@@ -710,7 +710,7 @@ export const siteConfig = {
         period: "for the first week",
         yearlyPrice: "n/a",
         features: [
-          "AI Study Prioritization"
+          "AI Study Prioritization",
           "Custom Topic Summaries (Based on your weak areas + learning style)",
           "On-Demand Motivation & Recharge Tools",
           "Evidence-Based Test Strategies",
@@ -727,7 +727,7 @@ export const siteConfig = {
         period: "month",
         yearlyPrice: "$200",
         features: [
-          "AI Study Prioritization"
+          "AI Study Prioritization",
           "Custom Topic Summaries (Based on your weak areas + learning style)",
           "On-Demand Motivation & Recharge Tools",
           "Evidence-Based Test Strategies",
