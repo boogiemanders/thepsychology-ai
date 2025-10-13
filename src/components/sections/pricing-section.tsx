@@ -145,7 +145,8 @@ export function PricingSection() {
               </div>
 
               <div className="flex flex-col gap-2 p-4">
-                <button
+                <a
+                  href={tier.href}
                   className={`h-10 w-full flex items-center justify-center text-sm font-normal tracking-wide rounded-full px-4 cursor-pointer transition-all ease-out active:scale-95 ${
                     tier.isPopular
                       ? `${tier.buttonColor} shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)]`
@@ -153,7 +154,7 @@ export function PricingSection() {
                   }`}
                 >
                   {tier.buttonText}
-                </button>
+                </a>
               </div>
               <hr className="border-border dark:border-white/20" />
               <div className="p-4">
