@@ -72,7 +72,7 @@ export const siteConfig = {
     badge: "EPPP Coach",
     title: "Pass the EPPP faster with AI tutoring",
     description:
-      "Built by a psychologist who scored 588 in month. Short lessons, smart quizzes, mobile-first.",
+      "Built by a psychologist who scored a 588 in 1 month. Optimal and mobile-friendly learning.",
     cta: {
       primary: {
         text: "Try for Free",
@@ -699,9 +699,9 @@ export const siteConfig = {
     },
   },
   pricing: {
-    title: "Pricing that scales with you",
+    title: "Pricing",
     description:
-      "Whichever plan you pick, it's free until you love your docs. That's our promise.",
+      "Coming soon",
     pricingItems: [
       {
         name: "Free",
@@ -1048,4 +1048,5 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
