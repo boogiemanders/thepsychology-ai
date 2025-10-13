@@ -704,37 +704,33 @@ export const siteConfig = {
       "Coming soon",
     pricingItems: [
       {
-        name: "Free",
+        name: "Starter",
         href: "#",
         price: "$0",
-        period: "month",
-        yearlyPrice: "$0",
+        period: "for the first week",
+        yearlyPrice: "n/a",
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components library",
+          "AI Study Prioritization"
+          "Custom Topic Summaries (Based on your weak areas + learning style)",
+          "On-Demand Motivation & Recharge Tools",
+          "Evidence-Based Test Strategies",
         ],
-        description: "Perfect for individual users",
+        description: "Discover the value of customized learning",
         buttonText: "Start Free",
         buttonColor: "bg-accent text-primary",
         isPopular: false,
       },
       {
-        name: "Startup",
+        name: "Pro",
         href: "#",
-        price: "$12",
+        price: "$20",
         period: "month",
-        yearlyPrice: "$120",
+        yearlyPrice: "$200",
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components library",
-          "E-commerce integration",
-          "User authentication system",
-          "Multi-language support",
-          "Real-time collaboration tools",
+          "AI Study Prioritization"
+          "Custom Topic Summaries (Based on your weak areas + learning style)",
+          "On-Demand Motivation & Recharge Tools",
+          "Evidence-Based Test Strategies",
         ],
         description: "Ideal for professionals and small teams",
         buttonText: "Upgrade to Pro",
@@ -1048,5 +1044,6 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
