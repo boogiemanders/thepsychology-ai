@@ -707,17 +707,17 @@ export const siteConfig = {
         name: "7-Day Free Trial",
         href: "#join",
         price: "$0",
-        period: "",
-        yearlyPrice: "$0",
+        period: "week",
+        yearlyPrice: "n/a",
         features: [
-          "Short lessons + audio",
-          "Smart quizzes",
-          "Mobile-first",
+          "Efficient learning through text, audio, and video",
+          "Adaptive quizzes",
+          "Mobile-friendly",
         ],
-        description: "Try the coach for a week. Full access.",
+        description: "Try the program for a week. Full access.",
         buttonText: "Try free",
         buttonColor: "bg-black text-white",
-        isPopular: false,
+        isPopular: true,
       },
       {
         name: "Pro",
@@ -726,27 +726,28 @@ export const siteConfig = {
         period: "month",
         yearlyPrice: "$192",
         features: [
-          "All topics unlocked",
+          "Efficient learning through text, audio, and video",
           "Adaptive quizzes",
+          "Mobile-friendly",
           "Progress tracking",
         ],
         description: "All lessons, audio summaries, and adaptive quizzes.",
         buttonText: "Go Pro",
         buttonColor: "bg-primary text-primary-foreground",
-        isPopular: true,
+        isPopular: false,
       },
       {
-        name: "Coaching",
+        name: "Pro + Coaching",
         href: "#join",
-        price: "$100–$200",
+        price: "$200",
         period: "month",
-        yearlyPrice: "$100–$200",
+        yearlyPrice: "$2000",
         features: [
           "2× 45-min calls / month",
           "Personal study plan",
           "Priority support",
         ],
-        description: "Everything in Pro + 2 calls per month with Dr. Anders.",
+        description: "Everything in Pro + 2 calls per month with Dr. Anders Chan.",
         buttonText: "Apply for coaching",
         buttonColor: "bg-white text-black border",
         isPopular: false,
@@ -968,9 +969,9 @@ export const siteConfig = {
       },
       {
         id: 2,
-        question: "How does SkyAgent work?",
+        question: "How does thePsychology.ai work?",
         answer:
-          "SkyAgent works by analyzing your requirements, leveraging advanced AI algorithms to understand context, and executing tasks based on your instructions. It can integrate with your workflow, learn from feedback, and continuously improve its performance.",
+          "We work by analyzing your learning preferences, providing learning material that matches your needs, and providing support through ACT and MI. It can integrate with other study programs, learn from feedback, and continuously improve its performance.",
       },
       {
         id: 3,
@@ -982,28 +983,28 @@ export const siteConfig = {
         id: 4,
         question: "Can I integrate my existing tools?",
         answer:
-          "Yes, SkyAgent is designed to be highly compatible with popular tools and platforms. We offer APIs and pre-built integrations for seamless connection with your existing workflow tools and systems.",
+          "Yes, thePsychology.ai is designed to be highly compatible with popular tools and platforms. We offer APIs and pre-built integrations for seamless connection with your existing workflow tools and systems.",
       },
       {
         id: 5,
         question: "Is there a free trial available?",
         answer:
-          "Yes, we offer a 14-day free trial that gives you full access to all features. No credit card is required to start your trial, and you can upgrade or cancel at any time.",
+          "Yes, we offer a 7-day free trial that gives you full access to all features. No credit card is required to start your trial, and you can upgrade or cancel at any time.",
       },
       {
         id: 6,
-        question: "How does SkyAgent save me time?",
+        question: "How does thePsychology.ai save me time?",
         answer:
-          "SkyAgent automates repetitive tasks, streamlines workflows, and provides quick solutions to common challenges. This automation and efficiency can save hours of manual work, allowing you to focus on more strategic activities.",
+          "We automate repetitive tasks, streamline workflows, and provide quick solutions to common challenges. This automation and efficiency can save hours of friction points in between studying and commuting, allowing you to experience less stress and more focus on more strategic activities.",
       },
     ],
   },
   ctaSection: {
     id: "cta",
-    title: "Automate. Simplify. Thrive",
+    title: "Study quickly and affordably",
     backgroundImage: "/agent-cta-background.png",
     button: {
-      text: "Start Your 30-Day Free Trial Today",
+      text: "Start Your 7-Day Free Trial Today",
       href: "#",
     },
     subtext: "Cancel anytime, no questions asked",
@@ -1040,6 +1041,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
