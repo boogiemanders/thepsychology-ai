@@ -170,7 +170,7 @@ export function Navbar() {
                   <Link href="/" className="flex items-center gap-3">
                     <Icons.logo className="size-7 md:size-10" />
                     <p className="text-lg font-semibold text-primary">
-                      SkyAgent
+                      thePsychology.ai
                     </p>
                   </Link>
                   <button
@@ -232,4 +232,5 @@ export function Navbar() {
     </header>
   );
 }
+
 
