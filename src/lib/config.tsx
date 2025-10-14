@@ -332,9 +332,9 @@ export const siteConfig = {
       {
         id: 1,
         content: <FirstBentoAnimation />,
-        title: "Real-time AI Collaboration",
+        title: "Study What Actually Raises Your Score",
         description:
-          "Experience real-time assistance. Ask your AI Agent to coordinate tasks, answer questions, and maintain team alignment.",
+          "Stop wasting hours guessing. The AI finds the topics that give you the fastest point gains based on your quiz results and exam weights.",
       },
       {
         id: 2,
@@ -691,11 +691,11 @@ export const siteConfig = {
   },
   quoteSection: {
     quote:
-      "I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and I got a 588 on my first try. This program is what I wish I had for fraction of the time, cost, and stress.",
+      "I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and I got a 588 on my first try. This program is what I wish I had for a fraction of the time, cost, and stress.",
     author: {
       name: "Anders H. Chan, Psy.D.",
       role: "Founder - thePsychology.ai",
-      image: "https://randomuser.me/api/portraits/men/91.jpg",
+      image: "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/468960776_10169814148370440_5031711526513575898_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RwLXdRHpqQsQ7kNvwHLV2Sz&_nc_oc=AdlRejHiEYDIxZOtTELYLdqCBBZ_wRWPzYBVKrb3gKyqeJI_Ho0sJnAucafM9oodQE857lsPArZcUV8i9TY8jFdq&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=3_RZfnwtAadLI-Wq1T4bTw&oh=00_AfcE78yyG0-WHNmH2FGsUeIGV_w3TJBjXtUujDOnt43r5g&oe=68F39267",
     },
   },
   pricing: {
@@ -762,7 +762,7 @@ export const siteConfig = {
       img: "https://randomuser.me/api/portraits/men/91.jpg",
       description: (
         <p>
-          I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and <Highlight>I got a 588 on my first try.</Highlight>{" "} This program is what I wish I had for fraction of the time, cost, and stress.
+          I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and <Highlight>I got a 588 on my first try.</Highlight>{" "} This program is what I wish I had for a fraction of the time, cost, and stress.
         </p>
       ),
     },
@@ -1036,6 +1036,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
