@@ -724,7 +724,7 @@ export const siteConfig = {
         href: "#join",
         price: "$20",
         period: "month",
-        yearlyPrice: "$192",
+        yearlyPrice: "$200",
         features: [
           "Efficient learning through text, audio, and video",
           "Adaptive quizzes",
@@ -757,8 +757,8 @@ export const siteConfig = {
   testimonials: [
     {
       id: "1",
-      name: "Alex Rivera",
-      role: "CTO at InnovateTech",
+      name: "Anders Chan",
+      role: "Founder of thePsychology.ai",
       img: "https://randomuser.me/api/portraits/men/91.jpg",
       description: (
         <p>
@@ -959,7 +959,7 @@ export const siteConfig = {
   faqSection: {
     title: "Frequently Asked Questions",
     description:
-      "Answers to common questions about SkyAgent and its features. If you have any other questions, please don't hesitate to contact us.",
+      "Answers to common questions about thePsychology.ai and its features. If you have any other questions, please don't hesitate to contact us.",
     faQitems: [
       {
         id: 1,
