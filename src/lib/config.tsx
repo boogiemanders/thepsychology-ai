@@ -72,7 +72,7 @@ export const siteConfig = {
     badge: "EPPP Coach",
     title: "Pass the EPPP faster with AI tutoring",
     description:
-      "Built by a licensed psychologist who scored 588. Short lessons, smart quizzes, mobile-first.",
+      "Built by a licensed psychologist who scored a 588 in a month.",
     cta: {
       primary: {
         text: "Try for free",
@@ -310,15 +310,15 @@ export const siteConfig = {
         id: 3,
         title: "The Only Prep That Cares About Your Mindset",
         content:
-          "Most EPPP tools just throw flashcards and readings at you. We built one that actually supports you with ACT and MI techniques to help you manage burnout, rebuild focus, and study without losing your health or finances.",
+          "Most EPPP tools just throw flashcards and readings at you. We built one that actually provides support for you through education about ACT, MI, and CBT-I to help you manage burnout, rebuild focus, and learn about EPPP topics.",
         image:
           "https://images.unsplash.com/photo-1720378042271-60aff1e1c538?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: 4,
-        title: "Receive Instant, Actionable Results",
+        title: "Built by Psychologists, for Psychologists",
         content:
-          "We are constantly updating and improving our features to provide the best experience.",
+          "We know what it’s like to study and pay for the EPPP because we’ve been there. That’s why we built ThePsychology.ai to be more than just an app: it’s your study coach and support system in one.",
         image:
           "https://images.unsplash.com/photo-1666882990322-e7f3b8df4f75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
       },
@@ -1041,6 +1041,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
