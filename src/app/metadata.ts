@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   keywords: [
-    "SkyAgent",
+    "thePsychology.ai",
     "AI",
     "Agent",
     "Magic UI",
@@ -51,3 +51,4 @@ export const metadata: Metadata = {
     },
   },
 };
+
