@@ -288,35 +288,35 @@ export const siteConfig = {
   featureSection: {
     title: "Simple. Seamless. Smart.",
     description:
-      "Discover how SkyAgent transforms your commands into action in four easy steps",
+      "Discover how thePsychology.ai improves your studying in four easy steps",
     items: [
       {
         id: 1,
-        title: "Ask Your AI Agent Directly",
+        title: "Learn Efficiently",
         content:
-          "Speak or type your command—let SkyAgent capture your intent. Your request instantly sets the process in motion.",
+          "Share your preferred language, interests, and style, and thePsychology.ai will instantly provide you with custom, understandable, relatable, and interesting learning material with metaphors that fit your interests.",
         image:
           "https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: 2,
-        title: "Let SkyAgent Process It",
+        title: "Prioritize your Studying ",
         content:
-          "We prioritize the needs and preferences of our users in our design process.",
+          ".",
         image:
           "https://images.unsplash.com/photo-1686170287433-c95faf6d3608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8fA%3D%3D",
       },
       {
         id: 3,
-        title: "Receive Instant, Actionable Results",
+        title: "Receive Support",
         content:
-          "Our features seamlessly integrate with your existing systems for a smooth experience.",
+          "The studying process for the EPPP is stressful. Applying and registering for this exam costs money, let alone paying for a program to assist studying. This exam affects clinicians salary and life outcome. You have already invested so much time and money in your career. We incorporated ACT and MI-informed support to validate your emotions and commit to behaviors that align with your values while remaining in an educational format.",
         image:
           "https://images.unsplash.com/photo-1720378042271-60aff1e1c538?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: 4,
-        title: "Continuous Improvement",
+        title: "Receive Instant, Actionable ResultsContinuous Improvement",
         content:
           "We are constantly updating and improving our features to provide the best experience.",
         image:
@@ -1041,6 +1041,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
