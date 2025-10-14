@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Dillion Verma",
+      name: "Anders Chan",
       url: "https://magicui.design",
     },
   ],
@@ -51,4 +51,5 @@ export const metadata: Metadata = {
     },
   },
 };
+
 
