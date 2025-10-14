@@ -105,7 +105,7 @@ export function JoinSection() {
             <label
               className={cn(
                 "flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors",
-                selectedPlan === "coaching-100-200"
+                selectedPlan === "coaching-200"
                   ? "border-primary bg-primary/5"
                   : "border-border hover:bg-muted/50",
               )}
@@ -113,12 +113,12 @@ export function JoinSection() {
               <input
                 type="radio"
                 name="plan"
-                value="coaching-100-200"
-                checked={selectedPlan === "coaching-100-200"}
+                value="coaching-200"
+                checked={selectedPlan === "coaching-200"}
                 onChange={(e) => setSelectedPlan(e.target.value)}
                 className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary"
               />
-              <span className="text-sm">Coaching - $100–$200/month</span>
+              <span className="text-sm">Coaching - $200/month</span>
             </label>
           </div>
         </div>
