@@ -113,7 +113,7 @@ export function Navbar() {
           <div className="flex h-[56px] items-center justify-between p-4">
             <Link href="/" className="flex items-center gap-3">
               <Icons.logo className="size-7 md:size-10" />
-              <p className="text-lg font-semibold text-primary">SkyAgent</p>
+              <p className="text-lg font-semibold text-primary">thePsychology.ai</p>
             </Link>
 
             <NavMenu />
@@ -232,3 +232,4 @@ export function Navbar() {
     </header>
   );
 }
+
