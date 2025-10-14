@@ -292,17 +292,17 @@ export const siteConfig = {
     items: [
       {
         id: 1,
-        title: "Learn Efficiently",
+        title: "Learn the Way Your Brain Likes",
         content:
-          "Share your preferred language, interests, and style, and thePsychology.ai will instantly provide you with custom, understandable, relatable, and interesting learning material with metaphors that fit your interests.",
+          "Tell the AI your learning style and interests. It translates complex topics into examples and metaphors that actually make sense.",
         image:
           "https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: 2,
-        title: "Prioritize your Studying ",
+        title: "Study What Actually Raises Your Score",
         content:
-          ".",
+          "Stop wasting hours guessing. The AI finds the topics that give you the fastest point gains based on your quiz results and exam weights.",
         image:
           "https://images.unsplash.com/photo-1686170287433-c95faf6d3608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8fA%3D%3D",
       },
@@ -1041,6 +1041,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
