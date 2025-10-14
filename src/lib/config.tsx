@@ -691,10 +691,10 @@ export const siteConfig = {
   },
   quoteSection: {
     quote:
-      "I scored a 19% on my first practice diagnostic exam. After a month of studying my ass off, I received a 588 on my first try. The application, exam fee, and test prep cost about $1k. I made this program to replicate the steps I took for a fraction of the price and stress. ",
+      "I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and I got a 588 on my first try. This program what I wish I had for fraction of the time, cost, and stress.",
     author: {
       name: "Anders H. Chan, Psy.D.",
-      role: "Postdoc - UCLA, Founder - thePsychology.ai",
+      role: "Founder - thePsychology.ai",
       image: "https://randomuser.me/api/portraits/men/91.jpg",
     },
   },
@@ -1037,6 +1037,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
