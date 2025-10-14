@@ -308,15 +308,15 @@ export const siteConfig = {
       },
       {
         id: 3,
-        title: "Receive Support",
+        title: "The Only Prep That Cares About Your Mindset",
         content:
-          "The studying process for the EPPP is stressful. Applying and registering for this exam costs money, let alone paying for a program to assist studying. This exam affects clinicians salary and life outcome. You have already invested so much time and money in your career. We incorporated ACT and MI-informed support to validate your emotions and commit to behaviors that align with your values while remaining in an educational format.",
+          "Most EPPP tools just throw flashcards and readings at you. We built one that actually supports you with ACT and MI techniques to help you manage burnout, rebuild focus, and study without losing your health or finances.",
         image:
           "https://images.unsplash.com/photo-1720378042271-60aff1e1c538?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: 4,
-        title: "Receive Instant, Actionable ResultsContinuous Improvement",
+        title: "Receive Instant, Actionable Results",
         content:
           "We are constantly updating and improving our features to provide the best experience.",
         image:
@@ -341,7 +341,7 @@ export const siteConfig = {
         content: <SecondBentoAnimation />,
         title: "Seamless Integrations",
         description:
-          "Unite your favorite tools for effortless connectivity. Boost productivity through interconnected workflows.",
+          "Unite your favorite tools for effortless studying. Boost productivity through interconnected workflows.",
       },
       {
         id: 3,
@@ -349,11 +349,11 @@ export const siteConfig = {
           <ThirdBentoAnimation
             data={[20, 30, 25, 45, 40, 55, 75]}
             toolTipValues={[
-              1234, 1678, 2101, 2534, 2967, 3400, 3833, 4266, 4700, 5133,
+              19, 22, 29, 33, 37, 42, 43, 47, 59, 60, 67, 69, 70, 75, 82
             ]}
           />
         ),
-        title: "Instant Insight Reporting",
+        title: "Progress Tracking",
         description:
           "Transform raw data into clear insights in seconds. Empower smarter decisions with real-time, always-learning intelligence.",
       },
@@ -1041,6 +1041,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
