@@ -75,11 +75,11 @@ export const siteConfig = {
       "Built by a licensed psychologist who scored 588. Short lessons, smart quizzes, mobile-first.",
     cta: {
       primary: {
-        text: "Start 7-day free trial",
+        text: "Try for free",
         href: "#join",
       },
       secondary: {
-        text: "How it works",
+        text: "Login",
         href: "#features",
       },
     },
@@ -1041,6 +1041,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
