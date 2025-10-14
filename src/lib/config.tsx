@@ -349,7 +349,7 @@ export const siteConfig = {
           <ThirdBentoAnimation
             data={[20, 30, 25, 45, 40, 55, 75]}
             toolTipValues={[
-              19, 22, 29, 33, 37, 42, 43, 47, 59, 60, 67, 69, 70, 75, 82
+              19%, 22%, 29%, 33%, 37%, 42%, 43%, 47%, 59%, 60%, 67%, 69%, 70%, 75%, 82%
             ]}
           />
         ),
@@ -1041,6 +1041,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
 
 
 
