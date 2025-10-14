@@ -691,10 +691,10 @@ export const siteConfig = {
   },
   quoteSection: {
     quote:
-      "SkyAgent has transformed our daily operations. Tasks that once consumed hours now complete in moments, freeing our team to focus on creativity and strategic growth.",
+      "I scored a 19% on my first practice diagnostic exam. After a month of studying my ass off, I received a 588 on my first try. The application, exam fee, and test prep cost about $1k. I made this program to replicate the steps I took for a fraction of the price and stress. ",
     author: {
-      name: "Alex Johnson",
-      role: "CTO, Innovatech",
+      name: "Anders H. Chan, Psy.D.",
+      role: "Postdoc - UCLA, Founder - thePsychology.ai",
       image: "https://randomuser.me/api/portraits/men/91.jpg",
     },
   },
@@ -762,12 +762,8 @@ export const siteConfig = {
       img: "https://randomuser.me/api/portraits/men/91.jpg",
       description: (
         <p>
-          The AI-driven analytics from #QuantumInsights have revolutionized our
-          product development cycle.
-          <Highlight>
-            Insights are now more accurate and faster than ever.
-          </Highlight>{" "}
-          A game-changer for tech companies.
+          I scored a 19% on my first practice diagnostic exam. After a month of studying my ass off, <Highlight>I received a 588 on my first try.</Highlight>{" "} The application, exam fee, and test prep cost about $1k. I made this program to replicate the steps I took for a fraction of the price and stress. 
+          
         </p>
       ),
     },
