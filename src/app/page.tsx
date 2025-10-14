@@ -20,9 +20,9 @@ export default function Home() {
       <CompanyShowcase />
       <BentoSection />
       <QuoteSection />
-      <FeatureSection />
-      <GrowthSection />
-      <PricingSection />
+      {/* <FeatureSection /> */}
+      {/*<GrowthSection /> */}
+      {/* <PricingSection /> */}
       <JoinSection />
       <TestimonialSection />
       <FAQSection />
