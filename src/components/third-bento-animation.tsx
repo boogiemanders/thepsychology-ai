@@ -1,17 +1,16 @@
-"use client";
+"use client"
 
-import { colorWithOpacity, getRGBA } from "@/lib/utils";
-import NumberFlow from "@number-flow/react";
-import { motion, useInView } from "motion/react";
-import { CSSProperties, useCallback, useEffect, useRef, useState } from "react";
+import { colorWithOpacity, getRGBA } from "@/lib/utils"
+import { motion, useInView } from "motion/react"
+import { type CSSProperties, useCallback, useEffect, useRef, useState } from "react"
 
 interface LineChartProps {
-  data: number[];
-  height?: number;
-  width?: number;
-  color: string;
-  shouldAnimate: boolean;
-  startAnimationDelay?: number;
+  data: number[]
+  height?: number
+  width?: number
+  color: string
+  shouldAnimate: boolean
+  startAnimationDelay?: number
 }
 
 export function LineChart({
@@ -22,78 +21,81 @@ export function LineChart({
   shouldAnimate,
   startAnimationDelay,
 }: LineChartProps) {
-  const svgRef = useRef<SVGSVGElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null)
 
   // Create smooth curve points using bezier curves
   const createSmoothPath = (points: { x: number; y: number }[]) => {
-    if (points.length < 2) return "";
+    if (points.length < 2) return ""
 
     const path = points.reduce((acc, point, i, arr) => {
       if (i === 0) {
         // Move to the first point
-        return `M ${point.x} ${point.y}`;
+        return `M ${point.x} ${point.y}`
       }
 
       // Calculate control points for smooth curve
-      const prev = arr[i - 1];
-      const next = arr[i + 1];
-      const smoothing = 0.2;
+      const prev = arr[i - 1]
+      const next = arr[i + 1]
+      const smoothing = 0.2
 
       // If it's the last point, we don't need a curve
       if (i === arr.length - 1) {
-        return `${acc} L ${point.x} ${point.y}`;
+        return `${acc} L ${point.x} ${point.y}`
       }
 
       // Calculate control points
-      const cp1x = prev.x + (point.x - prev.x) * smoothing;
-      const cp1y = prev.y + (point.y - prev.y) * smoothing;
-      const cp2x = point.x - (next.x - prev.x) * smoothing;
-      const cp2y = point.y - (next.y - prev.y) * smoothing;
+      const cp1x = prev.x + (point.x - prev.x) * smoothing
+      const cp1y = prev.y + (point.y - prev.y) * smoothing
+      const cp2x = point.x - (next.x - prev.x) * smoothing
+      const cp2y = point.y - (next.y - prev.y) * smoothing
 
-      return `${acc} C ${cp1x},${cp1y} ${cp2x},${cp2y} ${point.x},${point.y}`;
-    }, "");
+      return `${acc} C ${cp1x},${cp1y} ${cp2x},${cp2y} ${point.x},${point.y}`
+    }, "")
 
-    return path;
-  };
+    return path
+  }
 
   // Convert data points to coordinates
   const coordinates = data.map((value, index) => ({
     x: (index / (data.length - 1)) * width,
     y: height - (value / Math.max(...data)) * height * 0.8, // Add some padding at top
-  }));
+  }))
 
   // Create smooth path
-  const smoothPath = createSmoothPath(coordinates);
+  const smoothPath = createSmoothPath(coordinates)
 
   // Find the middle point coordinates
-  const middleIndex = Math.floor(data.length / 2);
-  const middlePoint = coordinates[middleIndex];
+  const middleIndex = Math.floor(data.length / 2)
+  const middlePoint = coordinates[middleIndex]
 
-  const [showPulse, setShowPulse] = useState(false);
+  const [showPulse, setShowPulse] = useState(false)
 
   useEffect(() => {
     if (!shouldAnimate) {
-      setShowPulse(false);
-      return;
+      setShowPulse(false)
+      return
     }
 
-    const timeoutId = setTimeout(() => {
-      setShowPulse(true);
-    }, (startAnimationDelay || 0) * 1000);
+    const timeoutId = setTimeout(
+      () => {
+        setShowPulse(true)
+      },
+      (startAnimationDelay || 0) * 1000,
+    )
 
-    return () => clearTimeout(timeoutId);
-  }, [shouldAnimate, startAnimationDelay]);
+    return () => clearTimeout(timeoutId)
+  }, [shouldAnimate, startAnimationDelay])
 
-  const [computedColor, setComputedColor] = useState(color);
+  const [computedColor, setComputedColor] = useState(color)
 
   useEffect(() => {
-    setComputedColor(getRGBA(color));
-  }, [color]);
+    setComputedColor(getRGBA(color))
+  }, [color])
 
   const getColorWithOpacity = useCallback(
     (opacity: number) => colorWithOpacity(computedColor, opacity),
     [computedColor],
-  );
+  )
 
   return (
     <svg
@@ -181,7 +183,7 @@ export function LineChart({
               }}
               transition={{
                 duration: 2,
-                repeat: Infinity,
+                repeat: Number.POSITIVE_INFINITY,
                 delay: index * 0.67,
                 ease: "easeOut",
                 times: [0, 1],
@@ -192,7 +194,7 @@ export function LineChart({
         </>
       )}
     </svg>
-  );
+  )
 }
 
 export function NumberFlowCounter({
@@ -200,38 +202,65 @@ export function NumberFlowCounter({
   shouldAnimate,
   startAnimationDelay,
 }: {
-  toolTipValues: number[];
-  shouldAnimate: boolean;
-  startAnimationDelay?: number;
+  toolTipValues: number[]
+  shouldAnimate: boolean
+  startAnimationDelay?: number
 }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const currentValue = toolTipValues[currentIndex];
-  const [showCounter, setShowCounter] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const currentValue = toolTipValues[currentIndex]
+  const [showCounter, setShowCounter] = useState(false)
+  const [displayValue, setDisplayValue] = useState(currentValue)
 
   useEffect(() => {
     if (!shouldAnimate) {
-      setShowCounter(false);
-      return;
+      setShowCounter(false)
+      return
     }
 
-    const timeoutId = setTimeout(() => {
-      setShowCounter(true);
-    }, (startAnimationDelay || 0) * 1000);
+    const timeoutId = setTimeout(
+      () => {
+        setShowCounter(true)
+      },
+      (startAnimationDelay || 0) * 1000,
+    )
 
-    return () => clearTimeout(timeoutId);
-  }, [shouldAnimate, startAnimationDelay]);
+    return () => clearTimeout(timeoutId)
+  }, [shouldAnimate, startAnimationDelay])
 
   useEffect(() => {
-    if (!showCounter) return;
+    if (!showCounter) return
 
     const intervalId = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % toolTipValues.length);
-    }, 2000);
+      setCurrentIndex((prev) => (prev + 1) % toolTipValues.length)
+    }, 2000)
 
     return () => {
-      if (intervalId) clearInterval(intervalId);
-    };
-  }, [showCounter, toolTipValues.length]);
+      if (intervalId) clearInterval(intervalId)
+    }
+  }, [showCounter, toolTipValues.length])
+
+  // Animate number changes
+  useEffect(() => {
+    const start = displayValue
+    const end = currentValue
+    const duration = 700
+    const startTime = Date.now()
+
+    const animate = () => {
+      const now = Date.now()
+      const progress = Math.min((now - startTime) / duration, 1)
+      const easeOut = 1 - Math.pow(1 - progress, 3)
+      const current = Math.round(start + (end - start) * easeOut)
+
+      setDisplayValue(current)
+
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      }
+    }
+
+    requestAnimationFrame(animate)
+  }, [currentValue])
 
   return (
     <div
@@ -239,20 +268,9 @@ export function NumberFlowCounter({
         showCounter ? "opacity-100" : "opacity-0"
       } transition-opacity duration-300 ease-in-out absolute top-32 left-[42%] -translate-x-1/2 text-sm bg-[#1A1B25] border border-white/[0.07] text-white px-4 py-1 rounded-full h-8 flex items-center justify-center font-mono shadow-[0px_1.1px_0px_0px_rgba(255,255,255,0.20)_inset,0px_4.4px_6.6px_0px_rgba(255,255,255,0.01)_inset,0px_2.2px_6.6px_0px_rgba(18,43,105,0.04),0px_1.1px_2.2px_0px_rgba(18,43,105,0.08),0px_0px_0px_1.1px_rgba(18,43,105,0.08)]`}
     >
-      <NumberFlow
-        value={currentValue}
-        className="font-mono"
-        transformTiming={{
-          duration: 700,
-          easing: "ease-out",
-        }}
-        format={{
-          useGrouping: true,
-          minimumIntegerDigits: 1,
-        }}
-      />
+      <span className="font-mono">{displayValue.toLocaleString()}</span>
     </div>
-  );
+  )
 }
 
 export function ThirdBentoAnimation({
@@ -262,28 +280,28 @@ export function ThirdBentoAnimation({
   startAnimationDelay = 0,
   once = false,
 }: {
-  data: number[];
-  toolTipValues: number[];
-  color?: string;
-  startAnimationDelay?: number;
-  once?: boolean;
+  data: number[]
+  toolTipValues: number[]
+  color?: string
+  startAnimationDelay?: number
+  once?: boolean
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once });
-  const [shouldAnimate, setShouldAnimate] = useState(false);
-  const [computedColor, setComputedColor] = useState(color);
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once })
+  const [shouldAnimate, setShouldAnimate] = useState(false)
+  const [computedColor, setComputedColor] = useState(color)
 
   useEffect(() => {
-    setComputedColor(getRGBA(color));
-  }, [color]);
+    setComputedColor(getRGBA(color))
+  }, [color])
 
   useEffect(() => {
     if (isInView) {
-      setShouldAnimate(true);
+      setShouldAnimate(true)
     } else {
-      setShouldAnimate(false);
+      setShouldAnimate(false)
     }
-  }, [isInView]);
+  }, [isInView])
 
   return (
     <div
@@ -319,5 +337,5 @@ export function ThirdBentoAnimation({
         startAnimationDelay={startAnimationDelay}
       />
     </div>
-  );
+  )
 }
