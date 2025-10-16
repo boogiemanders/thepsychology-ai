@@ -48,4 +48,3 @@ export default async function Image() {
     return new Response(`Failed to generate image`, { status: 500 });
   }
 }
-

@@ -1,17 +1,18 @@
-"use client";
+"use client"
 
-import { SectionHeader } from "@/components/section-header";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { SectionHeader } from "@/components/section-header"
+import { cn } from "@/lib/utils"
+import { useState } from "react"
 
 export function JoinSection() {
-  const [selectedPlan, setSelectedPlan] = useState("free");
+  const [selectedPlans, setSelectedPlans] = useState<string[]>([])
+
+  const togglePlan = (plan: string) => {
+    setSelectedPlans((prev) => (prev.includes(plan) ? prev.filter((p) => p !== plan) : [...prev, plan]))
+  }
 
   return (
-    <section
-      id="join"
-      className="flex flex-col items-center justify-center gap-10 py-20 w-full relative px-6"
-    >
+    <section id="join" className="flex flex-col items-center justify-center gap-10 py-20 w-full relative px-6">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
           Join the Waitlist
@@ -27,10 +28,7 @@ export function JoinSection() {
         className="w-full max-w-md mx-auto space-y-6 bg-card border border-border rounded-xl p-8 shadow-sm"
       >
         <div className="space-y-2">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-foreground"
-          >
+          <label htmlFor="email" className="block text-sm font-medium text-foreground">
             Email <span className="text-red-500">*</span>
           </label>
           <input
@@ -44,10 +42,7 @@ export function JoinSection() {
         </div>
 
         <div className="space-y-2">
-          <label
-            htmlFor="phone"
-            className="block text-sm font-medium text-foreground"
-          >
+          <label htmlFor="phone" className="block text-sm font-medium text-foreground">
             Phone (optional)
           </label>
           <input
@@ -62,23 +57,22 @@ export function JoinSection() {
         <div className="space-y-3">
           <label className="block text-sm font-medium text-foreground">
             Plan <span className="text-red-500">*</span>
+            <span className="text-xs text-muted-foreground ml-2">(Select all that interest you)</span>
           </label>
           <div className="space-y-2">
             <label
               className={cn(
                 "flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors",
-                selectedPlan === "free"
-                  ? "border-primary bg-primary/5"
-                  : "border-border hover:bg-muted/50",
+                selectedPlans.includes("free") ? "border-primary bg-primary/5" : "border-border hover:bg-muted/50",
               )}
             >
               <input
-                type="radio"
+                type="checkbox"
                 name="plan"
                 value="free"
-                checked={selectedPlan === "free"}
-                onChange={(e) => setSelectedPlan(e.target.value)}
-                className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary"
+                checked={selectedPlans.includes("free")}
+                onChange={() => togglePlan("free")}
+                className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary rounded"
               />
               <span className="text-sm">7-Day Free Trial</span>
             </label>
@@ -86,18 +80,16 @@ export function JoinSection() {
             <label
               className={cn(
                 "flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors",
-                selectedPlan === "pro-20"
-                  ? "border-primary bg-primary/5"
-                  : "border-border hover:bg-muted/50",
+                selectedPlans.includes("pro-20") ? "border-primary bg-primary/5" : "border-border hover:bg-muted/50",
               )}
             >
               <input
-                type="radio"
+                type="checkbox"
                 name="plan"
                 value="pro-20"
-                checked={selectedPlan === "pro-20"}
-                onChange={(e) => setSelectedPlan(e.target.value)}
-                className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary"
+                checked={selectedPlans.includes("pro-20")}
+                onChange={() => togglePlan("pro-20")}
+                className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary rounded"
               />
               <span className="text-sm">Pro - $20/month</span>
             </label>
@@ -105,18 +97,18 @@ export function JoinSection() {
             <label
               className={cn(
                 "flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors",
-                selectedPlan === "coaching-200"
+                selectedPlans.includes("coaching-200")
                   ? "border-primary bg-primary/5"
                   : "border-border hover:bg-muted/50",
               )}
             >
               <input
-                type="radio"
+                type="checkbox"
                 name="plan"
                 value="coaching-200"
-                checked={selectedPlan === "coaching-200"}
-                onChange={(e) => setSelectedPlan(e.target.value)}
-                className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary"
+                checked={selectedPlans.includes("coaching-200")}
+                onChange={() => togglePlan("coaching-200")}
+                className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary rounded"
               />
               <span className="text-sm">Coaching - $200/month</span>
             </label>
@@ -124,10 +116,7 @@ export function JoinSection() {
         </div>
 
         <div className="space-y-2">
-          <label
-            htmlFor="notes"
-            className="block text-sm font-medium text-foreground"
-          >
+          <label htmlFor="notes" className="block text-sm font-medium text-foreground">
             Notes (optional)
           </label>
           <textarea
@@ -151,5 +140,5 @@ export function JoinSection() {
         </p>
       </form>
     </section>
-  );
+  )
 }
