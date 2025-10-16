@@ -201,7 +201,7 @@ export const siteConfig = {
         content: <FirstBentoAnimation />,
         title: "The Only Prep That Cares About Your Mindset",
         description:
-          "Most programs only throws information at you. We built one that actually provides supports recovery by reminders for breaks and psychoeducation about ACT, MI, and CBT-I to help you manage burnout, rebuild focus, and still learn about EPPP topics.",
+          "Most programs only throw information at you and neglect burnout and stress. This program provides reminders for breaks and psychoeducation about ACT, MI, and CBT-I to rebuild focus while learning relevant EPPP topics.",
       },
       {
         id: 4,
@@ -337,7 +337,7 @@ export const siteConfig = {
       id: "4",
       name: "Anders Chan",
       role: "Founder of thePsychology.ai",
-      img: "https://randomuser.me/api/portraits/men/91.jpg",
+      img: "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/468960776_10169814148370440_5031711526513575898_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RwLXdRHpqQsQ7kNvwHLV2Sz&_nc_oc=AdlRejHiEYDIxZOtTELYLdqCBBZ_wRWPzYBVKrb3gKyqeJI_Ho0sJnAucafM9oodQE857lsPArZcUV8i9TY8jFdq&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=3_RZfnwtAadLI-Wq1T4bTw&oh=00_AfcE78yyG0-WHNmH2FGsUeIGV_w3TJBjXtUujDOnt43r5g&oe=68F39267",
       description: (
         <p>
           I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and{" "}
