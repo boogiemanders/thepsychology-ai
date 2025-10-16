@@ -17,7 +17,7 @@ export const BLUR_FADE_DELAY = 0.15
 
 export const siteConfig = {
   name: "thePsychology.ai",
-  description: "Pass the EPPP. Save your time, money, and sanity.",
+  description: "Pass the EPPP with time, money, and sanity.",
   cta: "Get Started",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   keywords: ["EPPP", "Psychology", "Exam Prep", "AI Learning"],
@@ -58,6 +58,27 @@ export const siteConfig = {
       secondary: { text: "Login", href: "#features" },
     },
   },
+
+
+
+companyShowcase: {
+  title: "Born from clinical and/or academic experiences with:",
+  companyLogos: [
+    { id: 1, name: "UCLA Health", src: "/ucla" },
+    { id: 2, name: "NYU Langone Health", src: "/nyu.png" },
+    { id: 3, name: "Montefiore Einstein", src: "/monte.png" },
+    { id: 4, name: "Pratt Institute", src: "/pratt.png" },
+    { id: 5, name: "LIU Post", src: "/liu.png" },
+    { id: 6, name: "Brooklyn Center for Psychotherapy", src: "/bcp.png" },
+    { id: 7, name: "NotebookLM", src: "/notebook.png" },
+    { id: 8, name: "OpenAI", src: "/openai.png" },
+  ],
+},
+
+
+
+
+  /*
   companyShowcase: {
     title: "Born from clinical and/or academic experiences with:",
     companyLogos: [
@@ -175,6 +196,8 @@ export const siteConfig = {
             <img src="/openai-white.png" alt="OpenAI" className="h-6 w-auto object-contain dark:hidden" />
             <img src="/openai-black.png" alt="OpenAI" className="h-6 w-auto object-contain hidden dark:block" />
           </>
+
+          */
         ),
       },
     ],
