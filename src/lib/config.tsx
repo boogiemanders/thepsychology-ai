@@ -83,7 +83,7 @@ export const siteConfig = {
       },
       {
         id: 2,
-        content: <SecondtBentoAnimation />,
+        content: <SecondBentoAnimation />,
         title: "Clear Learning",
         description:
           "Dense EPPP content can become clear, relatable lessons using pop culture, metaphors, and humor according to your preferences.",
