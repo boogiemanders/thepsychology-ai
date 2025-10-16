@@ -17,18 +17,8 @@ export function CompanyShowcase() {
                        before:absolute before:-left-1 before:top-0 before:z-10 before:h-screen before:w-px before:bg-border
                        after:absolute after:-top-1 after:left-0 after:z-10 after:h-px after:w-screen after:bg-border"
           >
-             <div className="transition-all duration-200 [cubic-bezier(0.165, 0.84, 0.44, 1)] translate-y-0 group-hover:-translate-y-4 duration-300 flex items-center justify-center w-full h-full dark:[&>img]:invert dark:[&>svg]:invert">
-  {logo.logo}
-</div>
-
-
-
-
-
-
-
-
-              
+            <div className="transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]
+                            translate-y-0 group-hover:-translate-y-4 flex items-center justify-center w-full h-full">
               <img
                 src={logo.src}
                 alt={logo.name}

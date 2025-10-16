@@ -58,103 +58,19 @@ export const siteConfig = {
       secondary: { text: "Login", href: "#features" },
     },
   },
-
-  // ---------- UPDATED LOGOS (black in light, white in dark) ----------
   companyShowcase: {
-  title: "Born from clinical and/or academic experiences with:",
-  companyLogos: [
-    {
-      id: 1,
-      name: "UCLA Health",
-      logo: (
-        <img
-          src="/ucla.png"
-          alt="UCLA Health David Geffen School of Medicine"
-          className="h-12 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-    {
-      id: 2,
-      name: "NYU Langone Health",
-      logo: (
-        <img
-          src="/nyu.png"
-          alt="NYU Langone Health"
-          className="h-12 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-    {
-      id: 3,
-      name: "Montefiore Einstein",
-      logo: (
-        <img
-          src="/monte.png"
-          alt="Montefiore Einstein"
-          className="h-12 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-    {
-      id: 4,
-      name: "Pratt Institute",
-      logo: (
-        <img
-          src="/pratt.png"
-          alt="Pratt Institute"
-          className="h-10 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-    {
-      id: 5,
-      name: "LIU Post",
-      logo: (
-        <img
-          src="/liu.png"
-          alt="LIU Post"
-          className="h-12 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Brooklyn Center for Psychotherapy",
-      logo: (
-        <img
-          src="/bcp.png"
-          alt="Brooklyn Center for Psychotherapy"
-          className="h-12 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-    {
-      id: 7,
-      name: "NotebookLM",
-      logo: (
-        <img
-          src="/notebook.png"
-          alt="NotebookLM"
-          className="h-12 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-    {
-      id: 8,
-      name: "OpenAI",
-      logo: (
-        <img
-          src="/openai.png"
-          alt="OpenAI"
-          className="h-6 w-auto object-contain dark:invert"
-        />
-      ),
-    },
-  ],
-},
-  // -------------------------------------------------------------------
-
+    title: "Born from clinical and/or academic experiences with:",
+    companyLogos: [
+      { id: 1, name: "UCLA Health", src: "/ucla.png" },
+      { id: 2, name: "NYU Langone Health", src: "/nyu.png" },
+      { id: 3, name: "Montefiore Einstein", src: "/monte.png" },
+      { id: 4, name: "Pratt Institute", src: "/pratt.png" },
+      { id: 5, name: "LIU Post", src: "/liu.png" },
+      { id: 6, name: "Brooklyn Center for Psychotherapy", src: "/bcp.png" },
+      { id: 7, name: "NotebookLM", src: "/notebook.png" },
+      { id: 8, name: "OpenAI", src: "/openai.png" },
+    ],
+  },
   bentoSection: {
     title: "How it Works",
     description: "Learn efficiently with our comprehensive study system",
@@ -191,10 +107,30 @@ export const siteConfig = {
     title: "Everything You Need to Pass",
     description: "Comprehensive tools and resources designed specifically for EPPP success",
     items: [
-      { id: 1, title: "Multimodal Learning", description: "Learn through text, audio, and video - choose what works best for you", icon: "📚" },
-      { id: 2, title: "Adaptive Practice", description: "Smart quizzes that focus on your weak areas and track your progress", icon: "🎯" },
-      { id: 3, title: "Mobile Friendly", description: "Study anywhere, anytime on any device with our responsive platform", icon: "📱" },
-      { id: 4, title: "Expert Support", description: "Get personalized coaching from Dr. Anders Chan who scored 588", icon: "👨‍⚕️" },
+      {
+        id: 1,
+        title: "Multimodal Learning",
+        description: "Learn through text, audio, and video - choose what works best for you",
+        icon: "📚",
+      },
+      {
+        id: 2,
+        title: "Adaptive Practice",
+        description: "Smart quizzes that focus on your weak areas and track your progress",
+        icon: "🎯",
+      },
+      {
+        id: 3,
+        title: "Mobile Friendly",
+        description: "Study anywhere, anytime on any device with our responsive platform",
+        icon: "📱",
+      },
+      {
+        id: 4,
+        title: "Expert Support",
+        description: "Get personalized coaching from Dr. Anders Chan who scored 588",
+        icon: "👨‍⚕️",
+      },
     ],
   },
   quoteSection: {
