@@ -258,15 +258,15 @@ export const siteConfig = {
     faQitems: [
       {
         id: 1,
-        question: "What is an AI Agent?",
-        answer:
-          "An AI Agent is an intelligent software program that can perform tasks autonomously, learn from interactions, and make decisions to help achieve specific goals.",
-      },
-      {
-        id: 2,
         question: "How does thePsychology.ai work?",
         answer:
           "We work by analyzing your learning preferences, providing learning material that matches your needs, and providing support through ACT and MI.",
+      },
+      {
+        id: 2,
+        question: "What is an AI Agent?",
+        answer:
+          "An AI Agent is an intelligent software program that can perform tasks autonomously, learn from interactions, and make decisions to help achieve specific goals.",
       },
       {
         id: 3,
