@@ -61,122 +61,14 @@ export const siteConfig = {
   companyShowcase: {
     title: "Born from clinical and/or academic experiences with:",
     companyLogos: [
-      {
-        id: 1,
-        name: "UCLA Health",
-        logo: (
-          <>
-            <img
-              src="/ucla-white.png"
-              alt="UCLA Health David Geffen School of Medicine"
-              className="h-12 w-auto object-contain dark:hidden"
-            />
-            <img
-              src="/ucla-black.png"
-              alt="UCLA Health David Geffen School of Medicine"
-              className="h-12 w-auto object-contain hidden dark:block"
-            />
-          </>
-        ),
-      },
-      {
-        id: 2,
-        name: "NYU Langone Health",
-        logo: (
-          <>
-            <img src="/nyu-white.png" alt="NYU Langone Health" className="h-12 w-auto object-contain dark:hidden" />
-            <img
-              src="/nyu-black.png"
-              alt="NYU Langone Health"
-              className="h-12 w-auto object-contain hidden dark:block"
-            />
-          </>
-        ),
-      },
-      {
-        id: 3,
-        name: "Montefiore Einstein",
-        logo: (
-          <>
-            <img
-              src="/montefiore-einstein-white.png"
-              alt="Montefiore Einstein"
-              className="h-12 w-auto object-contain dark:hidden"
-            />
-            <img
-              src="/montefiore-einstein-black.png"
-              alt="Montefiore Einstein"
-              className="h-12 w-auto object-contain hidden dark:block"
-            />
-          </>
-        ),
-      },
-      {
-        id: 4,
-        name: "Pratt Institute",
-        logo: (
-          <>
-            <img src="/pratt-white.png" alt="Pratt Institute" className="h-10 w-auto object-contain dark:hidden" />
-            <img
-              src="/pratt-black.png"
-              alt="Pratt Institute"
-              className="h-10 w-auto object-contain hidden dark:block"
-            />
-          </>
-        ),
-      },
-      {
-        id: 5,
-        name: "LIU Post",
-        logo: (
-          <>
-            <img src="/liu-post-white.png" alt="LIU Post" className="h-12 w-auto object-contain dark:hidden" />
-            <img src="/liu-post-black.png" alt="LIU Post" className="h-12 w-auto object-contain hidden dark:block" />
-          </>
-        ),
-      },
-      {
-        id: 6,
-        name: "Brooklyn Center for Psychotherapy",
-        logo: (
-          <>
-            <img
-              src="/bcp-logo-white.png"
-              alt="Brooklyn Center for Psychotherapy"
-              className="h-12 w-auto object-contain dark:hidden"
-            />
-            <img
-              src="/bcp-logo-black.png"
-              alt="Brooklyn Center for Psychotherapy"
-              className="h-12 w-auto object-contain hidden dark:block"
-            />
-          </>
-        ),
-      },
-      {
-        id: 7,
-        name: "NotebookLM",
-        logo: (
-          <>
-            <img src="/notebooklm-white.png" alt="NotebookLM" className="h-12 w-auto object-contain dark:hidden" />
-            <img
-              src="/notebooklm-black.png"
-              alt="NotebookLM"
-              className="h-12 w-auto object-contain hidden dark:block"
-            />
-          </>
-        ),
-      },
-      {
-        id: 8,
-        name: "OpenAI",
-        logo: (
-          <>
-            <img src="/openai-white.png" alt="OpenAI" className="h-6 w-auto object-contain dark:hidden" />
-            <img src="/openai-black.png" alt="OpenAI" className="h-6 w-auto object-contain hidden dark:block" />
-          </>
-        ),
-      },
+      { id: 1, name: "UCLA Health", src: "/ucla.png" },
+      { id: 2, name: "NYU Langone Health", src: "/nyu.png" },
+      { id: 3, name: "Montefiore Einstein", src: "/monte.png" },
+      { id: 4, name: "Pratt Institute", src: "/pratt.png" },
+      { id: 5, name: "LIU Post", src: "/liu.png" },
+      { id: 6, name: "Brooklyn Center for Psychotherapy", src: "/bcp.png" },
+      { id: 7, name: "NotebookLM", src: "/notebook.png" },
+      { id: 8, name: "OpenAI", src: "/openai.png" },
     ],
   },
   bentoSection: {
