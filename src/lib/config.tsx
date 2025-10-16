@@ -83,21 +83,21 @@ export const siteConfig = {
       },
       {
         id: 2,
-        content: <FirstBentoAnimation />,
+        content: <SecondtBentoAnimation />,
         title: "Clear Learning",
         description:
           "Dense EPPP content can become clear, relatable lessons using pop culture, metaphors, and humor according to your preferences.",
       },
       {
         id: 3,
-        content: <FirstBentoAnimation />,
+        content: <ThirdBentoAnimation />,
         title: "The Only Prep That Cares About Your Mindset",
         description:
           "Most programs only throw information at you and neglect burnout and stress. This program provides reminders for breaks and psychoeducation about ACT, MI, and CBT-I to rebuild focus while learning relevant EPPP topics.",
       },
       {
         id: 4,
-        content: <SecondBentoAnimation />,
+        content: <FourthBentoAnimation />,
         title: "Integrated studying",
         description: "Study anywhere with a mobile-friendly platform.",
       },
