@@ -84,7 +84,7 @@ export const siteConfig = {
       },
       {
         id: 2,
-        content: <FirstBentoAnimation />,
+        content: <ThirdBentoAnimation />,
         title: "Make It Stick",
         description:
           "Turns dense theory into customized and clear examples.",
