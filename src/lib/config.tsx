@@ -83,7 +83,7 @@ export const siteConfig = {
       },
       {
         id: 2,
-        content: <SecondBentoAnimation />,
+        content: <FirstBentoAnimation />,
         title: "Make It Stick",
         description:
           "Turns dense theory into customized and clear examples.",
@@ -97,7 +97,7 @@ export const siteConfig = {
       },
       {
         id: 4,
-        content: <FourthBentoAnimation />,
+        content: <SecondBentoAnimation />,
         title: "Frictionless Studying",
         description: "Everything you need. Nothing you don’t",
       },
