@@ -1,341 +1,148 @@
-"use client"
+/* eslint-disable @next/next/no-img-element */
+"use client";
 
-import { colorWithOpacity, getRGBA } from "@/lib/utils"
-import { motion, useInView } from "motion/react"
-import { type CSSProperties, useCallback, useEffect, useRef, useState } from "react"
+import { Icons } from "@/components/icons";
+import {
+  Reasoning,
+  ReasoningContent,
+  ReasoningResponse,
+} from "@/components/ui/reasoning";
+import { AnimatePresence, motion, useInView } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 
-interface LineChartProps {
-  data: number[]
-  height?: number
-  width?: number
-  color: string
-  shouldAnimate: boolean
-  startAnimationDelay?: number
-}
-
-export function LineChart({
-  data,
-  height = 200,
-  width = 600,
-  color,
-  shouldAnimate,
-  startAnimationDelay,
-}: LineChartProps) {
-  const svgRef = useRef<SVGSVGElement>(null)
-
-  // Create smooth curve points using bezier curves
-  const createSmoothPath = (points: { x: number; y: number }[]) => {
-    if (points.length < 2) return ""
-
-    const path = points.reduce((acc, point, i, arr) => {
-      if (i === 0) {
-        // Move to the first point
-        return `M ${point.x} ${point.y}`
-      }
-
-      // Calculate control points for smooth curve
-      const prev = arr[i - 1]
-      const next = arr[i + 1]
-      const smoothing = 0.2
-
-      // If it's the last point, we don't need a curve
-      if (i === arr.length - 1) {
-        return `${acc} L ${point.x} ${point.y}`
-      }
-
-      // Calculate control points
-      const cp1x = prev.x + (point.x - prev.x) * smoothing
-      const cp1y = prev.y + (point.y - prev.y) * smoothing
-      const cp2x = point.x - (next.x - prev.x) * smoothing
-      const cp2y = point.y - (next.y - prev.y) * smoothing
-
-      return `${acc} C ${cp1x},${cp1y} ${cp2x},${cp2y} ${point.x},${point.y}`
-    }, "")
-
-    return path
-  }
-
-  // Convert data points to coordinates
-  const coordinates = data.map((value, index) => ({
-    x: (index / (data.length - 1)) * width,
-    y: height - (value / Math.max(...data)) * height * 0.8, // Add some padding at top
-  }))
-
-  // Create smooth path
-  const smoothPath = createSmoothPath(coordinates)
-
-  // Find the middle point coordinates
-  const middleIndex = Math.floor(data.length / 2)
-  const middlePoint = coordinates[middleIndex]
-
-  const [showPulse, setShowPulse] = useState(false)
-
-  useEffect(() => {
-    if (!shouldAnimate) {
-      setShowPulse(false)
-      return
-    }
-
-    const timeoutId = setTimeout(
-      () => {
-        setShowPulse(true)
-      },
-      (startAnimationDelay || 0) * 1000,
-    )
-
-    return () => clearTimeout(timeoutId)
-  }, [shouldAnimate, startAnimationDelay])
-
-  const [computedColor, setComputedColor] = useState(color)
-
-  useEffect(() => {
-    setComputedColor(getRGBA(color))
-  }, [color])
-
-  const getColorWithOpacity = useCallback(
-    (opacity: number) => colorWithOpacity(computedColor, opacity),
-    [computedColor],
-  )
+export function ReasoningBasic() {
+  const reasoningText = `test3Based on your last quiz, focus on Ethics (53%) and Lifespan (48%) — both are high-weighted and give the best score gain. Next, hit Research/Stats (25%) — small section, but your lowest area`;
 
   return (
-    <svg
-      ref={svgRef}
-      width={width}
-      height={height}
-      viewBox={`0 0 ${width} ${height}`}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Gradient Definition */}
-      <defs>
-        <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={getColorWithOpacity(0.3)} />
-          <stop offset="100%" stopColor={getColorWithOpacity(0)} />
-        </linearGradient>
-      </defs>
-
-      {/* Animated Area Fill */}
-      <motion.path
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{
-          opacity: shouldAnimate ? 1 : 0,
-          scale: shouldAnimate ? 1 : 0.95,
-        }}
-        transition={{
-          duration: 0.8,
-          ease: "easeOut",
-          delay: startAnimationDelay,
-        }}
-        d={`${smoothPath} L ${width},${height} L 0,${height} Z`}
-        fill="url(#lineGradient)"
-      />
-
-      {/* Animated Line */}
-      <motion.path
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: shouldAnimate ? 1 : 0 }}
-        transition={{
-          duration: 1.5,
-          ease: "easeInOut",
-          delay: startAnimationDelay,
-        }}
-        d={smoothPath}
-        stroke={color}
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-      />
-
-      {/* Center dot with scale animation */}
-      <motion.circle
-        cx={middlePoint.x}
-        cy={middlePoint.y}
-        r="4"
-        fill={color}
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{
-          scale: shouldAnimate ? 1 : 0,
-          opacity: shouldAnimate ? 1 : 0,
-        }}
-        transition={{
-          delay: startAnimationDelay ? startAnimationDelay + 0.3 : 0.3,
-          duration: 0.4,
-          ease: "backOut",
-        }}
-      />
-
-      {/* Multiple pulsing waves */}
-      {showPulse && (
-        <>
-          {[0, 1, 2].map((index) => (
-            <motion.circle
-              key={index}
-              cx={middlePoint.x}
-              cy={middlePoint.y}
-              r="10"
-              stroke={color}
-              strokeWidth="2"
-              fill="none"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{
-                scale: [0.5, 2],
-                opacity: [0.8, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Number.POSITIVE_INFINITY,
-                delay: index * 0.67,
-                ease: "easeOut",
-                times: [0, 1],
-                repeatDelay: 0,
-              }}
-            />
-          ))}
-        </>
-      )}
-    </svg>
-  )
+    <Reasoning>
+      <ReasoningContent className="">
+        <ReasoningResponse text={reasoningText} />
+      </ReasoningContent>
+    </Reasoning>
+  );
 }
 
-export function NumberFlowCounter({
-  toolTipValues,
-  shouldAnimate,
-  startAnimationDelay,
-}: {
-  toolTipValues: number[]
-  shouldAnimate: boolean
-  startAnimationDelay?: number
-}) {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const currentValue = toolTipValues[currentIndex]
-  const [showCounter, setShowCounter] = useState(false)
-  const [displayValue, setDisplayValue] = useState(currentValue)
+export function FirstBentoAnimation() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    if (!shouldAnimate) {
-      setShowCounter(false)
-      return
+    let timeoutId: NodeJS.Timeout;
+    if (isInView) {
+      timeoutId = setTimeout(() => {
+        setShouldAnimate(true);
+      }, 1000);
+    } else {
+      setShouldAnimate(false);
     }
-
-    const timeoutId = setTimeout(
-      () => {
-        setShowCounter(true)
-      },
-      (startAnimationDelay || 0) * 1000,
-    )
-
-    return () => clearTimeout(timeoutId)
-  }, [shouldAnimate, startAnimationDelay])
-
-  useEffect(() => {
-    if (!showCounter) return
-
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % toolTipValues.length)
-    }, 2000)
 
     return () => {
-      if (intervalId) clearInterval(intervalId)
-    }
-  }, [showCounter, toolTipValues.length])
-
-  // Animate number changes
-  useEffect(() => {
-    const start = displayValue
-    const end = currentValue
-    const duration = 700
-    const startTime = Date.now()
-
-    const animate = () => {
-      const now = Date.now()
-      const progress = Math.min((now - startTime) / duration, 1)
-      const easeOut = 1 - Math.pow(1 - progress, 3)
-      const current = Math.round(start + (end - start) * easeOut)
-
-      setDisplayValue(current)
-
-      if (progress < 1) {
-        requestAnimationFrame(animate)
-      }
-    }
-
-    requestAnimationFrame(animate)
-  }, [currentValue])
-
-  return (
-    <div
-      className={`${
-        showCounter ? "opacity-100" : "opacity-0"
-      } transition-opacity duration-300 ease-in-out absolute top-32 left-[42%] -translate-x-1/2 text-sm bg-[#1A1B25] border border-white/[0.07] text-white px-4 py-1 rounded-full h-8 flex items-center justify-center font-mono shadow-[0px_1.1px_0px_0px_rgba(255,255,255,0.20)_inset,0px_4.4px_6.6px_0px_rgba(255,255,255,0.01)_inset,0px_2.2px_6.6px_0px_rgba(18,43,105,0.04),0px_1.1px_2.2px_0px_rgba(18,43,105,0.08),0px_0px_0px_1.1px_rgba(18,43,105,0.08)]`}
-    >
-      <span className="font-mono">{displayValue.toLocaleString()}</span>
-    </div>
-  )
-}
-
-export function ThirdBentoAnimation({
-  data,
-  toolTipValues,
-  color = "var(--secondary)",
-  startAnimationDelay = 0,
-  once = false,
-}: {
-  data: number[]
-  toolTipValues: number[]
-  color?: string
-  startAnimationDelay?: number
-  once?: boolean
-}) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once })
-  const [shouldAnimate, setShouldAnimate] = useState(false)
-  const [computedColor, setComputedColor] = useState(color)
-
-  useEffect(() => {
-    setComputedColor(getRGBA(color))
-  }, [color])
-
-  useEffect(() => {
-    if (isInView) {
-      setShouldAnimate(true)
-    } else {
-      setShouldAnimate(false)
-    }
-  }, [isInView])
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [isInView]);
 
   return (
     <div
       ref={ref}
-      className="relative flex size-full items-center justify-center h-[300px] pt-10 overflow-hidden"
-      style={
-        {
-          "--color": computedColor,
-        } as CSSProperties
-      }
+      className="w-full h-full p-4 flex flex-col items-center justify-center gap-5"
     >
+      <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: shouldAnimate ? 1 : 0 }}
-        transition={{
-          duration: 0.5,
-          delay: startAnimationDelay ? startAnimationDelay + 0.3 : 0.3,
-          ease: "easeOut",
+        className="max-w-md mx-auto w-full flex flex-col gap-2"
+        animate={{
+          y: shouldAnimate ? -75 : 0,
         }}
-        className="absolute top-[60%] left-1/2 -translate-x-1/2 w-[2px] h-32 bg-gradient-to-b from-[var(--color)] to-[var(--color-transparent)]"
-      ></motion.div>
-      <NumberFlowCounter
-        toolTipValues={toolTipValues}
-        shouldAnimate={shouldAnimate}
-        startAnimationDelay={startAnimationDelay}
-      />
-      <LineChart
-        data={data}
-        height={200}
-        width={600}
-        color={computedColor}
-        shouldAnimate={shouldAnimate}
-        startAnimationDelay={startAnimationDelay}
-      />
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 20,
+        }}
+      >
+        <div className="flex items-end justify-end gap-3">
+          <motion.div
+            className="max-w-[280px] bg-secondary text-white p-4 rounded-2xl ml-auto shadow-[0_0_10px_rgba(0,0,0,0.05)]"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.3,
+              ease: "easeOut",
+            }}
+          >
+            <p className="text-sm">
+              What should I focus on today?
+            </p>
+          </motion.div>
+          <div className="flex items-center bg-background rounded-full w-fit border border-border flex-shrink-0">
+            <img
+              src="https://randomuser.me/api/portraits/women/79.jpg"
+              alt="User Avatar"
+              className="size-8 rounded-full flex-shrink-0"
+            />
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <div className="flex items-center bg-background rounded-full size-10 flex-shrink-0 justify-center shadow-[0_0_10px_rgba(0,0,0,0.05)] border border-border">
+            <Icons.logo className="size-4" />
+          </div>
+
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              {!shouldAnimate ? (
+                <motion.div
+                  key="dots"
+                  className="absolute left-0 top-0 bg-background p-4 rounded-2xl border border-border"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -10 }}
+                  transition={{
+                    duration: 0.2,
+                    ease: "easeOut",
+                  }}
+                >
+                  <div className="flex gap-1">
+                    {[0, 1, 2].map((index) => (
+                      <motion.div
+                        key={index}
+                        className="w-2 h-2 bg-primary/50 rounded-full"
+                        animate={{ y: [0, -5, 0] }}
+                        transition={{
+                          duration: 0.6,
+                          repeat: Infinity,
+                          delay: index * 0.2,
+                          ease: "easeInOut",
+                        }}
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="response"
+                  layout
+                  className="absolute left-0 top-0 md:min-w-[300px] min-w-[220px] p-4 bg-accent border border-border rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.05)]"
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeOut",
+                  }}
+                >
+                  <ReasoningBasic />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+      </motion.div>
     </div>
-  )
+  );
+
 }
+
+
+
