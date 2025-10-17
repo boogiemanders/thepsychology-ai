@@ -254,7 +254,7 @@ export const siteConfig = {
   faqSection: {
     title: "Questions People Actually Ask",
     description:
-      "If more questions, please contact us below.",
+      "FAQs",
     faQitems: [
       {
         id: 1,
