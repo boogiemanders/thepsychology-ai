@@ -28,7 +28,7 @@ When Tony Stark tells the press “I am Iron Man,” he’s owning his truth. No
   );
 }
 
-export function SecondBentoAnimation() {
+export function FirstBentoAnimation() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -149,6 +149,7 @@ export function SecondBentoAnimation() {
   );
 
 }
+
 
 
 
