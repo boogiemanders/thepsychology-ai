@@ -11,7 +11,7 @@ import { AnimatePresence, motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 export function ReasoningBasic() {
-  const reasoningText = `Based on your last quiz, focus on Ethics (53%) and Lifespan (48%) — both are high-weighted and give the best score gain. Next, hit Research/Stats (25%) — small section, but your lowest area`;
+  const reasoningText = `It’s okay to feel worry, tired, and bored. Can notice thoughts while still moving forward. What will it mean for you to say you passed?`;
 
   return (
     <Reasoning>
@@ -70,7 +70,7 @@ export function FourthBentoAnimation() {
             }}
           >
             <p className="text-sm">
-              What should I focus on today?
+              My exam is in a week. I'm panicking. I'm scrolling on insta. 
             </p>
           </motion.div>
           <div className="flex items-center bg-background rounded-full w-fit border border-border flex-shrink-0">
