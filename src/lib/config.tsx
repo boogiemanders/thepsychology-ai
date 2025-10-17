@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 import { FirstBentoAnimation } from "@/components/first-bento-animation"
 import { SecondBentoAnimation } from "@/components/second-bento-animation"
 import { ThirdBentoAnimation } from "@/components/third-bento-animation"
+import { FourthBentoAnimation } from "@/components/fourth-bento-animation"
 
 export const Highlight = ({
   children,
@@ -91,7 +92,7 @@ export const siteConfig = {
       },
       {
         id: 3,
-        content: <SecondBentoAnimation />,
+        content: <FourthBentoAnimation />,
         title: "Replenish",
         description:
           "Improve focus and reduce burnout while learning relevant EPPP topics (ACT, MI, and CBT-I).",
