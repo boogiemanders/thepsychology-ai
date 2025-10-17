@@ -22,7 +22,7 @@ export function ReasoningBasic() {
   );
 }
 
-export function FirstBentoAnimation() {
+export function ThirdBentoAnimation() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [shouldAnimate, setShouldAnimate] = useState(false);
