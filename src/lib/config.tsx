@@ -128,7 +128,7 @@ export const siteConfig = {
       {
         id: 4,
         title: "Expert Support",
-        description: "Get personalized coaching from Dr. Anders Chan who scored 588",
+        description: "Get personalized coaching from Dr. Anders Chan, who scored 588",
         icon: "👨‍⚕️",
       },
     ],
@@ -179,7 +179,7 @@ export const siteConfig = {
         price: "$200",
         period: "month",
         yearlyPrice: "$2000",
-        features: ["2× 45-min calls / month", "Personal study plan", "Priority support"],
+        features: ["2× 45-min calls/month", "Personal study plan", "Priority support"],
         featuresLabel: "Everything in Pro:",
         description: "Everything in Pro + 2 calls per month with Dr. Anders Chan.",
         buttonText: "Select",
@@ -260,7 +260,7 @@ export const siteConfig = {
         id: 1,
         question: "What is ThePsychology.ai?",
         answer:
-          "An study coach powered by OpenAI's API that is helping psychologists increase their chances of passing the EPPP quickly (designed for 1 month) — with less stress, zero data leaks, and minimal screen time",
+          "A study coach powered by OpenAI's API that is helping psychologists increase their chances of passing the EPPP quickly (designed for 1 month) — with less stress, zero data leaks, and minimal screen time",
       },
       {
         id: 2,
@@ -270,9 +270,9 @@ export const siteConfig = {
       },
       {
         id: 3,
-        question: "Does it hurt the environment?",
+        question: "What about the environment?",
         answer:
-          "Yes, unfortunately. We are committed to awareness of consumption and consequently eco-efficient with AI use (e.g., running smaller models locally where possible). One month on our system uses 96% less energy than six months of traditional prep. That’s about 50 kg of CO₂ saved per person.",
+          "We are committed to awareness of consumption and consequently eco-efficiency with AI use (e.g., running smaller models locally where possible). One month on our system uses 96% less energy than six months of traditional prep. That’s about 50 kg of CO₂ saved per person.",
       },
       {
         id: 4,
