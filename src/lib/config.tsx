@@ -279,7 +279,7 @@ export const siteConfig = {
       {
         id: 4,
         question: "What happens to my data?",
-        answer: "Your data’s yours. Export it. Delete it. Done. It trains your plan, not our pockets.",
+        answer: "Your data’s yours. Export it. Delete it. Done. We use the data only to improve your training plan, no other agenda.",
       },
       {
         id: 5,
@@ -287,11 +287,8 @@ export const siteConfig = {
         answer:
           "Yes, we offer a 7-day free trial that gives you full access to all features. No credit card is required to start your trial.",
       },
-      {
-        id: 6,
-        question: "What’s the mission?",
-        answer: "To help you flourish: professionally, personally, and sustainably."
-      },
+
+      
     ],
   },
   ctaSection: {
