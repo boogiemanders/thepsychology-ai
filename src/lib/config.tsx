@@ -90,7 +90,7 @@ export const siteConfig = {
       },
       {
         id: 3,
-        content: <FirstBentoAnimation />,
+        content: <SecondBentoAnimation />,
         title: "Replenish",
         description:
           "Improve focus and reduce burnout while learning relevant EPPP topics (ACT, MI, and CBT-I).",
