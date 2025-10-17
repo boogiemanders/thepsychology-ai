@@ -55,7 +55,7 @@ export const siteConfig = {
     description: "Built by the psychologist who went from 19% to 588 in 30 days.",
     cta: {
       primary: { text: "Start free", href: "#join" },
-      secondary: { text: "See How It Works", href: "#features" },
+      secondary: { text: "Login", href: "#features" },
     },
   },
   companyShowcase: {
