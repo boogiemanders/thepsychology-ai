@@ -17,7 +17,7 @@ export const BLUR_FADE_DELAY = 0.15
 
 export const siteConfig = {
   name: "thePsychology.ai",
-  description: "Pass the EPPP. Save your time, money, and sanity.",
+  description: "Master the EPPP Quickly",
   cta: "Get Started",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   keywords: ["EPPP", "Psychology", "Exam Prep", "AI Learning"],
@@ -50,16 +50,16 @@ export const siteConfig = {
         <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
       </svg>
     ),
-    badge: "Your AI Coach",
-    title: "Pass the EPPP. Save your time, money, and sanity.",
-    description: "Built by a psychologist who scored a 588 in a month.",
+    badge: "Keep your time, money, and sanity",
+    title: "Master the EPPP Quickly",
+    description: "Built by the psychologist who went from 19% to 588 in 30 days.",
     cta: {
-      primary: { text: "Try for free", href: "#join" },
-      secondary: { text: "Login", href: "#features" },
+      primary: { text: "Start free", href: "#join" },
+      secondary: { text: "See How It Works", href: "#features" },
     },
   },
   companyShowcase: {
-    title: "Born from clinical and/or academic experiences with:",
+    title: "Practitioner-built. Proven in clinics, classrooms, and real exams",
     companyLogos: [
       { id: 1, name: "UCLA Health", src: "/ucla.png" },
       { id: 2, name: "NYU Langone Health", src: "/nyu.png" },
@@ -73,33 +73,33 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "How it Works",
-    description: "Learn efficiently with our comprehensive study system",
+    description: "Study less. Score higher. Here’s how.",
     items: [
       {
         id: 1,
         content: <FirstBentoAnimation />,
         title: "Study What Matters",
-        description: "We will give you what to focus on to maximize improvement",
+        description: "We show you the highest-yield topics so every hour moves your score.",
       },
       {
         id: 2,
         content: <FirstBentoAnimation />,
-        title: "Clear Learning",
+        title: "Make It Stick",
         description:
-          "Dense EPPP content can become clear, relatable lessons using pop culture, metaphors, and humor according to your preferences.",
+          "Turns dense theory into customized and clear examples.",
       },
       {
         id: 3,
         content: <FirstBentoAnimation />,
-        title: "Help with Mindset",
+        title: "Replenish",
         description:
-          "Improve focus and reduce burnout while learning relevant EPPP topics.",
+          "Improve focus and reduce burnout while learning relevant EPPP topics (ACT, MI, and CBT-I).",
       },
       {
         id: 4,
         content: <SecondBentoAnimation />,
         title: "Frictionless Studying",
-        description: "These functions are put into a simple interface, so that you can focus on studying.",
+        description: "Everything you need. Nothing you don’t",
       },
     ],
   },
@@ -135,7 +135,7 @@ export const siteConfig = {
   },
   quoteSection: {
     quote:
-      "I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and I got a 588 on my first try. This program is what I wish I had for a fraction of the time, cost, and stress.",
+      "I poured $1k and a month into studying and passed on my first try. This is the program that gives you everything I did and wish I had for a fraction of the time, cost, and stress.",
     author: {
       name: "Anders H. Chan, Psy.D.",
       role: "Founder - thePsychology.ai",
@@ -252,9 +252,9 @@ export const siteConfig = {
     },
   ],
   faqSection: {
-    title: "Frequently Asked Questions",
+    title: "Questions People Actually Ask",
     description:
-      "Answers to common questions about thePsychology.ai and its features. If you have any other questions, please don't hesitate to contact us.",
+      "If more questions, please contact us below.",
     faQitems: [
       {
         id: 1,
