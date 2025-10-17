@@ -258,26 +258,26 @@ export const siteConfig = {
     faQitems: [
       {
         id: 1,
-        question: "How does thePsychology.ai work?",
+        question: "What is ThePsychology.ai?",
         answer:
-          "We work by analyzing your learning preferences, providing learning material that matches your needs, and providing support through ACT and MI.",
+          "An study coach powered by OpenAI's API that is helping psychologists increase their chances of passing the EPPP quickly (designed for 1 month) — with less stress, zero data leaks, and minimal screen time",
       },
       {
         id: 2,
-        question: "What is an AI Agent?",
+        question: "How is it different from other EPPP tools?",
         answer:
-          "An AI Agent is an intelligent software program that can perform tasks autonomously, learn from interactions, and make decisions to help achieve specific goals.",
+          "We don’t just dump info — we prioritize what matters. No filler. No guessing. No burnout. This program helps you study smarter, not longer. This is built by psychologists, not corporations. If we as psychologists are to practice what we preach, we must also bring psychological principles in our learning. ",
       },
       {
         id: 3,
-        question: "How secure is my data?",
+        question: "Does it hurt the environment?",
         answer:
-          "We implement enterprise-grade security measures including end-to-end encryption, secure data centers, and regular security audits.",
+          "Yes, unfortunately. We are committed to awareness of consumption and consequently eco-efficient with AI use (e.g., running smaller models locally where possible). One month on our system uses 96% less energy than six months of traditional prep. That’s about 50 kg of CO₂ saved per person.",
       },
       {
         id: 4,
-        question: "Can I integrate my existing tools?",
-        answer: "Yes, thePsychology.ai is designed to be highly compatible with popular tools and platforms.",
+        question: "What happens to my data?",
+        answer: "Your data’s yours. Export it. Delete it. Done. It trains your plan, not our pockets.",
       },
       {
         id: 5,
@@ -287,8 +287,8 @@ export const siteConfig = {
       },
       {
         id: 6,
-        question: "How does thePsychology.ai save me time?",
-        answer: "We automate repetitive tasks, streamline workflows, and provide quick solutions to common challenges.",
+        question: "What’s the mission?",
+        answer: "To help you flourish: professionally, personally, and sustainably."
       },
     ],
   },
