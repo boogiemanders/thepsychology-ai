@@ -12,13 +12,14 @@ export function TestimonialSection() {
     >
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
-          Empower Your Studying with AI
+          Real Psychologists. Real Results.
         </h2>
         <p className="text-muted-foreground text-center text-balance font-medium">
-          Ask your AI Agent for real-time prioritization, learning, recovery, and actionable insights to streamline your studying.
+          Built by clinicians, powered by AI, proven by scores.
         </p>
       </SectionHeader>
       <SocialProofTestimonials testimonials={testimonials} />
     </section>
   );
+
 }
