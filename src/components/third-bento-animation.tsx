@@ -11,7 +11,13 @@ import { AnimatePresence, motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 export function ReasoningBasic() {
-  const reasoningText = `test3Based on your last quiz, focus on Ethics (53%) and Lifespan (48%) — both are high-weighted and give the best score gain. Next, hit Research/Stats (25%) — small section, but your lowest area`;
+  const reasoningText = `APA's Standard 5 is Integrity. Think of it like holding the Reality Stone — it controls how your professional image shapes the world around you. Use it wrong, and reality bends in harmful ways.
+
+When Tony Stark tells the press, “I am Iron Man,” he’s owning his truth. No fake degrees, no exaggerated claims. That’s 5.01–5.04: be accurate in every public statement and keep your team honest too. If your promo squad yells “Anders cures PTSD in one session!” that’s on you.
+
+5.05? Don’t fish for praise from people who depend on you — like asking Spider-Man to write your Yelp review while he’s still under your mentorship.
+
+5.06? No recruiting clients mid-battle. You can save civilians during chaos, but you don’t hand out business cards in the rubble.`;
 
   return (
     <Reasoning>
@@ -70,7 +76,7 @@ export function ThirdBentoAnimation() {
             }}
           >
             <p className="text-sm">
-              What should I focus on today?
+              Alright fine, what do I need to know for Ethics? Feeling Avengers today.
             </p>
           </motion.div>
           <div className="flex items-center bg-background rounded-full w-fit border border-border flex-shrink-0">
