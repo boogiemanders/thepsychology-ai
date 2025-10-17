@@ -2,6 +2,7 @@ import type React from "react"
 import { cn } from "@/lib/utils"
 import { FirstBentoAnimation } from "@/components/first-bento-animation"
 import { SecondBentoAnimation } from "@/components/second-bento-animation"
+import { ThirdBentoAnimation } from "@/components/third-bento-animation"
 
 export const Highlight = ({
   children,
