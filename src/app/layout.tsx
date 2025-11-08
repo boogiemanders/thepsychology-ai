@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 }
 
 export default function RootLayout({
@@ -40,7 +44,7 @@ export default function RootLayout({
         <Script src="https://unpkg.com/react-scan/dist/auto.global.js" />
       </head> */}
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background`} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="max-w-7xl mx-auto border-x relative">
             <div className="block w-px h-full border-l border-border absolute top-0 left-6 z-10"></div>

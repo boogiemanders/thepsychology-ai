@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Icons } from "@/components/icons";
 import {
   Reasoning,
   ReasoningContent,
   ReasoningResponse,
 } from "@/components/ui/reasoning";
 import { AnimatePresence, motion, useInView } from "motion/react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export function ReasoningBasic() {
@@ -89,7 +89,13 @@ export function ThirdBentoAnimation() {
         </div>
         <div className="flex items-start gap-2">
           <div className="flex items-center bg-background rounded-full size-10 flex-shrink-0 justify-center shadow-[0_0_10px_rgba(0,0,0,0.05)] border border-border">
-            <Icons.logo className="size-4" />
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={16}
+              height={16}
+              className="size-4 invert dark:invert-0"
+            />
           </div>
 
           <div className="relative">

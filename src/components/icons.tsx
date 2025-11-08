@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const Icons = {
   logo: ({ className }: { className?: string }) => (
@@ -1349,5 +1350,70 @@ export const Icons = {
         </g>
       </g>
     </svg>
+  ),
+  langfuse: () => (
+    <svg
+      width="52"
+      height="52"
+      viewBox="0 0 52 52"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="0" y="18" width="6" height="16" fill="#0052CC" rx="1" />
+      <rect x="46" y="18" width="6" height="16" fill="#0052CC" rx="1" />
+      <path
+        d="M 10 26 Q 10 15 18 15 Q 24 15 26 21 Q 24 22 20 22 Q 18 22 16 20 Q 14 18 12 22 Q 10 28 15 32 Q 20 35 26 32 Q 28 30 26 26"
+        fill="#E63946"
+      />
+      <path
+        d="M 42 26 Q 42 15 34 15 Q 28 15 26 21 Q 28 22 32 22 Q 34 22 36 20 Q 38 18 40 22 Q 42 28 37 32 Q 32 35 26 32 Q 28 30 26 26"
+        fill="#0052CC"
+      />
+      <path
+        d="M 26 32 Q 30 35 34 32 Q 40 28 42 26 L 38 26 Q 36 30 34 32 Q 28 35 26 32"
+        fill="#E63946"
+      />
+      <path
+        d="M 26 32 Q 22 35 18 32 Q 12 28 10 26 L 14 26 Q 16 30 18 32 Q 24 35 26 32"
+        fill="#0052CC"
+      />
+    </svg>
+  ),
+  uberdoc: () => (
+    <svg
+      width="52"
+      height="52"
+      viewBox="0 0 52 52"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="52" height="52" fill="#2B6CB0" rx="4" />
+      <path
+        d="M 14 12 L 14 28 Q 14 38 26 38 Q 38 38 38 28 L 38 12"
+        stroke="white"
+        strokeWidth="5"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  claudeAi: () => (
+    <Image
+      src="/images/claude-ai-symbol.png"
+      alt="Claude AI"
+      width={60}
+      height={60}
+      className="size-[60px]"
+    />
+  ),
+  openai: () => (
+    <Image
+      src="/images/openai.svg"
+      alt="OpenAI"
+      width={60}
+      height={60}
+      className="size-[60px] dark:invert"
+    />
   ),
 };

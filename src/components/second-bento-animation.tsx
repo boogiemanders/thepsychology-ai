@@ -1,5 +1,6 @@
 import { Icons } from "@/components/icons";
 import { OrbitingCircles } from "@/components/ui/orbiting-circle";
+import Image from "next/image";
 
 export function SecondBentoAnimation() {
   return (
@@ -7,8 +8,14 @@ export function SecondBentoAnimation() {
       <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
       <div className="pointer-events-none absolute top-0 left-0 h-20 w-full bg-gradient-to-b from-background to-transparent z-20"></div>
 
-      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 size-16 bg-secondary p-2 rounded-full z-30 md:bottom-0 md:top-auto">
-        <Icons.logo className="fill-white size-10" />
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 size-16 bg-black rounded-full z-30 md:bottom-0 md:top-auto">
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={40}
+          height={40}
+          className="size-10"
+        />
       </div>
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
         <div className="relative flex h-full w-full items-center justify-center translate-y-0 md:translate-y-32">
@@ -19,15 +26,16 @@ export function SecondBentoAnimation() {
             reverse
             speed={1}
           >
-            <Icons.boat />
-            <Icons.supabase />
-            <Icons.figma />
+            <Icons.claudeAi />
+            <Icons.vercel />
+            <Icons.gemini />
+            <Icons.openai />
           </OrbitingCircles>
 
           <OrbitingCircles index={1} iconSize={60} speed={0.5}>
-            <Icons.workos />
-            <Icons.runwayml />
+            <Icons.supabase />
             <Icons.gemini />
+            <Icons.supabase />
           </OrbitingCircles>
 
           <OrbitingCircles
@@ -38,8 +46,8 @@ export function SecondBentoAnimation() {
             speed={0.5}
           >
             <Icons.vercel />
-            <Icons.replit />
-            <Icons.posthog />
+            <Icons.figma />
+            <Icons.vercel />
           </OrbitingCircles>
         </div>
       </div>

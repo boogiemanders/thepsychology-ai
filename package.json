@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
     "@emotion/is-prop-valid": "latest",
     "@eslint/eslintrc": "latest",
     "@hookform/resolvers": "^3.10.0",
@@ -63,7 +64,7 @@
     "react-day-picker": "9.8.0",
     "react-dom": "^19",
     "react-hook-form": "^7.60.0",
-    "react-markdown": "latest",
+    "react-markdown": "^10.1.0",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.4",
     "remark-gfm": "latest",

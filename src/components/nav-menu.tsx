@@ -11,7 +11,13 @@ interface NavItem {
 
 const navs: NavItem[] = siteConfig.nav.links;
 
-export function NavMenu() {
+const loggedInNavs: NavItem[] = [
+  { name: "Practice", href: "/tools/exam-generator" },
+  { name: "Prioritize", href: "/tools/study-optimizer" },
+  { name: "Study", href: "/tools/topic-selector" },
+];
+
+export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
   const ref = useRef<HTMLUListElement>(null);
   const [left, setLeft] = useState(0);
   const [width, setWidth] = useState(0);
@@ -19,25 +25,32 @@ export function NavMenu() {
   const [activeSection, setActiveSection] = useState("hero");
   const [isManualScroll, setIsManualScroll] = useState(false);
 
+  const currentNavs = isLoggedIn ? loggedInNavs : navs;
+
   React.useEffect(() => {
     // Initialize with first nav item
-    const firstItem = ref.current?.querySelector(
-      `[href="#${navs[0].href.substring(1)}"]`,
-    )?.parentElement;
+    const selector = isLoggedIn
+      ? `[href="${currentNavs[0].href}"]`
+      : `[href="#${currentNavs[0].href.substring(1)}"]`;
+
+    const firstItem = ref.current?.querySelector(selector)?.parentElement;
     if (firstItem) {
       const rect = firstItem.getBoundingClientRect();
       setLeft(firstItem.offsetLeft);
       setWidth(rect.width);
       setIsReady(true);
     }
-  }, []);
+  }, [isLoggedIn, currentNavs]);
 
   React.useEffect(() => {
+    // Skip scroll handling for logged in users (they're on tools page)
+    if (isLoggedIn) return;
+
     const handleScroll = () => {
       // Skip scroll handling during manual click scrolling
       if (isManualScroll) return;
 
-      const sections = navs.map((item) => item.href.substring(1));
+      const sections = currentNavs.map((item) => item.href.substring(1));
 
       // Find the section closest to viewport top
       let closestSection = sections[0];
@@ -70,12 +83,17 @@ export function NavMenu() {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isManualScroll]);
+  }, [isManualScroll, isLoggedIn, currentNavs]);
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     item: NavItem,
   ) => {
+    // For logged in users, just let the link navigate normally
+    if (isLoggedIn) {
+      return;
+    }
+
     e.preventDefault();
 
     const targetId = item.href.substring(1);
@@ -117,13 +135,15 @@ export function NavMenu() {
         className="relative mx-auto flex w-fit rounded-full h-11 px-2 items-center justify-center"
         ref={ref}
       >
-        {navs.map((item) => (
+        {currentNavs.map((item) => (
           <li
             key={item.name}
             className={`z-10 cursor-pointer h-full flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-              activeSection === item.href.substring(1)
-                ? "text-primary"
-                : "text-primary/60 hover:text-primary"
+              isLoggedIn
+                ? "text-primary/60 hover:text-primary"
+                : activeSection === item.href.substring(1)
+                  ? "text-primary"
+                  : "text-primary/60 hover:text-primary"
             } tracking-tight`}
           >
             <a href={item.href} onClick={(e) => handleClick(e, item)}>

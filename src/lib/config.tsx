@@ -32,7 +32,7 @@ export const siteConfig = {
   },
   nav: {
     links: [
-      { id: 1, name: "Home", href: "#hero" },
+      { id: 1, name: "About", href: "/portfolio" },
       { id: 2, name: "How it Works", href: "#bento" },
       { id: 4, name: "Pricing", href: "#pricing" },
     ],
@@ -56,8 +56,8 @@ export const siteConfig = {
     title: "Master the EPPP Quickly",
     description: "Built by the psychologist who went from 19% to 588 in 30 days.",
     cta: {
-      primary: { text: "Start free", href: "#join" },
-      secondary: { text: "Login", href: "#features" },
+      primary: { text: "Start free", href: "/#get-started" },
+      secondary: { text: "Login", href: "/login" },
     },
   },
   companyShowcase: {
@@ -141,8 +141,7 @@ export const siteConfig = {
     author: {
       name: "Anders H. Chan, Psy.D.",
       role: "Founder - thePsychology.ai",
-      image:
-        "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/468960776_10169814148370440_5031711526513575898_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RwLXdRHpqQsQ7kNvwHLV2Sz&_nc_oc=AdlRejHiEYDIxZOtTELYLdqCBBZ_wRWPzYBVKrb3gKyqeJI_Ho0sJnAucafM9oodQE857lsPArZcUV8i9TY8jFdq&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=3_RZfnwtAadLI-Wq1T4bTw&oh=00_AfcE78yyG0-WHNmH2FGsUeIGV_w3TJBjXtUujDOnt43r5g&oe=68F39267",
+      image: "/images/anders-chan.png",
     },
   },
   pricing: {
@@ -151,38 +150,39 @@ export const siteConfig = {
     pricingItems: [
       {
         name: "7-Day Free Trial",
-        href: "#join",
+        href: "/#get-started",
         price: "$0",
         period: "week",
         yearlyPrice: "n/a",
-        features: ["Prioritizing Focus", "Custom Simple Study", "Recovery"],
-        featuresLabel: "Everything in Pro:",
-        description: "Try the program for a week. Full access.",
+        features: ["Diagnostic Exam", "Prioritizing Focus", "Custom Study (1 Topic)"],
+        featuresLabel: "Includes:",
+        description: "Try the program free for 7 days. Limited to one topic.",
         buttonText: "Select",
         buttonColor: "bg-black text-white",
         isPopular: true,
+        displayPrice: "$0/week",
       },
       {
         name: "Pro",
-        href: "#join",
+        href: "/#get-started",
         price: "$20",
         period: "month",
         yearlyPrice: "$200",
-        features: ["Mobile-use", "Gamification of Progress", "Video summaries"],
-        featuresLabel: "Future features include:",
-        description: "Everything in Pro:.",
+        features: ["Diagnostic Exam", "Prioritizing Focus", "Custom Study (All Topics)", "Recovery Tools"],
+        featuresLabel: "Everything includes:",
+        description: "Unlimited access to all topics and recovery tools.",
         buttonText: "Select",
         buttonColor: "bg-primary text-primary-foreground",
         isPopular: false,
       },
       {
         name: "Pro + Coaching",
-        href: "#join",
+        href: "/#get-started",
         price: "$200",
         period: "month",
         yearlyPrice: "$2000",
-        features: ["2× 45-min calls/month", "Personal study plan", "Priority support"],
-        featuresLabel: "Everything in Pro:",
+        features: ["Everything in Pro", "2× 45-min calls/month", "Personal study plan", "Priority support"],
+        featuresLabel: "Everything in Pro plus:",
         description: "Everything in Pro + 2 calls per month with Dr. Anders Chan.",
         buttonText: "Select",
         buttonColor: "bg-white text-black border",
@@ -231,7 +231,7 @@ export const siteConfig = {
       id: "4",
       name: "Anders Chan",
       role: "Founder of thePsychology.ai",
-      img: "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/468960776_10169814148370440_5031711526513575898_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RwLXdRHpqQsQ7kNvwHLV2Sz&_nc_oc=AdlRejHiEYDIxZOtTELYLdqCBBZ_wRWPzYBVKrb3gKyqeJI_Ho0sJnAucafM9oodQE857lsPArZcUV8i9TY8jFdq&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=3_RZfnwtAadLI-Wq1T4bTw&oh=00_AfcE78yyG0-WHNmH2FGsUeIGV_w3TJBjXtUujDOnt43r5g&oe=68F39267",
+      img: "/images/anders-chan.png",
       description: (
         <p>
           I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and{" "}

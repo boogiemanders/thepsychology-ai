@@ -1,10 +1,11 @@
 "use client"
 
-import { Icons } from "@/components/icons"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import { siteConfig } from "@/lib/config"
 import { ChevronRightIcon } from "@radix-ui/react-icons"
+import Image from "next/image"
 import Link from "next/link"
+import { Icons } from "@/components/icons"
 export function FooterSection() {
   const tablet = useMediaQuery("(max-width: 1024px)")
 
@@ -13,7 +14,13 @@ export function FooterSection() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between p-10">
         <div className="flex flex-col items-start justify-start gap-y-5 max-w-xs mx-0">
           <Link href="/" className="flex items-center gap-2">
-            <Icons.logo className="size-8" />
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={32}
+              height={32}
+              className="size-8 invert dark:invert-0"
+            />
             <p className="text-xl font-semibold text-primary">thePsychology.ai</p>
           </Link>
           <p className="tracking-tight text-muted-foreground font-medium">{siteConfig.hero.description}</p>

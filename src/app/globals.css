@@ -3,6 +3,27 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Use system font stack + Inter for modern typography */
+* {
+  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Clean, spacious typography inspired by MIT design - only for main content */
+html {
+  font-size: 16px;
+}
+
+/* Only apply generous line-height to main content, not navbar/header */
+main {
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+/* Key term emphasis - only bold, no other styling */
+strong, b {
+  font-weight: 600;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

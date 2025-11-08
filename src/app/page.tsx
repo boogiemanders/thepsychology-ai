@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/sections/hero-section"
 // import { JoinSection } from "@/components/sections/join-section"
 import { PricingSection } from "@/components/sections/pricing-section"
 import { QuoteSection } from "@/components/sections/quote-section"
+import { SignupSection } from "@/components/sections/signup-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       {/* <FeatureSection /> */}
       {/* <GrowthSection /> */}
       <PricingSection />
+      <SignupSection />
       {/* <JoinSection /> */}
       <TestimonialSection />
       <FAQSection />

@@ -3,89 +3,15 @@
 import { SectionHeader } from "@/components/section-header"
 import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
-import { useState } from "react"
 
-interface TabsProps {
-  activeTab: "yearly" | "monthly"
-  setActiveTab: (tab: "yearly" | "monthly") => void
-  className?: string
-}
-
-function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
-  return (
-    <div
-      className={cn(
-        "relative flex w-fit items-center rounded-full border p-0.5 backdrop-blur-sm cursor-pointer h-9 flex-row bg-muted",
-        className,
-      )}
-    >
-      {["monthly", "yearly"].map((tab) => (
-        <button
-          key={tab}
-          onClick={() => setActiveTab(tab as "yearly" | "monthly")}
-          className={cn("relative z-[1] px-2 h-8 flex items-center justify-center cursor-pointer", {
-            "z-0": activeTab === tab,
-          })}
-        >
-          {activeTab === tab && (
-            <motion.div
-              layoutId="active-tab"
-              className="absolute inset-0 rounded-full bg-white dark:bg-[#3F3F46] shadow-md border border-border"
-              transition={{
-                duration: 0.2,
-                type: "spring",
-                stiffness: 300,
-                damping: 25,
-                velocity: 2,
-              }}
-            />
-          )}
-          <span
-            className={cn(
-              "relative block text-sm font-medium duration-200 shrink-0",
-              activeTab === tab ? "text-primary" : "text-muted-foreground",
-            )}
-          >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            {tab === "yearly" && (
-              <span className="ml-2 text-xs font-semibold text-secondary bg-secondary/15 py-0.5 w-[calc(100%+1rem)] px-1 rounded-full">
-                -20%
-              </span>
-            )}
-          </span>
-        </button>
-      ))}
-    </div>
-  )
-}
 
 export function PricingSection() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly")
-
-  // Update price animation
-  const PriceDisplay = ({
-    tier,
-  }: {
-    tier: (typeof siteConfig.pricing.pricingItems)[0]
-  }) => {
-    const price = billingCycle === "yearly" ? tier.yearlyPrice : tier.price
-
-    return (
-      <motion.span
-        key={price}
-        className="text-4xl font-semibold"
-        initial={{
-          opacity: 0,
-          x: billingCycle === "yearly" ? -10 : 10,
-          filter: "blur(5px)",
-        }}
-        animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-      >
-        {price}
-      </motion.span>
-    )
+  const handleTierSelect = (tierName: string) => {
+    // Store selected tier in sessionStorage for SignupSection to use
+    sessionStorage.setItem('selectedTier', tierName)
+    // Scroll to signup section
+    const element = document.getElementById('get-started')
+    element?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -97,10 +23,6 @@ export function PricingSection() {
         <p className="text-muted-foreground text-center text-balance font-medium">{siteConfig.pricing.description}</p>
       </SectionHeader>
       <div className="relative w-full h-full">
-        <div className="absolute -top-14 left-1/2 -translate-x-1/2">
-          <PricingTabs activeTab={billingCycle} setActiveTab={setBillingCycle} className="mx-auto" />
-        </div>
-
         <div className="grid min-[650px]:grid-cols-2 min-[900px]:grid-cols-3 gap-4 w-full max-w-6xl mx-auto px-6">
           {siteConfig.pricing.pricingItems.map((tier) => (
             <div
@@ -110,7 +32,6 @@ export function PricingSection() {
                 tier.isPopular
                   ? "md:shadow-[0px_61px_24px_-10px_rgba(0,0,0,0.01),0px_34px_20px_-8px_rgba(0,0,0,0.05),0px_15px_15px_-6px_rgba(0,0,0,0.09),0px_4px_8px_-2px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(0,0,0,0.08)] bg-accent"
                   : "bg-accent border border-border",
-                tier.isPopular && billingCycle === "yearly" ? "opacity-40" : "opacity-100",
               )}
             >
               <div className="flex flex-col gap-4 p-4">
@@ -123,14 +44,15 @@ export function PricingSection() {
                   )}
                 </p>
                 <div className="flex items-baseline mt-2">
-                  <PriceDisplay tier={tier} />
-                  <span className="ml-2">/{billingCycle === "yearly" ? "year" : "month"}</span>
+                  <span className="text-4xl font-semibold">{tier.price}</span>
+                  <span className="ml-2">/month</span>
                 </div>
                 <p className="text-sm mt-2">{tier.description}</p>
               </div>
 
               <div className="flex flex-col gap-2 p-4">
-                <div
+                <button
+                  onClick={() => handleTierSelect(tier.name)}
                   className={`h-10 w-full flex items-center justify-center text-sm font-normal tracking-wide rounded-full px-4 cursor-pointer transition-all ease-out relative group ${
                     tier.isPopular
                       ? `${tier.buttonColor} shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)]`
@@ -139,9 +61,9 @@ export function PricingSection() {
                 >
                   <span className="group-hover:opacity-0 transition-opacity duration-200">{tier.buttonText}</span>
                   <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    Select
+                    Get Started
                   </span>
-                </div>
+                </button>
               </div>
               <hr className="border-border dark:border-white/20" />
               <div className="p-4">
@@ -200,53 +122,6 @@ export function PricingSection() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="w-full max-w-6xl mx-auto px-6 mt-6">
-          <div className="rounded-xl bg-accent border border-border p-6">
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  required
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Phone Number (optional)
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="+1 (555) 000-0000"
-                />
-              </div>
-              <div>
-                <label htmlFor="notes" className="block text-sm font-medium mb-2">
-                  Notes (optional)
-                </label>
-                <textarea
-                  id="notes"
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="Tell us about your study goals with, progress with, and questions about the EPPP..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full h-12 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:opacity-90 transition-opacity"
-              >
-                Join the Waitlist
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </section>
