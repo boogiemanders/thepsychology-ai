@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Lightbulb, TrendingDown, BookOpen, Target } from 'lucide-react'
+import { ArrowLeft, Lightbulb, TrendingDown, BookOpen, Target, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
+import * as animations from '@/lib/animations'
 
 interface AnalysisData {
   overallScore?: number
@@ -128,15 +129,19 @@ export function StudyOptimizerContent() {
         </Link>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          initial="hidden"
+          animate="visible"
+          variants={animations.containerVariants}
         >
-          <div className="mb-12">
+          <motion.div variants={animations.itemVariants} className="mb-12">
             <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border border-amber-500/20">
+              <motion.div
+                className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border border-amber-500/20"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Lightbulb size={32} className="text-amber-500" />
-              </div>
+              </motion.div>
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">Prioritize</h1>
                 <p className="text-lg text-muted-foreground">
@@ -144,7 +149,7 @@ export function StudyOptimizerContent() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {isAnalyzing && !analysis && (
             <motion.div
@@ -181,78 +186,107 @@ export function StudyOptimizerContent() {
 
           {analysis && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
+              initial="hidden"
+              animate="visible"
+              variants={animations.containerVariants}
               className="space-y-8"
             >
               {/* Performance Overview */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-secondary/30 to-secondary/10 backdrop-blur-sm hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+                  variants={animations.itemVariants}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-blue-500/10 to-blue-500/5 backdrop-blur-sm hover:border-blue-500/40 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="font-semibold">Overall Performance</h3>
-                    <TrendingDown size={20} />
+                    <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
+                      <TrendingDown size={20} className="text-blue-500" />
+                    </motion.div>
                   </div>
-                  <p className="text-3xl font-bold">
+                  <motion.p
+                    className="text-4xl font-bold text-blue-500"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                  >
                     {analysis.match(/(\d+)%/)?.[1] || '—'}%
-                  </p>
+                  </motion.p>
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="border border-border rounded-lg p-6"
+                  variants={animations.itemVariants}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-purple-500/10 to-purple-500/5 backdrop-blur-sm hover:border-purple-500/40 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="font-semibold">Areas to Focus</h3>
-                    <Target size={20} />
+                    <motion.div whileHover={{ rotate: -360 }} transition={{ duration: 0.5 }}>
+                      <Target size={20} className="text-purple-500" />
+                    </motion.div>
                   </div>
-                  <p className="text-3xl font-bold">
+                  <motion.p
+                    className="text-4xl font-bold text-purple-500"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                  >
                     {analysis.match(/\d+/)?.[0] || '—'}
-                  </p>
+                  </motion.p>
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-secondary/30 to-secondary/10 backdrop-blur-sm hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+                  variants={animations.itemVariants}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-500/5 backdrop-blur-sm hover:border-green-500/40 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="font-semibold">Study Plan</h3>
-                    <BookOpen size={20} />
+                    <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
+                      <BookOpen size={20} className="text-green-500" />
+                    </motion.div>
                   </div>
-                  <p className="text-lg font-bold">Ready</p>
+                  <motion.p
+                    className="text-2xl font-bold text-green-500"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    Ready
+                  </motion.p>
                 </motion.div>
               </div>
 
               {/* Detailed Analysis */}
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                variants={animations.itemVariants}
                 className="rounded-xl p-8 border border-border/50 bg-gradient-to-br from-secondary/30 to-secondary/10 backdrop-blur-sm"
               >
-                <h2 className="text-2xl font-bold mb-6">Detailed Analysis</h2>
-                <div className="prose prose-invert max-w-none">
+                <motion.h2
+                  className="text-2xl font-bold mb-6 flex items-center gap-2"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <Zap size={24} className="text-amber-500" />
+                  Detailed Analysis
+                </motion.h2>
+                <motion.div
+                  className="prose prose-invert max-w-none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                >
                   <div className="space-y-4 text-sm text-foreground leading-relaxed whitespace-pre-wrap">
                     {analysis}
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
 
               {/* Action Buttons */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="flex gap-4 justify-center"
+                variants={animations.itemVariants}
+                className="flex gap-4 justify-center pt-4"
               >
                 <Button
                   variant="outline"
