@@ -52,9 +52,9 @@ export const siteConfig = {
         <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
       </svg>
     ),
-    badge: "Keep your time, money, and sanity",
+    badge: "19% to 588 in 30 days",
     title: "Master the EPPP Quickly",
-    description: "Built by the psychologist who went from 19% to 588 in 30 days.",
+    description: "AI developed by psychologists to save your time, money, and sanity.",
     cta: {
       primary: { text: "Start free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
@@ -145,8 +145,8 @@ export const siteConfig = {
     },
   },
   pricing: {
-    title: "Waitlist",
-    description: "Select all that interest you",
+    title: "Study Efficiently Today",
+    description: "Choose your learning plan",
     pricingItems: [
       {
         name: "7-Day Free Trial",
@@ -154,11 +154,11 @@ export const siteConfig = {
         price: "$0",
         period: "week",
         yearlyPrice: "n/a",
-        features: ["Diagnostic Exam", "Prioritizing Focus", "Custom Study (1 Topic)"],
+        features: ["Diagnostic Exam", "Prioritizing Focus", "Custom Study (1 Topic/Domain)"],
         featuresLabel: "Includes:",
-        description: "Try the program free for 7 days. Limited to one topic.",
+        description: "Limited to one topic per domain.",
         buttonText: "Select",
-        buttonColor: "bg-black text-white",
+        buttonColor: "bg-primary text-primary-foreground",
         isPopular: true,
         displayPrice: "$0/week",
       },
@@ -170,7 +170,7 @@ export const siteConfig = {
         yearlyPrice: "$200",
         features: ["Diagnostic Exam", "Prioritizing Focus", "Custom Study (All Topics)", "Recovery Tools"],
         featuresLabel: "Everything includes:",
-        description: "Unlimited access to all topics and recovery tools.",
+        description: "Unlimited access to all topics and tools.",
         buttonText: "Select",
         buttonColor: "bg-primary text-primary-foreground",
         isPopular: false,
@@ -183,9 +183,9 @@ export const siteConfig = {
         yearlyPrice: "$2000",
         features: ["Everything in Pro", "2× 45-min calls/month", "Personal study plan", "Priority support"],
         featuresLabel: "Everything in Pro plus:",
-        description: "Everything in Pro + 2 calls per month with Dr. Anders Chan.",
+        description: "Pro + 2 1-on-1 calls/month with Dr. Chan",
         buttonText: "Select",
-        buttonColor: "bg-white text-black border",
+        buttonColor: "bg-primary text-primary-foreground",
         isPopular: false,
       },
     ],

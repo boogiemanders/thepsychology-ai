@@ -6,10 +6,8 @@ import { FAQSection } from "@/components/sections/faq-section"
 // import { FeatureSection } from "@/components/sections/feature-section"
 import { FooterSection } from "@/components/sections/footer-section"
 import { HeroSection } from "@/components/sections/hero-section"
-// import { JoinSection } from "@/components/sections/join-section"
 import { PricingSection } from "@/components/sections/pricing-section"
-import { QuoteSection } from "@/components/sections/quote-section"
-import { SignupSection } from "@/components/sections/signup-section"
+// import { SignupSection } from "@/components/sections/signup-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 export default function Home() {
@@ -18,13 +16,11 @@ export default function Home() {
       <HeroSection />
       <CompanyShowcase />
       <BentoSection />
-      <QuoteSection />
+      <TestimonialSection />
       {/* <FeatureSection /> */}
       {/* <GrowthSection /> */}
       <PricingSection />
-      <SignupSection />
-      {/* <JoinSection /> */}
-      <TestimonialSection />
+      {/* <SignupSection /> */}
       <FAQSection />
       {/* <CTASection /> */}
       <FooterSection />
