@@ -15,7 +15,7 @@ export function JoinSection() {
     <section id="join" className="flex flex-col items-center justify-center gap-10 py-20 w-full relative px-6">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
-          Join the Waitlist
+          Get Started Today
         </h2>
         <p className="text-muted-foreground text-center text-balance font-medium">
           Start your journey to passing the EPPP
@@ -132,7 +132,7 @@ export function JoinSection() {
           type="submit"
           className="w-full h-11 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity shadow-md"
         >
-          Join the waitlist
+          Get Started Today
         </button>
 
         <p className="text-xs text-muted-foreground text-center leading-relaxed">
