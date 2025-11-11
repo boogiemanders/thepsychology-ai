@@ -94,10 +94,21 @@ export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
       return;
     }
 
+    // If href doesn't start with #, let it navigate normally (e.g., /portfolio)
+    if (!item.href.startsWith("#")) {
+      return;
+    }
+
     e.preventDefault();
 
     const targetId = item.href.substring(1);
     const element = document.getElementById(targetId);
+
+    // If element doesn't exist on current page, navigate to home page with hash
+    if (!element) {
+      window.location.href = "/" + item.href;
+      return;
+    }
 
     if (element) {
       // Set manual scroll flag

@@ -34,7 +34,7 @@ export const siteConfig = {
     links: [
       { id: 1, name: "About", href: "/portfolio" },
       { id: 2, name: "How it Works", href: "#bento" },
-      { id: 4, name: "Pricing", href: "#pricing" },
+      { id: 4, name: "Pricing", href: "#get-started" },
     ],
   },
   hero: {
@@ -302,7 +302,7 @@ export const siteConfig = {
     {
       title: "Company",
       links: [
-        { id: 1, title: "About", url: "#" },
+        { id: 1, title: "About", url: "/portfolio" },
         { id: 2, title: "Contact", url: "#" },
         { id: 3, title: "Blog", url: "#" },
         { id: 4, title: "Story", url: "#" },

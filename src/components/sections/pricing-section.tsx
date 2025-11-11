@@ -14,6 +14,8 @@ export function PricingSection() {
     testDate: "",
     thoughtsGoalsQuestions: ""
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
 
   const handleTierSelect = (tierName: string) => {
     setExpandedTier(expandedTier === tierName ? null : tierName)
@@ -23,6 +25,7 @@ export function PricingSection() {
       testDate: "",
       thoughtsGoalsQuestions: ""
     })
+    setSubmitMessage(null)
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,14 +36,62 @@ export function PricingSection() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted with:', formData)
-    // Handle form submission here
+    setIsSubmitting(true)
+    setSubmitMessage(null)
+
+    try {
+      const response = await fetch('/api/pricing-submissions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          tier: expandedTier,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        setSubmitMessage({
+          type: 'error',
+          text: data.error || 'Failed to submit form. Please try again.'
+        })
+        return
+      }
+
+      setSubmitMessage({
+        type: 'success',
+        text: 'Thank you! We\'ve received your information and will be in touch soon.'
+      })
+
+      // Reset form after successful submission
+      setTimeout(() => {
+        setFormData({
+          email: "",
+          phone: "",
+          testDate: "",
+          thoughtsGoalsQuestions: ""
+        })
+        setExpandedTier(null)
+        setSubmitMessage(null)
+      }, 3000)
+    } catch (error) {
+      console.error('Submission error:', error)
+      setSubmitMessage({
+        type: 'error',
+        text: 'An error occurred. Please try again.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
-    <section id="pricing" className="flex flex-col items-center justify-center gap-10 pb-10 w-full relative">
+    <section id="get-started" className="flex flex-col items-center justify-center gap-10 pb-10 w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
           {siteConfig.pricing.title}
@@ -172,12 +223,27 @@ export function PricingSection() {
 
                     <motion.button
                       type="submit"
-                      className="w-full h-10 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      disabled={isSubmitting}
+                      className="w-full h-10 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                      whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                      whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                     >
-                      Get Started
+                      {isSubmitting ? 'Submitting...' : 'Get Started'}
                     </motion.button>
+
+                    {submitMessage && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className={`p-3 rounded-lg text-sm text-center ${
+                          submitMessage.type === 'success'
+                            ? 'bg-green-50 text-green-700 border border-green-200'
+                            : 'bg-red-50 text-red-700 border border-red-200'
+                        }`}
+                      >
+                        {submitMessage.text}
+                      </motion.div>
+                    )}
 
                     <p className="text-xs text-foreground/60 text-center leading-relaxed">
                       Educational tool, not therapy. Not affiliated with ASPPB.
@@ -193,8 +259,14 @@ export function PricingSection() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
               >
                 <div className="p-4">
-                  {tier.name !== "Basic" && (
-                    <p className="text-sm mb-4">Everything in {tier.name === "Pro" ? "Basic" : "Pro"} +</p>
+                  {tier.name === "7-Day Free Trial" ? (
+                    <p className="text-sm mb-4">No Credit Card</p>
+                  ) : tier.name === "Pro" ? (
+                    <p className="text-sm mb-4">Full Features</p>
+                  ) : tier.name === "Pro + Coaching" ? (
+                    <p className="text-sm mb-4">Premium Support</p>
+                  ) : tier.name !== "Basic" && (
+                    <p className="text-sm mb-4">Everything in Pro +</p>
                   )}
                   <ul className="space-y-3">
                     {tier.features.map((feature) => (
