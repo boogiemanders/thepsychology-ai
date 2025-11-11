@@ -316,7 +316,7 @@ export default function ExamGeneratorPage() {
                       ? 'bg-red-500/20 text-red-500'
                       : 'bg-secondary text-foreground'
                   }`}>
-                    <div className="w-2 h-2 rounded-full bg-current animate-pulse" />
+                    <div className="w-2 h-2 rounded-full bg-current animate-breath" />
                     {formatTime(timeRemaining)}
                   </div>
                 )}
