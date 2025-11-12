@@ -42,6 +42,10 @@ export default function LoginPage() {
 
       if (signInError) {
         console.error('Sign in error:', signInError)
+        // Provide helpful message for unconfirmed email
+        if (signInError.message.includes('Invalid login credentials')) {
+          throw new Error('Invalid email or password. If you just signed up, please check your email to confirm your account first.')
+        }
         throw signInError
       }
 
