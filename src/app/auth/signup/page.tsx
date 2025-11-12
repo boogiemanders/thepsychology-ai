@@ -1,13 +1,14 @@
 'use client'
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
 import { validatePromoCode } from '@/lib/promo-codes'
 
 export default function SignUpPage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
@@ -18,6 +19,19 @@ export default function SignUpPage() {
     fullName: '',
     promoCode: '',
   })
+  const [tierFromPricing, setTierFromPricing] = useState<string | null>(null)
+
+  // Get email and tier from URL parameters
+  useEffect(() => {
+    const email = searchParams.get('email')
+    const tier = searchParams.get('tier')
+    if (email) {
+      setFormData((prev) => ({ ...prev, email }))
+    }
+    if (tier) {
+      setTierFromPricing(tier)
+    }
+  }, [searchParams])
   const [promoStatus, setPromoStatus] = useState<{
     message: string
     type: 'success' | 'error' | null
@@ -98,12 +112,15 @@ export default function SignUpPage() {
       }
 
       // Create user profile
+      // Use tier from pricing form if available, otherwise use promo code or free tier
+      const subscriptionTier = tierFromPricing || (formData.promoCode ? 'pro' : 'free')
+
       const { error: profileError } = await supabase.from('users').insert([
         {
           id: authData.user.id,
           email: formData.email,
           full_name: formData.fullName || null,
-          subscription_tier: formData.promoCode ? 'pro' : 'free',
+          subscription_tier: subscriptionTier,
           promo_code_used: formData.promoCode || null,
           subscription_started_at: new Date().toISOString(),
         },
@@ -165,6 +182,15 @@ export default function SignUpPage() {
             <div className="mb-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
               <p className="text-green-400 font-medium">
                 Account created successfully! Redirecting to dashboard...
+              </p>
+            </div>
+          )}
+
+          {/* Tier Info Message */}
+          {tierFromPricing && (
+            <div className="mb-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg">
+              <p className="text-blue-400 font-medium">
+                ✨ You're signing up for the <span className="font-bold capitalize">{tierFromPricing}</span> plan from the pricing form
               </p>
             </div>
           )}

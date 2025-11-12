@@ -1,12 +1,14 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { SectionHeader } from "@/components/section-header"
 import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
 
 export function PricingSection() {
+  const router = useRouter()
   const [expandedTier, setExpandedTier] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     email: "",
@@ -65,20 +67,15 @@ export function PricingSection() {
 
       setSubmitMessage({
         type: 'success',
-        text: 'Thank you! We\'ve received your information and will be in touch soon.'
+        text: 'Thank you! Redirecting to sign up...'
       })
 
-      // Reset form after successful submission
+      // Redirect to sign-up with email and tier pre-filled
       setTimeout(() => {
-        setFormData({
-          email: "",
-          phone: "",
-          testDate: "",
-          thoughtsGoalsQuestions: ""
-        })
-        setExpandedTier(null)
-        setSubmitMessage(null)
-      }, 3000)
+        if (data.redirectUrl) {
+          router.push(data.redirectUrl)
+        }
+      }, 1500)
     } catch (error) {
       console.error('Submission error:', error)
       setSubmitMessage({
