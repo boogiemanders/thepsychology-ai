@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
         success: true,
         data: data,
         message: 'Submission received. Please sign up or log in with your email to get started.',
-        redirectUrl: '/auth/signup?email=' + encodeURIComponent(body.email) + '&tier=' + encodeURIComponent(subscriptionTier)
+        redirectUrl: '/signup?email=' + encodeURIComponent(body.email) + '&tier=' + encodeURIComponent(subscriptionTier)
       },
       { status: 201 }
     )

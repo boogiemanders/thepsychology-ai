@@ -28,7 +28,7 @@ export default function PerformanceDashboard() {
 
   useEffect(() => {
     if (mounted && !loading && !user) {
-      router.push('/auth/login')
+      router.push('/login')
     }
   }, [user, loading, mounted, router])
 

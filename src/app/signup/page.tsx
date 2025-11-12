@@ -312,7 +312,7 @@ export default function SignUpPage() {
           {!success &&
           <p className="text-center text-slate-400 mt-6">
             Already have an account?{' '}
-            <Link href="/auth/login" className="text-blue-400 hover:text-blue-300 font-medium transition">
+            <Link href="/login" className="text-blue-400 hover:text-blue-300 font-medium transition">
               Log in
             </Link>
           </p>}
@@ -322,7 +322,7 @@ export default function SignUpPage() {
               <p className="text-slate-400 mb-4">
                 Once you verify your email, you'll be able to log in and access your account.
               </p>
-              <Link href="/auth/login" className="text-blue-400 hover:text-blue-300 font-medium transition inline-block">
+              <Link href="/login" className="text-blue-400 hover:text-blue-300 font-medium transition inline-block">
                 Go to Login →
               </Link>
             </div>
