@@ -56,12 +56,7 @@ export function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const [user, setUser] = useState<ReturnType<typeof getCurrentUser>>(null);
-
-  useEffect(() => {
-    // Load user after hydration to avoid mismatch
-    setUser(getCurrentUser());
-  }, []);
+  const [user, setUser] = useState(getCurrentUser());
 
   useEffect(() => {
     const handleScroll = () => {

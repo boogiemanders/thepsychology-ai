@@ -115,57 +115,33 @@ export default function SignUpPage() {
 
       console.log('User created successfully:', authData.user.id)
 
-      // Create user profile via API endpoint
+      // Create user profile
       // Use tier from pricing form if available, otherwise use promo code or free tier
       const subscriptionTier = tierFromPricing || (formData.promoCode ? 'pro' : 'free')
 
-      try {
-        const profileResponse = await fetch('/api/auth/create-profile', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            userId: authData.user.id,
-            email: formData.email,
-            fullName: formData.fullName || undefined,
-            subscriptionTier: subscriptionTier,
-            promoCode: formData.promoCode || undefined,
-          }),
-        })
+      const { error: profileError } = await supabase.from('users').insert([
+        {
+          id: authData.user.id,
+          email: formData.email,
+          full_name: formData.fullName || null,
+          subscription_tier: subscriptionTier,
+          promo_code_used: formData.promoCode || null,
+          subscription_started_at: new Date().toISOString(),
+        },
+      ])
 
-        const profileData = await profileResponse.json()
-
-        if (!profileResponse.ok) {
-          console.error('Profile creation error:', profileData)
-          setError(`Profile creation failed: ${profileData.error || 'Unknown error'}`)
-          // Don't throw - account is created, profile might have issues
-        } else {
-          console.log('User profile created successfully')
-        }
-      } catch (profileCatchError) {
-        console.error('Profile catch error:', profileCatchError)
-        setError(`Failed to create profile: ${profileCatchError instanceof Error ? profileCatchError.message : 'Unknown error'}`)
+      if (profileError) {
+        console.error('Profile creation error:', profileError)
+        // Don't throw - account is created, profile might have issues
       }
 
       // If promo code was provided, apply it
       if (formData.promoCode && promoStatus.type === 'success') {
-        try {
-          const { data: promoData } = await supabase
-            .from('promo_codes')
-            .select('usage_count')
-            .eq('code', formData.promoCode.toUpperCase())
-            .single()
-
-          if (promoData) {
-            await supabase
-              .from('promo_codes')
-              .update({ usage_count: (promoData.usage_count || 0) + 1 })
-              .eq('code', formData.promoCode.toUpperCase())
-          }
-        } catch (err) {
-          console.error('Promo code update error:', err)
-        }
+        await supabase
+          .from('promo_codes')
+          .update({ usage_count: supabase.rpc('increment', { amount: 1 }) })
+          .eq('code', formData.promoCode.toUpperCase())
+          .catch((err) => console.error('Promo code update error:', err))
       }
 
       setSuccess(true)

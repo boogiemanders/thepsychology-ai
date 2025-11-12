@@ -219,15 +219,13 @@ export function PricingSection() {
                     </div>
 
 
-                    <div className="flex justify-center">
-                      <InteractiveHoverButton
-                        type="submit"
-                        disabled={isSubmitting}
-                        text={isSubmitting ? 'Submitting...' : 'Get Started'}
-                      >
-                        {isSubmitting ? 'Submitting...' : 'Get Started'}
-                      </InteractiveHoverButton>
-                    </div>
+                    <InteractiveHoverButton
+                      type="submit"
+                      disabled={isSubmitting}
+                      text={isSubmitting ? 'Submitting...' : 'Get Started'}
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Get Started'}
+                    </InteractiveHoverButton>
 
                     {submitMessage && (
                       <motion.div
