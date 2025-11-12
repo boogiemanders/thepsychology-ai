@@ -1,34 +1,30 @@
-import React from "react"
-import { motion } from "motion/react"
+import { ArrowRight } from "lucide-react"
 
-interface InteractiveHoverButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text?: string
-  children?: React.ReactNode
-}
+import { cn } from "@/lib/utils"
 
-export const InteractiveHoverButton = React.forwardRef<
-  HTMLButtonElement,
-  InteractiveHoverButtonProps
->(({ text = "Get Started", children, className, ...props }, ref) => {
+export function InteractiveHoverButton({
+  children,
+  className,
+  ...props
+}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <motion.button
-      ref={ref}
-      className={`group relative inline-flex h-10 w-full items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 px-6 font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-blue-500/50 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+    <button
+      className={cn(
+        "group bg-background relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold",
+        className
+      )}
       {...props}
     >
-      <span className="relative flex items-center justify-center">
-        <span className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-200 group-hover:opacity-0">
-          {children || text}
+      <div className="flex items-center gap-2">
+        <div className="bg-primary h-2 w-2 rounded-full transition-all duration-300 group-hover:scale-[100.8]"></div>
+        <span className="inline-block transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
+          {children}
         </span>
-        <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-          ✨ {children || text}
-        </span>
-      </span>
-    </motion.button>
+      </div>
+      <div className="text-primary-foreground absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:-translate-x-5 group-hover:opacity-100">
+        <span>{children}</span>
+        <ArrowRight />
+      </div>
+    </button>
   )
-})
-
-InteractiveHoverButton.displayName = "InteractiveHoverButton"
+}
