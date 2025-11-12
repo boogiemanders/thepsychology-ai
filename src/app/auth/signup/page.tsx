@@ -104,12 +104,16 @@ export default function SignUpPage() {
       })
 
       if (signUpError) {
+        console.error('Sign up error:', signUpError)
         throw signUpError
       }
 
       if (!authData.user) {
-        throw new Error('User creation failed')
+        console.error('No user returned from signup')
+        throw new Error('User creation failed - no user returned from Supabase')
       }
+
+      console.log('User created successfully:', authData.user.id)
 
       // Create user profile
       // Use tier from pricing form if available, otherwise use promo code or free tier
