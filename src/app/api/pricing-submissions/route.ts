@@ -49,7 +49,6 @@ export async function POST(request: NextRequest) {
           test_date: body.testDate || null,
           thoughts_goals_questions: body.thoughtsGoalsQuestions || null,
           tier: body.tier,
-          subscription_tier: subscriptionTier,
         },
       ])
       .select()

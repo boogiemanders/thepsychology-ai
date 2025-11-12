@@ -6,6 +6,7 @@ import { SectionHeader } from "@/components/section-header"
 import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 
 export function PricingSection() {
   const router = useRouter()
@@ -218,15 +219,13 @@ export function PricingSection() {
                     </div>
 
 
-                    <motion.button
+                    <InteractiveHoverButton
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-10 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
-                      whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                      whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                      text={isSubmitting ? 'Submitting...' : 'Get Started'}
                     >
                       {isSubmitting ? 'Submitting...' : 'Get Started'}
-                    </motion.button>
+                    </InteractiveHoverButton>
 
                     {submitMessage && (
                       <motion.div
