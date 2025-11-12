@@ -5,8 +5,8 @@ import { useAuth } from '@/context/auth-context'
 import { useEffect, useState } from 'react'
 
 export default function DashboardPage() {
-  const { user, userProfile, loading } = useAuth()
   const router = useRouter()
+  const { user, userProfile, loading } = useAuth()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -126,7 +126,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Quick Actions */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {/* Start Studying Card */}
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 shadow-2xl hover:border-blue-500/50 transition-all duration-300">
               <div className="flex items-start justify-between mb-4">
@@ -138,6 +138,27 @@ export default function DashboardPage() {
               </div>
               <button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-lg hover:shadow-blue-500/50">
                 Go to Study Tools
+              </button>
+            </div>
+
+            {/* Performance Analytics Card (Pro only) */}
+            <div className={`${userProfile?.subscription_tier === 'pro' || userProfile?.subscription_tier === 'premium' ? 'bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border-cyan-500/20 hover:border-cyan-500/50' : 'bg-slate-900/40 border-slate-800/50 opacity-60'} backdrop-blur-xl border rounded-2xl p-8 shadow-2xl transition-all duration-300`}>
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Performance Analytics</h3>
+                  <p className="text-slate-400 text-sm">
+                    {userProfile?.subscription_tier === 'pro' || userProfile?.subscription_tier === 'premium'
+                      ? 'View your exam results and progress analytics'
+                      : 'Available for Pro tier members'}
+                  </p>
+                </div>
+                <span className="text-3xl">{userProfile?.subscription_tier === 'pro' || userProfile?.subscription_tier === 'premium' ? '📊' : '🔒'}</span>
+              </div>
+              <button
+                onClick={() => userProfile?.subscription_tier === 'pro' || userProfile?.subscription_tier === 'premium' ? router.push('/dashboard/performance') : null}
+                disabled={userProfile?.subscription_tier !== 'pro' && userProfile?.subscription_tier !== 'premium'}
+                className={`w-full mt-4 ${userProfile?.subscription_tier === 'pro' || userProfile?.subscription_tier === 'premium' ? 'bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-700 hover:to-cyan-600 shadow-lg hover:shadow-cyan-500/50' : 'bg-slate-700 cursor-not-allowed'} text-white font-semibold py-2 px-4 rounded-lg transition duration-200`}>
+                {userProfile?.subscription_tier === 'pro' || userProfile?.subscription_tier === 'premium' ? 'View Analytics' : 'Upgrade to Pro'}
               </button>
             </div>
 
