@@ -1,14 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
-import { useAuth } from '@/context/auth-context'
 
 export default function LoginPage() {
   const router = useRouter()
-  const { user, loading: authLoading } = useAuth()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
@@ -16,12 +14,6 @@ export default function LoginPage() {
     password: '',
   })
 
-  // Redirect if already logged in
-  useEffect(() => {
-    if (user && !authLoading) {
-      router.push('/dashboard')
-    }
-  }, [user, authLoading, router])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -64,7 +56,10 @@ export default function LoginPage() {
       }
 
       console.log('Login successful for user:', data.user.id)
-      // Don't redirect here - let the useEffect handle it when auth context updates
+      // Redirect to dashboard after a brief delay to let Supabase session settle
+      setTimeout(() => {
+        router.push('/dashboard')
+      }, 500)
     } catch (err) {
       console.error('Login error:', err)
       const message = err instanceof Error ? err.message : 'Login failed'
