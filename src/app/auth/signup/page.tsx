@@ -153,10 +153,7 @@ export default function SignUpPage() {
         promoCode: '',
       })
 
-      // Redirect to dashboard after 2 seconds
-      setTimeout(() => {
-        router.push('/dashboard')
-      }, 2000)
+      // Don't redirect - user needs to verify email first
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Sign up failed'
       setError(message)
@@ -184,8 +181,11 @@ export default function SignUpPage() {
           {/* Success Message */}
           {success && (
             <div className="mb-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
-              <p className="text-green-400 font-medium">
-                Account created successfully! Redirecting to dashboard...
+              <p className="text-green-400 font-medium mb-2">
+                Account created successfully!
+              </p>
+              <p className="text-green-400 text-sm">
+                Please check your email to verify your account. You should receive a confirmation email shortly.
               </p>
             </div>
           )}
@@ -207,7 +207,7 @@ export default function SignUpPage() {
           )}
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          {!success && <form onSubmit={handleSubmit} className="space-y-4">
             {/* Full Name */}
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium text-slate-300 mb-2">
@@ -306,15 +306,27 @@ export default function SignUpPage() {
             >
               {loading ? 'Creating account...' : 'Sign Up'}
             </button>
-          </form>
+          </form>}
 
           {/* Login Link */}
+          {!success &&
           <p className="text-center text-slate-400 mt-6">
             Already have an account?{' '}
             <Link href="/auth/login" className="text-blue-400 hover:text-blue-300 font-medium transition">
               Log in
             </Link>
-          </p>
+          </p>}
+
+          {success && (
+            <div className="text-center mt-8">
+              <p className="text-slate-400 mb-4">
+                Once you verify your email, you'll be able to log in and access your account.
+              </p>
+              <Link href="/auth/login" className="text-blue-400 hover:text-blue-300 font-medium transition inline-block">
+                Go to Login →
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
