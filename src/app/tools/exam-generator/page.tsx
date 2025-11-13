@@ -2,8 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Zap } from 'lucide-react'
+import { ArrowLeft, Zap, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Progress } from '@/components/ui/progress'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { Alert, AlertDescription } from '@/components/ui/alert'
 import { motion } from 'motion/react'
 
 interface Question {
@@ -15,6 +21,7 @@ interface Question {
   domain: string
   difficulty: string
   type: string
+  isScored?: boolean
 }
 
 export default function ExamGeneratorPage() {
@@ -54,12 +61,13 @@ export default function ExamGeneratorPage() {
         // Auto-submit if time runs out
         if (newTime <= 0) {
           // Navigate to results
+          const scoredQuestions = questions.filter(q => q.isScored !== false)
           const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
             const q = questions[parseInt(qIdx)]
-            return q && answer === q.correct_answer
+            return q && q.isScored !== false && answer === q.correct_answer
           }).length
 
-          window.location.href = `/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify({ questions, selectedAnswers, score, totalQuestions: questions.length }))}`
+          window.location.href = `/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify({ questions, selectedAnswers, score, totalQuestions: scoredQuestions.length }))}`
           return 0
         }
 
@@ -162,11 +170,11 @@ export default function ExamGeneratorPage() {
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
           <Link
-            href="/tools"
+            href="/dashboard"
             className="flex items-center gap-2 text-primary hover:underline mb-8"
           >
             <ArrowLeft size={18} />
-            Back to Tools
+            Back to Dashboard
           </Link>
 
           <motion.div
@@ -175,54 +183,110 @@ export default function ExamGeneratorPage() {
             transition={{ duration: 0.3 }}
           >
             {!isGenerating && !mode && (
-              <div className="text-center py-20">
-                <div className="mb-6 flex justify-center">
-                  <div className="w-16 h-16 rounded-lg bg-secondary flex items-center justify-center">
+              <div className="text-center py-12">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="mb-6 flex justify-center"
+                >
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 flex items-center justify-center">
                     <Zap size={32} className="text-yellow-500" />
                   </div>
-                </div>
-                <h1 className="text-4xl font-bold mb-4">EPPP Exam Generator</h1>
+                </motion.div>
+                <h1 className="text-4xl font-bold mb-4">EPPP Practice Exam</h1>
                 <p className="text-muted-foreground mb-12 text-lg max-w-2xl mx-auto">
-                  Choose an exam mode to get started.
+                  Choose an exam mode to generate 225 questions.
                 </p>
 
-                <div className="flex gap-6 justify-center max-w-2xl mx-auto mb-8">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="flex-1"
-                  >
-                    <button
-                      onClick={() => {
-                        setMode('study')
-                        handleGenerateExam()
-                      }}
-                      className="w-full p-8 rounded-lg border-2 border-primary/50 hover:border-primary bg-primary/5 hover:bg-primary/10 transition-all"
-                    >
-                      <h3 className="text-xl font-bold mb-2">📚 Study Mode</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Learn at your own pace. Correct answers turn green, learn from mistakes immediately.
-                      </p>
-                    </button>
-                  </motion.div>
+                <Tabs defaultValue="study" className="max-w-2xl mx-auto">
+                  <TabsList className="grid w-full grid-cols-2 mb-8">
+                    <TabsTrigger value="study" className="text-base">
+                      📚 Study Mode
+                    </TabsTrigger>
+                    <TabsTrigger value="test" className="text-base">
+                      📋 Test Mode
+                    </TabsTrigger>
+                  </TabsList>
 
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="flex-1"
-                  >
-                    <button
-                      onClick={() => {
-                        setMode('test')
-                        handleGenerateExam()
-                      }}
-                      className="w-full p-8 rounded-lg border-2 border-border hover:border-primary bg-secondary/10 hover:bg-secondary/20 transition-all"
-                    >
-                      <h3 className="text-xl font-bold mb-2">📋 Test Mode</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Simulate real exam conditions. See all answers at the end, no instant feedback.
-                      </p>
-                    </button>
-                  </motion.div>
-                </div>
+                  <TabsContent value="study">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Study Mode</CardTitle>
+                        <CardDescription>
+                          Learn at your own pace with immediate feedback
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <ul className="space-y-2 text-sm">
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                            Correct answers turn green immediately
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                            Learn from mistakes with detailed explanations
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                            No time pressure - take as long as you need
+                          </li>
+                        </ul>
+                      </CardContent>
+                      <CardFooter>
+                        <Button
+                          onClick={() => {
+                            setMode('study')
+                            handleGenerateExam()
+                          }}
+                          className="w-full"
+                          size="lg"
+                        >
+                          Start Study Mode
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </TabsContent>
+
+                  <TabsContent value="test">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Test Mode</CardTitle>
+                        <CardDescription>
+                          Simulate real exam conditions
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <ul className="space-y-2 text-sm">
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                            See all answers only at the end
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                            Timed exam with countdown (4 hours 15 minutes)
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                            Realistic EPPP exam experience
+                          </li>
+                        </ul>
+                      </CardContent>
+                      <CardFooter>
+                        <Button
+                          onClick={() => {
+                            setMode('test')
+                            handleGenerateExam()
+                          }}
+                          className="w-full"
+                          size="lg"
+                          variant="outline"
+                        >
+                          Start Test Mode
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </TabsContent>
+                </Tabs>
               </div>
             )}
 
@@ -238,17 +302,23 @@ export default function ExamGeneratorPage() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="bg-destructive/10 border border-destructive/30 rounded-lg p-6 mb-8"
+                className="mb-8"
               >
-                <h3 className="font-semibold text-destructive mb-2">Error</h3>
-                <p className="text-sm text-destructive/80">{error}</p>
-                <Button
-                  onClick={handleGenerateExam}
-                  variant="outline"
-                  className="mt-4"
-                >
-                  Try Again
-                </Button>
+                <Alert variant="destructive">
+                  <AlertDescription className="space-y-3">
+                    <div>
+                      <h3 className="font-semibold mb-1">Error</h3>
+                      <p className="text-sm">{error}</p>
+                    </div>
+                    <Button
+                      onClick={handleGenerateExam}
+                      variant="outline"
+                      size="sm"
+                    >
+                      Try Again
+                    </Button>
+                  </AlertDescription>
+                </Alert>
               </motion.div>
             )}
           </motion.div>
@@ -292,52 +362,55 @@ export default function ExamGeneratorPage() {
           className="space-y-6"
         >
           {/* Mode and Progress */}
-          <div className="space-y-2">
-            <div className="flex justify-between items-center mb-3">
-              <div className="flex items-center gap-2">
-                <h2 className="font-semibold">
-                  Question {currentQuestion + 1} of {questions.length}
-                </h2>
-                <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                  mode === 'study'
-                    ? 'bg-blue-500/20 text-blue-400'
-                    : 'bg-purple-500/20 text-purple-400'
-                }`}>
-                  {mode === 'study' ? '📚 Study Mode' : '📋 Test Mode'}
-                </span>
+          <Card>
+            <CardHeader className="pb-3">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                  <CardTitle className="text-xl">
+                    Question {currentQuestion + 1} of {questions.length}
+                  </CardTitle>
+                  <Badge
+                    variant={mode === 'study' ? 'default' : 'secondary'}
+                    className={mode === 'study' ? 'bg-blue-500/20 text-blue-400 hover:bg-blue-500/30' : 'bg-purple-500/20 text-purple-400 hover:bg-purple-500/30'}
+                  >
+                    {mode === 'study' ? '📚 Study Mode' : '📋 Test Mode'}
+                  </Badge>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Badge variant="outline" className="font-normal">
+                    {question.domain}
+                  </Badge>
+                  <Badge variant="outline" className="font-normal">
+                    {question.difficulty}
+                  </Badge>
+                  {mode === 'test' && timeRemaining > 0 && (
+                    <Badge
+                      variant={isTimeWarning ? "destructive" : "secondary"}
+                      className="flex items-center gap-2 px-4 py-2 font-mono text-base"
+                    >
+                      <Clock className="w-4 h-4" />
+                      {formatTime(timeRemaining)}
+                    </Badge>
+                  )}
+                </div>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="text-sm text-muted-foreground">
-                  {question.domain} • {question.difficulty}
-                </span>
-                {mode === 'test' && timeRemaining > 0 && (
-                  <div className={`flex items-center gap-2 px-4 py-2 rounded-lg font-mono font-semibold transition-colors ${
-                    isTimeWarning
-                      ? 'bg-red-500/20 text-red-500'
-                      : 'bg-secondary text-foreground'
-                  }`}>
-                    <div className="w-2 h-2 rounded-full bg-current animate-breath" />
-                    {formatTime(timeRemaining)}
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className="w-full bg-secondary rounded-full h-2">
-              <div
-                className="bg-primary h-2 rounded-full transition-all duration-300"
-                style={{
-                  width: `${((currentQuestion + 1) / questions.length) * 100}%`,
-                }}
-              />
-            </div>
-          </div>
+            </CardHeader>
+            <CardContent className="pb-4">
+              <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-2" />
+            </CardContent>
+          </Card>
 
           {/* Question */}
-          <div className="bg-secondary/30 rounded-lg p-8 border border-border">
-            <h3 className="text-xl font-semibold mb-8">{question.question}</h3>
-
-            {/* Answer Options */}
-            <div className="space-y-3">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg font-normal leading-relaxed">
+                {question.question}
+              </CardTitle>
+            </CardHeader>
+            <Separator />
+            <CardContent className="pt-6">
+              {/* Answer Options */}
+              <div className="space-y-3">
               {question.options.map((option, idx) => {
                 const isSelected = selectedAnswer === option
                 const isAnswered = selectedAnswer !== undefined
@@ -345,81 +418,77 @@ export default function ExamGeneratorPage() {
                 const optionIsCorrect = option === question.correct_answer
 
                 return (
-                  <motion.button
+                  <motion.div
                     key={idx}
-                    whileHover={!isAnswered ? { scale: 1.02 } : {}}
-                    onClick={() => !isAnswered && handleSelectAnswer(option)}
-                    disabled={isAnswered}
-                    className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
-                      isSelected
-                        ? mode === 'study'
-                          ? optionIsCorrect
-                            ? 'border-green-500/50 bg-green-500/10'
-                            : 'border-border hover:border-primary/50'
-                          : isAnswered
-                            ? optionIsCorrect
-                              ? 'border-green-500/50 bg-green-500/10'
-                              : 'border-red-500/50 bg-red-500/10'
-                            : 'border-primary bg-primary/10'
-                        : mode === 'study'
-                          ? optionIsCorrect && isAnswered
-                            ? 'border-green-500/50 bg-green-500/10'
-                            : 'border-border hover:border-primary/50'
-                          : isAnswered && optionIsCorrect
-                            ? 'border-green-500/50 bg-green-500/10'
-                            : 'border-border hover:border-primary/50'
-                    }`}
+                    whileHover={!isAnswered ? { scale: 1.01 } : {}}
                   >
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold text-base mt-0.5">
-                        {optionLetter}.
-                      </span>
-                      <span>{option}</span>
-                    </div>
-                  </motion.button>
+                    <Button
+                      onClick={() => !isAnswered && handleSelectAnswer(option)}
+                      disabled={isAnswered}
+                      variant="outline"
+                      className={`w-full text-left p-4 h-auto justify-start transition-colors ${
+                        isSelected
+                          ? optionIsCorrect
+                            ? 'border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-950 text-foreground'
+                            : 'border-red-600 bg-red-50 dark:border-red-500 dark:bg-red-950 text-foreground'
+                          : optionIsCorrect && isAnswered
+                            ? 'border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-950 text-foreground'
+                            : ''
+                      }`}
+                    >
+                      <div className="flex items-start gap-3 w-full">
+                        <span className="font-bold text-base flex-shrink-0">
+                          {optionLetter}.
+                        </span>
+                        <span>{option}</span>
+                      </div>
+                    </Button>
+                  </motion.div>
                 )
               })}
-            </div>
+              </div>
 
-            {/* Show Answer Button (Test Mode Only) */}
-            {selectedAnswer && !showExplanation && mode === 'test' && (
-              <Button
-                onClick={handleShowExplanation}
-                variant="outline"
-                className="w-full mt-6"
-              >
-                Show Explanation
-              </Button>
-            )}
+              {/* Show Answer Button (Test Mode Only) */}
+              {selectedAnswer && !showExplanation && mode === 'test' && (
+                <Button
+                  onClick={handleShowExplanation}
+                  variant="outline"
+                  className="w-full mt-6"
+                >
+                  Show Explanation
+                </Button>
+              )}
 
-            {/* Explanation */}
-            {showExplanation && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className={`mt-6 p-4 rounded-lg border ${
-                  isCorrect
-                    ? 'bg-green-500/10 border-green-500/30'
-                    : 'bg-yellow-500/10 border-yellow-500/30'
-                }`}
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <p className="font-semibold">
-                    {isCorrect ? '✓ Correct!' : '✗ Incorrect'}
-                  </p>
-                  <div className="text-right">
-                    <p className="text-xs text-muted-foreground mb-1">Correct Answer</p>
-                    <p className="text-2xl font-bold">
-                      {correctLetter}
+              {/* Explanation */}
+              {showExplanation && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`mt-6 p-4 rounded-lg border ${
+                    isCorrect
+                      ? 'bg-green-500/10 border-green-500/30'
+                      : 'bg-yellow-500/10 border-yellow-500/30'
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <p className="font-semibold">
+                      {isCorrect ? '✓ Correct!' : '✗ Incorrect'}
                     </p>
+                    <div className="text-right">
+                      <p className="text-xs text-muted-foreground mb-1">Correct Answer</p>
+                      <p className="text-2xl font-bold">
+                        {correctLetter}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {question.explanation}
-                </p>
-              </motion.div>
-            )}
-          </div>
+                  <Separator className="my-3" />
+                  <p className="text-sm text-muted-foreground">
+                    {question.explanation}
+                  </p>
+                </motion.div>
+              )}
+            </CardContent>
+          </Card>
 
           {/* Navigation */}
           {showExplanation && (
@@ -438,7 +507,15 @@ export default function ExamGeneratorPage() {
 
               {currentQuestion === questions.length - 1 ? (
                 <Link
-                  href={`/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify({ questions, selectedAnswers }))}`}
+                  href={`/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify({
+                    questions,
+                    selectedAnswers,
+                    score: Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
+                      const q = questions[parseInt(qIdx)]
+                      return q && q.isScored !== false && answer === q.correct_answer
+                    }).length,
+                    totalQuestions: questions.filter(q => q.isScored !== false).length
+                  }))}`}
                   className="flex-1"
                 >
                   <Button className="w-full">

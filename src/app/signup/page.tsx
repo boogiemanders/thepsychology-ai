@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
 import { validatePromoCode } from '@/lib/promo-codes'
 
-export default function SignUpPage() {
+function SignUpContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [loading, setLoading] = useState(false)
@@ -36,6 +36,15 @@ export default function SignUpPage() {
     message: string
     type: 'success' | 'error' | null
   }>({ message: '', type: null })
+
+  const tiers = [
+    { name: 'Week Trial', value: 'free', price: '$0', description: 'Limited Access' },
+    { name: 'Pro', value: 'pro', price: '$20/mo', description: 'Full Access' },
+    { name: 'Pro + Coaching', value: 'pro_coaching', price: '$200/mo', description: 'Full + Calls' },
+  ]
+
+  // Set initial tier from URL, default to first tier if not specified
+  const selectedTier = tierFromPricing || tiers[0].value
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -115,35 +124,57 @@ export default function SignUpPage() {
 
       console.log('User created successfully:', authData.user.id)
 
-      // Create user profile
+      // Create user profile via server API endpoint
       // Use tier from pricing form if available, otherwise use promo code or free tier
       const subscriptionTier = tierFromPricing || (formData.promoCode ? 'pro' : 'free')
 
-      const { error: profileError } = await supabase.from('users').insert([
-        {
-          id: authData.user.id,
+      console.log('Starting profile creation for user:', authData.user.id)
+      try {
+        const profileBody = {
+          userId: authData.user.id,
           email: formData.email,
-          full_name: formData.fullName || null,
-          subscription_tier: subscriptionTier,
-          promo_code_used: formData.promoCode || null,
-          subscription_started_at: new Date().toISOString(),
-        },
-      ])
+          fullName: formData.fullName || null,
+          subscriptionTier,
+          promoCodeUsed: formData.promoCode || null,
+        }
+        console.log('Profile creation request body:', profileBody)
 
-      if (profileError) {
-        console.error('Profile creation error:', profileError)
-        // Don't throw - account is created, profile might have issues
+        const profileResponse = await fetch('/api/auth/create-profile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(profileBody),
+        })
+
+        console.log('Profile creation response status:', profileResponse.status)
+
+        if (!profileResponse.ok) {
+          const errorData = await profileResponse.json()
+          console.error('Profile creation API error:', {
+            status: profileResponse.status,
+            error: errorData,
+          })
+          // Don't throw - account is created, profile creation can be retried
+        } else {
+          const profileData = await profileResponse.json()
+          console.log('Profile created successfully:', profileData)
+        }
+      } catch (err) {
+        console.error('Profile creation request error:', err)
+        // Don't throw - account is created even if profile creation fails
       }
 
-      // If promo code was provided, apply it
+      // If promo code was provided, apply it in background
       if (formData.promoCode && promoStatus.type === 'success') {
-        await supabase
+        supabase
           .from('promo_codes')
           .update({ usage_count: supabase.rpc('increment', { amount: 1 }) })
           .eq('code', formData.promoCode.toUpperCase())
           .catch((err) => console.error('Promo code update error:', err))
       }
 
+      // Show success message after auth and profile creation
       setSuccess(true)
       setFormData({
         email: '',
@@ -157,9 +188,12 @@ export default function SignUpPage() {
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Sign up failed'
       setError(message)
-    } finally {
       setLoading(false)
+      return
     }
+
+    // Reset loading state after success
+    setLoading(false)
   }
 
   return (
@@ -190,14 +224,30 @@ export default function SignUpPage() {
             </div>
           )}
 
-          {/* Tier Info Message */}
-          {tierFromPricing && (
-            <div className="mb-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg">
-              <p className="text-blue-400 font-medium">
-                ✨ You're signing up for the <span className="font-bold capitalize">{tierFromPricing}</span> plan from the pricing form
-              </p>
+          {/* Tier Selection */}
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-slate-300 mb-3">
+              Choose Your Plan
+            </label>
+            <div className="grid grid-cols-3 gap-2">
+              {tiers.map((tier) => (
+                <button
+                  key={tier.value}
+                  type="button"
+                  onClick={() => setTierFromPricing(tier.value)}
+                  className={`p-3 rounded-lg border-2 transition-all text-center text-xs ${
+                    selectedTier === tier.value
+                      ? 'border-blue-500 bg-blue-500/10'
+                      : 'border-slate-700 bg-slate-800/30 hover:border-slate-600'
+                  }`}
+                >
+                  <div className="font-semibold text-slate-200">{tier.name}</div>
+                  <div className="text-blue-400 font-bold text-sm mt-1">{tier.price}</div>
+                  <div className="text-slate-400 text-xs mt-1">{tier.description}</div>
+                </button>
+              ))}
             </div>
-          )}
+          </div>
 
           {/* Error Message */}
           {error && (
@@ -330,5 +380,13 @@ export default function SignUpPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function SignUpPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center">Loading...</div>}>
+      <SignUpContent />
+    </Suspense>
   )
 }

@@ -5,48 +5,21 @@ const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 })
 
-// FULL 225-QUESTION VERSION (COMMENTED OUT FOR TESTING):
-// const EXAM_GENERATOR_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
-//
-// Your task is to generate a comprehensive 225-question practice exam following official ASPPB specifications.
-//
-// The exam should include:
-// - 225 questions total
-// - Proper domain distribution following EPPP weights
-// - 175 regular questions (counted for scoring)
-// - 50 comparative questions testing distinctions
-// - Multiple choice format with 4 options each
-// - Answer key with brief explanations
-// - Difficulty balanced throughout
-//
-// Generate the exam in JSON format with this structure:
-// {
-//   "questions": [
-//     {
-//       "id": number,
-//       "question": "Question text",
-//       "options": ["A", "B", "C", "D"],
-//       "correct_answer": "A",
-//       "explanation": "Why this is correct",
-//       "domain": "Domain 1-8",
-//       "difficulty": "easy|medium|hard",
-//       "type": "standard|comparative|experimental"
-//     }
-//   ]
-// }
-//
-// Start generating the exam now. Format each question clearly.`
-
-// TEMPORARY 2-QUESTION VERSION FOR TESTING:
+// FULL 225-QUESTION VERSION WITH UNSCORED EXPERIMENTAL QUESTIONS:
 const EXAM_GENERATOR_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
-Your task is to generate a practice exam with 2 questions following ASPPB specifications.
+Your task is to generate a comprehensive 225-question practice exam following official ASPPB specifications.
 
 The exam should include:
-- 2 questions total (for testing purposes)
+- 225 questions total
+- Proper domain distribution following EPPP weights
+- 180 scored questions (80%) - standard and medium difficulty questions that count toward score
+- 45 unscored experimental questions (20%) - harder questions for research/development that DO NOT count toward score
 - Multiple choice format with 4 options each
 - Answer key with brief explanations
-- Mix of different EPPP domains
+- Questions distributed across all 8 EPPP domains
+
+IMPORTANT: Mark the unscored questions clearly with "isScored": false. These should be noticeably harder than the scored questions and are used for data collection. Users will see their score calculated only from the 180 scored questions, not the 45 unscored ones.
 
 Generate the exam in JSON format with this structure:
 {
@@ -59,12 +32,13 @@ Generate the exam in JSON format with this structure:
       "explanation": "Why this is correct",
       "domain": "Domain 1-8",
       "difficulty": "easy|medium|hard",
+      "isScored": true,
       "type": "standard"
     }
   ]
 }
 
-Start generating the exam now. Format each question clearly.`
+Start generating the exam now. Format each question clearly. Remember: exactly 180 questions with "isScored": true, and 45 questions with "isScored": false.`
 
 export async function POST(request: NextRequest) {
   try {

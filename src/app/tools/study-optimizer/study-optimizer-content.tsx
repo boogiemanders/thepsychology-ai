@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Lightbulb, TrendingDown, BookOpen, Target, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
@@ -95,11 +97,11 @@ export function StudyOptimizerContent() {
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
           <Link
-            href="/tools"
+            href="/dashboard"
             className="flex items-center gap-2 text-primary hover:underline mb-8"
           >
             <ArrowLeft size={18} />
-            Back to Tools
+            Back to Dashboard
           </Link>
           <div className="text-center py-20">
             <h1 className="text-2xl font-bold mb-4">No exam results found</h1>
@@ -195,92 +197,112 @@ export function StudyOptimizerContent() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <motion.div
                   variants={animations.itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-blue-500/10 to-blue-500/5 backdrop-blur-sm hover:border-blue-500/40 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.02 }}
+                  className="transition-transform"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold">Overall Performance</h3>
-                    <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                      <TrendingDown size={20} className="text-blue-500" />
-                    </motion.div>
-                  </div>
-                  <motion.p
-                    className="text-4xl font-bold text-blue-500"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    {analysis.match(/(\d+)%/)?.[1] || '—'}%
-                  </motion.p>
+                  <Card className="hover:bg-accent/50 transition-colors">
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-base">Overall Performance</CardTitle>
+                        <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
+                          <TrendingDown size={20} className="text-muted-foreground" />
+                        </motion.div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <motion.p
+                        className="text-4xl font-bold"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        {analysis.match(/(\d+)%/)?.[1] || '—'}%
+                      </motion.p>
+                    </CardContent>
+                  </Card>
                 </motion.div>
 
                 <motion.div
                   variants={animations.itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-purple-500/10 to-purple-500/5 backdrop-blur-sm hover:border-purple-500/40 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.02 }}
+                  className="transition-transform"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold">Areas to Focus</h3>
-                    <motion.div whileHover={{ rotate: -360 }} transition={{ duration: 0.5 }}>
-                      <Target size={20} className="text-purple-500" />
-                    </motion.div>
-                  </div>
-                  <motion.p
-                    className="text-4xl font-bold text-purple-500"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    {analysis.match(/\d+/)?.[0] || '—'}
-                  </motion.p>
+                  <Card className="hover:bg-accent/50 transition-colors">
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-base">Areas to Focus</CardTitle>
+                        <motion.div whileHover={{ rotate: -360 }} transition={{ duration: 0.5 }}>
+                          <Target size={20} className="text-muted-foreground" />
+                        </motion.div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <motion.p
+                        className="text-4xl font-bold"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.4 }}
+                      >
+                        {analysis.match(/\d+/)?.[0] || '—'}
+                      </motion.p>
+                    </CardContent>
+                  </Card>
                 </motion.div>
 
                 <motion.div
                   variants={animations.itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="border border-border/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-500/5 backdrop-blur-sm hover:border-green-500/40 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.02 }}
+                  className="transition-transform"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold">Study Plan</h3>
-                    <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
-                      <BookOpen size={20} className="text-green-500" />
-                    </motion.div>
-                  </div>
-                  <motion.p
-                    className="text-2xl font-bold text-green-500"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                  >
-                    Ready
-                  </motion.p>
+                  <Card className="hover:bg-accent/50 transition-colors">
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-base">Study Plan</CardTitle>
+                        <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
+                          <BookOpen size={20} className="text-muted-foreground" />
+                        </motion.div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <motion.p
+                        className="text-2xl font-bold"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 }}
+                      >
+                        Ready
+                      </motion.p>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               </div>
 
               {/* Detailed Analysis */}
               <motion.div
                 variants={animations.itemVariants}
-                className="rounded-xl p-8 border border-border/50 bg-gradient-to-br from-secondary/30 to-secondary/10 backdrop-blur-sm"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
               >
-                <motion.h2
-                  className="text-2xl font-bold mb-6 flex items-center gap-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <Zap size={24} className="text-amber-500" />
-                  Detailed Analysis
-                </motion.h2>
-                <motion.div
-                  className="prose prose-invert max-w-none"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6 }}
-                >
-                  <div className="space-y-4 text-sm text-foreground leading-relaxed whitespace-pre-wrap">
-                    {analysis}
-                  </div>
-                </motion.div>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-2xl flex items-center gap-2">
+                      <Zap size={24} className="text-muted-foreground" />
+                      Detailed Analysis
+                    </CardTitle>
+                    <CardDescription>
+                      Review your performance and personalized recommendations
+                    </CardDescription>
+                  </CardHeader>
+                  <Separator />
+                  <CardContent className="pt-6">
+                    <div className="prose prose-invert max-w-none">
+                      <div className="space-y-4 text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                        {analysis}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               {/* Action Buttons */}

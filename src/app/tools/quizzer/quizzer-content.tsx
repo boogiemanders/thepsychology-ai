@@ -421,8 +421,8 @@ export function QuizzerContent() {
                     Select Another Topic
                   </Button>
                 </Link>
-                <Link href="/tools" className="block">
-                  <Button className="w-full">Back to Tools</Button>
+                <Link href="/tools/topic-selector" className="block">
+                  <Button className="w-full">Back to Topics</Button>
                 </Link>
               </div>
             </div>

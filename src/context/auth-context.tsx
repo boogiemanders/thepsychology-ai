@@ -9,6 +9,7 @@ interface UserProfile {
   email: string
   full_name?: string
   subscription_tier: 'free' | 'basic' | 'pro' | 'pro_coaching'
+  exam_date?: string
   created_at: string
 }
 
@@ -30,62 +31,67 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Initialize auth state
   useEffect(() => {
-    const initAuth = async () => {
-      try {
-        const {
-          data: { user: currentUser },
-        } = await supabase.auth.getUser()
-        setUser(currentUser ?? null)
+    let initialCheckDone = false
 
-        if (currentUser) {
-          // Fetch user profile
-          const { data, error: fetchError } = await supabase
-            .from('users')
-            .select('*')
-            .eq('id', currentUser.id)
-            .single()
-
-          if (fetchError && fetchError.code !== 'PGRST116') {
-            console.error('Error fetching user profile:', fetchError)
-          } else {
-            setUserProfile(data)
-          }
-        }
-      } catch (err) {
-        console.error('Auth initialization error:', err)
-        setError('Failed to initialize authentication')
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    initAuth()
-
-    // Listen for auth changes
+    // Listen for auth changes - this handles login/logout
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (!initialCheckDone) {
+        // First call is the initial state
+        initialCheckDone = true
+        setLoading(false)
+      }
+
       setUser(session?.user ?? null)
 
       if (session?.user) {
-        // Fetch user profile on auth change
-        const { data, error: fetchError } = await supabase
+        // Fetch user profile on auth change (don't await since it can hang)
+        supabase
           .from('users')
           .select('*')
           .eq('id', session.user.id)
           .single()
+          .then(({ data, error: fetchError }) => {
+            if (fetchError && fetchError.code !== 'PGRST116') {
+              console.error('Error fetching user profile:', fetchError)
+            } else {
+              setUserProfile(data)
+            }
+          })
+          .catch(err => {
+            console.error('Profile fetch failed:', err)
+          })
 
-        if (fetchError && fetchError.code !== 'PGRST116') {
-          console.error('Error fetching user profile:', fetchError)
-        } else {
-          setUserProfile(data)
-        }
+        // Set a timeout to create a basic profile if fetch doesn't complete
+        setTimeout(() => {
+          setUserProfile(prev => {
+            if (!prev && session?.user) {
+              return {
+                id: session.user.id,
+                email: session.user.email || '',
+                subscription_tier: 'free',
+                created_at: new Date().toISOString(),
+              }
+            }
+            return prev
+          })
+        }, 3000)
       } else {
         setUserProfile(null)
       }
     })
 
+    // Set a fallback timeout in case onAuthStateChange never fires
+    const fallbackTimeout = setTimeout(() => {
+      if (!initialCheckDone) {
+        setLoading(false)
+        initialCheckDone = true
+      }
+    }, 1000)
+
     return () => {
+      clearTimeout(fallbackTimeout)
       subscription?.unsubscribe()
     }
   }, [])

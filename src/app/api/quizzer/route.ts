@@ -8,9 +8,10 @@ const client = new Anthropic({
 const QUIZZER_PROMPT = `You are an expert EPPP quiz generator. Your task is to generate exactly 10 multiple-choice questions on the given topic.
 
 Requirements:
-- 10 questions total
+- 10 questions total (8 scored + 2 unscored experimental)
 - 4 options per question (A, B, C, D)
-- Difficulty: Mix of medium and hard questions
+- Scored questions (8): Mix of medium difficulty questions that count toward the score
+- Unscored questions (2): Noticeably harder experimental questions that DO NOT count toward score
 - Focus on concepts that might appear on the EPPP exam
 - Include one correct answer per question
 - Provide brief explanations for why the correct answer is right
@@ -19,6 +20,8 @@ Requirements:
   * These should be main topics or subtopics from the lesson
   * Examples: "Classical Conditioning", "Operant Conditioning", "Reinforcement Schedules"
   * Be consistent - reuse section names across multiple questions when appropriate
+- Mark unscored questions with "isScored": false (these 2 questions should be the hardest)
+- Mark scored questions with "isScored": true (default for all others)
 
 Return the quiz in this exact JSON format:
 {
@@ -29,10 +32,13 @@ Return the quiz in this exact JSON format:
       "options": ["Option A", "Option B", "Option C", "Option D"],
       "correctAnswer": "Option A",
       "explanation": "Brief explanation of why this is correct",
-      "relatedSections": ["Main Concept", "Sub-concept"]
+      "relatedSections": ["Main Concept", "Sub-concept"],
+      "isScored": true
     }
   ]
 }
+
+IMPORTANT: Include exactly 2 questions with "isScored": false (the hardest ones). All others should have "isScored": true or omit the field (defaults to true).
 
 Generate a quiz now. Return ONLY the JSON, no other text.`
 

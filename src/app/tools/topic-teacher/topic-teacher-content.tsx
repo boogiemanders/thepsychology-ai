@@ -2,8 +2,12 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Send, BookOpen, X } from 'lucide-react'
+import { ArrowLeft, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { TypographyH1, TypographyH2, TypographyH3, TypographyMuted } from '@/components/ui/typography'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
+import { Alert, AlertDescription } from '@/components/ui/alert'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
@@ -333,24 +337,27 @@ export function TopicTeacherContent() {
         </Link>
 
         <div className="mb-6">
-          <h1 className="text-2xl font-bold">{decodeURIComponent(topic)}</h1>
+          <TypographyH1>{decodeURIComponent(topic)}</TypographyH1>
         </div>
 
         {error && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 mb-4"
           >
-            <p className="text-sm text-destructive">{error}</p>
-            <Button
-              onClick={initializeLesson}
-              variant="outline"
-              size="sm"
-              className="mt-3"
-            >
-              Retry
-            </Button>
+            <Alert variant="destructive" className="mb-4">
+              <AlertDescription className="flex items-center justify-between">
+                <span>{error}</span>
+                <Button
+                  onClick={initializeLesson}
+                  variant="outline"
+                  size="sm"
+                  className="ml-4"
+                >
+                  Retry
+                </Button>
+              </AlertDescription>
+            </Alert>
           </motion.div>
         )}
 
@@ -371,10 +378,7 @@ export function TopicTeacherContent() {
           {messages.length === 0 && !initialized && !isLoading && (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mx-auto mb-4">
-                  <BookOpen size={24} />
-                </div>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground animate-pulse">
                   Loading your lesson...
                 </p>
               </div>
@@ -449,11 +453,9 @@ export function TopicTeacherContent() {
                             }
 
                             return (
-                              <h1
-                                className="!text-3xl !font-bold !leading-tight"
-                              >
+                              <TypographyH1>
                                 {children}
-                              </h1>
+                              </TypographyH1>
                             )
                           },
                           h2: ({ children }) => {
@@ -477,11 +479,9 @@ export function TopicTeacherContent() {
 
                             currentSectionRef.current = text
                             return (
-                              <h2
-                                className="!text-2xl !font-semibold !leading-snug"
-                              >
+                              <TypographyH2>
                                 {children}
-                              </h2>
+                              </TypographyH2>
                             )
                           },
                           h3: ({ children }) => {
@@ -505,11 +505,9 @@ export function TopicTeacherContent() {
 
                             currentSectionRef.current = text
                             return (
-                              <h3
-                                className="!text-lg !font-semibold !leading-snug"
-                              >
+                              <TypographyH3>
                                 {children}
-                              </h3>
+                              </TypographyH3>
                             )
                           },
                           p: ({ children }) => {
@@ -586,13 +584,14 @@ export function TopicTeacherContent() {
         </div>
 
         {/* Input */}
-        <form onSubmit={handleSendMessage} className="flex items-start gap-3 -mx-6 px-6 pl-12 pr-32">
-          <input
+        <form onSubmit={handleSendMessage} className="flex items-end gap-3 -mx-6 px-6 pl-12 pr-32">
+          <Textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={isLoading || !initialized}
             placeholder="Ask a follow-up question..."
-            className="flex-1 px-4 py-3 rounded-lg border border-border bg-secondary/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
+            className="flex-1 resize-none"
+            rows={3}
           />
           <Button
             type="submit"
@@ -614,70 +613,47 @@ export function TopicTeacherContent() {
         )}
 
         {/* Interests Modal */}
-        {showInterestsModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="bg-background border border-border rounded-lg p-8 max-w-md w-full mx-4"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-semibold">Tell us about your interests</h2>
-                <button
-                  onClick={() => {
-                    setShowInterestsModal(false)
-                    setUserInterests('')
-                  }}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <X size={20} />
-                </button>
-              </div>
-
-              <p className="text-sm text-muted-foreground mb-4">
+        <Dialog open={showInterestsModal} onOpenChange={setShowInterestsModal}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Tell us about your interests</DialogTitle>
+              <DialogDescription>
                 Share your hobbies, fandoms, or interests so we can personalize your lessons with relevant examples.
-              </p>
+              </DialogDescription>
+            </DialogHeader>
 
-              <textarea
-                value={interestsInput}
-                onChange={(e) => setInterestsInput(e.target.value)}
-                placeholder="e.g., gaming, Marvel movies, cooking, anime, basketball..."
-                className="w-full px-4 py-3 rounded-lg border border-border bg-secondary/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                rows={4}
-              />
+            <Textarea
+              value={interestsInput}
+              onChange={(e) => setInterestsInput(e.target.value)}
+              placeholder="e.g., gaming, Marvel movies, cooking, anime, basketball..."
+              rows={4}
+            />
 
-              <div className="flex gap-3 mt-6">
-                <Button
-                  variant="outline"
-                  onClick={() => {
+            <DialogFooter className="flex-col-reverse sm:flex-row gap-3 sm:gap-0">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setShowInterestsModal(false)
+                  setUserInterests('')
+                }}
+              >
+                Skip
+              </Button>
+              <Button
+                onClick={() => {
+                  if (interestsInput.trim()) {
+                    saveUserInterests(interestsInput)
+                    setUserInterests(interestsInput)
                     setShowInterestsModal(false)
-                    setUserInterests('')
-                  }}
-                  className="flex-1"
-                >
-                  Skip
-                </Button>
-                <Button
-                  onClick={() => {
-                    if (interestsInput.trim()) {
-                      saveUserInterests(interestsInput)
-                      setUserInterests(interestsInput)
-                      setShowInterestsModal(false)
-                    }
-                  }}
-                  disabled={!interestsInput.trim()}
-                  className="flex-1"
-                >
-                  Save
-                </Button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
+                  }
+                }}
+                disabled={!interestsInput.trim()}
+              >
+                Save
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
     </main>
   )
