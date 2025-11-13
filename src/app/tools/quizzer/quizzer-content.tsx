@@ -1,13 +1,14 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Zap, CheckCircle2, XCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
-import { saveQuizResults, getQuizResults, WrongAnswer } from '@/lib/quiz-results-storage'
+import { saveQuizResults, getQuizResults, WrongAnswer, getAllQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
+import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
 
 interface QuizQuestion {
   id: number
@@ -29,6 +30,7 @@ interface QuizState {
 export function QuizzerContent() {
   const searchParams = useSearchParams()
   const topic = searchParams.get('topic')
+  const confettiRef = useRef<ConfettiRef>(null)
 
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [quizState, setQuizState] = useState<QuizState>({
@@ -41,6 +43,7 @@ export function QuizzerContent() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [quizStarted, setQuizStarted] = useState(false)
+  const [isFirstQuiz, setIsFirstQuiz] = useState(false)
 
   const shuffleArray = <T,>(array: T[]): T[] => {
     const shuffled = [...array]
@@ -135,6 +138,25 @@ export function QuizzerContent() {
       setIsLoading(false)
     }
   }
+
+  // Check if this is the user's first quiz ever
+  useEffect(() => {
+    const allResults = getAllQuizResults()
+    setIsFirstQuiz(allResults.length === 0)
+  }, [])
+
+  // Fire confetti on quiz completion
+  useEffect(() => {
+    if (quizState.showResults) {
+      const passed = quizState.score >= 8
+      // Fire confetti if: first quiz (regardless of pass/fail) OR passed (subsequent quizzes)
+      if (isFirstQuiz || passed) {
+        setTimeout(() => {
+          confettiRef.current?.fire({})
+        }, 500)
+      }
+    }
+  }, [quizState.showResults, isFirstQuiz, quizState.score])
 
   // Auto-generate quiz when page loads with a topic
   useEffect(() => {
@@ -317,7 +339,13 @@ export function QuizzerContent() {
   }
 
   return (
-    <main className="min-h-screen p-6 bg-background">
+    <main className="min-h-screen p-6 bg-background relative">
+      {/* Confetti Canvas */}
+      <Confetti
+        ref={confettiRef}
+        className="fixed top-0 left-0 z-50 size-full pointer-events-none"
+      />
+
       <div className="max-w-2xl mx-auto">
         <Link
           href="/tools/topic-selector"

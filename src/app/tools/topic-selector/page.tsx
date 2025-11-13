@@ -2,114 +2,56 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, ChevronDown } from 'lucide-react'
+import { ArrowLeft, ChevronDown, Clock, Play } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { Progress } from '@/components/ui/progress'
 import { motion, AnimatePresence } from 'motion/react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
+import { calculateStudyStats } from '@/lib/dashboard-utils'
+import { EPPP_DOMAINS } from '@/lib/eppp-data'
 
-const domainConfig = [
-  {
-    id: '1',
-    name: 'Domain 1: Biological Bases of Behavior',
-    topics: [
-      'Neurotransmitters & Receptors',
-      'Brain Anatomy & Function',
-      'Nervous System Organization',
-      'Psychopharmacology',
-      'Sleep & Circadian Rhythms',
-    ],
-  },
-  {
-    id: '2',
-    name: 'Domain 2: Cognitive-Affective Bases',
-    topics: [
-      'Classical & Operant Conditioning',
-      'Observational Learning',
-      'Memory Systems & Encoding',
-      'Attention & Consciousness',
-      'Motivation & Emotion',
-    ],
-  },
-  {
-    id: '3',
-    name: 'Domain 3: Social & Cultural Foundations',
-    topics: [
-      'Social Cognition & Attitudes',
-      'Group Dynamics & Conformity',
-      'Cultural Psychology',
-      'Organizational Psychology',
-      'Diversity & Multicultural Issues',
-    ],
-  },
-  {
-    id: '4',
-    name: 'Domain 4: Growth & Lifespan Development',
-    topics: [
-      'Physical Development',
-      'Cognitive Development',
-      'Psychosocial Development',
-      'Moral Development',
-      'Aging & Late Adulthood',
-    ],
-  },
-  {
-    id: '5',
-    name: 'Domain 5: Assessment & Diagnosis',
-    topics: [
-      'Psychological Testing Principles',
-      'Intelligence Assessment',
-      'Personality Assessment',
-      'Clinical Diagnosis & Psychopathology',
-      'Substance Use Disorders',
-    ],
-  },
-  {
-    id: '6',
-    name: 'Domain 6: Treatment, Intervention, and Prevention',
-    topics: [
-      'Cognitive-Behavioral Therapies',
-      'Psychodynamic Therapies',
-      'Humanistic & Experiential Therapies',
-      'Group & Family Therapy',
-      'Evidence-Based Interventions',
-    ],
-  },
-  {
-    id: '7',
-    name: 'Domain 7: Research Methods & Statistics',
-    topics: [
-      'Research Design & Methodology',
-      'Experimental vs Non-Experimental',
-      'Descriptive Statistics',
-      'Inferential Statistics',
-      'Effect Size & Power',
-    ],
-  },
-  {
-    id: '8',
-    name: 'Domain 8: Ethical, Legal & Professional Issues',
-    topics: [
-      'Ethical Principles & Guidelines',
-      'Confidentiality & Privacy',
-      'Informed Consent',
-      'Competence & Boundaries',
-      'Legal Liability & Licensing',
-    ],
-  },
-]
+interface RecentActivity {
+  topic: string
+  timestamp: number
+  score: number
+}
+
+function getTimeAgo(timestamp: number): string {
+  const now = Date.now()
+  const diff = now - timestamp
+  const seconds = Math.floor(diff / 1000)
+  const minutes = Math.floor(seconds / 60)
+  const hours = Math.floor(minutes / 60)
+  const days = Math.floor(hours / 24)
+
+  if (days > 0) return `${days} ${days === 1 ? 'day' : 'days'} ago`
+  if (hours > 0) return `${hours} ${hours === 1 ? 'hour' : 'hours'} ago`
+  if (minutes > 0) return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'} ago`
+  return 'Just now'
+}
 
 export default function TopicSelectorPage() {
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [interests, setInterests] = useState<string>('')
   const [domains, setDomains] = useState<any[]>([])
+  const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
+  const studyStats = calculateStudyStats()
 
   // Calculate progress based on quiz results
   useEffect(() => {
     const allResults = getAllQuizResults()
+
+    // Get recent activities (last 5 topics)
+    const sortedResults = [...allResults].sort((a, b) => b.timestamp - a.timestamp)
+    const recentTopics = sortedResults.slice(0, 5).map(result => ({
+      topic: result.topic,
+      timestamp: result.timestamp,
+      score: Math.round((result.score / result.totalQuestions) * 100)
+    }))
+    setRecentActivities(recentTopics)
 
     // Create a map of topic scores
     const topicScores: Record<string, number> = {}
@@ -119,12 +61,12 @@ export default function TopicSelectorPage() {
     })
 
     // Build domains with dynamic progress
-    const domainsWithProgress = domainConfig.map((domain) => {
-      const topicsWithProgress = domain.topics.map((topicName) => {
+    const domainsWithProgress = EPPP_DOMAINS.map((domain) => {
+      const topicsWithProgress = domain.topics.map((topic) => {
         // If quiz exists, show actual score; otherwise show 0%
-        const score = topicScores[topicName] ?? 0
+        const score = topicScores[topic.name] ?? 0
         return {
-          name: topicName,
+          name: topic.name,
           progress: Math.round(score),
         }
       })
@@ -190,6 +132,73 @@ export default function TopicSelectorPage() {
             </div>
           </div>
         </div>
+
+        {/* Recent Activity Section */}
+        {recentActivities.length > 0 && (
+          <div className="p-6 border-b">
+            <Card>
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle className="flex items-center gap-2">
+                      <Clock size={20} />
+                      Recent Activity
+                    </CardTitle>
+                    <CardDescription>
+                      Continue where you left off
+                    </CardDescription>
+                  </div>
+                  {studyStats.lastStudiedTopic && (
+                    <Link href={`/tools/quizzer?topic=${encodeURIComponent(studyStats.lastStudiedTopic)}`}>
+                      <Button size="sm" className="gap-2">
+                        <Play size={16} />
+                        Continue
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  {recentActivities.map((activity, idx) => {
+                    const timeAgo = getTimeAgo(activity.timestamp)
+                    const scoreColor = activity.score >= 80 ? 'text-green-500' :
+                                      activity.score >= 60 ? 'text-yellow-500' :
+                                      'text-orange-500'
+
+                    return (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: idx * 0.05 }}
+                      >
+                        <Link href={`/tools/quizzer?topic=${encodeURIComponent(activity.topic)}`}>
+                          <div className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary hover:bg-accent transition-colors cursor-pointer group">
+                            <div className="flex-1">
+                              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+                                {activity.topic}
+                              </p>
+                              <p className="text-xs text-muted-foreground">
+                                {timeAgo}
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <span className={`text-sm font-semibold ${scoreColor}`}>
+                                {activity.score}%
+                              </span>
+                              <ChevronDown size={16} className="transform -rotate-90 text-muted-foreground group-hover:text-primary transition-colors" />
+                            </div>
+                          </div>
+                        </Link>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
 
         <div className="p-6 space-y-3">
           {domains.map((domain, index) => (

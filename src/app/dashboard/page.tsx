@@ -5,14 +5,19 @@ import { useAuth } from '@/context/auth-context'
 import { useEffect, useState } from 'react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { supabase } from '@/lib/supabase'
-import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Calendar } from '@/components/ui/calendar'
-import { LogOut, ChevronDown, Check, Edit2 } from 'lucide-react'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
+import { NumberTicker } from '@/components/ui/number-ticker'
+import { BentoCard, BentoGrid } from '@/components/ui/bento-grid'
+import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
+import { LogOut, GraduationCap, Flame, Target } from 'lucide-react'
+import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
+import { EPPP_DOMAINS } from '@/lib/eppp-data'
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -21,15 +26,25 @@ export default function DashboardPage() {
   const [progressData, setProgressData] = useState({
     totalCompletion: 0,
     completedTopics: 0,
-    totalTopics: 56,
+    totalTopics: 81,
     completedDomains: 0,
-    totalDomains: 8,
-    domainProgress: Array(8).fill(0),
+    totalDomains: 12,
+    domainProgress: Array(12).fill(0),
   })
   const [daysRemaining, setDaysRemaining] = useState<number | null>(null)
   const [examDate, setExamDate] = useState<string | null>(null)
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false)
+  const [studyStats, setStudyStats] = useState(calculateStudyStats())
+  const [dailyGoal, setDailyGoalState] = useState(getDailyGoal())
+  const [todayQuizCount, setTodayQuizCount] = useState(0)
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false)
+
+  const handleDailyGoalChange = (newGoal: number) => {
+    setDailyGoalState(newGoal)
+    setDailyGoal(newGoal)
+    setIsPopoverOpen(false)
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -116,23 +131,38 @@ export default function DashboardPage() {
     })
   }, [mounted])
 
+  // Update study stats and today's quiz count
+  useEffect(() => {
+    if (!mounted) return
+    setStudyStats(calculateStudyStats())
+    setTodayQuizCount(getTodayQuizCount())
+  }, [mounted])
+
   // Calculate days remaining to exam
   useEffect(() => {
     if (examDate) {
-      const exam = new Date(examDate)
+      // Parse date components and create at midnight UTC to match react-day-picker
+      const [year, month, day] = examDate.split('-').map(Number)
+      const exam = new Date(Date.UTC(year, month - 1, day))
       const today = new Date()
       today.setHours(0, 0, 0, 0)
-      exam.setHours(0, 0, 0, 0)
       const diffTime = exam.getTime() - today.getTime()
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
       setDaysRemaining(diffDays)
-      setSelectedDate(new Date(examDate))
+      setSelectedDate(exam)
     }
   }, [examDate])
 
   const handleSaveExamDate = async (date: Date | undefined) => {
     if (date && user) {
-      const dateString = date.toISOString().split('T')[0]
+      // Use UTC methods to extract date components as they appear in the calendar
+      // react-day-picker passes dates at midnight UTC, so we need UTC methods
+      const year = date.getUTCFullYear()
+      const month = date.getUTCMonth()
+      const day = date.getUTCDate()
+
+      // Create date string from the actual selected day
+      const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
       setExamDate(dateString)
 
       // Try to save to Supabase (may fail if column doesn't exist yet)
@@ -206,251 +236,314 @@ export default function DashboardPage() {
     return null
   }
 
+  // Calculate study pace
+  const studyPace = calculateStudyPace(examDate, progressData.completedTopics)
+
+  // ACTION BUTTONS - Bigger, more prominent
+  const actionCards = [
+    {
+      Icon: GraduationCap,
+      name: "Practice",
+      description: "Take practice exams to test your knowledge",
+      href: "/tools/exam-generator",
+      cta: "Start Exam",
+      className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3",
+      background: (
+        <div className="absolute inset-0 flex items-center justify-center opacity-20">
+          <div className="grid grid-cols-3 gap-4 p-6">
+            <div className="h-16 w-16 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0s' }} />
+            <div className="h-16 w-16 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.2s' }} />
+            <div className="h-16 w-16 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.4s' }} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      Icon: FileTextIcon,
+      name: "Prioritizer",
+      description: studyStats.weakTopics.length > 0 && studyStats.totalQuizzes > 0
+        ? `Focus on: ${studyStats.weakTopics[0].topic.substring(0, 30)}...`
+        : "AI-powered study recommendations",
+      href: "/tools/study-optimizer",
+      cta: "View Insights",
+      className: "lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5",
+      background: (
+        <div className="absolute inset-0 flex items-center justify-center opacity-20 p-6">
+          {studyStats.weakTopics.length > 0 ? (
+            <div className="w-full space-y-1">
+              {studyStats.weakTopics.slice(0, 3).map((topic, idx) => (
+                <div key={idx} className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-orange-500/60" />
+                  <div className="text-xs text-foreground/60 truncate">{topic.topic}</div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-3">
+              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0s' }} />
+              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.15s' }} />
+              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.3s' }} />
+              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.45s' }} />
+            </div>
+          )}
+        </div>
+      ),
+    },
+    {
+      Icon: Flame,
+      name: "Recover",
+      description: "Improve focus and reduce burnout while studying",
+      href: "#",
+      cta: "Coming Soon",
+      className: "lg:col-start-1 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
+      background: (
+        <div className="absolute inset-0 flex items-center justify-center opacity-20">
+          <div className="text-center group-hover:block hidden">
+            <p className="text-sm font-medium">Coming Soon for Pro</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      Icon: FileTextIcon,
+      name: "Study",
+      description: `${studyStats.totalQuizzes} quizzes • ${studyStats.averageScore}% avg • ${progressData.completedTopics}/${progressData.totalTopics} topics`,
+      href: "/tools/topic-selector",
+      cta: "Start Studying",
+      className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
+      background: (
+        <div className="absolute inset-0 flex flex-col items-start justify-start pt-4 p-4 h-full">
+          <ScrollArea className="w-full h-full pr-4">
+            <div className="w-full space-y-2 opacity-60">
+              {EPPP_DOMAINS.map((domain, idx) => (
+                <div key={idx} className="space-y-1 pr-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-foreground/80 truncate">{domain.name}</span>
+                    <span className="text-foreground/60 ml-1 flex-shrink-0">{Math.round(progressData.domainProgress[idx] || 0)}%</span>
+                  </div>
+                  <Progress value={progressData.domainProgress[idx] || 0} className="h-1" />
+                </div>
+              ))}
+            </div>
+          </ScrollArea>
+        </div>
+      ),
+    },
+  ]
+
+  // INFO CARDS - Smaller, secondary information (narrow, on right side)
+  const infoCards = [
+    {
+      Icon: CalendarIcon,
+      name: "Exam Date",
+      description: examDate && daysRemaining !== null
+        ? studyPace.pace !== 'Unknown'
+          ? `${daysRemaining} days • ${studyPace.pace} • ${studyPace.topicsPerWeek}/wk`
+          : `${daysRemaining} ${daysRemaining === 1 ? 'day' : 'days'} remaining`
+        : "Set your exam date",
+      href: "#",
+      cta: "Edit Date",
+      className: "lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
+      background: (
+        <div className="absolute inset-0 flex items-center justify-center opacity-20 p-4">
+          <div className="w-full space-y-2 text-sm">
+            {studyPace.pace !== 'Unknown' && (
+              <>
+                <div className="flex justify-between text-xs text-foreground/60">
+                  <span>Study Pace</span>
+                  <span className={`font-semibold ${
+                    studyPace.pace === 'On track' ? 'text-green-500' :
+                    studyPace.pace === 'Ahead' ? 'text-blue-500' :
+                    'text-orange-500'
+                  }`}>{studyPace.pace}</span>
+                </div>
+                <div className="flex justify-between text-xs text-foreground/60">
+                  <span>Topics/Week</span>
+                  <span className="font-semibold">{studyPace.topicsPerWeek}</span>
+                </div>
+              </>
+            )}
+            {studyPace.pace === 'Unknown' && <CalendarIcon className="h-12 w-12 mx-auto opacity-50" />}
+          </div>
+        </div>
+      ),
+    },
+    {
+      Icon: Flame,
+      name: "Study Streak",
+      description: "",
+      href: "/tools/topic-selector",
+      cta: "Keep it going",
+      className: "lg:col-start-5 lg:col-end-6 lg:row-start-3 lg:row-end-5",
+      background: (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+          <NumberTicker
+            value={studyStats.studyStreak}
+            duration={1.5}
+            className="text-4xl font-bold text-primary"
+          />
+          <span className="text-xs text-muted-foreground">{studyStats.studyStreak === 1 ? 'day' : 'days'}</span>
+        </div>
+      ),
+    },
+    {
+      Icon: Target,
+      name: "Daily Goal",
+      description: `${todayQuizCount}/${dailyGoal} quizzes today`,
+      href: "#",
+      cta: "Change Goal",
+      className: "lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
+      background: (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 pointer-events-auto">
+          <div className="relative w-24 h-24 opacity-30 pointer-events-none">
+            <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 128 128">
+              <circle
+                cx="64"
+                cy="64"
+                r="56"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="8"
+                className="text-border/50"
+              />
+              <circle
+                cx="64"
+                cy="64"
+                r="56"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="8"
+                className="text-primary transition-all duration-500"
+                strokeDasharray={`${(Math.min(todayQuizCount / dailyGoal, 1)) * (56 * 2 * Math.PI)} ${56 * 2 * Math.PI}`}
+              />
+            </svg>
+            <div className="absolute inset-0 flex items-center justify-center text-lg font-bold">
+              {Math.round((todayQuizCount / dailyGoal) * 100)}%
+            </div>
+          </div>
+          <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
+            <PopoverTrigger asChild>
+              <Button variant="outline" size="sm" className="pointer-events-auto text-xs">
+                {dailyGoal} topics/day
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[300px] p-4">
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold mb-2">Daily Study Goal</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    How many topics do you want to study per day? (1-7)
+                  </p>
+                </div>
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {[1, 2, 3, 4, 5, 6, 7].map((goal) => (
+                      <CarouselItem key={goal} className="basis-1/3">
+                        <Button
+                          variant={dailyGoal === goal ? "default" : "outline"}
+                          className="w-full text-xs"
+                          onClick={() => handleDailyGoalChange(goal)}
+                        >
+                          {goal}
+                        </Button>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-0" />
+                  <CarouselNext className="right-0" />
+                </Carousel>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
+      ),
+    },
+  ]
+
   return (
     <main className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12 space-y-8">
-        {/* Quick Actions */}
-        <Card>
-          <CardContent className="pt-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Link href="/tools/topic-selector" className="block">
-                <Button className="w-full" variant="default">
-                  Start Studying
-                </Button>
-              </Link>
-              <Link href="/tools/exam-generator" className="block">
-                <Button className="w-full" variant="outline">
-                  Take Practice Exam
-                </Button>
-              </Link>
-              <Link href="/tools/study-optimizer" className="block">
-                <Button className="w-full" variant="outline">
-                  View Analysis
-                </Button>
-              </Link>
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+            <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
+          </div>
+          {/* Exam date in top right */}
+          {examDate && (
+            <div className="flex flex-col items-end gap-1">
+              <p className="text-sm font-semibold text-foreground">Exam Date</p>
+              <p className="text-sm text-muted-foreground">
+                {new Date(examDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+              </p>
+              {daysRemaining !== null && (
+                <p className="text-xs text-primary font-medium">{daysRemaining} days remaining</p>
+              )}
             </div>
-          </CardContent>
-        </Card>
+          )}
+        </div>
 
-        {/* Exam Countdown */}
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0">
-            <CardTitle>Exam Countdown</CardTitle>
-            <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-              <DialogTrigger asChild>
-                <Button variant="ghost" size="sm" className="gap-2">
-                  <Edit2 size={16} />
-                  Edit Date
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>Update Exam Date</DialogTitle>
-                  <DialogDescription>
-                    Select your exam date from the calendar below.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="flex justify-center py-4">
-                  <Calendar
-                    mode="single"
-                    selected={selectedDate}
-                    onSelect={handleSaveExamDate}
-                    captionLayout="dropdown"
-                    fromYear={new Date().getFullYear()}
-                    toYear={new Date().getFullYear() + 5}
-                    disabled={(date) => {
-                      const today = new Date()
-                      today.setHours(0, 0, 0, 0)
-                      return date < today
-                    }}
-                    className="rounded-md border"
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            {examDate && daysRemaining !== null ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col items-center justify-center">
-                  <Calendar
-                    mode="single"
-                    selected={new Date(examDate)}
-                    disabled={(date) => {
-                      const today = new Date()
-                      today.setHours(0, 0, 0, 0)
-                      return date < today
-                    }}
-                    className="rounded-md border"
-                  />
-                </div>
-                <div className="flex flex-col justify-center items-center space-y-4">
-                  <div className="text-center">
-                    <p className="text-sm text-muted-foreground mb-2">Your Exam Date</p>
-                    <p className="text-2xl font-semibold">
-                      {new Date(examDate).toLocaleDateString('en-US', {
-                        month: 'long',
-                        day: 'numeric',
-                        year: 'numeric'
-                      })}
-                    </p>
-                  </div>
-                  <div className="text-center bg-primary/10 rounded-lg p-4 w-full">
-                    <p className="text-5xl font-bold text-primary">{daysRemaining}</p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      {daysRemaining === 1 ? 'Day' : 'Days'} Remaining
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="text-center py-8">
-                <p className="text-sm text-muted-foreground mb-4">
-                  No exam date set yet.
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Click "Edit Date" above to set your exam date and start your countdown.
-                </p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
+        {/* Bento Grid - Practice/Prioritize/Recover left, Study wide in middle, Info boxes narrow on right */}
+        <BentoGrid className="lg:grid-rows-6 lg:grid-cols-5">
+          {/* Action Cards */}
+          {actionCards.map((feature, idx) => (
+            <BentoCard
+              key={`action-${idx}`}
+              {...feature}
+              onClick={feature.name === "Study" ? undefined : undefined}
+            />
+          ))}
 
-        {/* Domain Progress */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Domain Progress</CardTitle>
-            <CardDescription>Your completion status for each domain</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {[
-              { name: 'Biological Bases of Behavior' },
-              { name: 'Cognitive-Affective Bases' },
-              { name: 'Social & Cultural Foundations' },
-              { name: 'Growth & Lifespan Development' },
-              { name: 'Assessment & Diagnosis' },
-              { name: 'Treatment, Intervention, and Prevention' },
-              { name: 'Research Methods & Statistics' },
-              { name: 'Ethical, Legal & Professional Issues' },
-            ].map((domain, idx) => (
-              <div key={domain.name} className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium">{domain.name}</span>
-                  <span className="text-xs text-muted-foreground">{Math.round(progressData.domainProgress[idx])}%</span>
-                </div>
-                <Progress value={progressData.domainProgress[idx]} className="h-2" />
-              </div>
-            ))}
-          </CardContent>
-        </Card>
+          {/* Info Cards */}
+          {infoCards.map((feature, idx) => (
+            <BentoCard
+              key={`info-${idx}`}
+              {...feature}
+              onClick={feature.name === "Exam Date" ? () => setIsEditDialogOpen(true) : undefined}
+            />
+          ))}
+        </BentoGrid>
 
-        {/* Account Info */}
-        <Card>
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <CardTitle>Account Information</CardTitle>
-              <Button variant="ghost" size="sm" onClick={handleSignOut} className="gap-2">
-                <LogOut size={16} />
-                Sign Out
-              </Button>
-            </div>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              <div>
-                <p className="text-xs text-muted-foreground mb-1">Email</p>
-                <p className="text-sm font-medium">{userProfile?.email}</p>
+        {/* Account Status Box */}
+        <div className="border border-border/50 rounded-lg p-6 bg-secondary/5 backdrop-blur-sm">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <PersonIcon className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-xs text-muted-foreground mb-1">Subscription Tier</p>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <Button variant="outline" className="w-40 justify-between">
-                      <span className="capitalize">{userProfile?.subscription_tier || 'free'}</span>
-                      <ChevronDown size={16} />
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-56" align="start">
-                    <div className="space-y-3">
-                      <div className="space-y-1">
-                        <p className="text-sm font-medium">Select a plan</p>
-                        <p className="text-xs text-muted-foreground">Upgrade to unlock more features</p>
-                      </div>
-                      <div className="space-y-2 pt-2 border-t">
-                        <button
-                          onClick={() => {
-                            // Handle free tier selection
-                          }}
-                          className={`w-full text-left px-3 py-2.5 text-sm rounded-md transition-colors flex items-center justify-between ${
-                            (userProfile?.subscription_tier || 'free') === 'free'
-                              ? 'bg-accent text-foreground'
-                              : 'hover:bg-accent/50'
-                          }`}
-                        >
-                          <div>
-                            <p className="font-medium">Free</p>
-                            <p className="text-xs text-muted-foreground">$0/month</p>
-                          </div>
-                          {(userProfile?.subscription_tier || 'free') === 'free' && (
-                            <Check size={16} />
-                          )}
-                        </button>
-
-                        <button
-                          onClick={() => {
-                            // Handle pro tier selection - redirect to upgrade
-                            window.location.href = '/#get-started'
-                          }}
-                          className={`w-full text-left px-3 py-2.5 text-sm rounded-md transition-colors flex items-center justify-between ${
-                            userProfile?.subscription_tier === 'pro'
-                              ? 'bg-accent text-foreground'
-                              : 'hover:bg-accent/50'
-                          }`}
-                        >
-                          <div>
-                            <p className="font-medium">Pro</p>
-                            <p className="text-xs text-muted-foreground">$20/month</p>
-                          </div>
-                          {userProfile?.subscription_tier === 'pro' && (
-                            <Check size={16} />
-                          )}
-                        </button>
-
-                        <button
-                          onClick={() => {
-                            // Handle pro+ coaching tier selection - redirect to upgrade
-                            window.location.href = '/#get-started'
-                          }}
-                          className={`w-full text-left px-3 py-2.5 text-sm rounded-md transition-colors flex items-center justify-between ${
-                            userProfile?.subscription_tier === 'coaching'
-                              ? 'bg-accent text-foreground'
-                              : 'hover:bg-accent/50'
-                          }`}
-                        >
-                          <div>
-                            <p className="font-medium">Pro + Coaching</p>
-                            <p className="text-xs text-muted-foreground">$200/month</p>
-                          </div>
-                          {userProfile?.subscription_tier === 'coaching' && (
-                            <Check size={16} />
-                          )}
-                        </button>
-                      </div>
-                    </div>
-                  </PopoverContent>
-                </Popover>
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground mb-1">Member Since</p>
-                <p className="text-sm font-medium">
-                  {userProfile?.created_at
-                    ? new Date(userProfile.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-                    : 'Recently'}
-                </p>
+                <h3 className="font-semibold text-foreground">{userProfile?.email?.split('@')[0]}</h3>
+                <p className="text-sm text-muted-foreground">{userProfile?.email}</p>
               </div>
             </div>
-          </CardContent>
-        </Card>
+            <Button variant="ghost" size="sm" onClick={handleSignOut} className="gap-2">
+              <LogOut size={16} />
+              Sign Out
+            </Button>
+          </div>
+        </div>
+
+        {/* Detailed Exam Countdown Dialog */}
+        <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Update Exam Date</DialogTitle>
+              <DialogDescription>
+                Select your exam date from the calendar below.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex justify-center py-4">
+              <Calendar
+                mode="single"
+                selected={selectedDate}
+                onSelect={handleSaveExamDate}
+                captionLayout="dropdowns"
+                fromYear={new Date().getFullYear()}
+                toYear={new Date().getFullYear() + 5}
+                className="rounded-lg border"
+              />
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </main>
   )

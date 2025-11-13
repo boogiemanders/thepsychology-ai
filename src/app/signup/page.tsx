@@ -1,14 +1,16 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect, Suspense, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
 import { validatePromoCode } from '@/lib/promo-codes'
+import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
 
 function SignUpContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const confettiRef = useRef<ConfettiRef>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
@@ -32,6 +34,14 @@ function SignUpContent() {
       setTierFromPricing(tier)
     }
   }, [searchParams])
+
+  // Fire confetti on successful signup
+  useEffect(() => {
+    if (success) {
+      confettiRef.current?.fire({})
+    }
+  }, [success])
+
   const [promoStatus, setPromoStatus] = useState<{
     message: string
     type: 'success' | 'error' | null
@@ -198,6 +208,12 @@ function SignUpContent() {
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Confetti Canvas */}
+      <Confetti
+        ref={confettiRef}
+        className="absolute top-0 left-0 z-50 size-full pointer-events-none"
+      />
+
       {/* Gradient background effects - 4 breaths per minute (15s cycle) */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-900 opacity-80"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-breath"></div>

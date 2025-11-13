@@ -131,7 +131,9 @@ export function PricingSection() {
                 <motion.button
                   onClick={() => handleTierSelect(tier.name)}
                   className={`h-10 w-full flex items-center justify-center text-sm font-normal tracking-wide rounded-full px-4 cursor-pointer transition-all ease-out relative group ${
-                    tier.isPopular
+                    expandedTier === tier.name
+                      ? "bg-primary text-primary-foreground shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)]"
+                      : tier.isPopular
                       ? `${tier.buttonColor} shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)]`
                       : `${tier.buttonColor} shadow-[0px_1px_2px_0px_rgba(255,255,255,0.16)_inset,0px_3px_3px_-1.5px_rgba(16,24,40,0.24),0px_1px_1px_-0.5px_rgba(16,24,40,0.20)]`
                   }`}
@@ -145,115 +147,8 @@ export function PricingSection() {
                 </motion.button>
               </div>
 
-              {/* Form - Animated Expansion */}
-              <motion.div
-                className="overflow-hidden"
-                initial={{ height: 0, opacity: 0 }}
-                animate={expandedTier === tier.name ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-              >
-                <div className="border-t border-border p-4 space-y-4">
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    {/* Email - Required */}
-                    <div>
-                      <label htmlFor={`email-${tier.name}`} className="block text-sm font-medium mb-2">
-                        Email Address <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        id={`email-${tier.name}`}
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your@email.com"
-                        required
-                        className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
-
-                    {/* Phone - Optional */}
-                    <div>
-                      <label htmlFor={`phone-${tier.name}`} className="block text-sm font-medium mb-2">
-                        Phone (optional)
-                      </label>
-                      <input
-                        type="tel"
-                        id={`phone-${tier.name}`}
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="+1 (555) 000-0000"
-                        className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
-
-                    {/* Test Date - Optional */}
-                    <div>
-                      <label htmlFor={`testDate-${tier.name}`} className="block text-sm font-medium mb-2">
-                        Test date? (optional)
-                      </label>
-                      <input
-                        type="date"
-                        id={`testDate-${tier.name}`}
-                        name="testDate"
-                        value={formData.testDate}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
-
-                    {/* Thoughts, Goals, Questions - Optional */}
-                    <div>
-                      <label htmlFor={`thoughtsGoalsQuestions-${tier.name}`} className="block text-sm font-medium mb-2">
-                        Anything else? (optional)
-                      </label>
-                      <textarea
-                        id={`thoughtsGoalsQuestions-${tier.name}`}
-                        name="thoughtsGoalsQuestions"
-                        value={formData.thoughtsGoalsQuestions}
-                        onChange={handleInputChange}
-                        placeholder="Share anything with us - your goals, questions, or thoughts about your EPPP prep..."
-                        rows={3}
-                        className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                      />
-                    </div>
-
-
-                    <InteractiveHoverButton
-                      type="submit"
-                      disabled={isSubmitting}
-                      text={isSubmitting ? 'Submitting...' : 'Get Started'}
-                    >
-                      {isSubmitting ? 'Submitting...' : 'Get Started'}
-                    </InteractiveHoverButton>
-
-                    {submitMessage && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className={`p-3 rounded-lg text-sm text-center ${
-                          submitMessage.type === 'success'
-                            ? 'bg-green-50 text-green-700 border border-green-200'
-                            : 'bg-red-50 text-red-700 border border-red-200'
-                        }`}
-                      >
-                        {submitMessage.text}
-                      </motion.div>
-                    )}
-
-                    <p className="text-xs text-foreground/60 text-center leading-relaxed">
-                      Educational tool, not therapy. Not affiliated with ASPPB.
-                    </p>
-                  </form>
-                </div>
-              </motion.div>
-
-              {/* Features - Only shown when not expanded */}
-              <motion.div
-                className="overflow-hidden border-t border-border flex-grow"
-                animate={expandedTier === tier.name ? { height: 0, opacity: 0 } : { height: "auto", opacity: 1 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-              >
+              {/* Features - Always shown */}
+              <div className="overflow-hidden border-t border-border flex-grow">
                 <div className="p-4">
                   {tier.name === "7-Day Free Trial" ? (
                     <p className="text-sm mb-4">No Credit Card</p>
@@ -313,6 +208,80 @@ export function PricingSection() {
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+
+              {/* Form - Animated Expansion */}
+              <motion.div
+                className="overflow-hidden"
+                initial={{ height: 0, opacity: 0 }}
+                animate={expandedTier === tier.name ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+              >
+                <div className="border-t border-border p-4 space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Email - Required */}
+                    <div>
+                      <label htmlFor={`email-${tier.name}`} className="block text-sm font-medium mb-2">
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id={`email-${tier.name}`}
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="your@email.com"
+                        required
+                        className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+
+                    {/* Thoughts, Goals, Questions - Optional */}
+                    <div>
+                      <label htmlFor={`thoughtsGoalsQuestions-${tier.name}`} className="block text-sm font-medium mb-2">
+                        Anything else? (optional)
+                      </label>
+                      <textarea
+                        id={`thoughtsGoalsQuestions-${tier.name}`}
+                        name="thoughtsGoalsQuestions"
+                        value={formData.thoughtsGoalsQuestions}
+                        onChange={handleInputChange}
+                        placeholder="Share anything with us - your goals, questions, or thoughts about your EPPP prep..."
+                        rows={3}
+                        className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                      />
+                    </div>
+
+                    <div className="flex justify-center">
+                      <InteractiveHoverButton
+                        type="submit"
+                        disabled={isSubmitting}
+                        text={isSubmitting ? 'Submitting...' : 'Start'}
+                        inverted={true}
+                      >
+                        {isSubmitting ? 'Submitting...' : 'Start'}
+                      </InteractiveHoverButton>
+                    </div>
+
+                    {submitMessage && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className={`p-3 rounded-lg text-sm text-center ${
+                          submitMessage.type === 'success'
+                            ? 'bg-green-50 text-green-700 border border-green-200'
+                            : 'bg-red-50 text-red-700 border border-red-200'
+                        }`}
+                      >
+                        {submitMessage.text}
+                      </motion.div>
+                    )}
+
+                    <p className="text-xs text-foreground/60 text-center leading-relaxed">
+                      Educational tool, not therapy. Not affiliated with ASPPB.
+                    </p>
+                  </form>
                 </div>
               </motion.div>
             </div>
