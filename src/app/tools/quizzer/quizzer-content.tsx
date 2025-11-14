@@ -188,7 +188,10 @@ export function QuizzerContent() {
 
         // Auto-submit if time runs out
         if (newTime <= 0) {
-          handleNext()
+          // Mark quiz as finished without calling handleNext (which has issues)
+          setTimeout(() => {
+            handleNext()
+          }, 0)
           return prev
         }
 
@@ -200,7 +203,7 @@ export function QuizzerContent() {
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [quizStarted, quizState.showResults, questions.length])
+  }, [quizStarted, quizState.showResults, questions.length, quizState.timeRemaining])
 
   const handleSelectAnswer = (option: string) => {
     if (quizState.showResults) return
@@ -428,6 +431,7 @@ export function QuizzerContent() {
                       score: 0,
                       selectedAnswers: {},
                       showResults: false,
+                      timeRemaining: 0,
                     })
                     setQuizStarted(false)
                   }}
