@@ -3,6 +3,7 @@
 import { siteConfig } from "@/lib/config";
 import { motion } from "motion/react";
 import React, { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface NavItem {
   name: string;
@@ -12,6 +13,7 @@ interface NavItem {
 const navs: NavItem[] = siteConfig.nav.links;
 
 const loggedInNavs: NavItem[] = [
+  { name: "Dashboard", href: "/dashboard" },
   { name: "Practice", href: "/tools/exam-generator" },
   { name: "Prioritize", href: "/tools/study-optimizer" },
   { name: "Study", href: "/tools/topic-selector" },
@@ -24,23 +26,36 @@ export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
   const [isReady, setIsReady] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [isManualScroll, setIsManualScroll] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
 
-  const currentNavs = isLoggedIn ? loggedInNavs : navs;
+  // Prevent hydration mismatch by only showing logged-in state after mount
+  const currentNavs = mounted && isLoggedIn ? loggedInNavs : navs;
 
   React.useEffect(() => {
-    // Initialize with first nav item
-    const selector = isLoggedIn
-      ? `[href="${currentNavs[0].href}"]`
-      : `[href="#${currentNavs[0].href.substring(1)}"]`;
+    setMounted(true);
+  }, []);
 
-    const firstItem = ref.current?.querySelector(selector)?.parentElement;
-    if (firstItem) {
-      const rect = firstItem.getBoundingClientRect();
-      setLeft(firstItem.offsetLeft);
+  React.useEffect(() => {
+    // Initialize with active nav item based on current path or first item
+    let activeSelector: string;
+
+    if (mounted && isLoggedIn) {
+      // Find the nav item that matches current pathname
+      const activeNav = currentNavs.find(nav => nav.href === pathname);
+      activeSelector = activeNav ? `[href="${activeNav.href}"]` : `[href="${currentNavs[0].href}"]`;
+    } else {
+      activeSelector = `[href="#${currentNavs[0].href.substring(1)}"]`;
+    }
+
+    const activeItem = ref.current?.querySelector(activeSelector)?.parentElement;
+    if (activeItem) {
+      const rect = activeItem.getBoundingClientRect();
+      setLeft(activeItem.offsetLeft);
       setWidth(rect.width);
       setIsReady(true);
     }
-  }, [isLoggedIn, currentNavs]);
+  }, [mounted, isLoggedIn, currentNavs, pathname]);
 
   React.useEffect(() => {
     // Skip scroll handling for logged in users (they're on tools page)
@@ -146,22 +161,26 @@ export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
         className="relative mx-auto flex w-fit rounded-full h-11 px-2 items-center justify-center"
         ref={ref}
       >
-        {currentNavs.map((item) => (
-          <li
-            key={item.name}
-            className={`z-10 cursor-pointer h-full flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-              isLoggedIn
-                ? "text-primary/60 hover:text-primary"
-                : activeSection === item.href.substring(1)
+        {currentNavs.map((item) => {
+          const isActive = mounted && isLoggedIn
+            ? pathname === item.href
+            : activeSection === item.href.substring(1);
+
+          return (
+            <li
+              key={item.name}
+              className={`z-10 cursor-pointer h-full flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                isActive
                   ? "text-primary"
                   : "text-primary/60 hover:text-primary"
-            } tracking-tight`}
-          >
-            <a href={item.href} onClick={(e) => handleClick(e, item)}>
-              {item.name}
-            </a>
-          </li>
-        ))}
+              } tracking-tight`}
+            >
+              <a href={item.href} onClick={(e) => handleClick(e, item)}>
+                {item.name}
+              </a>
+            </li>
+          );
+        })}
         {isReady && (
           <motion.li
             animate={{ left, width }}

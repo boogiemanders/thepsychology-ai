@@ -1,7 +1,7 @@
 "use client";
 
 import { NavMenu } from "@/components/nav-menu";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { getCurrentUser, logout } from "@/lib/user-management";
@@ -56,7 +56,14 @@ export function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const [user, setUser] = useState(getCurrentUser());
+  const [user, setUser] = useState(null);
+  const [mounted, setMounted] = useState(false);
+
+  // Check for user only after mounting to prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+    setUser(getCurrentUser());
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -144,7 +151,7 @@ export function Navbar() {
                   </a>
                 )}
               </div>
-              <ThemeToggle />
+              <AnimatedThemeToggler />
               <button
                 className="md:hidden border border-border size-8 rounded-md cursor-pointer flex items-center justify-center"
                 onClick={toggleDrawer}

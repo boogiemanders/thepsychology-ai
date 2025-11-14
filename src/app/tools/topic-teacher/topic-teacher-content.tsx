@@ -12,7 +12,9 @@ import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { getUserInterests, saveUserInterests } from '@/lib/interests-storage'
+import { getUserCurrentInterest, updateUserCurrentInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
+import type { RealtimeChannel } from '@supabase/supabase-js'
+import { useAuth } from '@/context/auth-context'
 import { getQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 
@@ -29,6 +31,7 @@ interface HighlightData {
 
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
+  const { user } = useAuth()
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
   const hasQuizResults = searchParams.get('hasQuizResults') === 'true'
@@ -41,6 +44,7 @@ export function TopicTeacherContent() {
   const [showInterestsModal, setShowInterestsModal] = useState(false)
   const [interestsInput, setInterestsInput] = useState('')
   const [userInterests, setUserInterests] = useState<string | null>(null)
+  const [interestsLoaded, setInterestsLoaded] = useState(false)
   const [highlightData, setHighlightData] = useState<HighlightData>({
     recentlyWrongSections: [],
     recentlyCorrectSections: [],
@@ -48,6 +52,7 @@ export function TopicTeacherContent() {
   })
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const currentSectionRef = useRef<string>('')
+  const subscriptionRef = useRef<RealtimeChannel | null>(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -57,14 +62,63 @@ export function TopicTeacherContent() {
     scrollToBottom()
   }, [messages])
 
-  // Check for user interests on mount
+  // Check for user interests on mount and subscribe to changes
   useEffect(() => {
-    const interests = getUserInterests()
-    setUserInterests(interests)
-    if (!interests) {
-      setShowInterestsModal(true)
+    const loadUserInterest = async () => {
+      if (!user?.id) {
+        setShowInterestsModal(true)
+        setInterestsLoaded(true)
+        return
+      }
+
+      try {
+        let currentInterest = await getUserCurrentInterest(user.id)
+
+        // Fallback to localStorage if Supabase returns nothing
+        if (!currentInterest && typeof window !== 'undefined') {
+          currentInterest = localStorage.getItem(`interests_${user.id}`)
+        }
+
+        setUserInterests(currentInterest)
+
+        // If user already has an interest, pre-populate the input
+        if (currentInterest) {
+          setInterestsInput(currentInterest)
+        } else {
+          // Only show modal if user hasn't filled out interests yet
+          setShowInterestsModal(true)
+        }
+
+        // Subscribe to real-time interest changes
+        const channel = subscribeToUserInterestChanges(user.id, (newInterest) => {
+          setUserInterests(newInterest)
+          if (newInterest) {
+            setInterestsInput(newInterest)
+            // Also update localStorage
+            if (typeof window !== 'undefined') {
+              localStorage.setItem(`interests_${user.id}`, newInterest)
+            }
+          }
+        })
+        subscriptionRef.current = channel
+      } catch (error) {
+        console.debug('Error loading user interest:', error)
+        setShowInterestsModal(true)
+      } finally {
+        // Mark interests as loaded regardless of outcome
+        setInterestsLoaded(true)
+      }
     }
-  }, [])
+
+    loadUserInterest()
+
+    // Clean up subscription on unmount
+    return () => {
+      if (subscriptionRef.current) {
+        unsubscribeFromInterestChanges(subscriptionRef.current)
+      }
+    }
+  }, [user?.id])
 
   // Load quiz results and compute highlight data
   useEffect(() => {
@@ -96,10 +150,10 @@ export function TopicTeacherContent() {
 
   // Initialize with lesson
   useEffect(() => {
-    if (!initialized && topic && userInterests !== undefined) {
+    if (!initialized && topic && interestsLoaded) {
       initializeLesson()
     }
-  }, [topic, initialized, userInterests])
+  }, [topic, initialized, interestsLoaded])
 
   const initializeLesson = async () => {
     if (!topic) return
@@ -640,11 +694,15 @@ export function TopicTeacherContent() {
                 Skip
               </Button>
               <Button
-                onClick={() => {
-                  if (interestsInput.trim()) {
-                    saveUserInterests(interestsInput)
-                    setUserInterests(interestsInput)
-                    setShowInterestsModal(false)
+                onClick={async () => {
+                  if (interestsInput.trim() && user?.id) {
+                    try {
+                      await updateUserCurrentInterest(user.id, interestsInput)
+                      setUserInterests(interestsInput)
+                      setShowInterestsModal(false)
+                    } catch (error) {
+                      console.debug('Error saving interest:', error)
+                    }
                   }
                 }}
                 disabled={!interestsInput.trim()}

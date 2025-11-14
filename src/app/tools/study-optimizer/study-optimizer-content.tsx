@@ -10,6 +10,7 @@ import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
+import { Switch } from '@/components/ui/switch'
 
 interface AnalysisData {
   overallScore?: number
@@ -26,6 +27,7 @@ export function StudyOptimizerContent() {
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [studyStats, setStudyStats] = useState(calculateStudyStats())
+  const [viewMode, setViewMode] = useState<'overview' | 'detailed'>('overview')
 
   useEffect(() => {
     if (resultsParam) {
@@ -96,8 +98,8 @@ export function StudyOptimizerContent() {
 
   if (!resultsParam) {
     return (
-      <main className="min-h-screen p-6 bg-gradient-to-br from-background via-background to-secondary/30">
-        <div className="max-w-5xl mx-auto">
+      <main className="min-h-screen p-6 bg-background">
+        <div className="max-w-4xl mx-auto">
           <Link
             href="/dashboard"
             className="flex items-center gap-2 text-primary hover:underline mb-8"
@@ -107,122 +109,118 @@ export function StudyOptimizerContent() {
           </Link>
 
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={animations.containerVariants}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <motion.div variants={animations.itemVariants} className="mb-12">
-              <div className="flex items-center gap-6">
-                <motion.div
-                  className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border border-amber-500/20"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Lightbulb size={32} className="text-amber-500" />
-                </motion.div>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">Prioritize</h1>
-                  <p className="text-lg text-muted-foreground">
-                    AI-powered study recommendations based on your progress
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            <div className="text-center py-12">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                Prioritize
+              </h1>
+              <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                AI-powered study recommendations based on your exam performance
+              </p>
 
-            {/* Weak Areas Alert */}
-            {studyStats.weakTopics.length > 0 ? (
-              <motion.div
-                variants={animations.itemVariants}
-                className="mb-8"
-              >
-                <Card className="border-orange-500/30 bg-orange-500/5">
-                  <CardHeader>
-                    <div className="flex items-center gap-3">
-                      <AlertTriangle size={24} className="text-orange-500" />
-                      <div>
-                        <CardTitle className="text-xl">Topics Needing Focus</CardTitle>
-                        <CardDescription>
-                          These topics scored below 60% - prioritize them in your study plan
-                        </CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <Separator />
-                  <CardContent className="pt-6">
-                    <div className="space-y-4">
-                      {studyStats.weakTopics.map((topic, idx) => (
-                        <motion.div
-                          key={idx}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: idx * 0.1 }}
-                          className="flex items-center justify-between p-4 rounded-lg bg-background border border-border hover:border-orange-500/50 transition-colors"
-                        >
+              {/* Current Progress Section */}
+              {studyStats.weakTopics.length > 0 || studyStats.totalQuizzes > 0 ? (
+                <div className="max-w-3xl mx-auto mb-12">
+                  {/* Weak Areas Alert */}
+                  {studyStats.weakTopics.length > 0 ? (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                      className="mb-8"
+                    >
+                      <Card className="border-orange-500/30 bg-orange-500/5">
+                        <CardHeader>
                           <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-orange-500" />
-                            <div>
-                              <p className="font-medium">{topic.topic}</p>
-                              <p className="text-sm text-muted-foreground">
-                                Current average: {topic.score}%
-                              </p>
+                            <AlertTriangle size={24} className="text-orange-500 flex-shrink-0" />
+                            <div className="text-left">
+                              <CardTitle className="text-xl">Topics Needing Focus</CardTitle>
+                              <CardDescription>
+                                These topics scored below 60% - prioritize them in your study plan
+                              </CardDescription>
                             </div>
                           </div>
-                          <Link href="/tools/topic-selector">
-                            <Button size="sm" variant="outline">
-                              Study Now
-                            </Button>
-                          </Link>
-                        </motion.div>
-                      ))}
+                        </CardHeader>
+                        <Separator />
+                        <CardContent className="pt-6">
+                          <div className="space-y-3">
+                            {studyStats.weakTopics.slice(0, 3).map((topic, idx) => (
+                              <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: (idx + 2) * 0.1 }}
+                                className="flex items-center justify-between p-3 rounded-lg bg-background border border-border hover:border-orange-500/50 transition-colors"
+                              >
+                                <div className="flex items-center gap-3 flex-1">
+                                  <div className="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0" />
+                                  <div className="text-left">
+                                    <p className="font-medium text-sm">{topic.topic}</p>
+                                    <p className="text-xs text-muted-foreground">
+                                      Average: {topic.score}%
+                                    </p>
+                                  </div>
+                                </div>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ) : studyStats.totalQuizzes > 0 ? (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                      className="mb-8"
+                    >
+                      <Card className="border-green-500/30 bg-green-500/5">
+                        <CardHeader>
+                          <div className="flex items-center gap-3">
+                            <BookOpen size={24} className="text-green-500 flex-shrink-0" />
+                            <div className="text-left">
+                              <CardTitle className="text-xl">Great Progress!</CardTitle>
+                              <CardDescription>
+                                All your topics are scoring above 60%. Keep up the excellent work!
+                              </CardDescription>
+                            </div>
+                          </div>
+                        </CardHeader>
+                      </Card>
+                    </motion.div>
+                  ) : null}
+                </div>
+              ) : null}
+
+              {/* CTA Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+              >
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Ready for a Practice Exam?</CardTitle>
+                    <CardDescription>
+                      Take a practice exam to get detailed AI-powered analysis and personalized recommendations
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex gap-4 justify-center">
+                      <Link href="/tools/exam-generator">
+                        <Button size="lg">Take Practice Exam</Button>
+                      </Link>
+                      <Link href="/tools/topic-selector">
+                        <Button size="lg" variant="outline">Study Topics</Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
-            ) : studyStats.totalQuizzes > 0 ? (
-              <motion.div
-                variants={animations.itemVariants}
-                className="mb-8"
-              >
-                <Card className="border-green-500/30 bg-green-500/5">
-                  <CardHeader>
-                    <div className="flex items-center gap-3">
-                      <BookOpen size={24} className="text-green-500" />
-                      <div>
-                        <CardTitle className="text-xl">Great Progress!</CardTitle>
-                        <CardDescription>
-                          All your topics are scoring above 60%. Keep up the excellent work!
-                        </CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-            ) : null}
-
-            {/* No Exam Results CTA */}
-            <motion.div
-              variants={animations.itemVariants}
-              className="text-center py-12"
-            >
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Ready for a Practice Exam?</CardTitle>
-                  <CardDescription>
-                    Take a practice exam to get detailed AI-powered analysis and recommendations
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex gap-4 justify-center">
-                    <Link href="/tools/exam-generator">
-                      <Button size="lg">Take Practice Exam</Button>
-                    </Link>
-                    <Link href="/tools/topic-selector">
-                      <Button size="lg" variant="outline">Study Topics</Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </main>
@@ -232,38 +230,29 @@ export function StudyOptimizerContent() {
   const sections = parseAnalysis()
 
   return (
-    <main className="min-h-screen p-6 bg-gradient-to-br from-background via-background to-secondary/30">
-      <div className="max-w-5xl mx-auto">
+    <main className="min-h-screen p-6 bg-background">
+      <div className="max-w-4xl mx-auto">
         <Link
-          href="/tools"
+          href="/dashboard"
           className="flex items-center gap-2 text-primary hover:underline mb-8"
         >
           <ArrowLeft size={18} />
-          Back to Tools
+          Back to Dashboard
         </Link>
 
         <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={animations.containerVariants}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <motion.div variants={animations.itemVariants} className="mb-12">
-            <div className="flex items-center gap-6">
-              <motion.div
-                className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border border-amber-500/20"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Lightbulb size={32} className="text-amber-500" />
-              </motion.div>
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">Prioritize</h1>
-                <p className="text-lg text-muted-foreground">
-                  Your personalized study plan based on exam performance
-                </p>
-              </div>
-            </div>
-          </motion.div>
+          <div className="text-center mb-12">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+              Prioritize
+            </h1>
+            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+              Your personalized study plan based on exam performance
+            </p>
+          </div>
 
           {isAnalyzing && !analysis && (
             <motion.div

@@ -1,17 +1,21 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, ChevronDown, Clock, Play } from 'lucide-react'
+import { ArrowLeft, ChevronDown, Clock, Play, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { Progress } from '@/components/ui/progress'
+import { Kbd } from '@/components/ui/kbd'
 import { motion, AnimatePresence } from 'motion/react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
+import { useAuth } from '@/context/auth-context'
+import { saveUserInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
+import type { RealtimeChannel } from '@supabase/supabase-js'
 
 interface RecentActivity {
   topic: string
@@ -34,10 +38,13 @@ function getTimeAgo(timestamp: number): string {
 }
 
 export default function TopicSelectorPage() {
+  const { user } = useAuth()
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
-  const [interests, setInterests] = useState<string>('')
+  const [currentInput, setCurrentInput] = useState<string>('')
+  const [savedInterests, setSavedInterests] = useState<string[]>([])
   const [domains, setDomains] = useState<any[]>([])
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
+  const subscriptionRef = useRef<RealtimeChannel | null>(null)
   const studyStats = calculateStudyStats()
 
   // Calculate progress based on quiz results
@@ -87,6 +94,30 @@ export default function TopicSelectorPage() {
     setDomains(domainsWithProgress)
   }, [])
 
+  // Subscribe to interest changes from topic-teacher
+  useEffect(() => {
+    if (user?.id) {
+      const channel = subscribeToUserInterestChanges(user.id, (newInterest) => {
+        if (newInterest) {
+          // Parse comma-separated interests
+          const interestsList = newInterest
+            .split(',')
+            .map((i) => i.trim())
+            .filter((i) => i.length > 0)
+          setSavedInterests(interestsList)
+          setCurrentInput('')
+        }
+      })
+      subscriptionRef.current = channel
+    }
+
+    return () => {
+      if (subscriptionRef.current) {
+        unsubscribeFromInterestChanges(subscriptionRef.current)
+      }
+    }
+  }, [user?.id])
+
   const toggleDomain = (domainId: string) => {
     setExpandedDomains((prev) =>
       prev.includes(domainId)
@@ -95,10 +126,48 @@ export default function TopicSelectorPage() {
     )
   }
 
-  const handleAddInterest = () => {
-    if (interests.trim()) {
-      // Interests can be used to customize the study material
-      setInterests('')
+  const handleAddInterest = async () => {
+    if (currentInput.trim() && user?.id) {
+      try {
+        const newInterest = currentInput.trim()
+        // Add to local list
+        const updatedInterests = [...savedInterests, newInterest]
+        setSavedInterests(updatedInterests)
+        setCurrentInput('')
+
+        const interestsString = updatedInterests.join(', ')
+
+        // Save to localStorage as backup
+        if (typeof window !== 'undefined') {
+          localStorage.setItem(`interests_${user.id}`, interestsString)
+        }
+
+        // Save all interests as comma-separated string to Supabase
+        await saveUserInterest(user.id, interestsString)
+      } catch (error) {
+        console.debug('Failed to save interest:', error)
+      }
+    }
+  }
+
+  const removeInterest = (index: number) => {
+    const newInterests = savedInterests.filter((_, i) => i !== index)
+    setSavedInterests(newInterests)
+
+    // Update localStorage as backup
+    if (user?.id && typeof window !== 'undefined') {
+      if (newInterests.length > 0) {
+        localStorage.setItem(`interests_${user.id}`, newInterests.join(', '))
+      } else {
+        localStorage.removeItem(`interests_${user.id}`)
+      }
+    }
+
+    // Update Supabase with remaining interests
+    if (user?.id) {
+      if (newInterests.length > 0) {
+        saveUserInterest(user.id, newInterests.join(', '))
+      }
     }
   }
 
@@ -122,13 +191,56 @@ export default function TopicSelectorPage() {
               </p>
             </div>
 
-            <div className="flex-1 max-w-xs">
-              <Input
-                placeholder="Add your study interests for personalization..."
-                value={interests}
-                onChange={(e) => setInterests(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleAddInterest()}
-              />
+            <div className="flex-1 max-w-2xl">
+              <div className="relative">
+                <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
+                  {/* Display saved interests as tags */}
+                  {savedInterests.map((interest, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      className="flex items-center gap-1 px-2 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium"
+                    >
+                      <span>{interest}</span>
+                      <button
+                        onClick={() => removeInterest(index)}
+                        className="hover:opacity-70 transition-opacity"
+                        type="button"
+                      >
+                        <X size={14} />
+                      </button>
+                    </motion.div>
+                  ))}
+
+                  {/* Input field */}
+                  <input
+                    type="text"
+                    placeholder={savedInterests.length === 0 ? "Add your interests/hobbies/fandoms for study personalization..." : "Add another interest..."}
+                    value={currentInput}
+                    onChange={(e) => setCurrentInput(e.target.value)}
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault()
+                        handleAddInterest()
+                      }
+                    }}
+                    className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"
+                  />
+
+                  {/* Enter key indicator */}
+                  {currentInput.trim().length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="flex items-center gap-1 text-xs text-muted-foreground ml-auto"
+                    >
+                      <Kbd className="text-xs px-1.5 py-0.5">Enter</Kbd>
+                    </motion.div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>

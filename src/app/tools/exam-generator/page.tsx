@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Zap, Clock } from 'lucide-react'
+import { ArrowLeft, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -11,6 +11,8 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { motion } from 'motion/react'
+import { Switch } from '@/components/ui/switch'
+import { LoadingAnimation } from '@/components/ui/loading-animation'
 
 interface Question {
   id: number
@@ -34,6 +36,7 @@ export default function ExamGeneratorPage() {
   const [mode, setMode] = useState<'study' | 'test' | null>(null)
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [isExamStarted, setIsExamStarted] = useState(false)
+  const [selectedTab, setSelectedTab] = useState<'study' | 'test'>('study')
 
   // Auto-show explanation in Study Mode
   useEffect(() => {
@@ -184,38 +187,42 @@ export default function ExamGeneratorPage() {
           >
             {!isGenerating && !mode && (
               <div className="text-center py-12">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="mb-6 flex justify-center"
-                >
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 flex items-center justify-center">
-                    <Zap size={32} className="text-yellow-500" />
-                  </div>
-                </motion.div>
-                <h1 className="text-4xl font-bold mb-4">EPPP Practice Exam</h1>
-                <p className="text-muted-foreground mb-12 text-lg max-w-2xl mx-auto">
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                  EPPP Practice Exam
+                </h1>
+                <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                   Choose an exam mode to generate 225 questions.
                 </p>
 
-                <Tabs defaultValue="study" className="max-w-2xl mx-auto">
-                  <TabsList className="grid w-full grid-cols-2 mb-8">
-                    <TabsTrigger value="study" className="text-base">
-                      📚 Study Mode
-                    </TabsTrigger>
-                    <TabsTrigger value="test" className="text-base">
-                      📋 Test Mode
-                    </TabsTrigger>
-                  </TabsList>
+                <div className="max-w-2xl mx-auto">
+                  <div className="flex items-center justify-center gap-4 mb-8">
+                    <span className={`text-base font-semibold transition-colors ${selectedTab === 'study' ? 'text-foreground' : 'text-muted-foreground'}`}>
+                      Study Mode
+                    </span>
+                    <Switch
+                      checked={selectedTab === 'test'}
+                      onCheckedChange={(checked) => setSelectedTab(checked ? 'test' : 'study')}
+                    />
+                    <span className={`text-base font-semibold transition-colors ${selectedTab === 'test' ? 'text-foreground' : 'text-muted-foreground'}`}>
+                      Test Mode
+                    </span>
+                  </div>
 
-                  <TabsContent value="study">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Study Mode</CardTitle>
-                        <CardDescription>
-                          Learn at your own pace with immediate feedback
-                        </CardDescription>
-                      </CardHeader>
+                <Tabs value={selectedTab} onValueChange={(value) => setSelectedTab(value as 'study' | 'test')} className="w-full">
+
+                  <TabsContent value="study" asChild>
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Card>
+                        <CardHeader>
+                          <CardDescription>
+                            Learn at your own pace with immediate feedback
+                          </CardDescription>
+                        </CardHeader>
                       <CardContent className="space-y-4">
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-center gap-2">
@@ -244,17 +251,23 @@ export default function ExamGeneratorPage() {
                           Start Study Mode
                         </Button>
                       </CardFooter>
-                    </Card>
+                      </Card>
+                    </motion.div>
                   </TabsContent>
 
-                  <TabsContent value="test">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Test Mode</CardTitle>
-                        <CardDescription>
-                          Simulate real exam conditions
-                        </CardDescription>
-                      </CardHeader>
+                  <TabsContent value="test" asChild>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Card>
+                        <CardHeader>
+                          <CardDescription>
+                            Simulate real exam conditions
+                          </CardDescription>
+                        </CardHeader>
                       <CardContent className="space-y-4">
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-center gap-2">
@@ -284,15 +297,17 @@ export default function ExamGeneratorPage() {
                           Start Test Mode
                         </Button>
                       </CardFooter>
-                    </Card>
+                      </Card>
+                    </motion.div>
                   </TabsContent>
                 </Tabs>
+                </div>
               </div>
             )}
 
             {isGenerating && (
               <div className="flex flex-col items-center justify-center py-20 gap-4">
-                <div className="w-12 h-12 border-4 border-border border-t-primary rounded-full animate-spin" />
+                <LoadingAnimation size="lg" />
                 <p className="text-muted-foreground">Generating your EPPP exam...</p>
                 <p className="text-sm text-muted-foreground/60">This may take a moment</p>
               </div>

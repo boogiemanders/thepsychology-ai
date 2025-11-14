@@ -11,11 +11,16 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Calendar } from '@/components/ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid'
+import { Marquee } from '@/components/ui/marquee'
+import { Ripple } from '@/components/ui/ripple'
+import { BreathingAnimation } from '@/components/ui/breathing-animation'
+import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
-import { LogOut, GraduationCap, Flame, Target } from 'lucide-react'
+import { LogOut, GraduationCap, Droplets, Target, Flame } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 
@@ -155,13 +160,16 @@ export default function DashboardPage() {
 
   const handleSaveExamDate = async (date: Date | undefined) => {
     if (date && user) {
-      // Use UTC methods to extract date components as they appear in the calendar
-      // react-day-picker passes dates at midnight UTC, so we need UTC methods
-      const year = date.getUTCFullYear()
-      const month = date.getUTCMonth()
-      const day = date.getUTCDate()
+      // Add 1 day to compensate for timezone offset issue
+      const adjustedDate = new Date(date)
+      adjustedDate.setDate(adjustedDate.getDate() + 1)
 
-      // Create date string from the actual selected day
+      // Use UTC methods to extract date components
+      const year = adjustedDate.getUTCFullYear()
+      const month = adjustedDate.getUTCMonth()
+      const day = adjustedDate.getUTCDate()
+
+      // Create date string from the adjusted date
       const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
       setExamDate(dateString)
 
@@ -249,13 +257,25 @@ export default function DashboardPage() {
       cta: "Start Exam",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3",
       background: (
-        <div className="absolute inset-0 flex items-center justify-center opacity-20">
-          <div className="grid grid-cols-3 gap-4 p-6">
-            <div className="h-16 w-16 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0s' }} />
-            <div className="h-16 w-16 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.2s' }} />
-            <div className="h-16 w-16 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.4s' }} />
+        <Marquee className="absolute inset-0 opacity-20" repeat={2}>
+          <div className="flex gap-6 whitespace-nowrap px-4">
+            <span>Build confidence</span>
+            <span>•</span>
+            <span>225 questions</span>
+            <span>•</span>
+            <span>Master content</span>
+            <span>•</span>
+            <span>4h 15min timer</span>
+            <span>•</span>
+            <span>Study smarter</span>
+            <span>•</span>
+            <span>Realistic exam experience</span>
+            <span>•</span>
+            <span>Track progress</span>
+            <span>•</span>
+            <span>Study & Test modes</span>
           </div>
-        </div>
+        </Marquee>
       ),
     },
     {
@@ -267,47 +287,43 @@ export default function DashboardPage() {
       href: "/tools/study-optimizer",
       cta: "View Insights",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5",
-      background: (
-        <div className="absolute inset-0 flex items-center justify-center opacity-20 p-6">
-          {studyStats.weakTopics.length > 0 ? (
-            <div className="w-full space-y-1">
-              {studyStats.weakTopics.slice(0, 3).map((topic, idx) => (
-                <div key={idx} className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-orange-500/60" />
-                  <div className="text-xs text-foreground/60 truncate">{topic.topic}</div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 gap-3">
-              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0s' }} />
-              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.15s' }} />
-              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.3s' }} />
-              <div className="h-12 w-12 rounded-lg bg-primary/20 animate-pulse" style={{ animationDelay: '0.45s' }} />
-            </div>
-          )}
+      background: studyStats.weakTopics.length > 0 && studyStats.totalQuizzes > 0 ? (
+        <Marquee className="absolute inset-0 opacity-20" repeat={2}>
+          <div className="flex gap-6 whitespace-nowrap px-4">
+            {studyStats.weakTopics.slice(0, 3).map((topic, idx) => (
+              <div key={idx} className="flex items-center gap-2">
+                <span className="text-sm">{topic.topic}</span>
+                {idx < 2 && <span>•</span>}
+              </div>
+            ))}
+          </div>
+        </Marquee>
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center opacity-20">
+          <div className="text-center text-xs text-foreground/60 px-4">
+            <p>Recommendations will appear</p>
+            <p>after first practice exam</p>
+          </div>
         </div>
       ),
     },
     {
-      Icon: Flame,
+      Icon: Droplets,
       name: "Recover",
       description: "Improve focus and reduce burnout while studying",
       href: "#",
       cta: "Coming Soon",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
       background: (
-        <div className="absolute inset-0 flex items-center justify-center opacity-20">
-          <div className="text-center group-hover:block hidden">
-            <p className="text-sm font-medium">Coming Soon for Pro</p>
-          </div>
+        <div className="absolute inset-0 overflow-hidden">
+          <BreathingAnimation speed={0.596} />
         </div>
       ),
     },
     {
       Icon: FileTextIcon,
       name: "Study",
-      description: `${studyStats.totalQuizzes} quizzes • ${studyStats.averageScore}% avg • ${progressData.completedTopics}/${progressData.totalTopics} topics`,
+      description: `${studyStats.totalQuizzes} quizzes • ${progressData.completedTopics}/${progressData.totalTopics} topics`,
       href: "/tools/topic-selector",
       cta: "Start Studying",
       className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
@@ -337,36 +353,11 @@ export default function DashboardPage() {
       Icon: CalendarIcon,
       name: "Exam Date",
       description: examDate && daysRemaining !== null
-        ? studyPace.pace !== 'Unknown'
-          ? `${daysRemaining} days • ${studyPace.pace} • ${studyPace.topicsPerWeek}/wk`
-          : `${daysRemaining} ${daysRemaining === 1 ? 'day' : 'days'} remaining`
+        ? `${daysRemaining} ${daysRemaining === 1 ? 'day' : 'days'} remaining`
         : "Set your exam date",
       href: "#",
       cta: "Edit Date",
       className: "lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
-      background: (
-        <div className="absolute inset-0 flex items-center justify-center opacity-20 p-4">
-          <div className="w-full space-y-2 text-sm">
-            {studyPace.pace !== 'Unknown' && (
-              <>
-                <div className="flex justify-between text-xs text-foreground/60">
-                  <span>Study Pace</span>
-                  <span className={`font-semibold ${
-                    studyPace.pace === 'On track' ? 'text-green-500' :
-                    studyPace.pace === 'Ahead' ? 'text-blue-500' :
-                    'text-orange-500'
-                  }`}>{studyPace.pace}</span>
-                </div>
-                <div className="flex justify-between text-xs text-foreground/60">
-                  <span>Topics/Week</span>
-                  <span className="font-semibold">{studyPace.topicsPerWeek}</span>
-                </div>
-              </>
-            )}
-            {studyPace.pace === 'Unknown' && <CalendarIcon className="h-12 w-12 mx-auto opacity-50" />}
-          </div>
-        </div>
-      ),
     },
     {
       Icon: Flame,
@@ -389,72 +380,66 @@ export default function DashboardPage() {
     {
       Icon: Target,
       name: "Daily Goal",
-      description: `${todayQuizCount}/${dailyGoal} quizzes today`,
+      description: `${dailyGoal} topic${dailyGoal > 1 ? 's' : ''}/day`,
       href: "#",
-      cta: "Change Goal",
+      cta: "Edit",
       className: "lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
       background: (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 pointer-events-auto">
-          <div className="relative w-24 h-24 opacity-30 pointer-events-none">
-            <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 128 128">
-              <circle
-                cx="64"
-                cy="64"
-                r="56"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="8"
-                className="text-border/50"
-              />
-              <circle
-                cx="64"
-                cy="64"
-                r="56"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="8"
-                className="text-primary transition-all duration-500"
-                strokeDasharray={`${(Math.min(todayQuizCount / dailyGoal, 1)) * (56 * 2 * Math.PI)} ${56 * 2 * Math.PI}`}
-              />
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center text-lg font-bold">
-              {Math.round((todayQuizCount / dailyGoal) * 100)}%
-            </div>
-          </div>
-          <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
-            <PopoverTrigger asChild>
-              <Button variant="outline" size="sm" className="pointer-events-auto text-xs">
-                {dailyGoal} topics/day
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-[300px] p-4">
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Daily Study Goal</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    How many topics do you want to study per day? (1-7)
-                  </p>
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center gap-3 pointer-events-auto cursor-pointer"
+          onClick={() => !isPopoverOpen && setIsPopoverOpen(true)}
+        >
+          {!isPopoverOpen ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-start pt-8 gap-2">
+              <div className="relative w-24 h-24 opacity-30">
+                <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 128 128">
+                  <circle
+                    cx="64"
+                    cy="64"
+                    r="56"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="8"
+                    className="text-border/50"
+                  />
+                  <circle
+                    cx="64"
+                    cy="64"
+                    r="56"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="8"
+                    className="text-primary transition-all duration-500"
+                    strokeDasharray={`${(Math.min(todayQuizCount / dailyGoal, 1)) * (56 * 2 * Math.PI)} ${56 * 2 * Math.PI}`}
+                  />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center text-lg font-bold text-white">
+                  {Math.round((todayQuizCount / dailyGoal) * 100)}%
                 </div>
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {[1, 2, 3, 4, 5, 6, 7].map((goal) => (
-                      <CarouselItem key={goal} className="basis-1/3">
-                        <Button
-                          variant={dailyGoal === goal ? "default" : "outline"}
-                          className="w-full text-xs"
-                          onClick={() => handleDailyGoalChange(goal)}
-                        >
-                          {goal}
-                        </Button>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-0" />
-                  <CarouselNext className="right-0" />
-                </Carousel>
               </div>
-            </PopoverContent>
-          </Popover>
+            </div>
+          ) : (
+            <div className="relative w-full h-full pointer-events-auto overflow-hidden rounded-lg" onClick={(e) => e.stopPropagation()}>
+              <ScrollArea className="relative w-full h-full">
+                <div className="flex flex-col gap-2 p-4 min-h-full">
+                  {[1, 2, 3, 4, 5, 6, 7].map((goal) => (
+                    <Button
+                      key={goal}
+                      variant={dailyGoal === goal ? "default" : "outline"}
+                      className="w-full justify-center text-lg"
+                      onClick={() => {
+                        handleDailyGoalChange(goal)
+                        setIsPopoverOpen(false)
+                      }}
+                    >
+                      {goal}
+                    </Button>
+                  ))}
+                </div>
+                <ProgressiveBlur position="bottom" height="30%" />
+              </ScrollArea>
+            </div>
+          )}
         </div>
       ),
     },
@@ -463,23 +448,9 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12 space-y-8">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-            <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
-          </div>
-          {/* Exam date in top right */}
-          {examDate && (
-            <div className="flex flex-col items-end gap-1">
-              <p className="text-sm font-semibold text-foreground">Exam Date</p>
-              <p className="text-sm text-muted-foreground">
-                {new Date(examDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-              </p>
-              {daysRemaining !== null && (
-                <p className="text-xs text-primary font-medium">{daysRemaining} days remaining</p>
-              )}
-            </div>
-          )}
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+          <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
         </div>
 
         {/* Bento Grid - Practice/Prioritize/Recover left, Study wide in middle, Info boxes narrow on right */}
@@ -499,6 +470,8 @@ export default function DashboardPage() {
               key={`info-${idx}`}
               {...feature}
               onClick={feature.name === "Exam Date" ? () => setIsEditDialogOpen(true) : undefined}
+              classNameHeader={feature.name === "Daily Goal" && isPopoverOpen ? "opacity-0 transition-opacity duration-300" : "transition-opacity duration-300"}
+              showHeader={!(feature.name === "Daily Goal" && isPopoverOpen)}
             />
           ))}
         </BentoGrid>

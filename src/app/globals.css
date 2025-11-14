@@ -248,6 +248,22 @@ strong, b {
   }
 
   --animate-breath: breath 15s ease-in-out infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 :root {
@@ -373,5 +389,12 @@ strong, b {
   .rdp-day {
     width: 100%;
     height: 100%;
+  }
+
+  /* View Transition API styles for animated theme toggler */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
   }
 }
