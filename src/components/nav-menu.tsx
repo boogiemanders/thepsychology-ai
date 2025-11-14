@@ -12,9 +12,9 @@ interface NavItem {
 const navs: NavItem[] = siteConfig.nav.links;
 
 const loggedInNavs: NavItem[] = [
-  { name: "Practice", href: "/tools/exam-generator" },
-  { name: "Prioritize", href: "/tools/study-optimizer" },
-  { name: "Study", href: "/tools/topic-selector" },
+  { name: "Study", href: "/topic-selector" },
+  { name: "Practice", href: "/exam-generator" },
+  { name: "Prioritize", href: "/prioritize" },
 ];
 
 export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
