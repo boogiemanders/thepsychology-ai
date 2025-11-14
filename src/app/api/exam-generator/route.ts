@@ -32,6 +32,13 @@ CRITICAL RANDOMIZATION REQUIREMENT:
 - Randomize answer option positions for each question independently
 - Verify that across all 71 questions, correct answers appear in different positions
 
+CRITICAL ANSWER LENGTH VARIATION:
+- Vary the length of answer choices to avoid length bias (where longer answers appear more correct)
+- Ensure that about 25% of correct answers are the longest option, 25% are medium length, 25% are shortest, and 25% are medium-short
+- For incorrect distractor options, ensure they have varied lengths - some should be longer, some shorter than the correct answer
+- Do NOT make the correct answer consistently the longest or shortest option
+- This makes test-taking more rigorous and prevents test-takers from using answer length as a cue
+
 Generate the exam in JSON format with this structure:
 {
   "questions": [
@@ -73,6 +80,13 @@ CRITICAL RANDOMIZATION REQUIREMENT:
 - Aim for roughly 25% of correct answers in each position (A, B, C, D)
 - Randomize answer option positions for each question independently
 - Verify that across all 225 questions, correct answers appear in different positions
+
+CRITICAL ANSWER LENGTH VARIATION:
+- Vary the length of answer choices to avoid length bias (where longer answers appear more correct)
+- Ensure that about 25% of correct answers are the longest option, 25% are medium length, 25% are shortest, and 25% are medium-short
+- For incorrect distractor options, ensure they have varied lengths - some should be longer, some shorter than the correct answer
+- Do NOT make the correct answer consistently the longest or shortest option
+- This makes test-taking more rigorous and prevents test-takers from using answer length as a cue
 
 IMPORTANT: Mark the unscored questions clearly with "isScored": false. These should be noticeably harder than the scored questions and are used for data collection. Users will see their score calculated only from the 180 scored questions, not the 45 unscored ones.
 
