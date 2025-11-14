@@ -291,21 +291,16 @@ export default function ExamGeneratorPage() {
                     >
                       <Card
                         className={`cursor-pointer transition-all border-2 ${
-                          recommendedExamType === 'diagnostic'
+                          examType === 'diagnostic'
                             ? 'border-blue-500 bg-blue-50/20 dark:bg-blue-950/20'
                             : 'border-border'
                         }`}
                         onClick={() => setExamType('diagnostic')}
                       >
-                        <CardHeader>
-                          <div className="flex items-start justify-between">
-                            <div>
-                              <CardTitle className="text-xl mb-2">Diagnostic Exam</CardTitle>
-                              <CardDescription>71 questions</CardDescription>
-                            </div>
-                            {recommendedExamType === 'diagnostic' && (
-                              <Badge className="bg-blue-500">Recommended</Badge>
-                            )}
+                        <CardHeader className="text-center">
+                          <div className="flex items-center justify-center flex-col">
+                            <CardTitle className="text-xl mb-2 font-semibold">Diagnostic Exam</CardTitle>
+                            <CardDescription>71 questions</CardDescription>
                           </div>
                         </CardHeader>
                         <CardContent className="space-y-3">
@@ -334,21 +329,16 @@ export default function ExamGeneratorPage() {
                     >
                       <Card
                         className={`cursor-pointer transition-all border-2 ${
-                          recommendedExamType === 'practice'
-                            ? 'border-purple-500 bg-purple-50/20 dark:bg-purple-950/20'
+                          examType === 'practice'
+                            ? 'border-blue-500 bg-blue-50/20 dark:bg-blue-950/20'
                             : 'border-border'
                         }`}
                         onClick={() => setExamType('practice')}
                       >
-                        <CardHeader>
-                          <div className="flex items-start justify-between">
-                            <div>
-                              <CardTitle className="text-xl mb-2">Practice Exam</CardTitle>
-                              <CardDescription>225 questions</CardDescription>
-                            </div>
-                            {recommendedExamType === 'practice' && (
-                              <Badge className="bg-purple-500">Recommended</Badge>
-                            )}
+                        <CardHeader className="text-center">
+                          <div className="flex items-center justify-center flex-col">
+                            <CardTitle className="text-xl mb-2 font-semibold">Practice Exam</CardTitle>
+                            <CardDescription>225 questions</CardDescription>
                           </div>
                         </CardHeader>
                         <CardContent className="space-y-3">
@@ -384,8 +374,8 @@ export default function ExamGeneratorPage() {
                     <p className="text-sm font-semibold text-muted-foreground mb-4">Step 2: Select Mode</p>
                     <Tabs value={selectedMode} onValueChange={(value) => setSelectedMode(value as 'study' | 'test')} className="w-full">
                       <TabsList className="grid w-full grid-cols-2">
-                        <TabsTrigger value="study">Study Mode</TabsTrigger>
-                        <TabsTrigger value="test">Test Mode</TabsTrigger>
+                        <TabsTrigger value="study" className="text-base font-semibold">Study Mode</TabsTrigger>
+                        <TabsTrigger value="test" className="text-base font-semibold">Test Mode</TabsTrigger>
                       </TabsList>
 
                       <TabsContent value="study" asChild>
@@ -473,14 +463,6 @@ export default function ExamGeneratorPage() {
                         </motion.div>
                       </TabsContent>
                     </Tabs>
-
-                    <Button
-                      onClick={() => setExamType(null)}
-                      variant="ghost"
-                      className="mt-4 w-full"
-                    >
-                      Back to Exam Selection
-                    </Button>
                     </motion.div>
                   )}
                 </div>
