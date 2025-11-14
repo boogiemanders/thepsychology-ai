@@ -11,8 +11,8 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { motion } from 'motion/react'
-import { Switch } from '@/components/ui/switch'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
+import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
 
 interface Question {
   id: number
@@ -24,6 +24,7 @@ interface Question {
   difficulty: string
   type: string
   isScored?: boolean
+  knId?: string
 }
 
 export default function ExamGeneratorPage() {
@@ -33,10 +34,21 @@ export default function ExamGeneratorPage() {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({})
   const [showExplanation, setShowExplanation] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [examType, setExamType] = useState<'diagnostic' | 'practice' | null>(null)
   const [mode, setMode] = useState<'study' | 'test' | null>(null)
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [isExamStarted, setIsExamStarted] = useState(false)
-  const [selectedTab, setSelectedTab] = useState<'study' | 'test'>('study')
+  const [selectedMode, setSelectedMode] = useState<'study' | 'test'>('study')
+  const [recommendedExamType, setRecommendedExamType] = useState<'diagnostic' | 'practice'>('diagnostic')
+  const [recommendedMode, setRecommendedMode] = useState<'study' | 'test'>('study')
+
+  // Initialize recommended defaults from exam history
+  useEffect(() => {
+    const defaults = getRecommendedDefaults()
+    setRecommendedExamType(defaults.examType)
+    setRecommendedMode(defaults.examMode)
+    setSelectedMode(defaults.examMode)
+  }, [])
 
   // Auto-show explanation in Study Mode
   useEffect(() => {
@@ -45,11 +57,13 @@ export default function ExamGeneratorPage() {
     }
   }, [selectedAnswers, currentQuestion, mode, showExplanation])
 
-  // Timer effect: 68 seconds per question
+  // Timer effect: time per question based on exam type
   useEffect(() => {
     if (!isExamStarted || questions.length === 0 || mode === 'study') return
 
-    const totalSeconds = questions.length * 68
+    // 68 seconds per question for practice (225q = 4h 15m), 50 seconds per question for diagnostic (71q = ~1h)
+    const secondsPerQuestion = examType === 'diagnostic' ? 50 : 68
+    const totalSeconds = questions.length * secondsPerQuestion
 
     // Initialize time remaining on exam start
     if (timeRemaining === 0) {
@@ -90,7 +104,7 @@ export default function ExamGeneratorPage() {
 
   const isTimeWarning = timeRemaining > 0 && timeRemaining <= 300
 
-  const handleGenerateExam = async () => {
+  const handleGenerateExam = async (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
     try {
       setIsGenerating(true)
       setError(null)
@@ -99,9 +113,11 @@ export default function ExamGeneratorPage() {
       setSelectedAnswers({})
       setShowExplanation(false)
       setTimeRemaining(0)
+      setExamType(chosenExamType)
+      setMode(chosenMode)
 
       let jsonContent = ''
-      const response = await fetch('/api/exam-generator', {
+      const response = await fetch(`/api/exam-generator?type=${chosenExamType}`, {
         method: 'POST',
       })
 
@@ -185,130 +201,225 @@ export default function ExamGeneratorPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            {!isGenerating && !mode && (
+            {!isGenerating && !examType && (
               <div className="text-center py-12">
                 <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                  EPPP Practice Exam
+                  EPPP Exam
                 </h1>
                 <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                  Choose an exam mode to generate 225 questions.
+                  Choose an exam type to get started.
                 </p>
 
-                <div className="max-w-2xl mx-auto">
-                  <div className="flex items-center justify-center gap-4 mb-8">
-                    <span className={`text-base font-semibold transition-colors ${selectedTab === 'study' ? 'text-foreground' : 'text-muted-foreground'}`}>
-                      Study Mode
-                    </span>
-                    <Switch
-                      checked={selectedTab === 'test'}
-                      onCheckedChange={(checked) => setSelectedTab(checked ? 'test' : 'study')}
-                    />
-                    <span className={`text-base font-semibold transition-colors ${selectedTab === 'test' ? 'text-foreground' : 'text-muted-foreground'}`}>
-                      Test Mode
-                    </span>
+                {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
+                <div className="max-w-2xl mx-auto mb-8">
+                  <p className="text-sm font-semibold text-muted-foreground mb-4">Step 1: Select Exam Type</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Diagnostic Card */}
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Card
+                        className={`cursor-pointer transition-all border-2 ${
+                          recommendedExamType === 'diagnostic'
+                            ? 'border-blue-500 bg-blue-50/20 dark:bg-blue-950/20'
+                            : 'border-border'
+                        }`}
+                        onClick={() => setExamType('diagnostic')}
+                      >
+                        <CardHeader>
+                          <div className="flex items-start justify-between">
+                            <div>
+                              <CardTitle className="text-xl mb-2">Diagnostic Exam</CardTitle>
+                              <CardDescription>71 questions</CardDescription>
+                            </div>
+                            {recommendedExamType === 'diagnostic' && (
+                              <Badge className="bg-blue-500">Recommended</Badge>
+                            )}
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <ul className="space-y-2 text-sm text-left">
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              Identify knowledge gaps
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              Quick assessment (30-45 minutes)
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              Get priority recommendations
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+
+                    {/* Practice Card */}
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Card
+                        className={`cursor-pointer transition-all border-2 ${
+                          recommendedExamType === 'practice'
+                            ? 'border-purple-500 bg-purple-50/20 dark:bg-purple-950/20'
+                            : 'border-border'
+                        }`}
+                        onClick={() => setExamType('practice')}
+                      >
+                        <CardHeader>
+                          <div className="flex items-start justify-between">
+                            <div>
+                              <CardTitle className="text-xl mb-2">Practice Exam</CardTitle>
+                              <CardDescription>225 questions</CardDescription>
+                            </div>
+                            {recommendedExamType === 'practice' && (
+                              <Badge className="bg-purple-500">Recommended</Badge>
+                            )}
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <ul className="space-y-2 text-sm text-left">
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              Comprehensive knowledge check
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              Full exam preparation (4-5 hours)
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              Includes experimental questions
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
                   </div>
-
-                <Tabs value={selectedTab} onValueChange={(value) => setSelectedTab(value as 'study' | 'test')} className="w-full">
-
-                  <TabsContent value="study" asChild>
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Card>
-                        <CardHeader>
-                          <CardDescription>
-                            Learn at your own pace with immediate feedback
-                          </CardDescription>
-                        </CardHeader>
-                      <CardContent className="space-y-4">
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                            Correct answers turn green immediately
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                            Learn from mistakes with detailed explanations
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                            No time pressure - take as long as you need
-                          </li>
-                        </ul>
-                      </CardContent>
-                      <CardFooter>
-                        <Button
-                          onClick={() => {
-                            setMode('study')
-                            handleGenerateExam()
-                          }}
-                          className="w-full"
-                          size="lg"
-                        >
-                          Start Study Mode
-                        </Button>
-                      </CardFooter>
-                      </Card>
-                    </motion.div>
-                  </TabsContent>
-
-                  <TabsContent value="test" asChild>
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 20 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Card>
-                        <CardHeader>
-                          <CardDescription>
-                            Simulate real exam conditions
-                          </CardDescription>
-                        </CardHeader>
-                      <CardContent className="space-y-4">
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                            See all answers only at the end
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                            Timed exam with countdown (4 hours 15 minutes)
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                            Realistic EPPP exam experience
-                          </li>
-                        </ul>
-                      </CardContent>
-                      <CardFooter>
-                        <Button
-                          onClick={() => {
-                            setMode('test')
-                            handleGenerateExam()
-                          }}
-                          className="w-full"
-                          size="lg"
-                          variant="outline"
-                        >
-                          Start Test Mode
-                        </Button>
-                      </CardFooter>
-                      </Card>
-                    </motion.div>
-                  </TabsContent>
-                </Tabs>
                 </div>
+
+                {/* Step 2: Mode Selection (Study vs Test) */}
+                {examType && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="max-w-2xl mx-auto"
+                  >
+                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 2: Select Mode</p>
+                    <Tabs value={selectedMode} onValueChange={(value) => setSelectedMode(value as 'study' | 'test')} className="w-full">
+                      <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="study">Study Mode</TabsTrigger>
+                        <TabsTrigger value="test">Test Mode</TabsTrigger>
+                      </TabsList>
+
+                      <TabsContent value="study" asChild>
+                        <motion.div
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -20 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Card>
+                            <CardHeader>
+                              <CardDescription>
+                                Learn at your own pace with immediate feedback
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                              <ul className="space-y-2 text-sm text-left">
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Correct answers turn green immediately
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Learn from mistakes with detailed explanations
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  No time pressure - take as long as you need
+                                </li>
+                              </ul>
+                            </CardContent>
+                            <CardFooter>
+                              <Button
+                                onClick={() => handleGenerateExam(examType, 'study')}
+                                className="w-full"
+                                size="lg"
+                              >
+                                Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Study Mode
+                              </Button>
+                            </CardFooter>
+                          </Card>
+                        </motion.div>
+                      </TabsContent>
+
+                      <TabsContent value="test" asChild>
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 20 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Card>
+                            <CardHeader>
+                              <CardDescription>
+                                Simulate real exam conditions
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                              <ul className="space-y-2 text-sm text-left">
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  See all answers only at the end
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Timed exam with countdown
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Realistic EPPP exam experience
+                                </li>
+                              </ul>
+                            </CardContent>
+                            <CardFooter>
+                              <Button
+                                onClick={() => handleGenerateExam(examType, 'test')}
+                                className="w-full"
+                                size="lg"
+                                variant="outline"
+                              >
+                                Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Test Mode
+                              </Button>
+                            </CardFooter>
+                          </Card>
+                        </motion.div>
+                      </TabsContent>
+                    </Tabs>
+
+                    <Button
+                      onClick={() => setExamType(null)}
+                      variant="ghost"
+                      className="mt-4 w-full"
+                    >
+                      Back to Exam Selection
+                    </Button>
+                  </motion.div>
+                )}
               </div>
             )}
 
             {isGenerating && (
               <div className="flex flex-col items-center justify-center py-20 gap-4">
                 <LoadingAnimation size="lg" />
-                <p className="text-muted-foreground">Generating your EPPP exam...</p>
+                <p className="text-muted-foreground">
+                  Generating your {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} exam...
+                </p>
                 <p className="text-sm text-muted-foreground/60">This may take a moment</p>
               </div>
             )}
@@ -326,7 +437,7 @@ export default function ExamGeneratorPage() {
                       <p className="text-sm">{error}</p>
                     </div>
                     <Button
-                      onClick={handleGenerateExam}
+                      onClick={() => handleGenerateExam(examType || 'practice', selectedMode)}
                       variant="outline"
                       size="sm"
                     >
@@ -384,12 +495,20 @@ export default function ExamGeneratorPage() {
                   <CardTitle className="text-xl">
                     Question {currentQuestion + 1} of {questions.length}
                   </CardTitle>
-                  <Badge
-                    variant={mode === 'study' ? 'default' : 'secondary'}
-                    className={mode === 'study' ? 'bg-blue-500/20 text-blue-400 hover:bg-blue-500/30' : 'bg-purple-500/20 text-purple-400 hover:bg-purple-500/30'}
-                  >
-                    {mode === 'study' ? '📚 Study Mode' : '📋 Test Mode'}
-                  </Badge>
+                  <div className="flex gap-2">
+                    <Badge
+                      variant="outline"
+                      className="bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                    >
+                      {examType === 'diagnostic' ? '🎯 Diagnostic' : '📚 Practice'}
+                    </Badge>
+                    <Badge
+                      variant={mode === 'study' ? 'default' : 'secondary'}
+                      className={mode === 'study' ? 'bg-green-500/20 text-green-600 dark:text-green-400 hover:bg-green-500/30' : 'bg-purple-500/20 text-purple-600 dark:text-purple-400 hover:bg-purple-500/30'}
+                    >
+                      {mode === 'study' ? '📚 Study Mode' : '📋 Test Mode'}
+                    </Badge>
+                  </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Badge variant="outline" className="font-normal">
@@ -521,22 +640,39 @@ export default function ExamGeneratorPage() {
               </Button>
 
               {currentQuestion === questions.length - 1 ? (
-                <Link
-                  href={`/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify({
-                    questions,
-                    selectedAnswers,
-                    score: Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
+                <Button
+                  onClick={() => {
+                    const scoredQuestions = questions.filter(q => q.isScored !== false)
+                    const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
                       const q = questions[parseInt(qIdx)]
                       return q && q.isScored !== false && answer === q.correct_answer
-                    }).length,
-                    totalQuestions: questions.filter(q => q.isScored !== false).length
-                  }))}`}
-                  className="flex-1"
+                    }).length
+
+                    // Save exam completion to local storage
+                    const { saveExamCompletion } = require('@/lib/exam-history')
+                    saveExamCompletion({
+                      examType: examType || 'practice',
+                      examMode: mode || 'study',
+                      score: (score / scoredQuestions.length) * 100,
+                      totalQuestions: scoredQuestions.length,
+                      correctAnswers: score,
+                    })
+
+                    // Route to results page
+                    const resultData = {
+                      questions,
+                      selectedAnswers,
+                      score,
+                      totalQuestions: scoredQuestions.length,
+                      examType,
+                      examMode: mode,
+                    }
+                    window.location.href = `/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify(resultData))}`
+                  }}
+                  className="w-full"
                 >
-                  <Button className="w-full">
-                    Finish & Analyze Results
-                  </Button>
-                </Link>
+                  Finish & Analyze Results
+                </Button>
               ) : (
                 <Button onClick={handleNext} className="flex-1">
                   Next Question
