@@ -25,14 +25,21 @@ The exam should include:
 - All questions scored (isScored: true)
 - Balanced difficulty levels
 
+CRITICAL RANDOMIZATION REQUIREMENT:
+- The correct answer MUST be randomized across all positions (A, B, C, D)
+- DO NOT place the correct answer always in position A
+- Aim for roughly 25% of correct answers in each position (A, B, C, D)
+- Randomize answer option positions for each question independently
+- Verify that across all 71 questions, correct answers appear in different positions
+
 Generate the exam in JSON format with this structure:
 {
   "questions": [
     {
       "id": number,
       "question": "Question text",
-      "options": ["A", "B", "C", "D"],
-      "correct_answer": "A",
+      "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+      "correct_answer": "Option text that matches one of the options exactly",
       "explanation": "Why this is correct",
       "domain": "Domain 1-8",
       "difficulty": "easy|medium|hard",
@@ -42,7 +49,9 @@ Generate the exam in JSON format with this structure:
   ]
 }
 
-Start generating the exam now. Format each question clearly. Generate exactly 71 questions as specified above.`
+IMPORTANT: The "correct_answer" field must contain the actual option text (not A, B, C, or D), and the options array must contain the option text, not letters. This allows proper randomization.
+
+Start generating the exam now. Format each question clearly. Generate exactly 71 questions as specified above. Remember to randomize answer positions!`
 
 // PRACTICE EXAM: 225 Questions
 const PRACTICE_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
@@ -58,6 +67,13 @@ The exam should include:
 - Answer key with brief explanations
 - Questions distributed across all 8 EPPP domains
 
+CRITICAL RANDOMIZATION REQUIREMENT:
+- The correct answer MUST be randomized across all positions (A, B, C, D)
+- DO NOT place the correct answer always in position A
+- Aim for roughly 25% of correct answers in each position (A, B, C, D)
+- Randomize answer option positions for each question independently
+- Verify that across all 225 questions, correct answers appear in different positions
+
 IMPORTANT: Mark the unscored questions clearly with "isScored": false. These should be noticeably harder than the scored questions and are used for data collection. Users will see their score calculated only from the 180 scored questions, not the 45 unscored ones.
 
 Generate the exam in JSON format with this structure:
@@ -66,8 +82,8 @@ Generate the exam in JSON format with this structure:
     {
       "id": number,
       "question": "Question text",
-      "options": ["A", "B", "C", "D"],
-      "correct_answer": "A",
+      "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+      "correct_answer": "Option text that matches one of the options exactly",
       "explanation": "Why this is correct",
       "domain": "Domain 1-8",
       "difficulty": "easy|medium|hard",
@@ -77,7 +93,9 @@ Generate the exam in JSON format with this structure:
   ]
 }
 
-Start generating the exam now. Format each question clearly. Remember: exactly 180 questions with "isScored": true, and 45 questions with "isScored": false.`
+IMPORTANT: The "correct_answer" field must contain the actual option text (not A, B, C, or D), and the options array must contain the option text, not letters. This allows proper randomization.
+
+Start generating the exam now. Format each question clearly. Remember: exactly 180 questions with "isScored": true, and 45 questions with "isScored": false. Most importantly, randomize answer positions throughout the exam!`
 
 export async function POST(request: NextRequest) {
   try {
