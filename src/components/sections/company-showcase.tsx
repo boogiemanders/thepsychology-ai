@@ -17,12 +17,19 @@ export function CompanyShowcase() {
                        before:absolute before:-left-1 before:top-0 before:z-10 before:h-screen before:w-px before:bg-border
                        after:absolute after:-top-1 after:left-0 after:z-10 after:h-px after:w-screen after:bg-border"
           >
-            <div className="transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]
-                            translate-y-0 group-hover:-translate-y-4 flex items-center justify-center w-full h-full">
+            <div className={`transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]
+                            translate-y-0 group-hover:-translate-y-4 flex items-center justify-center w-full h-full ${
+                              logo.id === 6 ? '-translate-y-3' : ''
+                            }`}>
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="h-10 md:h-12 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity dark:invert"
+                className={`w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity dark:invert ${
+                  logo.id === 2 ? 'h-11 md:h-12' :
+                  logo.id === 5 ? 'h-11 md:h-13' :
+                  [4, 6].includes(logo.id) ? 'h-14 md:h-16' :
+                  'h-10 md:h-12'
+                }`}
               />
             </div>
 

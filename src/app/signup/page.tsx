@@ -1,396 +1,408 @@
 'use client'
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect, Suspense, useRef } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, Check } from 'lucide-react'
-import { motion } from 'motion/react'
+import { supabase } from '@/lib/supabase'
+import { validatePromoCode } from '@/lib/promo-codes'
+import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
 
-type PricingTier = '7-Day Free Trial' | 'Pro' | 'Pro + Coaching'
-type SignupStep = 'tier-selection' | 'email' | 'password' | 'confirmation'
-
-export default function SignupPage() {
+function SignUpContent() {
   const router = useRouter()
-  const [step, setStep] = useState<SignupStep>('tier-selection')
-  const [selectedTier, setSelectedTier] = useState<PricingTier | null>(null)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [error, setError] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
+  const searchParams = useSearchParams()
+  const confettiRef = useRef<ConfettiRef>(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState(false)
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    confirmPassword: '',
+    fullName: '',
+    promoCode: '',
+  })
+  const [tierFromPricing, setTierFromPricing] = useState<string | null>(null)
 
-  const tierInfo = {
-    '7-Day Free Trial': {
-      price: '$0',
-      description: 'Try the program free for 7 days. Limited to one topic.',
-      features: ['Diagnostic Exam', 'Prioritizing Focus', 'Custom Study (1 Topic)'],
-    },
-    'Pro': {
-      price: '$20/month',
-      description: 'Unlimited access to all topics and recovery tools.',
-      features: ['Diagnostic Exam', 'Prioritizing Focus', 'Custom Study (All Topics)', 'Recovery Tools'],
-    },
-    'Pro + Coaching': {
-      price: '$200/month',
-      description: 'Everything in Pro + 2 calls per month with Dr. Anders Chan.',
-      features: ['Everything in Pro', '2× 45-min calls/month', 'Personal study plan', 'Priority support'],
-    },
+  // Get email and tier from URL parameters
+  useEffect(() => {
+    const email = searchParams.get('email')
+    const tier = searchParams.get('tier')
+    if (email) {
+      setFormData((prev) => ({ ...prev, email }))
+    }
+    if (tier) {
+      setTierFromPricing(tier)
+    }
+  }, [searchParams])
+
+  // Fire confetti on successful signup
+  useEffect(() => {
+    if (success) {
+      confettiRef.current?.fire({})
+    }
+  }, [success])
+
+  const [promoStatus, setPromoStatus] = useState<{
+    message: string
+    type: 'success' | 'error' | null
+  }>({ message: '', type: null })
+
+  const tiers = [
+    { name: 'Week Trial', value: 'free', price: '$0', description: 'Limited Access' },
+    { name: 'Pro', value: 'pro', price: '$20/mo', description: 'Full Access' },
+    { name: 'Pro + Coaching', value: 'pro_coaching', price: '$200/mo', description: 'Full + Calls' },
+  ]
+
+  // Set initial tier from URL, default to first tier if not specified
+  const selectedTier = tierFromPricing || tiers[0].value
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
   }
 
-  const handleTierSelection = (tier: PricingTier) => {
-    setSelectedTier(tier)
-    setError('')
-    setStep('email')
+  const validatePromoCodeField = async () => {
+    if (!formData.promoCode) {
+      setPromoStatus({ message: '', type: null })
+      return true
+    }
+
+    const result = await validatePromoCode(formData.promoCode)
+    if (result.isValid) {
+      setPromoStatus({
+        message: result.message || 'Promo code valid!',
+        type: 'success',
+      })
+      return true
+    } else {
+      setPromoStatus({
+        message: result.error || 'Invalid promo code',
+        type: 'error',
+      })
+      return false
+    }
   }
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setError('')
+    setError(null)
+    setSuccess(false)
 
-    if (!email) {
-      setError('Email is required')
+    // Validation
+    if (!formData.email || !formData.password) {
+      setError('Email and password are required')
       return
     }
 
-    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      setError('Please enter a valid email address')
+    if (formData.password.length < 6) {
+      setError('Password must be at least 6 characters')
       return
     }
 
-    // Check if email already exists in localStorage (simple check)
-    const existingUsers = JSON.parse(localStorage.getItem('users') || '[]')
-    if (existingUsers.some((u: any) => u.email === email)) {
-      setError('This email is already registered')
-      return
-    }
-
-    setStep('password')
-  }
-
-  const handlePasswordSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setError('')
-
-    if (!password) {
-      setError('Password is required')
-      return
-    }
-
-    if (password.length < 8) {
-      setError('Password must be at least 8 characters long')
-      return
-    }
-
-    if (password !== confirmPassword) {
+    if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match')
       return
     }
 
-    setStep('confirmation')
-  }
+    // Validate promo code if provided
+    if (formData.promoCode && !promoStatus.type) {
+      await validatePromoCodeField()
+      return
+    }
 
-  const handleCreateAccount = async () => {
-    setIsLoading(true)
-    setError('')
+    setLoading(true)
 
     try {
-      // Store user data
-      const existingUsers = JSON.parse(localStorage.getItem('users') || '[]')
+      // Create auth user
+      const { data: authData, error: signUpError } = await supabase.auth.signUp({
+        email: formData.email,
+        password: formData.password,
+      })
 
-      const newUser = {
-        id: Date.now().toString(),
-        email,
-        password: password, // In production, this should be hashed
-        tier: selectedTier,
-        createdAt: new Date().toISOString(),
-        trialExpiresAt: selectedTier === '7-Day Free Trial'
-          ? new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
-          : null,
+      if (signUpError) {
+        console.error('Sign up error:', signUpError)
+        throw signUpError
       }
 
-      existingUsers.push(newUser)
-      localStorage.setItem('users', JSON.stringify(existingUsers))
+      if (!authData.user) {
+        console.error('No user returned from signup')
+        throw new Error('User creation failed - no user returned from Supabase')
+      }
 
-      // Set current user
-      localStorage.setItem('currentUser', JSON.stringify({
-        id: newUser.id,
-        email: newUser.email,
-        tier: newUser.tier,
-        trialExpiresAt: newUser.trialExpiresAt,
-      }))
+      console.log('User created successfully:', authData.user.id)
 
-      // Wait a moment for visual feedback
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // Create user profile via server API endpoint
+      // Use tier from pricing form if available, otherwise use promo code or free tier
+      const subscriptionTier = tierFromPricing || (formData.promoCode ? 'pro' : 'free')
 
-      // Redirect to app
-      router.push('/app')
+      console.log('Starting profile creation for user:', authData.user.id)
+      try {
+        const profileBody = {
+          userId: authData.user.id,
+          email: formData.email,
+          fullName: formData.fullName || null,
+          subscriptionTier,
+          promoCodeUsed: formData.promoCode || null,
+        }
+        console.log('Profile creation request body:', profileBody)
+
+        const profileResponse = await fetch('/api/auth/create-profile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(profileBody),
+        })
+
+        console.log('Profile creation response status:', profileResponse.status)
+
+        if (!profileResponse.ok) {
+          const errorData = await profileResponse.json()
+          console.error('Profile creation API error:', {
+            status: profileResponse.status,
+            error: errorData,
+          })
+          // Don't throw - account is created, profile creation can be retried
+        } else {
+          const profileData = await profileResponse.json()
+          console.log('Profile created successfully:', profileData)
+        }
+      } catch (err) {
+        console.error('Profile creation request error:', err)
+        // Don't throw - account is created even if profile creation fails
+      }
+
+      // If promo code was provided, apply it in background
+      if (formData.promoCode && promoStatus.type === 'success') {
+        supabase
+          .from('promo_codes')
+          .update({ usage_count: supabase.rpc('increment', { amount: 1 }) })
+          .eq('code', formData.promoCode.toUpperCase())
+          .catch((err) => console.error('Promo code update error:', err))
+      }
+
+      // Show success message after auth and profile creation
+      setSuccess(true)
+      setFormData({
+        email: '',
+        password: '',
+        confirmPassword: '',
+        fullName: '',
+        promoCode: '',
+      })
+
+      // Don't redirect - user needs to verify email first
     } catch (err) {
-      setError('Failed to create account. Please try again.')
-      console.error(err)
-    } finally {
-      setIsLoading(false)
+      const message = err instanceof Error ? err.message : 'Sign up failed'
+      setError(message)
+      setLoading(false)
+      return
     }
-  }
 
-  const handleBack = () => {
-    if (step === 'tier-selection') {
-      router.back()
-    } else if (step === 'email') {
-      setStep('tier-selection')
-      setSelectedTier(null)
-      setEmail('')
-      setError('')
-    } else if (step === 'password') {
-      setStep('email')
-      setPassword('')
-      setConfirmPassword('')
-      setError('')
-    } else if (step === 'confirmation') {
-      setStep('password')
-    }
+    // Reset loading state after success
+    setLoading(false)
   }
 
   return (
-    <main className="min-h-screen bg-background flex flex-col">
-      <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-2xl">
-          {/* Header */}
-          <div className="mb-12">
-            <button
-              onClick={handleBack}
-              className="flex items-center gap-2 text-primary hover:underline mb-8"
-            >
-              <ArrowLeft size={18} />
-              Back
-            </button>
+    <div className="min-h-screen bg-black flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Confetti Canvas */}
+      <Confetti
+        ref={confettiRef}
+        className="absolute top-0 left-0 z-50 size-full pointer-events-none"
+      />
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-2">Get Started</h1>
-            <p className="text-lg text-muted-foreground mb-4">
-              Create your account and choose your learning plan
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Already have an account?{' '}
-              <Link href="/login" className="text-primary hover:underline font-medium">
-                Sign in
-              </Link>
-            </p>
+      {/* Gradient background effects - 4 breaths per minute (15s cycle) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-900 opacity-80"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-breath"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-breath" style={{animationDelay: '7.5s'}}></div>
+
+      {/* Card */}
+      <div className="relative w-full max-w-md">
+        <div className="bg-slate-900/40 backdrop-blur-xl border border-slate-800/50 rounded-2xl shadow-2xl p-8">
+          {/* Header */}
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold text-white mb-2">Create Account</h1>
+            <p className="text-slate-400">Join EPPP Skills Platform</p>
           </div>
 
-          <motion.div
-            key={step}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* Step 1: Tier Selection */}
-            {step === 'tier-selection' && (
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <h2 className="text-2xl font-semibold">Step 1: Choose Your Plan</h2>
-                  <p className="text-muted-foreground">Select the plan that works best for you</p>
-                </div>
+          {/* Success Message */}
+          {success && (
+            <div className="mb-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
+              <p className="text-green-400 font-medium mb-2">
+                Account created successfully!
+              </p>
+              <p className="text-green-400 text-sm">
+                Please check your email to verify your account. You should receive a confirmation email shortly.
+              </p>
+            </div>
+          )}
 
-                <div className="grid md:grid-cols-3 gap-4">
-                  {(Object.keys(tierInfo) as PricingTier[]).map((tier) => (
-                    <motion.button
-                      key={tier}
-                      whileHover={{ scale: 1.02 }}
-                      onClick={() => handleTierSelection(tier)}
-                      className={`p-6 rounded-xl border-2 transition-all text-left ${
-                        tier === '7-Day Free Trial'
-                          ? 'border-primary bg-primary/5'
-                          : 'border-border hover:border-primary/50'
-                      }`}
-                    >
-                      <h3 className="font-semibold text-lg mb-2">{tier}</h3>
-                      <p className="text-primary text-2xl font-bold mb-4">
-                        {tierInfo[tier].price}
-                      </p>
-                      <p className="text-sm text-muted-foreground mb-4">
-                        {tierInfo[tier].description}
-                      </p>
-                      <ul className="space-y-2">
-                        {tierInfo[tier].features.map((feature) => (
-                          <li key={feature} className="flex items-start gap-2 text-sm">
-                            <Check size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </motion.button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Step 2: Email */}
-            {step === 'email' && (
-              <div className="space-y-6 max-w-md">
-                <div className="space-y-2">
-                  <h2 className="text-2xl font-semibold">Step 2: Enter Your Email</h2>
-                  <p className="text-muted-foreground">We'll use this to sign in to your account</p>
-                </div>
-
-                {selectedTier && (
-                  <div className="p-4 rounded-lg bg-secondary/50 border border-border">
-                    <p className="text-sm font-medium text-muted-foreground">Selected Plan</p>
-                    <p className="text-lg font-semibold mt-1">{selectedTier}</p>
-                  </div>
-                )}
-
-                <form onSubmit={handleEmailSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="you@example.com"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                  </div>
-
-                  {error && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="bg-destructive/10 border border-destructive/30 rounded-lg p-3"
-                    >
-                      <p className="text-sm text-destructive">{error}</p>
-                    </motion.div>
-                  )}
-
-                  <button
-                    type="submit"
-                    className="w-full h-12 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
-                  >
-                    Continue
-                  </button>
-                </form>
-              </div>
-            )}
-
-            {/* Step 3: Password */}
-            {step === 'password' && (
-              <div className="space-y-6 max-w-md">
-                <div className="space-y-2">
-                  <h2 className="text-2xl font-semibold">Step 3: Create Password</h2>
-                  <p className="text-muted-foreground">This will secure your account</p>
-                </div>
-
-                <div className="p-4 rounded-lg bg-secondary/50 border border-border space-y-2">
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">Email</p>
-                    <p className="text-foreground">{email}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">Plan</p>
-                    <p className="text-foreground">{selectedTier}</p>
-                  </div>
-                </div>
-
-                <form onSubmit={handlePasswordSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="password" className="block text-sm font-medium mb-2">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Enter a strong password"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                    <p className="text-xs text-muted-foreground mt-2">
-                      At least 8 characters
-                    </p>
-                  </div>
-
-                  <div>
-                    <label htmlFor="confirmPassword" className="block text-sm font-medium mb-2">
-                      Confirm Password
-                    </label>
-                    <input
-                      type="password"
-                      id="confirmPassword"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      placeholder="Confirm your password"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                  </div>
-
-                  {error && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="bg-destructive/10 border border-destructive/30 rounded-lg p-3"
-                    >
-                      <p className="text-sm text-destructive">{error}</p>
-                    </motion.div>
-                  )}
-
-                  <button
-                    type="submit"
-                    className="w-full h-12 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
-                  >
-                    Continue
-                  </button>
-                </form>
-              </div>
-            )}
-
-            {/* Step 4: Confirmation */}
-            {step === 'confirmation' && (
-              <div className="space-y-6 max-w-md">
-                <div className="space-y-2">
-                  <h2 className="text-2xl font-semibold">Review Your Account</h2>
-                  <p className="text-muted-foreground">
-                    {selectedTier === '7-Day Free Trial'
-                      ? 'Your trial starts now and expires in 7 days'
-                      : 'Welcome to your new plan'}
-                  </p>
-                </div>
-
-                <div className="space-y-3 p-4 rounded-lg bg-secondary/50 border border-border">
-                  <div className="pb-3 border-b border-border">
-                    <p className="text-sm font-medium text-muted-foreground">Email</p>
-                    <p className="text-foreground mt-1">{email}</p>
-                  </div>
-                  <div className="pb-3 border-b border-border">
-                    <p className="text-sm font-medium text-muted-foreground">Plan</p>
-                    <p className="text-foreground font-semibold mt-1">{selectedTier}</p>
-                  </div>
-                  {selectedTier === '7-Day Free Trial' && (
-                    <div>
-                      <p className="text-sm font-medium text-muted-foreground">Trial Expires</p>
-                      <p className="text-foreground mt-1">
-                        {new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString()}
-                      </p>
-                    </div>
-                  )}
-                </div>
-
+          {/* Tier Selection */}
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-slate-300 mb-3">
+              Choose Your Plan
+            </label>
+            <div className="grid grid-cols-3 gap-2">
+              {tiers.map((tier) => (
                 <button
-                  onClick={handleCreateAccount}
-                  disabled={isLoading}
-                  className="w-full h-12 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+                  key={tier.value}
+                  type="button"
+                  onClick={() => setTierFromPricing(tier.value)}
+                  className={`p-3 rounded-lg border-2 transition-all text-center text-xs ${
+                    selectedTier === tier.value
+                      ? 'border-blue-500 bg-blue-500/10'
+                      : 'border-slate-700 bg-slate-800/30 hover:border-slate-600'
+                  }`}
                 >
-                  {isLoading ? 'Creating Account...' : 'Create Account & Get Started'}
+                  <div className="font-semibold text-slate-200">{tier.name}</div>
+                  <div className="text-blue-400 font-bold text-sm mt-1">{tier.price}</div>
+                  <div className="text-slate-400 text-xs mt-1">{tier.description}</div>
                 </button>
+              ))}
+            </div>
+          </div>
 
-                <p className="text-xs text-muted-foreground text-center">
-                  By creating an account, you agree to our Terms of Service and Privacy Policy
-                </p>
-              </div>
-            )}
-          </motion.div>
+          {/* Error Message */}
+          {error && (
+            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+              <p className="text-red-400 font-medium">{error}</p>
+            </div>
+          )}
+
+          {/* Form */}
+          {!success && <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Full Name */}
+            <div>
+              <label htmlFor="fullName" className="block text-sm font-medium text-slate-300 mb-2">
+                Full Name (optional)
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                placeholder="Your name"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="your@email.com"
+                required
+                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition"
+              />
+            </div>
+
+            {/* Password */}
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-slate-300 mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                placeholder="Minimum 6 characters"
+                required
+                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition"
+              />
+            </div>
+
+            {/* Confirm Password */}
+            <div>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-slate-300 mb-2">
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleInputChange}
+                placeholder="Confirm password"
+                required
+                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition"
+              />
+            </div>
+
+            {/* Promo Code */}
+            <div>
+              <label htmlFor="promoCode" className="block text-sm font-medium text-slate-300 mb-2">
+                Promo Code (optional)
+              </label>
+              <input
+                type="text"
+                id="promoCode"
+                name="promoCode"
+                value={formData.promoCode}
+                onChange={handleInputChange}
+                onBlur={validatePromoCodeField}
+                placeholder="Enter promo code for discount"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition"
+              />
+              {promoStatus.type === 'success' && (
+                <p className="text-sm text-green-400 mt-2 font-medium">{promoStatus.message}</p>
+              )}
+              {promoStatus.type === 'error' && (
+                <p className="text-sm text-red-400 mt-2 font-medium">{promoStatus.message}</p>
+              )}
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full mt-6 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:from-blue-400 disabled:to-blue-400 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 shadow-lg hover:shadow-blue-500/50"
+            >
+              {loading ? 'Creating account...' : 'Sign Up'}
+            </button>
+          </form>}
+
+          {/* Login Link */}
+          {!success &&
+          <p className="text-center text-slate-400 mt-6">
+            Already have an account?{' '}
+            <Link href="/login" className="text-blue-400 hover:text-blue-300 font-medium transition">
+              Log in
+            </Link>
+          </p>}
+
+          {success && (
+            <div className="text-center mt-8">
+              <p className="text-slate-400 mb-4">
+                Once you verify your email, you'll be able to log in and access your account.
+              </p>
+              <Link href="/login" className="text-blue-400 hover:text-blue-300 font-medium transition inline-block">
+                Go to Login →
+              </Link>
+            </div>
+          )}
         </div>
       </div>
-    </main>
+    </div>
+  )
+}
+
+export default function SignUpPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center">Loading...</div>}>
+      <SignUpContent />
+    </Suspense>
   )
 }

@@ -30,6 +30,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Map tier names to subscription tiers
+    const tierMap: { [key: string]: string } = {
+      '7-Day Free Trial': 'free',
+      'Pro': 'pro',
+      'Pro + Coaching': 'premium',
+    }
+
+    const subscriptionTier = tierMap[body.tier] || 'free'
+
     // Insert into Supabase
     const { data, error } = await supabase
       .from('pricing_submissions')
@@ -47,13 +56,18 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error('Supabase error:', error)
       return NextResponse.json(
-        { error: 'Failed to save submission' },
+        { error: `Failed to save submission: ${error.message || 'Unknown error'}` },
         { status: 500 }
       )
     }
 
     return NextResponse.json(
-      { success: true, data: data },
+      {
+        success: true,
+        data: data,
+        message: 'Submission received. Please sign up or log in with your email to get started.',
+        redirectUrl: '/signup?email=' + encodeURIComponent(body.email) + '&tier=' + encodeURIComponent(subscriptionTier)
+      },
       { status: 201 }
     )
   } catch (error) {

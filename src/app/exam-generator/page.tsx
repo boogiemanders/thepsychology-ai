@@ -1,0 +1,796 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { Clock } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Progress } from '@/components/ui/progress'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { motion } from 'motion/react'
+import { LoadingAnimation } from '@/components/ui/loading-animation'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb'
+import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
+
+interface Question {
+  id: number
+  question: string
+  options: string[]
+  correct_answer: string
+  explanation: string
+  domain: string
+  difficulty: string
+  type: string
+  isScored?: boolean
+  knId?: string
+}
+
+export default function ExamGeneratorPage() {
+  const [isGenerating, setIsGenerating] = useState(false)
+  const [questions, setQuestions] = useState<Question[]>([])
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({})
+  const [showExplanation, setShowExplanation] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [examType, setExamType] = useState<'diagnostic' | 'practice' | null>(null)
+  const [mode, setMode] = useState<'study' | 'test' | null>(null)
+  const [timeRemaining, setTimeRemaining] = useState(0)
+  const [isExamStarted, setIsExamStarted] = useState(false)
+  const [selectedMode, setSelectedMode] = useState<'study' | 'test'>('study')
+  const [recommendedExamType, setRecommendedExamType] = useState<'diagnostic' | 'practice'>('diagnostic')
+  const [recommendedMode, setRecommendedMode] = useState<'study' | 'test'>('study')
+
+  // Initialize recommended defaults from exam history
+  useEffect(() => {
+    const defaults = getRecommendedDefaults()
+    setRecommendedExamType(defaults.examType)
+    setRecommendedMode(defaults.examMode)
+    setSelectedMode(defaults.examMode)
+  }, [])
+
+  // Auto-show explanation in Study Mode
+  useEffect(() => {
+    if (selectedAnswers[currentQuestion] && mode === 'study' && !showExplanation) {
+      setShowExplanation(true)
+    }
+  }, [selectedAnswers, currentQuestion, mode, showExplanation])
+
+  // Timer effect: time per question based on exam type
+  useEffect(() => {
+    if (!isExamStarted || questions.length === 0 || mode !== 'test') return
+
+    // 68 seconds per question for practice (225q = 4h 15m), 50 seconds per question for diagnostic (71q = ~1h)
+    const secondsPerQuestion = examType === 'diagnostic' ? 50 : 68
+    const totalSeconds = questions.length * secondsPerQuestion
+
+    // Only initialize on first run
+    if (timeRemaining > 0) return
+
+    setTimeRemaining(totalSeconds)
+  }, [isExamStarted])
+
+  // Separate effect for timer countdown
+  useEffect(() => {
+    if (!isExamStarted || questions.length === 0 || mode !== 'test' || timeRemaining === 0) return
+
+    const timer = setInterval(() => {
+      setTimeRemaining((prev) => {
+        const newTime = prev - 1
+
+        // Auto-submit if time runs out
+        if (newTime <= 0) {
+          // Navigate to results
+          const scoredQuestions = questions.filter(q => q.isScored !== false)
+          const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
+            const q = questions[parseInt(qIdx)]
+            return q && q.isScored !== false && answer === q.correct_answer
+          }).length
+
+          // Generate priority recommendations if diagnostic exam
+          let priorityData = null
+          if (examType === 'diagnostic') {
+            const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
+            const { savePriorityRecommendation } = require('@/lib/priority-storage')
+
+            // Build wrong answers from selected answers
+            const wrongAnswers = Object.entries(selectedAnswers)
+              .map(([qIdx, answer]) => {
+                const q = questions[parseInt(qIdx)]
+                if (q && q.isScored !== false && answer !== q.correct_answer) {
+                  return {
+                    questionId: parseInt(qIdx) + 1,
+                    question: q.question,
+                    selectedAnswer: answer,
+                    correctAnswer: q.correct_answer,
+                    relatedSections: [q.domain],
+                    timestamp: Date.now(),
+                  }
+                }
+                return null
+              })
+              .filter(Boolean)
+
+            const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
+            const allResults = getAllDomainResults(wrongAnswers)
+
+            priorityData = {
+              topPriorities,
+              allResults,
+            }
+
+            savePriorityRecommendation({
+              examType: 'diagnostic',
+              examMode: mode,
+              topPriorities,
+              allResults,
+            })
+          }
+
+          const resultData = {
+            questions,
+            selectedAnswers,
+            score,
+            totalQuestions: scoredQuestions.length,
+            examType,
+            examMode: mode,
+            ...priorityData,
+          }
+
+          const targetPage = examType === 'diagnostic' ? '/prioritizer' : '/study-optimizer'
+          window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
+          return 0
+        }
+
+        return newTime
+      })
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [isExamStarted, timeRemaining, questions, selectedAnswers, examType, mode])
+
+  const formatTime = (seconds: number): string => {
+    const hours = Math.floor(seconds / 3600)
+    const minutes = Math.floor((seconds % 3600) / 60)
+    const secs = seconds % 60
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
+  }
+
+  const isTimeWarning = timeRemaining > 0 && timeRemaining <= 300
+
+  const handleGenerateExam = async (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
+    try {
+      setIsGenerating(true)
+      setError(null)
+      setQuestions([])
+      setCurrentQuestion(0)
+      setSelectedAnswers({})
+      setShowExplanation(false)
+      setTimeRemaining(0)
+      setExamType(chosenExamType)
+      setMode(chosenMode)
+
+      let jsonContent = ''
+      const response = await fetch(`/api/exam-generator?type=${chosenExamType}`, {
+        method: 'POST',
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to generate exam')
+      }
+
+      if (!response.body) {
+        throw new Error('No response body')
+      }
+
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+
+      while (true) {
+        const { done, value } = await reader.read()
+
+        if (done) break
+
+        const text = decoder.decode(value)
+        jsonContent += text
+      }
+
+      // Parse JSON from the content
+      const jsonMatch = jsonContent.match(/\{[\s\S]*\}/)
+      if (!jsonMatch) {
+        throw new Error('Could not parse exam data')
+      }
+
+      const data = JSON.parse(jsonMatch[0])
+      setQuestions(data.questions || [])
+      setIsExamStarted(true)
+    } catch (err) {
+      console.error('Error generating exam:', err)
+      setError(err instanceof Error ? err.message : 'Failed to generate exam')
+    } finally {
+      setIsGenerating(false)
+    }
+  }
+
+  const handleSelectAnswer = (option: string) => {
+    setSelectedAnswers((prev) => ({
+      ...prev,
+      [currentQuestion]: option,
+    }))
+    setShowExplanation(false)
+  }
+
+  const handleShowExplanation = () => {
+    setShowExplanation(true)
+  }
+
+  const handleNext = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion((prev) => prev + 1)
+      setShowExplanation(false)
+    }
+  }
+
+  const handlePrevious = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion((prev) => prev - 1)
+      setShowExplanation(false)
+    }
+  }
+
+  if (questions.length === 0) {
+    return (
+      <main className="min-h-screen p-6 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/dashboard">Dashboard</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Exam Generator</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="text-center py-12">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                EPPP Exam
+              </h1>
+              <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                {!examType ? 'Choose an exam type to get started.' : `You selected ${examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} Exam. Now choose your study mode.`}
+              </p>
+
+              {!isGenerating && (
+                <div>
+                  {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
+                  <div className="max-w-2xl mx-auto mb-8">
+                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 1: Select Exam Type</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Diagnostic Card */}
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Card
+                        className={`cursor-pointer transition-all border-2 ${
+                          examType === 'diagnostic'
+                            ? 'border-blue-500 bg-blue-50/20 dark:bg-blue-950/20'
+                            : 'border-border'
+                        }`}
+                        onClick={() => setExamType('diagnostic')}
+                      >
+                        <CardHeader className="text-center">
+                          <div className="flex items-center justify-center flex-col">
+                            <div className="flex items-center gap-2 mb-2">
+                              <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+                              {recommendedExamType === 'diagnostic' && (
+                                <Badge className="bg-blue-500">Recommended</Badge>
+                              )}
+                            </div>
+                            <CardDescription>71 questions</CardDescription>
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <ul className="space-y-2 text-sm text-left">
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              Identify knowledge gaps
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              Quick assessment (30-45 minutes)
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              Get priority recommendations
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+
+                    {/* Practice Card */}
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Card
+                        className={`cursor-pointer transition-all border-2 ${
+                          examType === 'practice'
+                            ? 'border-blue-500 bg-blue-50/20 dark:bg-blue-950/20'
+                            : 'border-border'
+                        }`}
+                        onClick={() => setExamType('practice')}
+                      >
+                        <CardHeader className="text-center">
+                          <div className="flex items-center justify-center flex-col">
+                            <div className="flex items-center gap-2 mb-2">
+                              <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+                              {recommendedExamType === 'practice' && (
+                                <Badge className="bg-blue-500">Recommended</Badge>
+                              )}
+                            </div>
+                            <CardDescription>225 questions</CardDescription>
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <ul className="space-y-2 text-sm text-left">
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              Comprehensive knowledge check
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              Full exam preparation (4-5 hours)
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              Includes experimental questions
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                    </div>
+                  </div>
+
+                  {/* Step 2: Mode Selection (Study vs Test) */}
+                  {examType && (
+                    <motion.div
+                    initial={{ opacity: 0, y: -20, scaleY: 0 }}
+                    animate={{ opacity: 1, y: 0, scaleY: 1 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    style={{ originY: 0 }}
+                    className="max-w-2xl mx-auto"
+                  >
+                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 2: Select Mode</p>
+                    <Tabs value={selectedMode} onValueChange={(value) => setSelectedMode(value as 'study' | 'test')} className="w-full">
+                      <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="study" className="text-base font-semibold">Study Mode</TabsTrigger>
+                        <TabsTrigger value="test" className="text-base font-semibold">Test Mode</TabsTrigger>
+                      </TabsList>
+
+                      <TabsContent value="study" asChild>
+                        <motion.div
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -20 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Card>
+                            <CardHeader>
+                              <CardDescription>
+                                Learn at your own pace with immediate feedback
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                              <ul className="space-y-2 text-sm text-left">
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Correct answers turn green immediately
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Learn from mistakes with detailed explanations
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  No time pressure - take as long as you need
+                                </li>
+                              </ul>
+                            </CardContent>
+                            <CardFooter>
+                              <Button
+                                onClick={() => handleGenerateExam(examType, 'study')}
+                                className="w-full px-8 py-6"
+                                size="lg"
+                              >
+                                Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Study Mode
+                              </Button>
+                            </CardFooter>
+                          </Card>
+                        </motion.div>
+                      </TabsContent>
+
+                      <TabsContent value="test" asChild>
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 20 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Card>
+                            <CardHeader>
+                              <CardDescription>
+                                Simulate real exam conditions
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                              <ul className="space-y-2 text-sm text-left">
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  See all answers only at the end
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Timed exam with countdown
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                                  Realistic EPPP exam experience
+                                </li>
+                              </ul>
+                            </CardContent>
+                            <CardFooter>
+                              <Button
+                                onClick={() => handleGenerateExam(examType, 'test')}
+                                className="w-full px-8 py-6"
+                                size="lg"
+                                variant="outline"
+                              >
+                                Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Test Mode
+                              </Button>
+                            </CardFooter>
+                          </Card>
+                        </motion.div>
+                      </TabsContent>
+                    </Tabs>
+                    </motion.div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {isGenerating && (
+              <div className="flex flex-col items-center justify-center py-20 gap-4">
+                <LoadingAnimation size="lg" />
+                <p className="text-muted-foreground">
+                  Generating your {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} exam...
+                </p>
+                <p className="text-sm text-muted-foreground/60">This may take a moment</p>
+              </div>
+            )}
+
+            {error && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="mb-8"
+              >
+                <Alert variant="destructive">
+                  <AlertDescription className="space-y-3">
+                    <div>
+                      <h3 className="font-semibold mb-1">Error</h3>
+                      <p className="text-sm">{error}</p>
+                    </div>
+                    <Button
+                      onClick={() => handleGenerateExam(examType || 'practice', selectedMode)}
+                      variant="outline"
+                      size="sm"
+                    >
+                      Try Again
+                    </Button>
+                  </AlertDescription>
+                </Alert>
+              </motion.div>
+            )}
+          </motion.div>
+        </div>
+      </main>
+    )
+  }
+
+  const question = questions[currentQuestion]
+  const selectedAnswer = selectedAnswers[currentQuestion]
+
+  // Find which option is correct by matching the letter or text
+  const correctOptionIndex = (() => {
+    // Check if correct_answer is a letter (A, B, C, D)
+    if (/^[A-D]$/.test(question.correct_answer)) {
+      return question.correct_answer.charCodeAt(0) - 65 // Convert A->0, B->1, etc
+    }
+    // Otherwise find by matching the text
+    return question.options.findIndex(opt => opt === question.correct_answer)
+  })()
+
+  const correctOption = question.options[correctOptionIndex]
+  const correctLetter = String.fromCharCode(65 + correctOptionIndex)
+  const isCorrect = selectedAnswer === correctOption
+
+  return (
+    <main className="min-h-screen p-6 bg-background">
+      <div className="max-w-3xl mx-auto">
+        <Breadcrumb className="mb-8">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/dashboard">Dashboard</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Exam Generator</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="space-y-6"
+        >
+          {/* Mode and Progress */}
+          <Card>
+            <CardHeader className="pb-3">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                  <CardTitle className="text-xl">
+                    Question {currentQuestion + 1} of {questions.length}
+                  </CardTitle>
+                  <div className="flex gap-2">
+                    <Badge
+                      variant="outline"
+                      className="bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                    >
+                      {examType === 'diagnostic' ? '🎯 Diagnostic' : '📚 Practice'}
+                    </Badge>
+                    <Badge
+                      variant={mode === 'study' ? 'default' : 'secondary'}
+                      className={mode === 'study' ? 'bg-green-500/20 text-green-600 dark:text-green-400 hover:bg-green-500/30' : 'bg-purple-500/20 text-purple-600 dark:text-purple-400 hover:bg-purple-500/30'}
+                    >
+                      {mode === 'study' ? '📚 Study Mode' : '📋 Test Mode'}
+                    </Badge>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  {mode === 'test' && timeRemaining > 0 && (
+                    <Badge
+                      variant={isTimeWarning ? "destructive" : "secondary"}
+                      className="flex items-center gap-2 px-4 py-2 font-mono text-base"
+                    >
+                      <Clock className="w-4 h-4" />
+                      {formatTime(timeRemaining)}
+                    </Badge>
+                  )}
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="pb-4">
+              <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-2" />
+            </CardContent>
+          </Card>
+
+          {/* Question */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg font-normal leading-relaxed">
+                {question.question}
+              </CardTitle>
+            </CardHeader>
+            <Separator />
+            <CardContent className="pt-6">
+              {/* Answer Options */}
+              <div className="space-y-3">
+              {question.options.map((option, idx) => {
+                const isSelected = selectedAnswer === option
+                const isAnswered = selectedAnswer !== undefined
+                const optionLetter = String.fromCharCode(65 + idx)
+                const optionIsCorrect = option === question.correct_answer
+
+                return (
+                  <motion.div
+                    key={idx}
+                    whileHover={!isAnswered ? { scale: 1.01 } : {}}
+                  >
+                    <Button
+                      onClick={() => !isAnswered && handleSelectAnswer(option)}
+                      disabled={isAnswered}
+                      variant="outline"
+                      className={`w-full text-left p-4 h-auto justify-start transition-colors whitespace-normal ${
+                        isSelected
+                          ? optionIsCorrect
+                            ? 'border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-950 text-foreground'
+                            : 'border-red-600 bg-red-50 dark:border-red-500 dark:bg-red-950 text-foreground'
+                          : optionIsCorrect && isAnswered
+                            ? 'border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-950 text-foreground'
+                            : ''
+                      }`}
+                    >
+                      <div className="flex items-start gap-3 w-full">
+                        <span className="font-bold text-base flex-shrink-0">
+                          {optionLetter}.
+                        </span>
+                        <span className="break-words">{option}</span>
+                      </div>
+                    </Button>
+                  </motion.div>
+                )
+              })}
+              </div>
+
+              {/* Show Answer Button (Test Mode Only) */}
+              {selectedAnswer && !showExplanation && mode === 'test' && (
+                <Button
+                  onClick={handleShowExplanation}
+                  variant="outline"
+                  className="w-full mt-6"
+                >
+                  Show Explanation
+                </Button>
+              )}
+
+              {/* Explanation */}
+              {showExplanation && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`mt-6 p-4 rounded-lg border ${
+                    isCorrect
+                      ? 'bg-green-500/10 border-green-500/30'
+                      : 'bg-yellow-500/10 border-yellow-500/30'
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <p className="font-semibold">
+                      {isCorrect ? '✓ Correct!' : '✗ Incorrect'}
+                    </p>
+                    <div className="text-right">
+                      <p className="text-xs text-muted-foreground mb-1">Correct Answer</p>
+                      <p className="text-2xl font-bold">
+                        {correctLetter}
+                      </p>
+                    </div>
+                  </div>
+                  <Separator className="my-3" />
+                  <p className="text-sm text-muted-foreground">
+                    {question.explanation}
+                  </p>
+                </motion.div>
+              )}
+            </CardContent>
+          </Card>
+
+          {/* Navigation */}
+          {showExplanation && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex gap-3 justify-between"
+            >
+              <Button
+                onClick={handlePrevious}
+                disabled={currentQuestion === 0}
+                variant="outline"
+              >
+                Previous
+              </Button>
+
+              {currentQuestion === questions.length - 1 ? (
+                <Button
+                  onClick={() => {
+                    const scoredQuestions = questions.filter(q => q.isScored !== false)
+                    const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
+                      const q = questions[parseInt(qIdx)]
+                      return q && q.isScored !== false && answer === q.correct_answer
+                    }).length
+
+                    // Save exam completion to local storage
+                    const { saveExamCompletion } = require('@/lib/exam-history')
+                    saveExamCompletion({
+                      examType: examType || 'practice',
+                      examMode: mode || 'study',
+                      score: (score / scoredQuestions.length) * 100,
+                      totalQuestions: scoredQuestions.length,
+                      correctAnswers: score,
+                    })
+
+                    // Generate priority recommendations if diagnostic exam
+                    let priorityData = null
+                    if (examType === 'diagnostic') {
+                      const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
+                      const { savePriorityRecommendation } = require('@/lib/priority-storage')
+
+                      // Build wrong answers from selected answers
+                      const wrongAnswers = Object.entries(selectedAnswers)
+                        .map(([qIdx, answer]) => {
+                          const q = questions[parseInt(qIdx)]
+                          if (q && q.isScored !== false && answer !== q.correct_answer) {
+                            return {
+                              questionId: parseInt(qIdx) + 1,
+                              question: q.question,
+                              selectedAnswer: answer,
+                              correctAnswer: q.correct_answer,
+                              relatedSections: [q.domain],
+                              timestamp: Date.now(),
+                            }
+                          }
+                          return null
+                        })
+                        .filter(Boolean)
+
+                      const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
+                      const allResults = getAllDomainResults(wrongAnswers)
+
+                      priorityData = {
+                        topPriorities,
+                        allResults,
+                      }
+
+                      // Save to local storage
+                      savePriorityRecommendation({
+                        examType: 'diagnostic',
+                        examMode: mode || 'study',
+                        topPriorities,
+                        allResults,
+                      })
+                    }
+
+                    // Route to prioritizer if diagnostic, study-optimizer if practice
+                    const resultData = {
+                      questions,
+                      selectedAnswers,
+                      score,
+                      totalQuestions: scoredQuestions.length,
+                      examType,
+                      examMode: mode,
+                      ...priorityData,
+                    }
+
+                    const targetPage = examType === 'diagnostic' ? '/prioritizer' : '/study-optimizer'
+                    window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
+                  }}
+                  className="w-full"
+                >
+                  Finish & Analyze Results
+                </Button>
+              ) : (
+                <Button onClick={handleNext} className="flex-1">
+                  Next Question
+                </Button>
+              )}
+            </motion.div>
+          )}
+        </motion.div>
+      </div>
+    </main>
+  )
+}

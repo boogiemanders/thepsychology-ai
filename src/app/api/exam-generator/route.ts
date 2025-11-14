@@ -5,48 +5,25 @@ const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 })
 
-// FULL 225-QUESTION VERSION (COMMENTED OUT FOR TESTING):
-// const EXAM_GENERATOR_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
-//
-// Your task is to generate a comprehensive 225-question practice exam following official ASPPB specifications.
-//
-// The exam should include:
-// - 225 questions total
-// - Proper domain distribution following EPPP weights
-// - 175 regular questions (counted for scoring)
-// - 50 comparative questions testing distinctions
-// - Multiple choice format with 4 options each
-// - Answer key with brief explanations
-// - Difficulty balanced throughout
-//
-// Generate the exam in JSON format with this structure:
-// {
-//   "questions": [
-//     {
-//       "id": number,
-//       "question": "Question text",
-//       "options": ["A", "B", "C", "D"],
-//       "correct_answer": "A",
-//       "explanation": "Why this is correct",
-//       "domain": "Domain 1-8",
-//       "difficulty": "easy|medium|hard",
-//       "type": "standard|comparative|experimental"
-//     }
-//   ]
-// }
-//
-// Start generating the exam now. Format each question clearly.`
+// DIAGNOSTIC EXAM: 71 Questions (1 per KN)
+const DIAGNOSTIC_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
-// TEMPORARY 2-QUESTION VERSION FOR TESTING:
-const EXAM_GENERATOR_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
-
-Your task is to generate a practice exam with 2 questions following ASPPB specifications.
+Your task is to generate a 71-question diagnostic exam based on the 71 ASPPB Knowledge Statements.
 
 The exam should include:
-- 2 questions total (for testing purposes)
+- 71 questions total (1 per Knowledge Statement, KN1-KN71)
+- Proper domain distribution maintaining EPPP weights:
+  - Domain 1: 5 questions
+  - Domain 2: 8 questions
+  - Domain 3: 7 questions
+  - Domain 4: 8 questions
+  - Domain 5: 13 questions
+  - Domain 6: 11 questions
+  - Domain 7: 5 questions (rounded from 7%)
+  - Domain 8: 9 questions (rounded from 16%)
 - Multiple choice format with 4 options each
-- Answer key with brief explanations
-- Mix of different EPPP domains
+- All questions scored (isScored: true)
+- Balanced difficulty levels
 
 Generate the exam in JSON format with this structure:
 {
@@ -59,15 +36,56 @@ Generate the exam in JSON format with this structure:
       "explanation": "Why this is correct",
       "domain": "Domain 1-8",
       "difficulty": "easy|medium|hard",
+      "isScored": true,
+      "knId": "KN1"
+    }
+  ]
+}
+
+Start generating the exam now. Format each question clearly. Generate exactly 71 questions as specified above.`
+
+// PRACTICE EXAM: 225 Questions
+const PRACTICE_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
+
+Your task is to generate a comprehensive 225-question practice exam following official ASPPB specifications.
+
+The exam should include:
+- 225 questions total
+- Proper domain distribution following EPPP weights
+- 180 scored questions (80%) - standard and medium difficulty questions that count toward score
+- 45 unscored experimental questions (20%) - harder questions for research/development that DO NOT count toward score
+- Multiple choice format with 4 options each
+- Answer key with brief explanations
+- Questions distributed across all 8 EPPP domains
+
+IMPORTANT: Mark the unscored questions clearly with "isScored": false. These should be noticeably harder than the scored questions and are used for data collection. Users will see their score calculated only from the 180 scored questions, not the 45 unscored ones.
+
+Generate the exam in JSON format with this structure:
+{
+  "questions": [
+    {
+      "id": number,
+      "question": "Question text",
+      "options": ["A", "B", "C", "D"],
+      "correct_answer": "A",
+      "explanation": "Why this is correct",
+      "domain": "Domain 1-8",
+      "difficulty": "easy|medium|hard",
+      "isScored": true,
       "type": "standard"
     }
   ]
 }
 
-Start generating the exam now. Format each question clearly.`
+Start generating the exam now. Format each question clearly. Remember: exactly 180 questions with "isScored": true, and 45 questions with "isScored": false.`
 
 export async function POST(request: NextRequest) {
   try {
+    const { searchParams } = new URL(request.url)
+    const examType = searchParams.get('type') || 'practice' // 'diagnostic' or 'practice'
+
+    const prompt = examType === 'diagnostic' ? DIAGNOSTIC_EXAM_PROMPT : PRACTICE_EXAM_PROMPT
+
     const response = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 16000,
@@ -75,7 +93,7 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: 'user',
-          content: EXAM_GENERATOR_PROMPT,
+          content: prompt,
         },
       ],
     })

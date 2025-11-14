@@ -3,128 +3,133 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
-import { motion } from 'motion/react'
-import { login } from '@/lib/user-management'
+import { supabase } from '@/lib/supabase'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { TypographyH1, TypographyMuted } from '@/components/ui/typography'
 
 export default function LoginPage() {
   const router = useRouter()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  })
+
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setError('')
-    setIsLoading(true)
+    setError(null)
+
+    if (!formData.email || !formData.password) {
+      setError('Email and password are required')
+      return
+    }
+
+    setLoading(true)
 
     try {
-      const user = login(email, password)
+      // Start the sign-in process (don't await it since it hangs)
+      supabase.auth.signInWithPassword({
+        email: formData.email,
+        password: formData.password,
+      }).catch(err => {
+        setError(err.message || 'Login failed')
+        setLoading(false)
+      })
 
-      if (!user) {
-        setError('Invalid email or password')
-        setIsLoading(false)
-        return
-      }
+      // Redirect to dashboard after a delay (auth context will handle setting the user)
+      setTimeout(() => {
+        router.push('/dashboard')
+      }, 2000)
 
-      // Wait a moment for visual feedback
-      await new Promise(resolve => setTimeout(resolve, 500))
-
-      // Redirect to app
-      router.push('/app')
     } catch (err) {
-      setError('Failed to log in. Please try again.')
-      console.error(err)
-      setIsLoading(false)
+      const message = err instanceof Error ? err.message : 'Login failed'
+      setError(message)
+      setLoading(false)
     }
   }
 
   return (
-    <main className="min-h-screen bg-background flex flex-col">
-      <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-md">
-          {/* Header */}
-          <div className="mb-12">
-            <Link
-              href="/"
-              className="flex items-center gap-2 text-primary hover:underline mb-8"
-            >
-              <ArrowLeft size={18} />
-              Back
-            </Link>
+    <main className="min-h-screen bg-background flex items-start justify-center p-4 pt-16">
+      <div className="w-full max-w-md">
+        <Card>
+          <CardHeader className="space-y-2">
+            <TypographyH1>Welcome Back</TypographyH1>
+            <CardDescription>
+              Log in to your EPPP Skills account
+            </CardDescription>
+          </CardHeader>
 
-            <h1 className="text-4xl font-bold mb-4">Welcome Back</h1>
-            <p className="text-lg text-muted-foreground">
-              Sign in to your account to continue learning
-            </p>
-          </div>
+          <CardContent className="space-y-6">
+            {error && (
+              <Alert variant="destructive">
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">
                   Email Address
                 </label>
-                <input
+                <Input
                   type="email"
                   id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="your@email.com"
                   required
                 />
               </div>
 
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium mb-2">
+              <div className="space-y-2">
+                <label htmlFor="password" className="text-sm font-medium">
                   Password
                 </label>
-                <input
+                <Input
                   type="password"
                   id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleInputChange}
+                  placeholder="Your password"
                   required
                 />
               </div>
 
-              {error && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="bg-destructive/10 border border-destructive/30 rounded-lg p-3"
-                >
-                  <p className="text-sm text-destructive">{error}</p>
-                </motion.div>
-              )}
-
-              <button
+              <Button
                 type="submit"
-                disabled={isLoading}
-                className="w-full h-12 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+                disabled={loading}
+                className="w-full mt-6"
+                size="lg"
               >
-                {isLoading ? 'Signing in...' : 'Sign In'}
-              </button>
+                {loading ? 'Logging in...' : 'Log In'}
+              </Button>
             </form>
 
-            <div className="mt-6 text-center">
-              <p className="text-muted-foreground">
+            <div className="text-center">
+              <TypographyMuted>
                 Don't have an account?{' '}
                 <Link href="/signup" className="text-primary hover:underline font-medium">
                   Sign up
                 </Link>
-              </p>
+              </TypographyMuted>
             </div>
-          </motion.div>
-        </div>
+          </CardContent>
+        </Card>
       </div>
     </main>
   )

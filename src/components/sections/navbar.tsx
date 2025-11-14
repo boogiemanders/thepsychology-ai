@@ -1,10 +1,10 @@
 "use client";
 
 import { NavMenu } from "@/components/nav-menu";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
-import { getCurrentUser, logout } from "@/lib/user-management";
+import { useAuth } from "@/context/auth-context";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion, useScroll } from "motion/react";
 import Image from "next/image";
@@ -53,10 +53,16 @@ const drawerMenuVariants = {
 
 export function Navbar() {
   const { scrollY } = useScroll();
+  const { user, signOut } = useAuth();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const [user, setUser] = useState(getCurrentUser());
+  const [mounted, setMounted] = useState(false);
+
+  // Set mounted flag to prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -128,23 +134,29 @@ export function Navbar() {
 
             <div className="flex flex-row items-center gap-1 md:gap-3 shrink-0">
               <div className="flex items-center space-x-6">
-                {user ? (
+                {mounted && user ? (
                   <button
-                    onClick={() => logout()}
+                    onClick={async () => {
+                      try {
+                        await signOut()
+                      } catch (err) {
+                        console.error('Logout failed:', err)
+                      }
+                    }}
                     className="border border-foreground/40 h-8 hidden md:flex items-center justify-center text-sm font-normal tracking-wide rounded-sm text-foreground w-fit px-4 hover:bg-foreground/5 hover:border-foreground/60 transition-colors"
                   >
                     Logout
                   </button>
-                ) : (
+                ) : mounted ? (
                   <a
                     className="border border-foreground/40 h-8 hidden md:flex items-center justify-center text-sm font-normal tracking-wide rounded-sm text-foreground w-fit px-4 hover:bg-foreground/5 hover:border-foreground/60 transition-colors cursor-pointer"
                     href="/#get-started"
                   >
                     Try for free
                   </a>
-                )}
+                ) : null}
               </div>
-              <ThemeToggle />
+              <AnimatedThemeToggler />
               <button
                 className="md:hidden border border-border size-8 rounded-md cursor-pointer flex items-center justify-center"
                 onClick={toggleDrawer}
@@ -240,21 +252,27 @@ export function Navbar() {
 
                 {/* Action buttons */}
                 <div className="flex flex-col gap-2">
-                  {user ? (
+                  {mounted && user ? (
                     <button
-                      onClick={() => logout()}
+                      onClick={async () => {
+                        try {
+                          await signOut()
+                        } catch (err) {
+                          console.error('Logout failed:', err)
+                        }
+                      }}
                       className="bg-secondary h-8 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-primary-foreground dark:text-secondary-foreground w-full px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-white/[0.12] hover:bg-secondary/80 transition-all ease-out active:scale-95"
                     >
                       Logout
                     </button>
-                  ) : (
+                  ) : mounted ? (
                     <a
                       href="/#get-started"
                       className="bg-secondary h-8 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-primary-foreground dark:text-secondary-foreground w-full px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-white/[0.12] hover:bg-secondary/80 transition-all ease-out active:scale-95 cursor-pointer"
                     >
                       Try for free
                     </a>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </motion.div>

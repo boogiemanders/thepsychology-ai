@@ -197,7 +197,7 @@ export const Feature = ({
 
     if (!currentItem) {
       return (
-        <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1 animate-pulse" />
+        <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1 animate-breath" />
       );
     }
 
