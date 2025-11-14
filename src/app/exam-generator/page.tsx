@@ -271,16 +271,12 @@ export default function ExamGeneratorPage() {
             transition={{ duration: 0.3 }}
           >
             <div className="text-center py-12">
-              {!examType && (
-                <>
-                  <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                    EPPP Exam
-                  </h1>
-                  <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                    Choose an exam type to get started.
-                  </p>
-                </>
-              )}
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                EPPP Exam
+              </h1>
+              <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                {!examType ? 'Choose an exam type to get started.' : `You selected ${examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} Exam. Now choose your study mode.`}
+              </p>
 
               {!isGenerating && (
                 <div>
