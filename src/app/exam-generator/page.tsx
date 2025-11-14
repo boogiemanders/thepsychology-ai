@@ -647,18 +647,7 @@ export default function ExamGeneratorPage() {
               })}
               </div>
 
-              {/* Show Answer Button (Test Mode Only) */}
-              {selectedAnswer && !showExplanation && mode === 'test' && (
-                <Button
-                  onClick={handleShowExplanation}
-                  variant="outline"
-                  className="w-full mt-6"
-                >
-                  Show Explanation
-                </Button>
-              )}
-
-              {/* Explanation */}
+              {/* Explanation - Only shown in Study Mode or after test is complete */}
               {showExplanation && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
