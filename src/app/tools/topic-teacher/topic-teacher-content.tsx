@@ -751,52 +751,99 @@ export function TopicTeacherContent() {
           </div>
         )}
 
-        {/* Interests Modal */}
-        <Dialog open={showInterestsModal} onOpenChange={setShowInterestsModal}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Tell us about your interests</DialogTitle>
-              <DialogDescription>
-                Share your hobbies, fandoms, or interests so we can personalize your lessons with relevant examples.
-              </DialogDescription>
-            </DialogHeader>
+        {/* Interests Modal - Only show if no interests saved */}
+        {savedInterests.length === 0 && (
+          <Dialog open={showInterestsModal} onOpenChange={setShowInterestsModal}>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Tell us about your interests</DialogTitle>
+                <DialogDescription>
+                  Share your hobbies, fandoms, or interests so we can personalize your lessons with relevant examples.
+                </DialogDescription>
+              </DialogHeader>
 
-            <Textarea
-              value={interestsInput}
-              onChange={(e) => setInterestsInput(e.target.value)}
-              placeholder="e.g., gaming, Marvel movies, cooking, anime, basketball..."
-              rows={4}
-            />
+              {/* Interest Tags Input - Same as topic selector */}
+              <div className="relative">
+                <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
+                  {/* Display saved interests as tags */}
+                  {savedInterests.map((interest, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      className="flex items-center gap-1 px-2 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium"
+                    >
+                      <span>{interest}</span>
+                      <button
+                        onClick={() => {
+                          const newInterests = savedInterests.filter((_, i) => i !== index)
+                          setSavedInterests(newInterests)
+                          if (user?.id && newInterests.length > 0) {
+                            updateUserCurrentInterest(user.id, newInterests.join(', '))
+                          }
+                        }}
+                        className="hover:opacity-70 transition-opacity"
+                        type="button"
+                      >
+                        <X size={14} />
+                      </button>
+                    </motion.div>
+                  ))}
 
-            <DialogFooter className="flex-col-reverse sm:flex-row gap-3 sm:gap-0">
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setShowInterestsModal(false)
-                  setUserInterests('')
-                }}
-              >
-                Skip
-              </Button>
-              <Button
-                onClick={async () => {
-                  if (interestsInput.trim() && user?.id) {
-                    try {
-                      await updateUserCurrentInterest(user.id, interestsInput)
-                      setUserInterests(interestsInput)
-                      setShowInterestsModal(false)
-                    } catch (error) {
-                      console.debug('Error saving interest:', error)
-                    }
-                  }
-                }}
-                disabled={!interestsInput.trim()}
-              >
-                Save
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+                  {/* Input field */}
+                  <input
+                    type="text"
+                    placeholder={savedInterests.length === 0 ? "Add your interests/hobbies/fandoms..." : "Add another interest..."}
+                    value={currentInterestInput}
+                    onChange={(e) => setCurrentInterestInput(e.target.value)}
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter' && currentInterestInput.trim() && user?.id) {
+                        e.preventDefault()
+                        const newInterest = currentInterestInput.trim()
+                        const updatedInterests = [...savedInterests, newInterest]
+                        setSavedInterests(updatedInterests)
+                        setCurrentInterestInput('')
+                        updateUserCurrentInterest(user.id, updatedInterests.join(', '))
+                      }
+                    }}
+                    className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"
+                  />
+
+                  {/* Enter key indicator */}
+                  {currentInterestInput.trim().length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="flex items-center gap-1 text-xs text-muted-foreground ml-auto"
+                    >
+                      <Kbd className="text-xs px-1.5 py-0.5">Enter</Kbd>
+                    </motion.div>
+                  )}
+                </div>
+              </div>
+
+              <DialogFooter className="flex-col-reverse sm:flex-row gap-3 sm:gap-0">
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setShowInterestsModal(false)
+                  }}
+                >
+                  Skip for now
+                </Button>
+                <Button
+                  onClick={() => {
+                    setShowInterestsModal(false)
+                  }}
+                  disabled={savedInterests.length === 0}
+                >
+                  Continue
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
     </main>
   )
