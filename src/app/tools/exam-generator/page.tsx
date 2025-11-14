@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Clock } from 'lucide-react'
+import { Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -12,6 +12,14 @@ import { Separator } from '@/components/ui/separator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { motion } from 'motion/react'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb'
 import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
 
 interface Question {
@@ -59,17 +67,21 @@ export default function ExamGeneratorPage() {
 
   // Timer effect: time per question based on exam type
   useEffect(() => {
-    if (!isExamStarted || questions.length === 0 || mode === 'study') return
+    if (!isExamStarted || questions.length === 0 || mode !== 'test') return
 
     // 68 seconds per question for practice (225q = 4h 15m), 50 seconds per question for diagnostic (71q = ~1h)
     const secondsPerQuestion = examType === 'diagnostic' ? 50 : 68
     const totalSeconds = questions.length * secondsPerQuestion
 
-    // Initialize time remaining on exam start
-    if (timeRemaining === 0) {
-      setTimeRemaining(totalSeconds)
-      return
-    }
+    // Only initialize on first run
+    if (timeRemaining > 0) return
+
+    setTimeRemaining(totalSeconds)
+  }, [isExamStarted])
+
+  // Separate effect for timer countdown
+  useEffect(() => {
+    if (!isExamStarted || questions.length === 0 || mode !== 'test' || timeRemaining === 0) return
 
     const timer = setInterval(() => {
       setTimeRemaining((prev) => {
@@ -144,7 +156,7 @@ export default function ExamGeneratorPage() {
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [isExamStarted, questions.length, mode])
+  }, [isExamStarted, timeRemaining, questions, selectedAnswers, examType, mode])
 
   const formatTime = (seconds: number): string => {
     const hours = Math.floor(seconds / 3600)
@@ -239,13 +251,25 @@ export default function ExamGeneratorPage() {
     return (
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
-          <Link
-            href="/dashboard"
-            className="flex items-center gap-2 text-primary hover:underline mb-8"
-          >
-            <ArrowLeft size={18} />
-            Back to Dashboard
-          </Link>
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/dashboard">Dashboard</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/tools">Tools</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Exam Generator</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -530,13 +554,25 @@ export default function ExamGeneratorPage() {
   return (
     <main className="min-h-screen p-6 bg-background">
       <div className="max-w-3xl mx-auto">
-        <Link
-          href="/tools"
-          className="flex items-center gap-2 text-primary hover:underline mb-8"
-        >
-          <ArrowLeft size={18} />
-          Back to Tools
-        </Link>
+        <Breadcrumb className="mb-8">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/dashboard">Dashboard</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/tools">Tools</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{examType === 'diagnostic' ? 'Diagnostic Exam' : 'Practice Exam'}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -568,12 +604,6 @@ export default function ExamGeneratorPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Badge variant="outline" className="font-normal">
-                    {question.domain}
-                  </Badge>
-                  <Badge variant="outline" className="font-normal">
-                    {question.difficulty}
-                  </Badge>
                   {mode === 'test' && timeRemaining > 0 && (
                     <Badge
                       variant={isTimeWarning ? "destructive" : "secondary"}
@@ -617,7 +647,7 @@ export default function ExamGeneratorPage() {
                       onClick={() => !isAnswered && handleSelectAnswer(option)}
                       disabled={isAnswered}
                       variant="outline"
-                      className={`w-full text-left p-4 h-auto justify-start transition-colors ${
+                      className={`w-full text-left p-4 h-auto justify-start transition-colors whitespace-normal ${
                         isSelected
                           ? optionIsCorrect
                             ? 'border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-950 text-foreground'
@@ -631,7 +661,7 @@ export default function ExamGeneratorPage() {
                         <span className="font-bold text-base flex-shrink-0">
                           {optionLetter}.
                         </span>
-                        <span>{option}</span>
+                        <span className="break-words">{option}</span>
                       </div>
                     </Button>
                   </motion.div>
