@@ -160,9 +160,10 @@ export default function DashboardPage() {
 
   const handleSaveExamDate = async (date: Date | undefined) => {
     if (date && user) {
-      // Add 1 day to compensate for timezone offset issue
+      // Subtract 1 day so selected date displays correctly
+      // (when user picks Nov 14, it should be saved as Nov 14, not Nov 15)
       const adjustedDate = new Date(date)
-      adjustedDate.setDate(adjustedDate.getDate() + 1)
+      adjustedDate.setDate(adjustedDate.getDate() - 1)
 
       // Use UTC methods to extract date components
       const year = adjustedDate.getUTCFullYear()

@@ -177,7 +177,9 @@ export function TopicTeacherContent() {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to load lesson')
+        const errorText = await response.text()
+        console.error('API Error:', response.status, errorText)
+        throw new Error(`API Error (${response.status}): ${errorText || 'Unknown error'}`)
       }
 
       if (!response.body) {
@@ -197,20 +199,21 @@ export function TopicTeacherContent() {
         lessonContent += text
       }
 
+      if (!lessonContent) {
+        throw new Error('No lesson content received from API')
+      }
+
       setMessages([
         {
           role: 'assistant',
-          content:
-            lessonContent ||
-            'Lesson loaded. Feel free to ask follow-up questions!',
+          content: lessonContent,
         },
       ])
       setInitialized(true)
     } catch (err) {
       console.error('Error loading lesson:', err)
-      setError(
-        err instanceof Error ? err.message : 'Failed to load lesson'
-      )
+      const errorMessage = err instanceof Error ? err.message : 'Failed to load lesson'
+      setError(errorMessage)
     } finally {
       setIsLoading(false)
     }
