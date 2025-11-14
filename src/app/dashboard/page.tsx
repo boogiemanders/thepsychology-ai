@@ -7,6 +7,7 @@ import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { supabase } from '@/lib/supabase'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
+import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Calendar } from '@/components/ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
@@ -20,9 +21,10 @@ import { Ripple } from '@/components/ui/ripple'
 import { BreathingAnimation } from '@/components/ui/breathing-animation'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
-import { LogOut, GraduationCap, Droplets, Target, Flame } from 'lucide-react'
+import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
+import { getTopPriorities } from '@/lib/priority-storage'
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -44,6 +46,7 @@ export default function DashboardPage() {
   const [dailyGoal, setDailyGoalState] = useState(getDailyGoal())
   const [todayQuizCount, setTodayQuizCount] = useState(0)
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
+  const [priorityDomains, setPriorityDomains] = useState<any[]>([])
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -74,6 +77,14 @@ export default function DashboardPage() {
         } catch (e) {
           console.error('Error retrieving exam date:', e)
         }
+      }
+    }
+
+    // Load priority recommendations from diagnostic exam
+    if (typeof window !== 'undefined') {
+      const priorities = getTopPriorities('diagnostic')
+      if (priorities && priorities.length > 0) {
+        setPriorityDomains(priorities)
       }
     }
   }, [userProfile])
@@ -365,17 +376,40 @@ export default function DashboardPage() {
       className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
       background: (
         <div className="absolute inset-0 flex flex-col items-start justify-start pt-4 p-4 h-full">
+          {/* Priority Badges Section */}
+          {priorityDomains.length > 0 && (
+            <div className="w-full mb-3 pb-3 border-b border-border/40">
+              <div className="text-xs font-semibold text-foreground/70 mb-2 flex items-center gap-1">
+                <AlertCircle className="w-3 h-3" />
+                Priority Focus
+              </div>
+              <div className="flex flex-wrap gap-1">
+                {priorityDomains.slice(0, 3).map((domain, idx) => (
+                  <Badge key={idx} variant="outline" className="text-xs bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-700">
+                    #{idx + 1}: {domain.domainName.split(':')[0]}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )}
+
           <ScrollArea className="w-full h-full pr-4">
             <div className="w-full space-y-2 opacity-60">
-              {EPPP_DOMAINS.map((domain, idx) => (
-                <div key={idx} className="space-y-1 pr-2">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-foreground/80 truncate">{domain.name}</span>
-                    <span className="text-foreground/60 ml-1 flex-shrink-0">{Math.round(progressData.domainProgress[idx] || 0)}%</span>
+              {EPPP_DOMAINS.map((domain, idx) => {
+                const isPriority = priorityDomains.some(p => p.domainNumber === idx + 1)
+                return (
+                  <div key={idx} className={`space-y-1 pr-2 ${isPriority ? 'opacity-100' : ''}`}>
+                    <div className="flex items-center justify-between text-xs">
+                      <div className="flex items-center gap-1 truncate">
+                        {isPriority && <AlertCircle className="w-3 h-3 text-orange-500 flex-shrink-0" />}
+                        <span className="text-foreground/80 truncate">{domain.name}</span>
+                      </div>
+                      <span className="text-foreground/60 ml-1 flex-shrink-0">{Math.round(progressData.domainProgress[idx] || 0)}%</span>
+                    </div>
+                    <Progress value={progressData.domainProgress[idx] || 0} className="h-1" />
                   </div>
-                  <Progress value={progressData.domainProgress[idx] || 0} className="h-1" />
-                </div>
-              ))}
+                )
+              })}
             </div>
           </ScrollArea>
         </div>
