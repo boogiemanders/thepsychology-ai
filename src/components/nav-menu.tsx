@@ -15,7 +15,7 @@ const navs: NavItem[] = siteConfig.nav.links;
 const loggedInNavs: NavItem[] = [
   { name: "Dashboard", href: "/dashboard" },
   { name: "Practice", href: "/tools/exam-generator" },
-  { name: "Prioritize", href: "/tools/study-optimizer" },
+  { name: "Prioritize", href: "/tools/prioritizer" },
   { name: "Study", href: "/tools/topic-selector" },
 ];
 

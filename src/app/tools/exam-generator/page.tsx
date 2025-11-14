@@ -84,7 +84,58 @@ export default function ExamGeneratorPage() {
             return q && q.isScored !== false && answer === q.correct_answer
           }).length
 
-          window.location.href = `/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify({ questions, selectedAnswers, score, totalQuestions: scoredQuestions.length }))}`
+          // Generate priority recommendations if diagnostic exam
+          let priorityData = null
+          if (examType === 'diagnostic') {
+            const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
+            const { savePriorityRecommendation } = require('@/lib/priority-storage')
+
+            // Build wrong answers from selected answers
+            const wrongAnswers = Object.entries(selectedAnswers)
+              .map(([qIdx, answer]) => {
+                const q = questions[parseInt(qIdx)]
+                if (q && q.isScored !== false && answer !== q.correct_answer) {
+                  return {
+                    questionId: parseInt(qIdx) + 1,
+                    question: q.question,
+                    selectedAnswer: answer,
+                    correctAnswer: q.correct_answer,
+                    relatedSections: [q.domain],
+                    timestamp: Date.now(),
+                  }
+                }
+                return null
+              })
+              .filter(Boolean)
+
+            const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
+            const allResults = getAllDomainResults(wrongAnswers)
+
+            priorityData = {
+              topPriorities,
+              allResults,
+            }
+
+            savePriorityRecommendation({
+              examType: 'diagnostic',
+              examMode: mode,
+              topPriorities,
+              allResults,
+            })
+          }
+
+          const resultData = {
+            questions,
+            selectedAnswers,
+            score,
+            totalQuestions: scoredQuestions.length,
+            examType,
+            examMode: mode,
+            ...priorityData,
+          }
+
+          const targetPage = examType === 'diagnostic' ? '/tools/prioritizer' : '/tools/study-optimizer'
+          window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
           return 0
         }
 
@@ -658,7 +709,48 @@ export default function ExamGeneratorPage() {
                       correctAnswers: score,
                     })
 
-                    // Route to results page
+                    // Generate priority recommendations if diagnostic exam
+                    let priorityData = null
+                    if (examType === 'diagnostic') {
+                      const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
+                      const { savePriorityRecommendation } = require('@/lib/priority-storage')
+
+                      // Build wrong answers from selected answers
+                      const wrongAnswers = Object.entries(selectedAnswers)
+                        .map(([qIdx, answer]) => {
+                          const q = questions[parseInt(qIdx)]
+                          if (q && q.isScored !== false && answer !== q.correct_answer) {
+                            return {
+                              questionId: parseInt(qIdx) + 1,
+                              question: q.question,
+                              selectedAnswer: answer,
+                              correctAnswer: q.correct_answer,
+                              relatedSections: [q.domain],
+                              timestamp: Date.now(),
+                            }
+                          }
+                          return null
+                        })
+                        .filter(Boolean)
+
+                      const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
+                      const allResults = getAllDomainResults(wrongAnswers)
+
+                      priorityData = {
+                        topPriorities,
+                        allResults,
+                      }
+
+                      // Save to local storage
+                      savePriorityRecommendation({
+                        examType: 'diagnostic',
+                        examMode: mode || 'study',
+                        topPriorities,
+                        allResults,
+                      })
+                    }
+
+                    // Route to prioritizer if diagnostic, study-optimizer if practice
                     const resultData = {
                       questions,
                       selectedAnswers,
@@ -666,8 +758,11 @@ export default function ExamGeneratorPage() {
                       totalQuestions: scoredQuestions.length,
                       examType,
                       examMode: mode,
+                      ...priorityData,
                     }
-                    window.location.href = `/tools/study-optimizer?results=${encodeURIComponent(JSON.stringify(resultData))}`
+
+                    const targetPage = examType === 'diagnostic' ? '/tools/prioritizer' : '/tools/study-optimizer'
+                    window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
                   }}
                   className="w-full"
                 >
