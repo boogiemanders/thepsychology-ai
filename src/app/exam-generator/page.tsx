@@ -299,7 +299,12 @@ export default function ExamGeneratorPage() {
                       >
                         <CardHeader className="text-center">
                           <div className="flex items-center justify-center flex-col">
-                            <CardTitle className="text-xl mb-2 font-semibold">Diagnostic Exam</CardTitle>
+                            <div className="flex items-center gap-2 mb-2">
+                              <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+                              {recommendedExamType === 'diagnostic' && (
+                                <Badge className="bg-blue-500">Recommended</Badge>
+                              )}
+                            </div>
                             <CardDescription>71 questions</CardDescription>
                           </div>
                         </CardHeader>
@@ -337,7 +342,12 @@ export default function ExamGeneratorPage() {
                       >
                         <CardHeader className="text-center">
                           <div className="flex items-center justify-center flex-col">
-                            <CardTitle className="text-xl mb-2 font-semibold">Practice Exam</CardTitle>
+                            <div className="flex items-center gap-2 mb-2">
+                              <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+                              {recommendedExamType === 'practice' && (
+                                <Badge className="bg-blue-500">Recommended</Badge>
+                              )}
+                            </div>
                             <CardDescription>225 questions</CardDescription>
                           </div>
                         </CardHeader>
@@ -410,7 +420,7 @@ export default function ExamGeneratorPage() {
                             <CardFooter>
                               <Button
                                 onClick={() => handleGenerateExam(examType, 'study')}
-                                className="w-full"
+                                className="w-full px-8 py-6"
                                 size="lg"
                               >
                                 Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Study Mode
@@ -452,7 +462,7 @@ export default function ExamGeneratorPage() {
                             <CardFooter>
                               <Button
                                 onClick={() => handleGenerateExam(examType, 'test')}
-                                className="w-full"
+                                className="w-full px-8 py-6"
                                 size="lg"
                                 variant="outline"
                               >
