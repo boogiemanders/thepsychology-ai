@@ -574,10 +574,10 @@ export default function ExamGeneratorPage() {
                       {examType === 'diagnostic' ? '🎯 Diagnostic' : '📚 Practice'}
                     </Badge>
                     <Badge
-                      variant={mode === 'study' ? 'default' : 'secondary'}
-                      className={mode === 'study' ? 'bg-green-500/20 text-green-600 dark:text-green-400 hover:bg-green-500/30' : 'bg-purple-500/20 text-purple-600 dark:text-purple-400 hover:bg-purple-500/30'}
+                      variant="outline"
+                      className="bg-slate-500/10 text-slate-600 dark:text-slate-400"
                     >
-                      {mode === 'study' ? '📚 Study Mode' : '📋 Test Mode'}
+                      {mode === 'study' ? '📚 Study' : '📋 Test'}
                     </Badge>
                   </div>
                 </div>
