@@ -2,12 +2,13 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Send } from 'lucide-react'
+import { ArrowLeft, Send, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { TypographyH1, TypographyH2, TypographyH3, TypographyMuted } from '@/components/ui/typography'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
 import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Kbd } from '@/components/ui/kbd'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
@@ -43,6 +44,8 @@ export function TopicTeacherContent() {
   const [initialized, setInitialized] = useState(false)
   const [showInterestsModal, setShowInterestsModal] = useState(false)
   const [interestsInput, setInterestsInput] = useState('')
+  const [currentInterestInput, setCurrentInterestInput] = useState('')
+  const [savedInterests, setSavedInterests] = useState<string[]>([])
   const [userInterests, setUserInterests] = useState<string | null>(null)
   const [interestsLoaded, setInterestsLoaded] = useState(false)
   const [highlightData, setHighlightData] = useState<HighlightData>({
@@ -54,13 +57,14 @@ export function TopicTeacherContent() {
   const currentSectionRef = useRef<string>('')
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  // Disabled auto-scroll - keep at top of page
+  // const scrollToBottom = () => {
+  //   messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  // }
 
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages])
+  // useEffect(() => {
+  //   scrollToBottom()
+  // }, [messages])
 
   // Check for user interests on mount and subscribe to changes
   useEffect(() => {
@@ -81,9 +85,16 @@ export function TopicTeacherContent() {
 
         setUserInterests(currentInterest)
 
-        // If user already has an interest, pre-populate the input
+        // If user already has an interest, pre-populate the inputs
         if (currentInterest) {
           setInterestsInput(currentInterest)
+          // Parse and display as saved interests
+          const interestsList = currentInterest
+            .split(',')
+            .map((i) => i.trim())
+            .filter((i) => i.length > 0)
+          setSavedInterests(interestsList)
+          setCurrentInterestInput('')
         } else {
           // Only show modal if user hasn't filled out interests yet
           setShowInterestsModal(true)
@@ -94,10 +105,16 @@ export function TopicTeacherContent() {
           setUserInterests(newInterest)
           if (newInterest) {
             setInterestsInput(newInterest)
-            // Also update localStorage
+            // Also update localStorage and saved interests display
             if (typeof window !== 'undefined') {
               localStorage.setItem(`interests_${user.id}`, newInterest)
             }
+            const interestsList = newInterest
+              .split(',')
+              .map((i) => i.trim())
+              .filter((i) => i.length > 0)
+            setSavedInterests(interestsList)
+            setCurrentInterestInput('')
           }
         })
         subscriptionRef.current = channel
@@ -395,6 +412,71 @@ export function TopicTeacherContent() {
 
         <div className="mb-6">
           <TypographyH1>{decodeURIComponent(topic)}</TypographyH1>
+        </div>
+
+        {/* Interest Tags Input */}
+        <div className="mb-6 max-w-2xl">
+          <div className="relative">
+            <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
+              {/* Display saved interests as tags */}
+              {savedInterests.map((interest, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  className="flex items-center gap-1 px-2 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium"
+                >
+                  <span>{interest}</span>
+                  <button
+                    onClick={() => {
+                      const newInterests = savedInterests.filter((_, i) => i !== index)
+                      setSavedInterests(newInterests)
+                      if (user?.id) {
+                        if (newInterests.length > 0) {
+                          updateUserCurrentInterest(user.id, newInterests.join(', '))
+                        }
+                      }
+                    }}
+                    className="hover:opacity-70 transition-opacity"
+                    type="button"
+                  >
+                    <X size={14} />
+                  </button>
+                </motion.div>
+              ))}
+
+              {/* Input field */}
+              <input
+                type="text"
+                placeholder={savedInterests.length === 0 ? "Add your interests/hobbies/fandoms..." : "Add another interest..."}
+                value={currentInterestInput}
+                onChange={(e) => setCurrentInterestInput(e.target.value)}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter' && currentInterestInput.trim() && user?.id) {
+                    e.preventDefault()
+                    const newInterest = currentInterestInput.trim()
+                    const updatedInterests = [...savedInterests, newInterest]
+                    setSavedInterests(updatedInterests)
+                    setCurrentInterestInput('')
+                    updateUserCurrentInterest(user.id, updatedInterests.join(', '))
+                  }
+                }}
+                className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"
+              />
+
+              {/* Enter key indicator */}
+              {currentInterestInput.trim().length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="flex items-center gap-1 text-xs text-muted-foreground ml-auto"
+                >
+                  <Kbd className="text-xs px-1.5 py-0.5">Enter</Kbd>
+                </motion.div>
+              )}
+            </div>
+          </div>
         </div>
 
         {error && (
