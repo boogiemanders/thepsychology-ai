@@ -282,7 +282,7 @@ export default function ExamGeneratorPage() {
                 </>
               )}
 
-              {!isGenerating && !examType && (
+              {!isGenerating && (
                 <div>
                   {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
                   <div className="max-w-2xl mx-auto mb-8">
@@ -375,12 +375,10 @@ export default function ExamGeneratorPage() {
                     </motion.div>
                     </div>
                   </div>
-                </div>
-              )}
 
-              {/* Step 2: Mode Selection (Study vs Test) */}
-              {!isGenerating && examType && (
-                  <motion.div
+                  {/* Step 2: Mode Selection (Study vs Test) */}
+                  {examType && (
+                    <motion.div
                     initial={{ opacity: 0, y: -20, scaleY: 0 }}
                     animate={{ opacity: 1, y: 0, scaleY: 1 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
@@ -487,7 +485,9 @@ export default function ExamGeneratorPage() {
                     >
                       Back to Exam Selection
                     </Button>
-                  </motion.div>
+                    </motion.div>
+                  )}
+                </div>
               )}
             </div>
 

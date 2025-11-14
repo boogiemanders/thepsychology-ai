@@ -32,38 +32,21 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
     }
   }, [speed, animationData, isReversed])
 
-  // Play animation and toggle reverse direction at the end
+  // Play animation and toggle reverse direction every 7.5 seconds
   useEffect(() => {
     if (!lottieRef.current) return
 
-    const handleComplete = () => {
-      // Animation completed, toggle direction for next cycle
-      setIsReversed((prev) => !prev)
-    }
-
-    // Get the Lottie instance and add completion listener
     const lottie = lottieRef.current
     // Play the animation
     lottie.play()
 
-    // Listen for animation completion
-    const animationFrameId = setInterval(() => {
-      if (lottie && lottie.currentFrame !== undefined) {
-        // Check if we're at the end or beginning of the animation
-        const totalFrames = lottie.getDuration(true) // Get total frames
-        const currentFrame = lottie.currentFrame
+    // Toggle direction every 7.5 seconds (7500ms)
+    const reverseInterval = setInterval(() => {
+      setIsReversed((prev) => !prev)
+    }, 7500)
 
-        // If we're at the end of the animation (forward), reverse it
-        if (isReversed && currentFrame <= 0) {
-          setIsReversed(false)
-        } else if (!isReversed && currentFrame >= totalFrames - 1) {
-          setIsReversed(true)
-        }
-      }
-    }, 100)
-
-    return () => clearInterval(animationFrameId)
-  }, [lottieRef, isReversed])
+    return () => clearInterval(reverseInterval)
+  }, [lottieRef])
 
   if (!animationData) {
     return <div className="w-full h-full" />
