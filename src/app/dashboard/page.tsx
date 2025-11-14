@@ -96,55 +96,71 @@ export default function DashboardPage() {
     const updateProgress = () => {
       const allResults = getAllQuizResults()
 
-      // Topic data with domain mapping
-      const topicsByDomain = {
-        0: ['Neurotransmitters & Receptors', 'Brain Anatomy & Function', 'Nervous System Organization', 'Psychopharmacology', 'Sleep & Circadian Rhythms'],
-        1: ['Classical & Operant Conditioning', 'Observational Learning', 'Memory Systems & Encoding', 'Attention & Consciousness', 'Motivation & Emotion'],
-        2: ['Social Cognition & Attitudes', 'Group Dynamics & Conformity', 'Cultural Psychology', 'Organizational Psychology', 'Diversity & Multicultural Issues'],
-        3: ['Physical Development', 'Cognitive Development', 'Psychosocial Development', 'Moral Development', 'Aging & Late Adulthood'],
-        4: ['Psychological Testing Principles', 'Intelligence Assessment', 'Personality Assessment', 'Clinical Diagnosis & Psychopathology', 'Substance Use Disorders'],
-        5: ['Cognitive-Behavioral Therapies', 'Psychodynamic Therapies', 'Humanistic & Experiential Therapies', 'Group & Family Therapy', 'Evidence-Based Interventions'],
-        6: ['Research Design & Methodology', 'Experimental vs Non-Experimental', 'Descriptive Statistics', 'Inferential Statistics', 'Effect Size & Power'],
-        7: ['Ethical Principles & Guidelines', 'Confidentiality & Privacy', 'Informed Consent', 'Competence & Boundaries', 'Legal Liability & Licensing'],
-      }
+      // Build topic-to-domain mapping dynamically from EPPP_DOMAINS
+      const topicsByDomain: Record<number, string[]> = {}
+      EPPP_DOMAINS.forEach((domain, idx) => {
+        topicsByDomain[idx] = domain.topics.map(t => t.name)
+      })
 
-      // Calculate completed topics (80%+ score)
+      // Calculate domain progress based on quiz results
+      const domainProgress: number[] = new Array(EPPP_DOMAINS.length).fill(0)
+      const topicScores: Record<number, Record<string, number>> = {}
+
+      // Initialize topic scores for each domain
+      EPPP_DOMAINS.forEach((_, domainIdx) => {
+        topicScores[domainIdx] = {}
+        topicsByDomain[domainIdx]?.forEach(topic => {
+          topicScores[domainIdx][topic] = 0
+        })
+      })
+
+      // Process all quiz results
+      let totalScore = 0
+      let totalQuizzes = 0
       const completedTopics = new Set<string>()
-      const domainCompletion = Array(8).fill(0)
 
       allResults.forEach((result) => {
         const percentage = (result.score / result.totalQuestions) * 100
-        if (percentage >= 80) {
-          completedTopics.add(result.topic)
+        completedTopics.add(result.topic)
+        totalScore += percentage
+        totalQuizzes++
 
-          // Find which domain this topic belongs to
-          for (let domainIdx = 0; domainIdx < 8; domainIdx++) {
-            const topics = topicsByDomain[domainIdx as keyof typeof topicsByDomain] || []
-            if (topics.some(t => t.toLowerCase() === result.topic.toLowerCase())) {
-              domainCompletion[domainIdx]++
-              break
-            }
+        // Find which domain this topic belongs to
+        for (let domainIdx = 0; domainIdx < EPPP_DOMAINS.length; domainIdx++) {
+          const topics = topicsByDomain[domainIdx] || []
+          const matchedTopic = topics.find(t => t.toLowerCase() === result.topic.toLowerCase())
+          if (matchedTopic) {
+            topicScores[domainIdx][matchedTopic] = percentage
+            break
           }
         }
       })
 
-      // Calculate domain progress percentages
-      const domainProgressPercent = domainCompletion.map((completed, idx) => {
-        const totalTopicsInDomain = 5 // Each domain has 5 topics
-        return (completed / totalTopicsInDomain) * 100
+      // Calculate domain progress as average of all topics in domain
+      EPPP_DOMAINS.forEach((_, domainIdx) => {
+        const topicsInDomain = topicsByDomain[domainIdx] || []
+        if (topicsInDomain.length === 0) {
+          domainProgress[domainIdx] = 0
+          return
+        }
+
+        const scores = topicsInDomain.map(t => topicScores[domainIdx][t] || 0)
+        const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length
+        domainProgress[domainIdx] = avgScore
       })
 
       // Calculate overall completion
-      const totalCompletion = Math.round((completedTopics.size / 56) * 100)
-      const completedDomainsCount = domainCompletion.filter(c => c >= 5).length
+      const totalCompletion = totalQuizzes > 0 ? Math.round(totalScore / totalQuizzes) : 0
+      const completedDomainsCount = domainProgress.filter(p => p >= 80).length
+      const totalTopics = Object.values(topicsByDomain).reduce((sum, topics) => sum + topics.length, 0)
 
       setProgressData({
         totalCompletion,
         completedTopics: completedTopics.size,
-        totalTopics: 56,
+        totalTopics,
         completedDomains: completedDomainsCount,
-        totalDomains: 8,
-        domainProgress: domainProgressPercent,
+        totalDomains: EPPP_DOMAINS.length,
+        domainProgress,
       })
     }
 
