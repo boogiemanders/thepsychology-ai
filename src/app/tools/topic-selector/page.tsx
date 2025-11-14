@@ -2,19 +2,21 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, ChevronDown, Clock, Play, X } from 'lucide-react'
+import { ArrowLeft, ChevronDown, Clock, Play, X, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { Progress } from '@/components/ui/progress'
 import { Kbd } from '@/components/ui/kbd'
+import { Badge } from '@/components/ui/badge'
 import { motion, AnimatePresence } from 'motion/react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { useAuth } from '@/context/auth-context'
 import { saveUserInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
+import { getTopPriorities } from '@/lib/priority-storage'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 
 interface RecentActivity {
@@ -44,6 +46,7 @@ export default function TopicSelectorPage() {
   const [savedInterests, setSavedInterests] = useState<string[]>([])
   const [domains, setDomains] = useState<any[]>([])
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
+  const [priorityTopicIds, setPriorityTopicIds] = useState<string[]>([])
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
   const studyStats = calculateStudyStats()
 
@@ -67,12 +70,20 @@ export default function TopicSelectorPage() {
       topicScores[result.topic] = percentage
     })
 
+    // Load priority recommendations
+    const priorities = getTopPriorities('diagnostic')
+    if (priorities && priorities.length > 0) {
+      const allPriorityTopics = priorities.flatMap(domain => domain.recommendedTopicIds)
+      setPriorityTopicIds(allPriorityTopics)
+    }
+
     // Build domains with dynamic progress
     const domainsWithProgress = EPPP_DOMAINS.map((domain) => {
       const topicsWithProgress = domain.topics.map((topic) => {
         // If quiz exists, show actual score; otherwise show 0%
         const score = topicScores[topic.name] ?? 0
         return {
+          id: topic.id,
           name: topic.name,
           progress: Math.round(score),
         }
@@ -358,19 +369,30 @@ export default function TopicSelectorPage() {
                   >
                     <Separator />
                     <CardContent className="pt-4 pb-4 space-y-3">
-                      {domain.topics.map((topic) => (
-                        <Link
-                          key={topic.name}
-                          href={`/tools/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
-                          className="block hover:opacity-75 transition-opacity"
-                        >
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-sm">{topic.name}</span>
-                            <span className="text-xs text-muted-foreground">{topic.progress}%</span>
-                          </div>
-                          <Progress value={topic.progress} className="h-1.5" />
-                        </Link>
-                      ))}
+                      {domain.topics.map((topic) => {
+                        const isPriority = priorityTopicIds.includes(topic.id)
+                        return (
+                          <Link
+                            key={topic.name}
+                            href={`/tools/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
+                            className="block hover:opacity-75 transition-opacity"
+                          >
+                            <div className="flex items-center justify-between mb-1">
+                              <div className="flex items-center gap-2 flex-1">
+                                <span className="text-sm">{topic.name}</span>
+                                {isPriority && (
+                                  <Badge variant="outline" className="text-xs bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-700 flex items-center gap-1">
+                                    <AlertCircle className="w-3 h-3" />
+                                    Priority
+                                  </Badge>
+                                )}
+                              </div>
+                              <span className="text-xs text-muted-foreground flex-shrink-0">{topic.progress}%</span>
+                            </div>
+                            <Progress value={topic.progress} className="h-1.5" />
+                          </Link>
+                        )
+                      })}
                     </CardContent>
                   </motion.div>
                 )}
