@@ -11,6 +11,7 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
   const lottieRef = useRef<LottieRefCurrentProps>(null)
   const [animationData, setAnimationData] = useState<any>(null)
   const [isReversed, setIsReversed] = useState(false)
+  const cycleTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     // Load the animation JSON from public folder
@@ -22,33 +23,39 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
 
   useEffect(() => {
     if (lottieRef.current) {
-      // Set playback speed for 4 breaths per minute (15 seconds per cycle)
-      // Original: 755 frames at 30fps = 25.17 seconds
-      // Target: 15 seconds per cycle
-      // Speed factor: 25.17 / 15 = 1.678, so reverse: 15 / 25.17 = 0.596
-      lottieRef.current.setSpeed(speed)
       // Set direction: 1 = forward, -1 = reverse
       lottieRef.current.setDirection(isReversed ? -1 : 1)
     }
-  }, [speed, animationData, isReversed])
+  }, [isReversed])
 
-  // Play animation and toggle reverse direction every 7.5 seconds
+  // Variable speed animation: normal for 6 seconds, then slow for last 1.5 seconds
   useEffect(() => {
     if (!lottieRef.current || !animationData) return
 
     const lottie = lottieRef.current
+    const normalSpeed = speed
+    const slowSpeed = speed * 0.4 // Slow down to 40% speed for natural hold at end
 
-    // When direction changes, stop and restart animation from beginning
+    // Start playing immediately
     lottie.stop()
     lottie.goToAndPlay(0, true)
+    lottie.setSpeed(normalSpeed)
 
-    // Toggle direction every 7.5 seconds (7500ms)
-    const reverseInterval = setInterval(() => {
+    // After 6 seconds, slow down for the last 1.5 seconds
+    const slowdownTimeout = setTimeout(() => {
+      lottie.setSpeed(slowSpeed)
+    }, 6000)
+
+    // After 7.5 seconds total, toggle direction (this triggers smooth transition)
+    const reverseTimeout = setTimeout(() => {
       setIsReversed((prev) => !prev)
     }, 7500)
 
-    return () => clearInterval(reverseInterval)
-  }, [isReversed, animationData])
+    return () => {
+      clearTimeout(slowdownTimeout)
+      clearTimeout(reverseTimeout)
+    }
+  }, [isReversed, animationData, speed])
 
   if (!animationData) {
     return <div className="w-full h-full" />
