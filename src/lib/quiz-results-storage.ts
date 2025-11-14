@@ -39,6 +39,11 @@ export function saveQuizResults(results: QuizResults): void {
   if (typeof window === 'undefined') return
   const key = getQuizResultsKey(results.topic)
   localStorage.setItem(key, JSON.stringify(results))
+
+  // Dispatch a custom event to notify listeners of quiz results update
+  window.dispatchEvent(new CustomEvent('quiz-results-updated', {
+    detail: { topic: results.topic, results }
+  }))
 }
 
 export function getQuizResults(topic: string): QuizResults | null {

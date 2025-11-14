@@ -82,65 +82,100 @@ export default function DashboardPage() {
   useEffect(() => {
     if (!mounted) return
 
-    const allResults = getAllQuizResults()
+    const updateProgress = () => {
+      const allResults = getAllQuizResults()
 
-    // Topic data with domain mapping
-    const topicsByDomain = {
-      0: ['Neurotransmitters & Receptors', 'Brain Anatomy & Function', 'Nervous System Organization', 'Psychopharmacology', 'Sleep & Circadian Rhythms'],
-      1: ['Classical & Operant Conditioning', 'Observational Learning', 'Memory Systems & Encoding', 'Attention & Consciousness', 'Motivation & Emotion'],
-      2: ['Social Cognition & Attitudes', 'Group Dynamics & Conformity', 'Cultural Psychology', 'Organizational Psychology', 'Diversity & Multicultural Issues'],
-      3: ['Physical Development', 'Cognitive Development', 'Psychosocial Development', 'Moral Development', 'Aging & Late Adulthood'],
-      4: ['Psychological Testing Principles', 'Intelligence Assessment', 'Personality Assessment', 'Clinical Diagnosis & Psychopathology', 'Substance Use Disorders'],
-      5: ['Cognitive-Behavioral Therapies', 'Psychodynamic Therapies', 'Humanistic & Experiential Therapies', 'Group & Family Therapy', 'Evidence-Based Interventions'],
-      6: ['Research Design & Methodology', 'Experimental vs Non-Experimental', 'Descriptive Statistics', 'Inferential Statistics', 'Effect Size & Power'],
-      7: ['Ethical Principles & Guidelines', 'Confidentiality & Privacy', 'Informed Consent', 'Competence & Boundaries', 'Legal Liability & Licensing'],
-    }
+      // Topic data with domain mapping
+      const topicsByDomain = {
+        0: ['Neurotransmitters & Receptors', 'Brain Anatomy & Function', 'Nervous System Organization', 'Psychopharmacology', 'Sleep & Circadian Rhythms'],
+        1: ['Classical & Operant Conditioning', 'Observational Learning', 'Memory Systems & Encoding', 'Attention & Consciousness', 'Motivation & Emotion'],
+        2: ['Social Cognition & Attitudes', 'Group Dynamics & Conformity', 'Cultural Psychology', 'Organizational Psychology', 'Diversity & Multicultural Issues'],
+        3: ['Physical Development', 'Cognitive Development', 'Psychosocial Development', 'Moral Development', 'Aging & Late Adulthood'],
+        4: ['Psychological Testing Principles', 'Intelligence Assessment', 'Personality Assessment', 'Clinical Diagnosis & Psychopathology', 'Substance Use Disorders'],
+        5: ['Cognitive-Behavioral Therapies', 'Psychodynamic Therapies', 'Humanistic & Experiential Therapies', 'Group & Family Therapy', 'Evidence-Based Interventions'],
+        6: ['Research Design & Methodology', 'Experimental vs Non-Experimental', 'Descriptive Statistics', 'Inferential Statistics', 'Effect Size & Power'],
+        7: ['Ethical Principles & Guidelines', 'Confidentiality & Privacy', 'Informed Consent', 'Competence & Boundaries', 'Legal Liability & Licensing'],
+      }
 
-    // Calculate completed topics (80%+ score)
-    const completedTopics = new Set<string>()
-    const domainCompletion = Array(8).fill(0)
+      // Calculate completed topics (80%+ score)
+      const completedTopics = new Set<string>()
+      const domainCompletion = Array(8).fill(0)
 
-    allResults.forEach((result) => {
-      const percentage = (result.score / result.totalQuestions) * 100
-      if (percentage >= 80) {
-        completedTopics.add(result.topic)
+      allResults.forEach((result) => {
+        const percentage = (result.score / result.totalQuestions) * 100
+        if (percentage >= 80) {
+          completedTopics.add(result.topic)
 
-        // Find which domain this topic belongs to
-        for (let domainIdx = 0; domainIdx < 8; domainIdx++) {
-          const topics = topicsByDomain[domainIdx as keyof typeof topicsByDomain] || []
-          if (topics.some(t => t.toLowerCase() === result.topic.toLowerCase())) {
-            domainCompletion[domainIdx]++
-            break
+          // Find which domain this topic belongs to
+          for (let domainIdx = 0; domainIdx < 8; domainIdx++) {
+            const topics = topicsByDomain[domainIdx as keyof typeof topicsByDomain] || []
+            if (topics.some(t => t.toLowerCase() === result.topic.toLowerCase())) {
+              domainCompletion[domainIdx]++
+              break
+            }
           }
         }
-      }
-    })
+      })
 
-    // Calculate domain progress percentages
-    const domainProgressPercent = domainCompletion.map((completed, idx) => {
-      const totalTopicsInDomain = 5 // Each domain has 5 topics
-      return (completed / totalTopicsInDomain) * 100
-    })
+      // Calculate domain progress percentages
+      const domainProgressPercent = domainCompletion.map((completed, idx) => {
+        const totalTopicsInDomain = 5 // Each domain has 5 topics
+        return (completed / totalTopicsInDomain) * 100
+      })
 
-    // Calculate overall completion
-    const totalCompletion = Math.round((completedTopics.size / 56) * 100)
-    const completedDomainsCount = domainCompletion.filter(c => c >= 5).length
+      // Calculate overall completion
+      const totalCompletion = Math.round((completedTopics.size / 56) * 100)
+      const completedDomainsCount = domainCompletion.filter(c => c >= 5).length
 
-    setProgressData({
-      totalCompletion,
-      completedTopics: completedTopics.size,
-      totalTopics: 56,
-      completedDomains: completedDomainsCount,
-      totalDomains: 8,
-      domainProgress: domainProgressPercent,
-    })
+      setProgressData({
+        totalCompletion,
+        completedTopics: completedTopics.size,
+        totalTopics: 56,
+        completedDomains: completedDomainsCount,
+        totalDomains: 8,
+        domainProgress: domainProgressPercent,
+      })
+    }
+
+    // Initial update
+    updateProgress()
+
+    // Listen for storage changes (quiz results updates from other tabs)
+    const handleStorageChange = () => {
+      updateProgress()
+    }
+
+    // Listen for custom quiz results update event
+    const handleQuizResultsUpdate = () => {
+      updateProgress()
+    }
+
+    window.addEventListener('storage', handleStorageChange)
+    window.addEventListener('quiz-results-updated', handleQuizResultsUpdate)
+    return () => {
+      window.removeEventListener('storage', handleStorageChange)
+      window.removeEventListener('quiz-results-updated', handleQuizResultsUpdate)
+    }
   }, [mounted])
 
   // Update study stats and today's quiz count
   useEffect(() => {
     if (!mounted) return
-    setStudyStats(calculateStudyStats())
-    setTodayQuizCount(getTodayQuizCount())
+
+    const updateStats = () => {
+      setStudyStats(calculateStudyStats())
+      setTodayQuizCount(getTodayQuizCount())
+    }
+
+    updateStats()
+
+    // Listen for storage changes and quiz results updates
+    window.addEventListener('storage', updateStats)
+    window.addEventListener('quiz-results-updated', updateStats)
+    return () => {
+      window.removeEventListener('storage', updateStats)
+      window.removeEventListener('quiz-results-updated', updateStats)
+    }
   }, [mounted])
 
   // Calculate days remaining to exam
