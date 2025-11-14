@@ -146,7 +146,7 @@ export default function ExamGeneratorPage() {
             ...priorityData,
           }
 
-          const targetPage = examType === 'diagnostic' ? '/tools/prioritizer' : '/tools/study-optimizer'
+          const targetPage = examType === 'diagnostic' ? '/prioritizer' : '/study-optimizer'
           window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
           return 0
         }
@@ -256,12 +256,6 @@ export default function ExamGeneratorPage() {
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="/dashboard">Dashboard</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/tools">Tools</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -387,8 +381,10 @@ export default function ExamGeneratorPage() {
               {/* Step 2: Mode Selection (Study vs Test) */}
               {!isGenerating && examType && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -20, scaleY: 0 }}
+                    animate={{ opacity: 1, y: 0, scaleY: 1 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    style={{ originY: 0 }}
                     className="max-w-2xl mx-auto"
                   >
                     <p className="text-sm font-semibold text-muted-foreground mb-4">Step 2: Select Mode</p>
@@ -563,13 +559,7 @@ export default function ExamGeneratorPage() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link href="/tools">Tools</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>{examType === 'diagnostic' ? 'Diagnostic Exam' : 'Practice Exam'}</BreadcrumbPage>
+              <BreadcrumbPage>Exam Generator</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -797,7 +787,7 @@ export default function ExamGeneratorPage() {
                       ...priorityData,
                     }
 
-                    const targetPage = examType === 'diagnostic' ? '/tools/prioritizer' : '/tools/study-optimizer'
+                    const targetPage = examType === 'diagnostic' ? '/prioritizer' : '/study-optimizer'
                     window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
                   }}
                   className="w-full"

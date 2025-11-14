@@ -14,9 +14,9 @@ const navs: NavItem[] = siteConfig.nav.links;
 
 const loggedInNavs: NavItem[] = [
   { name: "Dashboard", href: "/dashboard" },
-  { name: "Practice", href: "/tools/exam-generator" },
-  { name: "Prioritize", href: "/tools/prioritizer" },
-  { name: "Study", href: "/tools/topic-selector" },
+  { name: "Practice", href: "/exam-generator" },
+  { name: "Prioritize", href: "/prioritizer" },
+  { name: "Study", href: "/topic-selector" },
 ];
 
 export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {

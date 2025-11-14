@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle } from 'lucide-react'
+import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
@@ -100,13 +101,17 @@ export function StudyOptimizerContent() {
     return (
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
-          <Link
-            href="/dashboard"
-            className="flex items-center gap-2 text-primary hover:underline mb-8"
-          >
-            <ArrowLeft size={18} />
-            Back to Dashboard
-          </Link>
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Prioritizer</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -210,10 +215,10 @@ export function StudyOptimizerContent() {
                   </CardHeader>
                   <CardContent>
                     <div className="flex gap-4 justify-center">
-                      <Link href="/tools/exam-generator">
+                      <Link href="/exam-generator">
                         <Button size="lg">Take Practice Exam</Button>
                       </Link>
-                      <Link href="/tools/topic-selector">
+                      <Link href="/topic-selector">
                         <Button size="lg" variant="outline">Study Topics</Button>
                       </Link>
                     </div>
@@ -232,13 +237,17 @@ export function StudyOptimizerContent() {
   return (
     <main className="min-h-screen p-6 bg-background">
       <div className="max-w-4xl mx-auto">
-        <Link
-          href="/dashboard"
-          className="flex items-center gap-2 text-primary hover:underline mb-8"
-        >
-          <ArrowLeft size={18} />
-          Back to Dashboard
-        </Link>
+        <Breadcrumb className="mb-8">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Prioritizer</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -420,7 +429,7 @@ export function StudyOptimizerContent() {
                 >
                   Take Another Exam
                 </Button>
-                <Link href="/tools/topic-selector">
+                <Link href="/topic-selector">
                   <Button>
                     Start Studying
                   </Button>

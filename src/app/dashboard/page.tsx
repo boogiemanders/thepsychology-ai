@@ -310,7 +310,7 @@ export default function DashboardPage() {
       Icon: GraduationCap,
       name: "Practice",
       description: "Take practice exams to test your knowledge",
-      href: "/tools/exam-generator",
+      href: "/exam-generator",
       cta: "Start Exam",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3",
       background: (
@@ -341,7 +341,7 @@ export default function DashboardPage() {
       description: studyStats.weakTopics.length > 0 && studyStats.totalQuizzes > 0
         ? `Focus on: ${studyStats.weakTopics[0].topic.substring(0, 30)}...`
         : "AI-powered study recommendations",
-      href: "/tools/study-optimizer",
+      href: "/study-optimizer",
       cta: "View Insights",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5",
       background: studyStats.weakTopics.length > 0 && studyStats.totalQuizzes > 0 ? (
@@ -381,7 +381,7 @@ export default function DashboardPage() {
       Icon: FileTextIcon,
       name: "Study",
       description: `${studyStats.totalQuizzes} quizzes • ${progressData.completedTopics}/${progressData.totalTopics} topics`,
-      href: "/tools/topic-selector",
+      href: "/topic-selector",
       cta: "Start Studying",
       className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
       background: (
@@ -443,7 +443,7 @@ export default function DashboardPage() {
       Icon: Flame,
       name: "Study Streak",
       description: "",
-      href: "/tools/topic-selector",
+      href: "/topic-selector",
       cta: "Keep it going",
       className: "lg:col-start-5 lg:col-end-6 lg:row-start-3 lg:row-end-5",
       background: (

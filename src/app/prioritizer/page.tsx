@@ -88,7 +88,7 @@ export default function PrioritizerPage() {
             <p className="text-muted-foreground mb-6">
               Complete a diagnostic or practice exam to get personalized recommendations.
             </p>
-            <Link href="/tools/exam-generator">
+            <Link href="/exam-generator">
               <Button size="lg">Start an Exam</Button>
             </Link>
           </motion.div>
@@ -211,7 +211,7 @@ export default function PrioritizerPage() {
                                 return (
                                   <Link
                                     key={topicId}
-                                    href={`/tools/topic-teacher?topicId=${topicId}&fromPrioritizer=true`}
+                                    href={`/topic-teacher?topicId=${topicId}&fromPrioritizer=true`}
                                   >
                                     <motion.div
                                       whileHover={{ scale: 1.02 }}
@@ -271,12 +271,12 @@ export default function PrioritizerPage() {
 
           {/* Bottom Actions */}
           <div className="flex gap-3 justify-center pt-8">
-            <Link href="/tools/topic-selector">
+            <Link href="/topic-selector">
               <Button size="lg" variant="outline">
                 Browse All Topics
               </Button>
             </Link>
-            <Link href="/tools/exam-generator">
+            <Link href="/exam-generator">
               <Button size="lg">
                 Start Another Exam
               </Button>

@@ -321,7 +321,7 @@ export function QuizzerContent() {
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
           <Link
-            href="/tools/topic-selector"
+            href="/topic-selector"
             className="flex items-center gap-2 text-primary hover:underline mb-8"
           >
             <ArrowLeft size={18} />
@@ -332,7 +332,7 @@ export function QuizzerContent() {
             <p className="text-muted-foreground mb-6">
               Please select a topic first
             </p>
-            <Link href="/tools/topic-selector">
+            <Link href="/topic-selector">
               <Button>Go to Topics</Button>
             </Link>
           </div>
@@ -351,7 +351,7 @@ export function QuizzerContent() {
 
       <div className="max-w-2xl mx-auto">
         <Link
-          href="/tools/topic-selector"
+          href="/topic-selector"
           className="flex items-center gap-2 text-primary hover:underline mb-8"
         >
           <ArrowLeft size={18} />
@@ -441,19 +441,19 @@ export function QuizzerContent() {
                   Retake Quiz
                 </Button>
                 <Link
-                  href={`/tools/topic-teacher?topic=${encodeURIComponent(topic || '')}&hasQuizResults=true`}
+                  href={`/topic-teacher?topic=${encodeURIComponent(topic || '')}&hasQuizResults=true`}
                   className="block"
                 >
                   <Button variant="minimal" className="w-full">
                     Relearn the Materials
                   </Button>
                 </Link>
-                <Link href="/tools/topic-selector" className="block">
+                <Link href="/topic-selector" className="block">
                   <Button variant="minimal" className="w-full">
                     Select Another Topic
                   </Button>
                 </Link>
-                <Link href="/tools/topic-selector" className="block">
+                <Link href="/topic-selector" className="block">
                   <Button className="w-full">Back to Topics</Button>
                 </Link>
               </div>

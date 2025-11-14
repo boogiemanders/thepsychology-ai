@@ -2,13 +2,14 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Send, X } from 'lucide-react'
+import { Send, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { TypographyH1, TypographyH2, TypographyH3, TypographyMuted } from '@/components/ui/typography'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Kbd } from '@/components/ui/kbd'
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
@@ -378,19 +379,27 @@ export function TopicTeacherContent() {
     return (
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
-          <Link
-            href="/tools/topic-selector"
-            className="flex items-center gap-2 text-primary hover:underline mb-8"
-          >
-            <ArrowLeft size={18} />
-            Back to Topics
-          </Link>
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/topic-selector">Topics</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Topic Teacher</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <div className="text-center py-20">
             <h1 className="text-2xl font-bold mb-4">No topic selected</h1>
             <p className="text-muted-foreground mb-6">
               Please select a topic from Topics
             </p>
-            <Link href="/tools/topic-selector">
+            <Link href="/topic-selector">
               <Button>Go to Topics</Button>
             </Link>
           </div>
@@ -402,13 +411,21 @@ export function TopicTeacherContent() {
   return (
     <main className="min-h-screen flex flex-col bg-background">
       <div className="flex-1 flex flex-col w-full mx-auto p-6 max-w-4xl">
-        <Link
-          href="/tools/topic-selector"
-          className="flex items-center gap-2 text-primary hover:underline mb-6"
-        >
-          <ArrowLeft size={18} />
-          Back to Topics
-        </Link>
+        <Breadcrumb className="mb-6">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/topic-selector">Topics</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{decodeURIComponent(topic)}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
         <div className="mb-6">
           <TypographyH1>{decodeURIComponent(topic)}</TypographyH1>
@@ -743,7 +760,7 @@ export function TopicTeacherContent() {
 
         {initialized && messages.length > 0 && (
           <div className="mt-6 pt-4 border-t border-border -mx-6 px-6 pl-12 pr-32">
-            <Link href={`/tools/quizzer?topic=${encodeURIComponent(decodeURIComponent(topic))}`}>
+            <Link href={`/quizzer?topic=${encodeURIComponent(decodeURIComponent(topic))}`}>
               <Button variant="minimal" className="w-full">
                 Take Quiz on This Topic →
               </Button>

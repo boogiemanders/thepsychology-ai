@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, ChevronDown, Clock, Play, X, AlertCircle } from 'lucide-react'
+import { ChevronDown, Clock, Play, X, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -10,6 +10,7 @@ import { Separator } from '@/components/ui/separator'
 import { Progress } from '@/components/ui/progress'
 import { Kbd } from '@/components/ui/kbd'
 import { Badge } from '@/components/ui/badge'
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { motion, AnimatePresence } from 'motion/react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
@@ -186,13 +187,17 @@ export default function TopicSelectorPage() {
     <main className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="p-6 border-b">
-          <Link
-            href="/dashboard"
-            className="flex items-center gap-2 text-sm hover:underline mb-6"
-          >
-            <ArrowLeft size={16} />
-            Back to Dashboard
-          </Link>
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Topics</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
           <div className="space-y-4">
             <div>
@@ -272,7 +277,7 @@ export default function TopicSelectorPage() {
                     </CardDescription>
                   </div>
                   {studyStats.lastStudiedTopic && (
-                    <Link href={`/tools/quizzer?topic=${encodeURIComponent(studyStats.lastStudiedTopic)}`}>
+                    <Link href={`/quizzer?topic=${encodeURIComponent(studyStats.lastStudiedTopic)}`}>
                       <Button size="sm" className="gap-2">
                         <Play size={16} />
                         Continue
@@ -296,7 +301,7 @@ export default function TopicSelectorPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.05 }}
                       >
-                        <Link href={`/tools/quizzer?topic=${encodeURIComponent(activity.topic)}`}>
+                        <Link href={`/quizzer?topic=${encodeURIComponent(activity.topic)}`}>
                           <div className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary hover:bg-accent transition-colors cursor-pointer group">
                             <div className="flex-1">
                               <p className="font-medium text-sm group-hover:text-primary transition-colors">
@@ -374,7 +379,7 @@ export default function TopicSelectorPage() {
                         return (
                           <Link
                             key={topic.name}
-                            href={`/tools/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
+                            href={`/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
                             className="block hover:opacity-75 transition-opacity"
                           >
                             <div className="flex items-center justify-between mb-1">
