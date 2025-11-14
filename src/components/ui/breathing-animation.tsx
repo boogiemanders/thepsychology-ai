@@ -34,11 +34,13 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
 
   // Play animation and toggle reverse direction every 7.5 seconds
   useEffect(() => {
-    if (!lottieRef.current) return
+    if (!lottieRef.current || !animationData) return
 
     const lottie = lottieRef.current
-    // Play the animation
-    lottie.play()
+
+    // When direction changes, stop and restart animation from beginning
+    lottie.stop()
+    lottie.goToAndPlay(0, true)
 
     // Toggle direction every 7.5 seconds (7500ms)
     const reverseInterval = setInterval(() => {
@@ -46,7 +48,7 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
     }, 7500)
 
     return () => clearInterval(reverseInterval)
-  }, [lottieRef])
+  }, [isReversed, animationData])
 
   if (!animationData) {
     return <div className="w-full h-full" />
