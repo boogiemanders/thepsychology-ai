@@ -39,21 +39,16 @@ const BreadcrumbLink = React.forwardRef<
     asChild?: boolean
   }
 >(({ className, asChild, ...props }, ref) => {
-  const Comp = asChild ? React.Fragment : "a"
+  if (asChild) {
+    return props.children
+  }
 
   return (
-    <Comp
-      ref={!asChild ? (ref as React.Ref<HTMLAnchorElement>) : undefined}
+    <a
+      ref={ref}
       className={`transition-colors hover:text-foreground ${className || ""}`}
-      {...(!asChild && props)}
-      {...(asChild && { children: props.children })}
-    >
-      {asChild ? (
-        props.children
-      ) : (
-        <a ref={ref} className={`transition-colors hover:text-foreground ${className || ""}`} {...props} />
-      )}
-    </Comp>
+      {...props}
+    />
   )
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"

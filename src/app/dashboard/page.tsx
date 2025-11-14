@@ -337,19 +337,19 @@ export default function DashboardPage() {
     },
     {
       Icon: FileTextIcon,
-      name: "Prioritizer",
-      description: studyStats.weakTopics.length > 0 && studyStats.totalQuizzes > 0
-        ? `Focus on: ${studyStats.weakTopics[0].topic.substring(0, 30)}...`
+      name: "Prioritize",
+      description: priorityDomains.length > 0
+        ? `Top priority: ${priorityDomains[0].domainName.split(':')[0]}`
         : "AI-powered study recommendations",
-      href: "/study-optimizer",
+      href: "/prioritize",
       cta: "View Insights",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5",
-      background: studyStats.weakTopics.length > 0 && studyStats.totalQuizzes > 0 ? (
+      background: priorityDomains.length > 0 ? (
         <Marquee className="absolute inset-0 opacity-20" repeat={2}>
           <div className="flex gap-6 whitespace-nowrap px-4">
-            {studyStats.weakTopics.slice(0, 3).map((topic, idx) => (
+            {priorityDomains.slice(0, 3).map((domain, idx) => (
               <div key={idx} className="flex items-center gap-2">
-                <span className="text-sm">{topic.topic}</span>
+                <span className="text-sm font-medium">#{idx + 1}: {domain.domainName.split(':')[0]}</span>
                 {idx < 2 && <span>•</span>}
               </div>
             ))}
@@ -358,8 +358,8 @@ export default function DashboardPage() {
       ) : (
         <div className="absolute inset-0 flex items-center justify-center opacity-20">
           <div className="text-center text-xs text-foreground/60 px-4">
-            <p>Recommendations will appear</p>
-            <p>after first practice exam</p>
+            <p>Take a diagnostic exam</p>
+            <p>to see recommendations</p>
           </div>
         </div>
       ),

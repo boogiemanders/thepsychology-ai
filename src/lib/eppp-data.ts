@@ -12,7 +12,7 @@ export interface EPPPDomain {
 export const EPPP_DOMAINS: EPPPDomain[] = [
   {
     id: '1',
-    name: 'Domain 1: Biological Bases',
+    name: '1: Biological Bases',
     description: 'Physiological Psychology and Psychopharmacology',
     topics: [
       { name: 'Brain Regions/Functions – Cerebral Cortex' },
@@ -28,7 +28,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '2',
-    name: 'Domain 2: Cognitive-Affective Bases',
+    name: '2: Cognitive-Affective Bases',
     description: 'Learning and Memory',
     topics: [
       { name: 'Classical Conditioning' },
@@ -40,7 +40,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '3-social',
-    name: 'Domain 3: Social Psychology',
+    name: '3: Social Psychology',
     description: 'Social Behavior and Cognition',
     topics: [
       { name: 'Affiliation, Attraction, and Intimacy' },
@@ -55,7 +55,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '3-cultural',
-    name: 'Domain 3: Cultural Psychology',
+    name: '3: Cultural Psychology',
     description: 'Cross-Cultural Issues',
     topics: [
       { name: 'Cross-Cultural Issues – Identity Development Models' },
@@ -64,7 +64,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '4',
-    name: 'Domain 4: Growth & Lifespan Development',
+    name: '4: Growth & Lifespan Development',
     description: 'Human Development Across the Lifespan',
     topics: [
       { name: 'Cognitive Development' },
@@ -80,7 +80,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '5-assessment',
-    name: 'Domain 5: Assessment',
+    name: '5: Assessment',
     description: 'Psychological Testing and Measurement',
     topics: [
       { name: 'Clinical Tests' },
@@ -93,7 +93,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '5-diagnosis',
-    name: 'Domain 5: Diagnosis & Psychopathology',
+    name: '5: Diagnosis & Psychopathology',
     description: 'Clinical Diagnosis and Mental Disorders',
     topics: [
       { name: 'Anxiety Disorders and Obsessive-Compulsive Disorder' },
@@ -111,7 +111,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '5-test',
-    name: 'Domain 5: Test Construction',
+    name: '5: Test Construction',
     description: 'Test Development and Psychometrics',
     topics: [
       { name: 'Item Analysis and Test Reliability' },
@@ -122,7 +122,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '6',
-    name: 'Domain 6: Treatment & Intervention',
+    name: '6: Treatment & Intervention',
     description: 'Clinical Psychology',
     topics: [
       { name: 'Cognitive-Behavioral Therapies' },
@@ -133,7 +133,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '7',
-    name: 'Domain 7: Research Methods & Statistics',
+    name: '7: Research Methods & Statistics',
     description: 'Research Design and Data Analysis',
     topics: [
       { name: 'Correlation and Regression' },
@@ -146,7 +146,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '8',
-    name: 'Domain 8: Ethical, Legal & Professional Issues',
+    name: '8: Ethical, Legal & Professional Issues',
     description: 'Professional Conduct and Regulation',
     topics: [
       { name: 'APA Ethics Code Over and Standards 1 & 2' },
@@ -159,7 +159,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '3-5-6',
-    name: 'Domain 3, 5, 6: Organizational Psychology',
+    name: '3, 5, 6: Organizational Psychology',
     description: 'Integrated Organizational & Workplace Topics',
     topics: [
       { name: 'Career Choice and Development' },
