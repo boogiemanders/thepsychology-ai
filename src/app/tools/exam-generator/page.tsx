@@ -252,19 +252,24 @@ export default function ExamGeneratorPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            {!isGenerating && !examType && (
-              <div className="text-center py-12">
-                <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                  EPPP Exam
-                </h1>
-                <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                  Choose an exam type to get started.
-                </p>
+            <div className="text-center py-12">
+              {!examType && (
+                <>
+                  <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                    EPPP Exam
+                  </h1>
+                  <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    Choose an exam type to get started.
+                  </p>
+                </>
+              )}
 
-                {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
-                <div className="max-w-2xl mx-auto mb-8">
-                  <p className="text-sm font-semibold text-muted-foreground mb-4">Step 1: Select Exam Type</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {!isGenerating && !examType && (
+                <div>
+                  {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
+                  <div className="max-w-2xl mx-auto mb-8">
+                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 1: Select Exam Type</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Diagnostic Card */}
                     <motion.div
                       whileHover={{ scale: 1.02 }}
@@ -350,11 +355,13 @@ export default function ExamGeneratorPage() {
                         </CardContent>
                       </Card>
                     </motion.div>
+                    </div>
                   </div>
                 </div>
+              )}
 
-                {/* Step 2: Mode Selection (Study vs Test) */}
-                {examType && (
+              {/* Step 2: Mode Selection (Study vs Test) */}
+              {!isGenerating && examType && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -461,9 +468,8 @@ export default function ExamGeneratorPage() {
                       Back to Exam Selection
                     </Button>
                   </motion.div>
-                )}
-              </div>
-            )}
+              )}
+            </div>
 
             {isGenerating && (
               <div className="flex flex-col items-center justify-center py-20 gap-4">

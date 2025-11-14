@@ -178,14 +178,24 @@ export default function DashboardPage() {
       setTodayQuizCount(getTodayQuizCount())
     }
 
-    updateStats()
+    const updatePriorities = () => {
+      const priorities = getTopPriorities('diagnostic')
+      setPriorityDomains(priorities || [])
+    }
 
-    // Listen for storage changes and quiz results updates
+    updateStats()
+    updatePriorities()
+
+    // Listen for storage changes and quiz/priority results updates
     window.addEventListener('storage', updateStats)
     window.addEventListener('quiz-results-updated', updateStats)
+    window.addEventListener('quiz-results-updated', updatePriorities)
+    window.addEventListener('priority-recommendations-updated', updatePriorities)
     return () => {
       window.removeEventListener('storage', updateStats)
       window.removeEventListener('quiz-results-updated', updateStats)
+      window.removeEventListener('quiz-results-updated', updatePriorities)
+      window.removeEventListener('priority-recommendations-updated', updatePriorities)
     }
   }, [mounted])
 

@@ -32,14 +32,38 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
     }
   }, [speed, animationData, isReversed])
 
-  // Toggle reverse direction every 7.5 seconds
+  // Play animation and toggle reverse direction at the end
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsReversed((prev) => !prev)
-    }, 7500)
+    if (!lottieRef.current) return
 
-    return () => clearInterval(interval)
-  }, [])
+    const handleComplete = () => {
+      // Animation completed, toggle direction for next cycle
+      setIsReversed((prev) => !prev)
+    }
+
+    // Get the Lottie instance and add completion listener
+    const lottie = lottieRef.current
+    // Play the animation
+    lottie.play()
+
+    // Listen for animation completion
+    const animationFrameId = setInterval(() => {
+      if (lottie && lottie.currentFrame !== undefined) {
+        // Check if we're at the end or beginning of the animation
+        const totalFrames = lottie.getDuration(true) // Get total frames
+        const currentFrame = lottie.currentFrame
+
+        // If we're at the end of the animation (forward), reverse it
+        if (isReversed && currentFrame <= 0) {
+          setIsReversed(false)
+        } else if (!isReversed && currentFrame >= totalFrames - 1) {
+          setIsReversed(true)
+        }
+      }
+    }, 100)
+
+    return () => clearInterval(animationFrameId)
+  }, [lottieRef, isReversed])
 
   if (!animationData) {
     return <div className="w-full h-full" />
@@ -50,8 +74,6 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
       <Lottie
         lottieRef={lottieRef}
         animationData={animationData}
-        loop
-        autoplay
         style={{ width: '100%', height: '100%' }}
       />
     </div>
