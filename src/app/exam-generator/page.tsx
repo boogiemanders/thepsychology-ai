@@ -56,6 +56,7 @@ export default function ExamGeneratorPage() {
   const [userId, setUserId] = useState<string | null>(null)
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
   const [textFormats, setTextFormats] = useState<Record<number, Record<string, string>>>({})
+  const [assignmentId, setAssignmentId] = useState<string | null>(null)
 
   // Apply highlight to selected text (question and answer choices)
   const handleHighlightText = () => {
@@ -313,34 +314,36 @@ export default function ExamGeneratorPage() {
       setTimeRemaining(0)
       setExamType(chosenExamType)
       setMode(chosenMode)
+      setAssignmentId(null)
 
       let examData = null
 
-      // Try to fetch pre-generated exam if user is authenticated
+      // Try to fetch Git-backed exam if user is authenticated
       if (userId) {
         setIsLoadingPreGen(true)
         try {
-          const preGenResponse = await fetch(`/api/get-pre-generated-exam?userId=${userId}&examType=${chosenExamType}`)
-          const preGenData = await preGenResponse.json()
+          const assignResponse = await fetch('/api/assign-exam', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, examType: chosenExamType }),
+          })
+          const assignData = await assignResponse.json()
 
-          if (preGenData.preGenerated && preGenData.questions) {
-            console.log('[Exam Gen] Using pre-generated exam')
-            examData = preGenData.questions
+          if (assignData.success && assignData.questions) {
+            console.log('[Exam Gen] Using Git-backed exam:', assignData.examFile)
+            examData = assignData.questions
+            setAssignmentId(assignData.assignmentId)
             setIsLoadingPreGen(false)
-
-            // Trigger background pre-generation of next exam type
-            const nextExamType = chosenExamType === 'diagnostic' ? 'practice' : 'diagnostic'
-            triggerBackgroundPreGeneration(userId, nextExamType).catch((err) => {
-              console.log('[Exam Gen] Background pre-gen failed (non-critical):', err)
-            })
+          } else if (assignData.fallbackRequired) {
+            console.log('[Exam Gen] No Git-backed exams available, falling back to on-demand generation')
           }
-        } catch (preGenError) {
-          console.log('[Exam Gen] Pre-gen fetch failed, falling back to on-demand:', preGenError)
+        } catch (gitExamError) {
+          console.log('[Exam Gen] Git-backed exam fetch failed, falling back to on-demand:', gitExamError)
         }
         setIsLoadingPreGen(false)
       }
 
-      // Fall back to on-demand generation if no pre-gen available
+      // Fall back to on-demand generation if no Git-backed exam available
       if (!examData) {
         console.log('[Exam Gen] Generating exam on-demand')
         let jsonContent = ''
