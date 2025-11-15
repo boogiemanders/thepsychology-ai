@@ -15,7 +15,9 @@ const supabase = createClient(
 // Use same prompts as exam-generator
 const DIAGNOSTIC_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
-Your task is to generate a 71-question diagnostic exam based on the 71 ASPPB Knowledge Statements.
+Your task is to generate a COMPLETE 71-question diagnostic exam based on the 71 ASPPB Knowledge Statements.
+
+CRITICAL: You MUST generate ALL 71 questions. Do not stop early. Include every single question.
 
 The exam should include:
 - 71 questions total (1 per Knowledge Statement, KN1-KN71)
@@ -56,13 +58,19 @@ Generate the exam in JSON format with this structure:
   ]
 }
 
-IMPORTANT: The "correct_answer" field must contain the actual option text (not A, B, C, or D), and the options array must contain the option text, not letters. This allows proper randomization.
+IMPORTANT:
+- The "correct_answer" field must contain the actual option text (not A, B, C, or D)
+- The options array must contain the option text, not letters
+- YOU MUST INCLUDE ALL 71 QUESTIONS - do not stop at 8 or any partial count
+- Verify before responding that you have generated exactly 71 questions
 
-Start generating the exam now. Format each question clearly. Generate exactly 71 questions as specified above. Remember to randomize answer positions!`
+Start generating the exam now. Generate EXACTLY 71 questions as specified above. Remember: ALL 71 QUESTIONS REQUIRED. Randomize answer positions!`
 
 const PRACTICE_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
-Your task is to generate a comprehensive 225-question practice exam following official ASPPB specifications.
+Your task is to generate a COMPLETE 225-question practice exam following official ASPPB specifications.
+
+CRITICAL: You MUST generate ALL 225 questions. Do not stop early. Include every single question.
 
 The exam should include:
 - 225 questions total
@@ -70,7 +78,6 @@ The exam should include:
 - 180 scored questions (80%) - standard and medium difficulty questions that count toward score
 - 45 unscored experimental questions (20%) - harder questions for research/development that DO NOT count toward score
 - Multiple choice format with 4 options each
-- Answer key with brief explanations
 - Questions distributed across all 8 EPPP domains
 
 CRITICAL RANDOMIZATION REQUIREMENT:
@@ -99,9 +106,14 @@ Generate the exam in JSON format with this structure:
   ]
 }
 
-IMPORTANT: The "correct_answer" field must contain the actual option text (not A, B, C, or D), and the options array must contain the option text, not letters. This allows proper randomization.
+IMPORTANT:
+- The "correct_answer" field must contain the actual option text (not A, B, C, or D)
+- The options array must contain the option text, not letters
+- YOU MUST INCLUDE ALL 225 QUESTIONS - exactly 180 scored and 45 unscored
+- Do not stop at 8 or any partial count
+- Verify before responding that you have generated exactly 225 questions (180 + 45)
 
-Start generating the exam now. Format each question clearly. Remember: exactly 180 questions with "isScored": true, and 45 questions with "isScored": false. Most importantly, randomize answer positions throughout the exam!`
+Start generating the exam now. Generate EXACTLY 225 questions (180 scored + 45 unscored) as specified above. Remember: ALL 225 QUESTIONS REQUIRED. Randomize answer positions!`
 
 export async function POST(request: NextRequest) {
   try {
@@ -159,8 +171,8 @@ export async function POST(request: NextRequest) {
     console.log(`[Pre-Gen] Calling Claude API for ${examType} exam generation...`)
 
     const stream = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 16000,
+      model: 'claude-opus-4-1-20250805',
+      max_tokens: 128000,
       stream: true,
       messages: [
         {
