@@ -145,20 +145,23 @@ export async function POST(request: NextRequest) {
 
 /**
  * Get list of available exam files for a type
- * TODO: This should be updated to dynamically list files from GitHub or filesystem
+ * Now using standardized naming convention (001-004)
+ * Matches the exam generation system and allows for quick rotation
  */
 function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[] {
   if (examType === 'diagnostic') {
     return [
-      'diagnostic-2025-01-14.md',
-      'diagnostic-2025-01-13.md',
-      'diagnostic-2025-01-12.md',
+      'diagnostic-exam-001.md',
+      'diagnostic-exam-002.md',
+      'diagnostic-exam-003.md',
+      'diagnostic-exam-004.md',
     ]
   } else {
     return [
       'practice-exam-001.md',
       'practice-exam-002.md',
       'practice-exam-003.md',
+      'practice-exam-004.md',
     ]
   }
 }

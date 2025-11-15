@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { parseExamFile, getGitHubRawUrl } from '@/lib/exam-file-manager'
+import { parseExamFile } from '@/lib/exam-file-manager'
+import { readFileSync } from 'fs'
+import { join } from 'path'
 
 /**
- * Fetch exam file from GitHub
+ * Fetch exam file from local filesystem (fast, instant access)
+ * Previously fetched from GitHub which added network latency (200-500ms)
  * GET /api/fetch-exam-from-github?examFile=diagnostic-2025-01-14.md&examType=diagnostic
  */
 export async function GET(request: NextRequest) {
@@ -26,29 +29,33 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    // Construct GitHub raw content URL
-    const repoOwner = process.env.NEXT_PUBLIC_GITHUB_REPO_OWNER || 'boogiemanders'
-    const repoName = process.env.NEXT_PUBLIC_GITHUB_REPO_NAME || 'thepsychology-ai'
-    const filePath = `exams/${examType}/${examFile}`
-    const githubUrl = getGitHubRawUrl(repoOwner, repoName, filePath)
-
-    // Fetch from GitHub
-    const response = await fetch(githubUrl)
-
-    if (!response.ok) {
-      if (response.status === 404) {
-        return NextResponse.json(
-          { error: 'Exam file not found', fileExists: false },
-          { status: 404 }
-        )
-      }
-      throw new Error(`GitHub API error: ${response.status}`)
+    // Validate exam file name (prevent directory traversal)
+    if (examFile.includes('..') || examFile.includes('/')) {
+      return NextResponse.json(
+        { error: 'Invalid exam file name' },
+        { status: 400 }
+      )
     }
 
-    const content = await response.text()
+    // Read from local filesystem (instant access, no network latency)
+    const examsDir = join(process.cwd(), 'exams', examType)
+    const filePath = join(examsDir, examFile)
+
+    let content: string
+    try {
+      content = readFileSync(filePath, 'utf-8')
+    } catch (fsError) {
+      console.warn(`Exam file not found locally: ${filePath}`)
+      return NextResponse.json(
+        { error: 'Exam file not found', fileExists: false },
+        { status: 404 }
+      )
+    }
 
     // Parse exam file
     const examData = parseExamFile(content)
+
+    console.log(`[Exam Load] Loaded ${examType} exam from local filesystem: ${examFile} (${examData.questions.length} questions)`)
 
     return NextResponse.json({
       success: true,
@@ -56,7 +63,7 @@ export async function GET(request: NextRequest) {
       ...examData,
     })
   } catch (error) {
-    console.error('Error fetching exam from GitHub:', error)
+    console.error('Error fetching exam from filesystem:', error)
     return NextResponse.json(
       {
         error: 'Failed to fetch exam file',
