@@ -124,6 +124,44 @@ export default function ExamGeneratorPage() {
     window.getSelection()?.removeAllRanges()
   }
 
+  // Detect if user is on Mac
+  const isMac = typeof navigator !== 'undefined' && navigator.platform.toUpperCase().indexOf('MAC') >= 0
+
+  // Keyboard shortcuts for exam navigation
+  useEffect(() => {
+    if (!isExamStarted) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const modifier = isMac ? e.metaKey : e.altKey
+
+      if (!modifier) return
+
+      switch (e.key.toLowerCase()) {
+        case 'p':
+          e.preventDefault()
+          if (currentQuestion > 0) handlePrevious()
+          break
+        case 'n':
+          e.preventDefault()
+          if (currentQuestion < questions.length - 1) handleNext()
+          break
+        case 'h':
+          e.preventDefault()
+          handleHighlightText()
+          break
+        case 's':
+          e.preventDefault()
+          handleStrikethroughText()
+          break
+        default:
+          break
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isExamStarted, currentQuestion, questions.length, handleHighlightText, handleStrikethroughText])
+
   // Initialize recommended defaults from exam history
   useEffect(() => {
     const defaults = getRecommendedDefaults()
@@ -686,6 +724,11 @@ export default function ExamGeneratorPage() {
           transition={{ duration: 0.3 }}
           className="space-y-6"
         >
+          {/* Keyboard Shortcuts Help */}
+          <div className="text-xs text-muted-foreground text-center mb-4 px-4 py-2 bg-muted rounded">
+            💡 Keyboard shortcuts: <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + P</kbd> Previous • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + N</kbd> Next • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + H</kbd> Highlight • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + S</kbd> Strikethrough
+          </div>
+
           {/* Header with Question Number, Progress, and Timer */}
           <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
             <div className="flex justify-between items-start mb-4">
