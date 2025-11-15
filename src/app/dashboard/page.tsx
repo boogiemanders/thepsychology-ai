@@ -383,7 +383,7 @@ export default function DashboardPage() {
     {
       Icon: Droplets,
       name: "Recover",
-      description: "Improve focus and reduce burnout while studying",
+      description: "Improve focus and reduce burnout",
       href: "#",
       cta: "Coming Soon",
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
