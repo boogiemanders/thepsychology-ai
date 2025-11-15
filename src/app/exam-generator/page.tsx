@@ -57,6 +57,7 @@ export default function ExamGeneratorPage() {
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
   const [textFormats, setTextFormats] = useState<Record<number, Record<string, string>>>({})
   const [assignmentId, setAssignmentId] = useState<string | null>(null)
+  const [isPaused, setIsPaused] = useState(false)
 
   // Apply highlight to selected text (question and answer choices)
   const handleHighlightText = () => {
@@ -125,6 +126,71 @@ export default function ExamGeneratorPage() {
     window.getSelection()?.removeAllRanges()
   }
 
+  // Save paused exam state to localStorage
+  const savePausedExamState = () => {
+    if (!examType || !mode || questions.length === 0) return
+
+    const pausedState = {
+      examType,
+      mode,
+      currentQuestion,
+      selectedAnswers,
+      flaggedQuestions,
+      textFormats,
+      questions,
+      timeRemaining,
+      assignmentId,
+      pausedAt: new Date().toISOString(),
+    }
+
+    localStorage.setItem('pausedExamState', JSON.stringify(pausedState))
+  }
+
+  // Handle pause button click
+  const handlePause = () => {
+    savePausedExamState()
+    setIsPaused(true)
+  }
+
+  // Resume paused exam
+  const handleResume = () => {
+    setIsPaused(false)
+  }
+
+  // Save and return to dashboard
+  const handleSaveAndReturn = () => {
+    savePausedExamState()
+    window.location.href = '/dashboard'
+  }
+
+  // Check for paused exam on mount
+  useEffect(() => {
+    const pausedState = localStorage.getItem('pausedExamState')
+    if (pausedState && !isExamStarted) {
+      try {
+        const state = JSON.parse(pausedState)
+        // Only auto-restore if it's a practice exam (user explicitly paused)
+        if (state.examType === 'practice') {
+          setExamType(state.examType)
+          setMode(state.mode)
+          setQuestions(state.questions)
+          setCurrentQuestion(state.currentQuestion)
+          setSelectedAnswers(state.selectedAnswers)
+          setFlaggedQuestions(state.flaggedQuestions)
+          setTextFormats(state.textFormats)
+          setTimeRemaining(state.timeRemaining)
+          setAssignmentId(state.assignmentId)
+          setIsExamStarted(true)
+          // Don't auto-resume, show the pause modal
+          setIsPaused(true)
+        }
+      } catch (error) {
+        console.error('Failed to restore paused exam:', error)
+        localStorage.removeItem('pausedExamState')
+      }
+    }
+  }, [isExamStarted])
+
   // Detect if user is on Mac
   const isMac = typeof navigator !== 'undefined' && navigator.platform.toUpperCase().indexOf('MAC') >= 0
 
@@ -133,7 +199,7 @@ export default function ExamGeneratorPage() {
     if (!isExamStarted) return
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      const modifier = isMac ? e.metaKey : e.altKey
+      const modifier = e.altKey // Use Option/Alt for both Mac and Windows
 
       if (!modifier) return
 
@@ -725,11 +791,11 @@ export default function ExamGeneratorPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="space-y-6"
+          className={`space-y-6 ${isPaused ? 'blur-sm pointer-events-none' : ''}`}
         >
           {/* Keyboard Shortcuts Help */}
           <div className="text-xs text-muted-foreground text-center mb-4 px-4 py-2 bg-muted rounded">
-            💡 Keyboard shortcuts: <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + P</kbd> Previous • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + N</kbd> Next • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + H</kbd> Highlight • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Cmd' : 'Alt'} + S</kbd> Strikethrough
+            💡 Keyboard shortcuts: <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + P</kbd> Previous • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + N</kbd> Next • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + H</kbd> Highlight • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + S</kbd> Strikethrough
           </div>
 
           {/* Header with Question Number, Progress, and Timer */}
@@ -737,33 +803,33 @@ export default function ExamGeneratorPage() {
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-4">
                 <div>
-                  <CardTitle className="text-lg">
-                    Question <span className="font-bold">{currentQuestion + 1}</span> of <span className="font-bold">{questions.length}</span>
-                  </CardTitle>
+                  <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                    Question {currentQuestion + 1} of {questions.length}
+                  </p>
                 </div>
-                <div className="flex gap-2">
-                  <Badge
-                    variant="outline"
-                    className="bg-blue-500/10 text-blue-600 dark:text-blue-400"
-                  >
-                    {examType === 'diagnostic' ? '🎯 Diagnostic' : '📚 Practice'}
-                  </Badge>
-                  <Badge
-                    variant="outline"
-                    className="bg-slate-500/10 text-slate-600 dark:text-slate-400"
-                  >
-                    {mode === 'study' ? '📚 Study' : '📋 Test'}
-                  </Badge>
+                <div className="flex gap-3">
+                  <span className="text-base font-normal font-serif text-foreground">
+                    {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'}
+                  </span>
+                  <span className="text-base font-normal font-serif text-foreground">
+                    {mode === 'study' ? 'Study' : 'Test'}
+                  </span>
                 </div>
               </div>
               {mode === 'test' && timeRemaining > 0 && (
-                <div className={`flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-sm border ${
-                  isTimeWarning
-                    ? 'bg-red-500/10 border-red-500/30 text-red-600 dark:text-red-400'
-                    : 'bg-slate-500/10 border-slate-500/30 text-slate-600 dark:text-slate-400'
-                }`}>
-                  <Clock className="w-4 h-4" />
-                  {formatTime(timeRemaining)}
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2 text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                    <Clock className="w-4 h-4" />
+                    {formatTime(timeRemaining)}
+                  </div>
+                  <Button
+                    onClick={handlePause}
+                    variant="outline"
+                    size="sm"
+                    className="rounded-none hover:bg-accent transition-colors"
+                  >
+                    Pause
+                  </Button>
                 </div>
               )}
             </div>
@@ -771,29 +837,37 @@ export default function ExamGeneratorPage() {
           </div>
 
           {/* Highlight and Strikeout Buttons - Above Question */}
-          <div className="flex gap-2 mb-4">
-            <Button
-              onClick={handleHighlightText}
-              variant="outline"
-              size="sm"
-              className="bg-yellow-100 hover:bg-yellow-200 text-yellow-900 border-yellow-300 rounded-none"
-            >
-              Highlight
-            </Button>
-            <Button
-              onClick={handleStrikethroughText}
-              variant="outline"
-              size="sm"
-              className="bg-gray-100 hover:bg-gray-200 text-gray-900 border-gray-300 rounded-none"
-            >
-              Strikeout
-            </Button>
+          <div className="flex gap-4 mb-4">
+            <div className="flex flex-col gap-1">
+              <Button
+                onClick={handleHighlightText}
+                variant="outline"
+                size="sm"
+                className="rounded-none hover:bg-accent transition-colors"
+                style={{ fontFamily: 'Tahoma' }}
+              >
+                Highlight
+              </Button>
+              <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + H</span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <Button
+                onClick={handleStrikethroughText}
+                variant="outline"
+                size="sm"
+                className="rounded-none hover:bg-accent transition-colors"
+                style={{ fontFamily: 'Tahoma' }}
+              >
+                Strikeout
+              </Button>
+              <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
+            </div>
           </div>
 
           {/* Question */}
           <Card className="">
             <CardHeader>
-              <CardTitle className="text-base font-normal leading-relaxed font-serif text-foreground select-text">
+              <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text" style={{ fontFamily: 'Tahoma' }}>
                 {textFormats[currentQuestion]?.question ? (
                   <div dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].question }} />
                 ) : (
@@ -850,7 +924,7 @@ export default function ExamGeneratorPage() {
                           : isShowingCorrect && isSelected && !isCorrect
                             ? 'text-red-600 dark:text-red-400'
                             : 'text-foreground'
-                      }`}>
+                      }`} style={{ fontFamily: 'Tahoma' }}>
                         <span className="font-semibold">{optionLetter}.</span> {textFormats[currentQuestion]?.options?.[idx] ? (
                           <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
                         ) : (
@@ -898,9 +972,9 @@ export default function ExamGeneratorPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 -mx-6 mt-8"
+            className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 mt-8"
           >
-            <div className="max-w-3xl mx-auto flex items-center justify-between gap-4">
+            <div className="flex items-center justify-between gap-4">
               {/* Flag Checkbox on Left */}
               <label className="flex items-center gap-3 cursor-pointer group hover:bg-accent p-2 rounded transition-colors">
                 <Checkbox
@@ -913,21 +987,25 @@ export default function ExamGeneratorPage() {
                   }}
                   id={`flag-q${currentQuestion}`}
                 />
-                <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" style={{ fontFamily: 'Tahoma' }}>
                   Flag for review {flaggedQuestions[currentQuestion] && '✓'}
                 </span>
               </label>
 
               {/* Navigation Buttons on Right */}
-              <div className="flex items-center gap-3">
-                <Button
-                  onClick={handlePrevious}
-                  disabled={currentQuestion === 0}
-                  variant="outline"
-                  className="min-w-[120px] rounded-none"
-                >
-                  Previous
-                </Button>
+              <div className="flex items-center gap-4">
+                <div className="flex flex-col gap-1 items-center">
+                  <Button
+                    onClick={handlePrevious}
+                    disabled={currentQuestion === 0}
+                    variant="outline"
+                    className="min-w-[100px] rounded-none"
+                    style={{ fontFamily: 'Tahoma' }}
+                  >
+                    Previous
+                  </Button>
+                  <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + P</span>
+                </div>
 
                 {currentQuestion === questions.length - 1 ? (
                   <Button
@@ -1003,18 +1081,60 @@ export default function ExamGeneratorPage() {
                       const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
                       window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
                     }}
-                    className="min-w-[120px] rounded-none"
+                    className="min-w-[100px] rounded-none"
+                    style={{ fontFamily: 'Tahoma' }}
                   >
                     End Exam
                   </Button>
                 ) : (
-                  <Button onClick={handleNext} className="min-w-[120px] rounded-none">
-                    Next
-                  </Button>
+                  <div className="flex flex-col gap-1 items-center">
+                    <Button onClick={handleNext} className="min-w-[100px] rounded-none" style={{ fontFamily: 'Tahoma' }}>
+                      Next
+                    </Button>
+                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + N</span>
+                  </div>
                 )}
               </div>
             </div>
           </motion.div>
+
+          {/* Pause Modal Overlay */}
+          {isPaused && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+            >
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+                className="bg-card border border-border rounded-lg shadow-lg p-8 max-w-md w-full mx-4"
+              >
+                <h2 className="text-xl font-semibold mb-4 text-foreground">Exam Paused</h2>
+                <p className="text-sm text-muted-foreground mb-6">
+                  You can resume where you left off at Question {currentQuestion + 1} of {questions.length}.
+                </p>
+
+                <div className="flex flex-col gap-3">
+                  <Button
+                    onClick={handleResume}
+                    className="rounded-none w-full"
+                  >
+                    Resume Exam
+                  </Button>
+                  <Button
+                    onClick={handleSaveAndReturn}
+                    variant="outline"
+                    className="rounded-none w-full"
+                  >
+                    Save Place & Return to Dashboard
+                  </Button>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </main>

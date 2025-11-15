@@ -1,6 +1,8 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { writeFileSync, mkdirSync } from 'fs'
+import { join } from 'path'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -21,6 +23,7 @@ CRITICAL: You MUST generate ALL 71 questions. Do not stop early. Include every s
 
 The exam should include:
 - 71 questions total (1 per Knowledge Statement, KN1-KN71)
+- Questions MUST be presented in RANDOM ORDER (NOT in KN1-KN71 sequence)
 - Proper domain distribution maintaining EPPP weights:
   - Domain 1: 5 questions
   - Domain 2: 8 questions
@@ -34,12 +37,13 @@ The exam should include:
 - All questions scored (isScored: true)
 - Balanced difficulty levels
 
-CRITICAL RANDOMIZATION REQUIREMENT:
-- The correct answer MUST be randomized across all positions (A, B, C, D)
-- DO NOT place the correct answer always in position A
-- Aim for roughly 25% of correct answers in each position (A, B, C, D)
-- Randomize answer option positions for each question independently
-- Verify that across all 71 questions, correct answers appear in different positions
+CRITICAL RANDOMIZATION REQUIREMENTS:
+1. QUESTION ORDER: Shuffle all 71 questions in RANDOM order (do NOT order them by KN1-KN71)
+2. ANSWER POSITIONS: The correct answer MUST be randomized across all positions (A, B, C, D)
+   - DO NOT place the correct answer always in position A
+   - Aim for roughly 25% of correct answers in each position (A, B, C, D)
+   - Randomize answer option positions for each question independently
+   - Verify that across all 71 questions, correct answers appear in different positions
 
 Generate the exam in JSON format with this structure:
 {
@@ -53,7 +57,7 @@ Generate the exam in JSON format with this structure:
       "domain": "Domain 1-8",
       "difficulty": "easy|medium|hard",
       "isScored": true,
-      "knId": "KN1"
+      "knId": "KN1-KN71 (mixed/random order)"
     }
   ]
 }
@@ -62,9 +66,10 @@ IMPORTANT:
 - The "correct_answer" field must contain the actual option text (not A, B, C, or D)
 - The options array must contain the option text, not letters
 - YOU MUST INCLUDE ALL 71 QUESTIONS - do not stop at 8 or any partial count
-- Verify before responding that you have generated exactly 71 questions
+- Questions MUST be in RANDOM order, not sequential KN order
+- Verify before responding that you have generated exactly 71 questions in RANDOM order
 
-Start generating the exam now. Generate EXACTLY 71 questions as specified above. Remember: ALL 71 QUESTIONS REQUIRED. Randomize answer positions!`
+Start generating the exam now. Generate EXACTLY 71 questions in RANDOM ORDER as specified above. Remember: ALL 71 QUESTIONS REQUIRED. Random question order! Randomize answer positions!`
 
 const PRACTICE_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
@@ -73,19 +78,20 @@ Your task is to generate a COMPLETE 225-question practice exam following officia
 CRITICAL: You MUST generate ALL 225 questions. Do not stop early. Include every single question.
 
 The exam should include:
-- 225 questions total
+- 225 questions total in RANDOM ORDER (NOT sequential)
 - Proper domain distribution following EPPP weights
 - 180 scored questions (80%) - standard and medium difficulty questions that count toward score
 - 45 unscored experimental questions (20%) - harder questions for research/development that DO NOT count toward score
 - Multiple choice format with 4 options each
 - Questions distributed across all 8 EPPP domains
 
-CRITICAL RANDOMIZATION REQUIREMENT:
-- The correct answer MUST be randomized across all positions (A, B, C, D)
-- DO NOT place the correct answer always in position A
-- Aim for roughly 25% of correct answers in each position (A, B, C, D)
-- Randomize answer option positions for each question independently
-- Verify that across all 225 questions, correct answers appear in different positions
+CRITICAL RANDOMIZATION REQUIREMENTS:
+1. QUESTION ORDER: Shuffle all 225 questions in RANDOM order (do NOT present them in sequential/predictable order)
+2. ANSWER POSITIONS: The correct answer MUST be randomized across all positions (A, B, C, D)
+   - DO NOT place the correct answer always in position A
+   - Aim for roughly 25% of correct answers in each position (A, B, C, D)
+   - Randomize answer option positions for each question independently
+   - Verify that across all 225 questions, correct answers appear in different positions
 
 IMPORTANT: Mark the unscored questions clearly with "isScored": false. These should be noticeably harder than the scored questions and are used for data collection. Users will see their score calculated only from the 180 scored questions, not the 45 unscored ones.
 
@@ -100,7 +106,7 @@ Generate the exam in JSON format with this structure:
       "explanation": "Why this is correct",
       "domain": "Domain 1-8",
       "difficulty": "easy|medium|hard",
-      "isScored": true,
+      "isScored": true/false,
       "type": "standard"
     }
   ]
@@ -110,10 +116,11 @@ IMPORTANT:
 - The "correct_answer" field must contain the actual option text (not A, B, C, or D)
 - The options array must contain the option text, not letters
 - YOU MUST INCLUDE ALL 225 QUESTIONS - exactly 180 scored and 45 unscored
+- Questions MUST be in RANDOM order, not sequential
 - Do not stop at 8 or any partial count
-- Verify before responding that you have generated exactly 225 questions (180 + 45)
+- Verify before responding that you have generated exactly 225 questions (180 + 45) in RANDOM order
 
-Start generating the exam now. Generate EXACTLY 225 questions (180 scored + 45 unscored) as specified above. Remember: ALL 225 QUESTIONS REQUIRED. Randomize answer positions!`
+Start generating the exam now. Generate EXACTLY 225 questions (180 scored + 45 unscored) in RANDOM ORDER as specified above. Remember: ALL 225 QUESTIONS REQUIRED. Random question order! Randomize answer positions!`
 
 export async function POST(request: NextRequest) {
   try {
@@ -170,9 +177,10 @@ export async function POST(request: NextRequest) {
 
     console.log(`[Pre-Gen] Calling Claude API for ${examType} exam generation...`)
 
+    // Use Sonnet 4.5 for both exams - better model for large outputs
     const stream = await client.messages.create({
-      model: 'claude-opus-4-1-20250805',
-      max_tokens: 128000,
+      model: 'claude-sonnet-4-5-20250929',
+      max_tokens: 40000, // Sonnet 4.5 can handle larger outputs
       stream: true,
       messages: [
         {
@@ -213,42 +221,69 @@ export async function POST(request: NextRequest) {
 
     console.log(`[Pre-Gen] Successfully parsed ${examData.questions.length} questions`)
 
-    // Save to Supabase
-    const expiresAt = new Date()
-    expiresAt.setDate(expiresAt.getDate() + 7) // 7-day expiration
+    // Save to filesystem
+    try {
+      const examsDir = join(process.cwd(), 'exams', examType)
 
-    const { data: savedExam, error: saveError } = await supabase
-      .from('pre_generated_exams')
-      .insert({
-        user_id: userId,
-        exam_type: examType,
-        questions: examData,
-        expires_at: expiresAt.toISOString(),
-        used: false,
-      })
-      .select('id')
-      .single()
+      // Create directory if it doesn't exist
+      try {
+        mkdirSync(examsDir, { recursive: true })
+      } catch (mkdirError) {
+        console.warn('[Pre-Gen] Directory might already exist:', mkdirError)
+      }
 
-    if (saveError) {
-      console.error('[Pre-Gen] Error saving to Supabase:', saveError)
+      // Find next available exam number
+      let examNumber = 1
+      let filename = `${examType}-exam-${String(examNumber).padStart(3, '0')}.md`
+      let filePath = join(examsDir, filename)
+
+      // Check if file exists and find next available number (up to 10 exams)
+      const fs = require('fs')
+      for (let i = 1; i <= 10; i++) {
+        filename = `${examType}-exam-${String(i).padStart(3, '0')}.md`
+        filePath = join(examsDir, filename)
+        if (!fs.existsSync(filePath)) {
+          examNumber = i
+          break
+        }
+      }
+
+      // Create markdown file with frontmatter
+      const now = new Date().toISOString()
+      const fileContent = `---
+exam_id: ${examType}-exam-${String(examNumber).padStart(3, '0')}
+exam_type: ${examType}
+generated_at: ${now}
+question_count: ${examData.questions.length}
+version: 1
+---
+
+${JSON.stringify(examData, null, 2)}
+`
+
+      // Write file
+      writeFileSync(filePath, fileContent, 'utf-8')
+
+      console.log(
+        `[Pre-Gen] Successfully saved ${examType} exam to filesystem: ${filePath} (${examData.questions.length} questions)`
+      )
+
       return NextResponse.json(
-        { error: 'Failed to save exam' },
+        {
+          success: true,
+          examFile: filename,
+          questionCount: examData.questions.length,
+          path: filePath,
+        },
+        { status: 200 }
+      )
+    } catch (fileError) {
+      console.error('[Pre-Gen] Error saving exam to filesystem:', fileError)
+      return NextResponse.json(
+        { error: 'Failed to save exam to filesystem', message: String(fileError) },
         { status: 500 }
       )
     }
-
-    console.log(
-      `[Pre-Gen] Successfully saved pre-generated ${examType} exam (ID: ${savedExam.id}) for user ${userId}`
-    )
-
-    return NextResponse.json(
-      {
-        success: true,
-        examId: savedExam.id,
-        questionCount: examData.questions.length,
-      },
-      { status: 200 }
-    )
   } catch (error) {
     console.error('[Pre-Gen] Unexpected error:', error)
     return NextResponse.json(

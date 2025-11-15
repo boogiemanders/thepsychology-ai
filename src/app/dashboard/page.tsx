@@ -48,6 +48,7 @@ export default function DashboardPage() {
   const [todayQuizCount, setTodayQuizCount] = useState(0)
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
   const [priorityDomains, setPriorityDomains] = useState<any[]>([])
+  const [hasPausedExam, setHasPausedExam] = useState(false)
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -97,6 +98,14 @@ export default function DashboardPage() {
       triggerBackgroundPreGeneration(user.id, 'practice')
     }
   }, [user?.id])
+
+  // Check for paused exam on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const pausedState = localStorage.getItem('pausedExamState')
+      setHasPausedExam(!!pausedState)
+    }
+  }, [])
 
   // Calculate progress based on quiz results
   useEffect(() => {
@@ -346,9 +355,9 @@ export default function DashboardPage() {
     {
       Icon: GraduationCap,
       name: "Practice",
-      description: "Take practice exams to test your knowledge",
+      description: hasPausedExam ? "Resume your paused practice exam" : "Take practice exams to test your knowledge",
       href: "/exam-generator",
-      cta: "Start Exam",
+      cta: hasPausedExam ? "Resume?" : "Start Exam",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
       background: (
         <Marquee className="absolute inset-0 opacity-20" repeat={2}>

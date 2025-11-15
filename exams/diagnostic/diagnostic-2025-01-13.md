@@ -1,4 +1,4 @@
----
+ ---
 exam_id: diagnostic-2025-01-13
 exam_type: diagnostic
 generated_at: 2025-01-13T14:30:00Z
