@@ -370,16 +370,18 @@ export default function DashboardPage() {
       cta: "View Insights",
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-5",
       background: priorityDomains.length > 0 ? (
-        <Marquee className="absolute inset-0 opacity-20" repeat={2}>
-          <div className="flex gap-6 whitespace-nowrap px-4">
-            {priorityDomains.slice(0, 3).map((domain, idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <span className="text-sm font-medium">#{idx + 1}: {domain.domainName.split(':')[0]}</span>
-                {idx < 2 && <span>•</span>}
+        <div className="absolute inset-0 overflow-hidden">
+          <Marquee className="opacity-40" pauseOnHover>
+            {priorityDomains.map((domain, idx) => (
+              <div
+                key={idx}
+                className="mx-2 flex items-center justify-center rounded-lg border border-primary/30 bg-primary/10 px-4 py-3 text-sm font-medium text-primary whitespace-nowrap"
+              >
+                <span>#{idx + 1}: {domain.domainName.split(':')[0]}</span>
               </div>
             ))}
-          </div>
-        </Marquee>
+          </Marquee>
+        </div>
       ) : (
         <div className="absolute inset-0 flex items-center justify-center opacity-20">
           <div className="text-center text-xs text-foreground/60 px-4">
