@@ -821,12 +821,7 @@ export default function ExamGeneratorPage() {
           {/* Header with Question Number, Progress, and Timer */}
           <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
             <div className="flex justify-between items-start mb-4">
-              <div className="flex items-center gap-4">
-                <div>
-                  <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                    Question {currentQuestion + 1} of {questions.length}
-                  </p>
-                </div>
+              <div className="flex flex-col gap-2">
                 <div className="flex gap-3">
                   <span className="text-base font-normal font-serif text-foreground">
                     {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'}
@@ -835,6 +830,9 @@ export default function ExamGeneratorPage() {
                     {mode === 'study' ? 'Study' : 'Test'}
                   </span>
                 </div>
+                <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                  Question {currentQuestion + 1} of {questions.length}
+                </p>
               </div>
               {mode === 'test' && timeRemaining > 0 && (
                 <div className="flex items-center gap-4">
@@ -868,7 +866,7 @@ export default function ExamGeneratorPage() {
               >
                 Highlight
               </Button>
-              <span className="text-xs text-muted-foreground text-right" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + H</span>
+              <span className="text-xs text-muted-foreground pl-1" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + H</span>
             </div>
             <div className="flex flex-col gap-1">
               <Button
@@ -880,7 +878,7 @@ export default function ExamGeneratorPage() {
               >
                 Strikeout
               </Button>
-              <span className="text-xs text-muted-foreground text-right" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
+              <span className="text-xs text-muted-foreground pl-1" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
             </div>
           </div>
 
@@ -919,16 +917,8 @@ export default function ExamGeneratorPage() {
                     >
                       <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
                         isSelected
-                          ? mode === 'test'
-                            ? 'border-blue-500 bg-blue-500'
-                            : isShowingCorrect
-                              ? isCorrect
-                                ? 'border-green-500 bg-green-500'
-                                : 'border-red-500 bg-red-500'
-                              : 'border-blue-500 bg-blue-500'
-                          : isShowingCorrect && isCorrect
-                            ? 'border-green-500 bg-green-500'
-                            : 'border-gray-300 dark:border-gray-600 bg-transparent hover:border-blue-400 dark:hover:border-blue-500'
+                          ? 'border-foreground bg-foreground'
+                          : 'border-muted-foreground bg-transparent hover:border-foreground'
                       }`}>
                         {isSelected && (
                           <div className="w-2.5 h-2.5 bg-white rounded-full" />
@@ -938,13 +928,7 @@ export default function ExamGeneratorPage() {
 
                     {/* Option Text - Not Clickable */}
                     <div className="flex-1 min-w-0 pt-1">
-                      <div className={`text-base ${
-                        isShowingCorrect && isCorrect
-                          ? 'text-green-600 dark:text-green-400'
-                          : isShowingCorrect && isSelected && !isCorrect
-                            ? 'text-red-600 dark:text-red-400'
-                            : 'text-foreground'
-                      }`} style={{ fontFamily: 'Tahoma' }}>
+                      <div className="text-base text-foreground" style={{ fontFamily: 'Tahoma' }}>
                         <span className="font-semibold">{optionLetter}.</span> {textFormats[currentQuestion]?.options?.[idx] ? (
                           <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
                         ) : (
@@ -962,15 +946,11 @@ export default function ExamGeneratorPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`mt-6 p-4 rounded-lg border ${
-                    isCorrect
-                      ? 'bg-green-500/10 border-green-500/30'
-                      : 'bg-yellow-500/10 border-yellow-500/30'
-                  }`}
+                  className="mt-6 p-4 rounded-lg border bg-muted/50 border-border"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <p className="font-semibold">
-                      {isCorrect ? '✓ Correct!' : '✗ Incorrect'}
+                      {isCorrect ? 'Correct' : 'Incorrect'}
                     </p>
                     <div className="text-right">
                       <p className="text-xs text-muted-foreground mb-1">Correct Answer</p>
@@ -1118,44 +1098,45 @@ export default function ExamGeneratorPage() {
             </div>
           </motion.div>
 
-          {/* Pause Modal Overlay */}
-          {isPaused && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-            >
-              <motion.div
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.2 }}
-                className="bg-card border border-border rounded-lg shadow-lg p-8 max-w-md w-full mx-4"
-              >
-                <h2 className="text-xl font-semibold mb-4 text-foreground">Exam Paused</h2>
-                <p className="text-sm text-muted-foreground mb-6">
-                  You can resume where you left off at Question {currentQuestion + 1} of {questions.length}.
-                </p>
-
-                <div className="flex flex-col gap-3">
-                  <Button
-                    onClick={handleResume}
-                    className="rounded-none w-full"
-                  >
-                    Resume Exam
-                  </Button>
-                  <Button
-                    onClick={handleSaveAndReturn}
-                    variant="outline"
-                    className="rounded-none w-full"
-                  >
-                    Save Place & Return to Dashboard
-                  </Button>
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
         </motion.div>
+
+        {/* Pause Modal Overlay - Outside the blurred container */}
+        {isPaused && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+              className="bg-card border border-border rounded-lg shadow-lg p-8 max-w-md w-full mx-4"
+            >
+              <h2 className="text-xl font-semibold mb-4 text-foreground">Exam Paused</h2>
+              <p className="text-sm text-muted-foreground mb-6">
+                You can resume where you left off at Question {currentQuestion + 1} of {questions.length}.
+              </p>
+
+              <div className="flex flex-col gap-3">
+                <Button
+                  onClick={handleResume}
+                  className="rounded-none w-full"
+                >
+                  Resume Exam
+                </Button>
+                <Button
+                  onClick={handleSaveAndReturn}
+                  variant="outline"
+                  className="rounded-none w-full"
+                >
+                  Save Place & Return to Dashboard
+                </Button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
       </div>
     </main>
   )
