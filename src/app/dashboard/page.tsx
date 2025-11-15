@@ -368,7 +368,7 @@ export default function DashboardPage() {
         : "AI-powered study recommendations",
       href: "/prioritize",
       cta: "View Insights",
-      className: "lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5",
+      className: "lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-5",
       background: priorityDomains.length > 0 ? (
         <Marquee className="absolute inset-0 opacity-20" repeat={2}>
           <div className="flex gap-6 whitespace-nowrap px-4">
@@ -388,6 +388,14 @@ export default function DashboardPage() {
           </div>
         </div>
       ),
+    },
+    {
+      Icon: History,
+      name: "Review Exams",
+      description: "View your completed practice exams",
+      href: "/review-exams",
+      cta: "View Results",
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-5",
     },
     {
       Icon: Droplets,
@@ -548,14 +556,6 @@ export default function DashboardPage() {
         </div>
       ),
     },
-    {
-      Icon: History,
-      name: "Review Exams",
-      description: "View your completed practice exams",
-      href: "/review-exams",
-      cta: "View Results",
-      className: "lg:col-start-5 lg:col-end-6 lg:row-start-7 lg:row-end-9",
-    },
   ]
 
   return (
@@ -566,8 +566,8 @@ export default function DashboardPage() {
           <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
         </div>
 
-        {/* Bento Grid - Practice/Prioritize/Recover left, Study wide in middle, Info boxes narrow on right */}
-        <BentoGrid className="lg:grid-rows-8 lg:grid-cols-5">
+        {/* Bento Grid - Practice above, Review Exams and Prioritize side-by-side, Recover below, Study on right, Info cards on far right */}
+        <BentoGrid className="lg:grid-rows-6 lg:grid-cols-5">
           {/* Action Cards */}
           {actionCards.map((feature, idx) => (
             <BentoCard
