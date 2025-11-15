@@ -1,12 +1,12 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
-import { loadTopicContent, mergePersonalizedContent } from '@/lib/topic-content-manager'
+import { loadTopicContent, mergePersonalizedContent, loadFullTopicContent } from '@/lib/topic-content-manager'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 })
 
-const getTeacherSystemPrompt = (userInterests?: string | null): string => {
+const getTeacherSystemPrompt = (userInterests?: string | null, referenceMaterial?: string): string => {
   let prompt = `You are an expert EPPP psychology teacher who explains concepts using simple, engaging language (13-year-old reading level) with custom metaphors and analogies.
 
 Your teaching style:
@@ -31,6 +31,10 @@ Formatting guidelines:
 - Keep paragraphs concise (2-3 sentences), with lots of breathing room
 
 You're teaching EPPP (Examination for Professional Practice in Psychology) content. Cover the topic comprehensively but in an accessible way. Be ready for follow-up questions about the topic and answer them thoroughly.`
+
+  if (referenceMaterial) {
+    prompt += `\n\n## Reference Material\nYou have access to comprehensive course material on this topic. Use this material to inform your answers:\n\n${referenceMaterial}`
+  }
 
   if (userInterests) {
     prompt += `\n\nThe student is interested in: ${userInterests}. When possible, use examples and analogies related to their interests to make the content more engaging and relatable.`
@@ -200,12 +204,22 @@ export async function POST(request: NextRequest) {
       })
     }
 
+    // For follow-ups, load the full content and pass it as reference material
+    let referenceMaterial: string | undefined
+    if (!isInitial && topic && domain) {
+      const fullContent = loadFullTopicContent(topic, domain)
+      if (fullContent) {
+        referenceMaterial = fullContent
+        console.log(`[Topic Teacher] Loaded full content for follow-up: ${topic}`)
+      }
+    }
+
     // For follow-ups, stream the response
     const response = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 4000,
       stream: true,
-      system: getTeacherSystemPrompt(userInterests),
+      system: getTeacherSystemPrompt(userInterests, referenceMaterial),
       messages: messages as Array<{ role: 'user' | 'assistant'; content: string }>,
     })
 

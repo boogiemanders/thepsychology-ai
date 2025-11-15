@@ -141,3 +141,35 @@ export function topicContentExists(
     return false
   }
 }
+
+/**
+ * Load the full content (without removing personalization section) - used for follow-up Q&A
+ */
+export function loadFullTopicContent(
+  topicName: string,
+  domain: string
+): string | null {
+  try {
+    const domainFolder = getDomainFolder(domain)
+    const slug = topicName
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+
+    const filePath = join(
+      process.cwd(),
+      'topic-content',
+      domainFolder,
+      `${slug}.md`
+    )
+
+    const fileContent = readFileSync(filePath, 'utf-8')
+    const { content } = parseFrontmatter(fileContent)
+
+    // Return the full content body (without frontmatter)
+    return content
+  } catch (error) {
+    console.error(`Failed to load full topic content for ${topicName}:`, error)
+    return null
+  }
+}

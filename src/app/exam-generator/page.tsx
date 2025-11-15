@@ -371,6 +371,9 @@ export default function ExamGeneratorPage() {
 
   const handleGenerateExam = async (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
     try {
+      const startTime = performance.now()
+      console.log(`[Exam Gen] Starting exam generation for ${chosenExamType}...`)
+
       setIsGenerating(true)
       setError(null)
       setQuestions([])
@@ -388,15 +391,19 @@ export default function ExamGeneratorPage() {
       if (userId) {
         setIsLoadingPreGen(true)
         try {
+          console.time('[Exam Gen] Assignment API call')
           const assignResponse = await fetch('/api/assign-exam', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId, examType: chosenExamType }),
           })
+          console.timeEnd('[Exam Gen] Assignment API call')
+
           const assignData = await assignResponse.json()
 
           if (assignData.success && assignData.questions) {
             console.log('[Exam Gen] Using Git-backed exam:', assignData.examFile)
+            console.log(`[Exam Gen] Loaded ${assignData.questions.length} questions from cached file`)
             examData = assignData.questions
             setAssignmentId(assignData.assignmentId)
             setIsLoadingPreGen(false)
@@ -411,7 +418,8 @@ export default function ExamGeneratorPage() {
 
       // Fall back to on-demand generation if no Git-backed exam available
       if (!examData) {
-        console.log('[Exam Gen] Generating exam on-demand')
+        console.log('[Exam Gen] Generating exam on-demand (this may take 30-60 seconds)')
+        console.time('[Exam Gen] On-demand generation')
         let jsonContent = ''
         const response = await fetch(`/api/exam-generator?type=${chosenExamType}`, {
           method: 'POST',
@@ -436,6 +444,7 @@ export default function ExamGeneratorPage() {
           const text = decoder.decode(value)
           jsonContent += text
         }
+        console.timeEnd('[Exam Gen] On-demand generation')
 
         // Parse JSON from the content
         const jsonMatch = jsonContent.match(/\{[\s\S]*\}/)
@@ -444,10 +453,24 @@ export default function ExamGeneratorPage() {
         }
 
         examData = JSON.parse(jsonMatch[0])
+        console.log(`[Exam Gen] On-demand generation produced ${examData.questions?.length || 0} questions`)
       }
 
-      setQuestions(examData.questions || [])
+      // Fisher-Yates shuffle to ensure question randomization
+      console.time('[Exam Gen] Question shuffle')
+      const questionsToUse = examData.questions || []
+      for (let i = questionsToUse.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [questionsToUse[i], questionsToUse[j]] = [questionsToUse[j], questionsToUse[i]]
+      }
+      console.timeEnd('[Exam Gen] Question shuffle')
+
+      setQuestions(questionsToUse)
       setIsExamStarted(true)
+
+      const endTime = performance.now()
+      const totalTime = ((endTime - startTime) / 1000).toFixed(2)
+      console.log(`[Exam Gen] ✓ Total exam load time: ${totalTime}s`)
     } catch (err) {
       console.error('Error generating exam:', err)
       setError(err instanceof Error ? err.message : 'Failed to generate exam')
@@ -797,16 +820,6 @@ export default function ExamGeneratorPage() {
         >
           {/* Header with Question Number, Progress, and Timer */}
           <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
-            {/* Domain and Difficulty Tags */}
-            <div className="flex gap-2 mb-4">
-              <Badge className="rounded-full px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800">
-                {question.domain}
-              </Badge>
-              <Badge className="rounded-full px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800">
-                {question.difficulty}
-              </Badge>
-            </div>
-
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-4">
                 <div>
@@ -855,7 +868,7 @@ export default function ExamGeneratorPage() {
               >
                 Highlight
               </Button>
-              <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + H</span>
+              <span className="text-xs text-muted-foreground text-right" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + H</span>
             </div>
             <div className="flex flex-col gap-1">
               <Button
@@ -867,7 +880,7 @@ export default function ExamGeneratorPage() {
               >
                 Strikeout
               </Button>
-              <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
+              <span className="text-xs text-muted-foreground text-right" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
             </div>
           </div>
 
