@@ -21,7 +21,7 @@ import { Ripple } from '@/components/ui/ripple'
 import { BreathingAnimation } from '@/components/ui/breathing-animation'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
-import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle } from 'lucide-react'
+import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities } from '@/lib/priority-storage'
@@ -548,6 +548,14 @@ export default function DashboardPage() {
         </div>
       ),
     },
+    {
+      Icon: History,
+      name: "Review Exams",
+      description: "View your completed practice exams",
+      href: "/review-exams",
+      cta: "View Results",
+      className: "lg:col-start-5 lg:col-end-6 lg:row-start-7 lg:row-end-9",
+    },
   ]
 
   return (
@@ -559,7 +567,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Bento Grid - Practice/Prioritize/Recover left, Study wide in middle, Info boxes narrow on right */}
-        <BentoGrid className="lg:grid-rows-6 lg:grid-cols-5">
+        <BentoGrid className="lg:grid-rows-8 lg:grid-cols-5">
           {/* Action Cards */}
           {actionCards.map((feature, idx) => (
             <BentoCard
