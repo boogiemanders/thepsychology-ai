@@ -146,7 +146,7 @@ export default function ExamGeneratorPage() {
             ...priorityData,
           }
 
-          const targetPage = examType === 'diagnostic' ? '/prioritizer' : '/study-optimizer'
+          const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
           window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
           return 0
         }
@@ -764,7 +764,7 @@ export default function ExamGeneratorPage() {
                       })
                     }
 
-                    // Route to prioritizer if diagnostic, study-optimizer if practice
+                    // Route to prioritizer if diagnostic, prioritize if practice
                     const resultData = {
                       questions,
                       selectedAnswers,
@@ -775,7 +775,7 @@ export default function ExamGeneratorPage() {
                       ...priorityData,
                     }
 
-                    const targetPage = examType === 'diagnostic' ? '/prioritizer' : '/study-optimizer'
+                    const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
                     window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
                   }}
                   className="w-full"
