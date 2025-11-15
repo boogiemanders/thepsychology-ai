@@ -664,7 +664,7 @@ export default function ExamGeneratorPage() {
   const isCorrect = selectedAnswer === correctOption
 
   return (
-    <main className={`min-h-screen p-6 ${isExamStarted ? 'windows-2000-theme' : 'bg-background'}`}>
+    <main className="min-h-screen p-6 bg-background">
       <div className="max-w-3xl mx-auto">
         <Breadcrumb className="mb-8">
           <BreadcrumbList>
@@ -724,29 +724,30 @@ export default function ExamGeneratorPage() {
             <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-1" />
           </div>
 
+          {/* Highlight and Strikeout Buttons - Above Question */}
+          <div className="flex gap-2 mb-4">
+            <Button
+              onClick={handleHighlightText}
+              variant="outline"
+              size="sm"
+              className="bg-yellow-100 hover:bg-yellow-200 text-yellow-900 border-yellow-300 rounded-none"
+            >
+              Highlight
+            </Button>
+            <Button
+              onClick={handleStrikethroughText}
+              variant="outline"
+              size="sm"
+              className="bg-gray-100 hover:bg-gray-200 text-gray-900 border-gray-300 rounded-none"
+            >
+              Strikeout
+            </Button>
+          </div>
+
           {/* Question */}
-          <Card className={isExamStarted ? 'win2k-panel' : ''}>
+          <Card className="">
             <CardHeader>
-              {/* Highlight and Strikeout Buttons */}
-              <div className="flex gap-2 mb-4">
-                <Button
-                  onClick={handleHighlightText}
-                  variant="outline"
-                  size="sm"
-                  className={`${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400 bg-yellow-100 hover:bg-yellow-200 text-yellow-900' : 'bg-yellow-100 hover:bg-yellow-200 text-yellow-900 border-yellow-300'}`}
-                >
-                  🖍️ Highlight
-                </Button>
-                <Button
-                  onClick={handleStrikethroughText}
-                  variant="outline"
-                  size="sm"
-                  className={`${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400 bg-gray-100 hover:bg-gray-200 text-gray-900' : 'bg-gray-100 hover:bg-gray-200 text-gray-900 border-gray-300'}`}
-                >
-                  ✏️ Strikeout
-                </Button>
-              </div>
-              <CardTitle className="text-2xl font-normal leading-relaxed font-serif text-foreground select-text">
+              <CardTitle className="text-base font-normal leading-relaxed font-serif text-foreground select-text">
                 {textFormats[currentQuestion]?.question ? (
                   <div dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].question }} />
                 ) : (
@@ -851,7 +852,7 @@ export default function ExamGeneratorPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className={`sticky bottom-0 ${isExamStarted ? 'win2k-panel-inset' : 'bg-card border-t border-border'} shadow-lg p-6 -mx-6 mt-8`}
+            className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 -mx-6 mt-8"
           >
             <div className="max-w-3xl mx-auto flex items-center justify-between gap-4">
               {/* Flag Checkbox on Left */}
@@ -877,7 +878,7 @@ export default function ExamGeneratorPage() {
                   onClick={handlePrevious}
                   disabled={currentQuestion === 0}
                   variant="outline"
-                  className={`min-w-[120px] ${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400' : ''}`}
+                  className="min-w-[120px] rounded-none"
                 >
                   Previous
                 </Button>
@@ -956,12 +957,12 @@ export default function ExamGeneratorPage() {
                       const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
                       window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
                     }}
-                    className={`min-w-[120px] ${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400' : ''}`}
+                    className="min-w-[120px] rounded-none"
                   >
                     End Exam
                   </Button>
                 ) : (
-                  <Button onClick={handleNext} className={`min-w-[120px] ${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400' : ''}`}>
+                  <Button onClick={handleNext} className="min-w-[120px] rounded-none">
                     Next
                   </Button>
                 )}
