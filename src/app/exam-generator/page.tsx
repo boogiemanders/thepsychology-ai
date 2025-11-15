@@ -377,7 +377,7 @@ export default function ExamGeneratorPage() {
                 EPPP Exam
               </h1>
               <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                {!examType ? 'Choose an exam type to get started.' : `You selected ${examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} Exam. Now choose your study mode.`}
+                Choose an exam type to get started.
               </p>
 
               {!isGenerating && (
