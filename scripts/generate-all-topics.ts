@@ -152,7 +152,7 @@ version: 1
         // Add a small delay between requests to avoid rate limiting
         await new Promise((resolve) => setTimeout(resolve, 1000))
       } catch (error) {
-        console.error(`✗ Failed to generate ${topic}:`, error)
+        console.error(`✗ Failed to generate ${topicObj.name}:`, error)
         failedCount++
       }
     }
