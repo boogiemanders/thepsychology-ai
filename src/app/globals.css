@@ -33,6 +33,65 @@ main {
   letter-spacing: -0.3px;
 }
 
+/* Windows 2000 Theme for Quiz/Test Mode */
+.windows-2000-theme {
+  background: #c0c0c0;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+  color: #000;
+}
+
+.windows-2000-theme * {
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+}
+
+/* Windows 2000 Button Style */
+.win2k-button {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #808080 #808080 #dfdfdf;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+
+.win2k-button:active {
+  border-color: #808080 #dfdfdf #dfdfdf #808080;
+}
+
+.win2k-button:disabled {
+  color: #dfdfdf;
+  text-shadow: 1px 1px #808080;
+}
+
+/* Windows 2000 Panel/Card */
+.win2k-panel {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #808080 #808080 #dfdfdf;
+  padding: 2px;
+}
+
+.win2k-panel-inset {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #808080 #dfdfdf #dfdfdf #808080;
+  padding: 2px;
+}
+
+.win2k-title-bar {
+  background: linear-gradient(90deg, #000080 0%, #1084d7 100%);
+  color: #fff;
+  padding: 2px 2px;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 /* Key term emphasis - only bold, no other styling */
 strong, b {
   font-weight: 600;

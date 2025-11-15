@@ -55,43 +55,69 @@ export default function ExamGeneratorPage() {
   const [isLoadingPreGen, setIsLoadingPreGen] = useState(false)
   const [userId, setUserId] = useState<string | null>(null)
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
-  const [highlightedText, setHighlightedText] = useState<string>('')
   const [textFormats, setTextFormats] = useState<Record<number, Record<string, string>>>({})
 
-  // Apply highlight to selected text
+  // Apply highlight to selected text (question and answer choices)
   const handleHighlightText = () => {
     const selectedText = window.getSelection()?.toString()
     if (selectedText && currentQuestion !== undefined) {
-      setHighlightedText(selectedText)
       const question = questions[currentQuestion]
       if (question) {
+        // Highlight in question text
         const oldQuestion = question.question
         const newQuestion = oldQuestion.replace(
-          new RegExp(`(${selectedText})`, 'g'),
-          `<mark style="background-color: yellow;">$1</mark>`
+          new RegExp(`(?<!<mark[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</mark>)`, 'g'),
+          `<mark style="background-color: yellow; color: black;">$&</mark>`
         )
+
+        // Also highlight in all answer choices
+        const newOptions = question.options.map(option =>
+          option.replace(
+            new RegExp(`(?<!<mark[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</mark>)`, 'g'),
+            `<mark style="background-color: yellow; color: black;">$&</mark>`
+          )
+        )
+
         setTextFormats(prev => ({
           ...prev,
-          [currentQuestion]: { ...prev[currentQuestion], question: newQuestion }
+          [currentQuestion]: {
+            ...prev[currentQuestion],
+            question: newQuestion,
+            options: newOptions
+          }
         }))
       }
     }
   }
 
-  // Apply strikethrough to selected text
+  // Apply strikethrough to selected text (question and answer choices)
   const handleStrikethroughText = () => {
     const selectedText = window.getSelection()?.toString()
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
+        // Strikethrough in question text
         const oldQuestion = question.question
         const newQuestion = oldQuestion.replace(
-          new RegExp(`(${selectedText})`, 'g'),
-          `<del style="text-decoration: line-through;">$1</del>`
+          new RegExp(`(?<!<del[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</del>)`, 'g'),
+          `<del style="text-decoration: line-through;">$&</del>`
         )
+
+        // Also strikethrough in all answer choices
+        const newOptions = question.options.map(option =>
+          option.replace(
+            new RegExp(`(?<!<del[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</del>)`, 'g'),
+            `<del style="text-decoration: line-through;">$&</del>`
+          )
+        )
+
         setTextFormats(prev => ({
           ...prev,
-          [currentQuestion]: { ...prev[currentQuestion], question: newQuestion }
+          [currentQuestion]: {
+            ...prev[currentQuestion],
+            question: newQuestion,
+            options: newOptions
+          }
         }))
       }
     }
@@ -638,7 +664,7 @@ export default function ExamGeneratorPage() {
   const isCorrect = selectedAnswer === correctOption
 
   return (
-    <main className="min-h-screen p-6 bg-background">
+    <main className={`min-h-screen p-6 ${isExamStarted ? 'windows-2000-theme' : 'bg-background'}`}>
       <div className="max-w-3xl mx-auto">
         <Breadcrumb className="mb-8">
           <BreadcrumbList>
@@ -699,7 +725,7 @@ export default function ExamGeneratorPage() {
           </div>
 
           {/* Question */}
-          <Card>
+          <Card className={isExamStarted ? 'win2k-panel' : ''}>
             <CardHeader>
               {/* Highlight and Strikeout Buttons */}
               <div className="flex gap-2 mb-4">
@@ -707,7 +733,7 @@ export default function ExamGeneratorPage() {
                   onClick={handleHighlightText}
                   variant="outline"
                   size="sm"
-                  className="bg-yellow-100 hover:bg-yellow-200 text-yellow-900 border-yellow-300"
+                  className={`${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400 bg-yellow-100 hover:bg-yellow-200 text-yellow-900' : 'bg-yellow-100 hover:bg-yellow-200 text-yellow-900 border-yellow-300'}`}
                 >
                   🖍️ Highlight
                 </Button>
@@ -715,7 +741,7 @@ export default function ExamGeneratorPage() {
                   onClick={handleStrikethroughText}
                   variant="outline"
                   size="sm"
-                  className="bg-gray-100 hover:bg-gray-200 text-gray-900 border-gray-300"
+                  className={`${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400 bg-gray-100 hover:bg-gray-200 text-gray-900' : 'bg-gray-100 hover:bg-gray-200 text-gray-900 border-gray-300'}`}
                 >
                   ✏️ Strikeout
                 </Button>
@@ -778,7 +804,11 @@ export default function ExamGeneratorPage() {
                             ? 'text-red-600 dark:text-red-400'
                             : 'text-foreground'
                       }`}>
-                        <span className="font-semibold">{optionLetter}.</span> {option}
+                        <span className="font-semibold">{optionLetter}.</span> {textFormats[currentQuestion]?.options?.[idx] ? (
+                          <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
+                        ) : (
+                          option
+                        )}
                       </div>
                     </div>
                   </div>
@@ -821,7 +851,7 @@ export default function ExamGeneratorPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 -mx-6 mt-8"
+            className={`sticky bottom-0 ${isExamStarted ? 'win2k-panel-inset' : 'bg-card border-t border-border'} shadow-lg p-6 -mx-6 mt-8`}
           >
             <div className="max-w-3xl mx-auto flex items-center justify-between gap-4">
               {/* Flag Checkbox on Left */}
@@ -847,7 +877,7 @@ export default function ExamGeneratorPage() {
                   onClick={handlePrevious}
                   disabled={currentQuestion === 0}
                   variant="outline"
-                  className="min-w-[120px]"
+                  className={`min-w-[120px] ${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400' : ''}`}
                 >
                   Previous
                 </Button>
@@ -926,12 +956,12 @@ export default function ExamGeneratorPage() {
                       const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
                       window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
                     }}
-                    className="min-w-[120px]"
+                    className={`min-w-[120px] ${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400' : ''}`}
                   >
                     End Exam
                   </Button>
                 ) : (
-                  <Button onClick={handleNext} className="min-w-[120px]">
+                  <Button onClick={handleNext} className={`min-w-[120px] ${isExamStarted ? 'win2k-button !border-2 !border-b-2 !border-r-2 !border-gray-400' : ''}`}>
                     Next
                   </Button>
                 )}
