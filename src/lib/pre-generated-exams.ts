@@ -164,6 +164,7 @@ export async function hasValidPreGeneratedExam(
 /**
  * Trigger background pre-generation of next exam
  * Called from the prioritizer page after exam completion
+ * Uses improved job queue for better reliability
  */
 export async function triggerBackgroundPreGeneration(
   userId: string,
@@ -180,7 +181,19 @@ export async function triggerBackgroundPreGeneration(
       return
     }
 
-    // Fire-and-forget background generation
+    // Use improved job queue handler if available (client-side)
+    if (typeof window !== 'undefined') {
+      try {
+        const { enqueueExamGeneration } = await import('./background-job-handler')
+        enqueueExamGeneration(userId, nextExamType)
+        console.log(`[Pre-Gen] Queued ${nextExamType} exam generation for user ${userId}`)
+        return
+      } catch (err) {
+        console.warn('Job queue handler not available, falling back to direct fetch')
+      }
+    }
+
+    // Fire-and-forget background generation (fallback)
     // Don't await this, let it happen in background
     fetch('/api/pre-generate-exam', {
       method: 'POST',
