@@ -509,9 +509,11 @@ export default function ExamGeneratorPage() {
               <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
                 EPPP Exam
               </h1>
-              <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                Choose an exam type to get started.
-              </p>
+              {!isGenerating && (
+                <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                  Choose an exam type to get started.
+                </p>
+              )}
 
               {!isGenerating && (
                 <div>
@@ -793,13 +795,18 @@ export default function ExamGeneratorPage() {
           transition={{ duration: 0.3 }}
           className={`space-y-6 ${isPaused ? 'blur-sm pointer-events-none' : ''}`}
         >
-          {/* Keyboard Shortcuts Help */}
-          <div className="text-xs text-muted-foreground text-center mb-4 px-4 py-2 bg-muted rounded">
-            💡 Keyboard shortcuts: <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + P</kbd> Previous • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + N</kbd> Next • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + H</kbd> Highlight • <kbd className="px-2 py-1 bg-background border border-border rounded text-xs">{isMac ? 'Option' : 'Alt'} + S</kbd> Strikethrough
-          </div>
-
           {/* Header with Question Number, Progress, and Timer */}
           <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
+            {/* Domain and Difficulty Tags */}
+            <div className="flex gap-2 mb-4">
+              <Badge className="rounded-full px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800">
+                {question.domain}
+              </Badge>
+              <Badge className="rounded-full px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800">
+                {question.difficulty}
+              </Badge>
+            </div>
+
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-4">
                 <div>
