@@ -58,6 +58,7 @@ export default function ExamGeneratorPage() {
   const [textFormats, setTextFormats] = useState<Record<number, Record<string, string>>>({})
   const [assignmentId, setAssignmentId] = useState<string | null>(null)
   const [isPaused, setIsPaused] = useState(false)
+  const [hasPausedExam, setHasPausedExam] = useState(false)
 
   // Apply highlight to selected text (question and answer choices)
   const handleHighlightText = () => {
@@ -163,31 +164,51 @@ export default function ExamGeneratorPage() {
     window.location.href = '/dashboard'
   }
 
-  // Check for paused exam on mount
+  // Resume last paused exam (manual resume via button)
+  const handleResumeLastExam = () => {
+    const pausedState = localStorage.getItem('pausedExamState')
+    if (!pausedState) {
+      setHasPausedExam(false)
+      return
+    }
+
+    try {
+      const state = JSON.parse(pausedState)
+      // Restore all exam state
+      setExamType(state.examType)
+      setMode(state.mode)
+      setQuestions(state.questions)
+      setCurrentQuestion(state.currentQuestion)
+      setSelectedAnswers(state.selectedAnswers)
+      setFlaggedQuestions(state.flaggedQuestions || {})
+      setTextFormats(state.textFormats || {})
+      setTimeRemaining(state.timeRemaining)
+      setAssignmentId(state.assignmentId)
+      setIsExamStarted(true)
+      setHasPausedExam(false)
+      // Don't show pause modal on manual resume - user explicitly clicked to resume
+    } catch (error) {
+      console.error('Failed to restore paused exam:', error)
+      localStorage.removeItem('pausedExamState')
+      setHasPausedExam(false)
+    }
+  }
+
+  // Check for paused exam on mount (detect only, don't auto-restore)
   useEffect(() => {
     const pausedState = localStorage.getItem('pausedExamState')
     if (pausedState && !isExamStarted) {
       try {
         const state = JSON.parse(pausedState)
-        // Only auto-restore if it's a practice exam (user explicitly paused)
-        if (state.examType === 'practice') {
-          setExamType(state.examType)
-          setMode(state.mode)
-          setQuestions(state.questions)
-          setCurrentQuestion(state.currentQuestion)
-          setSelectedAnswers(state.selectedAnswers)
-          setFlaggedQuestions(state.flaggedQuestions)
-          setTextFormats(state.textFormats)
-          setTimeRemaining(state.timeRemaining)
-          setAssignmentId(state.assignmentId)
-          setIsExamStarted(true)
-          // Don't auto-resume, show the pause modal
-          setIsPaused(true)
-        }
+        // Just detect the paused exam, don't auto-restore
+        setHasPausedExam(true)
       } catch (error) {
-        console.error('Failed to restore paused exam:', error)
+        console.error('Failed to parse paused exam:', error)
         localStorage.removeItem('pausedExamState')
+        setHasPausedExam(false)
       }
+    } else if (!pausedState) {
+      setHasPausedExam(false)
     }
   }, [isExamStarted])
 
@@ -347,6 +368,10 @@ export default function ExamGeneratorPage() {
             examMode: mode,
             ...priorityData,
           }
+
+          // Clear paused exam state since exam is now completed
+          localStorage.removeItem('pausedExamState')
+          setHasPausedExam(false)
 
           const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
           window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
@@ -544,6 +569,25 @@ export default function ExamGeneratorPage() {
                 <p className="text-muted-foreground mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                   Choose an exam type to get started.
                 </p>
+              )}
+
+              {/* Resume Last Exam Button */}
+              {hasPausedExam && !isGenerating && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="max-w-2xl mx-auto mb-8"
+                >
+                  <Button
+                    onClick={handleResumeLastExam}
+                    variant="outline"
+                    size="sm"
+                    className="w-full rounded-none"
+                  >
+                    Resume Last Exam
+                  </Button>
+                </motion.div>
               )}
 
               {!isGenerating && (
@@ -1085,6 +1129,10 @@ export default function ExamGeneratorPage() {
                         examMode: mode,
                         ...priorityData,
                       }
+
+                      // Clear paused exam state since exam is now completed
+                      localStorage.removeItem('pausedExamState')
+                      setHasPausedExam(false)
 
                       const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
                       window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
