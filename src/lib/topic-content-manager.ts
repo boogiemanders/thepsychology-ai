@@ -1,6 +1,11 @@
 import { readFileSync } from 'fs'
 import { join } from 'path'
 import path from 'path'
+import Anthropic from '@anthropic-ai/sdk'
+
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+})
 
 export interface TopicContentMetadata {
   topic_name: string
@@ -171,5 +176,69 @@ export function loadFullTopicContent(
   } catch (error) {
     console.error(`Failed to load full topic content for ${topicName}:`, error)
     return null
+  }
+}
+
+/**
+ * Replace generic metaphors in content with personalized metaphors based on user interests
+ *
+ * This function takes pre-generated content with adult-friendly metaphors and replaces them
+ * with metaphors tailored to the user's specific interests (e.g., sports, music, cooking, etc.)
+ *
+ * @param baseContent - The pre-generated teaching content with generic metaphors
+ * @param userInterests - User's interests as a comma-separated string
+ * @param topicName - The name of the topic (for context)
+ * @returns Promise resolving to content with personalized metaphors
+ */
+export async function replaceMetaphors(
+  baseContent: string,
+  userInterests: string,
+  topicName: string
+): Promise<string> {
+  const METAPHOR_REPLACEMENT_PROMPT = `You are helping personalize psychology education content.
+
+You have teaching content about "${topicName}" that contains generic metaphors and examples. Your task is to replace these with metaphors that connect to the student's specific interests.
+
+Student's Interests: ${userInterests}
+
+Original Content:
+${baseContent}
+
+Your Task:
+Rewrite the content to replace generic metaphors and examples with ones that relate to the student's interests. Keep all the core psychology concepts, key terms, and factual information exactly the same - only change the analogies, metaphors, and examples.
+
+Guidelines:
+- Preserve all headers, structure, and formatting
+- Keep all technical terms and definitions unchanged
+- Replace generic metaphors (workplace, technology, etc.) with interest-based ones
+- Make sure new metaphors are just as clear and educational
+- Maintain the same reading level and tone
+- Keep the same length (don't make it significantly longer or shorter)
+- Bold the same key terms that were bolded before
+
+Return the complete rewritten content with personalized metaphors.`
+
+  try {
+    const message = await anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 8000,
+      messages: [
+        {
+          role: 'user',
+          content: METAPHOR_REPLACEMENT_PROMPT,
+        },
+      ],
+    })
+
+    const textContent = message.content.find((block) => block.type === 'text')
+    if (!textContent || textContent.type !== 'text') {
+      throw new Error('No text content in response')
+    }
+
+    return textContent.text
+  } catch (error) {
+    console.error('Error replacing metaphors:', error)
+    // Fallback: return original content if personalization fails
+    return baseContent
   }
 }

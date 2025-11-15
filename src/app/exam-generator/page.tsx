@@ -882,26 +882,28 @@ export default function ExamGeneratorPage() {
                     {mode === 'study' ? 'Study' : 'Test'}
                   </span>
                 </div>
-                <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                  Question {currentQuestion + 1} of {questions.length}
-                </p>
-              </div>
-              {mode === 'test' && timeRemaining > 0 && (
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2 text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                    <Clock className="w-4 h-4" />
-                    {formatTime(timeRemaining)}
-                  </div>
-                  <Button
-                    onClick={handlePause}
-                    variant="outline"
-                    size="sm"
-                    className="rounded-none hover:bg-accent transition-colors"
-                  >
-                    Pause
-                  </Button>
+                <div className="flex items-center justify-between">
+                  <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                    Question {currentQuestion + 1} of {questions.length}
+                  </p>
+                  {mode === 'test' && timeRemaining > 0 && (
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-2 text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                        <Clock className="w-4 h-4" />
+                        {formatTime(timeRemaining)}
+                      </div>
+                      <Button
+                        onClick={handlePause}
+                        variant="outline"
+                        size="sm"
+                        className="rounded-none hover:bg-accent transition-colors"
+                      >
+                        Pause
+                      </Button>
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
             <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-1" />
           </div>
@@ -967,7 +969,7 @@ export default function ExamGeneratorPage() {
                         isSelected ? 'scale-110' : ''
                       }`}
                     >
-                      <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all ${
                         isSelected
                           ? 'border-foreground bg-foreground'
                           : 'border-muted-foreground bg-transparent hover:border-foreground'

@@ -65,42 +65,43 @@ Style Guidelines:
 
 Start generating the lesson now based on the reference material provided.`
 
-interface TopicInfo {
-  name: string
-  domain: string
-  domainId: string
-  slug: string
-  domainFolder: string
-}
+async function regenerateTopic() {
+  console.log('='.repeat(80))
+  console.log('TESTING TABLE GENERATION')
+  console.log('='.repeat(80))
+  console.log('\nRegenerating Cognitive Development with updated prompt...\n')
 
-async function generateTopicContent(topic: TopicInfo): Promise<string> {
-  console.log(`Generating content for: ${topic.name}...`)
+  const topicName = 'Cognitive Development'
+  const domainId = '4'
+  const domainData = EPPP_DOMAINS.find(d => d.id === domainId)!
 
-  // Load reference content from EPPP Guts
-  const referenceContent = loadReferenceContent(topic.name, topic.domainId)
+  // Load reference content
+  const referenceContent = loadReferenceContent(topicName, domainId)
 
   if (!referenceContent) {
-    console.error(`  ⚠️  No reference content found for ${topic.name} in domain ${topic.domainId}`)
-    console.error(`  ⚠️  Generating without reference material (will be lower quality)`)
+    console.error('❌ No reference content found!')
+    return
   }
 
+  console.log(`✓ Loaded reference content (${referenceContent.length} characters)`)
+
+  // Check if reference has tables
+  const tableCount = (referenceContent.match(/\|/g) || []).length
+  console.log(`✓ Reference material contains ${Math.floor(tableCount / 3)} potential tables`)
+
   const prompt = TOPIC_GENERATION_PROMPT
-    .replace('{{TOPIC_NAME}}', topic.name)
-    .replace('{{DOMAIN}}', topic.domain)
-    .replace('{{REFERENCE_CONTENT}}', referenceContent || 'No reference material available. Generate based on your knowledge.')
+    .replace('{{TOPIC_NAME}}', topicName)
+    .replace('{{DOMAIN}}', domainData.name)
+    .replace('{{REFERENCE_CONTENT}}', referenceContent)
+
+  console.log('\nGenerating new version with table support...')
 
   let fullResponse = ''
-
   const stream = await client.messages.create({
     model: 'claude-sonnet-4-5-20250929',
     max_tokens: 10000,
     stream: true,
-    messages: [
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ],
+    messages: [{ role: 'user', content: prompt }],
   })
 
   for await (const event of stream) {
@@ -110,101 +111,51 @@ async function generateTopicContent(topic: TopicInfo): Promise<string> {
     }
   }
 
-  console.log(' done')
-  return fullResponse
-}
+  console.log(' done\n')
 
-function createSlug(topicName: string): string {
-  return topicName
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-}
+  // Count tables in generated content
+  const generatedTableCount = (fullResponse.match(/\|/g) || []).length
+  const estimatedTables = Math.floor(generatedTableCount / 3)
 
-function getDomainFolder(domain: string): string {
-  return domain
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-}
+  console.log(`✓ Generated ${fullResponse.length} characters`)
+  console.log(`✓ Generated content contains ${estimatedTables} table${estimatedTables !== 1 ? 's' : ''}`)
 
-async function generateAllTopics() {
-  console.log('Starting topic content generation...')
-
-  let totalTopics = 0
-  for (const domain of EPPP_DOMAINS) {
-    totalTopics += domain.topics.length
-  }
-  console.log(`Total topics to generate: ${totalTopics}`)
-
+  // Save the file
+  const slug = 'cognitive-development'
+  const domainFolder = '4-growth-lifespan-development'
   const topicsDir = join(process.cwd(), 'topic-content')
-  mkdirSync(topicsDir, { recursive: true })
+  const domainDir = join(topicsDir, domainFolder)
+  mkdirSync(domainDir, { recursive: true })
 
-  let generatedCount = 0
-  let failedCount = 0
-
-  for (const domainData of EPPP_DOMAINS) {
-    const domainFolder = getDomainFolder(domainData.name)
-    const domainDir = join(topicsDir, domainFolder)
-    mkdirSync(domainDir, { recursive: true })
-
-    console.log(`\n=== ${domainData.name} (${domainData.topics.length} topics) ===`)
-
-    for (const topicObj of domainData.topics) {
-      try {
-        const topic = topicObj.name
-        const slug = createSlug(topic)
-        const filePath = join(domainDir, `${slug}.md`)
-
-        const content = await generateTopicContent({
-          name: topic,
-          domain: domainData.name,
-          domainId: domainData.id,
-          slug,
-          domainFolder,
-        })
-
-        const now = new Date().toISOString()
-        const frontmatter = `---
-topic_name: ${topic}
+  const now = new Date().toISOString()
+  const frontmatter = `---
+topic_name: ${topicName}
 domain: ${domainData.name}
 slug: ${slug}
 generated_at: ${now}
 model: claude-sonnet-4-5-20250929
-version: 1
+version: 2
 ---
 
 `
 
-        const fileContent = frontmatter + content
+  const filePath = join(domainDir, `${slug}.md`)
+  writeFileSync(filePath, frontmatter + fullResponse, 'utf-8')
 
-        writeFileSync(filePath, fileContent, 'utf-8')
-        console.log(`✓ Saved: ${slug}`)
-        generatedCount++
+  console.log(`\n✓ Saved to: ${filePath}`)
 
-        // Add a small delay between requests to avoid rate limiting
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-      } catch (error) {
-        console.error(`✗ Failed to generate ${topicObj.name}:`, error)
-        failedCount++
-      }
-    }
-  }
-
-  console.log(`\n\n=== Generation Complete ===`)
-  console.log(`Successfully generated: ${generatedCount}`)
-  console.log(`Failed: ${failedCount}`)
-  console.log(`Total: ${generatedCount + failedCount}`)
-
-  if (failedCount > 0) {
-    console.log('\n⚠️  Some topics failed to generate. You can re-run this script to retry.')
+  if (estimatedTables > 0) {
+    console.log('\n✅ SUCCESS: Tables were generated!')
+    console.log('\nYou can now:')
+    console.log('1. View the file to see the tables')
+    console.log('2. Test in Topic Teacher to see how they render')
   } else {
-    console.log('\n✅ All topics generated successfully!')
+    console.log('\n⚠️  No tables detected in generated content')
+    console.log('The AI may not have found table-worthy content in this topic')
   }
 }
 
-// Run the generation
-generateAllTopics().catch((error) => {
-  console.error('Fatal error:', error)
+regenerateTopic().catch(error => {
+  console.error('Error:', error)
   process.exit(1)
 })

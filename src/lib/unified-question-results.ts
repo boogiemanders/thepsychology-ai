@@ -158,6 +158,14 @@ export function getUnresolvedSections(topic: string): SectionResult[] {
 }
 
 /**
+ * Get section names from exam/diagnostic wrong answers for highlighting in topic-teacher
+ * Returns array of section names that should show green apple emoji
+ */
+export function getExamWrongSections(topic: string): string[] {
+  return getUnresolvedSections(topic).map((s) => s.sectionName)
+}
+
+/**
  * Batch import question results (useful for syncing from Supabase)
  */
 export function importQuestionResults(

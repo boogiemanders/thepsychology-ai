@@ -74,22 +74,27 @@ interface TopicInfo {
 }
 
 async function generateTopicContent(topic: TopicInfo): Promise<string> {
-  console.log(`Generating content for: ${topic.name}...`)
+  console.log(`\nGenerating content for: ${topic.name}...`)
+  console.log(`Domain: ${topic.domain}`)
 
   // Load reference content from EPPP Guts
   const referenceContent = loadReferenceContent(topic.name, topic.domainId)
 
   if (!referenceContent) {
     console.error(`  ⚠️  No reference content found for ${topic.name} in domain ${topic.domainId}`)
-    console.error(`  ⚠️  Generating without reference material (will be lower quality)`)
+    throw new Error(`No reference content available for ${topic.name}`)
   }
+
+  console.log(`  ✓ Loaded reference content (${referenceContent.length} characters)`)
 
   const prompt = TOPIC_GENERATION_PROMPT
     .replace('{{TOPIC_NAME}}', topic.name)
     .replace('{{DOMAIN}}', topic.domain)
-    .replace('{{REFERENCE_CONTENT}}', referenceContent || 'No reference material available. Generate based on your knowledge.')
+    .replace('{{REFERENCE_CONTENT}}', referenceContent)
 
   let fullResponse = ''
+
+  console.log(`  Generating lesson...`)
 
   const stream = await client.messages.create({
     model: 'claude-sonnet-4-5-20250929',
@@ -111,6 +116,7 @@ async function generateTopicContent(topic: TopicInfo): Promise<string> {
   }
 
   console.log(' done')
+  console.log(`  ✓ Generated ${fullResponse.length} characters`)
   return fullResponse
 }
 
@@ -128,14 +134,20 @@ function getDomainFolder(domain: string): string {
     .replace(/^-|-$/g, '')
 }
 
-async function generateAllTopics() {
-  console.log('Starting topic content generation...')
+async function generateTestTopics() {
+  console.log('='.repeat(80))
+  console.log('TOPIC GENERATION TEST')
+  console.log('='.repeat(80))
+  console.log('\nGenerating 3 test topics from different domains...\n')
 
-  let totalTopics = 0
-  for (const domain of EPPP_DOMAINS) {
-    totalTopics += domain.topics.length
-  }
-  console.log(`Total topics to generate: ${totalTopics}`)
+  const testTopics = [
+    // Domain 2: Cognitive-Affective
+    { domainId: '2', topicName: 'Classical Conditioning' },
+    // Domain 4: Growth & Lifespan
+    { domainId: '4', topicName: 'Cognitive Development' },
+    // Domain 5: Diagnosis
+    { domainId: '5-diagnosis', topicName: 'Bipolar and Depressive Disorders' },
+  ]
 
   const topicsDir = join(process.cwd(), 'topic-content')
   mkdirSync(topicsDir, { recursive: true })
@@ -143,30 +155,32 @@ async function generateAllTopics() {
   let generatedCount = 0
   let failedCount = 0
 
-  for (const domainData of EPPP_DOMAINS) {
-    const domainFolder = getDomainFolder(domainData.name)
-    const domainDir = join(topicsDir, domainFolder)
-    mkdirSync(domainDir, { recursive: true })
+  for (const { domainId, topicName } of testTopics) {
+    try {
+      // Find the domain data
+      const domainData = EPPP_DOMAINS.find(d => d.id === domainId)
+      if (!domainData) {
+        throw new Error(`Domain not found: ${domainId}`)
+      }
 
-    console.log(`\n=== ${domainData.name} (${domainData.topics.length} topics) ===`)
+      const domainFolder = getDomainFolder(domainData.name)
+      const domainDir = join(topicsDir, domainFolder)
+      mkdirSync(domainDir, { recursive: true })
 
-    for (const topicObj of domainData.topics) {
-      try {
-        const topic = topicObj.name
-        const slug = createSlug(topic)
-        const filePath = join(domainDir, `${slug}.md`)
+      const slug = createSlug(topicName)
+      const filePath = join(domainDir, `${slug}.md`)
 
-        const content = await generateTopicContent({
-          name: topic,
-          domain: domainData.name,
-          domainId: domainData.id,
-          slug,
-          domainFolder,
-        })
+      const content = await generateTopicContent({
+        name: topicName,
+        domain: domainData.name,
+        domainId: domainData.id,
+        slug,
+        domainFolder,
+      })
 
-        const now = new Date().toISOString()
-        const frontmatter = `---
-topic_name: ${topic}
+      const now = new Date().toISOString()
+      const frontmatter = `---
+topic_name: ${topicName}
 domain: ${domainData.name}
 slug: ${slug}
 generated_at: ${now}
@@ -176,35 +190,40 @@ version: 1
 
 `
 
-        const fileContent = frontmatter + content
+      const fileContent = frontmatter + content
 
-        writeFileSync(filePath, fileContent, 'utf-8')
-        console.log(`✓ Saved: ${slug}`)
-        generatedCount++
+      writeFileSync(filePath, fileContent, 'utf-8')
+      console.log(`  ✓ Saved to: ${filePath}`)
+      generatedCount++
 
-        // Add a small delay between requests to avoid rate limiting
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-      } catch (error) {
-        console.error(`✗ Failed to generate ${topicObj.name}:`, error)
-        failedCount++
-      }
+      // Add a delay between requests
+      console.log('  Waiting 2 seconds before next topic...')
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+    } catch (error) {
+      console.error(`  ✗ Failed to generate ${topicName}:`, error)
+      failedCount++
     }
   }
 
-  console.log(`\n\n=== Generation Complete ===`)
-  console.log(`Successfully generated: ${generatedCount}`)
-  console.log(`Failed: ${failedCount}`)
-  console.log(`Total: ${generatedCount + failedCount}`)
+  console.log('\n' + '='.repeat(80))
+  console.log('GENERATION COMPLETE')
+  console.log('='.repeat(80))
+  console.log(`Successfully generated: ${generatedCount}/3`)
+  console.log(`Failed: ${failedCount}/3`)
 
-  if (failedCount > 0) {
-    console.log('\n⚠️  Some topics failed to generate. You can re-run this script to retry.')
+  if (generatedCount > 0) {
+    console.log('\n✅ Test topics generated successfully!')
+    console.log('You can now:')
+    console.log('1. Review the generated content in topic-content/ folders')
+    console.log('2. Test the Topic Teacher to see if content loads correctly')
+    console.log('3. Run scripts/generate-all-topics.ts to generate all remaining topics')
   } else {
-    console.log('\n✅ All topics generated successfully!')
+    console.log('\n❌ Generation failed. Check the errors above.')
   }
 }
 
 // Run the generation
-generateAllTopics().catch((error) => {
+generateTestTopics().catch((error) => {
   console.error('Fatal error:', error)
   process.exit(1)
 })

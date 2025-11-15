@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
-import { loadTopicContent, mergePersonalizedContent, loadFullTopicContent } from '@/lib/topic-content-manager'
+import { loadTopicContent, replaceMetaphors } from '@/lib/topic-content-manager'
+import { loadReferenceContent } from '@/lib/eppp-reference-loader'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -48,49 +49,6 @@ interface Message {
   content: string
 }
 
-const PERSONALIZATION_PROMPT = `You are helping create personalized examples for EPPP psychology education. A student with specific interests is learning about a topic.
-
-Topic: {{TOPIC}}
-Student Interests: {{INTERESTS}}
-
-Based on the topic and student interests, generate 2-3 specific, concrete examples or analogies that relate to their interests. These should help them understand the concept better by connecting it to things they care about.
-
-Keep it concise (3-5 sentences total), practical, and directly connected to their interests. Use simple language (13-year-old reading level). Do not include any headers or special formatting - just the examples themselves.`
-
-async function generatePersonalizedExamples(
-  topic: string,
-  userInterests: string | null
-): Promise<string> {
-  if (!userInterests) {
-    return ''
-  }
-
-  try {
-    const prompt = PERSONALIZATION_PROMPT
-      .replace('{{TOPIC}}', topic)
-      .replace('{{INTERESTS}}', userInterests)
-
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 500,
-      messages: [
-        {
-          role: 'user',
-          content: prompt,
-        },
-      ],
-    })
-
-    if (response.content[0].type === 'text') {
-      return response.content[0].text
-    }
-    return ''
-  } catch (error) {
-    console.error('Error generating personalized examples:', error)
-    return ''
-  }
-}
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -112,18 +70,16 @@ export async function POST(request: NextRequest) {
         const preGeneratedContent = loadTopicContent(topic, domain)
 
         if (preGeneratedContent) {
-          // Use pre-generated base content
+          // Use pre-generated base content (with adult-friendly metaphors)
           lessonContent = preGeneratedContent.baseContent
 
-          // Generate personalized examples if user has interests
+          // Replace metaphors if user has interests
           if (userInterests) {
-            const personalizedExamples = await generatePersonalizedExamples(topic, userInterests)
-            if (personalizedExamples) {
-              lessonContent = mergePersonalizedContent(lessonContent, personalizedExamples)
-            }
+            console.log(`[Topic Teacher] Personalizing metaphors for ${topic} based on interests: ${userInterests}`)
+            lessonContent = await replaceMetaphors(lessonContent, userInterests, topic)
+          } else {
+            console.log(`[Topic Teacher] Using pre-generated content with generic metaphors for ${topic}`)
           }
-
-          console.log(`[Topic Teacher] Using cached content for ${topic}`)
         } else {
           // Fallback: Generate on-demand if no pre-generated content
           console.warn(`[Topic Teacher] No pre-generated content for ${topic}, falling back to on-demand generation`)
@@ -204,13 +160,24 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // For follow-ups, load the full content and pass it as reference material
+    // For follow-ups, load the EPPP Guts reference material (not pre-generated content)
+    // This gives more detailed, comprehensive answers to follow-up questions
     let referenceMaterial: string | undefined
-    if (!isInitial && topic && domain) {
-      const fullContent = loadFullTopicContent(topic, domain)
-      if (fullContent) {
-        referenceMaterial = fullContent
-        console.log(`[Topic Teacher] Loaded full content for follow-up: ${topic}`)
+    if (!isInitial && topic) {
+      // Extract domain ID from domain name for the loader
+      // Domain format: "1: Biological Bases" → domainId: "1"
+      const domainId = domain.split(':')[0].trim()
+      const referenceContent = loadReferenceContent(topic, domainId)
+      if (referenceContent) {
+        referenceMaterial = referenceContent
+        console.log(`[Topic Teacher] Loaded EPPP reference material for follow-up: ${topic}`)
+      } else {
+        console.warn(`[Topic Teacher] No EPPP reference found for ${topic}, using pre-generated content`)
+        // Fallback to pre-generated content if EPPP reference not found
+        const preGenerated = loadTopicContent(topic, domain)
+        if (preGenerated) {
+          referenceMaterial = preGenerated.content
+        }
       }
     }
 

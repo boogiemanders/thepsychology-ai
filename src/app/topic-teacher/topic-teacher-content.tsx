@@ -37,6 +37,7 @@ export function TopicTeacherContent() {
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
   const hasQuizResults = searchParams.get('hasQuizResults') === 'true'
+  const hasExamResults = searchParams.get('hasExamResults') === 'true'
 
   const [messages, setMessages] = useState<Message[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -137,33 +138,57 @@ export function TopicTeacherContent() {
     }
   }, [user?.id])
 
-  // Load quiz results and compute highlight data
+  // Load quiz/exam results and compute highlight data
   useEffect(() => {
-    if (hasQuizResults && topic) {
+    if (topic) {
       const decodedTopic = decodeURIComponent(topic)
-      const quizResults = getQuizResults(decodedTopic)
+      let allWrongSections: string[] = []
+      let allCorrectSections: string[] = []
+      let allPreviouslyWrongNowCorrect: string[] = []
+      let hasAnyResults = false
 
+      // Always check for quiz results
+      const quizResults = getQuizResults(decodedTopic)
       if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
-        const recentlyWrongSections = quizResults.wrongAnswers.flatMap(
+        const quizWrongSections = quizResults.wrongAnswers.flatMap(
           (wa) => wa.relatedSections || []
         )
-        const recentlyCorrectSections = quizResults.correctAnswers
+        const quizCorrectSections = quizResults.correctAnswers
           .filter((ca) => !(ca as any).wasPreviouslyWrong)
           .flatMap((ca) => ca.relatedSections || [])
-        const previouslyWrongNowCorrectSections = quizResults.correctAnswers
+        const quizPreviouslyWrongNowCorrect = quizResults.correctAnswers
           .filter((ca) => (ca as any).wasPreviouslyWrong)
           .flatMap((ca) => ca.relatedSections || [])
 
+        allWrongSections = [...allWrongSections, ...quizWrongSections]
+        allCorrectSections = [...allCorrectSections, ...quizCorrectSections]
+        allPreviouslyWrongNowCorrect = [
+          ...allPreviouslyWrongNowCorrect,
+          ...quizPreviouslyWrongNowCorrect,
+        ]
+        hasAnyResults = true
+      }
+
+      // Always check for exam results (from diagnostic/practice exams)
+      const { getExamWrongSections } = require('@/lib/unified-question-results')
+      const examWrongSections = getExamWrongSections(decodedTopic)
+      if (examWrongSections.length > 0) {
+        allWrongSections = [...allWrongSections, ...examWrongSections]
+        hasAnyResults = true
+      }
+
+      // Set highlight data with combined results
+      if (hasAnyResults && allWrongSections.length > 0) {
         setHighlightData({
-          recentlyWrongSections: [...new Set(recentlyWrongSections)],
-          recentlyCorrectSections: [...new Set(recentlyCorrectSections)],
+          recentlyWrongSections: [...new Set(allWrongSections)],
+          recentlyCorrectSections: [...new Set(allCorrectSections)],
           previouslyWrongNowCorrectSections: [
-            ...new Set(previouslyWrongNowCorrectSections),
+            ...new Set(allPreviouslyWrongNowCorrect),
           ],
         })
       }
     }
-  }, [hasQuizResults, topic])
+  }, [topic])
 
   // Initialize with lesson
   useEffect(() => {
@@ -518,7 +543,7 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              🍏 Highlighting sections: {highlightData.recentlyWrongSections.join(', ')}
+              🍏 Highlighting sections where you got questions wrong: {highlightData.recentlyWrongSections.join(', ')}
             </p>
           </motion.div>
         )}
