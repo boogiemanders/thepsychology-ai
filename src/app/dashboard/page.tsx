@@ -337,7 +337,7 @@ export default function DashboardPage() {
       description: "Take practice exams to test your knowledge",
       href: "/exam-generator",
       cta: "Start Exam",
-      className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3",
+      className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
       background: (
         <Marquee className="absolute inset-0 opacity-20" repeat={2}>
           <div className="flex gap-6 whitespace-nowrap px-4">
@@ -368,7 +368,7 @@ export default function DashboardPage() {
         : "AI-powered study recommendations",
       href: "/prioritize",
       cta: "View Insights",
-      className: "lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-5",
+      className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3",
       background: priorityDomains.length > 0 ? (
         <div className="absolute inset-0 overflow-hidden">
           <Marquee className="opacity-40" pauseOnHover>
@@ -397,7 +397,7 @@ export default function DashboardPage() {
       description: "View your completed practice exams",
       href: "/review-exams",
       cta: "View Results",
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-5",
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
     },
     {
       Icon: Droplets,
@@ -405,7 +405,7 @@ export default function DashboardPage() {
       description: "Improve focus and reduce burnout while studying",
       href: "#",
       cta: "Coming Soon",
-      className: "lg:col-start-1 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
+      className: "lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
       background: (
         <div className="absolute inset-0 overflow-hidden">
           <BreathingAnimation speed={0.596} />
@@ -418,7 +418,7 @@ export default function DashboardPage() {
       description: `${studyStats.totalQuizzes} quizzes • ${progressData.completedTopics}/${progressData.totalTopics} topics`,
       href: "/topic-selector",
       cta: "Start Studying",
-      className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
+      className: "lg:col-start-3 lg:col-end-5 lg:row-start-3 lg:row-end-7",
       background: (
         <div className="absolute inset-0 flex flex-col items-start justify-start pt-4 p-4 h-full">
           {/* Priority Badges Section */}
