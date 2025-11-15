@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+import { parseExamFile } from '@/lib/exam-file-manager'
 
 /**
  * Assign an exam file to a user
@@ -86,8 +89,8 @@ export async function POST(request: NextRequest) {
 
     if (existingAssignment) {
       // User already has this exam assigned but not completed
-      // Fetch and return it
-      const { metadata, questions } = await fetchExamFromGitHub(
+      // Load it from disk
+      const { metadata, questions } = loadExamFromDisk(
         unusedFile,
         examType
       )
@@ -118,8 +121,8 @@ export async function POST(request: NextRequest) {
       throw insertError
     }
 
-    // Fetch exam data from GitHub
-    const { metadata, questions } = await fetchExamFromGitHub(
+    // Load exam data from disk
+    const { metadata, questions } = loadExamFromDisk(
       unusedFile,
       examType
     )
@@ -167,23 +170,30 @@ function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[
 }
 
 /**
- * Fetch exam from GitHub
+ * Load exam directly from disk (no HTTP round-trip needed)
+ * This is much faster and more reliable than the previous HTTP fetch approach
  */
-async function fetchExamFromGitHub(
+function loadExamFromDisk(
   examFile: string,
   examType: 'diagnostic' | 'practice'
 ) {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/api/fetch-exam-from-github?examFile=${examFile}&examType=${examType}`
-  )
+  try {
+    const examsDir = join(process.cwd(), 'exams', examType)
+    const filePath = join(examsDir, examFile)
 
-  if (!response.ok) {
-    throw new Error(`Failed to fetch exam: ${response.statusText}`)
-  }
+    console.log(`[Assign Exam] Loading exam from disk: ${filePath}`)
 
-  const data = await response.json()
-  return {
-    metadata: data.metadata,
-    questions: data.questions,
+    const content = readFileSync(filePath, 'utf-8')
+    const examData = parseExamFile(content)
+
+    console.log(`[Assign Exam] Successfully loaded ${examData.questions.length} questions from ${examFile}`)
+
+    return {
+      metadata: examData.metadata,
+      questions: examData.questions,
+    }
+  } catch (error) {
+    console.error(`[Assign Exam] Error loading exam file ${examFile}:`, error)
+    throw new Error(`Failed to load exam file: ${examFile}`)
   }
 }
