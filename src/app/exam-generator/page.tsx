@@ -480,10 +480,18 @@ export default function ExamGeneratorPage() {
   }
 
   const handleSelectAnswer = (option: string) => {
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [currentQuestion]: option,
-    }))
+    setSelectedAnswers((prev) => {
+      // Allow unclicking - if clicking the same option, remove it
+      if (prev[currentQuestion] === option) {
+        const newAnswers = { ...prev }
+        delete newAnswers[currentQuestion]
+        return newAnswers
+      }
+      return {
+        ...prev,
+        [currentQuestion]: option,
+      }
+    })
     setShowExplanation(false)
   }
 
@@ -866,7 +874,7 @@ export default function ExamGeneratorPage() {
               >
                 Highlight
               </Button>
-              <span className="text-xs text-muted-foreground pl-1" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + H</span>
+              <span className="text-xs text-muted-foreground pl-2" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + H</span>
             </div>
             <div className="flex flex-col gap-1">
               <Button
@@ -878,12 +886,12 @@ export default function ExamGeneratorPage() {
               >
                 Strikeout
               </Button>
-              <span className="text-xs text-muted-foreground pl-1" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
+              <span className="text-xs text-muted-foreground pl-2" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
             </div>
           </div>
 
           {/* Question */}
-          <Card className="">
+          <Card className="rounded-none">
             <CardHeader>
               <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text" style={{ fontFamily: 'Tahoma' }}>
                 {textFormats[currentQuestion]?.question ? (
@@ -915,13 +923,13 @@ export default function ExamGeneratorPage() {
                         isSelected ? 'scale-110' : ''
                       }`}
                     >
-                      <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
+                      <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
                         isSelected
                           ? 'border-foreground bg-foreground'
                           : 'border-muted-foreground bg-transparent hover:border-foreground'
                       }`}>
                         {isSelected && (
-                          <div className="w-2.5 h-2.5 bg-white rounded-full" />
+                          <div className="w-2 h-2 bg-white rounded-full" />
                         )}
                       </div>
                     </motion.button>
@@ -929,7 +937,7 @@ export default function ExamGeneratorPage() {
                     {/* Option Text - Not Clickable */}
                     <div className="flex-1 min-w-0 pt-1">
                       <div className="text-base text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                        <span className="font-semibold">{optionLetter}.</span> {textFormats[currentQuestion]?.options?.[idx] ? (
+                        <span>{optionLetter}.</span> {textFormats[currentQuestion]?.options?.[idx] ? (
                           <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
                         ) : (
                           option
@@ -946,7 +954,7 @@ export default function ExamGeneratorPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-6 p-4 rounded-lg border bg-muted/50 border-border"
+                  className="mt-6 p-4 rounded-none border bg-muted/50 border-border"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <p className="font-semibold">
