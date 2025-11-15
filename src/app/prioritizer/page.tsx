@@ -13,6 +13,8 @@ import { getTopicById, getDomainById } from '@/lib/eppp-data'
 import { getKNsForTopic } from '@/lib/kn-topic-mapping'
 import { getTopPriorities } from '@/lib/priority-storage'
 import type { PriorityDomainRecommendation } from '@/lib/priority-storage'
+import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
+import { createClient } from '@supabase/supabase-js'
 
 export default function PrioritizerPage() {
   const [recommendations, setRecommendations] = useState<PriorityDomainRecommendation[] | null>(null)
@@ -39,6 +41,24 @@ export default function PrioritizerPage() {
             allResults: data.allResults || [],
           }, '')
         }
+
+        // Trigger background pre-generation of next exam type
+        const triggerPreGen = async () => {
+          try {
+            const supabase = createClient(
+              process.env.NEXT_PUBLIC_SUPABASE_URL!,
+              process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+            )
+            const { data: { session } } = await supabase.auth.getSession()
+            if (session?.user?.id && data.examType) {
+              console.log('[Prioritizer] Triggering background pre-generation')
+              await triggerBackgroundPreGeneration(session.user.id, data.examType)
+            }
+          } catch (preGenError) {
+            console.log('[Prioritizer] Background pre-gen trigger failed (non-critical):', preGenError)
+          }
+        }
+        triggerPreGen()
       } catch (error) {
         console.error('Error parsing recommendations:', error)
       }

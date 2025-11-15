@@ -1,11 +1,18 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
+import { createClient } from '@supabase/supabase-js'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 })
 
-// DIAGNOSTIC EXAM: 71 Questions (1 per KN)
+// Initialize Supabase
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY! // Use service role key for backend operations
+)
+
+// Use same prompts as exam-generator
 const DIAGNOSTIC_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
 Your task is to generate a 71-question diagnostic exam based on the 71 ASPPB Knowledge Statements.
@@ -32,13 +39,6 @@ CRITICAL RANDOMIZATION REQUIREMENT:
 - Randomize answer option positions for each question independently
 - Verify that across all 71 questions, correct answers appear in different positions
 
-CRITICAL ANSWER LENGTH VARIATION:
-- Vary the length of answer choices to avoid length bias (where longer answers appear more correct)
-- Ensure that about 25% of correct answers are the longest option, 25% are medium length, 25% are shortest, and 25% are medium-short
-- For incorrect distractor options, ensure they have varied lengths - some should be longer, some shorter than the correct answer
-- Do NOT make the correct answer consistently the longest or shortest option
-- This makes test-taking more rigorous and prevents test-takers from using answer length as a cue
-
 Generate the exam in JSON format with this structure:
 {
   "questions": [
@@ -60,7 +60,6 @@ IMPORTANT: The "correct_answer" field must contain the actual option text (not A
 
 Start generating the exam now. Format each question clearly. Generate exactly 71 questions as specified above. Remember to randomize answer positions!`
 
-// PRACTICE EXAM: 225 Questions
 const PRACTICE_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
 Your task is to generate a comprehensive 225-question practice exam following official ASPPB specifications.
@@ -80,13 +79,6 @@ CRITICAL RANDOMIZATION REQUIREMENT:
 - Aim for roughly 25% of correct answers in each position (A, B, C, D)
 - Randomize answer option positions for each question independently
 - Verify that across all 225 questions, correct answers appear in different positions
-
-CRITICAL ANSWER LENGTH VARIATION:
-- Vary the length of answer choices to avoid length bias (where longer answers appear more correct)
-- Ensure that about 25% of correct answers are the longest option, 25% are medium length, 25% are shortest, and 25% are medium-short
-- For incorrect distractor options, ensure they have varied lengths - some should be longer, some shorter than the correct answer
-- Do NOT make the correct answer consistently the longest or shortest option
-- This makes test-taking more rigorous and prevents test-takers from using answer length as a cue
 
 IMPORTANT: Mark the unscored questions clearly with "isScored": false. These should be noticeably harder than the scored questions and are used for data collection. Users will see their score calculated only from the 180 scored questions, not the 45 unscored ones.
 
@@ -113,12 +105,60 @@ Start generating the exam now. Format each question clearly. Remember: exactly 1
 
 export async function POST(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
-    const examType = searchParams.get('type') || 'practice' // 'diagnostic' or 'practice'
+    // Check if Anthropic API key is available
+    if (!process.env.ANTHROPIC_API_KEY) {
+      console.error('ANTHROPIC_API_KEY not set')
+      return NextResponse.json(
+        { error: 'API key not configured' },
+        { status: 500 }
+      )
+    }
 
+    const body = await request.json()
+    const { userId, examType } = body
+
+    // Validate inputs
+    if (!userId || !examType) {
+      return NextResponse.json(
+        { error: 'Missing userId or examType' },
+        { status: 400 }
+      )
+    }
+
+    if (!['diagnostic', 'practice'].includes(examType)) {
+      return NextResponse.json(
+        { error: 'Invalid examType' },
+        { status: 400 }
+      )
+    }
+
+    console.log(`[Pre-Gen] Starting generation for user ${userId}, exam type: ${examType}`)
+
+    // Check if a valid unused pre-gen already exists
+    const { data: existing } = await supabase
+      .from('pre_generated_exams')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('exam_type', examType)
+      .eq('used', false)
+      .gt('expires_at', new Date().toISOString())
+      .single()
+
+    if (existing) {
+      console.log(`[Pre-Gen] Valid pre-generated exam already exists for user ${userId}`)
+      return NextResponse.json(
+        { success: true, message: 'Valid pre-gen already exists' },
+        { status: 200 }
+      )
+    }
+
+    // Generate exam using Claude
     const prompt = examType === 'diagnostic' ? DIAGNOSTIC_EXAM_PROMPT : PRACTICE_EXAM_PROMPT
+    let fullResponse = ''
 
-    const response = await client.messages.create({
+    console.log(`[Pre-Gen] Calling Claude API for ${examType} exam generation...`)
+
+    const stream = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 16000,
       stream: true,
@@ -130,38 +170,77 @@ export async function POST(request: NextRequest) {
       ],
     })
 
-    // Convert stream to ReadableStream for NextResponse
-    const stream = new ReadableStream({
-      async start(controller) {
-        try {
-          for await (const event of response) {
-            if (
-              event.type === 'content_block_delta' &&
-              event.delta.type === 'text_delta'
-            ) {
-              controller.enqueue(
-                new TextEncoder().encode(event.delta.text)
-              )
-            }
-          }
-          controller.close()
-        } catch (error) {
-          controller.error(error)
-        }
-      },
-    })
+    // Collect all streamed content
+    for await (const event of stream) {
+      if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
+        fullResponse += event.delta.text
+      }
+    }
 
-    return new NextResponse(stream, {
-      headers: {
-        'Content-Type': 'text/event-stream',
-        'Cache-Control': 'no-cache',
-        'Connection': 'keep-alive',
-      },
-    })
-  } catch (error) {
-    console.error('Error generating exam:', error)
+    console.log(`[Pre-Gen] Received response from Claude (${fullResponse.length} characters)`)
+
+    // Extract JSON from response
+    const jsonMatch = fullResponse.match(/\{[\s\S]*\}/)
+    if (!jsonMatch) {
+      console.error('[Pre-Gen] Failed to extract JSON from Claude response')
+      return NextResponse.json(
+        { error: 'Failed to parse exam data' },
+        { status: 500 }
+      )
+    }
+
+    const examData = JSON.parse(jsonMatch[0])
+
+    if (!examData.questions || !Array.isArray(examData.questions)) {
+      console.error('[Pre-Gen] Invalid exam structure from Claude')
+      return NextResponse.json(
+        { error: 'Invalid exam structure' },
+        { status: 500 }
+      )
+    }
+
+    console.log(`[Pre-Gen] Successfully parsed ${examData.questions.length} questions`)
+
+    // Save to Supabase
+    const expiresAt = new Date()
+    expiresAt.setDate(expiresAt.getDate() + 7) // 7-day expiration
+
+    const { data: savedExam, error: saveError } = await supabase
+      .from('pre_generated_exams')
+      .insert({
+        user_id: userId,
+        exam_type: examType,
+        questions: examData,
+        expires_at: expiresAt.toISOString(),
+        used: false,
+      })
+      .select('id')
+      .single()
+
+    if (saveError) {
+      console.error('[Pre-Gen] Error saving to Supabase:', saveError)
+      return NextResponse.json(
+        { error: 'Failed to save exam' },
+        { status: 500 }
+      )
+    }
+
+    console.log(
+      `[Pre-Gen] Successfully saved pre-generated ${examType} exam (ID: ${savedExam.id}) for user ${userId}`
+    )
+
     return NextResponse.json(
-      { error: 'Failed to generate exam' },
+      {
+        success: true,
+        examId: savedExam.id,
+        questionCount: examData.questions.length,
+      },
+      { status: 200 }
+    )
+  } catch (error) {
+    console.error('[Pre-Gen] Unexpected error:', error)
+    return NextResponse.json(
+      { error: 'Internal server error' },
       { status: 500 }
     )
   }

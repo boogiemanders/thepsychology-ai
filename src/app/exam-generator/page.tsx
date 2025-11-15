@@ -21,6 +21,8 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
+import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
+import { createClient } from '@supabase/supabase-js'
 
 interface Question {
   id: number
@@ -49,6 +51,8 @@ export default function ExamGeneratorPage() {
   const [selectedMode, setSelectedMode] = useState<'study' | 'test'>('study')
   const [recommendedExamType, setRecommendedExamType] = useState<'diagnostic' | 'practice'>('diagnostic')
   const [recommendedMode, setRecommendedMode] = useState<'study' | 'test'>('study')
+  const [isLoadingPreGen, setIsLoadingPreGen] = useState(false)
+  const [userId, setUserId] = useState<string | null>(null)
 
   // Initialize recommended defaults from exam history
   useEffect(() => {
@@ -56,6 +60,21 @@ export default function ExamGeneratorPage() {
     setRecommendedExamType(defaults.examType)
     setRecommendedMode(defaults.examMode)
     setSelectedMode(defaults.examMode)
+  }, [])
+
+  // Get current user ID for pre-generation
+  useEffect(() => {
+    const initializeUser = async () => {
+      const supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+      )
+      const { data: { session } } = await supabase.auth.getSession()
+      if (session?.user?.id) {
+        setUserId(session.user.id)
+      }
+    }
+    initializeUser()
   }, [])
 
   // Auto-show explanation in Study Mode
@@ -179,39 +198,70 @@ export default function ExamGeneratorPage() {
       setExamType(chosenExamType)
       setMode(chosenMode)
 
-      let jsonContent = ''
-      const response = await fetch(`/api/exam-generator?type=${chosenExamType}`, {
-        method: 'POST',
-      })
+      let examData = null
 
-      if (!response.ok) {
-        throw new Error('Failed to generate exam')
+      // Try to fetch pre-generated exam if user is authenticated
+      if (userId) {
+        setIsLoadingPreGen(true)
+        try {
+          const preGenResponse = await fetch(`/api/get-pre-generated-exam?userId=${userId}&examType=${chosenExamType}`)
+          const preGenData = await preGenResponse.json()
+
+          if (preGenData.preGenerated && preGenData.questions) {
+            console.log('[Exam Gen] Using pre-generated exam')
+            examData = preGenData.questions
+            setIsLoadingPreGen(false)
+
+            // Trigger background pre-generation of next exam type
+            const nextExamType = chosenExamType === 'diagnostic' ? 'practice' : 'diagnostic'
+            triggerBackgroundPreGeneration(userId, nextExamType).catch((err) => {
+              console.log('[Exam Gen] Background pre-gen failed (non-critical):', err)
+            })
+          }
+        } catch (preGenError) {
+          console.log('[Exam Gen] Pre-gen fetch failed, falling back to on-demand:', preGenError)
+        }
+        setIsLoadingPreGen(false)
       }
 
-      if (!response.body) {
-        throw new Error('No response body')
+      // Fall back to on-demand generation if no pre-gen available
+      if (!examData) {
+        console.log('[Exam Gen] Generating exam on-demand')
+        let jsonContent = ''
+        const response = await fetch(`/api/exam-generator?type=${chosenExamType}`, {
+          method: 'POST',
+        })
+
+        if (!response.ok) {
+          throw new Error('Failed to generate exam')
+        }
+
+        if (!response.body) {
+          throw new Error('No response body')
+        }
+
+        const reader = response.body.getReader()
+        const decoder = new TextDecoder()
+
+        while (true) {
+          const { done, value } = await reader.read()
+
+          if (done) break
+
+          const text = decoder.decode(value)
+          jsonContent += text
+        }
+
+        // Parse JSON from the content
+        const jsonMatch = jsonContent.match(/\{[\s\S]*\}/)
+        if (!jsonMatch) {
+          throw new Error('Could not parse exam data')
+        }
+
+        examData = JSON.parse(jsonMatch[0])
       }
 
-      const reader = response.body.getReader()
-      const decoder = new TextDecoder()
-
-      while (true) {
-        const { done, value } = await reader.read()
-
-        if (done) break
-
-        const text = decoder.decode(value)
-        jsonContent += text
-      }
-
-      // Parse JSON from the content
-      const jsonMatch = jsonContent.match(/\{[\s\S]*\}/)
-      if (!jsonMatch) {
-        throw new Error('Could not parse exam data')
-      }
-
-      const data = JSON.parse(jsonMatch[0])
-      setQuestions(data.questions || [])
+      setQuestions(examData.questions || [])
       setIsExamStarted(true)
     } catch (err) {
       console.error('Error generating exam:', err)
@@ -574,10 +624,10 @@ export default function ExamGeneratorPage() {
                       {examType === 'diagnostic' ? '🎯 Diagnostic' : '📚 Practice'}
                     </Badge>
                     <Badge
-                      variant={mode === 'study' ? 'default' : 'secondary'}
-                      className={mode === 'study' ? 'bg-green-500/20 text-green-600 dark:text-green-400 hover:bg-green-500/30' : 'bg-purple-500/20 text-purple-600 dark:text-purple-400 hover:bg-purple-500/30'}
+                      variant="outline"
+                      className="bg-slate-500/10 text-slate-600 dark:text-slate-400"
                     >
-                      {mode === 'study' ? '📚 Study Mode' : '📋 Test Mode'}
+                      {mode === 'study' ? '📚 Study' : '📋 Test'}
                     </Badge>
                   </div>
                 </div>
@@ -647,18 +697,7 @@ export default function ExamGeneratorPage() {
               })}
               </div>
 
-              {/* Show Answer Button (Test Mode Only) */}
-              {selectedAnswer && !showExplanation && mode === 'test' && (
-                <Button
-                  onClick={handleShowExplanation}
-                  variant="outline"
-                  className="w-full mt-6"
-                >
-                  Show Explanation
-                </Button>
-              )}
-
-              {/* Explanation */}
+              {/* Explanation - Only shown in Study Mode or after test is complete */}
               {showExplanation && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
