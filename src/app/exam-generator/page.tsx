@@ -404,7 +404,7 @@ export default function ExamGeneratorPage() {
           if (assignData.success && assignData.questions) {
             console.log('[Exam Gen] Using Git-backed exam:', assignData.examFile)
             console.log(`[Exam Gen] Loaded ${assignData.questions.length} questions from cached file`)
-            examData = assignData.questions
+            examData = { questions: assignData.questions }
             setAssignmentId(assignData.assignmentId)
             setIsLoadingPreGen(false)
           } else if (assignData.fallbackRequired) {

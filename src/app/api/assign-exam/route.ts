@@ -178,7 +178,7 @@ function loadExamFromDisk(
   examType: 'diagnostic' | 'practice'
 ) {
   try {
-    const examsDir = join(process.cwd(), 'public', 'exams', examType)
+    const examsDir = join(process.cwd(), 'exams', examType)
     const filePath = join(examsDir, examFile)
 
     console.log(`[Assign Exam] Loading exam from disk: ${filePath}`)
