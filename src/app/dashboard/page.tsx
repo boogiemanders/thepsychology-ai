@@ -25,6 +25,7 @@ import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle } from 'luc
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities } from '@/lib/priority-storage'
+import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -88,6 +89,14 @@ export default function DashboardPage() {
       }
     }
   }, [userProfile])
+
+  // Pre-generate exams in background for faster exam loading
+  useEffect(() => {
+    if (user?.id) {
+      triggerBackgroundPreGeneration(user.id, 'diagnostic')
+      triggerBackgroundPreGeneration(user.id, 'practice')
+    }
+  }, [user?.id])
 
   // Calculate progress based on quiz results
   useEffect(() => {

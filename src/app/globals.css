@@ -1,11 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Use system font stack + Inter for modern typography */
+/* Use Microsoft Sans Serif for exams and tests */
 * {
-  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Microsoft Sans Serif", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 }
 
 /* Clean, spacious typography inspired by MIT design - only for main content */
@@ -17,6 +18,19 @@ html {
 main {
   line-height: 1.8;
   letter-spacing: 0.3px;
+}
+
+/* Serif font for professional exam questions */
+.font-serif {
+  font-family: "Merriweather", "Georgia", serif;
+}
+
+.question-text {
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: -0.3px;
 }
 
 /* Key term emphasis - only bold, no other styling */

@@ -10,6 +10,7 @@ import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Checkbox } from '@/components/ui/checkbox'
 import { motion } from 'motion/react'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
 import {
@@ -53,6 +54,49 @@ export default function ExamGeneratorPage() {
   const [recommendedMode, setRecommendedMode] = useState<'study' | 'test'>('study')
   const [isLoadingPreGen, setIsLoadingPreGen] = useState(false)
   const [userId, setUserId] = useState<string | null>(null)
+  const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
+  const [highlightedText, setHighlightedText] = useState<string>('')
+  const [textFormats, setTextFormats] = useState<Record<number, Record<string, string>>>({})
+
+  // Apply highlight to selected text
+  const handleHighlightText = () => {
+    const selectedText = window.getSelection()?.toString()
+    if (selectedText && currentQuestion !== undefined) {
+      setHighlightedText(selectedText)
+      const question = questions[currentQuestion]
+      if (question) {
+        const oldQuestion = question.question
+        const newQuestion = oldQuestion.replace(
+          new RegExp(`(${selectedText})`, 'g'),
+          `<mark style="background-color: yellow;">$1</mark>`
+        )
+        setTextFormats(prev => ({
+          ...prev,
+          [currentQuestion]: { ...prev[currentQuestion], question: newQuestion }
+        }))
+      }
+    }
+  }
+
+  // Apply strikethrough to selected text
+  const handleStrikethroughText = () => {
+    const selectedText = window.getSelection()?.toString()
+    if (selectedText && currentQuestion !== undefined) {
+      const question = questions[currentQuestion]
+      if (question) {
+        const oldQuestion = question.question
+        const newQuestion = oldQuestion.replace(
+          new RegExp(`(${selectedText})`, 'g'),
+          `<del style="text-decoration: line-through;">$1</del>`
+        )
+        setTextFormats(prev => ({
+          ...prev,
+          [currentQuestion]: { ...prev[currentQuestion], question: newQuestion }
+        }))
+      }
+    }
+    window.getSelection()?.removeAllRanges()
+  }
 
   // Initialize recommended defaults from exam history
   useEffect(() => {
@@ -76,6 +120,14 @@ export default function ExamGeneratorPage() {
     }
     initializeUser()
   }, [])
+
+  // Pre-generate exams on page load for faster loading
+  useEffect(() => {
+    if (userId && !examType) {
+      triggerBackgroundPreGeneration(userId, 'diagnostic')
+      triggerBackgroundPreGeneration(userId, 'practice')
+    }
+  }, [userId, examType])
 
   // Auto-show explanation in Study Mode
   useEffect(() => {
@@ -608,97 +660,134 @@ export default function ExamGeneratorPage() {
           transition={{ duration: 0.3 }}
           className="space-y-6"
         >
-          {/* Mode and Progress */}
-          <Card>
-            <CardHeader className="pb-3">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <CardTitle className="text-xl">
-                    Question {currentQuestion + 1} of {questions.length}
+          {/* Header with Question Number, Progress, and Timer */}
+          <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
+            <div className="flex justify-between items-start mb-4">
+              <div className="flex items-center gap-4">
+                <div>
+                  <CardTitle className="text-lg">
+                    Question <span className="font-bold">{currentQuestion + 1}</span> of <span className="font-bold">{questions.length}</span>
                   </CardTitle>
-                  <div className="flex gap-2">
-                    <Badge
-                      variant="outline"
-                      className="bg-blue-500/10 text-blue-600 dark:text-blue-400"
-                    >
-                      {examType === 'diagnostic' ? '🎯 Diagnostic' : '📚 Practice'}
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="bg-slate-500/10 text-slate-600 dark:text-slate-400"
-                    >
-                      {mode === 'study' ? '📚 Study' : '📋 Test'}
-                    </Badge>
-                  </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  {mode === 'test' && timeRemaining > 0 && (
-                    <Badge
-                      variant={isTimeWarning ? "destructive" : "secondary"}
-                      className="flex items-center gap-2 px-4 py-2 font-mono text-base"
-                    >
-                      <Clock className="w-4 h-4" />
-                      {formatTime(timeRemaining)}
-                    </Badge>
-                  )}
+                <div className="flex gap-2">
+                  <Badge
+                    variant="outline"
+                    className="bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                  >
+                    {examType === 'diagnostic' ? '🎯 Diagnostic' : '📚 Practice'}
+                  </Badge>
+                  <Badge
+                    variant="outline"
+                    className="bg-slate-500/10 text-slate-600 dark:text-slate-400"
+                  >
+                    {mode === 'study' ? '📚 Study' : '📋 Test'}
+                  </Badge>
                 </div>
               </div>
-            </CardHeader>
-            <CardContent className="pb-4">
-              <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-2" />
-            </CardContent>
-          </Card>
+              {mode === 'test' && timeRemaining > 0 && (
+                <div className={`flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-sm border ${
+                  isTimeWarning
+                    ? 'bg-red-500/10 border-red-500/30 text-red-600 dark:text-red-400'
+                    : 'bg-slate-500/10 border-slate-500/30 text-slate-600 dark:text-slate-400'
+                }`}>
+                  <Clock className="w-4 h-4" />
+                  {formatTime(timeRemaining)}
+                </div>
+              )}
+            </div>
+            <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-1" />
+          </div>
 
           {/* Question */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg font-normal leading-relaxed">
-                {question.question}
+              {/* Highlight and Strikeout Buttons */}
+              <div className="flex gap-2 mb-4">
+                <Button
+                  onClick={handleHighlightText}
+                  variant="outline"
+                  size="sm"
+                  className="bg-yellow-100 hover:bg-yellow-200 text-yellow-900 border-yellow-300"
+                >
+                  🖍️ Highlight
+                </Button>
+                <Button
+                  onClick={handleStrikethroughText}
+                  variant="outline"
+                  size="sm"
+                  className="bg-gray-100 hover:bg-gray-200 text-gray-900 border-gray-300"
+                >
+                  ✏️ Strikeout
+                </Button>
+              </div>
+              <CardTitle className="text-2xl font-normal leading-relaxed font-serif text-foreground select-text">
+                {textFormats[currentQuestion]?.question ? (
+                  <div dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].question }} />
+                ) : (
+                  question.question
+                )}
               </CardTitle>
             </CardHeader>
             <Separator />
             <CardContent className="pt-6">
-              {/* Answer Options */}
+              {/* Answer Options - Radio Style */}
               <div className="space-y-3">
               {question.options.map((option, idx) => {
                 const isSelected = selectedAnswer === option
                 const isAnswered = selectedAnswer !== undefined
                 const optionLetter = String.fromCharCode(65 + idx)
                 const optionIsCorrect = option === question.correct_answer
+                const isShowingCorrect = (mode === 'study' && isAnswered) || (mode === 'test' && currentQuestion === questions.length - 1)
 
                 return (
-                  <motion.div
-                    key={idx}
-                    whileHover={!isAnswered ? { scale: 1.01 } : {}}
-                  >
-                    <Button
-                      onClick={() => !isAnswered && handleSelectAnswer(option)}
-                      disabled={isAnswered}
-                      variant="outline"
-                      className={`w-full text-left p-4 h-auto justify-start transition-colors whitespace-normal ${
-                        isSelected
-                          ? optionIsCorrect
-                            ? 'border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-950 text-foreground'
-                            : 'border-red-600 bg-red-50 dark:border-red-500 dark:bg-red-950 text-foreground'
-                          : optionIsCorrect && isAnswered
-                            ? 'border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-950 text-foreground'
-                            : ''
+                  <div key={idx} className="flex items-start gap-3 p-2">
+                    {/* Radio Button - Only This is Clickable */}
+                    <motion.button
+                      whileHover={!isAnswered ? { scale: 1.15 } : {}}
+                      onClick={() => (mode === 'test' || !isAnswered) && handleSelectAnswer(option)}
+                      disabled={mode === 'study' && isAnswered}
+                      className={`flex-shrink-0 mt-2 transition-all cursor-pointer disabled:cursor-not-allowed ${
+                        isSelected ? 'scale-110' : ''
                       }`}
                     >
-                      <div className="flex items-start gap-3 w-full">
-                        <span className="font-bold text-base flex-shrink-0">
-                          {optionLetter}.
-                        </span>
-                        <span className="break-words">{option}</span>
+                      <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
+                        isSelected
+                          ? mode === 'test'
+                            ? 'border-blue-500 bg-blue-500'
+                            : isShowingCorrect
+                              ? isCorrect
+                                ? 'border-green-500 bg-green-500'
+                                : 'border-red-500 bg-red-500'
+                              : 'border-blue-500 bg-blue-500'
+                          : isShowingCorrect && isCorrect
+                            ? 'border-green-500 bg-green-500'
+                            : 'border-gray-300 dark:border-gray-600 bg-transparent hover:border-blue-400 dark:hover:border-blue-500'
+                      }`}>
+                        {isSelected && (
+                          <div className="w-2.5 h-2.5 bg-white rounded-full" />
+                        )}
                       </div>
-                    </Button>
-                  </motion.div>
+                    </motion.button>
+
+                    {/* Option Text - Not Clickable */}
+                    <div className="flex-1 min-w-0 pt-1">
+                      <div className={`text-base ${
+                        isShowingCorrect && isCorrect
+                          ? 'text-green-600 dark:text-green-400'
+                          : isShowingCorrect && isSelected && !isCorrect
+                            ? 'text-red-600 dark:text-red-400'
+                            : 'text-foreground'
+                      }`}>
+                        <span className="font-semibold">{optionLetter}.</span> {option}
+                      </div>
+                    </div>
+                  </div>
                 )
               })}
               </div>
 
               {/* Explanation - Only shown in Study Mode or after test is complete */}
-              {showExplanation && (
+              {showExplanation && (mode === 'study' || (mode === 'test' && currentQuestion === questions.length - 1)) && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -728,106 +817,127 @@ export default function ExamGeneratorPage() {
             </CardContent>
           </Card>
 
-          {/* Navigation */}
-          {showExplanation && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex gap-3 justify-between"
-            >
-              <Button
-                onClick={handlePrevious}
-                disabled={currentQuestion === 0}
-                variant="outline"
-              >
-                Previous
-              </Button>
+          {/* Navigation - Sticky Bottom */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 -mx-6 mt-8"
+          >
+            <div className="max-w-3xl mx-auto flex items-center justify-between gap-4">
+              {/* Flag Checkbox on Left */}
+              <label className="flex items-center gap-3 cursor-pointer group hover:bg-accent p-2 rounded transition-colors">
+                <Checkbox
+                  checked={flaggedQuestions[currentQuestion] || false}
+                  onCheckedChange={(checked) => {
+                    setFlaggedQuestions(prev => ({
+                      ...prev,
+                      [currentQuestion]: checked === true
+                    }))
+                  }}
+                  id={`flag-q${currentQuestion}`}
+                />
+                <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  Flag for review {flaggedQuestions[currentQuestion] && '✓'}
+                </span>
+              </label>
 
-              {currentQuestion === questions.length - 1 ? (
+              {/* Navigation Buttons on Right */}
+              <div className="flex items-center gap-3">
                 <Button
-                  onClick={() => {
-                    const scoredQuestions = questions.filter(q => q.isScored !== false)
-                    const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
-                      const q = questions[parseInt(qIdx)]
-                      return q && q.isScored !== false && answer === q.correct_answer
-                    }).length
+                  onClick={handlePrevious}
+                  disabled={currentQuestion === 0}
+                  variant="outline"
+                  className="min-w-[120px]"
+                >
+                  Previous
+                </Button>
 
-                    // Save exam completion to local storage
-                    const { saveExamCompletion } = require('@/lib/exam-history')
-                    saveExamCompletion({
-                      examType: examType || 'practice',
-                      examMode: mode || 'study',
-                      score: (score / scoredQuestions.length) * 100,
-                      totalQuestions: scoredQuestions.length,
-                      correctAnswers: score,
-                    })
+                {currentQuestion === questions.length - 1 ? (
+                  <Button
+                    onClick={() => {
+                      const scoredQuestions = questions.filter(q => q.isScored !== false)
+                      const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
+                        const q = questions[parseInt(qIdx)]
+                        return q && q.isScored !== false && answer === q.correct_answer
+                      }).length
 
-                    // Generate priority recommendations if diagnostic exam
-                    let priorityData = null
-                    if (examType === 'diagnostic') {
-                      const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
-                      const { savePriorityRecommendation } = require('@/lib/priority-storage')
+                      // Save exam completion to local storage
+                      const { saveExamCompletion } = require('@/lib/exam-history')
+                      saveExamCompletion({
+                        examType: examType || 'practice',
+                        examMode: mode || 'study',
+                        score: (score / scoredQuestions.length) * 100,
+                        totalQuestions: scoredQuestions.length,
+                        correctAnswers: score,
+                      })
 
-                      // Build wrong answers from selected answers
-                      const wrongAnswers = Object.entries(selectedAnswers)
-                        .map(([qIdx, answer]) => {
-                          const q = questions[parseInt(qIdx)]
-                          if (q && q.isScored !== false && answer !== q.correct_answer) {
-                            return {
-                              questionId: parseInt(qIdx) + 1,
-                              question: q.question,
-                              selectedAnswer: answer,
-                              correctAnswer: q.correct_answer,
-                              relatedSections: [q.domain],
-                              timestamp: Date.now(),
+                      // Generate priority recommendations if diagnostic exam
+                      let priorityData = null
+                      if (examType === 'diagnostic') {
+                        const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
+                        const { savePriorityRecommendation } = require('@/lib/priority-storage')
+
+                        // Build wrong answers from selected answers
+                        const wrongAnswers = Object.entries(selectedAnswers)
+                          .map(([qIdx, answer]) => {
+                            const q = questions[parseInt(qIdx)]
+                            if (q && q.isScored !== false && answer !== q.correct_answer) {
+                              return {
+                                questionId: parseInt(qIdx) + 1,
+                                question: q.question,
+                                selectedAnswer: answer,
+                                correctAnswer: q.correct_answer,
+                                relatedSections: [q.domain],
+                                timestamp: Date.now(),
+                              }
                             }
-                          }
-                          return null
+                            return null
+                          })
+                          .filter(Boolean)
+
+                        const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
+                        const allResults = getAllDomainResults(wrongAnswers)
+
+                        priorityData = {
+                          topPriorities,
+                          allResults,
+                        }
+
+                        // Save to local storage
+                        savePriorityRecommendation({
+                          examType: 'diagnostic',
+                          examMode: mode || 'study',
+                          topPriorities,
+                          allResults,
                         })
-                        .filter(Boolean)
-
-                      const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
-                      const allResults = getAllDomainResults(wrongAnswers)
-
-                      priorityData = {
-                        topPriorities,
-                        allResults,
                       }
 
-                      // Save to local storage
-                      savePriorityRecommendation({
-                        examType: 'diagnostic',
-                        examMode: mode || 'study',
-                        topPriorities,
-                        allResults,
-                      })
-                    }
+                      // Route to prioritizer if diagnostic, prioritize if practice
+                      const resultData = {
+                        questions,
+                        selectedAnswers,
+                        score,
+                        totalQuestions: scoredQuestions.length,
+                        examType,
+                        examMode: mode,
+                        ...priorityData,
+                      }
 
-                    // Route to prioritizer if diagnostic, prioritize if practice
-                    const resultData = {
-                      questions,
-                      selectedAnswers,
-                      score,
-                      totalQuestions: scoredQuestions.length,
-                      examType,
-                      examMode: mode,
-                      ...priorityData,
-                    }
-
-                    const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
-                    window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
-                  }}
-                  className="w-full"
-                >
-                  Finish & Analyze Results
-                </Button>
-              ) : (
-                <Button onClick={handleNext} className="flex-1">
-                  Next Question
-                </Button>
-              )}
-            </motion.div>
-          )}
+                      const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
+                      window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
+                    }}
+                    className="min-w-[120px]"
+                  >
+                    End Exam
+                  </Button>
+                ) : (
+                  <Button onClick={handleNext} className="min-w-[120px]">
+                    Next
+                  </Button>
+                )}
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </main>
