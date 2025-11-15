@@ -255,7 +255,7 @@ export default function DashboardPage() {
       const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
       setExamDate(dateString)
 
-      // Try to save to Supabase (may fail if column doesn't exist yet)
+      // Save to Supabase
       try {
         const { error } = await supabase
           .from('users')
@@ -263,15 +263,15 @@ export default function DashboardPage() {
           .eq('id', user.id)
 
         if (error) {
-          console.warn('Supabase update failed (column may not exist yet):', error.message || error)
-          // Continue anyway - localStorage will work as fallback
+          console.error('Supabase update error:', error)
+        } else {
+          console.log('Exam date saved to Supabase:', dateString)
         }
       } catch (error) {
-        console.warn('Supabase update failed:', error)
-        // Continue anyway - localStorage will work as fallback
+        console.error('Supabase save failed:', error)
       }
 
-      // Always update localStorage as fallback
+      // Also update localStorage as fallback
       if (typeof window !== 'undefined') {
         const currentUser = localStorage.getItem('currentUser')
         if (currentUser) {
@@ -296,6 +296,18 @@ export default function DashboardPage() {
       }
 
       setIsEditDialogOpen(false)
+    }
+  }
+
+  // Helper function to format date as "MMM DD"
+  const formatDateShort = (dateString: string): string => {
+    try {
+      const [year, month, day] = dateString.split('-').map(Number)
+      const date = new Date(year, month - 1, day)
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      return `${monthNames[date.getMonth()]} ${date.getDate()}`
+    } catch (e) {
+      return dateString
     }
   }
 
@@ -435,7 +447,7 @@ export default function DashboardPage() {
   const infoCards = [
     {
       Icon: CalendarIcon,
-      name: "Exam Date",
+      name: examDate ? formatDateShort(examDate) : "Exam Date",
       description: examDate && daysRemaining !== null
         ? `${daysRemaining} ${daysRemaining === 1 ? 'day' : 'days'} remaining`
         : "Set your exam date",
