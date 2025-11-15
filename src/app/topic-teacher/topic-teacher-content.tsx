@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
-import { Send, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
+import { SimplePromptInput } from '@/components/ui/simple-prompt-input'
 import { TypographyH1, TypographyH2, TypographyH3, TypographyMuted } from '@/components/ui/typography'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -39,7 +39,6 @@ export function TopicTeacherContent() {
   const hasQuizResults = searchParams.get('hasQuizResults') === 'true'
 
   const [messages, setMessages] = useState<Message[]>([])
-  const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [initialized, setInitialized] = useState(false)
@@ -237,13 +236,8 @@ export function TopicTeacherContent() {
     }
   }
 
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!input.trim() || isLoading || !topic) return
-
-    const userMessage = input.trim()
-    setInput('')
+  const handleSendMessage = async (userMessage: string) => {
+    if (!userMessage.trim() || isLoading || !topic) return
 
     // Add user message immediately
     setMessages((prev) => [...prev, { role: 'user', content: userMessage }])
@@ -740,23 +734,13 @@ export function TopicTeacherContent() {
         </div>
 
         {/* Input */}
-        <form onSubmit={handleSendMessage} className="flex items-end gap-3 -mx-6 px-6 pl-12 pr-32">
-          <Textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            disabled={isLoading || !initialized}
+        <div className="-mx-6 px-6 pl-12 pr-32">
+          <SimplePromptInput
+            onSubmit={handleSendMessage}
             placeholder="Ask a follow-up question..."
-            className="flex-1 resize-none"
-            rows={3}
+            isLoading={isLoading || !initialized}
           />
-          <Button
-            type="submit"
-            disabled={isLoading || !input.trim() || !initialized}
-            size="icon"
-          >
-            <Send size={20} />
-          </Button>
-        </form>
+        </div>
 
         {initialized && messages.length > 0 && (
           <div className="mt-6 pt-4 border-t border-border -mx-6 px-6 pl-12 pr-32">

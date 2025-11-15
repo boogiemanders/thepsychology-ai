@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
+import { loadTopicContent, mergePersonalizedContent } from '@/lib/topic-content-manager'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -43,6 +44,49 @@ interface Message {
   content: string
 }
 
+const PERSONALIZATION_PROMPT = `You are helping create personalized examples for EPPP psychology education. A student with specific interests is learning about a topic.
+
+Topic: {{TOPIC}}
+Student Interests: {{INTERESTS}}
+
+Based on the topic and student interests, generate 2-3 specific, concrete examples or analogies that relate to their interests. These should help them understand the concept better by connecting it to things they care about.
+
+Keep it concise (3-5 sentences total), practical, and directly connected to their interests. Use simple language (13-year-old reading level). Do not include any headers or special formatting - just the examples themselves.`
+
+async function generatePersonalizedExamples(
+  topic: string,
+  userInterests: string | null
+): Promise<string> {
+  if (!userInterests) {
+    return ''
+  }
+
+  try {
+    const prompt = PERSONALIZATION_PROMPT
+      .replace('{{TOPIC}}', topic)
+      .replace('{{INTERESTS}}', userInterests)
+
+    const response = await client.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 500,
+      messages: [
+        {
+          role: 'user',
+          content: prompt,
+        },
+      ],
+    })
+
+    if (response.content[0].type === 'text') {
+      return response.content[0].text
+    }
+    return ''
+  } catch (error) {
+    console.error('Error generating personalized examples:', error)
+    return ''
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -56,23 +100,107 @@ export async function POST(request: NextRequest) {
     }
 
     let messages: Message[] = []
+    let lessonContent = ''
 
     if (isInitial) {
-      // Initial lesson request
-      messages = [
-        {
-          role: 'user',
-          content: `Please teach me about "${topic}" (Domain ${domain}). Explain it thoroughly but in simple terms, as if I'm 13 years old. Use examples and analogies to make it interesting.`,
-        },
-      ]
+      // Initial lesson request - use pre-generated content
+      try {
+        const preGeneratedContent = loadTopicContent(topic, domain)
+
+        if (preGeneratedContent) {
+          // Use pre-generated base content
+          lessonContent = preGeneratedContent.baseContent
+
+          // Generate personalized examples if user has interests
+          if (userInterests) {
+            const personalizedExamples = await generatePersonalizedExamples(topic, userInterests)
+            if (personalizedExamples) {
+              lessonContent = mergePersonalizedContent(lessonContent, personalizedExamples)
+            }
+          }
+
+          console.log(`[Topic Teacher] Using cached content for ${topic}`)
+        } else {
+          // Fallback: Generate on-demand if no pre-generated content
+          console.warn(`[Topic Teacher] No pre-generated content for ${topic}, falling back to on-demand generation`)
+          messages = [
+            {
+              role: 'user',
+              content: `Please teach me about "${topic}" (Domain ${domain}). Explain it thoroughly but in simple terms, as if I'm 13 years old. Use examples and analogies to make it interesting.`,
+            },
+          ]
+
+          const response = await client.messages.create({
+            model: 'claude-haiku-4-5-20251001',
+            max_tokens: 4000,
+            stream: false,
+            system: getTeacherSystemPrompt(userInterests),
+            messages: messages as Array<{ role: 'user' | 'assistant'; content: string }>,
+          })
+
+          if (response.content[0].type === 'text') {
+            lessonContent = response.content[0].text
+          }
+        }
+      } catch (error) {
+        console.error('Error loading pre-generated content:', error)
+        // Fallback: Generate on-demand
+        messages = [
+          {
+            role: 'user',
+            content: `Please teach me about "${topic}" (Domain ${domain}). Explain it thoroughly but in simple terms, as if I'm 13 years old. Use examples and analogies to make it interesting.`,
+          },
+        ]
+
+        const response = await client.messages.create({
+          model: 'claude-haiku-4-5-20251001',
+          max_tokens: 4000,
+          stream: false,
+          system: getTeacherSystemPrompt(userInterests),
+          messages: messages as Array<{ role: 'user' | 'assistant'; content: string }>,
+        })
+
+        if (response.content[0].type === 'text') {
+          lessonContent = response.content[0].text
+        }
+      }
     } else {
-      // Conversational follow-up
+      // Conversational follow-up - use streaming
       messages = [
         ...messageHistory,
         { role: 'user', content: userMessage },
       ]
     }
 
+    // For initial lessons with cached content, return immediately without streaming
+    if (isInitial && lessonContent) {
+      const stream = new ReadableStream({
+        start(controller) {
+          try {
+            // Stream the content in chunks to simulate natural streaming
+            const encoder = new TextEncoder()
+            const chunkSize = 100
+            for (let i = 0; i < lessonContent.length; i += chunkSize) {
+              const chunk = lessonContent.slice(i, i + chunkSize)
+              controller.enqueue(encoder.encode(chunk))
+            }
+            controller.close()
+          } catch (error) {
+            controller.error(error)
+          }
+        },
+      })
+
+      return new NextResponse(stream, {
+        headers: {
+          'Content-Type': 'text/event-stream',
+          'Cache-Control': 'no-cache',
+          'Connection': 'keep-alive',
+        },
+      })
+    }
+
+    // For follow-ups, stream the response
     const response = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 4000,
