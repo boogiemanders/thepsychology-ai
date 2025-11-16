@@ -176,3 +176,25 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
     ],
   },
 ]
+
+// Helper function to get domain by ID
+export function getDomainById(domainId: string): EPPPDomain | undefined {
+  return EPPP_DOMAINS.find(domain => domain.id === domainId)
+}
+
+// Helper function to get topic by ID (domainId-topicIndex)
+export function getTopicById(topicId: string): { domain: EPPPDomain; topic: EPPPTopic; topicIndex: number } | undefined {
+  const [domainId, topicIndexStr] = topicId.split('-')
+  const topicIndex = parseInt(topicIndexStr, 10)
+
+  const domain = EPPP_DOMAINS.find(d => d.id === domainId)
+  if (!domain || isNaN(topicIndex) || topicIndex < 0 || topicIndex >= domain.topics.length) {
+    return undefined
+  }
+
+  return {
+    domain,
+    topic: domain.topics[topicIndex],
+    topicIndex
+  }
+}
