@@ -54,6 +54,7 @@ export function TopicTeacherContent() {
   const [previousUserInterests, setPreviousUserInterests] = useState<string | null>(null)
   const [interestsLoaded, setInterestsLoaded] = useState(false)
   const [baseContent, setBaseContent] = useState<string>('')
+  const [personalizedCache, setPersonalizedCache] = useState<Record<string, string>>({})
   const [highlightData, setHighlightData] = useState<HighlightData>({
     recentlyWrongSections: [],
     recentlyCorrectSections: [],
@@ -303,11 +304,27 @@ export function TopicTeacherContent() {
   const refreshMetaphors = async (newInterests: string) => {
     if (!topic || !initialized) return
 
+    // Create cache key from topic + interests
+    const cacheKey = `${topic}__${newInterests}`
+
+    // Check cache first
+    if (personalizedCache[cacheKey]) {
+      console.log('[Topic Teacher] ⚡ Using cached personalized content for:', newInterests)
+      setMessages([
+        {
+          role: 'assistant',
+          content: personalizedCache[cacheKey],
+        },
+      ])
+      setPreviousUserInterests(newInterests)
+      return
+    }
+
     try {
       setIsRefreshingMetaphors(true)
       setError(null)
 
-      // First, show base content with loading placeholder
+      // First, show base content with loading placeholder immediately
       const contentWithPlaceholder = baseContent + '\n\n[LOADING_METAPHORS]'
       setMessages([
         {
@@ -315,6 +332,9 @@ export function TopicTeacherContent() {
           content: contentWithPlaceholder,
         },
       ])
+
+      console.log('[Topic Teacher] 🔄 Generating personalized metaphors for:', newInterests)
+      const startTime = Date.now()
 
       const response = await fetch('/api/topic-teacher', {
         method: 'POST',
@@ -343,13 +363,22 @@ export function TopicTeacherContent() {
       const decoder = new TextDecoder()
 
       while (true) {
-        const { done, value } = await reader.read()
+        const { done, value} = await reader.read()
 
         if (done) break
 
         const text = decoder.decode(value)
         lessonContent += text
       }
+
+      const duration = Date.now() - startTime
+      console.log(`[Topic Teacher] ✅ Personalization complete in ${duration}ms`)
+
+      // Cache the personalized content
+      setPersonalizedCache(prev => ({
+        ...prev,
+        [cacheKey]: lessonContent
+      }))
 
       // Update the lesson content with new metaphors
       setMessages([

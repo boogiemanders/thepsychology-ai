@@ -67,22 +67,31 @@ export async function POST(request: NextRequest) {
     if (isInitial) {
       // Initial lesson request - use pre-generated content
       try {
+        console.log(`[Topic Teacher] Loading topic: "${topic}", domain: "${domain}"`)
         const preGeneratedContent = loadTopicContent(topic, domain)
 
         if (preGeneratedContent) {
+          console.log(`[Topic Teacher] ✅ Found pre-generated content for ${topic}`)
+          console.log(`[Topic Teacher] Content length: ${preGeneratedContent.baseContent.length} chars`)
+
           // Use pre-generated base content (with adult-friendly metaphors)
           lessonContent = preGeneratedContent.baseContent
 
           // Replace metaphors if user has interests
           if (userInterests) {
-            console.log(`[Topic Teacher] Personalizing metaphors for ${topic} based on interests: ${userInterests}`)
+            console.log(`[Topic Teacher] 🔄 Personalizing metaphors for ${topic} based on interests: ${userInterests}`)
+            const startTime = Date.now()
             lessonContent = await replaceMetaphors(lessonContent, userInterests, topic)
+            const duration = Date.now() - startTime
+            console.log(`[Topic Teacher] ✅ Metaphor replacement completed in ${duration}ms`)
           } else {
-            console.log(`[Topic Teacher] Using pre-generated content with generic metaphors for ${topic}`)
+            console.log(`[Topic Teacher] ⚡ Using pre-generated content with generic metaphors for ${topic}`)
           }
         } else {
           // Fallback: Generate on-demand if no pre-generated content
-          console.warn(`[Topic Teacher] No pre-generated content for ${topic}, falling back to on-demand generation`)
+          console.warn(`[Topic Teacher] ❌ No pre-generated content for ${topic}, falling back to on-demand generation`)
+          console.warn(`[Topic Teacher] Topic slug would be: ${topic.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
+          console.warn(`[Topic Teacher] Domain folder would be: ${domain.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
           messages = [
             {
               role: 'user',
