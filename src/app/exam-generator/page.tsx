@@ -66,22 +66,52 @@ export default function ExamGeneratorPage() {
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
-        // Highlight in question text
+        // Get current formatted text or original
         const oldQuestion = textFormats[currentQuestion]?.question || question.question
-        const newQuestion = oldQuestion.replace(
-          new RegExp(`(?<!<mark[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</mark>)`, 'g'),
-          `<mark style="background-color: yellow; color: black;">$&</mark>`
-        )
 
-        // Also highlight in all answer choices
+        // Create a temporary div to work with HTML
+        const tempDiv = document.createElement('div')
+        tempDiv.innerHTML = oldQuestion
+
+        // Function to wrap matching text nodes with <mark>
+        const highlightTextNode = (node: Node) => {
+          if (node.nodeType === Node.TEXT_NODE && node.textContent) {
+            const text = node.textContent
+            if (text.includes(selectedText)) {
+              const parts = text.split(selectedText)
+              const fragment = document.createDocumentFragment()
+
+              parts.forEach((part, index) => {
+                if (part) fragment.appendChild(document.createTextNode(part))
+                if (index < parts.length - 1) {
+                  const mark = document.createElement('mark')
+                  mark.style.backgroundColor = 'yellow'
+                  mark.style.color = 'black'
+                  mark.textContent = selectedText
+                  fragment.appendChild(mark)
+                }
+              })
+
+              node.parentNode?.replaceChild(fragment, node)
+            }
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            // Recursively process child nodes
+            Array.from(node.childNodes).forEach(highlightTextNode)
+          }
+        }
+
+        highlightTextNode(tempDiv)
+        const newQuestion = tempDiv.innerHTML
+
+        // Do the same for options
         const formattedOptions = textFormats[currentQuestion]?.options
         const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options
-        const newOptions = currentOptions.map((option: string) =>
-          option.replace(
-            new RegExp(`(?<!<mark[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</mark>)`, 'g'),
-            `<mark style="background-color: yellow; color: black;">$&</mark>`
-          )
-        )
+        const newOptions = currentOptions.map((option: string) => {
+          const optDiv = document.createElement('div')
+          optDiv.innerHTML = option
+          highlightTextNode(optDiv)
+          return optDiv.innerHTML
+        })
 
         setTextFormats(prev => ({
           ...prev,
@@ -100,22 +130,51 @@ export default function ExamGeneratorPage() {
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
-        // Strikethrough in question text
+        // Get current formatted text or original
         const oldQuestion = textFormats[currentQuestion]?.question || question.question
-        const newQuestion = oldQuestion.replace(
-          new RegExp(`(?<!<del[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</del>)`, 'g'),
-          `<del style="text-decoration: line-through;">$&</del>`
-        )
 
-        // Also strikethrough in all answer choices
+        // Create a temporary div to work with HTML
+        const tempDiv = document.createElement('div')
+        tempDiv.innerHTML = oldQuestion
+
+        // Function to wrap matching text nodes with <del>
+        const strikeTextNode = (node: Node) => {
+          if (node.nodeType === Node.TEXT_NODE && node.textContent) {
+            const text = node.textContent
+            if (text.includes(selectedText)) {
+              const parts = text.split(selectedText)
+              const fragment = document.createDocumentFragment()
+
+              parts.forEach((part, index) => {
+                if (part) fragment.appendChild(document.createTextNode(part))
+                if (index < parts.length - 1) {
+                  const del = document.createElement('del')
+                  del.style.textDecoration = 'line-through'
+                  del.textContent = selectedText
+                  fragment.appendChild(del)
+                }
+              })
+
+              node.parentNode?.replaceChild(fragment, node)
+            }
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            // Recursively process child nodes
+            Array.from(node.childNodes).forEach(strikeTextNode)
+          }
+        }
+
+        strikeTextNode(tempDiv)
+        const newQuestion = tempDiv.innerHTML
+
+        // Do the same for options
         const formattedOptions = textFormats[currentQuestion]?.options
         const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options
-        const newOptions = currentOptions.map((option: string) =>
-          option.replace(
-            new RegExp(`(?<!<del[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</del>)`, 'g'),
-            `<del style="text-decoration: line-through;">$&</del>`
-          )
-        )
+        const newOptions = currentOptions.map((option: string) => {
+          const optDiv = document.createElement('div')
+          optDiv.innerHTML = option
+          strikeTextNode(optDiv)
+          return optDiv.innerHTML
+        })
 
         setTextFormats(prev => ({
           ...prev,
@@ -354,7 +413,7 @@ export default function ExamGeneratorPage() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isExamStarted, currentQuestion, questions.length, handleHighlightText, handleStrikethroughText])
+  }, [isExamStarted, currentQuestion, questions.length, handleNext, handlePrevious, handleHighlightText, handleStrikethroughText])
 
   // Initialize recommended defaults from exam history
   useEffect(() => {
