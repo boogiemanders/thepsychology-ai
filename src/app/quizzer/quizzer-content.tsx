@@ -551,16 +551,16 @@ export function QuizzerContent() {
                 >
                   Retake Quiz
                 </Button>
+                <Link href="/topic-selector" className="block">
+                  <Button variant="minimal" className="w-full">
+                    Select Another Topic
+                  </Button>
+                </Link>
                 <Link
                   href={`/topic-teacher?topic=${encodeURIComponent(topic || '')}&hasQuizResults=true`}
                   className="block"
                 >
-                  <Button variant="minimal" className="w-full">
-                    Relearn the Materials
-                  </Button>
-                </Link>
-                <Link href="/topic-selector" className="block">
-                  <Button className="w-full">Back to Topics</Button>
+                  <Button className="w-full">Relearn the Topic</Button>
                 </Link>
               </div>
             </div>
