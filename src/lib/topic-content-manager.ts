@@ -180,12 +180,32 @@ export function loadFullTopicContent(
 }
 
 /**
- * Replace generic metaphors in content with personalized metaphors based on user interests
+ * Extract all marked metaphors from content
+ * Returns array of objects with original text and position
+ */
+function extractMarkedMetaphors(content: string): Array<{ text: string; startIndex: number; endIndex: number }> {
+  const metaphors: Array<{ text: string; startIndex: number; endIndex: number }> = []
+  const regex = /\{\{M\}\}(.*?)\{\{\/M\}\}/gs
+
+  let match
+  while ((match = regex.exec(content)) !== null) {
+    metaphors.push({
+      text: match[1],
+      startIndex: match.index,
+      endIndex: match.index + match[0].length,
+    })
+  }
+
+  return metaphors
+}
+
+/**
+ * Replace marked metaphors inline with personalized versions (FAST approach)
  *
- * This function takes pre-generated content with adult-friendly metaphors and replaces them
- * with metaphors tailored to the user's specific interests (e.g., sports, music, cooking, etc.)
+ * This function finds {{M}}...{{/M}} markers and replaces ONLY those metaphors
+ * with personalized ones, leaving all other content untouched.
  *
- * @param baseContent - The pre-generated teaching content with generic metaphors
+ * @param baseContent - Content with {{M}}...{{/M}} marked metaphors
  * @param userInterests - User's interests as a comma-separated string
  * @param topicName - The name of the topic (for context)
  * @returns Promise resolving to content with personalized metaphors
@@ -195,37 +215,48 @@ export async function replaceMetaphors(
   userInterests: string,
   topicName: string
 ): Promise<string> {
-  const METAPHOR_REPLACEMENT_PROMPT = `You are helping personalize psychology education content.
+  // Extract all marked metaphors
+  const markedMetaphors = extractMarkedMetaphors(baseContent)
 
-You have teaching content about "${topicName}" that contains generic metaphors and examples. Your task is to replace these with metaphors that connect to the student's specific interests.
+  if (markedMetaphors.length === 0) {
+    console.log('[Metaphor Replacement] No marked metaphors found, returning original content')
+    return baseContent
+  }
+
+  console.log(`[Metaphor Replacement] Found ${markedMetaphors.length} marked metaphors to personalize`)
+
+  // Build prompt with just the metaphors to replace
+  const metaphorList = markedMetaphors.map((m, i) => `${i + 1}. "${m.text}"`).join('\n')
+
+  const INLINE_METAPHOR_PROMPT = `You are personalizing metaphors for a psychology student studying "${topicName}".
 
 Student's Interests: ${userInterests}
 
-Original Content:
-${baseContent}
+Below are ${markedMetaphors.length} generic metaphors/analogies from the lesson. Replace each one with a version that relates to the student's interests.
 
-Your Task:
-Rewrite the content to replace generic metaphors and examples with ones that relate to the student's interests. Keep all the core psychology concepts, key terms, and factual information exactly the same - only change the analogies, metaphors, and examples.
+Generic Metaphors:
+${metaphorList}
 
-Guidelines:
-- Preserve all headers, structure, and formatting
-- Keep all technical terms and definitions unchanged
-- Replace generic metaphors (workplace, technology, etc.) with interest-based ones
-- Make sure new metaphors are just as clear and educational
-- Maintain the same reading level and tone
-- Keep the same length (don't make it significantly longer or shorter)
-- Bold the same key terms that were bolded before
+Instructions:
+- Keep the same educational purpose and clarity
+- Make it relatable to their interests: ${userInterests}
+- Keep the same length (don't make them longer)
+- Return ONLY the replacement metaphors, numbered 1-${markedMetaphors.length}
+- Do NOT include any other text or explanation
 
-Return the complete rewritten content with personalized metaphors.`
+Return format:
+1. [your personalized metaphor for #1]
+2. [your personalized metaphor for #2]
+...and so on.`
 
   try {
     const message = await anthropic.messages.create({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 8000,
+      max_tokens: 2000,
       messages: [
         {
           role: 'user',
-          content: METAPHOR_REPLACEMENT_PROMPT,
+          content: INLINE_METAPHOR_PROMPT,
         },
       ],
     })
@@ -235,10 +266,38 @@ Return the complete rewritten content with personalized metaphors.`
       throw new Error('No text content in response')
     }
 
-    return textContent.text
+    // Parse the numbered responses
+    const personalizedMetaphors: string[] = []
+    const lines = textContent.text.split('\n')
+
+    for (const line of lines) {
+      const match = line.match(/^\d+\.\s*(.+)$/)
+      if (match) {
+        personalizedMetaphors.push(match[1].trim())
+      }
+    }
+
+    if (personalizedMetaphors.length !== markedMetaphors.length) {
+      console.warn(`[Metaphor Replacement] Expected ${markedMetaphors.length} metaphors but got ${personalizedMetaphors.length}, using original`)
+      return baseContent
+    }
+
+    // Replace metaphors in reverse order to preserve indices
+    let result = baseContent
+    for (let i = markedMetaphors.length - 1; i >= 0; i--) {
+      const original = markedMetaphors[i]
+      const replacement = personalizedMetaphors[i]
+
+      // Replace the entire {{M}}...{{/M}} block with just the personalized text
+      result = result.substring(0, original.startIndex) + replacement + result.substring(original.endIndex)
+    }
+
+    console.log(`[Metaphor Replacement] Successfully personalized ${personalizedMetaphors.length} metaphors`)
+    return result
+
   } catch (error) {
     console.error('Error replacing metaphors:', error)
-    // Fallback: return original content if personalization fails
-    return baseContent
+    // Fallback: return original content with markers removed
+    return baseContent.replace(/\{\{M\}\}|\{\{\/M\}\}/g, '')
   }
 }
