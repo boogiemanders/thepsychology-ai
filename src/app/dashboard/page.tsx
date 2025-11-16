@@ -596,20 +596,41 @@ export default function DashboardPage() {
 
         {/* Account Status Box */}
         <div className="border border-border/50 rounded-lg p-6 bg-secondary/5 backdrop-blur-sm">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <PersonIcon className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">{userProfile?.email?.split('@')[0]}</h3>
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <PersonIcon className="w-6 h-6 text-primary" />
+            </div>
+            <div className="flex-1">
+              <h3
+                className="font-semibold text-foreground cursor-pointer hover:text-primary transition-colors"
+                onClick={() => {
+                  const newName = prompt('Enter your name:', userProfile?.email?.split('@')[0] || '')
+                  if (newName && newName.trim()) {
+                    // TODO: Save name to user profile
+                    console.log('Saving name:', newName)
+                  }
+                }}
+              >
+                {userProfile?.email?.split('@')[0]}
+              </h3>
+              <div className="flex items-center gap-2">
                 <p className="text-sm text-muted-foreground">{userProfile?.email}</p>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-6 px-2 text-xs"
+                  onClick={() => {
+                    const newTier = prompt('Enter tier (Free/Premium/Pro):', 'Free')
+                    if (newTier) {
+                      // TODO: Save tier to user profile
+                      console.log('Saving tier:', newTier)
+                    }
+                  }}
+                >
+                  Change Tier
+                </Button>
               </div>
             </div>
-            <Button variant="ghost" size="sm" onClick={handleSignOut} className="gap-2">
-              <LogOut size={16} />
-              Sign Out
-            </Button>
           </div>
         </div>
 
