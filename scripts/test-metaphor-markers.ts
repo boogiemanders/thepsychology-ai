@@ -82,42 +82,39 @@ Style Guidelines:
 
 Start generating the lesson now based on the reference material provided.`
 
-interface TopicInfo {
-  name: string
-  domain: string
-  domainId: string
-  slug: string
-  domainFolder: string
-}
+async function testMetaphorMarkers() {
+  console.log('='.repeat(80))
+  console.log('TESTING METAPHOR MARKER GENERATION')
+  console.log('='.repeat(80))
+  console.log('\nGenerating Classical Conditioning with metaphor markers...\n')
 
-async function generateTopicContent(topic: TopicInfo): Promise<string> {
-  console.log(`Generating content for: ${topic.name}...`)
+  const topicName = 'Classical Conditioning'
+  const domainId = '2'
+  const domainData = EPPP_DOMAINS.find(d => d.id === domainId)!
 
-  // Load reference content from EPPP Guts
-  const referenceContent = loadReferenceContent(topic.name, topic.domainId)
+  // Load reference content
+  const referenceContent = loadReferenceContent(topicName, domainId)
 
   if (!referenceContent) {
-    console.error(`  ⚠️  No reference content found for ${topic.name} in domain ${topic.domainId}`)
-    console.error(`  ⚠️  Generating without reference material (will be lower quality)`)
+    console.error('❌ No reference content found!')
+    return
   }
 
+  console.log(`✓ Loaded reference content (${referenceContent.length} characters)`)
+
   const prompt = TOPIC_GENERATION_PROMPT
-    .replace('{{TOPIC_NAME}}', topic.name)
-    .replace('{{DOMAIN}}', topic.domain)
-    .replace('{{REFERENCE_CONTENT}}', referenceContent || 'No reference material available. Generate based on your knowledge.')
+    .replace('{{TOPIC_NAME}}', topicName)
+    .replace('{{DOMAIN}}', domainData.name)
+    .replace('{{REFERENCE_CONTENT}}', referenceContent)
+
+  console.log('\nGenerating with metaphor markers...')
 
   let fullResponse = ''
-
   const stream = await client.messages.create({
     model: 'claude-sonnet-4-5-20250929',
     max_tokens: 10000,
     stream: true,
-    messages: [
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ],
+    messages: [{ role: 'user', content: prompt }],
   })
 
   for await (const event of stream) {
@@ -127,63 +124,44 @@ async function generateTopicContent(topic: TopicInfo): Promise<string> {
     }
   }
 
-  console.log(' done')
-  return fullResponse
-}
+  console.log(' done\n')
 
-function createSlug(topicName: string): string {
-  return topicName
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-}
+  // Count metaphor markers
+  const metaphorStartCount = (fullResponse.match(/\{\{M\}\}/g) || []).length
+  const metaphorEndCount = (fullResponse.match(/\{\{\/M\}\}/g) || []).length
 
-function getDomainFolder(domain: string): string {
-  return domain
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-}
+  console.log(`✓ Generated ${fullResponse.length} characters`)
+  console.log(`✓ Found ${metaphorStartCount} metaphor start markers`)
+  console.log(`✓ Found ${metaphorEndCount} metaphor end markers`)
 
-async function generateAllTopics() {
-  console.log('Starting topic content generation...')
-
-  let totalTopics = 0
-  for (const domain of EPPP_DOMAINS) {
-    totalTopics += domain.topics.length
+  if (metaphorStartCount !== metaphorEndCount) {
+    console.warn(`⚠️  Marker mismatch! Start: ${metaphorStartCount}, End: ${metaphorEndCount}`)
   }
-  console.log(`Total topics to generate: ${totalTopics}`)
 
-  const topicsDir = join(process.cwd(), 'topic-content')
-  mkdirSync(topicsDir, { recursive: true })
+  // Show first few metaphors found
+  const metaphorRegex = /\{\{M\}\}(.*?)\{\{\/M\}\}/gs
+  const metaphors = [...fullResponse.matchAll(metaphorRegex)]
 
-  let generatedCount = 0
-  let failedCount = 0
+  if (metaphors.length > 0) {
+    console.log(`\n✅ SUCCESS: Found ${metaphors.length} marked metaphors`)
+    console.log('\nFirst 5 metaphors:')
+    metaphors.slice(0, 5).forEach((match, i) => {
+      console.log(`${i + 1}. "${match[1].substring(0, 80)}${match[1].length > 80 ? '...' : ''}"`)
+    })
+  } else {
+    console.log('\n❌ WARNING: No metaphor markers found in generated content!')
+  }
 
-  for (const domainData of EPPP_DOMAINS) {
-    const domainFolder = getDomainFolder(domainData.name)
-    const domainDir = join(topicsDir, domainFolder)
-    mkdirSync(domainDir, { recursive: true })
+  // Save the file
+  const slug = 'classical-conditioning'
+  const domainFolder = '2-cognitive-affective-bases'
+  const topicsDir = join(process.cwd(), 'topic-content-v3-test')
+  const domainDir = join(topicsDir, domainFolder)
+  mkdirSync(domainDir, { recursive: true })
 
-    console.log(`\n=== ${domainData.name} (${domainData.topics.length} topics) ===`)
-
-    for (const topicObj of domainData.topics) {
-      try {
-        const topic = topicObj.name
-        const slug = createSlug(topic)
-        const filePath = join(domainDir, `${slug}.md`)
-
-        const content = await generateTopicContent({
-          name: topic,
-          domain: domainData.name,
-          domainId: domainData.id,
-          slug,
-          domainFolder,
-        })
-
-        const now = new Date().toISOString()
-        const frontmatter = `---
-topic_name: ${topic}
+  const now = new Date().toISOString()
+  const frontmatter = `---
+topic_name: ${topicName}
 domain: ${domainData.name}
 slug: ${slug}
 generated_at: ${now}
@@ -193,35 +171,17 @@ version: 3
 
 `
 
-        const fileContent = frontmatter + content
+  const filePath = join(domainDir, `${slug}.md`)
+  writeFileSync(filePath, frontmatter + fullResponse, 'utf-8')
 
-        writeFileSync(filePath, fileContent, 'utf-8')
-        console.log(`✓ Saved: ${slug}`)
-        generatedCount++
-
-        // Add a small delay between requests to avoid rate limiting
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-      } catch (error) {
-        console.error(`✗ Failed to generate ${topicObj.name}:`, error)
-        failedCount++
-      }
-    }
-  }
-
-  console.log(`\n\n=== Generation Complete ===`)
-  console.log(`Successfully generated: ${generatedCount}`)
-  console.log(`Failed: ${failedCount}`)
-  console.log(`Total: ${generatedCount + failedCount}`)
-
-  if (failedCount > 0) {
-    console.log('\n⚠️  Some topics failed to generate. You can re-run this script to retry.')
-  } else {
-    console.log('\n✅ All topics generated successfully!')
-  }
+  console.log(`\n✓ Saved to: ${filePath}`)
+  console.log('\nYou can now:')
+  console.log('1. Review the file to verify marker placement')
+  console.log('2. Check if metaphors are appropriately marked')
+  console.log('3. If good, run full regeneration for all topics')
 }
 
-// Run the generation
-generateAllTopics().catch((error) => {
-  console.error('Fatal error:', error)
+testMetaphorMarkers().catch(error => {
+  console.error('Error:', error)
   process.exit(1)
 })
