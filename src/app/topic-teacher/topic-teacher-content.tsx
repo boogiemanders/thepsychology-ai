@@ -257,6 +257,19 @@ export function TopicTeacherContent() {
         throw new Error(`API Error (${response.status}): ${errorText || 'Unknown error'}`)
       }
 
+      // Extract base content from response headers
+      const baseContentHeader = response.headers.get('X-Base-Content')
+      if (baseContentHeader) {
+        try {
+          // Decode from base64
+          const decodedBaseContent = atob(baseContentHeader)
+          setBaseContent(decodedBaseContent)
+          console.log('[Topic Teacher] ✅ Stored base content from API headers')
+        } catch (error) {
+          console.warn('[Topic Teacher] Failed to decode base content from headers:', error)
+        }
+      }
+
       if (!response.body) {
         throw new Error('No response body')
       }
@@ -276,11 +289,6 @@ export function TopicTeacherContent() {
 
       if (!lessonContent) {
         throw new Error('No lesson content received from API')
-      }
-
-      // Store base content if this is the initial load without personalization
-      if (!userInterests) {
-        setBaseContent(lessonContent)
       }
 
       setMessages([

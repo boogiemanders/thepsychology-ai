@@ -22,22 +22,72 @@ interface AnalysisData {
 
 export function PrioritizeContent() {
   const searchParams = useSearchParams()
+  const resultId = searchParams.get('id')
   const resultsParam = searchParams.get('results')
 
   const [analysis, setAnalysis] = useState('')
   const [isAnalyzing, setIsAnalyzing] = useState(false)
+  const [isLoadingResults, setIsLoadingResults] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [studyStats, setStudyStats] = useState(calculateStudyStats())
   const [viewMode, setViewMode] = useState<'overview' | 'detailed'>('overview')
+  const [examResults, setExamResults] = useState<string | null>(null)
 
+  // Fetch results from Supabase if ID is provided
   useEffect(() => {
-    if (resultsParam) {
+    const fetchResults = async () => {
+      if (!resultId) {
+        // Use results from URL param if available (backward compatibility)
+        if (resultsParam) {
+          setExamResults(resultsParam)
+        }
+        return
+      }
+
+      try {
+        setIsLoadingResults(true)
+        setError(null)
+
+        const response = await fetch(`/api/get-exam-results?id=${resultId}`)
+        const data = await response.json()
+
+        if (!data.success) {
+          throw new Error(data.error || 'Failed to load exam results')
+        }
+
+        // Convert to same format as URL param for backward compatibility
+        const resultData = {
+          questions: data.results.questions,
+          selectedAnswers: data.results.selectedAnswers,
+          score: data.results.score,
+          totalQuestions: data.results.totalQuestions,
+          examType: data.results.examType,
+          examMode: data.results.examMode,
+          topPriorities: data.results.topPriorities,
+          allResults: data.results.allResults,
+        }
+
+        setExamResults(JSON.stringify(resultData))
+      } catch (err) {
+        console.error('Error loading results:', err)
+        setError(err instanceof Error ? err.message : 'Failed to load results')
+      } finally {
+        setIsLoadingResults(false)
+      }
+    }
+
+    fetchResults()
+  }, [resultId, resultsParam])
+
+  // Analyze results once they're loaded
+  useEffect(() => {
+    if (examResults && !isLoadingResults) {
       analyzeResults()
     }
-  }, [resultsParam])
+  }, [examResults, isLoadingResults])
 
   const analyzeResults = async () => {
-    if (!resultsParam) return
+    if (!examResults) return
 
     try {
       setIsAnalyzing(true)
@@ -49,7 +99,7 @@ export function PrioritizeContent() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ examResults: resultsParam }),
+        body: JSON.stringify({ examResults }),
       })
 
       if (!response.ok) {
@@ -97,7 +147,23 @@ export function PrioritizeContent() {
     return sections
   }
 
-  if (!resultsParam) {
+  // Show loading state while fetching results from Supabase
+  if (isLoadingResults) {
+    return (
+      <main className="min-h-screen p-6 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center py-20">
+            <div className="w-12 h-12 border-4 border-border border-t-primary rounded-full animate-spin mx-auto mb-4" />
+            <p className="text-muted-foreground">
+              Loading exam results...
+            </p>
+          </div>
+        </div>
+      </main>
+    )
+  }
+
+  if (!examResults && !resultId && !resultsParam) {
     return (
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">

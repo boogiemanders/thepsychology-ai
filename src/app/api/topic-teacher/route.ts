@@ -63,6 +63,7 @@ export async function POST(request: NextRequest) {
 
     let messages: Message[] = []
     let lessonContent = ''
+    let baseContentOnly = ''
 
     if (isInitial) {
       // Initial lesson request - use pre-generated content
@@ -73,6 +74,9 @@ export async function POST(request: NextRequest) {
         if (preGeneratedContent) {
           console.log(`[Topic Teacher] ✅ Found pre-generated content for ${topic}`)
           console.log(`[Topic Teacher] Content length: ${preGeneratedContent.baseContent.length} chars`)
+
+          // Store the base content
+          baseContentOnly = preGeneratedContent.baseContent
 
           // Use pre-generated base content (with adult-friendly metaphors)
           lessonContent = preGeneratedContent.baseContent
@@ -165,6 +169,10 @@ export async function POST(request: NextRequest) {
           'Content-Type': 'text/event-stream',
           'Cache-Control': 'no-cache',
           'Connection': 'keep-alive',
+          // Send base content length so frontend knows if base content is available
+          'X-Base-Content-Length': baseContentOnly.length.toString(),
+          // Encode base content in base64 to avoid header encoding issues
+          'X-Base-Content': baseContentOnly ? Buffer.from(baseContentOnly).toString('base64') : '',
         },
       })
     }

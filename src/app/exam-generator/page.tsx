@@ -1,11 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -55,26 +54,29 @@ export default function ExamGeneratorPage() {
   const [isLoadingPreGen, setIsLoadingPreGen] = useState(false)
   const [userId, setUserId] = useState<string | null>(null)
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
-  const [textFormats, setTextFormats] = useState<Record<number, Record<string, string>>>({})
+  const [textFormats, setTextFormats] = useState<Record<number, { question: string; options: string[] }>>({})
   const [assignmentId, setAssignmentId] = useState<string | null>(null)
+  const [isSavingResults, setIsSavingResults] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
 
   // Apply highlight to selected text (question and answer choices)
-  const handleHighlightText = () => {
+  const handleHighlightText = useCallback(() => {
     const selectedText = window.getSelection()?.toString()
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
         // Highlight in question text
-        const oldQuestion = question.question
+        const oldQuestion = textFormats[currentQuestion]?.question || question.question
         const newQuestion = oldQuestion.replace(
           new RegExp(`(?<!<mark[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</mark>)`, 'g'),
           `<mark style="background-color: yellow; color: black;">$&</mark>`
         )
 
         // Also highlight in all answer choices
-        const newOptions = question.options.map(option =>
+        const formattedOptions = textFormats[currentQuestion]?.options
+        const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options
+        const newOptions = currentOptions.map((option: string) =>
           option.replace(
             new RegExp(`(?<!<mark[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</mark>)`, 'g'),
             `<mark style="background-color: yellow; color: black;">$&</mark>`
@@ -84,30 +86,31 @@ export default function ExamGeneratorPage() {
         setTextFormats(prev => ({
           ...prev,
           [currentQuestion]: {
-            ...prev[currentQuestion],
             question: newQuestion,
             options: newOptions
           }
         }))
       }
     }
-  }
+  }, [currentQuestion, questions, textFormats])
 
   // Apply strikethrough to selected text (question and answer choices)
-  const handleStrikethroughText = () => {
+  const handleStrikethroughText = useCallback(() => {
     const selectedText = window.getSelection()?.toString()
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
         // Strikethrough in question text
-        const oldQuestion = question.question
+        const oldQuestion = textFormats[currentQuestion]?.question || question.question
         const newQuestion = oldQuestion.replace(
           new RegExp(`(?<!<del[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</del>)`, 'g'),
           `<del style="text-decoration: line-through;">$&</del>`
         )
 
         // Also strikethrough in all answer choices
-        const newOptions = question.options.map(option =>
+        const formattedOptions = textFormats[currentQuestion]?.options
+        const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options
+        const newOptions = currentOptions.map((option: string) =>
           option.replace(
             new RegExp(`(?<!<del[^>]*>)${selectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!</del>)`, 'g'),
             `<del style="text-decoration: line-through;">$&</del>`
@@ -117,7 +120,6 @@ export default function ExamGeneratorPage() {
         setTextFormats(prev => ({
           ...prev,
           [currentQuestion]: {
-            ...prev[currentQuestion],
             question: newQuestion,
             options: newOptions
           }
@@ -125,7 +127,7 @@ export default function ExamGeneratorPage() {
       }
     }
     window.getSelection()?.removeAllRanges()
-  }
+  }, [currentQuestion, questions, textFormats])
 
   // Save paused exam state to localStorage
   const savePausedExamState = () => {
@@ -162,6 +164,110 @@ export default function ExamGeneratorPage() {
   const handleSaveAndReturn = () => {
     savePausedExamState()
     window.location.href = '/dashboard'
+  }
+
+  // Handle end exam - save results to Supabase and navigate
+  const handleEndExam = async () => {
+    if (!userId || !examType || !mode) {
+      console.error('Missing required data for exam completion')
+      return
+    }
+
+    setIsSavingResults(true)
+
+    try {
+      const scoredQuestions = questions.filter(q => q.isScored !== false)
+      const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
+        const q = questions[parseInt(qIdx)]
+        return q && q.isScored !== false && answer === q.correct_answer
+      }).length
+
+      // Save exam completion to local storage
+      const { saveExamCompletion } = require('@/lib/exam-history')
+      saveExamCompletion({
+        examType: examType || 'practice',
+        examMode: mode || 'study',
+        score: (score / scoredQuestions.length) * 100,
+        totalQuestions: scoredQuestions.length,
+        correctAnswers: score,
+      })
+
+      // Generate priority recommendations if diagnostic exam
+      let priorityData = null
+      if (examType === 'diagnostic') {
+        const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
+        const { savePriorityRecommendation } = require('@/lib/priority-storage')
+
+        // Build wrong answers from selected answers
+        const wrongAnswers = Object.entries(selectedAnswers)
+          .map(([qIdx, answer]) => {
+            const q = questions[parseInt(qIdx)]
+            if (q && q.isScored !== false && answer !== q.correct_answer) {
+              return {
+                questionId: parseInt(qIdx) + 1,
+                question: q.question,
+                selectedAnswer: answer,
+                correctAnswer: q.correct_answer,
+                relatedSections: [q.domain],
+                timestamp: Date.now(),
+              }
+            }
+            return null
+          })
+          .filter(Boolean)
+
+        const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
+        const allResults = getAllDomainResults(wrongAnswers)
+
+        priorityData = {
+          topPriorities,
+          allResults,
+        }
+
+        // Save to local storage
+        savePriorityRecommendation({
+          examType: 'diagnostic',
+          examMode: mode || 'study',
+          topPriorities,
+          allResults,
+        })
+      }
+
+      // Save to Supabase
+      const response = await fetch('/api/save-exam-results', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId,
+          examType,
+          examMode: mode,
+          questions,
+          selectedAnswers,
+          flaggedQuestions,
+          score,
+          totalQuestions: scoredQuestions.length,
+          topPriorities: priorityData?.topPriorities || null,
+          allResults: priorityData?.allResults || null,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!data.success) {
+        throw new Error('Failed to save exam results')
+      }
+
+      // Clear paused exam state since exam is now completed
+      localStorage.removeItem('pausedExamState')
+      setHasPausedExam(false)
+
+      // Navigate with just the result ID (no more URI_TOO_LONG!)
+      window.location.href = `/prioritize?id=${data.resultId}`
+    } catch (error) {
+      console.error('Error saving exam results:', error)
+      setError('Failed to save exam results. Please try again.')
+      setIsSavingResults(false)
+    }
   }
 
   // Resume last paused exam (manual resume via button)
@@ -312,69 +418,7 @@ export default function ExamGeneratorPage() {
 
         // Auto-submit if time runs out
         if (newTime <= 0) {
-          // Navigate to results
-          const scoredQuestions = questions.filter(q => q.isScored !== false)
-          const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
-            const q = questions[parseInt(qIdx)]
-            return q && q.isScored !== false && answer === q.correct_answer
-          }).length
-
-          // Generate priority recommendations if diagnostic exam
-          let priorityData = null
-          if (examType === 'diagnostic') {
-            const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
-            const { savePriorityRecommendation } = require('@/lib/priority-storage')
-
-            // Build wrong answers from selected answers
-            const wrongAnswers = Object.entries(selectedAnswers)
-              .map(([qIdx, answer]) => {
-                const q = questions[parseInt(qIdx)]
-                if (q && q.isScored !== false && answer !== q.correct_answer) {
-                  return {
-                    questionId: parseInt(qIdx) + 1,
-                    question: q.question,
-                    selectedAnswer: answer,
-                    correctAnswer: q.correct_answer,
-                    relatedSections: [q.domain],
-                    timestamp: Date.now(),
-                  }
-                }
-                return null
-              })
-              .filter(Boolean)
-
-            const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
-            const allResults = getAllDomainResults(wrongAnswers)
-
-            priorityData = {
-              topPriorities,
-              allResults,
-            }
-
-            savePriorityRecommendation({
-              examType: 'diagnostic',
-              examMode: mode,
-              topPriorities,
-              allResults,
-            })
-          }
-
-          const resultData = {
-            questions,
-            selectedAnswers,
-            score,
-            totalQuestions: scoredQuestions.length,
-            examType,
-            examMode: mode,
-            ...priorityData,
-          }
-
-          // Clear paused exam state since exam is now completed
-          localStorage.removeItem('pausedExamState')
-          setHasPausedExam(false)
-
-          const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
-          window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
+          handleEndExam()
           return 0
         }
 
@@ -691,44 +735,46 @@ export default function ExamGeneratorPage() {
                     animate={{ opacity: 1, y: 0, scaleY: 1 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
                     style={{ originY: 0 }}
-                    className="max-w-2xl mx-auto"
+                    className="max-w-4xl mx-auto"
                   >
                     <p className="text-sm font-semibold text-muted-foreground mb-4">Step 2: Select Mode</p>
-                    <Tabs value={selectedMode} onValueChange={(value) => setSelectedMode(value as 'study' | 'test')} className="w-full">
-                      <TabsList className="grid w-full grid-cols-2">
-                        <TabsTrigger value="study" className="text-base font-semibold">Study Mode</TabsTrigger>
-                        <TabsTrigger value="test" className="text-base font-semibold">Test Mode</TabsTrigger>
-                      </TabsList>
-
-                      <TabsContent value="study" asChild>
-                        <motion.div
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -20 }}
-                          transition={{ duration: 0.3 }}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      {/* Study Mode Card */}
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Card
+                          className={`cursor-pointer transition-all border-2 h-full ${
+                            selectedMode === 'study'
+                              ? 'border-green-500 bg-green-50/20 dark:bg-green-950/20'
+                              : 'border-border'
+                          }`}
+                          onClick={() => setSelectedMode('study')}
                         >
-                          <Card>
-                            <CardHeader>
-                              <CardDescription>
-                                Learn at your own pace with immediate feedback
-                              </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                              <ul className="space-y-2 text-sm text-left">
-                                <li className="flex items-center gap-2">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                                  Correct answers turn green immediately
-                                </li>
-                                <li className="flex items-center gap-2">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                                  Learn from mistakes with detailed explanations
-                                </li>
-                                <li className="flex items-center gap-2">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                                  No time pressure - take as long as you need
-                                </li>
-                              </ul>
-                            </CardContent>
+                          <CardHeader className="text-center">
+                            <CardTitle className="text-xl font-semibold">Study Mode</CardTitle>
+                            <CardDescription>
+                              Learn at your own pace with immediate feedback
+                            </CardDescription>
+                          </CardHeader>
+                          <CardContent className="space-y-3">
+                            <ul className="space-y-2 text-sm text-left">
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                Correct answers turn green immediately
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                Learn from mistakes with explanations
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                No time pressure
+                              </li>
+                            </ul>
+                          </CardContent>
+                          {selectedMode === 'study' && (
                             <CardFooter>
                               <Button
                                 onClick={() => handleGenerateExam(examType, 'study')}
@@ -738,54 +784,60 @@ export default function ExamGeneratorPage() {
                                 Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Study Mode
                               </Button>
                             </CardFooter>
-                          </Card>
-                        </motion.div>
-                      </TabsContent>
+                          )}
+                        </Card>
+                      </motion.div>
 
-                      <TabsContent value="test" asChild>
-                        <motion.div
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: 20 }}
-                          transition={{ duration: 0.3 }}
+                      {/* Test Mode Card */}
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Card
+                          className={`cursor-pointer transition-all border-2 h-full ${
+                            selectedMode === 'test'
+                              ? 'border-orange-500 bg-orange-50/20 dark:bg-orange-950/20'
+                              : 'border-border'
+                          }`}
+                          onClick={() => setSelectedMode('test')}
                         >
-                          <Card>
-                            <CardHeader>
-                              <CardDescription>
-                                Simulate real exam conditions
-                              </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                              <ul className="space-y-2 text-sm text-left">
-                                <li className="flex items-center gap-2">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                                  See all answers only at the end
-                                </li>
-                                <li className="flex items-center gap-2">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                                  Timed exam with countdown
-                                </li>
-                                <li className="flex items-center gap-2">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                                  Realistic EPPP exam experience
-                                </li>
-                              </ul>
-                            </CardContent>
+                          <CardHeader className="text-center">
+                            <CardTitle className="text-xl font-semibold">Test Mode</CardTitle>
+                            <CardDescription>
+                              Simulate real exam conditions
+                            </CardDescription>
+                          </CardHeader>
+                          <CardContent className="space-y-3">
+                            <ul className="space-y-2 text-sm text-left">
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                                See all answers only at the end
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                                Timed exam with countdown
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                                Realistic EPPP exam experience
+                              </li>
+                            </ul>
+                          </CardContent>
+                          {selectedMode === 'test' && (
                             <CardFooter>
                               <Button
                                 onClick={() => handleGenerateExam(examType, 'test')}
                                 className="w-full px-8 py-6"
                                 size="lg"
-                                variant="outline"
                               >
                                 Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Test Mode
                               </Button>
                             </CardFooter>
-                          </Card>
-                        </motion.div>
-                      </TabsContent>
-                    </Tabs>
-                    </motion.div>
+                          )}
+                        </Card>
+                      </motion.div>
+                    </div>
+                  </motion.div>
                   )}
                 </div>
               )}
@@ -1063,86 +1115,12 @@ export default function ExamGeneratorPage() {
 
                 {currentQuestion === questions.length - 1 ? (
                   <Button
-                    onClick={() => {
-                      const scoredQuestions = questions.filter(q => q.isScored !== false)
-                      const score = Object.entries(selectedAnswers).filter(([qIdx, answer]) => {
-                        const q = questions[parseInt(qIdx)]
-                        return q && q.isScored !== false && answer === q.correct_answer
-                      }).length
-
-                      // Save exam completion to local storage
-                      const { saveExamCompletion } = require('@/lib/exam-history')
-                      saveExamCompletion({
-                        examType: examType || 'practice',
-                        examMode: mode || 'study',
-                        score: (score / scoredQuestions.length) * 100,
-                        totalQuestions: scoredQuestions.length,
-                        correctAnswers: score,
-                      })
-
-                      // Generate priority recommendations if diagnostic exam
-                      let priorityData = null
-                      if (examType === 'diagnostic') {
-                        const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
-                        const { savePriorityRecommendation } = require('@/lib/priority-storage')
-
-                        // Build wrong answers from selected answers
-                        const wrongAnswers = Object.entries(selectedAnswers)
-                          .map(([qIdx, answer]) => {
-                            const q = questions[parseInt(qIdx)]
-                            if (q && q.isScored !== false && answer !== q.correct_answer) {
-                              return {
-                                questionId: parseInt(qIdx) + 1,
-                                question: q.question,
-                                selectedAnswer: answer,
-                                correctAnswer: q.correct_answer,
-                                relatedSections: [q.domain],
-                                timestamp: Date.now(),
-                              }
-                            }
-                            return null
-                          })
-                          .filter(Boolean)
-
-                        const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
-                        const allResults = getAllDomainResults(wrongAnswers)
-
-                        priorityData = {
-                          topPriorities,
-                          allResults,
-                        }
-
-                        // Save to local storage
-                        savePriorityRecommendation({
-                          examType: 'diagnostic',
-                          examMode: mode || 'study',
-                          topPriorities,
-                          allResults,
-                        })
-                      }
-
-                      // Route to prioritizer if diagnostic, prioritize if practice
-                      const resultData = {
-                        questions,
-                        selectedAnswers,
-                        score,
-                        totalQuestions: scoredQuestions.length,
-                        examType,
-                        examMode: mode,
-                        ...priorityData,
-                      }
-
-                      // Clear paused exam state since exam is now completed
-                      localStorage.removeItem('pausedExamState')
-                      setHasPausedExam(false)
-
-                      const targetPage = examType === 'diagnostic' ? '/prioritize' : '/prioritize'
-                      window.location.href = `${targetPage}?results=${encodeURIComponent(JSON.stringify(resultData))}`
-                    }}
+                    onClick={handleEndExam}
+                    disabled={isSavingResults}
                     className="min-w-[100px] rounded-none"
                     style={{ fontFamily: 'Tahoma' }}
                   >
-                    End Exam
+                    {isSavingResults ? 'Saving...' : 'End Exam'}
                   </Button>
                 ) : (
                   <div className="flex flex-col gap-1 items-center">
