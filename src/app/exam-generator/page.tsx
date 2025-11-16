@@ -226,7 +226,7 @@ export default function ExamGeneratorPage() {
   }
 
   // Handle end exam - save results to Supabase and navigate
-  const handleEndExam = async () => {
+  const handleEndExam = useCallback(async () => {
     if (!userId || !examType || !mode) {
       console.error('Missing required data for exam completion')
       return
@@ -327,7 +327,7 @@ export default function ExamGeneratorPage() {
       setError('Failed to save exam results. Please try again.')
       setIsSavingResults(false)
     }
-  }
+  }, [userId, examType, mode, questions, selectedAnswers, flaggedQuestions])
 
   // Resume last paused exam (manual resume via button)
   const handleResumeLastExam = () => {
@@ -627,19 +627,19 @@ export default function ExamGeneratorPage() {
     setShowExplanation(true)
   }
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion((prev) => prev + 1)
       setShowExplanation(false)
     }
-  }
+  }, [currentQuestion, questions.length])
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     if (currentQuestion > 0) {
       setCurrentQuestion((prev) => prev - 1)
       setShowExplanation(false)
     }
-  }
+  }, [currentQuestion])
 
   if (questions.length === 0) {
     return (
