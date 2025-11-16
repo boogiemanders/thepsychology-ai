@@ -380,6 +380,20 @@ export default function ExamGeneratorPage() {
   // Detect if user is on Mac
   const isMac = typeof navigator !== 'undefined' && navigator.platform.toUpperCase().indexOf('MAC') >= 0
 
+  const handleNext = useCallback(() => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion((prev) => prev + 1)
+      setShowExplanation(false)
+    }
+  }, [currentQuestion, questions.length])
+
+  const handlePrevious = useCallback(() => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion((prev) => prev - 1)
+      setShowExplanation(false)
+    }
+  }, [currentQuestion])
+
   // Keyboard shortcuts for exam navigation
   useEffect(() => {
     if (!isExamStarted) return
@@ -626,20 +640,6 @@ export default function ExamGeneratorPage() {
   const handleShowExplanation = () => {
     setShowExplanation(true)
   }
-
-  const handleNext = useCallback(() => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion((prev) => prev + 1)
-      setShowExplanation(false)
-    }
-  }, [currentQuestion, questions.length])
-
-  const handlePrevious = useCallback(() => {
-    if (currentQuestion > 0) {
-      setCurrentQuestion((prev) => prev - 1)
-      setShowExplanation(false)
-    }
-  }, [currentQuestion])
 
   if (questions.length === 0) {
     return (
