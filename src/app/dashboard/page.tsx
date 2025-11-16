@@ -359,6 +359,10 @@ export default function DashboardPage() {
       href: "/exam-generator",
       cta: hasPausedExam ? "Resume?" : "Start Exam",
       className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
+      style: {
+        borderColor: '#788c5d',
+        backgroundColor: 'rgba(120, 140, 93, 0.05)',
+      },
       background: (
         <Marquee className="absolute inset-0 opacity-20" repeat={2}>
           <div className="flex gap-6 whitespace-nowrap px-4">
@@ -388,6 +392,10 @@ export default function DashboardPage() {
       href: "/review-exams",
       cta: "View Results",
       className: "lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
+      style: {
+        borderColor: '#bdd1ca',
+        backgroundColor: 'rgba(189, 209, 202, 0.05)',
+      },
     },
     {
       Icon: Droplets,
@@ -396,6 +404,10 @@ export default function DashboardPage() {
       href: "#",
       cta: "Coming Soon",
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
+      style: {
+        borderColor: '#c46685',
+        backgroundColor: 'rgba(196, 102, 133, 0.05)',
+      },
       background: (
         <div className="absolute inset-0 overflow-hidden">
           <BreathingAnimation speed={0.596} />
@@ -409,6 +421,10 @@ export default function DashboardPage() {
       href: "/topic-selector",
       cta: "Start Studying",
       className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
+      style: {
+        borderColor: '#d87758',
+        backgroundColor: 'rgba(216, 119, 88, 0.05)',
+      },
       background: (
         <div className="absolute inset-0 flex flex-col items-start justify-start pt-4 p-4 h-full">
           {/* Priority Badges Section */}
@@ -419,11 +435,24 @@ export default function DashboardPage() {
                 Priority Focus
               </div>
               <div className="flex flex-wrap gap-1">
-                {priorityDomains.slice(0, 3).map((domain, idx) => (
-                  <Badge key={idx} variant="outline" className="text-xs bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-700">
-                    #{idx + 1}: {domain.domainName.split(':')[0]}
-                  </Badge>
-                ))}
+                {priorityDomains.slice(0, 3).map((domain, idx) => {
+                  const colors = ['#bdd1ca', '#788c5d', '#d87758']
+                  const color = colors[idx]
+                  return (
+                    <Badge
+                      key={idx}
+                      variant="outline"
+                      className="text-xs"
+                      style={{
+                        borderColor: color,
+                        backgroundColor: `${color}20`,
+                        color: color,
+                      }}
+                    >
+                      #{idx + 1}: {domain.domainName.split(':')[0]}
+                    </Badge>
+                  )
+                })}
               </div>
             </div>
           )}

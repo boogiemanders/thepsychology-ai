@@ -35,6 +35,7 @@ export function BentoCard({
   onClick,
   classNameHeader,
   showHeader = true,
+  style,
 }: {
   name: string
   className: string
@@ -46,6 +47,7 @@ export function BentoCard({
   onClick?: () => void
   classNameHeader?: string
   showHeader?: boolean
+  style?: React.CSSProperties
 }) {
   const content = (
     <>
@@ -89,6 +91,7 @@ export function BentoCard({
         key={name}
         className={cardClasses}
         onClick={onClick}
+        style={style}
       >
         {content}
       </div>
@@ -100,6 +103,7 @@ export function BentoCard({
       <div
         key={name}
         className={cardClasses}
+        style={style}
       >
         {content}
       </div>
@@ -111,6 +115,7 @@ export function BentoCard({
       key={name}
       href={href}
       className={cardClasses}
+      style={style}
     >
       {content}
     </Link>

@@ -193,6 +193,10 @@ export default function ReviewExamsPage() {
                       <Card
                         key={exam.assignmentId}
                         className="cursor-pointer hover:shadow-lg transition-shadow"
+                        style={{
+                          borderColor: '#bdd1ca',
+                          backgroundColor: 'rgba(189, 209, 202, 0.03)',
+                        }}
                         onClick={() =>
                           setExpandedExam(
                             expandedExam === exam.assignmentId ? null : exam.assignmentId
@@ -209,7 +213,7 @@ export default function ReviewExamsPage() {
                             </div>
                             {exam.score !== undefined && (
                               <div className="text-right">
-                                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                                <div className="text-3xl font-bold" style={{ color: '#bdd1ca' }}>
                                   {Math.round(exam.score)}%
                                 </div>
                                 <p className="text-xs text-muted-foreground">Score</p>
@@ -286,6 +290,10 @@ export default function ReviewExamsPage() {
                       <Card
                         key={exam.assignmentId}
                         className="cursor-pointer hover:shadow-lg transition-shadow"
+                        style={{
+                          borderColor: '#788c5d',
+                          backgroundColor: 'rgba(120, 140, 93, 0.03)',
+                        }}
                         onClick={() =>
                           setExpandedExam(
                             expandedExam === exam.assignmentId ? null : exam.assignmentId
@@ -302,7 +310,7 @@ export default function ReviewExamsPage() {
                             </div>
                             {exam.score !== undefined && (
                               <div className="text-right">
-                                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">
+                                <div className="text-3xl font-bold" style={{ color: '#788c5d' }}>
                                   {Math.round(exam.score)}%
                                 </div>
                                 <p className="text-xs text-muted-foreground">Score</p>

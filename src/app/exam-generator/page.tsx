@@ -989,36 +989,34 @@ export default function ExamGeneratorPage() {
           <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
             <div className="flex justify-between items-start mb-4">
               <div className="flex flex-col gap-2">
-                <div className="flex gap-3">
-                  <span className="text-base font-normal font-serif text-foreground">
+                <div className="flex gap-2">
+                  <Badge variant="outline">
                     {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'}
-                  </span>
-                  <span className="text-base font-normal font-serif text-foreground">
+                  </Badge>
+                  <Badge variant="outline">
                     {mode === 'study' ? 'Study' : 'Test'}
-                  </span>
+                  </Badge>
                 </div>
-                <div className="flex items-center justify-between">
-                  <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                    Question {currentQuestion + 1} of {questions.length}
-                  </p>
-                  {mode === 'test' && timeRemaining > 0 && (
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-2 text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                        <Clock className="w-4 h-4" />
-                        {formatTime(timeRemaining)}
-                      </div>
-                      <Button
-                        onClick={handlePause}
-                        variant="outline"
-                        size="sm"
-                        className="rounded-none hover:bg-accent transition-colors"
-                      >
-                        Pause
-                      </Button>
-                    </div>
-                  )}
-                </div>
+                <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                  Question {currentQuestion + 1} of {questions.length}
+                </p>
               </div>
+              {mode === 'test' && timeRemaining > 0 && (
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2 text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                    <Clock className="w-4 h-4" />
+                    {formatTime(timeRemaining)}
+                  </div>
+                  <Button
+                    onClick={handlePause}
+                    variant="outline"
+                    size="sm"
+                    className="rounded-none hover:bg-accent transition-colors"
+                  >
+                    Pause
+                  </Button>
+                </div>
+              )}
             </div>
             <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-1" />
           </div>
