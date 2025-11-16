@@ -301,11 +301,20 @@ export function TopicTeacherContent() {
 
   // Refresh metaphors when interests change (after initial load)
   const refreshMetaphors = async (newInterests: string) => {
-    if (!topic || !initialized || !baseContent) return
+    if (!topic || !initialized) return
 
     try {
       setIsRefreshingMetaphors(true)
       setError(null)
+
+      // First, show base content with loading placeholder
+      const contentWithPlaceholder = baseContent + '\n\n[LOADING_METAPHORS]'
+      setMessages([
+        {
+          role: 'assistant',
+          content: contentWithPlaceholder,
+        },
+      ])
 
       const response = await fetch('/api/topic-teacher', {
         method: 'POST',
@@ -648,19 +657,7 @@ export function TopicTeacherContent() {
         )}
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto space-y-4 mb-6 rounded-lg p-4 relative">
-          {/* Metaphor loading overlay */}
-          {isRefreshingMetaphors && (
-            <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-10 flex items-center justify-center rounded-lg">
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-32 h-32">
-                  <Lottie animationData={textLoadingAnimation} loop={true} />
-                </div>
-                <p className="text-sm text-muted-foreground">Updating metaphors based on your interests...</p>
-              </div>
-            </div>
-          )}
-
+        <div className="flex-1 overflow-y-auto space-y-4 mb-6 rounded-lg p-4">
           {messages.length === 0 && !initialized && !isLoading && (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">
@@ -711,6 +708,23 @@ export function TopicTeacherContent() {
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={{
+                          p: ({ children }) => {
+                            // Check if this paragraph contains the loading placeholder
+                            const text = typeof children === 'string' ? children :
+                              Array.isArray(children) ? children.join('') : String(children)
+
+                            if (text.includes('[LOADING_METAPHORS]')) {
+                              return (
+                                <div className="flex flex-col items-center justify-center py-8 gap-3">
+                                  <div className="w-24 h-24">
+                                    <Lottie animationData={textLoadingAnimation} loop={true} />
+                                  </div>
+                                  <p className="text-sm text-muted-foreground">Personalizing metaphors for your interests...</p>
+                                </div>
+                              )
+                            }
+                            return <p>{children}</p>
+                          },
                           h1: ({ children }) => {
                             let text = ''
                             if (typeof children === 'string') {
