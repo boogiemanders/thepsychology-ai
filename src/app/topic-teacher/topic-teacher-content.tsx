@@ -19,6 +19,8 @@ import type { RealtimeChannel } from '@supabase/supabase-js'
 import { useAuth } from '@/context/auth-context'
 import { getQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
+import Lottie from 'lottie-react'
+import textLoadingAnimation from '@/../../public/animations/text-loading.json'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -41,6 +43,7 @@ export function TopicTeacherContent() {
 
   const [messages, setMessages] = useState<Message[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [isRefreshingMetaphors, setIsRefreshingMetaphors] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [initialized, setInitialized] = useState(false)
   const [showInterestsModal, setShowInterestsModal] = useState(false)
@@ -48,7 +51,9 @@ export function TopicTeacherContent() {
   const [currentInterestInput, setCurrentInterestInput] = useState('')
   const [savedInterests, setSavedInterests] = useState<string[]>([])
   const [userInterests, setUserInterests] = useState<string | null>(null)
+  const [previousUserInterests, setPreviousUserInterests] = useState<string | null>(null)
   const [interestsLoaded, setInterestsLoaded] = useState(false)
+  const [baseContent, setBaseContent] = useState<string>('')
   const [highlightData, setHighlightData] = useState<HighlightData>({
     recentlyWrongSections: [],
     recentlyCorrectSections: [],
@@ -197,6 +202,33 @@ export function TopicTeacherContent() {
     }
   }, [topic, initialized, interestsLoaded])
 
+  // Watch for interest changes and refresh metaphors
+  useEffect(() => {
+    if (!initialized || !interestsLoaded) return
+
+    // Check if interests actually changed
+    const currentInterestsStr = savedInterests.length > 0 ? savedInterests.join(', ') : null
+
+    if (currentInterestsStr !== previousUserInterests) {
+      // Interests changed - refresh metaphors
+      if (currentInterestsStr) {
+        console.log('Interests changed, refreshing metaphors:', currentInterestsStr)
+        refreshMetaphors(currentInterestsStr)
+      } else {
+        // User removed all interests - show base content
+        if (baseContent && messages.length > 0) {
+          setMessages([
+            {
+              role: 'assistant',
+              content: baseContent,
+            },
+          ])
+          setPreviousUserInterests(null)
+        }
+      }
+    }
+  }, [savedInterests, initialized, interestsLoaded])
+
   const initializeLesson = async () => {
     if (!topic) return
 
@@ -245,6 +277,11 @@ export function TopicTeacherContent() {
         throw new Error('No lesson content received from API')
       }
 
+      // Store base content if this is the initial load without personalization
+      if (!userInterests) {
+        setBaseContent(lessonContent)
+      }
+
       setMessages([
         {
           role: 'assistant',
@@ -252,12 +289,74 @@ export function TopicTeacherContent() {
         },
       ])
       setInitialized(true)
+      setPreviousUserInterests(userInterests)
     } catch (err) {
       console.error('Error loading lesson:', err)
       const errorMessage = err instanceof Error ? err.message : 'Failed to load lesson'
       setError(errorMessage)
     } finally {
       setIsLoading(false)
+    }
+  }
+
+  // Refresh metaphors when interests change (after initial load)
+  const refreshMetaphors = async (newInterests: string) => {
+    if (!topic || !initialized || !baseContent) return
+
+    try {
+      setIsRefreshingMetaphors(true)
+      setError(null)
+
+      const response = await fetch('/api/topic-teacher', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          topic,
+          domain,
+          messageHistory: [],
+          isInitial: true,
+          userInterests: newInterests,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to refresh metaphors')
+      }
+
+      if (!response.body) {
+        throw new Error('No response body')
+      }
+
+      let lessonContent = ''
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+
+      while (true) {
+        const { done, value } = await reader.read()
+
+        if (done) break
+
+        const text = decoder.decode(value)
+        lessonContent += text
+      }
+
+      // Update the lesson content with new metaphors
+      setMessages([
+        {
+          role: 'assistant',
+          content: lessonContent,
+        },
+      ])
+      setPreviousUserInterests(newInterests)
+    } catch (err) {
+      console.error('Error refreshing metaphors:', err)
+      setError(
+        err instanceof Error ? err.message : 'Failed to refresh metaphors'
+      )
+    } finally {
+      setIsRefreshingMetaphors(false)
     }
   }
 
@@ -549,7 +648,19 @@ export function TopicTeacherContent() {
         )}
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto space-y-4 mb-6 rounded-lg p-4">
+        <div className="flex-1 overflow-y-auto space-y-4 mb-6 rounded-lg p-4 relative">
+          {/* Metaphor loading overlay */}
+          {isRefreshingMetaphors && (
+            <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-10 flex items-center justify-center rounded-lg">
+              <div className="flex flex-col items-center gap-4">
+                <div className="w-32 h-32">
+                  <Lottie animationData={textLoadingAnimation} loop={true} />
+                </div>
+                <p className="text-sm text-muted-foreground">Updating metaphors based on your interests...</p>
+              </div>
+            </div>
+          )}
+
           {messages.length === 0 && !initialized && !isLoading && (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">
