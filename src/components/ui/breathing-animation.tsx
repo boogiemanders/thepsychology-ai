@@ -36,10 +36,16 @@ export function BreathingAnimation({ speed = 0.15 }: BreathingAnimationProps) {
     const normalSpeed = speed
     const slowSpeed = speed * 0.4 // Slow down to 40% speed for natural hold at end
 
-    // Start playing immediately
-    lottie.stop()
-    lottie.goToAndPlay(0, true)
-    lottie.setSpeed(normalSpeed)
+    // Only start from beginning on first play (when not reversed yet)
+    if (!isReversed) {
+      lottie.stop()
+      lottie.goToAndPlay(0, true)
+      lottie.setSpeed(normalSpeed)
+    } else {
+      // When reversing, continue from current position
+      lottie.play()
+      lottie.setSpeed(normalSpeed)
+    }
 
     // After 6 seconds, slow down for the last 1.5 seconds
     const slowdownTimeout = setTimeout(() => {
