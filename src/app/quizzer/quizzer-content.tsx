@@ -388,8 +388,9 @@ export function QuizzerContent() {
               </Button>
             </div>
           ) : quizState.showResults ? (
-            <div className="text-center py-10">
-              <div className="mb-6">
+            <div className="py-10">
+              {/* Score Summary */}
+              <div className="text-center mb-6">
                 <div className="text-6xl font-bold text-primary mb-2">
                   {quizState.score}/{questions.length}
                 </div>
@@ -422,6 +423,116 @@ export function QuizzerContent() {
                 </div>
               )}
 
+              {/* Detailed Question Breakdown */}
+              <div className="space-y-4 mb-6">
+                <h3 className="text-xl font-semibold text-center mb-4">Review Your Answers</h3>
+                {questions.map((q, idx) => {
+                  const selectedAnswer = quizState.selectedAnswers[q.id]
+                  const isCorrect = selectedAnswer === q.correctAnswer
+                  const selectedLetter = q.options.findIndex(opt => opt === selectedAnswer)
+                  const correctLetter = q.options.findIndex(opt => opt === q.correctAnswer)
+
+                  return (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                      className={`border rounded-lg p-6 ${
+                        isCorrect
+                          ? 'bg-green-500/5 border-green-500/30'
+                          : 'bg-red-500/5 border-red-500/30'
+                      }`}
+                    >
+                      {/* Question Header */}
+                      <div className="flex items-start gap-3 mb-4">
+                        {isCorrect ? (
+                          <CheckCircle2 className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                        ) : (
+                          <XCircle className="text-red-500 flex-shrink-0 mt-1" size={20} />
+                        )}
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-sm font-semibold text-muted-foreground">
+                              Question {idx + 1}
+                            </span>
+                            {isCorrect ? (
+                              <span className="text-xs px-2 py-0.5 bg-green-500/20 text-green-700 dark:text-green-400 rounded">
+                                Correct
+                              </span>
+                            ) : (
+                              <span className="text-xs px-2 py-0.5 bg-red-500/20 text-red-700 dark:text-red-400 rounded">
+                                Incorrect
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-base font-medium mb-4">{q.question}</p>
+
+                          {/* Answer Options */}
+                          <div className="space-y-2 mb-4">
+                            {q.options.map((option, optIdx) => {
+                              const optionLetter = String.fromCharCode(65 + optIdx)
+                              const isThisCorrect = option === q.correctAnswer
+                              const isThisSelected = option === selectedAnswer
+
+                              return (
+                                <div
+                                  key={optIdx}
+                                  className={`p-3 rounded-lg border ${
+                                    isThisCorrect
+                                      ? 'bg-green-500/10 border-green-500/30'
+                                      : isThisSelected
+                                      ? 'bg-red-500/10 border-red-500/30'
+                                      : 'bg-muted/30 border-border'
+                                  }`}
+                                >
+                                  <div className="flex items-start gap-2">
+                                    <span className="font-semibold">{optionLetter}.</span>
+                                    <span className="flex-1">{option}</span>
+                                    {isThisCorrect && (
+                                      <span className="text-xs px-2 py-0.5 bg-green-500/20 text-green-700 dark:text-green-400 rounded flex-shrink-0">
+                                        Correct Answer
+                                      </span>
+                                    )}
+                                    {isThisSelected && !isThisCorrect && (
+                                      <span className="text-xs px-2 py-0.5 bg-red-500/20 text-red-700 dark:text-red-400 rounded flex-shrink-0">
+                                        Your Answer
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+                              )
+                            })}
+                          </div>
+
+                          {/* Explanation */}
+                          {!isCorrect && (
+                            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 mb-3">
+                              <p className="text-sm font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
+                                Why you might have chosen this:
+                              </p>
+                              <p className="text-sm text-muted-foreground">
+                                This is a common misconception. Your selected answer may have seemed related, but it doesn't fully capture the core concept being tested.
+                              </p>
+                            </div>
+                          )}
+
+                          <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+                            <p className="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-2">
+                              Explanation:
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {q.explanation}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )
+                })}
+              </div>
+
+              {/* Action Buttons */}
               <div className="space-y-2">
                 <Button
                   onClick={() => {
@@ -446,11 +557,6 @@ export function QuizzerContent() {
                 >
                   <Button variant="minimal" className="w-full">
                     Relearn the Materials
-                  </Button>
-                </Link>
-                <Link href="/topic-selector" className="block">
-                  <Button variant="minimal" className="w-full">
-                    Select Another Topic
                   </Button>
                 </Link>
                 <Link href="/topic-selector" className="block">
