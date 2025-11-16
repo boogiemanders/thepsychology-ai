@@ -648,9 +648,10 @@ export default function ExamGeneratorPage() {
                       <Card
                         className={`cursor-pointer transition-all border-2 ${
                           examType === 'diagnostic'
-                            ? 'border-blue-500 bg-blue-50/20 dark:bg-blue-950/20'
+                            ? 'bg-[#bdd1ca]/20 dark:bg-[#bdd1ca]/10'
                             : 'border-border'
                         }`}
+                        style={examType === 'diagnostic' ? { borderColor: '#bdd1ca' } : {}}
                         onClick={() => setExamType('diagnostic')}
                       >
                         <CardHeader className="text-center">
@@ -658,7 +659,7 @@ export default function ExamGeneratorPage() {
                             <div className="flex items-center gap-2 mb-2">
                               <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
                               {recommendedExamType === 'diagnostic' && (
-                                <Badge className="bg-blue-500">Recommended</Badge>
+                                <Badge style={{ backgroundColor: '#bdd1ca' }}>Recommended</Badge>
                               )}
                             </div>
                             <CardDescription>71 questions</CardDescription>
@@ -667,15 +668,15 @@ export default function ExamGeneratorPage() {
                         <CardContent className="space-y-3">
                           <ul className="space-y-2 text-sm text-left">
                             <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                               Identify knowledge gaps
                             </li>
                             <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                               Quick assessment (30-45 minutes)
                             </li>
                             <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                               Get priority recommendations
                             </li>
                           </ul>
@@ -691,9 +692,10 @@ export default function ExamGeneratorPage() {
                       <Card
                         className={`cursor-pointer transition-all border-2 ${
                           examType === 'practice'
-                            ? 'border-blue-500 bg-blue-50/20 dark:bg-blue-950/20'
+                            ? 'bg-[#788c5d]/20 dark:bg-[#788c5d]/10'
                             : 'border-border'
                         }`}
+                        style={examType === 'practice' ? { borderColor: '#788c5d' } : {}}
                         onClick={() => setExamType('practice')}
                       >
                         <CardHeader className="text-center">
@@ -701,7 +703,7 @@ export default function ExamGeneratorPage() {
                             <div className="flex items-center gap-2 mb-2">
                               <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
                               {recommendedExamType === 'practice' && (
-                                <Badge className="bg-blue-500">Recommended</Badge>
+                                <Badge style={{ backgroundColor: '#788c5d' }}>Recommended</Badge>
                               )}
                             </div>
                             <CardDescription>225 questions</CardDescription>
@@ -710,15 +712,15 @@ export default function ExamGeneratorPage() {
                         <CardContent className="space-y-3">
                           <ul className="space-y-2 text-sm text-left">
                             <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                               Comprehensive knowledge check
                             </li>
                             <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                               Full exam preparation (4-5 hours)
                             </li>
                             <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                               Includes experimental questions
                             </li>
                           </ul>
@@ -747,9 +749,10 @@ export default function ExamGeneratorPage() {
                         <Card
                           className={`cursor-pointer transition-all border-2 h-full ${
                             selectedMode === 'study'
-                              ? 'border-green-500 bg-green-50/20 dark:bg-green-950/20'
+                              ? 'bg-[#d87758]/20 dark:bg-[#d87758]/10'
                               : 'border-border'
                           }`}
+                          style={selectedMode === 'study' ? { borderColor: '#d87758' } : {}}
                           onClick={() => setSelectedMode('study')}
                         >
                           <CardHeader className="text-center">
@@ -761,15 +764,15 @@ export default function ExamGeneratorPage() {
                           <CardContent className="space-y-3">
                             <ul className="space-y-2 text-sm text-left">
                               <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                                 Correct answers turn green immediately
                               </li>
                               <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                                 Learn from mistakes with explanations
                               </li>
                               <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                                 No time pressure
                               </li>
                             </ul>
@@ -796,9 +799,10 @@ export default function ExamGeneratorPage() {
                         <Card
                           className={`cursor-pointer transition-all border-2 h-full ${
                             selectedMode === 'test'
-                              ? 'border-orange-500 bg-orange-50/20 dark:bg-orange-950/20'
+                              ? 'bg-[#c46685]/20 dark:bg-[#c46685]/10'
                               : 'border-border'
                           }`}
+                          style={selectedMode === 'test' ? { borderColor: '#c46685' } : {}}
                           onClick={() => setSelectedMode('test')}
                         >
                           <CardHeader className="text-center">
@@ -810,15 +814,15 @@ export default function ExamGeneratorPage() {
                           <CardContent className="space-y-3">
                             <ul className="space-y-2 text-sm text-left">
                               <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                                 See all answers only at the end
                               </li>
                               <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                                 Timed exam with countdown
                               </li>
                               <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
                                 Realistic EPPP exam experience
                               </li>
                             </ul>
