@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { supabase } from '@/lib/supabase'
 import { Button } from '@/components/ui/button'
@@ -107,115 +107,109 @@ export default function DashboardPage() {
     }
   }, [])
 
+  // Memoized update progress function
+  const updateProgress = useCallback(() => {
+    const allResults = getAllQuizResults()
+
+    // Build topic-to-domain mapping dynamically from EPPP_DOMAINS
+    const topicsByDomain: Record<number, string[]> = {}
+    EPPP_DOMAINS.forEach((domain, idx) => {
+      topicsByDomain[idx] = domain.topics.map(t => t.name)
+    })
+
+    // Calculate domain progress based on quiz results
+    const domainProgress: number[] = new Array(EPPP_DOMAINS.length).fill(0)
+    const topicScores: Record<number, Record<string, number>> = {}
+
+    // Initialize topic scores for each domain
+    EPPP_DOMAINS.forEach((_, domainIdx) => {
+      topicScores[domainIdx] = {}
+      topicsByDomain[domainIdx]?.forEach(topic => {
+        topicScores[domainIdx][topic] = 0
+      })
+    })
+
+    // Process all quiz results
+    let totalScore = 0
+    let totalQuizzes = 0
+    const completedTopics = new Set<string>()
+
+    allResults.forEach((result) => {
+      const percentage = (result.score / result.totalQuestions) * 100
+      completedTopics.add(result.topic)
+      totalScore += percentage
+      totalQuizzes++
+
+      // Find which domain this topic belongs to
+      for (let domainIdx = 0; domainIdx < EPPP_DOMAINS.length; domainIdx++) {
+        const topics = topicsByDomain[domainIdx] || []
+        const matchedTopic = topics.find(t => t.toLowerCase() === result.topic.toLowerCase())
+        if (matchedTopic) {
+          topicScores[domainIdx][matchedTopic] = percentage
+          break
+        }
+      }
+    })
+
+    // Calculate domain progress as average of all topics in domain
+    EPPP_DOMAINS.forEach((_, domainIdx) => {
+      const topicsInDomain = topicsByDomain[domainIdx] || []
+      if (topicsInDomain.length === 0) {
+        domainProgress[domainIdx] = 0
+        return
+      }
+
+      const scores = topicsInDomain.map(t => topicScores[domainIdx][t] || 0)
+      const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length
+      domainProgress[domainIdx] = avgScore
+    })
+
+    // Calculate overall completion
+    const totalCompletion = totalQuizzes > 0 ? Math.round(totalScore / totalQuizzes) : 0
+    const completedDomainsCount = domainProgress.filter(p => p >= 80).length
+    const totalTopics = Object.values(topicsByDomain).reduce((sum, topics) => sum + topics.length, 0)
+
+    setProgressData({
+      totalCompletion,
+      completedTopics: completedTopics.size,
+      totalTopics,
+      completedDomains: completedDomainsCount,
+      totalDomains: EPPP_DOMAINS.length,
+      domainProgress,
+    })
+  }, [])
+
   // Calculate progress based on quiz results
   useEffect(() => {
     if (!mounted) return
 
-    const updateProgress = () => {
-      const allResults = getAllQuizResults()
-
-      // Build topic-to-domain mapping dynamically from EPPP_DOMAINS
-      const topicsByDomain: Record<number, string[]> = {}
-      EPPP_DOMAINS.forEach((domain, idx) => {
-        topicsByDomain[idx] = domain.topics.map(t => t.name)
-      })
-
-      // Calculate domain progress based on quiz results
-      const domainProgress: number[] = new Array(EPPP_DOMAINS.length).fill(0)
-      const topicScores: Record<number, Record<string, number>> = {}
-
-      // Initialize topic scores for each domain
-      EPPP_DOMAINS.forEach((_, domainIdx) => {
-        topicScores[domainIdx] = {}
-        topicsByDomain[domainIdx]?.forEach(topic => {
-          topicScores[domainIdx][topic] = 0
-        })
-      })
-
-      // Process all quiz results
-      let totalScore = 0
-      let totalQuizzes = 0
-      const completedTopics = new Set<string>()
-
-      allResults.forEach((result) => {
-        const percentage = (result.score / result.totalQuestions) * 100
-        completedTopics.add(result.topic)
-        totalScore += percentage
-        totalQuizzes++
-
-        // Find which domain this topic belongs to
-        for (let domainIdx = 0; domainIdx < EPPP_DOMAINS.length; domainIdx++) {
-          const topics = topicsByDomain[domainIdx] || []
-          const matchedTopic = topics.find(t => t.toLowerCase() === result.topic.toLowerCase())
-          if (matchedTopic) {
-            topicScores[domainIdx][matchedTopic] = percentage
-            break
-          }
-        }
-      })
-
-      // Calculate domain progress as average of all topics in domain
-      EPPP_DOMAINS.forEach((_, domainIdx) => {
-        const topicsInDomain = topicsByDomain[domainIdx] || []
-        if (topicsInDomain.length === 0) {
-          domainProgress[domainIdx] = 0
-          return
-        }
-
-        const scores = topicsInDomain.map(t => topicScores[domainIdx][t] || 0)
-        const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length
-        domainProgress[domainIdx] = avgScore
-      })
-
-      // Calculate overall completion
-      const totalCompletion = totalQuizzes > 0 ? Math.round(totalScore / totalQuizzes) : 0
-      const completedDomainsCount = domainProgress.filter(p => p >= 80).length
-      const totalTopics = Object.values(topicsByDomain).reduce((sum, topics) => sum + topics.length, 0)
-
-      setProgressData({
-        totalCompletion,
-        completedTopics: completedTopics.size,
-        totalTopics,
-        completedDomains: completedDomainsCount,
-        totalDomains: EPPP_DOMAINS.length,
-        domainProgress,
-      })
-    }
-
     // Initial update
     updateProgress()
 
-    // Listen for storage changes (quiz results updates from other tabs)
-    const handleStorageChange = () => {
-      updateProgress()
-    }
-
-    // Listen for custom quiz results update event
-    const handleQuizResultsUpdate = () => {
-      updateProgress()
-    }
-
-    window.addEventListener('storage', handleStorageChange)
-    window.addEventListener('quiz-results-updated', handleQuizResultsUpdate)
+    // Listen for storage changes and quiz results updates
+    window.addEventListener('storage', updateProgress)
+    window.addEventListener('quiz-results-updated', updateProgress)
     return () => {
-      window.removeEventListener('storage', handleStorageChange)
-      window.removeEventListener('quiz-results-updated', handleQuizResultsUpdate)
+      window.removeEventListener('storage', updateProgress)
+      window.removeEventListener('quiz-results-updated', updateProgress)
     }
-  }, [mounted])
+  }, [mounted, updateProgress])
+
+  // Memoized update stats function
+  const updateStats = useCallback(() => {
+    setStudyStats(calculateStudyStats())
+    setTodayQuizCount(getTodayQuizCount())
+  }, [])
+
+  // Memoized update priorities function
+  const updatePriorities = useCallback(() => {
+    const priorities = getTopPriorities('diagnostic')
+    setPriorityDomains(priorities || [])
+  }, [])
 
   // Update study stats and today's quiz count
   useEffect(() => {
     if (!mounted) return
-
-    const updateStats = () => {
-      setStudyStats(calculateStudyStats())
-      setTodayQuizCount(getTodayQuizCount())
-    }
-
-    const updatePriorities = () => {
-      const priorities = getTopPriorities('diagnostic')
-      setPriorityDomains(priorities || [])
-    }
 
     updateStats()
     updatePriorities()
@@ -231,7 +225,7 @@ export default function DashboardPage() {
       window.removeEventListener('quiz-results-updated', updatePriorities)
       window.removeEventListener('priority-recommendations-updated', updatePriorities)
     }
-  }, [mounted])
+  }, [mounted, updateStats, updatePriorities])
 
   // Calculate days remaining to exam
   useEffect(() => {

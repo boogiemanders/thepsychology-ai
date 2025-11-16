@@ -2,8 +2,12 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Zap, CheckCircle2, XCircle } from 'lucide-react'
+import { ArrowLeft, Zap, CheckCircle2, XCircle, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Progress } from '@/components/ui/progress'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import { saveQuizResults, getQuizResults, WrongAnswer, getAllQuizResults } from '@/lib/quiz-results-storage'
@@ -566,70 +570,76 @@ export function QuizzerContent() {
             </div>
           ) : (
             <div className="space-y-6">
-              <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold">
-                  Question {quizState.question + 1} of {questions.length}
-                </h2>
-                <div className="flex items-center gap-6">
-                  <div className="text-sm text-muted-foreground">
-                    Score: {quizState.score}
+              {/* Header with Question Number, Progress, and Timer */}
+              <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex gap-2">
+                      <Badge variant="outline" style={{ fontFamily: 'Tahoma' }}>Quiz</Badge>
+                    </div>
+                    <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                      Question {quizState.question + 1} of {questions.length}
+                    </p>
                   </div>
-                  <div className={`flex items-center gap-2 px-4 py-2 rounded-lg font-mono font-semibold transition-colors ${
-                    isTimeWarning
-                      ? 'bg-red-500/20 text-red-500'
-                      : 'bg-secondary text-foreground'
-                  }`}>
-                    <div className="w-2 h-2 rounded-full bg-current animate-breath" />
-                    {formatTime(quizState.timeRemaining)}
+                  <div className="flex items-center gap-2 text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                    <Clock className="w-4 h-4" />
+                    <span className={isTimeWarning ? 'text-red-500' : ''}>
+                      {formatTime(quizState.timeRemaining)}
+                    </span>
                   </div>
                 </div>
+                <Progress value={((quizState.question + 1) / questions.length) * 100} className="h-1" />
               </div>
 
-              <div className="rounded-lg p-6 border border-border">
-                <h3 className="text-lg font-semibold mb-6">
-                  {questions[quizState.question]?.question}
-                </h3>
-
-                <div className="space-y-3">
-                  {questions[quizState.question]?.options.map(
-                    (option, idx) => {
-                      const isSelected =
-                        quizState.selectedAnswers[quizState.question] ===
-                        option
-                      const letter = String.fromCharCode(65 + idx)
+              {/* Question Card */}
+              <Card className="rounded-none">
+                <CardHeader>
+                  <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text" style={{ fontFamily: 'Tahoma' }}>
+                    {questions[quizState.question]?.question}
+                  </CardTitle>
+                </CardHeader>
+                <Separator />
+                <CardContent className="pt-6">
+                  {/* Answer Options - Radio Style */}
+                  <div className="space-y-3">
+                    {questions[quizState.question]?.options.map((option, idx) => {
+                      const isSelected = quizState.selectedAnswers[quizState.question] === option
+                      const optionLetter = String.fromCharCode(65 + idx)
 
                       return (
-                        <button
-                          key={idx}
-                          onClick={() => handleSelectAnswer(option)}
-                          disabled={quizState.showResults}
-                          className="w-full text-left flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/20 transition-colors disabled:opacity-50"
-                        >
-                          <div className={`w-5 h-5 rounded-full border-2 flex-shrink-0 mt-0.5 transition-all ${
-                            isSelected
-                              ? 'border-primary bg-primary'
-                              : 'border-border'
-                          }`}>
-                            {isSelected && (
-                              <div className="w-full h-full flex items-center justify-center">
-                                <div className="w-2 h-2 bg-primary-foreground rounded-full" />
-                              </div>
-                            )}
+                        <div key={idx} className="flex items-start gap-3 p-2">
+                          {/* Radio Button - Only This is Clickable */}
+                          <motion.button
+                            whileHover={!quizState.showResults ? { scale: 1.15 } : {}}
+                            onClick={() => !quizState.showResults && handleSelectAnswer(option)}
+                            disabled={quizState.showResults}
+                            className={`flex-shrink-0 mt-2 transition-all cursor-pointer disabled:cursor-not-allowed ${
+                              isSelected ? 'scale-110' : ''
+                            }`}
+                          >
+                            <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all ${
+                              isSelected
+                                ? 'border-foreground bg-foreground'
+                                : 'border-muted-foreground bg-transparent hover:border-foreground'
+                            }`}>
+                              {isSelected && (
+                                <div className="w-2 h-2 bg-white rounded-full" />
+                              )}
+                            </div>
+                          </motion.button>
+
+                          {/* Option Text - Not Clickable */}
+                          <div className="flex-1 min-w-0 pt-1">
+                            <div className="text-base text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                              <span>{optionLetter}.</span> {option}
+                            </div>
                           </div>
-                          <div className="flex-1">
-                            <span className="font-semibold text-foreground">
-                              {letter}.
-                            </span>
-                            <span className="ml-2 text-foreground">
-                              {option}
-                            </span>
-                          </div>
-                        </button>
+                        </div>
                       )
-                    }
-                  )}
-                </div>
-              </div>
+                    })}
+                  </div>
+                </CardContent>
+              </Card>
 
               {error && (
                 <motion.div
@@ -641,19 +651,23 @@ export function QuizzerContent() {
                 </motion.div>
               )}
 
-              <div className="flex gap-3">
-                <Button
-                  onClick={handleNext}
-                  disabled={
-                    !quizState.selectedAnswers[quizState.question]
-                  }
-                  className="flex-1"
-                >
-                  {quizState.question === questions.length - 1
-                    ? 'Finish Quiz'
-                    : 'Next Question'}
-                </Button>
-              </div>
+              {/* Navigation - Sticky Bottom */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 mt-8"
+              >
+                <div className="flex items-center justify-end gap-4">
+                  <Button
+                    onClick={handleNext}
+                    disabled={!quizState.selectedAnswers[quizState.question]}
+                    className="min-w-[120px] rounded-none"
+                    style={{ fontFamily: 'Tahoma' }}
+                  >
+                    {quizState.question === questions.length - 1 ? 'Finish Quiz' : 'Next'}
+                  </Button>
+                </div>
+              </motion.div>
             </div>
           )}
         </motion.div>
