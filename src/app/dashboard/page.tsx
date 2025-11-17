@@ -12,7 +12,7 @@ import { Calendar } from '@/components/ui/calendar'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid'
 import { Marquee } from '@/components/ui/marquee'
@@ -63,9 +63,28 @@ export default function DashboardPage() {
   const handleSendFeedback = async (message: string) => {
     if (!message.trim() || !user) return
 
-    // TODO: Implement feedback submission to Supabase or email service
-    console.log('Feedback from user:', user.id, 'Message:', message)
-    setFeedbackMessage('Thank you for your feedback!')
+    try {
+      // Save feedback to Supabase
+      const { error } = await supabase
+        .from('feedback')
+        .insert({
+          user_id: user.id,
+          message: message.trim(),
+          status: 'new'
+        })
+
+      if (error) {
+        console.error('Failed to save feedback:', error)
+        setFeedbackMessage('Failed to send feedback. Please try again.')
+      } else {
+        console.log('Feedback successfully saved for user:', user.id)
+        setFeedbackMessage('Thank you for your feedback!')
+      }
+    } catch (err) {
+      console.error('Error submitting feedback:', err)
+      setFeedbackMessage('Failed to send feedback. Please try again.')
+    }
+
     setTimeout(() => {
       setFeedbackMessage('')
       setIsFeedbackOpen(false)
