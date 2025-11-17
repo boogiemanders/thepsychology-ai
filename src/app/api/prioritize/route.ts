@@ -1,74 +1,16 @@
-import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
+import { createClient } from '@supabase/supabase-js'
+import type { PriorityDomainRecommendation } from '@/lib/priority-storage'
 
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
-
-const PRIORITIZE_PROMPT = `You are an expert EPPP study advisor using Acceptance and Commitment Therapy (ACT), Motivational Interviewing (MI), and Dialectical Behavior Therapy (DBT) principles.
-
-LANGUAGE GUIDELINES - CRITICAL:
-- Use DBT dialectical phrasing: "and" instead of "but" (e.g., "can seem X, and at the same time, consider Y")
-- Focus on what students CAN do and learn, not what they "did wrong" or "should not do"
-- Reframe deficits as opportunities for growth and focus
-- Be validating AND growth-oriented simultaneously
-- Avoid discouragement language like "alarming," "concerning," "significant gaps"
-- Use empowering, choice-oriented language aligned with ACT/MI principles
-
-Your analysis should include:
-
-## Overall Performance
-Use this EXACT format for diagnostic scores indicating need for focused study:
-"This is a diagnostic exam score indicating need for focus in [specific domains]. This score provides a clear roadmap showing where your study time can be most valuable."
-
-Do NOT use discouraging language like "significant gaps" or "may feel discouraging."
-
-Include:
-- Overall score percentage
-- Total questions answered
-- Domains where the student can build on existing knowledge
-- Domains where focused study can make the biggest impact
-
-## Domain Breakdown
-Present performance data in a MARKDOWN TABLE using this exact format:
-
-| Domain | Performance | Weight | Focus Level |
-|--------|-------------|--------|-------------|
-| **Domain 1: Biological Bases** | X% (n/total) | 10% | ✅ Building on strength / 🔵 Room to grow / 🟡 Priority focus area |
-| **Domain 2: Cognitive-Affective Bases** | X% (n/total) | 13% | ... |
-[continue for all 8 domains]
-
-Use these Focus Level categories:
-- ✅ "Building on strength" (70%+ correct)
-- 🔵 "Room to grow" (40-69% correct)
-- 🟡 "Priority focus area" (below 40% correct)
-
-AVOID negative framing like "CRITICAL" or status symbols suggesting failure.
-
-## Key Learning Opportunities
-Identify 3-5 specific content areas where focused study can have the biggest impact. For each:
-- Name the specific topic/concept
-- Explain what understanding this concept enables (value-based framing)
-- Note which domains it connects to
-
-## Your Path Forward
-Provide an encouraging, choice-based closing that:
-- Acknowledges both the current score AND the student's capacity for growth (dialectical)
-- Emphasizes the value of the diagnostic information
-- Offers concrete next steps the student CAN choose to take
-- Uses ACT/MI principles about values and committed action
-
-Format your response using clear markdown with:
-- ## for main section headers
-- Markdown tables for domain breakdown
-- Bullet points for lists
-- **Bold** for emphasis on key concepts
-Be specific, validating, and action-oriented.`
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+)
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { examResults } = body
+    const { examResults, userId } = body
 
     if (!examResults) {
       return NextResponse.json(
@@ -77,36 +19,82 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 8000,
-      stream: true,
-      messages: [
-        {
-          role: 'user',
-          content: `${PRIORITIZE_PROMPT}\n\nHere are the exam results to analyze:\n\n${examResults}`,
-        },
-      ],
+    // Parse exam results
+    const results = typeof examResults === 'string' ? JSON.parse(examResults) : examResults
+    const { topPriorities, allResults, score, totalQuestions } = results
+
+    if (!topPriorities || !Array.isArray(topPriorities)) {
+      return NextResponse.json(
+        { error: 'Invalid exam results format' },
+        { status: 400 }
+      )
+    }
+
+    // Get top 3 domains (already calculated by priority-calculator)
+    const top3Domains = topPriorities.slice(0, 3) as PriorityDomainRecommendation[]
+
+    // Build simplified markdown response
+    let markdown = `## Overall Performance\n\n`
+    markdown += `You scored ${score}/${totalQuestions} (${Math.round((score / totalQuestions) * 100)}%). `
+    markdown += `This diagnostic provides a clear roadmap showing where your study time can be most valuable.\n\n`
+
+    // Domain breakdown table
+    markdown += `## Domain Breakdown\n\n`
+    markdown += `| Domain | Performance | Weight | Focus Level |\n`
+    markdown += `|--------|-------------|--------|-------------|\n`
+
+    if (allResults && Array.isArray(allResults)) {
+      allResults.forEach((domain: PriorityDomainRecommendation) => {
+        const correctCount = Math.round((domain.percentageWrong / 100) * totalQuestions)
+        const wrongCount = totalQuestions - correctCount
+        const correctPct = Math.round(((totalQuestions - wrongCount) / totalQuestions) * 100)
+
+        let focusLevel = '✅ Building on strength'
+        if (correctPct < 70 && correctPct >= 40) focusLevel = '🔵 Room to grow'
+        if (correctPct < 40) focusLevel = '🟡 Priority focus area'
+
+        markdown += `| **Domain ${domain.domainNumber}: ${domain.domainName}** | ${correctPct}% (${totalQuestions - wrongCount}/${totalQuestions}) | ${Math.round(domain.domainWeight * 100)}% | ${focusLevel} |\n`
+      })
+    }
+
+    markdown += `\n## Next Steps\n\n`
+    markdown += `Based on your performance, focus on these domains:\n\n`
+
+    top3Domains.forEach((domain, idx) => {
+      markdown += `**${idx + 1}. ${domain.domainName}**\n`
+
+      // List wrong topics
+      const topicNames = domain.wrongKNs.map(kn => kn.knName).slice(0, 3)
+      if (topicNames.length > 0) {
+        markdown += `   - Focus on: ${topicNames.join(', ')}\n`
+      }
+      markdown += `\n`
     })
 
-    // Convert stream to ReadableStream for NextResponse
+    // Save to Supabase if userId provided
+    if (userId) {
+      try {
+        await supabase
+          .from('study_priorities')
+          .upsert({
+            user_id: userId,
+            top_domains: top3Domains,
+            exam_score: score,
+            total_questions: totalQuestions,
+            created_at: new Date().toISOString(),
+          }, {
+            onConflict: 'user_id'
+          })
+      } catch (err) {
+        console.error('Failed to save priorities to Supabase:', err)
+      }
+    }
+
+    // Return markdown as plain text stream
     const stream = new ReadableStream({
-      async start(controller) {
-        try {
-          for await (const event of response) {
-            if (
-              event.type === 'content_block_delta' &&
-              event.delta.type === 'text_delta'
-            ) {
-              controller.enqueue(
-                new TextEncoder().encode(event.delta.text)
-              )
-            }
-          }
-          controller.close()
-        } catch (error) {
-          controller.error(error)
-        }
+      start(controller) {
+        controller.enqueue(new TextEncoder().encode(markdown))
+        controller.close()
       },
     })
 

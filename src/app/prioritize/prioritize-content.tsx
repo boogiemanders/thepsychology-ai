@@ -14,6 +14,7 @@ import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { Switch } from '@/components/ui/switch'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { useAuth } from '@/context/auth-context'
 
 interface AnalysisData {
   overallScore?: number
@@ -26,6 +27,7 @@ export function PrioritizeContent() {
   const searchParams = useSearchParams()
   const resultId = searchParams.get('id')
   const resultsParam = searchParams.get('results')
+  const { user } = useAuth()
 
   const [analysis, setAnalysis] = useState('')
   const [isAnalyzing, setIsAnalyzing] = useState(false)
@@ -101,7 +103,7 @@ export function PrioritizeContent() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ examResults }),
+        body: JSON.stringify({ examResults, userId: user?.id }),
       })
 
       if (!response.ok) {

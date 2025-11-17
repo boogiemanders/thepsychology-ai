@@ -83,14 +83,38 @@ export default function DashboardPage() {
       }
     }
 
-    // Load priority recommendations from diagnostic exam
-    if (typeof window !== 'undefined') {
-      const priorities = getTopPriorities('diagnostic')
-      if (priorities && priorities.length > 0) {
-        setPriorityDomains(priorities)
+    // Load priority recommendations from Supabase
+    const loadPriorities = async () => {
+      if (!user?.id) return
+
+      try {
+        const { data, error } = await supabase
+          .from('study_priorities')
+          .select('top_domains')
+          .eq('user_id', user.id)
+          .single()
+
+        if (data && !error) {
+          setPriorityDomains(data.top_domains)
+        } else {
+          // Fallback to localStorage
+          const priorities = getTopPriorities('diagnostic')
+          if (priorities && priorities.length > 0) {
+            setPriorityDomains(priorities)
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load priorities from Supabase:', err)
+        // Fallback to localStorage
+        const priorities = getTopPriorities('diagnostic')
+        if (priorities && priorities.length > 0) {
+          setPriorityDomains(priorities)
+        }
       }
     }
-  }, [userProfile])
+
+    loadPriorities()
+  }, [userProfile, user?.id])
 
   // Pre-generate exams in background for faster exam loading
   useEffect(() => {

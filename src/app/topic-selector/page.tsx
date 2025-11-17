@@ -19,6 +19,12 @@ import { useAuth } from '@/context/auth-context'
 import { saveUserInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
 import { getTopPriorities } from '@/lib/priority-storage'
 import type { RealtimeChannel } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+)
 
 interface RecentActivity {
   topic: string
@@ -71,12 +77,40 @@ export default function TopicSelectorPage() {
       topicScores[result.topic] = percentage
     })
 
-    // Load priority recommendations
-    const priorities = getTopPriorities('diagnostic')
-    if (priorities && priorities.length > 0) {
-      const allPriorityTopics = priorities.flatMap(domain => domain.recommendedTopicIds)
-      setPriorityTopicIds(allPriorityTopics)
+    // Load priority recommendations from Supabase
+    const loadPriorities = async () => {
+      if (!user) return
+
+      try {
+        const { data, error } = await supabase
+          .from('study_priorities')
+          .select('top_domains')
+          .eq('user_id', user.id)
+          .single()
+
+        if (data && !error) {
+          const allPriorityTopics = data.top_domains.flatMap((domain: any) => domain.recommendedTopicIds)
+          setPriorityTopicIds(allPriorityTopics)
+        } else {
+          // Fallback to localStorage
+          const priorities = getTopPriorities('diagnostic')
+          if (priorities && priorities.length > 0) {
+            const allPriorityTopics = priorities.flatMap(domain => domain.recommendedTopicIds)
+            setPriorityTopicIds(allPriorityTopics)
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load priorities from Supabase:', err)
+        // Fallback to localStorage
+        const priorities = getTopPriorities('diagnostic')
+        if (priorities && priorities.length > 0) {
+          const allPriorityTopics = priorities.flatMap(domain => domain.recommendedTopicIds)
+          setPriorityTopicIds(allPriorityTopics)
+        }
+      }
     }
+
+    loadPriorities()
 
     // Build domains with dynamic progress
     const domainsWithProgress = EPPP_DOMAINS.map((domain) => {
@@ -388,7 +422,7 @@ export default function TopicSelectorPage() {
                                 {isPriority && (
                                   <Badge variant="outline" className="text-xs bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-700 flex items-center gap-1">
                                     <AlertCircle className="w-3 h-3" />
-                                    Priority
+                                    Focus
                                   </Badge>
                                 )}
                               </div>
