@@ -50,11 +50,26 @@ function parseFrontmatter(
 }
 
 /**
- * Get the domain folder name from domain
- * Returns the domain name as-is to match eppp-reference folder structure
+ * Get the domain folder name from domain ID
+ * Maps domain IDs to actual folder names in topic-content-v3-test
  */
-function getDomainFolder(domain: string): string {
-  return domain
+function getDomainFolder(domainId: string): string {
+  const domainFolderMap: Record<string, string> = {
+    '1': '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology',
+    '2': '2 Cognitive-Affective Bases : Learning and Memory',
+    '3-social': '3 Social Psychology',
+    '3-cultural': '3 Cultural',
+    '4': '4 Growth  : Lifespan Development',
+    '5-assessment': '5 Assessment',
+    '5-diagnosis': '5 Diagnosis  : Psychopathology',
+    '5-test': '5 Test Construction',
+    '6': '6 Treatment : Intervention',
+    '7': '7 Research Methods : Statistics',
+    '8': '8 Ethical  : Legal  : Professional Issues',
+    '3-5-6': '2 3 5 6 Organizational Psychology',
+  }
+
+  return domainFolderMap[domainId] || domainId
 }
 
 /**

@@ -92,50 +92,21 @@ export async function POST(request: NextRequest) {
             console.log(`[Topic Teacher] ⚡ Using pre-generated content with generic metaphors for ${topic}`)
           }
         } else {
-          // Fallback: Generate on-demand if no pre-generated content
-          console.warn(`[Topic Teacher] ❌ No pre-generated content for ${topic}, falling back to on-demand generation`)
-          console.warn(`[Topic Teacher] Topic slug would be: ${topic.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
-          console.warn(`[Topic Teacher] Domain folder would be: ${domain.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
-          messages = [
-            {
-              role: 'user',
-              content: `Please teach me about "${topic}" (Domain ${domain}). Explain it thoroughly but in simple terms, as if I'm 13 years old. Use examples and analogies to make it interesting.`,
-            },
-          ]
-
-          const response = await client.messages.create({
-            model: 'claude-haiku-4-5-20251001',
-            max_tokens: 4000,
-            stream: false,
-            system: getTeacherSystemPrompt(userInterests),
-            messages: messages as Array<{ role: 'user' | 'assistant'; content: string }>,
-          })
-
-          if (response.content[0].type === 'text') {
-            lessonContent = response.content[0].text
-          }
+          // No pre-generated content found - return error
+          console.error(`[Topic Teacher] ❌ No pre-generated content for ${topic}`)
+          console.error(`[Topic Teacher] Topic slug: ${topic.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
+          console.error(`[Topic Teacher] Domain ID: ${domain}`)
+          return NextResponse.json(
+            { error: `No pre-generated content found for topic: ${topic}. Please ensure the content exists in topic-content-v3-test.` },
+            { status: 404 }
+          )
         }
       } catch (error) {
-        console.error('Error loading pre-generated content:', error)
-        // Fallback: Generate on-demand
-        messages = [
-          {
-            role: 'user',
-            content: `Please teach me about "${topic}" (Domain ${domain}). Explain it thoroughly but in simple terms, as if I'm 13 years old. Use examples and analogies to make it interesting.`,
-          },
-        ]
-
-        const response = await client.messages.create({
-          model: 'claude-haiku-4-5-20251001',
-          max_tokens: 4000,
-          stream: false,
-          system: getTeacherSystemPrompt(userInterests),
-          messages: messages as Array<{ role: 'user' | 'assistant'; content: string }>,
-        })
-
-        if (response.content[0].type === 'text') {
-          lessonContent = response.content[0].text
-        }
+        console.error('[Topic Teacher] Error loading pre-generated content:', error)
+        return NextResponse.json(
+          { error: `Failed to load pre-generated content for topic: ${topic}. Error: ${error instanceof Error ? error.message : 'Unknown error'}` },
+          { status: 500 }
+        )
       }
     } else {
       // Conversational follow-up - use streaming

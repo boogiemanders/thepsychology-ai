@@ -1,19 +1,19 @@
 # EPPP Practice Exam 002
 
-Total Questions: 212
+Total Questions: 213
 
 ---
 
 ## Question 1
 
-**Domain 1** | **KN1** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A 45-year-old client with major depressive disorder has been taking a selective serotonin reuptake inhibitor (SSRI) for six weeks at a therapeutic dose. The client reports minimal improvement in mood but experiences significant sexual dysfunction and gastrointestinal distress. The prescribing psychiatrist is considering switching medications. Which neurotransmitter system would be most relevant if the psychiatrist chooses bupropion as an alternative treatment?
+A 45-year-old woman presents to your practice reporting persistent feelings of sadness, loss of interest in previously enjoyed activities, significant weight loss, insomnia, and difficulty concentrating for the past two months. She denies any history of manic or hypomanic episodes. Her symptoms began shortly after she was passed over for a promotion at work. What is the most appropriate diagnosis?
 
-A) Dopamine and norepinephrine reuptake inhibition
-B) Serotonin and norepinephrine reuptake inhibition
-C) Monoamine oxidase inhibition across multiple neurotransmitters
-D) Selective serotonin reuptake with additional histamine blockade
+A) Major Depressive Disorder, single episode, moderate severity
+B) Persistent Depressive Disorder (Dysthymia)
+C) Adjustment Disorder with Depressed Mood
+D) Bipolar II Disorder, current episode depressed
 
 **Correct Answer:** A
 
@@ -21,74 +21,74 @@ D) Selective serotonin reuptake with additional histamine blockade
 
 ## Question 2
 
-**Domain 1** | **KN2** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A neuropsychologist is evaluating a 67-year-old patient who sustained a stroke affecting the left posterior temporal region. The patient demonstrates fluent speech with normal prosody but frequently uses incorrect words and has significant difficulty comprehending spoken language. When asked to name a watch, the patient says 'time circle.' What type of aphasia is this patient most likely experiencing?
+A 28-year-old male client in therapy reveals that he has been having intrusive thoughts about harming his neighbor's dog, though he has never acted on these thoughts and reports feeling distressed by them. He spends hours each day performing checking rituals to ensure he hasn't harmed any animals. According to the DSM-5-TR, which specifier would be most appropriate for his OCD diagnosis?
 
-A) Broca's aphasia characterized by non-fluent, effortful speech
-B) Wernicke's aphasia characterized by fluent but meaningless speech
-C) Conduction aphasia characterized by intact comprehension but poor repetition
-D) Global aphasia characterized by severe impairment in all language functions
+A) With good or fair insight
+B) With poor insight
+C) With absent insight/delusional beliefs
+D) With tic-related symptoms
 
-**Correct Answer:** B
+**Correct Answer:** A
 
 ---
 
 ## Question 3
 
-**Domain 1** | **KN3** | **Scored**
+**Domain 3** | **KN16** | **Scored**
 
-A research psychologist is designing a study to examine the effects of chronic stress on hippocampal volume using magnetic resonance imaging (MRI). The researcher plans to compare individuals with post-traumatic stress disorder to healthy controls. Which neuroimaging technique would provide the most appropriate structural information for measuring hippocampal volume changes?
+During a neuropsychological assessment, a 67-year-old patient demonstrates significant difficulty with executive functions, including planning, organizing, and abstract thinking, but shows relatively preserved memory for recent events. MRI results indicate atrophy in the frontal lobes with minimal hippocampal involvement. What type of dementia is most consistent with this presentation?
 
-A) Functional MRI (fMRI) to assess real-time blood oxygen level dependent signals
-B) Positron emission tomography (PET) to measure glucose metabolism
-C) Structural MRI with volumetric analysis to quantify brain region sizes
-D) Electroencephalography (EEG) to record electrical activity patterns
-
-**Correct Answer:** C
-
----
-
-## Question 4
-
-**Domain 1** | **KN1** | **Scored**
-
-A 34-year-old patient with schizophrenia has been treated with a first-generation antipsychotic for eight months and now presents with involuntary facial grimacing, tongue protrusion, and repetitive chewing movements that persist even when not taking the medication. The treating psychiatrist recognizes these symptoms as potentially irreversible. What is the most likely diagnosis for these motor symptoms?
-
-A) Acute dystonia requiring immediate anticholinergic intervention
-B) Tardive dyskinesia resulting from chronic dopamine receptor blockade
-C) Neuroleptic malignant syndrome requiring emergency medical attention
-D) Parkinsonism secondary to dopamine depletion in the nigrostriatal pathway
+A) Alzheimer's disease
+B) Frontotemporal dementia
+C) Vascular dementia
+D) Lewy body dementia
 
 **Correct Answer:** B
 
 ---
 
+## Question 4
+
+**Domain 3** | **KN15** | **Scored**
+
+A 35-year-old woman reports experiencing sudden, unexpected panic attacks characterized by heart palpitations, sweating, trembling, and fears of dying. She has become increasingly afraid of having panic attacks in public places and has started avoiding shopping malls, theaters, and public transportation. She can only go to these places if accompanied by her husband. What diagnosis best captures her current clinical presentation?
+
+A) Panic Disorder
+B) Agoraphobia
+C) Social Anxiety Disorder
+D) Panic Disorder with Agoraphobia
+
+**Correct Answer:** D
+
+---
+
 ## Question 5
 
-**Domain 1** | **KN2** | **Scored**
+**Domain 1** | **KN1** | **Scored**
 
-A pediatric neuropsychologist is assessing a 7-year-old child who experienced a traumatic brain injury affecting the prefrontal cortex at age 3. The child demonstrates significant difficulties with planning, impulse control, and shifting between tasks, despite having age-appropriate language and memory skills. Which executive function domain is most directly associated with prefrontal cortex integrity?
+A psychologist is working with a 16-year-old client whose parents are divorced. The mother, who has sole legal custody, has consented to treatment. The father contacts the psychologist requesting information about the therapy sessions and his daughter's progress. According to ethical guidelines and typical legal standards, what should the psychologist do?
 
-A) Procedural memory consolidation and motor skill acquisition
-B) Semantic knowledge storage and verbal comprehension abilities
-C) Cognitive flexibility, working memory, and inhibitory control
-D) Visual-spatial processing and pattern recognition capabilities
+A) Provide the father with the requested information since he is the biological parent
+B) Refuse to provide any information without the mother's authorization
+C) Provide general information but not specific details from therapy sessions
+D) Consult with the adolescent client before making any decision
 
-**Correct Answer:** C
+**Correct Answer:** B
 
 ---
 
 ## Question 6
 
-**Domain 1** | **KN4** | **Scored**
+**Domain 1** | **KN2** | **Scored**
 
-A graduate student is studying the heritability of intelligence by comparing monozygotic twins reared together versus monozygotic twins reared apart. The correlation for twins reared together is 0.85, while for twins reared apart it is 0.72. What do these findings most strongly suggest about the nature-nurture contribution to intelligence?
+A clinical psychologist has been treating a 42-year-old client for depression for six months. The client has made significant progress and mentions that her company is looking to hire a consultant for a project that matches the psychologist's expertise perfectly. She offers to recommend the psychologist for this lucrative consulting position. What is the most ethically appropriate response?
 
-A) Intelligence is determined almost entirely by genetic factors with minimal environmental influence
-B) Both genetic and environmental factors contribute substantially to intelligence, with genes playing a major role
-C) Environmental factors account for most of the variance in intelligence across populations
-D) The shared environment of twins reared together has no measurable impact on intelligence
+A) Accept the opportunity as it represents a separate business relationship from therapy
+B) Decline the offer due to the potential multiple relationship and conflict of interest
+C) Accept but terminate therapy immediately to avoid the multiple relationship
+D) Accept only if the consulting work would not begin until therapy has ended for at least two years
 
 **Correct Answer:** B
 
@@ -96,29 +96,29 @@ D) The shared environment of twins reared together has no measurable impact on i
 
 ## Question 7
 
-**Domain 1** | **KN2** | **Scored**
+**Domain 1** | **KN4** | **Scored**
 
-A clinical psychologist is treating a 28-year-old client who reports experiencing vivid, intrusive memories of a car accident that occurred three months ago. The client describes feeling as though the accident is happening again when triggered by the sound of screeching brakes. From a neuroscience perspective, which brain structure is most centrally involved in the formation and retrieval of these emotionally-charged traumatic memories?
+During a forensic evaluation for a child custody case, the psychologist discovers that one parent has been coaching the child on what to say during the evaluation. The psychologist has not yet completed the assessment or written the report. What is the most appropriate course of action according to specialty guidelines for forensic psychology?
 
-A) The amygdala, which processes emotional significance and fear conditioning
-B) The cerebellum, which coordinates motor responses and procedural learning
-C) The hypothalamus, which regulates homeostatic functions and hormone release
-D) The basal ganglia, which controls voluntary motor movements and habit formation
+A) Immediately terminate the evaluation and report the findings to the court
+B) Document the coaching behavior, address it with the parent, and include this information in the final report with its potential impact on validity
+C) Exclude the coached information and proceed with the evaluation using only uncontaminated data
+D) Report the parent to child protective services for attempting to manipulate the evaluation
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 8
 
-**Domain 1** | **KN1** | **Scored**
+**Domain 1** | **KN3** | **Scored**
 
-A researcher is investigating sleep architecture in patients with major depressive disorder by conducting polysomnographic studies. Results show that depressed patients enter REM sleep significantly earlier than healthy controls and spend more total time in REM sleep. These findings suggest dysregulation in which neurotransmitter system that is also targeted by many antidepressant medications?
+A 52-year-old client diagnosed with terminal cancer asks her psychologist to help her write a letter to her family explaining her decision to discontinue treatment and enter hospice care. She reports feeling at peace with her decision but wants support in communicating it effectively. The psychologist believes the client should continue treatment. What is the most ethically appropriate action?
 
-A) The GABAergic system that mediates inhibitory neurotransmission
-B) The cholinergic system that influences REM sleep onset and maintenance
-C) The dopaminergic system that controls reward and motor function
-D) The glutamatergic system that provides excitatory neurotransmission
+A) Refuse to help with the letter and encourage her to reconsider treatment
+B) Respect the client's autonomy and assist with the letter while exploring her feelings and ensuring the decision is informed
+C) Agree to help only after consulting with the client's oncologist
+D) Suggest that a family therapy session would be more appropriate than a letter
 
 **Correct Answer:** B
 
@@ -126,14 +126,14 @@ D) The glutamatergic system that provides excitatory neurotransmission
 
 ## Question 9
 
-**Domain 1** | **KN2** | **Scored**
+**Domain 1** | **KN7** | **Scored**
 
-A neuropsychologist evaluates a 72-year-old patient who shows progressive cognitive decline over 18 months. The patient demonstrates significant impairment in episodic memory, difficulty learning new information, and temporal disorientation, but maintains intact motor function and personality. MRI reveals bilateral hippocampal atrophy. What neurodegenerative condition is most consistent with this clinical presentation?
+A researcher is conducting a study examining the effectiveness of a new cognitive-behavioral intervention for social anxiety disorder. Participants are randomly assigned to either the treatment group or a waitlist control group. After the study concludes, what ethical obligation does the researcher have regarding the control group participants?
 
-A) Parkinson's disease with dementia characterized by motor symptoms preceding cognitive decline
-B) Alzheimer's disease characterized by early memory impairment and hippocampal degeneration
-C) Huntington's disease characterized by involuntary movements and caudate atrophy
-D) Frontotemporal dementia characterized by personality changes and frontal lobe dysfunction
+A) No obligation, as participants consented to possible placement in the control group
+B) Provide the treatment to control group participants or refer them to appropriate services
+C) Offer control group participants monetary compensation for their participation
+D) Include control group participants in a follow-up study without additional consent
 
 **Correct Answer:** B
 
@@ -143,12 +143,12 @@ D) Frontotemporal dementia characterized by personality changes and frontal lobe
 
 **Domain 1** | **KN1** | **Scored**
 
-A psychopharmacology researcher is studying the mechanism of action of benzodiazepines in treating anxiety disorders. The researcher explains to graduate students that benzodiazepines enhance the effect of a specific inhibitory neurotransmitter by increasing the frequency of chloride channel opening. Which neurotransmitter system do benzodiazepines primarily modulate?
+A psychologist receives a subpoena to release therapy records of a current client involved in a civil lawsuit. The client does not want the records released and the subpoena was issued by the opposing party's attorney, not by court order. What is the most appropriate initial response by the psychologist?
 
-A) Serotonin receptors in the raphe nuclei to reduce anxiety symptoms
-B) GABA-A receptors throughout the central nervous system to enhance inhibition
-C) Norepinephrine receptors in the locus coeruleus to decrease arousal
-D) Glutamate receptors in the cortex to reduce excitatory transmission
+A) Release the records immediately as required by the subpoena
+B) Contact the client to discuss the situation and do not release records without client consent, a court order, or appropriate authorization
+C) Release only a summary of treatment rather than the complete records
+D) Notify the client's attorney but release the records as the subpoena requires compliance
 
 **Correct Answer:** B
 
@@ -156,14 +156,14 @@ D) Glutamate receptors in the cortex to reduce excitatory transmission
 
 ## Question 11
 
-**Domain 1** | **KN2** | **Scored**
+**Domain 2** | **KN8** | **Scored**
 
-A developmental psychologist is studying executive function development in children aged 3 to 7 years. The research involves tasks measuring inhibitory control, working memory, and cognitive flexibility. Based on neurodevelopmental research, which brain region undergoes the most protracted development during this period and is most associated with these executive functions?
+According to Piaget's theory of cognitive development, a 4-year-old child who believes that pouring water from a short, wide glass into a tall, narrow glass changes the amount of water is demonstrating a lack of understanding of which concept?
 
-A) The occipital cortex responsible for visual processing and object recognition
-B) The prefrontal cortex responsible for higher-order cognitive control processes
-C) The primary motor cortex responsible for voluntary movement execution
-D) The temporal lobe responsible for auditory processing and language comprehension
+A) Object permanence
+B) Conservation
+C) Reversibility
+D) Accommodation
 
 **Correct Answer:** B
 
@@ -171,44 +171,44 @@ D) The temporal lobe responsible for auditory processing and language comprehens
 
 ## Question 12
 
-**Domain 1** | **KN2** | **Scored**
+**Domain 2** | **KN9** | **Scored**
 
-A clinical neuropsychologist is assessing a 55-year-old patient who experienced carbon monoxide poisoning. The patient shows marked deficits in executive functioning, including poor judgment, impulsivity, and difficulty with abstract reasoning, but demonstrates intact memory and language abilities. Which brain region is most likely affected given this specific pattern of cognitive impairment?
+A 7-month-old infant shows distress when her mother leaves the room and is comforted upon her return, but shows wariness when unfamiliar people approach. According to developmental theories, this infant is demonstrating which normal developmental milestone?
 
-A) The hippocampus and medial temporal lobe structures
-B) The frontal lobes, particularly the dorsolateral prefrontal cortex
-C) The parietal lobes and posterior association areas
-D) The occipital cortex and primary visual processing areas
-
-**Correct Answer:** B
-
----
-
-## Question 13
-
-**Domain 1** | **KN1** | **Scored**
-
-A psychiatrist is treating a patient with bipolar disorder who has not responded adequately to lithium monotherapy. The psychiatrist is considering adding valproate, which works by increasing GABAergic neurotransmission. From a neurobiological perspective, what is the primary therapeutic mechanism by which increased GABA activity helps stabilize mood in bipolar disorder?
-
-A) Enhancing inhibitory neurotransmission to reduce neuronal excitability and stabilize mood fluctuations
-B) Increasing dopamine release in the mesolimbic pathway to improve reward processing
-C) Blocking NMDA receptors to prevent excitotoxicity and neuronal damage
-D) Stimulating serotonin synthesis in the raphe nuclei to improve mood regulation
+A) Secure attachment and stranger anxiety
+B) Separation anxiety disorder requiring intervention
+C) Avoidant attachment pattern
+D) Social referencing behavior
 
 **Correct Answer:** A
 
 ---
 
+## Question 13
+
+**Domain 2** | **KN8** | **Scored**
+
+A developmental psychologist observes that a 2-year-old child can walk up stairs using both feet on each step, has a vocabulary of about 50 words, can build a tower of six blocks, and is beginning to engage in parallel play with peers. This developmental profile is most consistent with which stage of development?
+
+A) Early infancy (6-12 months)
+B) Late infancy (12-18 months)
+C) Early toddlerhood (18-24 months)
+D) Late toddlerhood (24-36 months)
+
+**Correct Answer:** D
+
+---
+
 ## Question 14
 
-**Domain 1** | **KN4** | **Scored**
+**Domain 2** | **KN9** | **Scored**
 
-A research team is conducting a twin study to examine the genetic contribution to antisocial personality disorder. They find concordance rates of 45% for monozygotic twins and 20% for dizygotic twins. What do these findings most strongly suggest about the etiology of antisocial personality disorder?
+A researcher studying adolescent development finds that teenagers who have strong family relationships and clear parental expectations while also being encouraged to explore their identity show better psychological outcomes than those with either very strict or very permissive parenting. This finding best supports which parenting style as described by Baumrind?
 
-A) The disorder is entirely determined by genetic factors with no environmental contribution
-B) There is a substantial genetic component, but environmental factors also play an important role
-C) Environmental factors are solely responsible for the development of the disorder
-D) The disorder shows no heritable component and is entirely learned behavior
+A) Authoritarian parenting
+B) Authoritative parenting
+C) Permissive parenting
+D) Uninvolved parenting
 
 **Correct Answer:** B
 
@@ -216,59 +216,59 @@ D) The disorder shows no heritable component and is entirely learned behavior
 
 ## Question 15
 
-**Domain 1** | **KN2** | **Scored**
+**Domain 2** | **KN10** | **Scored**
 
-A neurologist refers a patient to a psychologist for evaluation after the patient sustained damage to the right parietal lobe following a stroke. The patient demonstrates a tendency to ignore stimuli on the left side of space and fails to attend to the left side of their body during grooming activities. What neuropsychological syndrome is this patient most likely experiencing?
+An 82-year-old woman is experiencing mild cognitive decline, including occasional word-finding difficulties and slower processing speed, but she maintains her independence in daily activities and does not meet criteria for dementia. According to research on cognitive aging, this presentation is most consistent with which concept?
 
-A) Hemispatial neglect resulting from right parietal lobe damage affecting spatial attention
-B) Prosopagnosia resulting from ventral temporal lobe damage affecting face recognition
-C) Anosognosia resulting from frontal lobe damage affecting self-awareness
-D) Alexia resulting from left occipital damage affecting reading ability
-
-**Correct Answer:** A
-
----
-
-## Question 16
-
-**Domain 1** | **KN5** | **Scored**
-
-A health psychologist is designing an intervention to improve medication adherence among patients with hypertension. The psychologist plans to use principles from operant conditioning by providing immediate positive feedback through a smartphone app when patients take their medication on schedule. According to behavioral principles, which schedule of reinforcement would be most effective for maintaining long-term adherence after the initial learning phase?
-
-A) Continuous reinforcement where every instance of medication-taking is rewarded
-B) Fixed-ratio reinforcement where rewards are given after a set number of responses
-C) Variable-ratio reinforcement where rewards are given after an unpredictable number of responses
-D) Fixed-interval reinforcement where rewards are given after a consistent time period
-
-**Correct Answer:** C
-
----
-
-## Question 17
-
-**Domain 1** | **KN2** | **Scored**
-
-A forensic psychologist is evaluating a defendant who experienced a severe head injury affecting the ventromedial prefrontal cortex six months before allegedly committing a violent crime. Research on patients with similar injuries has shown specific deficits in certain cognitive domains. Which functional impairment would most likely be associated with this type of brain damage?
-
-A) Severe anterograde amnesia with inability to form new declarative memories
-B) Impaired moral reasoning, emotion regulation, and decision-making abilities
-C) Complete loss of language production with preserved comprehension
-D) Profound deficits in visual-spatial processing and navigation
+A) Pathological aging requiring immediate medical intervention
+B) Normal cognitive aging with expected age-related changes
+C) Early-stage Alzheimer's disease
+D) Mild cognitive impairment that will definitely progress to dementia
 
 **Correct Answer:** B
 
 ---
 
+## Question 16
+
+**Domain 2** | **KN8** | **Field Test**
+
+A research study finds that children who are raised in bilingual households show enhanced executive functioning skills, particularly in tasks requiring cognitive flexibility and inhibitory control, compared to monolingual peers. This finding best illustrates which concept in developmental psychology?
+
+A) Critical period hypothesis
+B) Cognitive reserve and neural plasticity
+C) Language acquisition device
+D) Sensitive period for language learning
+
+**Correct Answer:** B
+
+---
+
+## Question 17
+
+**Domain 2** | **KN8** | **Scored**
+
+A 15-year-old adolescent is exploring different identities, trying various hairstyles, clothing choices, and friend groups while questioning family religious beliefs and career expectations. According to Erikson's psychosocial theory, this adolescent is working through which developmental crisis?
+
+A) Autonomy vs. Shame and Doubt
+B) Industry vs. Inferiority
+C) Identity vs. Role Confusion
+D) Intimacy vs. Isolation
+
+**Correct Answer:** C
+
+---
+
 ## Question 18
 
-**Domain 1** | **KN2** | **Field Test**
+**Domain 2** | **KN13** | **Scored**
 
-A developmental researcher is studying the critical period hypothesis for language acquisition by examining outcomes in individuals who learned a second language at different ages. The study compares neural activation patterns using fMRI while participants process grammatical structures in their second language. What would the findings most likely show about individuals who learned the second language after puberty compared to those who learned it before age 7?
+A neuropsychologist is evaluating a 58-year-old patient who sustained a traumatic brain injury to the left hemisphere. The patient demonstrates significant difficulty producing speech, with effortful, halting verbal output, but appears to understand spoken language relatively well. This presentation is most consistent with which type of aphasia?
 
-A) Identical neural activation patterns with no differences in language processing efficiency
-B) Greater and more bilateral activation, particularly in frontal regions, suggesting less efficient processing
-C) Reduced overall brain activation indicating more automatic and native-like processing
-D) Exclusive right hemisphere activation with no left hemisphere involvement
+A) Wernicke's aphasia (receptive aphasia)
+B) Broca's aphasia (expressive aphasia)
+C) Global aphasia
+D) Anomic aphasia
 
 **Correct Answer:** B
 
@@ -276,14 +276,14 @@ D) Exclusive right hemisphere activation with no left hemisphere involvement
 
 ## Question 19
 
-**Domain 2** | **KN6** | **Scored**
+**Domain 2** | **KN13** | **Scored**
 
-A 6-month-old infant participates in a visual habituation study where they are repeatedly shown the same stimulus until looking time decreases, then a novel stimulus is presented. The infant shows increased looking time to the novel stimulus. According to developmental research, what cognitive ability is being demonstrated through this behavioral response?
+In a study examining memory consolidation, researchers find that participants who sleep for 8 hours after learning new information show significantly better retention compared to participants who remain awake. This finding best supports the role of which brain structure and process in memory consolidation?
 
-A) The infant's capacity for object permanence and understanding that objects exist when not visible
-B) The infant's ability to form mental representations and discriminate between familiar and novel stimuli
-C) The infant's development of stranger anxiety and preference for familiar caregivers
-D) The infant's emerging theory of mind and understanding of others' mental states
+A) Amygdala in emotional memory processing
+B) Hippocampus in transferring information from short-term to long-term memory
+C) Prefrontal cortex in working memory maintenance
+D) Cerebellum in procedural memory formation
 
 **Correct Answer:** B
 
@@ -291,31 +291,31 @@ D) The infant's emerging theory of mind and understanding of others' mental stat
 
 ## Question 20
 
-**Domain 2** | **KN7** | **Scored**
+**Domain 2** | **KN13** | **Scored**
 
-A developmental psychologist observes a 4-year-old child who insists that pouring juice from a short, wide glass into a tall, thin glass results in 'more juice' in the taller glass. The child focuses on the height of the liquid and ignores the width of the containers. According to Piaget's theory of cognitive development, what cognitive limitation is this child demonstrating?
+A patient with damage to the ventromedial prefrontal cortex demonstrates normal intelligence and memory but shows impaired decision-making, particularly in social and financial domains. He makes risky choices despite understanding the potential negative consequences. This case best illustrates the role of which neuropsychological function?
 
-A) Lack of object permanence indicating sensorimotor stage functioning
-B) Centration and failure to conserve quantity, characteristic of preoperational thought
-C) Inability to think abstractly, which emerges during formal operational stage
-D) Egocentrism preventing the child from taking another person's perspective
+A) Crystallized intelligence
+B) Procedural memory
+C) Emotional regulation and somatic markers in decision-making
+D) Selective attention and filtering
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 21
 
-**Domain 2** | **KN8** | **Scored**
+**Domain 2** | **KN13** | **Scored**
 
-A clinical psychologist is assessing attachment patterns in a 14-month-old child using the Strange Situation procedure. The child shows minimal distress when the mother leaves, actively avoids her upon reunion, and shows little preference for the mother over a stranger. The mother reports that she often feels overwhelmed by parenting and sometimes ignores the child's signals. What attachment classification best describes this child's behavior?
+A 72-year-old patient presents with progressive memory loss, visual hallucinations, parkinsonian motor symptoms, and significant fluctuations in cognitive functioning and alertness throughout the day. Neuropsychological testing reveals deficits in visuospatial abilities and executive functions. What type of dementia is most consistent with this presentation?
 
-A) Secure attachment characterized by effective use of caregiver as a secure base for exploration
-B) Avoidant attachment characterized by emotional distance and minimization of attachment needs
-C) Ambivalent/resistant attachment characterized by excessive clinginess and difficulty being soothed
-D) Disorganized attachment characterized by contradictory behaviors and lack of coherent strategy
+A) Alzheimer's disease
+B) Vascular dementia
+C) Frontotemporal dementia
+D) Lewy body dementia
 
-**Correct Answer:** B
+**Correct Answer:** D
 
 ---
 
@@ -323,42 +323,42 @@ D) Disorganized attachment characterized by contradictory behaviors and lack of 
 
 **Domain 2** | **KN9** | **Scored**
 
-A school psychologist is evaluating a 16-year-old student who is struggling with identity formation. The student reports feeling confused about career goals, values, and relationships, and has not yet made commitments in these areas but is actively exploring different options. According to James Marcia's identity status paradigm, which status best characterizes this adolescent's current developmental position?
+Research on attachment styles in adults finds that individuals with a dismissive-avoidant attachment pattern tend to report high self-esteem but show physiological stress responses when discussing relationship topics. This discrepancy between self-report and physiological measures best illustrates which concept?
 
-A) Identity achievement, having explored alternatives and made firm commitments
-B) Identity moratorium, actively exploring options without yet making commitments
-C) Identity foreclosure, having made commitments without exploring alternatives
-D) Identity diffusion, showing neither exploration nor commitment to identity elements
-
-**Correct Answer:** B
-
----
-
-## Question 23
-
-**Domain 2** | **KN7** | **Scored**
-
-A developmental researcher is studying theory of mind development by administering false-belief tasks to children of different ages. A 5-year-old child watches as a researcher places a toy in a box, then the child leaves the room. While the child is gone, the researcher moves the toy to a drawer. When asked where another child who didn't see the move would look for the toy, the 5-year-old correctly indicates the box. What cognitive milestone has this child achieved?
-
-A) Understanding that others can hold beliefs that differ from reality and from one's own knowledge
-B) Development of object permanence and understanding that objects exist when out of sight
-C) Emergence of concrete operational thinking and ability to perform mental operations
-D) Acquisition of metacognitive awareness and ability to reflect on one's own thinking
+A) Defensive exclusion and deactivating strategies
+B) Hyperactivating attachment strategies
+C) Earned secure attachment
+D) Disorganized attachment in adults
 
 **Correct Answer:** A
 
 ---
 
+## Question 23
+
+**Domain 2** | **KN8** | **Field Test**
+
+A developmental researcher conducts a longitudinal study following the same group of individuals from age 5 to age 25, assessing them every five years. While this design has advantages, what is a primary limitation the researcher must consider when interpreting the results?
+
+A) Cohort effects limiting generalizability to other generations
+B) Practice effects from repeated testing and participant attrition over time
+C) Inability to assess developmental changes within individuals
+D) Confounding of age and time of measurement
+
+**Correct Answer:** B
+
+---
+
 ## Question 24
 
-**Domain 2** | **KN6** | **Scored**
+**Domain 2** | **KN11** | **Scored**
 
-A pediatric psychologist is consulting with parents of a 3-year-old who is showing signs of delayed language development. The child produces only 50 single words and no two-word combinations, whereas typically developing children this age produce sentences of 3-4 words. The psychologist explains that this represents a significant delay. According to normative developmental milestones, at what age do most children begin combining two words into simple phrases?
+A cognitive psychologist presents participants with a list of words to memorize. Later, when asked to recall the words, participants remember words from the beginning and end of the list better than words from the middle. This phenomenon is best explained by which combination of memory effects?
 
-A) Around 12 months when first words typically emerge
-B) Around 18-24 months during the vocabulary explosion period
-C) Around 36 months when complex grammar begins developing
-D) Around 48 months when narratives and storytelling emerge
+A) Encoding specificity and context-dependent memory
+B) Primacy effect and recency effect
+C) Proactive interference and retroactive interference
+D) Levels of processing and elaborative rehearsal
 
 **Correct Answer:** B
 
@@ -366,74 +366,74 @@ D) Around 48 months when narratives and storytelling emerge
 
 ## Question 25
 
-**Domain 2** | **KN10** | **Scored**
+**Domain 2** | **KN11** | **Scored**
 
-A gerontological psychologist is assessing cognitive changes in a healthy 75-year-old client. The client reports that while she can remember events from her childhood with great clarity, she frequently forgets where she placed her keys or what she ate for breakfast. This pattern is consistent with typical cognitive aging. Which cognitive ability tends to remain relatively stable or even improve with age, while others decline?
+In a study of decision-making under uncertainty, participants consistently choose a certain gain of $50 over a 50% chance of winning $100, but choose a 50% chance of losing $100 over a certain loss of $50. This pattern of choices best illustrates which phenomenon described in prospect theory?
 
-A) Processing speed and reaction time in cognitive tasks
-B) Crystallized intelligence including vocabulary and general knowledge
-C) Working memory capacity and ability to hold information temporarily
-D) Fluid intelligence including novel problem-solving and abstract reasoning
+A) Availability heuristic
+B) Confirmation bias
+C) Loss aversion and framing effects
+D) Representativeness heuristic
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 26
 
-**Domain 2** | **KN8** | **Scored**
+**Domain 2** | **KN12** | **Scored**
 
-A developmental psychologist observes a 9-month-old infant who begins to cry when their mother leaves the room and shows obvious joy when she returns. Prior to 6 months, this infant showed no distress when the mother left. According to attachment theory, what developmental milestone is this infant demonstrating?
+A 38-year-old client in therapy demonstrates a pattern of viewing people as either all good or all bad, with no middle ground. She describes her new therapist as 'perfect and the only one who truly understands' her, but became enraged with her previous therapist over a minor scheduling conflict, calling him 'incompetent and uncaring.' This cognitive pattern is most characteristic of which defense mechanism?
 
-A) Separation anxiety resulting from the formation of a specific attachment bond
-B) Social referencing to determine how to respond to ambiguous situations
-C) Self-conscious emotions emerging from developing sense of self
-D) Theory of mind understanding that others have different perspectives
+A) Projection
+B) Splitting
+C) Rationalization
+D) Reaction formation
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 27
 
-**Domain 2** | **KN9** | **Scored**
+**Domain 2** | **KN14** | **Scored**
 
-A research team is studying moral development by presenting adolescents with ethical dilemmas and analyzing their reasoning. A 15-year-old explains that stealing medicine to save a dying spouse would be wrong because 'it's against the law and society would fall apart if everyone broke laws.' According to Kohlberg's theory of moral development, what stage of moral reasoning is this adolescent demonstrating?
+A social psychologist conducts an experiment where participants are asked to deliver what they believe are painful electric shocks to another person (actually a confederate) when instructed by an authority figure in a lab coat. Despite showing signs of distress, most participants continue delivering shocks when told to do so. This classic study paradigm demonstrates which social psychological phenomenon?
 
-A) Preconventional morality based on avoiding punishment and seeking rewards
-B) Conventional morality based on maintaining social order and following societal rules
-C) Postconventional morality based on universal ethical principles and individual conscience
-D) Premoral stage with no understanding of rules or social obligations
+A) Conformity to group pressure
+B) Bystander effect and diffusion of responsibility
+C) Obedience to authority
+D) Social facilitation
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 28
 
-**Domain 2** | **KN9** | **Scored**
+**Domain 2** | **KN11** | **Scored**
 
-A developmental researcher is studying gender identity development in young children. A 3-year-old child insists they are a boy and shows distress when referred to with female pronouns, despite being assigned female at birth. The child has consistently identified as male for the past year. According to current developmental research on gender identity, at what age do most children develop a stable sense of their own gender identity?
+A company implements a new policy where employees who exceed their sales targets receive a bonus, while those who fall short receive a warning. After several months, sales performance improves significantly. From a behavioral perspective, this scenario best illustrates the combined effects of which operant conditioning principles?
 
-A) By 6 months, when infants can visually discriminate between male and female faces
-B) By age 2-3 years, when children can label themselves and others by gender
-C) By age 7-8 years, when children understand gender constancy across situations
-D) By adolescence, when identity formation becomes the primary developmental task
+A) Positive reinforcement and negative punishment
+B) Negative reinforcement and positive punishment
+C) Positive reinforcement and positive punishment
+D) Continuous reinforcement and extinction
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 29
 
-**Domain 2** | **KN7** | **Scored**
+**Domain 2** | **KN14** | **Scored**
 
-A school psychologist is working with a 7-year-old child who has just entered Piaget's concrete operational stage. The psychologist designs activities to assess the child's newly developed cognitive abilities. Which cognitive skill would this child now be capable of performing that they could not do during the preoperational stage?
+A researcher studying stereotypes finds that when participants are subtly exposed to stereotypes about elderly people being slow, they subsequently walk more slowly down the hallway when leaving the experiment. This finding best demonstrates which social cognitive phenomenon?
 
-A) Using symbolic thought and engaging in pretend play with objects
-B) Understanding conservation of number, mass, and volume across transformations
-C) Thinking abstractly about hypothetical situations not yet experienced
-D) Demonstrating object permanence by searching for hidden objects
+A) Stereotype threat affecting performance
+B) Priming and automatic behavior activation
+C) Self-fulfilling prophecy
+D) Fundamental attribution error
 
 **Correct Answer:** B
 
@@ -441,29 +441,29 @@ D) Demonstrating object permanence by searching for hidden objects
 
 ## Question 30
 
-**Domain 2** | **KN6** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A clinical psychologist is assessing a 15-month-old child whose parents are concerned about autism spectrum disorder. The psychologist observes that the child does not point to objects to share interest with others, rarely makes eye contact, and does not respond to their name. These behaviors suggest deficits in which critical developmental domain that typically emerges around 9-12 months?
+A 29-year-old woman believes that her thoughts can influence events in the external world, such as believing that thinking about her friend will cause that friend to call her. She also reports that she sometimes feels that news broadcasts contain special messages meant specifically for her. However, she maintains her job and relationships. These symptoms are most consistent with which diagnosis?
 
-A) Joint attention and social communication skills
-B) Object permanence and understanding of physical causality
-C) Gross motor coordination and postural control
-D) Self-regulation and effortful control of behavior
+A) Schizophrenia
+B) Delusional Disorder
+C) Schizotypal Personality Disorder
+D) Brief Psychotic Disorder
 
-**Correct Answer:** A
+**Correct Answer:** C
 
 ---
 
 ## Question 31
 
-**Domain 2** | **KN8** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A developmental researcher is examining the impact of parenting styles on adolescent outcomes by conducting a longitudinal study. One family demonstrates high levels of warmth and responsiveness combined with clear expectations, consistent discipline, and encouragement of autonomy. According to Baumrind's parenting style classification, this approach is best characterized as which parenting style?
+A 19-year-old college student reports experiencing a depressed mood, decreased appetite, difficulty concentrating, and insomnia for the past three weeks following a breakup with her boyfriend. She is able to attend classes and maintain her part-time job, though she finds these activities less enjoyable. She has no history of mental health problems and denies suicidal ideation. What is the most appropriate diagnosis?
 
-A) Authoritarian parenting with high demands and low responsiveness
-B) Authoritative parenting with high demands and high responsiveness
-C) Permissive parenting with low demands and high responsiveness
-D) Uninvolved parenting with low demands and low responsiveness
+A) Major Depressive Disorder, single episode, mild severity
+B) Adjustment Disorder with Depressed Mood
+C) Persistent Depressive Disorder (Dysthymia)
+D) Other Specified Depressive Disorder
 
 **Correct Answer:** B
 
@@ -471,59 +471,59 @@ D) Uninvolved parenting with low demands and low responsiveness
 
 ## Question 32
 
-**Domain 2** | **KN10** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A neuropsychologist is evaluating a 68-year-old patient who reports increasing difficulty with word-finding and slower processing speed, but maintains strong reasoning abilities and vocabulary. The patient's spouse confirms these changes have been gradual over several years. Brain imaging shows age-appropriate changes without evidence of neurodegenerative disease. These findings are most consistent with which pattern of cognitive change?
+A client describes periods lasting 4-5 days where she feels extremely energetic, needs only 3-4 hours of sleep, talks rapidly, and engages in multiple projects simultaneously. These episodes have occurred several times over the past two years. Between episodes, she experiences her normal mood. She denies that these episodes cause significant impairment in her functioning or require hospitalization. What is the most appropriate diagnosis?
 
-A) Pathological cognitive decline indicating early-stage dementia requiring intervention
-B) Normal cognitive aging with expected declines in processing speed and fluid abilities
-C) Mild cognitive impairment representing a transitional state toward dementia
-D) Vascular cognitive impairment resulting from cerebrovascular disease
+A) Bipolar I Disorder
+B) Bipolar II Disorder
+C) Cyclothymic Disorder
+D) Major Depressive Disorder with mixed features
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 33
 
-**Domain 2** | **KN6** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A developmental psychologist is studying executive function development by testing children's ability to inhibit prepotent responses using a day-night task, where children must say 'day' when shown a moon and 'night' when shown a sun. A 4-year-old child struggles significantly with this task, while a 6-year-old performs much better. This developmental improvement in inhibitory control is most closely associated with maturation of which brain region?
+A 55-year-old man with alcohol use disorder has been abstinent for three years and actively participates in a recovery program. According to DSM-5-TR diagnostic criteria and specifiers, how should his current status be documented?
 
-A) The hippocampus and medial temporal lobe memory systems
-B) The prefrontal cortex and its connections to subcortical regions
-C) The primary sensory cortices in the occipital and temporal lobes
-D) The cerebellum and its role in motor coordination and timing
+A) Alcohol Use Disorder, mild, in remission
+B) Alcohol Use Disorder, in early remission
+C) Alcohol Use Disorder, in sustained remission
+D) Alcohol Use Disorder, recovered
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 34
 
-**Domain 2** | **KN8** | **Scored**
+**Domain 3** | **KN17** | **Scored**
 
-A pediatric psychologist is working with a family whose 8-year-old child is showing signs of developing an insecure attachment pattern with their newly adoptive parents, following multiple disrupted placements in foster care. The psychologist explains that early attachment experiences can be modified through consistent, responsive caregiving. This explanation is most consistent with which theoretical perspective?
+During a diagnostic interview, a 24-year-old woman reports that she has been experiencing persistent intrusive thoughts about contamination, spends 3-4 hours daily washing her hands and cleaning, and has developed skin irritation from excessive washing. She recognizes these thoughts are excessive but feels unable to control them. She scores 28 on the Yale-Brown Obsessive Compulsive Scale. Based on DSM-5-TR criteria, what severity specifier is most appropriate?
 
-A) Critical period theory suggesting attachment patterns are fixed after early childhood
-B) Sensitive period theory suggesting attachment is malleable with appropriate interventions
-C) Stage theory suggesting attachment develops in discrete, invariant stages
-D) Behavioral theory suggesting attachment is simply learned through reinforcement contingencies
+A) Mild (YBOCS score 8-15)
+B) Moderate (YBOCS score 16-23)
+C) Severe (YBOCS score 24-31)
+D) Extreme (YBOCS score 32-40)
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 35
 
-**Domain 2** | **KN7** | **Scored**
+**Domain 3** | **KN17** | **Scored**
 
-A researcher is studying cognitive development in adolescence by examining changes in abstract reasoning abilities. A 14-year-old participant is able to systematically test hypotheses, consider multiple variables simultaneously, and think about abstract concepts like justice and morality. According to Piaget's theory, this adolescent has entered which stage of cognitive development?
+A psychologist administers the WAIS-IV to a 32-year-old client and obtains a Full Scale IQ of 115. The client's Verbal Comprehension Index is 125, while her Processing Speed Index is 95. What is the most appropriate interpretation of these scores?
 
-A) Concrete operational stage, characterized by logical thinking about concrete objects
-B) Formal operational stage, characterized by abstract and hypothetical reasoning
-C) Preoperational stage, characterized by symbolic thought but illogical reasoning
-D) Sensorimotor stage, characterized by learning through sensory experiences
+A) The Full Scale IQ accurately represents the client's overall cognitive functioning
+B) There is significant variability in the client's cognitive profile, and the Full Scale IQ may not fully capture her abilities
+C) The client has a learning disability in processing speed
+D) The results are invalid due to excessive scatter
 
 **Correct Answer:** B
 
@@ -531,14 +531,14 @@ D) Sensorimotor stage, characterized by learning through sensory experiences
 
 ## Question 36
 
-**Domain 2** | **KN7** | **Scored**
+**Domain 3** | **KN18** | **Scored**
 
-A developmental psychologist observes that a 2-year-old child refers to all four-legged animals as 'doggie,' including cats, horses, and cows. According to Piaget's theory of cognitive development, what cognitive process is this child demonstrating when applying their existing schema for dogs to other similar animals?
+A clinical psychologist is selecting assessment instruments for a comprehensive evaluation of a 45-year-old client with suspected depression and cognitive difficulties. To ensure appropriate test selection, the psychologist should primarily consider which psychometric properties of the available instruments?
 
-A) Accommodation, modifying existing schemas to incorporate new information
-B) Assimilation, incorporating new information into existing schemas
-C) Equilibration, balancing assimilation and accommodation processes
-D) Conservation, understanding that properties remain constant across transformations
+A) Face validity and ease of administration
+B) Reliability, validity, and normative data appropriate for the client's demographic characteristics
+C) The number of items and time required for administration
+D) Whether the tests are available in multiple languages
 
 **Correct Answer:** B
 
@@ -546,29 +546,29 @@ D) Conservation, understanding that properties remain constant across transforma
 
 ## Question 37
 
-**Domain 2** | **KN10** | **Scored**
+**Domain 3** | **KN18** | **Scored**
 
-A gerontologist is studying successful aging by examining factors that contribute to well-being in late adulthood. One 78-year-old participant reports high life satisfaction despite some physical limitations, maintains close relationships, continues learning new skills, and has found new meaning after retirement. This pattern is most consistent with which theoretical model of aging?
+A researcher develops a new self-report measure of anxiety and finds that it correlates highly with established anxiety measures and physiological indicators of anxiety, but does not correlate with measures of depression or anger. This pattern of correlations provides evidence for which aspects of validity?
 
-A) Disengagement theory suggesting withdrawal from social roles is natural and adaptive
-B) Activity theory suggesting maintaining engagement leads to successful aging
-C) Socioemotional selectivity theory suggesting older adults prioritize emotionally meaningful goals
-D) Continuity theory suggesting people maintain consistent patterns of behavior throughout life
+A) Content validity only
+B) Convergent validity only
+C) Both convergent and discriminant validity
+D) Predictive validity only
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 38
 
-**Domain 2** | **KN6** | **Field Test**
+**Domain 3** | **KN17** | **Scored**
 
-A developmental researcher is studying temperament in infancy by observing how babies respond to novel stimuli and unfamiliar people. One 6-month-old infant consistently shows high reactivity, crying and showing distress when presented with new toys or meeting new people, while another infant shows low reactivity and approaches new situations calmly. According to Thomas and Chess's temperament research, these individual differences in temperament are best characterized as what?
+During a neuropsychological evaluation, a 68-year-old patient performs poorly on tests of memory and executive functioning. However, the psychologist notes that the patient appeared to put forth minimal effort and frequently responded 'I don't know' without attempting tasks. The patient also failed several symptom validity tests. What should the psychologist include in the interpretation of these results?
 
-A) Entirely learned responses shaped by parenting practices and environmental reinforcement
-B) Biologically-based individual differences in behavioral and emotional reactivity
-C) Temporary states that do not show stability or predict later personality traits
-D) Pathological responses indicating early signs of anxiety or mood disorders
+A) Diagnose the patient with dementia based on the test scores
+B) Note that the results likely underestimate the patient's true abilities due to poor effort and possible symptom exaggeration
+C) Conclude that the patient has a severe cognitive impairment requiring immediate intervention
+D) Recommend repeating the evaluation using different tests
 
 **Correct Answer:** B
 
@@ -576,14 +576,14 @@ D) Pathological responses indicating early signs of anxiety or mood disorders
 
 ## Question 39
 
-**Domain 2** | **KN9** | **Scored**
+**Domain 3** | **KN17** | **Scored**
 
-A school psychologist is working with parents of a 10-year-old child who is struggling academically and socially. The child frequently compares themselves unfavorably to peers, saying things like 'I'm stupid' and 'Nobody likes me.' According to Erikson's psychosocial development theory, this child is at risk for developing which maladaptive outcome associated with middle childhood?
+A psychologist administers the MMPI-2-RF to a client and obtains an elevated L scale score along with a significantly elevated K scale score, while the F scale is within normal limits. The validity scale configuration suggests which response pattern?
 
-A) Mistrust resulting from inconsistent caregiving in infancy
-B) Shame and doubt resulting from overly harsh socialization in toddlerhood
-C) Inferiority resulting from negative experiences with achievement and peer relationships
-D) Role confusion resulting from failure to develop a coherent identity in adolescence
+A) Random responding or difficulty understanding test items
+B) Exaggeration or overreporting of symptoms
+C) Defensive responding and underreporting of symptoms
+D) Valid and interpretable clinical profile
 
 **Correct Answer:** C
 
@@ -591,29 +591,29 @@ D) Role confusion resulting from failure to develop a coherent identity in adole
 
 ## Question 40
 
-**Domain 2** | **KN6** | **Scored**
+**Domain 3** | **KN17** | **Scored**
 
-A developmental neuroscientist is studying brain development during adolescence using longitudinal MRI scans. The research shows that while most brain regions have reached near-adult size by early adolescence, one particular region continues to undergo significant development into the mid-20s, including synaptic pruning and myelination. This extended development is associated with improvements in judgment, planning, and impulse control. Which brain region shows this protracted developmental trajectory?
+A clinician is conducting a diagnostic assessment for a 9-year-old child whose teacher reports attention problems and disruptive behavior in the classroom. To establish a comprehensive diagnostic formulation following best practices, the clinician should gather information from which sources?
 
-A) The primary sensory cortices that mature earliest in development
-B) The prefrontal cortex that continues developing into early adulthood
-C) The hippocampus that reaches maturity by early childhood
-D) The cerebellum that is fully developed by late childhood
+A) Only direct observation and testing of the child
+B) Parent interview and child testing only
+C) Multiple sources including parent and teacher interviews, rating scales, direct observation, and psychological testing
+D) Teacher rating scales and review of school records only
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 41
 
-**Domain 2** | **KN8** | **Scored**
+**Domain 3** | **KN18** | **Field Test**
 
-A clinical psychologist is assessing a child who was exposed to severe neglect during the first two years of life before being placed in a supportive adoptive home. Now age 8, the child shows significant difficulties with emotional regulation, social relationships, and trust. This case illustrates which important developmental principle?
+A psychological test manual reports a test-retest reliability coefficient of .92 over a two-week interval for a measure of personality traits. This high reliability coefficient indicates which characteristic of the test?
 
-A) Critical periods exist where certain experiences must occur or development is permanently impaired
-B) Early experiences can have lasting effects, though some recovery is possible with intervention
-C) Development is entirely predetermined by genetics regardless of environmental input
-D) Children are highly resilient and early adversity has no measurable long-term effects
+A) The test accurately measures what it claims to measure
+B) The test produces consistent scores across time, suggesting temporal stability
+C) The test items all measure the same underlying construct
+D) The test is appropriate for use with diverse populations
 
 **Correct Answer:** B
 
@@ -621,104 +621,104 @@ D) Children are highly resilient and early adversity has no measurable long-term
 
 ## Question 42
 
-**Domain 2** | **KN6** | **Scored**
+**Domain 4** | **KN19** | **Scored**
 
-A researcher is conducting a study on language development by recording parent-child interactions. The researcher observes that when a 2-year-old says 'Daddy go,' the father responds by expanding: 'Yes, Daddy is going to work.' This type of responsive interaction, where adults build on children's utterances using slightly more complex language, is an example of which process that facilitates language acquisition?
+During cognitive behavioral therapy for depression, a 38-year-old client consistently engages in 'all-or-nothing thinking,' such as believing that making any mistake at work means she is 'a complete failure.' The therapist helps her identify and challenge this pattern. What CBT technique is the therapist primarily employing?
 
-A) Scaffolding within the zone of proximal development to support learning
-B) Classical conditioning pairing words with their referents through association
-C) Operant conditioning reinforcing correct language use through praise
-D) Observational learning through passive exposure to language models
-
-**Correct Answer:** A
-
----
-
-## Question 43
-
-**Domain 2** | **KN9** | **Scored**
-
-A developmental psychologist is studying peer relationships in adolescence and observes that a 15-year-old is highly concerned about peer acceptance, frequently seeks approval from friends, and makes decisions based on what peers think. This heightened sensitivity to peer influence during adolescence is associated with which neurobiological change?
-
-A) Increased dopaminergic activity in reward-related brain regions during social evaluation
-B) Decreased prefrontal cortex activity leading to improved executive function
-C) Enhanced hippocampal development improving episodic memory formation
-D) Reduced amygdala reactivity resulting in decreased emotional responses
-
-**Correct Answer:** A
-
----
-
-## Question 44
-
-**Domain 2** | **KN10** | **Scored**
-
-A geropsychologist is assessing cognitive functioning in an 82-year-old client who lives independently. The client demonstrates intact crystallized intelligence, including excellent vocabulary and general knowledge, but shows mild declines in processing speed and working memory. The client successfully compensates for these changes by writing lists and allowing extra time for tasks. This adaptation strategy is consistent with which model of successful cognitive aging?
-
-A) Selection, optimization, and compensation model where older adults adapt to age-related changes
-B) Terminal drop hypothesis suggesting rapid decline immediately before death
-C) Use it or lose it principle suggesting cognitive decline results from disuse
-D) Cognitive reserve theory suggesting education protects against pathological decline
-
-**Correct Answer:** A
-
----
-
-## Question 45
-
-**Domain 3** | **KN11** | **Scored**
-
-A social psychologist conducts a study where participants evaluate job candidates whose resumes are identical except for the names, which signal different racial backgrounds. Results show that candidates with stereotypically White names receive significantly more interview callbacks than those with stereotypically Black names, despite identical qualifications. This finding most directly demonstrates which social-cognitive phenomenon?
-
-A) Implicit bias operating automatically outside conscious awareness to influence decisions
-B) Explicit prejudice reflecting conscious, deliberate discrimination against racial groups
-C) Stereotype threat causing underperformance when negative stereotypes are activated
-D) In-group favoritism reflecting preference for similar others without out-group derogation
-
-**Correct Answer:** A
-
----
-
-## Question 46
-
-**Domain 3** | **KN11** | **Scored**
-
-A researcher investigates the fundamental attribution error by having participants watch videos of a person giving a speech either supporting or opposing a controversial policy. Participants are told the speaker was assigned their position randomly. Despite this information, participants rate the speaker's true attitude as consistent with the speech content. What does this study demonstrate about attribution processes?
-
-A) People accurately consider situational constraints when explaining others' behavior
-B) People tend to overestimate dispositional factors and underestimate situational factors in others' behavior
-C) People show self-serving biases by attributing others' successes to luck and failures to ability
-D) People make more accurate attributions about in-group members than out-group members
+A) Behavioral activation
+B) Cognitive restructuring of distorted thinking patterns
+C) Exposure therapy
+D) Mindfulness-based stress reduction
 
 **Correct Answer:** B
 
 ---
 
-## Question 47
+## Question 43
 
-**Domain 3** | **KN12** | **Scored**
+**Domain 4** | **KN19** | **Scored**
 
-A social psychologist studies conformity by replicating Asch's line judgment paradigm in an online format. Participants make perceptual judgments after seeing responses from supposed other participants (actually confederates) who unanimously give incorrect answers. Results show that 35% of participants conform to the incorrect majority at least once. Which psychological mechanism best explains this conformity?
+A therapist working with a client who has PTSD from a serious car accident gradually exposes the client to trauma-related stimuli, starting with looking at pictures of cars, then sitting in a parked car, and eventually taking short drives. The client practices relaxation techniques at each stage before progressing. This intervention primarily represents which therapeutic approach?
 
-A) Informational social influence based on the desire to be correct and belief others have accurate information
-B) Cognitive dissonance reduction by changing attitudes to match behavior after compliance
-C) Social facilitation effects where presence of others enhances performance on simple tasks
-D) Deindividuation resulting from anonymity and reduced self-awareness in group contexts
+A) Psychodynamic therapy with free association
+B) Systematic desensitization using graduated exposure
+C) Cognitive restructuring of trauma-related beliefs
+D) Behavioral activation for avoidance behaviors
+
+**Correct Answer:** B
+
+---
+
+## Question 44
+
+**Domain 4** | **KN19** | **Scored**
+
+A 45-year-old man in therapy repeatedly describes his current boss as overly critical and impossible to please, which generates intense anger. The therapist notices that the client's descriptions of his boss closely mirror his descriptions of his father. The therapist interprets this pattern as the client transferring feelings about his father onto his boss. This interpretation reflects which therapeutic orientation?
+
+A) Cognitive-behavioral therapy
+B) Psychodynamic psychotherapy
+C) Solution-focused brief therapy
+D) Dialectical behavior therapy
+
+**Correct Answer:** B
+
+---
+
+## Question 45
+
+**Domain 4** | **KN20** | **Scored**
+
+A therapist treating a client with borderline personality disorder uses strategies including mindfulness training, distress tolerance skills, emotion regulation techniques, and interpersonal effectiveness training. The therapist also maintains a structured approach with clear boundaries while validating the client's experiences. This treatment approach is most consistent with which evidence-based therapy?
+
+A) Cognitive Behavioral Therapy (CBT)
+B) Acceptance and Commitment Therapy (ACT)
+C) Dialectical Behavior Therapy (DBT)
+D) Mentalization-Based Treatment (MBT)
+
+**Correct Answer:** C
+
+---
+
+## Question 46
+
+**Domain 4** | **KN19** | **Scored**
+
+During therapy, a client with depression has been identifying and challenging negative automatic thoughts for several weeks. The therapist now asks the client to examine the underlying core beliefs driving these thoughts, such as 'I am fundamentally unlovable.' This therapeutic progression reflects which phase of cognitive therapy?
+
+A) Moving from surface-level cognitions to deeper schema-level beliefs
+B) Transitioning from cognitive to behavioral interventions
+C) Shifting from individual to interpersonal factors
+D) Changing from structured to unstructured therapy
 
 **Correct Answer:** A
 
 ---
 
+## Question 47
+
+**Domain 4** | **KN19** | **Scored**
+
+A therapist working with a client who has panic disorder teaches the client to intentionally induce physical sensations associated with panic (such as hyperventilation, spinning, or breathing through a straw) in a controlled setting to reduce fear of these sensations. This technique is called:
+
+A) Systematic desensitization
+B) Interoceptive exposure
+C) In vivo exposure
+D) Imaginal exposure
+
+**Correct Answer:** B
+
+---
+
 ## Question 48
 
-**Domain 3** | **KN12** | **Scored**
+**Domain 4** | **KN22** | **Scored**
 
-A health psychologist designs an intervention to increase organ donor registration by changing the default option on driver's license applications from 'opt-in' to 'opt-out' with the opportunity to decline. This approach is based on research showing that defaults significantly influence decisions due to status quo bias and inertia. This intervention strategy exemplifies which approach to behavior change?
+A 52-year-old woman with major depressive disorder has not responded adequately to two different SSRI medications at therapeutic doses for sufficient duration. Her psychiatrist considers augmentation strategies. Which of the following represents an evidence-based augmentation approach for treatment-resistant depression?
 
-A) Cognitive dissonance theory using attitude-behavior inconsistency to motivate change
-B) Elaboration likelihood model targeting the central route with strong arguments
-C) Nudge theory using choice architecture to influence decisions while preserving freedom
-D) Social comparison theory leveraging upward comparisons to motivate improvement
+A) Adding a benzodiazepine for anxiety symptoms
+B) Switching to a different SSRI in the same class
+C) Adding an atypical antipsychotic medication such as aripiprazole
+D) Discontinuing medication and pursuing therapy only
 
 **Correct Answer:** C
 
@@ -726,59 +726,59 @@ D) Social comparison theory leveraging upward comparisons to motivate improvemen
 
 ## Question 49
 
-**Domain 3** | **KN13** | **Scored**
+**Domain 4** | **KN22** | **Scored**
 
-A researcher investigates bystander intervention by staging emergencies in public spaces with varying numbers of bystanders present. Results consistently show that as the number of bystanders increases, the likelihood that any individual will help decreases, and response time increases. This phenomenon is best explained by which combination of psychological processes?
+A psychiatrist prescribes a selective serotonin reuptake inhibitor (SSRI) for a patient with major depressive disorder. The patient should be informed that therapeutic effects typically begin to appear within which timeframe, though full benefits may take longer?
 
-A) Diffusion of responsibility and pluralistic ignorance reducing perceived obligation to help
-B) Social facilitation and audience effects enhancing helping behavior in groups
-C) Groupthink and conformity pressure leading to unanimous decisions about helping
-D) Deindividuation causing increased prosocial behavior when in large groups
+A) Within 24-48 hours of starting medication
+B) After 2-4 weeks of consistent use, with continued improvement up to 8-12 weeks
+C) Immediately upon reaching therapeutic blood levels
+D) After 6-12 months of treatment
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 50
 
-**Domain 3** | **KN11** | **Scored**
+**Domain 4** | **KN22** | **Scored**
 
-A social psychologist studies stereotype threat by having female students complete a difficult mathematics test under different conditions. One group is told the test shows gender differences in math ability, while the control group receives no such information. The stereotype threat group performs significantly worse than the control group, despite having equivalent math preparation. What mechanism best explains this performance deficit?
+A patient taking lithium for bipolar disorder must have regular monitoring of blood levels and certain organ functions. The psychologist working with this patient should be aware that lithium particularly requires monitoring of which organ system due to potential toxicity?
 
-A) Working memory capacity is reduced by anxiety and intrusive thoughts triggered by stereotype activation
-B) Actual mathematical ability is temporarily impaired by exposure to stereotype-consistent information
-C) Motivation to perform well decreases when stereotypes suggest poor performance is expected
-D) Stereotype threat has no real cognitive effects and performance differences reflect measurement error
+A) Liver function primarily
+B) Thyroid and kidney function
+C) Pancreatic function
+D) Cardiac conduction exclusively
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 51
 
-**Domain 3** | **KN12** | **Scored**
+**Domain 4** | **KN22** | **Scored**
 
-A researcher examines cognitive dissonance by recruiting participants who hold strong pro-environmental attitudes. Participants are asked to write essays arguing against environmental protection policies for a small payment. Those paid $1 show greater attitude change toward the anti-environmental position than those paid $20. This finding demonstrates which principle of cognitive dissonance theory?
+A 28-year-old patient with schizophrenia has been taking a first-generation (typical) antipsychotic medication and develops involuntary, repetitive movements of the mouth and tongue that persist even after the medication is discontinued. This patient is most likely experiencing which adverse effect?
 
-A) Insufficient justification for counter-attitudinal behavior leads to attitude change to reduce dissonance
-B) Greater external justification produces more attitude change because incentives are more salient
-C) Cognitive dissonance only occurs when behavior contradicts deeply held moral values
-D) Attitude change is unrelated to the degree of inconsistency between attitudes and behavior
+A) Acute dystonia requiring immediate treatment
+B) Neuroleptic malignant syndrome
+C) Tardive dyskinesia, a potentially irreversible movement disorder
+D) Akathisia with subjective restlessness
 
-**Correct Answer:** A
+**Correct Answer:** C
 
 ---
 
 ## Question 52
 
-**Domain 3** | **KN11** | **Scored**
+**Domain 4** | **KN22** | **Field Test**
 
-A social psychologist conducts research on the minimal group paradigm by randomly assigning participants to arbitrary groups based on trivial criteria like color preference. Despite no prior history or interaction between groups, participants show significant in-group favoritism when allocating resources and rate their own group more positively. What does this finding suggest about intergroup bias?
+A client in therapy reveals that she has been experiencing increased depressive symptoms and suicidal ideation since starting a new medication prescribed by her physician for chronic pain. The psychologist should be aware that which class of medications is most commonly associated with depression and suicidal ideation as potential side effects?
 
-A) Intergroup discrimination requires a history of conflict and competition over scarce resources
-B) Social categorization alone is sufficient to trigger in-group favoritism and out-group discrimination
-C) Prejudice develops only through observational learning and reinforcement of discriminatory attitudes
-D) Contact between groups inevitably reduces prejudice through increased familiarity and understanding
+A) Nonsteroidal anti-inflammatory drugs (NSAIDs)
+B) Corticosteroids and certain beta-blockers
+C) Antihistamines
+D) Proton pump inhibitors
 
 **Correct Answer:** B
 
@@ -786,44 +786,44 @@ D) Contact between groups inevitably reduces prejudice through increased familia
 
 ## Question 53
 
-**Domain 3** | **KN12** | **Scored**
+**Domain 4** | **KN21** | **Scored**
 
-A researcher studies attitude change through persuasive communication by manipulating source credibility and message quality. According to the elaboration likelihood model, under which conditions would participants be most influenced by peripheral cues such as the speaker's attractiveness rather than the strength of the arguments?
+Research on psychotherapy outcome has consistently found that one of the strongest predictors of positive treatment outcomes across different therapeutic modalities is which factor?
 
-A) When the topic is personally relevant and participants are motivated to carefully evaluate arguments
-B) When participants have low motivation or ability to process the message content systematically
-C) When participants have strong prior attitudes and extensive knowledge about the topic
-D) When the message contains strong, compelling arguments that withstand scrutiny
+A) The specific theoretical orientation used by the therapist
+B) The length and intensity of treatment
+C) The quality of the therapeutic alliance between therapist and client
+D) The therapist's years of experience
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 54
 
-**Domain 3** | **KN13** | **Scored**
+**Domain 4** | **KN21** | **Scored**
 
-A social psychologist investigates aggression by examining the effects of violent media exposure on subsequent behavior. Participants play either a violent or non-violent video game for 20 minutes, then complete a competitive task where they can deliver aversive noise blasts to an opponent. Results show that participants who played violent games deliver louder and longer noise blasts. According to the general aggression model, what mechanism best explains this effect?
+A meta-analysis of psychotherapy research examines effect sizes across multiple studies comparing cognitive-behavioral therapy to control conditions for anxiety disorders. The analysis yields a Cohen's d of 0.85. How should this effect size be interpreted?
 
-A) Violent media provides catharsis, releasing aggressive impulses and reducing subsequent aggression
-B) Violent media primes aggressive cognitions and increases physiological arousal, facilitating aggressive behavior
-C) Aggressive behavior results from frustration caused by game difficulty rather than violent content
-D) Media effects are entirely mediated by pre-existing personality traits with no causal influence
+A) Small effect indicating minimal clinical benefit
+B) Medium effect indicating moderate clinical benefit
+C) Large effect indicating substantial clinical benefit
+D) The effect size cannot be interpreted without additional context
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 55
 
-**Domain 3** | **KN12** | **Scored**
+**Domain 4** | **KN21** | **Scored**
 
-A researcher studies obedience to authority by recruiting participants to assist in what they believe is a study on teaching and learning. An authority figure instructs participants to administer increasingly severe electric shocks to a learner (actually a confederate) who makes errors. Despite the learner's protests, a significant majority of participants continue to obey the authority figure and administer shocks up to dangerous levels. This research, based on Milgram's classic paradigm, demonstrates what about human behavior?
+A therapy researcher is conducting a randomized controlled trial comparing a new treatment to an established evidence-based treatment. To minimize bias, the researcher ensures that outcome assessments are conducted by evaluators who are unaware of which treatment condition each participant received. This methodological approach is referred to as:
 
-A) People will not harm others regardless of situational pressures or authority commands
-B) Ordinary people will obey authority figures and commit harmful acts under certain situational conditions
-C) Only individuals with sadistic or aggressive personalities will harm others when instructed to do so
-D) Obedience to authority is primarily determined by cultural factors and varies dramatically across societies
+A) Random assignment
+B) Blinding or masking of assessors
+C) Intent-to-treat analysis
+D) Placebo control
 
 **Correct Answer:** B
 
@@ -831,14 +831,14 @@ D) Obedience to authority is primarily determined by cultural factors and varies
 
 ## Question 56
 
-**Domain 3** | **KN13** | **Scored**
+**Domain 4** | **KN21** | **Scored**
 
-A social psychologist examines close relationships by studying attachment styles in romantic partnerships. One participant describes their relationship pattern: they feel uncomfortable with intimacy, prefer emotional distance, and become anxious when partners want closeness. According to adult attachment theory, this pattern is most consistent with which attachment style and associated interpersonal difficulties?
+A clinical trial finds that 65% of patients receiving a new psychotherapy intervention show clinically significant improvement compared to 35% of patients in the control group. The researcher calculates the Number Needed to Treat (NNT). What does a lower NNT value indicate about the treatment?
 
-A) Secure attachment characterized by comfort with intimacy and autonomy
-B) Avoidant attachment characterized by discomfort with closeness and self-reliance
-C) Anxious-preoccupied attachment characterized by fear of abandonment and need for reassurance
-D) Fearful-avoidant attachment characterized by desire for closeness coupled with distrust
+A) The treatment is less effective and requires treating more people to see benefit
+B) The treatment is more effective, with fewer people needing treatment for one person to benefit
+C) The treatment has more side effects
+D) The treatment is less cost-effective
 
 **Correct Answer:** B
 
@@ -846,74 +846,74 @@ D) Fearful-avoidant attachment characterized by desire for closeness coupled wit
 
 ## Question 57
 
-**Domain 3** | **KN11** | **Field Test**
+**Domain 4** | **KN23** | **Scored**
 
-A researcher investigates the mere exposure effect by repeatedly presenting participants with novel stimuli such as unfamiliar foreign words, abstract shapes, or faces. After varying numbers of exposures, participants rate how much they like each stimulus. Results show that stimuli presented more frequently receive higher liking ratings, even when participants don't consciously remember seeing them. What psychological principle does this demonstrate?
+A couple seeks therapy for ongoing conflicts about household responsibilities and parenting decisions. The therapist focuses on improving their communication patterns, teaching them to express needs clearly and listen actively, and helping them negotiate mutually acceptable solutions. This approach is most consistent with which type of couples therapy?
 
-A) Classical conditioning where repeated pairings create positive associations with stimuli
-B) Familiarity through repeated exposure increases positive affect and preference for stimuli
-C) Cognitive dissonance where people justify their attention to stimuli by rating them positively
-D) Social facilitation where mere presence of stimuli enhances evaluative responses
-
-**Correct Answer:** B
-
----
-
-## Question 58
-
-**Domain 3** | **KN12** | **Scored**
-
-A social psychologist studies group decision-making by examining deliberations in jury simulations. When group members with initially moderate views on a case deliberate together, their final verdicts become more extreme in the direction of their initial leanings. This shift toward more extreme positions following group discussion is best explained by which phenomenon?
-
-A) Social loafing where individual effort decreases in group contexts
-B) Groupthink where conformity pressure leads to poor decision quality
-C) Group polarization where discussion amplifies the group's initial tendencies
-D) Deindividuation where anonymity leads to less restrained behavior
+A) Psychodynamic couples therapy focused on unconscious patterns
+B) Emotionally Focused Therapy (EFT) for couples
+C) Behavioral and cognitive-behavioral couples therapy
+D) Gottman Method couples therapy
 
 **Correct Answer:** C
 
 ---
 
-## Question 59
+## Question 58
 
-**Domain 3** | **KN11** | **Scored**
+**Domain 4** | **KN23** | **Scored**
 
-A researcher examines the self-fulfilling prophecy in educational settings by informing teachers that certain randomly selected students show unusual potential for intellectual growth based on a fictitious test. At year-end, these students show significantly greater IQ gains than control students. What mechanism best explains how teacher expectations influenced student outcomes?
+A family therapist working with a family where a teenage son has been acting out observes that the parents frequently disagree about discipline in front of the children, and the son's behavior seems to intensify when marital tension is high. The therapist hypothesizes that the son's behavior serves to unite the parents and distract from marital issues. This conceptualization reflects which family therapy concept?
 
-A) Students selected had genuinely higher ability that was detected by the initial assessment
-B) Teachers' expectations led them to provide more attention, encouragement, and learning opportunities to selected students
-C) The IQ test used to measure outcomes was biased in favor of students identified as high potential
-D) Regression to the mean explains apparent gains as students return to their true ability levels
+A) Individuation and differentiation
+B) Circular causality and symptom function within the family system
+C) Modeling and social learning
+D) Attachment patterns across generations
 
 **Correct Answer:** B
+
+---
+
+## Question 59
+
+**Domain 4** | **KN23** | **Scored**
+
+A group therapist is facilitating a therapy group for individuals with social anxiety disorder. During the initial session, a member asks very personal questions of other members, making them uncomfortable. The therapist should primarily focus on which group process intervention?
+
+A) Ignoring the behavior to avoid drawing attention to it
+B) Privately addressing the behavior with the member after group
+C) Addressing the behavior in the group context and establishing appropriate boundaries and group norms
+D) Removing the member from the group immediately
+
+**Correct Answer:** C
 
 ---
 
 ## Question 60
 
-**Domain 3** | **KN13** | **Scored**
+**Domain 4** | **KN23** | **Field Test**
 
-A social psychologist studies prosocial behavior using an empathy-altruism hypothesis framework. Participants watch an interview with a student struggling financially, with instructions either to focus on the student's feelings (high empathy) or to remain objective (low empathy). When given the opportunity to help, high-empathy participants help regardless of whether others will know, while low-empathy participants help mainly when their actions are public. What do these findings suggest about motivations for helping?
+Research comparing individual therapy to group therapy for depression has generally found which pattern of outcomes?
 
-A) All helping behavior is ultimately motivated by selfish concerns like reputation management
-B) Empathic concern can motivate truly altruistic helping that occurs even without external rewards
-C) Helping behavior is entirely determined by cost-benefit analysis without emotional influences
-D) People help others only when they expect reciprocity or future benefits from the recipient
+A) Individual therapy is significantly more effective than group therapy
+B) Group therapy is significantly more effective than individual therapy
+C) Both formats show comparable effectiveness for many conditions
+D) Group therapy is only effective when combined with individual therapy
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 61
 
-**Domain 3** | **KN11** | **Scored**
+**Domain 4** | **KN20** | **Scored**
 
-A researcher investigates the contact hypothesis for reducing prejudice by examining interactions between members of different ethnic groups. The study varies whether contact occurs under conditions of equal status, common goals, cooperation, and institutional support. Results show prejudice reduction is greatest when all four conditions are met. What does this finding suggest about intergroup contact?
+A therapist is treating a 35-year-old woman who experienced childhood sexual abuse. During a session, the client suddenly stops talking, stares blankly, and later reports feeling as though she 'wasn't present' for several minutes. She has no memory of this time period. This response is most consistent with which trauma-related symptom?
 
-A) Any contact between groups automatically reduces prejudice through increased familiarity
-B) Contact reduces prejudice most effectively when it occurs under optimal conditions that promote positive interaction
-C) Contact consistently increases prejudice by highlighting differences between groups
-D) The quality and context of intergroup contact have no meaningful effect on prejudice reduction
+A) Flashback episode
+B) Dissociative response
+C) Panic attack
+D) Absence seizure
 
 **Correct Answer:** B
 
@@ -921,44 +921,44 @@ D) The quality and context of intergroup contact have no meaningful effect on pr
 
 ## Question 62
 
-**Domain 3** | **KN11** | **Scored**
+**Domain 4** | **KN24** | **Scored**
 
-A social psychologist examines the actor-observer bias by having participants explain the causes of their own behavior versus identical behavior performed by others. Participants attribute their own behavior more to situational factors ('I was late because of traffic') while attributing others' identical behavior more to dispositional factors ('They were late because they're irresponsible'). What cognitive mechanism best explains this asymmetry?
+A psychologist is providing crisis intervention services to survivors immediately following a mass shooting incident. According to best practices in psychological first aid and crisis intervention, what should be the primary initial focus?
 
-A) People have privileged access to their own situational constraints but not others' constraints
-B) Self-serving bias leads people to make more flattering attributions for themselves than others
-C) Actor and observer perspectives focus attention on different aspects of the situation
-D) Defensive attribution motivates people to distance themselves from others' negative outcomes
+A) Detailed processing of the traumatic event to prevent PTSD
+B) Ensuring safety, providing support, reducing acute distress, and connecting individuals to resources
+C) Formal diagnostic assessment of acute stress disorder
+D) Teaching cognitive restructuring techniques
 
-**Correct Answer:** C
+**Correct Answer:** B
 
 ---
 
 ## Question 63
 
-**Domain 3** | **KN12** | **Scored**
+**Domain 4** | **KN20** | **Scored**
 
-A researcher studies the foot-in-the-door technique by first asking homeowners to display a small sign supporting safe driving, then later requesting they install a large, unattractive sign in their yard. Homeowners who agreed to the small request are significantly more likely to agree to the large request compared to those who received only the large request. What psychological principle underlies this compliance technique?
+A client who has been sexually assaulted three weeks ago presents with intrusive memories, nightmares, avoidance of reminders of the trauma, and hyperarousal symptoms. She is significantly distressed and having difficulty functioning at work. What is the most appropriate diagnosis at this point?
 
-A) Initial compliance creates commitment and consistency pressure that facilitates subsequent larger requests
-B) The large request appears smaller by contrast after considering an even larger request first
-C) Reciprocity norms obligate people to comply after the requester makes a concession
-D) Scarcity of opportunities to help increases the perceived value of compliance
+A) Posttraumatic Stress Disorder (PTSD)
+B) Acute Stress Disorder
+C) Adjustment Disorder with anxiety
+D) Brief Psychotic Disorder
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 64
 
-**Domain 3** | **KN13** | **Scored**
+**Domain 4** | **KN20** | **Scored**
 
-A social psychologist examines romantic relationship satisfaction by assessing partners' attributional patterns for relationship events. Partners in satisfied relationships attribute positive events to stable, global causes in their partner ('She helped because she's a caring person') and negative events to unstable, specific causes ('He forgot because he had a stressful day'). Partners in distressed relationships show the opposite pattern. This research demonstrates what about close relationships?
+Research on evidence-based treatments for PTSD has found the strongest support for which therapeutic approaches?
 
-A) Attributional patterns reflect relationship satisfaction but do not influence it
-B) How partners explain each other's behavior influences and reflects relationship quality
-C) Objective behavior matters more than subjective interpretations for relationship outcomes
-D) Attributions become more accurate and less biased as relationship duration increases
+A) Long-term psychodynamic therapy and hypnosis
+B) Trauma-focused cognitive-behavioral therapy and Eye Movement Desensitization and Reprocessing (EMDR)
+C) Supportive counseling and stress management alone
+D) Medication management without psychotherapy
 
 **Correct Answer:** B
 
@@ -966,44 +966,44 @@ D) Attributions become more accurate and less biased as relationship duration in
 
 ## Question 65
 
-**Domain 3** | **KN11** | **Scored**
+**Domain 4** | **KN24** | **Scored**
 
-A researcher investigates social identity theory by examining how sports fans respond to their team's wins and losses. After victories, fans use more 'we' language ('We won!') and prominently display team apparel. After defeats, fans use more 'they' language ('They lost') and are less likely to wear team merchandise. This pattern of basking in reflected glory and cutting off reflected failure demonstrates what aspect of social identity?
+A psychologist is conducting a violence risk assessment for a patient being considered for discharge from a psychiatric hospital. Research on risk assessment indicates that which approach provides the most accurate prediction of future violence?
 
-A) People maintain positive self-concept by strategically managing associations with in-group successes and failures
-B) True identification with social groups remains constant regardless of group performance outcomes
-C) Social identities become less important to self-concept when groups perform poorly
-D) Individuals are unaware of how group outcomes affect their self-esteem and behavior
+A) Unstructured clinical judgment based on experience
+B) Structured professional judgment using validated risk assessment tools combined with clinical expertise
+C) Relying solely on patient self-report of intentions
+D) Actuarial prediction using only static historical risk factors
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 66
 
-**Domain 4** | **KN14** | **Scored**
+**Domain 4** | **KN24** | **Scored**
 
-A cognitive psychologist conducts a study on working memory capacity by administering an operation span task where participants solve math problems while remembering unrelated words. Individual differences in working memory capacity predict performance on complex cognitive tasks like reading comprehension and reasoning. According to current models of working memory, which component is most critical for simultaneously processing and storing information in this type of task?
+A 42-year-old client discloses during a therapy session that he has specific plans to harm his ex-wife, including details about when and how he intends to carry out this plan. He has a history of domestic violence and appears serious about his intentions. What is the psychologist's primary ethical and legal obligation?
 
-A) The phonological loop that temporarily stores verbal and acoustic information
-B) The visuospatial sketchpad that maintains visual and spatial information
-C) The central executive that coordinates attention and integrates information across systems
-D) The episodic buffer that binds information from multiple sources into coherent episodes
+A) Maintain confidentiality as the client disclosed this in therapy
+B) Take steps to protect the intended victim, which may include warning her and/or notifying law enforcement
+C) Hospitalize the client involuntarily
+D) Consult with colleagues before taking any action
 
-**Correct Answer:** C
+**Correct Answer:** B
 
 ---
 
 ## Question 67
 
-**Domain 4** | **KN15** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A researcher investigates false memory formation using the Deese-Roediger-McDermott (DRM) paradigm. Participants study word lists containing strong associates of a non-presented critical lure (e.g., bed, rest, awake, tired, but not 'sleep'). On a subsequent recognition test, participants frequently claim with high confidence that they saw the critical lure. What does this finding reveal about memory reconstruction?
+A school psychologist is part of a team conducting a functional behavioral assessment (FBA) for an 8-year-old student who frequently leaves his seat and disrupts class. The assessment reveals that the disruptive behavior typically occurs during independent work time and results in teacher attention. Based on this functional analysis, what is the most likely function of the behavior?
 
-A) Memory operates like a video recording that accurately preserves experienced events
-B) Memory is reconstructive and can incorporate information consistent with but not actually present in the original experience
-C) False memories occur only when participants deliberately lie about what they remember
-D) Semantic processing during encoding prevents formation of false memories through elaboration
+A) Escape or avoidance of difficult academic tasks
+B) Access to attention from the teacher
+C) Sensory stimulation
+D) Access to preferred tangible items
 
 **Correct Answer:** B
 
@@ -1011,29 +1011,29 @@ D) Semantic processing during encoding prevents formation of false memories thro
 
 ## Question 68
 
-**Domain 4** | **KN16** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A cognitive neuroscientist studies attention by using a spatial cueing task with fMRI. Participants see a cue indicating where a target will likely appear, then detect targets that appear in cued or uncued locations. Valid cues produce faster responses and enhanced neural activity in visual cortex areas processing the cued location, even before the target appears. This demonstrates which attentional mechanism?
+A behavior analyst is working with a child with autism spectrum disorder to increase verbal requesting behavior. Initially, the therapist reinforces any vocalization attempt. Once vocalizations increase, the therapist only reinforces vocalizations that approximate words, and eventually only reinforces clear word production. This process exemplifies which behavioral technique?
 
-A) Divided attention allowing simultaneous processing of multiple information streams
-B) Top-down attentional control enhancing sensory processing of goal-relevant spatial locations
-C) Automatic capture of attention by salient, unexpected stimuli in the environment
-D) Inattentional blindness where unattended stimuli fail to reach conscious awareness
+A) Fading
+B) Chaining
+C) Shaping through successive approximations
+D) Discrimination training
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 69
 
-**Domain 4** | **KN17** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A researcher examines problem-solving by presenting participants with insight problems like the nine-dot problem where they must connect all dots using four straight lines without lifting their pen. Most participants fail initially because they assume constraints not specified in the problem. After taking a break and returning to the task, many participants suddenly solve it. What cognitive process best explains this delayed insight?
+A clinical psychologist implements a behavioral intervention for a client with depression that involves scheduling and engaging in pleasurable and meaningful activities, even when the client doesn't initially feel motivated. The goal is to increase positive reinforcement in the client's environment and improve mood. This intervention is called:
 
-A) Functional fixedness preventing novel uses of familiar objects
-B) Incubation allowing unconscious processing and restructuring of the problem representation
-C) Confirmation bias leading participants to seek information consistent with initial hypotheses
-D) Availability heuristic causing participants to rely on easily retrieved solution strategies
+A) Cognitive restructuring
+B) Behavioral activation
+C) Systematic desensitization
+D) Contingency management
 
 **Correct Answer:** B
 
@@ -1041,14 +1041,14 @@ D) Availability heuristic causing participants to rely on easily retrieved solut
 
 ## Question 70
 
-**Domain 4** | **KN17** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A cognitive psychologist studies decision-making under risk using prospect theory. Participants choose between a sure gain of $50 versus a 50% chance of winning $100. Then they choose between a sure loss of $50 versus a 50% chance of losing $100. Most participants are risk-averse for gains (choosing the sure option) but risk-seeking for losses (choosing the gamble). What principle of prospect theory explains this pattern?
+A therapist is treating a client with a specific phobia of dogs using exposure therapy. The client creates a hierarchy of anxiety-provoking situations from least to most distressing (looking at dog pictures to petting a large dog). The therapist systematically guides the client through each level while teaching relaxation techniques. This approach represents which behavior therapy method?
 
-A) Expected utility theory predicting consistent risk preferences across gain and loss frames
-B) Loss aversion where losses loom larger than equivalent gains, combined with reference point dependence
-C) Representativeness heuristic causing people to judge probabilities based on similarity to prototypes
-D) Anchoring and adjustment where initial values constrain subsequent estimates
+A) Flooding
+B) Systematic desensitization
+C) Implosive therapy
+D) Aversion therapy
 
 **Correct Answer:** B
 
@@ -1056,14 +1056,14 @@ D) Anchoring and adjustment where initial values constrain subsequent estimates
 
 ## Question 71
 
-**Domain 4** | **KN14** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A researcher investigates semantic memory organization by measuring response times in a category verification task. Participants verify statements like 'A robin is a bird' faster than 'A penguin is a bird,' despite both being equally true. According to prototype theory and research on semantic categories, what explains this response time difference?
+A parent reports that their 5-year-old child has frequent tantrums when told 'no.' A behavioral assessment reveals that the parent often gives in to the child's demands after tantrums persist. The behavioral consultant explains that the parent is inadvertently doing what to the tantrum behavior?
 
-A) All category members are represented identically with equal accessibility in semantic memory
-B) Typicality effects where more prototypical category members are verified faster than atypical members
-C) Episodic memory contamination where personal experiences with robins facilitate faster responses
-D) Response bias where participants guess rather than actually retrieving semantic information
+A) Punishing the behavior through negative reinforcement
+B) Reinforcing the behavior through positive reinforcement by providing the desired item
+C) Extinguishing the behavior by removing attention
+D) Using differential reinforcement of alternative behaviors
 
 **Correct Answer:** B
 
@@ -1071,14 +1071,14 @@ D) Response bias where participants guess rather than actually retrieving semant
 
 ## Question 72
 
-**Domain 4** | **KN15** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A cognitive neuroscientist studies the encoding specificity principle by having participants learn word lists in either a quiet laboratory or a noisy cafeteria, then tests memory in either the same or different context. Results show better recall when encoding and retrieval contexts match. What does this finding suggest about how memory traces are represented?
+A behavior therapist working with a client who has obsessive-compulsive disorder uses an intervention where the client is exposed to obsession-triggering stimuli (touching a doorknob) but is prevented from engaging in the compulsive behavior (washing hands). This evidence-based technique is known as:
 
-A) Memory traces are context-independent and equally accessible from any retrieval environment
-B) Contextual information is encoded along with target information and facilitates retrieval when reinstated
-C) Environmental context affects only episodic memory, not semantic or procedural memory systems
-D) Context-dependent memory effects result from motivated forgetting rather than retrieval dynamics
+A) Systematic desensitization
+B) Exposure and Response Prevention (ERP)
+C) Flooding
+D) Habituation training
 
 **Correct Answer:** B
 
@@ -1086,44 +1086,44 @@ D) Context-dependent memory effects result from motivated forgetting rather than
 
 ## Question 73
 
-**Domain 4** | **KN14** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A researcher examines cognitive load effects on learning by having students study complex science material under different conditions. One group studies with integrated text and diagrams, while another studies with separated text and diagrams requiring visual scanning back and forth. The integrated group shows superior comprehension and transfer. According to cognitive load theory, what explains this advantage?
+A researcher conducting a single-subject design study with an individual with self-injurious behavior collects baseline data (A), implements an intervention (B), withdraws the intervention to return to baseline (A), and then reimplements the intervention (B). This design is called:
 
-A) Split attention imposes extraneous cognitive load that consumes working memory resources needed for learning
-B) Studying separated materials enhances learning by encouraging active integration processes
-C) Integrated presentation reduces intrinsic cognitive load by making material inherently less complex
-D) Visual scanning between text and diagrams improves learning through elaborative rehearsal
+A) Multiple baseline design
+B) ABAB reversal design
+C) Changing criterion design
+D) Alternating treatments design
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 74
 
-**Domain 4** | **KN16** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A cognitive psychologist investigates automaticity by training participants to make consistent responses to specific stimuli over many trials, then changing the required response. Initially, performance is slow and requires focused attention, but becomes fast and effortless with practice. After the response changes, participants show interference from the old, automatic response. What characteristic of automatic processes does this demonstrate?
+A special education teacher wants to decrease a student's disruptive calling-out behavior while simultaneously increasing hand-raising. The teacher ignores calling out while immediately responding to and praising hand-raising. This intervention strategy is called:
 
-A) Automatic processes develop through extensive practice and become difficult to inhibit or modify
-B) Automatic processes require as much attentional capacity as controlled processes
-C) Automatic processes are innate and do not develop through experience or practice
-D) Automatic processes are easily modified and show no interference with controlled processing
+A) Positive practice overcorrection
+B) Differential reinforcement of incompatible behavior (DRI)
+C) Response cost
+D) Time-out from positive reinforcement
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 75
 
-**Domain 4** | **KN17** | **Scored**
+**Domain 5** | **KN30** | **Scored**
 
-A researcher studies reasoning by presenting participants with the Wason selection task involving four cards showing 'A,' 'K,' '4,' and '7,' and the rule 'If a card has a vowel on one side, it has an even number on the other.' Participants must select which cards to turn over to test the rule. Most participants incorrectly select 'A' and '4' rather than the logically correct 'A' and '7.' What does this error pattern reveal about human reasoning?
+A health psychologist is designing an intervention to help cardiac patients adhere to exercise recommendations. Based on the Health Belief Model, which factors should the intervention address to increase the likelihood of behavior change?
 
-A) People naturally apply formal logic and readily test hypotheses through falsification
-B) People show confirmation bias by seeking evidence consistent with the rule rather than attempting falsification
-C) Abstract reasoning tasks produce more accurate performance than concrete, contextualized problems
-D) Training in formal logic eliminates all reasoning errors in deductive inference tasks
+A) Only the benefits of exercise
+B) Perceived susceptibility to health problems, perceived severity, perceived benefits and barriers, and cues to action
+C) Unconscious motivations for non-adherence
+D) Social support exclusively
 
 **Correct Answer:** B
 
@@ -1131,14 +1131,14 @@ D) Training in formal logic eliminates all reasoning errors in deductive inferen
 
 ## Question 76
 
-**Domain 4** | **KN15** | **Scored**
+**Domain 5** | **KN30** | **Scored**
 
-A cognitive neuroscientist examines long-term potentiation (LTP) as a neural mechanism for learning and memory. Research shows that repeated stimulation of hippocampal pathways produces lasting increases in synaptic strength. When NMDA receptors are blocked pharmacologically, LTP does not occur and certain forms of learning are impaired. What does this evidence suggest about the neural basis of memory formation?
+A psychologist working in a primary care setting is helping patients manage chronic pain. Research on psychological interventions for chronic pain has found which approach to be most effective?
 
-A) Memory is stored exclusively in hippocampal neurons without distributed cortical representation
-B) Synaptic strengthening through mechanisms like LTP provides a cellular basis for learning and memory
-C) NMDA receptors are irrelevant to memory formation and only affect motor coordination
-D) Memory formation requires no changes in neural connectivity or synaptic function
+A) Encouraging complete rest and avoidance of activities that cause pain
+B) Cognitive-behavioral approaches including pain management strategies, activity pacing, and cognitive restructuring
+C) Supportive counseling focused only on emotional support
+D) Hypnosis as the sole intervention
 
 **Correct Answer:** B
 
@@ -1146,14 +1146,14 @@ D) Memory formation requires no changes in neural connectivity or synaptic funct
 
 ## Question 77
 
-**Domain 4** | **KN17** | **Scored**
+**Domain 5** | **KN30** | **Scored**
 
-A researcher investigates the availability heuristic by asking participants to estimate the frequency of various causes of death. Participants overestimate dramatic causes like plane crashes and homicides that receive extensive media coverage, while underestimating more common causes like heart disease and diabetes. What does this demonstrate about judgment under uncertainty?
+A patient with diabetes consistently fails to monitor blood glucose levels and follow dietary recommendations despite understanding the health consequences. According to research on health behavior change, what psychological factors are most likely contributing to this non-adherence?
 
-A) People accurately estimate objective frequencies based on statistical information
-B) Ease of retrieving examples from memory influences frequency judgments, leading to systematic biases
-C) Affect and emotion play no role in probability judgments and risk assessment
-D) Training in statistics completely eliminates reliance on heuristics in probability judgment
+A) Lack of knowledge about diabetes management
+B) Low self-efficacy, competing priorities, and possible depression or anxiety
+C) Intentional non-compliance with medical advice
+D) Cognitive impairment preventing understanding
 
 **Correct Answer:** B
 
@@ -1161,29 +1161,29 @@ D) Training in statistics completely eliminates reliance on heuristics in probab
 
 ## Question 78
 
-**Domain 4** | **KN16** | **Scored**
+**Domain 5** | **KN30** | **Scored**
 
-A cognitive psychologist studies attention using the Stroop task where participants name the ink color of color words (e.g., the word 'RED' printed in blue ink). Response times are slower and errors increase when word meaning and ink color conflict. According to theories of attention and automaticity, what causes this interference effect?
+Research on the relationship between stress and physical health has found that chronic stress can impact immune system functioning through which mechanism?
 
-A) Reading is an automatic process that occurs involuntarily and interferes with the controlled process of color naming
-B) Color perception is automatic while reading requires controlled attention, causing facilitation rather than interference
-C) Both reading and color naming are equally automatic, producing no differential interference
-D) Participants lack sufficient motivation to focus attention on the relevant dimension
+A) Stress has no direct impact on immune functioning
+B) Stress activates the hypothalamic-pituitary-adrenal (HPA) axis, leading to elevated cortisol which can suppress immune function
+C) Stress only affects the cardiovascular system, not immune function
+D) Acute stress suppresses immunity but chronic stress enhances it
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 79
 
-**Domain 4** | **KN15** | **Field Test**
+**Domain 5** | **KN30** | **Field Test**
 
-A researcher examines consolidation in memory by testing retention intervals in humans and examining the effects of post-learning sleep. Participants who sleep after learning show better retention after a delay compared to those who remain awake for an equivalent period, particularly for declarative memories. What does this suggest about the consolidation process?
+A psychologist working in a rehabilitation hospital is helping a stroke patient adjust to functional limitations and engage in rehabilitation activities. The psychologist's role in this interdisciplinary healthcare team primarily involves:
 
-A) Sleep provides passive protection from interference but no active memory processing
-B) Memory consolidation is an active process facilitated by sleep that strengthens and reorganizes memory traces
-C) Only procedural memories benefit from consolidation during sleep periods
-D) Consolidation is completed immediately at encoding with no role for subsequent processing
+A) Providing only individual psychotherapy for depression
+B) Addressing cognitive, emotional, and behavioral factors affecting adjustment and rehabilitation participation
+C) Focusing exclusively on neuropsychological testing
+D) Managing the patient's medical treatment plan
 
 **Correct Answer:** B
 
@@ -1191,14 +1191,14 @@ D) Consolidation is completed immediately at encoding with no role for subsequen
 
 ## Question 80
 
-**Domain 4** | **KN14** | **Scored**
+**Domain 5** | **KN30** | **Scored**
 
-A cognitive researcher investigates mental imagery by having participants study maps, then answer questions about spatial relationships between landmarks. Some participants are instructed to use visual imagery while others use verbal strategies. Brain imaging during retrieval shows that imagery users activate visual cortex regions similar to those active during actual perception. What does this suggest about the nature of mental imagery?
+A health psychologist designs an intervention to promote smoking cessation that includes identifying triggers, developing coping strategies, using nicotine replacement, building social support, and preventing relapse. This comprehensive approach reflects which intervention model?
 
-A) Mental imagery relies on entirely different neural systems than perceptual processing
-B) Mental imagery shares representational formats and neural substrates with perceptual processing
-C) Verbal and imagery-based representations produce identical patterns of brain activation
-D) Mental imagery has no measurable neural correlates or functional consequences
+A) Biomedical model focusing only on pharmacological treatment
+B) Biopsychosocial model addressing biological, psychological, and social factors
+C) Psychodynamic model exploring unconscious motivations
+D) Purely behavioral model using only contingency management
 
 **Correct Answer:** B
 
@@ -1206,14 +1206,14 @@ D) Mental imagery has no measurable neural correlates or functional consequences
 
 ## Question 81
 
-**Domain 4** | **KN17** | **Scored**
+**Domain 5** | **KN26** | **Scored**
 
-A researcher studies decision-making biases by presenting the same problem framed in terms of gains or losses. When a disease is expected to kill 600 people, participants prefer a sure option when framed as 'saving 200 people' but prefer a risky option when framed as '400 people will die,' despite the options being logically equivalent. What cognitive principle does this framing effect demonstrate?
+A 10-year-old child is referred for evaluation due to academic difficulties. The psychologist administers an IQ test (WISC-V) and achievement tests. The child obtains a Full Scale IQ of 108 (average range) but achievement scores in reading are at the 15th percentile, representing a significant discrepancy. This pattern is most consistent with which condition?
 
-A) Decisions are based on objective analysis of expected values regardless of how options are described
-B) The way options are framed affects decision-making by changing reference points and risk preferences
-C) People show consistent risk preferences across different framings of identical outcomes
-D) Framing effects occur only in inexperienced decision-makers with limited domain knowledge
+A) Intellectual developmental disorder
+B) Specific learning disorder with impairment in reading
+C) Attention-deficit/hyperactivity disorder
+D) Normal variation in academic skills
 
 **Correct Answer:** B
 
@@ -1221,29 +1221,29 @@ D) Framing effects occur only in inexperienced decision-makers with limited doma
 
 ## Question 82
 
-**Domain 4** | **KN14** | **Scored**
+**Domain 5** | **KN26** | **Scored**
 
-A cognitive neuroscientist examines the role of the prefrontal cortex in working memory using a delayed-response task with neural recording in non-human primates. During the delay period when information must be maintained but no stimulus is present, prefrontal neurons show sustained activation that represents the remembered information. When these neurons are temporarily inactivated, working memory performance is impaired. What does this evidence suggest?
+A school psychologist is consulting with a teacher about a 7-year-old student who has difficulty following multi-step directions, frequently loses materials, makes careless mistakes, and has trouble sustaining attention during lessons. The teacher reports that these behaviors occur across different subjects and activities. What disorder should be considered in a comprehensive evaluation?
 
-A) Working memory relies solely on hippocampal systems with no prefrontal involvement
-B) Prefrontal cortex actively maintains information in working memory through sustained neural firing
-C) Working memory requires no active maintenance and information persists through structural changes
-D) Prefrontal cortex is involved only in memory retrieval, not maintenance or manipulation
+A) Oppositional Defiant Disorder
+B) Specific Learning Disorder
+C) Attention-Deficit/Hyperactivity Disorder, predominantly inattentive presentation
+D) Intellectual Developmental Disorder
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 83
 
-**Domain 4** | **KN14** | **Scored**
+**Domain 5** | **KN26** | **Scored**
 
-A researcher investigates expertise in chess by comparing grandmasters and novices on their memory for briefly-presented chess positions from actual games versus randomly arranged pieces. Grandmasters show superior memory only for meaningful game positions, not random arrangements. According to chunking theory and expertise research, what explains grandmasters' selective advantage?
+A 5-year-old child demonstrates significant delays in social communication, engages in repetitive hand-flapping behaviors, becomes extremely distressed by changes in routine, and has highly restricted interests (memorizing train schedules). The child has difficulty with reciprocal social interaction and makes minimal eye contact. These symptoms are most consistent with which diagnosis?
 
-A) Grandmasters have larger working memory capacity that applies to all stimuli equally
-B) Expertise allows recognition of meaningful patterns that are encoded as chunks, reducing memory load for meaningful positions
-C) Grandmasters use different sensory systems for encoding chess information than novices
-D) Superior memory for random positions is prevented by interference from chess knowledge
+A) Social (Pragmatic) Communication Disorder
+B) Autism Spectrum Disorder
+C) Intellectual Developmental Disorder
+D) Language Disorder
 
 **Correct Answer:** B
 
@@ -1251,14 +1251,14 @@ D) Superior memory for random positions is prevented by interference from chess 
 
 ## Question 84
 
-**Domain 4** | **KN15** | **Scored**
+**Domain 5** | **KN27** | **Scored**
 
-A cognitive psychologist studies the testing effect by having students study educational materials and then either restudy the materials or complete practice tests. On a final test one week later, students who completed practice tests show superior retention compared to those who restudied, even when total study time is equated. What mechanism best explains the benefits of retrieval practice?
+According to the Individuals with Disabilities Education Act (IDEA), when determining eligibility for special education services, school teams must establish both that a child has a qualifying disability and which additional criterion?
 
-A) Repeated studying produces stronger encoding than retrieval practice for long-term retention
-B) Retrieval practice strengthens memory and improves later accessibility more effectively than rereading
-C) The testing effect only applies to rote memorization, not meaningful learning of concepts
-D) Practice tests improve retention solely by increasing familiarity with the test format
+A) The child must be at least two years behind grade level
+B) The disability must adversely affect educational performance and the child requires special education services
+C) The child must have failed at least one grade
+D) The child must have an IQ below 85
 
 **Correct Answer:** B
 
@@ -1266,14 +1266,14 @@ D) Practice tests improve retention solely by increasing familiarity with the te
 
 ## Question 85
 
-**Domain 4** | **KN16** | **Scored**
+**Domain 5** | **KN27** | **Scored**
 
-A researcher examines inattentional blindness using the famous 'invisible gorilla' study where participants count basketball passes and often fail to notice a person in a gorilla suit walking through the scene. What does this phenomenon reveal about the relationship between attention and conscious perception?
+A school psychologist is part of an Individualized Education Program (IEP) team for a student with a learning disability. Under IDEA, services must be provided in which type of educational setting?
 
-A) All visual information in the environment automatically reaches conscious awareness
-B) Attention is necessary for conscious perception, and unattended stimuli often go unnoticed despite being visible
-C) Inattentional blindness occurs only for briefly presented stimuli, not sustained events
-D) Salient, unexpected stimuli always capture attention regardless of attentional load
+A) Always in a separate special education classroom
+B) In the least restrictive environment (LRE) appropriate for the child's needs, with preference for general education when possible with supports
+C) Only in self-contained classrooms for students with disabilities
+D) In whatever setting the school determines is most convenient
 
 **Correct Answer:** B
 
@@ -1281,14 +1281,14 @@ D) Salient, unexpected stimuli always capture attention regardless of attentiona
 
 ## Question 86
 
-**Domain 4** | **KN15** | **Scored**
+**Domain 5** | **KN27** | **Scored**
 
-A cognitive researcher investigates metacognition by examining the relationship between confidence judgments and actual memory performance. Participants study word pairs, make predictions about their future memory for each pair, and later complete a cued recall test. Results show moderate but imperfect correlations between predicted and actual performance. What does this suggest about metamemory accuracy?
+A parent requests that the school conduct an evaluation of their child for possible learning disabilities. Under IDEA, within what timeframe must the school respond to this request and, if appropriate, complete the evaluation?
 
-A) People have perfect insight into their own memory processes and can accurately predict future retrieval
-B) Metamemory judgments show some validity but are imperfect and subject to various biases
-C) Confidence judgments are completely unrelated to actual memory accuracy
-D) Metacognitive monitoring has no practical implications for learning or memory strategies
+A) There is no specific timeline required
+B) The school must respond within a reasonable time and complete evaluations within 60 days or according to state timelines
+C) The school has up to one year to complete an evaluation
+D) The school must complete the evaluation within one week
 
 **Correct Answer:** B
 
@@ -1296,29 +1296,29 @@ D) Metacognitive monitoring has no practical implications for learning or memory
 
 ## Question 87
 
-**Domain 4** | **KN17** | **Scored**
+**Domain 5** | **KN27** | **Scored**
 
-A researcher studies analogical reasoning by presenting participants with a problem and a structurally similar source analog that could help solve the target problem. Participants often fail to spontaneously notice the analogy, but when prompted to consider the source, they successfully apply it to solve the target. What does this demonstrate about knowledge transfer?
+A school psychologist is working with a teacher to implement a Response to Intervention (RTI) model for a student struggling with reading. The student has received increasingly intensive evidence-based interventions with progress monitoring, but shows insufficient response. What is the next appropriate step in the RTI process?
 
-A) Analogical transfer occurs automatically whenever relevant knowledge exists in memory
-B) Transfer requires noticing structural similarities between problems, which is often difficult without hints
-C) Surface features are irrelevant to analogical mapping and never affect transfer success
-D) Experts show no advantage over novices in spontaneous analogical transfer
+A) Retain the student in the same grade
+B) Continue the same intervention for a longer period
+C) Refer the student for a comprehensive evaluation for possible special education eligibility
+D) Remove all interventions to see if the student improves independently
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 88
 
-**Domain 4** | **KN15** | **Scored**
+**Domain 5** | **KN28** | **Scored**
 
-A cognitive neuroscientist examines patient H.M., who underwent bilateral medial temporal lobe resection for epilepsy and subsequently developed profound anterograde amnesia while maintaining intact working memory and remote memories. H.M. can learn new motor skills despite having no conscious memory of the learning episodes. What does this dissociation reveal about memory systems?
+A school psychologist is conducting a psychoeducational evaluation and must select appropriate assessment instruments. According to best practices in school psychology, test selection should primarily be based on which factors?
 
-A) Memory is a unitary system that is either completely intact or completely impaired
-B) Declarative and procedural memory rely on distinct neural systems that can be independently affected
-C) The medial temporal lobes are unnecessary for any form of new learning
-D) Working memory and long-term memory rely on identical neural substrates
+A) Which tests the psychologist is most familiar with administering
+B) The specific referral questions, the student's characteristics, and psychometric properties including validity and reliability
+C) Which tests can be completed most quickly
+D) Only tests that have been used previously with this student
 
 **Correct Answer:** B
 
@@ -1326,14 +1326,14 @@ D) Working memory and long-term memory rely on identical neural substrates
 
 ## Question 89
 
-**Domain 4** | **KN16** | **Scored**
+**Domain 5** | **KN29** | **Scored**
 
-A researcher investigates change blindness by showing participants photographs of scenes, briefly interrupting the display, and changing a significant detail. Many participants fail to detect the change even after multiple viewing cycles. According to theories of visual attention and perception, what does this phenomenon suggest about visual representation?
+A school-based intervention for a student with anxiety includes teaching relaxation techniques, cognitive restructuring of anxious thoughts, gradual exposure to anxiety-provoking situations (like class presentations), and collaboration with teachers to provide accommodations. This multi-component approach reflects which intervention model?
 
-A) Detailed visual representations of entire scenes are constructed and maintained in visual memory
-B) Visual representations are sparse and depend on attention; unattended changes often go undetected
-C) Change blindness occurs only with very subtle changes to peripheral or background elements
-D) All visible information is fully processed and encoded regardless of attention allocation
+A) Medical model requiring only medication management
+B) Cognitive-behavioral intervention adapted for school settings
+C) Purely psychodynamic approach
+D) Behavior modification using only reinforcement
 
 **Correct Answer:** B
 
@@ -1341,29 +1341,29 @@ D) All visible information is fully processed and encoded regardless of attentio
 
 ## Question 90
 
-**Domain 4** | **KN15** | **Scored**
+**Domain 5** | **KN29** | **Scored**
 
-A researcher examines the generation effect by having participants either read word pairs or generate the second word from a fragment (e.g., 'hot-c___' for 'hot-cold'). On a later memory test, participants show better retention for word pairs they generated compared to those they passively read. According to theories of levels of processing and transfer-appropriate processing, what mechanism explains this benefit?
+A school implements a school-wide positive behavior support (PBIS) system with three tiers: universal supports for all students (Tier 1), targeted interventions for at-risk students (Tier 2), and intensive individualized interventions for students with significant needs (Tier 3). This model reflects which approach to school-based intervention?
 
-A) Passive reading produces deeper semantic processing than active generation
-B) Generation requires elaborative processing that creates more distinctive and accessible memory traces
-C) The generation effect occurs only for meaningless materials, not meaningful word pairs
-D) Generated items are rehearsed more frequently, fully explaining the retention advantage
+A) Response to Intervention (RTI) framework applied to behavior
+B) Exclusionary discipline approach
+C) Psychodynamic treatment model
+D) Medical model of mental health
 
-**Correct Answer:** B
+**Correct Answer:** A
 
 ---
 
 ## Question 91
 
-**Domain 5** | **KN18** | **Scored**
+**Domain 5** | **KN29** | **Scored**
 
-A forensic psychologist is preparing to conduct a child custody evaluation for a family court case. The psychologist has a prior relationship with one parent, having provided individual therapy to that parent for anxiety two years ago. According to ethical guidelines and best practices in forensic psychology, how should the psychologist proceed with this evaluation request?
+A school psychologist is consulting with a teacher about implementing classroom-wide strategies to improve student behavior and engagement. Research on effective classroom management indicates that which approaches are most effective?
 
-A) Accept the evaluation since sufficient time has passed to eliminate any bias or conflict of interest
-B) Decline the evaluation due to multiple relationship concerns that could compromise objectivity and the therapeutic relationship
-C) Accept the evaluation but base conclusions primarily on the perspective of the parent they know best
-D) Accept the evaluation without disclosure since the prior therapeutic relationship has ended
+A) Relying primarily on punishment and consequences for misbehavior
+B) Clearly stated expectations, positive reinforcement of appropriate behavior, consistent routines, and active supervision
+C) Allowing students complete freedom to self-regulate without teacher intervention
+D) Using only reactive strategies after problems occur
 
 **Correct Answer:** B
 
@@ -1371,29 +1371,29 @@ D) Accept the evaluation without disclosure since the prior therapeutic relation
 
 ## Question 92
 
-**Domain 5** | **KN19** | **Scored**
+**Domain 5** | **KN29** | **Scored**
 
-A clinical psychologist in private practice learns that a former client has filed a licensing board complaint alleging that the psychologist disclosed confidential information without authorization. The psychologist believes the complaint is without merit and is certain that no unauthorized disclosure occurred. According to ethical guidelines, what is the most appropriate initial response to this complaint?
+A 9-year-old student has been experiencing bullying at school. The school psychologist designs an intervention that includes individual counseling for the student, training for teachers on recognizing and responding to bullying, education for all students about bullying, and consultation with parents. This intervention reflects which level of prevention?
 
-A) Ignore the complaint since the psychologist knows it is baseless and will be dismissed
-B) Respond cooperatively to the licensing board, disclosing only information relevant to the complaint as permitted by law
-C) Immediately contact the former client to persuade them to withdraw the complaint
-D) Refuse to provide any response or records based on confidentiality protections
+A) Primary prevention only, targeting all students
+B) Secondary prevention only, targeting at-risk students
+C) Tertiary prevention only, treating the affected individual
+D) Multiple levels including secondary and tertiary prevention with universal components
 
-**Correct Answer:** B
+**Correct Answer:** D
 
 ---
 
 ## Question 93
 
-**Domain 5** | **KN20** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A psychologist is conducting research on depression treatment outcomes and obtains informed consent from participants. During the study, the psychologist realizes that the assessment battery is causing significant distress to several participants, more than was anticipated during the consent process. According to ethical principles, how should the psychologist address this situation?
+A school psychologist conducts a functional behavioral assessment (FBA) that includes interviews, observations in multiple settings, and review of records. The data suggests that a student's disruptive behavior serves to escape difficult academic tasks. Based on this hypothesis, what would be an appropriate function-based intervention?
 
-A) Continue the study as planned since participants provided informed consent to all procedures
-B) Inform participants of the unanticipated effects, offer them the opportunity to withdraw, and consider modifying the protocol
-C) Remove distressed participants from the study without explanation to preserve data integrity
-D) Wait until the study is complete to inform participants about the greater-than-expected distress
+A) Sending the student to the principal's office when disruptive
+B) Teaching the student to request breaks or help appropriately, and providing additional academic support
+C) Ignoring all disruptive behaviors completely
+D) Moving the student to a less demanding classroom
 
 **Correct Answer:** B
 
@@ -1401,14 +1401,14 @@ D) Wait until the study is complete to inform participants about the greater-tha
 
 ## Question 94
 
-**Domain 5** | **KN21** | **Scored**
+**Domain 5** | **KN29** | **Scored**
 
-A psychologist provides therapy to a 16-year-old client whose parents are divorced and share joint legal custody. After several sessions, the mother calls requesting detailed information about the therapy content and her daughter's progress. The father has not been involved in treatment. According to ethical and legal guidelines regarding informed consent and confidentiality with minors, how should the psychologist respond?
+Research on evidence-based interventions for children with ADHD in school settings has found which approaches to be most effective?
 
-A) Provide the detailed information since the mother brought the child to treatment and is requesting it
-B) Clarify custody arrangements and decision-making authority, involve both legal guardians as appropriate, and balance the minor's privacy with parental rights
-C) Refuse to provide any information to either parent since the client is 16 and has full confidentiality rights
-D) Provide the information only if the adolescent explicitly consents to each disclosure
+A) Medication alone without behavioral interventions
+B) Behavioral interventions including contingency management, organizational skills training, and classroom accommodations, often combined with medication
+C) Psychodynamic play therapy
+D) Dietary interventions exclusively
 
 **Correct Answer:** B
 
@@ -1416,14 +1416,14 @@ D) Provide the information only if the adolescent explicitly consents to each di
 
 ## Question 95
 
-**Domain 5** | **KN22** | **Scored**
+**Domain 5** | **KN29** | **Field Test**
 
-A licensed psychologist who specializes in treating adult anxiety disorders is asked to provide therapy to a 7-year-old child with selective mutism. The psychologist has limited training and no experience treating childhood disorders. There are no other mental health providers within 100 miles of this rural community. According to ethical guidelines regarding competence, what is the most appropriate course of action?
+A school psychologist is part of a crisis response team following a student suicide. According to best practices in school crisis intervention, what should be a primary focus of the immediate response?
 
-A) Decline the case entirely since the psychologist lacks competence in pediatric treatment
-B) Accept the case, obtain appropriate supervision or consultation, pursue relevant training, and inform the family of the situation
-C) Accept the case and proceed using adult anxiety treatment techniques without modification
-D) Accept the case only if the family signs a waiver acknowledging the psychologist's limited pediatric experience
+A) Holding a large school assembly to discuss the details of the death
+B) Identifying and supporting students at heightened risk, providing accurate information, and making mental health services available
+C) Minimizing discussion of the event to avoid spreading distress
+D) Creating a memorial that might inadvertently glorify suicide
 
 **Correct Answer:** B
 
@@ -1431,14 +1431,14 @@ D) Accept the case only if the family signs a waiver acknowledging the psycholog
 
 ## Question 96
 
-**Domain 5** | **KN21** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A psychologist is subpoenaed to testify in a legal proceeding involving a current therapy client. The client has not waived confidentiality and expresses strong objection to the psychologist testifying. The psychologist believes that testimony would be harmful to the therapeutic relationship and to the client's well-being. What is the most ethically appropriate response?
+A psychologist conducting research on the effectiveness of a new therapy for depression recruits participants through community mental health centers. To ensure informed consent is truly voluntary and informed, the psychologist must provide potential participants with which information?
 
-A) Testify as required by the subpoena without further action since subpoenas mandate compliance
-B) Assert the privilege on behalf of the client, seek legal counsel, and request that the court resolve the privilege issue before providing testimony
-C) Refuse to appear in court and ignore the subpoena based on confidentiality obligations
-D) Testify but limit responses to information that seems least harmful to the client
+A) Only the potential benefits of participating
+B) The purpose, procedures, risks, benefits, alternatives, and their right to withdraw at any time without penalty
+C) Minimal information to avoid biasing their responses
+D) Only information required by the IRB
 
 **Correct Answer:** B
 
@@ -1446,44 +1446,44 @@ D) Testify but limit responses to information that seems least harmful to the cl
 
 ## Question 97
 
-**Domain 5** | **KN20** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A psychologist conducting a research study on memory uses a deception procedure where participants believe they are in a study about perception. The deception is necessary because knowing the true purpose would contaminate the results. According to ethical guidelines on deception in research, what must the psychologist ensure?
+A researcher is conducting a longitudinal study following children from age 5 to age 18 to examine the development of social skills. Several participants drop out of the study over time, and those who remain tend to be from higher socioeconomic backgrounds. This pattern represents which threat to validity?
 
-A) Deception can never be used in psychological research regardless of justification
-B) The deception is justified by significant prospective value, no non-deceptive alternative exists, deception is explained during debriefing, and participants can withdraw data
-C) Deception is acceptable as long as participants sign a general consent form agreeing to possible deception
-D) Debriefing is unnecessary if the deception was minor and participants were not harmed
+A) History effects
+B) Maturation effects
+C) Attrition or mortality bias
+D) Testing effects
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 98
 
-**Domain 5** | **KN23** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A psychologist in independent practice terminates therapy with a client due to the client's repeated non-payment for services despite multiple payment plans and discussions. The client requests to resume therapy and offers to pay all past-due amounts. According to ethical guidelines regarding termination and abandonment, what factors should the psychologist consider in making this decision?
+A research study randomly assigns participants with social anxiety to either cognitive-behavioral therapy, medication, or a waitlist control group. Outcomes are assessed using standardized measures at baseline and post-treatment. This research design is best described as:
 
-A) The psychologist must resume treatment since offering to pay eliminates any basis for termination
-B) The psychologist should consider the client's clinical needs, risk of harm from termination, availability of alternative providers, and likelihood of future payment issues
-C) The psychologist should refuse to resume treatment under any circumstances once termination has occurred
-D) Financial considerations are never appropriate in treatment decisions regardless of circumstances
+A) Quasi-experimental design
+B) Correlational design
+C) Randomized controlled trial (RCT)
+D) Single-subject design
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 99
 
-**Domain 5** | **KN19** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A psychologist is treating a client who mentions during a session that their neighbor is physically abusing their 10-year-old child. The client provides specific details about observable injuries and credible concerns. The psychologist has not personally observed the child or the alleged abuse. According to ethical and legal obligations regarding mandated reporting, how should the psychologist proceed?
+A researcher conducts a meta-analysis combining results from 50 studies examining the effectiveness of mindfulness-based interventions for anxiety. The analysis yields significant heterogeneity in effect sizes across studies. What should the researcher do to address this heterogeneity?
 
-A) Maintain complete confidentiality since the psychologist has no direct knowledge of abuse
-B) Report the suspected child abuse to appropriate authorities as required by mandated reporting laws, which generally require reporting based on reasonable suspicion
-C) Encourage the client to report the abuse but take no direct action to protect confidentiality
-D) Wait to gather more information before reporting to ensure the allegation is substantiated
+A) Ignore the heterogeneity and report only the overall effect size
+B) Conduct moderator analyses to examine whether study characteristics (e.g., type of intervention, population) explain the variability
+C) Exclude all studies that show different effect sizes
+D) Conclude that mindfulness is ineffective
 
 **Correct Answer:** B
 
@@ -1491,29 +1491,29 @@ D) Wait to gather more information before reporting to ensure the allegation is 
 
 ## Question 100
 
-**Domain 5** | **KN18** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A psychologist is asked to provide an expert opinion in a legal case but has not personally examined the individual who is the subject of the case. The retaining attorney wants the psychologist to review records and render an opinion about the individual's mental state. According to ethical guidelines in forensic psychology, under what conditions might the psychologist ethically provide such an opinion?
+A psychologist develops a new assessment tool and wants to establish its construct validity. The most comprehensive approach to demonstrating construct validity would include:
 
-A) The psychologist can never provide an opinion without personal examination under any circumstances
-B) The psychologist can provide an opinion if the records are adequate, the limitations of the opinion are clearly stated, and the situation reasonably prevents personal examination
-C) The psychologist can provide any opinion requested by the retaining attorney who is paying for services
-D) The psychologist can provide an opinion without disclosing that no personal examination occurred
+A) Showing that the test correlates with other measures of the same construct and does not correlate with measures of different constructs
+B) Demonstrating only that experts agree the test appears to measure the construct
+C) Showing only that the test predicts future behavior
+D) Proving that all items have high internal consistency
 
-**Correct Answer:** B
+**Correct Answer:** A
 
 ---
 
 ## Question 101
 
-**Domain 5** | **KN24** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A psychologist discovers that a colleague is engaging in behavior that appears to violate ethical standards by conducting therapy with multiple members of the same family in individual sessions without informed consent about the risks and potential conflicts. The psychologist is uncertain whether this constitutes an ethics violation. According to ethical guidelines, what is the most appropriate course of action?
+In a study examining the relationship between exercise and depression, researchers measure depression levels before and after a 12-week exercise intervention. They find a significant reduction in depression scores. However, the study has no control group. This design limits the ability to rule out which alternative explanations?
 
-A) Immediately file a formal ethics complaint without attempting informal resolution
-B) Approach the colleague directly to discuss concerns if appropriate, or consult with ethics committee or colleagues to determine whether a violation has occurred
-C) Ignore the situation since it does not directly affect the psychologist's own practice
-D) Report the colleague to the licensing board without first determining if an actual violation occurred
+A) There are no limitations to this design
+B) Maturation, history, regression to the mean, and placebo effects
+C) Only sampling bias
+D) Only measurement error
 
 **Correct Answer:** B
 
@@ -1521,14 +1521,14 @@ D) Report the colleague to the licensing board without first determining if an a
 
 ## Question 102
 
-**Domain 5** | **KN18** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A psychologist has been providing therapy to an adult client for six months. The client's romantic partner calls the psychologist requesting to schedule joint couples therapy sessions with the psychologist. The client is enthusiastic about this idea. According to ethical guidelines regarding multiple relationships, how should the psychologist respond?
+A researcher analyzing data from a therapy outcome study calculates statistical significance and finds p < .05. However, when examining the effect size (Cohen's d = 0.20), the researcher notes it is small. What is the most appropriate interpretation of these findings?
 
-A) Agree to provide couples therapy since the original client consents and requests this service
-B) Explain the potential risks of multiple relationships, discuss alternatives such as referral to another therapist for couples work, and carefully document the decision-making process
-C) Agree to couples therapy only if the romantic partner signs a waiver of potential conflicts of interest
-D) Provide couples therapy but maintain separate records to avoid confusion between the two professional relationships
+A) The results are statistically significant and therefore clinically meaningful
+B) The results are statistically significant but the small effect size suggests limited clinical significance
+C) The results are not meaningful because the effect size is small
+D) The p-value and effect size contradict each other, so the study is invalid
 
 **Correct Answer:** B
 
@@ -1536,14 +1536,14 @@ D) Provide couples therapy but maintain separate records to avoid confusion betw
 
 ## Question 103
 
-**Domain 5** | **KN25** | **Scored**
+**Domain 6** | **KN34** | **Scored**
 
-A psychologist is conducting a neuropsychological evaluation of an older adult client to assess for dementia. During the evaluation, the psychologist administers tests that were normed on younger adult populations and may not have appropriate norms for the client's age group. According to ethical principles regarding assessment, what should the psychologist do?
+A consulting psychologist is hired by a company to conduct team-building workshops aimed at improving communication and collaboration among employees. During the initial assessment, the psychologist should primarily focus on:
 
-A) Proceed with the assessment and interpret results using the available norms without noting limitations
-B) Acknowledge the limitations of the measures for this population, use age-appropriate norms when available, and note interpretive limitations in the report
-C) Refuse to conduct the assessment since perfectly normed instruments are unavailable
-D) Adjust scores using clinical judgment without documenting the basis for adjustments
+A) Implementing a predetermined workshop curriculum without assessment
+B) Conducting a needs assessment to understand the organization's specific goals, challenges, and culture
+C) Providing individual therapy to employees
+D) Making immediate recommendations without gathering data
 
 **Correct Answer:** B
 
@@ -1551,14 +1551,14 @@ D) Adjust scores using clinical judgment without documenting the basis for adjus
 
 ## Question 104
 
-**Domain 5** | **KN20** | **Field Test**
+**Domain 6** | **KN34** | **Scored**
 
-A psychology graduate student is conducting dissertation research under faculty supervision. The student discovers that several participant consent forms were not properly signed due to an administrative error, though participants did provide verbal consent. The faculty supervisor suggests not reporting this to the IRB to avoid delays. According to ethical research principles, how should the student respond?
+An organizational psychologist is asked to help a company improve employee selection procedures. According to principles of personnel psychology, the psychologist should develop selection criteria based primarily on:
 
-A) Follow the supervisor's advice since the supervisor has more experience and ultimate responsibility
-B) Report the consent documentation issue to the IRB regardless of the supervisor's suggestion, as researchers have independent ethical obligations
-C) Continue collecting data without reporting the issue since verbal consent was obtained
-D) Modify the consent forms retroactively to appear properly completed
+A) The personal preferences of hiring managers
+B) A thorough job analysis identifying the knowledge, skills, abilities, and other characteristics (KSAOs) required for successful job performance
+C) Whatever criteria competitors use
+D) Only educational credentials
 
 **Correct Answer:** B
 
@@ -1566,14 +1566,14 @@ D) Modify the consent forms retroactively to appear properly completed
 
 ## Question 105
 
-**Domain 5** | **KN19** | **Scored**
+**Domain 6** | **KN34** | **Scored**
 
-A psychologist maintains client records in both paper and electronic formats. The psychologist's office is burglarized and a laptop containing unencrypted client records is stolen. According to ethical and legal obligations regarding confidentiality and record security, what should the psychologist do?
+A consulting psychologist working with an organization notices that employee morale is low and turnover is high. Assessment reveals that employees feel they have little input into decisions, receive minimal feedback, and see limited opportunities for advancement. Based on organizational psychology principles, what should the psychologist recommend?
 
-A) Take no action if the psychologist believes the thief was only interested in the hardware, not the data
-B) Notify affected clients of the breach, report as required by applicable laws (e.g., HIPAA), assess and mitigate risks, and improve security measures
-C) Notify only those clients who specifically ask about their records' security
-D) File a police report but avoid notifying clients to prevent unnecessary worry
+A) Increased salary and benefits only
+B) Changes to organizational structure and culture to increase employee autonomy, feedback, and development opportunities
+C) Stricter disciplinary policies
+D) Reduced job expectations to lower stress
 
 **Correct Answer:** B
 
@@ -1581,14 +1581,14 @@ D) File a police report but avoid notifying clients to prevent unnecessary worry
 
 ## Question 106
 
-**Domain 5** | **KN18** | **Scored**
+**Domain 6** | **KN34** | **Scored**
 
-A psychologist is providing testimony as an expert witness in a personal injury case. During cross-examination, the opposing attorney asks questions designed to make the psychologist appear biased and questions that mischaracterize the psychologist's opinions. According to ethical guidelines for forensic practice, how should the psychologist respond?
+An I/O psychologist is conducting a training needs assessment for a company. The psychologist analyzes the tasks and competencies required for various jobs, identifies performance gaps, and assesses organizational goals. This systematic approach to training development is most consistent with which model?
 
-A) Become defensive and argumentative to protect professional credibility
-B) Remain objective and professional, clarify any mischaracterizations, and acknowledge the limits of expertise and opinions when appropriate
-C) Provide only yes/no answers without elaboration to limit exposure during cross-examination
-D) Modify opinions to appear less biased in response to the attorney's questioning
+A) Informal training based on manager observations
+B) Evidence-based training design using organizational, task, and person analysis
+C) One-size-fits-all training programs
+D) Training based solely on employee requests
 
 **Correct Answer:** B
 
@@ -1596,29 +1596,29 @@ D) Modify opinions to appear less biased in response to the attorney's questioni
 
 ## Question 107
 
-**Domain 5** | **KN22** | **Scored**
+**Domain 6** | **KN34** | **Scored**
 
-A psychologist working in a community mental health center is assigned a new client whose presenting problems fall outside the psychologist's area of expertise. The client has limited financial resources and no other mental health providers are available to accept the case. According to ethical principles regarding competence and client welfare, what should the psychologist do?
+A company asks a consulting psychologist to evaluate the effectiveness of a new leadership development program. Using Kirkpatrick's model of training evaluation, what would represent the highest level of evaluation?
 
-A) Decline the case completely since the psychologist lacks specific competence in the presenting problem
-B) Accept the case, obtain appropriate consultation and supervision, pursue relevant training, inform the client of the limitations, and document steps taken to ensure competent service
-C) Accept the case and proceed without consultation since the client has no alternative options
-D) Accept the case but refer after two sessions if no improvement occurs
+A) Assessing participant satisfaction with the training (reaction)
+B) Testing whether participants learned the material (learning)
+C) Observing whether participants apply skills on the job (behavior)
+D) Measuring organizational outcomes such as productivity, quality, or profitability (results)
 
-**Correct Answer:** B
+**Correct Answer:** D
 
 ---
 
 ## Question 108
 
-**Domain 5** | **KN26** | **Scored**
+**Domain 6** | **KN34** | **Scored**
 
-A psychologist who specializes in trauma treatment develops a new workshop for training other clinicians. The psychologist's marketing materials claim the workshop will enable participants to become 'experts in trauma treatment' after completing the two-day program. According to ethical principles regarding public statements and advertising, what concern does this raise?
+A consulting psychologist is working with a team experiencing significant conflict. The psychologist facilitates discussions to clarify roles, improve communication, establish shared goals, and develop conflict resolution processes. This intervention primarily targets which aspect of team functioning?
 
-A) The marketing materials are appropriate since the psychologist believes the workshop provides valuable training
-B) The marketing materials are potentially misleading as they overstate what can reasonably be achieved in a brief workshop, potentially misrepresenting the training's scope
-C) The marketing materials are acceptable as long as participants sign acknowledgments about workshop limitations
-D) No ethical concerns exist regarding marketing materials unless participants formally complain
+A) Individual psychopathology
+B) Team processes and dynamics affecting collaboration and effectiveness
+C) Technical skills training
+D) Office layout and workspace design
 
 **Correct Answer:** B
 
@@ -1626,14 +1626,14 @@ D) No ethical concerns exist regarding marketing materials unless participants f
 
 ## Question 109
 
-**Domain 5** | **KN19** | **Scored**
+**Domain 6** | **KN34** | **Field Test**
 
-A psychologist receives a written request from a former client for a complete copy of their treatment records. The psychologist believes that releasing certain parts of the record, such as process notes containing the psychologist's personal observations, could be misinterpreted by the client and potentially cause harm. According to ethical and legal guidelines regarding client access to records, how should the psychologist proceed?
+An organizational psychologist is designing a performance appraisal system for a company. To maximize fairness and effectiveness, the system should include which features?
 
-A) Release only those portions of the record the psychologist believes will not cause harm without explanation
-B) Consult relevant laws and institutional policies, consider providing a summary instead if appropriate, document reasons for any limitations, and discuss concerns with the client
-C) Refuse to release any records based on the psychologist's judgment that harm could result
-D) Release only formal test data and not psychotherapy notes under any circumstances
+A) Subjective ratings based on general impressions only
+B) Job-relevant criteria based on job analysis, multiple raters when possible, clear rating scales, and training for raters to reduce bias
+C) Focus only on personality traits rather than job performance
+D) Annual evaluations with no ongoing feedback
 
 **Correct Answer:** B
 
@@ -1641,14 +1641,14 @@ D) Release only formal test data and not psychotherapy notes under any circumsta
 
 ## Question 110
 
-**Domain 5** | **KN23** | **Scored**
+**Domain 6** | **KN34** | **Scored**
 
-A psychologist is treating a client with severe depression who expresses passive suicidal ideation but denies any intent or plan. Over subsequent sessions, the client's depression worsens and suicidal thoughts become more frequent and specific, though the client continues to deny intent. According to risk management and ethical principles regarding client welfare, what should the psychologist do?
+Research on workplace diversity and inclusion has found that organizations with inclusive cultures and diverse teams often show which outcomes?
 
-A) Continue outpatient therapy without additional interventions since the client denies suicidal intent
-B) Conduct thorough risk assessment, consult as appropriate, consider increasing treatment intensity or level of care, document assessment and decisions, and potentially implement safety planning or hospitalization
-C) Terminate treatment since the client is too high risk for outpatient therapy
-D) Maintain the current treatment plan but have the client sign a contract promising not to attempt suicide
+A) Decreased performance due to increased conflict
+B) Enhanced creativity, problem-solving, and organizational performance when diversity is well-managed
+C) No difference in performance compared to homogeneous teams
+D) Reduced employee satisfaction across all groups
 
 **Correct Answer:** B
 
@@ -1656,14 +1656,14 @@ D) Maintain the current treatment plan but have the client sign a contract promi
 
 ## Question 111
 
-**Domain 5** | **KN18** | **Scored**
+**Domain 6** | **KN34** | **Scored**
 
-A psychologist is conducting court-ordered evaluation of a defendant's competency to stand trial. During the evaluation, the defendant makes statements that could be self-incriminating. The psychologist did not clearly explain the limits of confidentiality at the beginning of the evaluation. According to ethical guidelines in forensic psychology, what error has the psychologist made?
+A consulting psychologist is asked to help an organization implement a major change initiative. According to research on organizational change, what factors are most critical for successful change implementation?
 
-A) No error has occurred since court-ordered evaluations have no confidentiality protections
-B) The psychologist failed to adequately inform the defendant about the nature of the evaluation and limits of confidentiality, which is required before beginning the evaluation
-C) The psychologist should have obtained informed consent for treatment before beginning the evaluation
-D) The error can be corrected by providing the required notifications after the evaluation is complete
+A) Imposing change quickly without employee input to avoid resistance
+B) Clear communication about the change, employee involvement, leadership support, and addressing concerns about the transition
+C) Changing everything at once without planning
+D) Keeping the change secret until implementation
 
 **Correct Answer:** B
 
@@ -1671,14 +1671,14 @@ D) The error can be corrected by providing the required notifications after the 
 
 ## Question 112
 
-**Domain 5** | **KN20** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A researcher is analyzing data from a completed study and discovers that results differ significantly depending on whether certain outlier data points are included or excluded. The results with outliers excluded support the researcher's hypothesis, while the complete dataset does not. According to ethical principles in research, how should the researcher proceed?
+A forensic psychologist is conducting a competency to stand trial evaluation for a defendant with schizophrenia. The evaluation should primarily assess which abilities?
 
-A) Report only the analysis that supports the hypothesis since outliers often represent error
-B) Report results of both analyses, provide clear rationale for any data exclusions, and transparently describe how analysis decisions affect conclusions
-C) Exclude the outliers without reporting the alternative analysis to avoid confusion
-D) Choose the analysis approach based on which result is most publishable
+A) Whether the defendant committed the crime
+B) The defendant's understanding of court proceedings and ability to consult with counsel and assist in their own defense
+C) The defendant's mental state at the time of the offense
+D) Whether the defendant deserves punishment
 
 **Correct Answer:** B
 
@@ -1686,14 +1686,14 @@ D) Choose the analysis approach based on which result is most publishable
 
 ## Question 113
 
-**Domain 5** | **KN18** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A psychologist is treating a client who is involved in ongoing litigation related to the issues being addressed in therapy. The client's attorney requests that the psychologist write a letter supporting the client's legal position. According to ethical guidelines regarding multiple relationships and role conflicts, how should the psychologist respond?
+A psychologist is asked to conduct an evaluation of a defendant's mental state at the time of an offense (insanity evaluation). Unlike competency evaluations, this assessment requires the psychologist to:
 
-A) Write the requested letter since supporting the client's interests is the psychologist's primary obligation
-B) Explain the potential role conflict between serving as treating therapist and as forensic evaluator, discuss implications for the therapy and the legal matter, and consider suggesting an independent evaluation
-C) Write the letter but charge the client's attorney rather than the client for this service
-D) Write the letter only if it will help the client's case and avoid mentioning any contradictory information
+A) Assess the defendant's current mental status only
+B) Provide a retrospective reconstruction of the defendant's mental state at the time of the alleged crime
+C) Determine the defendant's guilt or innocence
+D) Make treatment recommendations for current symptoms
 
 **Correct Answer:** B
 
@@ -1701,14 +1701,14 @@ D) Write the letter only if it will help the client's case and avoid mentioning 
 
 ## Question 114
 
-**Domain 5** | **KN24** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A psychologist discovers that a recently published article contains data that were fabricated by a colleague who was a co-author. The psychologist had reviewed the manuscript before submission but had not examined the raw data. According to ethical obligations regarding research integrity, what should the discovering psychologist do?
+A forensic psychologist is conducting a child custody evaluation. According to specialty guidelines, the psychologist's recommendations should be based primarily on:
 
-A) Take no action since the psychologist was not responsible for data collection and did not know about the fabrication
-B) Address the issue with the colleague who fabricated data, report to appropriate authorities (e.g., institution, journal), and seek correction or retraction of the article
-C) Quietly remove their name from the publication without notifying others
-D) Wait to see if others discover the fabrication before taking action
+A) Which parent is wealthier or more educated
+B) The best interests of the child, considering factors such as parent-child relationships, parenting capacity, and the child's needs and preferences when age-appropriate
+C) Which parent requested the evaluation
+D) Solely on the child's stated preference regardless of age
 
 **Correct Answer:** B
 
@@ -1716,14 +1716,14 @@ D) Wait to see if others discover the fabrication before taking action
 
 ## Question 115
 
-**Domain 5** | **KN18** | **Scored**
+**Domain 6** | **KN36** | **Scored**
 
-A psychologist is hired to conduct a fitness-for-duty evaluation of an employee at the request of the employer. The employee is confused about the psychologist's role and appears to believe the evaluation is confidential treatment. According to ethical principles, what should the psychologist do before beginning the evaluation?
+A forensic psychologist provides expert testimony in court regarding the results of a psychological evaluation. The psychologist's primary ethical obligation in this role is to:
 
-A) Begin the evaluation without clarification to obtain the most candid information from the employee
-B) Clarify the nature of the evaluation, explain who the client is (the employer), describe how information will be used, and ensure the employee understands the limits of confidentiality before proceeding
-C) Provide clarification only if the employee specifically asks about confidentiality
-D) Obtain a signed waiver from the employer authorizing the psychologist to proceed without employee notification
+A) Advocate for the side that retained them
+B) Present findings objectively and impartially, acknowledging limitations and alternative interpretations
+C) Provide testimony that supports the attorney's case
+D) Make the ultimate legal determination for the judge or jury
 
 **Correct Answer:** B
 
@@ -1731,14 +1731,14 @@ D) Obtain a signed waiver from the employer authorizing the psychologist to proc
 
 ## Question 116
 
-**Domain 5** | **KN27** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A psychologist provides therapy services and charges fees based on a sliding scale according to client income. One long-term client has recently experienced a significant increase in income but asks to continue paying the reduced fee, claiming that full fees would still create financial hardship. According to ethical principles regarding fees and financial arrangements, how should the psychologist address this situation?
+A psychologist is conducting a violence risk assessment for use in a legal proceeding. Best practices in forensic psychology indicate that the assessment should include:
 
-A) Continue the reduced fee indefinitely since the client has been in treatment for a long time
-B) Discuss the fee structure and the client's changed circumstances, potentially adjusting the fee based on clear criteria while considering clinical and financial factors, and document the decision
-C) Immediately raise the fee to the full amount regardless of the client's expressed concerns
-D) Continue the reduced fee but decrease the frequency of sessions to compensate
+A) Only a clinical interview with the individual
+B) Use of validated risk assessment instruments, review of collateral information, and consideration of static and dynamic risk factors
+C) Sole reliance on actuarial tools without clinical judgment
+D) Only the psychologist's subjective impression
 
 **Correct Answer:** B
 
@@ -1746,14 +1746,14 @@ D) Continue the reduced fee but decrease the frequency of sessions to compensate
 
 ## Question 117
 
-**Domain 5** | **KN28** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A psychologist is supervising a doctoral student who is providing therapy to clients at a training clinic. The supervisor learns that the student failed to document a critical session in which a client discussed suicidal ideation. When questioned, the student explains they were overwhelmed with paperwork and planned to complete the note later. According to ethical obligations in supervision, how should the supervisor respond?
+A forensic psychologist conducts an evaluation for a personal injury case where the plaintiff claims psychological damages from an accident. The psychologist must differentiate between pre-existing conditions and injury-related symptoms. This assessment primarily requires:
 
-A) Accept the student's explanation since the note will eventually be completed
-B) Address the documentation failure directly, review requirements for timely and accurate documentation especially regarding risk issues, ensure appropriate follow-up with the client, and provide additional training or oversight as needed
-C) Ignore the issue since students are still learning and errors are expected
-D) Report the student to the licensing board immediately without providing corrective feedback
+A) Accepting the plaintiff's self-report without verification
+B) Comprehensive evaluation including clinical interview, psychological testing, review of medical and psychological records, and consideration of pre-injury functioning
+C) Focus only on current symptoms without considering history
+D) Determination based solely on one psychological test
 
 **Correct Answer:** B
 
@@ -1761,14 +1761,14 @@ D) Report the student to the licensing board immediately without providing corre
 
 ## Question 118
 
-**Domain 5** | **KN22** | **Scored**
+**Domain 6** | **KN36** | **Scored**
 
-A psychologist who specializes in anxiety disorders is asked to conduct a neuropsychological evaluation for a client with suspected traumatic brain injury. The psychologist has taken one graduate course in neuropsychological assessment but has no specialized training or supervised experience in this area. No neuropsychologists are available in the community. According to competence standards, what should the psychologist do?
+In forensic psychology, the concept of 'ultimate issue testimony' refers to psychologists testifying about:
 
-A) Conduct the neuropsychological evaluation since the psychologist has some relevant training
-B) Decline the evaluation and assist the client in accessing a qualified neuropsychologist through telehealth or travel if needed, as neuropsychological assessment requires specialized competence
-C) Conduct the evaluation but label it as a screening rather than a comprehensive assessment
-D) Conduct the evaluation and supervise oneself by reading relevant literature before and during the evaluation
+A) Psychological test results and their interpretation
+B) The legal question that is for the trier of fact to decide, such as whether a defendant is 'guilty' or 'insane'
+C) Clinical diagnoses based on DSM criteria
+D) Behavioral observations during evaluation
 
 **Correct Answer:** B
 
@@ -1776,14 +1776,14 @@ D) Conduct the evaluation and supervise oneself by reading relevant literature b
 
 ## Question 119
 
-**Domain 5** | **KN26** | **Scored**
+**Domain 6** | **KN36** | **Scored**
 
-A psychologist maintains a professional website that includes testimonials from former clients describing their positive experiences in treatment. The testimonials include clients' full names and photographs with their permission. According to ethical guidelines regarding advertising and public statements, what ethical issue does this raise?
+A psychologist is subpoenaed to testify in court about their treatment of a client in a civil case. The client does not want the psychologist to testify. What should the psychologist do?
 
-A) No ethical issues exist since the clients provided permission for their testimonials to be used
-B) Using client testimonials is problematic due to the potential for exploitation based on the power differential and client vulnerability, even with consent
-C) Testimonials are acceptable as long as they accurately describe the clients' experiences
-D) The only ethical requirement is that testimonials not be fabricated or misleading
+A) Testify fully about all aspects of treatment since they have been subpoenaed
+B) Discuss the situation with the client, attempt to resolve the issue, and potentially assert privilege on the client's behalf unless the client waives privilege or a court orders disclosure
+C) Refuse to testify under any circumstances
+D) Testify but only about general treatment approaches without specifics
 
 **Correct Answer:** B
 
@@ -1791,14 +1791,14 @@ D) The only ethical requirement is that testimonials not be fabricated or mislea
 
 ## Question 120
 
-**Domain 5** | **KN20** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A researcher conducts a study examining the effectiveness of a new therapy approach for depression. The researcher has a financial interest in the therapy's success, having developed proprietary training materials. The study shows positive results. According to ethical principles regarding conflicts of interest and research integrity, what should the researcher do?
+Research on eyewitness testimony has consistently found that which factors can significantly impact the accuracy of eyewitness identifications?
 
-A) Publish the results without mentioning the financial interest since the data speak for themselves
-B) Disclose the financial conflict of interest in any presentations or publications of the research, as such conflicts can potentially bias research and must be transparent
-C) Avoid publishing the results to prevent any appearance of impropriety
-D) Disclose the conflict only if specifically asked about financial interests
+A) Eyewitness testimony is always highly accurate
+B) Stress during the event, weapon focus, cross-racial identification, and suggestive identification procedures can reduce accuracy
+C) Only the amount of time the witness observed the perpetrator matters
+D) Confidence of the witness always correlates perfectly with accuracy
 
 **Correct Answer:** B
 
@@ -1806,14 +1806,14 @@ D) Disclose the conflict only if specifically asked about financial interests
 
 ## Question 121
 
-**Domain 5** | **KN23** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A psychologist receives a phone call from an individual claiming to be a former client who is now living in another state. The caller requests that the psychologist provide a brief consultation by phone regarding a current life stressor. The psychologist provided services to this individual over three years ago and has not maintained contact. According to ethical principles regarding termination and scope of practice, how should the psychologist respond?
+A forensic psychologist conducts a parental fitness evaluation for a dependency court case where a child has been removed from parental care. The evaluation should primarily assess:
 
-A) Provide the requested telephone consultation since a previous therapeutic relationship existed
-B) Explain that resuming services would require reestablishing the professional relationship with appropriate informed consent, and consider whether telephone services across state lines raise jurisdictional issues
-C) Provide the consultation but do not document it since it is brief and informal
-D) Refuse to speak with the caller under any circumstances since termination occurred three years ago
+A) Whether the parent is likeable
+B) The parent's capacity to meet the child's needs, risk factors, protective factors, and potential for change with services
+C) The parent's intelligence level only
+D) Whether the parent was abused as a child
 
 **Correct Answer:** B
 
@@ -1821,14 +1821,14 @@ D) Refuse to speak with the caller under any circumstances since termination occ
 
 ## Question 122
 
-**Domain 5** | **KN25** | **Scored**
+**Domain 6** | **KN36** | **Scored**
 
-A psychologist conducts psychological testing with a client from a cultural background for which the test norms may not be appropriate. The test manual does not include information about the test's validity or appropriate use with this cultural group. According to ethical principles regarding assessment, what should the psychologist do?
+In the context of expert testimony, the Daubert standard (or similar standards like Frye) requires that scientific evidence and expert testimony be:
 
-A) Proceed with the assessment and interpret results using the standard norms without noting limitations
-B) Note the limitations in applying the test to this cultural group, interpret results cautiously with appropriate caveats, consider supplementing with culturally appropriate measures, and document these considerations
-C) Refuse to conduct any assessment since perfectly culturally-matched instruments are unavailable
-D) Apply the test but adjust scores based on the psychologist's assumptions about cultural differences
+A) Based solely on the expert's experience without scientific foundation
+B) Relevant and based on scientifically reliable methods that have been tested, peer-reviewed, and generally accepted
+C) Whatever the attorney requests
+D) Based only on the expert's credentials
 
 **Correct Answer:** B
 
@@ -1836,14 +1836,14 @@ D) Apply the test but adjust scores based on the psychologist's assumptions abou
 
 ## Question 123
 
-**Domain 5** | **KN21** | **Scored**
+**Domain 6** | **KN35** | **Scored**
 
-A psychologist is treating an adult client who reveals during a session that they are planning to harm a specific individual who is identifiable. The threat appears credible and imminent. The client refuses to agree to any safety measures and demands that the psychologist maintain confidentiality. According to the Tarasoff duty and related ethical principles, what must the psychologist do?
+A forensic psychologist is evaluating a juvenile for transfer to adult court (waiver hearing). The evaluation should focus on which factors relevant to the legal question?
 
-A) Maintain absolute confidentiality as the client requests, regardless of the threat
-B) Take reasonable steps to protect the potential victim, which may include warning the intended victim and/or notifying law enforcement, while attempting to minimize the breach of confidentiality
-C) Hospitalize the client involuntarily without warning the intended victim
-D) Continue therapy and document the threat but take no action to warn or protect
+A) Only the severity of the alleged offense
+B) The juvenile's amenability to treatment, risk of reoffending, maturity, and sophistication, among other factors
+C) Whether the juvenile's parents are cooperative
+D) The juvenile's academic performance only
 
 **Correct Answer:** B
 
@@ -1851,14 +1851,14 @@ D) Continue therapy and document the threat but take no action to warn or protec
 
 ## Question 124
 
-**Domain 5** | **KN20** | **Scored**
+**Domain 6** | **KN37** | **Scored**
 
-A psychologist publishes a research article based on data collected several years ago. After publication, the psychologist discovers a significant data entry error that affects the study's conclusions. The error does not support the published findings. According to ethical obligations regarding research integrity, what should the psychologist do?
+A psychologist working in a police department is asked to conduct a fitness-for-duty evaluation of an officer who has been exhibiting concerning behavior. The primary purpose of this evaluation is to:
 
-A) Take no action since the article has already been published and the error was unintentional
-B) Notify the journal of the error, take steps to correct the published record through a correction or retraction, and inform any parties who may have relied on the erroneous findings
-C) Only correct the error in future publications without addressing the published article
-D) Wait to see if others discover the error before taking action to correct it
+A) Provide therapy to the officer
+B) Determine whether the officer can safely and effectively perform essential job functions
+C) Punish the officer for misconduct
+D) Make employment termination decisions
 
 **Correct Answer:** B
 
@@ -1866,14 +1866,14 @@ D) Wait to see if others discover the error before taking action to correct it
 
 ## Question 125
 
-**Domain 5** | **KN28** | **Scored**
+**Domain 6** | **KN37** | **Scored**
 
-A psychologist provides supervision to a provisionally licensed psychologist who is working toward full licensure. The supervisor learns that the supervisee has made a significant error in clinical judgment that did not result in harm but could have. According to ethical obligations in supervision, how should the supervisor address this situation?
+A psychologist is providing pre-employment screening for a police department, which includes psychological testing and interviews to assess candidates' suitability for law enforcement work. According to professional guidelines, this screening should assess:
 
-A) Ignore the error since no harm occurred and the supervisee is still learning
-B) Use the error as a learning opportunity, provide corrective feedback and additional training, monitor the supervisee's work more closely in the relevant area, and document the supervision provided
-C) Report the supervisee to the licensing board immediately without providing additional training
-D) End the supervision relationship to avoid any liability associated with the supervisee's errors
+A) Only the candidate's physical fitness
+B) Psychological stability, integrity, decision-making ability, stress tolerance, and other characteristics relevant to law enforcement
+C) The candidate's political beliefs
+D) Only the candidate's academic credentials
 
 **Correct Answer:** B
 
@@ -1881,14 +1881,14 @@ D) End the supervision relationship to avoid any liability associated with the s
 
 ## Question 126
 
-**Domain 5** | **KN19** | **Scored**
+**Domain 6** | **KN37** | **Scored**
 
-A psychologist receives an insurance company's request for treatment records to justify continued authorization for services. The psychologist believes that releasing certain information in the records, while relevant to treatment, is not necessary for the insurance company's utilization review and could potentially be used to deny coverage. According to ethical principles regarding confidentiality, what should the psychologist do?
+A psychologist embedded with a police department provides consultation on crisis negotiation with a barricaded subject threatening suicide. The psychologist's role in this situation primarily involves:
 
-A) Release all records as requested since the client signed an authorization form for insurance purposes
-B) Discuss with the client what will be released, provide only information necessary to meet the request, document what is released and why, and consider implications for treatment
-C) Refuse to release any records to protect client privacy
-D) Provide only information that supports continued authorization without mentioning potential complications
+A) Taking over the negotiation entirely
+B) Providing expertise on mental health, crisis intervention, and communication strategies to support law enforcement decision-making
+C) Making all tactical decisions
+D) Diagnosing the subject's mental disorder during the crisis
 
 **Correct Answer:** B
 
@@ -1896,14 +1896,14 @@ D) Provide only information that supports continued authorization without mentio
 
 ## Question 127
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 6** | **KN37** | **Field Test**
 
-A health psychologist is implementing a cognitive-behavioral therapy (CBT) intervention for chronic pain management in a multidisciplinary pain clinic. A 52-year-old patient with fibromyalgia has catastrophic thinking patterns about pain, avoids physical activity due to fear of pain exacerbation, and has gradually reduced all social activities. Which evidence-based component of CBT for chronic pain would be most critical to address first in this case?
+Research on police stress and officer well-being has identified which factors as significant sources of occupational stress for law enforcement personnel?
 
-A) Implementing an aggressive physical exercise program to immediately recondition the patient
-B) Cognitive restructuring of pain catastrophizing and education about the gate control theory and pain-behavior relationships
-C) Prescribing opioid medications to reduce pain before attempting behavioral interventions
-D) Scheduling intensive social activities to immediately reverse the patient's social withdrawal
+A) Only physical danger encountered on the job
+B) Organizational stressors (bureaucracy, shift work), operational stressors (critical incidents), and external stressors (public scrutiny, court appearances)
+C) Police work involves no unique stressors
+D) Only stressors related to use of force incidents
 
 **Correct Answer:** B
 
@@ -1911,14 +1911,14 @@ D) Scheduling intensive social activities to immediately reverse the patient's s
 
 ## Question 128
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 6** | **KN37** | **Scored**
 
-A clinical psychologist is conducting an intake assessment of a 28-year-old patient presenting with panic attacks, avoidance of situations where escape might be difficult, and significant functional impairment. The patient reports the first panic attack occurred six months ago in a crowded shopping mall and has since developed extensive avoidance behaviors. According to evidence-based practice for panic disorder with agoraphobia, what would be the most appropriate treatment approach?
+A psychologist provides training to law enforcement officers on interacting with individuals experiencing mental health crises. This training, often called Crisis Intervention Team (CIT) training, typically includes:
 
-A) Long-term psychodynamic psychotherapy focusing on unconscious conflicts underlying the anxiety
-B) Cognitive-behavioral therapy incorporating interoceptive exposure, cognitive restructuring, and graduated in vivo exposure to feared situations
-C) Supportive therapy with reassurance and encouragement to face fears without structured exposure
-D) Hypnosis to access and resolve the traumatic memory that triggered the first panic attack
+A) Training officers to provide psychotherapy
+B) Education on mental illness, de-escalation techniques, communication strategies, and community resources
+C) Teaching officers to diagnose mental disorders
+D) Instruction only on use of force with mentally ill individuals
 
 **Correct Answer:** B
 
@@ -1926,29 +1926,29 @@ D) Hypnosis to access and resolve the traumatic memory that triggered the first 
 
 ## Question 129
 
-**Domain 6** | **KN30** | **Scored**
+**Domain 6** | **KN38** | **Scored**
 
-A school psychologist is working with a 9-year-old child diagnosed with ADHD who displays significant behavioral problems in the classroom, including difficulty staying seated, frequent interruptions, and incomplete assignments. The teacher reports that the child's behavior disrupts the entire class. According to evidence-based interventions for ADHD in school settings, which combination of approaches would be most effective?
+A correctional psychologist working in a prison is asked to evaluate an inmate who has been exhibiting bizarre behavior. In the correctional context, the psychologist must balance which potentially competing obligations?
 
-A) Behavioral classroom interventions with contingency management, daily report cards, teacher consultation, and consideration of medication evaluation
-B) Removing the child from the regular classroom for most of the day to reduce disruption
-C) Requiring the child to complete all work during recess as punishment for incomplete assignments
-D) Implementing dietary restrictions eliminating all sugar and food additives without other interventions
+A) The psychologist has no ethical obligations in a correctional setting
+B) Obligations to the individual inmate's welfare and to institutional security, while maintaining professional ethics
+C) Complete loyalty to the institution with no consideration of the inmate
+D) Obligations only to the inmate with no consideration of security
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 130
 
-**Domain 6** | **KN31** | **Scored**
+**Domain 6** | **KN38** | **Scored**
 
-A neuropsychologist is assessing a 68-year-old patient who presents with memory complaints, word-finding difficulties, and reports from family members of personality changes including increased irritability and apathy over the past year. The patient performed significantly below expectations on tests of episodic memory, confrontation naming, and executive function. What is the most appropriate next step in the evaluation and management of this patient?
+A psychologist working in a correctional facility provides mental health treatment to inmates. Regarding confidentiality in this setting, the psychologist should:
 
-A) Reassure the patient that all cognitive changes are normal aging and no intervention is needed
-B) Recommend comprehensive medical evaluation to identify potentially reversible causes, consider neurodegenerative conditions, and plan appropriate follow-up and interventions
-C) Immediately diagnose Alzheimer's disease and recommend nursing home placement
-D) Attribute all symptoms to depression without further evaluation and recommend antidepressant medication
+A) Maintain absolute confidentiality with no exceptions
+B) Inform inmates of the limits of confidentiality, which may include reporting certain information related to institutional security or safety
+C) Report all information from therapy sessions to correctional staff
+D) Never document any treatment notes
 
 **Correct Answer:** B
 
@@ -1956,14 +1956,14 @@ D) Attribute all symptoms to depression without further evaluation and recommend
 
 ## Question 131
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 6** | **KN38** | **Scored**
 
-A clinical psychologist is treating a 35-year-old patient with major depressive disorder who has not responded adequately to two different SSRI medications tried sequentially for 8-10 weeks each at therapeutic doses. The patient continues to experience depressed mood, anhedonia, sleep disturbance, and has missed significant work due to the depression. According to evidence-based treatment guidelines for treatment-resistant depression, what would be the most appropriate clinical recommendation?
+Research on effective correctional interventions has found that programs based on which principles are most successful in reducing recidivism?
 
-A) Continue the current medication indefinitely since medication must be tried for at least one year before determining effectiveness
-B) Consider alternative medication strategies (e.g., different medication class, augmentation), adding evidence-based psychotherapy if not already implemented, and possibly psychiatric consultation
-C) Discontinue all treatment since the patient has not responded to medication
-D) Recommend only supportive counseling without any medication changes
+A) Punishment-only approaches with no treatment
+B) The Risk-Need-Responsivity (RNR) model targeting criminogenic needs with appropriate intensity based on risk level
+C) Providing all offenders with identical programming regardless of their characteristics
+D) Focusing only on self-esteem enhancement
 
 **Correct Answer:** B
 
@@ -1971,14 +1971,14 @@ D) Recommend only supportive counseling without any medication changes
 
 ## Question 132
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 6** | **KN38** | **Scored**
 
-A psychologist is conducting cognitive-behavioral therapy for a 42-year-old patient with obsessive-compulsive disorder characterized by contamination fears and excessive hand-washing rituals that consume 4-5 hours daily. The patient has insight into the irrationality of the fears but feels unable to resist the compulsions. What is the most critical component of evidence-based treatment for this presentation?
+A correctional psychologist is conducting a risk assessment for an inmate being considered for parole. The assessment should include evaluation of which factors?
 
-A) Cognitive therapy alone to change irrational beliefs without any behavioral components
-B) Exposure and response prevention (ERP) involving graduated exposure to contamination triggers while preventing washing rituals
-C) Psychodynamic exploration of childhood experiences that led to contamination concerns
-D) Relaxation training to reduce anxiety without exposure to feared contaminants
+A) Only the severity of the original offense
+B) Static risk factors (criminal history), dynamic risk factors (antisocial attitudes, substance abuse), and protective factors
+C) Only the inmate's institutional behavior
+D) The psychologist's intuition alone
 
 **Correct Answer:** B
 
@@ -1986,14 +1986,14 @@ D) Relaxation training to reduce anxiety without exposure to feared contaminants
 
 ## Question 133
 
-**Domain 6** | **KN31** | **Scored**
+**Domain 6** | **KN38** | **Scored**
 
-A clinical psychologist is assessing a 19-year-old college student who presents with a six-month history of unusual beliefs that classmates are monitoring him, hearing voices commenting on his actions, social withdrawal, decline in academic performance, and diminished self-care. The patient has no history of substance use and medical workup was negative. According to diagnostic criteria and evidence-based practice, what is the most appropriate initial clinical approach?
+A psychologist working in a correctional setting with individuals with serious mental illness faces the challenge of providing appropriate mental health care within institutional constraints. Best practices in correctional mental health include:
 
-A) Dismiss the symptoms as typical college adjustment stress requiring no intervention
-B) Conduct a comprehensive diagnostic assessment for possible psychotic disorder, refer for psychiatric evaluation for medication consideration, and begin coordinated treatment planning
-C) Immediately diagnose schizophrenia and recommend long-term institutionalization
-D) Attribute all symptoms to depression and begin antidepressant medication only
+A) Withholding mental health treatment as a disciplinary measure
+B) Providing clinically appropriate assessment, treatment, and medication management consistent with community standards of care
+C) Using only seclusion and restraint for behavior management
+D) Refusing to treat inmates with mental illness
 
 **Correct Answer:** B
 
@@ -2001,14 +2001,14 @@ D) Attribute all symptoms to depression and begin antidepressant medication only
 
 ## Question 134
 
-**Domain 6** | **KN29** | **Field Test**
+**Domain 6** | **KN39** | **Scored**
 
-A psychologist working with a 15-year-old patient with anorexia nervosa notes that the patient's BMI has dropped to 15.5 kg/m², the patient is medically unstable with abnormal vital signs, denies having a problem, and continues to restrict food intake severely despite outpatient treatment. According to treatment guidelines for eating disorders, what level of care is most appropriate at this point?
+A military psychologist is providing support to service members following their deployment to a combat zone. Many are experiencing symptoms of PTSD, depression, and adjustment difficulties. The psychologist's role includes:
 
-A) Continue with outpatient therapy since the patient is still attending sessions regularly
-B) Recommend higher level of care such as hospitalization or residential treatment due to medical instability and inadequate response to outpatient treatment
-C) Reduce the frequency of sessions since treatment is not working anyway
-D) Focus exclusively on family therapy without addressing the medical complications
+A) Determining medical fitness for duty only
+B) Providing evidence-based assessment and treatment, facilitating reintegration, and addressing military-specific stressors
+C) Making all command decisions about military assignments
+D) Focusing only on disciplinary issues
 
 **Correct Answer:** B
 
@@ -2016,14 +2016,14 @@ D) Focus exclusively on family therapy without addressing the medical complicati
 
 ## Question 135
 
-**Domain 6** | **KN31** | **Scored**
+**Domain 6** | **KN39** | **Scored**
 
-A neuropsychologist is evaluating a 45-year-old patient who sustained a traumatic brain injury in a motor vehicle accident three months ago. The patient demonstrates impaired executive functioning including poor planning, impulsivity, and difficulty with complex problem-solving, but has intact memory and language. What evidence-based recommendations would be most appropriate for cognitive rehabilitation?
+Research on military psychology and combat stress has found that which factors serve as protective factors against the development of PTSD and other combat-related mental health problems?
 
-A) Recommend that the patient avoid all cognitively demanding activities permanently
-B) Implement compensatory strategies training, environmental modifications, and systematic practice of executive function skills with gradual return to activities
-C) Provide reassurance that all cognitive functions will return to baseline without intervention
-D) Focus exclusively on computer-based brain training games without functional application
+A) Only pre-deployment mental health status matters
+B) Unit cohesion, social support, effective leadership, resilience skills, and access to mental health services
+C) Combat exposure has no relationship to mental health outcomes
+D) Individual characteristics are irrelevant
 
 **Correct Answer:** B
 
@@ -2031,14 +2031,14 @@ D) Focus exclusively on computer-based brain training games without functional a
 
 ## Question 136
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 6** | **KN39** | **Scored**
 
-A clinical psychologist is treating a 30-year-old veteran with PTSD following combat trauma. The patient experiences intrusive memories, nightmares, hypervigilance, avoidance of trauma reminders, and has been unable to maintain employment. According to evidence-based practice guidelines for PTSD, which treatment approach has the strongest empirical support?
+A psychologist embedded with a military unit provides consultation to command on issues affecting service member readiness, morale, and well-being. In this role, the psychologist must navigate which ethical consideration?
 
-A) Supportive counseling focusing on current life stressors without addressing the trauma directly
-B) Trauma-focused cognitive-behavioral therapy such as Prolonged Exposure (PE) or Cognitive Processing Therapy (CPT) involving trauma processing
-C) Relaxation training alone without any exposure to trauma-related material
-D) Hypnosis to recover repressed memories and achieve catharsis
+A) The psychologist has no ethical obligations in a military setting
+B) Balancing obligations to individual service members with obligations to the military mission and command, while maintaining ethical standards
+C) Complete allegiance to command with no consideration of individual welfare
+D) Providing only individual therapy with no organizational consultation
 
 **Correct Answer:** B
 
@@ -2046,14 +2046,14 @@ D) Hypnosis to recover repressed memories and achieve catharsis
 
 ## Question 137
 
-**Domain 6** | **KN32** | **Scored**
+**Domain 7** | **KN40** | **Scored**
 
-A health psychologist is working with a 58-year-old patient who recently experienced a myocardial infarction (heart attack) and needs to make significant lifestyle changes including smoking cessation, diet modification, exercise initiation, and medication adherence. The patient is ambivalent about making changes. Which evidence-based approach would be most effective for enhancing motivation and behavior change?
+A clinical neuropsychologist evaluates a 45-year-old patient who reports memory difficulties following a traumatic brain injury sustained in a motor vehicle accident. The evaluation reveals impairments in verbal memory and executive functioning. In addition to diagnosis, what should the neuropsychologist's report include to maximize utility?
 
-A) Confrontational approach emphasizing the dire consequences if the patient does not change immediately
-B) Motivational interviewing to explore ambivalence, enhance intrinsic motivation, and support self-efficacy for behavior change
-C) Passive education about health risks without addressing the patient's specific concerns or readiness
-D) Requiring the patient to sign a contract promising to make all changes immediately
+A) Only test scores without interpretation
+B) Specific recommendations for cognitive rehabilitation, compensatory strategies, and functional implications for daily living and work
+C) A single diagnosis with no additional information
+D) Predictions about permanent disability without recommendations
 
 **Correct Answer:** B
 
@@ -2061,29 +2061,29 @@ D) Requiring the patient to sign a contract promising to make all changes immedi
 
 ## Question 138
 
-**Domain 6** | **KN30** | **Scored**
+**Domain 7** | **KN40** | **Scored**
 
-A school psychologist is conducting a functional behavioral assessment for a 7-year-old student who displays frequent aggressive behavior toward peers including hitting, kicking, and verbal threats. Observation data suggest the aggression typically occurs during unstructured times and results in removal from the activity and one-on-one attention from adults. What does this functional analysis suggest about the maintaining variables?
+A neuropsychologist is conducting an evaluation to differentiate between depression-related cognitive complaints and early dementia in a 72-year-old patient. What pattern of test performance would most suggest a primary mood disorder rather than dementia?
 
-A) The behavior is maintained by positive reinforcement through adult attention and negative reinforcement through escape from peer interaction
-B) The behavior has no environmental function and is solely due to an underlying neurological disorder
-C) The behavior is maintained exclusively by sensory stimulation
-D) The behavior will resolve spontaneously without intervention
+A) Significant impairment across all cognitive domains with lack of awareness
+B) Complaints of memory problems that exceed objective impairment on testing, with inconsistent effort and preserved ability when motivated
+C) Progressive decline in memory with impaired activities of daily living
+D) Severe impairment in language with preserved memory
 
-**Correct Answer:** A
+**Correct Answer:** B
 
 ---
 
 ## Question 139
 
-**Domain 6** | **KN33** | **Scored**
+**Domain 7** | **KN41** | **Scored**
 
-A psychologist is treating a couple presenting with relationship distress characterized by frequent conflict, criticism, defensiveness, and emotional withdrawal. Both partners express desire to improve the relationship but feel stuck in negative interaction patterns. According to evidence-based approaches to couples therapy, which intervention would most effectively address these presenting problems?
+A patient with a left hemisphere stroke demonstrates significant expressive language difficulties, including problems with speech production and grammatical structure, but shows relatively preserved comprehension. Neuropsychological assessment also reveals right-sided weakness. This presentation is most consistent with damage to which brain region?
 
-A) Individual therapy for each partner separately without conjoint sessions
-B) Behavioral couples therapy or Emotionally Focused Therapy addressing communication patterns, emotional needs, and attachment dynamics
-C) Advice-giving about how couples should interact without systematic intervention
-D) Recommending separation immediately since conflict is present
+A) Wernicke's area in the left temporal lobe
+B) Broca's area in the left frontal lobe
+C) Right parietal lobe
+D) Occipital lobe bilaterally
 
 **Correct Answer:** B
 
@@ -2091,14 +2091,14 @@ D) Recommending separation immediately since conflict is present
 
 ## Question 140
 
-**Domain 6** | **KN34** | **Scored**
+**Domain 7** | **KN41** | **Scored**
 
-A clinical psychologist is conducting a suicide risk assessment for a 45-year-old patient who presents with major depression, has experienced recent job loss and divorce, has access to lethal means, and expresses hopelessness but denies specific suicidal intent or plan. According to best practices in suicide risk assessment and management, what would be the most appropriate course of action?
+A neuropsychological evaluation of a 55-year-old patient reveals intact memory and language abilities, but significant impairments in planning, organization, abstract reasoning, and behavioral regulation. The patient's family reports personality changes including impulsivity and poor judgment. This pattern is most consistent with dysfunction in which brain region?
 
-A) Document that the patient denies suicidal intent and continue with routine outpatient treatment without additional precautions
-B) Conduct comprehensive risk assessment considering risk and protective factors, increase treatment intensity, develop safety plan, reduce access to lethal means, and consider need for higher level of care
-C) Have the patient sign a no-suicide contract and assume this prevents any suicidal behavior
-D) Immediately hospitalize the patient involuntarily since any suicidal ideation requires hospitalization
+A) Temporal lobes
+B) Prefrontal cortex
+C) Occipital lobes
+D) Cerebellum
 
 **Correct Answer:** B
 
@@ -2106,14 +2106,14 @@ D) Immediately hospitalize the patient involuntarily since any suicidal ideation
 
 ## Question 141
 
-**Domain 6** | **KN31** | **Scored**
+**Domain 7** | **KN40** | **Scored**
 
-A neuropsychologist is evaluating a 72-year-old patient referred for memory concerns. The patient scores 1.5 standard deviations below age norms on episodic memory tests but performs within normal limits on all other cognitive domains. The patient reports subjective memory complaints but maintains independence in all activities of daily living. What is the most appropriate diagnostic consideration?
+A neuropsychologist is interpreting test results for a bilingual patient who completed testing in their second language (English) rather than their native language. How should the psychologist approach interpretation of the results?
 
-A) Normal cognitive aging with no clinical significance
-B) Mild cognitive impairment (MCI) with need for monitoring, risk factor management, and follow-up evaluation
-C) Alzheimer's disease dementia requiring immediate nursing home placement
-D) Pseudodementia due to depression without any actual cognitive impairment
+A) Interpret results without any special considerations
+B) Consider the potential impact of language proficiency on test performance and note this as a limitation, ideally using appropriate norms or testing in the native language when possible
+C) Assume that bilingualism has no impact on neuropsychological testing
+D) Refuse to test bilingual individuals
 
 **Correct Answer:** B
 
@@ -2121,14 +2121,14 @@ D) Pseudodementia due to depression without any actual cognitive impairment
 
 ## Question 142
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 7** | **KN41** | **Scored**
 
-A clinical psychologist is treating a 25-year-old patient with social anxiety disorder who avoids most social situations including work meetings, dating, and casual social gatherings due to fear of negative evaluation. The patient desires to be more social but experiences intense anxiety symptoms when attempting social interaction. What evidence-based treatment component is essential for this presentation?
+A patient demonstrates 'neglect' of the left side of space following a stroke, failing to attend to stimuli on the left side and even neglecting the left side of their own body. This presentation is most commonly associated with damage to which brain region?
 
-A) Avoiding all social situations indefinitely to prevent anxiety symptoms
-B) Cognitive-behavioral therapy including cognitive restructuring of feared social consequences and graduated exposure to feared social situations
-C) Insight-oriented therapy exploring childhood experiences without behavioral intervention
-D) Medication alone without any psychosocial intervention
+A) Left parietal lobe
+B) Right parietal lobe
+C) Frontal lobes bilaterally
+D) Left temporal lobe
 
 **Correct Answer:** B
 
@@ -2136,14 +2136,14 @@ D) Medication alone without any psychosocial intervention
 
 ## Question 143
 
-**Domain 6** | **KN30** | **Scored**
+**Domain 7** | **KN42** | **Scored**
 
-A psychologist is working with parents of a 5-year-old child with oppositional defiant disorder who displays frequent tantrums, defiance of adult requests, and aggressive behavior at home. The behavior problems are causing significant family stress. According to evidence-based treatment for childhood disruptive behavior disorders, what intervention approach would be most effective?
+A neuropsychologist is conducting a capacity evaluation for a patient with dementia to determine if the patient can make informed decisions about medical treatment. The evaluation should primarily assess:
 
-A) Individual play therapy for the child without parent involvement
-B) Parent management training (PMT) or parent-child interaction therapy (PCIT) teaching positive reinforcement, effective commands, and consistent consequences
-C) Punishment-based approaches with no positive reinforcement components
-D) Waiting for the child to outgrow the behavior without intervention
+A) Whether the patient agrees with the psychologist's opinion
+B) The patient's ability to understand relevant information, appreciate the situation and consequences, reason about treatment options, and communicate a choice
+C) Only whether the patient has a diagnosis of dementia
+D) The patient's general intelligence level
 
 **Correct Answer:** B
 
@@ -2151,14 +2151,14 @@ D) Waiting for the child to outgrow the behavior without intervention
 
 ## Question 144
 
-**Domain 6** | **KN32** | **Scored**
+**Domain 7** | **KN42** | **Scored**
 
-A health psychologist is designing an intervention to improve adherence to diabetes self-management among adolescent patients who demonstrate poor glucose monitoring, inconsistent insulin administration, and dietary non-compliance. According to evidence-based approaches to health behavior change in chronic illness, what intervention components would be most effective?
+A 68-year-old man with progressive memory loss wants to continue living independently, but his family is concerned about his safety. A neuropsychologist conducts an evaluation to assess the patient's capacity to make decisions about living arrangements. This evaluation should include:
 
-A) Lecturing adolescents about the serious health consequences of poor diabetes control
-B) Multicomponent intervention including patient education, family involvement, problem-solving skills training, and addressing developmental issues affecting adherence
-C) Threatening to discontinue treatment unless perfect adherence is achieved
-D) Focusing exclusively on parental supervision without addressing adolescent autonomy
+A) Only standardized cognitive tests
+B) Assessment of cognitive abilities, functional abilities, understanding of risks, and ability to make and communicate decisions about living situation
+C) Deferring entirely to family wishes without assessing the patient
+D) Making the decision for the patient
 
 **Correct Answer:** B
 
@@ -2166,14 +2166,14 @@ D) Focusing exclusively on parental supervision without addressing adolescent au
 
 ## Question 145
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 7** | **KN43** | **Scored**
 
-A clinical psychologist is treating a 40-year-old patient with borderline personality disorder characterized by emotional instability, self-harm behaviors, unstable relationships, and identity disturbance. The patient has had multiple psychiatric hospitalizations and has not responded well to previous unstructured therapy. According to evidence-based practice, which treatment approach has demonstrated efficacy for this presentation?
+Research on cognitive rehabilitation following traumatic brain injury has found which approaches to be most effective?
 
-A) Long-term unstructured supportive therapy without specific behavioral targets
-B) Dialectical behavior therapy (DBT) providing skills training in emotion regulation, distress tolerance, mindfulness, and interpersonal effectiveness
-C) Confrontational therapy focusing on characterological deficits
-D) Recommending no treatment since personality disorders are untreatable
+A) Cognitive exercises alone without functional application
+B) Comprehensive rehabilitation addressing cognitive deficits, compensatory strategies, and functional skills in real-world contexts
+C) Rest with no active intervention
+D) Focusing only on physical rehabilitation
 
 **Correct Answer:** B
 
@@ -2181,14 +2181,14 @@ D) Recommending no treatment since personality disorders are untreatable
 
 ## Question 146
 
-**Domain 6** | **KN31** | **Scored**
+**Domain 7** | **KN43** | **Scored**
 
-A neuropsychologist evaluates a 55-year-old patient six months post-stroke affecting the left hemisphere. The patient demonstrates intact comprehension but has significant difficulty with speech production, characterized by effortful, non-fluent speech with relatively preserved content. What type of rehabilitation approach would be most appropriate for this aphasia presentation?
+A neuropsychologist is working with a patient who has memory impairment following a brain injury. The patient is unable to form new memories (anterograde amnesia) but has relatively intact remote memory. What type of intervention would be most appropriate?
 
-A) No speech therapy since the damage is permanent and unchangeable
-B) Speech and language therapy utilizing constraint-induced language therapy, melodic intonation therapy, or other evidence-based approaches for non-fluent aphasia
-C) Only written communication training without addressing spoken language
-D) Intensive articulation drills without consideration of language function
+A) Attempting to restore memory function through memory exercises alone
+B) Teaching compensatory strategies such as use of memory aids, establishing routines, and environmental modifications
+C) No intervention as memory cannot be improved
+D) Focusing only on improving remote memory
 
 **Correct Answer:** B
 
@@ -2196,14 +2196,14 @@ D) Intensive articulation drills without consideration of language function
 
 ## Question 147
 
-**Domain 6** | **KN33** | **Scored**
+**Domain 7** | **KN41** | **Scored**
 
-A psychologist is conducting group therapy for patients with substance use disorders in an outpatient treatment program. One group member with alcohol use disorder maintains that abstinence is unnecessary and controlled drinking is an acceptable goal despite multiple failed attempts at moderation. According to evidence-based addiction treatment principles, how should the psychologist address this within the group context?
+A patient with Parkinson's disease is experiencing cognitive changes including slowed processing speed, executive dysfunction, and visuospatial difficulties. The neuropsychologist should be aware that these cognitive changes are associated with disruption of which neurotransmitter system?
 
-A) Immediately discharge the patient from group for not accepting abstinence as the only valid treatment goal
-B) Explore the patient's motivation and ambivalence using motivational enhancement principles, while educating about realistic treatment outcomes and allowing the group to process the issue
-C) Agree with the patient that controlled drinking is equally effective as abstinence for severe alcohol use disorder
-D) Require the patient to sign a pledge of abstinence as a condition of continuing group participation
+A) Serotonin primarily
+B) Dopamine, particularly in frontal-subcortical circuits
+C) Glutamate exclusively
+D) GABA primarily
 
 **Correct Answer:** B
 
@@ -2211,14 +2211,14 @@ D) Require the patient to sign a pledge of abstinence as a condition of continui
 
 ## Question 148
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 7** | **KN43** | **Field Test**
 
-A clinical psychologist is assessing a 16-year-old adolescent who presents with perfectionism, excessive exercise (2-3 hours daily), restrictive eating with rigid food rules, and BMI at the 20th percentile with recent weight loss. The adolescent denies having an eating disorder and states they are 'just healthy.' The parents are concerned. According to evidence-based assessment and treatment of eating disorders, what is the most appropriate intervention approach?
+A neuropsychologist conducts a baseline concussion assessment for high school athletes. One athlete sustains a concussion during the season and is reassessed. The athlete shows cognitive impairments compared to baseline. According to current guidelines, when should the athlete be cleared to return to play?
 
-A) Respect the adolescent's denial and provide no treatment since the BMI is not critically low
-B) Conduct comprehensive assessment, provide psychoeducation, involve family through family-based treatment (FBT), and address the eating disorder directly despite the patient's denial
-C) Focus exclusively on the excessive exercise without addressing eating behaviors
-D) Recommend weight gain without any psychological intervention
+A) Immediately after the injury
+B) Only after symptoms resolve, cognitive function returns to baseline, and the athlete completes a graduated return-to-play protocol
+C) After a fixed period of time regardless of symptoms
+D) Based solely on the athlete's self-report that they feel ready
 
 **Correct Answer:** B
 
@@ -2226,14 +2226,14 @@ D) Recommend weight gain without any psychological intervention
 
 ## Question 149
 
-**Domain 6** | **KN32** | **Scored**
+**Domain 7** | **KN41** | **Scored**
 
-A health psychologist is working with a patient newly diagnosed with multiple sclerosis who is experiencing significant adjustment difficulties including depression, anxiety, grief about losses, and uncertainty about the disease course. According to evidence-based psychological interventions for chronic illness adjustment, what treatment approach would be most beneficial?
+A neuropsychological evaluation reveals that a patient has difficulty recognizing familiar faces (prosopagnosia) following a stroke. This deficit is most commonly associated with damage to which brain region?
 
-A) Avoid discussing the illness directly to prevent increasing the patient's distress
-B) Cognitive-behavioral therapy addressing adjustment, coping skills training, treatment of comorbid depression/anxiety, and facilitating adaptation to chronic illness
-C) Encouraging complete denial of the diagnosis as a coping mechanism
-D) Providing reassurance that everything will be fine without acknowledging realistic concerns
+A) Primary visual cortex in occipital lobe
+B) Fusiform gyrus and surrounding areas in ventral temporal cortex
+C) Prefrontal cortex
+D) Primary motor cortex
 
 **Correct Answer:** B
 
@@ -2241,14 +2241,14 @@ D) Providing reassurance that everything will be fine without acknowledging real
 
 ## Question 150
 
-**Domain 6** | **KN30** | **Scored**
+**Domain 8** | **KN44** | **Scored**
 
-A school psychologist is consulting with teachers about a 12-year-old student with a specific learning disorder in reading who is significantly behind grade level despite average intellectual ability. The student is becoming increasingly frustrated, displaying behavioral problems, and expressing low academic self-esteem. What evidence-based intervention approach would be most appropriate?
+A clinical psychologist maintains client records in both paper and electronic formats. According to professional standards and HIPAA regulations, the psychologist must ensure that records are:
 
-A) Retention in the same grade to repeat all content without specialized intervention
-B) Intensive, evidence-based reading intervention (e.g., structured literacy approach), appropriate accommodations, support for self-esteem, and behavioral intervention for secondary problems
-C) Removing the student from all reading instruction since it causes frustration
-D) Assuming the student will eventually catch up without specialized intervention
+A) Kept indefinitely without ever being destroyed
+B) Maintained securely, kept for an appropriate retention period as required by law and professional standards, and disposed of properly
+C) Shared freely with any healthcare provider
+D) Kept only in paper format to ensure security
 
 **Correct Answer:** B
 
@@ -2256,14 +2256,14 @@ D) Assuming the student will eventually catch up without specialized interventio
 
 ## Question 151
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 8** | **KN44** | **Scored**
 
-A psychologist is providing therapy to a 50-year-old patient with generalized anxiety disorder who experiences excessive, uncontrollable worry about multiple domains (work, health, finances, family), muscle tension, sleep disturbance, and functional impairment. According to evidence-based treatment guidelines, which therapeutic approach would be most effective?
+A psychologist who is closing their independent practice must make arrangements for client records and ongoing care. According to ethical guidelines, the psychologist should:
 
-A) Reassurance and advice to 'just stop worrying' without systematic intervention
-B) Cognitive-behavioral therapy including cognitive restructuring of worry thoughts, relaxation training, worry exposure, and problem-solving training
-C) Insight-oriented therapy without behavioral or cognitive components
-D) Encouraging complete avoidance of all situations that trigger worry
+A) Simply destroy all records and inform clients the practice is closing
+B) Provide advance notice to clients, assist with transfer of care, maintain records appropriately, and arrange for record storage and access
+C) Transfer all clients to one specific provider without client input
+D) Leave records in the office without arranging for continued access
 
 **Correct Answer:** B
 
@@ -2271,14 +2271,14 @@ D) Encouraging complete avoidance of all situations that trigger worry
 
 ## Question 152
 
-**Domain 6** | **KN31** | **Scored**
+**Domain 8** | **KN44** | **Scored**
 
-A clinical psychologist is conducting an evidence-based psychological assessment to differentially diagnose between major depressive disorder and bipolar disorder in a 32-year-old patient who presents with current depressive symptoms. Which assessment approach would provide the most diagnostically useful information?
+A psychologist receives a phone call from an individual claiming to be a client's spouse requesting information about the client's therapy. The psychologist has no prior authorization from the client to speak with the spouse. What should the psychologist do?
 
-A) Only assessing current depressive symptoms without exploring past mood episodes
-B) Comprehensive structured diagnostic interview covering lifetime history of mood episodes including potential manic or hypomanic symptoms, collateral information from family, and standardized rating scales
-C) Relying exclusively on patient self-report without corroborating information
-D) Only administering projective tests without structured diagnostic assessment
+A) Provide the requested information since the caller is family
+B) Refuse to confirm or deny that the individual is a client and request written authorization from the client before discussing any information
+C) Provide general information but not specific details
+D) Call the client immediately and insist they authorize release
 
 **Correct Answer:** B
 
@@ -2286,14 +2286,14 @@ D) Only administering projective tests without structured diagnostic assessment
 
 ## Question 153
 
-**Domain 6** | **KN33** | **Scored**
+**Domain 8** | **KN45** | **Scored**
 
-A psychologist is working with a family where marital conflict has led to involving the children in parental disputes. The 10-year-old child is displaying anxiety symptoms and declining school performance. According to evidence-based family therapy approaches, what intervention would most appropriately address this systemic issue?
+A psychologist is considering implementing telepsychology services. According to guidelines for telepsychology, the psychologist must consider which factors before providing services remotely?
 
-A) Individual therapy for the child only without addressing family dynamics
-B) Family therapy addressing boundaries, parental alliance, reducing triangulation of the child, and improving family communication patterns
-C) Removing the child from the home without addressing family patterns
-D) Couples therapy for parents only without involving or addressing impact on child
+A) Only whether the psychologist has a computer and internet connection
+B) Competence in providing services via technology, applicable laws in the client's jurisdiction, confidentiality and security of communications, and informed consent for telepsychology
+C) Telepsychology requires no special considerations beyond in-person practice
+D) Only the cost of technology
 
 **Correct Answer:** B
 
@@ -2301,14 +2301,14 @@ D) Couples therapy for parents only without involving or addressing impact on ch
 
 ## Question 154
 
-**Domain 6** | **KN32** | **Scored**
+**Domain 8** | **KN45** | **Scored**
 
-A health psychologist is designing a smoking cessation intervention for a group of patients with coronary artery disease for whom continued smoking poses severe health risks. According to evidence-based approaches to smoking cessation in medical populations, which components would optimize treatment effectiveness?
+A psychologist provides telepsychology services to a client who is located in a different state. Regarding licensure and jurisdiction, the psychologist should:
 
-A) Brief advice to quit without any behavioral support or pharmacotherapy
-B) Multicomponent intervention including behavioral counseling, pharmacotherapy (e.g., nicotine replacement, bupropion, or varenicline), relapse prevention, and addressing tobacco dependence
-C) Recommending patients reduce smoking but not quit completely
-D) Scare tactics emphasizing death and disease without supportive intervention
+A) Only be licensed in the state where the psychologist is physically located
+B) Be licensed or otherwise authorized to practice in the state where the client is located, in accordance with that state's regulations
+C) Provide services without any concern for state boundaries
+D) Only be licensed in the state where their main office is located
 
 **Correct Answer:** B
 
@@ -2316,14 +2316,14 @@ D) Scare tactics emphasizing death and disease without supportive intervention
 
 ## Question 155
 
-**Domain 6** | **KN31** | **Scored**
+**Domain 8** | **KN45** | **Scored**
 
-A neuropsychologist is evaluating a 35-year-old patient who sustained a moderate traumatic brain injury with loss of consciousness for 30 minutes, but CT scan was negative for structural damage. The patient reports ongoing problems with attention, concentration, memory, and executive function that interfere with return to work. What assessment approach would best evaluate these complaints?
+A psychologist uses email to communicate with clients about appointment scheduling and occasionally responds to client questions between sessions. To maintain ethical practice regarding electronic communication, the psychologist should:
 
-A) Reassure the patient that the absence of structural damage means no cognitive problems exist
-B) Comprehensive neuropsychological evaluation with objective testing across cognitive domains, performance validity testing, and assessment of emotional factors
-C) Only administering a brief cognitive screening without comprehensive evaluation
-D) Attributing all complaints to psychological factors without objective cognitive testing
+A) Use regular unsecured email without any special precautions
+B) Discuss with clients the risks and limitations of electronic communication, obtain informed consent, and use secure communication methods when possible
+C) Provide therapy exclusively via email without informed consent
+D) Never communicate with clients via any electronic means
 
 **Correct Answer:** B
 
@@ -2331,14 +2331,14 @@ D) Attributing all complaints to psychological factors without objective cogniti
 
 ## Question 156
 
-**Domain 6** | **KN29** | **Scored**
+**Domain 8** | **KN45** | **Scored**
 
-A psychologist is treating a patient with insomnia disorder characterized by difficulty falling asleep, frequent nighttime awakenings, total sleep time of approximately 4-5 hours per night, and significant daytime impairment. The insomnia has persisted for over a year. According to evidence-based treatment guidelines, which intervention has the strongest empirical support for chronic insomnia?
+A clinical psychologist maintains an active presence on social media, including professional accounts and personal accounts. According to ethical guidelines on the use of social media, the psychologist should:
 
-A) Long-term use of benzodiazepine or sedative-hypnotic medication without behavioral treatment
-B) Cognitive-behavioral therapy for insomnia (CBT-I) including sleep restriction, stimulus control, cognitive restructuring, and sleep hygiene education
-C) Recommending the patient try harder to sleep and spend more time in bed to catch up on sleep
-D) Attributing the insomnia solely to stress without addressing sleep-specific factors
+A) Accept friend requests from current and former clients to maintain the therapeutic relationship
+B) Maintain appropriate boundaries, avoid multiple relationships, protect client confidentiality, and be aware that online behavior reflects on professional reputation
+C) Post about clients' progress with their consent
+D) Use social media to research clients without their knowledge or consent
 
 **Correct Answer:** B
 
@@ -2346,14 +2346,14 @@ D) Attributing the insomnia solely to stress without addressing sleep-specific f
 
 ## Question 157
 
-**Domain 6** | **KN30** | **Scored**
+**Domain 8** | **KN45** | **Scored**
 
-A school psychologist is developing an intervention for a 14-year-old student with school refusal behavior related to social anxiety. The student has missed 40% of school days this semester. According to evidence-based approaches for school refusal, which intervention strategy would be most effective?
+A psychologist stores electronic health records on a cloud-based practice management system. To comply with HIPAA and ethical requirements for protecting client information, the psychologist must ensure that:
 
-A) Allowing the student to remain home indefinitely until they feel ready to return
-B) Graduated exposure to school with cognitive-behavioral intervention for anxiety, collaboration between school and family, and systematic reinforcement for attendance
-C) Punishing the student for missing school without addressing underlying anxiety
-D) Homebound instruction permanently without attempting school reintegration
+A) Any cloud service can be used without special considerations
+B) The service provider has appropriate security safeguards, signs a Business Associate Agreement, and uses encryption to protect data
+C) Electronic records are less secure than paper and should not be used
+D) Password protection alone is sufficient security
 
 **Correct Answer:** B
 
@@ -2361,14 +2361,14 @@ D) Homebound instruction permanently without attempting school reintegration
 
 ## Question 158
 
-**Domain 6** | **KN34** | **Scored**
+**Domain 8** | **KN44** | **Scored**
 
-A clinical psychologist is conducting a comprehensive suicide risk assessment and must integrate multiple sources of information to formulate risk level and treatment recommendations. Which approach to risk assessment is most consistent with current evidence-based practice?
+A psychologist's electronic health record system experiences a data breach potentially exposing client protected health information. According to HIPAA breach notification requirements, the psychologist must:
 
-A) Relying exclusively on actuarial risk prediction tools without clinical judgment
-B) Integrating structured assessment of risk factors, protective factors, warning signs, patient's current mental state, and clinical judgment to inform individualized risk management
-C) Using only unstructured clinical intuition without systematic assessment of risk factors
-D) Relying solely on whether the patient denies suicidal intent as the determinant of risk level
+A) Not inform clients as it would upset them
+B) Notify affected clients, report the breach to the Department of Health and Human Services, and if the breach affects 500 or more individuals, notify media outlets
+C) Only notify clients if the psychologist believes the information was actually accessed
+D) Wait to see if any harm occurs before notifying anyone
 
 **Correct Answer:** B
 
@@ -2376,14 +2376,14 @@ D) Relying solely on whether the patient denies suicidal intent as the determina
 
 ## Question 159
 
-**Domain 7** | **KN35** | **Scored**
+**Domain 8** | **KN45** | **Field Test**
 
-An industrial-organizational psychologist is designing a selection system for a company hiring customer service representatives. Job analysis indicates that successful performance requires emotional regulation, communication skills, problem-solving, and stress tolerance. According to principles of personnel selection, which approach would best predict job performance while ensuring legal defensibility?
+A psychologist in independent practice wants to develop a website to provide information about their services and potentially allow clients to schedule appointments online. Ethical considerations for the website include:
 
-A) Using only unstructured interviews based on interviewer intuition about candidate fit
-B) Implementing a multi-method assessment including structured interviews, situational judgment tests, personality assessment, and work samples, with demonstrated validity for predicting job-relevant criteria
-C) Selecting candidates based solely on physical attractiveness and likability
-D) Using cognitive ability tests alone without assessing job-specific competencies
+A) The website can contain any information without restrictions
+B) Information must be accurate and not misleading, testimonials must be used cautiously if at all, and online forms must be secure if collecting personal information
+C) Advertising services that the psychologist is not competent to provide is acceptable
+D) Client testimonials without any context or disclaimers are encouraged
 
 **Correct Answer:** B
 
@@ -2391,14 +2391,14 @@ D) Using cognitive ability tests alone without assessing job-specific competenci
 
 ## Question 160
 
-**Domain 7** | **KN36** | **Scored**
+**Domain 8** | **KN46** | **Scored**
 
-An organizational consultant is working with a company experiencing low employee engagement, high turnover among high-performing employees, and complaints about lack of advancement opportunities. According to organizational psychology research on employee motivation and retention, which intervention would most effectively address these interconnected issues?
+A psychologist is developing a fee structure for a new private practice. According to ethical guidelines regarding fees and financial arrangements, the psychologist should:
 
-A) Implementing an employee recognition program alone without addressing systemic career development issues
-B) Conducting a comprehensive assessment of organizational culture and career development systems, implementing structured career paths, increasing developmental opportunities, and improving management practices
-C) Increasing salaries without addressing psychological needs or organizational practices
-D) Encouraging employees to be more positive without changing organizational structures
+A) Charge whatever fees the psychologist wants without disclosure
+B) Establish and disclose fee policies at the outset of the professional relationship, including rates, billing practices, and collection procedures
+C) Change fees frequently without informing clients
+D) Never discuss fees as it is unprofessional
 
 **Correct Answer:** B
 
@@ -2406,14 +2406,14 @@ D) Encouraging employees to be more positive without changing organizational str
 
 ## Question 161
 
-**Domain 7** | **KN35** | **Scored**
+**Domain 8** | **KN46** | **Scored**
 
-An I-O psychologist is conducting a job analysis for a newly created position in data analytics that requires technical skills not present in any current jobs. According to best practices in job analysis methodology, which approach would provide the most valid and comprehensive information for this novel position?
+A client has accumulated a significant unpaid balance for therapy services despite agreeing to the fee arrangement. The psychologist wants to use a collection agency to recover the debt. What ethical considerations must the psychologist address?
 
-A) Copying the job description from a similar-sounding position at another company without validation
-B) Using multiple job analysis methods including subject matter expert panels, future-oriented task analysis, review of similar positions, and identification of knowledge, skills, abilities, and other characteristics (KSAOs) required
-C) Having the psychologist independently create job requirements without input from technical experts
-D) Using only generic competency models without job-specific analysis
+A) The psychologist can freely give the collection agency all therapy records
+B) The psychologist must limit the information provided to the minimum necessary (typically only name and amount owed), consider the therapeutic relationship and client welfare, and provide advance notice
+C) Using a collection agency is never ethical
+D) The psychologist should withhold therapy records permanently as leverage for payment
 
 **Correct Answer:** B
 
@@ -2421,14 +2421,14 @@ D) Using only generic competency models without job-specific analysis
 
 ## Question 162
 
-**Domain 7** | **KN37** | **Scored**
+**Domain 8** | **KN46** | **Scored**
 
-An organizational psychologist is evaluating a training program designed to improve managers' performance feedback skills. The training includes didactic instruction, role-playing, and feedback. According to Kirkpatrick's model of training evaluation, what would constitute Level 3 (behavior) evaluation of this training?
+A psychologist is considering implementing a sliding fee scale to make services accessible to clients with limited financial resources. When implementing such a policy, the psychologist should:
 
-A) Assessing trainees' satisfaction with the training content and delivery immediately post-training
-B) Measuring the extent to which trainees actually use the feedback skills on the job following training, using direct observation or multi-source feedback
-C) Testing trainees' knowledge of feedback principles with a written exam at the end of training
-D) Measuring organizational-level outcomes like overall productivity without assessing skill use
+A) Provide lower quality services to clients paying reduced fees
+B) Apply the sliding scale policy consistently and fairly, provide the same quality of care regardless of fee, and maintain appropriate documentation
+C) Only accept clients who can pay full fee
+D) Change fees arbitrarily based on personal feelings about clients
 
 **Correct Answer:** B
 
@@ -2436,14 +2436,14 @@ D) Measuring organizational-level outcomes like overall productivity without ass
 
 ## Question 163
 
-**Domain 7** | **KN38** | **Scored**
+**Domain 8** | **KN46** | **Scored**
 
-An I-O psychologist is helping an organization develop a performance appraisal system that will be used for promotion and compensation decisions. According to research on performance appraisal and legal considerations, which design features would optimize validity, reliability, and legal defensibility?
+A psychologist contracts with a managed care organization to provide services to enrolled clients. The managed care company authorizes only 6 therapy sessions, but the psychologist believes the client needs more extensive treatment. The psychologist should:
 
-A) Using global ratings of overall performance without specific behavioral anchors or job analysis basis
-B) Basing ratings on job analysis, using behaviorally anchored rating scales (BARS), training raters to reduce bias, documenting performance throughout the rating period, and providing feedback
-C) Allowing raters to use whatever subjective criteria they personally value without standardization
-D) Basing evaluations solely on outcome measures without considering contextual factors
+A) Terminate treatment after 6 sessions regardless of client need
+B) Advocate for additional sessions through the appeals process, discuss options with the client including self-pay or referral, and document clinical necessity
+C) Provide services beyond authorization without informing the client of financial responsibility
+D) Exaggerate symptoms to obtain additional authorized sessions
 
 **Correct Answer:** B
 
@@ -2451,14 +2451,14 @@ D) Basing evaluations solely on outcome measures without considering contextual 
 
 ## Question 164
 
-**Domain 7** | **KN36** | **Scored**
+**Domain 8** | **KN46** | **Scored**
 
-An organizational consultant is addressing conflict between two departments whose interdependent work requires collaboration but who have developed an adversarial relationship with blame, poor communication, and competing goals. According to organizational psychology principles for managing intergroup conflict, which intervention approach would be most effective?
+A psychologist wants to accept credit card payments from clients for services. Best practices for handling credit card information include:
 
-A) Keeping the departments completely separate to avoid any potential conflict
-B) Implementing superordinate goals requiring collaboration, improving communication channels, establishing shared metrics, and using cross-functional teams to break down barriers
-C) Having each department list complaints about the other to intensify conflict
-D) Assuming the conflict will resolve itself without intervention
+A) Keeping credit card numbers in the client's paper chart
+B) Using a PCI-compliant payment processor, not storing credit card information in client records, and ensuring secure transactions
+C) Writing down credit card numbers and keeping them indefinitely
+D) Sharing credit card processing with other practice staff without restrictions
 
 **Correct Answer:** B
 
@@ -2466,14 +2466,14 @@ D) Assuming the conflict will resolve itself without intervention
 
 ## Question 165
 
-**Domain 7** | **KN35** | **Scored**
+**Domain 8** | **KN47** | **Scored**
 
-An I-O psychologist is conducting a validation study for a selection test that will be used to hire sales representatives. The psychologist administers the test to current employees and correlates their test scores with their sales performance ratings. This validation strategy is best described as which type of validity evidence?
+A psychologist operates a small group practice and hires administrative staff to assist with billing, scheduling, and record-keeping. Regarding staff training and confidentiality, the psychologist must:
 
-A) Content validity based on test items sampling the job domain
-B) Concurrent criterion-related validity based on correlation between predictor and criterion in current employees
-C) Construct validity based on theoretical relationships between test and performance
-D) Face validity based on whether the test appears relevant to applicants
+A) Trust staff to understand confidentiality without any training
+B) Provide training on HIPAA regulations and confidentiality requirements, ensure staff sign confidentiality agreements, and supervise their access to protected health information
+C) Allow staff unlimited access to all client records regardless of their role
+D) Not allow staff to have any access to client information
 
 **Correct Answer:** B
 
@@ -2481,14 +2481,14 @@ D) Face validity based on whether the test appears relevant to applicants
 
 ## Question 166
 
-**Domain 7** | **KN36** | **Scored**
+**Domain 8** | **KN47** | **Scored**
 
-An organizational psychologist is investigating why a company's wellness program, which offers gym memberships and health screenings, has very low employee participation despite the company's investment. According to health behavior and motivation theories, which factor would most likely explain low participation and suggest an intervention approach?
+A psychologist who owns an independent practice purchases professional liability insurance. This insurance typically provides coverage for:
 
-A) Employees are inherently lazy and have no interest in health regardless of program features
-B) Barriers such as time constraints, lack of awareness, low perceived self-efficacy, or insufficient alignment with employee needs may exist, suggesting need for needs assessment and program redesign
-C) The company should mandate participation through punitive measures for non-participation
-D) Wellness programs have no value and should be discontinued entirely
+A) Only criminal acts
+B) Claims of professional negligence or malpractice arising from professional services
+C) Intentional violations of ethical standards
+D) Business debts and loans
 
 **Correct Answer:** B
 
@@ -2496,29 +2496,29 @@ D) Wellness programs have no value and should be discontinued entirely
 
 ## Question 167
 
-**Domain 7** | **KN37** | **Scored**
+**Domain 8** | **KN47** | **Scored**
 
-An I-O psychologist is helping an organization develop a leadership development program targeting high-potential middle managers for senior leadership roles. According to research on leadership development and adult learning principles, which program components would most effectively develop leadership capabilities?
+A psychologist in independent practice must comply with various regulatory requirements. Which of the following is a requirement under HIPAA's Privacy Rule?
 
-A) Passive classroom instruction with no application opportunities or feedback
-B) Multicomponent program including 360-degree feedback, challenging developmental assignments, executive coaching, action learning projects, and peer learning groups
-C) Simply promoting high-potential employees without any developmental preparation
-D) Having managers read leadership books without structured development activities
+A) Providing clients with a Notice of Privacy Practices describing how their health information may be used and disclosed
+B) Sharing client information freely with all healthcare providers
+C) Never allowing clients to access their own records
+D) Maintaining records for only one year
 
-**Correct Answer:** B
+**Correct Answer:** A
 
 ---
 
 ## Question 168
 
-**Domain 7** | **KN36** | **Scored**
+**Domain 8** | **KN47** | **Scored**
 
-An organizational consultant is working with a company experiencing burnout among employees, characterized by emotional exhaustion, cynicism, and reduced professional efficacy. According to research on occupational stress and burnout, which multilevel intervention approach would most effectively address these issues?
+A psychologist wants to form a partnership with another psychologist to share office space and occasionally cover for each other's clients during vacations. This arrangement should include:
 
-A) Placing all responsibility on individual employees to manage their stress through personal coping strategies
-B) Implementing both individual-focused interventions (e.g., stress management training) and organizational interventions (e.g., workload management, role clarity, supportive supervision, resources)
-C) Terminating employees who show signs of burnout rather than addressing organizational causes
-D) Ignoring the burnout since it is inevitable in modern workplaces
+A) No formal agreement as they trust each other
+B) A written agreement specifying responsibilities, financial arrangements, confidentiality protections, and procedures for covering clients
+C) Sharing all clients' records freely without client consent
+D) Allowing each psychologist unlimited access to the other's clients
 
 **Correct Answer:** B
 
@@ -2526,14 +2526,14 @@ D) Ignoring the burnout since it is inevitable in modern workplaces
 
 ## Question 169
 
-**Domain 7** | **KN35** | **Field Test**
+**Domain 8** | **KN47** | **Scored**
 
-An I-O psychologist is evaluating adverse impact of a selection test where 50% of White applicants are hired, 30% of Black applicants are hired, and 35% of Hispanic applicants are hired. According to the Uniform Guidelines on Employee Selection Procedures, which statement about adverse impact is most accurate?
+A psychologist in independent practice receives a complaint from a client filed with the state licensing board. The psychologist should:
 
-A) No adverse impact exists because some members of each group are hired
-B) Adverse impact may exist because the selection rates for Black and Hispanic applicants are below 80% of the rate for White applicants (the four-fifths rule), warranting further investigation
-C) Adverse impact is irrelevant if the test has any validity evidence
-D) Statistical analysis of adverse impact is unnecessary if the employer has good intentions
+A) Ignore the complaint as it is not serious
+B) Respond to the complaint promptly and professionally, consult with an attorney if needed, and cooperate with the board's investigation while protecting client confidentiality as appropriate
+C) Contact the client and pressure them to withdraw the complaint
+D) Destroy all records related to the client
 
 **Correct Answer:** B
 
@@ -2541,14 +2541,14 @@ D) Statistical analysis of adverse impact is unnecessary if the employer has goo
 
 ## Question 170
 
-**Domain 7** | **KN38** | **Scored**
+**Domain 8** | **KN47** | **Scored**
 
-An organizational psychologist is designing a performance management system based on goal-setting theory. According to research on goal-setting, which characteristics of goals would most enhance employee motivation and performance?
+A psychologist is establishing office policies for a new practice. The office is physically accessible to individuals with disabilities as required by the Americans with Disabilities Act (ADA). The psychologist should also consider:
 
-A) Vague, easy goals that anyone can achieve without effort to ensure high success rates
-B) Specific, challenging but attainable goals with feedback on progress and employee commitment to goal achievement
-C) Extremely difficult goals that are virtually impossible to achieve to maximize effort
-D) Goals set unilaterally by management without employee input or understanding
+A) Physical access is the only requirement under ADA
+B) Providing reasonable modifications to policies and procedures, and ensuring effective communication for individuals with disabilities
+C) Refusing to treat individuals with disabilities as they require too many accommodations
+D) ADA does not apply to professional practices
 
 **Correct Answer:** B
 
@@ -2556,14 +2556,14 @@ D) Goals set unilaterally by management without employee input or understanding
 
 ## Question 171
 
-**Domain 7** | **KN36** | **Scored**
+**Domain 8** | **KN48** | **Scored**
 
-An I-O psychologist is consulting with an organization implementing teams to complete complex projects requiring diverse expertise. According to research on team effectiveness, which factors would most strongly predict team performance?
+A psychologist discovers that a colleague appears to be providing services outside their area of competence and may be harming clients. According to ethical guidelines, the psychologist should:
 
-A) Team member similarity in all characteristics to ensure comfort and agreement
-B) Clear goals, appropriate task design, team composition with required KSAOs, organizational support, effective communication processes, and performance feedback
-C) Large team size with as many members as possible regardless of coordination challenges
-D) Complete absence of any conflict or disagreement within the team
+A) Ignore the situation as it is not their responsibility
+B) Attempt to resolve the issue informally if appropriate, and if that fails or is not appropriate, report the colleague to the relevant ethics committee or licensing board
+C) Immediately report to law enforcement
+D) Discuss the colleague's behavior with other professionals without attempting to resolve it first
 
 **Correct Answer:** B
 
@@ -2571,14 +2571,14 @@ D) Complete absence of any conflict or disagreement within the team
 
 ## Question 172
 
-**Domain 7** | **KN36** | **Scored**
+**Domain 8** | **KN48** | **Scored**
 
-An organizational consultant is addressing a workplace environment where sexual harassment complaints have increased and employees report feeling unsafe. According to organizational psychology research on workplace harassment, which intervention approach would most effectively address this issue?
+A psychologist learns that a colleague has been convicted of insurance fraud involving billing for services not provided. The psychologist's ethical obligation is to:
 
-A) Conducting one-time training and assuming the problem is solved without further action
-B) Implementing comprehensive approach including clear anti-harassment policy, mandatory training, robust complaint procedures, prompt investigation and discipline, leadership accountability, and culture change efforts
-C) Ignoring the complaints since they might be frivolous or exaggerated
-D) Blaming victims and making no organizational changes
+A) Do nothing as it does not directly affect the psychologist's practice
+B) Consider reporting the colleague to the appropriate licensing board and professional ethics committee
+C) Gossip about the colleague with other professionals
+D) Only take action if the colleague's clients request it
 
 **Correct Answer:** B
 
@@ -2586,14 +2586,14 @@ D) Blaming victims and making no organizational changes
 
 ## Question 173
 
-**Domain 7** | **KN38** | **Scored**
+**Domain 8** | **KN48** | **Scored**
 
-An I-O psychologist is helping an organization redesign jobs to improve motivation and satisfaction. According to Hackman and Oldham's Job Characteristics Model, which core job dimensions should be enhanced to increase intrinsic motivation?
+A psychologist has a colleague who appears to be experiencing significant personal problems, including possible substance abuse, which may be affecting the quality of their professional work. According to ethical principles of colleague assistance, the psychologist should:
 
-A) Increasing repetitiveness and simplifying tasks to reduce cognitive demands on workers
-B) Increasing skill variety, task identity, task significance, autonomy, and feedback to enhance meaningfulness, responsibility, and knowledge of results
-C) Removing all autonomy to ensure standardized procedures are followed exactly
-D) Reducing any challenging aspects of work to prevent employee stress
+A) Ignore the situation to avoid conflict
+B) Approach the colleague with concern, offer support and resources, and take action to prevent harm to clients which may include reporting if informal resolution is unsuccessful
+C) Immediately file a formal complaint without speaking to the colleague
+D) Enable the colleague by covering up their problems
 
 **Correct Answer:** B
 
@@ -2601,14 +2601,14 @@ D) Reducing any challenging aspects of work to prevent employee stress
 
 ## Question 174
 
-**Domain 7** | **KN37** | **Scored**
+**Domain 8** | **KN48** | **Scored**
 
-An organizational psychologist is conducting a needs assessment before designing a training program to address performance deficiencies in customer service. According to systematic training design models, which levels of analysis should be conducted as part of the needs assessment?
+A psychologist becomes aware that they have made an error in judgment that may have negatively affected a client's treatment. According to ethical principles, the psychologist should:
 
-A) Assuming training is needed without any assessment of the actual causes of performance problems
-B) Conducting organizational analysis (strategic needs), task analysis (job requirements), and person analysis (who needs training and in what areas) to determine if training is the appropriate intervention
-C) Only surveying employees about what training topics sound interesting to them
-D) Copying training programs from other organizations without considering organizational context
+A) Hide the error to avoid potential liability
+B) Acknowledge the error, discuss it with the client, take steps to minimize harm, and ensure the client receives appropriate care going forward
+C) Blame the client for the error
+D) Immediately terminate the professional relationship
 
 **Correct Answer:** B
 
@@ -2616,14 +2616,14 @@ D) Copying training programs from other organizations without considering organi
 
 ## Question 175
 
-**Domain 7** | **KN35** | **Scored**
+**Domain 8** | **KN48** | **Scored**
 
-An I-O psychologist is evaluating an assessment center used for selecting managers. The assessment center includes in-basket exercises, leaderless group discussions, role-plays, and case analysis. According to research on assessment centers, which factor is most critical for the validity and effectiveness of this method?
+A psychologist is working in a multidisciplinary team and observes that a member of another discipline (e.g., a social worker or psychiatrist) appears to be practicing in a manner that conflicts with professional standards and potentially harms clients. The psychologist should:
 
-A) Using exercises with no relationship to actual job requirements
-B) Job-related exercises, trained assessors who observe and rate behavior systematically, clear behavioral dimensions derived from job analysis, and integration of data across exercises
-C) Allowing assessors to make intuitive judgments without structured rating systems
-D) Using only one exercise type rather than multiple assessment methods
+A) Ignore the situation as it involves a different profession
+B) Address concerns through appropriate channels, which may include discussing with the individual, consulting with supervisors, or reporting to relevant authorities depending on the severity and nature of the concern
+C) Immediately report to law enforcement regardless of the situation
+D) Take no action as interprofessional issues are not the psychologist's responsibility
 
 **Correct Answer:** B
 
@@ -2631,14 +2631,14 @@ D) Using only one exercise type rather than multiple assessment methods
 
 ## Question 176
 
-**Domain 8** | **KN39** | **Scored**
+**Domain 8** | **KN48** | **Scored**
 
-A forensic psychologist is evaluating a defendant's mental state at the time of the offense for an insanity defense evaluation. The defendant cannot remember the events surrounding the alleged crime due to claimed amnesia. According to forensic assessment best practices for criminal responsibility evaluations, how should the psychologist proceed?
+A psychologist provides supervision to a psychology trainee and becomes aware that the trainee has violated client confidentiality by discussing a case with inappropriate level of detail at a social gathering. The supervisor should:
 
-A) Conclude that amnesia automatically establishes lack of criminal responsibility
-B) Gather collateral information from multiple sources (e.g., police reports, witness statements, medical records), assess the defendant's mental state through other means, evaluate the credibility and nature of the amnesia claim, and address in the report how amnesia affects the evaluation
-C) Refuse to conduct the evaluation since the defendant cannot self-report
-D) Accept the defendant's claim of amnesia without any corroboration or investigation
+A) Ignore the incident as trainees are learning
+B) Address the violation with the trainee, provide education on confidentiality, document the incident, implement corrective action, and monitor future practice
+C) Immediately terminate the supervision without discussion
+D) Report the trainee to the licensing board without first addressing it in supervision
 
 **Correct Answer:** B
 
@@ -2646,14 +2646,14 @@ D) Accept the defendant's claim of amnesia without any corroboration or investig
 
 ## Question 177
 
-**Domain 8** | **KN40** | **Scored**
+**Domain 8** | **KN48** | **Field Test**
 
-A psychologist is conducting a child custody evaluation and learns that one parent is attempting to influence the child's statements about preferences and about allegations against the other parent. According to best practices in custody evaluation, how should the psychologist address this potential coaching?
+A psychologist receives a request to provide supervision to a supervisee who lives in a different state. The psychologist should consider which factors before agreeing to provide supervision?
 
-A) Accept the child's coached statements at face value without investigating their origin
-B) Use multiple data sources and methods to assess family dynamics, consider possible coaching while avoiding premature conclusions, interview the child using developmentally appropriate and non-leading questions, observe parent-child interactions, and assess all relevant factors beyond the child's stated preferences
-C) Immediately recommend against custody for the parent suspected of coaching without thorough evaluation
-D) Ignore the child's statements entirely if any possibility of coaching exists
+A) Only whether the psychologist has time available
+B) Competence to provide supervision in the relevant area, applicable regulations in both states, method of supervision delivery, and whether the arrangement meets requirements for licensure in the supervisee's state
+C) Supervision can be provided across state lines without any special considerations
+D) Only the supervisee's preference for supervision style
 
 **Correct Answer:** B
 
@@ -2661,14 +2661,14 @@ D) Ignore the child's statements entirely if any possibility of coaching exists
 
 ## Question 178
 
-**Domain 8** | **KN41** | **Scored**
+**Domain 9** | **KN49** | **Scored**
 
-A forensic psychologist is assessing risk of sexual offense recidivism in an individual being considered for civil commitment following completion of a criminal sentence. According to evidence-based practice in violence risk assessment, which approach would provide the most valid and defensible assessment?
+A community psychologist designs an intervention to reduce youth violence in a high-crime neighborhood. The intervention includes individual counseling for at-risk youth, parent training, school-based programs, and coordination with community organizations. This approach reflects which level of intervention?
 
-A) Relying exclusively on unstructured clinical judgment without use of actuarial tools or structured assessment
-B) Using structured professional judgment integrating actuarial risk assessment instruments validated for sexual offenders, empirically-supported risk factors, protective factors, and case-specific considerations to inform risk management
-C) Making predictions of future behavior with absolute certainty based on past behavior alone
-D) Using assessment tools designed for general violence without consideration of sexual offense-specific factors
+A) Individual level only
+B) Multiple ecological levels including individual, family, school, and community systems
+C) Only school-based intervention
+D) Only community-level intervention without individual components
 
 **Correct Answer:** B
 
@@ -2676,14 +2676,14 @@ D) Using assessment tools designed for general violence without consideration of
 
 ## Question 179
 
-**Domain 8** | **KN39** | **Scored**
+**Domain 9** | **KN49** | **Scored**
 
-A psychologist is conducting a competency to stand trial evaluation of a defendant with schizophrenia who is experiencing active psychotic symptoms including paranoid delusions about the judge and prosecutor. According to legal standards for competency, which abilities must the psychologist assess?
+A psychologist working with underserved communities recognizes that traditional individual therapy models may not be appropriate or accessible for all populations. According to principles of cultural competence and social justice in community psychology, the psychologist should:
 
-A) Only whether the defendant has a mental illness diagnosis, without functional assessment
-B) The defendant's ability to understand the nature and object of the proceedings, consult with counsel with a reasonable degree of rational understanding, and appreciate their role in the proceedings
-C) Whether the defendant is mentally ill at the time of evaluation, which automatically determines competency
-D) Only whether the defendant was competent at the time of the alleged offense
+A) Insist that all clients adapt to traditional therapy models
+B) Adapt services to be culturally responsive, address systemic barriers to access, and consider community-based and preventive approaches
+C) Only provide services to mainstream populations
+D) Assume all members of a cultural group have identical needs
 
 **Correct Answer:** B
 
@@ -2691,14 +2691,14 @@ D) Only whether the defendant was competent at the time of the alleged offense
 
 ## Question 180
 
-**Domain 8** | **KN42** | **Scored**
+**Domain 9** | **KN49** | **Scored**
 
-A forensic psychologist is evaluating psychological damages in a personal injury case where the plaintiff claims PTSD following a workplace accident. The defense argues the plaintiff had preexisting psychological problems. According to forensic assessment best practices, how should the psychologist address the issue of pre-existing conditions versus damages caused by the incident in question?
+A community psychologist is conducting a needs assessment in a community that has experienced recent trauma from a natural disaster. The assessment should include:
 
-A) Attribute all current symptoms to pre-existing conditions without assessing the incident's impact
-B) Conduct comprehensive assessment including review of pre-incident records, assessment of current functioning, psychological testing, collateral interviews, and use of differential diagnosis to apportion damages between pre-existing and incident-related factors
-C) Attribute all symptoms to the incident regardless of documented pre-existing problems
-D) Refuse to conduct the evaluation because pre-existing conditions make assessment impossible
+A) Only surveys administered to community members
+B) Multiple methods including surveys, interviews, focus groups, review of existing data, and input from diverse community stakeholders
+C) Only the psychologist's observations without community input
+D) Assumptions based on other communities' experiences
 
 **Correct Answer:** B
 
@@ -2706,14 +2706,14 @@ D) Refuse to conduct the evaluation because pre-existing conditions make assessm
 
 ## Question 181
 
-**Domain 8** | **KN43** | **Scored**
+**Domain 9** | **KN49** | **Scored**
 
-A psychologist is conducting an evaluation for an individual's testamentary capacity (ability to make a valid will) after the individual has died. The evaluation is retrospective based on records and collateral interviews. According to forensic best practices for testamentary capacity evaluations, what must the psychologist assess?
+Research on community-based prevention programs has found that effective prevention interventions typically include which characteristics?
 
-A) Only whether the deceased had any mental illness diagnosis, which automatically determines capacity
-B) Whether at the time of will execution the deceased understood the nature of making a will, knew the extent of their property, knew the natural objects of their bounty, and understood the disposition they were making
-C) Only the opinions of family members about whether they agree with the will's provisions
-D) Current mental status of living relatives rather than the deceased person's functioning at relevant time
+A) One-time educational presentations only
+B) Theory-based, multi-component approaches that are culturally adapted and involve community stakeholders in design and implementation
+C) Generic programs applied identically across all communities
+D) Programs designed without any theoretical foundation
 
 **Correct Answer:** B
 
@@ -2721,14 +2721,14 @@ D) Current mental status of living relatives rather than the deceased person's f
 
 ## Question 182
 
-**Domain 8** | **KN44** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A forensic psychologist is evaluating malingering in a defendant claiming amnesia for the alleged crime and cognitive impairment. According to best practices for assessment of response style and malingering in forensic contexts, which evaluation approach would be most appropriate?
+A psychologist is developing a program to reduce health disparities in a community with limited access to healthcare. The program includes health education, connection to resources, advocacy for policy changes, and partnership with community organizations. This approach reflects which principle of community psychology?
 
-A) Accepting the defendant's self-report of symptoms without any validity assessment
-B) Using multiple symptom validity tests and performance validity tests, examining consistency across data sources, evaluating motivation to malinger, considering base rates, and applying established criteria such as the Slick criteria
-C) Concluding anyone involved in litigation is malingering without individual assessment
-D) Using only one measure to detect malingering and making definitive conclusions from that alone
+A) Individual deficit model focusing only on personal responsibility
+B) Ecological and systems perspective addressing individual, social, and structural factors
+C) Medical model focusing only on disease treatment
+D) Approach focused solely on changing individual behavior without addressing systemic factors
 
 **Correct Answer:** B
 
@@ -2736,14 +2736,14 @@ D) Using only one measure to detect malingering and making definitive conclusion
 
 ## Question 183
 
-**Domain 8** | **KN39** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A psychologist is conducting a forensic evaluation and the retaining attorney asks the psychologist to exclude certain findings from the report that are unfavorable to the attorney's case. According to ethical guidelines for forensic practice, how should the psychologist respond to this request?
+A psychologist working with refugee and immigrant populations must be aware of which factors that may impact mental health and service utilization?
 
-A) Comply with the attorney's request since the attorney is the client and paying for services
-B) Refuse to alter or exclude findings based on whether they favor one side, explain obligations to provide objective and complete opinions, and include all relevant findings in the report
-C) Exclude the unfavorable findings but note in the report that some information was omitted
-D) Modify the findings to appear more ambiguous rather than clearly unfavorable
+A) Only language barriers
+B) Trauma and loss experiences, acculturation stress, discrimination, family separation, barriers to access, and cultural beliefs about mental health
+C) Refugees and immigrants have no unique mental health needs
+D) Only providing translation services is necessary
 
 **Correct Answer:** B
 
@@ -2751,14 +2751,14 @@ D) Modify the findings to appear more ambiguous rather than clearly unfavorable
 
 ## Question 184
 
-**Domain 8** | **KN40** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A forensic psychologist is evaluating a parent's psychological functioning in a child protection case where there are allegations of child neglect due to the parent's substance use and mental health issues. According to best practices in child protection evaluations, which assessment approach would provide the most relevant information?
+According to the APA Guidelines on Multicultural Education, Training, Research, Practice, and Organizational Change, culturally competent psychologists should:
 
-A) Only assessing the parent's general psychological functioning without relating it to parenting capacity
-B) Assessing the parent's psychological functioning and relating it specifically to parenting capacity, ability to meet children's needs, amenability to intervention, and protective factors, while observing parent-child interactions
-C) Making recommendations about parental rights based solely on diagnosis without functional assessment
-D) Advocating for the agency's position rather than providing objective assessment
+A) Treat all clients identically regardless of cultural background
+B) Develop awareness of their own cultural values and biases, knowledge of clients' worldviews, and culturally appropriate intervention skills
+C) Assume that race and ethnicity are the only important cultural factors
+D) Avoid discussing cultural differences with clients
 
 **Correct Answer:** B
 
@@ -2766,14 +2766,14 @@ D) Advocating for the agency's position rather than providing objective assessme
 
 ## Question 185
 
-**Domain 8** | **KN39** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A psychologist is asked to evaluate a defendant for mental state at the time of offense (insanity defense). The alleged crime occurred two years ago and the defendant has received psychiatric treatment since then that has significantly improved their mental state. According to forensic assessment best practices, how should the psychologist approach this retrospective evaluation?
+A psychologist provides services to clients from a culture where mental health stigma is high and family involvement in treatment is expected. The psychologist should:
 
-A) Only assess current mental status since retrospective assessment is impossible
-B) Gather extensive collateral information from the time of the offense (police reports, witness statements, jail records, prior treatment records), conduct detailed interview about the defendant's mental state at the relevant time, consider the defendant's explanation, and form opinion about functioning at the time of offense despite subsequent changes
-C) Assume current mental status is identical to mental status two years ago
-D) Refuse to conduct retrospective evaluations under any circumstances
+A) Refuse to involve family as it violates Western models of individual therapy
+B) Adapt treatment to include culturally appropriate family involvement while maintaining ethical standards, and address stigma in a culturally sensitive manner
+C) Insist clients adopt Western attitudes toward mental health
+D) Assume family involvement is always inappropriate
 
 **Correct Answer:** B
 
@@ -2781,14 +2781,14 @@ D) Refuse to conduct retrospective evaluations under any circumstances
 
 ## Question 186
 
-**Domain 8** | **KN41** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A forensic psychologist is conducting a violence risk assessment for an individual's release from psychiatric hospitalization following a violence-related commitment. According to evidence-based practice in risk assessment, which factors should be integrated into the risk formulation?
+Research on health disparities has found that certain populations experience disproportionately higher rates of chronic diseases and mental health problems. These disparities are primarily attributed to:
 
-A) Only static historical risk factors such as past violence, without consideration of current clinical factors
-B) Integration of static risk factors (e.g., violence history, age at first violence), dynamic risk factors (e.g., current symptoms, substance use, treatment adherence), and protective factors (e.g., social support, insight) with risk management planning
-C) Only the clinician's intuitive sense of whether the individual seems dangerous
-D) Demographic variables alone without individual clinical assessment
+A) Genetic differences between racial groups
+B) Social determinants of health including poverty, discrimination, limited access to healthcare, environmental factors, and chronic stress
+C) Personal choices alone with no systemic factors
+D) Cultural beliefs that prevent health-seeking behavior
 
 **Correct Answer:** B
 
@@ -2796,14 +2796,14 @@ D) Demographic variables alone without individual clinical assessment
 
 ## Question 187
 
-**Domain 8** | **KN39** | **Field Test**
+**Domain 9** | **KN50** | **Scored**
 
-A psychologist is evaluating a defendant for diminished capacity in a jurisdiction where this is a potential defense. The defendant argues that while they knew their actions were wrong (precluding an insanity defense), mental illness impaired their ability to form the specific intent required for the charged crime. How should the psychologist approach this evaluation?
+A psychologist conducting research with an indigenous community must consider ethical issues beyond standard informed consent, including:
 
-A) Use the same evaluation approach as for insanity without considering the different legal standard
-B) Understand the specific legal standard and required mental states for the charged offense, assess the defendant's mental state at the relevant time, evaluate the relationship between any mental disorder and the defendant's ability to form the required intent, and address the specific legal question
-C) Provide only a general psychological evaluation without relating findings to the legal issue
-D) Conclude that any mental illness automatically establishes diminished capacity
+A) Only obtaining individual consent as in any research
+B) Community consultation and consent, respect for cultural protocols, community ownership of data, and ensuring research benefits the community
+C) Indigenous communities do not require any special considerations
+D) Only following standard university IRB procedures without cultural adaptations
 
 **Correct Answer:** B
 
@@ -2811,14 +2811,14 @@ D) Conclude that any mental illness automatically establishes diminished capacit
 
 ## Question 188
 
-**Domain 8** | **KN45** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A forensic psychologist is conducting a pre-sentencing evaluation where the defense attorney wants to present mitigating evidence related to the defendant's history of trauma, mental illness, and cognitive limitations. According to ethical practice in mitigation evaluations, what is the psychologist's appropriate role?
+A psychologist working with LGBTQ+ clients should be aware that which factors may contribute to mental health disparities in this population?
 
-A) Fabricate or exaggerate mitigating factors to help the defense attorney's case
-B) Conduct thorough evaluation of potentially mitigating factors with supporting documentation, present findings objectively and completely including both mitigating and aggravating information, and allow the court to weigh the factors appropriately
-C) Refuse to participate in mitigation evaluations since they are inherently biased
-D) Present only aggravating factors regardless of the referral question
+A) Sexual orientation and gender identity inherently cause mental illness
+B) Minority stress including discrimination, stigma, victimization, and lack of family and social support
+C) LGBTQ+ individuals have no unique mental health needs
+D) Only biological factors affect mental health in LGBTQ+ populations
 
 **Correct Answer:** B
 
@@ -2826,14 +2826,14 @@ D) Present only aggravating factors regardless of the referral question
 
 ## Question 189
 
-**Domain 8** | **KN46** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A psychologist is conducting a fitness-for-duty evaluation of a police officer following a critical incident (officer-involved shooting). The officer is experiencing trauma symptoms and the department needs to determine readiness to return to full duty. According to best practices for fitness-for-duty evaluations, which approach is most appropriate?
+A psychologist is providing therapy to a client whose cultural background includes beliefs about health and healing that differ from Western biomedical models. The most culturally responsive approach would be to:
 
-A) Advocate for the officer's return to duty regardless of clinical findings
-B) Conduct objective assessment of current psychological functioning, assess job-relevant abilities and limitations, consider organizational requirements for the position, provide recommendations about fitness and any conditions for return to duty
-C) Recommend immediate return to duty without assessment since trauma reactions are normal
-D) Recommend permanent disability for any officer who experiences trauma symptoms
+A) Dismiss the client's cultural beliefs as incorrect
+B) Explore and respect the client's beliefs, integrate appropriate cultural healing practices when possible, and work collaboratively within the client's worldview
+C) Insist the client adopt Western medical models exclusively
+D) Refer the client to only traditional healers without psychological intervention
 
 **Correct Answer:** B
 
@@ -2841,14 +2841,14 @@ D) Recommend permanent disability for any officer who experiences trauma symptom
 
 ## Question 190
 
-**Domain 8** | **KN43** | **Scored**
+**Domain 9** | **KN50** | **Scored**
 
-A forensic psychologist is asked to evaluate whether an elderly individual has capacity to manage their financial affairs. Family members disagree about whether a conservatorship is needed. According to best practices for civil capacity evaluations, which assessment approach would be most appropriate?
+According to the principle of cultural humility in psychological practice, psychologists should:
 
-A) Defer entirely to family members' opinions without independent assessment
-B) Assess cognitive abilities relevant to financial management (e.g., understanding of finances, calculation ability, judgment, susceptibility to undue influence), evaluate functional abilities through interview and possibly observation, review financial records, and relate findings to the specific legal standard
-C) Make determinations based only on age without individual assessment
-D) Apply the same standard used for competency to stand trial
+A) Assume they fully understand a culture after reading about it
+B) Engage in ongoing self-reflection, recognize the limits of their knowledge, and maintain an open, respectful attitude toward learning from clients about their experiences
+C) Treat cultural competence as a finite endpoint rather than ongoing process
+D) Rely solely on stereotypes about cultural groups
 
 **Correct Answer:** B
 
@@ -2856,29 +2856,29 @@ D) Apply the same standard used for competency to stand trial
 
 ## Question 191
 
-**Domain 8** | **KN40** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A psychologist is evaluating child sexual abuse allegations in a custody case. The alleged abuse reportedly occurred several years ago, there was no disclosure at the time, and there is no physical evidence. According to best practices for child sexual abuse evaluations, how should the psychologist approach this evaluation?
+A 33-year-old client reports experiencing periods of elevated mood lasting about 3 days during which she feels more energetic and productive, needs less sleep, and is more talkative than usual. However, these episodes do not significantly impair her functioning or require hospitalization. She also experiences periods of mild depressive symptoms. This presentation over the past two years is most consistent with which diagnosis?
 
-A) Conclude that absence of physical evidence or immediate disclosure proves no abuse occurred
-B) Conduct evaluation using forensically-sound interview techniques, assess multiple hypotheses, consider research on disclosure patterns and dynamics of abuse, evaluate credibility factors without presuming guilt or innocence, gather collateral information, and acknowledge limitations
-C) Use leading or suggestive questions to determine if abuse occurred
-D) Conclude that all allegations in custody disputes are false without evaluation
+A) Bipolar I Disorder
+B) Bipolar II Disorder
+C) Cyclothymic Disorder
+D) Major Depressive Disorder with anxious distress
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 192
 
-**Domain 8** | **KN41** | **Scored**
+**Domain 4** | **KN22** | **Scored**
 
-A forensic psychologist is conducting a risk assessment and must communicate findings and recommendations to the court. According to best practices for risk communication, which approach to reporting risk is most appropriate?
+A patient taking a selective serotonin reuptake inhibitor (SSRI) for depression reports developing symptoms including agitation, confusion, rapid heart rate, dilated pupils, muscle rigidity, and elevated body temperature. These symptoms are most concerning for which potentially serious adverse effect?
 
-A) Providing a categorical prediction of 'will' or 'will not' be violent with absolute certainty
-B) Communicating risk in probabilistic terms, identifying relevant risk and protective factors, relating findings to empirical research on violence risk, discussing limitations and sources of uncertainty, and providing risk management recommendations
-C) Providing only a risk score from an actuarial tool without interpretation or context
-D) Communicating risk using only vague, undefined terms like 'possible' without further specification
+A) Normal initial side effects that will resolve
+B) Serotonin syndrome requiring immediate medical attention
+C) Discontinuation syndrome from missing doses
+D) Allergic reaction to the medication
 
 **Correct Answer:** B
 
@@ -2886,29 +2886,29 @@ D) Communicating risk using only vague, undefined terms like 'possible' without 
 
 ## Question 193
 
-**Domain 8** | **KN42** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A psychologist is evaluating psychological damages in an employment discrimination case where the plaintiff claims that workplace harassment caused depression and anxiety. The defense argues the plaintiff's symptoms pre-existed the harassment. According to forensic best practices, which approach would most appropriately address causation?
+A 25-year-old graduate student seeks therapy reporting symptoms of worry, muscle tension, fatigue, difficulty concentrating, and sleep disturbance present for the past 8 months. She worries excessively about multiple domains including academic performance, finances, health, and relationships. She finds the worry difficult to control. What is the most appropriate diagnosis?
 
-A) Accept the plaintiff's attribution of all symptoms to the harassment without investigation of temporal relationships
-B) Review pre-incident functioning through records and collateral sources, establish temporal relationship between alleged harassment and symptom onset or exacerbation, consider alternative explanations, use differential diagnosis, and provide opinion on causation with appropriate caveats
-C) Attribute all symptoms to pre-existing conditions without considering the incident's potential contribution
-D) Refuse to address causation since it is impossible to determine with certainty
+A) Panic Disorder
+B) Obsessive-Compulsive Disorder
+C) Generalized Anxiety Disorder
+D) Social Anxiety Disorder
 
-**Correct Answer:** B
+**Correct Answer:** C
 
 ---
 
 ## Question 194
 
-**Domain 8** | **KN39** | **Scored**
+**Domain 4** | **KN19** | **Scored**
 
-A forensic psychologist is retained by the defense in a criminal case and conducts an evaluation concluding that the defendant does not meet criteria for the insanity defense. According to ethical guidelines for forensic practice, what are the psychologist's obligations regarding this finding?
+During cognitive therapy, a client with depression expresses the belief 'I am a complete failure because I didn't get the promotion I wanted.' The therapist helps the client recognize this as an example of which cognitive distortion?
 
-A) Alter the findings to support the defense attorney's preferred outcome
-B) Report the findings accurately to the retaining attorney even though they are unfavorable to that party's case, as the obligation is to provide objective findings
-C) Refuse to provide any report since the findings do not support the defense
-D) Modify the report to be more ambiguous about conclusions
+A) Personalization
+B) All-or-nothing thinking and overgeneralization
+C) Emotional reasoning
+D) Mental filtering
 
 **Correct Answer:** B
 
@@ -2916,14 +2916,14 @@ D) Modify the report to be more ambiguous about conclusions
 
 ## Question 195
 
-**Domain 8** | **KN40** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A psychologist is conducting a child custody evaluation and must assess parenting capacity of both parents who have different parenting styles and strengths. According to best practices in custody evaluation, which approach to assessment would be most appropriate?
+A 17-year-old high school student is brought to therapy by parents concerned about recent behavioral changes. The student has become socially withdrawn, shows decreased motivation, exhibits unusual speech patterns, and reports believing that classmates are plotting against him. Symptoms began 4 months ago. What diagnosis should be considered?
 
-A) Apply a rigid standard of 'perfect parenting' and recommend against custody for any parent with limitations
-B) Assess each parent's strengths and limitations, consider children's needs and preferences, evaluate parent-child relationships, assess each parent's ability to meet children's developmental needs, and focus recommendations on children's best interests rather than parent preference
-C) Make recommendations based primarily on the evaluator's personal values about parenting
-D) Recommend equal custody in all cases regardless of individual family circumstances
+A) Major Depressive Disorder
+B) Schizophreniform Disorder given the duration of symptoms
+C) Social Anxiety Disorder
+D) Adjustment Disorder
 
 **Correct Answer:** B
 
@@ -2931,14 +2931,14 @@ D) Recommend equal custody in all cases regardless of individual family circumst
 
 ## Question 196
 
-**Domain 8** | **KN43** | **Scored**
+**Domain 5** | **KN33** | **Field Test**
 
-A forensic psychologist is evaluating an individual for civil commitment based on mental illness and dangerousness to self or others. According to legal standards and best practices, which assessment factors are most relevant to this determination?
+A researcher conducting a study finds that the correlation between two variables is r = .32 with p < .05. This means that:
 
-A) Only the presence of mental illness diagnosis without functional assessment
-B) Assessment of presence of mental illness, functional impairment, current risk of harm to self or others, relationship between mental illness and risk, and need for treatment, all related to the specific jurisdiction's legal criteria
-C) Any history of mental health treatment automatically justifies commitment
-D) Personal opinion about whether the individual would benefit from treatment
+A) There is a strong causal relationship between the variables
+B) There is a statistically significant positive correlation of moderate strength, explaining about 10% of the variance
+C) The relationship is not meaningful because the p-value is too high
+D) One variable causes changes in the other variable
 
 **Correct Answer:** B
 
@@ -2946,14 +2946,14 @@ D) Personal opinion about whether the individual would benefit from treatment
 
 ## Question 197
 
-**Domain 8** | **KN39** | **Scored**
+**Domain 2** | **KN11** | **Scored**
 
-A forensic psychologist is conducting a Miranda rights comprehension evaluation for a defendant with intellectual disability who waived rights and confessed. According to best practices, which factors should be assessed to evaluate the validity of the Miranda waiver?
+A patient with a history of alcohol use disorder has been sober for 6 months but reports experiencing intense cravings when driving past the bar where he used to drink. This response illustrates which learning principle?
 
-A) Only whether the defendant was read the Miranda warnings, without assessing comprehension
-B) Assessment of the defendant's understanding of the rights (silence, attorney, use of statements), capacity to make a knowing and intelligent waiver, voluntariness of the waiver considering coercion or impaired judgment, and use of validated Miranda comprehension instruments
-C) Assume that intellectual disability automatically invalidates any waiver without individual assessment
-D) Assume that if the defendant verbally agreed to waive rights, comprehension is established
+A) Operant conditioning through negative reinforcement
+B) Classical conditioning where environmental cues have become associated with alcohol use
+C) Observational learning
+D) Habituation to alcohol-related stimuli
 
 **Correct Answer:** B
 
@@ -2961,14 +2961,14 @@ D) Assume that if the defendant verbally agreed to waive rights, comprehension i
 
 ## Question 198
 
-**Domain 8** | **KN40** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A psychologist is conducting an evaluation in a child custody case and one parent provides the psychologist with recordings they secretly made of the other parent interacting with the children. According to ethical guidelines for custody evaluations, how should the psychologist address this situation?
+A 50-year-old woman reports experiencing her first manic episode characterized by decreased need for sleep, grandiosity, increased goal-directed activity, and excessive involvement in risky activities lasting 10 days with significant impairment. She has a history of several major depressive episodes. What is the appropriate diagnosis?
 
-A) Use the recordings as primary evidence without questioning how they were obtained
-B) Consider the ethical and legal implications of how the information was obtained, consult regarding relevant laws about recording, be cautious about relying on potentially illegally obtained evidence, and address the behavior in the evaluation
-C) Ignore the recordings entirely regardless of their content
-D) Report the parent who made the recordings to law enforcement immediately without consideration of relevant laws
+A) Bipolar II Disorder
+B) Bipolar I Disorder, current episode manic
+C) Cyclothymic Disorder
+D) Major Depressive Disorder with mixed features
 
 **Correct Answer:** B
 
@@ -2976,14 +2976,14 @@ D) Report the parent who made the recordings to law enforcement immediately with
 
 ## Question 199
 
-**Domain 8** | **KN43** | **Scored**
+**Domain 4** | **KN19** | **Scored**
 
-A forensic psychologist is evaluating an individual's capacity to consent to treatment in a civil context where the person refuses recommended psychiatric medication. According to best practices for treatment capacity evaluations, which abilities must be assessed?
+A therapist using Acceptance and Commitment Therapy (ACT) helps a client with anxiety learn to notice anxious thoughts without trying to change or eliminate them, while committing to actions aligned with personal values. This approach primarily emphasizes which therapeutic process?
 
-A) Only whether the individual's decision agrees with what the clinician recommends
-B) The individual's ability to understand relevant information about the treatment, appreciate the information's significance to their own situation, reason about treatment options, and express a choice
-C) Whether the individual has any mental illness diagnosis, which automatically determines capacity
-D) Only whether the individual provides any reason for their decision, regardless of quality of reasoning
+A) Cognitive restructuring to change thought content
+B) Psychological flexibility through acceptance and values-based action
+C) Symptom reduction as the primary goal
+D) Analysis of unconscious conflicts
 
 **Correct Answer:** B
 
@@ -2991,14 +2991,14 @@ D) Only whether the individual provides any reason for their decision, regardles
 
 ## Question 200
 
-**Domain 9** | **KN47** | **Scored**
+**Domain 7** | **KN40** | **Scored**
 
-A community psychologist is designing a prevention program to reduce substance use among adolescents in a high-risk urban community. According to evidence-based principles of prevention science and community psychology, which approach would be most effective?
+A neuropsychological evaluation reveals that a patient can repeat a list of 7 digits forward immediately after hearing them, but can only repeat 3 digits backward. This pattern suggests difficulty with which cognitive function?
 
-A) Implementing a fear-based educational program warning about dangers of drugs without skills training
-B) Implementing a comprehensive, theory-based program targeting multiple levels (individual, family, peer, community), addressing risk and protective factors, using interactive skill-building, and involving community stakeholders in program design and implementation
-C) Showing graphic images of drug consequences without providing alternative coping strategies
-D) One-time assembly program with a speaker providing testimonials
+A) Long-term memory storage
+B) Working memory and mental manipulation of information
+C) Semantic memory
+D) Procedural memory
 
 **Correct Answer:** B
 
@@ -3006,14 +3006,14 @@ D) One-time assembly program with a speaker providing testimonials
 
 ## Question 201
 
-**Domain 9** | **KN48** | **Scored**
+**Domain 4** | **KN20** | **Scored**
 
-A psychologist is consulting with a community mental health center serving a low-income, ethnically diverse community. The center has low utilization rates despite high need in the community. According to community psychology principles regarding access to care and cultural competence, which approach would most effectively increase service utilization?
+A 14-year-old client meets criteria for major depressive disorder. Research on treating adolescent depression has found that which intervention is most effective?
 
-A) Assuming the community does not value mental health services and making no changes
-B) Conducting community needs assessment to understand barriers, adapting services to be culturally responsive, hiring diverse staff, addressing practical barriers (transportation, cost, hours), building trust through community engagement, and using community-based outreach
-C) Offering services only in English during traditional business hours without community input
-D) Requiring community members to adapt to existing services without organizational change
+A) Medication alone without psychotherapy
+B) Cognitive-behavioral therapy, with medication added if needed for moderate to severe depression
+C) Psychodynamic therapy exclusively
+D) No intervention as adolescent depression resolves spontaneously
 
 **Correct Answer:** B
 
@@ -3021,14 +3021,14 @@ D) Requiring community members to adapt to existing services without organizatio
 
 ## Question 202
 
-**Domain 9** | **KN47** | **Scored**
+**Domain 5** | **KN25** | **Scored**
 
-A psychologist is evaluating a primary prevention program designed to prevent depression in at-risk adolescents by teaching cognitive-behavioral skills before any symptoms develop. According to prevention science principles, what type of prevention does this represent and what evaluation approach would be most appropriate?
+A behavior analyst observes that a child's tantrum behavior occurs most frequently when the child is asked to complete difficult academic tasks and results in the child being sent out of the classroom. The function of the tantrum behavior is most likely:
 
-A) This is tertiary prevention; evaluation should assess reduction in symptom severity among already diagnosed individuals
-B) This is indicated prevention targeting high-risk individuals; evaluation should use randomized controlled trial with long-term follow-up measuring incidence of depressive episodes and symptom development compared to control group
-C) This is secondary prevention; evaluation should only assess immediate satisfaction with program
-D) Prevention programs cannot be evaluated scientifically
+A) Access to attention from adults
+B) Escape or avoidance of aversive academic demands
+C) Access to tangible items or preferred activities
+D) Automatic or sensory reinforcement
 
 **Correct Answer:** B
 
@@ -3036,14 +3036,14 @@ D) Prevention programs cannot be evaluated scientifically
 
 ## Question 203
 
-**Domain 9** | **KN49** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A psychologist is working with a community coalition addressing childhood obesity through environmental and policy changes. According to community psychology and health promotion principles, which intervention approach would most effectively create sustainable population-level change?
+A 40-year-old man reports that for the past year, he has been preoccupied with fears that he has a serious illness despite medical evaluations showing no significant pathology. He spends hours researching symptoms online, frequently seeks reassurance from doctors, and checks his body repeatedly for signs of disease. This presentation is most consistent with which diagnosis?
 
-A) Focusing exclusively on individual counseling about diet and exercise without environmental change
-B) Implementing multilevel intervention including policy changes (e.g., nutrition standards in schools), environmental modifications (e.g., safe play spaces, healthy food access), community education, and building community capacity for sustained efforts
-C) Providing information only without addressing structural barriers or creating environmental supports
-D) Targeting only parents without involving schools, communities, or policy makers
+A) Generalized Anxiety Disorder
+B) Illness Anxiety Disorder
+C) Somatic Symptom Disorder
+D) Obsessive-Compulsive Disorder
 
 **Correct Answer:** B
 
@@ -3051,14 +3051,14 @@ D) Targeting only parents without involving schools, communities, or policy make
 
 ## Question 204
 
-**Domain 9** | **KN50** | **Scored**
+**Domain 4** | **KN21** | **Scored**
 
-A psychologist is conducting program evaluation of an early intervention program for young children with developmental delays. The stakeholders need to know whether the program is achieving its intended outcomes. According to program evaluation methodology, which evaluation approach would best address accountability and outcome questions?
+Research examining the effectiveness of psychotherapy has consistently found that which factor accounts for the largest proportion of variance in therapy outcomes?
 
-A) Evaluating only stakeholder satisfaction without assessing child outcomes
-B) Summative outcome evaluation using standardized developmental assessments at intake and program completion, comparison to benchmarks or control group if possible, assessment of goal attainment, and analysis of factors associated with outcomes
-C) Only documenting services provided without assessing effects on participants
-D) Using only anecdotal reports from staff without systematic data collection
+A) The specific theoretical orientation or brand of therapy
+B) Client factors and extra-therapeutic events
+C) The specific techniques used
+D) The setting where therapy is provided
 
 **Correct Answer:** B
 
@@ -3066,14 +3066,14 @@ D) Using only anecdotal reports from staff without systematic data collection
 
 ## Question 205
 
-**Domain 9** | **KN51** | **Scored**
+**Domain 4** | **KN20** | **Scored**
 
-A psychologist is designing a community-based participatory research (CBPR) project examining mental health needs and service preferences in an immigrant community. According to CBPR principles, which approach to research design and implementation would be most appropriate?
+A child psychologist is conducting play therapy with a 6-year-old who has experienced trauma. The child repeatedly acts out scenes with dolls that appear to represent the traumatic event. From a trauma-informed perspective, the therapist should:
 
-A) The psychologist designs and implements the research independently without community input
-B) Establishing genuine partnership with community members and organizations, involving community in all research phases (question formulation, design, data collection, interpretation, dissemination), sharing power and resources, and ensuring research benefits the community
-C) Conducting research on the community without involving community members as partners
-D) Making all research decisions independently but informing the community of findings after completion
+A) Immediately stop the play as it is retraumatizing
+B) Allow and facilitate the play as a way for the child to process the trauma at their own pace while ensuring safety
+C) Force the child to verbally describe the trauma instead
+D) Ignore the play and redirect to other activities
 
 **Correct Answer:** B
 
@@ -3081,14 +3081,14 @@ D) Making all research decisions independently but informing the community of fi
 
 ## Question 206
 
-**Domain 9** | **KN47** | **Scored**
+**Domain 5** | **KN33** | **Scored**
 
-A school psychologist is implementing a school-wide positive behavioral interventions and supports (PBIS) system as a tiered prevention approach. According to multi-tiered systems of support (MTSS) models, how should the three tiers of intervention be structured?
+A researcher is using a multiple baseline design across three participants to evaluate the effectiveness of a behavioral intervention. What feature of this design allows the researcher to demonstrate experimental control and rule out alternative explanations?
 
-A) Providing intensive interventions to all students regardless of need level
-B) Tier 1 provides universal supports for all students (e.g., school-wide expectations, teaching behavioral skills); Tier 2 provides targeted interventions for at-risk students (e.g., check-in/check-out, social skills groups); Tier 3 provides intensive individualized interventions for students with significant needs
-C) Providing no universal supports and waiting until students demonstrate significant problems before intervening
-D) Using the same intervention for all students regardless of need level or response to intervention
+A) The intervention is introduced at the same time for all participants
+B) The intervention is introduced at different times for each participant, with changes in behavior occurring only after intervention is introduced
+C) Only one participant receives the intervention
+D) No baseline data is collected
 
 **Correct Answer:** B
 
@@ -3096,14 +3096,14 @@ D) Using the same intervention for all students regardless of need level or resp
 
 ## Question 207
 
-**Domain 9** | **KN49** | **Scored**
+**Domain 3** | **KN15** | **Scored**
 
-A community psychologist is working to address intimate partner violence in a community by building a coordinated community response involving multiple systems. According to ecological systems theory and community collaboration principles, which approach would be most effective?
+A client reports experiencing persistent depressive symptoms including low mood, low energy, poor concentration, and feelings of hopelessness for the past 3 years, present more days than not. The symptoms have never been absent for more than 2 months at a time. Functioning is impaired but the client manages to maintain employment. What diagnosis is most appropriate?
 
-A) Working only with victim services without involving other systems
-B) Developing coordinated response involving law enforcement, courts, victim services, healthcare, social services, and community organizations; establishing communication protocols; providing cross-training; and addressing the issue at individual, relationship, community, and societal levels
-C) Assuming intimate partner violence is only an individual or relationship problem without community-level factors
-D) Working in isolation within a single system without coordination
+A) Major Depressive Disorder, recurrent
+B) Persistent Depressive Disorder (Dysthymia)
+C) Cyclothymic Disorder
+D) Adjustment Disorder with Depressed Mood
 
 **Correct Answer:** B
 
@@ -3111,14 +3111,14 @@ D) Working in isolation within a single system without coordination
 
 ## Question 208
 
-**Domain 9** | **KN48** | **Scored**
+**Domain 9** | **KN49** | **Scored**
 
-A psychologist is conducting a needs assessment to inform development of mental health prevention programming for a specific community. According to community needs assessment methodology, which approach would provide the most comprehensive and valid information?
+A psychologist develops an intervention program for at-risk youth that targets multiple risk factors including academic difficulties, family dysfunction, peer influences, and community factors. Program evaluation shows positive outcomes. This approach is most consistent with which prevention framework?
 
-A) Using only the psychologist's assumptions about community needs without systematic assessment
-B) Using multiple methods including key informant interviews, community surveys, analysis of archival data (e.g., epidemiological data, service utilization), community forums, and asset mapping to understand both needs and strengths
-C) Assuming all communities have identical needs and using a standardized program without local adaptation
-D) Consulting only with agency administrators without input from community members or service recipients
+A) Single-factor model focusing only on individual change
+B) Ecological or comprehensive approach addressing multiple systems
+C) Medical model focusing on pathology
+D) Waiting for problems to develop before intervening
 
 **Correct Answer:** B
 
@@ -3126,14 +3126,14 @@ D) Consulting only with agency administrators without input from community membe
 
 ## Question 209
 
-**Domain 9** | **KN48** | **Scored**
+**Domain 4** | **KN20** | **Scored**
 
-A psychologist is implementing trauma-informed care principles in a community agency serving children and families. According to trauma-informed care frameworks, which organizational practices would be most essential to implement?
+A 30-year-old woman reports that she experienced a traumatic sexual assault 3 months ago and since then has had recurrent intrusive memories, nightmares, avoidance of reminders, negative thoughts about herself and the world, and heightened startle response. She meets full criteria for PTSD. What is the most appropriate trauma-focused treatment approach?
 
-A) Using only trauma-specific treatment interventions without changing organizational culture
-B) Implementing organizational practices that recognize trauma prevalence and impact, emphasize safety, trustworthiness, peer support, collaboration, empowerment, and cultural humility; training all staff; creating trauma-informed policies; and avoiding retraumatization
-C) Assuming only clinical staff need trauma training without organizational change
-D) Focusing exclusively on identifying trauma history without creating safe and supportive environment
+A) Supportive counseling without trauma processing
+B) Trauma-focused cognitive behavioral therapy or EMDR that includes processing the traumatic memory
+C) Medication only without therapy
+D) Advising her to avoid thinking about the trauma entirely
 
 **Correct Answer:** B
 
@@ -3141,14 +3141,14 @@ D) Focusing exclusively on identifying trauma history without creating safe and 
 
 ## Question 210
 
-**Domain 9** | **KN50** | **Scored**
+**Domain 3** | **KN18** | **Scored**
 
-A psychologist is evaluating the implementation fidelity of an evidence-based bullying prevention program that has been adapted for use in a rural school. According to implementation science principles, which evaluation approach would best assess whether the program is being delivered as intended?
+A psychological test has a reliability coefficient of .65. What does this indicate about the test?
 
-A) Assuming fidelity without any monitoring or assessment
-B) Systematic assessment of adherence to core program components, dosage (amount of intervention delivered), quality of delivery, participant responsiveness, and program differentiation, using multiple methods such as observation, self-report, and review of program materials
-C) Only assessing whether teachers report liking the program without observing implementation
-D) Measuring only outcomes without assessing implementation processes
+A) The test has excellent reliability
+B) The test has marginal reliability, with considerable measurement error, and may not be suitable for making important decisions about individuals
+C) The test is valid
+D) The test has perfect reliability
 
 **Correct Answer:** B
 
@@ -3156,14 +3156,14 @@ D) Measuring only outcomes without assessing implementation processes
 
 ## Question 211
 
-**Domain 9** | **KN51** | **Scored**
+**Domain 4** | **KN23** | **Scored**
 
-A psychologist is working with a community to build capacity for addressing mental health needs through community-based approaches rather than relying solely on professional services. According to community psychology empowerment principles, which approach would best build sustainable community capacity?
+A couple in therapy demonstrates a pattern where one partner pursues connection and discussion of relationship issues while the other partner withdraws. The therapist helps them understand this pursue-withdraw dynamic and develop new interaction patterns. This intervention is most consistent with which approach?
 
-A) Providing all services professionally without developing community resources or leadership
-B) Working collaboratively with community to identify assets, develop natural helpers and peer support networks, build community leadership, transfer knowledge and skills, create sustainable community-controlled resources, and gradually reduce professional involvement as community capacity increases
-C) Assuming communities lack any assets or capacity to address their own needs
-D) Creating permanent dependence on the psychologist rather than building community capacity
+A) Behavioral couples therapy focusing only on behavior change
+B) Emotionally Focused Therapy (EFT) or systemic couples therapy addressing interaction patterns
+C) Individual therapy for each partner separately
+D) Psychodynamic exploration of childhood issues only
 
 **Correct Answer:** B
 
@@ -3171,14 +3171,29 @@ D) Creating permanent dependence on the psychologist rather than building commun
 
 ## Question 212
 
-**Domain 9** | **KN47** | **Field Test**
+**Domain 9** | **KN50** | **Scored**
 
-A psychologist is consulting with a school district implementing social-emotional learning (SEL) as a universal prevention strategy. According to evidence-based SEL frameworks and implementation research, which approach would most effectively promote student social-emotional competencies?
+Research on ethnic and racial identity development has found that a strong, positive ethnic identity is generally associated with which outcomes?
 
-A) Purchasing an SEL curriculum without implementation support, training, or evaluation
-B) Implementing evidence-based SEL curriculum with explicit instruction in self-awareness, self-management, social awareness, relationship skills, and responsible decision-making; providing teacher training and coaching; creating supportive school climate; and monitoring implementation and outcomes
-C) Assuming that social-emotional skills develop without explicit instruction or support
-D) Implementing SEL only in response to student behavioral problems rather than as universal prevention
+A) Increased intergroup conflict and decreased adjustment
+B) Better psychological adjustment, higher self-esteem, and resilience against discrimination
+C) Inability to function in mainstream society
+D) No relationship with psychological outcomes
+
+**Correct Answer:** B
+
+---
+
+## Question 213
+
+**Domain 5** | **KN25** | **Scored**
+
+A school-based intervention implements a token economy system where students earn points for demonstrating positive behaviors such as following classroom rules, completing assignments, and helping peers. Points can be exchanged for privileges or small rewards. This intervention is based primarily on which principle?
+
+A) Classical conditioning
+B) Operant conditioning using positive reinforcement
+C) Observational learning exclusively
+D) Negative punishment
 
 **Correct Answer:** B
 
