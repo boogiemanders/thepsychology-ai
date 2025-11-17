@@ -232,6 +232,12 @@ export async function replaceMetaphors(
 
 Student's Interests: ${userInterests}
 
+IMPORTANT: If the student mentions media/pop culture (like "The Office", "Star Wars", "Harry Potter", etc.), interpret these as the well-known TV shows, movies, or franchises - NOT literal meanings. For example:
+- "The Office" = the popular TV comedy series about office workers
+- "Star Wars" = the science fiction film franchise
+- "Harry Potter" = the fantasy book/film series
+- etc.
+
 Below are ${markedMetaphors.length} generic metaphors/analogies from the lesson. Replace each one with a version that relates to the student's interests.
 
 Generic Metaphors:
@@ -240,6 +246,7 @@ ${metaphorList}
 Instructions:
 - Keep the same educational purpose and clarity
 - Make it relatable to their interests: ${userInterests}
+- Use specific characters, scenes, or concepts from their mentioned shows/movies/books
 - Keep the same length (don't make them longer)
 - Return ONLY the replacement metaphors, numbered 1-${markedMetaphors.length}
 - Do NOT include any other text or explanation
