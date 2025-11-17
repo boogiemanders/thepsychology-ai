@@ -51,34 +51,10 @@ function parseFrontmatter(
 
 /**
  * Get the domain folder name from domain
- * Maps domain names to their actual folder names
+ * Returns the domain name as-is to match eppp-reference folder structure
  */
 function getDomainFolder(domain: string): string {
-  // Domain folder mapping to handle variations in domain names
-  const domainMap: Record<string, string> = {
-    '1-biological-bases': '1-biological-bases',
-    '2-cognitive-affective-bases': '2-cognitive-affective-bases',
-    '3-social': '3-social-psychology',  // Handle truncated version
-    '3-social-psychology': '3-social-psychology',
-    '3-cultural': '3-cultural-psychology',
-    '3-cultural-psychology': '3-cultural-psychology',
-    '3-5-6-organizational': '3-5-6-organizational-psychology',
-    '3-5-6-organizational-psychology': '3-5-6-organizational-psychology',
-    '4-growth-lifespan-development': '4-growth-lifespan-development',
-    '5-assessment': '5-assessment',
-    '5-diagnosis-psychopathology': '5-diagnosis-psychopathology',
-    '5-test-construction': '5-test-construction',
-    '6-treatment-intervention': '6-treatment-intervention',
-    '7-research-methods-statistics': '7-research-methods-statistics',
-    '8-ethical-legal-professional-issues': '8-ethical-legal-professional-issues',
-  }
-
-  const slug = domain
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-
-  return domainMap[slug] || slug
+  return domain
 }
 
 /**
@@ -97,7 +73,7 @@ export function loadTopicContent(
 
     const filePath = join(
       process.cwd(),
-      'topic-content',
+      'topic-content-v3-test',
       domainFolder,
       `${slug}.md`
     )
@@ -169,7 +145,7 @@ export function topicContentExists(
 
     const filePath = join(
       process.cwd(),
-      'topic-content',
+      'topic-content-v3-test',
       domainFolder,
       `${slug}.md`
     )
@@ -197,7 +173,7 @@ export function loadFullTopicContent(
 
     const filePath = join(
       process.cwd(),
-      'topic-content',
+      'topic-content-v3-test',
       domainFolder,
       `${slug}.md`
     )
