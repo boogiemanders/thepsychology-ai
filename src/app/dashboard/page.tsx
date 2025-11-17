@@ -471,6 +471,13 @@ export default function DashboardPage() {
         >
           {isExamDatePopoverOpen ? (
             <div className="relative w-full h-full pointer-events-auto overflow-hidden rounded-lg" onClick={(e) => e.stopPropagation()}>
+              {/* Close button */}
+              <button
+                onClick={() => setIsExamDatePopoverOpen(false)}
+                className="absolute top-2 right-2 z-10 w-6 h-6 flex items-center justify-center rounded-full bg-background/80 hover:bg-background border border-border text-foreground/60 hover:text-foreground transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
               <div className="flex items-center justify-center p-2 h-full">
                 <Calendar
                   mode="single"
