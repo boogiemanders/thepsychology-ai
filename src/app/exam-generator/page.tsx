@@ -257,15 +257,20 @@ export default function ExamGeneratorPage() {
         const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
         const { savePriorityRecommendation } = require('@/lib/priority-storage')
 
-        // Build wrong answers from selected answers
-        const wrongAnswers = Object.entries(selectedAnswers)
-          .map(([qIdx, answer]) => {
-            const q = questions[parseInt(qIdx)]
-            if (q && q.isScored !== false && answer !== q.correct_answer) {
+        // Build wrong answers from selected answers (including skipped questions)
+        const wrongAnswers = questions
+          .map((q, idx) => {
+            // Only count scored questions
+            if (q.isScored === false) return null
+
+            const answer = selectedAnswers[idx]
+
+            // Question was answered incorrectly OR skipped (no answer)
+            if (answer !== q.correct_answer) {
               return {
-                questionId: parseInt(qIdx) + 1,
+                questionId: idx + 1,
                 question: q.question,
-                selectedAnswer: answer,
+                selectedAnswer: answer || null, // null for skipped questions
                 correctAnswer: q.correct_answer,
                 relatedSections: [q.domain],
                 timestamp: Date.now(),

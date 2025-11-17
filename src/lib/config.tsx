@@ -64,10 +64,10 @@ export const siteConfig = {
     title: "Practitioner-built. Proven in clinics, classrooms, and real exams",
     companyLogos: [
       { id: 1, name: "David Geffen School of Medicine", src: "/dgsom.png" },
-      { id: 2, name: "UCLA Health", src: "/ucla.png" },
+      { id: 2, name: "NYU Langone Health", src: "/nyu.png" },
       { id: 3, name: "Montefiore", src: "/monte.png" },
       { id: 4, name: "Einstein", src: "/einstein.png" },
-      { id: 5, name: "NYU Langone Health", src: "/nyu.png" },
+      { id: 5, name: "UCLA Health", src: "/ucla.png" },
       { id: 6, name: "LIU Post", src: "/liu.png" },
       { id: 7, name: "Pratt Institute", src: "/pratt.png" },
       { id: 8, name: "Brooklyn Center for Psychotherapy", src: "/bcp.png" },
