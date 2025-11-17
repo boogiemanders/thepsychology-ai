@@ -51,26 +51,6 @@ Identify 3-5 specific content areas where focused study can have the biggest imp
 - Explain what understanding this concept enables (value-based framing)
 - Note which domains it connects to
 
-DO NOT include study actions here - those go in the Study Action Plan section.
-
-## Study Action Plan
-Consolidate ALL study actions into this single section. Organize by:
-
-**Immediate Actions (This Week)**
-- Specific, concrete study tasks
-- Resources to use
-- Estimated time commitments
-
-**Short-term Focus (Next 2-4 Weeks)**
-- Skill-building activities
-- Practice strategies
-- Progress checkpoints
-
-**Long-term Development**
-- Broader learning goals
-- Maintenance strategies
-- Test-taking skill development
-
 ## Your Path Forward
 Provide an encouraging, choice-based closing that:
 - Acknowledges both the current score AND the student's capacity for growth (dialectical)
