@@ -80,11 +80,18 @@ export function loadTopicContent(
       `${slug}.md`
     )
 
+    console.log(`[Topic Content Manager] Attempting to load from: ${filePath}`)
+    console.log(`[Topic Content Manager] Working directory: ${process.cwd()}`)
+    console.log(`[Topic Content Manager] Topic: "${topicName}", Domain: "${domain}"`)
+    console.log(`[Topic Content Manager] Computed slug: "${slug}", Domain folder: "${domainFolder}"`)
+
     const fileContent = readFileSync(filePath, 'utf-8')
     const { metadata, content } = parseFrontmatter(fileContent)
 
     // Remove personalization placeholder and keep as baseContent
     const baseContent = content.replace(/\n*## {{PERSONALIZED_EXAMPLES}}.*?(?=##|$)/s, '')
+
+    console.log(`[Topic Content Manager] ✅ Successfully loaded content for ${topicName}`)
 
     return {
       metadata: metadata as TopicContentMetadata,
@@ -92,7 +99,12 @@ export function loadTopicContent(
       baseContent: baseContent.trim(),
     }
   } catch (error) {
-    console.error(`Failed to load topic content for ${topicName}:`, error)
+    console.error(`[Topic Content Manager] ❌ Failed to load topic content for ${topicName}:`, error)
+    console.error(`[Topic Content Manager] Error details:`, {
+      name: (error as Error).name,
+      message: (error as Error).message,
+      code: (error as any).code,
+    })
     return null
   }
 }
