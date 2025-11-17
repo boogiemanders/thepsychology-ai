@@ -229,3 +229,159 @@ export function getImprovementSuggestions(performance: DomainPerformance[]): {
     }
   })
 }
+
+/**
+ * Calculate organizational psychology performance
+ * Org psych comprises 21% of the exam and is distributed across domains 2, 3, 5, 6
+ */
+export interface OrgPsychPerformance {
+  label: string
+  weight: number
+  totalQuestionsInOrgPsych: number
+  totalWrongInOrgPsych: number
+  percentageWrong: number
+  priorityScore: number // percentageWrong * weight
+  wrongSourceFiles: string[]
+}
+
+export function calculateOrgPsychPerformance(
+  wrongAnswers: WrongAnswer[] & { is_org_psych?: boolean; source_file?: string }[]
+): OrgPsychPerformance {
+  const ORG_PSYCH_WEIGHT = 0.21 // 21% of exam
+
+  const orgPsychWrong = wrongAnswers.filter((a) => a.is_org_psych === true)
+  const wrongSourceFiles = new Set(orgPsychWrong.map((a) => a.source_file).filter(Boolean))
+
+  // For calculation, we estimate total org psych questions per exam type
+  // Practice exam: 47 questions (38 scored + 9 unscored)
+  // Diagnostic exam: ~10 questions (distributed proportionally)
+  const totalOrgPsychQuestions = 47 // Default for practice exams
+
+  const percentageWrong = (orgPsychWrong.length / totalOrgPsychQuestions) * 100
+  const priorityScore = (percentageWrong / 100) * ORG_PSYCH_WEIGHT * 100
+
+  return {
+    label: "Organizational Psychology",
+    weight: ORG_PSYCH_WEIGHT * 100, // Convert to percentage
+    totalQuestionsInOrgPsych: totalOrgPsychQuestions,
+    totalWrongInOrgPsych: orgPsychWrong.length,
+    percentageWrong: Math.round(percentageWrong),
+    priorityScore: Math.round(priorityScore * 100) / 100,
+    wrongSourceFiles: Array.from(wrongSourceFiles),
+  }
+}
+
+/**
+ * Get top 3 priority areas from all 9 areas (8 domains + org psych)
+ * Ranks all areas by priority score and returns top 3
+ */
+export interface PriorityArea {
+  label: string
+  type: 'domain' | 'org_psych'
+  domainNumber?: number
+  weight: number
+  percentageWrong: number
+  priorityScore: number
+  wrongKNs?: WrongKNInfo[]
+  wrongSourceFiles?: string[]
+}
+
+export function getTopPriorityAreas(
+  domainPerformance: DomainPerformance[],
+  orgPsychPerformance: OrgPsychPerformance
+): PriorityArea[] {
+  // Convert domain performance to priority areas
+  const domainAreas: PriorityArea[] = domainPerformance.map((perf) => ({
+    label: perf.domainName,
+    type: 'domain',
+    domainNumber: perf.domainNumber,
+    weight: perf.domainWeight,
+    percentageWrong: perf.percentageWrong,
+    priorityScore: perf.priorityScore,
+  }))
+
+  // Add org psych as a priority area
+  const orgPsychArea: PriorityArea = {
+    label: orgPsychPerformance.label,
+    type: 'org_psych',
+    weight: orgPsychPerformance.weight,
+    percentageWrong: orgPsychPerformance.percentageWrong,
+    priorityScore: orgPsychPerformance.priorityScore,
+    wrongSourceFiles: orgPsychPerformance.wrongSourceFiles,
+  }
+
+  // Combine all 9 areas and rank by priority score
+  const allAreas = [...domainAreas, orgPsychArea]
+  return allAreas.sort((a, b) => b.priorityScore - a.priorityScore).slice(0, 3)
+}
+
+/**
+ * Main priority calculation function
+ * Called after exam completion to determine priority areas
+ */
+export function calculatePriorities(examResults: {
+  questions: Array<{
+    knId?: string
+    is_org_psych?: boolean
+    source_file?: string
+    correct_answer?: string
+    [key: string]: any
+  }>
+  selectedAnswers: Record<number, string>
+  totalQuestions: number
+}) {
+  // Convert exam results to wrong answers format
+  const wrongAnswers: Array<WrongAnswer & { is_org_psych?: boolean; source_file?: string }> = []
+
+  examResults.questions.forEach((question, index) => {
+    const selectedAnswer = examResults.selectedAnswers[index]
+    const isCorrect = selectedAnswer === question.correct_answer
+
+    if (!isCorrect && selectedAnswer) {
+      wrongAnswers.push({
+        questionId: index + 1,
+        is_org_psych: question.is_org_psych,
+        source_file: question.source_file,
+        ...question,
+      })
+    }
+  })
+
+  // Calculate domain and org psych performance
+  const domainPerformance = calculateDomainPerformance(wrongAnswers)
+  const orgPsychPerformance = calculateOrgPsychPerformance(wrongAnswers)
+
+  // Get top 3 priority areas (8 domains + org psych)
+  const topPriorityAreas = getTopPriorityAreas(domainPerformance, orgPsychPerformance)
+
+  // Get detailed recommendations for top 3 areas
+  const topPriorities: PriorityDomainRecommendation[] = topPriorityAreas
+    .filter((area) => area.type === 'domain')
+    .map((area) => {
+      const wrongKNs = getWrongKNsForDomain(area.domainNumber!, wrongAnswers)
+      const recommendedTopics = getRecommendedTopicsForDomain(area.domainNumber!, wrongKNs)
+
+      return {
+        domainNumber: area.domainNumber!,
+        domainName: area.label,
+        domainWeight: area.weight / 100,
+        percentageWrong: area.percentageWrong,
+        priorityScore: area.priorityScore,
+        wrongKNs,
+        recommendedTopicIds: recommendedTopics,
+        wrongSourceFiles: area.wrongSourceFiles,
+      }
+    })
+
+  // Get all domain results
+  const allResults = getAllDomainResults(wrongAnswers)
+
+  return {
+    topPriorities,
+    allResults,
+    topPriorityAreas,
+    orgPsychPerformance,
+    score: examResults.questions.length - wrongAnswers.length,
+    totalQuestions: examResults.totalQuestions,
+  }
+}

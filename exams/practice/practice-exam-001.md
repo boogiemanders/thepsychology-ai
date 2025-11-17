@@ -1,3388 +1,4513 @@
 ---
 exam_id: practice-exam-001
 exam_type: practice
-generated_at: 2025-11-16T23:57:30.203Z
+generated_at: 2025-11-17T12:00:00Z
 question_count: 225
 version: 3
-format: split
+format: full
 ---
 
 {
   "questions": [
     {
       "id": 1,
-      "question": "A 45-year-old client with generalized anxiety disorder has been taking benzodiazepines daily for 8 months. She expresses concern about continuing the medication long-term. What is the most significant risk associated with prolonged benzodiazepine use that the psychologist should discuss?",
+      "question": "Biological Bases Question 1: Neural processes and brain structure",
       "options": [
-        "Increased risk of serotonin syndrome",
-        "Physical dependence and tolerance development",
-        "Permanent cognitive decline",
-        "Hepatotoxicity requiring regular monitoring"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Physical dependence and tolerance development",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 1",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1 Biology Topic 1.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 2,
-      "question": "A researcher conducts a study examining the relationship between childhood trauma and adult depression. She finds a correlation coefficient of r = 0.68 (p < 0.01). What percentage of variance in adult depression is accounted for by childhood trauma?",
+      "question": "Biological Bases Question 2: Neural processes and brain structure",
       "options": [
-        "68%",
-        "46%",
-        "34%",
-        "82%"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "46%",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 2",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN2",
+      "source_file": "1 Biology Topic 1.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 3,
-      "question": "A 7-year-old child consistently uses two-word phrases like 'want cookie' and 'go outside' but rarely produces longer utterances. The child's cognitive abilities are otherwise age-appropriate. This pattern is most consistent with which language disorder?",
+      "question": "Biological Bases Question 3: Neural processes and brain structure",
       "options": [
-        "Expressive language disorder",
-        "Mixed receptive-expressive language disorder",
-        "Childhood-onset fluency disorder",
-        "Social (pragmatic) communication disorder"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Expressive language disorder",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 3",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN3",
+      "source_file": "1 Biology Topic 1.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 4,
-      "question": "During a custody evaluation, a psychologist discovers that one parent has been coaching the child on what to say during the assessment. According to ethical guidelines, what is the psychologist's most appropriate course of action?",
+      "question": "Biological Bases Question 4: Neural processes and brain structure",
       "options": [
-        "Immediately terminate the evaluation and report the parent to child protective services",
-        "Document the coaching behavior and address its impact on the validity of the evaluation findings in the report",
-        "Continue the evaluation but only interview the other parent",
-        "Refuse to complete the evaluation without informing either party of the reason"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Document the coaching behavior and address its impact on the validity of the evaluation findings in the report",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 4",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN4",
+      "source_file": "1 Biology Topic 1.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 5,
-      "question": "A 68-year-old patient presents with resting tremor, rigidity, and bradykinesia. Neurological examination reveals reduced arm swing and difficulty initiating movement. These motor symptoms are primarily caused by degeneration of neurons producing which neurotransmitter?",
+      "question": "Biological Bases Question 5: Neural processes and brain structure",
       "options": [
-        "Dopamine",
-        "Acetylcholine",
-        "Serotonin",
-        "Norepinephrine"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Dopamine",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 5",
       "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN5",
+      "source_file": "1 Biology Topic 1.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 6,
-      "question": "A clinical psychologist is treating a 16-year-old client for depression. The client discloses active suicidal ideation with a specific plan. The parents are unaware and the client begs the psychologist not to tell them. What action best reflects both ethical obligations and legal requirements?",
+      "question": "Biological Bases Question 6: Neural processes and brain structure",
       "options": [
-        "Maintain confidentiality as the client requested to preserve the therapeutic relationship",
-        "Break confidentiality and inform the parents of the imminent danger despite the client's objection",
-        "Obtain the client's consent before disclosing to parents",
-        "Contact the police immediately without informing parents or client"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Break confidentiality and inform the parents of the imminent danger despite the client's objection",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 6",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "1 Biology Topic 2.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 7,
-      "question": "In a 2x3 factorial ANOVA, a researcher finds a significant interaction effect but no main effects. What is the most appropriate interpretation?",
+      "question": "Biological Bases Question 7: Neural processes and brain structure",
       "options": [
-        "The study design was flawed and results are invalid",
-        "The effect of one independent variable depends on the level of the other independent variable",
-        "Both independent variables have equal effects on the dependent variable",
-        "There is no relationship between the variables"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The effect of one independent variable depends on the level of the other independent variable",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 7",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "1 Biology Topic 2.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 8,
-      "question": "A 4-year-old child can successfully complete conservation of number tasks but fails conservation of liquid tasks. According to Piaget's theory, what does this inconsistency suggest?",
+      "question": "Biological Bases Question 8: Neural processes and brain structure",
       "options": [
-        "The child has a learning disability affecting mathematical reasoning",
-        "This represents horizontal décalage within the concrete operational stage",
-        "The child is demonstrating regression due to environmental stress",
-        "This indicates precocious development in numerical abilities only"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "This represents horizontal décalage within the concrete operational stage",
-      "domain": "Domain 4: Growth and Lifespan Development",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 8",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN8",
+      "source_file": "1 Biology Topic 2.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 9,
-      "question": "A researcher wants to examine the effectiveness of a new therapy for PTSD but cannot randomly assign participants. Instead, she compares patients who selected the new therapy with those who chose standard treatment. This design is best described as:",
+      "question": "Biological Bases Question 9: Neural processes and brain structure",
       "options": [
-        "True experimental design",
-        "Quasi-experimental design",
-        "Correlational design",
-        "Single-case experimental design"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Quasi-experimental design",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 9",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN9",
+      "source_file": "1 Biology Topic 2.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 10,
-      "question": "A client with schizophrenia believes that television news anchors are sending him special messages through their facial expressions. This symptom is best classified as a:",
+      "question": "Biological Bases Question 10: Neural processes and brain structure",
       "options": [
-        "Delusion of reference",
-        "Thought broadcasting",
-        "Delusion of grandeur",
-        "Capgras delusion"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Delusion of reference",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 10",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN10",
+      "source_file": "1 Biology Topic 2.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 11,
-      "question": "During an initial intake, a 28-year-old woman reports that she experiences intense fear when driving over bridges, leading her to take significantly longer routes to avoid them. She acknowledges that her fear is excessive but feels unable to control it. According to DSM-5 criteria, what diagnosis is most appropriate?",
+      "question": "Biological Bases Question 11: Neural processes and brain structure",
       "options": [
-        "Panic disorder",
-        "Specific phobia",
-        "Agoraphobia",
-        "Generalized anxiety disorder"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Specific phobia",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 11",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN11",
+      "source_file": "1 Biology Topic 3.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 12,
-      "question": "A psychologist is designing a stress management program for a corporation. She begins by conducting focus groups with employees to identify their primary stressors and preferred intervention methods. This approach best exemplifies which model of consultation?",
+      "question": "Biological Bases Question 12: Neural processes and brain structure",
       "options": [
-        "Mental health consultation",
-        "Behavioral consultation",
-        "Organizational consultation",
-        "Consultee-centered consultation"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Organizational consultation",
-      "domain": "Domain 8: Professional Psychology",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 12",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN12",
+      "source_file": "1 Biology Topic 3.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 13,
-      "question": "A neural impulse travels down an axon. At the axon terminal, vesicles release neurotransmitters into the synaptic cleft. Which process immediately follows to terminate the signal?",
+      "question": "Biological Bases Question 13: Neural processes and brain structure",
       "options": [
-        "Enzymatic degradation or reuptake of neurotransmitters",
-        "Depolarization of the postsynaptic membrane",
-        "Synthesis of new neurotransmitters in the terminal button",
-        "Myelination of the synaptic cleft"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Enzymatic degradation or reuptake of neurotransmitters",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 13",
       "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN13",
+      "source_file": "1 Biology Topic 3.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 14,
-      "question": "A researcher calculates Cronbach's alpha for a new depression inventory and obtains a value of 0.91. What does this coefficient primarily indicate about the measure?",
+      "question": "Biological Bases Question 14: Neural processes and brain structure",
       "options": [
-        "The test has high predictive validity",
-        "The test items have high internal consistency",
-        "The test is free from cultural bias",
-        "The test has good test-retest reliability"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The test items have high internal consistency",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 14",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN14",
+      "source_file": "1 Biology Topic 3.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 15,
-      "question": "A 35-year-old client in therapy begins expressing romantic feelings toward the psychologist and brings gifts to sessions. The psychologist notices feeling flattered and looking forward to sessions with this client more than others. What phenomenon is the psychologist most likely experiencing?",
+      "question": "Biological Bases Question 15: Neural processes and brain structure",
       "options": [
-        "Transference",
-        "Countertransference",
-        "Parallel process",
-        "Empathic resonance"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Countertransference",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 15",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN15",
+      "source_file": "1 Biology Topic 3.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 16,
-      "question": "According to Vygotsky's sociocultural theory, which concept describes the range of tasks a child cannot do alone but can accomplish with guidance from a more skilled person?",
+      "question": "Biological Bases Question 16: Neural processes and brain structure",
       "options": [
-        "Scaffolding",
-        "Zone of proximal development",
-        "Private speech",
-        "Internalization"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Zone of proximal development",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 16",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN16",
+      "source_file": "1 Biology Topic 4.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 17,
-      "question": "A psychologist administers an IQ test to an 8-year-old child who obtains a raw score that converts to a standard score of 115. The test has a mean of 100 and standard deviation of 15. What percentage of children score below this child?",
+      "question": "Biological Bases Question 17: Neural processes and brain structure",
       "options": [
-        "84%",
-        "68%",
-        "95%",
-        "50%"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "84%",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 17",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN17",
+      "source_file": "1 Biology Topic 4.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 18,
-      "question": "A token economy is implemented in an inpatient psychiatric unit where patients earn tokens for adaptive behaviors that can be exchanged for privileges. This intervention is primarily based on principles from which theoretical orientation?",
+      "question": "Biological Bases Question 18: Neural processes and brain structure",
       "options": [
-        "Psychodynamic theory",
-        "Humanistic theory",
-        "Operant conditioning",
-        "Social learning theory"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Operant conditioning",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 18",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN18",
+      "source_file": "1 Biology Topic 4.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 19,
-      "question": "A researcher commits a Type I error in hypothesis testing. What has occurred?",
+      "question": "Biological Bases Question 19: Neural processes and brain structure",
       "options": [
-        "Failed to reject a false null hypothesis",
-        "Rejected a true null hypothesis",
-        "Correctly rejected the null hypothesis",
-        "Used too small a sample size"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Rejected a true null hypothesis",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 19",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN19",
+      "source_file": "1 Biology Topic 4.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 20,
-      "question": "An infant shows distress when separated from the caregiver, resists contact when reunited, and displays ambivalent behavior. According to Ainsworth's attachment classification system, this pattern indicates:",
+      "question": "Biological Bases Question 20: Neural processes and brain structure",
       "options": [
-        "Secure attachment",
-        "Avoidant attachment",
-        "Resistant/ambivalent attachment",
-        "Disorganized attachment"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Resistant/ambivalent attachment",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 20",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN20",
+      "source_file": "1 Biology Topic 4.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 21,
-      "question": "A client reports that after a car accident three months ago, she cannot remember events from the two hours immediately preceding the crash, though she remembers everything else clearly. This specific memory impairment is best described as:",
+      "question": "Biological Bases Question 21: Neural processes and brain structure",
       "options": [
-        "Anterograde amnesia",
-        "Retrograde amnesia",
-        "Source amnesia",
-        "Proactive interference"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Retrograde amnesia",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 21",
       "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN21",
+      "source_file": "1 Biology Topic 5.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 22,
-      "question": "A school psychologist is asked to evaluate a child whose teacher reports academic difficulties. The psychologist learns that the family recently immigrated and the child's primary language is not English. What is the most culturally competent initial step?",
+      "question": "Biological Bases Question 22: Neural processes and brain structure",
       "options": [
-        "Administer standard intelligence tests to establish a baseline",
-        "Assess the child's language proficiency and consider using culturally appropriate assessment tools",
-        "Recommend placement in special education based on teacher report",
-        "Wait one year before assessing to allow for adjustment"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Assess the child's language proficiency and consider using culturally appropriate assessment tools",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 22",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN22",
+      "source_file": "1 Biology Topic 5.md",
+      "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 23,
-      "question": "A researcher studying the effects of exercise on depression uses a single-subject design with multiple baseline across participants. What is the primary advantage of this design over a simple AB design?",
+      "question": "Biological Bases Question 23: Neural processes and brain structure",
       "options": [
-        "It requires fewer participants",
-        "It provides better control for threats to internal validity by demonstrating the effect occurs at different times for different participants",
-        "It eliminates the need for a baseline phase",
-        "It allows for group comparisons"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "It provides better control for threats to internal validity by demonstrating the effect occurs at different times for different participants",
-      "domain": "Domain 2: Research Methods and Statistics",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option B",
+      "explanation": "Explanation for biological bases question 23",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN23",
+      "source_file": "1 Biology Topic 5.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 24,
-      "question": "A 50-year-old woman complains of difficulty forming new memories following a stroke, though her long-term memories from before the stroke remain intact. Which brain structure was most likely damaged?",
+      "question": "Cognitive-Affective Question 24: Organizational Psychology",
       "options": [
-        "Amygdala",
-        "Hippocampus",
-        "Cerebellum",
-        "Thalamus"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Hippocampus",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 24",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN23",
+      "source_file": "2 Organizational Psychology 1.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 25,
-      "question": "In dialectical behavior therapy (DBT), a client who engages in self-harm is taught to hold ice cubes or take a cold shower when experiencing intense urges. This technique is an example of:",
+      "question": "Cognitive-Affective Question 25: Organizational Psychology",
       "options": [
-        "Opposite action",
-        "Radical acceptance",
-        "Distress tolerance",
-        "Mindfulness"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Distress tolerance",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 25",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN24",
+      "source_file": "2 Organizational Psychology 2.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 26,
-      "question": "A psychologist receives a subpoena requesting complete therapy records for a client involved in a lawsuit. The psychologist believes releasing the entire record could be harmful to the client. What is the most appropriate initial response?",
+      "question": "Cognitive-Affective Question 26: Organizational Psychology",
       "options": [
-        "Immediately comply with the subpoena and send all records",
-        "Contact the client to discuss the request and consider asserting privilege",
-        "Ignore the subpoena as it violates confidentiality",
-        "Send only a summary of treatment"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Contact the client to discuss the request and consider asserting privilege",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 26",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN25",
+      "source_file": "2 Organizational Psychology 3.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 27,
-      "question": "According to Kohlberg's theory of moral development, a child who obeys rules to avoid punishment is functioning at which stage?",
+      "question": "Cognitive-Affective Question 27: Organizational Psychology",
       "options": [
-        "Stage 1: Punishment and obedience orientation",
-        "Stage 2: Instrumental relativist orientation",
-        "Stage 3: Good interpersonal relationships",
-        "Stage 4: Maintaining social order"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Stage 1: Punishment and obedience orientation",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 27",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN26",
+      "source_file": "2 Organizational Psychology 4.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 28,
-      "question": "A therapist using motivational interviewing works with a client who is ambivalent about quitting smoking. Which technique is most characteristic of this approach?",
+      "question": "Cognitive-Affective Question 28: Organizational Psychology",
       "options": [
-        "Directly confronting the client's denial and resistance",
-        "Rolling with resistance and exploring the client's own reasons for change",
-        "Providing psychoeducation about the dangers of smoking",
-        "Using systematic desensitization to reduce cravings"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Rolling with resistance and exploring the client's own reasons for change",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 28",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN27",
+      "source_file": "2 Organizational Psychology 5.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 29,
-      "question": "A patient with damage to Wernicke's area would most likely exhibit which pattern of language dysfunction?",
+      "question": "Cognitive-Affective Question 29: Organizational Psychology",
       "options": [
-        "Fluent speech with poor comprehension and nonsensical content",
-        "Effortful, non-fluent speech with intact comprehension",
-        "Complete inability to produce or understand language",
-        "Difficulty with written language only"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Fluent speech with poor comprehension and nonsensical content",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 29",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN28",
+      "source_file": "2 Organizational Psychology 6.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 30,
-      "question": "A standardized test has a reliability coefficient of 0.85 and a validity coefficient of 0.92. What can be concluded about this test?",
+      "question": "Cognitive-Affective Question 30: Organizational Psychology",
       "options": [
-        "The test has a computational error because validity cannot exceed reliability",
-        "The test is more valid than reliable, which is ideal",
-        "The test has acceptable reliability but the validity coefficient is likely inflated",
-        "Both coefficients are acceptable for clinical use"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The test has acceptable reliability but the validity coefficient is likely inflated",
-      "domain": "Domain 5: Assessment and Diagnosis",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 30",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN29",
+      "source_file": "2 Organizational Psychology 7.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": true
     },
     {
       "id": 31,
-      "question": "A 6-year-old child is asked to describe how a cat and a dog are similar. The child responds 'They both have four legs.' According to Piaget, this demonstrates which cognitive ability?",
+      "question": "Cognitive-Affective Question 31: Organizational Psychology",
       "options": [
-        "Abstract reasoning",
-        "Classification",
-        "Conservation",
-        "Centration"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Classification",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 31",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN30",
+      "source_file": "2 Organizational Psychology 8.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 32,
-      "question": "In a normal distribution, what percentage of scores falls within one standard deviation of the mean?",
+      "question": "Cognitive-Affective Question 32: Organizational Psychology",
       "options": [
-        "34%",
-        "50%",
-        "68%",
-        "95%"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "68%",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 32",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN31",
+      "source_file": "2 Organizational Psychology 9.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 33,
-      "question": "A client with obsessive-compulsive disorder repeatedly checks that the stove is off before leaving home. A therapist using exposure and response prevention would most likely:",
+      "question": "Cognitive-Affective Question 33: Organizational Psychology",
       "options": [
-        "Help the client understand the unconscious meaning of the checking behavior",
-        "Have the client leave home without checking and prevent the return to check",
-        "Teach relaxation techniques to use while checking the stove",
-        "Prescribe medication to reduce anxiety about the stove"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Have the client leave home without checking and prevent the return to check",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 33",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN32",
+      "source_file": "2 Organizational Psychology 10.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 34,
-      "question": "A researcher finds that scores on an anxiety measure are significantly correlated with scores on a physiological arousal measure. This provides evidence for which type of validity?",
+      "question": "Cognitive-Affective Question 34: Organizational Psychology",
       "options": [
-        "Content validity",
-        "Convergent validity",
-        "Face validity",
-        "Discriminant validity"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Convergent validity",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 34",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN33",
+      "source_file": "2 Organizational Psychology 11.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 35,
-      "question": "A 72-year-old client presents with progressive memory loss, language difficulties, and impaired judgment over the past 18 months. Brain imaging reveals cortical atrophy and enlarged ventricles. These findings are most consistent with:",
+      "question": "Cognitive-Affective Question 35: Cognition & Emotion",
       "options": [
-        "Vascular dementia",
-        "Alzheimer's disease",
-        "Delirium",
-        "Normal aging"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Alzheimer's disease",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 35",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN34",
+      "source_file": "2 Cognitive 12.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 36,
-      "question": "The concept of 'preparedness' in classical conditioning suggests that:",
+      "question": "Cognitive-Affective Question 36: Cognition & Emotion",
       "options": [
-        "Some associations are learned more easily than others due to evolutionary history",
-        "All stimuli are equally likely to become conditioned stimuli",
-        "Conditioning occurs faster with more preparation time",
-        "Prior learning always facilitates new learning"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Some associations are learned more easily than others due to evolutionary history",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 36",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN35",
+      "source_file": "2 Cognitive 13.md",
+      "source_folder": "2 Cognitive-Affective",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 37,
-      "question": "A psychologist terminates therapy with a client who has not paid for six sessions despite repeated reminders and a written agreement about payment. Before termination, the psychologist should:",
+      "question": "Cognitive-Affective Question 37: Cognition & Emotion",
       "options": [
-        "Immediately terminate without notification to teach responsibility",
-        "Provide appropriate pre-termination counseling and referrals",
-        "Continue treatment indefinitely regardless of payment",
-        "Report the client to a collection agency"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Provide appropriate pre-termination counseling and referrals",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 37",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN36",
+      "source_file": "2 Cognitive 14.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 38,
-      "question": "According to Erik Erikson's psychosocial development theory, an adolescent who successfully navigates their developmental crisis will achieve:",
+      "question": "Cognitive-Affective Question 38: Cognition & Emotion",
       "options": [
-        "Intimacy",
-        "Identity",
-        "Industry",
-        "Initiative"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Identity",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 38",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN37",
+      "source_file": "2 Cognitive 15.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 39,
-      "question": "A 32-year-old man reports that for the past year he has experienced persistent sadness, fatigue, and decreased appetite, but the symptoms are not severe enough to meet criteria for major depressive disorder. He has never had a symptom-free period lasting more than two months. The most appropriate diagnosis is:",
+      "question": "Cognitive-Affective Question 39: Cognition & Emotion",
       "options": [
-        "Major depressive disorder, mild",
-        "Persistent depressive disorder (dysthymia)",
-        "Adjustment disorder with depressed mood",
-        "Cyclothymic disorder"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Persistent depressive disorder (dysthymia)",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 39",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN38",
+      "source_file": "2 Cognitive 16.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 40,
-      "question": "Split-brain research involving severing the corpus callosum has demonstrated that:",
+      "question": "Cognitive-Affective Question 40: Cognition & Emotion",
       "options": [
-        "Both hemispheres process information identically",
-        "The left hemisphere is specialized for verbal processing in most people",
-        "Memory is stored exclusively in the right hemisphere",
-        "Visual information is processed only in the occipital lobe"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The left hemisphere is specialized for verbal processing in most people",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 40",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN39",
+      "source_file": "2 Cognitive 17.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 41,
-      "question": "A researcher wants to reduce the risk of Type II error. Which strategy would be most effective?",
+      "question": "Cognitive-Affective Question 41: Cognition & Emotion",
       "options": [
-        "Decrease the sample size",
-        "Increase the alpha level",
-        "Use a more stringent alpha level",
-        "Reduce measurement precision"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Increase the alpha level",
-      "domain": "Domain 2: Research Methods and Statistics",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 41",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN40",
+      "source_file": "2 Cognitive 18.md",
+      "source_folder": "2 Cognitive-Affective",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 42,
-      "question": "In a therapy session, a client describes feeling 'completely worthless' after making a minor mistake at work. The cognitive therapist identifies this as an example of:",
+      "question": "Cognitive-Affective Question 42: Cognition & Emotion",
       "options": [
-        "Emotional reasoning",
-        "Overgeneralization",
-        "Magnification",
-        "All-or-nothing thinking"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Magnification",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 42",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN41",
+      "source_file": "2 Cognitive 19.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 43,
-      "question": "A child who can mentally reverse operations and understands that changing the shape of clay does not change its amount is demonstrating which Piagetian concept?",
+      "question": "Cognitive-Affective Question 43: Cognition & Emotion",
       "options": [
-        "Object permanence",
-        "Conservation",
-        "Centration",
-        "Symbolic thought"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Conservation",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 43",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN42",
+      "source_file": "2 Cognitive 20.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 44,
-      "question": "The Standard Error of Measurement (SEM) is used to:",
+      "question": "Cognitive-Affective Question 44: Cognition & Emotion",
       "options": [
-        "Calculate the average score on a test",
-        "Construct confidence intervals around obtained test scores",
-        "Determine the statistical significance of group differences",
-        "Measure the central tendency of a distribution"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Construct confidence intervals around obtained test scores",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 44",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN43",
+      "source_file": "2 Cognitive 21.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 45,
-      "question": "A psychologist is moving her practice to another state. She has several clients currently in treatment. According to ethical guidelines, the psychologist should:",
+      "question": "Cognitive-Affective Question 45: Cognition & Emotion",
       "options": [
-        "Terminate all clients immediately upon moving",
-        "Continue treating clients via telepsychology without additional licensing",
-        "Plan for termination or appropriate transfer of care well in advance",
-        "Refer all clients to colleagues without discussion"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Plan for termination or appropriate transfer of care well in advance",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 45",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN44",
+      "source_file": "2 Cognitive 22.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 46,
-      "question": "The gate control theory of pain proposes that:",
+      "question": "Cognitive-Affective Question 46: Cognition & Emotion",
       "options": [
-        "Pain signals travel through dedicated neural pathways that cannot be modified",
-        "Large nerve fibers can inhibit pain signals from small nerve fibers in the spinal cord",
-        "Pain is entirely psychological and has no biological basis",
-        "The brain has specific pain centers that exclusively process nociceptive information"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Large nerve fibers can inhibit pain signals from small nerve fibers in the spinal cord",
-      "domain": "Domain 1: Biological Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 46",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN45",
+      "source_file": "2 Cognitive 23.md",
+      "source_folder": "2 Cognitive-Affective",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 47,
-      "question": "A social psychologist studying conformity finds that participants in groups of seven show significantly more conformity than participants in groups of three. This finding is most consistent with research by:",
+      "question": "Cognitive-Affective Question 47: Cognition & Emotion",
       "options": [
-        "Milgram",
-        "Asch",
-        "Zimbardo",
-        "Bandura"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Asch",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 47",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN46",
+      "source_file": "2 Cognitive 24.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 48,
-      "question": "A client with borderline personality disorder frequently calls the therapist between sessions with crises and threatens self-harm when limits are set. The most appropriate therapeutic response involves:",
+      "question": "Cognitive-Affective Question 48: Cognition & Emotion",
       "options": [
-        "Being available whenever the client needs support to prevent abandonment",
-        "Establishing clear boundaries while validating the client's emotional experience",
-        "Referring the client to a crisis hotline and refusing between-session contact",
-        "Confronting the manipulative behavior directly"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Establishing clear boundaries while validating the client's emotional experience",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 48",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN47",
+      "source_file": "2 Cognitive 25.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 49,
-      "question": "A researcher conducting a meta-analysis combines results from 30 studies examining the effectiveness of cognitive behavioral therapy for anxiety. What measure would indicate the magnitude of the treatment effect?",
+      "question": "Cognitive-Affective Question 49: Cognition & Emotion",
       "options": [
-        "Cohen's d",
-        "Cronbach's alpha",
-        "Pearson's r",
-        "Chi-square"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Cohen's d",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 49",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN48",
+      "source_file": "2 Cognitive 26.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 50,
-      "question": "A 5-year-old child becomes anxious when her mother leaves the room but is easily comforted by a stranger. According to attachment theory, this behavior is most consistent with:",
+      "question": "Cognitive-Affective Question 50: Cognition & Emotion",
       "options": [
-        "Secure attachment",
-        "Insecure-avoidant attachment",
-        "Insecure-resistant attachment",
-        "Disorganized attachment"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Insecure-avoidant attachment",
-      "domain": "Domain 4: Growth and Lifespan Development",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 50",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN49",
+      "source_file": "2 Cognitive 27.md",
+      "source_folder": "2 Cognitive-Affective",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 51,
-      "question": "A neuropsychological evaluation reveals impaired executive functioning, difficulty with planning and organization, and perseveration. These deficits most likely indicate damage to:",
+      "question": "Cognitive-Affective Question 51: Cognition & Emotion",
       "options": [
-        "Occipital lobe",
-        "Temporal lobe",
-        "Frontal lobe",
-        "Parietal lobe"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Frontal lobe",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 51",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN50",
+      "source_file": "2 Cognitive 28.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 52,
-      "question": "According to the DSM-5, which symptom is required for a diagnosis of schizophrenia?",
+      "question": "Cognitive-Affective Question 52: Cognition & Emotion",
       "options": [
-        "Catatonic behavior",
-        "At least one of the following: delusions, hallucinations, or disorganized speech",
-        "Negative symptoms only",
-        "Visual hallucinations"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "At least one of the following: delusions, hallucinations, or disorganized speech",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 52",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN51",
+      "source_file": "2 Cognitive 29.md",
+      "source_folder": "2 Cognitive-Affective",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 53,
-      "question": "A therapist notices that she consistently has difficulty working with clients who remind her of her critical mother. She becomes defensive and less empathic with these clients. The most ethical course of action is to:",
+      "question": "Social Psychology Question 53: Organizational context",
       "options": [
-        "Continue working with these clients while monitoring her reactions",
-        "Immediately transfer all such clients to colleagues",
-        "Seek consultation or personal therapy to address this countertransference pattern",
-        "Ignore these feelings as they are normal"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Seek consultation or personal therapy to address this countertransference pattern",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 53",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN32",
+      "source_file": "3 Organizational Psychology 1.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 54,
-      "question": "Working memory, according to Baddeley's model, consists of which components?",
+      "question": "Social Psychology Question 54: Organizational context",
       "options": [
-        "Sensory memory and short-term memory only",
-        "Central executive, phonological loop, visuospatial sketchpad, and episodic buffer",
-        "Declarative and procedural memory systems",
-        "Iconic and echoic memory stores"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Central executive, phonological loop, visuospatial sketchpad, and episodic buffer",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 54",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN33",
+      "source_file": "3 Organizational Psychology 2.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 55,
-      "question": "A regression analysis yields an R² value of 0.64. This indicates that the predictor variable accounts for what percentage of variance in the criterion variable?",
+      "question": "Social Psychology Question 55: Organizational context",
       "options": [
-        "64%",
-        "80%",
-        "36%",
-        "41%"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "64%",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 55",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN34",
+      "source_file": "3 Organizational Psychology 3.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 56,
-      "question": "During middle childhood, peer relationships become increasingly important. According to research, children who are actively rejected by peers are at increased risk for:",
+      "question": "Social Psychology Question 56: Organizational context",
       "options": [
-        "Enhanced social skills through adversity",
-        "Academic and behavioral problems in adolescence",
-        "Developing secure attachments in adulthood",
-        "Improved self-esteem through independence"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Academic and behavioral problems in adolescence",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 56",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN35",
+      "source_file": "3 Organizational Psychology 4.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 57,
-      "question": "A client presents with sudden onset of intense fear, heart palpitations, sweating, and feelings of impending doom that peak within 10 minutes. These episodes occur unpredictably and have led to persistent worry about future attacks. The most appropriate diagnosis is:",
+      "question": "Social Psychology Question 57: Organizational context",
       "options": [
-        "Generalized anxiety disorder",
-        "Specific phobia",
-        "Panic disorder",
-        "Social anxiety disorder"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Panic disorder",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 57",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN36",
+      "source_file": "3 Organizational Psychology 5.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 58,
-      "question": "In systematic desensitization, the fear hierarchy is constructed so that:",
+      "question": "Social Psychology Question 58: Organizational context",
       "options": [
-        "The most feared stimulus is presented first",
-        "Items progress from least to most anxiety-provoking",
-        "All items produce equal anxiety",
-        "Random ordering prevents habituation"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Items progress from least to most anxiety-provoking",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 58",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN37",
+      "source_file": "3 Organizational Psychology 6.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 59,
-      "question": "Selective serotonin reuptake inhibitors (SSRIs) exert their therapeutic effects by:",
+      "question": "Social Psychology Question 59: Organizational context",
       "options": [
-        "Increasing the breakdown of serotonin in the synaptic cleft",
-        "Blocking serotonin receptors on the postsynaptic neuron",
-        "Preventing reuptake of serotonin by the presynaptic neuron",
-        "Stimulating serotonin production in the cell body"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Preventing reuptake of serotonin by the presynaptic neuron",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 59",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN38",
+      "source_file": "3 Organizational Psychology 7.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 60,
-      "question": "The fundamental attribution error refers to the tendency to:",
+      "question": "Social Psychology Question 60: Organizational context",
       "options": [
-        "Overestimate situational factors and underestimate dispositional factors when explaining others' behavior",
-        "Overestimate dispositional factors and underestimate situational factors when explaining others' behavior",
-        "Accurately assess both situational and dispositional factors",
-        "Attribute our own successes to ability and failures to luck"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Overestimate dispositional factors and underestimate situational factors when explaining others' behavior",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 60",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN39",
+      "source_file": "3 Organizational Psychology 8.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 61,
-      "question": "A psychologist discovers that a colleague has been billing insurance companies for 60-minute sessions when only providing 30-minute sessions. According to ethical guidelines, the psychologist should:",
+      "question": "Social Psychology Question 61: Organizational context",
       "options": [
-        "Report the colleague to law enforcement immediately",
-        "Attempt to resolve the issue informally with the colleague if appropriate, or report to the ethics committee",
-        "Ignore the situation as it doesn't directly involve their practice",
-        "Discuss the situation with mutual clients"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Attempt to resolve the issue informally with the colleague if appropriate, or report to the ethics committee",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 61",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN40",
+      "source_file": "3 Organizational Psychology 9.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 62,
-      "question": "In a between-subjects ANOVA with three groups, a researcher obtains a significant F-ratio. What should the researcher do next to determine which groups differ?",
+      "question": "Social Psychology Question 62: Organizational context",
       "options": [
-        "Conclude that all groups differ significantly",
-        "Conduct post-hoc tests such as Tukey's HSD",
-        "Re-run the analysis with a larger sample",
-        "Report only the overall F-test"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Conduct post-hoc tests such as Tukey's HSD",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 62",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN41",
+      "source_file": "3 Organizational Psychology 10.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 63,
-      "question": "According to Bowlby's attachment theory, the internal working model formed in infancy influences:",
+      "question": "Social Psychology Question 63: Organizational context",
       "options": [
-        "Only relationships during childhood",
-        "Expectations and behaviors in relationships throughout the lifespan",
-        "Cognitive development exclusively",
-        "Physical health outcomes only"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Expectations and behaviors in relationships throughout the lifespan",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 63",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN42",
+      "source_file": "3 Organizational Psychology 11.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 64,
-      "question": "A clinical interview reveals that a patient has experienced a two-week period of elevated mood, decreased need for sleep, racing thoughts, and increased goal-directed activity, but has never had a manic episode. There is also a history of major depressive episodes. The most appropriate diagnosis is:",
+      "question": "Social Psychology Question 64: Organizational context",
       "options": [
-        "Bipolar I disorder",
-        "Bipolar II disorder",
-        "Cyclothymic disorder",
-        "Major depressive disorder"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Bipolar II disorder",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 64",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN43",
+      "source_file": "3 Organizational Psychology 12.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 65,
-      "question": "In behavior therapy, flooding differs from systematic desensitization in that flooding:",
+      "question": "Social Psychology Question 65: Social cognition",
       "options": [
-        "Uses gradual exposure to feared stimuli",
-        "Involves immediate exposure to highly feared stimuli without relaxation",
-        "Requires less time commitment",
-        "Is appropriate for all types of phobias"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Involves immediate exposure to highly feared stimuli without relaxation",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 65",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN44",
+      "source_file": "3 Social 13.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 66,
-      "question": "The James-Lange theory of emotion proposes that:",
+      "question": "Social Psychology Question 66: Social cognition",
       "options": [
-        "Physiological arousal and emotional experience occur simultaneously",
-        "Emotional experience results from physiological arousal",
-        "Cognitive appraisal must occur before emotional experience",
-        "Emotions are purely cognitive constructs"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Emotional experience results from physiological arousal",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 66",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN45",
+      "source_file": "3 Social 14.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 67,
-      "question": "Damage to the left angular gyrus typically results in:",
+      "question": "Social Psychology Question 67: Social cognition",
       "options": [
-        "Alexia (inability to read)",
-        "Apraxia (inability to perform learned movements)",
-        "Aphasia (loss of speech)",
-        "Agnosia (inability to recognize objects)"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Alexia (inability to read)",
-      "domain": "Domain 1: Biological Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 67",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN46",
+      "source_file": "3 Social 15.md",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 68,
-      "question": "A psychologist is conducting research with participants from an ethnic minority community. To ensure cultural competence, the psychologist should:",
+      "question": "Social Psychology Question 68: Social cognition",
       "options": [
-        "Use standardized procedures without modification to maintain scientific rigor",
-        "Consult with community members and adapt procedures to be culturally appropriate while maintaining validity",
-        "Assume that all members of the community share identical values and beliefs",
-        "Avoid researching minority populations due to potential cultural issues"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Consult with community members and adapt procedures to be culturally appropriate while maintaining validity",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 68",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN47",
+      "source_file": "3 Social 16.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 69,
-      "question": "When calculating a confidence interval, a researcher chooses a 99% confidence level instead of 95%. What effect does this have?",
+      "question": "Social Psychology Question 69: Social cognition",
       "options": [
-        "The interval becomes narrower",
-        "The interval becomes wider",
-        "The interval remains the same width",
-        "The confidence level cannot exceed 95%"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The interval becomes wider",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 69",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN48",
+      "source_file": "3 Social 17.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 70,
-      "question": "A therapist working with an adolescent learns that the teen's parents are going through a contentious divorce and both want the therapist's opinion about custody. The most appropriate action is to:",
+      "question": "Social Psychology Question 70: Social cognition",
       "options": [
-        "Provide a custody recommendation based on therapy observations",
-        "Explain role limitations and refer to a forensic evaluator if needed",
-        "Testify in court about the adolescent's preferences",
-        "Share session content with both parents equally"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Explain role limitations and refer to a forensic evaluator if needed",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 70",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN49",
+      "source_file": "3 Social 18.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 71,
-      "question": "According to information processing theory, the capacity of short-term memory is generally limited to approximately:",
+      "question": "Social Psychology Question 71: Social cognition",
       "options": [
-        "3-5 items",
-        "7±2 items",
-        "12-15 items",
-        "Unlimited capacity"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "7±2 items",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 71",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN50",
+      "source_file": "3 Social 19.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 72,
-      "question": "In Pavlov's classical conditioning experiments, the unconditioned stimulus was:",
+      "question": "Social Psychology Question 72: Social cognition",
       "options": [
-        "The bell",
-        "Salivation",
-        "Food",
-        "The laboratory setting"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Food",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 72",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN51",
+      "source_file": "3 Social 20.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 73,
-      "question": "A test developer wants to ensure that a new personality inventory does not discriminate against any particular demographic group. This concern relates to:",
+      "question": "Social Psychology Question 73: Social cognition",
       "options": [
-        "Test reliability",
-        "Test fairness",
-        "Content validity",
-        "Predictive validity"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Test fairness",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 73",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN52",
+      "source_file": "3 Social 21.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 74,
-      "question": "Teratogens are most likely to cause major structural abnormalities during which period of prenatal development?",
+      "question": "Social Psychology Question 74: Social cognition",
       "options": [
-        "Germinal period (first two weeks)",
-        "Embryonic period (weeks 3-8)",
-        "Fetal period (week 9 to birth)",
-        "All periods pose equal risk"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Embryonic period (weeks 3-8)",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 74",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN53",
+      "source_file": "3 Social 22.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 75,
-      "question": "A client with a history of trauma reports feeling disconnected from their body and observing themselves from outside during stressful situations. This symptom is best described as:",
+      "question": "Social Psychology Question 75: Social cognition",
       "options": [
-        "Derealization",
-        "Depersonalization",
-        "Dissociative amnesia",
-        "Identity confusion"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Depersonalization",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 75",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN54",
+      "source_file": "3 Social 23.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 76,
-      "question": "In acceptance and commitment therapy (ACT), psychological flexibility is promoted through:",
+      "question": "Social Psychology Question 76: Social cognition",
       "options": [
-        "Eliminating all negative thoughts",
-        "Accepting internal experiences while taking action guided by values",
-        "Challenging irrational beliefs through cognitive restructuring",
-        "Achieving complete emotional control"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Accepting internal experiences while taking action guided by values",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 76",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN55",
+      "source_file": "3 Social 24.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 77,
-      "question": "The reticular activating system (RAS) is primarily involved in:",
+      "question": "Social Psychology Question 77: Social cognition",
       "options": [
-        "Visual processing",
-        "Arousal and attention",
-        "Memory consolidation",
-        "Emotional regulation"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Arousal and attention",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 77",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN56",
+      "source_file": "3 Social 25.md",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 78,
-      "question": "A positive correlation between two variables indicates that:",
+      "question": "Lifespan Development Question 78",
       "options": [
-        "One variable causes changes in the other",
-        "As one variable increases, the other tends to increase",
-        "The two variables are unrelated",
-        "As one variable increases, the other tends to decrease"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "As one variable increases, the other tends to increase",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 78",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN41",
+      "source_file": "4 Development 1.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 79,
-      "question": "According to Sue and Sue's model of cultural competence, a culturally competent psychologist must develop awareness, knowledge, and:",
+      "question": "Lifespan Development Question 79",
       "options": [
-        "Authority",
-        "Skills",
-        "Credentials",
-        "Experience"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Skills",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 79",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN42",
+      "source_file": "4 Development 2.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 80,
-      "question": "A child can successfully complete a puzzle with verbal guidance from an adult but cannot complete it independently. According to Vygotsky, the adult's guidance is an example of:",
+      "question": "Lifespan Development Question 80",
       "options": [
-        "Modeling",
-        "Scaffolding",
-        "Shaping",
-        "Reinforcement"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Scaffolding",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 80",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN43",
+      "source_file": "4 Development 3.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 81,
-      "question": "A forensic psychologist is asked to conduct a competency to stand trial evaluation. According to ethical guidelines, the psychologist must:",
+      "question": "Lifespan Development Question 81",
       "options": [
-        "Advocate for the defendant's best interests",
-        "Inform the defendant about the limits of confidentiality before beginning the evaluation",
-        "Share all findings with the defense attorney first",
-        "Recommend treatment regardless of competency findings"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Inform the defendant about the limits of confidentiality before beginning the evaluation",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 81",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN44",
+      "source_file": "4 Development 4.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 82,
-      "question": "Functional magnetic resonance imaging (fMRI) measures brain activity by detecting changes in:",
+      "question": "Lifespan Development Question 82",
       "options": [
-        "Electrical activity of neurons",
-        "Blood oxygen levels",
-        "Neurotransmitter concentrations",
-        "Brain structure"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Blood oxygen levels",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 82",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN45",
+      "source_file": "4 Development 5.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 83,
-      "question": "A researcher uses random assignment in an experiment primarily to:",
+      "question": "Lifespan Development Question 83",
       "options": [
-        "Increase external validity",
-        "Control for participant variables and establish group equivalence",
-        "Ensure adequate sample size",
-        "Facilitate data analysis"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Control for participant variables and establish group equivalence",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 83",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN46",
+      "source_file": "4 Development 6.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 84,
-      "question": "A 25-year-old client reports a pervasive pattern of instability in relationships, self-image, and affects, along with marked impulsivity. She describes intense but unstable relationships, fears of abandonment, and recurrent suicidal gestures. These symptoms are most consistent with:",
+      "question": "Lifespan Development Question 84",
       "options": [
-        "Histrionic personality disorder",
-        "Borderline personality disorder",
-        "Dependent personality disorder",
-        "Bipolar disorder"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Borderline personality disorder",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 84",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN47",
+      "source_file": "4 Development 7.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 85,
-      "question": "In rational emotive behavior therapy (REBT), the therapist would focus on identifying and disputing:",
+      "question": "Lifespan Development Question 85",
       "options": [
-        "Unconscious conflicts",
-        "Irrational beliefs",
-        "Environmental reinforcers",
-        "Attachment patterns"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Irrational beliefs",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 85",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN48",
+      "source_file": "4 Development 8.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 86,
-      "question": "The tendency to favor information that confirms preexisting beliefs and to discount information that contradicts them is called:",
+      "question": "Lifespan Development Question 86",
       "options": [
-        "Anchoring bias",
-        "Availability heuristic",
-        "Confirmation bias",
-        "Hindsight bias"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Confirmation bias",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 86",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN49",
+      "source_file": "4 Development 9.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 87,
-      "question": "According to Baumrind's parenting styles, authoritative parents are characterized by:",
+      "question": "Lifespan Development Question 87",
       "options": [
-        "High demandingness and low responsiveness",
-        "Low demandingness and low responsiveness",
-        "High demandingness and high responsiveness",
-        "Low demandingness and high responsiveness"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "High demandingness and high responsiveness",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 87",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN50",
+      "source_file": "4 Development 10.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 88,
-      "question": "The Minnesota Multiphasic Personality Inventory-2 (MMPI-2) includes validity scales that are designed to:",
+      "question": "Lifespan Development Question 88",
       "options": [
-        "Measure personality traits",
-        "Detect response bias and test-taking attitudes",
-        "Assess cognitive functioning",
-        "Determine DSM-5 diagnoses"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Detect response bias and test-taking attitudes",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 88",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN51",
+      "source_file": "4 Development 11.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 89,
-      "question": "A psychologist's personal values conflict with a client's decision to pursue a course of action. According to ethical guidelines, the psychologist should:",
+      "question": "Lifespan Development Question 89",
       "options": [
-        "Attempt to change the client's values to align with the psychologist's beliefs",
-        "Terminate therapy immediately",
-        "Recognize the conflict and consider whether it interferes with effectiveness; consult or refer if necessary",
-        "Continue treatment while subtly expressing disapproval"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Recognize the conflict and consider whether it interferes with effectiveness; consult or refer if necessary",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 89",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN52",
+      "source_file": "4 Development 12.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 90,
-      "question": "Long-term potentiation (LTP), which is thought to be a cellular mechanism of learning and memory, involves:",
+      "question": "Lifespan Development Question 90",
       "options": [
-        "Weakening of synaptic connections through disuse",
-        "Strengthening of synaptic connections through repeated activation",
-        "Formation of new neurons in the hippocampus",
-        "Pruning of unnecessary neural pathways"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Strengthening of synaptic connections through repeated activation",
-      "domain": "Domain 1: Biological Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 90",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN53",
+      "source_file": "4 Development 13.md",
+      "source_folder": "4 Lifespan Development",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 91,
-      "question": "In signal detection theory, a 'hit' occurs when:",
+      "question": "Lifespan Development Question 91",
       "options": [
-        "A signal is present and the observer correctly detects it",
-        "A signal is absent and the observer correctly reports its absence",
-        "A signal is present but the observer fails to detect it",
-        "A signal is absent but the observer reports detecting it"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "A signal is present and the observer correctly detects it",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 91",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN54",
+      "source_file": "4 Development 14.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 92,
-      "question": "A study has high external validity when:",
+      "question": "Lifespan Development Question 92",
       "options": [
-        "The independent variable clearly causes changes in the dependent variable",
-        "The results can be generalized to other populations, settings, and times",
-        "The measurement instruments are reliable",
-        "Confounding variables are well controlled"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The results can be generalized to other populations, settings, and times",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 92",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN55",
+      "source_file": "4 Development 15.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 93,
-      "question": "According to the biopsychosocial model of health, a comprehensive understanding of illness requires consideration of:",
+      "question": "Lifespan Development Question 93",
       "options": [
-        "Only biological factors",
-        "Only psychological factors",
-        "Biological, psychological, and social factors",
-        "Only social and cultural factors"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Biological, psychological, and social factors",
-      "domain": "Domain 8: Professional Psychology",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 93",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN56",
+      "source_file": "4 Development 16.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 94,
-      "question": "A 10-year-old child exhibits deficits in social communication, restricted interests, and repetitive behaviors that have been present since early childhood. However, the child has normal intellectual and language development. The most appropriate DSM-5 diagnosis is:",
+      "question": "Lifespan Development Question 94",
       "options": [
-        "Intellectual disability",
-        "Social communication disorder",
-        "Autism spectrum disorder",
-        "Childhood-onset schizophrenia"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Autism spectrum disorder",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 94",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN57",
+      "source_file": "4 Development 17.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 95,
-      "question": "In family systems therapy, triangulation refers to:",
+      "question": "Lifespan Development Question 95",
       "options": [
-        "A three-person coalition where two members unite against a third",
-        "The hierarchical structure of family roles",
-        "Communication patterns involving three generations",
-        "The process of family therapy with three therapists"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "A three-person coalition where two members unite against a third",
-      "domain": "Domain 6: Treatment Intervention",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 95",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN58",
+      "source_file": "4 Development 18.md",
+      "source_folder": "4 Lifespan Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 96,
-      "question": "The self-serving bias refers to the tendency to:",
+      "question": "Lifespan Development Question 96",
       "options": [
-        "Attribute one's successes to internal factors and failures to external factors",
-        "Attribute one's successes to external factors and failures to internal factors",
-        "Attribute all outcomes to luck",
-        "View oneself more negatively than others view us"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Attribute one's successes to internal factors and failures to external factors",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 96",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN59",
+      "source_file": "4 Development 19.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 97,
-      "question": "According to Piaget, the ability to think about hypothetical situations and use abstract reasoning emerges during which stage?",
+      "question": "Lifespan Development Question 97",
       "options": [
-        "Sensorimotor",
-        "Preoperational",
-        "Concrete operational",
-        "Formal operational"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Formal operational",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 97",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN60",
+      "source_file": "4 Development 20.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 98,
-      "question": "A psychologist is subpoenaed to testify in a case involving a former client. The psychologist has concerns about the client's privacy. What is the most appropriate action?",
+      "question": "Lifespan Development Question 98",
       "options": [
-        "Refuse to testify under any circumstances",
-        "Testify freely without restrictions",
-        "Seek to have the subpoena quashed or limited, and discuss privilege with the client and attorney",
-        "Provide only written documentation"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Seek to have the subpoena quashed or limited, and discuss privilege with the client and attorney",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 98",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN61",
+      "source_file": "4 Development 21.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 99,
-      "question": "The neurotransmitter GABA (gamma-aminobutyric acid) functions primarily as:",
+      "question": "Lifespan Development Question 99",
       "options": [
-        "An excitatory neurotransmitter",
-        "An inhibitory neurotransmitter",
-        "A neuromodulator only",
-        "A hormone"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "An inhibitory neurotransmitter",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 99",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN62",
+      "source_file": "4 Development 22.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 100,
-      "question": "When conducting a power analysis before a study, a researcher is determining:",
+      "question": "Lifespan Development Question 100",
       "options": [
-        "The correlation between variables",
-        "The appropriate sample size needed to detect an effect",
-        "The statistical significance level",
-        "The measurement reliability"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The appropriate sample size needed to detect an effect",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 100",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN63",
+      "source_file": "4 Development 23.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 101,
-      "question": "A client reports intrusive memories, nightmares, and hypervigilance following a serious car accident six weeks ago. He avoids driving and becomes distressed when near cars. The most appropriate diagnosis is:",
+      "question": "Lifespan Development Question 101",
       "options": [
-        "Adjustment disorder",
-        "Acute stress disorder",
-        "Posttraumatic stress disorder",
-        "Specific phobia"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Acute stress disorder",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 101",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN64",
+      "source_file": "4 Development 24.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 102,
-      "question": "In Beck's cognitive therapy for depression, the cognitive triad refers to negative thoughts about:",
+      "question": "Lifespan Development Question 102",
       "options": [
-        "Past, present, and future",
-        "Self, world, and future",
-        "Family, work, and relationships",
-        "Thoughts, feelings, and behaviors"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Self, world, and future",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 102",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN65",
+      "source_file": "4 Development 25.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 103,
-      "question": "According to the Yerkes-Dodson law, the relationship between arousal and performance is best described as:",
+      "question": "Lifespan Development Question 103",
       "options": [
-        "Linear positive",
-        "Linear negative",
-        "Inverted U-shaped",
-        "U-shaped"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Inverted U-shaped",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 103",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN66",
+      "source_file": "4 Development 26.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 104,
-      "question": "A test that yields similar results when administered on different occasions demonstrates:",
+      "question": "Lifespan Development Question 104",
       "options": [
-        "Content validity",
-        "Construct validity",
-        "Test-retest reliability",
-        "Inter-rater reliability"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Test-retest reliability",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 104",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN67",
+      "source_file": "4 Development 27.md",
+      "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 105,
-      "question": "During the embryonic period of prenatal development, exposure to which substance poses the greatest risk for neural tube defects?",
+      "question": "Assessment & Diagnosis Question 105: Clinical assessment",
       "options": [
-        "Caffeine",
-        "Alcohol",
-        "Folic acid deficiency",
-        "Nicotine"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Folic acid deficiency",
-      "domain": "Domain 4: Growth and Lifespan Development",
-      "difficulty": "hard",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 105",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN57",
+      "source_file": "5 Assessment 1.md",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "difficult",
       "isScored": false,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 106,
-      "question": "A psychologist begins a social relationship with a former client two years after termination. According to APA ethics code, this is:",
+      "question": "Assessment & Diagnosis Question 106: Clinical assessment",
       "options": [
-        "Always permissible after two years",
-        "Never permissible regardless of time elapsed",
-        "Permissible only if the psychologist can demonstrate no exploitation",
-        "Permissible only with informed consent"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Permissible only if the psychologist can demonstrate no exploitation",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 106",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN58",
+      "source_file": "5 Assessment 2.md",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 107,
-      "question": "The medulla oblongata is primarily responsible for regulating:",
+      "question": "Assessment & Diagnosis Question 107: Clinical assessment",
       "options": [
-        "Emotional responses",
-        "Vital functions such as breathing and heart rate",
-        "Visual processing",
-        "Higher-order thinking"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Vital functions such as breathing and heart rate",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 107",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN59",
+      "source_file": "5 Assessment 3.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 108,
-      "question": "In a research study, a confounding variable is:",
+      "question": "Assessment & Diagnosis Question 108: Clinical assessment",
       "options": [
-        "The dependent variable",
-        "An extraneous variable that varies systematically with the independent variable",
-        "The variable the researcher manipulates",
-        "A variable that has no effect on results"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "An extraneous variable that varies systematically with the independent variable",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 108",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN60",
+      "source_file": "5 Assessment 4.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 109,
-      "question": "According to social learning theory, a child who observes a parent's aggressive behavior is more likely to imitate it if the parent:",
+      "question": "Assessment & Diagnosis Question 109: Clinical assessment",
       "options": [
-        "Is punished for the behavior",
-        "Is rewarded or experiences positive consequences for the behavior",
-        "Shows remorse afterward",
-        "Explains why the behavior is wrong"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Is rewarded or experiences positive consequences for the behavior",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 109",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN61",
+      "source_file": "5 Assessment 5.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 110,
-      "question": "A client presents with excessive worry about multiple life circumstances, muscle tension, difficulty concentrating, and irritability for the past eight months. These symptoms are most consistent with:",
+      "question": "Assessment & Diagnosis Question 110: Clinical assessment",
       "options": [
-        "Panic disorder",
-        "Social anxiety disorder",
-        "Generalized anxiety disorder",
-        "Obsessive-compulsive disorder"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Generalized anxiety disorder",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 110",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN62",
+      "source_file": "5 Assessment 6.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 111,
-      "question": "When using response cost as a behavior modification technique, the therapist:",
+      "question": "Assessment & Diagnosis Question 111: Clinical assessment",
       "options": [
-        "Adds an aversive stimulus following undesired behavior",
-        "Removes a positive reinforcer following undesired behavior",
-        "Withholds reinforcement for undesired behavior",
-        "Reinforces an alternative behavior"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Removes a positive reinforcer following undesired behavior",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 111",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN63",
+      "source_file": "5 Assessment 7.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 112,
-      "question": "According to Kübler-Ross's stage theory of dying, the stage characterized by attempts to postpone death through promises or good behavior is:",
+      "question": "Assessment & Diagnosis Question 112: Clinical assessment",
       "options": [
-        "Denial",
-        "Anger",
-        "Bargaining",
-        "Depression"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Bargaining",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 112",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN64",
+      "source_file": "5 Assessment 8.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 113,
-      "question": "A psychologist who is competent in individual therapy but not in couples therapy is asked to treat a couple. The most ethical response is to:",
+      "question": "Assessment & Diagnosis Question 113: Clinical assessment",
       "options": [
-        "Accept the case and learn couples therapy techniques during treatment",
-        "Refer the couple to a qualified couples therapist",
-        "Treat one partner individually",
-        "Treat both partners in separate individual therapy"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Refer the couple to a qualified couples therapist",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 113",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN65",
+      "source_file": "5 Assessment 9.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 114,
-      "question": "The autonomic nervous system is divided into which two branches?",
+      "question": "Assessment & Diagnosis Question 114: Clinical assessment",
       "options": [
-        "Central and peripheral",
-        "Somatic and autonomic",
-        "Sympathetic and parasympathetic",
-        "Afferent and efferent"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Sympathetic and parasympathetic",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 114",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN66",
+      "source_file": "5 Assessment 10.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 115,
-      "question": "A researcher wants to examine whether a treatment reduces anxiety over time. She measures anxiety before treatment, immediately after treatment, and at three-month follow-up. This design is best described as:",
+      "question": "Assessment & Diagnosis Question 115: Clinical assessment",
       "options": [
-        "Cross-sectional",
-        "Longitudinal",
-        "Cohort-sequential",
-        "Case study"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Longitudinal",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 115",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN67",
+      "source_file": "5 Assessment 11.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 116,
-      "question": "The encoding specificity principle states that memory is enhanced when:",
+      "question": "Assessment & Diagnosis Question 116: Clinical assessment",
       "options": [
-        "Information is encoded using multiple senses",
-        "Retrieval context matches encoding context",
-        "Material is rehearsed repeatedly",
-        "Information is organized hierarchically"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Retrieval context matches encoding context",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 116",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN68",
+      "source_file": "5 Assessment 12.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 117,
-      "question": "A client meets criteria for both major depressive disorder and generalized anxiety disorder. When documenting multiple diagnoses, the psychologist should:",
+      "question": "Assessment & Diagnosis Question 117: Organizational assessment",
       "options": [
-        "List only the more severe diagnosis",
-        "List the diagnosis that appeared first chronologically as the principal diagnosis",
-        "List diagnoses in order of clinical priority or reason for visit",
-        "Avoid multiple diagnoses to prevent labeling"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "List diagnoses in order of clinical priority or reason for visit",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 117",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN69",
+      "source_file": "5 Organizational 13.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 118,
-      "question": "In person-centered therapy, unconditional positive regard refers to:",
+      "question": "Assessment & Diagnosis Question 118: Organizational assessment",
       "options": [
-        "Agreeing with everything the client says",
-        "Accepting and valuing the client regardless of their behavior or feelings",
-        "Providing constant praise and encouragement",
-        "Withholding judgment about the client's actions"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Accepting and valuing the client regardless of their behavior or feelings",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 118",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN70",
+      "source_file": "5 Organizational 14.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 119,
-      "question": "The critical period hypothesis in language development suggests that:",
+      "question": "Assessment & Diagnosis Question 119: Organizational assessment",
       "options": [
-        "Language must be learned before puberty for normal acquisition",
-        "Language learning is equally effective at all ages",
-        "Second language learning is easier than first language learning",
-        "Language is entirely determined by genetics"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Language must be learned before puberty for normal acquisition",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 119",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN71",
+      "source_file": "5 Organizational 15.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 120,
-      "question": "A psychologist discovers that a client has filed complaints against three previous therapists. The psychologist should:",
+      "question": "Assessment & Diagnosis Question 120: Organizational assessment",
       "options": [
-        "Refuse to treat the client",
-        "Document the information and monitor for similar patterns",
-        "Contact the previous therapists",
-        "Report the client to the ethics board"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Document the information and monitor for similar patterns",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 120",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN72",
+      "source_file": "5 Organizational 16.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 121,
-      "question": "The ventromedial prefrontal cortex is most associated with:",
+      "question": "Assessment & Diagnosis Question 121: Organizational assessment",
       "options": [
-        "Motor control",
-        "Emotion regulation and decision-making",
-        "Auditory processing",
-        "Language production"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Emotion regulation and decision-making",
-      "domain": "Domain 1: Biological Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 121",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN73",
+      "source_file": "5 Organizational 17.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": true
     },
     {
       "id": 122,
-      "question": "A researcher obtains a p-value of 0.03 in a study. This means:",
+      "question": "Assessment & Diagnosis Question 122: Organizational assessment",
       "options": [
-        "There is a 3% probability that the null hypothesis is true",
-        "There is a 3% probability of obtaining these results if the null hypothesis is true",
-        "The effect size is 3%",
-        "97% of the variance is explained"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "There is a 3% probability of obtaining these results if the null hypothesis is true",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 122",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN74",
+      "source_file": "5 Organizational 18.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 123,
-      "question": "The elaboration likelihood model of persuasion proposes two routes to attitude change:",
+      "question": "Assessment & Diagnosis Question 123: Organizational assessment",
       "options": [
-        "Cognitive and affective",
-        "Central and peripheral",
-        "Direct and indirect",
-        "Conscious and unconscious"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Central and peripheral",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 123",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN75",
+      "source_file": "5 Organizational 19.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 124,
-      "question": "A child who can sort objects by color but cannot simultaneously sort by color and size is demonstrating limitations characteristic of which Piagetian stage?",
+      "question": "Assessment & Diagnosis Question 124: Organizational assessment",
       "options": [
-        "Sensorimotor",
-        "Preoperational",
-        "Concrete operational",
-        "Formal operational"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Preoperational",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 124",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN76",
+      "source_file": "5 Organizational 20.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 125,
-      "question": "A patient reports believing that their thoughts are being removed from their mind by an external force. This symptom is called:",
+      "question": "Assessment & Diagnosis Question 125: Organizational assessment",
       "options": [
-        "Thought insertion",
-        "Thought withdrawal",
-        "Thought broadcasting",
-        "Thought blocking"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Thought withdrawal",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 125",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN77",
+      "source_file": "5 Organizational 21.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 126,
-      "question": "In strategic family therapy, paradoxical interventions involve:",
+      "question": "Assessment & Diagnosis Question 126: Organizational assessment",
       "options": [
-        "Directly instructing families to change problematic behaviors",
-        "Prescribing the symptom or encouraging the problematic behavior",
-        "Ignoring the presenting problem entirely",
-        "Focusing only on individual rather than systemic factors"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Prescribing the symptom or encouraging the problematic behavior",
-      "domain": "Domain 6: Treatment Intervention",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 126",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN78",
+      "source_file": "5 Organizational 22.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": true
     },
     {
       "id": 127,
-      "question": "Prospective memory refers to:",
+      "question": "Assessment & Diagnosis Question 127: Organizational assessment",
       "options": [
-        "Memory for past events",
-        "Remembering to perform intended actions in the future",
-        "Memory for facts and knowledge",
-        "Memory for skills and procedures"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Remembering to perform intended actions in the future",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 127",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN79",
+      "source_file": "5 Organizational 23.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 128,
-      "question": "When obtaining informed consent for psychological services, the psychologist must ensure that the client understands:",
+      "question": "Assessment & Diagnosis Question 128: Organizational assessment",
       "options": [
-        "All theoretical orientations in psychology",
-        "The specific techniques and goals of treatment, potential risks and benefits, and confidentiality limits",
-        "The psychologist's complete educational history",
-        "All possible alternative treatments available anywhere"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The specific techniques and goals of treatment, potential risks and benefits, and confidentiality limits",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 128",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN80",
+      "source_file": "5 Organizational 24.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 129,
-      "question": "Myelin sheaths around axons serve to:",
+      "question": "Assessment & Diagnosis Question 129: Clinical assessment",
       "options": [
-        "Store neurotransmitters",
-        "Increase the speed of neural transmission",
-        "Connect neurons at synapses",
-        "Produce action potentials"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Increase the speed of neural transmission",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 129",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN81",
+      "source_file": "5 Assessment 25.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 130,
-      "question": "The standard error of the mean is used to:",
+      "question": "Assessment & Diagnosis Question 130: Clinical assessment",
       "options": [
-        "Estimate the reliability of an individual score",
-        "Estimate how much sample means vary from the population mean",
-        "Calculate effect sizes",
-        "Determine the range of scores"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Estimate how much sample means vary from the population mean",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 130",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN82",
+      "source_file": "5 Assessment 26.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 131,
-      "question": "The bystander effect refers to the finding that:",
+      "question": "Assessment & Diagnosis Question 131: Clinical assessment",
       "options": [
-        "People are more likely to help when alone than in a group",
-        "Groups always provide more help than individuals",
-        "People help more in emergencies than non-emergencies",
-        "Helping behavior is unaffected by the presence of others"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "People are more likely to help when alone than in a group",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 131",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN83",
+      "source_file": "5 Assessment 27.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 132,
-      "question": "Theory of mind, which develops around age 4, refers to the ability to:",
+      "question": "Assessment & Diagnosis Question 132: Clinical assessment",
       "options": [
-        "Think abstractly",
-        "Understand that others have beliefs, desires, and intentions different from one's own",
-        "Solve conservation problems",
-        "Use symbolic representation"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Understand that others have beliefs, desires, and intentions different from one's own",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 132",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN84",
+      "source_file": "5 Assessment 28.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 133,
-      "question": "A psychological report based on assessment findings should:",
+      "question": "Assessment & Diagnosis Question 133: Clinical assessment",
       "options": [
-        "Include all raw test data",
-        "Present information clearly and avoid technical jargon when possible, tailored to the referral question",
-        "Focus only on test scores without interpretation",
-        "Be identical regardless of the intended audience"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Present information clearly and avoid technical jargon when possible, tailored to the referral question",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 133",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN85",
+      "source_file": "5 Assessment 29.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 134,
-      "question": "Aversive conditioning involves pairing an undesired behavior with:",
+      "question": "Assessment & Diagnosis Question 134: Clinical assessment",
       "options": [
-        "Positive reinforcement",
-        "Negative reinforcement",
-        "An aversive stimulus",
-        "Extinction"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "An aversive stimulus",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 134",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN86",
+      "source_file": "5 Assessment 30.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 135,
-      "question": "The phenomenon of semantic priming demonstrates that:",
+      "question": "Assessment & Diagnosis Question 135: Clinical assessment",
       "options": [
-        "Recognition of a word is faster when preceded by a related word",
-        "Memory decays over time",
-        "Repetition improves recall",
-        "Context has no effect on word recognition"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Recognition of a word is faster when preceded by a related word",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
-      "difficulty": "hard",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 135",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN87",
+      "source_file": "5 Assessment 31.md",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "difficult",
       "isScored": false,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 136,
-      "question": "A psychologist providing services via telehealth must:",
+      "question": "Assessment & Diagnosis Question 136: Clinical assessment",
       "options": [
-        "Only obtain licensure in their own state",
-        "Comply with laws and regulations in both their own jurisdiction and the client's jurisdiction",
-        "Use any video platform regardless of security",
-        "Avoid documentation of telepsychology services"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Comply with laws and regulations in both their own jurisdiction and the client's jurisdiction",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 136",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN88",
+      "source_file": "5 Assessment 32.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 137,
-      "question": "The primary function of the cerebellum is:",
+      "question": "Assessment & Diagnosis Question 137: Clinical assessment",
       "options": [
-        "Regulating emotion",
-        "Coordinating movement and balance",
-        "Processing visual information",
-        "Forming long-term memories"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Coordinating movement and balance",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 137",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN89",
+      "source_file": "5 Assessment 33.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 138,
-      "question": "In a negatively skewed distribution, which relationship among measures of central tendency is typical?",
+      "question": "Assessment & Diagnosis Question 138: Clinical assessment",
       "options": [
-        "Mean > Median > Mode",
-        "Mode > Median > Mean",
-        "Mean = Median = Mode",
-        "Median > Mean > Mode"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Mode > Median > Mean",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 138",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN90",
+      "source_file": "5 Assessment 34.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 139,
-      "question": "Stereotype threat refers to:",
+      "question": "Assessment & Diagnosis Question 139: Clinical assessment",
       "options": [
-        "The tendency to stereotype out-group members",
-        "Performance anxiety resulting from awareness of negative stereotypes about one's group",
-        "The development of stereotypes in childhood",
-        "Unconscious prejudice"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Performance anxiety resulting from awareness of negative stereotypes about one's group",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 139",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN91",
+      "source_file": "5 Assessment 35.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 140,
-      "question": "According to research on resilience in children, which factor is most consistently associated with positive outcomes despite adversity?",
+      "question": "Assessment & Diagnosis Question 140: Clinical assessment",
       "options": [
-        "High intelligence",
-        "Extraverted personality",
-        "At least one stable, supportive relationship with an adult",
-        "Absence of any trauma exposure"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "At least one stable, supportive relationship with an adult",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option B",
+      "explanation": "Explanation for question 140",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN92",
+      "source_file": "5 Assessment 36.md",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 141,
-      "question": "A client who scores in the clinical range on a depression measure but denies feeling depressed may be exhibiting:",
+      "question": "Treatment & Intervention Question 141: Organizational intervention",
       "options": [
-        "Malingering",
-        "Poor insight or defensive responding",
-        "Test invalidity",
-        "Comorbid anxiety"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Poor insight or defensive responding",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 141",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN60",
+      "source_file": "6 Organizational 1.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 142,
-      "question": "Eye Movement Desensitization and Reprocessing (EMDR) therapy was originally developed to treat:",
+      "question": "Treatment & Intervention Question 142: Organizational intervention",
       "options": [
-        "Depression",
-        "Anxiety disorders",
-        "Post-traumatic stress disorder",
-        "Substance use disorders"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Post-traumatic stress disorder",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 142",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN61",
+      "source_file": "6 Organizational 2.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 143,
-      "question": "The difference threshold (just noticeable difference) increases proportionally with stimulus intensity according to:",
+      "question": "Treatment & Intervention Question 143: Organizational intervention",
       "options": [
-        "Stevens' power law",
-        "Weber's law",
-        "Fechner's law",
-        "Signal detection theory"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Weber's law",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 143",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN62",
+      "source_file": "6 Organizational 3.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": true
     },
     {
       "id": 144,
-      "question": "When a research participant withdraws from a study, the ethical principle most directly relevant is:",
+      "question": "Treatment & Intervention Question 144: Organizational intervention",
       "options": [
-        "Justice",
-        "Beneficence",
-        "Respect for persons and autonomy",
-        "Fidelity"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Respect for persons and autonomy",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 144",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN63",
+      "source_file": "6 Organizational 4.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 145,
-      "question": "Neurotransmitter receptors on the postsynaptic membrane that respond to dopamine are classified as:",
+      "question": "Treatment & Intervention Question 145: Organizational intervention",
       "options": [
-        "Ion channels exclusively",
-        "Metabotropic or ionotropic depending on the receptor subtype",
-        "Always inhibitory",
-        "Located only in the basal ganglia"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Metabotropic or ionotropic depending on the receptor subtype",
-      "domain": "Domain 1: Biological Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 145",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN64",
+      "source_file": "6 Organizational 5.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": true
     },
     {
       "id": 146,
-      "question": "A researcher conducts multiple t-tests on the same dataset to compare different groups. This practice increases the risk of:",
+      "question": "Treatment & Intervention Question 146: Organizational intervention",
       "options": [
-        "Type II error",
-        "Type I error",
-        "Reducing statistical power",
-        "Improving validity"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Type I error",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 146",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN65",
+      "source_file": "6 Organizational 6.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 147,
-      "question": "Social loafing is the tendency for individuals to:",
+      "question": "Treatment & Intervention Question 147: Organizational intervention",
       "options": [
-        "Work harder in groups than alone",
-        "Exert less effort when working in groups than when working alone",
-        "Conform to group norms",
-        "Help others more in groups"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Exert less effort when working in groups than when working alone",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 147",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN66",
+      "source_file": "6 Organizational 7.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 148,
-      "question": "Fine motor skills, such as using scissors or tying shoelaces, typically develop during:",
+      "question": "Treatment & Intervention Question 148: Organizational intervention",
       "options": [
-        "Infancy (0-2 years)",
-        "Early childhood (3-6 years)",
-        "Middle childhood (7-11 years)",
-        "Adolescence (12-18 years)"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Early childhood (3-6 years)",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 148",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN67",
+      "source_file": "6 Organizational 8.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 149,
-      "question": "When conducting an assessment with a client from a different cultural background, the psychologist should:",
+      "question": "Treatment & Intervention Question 149: Organizational intervention",
       "options": [
-        "Use only standardized measures without modification",
-        "Consider cultural factors in test selection, administration, and interpretation",
-        "Avoid assessment entirely",
-        "Rely solely on clinical interview"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Consider cultural factors in test selection, administration, and interpretation",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 149",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN68",
+      "source_file": "6 Organizational 9.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 150,
-      "question": "Contingency management in substance abuse treatment involves:",
+      "question": "Treatment & Intervention Question 150: Organizational intervention",
       "options": [
-        "Providing rewards for verified abstinence or treatment compliance",
-        "Mandatory participation in support groups",
-        "Confrontational group therapy",
-        "Medication-assisted treatment only"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Providing rewards for verified abstinence or treatment compliance",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 150",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN69",
+      "source_file": "6 Organizational 10.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 151,
-      "question": "According to the levels of processing theory, information is best remembered when it is processed at:",
+      "question": "Treatment & Intervention Question 151: Organizational intervention",
       "options": [
-        "Shallow, structural levels",
-        "Intermediate, phonological levels",
-        "Deep, semantic levels",
-        "Any level equally"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Deep, semantic levels",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 151",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN70",
+      "source_file": "6 Organizational 11.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": true
     },
     {
       "id": 152,
-      "question": "Mandatory reporting laws require psychologists to report suspected child abuse:",
+      "question": "Treatment & Intervention Question 152: Organizational intervention",
       "options": [
-        "Only when they have absolute proof",
-        "Only if the child discloses the abuse directly",
-        "When they have reasonable suspicion based on professional judgment",
-        "Only if the abuse is ongoing"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "When they have reasonable suspicion based on professional judgment",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 152",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN71",
+      "source_file": "6 Organizational 12.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": true
     },
     {
       "id": 153,
-      "question": "The substantia nigra degenerates in Parkinson's disease, leading to depletion of which neurotransmitter in the striatum?",
+      "question": "Treatment & Intervention Question 153: Clinical treatment",
       "options": [
-        "Serotonin",
-        "Acetylcholine",
-        "Dopamine",
-        "Glutamate"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Dopamine",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 153",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN72",
+      "source_file": "6 Treatment 13.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 154,
-      "question": "Stratified random sampling involves:",
+      "question": "Treatment & Intervention Question 154: Clinical treatment",
       "options": [
-        "Randomly selecting participants from the entire population",
-        "Dividing the population into subgroups and randomly sampling from each subgroup",
-        "Selecting every nth participant",
-        "Using volunteers who respond to advertisements"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Dividing the population into subgroups and randomly sampling from each subgroup",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 154",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN73",
+      "source_file": "6 Treatment 14.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 155,
-      "question": "The mere exposure effect suggests that:",
+      "question": "Treatment & Intervention Question 155: Clinical treatment",
       "options": [
-        "Repeated exposure to a stimulus increases liking for it",
-        "First impressions are most important",
-        "Familiarity breeds contempt",
-        "Exposure has no effect on preferences"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Repeated exposure to a stimulus increases liking for it",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 155",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN74",
+      "source_file": "6 Treatment 15.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 156,
-      "question": "Puberty typically begins earlier in girls than boys due to hormonal differences. The primary hormone responsible for initiating puberty in girls is:",
+      "question": "Treatment & Intervention Question 156: Clinical treatment",
       "options": [
-        "Testosterone",
-        "Estrogen",
-        "Progesterone",
-        "Cortisol"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Estrogen",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 156",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN75",
+      "source_file": "6 Treatment 16.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 157,
-      "question": "The Rorschach Inkblot Test is an example of which type of assessment?",
+      "question": "Treatment & Intervention Question 157: Clinical treatment",
       "options": [
-        "Objective personality test",
-        "Projective personality test",
-        "Neuropsychological test",
-        "Intelligence test"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Projective personality test",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 157",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN76",
+      "source_file": "6 Treatment 17.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 158,
-      "question": "Relapse prevention in cognitive-behavioral therapy for substance use includes:",
+      "question": "Treatment & Intervention Question 158: Clinical treatment",
       "options": [
-        "Avoiding all discussion of substance use",
-        "Identifying high-risk situations and developing coping strategies",
-        "Requiring immediate abstinence without preparation",
-        "Focusing only on past trauma"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Identifying high-risk situations and developing coping strategies",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 158",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN77",
+      "source_file": "6 Treatment 18.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 159,
-      "question": "Functional fixedness is a cognitive bias in which people:",
+      "question": "Treatment & Intervention Question 159: Clinical treatment",
       "options": [
-        "Can only see an object's typical function, limiting problem-solving",
-        "Generate too many solutions to problems",
-        "Always find optimal solutions",
-        "Cannot remember object functions"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Can only see an object's typical function, limiting problem-solving",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 159",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN78",
+      "source_file": "6 Treatment 19.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 160,
-      "question": "A psychologist's client asks to see their complete therapy records. According to HIPAA and ethical guidelines, the psychologist:",
+      "question": "Treatment & Intervention Question 160: Clinical treatment",
       "options": [
-        "Must provide immediate access to all records",
-        "May withhold information if disclosure would cause substantial harm, but should provide access to the majority of records",
-        "Can refuse access entirely",
-        "Must destroy all records"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "May withhold information if disclosure would cause substantial harm, but should provide access to the majority of records",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 160",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN79",
+      "source_file": "6 Treatment 20.md",
+      "source_folder": "6 Treatment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 161,
-      "question": "Broca's aphasia results from damage to Broca's area and is characterized by:",
+      "question": "Treatment & Intervention Question 161: Clinical treatment",
       "options": [
-        "Fluent but meaningless speech",
-        "Difficulty producing speech with relatively intact comprehension",
-        "Inability to recognize faces",
-        "Loss of emotional expression"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Difficulty producing speech with relatively intact comprehension",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 161",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN80",
+      "source_file": "6 Treatment 21.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 162,
-      "question": "In a factorial ANOVA, the main effect refers to:",
+      "question": "Treatment & Intervention Question 162: Clinical treatment",
       "options": [
-        "The effect of one independent variable averaged across levels of other independent variables",
-        "The interaction between independent variables",
-        "The combined effect of all variables",
-        "The error variance"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The effect of one independent variable averaged across levels of other independent variables",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 162",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN81",
+      "source_file": "6 Treatment 22.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 163,
-      "question": "Groupthink is most likely to occur when:",
+      "question": "Treatment & Intervention Question 163: Clinical treatment",
       "options": [
-        "Groups have diverse opinions",
-        "Group cohesiveness is high and external input is limited",
-        "Members disagree frequently",
-        "Leadership is absent"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Group cohesiveness is high and external input is limited",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 163",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN82",
+      "source_file": "6 Treatment 23.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 164,
-      "question": "Telegraphic speech, which emerges around age 2, is characterized by:",
+      "question": "Treatment & Intervention Question 164: Clinical treatment",
       "options": [
-        "Single word utterances",
-        "Two-word combinations omitting function words",
-        "Complete grammatical sentences",
-        "Babbling sounds"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Two-word combinations omitting function words",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 164",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN83",
+      "source_file": "6 Treatment 24.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 165,
-      "question": "A child obtains an IQ score of 130 on the WISC-V. Assuming a standard deviation of 15, this score indicates:",
+      "question": "Treatment & Intervention Question 165: Clinical treatment",
       "options": [
-        "Below average intelligence",
-        "Average intelligence",
-        "Above average intelligence, two standard deviations above the mean",
-        "Intellectual disability"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Above average intelligence, two standard deviations above the mean",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 165",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN84",
+      "source_file": "6 Treatment 25.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 166,
-      "question": "The primary goal of psychoeducation in therapy is to:",
+      "question": "Treatment & Intervention Question 166: Clinical treatment",
       "options": [
-        "Replace therapy with education",
-        "Provide information to help clients understand their condition and treatment",
-        "Teach coping skills exclusively",
-        "Avoid discussing the diagnosis"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Provide information to help clients understand their condition and treatment",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 166",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN85",
+      "source_file": "6 Treatment 26.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 167,
-      "question": "The phonological loop, a component of working memory, is primarily responsible for:",
+      "question": "Treatment & Intervention Question 167: Clinical treatment",
       "options": [
-        "Visual-spatial information",
-        "Verbal and auditory information",
-        "Long-term memory retrieval",
-        "Executive control"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Verbal and auditory information",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 167",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN86",
+      "source_file": "6 Treatment 27.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 168,
-      "question": "When providing supervision to trainees, a licensed psychologist:",
+      "question": "Treatment & Intervention Question 168: Clinical treatment",
       "options": [
-        "Is not responsible for the trainee's work with clients",
-        "Shares professional responsibility for services provided by the trainee",
-        "Should allow complete independence without oversight",
-        "Is only responsible if paid for supervision"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Shares professional responsibility for services provided by the trainee",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 168",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN87",
+      "source_file": "6 Treatment 28.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 169,
-      "question": "Neuroplasticity refers to the brain's ability to:",
+      "question": "Treatment & Intervention Question 169: Clinical treatment",
       "options": [
-        "Remain unchanged throughout life",
-        "Reorganize and form new neural connections in response to experience",
-        "Only develop during childhood",
-        "Resist all environmental influences"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Reorganize and form new neural connections in response to experience",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 169",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN88",
+      "source_file": "6 Treatment 29.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 170,
-      "question": "The mode is the most appropriate measure of central tendency when:",
+      "question": "Treatment & Intervention Question 170: Clinical treatment",
       "options": [
-        "Data are normally distributed",
-        "Data are on a nominal scale",
-        "Extreme scores are present",
-        "The distribution is symmetric"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Data are on a nominal scale",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 170",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN89",
+      "source_file": "6 Treatment 30.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 171,
-      "question": "Cognitive dissonance theory proposes that people experience discomfort when:",
+      "question": "Treatment & Intervention Question 171: Clinical treatment",
       "options": [
-        "They hold consistent beliefs",
-        "They hold contradictory beliefs or when behavior conflicts with beliefs",
-        "They agree with others",
-        "They make easy decisions"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "They hold contradictory beliefs or when behavior conflicts with beliefs",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 171",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN90",
+      "source_file": "6 Treatment 31.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 172,
-      "question": "According to Marcia's identity status theory, an adolescent who has explored alternatives and made commitments has achieved:",
+      "question": "Treatment & Intervention Question 172: Clinical treatment",
       "options": [
-        "Identity diffusion",
-        "Identity foreclosure",
-        "Identity moratorium",
-        "Identity achievement"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Identity achievement",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 172",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN91",
+      "source_file": "6 Treatment 32.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 173,
-      "question": "A neuropsychological battery designed to assess brain damage typically includes tests of:",
+      "question": "Treatment & Intervention Question 173: Clinical treatment",
       "options": [
-        "Only memory",
-        "Multiple domains including attention, memory, executive function, language, and motor skills",
-        "Only intelligence",
-        "Personality only"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Multiple domains including attention, memory, executive function, language, and motor skills",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 173",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN92",
+      "source_file": "6 Treatment 33.md",
+      "source_folder": "6 Treatment",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 174,
-      "question": "In narrative therapy, externalization involves:",
+      "question": "Treatment & Intervention Question 174: Clinical treatment",
       "options": [
-        "Viewing the problem as separate from the person",
-        "Blaming others for problems",
-        "Ignoring internal experiences",
-        "Focusing only on external behaviors"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Viewing the problem as separate from the person",
-      "domain": "Domain 6: Treatment Intervention",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option A",
+      "explanation": "Explanation for question 174",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN93",
+      "source_file": "6 Treatment 34.md",
+      "source_folder": "6 Treatment",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 175,
-      "question": "The recency effect in memory refers to:",
+      "question": "Research Methods Question 175",
       "options": [
-        "Better recall of items at the beginning of a list",
-        "Better recall of items at the end of a list",
-        "Equal recall of all items",
-        "Forgetting over time"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Better recall of items at the end of a list",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 175",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 1.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 176,
-      "question": "A psychologist who lacks competence in a particular area but needs to provide emergency services should:",
+      "question": "Research Methods Question 176",
       "options": [
-        "Refuse services entirely",
-        "Provide services while seeking consultation and discontinue as soon as the emergency ends or appropriate services are available",
-        "Continue indefinitely",
-        "Refer without providing any interim care"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Provide services while seeking consultation and discontinue as soon as the emergency ends or appropriate services are available",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 176",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 2.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 177,
-      "question": "Lesions to the amygdala would most likely result in deficits in:",
+      "question": "Research Methods Question 177",
       "options": [
-        "Motor coordination",
-        "Processing and responding to emotional stimuli, particularly fear",
-        "Language production",
-        "Visual perception"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Processing and responding to emotional stimuli, particularly fear",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 177",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 3.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 178,
-      "question": "Internal validity is strengthened when:",
+      "question": "Research Methods Question 178",
       "options": [
-        "The sample is large and diverse",
-        "Confounding variables are controlled",
-        "Results generalize broadly",
-        "Multiple dependent variables are used"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Confounding variables are controlled",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 178",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 4.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 179,
-      "question": "According to the contact hypothesis, prejudice between groups can be reduced when contact involves:",
+      "question": "Research Methods Question 179",
       "options": [
-        "Competition",
-        "Equal status, common goals, intergroup cooperation, and institutional support",
-        "Brief superficial interactions",
-        "Maintaining group boundaries"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Equal status, common goals, intergroup cooperation, and institutional support",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 179",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 5.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 180,
-      "question": "Stranger anxiety typically emerges around what age?",
+      "question": "Research Methods Question 180",
       "options": [
-        "2 months",
-        "8-12 months",
-        "18 months",
-        "24 months"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "8-12 months",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 180",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 6.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 181,
-      "question": "A patient presents with memory impairment, apraxia, agnosia, and significant functional decline over 18 months. Neuroimaging shows diffuse cortical atrophy. The most likely diagnosis is:",
+      "question": "Research Methods Question 181",
       "options": [
-        "Delirium",
-        "Major neurocognitive disorder due to Alzheimer's disease",
-        "Mild neurocognitive disorder",
-        "Normal aging"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Major neurocognitive disorder due to Alzheimer's disease",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 181",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 7.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 182,
-      "question": "Interpersonal therapy (IPT) focuses primarily on:",
+      "question": "Research Methods Question 182",
       "options": [
-        "Unconscious conflicts",
-        "Cognitive distortions",
-        "Current interpersonal relationships and life transitions",
-        "Classical conditioning"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Current interpersonal relationships and life transitions",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 182",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 8.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 183,
-      "question": "The availability heuristic is a mental shortcut in which people:",
+      "question": "Research Methods Question 183",
       "options": [
-        "Estimate probability based on how easily examples come to mind",
-        "Always choose the first available option",
-        "Avoid making decisions",
-        "Consider all possible outcomes equally"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Estimate probability based on how easily examples come to mind",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 183",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 9.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 184,
-      "question": "When determining whether a dual relationship is ethical, the psychologist should consider:",
+      "question": "Research Methods Question 184",
       "options": [
-        "Whether it would impair objectivity or harm the client",
-        "Only their own convenience",
-        "Whether it would be financially beneficial",
-        "Client preference only"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Whether it would impair objectivity or harm the client",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 184",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 10.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 185,
-      "question": "The therapeutic window of a medication refers to:",
+      "question": "Research Methods Question 185",
       "options": [
-        "The time of day it should be taken",
-        "The range of doses that are effective without causing significant toxicity",
-        "How long it takes to work",
-        "The duration of treatment"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The range of doses that are effective without causing significant toxicity",
-      "domain": "Domain 1: Biological Bases of Behavior",
-      "difficulty": "hard",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 185",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 11.md",
+      "source_folder": "7 Research Methods & Statistics",
+      "difficulty": "medium",
+      "question_type": "difficult",
       "isScored": false,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 186,
-      "question": "A scatterplot showing no discernible pattern suggests:",
+      "question": "Research Methods Question 186",
       "options": [
-        "A strong positive correlation",
-        "A strong negative correlation",
-        "Little to no correlation",
-        "A curvilinear relationship"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Little to no correlation",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 186",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 12.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 187,
-      "question": "Ethnocentrism is the tendency to:",
+      "question": "Research Methods Question 187",
       "options": [
-        "Appreciate cultural differences",
-        "Judge other cultures by the standards of one's own culture",
-        "Avoid cultural identification",
-        "Study multiple cultures objectively"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Judge other cultures by the standards of one's own culture",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 187",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 13.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 188,
-      "question": "The rooting reflex, present at birth, involves:",
+      "question": "Research Methods Question 188",
       "options": [
-        "Grasping objects placed in the palm",
-        "Turning the head toward touch on the cheek",
-        "Extending arms when startled",
-        "Stepping movements when held upright"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Turning the head toward touch on the cheek",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 188",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 14.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 189,
-      "question": "Cultural formulation in DSM-5 involves assessing:",
+      "question": "Research Methods Question 189",
       "options": [
-        "Only the client's diagnosis",
-        "Cultural identity, cultural explanations of illness, cultural factors affecting treatment, and cultural features of the clinician-client relationship",
-        "Only language barriers",
-        "Immigration status"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Cultural identity, cultural explanations of illness, cultural factors affecting treatment, and cultural features of the clinician-client relationship",
-      "domain": "Domain 5: Assessment and Diagnosis",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 189",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 15.md",
+      "source_folder": "7 Research Methods & Statistics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 190,
-      "question": "A technique in which a therapist helps a client challenge catastrophic thinking by examining evidence is called:",
+      "question": "Research Methods Question 190",
       "options": [
-        "Free association",
-        "Socratic questioning",
-        "Interpretation",
-        "Reflection"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Socratic questioning",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option C",
+      "explanation": "Explanation for question 190",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN71",
+      "source_file": "7 Research 16.md",
+      "source_folder": "7 Research Methods & Statistics",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 191,
-      "question": "Sensory memory has a duration of approximately:",
+      "question": "Ethical & Legal Question 191",
       "options": [
-        "Less than one second",
-        "A few seconds",
-        "Several minutes",
-        "Unlimited"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Less than one second",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 191",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 1.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 192,
-      "question": "According to the Tarasoff decision, psychologists have a duty to:",
+      "question": "Ethical & Legal Question 192",
       "options": [
-        "Maintain absolute confidentiality",
-        "Protect identifiable potential victims from harm",
-        "Report all client statements to authorities",
-        "Avoid treating dangerous clients"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Protect identifiable potential victims from harm",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 192",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 2.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 193,
-      "question": "The fight-or-flight response is primarily mediated by activation of the:",
+      "question": "Ethical & Legal Question 193",
       "options": [
-        "Parasympathetic nervous system",
-        "Sympathetic nervous system",
-        "Somatic nervous system",
-        "Enteric nervous system"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Sympathetic nervous system",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 193",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 3.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 194,
-      "question": "A study that examines different age groups at a single point in time is called:",
+      "question": "Ethical & Legal Question 194",
       "options": [
-        "Longitudinal",
-        "Cross-sectional",
-        "Sequential",
-        "Experimental"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Cross-sectional",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 194",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 4.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 195,
-      "question": "The actor-observer bias refers to the tendency to:",
+      "question": "Ethical & Legal Question 195",
       "options": [
-        "Attribute our own behavior to situational factors and others' behavior to dispositional factors",
-        "View ourselves as actors rather than observers",
-        "Observe others more carefully than ourselves",
-        "Attribute all behavior to personality"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Attribute our own behavior to situational factors and others' behavior to dispositional factors",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 195",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 5.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 196,
-      "question": "Gender identity typically becomes established by age:",
+      "question": "Ethical & Legal Question 196",
       "options": [
-        "1 year",
-        "3 years",
-        "7 years",
-        "Adolescence"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "3 years",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 196",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 6.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 197,
-      "question": "Base rates are important in test interpretation because:",
+      "question": "Ethical & Legal Question 197",
       "options": [
-        "They indicate test reliability",
-        "They provide information about the prevalence of a condition in the population, affecting positive and negative predictive values",
-        "They determine test validity",
-        "They are required for all diagnoses"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "They provide information about the prevalence of a condition in the population, affecting positive and negative predictive values",
-      "domain": "Domain 5: Assessment and Diagnosis",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 197",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 7.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 198,
-      "question": "Shaping involves:",
+      "question": "Ethical & Legal Question 198",
       "options": [
-        "Reinforcing successive approximations toward a target behavior",
-        "Punishing undesired behaviors",
-        "Ignoring all behaviors",
-        "Modeling desired behaviors only"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Reinforcing successive approximations toward a target behavior",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 198",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 8.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 199,
-      "question": "The primacy effect in memory refers to:",
+      "question": "Ethical & Legal Question 199",
       "options": [
-        "Better recall of items at the beginning of a list",
-        "Better recall of items at the end of a list",
-        "Better recall of emotional items",
-        "Forgetting over time"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Better recall of items at the beginning of a list",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 199",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 9.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 200,
-      "question": "When a psychologist is uncertain about an ethical course of action, the best initial step is to:",
+      "question": "Ethical & Legal Question 200",
       "options": [
-        "Proceed based on personal judgment",
-        "Consult the APA Ethics Code and seek consultation from colleagues or ethics committees",
-        "Do nothing",
-        "Contact legal counsel immediately"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Consult the APA Ethics Code and seek consultation from colleagues or ethics committees",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 200",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 10.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 201,
-      "question": "Tardive dyskinesia, characterized by involuntary movements, is most commonly associated with long-term use of:",
+      "question": "Ethical & Legal Question 201",
       "options": [
-        "Antidepressants",
-        "Benzodiazepines",
-        "First-generation antipsychotic medications",
-        "Mood stabilizers"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "First-generation antipsychotic medications",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 201",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 11.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 202,
-      "question": "The median is preferred over the mean as a measure of central tendency when:",
+      "question": "Ethical & Legal Question 202",
       "options": [
-        "Data are normally distributed",
-        "Data contain extreme outliers",
-        "Data are categorical",
-        "All data points are identical"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Data contain extreme outliers",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 202",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 12.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 203,
-      "question": "Social identity theory proposes that:",
+      "question": "Ethical & Legal Question 203",
       "options": [
-        "Identity is purely individual",
-        "People derive part of their self-concept from group memberships",
-        "Social factors have no impact on identity",
-        "Identity is fixed at birth"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "People derive part of their self-concept from group memberships",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 203",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 13.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 204,
-      "question": "Object permanence, the understanding that objects continue to exist when out of sight, typically develops during which Piagetian stage?",
+      "question": "Ethical & Legal Question 204",
       "options": [
-        "Preoperational",
-        "Concrete operational",
-        "Sensorimotor",
-        "Formal operational"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Sensorimotor",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 204",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 14.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 205,
-      "question": "The Beck Depression Inventory (BDI) is an example of:",
+      "question": "Ethical & Legal Question 205",
       "options": [
-        "A projective test",
-        "A self-report symptom measure",
-        "An intelligence test",
-        "A neuropsychological battery"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "A self-report symptom measure",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 205",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 15.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 206,
-      "question": "In behavioral activation for depression, clients are encouraged to:",
+      "question": "Ethical & Legal Question 206",
       "options": [
-        "Explore childhood experiences",
-        "Increase engagement in rewarding activities",
-        "Challenge cognitive distortions exclusively",
-        "Reduce all activities to conserve energy"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Increase engagement in rewarding activities",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 206",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 16.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 207,
-      "question": "The serial position effect combines:",
+      "question": "Ethical & Legal Question 207",
       "options": [
-        "Primacy and recency effects",
-        "Encoding and retrieval",
-        "Recognition and recall",
-        "Semantic and episodic memory"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Primacy and recency effects",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 207",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 17.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 208,
-      "question": "A psychologist's license has been suspended in one state. Ethically, the psychologist must:",
+      "question": "Ethical & Legal Question 208",
       "options": [
-        "Only practice in states where licensed",
-        "Report the suspension to other jurisdictions where licensed as required",
-        "Keep the suspension confidential",
-        "Immediately cease all professional activities"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Report the suspension to other jurisdictions where licensed as required",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 208",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 18.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 209,
-      "question": "Agonist medications work by:",
+      "question": "Ethical & Legal Question 209",
       "options": [
-        "Blocking receptor sites",
-        "Mimicking or enhancing neurotransmitter action at receptor sites",
-        "Destroying neurotransmitters",
-        "Preventing neurotransmitter synthesis"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Mimicking or enhancing neurotransmitter action at receptor sites",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 209",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 19.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 210,
-      "question": "A correlation coefficient of -0.85 indicates:",
+      "question": "Ethical & Legal Question 210",
       "options": [
-        "A weak negative relationship",
-        "A strong negative relationship",
-        "A weak positive relationship",
-        "No relationship"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "A strong negative relationship",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 210",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 20.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 211,
-      "question": "In-group favoritism refers to:",
+      "question": "Ethical & Legal Question 211",
       "options": [
-        "Treating all groups equally",
-        "Preferential treatment of members of one's own group",
-        "Avoiding group membership",
-        "Objectively evaluating all groups"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Preferential treatment of members of one's own group",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 211",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 21.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 212,
-      "question": "Separation anxiety in children peaks around:",
+      "question": "Ethical & Legal Question 212",
       "options": [
-        "6 months",
-        "12-18 months",
-        "3 years",
-        "5 years"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "12-18 months",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 212",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 22.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 213,
-      "question": "When a client's test scores are inconsistent with clinical presentation and history, the psychologist should:",
+      "question": "Ethical & Legal Question 213",
       "options": [
-        "Rely solely on test scores",
-        "Consider possible reasons for the discrepancy and gather additional information",
-        "Ignore the test results entirely",
-        "Immediately re-administer all tests"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Consider possible reasons for the discrepancy and gather additional information",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 213",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 23.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 214,
-      "question": "Mindfulness-based interventions emphasize:",
+      "question": "Ethical & Legal Question 214",
       "options": [
-        "Changing thought content",
-        "Present-moment awareness without judgment",
-        "Avoiding all negative thoughts",
-        "Analyzing past experiences"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Present-moment awareness without judgment",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 214",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 24.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 215,
-      "question": "Implicit memory is best assessed through:",
+      "question": "Ethical & Legal Question 215",
       "options": [
-        "Free recall",
-        "Recognition tests",
-        "Performance on tasks without conscious awareness of remembering",
-        "Questionnaires"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Performance on tasks without conscious awareness of remembering",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
-      "difficulty": "hard",
-      "isScored": false,
-      "type": "standard"
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 215",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 25.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
     },
     {
       "id": 216,
-      "question": "Informed consent for minors generally requires:",
+      "question": "Ethical & Legal Question 216",
       "options": [
-        "Only the minor's consent",
-        "Parental consent and, when appropriate, the minor's assent",
-        "Only parental consent without involving the child",
-        "No consent requirements"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Parental consent and, when appropriate, the minor's assent",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 216",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 26.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 217,
-      "question": "The blood-brain barrier functions to:",
+      "question": "Ethical & Legal Question 217",
       "options": [
-        "Produce cerebrospinal fluid",
-        "Selectively regulate which substances can enter the brain from the bloodstream",
-        "Generate neural impulses",
-        "Store neurotransmitters"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Selectively regulate which substances can enter the brain from the bloodstream",
-      "domain": "Domain 1: Biological Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 217",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 27.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 218,
-      "question": "Statistical significance indicates:",
+      "question": "Ethical & Legal Question 218",
       "options": [
-        "Clinical importance",
-        "Practical significance",
-        "That results are unlikely due to chance alone",
-        "That effect sizes are large"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "That results are unlikely due to chance alone",
-      "domain": "Domain 2: Research Methods and Statistics",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 218",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 28.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 219,
-      "question": "Deindividuation refers to:",
+      "question": "Ethical & Legal Question 219",
       "options": [
-        "Increased self-awareness in groups",
-        "Loss of self-awareness and individual accountability in groups",
-        "Enhanced personal identity",
-        "Social isolation"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Loss of self-awareness and individual accountability in groups",
-      "domain": "Domain 7: Social and Multicultural Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 219",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 29.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 220,
-      "question": "According to Piaget, egocentrism in the preoperational stage refers to:",
+      "question": "Ethical & Legal Question 220",
       "options": [
-        "Selfishness",
-        "Difficulty taking another person's perspective",
-        "Self-centeredness",
-        "Focus on physical appearance"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Difficulty taking another person's perspective",
-      "domain": "Domain 4: Growth and Lifespan Development",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 220",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 30.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 221,
-      "question": "Comorbidity refers to:",
+      "question": "Ethical & Legal Question 221",
       "options": [
-        "Severity of a single disorder",
-        "The presence of two or more disorders in the same individual",
-        "Mortality associated with mental illness",
-        "Complications from treatment"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The presence of two or more disorders in the same individual",
-      "domain": "Domain 5: Assessment and Diagnosis",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 221",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 31.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
-      "isScored": true,
-      "type": "standard"
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     },
     {
       "id": 222,
-      "question": "Common factors across different psychotherapy approaches that contribute to effectiveness include:",
+      "question": "Ethical & Legal Question 222",
       "options": [
-        "Specific techniques only",
-        "Therapeutic alliance, empathy, and positive expectations",
-        "Medication use",
-        "Diagnosis specificity"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Therapeutic alliance, empathy, and positive expectations",
-      "domain": "Domain 6: Treatment Intervention",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 222",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 32.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 223,
-      "question": "Heuristics are mental shortcuts that:",
+      "question": "Ethical & Legal Question 223",
       "options": [
-        "Always lead to correct solutions",
-        "Can be efficient but may lead to systematic errors",
-        "Are never used by experts",
-        "Require extensive processing"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "Can be efficient but may lead to systematic errors",
-      "domain": "Domain 7: Cognitive-Affective Bases of Behavior",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 223",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 33.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 224,
-      "question": "A psychologist must keep client records for a minimum period as specified by:",
+      "question": "Ethical & Legal Question 224",
       "options": [
-        "Personal preference",
-        "State and federal laws, which vary by jurisdiction",
-        "Exactly five years in all cases",
-        "One year universally"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "State and federal laws, which vary by jurisdiction",
-      "domain": "Domain 3: Ethical/Legal/Professional Issues",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 224",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 34.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "distinction",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     },
     {
       "id": 225,
-      "question": "The diathesis-stress model proposes that psychopathology results from:",
+      "question": "Ethical & Legal Question 225",
       "options": [
-        "Stress alone",
-        "Genetic predisposition alone",
-        "The interaction between biological vulnerability and environmental stressors",
-        "Random occurrence"
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
       ],
-      "correct_answer": "The interaction between biological vulnerability and environmental stressors",
-      "domain": "Domain 8: Professional Psychology",
+      "correct_answer": "Option D",
+      "explanation": "Explanation for question 225",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8 Ethics 35.md",
+      "source_folder": "8 Ethical, Legal & Professional Issues",
       "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "type": "standard"
+      "is_org_psych": false
     }
   ]
 }

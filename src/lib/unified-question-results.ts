@@ -12,6 +12,14 @@ export interface QuestionResult {
   isCorrect: boolean
   timestamp: number
   sessionId?: string // Exam session ID
+  // New fields for source tracking and org psych integration
+  source_file?: string // Exact .md filename from eppp-reference
+  source_folder?: string // Directory name containing the file
+  question_type?: 'standard' | 'distinction' | 'difficult'
+  is_org_psych?: boolean // Whether question is organizational psychology
+  knId?: string // Knowledge Statement ID
+  difficulty?: 'easy' | 'medium' | 'hard'
+  isScored?: boolean // Whether question counts toward score
 }
 
 export interface SectionResult {

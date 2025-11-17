@@ -17,6 +17,14 @@ export interface ExamQuestion {
   correct_answer: string
   topic?: string
   domain?: string
+  // New fields for source tracking and org psych integration
+  source_file?: string
+  source_folder?: string
+  question_type?: 'standard' | 'distinction' | 'difficult'
+  is_org_psych?: boolean
+  knId?: string
+  difficulty?: 'easy' | 'medium' | 'hard'
+  isScored?: boolean
   [key: string]: any
 }
 

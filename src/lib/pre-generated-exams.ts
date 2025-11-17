@@ -14,6 +14,11 @@ interface Question {
   isScored?: boolean
   knId?: string
   type?: string
+  // New fields for source tracking and org psych integration
+  source_file?: string
+  source_folder?: string
+  question_type?: 'standard' | 'distinction' | 'difficult'
+  is_org_psych?: boolean
 }
 
 interface ExamQuestions {

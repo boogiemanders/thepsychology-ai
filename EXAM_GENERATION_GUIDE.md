@@ -2,32 +2,121 @@
 
 ## Overview
 
-The exam system has been updated to:
-1. **Use Opus AI model** - Better quality and larger context window (128k tokens)
-2. **Read from local filesystem** - Instant access without network latency
-3. **Support 4 of each exam type** - 4 diagnostic exams (71 questions each) + 4 practice exams (225 questions each)
+The exam system generates high-quality practice exams with:
+1. **Use Sonnet 4.5 AI model** - Superior quality, balanced token efficiency (~100k tokens per exam)
+2. **Exclusive source material** - All 83 .md files from eppp-reference folder
+3. **Complete source tracking** - Every question tagged with source file for topic selector/teacher
+4. **Read from local filesystem** - Instant access without network latency
+5. **Support 4 of each exam type** - 4 diagnostic exams (71 questions each) + 4 practice exams (225 questions each)
 
-## What Was Fixed
+## What Makes These Exams Different
 
-### ✅ API Route Updates
-- Updated `/api/pre-generate-exam` to use Claude Opus with 128k token limit
-- Increased from Haiku (16k tokens) to Opus (128k tokens) for complete exams
-- Updated prompts to emphasize all questions must be generated (no partial exams)
+### ✅ Comprehensive Question Coverage
+- Uses EXCLUSIVELY the 83 .md files in `/eppp-reference/` folder
+- Covers all 71 Knowledge Statements (KNs) from the official EPPP Part 1 exam
+- Follows official domain weight distributions from KNs.pdf
+- Each question traced to source file for educational tracking
 
-### ✅ Exam Loading System
-- Switched from GitHub network fetching to local filesystem reading
-- Removed 200-500ms network latency
-- Now reads from `exams/diagnostic/` and `exams/practice/` directories
-- Added security validation for file names
+### ✅ Source File Tracking
+- Every question includes `source_file` and `source_folder` metadata
+- Enables Topic Selector to recommend specific .md files to study
+- Allows Topic Teacher to highlight exact sentences from reference material
+- Powers prioritization engine for targeted learning
 
-### ✅ Exam File List
-- Updated `getAvailableExamFilesList()` to expect 4 of each exam type
-- New naming convention: `diagnostic-exam-001.md` through `diagnostic-exam-004.md`
-- Same for practice: `practice-exam-001.md` through `practice-exam-004.md`
+### ✅ Organizational Psychology Integration
+- Organizational psychology questions distributed across domains 2, 3, 5, 6
+- Comprises 21% of all questions (~47 questions in 225-question exam)
+- Tracked separately to show as 9th priority area if user struggles
+- Links to all org psych .md files: 12 files in "2 3 5 6 Organizational Psychology" folder
 
-## How to Generate Complete Exams
+### ✅ Question Type Distribution
+- **60% Standard questions** (135 scored) - Core knowledge verification
+- **20% Distinction questions** (45 scored) - Compare/contrast related concepts
+- **20% Difficult questions** (45 unscored) - Obscure facts, subtle distinctions, complex integrations
 
-### Option 1: Generate via API Endpoint (Recommended)
+### ✅ Domain Distribution
+Following KNs.pdf official weights for 225-question practice exam:
+- Domain 1 (Biological): 10% = 23 questions
+- Domain 2 (Cognitive-Affective): 13% = 29 questions (7 org psych)
+- Domain 3 (Social & Cultural): 11% = 25 questions (9 org psych)
+- Domain 4 (Lifespan): 12% = 27 questions
+- Domain 5 (Assessment & Diagnosis): 16% = 36 questions (9 org psych)
+- Domain 6 (Treatment/Intervention): 15% = 34 questions (13 org psych)
+- Domain 7 (Research & Statistics): 7% = 16 questions
+- Domain 8 (Ethical/Legal): 16% = 35 questions
+- **Org Psychology Total: 21% = 47 questions** (38 scored + 9 unscored)
+
+## Exam Generation Instructions
+
+### Generation Prompt
+
+Use this exact prompt to generate exams with Claude Sonnet 4.5:
+
+```
+You are an expert EPPP (Part 1–Knowledge) exam generator and subject matter expert in psychology. Your task is to create a comprehensive, [71|225]-question multiple-choice practice exam from the eppp-reference folder.
+
+Your generation of this exam must follow these rules precisely:
+
+1. Exclusive Source Material
+   - You must use ONLY the provided study material from eppp-reference as the exclusive source for generating all questions, correct answers, and incorrect answer choices (distractors)
+   - Do not use any external knowledge
+   - Every question must be traceable to a specific .md file in eppp-reference
+   - Reference ALL 83 .md files across all domains
+   - Ensure all 71 Knowledge Statements (KNs) are covered
+
+2. Question Style, Length, and Difficulty
+   - Format: Replicate these two sample questions:
+     * "An organizational psychologist is hired by a company to determine if the performance of many of its recently hired employees can be improved by providing them with training. To do so, the psychologist will conduct a: A. performance appraisal. B. needs analysis. C. task analysis D. job evaluation."
+     * "A psychologist developed a program for first-time parents that addresses methods of dealing with parenting stress and lifestyle changes and is open to all expectant parents in the community. This is an example of which of the following? A. primary prevention B. secondary prevention C. tertiary prevention D. quaternary prevention"
+   - Stems: Concise and direct (1-2 sentences), direct
+   - Choices: Brief (single terms or short phrases)
+   - No "All of the above" or "None of the above"
+
+3. Question Distribution
+   - 60% Standard questions: Core knowledge from eppp-reference
+   - 20% Distinction questions: Compare/contrast related concepts, differences in application between similar approaches, selecting the most appropriate option between viable alternatives
+   - 20% Difficult/Unscored questions: Obscure or secondary facts, extremely subtle distinctions, complex concept integration. MARK AS isScored: false
+
+4. Domain Coverage (follow KNs.pdf percentages)
+   [For practice exams: Distribute per domain percentages above, with org psych integrated]
+   - Ensure coverage of all 71 KNs across all domains
+   - Organizational psychology questions should be distributed in domains 2, 3, 5, 6 with approximately 21% total
+
+5. Source File Tracking (CRITICAL)
+   - Every question MUST include source_file and source_folder fields
+   - source_file: Exact .md filename from eppp-reference
+   - source_folder: Directory name containing the file
+   - Example: source_file: "2 Theories of Motivation.md", source_folder: "2 3 5 6 Organizational Psychology"
+
+6. Randomized Answers
+   - Correct answers must be randomized across A, B, C, D positions
+   - Approximately 25% in each position
+   - Ensure distractors are plausible and come from the eppp-reference material
+
+Output Format:
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "...",
+      "options": ["...", "...", "...", "..."],
+      "correct_answer": "The actual option text",
+      "explanation": "Why this answer is correct and why others are wrong",
+      "domain": "Domain X: [Name]",
+      "knId": "KNX",
+      "source_file": "filename.md",
+      "source_folder": "folder name",
+      "difficulty": "easy|medium|hard",
+      "question_type": "standard|distinction|difficult",
+      "isScored": true|false,
+      "is_org_psych": true|false
+    },
+    ...
+  ]
+}
+```
+
+### How to Generate
 
 1. **Start the development server:**
    ```bash
@@ -35,68 +124,39 @@ The exam system has been updated to:
    # Server runs on http://localhost:3000
    ```
 
-2. **Generate all 8 exams:**
-   Use the provided generation script (requires Node.js + ts-node):
-   ```bash
-   npx ts-node scripts/generate-all-exams.ts
-   ```
+2. **Generate practice exam using Claude directly:**
+   - Use Claude Sonnet 4.5
+   - Paste the generation prompt above
+   - Provide the full content of all 83 .md files from eppp-reference/
+   - Request 225 questions for practice exam or 71 for diagnostic
+   - Takes approximately 5-10 minutes to generate
 
-   OR manually call the API 8 times using curl:
-
-   **Diagnostic Exams (71 questions each):**
-   ```bash
-   curl -X POST http://localhost:3000/api/pre-generate-exam \
-     -H "Content-Type: application/json" \
-     -d '{"userId":"exam-gen-1","examType":"diagnostic"}'
-
-   curl -X POST http://localhost:3000/api/pre-generate-exam \
-     -H "Content-Type: application/json" \
-     -d '{"userId":"exam-gen-2","examType":"diagnostic"}'
-
-   curl -X POST http://localhost:3000/api/pre-generate-exam \
-     -H "Content-Type: application/json" \
-     -d '{"userId":"exam-gen-3","examType":"diagnostic"}'
-
-   curl -X POST http://localhost:3000/api/pre-generate-exam \
-     -H "Content-Type: application/json" \
-     -d '{"userId":"exam-gen-4","examType":"diagnostic"}'
-   ```
-
-   **Practice Exams (225 questions each):**
+3. **Or use the API endpoint (future implementation):**
    ```bash
    curl -X POST http://localhost:3000/api/pre-generate-exam \
      -H "Content-Type: application/json" \
      -d '{"userId":"exam-gen-1","examType":"practice"}'
-
-   curl -X POST http://localhost:3000/api/pre-generate-exam \
-     -H "Content-Type: application/json" \
-     -d '{"userId":"exam-gen-2","examType":"practice"}'
-
-   curl -X POST http://localhost:3000/api/pre-generate-exam \
-     -H "Content-Type: application/json" \
-     -d '{"userId":"exam-gen-3","examType":"practice"}'
-
-   curl -X POST http://localhost:3000/api/pre-generate-exam \
-     -H "Content-Type: application/json" \
-     -d '{"userId":"exam-gen-4","examType":"practice"}'
    ```
 
-3. **Exams are saved to Supabase:**
-   The API generates exams and saves them to the `pre_generated_exams` table in Supabase
-   - Expires after 7 days
-   - Marked as unused
-   - Can be retrieved by the exam system
+4. **Validate the generated JSON:**
+   - Verify all questions have source_file fields
+   - Check question count matches (71 or 225)
+   - Validate domain distribution
+   - Ensure all 71 KNs are represented
+   - Confirm org psych questions marked with is_org_psych: true
 
-4. **Move exams to local filesystem:**
-   Once generated in Supabase, export them and save to:
-   - `exams/diagnostic/diagnostic-exam-001.md`
-   - `exams/diagnostic/diagnostic-exam-002.md`
-   - `exams/diagnostic/diagnostic-exam-003.md`
-   - `exams/diagnostic/diagnostic-exam-004.md`
-   - `exams/practice/practice-exam-001.md`
-   - `exams/practice/practice-exam-002.md`
-   - `exams/practice/practice-exam-003.md`
-   - `exams/practice/practice-exam-004.md`
+5. **Save to local filesystem:**
+   Save to `exams/practice/practice-exam-001.md` with frontmatter:
+   ```yaml
+   ---
+   exam_id: practice-exam-001
+   exam_type: practice
+   generated_at: 2025-11-17T12:00:00Z
+   question_count: 225
+   version: 3
+   format: full
+   ---
+   ```
 
 ### Option 2: Manual Database Export
 
@@ -132,48 +192,110 @@ If you have exams already in Supabase's `pre_generated_exams` table:
 
 3. Save to `exams/` directory with proper naming
 
-## Exam File Format
+## Exam File Format (NEW: Version 3 with Source Tracking)
 
 Each exam file should follow this structure:
 
 ```markdown
 ---
-exam_id: diagnostic-exam-001
-exam_type: diagnostic
-generated_at: 2025-01-15T10:30:00Z
-question_count: 71
-version: 1
+exam_id: practice-exam-001
+exam_type: practice
+generated_at: 2025-11-17T12:00:00Z
+question_count: 225
+version: 3
+format: full
 ---
 
 {
   "questions": [
     {
       "id": 1,
-      "question": "What is...",
-      "options": ["Option A", "Option B", "Option C", "Option D"],
-      "correct_answer": "Option A",
-      "explanation": "Explanation of why Option A is correct...",
-      "domain": "Domain 1",
-      "difficulty": "easy|medium|hard",
+      "question": "An organizational psychologist is hired by a company to determine if the performance of many of its recently hired employees can be improved by providing them with training. To do so, the psychologist will conduct a:",
+      "options": [
+        "performance appraisal",
+        "needs analysis",
+        "task analysis",
+        "job evaluation"
+      ],
+      "correct_answer": "needs analysis",
+      "explanation": "A needs analysis is the appropriate tool for determining whether training would improve employee performance. A performance appraisal evaluates current performance, while task and job analyses examine job requirements.",
+      "domain": "Domain 6: Treatment, Intervention, Prevention",
+      "knId": "KN46",
+      "source_file": "5 6 Training Methods and Evaluation.md",
+      "source_folder": "2 3 5 6 Organizational Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
       "isScored": true,
-      "knId": "KN1"
+      "is_org_psych": true
     },
-    // ... more questions ...
     {
-      "id": 71,
-      "question": "...",
-      ...
+      "id": 2,
+      "question": "A psychologist developed a program for first-time parents that addresses methods of dealing with parenting stress and lifestyle changes and is open to all expectant parents in the community. This is an example of which of the following?",
+      "options": [
+        "primary prevention",
+        "secondary prevention",
+        "tertiary prevention",
+        "quaternary prevention"
+      ],
+      "correct_answer": "primary prevention",
+      "explanation": "Primary prevention targets entire populations before problems occur. This universal program for expectant parents prevents problems before they develop. Secondary prevention addresses early symptoms, tertiary treats established disorders.",
+      "domain": "Domain 6: Treatment, Intervention, Prevention",
+      "knId": "KN43",
+      "source_file": "6 Prevention, Consultation, and Psychotherapy Research.md",
+      "source_folder": "6 Treatment, Intervention, and Prevention : Clinical Psychology",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    // ... more questions (225 total) ...
+    {
+      "id": 225,
+      "question": "Which of the following is the most obscure application of the false consensus effect in organizational decision-making when combined with temporal discounting?",
+      "options": ["...", "...", "...", "..."],
+      "correct_answer": "...",
+      "explanation": "...",
+      "domain": "Domain 2: Cognitive-Affective Bases",
+      "knId": "KN14",
+      "source_file": "3 Social Cognition – Errors, Biases, and Heuristics.md",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
     }
   ]
 }
 ```
 
 ### Important Requirements:
-- **Diagnostic exams**: Must have exactly 71 questions
-- **Practice exams**: Must have exactly 225 questions (180 scored + 45 unscored)
-- **Correct answers**: Must be randomized across positions (roughly 25% in each position A-D)
-- **Correct answer field**: Must contain the actual option text, not A/B/C/D
-- **IDs**: Must be sequential from 1 to N
+
+**Question Count:**
+- **Diagnostic exams**: Exactly 71 questions
+- **Practice exams**: Exactly 225 questions (180 scored + 45 unscored)
+
+**Source Tracking (REQUIRED):**
+- Every question MUST have `source_file` field with exact .md filename
+- Every question MUST have `source_folder` field with directory name
+- Enables Topic Selector and Topic Teacher to track and display source material
+
+**Organizational Psychology (REQUIRED):**
+- Mark all organizational psychology questions with `is_org_psych: true`
+- Should comprise ~21% of questions (47 questions in 225-question exam)
+- Distributed across domains 2, 3, 5, 6
+
+**Question Types:**
+- `question_type`: "standard" (60%), "distinction" (20%), "difficult" (20%)
+- Difficult questions MUST have `isScored: false`
+
+**Answers:**
+- Correct answers must be randomized across positions (25% each: A, B, C, D)
+- `correct_answer` field contains actual option text, NOT A/B/C/D
+- All distractors must come from eppp-reference material
+
+**Domain Format:**
+- Include full domain name: "Domain X: [Full Name]"
+- Must match one of the 8 official EPPP domains
 
 ## Expected Performance After Generation
 
