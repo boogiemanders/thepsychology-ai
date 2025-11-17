@@ -20,12 +20,13 @@ import { Ripple } from '@/components/ui/ripple'
 import { BreathingAnimation } from '@/components/ui/breathing-animation'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
-import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X } from 'lucide-react'
+import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X, MessageSquare } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities } from '@/lib/priority-storage'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { siteConfig } from '@/lib/config'
+import { SimplePromptInput } from '@/components/ui/simple-prompt-input'
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -50,11 +51,25 @@ export default function DashboardPage() {
   const [priorityDomains, setPriorityDomains] = useState<any[]>([])
   const [hasPausedExam, setHasPausedExam] = useState(false)
   const [isPricingCarouselOpen, setIsPricingCarouselOpen] = useState(false)
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
+  const [feedbackMessage, setFeedbackMessage] = useState('')
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
     setDailyGoal(newGoal)
     setIsPopoverOpen(false)
+  }
+
+  const handleSendFeedback = async (message: string) => {
+    if (!message.trim() || !user) return
+
+    // TODO: Implement feedback submission to Supabase or email service
+    console.log('Feedback from user:', user.id, 'Message:', message)
+    setFeedbackMessage('Thank you for your feedback!')
+    setTimeout(() => {
+      setFeedbackMessage('')
+      setIsFeedbackOpen(false)
+    }, 2000)
   }
 
   useEffect(() => {
@@ -677,8 +692,15 @@ export default function DashboardPage() {
               >
                 {userProfile?.email?.split('@')[0]}
               </h3>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 mb-2">
                 <p className="text-sm text-muted-foreground">{userProfile?.email}</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge variant="secondary" className="text-xs">
+                  {userProfile?.subscription_tier === 'pro_coaching' ? 'Pro + Coaching' :
+                   userProfile?.subscription_tier === 'pro' ? 'Pro' :
+                   userProfile?.subscription_tier === 'basic' ? 'Basic' : 'Free Trial'}
+                </Badge>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -689,6 +711,15 @@ export default function DashboardPage() {
                 </Button>
               </div>
             </div>
+            <Button
+              variant="outline"
+              size="sm"
+              className="gap-2"
+              onClick={() => setIsFeedbackOpen(true)}
+            >
+              <MessageSquare className="w-4 h-4" />
+              Feedback
+            </Button>
           </div>
         </div>
 
@@ -768,6 +799,47 @@ export default function DashboardPage() {
                 <CarouselPrevious className="-left-12" />
                 <CarouselNext className="-right-12" />
               </Carousel>
+            </div>
+          </div>
+        )}
+
+        {/* Feedback Chat Modal */}
+        {isFeedbackOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsFeedbackOpen(false)}
+          >
+            <div className="relative w-full max-w-md mx-4" onClick={(e) => e.stopPropagation()}>
+              <button
+                onClick={() => setIsFeedbackOpen(false)}
+                className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-background/80 hover:bg-background border border-border text-foreground/60 hover:text-foreground transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MessageSquare className="w-5 h-5" />
+                    Send Feedback
+                  </CardTitle>
+                  <CardDescription>
+                    We'd love to hear your thoughts, suggestions, or report any issues
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {feedbackMessage ? (
+                    <div className="text-center py-8">
+                      <p className="text-green-600 dark:text-green-400 font-medium">{feedbackMessage}</p>
+                    </div>
+                  ) : (
+                    <SimplePromptInput
+                      onSubmit={handleSendFeedback}
+                      placeholder="Type your feedback here..."
+                      disabled={false}
+                    />
+                  )}
+                </CardContent>
+              </Card>
             </div>
           </div>
         )}

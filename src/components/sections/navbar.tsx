@@ -119,7 +119,7 @@ export function Navbar() {
           )}
         >
           <div className="flex h-[56px] items-center justify-between p-4">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href={user ? "/dashboard" : "/"} className="flex items-center gap-3">
               <Image
                 src="/images/logo.png"
                 alt="Logo"
