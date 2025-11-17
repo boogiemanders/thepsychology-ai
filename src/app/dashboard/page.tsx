@@ -74,9 +74,12 @@ export default function DashboardPage() {
 
   useEffect(() => {
     setMounted(true)
+  }, [])
 
-    // Load exam date from userProfile (Supabase) if available
+  // Load exam date when userProfile changes
+  useEffect(() => {
     if (userProfile?.exam_date) {
+      console.log('[Dashboard] Loading exam date from userProfile:', userProfile.exam_date)
       setExamDate(userProfile.exam_date)
     } else if (typeof window !== 'undefined') {
       // Fallback to localStorage for backwards compatibility
@@ -97,8 +100,10 @@ export default function DashboardPage() {
         }
       }
     }
+  }, [userProfile])
 
-    // Load priority recommendations from Supabase
+  // Load priority recommendations from Supabase
+  useEffect(() => {
     const loadPriorities = async () => {
       if (!user?.id) return
 
@@ -129,7 +134,7 @@ export default function DashboardPage() {
     }
 
     loadPriorities()
-  }, [userProfile, user?.id])
+  }, [user?.id])
 
   // Pre-generate exams in background for faster exam loading
   useEffect(() => {
