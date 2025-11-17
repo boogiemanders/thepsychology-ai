@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk'
-import { writeFileSync, mkdirSync, readFileSync } from 'fs'
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'fs'
 import { join } from 'path'
 import { EPPP_DOMAINS } from '../src/lib/eppp-data'
 import { loadReferenceContent } from '../src/lib/eppp-reference-loader'
@@ -154,7 +154,7 @@ async function generateAllTopics() {
   }
   console.log(`Total topics to generate: ${totalTopics}`)
 
-  const topicsDir = join(process.cwd(), 'topic-content')
+  const topicsDir = join(process.cwd(), 'topic-content-v3-test')
   mkdirSync(topicsDir, { recursive: true })
 
   let generatedCount = 0
@@ -172,6 +172,12 @@ async function generateAllTopics() {
         const topic = topicObj.name
         const slug = createSlug(topic)
         const filePath = join(domainDir, `${slug}.md`)
+
+        // Skip if file already exists
+        if (existsSync(filePath)) {
+          console.log(`⊘ Skipped (already exists): ${slug}`)
+          continue
+        }
 
         const content = await generateTopicContent({
           name: topic,

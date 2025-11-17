@@ -1,264 +1,249 @@
 ---
 exam_id: diagnostic-exam-001
 exam_type: diagnostic
-generated_at: 2025-11-15T05:00:56.011Z
+generated_at: 2025-11-16T23:45:55.867Z
 question_count: 71
-version: 1
+version: 3
+format: split
 ---
 
 {
   "questions": [
     {
       "id": 1,
-      "question": "Which neurotransmitter system is primarily implicated in Parkinson's disease?",
+      "question": "A clinical psychologist is conducting research on the effectiveness of a new cognitive intervention for depression. After obtaining IRB approval, several participants express concerns about their data privacy. According to ethical guidelines, what is the psychologist's primary obligation regarding informed consent and participant rights?",
       "options": [
-        "Serotonergic",
-        "Dopaminergic",
-        "Cholinergic",
-        "GABAergic"
+        "Ensure participants understand their right to withdraw at any time without penalty and that their data will be kept confidential within legal limits",
+        "Reassure participants that all data is completely anonymous",
+        "Explain that IRB approval guarantees complete confidentiality",
+        "Inform participants they cannot withdraw once they have begun the study"
       ],
-      "correct_answer": "Dopaminergic",
-      "explanation": "Parkinson's disease is characterized by the degeneration of dopamine-producing neurons in the substantia nigra, leading to motor symptoms.",
-      "domain": "Domain 1",
+      "correct_answer": "Ensure participants understand their right to withdraw at any time without penalty and that their data will be kept confidential within legal limits",
+      "domain": "Domain 7",
       "difficulty": "medium",
       "isScored": true,
-      "knId": "KN2"
+      "knId": "KN62"
     },
     {
       "id": 2,
-      "question": "In neuropsychological assessment, the Trail Making Test primarily assesses:",
+      "question": "A 45-year-old patient with a history of temporal lobe epilepsy exhibits difficulty recognizing familiar faces, including close family members, despite intact visual acuity and object recognition. This condition most likely represents damage to which specific brain region?",
       "options": [
-        "Memory",
-        "Executive function and processing speed",
-        "Language",
-        "Visuospatial abilities"
+        "Fusiform gyrus",
+        "Primary visual cortex",
+        "Superior temporal sulcus",
+        "Occipital pole"
       ],
-      "correct_answer": "Executive function and processing speed",
-      "explanation": "The Trail Making Test assesses executive function, particularly set-shifting ability, as well as processing speed.",
-      "domain": "Domain 6",
-      "difficulty": "medium",
+      "correct_answer": "Fusiform gyrus",
+      "domain": "Domain 1",
+      "difficulty": "hard",
       "isScored": true,
-      "knId": "KN48"
+      "knId": "KN3"
     },
     {
       "id": 3,
-      "question": "According to the APA Ethics Code, psychologists must obtain informed consent except when:",
+      "question": "A researcher is studying memory consolidation and wants to examine which brain structure is critical for converting short-term memories into long-term storage. Lesion studies and neuroimaging research consistently implicate which structure as essential for this memory consolidation process?",
       "options": [
-        "Working with children",
-        "Conducting anonymous surveys",
-        "The client has a mental illness",
-        "Providing group therapy"
+        "Hippocampus",
+        "Amygdala",
+        "Caudate nucleus",
+        "Thalamus"
       ],
-      "correct_answer": "Conducting anonymous surveys",
-      "explanation": "Informed consent may be waived for anonymous questionnaires or naturalistic observations where disclosure is not harmful.",
-      "domain": "Domain 8",
+      "correct_answer": "Hippocampus",
+      "domain": "Domain 1",
       "difficulty": "medium",
       "isScored": true,
-      "knId": "KN58"
+      "knId": "KN4"
     },
     {
       "id": 4,
-      "question": "A correlation coefficient of -0.85 indicates:",
+      "question": "During a family therapy session, a 14-year-old adolescent discloses ongoing suicidal ideation with a specific plan. The parents request that this information remain confidential from school officials. What is the psychologist's most appropriate course of action regarding confidentiality and duty to protect?",
       "options": [
-        "A weak negative relationship",
-        "A strong negative relationship",
-        "A strong positive relationship",
-        "No relationship"
+        "Break confidentiality to ensure the adolescent's safety, involving appropriate parties including parents and potentially school personnel",
+        "Maintain confidentiality as requested by the parents who have legal authority",
+        "Continue therapy without disclosure since the adolescent is in treatment",
+        "Only inform the parents and document their refusal to notify the school"
       ],
-      "correct_answer": "A strong negative relationship",
-      "explanation": "A correlation of -0.85 indicates a strong negative relationship where variables move in opposite directions.",
+      "correct_answer": "Break confidentiality to ensure the adolescent's safety, involving appropriate parties including parents and potentially school personnel",
       "domain": "Domain 7",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "isScored": true,
-      "knId": "KN56"
+      "knId": "KN63"
     },
     {
       "id": 5,
-      "question": "The therapeutic alliance is best predicted by:",
+      "question": "A school psychologist is asked to evaluate a 7-year-old child who is struggling academically. The child's parents speak limited English and request assessment materials in their native language. What is the most ethically appropriate approach to ensure valid assessment?",
       "options": [
-        "Therapist theoretical orientation",
-        "Client diagnosis",
-        "Early alliance quality",
-        "Treatment setting"
+        "Use assessment instruments that have been validated for the child's cultural and linguistic background, or note limitations in the report",
+        "Proceed with standard English assessments since the child attends an English-speaking school",
+        "Have a family member translate the assessment materials during administration",
+        "Use nonverbal tests exclusively to avoid language barriers"
       ],
-      "correct_answer": "Early alliance quality",
-      "explanation": "Research shows that the quality of the therapeutic alliance early in treatment is the best predictor of treatment outcome.",
-      "domain": "Domain 5",
+      "correct_answer": "Use assessment instruments that have been validated for the child's cultural and linguistic background, or note limitations in the report",
+      "domain": "Domain 7",
       "difficulty": "medium",
       "isScored": true,
-      "knId": "KN40"
+      "knId": "KN66"
     },
     {
       "id": 6,
-      "question": "Motivational interviewing is characterized by all of the following EXCEPT:",
+      "question": "A 3-year-old child consistently demonstrates the ability to understand that others may have beliefs different from their own, even when those beliefs are false. This ability represents the development of which cognitive concept?",
       "options": [
-        "Rolling with resistance",
-        "Developing discrepancy",
-        "Direct confrontation",
-        "Supporting self-efficacy"
+        "Theory of mind",
+        "Object permanence",
+        "Conservation",
+        "Centration"
       ],
-      "correct_answer": "Direct confrontation",
-      "explanation": "Motivational interviewing avoids direct confrontation and instead uses a collaborative, non-confrontational approach.",
-      "domain": "Domain 5",
-      "difficulty": "medium",
+      "correct_answer": "Theory of mind",
+      "domain": "Domain 2",
+      "difficulty": "easy",
       "isScored": true,
-      "knId": "KN36"
+      "knId": "KN8"
     },
     {
       "id": 7,
-      "question": "In organizational psychology, which type of validity is most important when developing a selection test for hiring?",
+      "question": "A 72-year-old patient presents with progressive memory loss, difficulty with executive functioning, and personality changes over the past 18 months. Neuropsychological testing reveals impairment across multiple cognitive domains. Which diagnosis should be considered first based on these presenting features?",
       "options": [
-        "Face validity",
-        "Content validity",
-        "Criterion-related validity",
-        "Construct validity"
+        "Major neurocognitive disorder",
+        "Delirium",
+        "Adjustment disorder",
+        "Normal age-related cognitive decline"
       ],
-      "correct_answer": "Criterion-related validity",
-      "explanation": "Criterion-related validity demonstrates that test scores predict job performance, which is crucial for employment selection tests.",
+      "correct_answer": "Major neurocognitive disorder",
       "domain": "Domain 2",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "isScored": true,
-      "knId": "KN10"
+      "knId": "KN12"
     },
     {
       "id": 8,
-      "question": "The MMPI-3 validity scales are designed to detect:",
+      "question": "A cognitive psychologist is studying how people organize information in memory. When participants are asked to recall a list of words, they consistently group items by semantic categories rather than presentation order. This phenomenon best demonstrates which memory principle?",
       "options": [
-        "Intelligence level",
-        "Response bias and test-taking attitudes",
-        "Personality disorders only",
-        "Cognitive impairment"
+        "Organizational encoding processes facilitate retrieval through chunking",
+        "Serial position effects determine recall accuracy",
+        "Working memory capacity limits information processing",
+        "Implicit memory operates independently of conscious awareness"
       ],
-      "correct_answer": "Response bias and test-taking attitudes",
-      "explanation": "MMPI-3 validity scales assess response patterns including over-reporting, under-reporting, and inconsistent responding.",
-      "domain": "Domain 6",
+      "correct_answer": "Organizational encoding processes facilitate retrieval through chunking",
+      "domain": "Domain 1",
       "difficulty": "medium",
       "isScored": true,
-      "knId": "KN45"
+      "knId": "KN5"
     },
     {
       "id": 9,
-      "question": "The diathesis-stress model suggests that psychological disorders result from:",
+      "question": "A researcher conducts a study examining the relationship between childhood attachment style and adult romantic relationships. The study finds a correlation coefficient of r = 0.68. What proportion of variance in adult relationship patterns can be explained by childhood attachment style?",
       "options": [
-        "Genetic factors alone",
-        "Environmental factors alone",
-        "The interaction of predisposition and stressors",
-        "Learned behaviors only"
+        "Approximately 46%",
+        "Approximately 68%",
+        "Approximately 82%",
+        "Approximately 34%"
       ],
-      "correct_answer": "The interaction of predisposition and stressors",
-      "explanation": "The diathesis-stress model proposes that disorders develop when a genetic or biological predisposition is triggered by environmental stressors.",
-      "domain": "Domain 4",
-      "difficulty": "medium",
+      "correct_answer": "Approximately 46%",
+      "domain": "Domain 3",
+      "difficulty": "hard",
       "isScored": true,
-      "knId": "KN25"
+      "knId": "KN17"
     },
     {
       "id": 10,
-      "question": "The Strange Situation procedure is used to assess:",
+      "question": "A psychologist is developing a new assessment instrument to measure anxiety in college students. After administering the test to 500 students, the psychologist examines whether test items correlate with the total score and with each other. This process is evaluating which psychometric property?",
       "options": [
-        "Cognitive development",
-        "Attachment patterns",
-        "Temperament",
-        "Social skills"
+        "Internal consistency reliability",
+        "Test-retest reliability",
+        "Predictive validity",
+        "Inter-rater reliability"
       ],
-      "correct_answer": "Attachment patterns",
-      "explanation": "Mary Ainsworth's Strange Situation is a standardized procedure for assessing attachment patterns in infants.",
+      "correct_answer": "Internal consistency reliability",
       "domain": "Domain 3",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "isScored": true,
       "knId": "KN19"
     },
     {
       "id": 11,
-      "question": "The standard error of measurement is used to:",
+      "question": "A 35-year-old client in psychotherapy reports experiencing intrusive thoughts about contamination and spends 4-5 hours daily performing cleaning rituals. The client recognizes these behaviors as excessive but feels unable to control them. Which therapeutic approach has the strongest empirical support for this presentation?",
       "options": [
-        "Calculate effect size",
-        "Establish confidence intervals around observed scores",
-        "Determine statistical significance",
-        "Measure inter-rater agreement"
+        "Exposure and response prevention",
+        "Psychodynamic therapy focusing on unconscious conflicts",
+        "Supportive counseling",
+        "Cognitive therapy without behavioral components"
       ],
-      "correct_answer": "Establish confidence intervals around observed scores",
-      "explanation": "The standard error of measurement helps establish confidence intervals to account for measurement error in test scores.",
-      "domain": "Domain 6",
+      "correct_answer": "Exposure and response prevention",
+      "domain": "Domain 5",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN40"
+    },
+    {
+      "id": 12,
+      "question": "A clinical psychologist is conducting a diagnostic assessment of a 28-year-old client presenting with mood disturbances. The client reports periods of elevated mood, decreased need for sleep, and increased goal-directed activity lasting 4-5 days, alternating with depressive episodes. These hypomanic episodes do not cause marked impairment. What is the most appropriate diagnosis?",
+      "options": [
+        "Bipolar II disorder",
+        "Bipolar I disorder",
+        "Cyclothymic disorder",
+        "Major depressive disorder with mixed features"
+      ],
+      "correct_answer": "Bipolar II disorder",
+      "domain": "Domain 4",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN29"
+    },
+    {
+      "id": 13,
+      "question": "A researcher wants to examine the effectiveness of a new intervention for PTSD by randomly assigning participants to either the intervention group or a waitlist control group. Six months after treatment, the researcher finds that 15 participants have dropped out of the study. To maintain the integrity of randomization, which statistical approach should be used?",
+      "options": [
+        "Intention-to-treat analysis including all originally randomized participants",
+        "Per-protocol analysis excluding participants who dropped out",
+        "Complete case analysis with no imputation for missing data",
+        "Separate analysis for completers and non-completers only"
+      ],
+      "correct_answer": "Intention-to-treat analysis including all originally randomized participants",
+      "domain": "Domain 3",
       "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN20"
+    },
+    {
+      "id": 14,
+      "question": "During a neuropsychological evaluation, a 55-year-old patient with suspected frontal lobe damage demonstrates impaired performance on tasks requiring planning, organization, and cognitive flexibility. Which assessment instrument would be most sensitive to detecting these executive function deficits?",
+      "options": [
+        "Wisconsin Card Sorting Test",
+        "Boston Naming Test",
+        "Wechsler Memory Scale",
+        "Trail Making Test Part A only"
+      ],
+      "correct_answer": "Wisconsin Card Sorting Test",
+      "domain": "Domain 4",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN31"
+    },
+    {
+      "id": 15,
+      "question": "A health psychologist is designing an intervention to increase medication adherence in patients with chronic hypertension. Based on the Health Belief Model, which combination of factors would most likely predict adherence behavior?",
+      "options": [
+        "Perceived susceptibility to health consequences, perceived benefits of adherence, and presence of cues to action",
+        "Self-efficacy alone regardless of perceived threat",
+        "Social support without consideration of personal beliefs",
+        "Financial resources and access to healthcare exclusively"
+      ],
+      "correct_answer": "Perceived susceptibility to health consequences, perceived benefits of adherence, and presence of cues to action",
+      "domain": "Domain 6",
+      "difficulty": "medium",
       "isScored": true,
       "knId": "KN52"
     },
     {
-      "id": 12,
-      "question": "The stages of change model (Transtheoretical Model) includes which sequence?",
-      "options": [
-        "Denial, anger, bargaining, depression, acceptance",
-        "Precontemplation, contemplation, preparation, action, maintenance",
-        "Contact, awareness, experimentation, integration",
-        "Orientation, identification, exploitation, resolution"
-      ],
-      "correct_answer": "Precontemplation, contemplation, preparation, action, maintenance",
-      "explanation": "The Transtheoretical Model identifies five stages: precontemplation, contemplation, preparation, action, and maintenance.",
-      "domain": "Domain 5",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN33"
-    },
-    {
-      "id": 13,
-      "question": "The phenomenon where therapy patients improve before treatment begins is called:",
-      "options": [
-        "Placebo effect",
-        "Hawthorne effect",
-        "Spontaneous remission",
-        "Regression to the mean"
-      ],
-      "correct_answer": "Spontaneous remission",
-      "explanation": "Spontaneous remission refers to improvement that occurs without treatment or before treatment begins.",
-      "domain": "Domain 5",
-      "difficulty": "hard",
-      "isScored": true,
-      "knId": "KN37"
-    },
-    {
-      "id": 14,
-      "question": "In factor analysis, eigenvalues greater than 1.0 typically indicate:",
-      "options": [
-        "Poor model fit",
-        "Factors that explain more variance than a single variable",
-        "Multicollinearity",
-        "Sampling adequacy"
-      ],
-      "correct_answer": "Factors that explain more variance than a single variable",
-      "explanation": "In factor analysis, eigenvalues >1.0 indicate factors that account for more variance than a single observed variable.",
-      "domain": "Domain 7",
-      "difficulty": "hard",
-      "isScored": true,
-      "knId": "KN67"
-    },
-    {
-      "id": 15,
-      "question": "The duty to warn or protect others from a dangerous client was established in:",
-      "options": [
-        "Tarasoff v. Regents",
-        "Jaffee v. Redmond",
-        "Durham v. United States",
-        "Wyatt v. Stickney"
-      ],
-      "correct_answer": "Tarasoff v. Regents",
-      "explanation": "The Tarasoff case established the duty to warn or protect identifiable victims when a client poses a serious threat.",
-      "domain": "Domain 8",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN59"
-    },
-    {
       "id": 16,
-      "question": "According to Piaget's theory of cognitive development, which stage is characterized by the ability to think abstractly and use hypothetical-deductive reasoning?",
+      "question": "A 68-year-old patient presents with resting tremor, rigidity, and bradykinesia. Neurological examination reveals reduced arm swing and difficulty initiating movement. These motor symptoms are primarily caused by degeneration of neurons producing which neurotransmitter?",
       "options": [
-        "Preoperational stage",
-        "Concrete operational stage",
-        "Formal operational stage",
-        "Sensorimotor stage"
+        "Dopamine",
+        "Serotonin",
+        "Acetylcholine",
+        "GABA"
       ],
-      "correct_answer": "Formal operational stage",
-      "explanation": "The formal operational stage (beginning around age 12) is when individuals develop the ability to think abstractly, reason hypothetically, and use deductive logic.",
+      "correct_answer": "Dopamine",
       "domain": "Domain 1",
       "difficulty": "easy",
       "isScored": true,
@@ -266,883 +251,828 @@ version: 1
     },
     {
       "id": 17,
-      "question": "A test with a sensitivity of 0.90 means:",
+      "question": "A psychologist is asked to provide expert testimony in a child custody case. During preparation, the attorney requests that the psychologist emphasize certain findings that favor the attorney's client while minimizing contradictory information. What is the psychologist's most ethical response?",
       "options": [
-        "90% of people without the condition test negative",
-        "90% of people with the condition test positive",
-        "The test is 90% accurate overall",
-        "90% of positive tests are correct"
+        "Decline to modify the testimony and present all findings objectively and impartially",
+        "Agree to emphasize favorable findings since attorneys have a right to advocate for their clients",
+        "Withdraw from the case entirely to avoid any conflict",
+        "Present only the requested information but note the attorney's influence in the report"
       ],
-      "correct_answer": "90% of people with the condition test positive",
-      "explanation": "Sensitivity is the true positive rate - the proportion of people with the condition who test positive.",
-      "domain": "Domain 6",
-      "difficulty": "hard",
+      "correct_answer": "Decline to modify the testimony and present all findings objectively and impartially",
+      "domain": "Domain 7",
+      "difficulty": "medium",
       "isScored": true,
-      "knId": "KN49"
+      "knId": "KN67"
     },
     {
       "id": 18,
-      "question": "Internal consistency reliability is best measured by:",
+      "question": "A 6-month-old infant shows distress when a caregiver leaves the room but is quickly comforted upon their return, using the caregiver as a secure base for exploration. According to attachment theory, this pattern is most consistent with which attachment classification?",
       "options": [
-        "Test-retest correlation",
-        "Alternate forms correlation",
-        "Cronbach's alpha",
-        "Inter-rater reliability"
+        "Secure attachment",
+        "Anxious-avoidant attachment",
+        "Anxious-resistant attachment",
+        "Disorganized attachment"
       ],
-      "correct_answer": "Cronbach's alpha",
-      "explanation": "Cronbach's alpha is the most commonly used measure of internal consistency, indicating how well items measure the same construct.",
-      "domain": "Domain 6",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN47"
-    },
-    {
-      "id": 19,
-      "question": "Which brain structure is primarily responsible for the consolidation of long-term memories?",
-      "options": [
-        "Amygdala",
-        "Hippocampus",
-        "Thalamus",
-        "Cerebellum"
-      ],
-      "correct_answer": "Hippocampus",
-      "explanation": "The hippocampus plays a crucial role in consolidating information from short-term to long-term memory.",
-      "domain": "Domain 1",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN69"
-    },
-    {
-      "id": 20,
-      "question": "Which type of validity examines whether a test measures what it claims to measure?",
-      "options": [
-        "Content validity",
-        "Criterion validity",
-        "Construct validity",
-        "Face validity"
-      ],
-      "correct_answer": "Construct validity",
-      "explanation": "Construct validity is the degree to which a test measures the theoretical construct it is intended to measure.",
-      "domain": "Domain 6",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN43"
-    },
-    {
-      "id": 21,
-      "question": "In cognitive-behavioral therapy, the technique of examining evidence for and against automatic thoughts is called:",
-      "options": [
-        "Behavioral activation",
-        "Cognitive restructuring",
-        "Exposure therapy",
-        "Mindfulness meditation"
-      ],
-      "correct_answer": "Cognitive restructuring",
-      "explanation": "Cognitive restructuring involves identifying and challenging distorted thoughts by examining evidence and developing more balanced perspectives.",
-      "domain": "Domain 5",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN29"
-    },
-    {
-      "id": 22,
-      "question": "According to Herzberg's two-factor theory, which of the following is a hygiene factor?",
-      "options": [
-        "Achievement",
-        "Recognition",
-        "Salary",
-        "Responsibility"
-      ],
-      "correct_answer": "Salary",
-      "explanation": "In Herzberg's theory, hygiene factors like salary, working conditions, and job security prevent dissatisfaction but don't motivate.",
-      "domain": "Domain 2",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN13"
-    },
-    {
-      "id": 23,
-      "question": "The critical period for language acquisition is most closely associated with which age range?",
-      "options": [
-        "Birth to 2 years",
-        "2 to 5 years",
-        "Birth to puberty",
-        "5 to 10 years"
-      ],
-      "correct_answer": "Birth to puberty",
-      "explanation": "The critical period hypothesis suggests that language acquisition is most successful from birth through puberty, after which it becomes significantly more difficult.",
-      "domain": "Domain 3",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN16"
-    },
-    {
-      "id": 24,
-      "question": "In group therapy, the factor that involves learning from observing others is called:",
-      "options": [
-        "Universality",
-        "Altruism",
-        "Vicarious learning",
-        "Catharsis"
-      ],
-      "correct_answer": "Vicarious learning",
-      "explanation": "Vicarious learning (imitative behavior) is one of Yalom's therapeutic factors where members learn by observing others in the group.",
-      "domain": "Domain 5",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN35"
-    },
-    {
-      "id": 25,
-      "question": "According to Bronfenbrenner's ecological systems theory, which system includes the culture in which an individual lives?",
-      "options": [
-        "Microsystem",
-        "Mesosystem",
-        "Exosystem",
-        "Macrosystem"
-      ],
-      "correct_answer": "Macrosystem",
-      "explanation": "The macrosystem encompasses the larger cultural context, including cultural values, customs, and laws that influence development.",
-      "domain": "Domain 1",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN5"
-    },
-    {
-      "id": 26,
-      "question": "In classical conditioning, the tendency for a conditioned response to be elicited by stimuli similar to the conditioned stimulus is called:",
-      "options": [
-        "Discrimination",
-        "Extinction",
-        "Spontaneous recovery",
-        "Generalization"
-      ],
-      "correct_answer": "Generalization",
-      "explanation": "Stimulus generalization occurs when stimuli similar to the conditioned stimulus also elicit the conditioned response.",
-      "domain": "Domain 1",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN3"
-    },
-    {
-      "id": 27,
-      "question": "According to Kohlberg, at which level of moral development do individuals base moral decisions on universal ethical principles?",
-      "options": [
-        "Preconventional",
-        "Conventional",
-        "Postconventional",
-        "Formal operational"
-      ],
-      "correct_answer": "Postconventional",
-      "explanation": "At the postconventional level, individuals develop personal moral principles based on abstract reasoning and universal ethical principles.",
-      "domain": "Domain 3",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN15"
-    },
-    {
-      "id": 28,
-      "question": "Which theory proposes that emotions result from our interpretation of physiological arousal in context?",
-      "options": [
-        "James-Lange theory",
-        "Cannon-Bard theory",
-        "Schachter-Singer two-factor theory",
-        "Opponent-process theory"
-      ],
-      "correct_answer": "Schachter-Singer two-factor theory",
-      "explanation": "The Schachter-Singer theory states that emotion results from the cognitive labeling of physiological arousal based on environmental context.",
-      "domain": "Domain 1",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN4"
-    },
-    {
-      "id": 29,
-      "question": "Which principle of psychopharmacology states that the smallest effective dose should be used?",
-      "options": [
-        "Therapeutic window",
-        "Start low and go slow",
-        "Polypharmacy",
-        "Drug holiday"
-      ],
-      "correct_answer": "Start low and go slow",
-      "explanation": "The principle of 'start low and go slow' minimizes side effects while finding the optimal therapeutic dose.",
-      "domain": "Domain 5",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN38"
-    },
-    {
-      "id": 30,
-      "question": "Which theory suggests that people are motivated to maintain consistency between their attitudes and behaviors?",
-      "options": [
-        "Social learning theory",
-        "Cognitive dissonance theory",
-        "Expectancy theory",
-        "Equity theory"
-      ],
-      "correct_answer": "Cognitive dissonance theory",
-      "explanation": "Festinger's cognitive dissonance theory proposes that inconsistency between attitudes and behaviors creates psychological discomfort that motivates change.",
-      "domain": "Domain 2",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN9"
-    },
-    {
-      "id": 31,
-      "question": "Which medication class is considered first-line treatment for generalized anxiety disorder?",
-      "options": [
-        "Benzodiazepines",
-        "SSRIs",
-        "Antipsychotics",
-        "Mood stabilizers"
-      ],
-      "correct_answer": "SSRIs",
-      "explanation": "SSRIs are first-line pharmacological treatment for GAD due to their efficacy and favorable side effect profile.",
-      "domain": "Domain 5",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN39"
-    },
-    {
-      "id": 32,
-      "question": "The DSM-5-TR uses which approach to classify mental disorders?",
-      "options": [
-        "Dimensional",
-        "Categorical",
-        "Hierarchical",
-        "Psychodynamic"
-      ],
-      "correct_answer": "Categorical",
-      "explanation": "The DSM-5-TR primarily uses a categorical approach, classifying disorders into distinct diagnostic categories based on specific criteria.",
-      "domain": "Domain 4",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN21"
-    },
-    {
-      "id": 33,
-      "question": "In research design, random assignment helps to:",
-      "options": [
-        "Increase external validity",
-        "Control for confounding variables",
-        "Increase sample size",
-        "Ensure representative sampling"
-      ],
-      "correct_answer": "Control for confounding variables",
-      "explanation": "Random assignment distributes potential confounding variables equally across groups, enhancing internal validity.",
-      "domain": "Domain 7",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN53"
-    },
-    {
-      "id": 34,
-      "question": "According to Erikson's psychosocial development theory, the primary crisis during adolescence is:",
-      "options": [
-        "Trust vs. mistrust",
-        "Industry vs. inferiority",
-        "Identity vs. role confusion",
-        "Intimacy vs. isolation"
-      ],
-      "correct_answer": "Identity vs. role confusion",
-      "explanation": "During adolescence, individuals face the crisis of identity vs. role confusion, working to establish a sense of personal identity.",
-      "domain": "Domain 3",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN18"
-    },
-    {
-      "id": 35,
-      "question": "Which assessment tool is specifically designed to measure adaptive behavior?",
-      "options": [
-        "WISC-V",
-        "Vineland Adaptive Behavior Scales",
-        "Beck Depression Inventory",
-        "Strong Interest Inventory"
-      ],
-      "correct_answer": "Vineland Adaptive Behavior Scales",
-      "explanation": "The Vineland scales assess adaptive behavior in communication, daily living skills, socialization, and motor skills.",
-      "domain": "Domain 6",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN51"
-    },
-    {
-      "id": 36,
-      "question": "Which parenting style is associated with the best developmental outcomes for children?",
-      "options": [
-        "Authoritarian",
-        "Authoritative",
-        "Permissive",
-        "Uninvolved"
-      ],
-      "correct_answer": "Authoritative",
-      "explanation": "Authoritative parenting, characterized by high responsiveness and high demands, is associated with positive developmental outcomes.",
-      "domain": "Domain 3",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN17"
-    },
-    {
-      "id": 37,
-      "question": "According to signal detection theory, a 'hit' occurs when:",
-      "options": [
-        "A signal is present and detected",
-        "A signal is absent and not detected",
-        "A signal is present but not detected",
-        "A signal is absent but reported"
-      ],
-      "correct_answer": "A signal is present and detected",
-      "explanation": "In signal detection theory, a hit is the correct detection of a signal when it is actually present.",
-      "domain": "Domain 1",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN70"
-    },
-    {
-      "id": 38,
-      "question": "Which neurotransmitter imbalance is most associated with major depressive disorder?",
-      "options": [
-        "Excess dopamine",
-        "Deficiency in serotonin",
-        "Excess acetylcholine",
-        "Deficiency in GABA"
-      ],
-      "correct_answer": "Deficiency in serotonin",
-      "explanation": "The monoamine hypothesis suggests that depression is associated with deficiencies in serotonin, norepinephrine, and dopamine, with serotonin being particularly implicated.",
-      "domain": "Domain 4",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN24"
-    },
-    {
-      "id": 39,
-      "question": "Which therapeutic approach emphasizes unconditional positive regard and empathic understanding?",
-      "options": [
-        "Psychoanalytic therapy",
-        "Person-centered therapy",
-        "Gestalt therapy",
-        "Rational emotive behavior therapy"
-      ],
-      "correct_answer": "Person-centered therapy",
-      "explanation": "Carl Rogers' person-centered therapy emphasizes unconditional positive regard, empathy, and genuineness as core therapeutic conditions.",
-      "domain": "Domain 5",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN30"
-    },
-    {
-      "id": 40,
-      "question": "The gate control theory is used to explain:",
-      "options": [
-        "Visual perception",
-        "Pain perception",
-        "Auditory processing",
-        "Memory retrieval"
-      ],
-      "correct_answer": "Pain perception",
-      "explanation": "Gate control theory proposes that pain signals can be modulated by a gating mechanism in the spinal cord.",
-      "domain": "Domain 1",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN71"
-    },
-    {
-      "id": 41,
-      "question": "Psychologists may breach confidentiality without client consent in all of these situations EXCEPT:",
-      "options": [
-        "Imminent danger to self",
-        "Imminent danger to others",
-        "Suspected child abuse",
-        "Client's request to insurance for reimbursement"
-      ],
-      "correct_answer": "Client's request to insurance for reimbursement",
-      "explanation": "Insurance reimbursement requires client consent for release of information, unlike mandated reporting situations.",
-      "domain": "Domain 8",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN63"
-    },
-    {
-      "id": 42,
-      "question": "The Wechsler Adult Intelligence Scale (WAIS-IV) yields which index scores?",
-      "options": [
-        "Verbal, Performance, Full Scale",
-        "Crystallized, Fluid, General",
-        "Verbal Comprehension, Perceptual Reasoning, Working Memory, Processing Speed",
-        "Analytical, Creative, Practical"
-      ],
-      "correct_answer": "Verbal Comprehension, Perceptual Reasoning, Working Memory, Processing Speed",
-      "explanation": "The WAIS-IV provides four index scores: Verbal Comprehension, Perceptual Reasoning, Working Memory, and Processing Speed.",
-      "domain": "Domain 6",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN42"
-    },
-    {
-      "id": 43,
-      "question": "Which cognitive distortion involves viewing situations in only two categories rather than on a continuum?",
-      "options": [
-        "Catastrophizing",
-        "All-or-nothing thinking",
-        "Mind reading",
-        "Personalization"
-      ],
-      "correct_answer": "All-or-nothing thinking",
-      "explanation": "All-or-nothing thinking (dichotomous thinking) involves seeing things in black-and-white categories without recognizing the middle ground.",
-      "domain": "Domain 4",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN28"
-    },
-    {
-      "id": 44,
-      "question": "Which leadership style is characterized by high concern for both people and production according to the Blake-Mouton Managerial Grid?",
-      "options": [
-        "Country club management",
-        "Team management",
-        "Authority-compliance management",
-        "Middle-of-the-road management"
-      ],
-      "correct_answer": "Team management",
-      "explanation": "Team management (9,9) reflects high concern for both people and production, emphasizing collaboration and commitment.",
-      "domain": "Domain 2",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN6"
-    },
-    {
-      "id": 45,
-      "question": "When working with culturally diverse populations, ethical practice requires:",
-      "options": [
-        "Treating all clients exactly the same",
-        "Cultural competence and awareness of one's limitations",
-        "Referring all diverse clients to specialists",
-        "Using only culturally-specific interventions"
-      ],
-      "correct_answer": "Cultural competence and awareness of one's limitations",
-      "explanation": "Ethical practice requires cultural competence, self-awareness of limitations, and seeking consultation or training as needed.",
-      "domain": "Domain 8",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN66"
-    },
-    {
-      "id": 46,
-      "question": "Which influence tactic involves using logical arguments and factual evidence to persuade someone?",
-      "options": [
-        "Ingratiation",
-        "Rational persuasion",
-        "Inspirational appeals",
-        "Coalition tactics"
-      ],
-      "correct_answer": "Rational persuasion",
-      "explanation": "Rational persuasion involves using logical arguments and factual evidence to show that a request is reasonable and likely to achieve objectives.",
-      "domain": "Domain 2",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN12"
-    },
-    {
-      "id": 47,
-      "question": "Which anxiety disorder is characterized by recurrent, unexpected panic attacks?",
-      "options": [
-        "Generalized anxiety disorder",
-        "Social anxiety disorder",
-        "Panic disorder",
-        "Specific phobia"
-      ],
-      "correct_answer": "Panic disorder",
-      "explanation": "Panic disorder involves recurrent, unexpected panic attacks and persistent concern about having additional attacks.",
-      "domain": "Domain 4",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN26"
-    },
-    {
-      "id": 48,
-      "question": "Which of the following situations requires breaking confidentiality?",
-      "options": [
-        "Client admits to past drug use",
-        "Client expresses suicidal ideation without a plan",
-        "Client reports ongoing child abuse",
-        "Client discusses marital infidelity"
-      ],
-      "correct_answer": "Client reports ongoing child abuse",
-      "explanation": "Psychologists are mandated reporters and must report ongoing child abuse to appropriate authorities.",
-      "domain": "Domain 8",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN60"
-    },
-    {
-      "id": 49,
-      "question": "Which theory emphasizes the role of observational learning in development?",
-      "options": [
-        "Psychoanalytic theory",
-        "Social learning theory",
-        "Information processing theory",
-        "Ecological systems theory"
-      ],
-      "correct_answer": "Social learning theory",
-      "explanation": "Bandura's social learning theory emphasizes that children learn through observation, imitation, and modeling.",
-      "domain": "Domain 3",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN20"
-    },
-    {
-      "id": 50,
-      "question": "Which statistical test would be appropriate for comparing means between three independent groups?",
-      "options": [
-        "Independent t-test",
-        "Paired t-test",
-        "One-way ANOVA",
-        "Chi-square test"
-      ],
-      "correct_answer": "One-way ANOVA",
-      "explanation": "One-way ANOVA is used to compare means across three or more independent groups.",
-      "domain": "Domain 7",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN57"
-    },
-    {
-      "id": 51,
-      "question": "A standard score with a mean of 50 and standard deviation of 10 is called a:",
-      "options": [
-        "Z-score",
-        "T-score",
-        "Stanine",
-        "Percentile"
-      ],
-      "correct_answer": "T-score",
-      "explanation": "T-scores have a mean of 50 and standard deviation of 10, making them useful for comparing scores across different tests.",
-      "domain": "Domain 6",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN44"
-    },
-    {
-      "id": 52,
-      "question": "A Type I error occurs when:",
-      "options": [
-        "The null hypothesis is falsely rejected",
-        "The null hypothesis is falsely retained",
-        "The effect size is too small",
-        "The sample size is too large"
-      ],
-      "correct_answer": "The null hypothesis is falsely rejected",
-      "explanation": "Type I error (false positive) occurs when we reject a true null hypothesis, concluding an effect exists when it doesn't.",
-      "domain": "Domain 7",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN54"
-    },
-    {
-      "id": 53,
-      "question": "According to HIPAA, psychotherapy notes:",
-      "options": [
-        "Must be shared with insurance companies",
-        "Have special protection and require separate authorization",
-        "Are part of the regular medical record",
-        "Cannot be kept separate from other records"
-      ],
-      "correct_answer": "Have special protection and require separate authorization",
-      "explanation": "HIPAA provides special protection for psychotherapy notes, requiring separate authorization for their release.",
-      "domain": "Domain 8",
-      "difficulty": "hard",
-      "isScored": true,
-      "knId": "KN64"
-    },
-    {
-      "id": 54,
-      "question": "Which personality disorder is characterized by a pervasive pattern of disregard for and violation of the rights of others?",
-      "options": [
-        "Borderline personality disorder",
-        "Antisocial personality disorder",
-        "Narcissistic personality disorder",
-        "Histrionic personality disorder"
-      ],
-      "correct_answer": "Antisocial personality disorder",
-      "explanation": "Antisocial personality disorder involves a persistent pattern of disregard for others' rights, often including deceitfulness and lack of remorse.",
-      "domain": "Domain 4",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN22"
-    },
-    {
-      "id": 55,
-      "question": "Multiple relationships are considered unethical when they:",
-      "options": [
-        "Exist in any form",
-        "Impair objectivity or exploit the client",
-        "Involve seeing friends of clients",
-        "Occur in small communities"
-      ],
-      "correct_answer": "Impair objectivity or exploit the client",
-      "explanation": "Multiple relationships are problematic when they impair professional judgment or risk exploitation or harm to the client.",
-      "domain": "Domain 8",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN61"
-    },
-    {
-      "id": 56,
-      "question": "The concept of competence in the ethics code requires psychologists to:",
-      "options": [
-        "Never work outside their expertise",
-        "Practice only within boundaries of competence",
-        "Obtain supervision for all new techniques",
-        "Specialize in only one area"
-      ],
-      "correct_answer": "Practice only within boundaries of competence",
-      "explanation": "Psychologists should practice within their competence based on education, training, and experience, seeking consultation when needed.",
-      "domain": "Domain 8",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN65"
-    },
-    {
-      "id": 57,
-      "question": "Which family therapy approach focuses on intergenerational patterns and differentiation of self?",
-      "options": [
-        "Structural family therapy",
-        "Strategic family therapy",
-        "Bowen family systems therapy",
-        "Solution-focused therapy"
-      ],
-      "correct_answer": "Bowen family systems therapy",
-      "explanation": "Bowen's approach emphasizes multigenerational patterns, differentiation of self, and emotional triangles in family systems.",
-      "domain": "Domain 5",
-      "difficulty": "hard",
-      "isScored": true,
-      "knId": "KN32"
-    },
-    {
-      "id": 58,
-      "question": "Which type of therapy has the strongest empirical support for treating PTSD?",
-      "options": [
-        "Psychodynamic therapy",
-        "Prolonged exposure therapy",
-        "Supportive therapy",
-        "Interpersonal therapy"
-      ],
-      "correct_answer": "Prolonged exposure therapy",
-      "explanation": "Prolonged exposure therapy, along with cognitive processing therapy, has the strongest empirical support for PTSD treatment.",
-      "domain": "Domain 5",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN34"
-    },
-    {
-      "id": 59,
-      "question": "The Flynn effect refers to:",
-      "options": [
-        "Declining IQ scores over time",
-        "Rising IQ scores over generations",
-        "Cultural bias in IQ tests",
-        "Practice effects on testing"
-      ],
-      "correct_answer": "Rising IQ scores over generations",
-      "explanation": "The Flynn effect describes the observed rise in IQ scores over generations, requiring periodic re-norming of tests.",
-      "domain": "Domain 6",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN50"
-    },
-    {
-      "id": 60,
-      "question": "Which attachment style is characterized by low anxiety and low avoidance in adult relationships?",
-      "options": [
-        "Secure",
-        "Dismissive",
-        "Preoccupied",
-        "Fearful"
-      ],
-      "correct_answer": "Secure",
-      "explanation": "Secure attachment is characterized by comfort with intimacy and interdependence, reflecting low anxiety and low avoidance.",
-      "domain": "Domain 3",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN14"
-    },
-    {
-      "id": 61,
-      "question": "The presence of two or more distinct personality states is characteristic of:",
-      "options": [
-        "Schizophrenia",
-        "Dissociative identity disorder",
-        "Bipolar disorder",
-        "Borderline personality disorder"
-      ],
-      "correct_answer": "Dissociative identity disorder",
-      "explanation": "Dissociative identity disorder (DID) involves the presence of two or more distinct personality states that recurrently take control of behavior.",
-      "domain": "Domain 4",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN27"
-    },
-    {
-      "id": 62,
-      "question": "The tendency for group discussion to strengthen the initial inclinations of group members is known as:",
-      "options": [
-        "Group polarization",
-        "Groupthink",
-        "Social loafing",
-        "Deindividuation"
-      ],
-      "correct_answer": "Group polarization",
-      "explanation": "Group polarization refers to the tendency for groups to make decisions that are more extreme than the initial inclinations of individual members.",
+      "correct_answer": "Secure attachment",
       "domain": "Domain 2",
       "difficulty": "easy",
       "isScored": true,
       "knId": "KN7"
     },
     {
-      "id": 63,
-      "question": "The Bonferroni correction is used to:",
+      "id": 19,
+      "question": "An industrial-organizational psychologist is tasked with improving employee performance in a manufacturing company. After conducting a job analysis, the psychologist recommends restructuring tasks to increase autonomy and feedback. This approach is most consistent with which theoretical framework?",
       "options": [
-        "Increase statistical power",
-        "Control for Type I error in multiple comparisons",
-        "Reduce Type II error",
-        "Improve effect size"
+        "Job Characteristics Model",
+        "Scientific Management Theory",
+        "Equity Theory",
+        "Expectancy Theory"
       ],
-      "correct_answer": "Control for Type I error in multiple comparisons",
-      "explanation": "The Bonferroni correction adjusts the significance level when multiple comparisons are made to control family-wise error rate.",
+      "correct_answer": "Job Characteristics Model",
+      "domain": "Domain 6",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN56"
+    },
+    {
+      "id": 20,
+      "question": "A researcher conducts a study with 2 independent variables (therapy type and session frequency) and 1 dependent variable (symptom reduction). To analyze whether there is an interaction effect between the two independent variables, which statistical test is most appropriate?",
+      "options": [
+        "Two-way ANOVA",
+        "Multiple regression",
+        "Independent samples t-test",
+        "Chi-square test"
+      ],
+      "correct_answer": "Two-way ANOVA",
+      "domain": "Domain 3",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN18"
+    },
+    {
+      "id": 21,
+      "question": "A clinical psychologist is treating a 42-year-old client who reports persistent low mood, loss of interest in activities, sleep disturbance, and feelings of worthlessness for the past 8 months. The client has no history of manic or hypomanic episodes. Which diagnosis is most appropriate?",
+      "options": [
+        "Major depressive disorder",
+        "Persistent depressive disorder (dysthymia)",
+        "Bipolar disorder, depressed",
+        "Adjustment disorder with depressed mood"
+      ],
+      "correct_answer": "Major depressive disorder",
+      "domain": "Domain 4",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN27"
+    },
+    {
+      "id": 22,
+      "question": "A social psychologist studies how people explain the causes of behavior. When research participants attribute their own failures to external situational factors but attribute others' failures to internal dispositional characteristics, this demonstrates which cognitive bias?",
+      "options": [
+        "Actor-observer bias",
+        "Confirmation bias",
+        "Fundamental attribution error only",
+        "Self-serving bias exclusively"
+      ],
+      "correct_answer": "Actor-observer bias",
+      "domain": "Domain 6",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN49"
+    },
+    {
+      "id": 23,
+      "question": "A couple presents for therapy reporting communication difficulties and frequent conflicts about household responsibilities. The therapist focuses on identifying and modifying negative interaction patterns and teaching effective communication skills. This approach is most characteristic of which therapeutic orientation?",
+      "options": [
+        "Behavioral couple therapy",
+        "Psychoanalytic couple therapy",
+        "Existential therapy",
+        "Client-centered therapy"
+      ],
+      "correct_answer": "Behavioral couple therapy",
+      "domain": "Domain 5",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN43"
+    },
+    {
+      "id": 24,
+      "question": "A 9-year-old child is referred for assessment due to academic difficulties. The psychologist administers an intelligence test and finds a Full Scale IQ of 88. When interpreting this score to the parents, what is the most accurate explanation?",
+      "options": [
+        "The child's overall cognitive ability falls in the low average range, approximately one standard deviation below the mean",
+        "The child has an intellectual disability requiring special education placement",
+        "The child's intelligence is below average and unlikely to improve",
+        "This score indicates the child has a learning disorder"
+      ],
+      "correct_answer": "The child's overall cognitive ability falls in the low average range, approximately one standard deviation below the mean",
+      "domain": "Domain 4",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN30"
+    },
+    {
+      "id": 25,
+      "question": "A researcher examines whether a newly developed cognitive test measures the same construct as an established test of executive functioning. Both tests are administered to the same sample, and the correlation between scores is calculated. This process is evaluating which type of validity?",
+      "options": [
+        "Convergent validity",
+        "Discriminant validity",
+        "Face validity",
+        "Predictive validity"
+      ],
+      "correct_answer": "Convergent validity",
+      "domain": "Domain 3",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN21"
+    },
+    {
+      "id": 26,
+      "question": "During psychotherapy, a client begins expressing romantic feelings toward the therapist that mirror unresolved feelings toward a parent figure. According to psychodynamic theory, this phenomenon is best described as which therapeutic concept?",
+      "options": [
+        "Transference",
+        "Countertransference",
+        "Resistance",
+        "Working alliance"
+      ],
+      "correct_answer": "Transference",
+      "domain": "Domain 5",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN35"
+    },
+    {
+      "id": 27,
+      "question": "A 16-year-old adolescent is exploring different roles, values, and career paths while trying to develop a coherent sense of self. According to Erikson's psychosocial development theory, this process represents which developmental stage?",
+      "options": [
+        "Identity versus role confusion",
+        "Intimacy versus isolation",
+        "Industry versus inferiority",
+        "Autonomy versus shame and doubt"
+      ],
+      "correct_answer": "Identity versus role confusion",
+      "domain": "Domain 2",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN9"
+    },
+    {
+      "id": 28,
+      "question": "A community psychologist is designing a prevention program to reduce substance abuse among high school students. The program includes skills training, environmental modifications, and community engagement. This multi-level approach best reflects which ecological systems perspective?",
+      "options": [
+        "Bronfenbrenner's ecological systems theory emphasizing multiple contextual influences",
+        "Individual counseling model",
+        "Medical model focusing on pathology",
+        "Trait theory of behavior"
+      ],
+      "correct_answer": "Bronfenbrenner's ecological systems theory emphasizing multiple contextual influences",
+      "domain": "Domain 6",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN58"
+    },
+    {
+      "id": 29,
+      "question": "A 25-year-old client presents with intense fear of social situations, particularly those involving potential scrutiny by others. The client avoids work meetings and social gatherings, significantly impairing occupational functioning. Which diagnosis is most appropriate?",
+      "options": [
+        "Social anxiety disorder (social phobia)",
+        "Agoraphobia",
+        "Generalized anxiety disorder",
+        "Avoidant personality disorder"
+      ],
+      "correct_answer": "Social anxiety disorder (social phobia)",
+      "domain": "Domain 4",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN26"
+    },
+    {
+      "id": 30,
+      "question": "A neuropsychologist is evaluating a patient who sustained a traumatic brain injury. The patient demonstrates intact language production but severe deficits in language comprehension. Neuroimaging reveals damage to the left posterior superior temporal gyrus. This presentation is most consistent with which type of aphasia?",
+      "options": [
+        "Wernicke's aphasia",
+        "Broca's aphasia",
+        "Conduction aphasia",
+        "Global aphasia"
+      ],
+      "correct_answer": "Wernicke's aphasia",
+      "domain": "Domain 1",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN2"
+    },
+    {
+      "id": 31,
+      "question": "A researcher is conducting a meta-analysis of studies examining the effectiveness of cognitive-behavioral therapy for depression. To assess the overall treatment effect across studies, the researcher calculates which statistical measure?",
+      "options": [
+        "Effect size (Cohen's d or similar metric)",
+        "Pearson correlation coefficient",
+        "Statistical power",
+        "Cronbach's alpha"
+      ],
+      "correct_answer": "Effect size (Cohen's d or similar metric)",
+      "domain": "Domain 3",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN22"
+    },
+    {
+      "id": 32,
+      "question": "A psychologist is treating a client who reports auditory hallucinations, delusions of persecution, disorganized speech, and significant social/occupational dysfunction for the past 8 months. There is no evidence of substance use or medical conditions. What is the most appropriate diagnosis?",
+      "options": [
+        "Schizophrenia",
+        "Brief psychotic disorder",
+        "Schizoaffective disorder",
+        "Delusional disorder"
+      ],
+      "correct_answer": "Schizophrenia",
+      "domain": "Domain 4",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN28"
+    },
+    {
+      "id": 33,
+      "question": "A cognitive-behavioral therapist is working with a client who engages in catastrophic thinking about minor physical symptoms. The therapist helps the client identify and challenge these automatic thoughts using Socratic questioning. This intervention primarily targets which cognitive component?",
+      "options": [
+        "Cognitive distortions and maladaptive thought patterns",
+        "Behavioral reinforcement contingencies",
+        "Unconscious defense mechanisms",
+        "Interpersonal schemas exclusively"
+      ],
+      "correct_answer": "Cognitive distortions and maladaptive thought patterns",
+      "domain": "Domain 5",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN38"
+    },
+    {
+      "id": 34,
+      "question": "A school psychologist conducts an assessment of a 10-year-old student and identifies significant difficulties with reading fluency and comprehension, despite average intelligence and adequate educational opportunities. The student's reading achievement is substantially below expected levels for age and grade. Which diagnosis is most appropriate?",
+      "options": [
+        "Specific learning disorder with impairment in reading",
+        "Intellectual disability",
+        "Attention-deficit/hyperactivity disorder",
+        "Communication disorder"
+      ],
+      "correct_answer": "Specific learning disorder with impairment in reading",
+      "domain": "Domain 4",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN32"
+    },
+    {
+      "id": 35,
+      "question": "A toddler demonstrates the ability to use words and symbols to represent objects and ideas, engages in pretend play, but still exhibits egocentric thinking and struggles with conservation tasks. According to Piaget's theory, this child is in which stage of cognitive development?",
+      "options": [
+        "Preoperational stage",
+        "Sensorimotor stage",
+        "Concrete operational stage",
+        "Formal operational stage"
+      ],
+      "correct_answer": "Preoperational stage",
+      "domain": "Domain 2",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN10"
+    },
+    {
+      "id": 36,
+      "question": "An older adult patient experiences a sudden onset of confusion, disorientation, and fluctuating levels of consciousness over 48 hours following hip surgery. Medical workup reveals a urinary tract infection. This clinical presentation is most consistent with which condition?",
+      "options": [
+        "Delirium",
+        "Major neurocognitive disorder",
+        "Schizophrenia",
+        "Brief psychotic disorder"
+      ],
+      "correct_answer": "Delirium",
+      "domain": "Domain 2",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN13"
+    },
+    {
+      "id": 37,
+      "question": "A behavior therapist working with a child who exhibits aggressive behavior implements a procedure where the child loses access to preferred activities immediately following each aggressive act. This intervention is an example of which behavioral principle?",
+      "options": [
+        "Negative punishment (response cost)",
+        "Positive punishment",
+        "Negative reinforcement",
+        "Extinction"
+      ],
+      "correct_answer": "Negative punishment (response cost)",
+      "domain": "Domain 5",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN37"
+    },
+    {
+      "id": 38,
+      "question": "A psychologist develops a new screening tool for depression and wants to determine how well it predicts clinical diagnosis six months later. The psychologist administers the screening tool and then compares scores with diagnostic outcomes. This process evaluates which type of validity?",
+      "options": [
+        "Predictive validity",
+        "Concurrent validity",
+        "Content validity",
+        "Construct validity"
+      ],
+      "correct_answer": "Predictive validity",
+      "domain": "Domain 3",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN23"
+    },
+    {
+      "id": 39,
+      "question": "A psychologist in independent practice discovers that a current client is the neighbor of a close personal friend. The psychologist feels this dual relationship may impair objectivity. What is the most ethically appropriate course of action?",
+      "options": [
+        "Discuss the situation with the client and provide a referral to another qualified psychologist if the relationship poses a conflict",
+        "Continue treatment since the psychologist-client relationship was established first",
+        "Immediately terminate treatment without discussion",
+        "Continue treatment but avoid all social contact with the friend"
+      ],
+      "correct_answer": "Discuss the situation with the client and provide a referral to another qualified psychologist if the relationship poses a conflict",
+      "domain": "Domain 7",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN64"
+    },
+    {
+      "id": 40,
+      "question": "A health psychologist is working with a patient diagnosed with Type 2 diabetes who struggles with dietary adherence. The psychologist helps the patient set specific, achievable goals and monitors progress through self-monitoring techniques. This intervention is most consistent with which theoretical approach?",
+      "options": [
+        "Self-regulation theory and goal-setting principles",
+        "Psychodynamic interpretation",
+        "Existential exploration",
+        "Classical conditioning"
+      ],
+      "correct_answer": "Self-regulation theory and goal-setting principles",
+      "domain": "Domain 6",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN53"
+    },
+    {
+      "id": 41,
+      "question": "A researcher wants to study the relationship between parenting style and adolescent academic achievement while controlling for socioeconomic status. Which statistical analysis allows examination of this relationship while holding the confounding variable constant?",
+      "options": [
+        "Analysis of covariance (ANCOVA) or partial correlation",
+        "Simple correlation",
+        "Independent t-test",
+        "Chi-square test of independence"
+      ],
+      "correct_answer": "Analysis of covariance (ANCOVA) or partial correlation",
+      "domain": "Domain 3",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN24"
+    },
+    {
+      "id": 42,
+      "question": "A psychologist provides clinical supervision to a provisionally licensed psychologist. During supervision, the supervisee discloses having provided services outside their area of competence. What is the supervisor's primary ethical responsibility?",
+      "options": [
+        "Address the competence issue immediately, ensure client welfare, provide appropriate training or arrange transfer of the case",
+        "Report the supervisee to the licensing board without discussion",
+        "Allow the supervisee to continue since they disclosed the issue",
+        "Document the disclosure but take no action if no harm occurred"
+      ],
+      "correct_answer": "Address the competence issue immediately, ensure client welfare, provide appropriate training or arrange transfer of the case",
+      "domain": "Domain 7",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN71"
+    },
+    {
+      "id": 43,
+      "question": "An organizational psychologist is assessing workplace climate and employee satisfaction across multiple departments in a large corporation. The psychologist plans to use survey data to compare mean satisfaction scores across departments. Which statistical test is most appropriate?",
+      "options": [
+        "One-way ANOVA",
+        "Paired samples t-test",
+        "Pearson correlation",
+        "Chi-square test"
+      ],
+      "correct_answer": "One-way ANOVA",
+      "domain": "Domain 6",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN57"
+    },
+    {
+      "id": 44,
+      "question": "A clinician is treating a client with chronic pain using an approach that emphasizes acceptance of pain rather than control, while encouraging engagement in valued activities despite discomfort. This intervention is most consistent with which therapeutic framework?",
+      "options": [
+        "Acceptance and Commitment Therapy (ACT)",
+        "Traditional cognitive-behavioral therapy",
+        "Psychodynamic psychotherapy",
+        "Solution-focused brief therapy"
+      ],
+      "correct_answer": "Acceptance and Commitment Therapy (ACT)",
+      "domain": "Domain 5",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN41"
+    },
+    {
+      "id": 45,
+      "question": "During language acquisition, a young child overgeneralizes grammatical rules by saying words like \"goed\" instead of \"went\" or \"mouses\" instead of \"mice.\" This pattern demonstrates which aspect of language development?",
+      "options": [
+        "Application of morphological rules showing implicit grammar knowledge",
+        "Language delay requiring intervention",
+        "Echolalia",
+        "Semantic development exclusively"
+      ],
+      "correct_answer": "Application of morphological rules showing implicit grammar knowledge",
+      "domain": "Domain 2",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN11"
+    },
+    {
+      "id": 46,
+      "question": "A client in therapy frequently shifts topics when discussing childhood experiences with an emotionally distant parent. The therapist notes this pattern and gently explores the client's difficulty staying with these painful emotions. According to psychodynamic theory, the client is demonstrating which defense mechanism?",
+      "options": [
+        "Avoidance or resistance",
+        "Projection",
+        "Rationalization",
+        "Sublimation"
+      ],
+      "correct_answer": "Avoidance or resistance",
+      "domain": "Domain 5",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN36"
+    },
+    {
+      "id": 47,
+      "question": "A social psychologist studies how individuals' attitudes and behaviors change when they are in large groups. Participants who are normally helpful become less likely to assist someone in need when others are present. This phenomenon is best explained by which concept?",
+      "options": [
+        "Diffusion of responsibility",
+        "Social facilitation",
+        "Groupthink",
+        "Social loafing"
+      ],
+      "correct_answer": "Diffusion of responsibility",
+      "domain": "Domain 6",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN50"
+    },
+    {
+      "id": 48,
+      "question": "A therapist working with a client who has borderline personality disorder establishes clear treatment boundaries, maintains consistency in session structure, and explicitly discusses limits around between-session contact. These interventions primarily serve which therapeutic function?",
+      "options": [
+        "Establishing a structured therapeutic frame to manage boundary issues and provide containment",
+        "Implementing behavioral punishment",
+        "Avoiding countertransference",
+        "Demonstrating social skills"
+      ],
+      "correct_answer": "Establishing a structured therapeutic frame to manage boundary issues and provide containment",
+      "domain": "Domain 5",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN46"
+    },
+    {
+      "id": 49,
+      "question": "A psychologist administers a standardized achievement test to a student and obtains a standard score of 115. If the test has a mean of 100 and standard deviation of 15, what percentile rank does this score represent?",
+      "options": [
+        "Approximately 84th percentile",
+        "Approximately 68th percentile",
+        "Approximately 95th percentile",
+        "Approximately 50th percentile"
+      ],
+      "correct_answer": "Approximately 84th percentile",
+      "domain": "Domain 3",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN15"
+    },
+    {
+      "id": 50,
+      "question": "A researcher designs a study to test whether a new intervention reduces anxiety symptoms. The researcher sets alpha at .05 and achieves adequate statistical power of .80. What does the power value indicate about this study?",
+      "options": [
+        "There is an 80% probability of detecting a true effect if one exists",
+        "There is an 80% probability that the results are statistically significant",
+        "There is a 20% probability of making a Type I error",
+        "The effect size is large"
+      ],
+      "correct_answer": "There is an 80% probability of detecting a true effect if one exists",
+      "domain": "Domain 3",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN16"
+    },
+    {
+      "id": 51,
+      "question": "A clinical psychologist is treating a 30-year-old client who reports recurrent, unexpected panic attacks followed by persistent worry about future attacks and significant behavioral changes to avoid potential triggers. Which diagnosis best fits this presentation?",
+      "options": [
+        "Panic disorder",
+        "Generalized anxiety disorder",
+        "Specific phobia",
+        "Agoraphobia without panic disorder"
+      ],
+      "correct_answer": "Panic disorder",
+      "domain": "Domain 4",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN25"
+    },
+    {
+      "id": 52,
+      "question": "A therapist using motivational interviewing works with a client who is ambivalent about changing substance use behavior. The therapist explores the client's own reasons for change, expresses empathy, and avoids confrontation. This approach is designed to enhance which therapeutic process?",
+      "options": [
+        "Intrinsic motivation and self-efficacy for behavior change",
+        "External contingencies for reinforcement",
+        "Insight into unconscious conflicts",
+        "Systematic desensitization"
+      ],
+      "correct_answer": "Intrinsic motivation and self-efficacy for behavior change",
+      "domain": "Domain 5",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN42"
+    },
+    {
+      "id": 53,
+      "question": "A patient with schizophrenia is prescribed an atypical antipsychotic medication that primarily blocks dopamine D2 receptors and serotonin 5-HT2A receptors. This medication's therapeutic effects on positive symptoms result primarily from its action on which neurotransmitter system?",
+      "options": [
+        "Dopamine blockade in mesolimbic pathways",
+        "Serotonin enhancement exclusively",
+        "GABA modulation",
+        "Norepinephrine reuptake inhibition"
+      ],
+      "correct_answer": "Dopamine blockade in mesolimbic pathways",
+      "domain": "Domain 5",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN47"
+    },
+    {
+      "id": 54,
+      "question": "A diversity consultant is providing training to a mental health clinic about culturally responsive practice. The consultant emphasizes the importance of examining one's own cultural values, biases, and assumptions. This process of self-examination is referred to as developing which competency?",
+      "options": [
+        "Cultural self-awareness and reflexivity",
+        "Cultural knowledge exclusively",
+        "Stereotype endorsement",
+        "Cultural assimilation techniques"
+      ],
+      "correct_answer": "Cultural self-awareness and reflexivity",
+      "domain": "Domain 6",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN60"
+    },
+    {
+      "id": 55,
+      "question": "A forensic psychologist is conducting a competency to stand trial evaluation for a defendant charged with a serious crime. The defendant's attorney requests a copy of the full evaluation report. What is the psychologist's primary obligation regarding the release of information?",
+      "options": [
+        "Clarify who is the client and follow jurisdictional laws regarding report disclosure in forensic contexts",
+        "Automatically release the report to the attorney since they requested the evaluation",
+        "Refuse to release the report to protect the defendant's privacy",
+        "Release only favorable information to the defense attorney"
+      ],
+      "correct_answer": "Clarify who is the client and follow jurisdictional laws regarding report disclosure in forensic contexts",
       "domain": "Domain 7",
       "difficulty": "hard",
       "isScored": true,
       "knId": "KN68"
     },
     {
-      "id": 64,
-      "question": "Which intervention focuses on identifying and modifying maladaptive schemas developed in childhood?",
+      "id": 56,
+      "question": "A group therapist notices that members increasingly conform to group norms, suppress dissenting opinions, and avoid conflict to maintain harmony. This dynamic may lead to poor decision-making. Which group process is the therapist observing?",
       "options": [
-        "Dialectical behavior therapy",
-        "Schema therapy",
-        "Acceptance and commitment therapy",
-        "Interpersonal therapy"
+        "Groupthink",
+        "Social facilitation",
+        "Deindividuation",
+        "Social loafing"
       ],
-      "correct_answer": "Schema therapy",
-      "explanation": "Schema therapy, developed by Jeffrey Young, focuses on identifying and changing deeply rooted patterns or schemas developed in childhood.",
-      "domain": "Domain 5",
-      "difficulty": "hard",
-      "isScored": true,
-      "knId": "KN41"
-    },
-    {
-      "id": 65,
-      "question": "The principle of beneficence in the APA Ethics Code refers to:",
-      "options": [
-        "Doing no harm",
-        "Striving to benefit those with whom psychologists work",
-        "Treating people fairly",
-        "Respecting autonomy"
-      ],
-      "correct_answer": "Striving to benefit those with whom psychologists work",
-      "explanation": "Beneficence involves actively working to benefit clients and promote their welfare.",
-      "domain": "Domain 8",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN62"
-    },
-    {
-      "id": 66,
-      "question": "The positive symptoms of schizophrenia include:",
-      "options": [
-        "Flat affect and alogia",
-        "Hallucinations and delusions",
-        "Anhedonia and avolition",
-        "Social withdrawal and poverty of speech"
-      ],
-      "correct_answer": "Hallucinations and delusions",
-      "explanation": "Positive symptoms represent an excess or distortion of normal functions, including hallucinations, delusions, and disorganized speech.",
-      "domain": "Domain 4",
-      "difficulty": "medium",
-      "isScored": true,
-      "knId": "KN23"
-    },
-    {
-      "id": 67,
-      "question": "According to the fundamental attribution error, people tend to:",
-      "options": [
-        "Underestimate situational factors when explaining others' behavior",
-        "Overestimate situational factors when explaining their own behavior",
-        "Attribute their successes to external factors",
-        "Make accurate attributions about behavior"
-      ],
-      "correct_answer": "Underestimate situational factors when explaining others' behavior",
-      "explanation": "The fundamental attribution error is the tendency to overestimate dispositional factors and underestimate situational factors when explaining others' behavior.",
-      "domain": "Domain 2",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN8"
-    },
-    {
-      "id": 68,
-      "question": "Which projective test uses ambiguous inkblots to assess personality?",
-      "options": [
-        "TAT",
-        "Rorschach",
-        "Sentence completion",
-        "Draw-a-Person"
-      ],
-      "correct_answer": "Rorschach",
-      "explanation": "The Rorschach Inkblot Test uses symmetrical inkblots to elicit responses that supposedly reveal personality characteristics.",
+      "correct_answer": "Groupthink",
       "domain": "Domain 6",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "isScored": true,
-      "knId": "KN46"
+      "knId": "KN51"
     },
     {
-      "id": 69,
-      "question": "The bystander effect is most likely to occur when:",
+      "id": 57,
+      "question": "A consulting psychologist is helping an organization develop a selection system for hiring managers. To ensure the selection process is legally defensible and fair, the psychologist should prioritize which psychometric consideration?",
       "options": [
-        "There is only one witness to an emergency",
-        "There are multiple witnesses to an emergency",
-        "The victim is known to the bystander",
-        "The situation is clearly an emergency"
+        "Job-relatedness and validity evidence demonstrating prediction of job performance",
+        "Face validity only",
+        "Convenience of administration",
+        "Cost efficiency exclusively"
       ],
-      "correct_answer": "There are multiple witnesses to an emergency",
-      "explanation": "The bystander effect refers to the decreased likelihood of helping when multiple people witness an emergency due to diffusion of responsibility.",
-      "domain": "Domain 2",
-      "difficulty": "easy",
-      "isScored": true,
-      "knId": "KN11"
-    },
-    {
-      "id": 70,
-      "question": "Which measure of central tendency is most affected by extreme scores?",
-      "options": [
-        "Mean",
-        "Median",
-        "Mode",
-        "Range"
-      ],
-      "correct_answer": "Mean",
-      "explanation": "The mean is most sensitive to outliers because it includes all values in its calculation.",
-      "domain": "Domain 7",
-      "difficulty": "easy",
+      "correct_answer": "Job-relatedness and validity evidence demonstrating prediction of job performance",
+      "domain": "Domain 6",
+      "difficulty": "medium",
       "isScored": true,
       "knId": "KN55"
     },
     {
-      "id": 71,
-      "question": "The therapeutic technique of systematic desensitization is based on the principle of:",
+      "id": 58,
+      "question": "A clinical neuropsychologist evaluates a patient with suspected dementia and observes significant deficits in recent memory, preserved remote memory, and confabulation. Neuroimaging reveals damage to the mammillary bodies and thalamus. This presentation is most consistent with which condition?",
       "options": [
-        "Operant conditioning",
-        "Reciprocal inhibition",
-        "Cognitive dissonance",
-        "Observational learning"
+        "Korsakoff's syndrome",
+        "Alzheimer's disease",
+        "Frontotemporal dementia",
+        "Vascular dementia"
       ],
-      "correct_answer": "Reciprocal inhibition",
-      "explanation": "Systematic desensitization is based on reciprocal inhibition - the idea that relaxation and anxiety are incompatible responses.",
+      "correct_answer": "Korsakoff's syndrome",
+      "domain": "Domain 4",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN33"
+    },
+    {
+      "id": 59,
+      "question": "A therapist implements a dialectical behavior therapy (DBT) skills group for clients with emotion regulation difficulties. The program teaches mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness skills. This comprehensive approach is particularly effective for which clinical population?",
+      "options": [
+        "Individuals with borderline personality disorder and chronic suicidality",
+        "Individuals with specific phobias",
+        "Individuals with mild depressive symptoms only",
+        "Individuals with attention-deficit/hyperactivity disorder exclusively"
+      ],
+      "correct_answer": "Individuals with borderline personality disorder and chronic suicidality",
       "domain": "Domain 5",
       "difficulty": "medium",
       "isScored": true,
-      "knId": "KN31"
+      "knId": "KN44"
+    },
+    {
+      "id": 60,
+      "question": "A health psychologist is studying the impact of chronic stress on immune system functioning. Research indicates that prolonged stress is associated with decreased immune response. Which physiological system primarily mediates this stress-immune relationship?",
+      "options": [
+        "The hypothalamic-pituitary-adrenal (HPA) axis and cortisol secretion",
+        "The parasympathetic nervous system exclusively",
+        "The endorphin system",
+        "The thyroid hormone system"
+      ],
+      "correct_answer": "The hypothalamic-pituitary-adrenal (HPA) axis and cortisol secretion",
+      "domain": "Domain 6",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN54"
+    },
+    {
+      "id": 61,
+      "question": "A psychologist is developing an intervention program for at-risk youth in an underserved community. To ensure the program is culturally appropriate and acceptable, the psychologist engages community members in all phases of program design and implementation. This approach reflects which principle?",
+      "options": [
+        "Community-based participatory research and cultural humility",
+        "Expert-driven intervention design",
+        "Evidence-based practice without adaptation",
+        "Standardized protocol implementation"
+      ],
+      "correct_answer": "Community-based participatory research and cultural humility",
+      "domain": "Domain 6",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN59"
+    },
+    {
+      "id": 62,
+      "question": "A psychologist receives a subpoena requesting client records for a legal proceeding. The client does not want the records released. What is the psychologist's most appropriate initial response?",
+      "options": [
+        "Contact the client and their attorney to discuss the subpoena and consider asserting privilege or seeking a protective order",
+        "Immediately release all records since a subpoena is a legal order",
+        "Refuse to release any records regardless of court order",
+        "Release a summary instead of complete records without further consultation"
+      ],
+      "correct_answer": "Contact the client and their attorney to discuss the subpoena and consider asserting privilege or seeking a protective order",
+      "domain": "Domain 7",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN69"
+    },
+    {
+      "id": 63,
+      "question": "An educational psychologist is consulting with a school about implementing a system-wide positive behavior support program. The program includes universal interventions for all students, targeted interventions for at-risk students, and intensive interventions for high-need students. This framework represents which approach?",
+      "options": [
+        "Multi-tiered system of supports (Response to Intervention/MTSS model)",
+        "Individual counseling model",
+        "Punishment-based discipline",
+        "Special education placement only"
+      ],
+      "correct_answer": "Multi-tiered system of supports (Response to Intervention/MTSS model)",
+      "domain": "Domain 6",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN61"
+    },
+    {
+      "id": 64,
+      "question": "A client with post-traumatic stress disorder is treated using prolonged exposure therapy, which involves repeatedly recounting the traumatic memory in a safe therapeutic environment until anxiety diminishes. The therapeutic mechanism underlying this intervention is based on which learning principle?",
+      "options": [
+        "Habituation and extinction of conditioned fear responses",
+        "Positive reinforcement of avoidance",
+        "Operant conditioning exclusively",
+        "Modeling and imitation"
+      ],
+      "correct_answer": "Habituation and extinction of conditioned fear responses",
+      "domain": "Domain 5",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN39"
+    },
+    {
+      "id": 65,
+      "question": "During a research study, a psychologist discovers that several participants were not properly debriefed after completing a deception-based experimental procedure. What is the researcher's ethical obligation?",
+      "options": [
+        "Promptly debrief those participants, explain the deception, and address any potential harm or misconceptions",
+        "Continue the study without debriefing to avoid contaminating the participant pool",
+        "Only debrief if participants specifically request information",
+        "Wait until all data collection is complete before any debriefing"
+      ],
+      "correct_answer": "Promptly debrief those participants, explain the deception, and address any potential harm or misconceptions",
+      "domain": "Domain 7",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN70"
+    },
+    {
+      "id": 66,
+      "question": "A patient recovering from a stroke demonstrates severe difficulty with language production, effortful and halting speech, but relatively intact comprehension. Neuroimaging reveals damage to the left inferior frontal gyrus. This presentation is most consistent with which type of aphasia?",
+      "options": [
+        "Broca's aphasia (expressive aphasia)",
+        "Wernicke's aphasia (receptive aphasia)",
+        "Anomic aphasia",
+        "Transcortical sensory aphasia"
+      ],
+      "correct_answer": "Broca's aphasia (expressive aphasia)",
+      "domain": "Domain 2",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN6"
+    },
+    {
+      "id": 67,
+      "question": "A researcher studies memory retrieval and finds that participants recall significantly more words when tested in the same room where they learned the material compared to a different room. This finding demonstrates which memory phenomenon?",
+      "options": [
+        "Context-dependent memory and encoding specificity",
+        "State-dependent learning exclusively",
+        "Proactive interference",
+        "Retroactive interference"
+      ],
+      "correct_answer": "Context-dependent memory and encoding specificity",
+      "domain": "Domain 1",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN5"
+    },
+    {
+      "id": 68,
+      "question": "A psychologist is conducting therapy with a client from a cultural background different from their own. The psychologist recognizes personal knowledge gaps and consults with colleagues familiar with the client's culture while also directly discussing cultural factors with the client. This approach demonstrates which ethical principle?",
+      "options": [
+        "Cultural competence and recognition of boundaries of expertise",
+        "Cultural stereotyping",
+        "Avoidance of cultural issues",
+        "Assumption of cultural universality"
+      ],
+      "correct_answer": "Cultural competence and recognition of boundaries of expertise",
+      "domain": "Domain 7",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN65"
+    },
+    {
+      "id": 69,
+      "question": "A couple therapist notices recurring patterns where one partner's withdrawal leads the other partner to pursue more intensely, which further increases withdrawal. The therapist helps the couple recognize and interrupt this cycle. This intervention is characteristic of which therapeutic approach?",
+      "options": [
+        "Emotionally focused therapy (EFT) or systems-oriented couple therapy",
+        "Individual psychoanalysis",
+        "Behavioral activation",
+        "Cognitive restructuring alone"
+      ],
+      "correct_answer": "Emotionally focused therapy (EFT) or systems-oriented couple therapy",
+      "domain": "Domain 5",
+      "difficulty": "medium",
+      "isScored": true,
+      "knId": "KN45"
+    },
+    {
+      "id": 70,
+      "question": "A consulting psychologist is helping an organization address workplace stress and burnout among employees. The psychologist recommends interventions targeting workload management, social support, and job control. This approach is most consistent with which organizational psychology framework?",
+      "options": [
+        "Job demands-resources model",
+        "Classical conditioning theory",
+        "Psychoanalytic organizational theory",
+        "Attribution theory"
+      ],
+      "correct_answer": "Job demands-resources model",
+      "domain": "Domain 6",
+      "difficulty": "hard",
+      "isScored": true,
+      "knId": "KN48"
+    },
+    {
+      "id": 71,
+      "question": "A psychologist is asked to conduct a psychological evaluation for a child custody case. During the evaluation process, one parent offers to pay a substantial bonus if the report favors their custody petition. What is the psychologist's most ethical response?",
+      "options": [
+        "Decline the offer, explain the conflict of interest, and maintain objectivity and impartiality throughout the evaluation",
+        "Accept the bonus since it doesn't change the findings",
+        "Withdraw from the case without explanation",
+        "Accept the payment but disclose it in the report"
+      ],
+      "correct_answer": "Decline the offer, explain the conflict of interest, and maintain objectivity and impartiality throughout the evaluation",
+      "domain": "Domain 4",
+      "difficulty": "easy",
+      "isScored": true,
+      "knId": "KN34"
     }
   ]
 }

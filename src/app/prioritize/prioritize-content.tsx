@@ -12,6 +12,8 @@ import { useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { Switch } from '@/components/ui/switch'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 interface AnalysisData {
   overallScore?: number
@@ -472,10 +474,20 @@ export function PrioritizeContent() {
                   </CardHeader>
                   <Separator />
                   <CardContent className="pt-6">
-                    <div className="prose prose-invert max-w-none">
-                      <div className="space-y-4 text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                    <div className="prose prose-sm prose-invert max-w-none
+                      [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-foreground [&_h2]:border-b [&_h2]:border-border [&_h2]:pb-2
+                      [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-3 [&_h3]:text-foreground
+                      [&_p]:text-sm [&_p]:text-foreground/90 [&_p]:leading-relaxed [&_p]:my-3
+                      [&_ul]:text-sm [&_ul]:text-foreground/90 [&_ul]:my-3 [&_ul]:space-y-2
+                      [&_li]:text-sm [&_li]:leading-relaxed
+                      [&_strong]:text-foreground [&_strong]:font-semibold
+                      [&_table]:w-full [&_table]:border-collapse [&_table]:my-6 [&_table]:text-sm
+                      [&_th]:border [&_th]:border-border [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground [&_th]:bg-muted/50
+                      [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90
+                    ">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
                         {analysis}
-                      </div>
+                      </ReactMarkdown>
                     </div>
                   </CardContent>
                 </Card>

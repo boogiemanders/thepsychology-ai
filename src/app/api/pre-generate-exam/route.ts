@@ -37,6 +37,37 @@ The exam should include:
 - All questions scored (isScored: true)
 - Balanced difficulty levels
 
+CRITICAL QUESTION DETAIL REQUIREMENTS:
+- Create questions with rich clinical context and real-world scenarios
+- Questions should be detailed and thought-provoking, testing application not just recall
+- Include relevant clinical scenarios, case vignettes, or applied situations where appropriate
+- Provide sufficient context in the question stem to make it clinically meaningful
+- Target question stems of 2-4 sentences with concrete details
+- Example approach: "A 68-year-old patient presents with resting tremor, rigidity, and bradykinesia.
+  Neurological examination reveals reduced arm swing and difficulty initiating movement.
+  These motor symptoms are primarily caused by degeneration of neurons producing which neurotransmitter?"
+
+CRITICAL ANSWER LENGTH VARIATION:
+- Vary the length of answer choices to avoid length bias (where longer answers appear more correct)
+- Ensure that about 25% of correct answers are the longest option, 25% are medium length,
+  25% are shortest, and 25% are medium-short
+- For incorrect distractor options, ensure they have varied lengths - some should be longer,
+  some shorter than the correct answer
+- Do NOT make the correct answer consistently the longest or shortest option
+- This makes test-taking more rigorous and prevents test-takers from using answer length as a cue
+
+EXPLANATION REQUIREMENTS:
+- Explanations should be comprehensive and educational (4-6 sentences)
+- Explain WHY the correct answer is right with supporting details
+- Briefly address why key distractors are incorrect
+- Include relevant clinical context, research findings, or practical applications
+- Help the test-taker learn and understand the concept, not just identify the correct answer
+- Example: "Dopamine is correct because Parkinson's disease results from degeneration of
+  dopaminergic neurons in the substantia nigra pars compacta. This leads to dopamine depletion
+  in the striatum, causing the characteristic motor symptoms. While other neurotransmitter systems
+  are also affected, the primary pathology involves dopamine. Treatment typically involves
+  dopamine replacement therapy with levodopa or dopamine agonists."
+
 CRITICAL RANDOMIZATION REQUIREMENTS:
 1. QUESTION ORDER: Shuffle all 71 questions in RANDOM order (do NOT order them by KN1-KN71)
 2. ANSWER POSITIONS: The correct answer MUST be randomized across all positions (A, B, C, D)
@@ -84,6 +115,37 @@ The exam should include:
 - 45 unscored experimental questions (20%) - harder questions for research/development that DO NOT count toward score
 - Multiple choice format with 4 options each
 - Questions distributed across all 8 EPPP domains
+
+CRITICAL QUESTION DETAIL REQUIREMENTS:
+- Create questions with rich clinical context and real-world scenarios
+- Questions should be detailed and thought-provoking, testing application not just recall
+- Include relevant clinical scenarios, case vignettes, or applied situations where appropriate
+- Provide sufficient context in the question stem to make it clinically meaningful
+- Target question stems of 2-4 sentences with concrete details
+- Example approach: "A 68-year-old patient presents with resting tremor, rigidity, and bradykinesia.
+  Neurological examination reveals reduced arm swing and difficulty initiating movement.
+  These motor symptoms are primarily caused by degeneration of neurons producing which neurotransmitter?"
+
+CRITICAL ANSWER LENGTH VARIATION:
+- Vary the length of answer choices to avoid length bias (where longer answers appear more correct)
+- Ensure that about 25% of correct answers are the longest option, 25% are medium length,
+  25% are shortest, and 25% are medium-short
+- For incorrect distractor options, ensure they have varied lengths - some should be longer,
+  some shorter than the correct answer
+- Do NOT make the correct answer consistently the longest or shortest option
+- This makes test-taking more rigorous and prevents test-takers from using answer length as a cue
+
+EXPLANATION REQUIREMENTS:
+- Explanations should be comprehensive and educational (4-6 sentences)
+- Explain WHY the correct answer is right with supporting details
+- Briefly address why key distractors are incorrect
+- Include relevant clinical context, research findings, or practical applications
+- Help the test-taker learn and understand the concept, not just identify the correct answer
+- Example: "Dopamine is correct because Parkinson's disease results from degeneration of
+  dopaminergic neurons in the substantia nigra pars compacta. This leads to dopamine depletion
+  in the striatum, causing the characteristic motor symptoms. While other neurotransmitter systems
+  are also affected, the primary pathology involves dopamine. Treatment typically involves
+  dopamine replacement therapy with levodopa or dopamine agonists."
 
 CRITICAL RANDOMIZATION REQUIREMENTS:
 1. QUESTION ORDER: Shuffle all 225 questions in RANDOM order (do NOT present them in sequential/predictable order)
@@ -180,7 +242,7 @@ export async function POST(request: NextRequest) {
     // Use Sonnet 4.5 for both exams - better model for large outputs
     const stream = await client.messages.create({
       model: 'claude-sonnet-4-5-20250929',
-      max_tokens: 40000, // Sonnet 4.5 can handle larger outputs
+      max_tokens: examType === 'diagnostic' ? 50000 : 64000, // Increased for detailed questions with comprehensive explanations (64K is max for Sonnet 4.5)
       stream: true,
       messages: [
         {
