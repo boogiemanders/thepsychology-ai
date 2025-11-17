@@ -172,6 +172,7 @@ function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[
 /**
  * Load exam directly from disk (no HTTP round-trip needed)
  * This is much faster and more reliable than the previous HTTP fetch approach
+ * For split exams (version 3+), also loads explanations from separate file
  */
 function loadExamFromDisk(
   examFile: string,
@@ -188,6 +189,42 @@ function loadExamFromDisk(
 
     console.log(`[Assign Exam] Successfully loaded ${examData.questions.length} questions from ${examFile}`)
 
+    // Check if this is a split exam (version 3+) that needs explanations loaded separately
+    if (examData.metadata.version >= 3 || examData.metadata.format === 'split') {
+      try {
+        // Load explanations from separate file
+        const explanationsDir = join(process.cwd(), 'exams', 'explanations')
+        const explanationFile = examFile.replace('.md', '-explanations.json')
+        const explanationPath = join(explanationsDir, explanationFile)
+
+        console.log(`[Assign Exam] Loading explanations from: ${explanationPath}`)
+
+        const explanationContent = readFileSync(explanationPath, 'utf-8')
+        const explanationData = JSON.parse(explanationContent)
+
+        // Merge explanations into questions
+        const questionsWithExplanations = examData.questions.map((q: any, idx: number) => ({
+          ...q,
+          explanation: explanationData.explanations[String(idx + 1)] || 'Explanation not available',
+        }))
+
+        console.log(`[Assign Exam] Successfully merged ${Object.keys(explanationData.explanations).length} explanations`)
+
+        return {
+          metadata: examData.metadata,
+          questions: questionsWithExplanations,
+        }
+      } catch (explanationError) {
+        console.warn(`[Assign Exam] Could not load explanations, using questions without explanations:`, explanationError)
+        // Fall back to questions without explanations (old format)
+        return {
+          metadata: examData.metadata,
+          questions: examData.questions,
+        }
+      }
+    }
+
+    // Legacy format (version 1-2) - questions already include explanations
     return {
       metadata: examData.metadata,
       questions: examData.questions,

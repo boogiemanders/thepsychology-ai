@@ -307,6 +307,7 @@ export default function ExamGeneratorPage() {
           totalQuestions: scoredQuestions.length,
           topPriorities: priorityData?.topPriorities || null,
           allResults: priorityData?.allResults || null,
+          assignmentId: assignmentId || null,
         }),
       })
 

@@ -8,9 +8,7 @@ import { supabase } from '@/lib/supabase'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Calendar } from '@/components/ui/calendar'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
@@ -42,7 +40,7 @@ export default function DashboardPage() {
   const [daysRemaining, setDaysRemaining] = useState<number | null>(null)
   const [examDate, setExamDate] = useState<string | null>(null)
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
-  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false)
+  const [isExamDatePopoverOpen, setIsExamDatePopoverOpen] = useState(false)
   const [studyStats, setStudyStats] = useState(calculateStudyStats())
   const [dailyGoal, setDailyGoalState] = useState(getDailyGoal())
   const [todayQuizCount, setTodayQuizCount] = useState(0)
@@ -244,17 +242,13 @@ export default function DashboardPage() {
 
   const handleSaveExamDate = async (date: Date | undefined) => {
     if (date && user) {
-      // Subtract 1 day so selected date displays correctly
-      // (when user picks Nov 14, it should be saved as Nov 14, not Nov 15)
-      const adjustedDate = new Date(date)
-      adjustedDate.setDate(adjustedDate.getDate() - 1)
+      // Use UTC methods to extract date components directly from selected date
+      // No adjustment needed - use the date the user actually selected
+      const year = date.getUTCFullYear()
+      const month = date.getUTCMonth()
+      const day = date.getUTCDate()
 
-      // Use UTC methods to extract date components
-      const year = adjustedDate.getUTCFullYear()
-      const month = adjustedDate.getUTCMonth()
-      const day = adjustedDate.getUTCDate()
-
-      // Create date string from the adjusted date
+      // Create date string (YYYY-MM-DD)
       const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
       setExamDate(dateString)
 
@@ -298,7 +292,7 @@ export default function DashboardPage() {
         }
       }
 
-      setIsEditDialogOpen(false)
+      setIsExamDatePopoverOpen(false)
     }
   }
 
@@ -470,6 +464,28 @@ export default function DashboardPage() {
       href: "#",
       cta: "Edit Date",
       className: "lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
+      background: (
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-auto cursor-pointer"
+          onClick={() => !isExamDatePopoverOpen && setIsExamDatePopoverOpen(true)}
+        >
+          {isExamDatePopoverOpen ? (
+            <div className="relative w-full h-full pointer-events-auto overflow-hidden rounded-lg" onClick={(e) => e.stopPropagation()}>
+              <div className="flex items-center justify-center p-2 h-full">
+                <Calendar
+                  mode="single"
+                  selected={selectedDate}
+                  onSelect={handleSaveExamDate}
+                  captionLayout="dropdowns"
+                  fromYear={new Date().getFullYear()}
+                  toYear={new Date().getFullYear() + 5}
+                  className="rounded-lg border scale-75 origin-center"
+                />
+              </div>
+            </div>
+          ) : null}
+        </div>
+      ),
     },
     {
       Icon: Flame,
@@ -581,9 +597,21 @@ export default function DashboardPage() {
             <BentoCard
               key={`info-${idx}`}
               {...feature}
-              onClick={feature.name === "Exam Date" ? () => setIsEditDialogOpen(true) : undefined}
-              classNameHeader={feature.name === "Daily Goal" && isPopoverOpen ? "opacity-0 transition-opacity duration-300" : "transition-opacity duration-300"}
-              showHeader={!(feature.name === "Daily Goal" && isPopoverOpen)}
+              onClick={
+                (examDate ? formatDateShort(examDate) : "Exam Date") === feature.name
+                  ? () => setIsExamDatePopoverOpen(true)
+                  : undefined
+              }
+              classNameHeader={
+                (feature.name === "Daily Goal" && isPopoverOpen) ||
+                ((examDate ? formatDateShort(examDate) : "Exam Date") === feature.name && isExamDatePopoverOpen)
+                  ? "opacity-0 transition-opacity duration-300"
+                  : "transition-opacity duration-300"
+              }
+              showHeader={
+                !(feature.name === "Daily Goal" && isPopoverOpen) &&
+                !((examDate ? formatDateShort(examDate) : "Exam Date") === feature.name && isExamDatePopoverOpen)
+              }
             />
           ))}
         </BentoGrid>
@@ -628,28 +656,6 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Detailed Exam Countdown Dialog */}
-        <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Update Exam Date</DialogTitle>
-              <DialogDescription>
-                Select your exam date from the calendar below.
-              </DialogDescription>
-            </DialogHeader>
-            <div className="flex justify-center py-4">
-              <Calendar
-                mode="single"
-                selected={selectedDate}
-                onSelect={handleSaveExamDate}
-                captionLayout="dropdowns"
-                fromYear={new Date().getFullYear()}
-                toYear={new Date().getFullYear() + 5}
-                className="rounded-lg border"
-              />
-            </div>
-          </DialogContent>
-        </Dialog>
       </div>
     </main>
   )

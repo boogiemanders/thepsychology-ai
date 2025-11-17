@@ -20,6 +20,7 @@ export async function POST(request: NextRequest) {
       totalQuestions,
       topPriorities,
       allResults,
+      assignmentId,
     } = body
 
     // Validate required fields
@@ -54,6 +55,24 @@ export async function POST(request: NextRequest) {
         { error: 'Failed to save exam results' },
         { status: 500 }
       )
+    }
+
+    // If assignmentId is provided, mark the assignment as completed
+    if (assignmentId) {
+      const { error: assignmentError } = await supabase
+        .from('user_exam_assignments')
+        .update({
+          completed: true,
+          completed_at: new Date().toISOString(),
+          exam_result_id: data.id,
+        })
+        .eq('id', assignmentId)
+
+      if (assignmentError) {
+        console.error('Error updating assignment:', assignmentError)
+        // Don't fail the entire request if assignment update fails
+        // The exam result was still saved successfully
+      }
     }
 
     return NextResponse.json({
