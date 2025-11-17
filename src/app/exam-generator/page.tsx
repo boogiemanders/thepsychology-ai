@@ -1181,14 +1181,16 @@ export default function ExamGeneratorPage() {
                 </div>
 
                 {currentQuestion === questions.length - 1 ? (
-                  <Button
-                    onClick={handleEndExam}
-                    disabled={isSavingResults}
-                    className="min-w-[100px] rounded-none"
-                    style={{ fontFamily: 'Tahoma' }}
-                  >
-                    {isSavingResults ? 'Saving...' : 'End Exam'}
-                  </Button>
+                  <div className="flex flex-col gap-1 items-center">
+                    <Button
+                      onClick={handleEndExam}
+                      disabled={isSavingResults}
+                      className="min-w-[100px] rounded-none"
+                      style={{ fontFamily: 'Tahoma' }}
+                    >
+                      {isSavingResults ? 'Saving...' : 'End Exam'}
+                    </Button>
+                  </div>
                 ) : (
                   <div className="flex flex-col gap-1 items-center">
                     <Button onClick={handleNext} className="min-w-[100px] rounded-none" style={{ fontFamily: 'Tahoma' }}>
