@@ -75,7 +75,7 @@ export function loadTopicContent(
 
     const filePath = join(
       process.cwd(),
-      'topic-content',
+      'topic-content-v3-test',
       domainFolder,
       `${slug}.md`
     )
@@ -135,7 +135,7 @@ export function topicContentExists(
 
     const filePath = join(
       process.cwd(),
-      'topic-content',
+      'topic-content-v3-test',
       domainFolder,
       `${slug}.md`
     )
@@ -163,7 +163,7 @@ export function loadFullTopicContent(
 
     const filePath = join(
       process.cwd(),
-      'topic-content',
+      'topic-content-v3-test',
       domainFolder,
       `${slug}.md`
     )
