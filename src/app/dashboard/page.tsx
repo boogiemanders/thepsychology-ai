@@ -462,7 +462,7 @@ export default function DashboardPage() {
         ? `${daysRemaining} ${daysRemaining === 1 ? 'day' : 'days'} remaining`
         : "Set your exam date",
       href: "#",
-      cta: "Edit Date",
+      cta: isExamDatePopoverOpen ? "" : "Edit Date", // Hide CTA when calendar is open
       className: "lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
       background: (
         <div
@@ -478,7 +478,7 @@ export default function DashboardPage() {
               >
                 <X className="w-4 h-4" />
               </button>
-              <div className="flex items-center justify-center p-4 h-full">
+              <div className="flex items-center justify-center p-2 h-full">
                 <Calendar
                   mode="single"
                   selected={selectedDate}
@@ -489,7 +489,7 @@ export default function DashboardPage() {
                   captionLayout="dropdown"
                   fromYear={new Date().getFullYear()}
                   toYear={new Date().getFullYear() + 5}
-                  className="rounded-lg border"
+                  className="rounded-lg border scale-[0.85] origin-center"
                   fixedWeeks
                 />
               </div>
