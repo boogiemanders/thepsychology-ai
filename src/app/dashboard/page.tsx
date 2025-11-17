@@ -478,15 +478,19 @@ export default function DashboardPage() {
               >
                 <X className="w-4 h-4" />
               </button>
-              <div className="flex items-center justify-center p-2 h-full">
+              <div className="flex items-center justify-center p-4 h-full">
                 <Calendar
                   mode="single"
                   selected={selectedDate}
-                  onSelect={handleSaveExamDate}
-                  captionLayout="dropdowns"
+                  onSelect={(date) => {
+                    handleSaveExamDate(date)
+                    setIsExamDatePopoverOpen(false)
+                  }}
+                  captionLayout="dropdown"
                   fromYear={new Date().getFullYear()}
                   toYear={new Date().getFullYear() + 5}
-                  className="rounded-lg border scale-75 origin-center"
+                  className="rounded-lg border"
+                  fixedWeeks
                 />
               </div>
             </div>
