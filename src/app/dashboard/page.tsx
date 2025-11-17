@@ -27,6 +27,7 @@ import { getTopPriorities } from '@/lib/priority-storage'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { siteConfig } from '@/lib/config'
 import { SimplePromptInput } from '@/components/ui/simple-prompt-input'
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -725,14 +726,12 @@ export default function DashboardPage() {
                    userProfile?.subscription_tier === 'pro' ? 'Pro' :
                    userProfile?.subscription_tier === 'basic' ? 'Basic' : 'Free Trial'}
                 </Badge>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="h-6 px-2 text-xs"
+                <InteractiveHoverButton
+                  text="Change Tier"
+                  hoverText="Upgrade"
+                  className="h-6 px-3 text-xs"
                   onClick={() => setIsPricingCarouselOpen(true)}
-                >
-                  Change Tier
-                </Button>
+                />
               </div>
             </div>
             <Button
