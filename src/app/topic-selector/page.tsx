@@ -420,7 +420,7 @@ export default function TopicSelectorPage() {
                               <div className="flex items-center gap-2 flex-1">
                                 <span className="text-sm">{topic.name}</span>
                                 {isPriority && (
-                                  <Badge variant="outline" className="text-xs bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-700 flex items-center gap-1">
+                                  <Badge variant="outline" className="text-xs flex items-center gap-1" style={{ backgroundColor: '#cbc9db20', color: '#cbc9db', borderColor: '#cbc9db' }}>
                                     <AlertCircle className="w-3 h-3" />
                                     Focus
                                   </Badge>
