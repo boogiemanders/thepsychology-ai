@@ -122,6 +122,8 @@ function SignUpContent() {
         password: formData.password,
       })
 
+      console.log('Supabase signup response:', { authData, signUpError })
+
       if (signUpError) {
         console.error('Sign up error:', signUpError)
 
@@ -131,6 +133,12 @@ function SignUpContent() {
         }
 
         throw signUpError
+      }
+
+      // Check if user was actually created (Supabase sometimes returns success but no user when rate limited)
+      if (authData.user && authData.user.identities && authData.user.identities.length === 0) {
+        console.warn('User created but no identities - likely already exists or rate limited')
+        throw new Error('This email may already be registered, or signup limit reached. Please try logging in instead.')
       }
 
       if (!authData.user) {
@@ -202,7 +210,20 @@ function SignUpContent() {
 
       // Don't redirect - user needs to verify email first
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Sign up failed'
+      console.error('Signup error details:', err)
+
+      let message = 'Sign up failed'
+
+      if (err instanceof Error) {
+        message = err.message
+      } else if (typeof err === 'string') {
+        message = err
+      } else if (err && typeof err === 'object') {
+        // Handle object errors (like from Supabase)
+        message = JSON.stringify(err)
+        console.error('Object error:', err)
+      }
+
       setError(message)
       setLoading(false)
       return
