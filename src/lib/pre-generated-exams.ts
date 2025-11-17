@@ -194,19 +194,21 @@ export async function triggerBackgroundPreGeneration(
     }
 
     // Fire-and-forget background generation (fallback)
-    // Don't await this, let it happen in background
-    fetch('/api/pre-generate-exam', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        userId,
-        examType: nextExamType,
-      }),
-    }).catch((err) => {
-      console.error('Background pre-generation failed (non-critical):', err)
-    })
+    // DISABLED: This tries to write to filesystem which doesn't work on Vercel
+    // Exams are now pre-generated and committed to git in /exams directory
+    console.log('[Pre-Gen] Background generation disabled - using pre-generated exams from /exams directory')
+    // fetch('/api/pre-generate-exam', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     userId,
+    //     examType: nextExamType,
+    //   }),
+    // }).catch((err) => {
+    //   console.error('Background pre-generation failed (non-critical):', err)
+    // })
   } catch (err) {
     console.error('Error triggering background pre-generation:', err)
   }
