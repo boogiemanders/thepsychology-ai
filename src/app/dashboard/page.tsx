@@ -242,11 +242,11 @@ export default function DashboardPage() {
 
   const handleSaveExamDate = async (date: Date | undefined) => {
     if (date && user) {
-      // Use UTC methods to extract date components directly from selected date
-      // No adjustment needed - use the date the user actually selected
-      const year = date.getUTCFullYear()
-      const month = date.getUTCMonth()
-      const day = date.getUTCDate()
+      // Use local date methods to extract the date the user clicked
+      // Calendar component passes Date in local timezone, so use local methods
+      const year = date.getFullYear()
+      const month = date.getMonth()
+      const day = date.getDate()
 
       // Create date string (YYYY-MM-DD)
       const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
