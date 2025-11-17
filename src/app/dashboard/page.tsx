@@ -250,22 +250,24 @@ export default function DashboardPage() {
 
       // Create date string (YYYY-MM-DD)
       const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+      console.log('[Dashboard] Saving exam date:', dateString, 'for user:', user.id)
       setExamDate(dateString)
 
       // Save to Supabase
       try {
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('users')
           .update({ exam_date: dateString })
           .eq('id', user.id)
+          .select()
 
         if (error) {
-          console.error('Supabase update error:', error)
+          console.error('[Dashboard] Supabase update error:', error)
         } else {
-          console.log('Exam date saved to Supabase:', dateString)
+          console.log('[Dashboard] Exam date saved to Supabase successfully:', dateString, 'Response:', data)
         }
       } catch (error) {
-        console.error('Supabase save failed:', error)
+        console.error('[Dashboard] Supabase save failed:', error)
       }
 
       // Also update localStorage as fallback
