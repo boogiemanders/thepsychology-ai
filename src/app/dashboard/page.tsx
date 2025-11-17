@@ -12,6 +12,7 @@ import { Calendar } from '@/components/ui/calendar'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
+import { Card, CardContent } from '@/components/ui/card'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid'
 import { Marquee } from '@/components/ui/marquee'
@@ -24,10 +25,11 @@ import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCoun
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities } from '@/lib/priority-storage'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
+import { siteConfig } from '@/lib/config'
 
 export default function DashboardPage() {
   const router = useRouter()
-  const { user, userProfile, loading, signOut } = useAuth()
+  const { user, userProfile, loading, signOut, refreshProfile } = useAuth()
   const [mounted, setMounted] = useState(false)
   const [progressData, setProgressData] = useState({
     totalCompletion: 0,
@@ -47,6 +49,7 @@ export default function DashboardPage() {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
   const [priorityDomains, setPriorityDomains] = useState<any[]>([])
   const [hasPausedExam, setHasPausedExam] = useState(false)
+  const [isPricingCarouselOpen, setIsPricingCarouselOpen] = useState(false)
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -265,6 +268,8 @@ export default function DashboardPage() {
           console.error('[Dashboard] Supabase update error:', error)
         } else {
           console.log('[Dashboard] Exam date saved to Supabase successfully:', dateString, 'Response:', data)
+          // Refresh the user profile to get the updated exam date
+          await refreshProfile()
         }
       } catch (error) {
         console.error('[Dashboard] Supabase save failed:', error)
@@ -654,13 +659,7 @@ export default function DashboardPage() {
                   variant="ghost"
                   size="sm"
                   className="h-6 px-2 text-xs"
-                  onClick={() => {
-                    const newTier = prompt('Enter tier (Free/Premium/Pro):', 'Free')
-                    if (newTier) {
-                      // TODO: Save tier to user profile
-                      console.log('Saving tier:', newTier)
-                    }
-                  }}
+                  onClick={() => setIsPricingCarouselOpen(true)}
                 >
                   Change Tier
                 </Button>
@@ -668,6 +667,86 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
+
+        {/* Pricing Tier Carousel Modal */}
+        {isPricingCarouselOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsPricingCarouselOpen(false)}
+          >
+            <div className="relative w-full max-w-md px-4" onClick={(e) => e.stopPropagation()}>
+              <button
+                onClick={() => setIsPricingCarouselOpen(false)}
+                className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-background/80 hover:bg-background border border-border text-foreground/60 hover:text-foreground transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {siteConfig.pricing.pricingItems.map((tier, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <Card className="border-2">
+                          <CardContent className="flex flex-col p-6 h-[500px]">
+                            <div className="flex-1">
+                              <div className="flex items-center justify-between mb-4">
+                                <h3 className="text-2xl font-bold">{tier.name}</h3>
+                                {tier.isPopular && (
+                                  <Badge className="bg-primary text-primary-foreground">Popular</Badge>
+                                )}
+                              </div>
+                              <div className="mb-6">
+                                <div className="text-4xl font-bold mb-2">{tier.displayPrice}</div>
+                                <p className="text-sm text-muted-foreground">{tier.description}</p>
+                              </div>
+                              <div className="space-y-3 mb-6">
+                                <p className="text-sm font-semibold text-muted-foreground">
+                                  {tier.featuresLabel}
+                                </p>
+                                {tier.features.map((feature, idx) => (
+                                  <div key={idx} className="flex items-start gap-2">
+                                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                      <svg
+                                        className="w-3 h-3 text-primary"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                      >
+                                        <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth={2}
+                                          d="M5 13l4 4L19 7"
+                                        />
+                                      </svg>
+                                    </div>
+                                    <span className="text-sm">{feature}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                            <Button
+                              className={tier.buttonColor}
+                              onClick={() => {
+                                // TODO: Save tier to user profile
+                                console.log('Selected tier:', tier.name)
+                                setIsPricingCarouselOpen(false)
+                              }}
+                            >
+                              {tier.buttonText}
+                            </Button>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
+            </div>
+          </div>
+        )}
 
       </div>
     </main>

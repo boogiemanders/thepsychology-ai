@@ -19,6 +19,7 @@ interface AuthContextType {
   loading: boolean
   error: string | null
   signOut: () => Promise<void>
+  refreshProfile: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -96,6 +97,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
+  const refreshProfile = async () => {
+    if (!user) return
+
+    try {
+      const { data, error: fetchError } = await supabase
+        .from('users')
+        .select('*')
+        .eq('id', user.id)
+        .single()
+
+      if (fetchError && fetchError.code !== 'PGRST116') {
+        console.error('Error refreshing user profile:', fetchError)
+      } else {
+        setUserProfile(data)
+      }
+    } catch (err) {
+      console.error('Profile refresh failed:', err)
+    }
+  }
+
   const signOut = async () => {
     try {
       setError(null)
@@ -117,6 +138,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         loading,
         error,
         signOut,
+        refreshProfile,
       }}
     >
       {children}
