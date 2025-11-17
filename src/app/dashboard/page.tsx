@@ -705,7 +705,7 @@ export default function DashboardPage() {
               >
                 <X className="w-4 h-4" />
               </button>
-              <Carousel className="w-full">
+              <Carousel className="w-full px-12">
                 <CarouselContent>
                   {siteConfig.pricing.pricingItems.map((tier, index) => (
                     <CarouselItem key={index}>
@@ -765,8 +765,8 @@ export default function DashboardPage() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
+                <CarouselPrevious className="-left-12" />
+                <CarouselNext className="-right-12" />
               </Carousel>
             </div>
           </div>
