@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import type { PriorityDomainRecommendation } from '@/lib/priority-storage'
+import { calculatePriorities } from '@/lib/priority-calculator'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -21,7 +22,21 @@ export async function POST(request: NextRequest) {
 
     // Parse exam results
     const results = typeof examResults === 'string' ? JSON.parse(examResults) : examResults
-    const { topPriorities, allResults, score, totalQuestions } = results
+
+    // If topPriorities don't exist, calculate them from raw results
+    let topPriorities, allResults, score, totalQuestions
+
+    if (results.topPriorities && Array.isArray(results.topPriorities)) {
+      // Already has priority calculations
+      ({ topPriorities, allResults, score, totalQuestions } = results)
+    } else {
+      // Calculate priorities from raw exam results
+      const calculated = calculatePriorities(results)
+      topPriorities = calculated.topPriorities
+      allResults = calculated.allResults
+      score = calculated.score
+      totalQuestions = calculated.totalQuestions
+    }
 
     if (!topPriorities || !Array.isArray(topPriorities)) {
       return NextResponse.json(
