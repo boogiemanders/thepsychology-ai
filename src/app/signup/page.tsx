@@ -124,6 +124,12 @@ function SignUpContent() {
 
       if (signUpError) {
         console.error('Sign up error:', signUpError)
+
+        // Handle rate limit error with helpful message
+        if (signUpError.message?.includes('rate limit') || signUpError.message?.includes('Email rate limit exceeded')) {
+          throw new Error('Too many signup attempts. Please wait an hour and try again, or contact support if you need immediate assistance.')
+        }
+
         throw signUpError
       }
 
