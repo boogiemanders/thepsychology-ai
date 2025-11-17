@@ -524,7 +524,7 @@ export default function DashboardPage() {
               >
                 <X className="w-4 h-4" />
               </button>
-              <div className="flex items-center justify-center p-2 h-full">
+              <div className="flex items-center justify-center p-1 h-full overflow-auto">
                 <Calendar
                   mode="single"
                   selected={selectedDate}
@@ -535,7 +535,7 @@ export default function DashboardPage() {
                   captionLayout="dropdown"
                   fromYear={new Date().getFullYear()}
                   toYear={new Date().getFullYear() + 5}
-                  className="rounded-lg border scale-[0.85] origin-center"
+                  className="rounded-lg border scale-[0.65] origin-center"
                   fixedWeeks
                 />
               </div>
