@@ -56,20 +56,22 @@ export async function POST(request: NextRequest) {
 
     // Domain breakdown table
     markdown += `## Domain Breakdown\n\n`
-    markdown += `| Domain | Performance | Weight | Focus Level |\n`
-    markdown += `|--------|-------------|--------|-------------|\n`
+    markdown += `| Domain | Performance | % Wrong | Weight | Priority Score | Focus Level |\n`
+    markdown += `|--------|-------------|---------|--------|-----------------|-------------|\n`
 
     if (allResults && Array.isArray(allResults)) {
       allResults.forEach((domain: PriorityDomainRecommendation) => {
-        const correctCount = Math.round((domain.percentageWrong / 100) * totalQuestions)
-        const wrongCount = totalQuestions - correctCount
-        const correctPct = Math.round(((totalQuestions - wrongCount) / totalQuestions) * 100)
+        // Use actual domain performance from calculations
+        const totalInDomain = domain.totalQuestionsInDomain || 1
+        const wrongInDomain = domain.totalWrongInDomain || 0
+        const correctInDomain = totalInDomain - wrongInDomain
+        const correctPct = Math.round((correctInDomain / totalInDomain) * 100)
 
         let focusLevel = '✅ Building on strength'
         if (correctPct < 70 && correctPct >= 40) focusLevel = '🔵 Room to grow'
         if (correctPct < 40) focusLevel = '🟡 Priority focus area'
 
-        markdown += `| **Domain ${domain.domainNumber}: ${domain.domainName}** | ${correctPct}% (${totalQuestions - wrongCount}/${totalQuestions}) | ${Math.round(domain.domainWeight * 100)}% | ${focusLevel} |\n`
+        markdown += `| **Domain ${domain.domainNumber}: ${domain.domainName}** | ${correctPct}% (${correctInDomain}/${totalInDomain}) | ${Math.round(domain.percentageWrong)}% | ${Math.round(domain.domainWeight)}% | ${domain.priorityScore} | ${focusLevel} |\n`
       })
     }
 

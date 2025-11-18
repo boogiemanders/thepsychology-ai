@@ -48,33 +48,59 @@ export function getKNFromQuestion(questionId: number, questionText: string): str
 
 /**
  * Calculate domain performance based on wrong answers
- * Now properly handles practice exams by counting actual questions per domain
+ * Counts actual questions from the exam and calculates performance based on responses submitted
  */
 export function calculateDomainPerformance(
-  wrongAnswers: (WrongAnswer & { domain?: string; source_file?: string })[]
+  wrongAnswers: (WrongAnswer & { domain?: string; source_file?: string })[],
+  allQuestions?: Array<{ domain?: string; is_org_psych?: boolean }>
 ): DomainPerformance[] {
   const domainData: Record<number, { wrong: number; total: number; wrongKNs: Set<string>; wrongFiles: Set<string> }> = {}
 
-  // Initialize domain data with proper question counts for practice exams
-  // Practice exam distribution: Domain 1: 23, Domain 2: 29, Domain 3: 25, Domain 4: 27,
-  // Domain 5: 36, Domain 6: 34, Domain 7: 18, Domain 8: 33
-  const PRACTICE_EXAM_QUESTION_COUNTS: Record<number, number> = {
-    1: 23,
-    2: 29,
-    3: 25,
-    4: 27,
-    5: 36,
-    6: 34,
-    7: 18,
-    8: 33,
-  }
-
+  // Initialize domain data - count actual questions from exam if provided, otherwise use reasonable defaults
   for (let i = 1; i <= 8; i++) {
     domainData[i] = {
       wrong: 0,
-      total: PRACTICE_EXAM_QUESTION_COUNTS[i],
+      total: 0,
       wrongKNs: new Set(),
       wrongFiles: new Set(),
+    }
+  }
+
+  // Count total questions per domain from the exam
+  if (allQuestions) {
+    for (const question of allQuestions) {
+      // Skip org psych questions - count them separately
+      if (question.is_org_psych === true) {
+        continue
+      }
+
+      // Extract domain number from domain metadata
+      let domain: number | null = null
+      if (question.domain) {
+        const match = question.domain.match(/Domain (\d+)/)
+        domain = match ? parseInt(match[1]) : null
+      }
+
+      if (domain && domain >= 1 && domain <= 8) {
+        domainData[domain].total++
+      }
+    }
+  }
+
+  // Use hardcoded defaults only if we don't have actual question data
+  if (allQuestions === undefined || domainData[1].total === 0) {
+    const PRACTICE_EXAM_QUESTION_COUNTS: Record<number, number> = {
+      1: 23,
+      2: 29,
+      3: 25,
+      4: 27,
+      5: 36,
+      6: 34,
+      7: 18,
+      8: 33,
+    }
+    for (let i = 1; i <= 8; i++) {
+      domainData[i].total = PRACTICE_EXAM_QUESTION_COUNTS[i]
     }
   }
 
@@ -116,9 +142,10 @@ export function calculateDomainPerformance(
 
   for (let i = 1; i <= 8; i++) {
     const data = domainData[i]
-    const percentageWrong = (data.wrong / data.total) * 100
+    // Avoid division by zero
+    const percentageWrong = data.total > 0 ? (data.wrong / data.total) * 100 : 0
     const domainWeight = DOMAIN_WEIGHTS[i]
-    const priorityScore = percentageWrong * domainWeight // % wrong × weight (both as decimals 0-1)
+    const priorityScore = (percentageWrong / 100) * domainWeight * 100 // (% wrong as decimal) × weight × 100
 
     performance.push({
       domainNumber: i,
@@ -127,7 +154,7 @@ export function calculateDomainPerformance(
       totalQuestionsInDomain: data.total,
       totalWrongInDomain: data.wrong,
       percentageWrong: Math.round(percentageWrong * 100) / 100, // Round to 2 decimals
-      priorityScore: Math.round(priorityScore * 10000) / 100, // Round to 2 decimals (as percentage points)
+      priorityScore: Math.round(priorityScore * 100) / 100, // Round to 2 decimals
       wrongSourceFiles: Array.from(data.wrongFiles), // Include source files from incorrect/skipped questions
     })
   }
@@ -445,19 +472,27 @@ export interface OrgPsychPerformance {
 }
 
 export function calculateOrgPsychPerformance(
-  wrongAnswers: (WrongAnswer & { is_org_psych?: boolean; source_file?: string })[]
+  wrongAnswers: (WrongAnswer & { is_org_psych?: boolean; source_file?: string })[],
+  allQuestions?: Array<{ is_org_psych?: boolean }>
 ): OrgPsychPerformance {
   const ORG_PSYCH_WEIGHT = 0.21 // 21% of exam
 
   const orgPsychWrong = wrongAnswers.filter((a) => a.is_org_psych === true)
   const wrongSourceFiles = new Set(orgPsychWrong.map((a) => a.source_file).filter(Boolean))
 
-  // For calculation, we use actual org psych questions in the practice exam
-  // Practice exam: 44 questions (marked as is_org_psych: true)
-  const totalOrgPsychQuestions = 44 // Based on exam generation
+  // Count total org psych questions from the exam
+  let totalOrgPsychQuestions = 0
+  if (allQuestions) {
+    totalOrgPsychQuestions = allQuestions.filter((q) => q.is_org_psych === true).length
+  }
 
-  const percentageWrong = (orgPsychWrong.length / totalOrgPsychQuestions) * 100
-  const priorityScore = percentageWrong * ORG_PSYCH_WEIGHT // % wrong × weight
+  // Fall back to hardcoded count if we don't have actual question data
+  if (totalOrgPsychQuestions === 0) {
+    totalOrgPsychQuestions = 44 // Based on practice exam generation
+  }
+
+  const percentageWrong = totalOrgPsychQuestions > 0 ? (orgPsychWrong.length / totalOrgPsychQuestions) * 100 : 0
+  const priorityScore = (percentageWrong / 100) * ORG_PSYCH_WEIGHT * 100 // (% wrong as decimal) × weight × 100
 
   return {
     label: "Organizational Psychology",
@@ -465,7 +500,7 @@ export function calculateOrgPsychPerformance(
     totalQuestionsInOrgPsych: totalOrgPsychQuestions,
     totalWrongInOrgPsych: orgPsychWrong.length,
     percentageWrong: Math.round(percentageWrong * 100) / 100, // Round to 2 decimals
-    priorityScore: Math.round(priorityScore * 10000) / 100, // Round to 2 decimals (as percentage points)
+    priorityScore: Math.round(priorityScore * 100) / 100, // Round to 2 decimals
     wrongSourceFiles: Array.from(wrongSourceFiles),
   }
 }
@@ -548,9 +583,9 @@ export function calculatePriorities(examResults: {
     }
   })
 
-  // Calculate domain and org psych performance
-  const domainPerformance = calculateDomainPerformance(wrongAnswers)
-  const orgPsychPerformance = calculateOrgPsychPerformance(wrongAnswers)
+  // Calculate domain and org psych performance, passing actual questions for accurate totals
+  const domainPerformance = calculateDomainPerformance(wrongAnswers, examResults.questions)
+  const orgPsychPerformance = calculateOrgPsychPerformance(wrongAnswers, examResults.questions)
 
   // Get top 3 priority areas (8 domains + org psych)
   const topPriorityAreas = getTopPriorityAreas(domainPerformance, orgPsychPerformance)
