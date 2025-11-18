@@ -604,11 +604,11 @@ export function PrioritizeContent() {
                                         item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                           <ul className="text-sm space-y-2">
                                             {item.recommendedTopics.map((topic: any, topicIdx: number) => (
-                                              <li key={topicIdx} className="flex gap-2 items-start">
-                                                <span className="text-lg mt-0.5">🍏</span>
+                                              <li key={topicIdx}>
                                                 <Link
                                                   href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
-                                                  className="hover:underline text-blue-600 dark:text-blue-400"
+                                                  className="hover:underline"
+                                                  style={{ color: '#6a9bcc' }}
                                                   target="_blank"
                                                   rel="noopener noreferrer"
                                                 >
@@ -625,11 +625,11 @@ export function PrioritizeContent() {
                                       ) : item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                         <ul className="text-sm space-y-2">
                                           {item.recommendedTopics.map((topic: any, topicIdx: number) => (
-                                            <li key={topicIdx} className="flex gap-2 items-start">
-                                              <span className="text-lg mt-0.5">🍏</span>
+                                            <li key={topicIdx}>
                                               <Link
                                                 href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
-                                                className="hover:underline text-blue-600 dark:text-blue-400"
+                                                className="hover:underline"
+                                                style={{ color: '#6a9bcc' }}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                               >

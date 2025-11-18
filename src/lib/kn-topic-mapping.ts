@@ -44,7 +44,7 @@ export const KN_TOPIC_MAPPING: Record<string, string[]> = {
   KN10: ["2-6", "6-5"],
 
   // KN11: Motivation and goal-directed behavior
-  KN11: ["org-1"],
+  KN11: [],
 
   // KN12: Cognitive and affective bases of psychopathology
   KN12: ["5d-2", "5d-3", "5d-4", "5d-5"],
@@ -131,10 +131,10 @@ export const KN_TOPIC_MAPPING: Record<string, string[]> = {
   KN37: ["5t-4", "5a-1", "5a-2", "5a-3", "5a-4"],
 
   // KN38: Occupational/organizational assessment
-  KN38: ["org-3", "org-4"],
+  KN38: [],
 
   // KN39: Selection and placement assessment
-  KN39: ["org-3", "org-4"],
+  KN39: [],
 
   // KN40: Assessment of group differences
   KN40: ["5t-2", "5t-3"],
@@ -172,10 +172,10 @@ export const KN_TOPIC_MAPPING: Record<string, string[]> = {
   KN50: ["6-1", "6-2", "6-3", "6-4"],
 
   // KN51: Organizational/industrial interventions
-  KN51: ["org-7", "org-8", "org-11"],
+  KN51: [],
 
   // KN52: Coaching and consulting
-  KN52: ["org-7", "org-9"],
+  KN52: [],
 
   // Domain 7: Research Methods and Statistics
 

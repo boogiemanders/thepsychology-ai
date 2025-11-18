@@ -223,6 +223,49 @@ export function convertTopicIdsToTopicNames(topicIds: string[]): RecommendedTopi
 }
 
 /**
+ * Extract organizational psychology topics from source file names
+ * Maps source files to matching org psych topics in the 3-5-6 domain
+ * e.g., "2 Theories of Motivation.md" → "Theories of Motivation"
+ */
+export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): RecommendedTopic[] {
+  const orgPsychDomain = EPPP_DOMAINS.find((d) => d.id === '3-5-6')
+  if (!orgPsychDomain) return []
+
+  const recommendedTopics: RecommendedTopic[] = []
+  const addedTopics = new Set<string>()
+
+  sourceFiles.forEach((sourceFile) => {
+    if (!sourceFile) return
+
+    // Strip domain prefix from filename (e.g., "2 ", "5 6 ", "2 3 ")
+    // Match patterns like "2 ", "5 6 ", "2 3 ", "3 5 6 " at the start
+    const cleanedName = sourceFile.replace(/^[\d\s]+/, '').replace(/\.md$/, '')
+
+    // Find matching topic in org psych domain by semantic similarity
+    const matchingTopic = orgPsychDomain.topics.find((topic) => {
+      const topicNameCleaned = topic.name.replace(/^[\d\s]+/, '').toLowerCase()
+      const fileNameLower = cleanedName.toLowerCase()
+
+      // Check for exact match or key phrase match
+      return topicNameCleaned === fileNameLower ||
+             topicNameCleaned.includes(fileNameLower) ||
+             fileNameLower.includes(topicNameCleaned)
+    })
+
+    if (matchingTopic && !addedTopics.has(matchingTopic.name)) {
+      addedTopics.add(matchingTopic.name)
+      const topicNameDisplay = matchingTopic.name.replace(/^\d+\s+/, '')
+      recommendedTopics.push({
+        topicName: topicNameDisplay,
+        domainId: '3-5-6',
+      })
+    }
+  })
+
+  return recommendedTopics
+}
+
+/**
  * Build priority domain recommendations (used by prioritizer)
  */
 export function buildPriorityRecommendations(
@@ -429,7 +472,9 @@ export function calculatePriorities(examResults: {
   // Get detailed recommendations for top 3 areas (including org psych if it ranks in top 3)
   const topPriorities: any[] = topPriorityAreas.map((area) => {
     if (area.type === 'org_psych') {
-      // Org psych doesn't have domain-specific KNs, so return it directly
+      // Extract org psych topics from wrong source files
+      const recommendedTopics = extractOrgPsychTopicsFromSourceFiles(area.wrongSourceFiles || [])
+
       return {
         type: 'org_psych',
         domainName: area.label,
@@ -439,7 +484,7 @@ export function calculatePriorities(examResults: {
         wrongSourceFiles: area.wrongSourceFiles || [],
         wrongKNs: [],
         recommendedTopicIds: [],
-        recommendedTopics: [],
+        recommendedTopics,
       }
     } else {
       // Regular domain
