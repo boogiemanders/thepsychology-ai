@@ -386,7 +386,7 @@ export function PrioritizeContent() {
                   variants={animations.itemVariants}
                   className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
-                  <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
+                  <Card style={{ borderColor: '#bdd1ca', backgroundColor: 'rgba(189, 209, 202, 0.08)' }}>
                     <CardHeader>
                       <CardTitle className="text-lg">Your Score</CardTitle>
                     </CardHeader>
@@ -400,7 +400,7 @@ export function PrioritizeContent() {
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border-orange-500/20">
+                  <Card style={{ borderColor: '#788c5d', backgroundColor: 'rgba(120, 140, 93, 0.08)' }}>
                     <CardHeader>
                       <CardTitle className="text-lg">Domains to Focus</CardTitle>
                     </CardHeader>
@@ -469,7 +469,7 @@ export function PrioritizeContent() {
                               )
                             })}
                             {priorityData.orgPsychPerformance && (
-                              <TableRow className="bg-orange-500/5 hover:bg-orange-500/10">
+                              <TableRow style={{ backgroundColor: 'rgba(216, 119, 88, 0.05)' }}>
                                 <TableCell className="font-medium">Organizational Psychology</TableCell>
                                 <TableCell className="text-right">
                                   {Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100)}%
