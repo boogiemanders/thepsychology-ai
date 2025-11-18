@@ -117,6 +117,8 @@ export async function POST(request: NextRequest) {
         allResults: allResults || [],
         topPriorities: topPriorities || [],
         orgPsychPerformance,
+        examQuestions: results.questions || [],
+        selectedAnswers: results.selectedAnswers || {},
       }
     }
 

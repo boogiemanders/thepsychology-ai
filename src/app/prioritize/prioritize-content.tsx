@@ -24,6 +24,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { ExpandableDomainAnalysis } from '@/components/expandable-domain-analysis'
 
 interface AnalysisData {
   overallScore?: number
@@ -420,114 +421,20 @@ export function PrioritizeContent() {
                 </motion.div>
               )}
 
-              {/* Domain Performance Table */}
-              {priorityData && (
+              {/* Domain Performance Accordion */}
+              {priorityData && priorityData.examQuestions && (
                 <motion.div
                   variants={animations.itemVariants}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-2xl flex items-center gap-2">
-                        <Zap size={24} className="text-muted-foreground" />
-                        Domain Analysis
-                      </CardTitle>
-                      <CardDescription>
-                        Breakdown of your performance
-                      </CardDescription>
-                    </CardHeader>
-                    <Separator />
-                    <CardContent className="pt-6">
-                      <div className="overflow-x-auto">
-                        <Table>
-                          <TableHeader>
-                            <TableRow>
-                              <TableHead>Domain</TableHead>
-                              <TableHead className="text-right">Performance</TableHead>
-                              <TableHead className="text-right">% Wrong</TableHead>
-                              <TableHead className="text-right">Weight</TableHead>
-                              <TableHead className="text-right">Priority Score</TableHead>
-                              <TableHead>Priority</TableHead>
-                            </TableRow>
-                          </TableHeader>
-                          <TableBody>
-                            {priorityData.allResults && priorityData.allResults.map((domain: any) => {
-                              const correctPct = Math.round((1 - domain.percentageWrong / 100) * 100)
-                              let priorityLabel = 'Low'
-                              let priorityColor = '#bdd1ca'
-
-                              if (correctPct >= 70) {
-                                priorityLabel = 'Low'
-                                priorityColor = '#bdd1ca'
-                              } else if (correctPct >= 40) {
-                                priorityLabel = 'Medium'
-                                priorityColor = '#788c5d'
-                              } else {
-                                priorityLabel = 'High'
-                                priorityColor = '#d87758'
-                              }
-
-                              return (
-                                <TableRow key={domain.domainNumber}>
-                                  <TableCell className="font-medium">{domain.domainName.split(': ')[1] || domain.domainName}</TableCell>
-                                  <TableCell className="text-right">{correctPct}%</TableCell>
-                                  <TableCell className="text-right">{domain.percentageWrong.toFixed(1)}%</TableCell>
-                                  <TableCell className="text-right">{(domain.domainWeight * 100).toFixed(0)}%</TableCell>
-                                  <TableCell className="text-right font-semibold">{domain.priorityScore.toFixed(2)}</TableCell>
-                                  <TableCell>
-                                    <Badge style={{ backgroundColor: priorityColor, borderColor: priorityColor, color: '#ffffff' }}>
-                                      {priorityLabel}
-                                    </Badge>
-                                  </TableCell>
-                                </TableRow>
-                              )
-                            })}
-                            {priorityData?.orgPsychPerformance && (
-                              <TableRow style={{ backgroundColor: 'rgba(216, 119, 88, 0.05)' }}>
-                                <TableCell className="font-medium">Organizational Psychology</TableCell>
-                                <TableCell className="text-right">
-                                  {Math.round((1 - (priorityData.orgPsychPerformance.percentageWrong || 0) / 100) * 100)}%
-                                </TableCell>
-                                <TableCell className="text-right">
-                                  {(priorityData.orgPsychPerformance.percentageWrong || 0).toFixed(1)}%
-                                </TableCell>
-                                <TableCell className="text-right">21%</TableCell>
-                                <TableCell className="text-right font-semibold">
-                                  {(priorityData.orgPsychPerformance.priorityScore || 0).toFixed(2)}
-                                </TableCell>
-                                <TableCell>
-                                  {(() => {
-                                    const correctPct = Math.round((1 - (priorityData.orgPsychPerformance.percentageWrong || 0) / 100) * 100)
-                                    let badgeColor = '#bdd1ca'
-                                    let badgeLabel = 'Low'
-
-                                    if (correctPct >= 70) {
-                                      badgeColor = '#bdd1ca'
-                                      badgeLabel = 'Low'
-                                    } else if (correctPct >= 40) {
-                                      badgeColor = '#788c5d'
-                                      badgeLabel = 'Medium'
-                                    } else {
-                                      badgeColor = '#d87758'
-                                      badgeLabel = 'High'
-                                    }
-
-                                    return (
-                                      <Badge style={{ backgroundColor: badgeColor, borderColor: badgeColor, color: '#ffffff' }}>
-                                        {badgeLabel}
-                                      </Badge>
-                                    )
-                                  })()}
-                                </TableCell>
-                              </TableRow>
-                            )}
-                          </TableBody>
-                        </Table>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <ExpandableDomainAnalysis
+                    allResults={priorityData.allResults || []}
+                    examQuestions={priorityData.examQuestions || []}
+                    selectedAnswers={priorityData.selectedAnswers || {}}
+                    orgPsychPerformance={priorityData.orgPsychPerformance}
+                  />
                 </motion.div>
               )}
 
