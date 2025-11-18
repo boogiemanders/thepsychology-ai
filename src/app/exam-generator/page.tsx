@@ -1055,21 +1055,22 @@ export default function ExamGeneratorPage() {
             </div>
           </div>
 
-          {/* Question */}
-          <Card className="rounded-none">
-            <CardHeader>
-              <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text" style={{ fontFamily: 'Tahoma' }}>
-                {textFormats[currentQuestion]?.question ? (
-                  <div dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].question }} />
-                ) : (
-                  question.question
-                )}
-              </CardTitle>
-            </CardHeader>
-            <Separator />
-            <CardContent className="pt-6">
-              {/* Answer Options - Radio Style */}
-              <div className="space-y-3">
+          {/* Question - Wrapped with min-height to keep nav box position consistent */}
+          <div className="min-h-[calc(100vh-320px)] flex flex-col">
+            <Card className="rounded-none flex-1 flex flex-col">
+              <CardHeader>
+                <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text" style={{ fontFamily: 'Tahoma' }}>
+                  {textFormats[currentQuestion]?.question ? (
+                    <div dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].question }} />
+                  ) : (
+                    question.question
+                  )}
+                </CardTitle>
+              </CardHeader>
+              <Separator />
+              <CardContent className="pt-6 flex-1 flex flex-col">
+                {/* Answer Options - Radio Style */}
+                <div className="space-y-3">
               {question.options.map((option, idx) => {
                 const isSelected = selectedAnswer === option
                 const isAnswered = selectedAnswer !== undefined
@@ -1138,14 +1139,15 @@ export default function ExamGeneratorPage() {
                   </p>
                 </motion.div>
               )}
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Navigation - Sticky Bottom */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 mt-8"
+            className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6"
           >
             <div className="flex items-center justify-between gap-4">
               {/* Flag Checkbox on Left */}
