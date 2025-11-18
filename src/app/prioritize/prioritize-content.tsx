@@ -454,18 +454,18 @@ export function PrioritizeContent() {
                           <TableBody>
                             {priorityData.allResults && priorityData.allResults.map((domain: any) => {
                               const correctPct = Math.round((1 - domain.percentageWrong / 100) * 100)
-                              let priorityLabel = 'Low Priority'
-                              let priorityVariant: 'default' | 'secondary' | 'destructive' = 'secondary'
+                              let priorityLabel = 'Low'
+                              let priorityColor = '#bdd1ca'
 
                               if (correctPct >= 70) {
                                 priorityLabel = 'Low'
-                                priorityVariant = 'secondary'
+                                priorityColor = '#bdd1ca'
                               } else if (correctPct >= 40) {
                                 priorityLabel = 'Medium'
-                                priorityVariant = 'default'
+                                priorityColor = '#788c5d'
                               } else {
                                 priorityLabel = 'High'
-                                priorityVariant = 'destructive'
+                                priorityColor = '#d87758'
                               }
 
                               return (
@@ -476,7 +476,9 @@ export function PrioritizeContent() {
                                   <TableCell className="text-right">{(domain.domainWeight * 100).toFixed(0)}%</TableCell>
                                   <TableCell className="text-right font-semibold">{domain.priorityScore.toFixed(2)}</TableCell>
                                   <TableCell>
-                                    <Badge variant={priorityVariant}>{priorityLabel}</Badge>
+                                    <Badge style={{ backgroundColor: priorityColor, borderColor: priorityColor, color: '#ffffff' }}>
+                                      {priorityLabel}
+                                    </Badge>
                                   </TableCell>
                                 </TableRow>
                               )
@@ -497,9 +499,25 @@ export function PrioritizeContent() {
                                 <TableCell>
                                   {(() => {
                                     const correctPct = Math.round((1 - (priorityData.orgPsychPerformance.percentageWrong || 0) / 100) * 100)
-                                    if (correctPct >= 70) return <Badge variant="secondary">Low</Badge>
-                                    if (correctPct >= 40) return <Badge variant="default">Medium</Badge>
-                                    return <Badge variant="destructive">High</Badge>
+                                    let badgeColor = '#bdd1ca'
+                                    let badgeLabel = 'Low'
+
+                                    if (correctPct >= 70) {
+                                      badgeColor = '#bdd1ca'
+                                      badgeLabel = 'Low'
+                                    } else if (correctPct >= 40) {
+                                      badgeColor = '#788c5d'
+                                      badgeLabel = 'Medium'
+                                    } else {
+                                      badgeColor = '#d87758'
+                                      badgeLabel = 'High'
+                                    }
+
+                                    return (
+                                      <Badge style={{ backgroundColor: badgeColor, borderColor: badgeColor, color: '#ffffff' }}>
+                                        {badgeLabel}
+                                      </Badge>
+                                    )
                                   })()}
                                 </TableCell>
                               </TableRow>
