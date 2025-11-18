@@ -252,6 +252,17 @@ export const siteConfig = {
         </p>
       ),
     },
+    {
+      id: "6",
+      name: "Dr. Menon",
+      role: "Licensed Psychologist",
+      img: "https://api.placeholder.com/40x40?text=DM",
+      description: (
+        <p>
+          thePsychology.ai is truly <Highlight>one-of-a-kind</Highlight>. It's an <Highlight>innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel engaging and manageable, and it clearly reflects a design philosophy of being <Highlight>'for the people, by the people'</Highlight>.
+        </p>
+      ),
+    },
   ],
   faqSection: {
     title: "Questions People Actually Ask",
