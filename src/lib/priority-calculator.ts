@@ -227,7 +227,8 @@ export function convertTopicIdsToTopicNames(topicIds: string[]): RecommendedTopi
 
 /**
  * Extract organizational psychology topics from source file names
- * Maps source files to matching org psych topics in the 3-5-6 domain
+ * Directly uses source file names as topic names instead of trying to match to EPPP_DOMAINS
+ * This ensures all source files from incorrect org psych answers appear as recommendations
  * e.g., "2 Theories of Motivation.md" → "Theories of Motivation"
  */
 export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): RecommendedTopic[] {
@@ -244,22 +245,12 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
     // Match patterns like "2 ", "5 6 ", "2 3 ", "3 5 6 " at the start
     const cleanedName = sourceFile.replace(/^[\d\s]+/, '').replace(/\.md$/, '')
 
-    // Find matching topic in org psych domain by semantic similarity
-    const matchingTopic = orgPsychDomain.topics.find((topic) => {
-      const topicNameCleaned = topic.name.replace(/^[\d\s]+/, '').toLowerCase()
-      const fileNameLower = cleanedName.toLowerCase()
-
-      // Check for exact match or key phrase match
-      return topicNameCleaned === fileNameLower ||
-             topicNameCleaned.includes(fileNameLower) ||
-             fileNameLower.includes(topicNameCleaned)
-    })
-
-    if (matchingTopic && !addedTopics.has(matchingTopic.name)) {
-      addedTopics.add(matchingTopic.name)
-      const topicNameDisplay = matchingTopic.name.replace(/^\d+\s+/, '')
+    // Use source file name directly as topic (don't try to match to EPPP_DOMAINS topics)
+    // This ensures all source files from wrong answers appear as recommendations
+    if (!addedTopics.has(cleanedName)) {
+      addedTopics.add(cleanedName)
       recommendedTopics.push({
-        topicName: topicNameDisplay,
+        topicName: cleanedName,
         domainId: '3-5-6',
       })
     }
@@ -270,7 +261,8 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
 
 /**
  * Convert source file names to RecommendedTopic objects for regular domains
- * Maps source files to their corresponding topics, extracting topic names from filenames
+ * Directly uses source file names as topic names instead of trying to match to EPPP_DOMAINS
+ * This ensures all source files from incorrect answers appear as recommendations
  * e.g., "1 Brain Regions.md" → topic name "Brain Regions"
  */
 export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumber: number): RecommendedTopic[] {
@@ -288,26 +280,16 @@ export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumb
   sourceFiles.forEach((sourceFile) => {
     if (!sourceFile) return
 
-    // Strip domain prefix and .md extension
+    // Strip domain prefix and .md extension to get clean topic name
     // e.g., "1 Brain Regions.md" → "Brain Regions"
-    const cleanedName = sourceFile.replace(/^[\d\s]+/, '').replace(/\.md$/, '')
+    const cleanTopicName = sourceFile.replace(/^[\d\s]+/, '').replace(/\.md$/, '')
 
-    // Find matching topic in domain by semantic similarity
-    const matchingTopic = domain.topics.find((topic) => {
-      const topicNameCleaned = topic.name.replace(/^[\d\s]+/, '').toLowerCase()
-      const fileNameLower = cleanedName.toLowerCase()
-
-      // Check for exact match or key phrase match
-      return topicNameCleaned === fileNameLower ||
-             topicNameCleaned.includes(fileNameLower) ||
-             fileNameLower.includes(topicNameCleaned)
-    })
-
-    if (matchingTopic && !addedTopics.has(matchingTopic.name)) {
-      addedTopics.add(matchingTopic.name)
-      const topicNameDisplay = matchingTopic.name.replace(/^\d+\s+/, '')
+    // Use source file name directly as topic (don't try to match to EPPP_DOMAINS topics)
+    // This ensures all source files from wrong answers appear as recommendations
+    if (!addedTopics.has(cleanTopicName)) {
+      addedTopics.add(cleanTopicName)
       recommendedTopics.push({
-        topicName: topicNameDisplay,
+        topicName: cleanTopicName,
         domainId: domain.id,
       })
     }
