@@ -5,7 +5,8 @@
 import { KN_BY_DOMAIN, DOMAIN_WEIGHTS, KN_DATA, type KnowledgeStatement } from "./kn-data"
 import { KN_TOPIC_MAPPING } from "./kn-topic-mapping"
 import type { WrongAnswer } from "./quiz-results-storage"
-import type { PriorityDomainRecommendation, WrongKNInfo } from "./priority-storage"
+import type { PriorityDomainRecommendation, WrongKNInfo, RecommendedTopic } from "./priority-storage"
+import { EPPP_DOMAINS } from "./eppp-data"
 
 const DOMAIN_NAMES: Record<number, string> = {
   1: "Biological Bases of Behavior",
@@ -187,6 +188,41 @@ export function getRecommendedTopicsForDomain(domainNumber: number, wrongKNs: Wr
 }
 
 /**
+ * Convert topic IDs to RecommendedTopic objects with topic names and domain IDs
+ * Strips leading numbers from topic names (e.g., "1 Brain Regions" → "Brain Regions")
+ */
+export function convertTopicIdsToTopicNames(topicIds: string[]): RecommendedTopic[] {
+  const recommendedTopics: RecommendedTopic[] = []
+
+  topicIds.forEach((topicId) => {
+    // Find the domain that contains this topic ID
+    const domain = EPPP_DOMAINS.find((d) => {
+      const [domainPart] = topicId.split('-')
+      return d.id === domainPart || d.id.includes(domainPart)
+    })
+
+    if (domain) {
+      // Extract topic index from topicId (format: "domainId-index")
+      const parts = topicId.split('-')
+      const topicIndex = parseInt(parts[parts.length - 1])
+
+      if (topicIndex >= 0 && topicIndex < domain.topics.length) {
+        const topicName = domain.topics[topicIndex].name
+        // Strip leading number if present (e.g., "1 Brain Regions" → "Brain Regions")
+        const cleanedName = topicName.replace(/^\d+\s+/, '')
+
+        recommendedTopics.push({
+          topicName: cleanedName,
+          domainId: domain.id,
+        })
+      }
+    }
+  })
+
+  return recommendedTopics
+}
+
+/**
  * Build priority domain recommendations (used by prioritizer)
  */
 export function buildPriorityRecommendations(
@@ -198,7 +234,8 @@ export function buildPriorityRecommendations(
 
   return topPriorities.map((perf) => {
     const wrongKNs = getWrongKNsForDomain(perf.domainNumber, wrongAnswers)
-    const recommendedTopics = getRecommendedTopicsForDomain(perf.domainNumber, wrongKNs)
+    const recommendedTopicIds = getRecommendedTopicsForDomain(perf.domainNumber, wrongKNs)
+    const recommendedTopics = convertTopicIdsToTopicNames(recommendedTopicIds)
 
     return {
       domainNumber: perf.domainNumber,
@@ -207,7 +244,8 @@ export function buildPriorityRecommendations(
       percentageWrong: perf.percentageWrong,
       priorityScore: perf.priorityScore,
       wrongKNs,
-      recommendedTopicIds: recommendedTopics,
+      recommendedTopicIds,
+      recommendedTopics,
     }
   })
 }
@@ -220,7 +258,8 @@ export function getAllDomainResults(wrongAnswers: WrongAnswer[]): PriorityDomain
 
   return performance.map((perf) => {
     const wrongKNs = getWrongKNsForDomain(perf.domainNumber, wrongAnswers)
-    const recommendedTopics = getRecommendedTopicsForDomain(perf.domainNumber, wrongKNs)
+    const recommendedTopicIds = getRecommendedTopicsForDomain(perf.domainNumber, wrongKNs)
+    const recommendedTopics = convertTopicIdsToTopicNames(recommendedTopicIds)
 
     return {
       domainNumber: perf.domainNumber,
@@ -229,7 +268,8 @@ export function getAllDomainResults(wrongAnswers: WrongAnswer[]): PriorityDomain
       percentageWrong: perf.percentageWrong,
       priorityScore: perf.priorityScore,
       wrongKNs,
-      recommendedTopicIds: recommendedTopics,
+      recommendedTopicIds,
+      recommendedTopics,
     }
   })
 }
@@ -399,11 +439,13 @@ export function calculatePriorities(examResults: {
         wrongSourceFiles: area.wrongSourceFiles || [],
         wrongKNs: [],
         recommendedTopicIds: [],
+        recommendedTopics: [],
       }
     } else {
       // Regular domain
       const wrongKNs = getWrongKNsForDomain(area.domainNumber!, wrongAnswers)
-      const recommendedTopics = getRecommendedTopicsForDomain(area.domainNumber!, wrongKNs)
+      const recommendedTopicIds = getRecommendedTopicsForDomain(area.domainNumber!, wrongKNs)
+      const recommendedTopics = convertTopicIdsToTopicNames(recommendedTopicIds)
 
       return {
         type: 'domain',
@@ -413,7 +455,8 @@ export function calculatePriorities(examResults: {
         percentageWrong: area.percentageWrong,
         priorityScore: area.priorityScore,
         wrongKNs,
-        recommendedTopicIds: recommendedTopics,
+        recommendedTopicIds,
+        recommendedTopics,
         wrongSourceFiles: area.wrongSourceFiles,
       }
     }

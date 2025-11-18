@@ -556,8 +556,8 @@ export function PrioritizeContent() {
                           const isExpanded = expandedRecommendations.includes(idx)
                           const isOrgPsych = item.type === 'org_psych'
                           const displayName = isOrgPsych ? item.domainName : (item.domainName.split(': ')[1] || item.domainName)
-                          const topicCount = isOrgPsych ? (item.wrongSourceFiles?.length || 0) : (item.wrongKNs?.length || 0)
-                          const topicLabel = isOrgPsych ? 'file' : 'topic'
+                          const topicCount = (item.recommendedTopics?.length || 0)
+                          const topicLabel = 'topic'
 
                           return (
                             <Card key={idx} className="overflow-hidden cursor-pointer hover:bg-accent/50 transition-colors">
@@ -601,12 +601,19 @@ export function PrioritizeContent() {
                                   >
                                     <CardContent className="pt-0">
                                       {isOrgPsych ? (
-                                        item.wrongSourceFiles && item.wrongSourceFiles.length > 0 ? (
+                                        item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                           <ul className="text-sm space-y-2">
-                                            {item.wrongSourceFiles.map((file: string, fileIdx: number) => (
-                                              <li key={fileIdx} className="flex gap-2 items-start">
-                                                <span className="text-primary mt-0.5">•</span>
-                                                <span>{file}</span>
+                                            {item.recommendedTopics.map((topic: any, topicIdx: number) => (
+                                              <li key={topicIdx} className="flex gap-2 items-start">
+                                                <span className="text-lg mt-0.5">🍏</span>
+                                                <Link
+                                                  href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
+                                                  className="hover:underline text-blue-600 dark:text-blue-400"
+                                                  target="_blank"
+                                                  rel="noopener noreferrer"
+                                                >
+                                                  {topic.topicName}
+                                                </Link>
                                               </li>
                                             ))}
                                           </ul>
@@ -615,12 +622,19 @@ export function PrioritizeContent() {
                                             Review all Organizational Psychology topics
                                           </p>
                                         )
-                                      ) : item.wrongKNs && item.wrongKNs.length > 0 ? (
+                                      ) : item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                         <ul className="text-sm space-y-2">
-                                          {item.wrongKNs.map((kn: any, knIdx: number) => (
-                                            <li key={knIdx} className="flex gap-2 items-start">
-                                              <span className="text-primary mt-0.5">•</span>
-                                              <span>{kn.knName}</span>
+                                          {item.recommendedTopics.map((topic: any, topicIdx: number) => (
+                                            <li key={topicIdx} className="flex gap-2 items-start">
+                                              <span className="text-lg mt-0.5">🍏</span>
+                                              <Link
+                                                href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
+                                                className="hover:underline text-blue-600 dark:text-blue-400"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                              >
+                                                {topic.topicName}
+                                              </Link>
                                             </li>
                                           ))}
                                         </ul>

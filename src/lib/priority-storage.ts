@@ -8,6 +8,11 @@ export interface WrongKNInfo {
   percentageWrong: number // e.g., 50 for 50%
 }
 
+export interface RecommendedTopic {
+  topicName: string // Topic name from eppp-reference (without leading number)
+  domainId: string // Domain ID for routing to topic-teacher
+}
+
 export interface PriorityDomainRecommendation {
   domainNumber: number // 1-8
   domainName: string
@@ -15,7 +20,8 @@ export interface PriorityDomainRecommendation {
   percentageWrong: number // Percentage of domain questions answered wrong
   priorityScore: number // percentageWrong * domainWeight
   wrongKNs: WrongKNInfo[]
-  recommendedTopicIds: string[] // Topic IDs to study
+  recommendedTopicIds: string[] // Topic IDs to study (deprecated, use recommendedTopics)
+  recommendedTopics?: RecommendedTopic[] // Recommended topics with names and domain routing
 }
 
 export interface PriorityRecommendation {
