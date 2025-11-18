@@ -80,6 +80,11 @@ export function calculateDomainPerformance(
 
   // Count wrong answers per domain
   for (const wrongAnswer of wrongAnswers) {
+    // SKIP org psych questions - they are tracked separately in calculateOrgPsychPerformance
+    if (wrongAnswer.is_org_psych === true) {
+      continue
+    }
+
     // First try to get domain from domain metadata
     let domain: number | null = null
 
@@ -249,14 +254,30 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
     // This ensures all source files from wrong answers appear as recommendations
     if (!addedTopics.has(cleanedName)) {
       addedTopics.add(cleanedName)
+      // Convert to kebab-case for topic-content-v3-test format
+      const topicContentFormat = convertToTopicContentFormat(cleanedName)
       recommendedTopics.push({
         topicName: cleanedName,
         domainId: '3-5-6',
+        topicContentFormat, // For use in links to topic-content-v3-test
       })
     }
   })
 
   return recommendedTopics
+}
+
+/**
+ * Convert filename to kebab-case format for topic-content-v3-test links
+ * e.g., "Brain Regions and Functions" → "brain-regions-and-functions"
+ */
+function convertToTopicContentFormat(topicName: string): string {
+  return topicName
+    .toLowerCase()
+    .replace(/[&]/g, 'and')
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
 }
 
 /**
@@ -288,9 +309,12 @@ export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumb
     // This ensures all source files from wrong answers appear as recommendations
     if (!addedTopics.has(cleanTopicName)) {
       addedTopics.add(cleanTopicName)
+      // Convert to kebab-case for topic-content-v3-test format
+      const topicContentFormat = convertToTopicContentFormat(cleanTopicName)
       recommendedTopics.push({
         topicName: cleanTopicName,
         domainId: domain.id,
+        topicContentFormat, // For use in links to topic-content-v3-test
       })
     }
   })

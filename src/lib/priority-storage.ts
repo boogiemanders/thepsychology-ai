@@ -11,6 +11,7 @@ export interface WrongKNInfo {
 export interface RecommendedTopic {
   topicName: string // Topic name from eppp-reference (without leading number)
   domainId: string // Domain ID for routing to topic-teacher
+  topicContentFormat?: string // Kebab-case format for linking to topic-content-v3-test
 }
 
 export interface PriorityDomainRecommendation {
