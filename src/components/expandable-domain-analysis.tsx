@@ -37,6 +37,8 @@ interface ExpandableDomainAnalysisProps {
     percentageWrong: number
     priorityScore: number
   }
+  title?: string
+  description?: string
 }
 
 const BRAND_COLORS = {
@@ -53,6 +55,8 @@ export function ExpandableDomainAnalysis({
   examQuestions,
   selectedAnswers,
   orgPsychPerformance,
+  title = 'Domain Analysis',
+  description = 'Click on a domain to see all practice exam questions and your performance',
 }: ExpandableDomainAnalysisProps) {
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
 
@@ -129,10 +133,8 @@ export function ExpandableDomainAnalysis({
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl">Domain Analysis</CardTitle>
-        <CardDescription>
-          Click on a domain to see all practice exam questions and your performance
-        </CardDescription>
+        <CardTitle className="text-2xl">{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <Separator />
       <CardContent className="pt-6">
