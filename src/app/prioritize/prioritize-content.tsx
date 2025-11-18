@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { Badge } from '@/components/ui/badge'
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
@@ -453,9 +454,19 @@ export function PrioritizeContent() {
                           <TableBody>
                             {priorityData.allResults && priorityData.allResults.map((domain: any) => {
                               const correctPct = Math.round((1 - domain.percentageWrong / 100) * 100)
-                              let focusLevel = '✅ Strength'
-                              if (correctPct < 70 && correctPct >= 40) focusLevel = '🔵 Moderate'
-                              if (correctPct < 40) focusLevel = '🟡 Critical'
+                              let priorityLabel = 'Low Priority'
+                              let priorityVariant: 'default' | 'secondary' | 'destructive' = 'secondary'
+
+                              if (correctPct >= 70) {
+                                priorityLabel = 'Low Priority'
+                                priorityVariant = 'secondary'
+                              } else if (correctPct >= 40) {
+                                priorityLabel = 'Medium Priority'
+                                priorityVariant = 'default'
+                              } else {
+                                priorityLabel = 'High Priority'
+                                priorityVariant = 'destructive'
+                              }
 
                               return (
                                 <TableRow key={domain.domainNumber}>
@@ -464,7 +475,9 @@ export function PrioritizeContent() {
                                   <TableCell className="text-right">{domain.percentageWrong.toFixed(1)}%</TableCell>
                                   <TableCell className="text-right">{(domain.domainWeight * 100).toFixed(0)}%</TableCell>
                                   <TableCell className="text-right font-semibold">{domain.priorityScore.toFixed(2)}</TableCell>
-                                  <TableCell>{focusLevel}</TableCell>
+                                  <TableCell>
+                                    <Badge variant={priorityVariant}>{priorityLabel}</Badge>
+                                  </TableCell>
                                 </TableRow>
                               )
                             })}
@@ -482,7 +495,12 @@ export function PrioritizeContent() {
                                   {priorityData.orgPsychPerformance.priorityScore.toFixed(2)}
                                 </TableCell>
                                 <TableCell>
-                                  {Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100) >= 40 ? '🔵 Moderate' : '🟡 Critical'}
+                                  {(() => {
+                                    const correctPct = Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100)
+                                    if (correctPct >= 70) return <Badge variant="secondary">Low Priority</Badge>
+                                    if (correctPct >= 40) return <Badge variant="default">Medium Priority</Badge>
+                                    return <Badge variant="destructive">High Priority</Badge>
+                                  })()}
                                 </TableCell>
                               </TableRow>
                             )}
