@@ -46,29 +46,61 @@ export function getKNFromQuestion(questionId: number, questionText: string): str
 
 /**
  * Calculate domain performance based on wrong answers
+ * Now properly handles practice exams by counting actual questions per domain
  */
-export function calculateDomainPerformance(wrongAnswers: WrongAnswer[]): DomainPerformance[] {
-  const domainData: Record<number, { wrong: number; total: number; wrongKNs: Set<string> }> = {}
+export function calculateDomainPerformance(
+  wrongAnswers: (WrongAnswer & { domain?: string; source_file?: string })[]
+): DomainPerformance[] {
+  const domainData: Record<number, { wrong: number; total: number; wrongKNs: Set<string>; wrongFiles: Set<string> }> = {}
 
-  // Initialize domain data
+  // Initialize domain data with proper question counts for practice exams
+  // Practice exam distribution: Domain 1: 23, Domain 2: 29, Domain 3: 25, Domain 4: 27,
+  // Domain 5: 36, Domain 6: 34, Domain 7: 18, Domain 8: 33
+  const PRACTICE_EXAM_QUESTION_COUNTS: Record<number, number> = {
+    1: 23,
+    2: 29,
+    3: 25,
+    4: 27,
+    5: 36,
+    6: 34,
+    7: 18,
+    8: 33,
+  }
+
   for (let i = 1; i <= 8; i++) {
     domainData[i] = {
       wrong: 0,
-      total: KN_BY_DOMAIN[i].length,
+      total: PRACTICE_EXAM_QUESTION_COUNTS[i],
       wrongKNs: new Set(),
+      wrongFiles: new Set(),
     }
   }
 
   // Count wrong answers per domain
   for (const wrongAnswer of wrongAnswers) {
-    // Try to extract KN from questionId (for diagnostic exams)
-    const knId = `KN${wrongAnswer.questionId}`
-    const kn = KN_DATA[knId]
+    // First try to get domain from domain metadata
+    let domain: number | null = null
 
-    if (kn) {
-      const domain = kn.domain
+    if (wrongAnswer.domain) {
+      // Extract domain number from domain name like "Domain 1: Biological Bases of Behavior"
+      const match = wrongAnswer.domain.match(/Domain (\d+)/)
+      domain = match ? parseInt(match[1]) : null
+    }
+
+    // Fallback: Try to extract KN from questionId for diagnostic exams
+    if (!domain) {
+      const knId = `KN${wrongAnswer.questionId}`
+      const kn = KN_DATA[knId]
+      if (kn) {
+        domain = kn.domain
+      }
+    }
+
+    if (domain && domain >= 1 && domain <= 8) {
       domainData[domain].wrong++
-      domainData[domain].wrongKNs.add(knId)
+      if (wrongAnswer.source_file) {
+        domainData[domain].wrongFiles.add(wrongAnswer.source_file)
+      }
     }
   }
 
@@ -79,16 +111,16 @@ export function calculateDomainPerformance(wrongAnswers: WrongAnswer[]): DomainP
     const data = domainData[i]
     const percentageWrong = (data.wrong / data.total) * 100
     const domainWeight = DOMAIN_WEIGHTS[i]
-    const priorityScore = (percentageWrong / 100) * domainWeight * 100 // Convert to percentage points
+    const priorityScore = percentageWrong * domainWeight // % wrong × weight (both as decimals 0-1)
 
     performance.push({
       domainNumber: i,
       domainName: DOMAIN_NAMES[i],
-      domainWeight: domainWeight * 100, // Convert to percentage
+      domainWeight: domainWeight * 100, // Convert to percentage for display
       totalQuestionsInDomain: data.total,
       totalWrongInDomain: data.wrong,
-      percentageWrong: Math.round(percentageWrong),
-      priorityScore: Math.round(priorityScore * 100) / 100, // Round to 2 decimals
+      percentageWrong: Math.round(percentageWrong * 100) / 100, // Round to 2 decimals
+      priorityScore: Math.round(priorityScore * 10000) / 100, // Round to 2 decimals (as percentage points)
     })
   }
 
@@ -245,28 +277,27 @@ export interface OrgPsychPerformance {
 }
 
 export function calculateOrgPsychPerformance(
-  wrongAnswers: WrongAnswer[] & { is_org_psych?: boolean; source_file?: string }[]
+  wrongAnswers: (WrongAnswer & { is_org_psych?: boolean; source_file?: string })[]
 ): OrgPsychPerformance {
   const ORG_PSYCH_WEIGHT = 0.21 // 21% of exam
 
   const orgPsychWrong = wrongAnswers.filter((a) => a.is_org_psych === true)
   const wrongSourceFiles = new Set(orgPsychWrong.map((a) => a.source_file).filter(Boolean))
 
-  // For calculation, we estimate total org psych questions per exam type
-  // Practice exam: 47 questions (38 scored + 9 unscored)
-  // Diagnostic exam: ~10 questions (distributed proportionally)
-  const totalOrgPsychQuestions = 47 // Default for practice exams
+  // For calculation, we use actual org psych questions in the practice exam
+  // Practice exam: 44 questions (marked as is_org_psych: true)
+  const totalOrgPsychQuestions = 44 // Based on exam generation
 
   const percentageWrong = (orgPsychWrong.length / totalOrgPsychQuestions) * 100
-  const priorityScore = (percentageWrong / 100) * ORG_PSYCH_WEIGHT * 100
+  const priorityScore = percentageWrong * ORG_PSYCH_WEIGHT // % wrong × weight
 
   return {
     label: "Organizational Psychology",
-    weight: ORG_PSYCH_WEIGHT * 100, // Convert to percentage
+    weight: ORG_PSYCH_WEIGHT * 100, // Convert to percentage (21%)
     totalQuestionsInOrgPsych: totalOrgPsychQuestions,
     totalWrongInOrgPsych: orgPsychWrong.length,
-    percentageWrong: Math.round(percentageWrong),
-    priorityScore: Math.round(priorityScore * 100) / 100,
+    percentageWrong: Math.round(percentageWrong * 100) / 100, // Round to 2 decimals
+    priorityScore: Math.round(priorityScore * 10000) / 100, // Round to 2 decimals (as percentage points)
     wrongSourceFiles: Array.from(wrongSourceFiles),
   }
 }
@@ -335,11 +366,12 @@ export function calculatePriorities(examResults: {
 
   examResults.questions.forEach((question, index) => {
     const selectedAnswer = examResults.selectedAnswers[index]
-    const isCorrect = selectedAnswer === question.correct_answer
 
-    if (!isCorrect && selectedAnswer) {
+    // Count both incorrect AND skipped questions (undefined selectedAnswer)
+    if (selectedAnswer !== question.correct_answer) {
       wrongAnswers.push({
         questionId: index + 1,
+        domain: question.domain,
         is_org_psych: question.is_org_psych,
         source_file: question.source_file,
         ...question,

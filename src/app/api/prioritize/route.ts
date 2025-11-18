@@ -105,21 +105,19 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Return markdown as plain text stream
-    const stream = new ReadableStream({
-      start(controller) {
-        controller.enqueue(new TextEncoder().encode(markdown))
-        controller.close()
-      },
-    })
+    // Return both markdown and structured data as JSON
+    const responseData = {
+      markdown,
+      structured: {
+        score,
+        totalQuestions,
+        allResults: allResults || [],
+        topPriorities: topPriorities || [],
+        orgPsychPerformance,
+      }
+    }
 
-    return new NextResponse(stream, {
-      headers: {
-        'Content-Type': 'text/event-stream',
-        'Cache-Control': 'no-cache',
-        'Connection': 'keep-alive',
-      },
-    })
+    return NextResponse.json(responseData)
   } catch (error) {
     console.error('Error analyzing exam results:', error)
     return NextResponse.json(

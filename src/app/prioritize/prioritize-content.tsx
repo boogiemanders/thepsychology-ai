@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle } from 'lucide-react'
+import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle, FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -15,6 +15,14 @@ import { Switch } from '@/components/ui/switch'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { useAuth } from '@/context/auth-context'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
 
 interface AnalysisData {
   overallScore?: number
@@ -36,6 +44,7 @@ export function PrioritizeContent() {
   const [studyStats, setStudyStats] = useState(calculateStudyStats())
   const [viewMode, setViewMode] = useState<'overview' | 'detailed'>('overview')
   const [examResults, setExamResults] = useState<string | null>(null)
+  const [priorityData, setPriorityData] = useState<any>(null)
 
   // Fetch results from Supabase if ID is provided
   useEffect(() => {
@@ -110,21 +119,10 @@ export function PrioritizeContent() {
         throw new Error('Failed to analyze exam results')
       }
 
-      if (!response.body) {
-        throw new Error('No response body')
-      }
+      const data = await response.json()
 
-      const reader = response.body.getReader()
-      const decoder = new TextDecoder()
-
-      while (true) {
-        const { done, value } = await reader.read()
-
-        if (done) break
-
-        const text = decoder.decode(value)
-        setAnalysis((prev) => prev + text)
-      }
+      setAnalysis(data.markdown || '')
+      setPriorityData(data.structured || null)
     } catch (err) {
       console.error('Error analyzing results:', err)
       setError(err instanceof Error ? err.message : 'Failed to analyze results')
@@ -373,127 +371,172 @@ export function PrioritizeContent() {
               variants={animations.containerVariants}
               className="space-y-8"
             >
-              {/* Performance Overview */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Score Display */}
+              {priorityData && (
                 <motion.div
                   variants={animations.itemVariants}
-                  whileHover={{ scale: 1.02 }}
-                  className="transition-transform"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
-                  <Card className="hover:bg-accent/50 transition-colors">
+                  <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
                     <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-base">Overall Performance</CardTitle>
-                        <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                          <TrendingDown size={20} className="text-muted-foreground" />
-                        </motion.div>
-                      </div>
+                      <CardTitle className="text-lg">Your Score</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <motion.p
-                        className="text-4xl font-bold"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
-                      >
-                        {analysis.match(/(\d+)%/)?.[1] || '—'}%
-                      </motion.p>
+                      <div className="text-4xl font-bold">{priorityData.score}/{priorityData.totalQuestions}</div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        {Math.round((priorityData.score / priorityData.totalQuestions) * 100)}%
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border-orange-500/20">
+                    <CardHeader>
+                      <CardTitle className="text-lg">Areas of Focus</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      {priorityData.topPriorities && priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => (
+                        <div key={idx} className="text-sm mb-2">
+                          <div className="font-medium">{idx + 1}. {domain.domainName}</div>
+                          <div className="text-xs text-muted-foreground">{domain.percentageWrong.toFixed(1)}% wrong</div>
+                        </div>
+                      ))}
                     </CardContent>
                   </Card>
                 </motion.div>
+              )}
 
+              {/* Domain Performance Table */}
+              {priorityData && (
                 <motion.div
                   variants={animations.itemVariants}
-                  whileHover={{ scale: 1.02 }}
-                  className="transition-transform"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
                 >
-                  <Card className="hover:bg-accent/50 transition-colors">
+                  <Card>
                     <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-base">Areas to Focus</CardTitle>
-                        <motion.div whileHover={{ rotate: -360 }} transition={{ duration: 0.5 }}>
-                          <Target size={20} className="text-muted-foreground" />
-                        </motion.div>
-                      </div>
+                      <CardTitle className="text-2xl flex items-center gap-2">
+                        <Zap size={24} className="text-muted-foreground" />
+                        Performance Analysis
+                      </CardTitle>
+                      <CardDescription>
+                        Detailed breakdown of your performance by domain
+                      </CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <motion.p
-                        className="text-4xl font-bold"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.4 }}
-                      >
-                        {analysis.match(/\d+/)?.[0] || '—'}
-                      </motion.p>
+                    <Separator />
+                    <CardContent className="pt-6">
+                      <div className="overflow-x-auto">
+                        <Table>
+                          <TableHeader>
+                            <TableRow>
+                              <TableHead>Domain</TableHead>
+                              <TableHead className="text-right">Performance</TableHead>
+                              <TableHead className="text-right">% Wrong</TableHead>
+                              <TableHead className="text-right">Weight</TableHead>
+                              <TableHead className="text-right">Priority Score</TableHead>
+                              <TableHead>Focus Level</TableHead>
+                            </TableRow>
+                          </TableHeader>
+                          <TableBody>
+                            {priorityData.allResults && priorityData.allResults.map((domain: any) => {
+                              const correctPct = Math.round((1 - domain.percentageWrong / 100) * 100)
+                              let focusLevel = '✅ Strength'
+                              if (correctPct < 70 && correctPct >= 40) focusLevel = '🔵 Moderate'
+                              if (correctPct < 40) focusLevel = '🟡 Critical'
+
+                              return (
+                                <TableRow key={domain.domainNumber}>
+                                  <TableCell className="font-medium">Domain {domain.domainNumber}: {domain.domainName.split(': ')[1]}</TableCell>
+                                  <TableCell className="text-right">{correctPct}%</TableCell>
+                                  <TableCell className="text-right">{domain.percentageWrong.toFixed(1)}%</TableCell>
+                                  <TableCell className="text-right">{(domain.domainWeight * 100).toFixed(0)}%</TableCell>
+                                  <TableCell className="text-right font-semibold">{domain.priorityScore.toFixed(2)}</TableCell>
+                                  <TableCell>{focusLevel}</TableCell>
+                                </TableRow>
+                              )
+                            })}
+                            {priorityData.orgPsychPerformance && (
+                              <TableRow className="bg-orange-500/5 hover:bg-orange-500/10">
+                                <TableCell className="font-medium">Organizational Psychology</TableCell>
+                                <TableCell className="text-right">
+                                  {Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100)}%
+                                </TableCell>
+                                <TableCell className="text-right">
+                                  {priorityData.orgPsychPerformance.percentageWrong.toFixed(1)}%
+                                </TableCell>
+                                <TableCell className="text-right">21%</TableCell>
+                                <TableCell className="text-right font-semibold">
+                                  {priorityData.orgPsychPerformance.priorityScore.toFixed(2)}
+                                </TableCell>
+                                <TableCell>
+                                  {Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100) >= 40 ? '🔵 Moderate' : '🟡 Critical'}
+                                </TableCell>
+                              </TableRow>
+                            )}
+                          </TableBody>
+                        </Table>
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
+              )}
 
+              {/* Recommended Study Files */}
+              {priorityData && priorityData.topPriorities && priorityData.topPriorities.length > 0 && (
                 <motion.div
                   variants={animations.itemVariants}
-                  whileHover={{ scale: 1.02 }}
-                  className="transition-transform"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7 }}
                 >
-                  <Card className="hover:bg-accent/50 transition-colors">
+                  <Card>
                     <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-base">Study Plan</CardTitle>
-                        <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
-                          <BookOpen size={20} className="text-muted-foreground" />
-                        </motion.div>
-                      </div>
+                      <CardTitle className="text-2xl flex items-center gap-2">
+                        <FileText size={24} className="text-muted-foreground" />
+                        Recommended Study Materials
+                      </CardTitle>
+                      <CardDescription>
+                        Focus on these topics based on your performance
+                      </CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <motion.p
-                        className="text-2xl font-bold"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5 }}
-                      >
-                        Ready
-                      </motion.p>
+                    <Separator />
+                    <CardContent className="pt-6">
+                      <div className="space-y-6">
+                        {priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => (
+                          <div key={idx} className="space-y-3">
+                            <h3 className="font-semibold text-lg">
+                              {idx + 1}. {domain.domainName}
+                            </h3>
+                            {domain.wrongKNs && domain.wrongKNs.length > 0 ? (
+                              <div className="space-y-2">
+                                <p className="text-sm text-muted-foreground">
+                                  Knowledge statements to review:
+                                </p>
+                                <ul className="text-sm space-y-1 ml-4">
+                                  {domain.wrongKNs.slice(0, 5).map((kn: any, knIdx: number) => (
+                                    <li key={knIdx} className="list-disc">
+                                      {kn.knName}
+                                    </li>
+                                  ))}
+                                  {domain.wrongKNs.length > 5 && (
+                                    <li className="text-muted-foreground">
+                                      ...and {domain.wrongKNs.length - 5} more
+                                    </li>
+                                  )}
+                                </ul>
+                              </div>
+                            ) : (
+                              <p className="text-sm text-muted-foreground">
+                                Review all topics in this domain
+                              </p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
-              </div>
-
-              {/* Detailed Analysis */}
-              <motion.div
-                variants={animations.itemVariants}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-2xl flex items-center gap-2">
-                      <Zap size={24} className="text-muted-foreground" />
-                      Detailed Analysis
-                    </CardTitle>
-                    <CardDescription>
-                      Review your performance and personalized recommendations
-                    </CardDescription>
-                  </CardHeader>
-                  <Separator />
-                  <CardContent className="pt-6">
-                    <div className="prose prose-sm prose-invert max-w-none
-                      [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-foreground [&_h2]:border-b [&_h2]:border-border [&_h2]:pb-2
-                      [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-3 [&_h3]:text-foreground
-                      [&_p]:text-sm [&_p]:text-foreground/90 [&_p]:leading-relaxed [&_p]:my-3
-                      [&_ul]:text-sm [&_ul]:text-foreground/90 [&_ul]:my-3 [&_ul]:space-y-2
-                      [&_li]:text-sm [&_li]:leading-relaxed
-                      [&_strong]:text-foreground [&_strong]:font-semibold
-                      [&_table]:w-full [&_table]:border-collapse [&_table]:my-6 [&_table]:text-sm
-                      [&_th]:border [&_th]:border-border [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground [&_th]:bg-muted/50
-                      [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90
-                    ">
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                        {analysis}
-                      </ReactMarkdown>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              )}
 
               {/* Action Buttons */}
               <motion.div
@@ -505,6 +548,7 @@ export function PrioritizeContent() {
                   onClick={() => {
                     setAnalysis('')
                     setError(null)
+                    setPriorityData(null)
                   }}
                 >
                   Take Another Exam
