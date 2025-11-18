@@ -481,22 +481,22 @@ export function PrioritizeContent() {
                                 </TableRow>
                               )
                             })}
-                            {priorityData.orgPsychPerformance && (
+                            {priorityData?.orgPsychPerformance && (
                               <TableRow style={{ backgroundColor: 'rgba(216, 119, 88, 0.05)' }}>
                                 <TableCell className="font-medium">Organizational Psychology</TableCell>
                                 <TableCell className="text-right">
-                                  {Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100)}%
+                                  {Math.round((1 - (priorityData.orgPsychPerformance.percentageWrong || 0) / 100) * 100)}%
                                 </TableCell>
                                 <TableCell className="text-right">
-                                  {priorityData.orgPsychPerformance.percentageWrong.toFixed(1)}%
+                                  {(priorityData.orgPsychPerformance.percentageWrong || 0).toFixed(1)}%
                                 </TableCell>
                                 <TableCell className="text-right">21%</TableCell>
                                 <TableCell className="text-right font-semibold">
-                                  {priorityData.orgPsychPerformance.priorityScore.toFixed(2)}
+                                  {(priorityData.orgPsychPerformance.priorityScore || 0).toFixed(2)}
                                 </TableCell>
                                 <TableCell>
                                   {(() => {
-                                    const correctPct = Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100)
+                                    const correctPct = Math.round((1 - (priorityData.orgPsychPerformance.percentageWrong || 0) / 100) * 100)
                                     if (correctPct >= 70) return <Badge variant="secondary">Low</Badge>
                                     if (correctPct >= 40) return <Badge variant="default">Medium</Badge>
                                     return <Badge variant="destructive">High</Badge>
