@@ -267,6 +267,54 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
 }
 
 /**
+ * Convert source file names to RecommendedTopic objects for regular domains
+ * Maps source files to their corresponding topics, extracting topic names from filenames
+ * e.g., "1 Brain Regions.md" → topic name "Brain Regions"
+ */
+export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumber: number): RecommendedTopic[] {
+  const domain = EPPP_DOMAINS.find((d) => {
+    // Find domain by matching domain number in the id
+    const idStart = d.id.split('-')[0]
+    return idStart === String(domainNumber)
+  })
+
+  if (!domain) return []
+
+  const recommendedTopics: RecommendedTopic[] = []
+  const addedTopics = new Set<string>()
+
+  sourceFiles.forEach((sourceFile) => {
+    if (!sourceFile) return
+
+    // Strip domain prefix and .md extension
+    // e.g., "1 Brain Regions.md" → "Brain Regions"
+    const cleanedName = sourceFile.replace(/^[\d\s]+/, '').replace(/\.md$/, '')
+
+    // Find matching topic in domain by semantic similarity
+    const matchingTopic = domain.topics.find((topic) => {
+      const topicNameCleaned = topic.name.replace(/^[\d\s]+/, '').toLowerCase()
+      const fileNameLower = cleanedName.toLowerCase()
+
+      // Check for exact match or key phrase match
+      return topicNameCleaned === fileNameLower ||
+             topicNameCleaned.includes(fileNameLower) ||
+             fileNameLower.includes(topicNameCleaned)
+    })
+
+    if (matchingTopic && !addedTopics.has(matchingTopic.name)) {
+      addedTopics.add(matchingTopic.name)
+      const topicNameDisplay = matchingTopic.name.replace(/^\d+\s+/, '')
+      recommendedTopics.push({
+        topicName: topicNameDisplay,
+        domainId: domain.id,
+      })
+    }
+  })
+
+  return recommendedTopics
+}
+
+/**
  * Build priority domain recommendations (used by prioritizer)
  */
 export function buildPriorityRecommendations(
@@ -488,10 +536,9 @@ export function calculatePriorities(examResults: {
         recommendedTopics,
       }
     } else {
-      // Regular domain
+      // Regular domain - use source files for recommended topics
       const wrongKNs = getWrongKNsForDomain(area.domainNumber!, wrongAnswers)
-      const recommendedTopicIds = getRecommendedTopicsForDomain(area.domainNumber!, wrongKNs)
-      const recommendedTopics = convertTopicIdsToTopicNames(recommendedTopicIds)
+      const recommendedTopics = convertSourceFilesToTopicNames(area.wrongSourceFiles || [], area.domainNumber!)
 
       return {
         type: 'domain',
@@ -501,7 +548,7 @@ export function calculatePriorities(examResults: {
         percentageWrong: area.percentageWrong,
         priorityScore: area.priorityScore,
         wrongKNs,
-        recommendedTopicIds,
+        recommendedTopicIds: [],
         recommendedTopics,
         wrongSourceFiles: area.wrongSourceFiles,
       }
