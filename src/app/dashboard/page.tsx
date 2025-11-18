@@ -12,7 +12,7 @@ import { Calendar } from '@/components/ui/calendar'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid'
 import { Marquee } from '@/components/ui/marquee'
@@ -720,8 +720,22 @@ export default function DashboardPage() {
               <div className="flex items-center gap-2 mb-2">
                 <p className="text-sm text-muted-foreground">{userProfile?.email}</p>
               </div>
-              <div className="flex items-center gap-2">
-                <Badge variant="secondary" className="text-xs">
+              <div className="flex items-center gap-2 flex-nowrap">
+                <Badge
+                  variant="outline"
+                  className="text-xs"
+                  style={{
+                    borderColor: userProfile?.subscription_tier === 'pro_coaching' ? '#c46685' :
+                                 userProfile?.subscription_tier === 'pro' ? '#6a9bcc' :
+                                 userProfile?.subscription_tier === 'basic' ? '#bdd1ca' : '#cbc9db',
+                    backgroundColor: userProfile?.subscription_tier === 'pro_coaching' ? 'rgba(196, 102, 133, 0.1)' :
+                                     userProfile?.subscription_tier === 'pro' ? 'rgba(106, 155, 204, 0.1)' :
+                                     userProfile?.subscription_tier === 'basic' ? 'rgba(189, 209, 202, 0.1)' : 'rgba(203, 201, 219, 0.1)',
+                    color: userProfile?.subscription_tier === 'pro_coaching' ? '#c46685' :
+                           userProfile?.subscription_tier === 'pro' ? '#6a9bcc' :
+                           userProfile?.subscription_tier === 'basic' ? '#bdd1ca' : '#cbc9db',
+                  }}
+                >
                   {userProfile?.subscription_tier === 'pro_coaching' ? 'Pro + Coaching' :
                    userProfile?.subscription_tier === 'pro' ? 'Pro' :
                    userProfile?.subscription_tier === 'basic' ? 'Basic' : 'Free Trial'}
