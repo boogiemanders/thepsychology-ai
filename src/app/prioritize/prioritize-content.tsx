@@ -510,19 +510,23 @@ export function PrioritizeContent() {
                                       {isOrgPsych ? (
                                         item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                           <ul className="text-sm space-y-2">
-                                            {item.recommendedTopics.map((topic: any, topicIdx: number) => (
-                                              <li key={topicIdx}>
-                                                <Link
-                                                  href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
-                                                  className="hover:underline"
-                                                  style={{ color: '#6a9bcc' }}
-                                                  target="_blank"
-                                                  rel="noopener noreferrer"
-                                                >
-                                                  {topic.topicName}
-                                                </Link>
-                                              </li>
-                                            ))}
+                                            {item.recommendedTopics.map((topic: any, topicIdx: number) => {
+                                              // Use sourceFile if available (actual filename), otherwise use topicName
+                                              const displayName = topic.sourceFile || topic.topicName
+                                              return (
+                                                <li key={topicIdx}>
+                                                  <Link
+                                                    href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
+                                                    className="hover:underline"
+                                                    style={{ color: '#6a9bcc' }}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                  >
+                                                    {displayName}
+                                                  </Link>
+                                                </li>
+                                              )
+                                            })}
                                           </ul>
                                         ) : (
                                           <p className="text-sm text-muted-foreground">
@@ -531,19 +535,23 @@ export function PrioritizeContent() {
                                         )
                                       ) : item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                         <ul className="text-sm space-y-2">
-                                          {item.recommendedTopics.map((topic: any, topicIdx: number) => (
-                                            <li key={topicIdx}>
-                                              <Link
-                                                href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
-                                                className="hover:underline"
-                                                style={{ color: '#6a9bcc' }}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                              >
-                                                {topic.topicName}
-                                              </Link>
-                                            </li>
-                                          ))}
+                                          {item.recommendedTopics.map((topic: any, topicIdx: number) => {
+                                            // Use sourceFile if available (actual filename), otherwise use topicName
+                                            const displayName = topic.sourceFile || topic.topicName
+                                            return (
+                                              <li key={topicIdx}>
+                                                <Link
+                                                  href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
+                                                  className="hover:underline"
+                                                  style={{ color: '#6a9bcc' }}
+                                                  target="_blank"
+                                                  rel="noopener noreferrer"
+                                                >
+                                                  {displayName}
+                                                </Link>
+                                              </li>
+                                            )
+                                          })}
                                         </ul>
                                       ) : (
                                         <p className="text-sm text-muted-foreground">

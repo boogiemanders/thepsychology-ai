@@ -1,0 +1,464 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "The reuptake of neurotransmitters into the presynaptic neuron is primarily blocked by which class of antidepressant medications?",
+      "options": [
+        "Monoamine oxidase inhibitors",
+        "Selective serotonin reuptake inhibitors",
+        "Tricyclic antidepressants",
+        "Atypical antipsychotics"
+      ],
+      "correct_answer": "Selective serotonin reuptake inhibitors",
+      "explanation": "SSRIs work by blocking serotonin reuptake.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1 Neurotransmitters and Psychopharmacology.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 2,
+      "question": "Which brain structure is most critical for consolidating declarative memories into long-term storage?",
+      "options": [
+        "Cerebellum",
+        "Amygdala",
+        "Hippocampus",
+        "Thalamus"
+      ],
+      "correct_answer": "Hippocampus",
+      "explanation": "The hippocampus is essential for declarative memory consolidation.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN2",
+      "source_file": "1 Brain Structures and Functions.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 3,
+      "question": "Long-term potentiation is induced by what type of synaptic activity?",
+      "options": [
+        "Minimal stimulation",
+        "High-frequency stimulation",
+        "Single action potentials",
+        "Chronic suppression"
+      ],
+      "correct_answer": "High-frequency stimulation",
+      "explanation": "LTP requires repeated high-frequency stimulation activating NMDA receptors.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN3",
+      "source_file": "1 Learning and Memory at the Neural Level.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 4,
+      "question": "Which neurotransmitter predominates at postganglionic sympathetic terminals?",
+      "options": [
+        "Acetylcholine",
+        "Norepinephrine",
+        "GABA",
+        "Dopamine"
+      ],
+      "correct_answer": "Norepinephrine",
+      "explanation": "Sympathetic terminals use norepinephrine while parasympathetic uses acetylcholine.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN4",
+      "source_file": "1 Autonomic Nervous System.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 5,
+      "question": "The pineal gland regulates which important behavioral cycle?",
+      "options": [
+        "Sleep-wake cycle",
+        "Appetite",
+        "Social behavior",
+        "Motor coordination"
+      ],
+      "correct_answer": "Sleep-wake cycle",
+      "explanation": "Melatonin from the pineal gland regulates circadian rhythms.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN5",
+      "source_file": "1 Endocrine System and Hormones.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 6,
+      "question": "The amygdala's primary role in fear conditioning is to:",
+      "options": [
+        "Consolidate explicit memories",
+        "Encode emotional significance and generate fear responses",
+        "Inhibit fear through regulation",
+        "Generate conscious fear awareness"
+      ],
+      "correct_answer": "Encode emotional significance and generate fear responses",
+      "explanation": "The amygdala assigns emotional value and coordinates fear responses.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "1 Emotion and the Brain.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 7,
+      "question": "Dopamine neurons signal reward prediction error by:",
+      "options": [
+        "Firing only when reward is received",
+        "Increasing firing when outcomes exceed predictions",
+        "Decreasing baseline firing rate",
+        "Showing no change to unexpected events"
+      ],
+      "correct_answer": "Increasing firing when outcomes exceed predictions",
+      "explanation": "Dopamine shows reward prediction error coding.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "1 Motivation and Reward Systems.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 8,
+      "question": "The default mode network activates when the brain is:",
+      "options": [
+        "Focused on external tasks",
+        "At rest and engaged in internal thought",
+        "Processing immediate threats",
+        "In deep sleep"
+      ],
+      "correct_answer": "At rest and engaged in internal thought",
+      "explanation": "The DMN is active during rest and mind-wandering.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN8",
+      "source_file": "1 Brain Networks and Functional Connectivity.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 9,
+      "question": "According to the dopamine hypothesis of schizophrenia:",
+      "options": [
+        "Serotonin is elevated everywhere",
+        "Mesolimbic dopamine is excessive and prefrontal dopamine is deficient",
+        "Glutamate is uniformly elevated",
+        "Acetylcholine is depleted"
+      ],
+      "correct_answer": "Mesolimbic dopamine is excessive and prefrontal dopamine is deficient",
+      "explanation": "The dopamine hypothesis implicates both hyperactivity and hypoactivity.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN9",
+      "source_file": "1 Neurotransmitters and Psychopathology.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 10,
+      "question": "Which glial cells form myelin in the central nervous system?",
+      "options": [
+        "Astrocytes",
+        "Oligodendrocytes",
+        "Microglia",
+        "Ependymal cells"
+      ],
+      "correct_answer": "Oligodendrocytes",
+      "explanation": "Oligodendrocytes myelinate CNS axons.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN10",
+      "source_file": "1 Neurons and Glia.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 11,
+      "question": "Which neurotransmitter system generates REM sleep?",
+      "options": [
+        "GABAergic in thalamus",
+        "Cholinergic in basal forebrain and brainstem",
+        "Adrenergic in neocortex",
+        "Serotonergic in raphe nucleus"
+      ],
+      "correct_answer": "Cholinergic in basal forebrain and brainstem",
+      "explanation": "REM sleep is generated by cholinergic neurons in the brainstem.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN11",
+      "source_file": "1 Sleep Architecture and Neurobiology.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 12,
+      "question": "Mirror neurons are hypothesized to underlie:",
+      "options": [
+        "Implicit memory formation",
+        "Voluntary motor control",
+        "Social understanding and empathy",
+        "Visual perception"
+      ],
+      "correct_answer": "Social understanding and empathy",
+      "explanation": "Mirror neurons may provide a neural basis for understanding others.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN12",
+      "source_file": "1 Social Brain and Mirror Neurons.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 13,
+      "question": "Which distinction characterizes the hippocampus versus cerebellum in memory?",
+      "options": [
+        "Both handle declarative memory",
+        "Hippocampus consolidates declarative while cerebellum handles procedural",
+        "Hippocampus handles procedural while cerebellum handles declarative",
+        "Neither structure is involved in learning"
+      ],
+      "correct_answer": "Hippocampus consolidates declarative while cerebellum handles procedural",
+      "explanation": "Different memory systems depend on different brain regions.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN13",
+      "source_file": "1 Memory Systems and the Hippocampus.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 14,
+      "question": "Parasympathetic activation produces which physiological effects?",
+      "options": [
+        "Increased heart rate and inhibited digestion",
+        "Decreased heart rate and enhanced digestion",
+        "Pupil dilation and sweating",
+        "Mobilization of energy stores"
+      ],
+      "correct_answer": "Decreased heart rate and enhanced digestion",
+      "explanation": "Parasympathetic activation supports rest-and-digest physiology.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN14",
+      "source_file": "1 Autonomic Nervous System Function.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 15,
+      "question": "Which hormone is the final effector in the hypothalamic-pituitary-adrenal axis?",
+      "options": [
+        "Corticotropin-releasing hormone",
+        "Adrenocorticotropic hormone",
+        "Cortisol",
+        "Epinephrine"
+      ],
+      "correct_answer": "Cortisol",
+      "explanation": "Cortisol is released from the adrenal cortex as the final cascade step.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN15",
+      "source_file": "1 Stress Response and the HPA Axis.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 16,
+      "question": "Purkinje cell damage in the cerebellum would most likely result in:",
+      "options": [
+        "Loss of consciousness",
+        "Impaired motor coordination and motor learning",
+        "Spastic paralysis",
+        "Sensory loss"
+      ],
+      "correct_answer": "Impaired motor coordination and motor learning",
+      "explanation": "Purkinje cells are cerebellar output neurons critical for motor control.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN16",
+      "source_file": "1 Cerebellum and Motor Control.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 17,
+      "question": "Which neurotransmitter system is most important for learning that a neutral stimulus predicts an important outcome?",
+      "options": [
+        "GABAergic inhibition",
+        "Dopaminergic prediction error signaling",
+        "Serotonergic mood regulation",
+        "Acetylcholinergic arousal"
+      ],
+      "correct_answer": "Dopaminergic prediction error signaling",
+      "explanation": "Dopamine encodes prediction errors fundamental to classical conditioning.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN17",
+      "source_file": "1 Reward Learning and Dopamine.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 18,
+      "question": "The prefrontal cortex contributes to emotional regulation by:",
+      "options": [
+        "Generating emotional responses",
+        "Providing inhibitory control and cognitive appraisal",
+        "Eliminating emotional experience",
+        "Intensifying emotional reactions"
+      ],
+      "correct_answer": "Providing inhibitory control and cognitive appraisal",
+      "explanation": "The prefrontal cortex provides top-down regulation of limbic regions.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN18",
+      "source_file": "1 Prefrontal Cortex and Emotion.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 19,
+      "question": "Action potentials result from the sequential opening of which ion channels?",
+      "options": [
+        "Calcium then magnesium channels",
+        "Sodium then potassium channels",
+        "Chloride then sodium channels",
+        "Potassium then calcium channels"
+      ],
+      "correct_answer": "Sodium then potassium channels",
+      "explanation": "Sodium influx depolarizes; potassium efflux repolarizes.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN19",
+      "source_file": "1 Membrane Potential and Action Potentials.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 20,
+      "question": "Which autonomic branch is most active during a panic attack?",
+      "options": [
+        "Parasympathetic",
+        "Enteric",
+        "Sympathetic",
+        "Somatic"
+      ],
+      "correct_answer": "Sympathetic",
+      "explanation": "Sympathetic activation produces panic symptoms.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN20",
+      "source_file": "1 Autonomic Nervous System and Fear.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 21,
+      "question": "Variable interval schedules differ from fixed interval schedules in producing:",
+      "options": [
+        "Lower response rates",
+        "Higher and more persistent response rates",
+        "Greater susceptibility to extinction",
+        "Immediate cessation of behavior"
+      ],
+      "correct_answer": "Higher and more persistent response rates",
+      "explanation": "VI schedules produce higher responding due to unpredictability.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN21",
+      "source_file": "1 Schedules of Reinforcement.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "distinction",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 22,
+      "question": "Major depressive disorder is associated with which neurotransmitter changes?",
+      "options": [
+        "Elevated acetylcholine",
+        "Reduced serotonin, norepinephrine, and dopamine",
+        "Excessive GABA",
+        "Elevated glutamate"
+      ],
+      "correct_answer": "Reduced serotonin, norepinephrine, and dopamine",
+      "explanation": "The monoamine hypothesis suggests depression involves reduced availability.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN22",
+      "source_file": "1 Neurochemistry of Mood Disorders.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 23,
+      "question": "Cortical reorganization in response to sensory deprivation, such as early blindness, is most dramatic in which region?",
+      "options": [
+        "Motor cortex",
+        "Visual cortex recruiting other sensory inputs",
+        "Auditory cortex",
+        "Somatosensory cortex"
+      ],
+      "correct_answer": "Visual cortex recruiting other sensory inputs",
+      "explanation": "Cross-modal plasticity allows visual cortex to process other sensations.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN23",
+      "source_file": "1 Cortical Plasticity and Reorganization.md",
+      "source_folder": "1 Biological Bases of Behavior",
+      "difficulty": "hard",
+      "question_type": "difficult",
+      "isScored": false,
+      "is_org_psych": false
+    }
+  ]
+}

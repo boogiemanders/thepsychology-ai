@@ -285,6 +285,7 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
       const topicContentFormat = convertToTopicContentFormat(cleanedName)
       recommendedTopics.push({
         topicName: cleanedName,
+        sourceFile: sourceFile, // Keep original filename for linking
         domainId: '3-5-6',
         topicContentFormat, // For use in links to topic-content-v3-test
       })
@@ -340,6 +341,7 @@ export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumb
       const topicContentFormat = convertToTopicContentFormat(cleanTopicName)
       recommendedTopics.push({
         topicName: cleanTopicName,
+        sourceFile: sourceFile, // Keep original filename for linking
         domainId: domain.id,
         topicContentFormat, // For use in links to topic-content-v3-test
       })
