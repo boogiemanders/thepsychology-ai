@@ -299,6 +299,34 @@ export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumb
 }
 
 /**
+ * Convert recommendedTopics back to topic IDs for matching in topic-selector
+ * Matches topic names against EPPP_DOMAINS to find their indices
+ * Returns IDs like ["1-0", "1-2", "2-3"] that topic-selector can use for badges
+ */
+export function convertRecommendedTopicsToIds(recommendedTopics: RecommendedTopic[]): string[] {
+  const topicIds: string[] = []
+
+  recommendedTopics.forEach((rec) => {
+    const domain = EPPP_DOMAINS.find((d) => d.id === rec.domainId)
+    if (!domain) return
+
+    // Find the topic index by matching the name
+    const topicIndex = domain.topics.findIndex((t) => {
+      // Try exact match (strip leading numbers from both)
+      const cleanTopicName = t.name.replace(/^[\d\s]+/, '')
+      const cleanRecName = rec.topicName.replace(/^[\d\s]+/, '')
+      return cleanTopicName.toLowerCase() === cleanRecName.toLowerCase()
+    })
+
+    if (topicIndex !== -1) {
+      topicIds.push(`${rec.domainId}-${topicIndex}`)
+    }
+  })
+
+  return topicIds
+}
+
+/**
  * Build priority domain recommendations (used by prioritizer)
  */
 export function buildPriorityRecommendations(
@@ -508,6 +536,7 @@ export function calculatePriorities(examResults: {
     if (area.type === 'org_psych') {
       // Extract org psych topics from wrong source files
       const recommendedTopics = extractOrgPsychTopicsFromSourceFiles(area.wrongSourceFiles || [])
+      const recommendedTopicIds = convertRecommendedTopicsToIds(recommendedTopics)
 
       return {
         type: 'org_psych',
@@ -517,13 +546,14 @@ export function calculatePriorities(examResults: {
         priorityScore: area.priorityScore,
         wrongSourceFiles: area.wrongSourceFiles || [],
         wrongKNs: [],
-        recommendedTopicIds: [],
+        recommendedTopicIds,
         recommendedTopics,
       }
     } else {
       // Regular domain - use source files for recommended topics
       const wrongKNs = getWrongKNsForDomain(area.domainNumber!, wrongAnswers)
       const recommendedTopics = convertSourceFilesToTopicNames(area.wrongSourceFiles || [], area.domainNumber!)
+      const recommendedTopicIds = convertRecommendedTopicsToIds(recommendedTopics)
 
       return {
         type: 'domain',
@@ -533,7 +563,7 @@ export function calculatePriorities(examResults: {
         percentageWrong: area.percentageWrong,
         priorityScore: area.priorityScore,
         wrongKNs,
-        recommendedTopicIds: [],
+        recommendedTopicIds,
         recommendedTopics,
         wrongSourceFiles: area.wrongSourceFiles,
       }
