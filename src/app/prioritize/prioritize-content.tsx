@@ -406,11 +406,12 @@ export function PrioritizeContent() {
                       <CardTitle className="text-lg">Domains to Focus</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      {priorityData.topPriorities && priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => {
-                        const domainNameOnly = domain.domainName.split(': ')[1] || domain.domainName
+                      {priorityData.topPriorities && priorityData.topPriorities.slice(0, 3).map((item: any, idx: number) => {
+                        const isOrgPsych = item.type === 'org_psych'
+                        const displayName = isOrgPsych ? item.domainName : (item.domainName.split(': ')[1] || item.domainName)
                         return (
                           <div key={idx} className="text-sm mb-2">
-                            <div className="font-medium">{idx + 1}. {domainNameOnly}</div>
+                            <div className="font-medium">{idx + 1}. {displayName}</div>
                           </div>
                         )
                       })}
@@ -434,7 +435,7 @@ export function PrioritizeContent() {
                         Domain Analysis
                       </CardTitle>
                       <CardDescription>
-                        Detailed breakdown of your performance by domain
+                        Breakdown of your performance
                       </CardDescription>
                     </CardHeader>
                     <Separator />
@@ -542,18 +543,21 @@ export function PrioritizeContent() {
                     <CardHeader>
                       <CardTitle className="text-2xl flex items-center gap-2">
                         <FileText size={24} className="text-muted-foreground" />
-                        Recommended Study Materials
+                        Recommended Topics to Study
                       </CardTitle>
                       <CardDescription>
-                        Focus on these topics based on your performance
+                        Focus on these areas based on your performance
                       </CardDescription>
                     </CardHeader>
                     <Separator />
                     <CardContent className="pt-6">
                       <div className="space-y-3">
-                        {priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => {
+                        {priorityData.topPriorities.slice(0, 3).map((item: any, idx: number) => {
                           const isExpanded = expandedRecommendations.includes(idx)
-                          const domainNameOnly = domain.domainName.split(': ')[1] || domain.domainName
+                          const isOrgPsych = item.type === 'org_psych'
+                          const displayName = isOrgPsych ? item.domainName : (item.domainName.split(': ')[1] || item.domainName)
+                          const topicCount = isOrgPsych ? (item.wrongSourceFiles?.length || 0) : (item.wrongKNs?.length || 0)
+                          const topicLabel = isOrgPsych ? 'file' : 'topic'
 
                           return (
                             <Card key={idx} className="overflow-hidden cursor-pointer hover:bg-accent/50 transition-colors">
@@ -566,9 +570,9 @@ export function PrioritizeContent() {
                                     <div className="flex items-center gap-3">
                                       <span className="text-lg font-semibold">{idx + 1}.</span>
                                       <div>
-                                        <CardTitle className="text-base">{domainNameOnly}</CardTitle>
+                                        <CardTitle className="text-base">{displayName}</CardTitle>
                                         <CardDescription>
-                                          {domain.wrongKNs?.length || 0} topic{domain.wrongKNs?.length !== 1 ? 's' : ''} to review
+                                          {topicCount} {topicLabel}{topicCount !== 1 ? 's' : ''} to review
                                         </CardDescription>
                                       </div>
                                     </div>
@@ -596,9 +600,24 @@ export function PrioritizeContent() {
                                     style={{ overflow: 'hidden' }}
                                   >
                                     <CardContent className="pt-0">
-                                      {domain.wrongKNs && domain.wrongKNs.length > 0 ? (
+                                      {isOrgPsych ? (
+                                        item.wrongSourceFiles && item.wrongSourceFiles.length > 0 ? (
+                                          <ul className="text-sm space-y-2">
+                                            {item.wrongSourceFiles.map((file: string, fileIdx: number) => (
+                                              <li key={fileIdx} className="flex gap-2 items-start">
+                                                <span className="text-primary mt-0.5">•</span>
+                                                <span>{file}</span>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        ) : (
+                                          <p className="text-sm text-muted-foreground">
+                                            Review all Organizational Psychology topics
+                                          </p>
+                                        )
+                                      ) : item.wrongKNs && item.wrongKNs.length > 0 ? (
                                         <ul className="text-sm space-y-2">
-                                          {domain.wrongKNs.map((kn: any, knIdx: number) => (
+                                          {item.wrongKNs.map((kn: any, knIdx: number) => (
                                             <li key={knIdx} className="flex gap-2 items-start">
                                               <span className="text-primary mt-0.5">•</span>
                                               <span>{kn.knName}</span>

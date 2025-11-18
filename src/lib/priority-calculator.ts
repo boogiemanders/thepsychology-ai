@@ -386,14 +386,27 @@ export function calculatePriorities(examResults: {
   // Get top 3 priority areas (8 domains + org psych)
   const topPriorityAreas = getTopPriorityAreas(domainPerformance, orgPsychPerformance)
 
-  // Get detailed recommendations for top 3 areas
-  const topPriorities: PriorityDomainRecommendation[] = topPriorityAreas
-    .filter((area) => area.type === 'domain')
-    .map((area) => {
+  // Get detailed recommendations for top 3 areas (including org psych if it ranks in top 3)
+  const topPriorities: any[] = topPriorityAreas.map((area) => {
+    if (area.type === 'org_psych') {
+      // Org psych doesn't have domain-specific KNs, so return it directly
+      return {
+        type: 'org_psych',
+        domainName: area.label,
+        domainWeight: area.weight / 100,
+        percentageWrong: area.percentageWrong,
+        priorityScore: area.priorityScore,
+        wrongSourceFiles: area.wrongSourceFiles || [],
+        wrongKNs: [],
+        recommendedTopicIds: [],
+      }
+    } else {
+      // Regular domain
       const wrongKNs = getWrongKNsForDomain(area.domainNumber!, wrongAnswers)
       const recommendedTopics = getRecommendedTopicsForDomain(area.domainNumber!, wrongKNs)
 
       return {
+        type: 'domain',
         domainNumber: area.domainNumber!,
         domainName: area.label,
         domainWeight: area.weight / 100,
@@ -403,7 +416,8 @@ export function calculatePriorities(examResults: {
         recommendedTopicIds: recommendedTopics,
         wrongSourceFiles: area.wrongSourceFiles,
       }
-    })
+    }
+  })
 
   // Get all domain results
   const allResults = getAllDomainResults(wrongAnswers)
