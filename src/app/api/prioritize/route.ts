@@ -24,11 +24,11 @@ export async function POST(request: NextRequest) {
     const results = typeof examResults === 'string' ? JSON.parse(examResults) : examResults
 
     // If topPriorities don't exist, calculate them from raw results
-    let topPriorities, allResults, score, totalQuestions
+    let topPriorities, allResults, score, totalQuestions, orgPsychPerformance
 
     if (results.topPriorities && Array.isArray(results.topPriorities)) {
       // Already has priority calculations
-      ({ topPriorities, allResults, score, totalQuestions } = results)
+      ({ topPriorities, allResults, score, totalQuestions, orgPsychPerformance } = results)
     } else {
       // Calculate priorities from raw exam results
       const calculated = calculatePriorities(results)
@@ -36,6 +36,7 @@ export async function POST(request: NextRequest) {
       allResults = calculated.allResults
       score = calculated.score
       totalQuestions = calculated.totalQuestions
+      orgPsychPerformance = calculated.orgPsychPerformance
     }
 
     if (!topPriorities || !Array.isArray(topPriorities)) {
