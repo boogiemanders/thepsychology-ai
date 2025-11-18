@@ -6,14 +6,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { CheckCircle2, XCircle, Circle, ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import { CheckCircle2, XCircle, Circle } from 'lucide-react'
 
 interface Question {
   id: number
   question: string
   options: string[]
   correct_answer: string
+  explanation?: string
   domain: string
   is_org_psych?: boolean
 }
@@ -129,7 +129,7 @@ export function ExpandableDomainAnalysis({
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl">Domain Analysis with Details</CardTitle>
+        <CardTitle className="text-2xl">Domain Analysis</CardTitle>
         <CardDescription>
           Click on a domain to see all practice exam questions and your performance
         </CardDescription>
@@ -165,12 +165,9 @@ export function ExpandableDomainAnalysis({
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-4">
-                        <Badge style={{ backgroundColor: priorityColor, color: '#ffffff', borderColor: priorityColor }}>
-                          {priorityLabel}
-                        </Badge>
-                        <ChevronRight size={20} className="text-muted-foreground" />
-                      </div>
+                      <Badge style={{ backgroundColor: priorityColor, color: '#ffffff', borderColor: priorityColor }}>
+                        {priorityLabel}
+                      </Badge>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -194,8 +191,8 @@ export function ExpandableDomainAnalysis({
                         </div>
                       </div>
 
-                      {/* Questions List */}
-                      <div className="space-y-2">
+                      {/* Questions List - Nested Accordion */}
+                      <Accordion type="single" collapsible className="w-full space-y-2">
                         {domainQuestions.map((question, idx) => {
                           const status = getQuestionStatus(question.id)
 
@@ -206,21 +203,33 @@ export function ExpandableDomainAnalysis({
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: idx * 0.05 }}
                             >
-                              <Link href={`/exam-results?questionId=${question.id}`}>
-                                <div
-                                  className="p-3 rounded-lg border border-border hover:border-primary/50 transition-all cursor-pointer"
-                                  style={{ backgroundColor: getStatusColor(status) }}
-                                >
-                                  <div className="flex items-start gap-3">
+                              <AccordionItem
+                                value={`q-${question.id}`}
+                                className="border border-border rounded-lg"
+                                style={{ backgroundColor: getStatusColor(status) }}
+                              >
+                                <AccordionTrigger className="hover:no-underline px-3 py-2">
+                                  <div className="flex items-start gap-3 flex-1">
                                     {getStatusIcon(status)}
-                                    <div className="flex-1 min-w-0">
-                                      <div className="font-medium text-sm mb-2">
-                                        Q{question.id}: {question.question.substring(0, 80)}
-                                        {question.question.length > 80 ? '...' : ''}
+                                    <div className="flex-1 min-w-0 text-left">
+                                      <div className="font-medium text-sm">
+                                        Q{question.id}: {question.question.substring(0, 60)}
+                                        {question.question.length > 60 ? '...' : ''}
                                       </div>
-                                      <div className="text-xs text-muted-foreground mb-2">
-                                        {question.question}
-                                      </div>
+                                    </div>
+                                  </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="px-3 pb-3">
+                                  <div className="space-y-4">
+                                    {/* Full Question */}
+                                    <div>
+                                      <h4 className="font-semibold text-sm mb-2">Question</h4>
+                                      <p className="text-sm text-foreground">{question.question}</p>
+                                    </div>
+
+                                    {/* All Options */}
+                                    <div>
+                                      <h4 className="font-semibold text-sm mb-2">Options</h4>
                                       <div className="space-y-1">
                                         {question.options.map((option, optIdx) => {
                                           const isCorrect = option === question.correct_answer
@@ -231,7 +240,7 @@ export function ExpandableDomainAnalysis({
                                           return (
                                             <div
                                               key={optIdx}
-                                              className={`text-xs p-2 rounded flex items-start gap-2 ${
+                                              className={`text-sm p-2 rounded flex items-start gap-2 ${
                                                 isCorrect ? 'bg-green-100/50 text-green-900' : ''
                                               } ${
                                                 isSelected && !isCorrect
@@ -252,13 +261,23 @@ export function ExpandableDomainAnalysis({
                                         })}
                                       </div>
                                     </div>
+
+                                    {/* Explanation */}
+                                    {question.explanation && (
+                                      <div>
+                                        <h4 className="font-semibold text-sm mb-2">Explanation</h4>
+                                        <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                                          {question.explanation}
+                                        </p>
+                                      </div>
+                                    )}
                                   </div>
-                                </div>
-                              </Link>
+                                </AccordionContent>
+                              </AccordionItem>
                             </motion.div>
                           )
                         })}
-                      </div>
+                      </Accordion>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -311,7 +330,6 @@ export function ExpandableDomainAnalysis({
                         )
                       )}
                     </Badge>
-                    <ChevronRight size={20} className="text-muted-foreground" />
                   </div>
                 </div>
               </AccordionTrigger>
@@ -345,8 +363,8 @@ export function ExpandableDomainAnalysis({
                     </div>
                   </div>
 
-                  {/* Organizational Psychology Questions List */}
-                  <div className="space-y-2">
+                  {/* Organizational Psychology Questions List - Nested Accordion */}
+                  <Accordion type="single" collapsible className="w-full space-y-2">
                     {getDomainQuestions('Organizational Psychology').map((question, idx) => {
                       const status = getQuestionStatus(question.id)
 
@@ -357,21 +375,33 @@ export function ExpandableDomainAnalysis({
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: idx * 0.05 }}
                         >
-                          <Link href={`/exam-results?questionId=${question.id}`}>
-                            <div
-                              className="p-3 rounded-lg border border-border hover:border-primary/50 transition-all cursor-pointer"
-                              style={{ backgroundColor: getStatusColor(status) }}
-                            >
-                              <div className="flex items-start gap-3">
+                          <AccordionItem
+                            value={`org-q-${question.id}`}
+                            className="border border-border rounded-lg"
+                            style={{ backgroundColor: getStatusColor(status) }}
+                          >
+                            <AccordionTrigger className="hover:no-underline px-3 py-2">
+                              <div className="flex items-start gap-3 flex-1">
                                 {getStatusIcon(status)}
-                                <div className="flex-1 min-w-0">
-                                  <div className="font-medium text-sm mb-2">
-                                    Q{question.id}: {question.question.substring(0, 80)}
-                                    {question.question.length > 80 ? '...' : ''}
+                                <div className="flex-1 min-w-0 text-left">
+                                  <div className="font-medium text-sm">
+                                    Q{question.id}: {question.question.substring(0, 60)}
+                                    {question.question.length > 60 ? '...' : ''}
                                   </div>
-                                  <div className="text-xs text-muted-foreground mb-2">
-                                    {question.question}
-                                  </div>
+                                </div>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-3 pb-3">
+                              <div className="space-y-4">
+                                {/* Full Question */}
+                                <div>
+                                  <h4 className="font-semibold text-sm mb-2">Question</h4>
+                                  <p className="text-sm text-foreground">{question.question}</p>
+                                </div>
+
+                                {/* All Options */}
+                                <div>
+                                  <h4 className="font-semibold text-sm mb-2">Options</h4>
                                   <div className="space-y-1">
                                     {question.options.map((option, optIdx) => {
                                       const isCorrect = option === question.correct_answer
@@ -382,7 +412,7 @@ export function ExpandableDomainAnalysis({
                                       return (
                                         <div
                                           key={optIdx}
-                                          className={`text-xs p-2 rounded flex items-start gap-2 ${
+                                          className={`text-sm p-2 rounded flex items-start gap-2 ${
                                             isCorrect ? 'bg-green-100/50 text-green-900' : ''
                                           } ${
                                             isSelected && !isCorrect
@@ -409,13 +439,23 @@ export function ExpandableDomainAnalysis({
                                     })}
                                   </div>
                                 </div>
+
+                                {/* Explanation */}
+                                {question.explanation && (
+                                  <div>
+                                    <h4 className="font-semibold text-sm mb-2">Explanation</h4>
+                                    <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                                      {question.explanation}
+                                    </p>
+                                  </div>
+                                )}
                               </div>
-                            </div>
-                          </Link>
+                            </AccordionContent>
+                          </AccordionItem>
                         </motion.div>
                       )
                     })}
-                  </div>
+                  </Accordion>
                 </div>
               </AccordionContent>
             </AccordionItem>
