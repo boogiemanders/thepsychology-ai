@@ -391,9 +391,11 @@ export function PrioritizeContent() {
                       <CardTitle className="text-lg">Your Score</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-4xl font-bold">{priorityData.score}/{priorityData.totalQuestions}</div>
-                      <div className="text-sm text-muted-foreground mt-2">
+                      <div className="text-4xl font-bold">
                         {Math.round((priorityData.score / priorityData.totalQuestions) * 100)}%
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        {priorityData.score}/{priorityData.totalQuestions}
                       </div>
                     </CardContent>
                   </Card>
@@ -403,12 +405,14 @@ export function PrioritizeContent() {
                       <CardTitle className="text-lg">Domains to Focus</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      {priorityData.topPriorities && priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => (
-                        <div key={idx} className="text-sm mb-2">
-                          <div className="font-medium">{idx + 1}. {domain.domainName}</div>
-                          <div className="text-xs text-muted-foreground">{domain.percentageWrong.toFixed(1)}% wrong</div>
-                        </div>
-                      ))}
+                      {priorityData.topPriorities && priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => {
+                        const domainNameOnly = domain.domainName.split(': ')[1] || domain.domainName
+                        return (
+                          <div key={idx} className="text-sm mb-2">
+                            <div className="font-medium">{idx + 1}. {domainNameOnly}</div>
+                          </div>
+                        )
+                      })}
                     </CardContent>
                   </Card>
                 </motion.div>
