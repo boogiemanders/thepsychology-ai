@@ -1161,7 +1161,7 @@ export default function ExamGeneratorPage() {
                   id={`flag-q${currentQuestion}`}
                 />
                 <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" style={{ fontFamily: 'Tahoma' }}>
-                  Flag for review {flaggedQuestions[currentQuestion] && '✓'}
+                  Flag for review
                 </span>
               </label>
 
