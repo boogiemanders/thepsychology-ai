@@ -104,43 +104,43 @@ export const KN_TOPIC_MAPPING: Record<string, string[]> = {
   // Domain 5: Assessment, Diagnosis, and Psychopathology
 
   // KN29: Intelligence assessment
-  KN29: ["5a-1", "5a-2"],
+  KN29: ["5a-4", "5a-5"],
 
   // KN30: Personality assessment and diagnosis
-  KN30: ["5a-3", "5a-4"],
+  KN30: ["5a-2", "5a-4"],
 
   // KN31: Behavioral assessment and diagnostic interviews
-  KN31: ["5a-6"],
+  KN31: ["5a-0"],
 
   // KN32: Diagnosis and conceptualization of psychological disorders
-  KN32: ["5d-1", "5d-2", "5d-3", "5d-4", "5d-5", "5d-6", "5d-7", "5d-8", "5d-9", "5d-10", "5d-11"],
+  KN32: ["5d-0", "5d-1", "5d-2", "5d-3", "5d-4", "5d-5", "5d-6", "5d-7", "5d-8", "5d-9", "5d-10"],
 
   // KN33: Comorbidity, epidemiology, and cultural factors
-  KN33: ["5d-1", "5d-2", "5d-3", "5d-4", "5d-5"],
+  KN33: ["5d-0", "5d-1", "5d-2", "5d-3", "5d-4"],
 
   // KN34: Assessment across the lifespan
-  KN34: ["5a-1", "5a-2", "5a-3", "5a-4"],
+  KN34: ["5a-4", "5a-5"],
 
   // KN35: Neuropsychological assessment
-  KN35: ["1-6", "5d-9"],
+  KN35: ["1-5", "5d-4"],
 
   // KN36: Psychometric concepts and measurement
-  KN36: ["5t-1", "5t-2", "5t-3", "5t-4"],
+  KN36: ["5t-0", "5t-1", "5t-2", "5t-3"],
 
   // KN37: Test selection and interpretation
-  KN37: ["5t-4", "5a-1", "5a-2", "5a-3", "5a-4"],
+  KN37: ["5a-0", "5a-4", "5a-5"],
 
   // KN38: Occupational/organizational assessment
-  KN38: [],
+  KN38: ["5a-1"],
 
   // KN39: Selection and placement assessment
-  KN39: [],
+  KN39: ["5a-1"],
 
   // KN40: Assessment of group differences
   KN40: ["5t-2", "5t-3"],
 
   // KN41: Forensic assessment
-  KN41: ["5a-6"],
+  KN41: ["5a-0"],
 
   // Domain 6: Treatment and Intervention
 

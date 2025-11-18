@@ -140,11 +140,12 @@ export function getTopPriorityDomains(performance: DomainPerformance[]): DomainP
  */
 export function getWrongKNsForDomain(
   domainNumber: number,
-  wrongAnswers: WrongAnswer[]
+  wrongAnswers: (WrongAnswer & { knId?: string })[]
 ): WrongKNInfo[] {
   const wrongKNs = wrongAnswers
     .map((answer) => {
-      const knId = `KN${answer.questionId}`
+      // Use knId from question if available (practice exams), else fall back to questionId (diagnostic exams)
+      const knId = answer.knId || `KN${answer.questionId}`
       const kn = KN_DATA[knId]
       return kn && kn.domain === domainNumber ? { knId, kn } : null
     })
