@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle, FileText } from 'lucide-react'
+import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle, FileText, ChevronDown } from 'lucide-react'
+import { motion, AnimatePresence } from 'motion/react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
-import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
@@ -45,6 +45,7 @@ export function PrioritizeContent() {
   const [viewMode, setViewMode] = useState<'overview' | 'detailed'>('overview')
   const [examResults, setExamResults] = useState<string | null>(null)
   const [priorityData, setPriorityData] = useState<any>(null)
+  const [expandedRecommendations, setExpandedRecommendations] = useState<number[]>([])
 
   // Fetch results from Supabase if ID is provided
   useEffect(() => {
@@ -129,6 +130,14 @@ export function PrioritizeContent() {
     } finally {
       setIsAnalyzing(false)
     }
+  }
+
+  const toggleRecommendation = (index: number) => {
+    setExpandedRecommendations((prev) =>
+      prev.includes(index)
+        ? prev.filter((i) => i !== index)
+        : [...prev, index]
+    )
   }
 
   const parseAnalysis = () => {
@@ -391,7 +400,7 @@ export function PrioritizeContent() {
 
                   <Card className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border-orange-500/20">
                     <CardHeader>
-                      <CardTitle className="text-lg">Areas of Focus</CardTitle>
+                      <CardTitle className="text-lg">Domains to Focus</CardTitle>
                     </CardHeader>
                     <CardContent>
                       {priorityData.topPriorities && priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => (
@@ -417,7 +426,7 @@ export function PrioritizeContent() {
                     <CardHeader>
                       <CardTitle className="text-2xl flex items-center gap-2">
                         <Zap size={24} className="text-muted-foreground" />
-                        Performance Analysis
+                        Domain Analysis
                       </CardTitle>
                       <CardDescription>
                         Detailed breakdown of your performance by domain
@@ -446,7 +455,7 @@ export function PrioritizeContent() {
 
                               return (
                                 <TableRow key={domain.domainNumber}>
-                                  <TableCell className="font-medium">Domain {domain.domainNumber}: {domain.domainName.split(': ')[1]}</TableCell>
+                                  <TableCell className="font-medium">{domain.domainName.split(': ')[1] || domain.domainName}</TableCell>
                                   <TableCell className="text-right">{correctPct}%</TableCell>
                                   <TableCell className="text-right">{domain.percentageWrong.toFixed(1)}%</TableCell>
                                   <TableCell className="text-right">{(domain.domainWeight * 100).toFixed(0)}%</TableCell>
@@ -501,37 +510,73 @@ export function PrioritizeContent() {
                     </CardHeader>
                     <Separator />
                     <CardContent className="pt-6">
-                      <div className="space-y-6">
-                        {priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => (
-                          <div key={idx} className="space-y-3">
-                            <h3 className="font-semibold text-lg">
-                              {idx + 1}. {domain.domainName}
-                            </h3>
-                            {domain.wrongKNs && domain.wrongKNs.length > 0 ? (
-                              <div className="space-y-2">
-                                <p className="text-sm text-muted-foreground">
-                                  Knowledge statements to review:
-                                </p>
-                                <ul className="text-sm space-y-1 ml-4">
-                                  {domain.wrongKNs.slice(0, 5).map((kn: any, knIdx: number) => (
-                                    <li key={knIdx} className="list-disc">
-                                      {kn.knName}
-                                    </li>
-                                  ))}
-                                  {domain.wrongKNs.length > 5 && (
-                                    <li className="text-muted-foreground">
-                                      ...and {domain.wrongKNs.length - 5} more
-                                    </li>
-                                  )}
-                                </ul>
-                              </div>
-                            ) : (
-                              <p className="text-sm text-muted-foreground">
-                                Review all topics in this domain
-                              </p>
-                            )}
-                          </div>
-                        ))}
+                      <div className="space-y-3">
+                        {priorityData.topPriorities.slice(0, 3).map((domain: any, idx: number) => {
+                          const isExpanded = expandedRecommendations.includes(idx)
+                          const domainNameOnly = domain.domainName.split(': ')[1] || domain.domainName
+
+                          return (
+                            <Card key={idx} className="overflow-hidden cursor-pointer hover:bg-accent/50 transition-colors">
+                              <button
+                                onClick={() => toggleRecommendation(idx)}
+                                className="w-full text-left"
+                              >
+                                <CardHeader>
+                                  <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                      <span className="text-lg font-semibold">{idx + 1}.</span>
+                                      <div>
+                                        <CardTitle className="text-base">{domainNameOnly}</CardTitle>
+                                        <CardDescription>
+                                          {domain.wrongKNs?.length || 0} topic{domain.wrongKNs?.length !== 1 ? 's' : ''} to review
+                                        </CardDescription>
+                                      </div>
+                                    </div>
+                                    <motion.div
+                                      animate={{ rotate: isExpanded ? 180 : 0 }}
+                                      transition={{ duration: 0.3 }}
+                                    >
+                                      <ChevronDown size={20} className="text-muted-foreground flex-shrink-0" />
+                                    </motion.div>
+                                  </div>
+                                </CardHeader>
+                              </button>
+
+                              <AnimatePresence initial={false}>
+                                {isExpanded && (
+                                  <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: 'auto', opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{
+                                      duration: 0.3,
+                                      ease: 'easeInOut',
+                                      opacity: { duration: 0.2 },
+                                    }}
+                                    style={{ overflow: 'hidden' }}
+                                  >
+                                    <CardContent className="pt-0">
+                                      {domain.wrongKNs && domain.wrongKNs.length > 0 ? (
+                                        <ul className="text-sm space-y-2">
+                                          {domain.wrongKNs.map((kn: any, knIdx: number) => (
+                                            <li key={knIdx} className="flex gap-2 items-start">
+                                              <span className="text-primary mt-0.5">•</span>
+                                              <span>{kn.knName}</span>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      ) : (
+                                        <p className="text-sm text-muted-foreground">
+                                          Review all topics in this domain
+                                        </p>
+                                      )}
+                                    </CardContent>
+                                  </motion.div>
+                                )}
+                              </AnimatePresence>
+                            </Card>
+                          )
+                        })}
                       </div>
                     </CardContent>
                   </Card>
