@@ -448,7 +448,7 @@ export function PrioritizeContent() {
                               <TableHead className="text-right">% Wrong</TableHead>
                               <TableHead className="text-right">Weight</TableHead>
                               <TableHead className="text-right">Priority Score</TableHead>
-                              <TableHead>Focus Level</TableHead>
+                              <TableHead>Priority</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -458,13 +458,13 @@ export function PrioritizeContent() {
                               let priorityVariant: 'default' | 'secondary' | 'destructive' = 'secondary'
 
                               if (correctPct >= 70) {
-                                priorityLabel = 'Low Priority'
+                                priorityLabel = 'Low'
                                 priorityVariant = 'secondary'
                               } else if (correctPct >= 40) {
-                                priorityLabel = 'Medium Priority'
+                                priorityLabel = 'Medium'
                                 priorityVariant = 'default'
                               } else {
-                                priorityLabel = 'High Priority'
+                                priorityLabel = 'High'
                                 priorityVariant = 'destructive'
                               }
 
@@ -497,9 +497,9 @@ export function PrioritizeContent() {
                                 <TableCell>
                                   {(() => {
                                     const correctPct = Math.round((1 - priorityData.orgPsychPerformance.percentageWrong / 100) * 100)
-                                    if (correctPct >= 70) return <Badge variant="secondary">Low Priority</Badge>
-                                    if (correctPct >= 40) return <Badge variant="default">Medium Priority</Badge>
-                                    return <Badge variant="destructive">High Priority</Badge>
+                                    if (correctPct >= 70) return <Badge variant="secondary">Low</Badge>
+                                    if (correctPct >= 40) return <Badge variant="default">Medium</Badge>
+                                    return <Badge variant="destructive">High</Badge>
                                   })()}
                                 </TableCell>
                               </TableRow>
