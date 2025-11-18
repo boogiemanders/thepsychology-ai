@@ -27,6 +27,7 @@ export interface DomainPerformance {
   totalWrongInDomain: number
   percentageWrong: number
   priorityScore: number // percentageWrong * domainWeight
+  wrongSourceFiles: string[] // source files from incorrect/skipped questions
 }
 
 /**
@@ -122,6 +123,7 @@ export function calculateDomainPerformance(
       totalWrongInDomain: data.wrong,
       percentageWrong: Math.round(percentageWrong * 100) / 100, // Round to 2 decimals
       priorityScore: Math.round(priorityScore * 10000) / 100, // Round to 2 decimals (as percentage points)
+      wrongSourceFiles: Array.from(data.wrongFiles), // Include source files from incorrect/skipped questions
     })
   }
 
@@ -461,6 +463,7 @@ export function getTopPriorityAreas(
     weight: perf.domainWeight,
     percentageWrong: perf.percentageWrong,
     priorityScore: perf.priorityScore,
+    wrongSourceFiles: perf.wrongSourceFiles || [],
   }))
 
   // Add org psych as a priority area
