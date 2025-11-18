@@ -80,6 +80,11 @@ export function calculateDomainPerformance(
 
   // Count wrong answers per domain
   for (const wrongAnswer of wrongAnswers) {
+    // SKIP org psych questions - they are tracked separately in calculateOrgPsychPerformance
+    if (wrongAnswer.is_org_psych === true) {
+      continue
+    }
+
     // First try to get domain from domain metadata
     let domain: number | null = null
 

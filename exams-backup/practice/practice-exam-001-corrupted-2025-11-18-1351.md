@@ -7,6 +7,7 @@ version: 5-fixed
 format: full
 source: All 225 questions with comprehensive detailed explanations
 ---
+
 {
   "questions": [
     {
@@ -41,7 +42,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Hippocampus",
       "explanation": "The hippocampus mediates the encoding and consolidation of declarative (explicit) memories. The cerebellum handles procedural memory, the amygdala adds emotional valence, and the thalamus serves as a relay station.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN1",
+      "knId": "KN2",
       "source_file": "1 Brain Structures and Functions.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -61,7 +62,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "NMDA receptors allowing calcium influx",
       "explanation": "NMDA receptors are calcium-permeable and require both glutamate binding and postsynaptic depolarization. This calcium influx triggers signaling cascades that increase AMPA receptor insertion and synaptic strength.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN1",
+      "knId": "KN3",
       "source_file": "1 Learning and Memory at the Neural Level.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "hard",
@@ -81,7 +82,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Norepinephrine at most terminals with acetylcholine at sweat glands",
       "explanation": "Sympathetic postganglionic terminals primarily use norepinephrine (adrenergic), except at sweat glands and adrenal medulla. Parasympathetic uses acetylcholine (cholinergic) at all terminals.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN1",
+      "knId": "KN4",
       "source_file": "1 Autonomic Nervous System.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -101,7 +102,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Regulate the sleep-wake cycle and circadian rhythms",
       "explanation": "Melatonin secretion by the pineal gland follows circadian patterns, being higher at night. It promotes sleep and synchronizes internal biological rhythms to the light-dark cycle.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN1",
+      "knId": "KN5",
       "source_file": "1 Endocrine System and Hormones.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -121,7 +122,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "All of the above contribute to fear learning",
       "explanation": "Fear conditioning involves coordinated activity: the thalamus and cortex provide sensory input, the hippocampus encodes context, and the prefrontal cortex modulates the response. The amygdala integrates these inputs.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN2",
+      "knId": "KN6",
       "source_file": "1 Emotion and the Brain.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -141,7 +142,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Rewards are better than predicted",
       "explanation": "Dopamine shows reward prediction error coding: firing increases when outcomes exceed predictions and decreases when outcomes are worse than expected. This supports learning through prediction adjustment.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN2",
+      "knId": "KN7",
       "source_file": "1 Motivation and Reward Systems.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "hard",
@@ -161,7 +162,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "At rest and engaged in internal mentation like mind-wandering",
       "explanation": "The DMN activates during self-referential thought and mind-wandering but deactivates during tasks requiring external attention. This anticorrelation with task-positive networks is a hallmark of the DMN.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN2",
+      "knId": "KN8",
       "source_file": "1 Brain Networks and Functional Connectivity.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "hard",
@@ -181,7 +182,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Excessive dopamine in mesolimbic pathways with insufficient dopamine in prefrontal cortex",
       "explanation": "The revised dopamine hypothesis explains positive symptoms (hallucinations, delusions) via mesolimbic hyperactivity and negative/cognitive symptoms via prefrontal hypoactivity. This explains why antipsychotics work on both.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN2",
+      "knId": "KN9",
       "source_file": "1 Neurotransmitters and Psychopathology.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -201,7 +202,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Oligodendrocytes, each myelinating multiple axons",
       "explanation": "Oligodendrocytes in the CNS myelinate multiple axons (one cell can myelinate 40-50 segments). In the PNS, Schwann cells myelinate one axon segment each. Both increase conduction velocity.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN2",
+      "knId": "KN10",
       "source_file": "1 Neurons and Glia.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -221,7 +222,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Cholinergic neurons in the laterodorsal tegmental and pedunculopontine tegmental nuclei",
       "explanation": "REM sleep is generated by cholinergic brainstem neurons. During REM, serotonergic and noradrenergic systems are suppressed, explaining why muscle atonia and vivid hallucinations occur.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN3",
+      "knId": "KN11",
       "source_file": "1 Sleep Architecture and Neurobiology.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -241,7 +242,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Understanding others' intentions and actions through embodied simulation",
       "explanation": "Mirror neurons are hypothesized to support mentalizing and empathy by internally simulating observed actions. This allows understanding of others' goals and mental states through motor resonance.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN3",
+      "knId": "KN12",
       "source_file": "1 Social Brain and Mirror Neurons.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "hard",
@@ -261,7 +262,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Hippocampus for explicit facts and events; cerebellum for habits and skills",
       "explanation": "Declarative (explicit) memory relies on the hippocampus-cortical system. Procedural (implicit) memory, including habits and skills, depends on the cerebellum and striatum. These systems operate largely independently.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN3",
+      "knId": "KN13",
       "source_file": "1 Memory Systems and the Hippocampus.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -281,7 +282,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Decreased heart rate, enhanced digestion, and urinary bladder contraction",
       "explanation": "Parasympathetic activation supports rest-and-digest functions: lowered heart rate, enhanced GI motility, pupil constriction, and bladder contraction. Sympathetic activation produces the opposite fight-or-flight response.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN3",
+      "knId": "KN14",
       "source_file": "1 Autonomic Nervous System Function.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -301,7 +302,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Cortisol",
       "explanation": "The cascade is: CRH from hypothalamus \u2192 ACTH from anterior pituitary \u2192 cortisol from adrenal cortex. Cortisol exerts negative feedback and metabolic effects (glucose mobilization, immune suppression).",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN4",
+      "knId": "KN15",
       "source_file": "1 Stress Response and the HPA Axis.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -321,7 +322,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Severe impairment in motor coordination and motor learning",
       "explanation": "Purkinje cells are the sole output of the cerebellar cortex. Damage causes ataxia (incoordination), dysmetria, and impaired motor learning while basic movement remains possible.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN4",
+      "knId": "KN16",
       "source_file": "1 Cerebellum and Motor Control.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "hard",
@@ -341,7 +342,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Dopaminergic system signaling prediction errors",
       "explanation": "Dopamine neurons encode prediction errors that drive associative learning. When a CS predicts a US, dopamine responses shift from the US to the CS, updating expectations about future events.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN4",
+      "knId": "KN17",
       "source_file": "1 Reward Learning and Dopamine.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "hard",
@@ -361,7 +362,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Providing top-down inhibitory control of limbic structures through cognitive appraisal",
       "explanation": "The ventromedial and dorsolateral prefrontal cortex regulate emotions by inhibiting amygdala activity and reappraising emotional stimuli. This supports adaptive emotional responses.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN4",
+      "knId": "KN18",
       "source_file": "1 Prefrontal Cortex and Emotion.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -381,7 +382,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Sodium channels for depolarization, then potassium channels for repolarization",
       "explanation": "During an action potential: sodium channels open causing rapid depolarization, then sodium channels inactivate while potassium channels open causing repolarization. This creates the characteristic action potential shape.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN4",
+      "knId": "KN19",
       "source_file": "1 Membrane Potential and Action Potentials.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -401,7 +402,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Sympathetic nervous system",
       "explanation": "Sympathetic activation produces increased heart rate, respiration, blood pressure, pupil dilation, and decreased digestion\u2014the fight-or-flight response characteristic of panic attacks.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN5",
+      "knId": "KN20",
       "source_file": "1 Autonomic Nervous System and Fear.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "easy",
@@ -421,7 +422,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Higher and more steady rates of responding with greater resistance to extinction",
       "explanation": "VI schedules produce higher, steadier responding because the unpredictable timing creates persistent behavior. FI schedules show scalloped patterns with pauses after reinforcement.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN5",
+      "knId": "KN21",
       "source_file": "1 Schedules of Reinforcement.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -441,7 +442,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Serotonin, norepinephrine, and dopamine across key brain regions",
       "explanation": "The monoamine hypothesis proposes that depression involves deficient serotonergic, noradrenergic, and dopaminergic neurotransmission. Antidepressants increase monoamine availability.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN5",
+      "knId": "KN22",
       "source_file": "1 Neurochemistry of Mood Disorders.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "medium",
@@ -461,7 +462,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Visual cortex, which is recruited for processing tactile and auditory information",
       "explanation": "Cross-modal plasticity allows the visual cortex of blind individuals to be recruited for tactile and auditory processing, demonstrating that cortical function depends on input rather than innate specialization.",
       "domain": "Domain 1: Biological Bases of Behavior",
-      "knId": "KN5",
+      "knId": "KN23",
       "source_file": "1 Cortical Plasticity and Reorganization.md",
       "source_folder": "1 Biological Bases of Behavior",
       "difficulty": "hard",
@@ -481,7 +482,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The cocktail party effect recognizing your name in noise",
       "explanation": "The cocktail party effect shows selective attention: we can detect personally relevant information even in noisy environments.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
+      "knId": "KN24",
       "source_file": "2 Attention and Perception.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -501,7 +502,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Dopamine",
       "explanation": "Dopamine in mesolimbic pathways mediates approach behavior and reward prediction error critical for learning.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
+      "knId": "KN25",
       "source_file": "2 Motivation Systems.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -521,7 +522,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Changing attitudes to match behaviors",
       "explanation": "When behavior-attitude inconsistency creates discomfort, attitude change is often the path of least resistance.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
+      "knId": "KN26",
       "source_file": "2 Attitudes and Beliefs.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -541,7 +542,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "More bystanders are present",
       "explanation": "Diffusion of responsibility occurs in groups, reducing individual helping as responsibility is distributed across bystanders.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
+      "knId": "KN27",
       "source_file": "2 Prosocial Behavior.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -561,7 +562,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Reinterprets emotional meaning prior to response generation",
       "explanation": "Reappraisal modifies emotional responses through cognitive reinterpretation, showing better outcomes than suppression.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
+      "knId": "KN28",
       "source_file": "2 Emotion and Regulation.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -581,7 +582,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Intrinsic motivation",
       "explanation": "Intrinsic motivation based on autonomy, competence, and relatedness produces higher engagement and persistence.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN7",
+      "knId": "KN29",
       "source_file": "2 Motivation in Organizations.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -601,7 +602,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Human relations theory",
       "explanation": "Human relations theory, developed by Mayo and others, highlights intrinsic motivation and employee well-being in organizational productivity.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN7",
+      "knId": "KN30",
       "source_file": "2 Organizational Theory.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -621,7 +622,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "All of the above",
       "explanation": "Strong organizational culture benefits employee outcomes but may reduce flexibility; weak cultures are flexible but inconsistent.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN7",
+      "knId": "KN31",
       "source_file": "2 Organizational Culture.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -641,7 +642,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Spacing practice over time",
       "explanation": "Spaced practice produces superior long-term retention through distributed memory consolidation.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN7",
+      "knId": "KN32",
       "source_file": "2 Learning and Training.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -661,7 +662,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Interconnected knowledge structures",
       "explanation": "Schemas are organized clusters of knowledge that include relationships between concepts and guide interpretation of new information.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN7",
+      "knId": "KN33",
       "source_file": "2 Knowledge Organization.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -681,7 +682,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "First information has disproportionate influence",
       "explanation": "Early information creates initial impressions that are difficult to change, influencing interpretation of subsequent information.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN8",
+      "knId": "KN34",
       "source_file": "2 Person Perception.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -701,7 +702,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "They provide observable, verifiable data",
       "explanation": "Behavioral anchors provide objective, defensible performance data reducing rater bias compared to trait ratings.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN8",
+      "knId": "KN35",
       "source_file": "2 Performance Appraisal.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -721,7 +722,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "7\u00b12 items",
       "explanation": "Miller's classic studies established working memory capacity at approximately 7\u00b12 units of information.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN8",
+      "knId": "KN36",
       "source_file": "2 Memory Systems.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "hard",
@@ -741,7 +742,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Knowledge and problem-solving distributed across team members",
       "explanation": "Distributed cognition models show how organizations solve problems through coordination across members with complementary knowledge.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN8",
+      "knId": "KN37",
       "source_file": "2 Organizational Cognition.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -761,7 +762,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Familiar items are more liked",
       "explanation": "Fluent processing creates positive affect and preference; we like what is easy to process.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN8",
+      "knId": "KN38",
       "source_file": "2 Affect and Cognition.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -781,7 +782,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Groups are cohesive with strong leadership",
       "explanation": "Groupthink occurs in highly cohesive groups with strong leaders where conformity is valued over critical appraisal.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN9",
+      "knId": "KN39",
       "source_file": "2 Group Decision-Making.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -801,7 +802,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Overestimate dispositional factors in others' behavior",
       "explanation": "We tend to attribute others' behavior to personality while underestimating situational factors; we reverse this for ourselves.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN9",
+      "knId": "KN40",
       "source_file": "2 Attribution Theory.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -821,7 +822,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Use contingent reward systems",
       "explanation": "Transactional leaders rely on exchange of rewards for performance; transformational leaders inspire and develop followers.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN9",
+      "knId": "KN41",
       "source_file": "2 Leadership Styles.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -841,7 +842,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Individuals perform poorly due to stereotype activation",
       "explanation": "Threat from stereotypes impairs performance on stereotype-relevant tasks through cognitive load and reduced working memory.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN9",
+      "knId": "KN42",
       "source_file": "2 Stereotypes and Threat.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "hard",
@@ -861,7 +862,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Seeking confirming evidence",
       "explanation": "People preferentially seek information that confirms existing beliefs while ignoring disconfirming evidence.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN9",
+      "knId": "KN43",
       "source_file": "2 Decision-Making Biases.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -881,7 +882,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Opposing evidence strengthens original beliefs",
       "explanation": "Strong prior beliefs may be strengthened when confronted with contradictory evidence through defensive processing.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN10",
+      "knId": "KN44",
       "source_file": "2 Belief Perseverance.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "hard",
@@ -901,7 +902,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Intrinsic motivation and value alignment",
       "explanation": "Satisfaction depends on alignment between personal values and work characteristics plus meaningful engagement.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN10",
+      "knId": "KN45",
       "source_file": "2 Work Motivation.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -921,7 +922,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Fairness of procedures in decision-making",
       "explanation": "Procedural justice examines whether processes are fair, systematic, and transparent in determining outcomes.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN10",
+      "knId": "KN46",
       "source_file": "2 Organizational Justice.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -941,7 +942,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Systematic observation \u2192 interpretation \u2192 assumption \u2192 conclusion",
       "explanation": "The ladder shows how we move from data through interpretation and assumptions to conclusions, risking errors at each step.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN10",
+      "knId": "KN47",
       "source_file": "2 Reasoning and Inference.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -961,7 +962,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Understanding feedback loops and interdependencies",
       "explanation": "Systems thinking recognizes that organizational elements are interconnected with feedback loops creating complex behaviors.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN10",
+      "knId": "KN48",
       "source_file": "2 Systems Thinking.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -981,7 +982,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Loss aversion and threat to individuals' competence and status",
       "explanation": "Change threatens established routines, competence, and identity; losses feel more salient than gains.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN13",
+      "knId": "KN49",
       "source_file": "2 Organizational Change.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1001,7 +1002,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Unconscious and automatic",
       "explanation": "Implicit processes operate without awareness and occur automatically, contrasting with explicit conscious reasoning.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN13",
+      "knId": "KN50",
       "source_file": "2 Implicit Cognition.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -1021,7 +1022,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Thinking about one's own thinking processes",
       "explanation": "Metacognition involves awareness and monitoring of cognitive processes, allowing self-regulation of learning and problem-solving.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN13",
+      "knId": "KN51",
       "source_file": "2 Metacognition.md",
       "source_folder": "2 Cognitive Bases",
       "difficulty": "medium",
@@ -1041,7 +1042,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Information processing and knowledge integration across members",
       "explanation": "Organizational learning requires collective processes that integrate member knowledge and institutional memory.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN13",
+      "knId": "KN52",
       "source_file": "2 Organizational Learning.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "hard",
@@ -1061,7 +1062,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "35% of critical trials",
       "explanation": "Asch's participants conformed to incorrect majority opinions on approximately one-third of critical trials, demonstrating powerful normative conformity. This classic study revealed that even when the correct answer is unambiguous, social pressure influences behavior and sometimes even perception.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN14",
+      "knId": "KN53",
       "source_file": "3 Conformity and Obedience.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1081,7 +1082,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Overestimate personality factors in explaining others' behavior while underestimating situational factors",
       "explanation": "The fundamental attribution error is a robust cross-cultural bias where observers attribute others' behavior to dispositional factors while neglecting powerful situational constraints. Interestingly, we show the opposite bias (actor-observer bias) for our own behavior, attributing it more to situations.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN14",
+      "knId": "KN54",
       "source_file": "3 Attribution Theory and Cognitive Biases.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1101,7 +1102,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The shared belief that team members can take interpersonal risks without fear of negative consequences",
       "explanation": "Psychological safety is a team-level construct where members believe they can speak up, ask questions, or admit mistakes without being embarrassed or punished. This construct predicts team learning, innovation, and performance in organizations. High psychological safety enables error detection and organizational learning.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN14",
+      "knId": "KN55",
       "source_file": "3 Team Dynamics and Psychological Safety.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1121,7 +1122,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Stereotypes activate self-doubt and cognitive load through threat concerns about being stereotyped",
       "explanation": "Stereotype threat impairs performance on stereotype-relevant tasks through anxiety, reduced working memory, and decreased motivation. Interventions that reduce threat (e.g., self-affirmation, reframing difficulty as surmountable) improve performance. This effect is particularly strong for high-performing individuals who strongly identify with the domain.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN14",
+      "knId": "KN56",
       "source_file": "3 Stereotypes and Social Identity.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
@@ -1141,7 +1142,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Self-awareness, transparent communication, and alignment between espoused values and behaviors",
       "explanation": "Authentic leadership theory emphasizes leaders' self-awareness regarding their values, identity, and impact on others. Authentic leaders communicate transparently, make decisions consistent with their values, and build trust through relational authenticity rather than manipulation or image management.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN15",
+      "knId": "KN57",
       "source_file": "3 Leadership and Organizational Culture.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1161,7 +1162,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Diffusion of responsibility reduces individual accountability",
       "explanation": "As group size increases, individual responsibility becomes diffused\u2014each person feels less personally responsible for helping. This diffusion of responsibility is stronger than other explanations and occurs even when potential helpers cannot see each other, suggesting cognitive rather than purely social factors.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN15",
+      "knId": "KN58",
       "source_file": "3 Prosocial Behavior and Helping.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1181,7 +1182,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Changing attitudes to match behaviors",
       "explanation": "Festinger's cognitive dissonance theory predicts that attitude change is often easier than behavior change when inconsistency exists. People frequently rationalize or reframe behaviors to justify them, changing their attitudes in the process. This has important implications for understanding persuasion and behavior change.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN15",
+      "knId": "KN59",
       "source_file": "3 Attitudes and Belief Systems.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1201,7 +1202,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Arousal increases drive, which enhances dominant responses and impairs non-dominant responses",
       "explanation": "Zajonc's drive theory explains that audience presence increases physiological arousal. This arousal enhances well-learned, dominant responses but impairs novel, non-dominant responses. The effect is stronger for observers than co-actors and is moderated by task difficulty.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN15",
+      "knId": "KN60",
       "source_file": "3 Group Influence and Performance.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
@@ -1221,7 +1222,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Inspire vision, provide intellectual stimulation, and develop followers' full potential",
       "explanation": "Bass's transformational leadership theory emphasizes idealized influence, inspirational motivation, intellectual stimulation, and individualized consideration. Transformational leaders engage followers' higher-order needs and develop them beyond contractual obligations, whereas transactional leaders rely on exchange of rewards.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN16",
+      "knId": "KN61",
       "source_file": "3 Leadership Styles and Effectiveness.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1241,7 +1242,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Employee alignment, commitment, and reduced turnover",
       "explanation": "Strong cultures create shared meaning and alignment around organizational goals. Research shows strong cultures predict employee satisfaction, retention, and performance. However, strong cultures can reduce flexibility and make change difficult, creating potential trade-offs.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN16",
+      "knId": "KN62",
       "source_file": "3 Organizational Culture and Climate.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1261,7 +1262,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "When interactions are repeated and reputation matters",
       "explanation": "In iterated prisoner's dilemma, tit-for-tat and reciprocal altruism strategies succeed because repeated interaction allows reputation building and relationship development. Single-shot dilemmas show lower cooperation; repeated interactions enable cooperation to become adaptive.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN16",
+      "knId": "KN63",
       "source_file": "3 Social Dilemmas and Cooperation.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
@@ -1281,7 +1282,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Operates outside conscious awareness and control despite explicit egalitarian beliefs",
       "explanation": "Implicit Association Tests reveal that most people hold automatic negative associations with certain groups, even when explicitly holding egalitarian values. Implicit biases predict behavior in situations allowing quick, unconscious responses and can influence hiring, health care, and law enforcement decisions.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN17",
+      "knId": "KN64",
       "source_file": "3 Prejudice and Discrimination.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1301,7 +1302,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Cognitive diversity bringing different perspectives and knowledge",
       "explanation": "Research on diversity in teams shows that cognitive diversity (different perspectives, expertise, backgrounds) enhances innovation and problem-solving. However, demographic diversity alone doesn't guarantee benefits\u2014team processes and psychological safety mediate whether diversity produces advantages.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN17",
+      "knId": "KN65",
       "source_file": "3 Team Diversity and Inclusion.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1321,7 +1322,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "High cohesion, directive leadership, and external pressure with little dissent",
       "explanation": "Janis identified conditions promoting groupthink: high cohesion, directive leadership favoring particular outcomes, time pressure, and perceived external threats. Groupthink leads to overconfidence, rationalization of contradictory information, and failure to consider alternatives or implications.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN17",
+      "knId": "KN66",
       "source_file": "3 Group Decision-Making Processes.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1341,7 +1342,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Contact includes equal status, cooperation toward shared goals, institutional support, and opportunity for personal acquaintance",
       "explanation": "Allport's contact hypothesis identifies specific conditions necessary for prejudice reduction: equal status, cooperative interdependence, superordinate goals, institutional support. Without these conditions, contact may actually increase prejudice through intergroup competition and anxiety.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN17",
+      "knId": "KN67",
       "source_file": "3 Intergroup Relations and Contact.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
@@ -1361,7 +1362,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Listen carefully to followers' needs and serve their development",
       "explanation": "Servant leadership (Greenleaf, Spears) inverts typical hierarchies: leaders exist to serve followers' growth and well-being. Servant leaders prioritize listening, empathy, and developing followers as complete persons. This contrasts with power-based leadership.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN18",
+      "knId": "KN68",
       "source_file": "3 Ethical Leadership and Stewardship.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1381,7 +1382,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Positive self-esteem through favorable intergroup comparisons",
       "explanation": "Tajfel and Turner's social identity theory proposes that group membership contributes to self-esteem. People enhance self-esteem by favoring their ingroup and creating positive intergroup distinctions, even on minimal/arbitrary group bases.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN18",
+      "knId": "KN69",
       "source_file": "3 Social Identity and Group Behavior.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1401,7 +1402,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Individual behavior, motivation, and satisfaction",
       "explanation": "Climate operates at the individual/team level (unlike culture which is organizational-level). Perceptions of climate influence psychological states, motivation, and behaviors. Dimensions like clarity, rewards, support, and psychological safety shape employee outcomes.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN18",
+      "knId": "KN70",
       "source_file": "3 Organizational Climate and Employee Perceptions.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1421,7 +1422,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Lack of perceived behavioral control over execution",
       "explanation": "Ajzen's theory of planned behavior includes perceived behavioral control\u2014belief in one's ability to perform the behavior. Even with positive attitudes and social support, low perceived control predicts failure to act. Environmental barriers and skill deficits reduce control perceptions.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN19",
+      "knId": "KN71",
       "source_file": "3 Behavioral Intentions and Decision-Making.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
@@ -1441,7 +1442,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Restore equity by changing inputs, outcomes, comparisons, or cognitions",
       "explanation": "Adams's equity theory predicts that inequitable outcomes create tension. Employees restore equity through behavioral changes (adjusting effort), outcome changes (seeking higher pay), comparison changes (choosing different referents), or cognitive changes (rationalizing the inequality).",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN19",
+      "knId": "KN72",
       "source_file": "3 Fairness and Equity in Organizations.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1461,7 +1462,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Actors attribute behavior to situations while observers attribute to dispositions",
       "explanation": "The actor-observer bias is the mirror image of fundamental attribution error: actors (who perform the behavior) emphasize situational factors; observers emphasize dispositional factors. This occurs partly because actors have better information about situations.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN19",
+      "knId": "KN73",
       "source_file": "3 Perspective and Attribution Bias.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1481,7 +1482,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Interactional justice and procedural justice together are most important for trust",
       "explanation": "Research shows interactional and procedural justice predict trust in authority and commitment more strongly than distributive justice alone. How leaders explain decisions and treat employees matters as much or more than whether outcomes favor the individual.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN19",
+      "knId": "KN74",
       "source_file": "3 Organizational Justice and Trust.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1501,7 +1502,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Making individual contributions identifiable and valued",
       "explanation": "Latan\u00e9's social impact theory and Harkins's research show that social loafing decreases when individual performance is identifiable (not pooled with others) and when contributions are valued. Anonymity increases loafing; identifiability and importance reduce it.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
+      "knId": "KN75",
       "source_file": "3 Individual Performance in Groups.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
@@ -1521,7 +1522,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Affective commitment most strongly predicts performance",
       "explanation": "Meyer and Allen's framework shows affective commitment (genuine desire to stay) predicts performance, attendance, and retention most strongly. Continuance (need-based) may increase conflict; normative (obligation) produces lesser engagement.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
+      "knId": "KN76",
       "source_file": "3 Organizational Commitment and Engagement.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -1541,7 +1542,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "65%",
       "explanation": "Despite believing they were causing pain, approximately 65% of Milgram's participants followed the experimenter's directives and administered the maximum 450-volt shock. This demonstrates the power of authority and situational factors in overriding moral concerns.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
+      "knId": "KN77",
       "source_file": "3 Obedience to Authority.md",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
@@ -1561,7 +1562,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Mastering academic and social skills while avoiding feelings of inadequacy",
       "explanation": "In Erikson's psychosocial development theory, the industry vs. inferiority stage focuses on children developing competence in academic, athletic, and social domains. Success leads to feelings of mastery and competence; failure can result in inferiority and self-doubt.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN21",
+      "knId": "KN42",
       "source_file": "4 Erikson Psychosocial Development.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1581,7 +1582,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "55-60%",
       "explanation": "In Ainsworth's classic observational study, approximately 60-65% of infants demonstrated secure attachment, characterized by mild distress upon separation and quick comfort upon reunion. Approximately 20% showed avoidant attachment and 15% showed resistant/ambivalent attachment.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN21",
+      "knId": "KN43",
       "source_file": "4 Attachment and Early Relationships.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1601,7 +1602,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Centration - the ability to consider multiple aspects of a situation simultaneously",
       "explanation": "Centration is a limitation of the preoperational stage (ages 2-7), where children focus on only one aspect of a problem. In concrete operations, children overcome centration and develop decentration - the ability to consider multiple dimensions simultaneously.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN21",
+      "knId": "KN44",
       "source_file": "4 Piaget Cognitive Development.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "hard",
@@ -1621,7 +1622,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "High demandingness and high warmth, producing children with better academic outcomes and social competence",
       "explanation": "Authoritative parenting combines clear structure and expectations (high demandingness) with emotional responsiveness and support (high warmth). Research consistently shows this style is associated with optimal developmental outcomes: higher academic achievement, better self-regulation, and prosocial behavior.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN21",
+      "knId": "KN45",
       "source_file": "4 Parenting Styles and Family Dynamics.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1641,7 +1642,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "A period of questioning life structure and examining whether current life choices align with values and dreams",
       "explanation": "Levinson's lifespan development theory proposed that midlife is not necessarily a crisis, but a transition period where individuals reassess their life structure. During this time, people often evaluate whether they've achieved their dream, relationships, career, and personal development.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN22",
+      "knId": "KN46",
       "source_file": "4 Adult Development and Aging.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1661,7 +1662,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Contact comfort and emotional security are critical for attachment formation, not just feeding",
       "explanation": "Harlow's landmark experiments showed that infant monkeys preferred the cloth mother who provided comfort over the wire mother who provided food, demonstrating that attachment is driven by emotional security and touch, not merely nutrition. This challenged behaviorist theories and supported the importance of affectional bonds.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN22",
+      "knId": "KN43",
       "source_file": "4 Attachment and Early Relationships.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1681,7 +1682,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Context, relationships, and responsibility for care within social networks",
       "explanation": "Gilligan critiqued Kohlberg's theory for emphasizing justice and abstract rules, arguing that women often prioritize an ethic of care, focusing on relationships, interdependence, and contextual decision-making. Her research highlighted different but not deficient moral development pathways in women, recognizing multiple valid approaches to moral reasoning.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN22",
+      "knId": "KN47",
       "source_file": "4 Moral Development and Values.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1701,7 +1702,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Greater emotional regulation, social competence, and resilience in later childhood",
       "explanation": "Sroufe's prospective longitudinal studies documented that secure attachment in infancy predicts positive developmental outcomes including better emotion regulation, stronger peer relationships, greater self-worth, and increased resilience in response to stress. These effects persist across childhood and adolescence.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN23",
+      "knId": "KN43",
       "source_file": "4 Attachment and Early Relationships.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "hard",
@@ -1721,7 +1722,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The range of tasks a child cannot yet perform independently but can accomplish with appropriate guidance and scaffolding",
       "explanation": "The ZPD represents the difference between what a child can do alone and what they can do with support from a more competent other. This concept emphasizes the social and interactive nature of learning, highlighting the importance of scaffolding, modeling, and guided participation in cognitive development.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN23",
+      "knId": "KN48",
       "source_file": "4 Sociocultural Learning Theory.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1741,7 +1742,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The ability to think about one's own thinking processes and monitor cognitive strategies",
       "explanation": "Metacognition involves awareness and regulation of one's own cognitive processes - knowing what you know and don't know, selecting appropriate strategies, and evaluating their effectiveness. Development of metacognitive skills improves academic performance, problem-solving, and learning across the lifespan.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN23",
+      "knId": "KN49",
       "source_file": "4 Information Processing and Memory Development.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1761,7 +1762,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Shyness, caution, and physiological reactivity to novel stimuli, with relative stability across development",
       "explanation": "Kagan's longitudinal research on temperament identified behavioral inhibition - a tendency toward shyness, caution, and physiological arousal in unfamiliar situations. This temperament shows considerable stability from infancy through childhood and is associated with heightened neural reactivity to novelty and threat.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN23",
+      "knId": "KN50",
       "source_file": "4 Temperament and Individual Differences.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1781,7 +1782,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Development follows a universal, predetermined sequence independent of context or individual differences",
       "explanation": "Baltes' lifespan perspective rejects rigid stage models, emphasizing that development involves multiple dimensions (cognitive, social, emotional), continues throughout life, shows considerable plasticity, and varies based on historical and contextual factors. Individual differences and cultural variations are central to understanding development.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
+      "knId": "KN51",
       "source_file": "4 Lifespan Development Models.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "hard",
@@ -1801,7 +1802,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Particular experiences have heightened effects on development during specific periods, though learning can still occur outside these windows",
       "explanation": "Sensitive periods are times when the brain is particularly responsive to specific types of stimulation (e.g., language exposure, visual input). While these periods are optimal for development, research shows that substantial learning and recovery can still occur outside these windows, reflecting the brain's remarkable plasticity.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
+      "knId": "KN52",
       "source_file": "4 Brain Development and Critical Periods.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "hard",
@@ -1821,7 +1822,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Exploring roles and values to develop a coherent sense of self and personal identity",
       "explanation": "During adolescence, Erikson's identity vs. role confusion stage involves exploring different roles, values, beliefs, and ideologies to develop a consistent sense of self. Successful resolution results in a strong personal identity and sense of direction; unsuccessful resolution leads to role confusion and identity diffusion.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
+      "knId": "KN53",
       "source_file": "4 Adolescent Development and Identity.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1841,7 +1842,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Are associated with better maintenance of cognitive function, slower decline rates, and enhanced life satisfaction",
       "explanation": "Longitudinal research demonstrates that cognitively stimulating activities, social engagement, and meaningful activity are associated with better cognitive outcomes in aging, partly through maintained neural plasticity and cognitive reserve. Isolation and cognitive inactivity are risk factors for cognitive decline and dementia.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN25",
+      "knId": "KN54",
       "source_file": "4 Aging and Late Adulthood.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1861,7 +1862,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The caregiver providing comfort and protection (safe haven) and enabling exploration (secure base) through a responsive relationship",
       "explanation": "In attachment theory, the secure base function enables children to explore their environment and develop independence, while the safe haven function provides comfort during distress. These complementary functions allow children to balance autonomy with security, supporting both exploratory competence and emotional regulation.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN25",
+      "knId": "KN43",
       "source_file": "4 Attachment and Early Relationships.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -1881,7 +1882,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Secure attachment relationships with at least one caring adult and access to community resources",
       "explanation": "Werner and Smith's longitudinal research on resilience in Hawaii identified that children who experienced adversity but maintained at least one secure, supportive relationship and had access to community resources (school, mentors, cultural opportunities) were more likely to develop positive outcomes in adulthood than those with poor relationships or social isolation.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN25",
+      "knId": "KN55",
       "source_file": "4 Resilience and Protective Factors.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "hard",
@@ -1901,7 +1902,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Emotional goals and meaningful relationships over acquisition of new knowledge and broad social networks",
       "explanation": "Socioemotional selectivity theory suggests that as perceived remaining time decreases (with age), people shift priorities from future-oriented, knowledge-acquisition goals to emotion-regulation and nurturing emotionally meaningful relationships. This explains why older adults often have smaller but closer social networks and report higher emotional well-being.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN26",
+      "knId": "KN56",
       "source_file": "4 Aging and Late Adulthood.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "hard",
@@ -1910,7 +1911,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 105,
+      "id": 96,
       "question": "Internal validity in research refers to:",
       "options": [
         "The degree to which study results can be generalized to other populations and settings",
@@ -1921,7 +1922,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The extent to which changes in the dependent variable can be attributed to the independent variable rather than confounding factors",
       "explanation": "Internal validity concerns whether observed changes in the dependent variable are truly caused by the independent variable or by alternative explanations (threats). Threats to internal validity include history, maturation, selection bias, regression to the mean, and instrumentation. Strong internal validity requires appropriate controls and experimental design.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN53",
+      "knId": "KN57",
       "source_file": "5 Research Design and Validity.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -1930,7 +1931,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 106,
+      "id": 97,
       "question": "External validity refers to:",
       "options": [
         "The extent to which a study's findings are caused by the independent variable",
@@ -1941,7 +1942,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The degree to which research findings can be generalized to other populations, settings, times, and conditions",
       "explanation": "External validity concerns the generalizability of findings beyond the specific study context. Threats to external validity include interaction of selection and treatment, reactive effects of testing, and reactive arrangements. High internal validity does not guarantee external validity; generalization requires representative samples and realistic conditions.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN53",
+      "knId": "KN58",
       "source_file": "5 Research Design and Validity.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -1950,7 +1951,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 107,
+      "id": 98,
       "question": "A Type I error in hypothesis testing occurs when:",
       "options": [
         "The null hypothesis is correctly rejected",
@@ -1961,7 +1962,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The null hypothesis is incorrectly rejected (false positive), concluding there is an effect when there is none",
       "explanation": "A Type I error (alpha error) is the probability of rejecting the null hypothesis when it is true - concluding an effect exists when it does not. The alpha level (typically .05) is the maximum probability of making a Type I error. Type II error (beta) is the opposite: failing to reject a false null hypothesis.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN53",
+      "knId": "KN59",
       "source_file": "5 Hypothesis Testing and Statistical Inference.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -1970,7 +1971,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 108,
+      "id": 99,
       "question": "Statistical power in research refers to:",
       "options": [
         "The significance level at which results are reported",
@@ -1981,7 +1982,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The probability of correctly rejecting the null hypothesis when it is false (1 - beta)",
       "explanation": "Statistical power (1 - Type II error rate) represents the sensitivity of a study to detect a true effect. Power is influenced by sample size, effect size, alpha level, and test characteristics. Researchers typically aim for power \u2265 .80 (80%) to be reasonably confident they can detect real effects if they exist.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN54",
+      "knId": "KN60",
       "source_file": "5 Hypothesis Testing and Statistical Inference.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -1990,7 +1991,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 109,
+      "id": 100,
       "question": "Cronbach's alpha is used to assess:",
       "options": [
         "The test-retest reliability of a measure over time",
@@ -2001,7 +2002,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The internal consistency and reliability of a multi-item scale (how consistently items measure the same construct)",
       "explanation": "Cronbach's alpha measures internal consistency by examining the average correlations among items on a scale. Alpha ranges from 0 to 1, with values \u2265 .70 generally considered acceptable. High alpha suggests items are measuring a single underlying construct, though very high values (> .95) may indicate redundancy.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN54",
+      "knId": "KN61",
       "source_file": "5 Measurement Reliability.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -2010,7 +2011,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 110,
+      "id": 101,
       "question": "Content validity of an assessment instrument refers to:",
       "options": [
         "The degree to which test scores correlate with an external criterion",
@@ -2021,7 +2022,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The extent to which items comprehensively and representatively sample from the domain of interest",
       "explanation": "Content validity asks whether the test adequately represents the content domain. For example, a reading comprehension test with only short passages would lack content validity if the domain includes varied text lengths and genres. Assessed through expert judgment and domain analysis, not statistical testing.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN55",
+      "knId": "KN62",
       "source_file": "5 Measurement Validity.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -2030,7 +2031,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 111,
+      "id": 102,
       "question": "Construct validity encompasses all of the following EXCEPT:",
       "options": [
         "Convergent validity - evidence that the measure correlates with other measures of the same construct",
@@ -2041,7 +2042,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Temporal stability - the extent to which items are relevant at all points in time",
       "explanation": "Construct validity involves convergent validity (correlations with related constructs) and discriminant validity (low correlations with unrelated constructs), plus relationships with other variables that support the theoretical meaning. Predictive validity is criterion-related validity. Temporal stability is not a component of construct validity.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN55",
+      "knId": "KN63",
       "source_file": "5 Measurement Validity.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2050,7 +2051,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 112,
+      "id": 103,
       "question": "Effect size (e.g., Cohen's d) differs from statistical significance by:",
       "options": [
         "Effect size indicates whether results are statistically significant, while significance indicates practical importance",
@@ -2061,7 +2062,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Statistical significance indicates whether an effect exists, while effect size measures the magnitude of the effect regardless of sample size",
       "explanation": "Statistical significance (p-value) indicates the probability of obtaining results if the null hypothesis is true and depends on sample size. Effect size (d, r, eta) measures the magnitude or practical importance of an effect independent of sample size. Large sample sizes can produce significant results with trivial effect sizes, while small samples may fail to detect large effects.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN56",
+      "knId": "KN64",
       "source_file": "5 Effect Size and Practical Significance.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2070,7 +2071,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 113,
+      "id": 104,
       "question": "Standard error of the mean (SEM) reflects:",
       "options": [
         "The standard deviation of the raw data distribution",
@@ -2081,7 +2082,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The estimated standard deviation of the sampling distribution of the mean",
       "explanation": "The standard error of the mean (\u03c3M = \u03c3/\u221aN) estimates how much sample means vary from the population mean across different samples. Smaller SEM indicates more precision in estimating the population mean. SEM is used to construct confidence intervals and conduct hypothesis tests.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN56",
+      "knId": "KN65",
       "source_file": "5 Sampling and Inference.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2090,7 +2091,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 114,
+      "id": 105,
       "question": "In a correlational study with correlation coefficient r = -.35, the coefficient of determination (r\u00b2) indicates that:",
       "options": [
         "35% of the variance in one variable is explained by the other",
@@ -2101,7 +2102,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "12.25% of the variance in one variable is explained by the other",
       "explanation": "The coefficient of determination (r\u00b2) represents the proportion of variance in one variable explained by another. With r = -.35, r\u00b2 = .1225 or 12.25%. This shows that correlation does not imply causation and that even moderate correlations explain relatively little variance.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN57",
+      "knId": "KN66",
       "source_file": "5 Correlation and Regression.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2110,7 +2111,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 115,
+      "id": 106,
       "question": "Multicollinearity in multiple regression analysis refers to:",
       "options": [
         "The presence of multiple dependent variables in the analysis",
@@ -2121,7 +2122,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "High correlations among the independent variables, which can compromise the reliability of regression coefficients",
       "explanation": "Multicollinearity occurs when predictor variables are highly correlated with each other, making it difficult to assess the independent contribution of each predictor. This inflates standard errors of coefficients, reduces statistical power, and can cause unstable or counterintuitive regression weights. Assessed through VIF (variance inflation factor).",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN57",
+      "knId": "KN67",
       "source_file": "5 Multiple Regression Analysis.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2130,7 +2131,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 116,
+      "id": 107,
       "question": "A confidence interval of 95% around a sample mean indicates:",
       "options": [
         "There is a 95% probability that the true population mean falls within this interval",
@@ -2141,7 +2142,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "If the study were repeated 100 times, the population mean would fall within this interval approximately 95 times",
       "explanation": "A 95% confidence interval reflects the frequentist interpretation: if sampling were repeated many times, the true population parameter would fall within the calculated interval approximately 95% of those times. It does NOT indicate a 95% probability for any single interval, as the population parameter is fixed.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN57",
+      "knId": "KN68",
       "source_file": "5 Confidence Intervals and Inferential Statistics.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2150,7 +2151,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 117,
+      "id": 108,
       "question": "Meta-analysis in research synthesis involves:",
       "options": [
         "Reviewing and summarizing research findings qualitatively",
@@ -2161,7 +2162,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Using statistical methods to combine and analyze data from multiple independent studies to estimate overall effect sizes",
       "explanation": "Meta-analysis combines quantitative results from multiple studies using statistical techniques to estimate overall effect sizes, examine moderators, and assess publication bias. This provides more precise estimates than individual studies and can clarify inconsistent findings across research.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN58",
+      "knId": "KN69",
       "source_file": "5 Meta-Analysis and Research Synthesis.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -2170,7 +2171,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 118,
+      "id": 109,
       "question": "Counterbalancing in experimental design serves primarily to:",
       "options": [
         "Ensure that all participants receive the experimental treatment",
@@ -2181,7 +2182,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Control for order effects by varying the sequence in which conditions are presented to different groups",
       "explanation": "Counterbalancing addresses threats to internal validity by systematically varying the order of conditions across participants. This prevents confounding of treatment effects with order effects (practice, fatigue, carryover). Latin square designs and other counterbalancing methods ensure each condition appears equally often in each position.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN58",
+      "knId": "KN70",
       "source_file": "5 Experimental Design Principles.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -2190,7 +2191,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 119,
+      "id": 110,
       "question": "Ecological validity in research refers to:",
       "options": [
         "The extent to which study procedures and settings are natural and representative of real-world conditions",
@@ -2201,7 +2202,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The extent to which study procedures and settings are natural and representative of real-world conditions",
       "explanation": "Ecological validity concerns whether the research environment and tasks are realistic and representative of naturally occurring situations. Laboratory studies with artificial tasks and conditions may have high internal validity but low ecological validity. Field studies may have higher ecological validity but less control.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN59",
+      "knId": "KN71",
       "source_file": "5 Research Design and Validity.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "medium",
@@ -2210,7 +2211,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 123,
+      "id": 111,
       "question": "Job analysis in organizational psychology involves:",
       "options": [
         "The psychological testing of job applicants",
@@ -2221,7 +2222,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The systematic examination of job tasks, responsibilities, and required competencies to inform selection, training, and performance evaluation",
       "explanation": "Job analysis is a foundational IO psychology process that identifies what knowledge, skills, abilities (KSAs), and other characteristics are required for effective performance. Results inform job descriptions, selection criteria, training needs, and performance standards. Methods include observation, interviews, questionnaires, and task analysis.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN12",
+      "knId": "KN57",
       "source_file": "6 Job Analysis and Competencies.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2230,7 +2231,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 124,
+      "id": 112,
       "question": "In personnel selection, criterion-related validity is most directly assessed through:",
       "options": [
         "Expert judgment regarding whether test items adequately represent the job",
@@ -2241,7 +2242,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The statistical correlation between selection test scores and measures of job performance",
       "explanation": "Criterion-related validity demonstrates that selection test scores predict actual job performance through concurrent (current employees) or predictive (hired applicants followed) studies. This empirical validation is critical for legal defensibility under the Uniform Guidelines and demonstrates practical utility.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN12",
+      "knId": "KN58",
       "source_file": "6 Personnel Selection and Validation.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2250,7 +2251,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 125,
+      "id": 113,
       "question": "Adverse impact in employment discrimination refers to:",
       "options": [
         "Any negative employment decision made by an employer",
@@ -2261,7 +2262,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Significantly lower selection rates for protected classes that create presumptive evidence of discrimination under the Four-Fifths Rule",
       "explanation": "Adverse impact occurs when selection procedures result in disparate impact on protected groups. The Four-Fifths Rule suggests adverse impact if selection rate for a group is less than 80% of the rate for the highest-scoring group. Adverse impact requires organizational justification through job-relatedness and business necessity.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN12",
+      "knId": "KN59",
       "source_file": "6 Employment Discrimination and EEO Law.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "hard",
@@ -2270,7 +2271,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 126,
+      "id": 114,
       "question": "Expectancy theory (Vroom) proposes that motivation is a function of:",
       "options": [
         "Equity between personal input and organizational rewards",
@@ -2281,7 +2282,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Expectancy (belief that effort leads to performance) \u00d7 Instrumentality (belief that performance leads to outcomes) \u00d7 Valence (perceived value of outcomes)",
       "explanation": "Vroom's expectancy theory suggests motivation depends on three multiplicative factors: expectancy (confidence that effort will lead to performance), instrumentality (belief that performance will lead to desired outcomes), and valence (how much those outcomes are valued. All three must be high for strong motivation.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN29",
+      "knId": "KN60",
       "source_file": "6 Motivation in Organizations.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2290,7 +2291,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 127,
+      "id": 115,
       "question": "According to equity theory (Adams), when employees perceive their inputs (effort, skills) to outcomes (pay, recognition) ratio is unfavorable compared to reference groups, they are most likely to:",
       "options": [
         "Immediately resign from their positions",
@@ -2301,7 +2302,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Reduce inputs (effort), increase outcomes (demand raises), change comparisons, or psychologically distort the situation",
       "explanation": "Equity theory proposes that inequitable situations create tension motivating restoration of equity. Employees may reduce effort (primary response), increase outcomes (request raises), change reference groups, or alter perception of equity. Overcompensated employees may also feel motivated to balance the ratio.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN29",
+      "knId": "KN61",
       "source_file": "6 Motivation in Organizations.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2310,7 +2311,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 128,
+      "id": 116,
       "question": "Organizational culture, as described by Schein, includes all of the following components EXCEPT:",
       "options": [
         "Shared basic assumptions and values underlying organizational behavior",
@@ -2321,7 +2322,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Economic indicators such as profitability and market share",
       "explanation": "Schein's three levels of organizational culture are: artifacts (visible elements), espoused values (stated principles), and basic underlying assumptions (unconscious beliefs driving behavior). Economic indicators reflect organizational performance outcomes, not cultural components.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN29",
+      "knId": "KN62",
       "source_file": "6 Organizational Culture and Climate.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "hard",
@@ -2330,7 +2331,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 129,
+      "id": 117,
       "question": "The role of organizational climate refers to:",
       "options": [
         "The physical environmental conditions of the workplace",
@@ -2341,7 +2342,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The shared perceptions and attitudes of employees regarding organizational policies, practices, and procedures",
       "explanation": "Organizational climate represents the collective perceptions of organizational policies, practices, and procedures. It's often measured through employee surveys and reflects how employees experience the work environment. Climate can facilitate or inhibit important outcomes like safety behaviors, innovation, and service quality.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN30",
+      "knId": "KN63",
       "source_file": "6 Organizational Culture and Climate.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2350,7 +2351,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 130,
+      "id": 118,
       "question": "360-degree feedback in organizational settings involves:",
       "options": [
         "Complete organizational restructuring and reorganization of roles",
@@ -2361,7 +2362,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Collecting performance feedback on an individual from multiple sources (supervisors, peers, subordinates, customers) to provide comprehensive perspective",
       "explanation": "360-degree feedback gathers ratings and comments from multiple raters around an individual, including supervisors, peers, direct reports, and sometimes customers or external stakeholders. This multi-source approach provides a broader perspective than traditional supervisor-only feedback and is valuable for development and leadership coaching.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN30",
+      "knId": "KN64",
       "source_file": "6 Performance Management and Feedback.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2370,7 +2371,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 131,
+      "id": 119,
       "question": "Transformational leadership (Burns, Bass) is characterized by leaders who demonstrate:",
       "options": [
         "Strict adherence to established procedures and contingent reward systems",
@@ -2381,7 +2382,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Inspiration, intellectual stimulation, individualized consideration, and idealized influence that motivates followers to exceed expected performance",
       "explanation": "Transformational leaders inspire followers to transcend self-interest, are intellectually stimulating, show genuine care for individual development, and model admired behaviors. Research shows transformational leadership predicts higher follower engagement, performance, satisfaction, and organizational commitment compared to transactional approaches.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN31",
+      "knId": "KN65",
       "source_file": "6 Leadership and Organizational Culture.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2390,7 +2391,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 132,
+      "id": 120,
       "question": "Organizational commitment, particularly affective commitment, is most strongly predicted by:",
       "options": [
         "Salary level and compensation package",
@@ -2401,7 +2402,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Fair treatment, meaningful work, supportive management, and organizational support for employee well-being",
       "explanation": "Affective commitment - emotional attachment and identification with the organization - is strongest when employees perceive fair treatment, meaningful contributions, supportive managers, and that the organization cares about their well-being. These factors create psychological contract fulfillment and sustained engagement.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN31",
+      "knId": "KN66",
       "source_file": "6 Organizational Commitment and Engagement.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2410,7 +2411,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 133,
+      "id": 121,
       "question": "Burnout in organizational settings is characterized by all of the following EXCEPT:",
       "options": [
         "Emotional exhaustion from work demands exceeding resources",
@@ -2421,7 +2422,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Enhanced motivation and strong sense of professional efficacy",
       "explanation": "Burnout (Maslach & Jackson) involves emotional exhaustion, cynicism/depersonalization, and reduced personal accomplishment. It results from chronic workplace stress when demands exceed resources. Burnout predicts turnover, health problems, and reduced performance. Opposite of burnout are energy, engagement, and efficacy.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN31",
+      "knId": "KN67",
       "source_file": "6 Stress and Burnout in Organizations.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2430,7 +2431,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 134,
+      "id": 122,
       "question": "Team effectiveness research suggests that successful teams are characterized by:",
       "options": [
         "Homogeneous composition with members of similar backgrounds and perspectives",
@@ -2441,7 +2442,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Clear goals, appropriate structure, psychologically safe climate, and high levels of psychological safety where members feel secure speaking up",
       "explanation": "Research on team effectiveness (Edmondson, Hackman) identifies critical factors: clear team objectives, appropriate structure for the task, psychological safety (ability to speak up without fear), mutual accountability, and coordination mechanisms. Diverse perspectives and constructive conflict actually enhance team performance.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN32",
+      "knId": "KN68",
       "source_file": "6 Team Dynamics and Psychological Safety.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2450,7 +2451,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 135,
+      "id": 123,
       "question": "Social facilitation and social inhibition effects in organizational contexts suggest that:",
       "options": [
         "Audience presence always improves performance on all tasks",
@@ -2461,7 +2462,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Presence of others enhances performance on well-learned tasks but inhibits performance on complex or novel tasks",
       "explanation": "Zajonc's drive theory explains that audience presence increases arousal, enhancing dominant (well-learned) responses but inhibiting complex (new/difficult) task performance. This has implications for training (practice tasks in private), performance (public evaluation of routine tasks), and team dynamics.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN32",
+      "knId": "KN69",
       "source_file": "6 Group Behavior and Performance.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "hard",
@@ -2470,7 +2471,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 159,
+      "id": 124,
       "question": "Informed consent in research or clinical practice requires that individuals understand:",
       "options": [
         "Only the time commitment required for participation",
@@ -2481,7 +2482,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The purposes, procedures, risks, benefits, alternatives, and their right to refuse or withdraw without penalty",
       "explanation": "Informed consent is an ethical and legal requirement that individuals receive adequate information to make autonomous decisions. Components include description of procedures, foreseeable risks and benefits, alternatives, limits of confidentiality, compensation, and right to refuse/withdraw without consequences.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN61",
+      "knId": "KN72",
       "source_file": "7 Informed Consent and Ethics.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "medium",
@@ -2490,7 +2491,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 160,
+      "id": 125,
       "question": "Confidentiality in clinical and research settings refers to:",
       "options": [
         "The therapist's right to share information with other healthcare providers without consent",
@@ -2501,7 +2502,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The practitioner's ethical and legal obligation to protect client/participant information from unauthorized disclosure",
       "explanation": "Confidentiality is the duty to keep client/participant information private and not disclose without consent. Limits to confidentiality include imminent danger to self/others, child/elder abuse, and some legal proceedings. Breaching confidentiality without justification violates ethical codes and may result in legal liability.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN61",
+      "knId": "KN73",
       "source_file": "7 Confidentiality and Privacy.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "medium",
@@ -2510,7 +2511,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 161,
+      "id": 126,
       "question": "Mandatory reporting requirements for psychologists typically apply to:",
       "options": [
         "All disclosures made in therapy sessions",
@@ -2521,7 +2522,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Suspected child abuse, elder adult abuse, dependent adult abuse, and imminent danger to self or others",
       "explanation": "Mandatory reporting laws require psychologists to report suspected abuse of vulnerable populations (children, elders, dependent adults) and imminent danger to self or others. Specific requirements vary by state. These are exceptions to confidentiality based on public safety and protection of vulnerable individuals.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN61",
+      "knId": "KN74",
       "source_file": "7 Mandatory Reporting Laws.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "medium",
@@ -2530,7 +2531,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 162,
+      "id": 127,
       "question": "Multiple relationships in psychology occur when a psychologist has:",
       "options": [
         "Multiple clients from the same family or organization",
@@ -2541,7 +2542,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Two or more distinct roles with the same person (e.g., therapist and friend, teacher and supervisor)",
       "explanation": "Multiple/dual relationships occur when a psychologist has a professional role plus an additional relationship with the same person. These are problematic because they create conflicts of interest, power imbalances, and role confusion. Most are prohibited unless clearly unavoidable or minimal risk (e.g., small rural communities).",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN62",
+      "knId": "KN75",
       "source_file": "7 Ethical Principles and Professional Conduct.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "medium",
@@ -2550,7 +2551,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 163,
+      "id": 128,
       "question": "The Tarasoff duty (Tarasoff v. Regents of UC) established that psychologists must:",
       "options": [
         "Maintain absolute confidentiality regardless of circumstances",
@@ -2561,7 +2562,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Warn identifiable victims and/or notify police when a client poses serious risk of harm to a specific person",
       "explanation": "Tarasoff liability requires that when a psychologist believes a client poses a serious threat to an identifiable victim, the therapist must take reasonable steps to protect, including warning the victim and/or notifying police. This exception to confidentiality balances client privacy with public safety when danger is imminent and specific.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN62",
+      "knId": "KN76",
       "source_file": "7 Legal Liability and Duty to Warn.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "hard",
@@ -2570,7 +2571,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 164,
+      "id": 129,
       "question": "Therapist-client sexual contact is considered unethical and typically illegal because:",
       "options": [
         "It violates professional codes and creates an inherent power imbalance where informed consent is impossible",
@@ -2581,7 +2582,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "It violates professional codes and creates an inherent power imbalance where informed consent and proper boundaries is impossible",
       "explanation": "Sexual contact between therapists and clients is prohibited by all major psychological organizations and is illegal in most jurisdictions. The power imbalance inherent in the therapeutic relationship makes genuine informed consent impossible, and such contact is always harmful. This applies during and often for extended periods after termination.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN62",
+      "knId": "KN77",
       "source_file": "7 Boundary Violations and Sexual Misconduct.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "medium",
@@ -2590,7 +2591,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 165,
+      "id": 130,
       "question": "Competence and scope of practice in psychology requires that practitioners:",
       "options": [
         "Can apply knowledge from their training to any psychological problem",
@@ -2601,7 +2602,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Limit their practice to areas where they have acquired education, training, and demonstrated competence through experience",
       "explanation": "Ethical practice requires competence - psychologists must practice only within areas where they have adequate education, training, and experience. Practicing outside one's competence is unethical and potentially harmful, violating ethical codes and potentially resulting in liability for inadequate care.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN63",
+      "knId": "KN78",
       "source_file": "7 Professional Competence and Scope.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "medium",
@@ -2610,7 +2611,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 192,
+      "id": 131,
       "question": "Cognitive-behavioral therapy (CBT) is based on the principle that:",
       "options": [
         "Unconscious conflicts are the primary drivers of psychological problems",
@@ -2621,7 +2622,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Thoughts, feelings, and behaviors are interconnected, and changing maladaptive thoughts and behaviors can improve emotional well-being",
       "explanation": "CBT focuses on the cognitive-behavioral model where maladaptive thoughts (cognitive distortions) maintain emotional problems and problematic behaviors. Therapy involves identifying and modifying these thoughts and behaviors. CBT is highly structured, short-term, and empirically supported for depression, anxiety, PTSD, and many other conditions.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN42",
+      "knId": "KN79",
       "source_file": "8 Cognitive-Behavioral Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2630,7 +2631,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 193,
+      "id": 132,
       "question": "Exposure therapy for anxiety disorders involves:",
       "options": [
         "Avoiding anxiety-provoking stimuli through systematic desensitization",
@@ -2641,7 +2642,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Repeatedly and safely exposing individuals to feared stimuli until anxiety naturally decreases (habituation) and threat beliefs are revised",
       "explanation": "Exposure therapy uses habituation and cognitive processing to reduce anxiety. Repeated, prolonged exposure to feared stimuli (real or imagined) leads to extinction of conditioned anxiety responses. Habituation occurs when the individual learns that the feared outcome does not occur, updating threat expectations.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN42",
+      "knId": "KN80",
       "source_file": "8 Exposure and Anxiety Treatment.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2650,7 +2651,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 194,
+      "id": 133,
       "question": "Psychodynamic therapy differs from CBT by:",
       "options": [
         "Using exclusively medication rather than psychological techniques",
@@ -2661,7 +2662,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Focusing on unconscious conflicts and historical patterns while employing less structured, longer-term interventions",
       "explanation": "Psychodynamic therapy emphasizes unconscious motivations, defense mechanisms, and how early relationships shape current patterns. It is less structured and typically longer-term than CBT. While CBT focuses on present thoughts/behaviors, psychodynamic work explores how the past influences present functioning.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN42",
+      "knId": "KN81",
       "source_file": "8 Psychodynamic Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2670,7 +2671,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 195,
+      "id": 134,
       "question": "Motivational interviewing (MI) is particularly effective for behaviors like substance abuse because it:",
       "options": [
         "Directly confronts resistance and forces behavior change",
@@ -2681,7 +2682,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Evokes and supports intrinsic motivation for change by resolving ambivalence and respecting autonomy",
       "explanation": "MI is a collaborative, client-centered approach emphasizing intrinsic motivation. Rather than confronting resistance (which backfires), MI uses open questions, affirmations, reflections, and summaries to help clients resolve ambivalence and increase commitment to change. Effective for substance abuse and behavior change.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN42",
+      "knId": "KN82",
       "source_file": "8 Motivational Interviewing.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2690,7 +2691,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 196,
+      "id": 135,
       "question": "Acceptance and Commitment Therapy (ACT) differs from traditional CBT by:",
       "options": [
         "Avoiding any discussion of negative thoughts or feelings",
@@ -2701,7 +2702,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Emphasizing acceptance of internal experiences (thoughts, feelings) while committing to values-aligned action",
       "explanation": "ACT uses acceptance and mindfulness alongside cognitive defusion and values clarification. Rather than trying to change or eliminate negative thoughts, ACT promotes accepting them while pursuing values-consistent behaviors. This third-wave approach is effective for chronic pain, anxiety, and psychological flexibility.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN43",
+      "knId": "KN83",
       "source_file": "8 Acceptance and Commitment Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "hard",
@@ -2710,7 +2711,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 197,
+      "id": 136,
       "question": "The therapeutic alliance in psychotherapy refers to:",
       "options": [
         "The therapist's clinical diagnosis of the client's condition",
@@ -2721,7 +2722,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The collaborative relationship between therapist and client, including agreement on goals, tasks, and emotional bond",
       "explanation": "The therapeutic alliance (or working alliance) is the degree of agreement on goals and tasks plus emotional bonding. Strong alliance predicts better outcomes across modalities and is often more predictive of success than specific technique. Building alliance is foundational to all forms of psychotherapy.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN43",
+      "knId": "KN84",
       "source_file": "8 Therapeutic Relationship and Alliance.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2730,7 +2731,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 198,
+      "id": 137,
       "question": "Empirically supported treatments (ESTs) are defined as:",
       "options": [
         "Any treatment that therapists believe is effective",
@@ -2741,7 +2742,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Treatments that have been tested in research studies with reasonable methodology, showing efficacy compared to control or alternative conditions",
       "explanation": "ESTs are based on empirical evidence from controlled research demonstrating efficacy. Examples include CBT for depression and anxiety, exposure therapy for PTSD, and behavioral interventions for child conduct problems. The EST movement promotes accountability and evidence-based practice in psychology.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN43",
+      "knId": "KN85",
       "source_file": "8 Evidence-Based Practice.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2750,7 +2751,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 199,
+      "id": 138,
       "question": "Systemic/family therapy approaches suggest that psychological problems involve:",
       "options": [
         "Individual pathology and internal psychological processes exclusively",
@@ -2761,7 +2762,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Problematic patterns in family relationships and broader systems, where the individual's symptoms serve a function in the system",
       "explanation": "Systemic approaches (structural, strategic, narrative family therapy) view problems as arising from dysfunctional relationship patterns, communication problems, and family structure issues rather than individual pathology alone. Symptoms often serve homeostatic functions in the system. Intervention targets system patterns, not just individuals.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN43",
+      "knId": "KN86",
       "source_file": "8 Family and Systemic Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2770,7 +2771,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 200,
+      "id": 139,
       "question": "Medication management in psychology (where psychologists can prescribe) involves understanding all of the following EXCEPT:",
       "options": [
         "Pharmacokinetics - how the body absorbs, distributes, and eliminates medications",
@@ -2781,7 +2782,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Individual psychotherapy techniques and protocols for all mental health conditions",
       "explanation": "Prescribing psychologists need knowledge of medication mechanisms, metabolism, and interactions with medical conditions, but they don't need to know all individual psychotherapy protocols. Prescribing psychology is specialized training focusing on medical knowledge, not comprehensive psychotherapy training.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN44",
+      "knId": "KN87",
       "source_file": "8 Psychopharmacology.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "hard",
@@ -2790,7 +2791,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 201,
+      "id": 140,
       "question": "Psychoeducation as a treatment component refers to:",
       "options": [
         "Testing clients' knowledge about their condition",
@@ -2801,7 +2802,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Providing clients with information about their diagnosis, symptoms, treatment options, and coping strategies to increase understanding and engagement",
       "explanation": "Psychoeducation involves sharing information to help clients understand their condition, reduce shame and stigma, and increase engagement in treatment. Particularly important in depression, bipolar disorder, schizophrenia, and anxiety. Informed clients are more adherent and often show better outcomes.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN44",
+      "knId": "KN88",
       "source_file": "8 Psychoeducation and Client Education.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2810,7 +2811,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 202,
+      "id": 141,
       "question": "Relapse prevention in treatment focuses on:",
       "options": [
         "Preventing any stress or negative emotions in the client's life",
@@ -2821,7 +2822,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Teaching clients to identify high-risk situations, develop coping strategies, and respond adaptively to lapses without full relapse",
       "explanation": "Relapse prevention (Marlatt & Gordon) acknowledges that lapses and setbacks may occur and prepares clients to handle them. Clients learn to recognize high-risk situations, develop alternative coping responses, and interpret lapses as learning opportunities rather than complete failure (abstinence violation effect).",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN44",
+      "knId": "KN89",
       "source_file": "8 Relapse Prevention.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -2830,7 +2831,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 120,
+      "id": 113,
       "question": "The Bonferroni correction in multiple hypothesis testing adjusts:",
       "options": [
         "Sample size calculations",
@@ -2841,7 +2842,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The alpha level or critical value to control familywise error rate when conducting multiple statistical tests",
       "explanation": "With multiple comparisons, the probability of Type I error increases. Bonferroni correction divides alpha by the number of tests (e.g., .05/10 = .005 for 10 tests), making each test more stringent. This conservative approach controls familywise error rate but reduces statistical power.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN59",
+      "knId": "KN70",
       "source_file": "5 Multiple Comparisons and Corrections.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2850,7 +2851,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 121,
+      "id": 114,
       "question": "Structural equation modeling (SEM) is used to:",
       "options": [
         "Determine causal relationships in non-experimental data definitively",
@@ -2861,7 +2862,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Test complex relationships among variables including direct and indirect (mediated) effects, and assess model fit",
       "explanation": "SEM allows simultaneous testing of multiple relationships, latent variables, and indirect effects (mediation). Path analysis, factor analysis, and regression can be integrated. SEM provides overall model fit indices (CFI, RMSEA) and can compare competing theoretical models.",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN60",
+      "knId": "KN71",
       "source_file": "5 Structural Equation Modeling.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2870,7 +2871,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 122,
+      "id": 115,
       "question": "A moderator variable in research is characterized by:",
       "options": [
         "A variable that explains the mechanism through which X affects Y",
@@ -2881,7 +2882,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "A variable that affects the strength or direction of the relationship between two other variables",
       "explanation": "Moderators specify when or for whom an effect occurs (e.g., CBT effectiveness may be moderated by age, with stronger effects for younger clients). Statistically detected through interaction effects. Contrasts with mediators (explain how/why) and covariates (controlled variables).",
       "domain": "Domain 7: Research Methods & Statistics",
-      "knId": "KN60",
+      "knId": "KN72",
       "source_file": "5 Moderation and Mediation Analysis.md",
       "source_folder": "5 Measurement and Statistics",
       "difficulty": "hard",
@@ -2890,7 +2891,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 136,
+      "id": 123,
       "question": "Organizational justice theory (Adams, Leventhal) identifies multiple dimensions of fairness, including:",
       "options": [
         "Only fairness of outcomes received",
@@ -2901,7 +2902,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Procedural justice (fairness of processes), distributive justice (fairness of outcomes), and interactional justice (quality of communication and treatment)",
       "explanation": "Organizational justice theory identifies three dimensions: distributive (Are outcomes fair?), procedural (Was the process fair?), and interactional (Was I treated with respect?). Perceptions of justice affect organizational commitment, satisfaction, and discretionary effort.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN33",
+      "knId": "KN70",
       "source_file": "6 Organizational Justice.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2910,7 +2911,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 137,
+      "id": 124,
       "question": "Job satisfaction research demonstrates that satisfaction is most strongly influenced by:",
       "options": [
         "Salary level exclusively",
@@ -2921,7 +2922,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Work itself, relationships with supervisors and coworkers, opportunities for growth, and fair treatment",
       "explanation": "Herzberg's two-factor theory and subsequent research identify that intrinsic factors (meaningful work, autonomy, advancement) and social factors (relationships, supervision quality) predict satisfaction more strongly than salary alone. A good salary may prevent dissatisfaction but doesn't ensure satisfaction.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN33",
+      "knId": "KN71",
       "source_file": "6 Job Satisfaction and Motivation.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2930,7 +2931,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 138,
+      "id": 125,
       "question": "Absenteeism and turnover in organizations are most effectively reduced through:",
       "options": [
         "Strict attendance policies and threat of termination",
@@ -2941,7 +2942,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Creating meaningful work, supportive management, fair compensation, and opportunities for growth",
       "explanation": "Retention research shows that employees leave due to lack of growth, poor management, unfair treatment, and lack of meaningful work more than low salary. Positive organizational culture, supportive leadership, and career development reduce turnover and associated costs.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN33",
+      "knId": "KN72",
       "source_file": "6 Retention and Turnover.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "medium",
@@ -2950,7 +2951,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 139,
+      "id": 126,
       "question": "Groupthink (Janis) occurs in cohesive groups and is characterized by all of the following EXCEPT:",
       "options": [
         "Illusion of unanimity and suppression of dissenting views",
@@ -2961,7 +2962,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Careful consideration of alternative viewpoints and critical evaluation of proposed courses of action",
       "explanation": "Groupthink involves cohesive groups suppressing critical thinking and dissent, leading to poor decisions. Symptoms include mindguards, illusion of unanimity, and pressure on dissenters. Prevention requires promoting critical evaluation, seeking outside perspectives, and encouraging dissent.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN34",
+      "knId": "KN73",
       "source_file": "6 Group Decision Making.md",
       "source_folder": "2 3 5 6 Organizational Psychology",
       "difficulty": "hard",
@@ -2970,7 +2971,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": true
     },
     {
-      "id": 166,
+      "id": 131,
       "question": "The principle of beneficence in psychological practice requires that:",
       "options": [
         "Psychologists maximize benefits and welfare for clients while minimizing potential harms",
@@ -2981,7 +2982,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Psychologists maximize benefits and welfare for clients while minimizing potential harms",
       "explanation": "Beneficence, a core ethical principle, requires that psychologists act in clients' best interests, do good, and minimize harm. This guides treatment selection, informed consent, and professional obligations. Contrasts with maleficence (doing no harm) and requires ongoing assessment of whether interventions are beneficial.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN63",
+      "knId": "KN79",
       "source_file": "7 Ethical Principles.md",
       "source_folder": "7 Ethics and Legal",
       "difficulty": "medium",
@@ -2990,7 +2991,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 203,
+      "id": 142,
       "question": "Dialectical Behavior Therapy (DBT) is particularly effective for borderline personality disorder because it combines:",
       "options": [
         "Only cognitive-behavioral techniques",
@@ -3001,7 +3002,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Cognitive-behavioral skills training, individual therapy, phone coaching, and therapist consultation teams with emphasis on acceptance and validation",
       "explanation": "DBT (Linehan) integrates CBT with Zen acceptance, dialectics (accepting contradictions), and a multi-component format (skills training, individual therapy, phone coaching, consultation teams). This comprehensive approach addresses the high suicide risk and treatment resistance in BPD.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN44",
+      "knId": "KN90",
       "source_file": "8 Dialectical Behavior Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "hard",
@@ -3010,7 +3011,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 204,
+      "id": 143,
       "question": "Schema therapy extends CBT by:",
       "options": [
         "Eliminating the need for behavioral techniques",
@@ -3021,7 +3022,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Addressing deep-seated patterns (schemas) formed in childhood that maintain psychological problems across situations",
       "explanation": "Schema therapy (Young) integrates CBT with psychodynamic concepts, addressing maladaptive schemas (core beliefs) developed early. Uses experiential techniques, imagery, and chair work alongside cognition and behavior change to modify entrenched patterns.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN45",
+      "knId": "KN91",
       "source_file": "8 Schema Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "hard",
@@ -3030,7 +3031,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 205,
+      "id": 144,
       "question": "Mindfulness-based interventions (MBIs) like MBSR and MBCT work through:",
       "options": [
         "Elimination of all negative thoughts and emotions",
@@ -3041,7 +3042,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Cultivating present-moment awareness and non-judgmental acceptance of experiences, reducing rumination and enhancing psychological flexibility",
       "explanation": "MBIs develop metacognitive awareness (observing thoughts without judgment) and acceptance. Research shows efficacy for depression relapse, anxiety, chronic pain, and stress reduction. Related to third-wave behavioral approaches emphasizing acceptance and values over thought change.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN45",
+      "knId": "KN92",
       "source_file": "8 Mindfulness-Based Interventions.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -3050,7 +3051,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 206,
+      "id": 145,
       "question": "Crisis intervention in mental health emphasizes:",
       "options": [
         "Providing long-term psychotherapy during acute crises",
@@ -3061,7 +3062,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Immediate stabilization, safety assessment, support, and resource connection to restore equilibrium",
       "explanation": "Crisis intervention focuses on immediate goals: ensuring safety, reducing distress, and connecting to resources. Not designed for ongoing treatment but for rapid stabilization, after which ongoing treatment may be provided. Time-limited and problem-focused.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN45",
+      "knId": "KN93",
       "source_file": "8 Crisis Intervention.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -3070,7 +3071,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 207,
+      "id": 146,
       "question": "Treatment of PTSD with prolonged exposure therapy is based on:",
       "options": [
         "Avoidance of trauma reminders",
@@ -3081,7 +3082,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Repeated safe exposure to trauma memories and reminders to promote extinction of fear conditioning and cognitive processing of the trauma",
       "explanation": "Prolonged exposure treats PTSD through habituation to trauma memories and trauma-related cues. Imaginal exposure (discussing trauma) and in vivo exposure (approaching real-world reminders) reduce conditioned fear. Cognitive processing through exposure updates threat beliefs.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN45",
+      "knId": "KN94",
       "source_file": "8 PTSD Treatment and Trauma Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "hard",
@@ -3090,7 +3091,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 208,
+      "id": 147,
       "question": "Group therapy offers distinct advantages over individual therapy, including:",
       "options": [
         "Identical outcomes with lower cost",
@@ -3101,7 +3102,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Peer support, feedback from others with similar problems, opportunity to develop social skills, and vicarious learning",
       "explanation": "Group therapy provides unique factors (Yalom): instillation of hope, universality, altruism, interpersonal learning, and group cohesion. Research shows group formats effective for depression, anxiety, substance abuse, and social skill development, often with lower cost than individual therapy.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN46",
+      "knId": "KN95",
       "source_file": "8 Group Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "medium",
@@ -3110,7 +3111,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 209,
+      "id": 148,
       "question": "Cognitive processing therapy (CPT) for PTSD differs from prolonged exposure by emphasizing:",
       "options": [
         "Avoidance of trauma discussion",
@@ -3121,7 +3122,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Detailed cognitive work on trauma-related beliefs and meanings alongside exposure to trauma memories",
       "explanation": "CPT combines exposure with cognitive processing worksheets where clients examine stuck points (problematic beliefs like self-blame). By updating beliefs about safety, trust, and self-worth alongside exposure, CPT addresses both fear conditioning and cognitive processing of trauma.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN46",
+      "knId": "KN96",
       "source_file": "8 Cognitive Processing Therapy.md",
       "source_folder": "8 Intervention and Treatment",
       "difficulty": "hard",
@@ -3130,7 +3131,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 96,
+      "id": 156,
       "question": "Puberty typically begins at approximately what age range in girls, and what hormonal changes trigger development?",
       "options": [
         "Ages 8-12; increased estrogen and progesterone",
@@ -3141,7 +3142,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Ages 8-12; increased estrogen and progesterone",
       "explanation": "Puberty onset varies but typically begins earlier in girls (8-13) than boys (9-14), triggered by GnRH hormone releasing FSH and LH.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN26",
+      "knId": "KN80",
       "source_file": "4 Puberty and Adolescent Development.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "hard",
@@ -3150,7 +3151,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 97,
+      "id": 157,
       "question": "Research by Bell and Ainsworth showed that infants with secure attachment had mothers who were:",
       "options": [
         "Highly protective and restrictive",
@@ -3161,7 +3162,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Responsive to infant cues and sensitive to needs",
       "explanation": "Maternal sensitivity and responsiveness predict secure attachment, not restrictiveness or permissiveness.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN26",
+      "knId": "KN81",
       "source_file": "4 Maternal Sensitivity and Secure Attachment.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3170,7 +3171,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 98,
+      "id": 158,
       "question": "Piaget's formal operational stage (ages 11+) involves the ability to:",
       "options": [
         "Think concretely only about visible objects",
@@ -3181,7 +3182,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Engage in abstract thinking and hypothetical reasoning",
       "explanation": "Formal operations enable abstract thought, logical deduction, and considering hypothetical scenarios.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN26",
+      "knId": "KN82",
       "source_file": "4 Cognitive Development: Formal Operations.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3190,7 +3191,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 99,
+      "id": 159,
       "question": "Longitudinal studies of quality early childhood programs (e.g., Perry Preschool) show long-term benefits including:",
       "options": [
         "Immediate IQ gains that remain constant",
@@ -3201,7 +3202,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Higher graduation rates, earnings, and civic engagement in adulthood",
       "explanation": "Research on early childhood education effects on development demonstrates this developmental principle.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN27",
+      "knId": "KN159",
       "source_file": "4 Early childhood education effects on development.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3210,7 +3211,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 100,
+      "id": 160,
       "question": "Children typically produce their first words around:",
       "options": [
         "3-4 months of age",
@@ -3221,7 +3222,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "8-12 months of age",
       "explanation": "Research on language development milestones demonstrates this developmental principle.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN27",
+      "knId": "KN160",
       "source_file": "4 Language development milestones.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3230,7 +3231,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 101,
+      "id": 161,
       "question": "Stranger anxiety typically emerges around which developmental period?",
       "options": [
         "2-3 months",
@@ -3241,7 +3242,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "6-8 months",
       "explanation": "Research on stranger anxiety and separation anxiety demonstrates this developmental principle.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN27",
+      "knId": "KN161",
       "source_file": "4 Stranger anxiety and separation anxiety.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3250,7 +3251,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 102,
+      "id": 162,
       "question": "Reactive attachment disorder is characterized by:",
       "options": [
         "Reduced emotional responsiveness and lack of seeking comfort from caregivers",
@@ -3261,7 +3262,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Reduced emotional responsiveness and lack of seeking comfort from caregivers",
       "explanation": "Research on attachment disorder identification demonstrates this developmental principle.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN28",
+      "knId": "KN162",
       "source_file": "4 Attachment disorder identification.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3270,7 +3271,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 103,
+      "id": 163,
       "question": "Pretend/symbolic play typically emerges around:",
       "options": [
         "6-12 months",
@@ -3281,7 +3282,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "18-24 months",
       "explanation": "Research in psychology demonstrates that pretend/symbolic play typically emerges around: Understanding this principle is essential for 18-24 months. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN28",
+      "knId": "KN163",
       "source_file": "4 Play development stages.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3290,7 +3291,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 104,
+      "id": 164,
       "question": "Self-regulation and impulse control develop significantly during which period?",
       "options": [
         "Infancy (0-12 months)",
@@ -3301,7 +3302,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Preschool (3-5 years)",
       "explanation": "Research on self-regulation development demonstrates this developmental principle.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN28",
+      "knId": "KN164",
       "source_file": "4 Self-regulation development.md",
       "source_folder": "4 Lifespan Development",
       "difficulty": "medium",
@@ -3310,7 +3311,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 140,
+      "id": 165,
       "question": "The Minnesota Multiphasic Personality Inventory (MMPI-2) is most useful for:",
       "options": [
         "Intelligence assessment",
@@ -3321,7 +3322,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Identifying psychopathology and personality patterns",
       "explanation": "Research in psychology demonstrates that the minnesota multiphasic personality inventory (mmpi-2) is most useful for: Understanding this principle is essential for identifying psychopathology and personality patterns. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN34",
+      "knId": "KN165",
       "source_file": "5 Clinical assessment tools.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3330,7 +3331,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 141,
+      "id": 166,
       "question": "Test-retest reliability measures:",
       "options": [
         "Whether items on a test correlate with each other",
@@ -3341,7 +3342,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Whether test scores remain stable over time",
       "explanation": "Test-retest reliability assesses measurement stability by administering the same test to the same individuals at different times and correlating the scores. High test-retest reliability indicates that the test produces consistent results across occasions.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN35",
+      "knId": "KN166",
       "source_file": "5 Reliability types.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3350,7 +3351,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 142,
+      "id": 167,
       "question": "The DSM-5 specifies that for Major Depressive Disorder diagnosis, symptoms must be present for at least:",
       "options": [
         "1 week continuously",
@@ -3361,7 +3362,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "2 weeks with most days symptomatic",
       "explanation": "Research in psychology demonstrates that the dsm-5 specifies that for major depressive disorder diagnosis, symptoms must be present for at least: Understanding this principle is essential for 2 weeks with most days symptomatic. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN35",
+      "knId": "KN167",
       "source_file": "5 DSM-5 criteria.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3370,7 +3371,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 143,
+      "id": 168,
       "question": "A criterion-referenced test score indicates:",
       "options": [
         "How a person scores relative to others (percentile)",
@@ -3381,7 +3382,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Whether specific behavioral criteria have been met",
       "explanation": "Assessment and diagnosis principle related to criterion-referenced interpretation.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN35",
+      "knId": "KN168",
       "source_file": "5 Criterion-referenced interpretation.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3390,7 +3391,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 144,
+      "id": 169,
       "question": "Generalized anxiety disorder differs from normal worry by:",
       "options": [
         "Worry intensity only",
@@ -3401,7 +3402,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Duration (6+ months), difficulty controlling worry, and physical symptoms",
       "explanation": "Research in psychology demonstrates that generalized anxiety disorder differs from normal worry by: Understanding this principle is essential for duration (6+ months), difficulty controlling worry, and physical symptoms. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN36",
+      "knId": "KN169",
       "source_file": "5 Anxiety disorders.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3410,7 +3411,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 145,
+      "id": 170,
       "question": "Personality disorders are distinguished from other mental disorders by:",
       "options": [
         "Being more common in males",
@@ -3421,7 +3422,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Being inflexible patterns that persist across contexts and time",
       "explanation": "Research in psychology demonstrates that personality disorders are distinguished from other mental disorders by: Understanding this principle is essential for being inflexible patterns that persist across contexts and time. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN36",
+      "knId": "KN170",
       "source_file": "5 Personality disorders.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3430,7 +3431,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 146,
+      "id": 171,
       "question": "The validity of a diagnosis is best supported by:",
       "options": [
         "Clinician consensus",
@@ -3441,7 +3442,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Empirical relationships with outcomes, treatment response, and etiology",
       "explanation": "Research in psychology demonstrates that the validity of a diagnosis is best supported by: Understanding this principle is essential for empirical relationships with outcomes, treatment response, and etiology. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN36",
+      "knId": "KN171",
       "source_file": "5 Diagnostic validity.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3450,7 +3451,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 147,
+      "id": 172,
       "question": "The purpose of using standardization samples in test development is to:",
       "options": [
         "Increase test difficulty",
@@ -3461,7 +3462,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Establish norms for comparison and interpretation",
       "explanation": "Research in psychology demonstrates that the purpose of using standardization samples in test development is to: Understanding this principle is essential for establish norms for comparison and interpretation. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN37",
+      "knId": "KN172",
       "source_file": "5 Standardization samples.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3470,7 +3471,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 210,
+      "id": 173,
       "question": "Behavioral activation for depression involves:",
       "options": [
         "Prescribing antidepressant medication",
@@ -3481,7 +3482,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Scheduling and engaging in value-aligned activities to increase mood-related reinforcement",
       "explanation": "Research in psychology demonstrates that behavioral activation for depression involves: Understanding this principle is essential for scheduling and engaging in value-aligned activities to increase mood-related reinforcement. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN46",
+      "knId": "KN173",
       "source_file": "6 Behavioral activation.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3490,7 +3491,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 211,
+      "id": 174,
       "question": "Parent-child interaction therapy is most effective for which age group?",
       "options": [
         "Adolescents",
@@ -3501,7 +3502,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Young children (2-7 years)",
       "explanation": "Research in psychology demonstrates that parent-child interaction therapy is most effective for which age group? Understanding this principle is essential for young children (2-7 years). This reflects evidence-based practice standards in the field.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN47",
+      "knId": "KN174",
       "source_file": "6 Parent-child interaction therapy.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3510,7 +3511,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 212,
+      "id": 175,
       "question": "Integrative psychotherapy approaches combine:",
       "options": [
         "Only cognitive and behavioral techniques",
@@ -3521,7 +3522,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Multiple theoretical orientations and techniques adapted to client needs",
       "explanation": "Integrative psychotherapy approaches combine theoretical orientations and techniques from multiple modalities (cognitive, behavioral, psychodynamic, humanistic) and adapt them flexibly based on individual client needs and treatment response.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN47",
+      "knId": "KN175",
       "source_file": "6 Psychotherapy integration.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3530,7 +3531,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 167,
+      "id": 176,
       "question": "A boundary crossing (vs. violation) in therapy is:",
       "options": [
         "Always harmful to the client",
@@ -3541,7 +3542,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "A deviation that may be clinically appropriate if carefully justified",
       "explanation": "A boundary crossing represents a deviation from standard practice that may be clinically justified (e.g., a small self-disclosure), whereas a boundary violation is harmful and exploitative. Professional judgment distinguishes between the two.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN63",
+      "knId": "KN176",
       "source_file": "8 Boundary crossings.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -3550,7 +3551,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 148,
+      "id": 177,
       "question": "DSM-5 PTSD requires exposure to actual or threatened death, serious injury, or sexual violence, followed by symptoms lasting more than:",
       "options": [
         "2 weeks",
@@ -3561,7 +3562,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "1 month",
       "explanation": "The DSM-5 diagnostic criteria for this condition specify particular requirements for duration, symptom patterns, and functional impairment. The correct answer reflects the official diagnostic threshold and temporal requirements established by the DSM-5.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN37",
+      "knId": "KN177",
       "source_file": "5 DSM-5 PTSD criteria.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3570,7 +3571,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 149,
+      "id": 178,
       "question": "The restricting subtype of Anorexia Nervosa is distinguished by:",
       "options": [
         "Binge eating episodes",
@@ -3581,7 +3582,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Weight loss through diet and exercise only (no binge/purge episodes)",
       "explanation": "This reflects psychological research and professional standards related to The restricting subtype of Anorexia Nervosa is dis. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN38",
+      "knId": "KN178",
       "source_file": "5 Eating disorder subtypes.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3590,7 +3591,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 150,
+      "id": 179,
       "question": "Substance Use Disorder diagnosis requires evidence of impairment or distress plus at least how many criteria within a 12-month period?",
       "options": [
         "2 criteria",
@@ -3601,7 +3602,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "2 criteria",
       "explanation": "Substance Use Disorder is diagnosed when individuals meet a threshold number of criteria within a 12-month period, indicating a clinically significant pattern of impaired control and continued use despite harm.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN38",
+      "knId": "KN179",
       "source_file": "5 Substance use disorder.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3610,7 +3611,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 151,
+      "id": 180,
       "question": "Adjustment disorder is characterized by:",
       "options": [
         "Severe personality dysfunction",
@@ -3621,7 +3622,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Emotional or behavioral symptoms in response to identifiable stressor",
       "explanation": "Adjustment disorders are characterized by emotional or behavioral symptoms that emerge in response to an identifiable stressor, with onset within three months and symptoms that don't persist more than six months after stressor cessation.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN38",
+      "knId": "KN180",
       "source_file": "5 Adjustment disorder.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3630,7 +3631,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 152,
+      "id": 181,
       "question": "Specific phobia differs from normal fear by:",
       "options": [
         "Duration of 6+ months and functional impairment",
@@ -3641,7 +3642,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Duration of 6+ months and functional impairment",
       "explanation": "Specific phobia involves intense, persistent fear of a particular object or situation that causes significant distress or impairment and lasts at least six months, distinguishing it from normal fear responses.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN39",
+      "knId": "KN181",
       "source_file": "5 Specific phobia.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3650,7 +3651,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 153,
+      "id": 182,
       "question": "Agoraphobia differs from Panic Disorder in that:",
       "options": [
         "It involves panic attacks with restricted situations",
@@ -3661,7 +3662,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "It focuses on fear of situations where escape is difficult, regardless of panic attacks",
       "explanation": "Research in psychology demonstrates that agoraphobia differs from panic disorder in that: Understanding this principle is essential for it focuses on fear of situations where escape is difficult, regardless of panic attacks. This reflects evidence-based practice standards in the field.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN39",
+      "knId": "KN182",
       "source_file": "5 Panic Disorder vs. Agoraphobia.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3670,7 +3671,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 154,
+      "id": 183,
       "question": "Obsessions in Obsessive-Compulsive Disorder are defined as:",
       "options": [
         "Unwanted, intrusive thoughts causing anxiety or distress",
@@ -3681,7 +3682,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Unwanted, intrusive thoughts causing anxiety or distress",
       "explanation": "This reflects psychological research and professional standards related to Obsessions in Obsessive-Compulsive Disorder are de. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN40",
+      "knId": "KN183",
       "source_file": "5 OCD diagnostic criteria.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3690,7 +3691,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 155,
+      "id": 184,
       "question": "Hoarding disorder is characterized by:",
       "options": [
         "Occasional collecting of valuable items",
@@ -3701,7 +3702,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Persistent difficulty discarding possessions due to perceived utility or emotional attachment",
       "explanation": "Hoarding disorder is characterized by persistent difficulty discarding possessions regardless of actual value, with the difficulty being driven by strong urges to save items and distress at discarding them.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN40",
+      "knId": "KN184",
       "source_file": "5 Hoarding disorder.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3710,7 +3711,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 156,
+      "id": 185,
       "question": "Body Dysmorphic Disorder involves:",
       "options": [
         "Realistic concern about actual physical defects",
@@ -3721,7 +3722,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Preoccupation with perceived defects in appearance not observable or slight to others",
       "explanation": "Body Dysmorphic Disorder involves preoccupation with perceived defects in physical appearance that are not observable or appear slight to others, combined with repetitive behaviors or mental acts performed in response to the appearance concerns.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN40",
+      "knId": "KN185",
       "source_file": "5 Body Dysmorphic Disorder.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3730,7 +3731,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 157,
+      "id": 186,
       "question": "Somatic Symptom Disorder requires:",
       "options": [
         "At least one medically unexplained symptom",
@@ -3741,7 +3742,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Excessive thoughts, feelings, or behaviors related to somatic symptoms for 6+ months",
       "explanation": "Somatic Symptom Disorder is defined by excessive thoughts, feelings, or behaviors related to somatic symptoms lasting at least six months, creating significant distress and impairment regardless of whether symptoms are medically explained.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN41",
+      "knId": "KN186",
       "source_file": "5 Somatic Symptom Disorder.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3750,7 +3751,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 158,
+      "id": 187,
       "question": "Illness Anxiety Disorder is distinguished from Somatic Symptom Disorder by:",
       "options": [
         "Presence of severe somatic symptoms",
@@ -3761,7 +3762,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Preoccupation with having or acquiring illness with minimal/no symptoms",
       "explanation": "Somatic Symptom Disorder is defined by excessive thoughts, feelings, or behaviors related to somatic symptoms lasting at least six months, creating significant distress and impairment regardless of whether symptoms are medically explained.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
-      "knId": "KN41",
+      "knId": "KN187",
       "source_file": "5 Illness Anxiety Disorder.md",
       "source_folder": "5 Assessment and Diagnosis",
       "difficulty": "medium",
@@ -3770,7 +3771,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 213,
+      "id": 188,
       "question": "Meta-analyses of psychotherapy outcomes show:",
       "options": [
         "Most therapies are equally effective",
@@ -3781,7 +3782,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Specific therapeutic approaches vary in effectiveness for different disorders",
       "explanation": "This reflects psychological research and professional standards related to Meta-analyses of psychotherapy outcomes show:. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN47",
+      "knId": "KN188",
       "source_file": "6 Psychotherapy efficacy.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3790,7 +3791,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 214,
+      "id": 189,
       "question": "Therapist empathy has been shown to:",
       "options": [
         "Reduce therapy effectiveness by increasing client dependence",
@@ -3801,7 +3802,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Predict better treatment outcomes across therapeutic modalities",
       "explanation": "This reflects psychological research and professional standards related to Therapist empathy has been shown to:. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN47",
+      "knId": "KN189",
       "source_file": "6 Empathy in therapy.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3810,7 +3811,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 215,
+      "id": 190,
       "question": "Treatment dropout is most predicted by:",
       "options": [
         "Low motivation exclusively",
@@ -3821,7 +3822,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Poor therapeutic alliance and perceived relevance of treatment",
       "explanation": "Treatment dropout is most predicted by poor therapeutic alliance\u2014the collaborative relationship between therapist and client\u2014and lack of perceived relevance of treatment to the client's presenting concerns.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN48",
+      "knId": "KN190",
       "source_file": "6 Treatment dropout.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3830,7 +3831,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 216,
+      "id": 191,
       "question": "SSRIs are particularly effective for treating:",
       "options": [
         "Bipolar I Disorder exclusively",
@@ -3841,7 +3842,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Major Depressive Disorder, Anxiety Disorders, and OCD",
       "explanation": "This reflects psychological research and professional standards related to SSRIs are particularly effective for treating:. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN48",
+      "knId": "KN191",
       "source_file": "6 Antidepressant efficacy.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3850,7 +3851,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 217,
+      "id": 192,
       "question": "Antipsychotic medications work primarily through:",
       "options": [
         "Increasing dopamine in all brain regions",
@@ -3861,7 +3862,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Blocking dopamine receptors in mesolimbic and mesocortical pathways",
       "explanation": "Antipsychotic medications work primarily by blocking dopamine D2 receptors in mesolimbic and mesocortical pathways, reducing positive symptoms of psychosis including hallucinations and delusions.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN48",
+      "knId": "KN192",
       "source_file": "6 Psychosis treatment.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3870,7 +3871,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 218,
+      "id": 193,
       "question": "Extrapyramidal side effects of antipsychotics include:",
       "options": [
         "Weight gain and metabolic changes",
@@ -3881,7 +3882,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Movement disorders, muscle tension, and tremor",
       "explanation": "Antipsychotic medications work primarily by blocking dopamine D2 receptors in mesolimbic and mesocortical pathways, reducing positive symptoms of psychosis including hallucinations and delusions.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN48",
+      "knId": "KN193",
       "source_file": "6 Medication side effects.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3890,7 +3891,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 219,
+      "id": 194,
       "question": "Research on combined psychotherapy and medication shows:",
       "options": [
         "Psychotherapy alone is always superior",
@@ -3901,7 +3902,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Combined treatment is often more effective than either alone for many disorders",
       "explanation": "Research demonstrates that combined psychotherapy and pharmacotherapy often produces superior outcomes compared to either treatment alone for many conditions, including depression, anxiety disorders, and bipolar disorder.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN49",
+      "knId": "KN194",
       "source_file": "6 Combined treatment.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3910,7 +3911,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 220,
+      "id": 195,
       "question": "Psychiatric hospitalization is typically considered when:",
       "options": [
         "Mild anxiety is present",
@@ -3921,7 +3922,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Imminent danger to self or others, or inability to care for basic needs",
       "explanation": "Psychiatric hospitalization is indicated when individuals pose imminent danger to themselves or others, or when they are unable to care for basic needs like food, shelter, or medication management.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN49",
+      "knId": "KN195",
       "source_file": "6 Hospitalization criteria.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3930,7 +3931,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 221,
+      "id": 196,
       "question": "Solution-focused brief therapy emphasizes:",
       "options": [
         "Exploring historical trauma in depth",
@@ -3941,7 +3942,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Building on exceptions and solutions already present in the client's life",
       "explanation": "Solution-focused brief therapy emphasizes identifying exceptions to the problem (times when the problem doesn't occur) and building solutions based on existing strengths and resources rather than focusing on problem etiology.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN49",
+      "knId": "KN196",
       "source_file": "6 Brief therapy.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3950,7 +3951,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 222,
+      "id": 197,
       "question": "Trauma-focused CBT includes:",
       "options": [
         "Psychoeducation about trauma reactions, cognitive processing, and exposure",
@@ -3961,7 +3962,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Psychoeducation about trauma reactions, cognitive processing, and exposure",
       "explanation": "Trauma-focused CBT integrates cognitive processing of trauma memories with behavioral exposure to trauma-related stimuli and reminders, enabling updating of threat-related beliefs and reducing avoidance.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN49",
+      "knId": "KN197",
       "source_file": "6 Trauma-focused CBT.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3970,7 +3971,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 223,
+      "id": 198,
       "question": "Play therapy is particularly effective for:",
       "options": [
         "Adult anxiety disorders",
@@ -3981,7 +3982,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Children's trauma, behavioral problems, and emotional expression",
       "explanation": "Play therapy is particularly effective for children because play is their natural mode of communication and expression. It allows children to safely process trauma, express emotions, and develop coping skills.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN50",
+      "knId": "KN198",
       "source_file": "6 Play therapy.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -3990,7 +3991,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 224,
+      "id": 199,
       "question": "Suicide risk assessment should include:",
       "options": [
         "Ideation, intent, plan, access to means, and protective factors",
@@ -4001,7 +4002,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Ideation, intent, plan, access to means, and protective factors",
       "explanation": "Comprehensive suicide risk assessment evaluates the presence of suicidal ideation, intent, specific plan, access to lethal means, and protective factors. This multidimensional evaluation informs treatment intensity and safety planning.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN50",
+      "knId": "KN199",
       "source_file": "6 Suicide risk assessment.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -4010,7 +4011,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 225,
+      "id": 200,
       "question": "Cultural competence in treatment involves:",
       "options": [
         "Applying identical treatment regardless of background",
@@ -4021,7 +4022,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Understanding client cultural context, adapting interventions, and addressing cultural factors",
       "explanation": "Cultural competence in treatment requires understanding how cultural context shapes the client's worldview, adapting interventions to align with cultural values, and addressing how discrimination or cultural factors contribute to presenting problems.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN50",
+      "knId": "KN200",
       "source_file": "6 Cultural competence.md",
       "source_folder": "6 Treatment and Intervention",
       "difficulty": "medium",
@@ -4030,7 +4031,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 168,
+      "id": 201,
       "question": "Violating the ethics code can result in:",
       "options": [
         "Loss of license, legal liability, and civil suits",
@@ -4041,7 +4042,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Loss of license, legal liability, and civil suits",
       "explanation": "Violating the ethics code can result in loss of professional license, civil lawsuits for damages, criminal prosecution for certain violations, and significant professional consequences including loss of employment and reputation.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN64",
+      "knId": "KN201",
       "source_file": "8 Ethics code violations.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4050,7 +4051,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 169,
+      "id": 202,
       "question": "Professional liability insurance covers:",
       "options": [
         "Intentional misconduct and criminal behavior",
@@ -4061,7 +4062,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Alleged negligence or wrongdoing in professional practice",
       "explanation": "This reflects psychological research and professional standards related to Professional liability insurance covers:. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN64",
+      "knId": "KN202",
       "source_file": "8 Malpractice insurance.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4070,7 +4071,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 170,
+      "id": 203,
       "question": "Psychological license requirements typically include:",
       "options": [
         "Doctoral degree in psychology and supervised practice hours",
@@ -4081,7 +4082,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Doctoral degree in psychology and supervised practice hours",
       "explanation": "This reflects psychological research and professional standards related to Psychological license requirements typically inclu. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN64",
+      "knId": "KN203",
       "source_file": "8 Licensing requirements.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4090,7 +4091,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 171,
+      "id": 204,
       "question": "The 'duty to treat' principle means:",
       "options": [
         "Psychologists must treat every person regardless of ability to pay",
@@ -4101,7 +4102,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Psychologists have an ethical obligation to provide competent treatment to those they accept as clients",
       "explanation": "The duty to treat principle establishes that psychologists accepting a client into treatment have an ethical obligation to provide competent care. However, psychologists may decline clients outside their competence or who require different services.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
+      "knId": "KN204",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4110,7 +4111,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 172,
+      "id": 205,
       "question": "Psychologists must practice within their domains of competence, which are determined by:",
       "options": [
         "Personal interest",
@@ -4121,7 +4122,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Education, training, supervised experience, and demonstrated expertise",
       "explanation": "Professional competence is determined by formal education and training, supervised professional experience, demonstrated expertise through continuing education, and understanding of the limits of one's knowledge and skills.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
+      "knId": "KN205",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4130,7 +4131,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 173,
+      "id": 206,
       "question": "If a client refuses recommended treatment, the psychologist should:",
       "options": [
         "Treat anyway for the client's benefit",
@@ -4141,7 +4142,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Document the refusal and risks, ensure understanding, and accept the client's autonomy",
       "explanation": "This reflects psychological research and professional standards related to If a client refuses recommended treatment, the psy. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
+      "knId": "KN206",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4150,7 +4151,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 174,
+      "id": 207,
       "question": "Clinical records should typically be kept for:",
       "options": [
         "1 year after treatment ends",
@@ -4161,7 +4162,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "The duration of treatment plus 3-7 years (varies by state/context)",
       "explanation": "This reflects psychological research and professional standards related to Clinical records should typically be kept for:. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
+      "knId": "KN207",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4170,7 +4171,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 175,
+      "id": 208,
       "question": "Psychological advertising must:",
       "options": [
         "Include all theoretical orientations available",
@@ -4181,7 +4182,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Be truthful, not misleading, and not make unsubstantiated claims",
       "explanation": "Psychological advertising must comply with ethical standards requiring truthfulness, avoiding misleading claims, and substantiating claims of expertise or effectiveness. Testimonials and guarantees are typically prohibited.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
+      "knId": "KN208",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4190,7 +4191,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 176,
+      "id": 209,
       "question": "Psychologists setting fees should consider:",
       "options": [
         "Market rates, overhead, training, and ability to serve diverse populations",
@@ -4201,7 +4202,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Market rates, overhead, training, and ability to serve diverse populations",
       "explanation": "Psychologists setting fees should consider market rates, practice overhead, training and expertise level, and ability to serve diverse populations including those with limited financial resources. Sliding scale fees increase access.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
+      "knId": "KN209",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4210,7 +4211,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 177,
+      "id": 210,
       "question": "Appropriate termination of therapy includes:",
       "options": [
         "Abrupt cessation without notice",
@@ -4221,7 +4222,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Sufficient notice, discussion of reasons, referral to alternative providers if needed",
       "explanation": "Appropriate termination includes adequate notice, discussion of termination reasons, referrals to alternative providers, and ensuring the client is not abandoned. Abrupt termination without notice is unethical.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN67",
+      "knId": "KN210",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4230,7 +4231,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 178,
+      "id": 211,
       "question": "A professor-student dual relationship where the professor provides therapy to the student is:",
       "options": [
         "Always permissible if the student consents",
@@ -4241,7 +4242,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Problematic due to inherent power imbalance and potential conflicts of interest",
       "explanation": "Dual relationships with students or supervisees are problematic because the inherent power imbalance makes consent impossible and creates conflicts of interest that compromise professional judgment and exploitative potential.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN67",
+      "knId": "KN211",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4250,7 +4251,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 179,
+      "id": 212,
       "question": "Forensic psychological evaluations differ from clinical practice regarding:",
       "options": [
         "Confidentiality is limited and consent/notification procedures differ",
@@ -4261,7 +4262,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Confidentiality is limited and consent/notification procedures differ",
       "explanation": "Forensic evaluations differ from clinical practice in that confidentiality is limited, the evaluee may not have consented to evaluation, findings may be used adversarially, and the psychologist's duty may be to the legal system rather than the individual.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN67",
+      "knId": "KN212",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4270,7 +4271,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 180,
+      "id": 213,
       "question": "When testifying as an expert witness, the psychologist should:",
       "options": [
         "Advocate exclusively for the retaining party",
@@ -4281,7 +4282,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Provide objective, unbiased professional opinions based on evidence",
       "explanation": "This reflects psychological research and professional standards related to When testifying as an expert witness, the psycholo. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN68",
+      "knId": "KN213",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4290,7 +4291,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 181,
+      "id": 214,
       "question": "Research involving human subjects typically requires:",
       "options": [
         "No review if the investigator believes it's ethical",
@@ -4301,7 +4302,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Institutional Review Board (IRB) approval before commencing",
       "explanation": "This reflects psychological research and professional standards related to Research involving human subjects typically requir. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN68",
+      "knId": "KN214",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4310,7 +4311,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 182,
+      "id": 215,
       "question": "Research with vulnerable populations (children, prisoners, cognitively impaired) requires:",
       "options": [
         "Standard informed consent only",
@@ -4321,7 +4322,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Additional protections, surrogate consent, and careful risk-benefit analysis",
       "explanation": "Research with vulnerable populations (children, prisoners, cognitively impaired, institutionalized persons) requires additional protections including surrogate consent, enhanced risk-benefit analysis, and special attention to potential coercion.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN68",
+      "knId": "KN215",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4330,7 +4331,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 183,
+      "id": 216,
       "question": "Protecting participant data privacy in research involves:",
       "options": [
         "Keeping original data accessible to anyone",
@@ -4341,7 +4342,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Secure storage, de-identification, limited access, and secure destruction",
       "explanation": "Protecting research data privacy involves secure storage, de-identification of data whenever possible, limiting access to authorized personnel only, and secure destruction of data according to specified timelines.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN69",
+      "knId": "KN216",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4350,7 +4351,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 184,
+      "id": 217,
       "question": "In academic publications, authorship should reflect:",
       "options": [
         "Whoever did the most work, regardless of contribution",
@@ -4361,7 +4362,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Substantial intellectual contributions and agreed-upon order based on contribution magnitude",
       "explanation": "Authorship should be assigned based on substantial intellectual contributions to conception/design or data interpretation and should reflect the relative magnitude of contribution in the specified order.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN69",
+      "knId": "KN217",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4370,7 +4371,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 185,
+      "id": 218,
       "question": "Psychologists must disclose conflicts of interest:",
       "options": [
         "Only if they're major financial interests",
@@ -4381,7 +4382,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "In all situations where personal interests might affect professional judgment",
       "explanation": "This reflects psychological research and professional standards related to Psychologists must disclose conflicts of interest:. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN69",
+      "knId": "KN218",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4390,7 +4391,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 186,
+      "id": 219,
       "question": "Psychologists must typically engage in continuing education:",
       "options": [
         "Never after initial licensure",
@@ -4401,7 +4402,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "At minimum amounts specified by licensing board (varies by state)",
       "explanation": "State licensing boards typically require minimum continuing education hours (commonly 20-40 hours annually) to maintain licensure. Requirements vary by state and often include ethics and diversity/cultural competence components.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN70",
+      "knId": "KN219",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4410,7 +4411,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 187,
+      "id": 220,
       "question": "Cultural humility in professional practice involves:",
       "options": [
         "Assuming cultural knowledge makes one an expert",
@@ -4421,7 +4422,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Lifelong learning about cultures, recognizing limitations, and accountability to communities served",
       "explanation": "Cultural humility involves lifelong commitment to self-evaluation, recognition of cultural limitations, and accountability to the communities one serves. It emphasizes continuous learning about diverse cultures and power dynamics.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN70",
+      "knId": "KN220",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4430,7 +4431,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 188,
+      "id": 221,
       "question": "Test bias refers to:",
       "options": [
         "Individual test-taker preference",
@@ -4441,7 +4442,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Systematic measurement error or differential validity across groups",
       "explanation": "This reflects psychological research and professional standards related to Test bias refers to:. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN70",
+      "knId": "KN221",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4450,7 +4451,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 189,
+      "id": 222,
       "question": "An ethical psychologist demonstrates commitment to social justice by:",
       "options": [
         "Ignoring societal inequalities",
@@ -4461,7 +4462,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Advocating for systemic changes, addressing disparities, and promoting equitable access to services",
       "explanation": "Ethical psychologists demonstrate commitment to social justice by advocating for systemic changes, addressing health and mental health disparities, promoting equitable access to psychological services, and addressing discrimination and oppression.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN71",
+      "knId": "KN222",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4470,7 +4471,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 190,
+      "id": 223,
       "question": "If a psychologist becomes impaired (mentally ill, substance abuse, etc.), they should:",
       "options": [
         "Continue practicing and hide the condition",
@@ -4481,7 +4482,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Seek treatment, monitor functioning, and limit practice if needed for client safety",
       "explanation": "This reflects psychological research and professional standards related to If a psychologist becomes impaired (mentally ill, . The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN71",
+      "knId": "KN223",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
@@ -4490,7 +4491,7 @@ source: All 225 questions with comprehensive detailed explanations
       "is_org_psych": false
     },
     {
-      "id": 191,
+      "id": 224,
       "question": "Supervisors of psychology trainees have ethical obligations to:",
       "options": [
         "Maximize trainee workload above development",
@@ -4501,7 +4502,7 @@ source: All 225 questions with comprehensive detailed explanations
       "correct_answer": "Provide adequate oversight, feedback, and evaluation of competence and ethics",
       "explanation": "This reflects psychological research and professional standards related to Supervisors of psychology trainees have ethical ob. The correct answer demonstrates understanding of evidence-based practices and ethical principles.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN71",
+      "knId": "KN224",
       "source_file": "8 Ethics.md",
       "source_folder": "8 Ethical and Legal Issues",
       "difficulty": "medium",
