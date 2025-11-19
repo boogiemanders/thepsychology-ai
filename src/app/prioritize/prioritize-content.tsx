@@ -477,6 +477,8 @@ export function PrioritizeContent() {
                         orgPsychPerformance={isOrgPsychInTop3 ? priorityData.orgPsychPerformance : undefined}
                         title="Top 3 Priority Domains"
                         description="Focus your study time on these highest-priority areas"
+                        showOnlyWrong={true}
+                        showSourceFile={true}
                       />
                     )
                   })()}

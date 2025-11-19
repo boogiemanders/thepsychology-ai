@@ -16,6 +16,7 @@ interface Question {
   explanation?: string
   domain: string
   is_org_psych?: boolean
+  source_file?: string
 }
 
 interface DomainResult {
@@ -39,6 +40,8 @@ interface ExpandableDomainAnalysisProps {
   }
   title?: string
   description?: string
+  showOnlyWrong?: boolean
+  showSourceFile?: boolean
 }
 
 const BRAND_COLORS = {
@@ -57,6 +60,8 @@ export function ExpandableDomainAnalysis({
   orgPsychPerformance,
   title = 'Domain Analysis',
   description = 'Click on a domain to see all practice exam questions and your performance',
+  showOnlyWrong = false,
+  showSourceFile = false,
 }: ExpandableDomainAnalysisProps) {
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
 
@@ -195,7 +200,13 @@ export function ExpandableDomainAnalysis({
 
                       {/* Questions List - Nested Accordion */}
                       <Accordion type="single" collapsible className="w-full space-y-2">
-                        {domainQuestions.map((question, idx) => {
+                        {domainQuestions
+                          .filter((question) => {
+                            if (!showOnlyWrong) return true
+                            const status = getQuestionStatus(question.id)
+                            return status === 'wrong' || status === 'skipped'
+                          })
+                          .map((question, idx) => {
                           const status = getQuestionStatus(question.id)
 
                           return (
@@ -264,15 +275,22 @@ export function ExpandableDomainAnalysis({
                                       </div>
                                     </div>
 
-                                    {/* Explanation */}
-                                    {question.explanation && (
+                                    {/* Explanation or Source File */}
+                                    {showSourceFile && question.source_file ? (
+                                      <div>
+                                        <h4 className="font-semibold text-sm mb-2">Source File</h4>
+                                        <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                                          {question.source_file}
+                                        </p>
+                                      </div>
+                                    ) : question.explanation ? (
                                       <div>
                                         <h4 className="font-semibold text-sm mb-2">Explanation</h4>
                                         <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
                                           {question.explanation}
                                         </p>
                                       </div>
-                                    )}
+                                    ) : null}
                                   </div>
                                 </AccordionContent>
                               </AccordionItem>
@@ -367,7 +385,13 @@ export function ExpandableDomainAnalysis({
 
                   {/* Organizational Psychology Questions List - Nested Accordion */}
                   <Accordion type="single" collapsible className="w-full space-y-2">
-                    {getDomainQuestions('Organizational Psychology').map((question, idx) => {
+                    {getDomainQuestions('Organizational Psychology')
+                      .filter((question) => {
+                        if (!showOnlyWrong) return true
+                        const status = getQuestionStatus(question.id)
+                        return status === 'wrong' || status === 'skipped'
+                      })
+                      .map((question, idx) => {
                       const status = getQuestionStatus(question.id)
 
                       return (
@@ -442,15 +466,22 @@ export function ExpandableDomainAnalysis({
                                   </div>
                                 </div>
 
-                                {/* Explanation */}
-                                {question.explanation && (
+                                {/* Explanation or Source File */}
+                                {showSourceFile && question.source_file ? (
+                                  <div>
+                                    <h4 className="font-semibold text-sm mb-2">Source File</h4>
+                                    <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                                      {question.source_file}
+                                    </p>
+                                  </div>
+                                ) : question.explanation ? (
                                   <div>
                                     <h4 className="font-semibold text-sm mb-2">Explanation</h4>
                                     <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
                                       {question.explanation}
                                     </p>
                                   </div>
-                                )}
+                                ) : null}
                               </div>
                             </AccordionContent>
                           </AccordionItem>
