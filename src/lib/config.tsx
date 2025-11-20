@@ -74,7 +74,7 @@ export const siteConfig = {
     ],
   },
   bentoSection: {
-    title: "How it Works",
+    title: "Examples",
     description: "Study less. Score higher. Here’s how.",
     items: [
       {

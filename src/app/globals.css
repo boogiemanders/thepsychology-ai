@@ -373,6 +373,13 @@ strong, b {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --brand-sage: #bdd1ca;
+  --brand-olive: #788c5d;
+  --brand-coral: #d87758;
+  --brand-dusty-rose: #c46685;
+  --brand-lavender-gray: #cbc9db;
+  --brand-soft-blue: #6a9bcc;
+  --brand-highlight: #d87758;
 }
 
 .dark {
@@ -408,6 +415,63 @@ strong, b {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+  --brand-highlight: #bdd1ca;
+}
+
+.brand-sage-bg {
+  background-color: var(--brand-sage);
+}
+.brand-olive-bg {
+  background-color: var(--brand-olive);
+}
+.brand-coral-bg {
+  background-color: var(--brand-coral);
+}
+.brand-dusty-rose-bg {
+  background-color: var(--brand-dusty-rose);
+}
+.brand-lavender-gray-bg {
+  background-color: var(--brand-lavender-gray);
+}
+.brand-soft-blue-bg {
+  background-color: var(--brand-soft-blue);
+}
+.text-brand-sage {
+  color: var(--brand-sage);
+}
+.text-brand-olive {
+  color: var(--brand-olive);
+}
+.text-brand-coral {
+  color: var(--brand-coral);
+}
+.text-brand-dusty-rose {
+  color: var(--brand-dusty-rose);
+}
+.text-brand-lavender-gray {
+  color: var(--brand-lavender-gray);
+}
+.text-brand-soft-blue {
+  color: var(--brand-soft-blue);
+}
+.text-brand-highlight {
+  color: var(--brand-highlight);
+}
+
+.animate-ripple {
+  animation: ripple-pulse 0.9s ease-out forwards;
+  mix-blend-mode: screen;
+}
+
+@keyframes ripple-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
 }
 
 @layer base {
@@ -422,6 +486,16 @@ strong, b {
   }
   .rdp-vhidden {
     @apply hidden;
+  }
+
+  /* Text selection highlight uses brand color instead of default blue/yellow */
+  ::selection {
+    background-color: var(--brand-sage);
+    color: #0b1f13;
+  }
+  ::-moz-selection {
+    background-color: var(--brand-sage);
+    color: #0b1f13;
   }
 
   /* React DayPicker Styles */
