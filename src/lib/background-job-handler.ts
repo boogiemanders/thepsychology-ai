@@ -107,8 +107,23 @@ async function executeJob(job: JobQueueItem): Promise<void> {
     })
 
     if (!response.ok) {
-      const errorData = await response.json()
-      throw new Error(`API returned ${response.status}: ${errorData.error}`)
+      let errorMessage = `API returned ${response.status}`
+
+      try {
+        const errorText = await response.text()
+        if (errorText) {
+          try {
+            const parsed = JSON.parse(errorText)
+            errorMessage = `${errorMessage}: ${parsed.error || errorText}`
+          } catch {
+            errorMessage = `${errorMessage}: ${errorText}`
+          }
+        }
+      } catch (parseErr) {
+        console.warn('[BGJob] Failed to parse error response', parseErr)
+      }
+
+      throw new Error(errorMessage)
     }
 
     const result = await response.json()
@@ -116,6 +131,11 @@ async function executeJob(job: JobQueueItem): Promise<void> {
       `[BGJob] Successfully generated ${job.examType} exam for user ${job.userId}`,
       result
     )
+  } catch (error) {
+    if (error instanceof DOMException && error.name === 'AbortError') {
+      throw new Error(`Background job timed out after ${JOB_TIMEOUT_MS / 1000}s`)
+    }
+    throw error
   } finally {
     clearTimeout(timeout)
   }

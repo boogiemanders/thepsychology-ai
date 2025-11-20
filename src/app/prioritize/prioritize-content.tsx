@@ -438,53 +438,6 @@ export function PrioritizeContent() {
                 </motion.div>
               )}
 
-              {/* Top 3 Priority Domains */}
-              {priorityData && priorityData.topPriorities && priorityData.topPriorities.length > 0 && (
-                <motion.div
-                  variants={animations.itemVariants}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 }}
-                >
-                  {(() => {
-                    // Get top 3 domain results
-                    const top3Results = priorityData.topPriorities
-                      .filter((item: any) => item.type === 'domain')
-                      .map((item: any) => ({
-                        domainNumber: item.domainNumber,
-                        domainName: item.domainName,
-                        percentageWrong: item.percentageWrong,
-                        domainWeight: item.domainWeight,
-                        priorityScore: item.priorityScore,
-                        totalQuestionsInDomain: priorityData.allResults?.find(
-                          (r: any) => r.domainNumber === item.domainNumber
-                        )?.totalQuestionsInDomain,
-                        totalWrongInDomain: priorityData.allResults?.find(
-                          (r: any) => r.domainNumber === item.domainNumber
-                        )?.totalWrongInDomain,
-                      }))
-
-                    // Check if org psych is in top 3
-                    const isOrgPsychInTop3 = priorityData.topPriorities.some(
-                      (item: any) => item.type === 'org_psych'
-                    )
-
-                    return (
-                      <ExpandableDomainAnalysis
-                        allResults={top3Results}
-                        examQuestions={priorityData.examQuestions || []}
-                        selectedAnswers={priorityData.selectedAnswers || {}}
-                        orgPsychPerformance={isOrgPsychInTop3 ? priorityData.orgPsychPerformance : undefined}
-                        title="Top 3 Priority Domains"
-                        description="Focus your study time on these highest-priority areas"
-                        showOnlyWrong={true}
-                        showSourceFile={true}
-                      />
-                    )
-                  })()}
-                </motion.div>
-              )}
-
               {/* Recommended Study Files */}
               {priorityData && priorityData.topPriorities && priorityData.topPriorities.length > 0 && (
                 <motion.div
