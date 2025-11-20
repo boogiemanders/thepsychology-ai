@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs'
+import { readFileSync, readdirSync, existsSync } from 'fs'
 import { join } from 'path'
 import path from 'path'
 import Anthropic from '@anthropic-ai/sdk'
@@ -73,6 +73,59 @@ function getDomainFolder(domainId: string): string {
 }
 
 /**
+ * Normalize a topic name or filename to a slug used for lookups.
+ * Strips leading numbers and spaces so both:
+ *   - "Organizational Leadership"
+ *   - "5 6 Organizational Leadership"
+ * map to the same slug.
+ */
+function slugifyTopicName(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/^[\d\s]+/, '') // remove leading numeric prefixes like "5 " or "5 6 "
+    .replace(/[&]/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+/**
+ * Resolve the actual markdown file path for a topic within a domain folder.
+ * First tries a direct slug match (old kebab-case filenames), then falls back
+ * to scanning the folder and matching by normalized slug against the full
+ * filename (including numeric prefixes) to support eppp-reference-style names.
+ */
+function resolveTopicFilePath(topicName: string, domain: string): string | null {
+  const domainFolder = getDomainFolder(domain)
+  const baseDir = path.join(process.cwd(), 'topic-content-v3-test', domainFolder)
+  const slug = slugifyTopicName(topicName)
+
+  // 1) Direct slug match (for legacy kebab-case filenames)
+  const directPath = path.join(baseDir, `${slug}.md`)
+  if (existsSync(directPath)) {
+    return directPath
+  }
+
+  // 2) Scan directory and match by normalized slug of each filename
+  let entries: ReturnType<typeof readdirSync>
+  try {
+    entries = readdirSync(baseDir, { withFileTypes: true })
+  } catch {
+    return null
+  }
+
+  for (const entry of entries) {
+    if (!entry.isFile() || !entry.name.endsWith('.md')) continue
+    const baseName = entry.name.slice(0, -3) // drop ".md"
+    const candidateSlug = slugifyTopicName(baseName)
+    if (candidateSlug === slug) {
+      return path.join(baseDir, entry.name)
+    }
+  }
+
+  return null
+}
+
+/**
  * Load pre-generated topic content from filesystem
  */
 export function loadTopicContent(
@@ -80,18 +133,16 @@ export function loadTopicContent(
   domain: string
 ): TopicContent | null {
   try {
+    const filePath = resolveTopicFilePath(topicName, domain)
     const domainFolder = getDomainFolder(domain)
-    const slug = topicName
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '')
+    const slug = slugifyTopicName(topicName)
 
-    const filePath = join(
-      process.cwd(),
-      'topic-content-v3-test',
-      domainFolder,
-      `${slug}.md`
-    )
+    if (!filePath) {
+      console.error(
+        `[Topic Content Manager] ❌ Could not resolve file for topic "${topicName}" in domain "${domain}"`
+      )
+      return null
+    }
 
     console.log(`[Topic Content Manager] Attempting to load from: ${filePath}`)
     console.log(`[Topic Content Manager] Working directory: ${process.cwd()}`)
@@ -152,19 +203,8 @@ export function topicContentExists(
   domain: string
 ): boolean {
   try {
-    const domainFolder = getDomainFolder(domain)
-    const slug = topicName
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '')
-
-    const filePath = join(
-      process.cwd(),
-      'topic-content-v3-test',
-      domainFolder,
-      `${slug}.md`
-    )
-
+    const filePath = resolveTopicFilePath(topicName, domain)
+    if (!filePath) return false
     readFileSync(filePath, 'utf-8')
     return true
   } catch {
@@ -180,19 +220,8 @@ export function loadFullTopicContent(
   domain: string
 ): string | null {
   try {
-    const domainFolder = getDomainFolder(domain)
-    const slug = topicName
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '')
-
-    const filePath = join(
-      process.cwd(),
-      'topic-content-v3-test',
-      domainFolder,
-      `${slug}.md`
-    )
-
+    const filePath = resolveTopicFilePath(topicName, domain)
+    if (!filePath) return null
     const fileContent = readFileSync(filePath, 'utf-8')
     const { content } = parseFrontmatter(fileContent)
 

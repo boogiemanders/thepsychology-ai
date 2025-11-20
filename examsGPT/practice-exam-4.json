@@ -24,7 +24,7 @@
         "Delegation is only allowed if the delegatee receives direct supervision at all times"
       ],
       "answer": "Psychologists must ensure the delegatee has no conflicting multiple relationships and has adequate competence",
-      "explanation": "Standard 2.05 specifies that psychologists must delegate only to individuals without multiple relationships that impair objectivity and who have the necessary competence.",
+      "explanation": "Delegating work requires choosing individuals with the necessary skills and no conflicting relationships, while maintaining oversight to protect clients and ensure quality.",
       "kn": "KN64",
       "kn_explanation": "This question addresses managing potential ethical issues in delegation, including conflicts of interest and competence, fitting under ethical issue management.",
       "difficulty": "medium",
@@ -119,7 +119,7 @@
         "Informed consent is not necessary for UIC because they are minors."
       ],
       "answer": "Psychologists should obtain consent from the organization holding custody and assent from the minor when appropriate.",
-      "explanation": "Since UIC are minors without legal guardians in the U.S., consent is obtained from the organization holding custody, consistent with Ethics Code Standard 3.10(b) and 3.11.",
+      "explanation": "Consent should come from the organization or agency with legal custody of the minors, since there is no guardian present.",
       "kn": "KN68",
       "kn_explanation": "This question addresses ethical obligations for informed consent with special populations, which falls under ethical and professional issues (KN68).",
       "difficulty": "hard",
@@ -321,7 +321,7 @@
       "scored": true
     },
     {
-      "stem": "According to Standard 9.04 of the APA Ethics Code, psychologists may withhold release of test data to clients under which condition?",
+      "stem": "When a client asks for their test data, when can a psychologist decline to release it?",
       "options": [
         "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
         "If the client is unlikely to understand the data due to cognitive limitations",
@@ -329,7 +329,7 @@
         "If the client requests only the summary report instead"
       ],
       "answer": "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
-      "explanation": "Standard 9.04 states psychologists may withhold test data to protect the client or others from harm or misuse when permitted by law (e.g., under HIPAA).",
+      "explanation": "Psychologists can withhold test data if releasing it is likely to cause harm or misuse and doing so is legally permitted.",
       "kn": "KN62",
       "kn_explanation": "This question covers ethical and legal standards about test data confidentiality and client rights, central to ethical practice (KN62).",
       "difficulty": "medium",
@@ -359,7 +359,7 @@
       "scored": true
     },
     {
-      "stem": "Under APA Ethics Code Standard 9.02, when administering a psychological test that has not been validated for a particular population, what is the psychologist required to do?",
+      "stem": "A psychologist uses a test with a population for whom it lacks solid validity evidence. What should they include when they share the results?",
       "options": [
         "Describe the strengths and limitations of test results and interpretations",
         "Avoid using the test entirely to prevent invalid conclusions",
@@ -367,7 +367,7 @@
         "Proceed as usual since validity is not essential for individual cases"
       ],
       "answer": "Describe the strengths and limitations of test results and interpretations",
-      "explanation": "Standard 9.02(b) states that when validity or reliability of a test for a population is not established, psychologists must describe strengths and limitations of results and interpretations.",
+      "explanation": "Ethical practice requires describing the strengths and limitations of the test and any interpretations when it has not been validated for that group.",
       "kn": "KN62",
       "kn_explanation": "This ethical guideline addresses appropriate use of assessment tools and test validity, part of professional practice standards (KN62).",
       "difficulty": "medium",
@@ -397,7 +397,7 @@
       "scored": false
     },
     {
-      "stem": "Under APA Ethics Code Standard 2.05, when is it appropriate for a psychologist to delegate duties to a family member serving as an interpreter for a client?",
+      "stem": "A client asks a psychologist's family member to interpret during sessions. Is it appropriate to delegate that role?",
       "options": [
         "If the family member agrees and the client consents",
         "When the psychologist lacks other interpreter options but supervises carefully",
@@ -405,7 +405,7 @@
         "If the family member is fluent in the language and understands confidentiality"
       ],
       "answer": "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
-      "explanation": "Delegation to someone with a multiple relationship that could interfere with objectivity, such as a family member, is unethical under Standard 2.05.",
+      "explanation": "No. Delegating to someone in a multiple relationship, such as a family member, risks impaired objectivity and potential harm.",
       "kn": "KN61",
       "kn_explanation": "This question assesses competence and delegation ethical standards, focusing on maintaining objectivity and professionalism.",
       "difficulty": "medium",
@@ -664,7 +664,7 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes the ethical handling of confidential information in forensic psychology when providing services to the same individual or closely related individuals, as outlined in APA Specialty Guidelines and Standard 3.05?",
+      "stem": "A therapist is asked to provide therapy and also serve as a forensic evaluator for the same family. What is the ethical approach?",
       "options": [
         "Forensic and therapeutic services to the same individual are encouraged to improve comprehensive care.",
         "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
@@ -672,7 +672,7 @@
         "It is permissible to combine forensic and therapeutic roles without any restrictions."
       ],
       "answer": "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
-      "explanation": "The Specialty Guidelines and Standard 3.05 recommend avoiding dual roles that impair objectivity, advising referral when forensic and therapeutic services are requested.",
+      "explanation": "They should avoid dual roles that threaten objectivity and instead refer or decline the additional role to prevent conflicts.",
       "kn": "KN68",
       "kn_explanation": "This addresses ethical issues specific to forensic practice and conflicts of interest within professional standards (KN68).",
       "difficulty": "hard",
@@ -835,7 +835,7 @@
       "scored": true
     },
     {
-      "stem": "According to APA Ethics Code Standard 6.01, which is a justified reason for psychologists to maintain professional records properly?",
+      "stem": "Why must psychologists maintain thorough professional records?",
       "options": [
         "To facilitate accurate billing and ensure legal compliance.",
         "To create marketing materials for future client recruitment.",
@@ -843,7 +843,7 @@
         "To discard forensic notes to protect client privacy post-trial."
       ],
       "answer": "To facilitate accurate billing and ensure legal compliance.",
-      "explanation": "Standard 6.01 requires proper record keeping to facilitate service transfer, billing, and to meet legal/institutional requirements; forensic notes are typically retained due to legal scrutiny.",
+      "explanation": "Good records support continuity of care, billing, and legal or institutional requirements, including retention of forensic notes when legally prudent.",
       "kn": "KN61",
       "kn_explanation": "The question targets ethical standards involving record maintenance and legal considerations, focusing on professional and ethical conduct (KN61).",
       "difficulty": "medium",
@@ -911,7 +911,7 @@
       "scored": true
     },
     {
-      "stem": "According to Standard 9.08, when is it acceptable for psychologists to use outdated or obsolete tests?",
+      "stem": "When might using an older or out-of-print test still be ethical?",
       "options": [
         "When use remains appropriate for the current evaluation and provides beneficial information",
         "Only when no newer versions of the test exist",
@@ -919,7 +919,7 @@
         "Only if the client specifically requests the older test version"
       ],
       "answer": "When use remains appropriate for the current evaluation and provides beneficial information",
-      "explanation": "Standard 9.08 allows use of outdated or obsolete tests if they are appropriate for the evaluation purpose and beneficial, e.g., better culturally relevant norms.",
+      "explanation": "Older tests can be used when they are still appropriate for the evaluation and provide useful information for the client or context.",
       "kn": "KN62",
       "kn_explanation": "This question examines ethical considerations regarding test selection and interpretation within practice standards (KN62).",
       "difficulty": "medium",
@@ -1291,7 +1291,7 @@
       "scored": true
     },
     {
-      "stem": "Which of the following behaviors constitutes sexual harassment under APA Ethics Code Standard 3.02?",
+      "stem": "Which behavior by a psychologist would be considered sexual harassment in a professional setting?",
       "options": [
         "Occasionally telling off-color jokes that have been indicated as unwelcome or offensive.",
         "Engaging in consensual flirtation with a colleague.",
@@ -1299,7 +1299,7 @@
         "Disagreeing with a coworker\u2019s work style."
       ],
       "answer": "Occasionally telling off-color jokes that have been indicated as unwelcome or offensive.",
-      "explanation": "Sexual harassment includes unwelcome sexual solicitation or behavior that is offensive; if a person continues such behavior after being told it is unwelcome, it qualifies as sexual harassment.",
+      "explanation": "Sexual harassment includes sexual solicitation, physical advances, or verbal conduct that the recipient finds unwelcome or that creates a hostile environment.",
       "kn": "KN68",
       "kn_explanation": "The question addresses definitions of harassment and appropriate professional boundaries, fitting ethical and professional issues (KN68).",
       "difficulty": "hard",
@@ -1329,7 +1329,7 @@
       "scored": true
     },
     {
-      "stem": "According to the APA Ethics Code, under what circumstance may a psychologist terminate therapy without providing pretermination counseling or referrals?",
+      "stem": "In what situation may a psychologist end therapy without offering pretermination counseling or referrals?",
       "options": [
         "When the client or another person threatens or endangers the psychologist's safety",
         "When the client refuses to pay fees on time",
@@ -1337,7 +1337,7 @@
         "When the client moves to another city"
       ],
       "answer": "When the client or another person threatens or endangers the psychologist's safety",
-      "explanation": "Standard 10.10 allows termination without pretermination counseling and referral if the psychologist is threatened or endangered by the client or an associated person.",
+      "explanation": "When the psychologist's safety is threatened by the client or someone associated with the client, they may terminate without referrals.",
       "kn": "KN62",
       "kn_explanation": "This question focuses on ethical standards for termination of therapy, which are a core aspect of professional ethical practice (KN62).",
       "difficulty": "medium",
@@ -1406,7 +1406,7 @@
       "scored": true
     },
     {
-      "stem": "Under APA Ethics Code Standard 4.05, when may psychologists disclose confidential information without client authorization?",
+      "stem": "When may psychologists disclose confidential information without client authorization?",
       "options": [
         "Only with the client's explicit permission, regardless of legal mandates.",
         "When mandated or permitted by law to protect the client or others from harm, such as in cases of risk of suicide or abuse.",
@@ -1414,7 +1414,7 @@
         "Only after consulting a colleague but without client or legal authorization."
       ],
       "answer": "When mandated or permitted by law to protect the client or others from harm, such as in cases of risk of suicide or abuse.",
-      "explanation": "Standard 4.05 permits disclosure without authorization only in legal or valid protective situations like risk of harm, suicide, or abuse reports.",
+      "explanation": "Disclosure without authorization is allowed only when permitted or required by law and ethics, such as to prevent harm or comply with a valid legal mandate.",
       "kn": "KN68",
       "kn_explanation": "This item tests understanding of legally and ethically mandated breaches of confidentiality (KN68).",
       "difficulty": "medium",
@@ -1959,7 +1959,7 @@
       "scored": true
     },
     {
-      "stem": "In the event a psychologist foresees an interruption in psychological services due to relocation, what does APA Ethics Code Standard 3.12 recommend?",
+      "stem": "If a psychologist expects services to be interrupted because of a move or another foreseeable change, what should they arrange?",
       "options": [
         "Immediately terminate all client contacts without notice.",
         "Make reasonable efforts including pretermination counseling and providing referrals.",
@@ -1967,7 +1967,7 @@
         "Transfer all client records to family members without client permission."
       ],
       "answer": "Make reasonable efforts including pretermination counseling and providing referrals.",
-      "explanation": "Standard 3.12 requires psychologists to plan reasonably for interruptions, such as discussing the situation with clients and providing referrals when appropriate.",
+      "explanation": "They should reasonably plan for the interruption by discussing the situation with clients and arranging referrals or coverage.",
       "kn": "KN68",
       "kn_explanation": "The item examines ethical guidelines for continuity of care and professional planning responsibilities (KN68).",
       "difficulty": "easy",
@@ -2377,7 +2377,7 @@
       "scored": true
     },
     {
-      "stem": "What does APA Ethics Code Standard 10.01(a) require related to informed consent in therapy?",
+      "stem": "At the start of therapy, what information should a psychologist review with a new client to ensure true informed consent?",
       "options": [
         "Clients should be informed early about the nature, anticipated course, fees, third-party involvement, and limits of confidentiality",
         "Informed consent should only be obtained after several therapy sessions to ensure trust",
@@ -2385,7 +2385,7 @@
         "Clients only need to be told about fees and confidentiality limits at termination"
       ],
       "answer": "Clients should be informed early about the nature, anticipated course, fees, third-party involvement, and limits of confidentiality",
-      "explanation": "Standard 10.01(a) requires obtaining informed consent as early as feasible, including key information about therapy and their rights.",
+      "explanation": "Clients should hear early about the nature and course of therapy, fees, any third-party involvement, and confidentiality limits.",
       "kn": "KN62",
       "kn_explanation": "This question focuses on ethical and professional issues concerning client informed consent during therapy, aligned with ethical principles (KN62).",
       "difficulty": "easy",
@@ -2491,7 +2491,7 @@
       "scored": true
     },
     {
-      "stem": "Standard 9.07 prohibits allowing unqualified individuals to use psychological assessment techniques. What is the one exception to this prohibition?",
+      "stem": "A trainee wants to practice administering assessments. Under what circumstance is it acceptable for them to use test materials?",
       "options": [
         "When the individual is being trained and appropriately supervised by a qualified psychologist",
         "When the individual has a graduate degree in psychology but is not licensed",
@@ -2499,7 +2499,7 @@
         "When the client specifically requests the involvement of unqualified persons"
       ],
       "answer": "When the individual is being trained and appropriately supervised by a qualified psychologist",
-      "explanation": "Standard 9.07 permits use of psychological assessment by unqualified individuals only when it is part of training under proper supervision.",
+      "explanation": "Unlicensed or otherwise unqualified individuals may handle assessments only as part of training while being appropriately supervised.",
       "kn": "KN62",
       "kn_explanation": "This question tests ethical knowledge regarding qualifications for assessment administration, part of professional standards (KN62).",
       "difficulty": "easy",
@@ -3575,7 +3575,7 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes psychologists\u2019 obligations regarding sharing research data for verification after publication, per Standard 8.14?",
+      "stem": "After research is published, what are psychologists' obligations around sharing data for verification?",
       "options": [
         "Psychologists may refuse to share data if participants\u2019 confidentiality might be moderately affected.",
         "Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality.",
@@ -3583,7 +3583,7 @@
         "Data sharing is optional and only encouraged for studies involving non-human subjects."
       ],
       "answer": "Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality.",
-      "explanation": "Standard 8.14 mandates data sharing for verification purposes after publication, provided confidentiality is maintained.",
+      "explanation": "They should share data with qualified professionals for reanalysis while safeguarding participant confidentiality.",
       "kn": "KN69",
       "kn_explanation": "This item evaluates ethical responsibilities for transparency and verification in research, an important ethical research issue (KN69).",
       "difficulty": "medium",
@@ -4089,7 +4089,7 @@
       "scored": true
     },
     {
-      "stem": "According to APA Ethics Code Standard 3.06, when must psychologists avoid accepting a professional role?",
+      "stem": "When should psychologists decline or step back from a professional role because of other interests or relationships they hold?",
       "options": [
         "When the role involves treatment of multiple clients simultaneously.",
         "When the role could impair their objectivity, competence, or effectiveness or expose others to harm or exploitation.",
@@ -4097,7 +4097,7 @@
         "When working with clients from different cultural backgrounds."
       ],
       "answer": "When the role could impair their objectivity, competence, or effectiveness or expose others to harm or exploitation.",
-      "explanation": "Standard 3.06 prohibits accepting roles that could reasonably be expected to impair professional functioning or harm others.",
+      "explanation": "They must avoid roles that could reasonably impair their objectivity or effectiveness or risk harming the people involved.",
       "kn": "KN68",
       "kn_explanation": "This addresses ethical responsibilities in role acceptance avoiding conflicts of interest and harm (KN68).",
       "difficulty": "medium",
@@ -4146,7 +4146,7 @@
       "scored": true
     },
     {
-      "stem": "When faced with a conflict between an ethical standard and a law requiring an action that violates human rights, what must a psychologist do according to APA Standard 1.02?",
+      "stem": "If a law requires an action that would violate human rights and conflicts with ethical responsibilities, how should a psychologist respond?",
       "options": [
         "Comply with the law regardless of the ethical conflict",
         "Use the ethical standard to justify violating the law",
@@ -4154,7 +4154,7 @@
         "Prioritize organizational demands over ethical responsibilities"
       ],
       "answer": "Make reasonable efforts to resolve the conflict consistent with the Ethics Code, but never justify violating human rights",
-      "explanation": "Standard 1.02 requires psychologists to attempt to resolve conflicts consistent with ethics but prohibits justifying violations of human rights under any circumstance.",
+      "explanation": "Psychologists must work to resolve the conflict in line with ethical principles and cannot use the law to justify violating human rights.",
       "kn": "KN61",
       "kn_explanation": "This question probes understanding of the interaction between ethical standards and legal demands, a core ethical and legal professional issue.",
       "difficulty": "medium",

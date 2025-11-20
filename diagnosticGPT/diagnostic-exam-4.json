@@ -430,7 +430,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Stanford-Binet and Wechsler Tests.json::12"
     },
     {
-      "stem": "Under APA Ethics Code Standard 2.05, when is it appropriate for a psychologist to delegate duties to a family member serving as an interpreter for a client?",
+      "stem": "A client asks a psychologist's family member to interpret during sessions. Is it appropriate to delegate that role?",
       "options": [
         "If the family member agrees and the client consents",
         "When the psychologist lacks other interpreter options but supervises carefully",
@@ -438,7 +438,7 @@
         "If the family member is fluent in the language and understands confidentiality"
       ],
       "answer": "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
-      "explanation": "Delegation to someone with a multiple relationship that could interfere with objectivity, such as a family member, is unethical under Standard 2.05.",
+      "explanation": "No. Delegating to someone in a multiple relationship, such as a family member, risks impaired objectivity and potential harm.",
       "kn": "KN61",
       "kn_explanation": "This question assesses competence and delegation ethical standards, focusing on maintaining objectivity and professionalism.",
       "difficulty": "medium",
@@ -700,7 +700,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::14"
     },
     {
-      "stem": "Which of the following best describes the ethical handling of confidential information in forensic psychology when providing services to the same individual or closely related individuals, as outlined in APA Specialty Guidelines and Standard 3.05?",
+      "stem": "A therapist is asked to provide therapy and also serve as a forensic evaluator for the same family. What is the ethical approach?",
       "options": [
         "Forensic and therapeutic services to the same individual are encouraged to improve comprehensive care.",
         "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
@@ -708,7 +708,7 @@
         "It is permissible to combine forensic and therapeutic roles without any restrictions."
       ],
       "answer": "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
-      "explanation": "The Specialty Guidelines and Standard 3.05 recommend avoiding dual roles that impair objectivity, advising referral when forensic and therapeutic services are requested.",
+      "explanation": "They should avoid dual roles that threaten objectivity and instead refer or decline the additional role to prevent conflicts.",
       "kn": "KN68",
       "kn_explanation": "This addresses ethical issues specific to forensic practice and conflicts of interest within professional standards (KN68).",
       "difficulty": "hard",
@@ -736,7 +736,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Terms and Concepts.json::6"
     },
     {
-      "stem": "According to APA Ethics Code Standard 9.01(b), when a psychologist bases conclusions about an individual in part on assessment results conducted by another professional, what must the psychologist do?",
+      "stem": "A psychologist has to base part of an evaluation on test results from another clinician because they cannot assess the person directly. How should they frame their conclusions?",
       "options": [
         "Disclose the limitations of their conclusions due to reliance on the other professional's data",
         "Use the other professional's results without qualification since the assessment was completed",
@@ -744,7 +744,7 @@
         "Only use other professionals\u2019 results when there is explicit client consent"
       ],
       "answer": "Disclose the limitations of their conclusions due to reliance on the other professional's data",
-      "explanation": "Standard 9.01(b) requires psychologists to communicate any limitations of conclusions when personal assessment is not feasible and evaluations from others are used.",
+      "explanation": "When relying on data collected by someone else, psychologists need to state the limitations of their conclusions so readers understand the uncertainty.",
       "kn": "KN62",
       "kn_explanation": "This question focuses on ethical principles regarding ethical assessment practices, which fall under professional standards and relevant guidelines (KN62).",
       "difficulty": "medium",

@@ -273,9 +273,15 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
   sourceFiles.forEach((sourceFile) => {
     if (!sourceFile) return
 
-    // Strip domain prefix from filename (e.g., "2 ", "5 6 ", "2 3 ")
-    // Match patterns like "2 ", "5 6 ", "2 3 ", "3 5 6 " at the start
-    const cleanedName = sourceFile.replace(/^[\d\s]+/, '').replace(/\.md$/, '')
+    // Support both bare filenames and full paths from questionsGPT/exams
+    // e.g., "/.../5 6 Organizational Leadership.json" → "5 6 Organizational Leadership"
+    const parts = sourceFile.split(/[\\/]/)
+    const fileName = parts[parts.length - 1] || sourceFile
+    const baseName = fileName.replace(/\.(json|md)$/i, '')
+
+    // Clean topic name for display and topic-teacher (strip domain prefixes)
+    // e.g., "5 6 Organizational Leadership" → "Organizational Leadership"
+    const cleanedName = baseName.replace(/^[\d\s]+/, '')
 
     // Use source file name directly as topic (don't try to match to EPPP_DOMAINS topics)
     // This ensures all source files from wrong answers appear as recommendations
@@ -285,7 +291,8 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
       const topicContentFormat = convertToTopicContentFormat(cleanedName)
       recommendedTopics.push({
         topicName: cleanedName,
-        sourceFile: sourceFile, // Keep original filename for linking
+        // Keep a human-readable filename (no path, no extension) for display
+        sourceFile: baseName,
         domainId: '3-5-6',
         topicContentFormat, // For use in links to topic-content-v3-test
       })
@@ -329,9 +336,15 @@ export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumb
   sourceFiles.forEach((sourceFile) => {
     if (!sourceFile) return
 
-    // Strip domain prefix and .md extension to get clean topic name
-    // e.g., "1 Brain Regions.md" → "Brain Regions"
-    const cleanTopicName = sourceFile.replace(/^[\d\s]+/, '').replace(/\.md$/, '')
+    // Support both bare filenames and full paths from questionsGPT/exams
+    // e.g., "/.../1 Brain Regions.md" or ".json"
+    const parts = sourceFile.split(/[\\/]/)
+    const fileName = parts[parts.length - 1] || sourceFile
+    const baseName = fileName.replace(/\.(json|md)$/i, '')
+
+    // Strip domain prefix to get clean topic name
+    // e.g., "1 Brain Regions" → "Brain Regions"
+    const cleanTopicName = baseName.replace(/^[\d\s]+/, '')
 
     // Use source file name directly as topic (don't try to match to EPPP_DOMAINS topics)
     // This ensures all source files from wrong answers appear as recommendations
@@ -341,7 +354,8 @@ export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumb
       const topicContentFormat = convertToTopicContentFormat(cleanTopicName)
       recommendedTopics.push({
         topicName: cleanTopicName,
-        sourceFile: sourceFile, // Keep original filename for linking
+        // Keep a human-readable filename (no path, no extension) for display
+        sourceFile: baseName,
         domainId: domain.id,
         topicContentFormat, // For use in links to topic-content-v3-test
       })

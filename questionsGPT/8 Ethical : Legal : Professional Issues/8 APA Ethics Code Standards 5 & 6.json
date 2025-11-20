@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "stem": "According to APA Ethics Code Standard 5.01, which of the following is TRUE regarding public statements made by psychologists about their professional credentials?",
+      "stem": "How should psychologists describe their credentials in public statements?",
       "options": [
         "Psychologists may claim degrees from nonaccredited institutions regardless of state licensure status.",
         "Psychologists can list as credentials only doctoral degrees from regionally accredited educational institutions or those approved by the state for licensure.",
@@ -9,14 +9,14 @@
         "Psychologists are allowed to include honorary degrees as evidence of their qualifications."
       ],
       "answer": "Psychologists can list as credentials only doctoral degrees from regionally accredited educational institutions or those approved by the state for licensure.",
-      "explanation": "Standard 5.01 restricts psychologists to using only doctoral degrees from accredited institutions or degrees from nonaccredited institutions that qualify them for licensure as evidence of their professional credentials.",
+      "explanation": "Public information about credentials must be accurate and limited to degrees and training that legitimately qualify the psychologist for practice.",
       "kn": "KN61",
       "kn_explanation": "This question is focused on the ethical standards governing accurate representation of credentials, fitting within the ethical and professional issues domain (KN61).",
       "difficulty": "medium",
       "quality_comment": "The question clearly targets an important ethical standard with plausible distractors that reflect common misunderstandings about credential representation."
     },
     {
-      "stem": "Which of the following practices is prohibited by Standard 5.05 of the APA Ethics Code concerning client testimonials?",
+      "stem": "What is an unethical way to use client testimonials in advertising therapy services?",
       "options": [
         "Requesting testimonials from former clients who have completed therapy.",
         "Seeking testimonials from current therapy clients who may be vulnerable to undue influence.",
@@ -24,14 +24,14 @@
         "Using anonymized summaries of treatment outcomes for promotional use."
       ],
       "answer": "Seeking testimonials from current therapy clients who may be vulnerable to undue influence.",
-      "explanation": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or others vulnerable to undue influence to protect clients from exploitation.",
+      "explanation": "Soliciting testimonials from current clients or others who could feel pressured exploits their vulnerability and is not allowed.",
       "kn": "KN61",
       "kn_explanation": "This question assesses knowledge of ethical prohibitions related to client interactions and public statements, corresponding to professional ethical standards (KN61).",
       "difficulty": "medium",
       "quality_comment": "The options are concise and the correct answer is clearly supported by the Ethics Code, making it a solid question for EPPP preparation."
     },
     {
-      "stem": "According to APA Ethics Code Standard 6.02, what technique should psychologists use when entering confidential information into databases to maintain client privacy?",
+      "stem": "When storing confidential information in a database, how should a psychologist protect client identity?",
       "options": [
         "Removing all clinical data and storing it separately offline.",
         "Using coding or other methods to avoid including personal identifiers.",
@@ -39,14 +39,14 @@
         "Sharing encrypted files only via unsecured email to trusted colleagues."
       ],
       "answer": "Using coding or other methods to avoid including personal identifiers.",
-      "explanation": "Standard 6.02(b) requires use of coding or similar techniques to protect confidentiality by excluding personal identifiers in records accessible to unauthorized persons.",
+      "explanation": "They should use coding or similar methods so records exclude personal identifiers accessible to unauthorized people.",
       "kn": "KN61",
       "kn_explanation": "This item deals with confidentiality and record-keeping practices grounded in ethical standards, situating it within ethical and professional issues (KN61).",
       "difficulty": "medium",
       "quality_comment": "The distractors are relatively plausible and the correct answer is directly taken from the ethics code, facilitating clear understanding of confidentiality requirements."
     },
     {
-      "stem": "Under APA Ethics Code Standard 6.04, which of the following is TRUE regarding fees and financial arrangements with clients?",
+      "stem": "What is the ethical approach to discussing fees and financial arrangements with clients?",
       "options": [
         "Psychologists must inform clients about fees and billing practices as early as is practicable in therapy.",
         "Psychologists may refuse service if a client has unpaid fees without informing the client first.",
@@ -54,29 +54,29 @@
         "Clients must be told about fees only after the first therapy session."
       ],
       "answer": "Psychologists must inform clients about fees and billing practices as early as is practicable in therapy.",
-      "explanation": "Standard 6.04 requires that fee agreements and billing arrangements be discussed with clients as early as feasible, including missed appointments and payment schedules.",
+      "explanation": "Fees, billing procedures, and policies such as charges for missed appointments should be discussed as early as feasible.",
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of ethical guidelines on financial transparency and agreements, which fall under ethical and professional standards (KN61).",
       "difficulty": "easy",
       "quality_comment": "The question is straightforward with clearly distinguishable distractors, making it an effective and accessible item for exam takers."
     },
     {
-      "stem": "Which of the following actions violates APA Ethics Code Standard 6.06 regarding accurate billing and insurance information?",
+      "stem": "Which billing practice would be fraudulent?",
       "options": [
         "Providing a detailed, truthful description of psychological services to payors.",
         "Assigning an inaccurate diagnosis to a client to receive reimbursement.",
         "Reporting the actual provider of psychological services to insurance companies.",
-        "Avoiding routine waiving of client co-payments without insurers’ approval."
+        "Avoiding routine waiving of client co-payments without insurers\u2019 approval."
       ],
       "answer": "Assigning an inaccurate diagnosis to a client to receive reimbursement.",
-      "explanation": "Standard 6.06 prohibits fraudulent billing practices such as assigning inaccurate diagnoses to obtain insurance reimbursement.",
+      "explanation": "Intentionally using an inaccurate diagnosis or service description to obtain payment from an insurer is unethical and fraudulent.",
       "kn": "KN61",
       "kn_explanation": "This item pertains to ethical and legal requirements for honest billing and insurance documentation, fitting within ethical and professional issues (KN61).",
       "difficulty": "medium",
       "quality_comment": "Distractors are realistic and closely related, challenging examinees to distinguish ethical from unethical billing practices."
     },
     {
-      "stem": "Standard 5.06 of the APA Ethics Code restricts psychologists from which of the following practices?",
+      "stem": "What type of in-person solicitation is off-limits for psychologists?",
       "options": [
         "Uninvited in-person solicitation of business from potential therapy clients who may be vulnerable to undue influence.",
         "Encouraging family members to participate in therapy when it benefits a current client.",
@@ -84,14 +84,14 @@
         "Soliciting referrals from past clients in a respectful manner."
       ],
       "answer": "Uninvited in-person solicitation of business from potential therapy clients who may be vulnerable to undue influence.",
-      "explanation": "Standard 5.06 prohibits uninvited in-person solicitation from vulnerable individuals but allows encouraging family participation and disaster relief services.",
+      "explanation": "Approaching vulnerable individuals in person to solicit services is prohibited, while encouraging family participation or offering disaster relief support is acceptable.",
       "kn": "KN61",
       "kn_explanation": "This question focuses on ethical rules about solicitation and client vulnerability, which relate to professional conduct standards (KN61).",
       "difficulty": "medium",
       "quality_comment": "The question clearly tests an important ethical restriction with plausible exceptions, supporting higher-order reasoning about professional boundaries."
     },
     {
-      "stem": "According to APA Ethics Code Standard 6.01, which is a justified reason for psychologists to maintain professional records properly?",
+      "stem": "Why must psychologists maintain thorough professional records?",
       "options": [
         "To facilitate accurate billing and ensure legal compliance.",
         "To create marketing materials for future client recruitment.",
@@ -99,14 +99,14 @@
         "To discard forensic notes to protect client privacy post-trial."
       ],
       "answer": "To facilitate accurate billing and ensure legal compliance.",
-      "explanation": "Standard 6.01 requires proper record keeping to facilitate service transfer, billing, and to meet legal/institutional requirements; forensic notes are typically retained due to legal scrutiny.",
+      "explanation": "Good records support continuity of care, billing, and legal or institutional requirements, including retention of forensic notes when legally prudent.",
       "kn": "KN61",
       "kn_explanation": "The question targets ethical standards involving record maintenance and legal considerations, focusing on professional and ethical conduct (KN61).",
       "difficulty": "medium",
       "quality_comment": "Options are balanced and the correct answer reflects foundational ethical record-keeping practices, reinforcing important clinical documentation guidelines."
     },
     {
-      "stem": "Which of the following is an acceptable use of referral fees according to APA Ethics Code Standard 6.07?",
+      "stem": "When is it acceptable to divide or pay fees related to client referrals?",
       "options": [
         "Paying a colleague a set fee for each client referred regardless of services provided.",
         "Dividing fees with another professional who both provided services to the client.",
@@ -114,14 +114,14 @@
         "Paying a fixed fee solely to secure new client referrals from another psychologist."
       ],
       "answer": "Dividing fees with another professional who both provided services to the client.",
-      "explanation": "Standard 6.07 allows fee division only when both professionals provided services; paying solely for referrals or incentives is prohibited.",
+      "explanation": "Fee division is ethical only when each professional provided services; paying solely for a referral or incentive violates ethical guidelines.",
       "kn": "KN61",
       "kn_explanation": "This question involves ethical financial practices in referrals, classified under professional and ethical standards in psychological practice (KN61).",
       "difficulty": "medium",
-      "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item’s ability to discriminate knowledge of nuanced ethical guidance."
+      "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item\u2019s ability to discriminate knowledge of nuanced ethical guidance."
     },
     {
-      "stem": "Which of the following statements about bartering for psychological services is consistent with APA Ethics Code Standard 6.05?",
+      "stem": "Which statement reflects ethical bartering for services?",
       "options": [
         "Bartering is always prohibited due to high risk of exploitation.",
         "Bartering goods for therapy sessions is generally discouraged but can be acceptable if not clinically contraindicated.",
@@ -129,14 +129,14 @@
         "Bartering must be reported to insurance companies as nonmonetary income always."
       ],
       "answer": "Bartering goods for therapy sessions is generally discouraged but can be acceptable if not clinically contraindicated.",
-      "explanation": "Standard 6.05 states bartering may be acceptable when not exploitative or clinically contraindicated; experts note bartering goods is less risky than services.",
+      "explanation": "Bartering is acceptable only when it avoids exploitation or clinical harm, with goods generally posing less risk than exchanging services.",
       "kn": "KN61",
       "kn_explanation": "This question assesses ethical considerations regarding financial arrangements beyond typical payment methods, consistent with ethical and professional guidelines (KN61).",
       "difficulty": "hard",
       "quality_comment": "The question presents nuanced options requiring detailed knowledge of ethical standards and professional discretion, suitable for higher-level cognitive processing."
     },
     {
-      "stem": "Regarding maintenance and storage of professional records, APA’s Record Keeping Guidelines recommend retaining client records for at least how long if no legal requirement supersedes?",
+      "stem": "Regarding maintenance and storage of professional records, APA\u2019s Record Keeping Guidelines recommend retaining client records for at least how long if no legal requirement supersedes?",
       "options": [
         "3 years after the date of the last service for adult clients.",
         "7 years after the date of the last service for adult clients or 3 years post majority for minors, whichever is later.",
@@ -166,7 +166,7 @@
       "quality_comment": "The question addresses practical application of ethical standards in digital confidentiality, balancing technical and ethical knowledge with plausible distractors."
     },
     {
-      "stem": "When a psychologist plans to withdraw from practice, which of the following is an appropriate ethical step to ensure proper management of client records according to APA Ethics Code Standard 6.02(c)?",
+      "stem": "If a psychologist plans to retire or close a practice, what should they arrange for client records?",
       "options": [
         "Destroying all client records to maintain confidentiality after the last session.",
         "Leaving records with administrative staff without instructions.",
@@ -174,7 +174,7 @@
         "Transferring records to a nonprofessional friend for safekeeping."
       ],
       "answer": "Arranging for a professional colleague or association to manage access and confidentiality of client records.",
-      "explanation": "Standard 6.02(c) requires psychologists to have plans such as engaging a colleague or professional association to manage client records confidentially upon practice withdrawal.",
+      "explanation": "They should plan for confidential management of records\u2014such as designating a colleague or custodian\u2014so clients' information remains protected.",
       "kn": "KN64",
       "kn_explanation": "This question relates to ethical management and protection of client information when psychologists end their practice, illustrating responsible professional conduct (KN64).",
       "difficulty": "medium",

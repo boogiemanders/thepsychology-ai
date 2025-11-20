@@ -234,6 +234,7 @@ export function ExpandableDomainAnalysis({
               ).length
               const correctInDomain = totalInDomain - wrongInDomain
               const correctPct = totalInDomain > 0 ? Math.round((correctInDomain / totalInDomain) * 100) : 0
+              const wrongPct = totalInDomain > 0 ? 100 - correctPct : 0
               const priorityColor = getPriorityColor(correctPct)
               const priorityLabel = getPriorityLabel(correctPct)
 
@@ -269,7 +270,7 @@ export function ExpandableDomainAnalysis({
                         </div>
                         <div>
                           <div className="text-sm text-muted-foreground">% Wrong</div>
-                          <div className="text-2xl font-bold">{domain.percentageWrong.toFixed(1)}%</div>
+                          <div className="text-2xl font-bold">{wrongPct}%</div>
                         </div>
                         <div>
                           <div className="text-sm text-muted-foreground">Priority Score</div>

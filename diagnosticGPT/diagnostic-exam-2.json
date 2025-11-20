@@ -124,7 +124,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Identity Development Models.json::12"
     },
     {
-      "stem": "When providing services in an emergency situation outside of their normal competence, what does APA Standard 2.02 require psychologists to do once the emergency is over or alternative services are available?",
+      "stem": "After providing emergency services outside their usual competence, what should a psychologist do when alternative providers become available?",
       "options": [
         "Continue services indefinitely to maintain client stability",
         "Transfer or refer the client to an appropriately competent professional as soon as possible",
@@ -132,7 +132,7 @@
         "Reduce services gradually rather than terminating abruptly"
       ],
       "answer": "Transfer or refer the client to an appropriately competent professional as soon as possible",
-      "explanation": "Standard 2.02 permits emergency services outside competence only if alternative services are unavailable, requiring discontinuation or referral when alternatives become available.",
+      "explanation": "They should discontinue or transfer services to qualified providers once the emergency has passed to ensure appropriate care.",
       "kn": "KN61",
       "kn_explanation": "This question assesses ethical standards tied to competence and emergency practice, a key area of professional ethical behavior.",
       "difficulty": "medium",
@@ -502,7 +502,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json::4"
     },
     {
-      "stem": "According to Standard 9.08, when is it acceptable for psychologists to use outdated or obsolete tests?",
+      "stem": "When might using an older or out-of-print test still be ethical?",
       "options": [
         "When use remains appropriate for the current evaluation and provides beneficial information",
         "Only when no newer versions of the test exist",
@@ -510,7 +510,7 @@
         "Only if the client specifically requests the older test version"
       ],
       "answer": "When use remains appropriate for the current evaluation and provides beneficial information",
-      "explanation": "Standard 9.08 allows use of outdated or obsolete tests if they are appropriate for the evaluation purpose and beneficial, e.g., better culturally relevant norms.",
+      "explanation": "Older tests can be used when they are still appropriate for the evaluation and provide useful information for the client or context.",
       "kn": "KN62",
       "kn_explanation": "This question examines ethical considerations regarding test selection and interpretation within practice standards (KN62).",
       "difficulty": "medium",
@@ -628,7 +628,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethical : Legal : Professional Issues/8 Professional Issues.json::10"
     },
     {
-      "stem": "When providing services ordered by a court, what must psychologists inform the examinee about, according to APA Ethics Code Standard 3.10(c)?",
+      "stem": "Before beginning a court-ordered evaluation, what should a psychologist explain to the person being assessed?",
       "options": [
         "That participation is voluntary and confidentiality is unlimited.",
         "The nature and purpose of the services, that they are court-ordered, and limits of confidentiality.",
@@ -636,7 +636,7 @@
         "That no information will be shared with third parties under any circumstances."
       ],
       "answer": "The nature and purpose of the services, that they are court-ordered, and limits of confidentiality.",
-      "explanation": "Standard 3.10(c) requires psychologists to inform clients of the nature of court-ordered services, their mandated status, and confidentiality limits.",
+      "explanation": "They should clarify their evaluative role, that the service is mandated, and any limits on confidentiality.",
       "kn": "KN68",
       "kn_explanation": "This question focuses on disclosure and informed consent within legal and ethical standards (KN68).",
       "difficulty": "medium",

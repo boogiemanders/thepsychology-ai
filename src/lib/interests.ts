@@ -108,7 +108,13 @@ export async function updateUserCurrentInterest(userId: string, interest: string
         console.debug('Interest tables not created yet')
         return
       }
-      console.error('Fetch error:', fetchError)
+      // Log details at debug level so it doesn't surface as a client error
+      console.debug('Fetch error while updating interest:', {
+        code: fetchError.code,
+        message: fetchError.message,
+        details: fetchError.details,
+        hint: fetchError.hint,
+      })
       return
     }
 
@@ -119,7 +125,7 @@ export async function updateUserCurrentInterest(userId: string, interest: string
         .eq('user_id', userId)
 
       if (updateError) {
-        console.error('Update error:', updateError)
+        console.debug('Update error while updating interest:', updateError)
       }
     } else {
       const { error: insertError } = await supabase
@@ -127,7 +133,7 @@ export async function updateUserCurrentInterest(userId: string, interest: string
         .insert([{ user_id: userId, interest, created_at: new Date(), updated_at: new Date() }])
 
       if (insertError) {
-        console.error('Insert error:', insertError)
+        console.debug('Insert error while inserting interest:', insertError)
       }
     }
 
@@ -137,10 +143,10 @@ export async function updateUserCurrentInterest(userId: string, interest: string
       .insert([{ user_id: userId, interest, created_at: new Date() }])
 
     if (historyError) {
-      console.error('History error:', historyError)
+      console.debug('History error while saving interest history:', historyError)
     }
   } catch (error) {
-    console.error('Error updating interest:', error)
+    console.debug('Error updating interest (non-fatal):', error)
   }
 }
 

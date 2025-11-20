@@ -183,6 +183,18 @@ export function TopicTeacherContent() {
         hasAnyResults = true
       }
 
+      // If this topic was reached from exam-based recommendations but
+      // we don't have granular section data, treat the whole topic as
+      // needing review so the content is highlighted.
+      if (hasExamResults && !hasAnyResults) {
+        setHighlightData({
+          recentlyWrongSections: ['__ALL__'],
+          recentlyCorrectSections: [],
+          previouslyWrongNowCorrectSections: [],
+        })
+        return
+      }
+
       // Set highlight data with combined results
       if (hasAnyResults && allWrongSections.length > 0) {
         setHighlightData({
@@ -194,7 +206,7 @@ export function TopicTeacherContent() {
         })
       }
     }
-  }, [topic])
+  }, [topic, hasExamResults])
 
   // Initialize with lesson
   useEffect(() => {
@@ -500,7 +512,7 @@ export function TopicTeacherContent() {
   }
 
   const getHighlightType = (text: string): 'recently-wrong' | 'previously-wrong-now-correct' | 'recently-correct' | null => {
-    if (!hasQuizResults || (highlightData.recentlyWrongSections.length === 0 &&
+    if ((!hasQuizResults && !hasExamResults) || (highlightData.recentlyWrongSections.length === 0 &&
         highlightData.previouslyWrongNowCorrectSections.length === 0 &&
         highlightData.recentlyCorrectSections.length === 0)) {
       return null
@@ -511,6 +523,11 @@ export function TopicTeacherContent() {
     }
 
     const SIMILARITY_THRESHOLD = 0.25
+
+    // Special case: mark all sections as recently wrong for exam-derived topics
+    if (highlightData.recentlyWrongSections.includes('__ALL__')) {
+      return 'recently-wrong'
+    }
 
     // Check if this header matches recently wrong sections
     for (const section of highlightData.recentlyWrongSections) {
@@ -688,7 +705,7 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              🍏 Highlighting sections where you got questions wrong: {highlightData.recentlyWrongSections.join(', ')}
+              🍏 Highlighting sections for growth: {highlightData.recentlyWrongSections.join(', ')}
             </p>
           </motion.div>
         )}
@@ -849,41 +866,44 @@ export function TopicTeacherContent() {
                           },
                           p: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            let className = ''
-                            if (highlightType === 'recently-wrong') {
-                              className = 'flex gap-2 items-start'
-                            }
+                            const shouldHighlight = highlightType === 'recently-wrong'
                             return (
-                              <p className={className}>
-                                {highlightType === 'recently-wrong' && <span className="flex-shrink-0 mt-0.5">🍏</span>}
-                                <span>{children}</span>
-                              </p>
+                              <div className={`transition-colors ${shouldHighlight ? 'relative pl-6' : ''}`}>
+                                {shouldHighlight && (
+                                  <span className="absolute left-0 top-0 text-base leading-none">
+                                    🍏
+                                  </span>
+                                )}
+                                <p className="m-0">{children}</p>
+                              </div>
                             )
                           },
                           ul: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            let className = ''
-                            if (highlightType === 'recently-wrong') {
-                              className = 'flex gap-2 items-start'
-                            }
+                            const shouldHighlight = highlightType === 'recently-wrong'
                             return (
-                              <ul className={className}>
-                                {highlightType === 'recently-wrong' && <span className="flex-shrink-0">🍏</span>}
-                                <div>{children}</div>
-                              </ul>
+                              <div className={`transition-colors ${shouldHighlight ? 'relative pl-6' : ''}`}>
+                                {shouldHighlight && (
+                                  <span className="absolute left-0 top-0 text-base leading-none">
+                                    🍏
+                                  </span>
+                                )}
+                                <ul>{children}</ul>
+                              </div>
                             )
                           },
                           ol: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            let className = ''
-                            if (highlightType === 'recently-wrong') {
-                              className = 'flex gap-2 items-start'
-                            }
+                            const shouldHighlight = highlightType === 'recently-wrong'
                             return (
-                              <ol className={className}>
-                                {highlightType === 'recently-wrong' && <span className="flex-shrink-0">🍏</span>}
-                                <div>{children}</div>
-                              </ol>
+                              <div className={`transition-colors ${shouldHighlight ? 'relative pl-6' : ''}`}>
+                                {shouldHighlight && (
+                                  <span className="absolute left-0 top-0 text-base leading-none">
+                                    🍏
+                                  </span>
+                                )}
+                                <ol>{children}</ol>
+                              </div>
                             )
                           },
                           thead: ({ children }) => {

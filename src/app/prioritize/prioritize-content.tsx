@@ -511,12 +511,12 @@ export function PrioritizeContent() {
                                         item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                           <ul className="text-sm space-y-2">
                                             {item.recommendedTopics.map((topic: any, topicIdx: number) => {
-                                              // Use sourceFile if available (actual filename), otherwise use topicName
-                                              const displayName = topic.sourceFile || topic.topicName
+                                              // Prefer the human-readable topic name; fall back to sourceFile label if needed
+                                              const displayName = topic.topicName || topic.sourceFile
                                               return (
                                                 <li key={topicIdx}>
                                                   <Link
-                                                    href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
+                                                    href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true&hasExamResults=true`}
                                                     className="hover:underline"
                                                     style={{ color: '#6a9bcc' }}
                                                     target="_blank"
@@ -536,12 +536,12 @@ export function PrioritizeContent() {
                                       ) : item.recommendedTopics && item.recommendedTopics.length > 0 ? (
                                         <ul className="text-sm space-y-2">
                                           {item.recommendedTopics.map((topic: any, topicIdx: number) => {
-                                            // Use sourceFile if available (actual filename), otherwise use topicName
-                                            const displayName = topic.sourceFile || topic.topicName
+                                            // Prefer the human-readable topic name; fall back to sourceFile label if needed
+                                            const displayName = topic.topicName || topic.sourceFile
                                             return (
                                               <li key={topicIdx}>
                                                 <Link
-                                                  href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true`}
+                                                  href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true&hasExamResults=true`}
                                                   className="hover:underline"
                                                   style={{ color: '#6a9bcc' }}
                                                   target="_blank"

@@ -191,6 +191,16 @@ Start generating the exam now. Generate EXACTLY 225 questions (180 scored + 45 u
 
 export async function POST(request: NextRequest) {
   try {
+    // In development, skip actual pre-generation to avoid Anthropic/Supabase
+    // configuration issues and long-running background jobs.
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('[Pre-Gen] Skipping exam pre-generation in non-production environment')
+      return NextResponse.json(
+        { success: true, message: 'Pre-generation disabled in development' },
+        { status: 200 }
+      )
+    }
+
     // Check if Anthropic API key is available
     if (!process.env.ANTHROPIC_API_KEY) {
       console.error('ANTHROPIC_API_KEY not set')

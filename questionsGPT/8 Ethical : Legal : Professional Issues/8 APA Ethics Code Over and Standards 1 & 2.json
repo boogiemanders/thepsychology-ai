@@ -16,7 +16,7 @@
       "quality_comment": "The question clearly distinguishes key terminology from the ethical code, and distractors are plausible misunderstandings, making it a solid foundational ethics question."
     },
     {
-      "stem": "Which of the following actions is required under APA Standard 1.05 when a psychologist becomes aware of a colleague's ethical violation that has caused substantial harm?",
+      "stem": "A psychologist learns that a colleague's actions have harmed a client and informal resolution is not appropriate. What should the psychologist do?",
       "options": [
         "Attempt an informal resolution by personally confronting the colleague, unless confidentiality can be broken",
         "Report the violation to an ethics committee, licensing board, or other appropriate authority if informal resolution is not appropriate or successful",
@@ -24,14 +24,14 @@
         "Consult with other colleagues before deciding whether to report the violation"
       ],
       "answer": "Report the violation to an ethics committee, licensing board, or other appropriate authority if informal resolution is not appropriate or successful",
-      "explanation": "Standard 1.05 requires reporting ethical violations when informal resolution is inappropriate, unsuccessful, or when substantial harm has occurred.",
+      "explanation": "They should report the violation to an ethics body, licensing board, or other authority when informal steps are inadequate or substantial harm has occurred.",
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of ethical requirements related to addressing colleagues' violations, which falls within current ethical principles and codes.",
       "difficulty": "medium",
       "quality_comment": "Distractors include common misconceptions about informal resolution and reporting, providing a realistic challenge for examinees."
     },
     {
-      "stem": "When faced with a conflict between an ethical standard and a law requiring an action that violates human rights, what must a psychologist do according to APA Standard 1.02?",
+      "stem": "If a law requires an action that would violate human rights and conflicts with ethical responsibilities, how should a psychologist respond?",
       "options": [
         "Comply with the law regardless of the ethical conflict",
         "Use the ethical standard to justify violating the law",
@@ -39,7 +39,7 @@
         "Prioritize organizational demands over ethical responsibilities"
       ],
       "answer": "Make reasonable efforts to resolve the conflict consistent with the Ethics Code, but never justify violating human rights",
-      "explanation": "Standard 1.02 requires psychologists to attempt to resolve conflicts consistent with ethics but prohibits justifying violations of human rights under any circumstance.",
+      "explanation": "Psychologists must work to resolve the conflict in line with ethical principles and cannot use the law to justify violating human rights.",
       "kn": "KN61",
       "kn_explanation": "This question probes understanding of the interaction between ethical standards and legal demands, a core ethical and legal professional issue.",
       "difficulty": "medium",
@@ -54,14 +54,14 @@
         "Never; they should always refer clients to another provider"
       ],
       "answer": "After undertaking relevant education, training, supervised experience, or consultation to develop competence",
-      "explanation": "Standard 2.01(c) allows psychologists to work outside their current competence boundaries if they obtain appropriate education, training, or consultation.",
+      "explanation": "Ethical guidelines permit psychologists to work with populations outside their current competence when they obtain appropriate education, training, supervised experience, or consultation.",
       "kn": "KN61",
       "kn_explanation": "This question addresses competence-related ethical standards, which are central to professional standards and guidelines.",
       "difficulty": "medium",
       "quality_comment": "Options offer clear contrasts, helping test-takers differentiate between ethical flexibility and rigid requirements."
     },
     {
-      "stem": "What action does APA Standard 2.06 require of psychologists who become aware that a personal problem is likely to interfere with their professional effectiveness?",
+      "stem": "A psychologist notices that personal problems are likely to interfere with their work. What should they do?",
       "options": [
         "Continue professional activities while monitoring the situation",
         "Limit, suspend, or terminate professional activities after consultation or take appropriate measures",
@@ -69,7 +69,7 @@
         "Delegate responsibilities to supervisees without notifying clients"
       ],
       "answer": "Limit, suspend, or terminate professional activities after consultation or take appropriate measures",
-      "explanation": "Standard 2.06 obligates psychologists to take appropriate measures, including consultation, and to limit or stop activities if effectiveness is impaired by personal problems.",
+      "explanation": "They should seek consultation and limit, suspend, or end professional activities until they can practice effectively.",
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of competence-related ethical requirements concerning personal issues that affect professional work.",
       "difficulty": "medium",
@@ -91,7 +91,7 @@
       "quality_comment": "Clear options representing different principles, making the question straightforward and well suited for foundational knowledge."
     },
     {
-      "stem": "Under APA Ethics Code Standard 2.05, when is it appropriate for a psychologist to delegate duties to a family member serving as an interpreter for a client?",
+      "stem": "A client asks a psychologist's family member to interpret during sessions. Is it appropriate to delegate that role?",
       "options": [
         "If the family member agrees and the client consents",
         "When the psychologist lacks other interpreter options but supervises carefully",
@@ -99,7 +99,7 @@
         "If the family member is fluent in the language and understands confidentiality"
       ],
       "answer": "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
-      "explanation": "Delegation to someone with a multiple relationship that could interfere with objectivity, such as a family member, is unethical under Standard 2.05.",
+      "explanation": "No. Delegating to someone in a multiple relationship, such as a family member, risks impaired objectivity and potential harm.",
       "kn": "KN61",
       "kn_explanation": "This question assesses competence and delegation ethical standards, focusing on maintaining objectivity and professionalism.",
       "difficulty": "medium",
@@ -136,7 +136,7 @@
       "quality_comment": "The sequence-focused question is clear and tests recall of procedural ethics models, with plausible distractors reflecting other steps in the process."
     },
     {
-      "stem": "Under APA Standard 1.06, which action would constitute an ethical violation regarding cooperation with ethics committees?",
+      "stem": "What constitutes an ethical violation when cooperating with an ethics investigation?",
       "options": [
         "Providing client information with a signed client release when requested by an ethics committee",
         "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
@@ -144,14 +144,14 @@
         "Consulting with a supervisor before responding to the ethics committee's request"
       ],
       "answer": "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
-      "explanation": "Standard 1.06 requires psychologists to cooperate with ethics investigations unless confidentiality or laws prevent disclosure.",
+      "explanation": "Failing to cooperate with an ethics inquiry without a legitimate confidentiality or legal barrier violates professional responsibilities.",
       "kn": "KN61",
       "kn_explanation": "This item tests knowledge of ethical requirements regarding interactions with regulatory and professional bodies.",
       "difficulty": "medium",
       "quality_comment": "Distractors include ethically correct or situation-appropriate responses, distinguishing the truly unethical behavior effectively."
     },
     {
-      "stem": "When providing services in an emergency situation outside of their normal competence, what does APA Standard 2.02 require psychologists to do once the emergency is over or alternative services are available?",
+      "stem": "After providing emergency services outside their usual competence, what should a psychologist do when alternative providers become available?",
       "options": [
         "Continue services indefinitely to maintain client stability",
         "Transfer or refer the client to an appropriately competent professional as soon as possible",
@@ -159,7 +159,7 @@
         "Reduce services gradually rather than terminating abruptly"
       ],
       "answer": "Transfer or refer the client to an appropriately competent professional as soon as possible",
-      "explanation": "Standard 2.02 permits emergency services outside competence only if alternative services are unavailable, requiring discontinuation or referral when alternatives become available.",
+      "explanation": "They should discontinue or transfer services to qualified providers once the emergency has passed to ensure appropriate care.",
       "kn": "KN61",
       "kn_explanation": "This question assesses ethical standards tied to competence and emergency practice, a key area of professional ethical behavior.",
       "difficulty": "medium",
@@ -168,12 +168,12 @@
     {
       "stem": "Which of the following best describes 'vicarious liability' in the context of psychologists delegating work to supervisees or employees?",
       "options": [
-        "The legal responsibility psychologists have for supervisees’ or employees’ actions conducted within their scope and standard of care",
-        "The ethical obligation to provide supervision regardless of supervisees’ competence",
+        "The legal responsibility psychologists have for supervisees\u2019 or employees\u2019 actions conducted within their scope and standard of care",
+        "The ethical obligation to provide supervision regardless of supervisees\u2019 competence",
         "Authorization of supervisees to act independently without oversight",
         "The responsibility of supervisees alone for any errors made during delegated tasks"
       ],
-      "answer": "The legal responsibility psychologists have for supervisees’ or employees’ actions conducted within their scope and standard of care",
+      "answer": "The legal responsibility psychologists have for supervisees\u2019 or employees\u2019 actions conducted within their scope and standard of care",
       "explanation": "Vicarious liability means supervisors can be held legally responsible for supervisees' actions if those actions deviate from standards and occur within assigned duties.",
       "kn": "KN61",
       "kn_explanation": "Understanding legal and ethical responsibilities related to supervision and delegation aligns with ethical, legal, and professional issues.",
@@ -198,13 +198,13 @@
     {
       "stem": "According to the APA Ethics Code, what is required when delegating professional work to others such as research assistants or interpreters?",
       "options": [
-        "Delegation is allowed regardless of the delegatee’s relationships with clients if they have been trained",
+        "Delegation is allowed regardless of the delegatee\u2019s relationships with clients if they have been trained",
         "Psychologists must ensure the delegatee has no conflicting multiple relationships and has adequate competence",
         "Psychologists can only delegate to licensed psychologists to avoid liability",
         "Delegation is only allowed if the delegatee receives direct supervision at all times"
       ],
       "answer": "Psychologists must ensure the delegatee has no conflicting multiple relationships and has adequate competence",
-      "explanation": "Standard 2.05 specifies that psychologists must delegate only to individuals without multiple relationships that impair objectivity and who have the necessary competence.",
+      "explanation": "Delegating work requires choosing individuals with the necessary skills and no conflicting relationships, while maintaining oversight to protect clients and ensure quality.",
       "kn": "KN64",
       "kn_explanation": "This question addresses managing potential ethical issues in delegation, including conflicts of interest and competence, fitting under ethical issue management.",
       "difficulty": "medium",
@@ -226,7 +226,7 @@
       "quality_comment": "The question clarifies nuanced understanding of how personal behavior may implicate professional ethical standards."
     },
     {
-      "stem": "Under APA Standard 2.01, what steps may a psychologist take when asked to provide services outside their competence and no alternative providers are available?",
+      "stem": "If no specialists are available, how may a psychologist proceed when asked to work outside their usual competence?",
       "options": [
         "Decline services and provide no further action",
         "Provide services after making reasonable efforts to obtain education, training, or consultation",
@@ -234,7 +234,7 @@
         "Refer the client only after beginning services without training"
       ],
       "answer": "Provide services after making reasonable efforts to obtain education, training, or consultation",
-      "explanation": "Standard 2.01(d) allows psychologists to provide services outside their competence when no alternatives exist but requires efforts to gain competence and protect clients.",
+      "explanation": "They may temporarily offer the service while actively gaining competence and arranging safeguards for the client.",
       "kn": "KN64",
       "kn_explanation": "This question reflects ethical management of competence boundaries, emphasizing appropriate steps to reduce ethical risk.",
       "difficulty": "medium",

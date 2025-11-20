@@ -85,8 +85,13 @@ export default function ExamGeneratorPage() {
                 if (part) fragment.appendChild(document.createTextNode(part))
                 if (index < parts.length - 1) {
                   const mark = document.createElement('mark')
+                  // Keep font consistent with surrounding text; only change highlight color
                   mark.style.backgroundColor = 'yellow'
                   mark.style.color = 'black'
+                  mark.style.fontFamily = 'inherit'
+                  mark.style.fontSize = 'inherit'
+                  mark.style.fontWeight = 'inherit'
+                  mark.style.lineHeight = 'inherit'
                   mark.textContent = selectedText
                   fragment.appendChild(mark)
                 }
@@ -149,7 +154,12 @@ export default function ExamGeneratorPage() {
                 if (part) fragment.appendChild(document.createTextNode(part))
                 if (index < parts.length - 1) {
                   const del = document.createElement('del')
+                  // Keep font consistent; only add line-through
                   del.style.textDecoration = 'line-through'
+                  del.style.fontFamily = 'inherit'
+                  del.style.fontSize = 'inherit'
+                  del.style.fontWeight = 'inherit'
+                  del.style.lineHeight = 'inherit'
                   del.textContent = selectedText
                   fragment.appendChild(del)
                 }
@@ -185,7 +195,6 @@ export default function ExamGeneratorPage() {
         }))
       }
     }
-    window.getSelection()?.removeAllRanges()
   }, [currentQuestion, questions, textFormats])
 
   // Save paused exam state to localStorage

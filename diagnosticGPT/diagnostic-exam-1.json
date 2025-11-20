@@ -736,7 +736,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Interest Inventories.json::7"
     },
     {
-      "stem": "According to APA Ethics Code Standard 10.01(b), what must psychologists inform clients about when using treatments for which generally recognized techniques have not been established?",
+      "stem": "When offering a treatment with little established evidence, what should the psychologist tell the client?",
       "options": [
         "The developing nature of treatment, potential risks, alternative treatments, and voluntary participation",
         "Only the potential benefits without emphasizing risks",
@@ -744,7 +744,7 @@
         "That the treatment is experimental and thus may not be effective"
       ],
       "answer": "The developing nature of treatment, potential risks, alternative treatments, and voluntary participation",
-      "explanation": "Standard 10.01(b) requires psychologists to disclose treatment uncertainty, risks, alternatives, and voluntary nature to clients receiving unestablished therapies.",
+      "explanation": "They should explain that the approach is still developing, outline potential risks, describe available alternatives, and note that participation is voluntary.",
       "kn": "KN64",
       "kn_explanation": "This question focuses on managing ethical issues around informed consent for novel or experimental treatments (KN64).",
       "difficulty": "medium",
@@ -934,7 +934,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/6 Career Choice and Development.json::4"
     },
     {
-      "stem": "According to APA Ethics Code Standard 3.06, when must psychologists avoid accepting a professional role?",
+      "stem": "When should psychologists decline or step back from a professional role because of other interests or relationships they hold?",
       "options": [
         "When the role involves treatment of multiple clients simultaneously.",
         "When the role could impair their objectivity, competence, or effectiveness or expose others to harm or exploitation.",
@@ -942,7 +942,7 @@
         "When working with clients from different cultural backgrounds."
       ],
       "answer": "When the role could impair their objectivity, competence, or effectiveness or expose others to harm or exploitation.",
-      "explanation": "Standard 3.06 prohibits accepting roles that could reasonably be expected to impair professional functioning or harm others.",
+      "explanation": "They must avoid roles that could reasonably impair their objectivity or effectiveness or risk harming the people involved.",
       "kn": "KN68",
       "kn_explanation": "This addresses ethical responsibilities in role acceptance avoiding conflicts of interest and harm (KN68).",
       "difficulty": "medium",
@@ -1168,7 +1168,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::7"
     },
     {
-      "stem": "Under APA Ethics Code Standard 2.05, when is it appropriate for a psychologist to delegate duties to a family member serving as an interpreter for a client?",
+      "stem": "A client asks a psychologist's family member to interpret during sessions. Is it appropriate to delegate that role?",
       "options": [
         "If the family member agrees and the client consents",
         "When the psychologist lacks other interpreter options but supervises carefully",
@@ -1176,7 +1176,7 @@
         "If the family member is fluent in the language and understands confidentiality"
       ],
       "answer": "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
-      "explanation": "Delegation to someone with a multiple relationship that could interfere with objectivity, such as a family member, is unethical under Standard 2.05.",
+      "explanation": "No. Delegating to someone in a multiple relationship, such as a family member, risks impaired objectivity and potential harm.",
       "kn": "KN61",
       "kn_explanation": "This question assesses competence and delegation ethical standards, focusing on maintaining objectivity and professionalism.",
       "difficulty": "medium",
@@ -1186,7 +1186,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json::6"
     },
     {
-      "stem": "When a psychologist plans to withdraw from practice, which of the following is an appropriate ethical step to ensure proper management of client records according to APA Ethics Code Standard 6.02(c)?",
+      "stem": "If a psychologist plans to retire or close a practice, what should they arrange for client records?",
       "options": [
         "Destroying all client records to maintain confidentiality after the last session.",
         "Leaving records with administrative staff without instructions.",
@@ -1194,7 +1194,7 @@
         "Transferring records to a nonprofessional friend for safekeeping."
       ],
       "answer": "Arranging for a professional colleague or association to manage access and confidentiality of client records.",
-      "explanation": "Standard 6.02(c) requires psychologists to have plans such as engaging a colleague or professional association to manage client records confidentially upon practice withdrawal.",
+      "explanation": "They should plan for confidential management of records\u2014such as designating a colleague or custodian\u2014so clients' information remains protected.",
       "kn": "KN64",
       "kn_explanation": "This question relates to ethical management and protection of client information when psychologists end their practice, illustrating responsible professional conduct (KN64).",
       "difficulty": "medium",
@@ -1410,7 +1410,7 @@
         "Privately inform colleagues but not make public corrections."
       ],
       "answer": "Take reasonable steps to correct errors via published corrections, retractions, or errata.",
-      "explanation": "Standard 8.10(b) requires psychologists to responsibly correct significant published errors to maintain scientific accuracy.",
+      "explanation": "Psychologists must take reasonable steps to correct significant published errors, such as issuing corrections or retractions, to maintain scientific integrity.",
       "kn": "KN69",
       "kn_explanation": "This question targets ethical responsibilities related to reporting research results and maintaining the integrity of the scientific record (KN69).",
       "difficulty": "medium",

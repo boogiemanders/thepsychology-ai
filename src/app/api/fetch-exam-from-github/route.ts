@@ -91,6 +91,12 @@ export async function GET(request: NextRequest) {
  * Mirrors the mapping logic used by /api/assign-exam so review-exams sees the same content.
  * Returns null if no matching GPT exam exists.
  */
+
+function isOrgPsychSource(sourcePath?: string | null): boolean {
+  if (!sourcePath) return false
+  return sourcePath.includes('2 3 5 6 Organizational Psychology')
+}
+
 function loadExamFromGptJson(
   examFile: string,
   examType: 'diagnostic' | 'practice'
@@ -119,6 +125,10 @@ function loadExamFromGptJson(
   const questions = Array.isArray(parsed.questions) ? parsed.questions : []
 
   const mappedQuestions = questions.map((q: any, idx: number) => {
+    const sourceFile = q.sourceFile ?? q.source_file
+    const sourceFolder = q.sourceFolder ?? q.source_folder
+    const inferredOrgPsych = isOrgPsychSource(sourceFolder) || isOrgPsychSource(sourceFile)
+
     const domainNumber =
       typeof q.domain === 'number'
         ? q.domain
@@ -140,10 +150,11 @@ function loadExamFromGptJson(
       isScored: typeof q.scored === 'boolean' ? q.scored : q.isScored,
       knId: q.kn ?? q.knId,
       type: q.type ?? 'standard',
-      source_file: q.sourceFile ?? q.source_file,
-      source_folder: q.sourceFolder ?? q.source_folder,
+      source_file: sourceFile,
+      source_folder: sourceFolder,
       question_type: q.question_type,
-      is_org_psych: q.is_org_psych,
+      // Prefer explicit flag, but infer from Org Psych source folder/path when missing
+      is_org_psych: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : inferredOrgPsych,
     }
   })
 

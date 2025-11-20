@@ -322,7 +322,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Other Psychoactive Drugs.json::8"
     },
     {
-      "stem": "According to APA Ethics Code Standard 6.01, which is a justified reason for psychologists to maintain professional records properly?",
+      "stem": "Why must psychologists maintain thorough professional records?",
       "options": [
         "To facilitate accurate billing and ensure legal compliance.",
         "To create marketing materials for future client recruitment.",
@@ -330,7 +330,7 @@
         "To discard forensic notes to protect client privacy post-trial."
       ],
       "answer": "To facilitate accurate billing and ensure legal compliance.",
-      "explanation": "Standard 6.01 requires proper record keeping to facilitate service transfer, billing, and to meet legal/institutional requirements; forensic notes are typically retained due to legal scrutiny.",
+      "explanation": "Good records support continuity of care, billing, and legal or institutional requirements, including retention of forensic notes when legally prudent.",
       "kn": "KN61",
       "kn_explanation": "The question targets ethical standards involving record maintenance and legal considerations, focusing on professional and ethical conduct (KN61).",
       "difficulty": "medium",
@@ -826,7 +826,7 @@
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json::6"
     },
     {
-      "stem": "According to APA Ethics Code Standard 10.01(b), what must psychologists inform clients about when using treatments for which generally recognized techniques have not been established?",
+      "stem": "When offering a treatment with little established evidence, what should the psychologist tell the client?",
       "options": [
         "The developing nature of treatment, potential risks, alternative treatments, and voluntary participation",
         "Only the potential benefits without emphasizing risks",
@@ -834,7 +834,7 @@
         "That the treatment is experimental and thus may not be effective"
       ],
       "answer": "The developing nature of treatment, potential risks, alternative treatments, and voluntary participation",
-      "explanation": "Standard 10.01(b) requires psychologists to disclose treatment uncertainty, risks, alternatives, and voluntary nature to clients receiving unestablished therapies.",
+      "explanation": "They should explain that the approach is still developing, outline potential risks, describe available alternatives, and note that participation is voluntary.",
       "kn": "KN64",
       "kn_explanation": "This question focuses on managing ethical issues around informed consent for novel or experimental treatments (KN64).",
       "difficulty": "medium",
