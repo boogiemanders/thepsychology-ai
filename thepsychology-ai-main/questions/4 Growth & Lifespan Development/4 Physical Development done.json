@@ -1,0 +1,302 @@
+[
+  {
+    "id": "phd_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is physical development primarily concerned with?",
+    "options": {
+      "A": "Psychological maturation",
+      "B": "Growth of body and nervous system",
+      "C": "Cognitive ability development",
+      "D": "Social relationship formation"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Physical development involves the growth and maturation of the body and nervous system throughout the lifespan."
+  },
+  {
+    "id": "phd_002",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What are the major changes during puberty?",
+    "options": {
+      "A": "Only intellectual changes",
+      "B": "Hormonal changes, growth spurt, and sexual maturation",
+      "C": "Decrease in physical activity",
+      "D": "Loss of deciduous teeth only"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Puberty involves hormonal changes, growth spurt, and development of secondary sexual characteristics."
+  },
+  {
+    "id": "phd_003",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How do growth rates differ between childhood and adolescence?",
+    "options": {
+      "A": "Continuous and equal throughout development",
+      "B": "Rapid in infancy, slower in childhood, then growth spurt in adolescence",
+      "C": "Slowest in infancy and childhood",
+      "D": "Variable with no predictable pattern"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Growth is rapid in infancy, slows during childhood, then accelerates again during adolescent growth spurt."
+  },
+  {
+    "id": "phd_004",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the relationship between physical development and motor skills?",
+    "options": {
+      "A": "Motor skills are independent of physical development",
+      "B": "Physical development enables motor skill development",
+      "C": "Motor skills determine physical development",
+      "D": "No relationship exists"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Physical development of the nervous system and muscles enables the acquisition of motor skills."
+  },
+  {
+    "id": "phd_005",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the difference between gross and fine motor skills?",
+    "options": {
+      "A": "Gross uses large muscles; fine uses small muscles",
+      "B": "Gross is learned; fine is innate",
+      "C": "Gross is slower to develop; fine is faster",
+      "D": "Gross is intellectual; fine is physical"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Gross motor skills involve large muscle groups (running, jumping); fine motor skills involve smaller muscle control (writing, drawing)."
+  },
+  {
+    "id": "phd_006",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is cephalocaudal development?",
+    "options": {
+      "A": "Development from outer to inner body parts",
+      "B": "Development from head downward to lower body",
+      "C": "Development of cognitive abilities",
+      "D": "Development of social relationships"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Cephalocaudal development refers to the sequence of development from the head downward to the lower body."
+  },
+  {
+    "id": "phd_007",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is proximodistal development?",
+    "options": {
+      "A": "Development from core outward to extremities",
+      "B": "Development of personality traits",
+      "C": "Development from inside the body outward",
+      "D": "Development of abstract thinking"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Proximodistal development is the sequence from the center (core) of the body outward to the extremities."
+  },
+  {
+    "id": "phd_008",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How does the timing of puberty vary and what are its consequences?",
+    "options": {
+      "A": "Timing is uniform for all adolescents",
+      "B": "Early/late timing affects psychological adjustment and peer relationships",
+      "C": "Timing has no effect on development",
+      "D": "Females always mature before males"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Timing of puberty varies, with early and late maturation having different effects on psychological adjustment and social relationships."
+  },
+  {
+    "id": "phd_009",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What happens to physical growth and development in middle and late adulthood?",
+    "options": {
+      "A": "Continues to accelerate",
+      "B": "Remains stable",
+      "C": "Gradual decline and aging",
+      "D": "Reverses completely"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN21",
+    "explanation": "Middle and late adulthood involve gradual physical decline including loss of muscle mass, bone density, and sensory abilities."
+  },
+  {
+    "id": "phd_010",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What are milestone achievements in motor development?",
+    "options": {
+      "A": "Sitting, standing, walking, running at typical ages",
+      "B": "Intellectual achievements only",
+      "C": "Social interaction milestones",
+      "D": "Language development only"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Motor milestones include rolling over, sitting, standing, walking, and running that occur at relatively predictable ages."
+  },
+  {
+    "id": "phd_011",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How are reflexes related to motor development in infants?",
+    "options": {
+      "A": "Reflexes are not related to motor development",
+      "B": "Primitive reflexes gradually disappear and voluntary control develops",
+      "C": "Reflexes increase throughout infancy",
+      "D": "Reflexes determine final motor ability"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Primitive reflexes gradually disappear as voluntary motor control develops during infancy and early childhood."
+  },
+  {
+    "id": "phd_012",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What role does myelination play in motor development?",
+    "options": {
+      "A": "It prevents motor skill development",
+      "B": "Myelin insulation enables faster neural transmission for coordinated movement",
+      "C": "It only affects cognitive development",
+      "D": "Myelination doesn't affect physical development"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Myelination (insulation of nerve fibers) enables faster neural transmission, allowing coordinated and complex motor skills."
+  },
+  {
+    "id": "phd_013",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What physical changes occur during menopause?",
+    "options": {
+      "A": "Increased estrogen production",
+      "B": "Cessation of menstruation and hormonal changes",
+      "C": "Increased fertility",
+      "D": "Rapid muscle development"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Menopause involves cessation of menstruation and significant hormonal changes affecting physical health and development."
+  },
+  {
+    "id": "phd_014",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does adolescent development differ between males and females?",
+    "options": {
+      "A": "Identical in both sexes",
+      "B": "Females mature earlier; males develop more muscle",
+      "C": "Males mature earlier and faster",
+      "D": "No significant biological differences"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Females typically enter and progress through puberty earlier than males; males tend to develop more muscle mass."
+  },
+  {
+    "id": "phd_015",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the relationship between nutrition and physical development?",
+    "options": {
+      "A": "Nutrition has no effect on development",
+      "B": "Nutrition affects growth, bone development, and overall health",
+      "C": "Nutrition only affects cognitive development",
+      "D": "Nutrition only affects adult health"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Adequate nutrition is essential for proper physical growth, bone development, muscle growth, and overall developmental health."
+  },
+  {
+    "id": "phd_016",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How does physical development affect cognitive and social development?",
+    "options": {
+      "A": "Physical development is independent of other domains",
+      "B": "Physical abilities influence what tasks can be attempted and social interactions",
+      "C": "Cognitive development determines physical development",
+      "D": "Social development is unaffected by physical changes"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Physical development affects what cognitive tasks can be attempted and influences peer relationships and social acceptance."
+  },
+  {
+    "id": "phd_017",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the sensorimotor period primarily associated with?",
+    "options": {
+      "A": "Abstract thinking",
+      "B": "Motor skill development and sensory awareness",
+      "C": "Language acquisition",
+      "D": "Emotional regulation"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "The sensorimotor period involves development of motor skills and learning through sensory experience and physical interaction."
+  },
+  {
+    "id": "phd_018",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does exercise affect physical and cognitive development?",
+    "options": {
+      "A": "Exercise only affects muscle development",
+      "B": "Exercise improves physical fitness and supports cognitive development",
+      "C": "Exercise has no developmental benefits",
+      "D": "Exercise interferes with cognitive development"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Regular exercise supports physical development, motor skill acquisition, and also enhances cognitive functioning and mental health."
+  },
+  {
+    "id": "phd_019",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is the impact of early or delayed physical maturation on development?",
+    "options": {
+      "A": "No impact on overall development",
+      "B": "Affects peer relationships, self-image, and psychological adjustment",
+      "C": "Only determines adult height",
+      "D": "Prevents later catch-up growth"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN21",
+    "explanation": "Early or delayed maturation affects peer acceptance, body image, and psychological adjustment during adolescence."
+  },
+  {
+    "id": "phd_020",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What major physical change occurs in the aging process?",
+    "options": {
+      "A": "Increased bone density",
+      "B": "Muscle mass increases",
+      "C": "Decline in organ function and sensory abilities",
+      "D": "Return to childhood growth rates"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN21",
+    "explanation": "Aging involves decline in muscle mass, bone density, organ function, and sensory abilities like vision and hearing."
+  }
+]

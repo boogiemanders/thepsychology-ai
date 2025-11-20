@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "stem": "According to Beck’s cognitive theory, which of the following best describes cognitive schemas?",
+      "options": [
+        "Verbal self-statements or mental images that spontaneously arise and trigger emotions",
+        "Enduring core beliefs developed in childhood that shape automatic thoughts and can be maladaptive or adaptive",
+        "Systematic errors in reasoning leading to distortions of reality during stress",
+        "Techniques used by therapists to correct faulty information processing"
+      ],
+      "answer": "Enduring core beliefs developed in childhood that shape automatic thoughts and can be maladaptive or adaptive",
+      "explanation": "Beck described cognitive schemas as core beliefs formed early in life that influence automatic thoughts and can be maladaptive, contributing to psychological disturbance.",
+      "kn": "KN12",
+      "kn_explanation": "This question addresses cognition and beliefs, specifically how core beliefs influence thought patterns and emotions, under relations among cognitions, beliefs, behavior, and affect (KN12).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a key CBT construct with distractors that reflect related but distinct concepts, enhancing test-taker discrimination."
+    },
+    {
+      "stem": "Which cognitive distortion involves drawing negative conclusions without any evidence to support them?",
+      "options": [
+        "Personalization",
+        "Selective abstraction",
+        "Arbitrary inference",
+        "Dichotomous thinking"
+      ],
+      "answer": "Arbitrary inference",
+      "explanation": "Arbitrary inference is a cognitive distortion defined as arriving at negative conclusions without supporting evidence.",
+      "kn": "KN12",
+      "kn_explanation": "This question assesses knowledge of cognitive distortions, which influence cognition and affect and are part of the cognitive-affective bases of behavior (KN12).",
+      "difficulty": "easy",
+      "quality_comment": "This question uses well-known distortions with clear definitions, making it appropriate for straightforward knowledge assessment."
+    },
+    {
+      "stem": "In Beck's CBT, what is the purpose of the Dysfunctional Thought Record (DTR)?",
+      "options": [
+        "To collect evidence supporting a client's maladaptive schemas",
+        "To help clients identify and challenge negative automatic thoughts through recording events, emotions, and alternative responses",
+        "To track medication effectiveness alongside cognitive therapy",
+        "To provide a long-term storage of all therapy session notes"
+      ],
+      "answer": "To help clients identify and challenge negative automatic thoughts through recording events, emotions, and alternative responses",
+      "explanation": "The DTR facilitates awareness and cognitive restructuring by documenting triggering events, emotional responses, automatic thoughts, and rational alternatives.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on treatment techniques and interventions in CBT, which falls under treatment, intervention, and prevention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The question has a clear stem and plausible but incorrect options, effectively distinguishing understanding of CBT tools."
+    },
+    {
+      "stem": "Ellis’s Rational Emotive Behavior Therapy (REBT) conceptualizes psychological disturbance primarily as the result of:",
+      "options": [
+        "Maladaptive cognitive schemas developed in childhood",
+        "Automatic thoughts triggered by external events",
+        "Irrational beliefs characterized by absolute 'must' and 'should' demands",
+        "Lack of coping skills for stressful situations"
+      ],
+      "answer": "Irrational beliefs characterized by absolute 'must' and 'should' demands",
+      "explanation": "REBT holds that rigid, dogmatic beliefs expressed as musts or shoulds cause emotional distress and interfere with goal attainment.",
+      "kn": "KN12",
+      "kn_explanation": "This item tests knowledge of cognitive beliefs underlying psychological problems, relevant to the study of cognition and affect (KN12).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include closely related CBT concepts, requiring nuanced understanding of REBT's unique emphasis on irrational beliefs."
+    },
+    {
+      "stem": "What is the main focus of Meichenbaum’s Stress Inoculation Training (SIT)?",
+      "options": [
+        "Exposure to feared stimuli to reduce anxiety",
+        "Teaching clients coping skills to better manage ongoing and future stressors through a structured three-phase approach",
+        "Eliminating maladaptive cognitive schemas that cause stress",
+        "Reinforcing positive automatic thoughts while dismissing negative ones"
+      ],
+      "answer": "Teaching clients coping skills to better manage ongoing and future stressors through a structured three-phase approach",
+      "explanation": "SIT involves education about stress, acquiring coping skills, and applying these skills in real and role-played situations to inoculate against stress.",
+      "kn": "KN44",
+      "kn_explanation": "This question addresses cognitive-behavioral treatment techniques designed to intervene in stress-related problems (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately targets SIT's features with plausible distractors drawn from related CBT principles."
+    },
+    {
+      "stem": "In Acceptance and Commitment Therapy (ACT), what is the process of 'cognitive defusion' designed to accomplish?",
+      "options": [
+        "Enhance emotional avoidance to reduce distress",
+        "Increase attachment to core beliefs for consistent behavior",
+        "Distance oneself from thoughts and feelings by viewing them as experiences rather than literal truths",
+        "Eliminate unpleasant thoughts through distraction"
+      ],
+      "answer": "Distance oneself from thoughts and feelings by viewing them as experiences rather than literal truths",
+      "explanation": "'Cognitive defusion' reduces the impact of thoughts by helping clients observe them without attaching to or literalizing them.",
+      "kn": "KN44",
+      "kn_explanation": "This question addresses a core process within ACT, a cognitive-behavioral treatment method, relevant to treatment interventions (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect plausible misunderstandings of ACT processes, encouraging precise knowledge of its therapeutic components."
+    },
+    {
+      "stem": "Which of the following distinguishes 'clean pain' from 'dirty pain' in Acceptance and Commitment Therapy?",
+      "options": [
+        "Clean pain is avoidable emotional suffering, while dirty pain is inevitable physical discomfort",
+        "Clean pain refers to unavoidable physical and psychological discomfort, while dirty pain is emotional suffering caused by resisting clean pain",
+        "Clean pain involves intrusive thoughts, whereas dirty pain relates to somatic symptoms",
+        "Clean pain is a sign of mental illness; dirty pain is a natural response to stress"
+      ],
+      "answer": "Clean pain refers to unavoidable physical and psychological discomfort, while dirty pain is emotional suffering caused by resisting clean pain",
+      "explanation": "ACT differentiates natural unavoidable discomfort ('clean pain') from the additional suffering created by resistance to that discomfort ('dirty pain').",
+      "kn": "KN44",
+      "kn_explanation": "This question relates to core theoretical concepts and processes within ACT, a treatment approach (KN44).",
+      "difficulty": "hard",
+      "quality_comment": "The question probes subtle conceptual distinctions in ACT, with distractors designed to mislead those unfamiliar with this model."
+    },
+    {
+      "stem": "Which intervention is an essential and empirically supported component of CBT for suicide prevention used across various client populations?",
+      "options": [
+        "No-suicide contracts requiring clients to promise abstinence from attempts",
+        "Safety planning intervention involving identification of warning signs and coping strategies",
+        "Prolonged exposure therapy focused on traumatic memories",
+        "Rational-emotive imagery to dispute irrational beliefs about suicide"
+      ],
+      "answer": "Safety planning intervention involving identification of warning signs and coping strategies",
+      "explanation": "Safety planning is an evidence-based practice that helps clients identify warning signs, coping strategies, and resources to reduce suicide risk, unlike no-suicide contracts which lack empirical support.",
+      "kn": "KN44",
+      "kn_explanation": "This item tests knowledge of empirically supported CBT techniques for suicide prevention, part of treatment/intervention methods (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible therapeutic techniques, but only safety planning has consistent empirical backing in this context, making the question clinically relevant."
+    },
+    {
+      "stem": "Self-instructional training (Meichenbaum) aims to improve children's impulsivity mainly by teaching them to:",
+      "options": [
+        "Verbalize internal task instructions progressively from modeling to covert self-guidance",
+        "Avoid stressful stimuli through role playing and relaxation techniques",
+        "Modify core beliefs through disputation of irrational thoughts",
+        "Develop cognitive schemas during early childhood"
+      ],
+      "answer": "Verbalize internal task instructions progressively from modeling to covert self-guidance",
+      "explanation": "Self-instructional training involves stages where children learn to talk themselves through tasks aloud, then covertly, improving self-control and problem solving.",
+      "kn": "KN44",
+      "kn_explanation": "This question pertains to a behavioral treatment technique aimed at cognitive and behavioral self-regulation (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The question offers concise but distinct options that require knowledge of the sequential stages in self-instructional training."
+    },
+    {
+      "stem": "Mindfulness-Based Cognitive Therapy (MBCT) primarily seeks to help clients:",
+      "options": [
+        "Develop rigid cognitive structures to eliminate emotional distress",
+        "Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques",
+        "Focus exclusively on physical symptoms of stress while ignoring cognitive processes",
+        "Replace negative automatic thoughts with positive ones using cognitive restructuring"
+      ],
+      "answer": "Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques",
+      "explanation": "MBCT integrates mindfulness and cognitive therapy to enable clients to observe distressing mental events without becoming absorbed by them.",
+      "kn": "KN44",
+      "kn_explanation": "This item covers a cognitive-behavioral treatment intervention that incorporates mindfulness, relevant to contemporary treatment approaches (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors describe plausible but inaccurate mechanisms, requiring an understanding of MBCT’s unique therapeutic goals."
+    }
+  ]
+}

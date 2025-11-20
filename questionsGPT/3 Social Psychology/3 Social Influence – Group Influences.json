@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "stem": "According to Zajonc’s drive theory, social facilitation occurs because the presence of others increases physiological arousal, which strengthens the dominant response. For which type of task is this dominant response typically correct, leading to improved performance?",
+      "options": [
+        "Difficult and unfamiliar tasks",
+        "Tasks requiring creative problem solving",
+        "Easy and well-learned tasks",
+        "Tasks involving new or complex skills"
+      ],
+      "answer": "Easy and well-learned tasks",
+      "explanation": "Zajonc’s drive theory states that the dominant response strengthened by arousal is usually correct for easy or well-learned tasks, resulting in social facilitation (improved performance).",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on social influence and group processes impacting individual behavior, which aligns with Group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a core mechanism of social facilitation with plausible distractors related to task difficulty and familiarity."
+    },
+    {
+      "stem": "Which of the following best describes social loafing?",
+      "options": [
+        "An increase in effort when task difficulty is perceived as low",
+        "A decrease in individual effort when working in a group compared to working alone",
+        "Strengthening of dominant responses in the presence of others",
+        "The loss of self-awareness and self-restraint in group settings"
+      ],
+      "answer": "A decrease in individual effort when working in a group compared to working alone",
+      "explanation": "Social loafing refers to individuals exerting less effort when working as part of a group than when working individually, often due to diffusion of responsibility.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests knowledge of group influences on individual behavior, specifically a group process concept central to social and cultural bases of behavior (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Question is straightforward with clearly distinguishable options; it effectively assesses understanding of a fundamental group behavior phenomenon."
+    },
+    {
+      "stem": "Which factor is NOT typically associated with reducing social loafing in group tasks?",
+      "options": [
+        "Small and cohesive group membership",
+        "Clear individual contributions that can be evaluated",
+        "Tasks perceived as personally meaningful",
+        "Presence of a large and anonymous crowd"
+      ],
+      "answer": "Presence of a large and anonymous crowd",
+      "explanation": "Large anonymous groups tend to increase social loafing, while small cohesive groups and identifiable contributions help reduce it.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding factors influencing social loafing involves knowledge of group and systems processes, consistent with KN16.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible and connected to social loafing, making the incorrect option (large group) stand out as the best answer."
+    },
+    {
+      "stem": "What best characterizes deindividuation in group settings?",
+      "options": [
+        "Improved performance on simple, repetitive tasks due to increased arousal",
+        "Loss of self-awareness and normal behavioral constraints due to anonymity or large groups",
+        "Effort reduction in groups because individual contributions are unidentifiable",
+        "The tendency of a minority opinion to affect majority attitudes through consistent expression"
+      ],
+      "answer": "Loss of self-awareness and normal behavioral constraints due to anonymity or large groups",
+      "explanation": "Deindividuation occurs when individuals in groups lose their sense of individuality, often leading to deviant behavior because they feel anonymous and less accountable.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses group influences on individual behavior, specifically mechanisms of deindividuation, which fit under Group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast different group phenomena well; distractors are similar concepts that challenge recall and conceptual understanding."
+    },
+    {
+      "stem": "Regarding minority influence in groups, Moscovici proposed that minorities are most effective at persuading the majority when they:",
+      "options": [
+        "Express their opinion consistently but without rigidity or dogmatism",
+        "Apply pressure through repeated majority normative influence",
+        "Rely on informal social sanctions against the majority",
+        "Accept public compliance but avoid conversion"
+      ],
+      "answer": "Express their opinion consistently but without rigidity or dogmatism",
+      "explanation": "Moscovici's model states that consistent, non-dogmatic minority expression increases their influence on the majority.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests understanding of social influence, particularly minority influence processes within groups, aligned with KN16.",
+      "difficulty": "medium",
+      "quality_comment": "The stem and options clearly address a nuanced aspect of social influence with plausible but conceptually distinct distractors."
+    },
+    {
+      "stem": "Which type of group task involves group members working independently and the final group output being the sum of individual contributions?",
+      "options": [
+        "Conjunctive task",
+        "Disjunctive task",
+        "Additive task",
+        "Compensatory task"
+      ],
+      "answer": "Additive task",
+      "explanation": "In additive tasks, individual efforts are combined by summing contributions, resulting in group performance better than any member alone.",
+      "kn": "KN16",
+      "kn_explanation": "This question pertains to group task types influencing group performance, a core aspect of group and systems processes (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Options include commonly referenced task types with different characteristics; question is clear with sufficiently similar option length."
+    },
+    {
+      "stem": "In Steiner's framework, which group task is limited by the performance of the poorest member, because all must contribute successfully for the group to succeed?",
+      "options": [
+        "Discretionary task",
+        "Additive task",
+        "Disjunctive task",
+        "Conjunctive task"
+      ],
+      "answer": "Conjunctive task",
+      "explanation": "Conjunctive tasks require all members to contribute effectively; the group's overall performance is constrained by the weakest member's contribution.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding the relationship between task type and group outcome is within group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all Steiner task types, requiring specific knowledge to differentiate, making this suitable for EPPP-level difficulty."
+    },
+    {
+      "stem": "According to Tuckman and Jensen's model, what characterizes the norming stage of group development?",
+      "options": [
+        "Members experience uncertainty about roles and rely heavily on the leader",
+        "Group members experience power struggles and conflicts",
+        "Group cohesion increases along with attempts to resolve conflicts and develop norms",
+        "Group focuses on task completion and recognition of accomplishments"
+      ],
+      "answer": "Group cohesion increases along with attempts to resolve conflicts and develop norms",
+      "explanation": "The norming stage involves resolving earlier conflicts, growing group cohesion, and establishing norms and procedures.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on group developmental processes as part of group and systems functioning (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Options correspond to different stages of Tuckman's model, effectively assessing knowledge of group development phases."
+    },
+    {
+      "stem": "Which statement best describes opinion change due to minority influence compared to majority influence, according to Moscovici?",
+      "options": [
+        "Minority influence leads to public compliance without private acceptance",
+        "Majority influence leads to private acceptance, while minority influence leads to public compliance",
+        "Minority influence is more likely to lead to private acceptance (conversion) of opinion",
+        "Both minority and majority influence lead only to public conformity"
+      ],
+      "answer": "Minority influence is more likely to lead to private acceptance (conversion) of opinion",
+      "explanation": "Moscovici proposed that minority influence tends to result in private acceptance and internal change, whereas majority influence more often results in public compliance.",
+      "kn": "KN16",
+      "kn_explanation": "The question tests understanding of mechanisms and effects of social influence on opinion change within groups, central to KN16.",
+      "difficulty": "medium",
+      "quality_comment": "The options are carefully crafted to test subtle distinctions between types of social influence and their effects."
+    },
+    {
+      "stem": "During which stage of Tuckman and Jensen’s group development model are group members most likely to avoid conflict and act politely toward one another?",
+      "options": [
+        "Performing stage",
+        "Storming stage",
+        "Forming stage",
+        "Norming stage"
+      ],
+      "answer": "Forming stage",
+      "explanation": "In the forming stage, group members are uncertain about roles, rely on the leader, and try to avoid conflict, interacting politely.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses knowledge about early group dynamics and stages of development, aligned with social and cultural bases of behavior (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Question is straightforward with clear, distinct options representing the well-known stages of group development."
+    },
+    {
+      "stem": "Which cultural difference is associated with greater likelihood of social loafing?",
+      "options": [
+        "Collectivist-Eastern cultures tend to exhibit more social loafing than individualist-Western cultures",
+        "Individualist-Western cultures tend to exhibit more social loafing than collectivist-Eastern cultures",
+        "No difference in social loafing between individualist and collectivist cultures",
+        "Social loafing occurs only in Western cultures"
+      ],
+      "answer": "Individualist-Western cultures tend to exhibit more social loafing than collectivist-Eastern cultures",
+      "explanation": "Research indicates that social loafing is more common in individualist-Western cultures, likely due to differing social norms regarding individual responsibility.",
+      "kn": "KN18",
+      "kn_explanation": "KN18 covers cultural influences on social behavior, making it appropriate for this question about cultural differences in social loafing within social influence.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively integrates cultural context with a specific group behavior, with plausible alternatives to challenge test takers."
+    },
+    {
+      "stem": "Which of the following best describes why social loafing decreases when individual contributions are identifiable?",
+      "options": [
+        "Individuals feel less diffusion of responsibility and increased evaluation apprehension",
+        "Group cohesion decreases and individuals act independently",
+        "Individuals experience reduced physiological arousal",
+        "Group members focus more on shared goals"
+      ],
+      "answer": "Individuals feel less diffusion of responsibility and increased evaluation apprehension",
+      "explanation": "When individual efforts can be identified and evaluated, people feel more accountable and motivated, reducing social loafing.",
+      "kn": "KN14",
+      "kn_explanation": "This item involves understanding social psychological mechanisms affecting individual behavior in groups, aligned with social cognition and group processes (KN14).",
+      "difficulty": "medium",
+      "quality_comment": "This item asks about underlying psychological processes related to group behavior, connecting well to fundamental social influence concepts."
+    }
+  ]
+}

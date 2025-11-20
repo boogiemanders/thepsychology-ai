@@ -1,0 +1,199 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following is a primary behavioral technique used to reduce performance anxiety in the treatment of erectile disorder?",
+      "options": [
+        "Start-stop technique",
+        "Sensate focus",
+        "Orgasmic reconditioning",
+        "Covert sensitization"
+      ],
+      "answer": "Sensate focus",
+      "explanation": "Sensate focus involves a series of nonsexual and sexual touching activities designed to reduce performance anxiety and enhance intimacy, making it effective for erectile disorder.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on treatment techniques and interventions for sexual dysfunctions, fitting the treatment and intervention knowledge area (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include relevant techniques for other sexual disorders or paraphilic disorders, providing plausible but distinct options."
+    },
+    {
+      "stem": "A man reports persistent difficulty ejaculating before one minute of vaginal penetration in 80% of sexual encounters for the past seven months, causing him significant distress. Which of the following treatments is supported by research for this condition?",
+      "options": [
+        "Daily SSRI medication, especially paroxetine",
+        "Topical anesthetic application",
+        "Kegel exercises",
+        "Cross-sex hormone therapy"
+      ],
+      "answer": "Daily SSRI medication, especially paroxetine",
+      "explanation": "Premature ejaculation has been linked to low serotonin, and SSRIs like paroxetine have been shown to delay ejaculation.",
+      "kn": "KN44",
+      "kn_explanation": "The question assesses knowledge of effective psychopharmacological and behavioral treatment for premature ejaculation, falling under treatment and intervention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options include plausible treatments related to sexual disorders or gender dysphoria to challenge test-takers appropriately."
+    },
+    {
+      "stem": "Which of the following DSM-5-TR specifiers is NOT applicable to genito-pelvic pain/penetration disorder?",
+      "options": [
+        "Onset (lifelong or acquired)",
+        "Severity (mild, moderate, or severe)",
+        "Extent (generalized or situational)",
+        "Intensity of pelvic muscle tensing"
+      ],
+      "answer": "Extent (generalized or situational)",
+      "explanation": "All sexual dysfunctions except genito-pelvic pain/penetration disorder include extent specifiers; this disorder only has onset and severity specifiers.",
+      "kn": "KN36",
+      "kn_explanation": "This question requires knowledge of diagnostic classification and specifiers within the DSM-5-TR classification system, linked to assessment and diagnosis (KN36).",
+      "difficulty": "hard",
+      "quality_comment": "The question tests detailed knowledge of diagnostic criteria and specifiers, with distractors mixing diagnostic features and irrelevant clinical terminology."
+    },
+    {
+      "stem": "Which treatment combination is most appropriate for a woman experiencing genito-pelvic pain/penetration disorder associated with pelvic floor muscle tension?",
+      "options": [
+        "Relaxation training, Kegel exercises, and sensate focus",
+        "Daily SSRI medication, cognitive restructuring, and marital therapy",
+        "Orgasmic reconditioning, start-stop technique, and vaginal dilators",
+        "Cross-sex hormones, psychotherapy, and genital reconstructive surgery"
+      ],
+      "answer": "Relaxation training, Kegel exercises, and sensate focus",
+      "explanation": "Interventions for this disorder focus on reducing anxiety and pelvic muscle tension via relaxation, Kegel exercises for control, and sensate focus to reduce performance anxiety.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of evidence-based treatment interventions targeting sexual dysfunction, which relates to treatment and intervention knowledge (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include treatments relevant to other disorders providing thoughtful challenge, with plausible but incorrect options."
+    },
+    {
+      "stem": "According to the gender-affirmative model of care for gender diverse youth, which of the following assumptions is emphasized?",
+      "options": [
+        "Gender dysphoria in children persists into adolescence in only a small minority of cases",
+        "Gender variations are not disorders and gender is not always binary",
+        "Watchful waiting is the preferred approach before any social transition",
+        "Cross-sex hormone therapy should only be provided after age 18"
+      ],
+      "answer": "Gender variations are not disorders and gender is not always binary",
+      "explanation": "The gender-affirmative model supports that gender variations are diverse, non-pathological, and that gender may be fluid and non-binary.",
+      "kn": "KN19",
+      "kn_explanation": "This question addresses concepts related to identity diversity and social-cultural psychological understanding of gender, aligning with social and cultural bases of behavior (KN19).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contrast the Dutch protocol and incorrect assumptions, enhancing clarity and discrimination."
+    },
+    {
+      "stem": "Which of the following criteria must be met for a diagnosis of pedophilic disorder according to DSM-5-TR?",
+      "options": [
+        "Sexual arousal focused on children under 16, with onset before age 18",
+        "Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child",
+        "Sexual attraction to prepubescent and adolescent children without acting on urges",
+        "Persistent distress caused by urges involving consenting underage partners"
+      ],
+      "answer": "Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child",
+      "explanation": "The DSM-5-TR requires pedophilic disorder individuals to be 16 or older and at least five years older than the child aged 13 or younger for diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "The question assesses diagnostic criteria for a paraphilic disorder, focusing on assessment and diagnosis (KN36).",
+      "difficulty": "hard",
+      "quality_comment": "Distractors contain partially correct but inaccurate age or consent descriptions to thoughtfully challenge recall of specific DSM criteria."
+    },
+    {
+      "stem": "Which pharmacological treatment would most likely be prescribed to reduce sexual desire in a client with severe paraphilic disorder to reduce risk of harm to others?",
+      "options": [
+        "Selective serotonin reuptake inhibitors (SSRIs)",
+        "Antiandrogens such as Depo-Provera",
+        "Tricyclic antidepressants",
+        "Mood stabilizers"
+      ],
+      "answer": "Antiandrogens such as Depo-Provera",
+      "explanation": "Antiandrogens reduce testosterone and sexual drive and are used in severe paraphilic disorders to reduce dangerous sexual urges.",
+      "kn": "KN3",
+      "kn_explanation": "This question tests knowledge of pharmacological interventions for paraphilic disorders, specifically drug mechanisms and indications, fitting pharmacotherapy guidelines (KN3).",
+      "difficulty": "medium",
+      "quality_comment": "All options are psychopharmacological agents relevant to psychiatry, but only one is correctly linked to reducing sexual drive."
+    },
+    {
+      "stem": "A client diagnosed with exhibitionistic disorder must meet which of the following diagnostic requirements according to DSM-5-TR?",
+      "options": [
+        "Recurrent sexual arousal from exposing genitals to consenting adults for at least six months",
+        "Exposure of genitals to unsuspecting persons or significant distress/impairment caused by urges or fantasies lasting six months or more",
+        "Exposing genitals solely to prepubertal children for sexual arousal without acting on urges",
+        "Distress caused by fantasies of exposure without any behavior for less than six months"
+      ],
+      "answer": "Exposure of genitals to unsuspecting persons or significant distress/impairment caused by urges or fantasies lasting six months or more",
+      "explanation": "DSM-5-TR requires the person to have acted on urges with an unsuspecting person or have significant distress or impairment for at least six months.",
+      "kn": "KN36",
+      "kn_explanation": "This question evaluates diagnostic criteria for a paraphilic disorder, specifically focusing on assessment and identification (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Options present nuanced diagnostic features related to duration, consent, and behavior to challenge detailed knowledge of criteria."
+    },
+    {
+      "stem": "Which of the following is true regarding the prognosis of gender confirmation surgery (gender-affirming surgery)?",
+      "options": [
+        "It is generally associated with high rates of regret and decreased self-satisfaction",
+        "Positive outcomes are more common among transgender males compared to transgender females",
+        "Psychological stability prior to surgery predicts worse postoperative outcomes",
+        "Social support has no impact on surgical outcome and satisfaction"
+      ],
+      "answer": "Positive outcomes are more common among transgender males compared to transgender females",
+      "explanation": "Research shows transgender male patients often have somewhat better outcomes and satisfaction than transgender females following surgery.",
+      "kn": "KN42",
+      "kn_explanation": "This question relates to factors affecting treatment outcomes and decision-making, aligning with treatment and intervention decision-making knowledge (KN42).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are clearly incorrect but plausible misconceptions, making the question effective for assessing understanding of prognosis."
+    },
+    {
+      "stem": "Orgasmic reconditioning as a behavioral strategy in the treatment of paraphilic disorders involves which of the following?",
+      "options": [
+        "Replacing sexual fantasies with fear through imagined aversive conditioning",
+        "Masturbating while shifting fantasy from paraphilic to normative stimuli",
+        "Practicing repeated exposure to paraphilic stimuli without allowing orgasm",
+        "Relaxation training to reduce sexual arousal to paraphilic objects"
+      ],
+      "answer": "Masturbating while shifting fantasy from paraphilic to normative stimuli",
+      "explanation": "Orgasmic reconditioning directs the individual to switch fantasy content to socially appropriate targets during masturbation to redirect sexual arousal.",
+      "kn": "KN44",
+      "kn_explanation": "The question addresses behavioral treatment techniques for paraphilic disorders, which relates to interventions and their evidence base (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast related behavioral interventions, requiring examinees to discriminate subtle but important distinctions."
+    },
+    {
+      "stem": "Which sexual dysfunction requires symptoms to have been present at least six months, occur on 75-100% of sexual occasions, and involve marked difficulty maintaining an erection during sexual activity?",
+      "options": [
+        "Female orgasmic disorder",
+        "Erectile disorder",
+        "Premature (early) ejaculation",
+        "Genito-pelvic pain/penetration disorder"
+      ],
+      "answer": "Erectile disorder",
+      "explanation": "Erectile disorder involves marked difficulty obtaining or maintaining an erection, with symptoms persisting at least six months and occurring 75-100% of the time.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of diagnostic criteria for sexual dysfunctions, which falls under assessment and diagnosis (KN36).",
+      "difficulty": "easy",
+      "quality_comment": "Stem and options are clearly stated, with plausible distractors representing other sexual dysfunctions to aid discrimination."
+    },
+    {
+      "stem": "The Dutch protocol for treating gender dysphoria in youth emphasizes which of the following approaches prior to puberty?",
+      "options": [
+        "Immediate social transition and hormone therapy from early childhood",
+        "Watchful waiting with support for child and family with puberty suppression starting at first signs of puberty",
+        "Early cross-sex hormone therapy and surgical intervention before age 16",
+        "No treatment until the child reaches adulthood"
+      ],
+      "answer": "Watchful waiting with support for child and family with puberty suppression starting at first signs of puberty",
+      "explanation": "The Dutch protocol recommends watchful waiting for children under 12 with supportive care, then puberty blockers if gender dysphoria persists at puberty.",
+      "kn": "KN44",
+      "kn_explanation": "This question relates to treatment strategies and models for gender dysphoria, a topic within treatment and intervention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include approaches from other models or inaccurate practices, clarifying the distinctions for examinees."
+    },
+    {
+      "stem": "Which of the following statements about transvestic disorder is true?",
+      "options": [
+        "It involves sexual arousal from wearing clothes of the other gender and most affected men identify as heterosexual",
+        "It is characterized by a strong desire to live permanently as the other gender",
+        "It requires distress related to a mismatch between assigned and expressed gender identity",
+        "It only occurs in individuals assigned female at birth"
+      ],
+      "answer": "It involves sexual arousal from wearing clothes of the other gender and most affected men identify as heterosexual",
+      "explanation": "Transvestic disorder involves cross-dressing for sexual arousal and most men with this disorder identify as heterosexual.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses diagnostic characteristics and epidemiology of a paraphilic disorder, fitting the assessment and diagnosis knowledge area (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are common misunderstandings related to gender dysphoria and gender identity, promoting clear differentiation."
+    }
+  ]
+}

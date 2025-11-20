@@ -1,0 +1,302 @@
+[
+  {
+    "id": "es_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to the James-Lange theory, what is the sequence of events in experiencing an emotion?",
+    "options": {
+      "A": "Stimulus, emotion, physiological response",
+      "B": "Stimulus, physiological response, emotion",
+      "C": "Emotion, stimulus, physiological response",
+      "D": "Physiological response, emotion, stimulus"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "The James-Lange theory proposes that exposure to a stimulus causes physiological arousal, which is then perceived as an emotion."
+  },
+  {
+    "id": "es_002",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What does the facial feedback hypothesis predict?",
+    "options": {
+      "A": "Facial expressions follow emotional experiences",
+      "B": "Facial expressions initiate physiological emotion-related changes",
+      "C": "Facial expressions prevent emotional responses",
+      "D": "Facial expressions are universal across cultures"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "The facial feedback hypothesis predicts that facial expressions associated with specific emotions initiate physiological changes consistent with those emotions."
+  },
+  {
+    "id": "es_003",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does Cannon-Bard theory differ from James-Lange theory regarding emotion?",
+    "options": {
+      "A": "Cannon-Bard: emotion follows arousal; James-Lange: arousal follows emotion",
+      "B": "Cannon-Bard: emotion and arousal occur together; James-Lange: arousal precedes emotion",
+      "C": "Cannon-Bard: cognition is primary; James-Lange: physiology is primary",
+      "D": "Cannon-Bard: emotions are universal; James-Lange: emotions are individual"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Cannon-Bard theory proposes emotion and arousal occur simultaneously when thalamus signals cortex and sympathetic system; James-Lange says arousal precedes emotion."
+  },
+  {
+    "id": "es_004",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the key assumption in Schachter and Singer's two-factor theory of emotion?",
+    "options": {
+      "A": "Physiological arousal differs for each emotion",
+      "B": "Emotion results from arousal plus cognitive attribution",
+      "C": "Emotions are innate and biologically determined",
+      "D": "Emotions develop through classical conditioning"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Two-factor theory proposes emotion is the result of physiological arousal followed by a cognitive label (attribution) for that arousal based on environmental cues."
+  },
+  {
+    "id": "es_005",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "In Schachter and Singer's epinephrine studies, what did subjects do when they experienced unexplained arousal?",
+    "options": {
+      "A": "Assumed they were ill or anxious",
+      "B": "Looked to confederate's behavior to label their emotions",
+      "C": "Sought medical help immediately",
+      "D": "Controlled arousal through breathing techniques"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Subjects experiencing unexplained arousal looked to environmental cues, particularly a confederate's behavior, to determine what emotions they were experiencing."
+  },
+  {
+    "id": "es_006",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the misattribution of arousal?",
+    "options": {
+      "A": "Assigning too much importance to emotional events",
+      "B": "Mislabeling arousal when its cause is unknown",
+      "C": "Ignoring signs of physiological arousal",
+      "D": "Attributing arousal to internal factors incorrectly"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Misattribution of arousal is the tendency to mislabel arousal when its actual cause is unknown or ambiguous."
+  },
+  {
+    "id": "es_007",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "According to Zillman's excitation transfer theory, how does residual arousal affect subsequent emotional responses?",
+    "options": {
+      "A": "It decreases subsequent emotional intensity",
+      "B": "It has no effect on subsequent emotions",
+      "C": "It intensifies subsequent emotional arousal",
+      "D": "It changes the type of emotion experienced"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN10",
+    "explanation": "Excitation transfer theory proposes that residual arousal from one event can continue and intensify arousal elicited by a subsequent unrelated event."
+  },
+  {
+    "id": "es_008",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What does Lazarus's cognitive appraisal theory emphasize?",
+    "options": {
+      "A": "The universality of emotional responses across cultures",
+      "B": "Differences in appraisals of events cause different emotions",
+      "C": "Physiological arousal triggers emotions before cognition",
+      "D": "Emotions are primarily biological and genetic"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Lazarus's cognitive appraisal theory proposes that differences in emotional reactions result from different appraisals of events."
+  },
+  {
+    "id": "es_009",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the distinction between primary and secondary appraisal?",
+    "options": {
+      "A": "Primary is conscious; secondary is unconscious",
+      "B": "Primary evaluates event relevance; secondary identifies coping options",
+      "C": "Primary is automatic; secondary is learned",
+      "D": "Primary affects body; secondary affects mind"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Primary appraisal determines if an event is irrelevant or stressful; secondary appraisal identifies coping options when stress is determined."
+  },
+  {
+    "id": "es_010",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to LeDoux's two-system theory, what is the role of the subcortical system?",
+    "options": {
+      "A": "Generates conscious feelings of fear",
+      "B": "Reacts quickly and automatically to threatening stimuli",
+      "C": "Processes sensory information slowly",
+      "D": "Makes conscious decisions about threats"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "The subcortical (survival) system reacts quickly and automatically to sensory information about threats with physiological and defensive responses."
+  },
+  {
+    "id": "es_011",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "Which structure is primarily responsible for the subcortical fear response in LeDoux's two-system theory?",
+    "options": {
+      "A": "Hippocampus",
+      "B": "Prefrontal cortex",
+      "C": "Amygdala",
+      "D": "Cingulate gyrus"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN10",
+    "explanation": "The amygdala is the major component of the subcortical system and is responsible for quick, automatic fear responses to threatening stimuli."
+  },
+  {
+    "id": "es_012",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What do areas in the left cerebral hemisphere mediate?",
+    "options": {
+      "A": "Negative emotions like sadness",
+      "B": "Positive emotions like happiness",
+      "C": "Fear responses exclusively",
+      "D": "Unconscious emotional reactions"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Areas in the left (dominant) hemisphere mediate happiness and other positive emotions."
+  },
+  {
+    "id": "es_013",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What happens when there is damage to the right hemisphere emotional areas?",
+    "options": {
+      "A": "Catastrophic reaction with depression and fear",
+      "B": "Complete emotional numbness",
+      "C": "Indifference reaction with inappropriate euphoria",
+      "D": "Excessive anger and aggression"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN10",
+    "explanation": "Damage to right hemisphere areas produces an indifference reaction involving inappropriate indifference and/or euphoria."
+  },
+  {
+    "id": "es_014",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What are the three stages of Selye's general adaptation syndrome?",
+    "options": {
+      "A": "Alert, response, recovery",
+      "B": "Alarm, resistance, exhaustion",
+      "C": "Stimulus, arousal, adaptation",
+      "D": "Recognition, reaction, resolution"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Selye's general adaptation syndrome includes alarm reaction, resistance, and exhaustion stages in response to stress."
+  },
+  {
+    "id": "es_015",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What does the hypothalamus do in relation to emotion?",
+    "options": {
+      "A": "Processes emotional memories",
+      "B": "Generates conscious emotional feelings",
+      "C": "Regulates physical signs through autonomic and pituitary control",
+      "D": "Recognizes emotional facial expressions"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN10",
+    "explanation": "The hypothalamus regulates physical signs of emotion through communication with the autonomic nervous system and pituitary gland."
+  },
+  {
+    "id": "es_016",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "In McEwen's allostatic load model, what is allostasis?",
+    "options": {
+      "A": "The failure of the body to adapt to stress",
+      "B": "Processes that achieve stability through adaptation to change",
+      "C": "Chronic physiological dysfunction from stress",
+      "D": "The point at which stress becomes harmful"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Allostasis refers to processes allowing the body to achieve stability by adapting to change, such as elevated blood pressure during stress."
+  },
+  {
+    "id": "es_017",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the difference between allostatic load and allostatic overload?",
+    "options": {
+      "A": "Allostatic load is temporary; overload is permanent",
+      "B": "Load is maintained without harm; overload has adverse effects",
+      "C": "Load is psychological; overload is physical",
+      "D": "Load is preventable; overload is not"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "Allostatic load can be maintained for a limited time without adverse consequences; allostatic overload causes wear-and-tear and adverse health effects."
+  },
+  {
+    "id": "es_018",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "According to McEwen, how does the brain determine what is stressful?",
+    "options": {
+      "A": "Through automatic physiological responses",
+      "B": "Through the amygdala, hippocampus, and prefrontal cortex",
+      "C": "Through comparison with past experiences",
+      "D": "Through consensus with others in the environment"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "McEwen identifies amygdala, hippocampus, and prefrontal cortex as primary mediators of what the brain determines as threatening and stressful."
+  },
+  {
+    "id": "es_019",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What functions does the amygdala serve in emotion?",
+    "options": {
+      "A": "Processing conscious emotional decisions",
+      "B": "Recognizing fear in facial expressions and attaching emotions to memories",
+      "C": "Generating logical reasoning about emotions",
+      "D": "Controlling voluntary emotional expressions"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "The amygdala is responsible for recognizing fear in facial expressions, attaching emotions to memories, and evaluating emotional significance of information."
+  },
+  {
+    "id": "es_020",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does McEwen's allostatic load model challenge Selye's general adaptation syndrome?",
+    "options": {
+      "A": "It proposes emotions are not related to stress",
+      "B": "It suggests stress responses vary based on individual factors",
+      "C": "It emphasizes only physiological aspects of stress",
+      "D": "It rejects the concept of adaptation to stress"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "McEwen's model challenges Selye's universal stress response by proposing responses vary based on genetic makeup, resilience, and stress perception."
+  }
+]

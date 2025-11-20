@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best characterizes a programmed decision in an organization?",
+      "options": [
+        "A novel and complex decision requiring creative problem-solving",
+        "A routine decision governed by established rules and policies",
+        "A decision focused on developing new products and services",
+        "A high-level decision involving legal issue response"
+      ],
+      "answer": "A routine decision governed by established rules and policies",
+      "explanation": "Programmed decisions are routine, repetitive, and made according to predetermined rules, often by lower-level personnel.",
+      "kn": "KN16",
+      "kn_explanation": "This question relates to group and systems processes within organizations, specifically organizational decision-making classifications.",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward and clearly distinguishes between programmed and nonprogrammed decisions with plausible distractors."
+    },
+    {
+      "stem": "According to Simon’s bounded rationality model of decision-making, how do individuals typically make decisions under cognitive and organizational constraints?",
+      "options": [
+        "They identify and evaluate all possible alternatives to find the optimal choice",
+        "They satisfice by selecting the first minimally acceptable alternative",
+        "They rely on organizational routines and standard operating procedures",
+        "They make incremental choices responding to short-term conditions"
+      ],
+      "answer": "They satisfice by selecting the first minimally acceptable alternative",
+      "explanation": "Bounded rationality recognizes limits like time and cognitive resources, leading decision-makers to satisfice rather than optimize their decisions.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses organizational decision-making models related to individual cognitive limitations and organizational constraints.",
+      "difficulty": "medium",
+      "quality_comment": "The answer options clearly reflect different decision-making models, helping assess conceptual understanding of bounded rationality."
+    },
+    {
+      "stem": "What is a key assumption of the rational (classical) model of organizational decision-making?",
+      "options": [
+        "Decisions are made by multiple groups limited by organizational routines",
+        "Decision-makers select outcomes based on intuition and judgment alone",
+        "Decision-makers objectively evaluate all alternatives to choose the optimal solution",
+        "Decision-making is limited by time and incomplete information"
+      ],
+      "answer": "Decision-makers objectively evaluate all alternatives to choose the optimal solution",
+      "explanation": "The rational model assumes a deliberate, systematic evaluation of all possible choices to find the best alternative.",
+      "kn": "KN16",
+      "kn_explanation": "This question evaluates knowledge of the classical model of organizational decision-making, a core concept in group and systems processes.",
+      "difficulty": "medium",
+      "quality_comment": "Options distinguish key models well, with distractors reflecting related but distinct concepts, supporting discrimination of knowledge."
+    },
+    {
+      "stem": "Which factor increases the likelihood of groupthink during organizational decision-making?",
+      "options": [
+        "Presence of diverse external opinions",
+        "A directive leader and strong group cohesiveness",
+        "Members encouraged to express contradictory views",
+        "A lengthy decision-making process with multiple stages"
+      ],
+      "answer": "A directive leader and strong group cohesiveness",
+      "explanation": "High cohesiveness combined with a strong directive leader, isolation, and pressure to decide quickly are conditions that promote groupthink.",
+      "kn": "KN16",
+      "kn_explanation": "This question covers group decision-making processes and social influences on organizational functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clearly stated, and distractors are plausible but accurately distinguish groupthink risk factors."
+    },
+    {
+      "stem": "Which of the following is NOT a symptom of groupthink as identified by Janis?",
+      "options": [
+        "Illusions of invulnerability",
+        "Self-censorship of dissenting opinions",
+        "Frequent devil’s advocate roles in discussions",
+        "Presence of self-appointed mindguards"
+      ],
+      "answer": "Frequent devil’s advocate roles in discussions",
+      "explanation": "Appointing a devil’s advocate is a tactic to prevent groupthink, whereas the other options describe symptoms of groupthink.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding symptoms and prevention of groupthink pertains to group and systems processes within organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors closely relate to groupthink features, requiring detailed knowledge; the correct option clearly contrasts prevention vs symptoms."
+    },
+    {
+      "stem": "Group polarization refers to the tendency of groups to:",
+      "options": [
+        "Make more moderate decisions than individuals would alone",
+        "Become less cohesive after extended group discussion",
+        "Make more extreme (risky or cautious) decisions than individual members",
+        "Prioritize minority opinions over majority views"
+      ],
+      "answer": "Make more extreme (risky or cautious) decisions than individual members",
+      "explanation": "Group polarization is when group discussion leads members to adopt more extreme positions than they held individually.",
+      "kn": "KN16",
+      "kn_explanation": "This question relates to social influences on group decision-making, a major aspect of group and systems processes.",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear, and the distractors are reasonable, effectively testing knowledge of group polarization concept."
+    },
+    {
+      "stem": "Groups are most likely to outperform individuals in decision-making when:",
+      "options": [
+        "The task is poorly structured and requires creativity",
+        "The task is complex and members have complementary skills",
+        "Decisions need to be made rapidly with little information",
+        "All group members have similar skill sets"
+      ],
+      "answer": "The task is complex and members have complementary skills",
+      "explanation": "Research shows groups excel when tasks are complex and members bring different, complementary abilities.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses understanding of conditions affecting effectiveness of group versus individual decision-making.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but distinguishable, helping to evaluate nuanced knowledge of group task characteristics."
+    },
+    {
+      "stem": "According to the organizational process model, decisions in organizations are often made by:",
+      "options": [
+        "A single, high-level decision maker seeking an optimal solution",
+        "Individuals making isolated choices without procedural constraints",
+        "Many people or groups constrained by routines and incremental choices",
+        "Experts who rely solely on objective data analysis"
+      ],
+      "answer": "Many people or groups constrained by routines and incremental choices",
+      "explanation": "This model posits organizational decisions emerge from multiple actors’ small, incremental choices within standard procedures.",
+      "kn": "KN16",
+      "kn_explanation": "The question relates to organizational decision-making models specifically focusing on how group dynamics and processes influence decisions.",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast different decision-making approaches well, facilitating assessment of comprehension of this specific model."
+    },
+    {
+      "stem": "Which step is recommended for leaders to reduce the risk of groupthink when managing group decisions?",
+      "options": [
+        "Encourage consensus early to speed up decision-making",
+        "Isolate the group from outside opinions",
+        "Appoint a member to play devil’s advocate",
+        "Exclude members with dissenting views"
+      ],
+      "answer": "Appoint a member to play devil’s advocate",
+      "explanation": "Assigning a devil’s advocate encourages expression of alternative views, helping prevent groupthink.",
+      "kn": "KN16",
+      "kn_explanation": "This question targets methods to mitigate biases and improve group decision-making in organizational settings.",
+      "difficulty": "medium",
+      "quality_comment": "Clearly worded with distractors that reflect common mistakes, making it effective for EPPP-level knowledge checks."
+    },
+    {
+      "stem": "In organizational decision-making, nonprogrammed decisions are typically characterized by which of the following?",
+      "options": [
+        "Repetitive decisions governed by clear policies",
+        "Routine decisions made by lower-level personnel",
+        "Complex, novel decisions requiring judgment and creativity",
+        "Decisions aimed at routine ordering and billing"
+      ],
+      "answer": "Complex, novel decisions requiring judgment and creativity",
+      "explanation": "Nonprogrammed decisions involve unique problems requiring creative solutions, usually made by upper management.",
+      "kn": "KN16",
+      "kn_explanation": "Focuses on classification of decision types within organizations addressing complexity and role levels, part of group and systems processes.",
+      "difficulty": "easy",
+      "quality_comment": "The options contrast programmed and nonprogrammed decisions clearly, suitable for knowledge recall on key definitions."
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following statements best describes a key advantage of benzodiazepines compared to SSRIs or SNRIs in the treatment of anxiety?",
+      "options": [
+        "Benzodiazepines are effective for long-term management of cognitive symptoms of anxiety.",
+        "Benzodiazepines have a delayed onset of action but fewer side effects than SSRIs or SNRIs.",
+        "Benzodiazepines provide fast-acting, short-term relief from acute anxiety symptoms.",
+        "Benzodiazepines have no risk of physical dependence or tolerance.",
+        "Benzodiazepines primarily improve psychological rather than physiological anxiety symptoms."
+      ],
+      "answer": "Benzodiazepines provide fast-acting, short-term relief from acute anxiety symptoms.",
+      "explanation": "Benzodiazepines act quickly to alleviate anxiety symptoms and are primarily used for immediate, short-term relief, whereas SSRIs and SNRIs have a delayed onset and are better suited for chronic anxiety.",
+      "kn": "KN2",
+      "kn_explanation": "This question focuses on drug mechanisms and clinical application of anxiolytics, which falls under drug classification, mechanisms of action, and therapeutic effects (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly addresses a clinically important distinction; distractors include common misconceptions, making it an effective test of knowledge."
+    },
+    {
+      "stem": "A patient who has been on long-term alprazolam (Xanax) therapy wishes to discontinue use. What is the best approach to minimize withdrawal symptoms?",
+      "options": [
+        "Abruptly stopping the medication.",
+        "Gradually tapering the dose over an extended period.",
+        "Switching immediately to a barbiturate for cross-tolerance.",
+        "Replacing alprazolam with an SSRI without tapering.",
+        "Reducing the dose only if withdrawal symptoms develop."
+      ],
+      "answer": "Gradually tapering the dose over an extended period.",
+      "explanation": "Long-term use of benzodiazepines like alprazolam requires gradual tapering to prevent severe withdrawal symptoms such as rebound anxiety, seizures, or delirium.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses knowledge of the pharmacological management and withdrawal characteristics of anxiolytic drugs, a key component of KN2.",
+      "difficulty": "medium",
+      "quality_comment": "Options are phrased to target common clinical errors; the correct answer is clear and well justified, suitable for EPPP standards."
+    },
+    {
+      "stem": "Which side effect is most characteristic of barbiturate use and warrants caution due to its severity?",
+      "options": [
+        "Rebound anxiety upon discontinuation.",
+        "Cognitive impairment and risk of fatal overdose especially with alcohol.",
+        "Sexual dysfunction and disorientation in older adults.",
+        "Dry mouth, sweating, and headache.",
+        "Alpha-blocker related hypotension."
+      ],
+      "answer": "Cognitive impairment and risk of fatal overdose especially with alcohol.",
+      "explanation": "Barbiturates cause significant central nervous system depression leading to cognitive impairment, and when combined with alcohol, they can cause potentially fatal synergistic effects.",
+      "kn": "KN2",
+      "kn_explanation": "This question tests knowledge of drug adverse effects and risks associated with sedative-hypnotic barbiturates, core content in KN2.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect side effects of related drug classes, increasing the plausibility and discriminative quality of the item."
+    },
+    {
+      "stem": "Which anxiolytic drug is preferred when sedation, tolerance, and dependence are significant clinical concerns?",
+      "options": [
+        "Diazepam",
+        "Buspirone",
+        "Secobarbital",
+        "Lorazepam",
+        "Alprazolam"
+      ],
+      "answer": "Buspirone",
+      "explanation": "Buspirone is an azapirone that treats anxiety without causing sedation, tolerance, or physical dependence, unlike benzodiazepines or barbiturates.",
+      "kn": "KN2",
+      "kn_explanation": "The question focuses on pharmacological properties distinguishing anxiolytic agents, specifically drug side effect profiles, which aligns with KN2.",
+      "difficulty": "easy",
+      "quality_comment": "The concise options contrast well-known drugs with a unique alternative, facilitating clear differentiation for examinees."
+    },
+    {
+      "stem": "Methadone is primarily used in the treatment of which condition and why?",
+      "options": [
+        "Generalized anxiety disorder, due to its calming properties.",
+        "Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.",
+        "Chronic pain management, since it has no risk of tolerance or dependence.",
+        "Nicotine addiction treatment, by mimicking nicotine effects.",
+        "Depression, as it modulates serotonin and dopamine levels."
+      ],
+      "answer": "Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.",
+      "explanation": "Methadone is a synthetic opioid that helps heroin users by reducing cravings and withdrawal symptoms without producing heroin's pleasurable effects.",
+      "kn": "KN2",
+      "kn_explanation": "This item assesses understanding of opioid pharmacotherapy in substance use disorders, a drug mechanism and clinical application topic in KN2.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible drugs but irrelevant for the treatment described, maintaining focus on opioid pharmacology."
+    },
+    {
+      "stem": "Propranolol is sometimes used to treat anxiety because it primarily reduces which type of symptoms?",
+      "options": [
+        "Cognitive symptoms such as excessive worry and fear.",
+        "Physiological somatic symptoms like tremors and tachycardia.",
+        "Depressive symptoms commonly comorbid with anxiety.",
+        "Seizure activity associated with anxiety disorders.",
+        "Psychotic symptoms triggered by stress."
+      ],
+      "answer": "Physiological somatic symptoms like tremors and tachycardia.",
+      "explanation": "Propranolol, a beta-blocker, reduces somatic symptoms of anxiety (e.g., tremors, palpitations), but has less impact on psychological symptoms like apprehension or worry.",
+      "kn": "KN2",
+      "kn_explanation": "This item evaluates knowledge of pharmacodynamic effects of beta-blockers in anxiety treatment, consistent with drug classification and effects in KN2.",
+      "difficulty": "easy",
+      "quality_comment": "The stem clearly directs attention to symptom types; distractors represent other symptom domains to challenge the examinee's precision."
+    },
+    {
+      "stem": "Which of the following statements best characterizes the drug half-life and its importance in medication management?",
+      "options": [
+        "A long half-life drug requires more frequent dosing to maintain blood levels.",
+        "Half-life refers to the time for the drug's therapeutic effect to be noticeable.",
+        "Older adults typically have shorter drug half-lives due to faster metabolism.",
+        "Half-life is the time needed for blood drug levels to decline to 50% and guides dosing intervals.",
+        "Short half-life drugs are usually more dangerous due to accumulation in the body."
+      ],
+      "answer": "Half-life is the time needed for blood drug levels to decline to 50% and guides dosing intervals.",
+      "explanation": "Drug half-life is the time required for blood concentration of the drug to fall to half its peak level and helps determine the frequency of drug dosing.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses foundational pharmacokinetic concepts relevant to drug action and dosing, a key pharmacological principle in KN2.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misconceptions, but the correct answer is clearly stated, testing critical pharmacological knowledge."
+    },
+    {
+      "stem": "A drug with a narrow therapeutic window is characterized by which of the following?",
+      "options": [
+        "Its effective dose is much lower than its toxic dose, making it very safe.",
+        "Its effective dose is equal to or greater than its lethal or toxic dose, requiring close monitoring.",
+        "It typically requires no dosing adjustments for older adults.",
+        "It is ineffective at usual clinical doses.",
+        "It produces no adverse effects at therapeutic levels."
+      ],
+      "answer": "Its effective dose is equal to or greater than its lethal or toxic dose, requiring close monitoring.",
+      "explanation": "A narrow therapeutic window means the drug’s effective dose is close to or overlaps with the toxic or lethal dose, necessitating careful dosing and monitoring.",
+      "kn": "KN2",
+      "kn_explanation": "Understanding therapeutic index and drug safety is fundamental to pharmacology, which fits well within KN2’s scope of drug classification and safety.",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast safety profiles effectively, and the correct answer requires integration of pharmacological concepts."
+    },
+    {
+      "stem": "For managing ADHD symptoms in a patient who cannot tolerate stimulant side effects, which medication is considered a second-line treatment option?",
+      "options": [
+        "Methylphenidate",
+        "Amphetamine-dextroamphetamine",
+        "Atomoxetine",
+        "Pemoline",
+        "Modafinil"
+      ],
+      "answer": "Atomoxetine",
+      "explanation": "Atomoxetine, a norepinephrine reuptake inhibitor, is a commonly prescribed nonstimulant second-line treatment for ADHD, especially when stimulants are not tolerated.",
+      "kn": "KN2",
+      "kn_explanation": "This question targets knowledge about pharmacological treatment alternatives for ADHD, an important clinical drug application in KN2.",
+      "difficulty": "medium",
+      "quality_comment": "The options include well-known stimulants and nonstimulants; the question is clear and discriminates well among medications."
+    },
+    {
+      "stem": "Which of the following drugs is FDA approved for slowing progression in moderate to severe Alzheimer's disease and exerts its effects potentially by regulating glutamate activity?",
+      "options": [
+        "Donepezil",
+        "Galantamine",
+        "Memantine",
+        "Tacrine",
+        "Rivastigmine"
+      ],
+      "answer": "Memantine",
+      "explanation": "Memantine is an NMDA receptor antagonist approved for moderate to severe Alzheimer's disease that works by regulating glutamate, unlike cholinesterase inhibitors which affect acetylcholine.",
+      "kn": "KN2",
+      "kn_explanation": "This assesses knowledge of Alzheimer's pharmacotherapy and drug mechanisms outside classical neurotransmitter systems, fitting in KN2.",
+      "difficulty": "hard",
+      "quality_comment": "Options are all cholinesterase inhibitors except memantine, challenging examinees to recall specific drug mechanisms."
+    },
+    {
+      "stem": "Which of the following is a common side effect of psychostimulant medications used for ADHD in children?",
+      "options": [
+        "Increased appetite and weight gain",
+        "Seizures and hallucinations",
+        "Insomnia and decreased appetite",
+        "Excessive sedation",
+        "Postural hypotension"
+      ],
+      "answer": "Insomnia and decreased appetite",
+      "explanation": "Psychostimulants commonly cause insomnia and decreased appetite in children, along with nervousness and abdominal pain.",
+      "kn": "KN2",
+      "kn_explanation": "This question targets knowledge about side effect profiles of stimulant treatments for ADHD, focusing on clinical pharmacology in KN2.",
+      "difficulty": "easy",
+      "quality_comment": "Clear and straightforward, with plausible distractors reflecting other drug side effects, appropriate for standard testing."
+    },
+    {
+      "stem": "In terms of pharmacological treatment of tobacco use disorder, which medication is known to reduce both nicotine craving and withdrawal symptoms and was originally developed as an antidepressant?",
+      "options": [
+        "Nicotine replacement therapy",
+        "Varenicline",
+        "Bupropion",
+        "Disulfiram",
+        "Topiramate"
+      ],
+      "answer": "Bupropion",
+      "explanation": "Bupropion was initially an antidepressant but also reduces nicotine cravings and withdrawal symptoms, aiding smoking cessation.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses pharmacological interventions for substance use disorders, an essential part of KN2's drug mechanism and treatment focus.",
+      "difficulty": "medium",
+      "quality_comment": "Options cover a range of substances and medications associated with addiction treatment, effectively challenging knowledge."
+    },
+    {
+      "stem": "Which neurotransmitter system is primarily affected by benzodiazepines to produce their anxiolytic and sedative effects?",
+      "options": [
+        "Dopaminergic system",
+        "Serotonergic system",
+        "GABAergic system",
+        "Cholinergic system",
+        "Glutamatergic system"
+      ],
+      "answer": "GABAergic system",
+      "explanation": "Benzodiazepines act as agonists at GABA receptors, enhancing GABAergic inhibition leading to anxiolytic and sedative effects.",
+      "kn": "KN2",
+      "kn_explanation": "Understanding the mechanism of benzodiazepines involves knowledge of neurotransmitter systems, a fundamental topic in KN2.",
+      "difficulty": "easy",
+      "quality_comment": "Very clear question focusing on core pharmacological mechanisms with plausible distractors, appropriate for the EPPP."
+    }
+  ]
+}

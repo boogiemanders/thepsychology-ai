@@ -1,12 +1,17 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-import { writeFileSync, mkdirSync } from 'fs'
+import { writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join } from 'path'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 })
+
+const DIAGNOSTIC_MODEL =
+  process.env.ANTHROPIC_DIAGNOSTIC_MODEL ?? 'claude-3-5-sonnet-20241022'
+const PRACTICE_MODEL =
+  process.env.ANTHROPIC_PRACTICE_MODEL ?? 'claude-3-5-sonnet-20241022'
 
 // Initialize Supabase
 const supabase = createClient(
@@ -235,13 +240,16 @@ export async function POST(request: NextRequest) {
 
     // Generate exam using Claude
     const prompt = examType === 'diagnostic' ? DIAGNOSTIC_EXAM_PROMPT : PRACTICE_EXAM_PROMPT
+    const model = examType === 'diagnostic' ? DIAGNOSTIC_MODEL : PRACTICE_MODEL
     let fullResponse = ''
 
-    console.log(`[Pre-Gen] Calling Claude API for ${examType} exam generation...`)
+    console.log(
+      `[Pre-Gen] Calling Claude API for ${examType} exam generation using model ${model}...`
+    )
 
     // Use Sonnet 4.5 for both exams - better model for large outputs
     const stream = await client.messages.create({
-      model: 'claude-sonnet-4-5-20250929',
+      model,
       max_tokens: examType === 'diagnostic' ? 50000 : 64000, // Increased for detailed questions with comprehensive explanations (64K is max for Sonnet 4.5)
       stream: true,
       messages: [
@@ -300,11 +308,10 @@ export async function POST(request: NextRequest) {
       let filePath = join(examsDir, filename)
 
       // Check if file exists and find next available number (up to 10 exams)
-      const fs = require('fs')
       for (let i = 1; i <= 10; i++) {
         filename = `${examType}-exam-${String(i).padStart(3, '0')}.md`
         filePath = join(examsDir, filename)
-        if (!fs.existsSync(filePath)) {
+        if (!existsSync(filePath)) {
           examNumber = i
           break
         }

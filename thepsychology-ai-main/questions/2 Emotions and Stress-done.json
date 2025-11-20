@@ -1,0 +1,302 @@
+[
+  {
+    "id": "es_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to James-Lange theory, what is the sequence of events in emotion?",
+    "options": {
+      "A": "Stimulus, emotion, physiological reaction",
+      "B": "Stimulus, physiological reaction, emotion",
+      "C": "Stimulus, cognitive appraisal, emotion",
+      "D": "Stimulus, emotion and physiology together"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN10",
+    "explanation": "James-Lange theory proposes that exposure to a stimulus causes a physiological reaction which is then perceived as an emotion. The experience of emotion follows physiological arousal."
+  },
+  {
+    "id": "es_002",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does Cannon-Bard theory differ from James-Lange theory regarding physiological arousal?",
+    "options": {
+      "A": "Cannon-Bard: emotion and arousal are simultaneous",
+      "B": "Cannon-Bard: arousal precedes emotion",
+      "C": "Cannon-Bard: emotion precedes arousal",
+      "D": "Cannon-Bard: arousal is unnecessary for emotion"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Cannon-Bard theory proposes that the experience of an emotion and physiological arousal occur simultaneously when the thalamus sends signals to both the cortex and sympathetic nervous system."
+  },
+  {
+    "id": "es_003",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "Schachter and Singer's two-factor theory explains emotion as the result of what two factors?",
+    "options": {
+      "A": "Physiological arousal and cognitive label",
+      "B": "Environmental stimulus and facial expression",
+      "C": "Brain activation and behavioral response",
+      "D": "Primary and secondary appraisal"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Two-factor theory describes the experience of emotion as the result of physiological arousal followed by an attribution (cognitive label) for that arousal."
+  },
+  {
+    "id": "es_004",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What are the three assumptions underlying Zillman's excitation transfer theory?",
+    "options": {
+      "A": "Arousal decays slowly, transfers to later events, causes misattribution",
+      "B": "Arousal is immediate, event-specific, consciously recognized",
+      "C": "Arousal is uniform, unchanging, accurately perceived",
+      "D": "Arousal follows appraisal, varies by emotion, requires awareness"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Excitation transfer theory assumes that arousal decays slowly, residual arousal can intensify later arousal, and people often misattribute intense arousal to the subsequent event."
+  },
+  {
+    "id": "es_005",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "According to Lazarus, what distinguishes primary appraisal from secondary appraisal?",
+    "options": {
+      "A": "Primary evaluates the event; secondary identifies coping options",
+      "B": "Primary is automatic; secondary is controlled",
+      "C": "Primary involves emotion; secondary involves cognition",
+      "D": "Primary is physiological; secondary is psychological"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Primary appraisal involves evaluating whether an event is irrelevant, benign-positive, or stressful. Secondary appraisal occurs when the event is stressful and involves identifying coping options."
+  },
+  {
+    "id": "es_006",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "In LeDoux's two-system theory, what distinguishes the subcortical from the cortical system?",
+    "options": {
+      "A": "Subcortical: automatic defense; Cortical: conscious feeling",
+      "B": "Subcortical: slow processing; Cortical: fast processing",
+      "C": "Subcortical: all emotions; Cortical: fear only",
+      "D": "Subcortical: cognitive; Cortical: physiological"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "The subcortical (survival) system reacts quickly and automatically with physiological and defensive responses. The cortical system processes information and generates conscious feelings when appropriate."
+  },
+  {
+    "id": "es_007",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "The facial feedback hypothesis predicts that facial expressions do what?",
+    "options": {
+      "A": "Initiate physiological changes consistent with emotions",
+      "B": "Reflect but do not influence emotional states",
+      "C": "Communicate emotions to others only",
+      "D": "Result from but do not cause emotions"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "The facial feedback hypothesis predicts that facial expressions associated with specific emotions initiate physiological changes consistent with those emotions, such as smiling making us feel happy."
+  },
+  {
+    "id": "es_008",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "Which brain structure is primarily responsible for the amygdala's role in emotion?",
+    "options": {
+      "A": "Recognizing fear in faces and mediating reactions",
+      "B": "Regulating positive emotions only",
+      "C": "Storing emotional memories permanently",
+      "D": "Coordinating motor responses to emotion"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "The amygdala is responsible for recognizing fear in facial expressions, attaching emotions to memories, and evaluating incoming information to determine its emotional significance."
+  },
+  {
+    "id": "es_009",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How do the left and right cerebral hemispheres differ in mediating emotion?",
+    "options": {
+      "A": "Left mediates positive emotions; right mediates negative",
+      "B": "Left mediates negative emotions; right mediates positive",
+      "C": "Left mediates conscious; right mediates unconscious",
+      "D": "Left mediates arousal; right mediates expression"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Areas in the left hemisphere mediate happiness and positive emotions, while areas in the right hemisphere mediate sadness and negative emotions."
+  },
+  {
+    "id": "es_010",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What produces a catastrophic reaction involving depression and anxiety?",
+    "options": {
+      "A": "Damage to left hemisphere emotion areas",
+      "B": "Damage to right hemisphere emotion areas",
+      "C": "Bilateral amygdala lesions",
+      "D": "Hypothalamic overstimulation"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Damage to areas in the left hemisphere that mediate positive emotions produces a catastrophic reaction involving depression, anxiety, fear, and paranoia."
+  },
+  {
+    "id": "es_011",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "The hypothalamus regulates physical signs of emotion through communication with what systems?",
+    "options": {
+      "A": "Autonomic nervous system and pituitary gland",
+      "B": "Somatic nervous system and thyroid gland",
+      "C": "Central nervous system and adrenal gland",
+      "D": "Peripheral nervous system and pineal gland"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "The hypothalamus regulates the physical signs of emotion through its communication with the autonomic nervous system and pituitary gland."
+  },
+  {
+    "id": "es_012",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What are the three stages of Selye's general adaptation syndrome?",
+    "options": {
+      "A": "Alarm reaction, resistance, exhaustion",
+      "B": "Recognition, adaptation, recovery",
+      "C": "Arousal, coping, resolution",
+      "D": "Threat, challenge, harm/loss"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Selye's general adaptation syndrome proposes that the body's response to stress involves three stages: alarm reaction, resistance, and exhaustion."
+  },
+  {
+    "id": "es_013",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "During the resistance stage of Selye's model, what continues to circulate at elevated levels?",
+    "options": {
+      "A": "Cortisol to maintain high energy",
+      "B": "Adrenaline to sustain alertness",
+      "C": "Serotonin to regulate mood",
+      "D": "Dopamine to enhance motivation"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "During the resistance stage, some physiological functions return to normal while cortisol continues to circulate at an elevated level to help the body maintain high energy and cope."
+  },
+  {
+    "id": "es_014",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "According to McEwen's allostatic load model, what brain structures are primary mediators of stress?",
+    "options": {
+      "A": "Amygdala, hippocampus, prefrontal cortex",
+      "B": "Hypothalamus, thalamus, pituitary",
+      "C": "Cingulate gyrus, insula, cerebellum",
+      "D": "Basal ganglia, corpus callosum, medulla"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "McEwen identifies the amygdala, hippocampus, and prefrontal cortex as the primary mediators of stress response, with the brain being the key organ determining what is stressful."
+  },
+  {
+    "id": "es_015",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What does allostasis refer to in McEwen's model?",
+    "options": {
+      "A": "Processes allowing the body to adapt to change",
+      "B": "The breakdown of physiological systems",
+      "C": "The accumulation of chronic stress effects",
+      "D": "The regulation of cortisol levels"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Allostasis refers to processes that allow the body to achieve stability by adapting to change, such as elevated blood pressure in response to a stressful event."
+  },
+  {
+    "id": "es_016",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What distinguishes allostatic load from allostatic overload in McEwen's model?",
+    "options": {
+      "A": "Load is wear-and-tear; overload causes health problems",
+      "B": "Load is acute stress; overload is chronic stress",
+      "C": "Load is reversible; overload is permanent",
+      "D": "Load affects physiology; overload affects psychology"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Allostatic load is wear-and-tear on the body from extended allostatic states. When it continues for days, weeks, or longer, it becomes allostatic overload with adverse health effects."
+  },
+  {
+    "id": "es_017",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "What was the key finding of Schachter and Singer's epinephrine studies?",
+    "options": {
+      "A": "Subjects looked to environment to determine emotions",
+      "B": "Physiological arousal always preceded emotion",
+      "C": "Cognitive appraisal eliminated arousal effects",
+      "D": "Facial expressions determined emotional experience"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Schachter and Singer found that subjects experiencing unexplained arousal looked to the environment (the behavior of a confederate) to determine what emotions they were experiencing."
+  },
+  {
+    "id": "es_018",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is misattribution of arousal?",
+    "options": {
+      "A": "The tendency to mislabel arousal when cause is unknown",
+      "B": "The inability to experience physiological arousal",
+      "C": "The exaggeration of emotional intensity",
+      "D": "The suppression of emotional responses"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Misattribution of arousal is the tendency to mislabel arousal when its cause is unknown or ambiguous, as studied extensively following Schachter and Singer's work."
+  },
+  {
+    "id": "es_019",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "According to Lazarus, when does reappraisal occur?",
+    "options": {
+      "A": "When the person monitors and changes their appraisal",
+      "B": "Before primary appraisal is completed",
+      "C": "Only when coping strategies fail",
+      "D": "Automatically without conscious awareness"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Reappraisal occurs when the person monitors the situation and, as appropriate, changes their primary and/or secondary appraisal."
+  },
+  {
+    "id": "es_020",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "Research challenging Selye's general adaptation syndrome found that stress responses are affected by what?",
+    "options": {
+      "A": "Type of stress, genetics, previous experiences",
+      "B": "Age, gender, and personality only",
+      "C": "Duration of stress exclusively",
+      "D": "Social support and coping style only"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN10",
+    "explanation": "Research has found that physiological, psychological, and behavioral responses to stress are affected by the type of stress and a person's genetic make-up and previous experiences."
+  }
+]

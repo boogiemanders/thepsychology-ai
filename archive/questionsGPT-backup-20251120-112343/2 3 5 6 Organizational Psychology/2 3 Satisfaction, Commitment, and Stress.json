@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "Which individual factor has been linked to the stability of job satisfaction over time and across different jobs?",
+      "options": [
+        "Affective disposition",
+        "Perceived organizational justice",
+        "Work-family conflict",
+        "Type A behavior pattern"
+      ],
+      "answer": "Affective disposition",
+      "explanation": "Affective disposition, the tendency to respond similarly to various situations, has been linked to stable levels of job satisfaction over time across jobs and careers.",
+      "kn": "KN16",
+      "kn_explanation": "This question concerns job satisfaction and factors influencing it, which relates to social and organizational behavior (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of individual contributors to job satisfaction; options are plausible but only one matches the content."
+    },
+    {
+      "stem": "Which type of organizational justice is concerned with the fairness of the procedures used to determine workplace outcomes?",
+      "options": [
+        "Interactional justice",
+        "Distributive justice",
+        "Procedural justice",
+        "Normative justice"
+      ],
+      "answer": "Procedural justice",
+      "explanation": "Procedural justice refers to the perceived fairness of the methods and procedures used to determine outcomes within an organization.",
+      "kn": "KN15",
+      "kn_explanation": "This question addresses organizational justice, a social interaction and organizational behavior concept in the social domain (KN15).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward with distractors that are commonly confused types of justice, suitable for EPPP level."
+    },
+    {
+      "stem": "According to meta-analytic research, which type of organizational commitment is most consistently associated with positive job outcomes such as satisfaction and performance?",
+      "options": [
+        "Continuance commitment",
+        "Normative commitment",
+        "Affective commitment",
+        "Role-based commitment"
+      ],
+      "answer": "Affective commitment",
+      "explanation": "Affective commitment, the emotional attachment to the organization, shows the strongest and most consistent correlations with job outcomes.",
+      "kn": "KN16",
+      "kn_explanation": "This question deals with organizational commitment and its relationship to job outcomes, relating to social and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Question clearly distinguishes commitment types; options are plausible, though 'role-based commitment' is a distractor not supported by the material."
+    },
+    {
+      "stem": "Which hormone is released by the adrenal cortex during the general adaptation syndrome and helps maintain energy during prolonged stress?",
+      "options": [
+        "Adrenocorticotropic hormone (ACTH)",
+        "Cortisol",
+        "Epinephrine",
+        "Norepinephrine"
+      ],
+      "answer": "Cortisol",
+      "explanation": "Cortisol is released by the adrenal cortex during the resistance stage of the general adaptation syndrome and helps the body maintain high energy levels under chronic stress.",
+      "kn": "KN1",
+      "kn_explanation": "The question tests knowledge of physiological stress responses involving neuroendocrine mechanisms, part of biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include hormones related to stress but with different roles, making the question both challenging and clear."
+    },
+    {
+      "stem": "Which of the following is NOT identified as a major source of work-related stress?",
+      "options": [
+        "Lack of control over work tasks",
+        "Work-family conflict",
+        "Organizational fairness",
+        "Downsizing"
+      ],
+      "answer": "Organizational fairness",
+      "explanation": "Organizational fairness is not listed as a source of stress; rather, unfairness is linked to stress, but fairness itself is a positive factor.",
+      "kn": "KN13",
+      "kn_explanation": "This question involves psychosocial factors influencing behavior and stress at work, linking to social influences (KN13).",
+      "difficulty": "easy",
+      "quality_comment": "Options are well balanced; the correct choice is clearly differentiated from the others, aiding test-taker discrimination."
+    },
+    {
+      "stem": "Which of the following best describes the 'survivor syndrome' observed in employees who remain after organizational downsizing?",
+      "options": [
+        "Increased motivation and commitment due to survival",
+        "Elevated job satisfaction and sense of security",
+        "Reduced commitment, loss of control, anxiety, and guilt",
+        "Indifference about organizational changes"
+      ],
+      "answer": "Reduced commitment, loss of control, anxiety, and guilt",
+      "explanation": "Survivor syndrome is characterized by negative psychological and physical symptoms including reduced commitment, sense of lost control, anxiety, depression, insomnia, and guilt.",
+      "kn": "KN13",
+      "kn_explanation": "This question reflects group and organizational processes and their impact on individuals, fitting with social influences on functioning (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible reactions to organizational change; the correct answer clearly reflects the syndrome described."
+    },
+    {
+      "stem": "Which of the following is NOT one of the three core characteristics of job burnout as defined by Maslach and colleagues?",
+      "options": [
+        "Exhaustion",
+        "Depersonalization and cynicism",
+        "Sense of inefficacy",
+        "Increased productivity"
+      ],
+      "answer": "Increased productivity",
+      "explanation": "Job burnout consists of exhaustion, depersonalization/cynicism, and a sense of inefficacy; increased productivity is typically not a burnout characteristic.",
+      "kn": "KN13",
+      "kn_explanation": "This question addresses psychological manifestations of stress and burnout, falling under social and cognitive-affective influences on behavior (KN13).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and concise question with an obvious correct answer relative to plausible distractors enhances reliability."
+    },
+    {
+      "stem": "According to Kobasa's model, which personality trait increases resistance to the harmful effects of stress?",
+      "options": [
+        "Type A behavior pattern",
+        "Hardiness",
+        "Low self-esteem",
+        "Neuroticism"
+      ],
+      "answer": "Hardiness",
+      "explanation": "Hardiness is a personality trait characterized by control, commitment, and viewing stressors as challenges, which increases stress resistance.",
+      "kn": "KN12",
+      "kn_explanation": "This question focuses on personality traits that influence stress response and cognitive-affective resilience, aligning with psychosocial influences (KN12).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include related but incorrect traits, encouraging critical thinking about stress resilience."
+    },
+    {
+      "stem": "Which Type A behavior characteristic is most associated with an increased risk for coronary heart disease?",
+      "options": [
+        "Excessive competitiveness",
+        "Time urgency",
+        "Hostility",
+        "Multitasking"
+      ],
+      "answer": "Hostility",
+      "explanation": "Research identifies hostility, a core Type A behavior trait, as the characteristic most linked to increased coronary heart disease risk.",
+      "kn": "KN1",
+      "kn_explanation": "This question links personality behavior patterns to biological health outcomes, consistent with biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The question targets a nuanced detail in the relationship between Type A behavior and health, with plausible distractors enhancing challenge."
+    },
+    {
+      "stem": "Which construct refers to employees' perceptions of their value as members of their organization and relates to their resistance to job stress?",
+      "options": [
+        "Hardiness",
+        "Organizational justice",
+        "Organization-based self-esteem (OBSE)",
+        "Continuance commitment"
+      ],
+      "answer": "Organization-based self-esteem (OBSE)",
+      "explanation": "OBSE refers to employees’ perceptions of their worth as organizational members and is linked to how they experience and cope with job stress.",
+      "kn": "KN13",
+      "kn_explanation": "The question involves psychosocial factors affecting stress and organizational behavior, fitting within social influences on behavior (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are related constructs, making the question appropriate for assessing nuanced knowledge in this area."
+    },
+    {
+      "stem": "Which statement best describes the relationship between job satisfaction and job performance according to meta-analytic findings?",
+      "options": [
+        "Job satisfaction causes performance to improve consistently",
+        "Job satisfaction and performance are unrelated",
+        "The relationship varies and is moderated by reinforcement contingencies",
+        "Performance decreases when satisfaction increases"
+      ],
+      "answer": "The relationship varies and is moderated by reinforcement contingencies",
+      "explanation": "Research reveals the satisfaction-performance relationship is low to moderate in strength and moderated by factors such as pay linked to performance, suggesting complex causality.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses understanding of workplace attitudes and behaviors, specifically social and organizational influences on functioning (KN16).",
+      "difficulty": "hard",
+      "quality_comment": "The question addresses complex causal relationships with plausible distractors; it challenges higher-level reasoning relevant to EPPP."
+    }
+  ]
+}

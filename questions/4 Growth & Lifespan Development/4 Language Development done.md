@@ -1,0 +1,326 @@
+{
+  "source_file": "4 Language Development.md",
+  "domain": "4 Growth & Lifespan Development",
+  "questions": [
+    {
+      "id": "langdev_001",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is prelinguistic communication?",
+      "options": {
+        "A": "Language before birth",
+        "B": "Communication through sounds and gestures before words",
+        "C": "Written language development",
+        "D": "Bilingual language learning"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Prelinguistic communication includes crying, cooing, gestures, and babbling that occur before first words.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_002",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is babbling in language development?",
+      "options": {
+        "A": "Speaking unclearly",
+        "B": "Repetition of consonant-vowel sounds by infants",
+        "C": "Making animal sounds",
+        "D": "Talking too much"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Babbling is the repetition of consonant-vowel sound combinations (ba-ba-ba) that appears around 4-6 months.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_003",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "What is the difference between receptive and expressive language?",
+      "options": {
+        "A": "Receptive is speaking; expressive is understanding",
+        "B": "Receptive is understanding; expressive is producing language",
+        "C": "Receptive is reading; expressive is writing",
+        "D": "No meaningful difference"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Receptive language is understanding language heard; expressive language is producing and speaking language.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_004",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is the typical age of first words?",
+      "options": {
+        "A": "3-6 months",
+        "B": "8-12 months",
+        "C": "12-18 months",
+        "D": "18-24 months"
+      },
+      "correct_answer": "C",
+      "kn_id": "KN21",
+      "explanation": "First words typically appear around 12-18 months of age, though there is considerable individual variation.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_005",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is a one-word or holophrastic stage?",
+      "options": {
+        "A": "Using one language only",
+        "B": "Single words used to express complex ideas",
+        "C": "Beginning to read",
+        "D": "Ability to spell"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Holophrastic stage (12-18 months) is when single words are used to express complete thoughts or ideas.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_006",
+      "difficulty": "medium",
+      "type": "basic",
+      "question": "What is semantic overextension (overextending) in language?",
+      "options": {
+        "A": "Speaking too much",
+        "B": "Using a word too broadly (e.g., all animals are 'dog')",
+        "C": "Extending sentences too long",
+        "D": "Extending language learning too long"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Semantic overextension is using a word to refer to a broader range of items than appropriate (e.g., all four-legged animals as 'dog').",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_007",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is telegraphic speech?",
+      "options": {
+        "A": "Speech transmitted electronically",
+        "B": "Short phrases with mostly content words and few function words",
+        "C": "Speech that imitates telegraph sounds",
+        "D": "Communication by telegram"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Telegraphic speech (18-24 months+) uses short phrases with content words ('mama go', 'more milk') omitting articles and conjunctions.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_008",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What do theories of language acquisition debate?",
+      "options": {
+        "A": "Whether language is important",
+        "B": "The roles of innate ability versus environmental input",
+        "C": "Which language to teach first",
+        "D": "Whether babies can communicate"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Major debate is between nativist theories (innate language ability) and empiricist theories (environmental experience).",
+      "is_scored": false
+    },
+    {
+      "id": "langdev_009",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is Chomsky's language acquisition device (LAD)?",
+      "options": {
+        "A": "A physical device that helps children speak",
+        "B": "Innate neural structures enabling language learning",
+        "C": "A recording device for children's speech",
+        "D": "Technology for teaching language"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "LAD is Chomsky's theory of innate neural capacity that enables children to acquire language from limited input.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_010",
+      "difficulty": "medium",
+      "type": "basic",
+      "question": "What is syntax in language development?",
+      "options": {
+        "A": "The sound system of language",
+        "B": "Rules for word order and sentence structure",
+        "C": "Meaning of words",
+        "D": "Sound combinations"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Syntax refers to grammatical rules and word order for constructing meaningful sentences.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_011",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is morphology in language?",
+      "options": {
+        "A": "Study of language history",
+        "B": "Rules for combining sounds into meaningful units",
+        "C": "Word order in sentences",
+        "D": "Meaning of words"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Morphology involves rules for combining morphemes (smallest meaningful units) into words.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_012",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "What is the relationship between language and cognitive development?",
+      "options": {
+        "A": "No relationship exists",
+        "B": "Language enables higher cognitive development",
+        "C": "Cognitive development enables language",
+        "D": "They develop completely independently"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Language development supports cognitive development by enabling representation of thoughts and abstract reasoning.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_013",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What is Vygotsky's concept of private speech?",
+      "options": {
+        "A": "Secret language between children",
+        "B": "Self-directed speech helping with problem-solving",
+        "C": "Speaking quietly in groups",
+        "D": "Silent language use"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Private speech is self-directed talk that guides thinking and problem-solving, eventually becoming internalized thought.",
+      "is_scored": false
+    },
+    {
+      "id": "langdev_014",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is overregularization in language development?",
+      "options": {
+        "A": "Speaking too correctly",
+        "B": "Applying grammar rules too broadly (e.g., 'goed', 'mouses')",
+        "C": "Following too many rules",
+        "D": "Being too formal in speech"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Overregularization occurs when children apply regular grammar rules to irregular words (e.g., past tense 'goed' instead of 'went').",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_015",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "How does exposure to multiple languages affect language development?",
+      "options": {
+        "A": "It always delays language development",
+        "B": "It confuses children permanently",
+        "C": "Bilingual children often show different trajectories but normal development",
+        "D": "Multiple languages prevent language learning"
+      },
+      "correct_answer": "C",
+      "kn_id": "KN21",
+      "explanation": "Bilingual exposure may show different developmental patterns but typically results in normal overall language competence.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_016",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What role does joint attention play in language development?",
+      "options": {
+        "A": "It prevents language learning",
+        "B": "Shared focus on objects/events facilitates word learning",
+        "C": "It only occurs in older children",
+        "D": "No role in language development"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Joint attention (adult and child focusing on same thing) is crucial for word learning and language development.",
+      "is_scored": false
+    },
+    {
+      "id": "langdev_017",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is language pragmatics?",
+      "options": {
+        "A": "Using language practically in real situations",
+        "B": "Rules for how language is used socially and contextually",
+        "C": "Practical grammar",
+        "D": "Everyday language use"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Pragmatics involves rules for using language appropriately in social contexts (turn-taking, politeness, topic relevance).",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_018",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "What is the difference between vocabulary spurt and slow vocabulary growth?",
+      "options": {
+        "A": "No meaningful difference",
+        "B": "Spurt is rapid increase; slow growth is gradual accumulation",
+        "C": "Spurt occurs in infants; slow growth in older children",
+        "D": "Spurt is learning nouns; slow growth is learning verbs"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Vocabulary spurt is sudden acceleration in word learning (often 18-24 months); slow growth is gradual accumulation of words.",
+      "is_scored": true
+    },
+    {
+      "id": "langdev_019",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "How does child-directed speech (motherese) support language development?",
+      "options": {
+        "A": "It doesn't; baby talk harms development",
+        "B": "Simplified syntax, higher pitch, and repetition facilitate learning",
+        "C": "It only helps hearing development",
+        "D": "It delays language development"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Child-directed speech (motherese) uses simplified grammar, repetition, and exaggerated intonation supporting language learning.",
+      "is_scored": false
+    },
+    {
+      "id": "langdev_020",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is the relationship between reading and language development?",
+      "options": {
+        "A": "Reading development is independent of language",
+        "B": "Language foundation supports reading development",
+        "C": "Reading prevents spoken language development",
+        "D": "Language and reading are identical"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN21",
+      "explanation": "Strong language foundation (phonological awareness, vocabulary) supports development of reading skills.",
+      "is_scored": true
+    }
+  ]
+}

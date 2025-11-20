@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export function ReasoningBasic() {
-  const reasoningText = `It’s okay to feel worry, tired, and bored. Can notice thoughts while still moving forward. What will it mean for you to say you passed?`;
+  const reasoningText = `It’s okay to feel worried, tired, and bored. Can notice thoughts while still moving forward. What will it mean for you to say you passed?`;
 
   return (
     <Reasoning>
@@ -61,7 +61,7 @@ export function FourthBentoAnimation() {
       >
         <div className="flex items-end justify-end gap-3">
           <motion.div
-            className="max-w-[280px] bg-secondary text-white p-4 rounded-2xl ml-auto shadow-[0_0_10px_rgba(0,0,0,0.05)]"
+            className="max-w-[280px] brand-dusty-rose-bg text-white p-4 rounded-2xl ml-auto shadow-[0_0_10px_rgba(0,0,0,0.05)]"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
@@ -149,4 +149,3 @@ export function FourthBentoAnimation() {
   );
 
 }
-

@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "stem": "According to Piaget, at which stage do children begin to understand that rules are agreements between people and can be changed?",
+      "options": [
+        "Heteronomous Stage",
+        "Premoral Stage",
+        "Autonomous Stage",
+        "Concrete Operational Stage"
+      ],
+      "answer": "Autonomous Stage",
+      "explanation": "Piaget's Autonomous Stage begins around age 10 or 11, where children recognize that rules are based on mutual agreement and can be modified.",
+      "kn": "KN23",
+      "kn_explanation": "This question focuses on Piaget's developmental theory of moral understanding, which aligns with major developmental theories and models (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a key Piagetian concept with plausible distractors including a common Piagetian developmental stage to test nuanced understanding."
+    },
+    {
+      "stem": "In Kohlberg's theory, which level of moral reasoning is characterized by adherence to laws and rules established by legitimate authorities?",
+      "options": [
+        "Postconventional Morality",
+        "Preconventional Morality",
+        "Conventional Morality",
+        "Instrumental Hedonism"
+      ],
+      "answer": "Conventional Morality",
+      "explanation": "At the Conventional Morality level, individuals judge moral behavior based on maintaining social order by following laws and rules.",
+      "kn": "KN23",
+      "kn_explanation": "The question pertains to Kohlberg's stages of moral development, a core developmental theory, and therefore best fits KN23.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is straightforward and the distractors are relevant stages or concepts from Kohlberg's theory, providing a good discrimination."
+    },
+    {
+      "stem": "Which of the following is a major criticism of both Piaget's and Kohlberg's moral development theories?",
+      "options": [
+        "They underestimate young children's moral reasoning abilities.",
+        "They exaggerate the role of emotions in moral judgment.",
+        "They emphasize culture as the primary factor influencing development.",
+        "They focus only on real-life moral decisions, ignoring hypothetical dilemmas."
+      ],
+      "answer": "They underestimate young children's moral reasoning abilities.",
+      "explanation": "Research has shown that both theories tend to underestimate the moral capacities of young children, a key critique.",
+      "kn": "KN23",
+      "kn_explanation": "Understanding criticisms of developmental theories of moral reasoning involves analysis of developmental research, appropriate for KN23.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible misunderstandings making this item suitable to assess critical evaluation of theory."
+    },
+    {
+      "stem": "According to Kohlberg, which stage involves moral reasoning based primarily on avoiding punishment?",
+      "options": [
+        "Punishment and Obedience Stage",
+        "Morality of Individual Principles Stage",
+        "Good Boy/Good Girl Stage",
+        "Law and Order Orientation Stage"
+      ],
+      "answer": "Punishment and Obedience Stage",
+      "explanation": "The Punishment and Obedience Stage is the first stage of preconventional morality, where behavior is judged acceptable based on avoiding punishment.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of specific stages in Kohlberg's moral development theory, a major developmental model (KN23).",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly tests a fundamental Kohlbergian concept with well-crafted, plausible distractors from other stages."
+    },
+    {
+      "stem": "Which parenting discipline style is most strongly associated with advanced levels of a child's moral reasoning?",
+      "options": [
+        "Induction, explaining why behavior is wrong and its effects on others",
+        "Power assertion, emphasizing strict obedience without explanation",
+        "Love withdrawal, withholding affection to discourage behavior",
+        "Permissive, allowing children to act without constraints"
+      ],
+      "answer": "Induction, explaining why behavior is wrong and its effects on others",
+      "explanation": "Induction involves reasoning and empathy, which helps children develop more advanced moral reasoning compared to power assertion and love withdrawal.",
+      "kn": "KN21",
+      "kn_explanation": "This item focuses on socialization influences on moral development in childhood, aligning with normal growth and development across the lifespan (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are commonly known parenting styles, making the correct answer stand out but still challenging for those less familiar with moral development research."
+    },
+    {
+      "stem": "Gilligan critiqued Kohlberg's moral development theory primarily because:",
+      "options": [
+        "It was androcentric and did not adequately represent women's moral perspectives.",
+        "It overgeneralized moral development across different cultures.",
+        "It ignored the role of cognitive development in moral reasoning.",
+        "It relied exclusively on stage theory and hypothetical dilemmas."
+      ],
+      "answer": "It was androcentric and did not adequately represent women's moral perspectives.",
+      "explanation": "Gilligan argued that Kohlberg's theory was male-centered, emphasizing justice-based reasoning, whereas women’s moral judgments often emphasize care and responsibility.",
+      "kn": "KN23",
+      "kn_explanation": "The question examines critiques related to cultural and gender influences on moral development theory, which falls under developmental theory models (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible critiques but only one directly addresses Gilligan's key argument, making this a targeted and fair question."
+    },
+    {
+      "stem": "Piaget believed that moral development depends primarily on:",
+      "options": [
+        "Cognitive development and perspective-taking abilities",
+        "Parental authority and punishment",
+        "Genetic predispositions toward altruism",
+        "Emotional attachment to caregivers"
+      ],
+      "answer": "Cognitive development and perspective-taking abilities",
+      "explanation": "Piaget emphasized that understanding and internalizing moral standards requires cognitive growth and the ability to consider others' viewpoints.",
+      "kn": "KN23",
+      "kn_explanation": "This question targets Piaget's theory linking cognition and moral development, aligning with research on developmental models (KN23).",
+      "difficulty": "easy",
+      "quality_comment": "The distractors are relevant developmental concepts but distinguishable, which helps confirm mastery of Piaget's focus."
+    },
+    {
+      "stem": "Which best summarizes Kohlberg's view on the universality of his stages of moral development?",
+      "options": [
+        "The stages are universal and always occur in the same order.",
+        "The stages vary significantly by culture and gender.",
+        "The stages can be skipped depending on individual motivation.",
+        "The stages are exclusive to males from Western cultures."
+      ],
+      "answer": "The stages are universal and always occur in the same order.",
+      "explanation": "Kohlberg proposed that moral reasoning stages are universal and sequential, although later research questioned this assumption.",
+      "kn": "KN23",
+      "kn_explanation": "This question addresses Kohlberg's theoretical claims regarding moral development sequences within major developmental theories (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "Options present common misconceptions and criticisms, with one correct theoretical assertion, effectively testing knowledge of Kohlberg’s framework."
+    },
+    {
+      "stem": "Why do Piaget and Kohlberg emphasize the greater influence of peers over parents in children's moral development?",
+      "options": [
+        "Peer relationships allow mutual negotiation, unlike adult unilateral authority.",
+        "Parents tend to model immoral behaviors more often than peers.",
+        "Children are biologically predisposed to follow peers over parents.",
+        "Parents do not discuss moral issues verbally with their children."
+      ],
+      "answer": "Peer relationships allow mutual negotiation, unlike adult unilateral authority.",
+      "explanation": "Peers provide an egalitarian context for discussing and resolving moral issues, which encourages moral reasoning more than the typically authoritarian parent-child dynamic.",
+      "kn": "KN21",
+      "kn_explanation": "This item highlights social environmental influences on moral development across childhood, fitting the normal growth and social interaction focus of KN21.",
+      "difficulty": "hard",
+      "quality_comment": "The question probes conceptual understanding of social influences with plausible distractors that require nuanced knowledge of developmental theory."
+    },
+    {
+      "stem": "According to Kohlberg's theory, actions judged acceptable because they satisfy one’s own needs and lead to rewards belong to which stage?",
+      "options": [
+        "Instrumental Hedonism Stage",
+        "Law and Order Orientation Stage",
+        "Morality of Contract Stage",
+        "Good Boy/Good Girl Stage"
+      ],
+      "answer": "Instrumental Hedonism Stage",
+      "explanation": "Instrumental Hedonism is the second stage of preconventional morality where decisions are based primarily on self-interest and reciprocal exchange.",
+      "kn": "KN23",
+      "kn_explanation": "This question requires knowledge of Kohlberg’s specific stages within preconventional morality, aligned with developmental theories (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are drawn from other Kohlbergian stages, offering plausible alternatives and enhancing discriminative value."
+    }
+  ]
+}

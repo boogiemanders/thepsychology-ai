@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "stem": "According to APA Ethics Code Standard 9.01(b), when a psychologist bases conclusions about an individual in part on assessment results conducted by another professional, what must the psychologist do?",
+      "options": [
+        "Disclose the limitations of their conclusions due to reliance on the other professional's data",
+        "Use the other professional's results without qualification since the assessment was completed",
+        "Avoid using any information obtained from other professionals to maintain assessment validity",
+        "Only use other professionals’ results when there is explicit client consent"
+      ],
+      "answer": "Disclose the limitations of their conclusions due to reliance on the other professional's data",
+      "explanation": "Standard 9.01(b) requires psychologists to communicate any limitations of conclusions when personal assessment is not feasible and evaluations from others are used.",
+      "kn": "KN62",
+      "kn_explanation": "This question focuses on ethical principles regarding ethical assessment practices, which fall under professional standards and relevant guidelines (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clearly worded and tests a key ethical responsibility with plausible distractors related to use of external data."
+    },
+    {
+      "stem": "Under APA Ethics Code Standard 9.02, when administering a psychological test that has not been validated for a particular population, what is the psychologist required to do?",
+      "options": [
+        "Describe the strengths and limitations of test results and interpretations",
+        "Avoid using the test entirely to prevent invalid conclusions",
+        "Modify the test content to fit the population without documentation",
+        "Proceed as usual since validity is not essential for individual cases"
+      ],
+      "answer": "Describe the strengths and limitations of test results and interpretations",
+      "explanation": "Standard 9.02(b) states that when validity or reliability of a test for a population is not established, psychologists must describe strengths and limitations of results and interpretations.",
+      "kn": "KN62",
+      "kn_explanation": "This ethical guideline addresses appropriate use of assessment tools and test validity, part of professional practice standards (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common misconceptions and the correct answer emphasizes responsible, transparent test use, matching EPPP ethical standards."
+    },
+    {
+      "stem": "Which of the following best describes a test modification, as opposed to an accommodation, according to the Standards for Educational and Psychological Testing?",
+      "options": [
+        "Providing a screen reader for a dyslexic examinee on a reading comprehension test",
+        "Offering a large-print version of a written exam for a visually impaired examinee",
+        "Extending time limits for all test takers to reduce anxiety",
+        "Administering the test in a quiet room to minimize distractions"
+      ],
+      "answer": "Providing a screen reader for a dyslexic examinee on a reading comprehension test",
+      "explanation": "Modifications change the test content or construct to some extent and result in scores not comparable to the original test, e.g., using a screen reader on a reading test alters construct measurement.",
+      "kn": "KN62",
+      "kn_explanation": "This question covers ethical and professional standards regarding modifications versus accommodations in assessment, central to ethical test administration (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "Options distinguish between accommodations and modifications clearly; distractors are plausible, enhancing discriminative value."
+    },
+    {
+      "stem": "What does APA Ethics Code Standard 10.01(a) require related to informed consent in therapy?",
+      "options": [
+        "Clients should be informed early about the nature, anticipated course, fees, third-party involvement, and limits of confidentiality",
+        "Informed consent should only be obtained after several therapy sessions to ensure trust",
+        "Therapists may omit information about fees if treatment is publicly funded",
+        "Clients only need to be told about fees and confidentiality limits at termination"
+      ],
+      "answer": "Clients should be informed early about the nature, anticipated course, fees, third-party involvement, and limits of confidentiality",
+      "explanation": "Standard 10.01(a) requires obtaining informed consent as early as feasible, including key information about therapy and their rights.",
+      "kn": "KN62",
+      "kn_explanation": "This question focuses on ethical and professional issues concerning client informed consent during therapy, aligned with ethical principles (KN62).",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear and tests a fundamental ethical requirement with realistic distractors, suitable for basic EPPP knowledge."
+    },
+    {
+      "stem": "If a psychologist switches a client from in-person therapy to telepsychology, what ethical practice is recommended according to APA Guidelines for the Practice of Telepsychology?",
+      "options": [
+        "Providing a second informed consent addendum addressing telepsychology-specific issues",
+        "Assuming initial informed consent covers telepsychology without further documentation",
+        "Avoiding discussing telepsychology limitations to reduce client anxiety",
+        "Discontinuing informed consent procedures since telepsychology is equivalent to in-person therapy"
+      ],
+      "answer": "Providing a second informed consent addendum addressing telepsychology-specific issues",
+      "explanation": "APA recommends obtaining additional informed consent documentation that addresses the unique risks and limitations of telepsychology when switching modalities.",
+      "kn": "KN62",
+      "kn_explanation": "This question assesses knowledge of ethical standards related to telepsychology informed consent, part of professional and ethical guidelines (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "The question addresses contemporary ethical issues with plausible options reflecting common misconceptions, enhancing its relevance."
+    },
+    {
+      "stem": "According to the APA Ethics Code, under what circumstance may a psychologist terminate therapy without providing pretermination counseling or referrals?",
+      "options": [
+        "When the client or another person threatens or endangers the psychologist's safety",
+        "When the client refuses to pay fees on time",
+        "When the therapy goals have been partially met within six sessions",
+        "When the client moves to another city"
+      ],
+      "answer": "When the client or another person threatens or endangers the psychologist's safety",
+      "explanation": "Standard 10.10 allows termination without pretermination counseling and referral if the psychologist is threatened or endangered by the client or an associated person.",
+      "kn": "KN62",
+      "kn_explanation": "This question focuses on ethical standards for termination of therapy, which are a core aspect of professional ethical practice (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible but less defensible ethically, making this a fair question assessing important termination considerations."
+    },
+    {
+      "stem": "Standard 9.07 prohibits allowing unqualified individuals to use psychological assessment techniques. What is the one exception to this prohibition?",
+      "options": [
+        "When the individual is being trained and appropriately supervised by a qualified psychologist",
+        "When the individual has a graduate degree in psychology but is not licensed",
+        "When the assessment is informal and low risk",
+        "When the client specifically requests the involvement of unqualified persons"
+      ],
+      "answer": "When the individual is being trained and appropriately supervised by a qualified psychologist",
+      "explanation": "Standard 9.07 permits use of psychological assessment by unqualified individuals only when it is part of training under proper supervision.",
+      "kn": "KN62",
+      "kn_explanation": "This question tests ethical knowledge regarding qualifications for assessment administration, part of professional standards (KN62).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and well-constructed distractors provide a straightforward test of an important ethical standard."
+    },
+    {
+      "stem": "According to Standard 9.04 of the APA Ethics Code, psychologists may withhold release of test data to clients under which condition?",
+      "options": [
+        "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
+        "If the client is unlikely to understand the data due to cognitive limitations",
+        "If the psychologist believes the data are irrelevant to the client’s treatment",
+        "If the client requests only the summary report instead"
+      ],
+      "answer": "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
+      "explanation": "Standard 9.04 states psychologists may withhold test data to protect the client or others from harm or misuse when permitted by law (e.g., under HIPAA).",
+      "kn": "KN62",
+      "kn_explanation": "This question covers ethical and legal standards about test data confidentiality and client rights, central to ethical practice (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "Answer choices are balanced and represent common client data release scenarios, enhancing the question’s relevance and difficulty."
+    },
+    {
+      "stem": "What must psychologists include in their reports after using an interpreter during an assessment, according to Standard 9.03(c)?",
+      "options": [
+        "A description of any limitations of the obtained data resulting from the use of the interpreter",
+        "Only the interpreter's credentials without further comments",
+        "A disclaimer that the results are invalid due to use of an interpreter",
+        "No special notation is required if the interpreter is fluent in the client’s language"
+      ],
+      "answer": "A description of any limitations of the obtained data resulting from the use of the interpreter",
+      "explanation": "Standard 9.03(c) requires psychologists to address potential data limitations caused by the use of an interpreter in reports and feedback.",
+      "kn": "KN62",
+      "kn_explanation": "This question assesses knowledge of professional standards related to assessment with linguistic accommodations and informed consent (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common misunderstandings about interpreter use; the correct answer emphasizes transparency in reporting."
+    },
+    {
+      "stem": "APA Ethics Codes Standards 10.05 and 10.08 place restrictions on sexual relationships with clients. Which of the following accurately summarizes these restrictions?",
+      "options": [
+        "Sexual intimacies with current clients are prohibited; sexual intimacies with former clients are prohibited for at least two years post-termination, and thereafter only under unusual circumstances",
+        "Sexual relationships are permitted with former clients immediately upon termination if the client consents",
+        "There are no restrictions on sexual relationships with former clients after therapy ends",
+        "Sexual intimacies with current or former clients are prohibited indefinitely"
+      ],
+      "answer": "Sexual intimacies with current clients are prohibited; sexual intimacies with former clients are prohibited for at least two years post-termination, and thereafter only under unusual circumstances",
+      "explanation": "Standards 10.05 and 10.08 prohibit sexual contact with current clients and with former clients for at least two years after therapy, with further restrictions thereafter.",
+      "kn": "KN62",
+      "kn_explanation": "This question addresses ethical rules around boundaries and sexual relationships with clients, a critical component of ethical professional conduct (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "The options clearly differentiate the nuanced time-based restrictions, making it a strong ethics-based question."
+    },
+    {
+      "stem": "Which ethical principle guides psychologists to consult or refer clients to other professionals when needed to serve the best interests of the client?",
+      "options": [
+        "Principle B: Fidelity and Responsibility",
+        "Principle A: Beneficence and Nonmaleficence",
+        "Principle C: Integrity",
+        "Principle D: Justice"
+      ],
+      "answer": "Principle B: Fidelity and Responsibility",
+      "explanation": "Principle B emphasizes psychologists' responsibility to collaborate and refer to ensure clients receive appropriate services.",
+      "kn": "KN62",
+      "kn_explanation": "This question tests knowledge of core ethical principles guiding professional responsibility, relevant to referral decisions (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "While brief, the question targets important ethical decision-making principles with plausible distractors based on APA Ethics Code."
+    },
+    {
+      "stem": "According to Standard 9.08, when is it acceptable for psychologists to use outdated or obsolete tests?",
+      "options": [
+        "When use remains appropriate for the current evaluation and provides beneficial information",
+        "Only when no newer versions of the test exist",
+        "Never, as use of outdated tests is unethical under any circumstances",
+        "Only if the client specifically requests the older test version"
+      ],
+      "answer": "When use remains appropriate for the current evaluation and provides beneficial information",
+      "explanation": "Standard 9.08 allows use of outdated or obsolete tests if they are appropriate for the evaluation purpose and beneficial, e.g., better culturally relevant norms.",
+      "kn": "KN62",
+      "kn_explanation": "This question examines ethical considerations regarding test selection and interpretation within practice standards (KN62).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors contrast unethical and inflexible perspectives against the nuanced ethical flexibility described in the standard."
+    }
+  ]
+}

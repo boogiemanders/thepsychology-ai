@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best describes content validity in psychological testing?",
+      "options": [
+        "The degree to which a test measures what it intends to by sampling items representative of the domain",
+        "The correlation of test scores with an external behavioral criterion",
+        "The degree to which test items appear valid to examinees",
+        "The degree to which test scores correlate highly with scores on unrelated constructs"
+      ],
+      "answer": "The degree to which a test measures what it intends to by sampling items representative of the domain",
+      "explanation": "Content validity involves ensuring test items are a representative sample of the behavior or content domain the test is designed to assess.",
+      "kn": "KN29",
+      "kn_explanation": "This question focuses on test construction and validity evidence, topics central to psychometric theories and test characteristics (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates content validity from other forms, and distractors are plausible, enhancing discriminability in an exam setting."
+    },
+    {
+      "stem": "Face validity is best described as:",
+      "options": [
+        "A type of validity demonstrated by statistical analyses of test content",
+        "The extent to which a test appears valid to those taking it",
+        "The degree to which test scores accurately predict future behavior",
+        "The correlation between test scores and an external construct"
+      ],
+      "answer": "The extent to which a test appears valid to those taking it",
+      "explanation": "Face validity refers to how test items look valid to examinees, but it is not a true form of validity supported by empirical evidence.",
+      "kn": "KN29",
+      "kn_explanation": "This question targets understanding of types of validity and test characteristics, integral to psychometric theories (KN29).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward with clear distractors, well suited for testing basic knowledge of validity concepts."
+    },
+    {
+      "stem": "Which coefficient in a multitrait-multimethod matrix provides evidence of convergent validity?",
+      "options": [
+        "Monotrait-heteromethod coefficient",
+        "Heterotrait-monomethod coefficient",
+        "Monotrait-monomethod coefficient",
+        "Heterotrait-heteromethod coefficient"
+      ],
+      "answer": "Monotrait-heteromethod coefficient",
+      "explanation": "The monotrait-heteromethod coefficient represents correlations between the same trait measured by different methods, indicating convergent validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question addresses test validation techniques, specifically convergent validity assessment using multitrait-multimethod matrices, key to psychometric evaluation (KN29).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires precise knowledge about validity coefficients; distractors are plausible which enhances its difficulty and discrimination."
+    },
+    {
+      "stem": "In a multitrait-multimethod matrix, a low correlation between the target test and a different trait measured by the same method provides evidence of:",
+      "options": [
+        "Divergent validity",
+        "Convergent validity",
+        "Content validity",
+        "Face validity"
+      ],
+      "answer": "Divergent validity",
+      "explanation": "Low correlations between different traits measured by the same method indicate that the test does not measure unrelated constructs, supporting divergent validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question concerns construct validity components and their statistical indicators, fundamental in test psychometric theory (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes divergent from convergent and content validity, with plausible distractors, suitable for intermediate learners."
+    },
+    {
+      "stem": "When factor analysis of a test and related measures yields high factor loadings on one factor and low on another unrelated factor, this primarily supports which type of validity?",
+      "options": [
+        "Construct validity",
+        "Content validity",
+        "Criterion-related validity",
+        "Face validity"
+      ],
+      "answer": "Construct validity",
+      "explanation": "Factor analysis results showing expected patterns of loadings support construct validity by demonstrating the test measures the intended theoretical construct.",
+      "kn": "KN29",
+      "kn_explanation": "This question reviews the use of factor analysis in establishing construct validity, a key concept in psychometric test evaluation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The item integrates an understanding of factor analysis and validity, challenging test-takers to apply knowledge rather than recall simple definitions."
+    },
+    {
+      "stem": "Assuming factors are orthogonal, how is the communality of a test item in factor analysis calculated?",
+      "options": [
+        "By squaring and summing each of the test’s factor loadings",
+        "By correlating the test item with other items on the same factor",
+        "By averaging the factor loadings across all factors",
+        "By subtracting error variance from total variance"
+      ],
+      "answer": "By squaring and summing each of the test’s factor loadings",
+      "explanation": "Communality represents the proportion of variance accounted for by all factors and is calculated by summing the squared factor loadings when factors are orthogonal.",
+      "kn": "KN55",
+      "kn_explanation": "This question assesses understanding of factor analysis procedures and statistical interpretation, central to analytic methods (KN55).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires knowledge of factor analysis computations, making it appropriate for advanced examinees; distractors are reasonable but clearly incorrect."
+    },
+    {
+      "stem": "Which source of validity evidence includes systematic review by subject matter experts to ensure representativeness of test items?",
+      "options": [
+        "Evidence based on test content",
+        "Evidence based on internal structure",
+        "Evidence based on relationships with other variables",
+        "Evidence based on consequences of testing"
+      ],
+      "answer": "Evidence based on test content",
+      "explanation": "Content validity evidence involves expert review to verify that items adequately represent the content domain.",
+      "kn": "KN29",
+      "kn_explanation": "This question highlights a key process in establishing test content validity, integral to psychometric theories and test construction (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The item clearly distinguishes among types of validity evidence with plausible distractors, making it effective for knowledge assessment."
+    },
+    {
+      "stem": "Why might face validity be undesirable for certain tests, such as those assessing honesty or criminality?",
+      "options": [
+        "Because it may lead examinees to respond inaccurately to avoid detection",
+        "Because it reduces the test’s internal consistency reliability",
+        "Because it biases expert judgment of content validity",
+        "Because it decreases the test’s ability to predict relevant behaviors"
+      ],
+      "answer": "Because it may lead examinees to respond inaccurately to avoid detection",
+      "explanation": "If test items appear obviously related to sensitive traits, examinees might respond in socially desirable or deceptive ways, undermining validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests understanding of the implications of face validity and response biases on psychological assessment, relevant to test fairness and bias (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and addresses a nuanced concept; distractors are plausible but distinguishable with careful reading."
+    },
+    {
+      "stem": "Which statement about the monotrait-monomethod coefficient in a multitrait-multimethod matrix is true?",
+      "options": [
+        "It is a reliability coefficient for the test measuring the same trait with the same method",
+        "It indicates convergent validity between two different traits using the same method",
+        "It identifies discriminant validity by low correlations between unrelated traits using different methods",
+        "It shows the correlation between the target test and an unrelated trait using a different method"
+      ],
+      "answer": "It is a reliability coefficient for the test measuring the same trait with the same method",
+      "explanation": "The monotrait-monomethod coefficient reflects internal consistency or reliability for the test when measuring the same trait with the same method.",
+      "kn": "KN29",
+      "kn_explanation": "This question targets psychometric concepts of reliability and their interpretation within validation studies, important for assessment theory (KN29).",
+      "difficulty": "hard",
+      "quality_comment": "The item is precise and requires detailed knowledge of multitrait-multimethod methodology; distractors are plausible, increasing discriminability."
+    },
+    {
+      "stem": "Which of the following steps is NOT part of the factor analysis process used to assess test validity?",
+      "options": [
+        "Correlating all pairs of test scores to create a correlation matrix",
+        "Administering the test with related and unrelated measures to a sample",
+        "Computing regression coefficients to predict criterion variables",
+        "Rotating the initial factor matrix to facilitate interpretation"
+      ],
+      "answer": "Computing regression coefficients to predict criterion variables",
+      "explanation": "Regression analysis is not part of factor analysis; factor analysis involves correlational matrices and factor rotations but not regression coefficients.",
+      "kn": "KN55",
+      "kn_explanation": "This question assesses knowledge of research methods and statistical procedures, focusing on factor analysis techniques (KN55).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are believable steps related to test validation, making the question good for assessing procedural knowledge."
+    },
+    {
+      "stem": "Which source of validity evidence would best address whether the interpretation of test scores is supported by theoretical relationships with other constructs?",
+      "options": [
+        "Evidence based on relationships with other variables",
+        "Evidence based on internal structure",
+        "Evidence based on test content",
+        "Evidence based on response process"
+      ],
+      "answer": "Evidence based on relationships with other variables",
+      "explanation": "Construct validity uses evidence involving correlations between test scores and other measures of related or unrelated constructs, corresponding to relationships with other variables.",
+      "kn": "KN29",
+      "kn_explanation": "This question evaluates understanding of validity evidence types and their theoretical basis in psychometric evaluation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-constructed with clear and plausible distractors, helping to solidify concepts of validity evidence."
+    },
+    {
+      "stem": "A newly developed self-report sociability test shows a high correlation with a teacher report sociability test and a low correlation with a teacher report impulsivity test. This pattern of correlations primarily demonstrates:",
+      "options": [
+        "Both convergent and divergent validity",
+        "Face validity only",
+        "Only content validity",
+        "Criterion-related validity"
+      ],
+      "answer": "Both convergent and divergent validity",
+      "explanation": "High correlation with the same trait measured differently shows convergent validity; low correlation with an unrelated trait supports divergent validity.",
+      "kn": "KN29",
+      "kn_explanation": "The question targets understanding of construct validity components and their interpretation using correlation patterns within validation research (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The scenario-based question integrates concepts well, with distractors reflecting common validity misconceptions."
+    },
+    {
+      "stem": "Which validity evidence source focuses on how respondents engage with test items during administration to ensure accurate construct measurement?",
+      "options": [
+        "Evidence based on response process",
+        "Evidence based on test content",
+        "Evidence based on internal structure",
+        "Evidence based on consequences of testing"
+      ],
+      "answer": "Evidence based on response process",
+      "explanation": "Response process validity evidence examines the cognitive and psychological processes of test takers during item responses to confirm the test measures the intended construct.",
+      "kn": "KN30",
+      "kn_explanation": "This item aligns with assessment theories and models regarding the mechanisms of test validity, fitting KN30 in Domain 5.",
+      "difficulty": "medium",
+      "quality_comment": "This question adds coverage on validity evidence related to response processes, filling an underrepresented validity source area with clear distractors."
+    },
+    {
+      "stem": "In the context of construct validity, how does the multitrait-multimethod matrix aid in understanding measurement error?",
+      "options": [
+        "By differentiating method effects from trait effects through varying methods and traits",
+        "By directly measuring test-retest reliability over time",
+        "By assessing face validity of test items through expert ratings",
+        "By correlating test scores with external behavioral criteria"
+      ],
+      "answer": "By differentiating method effects from trait effects through varying methods and traits",
+      "explanation": "The multitrait-multimethod matrix disentangles variance due to traits from variance due to measurement methods, helping to identify measurement errors attributable to methods.",
+      "kn": "KN30",
+      "kn_explanation": "This question addresses assessment theories and models focused on improving construct validity and evaluation of measurement error, relevant to KN30.",
+      "difficulty": "hard",
+      "quality_comment": "The item targets higher-level understanding of the multitrait-multimethod approach, adding depth to the question bank with well-crafted distractors."
+    },
+    {
+      "stem": "How can factor analysis help in identifying construct-irrelevant variance in a psychological test?",
+      "options": [
+        "By revealing factors that load on items unrelated to the intended construct",
+        "By validating the internal consistency of the test",
+        "By assessing test-retest reliability across administrations",
+        "By evaluating how items appear to test takers"
+      ],
+      "answer": "By revealing factors that load on items unrelated to the intended construct",
+      "explanation": "Factor analysis can uncover unintended constructs represented by test items, highlighting construct-irrelevant variance that threatens validity.",
+      "kn": "KN30",
+      "kn_explanation": "This question relates to psychometric models of construct validity and techniques for identifying extraneous variance in assessments (KN30).",
+      "difficulty": "medium",
+      "quality_comment": "The question introduces the application of factor analysis beyond simple construct confirmation, enhancing conceptual coverage with balanced options."
+    },
+    {
+      "stem": "Which of the following best illustrates construct validity evidence using external correlates?",
+      "options": [
+        "A test of anxiety correlates strongly with established measures of depression and weakly with measures of intelligence",
+        "A test content domain is reviewed by experts for representativeness",
+        "A new achievement test is administered twice to assess score consistency",
+        "Test items appear appropriate to examinees on the surface level"
+      ],
+      "answer": "A test of anxiety correlates strongly with established measures of depression and weakly with measures of intelligence",
+      "explanation": "Construct validity evidence includes demonstrating predicted correlations (convergent and divergent) with related and unrelated constructs, respectively.",
+      "kn": "KN37",
+      "kn_explanation": "This question taps evidence-based interpretation of validity data considering correlational patterns and construct relationships (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "This question broadens coverage into evidence evaluation and construct validation, supporting interpretive skill development with plausible distractors."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best characterizes the diagnostic criteria of delirium?",
+      "options": [
+        "A gradual onset of cognitive decline over months with no fluctuations and no attention disturbance",
+        "A sudden disturbance in attention and awareness that fluctuates during the day, accompanied by at least one other cognitive disturbance",
+        "Progressive memory loss without any changes in attention or awareness",
+        "Steady cognitive decline accompanied by aphasia and apraxia in elderly individuals"
+      ],
+      "answer": "A sudden disturbance in attention and awareness that fluctuates during the day, accompanied by at least one other cognitive disturbance",
+      "explanation": "Delirium is defined by a disturbance in attention and awareness that develops quickly (hours to days), fluctuates during the day, and includes an additional cognitive disturbance such as memory or language impairment.",
+      "kn": "KN36",
+      "kn_explanation": "The question focuses on clinical diagnostic criteria for delirium, relating to the understanding of classification systems and diagnosis in neurocognitive disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear, and distractors cover related but distinct disorders, promoting good differentiation of delirium from other conditions."
+    },
+    {
+      "stem": "Which neuropathological feature is considered a hallmark of Alzheimer's disease?",
+      "options": [
+        "Lewy bodies consisting of alpha-synuclein deposits",
+        "Multiple sclerosis plaques in the white matter",
+        "Amyloid plaques and neurofibrillary tangles disrupting cell-to-cell communication",
+        "Basal ganglia degeneration causing psychomotor retardation"
+      ],
+      "answer": "Amyloid plaques and neurofibrillary tangles disrupting cell-to-cell communication",
+      "explanation": "Alzheimer's disease is characterized by extracellular amyloid plaques composed of beta-amyloid protein and intracellular neurofibrillary tangles made of abnormal tau protein, which interfere with neuronal communication.",
+      "kn": "KN1",
+      "kn_explanation": "This question targets knowledge of biological bases of neurocognitive disorders, specifically the neurobiological markers of Alzheimer's disease.",
+      "difficulty": "medium",
+      "quality_comment": "Options include other neurological features to mislead, but the correct response is clearly the signature pathological hallmark of Alzheimer's."
+    },
+    {
+      "stem": "Which of the following is NOT a characteristic early symptom distinguishing the behavioral variant of frontotemporal neurocognitive disorder from Alzheimer's disease?",
+      "options": [
+        "Pronounced changes in social behavior and lack of empathy",
+        "Memory impairment that interferes with social functioning",
+        "Disinhibition and compulsive behaviors",
+        "Prominent language deficits such as aphasia"
+      ],
+      "answer": "Memory impairment that interferes with social functioning",
+      "explanation": "Early-stage frontotemporal neurocognitive disorder is marked by behavioral and personality changes, whereas memory impairment is a hallmark early symptom of Alzheimer's disease, not frontotemporal NCD.",
+      "kn": "KN36",
+      "kn_explanation": "This item assesses differential diagnosis based on clinical presentation between neurocognitive disorder subtypes, fitting into diagnosis and classification knowledge.",
+      "difficulty": "hard",
+      "quality_comment": "The question carefully distinguishes overlapping symptoms, requiring nuanced understanding of frontotemporal vs. Alzheimer's presentations."
+    },
+    {
+      "stem": "A 72-year-old patient shows progressive memory loss and trouble with daily activities over several years. Genetic testing reveals an ApoE4 allele. What does this finding suggest about the patient’s neurocognitive disorder?",
+      "options": [
+        "The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease",
+        "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
+        "The ApoE4 allele is diagnostic for Lewy body dementia",
+        "ApoE4 presence suggests the disorder is due to vascular causes"
+      ],
+      "answer": "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
+      "explanation": "The ApoE4 variant on chromosome 19 is a well-established genetic risk factor linked to increased likelihood of Alzheimer’s disease.",
+      "kn": "KN4",
+      "kn_explanation": "This question emphasizes behavioral genetics and the role of genetic risk factors in neurocognitive disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible and reflect common misunderstandings, making the question effective for testing genetic knowledge."
+    },
+    {
+      "stem": "Which of the following medications primarily acts as a cholinesterase inhibitor used in treating Alzheimer’s disease?",
+      "options": [
+        "Memantine",
+        "Donepezil",
+        "Haloperidol",
+        "Levodopa"
+      ],
+      "answer": "Donepezil",
+      "explanation": "Donepezil is a cholinesterase inhibitor that delays breakdown of acetylcholine, helping reduce cognitive symptoms in Alzheimer’s disease, whereas memantine regulates glutamate, haloperidol is an antipsychotic, and levodopa is used in Parkinson’s disease.",
+      "kn": "KN2",
+      "kn_explanation": "The question tests knowledge of drug classification and mechanisms of action relevant to neurocognitive disorder pharmacotherapy.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is straightforward and options are common drugs, ensuring clarity and good differentiation."
+    },
+    {
+      "stem": "Which symptom is more typical of neurocognitive disorder with Lewy bodies than Alzheimer’s disease?",
+      "options": [
+        "Memory loss as the earliest symptom",
+        "Fluctuating cognition and recurrent visual hallucinations",
+        "Gradual decline in learning and memory",
+        "Prominent early aphasia and apraxia"
+      ],
+      "answer": "Fluctuating cognition and recurrent visual hallucinations",
+      "explanation": "NCD with Lewy bodies is characterized by fluctuating attention/alertness and recurrent visual hallucinations early in the course, which differ from the early predominant memory deficits in Alzheimer’s disease.",
+      "kn": "KN36",
+      "kn_explanation": "This focuses on clinical features aiding differential diagnosis between neurocognitive disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect Alzheimer’s symptoms, enhancing discriminatory power of the question."
+    },
+    {
+      "stem": "Which of the following best describes the prognosis and course of vascular neurocognitive disorder?",
+      "options": [
+        "A rapid, always steadily progressive decline similar to Alzheimer’s disease",
+        "A stepwise decline or fluctuating symptom severity often related to cerebrovascular events",
+        "A stable cognitive deficit with no further deterioration",
+        "Primarily a reversible disorder with rapid full recovery"
+      ],
+      "answer": "A stepwise decline or fluctuating symptom severity often related to cerebrovascular events",
+      "explanation": "Vascular NCD often presents with a stepwise decline or fluctuations in symptom intensity corresponding with strokes or cerebrovascular events.",
+      "kn": "KN36",
+      "kn_explanation": "This question addresses clinical course and prognosis relevant to diagnosis of neurocognitive disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates vascular NCD from other neurocognitive disorders, useful for exam preparation."
+    },
+    {
+      "stem": "A patient with Down syndrome in their 20s begins showing early signs of cognitive decline. Which neurocognitive disorder and mechanism is most consistent with this presentation?",
+      "options": [
+        "Lewy body dementia due to alpha-synuclein buildup",
+        "Alzheimer’s disease associated with overproduction of amyloid precursor protein from trisomy 21",
+        "Parkinson’s disease due to dopamine depletion",
+        "Prion disease causing rapid cognitive deterioration"
+      ],
+      "answer": "Alzheimer’s disease associated with overproduction of amyloid precursor protein from trisomy 21",
+      "explanation": "Individuals with Down syndrome have an extra copy of chromosome 21, leading to extra amyloid precursor protein production and greatly increased risk for early-onset Alzheimer’s disease.",
+      "kn": "KN1",
+      "kn_explanation": "Focuses on the genetic and biological bases of behavior underlying neurocognitive risk factors in a medical condition.",
+      "difficulty": "medium",
+      "quality_comment": "Question integrates genetics and clinical presentation effectively; distractors are plausible but biologically distinct."
+    },
+    {
+      "stem": "Which feature distinguishes mild neurocognitive disorder from major neurocognitive disorder according to DSM-5-TR criteria?",
+      "options": [
+        "Mild NCD involves cognitive decline that interferes with independence in everyday activities",
+        "Major NCD requires evidence of a medical condition explaining symptoms",
+        "Mild NCD presents with modest decline that does not interfere with independence but may require compensatory strategies",
+        "Delirium symptoms must be present to diagnose mild NCD"
+      ],
+      "answer": "Mild NCD presents with modest decline that does not interfere with independence but may require compensatory strategies",
+      "explanation": "Mild NCD is characterized by modest cognitive decline that does not interfere with independence in daily activities but may require extra effort or strategies, whereas major NCD interferes with independence.",
+      "kn": "KN36",
+      "kn_explanation": "This deals with the diagnostic classification and differentiation between mild and major neurocognitive disorders.",
+      "difficulty": "easy",
+      "quality_comment": "Clear formulation contrasts mild vs. major NCD, with distractors that are partially true but misleading for diagnostic criteria."
+    },
+    {
+      "stem": "In the assessment of Alzheimer’s disease, which statement about a definitive diagnosis is accurate?",
+      "options": [
+        "Definitive diagnosis is possible with clinical evaluation alone",
+        "Brain biopsy is commonly used to confirm diagnosis during life",
+        "Definitive diagnosis requires postmortem brain autopsy showing characteristic pathology",
+        "Genetic testing alone can confirm Alzheimer’s disease diagnosis"
+      ],
+      "answer": "Definitive diagnosis requires postmortem brain autopsy showing characteristic pathology",
+      "explanation": "A definitive diagnosis of Alzheimer’s disease is possible only with a postmortem brain autopsy revealing amyloid plaques and neurofibrillary tangles; brain biopsies are rarely done and clinical diagnosis is presumptive.",
+      "kn": "KN33",
+      "kn_explanation": "This question concerns assessment methods and limitations in diagnosis, emphasizing integration of non-psychological information.",
+      "difficulty": "medium",
+      "quality_comment": "The question clarifies a common misconception, with well-balanced distractors for clinical context."
+    },
+    {
+      "stem": "Which intervention has recently been FDA approved to slow progression of early-stage Alzheimer’s disease by targeting amyloid plaques?",
+      "options": [
+        "Memantine",
+        "Haloperidol",
+        "Donepezil",
+        "Donanemab"
+      ],
+      "answer": "Donanemab",
+      "explanation": "Donanemab is a recently approved intravenous treatment that slows early-stage Alzheimer’s progression by reducing amyloid plaques in the brain.",
+      "kn": "KN3",
+      "kn_explanation": "Involves knowledge about recent pharmacological treatment advances for neurocognitive disorders, under pharmacotherapy guidelines.",
+      "difficulty": "medium",
+      "quality_comment": "Options are well-known drugs for neurocognitive or psychiatric disorders, increasing plausibility."
+    },
+    {
+      "stem": "A patient with HIV shows forgetfulness, apathy, psychomotor slowing, and tremors. Which neurocognitive disorder subtype is most consistent with this presentation?",
+      "options": [
+        "Cortical neurocognitive disorder",
+        "Subcortical neurocognitive disorder",
+        "Cortico-subcortical neurocognitive disorder",
+        "Behavioral variant frontotemporal neurocognitive disorder"
+      ],
+      "answer": "Subcortical neurocognitive disorder",
+      "explanation": "NCD due to HIV infection affects subcortical brain areas leading to symptoms like psychomotor slowing, apathy, tremors, and cognitive slowing.",
+      "kn": "KN36",
+      "kn_explanation": "Focuses on understanding symptom patterns related to brain regions damaged, which is crucial for diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "Distractors include plausible brain region categories, requiring strong content knowledge for correct choice."
+    },
+    {
+      "stem": "Which approach is recommended for treating agitation and psychotic symptoms in delirium in hospitalized older adults?",
+      "options": [
+        "Haloperidol or other antipsychotic medications",
+        "Cholinesterase inhibitors like donepezil",
+        "NMDA receptor antagonists like memantine",
+        "Benzodiazepines as first-line agents"
+      ],
+      "answer": "Haloperidol or other antipsychotic medications",
+      "explanation": "Treatment of agitation and psychotic symptoms in delirium often involves antipsychotics like haloperidol, while benzodiazepines are generally avoided unless delirium is due to withdrawal.",
+      "kn": "KN3",
+      "kn_explanation": "This question targets treatment guidelines and pharmacological management of delirium.",
+      "difficulty": "easy",
+      "quality_comment": "Clear question stem and relevant plausible options; distractors are pharmacologically related but distinct in use."
+    },
+    {
+      "stem": "Which of the following factors is associated with increased risk for developing Alzheimer’s disease?",
+      "options": [
+        "High educational attainment",
+        "Obesity and hearing loss",
+        "Regular aerobic exercise",
+        "Young age at onset"
+      ],
+      "answer": "Obesity and hearing loss",
+      "explanation": "Obesity and hearing loss have been linked to increased risk of Alzheimer’s disease, whereas high education and exercise are protective factors.",
+      "kn": "KN28",
+      "kn_explanation": "Assesses knowledge of risk and protective factors impacting the course of neurocognitive disease across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Options balance protective and risk factors well, requiring applied knowledge."
+    },
+    {
+      "stem": "Which theory or model is primarily concerned with how base rates and cognitive biases can affect the interpretation of neuropsychological test results?",
+      "options": [
+        "Dual process theory",
+        "Information processing model",
+        "Heuristics and biases framework",
+        "Cognitive load theory"
+      ],
+      "answer": "Heuristics and biases framework",
+      "explanation": "The heuristics and biases framework addresses how people use mental shortcuts and are prone to biases that can distort interpretation of data, including in clinical assessments.",
+      "kn": "KN37",
+      "kn_explanation": "KN37 covers evidence-based interpretation of data including base rates and biases, making this framework relevant to interpreting assessment results.",
+      "difficulty": "medium",
+      "quality_comment": "The options include other cognitive models but only the heuristics and biases framework specifically addresses judgment biases in assessment."
+    },
+    {
+      "stem": "When interpreting neurocognitive assessment data, what is the importance of considering base rates in the patient population?",
+      "options": [
+        "To determine the most commonly occurring symptom regardless of context",
+        "To assess the probability that observed test scores are due to chance or normal variability",
+        "To eliminate the influence of culture on test results",
+        "To predict which treatment will be most effective"
+      ],
+      "answer": "To assess the probability that observed test scores are due to chance or normal variability",
+      "explanation": "Base rates help clinicians understand how common certain test scores or symptoms are in the general or clinical population, aiding in distinguishing true pathology from normal variability.",
+      "kn": "KN37",
+      "kn_explanation": "This item illustrates the application of base rate information in evidence-based interpretation of neuropsychological data (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "This item clarifies a frequently misunderstood concept in clinical test interpretation, with plausible distractors."
+    },
+    {
+      "stem": "Which theoretical model of psychopathology emphasizes the role of brain network connectivity disruptions in explaining neurocognitive disorders?",
+      "options": [
+        "Biopsychosocial model",
+        "The connectome model",
+        "Psychodynamic model",
+        "Behavioral model"
+      ],
+      "answer": "The connectome model",
+      "explanation": "The connectome model focuses on how dysfunction in brain connectivity networks contributes to symptoms seen in neurocognitive disorders, integrating neurobiological substrates with clinical features.",
+      "kn": "KN39",
+      "kn_explanation": "KN39 involves theories and models of psychopathology; the connectome model is relevant for understanding neurocognitive disorder mechanisms.",
+      "difficulty": "hard",
+      "quality_comment": "The question targets advanced integrative theoretical knowledge relevant for understanding neurocognitive disorder etiologies."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best distinguishes bottom-up processing from top-down processing in sensation and perception?",
+      "options": [
+        "Bottom-up processing relies on prior knowledge and expectations, while top-down processing starts with sensory input.",
+        "Bottom-up processing begins with incoming sensory data and proceeds to higher brain areas, whereas top-down processing uses existing knowledge to interpret sensory data.",
+        "Bottom-up processing is involved only in visual perception, whereas top-down processing applies to all sensory modalities.",
+        "Bottom-up processing occurs only in childhood; top-down processing develops in adulthood."
+      ],
+      "answer": "Bottom-up processing begins with incoming sensory data and proceeds to higher brain areas, whereas top-down processing uses existing knowledge to interpret sensory data.",
+      "explanation": "Bottom-up processing is data-driven, starting with sensory input going to the brain, whereas top-down processing is concept-driven, using prior knowledge and expectations to interpret sensory information.",
+      "kn": "KN11",
+      "kn_explanation": "This question targets knowledge about sensation and perception processes, which falls under elements of cognition including sensation and perception (KN11).",
+      "difficulty": "medium",
+      "quality_comment": "Clear wording and plausible distractors make the question effective at differentiating understanding of processing types."
+    },
+    {
+      "stem": "According to the opponent-process theory of color vision, which of the following color pairs would be processed as opponent channels?",
+      "options": [
+        "Red and blue",
+        "Blue and yellow",
+        "Green and orange",
+        "Purple and green"
+      ],
+      "answer": "Blue and yellow",
+      "explanation": "The opponent-process theory posits three opponent pairs: red/green, blue/yellow, and white/black. Blue and yellow form one of these opponent channels involved in color processing beyond the retina.",
+      "kn": "KN11",
+      "kn_explanation": "This tests knowledge of visual perception theories related to color processing, fitting within elements of sensation and perception (KN11).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are reasonable color pairs; correct answer aligns clearly with opponent-process theory."
+    },
+    {
+      "stem": "Which type of color blindness is most frequently caused by a recessive gene on the X chromosome and affects males more often than females?",
+      "options": [
+        "Blue-yellow color blindness",
+        "Red-green color blindness",
+        "Total color blindness (achromatopsia)",
+        "Monochromacy"
+      ],
+      "answer": "Red-green color blindness",
+      "explanation": "Red-green color blindness is commonly due to a recessive gene on the X chromosome, making it more common in males who have only one X chromosome inherited from their mothers.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses genetic transmission of color vision deficiencies, specifically X-linked recessive inheritance, related to behavioral genetics (KN4).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible types of color blindness but differ sufficiently to test precise knowledge of genetic causes."
+    },
+    {
+      "stem": "Which depth perception cue depends on the brain integrating different images from each eye due to their slightly different perspectives?",
+      "options": [
+        "Retinal disparity",
+        "Linear perspective",
+        "Texture gradients",
+        "Motion parallax"
+      ],
+      "answer": "Retinal disparity",
+      "explanation": "Retinal disparity occurs because each eye views an object from a slightly different angle, and the brain combines these views to perceive depth, a binocular cue important for nearby objects.",
+      "kn": "KN11",
+      "kn_explanation": "This question evaluates understanding of depth perception cues linked to visual-spatial processing under cognition (KN11).",
+      "difficulty": "medium",
+      "quality_comment": "Options include common monocular and binocular cues, which makes the question sufficiently challenging."
+    },
+    {
+      "stem": "According to gate control theory of pain, how can non-painful stimuli reduce the experience of pain?",
+      "options": [
+        "Non-painful stimuli deactivate nociceptors directly.",
+        "Non-painful stimuli close the spinal cord gate by activating large myelinated fibers, inhibiting pain signal transmission.",
+        "Non-painful stimuli reduce emotional response to pain via higher brain structures only.",
+        "Non-painful stimuli increase pain signal transmission for faster healing."
+      ],
+      "answer": "Non-painful stimuli close the spinal cord gate by activating large myelinated fibers, inhibiting pain signal transmission.",
+      "explanation": "Gate control theory proposes that large myelinated fibers transmit non-pain information and can close a spinal gate, reducing the transmission of pain signals from small fibers to the brain.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to neurobiological mechanisms of pain and sensory processing, best categorized under biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent common misconceptions; the correct option accurately reflects the gate control mechanism."
+    },
+    {
+      "stem": "A person with grapheme-color synesthesia most likely experiences which phenomenon?",
+      "options": [
+        "Letters or numbers evoke specific colors automatically.",
+        "Sounds trigger tactile sensations on the skin.",
+        "Emotions produce automatic taste sensations.",
+        "Visual stimuli cause olfactory experiences."
+      ],
+      "answer": "Letters or numbers evoke specific colors automatically.",
+      "explanation": "Grapheme-color synesthesia involves the automatic association of letters or numbers with specific colors, the most common form of synesthesia.",
+      "kn": "KN11",
+      "kn_explanation": "The question addresses cross-modal sensory experiences and perception variations, fitting within sensation and perception (KN11).",
+      "difficulty": "easy",
+      "quality_comment": "Clear options and focused stem make this question straightforward yet informative."
+    },
+    {
+      "stem": "Which psychophysical law predicts that the just noticeable difference (JND) for a stimulus is a constant proportion of the original stimulus intensity?",
+      "options": [
+        "Fechner's law",
+        "Stevens's power law",
+        "Weber's law",
+        "Signal detection theory"
+      ],
+      "answer": "Weber's law",
+      "explanation": "Weber's law states that the JND is a constant proportion of the original stimulus intensity (e.g., 2% difference in weight to detect a change).",
+      "kn": "KN11",
+      "kn_explanation": "This question concerns psychophysical principles and laws relating physical stimuli to perception, which is part of sensation and perception studies (KN11).",
+      "difficulty": "medium",
+      "quality_comment": "Options represent key psychophysical theories, requiring candidates to distinguish among related laws."
+    },
+    {
+      "stem": "In signal detection theory, what does a false alarm indicate during a perception task?",
+      "options": [
+        "Stimulus present and correctly detected",
+        "Stimulus absent but reported as present",
+        "Stimulus present but not detected",
+        "Stimulus absent and correctly reported as absent"
+      ],
+      "answer": "Stimulus absent but reported as present",
+      "explanation": "A false alarm occurs when the stimulus is not present but a participant responds 'yes' indicating they perceive the stimulus.",
+      "kn": "KN11",
+      "kn_explanation": "Understanding the components of signal detection theory and decision-making processes concerning perception aligns with sensation and perception content (KN11).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly tests knowledge of SDT's outcome categories with plausible alternatives."
+    },
+    {
+      "stem": "Which psychophysical theory proposes an exponential relationship between psychological sensation and the magnitude of the physical stimulus, with varying exponents for different stimuli?",
+      "options": [
+        "Fechner's law",
+        "Stevens's power law",
+        "Weber's law",
+        "Signal detection theory"
+      ],
+      "answer": "Stevens's power law",
+      "explanation": "Stevens's power law states that sensation magnitude is related exponentially to stimulus intensity and that the exponent differs depending on the type of stimulus.",
+      "kn": "KN11",
+      "kn_explanation": "This question tests knowledge of advanced psychophysical models explaining stimulus-sensation relationships, within perception studies (KN11).",
+      "difficulty": "hard",
+      "quality_comment": "Good complexity and nuance; the distinctions among laws challenge test-takers to apply precise knowledge."
+    },
+    {
+      "stem": "Why is red-green color blindness more prevalent in males than females?",
+      "options": [
+        "Because blue-yellow color blindness affects only females.",
+        "Because red-green color blindness is caused by an autosomal dominant gene.",
+        "Because red-green color blindness is linked to a recessive gene on the X chromosome, and males have only one X chromosome.",
+        "Because females inherit only one X chromosome from their mothers."
+      ],
+      "answer": "Because red-green color blindness is linked to a recessive gene on the X chromosome, and males have only one X chromosome.",
+      "explanation": "Males have a single X chromosome, so inheriting one recessive mutant gene causes red-green color blindness, whereas females require two copies to be affected.",
+      "kn": "KN4",
+      "kn_explanation": "This question focuses on the genetic basis and sex-linked inheritance patterns of color blindness, within behavioral genetics (KN4).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors test understanding of inheritance patterns; question is clearly posed."
+    },
+    {
+      "stem": "Which monocular depth cue involves judging the distance of an object based on the relative size compared to other objects?",
+      "options": [
+        "Retinal disparity",
+        "Convergence",
+        "Relative size",
+        "Motion parallax"
+      ],
+      "answer": "Relative size",
+      "explanation": "Relative size is a monocular cue referring to the perception that smaller objects are perceived as farther away compared to objects perceived as larger.",
+      "kn": "KN11",
+      "kn_explanation": "Assessing knowledge of depth perception cues involving vision, particularly monocular cues, falls under sensation and perception (KN11).",
+      "difficulty": "easy",
+      "quality_comment": "Options include both binocular and monocular cues; answer choices are balanced."
+    },
+    {
+      "stem": "How does signal detection theory account for decision-making under conditions of uncertainty in stimulus perception?",
+      "options": [
+        "By assuming sensory input is always clear and reliable.",
+        "By separating the sensory processing from decision processes and incorporating response bias and sensitivity.",
+        "By predicting a linear relationship between stimulus intensity and sensation.",
+        "By relying solely on the strength of the stimulus to determine perception."
+      ],
+      "answer": "By separating the sensory processing from decision processes and incorporating response bias and sensitivity.",
+      "explanation": "Signal detection theory posits that perception results from sensory processes combined with decision-making affected by sensitivity and decision criterion, especially under uncertainty.",
+      "kn": "KN11",
+      "kn_explanation": "This question addresses the cognitive-affective process of integrating sensation with decision biases in perception, fitting sensation and perception knowledge (KN11).",
+      "difficulty": "hard",
+      "quality_comment": "Complex concept clearly presented with well-designed distractors, appropriate for advanced EPPP items."
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "questions": [
+    {
+      "stem": "According to the James-Lange theory of emotion, the experience of emotion is primarily the result of:",
+      "options": [
+        "Simultaneous occurrence of physiological arousal and emotional experience",
+        "Cognitive appraisal of the situation before physiological response",
+        "Physiological reactions to a stimulus preceding the emotional experience",
+        "Attributing physiological arousal to environmental cues"
+      ],
+      "answer": "Physiological reactions to a stimulus preceding the emotional experience",
+      "explanation": "James-Lange theory asserts that an emotionally salient stimulus causes physiological changes, and the perception of these changes leads to the experience of emotion.",
+      "kn": "KN10",
+      "kn_explanation": "This question tests knowledge of a major emotion theory, which belongs to research-based theories and models of emotion in cognitive-affective bases of behavior (KN10).",
+      "difficulty": "medium",
+      "quality_comment": "Options present common theories of emotion with plausible descriptions, requiring careful differentiation, making this a good challenge at EPPP level."
+    },
+    {
+      "stem": "Which statement best describes the facial feedback hypothesis related to emotion?",
+      "options": [
+        "Physiological responses to emotional stimuli occur without conscious awareness",
+        "Mimicking facial expressions can induce the corresponding emotion",
+        "Emotions cause facial expressions that then trigger physiological arousal",
+        "Facial expressions are simply outcomes of emotional experiences"
+      ],
+      "answer": "Mimicking facial expressions can induce the corresponding emotion",
+      "explanation": "The facial feedback hypothesis suggests that producing facial expressions associated with an emotion can initiate physiological changes and thus help induce the experience of that emotion.",
+      "kn": "KN10",
+      "kn_explanation": "This question foregrounds a specific proposed mechanism relating physical expression to emotion, integral to the study of emotion in cognitive-affective bases of behavior (KN10).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and concise stem; distractors are reasonable, though one is close, reinforcing the need for careful reading for EPPP candidates."
+    },
+    {
+      "stem": "Which of the following is a core assumption of Schachter and Singer's two-factor theory of emotion?",
+      "options": [
+        "Each emotion has a distinct pattern of physiological arousal",
+        "Emotional experience depends on physiological arousal and cognitive interpretation of that arousal",
+        "The thalamus sends simultaneous signals to the cortex and autonomic nervous system",
+        "Cognitive appraisal occurs only after the emotion is experienced"
+      ],
+      "answer": "Emotional experience depends on physiological arousal and cognitive interpretation of that arousal",
+      "explanation": "Schachter and Singer’s two-factor theory states emotion results from physiological arousal plus a cognitive label (interpretation) of that arousal based on external context.",
+      "kn": "KN10",
+      "kn_explanation": "This question tests understanding of a major research-based theory of emotion focusing on cognitive-affective processes, relevant to KN10.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent other prominent theories, making this an effective question to differentiate among candidates' understanding."
+    },
+    {
+      "stem": "According to Zillman's excitation transfer theory, residual arousal from a prior event can:",
+      "options": [
+        "Decrease the physiological response to a subsequent unrelated event",
+        "Be fully attributed to the original stimulus regardless of context",
+        "Intensify emotional reactions to a later unrelated event due to misattribution of arousal",
+        "Cause a gradual dissipation of emotional intensity over time"
+      ],
+      "answer": "Intensify emotional reactions to a later unrelated event due to misattribution of arousal",
+      "explanation": "Excitation transfer theory posits that lingering arousal from one event can augment the intensity of a subsequent emotional response when that residual arousal is misattributed.",
+      "kn": "KN10",
+      "kn_explanation": "This question addresses theories linking physiological responses and cognitive interpretations in emotional processes, fitting within KN10.",
+      "difficulty": "hard",
+      "quality_comment": "The stem and options integrate complex theory concepts; distractors are plausible, making this suitably challenging for the EPPP."
+    },
+    {
+      "stem": "In Lazarus’s cognitive appraisal theory, what occurs during the primary appraisal of an event?",
+      "options": [
+        "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
+        "Determining available coping options and their likelihood of success",
+        "Monitoring and changing previous appraisals as new information emerges",
+        "Experiencing physiological arousal in response to the event"
+      ],
+      "answer": "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
+      "explanation": "Primary appraisal involves evaluating an event to determine its significance, including whether it is stressful and the type of stress it presents.",
+      "kn": "KN10",
+      "kn_explanation": "This question probes the cognitive process central to appraisal theory of emotion, a key research-based model under KN10.",
+      "difficulty": "medium",
+      "quality_comment": "The answer options represent different appraisal components; the correct response is clearly distinct and the stem is concisely worded."
+    },
+    {
+      "stem": "LeDoux’s two-system theory of fear distinguishes between a subcortical and a cortical system. What is the primary role of the subcortical system?",
+      "options": [
+        "To process sensory information consciously and generate the feeling of fear",
+        "To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors",
+        "To regulate hormonal responses via communication with the pituitary gland",
+        "To integrate episodic and semantic memory during fear evaluation"
+      ],
+      "answer": "To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors",
+      "explanation": "The subcortical system, or survival system, responds rapidly and automatically to threats by generating physiological and behavioral fear responses, with the amygdala playing a central role.",
+      "kn": "KN10",
+      "kn_explanation": "This question concerns brain mechanisms underlying emotion, specifically fear, which falls under research-based emotion theories in KN10.",
+      "difficulty": "medium",
+      "quality_comment": "Options are similarly detailed and technically accurate, prompting test-takers to carefully recall specifics of neural substrates of fear."
+    },
+    {
+      "stem": "Damage to the left hemisphere areas of the cerebral cortex involved in emotion typically results in which reaction?",
+      "options": [
+        "An indifference reaction with inappropriate euphoria and lack of emotional response",
+        "A catastrophic reaction characterized by depression, anxiety, fear, and paranoia",
+        "Increased expression of sadness and negative emotions without cognitive awareness",
+        "Loss of all emotional experience including positive and negative emotions"
+      ],
+      "answer": "A catastrophic reaction characterized by depression, anxiety, fear, and paranoia",
+      "explanation": "Damage to left hemisphere regions mediating happiness and positive emotions can produce a catastrophic reaction featuring intense negative emotional states.",
+      "kn": "KN1",
+      "kn_explanation": "This question addresses brain function and lesion effects on emotional processing, aligned with biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect, making this question effective for assessing neurological knowledge relevant to emotion."
+    },
+    {
+      "stem": "Which of the following best characterizes the resistance stage in Selye’s general adaptation syndrome model of stress?",
+      "options": [
+        "An initial sympathetic nervous system activation releasing energy for immediate response",
+        "A stage where physiological functions normalize but cortisol remains elevated to sustain coping",
+        "Physiological systems break down due to prolonged stress exposure",
+        "The cognitive reappraisal of the stressor leading to a calm emotional state"
+      ],
+      "answer": "A stage where physiological functions normalize but cortisol remains elevated to sustain coping",
+      "explanation": "In the resistance stage, the body attempts to adapt to persistent stress; some functions return to normal while cortisol continues at high levels to maintain energy and coping.",
+      "kn": "KN1",
+      "kn_explanation": "This question concerns physiological stress responses and hormonal regulation, relevant to neurobiological and physiological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Options reflect distinct stages of stress response, reinforcing key conceptual distinctions; concisely stated for clarity."
+    },
+    {
+      "stem": "McEwen’s allostatic load model explains that prolonged or repeated stress leads to:",
+      "options": [
+        "Enhanced immune system functioning due to continuous adaptation",
+        "Stable physiological states maintained without any adverse health effects",
+        "Wear-and-tear on the body and brain increasing risk of physical and psychiatric disorders",
+        "Immediate physiological exhaustion without adaptation phases"
+      ],
+      "answer": "Wear-and-tear on the body and brain increasing risk of physical and psychiatric disorders",
+      "explanation": "The allostatic load refers to the cumulative biological burden from chronic stress, potentially causing dysregulation and increased vulnerability to diseases and mental health problems.",
+      "kn": "KN1",
+      "kn_explanation": "This question examines stress physiology and its consequences, central to understanding biological mechanisms in behavior under KN1.",
+      "difficulty": "hard",
+      "quality_comment": "The question probes nuanced knowledge of contemporary stress models; distractors are technically accurate statements but do not represent allostatic load consequences."
+    },
+    {
+      "stem": "Which brain structure is primarily involved in recognizing fear in others' facial expressions and attaching emotions to memories?",
+      "options": [
+        "Hippocampus",
+        "Amygdala",
+        "Hypothalamus",
+        "Prefrontal cortex"
+      ],
+      "answer": "Amygdala",
+      "explanation": "The amygdala is key for processing fear-related stimuli, recognizing fearful faces, associating emotions with memories, and initiating emotional responses.",
+      "kn": "KN1",
+      "kn_explanation": "This question targets knowledge of brain structures involved in emotion processing, directly related to the biological bases of behavior (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "Simple, direct question with clear correct answer; distractors are plausible brain areas but do not have the specific three functions listed."
+    },
+    {
+      "stem": "Which statement accurately reflects Cannon-Bard theory of emotion?",
+      "options": [
+        "Emotion is experienced only after physiological arousal is perceived",
+        "Emotion and physiological arousal occur simultaneously but independently",
+        "Emotion results from labeling physiological arousal according to situational cues",
+        "Cognitive appraisal precedes physiological responses"
+      ],
+      "answer": "Emotion and physiological arousal occur simultaneously but independently",
+      "explanation": "Cannon-Bard theory posits that environmental stimuli trigger the thalamus to send signals simultaneously to the cortex (emotion) and sympathetic nervous system (arousal), which happen together.",
+      "kn": "KN10",
+      "kn_explanation": "This question assesses understanding of a major theory of emotion emphasizing simultaneity of arousal and experience, a core topic within KN10.",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast major theories well, requiring candidates to carefully distinguish Cannon-Bard theory, suitable for EPPP-level rigor."
+    },
+    {
+      "stem": "In Lazarus's cognitive appraisal model, what differentiates the secondary appraisal from the primary appraisal?",
+      "options": [
+        "Secondary appraisal focuses on evaluating if the event is stressful, primary appraisal evaluates coping options",
+        "Secondary appraisal involves identifying coping options and their effectiveness after an event is appraised as stressful",
+        "Primary appraisal is about monitoring ongoing stress while secondary appraisal identifies emotional reactions",
+        "Primary appraisal assesses physiological responses before cognitive evaluation"
+      ],
+      "answer": "Secondary appraisal involves identifying coping options and their effectiveness after an event is appraised as stressful",
+      "explanation": "Secondary appraisal happens after the event is deemed stressful, focusing on coping resources and perceived ability to manage the stressor.",
+      "kn": "KN10",
+      "kn_explanation": "This question highlights a specific component of the cognitive appraisal process, essential to theories of emotion appraisal within KN10.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include reversed or incorrect sequences to test detailed knowledge, making this a precise evaluation item."
+    },
+    {
+      "stem": "Which brain area is implicated in regulating the physical signs of emotion through the autonomic nervous system and pituitary gland communication?",
+      "options": [
+        "Amygdala",
+        "Hypothalamus",
+        "Hippocampus",
+        "Cingulate gyrus"
+      ],
+      "answer": "Hypothalamus",
+      "explanation": "The hypothalamus controls physiological emotional responses by regulating autonomic functions and interacting with the pituitary gland.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of brain regions mediating physiological aspects of emotion, relevant to biological bases of behavior (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "Simple and clear question addressing a key brain-emotion connection; distractors are related brain areas but serve to test specificity."
+    }
+  ]
+}

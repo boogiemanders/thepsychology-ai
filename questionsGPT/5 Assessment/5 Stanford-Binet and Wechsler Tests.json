@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "stem": "According to Horn and Cattell's theory, which type of intelligence peaks earliest in adulthood?",
+      "options": [
+        "Crystallized intelligence peaks earliest, typically between 30 and 40 years old.",
+        "Fluid intelligence peaks earliest, typically between 30 and 40 years old.",
+        "Crystallized intelligence peaks earliest, typically between 60 and 70 years old.",
+        "Fluid intelligence peaks earliest, typically between 60 and 70 years old."
+      ],
+      "answer": "Fluid intelligence peaks earliest, typically between 30 and 40 years old.",
+      "explanation": "Fluid intelligence, reflecting inherent capacity to learn and solve novel problems, peaks earlier in adulthood (30–40 years), whereas crystallized intelligence peaks later (60–70 years).",
+      "kn": "KN6",
+      "kn_explanation": "This question tests knowledge of Horn and Cattell's crystallized and fluid intelligence theory, which is a major research-based theory of intelligence.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible and based on reversed or incorrect age and intelligence type pairings, requiring careful knowledge of the theory."
+    },
+    {
+      "stem": "Which of the following best describes the hierarchical levels in Carroll's Three-Stratum Theory of intelligence?",
+      "options": [
+        "Stratum I consists of general intelligence; Stratum II of broad abilities; Stratum III of specific abilities.",
+        "Stratum I consists of broad abilities; Stratum II of specific abilities; Stratum III of general intelligence.",
+        "Stratum I consists of numerous specific abilities; Stratum II of broad abilities; Stratum III of general intelligence.",
+        "Stratum I consists of general intelligence; Stratum II of specific abilities; Stratum III of broad abilities."
+      ],
+      "answer": "Stratum I consists of numerous specific abilities; Stratum II of broad abilities; Stratum III of general intelligence.",
+      "explanation": "Carroll's model has Stratum III as general intelligence (g), Stratum II as eight broad abilities (including fluid and crystallized intelligence), and Stratum I as many specific abilities linked to the broad abilities.",
+      "kn": "KN6",
+      "kn_explanation": "This question assesses understanding of Carroll’s hierarchical model of intelligence, a fundamental research-based theory of intelligence.",
+      "difficulty": "hard",
+      "quality_comment": "Options are structured similarly but contain subtle reversals in the order of strata, requiring detailed knowledge; well-designed for EPPP difficulty."
+    },
+    {
+      "stem": "The Cattell-Horn-Carroll (CHC) theory has most influenced the development and revision of which intelligence test?",
+      "options": [
+        "Stanford-Binet Intelligence Test, 5th Edition",
+        "Wechsler Adult Intelligence Scale, 3rd Edition",
+        "Raven's Progressive Matrices",
+        "Woodcock-Johnson Tests of Cognitive Abilities"
+      ],
+      "answer": "Stanford-Binet Intelligence Test, 5th Edition",
+      "explanation": "The CHC theory was explicitly used in developing the SB5 and some tests like the Kaufman Battery, though it influenced but was not the explicit framework for the Wechsler tests.",
+      "kn": "KN6",
+      "kn_explanation": "This question requires knowledge of how current intelligence theories impact test development and revision, fitting under major research-based theories of intelligence.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible alternate intelligence tests, making the correct answer plausible yet distinguished by careful recall."
+    },
+    {
+      "stem": "Which cognitive ability is primarily assessed by the Visual Spatial Index of the WISC-V?",
+      "options": [
+        "Visual processing (Gv)",
+        "Short-term memory (Gsm)",
+        "Crystallized intelligence (Gc)",
+        "Processing speed (Gs)"
+      ],
+      "answer": "Visual processing (Gv)",
+      "explanation": "The Visual Spatial Index of the WISC-V assesses visual processing ability, corresponding to Gv in CHC theory.",
+      "kn": "KN6",
+      "kn_explanation": "This question tests knowledge about how specific cognitive abilities map onto index scores in a major intelligence test, central to theories and models of intelligence.",
+      "difficulty": "easy",
+      "quality_comment": "The options are equally plausible cognitive abilities, making this a straightforward recall question appropriate for EPPP."
+    },
+    {
+      "stem": "What is the primary reason psychologists must be cautious when interpreting IQ scores obtained using older test norms, according to the Flynn Effect?",
+      "options": [
+        "IQ scores tend to increase by about 3 points per decade, so older norms may inflate scores.",
+        "IQ scores tend to decrease over time, so older norms may deflate scores.",
+        "There is no systematic difference in IQ scores across different test norms.",
+        "Older test norms systematically bias scores downward due to cultural changes."
+      ],
+      "answer": "IQ scores tend to increase by about 3 points per decade, so older norms may inflate scores.",
+      "explanation": "Due to the Flynn effect, IQ test scores have increased over decades, so using outdated norms can lead to higher standardized scores relative to current norms.",
+      "kn": "KN6",
+      "kn_explanation": "The question focuses on research-based findings about intelligence measurement and test interpretation, a subtopic of intelligence theories and models.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors address plausible misunderstandings about the Flynn effect, thus providing meaningful options for test-takers."
+    },
+    {
+      "stem": "In the WAIS-IV, which Index Score typically shows the greatest decline beginning around age 30?",
+      "options": [
+        "Processing Speed Index (PSI)",
+        "Verbal Comprehension Index (VCI)",
+        "Working Memory Index (WMI)",
+        "General Ability Index (GAI)"
+      ],
+      "answer": "Processing Speed Index (PSI)",
+      "explanation": "Research shows that PSI begins to decline around age 30 and has the steepest age-related decrease compared to other indexes.",
+      "kn": "KN6",
+      "kn_explanation": "Understanding age-related changes in cognitive abilities assessed by intelligence tests concerns theories and models of cognition and intelligence.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include other WAIS-IV indexes that decline later or remain stable to increase discrimination without making the question overly difficult."
+    },
+    {
+      "stem": "Which of the following patterns of WAIS-IV index scores is characteristic of an individual with nonverbal learning disability (NVLD)?",
+      "options": [
+        "Verbal Comprehension Index (VCI) significantly higher than Perceptual Reasoning Index (PRI).",
+        "Perceptual Reasoning Index (PRI) significantly higher than Verbal Comprehension Index (VCI).",
+        "Processing Speed Index (PSI) significantly higher than Working Memory Index (WMI).",
+        "Working Memory Index (WMI) significantly higher than Processing Speed Index (PSI)."
+      ],
+      "answer": "Verbal Comprehension Index (VCI) significantly higher than Perceptual Reasoning Index (PRI).",
+      "explanation": "NVLD individuals typically score much higher on verbal comprehension than perceptual reasoning, reflecting difficulty with nonverbal tasks despite good verbal abilities.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests knowledge of assessment interpretation for a specific clinical presentation using an intelligence test, which belongs to commonly used instruments and their appropriate use.",
+      "difficulty": "hard",
+      "quality_comment": "Options include plausible discrepancies but only one corresponds to the clinical pattern, rewarding detailed knowledge of test profiles."
+    },
+    {
+      "stem": "Which of the following theories of intelligence emphasizes planning, attention, simultaneous processing, and sequential processing as four interdependent functions?",
+      "options": [
+        "Das, Naglieri, and Kirby's PASS theory",
+        "Gardner's Theory of Multiple Intelligences",
+        "Sternberg's Triarchic Theory of Successful Intelligence",
+        "Spearman's Two-Factor Theory"
+      ],
+      "answer": "Das, Naglieri, and Kirby's PASS theory",
+      "explanation": "The PASS theory, derived from Luria’s work, proposes intelligence consists of planning, attention, simultaneous processing, and sequential processing.",
+      "kn": "KN6",
+      "kn_explanation": "This question focuses on a major research-based model of intelligence, an essential area under cognitive-affective bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Distractor theories are well-known and plausible but distinct; this tests precise recognition of the PASS theory."
+    },
+    {
+      "stem": "Which WAIS-IV Index is mainly associated with crystallized intelligence (Gc) based on CHC theory as identified in independent factor analyses?",
+      "options": [
+        "Verbal Comprehension Index (VCI)",
+        "Processing Speed Index (PSI)",
+        "Perceptual Reasoning Index (PRI)",
+        "Working Memory Index (WMI)"
+      ],
+      "answer": "Verbal Comprehension Index (VCI)",
+      "explanation": "The VCI primarily taps into crystallized intelligence, reflecting acquired knowledge and verbal skills.",
+      "kn": "KN6",
+      "kn_explanation": "This question requires understanding the relationships between test indexes and CHC cognitive abilities, part of major theories of intelligence.",
+      "difficulty": "easy",
+      "quality_comment": "Clear distinction among indexes with CHC labels makes this a straightforward knowledge recall question well-suited for EPPP review."
+    },
+    {
+      "stem": "For a child diagnosed with Autism Spectrum Disorder without language impairment, which WISC-V Index score is typically the highest?",
+      "options": [
+        "Verbal Comprehension Index (VCI)",
+        "Processing Speed Index (PSI)",
+        "Fluid Reasoning Index (FRI)",
+        "Working Memory Index (WMI)"
+      ],
+      "answer": "Verbal Comprehension Index (VCI)",
+      "explanation": "Children with ASD without language impairment tend to have their highest scores on the VCI and lowest on the PSI.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests knowledge on psychological assessment and interpretation of index score patterns for clinical groups on standardized tests.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are commonly reported indexes allowing test-takers to exercise applied knowledge, enhancing question quality."
+    },
+    {
+      "stem": "Which of the following accurately describes the stopping rule (ceiling) when administering a Stanford-Binet 5th Edition subtest?",
+      "options": [
+        "Testing ends when the examinee misses 75% of items at two consecutive age levels.",
+        "Testing ends after the examinee answers one question incorrectly at any age level.",
+        "Testing stops after the examinee answers all items correctly at a single age level.",
+        "Testing ends when the examinee fails to respond within the time limit."
+      ],
+      "answer": "Testing ends when the examinee misses 75% of items at two consecutive age levels.",
+      "explanation": "The ceiling is reached when the examinee misses 75% of items on two consecutive age levels, indicating maximal level has been tested.",
+      "kn": "KN32",
+      "kn_explanation": "This question addresses knowledge of assessment methods and administration rules for a standardized intelligence test.",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible test discontinuation rules, but only one matches the SB5 guidelines, requiring specific knowledge."
+    },
+    {
+      "stem": "Which intelligence test is designed for individuals aged 2 to 85 years and contains five cognitive factors each divided into verbal and nonverbal domains?",
+      "options": [
+        "Stanford-Binet Intelligence Test, 5th Edition (SB5)",
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)",
+        "Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)",
+        "Wechsler Primary and Preschool Scale of Intelligence, 4th Edition (WPPSI-IV)"
+      ],
+      "answer": "Stanford-Binet Intelligence Test, 5th Edition (SB5)",
+      "explanation": "The SB5 is normed for ages 2 to 85+, structured around five cognitive factors with verbal and nonverbal domains.",
+      "kn": "KN32",
+      "kn_explanation": "This question covers knowledge of commonly used intelligence instruments and their key characteristics and populations.",
+      "difficulty": "easy",
+      "quality_comment": "The options are all major IQ tests but differ in age ranges and structure; question clearly assesses knowledge of test features."
+    },
+    {
+      "stem": "Which of the following best describes the General Ability Index (GAI) on the WAIS-IV?",
+      "options": [
+        "A summary score combining Verbal Comprehension and Perceptual Reasoning Indexes that minimizes working memory and processing speed effects",
+        "An index score that combines all four WAIS-IV indexes to provide a composite IQ score",
+        "A score measuring processing speed and working memory only",
+        "A score derived from supplemental subtests assessing social cognition"
+      ],
+      "answer": "A summary score combining Verbal Comprehension and Perceptual Reasoning Indexes that minimizes working memory and processing speed effects",
+      "explanation": "The GAI is calculated from the VCI and PRI scores to provide an estimate of general intellectual ability less affected by working memory and processing speed variations.",
+      "kn": "KN32",
+      "kn_explanation": "This question relates to interpretation and scoring of intelligence tests, focusing on derived indexes used clinically and in assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible alternate index conceptualizations, requiring knowledge of WAIS-IV scoring and clinical use."
+    },
+    {
+      "stem": "Research indicates that the Flynn effect has recently plateaued or reversed in certain populations. Which environmental factor best explains these rapid IQ score changes?",
+      "options": [
+        "Changes in education quality and environmental stimulation",
+        "Genetic mutations occurring within a few generations",
+        "Stable socio-economic conditions",
+        "Increased test familiarity due to technology use"
+      ],
+      "answer": "Changes in education quality and environmental stimulation",
+      "explanation": "Rapid changes in IQ scores over decades are too fast to be genetic and are attributed primarily to environmental influences such as education and early life experiences.",
+      "kn": "KN37",
+      "kn_explanation": "This question highlights biases and interpretation factors in assessment derived from research on IQ test score trends and environmental influences.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common but incorrect attributions, providing a discriminating test of understanding environmental vs. genetic influences."
+    },
+    {
+      "stem": "Which theory of intelligence critiques traditional IQ tests for neglecting creative and practical intelligence?",
+      "options": [
+        "Sternberg's Triarchic Theory of Successful Intelligence",
+        "Spearman's Two-Factor Theory",
+        "Gardner's Theory of Multiple Intelligences",
+        "Horn and Cattell's Crystallized and Fluid Intelligence Theory"
+      ],
+      "answer": "Sternberg's Triarchic Theory of Successful Intelligence",
+      "explanation": "Sternberg's theory posits intelligence includes analytical, creative, and practical components, noting typical IQ tests focus mainly on analytical intelligence.",
+      "kn": "KN39",
+      "kn_explanation": "This question maps onto theories of psychopathology and models of intelligence, particularly critiques of traditional IQ assessments and their scope.",
+      "difficulty": "medium",
+      "quality_comment": "Answer options are well-known theories, making the correct choice rewarding knowledge of broader intelligence conceptualizations."
+    },
+    {
+      "stem": "Which of the following best explains the importance of updated normative data in intelligence testing?",
+      "options": [
+        "Proper norms adjust for cultural and environmental changes affecting test performance over time",
+        "Older norms provide more stable and reliable scores",
+        "Test norms have no effect on IQ score interpretation",
+        "Norms are only relevant for local, not national, populations"
+      ],
+      "answer": "Proper norms adjust for cultural and environmental changes affecting test performance over time",
+      "explanation": "Updated norms account for changes like those demonstrated by the Flynn effect, ensuring IQ scores accurately reflect current population functioning.",
+      "kn": "KN37",
+      "kn_explanation": "This question tests knowledge about evidence-based interpretation of assessment data and the impact of biases and base rates in test norms.",
+      "difficulty": "easy",
+      "quality_comment": "Distractors contrast commonly held misconceptions, allowing clear discrimination for those understanding test norm updates."
+    }
+  ]
+}

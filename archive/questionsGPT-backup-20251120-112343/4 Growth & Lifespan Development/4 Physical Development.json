@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "Which brain developmental process involves the elimination of unused synapses that continues through adolescence?",
+      "options": [
+        "Neurogenesis",
+        "Myelination",
+        "Synaptic pruning",
+        "Synaptogenesis"
+      ],
+      "answer": "Synaptic pruning",
+      "explanation": "Synaptic pruning refers to the loss of synapses that are unused, which continues through adolescence, refining neural connections.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to biological processes underlying brain development, fitting the neurobiological bases in KN1.",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem with plausible distractors involving related brain development processes makes it suitable for EPPP-level testing."
+    },
+    {
+      "stem": "At approximately what age does an infant's visual acuity reach levels similar to that of a normal adult?",
+      "options": [
+        "At birth",
+        "1 to 2 months",
+        "7 to 8 months",
+        "12 months"
+      ],
+      "answer": "7 to 8 months",
+      "explanation": "Visual acuity improves rapidly after birth and is similar to adults by about 7 or 8 months of age.",
+      "kn": "KN21",
+      "kn_explanation": "This question tests knowledge of normal sensory development during infancy, which falls under growth and lifespan development (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward with realistic distractors that align with typical developmental timelines."
+    },
+    {
+      "stem": "Which type of depth cue do infants begin using at about five to six months of age, providing the impression of depth from static, one-eyed images?",
+      "options": [
+        "Kinetic cues",
+        "Binocular (stereoscopic) cues",
+        "Pictorial (static-monocular) cues",
+        "Motion parallax"
+      ],
+      "answer": "Pictorial (static-monocular) cues",
+      "explanation": "Pictorial cues such as size, texture gradients, shadows, and linear perspective are static monocular cues used starting around five or six months.",
+      "kn": "KN11",
+      "kn_explanation": "This examines understanding of perceptual development, specifically visual-spatial and sensory processing, aligning with KN11.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible types of depth cues, requiring test-takers to know specific developmental timing and cue types."
+    },
+    {
+      "stem": "Which of the following best describes the typical pattern of hearing loss that begins around age 40 in adults?",
+      "options": [
+        "Decreased sensitivity to low-frequency sounds",
+        "Decreased sensitivity to high-frequency sounds",
+        "Increased auditory localization abilities",
+        "Increased sensitivity to soft consonants"
+      ],
+      "answer": "Decreased sensitivity to high-frequency sounds",
+      "explanation": "Presbycusis typically begins with decreased sensitivity to high-frequency sounds, affecting the perception of soft consonants and children's voices.",
+      "kn": "KN1",
+      "kn_explanation": "This question addresses age-related sensory decline and neurobiological changes, relevant to biological bases of behavior (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "The stem is clear and distractors address common misconceptions about hearing loss to differentiate knowledge levels."
+    },
+    {
+      "stem": "Which factor is associated with an increased risk of early onset puberty in girls?",
+      "options": [
+        "Presence of biological father in the home",
+        "High maternal education level",
+        "Presence of stepfather or maternal boyfriend in the home",
+        "Later menarche in the mother"
+      ],
+      "answer": "Presence of stepfather or maternal boyfriend in the home",
+      "explanation": "Studies show early onset puberty in girls is associated with family discord and presence of a stepfather or maternal boyfriend.",
+      "kn": "KN21",
+      "kn_explanation": "This question taps into developmental influences on puberty timing in adolescence, part of normal growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors relate to plausible family environment factors, enhancing the discriminative power of the question."
+    },
+    {
+      "stem": "Why are adolescents particularly at risk for engaging in substance use and other impulsive behaviors, according to brain development research?",
+      "options": [
+        "The prefrontal cortex develops earlier than the limbic system, causing emotional immaturity",
+        "The limbic system develops earlier than the prefrontal cortex, leading to emotion-driven decisions",
+        "Both the limbic system and prefrontal cortex develop fully before adolescence",
+        "The nucleus accumbens suppresses the reward circuit in adolescents"
+      ],
+      "answer": "The limbic system develops earlier than the prefrontal cortex, leading to emotion-driven decisions",
+      "explanation": "The earlier maturation of the limbic system relative to the still-developing prefrontal cortex causes adolescents to rely more on emotions and rewards, increasing risk-taking.",
+      "kn": "KN1",
+      "kn_explanation": "This question addresses neurobiological underpinnings of behavior in adolescence, relevant to neurobiological and genetic bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Well-structured distractors require nuanced understanding of developmental neuroscience, making it suitable for intermediate difficulty."
+    },
+    {
+      "stem": "Which of the following is a protective factor against adolescent substance use?",
+      "options": [
+        "Affiliation with substance-involved peers",
+        "Poor academic achievement",
+        "Parental disapproval of substance use",
+        "Exposure to stressful life events"
+      ],
+      "answer": "Parental disapproval of substance use",
+      "explanation": "Parental disapproval is a protective factor that reduces the likelihood of adolescent substance use, unlike the listed risk factors.",
+      "kn": "KN21",
+      "kn_explanation": "This question focuses on risk and protective factors affecting adolescent development, under normal growth and lifespan development (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly differentiates well-known risk vs. protective factors, providing good basic knowledge testing."
+    },
+    {
+      "stem": "Which developmental milestone is expected between 10 and 12 months of age?",
+      "options": [
+        "Sits without support steadily",
+        "Walks with two hands held and then with one hand",
+        "Hops on one foot two or three times",
+        "Throws ball overhand 10 feet"
+      ],
+      "answer": "Walks with two hands held and then with one hand",
+      "explanation": "Between 10 and 12 months, infants typically begin cruising and take independent steps with support.",
+      "kn": "KN21",
+      "kn_explanation": "This assesses knowledge of typical gross motor milestones in infancy, falling under growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Options represent motor milestones from different ages, requiring precise knowledge of developmental timing."
+    },
+    {
+      "stem": "Which of the following is NOT recommended to reduce the risk of Sudden Infant Death Syndrome (SIDS)?",
+      "options": [
+        "Having the baby sleep on his/her back",
+        "Breastfeeding the baby",
+        "Bed-sharing with the baby",
+        "Keeping the crib as bare as possible"
+      ],
+      "answer": "Bed-sharing with the baby",
+      "explanation": "Bed-sharing is a known risk factor for SIDS; safe sleep recommendations advise against it.",
+      "kn": "KN21",
+      "kn_explanation": "This questions covers risk and protective factors in infant development and safety, appropriate for growth and lifespan development (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "The question uses commonly known safe sleep practices, with distractors that are clear and plausible, enhancing clarity."
+    },
+    {
+      "stem": "Which biological factor is most consistently linked to the increased likelihood that a boy will have a gay sexual orientation?",
+      "options": [
+        "Having older sisters",
+        "Fraternal birth order effect",
+        "Maternal smoking during pregnancy",
+        "Increased testosterone exposure prenatally"
+      ],
+      "answer": "Fraternal birth order effect",
+      "explanation": "The fraternal birth order effect, where each older brother increases the likelihood of a boy being gay, is a well-documented biological correlate.",
+      "kn": "KN4",
+      "kn_explanation": "This question assesses knowledge of behavioral genetics related to sexual orientation, fitting best with KN4 on behavioral genetics.",
+      "difficulty": "hard",
+      "quality_comment": "Distractors involve plausible biological factors, increasing the challenge suitable for advanced examination items."
+    },
+    {
+      "stem": "What is the main biological factor contributing to adolescent sleep deprivation according to research?",
+      "options": [
+        "Early school start times",
+        "Changes in melatonin secretion delaying sleep onset",
+        "Increased academic pressures",
+        "Excessive screen time"
+      ],
+      "answer": "Changes in melatonin secretion delaying sleep onset",
+      "explanation": "Biological delayed sleep onset caused by altered melatonin secretion during puberty is the main biological contributor to adolescent sleep deprivation.",
+      "kn": "KN21",
+      "kn_explanation": "This question relates to biological changes affecting adolescent development, classified under growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Options reflect known contributors with a clear distinction between biological and social factors, fostering critical thinking."
+    }
+  ]
+}

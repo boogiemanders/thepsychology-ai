@@ -1,0 +1,199 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following is NOT one of the four conditions necessary for a client to succeed in a malpractice claim against a psychologist?",
+      "options": [
+        "The psychologist owed a duty to the client.",
+        "The client gave informed consent.",
+        "There was a breach of duty by the psychologist.",
+        "The breach directly caused injury to the client."
+      ],
+      "answer": "The client gave informed consent.",
+      "explanation": "The four conditions required for malpractice are duty, breach of duty, harm (damages), and direct cause. Informed consent is important ethically but not one of the four legal conditions.",
+      "kn": "KN63",
+      "kn_explanation": "This question pertains to legal requirements for malpractice claims, fitting under laws and judicial decisions affecting psychological practice.",
+      "difficulty": "medium",
+      "quality_comment": "The question is straightforward with one clearly inaccurate option, testing essential malpractice concepts effectively."
+    },
+    {
+      "stem": "According to APA guidelines, when responding to a subpoena for client records, what is the psychologist's first step?",
+      "options": [
+        "Immediately provide the requested records to the attorney who issued the subpoena.",
+        "Determine if the subpoena is legally valid.",
+        "Consult with the client after responding to the subpoena.",
+        "File a motion to quash without reviewing the subpoena."
+      ],
+      "answer": "Determine if the subpoena is legally valid.",
+      "explanation": "APA guidelines recommend first verifying subpoena validity before taking any further action to ensure legal compliance and protect client confidentiality.",
+      "kn": "KN63",
+      "kn_explanation": "This question assesses knowledge of the proper legal procedures when dealing with subpoenas, relevant to laws and statutes impacting practice.",
+      "difficulty": "easy",
+      "quality_comment": "Clear and concise stem, with plausible distractors; this item effectively addresses a key professional legal procedure."
+    },
+    {
+      "stem": "Which statement best describes the difference between a fact witness and an expert witness in forensic psychology?",
+      "options": [
+        "A fact witness can offer opinions about hypothetical situations, but an expert witness cannot.",
+        "An expert witness testifies only about what they personally observed directly.",
+        "A fact witness cannot offer opinions or address issues outside of personal knowledge, while an expert witness can.",
+        "A fact witness is required to have specialized education, but an expert witness is not."
+      ],
+      "answer": "A fact witness cannot offer opinions or address issues outside of personal knowledge, while an expert witness can.",
+      "explanation": "Fact witnesses testify about observed facts only; expert witnesses, due to their specialized knowledge, can offer opinions and testify about hypotheticals.",
+      "kn": "KN63",
+      "kn_explanation": "This question addresses legal definitions and roles in psychological testimony, fitting under relevant laws and judicial decisions.",
+      "difficulty": "medium",
+      "quality_comment": "Stem is well-written; distractors are plausible misconceptions, making this a good discriminating item."
+    },
+    {
+      "stem": "Which of the following best describes the purpose of a psychological autopsy in forensic cases?",
+      "options": [
+        "To diagnose mental disorders for legal competency proceedings.",
+        "To clarify equivocal deaths by evaluating psychosocial factors surrounding death.",
+        "To evaluate malingering in criminal defendants.",
+        "To assess risk factors for future violent behavior."
+      ],
+      "answer": "To clarify equivocal deaths by evaluating psychosocial factors surrounding death.",
+      "explanation": "Psychological autopsies are conducted primarily to clarify uncertain causes or manners of death, especially suicide versus accident or homicide.",
+      "kn": "KN63",
+      "kn_explanation": "This question assesses knowledge of forensic procedures relevant to psychological-legal practice and forensic assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Options are balanced and the correct answer is the only one describing the unique forensic autopsy purpose, making it effective for EPPP-level testing."
+    },
+    {
+      "stem": "According to APA Inclusive Language Guidelines, which of the following is the most appropriate way to refer to a hypothetical single individual of unknown gender?",
+      "options": [
+        "He or she",
+        "They, them, and their",
+        "He",
+        "She"
+      ],
+      "answer": "They, them, and their",
+      "explanation": "Using 'they/them/their' as singular pronouns is recommended when gender is unknown, irrelevant, or for generic individuals to avoid bias.",
+      "kn": "KN18",
+      "kn_explanation": "This question relates to cultural and sociopolitical psychology by addressing inclusive language and identity diversity.",
+      "difficulty": "easy",
+      "quality_comment": "Clear question stem and well-differentiated options; tests awareness of current recommendations for non-binary inclusive language."
+    },
+    {
+      "stem": "Which of the following is TRUE about providing telepsychology services across state lines in jurisdictions NOT participating in PSYPACT?",
+      "options": [
+        "A psychologist licensed in any state may freely provide telepsychology services to clients located anywhere in the U.S.",
+        "A psychologist must comply with the legal requirements of both the state where the psychologist is licensed and the state where the client is located.",
+        "Licensure is irrelevant for telepsychology services under current federal regulations.",
+        "Telepsychology services can be provided without consideration of local emergency resources."
+      ],
+      "answer": "A psychologist must comply with the legal requirements of both the state where the psychologist is licensed and the state where the client is located.",
+      "explanation": "When jurisdictions are not part of PSYPACT, psychologists must follow legal requirements in both locations, including licensure and local laws.",
+      "kn": "KN63",
+      "kn_explanation": "This question assesses knowledge about legal and regulatory issues related to telepsychology practice.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misconceptions; the stem is clear, making this question effective and relevant."
+    },
+    {
+      "stem": "What is the primary purpose of the APA Commission on Accreditation (APA-CoA)?",
+      "options": [
+        "To develop national licensure examinations for psychology",
+        "To ensure educational programs meet professional and scientific standards to protect the public",
+        "To manage ethical complaints against psychologists",
+        "To provide continuing education for licensed psychologists"
+      ],
+      "answer": "To ensure educational programs meet professional and scientific standards to protect the public",
+      "explanation": "APA accreditation aims to assure defined training aims meet professional standards to benefit students and protect the public.",
+      "kn": "KN62",
+      "kn_explanation": "This question relates to professional standards and guidelines regarding training and education in psychology.",
+      "difficulty": "easy",
+      "quality_comment": "The options are plausible roles but only one matches the main purpose of APA-CoA, making this question straightforward."
+    },
+    {
+      "stem": "In Bernard’s discrimination model of clinical supervision, which combination describes the supervisor acting as counselor focusing on personalization skills?",
+      "options": [
+        "Teaching therapeutic interventions and techniques",
+        "Helping the supervisee explore their personal reactions interfering with therapy",
+        "Advising on theoretical conceptualizations of client cases",
+        "Consulting on administrative and ethical matters"
+      ],
+      "answer": "Helping the supervisee explore their personal reactions interfering with therapy",
+      "explanation": "The counselor role in Bernard’s model entails addressing personalization problems, such as supervisee blind spots and personal issues affecting therapy.",
+      "kn": "KN70",
+      "kn_explanation": "This question assesses knowledge of supervision models and related ethical and professional issues in clinical supervision.",
+      "difficulty": "hard",
+      "quality_comment": "The stem is precise and options plausible; this tests more advanced knowledge fitting well at the applied level."
+    },
+    {
+      "stem": "According to APA’s Supervision Guidelines, what is the supervisor’s responsibility regarding confidentiality in supervision?",
+      "options": [
+        "Keep supervisee’s personal disclosures confidential with no exceptions",
+        "Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records",
+        "Share supervisee disclosures freely with other staff members for feedback purposes",
+        "Disclose supervisee’s client data only with supervisee’s verbal consent"
+      ],
+      "answer": "Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records",
+      "explanation": "Supervisors must clarify confidentiality limits and have access and responsibility for client records as part of supervision.",
+      "kn": "KN70",
+      "kn_explanation": "This question addresses ethical issues specific to supervision, including confidentiality responsibilities.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed item with clear alternatives; tests knowledge of supervisor ethical duties."
+    },
+    {
+      "stem": "Which stage in Stoltenberg's Integrated Developmental Model is characterized by supervisees who are anxious about evaluation, highly dependent on the supervisor, and primarily focused on themselves?",
+      "options": [
+        "Level 3",
+        "Level 2",
+        "Level 1",
+        "Level 4"
+      ],
+      "answer": "Level 1",
+      "explanation": "Level 1 supervisees are self-focused, anxious about evaluation, and highly dependent on the supervisor, requiring more structure and support.",
+      "kn": "KN70",
+      "kn_explanation": "This question tests understanding of developmental models of supervision, a key professional development topic.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible levels but only one reflects the early developmental characteristics accurately."
+    },
+    {
+      "stem": "Which of the following is an appropriate ethical response to a negative online review about a psychologist's services?",
+      "options": [
+        "Reply publicly to the reviewer to clarify the situation.",
+        "Solicit positive testimonials from clients to counteract the negative review.",
+        "Ignore the reviews and focus on maintaining a positive online presence.",
+        "Report the reviewer to the licensing board for defamation."
+      ],
+      "answer": "Ignore the reviews and focus on maintaining a positive online presence.",
+      "explanation": "Responding publicly or soliciting testimonials often violates ethical or privacy guidelines; developing a positive online reputation is recommended.",
+      "kn": "KN68",
+      "kn_explanation": "This question involves client rights and ethical considerations in professional practice and online behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Options represent common reactions; the correct answer reflects current ethical guidance, making this a relevant applied item."
+    },
+    {
+      "stem": "Which of the following best describes the ethical competency a supervisor must possess to provide competent clinical supervision?",
+      "options": [
+        "Competence only in the clinical services provided by the supervisee.",
+        "Competence in both the clinical services provided by the supervisee and in the provision of supervision.",
+        "Competence only in general psychological theory without regard to supervisee services.",
+        "Competence in administrative tasks but not necessarily clinical issues."
+      ],
+      "answer": "Competence in both the clinical services provided by the supervisee and in the provision of supervision.",
+      "explanation": "APA Supervision Guidelines state supervisors must be competent in the services supervisees provide and in the supervision process itself to ensure effective oversight.",
+      "kn": "KN70",
+      "kn_explanation": "This question relates to supervisor ethical responsibilities regarding competence under professional standards.",
+      "difficulty": "medium",
+      "quality_comment": "This question fills an important gap about supervisor competence and is appropriately stated for EPPP-level testing."
+    },
+    {
+      "stem": "Which of the following is true regarding telepsychology supervision according to APA guidelines?",
+      "options": [
+        "Telepsychology supervision can constitute 100% of a supervisee's supervision at any practicum site.",
+        "Interjurisdictional telepsychology supervision is permitted under all circumstances.",
+        "Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact.",
+        "There are no specific risks or limitations to discuss with supervisees during telepsychology supervision."
+      ],
+      "answer": "Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact.",
+      "explanation": "APA guidelines require identity verification and informing supervisees about risks and limitations, including confidentiality concerns, in telepsychology supervision.",
+      "kn": "KN70",
+      "kn_explanation": "This question assesses knowledge of telepsychology practices and ethical issues in supervision under professional guidelines.",
+      "difficulty": "medium",
+      "quality_comment": "Options provide clear contrasts; this question addresses an emerging and underrepresented topic well."
+    }
+  ]
+}

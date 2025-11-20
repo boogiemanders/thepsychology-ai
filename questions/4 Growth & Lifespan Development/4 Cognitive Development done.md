@@ -1,0 +1,326 @@
+{
+  "source_file": "4 Cognitive Development.md",
+  "domain": "4 Growth & Lifespan Development",
+  "questions": [
+    {
+      "id": "cogdev_001",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is Piaget's first stage of cognitive development?",
+      "options": {
+        "A": "Preoperational stage",
+        "B": "Sensorimotor stage",
+        "C": "Concrete operational stage",
+        "D": "Formal operational stage"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Piaget's sensorimotor stage spans infancy to approximately 2 years and involves learning through sensory and motor exploration.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_002",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What does object permanence refer to in cognitive development?",
+      "options": {
+        "A": "The ability to walk",
+        "B": "Understanding that objects exist even when not visible",
+        "C": "Ability to count objects",
+        "D": "Recognition of colors"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Object permanence is the understanding that objects continue to exist even when not visible or in mind.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_003",
+      "difficulty": "medium",
+      "type": "basic",
+      "question": "What is the key characteristic of preoperational thinking?",
+      "options": {
+        "A": "Ability to perform logical operations",
+        "B": "Egocentrism and lack of conservation",
+        "C": "Abstract reasoning",
+        "D": "Understanding of reversibility"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Preoperational stage (ages 2-7) is characterized by egocentrism and lack of conservation of mass, volume, and number.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_004",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is conservation in Piaget's cognitive theory?",
+      "options": {
+        "A": "Environmental protection",
+        "B": "Understanding properties remain despite appearance changes",
+        "C": "Saving money for future use",
+        "D": "Preserving cultural traditions"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Conservation is the understanding that properties of objects (number, mass, volume) remain the same despite perceptual changes.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_005",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "How does concrete operational thinking differ from formal operational?",
+      "options": {
+        "A": "Concrete uses objects; formal uses symbols",
+        "B": "Concrete is tangible; formal is abstract",
+        "C": "Concrete requires visual aids; formal doesn't",
+        "D": "All of the above"
+      },
+      "correct_answer": "D",
+      "kn_id": "KN23",
+      "explanation": "Concrete operational (ages 7-11) involves concrete thinking with objects; formal operational (11+) involves abstract reasoning with symbols.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_006",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is egocentrism in childhood cognitive development?",
+      "options": {
+        "A": "Being selfish or arrogant",
+        "B": "Inability to take another's perspective",
+        "C": "Excessive self-confidence",
+        "D": "Narcissistic personality traits"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Egocentrism is cognitive inability to take another person's perspective or viewpoint, not moral selfishness.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_007",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What does Piaget's three-mountains task demonstrate?",
+      "options": {
+        "A": "Children's ability to climb",
+        "B": "Egocentrism and inability to take different perspectives",
+        "C": "Conservation of space",
+        "D": "Memory for spatial arrangements"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "The three-mountains task demonstrates egocentric thinking by showing children assume others see the same view as they do.",
+      "is_scored": false
+    },
+    {
+      "id": "cogdev_008",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is centration in preoperational thinking?",
+      "options": {
+        "A": "Focusing on one aspect while ignoring others",
+        "B": "Ability to rotate objects mentally",
+        "C": "Understanding of center of mass",
+        "D": "Balancing weights equally"
+      },
+      "correct_answer": "A",
+      "kn_id": "KN23",
+      "explanation": "Centration is focusing on one aspect of a situation while ignoring other relevant features in preoperational thinking.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_009",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "What is reversibility and how does it relate to conservation?",
+      "options": {
+        "A": "Going backward in thinking; not related to conservation",
+        "B": "Ability to reverse operations; essential for understanding conservation",
+        "C": "Opposite of centration only",
+        "D": "Reversing judgment of morality"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Reversibility is the ability to mentally reverse operations, allowing children to understand that changes can be undone (conservation).",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_010",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What cognitive ability emerges in the formal operational stage?",
+      "options": {
+        "A": "Object permanence",
+        "B": "Conservation",
+        "C": "Abstract reasoning and hypothetical thinking",
+        "D": "Symbolic representation"
+      },
+      "correct_answer": "C",
+      "kn_id": "KN23",
+      "explanation": "Formal operational stage (11+ years) involves abstract reasoning, hypothetical thinking, and logical deduction.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_011",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What is a key criticism of Piaget's theory regarding cognitive development stages?",
+      "options": {
+        "A": "Stages occur too slowly",
+        "B": "Children's abilities don't clearly follow stage boundaries; overlap occurs",
+        "C": "Stages are too long in duration",
+        "D": "Theory doesn't account for language"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "A major criticism is that cognitive abilities don't strictly follow stage boundaries; children show abilities of adjacent stages.",
+      "is_scored": false
+    },
+    {
+      "id": "cogdev_012",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is scaffolding in cognitive development?",
+      "options": {
+        "A": "Physical structures for climbing",
+        "B": "Temporary support structures for learning",
+        "C": "Building materials used by children",
+        "D": "Metal frameworks in development"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Scaffolding (Vygotsky) is temporary support provided by a more skilled person to help a learner accomplish a task.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_013",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "How does Vygotsky's zone of proximal development differ from Piaget's readiness?",
+      "options": {
+        "A": "ZPD is smaller; readiness is larger",
+        "B": "ZPD involves social interaction; readiness is individual maturation",
+        "C": "ZPD is for preschoolers; readiness is for older children",
+        "D": "No meaningful difference"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "ZPD emphasizes social support and guidance; Piaget emphasizes individual readiness based on cognitive maturation.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_014",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is information processing theory's focus in cognitive development?",
+      "options": {
+        "A": "Stages of development",
+        "B": "How children acquire, store, and use information",
+        "C": "Social influences on thinking",
+        "D": "Language development"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Information processing theory focuses on how children attend to, encode, store, and retrieve information.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_015",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "How does theory of mind develop in childhood?",
+      "options": {
+        "A": "It's present at birth",
+        "B": "Emerges around age 2-3 with understanding of different beliefs",
+        "C": "Develops only in formal operational stage",
+        "D": "Doesn't develop in childhood"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Theory of mind (understanding others have different beliefs/knowledge) emerges around ages 2-3 and develops throughout childhood.",
+      "is_scored": false
+    },
+    {
+      "id": "cogdev_016",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What does the false belief test measure?",
+      "options": {
+        "A": "Children's honesty",
+        "B": "Understanding that others can have false beliefs different from reality",
+        "C": "Mathematical ability",
+        "D": "Memory capacity"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "False belief tests measure theory of mind by assessing if children understand others can hold beliefs different from objective reality.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_017",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "How does metacognition relate to cognitive development?",
+      "options": {
+        "A": "It's the same as cognitive development",
+        "B": "Thinking about one's own thinking processes",
+        "C": "Only occurs in adolescence",
+        "D": "Involves memorizing facts"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Metacognition is awareness and control of one's own cognitive processes, improving throughout development.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_018",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What do executive function skills include in cognitive development?",
+      "options": {
+        "A": "Only memory abilities",
+        "B": "Planning, inhibition, working memory, and task-switching",
+        "C": "Language acquisition only",
+        "D": "Social interaction skills"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Executive functions include planning, inhibition of impulses, working memory, and cognitive flexibility (switching between tasks).",
+      "is_scored": false
+    },
+    {
+      "id": "cogdev_019",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is the relationship between play and cognitive development?",
+      "options": {
+        "A": "Play has no cognitive benefits",
+        "B": "Play supports cognitive development through exploration and problem-solving",
+        "C": "Play only benefits social development",
+        "D": "Play prevents cognitive growth"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Play is essential for cognitive development through exploration, experimentation, and development of problem-solving skills.",
+      "is_scored": true
+    },
+    {
+      "id": "cogdev_020",
+      "difficulty": "medium",
+      "type": "basic",
+      "question": "How do speed of processing and cognitive development relate?",
+      "options": {
+        "A": "No relationship exists",
+        "B": "Processing speed increases with cognitive development",
+        "C": "Faster processing indicates lower ability",
+        "D": "Processing speed is constant across childhood"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN23",
+      "explanation": "Information processing speed increases with cognitive development, enabling more complex cognitive tasks.",
+      "is_scored": true
+    }
+  ]
+}

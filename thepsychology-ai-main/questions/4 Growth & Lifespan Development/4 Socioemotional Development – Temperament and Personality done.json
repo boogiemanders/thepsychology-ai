@@ -1,0 +1,302 @@
+[
+  {
+    "id": "temper_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is temperament in developmental psychology?",
+    "options": {
+      "A": "Learned behaviors from environment",
+      "B": "Inborn individual differences in emotional reactivity and regulation",
+      "C": "Personality disorders in children",
+      "D": "Emotional instability"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Temperament refers to inborn individual differences in emotional reactivity, emotional regulation, and behavioral patterns."
+  },
+  {
+    "id": "temper_002",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What were Thomas and Chess' three temperament types?",
+    "options": {
+      "A": "Aggressive, passive, neutral",
+      "B": "Easy, difficult, slow-to-warm-up",
+      "C": "Extroverted, introverted, ambiverted",
+      "D": "Happy, sad, neutral"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Thomas and Chess identified easy (adaptable), difficult (not adaptable, intense), and slow-to-warm-up temperament types."
+  },
+  {
+    "id": "temper_003",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What characterizes an 'easy' temperament child?",
+    "options": {
+      "A": "Highly reactive and resistant to change",
+      "B": "Adaptable, positive mood, regular eating/sleeping patterns",
+      "C": "Shy and withdrawing from novelty",
+      "D": "Unpredictable and inconsistent"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Easy temperament children are adaptable, have positive mood, and regular biological rhythms."
+  },
+  {
+    "id": "temper_004",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What characterizes a 'difficult' temperament child?",
+    "options": {
+      "A": "Very adaptable and flexible",
+      "B": "Intense, withdrawing, resistant to change, irregular patterns",
+      "C": "Extremely shy and timid",
+      "D": "Always happy and cooperative"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Difficult temperament children are intense, withdrawing, not adaptable, and have irregular biological patterns."
+  },
+  {
+    "id": "temper_005",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is Kagan's concept of behavioral inhibition?",
+    "options": {
+      "A": "Inability to control behavior",
+      "B": "Withdrawal and fear in response to novel stimuli",
+      "C": "Behavioral suppression by adults",
+      "D": "Lack of responsiveness to environment"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Behavioral inhibition describes children who withdraw and show fear in response to novel people or situations."
+  },
+  {
+    "id": "temper_006",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is temperamental goodness of fit?",
+    "options": {
+      "A": "How well child's temperament matches parenting style",
+      "B": "How sociable a child is",
+      "C": "Physical attractiveness and fit",
+      "D": "Match between age and grade level"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN23",
+    "explanation": "Goodness of fit refers to match between child's temperament and parental expectations/style affecting adjustment."
+  },
+  {
+    "id": "temper_007",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "How does temperament relate to personality?",
+    "options": {
+      "A": "They are identical concepts",
+      "B": "Temperament is inborn foundation; personality builds on it with experience",
+      "C": "Personality determines temperament",
+      "D": "No relationship exists"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Temperament provides an inborn foundation; personality develops through interaction of temperament and environmental experiences."
+  },
+  {
+    "id": "temper_008",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the Big Five personality model?",
+    "options": {
+      "A": "Five childhood phases",
+      "B": "Openness, conscientiousness, extraversion, agreeableness, neuroticism",
+      "C": "Five types of intelligence",
+      "D": "Five attachment styles"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Big Five personality dimensions are: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism."
+  },
+  {
+    "id": "temper_009",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "When does personality stability increase?",
+    "options": {
+      "A": "Remains unstable throughout life",
+      "B": "Becomes increasingly stable from childhood through adulthood",
+      "C": "Most stable in infancy",
+      "D": "Personality is never stable"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Personality stability increases over time, with greater stability in adulthood than in childhood."
+  },
+  {
+    "id": "temper_010",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does sensitivity to punishment and reward affect personality development?",
+    "options": {
+      "A": "No relationship with personality",
+      "B": "Influences tendency toward approach vs. avoidance behaviors and personality traits",
+      "C": "Only determines intelligence",
+      "D": "Only affects learning, not personality"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Differential sensitivity to reward and punishment influences approach/avoidance tendencies and related personality traits."
+  },
+  {
+    "id": "temper_011",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is persistence or effortful control in temperament?",
+    "options": {
+      "A": "Physical strength of child",
+      "B": "Ability to focus attention and regulate behavior",
+      "C": "Stubbornness or resistance",
+      "D": "Defiance of authority"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Effortful control is the ability to focus attention and inhibit responses, important for self-regulation."
+  },
+  {
+    "id": "temper_012",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How does negative emotionality in temperament affect development?",
+    "options": {
+      "A": "Prevents emotional development",
+      "B": "High reactivity increases risk for anxiety and behavior problems if not well-managed",
+      "C": "Has no developmental effects",
+      "D": "Always leads to mental illness"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "High negative emotionality/reactivity increases risk for anxiety and behavior problems unless properly managed through parenting and support."
+  },
+  {
+    "id": "temper_013",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What role does genetics play in temperament?",
+    "options": {
+      "A": "Genetics has no role",
+      "B": "Genetics is primary determinant of temperament",
+      "C": "Environment is primary; genetics is irrelevant",
+      "D": "Temperament is 100% learned"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Genetics play a substantial role in temperament; twin studies show significant heritability for temperament traits."
+  },
+  {
+    "id": "temper_014",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does sociability or extraversion develop?",
+    "options": {
+      "A": "Purely from parenting style",
+      "B": "Combination of temperamental tendency and environmental factors",
+      "C": "Only from genetic inheritance",
+      "D": "Cannot be influenced once born"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Extraversion/sociability develops from interaction of inborn temperamental tendencies and environmental experiences."
+  },
+  {
+    "id": "temper_015",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is shyness and how does it relate to temperament?",
+    "options": {
+      "A": "Learned behavior only",
+      "B": "Rooted in temperamental inhibition and fear of novelty",
+      "C": "Opposite of extraversion",
+      "D": "A mental health disorder"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Shyness is rooted in temperamental behavioral inhibition and heightened reactivity to novel people or situations."
+  },
+  {
+    "id": "temper_016",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is the effect of parenting style on difficult temperament children?",
+    "options": {
+      "A": "Parenting style doesn't matter",
+      "B": "Supportive, patient parenting improves outcomes; harsh parenting worsens problems",
+      "C": "All difficult children become behavior problems",
+      "D": "Parenting style only affects easy children"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Goodness of fit is critical: supportive parenting helps difficult-temperament children; harsh parenting exacerbates problems."
+  },
+  {
+    "id": "temper_017",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "How is conscientiousness related to achievement and success?",
+    "options": {
+      "A": "Not related to achievement",
+      "B": "Positively associated with academic and work success",
+      "C": "Negatively associated with success",
+      "D": "Only affects social relationships"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Conscientiousness (responsibility, organization, persistence) is strongly positively associated with academic and work success."
+  },
+  {
+    "id": "temper_018",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does neuroticism relate to emotional health outcomes?",
+    "options": {
+      "A": "Higher neuroticism predicts better mental health",
+      "B": "Higher neuroticism increases vulnerability to anxiety, depression, and stress",
+      "C": "Neuroticism is unrelated to mental health",
+      "D": "Neuroticism prevents mental illness"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Higher neuroticism/negative emotionality predicts increased vulnerability to anxiety, depression, and stress-related disorders."
+  },
+  {
+    "id": "temper_019",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What does research show about personality change across the lifespan?",
+    "options": {
+      "A": "Personality cannot change after early childhood",
+      "B": "Personality is completely malleable throughout life",
+      "C": "Personality is relatively stable but can change with effort and life experiences",
+      "D": "Personality changes randomly throughout life"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN23",
+    "explanation": "Personality shows substantial stability but also capacity for meaningful change, especially with directed effort or major life experiences."
+  },
+  {
+    "id": "temper_020",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the relationship between temperament and self-esteem development?",
+    "options": {
+      "A": "Temperament doesn't affect self-esteem",
+      "B": "Children's temperament affects responses from others influencing self-esteem",
+      "C": "Only parenting affects self-esteem",
+      "D": "Genetics determines all self-esteem"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN23",
+    "explanation": "Temperament influences how others respond to the child, which affects development of self-esteem and self-concept."
+  }
+]

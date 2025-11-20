@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best describes a percentile rank score?",
+      "options": [
+        "The number of standard deviations an individual's score is from the mean",
+        "The percentage of individuals in the reference group who scored at or below an examinee's score",
+        "The proportion of test items answered correctly by an examinee",
+        "The expected score on a criterion measure based on an obtained predictor score"
+      ],
+      "answer": "The percentage of individuals in the reference group who scored at or below an examinee's score",
+      "explanation": "A percentile rank indicates the percentage of examinees in the reference group who obtained a score equal to or lower than the examinee’s score.",
+      "kn": "KN29",
+      "kn_explanation": "This question pertains to psychometric score interpretation, a key aspect of test construction and interpretation (KN29).",
+      "difficulty": "easy",
+      "quality_comment": "The distractors are conceptually distinct and the stem is straightforward, making the question accessible and effective for testing basic knowledge."
+    },
+    {
+      "stem": "An examinee obtains a T-score of 40 on a standardized test. Which of the following is the best interpretation of this score?",
+      "options": [
+        "The examinee scored 0.5 standard deviations below the mean",
+        "The examinee scored 1 standard deviation below the mean",
+        "The examinee scored 1 standard deviation above the mean",
+        "The examinee scored 2 standard deviations above the mean"
+      ],
+      "answer": "The examinee scored 1 standard deviation below the mean",
+      "explanation": "T-scores have a mean of 50 and SD of 10, so a T-score of 40 is exactly one standard deviation below the mean.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding standard score conversions and interpretations is essential for psychometric test interpretation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Clear and concise, the options are numerically close, requiring test-takers to apply knowledge rather than guess."
+    },
+    {
+      "stem": "If an individual’s raw score on a test corresponds to a z-score of +2.0, what is the approximate percentile rank equivalent in a normal distribution?",
+      "options": [
+        "About the 98th percentile",
+        "About the 50th percentile",
+        "About the 16th percentile",
+        "About the 2nd percentile"
+      ],
+      "answer": "About the 98th percentile",
+      "explanation": "In a normal distribution, a z-score of +2.0 corresponds approximately to the 98th percentile rank.",
+      "kn": "KN29",
+      "kn_explanation": "This question involves converting standard scores to percentile ranks, a fundamental part of test score interpretation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent common percentile ranks associated with standard deviations, making the question appropriately challenging."
+    },
+    {
+      "stem": "Which of the following statements accurately describes stanines?",
+      "options": [
+        "Stanines range from 1 to 9, with a mean of 5 and a standard deviation of 2, representing roughly half a standard deviation per unit except for extremes",
+        "Stanines are scores scaled to have a mean of 100 and standard deviation of 15, used mainly for IQ tests",
+        "Stanines have a mean of 50 and SD of 10 and are identical to T-scores",
+        "Stanines represent the percentage of test items an examinee answered correctly"
+      ],
+      "answer": "Stanines range from 1 to 9, with a mean of 5 and a standard deviation of 2, representing roughly half a standard deviation per unit except for extremes",
+      "explanation": "Stanines are a standard scoring system with these characteristics where each unit corresponds approximately to 0.5 of an SD except the 1st and 9th stanine.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests knowledge of standard score types and their interpretations (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "All options are plausible but only one accurately reflects stanine characteristics, improving item discrimination."
+    },
+    {
+      "stem": "In which scenario is the use of criterion-referenced scores most appropriate?",
+      "options": [
+        "When comparing an individual's test score to the performance of a normative group",
+        "When determining if an examinee has achieved mastery of specific content based on a pre-established cutoff",
+        "When ranking a group of candidates from highest to lowest to select the top performers",
+        "When converting raw scores into z-scores to determine relative standing"
+      ],
+      "answer": "When determining if an examinee has achieved mastery of specific content based on a pre-established cutoff",
+      "explanation": "Criterion-referenced scores evaluate performance against a fixed standard or cutoff to measure mastery rather than relative rankings.",
+      "kn": "KN29",
+      "kn_explanation": "This question addresses score interpretation types and their appropriate applications in assessment (KN29).",
+      "difficulty": "easy",
+      "quality_comment": "The distractors contrast norm- and criterion-referenced uses well, reinforcing conceptual understanding."
+    },
+    {
+      "stem": "Which of the following best characterizes the use of banding in personnel selection?",
+      "options": [
+        "Grouping test scores into ranks from highest to lowest and selecting top candidates accordingly",
+        "Setting a score cutoff and accepting any candidates who exceed it",
+        "Grouping scores into ranges based on the test's standard error of measurement and considering all candidates within a band equivalent",
+        "Selecting candidates solely based on their exact test score differences"
+      ],
+      "answer": "Grouping scores into ranges based on the test's standard error of measurement and considering all candidates within a band equivalent",
+      "explanation": "Banding groups scores into score ranges to account for measurement error, treating scores within a band as equivalent for selection decisions.",
+      "kn": "KN29",
+      "kn_explanation": "This question concerns test score use in applied contexts, focusing on fairness and decision-making based on test reliability (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common selection methods, creating a realistic and challenging question format."
+    },
+    {
+      "stem": "What is a key difference between expectancy tables and regression equations in predicting criterion scores from predictor test scores?",
+      "options": [
+        "Expectancy tables predict a single criterion score, whereas regression equations show the distribution of criterion scores for a given predictor score",
+        "Expectancy tables show the distribution of criterion scores for each predictor score, whereas regression equations predict a single criterion score",
+        "Expectancy tables assess ranking only, whereas regression equations are used for cutoff score setting",
+        "Expectancy tables are used exclusively for criterion-referenced tests, while regression equations apply to norm-referenced tests"
+      ],
+      "answer": "Expectancy tables show the distribution of criterion scores for each predictor score, whereas regression equations predict a single criterion score",
+      "explanation": "Expectancy tables provide the percentage distribution of criterion scores at each predictor score level; regression equations predict one expected criterion score.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding how predictive information from tests is represented reflects deep knowledge of assessment and test interpretation (KN29).",
+      "difficulty": "hard",
+      "quality_comment": "The options are nuanced and rely on subtle distinctions that require thorough understanding; distractors are credible."
+    },
+    {
+      "stem": "An individual scores 85 on a Wechsler IQ test. Which of the following interpretations is accurate?",
+      "options": [
+        "The score is one standard deviation above the mean",
+        "The score is one standard deviation below the mean",
+        "The score is equal to the population mean",
+        "The score is two standard deviations below the mean"
+      ],
+      "answer": "The score is one standard deviation below the mean",
+      "explanation": "Full-scale IQ scores have a mean of 100 and SD of 15; thus, a score of 85 is one SD below the mean (100 – 15 = 85).",
+      "kn": "KN29",
+      "kn_explanation": "This item assesses knowledge of major standardized score types and their interpretation (KN29).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers’ knowledge."
+    },
+    {
+      "stem": "Why is the conversion of raw scores to percentile ranks considered a nonlinear transformation?",
+      "options": [
+        "Because percentile ranks represent equal intervals of raw scores",
+        "Because the shape of the raw score distribution is preserved in percentile ranks",
+        "Because each percentile rank corresponds to exactly 1% of scores, resulting in a uniform distribution",
+        "Because percentile ranks involve adding a constant value to raw scores"
+      ],
+      "answer": "Because each percentile rank corresponds to exactly 1% of scores, resulting in a uniform distribution",
+      "explanation": "Percentile ranks assign equal proportions (1%) of examinees to each rank, creating a flat distribution regardless of raw score distribution shape.",
+      "kn": "KN29",
+      "kn_explanation": "This question taps into understanding score transformations and distributions, a core psychometric concept (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Options target common misconceptions about linearity versus nonlinearity, supporting effective differentiation."
+    },
+    {
+      "stem": "A hiring manager uses a cutoff score for a selection test linked to a criterion measure of job performance. Which is the BEST description of this approach?",
+      "options": [
+        "Ranking candidates from highest to lowest scores and selecting the top scorers until positions are filled",
+        "Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance",
+        "Banding candidates’ scores into groups based on score unreliability and randomly selecting within bands",
+        "Comparing candidates’ scores to the distribution of scores in the general population"
+      ],
+      "answer": "Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance",
+      "explanation": "Linking a cutoff score to an acceptable criterion score is a criterion-referenced approach focused on minimal competence or mastery.",
+      "kn": "KN29",
+      "kn_explanation": "This question addresses applying test score interpretations for practical decision making in personnel selection (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors represent other common selection methods, making this an applied and relevant question."
+    },
+    {
+      "stem": "Which of the following represents a linear transformation of raw test scores?",
+      "options": [
+        "Converting raw scores to percentile ranks",
+        "Converting raw scores to z-scores",
+        "Using expectancy tables to predict criterion scores",
+        "Calculating percentage of items answered correctly"
+      ],
+      "answer": "Converting raw scores to z-scores",
+      "explanation": "Z-score transformation is linear, preserving the shape of the distribution by expressing scores in terms of standard deviations from the mean.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding types of score transformations is fundamental for psychometric interpretation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are well-chosen to test understanding of linear versus nonlinear transformations."
+    },
+    {
+      "stem": "What primary purpose do expectancy tables serve in test score interpretation?",
+      "options": [
+        "To estimate the percentile rank equivalent of a raw score",
+        "To predict an examinee’s distribution of criterion scores based on their predictor score",
+        "To establish cutoff scores for mastery of skills",
+        "To convert raw scores into norm-referenced standard scores"
+      ],
+      "answer": "To predict an examinee’s distribution of criterion scores based on their predictor score",
+      "explanation": "Expectancy tables provide the proportion of individuals expected to achieve various levels on a criterion measure given their predictor test score, showing the distribution rather than a single point estimate.",
+      "kn": "KN30",
+      "kn_explanation": "This question addresses assessment models and their application in predicting criterion performance from predictor test scores (KN30).",
+      "difficulty": "medium",
+      "quality_comment": "The item effectively distinguishes expectancy tables from other score interpretations with plausible distractors."
+    },
+    {
+      "stem": "When using banding as a selection technique, what assumption about test scores is central to its application?",
+      "options": [
+        "That all scores within a band represent identical true ability levels",
+        "That small score differences within a band are due to measurement error rather than meaningful differences",
+        "That higher raw scores always indicate superior ability regardless of error",
+        "That test scores should be converted to percentile ranks before banding"
+      ],
+      "answer": "That small score differences within a band are due to measurement error rather than meaningful differences",
+      "explanation": "Banding groups scores within a range defined by the test’s standard error of measurement, assuming differences within bands are not meaningful for selection decisions.",
+      "kn": "KN30",
+      "kn_explanation": "This item relates to assessment theory by addressing how measurement error influences interpretation and use of scores in decision making (KN30).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors address common misunderstandings, requiring examinees to grasp measurement concepts underlying banding."
+    },
+    {
+      "stem": "Which of the following is TRUE about the relationship between norm-referenced standard scores and the shape of the raw score distribution?",
+      "options": [
+        "Standard scores always produce a flat distribution regardless of raw score distribution shape",
+        "Standard score distributions have the same shape as the raw score distributions unless a nonlinear transformation is applied",
+        "Percentile ranks maintain the exact shape of the original raw score distribution",
+        "Expectancy tables normalize score distributions before transformation"
+      ],
+      "answer": "Standard score distributions have the same shape as the raw score distributions unless a nonlinear transformation is applied",
+      "explanation": "Linear transformations to standard scores preserve the raw score distribution shape; nonlinear transformations can normalize scores but are not always applied.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests knowledge of assessment theory concepts regarding score transformations and distribution shapes (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The options contrast key concepts well, requiring nuanced understanding of transformation effects."
+    }
+  ]
+}

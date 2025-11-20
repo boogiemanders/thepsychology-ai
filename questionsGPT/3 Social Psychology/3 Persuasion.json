@@ -1,0 +1,229 @@
+{
+  "questions": [
+    {
+      "stem": "Which strategy in persuasion aims to overcome resistance by increasing approach forces such as maximizing the strength of arguments and using consensus information?",
+      "options": [
+        "Omega strategy",
+        "Beta strategy",
+        "Alpha strategy",
+        "Gamma strategy"
+      ],
+      "answer": "Alpha strategy",
+      "explanation": "Alpha strategies attempt to increase approach forces to overcome resistance by providing strong reasons to change attitudes, such as emphasizing consensus and strong arguments.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on persuasion techniques, which are part of group and systems processes and social influences on functioning (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem with plausible distractors, though use of Greek letter names might slightly cue the test takers; otherwise well-constructed."
+    },
+    {
+      "stem": "What is the 'sleeper effect' in the context of communicator credibility in persuasion?",
+      "options": [
+        "The gradual increase in attitude change as exposure to the communicator continues over time",
+        "The tendency to remember the message but forget the low credibility of the source over time",
+        "The weakening of initial skepticism towards a communicator due to repeated messages",
+        "The effect of high-credible communicators producing less attitude change over time"
+      ],
+      "answer": "The tendency to remember the message but forget the low credibility of the source over time",
+      "explanation": "The sleeper effect describes how people may eventually retain the message content but forget the credibility of the source, allowing initially discounted messages to influence attitudes later.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding source credibility and its effect on persuasion is fundamental to social influence and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The alternatives are subtle and plausible, encouraging critical thinking about source issues in persuasion."
+    },
+    {
+      "stem": "Regarding message discrepancy and communicator credibility, which pattern best describes the relationship between amount of attitude change and message discrepancy when the communicator is high in credibility?",
+      "options": [
+        "An inverted-U shape with moderate discrepancy eliciting the greatest change",
+        "A linear relationship with increased change as discrepancy increases",
+        "No relationship between discrepancy and attitude change",
+        "A negative linear relationship with less change as discrepancy increases"
+      ],
+      "answer": "A linear relationship with increased change as discrepancy increases",
+      "explanation": "High-credible communicators produce more attitude change as message discrepancy increases, unlike low-credible sources which show an inverted-U effect.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests knowledge of message factors influencing persuasion, a key part of social and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Offers well-balanced options and tests understanding of a nuanced interaction effect in persuasion research."
+    },
+    {
+      "stem": "When two opposing sides of an argument are presented back-to-back and attitudes are assessed after a delay, which effect is most likely to be observed?",
+      "options": [
+        "Recency effect where the second side influences attitudes more",
+        "Primacy effect where the first side influences attitudes more",
+        "No effect due to immediate measurement of attitudes",
+        "Both sides have equal influence regardless of order"
+      ],
+      "answer": "Primacy effect where the first side influences attitudes more",
+      "explanation": "In this scenario, the side presented first tends to have the greatest impact on attitudes when measured after some time, demonstrating the primacy effect.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding order and timing effects in message presentation relates to social cognition and persuasion processes within group/social dynamics (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Clear distinction between primacy and recency effects; distractors are plausible and test knowledge well."
+    },
+    {
+      "stem": "According to Tannenbaum et al. (2015), fear appeals are most effective in changing attitudes when they include all of the following EXCEPT:",
+      "options": [
+        "A high level of fear arousal",
+        "Assurance that recipients can perform the recommended action",
+        "Descriptions of the negative consequences if action is not taken",
+        "Minimization of risk to reduce anxiety in recipients"
+      ],
+      "answer": "Minimization of risk to reduce anxiety in recipients",
+      "explanation": "Effective fear appeals involve highlighting risk and negative outcomes as well as efficacy messages; minimizing risk reduces the persuasive impact.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses message factors in persuasion (fear arousal), fitting within social influence and group processes (KN16).",
+      "difficulty": "hard",
+      "quality_comment": "Well-crafted question focusing on specifics of fear appeals with plausible but incorrect distractor emphasizing minimization."
+    },
+    {
+      "stem": "Which recipient characteristic shows an inverted-U shaped relationship with susceptibility to persuasion?",
+      "options": [
+        "Intelligence",
+        "Self-esteem",
+        "Age",
+        "Gender"
+      ],
+      "answer": "Self-esteem",
+      "explanation": "Research shows moderate self-esteem individuals are most susceptible, forming an inverted-U relationship between self-esteem and influenceability.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses knowledge of individual differences affecting social influence and persuasion, classified under social and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all plausible individual difference variables; question is clear and focused."
+    },
+    {
+      "stem": "McGuire’s attitude inoculation hypothesis proposes that resistance to persuasion is increased by:",
+      "options": [
+        "Providing only strong arguments supporting the current attitude",
+        "Exposing recipients to comprehensive convincing counterarguments",
+        "Presenting weak attacks on current attitudes along with refutations before exposure to persuasive messages",
+        "Avoiding exposure to any arguments that challenge the recipient's attitudes"
+      ],
+      "answer": "Presenting weak attacks on current attitudes along with refutations before exposure to persuasive messages",
+      "explanation": "Attitude inoculation involves exposure to weak counterarguments with refutations to help individuals build resistance similar to biological immunization.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on strategies to enhance resistance to persuasion, a component of group and systems processes influencing social behavior (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but only one describes inoculation theory correctly, making it an effective question."
+    },
+    {
+      "stem": "According to behavioral economics, which of the following best illustrates 'loss aversion'?",
+      "options": [
+        "People prefer a guaranteed small reward over a risky larger reward",
+        "The distress from losing $100 feels roughly twice as powerful as the pleasure from gaining $100",
+        "Individuals always take risks to avoid a certain loss",
+        "Gains and losses of equal amounts produce equivalent emotional responses"
+      ],
+      "answer": "The distress from losing $100 feels roughly twice as powerful as the pleasure from gaining $100",
+      "explanation": "Loss aversion describes how losses have greater psychological impact than equivalent gains, amplifying the negative feelings for losses.",
+      "kn": "KN9",
+      "kn_explanation": "This question relates to theories of motivation and decision-making under risk, fitting under major models of motivation and their application (KN9).",
+      "difficulty": "medium",
+      "quality_comment": "Options are clear and differentiated; tests precise understanding of the key concept of loss aversion."
+    },
+    {
+      "stem": "What does the term 'scarcity trap' refer to in behavioral economics?",
+      "options": [
+        "A situation where abundance leads to poor decision-making due to complacency",
+        "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+        "A condition where sudden availability of resources increases risky behaviors",
+        "A form of cognitive overload caused by too many options"
+      ],
+      "answer": "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+      "explanation": "The scarcity trap involves reduced mental bandwidth causing poor decisions that maintain or worsen scarcity conditions.",
+      "kn": "KN9",
+      "kn_explanation": "This question addresses motivational and cognitive factors related to decision-making under scarcity, related to models of motivation and cognition (KN9).",
+      "difficulty": "hard",
+      "quality_comment": "The question captures a complex concept with well-balanced answer choices, requiring integration of multiple ideas."
+    },
+    {
+      "stem": "Which of the following factors decreases the perceived trustworthiness of a communicator in persuasion?",
+      "options": [
+        "The communicator argues against their own self-interest",
+        "The message appears to be accidentally overheard",
+        "The communicator is perceived as biased or dishonest",
+        "The communicator is a well-known expert in the field"
+      ],
+      "answer": "The communicator is perceived as biased or dishonest",
+      "explanation": "Trustworthiness is diminished by perceptions of bias or dishonesty, while arguing against own interests or accidental overhearing can enhance trust.",
+      "kn": "KN16",
+      "kn_explanation": "This question involves source credibility factors in persuasion, a core topic in social and group influence processes (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and straightforward question with plausible distractors, appropriate for foundational understanding."
+    },
+    {
+      "stem": "Which of the following describes the typical relationship between intelligence and susceptibility to persuasion?",
+      "options": [
+        "An inverted U-shaped relationship where moderate intelligence is most susceptible",
+        "Higher intelligence is associated with higher susceptibility to persuasion",
+        "Lower intelligence is associated with higher susceptibility to persuasion",
+        "No consistent relationship exists between intelligence and persuasion"
+      ],
+      "answer": "Lower intelligence is associated with higher susceptibility to persuasion",
+      "explanation": "Research indicates a linear relationship in which individuals with lower intelligence tend to be more susceptible to persuasion.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding recipient characteristics influencing persuasion fits within social cognitive processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors cover common patterns to distinguish test-takers' familiarity with intelligence and persuasion data."
+    },
+    {
+      "stem": "Which of the following best defines 'materialism' as studied in behavioral economics and psychology?",
+      "options": [
+        "The focus on acquiring wealth and possessions at the expense of personal and spiritual well-being",
+        "A preference for money over other forms of rewards in decision-making scenarios",
+        "The tendency to save money rather than spend",
+        "An intrinsic motivation to achieve status through social connections"
+      ],
+      "answer": "The focus on acquiring wealth and possessions at the expense of personal and spiritual well-being",
+      "explanation": "Materialism involves valuing possessions, image, and status often at odds with well-being and growth in other life domains.",
+      "kn": "KN9",
+      "kn_explanation": "This question relates to motivational values and goals affecting behavior and personal outcomes, linked to motivation models (KN9).",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual clarity; distractors are plausible but clearly different constructs from materialism."
+    },
+    {
+      "stem": "Which persuasion factor is most enhanced when a celebrity endorses a product that aligns closely with their known background or expertise?",
+      "options": [
+        "Communicator likeability",
+        "Communicator attractiveness",
+        "Communicator expertise",
+        "Message consistency"
+      ],
+      "answer": "Communicator expertise",
+      "explanation": "A communicator’s perceived expertise is higher when there is congruence between their background and the endorsed product, increasing persuasive impact.",
+      "kn": "KN16",
+      "kn_explanation": "This question highlights communicator factors influencing persuasion, specifically expertise within social influence processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Clear linkage of communicator expertise to an applied example; options are balanced and plausible."
+    },
+    {
+      "stem": "Which of the following is an example of an omega strategy in persuasion?",
+      "options": [
+        "Maximizing the strength of arguments presented",
+        "Using consensus information to show the popularity of a message",
+        "Providing counterarguments to address recipients' concerns",
+        "Increasing the attractiveness of the communicator"
+      ],
+      "answer": "Providing counterarguments to address recipients' concerns",
+      "explanation": "Omega strategies focus on reducing resistance by neutralizing avoidance forces, such as by addressing counterarguments the recipient may have.",
+      "kn": "KN16",
+      "kn_explanation": "This item addresses persuasion strategies targeting resistance reduction, an important social influence topic (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Good discrimination between approach-focused alpha strategies and resistance-focused omega strategies."
+    },
+    {
+      "stem": "Which recipient factor has been shown to have a U-shaped relationship with susceptibility to persuasion, with adolescents and older adults being more persuadable than middle-aged adults?",
+      "options": [
+        "Self-esteem",
+        "Age",
+        "Intelligence",
+        "Motivation level"
+      ],
+      "answer": "Age",
+      "explanation": "Studies suggest a U-shaped relation where young and older adults are more susceptible to influence than middle-aged adults.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests knowledge of recipient factors influencing persuasion, within social development and influence processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are relevant constructs, allowing effective testing of nuanced developmental patterns in susceptibility."
+    }
+  ]
+}

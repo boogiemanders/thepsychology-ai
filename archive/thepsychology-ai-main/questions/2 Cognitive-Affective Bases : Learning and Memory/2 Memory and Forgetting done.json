@@ -1,0 +1,302 @@
+[
+  {
+    "id": "mf_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to the multi-store model of memory, how long does visual (iconic) sensory memory typically last?",
+    "options": {
+      "A": "About one-half second",
+      "B": "About 2 seconds",
+      "C": "About 20 seconds",
+      "D": "About 2-3 minutes"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN8",
+    "explanation": "Iconic (visual) sensory memory stores information for approximately one-half second, while echoic (auditory) sensory memory lasts about two seconds."
+  },
+  {
+    "id": "mf_002",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the primary method for transferring information from short-term memory to long-term memory?",
+    "options": {
+      "A": "Chunking",
+      "B": "Rehearsal",
+      "C": "Encoding",
+      "D": "Retrieval"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN8",
+    "explanation": "Information is transferred from short-term to long-term memory when it is encoded, such as by relating it to information already stored in long-term memory."
+  },
+  {
+    "id": "mf_003",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to Miller (1956), what is the approximate capacity of short-term memory?",
+    "options": {
+      "A": "3-4 units of information",
+      "B": "5-6 units of information",
+      "C": "7 plus or minus 2 units",
+      "D": "12-15 units of information"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN8",
+    "explanation": "Miller's classic research established that short-term memory capacity is approximately 7 plus or minus 2 units of information, though this can be expanded through chunking."
+  },
+  {
+    "id": "mf_004",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does working memory differ from memory span?",
+    "options": {
+      "A": "Memory span stores information; working memory processes it",
+      "B": "Working memory is temporary; memory span is permanent",
+      "C": "Memory span is auditory; working memory is visual",
+      "D": "Working memory is older; memory span is newer"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN8",
+    "explanation": "Memory span refers to storage capacity of short-term memory, while working memory is responsible for processing and manipulating information in short-term memory."
+  },
+  {
+    "id": "mf_005",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the serial position effect?",
+    "options": {
+      "A": "Better recall of words presented in sequence",
+      "B": "Primacy and recency effects in word recall",
+      "C": "Inability to remember words in middle positions",
+      "D": "Improved memory with repeated presentation"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "The serial position effect occurs when people recall more words at the beginning (primacy effect) and end (recency effect) of a list than words in the middle."
+  },
+  {
+    "id": "mf_006",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the primary function of the central executive in Baddeley's working memory model?",
+    "options": {
+      "A": "Stores verbal information",
+      "B": "Stores visual and spatial information",
+      "C": "Directs attention and coordinates cognitive processes",
+      "D": "Integrates information with long-term memory"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN8",
+    "explanation": "In Baddeley's model, the central executive controls the subsystems by directing attention to relevant information and coordinating other cognitive processes."
+  },
+  {
+    "id": "mf_007",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "Which of the following is classified as a procedural memory?",
+    "options": {
+      "A": "Remembering that Paris is the capital of France",
+      "B": "Remembering where you went on vacation",
+      "C": "Remembering how to ride a bicycle",
+      "D": "Remembering your childhood home"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN8",
+    "explanation": "Procedural (nondeclarative) memories are memories for learned skills and actions, such as how to ride a bicycle or play an instrument."
+  },
+  {
+    "id": "mf_008",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "Which type of long-term memory involves remembering facts and concepts?",
+    "options": {
+      "A": "Episodic memory",
+      "B": "Semantic memory",
+      "C": "Procedural memory",
+      "D": "Prospective memory"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "Semantic memories are memories for facts, concepts, and knowledge, such as remembering that the multi-store model distinguishes between types of memory."
+  },
+  {
+    "id": "mf_009",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the difference between retrospective and prospective memory?",
+    "options": {
+      "A": "Retrospective is conscious; prospective is unconscious",
+      "B": "Retrospective is past events; prospective is future events",
+      "C": "Retrospective is semantic; prospective is episodic",
+      "D": "Retrospective is visual; prospective is verbal"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "Retrospective memories are for events that occurred in the past, while prospective memories are for events that will occur in the future."
+  },
+  {
+    "id": "mf_010",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "How does explicit memory differ from implicit memory?",
+    "options": {
+      "A": "Explicit requires conscious effort; implicit does not",
+      "B": "Explicit is permanent; implicit is temporary",
+      "C": "Explicit is visual; implicit is verbal",
+      "D": "Explicit is recent; implicit is remote"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN8",
+    "explanation": "Explicit memory consists of memories that require conscious effort to retrieve, while implicit memory is recalled without conscious effort."
+  },
+  {
+    "id": "mf_011",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "In the Deese-Roediger-McDermott (DRM) procedure, what is a critical lure?",
+    "options": {
+      "A": "A word that was presented but not recalled",
+      "B": "A word related to presented words but not included in the list",
+      "C": "A word used to distract subjects from the task",
+      "D": "A word that prevents false memory formation"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "In the DRM procedure, a critical lure is a word related to words in the list but not presented, yet subjects frequently recall it as having been presented."
+  },
+  {
+    "id": "mf_012",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How do false memory induction and imagination inflation differ in inducing false memories?",
+    "options": {
+      "A": "False memory induction uses family members; imagination inflation uses imagery",
+      "B": "False memory induction is faster; imagination inflation is slower",
+      "C": "False memory induction is for childhood events; imagination inflation is for recent events",
+      "D": "False memory induction uses suggestions; imagination inflation uses self-generated content"
+    },
+    "correct_answer": "D",
+    "kn_id": "KN8",
+    "explanation": "False memory induction involves telling subjects about events via family members; imagination inflation involves having subjects repeatedly imagine events that didn't occur."
+  },
+  {
+    "id": "mf_013",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the primary difference between proactive and retroactive interference?",
+    "options": {
+      "A": "Proactive is stronger; retroactive is weaker",
+      "B": "Proactive is old information disrupting new; retroactive is new information disrupting old",
+      "C": "Proactive is intentional; retroactive is unintentional",
+      "D": "Proactive is verbal; retroactive is visual"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "Proactive interference occurs when previously learned information interferes with learning new information; retroactive interference occurs when newly acquired information interferes with recall of old information."
+  },
+  {
+    "id": "mf_014",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to trace decay theory, why are memories forgotten?",
+    "options": {
+      "A": "Due to interference from other memories",
+      "B": "Due to lack of retrieval practice",
+      "C": "Due to deterioration of physical brain changes over time",
+      "D": "Due to limited capacity of long-term memory"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN8",
+    "explanation": "Trace decay theory proposes that memories create physical changes in the brain that deteriorate over time when not rehearsed or recalled."
+  },
+  {
+    "id": "mf_015",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "Which memory improvement technique involves making information meaningful through personal connection?",
+    "options": {
+      "A": "Method of loci",
+      "B": "Elaborative rehearsal",
+      "C": "Encoding specificity",
+      "D": "Keyword method"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "Elaborative rehearsal involves making new information meaningful by relating it to something already known or generating personally meaningful examples, utilizing semantic encoding."
+  },
+  {
+    "id": "mf_016",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the testing effect in the context of memory improvement?",
+    "options": {
+      "A": "Memory decreases with repeated testing",
+      "B": "Memory improves with repeated practice recall",
+      "C": "Testing is less effective than reading",
+      "D": "Testing works only for new information"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "The testing effect refers to the positive impact of practice testing on memory, where practicing recall during learning improves retention."
+  },
+  {
+    "id": "mf_017",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "In Tolman's latent learning study, what did the Group 3 rats' behavior demonstrate?",
+    "options": {
+      "A": "Rats cannot learn without reinforcement",
+      "B": "Rats form cognitive maps without observable behavior",
+      "C": "Rats learn through trial and error only",
+      "D": "Rats require immediate reinforcement for learning"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN8",
+    "explanation": "Group 3 rats formed cognitive maps in the first 10 days without reinforcement, then performed like Group 1 once reinforcement was introduced, demonstrating latent learning."
+  },
+  {
+    "id": "mf_018",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to Bandura's social cognitive theory, what are the four mediational processes of observational learning?",
+    "options": {
+      "A": "Attention, retention, production, motivation",
+      "B": "Observation, imitation, practice, reinforcement",
+      "C": "Input, processing, output, feedback",
+      "D": "Stimulus, response, reinforcement, extinction"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN8",
+    "explanation": "Bandura identified four mediational processes: the learner must attend to the model's behavior, retain it in memory, be capable of imitating it, and be motivated to perform it."
+  },
+  {
+    "id": "mf_019",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "Why are coping models more effective than mastery models in treating phobias using Bandura's approach?",
+    "options": {
+      "A": "Coping models are more realistic to clients' experiences",
+      "B": "Mastery models increase client anxiety",
+      "C": "Coping models provide faster results",
+      "D": "Mastery models require more sessions"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN8",
+    "explanation": "Coping models who are initially apprehensive but gradually overcome fear are more effective than mastery models because they are more realistic and relatable to clients' experiences."
+  },
+  {
+    "id": "mf_020",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does the method of loci differ from the keyword method?",
+    "options": {
+      "A": "Method of loci uses locations; keyword method uses paired associations",
+      "B": "Method of loci is verbal; keyword method is visual",
+      "C": "Method of loci is for lists; keyword method is for facts",
+      "D": "Method of loci is easier; keyword method is harder"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN8",
+    "explanation": "Method of loci links images to specific locations in a familiar place for memorizing lists; keyword method uses visual imagery to associate foreign words with similar-sounding English words."
+  }
+]

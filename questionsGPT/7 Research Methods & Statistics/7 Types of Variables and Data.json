@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "stem": "In a research study comparing the effectiveness of three different therapies on reducing depressive symptoms, the variable representing the type of therapy given is best described as which of the following?",
+      "options": [
+        "Dependent variable",
+        "Moderator variable",
+        "Independent variable",
+        "Mediator variable"
+      ],
+      "answer": "Independent variable",
+      "explanation": "The independent variable is what the researcher manipulates or categorizes participants by (type of therapy) to observe its effect on the dependent variable (depressive symptoms).",
+      "kn": "KN53",
+      "kn_explanation": "This question involves understanding key variables in research design, a topic covered under sampling and data collection methods (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes between different types of variables; distractors are plausible for examinees who might confuse roles of variables in studies."
+    },
+    {
+      "stem": "Which of the following best characterizes a mediator variable in psychological research?",
+      "options": [
+        "A variable that strengthens or weakens the relationship between two other variables",
+        "A variable that is manipulated by the researcher to measure its effect",
+        "A variable that explains the relationship between an independent and dependent variable",
+        "A variable that is an unintended source of influence on study results"
+      ],
+      "answer": "A variable that explains the relationship between an independent and dependent variable",
+      "explanation": "A mediator variable accounts for how or why an independent variable affects a dependent variable by explaining the mechanism of the relationship.",
+      "kn": "KN53",
+      "kn_explanation": "Understanding mediator variables is fundamental to research design and analysis, fitting within data collection and experimental design methods (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include correct concepts related to variables but selectively differentiate mediator from moderator and extraneous variables, enhancing discrimination."
+    },
+    {
+      "stem": "In a study of teaching methods where one group receives instruction in noisier conditions than another group, the noise level is best described as which type of variable?",
+      "options": [
+        "Dependent variable",
+        "Extraneous variable",
+        "Mediator variable",
+        "Moderator variable"
+      ],
+      "answer": "Extraneous variable",
+      "explanation": "An extraneous variable is an unintended factor that can affect the dependent variable and complicate attribution of effects to the independent variable.",
+      "kn": "KN53",
+      "kn_explanation": "This question tests knowledge about confounding factors in research methods, aligned with sampling and study design content (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The question situationally clarifies concept of extraneous variables; distractors include other variable types to test subtle distinctions."
+    },
+    {
+      "stem": "Which scale of measurement allows for meaningful statements about ratios, such as one value being twice as much as another, due to having an absolute zero?",
+      "options": [
+        "Ordinal scale",
+        "Ratio scale",
+        "Interval scale",
+        "Nominal scale"
+      ],
+      "answer": "Ratio scale",
+      "explanation": "Ratio scales have ordered categories with equal intervals and an absolute zero point, enabling ratio comparisons between values.",
+      "kn": "KN53",
+      "kn_explanation": "Assessment of scale types is essential in research methods and statistics, particularly measurement and data collection (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common scales of measurement, making the question effective for testing knowledge of scale properties."
+    },
+    {
+      "stem": "A variable measured by assigning individuals to categories such as 'strongly agree,' 'agree,' 'disagree,' and 'strongly disagree' is an example of which scale of measurement?",
+      "options": [
+        "Nominal scale",
+        "Interval scale",
+        "Ordinal scale",
+        "Ratio scale"
+      ],
+      "answer": "Ordinal scale",
+      "explanation": "Ordinal scales rank order categories where relative magnitude can be determined, but the intervals between categories are not necessarily equal.",
+      "kn": "KN53",
+      "kn_explanation": "This question relates to measurement theory, an important element of research methods focusing on understanding different data scales (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem with straightforward options; distractors are plausible but test basic knowledge of measurement levels."
+    },
+    {
+      "stem": "In a frequency polygon depicting test scores that are negatively skewed, which of the following accurately describes the relative positions of the mean, median, and mode?",
+      "options": [
+        "Mean > Median > Mode",
+        "Mode > Median > Mean",
+        "Mean = Median = Mode",
+        "Median > Mean > Mode"
+      ],
+      "answer": "Mode > Median > Mean",
+      "explanation": "In negatively skewed distributions, the mode (peak) has the highest value, the median is intermediate, and the mean is pulled toward the lower (negative) tail.",
+      "kn": "KN53",
+      "kn_explanation": "Understanding distribution shapes and measures of central tendency is fundamental in statistics, linked to analytic methods and statistics (KN53).",
+      "difficulty": "hard",
+      "quality_comment": "The question tests nuanced understanding of skewed distributions; the distractors are plausible, requiring detailed conceptual comprehension."
+    },
+    {
+      "stem": "Which type of graph is most appropriate for displaying data measured on a nominal scale, such as eye color categories?",
+      "options": [
+        "Histogram",
+        "Bar graph",
+        "Frequency polygon",
+        "Scatterplot"
+      ],
+      "answer": "Bar graph",
+      "explanation": "Bar graphs display categorical data with separate bars for each category; they're ideal for nominal or ordinal data.",
+      "kn": "KN53",
+      "kn_explanation": "Selecting appropriate graphical representations for data types is part of research methods and statistics concerning data visualization (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear and tests common knowledge; distractors are typical graph types but less suitable for nominal data."
+    },
+    {
+      "stem": "A study finds that cognitive-behavioral therapy reduces anxiety because it changes the way clients think. Changing the clients' thinking is an example of what kind of variable in this context?",
+      "options": [
+        "Moderator variable",
+        "Mediator variable",
+        "Independent variable",
+        "Extraneous variable"
+      ],
+      "answer": "Mediator variable",
+      "explanation": "The altered thinking explains how therapy affects anxiety, serving as a mediator that links the independent variable (therapy) to the dependent variable (anxiety).",
+      "kn": "KN53",
+      "kn_explanation": "This question requires understanding the concepts of mediation in research design, part of analytic methods and causal modeling (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include relevant variable concepts; the scenario helps clarify mediator conceptualization effectively."
+    },
+    {
+      "stem": "Which characteristic is true of interval scales but not of ratio scales?",
+      "options": [
+        "Variables can be ordered",
+        "Equal intervals between values",
+        "An absolute zero point",
+        "Allowed to perform meaningful ratio comparisons"
+      ],
+      "answer": "Equal intervals between values",
+      "explanation": "Both interval and ratio scales have ordered categories with equal intervals, but only ratio scales have an absolute zero point.",
+      "kn": "KN53",
+      "kn_explanation": "This item tests detailed knowledge of measurement scales essential for research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The question focuses on a common source of confusion with well-matched distractors; the stem is clear and concise."
+    },
+    {
+      "stem": "What distinguishes a moderator variable in experimental research?",
+      "options": [
+        "It changes the strength or direction of the effect between independent and dependent variables",
+        "It explains why the independent variable influences the dependent variable",
+        "It represents an unintended influence on the dependent variable",
+        "It is measured after the dependent variable"
+      ],
+      "answer": "It changes the strength or direction of the effect between independent and dependent variables",
+      "explanation": "A moderator variable alters the relationship between the independent and dependent variables, affecting how or when an effect occurs.",
+      "kn": "KN53",
+      "kn_explanation": "Moderators are key concepts in study design and statistical analysis, consistent with research methods knowledge (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect related concepts, requiring test-takers to discriminate carefully, making it a well-constructed question."
+    },
+    {
+      "stem": "Which of the following best describes a platykurtic distribution?",
+      "options": [
+        "A distribution with a sharp peak and thin tails",
+        "Symmetrical distribution where mean, median, and mode are equal",
+        "Flatter peak and thicker tails compared to a normal distribution",
+        "Distribution with the mean pulled toward an extended tail"
+      ],
+      "answer": "Flatter peak and thicker tails compared to a normal distribution",
+      "explanation": "Platykurtic distributions are characterized by a flattened peak and heavier tails than normal distributions, indicating scores are more evenly spread out.",
+      "kn": "KN53",
+      "kn_explanation": "This question concerns distribution shapes and properties, relevant to analytic and descriptive statistics in research methods (KN53).",
+      "difficulty": "hard",
+      "quality_comment": "This item tests knowledge often confused with leptokurtic and normal distributions; the distractors are appropriately challenging."
+    },
+    {
+      "stem": "Which of the following is true about a confounding variable in research?",
+      "options": [
+        "It is an unintended variable related to the independent variable affecting the dependent variable",
+        "It is a type of mediator variable explaining the relationship between independent and dependent variables",
+        "It changes the strength or direction of a relationship between variables",
+        "It is a variable that the researcher manipulates intentionally"
+      ],
+      "answer": "It is an unintended variable related to the independent variable affecting the dependent variable",
+      "explanation": "A confounding variable is a specific type of extraneous variable that is related to the independent variable and may falsely appear to affect the dependent variable.",
+      "kn": "KN53",
+      "kn_explanation": "Confounding variables are part of extraneous variable concepts important for study validity and research methodology (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The question clarifies an important subtype of extraneous variables, distinguishing it from mediators or moderators with effective distractors."
+    },
+    {
+      "stem": "What type of graph is most appropriate to show the distribution of IQ scores in a sample, which are measured on an interval scale?",
+      "options": [
+        "Bar graph",
+        "Histogram",
+        "Boxplot",
+        "Pie chart"
+      ],
+      "answer": "Histogram",
+      "explanation": "Histograms are ideal for interval or ratio data showing frequency distributions, with bars touching to indicate continuous data.",
+      "kn": "KN53",
+      "kn_explanation": "Understanding the correct visual display based on data scale is a core component of research methods and statistics (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "The item tests basic but essential knowledge of data visualization; distractors are plausible graph types but inappropriate for interval data."
+    },
+    {
+      "stem": "In terms of variable types, which best describes parenting style that modifies the effectiveness of a treatment for social anxiety in adolescents?",
+      "options": [
+        "Mediator variable",
+        "Dependent variable",
+        "Moderator variable",
+        "Independent variable"
+      ],
+      "answer": "Moderator variable",
+      "explanation": "Parenting style affects the strength or direction of the treatment effect, making it a moderator variable.",
+      "kn": "KN53",
+      "kn_explanation": "This question tests the concept of moderator variables affecting relationships between IV and DV, central to experimental design knowledge (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The realistic example enhances understanding; distractors involve related variable types for candidate discrimination."
+    }
+  ]
+}

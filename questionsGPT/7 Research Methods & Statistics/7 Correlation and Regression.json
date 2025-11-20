@@ -1,0 +1,199 @@
+{
+  "questions": [
+    {
+      "stem": "Which assumption must be met when using most correlation coefficients to ensure accurate estimation of the relationship between variables?",
+      "options": [
+        "Variables have a nonlinear relationship",
+        "Predictor scores show restricted range",
+        "Variability of the criterion scores is consistent across all levels of the predictor",
+        "Only one variable is measured on an ordinal scale"
+      ],
+      "answer": "Variability of the criterion scores is consistent across all levels of the predictor",
+      "explanation": "Homoscedasticity means the variability of criterion scores is similar for all predictor scores; violating this leads to unequal accuracy in prediction.",
+      "kn": "KN53",
+      "kn_explanation": "This question addresses fundamental assumptions in correlation and regression, which align with sampling and data collection methods (KN53) and proper use of statistical tests.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly tests understanding of key correlation assumptions; distractors are plausible misunderstandings that reinforce knowledge of assumptions."
+    },
+    {
+      "stem": "The Pearson product-moment correlation coefficient (Pearson r) is most appropriate when:",
+      "options": [
+        "Both variables are measured on a nominal scale with two categories each",
+        "One variable is continuous and the other is an artificial dichotomy",
+        "Two continuous variables have a linear relationship",
+        "Two ranked variables are being compared"
+      ],
+      "answer": "Two continuous variables have a linear relationship",
+      "explanation": "Pearson r is used when both variables are continuous (interval or ratio) and related linearly; nonlinear relationships are not well captured.",
+      "kn": "KN53",
+      "kn_explanation": "This question pertains to choosing statistical tests based on measurement scales, a topic central to research methods and statistics (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "Options represent common correlation types, making the correct choice clear but requiring knowledge of variable measurement and relationships."
+    },
+    {
+      "stem": "If the correlation coefficient between job knowledge and job performance is .70, what does the coefficient of determination (.70 squared) indicate?",
+      "options": [
+        "70% of performance variance is due to job knowledge",
+        "49% of performance variance is explained by job knowledge",
+        "30% of performance variance is unexplained error",
+        "The correlation is unreliable due to nonlinear relationship"
+      ],
+      "answer": "49% of performance variance is explained by job knowledge",
+      "explanation": "The coefficient of determination (r²) represents shared variability; .70 squared is .49, meaning 49% of variance in job performance is explained by job knowledge.",
+      "kn": "KN53",
+      "kn_explanation": "Understanding the coefficient of determination is part of interpreting statistical results in correlation, fitting within analytic methods in research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Clear numeric example enhances understanding; distractors test common misconceptions about correlation and variance explained."
+    },
+    {
+      "stem": "Which correlation coefficient is appropriate when one variable is continuous and the other is a true dichotomy (i.e., a categorical variable with exactly two categories)?",
+      "options": [
+        "Biserial correlation coefficient",
+        "Point biserial correlation coefficient",
+        "Spearman rho",
+        "Contingency correlation coefficient"
+      ],
+      "answer": "Point biserial correlation coefficient",
+      "explanation": "Point biserial correlation is used when one variable is continuous and the other is a true dichotomy, such as pregnant vs. not pregnant.",
+      "kn": "KN53",
+      "kn_explanation": "Choosing correct correlation coefficients based on variable type aligns with knowledge of data collection and analysis methods in research methods (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Options include similar correlation coefficients, demanding specific knowledge; well constructed to test precision of statistical tool application."
+    },
+    {
+      "stem": "What is the primary reason multicollinearity among predictor variables in a multiple regression analysis is problematic?",
+      "options": [
+        "It inflates the sample size requirements for the study",
+        "It reduces the unique contribution of each predictor to the criterion prediction",
+        "It violates the assumption of homoscedasticity",
+        "It indicates a nonlinear relationship between predictors and the criterion"
+      ],
+      "answer": "It reduces the unique contribution of each predictor to the criterion prediction",
+      "explanation": "Multicollinearity occurs when predictors are highly correlated with one another, reducing their ability to contribute unique information to the prediction.",
+      "kn": "KN53",
+      "kn_explanation": "Understanding multicollinearity effects is critical in multiple regression analysis, an analytic method evaluated under research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible statistical concerns; distractors test common regression misconceptions, improving discriminability."
+    },
+    {
+      "stem": "Discriminant function analysis is the most appropriate statistical technique to use when:",
+      "options": [
+        "Using multiple predictors to estimate a continuous criterion",
+        "Using multiple predictors to estimate a nominal criterion with more than two categories",
+        "Using a single predictor to estimate a continuous criterion",
+        "Using multiple continuous predictors to estimate two or more continuous criteria"
+      ],
+      "answer": "Using multiple predictors to estimate a nominal criterion with more than two categories",
+      "explanation": "Discriminant function analysis is used when predicting a categorical (nominal) dependent variable using multiple predictors.",
+      "kn": "KN53",
+      "kn_explanation": "This question tests knowledge of appropriate multivariate techniques, key analytic methods in research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Well-focused question on method selection; distractors reflect other related but incorrect multivariate techniques, which helps test deep understanding."
+    },
+    {
+      "stem": "Structural Equation Modeling (SEM) differs from multiple regression primarily because SEM:",
+      "options": [
+        "Only analyzes relationships among observed variables",
+        "Combines factor analysis with multiple regression and incorporates latent variables",
+        "Requires all variables to be measured on nominal scales",
+        "Is limited to bivariate correlation between two variables"
+      ],
+      "answer": "Combines factor analysis with multiple regression and incorporates latent variables",
+      "explanation": "SEM includes testing relationships among observed and latent variables, combining features of factor analysis and regression.",
+      "kn": "KN53",
+      "kn_explanation": "SEM is a complex analytic method requiring understanding of latent constructs and multivariate models, which falls within analytic methods in research methods and statistics (KN53).",
+      "difficulty": "hard",
+      "quality_comment": "The question clearly distinguishes SEM from simpler methods; distractors are plausible misconceptions, making it suitable for advanced understanding."
+    },
+    {
+      "stem": "Which of the following correlation coefficients is suitable for data when both variables are measured on nominal scales?",
+      "options": [
+        "Point biserial correlation coefficient",
+        "Pearson r",
+        "Contingency correlation coefficient",
+        "Spearman rho"
+      ],
+      "answer": "Contingency correlation coefficient",
+      "explanation": "The contingency correlation coefficient is designed for use when both variables are nominal.",
+      "kn": "KN53",
+      "kn_explanation": "Selecting appropriate statistics depending on level of measurement is a foundational concept in research methods and statistics (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward question with clearly distinct options, allowing assessment of fundamental knowledge about correlation types."
+    },
+    {
+      "stem": "Stepwise multiple regression differs from simultaneous multiple regression in that it:",
+      "options": [
+        "Includes all predictors at once to assess their combined predictive power",
+        "Adds or removes predictors one at a time to find the most parsimonious model",
+        "Is limited to only two predictor variables",
+        "Disregards multicollinearity among predictors"
+      ],
+      "answer": "Adds or removes predictors one at a time to find the most parsimonious model",
+      "explanation": "Stepwise regression involves sequentially adding or removing predictors to identify the smallest set needed for accurate prediction.",
+      "kn": "KN53",
+      "kn_explanation": "This question addresses different strategies for predictor selection in regression, which is important in understanding statistical modeling techniques (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Options cover common regression methods and misinterpretations, promoting discrimination of concepts related to regression procedures."
+    },
+    {
+      "stem": "What does homoscedasticity assume in the context of regression analysis?",
+      "options": [
+        "That the residuals have a nonlinear distribution",
+        "That variance of the errors is the same across all values of the predictor variable",
+        "That predictor variables are perfectly correlated with the criterion",
+        "That all variables are measured on ratio scales"
+      ],
+      "answer": "That variance of the errors is the same across all values of the predictor variable",
+      "explanation": "Homoscedasticity means the variability around the regression line (errors) is constant at all levels of the predictor.",
+      "kn": "KN53",
+      "kn_explanation": "Homoscedasticity is a critical assumption underlying regression and correlation analyses covered in research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "This question targets understanding of a key regression assumption; distractors are conceptually related, making the question a good test of nuance."
+    },
+    {
+      "stem": "When using multiple regression, which scenario best describes the problem caused by multicollinearity?",
+      "options": [
+        "Each predictor contributes unique information that is independent of the others",
+        "Predictors share variance, making it difficult to determine their individual effects",
+        "Predictor variables have no relationship with the criterion variable",
+        "The number of predictors exceeds the number of observations"
+      ],
+      "answer": "Predictors share variance, making it difficult to determine their individual effects",
+      "explanation": "Multicollinearity occurs when predictor variables are highly correlated with each other, making their individual contributions to the criterion difficult to separate.",
+      "kn": "KN53",
+      "kn_explanation": "This question again addresses multicollinearity, an important concept in regression analysis within research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The item clarifies a common source of confusion about multicollinearity with plausible distractors, enhancing conceptual understanding."
+    },
+    {
+      "stem": "Which of the following best characterizes the difference between point biserial and biserial correlation coefficients?",
+      "options": [
+        "Point biserial is used for continuous variables, biserial is for nominal variables",
+        "Point biserial is for true dichotomies, biserial is for artificially dichotomized continuous variables",
+        "Point biserial assumes nonlinear relationships, biserial assumes linear",
+        "Point biserial coefficient is always higher than biserial"
+      ],
+      "answer": "Point biserial is for true dichotomies, biserial is for artificially dichotomized continuous variables",
+      "explanation": "Point biserial correlation is appropriate when one variable is continuous and the other is a true dichotomy; biserial is used when the dichotomy is artificial.",
+      "kn": "KN53",
+      "kn_explanation": "Distinguishing different types of correlation coefficients based on variable characteristics fits within analytic procedures in research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The question highlights a subtle but important distinction important for precise application, with clear, balanced answer choices."
+    },
+    {
+      "stem": "What is the purpose of canonical correlation analysis?",
+      "options": [
+        "To predict a single continuous criterion from multiple continuous predictors",
+        "To estimate the relationship between a single predictor and criterion",
+        "To analyze relationships between two or more sets of continuous variables",
+        "To classify cases into nominal categories based on predictors"
+      ],
+      "answer": "To analyze relationships between two or more sets of continuous variables",
+      "explanation": "Canonical correlation assesses the relationship between two sets of continuous variables, extending beyond bivariate correlation.",
+      "kn": "KN53",
+      "kn_explanation": "This item covers multivariate statistical techniques, a critical analytic method within research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Provides a clear description of canonical correlation's function compared to related methods, promoting nuanced understanding."
+    }
+  ]
+}

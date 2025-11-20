@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "Which cognitive assessment is based on the PASS theory, measuring planning, attention, simultaneous, and successive processing in children aged 5 to 18 years?",
+      "options": [
+        "Cognitive Assessment System, Second Edition (CAS2)",
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Leiter International Performance Scale-Third Edition (Leiter-3)",
+        "Columbia Mental Maturity Scale-Third Edition (CMMS)"
+      ],
+      "answer": "Cognitive Assessment System, Second Edition (CAS2)",
+      "explanation": "The CAS2 uses the PASS cognitive/neurological theory which distinguishes planning, attention, simultaneous, and successive processing.",
+      "kn": "KN6",
+      "kn_explanation": "This question covers theory-based cognitive assessment development and models of intelligence, aligning with major research-based theories and models of intelligence (KN6).",
+      "difficulty": "medium",
+      "quality_comment": "The question focuses on distinguishing a specific test based on theoretical underpinnings, with well-balanced answer choices covering similar age ranges and functions."
+    },
+    {
+      "stem": "Which test is particularly useful for assessing receptive vocabulary in individuals with speech or motor impairments, as it does not require reading or writing skills?",
+      "options": [
+        "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Wonderlic Cognitive Ability Test",
+        "Raven’s Standard Progressive Matrices (SPM)"
+      ],
+      "answer": "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
+      "explanation": "The PPVT-5 assesses receptive vocabulary by having examinees point to pictures illustrating words and does not require verbal or written responses.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests knowledge of specific assessment instruments and their appropriate application (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "Clear question with plausible distractors that assess recognition of test purposes and administration requirements."
+    },
+    {
+      "stem": "Which cognitive ability test is designed to reduce cultural bias by minimizing verbal instructions and cultural content, and allows interpretation via both CHC and Luria's models?",
+      "options": [
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Leiter International Performance Scale-Third Edition (Leiter-3)",
+        "Cognitive Assessment System, Second Edition (CAS2)",
+        "Columbia Mental Maturity Scale-Third Edition (CMMS)"
+      ],
+      "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+      "explanation": "KABC-II was designed to be culturally fair by reducing cultural content and verbal demands, and can be interpreted using CHC or Luria’s models.",
+      "kn": "KN35",
+      "kn_explanation": "This question relates to test selection and adaptation for cultural appropriateness and minimizing bias (KN35).",
+      "difficulty": "medium",
+      "quality_comment": "High-quality question targeting knowledge of test characteristics and cultural fairness, with well-chosen distractors."
+    },
+    {
+      "stem": "Which assessment is a nonverbal test of cognitive abilities emphasizing fluid intelligence and suitable for individuals with speech or hearing impairments, autism spectrum disorder, or limited English proficiency?",
+      "options": [
+        "Leiter International Performance Scale-Third Edition (Leiter-3)",
+        "Cognitive Assessment System, Second Edition (CAS2)",
+        "Wonderlic Cognitive Ability Test",
+        "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)"
+      ],
+      "answer": "Leiter International Performance Scale-Third Edition (Leiter-3)",
+      "explanation": "Leiter-3 is a nonverbal cognitive test focusing on visualization, reasoning, memory, and attention, suited for individuals with speech, hearing, or language limitations.",
+      "kn": "KN32",
+      "kn_explanation": "This question addresses knowledge of assessment tools and their appropriate uses with special populations (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors test knowledge of other assessments, with plausible but incorrect matches, making the question effective."
+    },
+    {
+      "stem": "Raven’s Standard Progressive Matrices (SPM) is best described as:",
+      "options": [
+        "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
+        "A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension",
+        "A group-administered test assessing verbal, quantitative, and nonverbal domains for students in grades 2-12",
+        "A test measuring motor, cognitive, and language development in infants up to 42 months"
+      ],
+      "answer": "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
+      "explanation": "Raven’s SPM measures abstract reasoning, estimates fluid intelligence, and is less influenced by culture or education compared to other tests.",
+      "kn": "KN32",
+      "kn_explanation": "This question evaluates knowledge of cognitive ability measures, specifically nonverbal tests and their applicable constructs (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "This question has clearly differentiated options referencing different tests and domains, facilitating discrimination of knowledge."
+    },
+    {
+      "stem": "Which group intelligence test consists of 50 verbal, numerical, and spatial items administered in 12 minutes and is frequently used for adult hiring decisions?",
+      "options": [
+        "Wonderlic Cognitive Ability Test",
+        "Cognitive Abilities Test, Form 7 (CogAT7)",
+        "SAT",
+        "Graduate Record Exam (GRE)"
+      ],
+      "answer": "Wonderlic Cognitive Ability Test",
+      "explanation": "The Wonderlic is a brief group intelligence test used with adults, especially in employment settings, consisting of 50 items across verbal, numerical, and spatial domains.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests familiarity with commonly used group intelligence tests and their purposes (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "A straightforward recall question with plausible distractors relevant to cognitive testing."
+    },
+    {
+      "stem": "Computerized adaptive testing (CAT) primarily improves assessment by:",
+      "options": [
+        "Tailoring item difficulty in real time based on examinee responses, thus improving efficiency and precision",
+        "Presenting the same set of standardized items to all examinees for comparability",
+        "Allowing examinees to review and change previously answered items during the test session",
+        "Reducing test administration to paper and pencil formats emphasizing manual scoring"
+      ],
+      "answer": "Tailoring item difficulty in real time based on examinee responses, thus improving efficiency and precision",
+      "explanation": "CAT adapts item difficulty based on performance, enhancing efficiency by avoiding irrelevant item difficulty, and improving measurement precision.",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses understanding of test construction and psychometric properties, particularly the advantages of computerized adaptive testing (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-phrased with plausible distractors that address common misunderstandings about CAT."
+    },
+    {
+      "stem": "Which test is designed specifically for assessing general reasoning ability in young children 3:6 to 9:11 years old and is often used with children with cerebral palsy or limited English proficiency?",
+      "options": [
+        "Columbia Mental Maturity Scale-Third Edition (CMMS)",
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
+        "Leiter International Performance Scale-Third Edition (Leiter-3)"
+      ],
+      "answer": "Columbia Mental Maturity Scale-Third Edition (CMMS)",
+      "explanation": "The CMMS measures general reasoning ability in young children, requiring no verbal or fine motor responses, making it suitable for children with motor or language impairments.",
+      "kn": "KN32",
+      "kn_explanation": "This question pertains to knowledge of specialized assessment tools appropriate for specific age groups and disabilities (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem focusing on test population and characteristics, with distractors that are similar in age range but differ in test focus."
+    },
+    {
+      "stem": "The Bayley Scales of Infant and Toddler Development, Fourth Edition (Bayley-4) assess all of the following except:",
+      "options": [
+        "Crystallized intelligence abilities",
+        "Motor development",
+        "Social-emotional development",
+        "Adaptive behavior"
+      ],
+      "answer": "Crystallized intelligence abilities",
+      "explanation": "The Bayley-4 assesses five domains including cognitive, motor, language, social-emotional, and adaptive behavior, but not crystallized intelligence specifically.",
+      "kn": "KN32",
+      "kn_explanation": "This question requires knowledge of infant/toddler developmental assessments and their target domains, a key part of assessment instruments (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Question effectively tests recognition of assessment domains with plausible but incorrect distractor closely related to cognition."
+    },
+    {
+      "stem": "Which of the following is NOT an advantage of computerized adaptive testing (CAT)?",
+      "options": [
+        "Allows examinees to review and change previous answers",
+        "Reduces testing time by not administering all items",
+        "Maintains test security by varying items between examinees",
+        "Assesses all examinees at approximately equal precision levels"
+      ],
+      "answer": "Allows examinees to review and change previous answers",
+      "explanation": "CAT typically does not allow examinees to review or change answers once submitted as item difficulty adapts dynamically.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests knowledge of key strengths and limitations of computerized adaptive testing in assessment theory and practice (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are accurate CAT advantages, making the correct answer stand out as the known limitation."
+    },
+    {
+      "stem": "The Graduate Record Exam (GRE) General Test is designed to assess:",
+      "options": [
+        "Verbal reasoning, quantitative reasoning, and analytical reasoning skills relevant to graduate academic achievement",
+        "Specific knowledge in biology, chemistry, psychology, and literature",
+        "General cognitive ability including verbal, numerical, and spatial capacity for employment screening",
+        "Receptive vocabulary skills for individuals with speech impairments"
+      ],
+      "answer": "Verbal reasoning, quantitative reasoning, and analytical reasoning skills relevant to graduate academic achievement",
+      "explanation": "The GRE General Test assesses general academic skills important for graduate studies and provides scores in verbal, quantitative, and analytical reasoning.",
+      "kn": "KN32",
+      "kn_explanation": "This question addresses knowledge of standardized testing for higher education admissions and their constructs (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "Clear question with well-differentiated options testing familiarity with graduate-level assessments."
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "According to the theory of planned behavior, which factor is NOT considered a determinant of a person's intention to perform a behavior?",
+      "options": [
+        "Attitude toward the behavior",
+        "Subjective norms",
+        "Perceived behavioral control",
+        "Emotional affect associated with the behavior"
+      ],
+      "answer": "Emotional affect associated with the behavior",
+      "explanation": "The theory of planned behavior posits that a person's intention to perform a behavior is determined by attitude toward the behavior, subjective norms, and perceived behavioral control. Emotional affect is not one of the three factors.",
+      "kn": "KN13",
+      "kn_explanation": "This question assesses understanding of the theory of planned behavior, a major social cognition model explaining the link between attitudes and behaviors, which is covered by KN13 (Influence of psychosocial factors on cognitions/beliefs and behaviors).",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly tests knowledge of the theory’s components; distractors are plausible but only one option is not part of the theory, ensuring focused and fair assessment."
+    },
+    {
+      "stem": "In the prototype/willingness model, what primarily influences a person’s willingness to engage in a health risk behavior in social settings?",
+      "options": [
+        "The person's behavioral intentions as predicted by attitudes and norms",
+        "The perceived acceptability of the behavior based on their prototype of people who engage in it",
+        "The strength of their general attitudes formed through direct experience",
+        "Their subjective norms about what others believe they should do"
+      ],
+      "answer": "The perceived acceptability of the behavior based on their prototype of people who engage in it",
+      "explanation": "Willingness to engage in a behavior depends on the social reaction path, which is influenced by the person’s prototype or social image of those who engage in the behavior, affecting perceived acceptability.",
+      "kn": "KN13",
+      "kn_explanation": "This question evaluates knowledge of a social-cognitive model explaining behavior in social contexts, related to psychosocial influences on cognition and behavior (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "Options differentiate between related social cognitive constructs, requiring a clear understanding of the prototype/willingness model, making it a solid EPPP item."
+    },
+    {
+      "stem": "Which of the following is NOT a component of the health belief model that predicts a person's likelihood of engaging in health-promoting behavior?",
+      "options": [
+        "Perceived susceptibility",
+        "Perceived severity",
+        "Perceived ambivalence",
+        "Self-efficacy"
+      ],
+      "answer": "Perceived ambivalence",
+      "explanation": "Perceived ambivalence is not part of the health belief model, which includes perceived susceptibility, severity, benefits, barriers, self-efficacy, and cues to action.",
+      "kn": "KN13",
+      "kn_explanation": "The health belief model is a psychosocial model explaining health behavior change, directly linked to the study of psychosocial influences on cognition and behavior (KN13).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are well matched and the question tests essential knowledge of foundational model components, appropriate for foundational-level recall."
+    },
+    {
+      "stem": "According to the elaboration likelihood model, attitude change that is strong, enduring, and predictive of behavior is most likely to occur through which processing route?",
+      "options": [
+        "Peripheral route, relying on source attractiveness",
+        "Peripheral route, relying on message length",
+        "Central route, involving thoughtful evaluation of message content",
+        "Central route, involving reliance on heuristics"
+      ],
+      "answer": "Central route, involving thoughtful evaluation of message content",
+      "explanation": "The central route involves high elaboration and careful consideration of message arguments, leading to strong, enduring attitude change predictive of behavior.",
+      "kn": "KN13",
+      "kn_explanation": "Understanding the elaboration likelihood model involves knowledge of social cognition and attitude change theories, classified under psychosocial influences on cognition and behavior (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The question contrasts central and peripheral routes effectively, with distractors based on peripheral cues, encouraging discrimination of key theoretical concepts."
+    },
+    {
+      "stem": "According to social judgment theory, when a person's level of ego-involvement with an issue increases, how do their latitudes of acceptance and rejection change?",
+      "options": [
+        "Latitude of acceptance increases and latitude of rejection decreases",
+        "Latitude of acceptance decreases and latitude of rejection increases",
+        "Both latitudes of acceptance and rejection increase",
+        "Latency of noncommitment increases while acceptance and rejection remain unchanged"
+      ],
+      "answer": "Latitude of acceptance decreases and latitude of rejection increases",
+      "explanation": "With higher ego-involvement, people become less open to alternative views, resulting in smaller latitude of acceptance and larger latitude of rejection.",
+      "kn": "KN13",
+      "kn_explanation": "This question addresses a key aspect of social judgment theory, a social cognition model emphasizing attitudes and persuasion, fitting well within psychosocial influences (KN13).",
+      "difficulty": "hard",
+      "quality_comment": "The stem requires understanding subtle changes in attitude latitudes with ego involvement, and distractors are nuanced, providing a challenging yet fair test of knowledge."
+    },
+    {
+      "stem": "Heider's balance theory suggests that if Patricia (P) likes Oscar (O) but Oscar dislikes country music (X), which Patricia likes, Patricia will likely be:",
+      "options": [
+        "Motivated to change her attitude toward country music or Oscar to restore balance",
+        "Unconcerned because relationships are independent of attitudes toward objects",
+        "Motivated to reinforce her liking of Oscar without changing her attitude toward country music",
+        "Likely to ignore Oscar’s attitude since it does not affect her attitude"
+      ],
+      "answer": "Motivated to change her attitude toward country music or Oscar to restore balance",
+      "explanation": "According to balance theory, people are motivated to resolve inconsistency among person (P), other person (O), and object (X), restoring balance by changing attitudes.",
+      "kn": "KN13",
+      "kn_explanation": "Balance theory is a social psychological theory explaining attitude consistency and motivation, fitting under social cognition theories within psychosocial factors (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The question presents a clear, practical example of the theory, with plausible distractors, making it well suited for applied knowledge testing."
+    },
+    {
+      "stem": "In Festinger and Carlsmith’s cognitive dissonance study, why did participants paid $1 to lie about a boring task rate the task as more enjoyable than those paid $20?",
+      "options": [
+        "They had insufficient external justification for lying, leading to attitude change to reduce dissonance",
+        "They were bribed and thus motivated to genuinely enjoy the task",
+        "They had more positive subjective norms about the task",
+        "They were more cognitively capable of attending to the task"
+      ],
+      "answer": "They had insufficient external justification for lying, leading to attitude change to reduce dissonance",
+      "explanation": "Participants paid $1 experienced dissonance because the reward was too small to justify lying; to reduce discomfort, they changed their attitudes to view the task more positively.",
+      "kn": "KN13",
+      "kn_explanation": "This classic study illustrates cognitive dissonance theory, a core concept in social cognition and attitude change within psychosocial bases (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "This question tests critical experimental findings illustrating theoretical principles, with well-matched distractors that reflect common misconceptions."
+    },
+    {
+      "stem": "Which phenomenon best explains why children who were externally rewarded for an intrinsically enjoyable activity later showed decreased intrinsic motivation for that activity?",
+      "options": [
+        "Cognitive dissonance",
+        "Overjustification effect",
+        "Social facilitation",
+        "Self-serving bias"
+      ],
+      "answer": "Overjustification effect",
+      "explanation": "The overjustification effect occurs when external rewards reduce intrinsic motivation by shifting the perceived reason for behavior from internal to external.",
+      "kn": "KN13",
+      "kn_explanation": "The question focuses on self-perception theory and motivation changes, core to research on attitudes and behavior in social cognition (KN13).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are relevant social psychology concepts but only one answers the question correctly; clear and concise formulation enhances validity."
+    },
+    {
+      "stem": "Which condition is LEAST likely to strengthen the relationship between a person’s attitude and their subsequent behavior?",
+      "options": [
+        "When attitude is based on direct experience",
+        "When attitude toward the issue is highly accessible",
+        "When attitude and behavior are measured at different levels of specificity",
+        "When the issue is relevant to the person’s self-interest"
+      ],
+      "answer": "When attitude and behavior are measured at different levels of specificity",
+      "explanation": "Attitudes better predict behavior when both are matched in specificity; mismatch weakens the relationship.",
+      "kn": "KN13",
+      "kn_explanation": "This question addresses factors influencing attitude-behavior consistency, a crucial concept in social cognition research and psychosocial influence on behavior (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and concise, with plausible options that test understanding of important moderating factors for attitudes predicting behavior."
+    },
+    {
+      "stem": "According to the elaboration likelihood model, which of the following is a peripheral cue that may influence attitude change through the peripheral route?",
+      "options": [
+        "Strength of the argument presented",
+        "Cognitive ability to process the message",
+        "Communicator's attractiveness",
+        "Relevance of the message to the individual"
+      ],
+      "answer": "Communicator's attractiveness",
+      "explanation": "Peripheral cues include factors unrelated to message content such as source attractiveness, which influence attitude change when elaboration is low.",
+      "kn": "KN13",
+      "kn_explanation": "This item tests knowledge of key elements influencing attitude change processes within social cognition frameworks (KN13).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and focused question with plausible answer choices that differentiate between central message content and peripheral cues."
+    },
+    {
+      "stem": "Within the health belief model, what is the role of 'cues to action'?",
+      "options": [
+        "They represent the perceived severity of the health threat",
+        "They act as motivating triggers that initiate health-related behavior",
+        "They reduce perceived barriers to taking action",
+        "They reflect the person's confidence in their ability to act"
+      ],
+      "answer": "They act as motivating triggers that initiate health-related behavior",
+      "explanation": "Cues to action are external or internal stimuli that motivate a person to engage in health-promoting behaviors.",
+      "kn": "KN13",
+      "kn_explanation": "This question assesses understanding of specific components of the health belief model, part of social psychological models of health behavior (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The question stems from core model knowledge with distractors reflecting other model components, providing a robust assessment of detailed understanding."
+    }
+  ]
+}

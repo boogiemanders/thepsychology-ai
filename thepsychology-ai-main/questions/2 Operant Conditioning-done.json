@@ -1,0 +1,302 @@
+[
+  {
+    "id": "oc_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to Thorndike's law of effect, what determines whether a behavior will recur?",
+    "options": {
+      "A": "The behavior's consequences",
+      "B": "The behavior's frequency",
+      "C": "The behavior's intensity",
+      "D": "The behavior's complexity"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN7",
+    "explanation": "Thorndike's law of effect states that behaviors followed by satisfying consequences are likely to recur, while those followed by dissatisfying consequences are less likely to be repeated."
+  },
+  {
+    "id": "oc_002",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "An employee works overtime because extra pay is provided. This exemplifies which operant principle?",
+    "options": {
+      "A": "Negative reinforcement",
+      "B": "Positive reinforcement",
+      "C": "Positive punishment",
+      "D": "Negative punishment"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Positive reinforcement occurs when a behavior increases or is maintained because a stimulus (extra pay) is applied following the behavior."
+  },
+  {
+    "id": "oc_003",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "A child straightens her room because her parents stop nagging. This is an example of what?",
+    "options": {
+      "A": "Positive reinforcement",
+      "B": "Negative punishment",
+      "C": "Negative reinforcement",
+      "D": "Positive punishment"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN7",
+    "explanation": "Negative reinforcement occurs when a behavior increases or is maintained because a stimulus (nagging) is removed following the behavior."
+  },
+  {
+    "id": "oc_004",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What initially occurs when reinforcement is withheld during operant extinction?",
+    "options": {
+      "A": "Immediate cessation of behavior",
+      "B": "Temporary increase in behavior",
+      "C": "Gradual decrease in behavior",
+      "D": "Complete behavioral collapse"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "When reinforcement is terminated, an extinction burst often occurs, which is a temporary increase in the behavior before it decreases."
+  },
+  {
+    "id": "oc_005",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "Which reinforcement schedule is best for acquiring a new behavior most quickly?",
+    "options": {
+      "A": "Variable ratio schedule",
+      "B": "Fixed interval schedule",
+      "C": "Continuous schedule",
+      "D": "Variable interval schedule"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN7",
+    "explanation": "Acquisition of a behavior is fastest when it's reinforced on a continuous schedule, meaning the behavior is reinforced every time it occurs."
+  },
+  {
+    "id": "oc_006",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "A rat on a fixed interval 20-second schedule will most likely exhibit what response pattern?",
+    "options": {
+      "A": "Steady high rate of responding",
+      "B": "Responses shortly before each interval ends",
+      "C": "Steady low rate of responding",
+      "D": "Variable high rate of responding"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Fixed interval schedules produce a low rate of responding, with responses being made shortly before the end of each interval."
+  },
+  {
+    "id": "oc_007",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "Which intermittent schedule produces the highest response rate and greatest extinction resistance?",
+    "options": {
+      "A": "Fixed interval schedule",
+      "B": "Variable interval schedule",
+      "C": "Fixed ratio schedule",
+      "D": "Variable ratio schedule"
+    },
+    "correct_answer": "D",
+    "kn_id": "KN7",
+    "explanation": "Of the four intermittent schedules, variable ratio schedules produce the highest rate of responding and the greatest resistance to extinction."
+  },
+  {
+    "id": "oc_008",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What characterizes negative behavioral contrast when two behaviors are concurrently reinforced?",
+    "options": {
+      "A": "Both behaviors increase simultaneously",
+      "B": "Unaltered behavior decreases in frequency",
+      "C": "Unaltered behavior increases in frequency",
+      "D": "Both behaviors decrease simultaneously"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Negative behavioral contrast occurs when reinforcement for Behavior A increases while Behavior B's reinforcement is unaltered, causing Behavior B to decrease."
+  },
+  {
+    "id": "oc_009",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "According to the matching law, how do organisms distribute responses across concurrent schedules?",
+    "options": {
+      "A": "Equally regardless of reinforcement rate",
+      "B": "Randomly across available options",
+      "C": "Proportional to reinforcement frequency",
+      "D": "Based on effort required per response"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN7",
+    "explanation": "The matching law states that when behaviors are concurrently reinforced on different schedules, the rate of performing each behavior is proportional to the frequency of reinforcement."
+  },
+  {
+    "id": "oc_010",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "Which type of reinforcer satisfies needs related to basic survival?",
+    "options": {
+      "A": "Secondary reinforcers",
+      "B": "Generalized reinforcers",
+      "C": "Primary reinforcers",
+      "D": "Conditioned reinforcers"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN7",
+    "explanation": "Primary reinforcers (e.g., food, water) are inherently reinforcing because they satisfy needs related to basic survival."
+  },
+  {
+    "id": "oc_011",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "Money functions as what type of reinforcer in operant conditioning?",
+    "options": {
+      "A": "Primary reinforcer",
+      "B": "Secondary reinforcer",
+      "C": "Generalized reinforcer",
+      "D": "Unconditioned reinforcer"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN7",
+    "explanation": "Money is a generalized reinforcer because it can be exchanged for a variety of back-up reinforcers, making it associated with multiple primary reinforcers."
+  },
+  {
+    "id": "oc_012",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is superstitious behavior in the context of operant conditioning?",
+    "options": {
+      "A": "Behavior maintained by social pressure",
+      "B": "Behavior increased by accidental reinforcement",
+      "C": "Behavior decreased by random punishment",
+      "D": "Behavior extinguished through habituation"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Superstitious behavior occurs when a behavior increases because it was accidentally reinforced, even though there is no actual contingency."
+  },
+  {
+    "id": "oc_013",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "A positive discriminative stimulus (SD) in operant conditioning serves what function?",
+    "options": {
+      "A": "Signals reinforcement will not be delivered",
+      "B": "Signals reinforcement will be delivered",
+      "C": "Prevents extinction from occurring",
+      "D": "Facilitates response generalization"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "A positive discriminative stimulus (SD) signals that reinforcement will be delivered when the behavior occurs in its presence."
+  },
+  {
+    "id": "oc_014",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "Stimulus control in operant conditioning is an example of what type of learning?",
+    "options": {
+      "A": "Single-factor operant learning",
+      "B": "Two-factor learning combining operant and classical",
+      "C": "Pure classical conditioning",
+      "D": "Observational learning"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Stimulus control is an example of two-factor learning, combining operant conditioning (behavior performance) and classical conditioning (discrimination training)."
+  },
+  {
+    "id": "oc_015",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the process of gradually removing a prompt called?",
+    "options": {
+      "A": "Thinning",
+      "B": "Fading",
+      "C": "Shaping",
+      "D": "Chaining"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Gradually removing a prompt once the behavior is at the desired level is referred to as fading."
+  },
+  {
+    "id": "oc_016",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "When reinforcing one behavior increases the likelihood of similar behaviors occurring, this is called what?",
+    "options": {
+      "A": "Stimulus generalization",
+      "B": "Behavioral contrast",
+      "C": "Response generalization",
+      "D": "Discriminative transfer"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN7",
+    "explanation": "Response generalization occurs when reinforcing a specific behavior increases the likelihood that similar behaviors will also occur."
+  },
+  {
+    "id": "oc_017",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What distinguishes avoidance conditioning from escape conditioning?",
+    "options": {
+      "A": "Avoidance prevents stimulus occurrence; escape terminates it",
+      "B": "Escape prevents stimulus occurrence; avoidance terminates it",
+      "C": "Avoidance uses punishment; escape uses reinforcement",
+      "D": "Escape involves discrimination; avoidance does not"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN7",
+    "explanation": "Escape conditioning allows escape from an unpleasant stimulus, while avoidance conditioning prevents the occurrence of an unpleasant stimulus signaled by a warning stimulus."
+  },
+  {
+    "id": "oc_018",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "Avoidance conditioning results from what combination of learning processes?",
+    "options": {
+      "A": "Operant conditioning only",
+      "B": "Classical conditioning only",
+      "C": "Two-factor learning combining both",
+      "D": "Observational learning"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN7",
+    "explanation": "Avoidance conditioning is the result of two-factor learning: a warning stimulus becomes a conditioned stimulus (classical), and avoiding behavior is negatively reinforced (operant)."
+  },
+  {
+    "id": "oc_019",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "Why does punishment often lose effectiveness over time?",
+    "options": {
+      "A": "The person habituates to the punishment",
+      "B": "The behavior becomes automatically reinforced",
+      "C": "Extinction bursts prevent further learning",
+      "D": "The punishment schedule becomes irregular"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN7",
+    "explanation": "Over time, punishment tends to become less effective because the person habituates (becomes accustomed) to it, which is one reason punishment lacks good long-term effects."
+  },
+  {
+    "id": "oc_020",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What does reducing the amount of reinforcement for a behavior refer to?",
+    "options": {
+      "A": "Fading",
+      "B": "Thinning",
+      "C": "Shaping",
+      "D": "Chaining"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Thinning refers to reducing the amount of reinforcement for a behavior, such as switching from a continuous to an intermittent schedule or from FR-10 to FR-20."
+  }
+]

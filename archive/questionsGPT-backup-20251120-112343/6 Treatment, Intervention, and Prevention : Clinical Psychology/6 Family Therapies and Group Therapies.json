@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "stem": "According to Bowen's Extended Family Systems Therapy, what best describes 'differentiation' within family functioning?",
+      "options": [
+        "A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others",
+        "The formation of a third party to reduce tension in a family dyad",
+        "Parents projecting emotional immaturity onto their children",
+        "Rigid family boundaries that prevent emotional expression"
+      ],
+      "answer": "A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others",
+      "explanation": "Differentiation refers to the intrapersonal ability to distinguish feelings from thoughts and the interpersonal ability to separate one's functioning from others, reducing emotional fusion.",
+      "kn": "KN25",
+      "kn_explanation": "This question focuses on family development and functioning and their impact on individuals, which is covered under family dynamics in growth and lifespan development (KN25).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a foundational concept in Bowenian therapy, with distractors reflecting related but distinct concepts, appropriate for EPPP testing."
+    },
+    {
+      "stem": "In Structural Family Therapy, which type of alliance occurs when one parent and a child join together inflexibly against the other parent?",
+      "options": [
+        "Stable coalition",
+        "Unstable coalition",
+        "Detouring-attack coalition",
+        "Detouring-support coalition"
+      ],
+      "answer": "Stable coalition",
+      "explanation": "A stable coalition is an inflexible alliance between one parent and child against the other parent, obscuring parental conflict.",
+      "kn": "KN25",
+      "kn_explanation": "This item assesses knowledge of family subsystems and dynamics, specifically structural family therapy concepts, which relate to family functioning impacting development (KN25).",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible and derived directly from the theory, providing an effective discrimination of key concepts in structural family therapy."
+    },
+    {
+      "stem": "Which therapeutic technique involves instructing family members to engage in the problematic behavior, often in an exaggerated way, to promote change?",
+      "options": [
+        "Prescribing the symptom",
+        "Reframing",
+        "Unbalancing",
+        "Boundary making"
+      ],
+      "answer": "Prescribing the symptom",
+      "explanation": "Prescribing the symptom is a paradoxical intervention where clients are directed to intentionally perform the symptom to gain control over it.",
+      "kn": "KN44",
+      "kn_explanation": "This question addresses treatment techniques used in strategic family therapy, linked to evidence-based interventions and behavior change strategies (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are other valid structural or strategic approaches, making the correct answer stand out by its unique paradoxical nature."
+    },
+    {
+      "stem": "In Milan Systemic Family Therapy, what is the purpose of 'circular questioning'?",
+      "options": [
+        "To identify differences in family members' perceptions and uncover communication patterns",
+        "To assign blame for problematic behaviors",
+        "To have family members role-play past conflicts",
+        "To instruct family members to perform rituals between sessions"
+      ],
+      "answer": "To identify differences in family members' perceptions and uncover communication patterns",
+      "explanation": "Circular questioning involves asking each member the same question to reveal varying perspectives and highlight family dynamics.",
+      "kn": "KN44",
+      "kn_explanation": "This item pertains to therapeutic techniques designed to alter family communication and interaction patterns, relevant to treatment intervention strategies (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "This question clearly distinguishes the unique and non-obvious use of circular questioning compared to other Milan therapy interventions."
+    },
+    {
+      "stem": "Which family communication style identified by Satir involves changing the subject or making jokes to avoid conflict?",
+      "options": [
+        "Distracting",
+        "Placating",
+        "Blaming",
+        "Computing"
+      ],
+      "answer": "Distracting",
+      "explanation": "Distracting is a dysfunctional communication style where an individual avoids dealing with issues by diverting attention.",
+      "kn": "KN25",
+      "kn_explanation": "The question assesses family communication styles and roles affecting family dynamics, relevant to family functioning across the lifespan (KN25).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors represent other dysfunctional styles Satir described, providing plausible alternatives that enhance discriminability."
+    },
+    {
+      "stem": "In Narrative Family Therapy, what is the primary meaning of 'externalizing questions'?",
+      "options": [
+        "Questions that help clients view problems as separate from themselves",
+        "Questions that focus on blame and responsibility",
+        "Questions that reinforce family rules and rituals",
+        "Questions that analyze family communication patterns"
+      ],
+      "answer": "Questions that help clients view problems as separate from themselves",
+      "explanation": "Externalizing questions aim to separate the person from the problem, helping clients see the problem as an external entity.",
+      "kn": "KN44",
+      "kn_explanation": "This question evaluates knowledge of therapeutic techniques in narrative therapy, focusing on interventions that promote alternative meaning-making (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but clearly different from the core concept, providing good differentiation for EPPP level."
+    },
+    {
+      "stem": "What is the main goal of Emotionally Focused Therapy (EFT) for couples?",
+      "options": [
+        "To expand and restructure partners’ emotional experiences to foster attachment security within their relationship",
+        "To analyze family-of-origin issues through role-play and genograms",
+        "To establish clear behavioral contingencies and reinforce desired interactions",
+        "To assign therapeutic tasks and paradoxical directives to alter family hierarchies"
+      ],
+      "answer": "To expand and restructure partners’ emotional experiences to foster attachment security within their relationship",
+      "explanation": "EFT focuses on creating new emotional experiences that promote secure attachment between couples.",
+      "kn": "KN44",
+      "kn_explanation": "This addresses a therapy model emphasizing emotion and attachment in treatment, fitting under treatment approaches and interventions (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors reference other family therapy methods, which serves to clearly differentiate EFT’s unique attachment focus."
+    },
+    {
+      "stem": "Which stage in group therapy, according to Yalom and Leszcz, is characterized by group members competing for power, expressing hostility, and establishing a pecking order?",
+      "options": [
+        "Conflict, dominance, and rebellion stage",
+        "Initial orientation and hesitant participation stage",
+        "Development of cohesiveness stage",
+        "Termination and separation stage"
+      ],
+      "answer": "Conflict, dominance, and rebellion stage",
+      "explanation": "The conflict stage involves power struggles, criticism among members, and resistance toward the therapist.",
+      "kn": "KN16",
+      "kn_explanation": "This question concerns group processes and social interactions within therapy groups, which align with social and systems processes (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are stages from group therapy development with one being incorrect (termination), making this a clear but valid test of knowledge."
+    },
+    {
+      "stem": "In Functional Family Therapy (FFT), what is the primary focus when replacing problematic behaviors?",
+      "options": [
+        "Behaviors that fulfill the same interpersonal and relational functions as the problematic ones",
+        "Complete elimination of all conflict-inducing behaviors regardless of context",
+        "Changing family structure through boundary realignment",
+        "Focusing exclusively on individual members’ internal motivation"
+      ],
+      "answer": "Behaviors that fulfill the same interpersonal and relational functions as the problematic ones",
+      "explanation": "FFT aims to substitute problematic behaviors with functional alternatives that serve the same relational role.",
+      "kn": "KN44",
+      "kn_explanation": "This focuses on treatment goals and intervention techniques in family therapy, particularly functional and behavioral approaches (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but non-core features, effectively assessing understanding of FFT’s functional approach."
+    },
+    {
+      "stem": "Multisystemic Therapy (MST) is grounded in which theoretical model emphasizing multiple social systems interacting to influence individual behavior?",
+      "options": [
+        "Bronfenbrenner’s ecological model",
+        "Bowen’s family systems theory",
+        "Minuchin’s structural family therapy",
+        "Narrative therapy’s social constructionism"
+      ],
+      "answer": "Bronfenbrenner’s ecological model",
+      "explanation": "MST is based on the ecological model which considers individual behavior within the context of interrelated systems such as family, school, and community.",
+      "kn": "KN44",
+      "kn_explanation": "This question addresses treatment based on systemic frameworks linking multiple environmental systems to individual behavior (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are other well-known family therapy models, enhancing the clarity of the correct systemic ecological model."
+    },
+    {
+      "stem": "In Bateson's communication theory relevant to family therapy, what characterizes a 'double-bind' communication pattern?",
+      "options": [
+        "Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction",
+        "Communicating in a way that reflects equality and reciprocal behavior",
+        "Assuming a dominant-subordinate interaction pattern consistently",
+        "Blaming one family member to avoid addressing the real conflict"
+      ],
+      "answer": "Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction",
+      "explanation": "Double-bind communication involves contradictory messages where the subject cannot comment on or address the inconsistency, leading to confusion and distress.",
+      "kn": "KN16",
+      "kn_explanation": "This assesses understanding of family systems and communication theories impacting dysfunctional patterns relevant to group and family processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The options provide distractors that are related communication or interaction styles, making the correct answer stand out with its unique paradoxical nature."
+    },
+    {
+      "stem": "Which of the following is considered the analogue of the therapeutic alliance in group therapy according to Yalom and Leszcz?",
+      "options": [
+        "Group cohesiveness",
+        "Universality",
+        "Altruism",
+        "Catharsis"
+      ],
+      "answer": "Group cohesiveness",
+      "explanation": "Group cohesiveness is essential for successful group therapy outcomes and is analogous to the therapeutic alliance in individual therapy.",
+      "kn": "KN16",
+      "kn_explanation": "This question pertains to key therapeutic factors in group processes and their impact on treatment effectiveness (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are well-known therapeutic factors, making the question straightforward while testing important group therapy knowledge."
+    },
+    {
+      "stem": "In Strategic Family Therapy, what is the purpose of 'restraining' as a therapeutic directive?",
+      "options": [
+        "Encouraging family members not to change or warning against too rapid change",
+        "Directly asking family members to perform the problematic behavior",
+        "Altering hierarchical relationships by aligning with a less powerful member",
+        "Teaching communication skills to all family members"
+      ],
+      "answer": "Encouraging family members not to change or warning against too rapid change",
+      "explanation": "'Restraining' is a paradoxical technique used to reduce resistance by suggesting a slow or no change approach to problematic behaviors.",
+      "kn": "KN44",
+      "kn_explanation": "The question focuses on treatment interventions specific to strategic family therapy, reflecting knowledge of therapeutic techniques aimed at behavior change (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include accurate therapeutic strategies but not matching restraining, providing a thoughtful challenge for examinees."
+    },
+    {
+      "stem": "Within Bowen’s family systems theory, what does the 'family projection process' describe?",
+      "options": [
+        "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+        "Children forming triangles with their parents to reduce parental conflicts",
+        "The transmission of family secrets across generations",
+        "The process of establishing clear family boundaries between subsystems"
+      ],
+      "answer": "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+      "explanation": "The family projection process refers to the transmission of parents' emotional immaturity leading to less differentiated children.",
+      "kn": "KN25",
+      "kn_explanation": "This item assesses knowledge of intergenerational family dynamics and development impacting differentiation in family relationships (KN25).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are related concepts from Bowenian theory, enhancing validity and discrimination for testing family systems knowledge."
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "questions": [
+    {
+      "stem": "According to Latane and Darley's model of bystander intervention, which step involves a bystander deciding that someone else will take responsibility for helping, thereby reducing their own likelihood of intervening?",
+      "options": [
+        "Step 2 – Interpreting the event",
+        "Step 3 – Assuming responsibility",
+        "Step 4 – Determining how to help",
+        "Step 5 – Deciding whether or not to help"
+      ],
+      "answer": "Step 3 – Assuming responsibility",
+      "explanation": "Diffusion of responsibility occurs in Step 3 when the presence of others leads a bystander to feel less personal obligation to help.",
+      "kn": "KN15",
+      "kn_explanation": "This question relates to social cognition theories regarding altruistic behavior and social influence in emergencies, pertinent to social interaction and relationships (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a specific step in a well-known model and distractors are similarly plausible steps, improving discriminability."
+    },
+    {
+      "stem": "In Sherif’s Robbers Cave study, which intervention was found to most effectively reduce intergroup hostility between competing groups?",
+      "options": [
+        "Establishing equal status contact",
+        "Introducing superordinate goals",
+        "Increasing competition within groups",
+        "Separating groups physically"
+      ],
+      "answer": "Introducing superordinate goals",
+      "explanation": "Sherif demonstrated that cooperation toward shared, superordinate goals that required intergroup collaboration reduced conflict and hostility.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses knowledge of group processes and interventions to reduce prejudice, which falls within group and systems processes (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "This item is clear and has one well-supported correct answer with plausible distractors reflective of related constructs."
+    },
+    {
+      "stem": "Which of the following best illustrates the concept of pluralistic ignorance in bystander intervention research?",
+      "options": [
+        "A person not noticing an emergency due to distraction",
+        "A bystander assuming that others' lack of action means no help is needed",
+        "Feeling unable to help because of lack of skills",
+        "Avoiding helping to prevent social embarrassment"
+      ],
+      "answer": "A bystander assuming that others' lack of action means no help is needed",
+      "explanation": "Pluralistic ignorance involves interpreting others’ inaction as an indicator that intervention is unnecessary.",
+      "kn": "KN15",
+      "kn_explanation": "Focuses on social cognitive processes involved in interpreting other people's behavior, key to social interaction and relationships (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "Options are clear with distractors representing related but distinct barriers to helping, aiding discrimination on knowledge."
+    },
+    {
+      "stem": "The empathy-altruism hypothesis proposes that people help others primarily due to:",
+      "options": [
+        "A desire to reduce their own distress",
+        "Empathic concern for the other person's welfare",
+        "Social pressure to conform",
+        "Anticipation of external rewards"
+      ],
+      "answer": "Empathic concern for the other person's welfare",
+      "explanation": "The empathy-altruism hypothesis states that empathic feelings motivate helping out of genuine concern without expectation of personal gain.",
+      "kn": "KN15",
+      "kn_explanation": "This question tests knowledge of motivational theories behind prosocial behavior, relating to social cognition and social interaction (KN15).",
+      "difficulty": "easy",
+      "quality_comment": "The correct option is conceptually distinct and distractors reflect alternative motivational explanations, enhancing test validity."
+    },
+    {
+      "stem": "According to social identity theory, prejudice and discrimination toward outgroup members stem primarily from:",
+      "options": [
+        "Competition for scarce resources",
+        "Categorizing people into groups and favoring one’s ingroup",
+        "Authoritarian personality traits",
+        "Unconscious negative feelings about minorities"
+      ],
+      "answer": "Categorizing people into groups and favoring one’s ingroup",
+      "explanation": "Social identity theory emphasizes natural tendencies to categorize and elevate one’s group to maintain positive self-esteem.",
+      "kn": "KN14",
+      "kn_explanation": "This question targets foundational social cognition theories around group membership and prejudice, fitting social cognition (KN14).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible competing theories of prejudice, making this question effective for assessing theory knowledge."
+    },
+    {
+      "stem": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "options": [
+        "Symbolic racism",
+        "Aversive racism",
+        "Ambivalent racism",
+        "Overt racism"
+      ],
+      "answer": "Aversive racism",
+      "explanation": "Aversive racism involves unconscious negative attitudes combined with an explicit belief in egalitarianism, leading to subtle discrimination.",
+      "kn": "KN20",
+      "kn_explanation": "The question pertains to a nuanced form of bias relevant to the causes and manifestations of oppression (KN20).",
+      "difficulty": "hard",
+      "quality_comment": "The choices are conceptually specific and require detailed content knowledge, making this appropriate for advanced testing."
+    },
+    {
+      "stem": "The phenomenon in which members of stigmatized groups perform more poorly on tasks after exposure to negative group stereotypes is called:",
+      "options": [
+        "Self-stereotyping",
+        "Stereotype threat",
+        "Scapegoating",
+        "Dehumanization"
+      ],
+      "answer": "Stereotype threat",
+      "explanation": "Stereotype threat refers to anxiety and performance impairments when individuals fear confirming negative stereotypes about their group.",
+      "kn": "KN14",
+      "kn_explanation": "This question assesses understanding of social cognitive processes leading to discrimination effects, falling under social cognition (KN14).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are related concepts that are plausible but distinct, helping differentiate levels of understanding."
+    },
+    {
+      "stem": "Ambivalent sexism theory differentiates hostile sexism from benevolent sexism by identifying hostile sexism as:",
+      "options": [
+        "A subjectively favorable attitude offering protection to women in traditional roles",
+        "Antipathy toward women perceived as challenging men's power",
+        "Neutral attitudes that do not affect behavior",
+        "A rejection of all gender stereotypes"
+      ],
+      "answer": "Antipathy toward women perceived as challenging men's power",
+      "explanation": "Hostile sexism involves negative attitudes toward women who are seen as threatening male dominance, while benevolent sexism is superficially positive.",
+      "kn": "KN20",
+      "kn_explanation": "This question addresses social bases of oppression related to gender bias, relevant to causes and effects of oppression (KN20).",
+      "difficulty": "medium",
+      "quality_comment": "The stem and options are precise; distractors represent common misunderstandings providing a valid challenge."
+    },
+    {
+      "stem": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "options": [
+        "A teacher treating students unfairly based on race",
+        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
+        "Individual holding and expressing overtly racist views",
+        "Discriminatory hiring practices by a private employer"
+      ],
+      "answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
+      "explanation": "Structural racism refers to systemic laws and policies that produce and sustain racial inequalities over time.",
+      "kn": "KN20",
+      "kn_explanation": "The question focuses on systemic and societal bases of oppression, fitting within causes, manifestations, and effects of oppression (KN20).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible but distinct forms of racism, increasing clarity and content validity."
+    },
+    {
+      "stem": "Research on shooter bias has found that:",
+      "options": [
+        "Both White and Black civilians exhibit shooter bias in response times and errors",
+        "Police officers do not show any form of shooter bias compared to civilians",
+        "Only White civilians show shooter bias related to racial stereotypes",
+        "Police officers make more errors than civilians when deciding to shoot armed suspects"
+      ],
+      "answer": "Both White and Black civilians exhibit shooter bias in response times and errors",
+      "explanation": "Studies found that civilians of both races show shooter bias, with faster decisions to shoot armed Black suspects and errors in shooting unarmed Black suspects.",
+      "kn": "KN14",
+      "kn_explanation": "This item addresses social cognitive biases and stereotype activation in decision-making, relating to social cognition (KN14).",
+      "difficulty": "hard",
+      "quality_comment": "The question integrates empirical research findings and has carefully constructed distractors that require detailed content knowledge."
+    },
+    {
+      "stem": "According to contact hypothesis, one key condition that enhances the effectiveness of intergroup contact for reducing prejudice is:",
+      "options": [
+        "Groups competing for limited resources",
+        "Contact occurring with unequal group status",
+        "Contact sanctioned by law or institutional authorities",
+        "Avoidance of cooperative activities"
+      ],
+      "answer": "Contact sanctioned by law or institutional authorities",
+      "explanation": "Legal or institutional support for contact helps ensure positive interaction and reduces hostility between groups.",
+      "kn": "KN16",
+      "kn_explanation": "This question concerns interventions focusing on group and systems processes to reduce prejudice (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and plausible alternatives make this question accessible but still discriminating for test-takers."
+    },
+    {
+      "stem": "Which of the following best describes the concept of infrahumanization in dehumanization theories?",
+      "options": [
+        "Denying the humanness of outgroup members entirely",
+        "Viewing outgroup members as fully human but inferior in status",
+        "Attributing fewer secondary, uniquely human emotions to outgroup members than to ingroup members",
+        "Believing ingroup members are less emotional than outgroup members"
+      ],
+      "answer": "Attributing fewer secondary, uniquely human emotions to outgroup members than to ingroup members",
+      "explanation": "Infrahumanization involves seeing outgroups as lacking complex emotions that are thought uniquely human, leading to reduced empathy.",
+      "kn": "KN14",
+      "kn_explanation": "The question taps into nuanced social cognitive biases and stereotyping phenomena within prejudice research (KN14).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are well-constructed, and the item requires understanding subtle differences in theories of dehumanization."
+    },
+    {
+      "stem": "Which factor is most influential in determining whether a bystander will help a person in distress in urban versus rural settings?",
+      "options": [
+        "Where the bystander was born and socialized",
+        "Whether the bystander has received formal emergency training",
+        "The bystander’s current location during the emergency",
+        "The severity of the victim’s injury"
+      ],
+      "answer": "The bystander’s current location during the emergency",
+      "explanation": "Research shows that current location matters more, with bystanders in urban settings less likely to help than those in rural settings regardless of socialization.",
+      "kn": "KN15",
+      "kn_explanation": "This item relates to social environmental influences on prosocial behavior and bystander intervention, fitting social interaction and relationships (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "This question targets empirical evidence distinguishing location effects, offering realistic but distinct distractors."
+    },
+    {
+      "stem": "Which of the following best explains why altruistic helping is more likely to result in sustained assistance compared to egoistic helping?",
+      "options": [
+        "Altruistic helping is motivated by reducing one’s own distress",
+        "Egoistic helping typically requires external rewards",
+        "Altruistic helping originates from empathic concern for the other’s well-being",
+        "Egoistic helping leads to increased social approval"
+      ],
+      "answer": "Altruistic helping originates from empathic concern for the other’s well-being",
+      "explanation": "Helping motivated by genuine concern for others' welfare (altruism) is more enduring than helping aimed at reducing one’s own negative feelings (egoism).",
+      "kn": "KN15",
+      "kn_explanation": "This question highlights motivational factors in prosocial behavior, relevant to social cognition in interaction (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors cover alternative motivations, making the correct answer clear but requiring conceptual understanding."
+    },
+    {
+      "stem": "Which of the following is an example of unintentional covert racism?",
+      "options": [
+        "Openly stating discriminatory beliefs",
+        "Providing a socially acceptable excuse for prejudiced behavior",
+        "Avoiding contact with minority group members without awareness of harm caused",
+        "Engaging in hate crimes"
+      ],
+      "answer": "Avoiding contact with minority group members without awareness of harm caused",
+      "explanation": "Unintentional covert racism involves unknowingly engaging in behaviors that negatively affect minorities without recognizing the harm.",
+      "kn": "KN20",
+      "kn_explanation": "This item examines subtle forms of racism and their manifestations, fitting causes and manifestations of oppression (KN20).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contrast intentionality and manifestation types, improving discrimination in specialized content."
+    }
+  ]
+}

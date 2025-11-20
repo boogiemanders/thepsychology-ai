@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "According to Judge, Bono, Ilies, and Gerehardt (2002), which Big Five personality traits are most strongly correlated with leader effectiveness?",
+      "options": [
+        "Neuroticism and openness",
+        "Extraversion and conscientiousness",
+        "Agreeableness and openness",
+        "Conscientiousness and neuroticism"
+      ],
+      "answer": "Extraversion and conscientiousness",
+      "explanation": "Meta-analytic findings indicate extraversion (.31) and conscientiousness (.28) have the largest correlations with leader effectiveness among the Big Five traits.",
+      "kn": "KN34",
+      "kn_explanation": "The question involves assessment and diagnosis concepts related to identifying personality traits linked to leadership effectiveness, which is appropriate for KN34.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and targets knowledge of personality traits in leadership, with plausible distractors that could challenge test-takers."
+    },
+    {
+      "stem": "Which of the following descriptions best aligns with a leader high in 'initiating structure' according to Ohio State studies on leader behavior?",
+      "options": [
+        "A leader who prioritizes interpersonal relationships and trust with employees",
+        "A leader who focuses primarily on task accomplishment and performance goals",
+        "A leader who avoids both task and people orientation",
+        "A leader who delegates all decision-making to subordinates"
+      ],
+      "answer": "A leader who focuses primarily on task accomplishment and performance goals",
+      "explanation": "Initiating structure reflects a task-oriented style where the leader emphasizes performance and goal achievement.",
+      "kn": "KN46",
+      "kn_explanation": "The question tests knowledge of leadership behavior dimensions and their impact on performance, fitting within treatment and intervention models (KN46).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward with clearly distinct options, ensuring comprehension of key leadership behavior constructs."
+    },
+    {
+      "stem": "Which leadership style is most characteristic of female leaders compared to male leaders, based on meta-analyses by Eagly and colleagues?",
+      "options": [
+        "More directive and autocratic",
+        "Higher use of laissez-faire behaviors",
+        "More participative and transformational leadership",
+        "Management-by-exception with active monitoring"
+      ],
+      "answer": "More participative and transformational leadership",
+      "explanation": "Female leaders tend to favor participative (democratic) and transformational styles, while male leaders lean more to directive and laissez-faire behaviors.",
+      "kn": "KN46",
+      "kn_explanation": "This question relates to differences in leadership styles by gender, which informs intervention strategies and supervision approaches (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Options reflect nuanced leadership distinctions by gender; distractors are scientifically grounded yet distinguishable."
+    },
+    {
+      "stem": "According to French and Raven’s bases of social power, which type of power is most likely to foster commitment rather than mere compliance or resistance?",
+      "options": [
+        "Coercive power",
+        "Legitimate power",
+        "Expert and referent power",
+        "Reward power"
+      ],
+      "answer": "Expert and referent power",
+      "explanation": "Expert and referent power are linked with subordinates’ commitment because they stem from respect and admiration or knowledge, rather than control over rewards or punishments.",
+      "kn": "KN46",
+      "kn_explanation": "Understanding leadership power bases and their effects on subordinate motivation is important for intervention strategies covered in KN46.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all plausible types of power; correct answer requires specific recall of power outcomes."
+    },
+    {
+      "stem": "In Fiedler’s Contingency Model, what does a low Least Preferred Coworker (LPC) score indicate about a leader’s style?",
+      "options": [
+        "The leader is primarily person-oriented",
+        "The leader is task-oriented and describes their least preferred coworker negatively",
+        "The leader is conflicted about their coworker’s traits",
+        "The leader is flexible and switches between task and person orientation"
+      ],
+      "answer": "The leader is task-oriented and describes their least preferred coworker negatively",
+      "explanation": "Low LPC scores indicate task-oriented leaders who view their least preferred coworker unfavorably due to task performance judgments.",
+      "kn": "KN34",
+      "kn_explanation": "The question addresses assessment instruments used to evaluate leadership orientation, fitting well with organizational assessment topics (KN34).",
+      "difficulty": "hard",
+      "quality_comment": "This question requires understanding of a specific and less commonly known leadership assessment tool, raising its difficulty appropriately."
+    },
+    {
+      "stem": "According to Hersey and Blanchard’s Situational Leadership Theory, what leadership style is best for subordinates who have high job ability but low willingness?",
+      "options": [
+        "Telling leader (high task, low relationship)",
+        "Selling leader (high task, high relationship)",
+        "Participating leader (low task, high relationship)",
+        "Delegating leader (low task, low relationship)"
+      ],
+      "answer": "Participating leader (low task, high relationship)",
+      "explanation": "Subordinates with high ability but low motivation benefit from a leader who provides support and encouragement rather than direction.",
+      "kn": "KN46",
+      "kn_explanation": "This question covers leadership style adaptation based on subordinate characteristics, which aligns with treatment and intervention approaches (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are balanced and reflect the core four styles; clinical application of theory is effectively tested."
+    },
+    {
+      "stem": "House's Path-Goal Theory suggests which leadership style is most appropriate for subordinates who have a high need for affiliation and are performing mundane tasks with low job satisfaction?",
+      "options": [
+        "Directive leadership",
+        "Supportive leadership",
+        "Achievement-oriented leadership",
+        "Participative leadership"
+      ],
+      "answer": "Supportive leadership",
+      "explanation": "Supportive leadership is best when tasks are unchallenging and subordinates need interpersonal support due to low satisfaction and high affiliation needs.",
+      "kn": "KN46",
+      "kn_explanation": "The question assesses theoretical knowledge about how leaders adapt style to subordinate needs, a key part of treatment and supervision models (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Clear and focused stem with plausible distractors, requiring precise application of the theory."
+    },
+    {
+      "stem": "The Vroom-Yetton-Jago decision model helps leaders determine:",
+      "options": [
+        "The ideal combinations of leader personality traits for efficacy",
+        "The best method for employee motivation based on power dynamics",
+        "The optimal leadership decision-making style based on situational variables",
+        "The level of subordinate job maturity to guide leadership style"
+      ],
+      "answer": "The optimal leadership decision-making style based on situational variables",
+      "explanation": "The model provides decision trees and matrices that help determine whether a leader should make decisions alone or include group members, depending on factors such as expertise and required commitment.",
+      "kn": "KN46",
+      "kn_explanation": "This question requires knowledge of a leadership theory focused on decision-making processes relevant to intervention and supervision (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible and somewhat related to leadership theory, adequately challenging knowledge without being misleading."
+    },
+    {
+      "stem": "In Leader-Member Exchange (LMX) theory, subordinates classified as 'in-group' typically experience:",
+      "options": [
+        "More formal relationships with the leader and routine tasks",
+        "Limited participation in decision-making and fewer challenges",
+        "Greater job satisfaction, support, and opportunities for responsibility",
+        "Strict performance monitoring and reduced trust"
+      ],
+      "answer": "Greater job satisfaction, support, and opportunities for responsibility",
+      "explanation": "In-group members receive favorable treatment, including more support, challenging assignments, and decision-making participation, leading to better outcomes.",
+      "kn": "KN46",
+      "kn_explanation": "This question involves understanding leader-subordinate interactions and their implications for workplace outcomes, fitting into treatment and intervention knowledge (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "The response options reflect contrasting out-group and in-group experiences well, making this an effective discrimination item."
+    },
+    {
+      "stem": "Which characteristic is NOT a defining feature of transformational leadership according to Bass (1997)?",
+      "options": [
+        "Idealized influence",
+        "Management by contingency rewards",
+        "Inspirational motivation",
+        "Intellectual stimulation"
+      ],
+      "answer": "Management by contingency rewards",
+      "explanation": "Contingency rewards are a feature of transactional leadership, whereas transformational leadership includes idealized influence, inspirational motivation, intellectual stimulation, and individualized consideration.",
+      "kn": "KN46",
+      "kn_explanation": "This tests differentiation between transformational and transactional leadership styles, part of contemporary treatment/intervention theories (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates related constructs; distractors reflect both leadership styles to test nuanced understanding."
+    },
+    {
+      "stem": "Management-by-exception in transactional leadership is characterized by:",
+      "options": [
+        "Providing employees individualized attention to foster growth",
+        "Promoting innovation and creative problem-solving",
+        "Intervening to correct mistakes either actively or passively",
+        "Delegating authority and decision-making entirely to subordinates"
+      ],
+      "answer": "Intervening to correct mistakes either actively or passively",
+      "explanation": "Management-by-exception involves leaders correcting errors, either by actively monitoring or passively waiting for serious problems before intervening.",
+      "kn": "KN46",
+      "kn_explanation": "Understanding leadership interventions and their mechanisms is central to treatment and supervision in leadership contexts (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are all plausible leadership-related behaviors, but only one accurately describes management-by-exception."
+    }
+  ]
+}

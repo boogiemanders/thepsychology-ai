@@ -1,0 +1,302 @@
+[
+  {
+    "id": "soc_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is attachment in development?",
+    "options": {
+      "A": "Physical contact between parent and child",
+      "B": "Emotional bond forming between infant and caregiver",
+      "C": "Dependency behavior that should be discouraged",
+      "D": "Lack of independence"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Attachment is the emotional bond between infant and primary caregiver that provides security and forms basis for later relationships."
+  },
+  {
+    "id": "soc_002",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What are Bowlby's phases of attachment development?",
+    "options": {
+      "A": "Pre-attachment, attachment in formation, clear-cut attachment, reciprocal relationships",
+      "B": "Dependent, independent, interdependent, autonomous",
+      "C": "Secure, insecure, avoidant, resistant",
+      "D": "Infancy, childhood, adolescence, adulthood"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN25",
+    "explanation": "Bowlby identified four phases: pre-attachment (indiscriminate social responses), attachment in formation, clear-cut attachment, and reciprocal relationships."
+  },
+  {
+    "id": "soc_003",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is secure attachment according to Ainsworth?",
+    "options": {
+      "A": "Child ignores caregiver when returned",
+      "B": "Child seeks comfort from caregiver; can explore independently",
+      "C": "Child shows high anxiety and resistance",
+      "D": "Child avoids caregiver completely"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Secure attachment is shown by seeking comfort when distressed and being able to explore independently knowing caregiver is available."
+  },
+  {
+    "id": "soc_004",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How do avoidant and resistant insecure attachment patterns differ?",
+    "options": {
+      "A": "Avoidant ignore caregiver; resistant seek but then resist comfort",
+      "B": "Avoidant is temporary; resistant is permanent",
+      "C": "Avoidant affects boys; resistant affects girls",
+      "D": "No meaningful difference"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN25",
+    "explanation": "Avoidant: child ignores caregiver; resistant: child seeks comfort but then resists it (angry behavior)."
+  },
+  {
+    "id": "soc_005",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is disorganized-disoriented attachment?",
+    "options": {
+      "A": "When child is forgetful",
+      "B": "Inconsistent, contradictory behavior; often linked to maltreatment",
+      "C": "Child's resistance to organization",
+      "D": "Inability to find the caregiver"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Disorganized attachment shows contradictory behaviors and is often associated with abuse, neglect, or frightening caregiver behavior."
+  },
+  {
+    "id": "soc_006",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the role of emotion in social development?",
+    "options": {
+      "A": "Emotions interfere with social development",
+      "B": "Emotions guide social behavior and communication",
+      "C": "Emotions are unrelated to social development",
+      "D": "Emotions only affect personal feelings"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Emotions regulate social behavior, facilitate communication, and guide development of social relationships."
+  },
+  {
+    "id": "soc_007",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is emotional regulation?",
+    "options": {
+      "A": "Controlling others' emotions",
+      "B": "Ability to manage one's own emotional responses",
+      "C": "Suppressing all emotions",
+      "D": "Expressing emotions without thinking"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Emotional regulation is the ability to manage, control, and respond appropriately to emotional experiences."
+  },
+  {
+    "id": "soc_008",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does social referencing develop in infants?",
+    "options": {
+      "A": "Innate ability at birth",
+      "B": "Reading others' emotional cues to guide own responses",
+      "C": "Understanding social hierarchies",
+      "D": "Ability to reference social rules"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Social referencing is using others' emotional expressions (especially caregiver's) to guide own responses to novel situations."
+  },
+  {
+    "id": "soc_009",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the development of peer relationships in childhood?",
+    "options": {
+      "A": "Begins only in middle childhood",
+      "B": "Not important for development",
+      "C": "Starts in infancy and becomes increasingly important",
+      "D": "Peaks in adulthood"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN25",
+    "explanation": "Peer relationships begin in infancy and become increasingly important throughout childhood for social development."
+  },
+  {
+    "id": "soc_010",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What are popular, rejected, and neglected peer statuses?",
+    "options": {
+      "A": "Statuses based on intelligence",
+      "B": "Children's social acceptance and peer relationships",
+      "C": "Academic achievement levels",
+      "D": "Maturity levels only"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Peer statuses reflect degree of social acceptance: popular (well-liked), rejected (disliked), and neglected (overlooked) by peers."
+  },
+  {
+    "id": "soc_011",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How does empathy develop in children?",
+    "options": {
+      "A": "Not developed until adolescence",
+      "B": "Present at birth",
+      "C": "Gradually emerges through perspective-taking and emotional understanding",
+      "D": "Cannot be taught or facilitated"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN25",
+    "explanation": "Empathy develops gradually as children acquire perspective-taking ability and emotional understanding of others."
+  },
+  {
+    "id": "soc_012",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the effect of early attachment on later development?",
+    "options": {
+      "A": "No long-term effects",
+      "B": "Only affects infancy",
+      "C": "Influences later emotional, social, and relationship development",
+      "D": "Prevents all relationship formation"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN25",
+    "explanation": "Early secure attachment promotes healthy emotional, social, and romantic relationships throughout life."
+  },
+  {
+    "id": "soc_013",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the impact of multiple caregivers on attachment?",
+    "options": {
+      "A": "Multiple caregivers prevent attachment formation",
+      "B": "Secure attachment to multiple caregivers is possible",
+      "C": "Only one attachment is ever possible",
+      "D": "Multiple attachments harm development"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Children can form secure attachments to multiple caregivers, though one relationship may be primary."
+  },
+  {
+    "id": "soc_014",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is stranger anxiety?",
+    "options": {
+      "A": "Fear of all adults",
+      "B": "Distress when meeting unfamiliar people",
+      "C": "Permanent anxiety disorder",
+      "D": "Fear of public places"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Stranger anxiety is normal distress when encountering unfamiliar people, typically emerging around 6-8 months."
+  },
+  {
+    "id": "soc_015",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is the separation protest response and what does it indicate?",
+    "options": {
+      "A": "Misbehavior when parent leaves",
+      "B": "Distress upon separation indicating secure attachment formation",
+      "C": "Permanent anxiety disorder",
+      "D": "Rejection of the parent"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Separation protest (crying when caregiver leaves) indicates secure attachment has formed, typically appearing around 6-9 months."
+  },
+  {
+    "id": "soc_016",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How do friendships change across childhood and adolescence?",
+    "options": {
+      "A": "No changes occur",
+      "B": "Shift from activity-based to loyalty and intimacy based",
+      "C": "Become less important",
+      "D": "Remain superficial throughout"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Early friendships are activity-based; they become increasingly based on loyalty, intimacy, and shared values in later childhood."
+  },
+  {
+    "id": "soc_017",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What role does play have in social development?",
+    "options": {
+      "A": "Play has no developmental role",
+      "B": "Play facilitates social skill development and relationship building",
+      "C": "Play only entertains",
+      "D": "Play delays social development"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Play provides opportunities for social interaction, cooperation, conflict resolution, and development of social skills."
+  },
+  {
+    "id": "soc_018",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is disruptive peer relationships impact on development?",
+    "options": {
+      "A": "They promote strength through adversity",
+      "B": "Peer rejection increases risk for emotional and behavioral problems",
+      "C": "Peer problems are irrelevant to development",
+      "D": "Only affect immediate relationships"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN25",
+    "explanation": "Poor peer relationships and rejection predict increased risk for depression, anxiety, aggression, and school problems."
+  },
+  {
+    "id": "soc_019",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the impact of secure attachment on exploration and independence?",
+    "options": {
+      "A": "Secure attachment prevents independence",
+      "B": "Attachment and independence are unrelated",
+      "C": "Secure attachment enables healthy exploration and independence",
+      "D": "Secure attachment creates dependence"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN25",
+    "explanation": "Secure attachment provides the emotional foundation for children to explore confidently and develop healthy independence."
+  },
+  {
+    "id": "soc_020",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does cultural context affect attachment and social relationships?",
+    "options": {
+      "A": "Culture has no effect on attachment",
+      "B": "All attachment styles are identical across cultures",
+      "C": "Cultural practices influence attachment styles and relationship values",
+      "D": "Culture only affects language, not relationships"
+    },
+    "correct_answer": "C",
+    "kn_id": "KN25",
+    "explanation": "Cultural values and practices influence attachment behaviors, emotional expression, and what is valued in relationships."
+  }
+]

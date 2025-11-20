@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "stem": "Which qualitative research approach aims primarily to develop a general, abstract theory grounded in participants’ views through methods like interviews and observations?",
+      "options": [
+        "Phenomenology",
+        "Grounded Theory",
+        "Ethnography",
+        "Thematic Analysis"
+      ],
+      "answer": "Grounded Theory",
+      "explanation": "Grounded theory seeks to generate an abstract theory based directly on the data collected from participants’ perspectives, typically through interviews and observations.",
+      "kn": "KN53",
+      "kn_explanation": "This question tests knowledge of qualitative research methods under sampling and research design, which is part of research methods (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates among qualitative approaches with plausible distractors, challenging test-takers to distinguish based on key goals and data collection methods."
+    },
+    {
+      "stem": "In single-subject experimental designs, what is the main methodological advantage of an ABAB reversal design over a simple AB design?",
+      "options": [
+        "It allows for random assignment of subjects to groups.",
+        "It controls for history effects by demonstrating reversibility of behavior change.",
+        "It uses multiple subjects simultaneously to improve external validity.",
+        "It eliminates the need for a baseline phase."
+      ],
+      "answer": "It controls for history effects by demonstrating reversibility of behavior change.",
+      "explanation": "The ABAB design includes withdrawing and reapplying treatment, showing that behavior changes correspond with treatment phases rather than extraneous events, thus controlling for history effects.",
+      "kn": "KN54",
+      "kn_explanation": "This question focuses on single-subject experimental design features and control of internal validity threats, central to experimental design knowledge (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "The options provide relevant design features; only one correctly captures the essence of the reversal design’s strength, making it a fair EPPP question."
+    },
+    {
+      "stem": "A researcher is conducting a study comparing depressive symptoms following low, moderate, and high doses of an antidepressant, assigning different participants to each dose group randomly. Which research design is being used?",
+      "options": [
+        "Within-subjects design",
+        "Between-subjects design",
+        "Mixed design",
+        "Multiple baseline design"
+      ],
+      "answer": "Between-subjects design",
+      "explanation": "In a between-subjects design, different groups of participants are each exposed to one level of the independent variable, such as different drug doses assigned randomly.",
+      "kn": "KN54",
+      "kn_explanation": "This question tests understanding of experimental group designs, particularly between-subjects versus within-subjects, pertinent to research design principles (KN54).",
+      "difficulty": "easy",
+      "quality_comment": "The scenario is clearly described and distractors are plausible but distinct, providing good discrimination of group design knowledge."
+    },
+    {
+      "stem": "Which of the following triangulation types involves using multiple methods like interviews, questionnaires, and observations to collect data in order to increase the credibility of qualitative research findings?",
+      "options": [
+        "Data Triangulation",
+        "Investigator Triangulation",
+        "Methodological Triangulation",
+        "Theory Triangulation"
+      ],
+      "answer": "Methodological Triangulation",
+      "explanation": "Methodological triangulation refers to using multiple data collection methods to improve study credibility and reduce bias in qualitative research.",
+      "kn": "KN53",
+      "kn_explanation": "The question assesses knowledge of qualitative research validation strategies such as triangulation types, categorized under sampling and data collection methods (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent real triangulation types, requiring test-takers to carefully differentiate their definitions, making this a challenging but fair item."
+    },
+    {
+      "stem": "In a multiple baseline design across behaviors, what is the main advantage compared to a reversal design?",
+      "options": [
+        "It requires fewer baseline phases to establish stable behavior.",
+        "It eliminates the need to withdraw the treatment once applied to a behavior.",
+        "It randomly assigns participants to treatment conditions.",
+        "It produces the highest external validity among single-subject designs."
+      ],
+      "answer": "It eliminates the need to withdraw the treatment once applied to a behavior.",
+      "explanation": "A key advantage of multiple baseline designs is that treatment does not have to be withdrawn to establish experimental control, unlike reversal designs.",
+      "kn": "KN54",
+      "kn_explanation": "This item targets understanding of single-subject design strengths related to internal validity and experimental control (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "The options contrast features of experimental designs well, ensuring test-takers must understand the practical advantages of design differences."
+    },
+    {
+      "stem": "Which developmental research design measures cognitive functioning in individuals aged 40, 50, 60, 70, and 80 years at one specific point in time?",
+      "options": [
+        "Longitudinal research",
+        "Cross-sequential research",
+        "Cross-sectional research",
+        "Experimental research"
+      ],
+      "answer": "Cross-sectional research",
+      "explanation": "Cross-sectional research compares different age groups at a single point in time rather than following the same individuals over time.",
+      "kn": "KN54",
+      "kn_explanation": "This question assesses knowledge of developmental research designs, particularly cross-sectional studies, an essential part of research design (KN54).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and straightforward, this question assesses a fundamental difference in developmental designs with plausible but distinguishable options."
+    },
+    {
+      "stem": "Regarding probability sampling methods, which sampling technique involves dividing the population into subgroups based on relevant characteristics and then randomly sampling from each subgroup?",
+      "options": [
+        "Cluster random sampling",
+        "Simple random sampling",
+        "Stratified random sampling",
+        "Systematic random sampling"
+      ],
+      "answer": "Stratified random sampling",
+      "explanation": "Stratified random sampling involves dividing the population into strata and randomly sampling from each to ensure representative subgroups are included.",
+      "kn": "KN53",
+      "kn_explanation": "This question covers sampling methods fundamental to obtaining representative samples, key to sampling and data collection methods (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Options represent common probability sampling methods with clear definitions; the question is well-constructed to test precise knowledge."
+    },
+    {
+      "stem": "What is the primary goal of Community-Based Participatory Research (CBPR)?",
+      "options": [
+        "To test hypotheses in a controlled laboratory environment.",
+        "To develop abstract theories based solely on academic researchers’ perspectives.",
+        "To collaborate with community partners to generate knowledge and promote social change.",
+        "To utilize exclusively quantitative methods to study public health problems."
+      ],
+      "answer": "To collaborate with community partners to generate knowledge and promote social change.",
+      "explanation": "CBPR emphasizes equitable collaboration with community members throughout the research process to address community-relevant problems and effect social change.",
+      "kn": "KN59",
+      "kn_explanation": "This question pertains to community involvement and participatory research approaches within research methods (KN59).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors clearly contrast with key CBPR principles, making the correct answer stand out while testing conceptual understanding."
+    },
+    {
+      "stem": "A correlational study analyzes the relationship between the predictor X (hours studied) and criterion Y (exam score). What does the regression equation derived from this analysis primarily allow the researcher to do?",
+      "options": [
+        "Establish a causal relationship between hours studied and exam score.",
+        "Describe the characteristics of the sample using descriptive statistics.",
+        "Predict an individual's exam score based on their hours studied.",
+        "Determine the population mean exam score."
+      ],
+      "answer": "Predict an individual's exam score based on their hours studied.",
+      "explanation": "Regression analysis allows prediction of scores on a criterion variable (exam score) based on scores on one or more predictor variables (hours studied).",
+      "kn": "KN54",
+      "kn_explanation": "This question tests understanding of correlational research and regression analysis within quantitative research methods (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research."
+    },
+    {
+      "stem": "What is the major limitation of randomized controlled trials (RCTs) that affects the generalizability of their results?",
+      "options": [
+        "Use of random assignment to groups",
+        "Strict inclusion/exclusion criteria and controlled study conditions",
+        "Lack of a control group",
+        "Inability to demonstrate causality"
+      ],
+      "answer": "Strict inclusion/exclusion criteria and controlled study conditions",
+      "explanation": "While RCTs have high internal validity due to random assignment, their strict criteria and controlled conditions can limit external validity, reducing generalizability.",
+      "kn": "KN54",
+      "kn_explanation": "This item addresses experimental design concepts, specifically internal and external validity considerations in clinical trials (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "The question requires knowledge of strengths and weaknesses of RCT methodology, with plausible but distinct distractors enhancing test quality."
+    },
+    {
+      "stem": "In qualitative research, what is the primary purpose of thematic analysis?",
+      "options": [
+        "To test specific hypotheses using numerical data.",
+        "To identify, analyze, and report patterns or themes within qualitative data.",
+        "To develop large-scale statistical models of behavior.",
+        "To randomly assign participants to treatment groups."
+      ],
+      "answer": "To identify, analyze, and report patterns or themes within qualitative data.",
+      "explanation": "Thematic analysis is a qualitative method focused on systematically finding themes and patterns within textual or interview data.",
+      "kn": "KN53",
+      "kn_explanation": "This question evaluates comprehension of qualitative analytic methods, an important aspect of qualitative research methodology (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward with clear options, providing good differentiation between qualitative and quantitative methods."
+    },
+    {
+      "stem": "Which type of observation involves recording whether or not a behavior occurred during predefined intervals and is best suited for frequent behaviors without clear beginnings or ends?",
+      "options": [
+        "Event recording",
+        "Unstructured observation",
+        "Interval recording",
+        "Case study"
+      ],
+      "answer": "Interval recording",
+      "explanation": "Interval recording involves noting if the behavior occurred within set time intervals, useful for frequent behaviors lacking clear start and end points.",
+      "kn": "KN53",
+      "kn_explanation": "This question tests knowledge of structured observational techniques used in quantitative descriptive research designs (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include related but distinct observational methods, making this an effective test of detailed procedural knowledge."
+    },
+    {
+      "stem": "In a mixed research design measuring the effects of drug dose on depression over time, drug dose is manipulated between subjects, while depressive symptoms measured weekly represent which type of variable?",
+      "options": [
+        "Between-subjects variable",
+        "Within-subjects variable",
+        "Confounding variable",
+        "Independent variable"
+      ],
+      "answer": "Within-subjects variable",
+      "explanation": "Time-related measurements repeated on the same individuals represent within-subjects variables in a mixed design, while drug dose is between-subjects.",
+      "kn": "KN54",
+      "kn_explanation": "This item focuses on understanding mixed research designs involving both between- and within-subjects variables, a core research design concept (KN54).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires integration of design concepts, making distractors plausible and the item challenging at the EPPP level."
+    },
+    {
+      "stem": "Which sampling method involves selecting participants who are easiest to access, often leading to potential sampling bias?",
+      "options": [
+        "Convenience sampling",
+        "Stratified random sampling",
+        "Snowball sampling",
+        "Simple random sampling"
+      ],
+      "answer": "Convenience sampling",
+      "explanation": "Convenience sampling includes participants who are readily available but may not represent the population well, increasing risk of sampling bias.",
+      "kn": "KN53",
+      "kn_explanation": "This question addresses non-probability sampling techniques focusing on practical sampling approaches and their limitations, fitting under research methods sampling knowledge (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The item clearly contrasts convenience sampling with other common sampling techniques, aiding differentiation and conceptual understanding."
+    },
+    {
+      "stem": "What is a primary disadvantage of analogue research compared to naturalistic research settings?",
+      "options": [
+        "It produces less internally valid results",
+        "It limits the external validity or generalizability of findings",
+        "It cannot be ethically conducted",
+        "It does not allow any experimental control"
+      ],
+      "answer": "It limits the external validity or generalizability of findings",
+      "explanation": "Analogue research increases internal validity through controlled conditions but limits external validity because it doesn't fully replicate real-world settings.",
+      "kn": "KN54",
+      "kn_explanation": "This question assesses knowledge of trade-offs between internal and external validity in specific research designs, central to experimental design (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors reflect common research trade-off misconceptions, making the correct choice clear yet requiring understanding of validity concepts."
+    },
+    {
+      "stem": "Which of the following is a key feature of cross-sequential developmental research design?",
+      "options": [
+        "It assesses different age groups only at one point in time",
+        "It follows the same group of individuals repeatedly over many years",
+        "It combines longitudinal and cross-sectional methods to distinguish age and cohort effects",
+        "It exclusively studies a single individual across different time points"
+      ],
+      "answer": "It combines longitudinal and cross-sectional methods to distinguish age and cohort effects",
+      "explanation": "Cross-sequential designs measure multiple cohorts longitudinally, helping separate effects of age from those due to cohort (generational) differences.",
+      "kn": "KN54",
+      "kn_explanation": "This item focuses on understanding developmental research designs, specifically cross-sequential methods distinguishing confounding factors (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "The item provides clear, distinct plausible options that require knowledge beyond basic developmental design definitions."
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "questions": [
+    {
+      "stem": "Which brain area is primarily responsible for the consolidation of long-term declarative memories and spatial memory?",
+      "options": [
+        "Hippocampus",
+        "Amygdala",
+        "Basal Ganglia",
+        "Prefrontal Cortex"
+      ],
+      "answer": "Hippocampus",
+      "explanation": "The hippocampus plays a critical role in transferring declarative memories from short-term to long-term memory and is involved in spatial memory.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses major neurobiological bases and models of memory relevant to declarative and spatial memory, falling under major research-based theories and models of memory (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is straightforward with plausible distractors representing different memory-related brain structures, clearly testing memory system knowledge."
+    },
+    {
+      "stem": "Damage to which brain area would most likely impair procedural memory and skill learning while leaving declarative memory mostly intact?",
+      "options": [
+        "Basal Ganglia and Cerebellum",
+        "Amygdala",
+        "Hippocampus",
+        "Prefrontal Cortex"
+      ],
+      "answer": "Basal Ganglia and Cerebellum",
+      "explanation": "The basal ganglia and cerebellum are essential for procedural and implicit memories; damage to these disrupts skill learning but generally spares declarative memory.",
+      "kn": "KN8",
+      "kn_explanation": "This question focuses on brain systems underlying different types of memory—specifically procedural memory—consistent with research-based memory models (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are relevant brain areas involved in other memory types, providing a challenging but clear test of procedural memory knowledge."
+    },
+    {
+      "stem": "Which of the following best characterizes memory impairments seen in patient H.M. following bilateral medial temporal lobe resection?",
+      "options": [
+        "Intact short-term and procedural memory but impaired new declarative memory formation",
+        "Impaired short-term memory but intact procedural memory and long-term memory",
+        "Deficits in procedural memory with intact episodic memory",
+        "Complete loss of both short-term and long-term memory"
+      ],
+      "answer": "Intact short-term and procedural memory but impaired new declarative memory formation",
+      "explanation": "H.M.’s surgery caused an inability to transfer new declarative memories to long-term storage while preserving short-term and procedural memory.",
+      "kn": "KN8",
+      "kn_explanation": "This assesses understanding of landmark neuropsychological cases informing memory models and brain areas, a core topic under memory theories (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-constructed and uses a classic clinical example with plausible distractors making it suitable for EPPP review."
+    },
+    {
+      "stem": "Long-term potentiation (LTP), believed to underlie long-term memory formation, was first discovered in which brain region?",
+      "options": [
+        "Hippocampus",
+        "Amygdala",
+        "Cerebellum",
+        "Prefrontal Cortex"
+      ],
+      "answer": "Hippocampus",
+      "explanation": "LTP was initially observed at glutamate receptors in the hippocampus and plays a key role in learning and long-term memory.",
+      "kn": "KN8",
+      "kn_explanation": "This question assesses knowledge of neural mechanisms of memory consolidation, fitting within the neuroscience aspects of memory models (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are relevant brain areas involved in memory but only one was where LTP was first discovered, providing a focused challenge."
+    },
+    {
+      "stem": "During which sleep stage are K-complexes and sleep spindles most prominently observed?",
+      "options": [
+        "Stage N2",
+        "Stage N1",
+        "Stage N3",
+        "REM (Stage R) sleep"
+      ],
+      "answer": "Stage N2",
+      "explanation": "Sleep spindles and K-complexes are characteristic features of stage N2 sleep, indicating light but stable non-REM sleep.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests knowledge of sleep stages, a key physiological process relevant to cognition and memory consolidation (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Options include all main sleep stages with specific EEG features, allowing test-takers to demonstrate detailed understanding."
+    },
+    {
+      "stem": "Which statement best describes REM sleep characteristics?",
+      "options": [
+        "Low amplitude, high-frequency EEG activity with rapid eye movements and muscle atonia",
+        "High amplitude, low-frequency delta waves with slow eye movements and high muscle tone",
+        "Theta waves interrupted by sleep spindles and K-complexes without rapid eye movements",
+        "Replacement of alpha waves by theta waves, associated with sleep onset"
+      ],
+      "answer": "Low amplitude, high-frequency EEG activity with rapid eye movements and muscle atonia",
+      "explanation": "REM sleep has desynchronized, low-amplitude high-frequency EEG, rapid eye movements, and nearly paralyzed muscles (atonia).",
+      "kn": "KN8",
+      "kn_explanation": "The question taps into understanding of sleep physiology and EEG patterns, which relate to cognitive and neurobiological functioning (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Each option correctly describes features of different sleep stages, making it a good discriminating question."
+    },
+    {
+      "stem": "Which brain region is most implicated in attaching emotional significance to memories, such that damage here abolishes the enhanced recall of emotional over neutral experiences?",
+      "options": [
+        "Amygdala",
+        "Prefrontal Cortex",
+        "Hippocampus",
+        "Thalamus"
+      ],
+      "answer": "Amygdala",
+      "explanation": "The amygdala is critical for encoding emotions in memories, and damage results in equal recall of emotional and nonemotional events.",
+      "kn": "KN10",
+      "kn_explanation": "This question incorporates the study of emotion processing and its influence on memory, placing it within models of emotion and memory (KN10).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are other memory-related brain areas, enhancing the question’s specificity regarding emotion-memory interaction."
+    },
+    {
+      "stem": "Which age-related change in sleep is correct?",
+      "options": [
+        "Older adults spend less time in stage N3 slow-wave sleep and experience more awakenings",
+        "Infants begin sleep periods with quiet (non-REM) sleep followed by active (REM) sleep",
+        "Total sleep time increases from infancy to adulthood",
+        "Older adults have delayed sleep phase and tend to fall asleep later in the evening"
+      ],
+      "answer": "Older adults spend less time in stage N3 slow-wave sleep and experience more awakenings",
+      "explanation": "Older adults have decreased slow-wave (stage N3) sleep, increased nighttime awakenings, and earlier sleep timing (phase advance), not delay.",
+      "kn": "KN21",
+      "kn_explanation": "This question addresses lifespan changes in sleep patterns, consistent with normal growth and development across the lifespan (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misconceptions about sleep changes, making this a good item to test developmental sleep knowledge."
+    },
+    {
+      "stem": "Which neurotransmitter was found by Kandel’s research on Aplysia to increase during short-term memory formation?",
+      "options": [
+        "Serotonin",
+        "Dopamine",
+        "Glutamate",
+        "Acetylcholine"
+      ],
+      "answer": "Serotonin",
+      "explanation": "Kandel’s studies showed that short-term storage involved increased release of serotonin during classical conditioning of reflexes in Aplysia.",
+      "kn": "KN8",
+      "kn_explanation": "This question focuses on the neural mechanisms underlying memory formation, particularly classical conditioning and neurotransmitters (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible neurotransmitters involved in learning, offering a well-constructed question on neurobiology of memory."
+    },
+    {
+      "stem": "What effect does administering a drug that inhibits RNA synthesis around the time of training have on memory formation?",
+      "options": [
+        "Prevents formation of long-term but not short-term memories",
+        "Prevents formation of short-term but not long-term memories",
+        "Enhances both short-term and long-term memory formation",
+        "Has no effect on memory formation"
+      ],
+      "answer": "Prevents formation of long-term but not short-term memories",
+      "explanation": "RNA synthesis is required for protein synthesis necessary for long-term memory consolidation, so inhibiting it blocks long-term, but not short-term, memory.",
+      "kn": "KN8",
+      "kn_explanation": "The question pertains to molecular mechanisms of memory and how genetic activity supports long-term memory processes (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem and correct use of neuroscience terms make this a strong question on memory physiology."
+    },
+    {
+      "stem": "Which of the following best describes the transition and EEG activity in sleep stage N1?",
+      "options": [
+        "Transition from alpha to theta waves as person begins falling asleep",
+        "Presence of delta waves indicating deep sleep",
+        "High-frequency, low-amplitude beta waves typical of REM sleep",
+        "Theta waves interrupted by sleep spindles and K-complexes"
+      ],
+      "answer": "Transition from alpha to theta waves as person begins falling asleep",
+      "explanation": "Stage N1 is characterized by the replacement of alpha waves by theta waves during the transition from wakefulness to sleep.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests knowledge of electrophysiological correlates of early sleep stages, related to cognition and brain activity (KN8).",
+      "difficulty": "easy",
+      "quality_comment": "Well-phrased with clear EEG characteristics, making it an effective question for basic sleep stage identification."
+    },
+    {
+      "stem": "Which brain area is integral to working memory, item memory, and source memory, including remembering what happened and where/when it happened?",
+      "options": [
+        "Prefrontal Cortex",
+        "Amygdala",
+        "Hippocampus",
+        "Thalamus"
+      ],
+      "answer": "Prefrontal Cortex",
+      "explanation": "The prefrontal cortex is critical for various memory aspects including working memory, item memory (what happened), and source memory (when/where it happened).",
+      "kn": "KN8",
+      "kn_explanation": "The question pertains to cognitive bases of memory function, specifically the role of brain areas in episodic memory processes (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are involved in other memory functions, making the question appropriately challenging and focused on prefrontal-associated memory."
+    },
+    {
+      "stem": "Which sleep theory proposes that sleep’s primary function is to repair damage accumulated during waking hours?",
+      "options": [
+        "Recovery/restoration theories",
+        "Adaptive/evolutionary theories",
+        "Consolidation theories",
+        "Energy conservation hypothesis"
+      ],
+      "answer": "Recovery/restoration theories",
+      "explanation": "Recovery/restoration theories suggest the main purpose of sleep is to restore physiological and neural function after wakefulness-related wear.",
+      "kn": "KN8",
+      "kn_explanation": "This question relates to psychological theories of sleep function, part of cognitive-affective bases of behavior (KN8).",
+      "difficulty": "easy",
+      "quality_comment": "Options include related theories with subtle differences, but the correct choice clearly fits the content, suitable for foundational sleep theory knowledge."
+    },
+    {
+      "stem": "Which statement best describes the typical pattern of sleep stage duration changes across a single night?",
+      "options": [
+        "REM sleep duration increases and stage N3 sleep duration decreases as the night progresses",
+        "Stage N3 duration increases while REM sleep decreases throughout the night",
+        "REM and stage N3 durations remain constant throughout the night",
+        "Stage N1 sleep predominates in the second half of the night"
+      ],
+      "answer": "REM sleep duration increases and stage N3 sleep duration decreases as the night progresses",
+      "explanation": "Throughout the night, REM sleep episodes lengthen, while deep slow-wave sleep (stage N3) episodes become shorter.",
+      "kn": "KN8",
+      "kn_explanation": "This question examines understanding of normal sleep architecture and how different stages vary across the sleep cycle, relevant to cognitive and neural processes in sleep (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect sleep pattern descriptions that require detailed sleep knowledge, enhancing discrimination."
+    },
+    {
+      "stem": "Which brain structure’s damage can cause both anterograde and retrograde amnesia due to its involvement in memory processing?",
+      "options": [
+        "Thalamus",
+        "Amygdala",
+        "Basal Ganglia",
+        "Prefrontal Cortex"
+      ],
+      "answer": "Thalamus",
+      "explanation": "Damage to the thalamus can cause both anterograde and retrograde amnesia because of its role in memory processing and relay functions.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses the neuroanatomical basis of amnesia, linking brain structures to memory impairments within memory models (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Good use of a less commonly tested memory-related brain region, which broadens knowledge evaluation beyond hippocampus and amygdala."
+    }
+  ]
+}

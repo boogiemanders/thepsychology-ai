@@ -1,0 +1,243 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following is required for a diagnosis of a Substance Use Disorder according to the DSM-5-TR?",
+      "options": [
+        "Presence of two or more characteristic symptoms within a 12-month period",
+        "At least one symptom of impairment lasting more than six months",
+        "Symptoms causing distress but no behavioral changes",
+        "Only physiological withdrawal symptoms"
+      ],
+      "answer": "Presence of two or more characteristic symptoms within a 12-month period",
+      "explanation": "DSM-5-TR requires at least two characteristic symptoms within a 12-month period to diagnose substance use disorders, reflecting clinical significance.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests understanding of diagnostic criteria and classification systems relevant to substance use disorders, aligned with diagnostic frameworks (KN36).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and well-defined options, with distractors plausible but incorrect, ideal for foundational knowledge assessment."
+    },
+    {
+      "stem": "Which symptom is NOT one of the criteria for Alcohol Intoxication in DSM-5-TR?",
+      "options": [
+        "Incoordination",
+        "Nystagmus",
+        "Pupillary constriction",
+        "Slurred speech",
+        "Unsteady gait"
+      ],
+      "answer": "Pupillary constriction",
+      "explanation": "Pupillary constriction is characteristic of opioid intoxication, not alcohol intoxication; alcohol intoxication includes symptoms like slurred speech, incoordination, nystagmus, and unsteady gait.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of specific symptom criteria used in psychiatric diagnosis (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Good focus on differential diagnosis with strong distractors from related substance intoxications, enhancing discrimination."
+    },
+    {
+      "stem": "Korsakoff syndrome, associated with alcohol use, is characterized clinically by:",
+      "options": [
+        "Anterograde and retrograde amnesia with confabulation linked to thiamine deficiency",
+        "Psychomotor agitation and autonomic hyperactivity following alcohol cessation",
+        "Severe mood lability and inappropriate aggression during intoxication",
+        "Transient hallucinations and illusions during withdrawal",
+        "Pupillary dilation and psychomotor retardation"
+      ],
+      "answer": "Anterograde and retrograde amnesia with confabulation linked to thiamine deficiency",
+      "explanation": "Korsakoff syndrome is a form of alcohol-induced major neurocognitive disorder involving profound memory impairment and confabulation, caused by thiamine deficiency.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to neurobiological bases and complications of substance use, focusing on brain damage and cognitive deficits (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Options include symptoms from other alcohol-related disorders, providing strong distractors; question tests clinical knowledge of neurological sequelae."
+    },
+    {
+      "stem": "Which of the following symptoms is required for the diagnosis of Opioid Intoxication?",
+      "options": [
+        "Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory",
+        "Pupillary dilation plus hypervigilance and psychomotor agitation",
+        "Autonomic hyperactivity plus anxiety and transient hallucinations",
+        "Weight loss and vivid nightmares",
+        "Slurred speech plus nystagmus and unsteady gait"
+      ],
+      "answer": "Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory",
+      "explanation": "Opioid intoxication involves pupillary constriction and at least one of the listed behavioral/psychological symptoms during or shortly after use.",
+      "kn": "KN36",
+      "kn_explanation": "Focus on diagnostic symptomatology of opioid intoxication reflects understanding of classification criteria (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include symptoms of other substances' intoxication or withdrawal, appropriately challenging test-takers."
+    },
+    {
+      "stem": "Which of the following interventions focuses primarily on arranging an individual’s lifestyle so that healthy, drug-free living is more rewarding than substance use?",
+      "options": [
+        "Community Reinforcement Approach (CRA)",
+        "Personalized Normative Feedback (PNF)",
+        "Voucher-Based Reinforcement Therapy (VBRT)",
+        "Relapse Prevention Therapy (RPT)",
+        "Twelve-step Facilitation"
+      ],
+      "answer": "Community Reinforcement Approach (CRA)",
+      "explanation": "CRA is based on operant conditioning principles and helps individuals make their lifestyle rewarding to compete with drug use.",
+      "kn": "KN44",
+      "kn_explanation": "This question examines evidence-based behavioral treatment approaches for substance use, focusing on intervention mechanisms (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all relevant substance use interventions, which requires discrimination and understanding different treatment foci."
+    },
+    {
+      "stem": "Voucher-Based Reinforcement Therapy (VBRT) primarily utilizes which behavioral principle to promote abstinence?",
+      "options": [
+        "Contingency management by providing vouchers contingent on treatment goals",
+        "Cognitive restructuring to alter beliefs about substance use",
+        "Motivational interviewing to enhance readiness to change",
+        "Norm correction to adjust perceived peer substance use",
+        "Relapse prevention by identifying high-risk situations"
+      ],
+      "answer": "Contingency management by providing vouchers contingent on treatment goals",
+      "explanation": "VBRT is a contingency management approach where patients receive vouchers as positive reinforcement for meeting treatment goals like negative drug screens.",
+      "kn": "KN44",
+      "kn_explanation": "This question targets the understanding of specific evidence-based behavioral techniques for substance use disorders (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options represent varied intervention strategies, compelling the examinee to know the core principle of VBRT."
+    },
+    {
+      "stem": "Personalized Normative Feedback (PNF) reduces problematic substance use primarily by:",
+      "options": [
+        "Correcting clients’ overestimations of peer substance use prevalence",
+        "Increasing clients’ awareness of physiological withdrawal symptoms",
+        "Providing vouchers contingent on abstinence",
+        "Teaching coping skills to handle high-risk situations",
+        "Reminding clients of appointment schedules via text messages"
+      ],
+      "answer": "Correcting clients’ overestimations of peer substance use prevalence",
+      "explanation": "PNF works by giving feedback that contrasts clients' perceptions with actual peer behaviors to reduce misperceptions and thus decrease use.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on cognitive-behavioral treatment models and mechanisms to reduce substance use (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are plausible but clearly different interventions, enabling assessment of conceptual understanding."
+    },
+    {
+      "stem": "Relapse Prevention Therapy (RPT) conceptualizes a lapse in substance use as most likely to become a full relapse when the individual:",
+      "options": [
+        "Has poor coping skills, low self-efficacy, and experiences an abstinence violation effect",
+        "Experiences withdrawal symptoms during the first 48 hours post-cessation",
+        "Is given vouchers contingent on negative drug test results",
+        "Receives personalized normative feedback about peer substance use",
+        "Is in early remission with no recent substance use"
+      ],
+      "answer": "Has poor coping skills, low self-efficacy, and experiences an abstinence violation effect",
+      "explanation": "RPT emphasizes that lapses combined with inadequate coping and negative cognitions about the lapse often lead to full relapse.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses understanding of cognitive-behavioral theories and relapse prevention techniques in substance use treatment (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors describe elements from other treatments making the question a solid test of RPT-specific conceptual knowledge."
+    },
+    {
+      "stem": "Which of the following characterizes Tobacco Withdrawal according to the DSM-5-TR?",
+      "options": [
+        "At least four of seven symptoms developing within 24 hours of abrupt cessation, including irritability and impaired concentration",
+        "Development of seizures and hallucinations following cessation",
+        "Transient hallucinations or illusions appearing within days of quitting",
+        "Pupillary constriction accompanied by drowsiness shortly after use",
+        "Vivid and unpleasant dreams occurring weeks after stopping use"
+      ],
+      "answer": "At least four of seven symptoms developing within 24 hours of abrupt cessation, including irritability and impaired concentration",
+      "explanation": "Tobacco withdrawal requires at least four of seven symptoms, such as irritability, anger, anxiety, impaired concentration, increased appetite, restlessness, depressed mood, or insomnia, beginning within 24 hours of stopping.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests criteria related to substance withdrawal syndromes for accurate diagnosis (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include symptoms diagnostic for other substances, enhancing item plausibility and preventing cueing."
+    },
+    {
+      "stem": "In Project MATCH, which treatment showed a slight advantage in reducing drinking in clients diagnosed with alcohol dependence or abuse at one- and three-year follow-up?",
+      "options": [
+        "Twelve-step facilitation",
+        "Motivational enhancement therapy",
+        "Cognitive behavioral coping skills therapy",
+        "Community reinforcement approach",
+        "Voucher-based reinforcement therapy"
+      ],
+      "answer": "Twelve-step facilitation",
+      "explanation": "Project MATCH results indicated that all three treatments produced significant reductions but twelve-step facilitation had a slight advantage at follow-ups.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of outcome research and comparative efficacy of treatments for substance use disorders (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options include well-known treatments in the field; this item requires recall of specific research findings, suitable for EPPP context."
+    },
+    {
+      "stem": "Hallucinogen Persisting Perception Disorder is best described as:",
+      "options": [
+        "Re-experiencing perceptual symptoms from prior intoxication with intact reality testing",
+        "Hallucinations accompanied by impaired reality testing and cognitive deficits",
+        "Withdrawal symptoms that include autonomic hyperactivity and seizures",
+        "Anxiety disorder onset following hallucinogen use with delusions",
+        "Transient psychosis occurring during acute intoxication with hallucinations"
+      ],
+      "answer": "Re-experiencing perceptual symptoms from prior intoxication with intact reality testing",
+      "explanation": "This disorder involves brief, recurring visual disturbances similar to those experienced during intoxication, with the individual aware that symptoms are due to prior substance use.",
+      "kn": "KN36",
+      "kn_explanation": "Focuses on understanding diagnosis and symptom presentation of substance-induced disorders (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Includes subtle distinctions related to psychotic symptoms and reality testing, requiring knowledge of diagnostic conceptualization."
+    },
+    {
+      "stem": "Which theoretical model underlies the Community Reinforcement Approach (CRA) to substance use treatment?",
+      "options": [
+        "Operant conditioning principles focusing on positive reinforcement",
+        "Psychodynamic theory emphasizing unconscious conflict resolution",
+        "Humanistic approach centered on self-actualization",
+        "Biological model targeting neurochemical imbalances",
+        "Cognitive dissonance theory addressing conflicting beliefs"
+      ],
+      "answer": "Operant conditioning principles focusing on positive reinforcement",
+      "explanation": "CRA is based on operant conditioning, helping individuals find rewarding alternatives to substance use to support abstinence.",
+      "kn": "KN30",
+      "kn_explanation": "This question targets knowledge of assessment theories and models, specifically behavioral theories underpinning substance use treatments (KN30).",
+      "difficulty": "medium",
+      "quality_comment": "The question introduces theoretical foundations, clearly distinct from existing items, with credible and comparable distractors."
+    },
+    {
+      "stem": "Which of the following cognitive biases is most relevant to relapse in substance use disorders as described in Relapse Prevention Therapy?",
+      "options": [
+        "Abstinence violation effect leading to feelings of guilt and failure",
+        "Confirmation bias reinforcing substance-related beliefs",
+        "Optimism bias underestimating risk of relapse",
+        "Availability heuristic causing exaggerated recall of drug use benefits",
+        "Fundamental attribution error blaming others for one’s relapse"
+      ],
+      "answer": "Abstinence violation effect leading to feelings of guilt and failure",
+      "explanation": "Relapse Prevention Therapy highlights the abstinence violation effect, where a lapse causes negative emotions that increase relapse likelihood.",
+      "kn": "KN37",
+      "kn_explanation": "This item focuses on evidence-based interpretation of biases affecting substance use relapse, consistent with cognitive and behavioral models (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "The question adds nuanced content about cognitive biases impacting relapse, complementing existing treatment-focused items."
+    },
+    {
+      "stem": "How does text-message intervention support treatment for substance use disorders?",
+      "options": [
+        "By providing reminders, health information, support, and self-monitoring tools",
+        "By delivering cognitive-behavioral therapy sessions remotely",
+        "By substituting for in-person therapy entirely",
+        "By administering medication through mobile technology",
+        "By tracking physiological withdrawal symptoms automatically"
+      ],
+      "answer": "By providing reminders, health information, support, and self-monitoring tools",
+      "explanation": "Text-message interventions aid treatment by offering appointment and medication reminders, information, support, and tools for self-monitoring.",
+      "kn": "KN41",
+      "kn_explanation": "This question pertains to the use of technology in assessment and intervention for substance use disorders, addressing KN41.",
+      "difficulty": "easy",
+      "quality_comment": "This item introduces technology use in treatment complementing existing intervention questions without overlap."
+    },
+    {
+      "stem": "Which of the following best summarizes the treatment outcome finding for combining therapy and medication in tobacco use disorder?",
+      "options": [
+        "Combination of therapy and medication yields higher quit rates than either alone",
+        "Medication alone is more effective than therapy or combination treatment",
+        "Therapy alone is sufficient for most patients without medication",
+        "Neither therapy nor medication shows significant benefit alone or combined",
+        "Combination therapy has the same effect as no treatment"
+      ],
+      "answer": "Combination of therapy and medication yields higher quit rates than either alone",
+      "explanation": "Research shows that combining behavioral therapy and medication leads to better tobacco cessation outcomes than either approach alone.",
+      "kn": "KN40",
+      "kn_explanation": "This question addresses measuring outcomes and changes due to intervention, highlighting evidence-based efficacy (KN40).",
+      "difficulty": "medium",
+      "quality_comment": "A clear clinically relevant item about intervention efficacy that broadens assessment coverage in outcome measurement."
+    }
+  ]
+}

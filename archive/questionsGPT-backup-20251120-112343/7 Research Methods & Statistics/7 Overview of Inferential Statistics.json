@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "stem": "According to the central limit theorem, which of the following is true about the sampling distribution of the mean as sample size increases?",
+      "options": [
+        "The mean of the sampling distribution will approach zero regardless of the population mean.",
+        "The sampling distribution of the mean will increasingly approximate a normal distribution regardless of population distribution shape.",
+        "The standard deviation of the sampling distribution will increase as sample size increases.",
+        "The sampling distribution of the mean becomes skewed as sample size increases."
+      ],
+      "answer": "The sampling distribution of the mean will increasingly approximate a normal distribution regardless of population distribution shape.",
+      "explanation": "The central limit theorem states that as sample size increases, the distribution of sample means approaches a normal shape regardless of the population's distribution.",
+      "kn": "KN53",
+      "kn_explanation": "This question assesses understanding of sampling distributions and probability theory, which are fundamental sampling and data collection concepts (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a central statistical concept with distractors that reflect common misconceptions, making it suitable for the EPPP level."
+    },
+    {
+      "stem": "What does a Type I error represent in hypothesis testing?",
+      "options": [
+        "Retaining a false null hypothesis",
+        "Rejecting a false null hypothesis",
+        "Retaining a true null hypothesis",
+        "Rejecting a true null hypothesis"
+      ],
+      "answer": "Rejecting a true null hypothesis",
+      "explanation": "A Type I error occurs when the null hypothesis is incorrectly rejected even though it is true, meaning a false positive conclusion.",
+      "kn": "KN56",
+      "kn_explanation": "Understanding decision errors and alpha levels is a key statistical interpretation topic related to power and error rates (KN56).",
+      "difficulty": "easy",
+      "quality_comment": "This is a straightforward question testing a fundamental concept; distractors are clear and plausible, appropriate for entry-level statistics knowledge."
+    },
+    {
+      "stem": "Which of the following factors increases the statistical power of a study?",
+      "options": [
+        "Using a smaller sample size to reduce variability",
+        "Decreasing the alpha level from .05 to .01",
+        "Increasing the effect size of the independent variable",
+        "Using a nonparametric test instead of a parametric test"
+      ],
+      "answer": "Increasing the effect size of the independent variable",
+      "explanation": "Greater effect size increases the likelihood of detecting a true effect, thus increasing statistical power.",
+      "kn": "KN56",
+      "kn_explanation": "This question addresses factors influencing power and error rates, focusing on statistical interpretation (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible, but only one correctly identifies a factor that increases power, making this question effective for EPPP preparation."
+    },
+    {
+      "stem": "In Bayesian statistics, what does the 'prior' represent?",
+      "options": [
+        "The probability distribution of a parameter after observing current data",
+        "The probability distribution of a parameter before collecting current data, based on previous knowledge",
+        "The observed data distribution in the current study",
+        "The probability that the null hypothesis is false"
+      ],
+      "answer": "The probability distribution of a parameter before collecting current data, based on previous knowledge",
+      "explanation": "The prior represents existing knowledge or beliefs about a parameter before current data are collected, used in Bayesian updating.",
+      "kn": "KN55",
+      "kn_explanation": "This question involves analytic methods and different statistical approaches, including Bayesian statistics (KN55).",
+      "difficulty": "hard",
+      "quality_comment": "The question is clearly worded, and options reflect common Bayesian terms to challenge test takers’ comprehension effectively."
+    },
+    {
+      "stem": "Which of the following best describes the difference between frequentist confidence intervals and Bayesian credibility intervals?",
+      "options": [
+        "Confidence intervals provide the exact probability that a parameter lies within the interval, while credibility intervals do not.",
+        "Confidence intervals are interpreted in terms of repeated sampling, whereas credibility intervals express the probability the parameter lies within the interval for the observed data.",
+        "Both intervals provide identical interpretations of parameter uncertainty.",
+        "Credibility intervals are calculated only when the sample size is very large."
+      ],
+      "answer": "Confidence intervals are interpreted in terms of repeated sampling, whereas credibility intervals express the probability the parameter lies within the interval for the observed data.",
+      "explanation": "Frequentist confidence intervals refer to long-run frequency properties, while Bayesian credibility intervals indicate the probability the parameter falls within that interval given the current data.",
+      "kn": "KN55",
+      "kn_explanation": "This question tests understanding of statistical interpretation differences between classical and Bayesian methods, a key analytic method concept (KN55).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors include common misconceptions, which strengthens the question’s ability to distinguish between novice and advanced understanding."
+    },
+    {
+      "stem": "Which of the following statements about the null and alternative hypotheses in inferential statistics is TRUE?",
+      "options": [
+        "The null hypothesis states the independent variable has an effect, while the alternative states it does not.",
+        "The alternative hypothesis is typically stated to reflect the predicted effect of the independent variable.",
+        "Both hypotheses state the independent variable has no effect, but at different significance levels.",
+        "The alternative hypothesis is always a statement of no difference."
+      ],
+      "answer": "The alternative hypothesis is typically stated to reflect the predicted effect of the independent variable.",
+      "explanation": "The alternative hypothesis is usually the research hypothesis and indicates that the independent variable has an effect on the dependent variable.",
+      "kn": "KN56",
+      "kn_explanation": "This assesses knowledge about hypothesis formulation, an essential part of statistical interpretation and testing (KN56).",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear and the distractors are plausible misunderstandings, helping to reinforce correct hypothesis formulation knowledge."
+    },
+    {
+      "stem": "If a researcher sets alpha at .05, what is the implication for making a Type I error?",
+      "options": [
+        "There is a 95% chance of making a Type I error.",
+        "There is a 5% chance of retaining a false null hypothesis.",
+        "There is a 5% chance of incorrectly rejecting a true null hypothesis.",
+        "The probability of a Type I error is controlled by beta, not alpha."
+      ],
+      "answer": "There is a 5% chance of incorrectly rejecting a true null hypothesis.",
+      "explanation": "Alpha is the significance level and represents the probability of making a Type I error, i.e., rejecting a true null hypothesis.",
+      "kn": "KN56",
+      "kn_explanation": "This question targets knowledge of decision errors and alpha levels, key components of statistical interpretation (KN56).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward with well-distinguished distractors, ideal for confirming foundational understanding."
+    },
+    {
+      "stem": "Which factor is NOT controllable by the researcher to increase statistical power?",
+      "options": [
+        "Increasing sample size",
+        "Increasing effect size by intervention intensity",
+        "Using more powerful parametric tests when assumptions are met",
+        "Increasing population heterogeneity"
+      ],
+      "answer": "Increasing population heterogeneity",
+      "explanation": "Population homogeneity affects power, but it cannot be controlled by the researcher; greater homogeneity leads to higher power.",
+      "kn": "KN56",
+      "kn_explanation": "This question involves understanding factors influencing power, part of statistical interpretation (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible active research decisions, while the correct answer highlights an uncontrollable factor, demanding good conceptual clarity."
+    },
+    {
+      "stem": "Which of the following best describes sampling error in the context of inferential statistics?",
+      "options": [
+        "Systematic bias that affects all samples equally",
+        "Random variations in sample statistics from the true population parameter due to chance",
+        "Errors introduced by faulty measurement instruments",
+        "Differences caused by treatment effects in experimental designs"
+      ],
+      "answer": "Random variations in sample statistics from the true population parameter due to chance",
+      "explanation": "Sampling error reflects random fluctuations in sample statistics from the actual population parameter caused purely by chance variation.",
+      "kn": "KN53",
+      "kn_explanation": "This question focuses on understanding concepts related to sampling and sources of error in research methods (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors contrast measurement and treatment effects effectively against the correct statistical definition, making the question clear and instructive."
+    },
+    {
+      "stem": "What is the relationship between beta and statistical power in hypothesis testing?",
+      "options": [
+        "Beta is the probability of correctly rejecting the null hypothesis, which is equivalent to power.",
+        "Beta is the probability of making a Type I error and is inversely related to power.",
+        "Beta is the probability of making a Type II error and is inversely related to power.",
+        "Beta is set by the researcher before collecting data to control power."
+      ],
+      "answer": "Beta is the probability of making a Type II error and is inversely related to power.",
+      "explanation": "Beta is the chance of retaining a false null hypothesis (Type II error), and power equals 1 - beta, meaning power increases as beta decreases.",
+      "kn": "KN56",
+      "kn_explanation": "This question addresses statistical interpretation of error rates and power, critical to hypothesis testing concepts (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "Answer choices provide a balanced set of plausible errors, reinforcing distinctions between error types and power clearly."
+    },
+    {
+      "stem": "In the context of inferential statistics, what does the standard error of the mean represent?",
+      "options": [
+        "The population standard deviation multiplied by the square root of sample size",
+        "The sample standard deviation divided by the square root of the population size",
+        "The standard deviation of the sampling distribution of sample means",
+        "The difference between the sample mean and the population mean"
+      ],
+      "answer": "The standard deviation of the sampling distribution of sample means",
+      "explanation": "Standard error of the mean is the standard deviation of the distribution of sample means and measures variability due to sampling error.",
+      "kn": "KN53",
+      "kn_explanation": "This question assesses understanding of sampling distributions and related statistical concepts (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors test knowledge of related formulas and concepts, helping to clarify a key statistical term effectively."
+    },
+    {
+      "stem": "Which statistical test is generally more powerful when data meet the required assumptions?",
+      "options": [
+        "Nonparametric chi-square test",
+        "Parametric t-test",
+        "Wilcoxon signed-rank test",
+        "Mann-Whitney U test"
+      ],
+      "answer": "Parametric t-test",
+      "explanation": "Parametric tests, such as the t-test, are generally more powerful than nonparametric tests when data are interval/ratio and assumptions are met.",
+      "kn": "KN56",
+      "kn_explanation": "This question addresses knowledge of different inferential statistical tests and their relative power (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are appropriate examples of nonparametric tests, providing a meaningful challenge for test takers."
+    },
+    {
+      "stem": "Bayesian analysis differs from frequentist analysis primarily in which way?",
+      "options": [
+        "Bayesian analysis does not require prior information about parameters.",
+        "Frequentist probability is the subjective degree of belief in an event, whereas Bayesian probability is based on data frequencies.",
+        "Bayesian analysis combines prior knowledge with current data to update beliefs about parameters.",
+        "Frequentist methods allow direct testing of research hypotheses, while Bayesian methods only reject null hypotheses."
+      ],
+      "answer": "Bayesian analysis combines prior knowledge with current data to update beliefs about parameters.",
+      "explanation": "Bayesian statistics incorporate prior information (the prior) and current data (likelihood) to produce an updated understanding (posterior).",
+      "kn": "KN55",
+      "kn_explanation": "This question evaluates comprehension of Bayesian versus frequentist statistical approaches, which is part of analytic methods (KN55).",
+      "difficulty": "hard",
+      "quality_comment": "Options target common confusions about Bayesian concepts, making this a high-quality question on a complex topic."
+    },
+    {
+      "stem": "What is the most accurate interpretation of a 95% frequentist confidence interval around a sample mean?",
+      "options": [
+        "There is a 95% chance the population mean lies within this interval for this sample.",
+        "95% of all sample means calculated from repeated sampling will fall within this interval.",
+        "If the study were repeated many times, 95% of such calculated intervals would contain the true population mean.",
+        "The sample mean will fall within 95% of all possible population values."
+      ],
+      "answer": "If the study were repeated many times, 95% of such calculated intervals would contain the true population mean.",
+      "explanation": "Frequentist confidence intervals relate to the long-run proportion of intervals containing the population parameter, not probability for a single interval.",
+      "kn": "KN55",
+      "kn_explanation": "This tests understanding of frequentist confidence intervals, part of statistical interpretation in analytic methods (KN55).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misinterpretations, offering a useful challenge for EPPP candidates."
+    }
+  ]
+}

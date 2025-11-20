@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "stem": "In Harlow and Zimmerman's (1959) study with infant monkeys, what was the main finding regarding attachment?",
+      "options": [
+        "Monkeys preferred the wire mother because it provided food",
+        "Monkeys showed equal attachment to the wire and cloth mothers",
+        "Monkeys became attached to the cloth mother despite the wire mother providing food",
+        "Monkeys did not show significant attachment behaviors toward either surrogate mother"
+      ],
+      "answer": "Monkeys became attached to the cloth mother despite the wire mother providing food",
+      "explanation": "Harlow and Zimmerman found that infant monkeys preferred the cloth mother because it provided contact comfort, indicating the importance of comfort in attachment beyond mere food provision.",
+      "kn": "KN21",
+      "kn_explanation": "This question focuses on early socioemotional developmental processes and the biological basis of attachment, which is part of normal growth and development across the lifespan (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear, and the distractors are plausible, reflecting common misconceptions about attachment and early behavior research."
+    },
+    {
+      "stem": "According to Bowlby’s ethological theory of attachment, what is the primary purpose of infant attachment behaviors such as crying and smiling?",
+      "options": [
+        "To entertain the infant",
+        "To establish dominance over caregivers",
+        "To elicit caregiver attention and ensure proximity for survival",
+        "To express the infant’s mood without caregiver response"
+      ],
+      "answer": "To elicit caregiver attention and ensure proximity for survival",
+      "explanation": "Bowlby proposed that attachment behaviors are biologically innate and serve to keep the caregiver close to the infant to promote survival.",
+      "kn": "KN21",
+      "kn_explanation": "The question assesses understanding of Bowlby's attachment theory, a core model of socioemotional development in childhood, under normal growth and development (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "The stem is direct and the options are concise, allowing for easy discrimination between the correct and incorrect choices."
+    },
+    {
+      "stem": "Which attachment pattern, identified by Ainsworth's Strange Situation, is characterized by infants showing distress upon separation and resistance or anger upon reunion with their mother?",
+      "options": [
+        "Secure attachment",
+        "Insecure-avoidant attachment",
+        "Insecure-resistant (ambivalent) attachment",
+        "Disorganized/disoriented attachment"
+      ],
+      "answer": "Insecure-resistant (ambivalent) attachment",
+      "explanation": "Insecure-resistant attachment involves distress when the caregiver leaves and ambivalence upon their return, including resistance and anger.",
+      "kn": "KN21",
+      "kn_explanation": "This question tests knowledge of specific attachment patterns in early childhood, which relates to socioemotional developmental stages (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are all genuine attachment patterns, increasing the question's clinical relevance and requiring precise knowledge."
+    },
+    {
+      "stem": "Which of the following best describes the findings related to socioeconomic status (SES) and childhood attachment?",
+      "options": [
+        "Low SES directly causes insecure attachment regardless of parenting quality",
+        "Secure attachment only occurs in high SES families",
+        "Insecure attachment is more common in low SES families due to associated risk factors but secure attachment can occur with good parenting",
+        "Attachment patterns are not influenced by SES or related factors"
+      ],
+      "answer": "Insecure attachment is more common in low SES families due to associated risk factors but secure attachment can occur with good parenting",
+      "explanation": "Research shows that risk factors associated with low SES, rather than low SES itself, increase insecure attachment risk, but good quality parenting can promote secure attachment despite poverty.",
+      "kn": "KN27",
+      "kn_explanation": "This question assesses knowledge of risk and protective factors impacting development, especially socioeconomic and environmental influences on attachment (KN27).",
+      "difficulty": "medium",
+      "quality_comment": "Options are well balanced, reflecting nuanced understanding of SES effects on development; distractors represent common misunderstandings."
+    },
+    {
+      "stem": "At what age do infants typically begin to recognize and categorize facial expressions of emotion, and show a shift in preference toward fearful expressions?",
+      "options": [
+        "Immediately after birth",
+        "2 to 3 months",
+        "5 to 7 months",
+        "12 to 18 months"
+      ],
+      "answer": "5 to 7 months",
+      "explanation": "Infants usually start reliably discriminating facial expressions and begin categorizing them around 5 to 7 months, with a preference shift toward fearful faces at about 7 months.",
+      "kn": "KN10",
+      "kn_explanation": "This question pertains to the development of emotion recognition abilities, fitting within major theories and models of emotion development (KN10).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect plausible developmental timelines; the stem is precise, making this a well-constructed developmental question."
+    },
+    {
+      "stem": "According to Crick and Dodge’s social information processing model, which step explains why aggressive children tend to choose retaliation as their goal in ambiguous provocation situations?",
+      "options": [
+        "Encoding of cues",
+        "Interpretation of cues",
+        "Clarification of goals",
+        "Response search"
+      ],
+      "answer": "Clarification of goals",
+      "explanation": "The clarification of goals step involves deciding on what goal to pursue in response to a situation; aggressive children often select retaliation as their goal.",
+      "kn": "KN15",
+      "kn_explanation": "This question concerns social cognition and aggression, which relates to social interaction and relationships theories and models (KN15).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires detailed knowledge of a multi-step model, with distractors that reflect other plausible steps, increasing difficulty and discrimination."
+    },
+    {
+      "stem": "Which of the following best characterizes the difference between shame and guilt in terms of the focus of self-blame?",
+      "options": [
+        "Shame focuses on a specific behavior, guilt focuses on the self",
+        "Shame and guilt both focus equally on the self and behavior",
+        "Guilt focuses on a specific behavior, shame focuses on the self",
+        "Guilt is unrelated to self-blame, shame is related"
+      ],
+      "answer": "Guilt focuses on a specific behavior, shame focuses on the self",
+      "explanation": "Shame involves feeling badly about oneself, whereas guilt involves feeling badly about a specific behavior one has done.",
+      "kn": "KN10",
+      "kn_explanation": "This question addresses the distinction between self-conscious emotions, which is part of major emotion theories and models (KN10).",
+      "difficulty": "easy",
+      "quality_comment": "The options clearly contrast the concepts, making this question straightforward but essential for understanding emotional distinctions."
+    },
+    {
+      "stem": "Which type of childhood aggression is characterized by goal-directed behavior to obtain an object or attention and tends to peak around age 2?",
+      "options": [
+        "Hostile/reactive aggression",
+        "Instrumental/proactive aggression",
+        "Relational aggression",
+        "Verbal aggression"
+      ],
+      "answer": "Instrumental/proactive aggression",
+      "explanation": "Instrumental or proactive aggression is goal-oriented and emerges early (around 1 year), peaking around 2 years old as children try to obtain desired objects or attention.",
+      "kn": "KN21",
+      "kn_explanation": "This question focuses on developmental changes in aggression during early childhood, relating to normal growth and socioemotional development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Answer choices represent different aggression types, making the question relevant and the options appropriately balanced."
+    },
+    {
+      "stem": "According to socioemotional selectivity theory, what is the primary motivation for friendships in older adults who perceive their time as limited?",
+      "options": [
+        "Gathering new information for future use",
+        "Expanding social networks",
+        "Seeking emotional closeness and positive feelings",
+        "Establishing professional connections"
+      ],
+      "answer": "Seeking emotional closeness and positive feelings",
+      "explanation": "Socioemotional selectivity theory proposes that older adults who see time as limited prioritize emotionally meaningful relationships that evoke positive emotions.",
+      "kn": "KN15",
+      "kn_explanation": "This question tests knowledge of social motivations and relationship dynamics in adulthood, fitting within social interaction and relationships (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "Options include plausible social goals, sharpening test-taker discrimination based on theory knowledge."
+    },
+    {
+      "stem": "Which of the following types of play involves children interacting with each other to achieve a shared goal?",
+      "options": [
+        "Parallel play",
+        "Associative play",
+        "Cooperative play",
+        "Onlooker play"
+      ],
+      "answer": "Cooperative play",
+      "explanation": "Cooperative play involves children interacting purposefully to achieve common goals, unlike other types which involve less direct interaction or coordination.",
+      "kn": "KN21",
+      "kn_explanation": "This question focuses on childhood social development and play types, a key topic in growth and lifespan development (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "The distractors are reasonable and commonly confused play types, making the question clear and relevant."
+    },
+    {
+      "stem": "Which adult attachment pattern, identified by the Adult Attachment Interview (AAI), is associated with adults providing coherent descriptions of childhood relationships and whose children usually have secure attachment?",
+      "options": [
+        "Preoccupied",
+        "Dismissing",
+        "Autonomous",
+        "Unresolved"
+      ],
+      "answer": "Autonomous",
+      "explanation": "The autonomous adult attachment classification is characterized by coherent and balanced descriptions of childhood experiences, linked to secure attachment in their children.",
+      "kn": "KN21",
+      "kn_explanation": "The question assesses understanding of attachment patterns across the lifespan and intergenerational transmission, part of socioemotional development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Options include major adult attachment categories, requiring accurate recall of their characteristics."
+    },
+    {
+      "stem": "In the context of family aggression, the coercive family interaction model explains that:",
+      "options": [
+        "Parents use consistent and positive discipline strategies to reduce aggression",
+        "Both parents and children learn that aggressive behaviors can stop undesirable behaviors in the other",
+        "Children learn to avoid aggression because it results in punishment",
+        "Aggression in children is solely due to genetic predispositions"
+      ],
+      "answer": "Both parents and children learn that aggressive behaviors can stop undesirable behaviors in the other",
+      "explanation": "The coercive family interaction model posits that parents use threats/punishment to stop misbehavior temporarily, children learn aggression can stop parents, escalating coercive cycles.",
+      "kn": "KN15",
+      "kn_explanation": "This question involves social interaction models related to aggression and family dynamics, relevant to social and cultural bases of behavior (KN15).",
+      "difficulty": "hard",
+      "quality_comment": "This item requires deeper understanding of a complex model which increases its discriminative power; distractors represent common misconceptions."
+    },
+    {
+      "stem": "Which of the following is NOT a stage in Bowlby’s four stages of attachment development?",
+      "options": [
+        "Preattachment",
+        "Attachment-in-the-making",
+        "Clear-cut attachment",
+        "Trust versus mistrust"
+      ],
+      "answer": "Trust versus mistrust",
+      "explanation": "Trust versus mistrust is a stage in Erikson’s psychosocial theory, not one of Bowlby’s attachment stages.",
+      "kn": "KN21",
+      "kn_explanation": "This question tests knowledge of specific stages in attachment theory, a core developmental theory (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are correct attachment stages, and the foil is a well-known alternative, enhancing clarity and discrimination."
+    },
+    {
+      "stem": "Which of the following best describes a protective factor that supports secure attachment despite living in poverty?",
+      "options": [
+        "High parental education is the only factor needed for secure attachment",
+        "Good quality parenting and caregiver sensitivity",
+        "Absence of all socioeconomic stressors",
+        "Limiting child exposure to peers"
+      ],
+      "answer": "Good quality parenting and caregiver sensitivity",
+      "explanation": "Research indicates that secure attachment can occur despite poverty when parenting quality is good, highlighting caregiver sensitivity as a protective factor.",
+      "kn": "KN27",
+      "kn_explanation": "This item covers environmental and caregiving factors influencing attachment security related to socioeconomic contexts (KN27).",
+      "difficulty": "medium",
+      "quality_comment": "The item contrasts environmental and parenting factors, requiring understanding of risk versus protective influences on development."
+    },
+    {
+      "stem": "Which of the following is an example of primary emotions that children display by 6 months of age?",
+      "options": [
+        "Shame",
+        "Guilt",
+        "Joy",
+        "Empathy"
+      ],
+      "answer": "Joy",
+      "explanation": "Primary emotions such as joy, interest, and distress emerge early, within the first 6 months; shame, guilt, and empathy are secondary emotions emerging later with self-awareness.",
+      "kn": "KN21",
+      "kn_explanation": "This question addresses early emotional development and differentiation of primary versus secondary (self-conscious) emotions, important in socioemotional growth (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "The options include plausible but developmentally distinct emotions, helping test conceptual clarity in emotional development stages."
+    },
+    {
+      "stem": "According to research, what pattern of peer rejection is characterized by children who are hyperactive, impulsive, and misinterpret others’ intentions as hostile?",
+      "options": [
+        "Rejected-aggressive",
+        "Rejected-withdrawn",
+        "Neglected",
+        "Popular"
+      ],
+      "answer": "Rejected-aggressive",
+      "explanation": "Rejected-aggressive children tend to be impulsive, have emotion regulation difficulties, and a hostile attribution bias leading to peer conflicts.",
+      "kn": "KN21",
+      "kn_explanation": "This item tests knowledge about peer status subtypes and associated behavioral and cognitive characteristics in childhood social relationships (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are other peer status groups which test-takers must differentiate based on characteristic behaviors and outcomes."
+    }
+  ]
+}

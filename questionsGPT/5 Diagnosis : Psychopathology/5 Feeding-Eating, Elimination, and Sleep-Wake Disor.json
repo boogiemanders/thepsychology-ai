@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best characterizes the core psychopathology underlying eating disorders targeted by transdiagnostic CBT-E treatment?",
+      "options": [
+        "Distorted body image and lack of awareness of weight status",
+        "Excessive valuation of physical appearance and weight",
+        "Compulsive need for control over food and emotions",
+        "An intense fear of food and social eating situations"
+      ],
+      "answer": "Excessive valuation of physical appearance and weight",
+      "explanation": "CBT-E is based on the premise that eating disorders share a core pathology involving placing excessive importance on appearance and weight, which maintains disordered eating.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of evidence-based treatment models and their theoretical bases for eating disorders, falling under treatment techniques and interventions (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and the distractors are realistic but distinct, reflecting common misconceptions and specifics of treatment models."
+    },
+    {
+      "stem": "A 7-year-old child has repeated involuntary urination into clothing at least twice weekly for four months, with no medical cause identified. Which treatment is considered first-line for nocturnal episodes in this elimination disorder?",
+      "options": [
+        "Behavioral dry-bed training",
+        "Moisture alarm (bell-and-pad)",
+        "Imipramine medication",
+        "Desmopressin monotherapy"
+      ],
+      "answer": "Moisture alarm (bell-and-pad)",
+      "explanation": "The moisture alarm is the most common and effective treatment for nocturnal enuresis, conditioning the child to awaken when urination begins.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on treatment intervention principles for elimination disorders, specifically the behavioral approach, which aligns with treatment techniques and evidence (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "The options present plausible treatments for enuresis, with the moisture alarm clearly the best first-line evidence-based intervention, enhancing question validity."
+    },
+    {
+      "stem": "Which medical complication is most directly associated with the compensatory behaviors seen in bulimia nervosa?",
+      "options": [
+        "Electrolyte imbalance leading to cardiac arrhythmias",
+        "Severe malnutrition affecting all major organ systems",
+        "Intestinal obstruction and lead poisoning",
+        "Osteoporosis from prolonged calcium deficiency"
+      ],
+      "answer": "Electrolyte imbalance leading to cardiac arrhythmias",
+      "explanation": "Compensatory behaviors like purging cause dehydration and electrolyte imbalance, which can result in dangerous cardiac arrhythmias.",
+      "kn": "KN1",
+      "kn_explanation": "This assesses knowledge of physiological consequences of psychological disorders, fitting biological bases of behavior related to medical complications (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors include serious complications related to other feeding disorders, increasing the plausibility of incorrect choices and testing detailed knowledge."
+    },
+    {
+      "stem": "A patient with anorexia nervosa is resistant to treatment and denies having an eating disorder. Which treatment approach is most consistent with enhancing motivation and addressing distorted beliefs after initial weight restoration?",
+      "options": [
+        "Family-based treatment (FBT)",
+        "Enhanced cognitive-behavior therapy (CBT-E)",
+        "Cognitive behavior therapy (CBT) post-hospitalization",
+        "Pharmacotherapy with olanzapine"
+      ],
+      "answer": "Cognitive behavior therapy (CBT) post-hospitalization",
+      "explanation": "CBT for anorexia nervosa is a post-hospitalization intervention focusing on changing weight- and shape-related cognitions and increasing motivation following medical stabilization.",
+      "kn": "KN44",
+      "kn_explanation": "This question targets treatment decision-making and intervention techniques for anorexia nervosa, relevant to treatment efficacy and approaches (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The options reflect common treatments, but only CBT post-hospitalization specifically targets motivation and cognition, making distractors plausible yet distinct."
+    },
+    {
+      "stem": "Which of the following sleep disturbances involves episodes of incomplete awakening during slow-wave sleep accompanied by ambulation and lack of memory for the event upon awakening?",
+      "options": [
+        "Nightmare disorder",
+        "Sleepwalking (somnambulism)",
+        "Narcolepsy with cataplexy",
+        "Sleep maintenance insomnia"
+      ],
+      "answer": "Sleepwalking (somnambulism)",
+      "explanation": "Sleepwalking occurs during Stage 3 or 4 sleep and involves incomplete awakening and ambulation, with little or no memory of the episode afterward.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses understanding of sleep disorder classification and diagnostic criteria, fitting assessment and diagnosis (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent related but distinct sleep disorders, making this question effective for discriminating knowledge of specific sleep-wake disorders."
+    },
+    {
+      "stem": "Which feature differentiates binge-eating disorder (BED) from bulimia nervosa in terms of diagnostic criteria?",
+      "options": [
+        "Presence of excessive compensatory behavior",
+        "Frequency of binge episodes occurring at least once a week for three months",
+        "Sense of lack of control during eating episodes",
+        "Onset of dysfunctional dieting prior to binge episodes"
+      ],
+      "answer": "Presence of excessive compensatory behavior",
+      "explanation": "BED is characterized by binge eating without recurrent inappropriate compensatory behaviors, which distinguishes it from bulimia nervosa.",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on differentiating diagnostic criteria between feeding/eating disorders, a core assessment and diagnosis topic (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common features of both disorders, providing a balanced challenge and clear focus on distinctive diagnostic features."
+    },
+    {
+      "stem": "A young adult reports difficulty initiating sleep and waking early unable to return to sleep for the past four months, impairing daytime functioning despite adequate opportunity for sleep. Which treatment component directly targets strengthening the bed and bedroom as sleep cues in cognitive-behavior therapy for insomnia (CBT-I)?",
+      "options": [
+        "Stimulus control",
+        "Cognitive restructuring",
+        "Sleep hygiene training",
+        "Sleep restriction"
+      ],
+      "answer": "Stimulus control",
+      "explanation": "Stimulus control involves associating the bed and bedroom with sleep only, helping to strengthen these cues for falling asleep.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on understanding specific CBT-I techniques, reflecting treatment methods and their evidence base (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options are all common CBT-I components, making the question a precise test of specific intervention knowledge."
+    },
+    {
+      "stem": "What is the hallmark characteristic of narcolepsy that differentiates it from other sleep-wake disorders?",
+      "options": [
+        "Episodes of early morning awakening with difficulty returning to sleep",
+        "Recurrent episodes of cataplexy triggered by strong emotions",
+        "Prolonged difficulty maintaining sleep throughout the night",
+        "Repetitive involuntary urination during sleep"
+      ],
+      "answer": "Recurrent episodes of cataplexy triggered by strong emotions",
+      "explanation": "Narcolepsy is uniquely characterized by cataplexy — sudden muscle tone loss often triggered by emotions, distinguishing it from other sleep disorders.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses diagnostic features of a specific sleep disorder, fitting classification and differential diagnosis (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect symptoms of other sleep disorders, effectively testing recognition of narcolepsy's unique feature."
+    },
+    {
+      "stem": "In family-based treatment (FBT) for adolescent anorexia nervosa, what is the primary focus during the first phase of treatment?",
+      "options": [
+        "Helping the adolescent develop age-appropriate independence regarding eating",
+        "Parents taking charge of nutritional rehabilitation and weight restoration",
+        "Addressing adolescent and family psychological issues",
+        "Collaboratively disrupting the adolescent's binge and purge behaviors"
+      ],
+      "answer": "Parents taking charge of nutritional rehabilitation and weight restoration",
+      "explanation": "The first phase of FBT focuses on parents actively managing the adolescent's food intake to restore weight.",
+      "kn": "KN44",
+      "kn_explanation": "The question assesses the foundational phase and goals of a specific evidence-based treatment, pertinent to treatment techniques (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors describe later phases or features of other treatments, providing a clear but challenging test of FBT procedural knowledge."
+    },
+    {
+      "stem": "Which medication is the primary pharmacological treatment used specifically to reduce cataplexy in narcolepsy?",
+      "options": [
+        "Modafinil",
+        "Venlafaxine",
+        "Lisdexamfetamine",
+        "Desmopressin"
+      ],
+      "answer": "Venlafaxine",
+      "explanation": "Venlafaxine is an antidepressant effective for reducing cataplexy episodes associated with narcolepsy.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses knowledge of drug classifications, mechanisms, and their use in treating sleep disorders (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "Options include commonly used drugs but only venlafaxine targets cataplexy specifically, testing pharmacotherapy details."
+    },
+    {
+      "stem": "A patient with insomnia complains of worry about the consequences of poor sleep and frequently checks the clock at night, which worsens their difficulty sleeping. According to cognitive therapy for insomnia (CT-I), what are these behaviors termed?",
+      "options": [
+        "Sleep hygiene violations",
+        "Maladaptive safety behaviors",
+        "Sleep restriction techniques",
+        "Stimulus control errors"
+      ],
+      "answer": "Maladaptive safety behaviors",
+      "explanation": "In CT-I, safety behaviors are counterproductive coping strategies used to increase perceived control over sleep but actually maintain insomnia.",
+      "kn": "KN44",
+      "kn_explanation": "This question tests understanding of cognitive therapy concepts for insomnia, focusing on behavioral mechanisms relevant to treatment (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible sleep-related terms, allowing for meaningful discrimination based on CT-I theory."
+    },
+    {
+      "stem": "Which characteristic symptom is NOT required for the diagnosis of binge-eating disorder according to DSM-5-TR criteria?",
+      "options": [
+        "Episodes of binge eating occur at least once a week for three months",
+        "Frequent inappropriate compensatory behaviors following binges",
+        "At least three specific behavioral or emotional symptoms during binges",
+        "A subjective sense of loss of control during binge episodes"
+      ],
+      "answer": "Frequent inappropriate compensatory behaviors following binges",
+      "explanation": "Unlike bulimia nervosa, BED does not include inappropriate compensatory behaviors as part of its diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question evaluates detailed knowledge of diagnostic criteria distinguishing feeding disorders (assessment and diagnosis, KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are accurate DSM criteria for BED except for the compensatory behavior item, making this an effective question on diagnostic differentiation."
+    },
+    {
+      "stem": "Which of the following is the most common subtype of insomnia disorder reported in clinical populations?",
+      "options": [
+        "Sleep-onset (initial) insomnia",
+        "Sleep maintenance (middle) insomnia",
+        "Late insomnia (early morning awakening)",
+        "Combined types of insomnia"
+      ],
+      "answer": "Sleep maintenance (middle) insomnia",
+      "explanation": "Sleep maintenance insomnia, involving frequent or prolonged awakenings, is the most common single type of insomnia reported.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of symptom presentation and diagnostic classification of insomnia disorders (KN36).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors include all recognized insomnia types, with the correct answer well-supported by epidemiological data, enhancing clarity."
+    },
+    {
+      "stem": "Which model of insomnia emphasizes the role of selective attention, worry, and safety behaviors in maintaining the disorder?",
+      "options": [
+        "Two-process model",
+        "Cognitive model by Harvey",
+        "Behavioral model",
+        "Neurobiological model"
+      ],
+      "answer": "Cognitive model by Harvey",
+      "explanation": "Harvey's cognitive model highlights processes like selective attention, worry, and safety behaviors as key in perpetuating insomnia symptoms.",
+      "kn": "KN30",
+      "kn_explanation": "This question targets understanding of theoretical models relevant to assessment and diagnosis of sleep-wake disorders, specifically the cognitive model of insomnia (KN30).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible models related to sleep/wake regulation, providing a strong test of specific model knowledge."
+    },
+    {
+      "stem": "In the context of eating disorders, which statement best reflects the typical temporal relationship between anxiety disorders and anorexia nervosa?",
+      "options": [
+        "Anxiety disorders often emerge after recovery from anorexia nervosa",
+        "Anxiety disorders typically co-occur but are unrelated in onset",
+        "Anxiety disorders often precede the onset of anorexia nervosa",
+        "Anxiety disorders only emerge in severe cases of anorexia nervosa"
+      ],
+      "answer": "Anxiety disorders often precede the onset of anorexia nervosa",
+      "explanation": "Research indicates that anxiety disorders frequently precede the development of anorexia nervosa, suggesting a possible risk factor or prodromal condition.",
+      "kn": "KN39",
+      "kn_explanation": "This question probes knowledge of psychopathology theories and models relating to feeding/eating disorders, specifically temporal precedence of comorbid anxiety (KN39).",
+      "difficulty": "medium",
+      "quality_comment": "The options are well-constructed and reflect common clinical patterns, making discrimination of temporal sequence necessary."
+    },
+    {
+      "stem": "Which statistical concept is crucial to avoid misinterpretation of rare symptoms in psychological assessment, particularly when base rates are low?",
+      "options": [
+        "Base rate fallacy",
+        "Confirmation bias",
+        "Overconfidence effect",
+        "Anchoring bias"
+      ],
+      "answer": "Base rate fallacy",
+      "explanation": "The base rate fallacy occurs when the rarity of a symptom is overlooked, leading to incorrect diagnostic conclusions; attention to base rates improves interpretation accuracy.",
+      "kn": "KN37",
+      "kn_explanation": "This question addresses evidence-based interpretation of data and cognitive biases relevant to psychological assessment and diagnosis (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively integrates statistical reasoning with clinical assessment, testing conceptual understanding of common biases."
+    },
+    {
+      "stem": "Which technology is commonly employed to objectively measure sleep stages and diagnose sleep-wake disorders in clinical settings?",
+      "options": [
+        "Polysomnography",
+        "Actigraphy",
+        "Electrocardiogram",
+        "Functional MRI"
+      ],
+      "answer": "Polysomnography",
+      "explanation": "Polysomnography is the gold standard for assessing sleep architecture and diagnosing sleep disorders by recording brain waves, muscle activity, and other physiological parameters during sleep.",
+      "kn": "KN41",
+      "kn_explanation": "This question targets knowledge of technology used in assessment and diagnosis of sleep-wake disorders, specifically objective sleep measurement methods (KN41).",
+      "difficulty": "easy",
+      "quality_comment": "The options are common physiological measures, with polysomnography clearly the best fit, making the item an accessible test of assessment technology knowledge."
+    }
+  ]
+}

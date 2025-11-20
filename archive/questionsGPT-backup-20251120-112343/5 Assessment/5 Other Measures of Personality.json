@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "stem": "Which personality assessment is based on the assumption that important personality traits are encoded in the English language and uses factor analysis to identify both primary and global traits?",
+      "options": [
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "Myers-Briggs Type Indicator (MBTI)",
+        "Edwards Personal Preference Schedule (EPPS)"
+      ],
+      "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
+      "explanation": "The 16 PF was developed by Cattell using the lexical strategy, assuming important traits are embedded in language, and applied factor analysis to derive 16 primary and five global traits.",
+      "kn": "KN32",
+      "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem with well-differentiated options focused on specific test characteristics, appropriate for the EPPP."
+    },
+    {
+      "stem": "What type of scoring does the Edwards Personal Preference Schedule (EPPS) use, and what is a key limitation of these scores?",
+      "options": [
+        "Ipsative scoring, which allows intra-individual but not inter-individual comparisons",
+        "Norm-referenced scoring, which allows extensive inter-individual comparisons",
+        "Criterion-referenced scoring, which compares examinees to fixed standards",
+        "Raw scores, which directly reflect absolute strength of needs"
+      ],
+      "answer": "Ipsative scoring, which allows intra-individual but not inter-individual comparisons",
+      "explanation": "The EPPS uses a forced-choice format yielding ipsative scores that show relative strengths of an individual's needs but do not permit valid comparisons between individuals.",
+      "kn": "KN32",
+      "kn_explanation": "This question targets understanding of assessment scoring methods and their implications for test interpretation.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect scoring types, making the correct choice clear for knowledgeable candidates."
+    },
+    {
+      "stem": "Which personality test categorizes individuals into 16 types based on four bipolar dimensions derived from Jung’s theory?",
+      "options": [
+        "Myers-Briggs Type Indicator (MBTI)",
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "Edwards Personal Preference Schedule (EPPS)"
+      ],
+      "answer": "Myers-Briggs Type Indicator (MBTI)",
+      "explanation": "The MBTI assesses four dimensions (introversion-extraversion, sensing-intuition, thinking-feeling, judging-perceiving) resulting in 16 personality types.",
+      "kn": "KN32",
+      "kn_explanation": "This question assesses knowledge of specific personality assessment instruments and their theoretical underpinnings.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward question with clearly differentiated options; suitable for foundational EPPP content."
+    },
+    {
+      "stem": "Which of the following personality inventories assesses the 'Big Five' traits and provides scores on broad traits and multiple facets?",
+      "options": [
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "Edwards Personal Preference Schedule (EPPS)",
+        "Myers-Briggs Type Indicator (MBTI)"
+      ],
+      "answer": "NEO Personality Inventory-3 (NEO-PI-3)",
+      "explanation": "The NEO-PI-3 measures the Big Five personality traits—openness, conscientiousness, extraversion, agreeableness, and neuroticism—and includes facet-level scores.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests understanding of major personality inventories and their trait models.",
+      "difficulty": "medium",
+      "quality_comment": "Good distractor options that are also personality tests enhance the question's rigor without ambiguity."
+    },
+    {
+      "stem": "According to meta-analytic research, which Big Five personality traits are most consistently associated with an increased risk for Alzheimer’s disease and other neurocognitive disorders?",
+      "options": [
+        "High neuroticism and low conscientiousness",
+        "High extraversion and high openness",
+        "Low agreeableness and low extraversion",
+        "Low neuroticism and high conscientiousness"
+      ],
+      "answer": "High neuroticism and low conscientiousness",
+      "explanation": "Research has found that higher neuroticism and lower conscientiousness levels are significantly associated with elevated risk for Alzheimer’s and related disorders.",
+      "kn": "KN1",
+      "kn_explanation": "This question integrates personality traits with neurobehavioral disease risk, fitting within biological bases of behavior.",
+      "difficulty": "hard",
+      "quality_comment": "The question requires integration of personality and neurocognitive disorder knowledge, appropriately challenging for the EPPP."
+    },
+    {
+      "stem": "Which projective test uses 10 bilaterally symmetrical inkblots and includes an administration phase where the examinee describes what they see and an inquiry phase exploring determinants of responses?",
+      "options": [
+        "Rorschach Inkblot Test",
+        "Thematic Apperception Test (TAT)",
+        "Edwards Personal Preference Schedule (EPPS)",
+        "Sixteen Personality Factor Questionnaire (16 PF)"
+      ],
+      "answer": "Rorschach Inkblot Test",
+      "explanation": "The Rorschach consists of 10 inkblots administered in free association and inquiry phases to explore perceptual and personality processes.",
+      "kn": "KN32",
+      "kn_explanation": "This question addresses knowledge of projective personality assessment methods and procedures, part of assessment instrument familiarity.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed with plausible distractors, effectively distinguishing knowledge of projective methods."
+    },
+    {
+      "stem": "In the Exner Comprehensive System for the Rorschach Inkblot Test, what does a high number of 'color' responses typically indicate about an examinee?",
+      "options": [
+        "Emotionality and impulsiveness",
+        "Creative or theoretical thinking",
+        "Brain injury or cognitive impairment",
+        "Social conformity and realism"
+      ],
+      "answer": "Emotionality and impulsiveness",
+      "explanation": "Many color responses indicate heightened emotional responsiveness and impulsive tendencies in the examinee’s personality.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests knowledge of specific scoring interpretation techniques for projective measures, critical in assessment.",
+      "difficulty": "hard",
+      "quality_comment": "Distractors are related to other possible interpretations, increasing the question’s discriminative power."
+    },
+    {
+      "stem": "The Thematic Apperception Test (TAT) was developed based on which of the following theoretical frameworks?",
+      "options": [
+        "Murray’s system of human needs involving needs and press",
+        "Jung’s typology of personality dimensions",
+        "Costa and McCrae’s Big Five factors",
+        "Cattell’s lexical hypothesis and factor analysis"
+      ],
+      "answer": "Murray’s system of human needs involving needs and press",
+      "explanation": "The TAT is based on Murray’s theory emphasizing personality needs and external/internal press affecting behavior.",
+      "kn": "KN32",
+      "kn_explanation": "This item focuses on the theoretical foundation of a specific projective test, relevant for assessment knowledge.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include other well-known personality theories that provide plausible but incorrect choices."
+    },
+    {
+      "stem": "Which of the following describes a primary characteristic of projective personality tests?",
+      "options": [
+        "They present unstructured, ambiguous stimuli to elicit projections of personality",
+        "They use direct self-report items with objective, non-ambiguous wording",
+        "They score examinees based on their absolute levels of traits relative to norms",
+        "They utilize forced-choice formats to avoid social desirability bias"
+      ],
+      "answer": "They present unstructured, ambiguous stimuli to elicit projections of personality",
+      "explanation": "Projective tests rely on ambiguous stimuli intended to evoke unconscious aspects of personality through projection.",
+      "kn": "KN32",
+      "kn_explanation": "This question assesses understanding of the fundamental nature of projective personality testing within assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Simple yet important distinction, with distractors reflecting characteristics of structured tests, enhancing clarity."
+    },
+    {
+      "stem": "In the Rorschach test, what does a 'whole' response location typically indicate about the examinee’s cognitive style?",
+      "options": [
+        "Creative or theoretical thinking",
+        "Emotional reactivity",
+        "Tendency to confabulate",
+        "Social conformity"
+      ],
+      "answer": "Creative or theoretical thinking",
+      "explanation": "Many 'whole' responses suggest the examinee processes stimuli in an integrative, creative, or abstract manner.",
+      "kn": "KN32",
+      "kn_explanation": "This question involves the interpretation of a specific Rorschach scoring category within personality assessment knowledge.",
+      "difficulty": "hard",
+      "quality_comment": "Options are concise and targeted, emphasizing clinically relevant interpretation for advanced examinees."
+    }
+  ]
+}

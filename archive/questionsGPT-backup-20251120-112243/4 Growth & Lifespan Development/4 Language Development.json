@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "According to Chomsky's nativist theory of language development, what innate mechanism enables children to acquire language?",
+      "options": [
+        "Social interactionist device",
+        "Language acquisition device (LAD)",
+        "Imitation and reinforcement system",
+        "Cognitive schema processor"
+      ],
+      "answer": "Language acquisition device (LAD)",
+      "explanation": "Chomsky's nativist theory posits an innate language acquisition device that biologically prepares children to learn language in a rule-governed way.",
+      "kn": "KN11",
+      "kn_explanation": "This question addresses foundational knowledge of language acquisition mechanisms linked to cognition and language processing.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-constructed with plausible distractors that distinguish between major theories of language development."
+    },
+    {
+      "stem": "Which component of language involves the rules for combining morphemes, the smallest units of meaning?",
+      "options": [
+        "Phonology",
+        "Syntax",
+        "Morphology",
+        "Pragmatics"
+      ],
+      "answer": "Morphology",
+      "explanation": "Morphology deals with the rules for the use of morphemes, including free and bound morphemes, which are the smallest meaningful language units.",
+      "kn": "KN11",
+      "kn_explanation": "The question concerns elements of language structure and their cognitive underpinnings, fitting with knowledge of language components.",
+      "difficulty": "easy",
+      "quality_comment": "Clear question stem and options; distractors represent other language components but are easily distinguishable."
+    },
+    {
+      "stem": "Which theory of language development emphasizes the role of caregivers' use of child-directed speech in facilitating language acquisition?",
+      "options": [
+        "Learning theory",
+        "Nativist theory",
+        "Social interactionist theory",
+        "Cognitive-developmental theory"
+      ],
+      "answer": "Social interactionist theory",
+      "explanation": "Social interactionist theory highlights the combination of biological and social factors, including caregiver-child interactions like child-directed speech, in language acquisition.",
+      "kn": "KN13",
+      "kn_explanation": "The question focuses on social factors influencing language development, aligned with psychosocial influences on cognition and behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Options provide a clear contrast among major theories; distractors are credible for graduate-level examinees."
+    },
+    {
+      "stem": "At approximately what age do infants typically begin to use telegraphic speech characterized by two-word phrases?",
+      "options": [
+        "6 to 8 weeks",
+        "3 to 6 months",
+        "12 to 15 months",
+        "18 to 24 months"
+      ],
+      "answer": "18 to 24 months",
+      "explanation": "Telegraphic speech, or two-word phrases mainly using content words, typically emerges between 18 and 24 months of age.",
+      "kn": "KN21",
+      "kn_explanation": "The question pertains to language development milestones within normal growth across the lifespan.",
+      "difficulty": "easy",
+      "quality_comment": "The time frames are distinct and well chosen, making the question suitable for assessing milestone knowledge."
+    },
+    {
+      "stem": "What is overregularization in children's language development?",
+      "options": [
+        "Using a word with an overly broad meaning",
+        "Misapplying grammatical rules such as pluralization or past tense",
+        "Using language appropriate only for a narrow context",
+        "Repeating words without understanding their meaning"
+      ],
+      "answer": "Misapplying grammatical rules such as pluralization or past tense",
+      "explanation": "Overregularization occurs when children incorrectly apply regular grammatical patterns to irregular words, e.g., saying 'foots' instead of 'feet'.",
+      "kn": "KN21",
+      "kn_explanation": "This question addresses a typical language development error during childhood growth stages.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible linguistic errors, providing a good challenge for test-takers."
+    },
+    {
+      "stem": "Research on the critical period for language acquisition suggests that:",
+      "options": [
+        "Exposure to language after adolescence has no effect on vocabulary acquisition",
+        "Early exposure to language is crucial for full proficiency in grammar and syntax",
+        "Semantics and vocabulary are equally impaired by late language exposure",
+        "Sign language and spoken language do not follow similar developmental trajectories"
+      ],
+      "answer": "Early exposure to language is crucial for full proficiency in grammar and syntax",
+      "explanation": "Studies indicate that early language exposure, especially within the first years of life, is essential for mastering grammar and syntax, though vocabulary may be less affected.",
+      "kn": "KN21",
+      "kn_explanation": "This question relates to developmental sensitive periods affecting language acquisition, which is a core topic in lifespan development.",
+      "difficulty": "hard",
+      "quality_comment": "The question requires nuanced understanding of critical period research with subtle differences among options, suitable for advanced learners."
+    },
+    {
+      "stem": "Which term describes bilingual or multilingual speakers’ use of more than one language within a single conversation or interaction?",
+      "options": [
+        "Code-switching",
+        "Language brokering",
+        "Paralanguage",
+        "Overextension"
+      ],
+      "answer": "Code-switching",
+      "explanation": "Code-switching refers to alternating languages during communication, often unconsciously or for specific social purposes.",
+      "kn": "KN15",
+      "kn_explanation": "The question addresses social communication behavior in bilingual individuals, placing it within social and cultural bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Options are all related to language concepts, making distractors plausible and enhancing question validity."
+    },
+    {
+      "stem": "What type of cry is characterized by a loud high-pitched cry followed by silence due to breath-holding and signals pain in a newborn?",
+      "options": [
+        "Low-pitched rhythmic cry",
+        "Shrill, less regular cry",
+        "Loud high-pitched cry with silence",
+        "Monotone continuous cry"
+      ],
+      "answer": "Loud high-pitched cry with silence",
+      "explanation": "The loud high-pitched cry followed by silence indicates pain and breath-holding in infants.",
+      "kn": "KN21",
+      "kn_explanation": "This question pertains to early infant behavioral development and communication, a key part of normal growth across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect other known cry types ensuring differentiation but maintaining plausible confusion."
+    },
+    {
+      "stem": "Which aspect of language is primarily concerned with the appropriate use of language in social contexts, including nonverbal cues and conversational rules?",
+      "options": [
+        "Phonology",
+        "Semantics",
+        "Pragmatics",
+        "Morphology"
+      ],
+      "answer": "Pragmatics",
+      "explanation": "Pragmatics involves understanding and using language appropriately in social situations, including understanding idioms, turn-taking, and body language.",
+      "kn": "KN11",
+      "kn_explanation": "The question asks about language functions in social interaction, a cognitive element of language processing.",
+      "difficulty": "easy",
+      "quality_comment": "Clear differential among language components; distractors are other well-known categories but easily ruled out by knowledgeable students."
+    },
+    {
+      "stem": "Language brokering within immigrant families is best described as:",
+      "options": [
+        "Children translating and interpreting for family members and others",
+        "Parents teaching children a second language at home",
+        "Using gestures and facial expressions during communication",
+        "Switching between languages during conversations"
+      ],
+      "answer": "Children translating and interpreting for family members and others",
+      "explanation": "Language brokering involves children acting as translators and interpreters for their families within immigrant contexts.",
+      "kn": "KN18",
+      "kn_explanation": "This question concerns cultural and social processes affecting language use and family dynamics within cross-cultural contexts.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors relate to language or communication concepts and provide a reasonable level of challenge."
+    },
+    {
+      "stem": "In studies of deaf infants exposed from birth to American Sign Language (ASL), what behavior emerges between 6 and 8 months of age similar to vocal babbling in hearing infants?",
+      "options": [
+        "Manual babbling consisting of repetitive hand movements",
+        "Echolalia involving repetition of spoken words",
+        "Acoustic babbling restricted to vocal sounds",
+        "Early sign sentences combining words and gestures"
+      ],
+      "answer": "Manual babbling consisting of repetitive hand movements",
+      "explanation": "Deaf infants exposed to ASL exhibit manual babbling with repetitive hand movements paralleling hearing infants' vocal babbling.",
+      "kn": "KN21",
+      "kn_explanation": "This question addresses developmental milestones in atypical populations, relevant to lifespan growth and language acquisition.",
+      "difficulty": "hard",
+      "quality_comment": "The question tests detailed knowledge of parallel language development modes in deaf infants, with plausible distractors."
+    }
+  ]
+}

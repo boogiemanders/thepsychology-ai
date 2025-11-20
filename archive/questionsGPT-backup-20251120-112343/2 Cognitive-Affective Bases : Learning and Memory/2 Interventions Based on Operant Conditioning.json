@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best describes the primary distinction between shaping and chaining in operant conditioning interventions?",
+      "options": [
+        "Shaping reinforces successive approximations to a single final behavior, whereas chaining reinforces each discrete behavior in a sequence.",
+        "Shaping uses positive reinforcement only, while chaining uses punishment.",
+        "Shaping is based on classical conditioning principles, and chaining is based on operant conditioning.",
+        "Shaping focuses on decreasing undesirable behaviors, while chaining focuses on increasing desirable behaviors."
+      ],
+      "answer": "Shaping reinforces successive approximations to a single final behavior, whereas chaining reinforces each discrete behavior in a sequence.",
+      "explanation": "Shaping involves reinforcing closer approximations toward a final target behavior, where intermediate behaviors are eventually no longer needed, while chaining reinforces each separate response in a sequence and all parts remain evident in the completed behavior.",
+      "kn": "KN7",
+      "kn_explanation": "This question evaluates understanding of core operant conditioning procedures, which aligns with theories and principles of learning under KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly differentiates two similar operant techniques; distractors are plausible but clearly incorrect upon knowledge of definitions."
+    },
+    {
+      "stem": "A teacher praises a student for raising her hand instead of shouting out answers in class. Which differential reinforcement procedure is being used?",
+      "options": [
+        "Differential reinforcement of incompatible behavior (DRI)",
+        "Differential reinforcement of alternative behavior (DRA)",
+        "Differential reinforcement of other behavior (DRO)",
+        "Differential reinforcement of low rates (DRL)"
+      ],
+      "answer": "Differential reinforcement of alternative behavior (DRA)",
+      "explanation": "DRA involves reinforcing a specified alternative behavior to replace an undesirable behavior, regardless of whether the behaviors are incompatible.",
+      "kn": "KN7",
+      "kn_explanation": "This question focuses on applying operant learning principles to behavior modification strategies, fitting under KN7's coverage of learning theories.",
+      "difficulty": "easy",
+      "quality_comment": "The item is straightforward with clearly defined options that differentiate closely related reinforcement procedures, suitable for EPPP level."
+    },
+    {
+      "stem": "Which of the following is an example of positive punishment?",
+      "options": [
+        "A child must clean up chairs knocked over after becoming angry",
+        "A child loses 15 minutes of video game time for aggressive behavior",
+        "A child sits in the corner for a few minutes after misbehaving",
+        "Ignoring a child's whining to reduce its frequency"
+      ],
+      "answer": "A child must clean up chairs knocked over after becoming angry",
+      "explanation": "Positive punishment involves presenting an aversive stimulus following a behavior to decrease its occurrence; requiring cleanup is an application of overcorrection, a form of positive punishment.",
+      "kn": "KN7",
+      "kn_explanation": "The question assesses knowledge of operant conditioning punishment definitions and examples, falling under learning principles in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The options represent different types of consequences making the question a good discriminator of understanding positive versus negative punishment and extinction."
+    },
+    {
+      "stem": "In functional behavioral assessment, what is the purpose of systematically altering antecedents and consequences during the third step?",
+      "options": [
+        "To test hypotheses about the function of the behavior",
+        "To reinforce appropriate alternative behaviors",
+        "To evaluate the effectiveness of the interventions",
+        "To collect indirect information from family reports"
+      ],
+      "answer": "To test hypotheses about the function of the behavior",
+      "explanation": "The third step involves systematically modifying antecedents and consequences to determine whether the behavior changes as predicted, thus testing the hypothesized function.",
+      "kn": "KN7",
+      "kn_explanation": "Understanding functional assessment procedures is part of applied learning theory and intervention selection, aligning with KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a key step in functional behavioral assessment with plausible distractors representing other steps."
+    },
+    {
+      "stem": "When applying the Premack principle, which of the following scenarios illustrates its use correctly?",
+      "options": [
+        "Allowing a child to play video games only after completing homework",
+        "Giving a child a time-out following an aggressive episode",
+        "Extinguishing a behavior by ignoring it consistently",
+        "Requiring a child to clean the room after causing damage"
+      ],
+      "answer": "Allowing a child to play video games only after completing homework",
+      "explanation": "The Premack principle uses a high-frequency or preferred behavior (playing video games) to reinforce a low-frequency or less preferred behavior (doing homework).",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses reinforcement contingencies within operant learning theories consistent with KN7.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is clear and distractors include other operant techniques, aiding in differentiation of concepts."
+    },
+    {
+      "stem": "Which of these statements about time out as a behavior intervention is FALSE?",
+      "options": [
+        "Time out involves removing reinforcement immediately following an undesirable behavior",
+        "The individual should be informed about the behaviors that will lead to time out and its duration",
+        "The length of time out can extend beyond 10 minutes if the behavior persists",
+        "Time out should be discontinued even if the individual continues the undesirable behavior"
+      ],
+      "answer": "Time out should be discontinued even if the individual continues the undesirable behavior",
+      "explanation": "Time out should not end until the individual is no longer engaging in the undesirable behavior; ending it earlier reduces its effectiveness.",
+      "kn": "KN7",
+      "kn_explanation": "This question evaluates knowledge of operant punishment procedures and best practice guidelines, related to learning theories in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "This item effectively tests common misunderstandings about time out with clearly true and false answer choices."
+    },
+    {
+      "stem": "A parent stops responding to a child's whining, which previously resulted in attention. This intervention is an example of:",
+      "options": [
+        "Extinction",
+        "Positive punishment",
+        "Differential reinforcement of incompatible behavior",
+        "Response cost"
+      ],
+      "answer": "Extinction",
+      "explanation": "Extinction involves withholding reinforcement (attention) for a behavior (whining) that was previously maintained by that reinforcement.",
+      "kn": "KN7",
+      "kn_explanation": "Understanding extinction as a learning principle applies directly to operant conditioning concepts in KN7.",
+      "difficulty": "easy",
+      "quality_comment": "The example is straightforward and well matched to the concept tested, with plausible distractors to challenge knowledge."
+    },
+    {
+      "stem": "In backward chaining, teaching a complex task differs from forward chaining because:",
+      "options": [
+        "Training begins with the last behavior in the sequence and moves backward",
+        "Each response is reinforced only after the entire sequence is completed",
+        "Only the final target behavior is important, intermediate behaviors are ignored",
+        "Reinforcement is omitted until all behaviors are mastered"
+      ],
+      "answer": "Training begins with the last behavior in the sequence and moves backward",
+      "explanation": "Backward chaining starts teaching the last step of a behavior chain first and then proceeds backward toward the first step, reinforcing each newly learned link.",
+      "kn": "KN7",
+      "kn_explanation": "This question targets chaining methods, a specialized operant conditioning technique within learning models, making KN7 most relevant.",
+      "difficulty": "medium",
+      "quality_comment": "The item clearly contrasts chaining methods with plausible distractors that reflect basic misunderstandings."
+    },
+    {
+      "stem": "A teacher reinforces a student for staying seated for 30 minutes, which is incompatible with the student's usual behavior of leaving their seat frequently. This is an example of:",
+      "options": [
+        "Differential reinforcement of incompatible behavior (DRI)",
+        "Differential reinforcement of alternative behavior (DRA)",
+        "Differential reinforcement of other behavior (DRO)",
+        "Differential reinforcement of low rates of behavior (DRL)"
+      ],
+      "answer": "Differential reinforcement of incompatible behavior (DRI)",
+      "explanation": "DRI involves reinforcing a behavior that cannot occur simultaneously with the undesirable behavior, such as sitting (incompatible) instead of getting up.",
+      "kn": "KN7",
+      "kn_explanation": "Classifying differential reinforcement procedures falls under operant learning models included in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include other differential reinforcement types, requiring precise knowledge for correct selection."
+    },
+    {
+      "stem": "Which step in functional behavioral assessment involves collecting information about the antecedents and consequences maintaining a target behavior and forming hypotheses about its function?",
+      "options": [
+        "Step 2: Collect information about antecedents and consequences and develop hypotheses",
+        "Step 1: Collect information using direct and indirect methods",
+        "Step 4: Identify and implement function-based interventions",
+        "Step 3: Test hypotheses by altering antecedents and consequences"
+      ],
+      "answer": "Step 2: Collect information about antecedents and consequences and develop hypotheses",
+      "explanation": "Step 2 focuses on gathering detailed information about factors maintaining the behavior and forming functional hypotheses to guide intervention.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses the behavioral assessment process fundamental to designing operant interventions, consistent with KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The question requires recall of FBA procedural steps with distractors reflecting other stages, well constructed for exam review."
+    },
+    {
+      "stem": "Response cost is best characterized as:",
+      "options": [
+        "Removing a specific reinforcer following a behavior to reduce its frequency",
+        "Providing an aversive stimulus to decrease behavior",
+        "Withholding all reinforcement following the behavior",
+        "Reinforcing a behavior that is alternative but not incompatible"
+      ],
+      "answer": "Removing a specific reinforcer following a behavior to reduce its frequency",
+      "explanation": "Response cost is a form of negative punishment involving loss of a reinforcer contingent on behavior to decrease its future occurrence.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of operant conditioning punishment procedures according to learning theories (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "Options are clearly defined and plausible, facilitating discrimination of key operant concepts."
+    },
+    {
+      "stem": "Which of the following best exemplifies differential reinforcement of low rates of behavior (DRL)?",
+      "options": [
+        "Reinforcing a child for asking three or fewer questions during a 60-minute period",
+        "Reinforcing a child for any behavior other than hand-flapping",
+        "Reinforcing a child for raising their hand instead of shouting out answers",
+        "Reinforcing a child for staying seated during class intervals"
+      ],
+      "answer": "Reinforcing a child for asking three or fewer questions during a 60-minute period",
+      "explanation": "DRL involves reinforcing the target behavior only if it occurs at or below a specified low rate rather than reinforcing a different behavior.",
+      "kn": "KN7",
+      "kn_explanation": "This question evaluates understanding of a specific operant conditioning reinforcement strategy, appropriate under learning theories (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect other differential reinforcement types, requiring solid understanding to answer correctly."
+    }
+  ]
+}

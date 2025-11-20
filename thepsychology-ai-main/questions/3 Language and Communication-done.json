@@ -1,0 +1,302 @@
+[
+  {
+    "id": "lc_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "According to nativist theory, what enables children to acquire language?",
+    "options": {
+      "A": "Language acquisition device (LAD)",
+      "B": "Imitation and reinforcement",
+      "C": "Social interaction only",
+      "D": "Environmental exposure alone"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Chomsky's nativist theory proposes that humans have a language acquisition device (LAD), an inborn linguistic processor that enables children to understand language and speak in rule-governed ways."
+  },
+  {
+    "id": "lc_002",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What are the five major components of language?",
+    "options": {
+      "A": "Phonology, morphology, syntax, semantics, pragmatics",
+      "B": "Grammar, vocabulary, pronunciation, comprehension, expression",
+      "C": "Reading, writing, speaking, listening, thinking",
+      "D": "Consonants, vowels, words, sentences, paragraphs"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Linguists distinguish between five major components of language: phonology (sound rules), morphology (meaning units), syntax (sentence structure), semantics (meaning), and pragmatics (social use)."
+  },
+  {
+    "id": "lc_003",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What distinguishes free morphemes from bound morphemes?",
+    "options": {
+      "A": "Free: stand alone as words; Bound: must combine with others",
+      "B": "Free: must combine; Bound: stand alone",
+      "C": "Free: grammatical; Bound: meaningful",
+      "D": "Free: verbs only; Bound: nouns only"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Free morphemes are minimal units of meaning that stand alone as words (e.g., test), while bound morphemes must be combined with at least one other morpheme (e.g., pre, un)."
+  },
+  {
+    "id": "lc_004",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What distinguishes semantics from pragmatics in language?",
+    "options": {
+      "A": "Semantics: literal meaning; Pragmatics: social context use",
+      "B": "Semantics: social use; Pragmatics: literal meaning",
+      "C": "Semantics: sentence structure; Pragmatics: word order",
+      "D": "Semantics: sound rules; Pragmatics: meaning units"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Semantics is concerned with the literal meaning of words, phrases, and sentences. Pragmatics refers to the use and meaning of verbal and nonverbal language in different social contexts."
+  },
+  {
+    "id": "lc_005",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "At what age does cooing begin in infants?",
+    "options": {
+      "A": "Six to eight weeks of age",
+      "B": "Three to six months of age",
+      "C": "Eight to nine months of age",
+      "D": "Ten to fifteen months of age"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Cooing begins at six to eight weeks of age and involves repeating vowel-like sounds such as 'ooo' and 'aaaeeeooo.'"
+  },
+  {
+    "id": "lc_006",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "When does babbling typically begin in infants?",
+    "options": {
+      "A": "Three to six months of age",
+      "B": "Six to eight weeks of age",
+      "C": "Eight to nine months of age",
+      "D": "Twelve to fifteen months of age"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Babbling begins at three to six months of age with single consonant-vowel combinations like 'ba' and 'goo,' followed by canonical babbling with repetitions like 'mamamama.'"
+  },
+  {
+    "id": "lc_007",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How does babbling in deaf infants differ from hearing infants?",
+    "options": {
+      "A": "Babble less frequently, more limited sounds, stops without aids",
+      "B": "Babble more frequently with greater sound variety",
+      "C": "Babble at exactly the same rate and pattern",
+      "D": "Never exhibit any form of babbling"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Congenitally deaf infants babble at the same time or slightly later but less frequently, with a more limited range of sounds, and vocalizations decrease and stop without hearing aids or implants."
+  },
+  {
+    "id": "lc_008",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What is echolalia in language development?",
+    "options": {
+      "A": "Repeating speech sounds without understanding meaning",
+      "B": "Using single words to express thoughts",
+      "C": "Combining two content words in sentences",
+      "D": "Understanding words before speaking"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Echolalia begins at about 9 months of age and involves repeating speech sounds and words uttered by another person without understanding their meaning."
+  },
+  {
+    "id": "lc_009",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What distinguishes holophrastic speech from telegraphic speech?",
+    "options": {
+      "A": "Holophrastic: single word for thought; Telegraphic: two+ words",
+      "B": "Holophrastic: two words; Telegraphic: single word",
+      "C": "Holophrastic: complete sentences; Telegraphic: fragments",
+      "D": "Holophrastic: questions; Telegraphic: statements"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Holophrastic speech (12-15 months) uses a single word to express an entire thought. Telegraphic speech (18-24 months) uses two or more content words like 'want juice.'"
+  },
+  {
+    "id": "lc_010",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What do studies suggest about critical periods for different language aspects?",
+    "options": {
+      "A": "Grammar/syntax/phonetics need early exposure; semantics/vocabulary less affected",
+      "B": "All aspects require identical critical periods",
+      "C": "Vocabulary needs early exposure; grammar less affected",
+      "D": "No critical periods exist for any language aspect"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Research indicates different critical periods for different language aspects: full proficiency with grammar, syntax, and phonetics requires early exposure, while semantics and vocabulary size are less affected by age."
+  },
+  {
+    "id": "lc_011",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "According to Friedmann and Rusou, when is the critical period for syntax acquisition?",
+    "options": {
+      "A": "The first year of life",
+      "B": "The first three years of life",
+      "C": "Early childhood through age 7",
+      "D": "Late childhood to early adolescence"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Friedmann and Rusou (2015) found that the critical period for the acquisition of syntax in a first language is the first year of life."
+  },
+  {
+    "id": "lc_012",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "What do proponents of the bimodal-bilingual approach for DHH children argue?",
+    "options": {
+      "A": "Sign language benefits spoken language acquisition",
+      "B": "Sign language inhibits spoken language development",
+      "C": "Cochlear implants alone are always sufficient",
+      "D": "Hearing aids eliminate need for sign language"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Professionals endorsing the combined (bimodal-bilingual) approach argue that there is evidence sign language benefits the acquisition of spoken language and prevents language deprivation."
+  },
+  {
+    "id": "lc_013",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is overextension in language development?",
+    "options": {
+      "A": "Using a word too broadly",
+      "B": "Using a word too narrowly",
+      "C": "Misapplying grammar rules",
+      "D": "Repeating words without meaning"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Overextension occurs when a child uses a word too broadly, such as using 'doggie' to refer to all furry, four-legged animals, not just dogs."
+  },
+  {
+    "id": "lc_014",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What is overregularization in language errors?",
+    "options": {
+      "A": "Misapplying rules for plurals and past tense",
+      "B": "Using words too broadly or narrowly",
+      "C": "Repeating sounds without understanding",
+      "D": "Combining incorrect word sequences"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Overregularization occurs when a child misapplies rules for plurals and past tense, such as saying 'foots' instead of 'feet' and 'telled' instead of 'told.'"
+  },
+  {
+    "id": "lc_015",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What does paralanguage refer to?",
+    "options": {
+      "A": "How something is said rather than what is said",
+      "B": "What is said rather than how it's said",
+      "C": "The vocabulary used in conversation",
+      "D": "The grammatical structure of sentences"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Paralanguage refers to how something is said rather than what is said and is often used to modify meaning or express emotion, including prosody and nonwords."
+  },
+  {
+    "id": "lc_016",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What distinguishes tone from intonation in prosody?",
+    "options": {
+      "A": "Tone: pitch change for syllables/words; Intonation: phrases/sentences",
+      "B": "Tone: phrases/sentences; Intonation: syllables/words",
+      "C": "Tone: expresses emotion only; Intonation: grammatical only",
+      "D": "Tone: conscious; Intonation: unconscious"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Tone refers to a change in pitch for syllables or entire words (usually expressing emotion). Intonation refers to changes in pitch over entire phrases or sentences."
+  },
+  {
+    "id": "lc_017",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "What are the mixed effects of language brokering on children and adolescents?",
+    "options": {
+      "A": "Positive: strong skills/confidence; Negative: anxiety/embarrassment",
+      "B": "Positive: reduced academic pressure; Negative: social isolation",
+      "C": "Positive: delayed maturity; Negative: early independence",
+      "D": "Only positive effects have been found"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Language brokering has been linked to positive effects (strong interpersonal skills, high self-confidence and academic self-efficacy) and negative effects (elevated anxiety, frustration, embarrassment)."
+  },
+  {
+    "id": "lc_018",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is code-switching?",
+    "options": {
+      "A": "Using more than one language in a single interaction",
+      "B": "Translating between languages for family",
+      "C": "Learning a second language after the first",
+      "D": "Switching from verbal to nonverbal communication"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Code-switching refers to bi- and multilingual speakers' use of more than one language or language variety within a single interaction or conversational turn."
+  },
+  {
+    "id": "lc_019",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "When can fetuses begin to distinguish their mothers' voices from strangers?",
+    "options": {
+      "A": "During the third trimester",
+      "B": "Immediately after birth only",
+      "C": "During the first trimester",
+      "D": "During the second trimester"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "During the third trimester, fetuses can distinguish between their mothers' voices and strangers' voices as indicated by changes in heart rate and motor activity when their mothers speak."
+  },
+  {
+    "id": "lc_020",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "At what age can bilingual children use their two languages appropriately with different speakers?",
+    "options": {
+      "A": "As young as 20 months of age",
+      "B": "Not until 3 years of age",
+      "C": "Not until 5 years of age",
+      "D": "Only in late childhood"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN21",
+    "explanation": "Genesee et al. (1996) found that bilingual children as young as 20 months could use their two languages appropriately so that their language matched the language used by familiar and unfamiliar conversational partners."
+  }
+]

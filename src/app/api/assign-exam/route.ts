@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-import { readFileSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { join } from 'path'
 import { parseExamFile } from '@/lib/exam-file-manager'
 
@@ -181,6 +181,21 @@ function loadExamFromDisk(
   examFile: string,
   examType: 'diagnostic' | 'practice'
 ) {
+  // First, try to load from examsGPT JSON if available.
+  // This lets us use the new GPT-generated exams while keeping
+  // the legacy exams/ markdown files as a safe fallback.
+  try {
+    const gptExam = loadExamFromGptJson(examFile, examType)
+    if (gptExam) {
+      return gptExam
+    }
+  } catch (gptError) {
+    console.warn(
+      `[Assign Exam] Failed to load GPT exam for ${examType} ${examFile}, falling back to legacy exams/:`,
+      gptError
+    )
+  }
+
   try {
     const examsDir = join(process.cwd(), 'exams', examType)
     const filePath = join(examsDir, examFile)
@@ -235,5 +250,87 @@ function loadExamFromDisk(
   } catch (error) {
     console.error(`[Assign Exam] Error loading exam file ${examFile}:`, error)
     throw new Error(`Failed to load exam file: ${examFile}`)
+  }
+}
+
+/**
+ * Try to load a GPT-generated exam from the examsGPT directory.
+ * Returns null if no matching JSON file exists so callers can fall back.
+ */
+function loadExamFromGptJson(
+  examFile: string,
+  examType: 'diagnostic' | 'practice'
+) {
+  // Expect examFile patterns like "practice-exam-001.md" or "diagnostic-exam-002.md"
+  const match = examFile.match(/(\d+)/)
+  const examNumber = match ? parseInt(match[1], 10) : 1
+
+  const gptDir =
+    examType === 'practice'
+      ? join(process.cwd(), 'examsGPT')
+      : join(process.cwd(), 'diagnosticGPT')
+  const jsonFileName =
+    examType === 'practice'
+      ? `practice-exam-${examNumber}.json`
+      : `diagnostic-exam-${examNumber}.json`
+  const jsonPath = join(gptDir, jsonFileName)
+
+  if (!existsSync(jsonPath)) {
+    // No GPT exam yet for this slot – let caller fall back
+    return null
+  }
+
+  const raw = readFileSync(jsonPath, 'utf-8')
+  const parsed = JSON.parse(raw)
+
+  const questions = Array.isArray(parsed.questions) ? parsed.questions : []
+
+  const mappedQuestions = questions.map((q: any, idx: number) => {
+    const domainNumber =
+      typeof q.domain === 'number'
+        ? q.domain
+        : typeof q.domain === 'string'
+        ? parseInt(q.domain, 10)
+        : undefined
+
+    return {
+      id: idx + 1,
+      question: q.stem ?? q.question ?? '',
+      options: q.options ?? [],
+      correct_answer: q.answer ?? q.correct_answer ?? '',
+      explanation: q.explanation ?? '',
+      // Store domain in a consistent string format so prioritizer
+      // can extract the domain number (e.g., "Domain 6")
+      domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
+      difficulty:
+        q.difficulty === 'easy' || q.difficulty === 'medium' || q.difficulty === 'hard'
+          ? q.difficulty
+          : 'medium',
+      isScored: typeof q.scored === 'boolean' ? q.scored : q.isScored,
+      knId: q.kn ?? q.knId,
+      type: q.type ?? 'standard',
+      // Preserve any extra metadata if present
+      source_file: q.sourceFile ?? q.source_file,
+      source_folder: q.sourceFolder ?? q.source_folder,
+      question_type: q.question_type,
+      is_org_psych: q.is_org_psych,
+    }
+  })
+
+  const metadata = {
+    exam_id: `${examType}-gpt-${examNumber}`,
+    exam_type: examType,
+    generated_at: parsed.meta?.generatedAt ?? new Date().toISOString(),
+    question_count: mappedQuestions.length,
+    version: 1,
+  }
+
+  console.log(
+    `[Assign Exam] Loaded GPT ${examType} exam from examsGPT: ${jsonFileName} (${mappedQuestions.length} questions)`
+  )
+
+  return {
+    metadata,
+    questions: mappedQuestions,
   }
 }

@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "stem": "Exposure with response prevention decreases anxiety by preventing the client from performing which of the following during exposure to the feared stimulus?",
+      "options": [
+        "Avoidance response",
+        "Relaxation response",
+        "Safety behavior",
+        "Conditioned inhibition"
+      ],
+      "answer": "Avoidance response",
+      "explanation": "Exposure with response prevention works by exposing the client to the feared stimulus while preventing avoidance, which allows extinction of the conditioned fear response.",
+      "kn": "KN7",
+      "kn_explanation": "This question focuses on the classical conditioning principles underlying exposure therapy, thus aligns with theories and principles of learning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a key mechanism in exposure therapy, and the distractors are related concepts, creating plausible distractors that test conceptual understanding."
+    },
+    {
+      "stem": "Which of the following best describes graded exposure in the context of exposure with response prevention?",
+      "options": [
+        "Exposing the client to the most feared stimulus repeatedly until anxiety reduces",
+        "Gradually exposing the client to anxiety-provoking stimuli from least to most anxiety-arousing",
+        "Pairing anxiety-provoking stimuli with an unconditioned stimulus that elicits relaxation",
+        "Presenting feared stimuli while encouraging exaggerated fearful imagery"
+      ],
+      "answer": "Gradually exposing the client to anxiety-provoking stimuli from least to most anxiety-arousing",
+      "explanation": "Graded exposure involves starting with the least anxiety-arousing stimulus and progressively moving to more challenging stimuli to facilitate extinction.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge about exposure therapy, a classical conditioning-based intervention, linked to learning theories in KN7.",
+      "difficulty": "easy",
+      "quality_comment": "Well-structured question with clear and distinct options to test understanding of graded exposure specifically."
+    },
+    {
+      "stem": "In cue exposure therapy (CET) for substance use disorders, what is the primary process presumed to weaken the conditioned association between cues and substance use?",
+      "options": [
+        "Counterconditioning via relaxation training",
+        "Extinction through repeated exposure without substance use",
+        "Flooding with rapid exposure to multiple cues simultaneously",
+        "Implosive therapy conducted in imagination"
+      ],
+      "answer": "Extinction through repeated exposure without substance use",
+      "explanation": "CET involves exposing clients to conditioned cues without allowing substance use, weakening the cue-use association through extinction.",
+      "kn": "KN7",
+      "kn_explanation": "The question concerns extinction of conditioned responses via exposure therapy, reflecting learning theory principles (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Options represent plausible interventions, requiring knowledge of CET's specific extinction mechanism, enhancing question quality."
+    },
+    {
+      "stem": "Implosive therapy differs from other exposure techniques primarily because it:",
+      "options": [
+        "Is always conducted in imagination and incorporates psychodynamic conflicts",
+        "Emphasizes gradual exposure from least to most feared stimuli",
+        "Utilizes rapid eye movements to facilitate trauma processing",
+        "Combines exposure with response prevention in vivo"
+      ],
+      "answer": "Is always conducted in imagination and incorporates psychodynamic conflicts",
+      "explanation": "Implosive therapy is imaginal exposure that exaggerates feared scenarios and embeds psychodynamic elements thought to underlie anxiety.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses theoretical aspects and components of a classical conditioning-based treatment, fitting under learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are distinct commonly used techniques, assisting discrimination and reinforcing conceptual clarity."
+    },
+    {
+      "stem": "Which statement best summarizes current research findings regarding the role of rapid eye movements in Eye Movement Desensitization and Reprocessing (EMDR)?",
+      "options": [
+        "Eye movements are essential and explain EMDR's unique effectiveness",
+        "Eye movements have no effect; benefits stem solely from repeated imaginal exposure",
+        "Research findings are inconsistent about whether eye movements enhance EMDR’s efficacy",
+        "Eye movements actually diminish the effectiveness of EMDR"
+      ],
+      "answer": "Research findings are inconsistent about whether eye movements enhance EMDR’s efficacy",
+      "explanation": "Meta-analyses yield mixed results about whether eye movements add to EMDR’s effects; mechanisms remain unclear.",
+      "kn": "KN7",
+      "kn_explanation": "The question addresses the mechanisms of a learning-based intervention, relating to research-based learning models (KN7).",
+      "difficulty": "hard",
+      "quality_comment": "This question effectively assesses nuanced understanding of the evidence regarding EMDR's mechanism, challenging but fair."
+    },
+    {
+      "stem": "Systematic desensitization works by which primary classical conditioning mechanism according to Wolpe’s original description?",
+      "options": [
+        "Counterconditioning through reciprocal inhibition with relaxation response",
+        "Extinction by preventing avoidance of the conditioned stimulus",
+        "Flooding to elicit maximal anxiety until habituation occurs",
+        "Conditioned inhibition via safety behaviors"
+      ],
+      "answer": "Counterconditioning through reciprocal inhibition with relaxation response",
+      "explanation": "Wolpe described systematic desensitization as counterconditioning where anxiety is replaced by incompatible relaxation.",
+      "kn": "KN7",
+      "kn_explanation": "The question tests understanding of classical conditioning-based counterconditioning, central to learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Clear and focused question with plausible distractors that test knowledge of key classical conditioning concepts."
+    },
+    {
+      "stem": "Research dismantling studies indicate that the effectiveness of systematic desensitization is largely due to which process?",
+      "options": [
+        "Classical extinction of the anxiety response",
+        "Reciprocal inhibition via relaxation training",
+        "Counterconditioning with aversive stimuli",
+        "Safety signal learning through conditioned inhibition"
+      ],
+      "answer": "Classical extinction of the anxiety response",
+      "explanation": "Dismantling research suggests systematic desensitization’s success is due to extinction from repeated CS exposure without anxiety-eliciting US.",
+      "kn": "KN7",
+      "kn_explanation": "This question concerns empirical findings about learning mechanisms underlying treatment efficacy, fitting within KN7’s scope.",
+      "difficulty": "hard",
+      "quality_comment": "The question highlights research nuance in treatment theory; distractors are conceptually related, increasing test rigor."
+    },
+    {
+      "stem": "In aversion therapy, the fetish object serves as which of the following in classical conditioning terms?",
+      "options": [
+        "Conditioned stimulus (CS)",
+        "Unconditioned stimulus (US)",
+        "Unconditioned response (UR)",
+        "Conditioned response (CR)"
+      ],
+      "answer": "Conditioned stimulus (CS)",
+      "explanation": "The fetish object is the CS paired with an aversive US (e.g., electric shock) to elicit an unpleasant CR instead of sexual arousal.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses knowledge of classical conditioning terminology as applied to behavioral interventions (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "This is a straightforward, well-constructed question testing fundamental classical conditioning concepts in treatment context."
+    },
+    {
+      "stem": "Which of the following statements about safety behaviors during exposure with response prevention is TRUE?",
+      "options": [
+        "They always facilitate the extinction of anxiety by signaling safety",
+        "Their presence may hinder treatment by attributing lack of anxiety to the behavior itself",
+        "They are universally contraindicated because they increase anxiety",
+        "They replace the need for imaginal exposure"
+      ],
+      "answer": "Their presence may hinder treatment by attributing lack of anxiety to the behavior itself",
+      "explanation": "Some researchers argue safety behaviors interfere with extinction by leading clients to believe anxiety is prevented by those behaviors, maintaining avoidance.",
+      "kn": "KN7",
+      "kn_explanation": "This question delves into learning concepts related to safety signals and conditioned inhibition as they affect exposure therapy outcomes (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The question differentiates nuanced clinical application points; distractors include common misconceptions, enhancing discrimination."
+    },
+    {
+      "stem": "Which of these best describes the difference between implosive therapy and systematic desensitization?",
+      "options": [
+        "Implosive therapy involves exaggerated feared imagery and psychodynamic conflicts, systematic desensitization involves relaxation training and gradual exposure",
+        "Implosive therapy uses rapid eye movements, systematic desensitization uses flooding techniques",
+        "Implosive therapy is always conducted in vivo, systematic desensitization is imaginal",
+        "Implosive therapy is based on operant conditioning, systematic desensitization is classical extinction"
+      ],
+      "answer": "Implosive therapy involves exaggerated feared imagery and psychodynamic conflicts, systematic desensitization involves relaxation training and gradual exposure",
+      "explanation": "Implosive therapy emphasizes exaggerated imagery and psychodynamic themes in imagination, while systematic desensitization uses progressive exposure paired with relaxation.",
+      "kn": "KN7",
+      "kn_explanation": "This question compares classical conditioning-based interventions, evaluating knowledge of their specific features in learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Cleverly juxtaposes two concepts with some overlapping features, requiring detailed knowledge for accurate selection."
+    }
+  ]
+}

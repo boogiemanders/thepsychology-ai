@@ -1,0 +1,176 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following symptoms is NOT part of the diagnostic criteria for oppositional defiant disorder (ODD)?",
+      "options": [
+        "Often loses temper",
+        "Deliberately annoys others",
+        "Persistent pattern of stealing or deceitfulness",
+        "Often blames others for their mistakes",
+        "Is angry and resentful"
+      ],
+      "answer": "Persistent pattern of stealing or deceitfulness",
+      "explanation": "A pattern of stealing or deceitfulness is characteristic of conduct disorder, not oppositional defiant disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of classification systems and differential diagnosis (KN36) by distinguishing features of ODD versus conduct disorder.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is concise, and the distractors are symptoms associated with ODD, except the correct option which is from a related but distinct disorder, making it a good discriminating item."
+    },
+    {
+      "stem": "Which subtype of conduct disorder (CD) is associated with a higher risk of developing antisocial personality disorder in adulthood?",
+      "options": [
+        "Adolescent-onset type",
+        "Childhood-onset type",
+        "Unspecified onset type",
+        "Late adolescent-onset type"
+      ],
+      "answer": "Childhood-onset type",
+      "explanation": "Childhood-onset CD, with symptoms before age 10, is linked to a worse prognosis and greater risk for antisocial personality disorder in adulthood.",
+      "kn": "KN28",
+      "kn_explanation": "This question focuses on developmental psychopathology and prognosis related to disorders impacting expected developmental course (KN28).",
+      "difficulty": "medium",
+      "quality_comment": "Stem is clear and the answer choices are plausible; the correct option aligns well with diagnostic specifiers, enhancing clinical relevance."
+    },
+    {
+      "stem": "Which of the following is an evidence-based parent-focused intervention designed to replace coercive parenting practices with positive reinforcement in children with conduct disorder?",
+      "options": [
+        "Multisystemic therapy (MST)",
+        "Parent management training - Oregon model (PMTO)",
+        "Functional family therapy (FFT)",
+        "Problem-solving skills training (PSST)"
+      ],
+      "answer": "Parent management training - Oregon model (PMTO)",
+      "explanation": "PMTO specifically targets replacing coercive parenting with positive parenting strategies like reinforcement and monitoring.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of treatment techniques and evidence for their effectiveness, specifically parent management interventions (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are other empirically supported treatments for conduct disorder, which adds complexity, while the stem clearly focuses on parental coercion replacement."
+    },
+    {
+      "stem": "According to Moffitt’s developmental taxonomy, which type of antisocial behavior is characterized by a temporary pattern related to a 'maturity gap' during adolescence?",
+      "options": [
+        "Life-course-persistent type",
+        "Adolescence-limited type",
+        "Childhood-onset type",
+        "Late-onset type"
+      ],
+      "answer": "Adolescence-limited type",
+      "explanation": "The adolescence-limited type occurs mainly during teens due to a discrepancy between biological maturity and social maturity.",
+      "kn": "KN23",
+      "kn_explanation": "The question evaluates knowledge of major developmental theories and models related to disorder onset and course (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include related but incorrect options which require understanding Moffitt’s theory, making this question effective for EPPP-level testing."
+    },
+    {
+      "stem": "Which physiological finding has been associated with conduct disorder in children?",
+      "options": [
+        "Elevated resting heart rate compared to healthy peers",
+        "Increased cortisol response to stress",
+        "Lower physiological reactions to aversive stimuli",
+        "Heightened skin conductance responses",
+        "Increased cardiovascular reactivity during stress"
+      ],
+      "answer": "Lower physiological reactions to aversive stimuli",
+      "explanation": "Children with conduct disorder often show reduced physiological responses to stress and aversive stimuli, including lower heart rate and skin conductance.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to neurobiological bases and physiological correlates of behavior in psychopathology (KN1).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors include physiological responses that are plausible but incorrect, increasing item difficulty and discriminability."
+    },
+    {
+      "stem": "Which of the following statements regarding intermittent explosive disorder (IED) is TRUE?",
+      "options": [
+        "IED involves premeditated aggressive acts aimed at achieving tangible outcomes.",
+        "Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage.",
+        "IED symptoms usually begin in late adulthood.",
+        "Aggressive outbursts in IED are proportional to the provocation or social stressor.",
+        "The disorder can be diagnosed in children younger than six years old."
+      ],
+      "answer": "Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage.",
+      "explanation": "IED includes recurrent outbursts of aggression typically occurring twice weekly without damage or injury over at least three months; premeditation and proportionality are exclusionary.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of classification criteria and diagnostic thresholds for impulse-control disorders (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Options include common misconceptions and diagnostic nuances, effectively assessing detailed knowledge of IED diagnostic criteria."
+    },
+    {
+      "stem": "Which of the following best characterizes Problem-Solving Skills Training (PSST) used in children with conduct disorder?",
+      "options": [
+        "It emphasizes operant conditioning techniques to modify externalizing behavior.",
+        "It targets parents' coercive behaviors toward their children.",
+        "It helps children identify others’ feelings and develop prosocial conflict resolution skills.",
+        "It focuses on altering power structures within family systems.",
+        "It uses intensive therapy involving community and school interventions."
+      ],
+      "answer": "It helps children identify others’ feelings and develop prosocial conflict resolution skills.",
+      "explanation": "PSST focuses on cognitive processes and interpersonal problem-solving skills in children to reduce disruptive behaviors.",
+      "kn": "KN44",
+      "kn_explanation": "This question involves treatment techniques and interventions designed for children with conduct disorder (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The options are clearly differentiated and reflect distinct intervention approaches, aiding precise assessment of treatment knowledge."
+    },
+    {
+      "stem": "Which of these is a commonly noted risk factor in the etiology of conduct disorder as supported by family and twin studies?",
+      "options": [
+        "Low heritability in males and females",
+        "High concordance rates in dizygotic twins compared to monozygotic twins",
+        "Parental history of criminology and substance abuse",
+        "Increased physiological reactions to aversive stimuli",
+        "Consistent positive parenting and supervision"
+      ],
+      "answer": "Parental history of criminology and substance abuse",
+      "explanation": "Parental criminology and substance abuse are linked to increased conduct disorder risk, supported by family and twin study findings.",
+      "kn": "KN4",
+      "kn_explanation": "This question relates to behavioral genetics and environmental contributions to conduct disorder etiology (KN4).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect, and the stem is clear, resulting in an effective question on etiology."
+    },
+    {
+      "stem": "Which intervention is an intensive, community-based program targeting adolescents with conduct disorder at risk for out-of-home placement, based on ecological theory?",
+      "options": [
+        "Multisystemic therapy (MST)",
+        "Parent management training (PMT)",
+        "Functional family therapy (FFT)",
+        "Multidimensional family therapy (MDFT)"
+      ],
+      "answer": "Multisystemic therapy (MST)",
+      "explanation": "MST is a comprehensive family- and community-based intervention addressing multiple ecological levels to reduce antisocial behavior.",
+      "kn": "KN44",
+      "kn_explanation": "Assesses knowledge of evidence-based psychotherapeutic interventions for conduct disorder, specifically multimodal ecological therapy (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options are all evidence-based interventions; however, only MST uniquely fits the ecological, intensive community model stated, creating a fair test of applied knowledge."
+    },
+    {
+      "stem": "Research investigating \"Scared Straight\" programs for youth with conduct disorder has generally found that these programs:",
+      "options": [
+        "Are effective in reducing future criminal behaviors.",
+        "Have no significant impact compared to no intervention.",
+        "Increase the likelihood of future delinquent behaviors.",
+        "Are more effective than family-focused treatments.",
+        "Are recommended as first-line prevention interventions."
+      ],
+      "answer": "Increase the likelihood of future delinquent behaviors.",
+      "explanation": "Studies have shown Scared Straight programs tend to have harmful effects, increasing criminal behavior likelihood among juvenile offenders.",
+      "kn": "KN44",
+      "kn_explanation": "This addresses evidence-based evaluation of intervention effectiveness and comparative outcomes in treatment/prevention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent common assumptions and recommendations, highlighting the importance of research evidence and making this a good item."
+    },
+    {
+      "stem": "Which of the following is TRUE regarding the sex distribution of oppositional defiant disorder (ODD)?",
+      "options": [
+        "Equally common in boys and girls at all ages.",
+        "More common in girls during early childhood, with equal incidence in adolescence.",
+        "More common in boys during early childhood; equal occurrence in older children and adolescents.",
+        "More common in girls throughout childhood and adolescence.",
+        "More common in boys throughout childhood and adolescence."
+      ],
+      "answer": "More common in boys during early childhood; equal occurrence in older children and adolescents.",
+      "explanation": "ODD is more prevalent in boys during early childhood but tends to occur about equally in boys and girls later in development.",
+      "kn": "KN21",
+      "kn_explanation": "This question assesses knowledge of normal growth and development patterns relevant to prevalence of childhood disorders (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "Options provide clear contrasts highlighting sex differences across developmental stages, making it straightforward yet important."
+    }
+  ]
+}

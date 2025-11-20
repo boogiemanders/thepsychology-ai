@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best describes the primary goal of Interpersonal Psychotherapy (IPT)?",
+      "options": [
+        "Identifying unconscious conflicts to improve insight",
+        "Symptom relief and improved interpersonal functioning",
+        "Changing maladaptive behavior patterns through reinforcement",
+        "Focusing on future-oriented solutions rather than past problems"
+      ],
+      "answer": "Symptom relief and improved interpersonal functioning",
+      "explanation": "IPT is based on the medical model and aims primarily to relieve symptoms and improve interpersonal relationships contributing to the disorder.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of treatment goals and therapeutic interventions, which falls under treatment techniques and their effectiveness (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible therapy goals but differ clearly from IPT’s focus, providing a good test of conceptual understanding."
+    },
+    {
+      "stem": "In Solution-Focused Therapy, which type of question is most useful for identifying client strengths and past successes in managing problems?",
+      "options": [
+        "Miracle question",
+        "Scaling question",
+        "Exception question",
+        "Decision analysis question"
+      ],
+      "answer": "Exception question",
+      "explanation": "Exception questions help clients identify times when the problem was less severe or absent, highlighting strengths and resources.",
+      "kn": "KN44",
+      "kn_explanation": "The question focuses on a specific therapeutic strategy used to facilitate change and strengths-based intervention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options include commonly confused question types, making for a good discriminative item on therapy techniques."
+    },
+    {
+      "stem": "According to the Transtheoretical Model, which stage is characterized by clients having no intention to change behavior within the next six months and often resisting advice?",
+      "options": [
+        "Preparation",
+        "Contemplation",
+        "Precontemplation",
+        "Action"
+      ],
+      "answer": "Precontemplation",
+      "explanation": "Clients in precontemplation do not intend to change soon and may be in denial or discouraged from past failures, often resisting interventions.",
+      "kn": "KN9",
+      "kn_explanation": "This assesses understanding of a major motivation model and its stages related to behavior change (KN9).",
+      "difficulty": "easy",
+      "quality_comment": "The stem is precise and options are clearly defined stages, reducing ambiguity and facilitating recall."
+    },
+    {
+      "stem": "Which strategy is most appropriate for clients in the contemplation stage of the Transtheoretical Model?",
+      "options": [
+        "Stimulus control to prevent relapse",
+        "Self-reevaluation to evaluate feelings about change",
+        "Contingency management to reinforce new behavior",
+        "Assigning the sick role to manage symptoms"
+      ],
+      "answer": "Self-reevaluation to evaluate feelings about change",
+      "explanation": "Clients in contemplation are ambivalent and benefit from self-reevaluation to clarify feelings about their problem and the possibility of change.",
+      "kn": "KN9",
+      "kn_explanation": "This question targets specific intervention strategies matched to stages in a motivational model (KN9).",
+      "difficulty": "medium",
+      "quality_comment": "Options include plausible therapeutic strategies, but only one is stage-matched, effectively assessing clinical application."
+    },
+    {
+      "stem": "Which of the following is NOT a typical component of Motivational Interviewing (MI)?",
+      "options": [
+        "Developing discrepancy between current behavior and values",
+        "Eliciting and strengthening change talk",
+        "Assigning the sick role to reduce self-blame",
+        "Resolving discord in the therapeutic relationship"
+      ],
+      "answer": "Assigning the sick role to reduce self-blame",
+      "explanation": "Assigning the sick role is a characteristic of IPT, not MI; MI focuses on motivation and resolving ambivalence without labeling client illness.",
+      "kn": "KN44",
+      "kn_explanation": "This tests knowledge of specific counseling strategies and differentiates among brief therapy approaches (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are closely related techniques used in MI, ensuring examinees must know therapy-specific components."
+    },
+    {
+      "stem": "Which of these statements best exemplifies 'change talk' in Motivational Interviewing?",
+      "options": [
+        "\"I'm just not ready to quit smoking.\"",
+        "\"If I stopped smoking, I’d probably feel much better.\"",
+        "\"You don’t understand what I’m going through.\"",
+        "\"I don’t think changing will make a difference.\""
+      ],
+      "answer": "\"If I stopped smoking, I’d probably feel much better.\"",
+      "explanation": "Change talk involves statements favoring change, reflecting motivation to alter current behavior.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on verbal indicators of client motivation within treatment strategies (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "Options represent distinct client attitudes, making the correct answer clear to those familiar with MI concepts."
+    },
+    {
+      "stem": "Which brief therapy emphasizes focusing on solutions and future goals rather than exploring the history or causes of problems?",
+      "options": [
+        "Brief Psychodynamic Psychotherapy",
+        "Interpersonal Psychotherapy",
+        "Solution-Focused Therapy",
+        "Motivational Interviewing"
+      ],
+      "answer": "Solution-Focused Therapy",
+      "explanation": "Solution-Focused Therapy centers on identifying solutions and goals, focusing on strengths and future-oriented change rather than problem causes.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of specific characteristics of different brief therapy models (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "The options list well-known therapies with distinct characteristics, making this a straightforward knowledge check."
+    },
+    {
+      "stem": "Which of the following is a shared characteristic of brief psychodynamic psychotherapy approaches?",
+      "options": [
+        "A primary focus on unconscious conflicts and lengthy exploration",
+        "Limited therapeutic goals agreed upon by client and therapist early in treatment",
+        "Avoidance of discussing termination throughout therapy",
+        "Passive therapist style to allow client-led exploration"
+      ],
+      "answer": "Limited therapeutic goals agreed upon by client and therapist early in treatment",
+      "explanation": "Brief psychodynamic therapies emphasize setting clear, limited goals collaboratively at the start due to time constraints.",
+      "kn": "KN44",
+      "kn_explanation": "This targets knowledge of treatment structure and approach within psychodynamic therapy adaptations (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect, testing familiarity with the brief psychodynamic framework effectively."
+    },
+    {
+      "stem": "In the transtheoretical model, which factor is the most important determinant of motivation during the contemplation stage?",
+      "options": [
+        "Self-efficacy",
+        "Decisional balance",
+        "Temptation",
+        "Environmental reevaluation"
+      ],
+      "answer": "Decisional balance",
+      "explanation": "During contemplation, weighing pros and cons of change (decisional balance) is key for motivation to progress to preparation.",
+      "kn": "KN9",
+      "kn_explanation": "This evaluates understanding of motivation constructs within the transtheoretical model (KN9).",
+      "difficulty": "hard",
+      "quality_comment": "Options include closely related motivational constructs requiring nuanced knowledge, elevating item difficulty."
+    },
+    {
+      "stem": "Which strategy would be most effective for clients in the action stage of behavior change according to the transtheoretical model?",
+      "options": [
+        "Consciousness raising and dramatic relief",
+        "Self-reevaluation and environmental reevaluation",
+        "Contingency management and stimulus control",
+        "Self-liberation and decision making"
+      ],
+      "answer": "Contingency management and stimulus control",
+      "explanation": "In the action stage, clients actively change behavior and benefit from reinforcement and manipulation of triggers to maintain change.",
+      "kn": "KN9",
+      "kn_explanation": "This question focuses on stage-specific intervention strategies related to motivation and behavioral change (KN9).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect earlier stages’ strategies, helping to test precise knowledge of stage-appropriate interventions."
+    },
+    {
+      "stem": "Which brief therapy explicitly assigns clients the 'sick role' to reduce self-blame for their symptoms?",
+      "options": [
+        "Solution-Focused Therapy",
+        "Interpersonal Psychotherapy",
+        "Motivational Interviewing",
+        "Brief Psychodynamic Psychotherapy"
+      ],
+      "answer": "Interpersonal Psychotherapy",
+      "explanation": "IPT assigns the sick role in the initial phase to help clients view their illness as temporary and avoid self-blame.",
+      "kn": "KN44",
+      "kn_explanation": "This assesses specific therapeutic concepts and interventions unique to IPT (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options are prominent brief therapies, promoting integration of conceptual and procedural knowledge."
+    },
+    {
+      "stem": "Which of the following is true about the use of decision balance in Motivational Interviewing?",
+      "options": [
+        "It is contraindicated when the goal is to maintain neutrality about change direction.",
+        "It helps resolve ambivalence by focusing on only the pros of change.",
+        "It is useful to maintain a neutral stance when assessing readiness for change.",
+        "It always promotes change by highlighting negative consequences of current behavior."
+      ],
+      "answer": "It is useful to maintain a neutral stance when assessing readiness for change.",
+      "explanation": "Decision balance is appropriate when clinicians remain neutral, but may backfire if used to resolve ambivalence because it highlights cons of change.",
+      "kn": "KN44",
+      "kn_explanation": "This tests understanding of clinical application and limitations of a motivational interviewing technique (KN44).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors are nuanced and conceptually challenging, suitable for higher-level comprehension."
+    },
+    {
+      "stem": "Research indicates that combining Motivational Interviewing (MI) with Cognitive Behavior Therapy (CBT) for anxiety disorders results in:",
+      "options": [
+        "Greater symptom reduction compared to CBT alone",
+        "No difference compared to CBT alone",
+        "Worse outcomes compared to CBT alone",
+        "Greater symptom reduction only in telehealth delivery"
+      ],
+      "answer": "Greater symptom reduction compared to CBT alone",
+      "explanation": "Studies have found that MI prior to or combined with CBT improves symptom reduction for anxiety disorders like GAD and OCD compared to CBT alone.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of empirical support and treatment efficacy for combined brief therapies (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear, and distractors address potential misconceptions about treatment efficacy."
+    },
+    {
+      "stem": "Which of the following elements is essential in a therapist’s approach when conducting brief psychodynamic psychotherapy?",
+      "options": [
+        "Maintaining a passive stance to allow client-led insight",
+        "Focusing therapy goals primarily on symptom elimination",
+        "Establishing an active therapeutic alliance early to keep focus",
+        "Avoiding discussion of termination until late in therapy"
+      ],
+      "answer": "Establishing an active therapeutic alliance early to keep focus",
+      "explanation": "Brief psychodynamic psychotherapy emphasizes an active therapist role early on to build alliance and maintain focus on prioritized issues within time limits.",
+      "kn": "KN44",
+      "kn_explanation": "This reflects treatment structure and supervisory models relevant to brief psychodynamic approaches within brief therapies (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The item requires understanding subtle differences in therapist roles across therapy types, promoting higher-order thinking."
+    },
+    {
+      "stem": "Which of the following best describes the role of relapse prevention in the Transtheoretical Model's maintenance stage?",
+      "options": [
+        "Initiating behavior change through environmental reevaluation",
+        "Encouraging self-liberation to commit to change",
+        "Using strategies like contingency management to avoid relapse",
+        "Dismissing temptation as unimportant due to sustained change"
+      ],
+      "answer": "Using strategies like contingency management to avoid relapse",
+      "explanation": "In maintenance, the focus is on preventing relapse using strategies effective during the action stage, such as contingency management and stimulus control.",
+      "kn": "KN44",
+      "kn_explanation": "This addresses treatment techniques used to sustain behavioral change, fitting within treatment and intervention knowledge (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors include related but inaccurate strategies for maintenance, enhancing discriminative value."
+    },
+    {
+      "stem": "In Motivational Interviewing, what does 'discord' in the therapeutic relationship typically indicate?",
+      "options": [
+        "Client statements supporting change efforts",
+        "A smooth collaborative rapport between therapist and client",
+        "Client expressions of resistance or disconnection",
+        "Therapist agreement with client values"
+      ],
+      "answer": "Client expressions of resistance or disconnection",
+      "explanation": "Discord reflects tension or dissonance in the therapeutic relationship, signaling resistance or misalignment between client and therapist.",
+      "kn": "KN44",
+      "kn_explanation": "Understanding therapeutic relationship dynamics and their contemporary management strategies are key in treatment interventions (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Clear distinctions among options require nuanced understanding of client-therapist interactions."
+    }
+  ]
+}

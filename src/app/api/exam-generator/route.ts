@@ -1,5 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
+import { existsSync, readFileSync, readdirSync } from 'fs'
+import { join } from 'path'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -116,6 +118,19 @@ export async function POST(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const examType = searchParams.get('type') || 'practice' // 'diagnostic' or 'practice'
 
+    // For diagnostic exams, prefer pre-generated GPT exams from diagnosticGPT
+    if (examType === 'diagnostic') {
+      try {
+        const examData = loadDiagnosticFromGpt()
+        return NextResponse.json(examData)
+      } catch (gptError) {
+        console.warn(
+          '[Exam Generator] Failed to load diagnostic exam from diagnosticGPT, falling back to Anthropic generation:',
+          gptError
+        )
+      }
+    }
+
     const prompt = examType === 'diagnostic' ? DIAGNOSTIC_EXAM_PROMPT : PRACTICE_EXAM_PROMPT
 
     const response = await client.messages.create({
@@ -164,5 +179,62 @@ export async function POST(request: NextRequest) {
       { error: 'Failed to generate exam' },
       { status: 500 }
     )
+  }
+}
+
+/**
+ * Load a diagnostic exam from the diagnosticGPT folder.
+ * Chooses a random diagnostic-exam-*.json file and maps it into the
+ * question shape expected by the exam generator page.
+ */
+function loadDiagnosticFromGpt() {
+  const diagnosticDir = join(process.cwd(), 'diagnosticGPT')
+  if (!existsSync(diagnosticDir)) {
+    throw new Error(`diagnosticGPT directory not found at ${diagnosticDir}`)
+  }
+
+  const files = readdirSync(diagnosticDir).filter(
+    (name) => name.startsWith('diagnostic-exam-') && name.endsWith('.json')
+  )
+
+  if (files.length === 0) {
+    throw new Error('No diagnostic-exam-*.json files found in diagnosticGPT')
+  }
+
+  // Pick a random diagnostic exam
+  const chosen = files[Math.floor(Math.random() * files.length)]
+  const fullPath = join(diagnosticDir, chosen)
+
+  const raw = readFileSync(fullPath, 'utf-8')
+  const parsed = JSON.parse(raw)
+  const questions = Array.isArray(parsed.questions) ? parsed.questions : []
+
+  const mappedQuestions = questions.map((q: any, idx: number) => {
+    const domainNumber =
+      typeof q.domain === 'number'
+        ? q.domain
+        : typeof q.domain === 'string'
+        ? parseInt(q.domain, 10)
+        : undefined
+
+    return {
+      id: idx + 1,
+      question: q.stem ?? q.question ?? '',
+      options: q.options ?? [],
+      correct_answer: q.answer ?? q.correct_answer ?? '',
+      explanation: q.explanation ?? '',
+      domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
+      difficulty:
+        q.difficulty === 'easy' || q.difficulty === 'medium' || q.difficulty === 'hard'
+          ? q.difficulty
+          : 'medium',
+      isScored: typeof q.scored === 'boolean' ? q.scored : q.isScored ?? true,
+      knId: q.kn ?? q.knId,
+      type: q.type ?? 'standard',
+    }
+  })
+
+  return {
+    questions: mappedQuestions,
   }
 }

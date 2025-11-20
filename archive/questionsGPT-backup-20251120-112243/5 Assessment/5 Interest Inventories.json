@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following scales on the Strong Interest Inventory (SII) provides scores based on Holland's six occupational themes such as realistic and investigative?",
+      "options": [
+        "Basic Interest Scales (BISs)",
+        "General Occupational Themes (GOTs)",
+        "Occupational Scales (OSs)",
+        "Personal Styles Scales (PSSs)"
+      ],
+      "answer": "General Occupational Themes (GOTs)",
+      "explanation": "The General Occupational Themes (GOTs) in the SII provide scores on Holland’s six occupational themes including realistic, investigative, artistic, social, enterprising, and conventional.",
+      "kn": "KN32",
+      "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly contrasts different SII scales, with plausible distractors referencing other legitimate scales, enhancing content validity for EPPP level."
+    },
+    {
+      "stem": "What type of scoring does the Kuder Occupational Interest Survey (KOIS) use given its forced-choice item format?",
+      "options": [
+        "Norm-referenced scoring",
+        "Ipsative scoring",
+        "Criterion-referenced scoring",
+        "Percentile scoring"
+      ],
+      "answer": "Ipsative scoring",
+      "explanation": "Due to the KOIS’s forced-choice format where examinees choose most and least preferred activities, it yields ipsative scores that allow intra-individual but not inter-individual comparisons.",
+      "kn": "KN29",
+      "kn_explanation": "This question addresses test scoring methods and characteristics of specific assessments, central to psychometric theories and test interpretation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors correctly represent other common scoring methods, making the distractors credible and the question effective for testing knowledge of scoring types."
+    },
+    {
+      "stem": "Which personal style is NOT assessed by the Personal Styles Scales (PSSs) in the Strong Interest Inventory?",
+      "options": [
+        "Leadership style",
+        "Risk taking",
+        "Work-life balance",
+        "Team orientation"
+      ],
+      "answer": "Work-life balance",
+      "explanation": "The PSSs assess five personal styles including work style, leadership style, learning environment, risk taking, and team orientation; work-life balance is not one of them.",
+      "kn": "KN32",
+      "kn_explanation": "This question examines detailed knowledge of assessment instrument components, fitting under commonly used measurement instruments (KN32).",
+      "difficulty": "hard",
+      "quality_comment": "The options are similar in length and plausibility, challenging test-takers to know specific scale content enhancing discriminative capacity."
+    },
+    {
+      "stem": "How were the Occupational Scales (OSs) of the Strong Interest Inventory constructed?",
+      "options": [
+        "Using factor analysis of interest items across occupations",
+        "By comparing responses of employed individuals to a representative adult sample (empirical criterion keying)",
+        "Through expert consensus on occupational traits",
+        "Based on theoretical predictions from Holland’s model"
+      ],
+      "answer": "By comparing responses of employed individuals to a representative adult sample (empirical criterion keying)",
+      "explanation": "The OSs were developed using empirical criterion keying by comparing responses of employed men and women in various occupations to a general representative sample of employed adults.",
+      "kn": "KN29",
+      "kn_explanation": "This question deals with test construction and standardization procedures, a core topic within psychometric theories and test characteristics (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors blend both common test construction practices and relevant theory, requiring a precise understanding, suitable for graduate level."
+    },
+    {
+      "stem": "Which of the following is a key difference between the Strong Interest Inventory (SII) and the Kuder Occupational Interest Survey (KOIS)?",
+      "options": [
+        "Only the KOIS uses a Likert-type scale for responses",
+        "The SII provides normative scores allowing inter-individual comparisons, while the KOIS provides ipsative scores allowing only intra-individual comparisons",
+        "The SII is designed exclusively for adults, while the KOIS is only for high school students",
+        "Both inventories employ criterion-referenced scoring based on occupational satisfaction"
+      ],
+      "answer": "The SII provides normative scores allowing inter-individual comparisons, while the KOIS provides ipsative scores allowing only intra-individual comparisons",
+      "explanation": "The SII uses a Likert scale with normative scores for inter-individual comparisons, whereas the KOIS’s forced-choice format yields ipsative scores that allow only intra-individual comparisons.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding scoring and interpretive differences between assessments fits psychometric knowledge about test characteristics (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors include partially correct or clearly false options, increasing the precision with which test takers must know differences between assessments."
+    },
+    {
+      "stem": "Which statement best describes how Occupational Scales for the Kuder Occupational Interest Survey (KOIS) were developed?",
+      "options": [
+        "They were created by comparing workers in specific occupations with a general sample of adults",
+        "Items were selected to distinguish among different occupational groups without using a general sample",
+        "Developed by factor analyzing general interests across college majors",
+        "Constructed by correlating scores with supervisor ratings of job performance"
+      ],
+      "answer": "Items were selected to distinguish among different occupational groups without using a general sample",
+      "explanation": "The KOIS Occupational Scales were developed using empirical criterion keying but, in contrast to the SII, focused on selecting items that differentiate between occupational groups without comparing to a general sample.",
+      "kn": "KN29",
+      "kn_explanation": "This tests detailed understanding of test construction and criterion keying approaches in vocational assessment, key psychometric concepts (KN29).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors reflect plausible test development methods, requiring deep knowledge of KOIS scale construction, appropriate for advanced learners."
+    },
+    {
+      "stem": "An examinee takes the Kuder Occupational Interest Survey and receives Vocational Interest Estimates (VIEs). Which of the following interest areas is NOT part of the VIEs?",
+      "options": [
+        "Computational",
+        "Artistic",
+        "Healthcare services",
+        "Persuasive"
+      ],
+      "answer": "Healthcare services",
+      "explanation": "Healthcare services is a Basic Interest Scale category on the Strong Interest Inventory, not a VIE area on the KOIS; the KOIS includes computational, artistic, and persuasive among its ten VIE interest areas.",
+      "kn": "KN32",
+      "kn_explanation": "This addresses recognition of specific subscales and interest domains within vocational assessments, aligned with commonly used instruments knowledge (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors all sound vocationally relevant, making the question appropriately challenging and fair for the EPPP."
+    },
+    {
+      "stem": "Which of the following statements about the Kuder Career Planning System (KCPS) is TRUE?",
+      "options": [
+        "It includes only assessments designed for college students and adults",
+        "It offers age-appropriate career exploration programs ranging from pre-K through adulthood",
+        "It excludes assessment of work values",
+        "It uses a paper-and-pencil administration format only"
+      ],
+      "answer": "It offers age-appropriate career exploration programs ranging from pre-K through adulthood",
+      "explanation": "The KCPS includes Kuder Galaxy (pre-K–grade 5), Kuder Navigator (grades 6–12), and Kuder Journey (college and adults), each with age-appropriate assessments and career exploration tools.",
+      "kn": "KN32",
+      "kn_explanation": "Testing knowledge of evidence-based vocational and career assessments and systems aligns with commonly used instruments and their applications (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "This question is straightforward with clear true/false options, good for foundational knowledge testing at the EPPP level."
+    },
+    {
+      "stem": "The Strong Interest Inventory’s Personal Styles Scales assess preferences related to all of the following EXCEPT:",
+      "options": [
+        "Learning environment",
+        "Risk taking",
+        "Leadership style",
+        "Verbal communication style"
+      ],
+      "answer": "Verbal communication style",
+      "explanation": "Verbal communication style is not one of the five personal styles assessed by the SII Personal Styles Scales; they assess work style, leadership style, learning environment, risk taking, and team orientation.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests knowledge of the content domains assessed by a popular vocational interest inventory, fitting within assessment instrument knowledge (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are consistent with plausible personality/personal style factors, making the test-taker discriminate carefully."
+    },
+    {
+      "stem": "Which of the following is the primary purpose of the Dependability Indices on the Kuder Occupational Interest Survey?",
+      "options": [
+        "To assess the consistency and validity of the examinee’s responses",
+        "To measure the desire for stable employment positions",
+        "To evaluate reliability of the vocational skills reported",
+        "To predict job satisfaction based on interests"
+      ],
+      "answer": "To assess the consistency and validity of the examinee’s responses",
+      "explanation": "Dependability Indices are designed to help determine the validity and internal consistency of the examinee’s test responses to ensure reliable interpretation.",
+      "kn": "KN29",
+      "kn_explanation": "Assessment of response validity is central to psychometric test scoring, reliability, and validity concepts (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors address related but distinct concepts, reinforcing understanding of test response validity measures."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "stem": "Which type of analysis in a needs analysis is primarily focused on determining if employee performance issues are due to inadequate selection procedures rather than lack of training?",
+      "options": [
+        "Task analysis",
+        "Organizational analysis",
+        "Person analysis",
+        "Demographic analysis"
+      ],
+      "answer": "Organizational analysis",
+      "explanation": "Organizational analysis identifies organizational goals and determines if performance problems stem from lack of training or other factors like selection procedures.",
+      "kn": "KN58",
+      "kn_explanation": "This question addresses program evaluation methods, specifically needs assessment and organizational factors impacting training, which aligns with evaluation strategies and techniques (KN58).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a fundamental step in training needs analysis, with plausible distractors that represent other types of needs analyses, enhancing discriminability."
+    },
+    {
+      "stem": "What is a key advantage of on-the-job training compared to off-the-job training?",
+      "options": [
+        "Allows larger groups to be trained simultaneously",
+        "Provides greater control over the training environment",
+        "Usually less costly and enhances transfer of training",
+        "Permits use of multiple training methods"
+      ],
+      "answer": "Usually less costly and enhances transfer of training",
+      "explanation": "On-the-job training is generally less expensive and reduces transfer problems because training occurs in the actual work environment.",
+      "kn": "KN7",
+      "kn_explanation": "This question relates to learning methods and their characteristics, falling under theories and principles of learning (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "The stem is straightforward and the options are balanced, making the correct answer clearly distinguishable for examinees familiar with training methods."
+    },
+    {
+      "stem": "Behavior modeling in training is based on which of the following theoretical frameworks?",
+      "options": [
+        "Classical conditioning",
+        "Operant conditioning",
+        "Social learning theory",
+        "Cognitive dissonance theory"
+      ],
+      "answer": "Social learning theory",
+      "explanation": "Behavior modeling involves observing a model and practicing behavior with feedback, based on Bandura’s social learning theory.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of learning theories applied to training design, fitting into major research-based theories and principles of learning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are relevant learning theories, providing a good challenge while the correct answer is well grounded in theory."
+    },
+    {
+      "stem": "How does mentoring differ from coaching in workplace training?",
+      "options": [
+        "Mentoring is time-limited; coaching is long-term and mentee-directed",
+        "Coaching focuses on performance improvement; mentoring focuses on career and personal development",
+        "Coaching involves only informal meetings; mentoring always involves scheduled sessions",
+        "Mentoring primarily addresses organizational needs; coaching addresses only individual needs"
+      ],
+      "answer": "Coaching focuses on performance improvement; mentoring focuses on career and personal development",
+      "explanation": "Mentoring supports career and psychosocial development, whereas coaching is formal, performance-focused, and typically time-bound.",
+      "kn": "KN16",
+      "kn_explanation": "This question involves social interaction and workplace relationships, particularly training and development dynamics, which corresponds with group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Answer options present subtle distinctions between mentoring and coaching, requiring careful reading to identify key differences."
+    },
+    {
+      "stem": "Which practice has been shown to maximize transfer of training by increasing similarity between training and work conditions?",
+      "options": [
+        "Stimulus variability",
+        "Overlearning",
+        "Identical elements",
+        "Distributed practice"
+      ],
+      "answer": "Identical elements",
+      "explanation": "Identical elements refer to maximizing physical and psychological fidelity between training and job tasks, enhancing training transfer.",
+      "kn": "KN7",
+      "kn_explanation": "The question relates to principles of learning transfer, a core concept in research-based learning models (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Options include commonly confused training concepts, improving the discriminative value of the question."
+    },
+    {
+      "stem": "What is the primary difference between distributed practice and massed practice in training settings?",
+      "options": [
+        "Distributed practice involves learning tasks in one session; massed practice spreads sessions over time",
+        "Distributed practice yields better retention by spacing sessions; massed practice involves one continuous session",
+        "Massed practice is more effective for complex tasks; distributed practice better suits simple skills",
+        "Massed practice requires rest between sessions; distributed practice is continuous"
+      ],
+      "answer": "Distributed practice yields better retention by spacing sessions; massed practice involves one continuous session",
+      "explanation": "Distributed practice spaces learning sessions with rest intervals, leading to better acquisition and retention than massed practice's continuous single sessions.",
+      "kn": "KN7",
+      "kn_explanation": "This question involves a major principle of learning related to practice scheduling and memory retention (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "The stem is clear and the answer contrasts the two concepts effectively, with distractors addressing common misconceptions."
+    },
+    {
+      "stem": "Which of the following best describes overlearning in training contexts?",
+      "options": [
+        "Practicing a skill just until initial mastery is reached",
+        "Continued practice beyond mastery to achieve automaticity",
+        "Training that results in physical and psychological fatigue",
+        "Repeated training without supervisory feedback"
+      ],
+      "answer": "Continued practice beyond mastery to achieve automaticity",
+      "explanation": "Overlearning is when practice continues after mastery to automate responses, reducing errors on infrequent but critical tasks.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests understanding of learning processes and skill acquisition relevant to training methods (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but incorrect interpretations, enhancing the question's ability to discriminate mastery of the content."
+    },
+    {
+      "stem": "According to Kirkpatrick’s model, which level of training evaluation assesses changes in job performance after training?",
+      "options": [
+        "Results criteria",
+        "Learning criteria",
+        "Behavior criteria",
+        "Reaction criteria"
+      ],
+      "answer": "Behavior criteria",
+      "explanation": "Behavior criteria measure trainees' on-the-job performance improvement attributable to training.",
+      "kn": "KN58",
+      "kn_explanation": "The question concerns evaluation strategies and criteria for training effectiveness within organizational settings (KN58).",
+      "difficulty": "medium",
+      "quality_comment": "The answer choices represent the four levels of Kirkpatrick’s model clearly, making it an effective test of conceptual knowledge."
+    },
+    {
+      "stem": "What is the primary purpose of a formative evaluation in training program development?",
+      "options": [
+        "To determine if the program met its stated goals after completion",
+        "To assess the long-term effects of training",
+        "To provide feedback for improving the program during development",
+        "To compare program costs to benefits"
+      ],
+      "answer": "To provide feedback for improving the program during development",
+      "explanation": "Formative evaluation is conducted during program development to guide improvements and adjustments.",
+      "kn": "KN58",
+      "kn_explanation": "Evaluating the development and improvement of programs is central to formative evaluation and relates to program evaluation theories (KN58).",
+      "difficulty": "easy",
+      "quality_comment": "This question straightforwardly distinguishes formative from summative evaluation, making it accessible but meaningful for exam purposes."
+    },
+    {
+      "stem": "Which of the following practices best supports maximizing transfer of training once employees return to the job?",
+      "options": [
+        "Providing peer and supervisor support and opportunities to apply new skills",
+        "Avoiding stimulus variability during training",
+        "Conducting training exclusively off-the-job in a controlled environment",
+        "Limiting feedback during on-the-job training to avoid confusion"
+      ],
+      "answer": "Providing peer and supervisor support and opportunities to apply new skills",
+      "explanation": "Support in the work environment, including encouragement and chances to use new skills, enhances transfer of training.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses knowledge of learning transfer factors and organizational climate impact on training outcomes (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors offer contrasting approaches, making the correct answer distinctive, emphasizing the practical aspect of training application."
+    },
+    {
+      "stem": "Which type of training involves a trainee rotating through a predetermined sequence of jobs within an organization, usually to prepare managers?",
+      "options": [
+        "Cross-training",
+        "Job rotation",
+        "Apprenticeship",
+        "Internship"
+      ],
+      "answer": "Job rotation",
+      "explanation": "Job rotation exposes trainees to multiple functions by moving them through various jobs, commonly used in managerial training.",
+      "kn": "KN7",
+      "kn_explanation": "This question concerns specific training methods and their applications, fitting within learning methods and approaches in organizational settings (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "Options are related training methods, but job rotation is clearly identified by its defining feature, making the question straightforward."
+    },
+    {
+      "stem": "Which evaluation component involves determining if a program's effectiveness can be practically measured before conducting a full evaluation?",
+      "options": [
+        "Process evaluation",
+        "Evaluability assessment",
+        "Implementation evaluation",
+        "Needs assessment"
+      ],
+      "answer": "Evaluability assessment",
+      "explanation": "Evaluability assessment checks whether it is possible and practical to evaluate a program's effectiveness before proceeding.",
+      "kn": "KN58",
+      "kn_explanation": "This question targets program evaluation planning steps, specifically feasibility analysis, aligned with evaluation strategies (KN58).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires knowledge of nuanced evaluation stages with closely related terms as distractors, increasing cognitive challenge."
+    },
+    {
+      "stem": "According to the Dessinger-Moseley full-scope evaluation model, what type of evaluation is conducted a significant time after training to assess long-term effects?",
+      "options": [
+        "Summative evaluation",
+        "Confirmative evaluation",
+        "Formative evaluation",
+        "Meta-evaluation"
+      ],
+      "answer": "Confirmative evaluation",
+      "explanation": "Confirmative evaluation assesses the durability and long-term impact of training at a later point after the program completion.",
+      "kn": "KN58",
+      "kn_explanation": "This question involves advanced knowledge of evaluation models distinguishing between time-based assessment functions (KN58).",
+      "difficulty": "hard",
+      "quality_comment": "This question addresses a less commonly known evaluation phase, demanding integration of conceptual details with plausible distractors."
+    },
+    {
+      "stem": "Which characteristic most accurately distinguishes coaching from mentoring in organizational training contexts?",
+      "options": [
+        "Mentoring focuses exclusively on improving job-specific skills, coaching on psychosocial development",
+        "Coaching is usually highly structured with specific goals and regular meetings",
+        "Mentoring has a shorter duration and is typically time-bound",
+        "Coaching sets the agenda based solely on the mentee's needs"
+      ],
+      "answer": "Coaching is usually highly structured with specific goals and regular meetings",
+      "explanation": "Coaching is formal, time-limited, and goal-oriented, unlike mentoring which is less structured and mentee-led in agenda.",
+      "kn": "KN16",
+      "kn_explanation": "The question tests understanding of social and organizational relationships and distinctions in professional development processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect, requiring careful analysis to discriminate coaching's formal structure."
+    },
+    {
+      "stem": "Which training method is characterized by teaching employees how to perform the essential tasks of other workers to improve team flexibility and coverage?",
+      "options": [
+        "Job rotation",
+        "Cross-training",
+        "Apprenticeship",
+        "Behavior modeling"
+      ],
+      "answer": "Cross-training",
+      "explanation": "Cross-training trains employees on the essential tasks performed by other employees, enhancing team versatility.",
+      "kn": "KN7",
+      "kn_explanation": "This question highlights a training method that promotes multi-skill development within teams, a key concept in learning and training methods (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are relevant training methods offering a good challenge by contrasting approaches that involve different kinds of employee exposure."
+    },
+    {
+      "stem": "What is the role of a meta-evaluation in the Dessinger-Moseley full-scope evaluation model?",
+      "options": [
+        "To monitor fidelity of program implementation",
+        "To assess the reliability and validity of other evaluation phases",
+        "To determine program costs relative to benefits",
+        "To confirm long-term effects of training"
+      ],
+      "answer": "To assess the reliability and validity of other evaluation phases",
+      "explanation": "Meta-evaluation is an ongoing process assessing the dependability and accuracy of formative, summative, and confirmative evaluations.",
+      "kn": "KN58",
+      "kn_explanation": "This question aligns with program evaluation methodology, focusing on quality control and methodological rigor in evaluation processes (KN58).",
+      "difficulty": "hard",
+      "quality_comment": "This advanced question requires integrative knowledge of evaluation models and quality assurance procedures, enhancing cognitive depth."
+    },
+    {
+      "stem": "Which of the following best exemplifies mentoring's psychosocial functions in workplace training?",
+      "options": [
+        "Sponsoring the advancement of the mentee",
+        "Providing emotional support and role-modeling to promote self-confidence",
+        "Assigning specific tasks to improve job performance",
+        "Conducting performance appraisals regularly"
+      ],
+      "answer": "Providing emotional support and role-modeling to promote self-confidence",
+      "explanation": "Psychosocial functions of mentoring include interpersonal behaviors like role-modeling and support that enhance personal growth and confidence.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on social and interpersonal aspects of mentoring relationships, reflecting group and systems processes relevant to training (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The options contrast career-related and psychosocial functions, requiring differentiation between mentoring roles to answer correctly."
+    }
+  ]
+}

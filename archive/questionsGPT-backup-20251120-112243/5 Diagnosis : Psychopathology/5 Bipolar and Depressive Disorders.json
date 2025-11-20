@@ -1,0 +1,229 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best distinguishes a manic episode from a hypomanic episode according to DSM-5-TR criteria?",
+      "options": [
+        "Manic episodes last at least four days and do not cause significant impairment, while hypomanic episodes last at least seven days and cause marked impairment.",
+        "Manic episodes require at least three symptoms and cause marked impairment or hospitalization, while hypomanic episodes require three symptoms but do not cause marked impairment or psychotic features.",
+        "Manic episodes involve irritability only, while hypomanic episodes always involve an elevated mood.",
+        "Hypomanic episodes require psychotic features, while manic episodes do not."
+      ],
+      "answer": "Manic episodes require at least three symptoms and cause marked impairment or hospitalization, while hypomanic episodes require three symptoms but do not cause marked impairment or psychotic features.",
+      "explanation": "Manic episodes last at least one week and cause marked impairment, hospitalization, or psychotic features, while hypomanic episodes last at least four days, have three or more symptoms, but do not cause severe impairment or psychosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of diagnostic criteria for mood episodes, which involves understanding DSM-5-TR classification systems and diagnostic criteria (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible and test the nuances of diagnostic criteria, making it suitable for EPPP preparation."
+    },
+    {
+      "stem": "Which bipolar disorder diagnosis requires the presence of at least one hypomanic episode and at least one major depressive episode?",
+      "options": [
+        "Bipolar I disorder",
+        "Bipolar II disorder",
+        "Cyclothymic disorder",
+        "Major depressive disorder with mixed features"
+      ],
+      "answer": "Bipolar II disorder",
+      "explanation": "Bipolar II disorder is diagnosed when there is at least one hypomanic episode and one major depressive episode, while Bipolar I requires a manic episode.",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on the diagnostic distinctions within bipolar disorders per DSM-5-TR criteria, falling under classification systems and diagnostic criteria (KN36).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and straightforward question with plausible distractors; appropriate for foundational understanding."
+    },
+    {
+      "stem": "Which of the following environmental factors has NOT been identified as a risk factor for bipolar disorder?",
+      "options": [
+        "Early parental loss",
+        "Childhood emotional abuse",
+        "Chronic medical illnesses like irritable bowel syndrome",
+        "Excessive caffeine intake"
+      ],
+      "answer": "Excessive caffeine intake",
+      "explanation": "Research identifies early parental loss, emotional abuse, medical comorbidities, substance use, and life stress as environmental risks; excessive caffeine intake is not among these factors.",
+      "kn": "KN4",
+      "kn_explanation": "This question involves understanding environmental contributions to the etiology of bipolar disorder, which relates to behavioral genetics and environmental factors in disorders (KN4).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible; the question tests etiological knowledge effectively."
+    },
+    {
+      "stem": "When differentiating adult mania from adult ADHD, which symptom is more characteristic of mania than ADHD?",
+      "options": [
+        "Labile and dysphoric mood",
+        "Distractibility due to wandering thoughts",
+        "Increased self-esteem or grandiosity",
+        "Fatigue following loss of sleep"
+      ],
+      "answer": "Increased self-esteem or grandiosity",
+      "explanation": "Mania is characterized by increased self-esteem or grandiosity, while ADHD typically shows labile mood and distractibility from wandering thoughts without grandiosity.",
+      "kn": "KN33",
+      "kn_explanation": "This question pertains to differential diagnosis by distinguishing symptoms of bipolar mania versus ADHD, an assessment and diagnosis domain topic (KN33).",
+      "difficulty": "medium",
+      "quality_comment": "Options are balanced and touch on overlapping symptoms, enhancing the question's discriminative value."
+    },
+    {
+      "stem": "Which pharmacological treatment is typically most effective for the \"classic bipolar disorder\" subtype characterized by episodic mood states and onset in late adolescence?",
+      "options": [
+        "Valproic acid",
+        "Carbamazepine",
+        "Lithium",
+        "Second-generation antipsychotics"
+      ],
+      "answer": "Lithium",
+      "explanation": "Lithium is most effective for classic bipolar disorder with episodic mood states, minimal rapid cycling, and onset between ages 15 and 19.",
+      "kn": "KN3",
+      "kn_explanation": "This question targets knowledge of pharmacotherapy for bipolar disorder, focusing on drug classifications and guidelines (KN3).",
+      "difficulty": "medium",
+      "quality_comment": "Clear and focused stem with options that reflect common treatments, testing specific clinical application."
+    },
+    {
+      "stem": "A patient has experienced numerous periods of hypomanic and depressive symptoms for the past two years, but never meets full criteria for episodes. Which diagnosis fits best?",
+      "options": [
+        "Bipolar I disorder",
+        "Bipolar II disorder",
+        "Cyclothymic disorder",
+        "Persistent depressive disorder"
+      ],
+      "answer": "Cyclothymic disorder",
+      "explanation": "Cyclothymic disorder involves periods of hypomanic and depressive symptoms that do not meet full episode criteria, lasting at least two years in adults.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses correct diagnostic classification for mood disorders based on symptom duration and severity (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Options are clinically relevant and plausible, enhancing differentiation of related diagnoses."
+    },
+    {
+      "stem": "Which theory of depression attributes the disorder to decreased response-contingent social reinforcement leading to social isolation and low self-esteem?",
+      "options": [
+        "Learned helplessness model",
+        "Cognitive triad theory",
+        "Social reinforcement theory",
+        "Hopelessness theory"
+      ],
+      "answer": "Social reinforcement theory",
+      "explanation": "Lewinsohn's social reinforcement theory explains depression as resulting from low levels of positive social reinforcement, leading to isolation and low self-worth.",
+      "kn": "KN12",
+      "kn_explanation": "The question targets knowledge of cognitive and behavioral theories explaining mood disorders, a core part of cognition-affect bases of behavior (KN12).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are well chosen as they represent other important depression theories, encouraging careful recall."
+    },
+    {
+      "stem": "Which of the following brain activity patterns is typically associated with depression, as opposed to its remission following effective treatment?",
+      "options": [
+        "Increased dorsolateral prefrontal cortex activity and decreased ventromedial prefrontal cortex activity",
+        "Decreased dorsolateral prefrontal cortex activity and increased ventromedial prefrontal cortex activity",
+        "Increased activity in both dorsolateral and ventromedial prefrontal cortex",
+        "Decreased activity in both dorsolateral and ventromedial prefrontal cortex"
+      ],
+      "answer": "Decreased dorsolateral prefrontal cortex activity and increased ventromedial prefrontal cortex activity",
+      "explanation": "Depression is linked to hypoactivity in dorsolateral PFC and hyperactivity in ventromedial PFC, with remission showing the reverse pattern.",
+      "kn": "KN1",
+      "kn_explanation": "This question addresses neurobiological findings regarding brain activity associated with mood disorders, relevant to biological bases of behavior (KN1).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses detailed neurobiological knowledge with balanced and plausible options."
+    },
+    {
+      "stem": "Which of the following treatment approaches has the highest response and remission rates and the fastest time to remission for severe major depressive disorder?",
+      "options": [
+        "Cognitive-behavioral therapy",
+        "Second-generation antidepressants",
+        "Electroconvulsive therapy",
+        "Repetitive transcranial magnetic stimulation"
+      ],
+      "answer": "Electroconvulsive therapy",
+      "explanation": "ECT has the highest response (~80%) and remission (~70%) rates and produces remission more quickly (1–3 weeks) than other treatments for severe depression.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of treatment efficacy and comparative outcomes in depression, under treatment and intervention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent common treatments, making this clinically relevant and well-targeted."
+    },
+    {
+      "stem": "Which factor is most associated with increasing depression risk in older adults, as opposed to younger adults?",
+      "options": [
+        "Genetic predisposition",
+        "Stressful life events",
+        "Chronic medical illness and physical disability",
+        "Limitations in cognitive problem-solving"
+      ],
+      "answer": "Chronic medical illness and physical disability",
+      "explanation": "In older adults, chronic medical illnesses that reduce physical function and lead to social isolation are strong risk factors for depression.",
+      "kn": "KN27",
+      "kn_explanation": "The question probes knowledge of risk and protective factors influencing development of mood disorders across the lifespan (KN27).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible risk factors for other age groups, increasing question discrimination."
+    },
+    {
+      "stem": "A client reports severe temper outbursts occurring three or more times per week and a persistently irritable mood most days for over a year, starting in childhood. Which diagnosis fits best?",
+      "options": [
+        "Major depressive disorder",
+        "Disruptive mood dysregulation disorder",
+        "Persistent depressive disorder",
+        "Bipolar II disorder"
+      ],
+      "answer": "Disruptive mood dysregulation disorder",
+      "explanation": "Disruptive mood dysregulation disorder requires severe recurrent temper outbursts and persistent irritability lasting at least 12 months in youth.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests accurate differential diagnosis of depressive and mood dysregulation disorders in children (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Options are all mood-related disorders, appropriately challenging differential diagnosis skills."
+    },
+    {
+      "stem": "Which of the following statements about suicide risk is accurate based on recent epidemiological data in the United States?",
+      "options": [
+        "Suicide rates are highest among females ages 75 and older.",
+        "Veterans have suicide rates approximately twice that of non-veterans.",
+        "Men and women previously incarcerated have similar suicide rates because men’s rates increase more following release.",
+        "Suicide rates are highest among non-Hispanic White individuals compared to other ethnic groups."
+      ],
+      "answer": "Veterans have suicide rates approximately twice that of non-veterans.",
+      "explanation": "Veterans’ suicide rates are about twice those of non-veterans; male rate is four times that of females; AI/AN individuals have the highest suicide rates among ethnic groups.",
+      "kn": "KN38",
+      "kn_explanation": "This question addresses knowledge of epidemiology and base rates of suicide risk within demographic groups (KN38).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common misconceptions, making this a useful test of epidemiological knowledge."
+    },
+    {
+      "stem": "Which of the following is a validated, evidence-based psychotherapy recommended for preventing and treating peripartum major depressive disorder?",
+      "options": [
+        "Psychoanalysis",
+        "Exposure therapy",
+        "Cognitive-behavioral therapy",
+        "Electroconvulsive therapy"
+      ],
+      "answer": "Cognitive-behavioral therapy",
+      "explanation": "CBT and interpersonal therapy are evidence-based psychotherapies effective for prevention and treatment of peripartum depression.",
+      "kn": "KN44",
+      "kn_explanation": "This question targets knowledge of evidence-based psychosocial treatments for specific depressive disorder presentations (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "Clear question with plausible options, suitable for testing clinical treatment knowledge."
+    },
+    {
+      "stem": "Which neurotransmitter abnormalities have been linked to major depressive disorder?",
+      "options": [
+        "Elevated serotonin and norepinephrine levels",
+        "Low levels of serotonin, dopamine, and norepinephrine",
+        "High dopamine with low serotonin",
+        "Low acetylcholine and histamine levels"
+      ],
+      "answer": "Low levels of serotonin, dopamine, and norepinephrine",
+      "explanation": "Depression has been associated with decreased functioning of serotonin, dopamine, and norepinephrine neurotransmitter systems.",
+      "kn": "KN1",
+      "kn_explanation": "This question assesses biological bases of mood disorders focusing on neurotransmitter abnormalities (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Options are well balanced and test neurochemical etiology knowledge relevant to the EPPP."
+    },
+    {
+      "stem": "Which cognitive theory of depression emphasizes the role of negative thoughts about oneself, the world, and the future?",
+      "options": [
+        "Beck's cognitive theory",
+        "Lewinsohn's social reinforcement theory",
+        "Seligman’s original learned helplessness model",
+        "Hopelessness theory"
+      ],
+      "answer": "Beck's cognitive theory",
+      "explanation": "Beck’s theory centers on the negative cognitive triad: negative views of self, world, and future in depression.",
+      "kn": "KN12",
+      "kn_explanation": "This question evaluates knowledge of cognitive models explaining depression, directly related to cognition-affect bases of behavior (KN12).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem with distinct and well-known theoretical options, ideal for exam preparation."
+    }
+  ]
+}

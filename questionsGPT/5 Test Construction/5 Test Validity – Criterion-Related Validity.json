@@ -1,0 +1,199 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following scenarios best exemplifies the use of predictive validity in a criterion-related validity study?",
+      "options": [
+        "Correlating scores on a new intelligence test with scores on an established intelligence test collected at the same time",
+        "Using a job knowledge test to forecast employee performance scores collected one year after hiring",
+        "Comparing scores on two different personality inventories administered simultaneously",
+        "Evaluating the consistency of test results across two administrations within one week"
+      ],
+      "answer": "Using a job knowledge test to forecast employee performance scores collected one year after hiring",
+      "explanation": "Predictive validity involves using predictor scores collected first to estimate future criterion scores, such as predicting future job performance from a job knowledge test.",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses understanding of criterion-related validity, a core psychometric concept related to test validity and prediction, falling under psychometric theories and test characteristics.",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly differentiates predictive validity from concurrent validity; the distractors are plausible and test discriminative knowledge about timing of measurements."
+    },
+    {
+      "stem": "If a job knowledge test has a criterion-related validity coefficient of .70, approximately what percentage of variance in job performance can be explained by job knowledge according to this coefficient?",
+      "options": [
+        "49%",
+        "30%",
+        "70%",
+        "21%"
+      ],
+      "answer": "49%",
+      "explanation": "The squared validity coefficient (.70² = .49) represents the proportion of variance in the criterion explained by the predictor, which is 49%.",
+      "kn": "KN29",
+      "kn_explanation": "Calculating the amount of variance explained by a correlation coefficient is fundamental to understanding criterion-related validity statistics and psychometric properties.",
+      "difficulty": "easy",
+      "quality_comment": "The question requires a straightforward calculation; the incorrect options represent common miscalculations, enhancing discriminability."
+    },
+    {
+      "stem": "What happens to the criterion-related validity coefficient when a predictor test is cross-validated on a new sample?",
+      "options": [
+        "It tends to shrink due to reduction of chance correlations",
+        "It increases because the new sample is independent",
+        "It remains exactly the same as in the original study",
+        "It doubles as new variability is accounted for"
+      ],
+      "answer": "It tends to shrink due to reduction of chance correlations",
+      "explanation": "Initial correlations may be inflated by chance factors; when cross-validated on a new sample without those chance factors, the validity coefficient typically decreases (shrinkage).",
+      "kn": "KN29",
+      "kn_explanation": "This question covers an important psychometric concept about validity coefficient stability and generalizability, relevant to understanding test validation procedures.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and the distractors are plausible misconceptions, offering a solid test of understanding of cross-validation effects."
+    },
+    {
+      "stem": "Which of the following describes the standard error of estimate (SEE) in a criterion-related validity study?",
+      "options": [
+        "An index of the average amount by which predicted criterion scores deviate from actual scores",
+        "A measure of internal consistency reliability of the predictor",
+        "The correlation between predictor and criterion scores",
+        "The effect size of the predictor on the criterion"
+      ],
+      "answer": "An index of the average amount by which predicted criterion scores deviate from actual scores",
+      "explanation": "The SEE quantifies the typical error in prediction, indicating how much an individual's actual criterion score may differ from the predicted score based on the predictor.",
+      "kn": "KN29",
+      "kn_explanation": "The question focuses on interpretation of psychometric indices used in prediction studies, essential for understanding test accuracy and confidence intervals.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors represent related but distinct concepts, making the question both clear and challenging for EPPP candidates."
+    },
+    {
+      "stem": "When the reliability of the predictor and/or the criterion measure decreases, what is the effect on the criterion-related validity coefficient if uncorrected for attenuation?",
+      "options": [
+        "It is reduced and underestimates the true relationship due to measurement error",
+        "It increases because more variability is accounted for",
+        "It remains unaffected since reliability does not influence validity",
+        "It becomes exactly equal to the predictor’s reliability coefficient"
+      ],
+      "answer": "It is reduced and underestimates the true relationship due to measurement error",
+      "explanation": "Measurement error from low reliability attenuates the observed validity coefficient, causing it to underestimate the true association between predictor and criterion.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding correction for attenuation involves concepts of reliability affecting validity coefficients, core to psychometric knowledge in assessment and diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly presents a common pitfall; the distractors test common misunderstandings about relationships between reliability and validity."
+    },
+    {
+      "stem": "In a predictive validity study investigating a new hiring test, which of the following is true about raising the predictor cutoff score?",
+      "options": [
+        "It results in fewer hires, leading to fewer true and false positives and more true and false negatives",
+        "It leads to more hires, increasing true and false positives and decreasing false negatives",
+        "It has no effect on the number of true positives or false negatives",
+        "It increases false positives while decreasing true positives"
+      ],
+      "answer": "It results in fewer hires, leading to fewer true and false positives and more true and false negatives",
+      "explanation": "Raising the cutoff score makes it harder to be hired, reducing true and false positives and increasing false and true negatives.",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses understanding of decision thresholds and classification outcomes in criterion-related validity and test interpretation.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-constructed with plausible alternatives that require conceptual understanding of cutoff adjustments and their impact."
+    },
+    {
+      "stem": "What does incremental validity refer to in the context of test utility?",
+      "options": [
+        "The improvement in prediction accuracy when a new predictor is added to existing methods",
+        "The ability of a test to perfectly classify all cases correctly",
+        "The reliability of a test across repeated administrations",
+        "The magnitude of the correlation between a predictor and a criterion score"
+      ],
+      "answer": "The improvement in prediction accuracy when a new predictor is added to existing methods",
+      "explanation": "Incremental validity measures how much a new predictor increases predictive accuracy beyond what current methods achieve.",
+      "kn": "KN29",
+      "kn_explanation": "Incremental validity is a key concept in evaluating the usefulness of assessment tools, which falls within psychometric theories and applications.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is straightforward, and the distractors are reasonable but clearly different constructs, making this accessible yet informative."
+    },
+    {
+      "stem": "In diagnostic efficiency studies, which formula correctly calculates the sensitivity of a screening test?",
+      "options": [
+        "True positives divided by true positives plus false negatives (TP / [TP + FN])",
+        "True negatives divided by true negatives plus false positives (TN / [TN + FP])",
+        "True positives divided by total sample size (TP / N)",
+        "False positives divided by false positives plus true negatives (FP / [FP + TN])"
+      ],
+      "answer": "True positives divided by true positives plus false negatives (TP / [TP + FN])",
+      "explanation": "Sensitivity is the proportion of actual positives correctly identified by the test, calculated as true positives divided by true positives plus false negatives.",
+      "kn": "KN29",
+      "kn_explanation": "This item covers knowledge of sensitivity, a central concept in test diagnostics and validity within assessment and diagnosis.",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear with well-constructed distractors involving related but incorrect ratios, promoting solid understanding."
+    },
+    {
+      "stem": "How do changes in prevalence of a disorder in different settings affect the positive predictive value of a screening test?",
+      "options": [
+        "Positive predictive value increases as prevalence increases",
+        "Positive predictive value decreases as prevalence increases",
+        "Positive predictive value is unaffected by prevalence",
+        "Positive predictive value always equals sensitivity"
+      ],
+      "answer": "Positive predictive value increases as prevalence increases",
+      "explanation": "As the disorder's prevalence rises, the likelihood that a positive test result indicates the actual presence of the disorder (positive predictive value) increases.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding how predictive values depend on base rates is critical to interpretation of diagnostic test results, central to psychometrics and assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question probes understanding of an important but often misunderstood aspect of diagnostic statistics, with plausible distractors."
+    },
+    {
+      "stem": "A test has a reliability coefficient of .81. According to the relationship between reliability and validity, what is the highest possible criterion-related validity coefficient this test can achieve?",
+      "options": [
+        "0.90",
+        "0.81",
+        "0.95",
+        "1.00"
+      ],
+      "answer": "0.90",
+      "explanation": "The maximum validity coefficient is limited by the square root of reliability (.81), which is .90, representing the ceiling imposed by reliability.",
+      "kn": "KN29",
+      "kn_explanation": "This question highlights the fundamental limitation that reliability places on validity, a key concept in the psychometric evaluation of tests.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests candidate knowledge of mathematical relationships between reliability and validity, with well-balanced answer options."
+    },
+    {
+      "stem": "Which of the following best describes the primary purpose of using Taylor-Russell tables in evaluating a new predictor test?",
+      "options": [
+        "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
+        "Calculating the standard error of estimate for predicted criterion scores",
+        "Determining the test–retest reliability of the predictor",
+        "Assessing the internal consistency of the predictor test items"
+      ],
+      "answer": "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
+      "explanation": "Taylor-Russell tables are used to estimate incremental validity by showing how much the use of a new predictor improves the proportion of correct decisions relative to existing methods.",
+      "kn": "KN29",
+      "kn_explanation": "This pertains to psychometric models used in assessing test utility and incremental validity, central to criterion-related validity evaluation.",
+      "difficulty": "medium",
+      "quality_comment": "This question adds depth by addressing specific methods used to evaluate incremental validity, with distractors related to other psychometric concepts."
+    },
+    {
+      "stem": "When constructing confidence intervals around predicted criterion scores, which of the following increases the width of the interval?",
+      "options": [
+        "Decreased criterion-related validity coefficient",
+        "Decreased standard deviation of the criterion scores",
+        "Using a 68% confidence level instead of 95%",
+        "Having a perfect correlation between predictor and criterion"
+      ],
+      "answer": "Decreased criterion-related validity coefficient",
+      "explanation": "A lower validity coefficient increases the standard error of estimate, thus widening the confidence interval around the predicted score.",
+      "kn": "KN29",
+      "kn_explanation": "This item examines understanding of the standard error of estimate and confidence intervals in the context of criterion-related validity studies.",
+      "difficulty": "medium",
+      "quality_comment": "The question tests subtle understanding of statistical error and impacts of validity coefficient on prediction precision, with well-matched options."
+    },
+    {
+      "stem": "What effect does cross-validation typically have on the multiple correlation coefficient when additional predictors are included in a criterion-related validity study?",
+      "options": [
+        "The coefficient usually decreases due to shrinkage effects",
+        "The coefficient typically increases with more predictors",
+        "Cross-validation has no effect on the coefficient",
+        "The coefficient becomes unstable and cannot be interpreted"
+      ],
+      "answer": "The coefficient usually decreases due to shrinkage effects",
+      "explanation": "Adding predictors inflates initial correlations; cross-validation removes chance factors leading to shrinkage of the multiple correlation coefficient.",
+      "kn": "KN29",
+      "kn_explanation": "This item addresses cross-validation and shrinkage effects in psychometric models that include multiple predictors, an advanced validity concept.",
+      "difficulty": "medium",
+      "quality_comment": "The question differentiates key concepts of shrinkage influenced by sample size and predictors, offering a challenging but fair item."
+    }
+  ]
+}

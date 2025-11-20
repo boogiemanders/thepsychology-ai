@@ -1,0 +1,326 @@
+{
+  "source_file": "3 Prosocial Behavior and Prejudice-Discrimination.md",
+  "domain": "3 Social Psychology",
+  "questions": [
+    {
+      "id": "prosoc_001",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is prosocial behavior?",
+      "options": {
+        "A": "Behavior that harms others",
+        "B": "Voluntary behavior intended to benefit others",
+        "C": "Professional social work",
+        "D": "Social skills only"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Prosocial behavior includes helping, sharing, comforting and voluntary actions benefiting others.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_002",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is the bystander effect?",
+      "options": {
+        "A": "Helping behavior increases in groups",
+        "B": "Presence of others decreases helping probability",
+        "C": "Only bystanders help",
+        "D": "Standing by causes injury"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Bystander effect: presence of others decreases probability of helping due to diffusion of responsibility.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_003",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "What is the difference between altruism and reciprocal helping?",
+      "options": {
+        "A": "No meaningful difference",
+        "B": "Altruism has no benefit to helper; reciprocal expects future help",
+        "C": "Reciprocal is stronger",
+        "D": "Altruism is selfish"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Altruism is helping without expectation of reward; reciprocal helping involves expectation of future help.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_004",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is prejudice?",
+      "options": {
+        "A": "Unfair legal judgment",
+        "B": "Negative attitude/stereotype toward group members",
+        "C": "Personal dislike",
+        "D": "Racial identification"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN20",
+      "explanation": "Prejudice is negative attitude and stereotypes toward members of particular group.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_005",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is discrimination?",
+      "options": {
+        "A": "Being selective in choices",
+        "B": "Treating groups unfairly based on prejudice",
+        "C": "Recognizing differences",
+        "D": "Discerning taste"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN20",
+      "explanation": "Discrimination is unfair treatment of groups based on prejudice.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_006",
+      "difficulty": "medium",
+      "type": "basic",
+      "question": "What is the distinction between stereotypes and prejudice?",
+      "options": {
+        "A": "No difference",
+        "B": "Stereotypes are beliefs; prejudice is negative attitude",
+        "C": "Stereotypes cause discrimination",
+        "D": "Prejudice is older than stereotypes"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN20",
+      "explanation": "Stereotypes are beliefs about groups; prejudice is negative attitude; discrimination is unfair behavior.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_007",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What causes the bystander effect and how can it be reduced?",
+      "options": {
+        "A": "Helping increases in groups",
+        "B": "Diffusion of responsibility; can be reduced by personal responsibility/training",
+        "C": "Bystanders are uncaring",
+        "D": "Cannot be reduced"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Bystander effect from diffusion of responsibility; reduced by making people feel responsibility and training.",
+      "is_scored": false
+    },
+    {
+      "id": "prosoc_008",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is empathy and its relationship to prosocial behavior?",
+      "options": {
+        "A": "Empathy decreases helping",
+        "B": "Understanding others' feelings increases prosocial behavior",
+        "C": "Empathy is irrelevant",
+        "D": "Empathy prevents care"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Empathy (understanding others' feelings) is key motivator of prosocial and helping behavior.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_009",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "What is the outgroup homogeneity bias in stereotyping?",
+      "options": {
+        "A": "All groups are identical",
+        "B": "Outgroup members seen as similar/homogeneous; ingroup members seen as diverse",
+        "C": "Diversity increases stereotyping",
+        "D": "No bias exists"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN14",
+      "explanation": "Outgroup homogeneity bias: outgroup members perceived as more similar and less variable than ingroup members.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_010",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is ingroup bias?",
+      "options": {
+        "A": "Judging ingroup unfairly",
+        "B": "Favoring one's own group over outgroups",
+        "C": "Discrimination against ingroup",
+        "D": "Reducing ingroup size"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN14",
+      "explanation": "Ingroup bias: tendency to favor members of one's own group over outgroup members.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_011",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What is implicit bias and how does it relate to discrimination?",
+      "options": {
+        "A": "Unconscious stereotypes not intentionally held",
+        "B": "All bias is conscious",
+        "C": "Implicit bias doesn't affect behavior",
+        "D": "Bias is always explicit"
+      },
+      "correct_answer": "A",
+      "kn_id": "KN20",
+      "explanation": "Implicit bias: unconscious stereotypes/attitudes affecting behavior without conscious awareness.",
+      "is_scored": false
+    },
+    {
+      "id": "prosoc_012",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "What reduces prejudice according to contact hypothesis?",
+      "options": {
+        "A": "Prejudice cannot be reduced",
+        "B": "Intergroup contact with cooperation and equal status reduces prejudice",
+        "C": "Contact increases prejudice",
+        "D": "Only education reduces prejudice"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN20",
+      "explanation": "Contact hypothesis: prejudice reduced when groups interact cooperatively with equal status and shared goals.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_013",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is ambivalent sexism?",
+      "options": {
+        "A": "Not caring about gender",
+        "B": "Positive and negative attitudes toward women depending on role",
+        "C": "Identical treatment of all genders",
+        "D": "Gender is irrelevant"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN20",
+      "explanation": "Ambivalent sexism: benevolent (positive but paternalistic) and hostile (negative) attitudes toward women.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_014",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What are factors contributing to helping in emergencies?",
+      "options": {
+        "A": "Only personality determines helping",
+        "B": "Situational factors: diffusion of responsibility, ambiguity, personal cost affect helping",
+        "C": "All people help equally",
+        "D": "Helping is random"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Emergency helping affected by diffusion of responsibility, situation ambiguity, personal cost, and bystander factors.",
+      "is_scored": false
+    },
+    {
+      "id": "prosoc_015",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is the just-world hypothesis?",
+      "options": {
+        "A": "The world is perfectly fair",
+        "B": "People believe world is fair; people get what they deserve",
+        "C": "Injustice is inevitable",
+        "D": "World is random"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN14",
+      "explanation": "Just-world hypothesis: belief that world is fair and people get what they deserve (justifies blaming victims).",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_016",
+      "difficulty": "medium",
+      "type": "distinction",
+      "question": "How does moral disengagement relate to prejudice and discrimination?",
+      "options": {
+        "A": "No relationship",
+        "B": "Self-serving rationalizations allow prejudice while maintaining positive self-image",
+        "C": "Morality always prevents discrimination",
+        "D": "Prejudice is amoral"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN20",
+      "explanation": "Moral disengagement: rationalizations allow discriminatory behavior while maintaining positive self-image.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_017",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What role does motivation play in prosocial behavior?",
+      "options": {
+        "A": "Motivation is irrelevant",
+        "B": "Both egoistic (reward) and altruistic motivations drive helping",
+        "C": "Only egoistic motivation exists",
+        "D": "Motivation prevents helping"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Prosocial behavior motivated by both egoistic rewards and altruistic concern for others.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_018",
+      "difficulty": "hard",
+      "type": "difficult",
+      "question": "What is the effect of mood on prosocial behavior?",
+      "options": {
+        "A": "Mood is irrelevant",
+        "B": "Positive mood increases helping; negative mood may increase empathic helping",
+        "C": "Negative mood always increases helping",
+        "D": "Mood prevents prosocial behavior"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Positive mood increases helping (maintain mood); negative mood increases helping if situation addresses bad mood.",
+      "is_scored": false
+    },
+    {
+      "id": "prosoc_019",
+      "difficulty": "easy",
+      "type": "basic",
+      "question": "What is tokenism in addressing discrimination?",
+      "options": {
+        "A": "Token payments for help",
+        "B": "Symbolic inclusion of minorities without meaningful change",
+        "C": "Using tokens as money",
+        "D": "Acknowledging diversity"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN20",
+      "explanation": "Tokenism: symbolic inclusion of minorities without meaningful change in discrimination or power structures.",
+      "is_scored": true
+    },
+    {
+      "id": "prosoc_020",
+      "difficulty": "medium",
+      "type": "basic",
+      "question": "How do individual and situational factors interact in prosocial behavior?",
+      "options": {
+        "A": "Only personality determines helping",
+        "B": "Situation activates or inhibits prosocial tendencies",
+        "C": "Situation is irrelevant",
+        "D": "Individual factors never matter"
+      },
+      "correct_answer": "B",
+      "kn_id": "KN15",
+      "explanation": "Prosocial behavior results from interaction: situations either activate or inhibit individuals' prosocial tendencies.",
+      "is_scored": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { SectionHeader } from "@/components/section-header"
 import { siteConfig } from "@/lib/config"
@@ -19,6 +19,52 @@ export function PricingSection() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
+  const tierBrandSettings: Record<string, { base: string; hover: string; hoverText: string; dot: string }> = {
+    "7-Day Free Trial": {
+      base: "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
+      hover: "hover:!bg-brand-olive hover:!text-white dark:hover:!bg-black dark:hover:!text-white",
+      hoverText: "text-white dark:text-white",
+      dot: "brand-olive-bg dark:brand-soft-blue-bg",
+    },
+    Pro: {
+      base: "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
+      hover: "hover:!bg-brand-coral hover:!text-white dark:hover:!bg-black dark:hover:!text-white",
+      hoverText: "text-white dark:text-white",
+      dot: "brand-coral-bg dark:brand-lavender-gray-bg",
+    },
+    "Pro + Coaching": {
+      base: "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
+      hover: "hover:!bg-brand-dusty-rose hover:!text-white dark:hover:!bg-black dark:hover:!text-white",
+      hoverText: "text-white dark:text-white",
+      dot: "brand-dusty-rose-bg dark:brand-sage-bg",
+    },
+  }
+  const asteriskClasses: Record<string, string> = {
+    "7-Day Free Trial": "text-brand-coral",
+    Pro: "text-brand-lavender-gray",
+    "Pro + Coaching": "text-brand-sage",
+  }
+
+  useEffect(() => {
+    const handler = (event: Event) => {
+      const customEvent = event as CustomEvent<{ tierName: string }>
+      const tierName = customEvent.detail?.tierName
+      if (!tierName) return
+      setExpandedTier((current) => (current === tierName ? current : tierName))
+      setFormData({
+        email: "",
+        phone: "",
+        testDate: "",
+        thoughtsGoalsQuestions: "",
+      })
+      setSubmitMessage(null)
+    }
+
+    window.addEventListener("mini-pricing-select", handler as EventListener)
+    return () => {
+      window.removeEventListener("mini-pricing-select", handler as EventListener)
+    }
+  }, [])
 
   const handleTierSelect = (tierName: string) => {
     setExpandedTier(expandedTier === tierName ? null : tierName)
@@ -98,30 +144,39 @@ export function PricingSection() {
       </SectionHeader>
       <div className="relative w-full h-full">
         <div className="grid min-[650px]:grid-cols-2 min-[900px]:grid-cols-3 gap-4 w-full max-w-6xl mx-auto px-6">
-          {siteConfig.pricing.pricingItems.map((tier) => (
-            <div
-              key={tier.name}
-              className={cn(
-                "rounded-xl relative overflow-hidden",
-                tier.isPopular
-                  ? "md:shadow-[0px_61px_24px_-10px_rgba(0,0,0,0.01),0px_34px_20px_-8px_rgba(0,0,0,0.05),0px_15px_15px_-6px_rgba(0,0,0,0.09),0px_4px_8px_-2px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(0,0,0,0.08)] bg-accent"
-                  : "bg-accent border border-border",
-                "flex flex-col h-full"
-              )}
-            >
+          {siteConfig.pricing.pricingItems.map((tier) => {
+            const [displayAmount, displayPeriod] = tier.displayPrice
+              ? tier.displayPrice.split("/").map((part) => part.trim())
+              : [tier.price, tier.period]
+
+            return (
+              <div
+                key={tier.name}
+                className={cn(
+                  "rounded-xl relative overflow-hidden",
+                  tier.isPopular
+                    ? "md:shadow-[0px_61px_24px_-10px_rgba(0,0,0,0.01),0px_34px_20px_-8px_rgba(0,0,0,0.05),0px_15px_15px_-6px_rgba(0,0,0,0.09),0px_4px_8px_-2px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(0,0,0,0.08)] bg-accent"
+                    : "bg-accent border border-border",
+                  "flex flex-col h-full"
+                )}
+              >
               {/* Header - Always Visible */}
               <div className="flex flex-col gap-4 p-4">
                 <p className="text-sm">
                   {tier.name}
                   {tier.isPopular && (
-                    <span className="bg-gradient-to-b from-secondary/50 from-[1.92%] to-secondary to-[100%] text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm ml-2 shadow-[0px_6px_6px_-3px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)]">
+                    <span className="brand-soft-blue-bg text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm ml-2 shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(0,0,0,0.15)]">
                       Popular
                     </span>
                   )}
                 </p>
                 <div className="flex items-baseline mt-2">
-                  <span className="text-4xl font-semibold">{tier.price}</span>
-                  <span className="ml-2">/month</span>
+                  <span className="text-4xl font-semibold">{displayAmount}</span>
+                  {displayPeriod && (
+                    <span className="ml-2 text-lg font-medium text-muted-foreground">
+                      /{displayPeriod}
+                    </span>
+                  )}
                 </div>
                 <p className="text-sm mt-2">{tier.description}</p>
               </div>
@@ -223,7 +278,7 @@ export function PricingSection() {
                     {/* Email - Required */}
                     <div>
                       <label htmlFor={`email-${tier.name}`} className="block text-sm font-medium mb-2">
-                        Email Address <span className="text-red-500">*</span>
+                        Email Address <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
                       </label>
                       <input
                         type="email"
@@ -254,14 +309,30 @@ export function PricingSection() {
                     </div>
 
                     <div className="flex justify-center">
-                      <InteractiveHoverButton
-                        type="submit"
-                        disabled={isSubmitting}
-                        text={isSubmitting ? 'Submitting...' : 'Start'}
-                        inverted={true}
-                      >
-                        {isSubmitting ? 'Submitting...' : 'Start'}
-                      </InteractiveHoverButton>
+                      {(() => {
+                        const brand = tierBrandSettings[tier.name] ?? {
+                          base: "",
+                          hover: "",
+                          hoverText: "",
+                          dot: "",
+                        }
+                        return (
+                          <InteractiveHoverButton
+                            type="submit"
+                            disabled={isSubmitting}
+                            text={isSubmitting ? "Submitting..." : "Start"}
+                            className={cn(
+                              "transition-colors duration-150 focus-visible:outline focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/60 border border-border shadow-sm",
+                              brand?.base,
+                              brand?.hover
+                            )}
+                            hoverTextClassName={brand?.hoverText}
+                            dotClassName={brand?.dot}
+                          >
+                            {isSubmitting ? "Submitting..." : "Start"}
+                          </InteractiveHoverButton>
+                        )
+                      })()}
                     </div>
 
                     {submitMessage && (
@@ -285,7 +356,7 @@ export function PricingSection() {
                 </div>
               </motion.div>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </section>

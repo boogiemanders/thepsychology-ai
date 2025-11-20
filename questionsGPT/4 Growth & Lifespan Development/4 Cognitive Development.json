@@ -1,0 +1,229 @@
+{
+  "questions": [
+    {
+      "stem": "According to Piaget's theory, what process occurs when a child modifies an existing cognitive schema to accommodate new information?",
+      "options": [
+        "Equilibration",
+        "Assimilation",
+        "Accommodation",
+        "Transduction"
+      ],
+      "answer": "Accommodation",
+      "explanation": "Accommodation involves changing an existing cognitive schema or creating a new one to fit new information, helping to restore equilibrium.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of Piaget’s constructivist theory, a major research-based developmental theory under KN23.",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly tests a fundamental Piagetian concept, with distractors that are related but distinct, supporting effective assessment of understanding."
+    },
+    {
+      "stem": "In Piaget's sensorimotor substages, which substage is characterized by the development of object permanence and intentional goal-directed behavior?",
+      "options": [
+        "Primary Circular Reactions",
+        "Secondary Circular Reactions",
+        "Coordination of Secondary Circular Reactions",
+        "Internalization of Schemas"
+      ],
+      "answer": "Coordination of Secondary Circular Reactions",
+      "explanation": "The Coordination of Secondary Circular Reactions substage (8–12 months) marks the beginning of object permanence and intentional actions toward goals.",
+      "kn": "KN23",
+      "kn_explanation": "This question focuses on developmental stages and their characteristics, aligned with major theories of development under KN23.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors represent other substages in the sensorimotor period, making this question moderately challenging but fair."
+    },
+    {
+      "stem": "Which limitation of preoperational thought explains a child's difficulty understanding that the amount of liquid remains the same when poured into a differently shaped container?",
+      "options": [
+        "Decentration",
+        "Egocentrism",
+        "Centration",
+        "Hypothetical-Deductive Reasoning"
+      ],
+      "answer": "Centration",
+      "explanation": "Centration is the tendency to focus on one aspect (e.g., height of liquid) while ignoring other relevant features, leading to difficulties with conservation tasks.",
+      "kn": "KN23",
+      "kn_explanation": "Preoperational cognitive limitations are central concepts within developmental theory, classified under KN23.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible Piagetian terms, enhancing the quality and discriminative power of the question."
+    },
+    {
+      "stem": "According to Vygotsky's sociocultural theory, the 'zone of proximal development' refers to:",
+      "options": [
+        "The gap between a child’s actual development level and their potential development with support",
+        "The stage when language development fully supports cognitive growth",
+        "The range of social behaviors a child can perform independently",
+        "A child’s ability to imitate adults without assistance"
+      ],
+      "answer": "The gap between a child’s actual development level and their potential development with support",
+      "explanation": "The zone of proximal development is the difference between what children can do alone versus with guidance from adults or more capable peers.",
+      "kn": "KN23",
+      "kn_explanation": "This concept is a central part of Vygotsky’s developmental theory, encompassing social and cultural influences on cognitive growth, relevant to KN23.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is concise and the distractors are related but incorrect definitions, making it straightforward for exam-level learners."
+    },
+    {
+      "stem": "Which of the following best describes the misinformation effect as it pertains to eyewitness testimony?",
+      "options": [
+        "Memory distortions caused by the presence of multiple eyewitnesses",
+        "The alteration of memories due to misleading post-event information",
+        "The inability to recall events due to traumatic stress",
+        "The recall of accurate but irrelevant details"
+      ],
+      "answer": "The alteration of memories due to misleading post-event information",
+      "explanation": "The misinformation effect occurs when exposure to incorrect information after an event changes a person’s memory of that event.",
+      "kn": "KN11",
+      "kn_explanation": "This question tests knowledge of cognitive processes related to memory distortions, a key element of cognition under KN11.",
+      "difficulty": "medium",
+      "quality_comment": "The choices include plausible memory-related concepts making it a well-constructed question testing important aspects of eyewitness reliability."
+    },
+    {
+      "stem": "Which memory type is most likely to show significant decline as adults age?",
+      "options": [
+        "Remote long-term memory",
+        "Recent long-term (secondary) memory",
+        "Procedural memory",
+        "Short-term storage (primary) memory"
+      ],
+      "answer": "Recent long-term (secondary) memory",
+      "explanation": "Research consistently shows that recent long-term memory declines most with age, whereas remote long-term and procedural memories are relatively preserved.",
+      "kn": "KN8",
+      "kn_explanation": "This question relates to memory changes across the lifespan, fitting within major research-based theories and models of memory (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all legitimate memory types, making this question effective for distinguishing knowledge of age-related memory effects."
+    },
+    {
+      "stem": "In Piaget’s formal operational stage, which concept explains adolescents’ belief that they are the focus of everyone’s attention?",
+      "options": [
+        "Personal fable",
+        "Imaginary audience",
+        "Egocentrism",
+        "Centration"
+      ],
+      "answer": "Imaginary audience",
+      "explanation": "The imaginary audience is the adolescent’s belief that they are constantly observed and evaluated by others, a feature of adolescent egocentrism.",
+      "kn": "KN23",
+      "kn_explanation": "This question pertains to developmental theory focused on adolescence, corresponding to major research-based developmental models (KN23).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are related developmental concepts, but only one specifically describes this egocentric belief, making it a clear and fair question."
+    },
+    {
+      "stem": "Which of the following best exemplifies private speech as described by Vygotsky?",
+      "options": [
+        "A child silently rehearsing instructions after a teacher explains a task",
+        "A child talking aloud to themselves while solving a puzzle",
+        "Children playing collaboratively and exchanging ideas",
+        "A child observing an adult solving a problem"
+      ],
+      "answer": "A child talking aloud to themselves while solving a puzzle",
+      "explanation": "Private speech is verbal self-guidance children use to regulate their behavior and problem-solving, typically spoken aloud before becoming internalized.",
+      "kn": "KN23",
+      "kn_explanation": "This question addresses a key concept in sociocultural theory related to cognitive development involving speech and self-regulation, under KN23.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors contrast with the concept of private speech, helping to test precise understanding of Vygotsky’s theory."
+    },
+    {
+      "stem": "Which of the following statements best describes 'horizontal decalage' in cognitive development?",
+      "options": [
+        "The gradual acquisition of new skills across different age groups",
+        "The uneven development of cognitive skills within the same developmental stage",
+        "The inability to reverse an action in the preoperational stage",
+        "The focus on one aspect of a problem to the exclusion of others"
+      ],
+      "answer": "The uneven development of cognitive skills within the same developmental stage",
+      "explanation": "Horizontal decalage refers to the sequential emergence of related cognitive abilities at different times within the same Piagetian stage, such as conservation skills.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of nuanced concepts within developmental stage theory, which falls under KN23.",
+      "difficulty": "hard",
+      "quality_comment": "The distractors are related cognitive concepts, increasing the complexity and making it appropriate for higher-difficulty assessment."
+    },
+    {
+      "stem": "Which explanation for childhood amnesia emphasizes the role of language in encoding memories?",
+      "options": [
+        "The theory that infant brain structures are underdeveloped",
+        "The hypothesis that children lack a stable sense of self necessary for memory",
+        "The idea that limited language ability in young children restricts memory encoding",
+        "The proposal that early memories are replaced by later experiences"
+      ],
+      "answer": "The idea that limited language ability in young children restricts memory encoding",
+      "explanation": "One explanation of childhood amnesia suggests that inadequate language skills in children under 3–4 years limit their ability to encode memories verbally.",
+      "kn": "KN21",
+      "kn_explanation": "The question deals with normal cognitive development and memory processes across the lifespan, falling under growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but inaccurate theories, making this a well-balanced question."
+    },
+    {
+      "stem": "Which of the following best describes the 'personal fable' in adolescent egocentrism?",
+      "options": [
+        "The belief that one is uniquely special and invulnerable to harm",
+        "The tendency to focus attention on oneself as though on a stage",
+        "The inability to conserve quantity or volume",
+        "The perception that adults always misunderstand adolescents"
+      ],
+      "answer": "The belief that one is uniquely special and invulnerable to harm",
+      "explanation": "The personal fable is the adolescent’s belief in their own uniqueness and invulnerability, contributing to risky behaviors and feelings of being misunderstood.",
+      "kn": "KN23",
+      "kn_explanation": "This question focuses on adolescent cognitive development, especially egocentrism, a key concept in developmental theory under KN23.",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are plausible adolescent concepts but clearly distinct from the personal fable, making it an accessible question."
+    },
+    {
+      "stem": "Which cognitive ability involves evaluating the logic of verbal statements without needing concrete examples and typically develops during Piaget’s formal operational stage?",
+      "options": [
+        "Representational thought",
+        "Hypothetical-deductive reasoning",
+        "Propositional thought",
+        "Transductive reasoning"
+      ],
+      "answer": "Propositional thought",
+      "explanation": "Propositional thought is the ability to logically evaluate verbal statements without concrete examples and emerges in the formal operational stage.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests understanding of higher-level logical reasoning in development, categorized under developmental theories (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "The options contain related terms, requiring careful differentiation which enhances the question’s discriminative value."
+    },
+    {
+      "stem": "Research on sex differences in cognitive abilities has consistently found which of the following patterns during adolescence?",
+      "options": [
+        "Boys outperform girls on computational math skills, girls outperform boys on mathematical reasoning",
+        "Girls outperform boys on speech fluency and writing, boys outperform girls on mental rotation",
+        "Boys outperform girls in verbal fluency and reading achievement",
+        "Girls outperform boys in mathematical problem-solving and visual-spatial tasks"
+      ],
+      "answer": "Girls outperform boys on speech fluency and writing, boys outperform girls on mental rotation",
+      "explanation": "Studies show girls excel in verbal skills like speech and writing, while boys score higher on visual-spatial tasks such as mental rotation.",
+      "kn": "KN13",
+      "kn_explanation": "This question involves cognitive-affective bases of behavior related to sex differences in cognition, aligning with social and cultural influences on cognition (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The options are plausible but only one correctly states the consistent research findings, making it a quality question."
+    },
+    {
+      "stem": "In the context of diverse identities and development (KN24), which factor best demonstrates how cultural background influences cognitive developmental milestones?",
+      "options": [
+        "Children universally develop object permanence at the same age regardless of culture",
+        "Exposure to language and social interaction within a culture shapes the timing and nature of a child’s cognitive skills",
+        "Cognitive development is solely driven by biological maturation, independent of cultural experience",
+        "Culture has minimal impact on children’s acquisition of hypothetical-deductive reasoning"
+      ],
+      "answer": "Exposure to language and social interaction within a culture shapes the timing and nature of a child’s cognitive skills",
+      "explanation": "KN24 emphasizes the role of diverse identities including cultural factors; cognitive development varies with cultural experiences such as language exposure and social interactions.",
+      "kn": "KN24",
+      "kn_explanation": "This question best fits KN24 as it addresses how diverse cultural identities influence cognitive development trajectories.",
+      "difficulty": "medium",
+      "quality_comment": "The options test understanding of cultural impact on development, with distractors reflecting common misconceptions, supporting a well-targeted item."
+    },
+    {
+      "stem": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "options": [
+        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
+        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
+        "They only affect adults’ attitudes and do not influence children's cognitive skills",
+        "They enhance boys’ and girls’ abilities equally through positive reinforcement"
+      ],
+      "answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
+      "explanation": "Gender-role stereotypes influence children's cognitive development by shaping their self-perceptions and effort, often leading to performance consistent with societal expectations.",
+      "kn": "KN24",
+      "kn_explanation": "This item targets KN24 by examining how diverse social identities and cultural stereotypes impact cognitive development outcomes across genders.",
+      "difficulty": "medium",
+      "quality_comment": "The question draws on well-established research, with distractors based on common myths, making it effective for assessing nuanced knowledge."
+    }
+  ]
+}

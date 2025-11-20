@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best describes a work-oriented job analysis?",
+      "options": [
+        "Focuses on the personal characteristics such as knowledge, skills, abilities, and other attributes needed to perform the job",
+        "Focuses on the tasks that must be accomplished to achieve desired job outcomes",
+        "Focuses on identifying core competencies that apply across multiple jobs within an organization",
+        "Focuses on evaluating monetary compensation based on job responsibilities"
+      ],
+      "answer": "Focuses on the tasks that must be accomplished to achieve desired job outcomes",
+      "explanation": "A work-oriented job analysis emphasizes identifying job tasks required to achieve specific outcomes, distinguishing it from worker-oriented analyses that center on KSAOs.",
+      "kn": "KN34",
+      "kn_explanation": "This question targets assessment methods and their strengths and limitations in organizational settings, aligning well with organizational and personnel assessment (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly contrasts key approaches within job analysis, and the distractors are plausible but distinct, testing nuanced understanding."
+    },
+    {
+      "stem": "What is the primary focus of competency modeling in organizations?",
+      "options": [
+        "Identification of compensable factors to determine fair wages",
+        "Analyzing the tasks required for successful job completion",
+        "Determining core competencies linked to organizational values across multiple jobs",
+        "Measuring employee performance through objective metrics"
+      ],
+      "answer": "Determining core competencies linked to organizational values across multiple jobs",
+      "explanation": "Competency modeling centers on core worker attributes that align with organizational goals and are applicable across jobs or job groups.",
+      "kn": "KN34",
+      "kn_explanation": "This question addresses organizational assessment and personnel functions, specifically exploring competency modeling as part of assessment methods within groups and organizations (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "Options differentiate closely related concepts, requiring test-takers to discriminate between job analysis and competency modeling effectively."
+    },
+    {
+      "stem": "Which job evaluation method involves assigning points to compensable factors such as skill and responsibility to determine job value?",
+      "options": [
+        "Comparable worth analysis",
+        "Point system method",
+        "Critical incident technique",
+        "Behaviorally anchored rating scales"
+      ],
+      "answer": "Point system method",
+      "explanation": "The point system assigns numerical values to compensable job factors to facilitate compensation decisions based on job worth.",
+      "kn": "KN34",
+      "kn_explanation": "This item relates to organizational assessment and job evaluation techniques within personnel assessment (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are related organizational concepts, which enhances the question's discriminative power and relevance for the domain."
+    },
+    {
+      "stem": "Which of the following is an advantage of using subjective performance appraisal measures over objective measures?",
+      "options": [
+        "They provide quantitative, error-free data",
+        "They can account for situational factors affecting performance",
+        "They are free from rater biases",
+        "They are readily available for all job types"
+      ],
+      "answer": "They can account for situational factors affecting performance",
+      "explanation": "Subjective measures allow raters to consider contextual elements influencing performance that objective measures may miss.",
+      "kn": "KN34",
+      "kn_explanation": "The question concerns evaluation of assessment methods and their limitations in organizational settings (KN34).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and plausible distractors make this a well-constructed question for testing comprehension of performance appraisal approaches."
+    },
+    {
+      "stem": "The forced distribution method of performance appraisal is best described as:",
+      "options": [
+        "Comparing each employee to all others in pairs for evaluation",
+        "Assigning employees to predetermined performance categories based on a fixed percentage distribution",
+        "Rating employee behaviors according to defined behavioral anchors",
+        "Recording exceptional positive and negative job-related incidents"
+      ],
+      "answer": "Assigning employees to predetermined performance categories based on a fixed percentage distribution",
+      "explanation": "Forced distribution requires raters to classify employees into set percentage categories, which helps mitigate some rating biases but can be inaccurate if performance does not fit the distribution.",
+      "kn": "KN34",
+      "kn_explanation": "This item evaluates knowledge of subjective rating scale techniques used in performance assessment within organizations (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The answer and distractors clearly correspond to different appraisal methods, encouraging precise understanding of forced distribution advantages and limitations."
+    },
+    {
+      "stem": "Which of the following best exemplifies the criterion contamination problem in performance appraisal?",
+      "options": [
+        "A supervisor fails to rate all employees on important dimensions of job performance",
+        "An employee’s gender biases the supervisor's rating, unrelated to actual performance",
+        "A performance test covers only some but not all essential job tasks",
+        "Ratings focus primarily on exceptional rather than typical behaviors"
+      ],
+      "answer": "An employee’s gender biases the supervisor's rating, unrelated to actual performance",
+      "explanation": "Criterion contamination occurs when ratings are influenced by factors unrelated to actual job performance, like personal biases.",
+      "kn": "KN34",
+      "kn_explanation": "This question assesses understanding of problems affecting criterion validity in performance measurement, relevant to organizational assessment methods (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent related but distinct issues, making this an effective item for assessing nuanced knowledge of criterion validity concepts."
+    },
+    {
+      "stem": "Which rater bias is demonstrated when a supervisor gives all employees the same average rating regardless of their actual performance?",
+      "options": [
+        "Halo error",
+        "Leniency bias",
+        "Central tendency bias",
+        "Contrast error"
+      ],
+      "answer": "Central tendency bias",
+      "explanation": "Central tendency bias occurs when raters avoid using extreme ratings and instead assign average ratings uniformly.",
+      "kn": "KN34",
+      "kn_explanation": "This question focuses on rater biases affecting subjective performance ratings, part of personnel and organizational assessment knowledge (KN34).",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly differentiates common rater biases with realistic distractors, making it appropriate for foundational knowledge testing."
+    },
+    {
+      "stem": "Behaviorally Anchored Rating Scales (BARS) differ from graphic rating scales primarily because:",
+      "options": [
+        "They are easier to develop and apply",
+        "Behavioral examples anchor each scale point to improve rating accuracy",
+        "They focus exclusively on relative comparisons among employees",
+        "They rely solely on quantitative performance metrics"
+      ],
+      "answer": "Behavioral examples anchor each scale point to improve rating accuracy",
+      "explanation": "BARS include specific behavioral descriptions at each point on the scale to clarify ratings and reduce bias.",
+      "kn": "KN34",
+      "kn_explanation": "This item tests knowledge of performance appraisal scale types, a key topic within organizational and personnel assessment (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The options contrast key features of BARS versus other rating scales, supporting discrimination of item-level knowledge."
+    },
+    {
+      "stem": "Which of the following rater training approaches aims to improve rating accuracy by teaching raters about multidimensional job performance and providing rating practice with feedback?",
+      "options": [
+        "Bias-awareness training",
+        "Frame-of-reference (FOR) training",
+        "Forced distribution training",
+        "Critical incident training"
+      ],
+      "answer": "Frame-of-reference (FOR) training",
+      "explanation": "FOR training familiarizes raters with a shared performance standard and provides practice to enhance accuracy and consistency.",
+      "kn": "KN34",
+      "kn_explanation": "This question addresses methods to improve assessment accuracy and reduce biases, an important facet of organizational assessment (KN34).",
+      "difficulty": "hard",
+      "quality_comment": "This question tests conceptual understanding of specific training methods to reduce rater errors, suitable for advanced preparation."
+    },
+    {
+      "stem": "A Position Analysis Questionnaire (PAQ) is most accurately described as:",
+      "options": [
+        "A method for identifying critical incidents of good and poor performance",
+        "A worker-oriented job analysis instrument focusing on knowledge, skills, abilities, and other characteristics",
+        "A point system method to evaluate job worth for compensation decisions",
+        "A forced distribution method for relative performance appraisal"
+      ],
+      "answer": "A worker-oriented job analysis instrument focusing on knowledge, skills, abilities, and other characteristics",
+      "explanation": "The PAQ assesses worker characteristics across categories like mental processes and relationships to define job requirements.",
+      "kn": "KN34",
+      "kn_explanation": "This question focuses on assessment methods used for job and worker analysis within organizations (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes among various organizational instruments, improving test-taker discrimination."
+    },
+    {
+      "stem": "The contrast error in subjective performance ratings occurs when:",
+      "options": [
+        "Raters give systematically low or high ratings regardless of actual performance",
+        "A rater’s evaluation of an employee is influenced by the performance of a previously rated employee",
+        "A rater’s single impression of an employee influences ratings on all performance dimensions",
+        "Raters give higher ratings to individuals perceived as similar to themselves"
+      ],
+      "answer": "A rater’s evaluation of an employee is influenced by the performance of a previously rated employee",
+      "explanation": "Contrast error happens when raters unintentionally compare employees to previously rated employees rather than an objective standard.",
+      "kn": "KN34",
+      "kn_explanation": "The question evaluates knowledge of common rater biases in subjective ratings within organizational assessments (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "This question uses a clear example of contrast error with plausible distractors to enhance discriminability."
+    },
+    {
+      "stem": "Which performance appraisal method involves identifying exceptional positive and negative behaviors to assess employee performance?",
+      "options": [
+        "Critical incident technique",
+        "Paired comparison technique",
+        "Graphic rating scales",
+        "Behaviorally anchored rating scales"
+      ],
+      "answer": "Critical incident technique",
+      "explanation": "The CIT collects incidents of notably good or poor behaviors to evaluate performance and provide feedback.",
+      "kn": "KN34",
+      "kn_explanation": "This question highlights a specific job analysis and performance assessment method relevant to personnel assessment (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast different appraisal methods well, aiding in testing recognition of the CIT’s unique characteristics."
+    },
+    {
+      "stem": "Which of the following is a key benefit of using electronic performance monitoring as part of a job analysis?",
+      "options": [
+        "It allows real-time, objective tracking of employee behaviors and work conditions",
+        "It exclusively collects subjective ratings from supervisors",
+        "It focuses on identifying core competencies shared by all employees",
+        "It determines compensable factors for wage setting"
+      ],
+      "answer": "It allows real-time, objective tracking of employee behaviors and work conditions",
+      "explanation": "Electronic performance monitoring provides direct, continuous data about job performance and conditions, aiding job analysis.",
+      "kn": "KN34",
+      "kn_explanation": "This question fits with organizational assessment methods, emphasizing sources of job analysis data including technology-based approaches relevant to job and performance assessment (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively probes understanding of modern data collection methods for job analysis with clearly distinct distractors."
+    },
+    {
+      "stem": "When developing a behaviorally anchored rating scale (BARS), which group is typically involved in identifying performance dimensions and defining behavioral anchors?",
+      "options": [
+        "Only senior management",
+        "Job incumbents, supervisors, and subject matter experts",
+        "Human resources staff exclusively",
+        "External consultants with no job experience"
+      ],
+      "answer": "Job incumbents, supervisors, and subject matter experts",
+      "explanation": "BARS development requires input from those familiar with job tasks to identify relevant performance dimensions and behavioral examples.",
+      "kn": "KN34",
+      "kn_explanation": "This item highlights the collaborative process used in developing performance appraisal tools, a component of organizational assessment and job performance measurement (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The question targets the procedural context of BARS development and contrasts typical vs. inappropriate contributors, enhancing content validity."
+    }
+  ]
+}

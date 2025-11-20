@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "According to APA Ethics Code Standard 7.04, under what condition may psychologists require students to disclose personal information in course- or program-related activities?",
+      "options": [
+        "Only if the information is unrelated to the student's performance or safety concerns.",
+        "When the program materials do not specify the requirement but the therapist requests it.",
+        "If the program or training facility explicitly states this requirement in admissions and program materials, or the information is needed to assess performance or safety risks.",
+        "When students voluntarily choose to share personal information to enhance learning experiences."
+      ],
+      "answer": "If the program or training facility explicitly states this requirement in admissions and program materials, or the information is needed to assess performance or safety risks.",
+      "explanation": "Standard 7.04 allows requiring disclosure of personal information only if the program clearly states this requirement or if such information is necessary to evaluate or assist students whose personal problems impair their competence or pose a threat.",
+      "kn": "KN61",
+      "kn_explanation": "This question assesses knowledge of ethical principles regarding education and training programs, specifically confidentiality and disclosure requirements, falling under ethical, legal, and professional issues (KN61).",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly asks about a specific ethical standard and the distractors are plausible but incorrect interpretations of the standard, providing a clear assessment of the examinee's understanding."
+    },
+    {
+      "stem": "According to Standard 7.05, which practice is NOT ethically permissible when individual or group therapy is required for a graduate psychology program?",
+      "options": [
+        "Allowing students to choose their own therapist unaffiliated with the program.",
+        "Faculty members who evaluate students providing personal therapy to those students.",
+        "Describing personal therapy requirements, including risks and safeguards, in program materials.",
+        "Providing financially feasible therapy options to students."
+      ],
+      "answer": "Faculty members who evaluate students providing personal therapy to those students.",
+      "explanation": "Standard 7.05 prohibits faculty responsible for evaluating a student's academic performance from providing therapy to that student to avoid dual relationships.",
+      "kn": "KN61",
+      "kn_explanation": "This question evaluates understanding of ethical standards on avoiding dual relationships and conflicts of interest within supervision and training (KN61 Ethics).",
+      "difficulty": "medium",
+      "quality_comment": "The question distinguishes a clear ethical violation from acceptable practices, with reasonable distractors that probe knowledge of therapy requirements in training."
+    },
+    {
+      "stem": "Which of the following is a condition under Standard 8.07 that justifies the use of deception in research?",
+      "options": [
+        "When the deception will increase the likelihood of participant enjoyment.",
+        "If the deception involves physical pain but is brief.",
+        "If alternative nondeceptive procedures are unavailable and the study has significant scientific or educational value.",
+        "If participants are told about the deception only after publication."
+      ],
+      "answer": "If alternative nondeceptive procedures are unavailable and the study has significant scientific or educational value.",
+      "explanation": "Deception is ethically justified only when necessary for important research aims and no suitable nondeceptive alternatives exist, per Standard 8.07.",
+      "kn": "KN69",
+      "kn_explanation": "This question addresses ethical considerations in research conduct, specifically the appropriateness of deception (KN69 - Ethical issues in research).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear with plausible distractors that reflect common misconceptions, good for testing ethical decision-making understanding."
+    },
+    {
+      "stem": "Under APA Ethics Code Standard 8.01, what must psychologists do regarding Institutional Review Board (IRB) approval before conducting research?",
+      "options": [
+        "Obtain IRB approval only after completing data collection.",
+        "Provide accurate research information and obtain IRB approval prior to research commencement.",
+        "Obtain approval only if the research involves experimental treatments.",
+        "Obtain verbal approval from colleagues instead of formal IRB approval."
+      ],
+      "answer": "Provide accurate research information and obtain IRB approval prior to research commencement.",
+      "explanation": "Standard 8.01 requires psychologists to submit accurate proposals and secure IRB approval before starting research involving human subjects.",
+      "kn": "KN69",
+      "kn_explanation": "The question covers ethical and procedural standards for research oversight, core to ethical issues in research (KN69).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward and covers essential ethical practice, with distractors that are clearly incorrect, fitting basic knowledge testing."
+    },
+    {
+      "stem": "Which statement best describes the APA Ethics Code requirements for informed consent in research involving children who are unable to provide consent themselves?",
+      "options": [
+        "Children’s assent is always required and cannot be waived under any circumstance.",
+        "Consent from legal guardians is sufficient, and a child’s dissent must be respected regardless of benefits.",
+        "Federal regulations permit waiving a child’s assent if the research offers direct health benefits unavailable outside the study.",
+        "No consent or assent is needed for children because they have limited capacity to understand research risks."
+      ],
+      "answer": "Federal regulations permit waiving a child’s assent if the research offers direct health benefits unavailable outside the study.",
+      "explanation": "U.S. federal regulations allow waiving assent when a child lacks capacity and the research provides benefits not otherwise obtainable, superseding dissent in these cases.",
+      "kn": "KN69",
+      "kn_explanation": "This question assesses knowledge of ethical issues involving vulnerable populations in research, especially consent/assent requirements (KN69).",
+      "difficulty": "hard",
+      "quality_comment": "The question involves nuanced regulatory knowledge and has distractors reflecting common misunderstandings, making it appropriate for advanced ethical reasoning."
+    },
+    {
+      "stem": "According to the Ethics Code, what must psychologists do when they discover significant errors in their published research data?",
+      "options": [
+        "Ignore the errors if they are unlikely to affect interpretations.",
+        "Retract the entire publication immediately without notifying the journal.",
+        "Take reasonable steps to correct errors via published corrections, retractions, or errata.",
+        "Privately inform colleagues but not make public corrections."
+      ],
+      "answer": "Take reasonable steps to correct errors via published corrections, retractions, or errata.",
+      "explanation": "Standard 8.10(b) requires psychologists to responsibly correct significant published errors to maintain scientific accuracy.",
+      "kn": "KN69",
+      "kn_explanation": "This question targets ethical responsibilities related to reporting research results and maintaining the integrity of the scientific record (KN69).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible but incorrect, and the stem clearly tests knowledge of ethical standards for handling errors, making this a well-constructed item."
+    },
+    {
+      "stem": "What distinguishes duplicate publication from piecemeal publication according to APA guidelines?",
+      "options": [
+        "Duplicate publication involves splitting data into multiple works; piecemeal involves publishing identical data twice.",
+        "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study’s findings into multiple publications.",
+        "Both terms describe publishing the same manuscript simultaneously in multiple journals.",
+        "Piecemeal publication always requires retraction, whereas duplicate publication does not."
+      ],
+      "answer": "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study’s findings into multiple publications.",
+      "explanation": "Duplicate publication refers to republishing identical data; piecemeal publication is fragmenting data into multiple papers, potentially misrepresenting original research volume.",
+      "kn": "KN69",
+      "kn_explanation": "The question covers ethical issues related to research publication practices, including plagiarism and integrity (KN69).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates similar ethical concepts, with distractors reflecting common confusions, making it useful for precise knowledge assessment."
+    },
+    {
+      "stem": "Which of the following best describes psychologists’ obligations regarding sharing research data for verification after publication, per Standard 8.14?",
+      "options": [
+        "Psychologists may refuse to share data if participants’ confidentiality might be moderately affected.",
+        "Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality.",
+        "Psychologists should destroy data immediately after publication to protect privacy.",
+        "Data sharing is optional and only encouraged for studies involving non-human subjects."
+      ],
+      "answer": "Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality.",
+      "explanation": "Standard 8.14 mandates data sharing for verification purposes after publication, provided confidentiality is maintained.",
+      "kn": "KN69",
+      "kn_explanation": "This item evaluates ethical responsibilities for transparency and verification in research, an important ethical research issue (KN69).",
+      "difficulty": "medium",
+      "quality_comment": "The options are balanced in detail and highlight critical concepts, making the question effective for testing understanding of post-publication data sharing ethics."
+    },
+    {
+      "stem": "According to Standard 8.15, what is a key ethical obligation of psychologists who act as reviewers for research manuscripts or grant proposals?",
+      "options": [
+        "Sharing manuscripts with colleagues freely to gain feedback without permission.",
+        "Using proprietary ideas from manuscripts in their own work before publication.",
+        "Treating submitted materials as confidential and not disclosing content without permission.",
+        "Citing unpublished manuscripts in their publications to credit authors."
+      ],
+      "answer": "Treating submitted materials as confidential and not disclosing content without permission.",
+      "explanation": "Standard 8.15 requires reviewers to maintain confidentiality and respect intellectual property rights of authors.",
+      "kn": "KN69",
+      "kn_explanation": "This question examines ethical conduct in peer review, an important professional responsibility covered under research ethics (KN69).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward, with clear and plausible distractors, suitable for testing foundational ethical knowledge about peer review."
+    },
+    {
+      "stem": "Under which conditions may psychologists dispense with obtaining informed consent for research participation, per Standard 8.05?",
+      "options": [
+        "When the study involves experimental treatments or high risk of distress.",
+        "If the research involves anonymous questionnaires and presents no risk or legal liability.",
+        "Whenever the research is conducted in educational settings regardless of procedures involved.",
+        "If participants have previously given consent for any research participation."
+      ],
+      "answer": "If the research involves anonymous questionnaires and presents no risk or legal liability.",
+      "explanation": "Standard 8.05 permits waiving consent for low-risk research like anonymous surveys when confidentiality is maintained and there is no harm.",
+      "kn": "KN69",
+      "kn_explanation": "This item tests knowledge about ethical exceptions to informed consent requirements in minimal-risk research, a core research ethics issue (KN69).",
+      "difficulty": "medium",
+      "quality_comment": "The item has plausible distractors and a clear stem, effectively assessing understanding of informed consent waivers."
+    },
+    {
+      "stem": "What ethical guidelines should a psychologist follow when requiring students to participate in personal psychotherapy as part of their training program?",
+      "options": [
+        "Require therapy only if the therapist is a faculty member involved in evaluation.",
+        "Allow students no choice in selecting therapists to ensure uniformity.",
+        "Justify the requirement by training objectives, describe it clearly, avoid multiple relationships, and provide affordable options.",
+        "Keep therapy requirements undisclosed to avoid influencing student applications."
+      ],
+      "answer": "Justify the requirement by training objectives, describe it clearly, avoid multiple relationships, and provide affordable options.",
+      "explanation": "Fisher's guidelines emphasize that mandatory personal therapy must be justified, openly described, avoid dual relationships, and be affordable to meet ethical standards.",
+      "kn": "KN61",
+      "kn_explanation": "This question examines ethical considerations in training and supervision practices, relevant to ethical standards for education (KN61).",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly targets ethical training standards, and distractors include common missteps, making it effective for knowledge assessment."
+    }
+  ]
+}

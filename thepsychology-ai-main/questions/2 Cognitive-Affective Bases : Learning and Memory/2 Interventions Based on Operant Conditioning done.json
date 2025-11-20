@@ -1,0 +1,302 @@
+[
+  {
+    "id": "ioc_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the primary purpose of a functional behavioral assessment (FBA)?",
+    "options": {
+      "A": "To measure intelligence and cognitive abilities",
+      "B": "To identify the function of a behavior and guide intervention selection",
+      "C": "To diagnose mental health disorders",
+      "D": "To predict future problem behaviors"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "FBA consists of collecting information about antecedents and consequences to develop hypotheses about a behavior's function and select appropriate interventions."
+  },
+  {
+    "id": "ioc_002",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is shaping in operant conditioning interventions?",
+    "options": {
+      "A": "Teaching complex behaviors through task analysis",
+      "B": "Reinforcing successive approximations to desired behavior",
+      "C": "Removing reinforcement from undesirable behaviors",
+      "D": "Using high-frequency behaviors to reinforce low-frequency behaviors"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Shaping involves reinforcing successive approximations to the desired behavior, used by Lovaas to teach imitative speech."
+  },
+  {
+    "id": "ioc_003",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does forward chaining differ from backward chaining?",
+    "options": {
+      "A": "Forward is faster; backward is slower",
+      "B": "Forward begins with first step; backward begins with last step",
+      "C": "Forward uses reinforcement; backward uses punishment",
+      "D": "Forward applies to simple behaviors; backward to complex ones"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Forward chaining teaches the first response first, then progressively teaches subsequent responses; backward chaining begins with the last response and works backward."
+  },
+  {
+    "id": "ioc_004",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is the key difference between shaping and chaining?",
+    "options": {
+      "A": "Shaping focuses on the final behavior only; chaining focuses on the entire sequence",
+      "B": "Shaping uses reinforcement; chaining uses punishment",
+      "C": "Shaping is for simple behaviors; chaining is for complex ones",
+      "D": "Shaping requires task analysis; chaining does not"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN7",
+    "explanation": "With shaping, intermediate behaviors disappear once the final behavior is learned; with chaining, each response in the sequence remains important."
+  },
+  {
+    "id": "ioc_005",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is the Premack principle?",
+    "options": {
+      "A": "High-frequency behaviors reinforce low-frequency behaviors",
+      "B": "Low-frequency behaviors reinforce high-frequency behaviors",
+      "C": "Preferred behaviors must be taught first",
+      "D": "Undesired behaviors strengthen over time"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN7",
+    "explanation": "The Premack principle states that a high-frequency or preferred behavior can be used as reinforcement for a low-frequency behavior."
+  },
+  {
+    "id": "ioc_006",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What are the two components of overcorrection?",
+    "options": {
+      "A": "Reinforcement and extinction",
+      "B": "Restitution and positive practice",
+      "C": "Response cost and time out",
+      "D": "Instruction and guidance"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Overcorrection consists of restitution (correcting the consequences of behavior) and positive practice (practicing appropriate alternative behaviors)."
+  },
+  {
+    "id": "ioc_007",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What type of punishment is overcorrection classified as?",
+    "options": {
+      "A": "Negative punishment (stimulus removal)",
+      "B": "Positive punishment (stimulus application)",
+      "C": "Secondary punishment (learned)",
+      "D": "Natural punishment (consequence-based)"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Overcorrection is classified as positive punishment because it involves applying a penalty after an undesirable behavior."
+  },
+  {
+    "id": "ioc_008",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is response cost?",
+    "options": {
+      "A": "Increased cost of engaging in desired behavior",
+      "B": "Removing a reinforcer after a behavior to decrease it",
+      "C": "The expense of implementing a behavior intervention",
+      "D": "Paying a fee to access reinforcing activities"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Response cost is a form of negative punishment that involves removing a specific reinforcer temporarily or permanently after a behavior."
+  },
+  {
+    "id": "ioc_009",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "How does time out differ from response cost?",
+    "options": {
+      "A": "Time out removes all reinforcement; response cost removes specific reinforcers",
+      "B": "Time out is positive punishment; response cost is negative punishment",
+      "C": "Time out is temporary; response cost is permanent",
+      "D": "Time out uses isolation; response cost uses penalties"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN7",
+    "explanation": "Time out removes all sources of reinforcement, while response cost removes a specific reinforcer after the behavior occurs."
+  },
+  {
+    "id": "ioc_010",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What factors enhance the effectiveness of time out?",
+    "options": {
+      "A": "Lengthy duration and delayed implementation",
+      "B": "Prior warning, immediate application, consistency, and combined positive reinforcement",
+      "C": "Isolation from all social contact indefinitely",
+      "D": "Use of harsh verbal criticism during time out"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Effective time out should be brief (1-10 minutes), immediately applied, consistently applied, and combined with reinforcement for appropriate behaviors."
+  },
+  {
+    "id": "ioc_011",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What is operant extinction?",
+    "options": {
+      "A": "Applying an aversive consequence after a behavior",
+      "B": "Withholding reinforcement from a previously reinforced behavior",
+      "C": "Increasing the intensity of a behavior before eliminating it",
+      "D": "Preventing access to situations where behavior occurs"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Operant extinction involves withholding reinforcement from a behavior that has been previously reinforced to decrease that behavior."
+  },
+  {
+    "id": "ioc_012",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is differential reinforcement of incompatible behavior (DRI)?",
+    "options": {
+      "A": "Reinforcing any behavior other than the target behavior",
+      "B": "Reinforcing a behavior physically impossible while engaging in target behavior",
+      "C": "Reinforcing the target behavior less frequently",
+      "D": "Removing reinforcement from incompatible alternative behaviors"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "DRI involves reinforcing a desirable behavior that is physically incompatible with the undesirable target behavior."
+  },
+  {
+    "id": "ioc_013",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What distinguishes differential reinforcement of alternative behavior (DRA) from DRI?",
+    "options": {
+      "A": "DRA reinforces any other behavior; DRI requires incompatible behavior",
+      "B": "DRA is faster; DRI is slower",
+      "C": "DRA uses punishment; DRI uses reinforcement",
+      "D": "DRA addresses skill deficits; DRI addresses excess behaviors"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN7",
+    "explanation": "DRA reinforces alternative behaviors that are not necessarily incompatible; DRI specifically reinforces behaviors that are incompatible with the target."
+  },
+  {
+    "id": "ioc_014",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What is differential reinforcement of other behavior (DRO)?",
+    "options": {
+      "A": "Reinforcing specific alternative behaviors instead of the target",
+      "B": "Reinforcing the person for any behavior except the target behavior",
+      "C": "Reinforcing the target behavior at a lower rate",
+      "D": "Reinforcing behaviors that prevent the target behavior"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "DRO involves reinforcing any behavior other than the target undesirable behavior, without specifying what the alternative behavior should be."
+  },
+  {
+    "id": "ioc_015",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How does differential reinforcement of low rates of behavior (DRL) differ from other differential reinforcement procedures?",
+    "options": {
+      "A": "It reinforces a desirable alternative behavior instead of target behavior",
+      "B": "It reinforces the target behavior when occurring at a low rate",
+      "C": "It requires complete elimination of the target behavior",
+      "D": "It uses punishment instead of reinforcement"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "DRL reinforces the individual for engaging in the target behavior at or below a specified low rate, rather than eliminating it entirely."
+  },
+  {
+    "id": "ioc_016",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What does functional behavioral assessment identify?",
+    "options": {
+      "A": "The severity of behavioral problems",
+      "B": "Antecedents and consequences maintaining a behavior",
+      "C": "Whether a behavior is biological or environmental in origin",
+      "D": "The person's mental health diagnosis"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "FBA collects information about antecedents and consequences maintaining a behavior to develop hypotheses about its function."
+  },
+  {
+    "id": "ioc_017",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "When using positive practice in overcorrection, what does the individual do?",
+    "options": {
+      "A": "Corrects the damage caused by the behavior",
+      "B": "Practices appropriate alternative behaviors",
+      "C": "Receives verbal praise for compliance",
+      "D": "Spends time away from reinforcing activities"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Positive practice in overcorrection involves practicing alternative appropriate behaviors similar to what should have been done."
+  },
+  {
+    "id": "ioc_018",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "Why should extinction be combined with reinforcement for appropriate behaviors?",
+    "options": {
+      "A": "To prevent the extinction burst from occurring",
+      "B": "To teach replacement behaviors and maintain behavior change",
+      "C": "To ensure the person doesn't develop new problem behaviors",
+      "D": "To meet ethical requirements in behavior interventions"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Combining extinction with reinforcement for appropriate behaviors helps teach effective replacements and maintains long-term behavior change."
+  },
+  {
+    "id": "ioc_019",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What must happen for differential reinforcement to be effective?",
+    "options": {
+      "A": "The target behavior must be completely eliminated immediately",
+      "B": "The alternative behavior must be reinforced while target behavior is extinguished",
+      "C": "The person must understand the contingencies beforehand",
+      "D": "Punishment must be used simultaneously with reinforcement"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "Differential reinforcement combines extinction of the target behavior with positive reinforcement of alternative or incompatible behaviors."
+  },
+  {
+    "id": "ioc_020",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How do functional behavioral assessments guide intervention selection in operant conditioning?",
+    "options": {
+      "A": "By identifying which interventions are easiest to implement",
+      "B": "By determining the function of behavior to select function-based interventions",
+      "C": "By predicting how quickly the behavior will improve",
+      "D": "By identifying which reinforcers are most powerful"
+    },
+    "correct_answer": "B",
+    "kn_id": "KN7",
+    "explanation": "FBA identifies what maintains the behavior, allowing selection of function-based interventions targeting those specific antecedents and consequences."
+  }
+]

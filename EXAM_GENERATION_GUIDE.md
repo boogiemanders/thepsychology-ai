@@ -69,8 +69,10 @@ Your generation of this exam must follow these rules precisely:
      * "An organizational psychologist is hired by a company to determine if the performance of many of its recently hired employees can be improved by providing them with training. To do so, the psychologist will conduct a: A. performance appraisal. B. needs analysis. C. task analysis D. job evaluation."
      * "A psychologist developed a program for first-time parents that addresses methods of dealing with parenting stress and lifestyle changes and is open to all expectant parents in the community. This is an example of which of the following? A. primary prevention B. secondary prevention C. tertiary prevention D. quaternary prevention"
    - Stems: Concise and direct (1-2 sentences), direct
-   - Choices: Brief (single terms or short phrases)
+   - Choices: Brief (single terms or short phrases) and comparable in length so the correct answer is not noticeably longer than the distractors
    - No "All of the above" or "None of the above"
+   - Keep each answer choice around the same length (max 7 character difference)
+   - Make sure the correct answer is not always the longest choice. 
 
 3. Question Distribution
    - 60% Standard questions: Core knowledge from eppp-reference

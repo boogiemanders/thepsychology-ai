@@ -1,0 +1,139 @@
+{
+  "questions": [
+    {
+      "stem": "According to Taylor’s Scientific Management, which of the following is NOT a key principle for maximizing organizational efficiency?",
+      "options": [
+        "Using scientific methods to identify the best way to perform a job",
+        "Selecting and training workers to match skill requirements",
+        "Implementing worker-led planning and organizing of tasks",
+        "Providing financial incentives linked to productivity"
+      ],
+      "answer": "Implementing worker-led planning and organizing of tasks",
+      "explanation": "Taylor’s Scientific Management advocates for an equal division of labor where managers plan and organize work while workers implement plans, not for worker-led planning.",
+      "kn": "KN16",
+      "kn_explanation": "This question relates to understanding organizational and group processes, specifically management theories affecting work structure and productivity, which falls under social and cultural bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Options are balanced in length and content; the distractor addresses a plausible but incorrect interpretation of the theory, requiring test-takers to discriminate between management roles."
+    },
+    {
+      "stem": "Which feature is characteristic of Weber’s concept of bureaucracy in organizational theory?",
+      "options": [
+        "Decision-making based on informal social norms",
+        "Separation of ownership and management responsibilities",
+        "Laissez-faire leadership style with minimal supervision",
+        "Flexible, undocumented procedures for adapting to change"
+      ],
+      "answer": "Separation of ownership and management responsibilities",
+      "explanation": "Weber’s bureaucracy emphasizes formal rules, hierarchical authority, and separation between ownership and management to ensure order and efficiency.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests knowledge of organizational structure and formal group processes consistent with social and cultural bases of behavior.",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and plausible distractors; options test recognition of formal versus informal organizational features."
+    },
+    {
+      "stem": "The Hawthorne effect, as discovered in Mayo’s Human Relations research, refers to which phenomenon?",
+      "options": [
+        "Workers increase productivity in response to physical work condition improvements",
+        "Increased productivity resulting from attention given to workers during research",
+        "Decline in productivity due to worker dissatisfaction with management",
+        "Workers conforming to formal rules and procedures regardless of motivation"
+      ],
+      "answer": "Increased productivity resulting from attention given to workers during research",
+      "explanation": "Mayo found that productivity increased regardless of physical changes, due to the psychological effect of being observed and receiving attention.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses the impact of social factors and group dynamics on behavior and motivation, relevant to social and cultural bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors relate to reasonable alternatives but only one fits the classic definition of the Hawthorne effect, aiding discrimination."
+    },
+    {
+      "stem": "According to McGregor’s Theory X, supervisors typically believe that workers:",
+      "options": [
+        "Are self-directed and motivated to take responsibility",
+        "Dislike work and require strict control and direction",
+        "Seek out opportunities for personal and organizational growth",
+        "Cooperate spontaneously with management goals"
+      ],
+      "answer": "Dislike work and require strict control and direction",
+      "explanation": "Theory X assumes workers are inherently lazy, dislike responsibility, and need authoritarian supervision to meet goals.",
+      "kn": "KN16",
+      "kn_explanation": "This question examines leadership theories related to social interactions and beliefs affecting workplace behavior within group and systems processes.",
+      "difficulty": "easy",
+      "quality_comment": "Options present clear contrasts between Theory X and Theory Y assumptions, with straightforward wording to assess knowledge efficiently."
+    },
+    {
+      "stem": "Which principle from Katz and Kahn’s Open-System Theory states that an organization can reach the same goal through multiple different methods?",
+      "options": [
+        "Homeostasis principle",
+        "Differential reinforcement principle",
+        "Principle of equifinality",
+        "Principle of multifinality"
+      ],
+      "answer": "Principle of equifinality",
+      "explanation": "Equifinality means a system can achieve the same outcome by various means, a central concept in open-systems theory.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests understanding of system theory concepts applied to organizational processes under group and systems processes.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible-sounding but incorrect terms, requiring specific knowledge of system principles."
+    },
+    {
+      "stem": "In Katz and Kahn’s Open-System Theory, what term describes when the same initial conditions lead to different outcomes?",
+      "options": [
+        "Entropy",
+        "Multifinality",
+        "Equifinality",
+        "Homeostasis"
+      ],
+      "answer": "Multifinality",
+      "explanation": "Multifinality refers to a system producing varied outcomes from identical starting points.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on core organizational systems theory concepts related to variability in outcomes, which is relevant to social and cultural bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The similar sounding options test detailed comprehension of key system concepts, appropriate for graduate-level exam preparation."
+    },
+    {
+      "stem": "Which cycle correctly represents the input-throughput-output model in Katz and Kahn’s Open-System Theory of organizations?",
+      "options": [
+        "Organizations produce outputs, then process them through inputs, followed by throughput transformations",
+        "Organizations take in resources (inputs), transform them (throughputs), and release products or information (outputs)",
+        "Organizations output products which serve as inputs for other systems without transformation",
+        "Throughput involves external environmental feedback which is released as inputs after transformation"
+      ],
+      "answer": "Organizations take in resources (inputs), transform them (throughputs), and release products or information (outputs)",
+      "explanation": "In an open system, inputs such as materials or information enter the organization, are processed internally, and outputs are delivered externally.",
+      "kn": "KN16",
+      "kn_explanation": "This question involves comprehension of organizational processes consistent with group and systems processes within social and cultural bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Clear and concise stem and distractors test the candidate’s ability to recall and apply the system input-output model accurately."
+    },
+    {
+      "stem": "McGregor’s Theory Y supervisors believe that subordinates:",
+      "options": [
+        "Distrust authority and require constant supervision",
+        "Avoid responsibility and prefer to be directed",
+        "Are self-motivated, enjoy work, and seek responsibility",
+        "Have low potential for creativity and avoid work challenges"
+      ],
+      "answer": "Are self-motivated, enjoy work, and seek responsibility",
+      "explanation": "Theory Y posits that workers are internally motivated and enjoy meaningful work, which produces the best organizational outcomes.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses motivational and leadership beliefs affecting management styles within organizational psychology, part of social and cultural bases of behavior.",
+      "difficulty": "easy",
+      "quality_comment": "The options clearly contrast Theory X and Theory Y assumptions, allowing a straightforward assessment of knowledge with plausible distractors."
+    },
+    {
+      "stem": "A key finding from Mayo’s research in the Hawthorne studies was that worker productivity is most strongly influenced by:",
+      "options": [
+        "Physical conditions of the workplace such as illumination and noise level",
+        "Financial incentives tied to output and efficiency",
+        "Social factors such as group norms and attention from supervisors",
+        "The strict enforcement of formal organizational rules"
+      ],
+      "answer": "Social factors such as group norms and attention from supervisors",
+      "explanation": "Mayo found that productivity increased because workers felt observed and valued, and informal social norms influenced work behavior more than physical conditions.",
+      "kn": "KN16",
+      "kn_explanation": "This question highlights the role of social interaction and group processes within organizational settings, relevant to social and cultural bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common assumptions about productivity, making the correct social factor answer stand out meaningfully to informed test-takers."
+    }
+  ]
+}

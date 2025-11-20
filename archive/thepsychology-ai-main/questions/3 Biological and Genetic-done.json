@@ -1,0 +1,302 @@
+[
+  {
+    "id": "bg_001",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What are the three main mechanisms of inheritance?",
+    "options": {
+      "A": "Single gene-pair, sex-linked, polygenic",
+      "B": "Dominant, recessive, codominant",
+      "C": "Maternal, paternal, epigenetic",
+      "D": "Nuclear, mitochondrial, chromosomal"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "The three main mechanisms of inheritance are single gene-pair inheritance, sex-linked inheritance (usually on X chromosome), and polygenic inheritance (influenced by multiple genes)."
+  },
+  {
+    "id": "bg_002",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What does a heritability estimate of .80 for height indicate?",
+    "options": {
+      "A": "80% of variability is due to genetic factors",
+      "B": "80% of height is determined by genes",
+      "C": "80% of individuals inherit height from parents",
+      "D": "80% of height develops before adulthood"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "A heritability estimate of .80 means that 80% of variability in height in the population is attributable to genetic factors, while 20% is due to environmental factors."
+  },
+  {
+    "id": "bg_003",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How does SES affect intelligence heritability estimates in young children?",
+    "options": {
+      "A": "Low-SES: .10; High-SES: .70",
+      "B": "Low-SES: .70; High-SES: .10",
+      "C": "Low-SES: .50; High-SES: .50",
+      "D": "Low-SES: .30; High-SES: .90"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Heritability estimates for intelligence in young children are about .10 for low-SES families and .70 for high-SES families, showing that environment plays a larger role in low-SES contexts."
+  },
+  {
+    "id": "bg_004",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What distinguishes a critical period from a sensitive period?",
+    "options": {
+      "A": "Critical: necessary; Sensitive: optimal but not necessary",
+      "B": "Critical: optimal; Sensitive: necessary",
+      "C": "Critical: longer duration; Sensitive: shorter duration",
+      "D": "Critical: for humans; Sensitive: for animals"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "A critical period is when exposure to certain environmental events is necessary for development. A sensitive period is usually longer and when it's optimal but not necessary for certain events to occur."
+  },
+  {
+    "id": "bg_005",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "In Bronfenbrenner's ecological theory, what is the microsystem?",
+    "options": {
+      "A": "The child's immediate environment and relationships",
+      "B": "Interactions between microsystem elements",
+      "C": "Elements affecting the immediate environment",
+      "D": "The social and cultural environment"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "The microsystem is the child's immediate environment and includes relationships with parents, siblings, friends, and others at home, school, and church."
+  },
+  {
+    "id": "bg_006",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What does the chronosystem in Bronfenbrenner's theory consist of?",
+    "options": {
+      "A": "Environmental events over the lifespan",
+      "B": "Cultural practices and ideologies",
+      "C": "Immediate family relationships",
+      "D": "Community health services"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "The chronosystem consists of environmental events that occur over a person's lifespan and impact development, such as parental divorce, birth of a sibling, and natural disasters."
+  },
+  {
+    "id": "bg_007",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "Fetal programming theory proposes that what can have permanent effects?",
+    "options": {
+      "A": "Environmental events in utero during sensitive windows",
+      "B": "Genetic mutations during cell division",
+      "C": "Maternal stress during the first trimester only",
+      "D": "Paternal health conditions before conception"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Fetal programming (Barker's fetal origins hypothesis) theorizes that environmental events in utero during sensitive windows of development can have permanent and long-lasting effects."
+  },
+  {
+    "id": "bg_008",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What mechanism may explain the link between prenatal maternal stress and offspring's health risks?",
+    "options": {
+      "A": "Prenatal programming of the HPA axis",
+      "B": "Disruption of DNA methylation patterns",
+      "C": "Altered gene expression in the cerebellum",
+      "D": "Permanent changes to mitochondrial DNA"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Evidence suggests prenatal programming of the hypothalamic-pituitary-adrenal (HPA) axis may explain the link between maternal stress in utero and increased risk for cardiovascular, metabolic, and mental disorders."
+  },
+  {
+    "id": "bg_009",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What is the reported heritability estimate range for personality?",
+    "options": {
+      "A": "About .40 to .50",
+      "B": "About .10 to .20",
+      "C": "About .60 to .80",
+      "D": "About .20 to .30"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Reported heritability estimates for personality range from about .40 to .50, indicating that both genetics and environmental factors contribute to personality."
+  },
+  {
+    "id": "bg_010",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "How do shared versus non-shared environmental factors affect personality across the lifespan?",
+    "options": {
+      "A": "Shared: little/no influence; Non-shared: substantial and increases",
+      "B": "Shared: substantial influence; Non-shared: minimal influence",
+      "C": "Shared: increases with age; Non-shared: decreases with age",
+      "D": "Shared: early influence only; Non-shared: no influence"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Studies have found shared environmental factors have little or no influence on personality throughout the lifespan, while non-shared factors have substantial influence that increases with age."
+  },
+  {
+    "id": "bg_011",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "How do intelligence heritability estimates change across the lifespan?",
+    "options": {
+      "A": "Increase from .20 in infancy to .60-.80 in adulthood",
+      "B": "Decrease from .80 in infancy to .20 in adulthood",
+      "C": "Remain constant at .50 throughout",
+      "D": "Fluctuate randomly with no pattern"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Heritability estimates are about .20 for infants, .40 for children and adolescents, .60 to .80 for early and middle adulthood, and .60 for adults over 80."
+  },
+  {
+    "id": "bg_012",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is active genotype-environment correlation (niche-picking)?",
+    "options": {
+      "A": "Actively seeking experiences fitting genetic predispositions",
+      "B": "Passively inheriting parents' environmental preferences",
+      "C": "Evoking reactions that reinforce genetic traits",
+      "D": "Randomly selecting environments without genetic influence"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Active genotype-environment correlation (niche-picking) occurs when individuals actively seek experiences that fit their genetic predispositions, which may explain increasing genetic influence on intelligence over time."
+  },
+  {
+    "id": "bg_013",
+    "difficulty": "easy",
+    "type": "basic",
+    "question": "What correlation is highest for IQ scores according to Bouchard and McGue?",
+    "options": {
+      "A": "Identical twins reared together (.85)",
+      "B": "Identical twins reared apart (.67)",
+      "C": "Fraternal twins reared together (.58)",
+      "D": "Biological siblings reared together (.45)"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "The highest median correlation for IQ scores is .85 for identical twins reared together, followed by .67 for identical twins reared apart."
+  },
+  {
+    "id": "bg_014",
+    "difficulty": "medium",
+    "type": "difficult",
+    "question": "What assumption underlies twin studies in behavioral genetics?",
+    "options": {
+      "A": "Equal environment assumption: both twin types have similar environments",
+      "B": "Different environment assumption: monozygotic twins differ more",
+      "C": "Genetic similarity assumption: all twins are identical",
+      "D": "Random assignment assumption: twins are randomly placed"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Twin studies are based on the equal environment assumption that monozygotic and dizygotic twin pairs have similar environments, so differences in correlations are due to genetic differences."
+  },
+  {
+    "id": "bg_015",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "Why might twin studies overestimate the influence of genetics?",
+    "options": {
+      "A": "Monozygotic twins' environments are more similar than dizygotic",
+      "B": "Dizygotic twins share more genes than previously thought",
+      "C": "Monozygotic twins have less genetic similarity",
+      "D": "Environmental factors are impossible to measure"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Research has shown that monozygotic twins' environments are usually more similar than dizygotic twins' environments (e.g., treated more similarly by parents), which may cause twin studies to overestimate genetic influence."
+  },
+  {
+    "id": "bg_016",
+    "difficulty": "medium",
+    "type": "distinction",
+    "question": "What distinguishes passive from evocative genotype-environment correlation?",
+    "options": {
+      "A": "Passive: parents provide environment; Evocative: child evokes reactions",
+      "B": "Passive: child seeks environment; Evocative: parents provide environment",
+      "C": "Passive: occurs in adulthood; Evocative: occurs in infancy",
+      "D": "Passive: rare occurrence; Evocative: common occurrence"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Passive correlation occurs when children inherit genes and parents provide supporting environments. Evocative correlation occurs when a child's genetic make-up evokes certain reactions from others that reinforce the child's traits."
+  },
+  {
+    "id": "bg_017",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "According to Gottesman, what does reaction range determine?",
+    "options": {
+      "A": "How people respond to environmental influences",
+      "B": "The speed of developmental milestones",
+      "C": "The severity of genetic disorders",
+      "D": "The accuracy of heritability estimates"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Gottesman's reaction range theory proposes that there's a reaction range for certain traits that determines how people respond to environmental influences, with genetic make-up determining whether the range is broad or narrow."
+  },
+  {
+    "id": "bg_018",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What does dynamic systems theory propose about motor milestone development?",
+    "options": {
+      "A": "Simple repetitive behaviors precede and integrate into complex behaviors",
+      "B": "Milestones emerge suddenly from brain maturation",
+      "C": "All infants develop milestones in identical ways",
+      "D": "Environmental factors play no role in development"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Thelen's research concluded that simple repetitive behaviors (rhythmic stereotypies) precede voluntary complex behaviors. For example, kicking and rocking precede and integrate into crawling when supported by the situation."
+  },
+  {
+    "id": "bg_019",
+    "difficulty": "medium",
+    "type": "basic",
+    "question": "What is epigenetics the study of?",
+    "options": {
+      "A": "Changes from gene expression modification, not DNA alteration",
+      "B": "Changes from DNA sequence mutations only",
+      "C": "Changes from chromosomal rearrangements",
+      "D": "Changes from mitochondrial DNA inheritance"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "Epigenetics is the study of changes in organisms brought about by modification of gene expression rather than by alteration of the genetic code in the form of DNA."
+  },
+  {
+    "id": "bg_020",
+    "difficulty": "hard",
+    "type": "difficult",
+    "question": "What is DNA methylation in epigenetic mechanisms?",
+    "options": {
+      "A": "Adding a chemical cap to prevent gene expression",
+      "B": "Removing methyl groups to activate genes",
+      "C": "Altering the DNA sequence permanently",
+      "D": "Repairing damaged DNA molecules"
+    },
+    "correct_answer": "A",
+    "kn_id": "KN14",
+    "explanation": "DNA methylation involves adding a methyl group or chemical cap to part of the DNA molecule, which prevents certain genes from being expressed without changing the DNA sequence."
+  }
+]

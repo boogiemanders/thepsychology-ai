@@ -1,0 +1,274 @@
+{
+  "questions": [
+    {
+      "stem": "According to Caplan's model of prevention, which type of prevention aims to reduce the occurrence of new cases of a disorder by targeting entire populations or groups regardless of risk status?",
+      "options": [
+        "Primary prevention",
+        "Secondary prevention",
+        "Tertiary prevention",
+        "Selective prevention"
+      ],
+      "answer": "Primary prevention",
+      "explanation": "Primary prevention aims to prevent new cases of a disorder by focusing on entire populations or groups, not just those at elevated risk.",
+      "kn": "KN45",
+      "kn_explanation": "This question assesses knowledge of prevention models relevant to intervention and prevention methods (KN45).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and the distractors are plausible but conceptually distinct, making this a solid question for assessing key prevention concepts."
+    },
+    {
+      "stem": "Which of the following describes client-centered case consultation as defined by Caplan?",
+      "options": [
+        "Improving program administrators’ ability to clarify and resolve program issues",
+        "Enhancing the consultee’s skills to better work with present and future clients",
+        "Focusing on a specific client with treatment difficulties to guide the consultee's plan",
+        "Improving professional functioning of administrators for future program evaluation"
+      ],
+      "answer": "Focusing on a specific client with treatment difficulties to guide the consultee's plan",
+      "explanation": "Client-centered case consultation focuses on assisting the consultee with a particular client who is challenging treatment or services.",
+      "kn": "KN47",
+      "kn_explanation": "Focuses on models and processes of consultation, specifically mental health consultation types (KN47).",
+      "difficulty": "medium",
+      "quality_comment": "Options are carefully crafted to represent different consultation types, requiring nuanced understanding of Caplan's consultation model."
+    },
+    {
+      "stem": "Which psychotherapy outcome model proposes three distinct phases: remoralization, remediation, and rehabilitation?",
+      "options": [
+        "Dosage (dose-effect) model",
+        "Phase model",
+        "Meta-analytic model",
+        "Common factors model"
+      ],
+      "answer": "Phase model",
+      "explanation": "The phase model conceptualizes psychotherapy as progressing through remoralization, remediation, and rehabilitation phases.",
+      "kn": "KN44",
+      "kn_explanation": "Tests knowledge of psychotherapy outcome research and treatment models (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible psychotherapy concepts, correctly assessing detailed knowledge of outcome models."
+    },
+    {
+      "stem": "In Gordon's model of prevention, what type of prevention targets individuals who have minimal signs or symptoms of a disorder but have not yet received a diagnosis?",
+      "options": [
+        "Universal prevention",
+        "Selective prevention",
+        "Indicated prevention",
+        "Tertiary prevention"
+      ],
+      "answer": "Indicated prevention",
+      "explanation": "Indicated prevention addresses individuals with early or minimal signs of a disorder before diagnosis.",
+      "kn": "KN45",
+      "kn_explanation": "Assesses understanding of prevention approaches, specifically Gordon’s model (KN45).",
+      "difficulty": "easy",
+      "quality_comment": "Clear presentation with distractors varying in prevention type and level of risk, effective for EPPP learners."
+    },
+    {
+      "stem": "Which of the following statements best describes the findings of Smith, Glass, and Miller's meta-analysis on psychotherapy outcomes?",
+      "options": [
+        "Psychotherapy was ineffective compared to no treatment",
+        "Average patient receiving psychotherapy was better off than 80% of untreated patients",
+        "Combined treatments involving medication were superior to psychotherapy alone",
+        "Psychotherapy effects were only evident in inpatient settings"
+      ],
+      "answer": "Average patient receiving psychotherapy was better off than 80% of untreated patients",
+      "explanation": "Their meta-analysis produced a mean effect size of .85, indicating the average treated patient fared better than 80% of untreated controls.",
+      "kn": "KN44",
+      "kn_explanation": "Evaluates knowledge of psychotherapy outcome research and meta-analytic findings (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Stem is straightforward; distractors include common misconceptions that challenge examinees' knowledge of evidence-appraisal."
+    },
+    {
+      "stem": "Routine outcome monitoring (ROM) in clinical practice primarily involves:",
+      "options": [
+        "Therapist-only evaluation of treatment progress at therapy termination",
+        "Collecting client data only at baseline and final sessions",
+        "Regular assessment of client symptoms and feedback to inform collaborative treatment planning",
+        "Use of imaging techniques to assess brain changes across therapy"
+      ],
+      "answer": "Regular assessment of client symptoms and feedback to inform collaborative treatment planning",
+      "explanation": "ROM includes routine symptom measurement before sessions with shared review and collaborative treatment adjustments.",
+      "kn": "KN44",
+      "kn_explanation": "Concerns evidence-based treatment practices and integration of measurement-based care (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Good clarity with distractors that probe common misunderstandings about how ROM is practiced."
+    },
+    {
+      "stem": "Which economic evaluation method compares the costs and benefits of interventions by converting both into monetary terms?",
+      "options": [
+        "Cost-effectiveness analysis",
+        "Cost-utility analysis",
+        "Cost-benefit analysis",
+        "Cost-minimization analysis"
+      ],
+      "answer": "Cost-benefit analysis",
+      "explanation": "Cost-benefit analysis expresses both costs and benefits in dollars to compare interventions directly.",
+      "kn": "KN58",
+      "kn_explanation": "This question addresses economic evaluation methods related to healthcare program decisions (KN58).",
+      "difficulty": "medium",
+      "quality_comment": "Options are related economic terms, requiring precise knowledge of health economics terminology."
+    },
+    {
+      "stem": "Which of the following best describes the social model of disability?",
+      "options": [
+        "Disability results primarily from biological impairments intrinsic to the individual",
+        "Disability is a functional inability to perform work or social roles",
+        "Disability arises from barriers created by societal attitudes and environments",
+        "Disability requires legal proof of impairment to determine benefits"
+      ],
+      "answer": "Disability arises from barriers created by societal attitudes and environments",
+      "explanation": "The social model views disability as stemming from societal barriers rather than intrinsic medical conditions.",
+      "kn": "KN18",
+      "kn_explanation": "Focuses on cultural and social conceptualizations of disability and oppression (KN18).",
+      "difficulty": "medium",
+      "quality_comment": "Options clearly differentiate between models, testing knowledge of disability conceptual frameworks."
+    },
+    {
+      "stem": "Research on client-therapist racial/ethnic matching suggests that:",
+      "options": [
+        "Matching consistently improves therapy outcomes across all racial/ethnic groups",
+        "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+        "Matching is irrelevant once therapist cultural competence is established",
+        "Therapy outcomes improve more when therapists share the same personality traits as clients"
+      ],
+      "answer": "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+      "explanation": "Meta-analysis finds racial/ethnic matching improves clients' perceptions more than actual therapy outcomes.",
+      "kn": "KN18",
+      "kn_explanation": "Pertains to cultural and diversity factors influencing therapy process and outcomes (KN18).",
+      "difficulty": "medium",
+      "quality_comment": "The question incorporates nuanced research findings and distractors address related confounds."
+    },
+    {
+      "stem": "Which of the following is a primary advantage of transdiagnostic treatments compared to diagnosis-specific interventions?",
+      "options": [
+        "They focus exclusively on biological mechanisms of disorders",
+        "They reduce training costs by addressing commonalities across disorders",
+        "They require less therapist involvement than diagnosis-based treatments",
+        "They are limited to treating only anxiety disorders"
+      ],
+      "answer": "They reduce training costs by addressing commonalities across disorders",
+      "explanation": "Transdiagnostic treatments target shared mechanisms, enabling clinicians to treat multiple disorders efficiently.",
+      "kn": "KN44",
+      "kn_explanation": "Tests understanding of evidence-based treatment models in psychotherapy (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect, emphasizing key benefits of transdiagnostic approaches."
+    },
+    {
+      "stem": "Which model of stepped care for depression prioritizes the least restrictive but effective treatments first and systematically monitors treatment response to adjust care?",
+      "options": [
+        "Biomedical model",
+        "Phase model",
+        "Stepped care model",
+        "Consultee-centered consultation model"
+      ],
+      "answer": "Stepped care model",
+      "explanation": "Stepped care aims to provide minimal effective intervention and escalate treatment based on systematic outcome monitoring.",
+      "kn": "KN50",
+      "kn_explanation": "Addresses healthcare systems and models impacting intervention choices integrated with economic allocation (KN50).",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly defines the model, and distractors represent other models for differentiation."
+    },
+    {
+      "stem": "In research assessing telepsychology for anxiety disorders, which statement is best supported?",
+      "options": [
+        "Videoconferencing therapy is generally less effective than in-person therapy",
+        "Videoconferencing therapy shows equivalent improvements and similar dropout rates compared to in-person therapy",
+        "Telepsychology is only effective for individual anxiety disorders, not comorbid conditions",
+        "Therapeutic alliance cannot be established effectively via telepsychology"
+      ],
+      "answer": "Videoconferencing therapy shows equivalent improvements and similar dropout rates compared to in-person therapy",
+      "explanation": "Systematic reviews indicate videoconferencing CBT for anxiety yields comparable effectiveness and dropout rates to in-person therapy.",
+      "kn": "KN49",
+      "kn_explanation": "Concerns telepsychology and technology-assisted psychological services (KN49).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors probe common misconceptions about teletherapy, forcing examinees to recall empirical findings."
+    },
+    {
+      "stem": "Eysenck’s 1952 review concluded that:",
+      "options": [
+        "Psychotherapy was highly effective for neurotic patients compared to no treatment",
+        "Psychotherapy may be ineffective or even detrimental compared to spontaneous remission",
+        "All forms of psychotherapy have equivalent, significant positive outcomes",
+        "Custodial care produced worse outcomes than psychoanalytic therapy"
+      ],
+      "answer": "Psychotherapy may be ineffective or even detrimental compared to spontaneous remission",
+      "explanation": "Eysenck concluded that recovery rates for psychotherapy patients were lower than spontaneous remission rates in untreated patients.",
+      "kn": "KN44",
+      "kn_explanation": "Evaluates understanding of classic psychotherapy outcome research and critique (KN44).",
+      "difficulty": "hard",
+      "quality_comment": "Question addresses a historical, controversial study with plausible distractors, requiring recall of detailed content."
+    },
+    {
+      "stem": "What is the primary focus of treatment fidelity in psychotherapy research and practice?",
+      "options": [
+        "Ensuring therapists deliver treatment protocols consistently and competently",
+        "Matching therapist and client personality traits for optimal outcomes",
+        "Providing feedback to clients about session progress and alliance quality",
+        "Measuring the economic costs and benefits of treatments"
+      ],
+      "answer": "Ensuring therapists deliver treatment protocols consistently and competently",
+      "explanation": "Treatment fidelity ensures that the intervention is implemented as intended to assess true treatment effectiveness.",
+      "kn": "KN44",
+      "kn_explanation": "Focuses on treatment delivery and assessment of intervention quality (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "The stem is clear and straightforward; distractors are related concepts but clearly distinct."
+    },
+    {
+      "stem": "Which of the following best describes the WEIRD sampling bias in psychological research?",
+      "options": [
+        "Overrepresentation of industrialized countries leading to limited generalizability of findings",
+        "Underrepresentation of women in psychological research studies",
+        "Bias that exaggerates gender differences in mental health presentations",
+        "Preference for convenience samples from clinical populations"
+      ],
+      "answer": "Overrepresentation of industrialized countries leading to limited generalizability of findings",
+      "explanation": "WEIRD refers to samples from Western, Educated, Industrialized, Rich, Democratic societies, limiting external validity.",
+      "kn": "KN57",
+      "kn_explanation": "Concerns biases affecting research generalizability and validity (KN57).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible potential biases; the question requires specific knowledge of sampling biases."
+    },
+    {
+      "stem": "Which of the following is an important benefit of interprofessional collaboration (IPC) in primary care settings?",
+      "options": [
+        "Consistently improves quality of life and health behaviors for all patients",
+        "Generally increases patient satisfaction and access to care for older adults",
+        "Requires no special coordination among health providers",
+        "Reduces the need for mental health professionals in primary care"
+      ],
+      "answer": "Generally increases patient satisfaction and access to care for older adults",
+      "explanation": "Research indicates IPC is associated with improved access to care and increased patient satisfaction, especially for older adults.",
+      "kn": "KN50",
+      "kn_explanation": "This question taps into knowledge of health promotion, risk reduction, and collaborative care models in healthcare (KN50).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but incorrect ideas about IPC, requiring examinees to understand nuanced research outcomes."
+    },
+    {
+      "stem": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "options": [
+        "Developmental model",
+        "Integrative model",
+        "Psychodynamic model",
+        "Behavioral model"
+      ],
+      "answer": "Psychodynamic model",
+      "explanation": "The psychodynamic supervision model emphasizes interpersonal dynamics between supervisor and supervisee to enhance clinical skills and outcomes.",
+      "kn": "KN52",
+      "kn_explanation": "Addresses supervision theories and models relevant to clinical psychology practice (KN52).",
+      "difficulty": "medium",
+      "quality_comment": "The options comprise known supervision models, testing candidate recognition of model focus areas appropriately."
+    },
+    {
+      "stem": "Health promotion strategies in psychological interventions primarily aim to:",
+      "options": [
+        "Reduce severity and duration of diagnosed disorders",
+        "Target individuals already receiving treatment",
+        "Enhance resilience and well-being before onset of disorder",
+        "Focus exclusively on pharmacological treatments"
+      ],
+      "answer": "Enhance resilience and well-being before onset of disorder",
+      "explanation": "Health promotion seeks to improve wellness and resilience proactively to prevent disorders from developing.",
+      "kn": "KN51",
+      "kn_explanation": "This item assesses knowledge of health promotion, risk reduction, and wellness concepts in prevention (KN51).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contrast stages of intervention to ensure understanding of health promotion's proactive nature."
+    }
+  ]
+}

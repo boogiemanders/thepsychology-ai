@@ -1,0 +1,229 @@
+{
+  "questions": [
+    {
+      "stem": "According to Lewin's three-step model of planned change, what is the primary focus of the 'unfreezing' stage?",
+      "options": [
+        "Implementing desired changes to establish a new equilibrium",
+        "Stabilizing the organization to prevent regression to previous states",
+        "Identifying and reducing forces maintaining the current status quo",
+        "Evaluating the outcomes of organizational change interventions"
+      ],
+      "answer": "Identifying and reducing forces maintaining the current status quo",
+      "explanation": "'Unfreezing' involves breaking down the existing status quo by reducing forces that maintain it and increasing forces that disrupt it, preparing the organization for change.",
+      "kn": "KN46",
+      "kn_explanation": "This question relates to theories and models of organizational change interventions within systems and organizations, which corresponds to interventions enhancing performance of organizations (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly assesses knowledge of foundational change theory, with plausible distractors that test differentiation of model stages."
+    },
+    {
+      "stem": "During which phase of Cummings and Worley’s general model of planned change does the OD consultant work with organization members to reach an agreement on expectations and develop a contractual arrangement?",
+      "options": [
+        "Diagnosing phase",
+        "Entering and contracting phase",
+        "Planning and implementing phase",
+        "Evaluating and institutionalizing phase"
+      ],
+      "answer": "Entering and contracting phase",
+      "explanation": "The entering and contracting phase includes selecting the OD practitioner, establishing collaborative relationships, understanding problems, and creating a contract specifying roles and expectations.",
+      "kn": "KN46",
+      "kn_explanation": "This question focuses on organizational development consultation models and processes involving collaboration and contracting, fitting within interventions with systems (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are distinct phases of planned change, requiring the test taker to have precise knowledge of the timing and activities for each stage."
+    },
+    {
+      "stem": "Which of the following best describes the role of a process consultant in organizational development?",
+      "options": [
+        "Providing explicit solutions to organizational problems",
+        "Diagnosing and solving problems independently of the organization",
+        "Helping the organization self-diagnose and resolve problems",
+        "Directing the implementation of organizational interventions"
+      ],
+      "answer": "Helping the organization self-diagnose and resolve problems",
+      "explanation": "Process consultation aims to foster organizational self-reliance by assisting members in diagnosing and managing their own issues rather than providing direct solutions.",
+      "kn": "KN46",
+      "kn_explanation": "The question addresses a specific OD method focused on enhancing organizational functioning and self-management, making it relevant to interventions with organizations (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "The options include common misconceptions about consultation, enhancing the discriminative quality of the question."
+    },
+    {
+      "stem": "What is a key characteristic of self-managed work teams (SMWTs)?",
+      "options": [
+        "They are supervised by a designated team leader at all times",
+        "They have responsibility and control over work decisions without a supervisor",
+        "They primarily focus on feedback collection through surveys",
+        "Their leadership structure remains constant regardless of task"
+      ],
+      "answer": "They have responsibility and control over work decisions without a supervisor",
+      "explanation": "SMWTs operate without supervisors and members share responsibility for budgeting, task assignments, training, and appraisal, with leadership roles changing depending on expertise.",
+      "kn": "KN46",
+      "kn_explanation": "This question tests knowledge of team structures and their roles in organizational development and performance, a topic covered under organizational interventions (KN46).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and well-balanced options make this suitable for testing basic knowledge of SMWTs."
+    },
+    {
+      "stem": "Which technostructural intervention involves radically redesigning core business processes to achieve dramatic improvements in efficiency?",
+      "options": [
+        "Job enrichment",
+        "Business process reengineering",
+        "Flextime scheduling",
+        "Self-managed work teams"
+      ],
+      "answer": "Business process reengineering",
+      "explanation": "Business process reengineering (BPR) entails a fundamental rethinking and radical redesign of key organizational processes to generate substantial gains in performance.",
+      "kn": "KN46",
+      "kn_explanation": "This item concerns interventions focused on structural and technological changes in organizations to enhance effectiveness, aligning it with organizational development interventions (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are related OD concepts of similar length and detail, challenging test takers’ knowledge of specific intervention types."
+    },
+    {
+      "stem": "Research examining the compressed workweek has found it to have which of the following effects?",
+      "options": [
+        "A strong positive effect on absenteeism and no effect on job satisfaction",
+        "Strong positive effects on both job satisfaction and productivity, with unclear effects on absenteeism",
+        "No effect on job satisfaction but reduced absenteeism and productivity",
+        "A strong negative effect on job satisfaction and increased absenteeism"
+      ],
+      "answer": "Strong positive effects on both job satisfaction and productivity, with unclear effects on absenteeism",
+      "explanation": "Studies indicate the compressed workweek strongly improves job satisfaction and positively but less strongly affects productivity; its impact on absenteeism is inconclusive.",
+      "kn": "KN46",
+      "kn_explanation": "Knowledge of research-based effects of alternative work schedules on organizational outcomes corresponds to interventions aimed at improving work conditions and employee motivation (KN46).",
+      "difficulty": "hard",
+      "quality_comment": "This question requires recall of nuanced research findings, demanding careful reading of each option’s details."
+    },
+    {
+      "stem": "In Total Quality Management (TQM), which technique involves small groups of employees volunteering to identify quality problems and suggest solutions?",
+      "options": [
+        "Benchmarking",
+        "Quality circles",
+        "Six sigma",
+        "Appreciative inquiry"
+      ],
+      "answer": "Quality circles",
+      "explanation": "Quality circles are employee groups focused on regularly meeting to discuss quality and productivity issues and recommending improvements to management.",
+      "kn": "KN46",
+      "kn_explanation": "Understanding the components and techniques of TQM as part of organizational improvement processes falls within the domain of system-level interventions (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Options are all valid organizational techniques, making this a plausible and fair test of knowledge specificity."
+    },
+    {
+      "stem": "What is the primary purpose of a program logic model in organizational program planning?",
+      "options": [
+        "To identify ethical issues that may arise during program implementation",
+        "To provide a roadmap connecting program resources and activities to intended outcomes",
+        "To evaluate the quality of products and services compared to competitors",
+        "To prescribe exact operational steps for direct supervisor involvement"
+      ],
+      "answer": "To provide a roadmap connecting program resources and activities to intended outcomes",
+      "explanation": "A program logic model visually maps the sequence linking necessary inputs and activities with anticipated outputs and long-term outcomes for program planning and evaluation.",
+      "kn": "KN58",
+      "kn_explanation": "This question is about program evaluation and planning methods, a key aspect of evaluation strategies and techniques (KN58).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible but clearly distinct from the definition, helping assess understanding of program logic models."
+    },
+    {
+      "stem": "Which of the following phases is NOT part of the '4D cycle' in Appreciative Inquiry?",
+      "options": [
+        "Design",
+        "Delivery/Destiny",
+        "Diagnosis",
+        "Discovery"
+      ],
+      "answer": "Diagnosis",
+      "explanation": "The 4D cycle of Appreciative Inquiry includes Discovery, Dream, Design, and Delivery/Destiny; Diagnosis is not part of this model.",
+      "kn": "KN46",
+      "kn_explanation": "The question covers a positive organizational development approach focused on change methodology, fitting under organizational interventions (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Options are similar in wording and related to different phases or approaches, effectively testing recognition of model components."
+    },
+    {
+      "stem": "Which component of a program logic model includes the human, financial, and organizational resources needed to support the program?",
+      "options": [
+        "Outputs",
+        "Activities",
+        "Outcomes",
+        "Inputs"
+      ],
+      "answer": "Inputs",
+      "explanation": "Inputs refer to the resources—such as staff, funding, and data sources—needed to implement a program’s activities successfully.",
+      "kn": "KN58",
+      "kn_explanation": "This question assesses understanding of program evaluation components, specifically resource identification, which is part of evaluation techniques and process analysis (KN58).",
+      "difficulty": "easy",
+      "quality_comment": "Clear definitions make the question straightforward but effective for foundational knowledge assessment."
+    },
+    {
+      "stem": "Which method involves collecting employee feedback via surveys, sharing the summary results with employees, and collaboratively developing an action plan?",
+      "options": [
+        "Process consultation",
+        "Survey feedback",
+        "Total Quality Management",
+        "Business process reengineering"
+      ],
+      "answer": "Survey feedback",
+      "explanation": "Survey feedback collects data on employee attitudes and perceptions, shares results with staff, and facilitates collaborative problem-solving and action planning.",
+      "kn": "KN46",
+      "kn_explanation": "This question focuses on specific OD methods aimed at improving organizational climate and effectiveness, tied to intervention strategies (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "All options are valid OD methods, making the question a fair test differentiating their key characteristics."
+    },
+    {
+      "stem": "In the context of Organizational Development, 'job enrichment' primarily aims to:",
+      "options": [
+        "Increase the number of tasks performed by employees to reduce boredom",
+        "Provide employees with more responsibility and opportunities for advancement",
+        "Shorten work hours while keeping tasks unchanged",
+        "Introduce flexible work timing to improve work-life balance"
+      ],
+      "answer": "Provide employees with more responsibility and opportunities for advancement",
+      "explanation": "Job enrichment redesigns jobs to enhance motivator factors like responsibility, challenge, and advancement, thereby increasing satisfaction and motivation.",
+      "kn": "KN46",
+      "kn_explanation": "This question involves a motivational approach within technostructural interventions aimed at improving job content and employee satisfaction (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent other work redesign strategies but differ distinctly from job enrichment, encouraging nuanced understanding."
+    },
+    {
+      "stem": "Which aspect of organizational change and development is most directly supported by the use of a program logic model?",
+      "options": [
+        "Facilitating top management commitment to quality",
+        "Providing a structured roadmap linking resources and expected benefits",
+        "Increasing employee responsibility in self-managed teams",
+        "Designing flexible work schedules to improve job satisfaction"
+      ],
+      "answer": "Providing a structured roadmap linking resources and expected benefits",
+      "explanation": "Program logic models visually depict how resources, activities, and outputs logically lead to desired outcomes, thereby organizing the process of change implementation and evaluation.",
+      "kn": "KN58",
+      "kn_explanation": "This item targets program logic models as a tool for program planning and evaluation, aligning with evaluation techniques in organizational change (KN58).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes the unique role of logic models, avoiding confusion with other organizational development methods."
+    },
+    {
+      "stem": "In the general model of planned change by Cummings and Worley, which phase primarily focuses on assessing organizational readiness to change and planning interventions?",
+      "options": [
+        "Entering and contracting phase",
+        "Diagnosing phase",
+        "Planning and implementing phase",
+        "Evaluating and institutionalizing phase"
+      ],
+      "answer": "Planning and implementing phase",
+      "explanation": "The planning and implementing phase includes preparing the organization for change, designing interventions, managing transitions, and fostering employee competencies.",
+      "kn": "KN46",
+      "kn_explanation": "This question assesses familiarity with the stages of planned change and the focus on intervention design and readiness, which fits organizational development consultation (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Options correspond to distinct phases of change, requiring detailed knowledge of the model’s stages."
+    },
+    {
+      "stem": "Which of the following best exemplifies an outcome in a program logic model for an employee wellness program?",
+      "options": [
+        "Number of training sessions conducted",
+        "Funding allocated to the program",
+        "Improved employee physical health and lifestyle",
+        "Materials used for the wellness sessions"
+      ],
+      "answer": "Improved employee physical health and lifestyle",
+      "explanation": "Outcomes are the changes or benefits expected from a program’s outputs, such as improvements in health seen after participation in a wellness program.",
+      "kn": "KN58",
+      "kn_explanation": "This question targets understanding of program logic components, specifically distinguishing outcomes from inputs, activities, and outputs (KN58).",
+      "difficulty": "easy",
+      "quality_comment": "The options contrast tangible resources and products with actual benefits, helping test comprehension of evaluation terminology."
+    }
+  ]
+}

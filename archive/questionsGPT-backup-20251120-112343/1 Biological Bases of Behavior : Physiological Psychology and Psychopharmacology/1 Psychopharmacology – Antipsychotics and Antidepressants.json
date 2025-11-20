@@ -1,0 +1,199 @@
+{
+  "questions": [
+    {
+      "stem": "Which side effect is most commonly associated with long-term use of high-potency first-generation antipsychotics and is characterized by involuntary, rhythmic movements of the face and limbs?",
+      "options": [
+        "Neuroleptic malignant syndrome",
+        "Tardive dyskinesia",
+        "Akathisia",
+        "Dystonia"
+      ],
+      "answer": "Tardive dyskinesia",
+      "explanation": "Tardive dyskinesia is a potentially irreversible side effect of long-term treatment with high-potency FGAs, presenting as involuntary, rhythmic movements particularly of the tongue, face, jaw, limbs, and trunk.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses knowledge of drug side effects, mechanisms, and classifications of therapeutic agents, which is covered under KN2.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and targets a key adverse effect relevant for clinicians, with distractors representing other movement-related side effects making the question challenging."
+    },
+    {
+      "stem": "Which of the following antipsychotic drugs is FDA-approved specifically for treatment-resistant schizophrenia and requires regular blood monitoring due to risk of neutropenia?",
+      "options": [
+        "Risperidone",
+        "Haloperidol",
+        "Clozapine",
+        "Olanzapine"
+      ],
+      "answer": "Clozapine",
+      "explanation": "Clozapine is the only antipsychotic approved for treatment-resistant schizophrenia and can cause severe neutropenia and agranulocytosis necessitating routine blood tests.",
+      "kn": "KN2",
+      "kn_explanation": "Understanding specific drug indications, side effects, and monitoring protocols fits within the drug classification and adverse effects knowledge area (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question focuses on a clinically important unique feature of clozapine with options including other well-known antipsychotics, providing good discriminative power."
+    },
+    {
+      "stem": "Third-generation antipsychotics such as aripiprazole differ from second-generation antipsychotics primarily because they:",
+      "options": [
+        "Are pure dopamine D2 antagonists",
+        "Act as partial agonists at dopamine D2 receptors",
+        "Cause more extrapyramidal side effects",
+        "Block norepinephrine reuptake"
+      ],
+      "answer": "Act as partial agonists at dopamine D2 receptors",
+      "explanation": "Third-generation antipsychotics are dopamine-serotonin stabilizers that act as partial agonists at D2 receptors, modulating dopamine activity in different brain regions.",
+      "kn": "KN2",
+      "kn_explanation": "This question tests knowledge of the mechanisms of action of different classes of antipsychotic medications, which is under KN2.",
+      "difficulty": "hard",
+      "quality_comment": "The question clearly distinguishes a nuanced pharmacological mechanism with distractors serving as common misconceptions, suitable for higher-difficulty items."
+    },
+    {
+      "stem": "Which of the following is a common and potentially dangerous side effect of combining an SSRI with an MAOI?",
+      "options": [
+        "Hypertensive crisis",
+        "Neutropenia",
+        "Serotonin syndrome",
+        "Neuroleptic malignant syndrome"
+      ],
+      "answer": "Serotonin syndrome",
+      "explanation": "Combining SSRIs with MAOIs can lead to serotonin syndrome, a potentially fatal condition characterized by agitation, confusion, hyperthermia, and autonomic instability.",
+      "kn": "KN2",
+      "kn_explanation": "This item evaluates knowledge of drug interactions and their dangerous consequences, covered by drug mechanisms and adverse effects (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clinically relevant and the distractors consist of other severe drug side effects, requiring precise knowledge for correct selection."
+    },
+    {
+      "stem": "A patient on fluoxetine (an SSRI) abruptly discontinues the medication and experiences headaches, dizziness, mood swings, and flu-like symptoms. This cluster of symptoms is best described as:",
+      "options": [
+        "Tardive dyskinesia",
+        "Anticholinergic syndrome",
+        "Discontinuation syndrome",
+        "Hypertensive crisis"
+      ],
+      "answer": "Discontinuation syndrome",
+      "explanation": "Discontinuation syndrome occurs after abrupt cessation of SSRIs and includes symptoms like dizziness, headaches, mood lability, and flu-like manifestations.",
+      "kn": "KN2",
+      "kn_explanation": "Recognizing withdrawal effects and side effects of therapeutic drugs fits within KN2's focus on drug effects and adverse reactions.",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward, with distractors representing other adverse effects that are less consistent with the symptom cluster described."
+    },
+    {
+      "stem": "Which antidepressant is least likely to cause sexual dysfunction and has an activating effect due to its inhibition of norepinephrine and dopamine reuptake?",
+      "options": [
+        "Paroxetine",
+        "Bupropion",
+        "Amitriptyline",
+        "Duloxetine"
+      ],
+      "answer": "Bupropion",
+      "explanation": "Bupropion inhibits norepinephrine and dopamine reuptake, has an energizing effect, and is notable for causing minimal sexual dysfunction.",
+      "kn": "KN2",
+      "kn_explanation": "This tests knowledge of antidepressant mechanisms and side effect profiles aligning with drug classification and effects (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "Good question differentiating side effect profiles and mechanisms among common antidepressants, with plausible distractors included."
+    },
+    {
+      "stem": "Which of the following drug classes is contraindicated for patients with uncontrolled hypertension due to its potential to elevate blood pressure?",
+      "options": [
+        "SSRIs",
+        "SNRIs",
+        "MAOIs",
+        "NDRIs"
+      ],
+      "answer": "SNRIs",
+      "explanation": "SNRIs increase norepinephrine levels, which can elevate blood pressure; therefore, they may be contraindicated in patients with hypertension.",
+      "kn": "KN2",
+      "kn_explanation": "Understanding adverse effects related to physiological parameters like blood pressure is encompassed in drug mechanisms and side effects (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "Clear and clinically significant question, with adequate distractors that might confuse due to some overlap in side effect profiles."
+    },
+    {
+      "stem": "A patient treated with a tricyclic antidepressant experiences orthostatic hypotension, dry mouth, sedation, and weight gain. These symptoms primarily reflect the:",
+      "options": [
+        "Cardiotoxic effects of TCAs",
+        "Anticholinergic and cardiovascular side effects of TCAs",
+        "Serotonin syndrome",
+        "Hypertensive crisis associated with TCAs"
+      ],
+      "answer": "Anticholinergic and cardiovascular side effects of TCAs",
+      "explanation": "TCAs commonly produce anticholinergic side effects (dry mouth, sedation) and cardiovascular effects (orthostatic hypotension, weight gain).",
+      "kn": "KN2",
+      "kn_explanation": "This question addresses the understanding of typical adverse effects associated with a major drug class, a key component of KN2.",
+      "difficulty": "medium",
+      "quality_comment": "Well-structured question with plausible options, differentiating types of side effects associated with TCAs."
+    },
+    {
+      "stem": "Which of the following is a life-threatening adverse effect associated primarily with first-generation antipsychotics and involves muscle rigidity, high fever, and autonomic dysfunction?",
+      "options": [
+        "Neuroleptic malignant syndrome",
+        "Tardive dyskinesia",
+        "Serotonin syndrome",
+        "Discontinuation syndrome"
+      ],
+      "answer": "Neuroleptic malignant syndrome",
+      "explanation": "Neuroleptic malignant syndrome is a rare but life-threatening reaction to FGAs characterized by rigidity, hyperthermia, unstable vital signs, and altered mental status.",
+      "kn": "KN2",
+      "kn_explanation": "This evaluates recognition of dangerous drug-induced syndromes, a critical area within drug effects knowledge (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and covers an important safety issue, with distractors being other adverse effects that must be differentiated clinically."
+    },
+    {
+      "stem": "Treatment with monoamine oxidase inhibitors (MAOIs) requires dietary restrictions primarily to prevent which potentially fatal complication?",
+      "options": [
+        "Serotonin syndrome",
+        "Hypertensive crisis",
+        "Neuroleptic malignant syndrome",
+        "Tardive dyskinesia"
+      ],
+      "answer": "Hypertensive crisis",
+      "explanation": "MAOIs inhibit metabolism of tyramine-containing foods; dietary tyramine can cause hypertensive crisis, a sudden dangerous increase in blood pressure.",
+      "kn": "KN2",
+      "kn_explanation": "Understanding serious drug-food interactions and their adverse effects falls under drug classification and side effect knowledge (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clinically relevant and tests knowledge of safety considerations, with distractors representing other severe drug-induced conditions."
+    },
+    {
+      "stem": "Which of the following best describes the mechanism of action of selective serotonin reuptake inhibitors (SSRIs)?",
+      "options": [
+        "Blocking postsynaptic serotonin receptors",
+        "Inhibiting monoamine oxidase activity",
+        "Blocking presynaptic serotonin reuptake to increase synaptic serotonin",
+        "Increasing dopamine release at synapses"
+      ],
+      "answer": "Blocking presynaptic serotonin reuptake to increase synaptic serotonin",
+      "explanation": "SSRIs act by blocking the reuptake of serotonin into presynaptic neurons, increasing serotonin availability at postsynaptic receptors.",
+      "kn": "KN2",
+      "kn_explanation": "This tests understanding of the specific pharmacological mechanism of a major antidepressant class, which is key content in KN2.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward and factual question with appropriate distractors, ideal for foundational knowledge assessment."
+    },
+    {
+      "stem": "Which antipsychotic generation is associated with the highest risk of metabolic syndrome, including weight gain and insulin resistance?",
+      "options": [
+        "First-generation antipsychotics",
+        "Second-generation antipsychotics",
+        "Third-generation antipsychotics",
+        "All antipsychotic generations have equal risk"
+      ],
+      "answer": "Second-generation antipsychotics",
+      "explanation": "Second-generation (atypical) antipsychotics have a higher likelihood of causing metabolic syndrome than first- or third-generation drugs.",
+      "kn": "KN2",
+      "kn_explanation": "This item focuses on adverse effect profiles related to different drug classes, fitting within the drug classification and effects knowledge area (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "Clear question with plausible answer choices; the distractors are reasonable and test recognition of important clinical differences."
+    },
+    {
+      "stem": "Why are SSRIs prescribed cautiously when treating bipolar I disorder without mood stabilizers?",
+      "options": [
+        "They increase blood pressure dangerously",
+        "They may trigger rapid cycling or mania",
+        "They cause tardive dyskinesia",
+        "They produce excessive sedation"
+      ],
+      "answer": "They may trigger rapid cycling or mania",
+      "explanation": "SSRIs can induce mania or rapid cycling in bipolar I patients if not combined with mood stabilizers, which is why caution is necessary.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses knowledge of drug effects and treatment considerations in comorbid psychiatric conditions, under drug effects (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clinically relevant, with distractors representing other drug effects, requiring test-takers to understand bipolar treatment nuances."
+    }
+  ]
+}

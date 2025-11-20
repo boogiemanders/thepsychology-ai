@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "stem": "According to APA Ethics Code Standard 3.01, which of the following is true regarding discrimination in psychological services?",
+      "options": [
+        "Psychologists must accept every individual who requests services regardless of their characteristics.",
+        "Discrimination based on legally protected characteristics is prohibited, but psychologists may refuse services if it impairs competence.",
+        "Psychologists may refuse services only on the basis of socioeconomic status.",
+        "It is acceptable to refuse service to clients who cannot pay fees, but not for any other reason."
+      ],
+      "answer": "Discrimination based on legally protected characteristics is prohibited, but psychologists may refuse services if it impairs competence.",
+      "explanation": "Standard 3.01 prohibits discrimination based on protected characteristics, but psychologists may refuse clients if their values, diagnosis, or characteristics would impair competent service or payment ability.",
+      "kn": "KN68",
+      "kn_explanation": "This question covers ethical principles and client rights related to nondiscrimination and ethical service provision (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes between discrimination and refusal based on competence; distractors are plausible with different nuances."
+    },
+    {
+      "stem": "Which of the following behaviors constitutes sexual harassment under APA Ethics Code Standard 3.02?",
+      "options": [
+        "Occasionally telling off-color jokes that have been indicated as unwelcome or offensive.",
+        "Engaging in consensual flirtation with a colleague.",
+        "Providing constructive performance feedback in a professional manner.",
+        "Disagreeing with a coworker’s work style."
+      ],
+      "answer": "Occasionally telling off-color jokes that have been indicated as unwelcome or offensive.",
+      "explanation": "Sexual harassment includes unwelcome sexual solicitation or behavior that is offensive; if a person continues such behavior after being told it is unwelcome, it qualifies as sexual harassment.",
+      "kn": "KN68",
+      "kn_explanation": "The question addresses definitions of harassment and appropriate professional boundaries, fitting ethical and professional issues (KN68).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors contrast accepted versus unwelcome behaviors, creating a high-level question about behavior interpretation in context."
+    },
+    {
+      "stem": "Under the APA Ethics Code, what defines a multiple relationship as problematic and ethically impermissible according to Standard 3.05(a)?",
+      "options": [
+        "Any multiple relationship involving a current or former client.",
+        "Only those multiple relationships that could reasonably impair objectivity or risk harm or exploitation.",
+        "Multiple relationships between colleagues within the same organization.",
+        "Only multiple relationships outside the psychologist’s workplace."
+      ],
+      "answer": "Only those multiple relationships that could reasonably impair objectivity or risk harm or exploitation.",
+      "explanation": "Standard 3.05(a) forbids multiple relationships only if they may impair objectivity, competence, or cause exploitation or harm, but does not prohibit all multiple relationships.",
+      "kn": "KN68",
+      "kn_explanation": "This question tests knowledge of ethical standards governing multiple relationships, an important professional issue (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets the key ethical distinction and distractors are plausible but less accurate."
+    },
+    {
+      "stem": "Which of the following statements accurately reflects the APA Ethics Code regarding informed consent from minors who are unaccompanied immigrant children (UIC)?",
+      "options": [
+        "UIC can legally provide informed consent for their treatment without any additional authorization.",
+        "Psychologists should obtain consent from the organization holding custody and assent from the minor when appropriate.",
+        "Consent must always be obtained from a parent or legal guardian regardless of custody status.",
+        "Informed consent is not necessary for UIC because they are minors."
+      ],
+      "answer": "Psychologists should obtain consent from the organization holding custody and assent from the minor when appropriate.",
+      "explanation": "Since UIC are minors without legal guardians in the U.S., consent is obtained from the organization holding custody, consistent with Ethics Code Standard 3.10(b) and 3.11.",
+      "kn": "KN68",
+      "kn_explanation": "This question addresses ethical obligations for informed consent with special populations, which falls under ethical and professional issues (KN68).",
+      "difficulty": "hard",
+      "quality_comment": "The correct answer reflects nuanced application of informed consent standards; distractors reflect common misconceptions."
+    },
+    {
+      "stem": "When providing services ordered by a court, what must psychologists inform the examinee about, according to APA Ethics Code Standard 3.10(c)?",
+      "options": [
+        "That participation is voluntary and confidentiality is unlimited.",
+        "The nature and purpose of the services, that they are court-ordered, and limits of confidentiality.",
+        "That services can be refused without consequences.",
+        "That no information will be shared with third parties under any circumstances."
+      ],
+      "answer": "The nature and purpose of the services, that they are court-ordered, and limits of confidentiality.",
+      "explanation": "Standard 3.10(c) requires psychologists to inform clients of the nature of court-ordered services, their mandated status, and confidentiality limits.",
+      "kn": "KN68",
+      "kn_explanation": "This question focuses on disclosure and informed consent within legal and ethical standards (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "Options provide contrasting misinformation, allowing test-takers to discriminate based on knowledge of judicial mandates and confidentiality."
+    },
+    {
+      "stem": "In the event a psychologist foresees an interruption in psychological services due to relocation, what does APA Ethics Code Standard 3.12 recommend?",
+      "options": [
+        "Immediately terminate all client contacts without notice.",
+        "Make reasonable efforts including pretermination counseling and providing referrals.",
+        "Avoid discussing the interruption to reduce client anxiety.",
+        "Transfer all client records to family members without client permission."
+      ],
+      "answer": "Make reasonable efforts including pretermination counseling and providing referrals.",
+      "explanation": "Standard 3.12 requires psychologists to plan reasonably for interruptions, such as discussing the situation with clients and providing referrals when appropriate.",
+      "kn": "KN68",
+      "kn_explanation": "The item examines ethical guidelines for continuity of care and professional planning responsibilities (KN68).",
+      "difficulty": "easy",
+      "quality_comment": "The scenario is straightforward with clear correct action, and distractors represent ethically incorrect responses."
+    },
+    {
+      "stem": "According to APA Ethics Code Standard 4.02, what is the most appropriate time to discuss the limits of confidentiality with clients?",
+      "options": [
+        "Only if a breach of confidentiality occurs.",
+        "At the outset of the professional relationship and thereafter as new circumstances warrant.",
+        "After the client discloses sensitive information.",
+        "Only during the final session of therapy."
+      ],
+      "answer": "At the outset of the professional relationship and thereafter as new circumstances warrant.",
+      "explanation": "Standard 4.02 states discussions about confidentiality limits should occur initially and as needed when conditions change.",
+      "kn": "KN68",
+      "kn_explanation": "This question targets ethical communication about confidentiality, a core professional responsibility (KN68).",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear and covers a foundational ethical practice with plausible distractors."
+    },
+    {
+      "stem": "In group therapy, how should psychologists address confidentiality according to APA Ethics Code standards?",
+      "options": [
+        "Guarantee full confidentiality of all information shared in the group.",
+        "Inform members that psychologists are legally responsible for breaches of confidentiality by others.",
+        "Educate group members about the limits of confidentiality and encourage maintenance of confidentiality.",
+        "Avoid discussing confidentiality to prevent discomfort."
+      ],
+      "answer": "Educate group members about the limits of confidentiality and encourage maintenance of confidentiality.",
+      "explanation": "Standard 10.03 requires describing roles and limits of confidentiality and educating group members that confidentiality cannot be guaranteed as members are not bound professionally.",
+      "kn": "KN68",
+      "kn_explanation": "The question addresses ethical challenges related to confidentiality in group settings, within professional practice standards (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors clarify common misconceptions with the correct answer emphasizing education and realistic limits."
+    },
+    {
+      "stem": "Which of the following best describes the ethical handling of confidential information in forensic psychology when providing services to the same individual or closely related individuals, as outlined in APA Specialty Guidelines and Standard 3.05?",
+      "options": [
+        "Forensic and therapeutic services to the same individual are encouraged to improve comprehensive care.",
+        "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
+        "Dual roles are acceptable if the psychologist obtains informed consent.",
+        "It is permissible to combine forensic and therapeutic roles without any restrictions."
+      ],
+      "answer": "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
+      "explanation": "The Specialty Guidelines and Standard 3.05 recommend avoiding dual roles that impair objectivity, advising referral when forensic and therapeutic services are requested.",
+      "kn": "KN68",
+      "kn_explanation": "This addresses ethical issues specific to forensic practice and conflicts of interest within professional standards (KN68).",
+      "difficulty": "hard",
+      "quality_comment": "This question highlights discipline-specific ethical standards with appropriately challenging distractors."
+    },
+    {
+      "stem": "Under APA Ethics Code Standard 4.05, when may psychologists disclose confidential information without client authorization?",
+      "options": [
+        "Only with the client's explicit permission, regardless of legal mandates.",
+        "When mandated or permitted by law to protect the client or others from harm, such as in cases of risk of suicide or abuse.",
+        "Whenever the psychologist believes disclosure would be beneficial for the client.",
+        "Only after consulting a colleague but without client or legal authorization."
+      ],
+      "answer": "When mandated or permitted by law to protect the client or others from harm, such as in cases of risk of suicide or abuse.",
+      "explanation": "Standard 4.05 permits disclosure without authorization only in legal or valid protective situations like risk of harm, suicide, or abuse reports.",
+      "kn": "KN68",
+      "kn_explanation": "This item tests understanding of legally and ethically mandated breaches of confidentiality (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misunderstandings, with the correct choice emphasizing legal mandates consistent with Ethics Code."
+    },
+    {
+      "stem": "Which of the following best describes the difference between confidentiality and privilege in the context of psychological practice?",
+      "options": [
+        "Confidentiality is a legal right held by the client; privilege is an ethical obligation held by the psychologist.",
+        "Confidentiality is an ethical obligation to protect client information; privilege is a legal right allowing the client to prevent disclosure in legal proceedings.",
+        "Privilege allows psychologists to share client information freely; confidentiality prohibits sharing without consent.",
+        "Confidentiality applies only to medical records, while privilege applies only to therapy notes."
+      ],
+      "answer": "Confidentiality is an ethical obligation to protect client information; privilege is a legal right allowing the client to prevent disclosure in legal proceedings.",
+      "explanation": "Confidentiality is an ethical duty to protect information, while privilege is a legal concept granting the client control over disclosure in court.",
+      "kn": "KN68",
+      "kn_explanation": "This question clarifies fundamental ethical and legal concepts essential to professional practice (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-constructed, with clear distinctions that challenge test-takers to differentiate related constructs."
+    },
+    {
+      "stem": "What is the recommended approach for psychologists using telepsychology services to protect client confidentiality, according to APA Guidelines?",
+      "options": [
+        "Using any free videoconferencing platform for convenience.",
+        "Using platforms that comply with HIPAA and state security requirements with features like encryption and secure data storage.",
+        "Avoiding discussion of privacy concerns with clients to reduce anxiety.",
+        "Sharing client information only by unencrypted email to expedite communication."
+      ],
+      "answer": "Using platforms that comply with HIPAA and state security requirements with features like encryption and secure data storage.",
+      "explanation": "APA Guidelines recommend employing secure, HIPAA-compliant platforms and other safeguards to protect privacy in telepsychology.",
+      "kn": "KN68",
+      "kn_explanation": "This question relates to ethical and professional issues concerning confidentiality in technologically assisted services (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common errors in telepsychology practice, while the correct option accurately reflects ethical standards."
+    },
+    {
+      "stem": "According to APA Ethics Code Standard 3.06, when must psychologists avoid accepting a professional role?",
+      "options": [
+        "When the role involves treatment of multiple clients simultaneously.",
+        "When the role could impair their objectivity, competence, or effectiveness or expose others to harm or exploitation.",
+        "Whenever the role involves receiving any form of compensation.",
+        "When working with clients from different cultural backgrounds."
+      ],
+      "answer": "When the role could impair their objectivity, competence, or effectiveness or expose others to harm or exploitation.",
+      "explanation": "Standard 3.06 prohibits accepting roles that could reasonably be expected to impair professional functioning or harm others.",
+      "kn": "KN68",
+      "kn_explanation": "This addresses ethical responsibilities in role acceptance avoiding conflicts of interest and harm (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors test understanding of the circumstances that impair professional performance versus general role characteristics."
+    },
+    {
+      "stem": "Under HIPAA, when can parents generally access their minor child's protected health information (PHI)?",
+      "options": [
+        "Always, regardless of state laws or the minor's consent status.",
+        "Only when the state law allows parental access and the minor is not legally permitted to consent to their own treatment.",
+        "Never, as minors always have exclusive rights to their PHI.",
+        "Only if the minor requests the parent to have access."
+      ],
+      "answer": "Only when the state law allows parental access and the minor is not legally permitted to consent to their own treatment.",
+      "explanation": "HIPAA allows parents access as legal representatives unless state laws allow minors to consent and restrict parental access.",
+      "kn": "KN68",
+      "kn_explanation": "This question tests knowledge of legal and ethical issues regarding client access to records and rights of minors (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "Options clarify nuances in parental rights and client confidentiality, important for clinical and legal considerations."
+    },
+    {
+      "stem": "According to the APA Ethics Code, which of the following steps is most appropriate when a psychologist identifies a potential ethical conflict arising from a multiple relationship?",
+      "options": [
+        "Immediately terminate both relationships to avoid harm.",
+        "Ignore the conflict if no harm has occurred yet.",
+        "Consult with a colleague and discuss the situation with involved parties to find the best resolution.",
+        "Continue both relationships without disclosure to maintain rapport."
+      ],
+      "answer": "Consult with a colleague and discuss the situation with involved parties to find the best resolution.",
+      "explanation": "Standard 3.05(b) requires psychologists to take reasonable steps to resolve potentially harmful multiple relationships, including consultation and discussion with the involved individuals.",
+      "kn": "KN64",
+      "kn_explanation": "This question aligns with identifying and managing potential ethical issues related to multiple relationships (KN64).",
+      "difficulty": "medium",
+      "quality_comment": "The options present plausible responses; the correct option reflects standard ethical decision-making."
+    },
+    {
+      "stem": "Which factor is NOT part of Gottlieb's decision-making model when evaluating whether to enter into a multiple relationship?",
+      "options": [
+        "The power differential between the psychologist and client.",
+        "The expected duration of each relationship.",
+        "The clarity of termination of each relationship.",
+        "The client's socioeconomic status."
+      ],
+      "answer": "The client's socioeconomic status.",
+      "explanation": "Gottlieb's model includes power differential, duration, and clarity of termination as key factors; socioeconomic status is not included.",
+      "kn": "KN64",
+      "kn_explanation": "This question covers ethical decision-making processes for managing multiple relationships, which involves managing potential ethical issues (KN64).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are reasonable, with the exception option reflecting a commonly confused but irrelevant factor."
+    },
+    {
+      "stem": "Which of the following best reflects the psychologist's ethical responsibilities when providing telepsychology services to enhance confidentiality?",
+      "options": [
+        "Disclose all technical limitations to clients but take minimal additional steps.",
+        "Use secure, private settings and encrypted communication while educating clients about confidentiality risks.",
+        "Avoid discussing confidentiality to focus on therapy goals.",
+        "Rely solely on the telepsychology platform's default security features without additional measures."
+      ],
+      "answer": "Use secure, private settings and encrypted communication while educating clients about confidentiality risks.",
+      "explanation": "APA Guidelines for Telepsychology stress multiple steps like using secure environments, encryption, and client education to protect confidentiality.",
+      "kn": "KN68",
+      "kn_explanation": "This question involves ethical and professional issues of confidentiality with technological modalities, appropriate for the domain (KN68).",
+      "difficulty": "medium",
+      "quality_comment": "The item requires application of best practices in telepsychology to protect confidentiality, with plausible distractors."
+    }
+  ]
+}

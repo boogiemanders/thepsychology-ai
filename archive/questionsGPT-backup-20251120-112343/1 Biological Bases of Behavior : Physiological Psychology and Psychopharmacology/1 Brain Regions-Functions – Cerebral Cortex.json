@@ -1,0 +1,169 @@
+{
+  "questions": [
+    {
+      "stem": "Damage to Broca's area in the dominant hemisphere most typically results in which of the following clinical presentations?",
+      "options": [
+        "Fluent speech with impaired comprehension and word substitutions",
+        "Nonfluent, labored speech with relatively intact comprehension",
+        "Loss of writing skills and right-left disorientation",
+        "Complete inability to recognize faces of familiar individuals"
+      ],
+      "answer": "Nonfluent, labored speech with relatively intact comprehension",
+      "explanation": "Broca’s aphasia is characterized by expressive, nonfluent speech that is slow and labored, but comprehension remains relatively intact.",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to neurobiological bases of language processing and neurological deficits, aligned with biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are relevant neurological deficits, creating plausible distractors that test differentiation among aphasias and syndromes."
+    },
+    {
+      "stem": "Which region of the prefrontal cortex is primarily associated with goal-directed behavior, working memory deficits, and impairments in executive function when damaged?",
+      "options": [
+        "Ventromedial prefrontal cortex (VMPFC)",
+        "Dorsolateral prefrontal cortex (DLPFC)",
+        "Orbitofrontal cortex (OFC)",
+        "Ventrolateral prefrontal cortex (VLPFC)"
+      ],
+      "answer": "Dorsolateral prefrontal cortex (DLPFC)",
+      "explanation": "The DLPFC is crucial for executive functions including working memory and goal-directed behavior; damage causes related impairments.",
+      "kn": "KN1",
+      "kn_explanation": "This assesses knowledge of neuroanatomical correlates of executive functions, under neurological and genetic bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all prefrontal regions with overlapping functions, requiring careful recall and differentiation, enhancing question quality."
+    },
+    {
+      "stem": "A patient presents with fluent speech containing many word substitutions, impaired comprehension of spoken and written language, and impaired repetition, but intact grammar and prosody. Which brain region is most likely damaged?",
+      "options": [
+        "Broca's area in the left frontal lobe",
+        "Wernicke’s area in the left temporal lobe",
+        "Right parietal lobe",
+        "Primary motor cortex in the left frontal lobe"
+      ],
+      "answer": "Wernicke’s area in the left temporal lobe",
+      "explanation": "Wernicke’s aphasia results from damage to Wernicke’s area and is characterized by fluent but nonsensical speech with impaired comprehension and repetition.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests neurological localization of language comprehension deficits, a core concept of biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include anatomically adjacent or functionally related areas, making this a well-constructed differential diagnosis question."
+    },
+    {
+      "stem": "Which syndrome is characterized by right-left disorientation, finger agnosia, agraphia, and acalculia, commonly resulting from damage to the dominant parietal lobe?",
+      "options": [
+        "Gerstmann’s syndrome",
+        "Conduction aphasia",
+        "Limb-kinetic apraxia",
+        "Contralateral neglect"
+      ],
+      "answer": "Gerstmann’s syndrome",
+      "explanation": "Gerstmann’s syndrome includes those specific symptoms due to left (dominant) parietal lobe damage.",
+      "kn": "KN1",
+      "kn_explanation": "The question evaluates knowledge of neurological syndromes linked to specific brain regions, fitting biological bases of behavior (KN1).",
+      "difficulty": "hard",
+      "quality_comment": "Uses multiple hallmark symptoms for localization, requiring integrative recall suitable for higher difficulty EPPP questions."
+    },
+    {
+      "stem": "Damage to the occipital lobe's primary visual cortex with intact eyes and optic nerves produces which of the following conditions?",
+      "options": [
+        "Prosopagnosia",
+        "Cortical blindness",
+        "Tactile agnosia",
+        "Broca’s aphasia"
+      ],
+      "answer": "Cortical blindness",
+      "explanation": "Cortical blindness results from damage to the primary visual cortex despite intact ocular structures.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests neuroanatomical understanding of visual processing deficits, within the biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Options include relevant neuropsychological disorders, forcing test takers to identify specific visual deficits."
+    },
+    {
+      "stem": "Which prefrontal cortex region, when damaged, leads to impulsivity, social inappropriateness, lack of empathy, and emotional dysregulation?",
+      "options": [
+        "Ventrolateral prefrontal cortex (VLPFC)",
+        "Dorsolateral prefrontal cortex (DLPFC)",
+        "Orbitofrontal cortex (OFC)",
+        "Ventromedial prefrontal cortex (VMPFC)"
+      ],
+      "answer": "Orbitofrontal cortex (OFC)",
+      "explanation": "The OFC is key for emotion regulation and social behavior; damage produces the listed social and emotional deficits.",
+      "kn": "KN1",
+      "kn_explanation": "This question addresses the neurobiological underpinnings of emotional and social regulation functions, aligned with KN1.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question that differentiates closely related prefrontal regions to test precise localization knowledge."
+    },
+    {
+      "stem": "A patient with right parietal lobe damage is most likely to exhibit which of the following symptoms?",
+      "options": [
+        "Denial of illness and neglect of the left side of the body",
+        "Inability to repeat phrases and impaired comprehension",
+        "Nonfluent speech and anomia",
+        "Loss of color vision and visual hallucinations"
+      ],
+      "answer": "Denial of illness and neglect of the left side of the body",
+      "explanation": "Right parietal lobe damage commonly causes contralateral (left) neglect and anosognosia (denial of illness).",
+      "kn": "KN1",
+      "kn_explanation": "This focuses on sensory and spatial neuropsychological deficits following lesion localization, within biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors correspond to other cortical deficits, strengthening the diagnostic reasoning tested by this question."
+    },
+    {
+      "stem": "Which of the following best describes the role of the right hemisphere in language?",
+      "options": [
+        "Dominant for producing grammatical and syntactic language",
+        "Essential for emotional prosody and understanding pragmatics",
+        "Controls the majority of phoneme discrimination in adults learning their first language",
+        "Primary region for logical and analytical language functions"
+      ],
+      "answer": "Essential for emotional prosody and understanding pragmatics",
+      "explanation": "The right hemisphere governs emotional tone and pragmatic use of language, while the left hemisphere is dominant for grammatical and analytical language.",
+      "kn": "KN1",
+      "kn_explanation": "Examines lateralization and specialization of brain functions related to language processing, central to biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but reflect common misconceptions, helping to assess nuanced understanding of hemispheric functions."
+    },
+    {
+      "stem": "In split-brain patients, a picture of a spoon presented to the left visual field will likely result in which of the following behaviors?",
+      "options": [
+        "Verbally declaring they see a spoon and picking it up with the right hand",
+        "Inability to recognize or pick up the spoon with either hand",
+        "Unable to verbally identify the spoon but able to pick it up with the left hand",
+        "Correctly identifying the spoon verbally and by touch with either hand"
+      ],
+      "answer": "Unable to verbally identify the spoon but able to pick it up with the left hand",
+      "explanation": "Information from the left visual field goes to the right hemisphere, which in split-brain patients cannot produce speech but can guide the left hand to select the object.",
+      "kn": "KN1",
+      "kn_explanation": "Tests knowledge of cerebral lateralization and split-brain research findings relating to sensory processing and language, within biological bases of behavior (KN1).",
+      "difficulty": "hard",
+      "quality_comment": "This question assesses integration of complex research findings, with well-constructed options demanding detailed understanding."
+    },
+    {
+      "stem": "Damage to which brain area would most likely impair one's ability to imitate a motor activity upon verbal command, such as 'pretend to comb your hair'?",
+      "options": [
+        "Right temporal lobe",
+        "Left dominant parietal lobe causing ideomotor apraxia",
+        "Left occipital lobe",
+        "Right dorsolateral prefrontal cortex"
+      ],
+      "answer": "Left dominant parietal lobe causing ideomotor apraxia",
+      "explanation": "Ideomotor apraxia results from left parietal lobe damage and is characterized by difficulty imitating or performing motor activities on command.",
+      "kn": "KN1",
+      "kn_explanation": "This focuses on neurological motor planning deficits based on lesion location, consistent with biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The options include incorrect lobes and brain areas plausibly related to motor control, supporting effective discrimination."
+    },
+    {
+      "stem": "Which of the following best describes the difference in hemispheric control of sensory and motor functions?",
+      "options": [
+        "The left hemisphere controls the left side of the body; the right hemisphere controls the right side",
+        "Both hemispheres equally control sensory and motor functions on both body sides",
+        "The right hemisphere controls most functions of the left side of the body and vice versa",
+        "The left hemisphere controls sensory functions; the right hemisphere controls motor functions"
+      ],
+      "answer": "The right hemisphere controls most functions of the left side of the body and vice versa",
+      "explanation": "Typically, each hemisphere controls motor and sensory function contralaterally, with the right hemisphere controlling the left body side and vice versa.",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to the neuroanatomical organization of motor and sensory pathways, falling under biological bases of behavior (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "This question is straightforward and clearly differentiates common misconception, appropriate for entry-level understanding."
+    }
+  ]
+}

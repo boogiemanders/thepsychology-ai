@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "stem": "In Milgram's original obedience study, what factor did he identify as the main reason subjects continued to deliver shocks despite apparent harm to the learner?",
+      "options": [
+        "Subjects experienced psychological reactance leading to compliance",
+        "Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes",
+        "Subjects conformed due to normative social influence",
+        "Subjects received financial incentives to continue",
+        "Subjects misunderstood the nature of the shock"
+      ],
+      "answer": "Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes",
+      "explanation": "Milgram concluded that participants obeyed because they entered an agentic state where they viewed themselves as merely executing the authority's commands.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses social influence theories and group processes—specifically obedience to authority—categorized under group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible alternatives related to social influence concepts, making the question a solid test of key conceptual understanding."
+    },
+    {
+      "stem": "Which of the following best describes psychological reactance as it relates to social influence?",
+      "options": [
+        "When people comply to avoid punishment from authority",
+        "When people conform to group norms to gain acceptance",
+        "When individuals resist influence because their sense of freedom is threatened",
+        "When people accept others’ judgments as correct in uncertain situations",
+        "When individuals comply with requests due to perceived reciprocity"
+      ],
+      "answer": "When individuals resist influence because their sense of freedom is threatened",
+      "explanation": "Psychological reactance occurs when people feel their freedom to choose is threatened and respond by resisting or doing the opposite of what is requested.",
+      "kn": "KN16",
+      "kn_explanation": "This question covers a concept related to social influence and individual responses to pressure, thus relating to group and systems processes (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "The stem is clearly worded, and distractors include related but distinct social influence principles, promoting careful discrimination."
+    },
+    {
+      "stem": "According to research on conformity, which type of influence is most likely to lead to private acceptance of a group's viewpoint in ambiguous situations?",
+      "options": [
+        "Normative influence",
+        "Informational influence",
+        "Psychological reactance",
+        "Agentic state",
+        "Foot-in-the-door technique"
+      ],
+      "answer": "Informational influence",
+      "explanation": "Informational influence leads people to conform because they believe others have more accurate information, especially in ambiguous situations, which results in private acceptance.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses understanding of social cognition processes involved in conformity and social influence, which falls under group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The options include related concepts, some from other influence types, providing a well-constructed challenge for differentiating key mechanisms."
+    },
+    {
+      "stem": "In Asch's conformity experiments, what was a key finding that differentiated his work from Sherif's autokinetic effect studies?",
+      "options": [
+        "Asch found conformity only occurred in ambiguous situations",
+        "Asch found conformity even when the correct answer was obvious and unambiguous",
+        "Sherif’s study demonstrated conformity only in unambiguous situations",
+        "Sherif’s study involved foot-in-the-door compliance tactics",
+        "Asch used electric shocks to measure obedience"
+      ],
+      "answer": "Asch found conformity even when the correct answer was obvious and unambiguous",
+      "explanation": "Asch’s research showed people conformed to group pressure even when the correct answer was clear, indicating normative influence, unlike Sherif’s work with ambiguous stimuli.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding these seminal studies in conformity highlights group dynamics and social influences, core topics within group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast the key differences between landmark studies; distractors are credible misconceptions."
+    },
+    {
+      "stem": "Which technique involves making a large initial request that is expected to be refused, followed by a smaller, more reasonable request?",
+      "options": [
+        "Foot-in-the-door technique",
+        "Door-in-the-face technique",
+        "Lowball technique",
+        "That's-not-all technique",
+        "Reciprocity technique"
+      ],
+      "answer": "Door-in-the-face technique",
+      "explanation": "The door-in-the-face technique uses a large, often refused request followed by a smaller one to increase compliance through perceptual contrast and reciprocity norms.",
+      "kn": "KN16",
+      "kn_explanation": "This question evaluates knowledge of compliance tactics, a key aspect of social influence and group processes (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Clear, focused question with plausible alternative influence tactics as distractors, aiding discrimination at the EPPP level."
+    },
+    {
+      "stem": "What is the primary psychological explanation for why the foot-in-the-door technique increases compliance?",
+      "options": [
+        "People feel obligated to reciprocate when concessions are made",
+        "People want to appear consistent in their behavior by agreeing to a larger request after initially agreeing to a smaller one",
+        "People experience psychological reactance and resist the initial request",
+        "The large initial request makes the smaller request seem more reasonable",
+        "People assume the requester has more information and trust their judgment"
+      ],
+      "answer": "People want to appear consistent in their behavior by agreeing to a larger request after initially agreeing to a smaller one",
+      "explanation": "The foot-in-the-door technique works because once people agree to a small request, they tend to maintain consistency by agreeing to a related larger one.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses social influence and specific compliance strategies, fitting within group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Options offer various plausible influence explanations, encouraging test-takers to understand specific mechanisms underlying compliance strategies."
+    },
+    {
+      "stem": "In Burger’s 2009 replication of Milgram's obedience experiment, which of the following was found?",
+      "options": [
+        "Participants were significantly less likely to deliver shocks at 150 volts compared to Milgram’s original study",
+        "Only male participants showed willingness to deliver shocks",
+        "The majority of participants continued delivering shocks at 150 volts, with no significant gender differences",
+        "The study found that informing participants fully decreased obedience",
+        "Participants refused to continue once shocks reached 100 volts"
+      ],
+      "answer": "The majority of participants continued delivering shocks at 150 volts, with no significant gender differences",
+      "explanation": "Burger found similar obedience rates at 150 volts as Milgram, with both males and females showing comparable levels of compliance.",
+      "kn": "KN16",
+      "kn_explanation": "This examines knowledge of updated research on obedience to authority, a key aspect of social influence and group dynamics (KN16).",
+      "difficulty": "hard",
+      "quality_comment": "The question tests detailed recall of replication research, with distractors reflecting common misunderstandings about gender and obedience studies."
+    },
+    {
+      "stem": "Normative social influence is primarily driven by which of the following motivations?",
+      "options": [
+        "Desire to achieve accurate understanding in ambiguous situations",
+        "Desire to avoid social rejection or ridicule",
+        "Desire to reassert personal freedom when threatened",
+        "Desire to follow authoritative directives",
+        "Desire to maintain consistency in behavior"
+      ],
+      "answer": "Desire to avoid social rejection or ridicule",
+      "explanation": "Normative influence causes conformity based on the need to avoid negative social consequences like rejection, especially in unambiguous situations.",
+      "kn": "KN16",
+      "kn_explanation": "This question probes core reasons behind adherence to group norms, central to understanding social and cultural bases of behavior (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward question with well-constructed distractors related to social influence motives, making it suitable for foundational testing."
+    },
+    {
+      "stem": "Which modification to Milgram’s original procedure resulted in decreased obedience to deliver high shocks?",
+      "options": [
+        "Having the experimenter deliver commands by phone rather than in person",
+        "Increasing the number of confederates in the room",
+        "Allowing the teacher to physically force the learner to answer",
+        "Giving participants monetary reward to continue",
+        "Having the learner visibly express pain and scream"
+      ],
+      "answer": "Having the experimenter deliver commands by phone rather than in person",
+      "explanation": "Milgram found that obedience decreased when the authority figure was not physically present, such as giving orders over the phone.",
+      "kn": "KN16",
+      "kn_explanation": "This item covers situational variables influencing obedience in social influence research, a core aspect of group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Options include plausible but incorrect manipulations; the question clearly targets critical variations that affect obedience."
+    },
+    {
+      "stem": "Sherif’s use of the autokinetic phenomenon demonstrated conformity through which process?",
+      "options": [
+        "Private acceptance via informational influence in an ambiguous setting",
+        "Public compliance via normative influence in an unambiguous setting",
+        "Psychological reactance to the group norm",
+        "Obedience to an authority figure directing the response",
+        "Foot-in-the-door compliance strategy"
+      ],
+      "answer": "Private acceptance via informational influence in an ambiguous setting",
+      "explanation": "Sherif’s findings involved ambiguous stimuli leading individuals to conform because they believed the group had valid information, reflecting private acceptance.",
+      "kn": "KN16",
+      "kn_explanation": "The question assesses understanding of foundational research on social influence and conformity mechanisms within social and cultural bases of behavior (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are related social influence concepts but clearly distinct, which helps in assessing nuanced understanding."
+    }
+  ]
+}

@@ -775,63 +775,76 @@ export default function DashboardPage() {
               </button>
               <Carousel className="w-full px-12">
                 <CarouselContent>
-                  {siteConfig.pricing.pricingItems.map((tier, index) => (
-                    <CarouselItem key={index}>
-                      <div className="p-1">
-                        <Card className="border-2">
-                          <CardContent className="flex flex-col p-6 h-[500px]">
-                            <div className="flex-1">
-                              <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-2xl font-bold">{tier.name}</h3>
-                                {tier.isPopular && (
-                                  <Badge className="bg-primary text-primary-foreground">Popular</Badge>
-                                )}
-                              </div>
-                              <div className="mb-6">
-                                <div className="text-4xl font-bold mb-2">{tier.displayPrice}</div>
-                                <p className="text-sm text-muted-foreground">{tier.description}</p>
-                              </div>
-                              <div className="space-y-3 mb-6">
-                                <p className="text-sm font-semibold text-muted-foreground">
-                                  {tier.featuresLabel}
-                                </p>
-                                {tier.features.map((feature, idx) => (
-                                  <div key={idx} className="flex items-start gap-2">
-                                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                      <svg
-                                        className="w-3 h-3 text-primary"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                      >
-                                        <path
-                                          strokeLinecap="round"
-                                          strokeLinejoin="round"
-                                          strokeWidth={2}
-                                          d="M5 13l4 4L19 7"
-                                        />
-                                      </svg>
-                                    </div>
-                                    <span className="text-sm">{feature}</span>
+                  {siteConfig.pricing.pricingItems.map((tier, index) => {
+                    const [displayAmount, displayPeriod] = tier.displayPrice
+                      ? tier.displayPrice.split("/").map((part) => part.trim())
+                      : [tier.price, tier.period]
+
+                    return (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Card className="border-2">
+                            <CardContent className="flex flex-col p-6 h-[500px]">
+                              <div className="flex-1">
+                                <div className="flex items-center justify-between mb-4">
+                                  <h3 className="text-2xl font-bold">{tier.name}</h3>
+                                  {tier.isPopular && (
+                                    <Badge className="bg-primary text-primary-foreground">Popular</Badge>
+                                  )}
+                                </div>
+                                <div className="mb-6">
+                                  <div className="text-4xl font-bold mb-2">
+                                    {displayAmount}
+                                    {displayPeriod && (
+                                      <span className="text-lg font-medium text-muted-foreground ml-2">
+                                        /{displayPeriod}
+                                      </span>
+                                    )}
                                   </div>
-                                ))}
+                                  <p className="text-sm text-muted-foreground">{tier.description}</p>
+                                </div>
+                                <div className="space-y-3 mb-6">
+                                  <p className="text-sm font-semibold text-muted-foreground">
+                                    {tier.featuresLabel}
+                                  </p>
+                                  {tier.features.map((feature, idx) => (
+                                    <div key={idx} className="flex items-start gap-2">
+                                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg
+                                          className="w-3 h-3 text-primary"
+                                          fill="none"
+                                          viewBox="0 0 24 24"
+                                          stroke="currentColor"
+                                        >
+                                          <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M5 13l4 4L19 7"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <span className="text-sm">{feature}</span>
+                                    </div>
+                                  ))}
+                                </div>
                               </div>
-                            </div>
-                            <Button
-                              className={tier.buttonColor}
-                              onClick={() => {
-                                // TODO: Save tier to user profile
-                                console.log('Selected tier:', tier.name)
-                                setIsPricingCarouselOpen(false)
-                              }}
-                            >
-                              {tier.buttonText}
-                            </Button>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
+                              <Button
+                                className={tier.buttonColor}
+                                onClick={() => {
+                                  // TODO: Save tier to user profile
+                                  console.log('Selected tier:', tier.name)
+                                  setIsPricingCarouselOpen(false)
+                                }}
+                              >
+                                {tier.buttonText}
+                              </Button>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    )
+                  })}
                 </CarouselContent>
                 <CarouselPrevious className="-left-12" />
                 <CarouselNext className="-right-12" />
