@@ -8,7 +8,12 @@ import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 
-export function PricingSection() {
+type PricingSectionProps = {
+  activeTier?: string
+  onActiveTierChange?: (tierName: string) => void
+}
+
+export function PricingSection({ activeTier, onActiveTierChange }: PricingSectionProps) {
   const router = useRouter()
   const pricingItems = siteConfig.pricing.pricingItems
   const [expandedTier, setExpandedTier] = useState<string | null>(null)
@@ -23,6 +28,12 @@ export function PricingSection() {
   const sliderRef = useRef<HTMLDivElement | null>(null)
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeSlide, setActiveSlide] = useState(0)
+  const scrollToCard = useCallback((index: number) => {
+    const target = cardRefs.current[index]
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" })
+    }
+  }, [])
   const tierIndexMap = useMemo(
     () =>
       pricingItems.reduce<Record<string, number>>((acc, tier, idx) => {
@@ -58,37 +69,13 @@ export function PricingSection() {
   }
 
   useEffect(() => {
-    const handler = (event: Event) => {
-      const customEvent = event as CustomEvent<{ tierName: string }>
-      const tierName = customEvent.detail?.tierName
-      if (!tierName) return
-      setExpandedTier((current) => (current === tierName ? current : tierName))
-      setFormData({
-        email: "",
-        phone: "",
-        testDate: "",
-        thoughtsGoalsQuestions: "",
-      })
-      setSubmitMessage(null)
-      const index = tierIndexMap[tierName]
-      if (typeof index === "number") {
-        scrollToCard(index)
-        setActiveSlide(index)
-      }
+    if (!activeTier) return
+    const index = tierIndexMap[activeTier]
+    if (typeof index === "number") {
+      scrollToCard(index)
+      setActiveSlide(index)
     }
-
-    window.addEventListener("mini-pricing-select", handler as EventListener)
-    return () => {
-      window.removeEventListener("mini-pricing-select", handler as EventListener)
-    }
-  }, [scrollToCard, tierIndexMap])
-
-  const scrollToCard = useCallback((index: number) => {
-    const target = cardRefs.current[index]
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" })
-    }
-  }, [])
+  }, [activeTier, scrollToCard, tierIndexMap])
 
   useEffect(() => {
     const sliderEl = sliderRef.current
@@ -119,18 +106,15 @@ export function PricingSection() {
   }, [pricingItems.length])
 
   useEffect(() => {
-    if (typeof window === "undefined") return
     const tier = pricingItems[activeSlide]
-    if (!tier) return
-    window.dispatchEvent(
-      new CustomEvent("pricing-slide-active", {
-        detail: { tierName: tier.name, index: activeSlide },
-      })
-    )
-  }, [activeSlide, pricingItems])
+    if (tier) {
+      onActiveTierChange?.(tier.name)
+    }
+  }, [activeSlide, pricingItems, onActiveTierChange])
 
   const handleTierSelect = (tierName: string) => {
     setExpandedTier(expandedTier === tierName ? null : tierName)
+    onActiveTierChange?.(tierName)
     setFormData({
       email: "",
       phone: "",

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { siteConfig } from "@/lib/config"
 import { CompanyShowcase } from "@/components/sections/company-showcase"
 import { FAQSection } from "@/components/sections/faq-section"
 // import { FeatureSection } from "@/components/sections/feature-section"
@@ -15,6 +16,7 @@ import { MiniPricingBar } from "@/components/mini-pricing-bar"
 
 export default function Home() {
   const [showMiniBar, setShowMiniBar] = useState(false)
+  const [activeTier, setActiveTier] = useState(() => siteConfig.pricing.pricingItems[0]?.name ?? "")
   const pricingRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
@@ -49,6 +51,7 @@ export default function Home() {
   }, [])
 
   const handleMiniTierClick = (tierName: string) => {
+    setActiveTier(tierName)
     const pricing = pricingRef.current ?? document.getElementById("get-started")
     if (!pricing) return
 
@@ -72,13 +75,13 @@ export default function Home() {
         <TestimonialSection />
         {/* <FeatureSection /> */}
         {/* <GrowthSection /> */}
-        <PricingSection />
+        <PricingSection activeTier={activeTier} onActiveTierChange={setActiveTier} />
         {/* <SignupSection /> */}
         <FAQSection />
         {/* <CTASection /> */}
         <FooterSection />
       </main>
-      <MiniPricingBar show={showMiniBar} onTierClick={handleMiniTierClick} />
+      <MiniPricingBar show={showMiniBar} activeTier={activeTier} onTierClick={handleMiniTierClick} />
     </>
   )
 }

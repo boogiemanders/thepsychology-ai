@@ -8,14 +8,14 @@ import { ChevronDown } from "lucide-react"
 
 type MiniPricingBarProps = {
   show: boolean
+  activeTier: string
   onTierClick?: (tierName: string) => void
 }
 
-export function MiniPricingBar({ show, onTierClick }: MiniPricingBarProps) {
+export function MiniPricingBar({ show, activeTier, onTierClick }: MiniPricingBarProps) {
   const [isMounted, setIsMounted] = useState(false)
 
   const tiers = useMemo(() => siteConfig.pricing.pricingItems, [])
-  const [activeMiniTier, setActiveMiniTier] = useState<string>(tiers[0]?.name ?? "")
 
   useEffect(() => {
     setIsMounted(true)
@@ -28,21 +28,6 @@ export function MiniPricingBar({ show, onTierClick }: MiniPricingBarProps) {
       section.scrollIntoView({ behavior: "smooth", block: "center" })
     }
   }
-
-  useEffect(() => {
-    const handleActive = (event: Event) => {
-      const customEvent = event as CustomEvent<{ tierName: string }>
-      const tierName = customEvent.detail?.tierName
-      if (tierName) {
-        setActiveMiniTier(tierName)
-      }
-    }
-
-    window.addEventListener("pricing-slide-active", handleActive as EventListener)
-    return () => {
-      window.removeEventListener("pricing-slide-active", handleActive as EventListener)
-    }
-  }, [])
 
   const handleSelect = (tierName: string) => {
     onTierClick?.(tierName)
@@ -79,7 +64,7 @@ export function MiniPricingBar({ show, onTierClick }: MiniPricingBarProps) {
                   ? tier.displayPrice.split("/").map((part) => part.trim())
                   : [tier.price, tier.period]
 
-                const isActive = activeMiniTier === tier.name
+                const isActive = activeTier === tier.name
 
                 return (
                   <button
