@@ -84,7 +84,7 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "Examples",
-    description: "Study less. Score higher. Here’s how.",
+    description: "Conversational demonstration",
     items: [
       {
         id: 1,
@@ -207,7 +207,7 @@ export const siteConfig = {
       img: "https://randomuser.me/api/portraits/women/44.jpg",
       description: (
         <p>
-          The <Highlight className="text-brand-sage">adaptive quizzes</Highlight> were a game-changer for me. They identified my weak areas and
+          The <Highlight className="text-brand-soft-blue dark:text-brand-sage">adaptive quizzes</Highlight> were a game-changer for me. They identified my weak areas and
           helped me focus my study time effectively. Passed on my first attempt!
         </p>
       ),
@@ -219,7 +219,7 @@ export const siteConfig = {
       img: "https://randomuser.me/api/portraits/men/32.jpg",
       description: (
         <p>
-          I loved the <Highlight className="text-brand-soft-blue">multimodal learning approach</Highlight>. Being able to switch between text, audio, and
+          I loved the <Highlight className="text-brand-coral dark:text-brand-soft-blue">multimodal learning approach</Highlight>. Being able to switch between text, audio, and
           video kept me engaged and helped me retain information better.
         </p>
       ),
@@ -231,7 +231,7 @@ export const siteConfig = {
       img: "https://randomuser.me/api/portraits/women/68.jpg",
       description: (
         <p>
-          The <Highlight className="text-brand-olive">coaching sessions with Dr. Chan</Highlight> were invaluable. His insights and study strategies
+          The <Highlight className="text-brand-dusty-rose dark:text-brand-olive">coaching sessions with Dr. Chan</Highlight> were invaluable. His insights and study strategies
           made all the difference in my preparation.
         </p>
       ),
@@ -244,7 +244,7 @@ export const siteConfig = {
       description: (
         <p>
           I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and{" "}
-          <Highlight className="text-brand-coral">I got a 588 on my first try.</Highlight> This program is what I wish I had for a fraction of the
+          <Highlight className="text-brand-soft-blue dark:text-brand-coral">I got a 588 on my first try.</Highlight> This program is what I wish I had for a fraction of the
           time, cost, and stress.
         </p>
       ),
@@ -256,7 +256,7 @@ export const siteConfig = {
       img: "https://randomuser.me/api/portraits/women/90.jpg",
       description: (
         <p>
-          The <Highlight className="text-brand-dusty-rose">mobile-friendly platform</Highlight> allowed me to study during my commute and lunch breaks.
+          The <Highlight className="text-brand-coral dark:text-brand-dusty-rose">mobile-friendly platform</Highlight> allowed me to study during my commute and lunch breaks.
           Made the most of every spare moment!
         </p>
       ),
@@ -265,10 +265,10 @@ export const siteConfig = {
       id: "6",
       name: "Dr. Menon",
       role: "Licensed Psychologist",
-      img: "https://api.placeholder.com/40x40?text=DM",
+      img: "/images/user-icon.svg",
       description: (
         <p>
-          thePsychology.ai is truly <Highlight className="text-brand-lavender-gray">one-of-a-kind</Highlight>. It's an <Highlight className="text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel engaging and manageable, and it clearly reflects a design philosophy of being <Highlight className="text-brand-lavender-gray">'for the people, by the people'</Highlight>.
+          thePsychology.ai is truly <Highlight className="text-brand-olive dark:text-brand-lavender-gray">one-of-a-kind</Highlight>. It's an <Highlight className="text-brand-olive dark:text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel engaging and manageable, and it clearly reflects a design philosophy of being <Highlight className="text-brand-olive dark:text-brand-lavender-gray">'for the people, by the people'</Highlight>.
         </p>
       ),
     },

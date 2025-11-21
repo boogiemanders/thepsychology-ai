@@ -34,7 +34,14 @@ export const TestimonialCard = ({
     </div>
 
     <div className="flex w-full select-none items-center justify-start gap-2">
-      <img src={img} alt={name} className="size-7 rounded-full flex-shrink-0" />
+      <img
+        src={img}
+        alt={name}
+        className={cn(
+          "size-7 rounded-full flex-shrink-0",
+          img?.includes("user-icon") && "dark:invert"
+        )}
+      />
 
       <div>
         <p className="font-medium text-primary/90 text-xs">{name}</p>
@@ -64,12 +71,16 @@ export function SocialProofTestimonials({
           {testimonials.map((card, idx) => {
             const isMenon = card.name.toLowerCase().includes("menon")
             const widthClass = isMenon ? "w-[460px]" : "w-[380px]"
+            const cardClassName = cn(
+              "h-full w-full break-words",
+              isMenon ? "max-w-[420px] mx-auto" : "max-w-full"
+            )
             return (
-              <div key={idx} className={`${widthClass} h-[150px] px-1`}>
-                <TestimonialCard
-                  {...card}
-                  className="h-full w-full break-words"
-                />
+              <div
+                key={idx}
+                className={`${widthClass} h-[180px] px-1 flex justify-center`}
+              >
+                <TestimonialCard {...card} className={cardClassName} />
               </div>
             )
           })}
