@@ -131,6 +131,19 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // For practice exams, try loading from cached GPT JSON exams first
+    if (examType === 'practice') {
+      try {
+        const examData = loadPracticeFromGpt()
+        return NextResponse.json(examData)
+      } catch (practiceError) {
+        console.warn(
+          '[Exam Generator] Failed to load practice exam from examsGPT, falling back to Anthropic generation:',
+          practiceError
+        )
+      }
+    }
+
     const prompt = examType === 'diagnostic' ? DIAGNOSTIC_EXAM_PROMPT : PRACTICE_EXAM_PROMPT
 
     const response = await client.messages.create({
@@ -236,5 +249,72 @@ function loadDiagnosticFromGpt() {
 
   return {
     questions: mappedQuestions,
+  }
+}
+
+/**
+ * Load a practice exam from the examsGPT folder (practice-exam-*.json files)
+ * This avoids needing to call Anthropic if we already have cached practice exams.
+ */
+function loadPracticeFromGpt() {
+  const practiceDir = join(process.cwd(), 'examsGPT')
+  if (!existsSync(practiceDir)) {
+    throw new Error(`examsGPT directory not found at ${practiceDir}`)
+  }
+
+  const files = readdirSync(practiceDir).filter(
+    (name) => name.startsWith('practice-exam-') && name.endsWith('.json')
+  )
+
+  if (files.length === 0) {
+    throw new Error('No practice-exam-*.json files found in examsGPT')
+  }
+
+  // Randomize the exam selection to keep attempts fresh
+  const chosen = files[Math.floor(Math.random() * files.length)]
+  const fullPath = join(practiceDir, chosen)
+
+  const raw = readFileSync(fullPath, 'utf-8')
+  const parsed = JSON.parse(raw)
+  const questions = Array.isArray(parsed.questions) ? parsed.questions : []
+
+  const mappedQuestions = questions.map((q: any, idx: number) => {
+    const domainNumber =
+      typeof q.domain === 'number'
+        ? q.domain
+        : typeof q.domain === 'string'
+        ? parseInt(q.domain, 10)
+        : undefined
+
+    const questionId = typeof q.id === 'number' ? q.id : idx + 1
+    const options = Array.isArray(q.options) ? q.options : []
+
+    const isScored =
+      typeof q.scored === 'boolean'
+        ? q.scored
+        : typeof q.isScored === 'boolean'
+        ? q.isScored
+        : true
+
+    return {
+      id: questionId,
+      question: q.stem ?? q.question ?? '',
+      options,
+      correct_answer: q.answer ?? q.correct_answer ?? '',
+      explanation: q.explanation ?? q.rationale ?? '',
+      domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
+      difficulty:
+        q.difficulty === 'easy' || q.difficulty === 'medium' || q.difficulty === 'hard'
+          ? q.difficulty
+          : 'medium',
+      isScored,
+      knId: q.kn ?? q.knId,
+      type: q.type ?? (isScored ? 'standard' : 'experimental'),
+    }
+  })
+
+  return {
+    questions: mappedQuestions,
+    metadata: parsed.meta ?? null,
   }
 }
