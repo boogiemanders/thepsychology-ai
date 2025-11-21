@@ -61,14 +61,18 @@ export function SocialProofTestimonials({
     <div className="w-full">
       <div className="relative overflow-hidden py-8">
         <Marquee className="[--duration:60s]">
-          {testimonials.map((card, idx) => (
-            <div key={idx} className="w-[380px] h-[150px] px-1">
-              <TestimonialCard
-                {...card}
-                className="h-full w-full break-words"
-              />
-            </div>
-          ))}
+          {testimonials.map((card, idx) => {
+            const isMenon = card.name.toLowerCase().includes("menon")
+            const widthClass = isMenon ? "w-[460px]" : "w-[380px]"
+            return (
+              <div key={idx} className={`${widthClass} h-[150px] px-1`}>
+                <TestimonialCard
+                  {...card}
+                  className="h-full w-full break-words"
+                />
+              </div>
+            )
+          })}
         </Marquee>
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-background from-20%"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-background from-20%"></div>
