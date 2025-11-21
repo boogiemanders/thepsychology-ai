@@ -232,7 +232,7 @@ export function OrbitingLoopSection() {
         </SectionHeader>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 py-10 items-center">
-          <div className="space-y-6">
+          <div className="order-2 lg:order-1 space-y-6">
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xl">
               Your AI coach helps you study what you actually need.
             </p>
@@ -269,7 +269,7 @@ export function OrbitingLoopSection() {
 
           <div
             ref={containerRef}
-            className="relative flex w-full max-w-[420px] md:max-w-[520px] mx-auto items-center justify-center overflow-hidden py-10 h-[360px] md:h-[420px] -translate-x-2 md:-translate-x-4"
+            className="order-1 lg:order-2 relative flex w-full max-w-[420px] md:max-w-[520px] mx-auto items-center justify-center overflow-hidden py-10 h-[360px] md:h-[420px] -translate-x-2 md:-translate-x-4"
           >
             {/* Parallelogram layout for the four stages */}
             <Circle
