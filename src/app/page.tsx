@@ -15,29 +15,9 @@ import { MiniPricingBar } from "@/components/mini-pricing-bar"
 
 export default function Home() {
   const [showMiniBar, setShowMiniBar] = useState(false)
-  const [isDesktop, setIsDesktop] = useState(false)
   const pricingRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
-    const updateIsDesktop = () => {
-      if (typeof window === "undefined") return
-      setIsDesktop(window.innerWidth >= 768)
-    }
-
-    updateIsDesktop()
-    window.addEventListener("resize", updateIsDesktop)
-
-    return () => {
-      window.removeEventListener("resize", updateIsDesktop)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!isDesktop) {
-      setShowMiniBar(false)
-      return
-    }
-
     const hero = document.getElementById("hero")
     const pricing = document.getElementById("get-started")
     if (pricing) {
@@ -66,7 +46,7 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("resize", handleScroll)
     }
-  }, [isDesktop])
+  }, [])
 
   const handleMiniTierClick = (tierName: string) => {
     const pricing = pricingRef.current ?? document.getElementById("get-started")
@@ -98,7 +78,7 @@ export default function Home() {
         {/* <CTASection /> */}
         <FooterSection />
       </main>
-      <MiniPricingBar show={isDesktop && showMiniBar} onTierClick={handleMiniTierClick} />
+      <MiniPricingBar show={showMiniBar} onTierClick={handleMiniTierClick} />
     </>
   )
 }

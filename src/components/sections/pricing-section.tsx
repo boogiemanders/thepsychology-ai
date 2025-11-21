@@ -402,7 +402,7 @@ export function PricingSection() {
         <p className="text-muted-foreground text-center text-balance font-medium">{siteConfig.pricing.description}</p>
       </SectionHeader>
       <div className="relative w-full h-full space-y-8 lg:space-y-0">
-        <div className="w-full lg:hidden">
+        <div className="w-full lg:hidden relative z-10">
           <div
             ref={sliderRef}
             className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-pl-6 px-6 pb-4 -mx-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
