@@ -32,6 +32,13 @@ import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button
 export default function DashboardPage() {
   const router = useRouter()
   const { user, userProfile, loading, signOut, refreshProfile } = useAuth()
+  const getBaseUrl = () => {
+    if (typeof window !== 'undefined') {
+      return window.location.origin
+    }
+    return (process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || '').replace(/\/$/, '')
+  }
+  const prioritizeHref = `${getBaseUrl()}/prioritize`
   const [mounted, setMounted] = useState(false)
   const [progressData, setProgressData] = useState({
     totalCompletion: 0,
@@ -96,31 +103,82 @@ export default function DashboardPage() {
     setMounted(true)
   }, [])
 
+  const storeExamDateLocally = useCallback((dateString: string) => {
+    if (typeof window === 'undefined') return
+
+    try {
+      if (user?.id) {
+        localStorage.setItem(`examDate_${user.id}`, dateString)
+      }
+
+      // Legacy fallback structure for older users
+      const currentUser = localStorage.getItem('currentUser')
+      if (currentUser) {
+        const userData = JSON.parse(currentUser)
+        const usersData = localStorage.getItem('users')
+        if (usersData) {
+          const users = JSON.parse(usersData)
+          const userIndex = users.findIndex((u: any) => u.id === userData.id)
+          if (userIndex !== -1) {
+            if (!users[userIndex].goals) {
+              users[userIndex].goals = {}
+            }
+            users[userIndex].goals.examDate = dateString
+            localStorage.setItem('users', JSON.stringify(users))
+          }
+        }
+      }
+    } catch (e) {
+      console.error('Error updating exam date in localStorage:', e)
+    }
+  }, [user?.id])
+
+  const loadExamDateFromLocalStorage = useCallback(() => {
+    if (typeof window === 'undefined') return null
+
+    try {
+      if (user?.id) {
+        const storedValue = localStorage.getItem(`examDate_${user.id}`)
+        if (storedValue) {
+          return storedValue
+        }
+      }
+
+      const currentUser = localStorage.getItem('currentUser')
+      if (currentUser) {
+        const userData = JSON.parse(currentUser)
+        const usersData = localStorage.getItem('users')
+        if (usersData) {
+          const users = JSON.parse(usersData)
+          const userRecord = users.find((u: any) => u.id === userData.id)
+          if (userRecord?.goals?.examDate) {
+            return userRecord.goals.examDate
+          }
+        }
+      }
+    } catch (e) {
+      console.error('Error retrieving exam date from localStorage:', e)
+    }
+
+    return null
+  }, [user?.id])
+
   // Load exam date when userProfile changes
   useEffect(() => {
     if (userProfile?.exam_date) {
       console.log('[Dashboard] Loading exam date from userProfile:', userProfile.exam_date)
       setExamDate(userProfile.exam_date)
-    } else if (typeof window !== 'undefined') {
-      // Fallback to localStorage for backwards compatibility
-      const currentUser = localStorage.getItem('currentUser')
-      if (currentUser) {
-        try {
-          const userData = JSON.parse(currentUser)
-          const usersData = localStorage.getItem('users')
-          if (usersData) {
-            const users = JSON.parse(usersData)
-            const user = users.find((u: any) => u.id === userData.id)
-            if (user?.goals?.examDate) {
-              setExamDate(user.goals.examDate)
-            }
-          }
-        } catch (e) {
-          console.error('Error retrieving exam date:', e)
-        }
+      if (user?.id) {
+        storeExamDateLocally(userProfile.exam_date)
       }
+      return
     }
-  }, [userProfile])
+
+    const localExamDate = loadExamDateFromLocalStorage()
+    if (localExamDate) {
+      setExamDate(localExamDate)
+    }
+  }, [userProfile, loadExamDateFromLocalStorage, storeExamDateLocally, user?.id])
 
   // Load priority recommendations from Supabase
   useEffect(() => {
@@ -319,6 +377,7 @@ export default function DashboardPage() {
       const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
       console.log('[Dashboard] Saving exam date:', dateString, 'for user:', user.id)
       setExamDate(dateString)
+      storeExamDateLocally(dateString)
 
       // Save to Supabase
       try {
@@ -329,7 +388,8 @@ export default function DashboardPage() {
           .select()
 
         if (error) {
-          console.error('[Dashboard] Supabase update error:', error)
+          const supabaseMessage = error?.message || error || 'Unknown error'
+          console.warn('[Dashboard] Supabase exam date update skipped (using local cache):', supabaseMessage)
         } else {
           console.log('[Dashboard] Exam date saved to Supabase successfully:', dateString, 'Response:', data)
           // Refresh the user profile to get the updated exam date
@@ -337,30 +397,6 @@ export default function DashboardPage() {
         }
       } catch (error) {
         console.error('[Dashboard] Supabase save failed:', error)
-      }
-
-      // Also update localStorage as fallback
-      if (typeof window !== 'undefined') {
-        const currentUser = localStorage.getItem('currentUser')
-        if (currentUser) {
-          try {
-            const userData = JSON.parse(currentUser)
-            const usersData = localStorage.getItem('users')
-            if (usersData) {
-              const users = JSON.parse(usersData)
-              const userIndex = users.findIndex((u: any) => u.id === userData.id)
-              if (userIndex !== -1) {
-                if (!users[userIndex].goals) {
-                  users[userIndex].goals = {}
-                }
-                users[userIndex].goals.examDate = dateString
-                localStorage.setItem('users', JSON.stringify(users))
-              }
-            }
-          } catch (e) {
-            console.error('Error updating localStorage:', e)
-          }
-        }
       }
 
       setIsExamDatePopoverOpen(false)
@@ -442,9 +478,9 @@ export default function DashboardPage() {
     },
     {
       Icon: History,
-      name: "Review Exams",
-      description: "View your completed practice exams",
-      href: "/review-exams",
+      name: "Prioritize",
+      description: "Review exams results",
+      href: prioritizeHref,
       cta: "View Results",
       className: "lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
     },

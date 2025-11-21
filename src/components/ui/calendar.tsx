@@ -6,12 +6,25 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "lucide-react"
-import { DayButton, DayPicker, getDefaultClassNames, DropdownProps } from "react-day-picker"
+import { DayButton, DayPicker, getDefaultClassNames, useDayPicker } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ScrollArea } from "@/components/ui/scroll-area"
+
+const SHORT_MONTH_LABELS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+]
 
 function Calendar({
   className,
@@ -30,6 +43,7 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
+      hideNavigation
       className={cn(
         "bg-background group/calendar p-3 [--cell-size:3rem] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent",
         String.raw`rtl:**:[.rdp-button\_next>svg]:rotate-180`,
@@ -38,10 +52,13 @@ function Calendar({
       )}
       captionLayout={captionLayout}
       formatters={{
-        formatMonthCaption: (date) =>
-          date.toLocaleString("default", { month: "long", year: "numeric" }),
+        formatMonthCaption: (date) => {
+          const month = SHORT_MONTH_LABELS[date.getMonth()]
+          const year = date.getFullYear().toString()
+          return `${month} ${year}`
+        },
         formatMonthDropdown: (date) =>
-          date.toLocaleString("default", { month: "long" }),
+          SHORT_MONTH_LABELS[date.getMonth()],
         formatYearDropdown: (date) =>
           date.getFullYear().toString(),
         ...formatters,
@@ -54,7 +71,7 @@ function Calendar({
         ),
         month: cn("flex w-full flex-col gap-4", defaultClassNames.month),
         nav: cn(
-          "absolute inset-x-0 top-0 flex w-full items-center justify-between gap-1",
+          "flex w-full items-center justify-between gap-1",
           defaultClassNames.nav
         ),
         button_previous: cn(
@@ -161,37 +178,6 @@ function Calendar({
             <ChevronDownIcon className={cn("size-4", className)} {...props} />
           )
         },
-        Dropdown: ({ value, onChange, children, ...props }: DropdownProps) => {
-          const options = React.Children.toArray(children) as React.ReactElement<React.HTMLProps<HTMLOptionElement>>[]
-          const selected = options.find((child) => child.props.value === value)
-          const handleChange = (value: string) => {
-            const changeEvent = {
-              target: { value },
-            } as React.ChangeEvent<HTMLSelectElement>
-            onChange?.(changeEvent)
-          }
-          return (
-            <Select
-              value={value?.toString()}
-              onValueChange={(value) => {
-                handleChange(value)
-              }}
-            >
-              <SelectTrigger className="pr-1.5 focus:ring-0 border border-input hover:border-primary/50 cursor-pointer">
-                <SelectValue className="font-medium">{selected?.props?.children}</SelectValue>
-              </SelectTrigger>
-              <SelectContent position="popper" className="w-auto">
-                <ScrollArea className="h-80 w-auto">
-                  {options.map((option, id: number) => (
-                    <SelectItem key={`${option.props.value}-${id}`} value={option.props.value?.toString() ?? ""}>
-                      {option.props.children}
-                    </SelectItem>
-                  ))}
-                </ScrollArea>
-              </SelectContent>
-            </Select>
-          )
-        },
         DayButton: CalendarDayButton,
         WeekNumber: ({ children, ...props }) => {
           return (
@@ -202,6 +188,7 @@ function Calendar({
             </td>
           )
         },
+        DropdownNav: CalendarDropdownNav,
         ...components,
       }}
       {...props}
@@ -248,3 +235,59 @@ function CalendarDayButton({
 }
 
 export { Calendar, CalendarDayButton }
+
+function CalendarDropdownNav({
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  const { previousMonth, nextMonth, goToMonth, dayPickerProps } = useDayPicker()
+  const childArray = React.Children.toArray(children)
+  const status = childArray.slice(-1)
+  const controls = childArray.slice(0, -1)
+
+  const handlePrevious = () => {
+    if (!previousMonth) return
+    goToMonth(previousMonth)
+    dayPickerProps?.onPrevClick?.(previousMonth)
+  }
+
+  const handleNext = () => {
+    if (!nextMonth) return
+    goToMonth(nextMonth)
+    dayPickerProps?.onNextClick?.(nextMonth)
+  }
+
+  return (
+    <div
+      {...props}
+      className={cn(
+        "flex w-full items-center justify-center gap-2",
+        className
+      )}
+    >
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-8 w-8 rounded-full border border-input shadow-sm"
+        onClick={handlePrevious}
+        disabled={!previousMonth}
+      >
+        <ChevronLeftIcon className="h-4 w-4" />
+      </Button>
+      <div className="flex items-center gap-1.5">
+        {controls}
+      </div>
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-8 w-8 rounded-full border border-input shadow-sm"
+        onClick={handleNext}
+        disabled={!nextMonth}
+      >
+        <ChevronRightIcon className="h-4 w-4" />
+      </Button>
+      {status}
+    </div>
+  )
+}
