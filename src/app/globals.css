@@ -9,6 +9,12 @@
   font-family: "Microsoft Sans Serif", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 }
 
+/* Preserve exam question typography even when HTML markup is injected */
+.exam-question-text,
+.exam-question-text * {
+  font-family: "Tahoma", "Geneva", sans-serif;
+}
+
 /* Clean, spacious typography inspired by MIT design - only for main content */
 html {
   font-size: 16px;

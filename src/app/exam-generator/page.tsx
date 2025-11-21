@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -59,10 +59,70 @@ export default function ExamGeneratorPage() {
   const [isSavingResults, setIsSavingResults] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
+  const questionContentRef = useRef<HTMLDivElement | null>(null)
+  const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
+
+  const resolveSelectionText = useCallback(() => {
+    if (typeof window === 'undefined') return null
+
+    const selection = window.getSelection()
+    const container = questionContentRef.current
+
+    if (selection && container && selection.rangeCount > 0) {
+      const selectedText = selection.toString()
+      if (selectedText.trim()) {
+        const anchorInside = selection.anchorNode ? container.contains(selection.anchorNode) : false
+        const focusInside = selection.focusNode ? container.contains(selection.focusNode) : false
+        if (anchorInside || focusInside) {
+          lastSelectionRef.current = {
+            text: selectedText,
+            questionIndex: currentQuestion,
+          }
+          return selectedText
+        }
+      }
+    }
+
+    if (lastSelectionRef.current?.questionIndex === currentQuestion) {
+      return lastSelectionRef.current.text
+    }
+
+    return null
+  }, [currentQuestion])
+
+  useEffect(() => {
+    const handleSelectionChange = () => {
+      const container = questionContentRef.current
+      if (!container) return
+
+      const selection = window.getSelection()
+      if (!selection || selection.rangeCount === 0) return
+
+      const selectedText = selection.toString()
+      if (!selectedText.trim()) return
+
+      const anchorInside = selection.anchorNode ? container.contains(selection.anchorNode) : false
+      const focusInside = selection.focusNode ? container.contains(selection.focusNode) : false
+
+      if (anchorInside || focusInside) {
+        lastSelectionRef.current = {
+          text: selectedText,
+          questionIndex: currentQuestion,
+        }
+      }
+    }
+
+    document.addEventListener('selectionchange', handleSelectionChange)
+    return () => document.removeEventListener('selectionchange', handleSelectionChange)
+  }, [currentQuestion])
+
+  useEffect(() => {
+    lastSelectionRef.current = null
+  }, [currentQuestion])
 
   // Apply highlight to selected text (question and answer choices)
   const handleHighlightText = useCallback(() => {
-    const selectedText = window.getSelection()?.toString()
+    const selectedText = resolveSelectionText()
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
@@ -125,13 +185,14 @@ export default function ExamGeneratorPage() {
             options: newOptions
           }
         }))
+        lastSelectionRef.current = null
       }
     }
-  }, [currentQuestion, questions, textFormats])
+  }, [currentQuestion, questions, textFormats, resolveSelectionText])
 
   // Apply strikethrough to selected text (question and answer choices)
   const handleStrikethroughText = useCallback(() => {
-    const selectedText = window.getSelection()?.toString()
+    const selectedText = resolveSelectionText()
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
@@ -193,9 +254,10 @@ export default function ExamGeneratorPage() {
             options: newOptions
           }
         }))
+        lastSelectionRef.current = null
       }
     }
-  }, [currentQuestion, questions, textFormats])
+  }, [currentQuestion, questions, textFormats, resolveSelectionText])
 
   // Save paused exam state to localStorage
   const savePausedExamState = () => {
@@ -418,22 +480,35 @@ export default function ExamGeneratorPage() {
 
       if (!modifier) return
 
-      switch (e.key.toLowerCase()) {
+      const normalizedKey = (e.code || e.key || '').toLowerCase()
+
+      switch (normalizedKey) {
+        case 'keyp':
         case 'p':
           e.preventDefault()
           if (currentQuestion > 0) handlePrevious()
           break
+        case 'keyn':
         case 'n':
           e.preventDefault()
           if (currentQuestion < questions.length - 1) handleNext()
           break
+        case 'keyh':
         case 'h':
           e.preventDefault()
           handleHighlightText()
           break
+        case 'keys':
         case 's':
           e.preventDefault()
           handleStrikethroughText()
+          break
+        case 'keye':
+        case 'e':
+          if (currentQuestion === questions.length - 1) {
+            e.preventDefault()
+            handleEndExam()
+          }
           break
         default:
           break
@@ -442,7 +517,7 @@ export default function ExamGeneratorPage() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isExamStarted, currentQuestion, questions.length, handleNext, handlePrevious, handleHighlightText, handleStrikethroughText])
+  }, [isExamStarted, currentQuestion, questions.length, handleNext, handlePrevious, handleHighlightText, handleStrikethroughText, handleEndExam])
 
   // Initialize recommended defaults from exam history
   useEffect(() => {
@@ -1041,6 +1116,7 @@ export default function ExamGeneratorPage() {
             <div className="flex flex-col gap-1">
               <Button
                 onClick={handleHighlightText}
+                onMouseDown={(e) => e.preventDefault()}
                 variant="outline"
                 size="sm"
                 className="rounded-none hover:bg-accent transition-colors"
@@ -1053,6 +1129,7 @@ export default function ExamGeneratorPage() {
             <div className="flex flex-col gap-1">
               <Button
                 onClick={handleStrikethroughText}
+                onMouseDown={(e) => e.preventDefault()}
                 variant="outline"
                 size="sm"
                 className="rounded-none hover:bg-accent transition-colors"
@@ -1066,90 +1143,93 @@ export default function ExamGeneratorPage() {
 
           {/* Question - Wrapped with min-height to keep nav box position consistent */}
           <div className="min-h-[calc(100vh-320px)] flex flex-col">
-            <Card className="rounded-none flex-1 flex flex-col">
-              <CardHeader>
-                <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text" style={{ fontFamily: 'Tahoma' }}>
-                  {textFormats[currentQuestion]?.question ? (
-                    <div dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].question }} />
-                  ) : (
-                    question.question
-                  )}
-                </CardTitle>
-              </CardHeader>
-              <Separator />
-              <CardContent className="pt-6 flex-1 flex flex-col">
-                {/* Answer Options - Radio Style */}
-                <div className="space-y-3">
-              {question.options.map((option, idx) => {
-                const isSelected = selectedAnswer === option
-                const isAnswered = selectedAnswer !== undefined
-                const optionLetter = String.fromCharCode(65 + idx)
-                const optionIsCorrect = option === question.correct_answer
-                const isShowingCorrect = (mode === 'study' && isAnswered) || (mode === 'test' && currentQuestion === questions.length - 1)
+            <div ref={questionContentRef} className="flex-1 flex flex-col">
+              <Card className="rounded-none flex-1 flex flex-col">
+                <CardHeader>
+                  <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text exam-question-text" style={{ fontFamily: 'Tahoma' }}>
+                    {textFormats[currentQuestion]?.question ? (
+                      <div dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].question }} />
+                    ) : (
+                      question.question
+                    )}
+                  </CardTitle>
+                </CardHeader>
+                <Separator />
+                <CardContent className="pt-6 flex-1 flex flex-col">
+                  {/* Answer Options - Radio Style */}
+                  <div className="space-y-3">
+                    {question.options.map((option, idx) => {
+                      const isSelected = selectedAnswer === option
+                      const isAnswered = selectedAnswer !== undefined
+                      const optionLetter = String.fromCharCode(65 + idx)
+                      const optionIsCorrect = option === question.correct_answer
+                      const isShowingCorrect = (mode === 'study' && isAnswered) || (mode === 'test' && currentQuestion === questions.length - 1)
 
-                return (
-                  <div key={idx} className="flex items-start gap-3 p-2">
-                    {/* Radio Button - Only This is Clickable */}
-                    <motion.button
-                      whileHover={!isAnswered ? { scale: 1.15 } : {}}
-                      onClick={() => (mode === 'test' || !isAnswered) && handleSelectAnswer(option)}
-                      disabled={mode === 'study' && isAnswered}
-                      className={`flex-shrink-0 mt-2 transition-all cursor-pointer disabled:cursor-not-allowed ${
-                        isSelected ? 'scale-110' : ''
-                      }`}
+                      return (
+                        <div key={idx} className="flex items-start gap-3 p-2">
+                          {/* Radio Button - Only This is Clickable */}
+                          <motion.button
+                            whileHover={!isAnswered ? { scale: 1.15 } : {}}
+                            onClick={() => (mode === 'test' || !isAnswered) && handleSelectAnswer(option)}
+                            disabled={mode === 'study' && isAnswered}
+                            className={`flex-shrink-0 mt-2 transition-all cursor-pointer disabled:cursor-not-allowed ${
+                              isSelected ? 'scale-110' : ''
+                            }`}
+                          >
+                            <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all ${
+                              isSelected
+                                ? 'border-foreground bg-foreground'
+                                : 'border-muted-foreground bg-transparent hover:border-foreground'
+                            }`}>
+                              {isSelected && (
+                                <div className="w-2 h-2 bg-white rounded-full" />
+                              )}
+                            </div>
+                          </motion.button>
+
+                          {/* Option Text - Not Clickable */}
+                          <div className="flex-1 min-w-0 pt-1">
+                            <div className="text-base text-foreground exam-question-text" style={{ fontFamily: 'Tahoma' }}>
+                              <span>{optionLetter}.</span>{' '}
+                              {textFormats[currentQuestion]?.options?.[idx] ? (
+                                <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
+                              ) : (
+                                option
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  {/* Explanation - Only shown in Study Mode or after test is complete */}
+                  {showExplanation && (mode === 'study' || (mode === 'test' && currentQuestion === questions.length - 1)) && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="mt-6 p-4 rounded-none border bg-muted/50 border-border"
                     >
-                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all ${
-                        isSelected
-                          ? 'border-foreground bg-foreground'
-                          : 'border-muted-foreground bg-transparent hover:border-foreground'
-                      }`}>
-                        {isSelected && (
-                          <div className="w-2 h-2 bg-white rounded-full" />
-                        )}
+                      <div className="flex items-start justify-between mb-3">
+                        <p className="font-semibold">
+                          {isCorrect ? 'Correct' : 'Incorrect'}
+                        </p>
+                        <div className="text-right">
+                          <p className="text-xs text-muted-foreground mb-1">Correct Answer</p>
+                          <p className="text-2xl font-bold">
+                            {correctLetter}
+                          </p>
+                        </div>
                       </div>
-                    </motion.button>
-
-                    {/* Option Text - Not Clickable */}
-                    <div className="flex-1 min-w-0 pt-1">
-                      <div className="text-base text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                        <span>{optionLetter}.</span> {textFormats[currentQuestion]?.options?.[idx] ? (
-                          <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
-                        ) : (
-                          option
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
-              </div>
-
-              {/* Explanation - Only shown in Study Mode or after test is complete */}
-              {showExplanation && (mode === 'study' || (mode === 'test' && currentQuestion === questions.length - 1)) && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-6 p-4 rounded-none border bg-muted/50 border-border"
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <p className="font-semibold">
-                      {isCorrect ? 'Correct' : 'Incorrect'}
-                    </p>
-                    <div className="text-right">
-                      <p className="text-xs text-muted-foreground mb-1">Correct Answer</p>
-                      <p className="text-2xl font-bold">
-                        {correctLetter}
+                      <Separator className="my-3" />
+                      <p className="text-sm text-muted-foreground">
+                        {question.explanation}
                       </p>
-                    </div>
-                  </div>
-                  <Separator className="my-3" />
-                  <p className="text-sm text-muted-foreground">
-                    {question.explanation}
-                  </p>
-                </motion.div>
-              )}
-              </CardContent>
-            </Card>
+                    </motion.div>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Navigation - Sticky Bottom */}
@@ -1201,6 +1281,9 @@ export default function ExamGeneratorPage() {
                     >
                       {isSavingResults ? 'Saving...' : 'End Exam'}
                     </Button>
+                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                      {isMac ? 'Option' : 'Alt'} + E
+                    </span>
                   </div>
                 ) : (
                   <div className="flex flex-col gap-1 items-center">
