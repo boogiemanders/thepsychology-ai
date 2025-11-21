@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { existsSync, readFileSync } from 'fs'
 import { join } from 'path'
 import { parseExamFile } from '@/lib/exam-file-manager'
+import { inferIsOrgPsych } from '@/lib/org-psych-utils'
 
 /**
  * Assign an exam file to a user
@@ -258,11 +259,6 @@ function loadExamFromDisk(
  * Returns null if no matching JSON file exists so callers can fall back.
  */
 
-function isOrgPsychSource(sourcePath?: string | null): boolean {
-  if (!sourcePath) return false
-  return sourcePath.includes('2 3 5 6 Organizational Psychology')
-}
-
 function loadExamFromGptJson(
   examFile: string,
   examType: 'diagnostic' | 'practice'
@@ -294,7 +290,11 @@ function loadExamFromGptJson(
   const mappedQuestions = questions.map((q: any, idx: number) => {
     const sourceFile = q.sourceFile ?? q.source_file
     const sourceFolder = q.sourceFolder ?? q.source_folder
-    const inferredOrgPsych = isOrgPsychSource(sourceFolder) || isOrgPsychSource(sourceFile)
+    const inferredOrgPsych = inferIsOrgPsych({
+      explicitFlag: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : undefined,
+      sourceFile,
+      sourceFolder,
+    })
 
     const domainNumber =
       typeof q.domain === 'number'
@@ -324,7 +324,7 @@ function loadExamFromGptJson(
       source_folder: sourceFolder,
       question_type: q.question_type,
       // Prefer explicit flag, but infer from Org Psych source folder/path when missing
-      is_org_psych: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : inferredOrgPsych,
+      is_org_psych: inferredOrgPsych,
     }
   })
 

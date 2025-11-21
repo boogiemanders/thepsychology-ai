@@ -2,6 +2,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
+import { inferIsOrgPsych } from '@/lib/org-psych-utils'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -229,6 +230,13 @@ function loadDiagnosticFromGpt() {
         : typeof q.domain === 'string'
         ? parseInt(q.domain, 10)
         : undefined
+    const sourceFile = q.sourceFile ?? q.source_file
+    const sourceFolder = q.sourceFolder ?? q.source_folder
+    const isOrgPsych = inferIsOrgPsych({
+      explicitFlag: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : undefined,
+      sourceFile,
+      sourceFolder,
+    })
 
     return {
       id: idx + 1,
@@ -244,6 +252,9 @@ function loadDiagnosticFromGpt() {
       isScored: typeof q.scored === 'boolean' ? q.scored : q.isScored ?? true,
       knId: q.kn ?? q.knId,
       type: q.type ?? 'standard',
+      source_file: sourceFile,
+      source_folder: sourceFolder,
+      is_org_psych: isOrgPsych,
     }
   })
 
@@ -288,6 +299,13 @@ function loadPracticeFromGpt() {
 
     const questionId = typeof q.id === 'number' ? q.id : idx + 1
     const options = Array.isArray(q.options) ? q.options : []
+    const sourceFile = q.sourceFile ?? q.source_file
+    const sourceFolder = q.sourceFolder ?? q.source_folder
+    const isOrgPsych = inferIsOrgPsych({
+      explicitFlag: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : undefined,
+      sourceFile,
+      sourceFolder,
+    })
 
     const isScored =
       typeof q.scored === 'boolean'
@@ -310,6 +328,9 @@ function loadPracticeFromGpt() {
       isScored,
       knId: q.kn ?? q.knId,
       type: q.type ?? (isScored ? 'standard' : 'experimental'),
+      source_file: sourceFile,
+      source_folder: sourceFolder,
+      is_org_psych: isOrgPsych,
     }
   })
 

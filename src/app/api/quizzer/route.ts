@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
+import { loadTopicQuestions, TopicQuestion } from '@/lib/topic-question-loader'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -42,10 +43,79 @@ IMPORTANT: Include exactly 2 questions with "isScored": false (the hardest ones)
 
 Generate a quiz now. Return ONLY the JSON, no other text.`
 
+function safeDecode(value: string): string {
+  try {
+    return decodeURIComponent(value)
+  } catch {
+    return value
+  }
+}
+
+function normalizeDomain(domain?: string | null): string | undefined {
+  if (!domain) return undefined
+  return domain.split(':')[0].trim()
+}
+
+function shuffleArray<T>(input: T[]): T[] {
+  const arr = [...input]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
+
+function buildQuizFromLocalQuestions(topicName: string, domain?: string) {
+  const loaded = loadTopicQuestions(topicName, domain)
+  if (!loaded) return null
+
+  const validQuestions = loaded.questions.filter((q: TopicQuestion) => {
+    const prompt = q.stem ?? q.question
+    const options = Array.isArray(q.options) ? q.options.filter((opt) => typeof opt === 'string' && opt.trim().length > 0) : []
+    const answer = q.answer ?? q.correct_answer
+    return (
+      typeof prompt === 'string' &&
+      prompt.trim().length > 0 &&
+      options.length >= 2 &&
+      typeof answer === 'string' &&
+      options.includes(answer)
+    )
+  })
+
+  if (validQuestions.length < 10) {
+    console.warn(`[Quizzer] Not enough valid questions for topic "${topicName}" (found ${validQuestions.length})`)
+    return null
+  }
+
+  const selected = shuffleArray(validQuestions).slice(0, 10)
+  const unscoredIndices = new Set<number>()
+
+  while (unscoredIndices.size < Math.min(2, selected.length)) {
+    unscoredIndices.add(Math.floor(Math.random() * selected.length))
+  }
+
+  return selected.map((q, idx) => {
+    const baseOptions = shuffleArray(
+      (Array.isArray(q.options) ? q.options : []).filter((opt) => typeof opt === 'string' && opt.trim().length > 0)
+    )
+    const correctAnswer = q.answer ?? q.correct_answer ?? baseOptions[0]
+
+    return {
+      id: idx + 1,
+      question: q.stem ?? q.question ?? '',
+      options: baseOptions,
+      correctAnswer,
+      explanation: q.explanation ?? '',
+      relatedSections: q.relatedSections && q.relatedSections.length > 0 ? q.relatedSections : [topicName],
+      isScored: !unscoredIndices.has(idx),
+    }
+  })
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { topic } = body
+    const { topic, domain } = body
 
     if (!topic) {
       return NextResponse.json(
@@ -54,24 +124,31 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const decodedTopic = safeDecode(topic)
+    const normalizedDomain = normalizeDomain(domain)
+
+    const localQuiz = decodedTopic ? buildQuizFromLocalQuestions(decodedTopic, normalizedDomain) : null
+    if (localQuiz) {
+      console.log(`[Quizzer] Serving local quiz for topic "${decodedTopic}" (${normalizedDomain ?? 'any domain'})`)
+      return NextResponse.json({ questions: localQuiz })
+    }
+
     const response = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 4000,
       messages: [
         {
           role: 'user',
-          content: `${QUIZZER_PROMPT}\n\nTopic: ${topic}`,
+          content: `${QUIZZER_PROMPT}\n\nTopic: ${decodedTopic}`,
         },
       ],
     })
 
-    // Extract the text content from the response
     const textContent = response.content.find((c) => c.type === 'text')
     if (!textContent || textContent.type !== 'text') {
       throw new Error('No text content in response')
     }
 
-    // Parse the JSON response
     const jsonMatch = textContent.text.match(/\{[\s\S]*\}/)
     if (!jsonMatch) {
       throw new Error('Could not parse quiz JSON from response')

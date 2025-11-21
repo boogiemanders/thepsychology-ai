@@ -1,0 +1,199 @@
+{
+  "questions": [
+    {
+      "stem": "In classical conditioning, which procedure is considered most effective for acquiring a conditioned response?",
+      "options": [
+        "Simultaneous conditioning, where the conditioned stimulus (CS) and unconditioned stimulus (US) occur at the same time",
+        "Trace conditioning, where the CS is presented and ends just before the US begins",
+        "Delay conditioning, where the CS precedes and overlaps with the US",
+        "Backward conditioning, where the US is presented before the CS"
+      ],
+      "answer": "Delay conditioning, where the CS precedes and overlaps with the US",
+      "explanation": "Delay conditioning is the most effective procedure because presenting the CS shortly before and overlapping with the US creates a strong contingency that facilitates acquisition of the CR.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of conditioning procedures within classical learning theories, which is central to the major research-based theories and principles of learning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes between different conditioning paradigms with plausible distractors, aiding test-takers in distinguishing procedural differences."
+    },
+    {
+      "stem": "Which phenomenon occurs when a previously extinguished conditioned response (CR) reappears after a rest period without further conditioning?",
+      "options": [
+        "Stimulus generalization",
+        "Classical extinction",
+        "Spontaneous recovery",
+        "Conditioned inhibition"
+      ],
+      "answer": "Spontaneous recovery",
+      "explanation": "Spontaneous recovery refers to the return of a CR in a less intense form after extinction when the CS is presented again following a pause.",
+      "kn": "KN7",
+      "kn_explanation": "Spontaneous recovery is a key concept in learning theory relating to how conditioned responses change over time, fitting under major theories of learning (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "This straightforward question effectively distinguishes key classical conditioning terms, with distractors that are often confused concepts, making it a solid foundational question."
+    },
+    {
+      "stem": "In Pavlov's classical conditioning studies, the phenomenon where a dog salivates in response to tones similar but not identical to the conditioned stimulus tone is called:",
+      "options": [
+        "Stimulus discrimination",
+        "Conditioned inhibition",
+        "Stimulus generalization",
+        "Higher-order conditioning"
+      ],
+      "answer": "Stimulus generalization",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original CS elicit the CR, even though they were never paired with the US.",
+      "kn": "KN7",
+      "kn_explanation": "Understanding generalization and discrimination of stimuli is fundamental to learning theory, situated in models and principles of learning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The question targets understanding of different stimulus-response phenomena in classical conditioning with well-balanced answer choices."
+    },
+    {
+      "stem": "What is an example of conditioned inhibition in classical conditioning?",
+      "options": [
+        "A light (CS-) consistently presented with a bell (CS+) yet no unconditioned stimulus (US), causing the light to predict no US and inhibit the response",
+        "Presenting two neutral stimuli simultaneously before a US, one of which fails to elicit a response later",
+        "Introducing a novel stimulus far removed from the CS that nevertheless produces the conditioned response",
+        "Pairing a CS with a new UNCONDITIONED stimulus to create a second-order condition"
+      ],
+      "answer": "A light (CS-) consistently presented with a bell (CS+) yet no unconditioned stimulus (US), causing the light to predict no US and inhibit the response",
+      "explanation": "Conditioned inhibition involves a stimulus (CS-) indicating that the US will not occur, thereby suppressing the conditioned response when presented with the excitatory CS+.",
+      "kn": "KN7",
+      "kn_explanation": "Conditioned inhibition illustrates how conditioned responses can be suppressed, important in theories of learning and classical conditioning (KN7).",
+      "difficulty": "hard",
+      "quality_comment": "This question requires specific knowledge of conditioned inhibition and differentiates it carefully from related concepts like compound conditioning, making it challenging."
+    },
+    {
+      "stem": "During compound conditioning, what occurs in the blocking effect?",
+      "options": [
+        "Two stimuli are presented together and both equally elicit a conditioned response when presented alone",
+        "A previously conditioned stimulus prevents conditioning of a new stimulus when both are presented together before the US",
+        "A neutral stimulus gains control of a conditioned response by being paired directly with the US",
+        "A conditioned stimulus suppresses a response to another previously conditioned stimulus"
+      ],
+      "answer": "A previously conditioned stimulus prevents conditioning of a new stimulus when both are presented together before the US",
+      "explanation": "Blocking happens when the first CS already fully predicts the US, so adding a second stimulus provides no new information and thus does not become conditioned.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests understanding of compound conditioning phenomena, which are integral to models explaining learning processes (KN7).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-constructed with closely related distractors, requiring detailed knowledge of compound conditioning effects to answer correctly."
+    },
+    {
+      "stem": "What best describes higher-order conditioning?",
+      "options": [
+        "A neutral stimulus is paired directly with the unconditioned stimulus to produce a conditioned response",
+        "A neutral stimulus is paired with an already established conditioned stimulus, causing the neutral stimulus to evoke the conditioned response",
+        "Two stimuli are paired with the unconditioned stimulus simultaneously to create a compound conditioned response",
+        "Repeated presentation of the conditioned stimulus without the unconditioned stimulus diminishes the conditioned response"
+      ],
+      "answer": "A neutral stimulus is paired with an already established conditioned stimulus, causing the neutral stimulus to evoke the conditioned response",
+      "explanation": "Higher-order conditioning occurs when a neutral stimulus acquires the ability to evoke the CR by being paired with a previously conditioned stimulus rather than the US directly.",
+      "kn": "KN7",
+      "kn_explanation": "This concept is key in understanding the extension and complexity of conditioning in learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Options are clear and concise with strong distractors that test discrimination among stages of conditioning, fitting EPPP exam style."
+    },
+    {
+      "stem": "In Pavlov's stimulus discrimination studies, dogs became extremely agitated and aggressive when discrimination was difficult. This pattern of behavior is known as:",
+      "options": [
+        "Experimental neurosis",
+        "Conditioned inhibition",
+        "Spontaneous recovery",
+        "Stimulus generalization"
+      ],
+      "answer": "Experimental neurosis",
+      "explanation": "Experimental neurosis refers to Pavlov's term for abnormal behaviors like agitation and aggression that arise from difficult discrimination learning, due to conflict in neural processes.",
+      "kn": "KN7",
+      "kn_explanation": "Understanding behavioral consequences of complex discrimination is important for learning models and their CNS correlates (KN7).",
+      "difficulty": "hard",
+      "quality_comment": "This question taps into less commonly tested but important classical conditioning research, backed by plausible distractors aiding discrimination."
+    },
+    {
+      "stem": "How does overshadowing affect classical conditioning when two neutral stimuli are presented together before the US?",
+      "options": [
+        "Both stimuli become equally conditioned and elicit the CR when tested alone",
+        "The more salient stimulus conditions and elicits the CR, while the less salient stimulus fails to become conditioned",
+        "Neither stimulus becomes conditioned because they compete for association with the US",
+        "The two stimuli plan a role in conditioned inhibition, reducing the CR"
+      ],
+      "answer": "The more salient stimulus conditions and elicits the CR, while the less salient stimulus fails to become conditioned",
+      "explanation": "Overshadowing occurs when the more salient stimulus in a compound captures conditioning, preventing the less salient stimulus from becoming conditioned despite pairing with the US.",
+      "kn": "KN7",
+      "kn_explanation": "This question involves understanding complex interactions between stimuli during conditioning trials, a key aspect of learning theory models (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible and concise, and the question targets a nuanced concept, appropriate for mid-level challenge."
+    },
+    {
+      "stem": "Which classical conditioning term refers to the reduction or elimination of a conditioned response when the conditioned stimulus is repeatedly presented without the unconditioned stimulus?",
+      "options": [
+        "Spontaneous recovery",
+        "Classical extinction",
+        "Stimulus generalization",
+        "Conditioned inhibition"
+      ],
+      "answer": "Classical extinction",
+      "explanation": "Classical extinction occurs when repeated presentation of the CS without the US results in a decrease and eventual loss of the CR.",
+      "kn": "KN7",
+      "kn_explanation": "Extinction is a fundamental process in learning theory, critical for understanding how conditioned responses change and are modulated (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "This is a foundational question suitable for early-stage mastery testing, with clearly distinguishable options."
+    },
+    {
+      "stem": "In the Little Albert experiment, the infant exhibited fear responses not only to the white rat (CS) but also to other white furry objects. This phenomenon exemplifies:",
+      "options": [
+        "Conditioned inhibition",
+        "Experimental neurosis",
+        "Stimulus generalization",
+        "Higher-order conditioning"
+      ],
+      "answer": "Stimulus generalization",
+      "explanation": "Little Albert’s fear to stimuli similar to the conditioned white rat (e.g., white rabbit, furry objects) illustrates stimulus generalization, where similar stimuli elicit the CR without direct pairing.",
+      "kn": "KN7",
+      "kn_explanation": "This question relates to the classical conditioning principle of generalization, which is crucial to understanding fears and phobias acquisition (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Includes a classic applied example that enhances the relevance and appeal of the question, with carefully chosen distractors."
+    },
+    {
+      "stem": "Which classical conditioning phenomenon illustrates that the conditioned response (CR) is typically weaker than the unconditioned response (UR) and increases with repeated CS-US pairings?",
+      "options": [
+        "Stimulus discrimination",
+        "Magnitude of conditioned response",
+        "Conditioned inhibition",
+        "Experimental neurosis"
+      ],
+      "answer": "Magnitude of conditioned response",
+      "explanation": "The magnitude of the CR is always less than the UR initially but increases with repeated CS-US pairings due to the strengthening of the association.",
+      "kn": "KN7",
+      "kn_explanation": "Understanding the strength and magnitude of conditioned responses is part of the core principles and mechanisms in classical conditioning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Good item focusing on response magnitude, with distractors addressing other classical conditioning phenomena, supporting comprehension of response dynamics."
+    },
+    {
+      "stem": "Why is backward conditioning generally considered ineffective in classical conditioning procedures?",
+      "options": [
+        "Because the US precedes the CS, preventing the CS from predicting the US",
+        "Because the CS and US are presented simultaneously, making discrimination difficult",
+        "Because the CS is repeatedly presented without the US, leading to extinction",
+        "Because multiple CSs compete for association with the US"
+      ],
+      "answer": "Because the US precedes the CS, preventing the CS from predicting the US",
+      "explanation": "Backward conditioning is ineffective because the CS does not predict the US; the required contingency for learning is absent.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests understanding of the importance of stimulus order and contingency in classical conditioning, central to learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible alternative procedures, helping assess grasp of temporal factors affecting conditioning efficacy."
+    },
+    {
+      "stem": "What is the optimal time interval between the conditioned stimulus (CS) and unconditioned stimulus (US) presentation during delay conditioning?",
+      "options": [
+        "About one-half second delay between CS onset and US onset",
+        "US is presented immediately before the CS",
+        "CS and US presented simultaneously",
+        "Several seconds between CS termination and US onset"
+      ],
+      "answer": "About one-half second delay between CS onset and US onset",
+      "explanation": "A half-second delay between CS onset and US onset is optimal for the strongest acquisition in delay conditioning.",
+      "kn": "KN7",
+      "kn_explanation": "This item probes specific parameters influencing conditioning strength, emphasizing procedural nuances recognized in classical conditioning research (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "This focused question reinforces knowledge of timing critical to optimal conditioning, balancing specificity with plausible distractors."
+    }
+  ]
+}

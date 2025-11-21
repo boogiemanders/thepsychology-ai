@@ -1,0 +1,1047 @@
+{
+  "meta": {
+    "examId": 1,
+    "totalQuestions": 57,
+    "domainCounts": {
+      "1": 6,
+      "2": 7,
+      "3": 6,
+      "4": 7,
+      "5": 9,
+      "6": 9,
+      "7": 4,
+      "8": 9
+    },
+    "orgPsychCount": 12,
+    "orgPsychPercentage": 21,
+    "generatedAt": "2025-11-21T05:02:03.993Z"
+  },
+  "questions": [
+    {
+      "stem": "Which method corrects for the underestimation of reliability that occurs when splitting a test in half for the calculation of split-half reliability?",
+      "options": [
+        "Spearman-Brown prophecy formula",
+        "Kuder-Richardson 20 formula",
+        "Cronbach’s alpha",
+        "Cohen’s kappa coefficient"
+      ],
+      "answer": "Spearman-Brown prophecy formula",
+      "explanation": "The Spearman-Brown formula adjusts the split-half reliability coefficient to estimate the reliability of the full-length test.",
+      "kn": "KN29",
+      "kn_explanation": "This question relates to methods for estimating reliability coefficients and their correction, grounded in psychometric theory (KN29).",
+      "difficulty": "hard",
+      "quality_comment": "The question is technically detailed and challenges test-takers’ knowledge of specific reliability corrections.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Test Construction/5 Item Analysis and Test Reliability.json",
+      "domain": 5,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "A patient with right parietal lobe damage is most likely to exhibit which of the following symptoms?",
+      "options": [
+        "Denial of illness and neglect of the left side of the body",
+        "Inability to repeat phrases and impaired comprehension",
+        "Nonfluent speech and anomia",
+        "Loss of color vision and visual hallucinations"
+      ],
+      "answer": "Denial of illness and neglect of the left side of the body",
+      "explanation": "Right parietal lobe damage commonly causes contralateral (left) neglect and anosognosia (denial of illness).",
+      "kn": "KN1",
+      "kn_explanation": "This focuses on sensory and spatial neuropsychological deficits following lesion localization, within biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors correspond to other cortical deficits, strengthening the diagnostic reasoning tested by this question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
+      "domain": 1,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following elements is essential in a therapist’s approach when conducting brief psychodynamic psychotherapy?",
+      "options": [
+        "Maintaining a passive stance to allow client-led insight",
+        "Focusing therapy goals primarily on symptom elimination",
+        "Establishing an active therapeutic alliance early to keep focus",
+        "Avoiding discussion of termination until late in therapy"
+      ],
+      "answer": "Establishing an active therapeutic alliance early to keep focus",
+      "explanation": "Brief psychodynamic psychotherapy emphasizes an active therapist role early on to build alliance and maintain focus on prioritized issues within time limits.",
+      "kn": "KN44",
+      "kn_explanation": "This reflects treatment structure and supervisory models relevant to brief psychodynamic approaches within brief therapies (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The item requires understanding subtle differences in therapist roles across therapy types, promoting higher-order thinking.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Brief Therapies.json",
+      "domain": 6,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following best describes the 'survivor syndrome' observed in employees who remain after organizational downsizing?",
+      "options": [
+        "Increased motivation and commitment due to survival",
+        "Elevated job satisfaction and sense of security",
+        "Reduced commitment, loss of control, anxiety, and guilt",
+        "Indifference about organizational changes"
+      ],
+      "answer": "Reduced commitment, loss of control, anxiety, and guilt",
+      "explanation": "Survivor syndrome is characterized by negative psychological and physical symptoms including reduced commitment, sense of lost control, anxiety, depression, insomnia, and guilt.",
+      "kn": "KN13",
+      "kn_explanation": "This question reflects group and organizational processes and their impact on individuals, fitting with social influences on functioning (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible reactions to organizational change; the correct answer clearly reflects the syndrome described.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 2,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "options": [
+        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
+        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
+        "They only affect adults’ attitudes and do not influence children's cognitive skills",
+        "They enhance boys’ and girls’ abilities equally through positive reinforcement"
+      ],
+      "answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
+      "explanation": "Gender-role stereotypes influence children's cognitive development by shaping their self-perceptions and effort, often leading to performance consistent with societal expectations.",
+      "kn": "KN24",
+      "kn_explanation": "This item targets KN24 by examining how diverse social identities and cultural stereotypes impact cognitive development outcomes across genders.",
+      "difficulty": "medium",
+      "quality_comment": "The question draws on well-established research, with distractors based on common myths, making it effective for assessing nuanced knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 4,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which individual factor has been linked to the stability of job satisfaction over time and across different jobs?",
+      "options": [
+        "Affective disposition",
+        "Perceived organizational justice",
+        "Work-family conflict",
+        "Type A behavior pattern"
+      ],
+      "answer": "Affective disposition",
+      "explanation": "Affective disposition, the tendency to respond similarly to various situations, has been linked to stable levels of job satisfaction over time across jobs and careers.",
+      "kn": "KN16",
+      "kn_explanation": "This question concerns job satisfaction and factors influencing it, which relates to social and organizational behavior (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of individual contributors to job satisfaction; options are plausible but only one matches the content.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 3,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "In item response theory (IRT), the difficulty parameter of an item represents:",
+      "options": [
+        "The level of the latent trait where there is a 50% chance of endorsing or answering correctly",
+        "The average score of examinees on the item",
+        "The slope of the item characteristic curve indicating discrimination",
+        "The chance of correctly guessing the answer"
+      ],
+      "answer": "The level of the latent trait where there is a 50% chance of endorsing or answering correctly",
+      "explanation": "In IRT, the difficulty (location) parameter indicates the latent trait level associated with a 50% probability of a correct or endorsed response.",
+      "kn": "KN29",
+      "kn_explanation": "This assesses knowledge of item parameters central to modern test theory and item response theory used in test construction (KN29).",
+      "difficulty": "hard",
+      "quality_comment": "The question probes advanced understanding of IRT model parameters with balanced plausible options.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Test Construction/5 Item Analysis and Test Reliability.json",
+      "domain": 5,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which limitation of preoperational thought explains a child's difficulty understanding that the amount of liquid remains the same when poured into a differently shaped container?",
+      "options": [
+        "Decentration",
+        "Egocentrism",
+        "Centration",
+        "Hypothetical-Deductive Reasoning"
+      ],
+      "answer": "Centration",
+      "explanation": "Centration is the tendency to focus on one aspect (e.g., height of liquid) while ignoring other relevant features, leading to difficulties with conservation tasks.",
+      "kn": "KN23",
+      "kn_explanation": "Preoperational cognitive limitations are central concepts within developmental theory, classified under KN23.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible Piagetian terms, enhancing the quality and discriminative power of the question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 4,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following individual characteristics is associated with increased susceptibility to the negative effects of stress and an elevated risk for coronary heart disease?",
+      "options": [
+        "Hardiness",
+        "Type A behavior pattern",
+        "Organization-based self-esteem",
+        "Neuroticism"
+      ],
+      "answer": "Type A behavior pattern",
+      "explanation": "Type A behavior, especially hostility, is linked to greater vulnerability to stress's negative effects and higher coronary heart disease risk.",
+      "kn": "KN12",
+      "kn_explanation": "This question involves personality factors influencing stress responses, fitting the cognitive-affective domain focusing on stress susceptibility (KN12).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible resilience or unrelated traits; the item assesses important associations in stress-health research.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 6,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "Which cognitive ability involves evaluating the logic of verbal statements without needing concrete examples and typically develops during Piaget’s formal operational stage?",
+      "options": [
+        "Representational thought",
+        "Hypothetical-deductive reasoning",
+        "Propositional thought",
+        "Transductive reasoning"
+      ],
+      "answer": "Propositional thought",
+      "explanation": "Propositional thought is the ability to logically evaluate verbal statements without concrete examples and emerges in the formal operational stage.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests understanding of higher-level logical reasoning in development, categorized under developmental theories (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "The options contain related terms, requiring careful differentiation which enhances the question’s discriminative value.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 4,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following is NOT one of the three core characteristics of job burnout as defined by Maslach and colleagues?",
+      "options": [
+        "Exhaustion",
+        "Depersonalization and cynicism",
+        "Sense of inefficacy",
+        "Increased productivity"
+      ],
+      "answer": "Increased productivity",
+      "explanation": "Job burnout consists of exhaustion, depersonalization/cynicism, and a sense of inefficacy; increased productivity is typically not a burnout characteristic.",
+      "kn": "KN13",
+      "kn_explanation": "This question addresses psychological manifestations of stress and burnout, falling under social and cognitive-affective influences on behavior (KN13).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and concise question with an obvious correct answer relative to plausible distractors enhances reliability.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 5,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "According to the APA Ethics Code, what must psychologists consider when providing telepsychology services in emerging areas with incomplete evidence for effectiveness?",
+      "options": [
+        "They can proceed without explanation as long as they are licensed psychologists",
+        "They must engage patients in a documented informed consent process reviewing risks and benefits",
+        "They should avoid telepsychology services entirely until full evidence is available",
+        "They only need to inform patients verbally and no documentation is required"
+      ],
+      "answer": "They must engage patients in a documented informed consent process reviewing risks and benefits",
+      "explanation": "APA telepsychology guidelines state that psychologists should obtain thorough informed consent when evidence for effectiveness is incomplete.",
+      "kn": "KN71",
+      "kn_explanation": "This question evaluates knowledge about ethical issues in technology-assisted psychological services, specifically telepsychology standards.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect common misconceptions and practices, encouraging careful consideration of ethical informed consent requirements.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Stepwise multiple regression differs from simultaneous multiple regression in that it:",
+      "options": [
+        "Includes all predictors at once to assess their combined predictive power",
+        "Adds or removes predictors one at a time to find the most parsimonious model",
+        "Is limited to only two predictor variables",
+        "Disregards multicollinearity among predictors"
+      ],
+      "answer": "Adds or removes predictors one at a time to find the most parsimonious model",
+      "explanation": "Stepwise regression involves sequentially adding or removing predictors to identify the smallest set needed for accurate prediction.",
+      "kn": "KN53",
+      "kn_explanation": "This question addresses different strategies for predictor selection in regression, which is important in understanding statistical modeling techniques (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "Options cover common regression methods and misinterpretations, promoting discrimination of concepts related to regression procedures.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/7 Research Methods & Statistics/7 Correlation and Regression.json",
+      "domain": 7,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which explanation for childhood amnesia emphasizes the role of language in encoding memories?",
+      "options": [
+        "The theory that infant brain structures are underdeveloped",
+        "The hypothesis that children lack a stable sense of self necessary for memory",
+        "The idea that limited language ability in young children restricts memory encoding",
+        "The proposal that early memories are replaced by later experiences"
+      ],
+      "answer": "The idea that limited language ability in young children restricts memory encoding",
+      "explanation": "One explanation of childhood amnesia suggests that inadequate language skills in children under 3–4 years limit their ability to encode memories verbally.",
+      "kn": "KN21",
+      "kn_explanation": "The question deals with normal cognitive development and memory processes across the lifespan, falling under growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but inaccurate theories, making this a well-balanced question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 4,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following is the preferred initial treatment approach for childhood Separation Anxiety Disorder that includes school refusal?",
+      "options": [
+        "Pharmacotherapy with SSRIs combined with relaxation techniques",
+        "Cognitive-behavioral therapy with parent training focused on psychoeducation and exposure",
+        "Psychoanalytic therapy focused on unconscious conflicts",
+        "In vivo flooding exposure without parent involvement"
+      ],
+      "answer": "Cognitive-behavioral therapy with parent training focused on psychoeducation and exposure",
+      "explanation": "CBT combined with parent training, including psychoeducation and gradual exposure, is the preferred treatment for separation anxiety disorder with school refusal to reduce impairment.",
+      "kn": "KN44",
+      "kn_explanation": "This question targets knowledge of evidence-based treatment modalities for anxiety disorders, particularly cognitive-behavioral therapy and parent training.",
+      "difficulty": "medium",
+      "quality_comment": "Options represent plausible treatments, but the correct answer aligns with best research-supported interventions for this disorder and population.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Diagnosis : Psychopathology/5 Anxiety Disorders and Obsessive-Compulsive Disorder.json",
+      "domain": 6,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following best describes 'vicarious liability' in the context of psychologists delegating work to supervisees or employees?",
+      "options": [
+        "The legal responsibility psychologists have for supervisees’ or employees’ actions conducted within their scope and standard of care",
+        "The ethical obligation to provide supervision regardless of supervisees’ competence",
+        "Authorization of supervisees to act independently without oversight",
+        "The responsibility of supervisees alone for any errors made during delegated tasks"
+      ],
+      "answer": "The legal responsibility psychologists have for supervisees’ or employees’ actions conducted within their scope and standard of care",
+      "explanation": "Vicarious liability means supervisors can be held legally responsible for supervisees' actions if those actions deviate from standards and occur within assigned duties.",
+      "kn": "KN61",
+      "kn_explanation": "Understanding legal and ethical responsibilities related to supervision and delegation aligns with ethical, legal, and professional issues.",
+      "difficulty": "medium",
+      "quality_comment": "This question clearly distinguishes between legal liability concepts and ethical supervision responsibilities with plausible distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following is NOT identified as a major source of work-related stress?",
+      "options": [
+        "Lack of control over work tasks",
+        "Work-family conflict",
+        "Organizational fairness",
+        "Downsizing"
+      ],
+      "answer": "Organizational fairness",
+      "explanation": "Organizational fairness is not listed as a source of stress; rather, unfairness is linked to stress, but fairness itself is a positive factor.",
+      "kn": "KN13",
+      "kn_explanation": "This question involves psychosocial factors influencing behavior and stress at work, linking to social influences (KN13).",
+      "difficulty": "easy",
+      "quality_comment": "Options are well balanced; the correct choice is clearly differentiated from the others, aiding test-taker discrimination.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 6,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "Generalized reciprocity differs from dyadic reciprocity in that generalized reciprocity:",
+      "options": [
+        "Refers to a general tendency for likers to be more likable overall",
+        "Involves mutual liking within specific pairs of individuals",
+        "Is unrelated to the degree of attraction between people",
+        "Suggests that individuals dislike those who like them"
+      ],
+      "answer": "Refers to a general tendency for likers to be more likable overall",
+      "explanation": "Generalized reciprocity is a broad pattern where people who like others tend to be liked back more overall, while dyadic reciprocity involves specific mutual liking between two people.",
+      "kn": "KN15",
+      "kn_explanation": "The question clarifies distinct forms of reciprocity in social interaction and relationships, under the social and cultural bases of behavior domain (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "This item distinguishes similar concepts with closely related terminology, testing precise conceptual understanding suitable for EPPP.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/3 Social Psychology/3 Affiliation, Attraction, and Intimacy.json",
+      "domain": 3,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Cronbach’s alpha is commonly used to estimate which type of reliability?",
+      "options": [
+        "Internal consistency reliability",
+        "Test-retest reliability",
+        "Alternate forms reliability",
+        "Inter-rater reliability"
+      ],
+      "answer": "Internal consistency reliability",
+      "explanation": "Cronbach’s alpha calculates the average inter-item correlation to estimate the degree to which items measure the same construct within a test.",
+      "kn": "KN29",
+      "kn_explanation": "This question covers knowledge of a major internal consistency reliability statistic, important in evaluating psychometric properties (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible, and the question targets a frequently tested reliability concept.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Test Construction/5 Item Analysis and Test Reliability.json",
+      "domain": 5,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "In the context of diverse identities and development (KN24), which factor best demonstrates how cultural background influences cognitive developmental milestones?",
+      "options": [
+        "Children universally develop object permanence at the same age regardless of culture",
+        "Exposure to language and social interaction within a culture shapes the timing and nature of a child’s cognitive skills",
+        "Cognitive development is solely driven by biological maturation, independent of cultural experience",
+        "Culture has minimal impact on children’s acquisition of hypothetical-deductive reasoning"
+      ],
+      "answer": "Exposure to language and social interaction within a culture shapes the timing and nature of a child’s cognitive skills",
+      "explanation": "KN24 emphasizes the role of diverse identities including cultural factors; cognitive development varies with cultural experiences such as language exposure and social interactions.",
+      "kn": "KN24",
+      "kn_explanation": "This question best fits KN24 as it addresses how diverse cultural identities influence cognitive development trajectories.",
+      "difficulty": "medium",
+      "quality_comment": "The options test understanding of cultural impact on development, with distractors reflecting common misconceptions, supporting a well-targeted item.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 4,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which prefrontal cortex region, when damaged, leads to impulsivity, social inappropriateness, lack of empathy, and emotional dysregulation?",
+      "options": [
+        "Ventrolateral prefrontal cortex (VLPFC)",
+        "Dorsolateral prefrontal cortex (DLPFC)",
+        "Orbitofrontal cortex (OFC)",
+        "Ventromedial prefrontal cortex (VMPFC)"
+      ],
+      "answer": "Orbitofrontal cortex (OFC)",
+      "explanation": "The OFC is key for emotion regulation and social behavior; damage produces the listed social and emotional deficits.",
+      "kn": "KN1",
+      "kn_explanation": "This question addresses the neurobiological underpinnings of emotional and social regulation functions, aligned with KN1.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question that differentiates closely related prefrontal regions to test precise localization knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
+      "domain": 1,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "According to meta-analytic research, which type of organizational commitment is most consistently associated with positive job outcomes such as satisfaction and performance?",
+      "options": [
+        "Continuance commitment",
+        "Normative commitment",
+        "Affective commitment",
+        "Role-based commitment"
+      ],
+      "answer": "Affective commitment",
+      "explanation": "Affective commitment, the emotional attachment to the organization, shows the strongest and most consistent correlations with job outcomes.",
+      "kn": "KN16",
+      "kn_explanation": "This question deals with organizational commitment and its relationship to job outcomes, relating to social and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Question clearly distinguishes commitment types; options are plausible, though 'role-based commitment' is a distractor not supported by the material.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 3,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "Which strategy would be most effective for clients in the action stage of behavior change according to the transtheoretical model?",
+      "options": [
+        "Consciousness raising and dramatic relief",
+        "Self-reevaluation and environmental reevaluation",
+        "Contingency management and stimulus control",
+        "Self-liberation and decision making"
+      ],
+      "answer": "Contingency management and stimulus control",
+      "explanation": "In the action stage, clients actively change behavior and benefit from reinforcement and manipulation of triggers to maintain change.",
+      "kn": "KN9",
+      "kn_explanation": "This question focuses on stage-specific intervention strategies related to motivation and behavioral change (KN9).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect earlier stages’ strategies, helping to test precise knowledge of stage-appropriate interventions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Brief Therapies.json",
+      "domain": 2,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following best describes the role of relapse prevention in the Transtheoretical Model's maintenance stage?",
+      "options": [
+        "Initiating behavior change through environmental reevaluation",
+        "Encouraging self-liberation to commit to change",
+        "Using strategies like contingency management to avoid relapse",
+        "Dismissing temptation as unimportant due to sustained change"
+      ],
+      "answer": "Using strategies like contingency management to avoid relapse",
+      "explanation": "In maintenance, the focus is on preventing relapse using strategies effective during the action stage, such as contingency management and stimulus control.",
+      "kn": "KN44",
+      "kn_explanation": "This addresses treatment techniques used to sustain behavioral change, fitting within treatment and intervention knowledge (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors include related but inaccurate strategies for maintenance, enhancing discriminative value.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Brief Therapies.json",
+      "domain": 6,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "A psychologist learns that a colleague's actions have harmed a client and informal resolution is not appropriate. What should the psychologist do?",
+      "options": [
+        "Attempt an informal resolution by personally confronting the colleague, unless confidentiality can be broken",
+        "Report the violation to an ethics committee, licensing board, or other appropriate authority if informal resolution is not appropriate or successful",
+        "Ignore the violation unless it directly affects your own clients or professional activities",
+        "Consult with other colleagues before deciding whether to report the violation"
+      ],
+      "answer": "Report the violation to an ethics committee, licensing board, or other appropriate authority if informal resolution is not appropriate or successful",
+      "explanation": "They should report the violation to an ethics body, licensing board, or other authority when informal steps are inadequate or substantial harm has occurred.",
+      "kn": "KN61",
+      "kn_explanation": "This question tests knowledge of ethical requirements related to addressing colleagues' violations, which falls within current ethical principles and codes.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misconceptions about informal resolution and reporting, providing a realistic challenge for examinees.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "According to the Multidimensional Model of Racial Identity (Sellers et al.), which racial ideology emphasizes the similarity in oppression among minority groups and prioritizes coalition building?",
+      "options": [
+        "Assimilationist ideology",
+        "Humanist ideology",
+        "Oppressed minority ideology",
+        "Nationalist ideology"
+      ],
+      "answer": "Oppressed minority ideology",
+      "explanation": "The oppressed minority ideology highlights shared experiences of oppression across minority groups and supports forming alliances with other groups.",
+      "kn": "KN19",
+      "kn_explanation": "This item assesses understanding of racial ideological perspectives within racial identity models, linked to social and cultural identity issues.",
+      "difficulty": "medium",
+      "quality_comment": "All options are drawn from the model’s ideologies with similar complexity and length, increasing discriminative quality.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json",
+      "domain": 3,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which region of the prefrontal cortex is primarily associated with goal-directed behavior, working memory deficits, and impairments in executive function when damaged?",
+      "options": [
+        "Ventromedial prefrontal cortex (VMPFC)",
+        "Dorsolateral prefrontal cortex (DLPFC)",
+        "Orbitofrontal cortex (OFC)",
+        "Ventrolateral prefrontal cortex (VLPFC)"
+      ],
+      "answer": "Dorsolateral prefrontal cortex (DLPFC)",
+      "explanation": "The DLPFC is crucial for executive functions including working memory and goal-directed behavior; damage causes related impairments.",
+      "kn": "KN1",
+      "kn_explanation": "This assesses knowledge of neuroanatomical correlates of executive functions, under neurological and genetic bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all prefrontal regions with overlapping functions, requiring careful recall and differentiation, enhancing question quality.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
+      "domain": 1,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which assumption must be met when using most correlation coefficients to ensure accurate estimation of the relationship between variables?",
+      "options": [
+        "Variables have a nonlinear relationship",
+        "Predictor scores show restricted range",
+        "Variability of the criterion scores is consistent across all levels of the predictor",
+        "Only one variable is measured on an ordinal scale"
+      ],
+      "answer": "Variability of the criterion scores is consistent across all levels of the predictor",
+      "explanation": "Homoscedasticity means the variability of criterion scores is similar for all predictor scores; violating this leads to unequal accuracy in prediction.",
+      "kn": "KN53",
+      "kn_explanation": "This question addresses fundamental assumptions in correlation and regression, which align with sampling and data collection methods (KN53) and proper use of statistical tests.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly tests understanding of key correlation assumptions; distractors are plausible misunderstandings that reinforce knowledge of assumptions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/7 Research Methods & Statistics/7 Correlation and Regression.json",
+      "domain": 7,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Damage to which brain area would most likely impair one's ability to imitate a motor activity upon verbal command, such as 'pretend to comb your hair'?",
+      "options": [
+        "Right temporal lobe",
+        "Left dominant parietal lobe causing ideomotor apraxia",
+        "Left occipital lobe",
+        "Right dorsolateral prefrontal cortex"
+      ],
+      "answer": "Left dominant parietal lobe causing ideomotor apraxia",
+      "explanation": "Ideomotor apraxia results from left parietal lobe damage and is characterized by difficulty imitating or performing motor activities on command.",
+      "kn": "KN1",
+      "kn_explanation": "This focuses on neurological motor planning deficits based on lesion location, consistent with biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The options include incorrect lobes and brain areas plausibly related to motor control, supporting effective discrimination.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
+      "domain": 1,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "What is the first-line treatment modality for Agoraphobia?",
+      "options": [
+        "In vivo exposure and response prevention",
+        "Long-term benzodiazepine therapy",
+        "Group psychodynamic psychotherapy",
+        "Applied tension exercises"
+      ],
+      "answer": "In vivo exposure and response prevention",
+      "explanation": "The primary recommended treatment for agoraphobia is in vivo exposure therapy to feared situations combined with response prevention to reduce avoidance.",
+      "kn": "KN44",
+      "kn_explanation": "This question targets treatment interventions specifically for agoraphobia supported by empirical evidence, fitting under treatment and intervention knowledge.",
+      "difficulty": "easy",
+      "quality_comment": "The options mix various interventions to challenge knowledge of evidence-based practice while maintaining clarity and plausibility.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Diagnosis : Psychopathology/5 Anxiety Disorders and Obsessive-Compulsive Disorder.json",
+      "domain": 6,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following is true about the use of decision balance in Motivational Interviewing?",
+      "options": [
+        "It is contraindicated when the goal is to maintain neutrality about change direction.",
+        "It helps resolve ambivalence by focusing on only the pros of change.",
+        "It is useful to maintain a neutral stance when assessing readiness for change.",
+        "It always promotes change by highlighting negative consequences of current behavior."
+      ],
+      "answer": "It is useful to maintain a neutral stance when assessing readiness for change.",
+      "explanation": "Decision balance is appropriate when clinicians remain neutral, but may backfire if used to resolve ambivalence because it highlights cons of change.",
+      "kn": "KN44",
+      "kn_explanation": "This tests understanding of clinical application and limitations of a motivational interviewing technique (KN44).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors are nuanced and conceptually challenging, suitable for higher-level comprehension.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Brief Therapies.json",
+      "domain": 6,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "In Solution-Focused Therapy, which type of question is most useful for identifying client strengths and past successes in managing problems?",
+      "options": [
+        "Miracle question",
+        "Scaling question",
+        "Exception question",
+        "Decision analysis question"
+      ],
+      "answer": "Exception question",
+      "explanation": "Exception questions help clients identify times when the problem was less severe or absent, highlighting strengths and resources.",
+      "kn": "KN44",
+      "kn_explanation": "The question focuses on a specific therapeutic strategy used to facilitate change and strengths-based intervention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "Options include commonly confused question types, making for a good discriminative item on therapy techniques.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Brief Therapies.json",
+      "domain": 6,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which stage of the General Adaptation Syndrome is characterized by the body's inability to sustain hormonal responses, leading to physiological breakdown?",
+      "options": [
+        "Alarm reaction stage",
+        "Resistance stage",
+        "Exhaustion stage",
+        "Recovery stage"
+      ],
+      "answer": "Exhaustion stage",
+      "explanation": "The exhaustion stage occurs when the pituitary and adrenal glands can no longer sustain elevated hormone levels, causing physiological processes to deteriorate.",
+      "kn": "KN12",
+      "kn_explanation": "This question addresses the physiological stages of stress response, which involves cognitive-affective and biological bases of behavior (KN12).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes the key features of each stage, helping test-takers understand the sequence and consequences of stress.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 3,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "Which of the following best explains why people tend to be attracted to others who share similar attitudes according to Byrne's law of attraction?",
+      "options": [
+        "Similar attitudes validate our own views and produce positive feelings",
+        "Similarity leads to less conflict in communication",
+        "Different attitudes challenge us and increase attraction",
+        "People imitate attitudes of those they are attracted to"
+      ],
+      "answer": "Similar attitudes validate our own views and produce positive feelings",
+      "explanation": "Byrne's law states attraction is due to reinforcement from validation of our own attitudes, producing good feelings.",
+      "kn": "KN15",
+      "kn_explanation": "This question addresses social cognition and interpersonal attraction within social interaction and relationships (KN15).",
+      "difficulty": "easy",
+      "quality_comment": "Options are well balanced and the correct answer targets a core principle of attraction, making it appropriate for the EPPP.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/3 Social Psychology/3 Affiliation, Attraction, and Intimacy.json",
+      "domain": 3,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "In split-brain patients, a picture of a spoon presented to the left visual field will likely result in which of the following behaviors?",
+      "options": [
+        "Verbally declaring they see a spoon and picking it up with the right hand",
+        "Inability to recognize or pick up the spoon with either hand",
+        "Unable to verbally identify the spoon but able to pick it up with the left hand",
+        "Correctly identifying the spoon verbally and by touch with either hand"
+      ],
+      "answer": "Unable to verbally identify the spoon but able to pick it up with the left hand",
+      "explanation": "Information from the left visual field goes to the right hemisphere, which in split-brain patients cannot produce speech but can guide the left hand to select the object.",
+      "kn": "KN1",
+      "kn_explanation": "Tests knowledge of cerebral lateralization and split-brain research findings relating to sensory processing and language, within biological bases of behavior (KN1).",
+      "difficulty": "hard",
+      "quality_comment": "This question assesses integration of complex research findings, with well-constructed options demanding detailed understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
+      "domain": 1,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following best describes the neuronal function of the primary motor cortex in the frontal lobe?",
+      "options": [
+        "Processes sensory input from the body including touch and temperature",
+        "Initiates voluntary movements and activates during movement imagination or observation",
+        "Processes auditory information and language comprehension",
+        "Regulates emotional responses and social behavior"
+      ],
+      "answer": "Initiates voluntary movements and activates during movement imagination or observation",
+      "explanation": "The primary motor cortex initiates purposeful, voluntary movements and is active during both movement execution and motor imagery or observation.",
+      "kn": "KN1",
+      "kn_explanation": "This question evaluates understanding of motor cortex function in movement control, a core biological bases of behavior content (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "Simple yet important question that clearly distinguishes motor from sensory and higher-order cortical functions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
+      "domain": 1,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "According to Piaget's theory, what process occurs when a child modifies an existing cognitive schema to accommodate new information?",
+      "options": [
+        "Equilibration",
+        "Assimilation",
+        "Accommodation",
+        "Transduction"
+      ],
+      "answer": "Accommodation",
+      "explanation": "Accommodation involves changing an existing cognitive schema or creating a new one to fit new information, helping to restore equilibrium.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of Piaget’s constructivist theory, a major research-based developmental theory under KN23.",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly tests a fundamental Piagetian concept, with distractors that are related but distinct, supporting effective assessment of understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 4,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which memory type is most likely to show significant decline as adults age?",
+      "options": [
+        "Remote long-term memory",
+        "Recent long-term (secondary) memory",
+        "Procedural memory",
+        "Short-term storage (primary) memory"
+      ],
+      "answer": "Recent long-term (secondary) memory",
+      "explanation": "Research consistently shows that recent long-term memory declines most with age, whereas remote long-term and procedural memories are relatively preserved.",
+      "kn": "KN8",
+      "kn_explanation": "This question relates to memory changes across the lifespan, fitting within major research-based theories and models of memory (KN8).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all legitimate memory types, making this question effective for distinguishing knowledge of age-related memory effects.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 2,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "According to Berscheid’s emotion-in-relationships model, strong emotional reactions in intimate relationships occur primarily when:",
+      "options": [
+        "A partner unexpectedly interrupts the couple’s usual behavioral routines",
+        "Partners maintain consistent and expected behaviors over time",
+        "A partner avoids expressing emotions during conflicts",
+        "Couples spend less time engaging in shared activities"
+      ],
+      "answer": "A partner unexpectedly interrupts the couple’s usual behavioral routines",
+      "explanation": "Strong emotions arise when one partner exhibits unexpected behaviors, disrupting established interaction sequences.",
+      "kn": "KN10",
+      "kn_explanation": "This question focuses on emotion elicitation theories within intimate relationships, aligning with major theories of emotion (KN10).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is precise and all options are plausible behaviors in relationships, making the correct answer stand out logically.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/3 Social Psychology/3 Affiliation, Attraction, and Intimacy.json",
+      "domain": 2,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which construct refers to employees' perceptions of their value as members of their organization and relates to their resistance to job stress?",
+      "options": [
+        "Hardiness",
+        "Organizational justice",
+        "Organization-based self-esteem (OBSE)",
+        "Continuance commitment"
+      ],
+      "answer": "Organization-based self-esteem (OBSE)",
+      "explanation": "OBSE refers to employees’ perceptions of their worth as organizational members and is linked to how they experience and cope with job stress.",
+      "kn": "KN13",
+      "kn_explanation": "The question involves psychosocial factors affecting stress and organizational behavior, fitting within social influences on behavior (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are related constructs, making the question appropriate for assessing nuanced knowledge in this area.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 2,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "According to the APA Ethics Code, what is required when delegating professional work to others such as research assistants or interpreters?",
+      "options": [
+        "Delegation is allowed regardless of the delegatee’s relationships with clients if they have been trained",
+        "Psychologists must ensure the delegatee has no conflicting multiple relationships and has adequate competence",
+        "Psychologists can only delegate to licensed psychologists to avoid liability",
+        "Delegation is only allowed if the delegatee receives direct supervision at all times"
+      ],
+      "answer": "Psychologists must ensure the delegatee has no conflicting multiple relationships and has adequate competence",
+      "explanation": "Delegating work requires choosing individuals with the necessary skills and no conflicting relationships, while maintaining oversight to protect clients and ensure quality.",
+      "kn": "KN64",
+      "kn_explanation": "This question addresses managing potential ethical issues in delegation, including conflicts of interest and competence, fitting under ethical issue management.",
+      "difficulty": "medium",
+      "quality_comment": "Answer options vary in plausibility, promoting understanding of key delegation criteria and ethical constraints.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "When using multiple regression, which scenario best describes the problem caused by multicollinearity?",
+      "options": [
+        "Each predictor contributes unique information that is independent of the others",
+        "Predictors share variance, making it difficult to determine their individual effects",
+        "Predictor variables have no relationship with the criterion variable",
+        "The number of predictors exceeds the number of observations"
+      ],
+      "answer": "Predictors share variance, making it difficult to determine their individual effects",
+      "explanation": "Multicollinearity occurs when predictor variables are highly correlated with each other, making their individual contributions to the criterion difficult to separate.",
+      "kn": "KN53",
+      "kn_explanation": "This question again addresses multicollinearity, an important concept in regression analysis within research methods and statistics (KN53).",
+      "difficulty": "medium",
+      "quality_comment": "The item clarifies a common source of confusion about multicollinearity with plausible distractors, enhancing conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/7 Research Methods & Statistics/7 Correlation and Regression.json",
+      "domain": 7,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following diagnostic features distinguishes Generalized Anxiety Disorder (GAD) from nonpathological anxiety?",
+      "options": [
+        "Excessive anxiety and difficulty controlling worry about multiple events occurring most days for at least six months",
+        "Short periods of intense fear that peak within minutes along with physical symptoms",
+        "Fear or anxiety focused on specific social situations with avoidance or distress",
+        "Persistent and excessive fear of separation from attachment figures"
+      ],
+      "answer": "Excessive anxiety and difficulty controlling worry about multiple events occurring most days for at least six months",
+      "explanation": "GAD is characterized by chronic, uncontrollable worry about multiple things lasting at least six months, distinguishing it from normal anxiety.",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on diagnostic criteria, classifying GAD accurately relative to other anxiety disorders, within classification and diagnosis knowledge.",
+      "difficulty": "easy",
+      "quality_comment": "Question is straightforward with clearly differentiable options for other anxiety disorders, enhancing clarity and suitability for EPPP.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Diagnosis : Psychopathology/5 Anxiety Disorders and Obsessive-Compulsive Disorder.json",
+      "domain": 5,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Structural Equation Modeling (SEM) differs from multiple regression primarily because SEM:",
+      "options": [
+        "Only analyzes relationships among observed variables",
+        "Combines factor analysis with multiple regression and incorporates latent variables",
+        "Requires all variables to be measured on nominal scales",
+        "Is limited to bivariate correlation between two variables"
+      ],
+      "answer": "Combines factor analysis with multiple regression and incorporates latent variables",
+      "explanation": "SEM includes testing relationships among observed and latent variables, combining features of factor analysis and regression.",
+      "kn": "KN53",
+      "kn_explanation": "SEM is a complex analytic method requiring understanding of latent constructs and multivariate models, which falls within analytic methods in research methods and statistics (KN53).",
+      "difficulty": "hard",
+      "quality_comment": "The question clearly distinguishes SEM from simpler methods; distractors are plausible misconceptions, making it suitable for advanced understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/7 Research Methods & Statistics/7 Correlation and Regression.json",
+      "domain": 7,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "A client asks a psychologist's family member to interpret during sessions. Is it appropriate to delegate that role?",
+      "options": [
+        "If the family member agrees and the client consents",
+        "When the psychologist lacks other interpreter options but supervises carefully",
+        "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
+        "If the family member is fluent in the language and understands confidentiality"
+      ],
+      "answer": "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
+      "explanation": "No. Delegating to someone in a multiple relationship, such as a family member, risks impaired objectivity and potential harm.",
+      "kn": "KN61",
+      "kn_explanation": "This question assesses competence and delegation ethical standards, focusing on maintaining objectivity and professionalism.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include ethically incorrect but plausible justifications, encouraging careful ethical reasoning.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following factors tends to increase the reliability coefficient of a test?",
+      "options": [
+        "Homogeneity of test content",
+        "Restriction of test score range",
+        "Increased guessing probability on test items",
+        "Use of short test forms"
+      ],
+      "answer": "Homogeneity of test content",
+      "explanation": "Tests with homogeneous content often have higher internal consistency, thereby increasing reliability coefficients.",
+      "kn": "KN29",
+      "kn_explanation": "The question addresses factors affecting reliability magnitude, essential in psychometric test evaluation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors address common misconceptions, enhancing discriminability for test-takers.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Test Construction/5 Item Analysis and Test Reliability.json",
+      "domain": 5,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which hormone is released by the adrenal cortex during the general adaptation syndrome and helps maintain energy during prolonged stress?",
+      "options": [
+        "Adrenocorticotropic hormone (ACTH)",
+        "Cortisol",
+        "Epinephrine",
+        "Norepinephrine"
+      ],
+      "answer": "Cortisol",
+      "explanation": "Cortisol is released by the adrenal cortex during the resistance stage of the general adaptation syndrome and helps the body maintain high energy levels under chronic stress.",
+      "kn": "KN1",
+      "kn_explanation": "The question tests knowledge of physiological stress responses involving neuroendocrine mechanisms, part of biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include hormones related to stress but with different roles, making the question both challenging and clear.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 5,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "Which type of organizational justice is concerned with the fairness of the procedures used to determine workplace outcomes?",
+      "options": [
+        "Interactional justice",
+        "Distributive justice",
+        "Procedural justice",
+        "Normative justice"
+      ],
+      "answer": "Procedural justice",
+      "explanation": "Procedural justice refers to the perceived fairness of the methods and procedures used to determine outcomes within an organization.",
+      "kn": "KN15",
+      "kn_explanation": "This question addresses organizational justice, a social interaction and organizational behavior concept in the social domain (KN15).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward with distractors that are commonly confused types of justice, suitable for EPPP level.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 5,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "What constitutes an ethical violation when cooperating with an ethics investigation?",
+      "options": [
+        "Providing client information with a signed client release when requested by an ethics committee",
+        "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+        "Reporting suspected child abuse to appropriate authorities despite confidentiality constraints",
+        "Consulting with a supervisor before responding to the ethics committee's request"
+      ],
+      "answer": "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+      "explanation": "Failing to cooperate with an ethics inquiry without a legitimate confidentiality or legal barrier violates professional responsibilities.",
+      "kn": "KN61",
+      "kn_explanation": "This item tests knowledge of ethical requirements regarding interactions with regulatory and professional bodies.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include ethically correct or situation-appropriate responses, distinguishing the truly unethical behavior effectively.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
+      "options": [
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
+      ],
+      "answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "Step 4 in Fisher's model is to consider stakeholders' perspectives after identifying applicable laws and policies (Step 3).",
+      "kn": "KN65",
+      "kn_explanation": "This question involves understanding models of ethical decision-making, which fits within the knowledge area related to ethical decision approaches.",
+      "difficulty": "medium",
+      "quality_comment": "The sequence-focused question is clear and tests recall of procedural ethics models, with plausible distractors reflecting other steps in the process.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Work-family conflict has been found to be equally reported by men and women across various regions. However, in dual-earner couples, what slight difference exists in the type of interference reported?",
+      "options": [
+        "Men report more family-to-work interference; women report more work-to-family interference",
+        "Women report more family-to-work interference; men report more work-to-family interference",
+        "Men report more work-to-family interference; women report more family-to-work interference",
+        "No differences exist in interference types by gender"
+      ],
+      "answer": "Men report more work-to-family interference; women report more family-to-work interference",
+      "explanation": "In dual-earner couples, men tend to report higher work-to-family interference, while women report slightly higher family-to-work interference.",
+      "kn": "KN13",
+      "kn_explanation": "This item focuses on psychosocial stressors and gender differences in work-family conflict, linking to cognitive-affective and social influences (KN13).",
+      "difficulty": "medium",
+      "quality_comment": "The question examines nuanced gender-related differences in work-family stress, promoting application of research findings.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 6,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "Which of the following best illustrates the principle of Fidelity and Responsibility (Principle B) outlined in the APA General Principles?",
+      "options": [
+        "Psychologists strive to benefit those they work with and avoid harm",
+        "Psychologists establish trust, fulfill professional responsibilities, and contribute pro bono work",
+        "Psychologists maintain honesty and accuracy in teaching and research",
+        "Psychologists ensure fairness and equal access to psychological services"
+      ],
+      "answer": "Psychologists establish trust, fulfill professional responsibilities, and contribute pro bono work",
+      "explanation": "Principle B emphasizes trustworthiness, responsibility, and contribution of some professional time with little or no compensation.",
+      "kn": "KN61",
+      "kn_explanation": "This question covers understanding of the APA General Principles, specifically Principle B, which is foundational ethical knowledge.",
+      "difficulty": "easy",
+      "quality_comment": "Clear options representing different principles, making the question straightforward and well suited for foundational knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "In classical test theory, an observed test score (X) is conceptualized as the sum of which two components?",
+      "options": [
+        "True score variability and measurement error",
+        "Observed score and reliability coefficient",
+        "Item difficulty and item discrimination",
+        "Standard error and confidence interval"
+      ],
+      "answer": "True score variability and measurement error",
+      "explanation": "Classical test theory posits that an obtained score (X) equals the true score (T) plus random error (E), representing measurement error.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding the basics of test score components and psychometric theory directly relates to psychometric theories and measurement (KN29).",
+      "difficulty": "easy",
+      "quality_comment": "This foundational question clearly assesses core understanding of classical test theory; distractors are plausible but distinct.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Test Construction/5 Item Analysis and Test Reliability.json",
+      "domain": 5,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following best reflects the ethical considerations for psychologists whose personal conduct may impact their professional role, according to APA guidelines?",
+      "options": [
+        "Personal conduct is irrelevant if it occurs outside the professional role",
+        "Psychologists should evaluate if personal actions overlap professional roles and potentially affect credibility or clients",
+        "Only professional misconduct is subject to APA ethical review",
+        "APA only acts on personal conduct if it directly violates psychological practice standards"
+      ],
+      "answer": "Psychologists should evaluate if personal actions overlap professional roles and potentially affect credibility or clients",
+      "explanation": "The APA Ethics Code allows action even for personal conduct if it relates to the professional role or affects credibility, aligning with ensuring professional integrity.",
+      "kn": "KN64",
+      "kn_explanation": "This item covers managing potential ethical issues arising from personal-professional overlap and maintaining professional integrity.",
+      "difficulty": "medium",
+      "quality_comment": "The question clarifies nuanced understanding of how personal behavior may implicate professional ethical standards.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "domain": 8,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "What best describes higher-order conditioning?",
+      "options": [
+        "A neutral stimulus is paired directly with the unconditioned stimulus to produce a conditioned response",
+        "A neutral stimulus is paired with an already established conditioned stimulus, causing the neutral stimulus to evoke the conditioned response",
+        "Two stimuli are paired with the unconditioned stimulus simultaneously to create a compound conditioned response",
+        "Repeated presentation of the conditioned stimulus without the unconditioned stimulus diminishes the conditioned response"
+      ],
+      "answer": "A neutral stimulus is paired with an already established conditioned stimulus, causing the neutral stimulus to evoke the conditioned response",
+      "explanation": "Higher-order conditioning occurs when a neutral stimulus acquires the ability to evoke the CR by being paired with a previously conditioned stimulus rather than the US directly.",
+      "kn": "KN7",
+      "kn_explanation": "This concept is key in understanding the extension and complexity of conditioning in learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Options are clear and concise with strong distractors that test discrimination among stages of conditioning, fitting EPPP exam style.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 Cognitive-Affective Bases : Learning and Memory/2 Classical Conditioning.json",
+      "domain": 2,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which Type A behavior characteristic is most associated with an increased risk for coronary heart disease?",
+      "options": [
+        "Excessive competitiveness",
+        "Time urgency",
+        "Hostility",
+        "Multitasking"
+      ],
+      "answer": "Hostility",
+      "explanation": "Research identifies hostility, a core Type A behavior trait, as the characteristic most linked to increased coronary heart disease risk.",
+      "kn": "KN1",
+      "kn_explanation": "This question links personality behavior patterns to biological health outcomes, consistent with biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "The question targets a nuanced detail in the relationship between Type A behavior and health, with plausible distractors enhancing challenge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 3 5 6 Organizational Psychology/2 3 Satisfaction, Commitment, and Stress.json",
+      "domain": 2,
+      "isOrgPsych": true
+    },
+    {
+      "stem": "In Piaget's sensorimotor substages, which substage is characterized by the development of object permanence and intentional goal-directed behavior?",
+      "options": [
+        "Primary Circular Reactions",
+        "Secondary Circular Reactions",
+        "Coordination of Secondary Circular Reactions",
+        "Internalization of Schemas"
+      ],
+      "answer": "Coordination of Secondary Circular Reactions",
+      "explanation": "The Coordination of Secondary Circular Reactions substage (8–12 months) marks the beginning of object permanence and intentional actions toward goals.",
+      "kn": "KN23",
+      "kn_explanation": "This question focuses on developmental stages and their characteristics, aligned with major theories of development under KN23.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors represent other substages in the sensorimotor period, making this question moderately challenging but fair.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "domain": 4,
+      "isOrgPsych": false
+    }
+  ]
+}

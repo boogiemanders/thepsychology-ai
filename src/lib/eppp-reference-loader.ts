@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { DOMAIN_FOLDER_MAP, DOMAIN_NUMBER_MAP, findTopicFile } from './topic-paths'
 
 /**
  * EPPP Reference Content Loader
@@ -10,101 +11,6 @@ import path from 'path'
  */
 
 const EPPP_REFERENCE_DIR = path.join(process.cwd(), 'eppp-reference')
-
-/**
- * Domain folder name mapping
- * Maps domain IDs to their folder names in eppp-reference/
- */
-const DOMAIN_FOLDER_MAP: Record<string, string> = {
-  '1': '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology',
-  '2': '2 Cognitive-Affective Bases : Learning and Memory',
-  '3-social': '3 Social Psychology',
-  '3-cultural': '3 Cultural',
-  '4': '4 Growth & Lifespan Development',
-  '5-assessment': '5 Assessment',
-  '5-diagnosis': '5 Diagnosis : Psychopathology',
-  '5-test': '5 Test Construction',
-  '6': '6 Treatment, Intervention, and Prevention : Clinical Psychology',
-  '7': '7 Research Methods & Statistics',
-  '8': '8 Ethical : Legal : Professional Issues',
-  '3-5-6': '2 3 5 6 Organizational Psychology',
-}
-
-/**
- * Domain number extraction for file matching
- * Maps domain IDs to their numeric prefix in file names
- */
-const DOMAIN_NUMBER_MAP: Record<string, string[]> = {
-  '1': ['1'],
-  '2': ['2'],
-  '3-social': ['3'],
-  '3-cultural': ['3'],
-  '4': ['4'],
-  '5-assessment': ['5'],
-  '5-diagnosis': ['5'],
-  '5-test': ['5'],
-  '6': ['6'],
-  '7': ['7'],
-  '8': ['8'],
-  '3-5-6': ['2', '3', '5', '6'], // Multi-domain topics
-}
-
-/**
- * Normalizes topic names for file matching
- * Handles differences between display names and file names:
- * - Converts "/" to "-"
- * - Converts "–" (en-dash) to "-" (hyphen)
- * - Removes "..." ellipsis
- * - Standardizes spacing
- */
-function normalizeTopicName(topicName: string): string {
-  return topicName
-    .replace(/\//g, '-')           // Convert slash to hyphen
-    .replace(/–/g, '-')            // Convert en-dash to hyphen
-    .replace(/…/g, '')             // Remove ellipsis
-    .replace(/\.\.\./g, '')        // Remove triple dots
-    .replace(/\s+/g, ' ')          // Normalize whitespace
-    .trim()
-}
-
-/**
- * Finds the file path for a given topic in a domain folder
- * Handles variations in file naming and multi-domain files
- */
-function findTopicFile(domainFolder: string, topicName: string, domainNumbers: string[]): string | null {
-  const folderPath = path.join(EPPP_REFERENCE_DIR, domainFolder)
-
-  if (!fs.existsSync(folderPath)) {
-    console.error(`Domain folder not found: ${folderPath}`)
-    return null
-  }
-
-  const normalizedTopic = normalizeTopicName(topicName)
-  const files = fs.readdirSync(folderPath)
-
-  // Try to find exact match with domain number prefix
-  for (const domainNum of domainNumbers) {
-    const expectedFileName = `${domainNum} ${normalizedTopic}.md`
-    const exactMatch = files.find(f => normalizeTopicName(f) === normalizeTopicName(expectedFileName))
-    if (exactMatch) {
-      return path.join(folderPath, exactMatch)
-    }
-  }
-
-  // Fallback: Try fuzzy match (contains the topic name)
-  const fuzzyMatch = files.find(file => {
-    const normalizedFile = normalizeTopicName(file)
-    return normalizedFile.includes(normalizedTopic) || normalizedTopic.includes(normalizedFile.replace('.md', ''))
-  })
-
-  if (fuzzyMatch) {
-    return path.join(folderPath, fuzzyMatch)
-  }
-
-  console.error(`Topic file not found: ${topicName} in ${domainFolder}`)
-  console.error(`Available files:`, files)
-  return null
-}
 
 /**
  * Loads reference content for a given topic and domain
@@ -122,7 +28,7 @@ export function loadReferenceContent(topicName: string, domainId: string): strin
     return null
   }
 
-  const filePath = findTopicFile(domainFolder, topicName, domainNumbers)
+  const filePath = findTopicFile(EPPP_REFERENCE_DIR, topicName, '.md', domainId)
 
   if (!filePath) {
     return null
@@ -152,7 +58,7 @@ export function referenceContentExists(topicName: string, domainId: string): boo
     return false
   }
 
-  const filePath = findTopicFile(domainFolder, topicName, domainNumbers)
+  const filePath = findTopicFile(EPPP_REFERENCE_DIR, topicName, '.md', domainId)
   return filePath !== null && fs.existsSync(filePath)
 }
 
@@ -168,7 +74,7 @@ export function getReferenceFilePath(topicName: string, domainId: string): strin
     return null
   }
 
-  return findTopicFile(domainFolder, topicName, domainNumbers)
+  return findTopicFile(EPPP_REFERENCE_DIR, topicName, '.md', domainId)
 }
 
 /**

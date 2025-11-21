@@ -1,11 +1,6 @@
 import { readFileSync, readdirSync, existsSync } from 'fs'
 import { join } from 'path'
 import path from 'path'
-import Anthropic from '@anthropic-ai/sdk'
-
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
 
 export interface TopicContentMetadata {
   topic_name: string
@@ -20,6 +15,22 @@ export interface TopicContent {
   metadata: TopicContentMetadata
   content: string
   baseContent: string // Content without personalization placeholder
+}
+
+// Maps domain IDs to actual folder names in topic-content-v3-test
+const DOMAIN_FOLDER_MAP: Record<string, string> = {
+  '1': '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology',
+  '2': '2 Cognitive-Affective Bases : Learning and Memory',
+  '3-social': '3 Social Psychology',
+  '3-cultural': '3 Cultural',
+  '4': '4 Growth  : Lifespan Development',
+  '5-assessment': '5 Assessment',
+  '5-diagnosis': '5 Diagnosis  : Psychopathology',
+  '5-test': '5 Test Construction',
+  '6': '6 Treatment : Intervention',
+  '7': '7 Research Methods : Statistics',
+  '8': '8 Ethical  : Legal  : Professional Issues',
+  '3-5-6': '2 3 5 6 Organizational Psychology',
 }
 
 /**
@@ -50,26 +61,10 @@ function parseFrontmatter(
 }
 
 /**
- * Get the domain folder name from domain ID
- * Maps domain IDs to actual folder names in topic-content-v3-test
+ * Get the domain folder name from domain ID.
  */
 function getDomainFolder(domainId: string): string {
-  const domainFolderMap: Record<string, string> = {
-    '1': '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology',
-    '2': '2 Cognitive-Affective Bases : Learning and Memory',
-    '3-social': '3 Social Psychology',
-    '3-cultural': '3 Cultural',
-    '4': '4 Growth  : Lifespan Development',
-    '5-assessment': '5 Assessment',
-    '5-diagnosis': '5 Diagnosis  : Psychopathology',
-    '5-test': '5 Test Construction',
-    '6': '6 Treatment : Intervention',
-    '7': '7 Research Methods : Statistics',
-    '8': '8 Ethical  : Legal  : Professional Issues',
-    '3-5-6': '2 3 5 6 Organizational Psychology',
-  }
-
-  return domainFolderMap[domainId] || domainId
+  return DOMAIN_FOLDER_MAP[domainId] || domainId
 }
 
 /**
@@ -110,7 +105,7 @@ function resolveTopicFilePath(topicName: string, domain: string): string | null 
   try {
     entries = readdirSync(baseDir, { withFileTypes: true })
   } catch {
-    return null
+    entries = []
   }
 
   for (const entry of entries) {
@@ -122,7 +117,38 @@ function resolveTopicFilePath(topicName: string, domain: string): string | null 
     }
   }
 
+  // 3) Fallback: scan all known domain folders for a matching topic slug.
+  // This handles cases where the domain ID in the URL (e.g. "5-assessment")
+  // doesn't match the folder where the content actually lives (e.g. diagnosis vs assessment).
+  for (const folder of Object.values(DOMAIN_FOLDER_MAP)) {
+    if (folder === domainFolder) continue
+    const otherBaseDir = path.join(process.cwd(), 'topic-content-v3-test', folder)
+
+    let otherEntries: ReturnType<typeof readdirSync>
+    try {
+      otherEntries = readdirSync(otherBaseDir, { withFileTypes: true })
+    } catch {
+      continue
+    }
+
+    for (const entry of otherEntries) {
+      if (!entry.isFile() || !entry.name.endsWith('.md')) continue
+      const baseName = entry.name.slice(0, -3)
+      const candidateSlug = slugifyTopicName(baseName)
+      if (candidateSlug === slug) {
+        return path.join(otherBaseDir, entry.name)
+      }
+    }
+  }
+
   return null
+}
+
+/**
+ * Remove {{M}}...{{/M}} markers while leaving the inner metaphor text intact.
+ */
+export function stripMetaphorMarkers(content: string): string {
+  return content.replace(/\{\{\/?M\}\}/g, '')
 }
 
 /**
@@ -269,6 +295,12 @@ export async function replaceMetaphors(
   userInterests: string,
   topicName: string
 ): Promise<string> {
+  const apiKey = process.env.OPENAI_API_KEY
+  if (!apiKey) {
+    console.warn('[Metaphor Replacement] OPENAI_API_KEY not set, returning content without markers')
+    return stripMetaphorMarkers(baseContent)
+  }
+
   // Extract all marked metaphors
   const markedMetaphors = extractMarkedMetaphors(baseContent)
 
@@ -311,25 +343,38 @@ Return format:
 ...and so on.`
 
   try {
-    const message = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 2000,
-      messages: [
-        {
-          role: 'user',
-          content: INLINE_METAPHOR_PROMPT,
-        },
-      ],
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-4.1-mini',
+        max_tokens: 2000,
+        messages: [
+          {
+            role: 'user',
+            content: INLINE_METAPHOR_PROMPT,
+          },
+        ],
+      }),
     })
 
-    const textContent = message.content.find((block) => block.type === 'text')
-    if (!textContent || textContent.type !== 'text') {
-      throw new Error('No text content in response')
+    if (!response.ok) {
+      const errorText = await response.text()
+      throw new Error(`OpenAI API error (${response.status}): ${errorText}`)
+    }
+
+    const data: any = await response.json()
+    const text = data.choices?.[0]?.message?.content
+    if (!text || typeof text !== 'string') {
+      throw new Error('No text content in OpenAI response')
     }
 
     // Parse the numbered responses
     const personalizedMetaphors: string[] = []
-    const lines = textContent.text.split('\n')
+    const lines = text.split('\n')
 
     for (const line of lines) {
       const match = line.match(/^\d+\.\s*(.+)$/)
@@ -359,6 +404,6 @@ Return format:
   } catch (error) {
     console.error('Error replacing metaphors:', error)
     // Fallback: return original content with markers removed
-    return baseContent.replace(/\{\{M\}\}|\{\{\/M\}\}/g, '')
+    return stripMetaphorMarkers(baseContent)
   }
 }

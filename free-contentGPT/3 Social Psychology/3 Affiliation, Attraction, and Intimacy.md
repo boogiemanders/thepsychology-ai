@@ -71,7 +71,7 @@ Aronson and Linder's 1965 research on the **gain-loss effect** found two surpris
 1. We're MORE attracted to people who initially dislike us but warm up over time than to people who consistently like us
 2. We're LESS attracted to people who initially like us but then cool off than to people who consistently dislike us
 
-{{M}}Think about someone you were convinced didn't like you at first - maybe a skeptical client or a critical coworker. Then, over time, they started showing genuine appreciation for your work. That shift probably felt more meaningful than praise from someone who liked you immediately, right? We seem to value earned approval more than automatic acceptance.{{/M}}
+{{M}}Think about someone you were convinced didn't like you at first—maybe a skeptical client or a critical coworker. Then, over time, they started showing genuine appreciation for your work. That shift probably felt more meaningful than praise from someone who liked you immediately, right? We seem to value earned approval more than automatic acceptance.{{/M}}
 
 Researchers also distinguish between two types of reciprocity:
 

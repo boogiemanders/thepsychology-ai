@@ -62,7 +62,12 @@ export function SocialProofTestimonials({
       <div className="relative overflow-hidden py-8">
         <Marquee className="[--duration:60s]">
           {testimonials.map((card, idx) => (
-            <TestimonialCard {...card} key={idx} className="min-w-[200px] sm:min-w-[220px]" />
+            <div key={idx} className="w-[380px] h-[150px] px-1">
+              <TestimonialCard
+                {...card}
+                className="h-full w-full break-words"
+              />
+            </div>
           ))}
         </Marquee>
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-background from-20%"></div>

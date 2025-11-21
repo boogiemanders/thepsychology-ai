@@ -1,6 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
-import { loadTopicContent, replaceMetaphors } from '@/lib/topic-content-manager'
+import { loadTopicContent, replaceMetaphors, stripMetaphorMarkers } from '@/lib/topic-content-manager'
 import { loadReferenceContent } from '@/lib/eppp-reference-loader'
 
 const client = new Anthropic({
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
           console.log(`[Topic Teacher] Content length: ${preGeneratedContent.baseContent.length} chars`)
 
           // Store the base content
-          baseContentOnly = preGeneratedContent.baseContent
+          baseContentOnly = stripMetaphorMarkers(preGeneratedContent.baseContent)
 
           // Use pre-generated base content (with adult-friendly metaphors)
           lessonContent = preGeneratedContent.baseContent
@@ -90,6 +90,7 @@ export async function POST(request: NextRequest) {
             console.log(`[Topic Teacher] ✅ Metaphor replacement completed in ${duration}ms`)
           } else {
             console.log(`[Topic Teacher] ⚡ Using pre-generated content with generic metaphors for ${topic}`)
+            lessonContent = stripMetaphorMarkers(lessonContent)
           }
         } else {
           // No pre-generated content found - return error

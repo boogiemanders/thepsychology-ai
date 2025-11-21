@@ -12,7 +12,16 @@ export const Highlight = ({
   children: React.ReactNode
   className?: string
 }) => {
-  return <span className={cn("p-1 py-0.5 font-medium dark:font-semibold text-secondary", className)}>{children}</span>
+  return (
+    <span
+      className={cn(
+        "p-1 py-0.5 font-medium dark:font-semibold text-brand-coral",
+        className
+      )}
+    >
+      {children}
+    </span>
+  )
 }
 
 export const BLUR_FADE_DELAY = 0.15

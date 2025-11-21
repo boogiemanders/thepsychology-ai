@@ -35,3 +35,33 @@ export function saveDevExamResult(record: DevExamResultRecord): string {
 export function getDevExamResult(id: string): DevExamResultRecord | null {
   return store.get(id) ?? null
 }
+
+function getRecordTimestamp(record: DevExamResultRecord): number {
+  if (!record?.created_at) return 0
+  const time = new Date(record.created_at).getTime()
+  return Number.isFinite(time) ? time : 0
+}
+
+export function getDevExamResultsForUser(
+  userId: string
+): Array<{ id: string; record: DevExamResultRecord }> {
+  if (!userId) return []
+
+  const results: Array<{ id: string; record: DevExamResultRecord }> = []
+
+  for (const [id, record] of store.entries()) {
+    if (record.user_id !== userId) continue
+    results.push({ id, record })
+  }
+
+  return results.sort(
+    (a, b) => getRecordTimestamp(b.record) - getRecordTimestamp(a.record)
+  )
+}
+
+export function getLatestDevExamResultForUser(
+  userId: string
+): { id: string; record: DevExamResultRecord } | null {
+  const [latest] = getDevExamResultsForUser(userId)
+  return latest || null
+}

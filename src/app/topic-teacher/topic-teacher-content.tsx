@@ -40,6 +40,15 @@ export function TopicTeacherContent() {
   const topic = searchParams.get('topic')
   const hasQuizResults = searchParams.get('hasQuizResults') === 'true'
   const hasExamResults = searchParams.get('hasExamResults') === 'true'
+  const decodeParam = (value: string | null): string => {
+    if (!value) return ''
+    try {
+      return decodeURIComponent(value)
+    } catch {
+      return value
+    }
+  }
+  const decodedTopic = decodeParam(topic)
 
   const [messages, setMessages] = useState<Message[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -60,6 +69,7 @@ export function TopicTeacherContent() {
     recentlyCorrectSections: [],
     previouslyWrongNowCorrectSections: [],
   })
+  const [recentQuizWrongSections, setRecentQuizWrongSections] = useState<string[]>([])
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const currentSectionRef = useRef<string>('')
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
@@ -143,6 +153,28 @@ export function TopicTeacherContent() {
       }
     }
   }, [user?.id])
+
+  useEffect(() => {
+    const param = searchParams.get('recentQuizWrongSections')
+    if (!param) {
+      setRecentQuizWrongSections([])
+      return
+    }
+
+    try {
+      const decoded = JSON.parse(decodeURIComponent(param))
+      if (Array.isArray(decoded)) {
+        setRecentQuizWrongSections(decoded)
+      } else if (typeof decoded === 'string') {
+        setRecentQuizWrongSections([decoded])
+      } else {
+        setRecentQuizWrongSections([])
+      }
+    } catch (error) {
+      console.warn('[Topic Teacher] Failed to parse recent quiz sections', error)
+      setRecentQuizWrongSections([])
+    }
+  }, [searchParams])
 
   // Load quiz/exam results and compute highlight data
   useEffect(() => {
@@ -705,7 +737,21 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              🍏 Highlighting sections for growth: {highlightData.recentlyWrongSections.join(', ')}
+              🍏 Highlighting sections for growth:{' '}
+              {highlightData.recentlyWrongSections.includes('__ALL__')
+                ? 'All'
+                : highlightData.recentlyWrongSections.join(', ')}
+            </p>
+          </motion.div>
+        )}
+        {recentQuizWrongSections.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mb-4"
+          >
+            <p className="text-sm text-foreground/80">
+              🍎 Most recent quiz: {recentQuizWrongSections.join(', ')}
             </p>
           </motion.div>
         )}
@@ -951,7 +997,9 @@ export function TopicTeacherContent() {
 
         {initialized && messages.length > 0 && (
           <div className="mt-6 pt-4 border-t border-border -mx-6 px-6 pl-12 pr-32">
-            <Link href={`/quizzer?topic=${encodeURIComponent(decodeURIComponent(topic))}`}>
+            <Link
+              href={`/quizzer?topic=${encodeURIComponent(decodedTopic)}${domain ? `&domain=${encodeURIComponent(domain)}` : ''}`}
+            >
               <Button variant="minimal" className="w-full">
                 Take Quiz on This Topic →
               </Button>

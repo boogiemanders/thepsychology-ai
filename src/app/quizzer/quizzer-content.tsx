@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Zap, CheckCircle2, XCircle, Clock } from 'lucide-react'
+import { Zap, CheckCircle2, XCircle, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
@@ -13,6 +13,27 @@ import { useSearchParams } from 'next/navigation'
 import { saveQuizResults, getQuizResults, WrongAnswer, getAllQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb'
+import {
+  TypographyH1,
+  TypographyH2,
+  TypographyMuted,
+  TypographyP,
+  TypographySmall,
+} from '@/components/ui/typography'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 interface QuizQuestion {
   id: number
@@ -31,10 +52,43 @@ interface QuizState {
   timeRemaining: number
 }
 
+const BRAND_COLORS = {
+  softSage: '#bdd1ca',
+  coral: '#d87758',
+  olive: '#788c5d',
+  lavenderGray: '#cbc9db',
+  softBlue: '#6a9bcc',
+  dustRose: '#c46685',
+}
+
+const escapeHtml = (value: string): string => {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
 export function QuizzerContent() {
   const searchParams = useSearchParams()
   const topic = searchParams.get('topic')
+  const domain = searchParams.get('domain')
+  const decodeParam = (value: string | null): string => {
+    if (!value) return ''
+    try {
+      return decodeURIComponent(value)
+    } catch {
+      return value
+    }
+  }
+  const decodedTopic = decodeParam(topic)
+  const isMac = typeof navigator !== 'undefined' && navigator.platform.toUpperCase().includes('MAC')
+  const modifierLabel = isMac ? 'Option' : 'Alt'
   const confettiRef = useRef<ConfettiRef>(null)
+  const questionContentRef = useRef<HTMLDivElement | null>(null)
+  const [textFormats, setTextFormats] = useState<Record<number, { question: string; options: string[] }>>({})
+  const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
 
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [quizState, setQuizState] = useState<QuizState>({
@@ -48,6 +102,12 @@ export function QuizzerContent() {
   const [error, setError] = useState<string | null>(null)
   const [quizStarted, setQuizStarted] = useState(false)
   const [isFirstQuiz, setIsFirstQuiz] = useState(false)
+  const [recentQuizSectionsParam, setRecentQuizSectionsParam] = useState('')
+
+  const quizStateRef = useRef<QuizState>(quizState)
+  useEffect(() => {
+    quizStateRef.current = quizState
+  }, [quizState])
 
   const shuffleArray = <T,>(array: T[]): T[] => {
     const shuffled = [...array]
@@ -57,6 +117,253 @@ export function QuizzerContent() {
     }
     return shuffled
   }
+
+  const resolveSelectionText = useCallback(() => {
+    if (typeof window === 'undefined') return null
+
+    const selection = window.getSelection()
+    const container = questionContentRef.current
+    if (!selection || !container) return null
+    if (selection.rangeCount === 0) return null
+
+    const selectedText = selection.toString()
+    if (!selectedText.trim()) return lastSelectionRef.current?.questionIndex === quizState.question ? lastSelectionRef.current.text : null
+
+    const anchorInside = selection.anchorNode ? container.contains(selection.anchorNode) : false
+    const focusInside = selection.focusNode ? container.contains(selection.focusNode) : false
+
+    if (anchorInside || focusInside) {
+      lastSelectionRef.current = {
+        text: selectedText,
+        questionIndex: quizState.question,
+      }
+      return selectedText
+    }
+
+    if (lastSelectionRef.current?.questionIndex === quizState.question) {
+      return lastSelectionRef.current.text
+    }
+
+    return null
+  }, [quizState.question])
+
+  useEffect(() => {
+    const handleSelectionChange = () => {
+      const selection = window.getSelection()
+      const container = questionContentRef.current
+      if (!selection || !container || selection.rangeCount === 0) return
+      const selectedText = selection.toString()
+      if (!selectedText.trim()) return
+      const anchorInside = selection.anchorNode ? container.contains(selection.anchorNode) : false
+      const focusInside = selection.focusNode ? container.contains(selection.focusNode) : false
+
+      if (anchorInside || focusInside) {
+        lastSelectionRef.current = {
+          text: selectedText,
+          questionIndex: quizState.question,
+        }
+      }
+    }
+
+    document.addEventListener('selectionchange', handleSelectionChange)
+    return () => document.removeEventListener('selectionchange', handleSelectionChange)
+  }, [quizState.question])
+
+  useEffect(() => {
+    lastSelectionRef.current = null
+  }, [quizState.question])
+
+  const applyTextFormat = useCallback(
+    (selectedText: string, tagName: 'mark' | 'del') => {
+      const question = questions[quizState.question]
+      if (!question) return
+
+      const currentFormat = textFormats[quizState.question]
+      const baseQuestion = currentFormat?.question ?? escapeHtml(question.question)
+      const baseOptions = currentFormat?.options ?? question.options.map(escapeHtml)
+
+      const wrapTag = () => {
+        const el = document.createElement(tagName)
+        el.style.fontFamily = 'inherit'
+        el.style.fontSize = 'inherit'
+        el.style.fontWeight = 'inherit'
+        el.style.lineHeight = 'inherit'
+        if (tagName === 'mark') {
+          el.style.backgroundColor = BRAND_COLORS.softSage
+          el.style.color = '#0b1f13'
+        } else {
+          el.style.textDecoration = 'line-through'
+        }
+        el.textContent = selectedText
+        return el
+      }
+
+      const processNode = (node: Node) => {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent) {
+          const text = node.textContent
+          if (text.includes(selectedText)) {
+            const parts = text.split(selectedText)
+            const fragment = document.createDocumentFragment()
+
+            parts.forEach((part, index) => {
+              if (part) fragment.appendChild(document.createTextNode(part))
+              if (index < parts.length - 1) {
+                fragment.appendChild(wrapTag())
+              }
+            })
+
+            node.parentNode?.replaceChild(fragment, node)
+          }
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          Array.from(node.childNodes).forEach(processNode)
+        }
+      }
+
+      const tempQuestion = document.createElement('div')
+      tempQuestion.innerHTML = baseQuestion
+      processNode(tempQuestion)
+
+      const updatedOptions = baseOptions.map((option) => {
+        const optDiv = document.createElement('div')
+        optDiv.innerHTML = option
+        processNode(optDiv)
+        return optDiv.innerHTML
+      })
+
+      setTextFormats((prev) => ({
+        ...prev,
+        [quizState.question]: {
+          question: tempQuestion.innerHTML,
+          options: updatedOptions,
+        },
+      }))
+      lastSelectionRef.current = null
+    },
+    [questions, quizState.question, textFormats]
+  )
+
+  const handleHighlightText = useCallback(() => {
+    const selectedText = resolveSelectionText()
+    if (!selectedText) return
+    applyTextFormat(selectedText, 'mark')
+  }, [applyTextFormat, resolveSelectionText])
+
+  const handleStrikethroughText = useCallback(() => {
+    const selectedText = resolveSelectionText()
+    if (!selectedText) return
+    applyTextFormat(selectedText, 'del')
+  }, [applyTextFormat, resolveSelectionText])
+
+  const handlePrevious = useCallback(() => {
+    setQuizState((prev) => ({
+      ...prev,
+      question: Math.max(0, prev.question - 1),
+    }))
+    setError(null)
+  }, [])
+
+  const handleNext = useCallback(() => {
+    const state = quizStateRef.current
+    const currentIndex = state.question
+    if (currentIndex >= questions.length) return
+
+    const selectedAnswer = state.selectedAnswers[currentIndex]
+    if (!selectedAnswer) {
+      setError('Please select an answer')
+      return
+    }
+
+    const currentQuestion = questions[currentIndex]
+    const isCorrect = selectedAnswer === currentQuestion.correctAnswer
+
+    if (currentIndex < questions.length - 1) {
+      setQuizState((prev) => ({
+        ...prev,
+        question: prev.question + 1,
+        score: prev.score + (isCorrect ? 1 : 0),
+      }))
+      setError(null)
+      return
+    }
+
+    const finalScore = state.score + (isCorrect ? 1 : 0)
+    const wrongAnswers: WrongAnswer[] = []
+    const correctAnswers = []
+
+    questions.forEach((q) => {
+      const selected = state.selectedAnswers[q.id] ?? ''
+      const questionWasCorrect = selected === q.correctAnswer
+
+      if (!questionWasCorrect) {
+        wrongAnswers.push({
+          questionId: q.id,
+          question: q.question,
+          selectedAnswer: selected,
+          correctAnswer: q.correctAnswer,
+          relatedSections: q.relatedSections || [],
+          timestamp: Date.now(),
+        })
+      } else {
+        correctAnswers.push({
+          questionId: q.id,
+          question: q.question,
+          relatedSections: q.relatedSections || [],
+          timestamp: Date.now(),
+        })
+      }
+    })
+
+    const previousResults = getQuizResults(topic || '')
+    if (previousResults) {
+      wrongAnswers.forEach((wa) => {
+        const wasPreviouslyCorrect = previousResults.correctAnswers.some(
+          (ca) => ca.questionId === wa.questionId
+        )
+        if (wasPreviouslyCorrect) {
+          wa.previouslyWrong = false
+        }
+      })
+
+      correctAnswers.forEach((ca) => {
+        const wasPreviouslyWrong = previousResults.wrongAnswers.some(
+          (wa) => wa.questionId === ca.questionId
+        )
+        if (wasPreviouslyWrong) {
+          ;(ca as any).wasPreviouslyWrong = true
+        }
+      })
+    }
+
+    const recentSections = Array.from(
+      new Set(wrongAnswers.flatMap((wa) => wa.relatedSections || []))
+    )
+
+    const quizResults = {
+      topic: decodedTopic,
+      timestamp: Date.now(),
+      score: finalScore,
+      totalQuestions: questions.length,
+      wrongAnswers,
+      correctAnswers,
+    }
+
+    saveQuizResults(quizResults)
+
+    const resultsParam = encodeURIComponent(JSON.stringify(quizResults))
+    const sectionsParam = encodeURIComponent(JSON.stringify(recentSections))
+    window.history.replaceState(
+      null,
+      '',
+      `?topic=${encodeURIComponent(topic || '')}&quizResults=${resultsParam}&recentQuizWrongSections=${sectionsParam}`
+    )
+    setRecentQuizSectionsParam(sectionsParam)
+
+    setQuizState((prev) => ({
+      ...prev,
+      showResults: true,
+      score: finalScore,
+    }))
+  }, [questions, topic, decodedTopic])
 
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60)
@@ -78,7 +385,7 @@ export function QuizzerContent() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ topic }),
+        body: JSON.stringify({ topic, domain }),
       })
 
       if (!response.ok) {
@@ -88,51 +395,23 @@ export function QuizzerContent() {
       const data = await response.json()
       let questionsData = data.questions || []
 
-      // Get previous wrong answers to include on retake
-      const previousResults = getQuizResults(topic)
-      let questionsToUse = [...questionsData]
-
-      if (previousResults && previousResults.wrongAnswers.length > 0) {
-        // Include previous wrong answers - take up to 3 of them or all if less than 3
-        const wrongAnswersToInclude = previousResults.wrongAnswers.slice(0, 3)
-
-        // Convert wrong answers to QuizQuestion format
-        const wrongAnswerQuestions: QuizQuestion[] = wrongAnswersToInclude.map(
-          (wa) => ({
-            id: wa.questionId,
-            question: wa.question,
-            options: shuffleArray([
-              wa.correctAnswer,
-              wa.selectedAnswer,
-              'Placeholder option 1',
-              'Placeholder option 2',
-            ]),
-            correctAnswer: wa.correctAnswer,
-            explanation: `Remember: The correct answer is "${wa.correctAnswer}". You previously selected "${wa.selectedAnswer}".`,
-            relatedSections: wa.relatedSections,
-          })
-        )
-
-        // Combine new questions with previous wrong answers, take 10 total
-        questionsToUse = shuffleArray([
-          ...questionsData.slice(0, 10 - wrongAnswerQuestions.length),
-          ...wrongAnswerQuestions,
-        ]).slice(0, 10)
-      }
-
-      // Shuffle answer options for each question
-      questionsToUse = questionsToUse.map((q: QuizQuestion) => ({
+      const shuffled = shuffleArray(questionsData).map((q: QuizQuestion, idx: number) => ({
         ...q,
         options: shuffleArray(q.options),
-      }))
-
-      // Assign sequential IDs
-      questionsToUse = questionsToUse.map((q: QuizQuestion, idx: number) => ({
-        ...q,
         id: idx,
       }))
 
-      setQuestions(questionsToUse)
+      const finalQuestions = shuffled.slice(0, 10)
+      setQuestions(finalQuestions)
+      const initialFormats: Record<number, { question: string; options: string[] }> = {}
+      finalQuestions.forEach((q, idx) => {
+        initialFormats[idx] = {
+          question: escapeHtml(q.question),
+          options: q.options.map(escapeHtml),
+        }
+      })
+      setTextFormats(initialFormats)
+      lastSelectionRef.current = null
     } catch (err) {
       console.error('Error generating quiz:', err)
       setError(
@@ -209,6 +488,53 @@ export function QuizzerContent() {
     return () => clearInterval(timer)
   }, [quizStarted, quizState.showResults, questions.length, quizState.timeRemaining])
 
+  useEffect(() => {
+    if (!quizStarted || questions.length === 0) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const modifier = e.altKey
+      if (!modifier) return
+
+      const key = (e.code || e.key || '').toLowerCase()
+      if (key === 'keyp' || key === 'p') {
+        e.preventDefault()
+        handlePrevious()
+        return
+      }
+
+      if ((key === 'keyn' || key === 'n') && quizStateRef.current.selectedAnswers[quizStateRef.current.question]) {
+        e.preventDefault()
+        handleNext()
+        return
+      }
+
+      if (
+        (key === 'keye' || key === 'e') &&
+        quizStateRef.current.question === questions.length - 1 &&
+        quizStateRef.current.selectedAnswers[quizStateRef.current.question]
+      ) {
+        e.preventDefault()
+        handleNext()
+        return
+      }
+
+      if (key === 'keyh' || key === 'h') {
+        e.preventDefault()
+        handleHighlightText()
+        return
+      }
+
+      if (key === 'keys' || key === 's') {
+        e.preventDefault()
+        handleStrikethroughText()
+        return
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [quizStarted, questions.length, handleNext, handlePrevious, handleHighlightText, handleStrikethroughText])
+
   const handleSelectAnswer = (option: string) => {
     if (quizState.showResults) return
 
@@ -221,121 +547,34 @@ export function QuizzerContent() {
     }))
   }
 
-  const handleNext = () => {
-    const currentQuestion = questions[quizState.question]
-    const selectedAnswer = quizState.selectedAnswers[quizState.question]
-
-    if (!selectedAnswer) {
-      setError('Please select an answer')
-      return
-    }
-
-    const isCorrect =
-      selectedAnswer === currentQuestion.correctAnswer
-
-    if (quizState.question < questions.length - 1) {
-      setQuizState((prev) => ({
-        ...prev,
-        question: prev.question + 1,
-        score: prev.score + (isCorrect ? 1 : 0),
-      }))
-      setError(null)
-    } else {
-      // Quiz is finishing, save results
-      const finalScore = quizState.score + (isCorrect ? 1 : 0)
-
-      // Collect wrong and correct answers
-      const wrongAnswers: WrongAnswer[] = []
-      const correctAnswers = []
-
-      questions.forEach((q) => {
-        const selected = quizState.selectedAnswers[q.id] || selectedAnswer
-        const questionWasCorrect = selected === q.correctAnswer
-
-        if (!questionWasCorrect) {
-          wrongAnswers.push({
-            questionId: q.id,
-            question: q.question,
-            selectedAnswer: selected,
-            correctAnswer: q.correctAnswer,
-            relatedSections: q.relatedSections || [],
-            timestamp: Date.now(),
-          })
-        } else {
-          correctAnswers.push({
-            questionId: q.id,
-            question: q.question,
-            relatedSections: q.relatedSections || [],
-            timestamp: Date.now(),
-          })
-        }
-      })
-
-      // Get previous quiz results to check if wrong answers were correct before
-      const previousResults = getQuizResults(topic || '')
-      if (previousResults) {
-        wrongAnswers.forEach((wa) => {
-          const wasPreviouslyCorrect = previousResults.correctAnswers.some(
-            (ca) => ca.questionId === wa.questionId
-          )
-          if (wasPreviouslyCorrect) {
-            wa.previouslyWrong = false
-          }
-        })
-
-        correctAnswers.forEach((ca) => {
-          const wasPreviouslyWrong = previousResults.wrongAnswers.some(
-            (wa) => wa.questionId === ca.questionId
-          )
-          if (wasPreviouslyWrong) {
-            ;(ca as any).wasPreviouslyWrong = true
-          }
-        })
-      }
-
-      const quizResults = {
-        topic: decodeURIComponent(topic || ''),
-        timestamp: Date.now(),
-        score: finalScore,
-        totalQuestions: questions.length,
-        wrongAnswers,
-        correctAnswers,
-      }
-
-      saveQuizResults(quizResults)
-
-      // Pass results via URL for topic-teacher
-      const resultsParam = encodeURIComponent(JSON.stringify(quizResults))
-      window.history.replaceState(
-        null,
-        '',
-        `?topic=${encodeURIComponent(topic || '')}&quizResults=${resultsParam}`
-      )
-
-      setQuizState((prev) => ({
-        ...prev,
-        showResults: true,
-        score: finalScore,
-      }))
-    }
-  }
-
   if (!topic) {
     return (
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
-          <Link
-            href="/topic-selector"
-            className="flex items-center gap-2 text-primary hover:underline mb-8"
-          >
-            <ArrowLeft size={18} />
-            Back to Topics
-          </Link>
-          <div className="text-center py-20">
-            <h1 className="text-2xl font-bold mb-4">No topic selected</h1>
-            <p className="text-muted-foreground mb-6">
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/dashboard">Dashboard</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/topic-selector">Topic Selector</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Quiz</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          <div className="text-center py-20 space-y-3">
+            <TypographyH1 className="text-center">No topic selected</TypographyH1>
+            <TypographyMuted className="text-base text-center">
               Please select a topic first
-            </p>
+            </TypographyMuted>
             <Link href="/topic-selector">
               <Button>Go to Topics</Button>
             </Link>
@@ -354,13 +593,25 @@ export function QuizzerContent() {
       />
 
       <div className="max-w-2xl mx-auto">
-        <Link
-          href="/topic-selector"
-          className="flex items-center gap-2 text-primary hover:underline mb-8"
-        >
-          <ArrowLeft size={18} />
-          Back to Topic Selector
-        </Link>
+        <Breadcrumb className="mb-8">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/dashboard">Dashboard</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/topic-selector">Topic Selector</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{decodedTopic || 'Quiz'}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -376,18 +627,19 @@ export function QuizzerContent() {
               </div>
             </div>
           ) : !quizStarted ? (
-            <div className="text-center py-20">
-              <h1 className="text-4xl font-bold mb-4">Quiz - {decodeURIComponent(topic)}</h1>
-              <p className="text-muted-foreground mb-8 text-lg">
-                10 questions
-              </p>
+            <div className="text-center py-20 space-y-3">
+              <TypographyH1 className="text-center">
+                Quiz - {decodedTopic || 'Selected Topic'}
+              </TypographyH1>
+              <TypographyMuted className="text-lg text-center">
+                10 questions · Total time: {formatTime(questions.length * 68)}
+              </TypographyMuted>
               <Button
                 onClick={() => setQuizStarted(true)}
                 size="lg"
                 variant="minimal"
                 className="gap-2"
               >
-                <Zap size={20} />
                 Start
               </Button>
             </div>
@@ -406,35 +658,35 @@ export function QuizzerContent() {
               </div>
 
               {quizState.score >= 8 ? (
-                <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-6 mb-6">
-                  <CheckCircle2 className="text-green-500 mx-auto mb-3" />
-                  <h3 className="font-semibold text-green-500 mb-2">
+                <div className="rounded-lg p-6 mb-6">
+                  <CheckCircle2
+                    className="mx-auto mb-3"
+                    style={{ color: BRAND_COLORS.softBlue }}
+                  />
+                  <h3 className="font-semibold mb-2" style={{ color: BRAND_COLORS.softBlue }}>
                     Excellent! Topic Mastered
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <TypographyMuted>
                     You've demonstrated mastery of this topic. Great work!
-                  </p>
+                  </TypographyMuted>
                 </div>
               ) : (
-                <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-6 mb-6">
-                  <XCircle className="text-yellow-500 mx-auto mb-3" />
-                  <h3 className="font-semibold text-yellow-500 mb-2">
+                <div className="rounded-lg p-6 mb-6">
+                  <h3 className="font-semibold mb-2" style={{ color: BRAND_COLORS.coral }}>
                     Keep Practicing
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <TypographyMuted>
                     Review the material and try again to improve your score.
-                  </p>
+                  </TypographyMuted>
                 </div>
               )}
 
               {/* Detailed Question Breakdown */}
               <div className="space-y-4 mb-6">
-                <h3 className="text-xl font-semibold text-center mb-4">Review Your Answers</h3>
+                <TypographyH2 className="text-center border-none">Review Your Answers</TypographyH2>
                 {questions.map((q, idx) => {
                   const selectedAnswer = quizState.selectedAnswers[q.id]
                   const isCorrect = selectedAnswer === q.correctAnswer
-                  const selectedLetter = q.options.findIndex(opt => opt === selectedAnswer)
-                  const correctLetter = q.options.findIndex(opt => opt === q.correctAnswer)
 
                   return (
                     <motion.div
@@ -442,33 +694,50 @@ export function QuizzerContent() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 }}
-                      className={`border rounded-lg p-6 ${
-                        isCorrect
-                          ? 'bg-green-500/5 border-green-500/30'
-                          : 'bg-red-500/5 border-red-500/30'
-                      }`}
+                      className="rounded-lg p-6 border border-border"
                     >
                       {/* Question Header */}
                       <div className="flex items-start gap-3 mb-4">
                         {isCorrect ? (
-                          <CheckCircle2 className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                          <CheckCircle2
+                            className="flex-shrink-0 mt-1"
+                            size={20}
+                            style={{ color: BRAND_COLORS.softSage }}
+                          />
                         ) : (
-                          <XCircle className="text-red-500 flex-shrink-0 mt-1" size={20} />
+                          <XCircle
+                            className="flex-shrink-0 mt-1"
+                            size={20}
+                            style={{ color: BRAND_COLORS.coral }}
+                          />
                         )}
                         <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-2">
+                          <div className="flex items-center gap-2 mb-2 flex-wrap">
                             <span className="text-sm font-semibold text-muted-foreground">
                               Question {idx + 1}
                             </span>
-                            {isCorrect ? (
-                              <span className="text-xs px-2 py-0.5 bg-green-500/20 text-green-700 dark:text-green-400 rounded">
-                                Correct
-                              </span>
-                            ) : (
-                              <span className="text-xs px-2 py-0.5 bg-red-500/20 text-red-700 dark:text-red-400 rounded">
-                                Incorrect
-                              </span>
+                            {!q.isScored && (
+                              <Badge
+                                variant="outline"
+                                className="text-xs px-2 py-0.5 rounded border"
+                                style={{
+                                  borderColor: BRAND_COLORS.lavenderGray,
+                                  color: BRAND_COLORS.lavenderGray,
+                                }}
+                              >
+                                Unscored
+                              </Badge>
                             )}
+                            <Badge
+                              variant="outline"
+                              className="text-xs px-2 py-0.5 rounded border"
+                              style={{
+                                borderColor: isCorrect ? BRAND_COLORS.softSage : BRAND_COLORS.coral,
+                                color: isCorrect ? BRAND_COLORS.softSage : BRAND_COLORS.coral,
+                              }}
+                            >
+                              {isCorrect ? 'Correct' : 'Incorrect'}
+                            </Badge>
                           </div>
                           <p className="text-base font-medium mb-4">{q.question}</p>
 
@@ -482,26 +751,41 @@ export function QuizzerContent() {
                               return (
                                 <div
                                   key={optIdx}
-                                  className={`p-3 rounded-lg border ${
-                                    isThisCorrect
-                                      ? 'bg-green-500/10 border-green-500/30'
+                                  className="p-3 rounded-lg border"
+                                  style={{
+                                    borderColor: isThisCorrect
+                                      ? BRAND_COLORS.softSage
                                       : isThisSelected
-                                      ? 'bg-red-500/10 border-red-500/30'
-                                      : 'bg-muted/30 border-border'
-                                  }`}
+                                      ? BRAND_COLORS.coral
+                                      : 'var(--border)',
+                                  }}
                                 >
                                   <div className="flex items-start gap-2">
                                     <span className="font-semibold">{optionLetter}.</span>
                                     <span className="flex-1">{option}</span>
                                     {isThisCorrect && (
-                                      <span className="text-xs px-2 py-0.5 bg-green-500/20 text-green-700 dark:text-green-400 rounded flex-shrink-0">
+                                      <Badge
+                                        variant="outline"
+                                        className="text-xs px-2 py-0.5 rounded border flex-shrink-0"
+                                        style={{
+                                          borderColor: BRAND_COLORS.softSage,
+                                          color: BRAND_COLORS.softSage,
+                                        }}
+                                      >
                                         Correct Answer
-                                      </span>
+                                      </Badge>
                                     )}
                                     {isThisSelected && !isThisCorrect && (
-                                      <span className="text-xs px-2 py-0.5 bg-red-500/20 text-red-700 dark:text-red-400 rounded flex-shrink-0">
+                                      <Badge
+                                        variant="outline"
+                                        className="text-xs px-2 py-0.5 rounded border flex-shrink-0"
+                                        style={{
+                                          borderColor: BRAND_COLORS.coral,
+                                          color: BRAND_COLORS.coral,
+                                        }}
+                                      >
                                         Your Answer
-                                      </span>
+                                      </Badge>
                                     )}
                                   </div>
                                 </div>
@@ -510,25 +794,18 @@ export function QuizzerContent() {
                           </div>
 
                           {/* Explanation */}
-                          {!isCorrect && (
-                            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 mb-3">
-                              <p className="text-sm font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
-                                Why you might have chosen this:
-                              </p>
-                              <p className="text-sm text-muted-foreground">
-                                This is a common misconception. Your selected answer may have seemed related, but it doesn't fully capture the core concept being tested.
-                              </p>
-                            </div>
-                          )}
-
-                          <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
-                            <p className="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-2">
-                              Explanation:
-                            </p>
-                            <p className="text-sm text-muted-foreground">
-                              {q.explanation}
-                            </p>
-                          </div>
+                          <Accordion type="single" collapsible className="w-full border border-border rounded-lg">
+                            <AccordionItem value={`exp-${q.id}`}>
+                              <AccordionTrigger className="text-sm font-semibold">
+                                Explanation
+                              </AccordionTrigger>
+                              <AccordionContent className="p-0">
+                                <TypographyP className="text-sm text-muted-foreground px-1 pt-2 pb-4">
+                                  {q.explanation}
+                                </TypographyP>
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
                         </div>
                       </div>
                     </motion.div>
@@ -538,30 +815,27 @@ export function QuizzerContent() {
 
               {/* Action Buttons */}
               <div className="space-y-2">
-                <Button
-                  onClick={() => {
-                    setQuestions([])
-                    setQuizState({
-                      question: 0,
-                      score: 0,
-                      selectedAnswers: {},
-                      showResults: false,
-                      timeRemaining: 0,
-                    })
-                    setQuizStarted(false)
-                  }}
-                  variant="minimal"
-                  className="w-full"
+                <Link
+                  href={`/quizzer?topic=${encodeURIComponent(topic || '')}${
+                    domain ? `&domain=${encodeURIComponent(domain)}` : ''
+                  }`}
+                  className="block"
                 >
-                  Retake Quiz
-                </Button>
+                  <Button variant="minimal" className="w-full">
+                    Retake Quiz
+                  </Button>
+                </Link>
                 <Link href="/topic-selector" className="block">
                   <Button variant="minimal" className="w-full">
                     Select Another Topic
                   </Button>
                 </Link>
                 <Link
-                  href={`/topic-teacher?topic=${encodeURIComponent(topic || '')}&hasQuizResults=true`}
+                  href={`/topic-teacher?topic=${encodeURIComponent(topic || '')}&hasQuizResults=true${
+                    recentQuizSectionsParam
+                      ? `&recentQuizWrongSections=${recentQuizSectionsParam}`
+                      : ''
+                  }`}
                   className="block"
                 >
                   <Button className="w-full">Relearn the Topic</Button>
@@ -591,55 +865,103 @@ export function QuizzerContent() {
                 <Progress value={((quizState.question + 1) / questions.length) * 100} className="h-1" />
               </div>
 
+              <div className="flex gap-4 mb-4">
+                <div className="flex flex-col gap-1 items-start">
+                  <Button
+                    onClick={handleHighlightText}
+                    variant="outline"
+                    size="sm"
+                    className="rounded-none hover:bg-accent transition-colors"
+                    style={{ fontFamily: 'Tahoma' }}
+                    onMouseDown={(e) => e.preventDefault()}
+                  >
+                    Highlight
+                  </Button>
+                  <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                    {modifierLabel} + H
+                  </span>
+                </div>
+                <div className="flex flex-col gap-1 items-start">
+                  <Button
+                    onClick={handleStrikethroughText}
+                    variant="outline"
+                    size="sm"
+                    className="rounded-none hover:bg-accent transition-colors"
+                    style={{ fontFamily: 'Tahoma' }}
+                    onMouseDown={(e) => e.preventDefault()}
+                  >
+                    Strikeout
+                  </Button>
+                  <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                    {modifierLabel} + S
+                  </span>
+                </div>
+              </div>
+
               {/* Question Card */}
-              <Card className="rounded-none">
-                <CardHeader>
-                  <CardTitle className="text-base font-normal leading-relaxed text-foreground select-text" style={{ fontFamily: 'Tahoma' }}>
-                    {questions[quizState.question]?.question}
-                  </CardTitle>
-                </CardHeader>
-                <Separator />
-                <CardContent className="pt-6">
-                  {/* Answer Options - Radio Style */}
-                  <div className="space-y-3">
-                    {questions[quizState.question]?.options.map((option, idx) => {
-                      const isSelected = quizState.selectedAnswers[quizState.question] === option
-                      const optionLetter = String.fromCharCode(65 + idx)
+              {(() => {
+                const currentQuestion = questions[quizState.question]
+                const currentFormat = textFormats[quizState.question]
+                const questionHtml = currentFormat?.question ?? escapeHtml(currentQuestion?.question ?? '')
+                const optionHtml = currentFormat?.options ?? currentQuestion?.options.map(escapeHtml) ?? []
 
-                      return (
-                        <div key={idx} className="flex items-start gap-3 p-2">
-                          {/* Radio Button - Only This is Clickable */}
-                          <motion.button
-                            whileHover={!quizState.showResults ? { scale: 1.15 } : {}}
-                            onClick={() => !quizState.showResults && handleSelectAnswer(option)}
-                            disabled={quizState.showResults}
-                            className={`flex-shrink-0 mt-2 transition-all cursor-pointer disabled:cursor-not-allowed ${
-                              isSelected ? 'scale-110' : ''
-                            }`}
-                          >
-                            <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all ${
-                              isSelected
-                                ? 'border-foreground bg-foreground'
-                                : 'border-muted-foreground bg-transparent hover:border-foreground'
-                            }`}>
-                              {isSelected && (
-                                <div className="w-2 h-2 bg-white rounded-full" />
-                              )}
-                            </div>
-                          </motion.button>
+                return (
+                  <div ref={questionContentRef}>
+                    <Card className="rounded-none">
+                      <CardHeader>
+                        <CardTitle
+                          className="text-base font-normal leading-relaxed text-foreground select-text"
+                          style={{ fontFamily: 'Tahoma' }}
+                          dangerouslySetInnerHTML={{ __html: questionHtml }}
+                        />
+                      </CardHeader>
+                      <Separator />
+                      <CardContent className="pt-6">
+                        {/* Answer Options - Radio Style */}
+                        <div className="space-y-3">
+                          {questions[quizState.question]?.options.map((option, idx) => {
+                            const isSelected = quizState.selectedAnswers[quizState.question] === option
+                            const optionLetter = String.fromCharCode(65 + idx)
+                            const optionContent = optionHtml[idx] ?? escapeHtml(option)
 
-                          {/* Option Text - Not Clickable */}
-                          <div className="flex-1 min-w-0 pt-1">
-                            <div className="text-base text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                              <span>{optionLetter}.</span> {option}
-                            </div>
-                          </div>
+                            return (
+                              <div key={idx} className="flex items-start gap-3 p-2">
+                                {/* Radio Button - Only This is Clickable */}
+                                <motion.button
+                                  whileHover={!quizState.showResults ? { scale: 1.15 } : {}}
+                                  onClick={() => !quizState.showResults && handleSelectAnswer(option)}
+                                  disabled={quizState.showResults}
+                                  className={`flex-shrink-0 mt-2 transition-all cursor-pointer disabled:cursor-not-allowed ${
+                                    isSelected ? 'scale-110' : ''
+                                  }`}
+                                >
+                                  <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all ${
+                                    isSelected
+                                      ? 'border-foreground bg-foreground'
+                                      : 'border-muted-foreground bg-transparent hover:border-foreground'
+                                  }`}>
+                                    {isSelected && (
+                                      <div className="w-2 h-2 bg-white rounded-full" />
+                                    )}
+                                  </div>
+                                </motion.button>
+
+                                {/* Option Text - Not Clickable */}
+                                <div className="flex-1 min-w-0 pt-1">
+                                  <div className="text-base text-foreground" style={{ fontFamily: 'Tahoma' }}>
+                                    <span>{optionLetter}.</span>{' '}
+                                    <span dangerouslySetInnerHTML={{ __html: optionContent }} />
+                                  </div>
+                                </div>
+                              </div>
+                            )
+                          })}
                         </div>
-                      )
-                    })}
+                      </CardContent>
+                    </Card>
                   </div>
-                </CardContent>
-              </Card>
+                )
+              })()}
 
               {error && (
                 <motion.div
@@ -657,15 +979,35 @@ export function QuizzerContent() {
                 animate={{ opacity: 1 }}
                 className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 mt-8"
               >
-                <div className="flex items-center justify-end gap-4">
-                  <Button
-                    onClick={handleNext}
-                    disabled={!quizState.selectedAnswers[quizState.question]}
-                    className="min-w-[120px] rounded-none"
-                    style={{ fontFamily: 'Tahoma' }}
-                  >
-                    {quizState.question === questions.length - 1 ? 'Finish Quiz' : 'Next'}
-                  </Button>
+                <div className="flex items-center justify-between gap-6">
+                  <div className="flex flex-col gap-1 items-center">
+                    <Button
+                      onClick={handlePrevious}
+                      disabled={quizState.question === 0}
+                      className="min-w-[120px] rounded-none"
+                      variant="outline"
+                      style={{ fontFamily: 'Tahoma' }}
+                    >
+                      Previous
+                    </Button>
+                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                      {modifierLabel} + P
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col gap-1 items-center">
+                    <Button
+                      onClick={handleNext}
+                      disabled={!quizState.selectedAnswers[quizState.question]}
+                      className="min-w-[120px] rounded-none"
+                      style={{ fontFamily: 'Tahoma' }}
+                    >
+                      {quizState.question === questions.length - 1 ? 'Finish Quiz' : 'Next'}
+                    </Button>
+                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                      {modifierLabel} + {quizState.question === questions.length - 1 ? 'E' : 'N'}
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             </div>

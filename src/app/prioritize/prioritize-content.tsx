@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle, FileText, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -9,7 +9,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
-import { useSearchParams } from 'next/navigation'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import { useRouter, useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { Switch } from '@/components/ui/switch'
@@ -33,11 +40,24 @@ interface AnalysisData {
   topics?: string[]
 }
 
+interface ResultHistoryItem {
+  id: string
+  examType: string
+  examMode: string
+  score: number | null
+  totalQuestions: number | null
+  createdAt: string
+}
+
+const HISTORY_PAGE_SIZE = 4
+
 export function PrioritizeContent() {
   const searchParams = useSearchParams()
   const resultId = searchParams.get('id')
   const resultsParam = searchParams.get('results')
+  const router = useRouter()
   const { user } = useAuth()
+  const userId = user?.id ?? null
 
   const [analysis, setAnalysis] = useState('')
   const [isAnalyzing, setIsAnalyzing] = useState(false)
@@ -48,15 +68,187 @@ export function PrioritizeContent() {
   const [examResults, setExamResults] = useState<string | null>(null)
   const [priorityData, setPriorityData] = useState<any>(null)
   const [expandedRecommendations, setExpandedRecommendations] = useState<number[]>([])
+  const [resultHistory, setResultHistory] = useState<ResultHistoryItem[]>([])
+  const [isLoadingHistory, setIsLoadingHistory] = useState(false)
+  const [historyError, setHistoryError] = useState<string | null>(null)
+  const [selectedResultId, setSelectedResultId] = useState<string | null>(resultId)
+  const skipNextResultFetch = useRef(false)
+  const historyPages = useMemo(() => {
+    if (resultHistory.length === 0) return []
 
-  // Fetch results from Supabase if ID is provided
+    const pages: ResultHistoryItem[][] = []
+    for (let i = 0; i < resultHistory.length; i += HISTORY_PAGE_SIZE) {
+      pages.push(resultHistory.slice(i, i + HISTORY_PAGE_SIZE))
+    }
+    return pages
+  }, [resultHistory])
+
+  const handleHistorySelect = (historyId: string, options?: { updateUrl?: boolean }) => {
+    if (!historyId || historyId === selectedResultId) return
+
+    setError(null)
+    setExamResults(null)
+    setSelectedResultId(historyId)
+
+    if (options?.updateUrl === false) {
+      return
+    }
+
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('id', historyId)
+    const queryString = params.toString()
+    router.replace(queryString ? `/prioritize?${queryString}` : '/prioritize', { scroll: false })
+  }
+
+  const formatHistoryLabel = (item: ResultHistoryItem) => {
+    const type = item.examType === 'diagnostic' ? 'Diagnostic' : 'Practice'
+    const mode = item.examMode === 'test' ? 'Test Mode' : 'Study Mode'
+    return `${type} • ${mode}`
+  }
+
+  const formatHistoryScore = (item: ResultHistoryItem) => {
+    if (
+      typeof item.score !== 'number' ||
+      typeof item.totalQuestions !== 'number' ||
+      item.totalQuestions === 0
+    ) {
+      return 'Score pending'
+    }
+
+    const percent = Math.round((item.score / item.totalQuestions) * 100)
+    return `${percent}%`
+  }
+
+  const formatHistoryDate = (item: ResultHistoryItem) => {
+    const date = new Date(item.createdAt)
+    if (Number.isNaN(date.getTime())) return ''
+    const day = date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
+    const time = date.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' })
+    return `${day} • ${time}`
+  }
+
+  useEffect(() => {
+    if (resultId) {
+      setSelectedResultId(resultId)
+    }
+  }, [resultId])
+
+  // Fetch exam history for quick navigation
+  useEffect(() => {
+    if (!userId) {
+      setResultHistory([])
+      return
+    }
+
+    let isMounted = true
+
+    const fetchHistory = async () => {
+      try {
+        setIsLoadingHistory(true)
+        setHistoryError(null)
+
+        const response = await fetch(`/api/exam-history?userId=${userId}&limit=10`)
+        if (!response.ok) {
+          const errorText = await response.text()
+          throw new Error(errorText || 'Failed to load exam history')
+        }
+
+        const data = await response.json()
+        if (!data.success) {
+          throw new Error(data.error || 'Failed to load exam history')
+        }
+
+        if (!isMounted) return
+
+        setResultHistory(data.history || [])
+
+        if (!resultsParam && !selectedResultId && data.history && data.history.length > 0) {
+          setError(null)
+          setExamResults(null)
+          setSelectedResultId(data.history[0].id)
+        }
+      } catch (err) {
+        console.error('Error fetching exam history:', err)
+        if (isMounted) {
+          setHistoryError(err instanceof Error ? err.message : 'Failed to load exam history')
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoadingHistory(false)
+        }
+      }
+    }
+
+    fetchHistory()
+
+    return () => {
+      isMounted = false
+    }
+  }, [userId, resultsParam])
+
+  // Fetch results (specific ID, legacy param, or latest exam)
   useEffect(() => {
     const fetchResults = async () => {
-      if (!resultId) {
-        // Use results from URL param if available (backward compatibility)
-        if (resultsParam) {
-          setExamResults(resultsParam)
+      if (!selectedResultId && resultsParam) {
+        setExamResults(resultsParam)
+        return
+      }
+
+      if (!selectedResultId) {
+        if (!userId) {
+          return
         }
+
+        try {
+          setIsLoadingResults(true)
+          setError(null)
+
+          const response = await fetch(`/api/get-exam-results/latest?userId=${userId}`)
+
+          if (response.status === 404) {
+            setExamResults(null)
+            return
+          }
+
+          if (!response.ok) {
+            const errorText = await response.text()
+            throw new Error(errorText || 'Failed to load latest exam results')
+          }
+
+          const data = await response.json()
+
+          if (!data.success) {
+            throw new Error(data.error || 'Failed to load latest exam results')
+          }
+
+          const resultData = {
+            questions: data.results.questions,
+            selectedAnswers: data.results.selectedAnswers,
+            score: data.results.score,
+            totalQuestions: data.results.totalQuestions,
+            examType: data.results.examType,
+            examMode: data.results.examMode,
+            topPriorities: data.results.topPriorities,
+            allResults: data.results.allResults,
+          }
+
+          setExamResults(JSON.stringify(resultData))
+
+          if (!selectedResultId && data.resultId) {
+            skipNextResultFetch.current = true
+            setSelectedResultId(data.resultId)
+          }
+        } catch (err) {
+          console.error('Error loading latest exam results:', err)
+          setError(err instanceof Error ? err.message : 'Failed to load results')
+        } finally {
+          setIsLoadingResults(false)
+        }
+        return
+      }
+
+      if (skipNextResultFetch.current) {
+        skipNextResultFetch.current = false
         return
       }
 
@@ -64,14 +256,19 @@ export function PrioritizeContent() {
         setIsLoadingResults(true)
         setError(null)
 
-        const response = await fetch(`/api/get-exam-results?id=${resultId}`)
+        const response = await fetch(`/api/get-exam-results?id=${selectedResultId}`)
+
+        if (!response.ok) {
+          const errorText = await response.text()
+          throw new Error(errorText || 'Failed to load exam results')
+        }
+
         const data = await response.json()
 
         if (!data.success) {
           throw new Error(data.error || 'Failed to load exam results')
         }
 
-        // Convert to same format as URL param for backward compatibility
         const resultData = {
           questions: data.results.questions,
           selectedAnswers: data.results.selectedAnswers,
@@ -93,7 +290,7 @@ export function PrioritizeContent() {
     }
 
     fetchResults()
-  }, [resultId, resultsParam])
+  }, [selectedResultId, resultsParam, userId])
 
   // Analyze results once they're loaded
   useEffect(() => {
@@ -176,7 +373,7 @@ export function PrioritizeContent() {
     )
   }
 
-  if (!examResults && !resultId && !resultsParam) {
+  if (!examResults && !selectedResultId && !resultsParam) {
     return (
       <main className="min-h-screen p-6 bg-background">
         <div className="max-w-4xl mx-auto">
@@ -354,6 +551,82 @@ export function PrioritizeContent() {
                   Analyzing your performance...
                 </p>
               </div>
+            </motion.div>
+          )}
+
+          {userId && (isLoadingHistory || historyError || resultHistory.length > 0) && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mb-8"
+            >
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">Recent Exam Attempts</CardTitle>
+                  <CardDescription>Jump between your last results.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {historyError ? (
+                    <p className="text-sm text-destructive">{historyError}</p>
+                  ) : isLoadingHistory ? (
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-4 h-4 border-2 border-border border-t-primary rounded-full animate-spin" />
+                      Loading recent attempts...
+                    </div>
+                  ) : historyPages.length > 0 ? (
+                    <div className="relative">
+                      <Carousel className="w-full">
+                        <CarouselContent className="flex gap-3 pl-2 pr-6">
+                          {historyPages.map((page, pageIndex) => (
+                            <CarouselItem key={`history-page-${pageIndex}`} className="w-full">
+                              <div className="flex gap-3 overflow-hidden">
+                                {page.map((item) => {
+                                  const isActive = selectedResultId === item.id
+                                  return (
+                                    <button
+                                      key={item.id}
+                                      type="button"
+                                      onClick={() => handleHistorySelect(item.id)}
+                                      className={`flex-1 min-w-[180px] p-4 rounded-lg border text-left transition-colors ${
+                                        isActive
+                                          ? 'border-primary bg-primary/10'
+                                          : 'border-border hover:border-primary/50'
+                                      }`}
+                                    >
+                                      <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                                        {formatHistoryLabel(item)}
+                                      </div>
+                                      <div className="text-xl font-semibold">{formatHistoryScore(item)}</div>
+                                      <div className="text-xs text-muted-foreground mt-1">
+                                        {formatHistoryDate(item)}
+                                      </div>
+                                    </button>
+                                  )
+                                })}
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious
+                          className="absolute top-1/2 -translate-y-1/2 rounded-full border border-border/40 h-10 w-10"
+                          aria-label="Previous exam"
+                          style={{ left: '-1.5rem' }}
+                        />
+                        <CarouselNext
+                          className="absolute top-1/2 -translate-y-1/2 rounded-full border border-border/40 h-10 w-10"
+                          aria-label="Next exam"
+                          style={{ right: '-1.5rem' }}
+                        />
+                      </Carousel>
+                    </div>
+                  ) : (
+                    <p className="text-sm text-muted-foreground">
+                      No completed exams yet. Take a diagnostic or practice exam to see your progress here.
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
             </motion.div>
           )}
 
