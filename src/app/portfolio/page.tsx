@@ -100,7 +100,7 @@ export default function PortfolioPage() {
               {
                 company: "David Geffen School of Medicine at UCLA",
                 title: "Postdoctoral Fellow",
-                period: "Sep 2024 - Present",
+                period: "Sep 2024 - Sep 2025",
                 location: "Los Angeles, California",
               },
               {
@@ -122,7 +122,7 @@ export default function PortfolioPage() {
                 location: "Brooklyn, New York",
               },
               {
-                company: "Montefiore Health System",
+                company: "Montefiore Einstein - Supporting Healthy Relationships",
                 title: "Psychology Extern",
                 period: "Jul 2020 - Jun 2021",
                 location: "Bronx, New York",
@@ -157,7 +157,8 @@ export default function PortfolioPage() {
               {
                 school: "Long Island University",
                 degree: "Psy.D. (Doctor of Psychology)",
-                period: "2018 - 2023",
+                period: "2018 - 2024",
+                description: "Dissertation: Acceptability and Cultural Considerations of DBT-A for Chinese Mental Health Professionals",
               },
             ].map((edu, idx) => (
               <BlurFade key={edu.school} delay={BLUR_FADE_DELAY * 14 + idx * 0.05}>
@@ -165,6 +166,7 @@ export default function PortfolioPage() {
                   title={edu.school}
                   subtitle={edu.degree}
                   period={edu.period}
+                  description={edu.description}
                 />
               </BlurFade>
             ))}

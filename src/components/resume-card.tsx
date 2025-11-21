@@ -38,7 +38,9 @@ export const ResumeCard = ({
           {period && <span className="text-sm text-muted-foreground">{period}</span>}
         </div>
         {subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>}
-        {description && <p className="mt-2 text-sm text-muted-foreground">{description}</p>}
+        {description && (
+          <p className="mt-2 text-sm text-muted-foreground whitespace-pre-line">{description}</p>
+        )}
         {badges && badges.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {badges.map((badge) => (
