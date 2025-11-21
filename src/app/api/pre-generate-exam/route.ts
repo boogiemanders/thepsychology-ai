@@ -13,12 +13,6 @@ const DIAGNOSTIC_MODEL =
 const PRACTICE_MODEL =
   process.env.ANTHROPIC_PRACTICE_MODEL ?? 'claude-3-5-sonnet-20241022'
 
-// Initialize Supabase
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY! // Use service role key for backend operations
-)
-
 // Use same prompts as exam-generator
 const DIAGNOSTIC_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
 
@@ -229,6 +223,19 @@ export async function POST(request: NextRequest) {
     }
 
     console.log(`[Pre-Gen] Starting generation for user ${userId}, exam type: ${examType}`)
+
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+
+    if (!supabaseUrl || !supabaseServiceRoleKey) {
+      console.error('Supabase environment variables are not set')
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      )
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceRoleKey)
 
     // Check if a valid unused pre-gen already exists
     const { data: existing } = await supabase
