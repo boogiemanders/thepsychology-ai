@@ -233,7 +233,7 @@ export function OrbitingLoopSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 py-10 items-center">
           <div className="order-2 lg:order-1 space-y-6">
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-[0.95rem] leading-[1.9] md:text-base md:leading-relaxed text-muted-foreground max-w-xl">
               Your AI coach helps you study what you actually need.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm md:text-base">

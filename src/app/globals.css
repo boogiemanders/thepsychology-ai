@@ -464,6 +464,22 @@ strong, b {
   color: var(--brand-highlight);
 }
 
+.brand-pill-olive {
+  background-color: color-mix(in srgb, var(--brand-olive) 18%, transparent);
+  color: var(--brand-olive);
+  border: 1px solid color-mix(in srgb, var(--brand-olive) 35%, transparent);
+}
+.brand-pill-coral {
+  background-color: color-mix(in srgb, var(--brand-coral) 18%, transparent);
+  color: var(--brand-coral);
+  border: 1px solid color-mix(in srgb, var(--brand-coral) 35%, transparent);
+}
+.brand-pill-dusty-rose {
+  background-color: color-mix(in srgb, var(--brand-dusty-rose) 18%, transparent);
+  color: var(--brand-dusty-rose);
+  border: 1px solid color-mix(in srgb, var(--brand-dusty-rose) 35%, transparent);
+}
+
 .animate-ripple {
   animation: ripple-pulse 0.9s ease-out forwards;
   mix-blend-mode: screen;
