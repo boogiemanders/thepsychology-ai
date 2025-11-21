@@ -15,14 +15,7 @@ export function MiniPricingBar({ show, onTierClick }: MiniPricingBarProps) {
   const [isMounted, setIsMounted] = useState(false)
 
   const tiers = useMemo(() => siteConfig.pricing.pricingItems, [])
-  const tierStyles = useMemo(
-    () => ({
-      "7-Day Free Trial": "brand-pill-olive",
-      Pro: "brand-pill-coral",
-      "Pro + Coaching": "brand-pill-dusty-rose",
-    }),
-    []
-  )
+  const [activeMiniTier, setActiveMiniTier] = useState<string>(tiers[0]?.name ?? "")
 
   useEffect(() => {
     setIsMounted(true)
@@ -35,6 +28,21 @@ export function MiniPricingBar({ show, onTierClick }: MiniPricingBarProps) {
       section.scrollIntoView({ behavior: "smooth", block: "center" })
     }
   }
+
+  useEffect(() => {
+    const handleActive = (event: Event) => {
+      const customEvent = event as CustomEvent<{ tierName: string }>
+      const tierName = customEvent.detail?.tierName
+      if (tierName) {
+        setActiveMiniTier(tierName)
+      }
+    }
+
+    window.addEventListener("pricing-slide-active", handleActive as EventListener)
+    return () => {
+      window.removeEventListener("pricing-slide-active", handleActive as EventListener)
+    }
+  }, [])
 
   const handleSelect = (tierName: string) => {
     onTierClick?.(tierName)
@@ -65,12 +73,13 @@ export function MiniPricingBar({ show, onTierClick }: MiniPricingBarProps) {
                 <ChevronDown className="h-3 w-3" />
               </button>
             </div>
-            <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+            <div className="mt-2 flex gap-2">
               {tiers.map((tier) => {
-                const pillClass = tierStyles[tier.name] ?? "border border-border bg-accent"
                 const [amount, period] = tier.displayPrice
                   ? tier.displayPrice.split("/").map((part) => part.trim())
                   : [tier.price, tier.period]
+
+                const isActive = activeMiniTier === tier.name
 
                 return (
                   <button
@@ -78,21 +87,19 @@ export function MiniPricingBar({ show, onTierClick }: MiniPricingBarProps) {
                     type="button"
                     onClick={() => handleSelect(tier.name)}
                     className={cn(
-                      "flex-1 rounded-2xl px-3 py-2 text-left transition-all duration-150 bg-background/80 shadow-sm",
-                      pillClass
+                      "flex-1 rounded-2xl border px-3 py-2 text-left text-[0.65rem] leading-tight transition-all duration-150",
+                      isActive
+                        ? "border-primary bg-gradient-to-br from-primary/10 to-transparent text-primary"
+                        : "border-border bg-background/80 text-foreground"
                     )}
                   >
-                    <div className="flex items-center justify-between text-[0.7rem] font-semibold">
-                      <span>{tier.name}</span>
-                      <span className="text-[0.65rem] text-muted-foreground uppercase tracking-wide">Tap</span>
-                    </div>
-                    <div className="mt-1 flex items-baseline gap-1">
+                    <p className="font-semibold text-[0.7rem]">{tier.name}</p>
+                    <div className="flex items-baseline gap-1">
                       <span className="text-xl font-semibold text-current">{amount}</span>
-                      {period && <span className="text-[0.7rem] text-muted-foreground">/{period}</span>}
+                      {period && (
+                        <span className="text-[0.65rem] text-muted-foreground">/{period}</span>
+                      )}
                     </div>
-                    <p className="mt-1 text-[0.65rem] leading-4 text-muted-foreground">
-                      {tier.description}
-                    </p>
                   </button>
                 )
               })}

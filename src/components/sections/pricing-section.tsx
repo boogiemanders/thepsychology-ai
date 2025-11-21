@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import { SectionHeader } from "@/components/section-header"
 import { siteConfig } from "@/lib/config"
@@ -23,6 +23,14 @@ export function PricingSection() {
   const sliderRef = useRef<HTMLDivElement | null>(null)
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeSlide, setActiveSlide] = useState(0)
+  const tierIndexMap = useMemo(
+    () =>
+      pricingItems.reduce<Record<string, number>>((acc, tier, idx) => {
+        acc[tier.name] = idx
+        return acc
+      }, {}),
+    [pricingItems]
+  )
   const tierBrandSettings: Record<string, { base: string; hover: string; hoverText: string; dot: string }> = {
     "7-Day Free Trial": {
       base: "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
@@ -62,11 +70,23 @@ export function PricingSection() {
         thoughtsGoalsQuestions: "",
       })
       setSubmitMessage(null)
+      const index = tierIndexMap[tierName]
+      if (typeof index === "number") {
+        scrollToCard(index)
+        setActiveSlide(index)
+      }
     }
 
     window.addEventListener("mini-pricing-select", handler as EventListener)
     return () => {
       window.removeEventListener("mini-pricing-select", handler as EventListener)
+    }
+  }, [scrollToCard, tierIndexMap])
+
+  const scrollToCard = useCallback((index: number) => {
+    const target = cardRefs.current[index]
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" })
     }
   }, [])
 
@@ -98,12 +118,16 @@ export function PricingSection() {
     return () => observer.disconnect()
   }, [pricingItems.length])
 
-  const scrollToCard = (index: number) => {
-    const target = cardRefs.current[index]
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" })
-    }
-  }
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    const tier = pricingItems[activeSlide]
+    if (!tier) return
+    window.dispatchEvent(
+      new CustomEvent("pricing-slide-active", {
+        detail: { tierName: tier.name, index: activeSlide },
+      })
+    )
+  }, [activeSlide, pricingItems])
 
   const handleTierSelect = (tierName: string) => {
     setExpandedTier(expandedTier === tierName ? null : tierName)
