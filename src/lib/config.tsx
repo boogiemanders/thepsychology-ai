@@ -272,8 +272,8 @@ export const siteConfig = {
       {
         id: 1,
         question: "What is ThePsychology.ai?",
-        answer:
-          "A study coach powered by OpenAI's API that is helping psychologists increase their chances of passing the EPPP quickly (designed for 1 month) — with less stress, zero data leaks, and minimal screen time",
+      answer:
+          "A study coach powered by APIs that is helping psychologists increase their chances of passing the EPPP quickly (designed for 1 month) with less stress, zero data leaks, and minimal screen time. View this as an AI-augmented textbook where your learning is customized to your preferences",
       },
       {
         id: 2,
