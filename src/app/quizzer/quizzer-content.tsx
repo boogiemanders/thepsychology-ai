@@ -549,7 +549,7 @@ export function QuizzerContent() {
 
   if (!topic) {
     return (
-      <main className="min-h-screen p-6 bg-background">
+      <main className="min-h-screen p-6 bg-background exam-ui">
         <div className="max-w-4xl mx-auto">
           <Breadcrumb className="mb-8">
             <BreadcrumbList>
@@ -585,7 +585,7 @@ export function QuizzerContent() {
   }
 
   return (
-    <main className="min-h-screen p-6 bg-background relative">
+    <main className="min-h-screen p-6 bg-background relative exam-ui">
       {/* Confetti Canvas */}
       <Confetti
         ref={confettiRef}
@@ -815,16 +815,6 @@ export function QuizzerContent() {
 
               {/* Action Buttons */}
               <div className="space-y-2">
-                <Link
-                  href={`/quizzer?topic=${encodeURIComponent(topic || '')}${
-                    domain ? `&domain=${encodeURIComponent(domain)}` : ''
-                  }`}
-                  className="block"
-                >
-                  <Button variant="minimal" className="w-full">
-                    Retake Quiz
-                  </Button>
-                </Link>
                 <Link href="/topic-selector" className="block">
                   <Button variant="minimal" className="w-full">
                     Select Another Topic
