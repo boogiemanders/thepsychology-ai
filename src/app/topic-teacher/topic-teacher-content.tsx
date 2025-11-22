@@ -31,6 +31,7 @@ interface HighlightData {
   recentlyWrongSections: string[]
   recentlyCorrectSections: string[]
   previouslyWrongNowCorrectSections: string[]
+  examWrongSections: string[]
 }
 
 const GENERIC_SECTION_NAMES = new Set([
@@ -72,9 +73,9 @@ export function TopicTeacherContent() {
     if (!trimmed) return null
     const normalized = trimmed.toLowerCase()
 
-    // Treat only truly generic labels as "whole topic"
+    // Drop truly generic labels from exam history; they aren't useful
     if (GENERIC_SECTION_NAMES.has(normalized)) {
-      return '__ALL__'
+      return null
     }
 
     return trimmed
@@ -90,14 +91,6 @@ export function TopicTeacherContent() {
     const normalized = sections
       .map((section) => normalizeSectionName(section))
       .filter((section): section is string => Boolean(section))
-
-    if (!allowAll) {
-      return normalized.filter((section) => section !== '__ALL__')
-    }
-
-    if (normalized.includes('__ALL__')) {
-      return ['__ALL__']
-    }
 
     return normalized
   }
@@ -120,6 +113,7 @@ export function TopicTeacherContent() {
     recentlyWrongSections: [],
     recentlyCorrectSections: [],
     previouslyWrongNowCorrectSections: [],
+    examWrongSections: [],
   })
   const [recentQuizWrongSections, setRecentQuizWrongSections] = useState<string[]>([])
   const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -236,10 +230,10 @@ export function TopicTeacherContent() {
       let allPreviouslyWrongNowCorrect: string[] = []
       let hasAnyResults = false
 
-      // Always check for quiz results
-      const quizResults = getQuizResults(decodedTopic)
-      if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
-        const quizWrongSections = normalizeSections(
+	      // Always check for quiz results
+	      const quizResults = getQuizResults(decodedTopic)
+	      if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
+	        const quizWrongSections = normalizeSections(
           quizResults.wrongAnswers.flatMap((wa) => wa.relatedSections || []),
           { allowAll: true }
         )
@@ -273,15 +267,15 @@ export function TopicTeacherContent() {
         }
       }
 
-      // Always check for exam results (from diagnostic/practice exams)
-      const { getExamWrongSections } = require('@/lib/unified-question-results')
-      const examWrongSections = normalizeSections(
-        getExamWrongSections(decodedTopic),
-        { allowAll: true }
-      )
-      if (examWrongSections.length > 0) {
-        allWrongSections = [...allWrongSections, ...examWrongSections]
-        hasAnyResults = true
+	      // Always check for exam results (from diagnostic/practice exams)
+	      const { getExamWrongSections } = require('@/lib/unified-question-results')
+	      const examWrongSections = normalizeSections(
+	        getExamWrongSections(decodedTopic),
+	        { allowAll: true }
+	      )
+	      if (examWrongSections.length > 0) {
+	        allWrongSections = [...allWrongSections, ...examWrongSections]
+	        hasAnyResults = true
       }
 
       // If this topic was reached from exam-based recommendations but
@@ -296,21 +290,20 @@ export function TopicTeacherContent() {
         return
       }
 
-      // Set highlight data with combined results
-      if (hasAnyResults && allWrongSections.length > 0) {
-        let dedupedWrong = [...new Set(allWrongSections)]
-        if (dedupedWrong.includes('__ALL__')) {
-          dedupedWrong = ['__ALL__']
-        }
+	      // Set highlight data with combined results
+	      if (hasAnyResults && allWrongSections.length > 0) {
+	        const dedupedWrong = [...new Set(allWrongSections)]
+	        const dedupedExamWrong = [...new Set(examWrongSections)]
 
-        setHighlightData({
-          recentlyWrongSections: dedupedWrong,
-          recentlyCorrectSections: [...new Set(allCorrectSections)],
-          previouslyWrongNowCorrectSections: [
-            ...new Set(allPreviouslyWrongNowCorrect),
-          ],
-        })
-      }
+	        setHighlightData({
+	          recentlyWrongSections: dedupedWrong,
+	          recentlyCorrectSections: [...new Set(allCorrectSections)],
+	          previouslyWrongNowCorrectSections: [
+	            ...new Set(allPreviouslyWrongNowCorrect),
+	          ],
+	          examWrongSections: dedupedExamWrong,
+	        })
+	      }
     }
   }, [decodedTopic, hasExamResults])
 
@@ -606,7 +599,9 @@ export function TopicTeacherContent() {
     return false
   }
 
-  const getHighlightType = (text: string): 'recently-wrong' | 'previously-wrong-now-correct' | 'recently-correct' | null => {
+  const getHighlightType = (
+    text: string
+  ): 'recently-wrong' | 'previously-wrong-now-correct' | 'recently-correct' | 'exam-wrong' | null => {
     if (
       highlightData.recentlyWrongSections.length === 0 &&
       highlightData.previouslyWrongNowCorrectSections.length === 0 &&
@@ -619,12 +614,14 @@ export function TopicTeacherContent() {
       return null
     }
 
-    // Special case: mark all sections as recently wrong for exam-derived topics
-    if (highlightData.recentlyWrongSections.includes('__ALL__')) {
-      return 'recently-wrong'
+    // Exam-derived wrong sections (practice/diagnostic) → treat as "exam-wrong"
+    for (const section of highlightData.examWrongSections) {
+      if (labelsMatch(text, section)) {
+        return 'exam-wrong'
+      }
     }
 
-    // Check if this header matches recently wrong sections
+    // Check if this header matches recently wrong sections (quiz-derived)
     for (const section of highlightData.recentlyWrongSections) {
       if (labelsMatch(text, section)) {
         return 'recently-wrong'
@@ -972,12 +969,13 @@ export function TopicTeacherContent() {
                           },
                           p: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            const isRecentlyWrong = highlightType === 'recently-wrong'
+                            const isQuizWrong = highlightType === 'recently-wrong'
+                            const isExamWrong = highlightType === 'exam-wrong'
                             const isRecentlyCorrect = highlightType === 'recently-correct'
                             const isRecovered = highlightType === 'previously-wrong-now-correct'
 
-                            const showIcon = isRecentlyWrong || isRecentlyCorrect || isRecovered
-                            const icon = isRecentlyWrong ? '🍎' : '🍏'
+                            const showIcon = isQuizWrong || isExamWrong || isRecentlyCorrect || isRecovered
+                            const icon = isQuizWrong ? '🍎' : '🍏'
 
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
@@ -992,12 +990,13 @@ export function TopicTeacherContent() {
                           },
                           ul: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            const isRecentlyWrong = highlightType === 'recently-wrong'
+                            const isQuizWrong = highlightType === 'recently-wrong'
+                            const isExamWrong = highlightType === 'exam-wrong'
                             const isRecentlyCorrect = highlightType === 'recently-correct'
                             const isRecovered = highlightType === 'previously-wrong-now-correct'
 
-                            const showIcon = isRecentlyWrong || isRecentlyCorrect || isRecovered
-                            const icon = isRecentlyWrong ? '🍎' : '🍏'
+                            const showIcon = isQuizWrong || isExamWrong || isRecentlyCorrect || isRecovered
+                            const icon = isQuizWrong ? '🍎' : '🍏'
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
                                 {showIcon && (
@@ -1011,12 +1010,13 @@ export function TopicTeacherContent() {
                           },
                           ol: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            const isRecentlyWrong = highlightType === 'recently-wrong'
+                            const isQuizWrong = highlightType === 'recently-wrong'
+                            const isExamWrong = highlightType === 'exam-wrong'
                             const isRecentlyCorrect = highlightType === 'recently-correct'
                             const isRecovered = highlightType === 'previously-wrong-now-correct'
 
-                            const showIcon = isRecentlyWrong || isRecentlyCorrect || isRecovered
-                            const icon = isRecentlyWrong ? '🍎' : '🍏'
+                            const showIcon = isQuizWrong || isExamWrong || isRecentlyCorrect || isRecovered
+                            const icon = isQuizWrong ? '🍎' : '🍏'
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
                                 {showIcon && (
