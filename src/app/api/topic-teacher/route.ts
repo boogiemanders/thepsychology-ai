@@ -1,11 +1,10 @@
-import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { loadTopicContent, replaceMetaphors, stripMetaphorMarkers } from '@/lib/topic-content-manager'
 import { loadReferenceContent } from '@/lib/eppp-reference-loader'
+import OpenAI from 'openai'
 
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
+const openaiApiKey = process.env.OPENAI_API_KEY
+const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 
 const getTeacherSystemPrompt = (userInterests?: string | null, referenceMaterial?: string): string => {
   let prompt = `You are an expert EPPP psychology teacher who explains concepts using simple, engaging language (13-year-old reading level) with custom metaphors and analogies.
@@ -170,28 +169,35 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // For follow-ups, stream the response
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 4000,
-      stream: true,
-      system: getTeacherSystemPrompt(userInterests, referenceMaterial),
-      messages: messages as Array<{ role: 'user' | 'assistant'; content: string }>,
+    if (!openai) {
+      console.error('[Topic Teacher] Missing OPENAI_API_KEY for follow-up')
+      return NextResponse.json(
+        { error: 'Topic Teacher follow-up is not configured (missing OPENAI_API_KEY).' },
+        { status: 500 }
+      )
+    }
+
+    // For follow-ups, call OpenAI and then stream the full response text in chunks
+    const systemPrompt = getTeacherSystemPrompt(userInterests, referenceMaterial)
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4.1-mini',
+      temperature: 0.7,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        ...(messages as Array<{ role: 'user' | 'assistant'; content: string }>),
+      ],
     })
 
-    // Convert stream to ReadableStream
+    const fullText = completion.choices[0]?.message?.content || ''
+
     const stream = new ReadableStream({
-      async start(controller) {
+      start(controller) {
         try {
-          for await (const event of response) {
-            if (
-              event.type === 'content_block_delta' &&
-              event.delta.type === 'text_delta'
-            ) {
-              controller.enqueue(
-                new TextEncoder().encode(event.delta.text)
-              )
-            }
+          const encoder = new TextEncoder()
+          const chunkSize = 100
+          for (let i = 0; i < fullText.length; i += chunkSize) {
+            const chunk = fullText.slice(i, i + chunkSize)
+            controller.enqueue(encoder.encode(chunk))
           }
           controller.close()
         } catch (error) {

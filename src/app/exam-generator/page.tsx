@@ -848,7 +848,7 @@ export default function ExamGeneratorPage() {
 
   if (questions.length === 0) {
     return (
-      <main className="min-h-screen p-6 bg-background">
+      <main className="min-h-screen p-6 bg-background exam-ui">
         <div className="max-w-4xl mx-auto">
           <Breadcrumb className="mb-8">
             <BreadcrumbList>
@@ -1339,7 +1339,7 @@ export default function ExamGeneratorPage() {
   const isCorrect = selectedAnswer === correctOption
 
   return (
-    <main className="min-h-screen p-6 bg-background">
+    <main className="min-h-screen p-6 bg-background exam-ui">
       <div className="max-w-3xl mx-auto">
         <Breadcrumb className="mb-8">
           <BreadcrumbList>
@@ -1476,7 +1476,7 @@ export default function ExamGeneratorPage() {
                           {/* Option Text - Not Clickable */}
                           <div className="flex-1 min-w-0 pt-1">
                             <div className="text-base text-foreground exam-question-text" style={{ fontFamily: 'Tahoma' }}>
-                              <span>{optionLetter}.</span>{' '}
+                              <span style={{ fontFamily: 'Tahoma' }}>{optionLetter}.</span>{' '}
                               {textFormats[currentQuestion]?.options?.[idx] ? (
                                 <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
                               ) : (
@@ -1502,7 +1502,7 @@ export default function ExamGeneratorPage() {
                         </p>
                         <div className="text-right">
                           <p className="text-xs text-muted-foreground mb-1">Correct Answer</p>
-                          <p className="text-2xl font-bold">
+                          <p className="text-2xl font-bold" style={{ fontFamily: 'Tahoma' }}>
                             {correctLetter}
                           </p>
                         </div>

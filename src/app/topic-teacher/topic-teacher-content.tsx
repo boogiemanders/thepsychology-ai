@@ -31,6 +31,7 @@ interface HighlightData {
   recentlyWrongSections: string[]
   recentlyCorrectSections: string[]
   previouslyWrongNowCorrectSections: string[]
+  quizWrongSections: string[]
   examWrongSections: string[]
 }
 
@@ -113,6 +114,7 @@ export function TopicTeacherContent() {
     recentlyWrongSections: [],
     recentlyCorrectSections: [],
     previouslyWrongNowCorrectSections: [],
+    quizWrongSections: [],
     examWrongSections: [],
   })
   const [recentQuizWrongSections, setRecentQuizWrongSections] = useState<string[]>([])
@@ -229,11 +231,12 @@ export function TopicTeacherContent() {
       let allCorrectSections: string[] = []
       let allPreviouslyWrongNowCorrect: string[] = []
       let hasAnyResults = false
+      let quizWrongSections: string[] = []
 
 	      // Always check for quiz results
-	      const quizResults = getQuizResults(decodedTopic)
-	      if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
-	        const quizWrongSections = normalizeSections(
+      const quizResults = getQuizResults(decodedTopic)
+      if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
+        quizWrongSections = normalizeSections(
           quizResults.wrongAnswers.flatMap((wa) => wa.relatedSections || []),
           { allowAll: true }
         )
@@ -290,20 +293,22 @@ export function TopicTeacherContent() {
         return
       }
 
-	      // Set highlight data with combined results
-	      if (hasAnyResults && allWrongSections.length > 0) {
-	        const dedupedWrong = [...new Set(allWrongSections)]
-	        const dedupedExamWrong = [...new Set(examWrongSections)]
+      // Set highlight data with combined results
+      if (hasAnyResults && allWrongSections.length > 0) {
+        const dedupedWrong = [...new Set(allWrongSections)]
+        const dedupedQuizWrong = [...new Set(quizWrongSections)]
+        const dedupedExamWrong = [...new Set(examWrongSections)]
 
-	        setHighlightData({
-	          recentlyWrongSections: dedupedWrong,
-	          recentlyCorrectSections: [...new Set(allCorrectSections)],
-	          previouslyWrongNowCorrectSections: [
-	            ...new Set(allPreviouslyWrongNowCorrect),
-	          ],
-	          examWrongSections: dedupedExamWrong,
-	        })
-	      }
+        setHighlightData({
+          recentlyWrongSections: dedupedWrong,
+          recentlyCorrectSections: [...new Set(allCorrectSections)],
+          previouslyWrongNowCorrectSections: [
+            ...new Set(allPreviouslyWrongNowCorrect),
+          ],
+          quizWrongSections: dedupedQuizWrong,
+          examWrongSections: dedupedExamWrong,
+        })
+      }
     }
   }, [decodedTopic, hasExamResults])
 
@@ -599,50 +604,35 @@ export function TopicTeacherContent() {
     return false
   }
 
-  const getHighlightType = (
-    text: string
-  ): 'recently-wrong' | 'previously-wrong-now-correct' | 'recently-correct' | 'exam-wrong' | null => {
-    if (
-      highlightData.recentlyWrongSections.length === 0 &&
-      highlightData.previouslyWrongNowCorrectSections.length === 0 &&
-      highlightData.recentlyCorrectSections.length === 0
-    ) {
-      return null
-    }
-
+  const getHighlightFlags = (text: string) => {
     if (!text || text.trim().length === 0) {
-      return null
-    }
-
-    // Exam-derived wrong sections (practice/diagnostic) → treat as "exam-wrong"
-    for (const section of highlightData.examWrongSections) {
-      if (labelsMatch(text, section)) {
-        return 'exam-wrong'
+      return {
+        quizWrong: false,
+        examWrong: false,
+        recovered: false,
+        recentlyCorrect: false,
       }
     }
 
-    // Check if this header matches recently wrong sections (quiz-derived)
-    for (const section of highlightData.recentlyWrongSections) {
-      if (labelsMatch(text, section)) {
-        return 'recently-wrong'
-      }
-    }
+    const quizWrong = highlightData.quizWrongSections.some((section) =>
+      labelsMatch(text, section)
+    )
+    const examWrong = highlightData.examWrongSections.some((section) =>
+      labelsMatch(text, section)
+    )
+    const recovered = highlightData.previouslyWrongNowCorrectSections.some((section) =>
+      labelsMatch(text, section)
+    )
+    const recentlyCorrect = highlightData.recentlyCorrectSections.some((section) =>
+      labelsMatch(text, section)
+    )
 
-    // Check if this header matches previously wrong, now correct
-    for (const section of highlightData.previouslyWrongNowCorrectSections) {
-      if (labelsMatch(text, section)) {
-        return 'previously-wrong-now-correct'
-      }
+    return {
+      quizWrong,
+      examWrong,
+      recovered,
+      recentlyCorrect,
     }
-
-    // Check if this header matches recently correct
-    for (const section of highlightData.recentlyCorrectSections) {
-      if (labelsMatch(text, section)) {
-        return 'recently-correct'
-      }
-    }
-
-    return null
   }
 
   if (!topic) {
@@ -968,20 +958,18 @@ export function TopicTeacherContent() {
                             )
                           },
                           p: ({ children }) => {
-                            const highlightType = getHighlightType(currentSectionRef.current)
-                            const isQuizWrong = highlightType === 'recently-wrong'
-                            const isExamWrong = highlightType === 'exam-wrong'
-                            const isRecentlyCorrect = highlightType === 'recently-correct'
-                            const isRecovered = highlightType === 'previously-wrong-now-correct'
+                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
+                              getHighlightFlags(currentSectionRef.current)
 
-                            const showIcon = isQuizWrong || isExamWrong || isRecentlyCorrect || isRecovered
-                            const icon = isQuizWrong ? '🍎' : '🍏'
+                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+                            const icons =
+                              (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
 
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute left-0 top-0 text-base leading-none">
-                                    {icon}
+                                    {icons}
                                   </span>
                                 )}
                                 <p className="m-0">{children}</p>
@@ -989,19 +977,17 @@ export function TopicTeacherContent() {
                             )
                           },
                           ul: ({ children }) => {
-                            const highlightType = getHighlightType(currentSectionRef.current)
-                            const isQuizWrong = highlightType === 'recently-wrong'
-                            const isExamWrong = highlightType === 'exam-wrong'
-                            const isRecentlyCorrect = highlightType === 'recently-correct'
-                            const isRecovered = highlightType === 'previously-wrong-now-correct'
+                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
+                              getHighlightFlags(currentSectionRef.current)
 
-                            const showIcon = isQuizWrong || isExamWrong || isRecentlyCorrect || isRecovered
-                            const icon = isQuizWrong ? '🍎' : '🍏'
+                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+                            const icons =
+                              (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute left-0 top-0 text-base leading-none">
-                                    {icon}
+                                    {icons}
                                   </span>
                                 )}
                                 <ul>{children}</ul>
@@ -1009,19 +995,17 @@ export function TopicTeacherContent() {
                             )
                           },
                           ol: ({ children }) => {
-                            const highlightType = getHighlightType(currentSectionRef.current)
-                            const isQuizWrong = highlightType === 'recently-wrong'
-                            const isExamWrong = highlightType === 'exam-wrong'
-                            const isRecentlyCorrect = highlightType === 'recently-correct'
-                            const isRecovered = highlightType === 'previously-wrong-now-correct'
+                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
+                              getHighlightFlags(currentSectionRef.current)
 
-                            const showIcon = isQuizWrong || isExamWrong || isRecentlyCorrect || isRecovered
-                            const icon = isQuizWrong ? '🍎' : '🍏'
+                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+                            const icons =
+                              (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute left-0 top-0 text-base leading-none">
-                                    {icon}
+                                    {icons}
                                   </span>
                                 )}
                                 <ol>{children}</ol>
