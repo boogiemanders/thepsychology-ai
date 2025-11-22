@@ -105,6 +105,8 @@ export function addSectionResult(section: SectionResult): void {
       ...existing[existingIndex],
       wrongCount: (existing[existingIndex].wrongCount || 0) + 1,
       lastAttempted: section.lastAttempted,
+      // Any new wrong answer should reopen the section for review
+      isResolved: false,
     }
   } else {
     // Add new

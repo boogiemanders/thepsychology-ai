@@ -25,7 +25,7 @@ import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { createClient } from '@supabase/supabase-js'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
-import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/lib/unified-question-results'
+import { saveQuestionResult, addSectionResult } from '@/lib/unified-question-results'
 
 interface Question {
   id: number
@@ -324,10 +324,13 @@ export default function ExamGeneratorPage() {
       const domainId =
         question.domainId || meta?.domainId || (question.domain ? String(question.domain) : 'unknown')
 
-      // For exam-derived highlights, treat the whole topic as needing review.
-      // This ensures Topic Teacher shows apples even when we don't have
-      // granular section labels for each exam question.
-      const sections = ['__ALL__']
+      const sections =
+        (question.relatedSections && question.relatedSections.length > 0
+          ? question.relatedSections
+          : meta?.sectionName
+          ? [meta.sectionName]
+          : []
+        ).filter(Boolean)
 
       const isCorrect = selectedAnswer === question.correct_answer
       const questionId = question.id?.toString() || `${topicName}_q${index}`
@@ -344,7 +347,7 @@ export default function ExamGeneratorPage() {
         timestamp: Date.now(),
       })
 
-      if (!isCorrect) {
+      if (!isCorrect && sections.length > 0) {
         sections.forEach((sectionName) =>
           addSectionResult({
             sectionName,
@@ -355,8 +358,6 @@ export default function ExamGeneratorPage() {
             isResolved: false,
           }),
         )
-      } else {
-        sections.forEach((sectionName) => resolveSectionResult(topicName, sectionName))
       }
     })
   }, [examType, questions, selectedAnswers])
