@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/carousel'
 import { useRouter, useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
-import { calculateStudyStats } from '@/lib/dashboard-utils'
+import { calculateStudyStats, type StudyStats } from '@/lib/dashboard-utils'
 import { Switch } from '@/components/ui/switch'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -51,6 +51,18 @@ interface ResultHistoryItem {
 
 const HISTORY_PAGE_SIZE = 4
 
+const fallbackStudyStats: StudyStats = {
+  totalQuizzes: 0,
+  averageScore: 0,
+  studyStreak: 0,
+  lastStudyDate: null,
+  bestPerformingDomain: '',
+  recentScores: [],
+  weakTopics: [],
+  lastStudiedTopic: null,
+  studyDays: [],
+}
+
 export function PrioritizeContent() {
   const searchParams = useSearchParams()
   const resultId = searchParams.get('id')
@@ -63,7 +75,7 @@ export function PrioritizeContent() {
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [isLoadingResults, setIsLoadingResults] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [studyStats, setStudyStats] = useState(calculateStudyStats())
+  const [studyStats, setStudyStats] = useState<StudyStats>(fallbackStudyStats)
   const [viewMode, setViewMode] = useState<'overview' | 'detailed'>('overview')
   const [examResults, setExamResults] = useState<string | null>(null)
   const [priorityData, setPriorityData] = useState<any>(null)
@@ -132,6 +144,11 @@ export function PrioritizeContent() {
       setSelectedResultId(resultId)
     }
   }, [resultId])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    setStudyStats(calculateStudyStats())
+  }, [])
 
   // Fetch exam history for quick navigation
   useEffect(() => {

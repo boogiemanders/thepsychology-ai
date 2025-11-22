@@ -21,7 +21,7 @@ import {
   unsubscribeFromInterestChanges,
   updateUserCurrentInterest,
 } from '@/lib/interests'
-import { getTopPriorities } from '@/lib/priority-storage'
+import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { createClient } from '@supabase/supabase-js'
 
@@ -43,6 +43,18 @@ const parseInterestList = (interest: string | null) =>
         .map((item) => item.trim())
         .filter((item) => item.length > 0)
     : []
+
+const INTEREST_TAG_PALETTE = [
+  { backgroundColor: '#bdd1ca', borderColor: '#bdd1ca', textColor: '#1a2b24' },
+  { backgroundColor: '#788c5d', borderColor: '#788c5d', textColor: '#ffffff' },
+  { backgroundColor: '#d87758', borderColor: '#d87758', textColor: '#ffffff' },
+  { backgroundColor: '#c46685', borderColor: '#c46685', textColor: '#ffffff' },
+  { backgroundColor: '#6a9bcc', borderColor: '#6a9bcc', textColor: '#ffffff' },
+  { backgroundColor: '#cbc9db', borderColor: '#cbc9db', textColor: '#1b1a1f' },
+]
+
+const getInterestTagStyle = (index: number) =>
+  INTEREST_TAG_PALETTE[index % INTEREST_TAG_PALETTE.length]
 
 function getTimeAgo(timestamp: number): string {
   const now = Date.now()
@@ -66,6 +78,7 @@ export default function TopicSelectorPage() {
   const [domains, setDomains] = useState<any[]>([])
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
   const [priorityTopicIds, setPriorityTopicIds] = useState<string[]>([])
+  const [recommendedDomainIds, setRecommendedDomainIds] = useState<string[]>([])
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
   const studyStats = calculateStudyStats()
 
@@ -89,9 +102,70 @@ export default function TopicSelectorPage() {
       topicScores[result.topic] = percentage
     })
 
+    const mapDomainNumberToIds = (domainNumber?: number | null) => {
+      if (!domainNumber) return []
+      return EPPP_DOMAINS.filter((domain) => {
+        if (domain.id === '3-5-6') return false
+        const [prefix] = domain.id.split('-')
+        return parseInt(prefix, 10) === domainNumber
+      }).map((domain) => domain.id)
+    }
+
+    const derivePriorityState = (topDomains: any[] | null | undefined) => {
+      const topicSet = new Set<string>()
+      const domainSet = new Set<string>()
+
+      ;(topDomains || []).forEach((domain) => {
+        if (Array.isArray(domain?.recommendedTopicIds)) {
+          domain.recommendedTopicIds.forEach((id: string) => topicSet.add(id))
+        }
+
+        if (domain?.type === 'org_psych') {
+          domainSet.add('3-5-6')
+        } else {
+          mapDomainNumberToIds(domain?.domainNumber).forEach((id) => domainSet.add(id))
+        }
+      })
+
+      return {
+        topicIds: Array.from(topicSet),
+        domainIds: Array.from(domainSet),
+      }
+    }
+
+    const applyLocalPriorityFallback = () => {
+      const { diagnostic, practice } = getAllLatestRecommendations()
+      const available = [diagnostic, practice].filter(Boolean) as Array<{
+        timestamp: number
+        topPriorities: any[]
+      }>
+
+      if (available.length === 0) {
+        const localDiagnostic = getTopPriorities('diagnostic')
+        if (localDiagnostic && localDiagnostic.length > 0) {
+          const state = derivePriorityState(localDiagnostic)
+          setPriorityTopicIds(state.topicIds)
+          setRecommendedDomainIds(state.domainIds)
+        } else {
+          setPriorityTopicIds([])
+          setRecommendedDomainIds([])
+        }
+        return
+      }
+
+      available.sort((a, b) => b.timestamp - a.timestamp)
+      const latest = available[0]
+      const state = derivePriorityState(latest.topPriorities || [])
+      setPriorityTopicIds(state.topicIds)
+      setRecommendedDomainIds(state.domainIds)
+    }
+
     // Load priority recommendations from Supabase
     const loadPriorities = async () => {
-      if (!user) return
+      if (!user) {
+        applyLocalPriorityFallback()
+        return
+      }
 
       try {
         const { data, error } = await supabase
@@ -101,24 +175,15 @@ export default function TopicSelectorPage() {
           .single()
 
         if (data && !error) {
-          const allPriorityTopics = data.top_domains.flatMap((domain: any) => domain.recommendedTopicIds)
-          setPriorityTopicIds(allPriorityTopics)
+          const state = derivePriorityState(data.top_domains || [])
+          setPriorityTopicIds(state.topicIds)
+          setRecommendedDomainIds(state.domainIds)
         } else {
-          // Fallback to localStorage
-          const priorities = getTopPriorities('diagnostic')
-          if (priorities && priorities.length > 0) {
-            const allPriorityTopics = priorities.flatMap(domain => domain.recommendedTopicIds)
-            setPriorityTopicIds(allPriorityTopics)
-          }
+          applyLocalPriorityFallback()
         }
       } catch (err) {
         console.error('Failed to load priorities from Supabase:', err)
-        // Fallback to localStorage
-        const priorities = getTopPriorities('diagnostic')
-        if (priorities && priorities.length > 0) {
-          const allPriorityTopics = priorities.flatMap(domain => domain.recommendedTopicIds)
-          setPriorityTopicIds(allPriorityTopics)
-        }
+        applyLocalPriorityFallback()
       }
     }
 
@@ -299,24 +364,41 @@ export default function TopicSelectorPage() {
               <div className="relative">
                 <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
                   {/* Display saved interests as tags */}
-                  {savedInterests.map((interest, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.8 }}
-                      className="flex items-center gap-1 px-2 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium"
-                    >
-                      <span>{interest}</span>
-                      <button
-                        onClick={() => removeInterest(index)}
-                        className="hover:opacity-70 transition-opacity"
-                        type="button"
+                  {savedInterests.map((interest, index) => {
+                    const tagStyle = getInterestTagStyle(index)
+                    return (
+                      <motion.div
+                        key={interest + index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        className="flex items-center gap-2"
                       >
-                        <X size={14} />
-                      </button>
-                    </motion.div>
-                  ))}
+                        <Badge
+                          variant="outline"
+                          className="flex items-center gap-1 px-3 py-1 text-sm font-semibold transition-colors"
+                          style={{
+                            backgroundColor: tagStyle.backgroundColor,
+                            borderColor: tagStyle.borderColor,
+                            color: tagStyle.textColor,
+                          }}
+                        >
+                          <span className="whitespace-nowrap">{interest}</span>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              removeInterest(index)
+                            }}
+                            aria-label={`Remove interest ${interest}`}
+                            className="ml-2 flex h-4 w-4 items-center justify-center rounded-full border border-transparent bg-white/20 text-current transition-colors hover:bg-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
+                          >
+                            <X size={12} />
+                          </button>
+                        </Badge>
+                      </motion.div>
+                    )
+                  })}
 
                   {/* Input field */}
                   <input
@@ -430,7 +512,12 @@ export default function TopicSelectorPage() {
                   className="p-4 hover:bg-accent transition-colors text-left w-full"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-sm font-medium">{domain.name}</h3>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm font-medium">{domain.name}</h3>
+                      {recommendedDomainIds.includes(domain.id) && (
+                        <Badge variant="outline" className="text-xs">Recommended</Badge>
+                      )}
+                    </div>
                     <div className="flex items-center gap-3">
                       <span className="text-xs text-muted-foreground">{domain.progress}%</span>
                       <motion.div
