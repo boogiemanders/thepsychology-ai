@@ -84,59 +84,59 @@ function slugifyTopicName(name: string): string {
 }
 
 /**
- * Resolve the actual markdown file path for a topic within a domain folder.
- * First tries a direct slug match (old kebab-case filenames), then falls back
- * to scanning the folder and matching by normalized slug against the full
- * filename (including numeric prefixes) to support eppp-reference-style names.
+ * Resolve the actual markdown file path for a topic.
+ *
+ * Behaviors:
+ * - If a domain ID is provided, search that domain folder first.
+ * - Always fall back to scanning all known domain folders so links that
+ *   omit the domain (e.g., from quiz results) still work.
  */
-function resolveTopicFilePath(topicName: string, domain: string): string | null {
-  const domainFolder = getDomainFolder(domain)
-  const baseDir = path.join(process.cwd(), 'topic-content-v3-test', domainFolder)
+function resolveTopicFilePath(topicName: string, domain?: string | null): string | null {
   const slug = slugifyTopicName(topicName)
+  const rootDir = path.join(process.cwd(), 'topic-content-v3-test')
 
-  // 1) Direct slug match (for legacy kebab-case filenames)
-  const directPath = path.join(baseDir, `${slug}.md`)
-  if (existsSync(directPath)) {
-    return directPath
-  }
+  // Build ordered list of folders to search: requested domain (if any) first,
+  // then all other known domain folders.
+  const searchFolders: string[] = []
+  let domainFolder: string | null = null
 
-  // 2) Scan directory and match by normalized slug of each filename
-  let entries: ReturnType<typeof readdirSync>
-  try {
-    entries = readdirSync(baseDir, { withFileTypes: true })
-  } catch {
-    entries = []
-  }
-
-  for (const entry of entries) {
-    if (!entry.isFile() || !entry.name.endsWith('.md')) continue
-    const baseName = entry.name.slice(0, -3) // drop ".md"
-    const candidateSlug = slugifyTopicName(baseName)
-    if (candidateSlug === slug) {
-      return path.join(baseDir, entry.name)
+  if (domain) {
+    const mapped = getDomainFolder(domain)
+    if (mapped) {
+      domainFolder = mapped
+      searchFolders.push(mapped)
     }
   }
 
-  // 3) Fallback: scan all known domain folders for a matching topic slug.
-  // This handles cases where the domain ID in the URL (e.g. "5-assessment")
-  // doesn't match the folder where the content actually lives (e.g. diagnosis vs assessment).
   for (const folder of Object.values(DOMAIN_FOLDER_MAP)) {
-    if (folder === domainFolder) continue
-    const otherBaseDir = path.join(process.cwd(), 'topic-content-v3-test', folder)
+    if (folder && folder !== domainFolder && !searchFolders.includes(folder)) {
+      searchFolders.push(folder)
+    }
+  }
 
-    let otherEntries: ReturnType<typeof readdirSync>
+  for (const folder of searchFolders) {
+    const baseDir = path.join(rootDir, folder)
+
+    // 1) Direct slug match (for legacy kebab-case filenames)
+    const directPath = path.join(baseDir, `${slug}.md`)
+    if (existsSync(directPath)) {
+      return directPath
+    }
+
+    // 2) Scan directory and match by normalized slug of each filename
+    let entries: ReturnType<typeof readdirSync>
     try {
-      otherEntries = readdirSync(otherBaseDir, { withFileTypes: true })
+      entries = readdirSync(baseDir, { withFileTypes: true })
     } catch {
       continue
     }
 
-    for (const entry of otherEntries) {
+    for (const entry of entries) {
       if (!entry.isFile() || !entry.name.endsWith('.md')) continue
-      const baseName = entry.name.slice(0, -3)
+      const baseName = entry.name.slice(0, -3) // drop ".md"
       const candidateSlug = slugifyTopicName(baseName)
       if (candidateSlug === slug) {
-        return path.join(otherBaseDir, entry.name)
+        return path.join(baseDir, entry.name)
       }
     }
   }

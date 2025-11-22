@@ -1,11 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
-
-// Initialize Supabase with service role
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
+import { getSupabaseClient } from '@/lib/supabase-server'
 
 interface PreGenAnalytics {
   totalGenerated: number
@@ -31,6 +25,14 @@ interface PreGenAnalytics {
  */
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
+    const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+    if (!supabase) {
+      return NextResponse.json(
+        { error: 'Supabase is not configured', stats: null },
+        { status: 500 }
+      )
+    }
+
     // Optional: Add authentication check
     const authHeader = request.headers.get('authorization')
     const cronSecret = process.env.CRON_SECRET

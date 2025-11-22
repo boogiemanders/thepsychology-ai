@@ -4,7 +4,6 @@
       "stem": "Which of the following best describes a work-oriented job analysis?",
       "options": [
         "Focusing on the knowledge, skills, abilities, and other characteristics required to perform the job",
-        "Evaluating the monetary value of a job based on compensable factors",
         "Identifying the tasks that must be accomplished to achieve desired job outcomes",
         "Assessing core competencies required across all jobs in an organization",
         "Observing employee behaviors linked to exceptionally good and poor performance"
@@ -22,7 +21,6 @@
         "To develop employee training programs based on job requirements",
         "To facilitate decisions related to employee compensation",
         "To identify core competencies for all jobs within an organization",
-        "To obtain information for writing accurate job descriptions",
         "To assess employee behaviors that indicate exceptional performance"
       ],
       "answer": "To facilitate decisions related to employee compensation",
@@ -38,8 +36,7 @@
         "Forced distribution rating scales",
         "Position Analysis Questionnaire (PAQ)",
         "Critical incident technique",
-        "Paired comparison method",
-        "Point system method"
+        "Paired comparison method"
       ],
       "answer": "Position Analysis Questionnaire (PAQ)",
       "explanation": "The PAQ is a standardized worker-oriented questionnaire focusing on KSAOs and categories such as mental processes and work output.",
@@ -54,8 +51,7 @@
         "Behaviorally anchored rating scales (BARS)",
         "Critical incident technique",
         "Paired comparison technique",
-        "Forced distribution method",
-        "Graphic rating scale"
+        "Forced distribution method"
       ],
       "answer": "Paired comparison technique",
       "explanation": "The paired comparison technique involves systematically comparing employees in pairs on each performance dimension to rank them.",
@@ -68,7 +64,6 @@
       "stem": "Which rater bias occurs when a supervisor’s ratings of an employee are influenced by the ratings given to a previously evaluated employee?",
       "options": [
         "Similarity bias",
-        "Halo error",
         "Central tendency bias",
         "Contrast error",
         "Leniency bias"
@@ -84,7 +79,6 @@
       "stem": "What is criterion contamination in the context of job performance measurement?",
       "options": [
         "When a performance measure fails to assess an important aspect of the job",
-        "When the actual criterion matches perfectly with the ultimate criterion",
         "When factors unrelated to job performance influence the measure of performance",
         "When a rater consistently gives average ratings regardless of true performance",
         "When employees are compared with each other rather than rated independently"
@@ -99,7 +93,6 @@
     {
       "stem": "Which of the following is an advantage of behaviorally anchored rating scales (BARS) over graphic rating scales?",
       "options": [
-        "They are easier and faster to develop",
         "They focus on rating employees relative to their peers",
         "They reduce rater bias by anchoring scale points with specific behaviors",
         "They require raters to assign employees to pre-specified percentage categories",
@@ -118,8 +111,7 @@
         "Training focused solely on identifying common rater biases",
         "Providing frame-of-reference training including definitions of successful performance and practice rating",
         "Teaching raters to use forced distribution rating scales exclusively",
-        "Coaching raters to be lenient to avoid employee dissatisfaction",
-        "Emphasizing speed and efficiency over accuracy in ratings"
+        "Coaching raters to be lenient to avoid employee dissatisfaction"
       ],
       "answer": "Providing frame-of-reference training including definitions of successful performance and practice rating",
       "explanation": "Frame-of-reference training enhances rater accuracy by clarifying multidimensional performance and offering practice with feedback.",
@@ -134,7 +126,6 @@
         "The specific tasks required to complete a particular job",
         "The level of productivity achieved by employees in each job",
         "Core worker attributes linked to organizational values and applicable across multiple jobs",
-        "Comparing job salaries to establish comparable worth",
         "Identifying behaviors associated with exceptionally poor or good performance on a job"
       ],
       "answer": "Core worker attributes linked to organizational values and applicable across multiple jobs",
@@ -150,8 +141,7 @@
         "They provide complete information about employee performance",
         "They can be influenced by situational factors unrelated to employee effort",
         "They are the most commonly used performance measures in organizations",
-        "They allow raters to adjust scores based on situational influences",
-        "They effectively eliminate errors caused by rater biases"
+        "They allow raters to adjust scores based on situational influences"
       ],
       "answer": "They can be influenced by situational factors unrelated to employee effort",
       "explanation": "Objective measures can be affected by external resources or support, which may unfairly impact performance data.",
@@ -166,8 +156,7 @@
         "Allow raters to assign the same rating to all employees to minimize conflict",
         "Require raters to rate employees against absolute standards without considering others",
         "Force raters to place a fixed percentage of employees into each of several performance categories",
-        "Compare employees in pairs to determine which performs better on various dimensions",
-        "Anchor ratings with specific behaviors defining each scale point"
+        "Compare employees in pairs to determine which performs better on various dimensions"
       ],
       "answer": "Force raters to place a fixed percentage of employees into each of several performance categories",
       "explanation": "The forced distribution requires raters to allocate employees according to pre-set percentages, which controls for rating biases.",
@@ -182,8 +171,7 @@
         "Paying employees strictly based on seniority and tenure",
         "Ensuring employees performing jobs of equal value receive equal pay regardless of gender",
         "Allocating salaries according to employee negotiation skills",
-        "Increasing pay based on the number of job tasks completed",
-        "Setting wages arbitrarily without job analysis"
+        "Increasing pay based on the number of job tasks completed"
       ],
       "answer": "Ensuring employees performing jobs of equal value receive equal pay regardless of gender",
       "explanation": "Comparable worth aims to reduce wage disparities by ensuring jobs requiring similar skills and responsibilities get equal compensation, addressing gender pay gaps.",
@@ -198,8 +186,7 @@
         "Focuses on core worker attributes applicable across multiple jobs",
         "Linked to organizational values, goals, and strategies",
         "Primarily emphasizes specific tasks to be completed",
-        "Serves to identify future job requirements",
-        "Helps define content of training programs"
+        "Serves to identify future job requirements"
       ],
       "answer": "Primarily emphasizes specific tasks to be completed",
       "explanation": "Competency modeling focuses on broader attributes and capabilities applicable across jobs, not detailed task analysis which is central to job analysis.",
@@ -211,7 +198,6 @@
     {
       "stem": "Which job analysis method could best help develop training programs focused on improving essential worker KSAOs?",
       "options": [
-        "Task analysis focusing on work tasks",
         "Position Analysis Questionnaire (PAQ) focusing on worker characteristics",
         "Forced distribution method for rating employees",
         "Behaviorally anchored rating scales (BARS) for performance",

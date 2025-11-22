@@ -24,7 +24,7 @@ import {
 import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { createClient } from '@supabase/supabase-js'
-import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
+import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/lib/unified-question-results'
 
 interface Question {
@@ -317,18 +317,12 @@ export default function ExamGeneratorPage() {
       if (!selectedAnswer) return
       if (question.isScored === false || question.scored === false) return
 
-      const meta =
-        question.topicName || question.domainId
-          ? null
-          : deriveTopicMetaFromSourceFile(question.sourceFile ?? (question as any).source_file)
-
+      const meta = deriveTopicMetaFromQuestionSource(question as any)
       const topicName = question.topicName || meta?.topicName
       if (!topicName) return
 
       const domainId =
-        question.domainId ||
-        meta?.domainId ||
-        (question.domain ? String(question.domain) : 'unknown')
+        question.domainId || meta?.domainId || (question.domain ? String(question.domain) : 'unknown')
 
       // For exam-derived highlights, treat the whole topic as needing review.
       // This ensures Topic Teacher shows apples even when we don't have
@@ -800,7 +794,7 @@ export default function ExamGeneratorPage() {
       console.timeEnd('[Exam Gen] Question shuffle')
 
       const enrichedQuestions = questionsToUse.map((question) => {
-        const meta = deriveTopicMetaFromSourceFile(question.sourceFile ?? (question as any)?.source_file)
+        const meta = deriveTopicMetaFromQuestionSource(question as any)
         const derivedDomainId = meta?.domainId ?? (question.domain ? String(question.domain) : undefined)
         const derivedSections =
           question.relatedSections && question.relatedSections.length > 0

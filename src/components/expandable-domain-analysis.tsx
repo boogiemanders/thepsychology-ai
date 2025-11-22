@@ -7,6 +7,7 @@ import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { CheckCircle2, XCircle, Circle } from 'lucide-react'
+import type { DomainPerformance } from '@/lib/priority-calculator'
 
 interface Question {
   id: number
@@ -42,6 +43,8 @@ interface ExpandableDomainAnalysisProps {
   description?: string | null
   showOnlyWrong?: boolean
   showSourceFile?: boolean
+  // Optional scored-status map per question index to avoid recomputing
+  scoredStatusByIndex?: Record<number, 'correct' | 'wrong' | 'skipped'>
 }
 
 const BRAND_COLORS = {
@@ -62,6 +65,7 @@ export function ExpandableDomainAnalysis({
   description,
   showOnlyWrong = false,
   showSourceFile = false,
+  scoredStatusByIndex,
 }: ExpandableDomainAnalysisProps) {
   const resolvedTitle = title === undefined ? 'Domain Analysis' : title
   const resolvedDescription =
@@ -127,6 +131,11 @@ export function ExpandableDomainAnalysis({
   const getSelectedAnswerForQuestion = (question: Question) => {
     if (!question) return undefined
 
+    const index = questionIndexLookup.get(question)
+    if (typeof index !== 'undefined') {
+      return selectedAnswers[index]
+    }
+
     if (typeof question.id !== 'undefined') {
       const answerById = selectedAnswers[question.id]
       if (typeof answerById !== 'undefined') {
@@ -141,16 +150,24 @@ export function ExpandableDomainAnalysis({
       }
     }
 
-    const index = questionIndexLookup.get(question)
-    if (typeof index !== 'undefined') {
-      return selectedAnswers[index]
-    }
-
     return undefined
   }
 
   const getQuestionStatus = (question: Question) => {
+    const index = questionIndexLookup.get(question)
+    if (typeof index === 'number' && scoredStatusByIndex && scoredStatusByIndex[index]) {
+      return scoredStatusByIndex[index]
+    }
+
     const selectedAnswer = getSelectedAnswerForQuestion(question)
+    const isScored =
+      typeof question.isScored === 'boolean'
+        ? question.isScored
+        : typeof (question as any).scored === 'boolean'
+        ? (question as any).scored
+        : true
+
+    if (!isScored) return 'unscored'
 
     if (!selectedAnswer || selectedAnswer === 'skipped') {
       return 'skipped'
@@ -171,6 +188,8 @@ export function ExpandableDomainAnalysis({
         return <XCircle size={16} className="text-red-600 flex-shrink-0" />
       case 'skipped':
         return <Circle size={16} className="text-amber-600 flex-shrink-0" />
+      case 'unscored':
+        return <Circle size={16} className="text-slate-500 flex-shrink-0" />
       default:
         return null
     }
@@ -184,6 +203,8 @@ export function ExpandableDomainAnalysis({
         return 'rgba(239, 68, 68, 0.05)'
       case 'skipped':
         return 'rgba(217, 119, 16, 0.05)'
+      case 'unscored':
+        return 'rgba(148, 163, 184, 0.08)'
       default:
         return 'transparent'
     }
@@ -205,6 +226,8 @@ export function ExpandableDomainAnalysis({
         return { label: 'Incorrect', color: 'text-red-600' }
       case 'skipped':
         return { label: 'Skipped', color: 'text-amber-600' }
+      case 'unscored':
+        return { label: 'Unscored', color: 'text-muted-foreground' }
       default:
         return { label: 'Unknown', color: 'text-muted-foreground' }
     }
@@ -228,8 +251,16 @@ export function ExpandableDomainAnalysis({
             .filter((domain) => domain.domainNumber !== undefined)
             .map((domain) => {
               const domainQuestions = getDomainQuestions(domain.domainName, domain.domainNumber)
-              const totalInDomain = domainQuestions.length
-              const wrongInDomain = domainQuestions.filter(
+              const calculatedTotal = domain.totalQuestionsInDomain ?? 0
+              const calculatedWrong = domain.totalWrongInDomain ?? 0
+
+              // Fallback to question-based counts only if calculator data is missing
+              const totalInDomain =
+                calculatedTotal > 0 ? calculatedTotal : domainQuestions.length
+              const wrongInDomain =
+                calculatedTotal > 0
+                  ? calculatedWrong
+                  : domainQuestions.filter(
                 (q) => getQuestionStatus(q) !== 'correct'
               ).length
               const correctInDomain = totalInDomain - wrongInDomain

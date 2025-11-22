@@ -6,7 +6,6 @@
         "Benzodiazepines are effective for long-term management of cognitive symptoms of anxiety.",
         "Benzodiazepines have a delayed onset of action but fewer side effects than SSRIs or SNRIs.",
         "Benzodiazepines provide fast-acting, short-term relief from acute anxiety symptoms.",
-        "Benzodiazepines have no risk of physical dependence or tolerance.",
         "Benzodiazepines primarily improve psychological rather than physiological anxiety symptoms."
       ],
       "answer": "Benzodiazepines provide fast-acting, short-term relief from acute anxiety symptoms.",
@@ -19,7 +18,6 @@
     {
       "stem": "A patient who has been on long-term alprazolam (Xanax) therapy wishes to discontinue use. What is the best approach to minimize withdrawal symptoms?",
       "options": [
-        "Abruptly stopping the medication.",
         "Gradually tapering the dose over an extended period.",
         "Switching immediately to a barbiturate for cross-tolerance.",
         "Replacing alprazolam with an SSRI without tapering.",
@@ -38,8 +36,7 @@
         "Rebound anxiety upon discontinuation.",
         "Cognitive impairment and risk of fatal overdose especially with alcohol.",
         "Sexual dysfunction and disorientation in older adults.",
-        "Dry mouth, sweating, and headache.",
-        "Alpha-blocker related hypotension."
+        "Dry mouth, sweating, and headache."
       ],
       "answer": "Cognitive impairment and risk of fatal overdose especially with alcohol.",
       "explanation": "Barbiturates cause significant central nervous system depression leading to cognitive impairment, and when combined with alcohol, they can cause potentially fatal synergistic effects.",
@@ -51,7 +48,6 @@
     {
       "stem": "Which anxiolytic drug is preferred when sedation, tolerance, and dependence are significant clinical concerns?",
       "options": [
-        "Diazepam",
         "Buspirone",
         "Secobarbital",
         "Lorazepam",
@@ -70,8 +66,7 @@
         "Generalized anxiety disorder, due to its calming properties.",
         "Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.",
         "Chronic pain management, since it has no risk of tolerance or dependence.",
-        "Nicotine addiction treatment, by mimicking nicotine effects.",
-        "Depression, as it modulates serotonin and dopamine levels."
+        "Nicotine addiction treatment, by mimicking nicotine effects."
       ],
       "answer": "Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.",
       "explanation": "Methadone is a synthetic opioid that helps heroin users by reducing cravings and withdrawal symptoms without producing heroin's pleasurable effects.",
@@ -86,8 +81,7 @@
         "Cognitive symptoms such as excessive worry and fear.",
         "Physiological somatic symptoms like tremors and tachycardia.",
         "Depressive symptoms commonly comorbid with anxiety.",
-        "Seizure activity associated with anxiety disorders.",
-        "Psychotic symptoms triggered by stress."
+        "Seizure activity associated with anxiety disorders."
       ],
       "answer": "Physiological somatic symptoms like tremors and tachycardia.",
       "explanation": "Propranolol, a beta-blocker, reduces somatic symptoms of anxiety (e.g., tremors, palpitations), but has less impact on psychological symptoms like apprehension or worry.",
@@ -99,7 +93,6 @@
     {
       "stem": "Which of the following statements best characterizes the drug half-life and its importance in medication management?",
       "options": [
-        "A long half-life drug requires more frequent dosing to maintain blood levels.",
         "Half-life refers to the time for the drug's therapeutic effect to be noticeable.",
         "Older adults typically have shorter drug half-lives due to faster metabolism.",
         "Half-life is the time needed for blood drug levels to decline to 50% and guides dosing intervals.",
@@ -118,7 +111,6 @@
         "Its effective dose is much lower than its toxic dose, making it very safe.",
         "Its effective dose is equal to or greater than its lethal or toxic dose, requiring close monitoring.",
         "It typically requires no dosing adjustments for older adults.",
-        "It is ineffective at usual clinical doses.",
         "It produces no adverse effects at therapeutic levels."
       ],
       "answer": "Its effective dose is equal to or greater than its lethal or toxic dose, requiring close monitoring.",
@@ -134,7 +126,6 @@
         "Methylphenidate",
         "Amphetamine-dextroamphetamine",
         "Atomoxetine",
-        "Pemoline",
         "Modafinil"
       ],
       "answer": "Atomoxetine",
@@ -150,7 +141,6 @@
         "Donepezil",
         "Galantamine",
         "Memantine",
-        "Tacrine",
         "Rivastigmine"
       ],
       "answer": "Memantine",
@@ -166,7 +156,6 @@
         "Increased appetite and weight gain",
         "Seizures and hallucinations",
         "Insomnia and decreased appetite",
-        "Excessive sedation",
         "Postural hypotension"
       ],
       "answer": "Insomnia and decreased appetite",
@@ -182,7 +171,6 @@
         "Nicotine replacement therapy",
         "Varenicline",
         "Bupropion",
-        "Disulfiram",
         "Topiramate"
       ],
       "answer": "Bupropion",
@@ -198,7 +186,6 @@
         "Dopaminergic system",
         "Serotonergic system",
         "GABAergic system",
-        "Cholinergic system",
         "Glutamatergic system"
       ],
       "answer": "GABAergic system",
@@ -212,7 +199,6 @@
       "stem": "Which pharmacological property best explains the need for “drug holidays” in children treated with psychostimulants for ADHD?",
       "options": [
         "Development of drug tolerance leading to loss of efficacy",
-        "Short drug half-life requiring intermittent dosing",
         "Suppression of growth that can be reversed during drug-free periods",
         "Accumulation of toxic metabolites causing adverse effects",
         "Development of physical dependence causing withdrawal symptoms"
@@ -229,7 +215,6 @@
       "options": [
         "Benzodiazepines",
         "Barbiturates",
-        "Azapirones",
         "Beta-blockers",
         "Anticonvulsants"
       ],
@@ -246,8 +231,7 @@
         "Inhibition of norepinephrine reuptake in the central nervous system",
         "Blockade of alpha-1 adrenergic receptors to reduce anxiety-associated tremor",
         "Inhibition of beta-adrenergic receptors to reduce sympathetic nervous system stimulation",
-        "Enhancement of GABAergic neurotransmission to promote relaxation",
-        "Agonism of serotonin receptors to improve mood"
+        "Enhancement of GABAergic neurotransmission to promote relaxation"
       ],
       "answer": "Inhibition of beta-adrenergic receptors to reduce sympathetic nervous system stimulation",
       "explanation": "Beta-blockers reduce the physical symptoms of anxiety by blocking beta-adrenergic receptors, thereby inhibiting sympathetic nervous system activity like tachycardia and tremors.",

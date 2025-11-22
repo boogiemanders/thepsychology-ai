@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 import { existsSync, readFileSync } from 'fs'
 import { join } from 'path'
 import { parseExamFile } from '@/lib/exam-file-manager'
 import { inferIsOrgPsych } from '@/lib/org-psych-utils'
+import { getSupabaseClient } from '@/lib/supabase-server'
 
 /**
  * Assign an exam file to a user
@@ -28,10 +28,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!
-    )
+    const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+    if (!supabase) {
+      return NextResponse.json(
+        { error: 'Supabase is not configured' },
+        { status: 500 }
+      )
+    }
 
     // Query which exam files the user has already completed
     const { data: completedAssignments, error: queryError } = await supabase

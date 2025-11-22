@@ -6,6 +6,14 @@ export interface TopicSourceMeta {
   domainId: string | null
 }
 
+export interface TopicSourceCandidate {
+  sourceFile?: string | null
+  source_file?: string | null
+  topicName?: string | null
+  sectionName?: string | null
+  domainId?: string | null
+}
+
 const SOURCE_FOLDER_TO_DOMAIN_ID: Record<string, string> = {
   '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology': '1',
   '2 Cognitive-Affective Bases : Learning and Memory': '2',
@@ -96,5 +104,36 @@ export function deriveTopicMetaFromSourceFile(sourceFile?: string | null): Topic
     topicName,
     sectionName: topicName,
     domainId: getDomainIdFromFolder(folderName),
+  }
+}
+
+export function deriveTopicMetaFromQuestionSource(candidate?: TopicSourceCandidate | null): TopicSourceMeta | null {
+  if (!candidate) return null
+
+  const {
+    sourceFile = null,
+    source_file: sourceFileAlt = null,
+    topicName: providedTopic,
+    sectionName: providedSection,
+    domainId: providedDomain,
+  } = candidate
+
+  const topicHint = providedTopic?.trim() || providedSection?.trim() || null
+  const fileMeta = deriveTopicMetaFromSourceFile(sourceFile ?? sourceFileAlt)
+
+  if (fileMeta) {
+    return {
+      topicName: fileMeta.topicName || topicHint || '',
+      sectionName: fileMeta.sectionName || topicHint || '',
+      domainId: fileMeta.domainId ?? providedDomain ?? null,
+    }
+  }
+
+  if (!topicHint) return null
+
+  return {
+    topicName: topicHint,
+    sectionName: topicHint,
+    domainId: providedDomain ?? null,
   }
 }

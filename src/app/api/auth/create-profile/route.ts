@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { getSupabaseClient } from '@/lib/supabase-server'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
@@ -19,9 +19,7 @@ export async function POST(request: NextRequest) {
 
     // Create Supabase client for profile insertion
     // Use service role key for backend operations (bypasses RLS)
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    const supabase = getSupabaseClient(
       authToken
         ? {
             global: {
@@ -30,8 +28,16 @@ export async function POST(request: NextRequest) {
               },
             },
           }
-        : undefined
+        : undefined,
+      { requireServiceRole: true }
     )
+
+    if (!supabase) {
+      return NextResponse.json(
+        { error: 'Supabase is not configured' },
+        { status: 500 }
+      )
+    }
 
     // If we have an auth token, verify it matches
     if (authToken) {

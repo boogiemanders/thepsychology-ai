@@ -389,11 +389,7 @@ export function PrioritizeContent() {
             </BreadcrumbList>
           </Breadcrumb>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
+          <div>
             <div className="text-center py-12">
               <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
                 Prioritize
@@ -407,12 +403,7 @@ export function PrioritizeContent() {
                 <div className="max-w-3xl mx-auto mb-12">
                   {/* Weak Areas Alert */}
                   {studyStats.weakTopics.length > 0 ? (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: 0.1 }}
-                      className="mb-8"
-                    >
+                    <div className="mb-8">
                       <Card className="border-orange-500/30 bg-orange-500/5">
                         <CardHeader>
                           <div className="flex items-center gap-3">
@@ -429,11 +420,8 @@ export function PrioritizeContent() {
                         <CardContent className="pt-6">
                           <div className="space-y-3">
                             {studyStats.weakTopics.slice(0, 3).map((topic, idx) => (
-                              <motion.div
+                              <div
                                 key={idx}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: (idx + 2) * 0.1 }}
                                 className="flex items-center justify-between p-3 rounded-lg bg-background border border-border hover:border-orange-500/50 transition-colors"
                               >
                                 <div className="flex items-center gap-3 flex-1">
@@ -445,19 +433,14 @@ export function PrioritizeContent() {
                                     </p>
                                   </div>
                                 </div>
-                              </motion.div>
+                              </div>
                             ))}
                           </div>
                         </CardContent>
                       </Card>
-                    </motion.div>
+                    </div>
                   ) : studyStats.totalQuizzes > 0 ? (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: 0.1 }}
-                      className="mb-8"
-                    >
+                    <div className="mb-8">
                       <Card className="border-green-500/30 bg-green-500/5">
                         <CardHeader>
                           <div className="flex items-center gap-3">
@@ -471,17 +454,13 @@ export function PrioritizeContent() {
                           </div>
                         </CardHeader>
                       </Card>
-                    </motion.div>
+                    </div>
                   ) : null}
                 </div>
               ) : null}
 
               {/* CTA Section */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-              >
+              <div>
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-2xl">Ready for a Practice Exam?</CardTitle>
@@ -500,9 +479,9 @@ export function PrioritizeContent() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </main>
     )

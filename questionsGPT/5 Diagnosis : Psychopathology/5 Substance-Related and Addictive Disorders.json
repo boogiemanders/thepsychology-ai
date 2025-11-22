@@ -19,7 +19,6 @@
       "stem": "Which symptom is NOT one of the criteria for Alcohol Intoxication in DSM-5-TR?",
       "options": [
         "Incoordination",
-        "Nystagmus",
         "Pupillary constriction",
         "Slurred speech",
         "Unsteady gait"
@@ -37,8 +36,7 @@
         "Anterograde and retrograde amnesia with confabulation linked to thiamine deficiency",
         "Psychomotor agitation and autonomic hyperactivity following alcohol cessation",
         "Severe mood lability and inappropriate aggression during intoxication",
-        "Transient hallucinations and illusions during withdrawal",
-        "Pupillary dilation and psychomotor retardation"
+        "Transient hallucinations and illusions during withdrawal"
       ],
       "answer": "Anterograde and retrograde amnesia with confabulation linked to thiamine deficiency",
       "explanation": "Korsakoff syndrome is a form of alcohol-induced major neurocognitive disorder involving profound memory impairment and confabulation, caused by thiamine deficiency.",
@@ -53,7 +51,6 @@
         "Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory",
         "Pupillary dilation plus hypervigilance and psychomotor agitation",
         "Autonomic hyperactivity plus anxiety and transient hallucinations",
-        "Weight loss and vivid nightmares",
         "Slurred speech plus nystagmus and unsteady gait"
       ],
       "answer": "Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory",
@@ -69,8 +66,7 @@
         "Community Reinforcement Approach (CRA)",
         "Personalized Normative Feedback (PNF)",
         "Voucher-Based Reinforcement Therapy (VBRT)",
-        "Relapse Prevention Therapy (RPT)",
-        "Twelve-step Facilitation"
+        "Relapse Prevention Therapy (RPT)"
       ],
       "answer": "Community Reinforcement Approach (CRA)",
       "explanation": "CRA is based on operant conditioning principles and helps individuals make their lifestyle rewarding to compete with drug use.",
@@ -85,7 +81,6 @@
         "Contingency management by providing vouchers contingent on treatment goals",
         "Cognitive restructuring to alter beliefs about substance use",
         "Motivational interviewing to enhance readiness to change",
-        "Norm correction to adjust perceived peer substance use",
         "Relapse prevention by identifying high-risk situations"
       ],
       "answer": "Contingency management by providing vouchers contingent on treatment goals",
@@ -100,7 +95,6 @@
       "options": [
         "Correcting clients’ overestimations of peer substance use prevalence",
         "Increasing clients’ awareness of physiological withdrawal symptoms",
-        "Providing vouchers contingent on abstinence",
         "Teaching coping skills to handle high-risk situations",
         "Reminding clients of appointment schedules via text messages"
       ],
@@ -117,8 +111,7 @@
         "Has poor coping skills, low self-efficacy, and experiences an abstinence violation effect",
         "Experiences withdrawal symptoms during the first 48 hours post-cessation",
         "Is given vouchers contingent on negative drug test results",
-        "Receives personalized normative feedback about peer substance use",
-        "Is in early remission with no recent substance use"
+        "Receives personalized normative feedback about peer substance use"
       ],
       "answer": "Has poor coping skills, low self-efficacy, and experiences an abstinence violation effect",
       "explanation": "RPT emphasizes that lapses combined with inadequate coping and negative cognitions about the lapse often lead to full relapse.",
@@ -131,7 +124,6 @@
       "stem": "Which of the following characterizes Tobacco Withdrawal according to the DSM-5-TR?",
       "options": [
         "At least four of seven symptoms developing within 24 hours of abrupt cessation, including irritability and impaired concentration",
-        "Development of seizures and hallucinations following cessation",
         "Transient hallucinations or illusions appearing within days of quitting",
         "Pupillary constriction accompanied by drowsiness shortly after use",
         "Vivid and unpleasant dreams occurring weeks after stopping use"
@@ -147,7 +139,6 @@
       "stem": "In Project MATCH, which treatment showed a slight advantage in reducing drinking in clients diagnosed with alcohol dependence or abuse at one- and three-year follow-up?",
       "options": [
         "Twelve-step facilitation",
-        "Motivational enhancement therapy",
         "Cognitive behavioral coping skills therapy",
         "Community reinforcement approach",
         "Voucher-based reinforcement therapy"
@@ -165,7 +156,6 @@
         "Re-experiencing perceptual symptoms from prior intoxication with intact reality testing",
         "Hallucinations accompanied by impaired reality testing and cognitive deficits",
         "Withdrawal symptoms that include autonomic hyperactivity and seizures",
-        "Anxiety disorder onset following hallucinogen use with delusions",
         "Transient psychosis occurring during acute intoxication with hallucinations"
       ],
       "answer": "Re-experiencing perceptual symptoms from prior intoxication with intact reality testing",
@@ -180,7 +170,6 @@
       "options": [
         "Operant conditioning principles focusing on positive reinforcement",
         "Psychodynamic theory emphasizing unconscious conflict resolution",
-        "Humanistic approach centered on self-actualization",
         "Biological model targeting neurochemical imbalances",
         "Cognitive dissonance theory addressing conflicting beliefs"
       ],
@@ -196,7 +185,6 @@
       "options": [
         "Abstinence violation effect leading to feelings of guilt and failure",
         "Confirmation bias reinforcing substance-related beliefs",
-        "Optimism bias underestimating risk of relapse",
         "Availability heuristic causing exaggerated recall of drug use benefits",
         "Fundamental attribution error blaming others for one’s relapse"
       ],
@@ -212,7 +200,6 @@
       "options": [
         "By providing reminders, health information, support, and self-monitoring tools",
         "By delivering cognitive-behavioral therapy sessions remotely",
-        "By substituting for in-person therapy entirely",
         "By administering medication through mobile technology",
         "By tracking physiological withdrawal symptoms automatically"
       ],
@@ -229,8 +216,7 @@
         "Combination of therapy and medication yields higher quit rates than either alone",
         "Medication alone is more effective than therapy or combination treatment",
         "Therapy alone is sufficient for most patients without medication",
-        "Neither therapy nor medication shows significant benefit alone or combined",
-        "Combination therapy has the same effect as no treatment"
+        "Neither therapy nor medication shows significant benefit alone or combined"
       ],
       "answer": "Combination of therapy and medication yields higher quit rates than either alone",
       "explanation": "Research shows that combining behavioral therapy and medication leads to better tobacco cessation outcomes than either approach alone.",

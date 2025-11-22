@@ -4,9 +4,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Use Microsoft Sans Serif for exams and tests */
+/* Use Tahoma for exams and tests */
 * {
-  font-family: "Microsoft Sans Serif", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Tahoma", "Geneva", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 }
 
 /* Preserve exam question typography even when HTML markup is injected */
@@ -42,12 +42,12 @@ main {
 /* Windows 2000 Theme for Quiz/Test Mode */
 .windows-2000-theme {
   background: #c0c0c0;
-  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+  font-family: "Tahoma", "Geneva", sans-serif;
   color: #000;
 }
 
 .windows-2000-theme * {
-  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+  font-family: "Tahoma", "Geneva", sans-serif;
 }
 
 /* Windows 2000 Button Style */
@@ -57,7 +57,7 @@ main {
   border-color: #dfdfdf #808080 #808080 #dfdfdf;
   padding: 4px 12px;
   font-size: 11px;
-  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+  font-family: "Tahoma", "Geneva", sans-serif;
   cursor: pointer;
   user-select: none;
 }
@@ -92,7 +92,7 @@ main {
   padding: 2px 2px;
   font-size: 11px;
   font-weight: bold;
-  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+  font-family: "Tahoma", "Geneva", sans-serif;
   display: flex;
   align-items: center;
   gap: 4px;

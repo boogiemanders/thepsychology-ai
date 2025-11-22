@@ -831,7 +831,7 @@ export function QuizzerContent() {
                   </Button>
                 </Link>
                 <Link
-                  href={`/topic-teacher?topic=${encodeURIComponent(topic || '')}&hasQuizResults=true${
+                  href={`/topic-teacher?topic=${encodeURIComponent(decodedTopic || '')}&hasQuizResults=true${
                     recentQuizSectionsParam
                       ? `&recentQuizWrongSections=${recentQuizSectionsParam}`
                       : ''

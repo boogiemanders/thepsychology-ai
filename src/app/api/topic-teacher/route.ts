@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
     // For follow-ups, load the EPPP Guts reference material (not pre-generated content)
     // This gives more detailed, comprehensive answers to follow-up questions
     let referenceMaterial: string | undefined
-    if (!isInitial && topic) {
+    if (!isInitial && topic && domain) {
       // Extract domain ID from domain name for the loader
       // Domain format: "1: Biological Bases" → domainId: "1"
       const domainId = domain.split(':')[0].trim()

@@ -52,7 +52,7 @@ export function getKNFromQuestion(questionId: number, questionText: string): str
  */
 export function calculateDomainPerformance(
   wrongAnswers: (WrongAnswer & { domain?: string; source_file?: string })[],
-  allQuestions?: Array<{ domain?: string; is_org_psych?: boolean }>
+  allQuestions?: Array<{ domain?: string; is_org_psych?: boolean; isScored?: boolean; scored?: boolean }>
 ): DomainPerformance[] {
   const domainData: Record<number, { wrong: number; total: number; wrongKNs: Set<string>; wrongFiles: Set<string> }> = {}
 
@@ -73,6 +73,14 @@ export function calculateDomainPerformance(
       if (question.is_org_psych === true) {
         continue
       }
+
+      const isScored =
+        typeof (question as any).isScored === 'boolean'
+          ? (question as any).isScored
+          : typeof (question as any).scored === 'boolean'
+          ? (question as any).scored
+          : true
+      if (!isScored) continue
 
       // Extract domain number from domain metadata
       let domain: number | null = null
@@ -576,26 +584,44 @@ export function calculatePriorities(examResults: {
     is_org_psych?: boolean
     source_file?: string
     correct_answer?: string
+    isScored?: boolean
+    scored?: boolean
+    domain?: string
     [key: string]: any
   }>
   selectedAnswers: Record<number, string>
   totalQuestions: number
 }) {
-  // Convert exam results to wrong answers format
+  // Convert exam results to wrong answers format (scored questions only)
   const wrongAnswers: Array<WrongAnswer & { is_org_psych?: boolean; source_file?: string }> = []
+  let scoredQuestionCount = 0
+  let scoredCorrectCount = 0
 
   examResults.questions.forEach((question, index) => {
     const selectedAnswer = examResults.selectedAnswers[index]
+    const isScored =
+      typeof question.isScored === 'boolean'
+        ? question.isScored
+        : typeof question.scored === 'boolean'
+        ? question.scored
+        : true
 
-    // Count both incorrect AND skipped questions (undefined selectedAnswer)
-    if (selectedAnswer !== question.correct_answer) {
-      wrongAnswers.push({
-        questionId: index + 1,
-        domain: question.domain,
-        is_org_psych: question.is_org_psych,
-        source_file: question.source_file,
-        ...question,
-      })
+    const isCorrect = selectedAnswer === question.correct_answer
+
+    if (isScored) {
+      scoredQuestionCount++
+      if (isCorrect) scoredCorrectCount++
+
+      // Include incorrect or skipped scored questions
+      if (!isCorrect) {
+        wrongAnswers.push({
+          questionId: index + 1,
+          domain: question.domain,
+          is_org_psych: question.is_org_psych,
+          source_file: question.source_file,
+          ...question,
+        })
+      }
     }
   })
 
@@ -648,12 +674,22 @@ export function calculatePriorities(examResults: {
   // Get all domain results
   const allResults = getAllDomainResults(wrongAnswers)
 
+  // Sanity: scoredCorrect + wrongAnswers.length should equal scoredQuestionCount
+  const sanityMismatch = scoredCorrectCount + wrongAnswers.length !== scoredQuestionCount
+  if (sanityMismatch) {
+    console.warn('[Priorities] Scored question count mismatch:', {
+      scoredQuestionCount,
+      scoredCorrectCount,
+      wrongCount: wrongAnswers.length,
+    })
+  }
+
   return {
     topPriorities,
     allResults,
     topPriorityAreas,
     orgPsychPerformance,
-    score: examResults.questions.length - wrongAnswers.length,
-    totalQuestions: examResults.totalQuestions,
+    score: scoredCorrectCount,
+    totalQuestions: scoredQuestionCount,
   }
 }

@@ -33,12 +33,27 @@ interface HighlightData {
   previouslyWrongNowCorrectSections: string[]
 }
 
+const GENERIC_SECTION_NAMES = new Set([
+  'main content',
+  'main concept',
+  'sub-concept',
+  'general overview',
+  'overview',
+  'topic overview',
+  'topic summary',
+  'full topic',
+  'entire topic',
+  'core content',
+  'whole topic',
+  'entire section',
+  'lesson overview',
+])
+
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
   const { user } = useAuth()
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
-  const hasQuizResults = searchParams.get('hasQuizResults') === 'true'
   const hasExamResults = searchParams.get('hasExamResults') === 'true'
   const decodeParam = (value: string | null): string => {
     if (!value) return ''
@@ -49,6 +64,43 @@ export function TopicTeacherContent() {
     }
   }
   const decodedTopic = decodeParam(topic)
+  const normalizedTopicName = decodedTopic ? decodedTopic.trim().toLowerCase() : ''
+
+  const normalizeSectionName = (section?: string | null): string | null => {
+    if (!section) return null
+    const trimmed = section.trim()
+    if (!trimmed) return null
+    const normalized = trimmed.toLowerCase()
+
+    // Treat only truly generic labels as "whole topic"
+    if (GENERIC_SECTION_NAMES.has(normalized)) {
+      return '__ALL__'
+    }
+
+    return trimmed
+  }
+
+  const normalizeSections = (
+    sections?: string[],
+    options: { allowAll?: boolean } = {}
+  ): string[] => {
+    const { allowAll = true } = options
+    if (!sections || sections.length === 0) return []
+
+    const normalized = sections
+      .map((section) => normalizeSectionName(section))
+      .filter((section): section is string => Boolean(section))
+
+    if (!allowAll) {
+      return normalized.filter((section) => section !== '__ALL__')
+    }
+
+    if (normalized.includes('__ALL__')) {
+      return ['__ALL__']
+    }
+
+    return normalized
+  }
 
   const [messages, setMessages] = useState<Message[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -178,8 +230,7 @@ export function TopicTeacherContent() {
 
   // Load quiz/exam results and compute highlight data
   useEffect(() => {
-    if (topic) {
-      const decodedTopic = decodeURIComponent(topic)
+    if (decodedTopic) {
       let allWrongSections: string[] = []
       let allCorrectSections: string[] = []
       let allPreviouslyWrongNowCorrect: string[] = []
@@ -188,28 +239,46 @@ export function TopicTeacherContent() {
       // Always check for quiz results
       const quizResults = getQuizResults(decodedTopic)
       if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
-        const quizWrongSections = quizResults.wrongAnswers.flatMap(
-          (wa) => wa.relatedSections || []
+        const quizWrongSections = normalizeSections(
+          quizResults.wrongAnswers.flatMap((wa) => wa.relatedSections || []),
+          { allowAll: true }
         )
-        const quizCorrectSections = quizResults.correctAnswers
-          .filter((ca) => !(ca as any).wasPreviouslyWrong)
-          .flatMap((ca) => ca.relatedSections || [])
-        const quizPreviouslyWrongNowCorrect = quizResults.correctAnswers
-          .filter((ca) => (ca as any).wasPreviouslyWrong)
-          .flatMap((ca) => ca.relatedSections || [])
+        const quizCorrectSections = normalizeSections(
+          quizResults.correctAnswers
+            .filter((ca) => !(ca as any).wasPreviouslyWrong)
+            .flatMap((ca) => ca.relatedSections || []),
+          { allowAll: false }
+        )
+        const quizPreviouslyWrongNowCorrect = normalizeSections(
+          quizResults.correctAnswers
+            .filter((ca) => (ca as any).wasPreviouslyWrong)
+            .flatMap((ca) => ca.relatedSections || []),
+          { allowAll: false }
+        )
 
-        allWrongSections = [...allWrongSections, ...quizWrongSections]
-        allCorrectSections = [...allCorrectSections, ...quizCorrectSections]
-        allPreviouslyWrongNowCorrect = [
-          ...allPreviouslyWrongNowCorrect,
-          ...quizPreviouslyWrongNowCorrect,
-        ]
-        hasAnyResults = true
+        if (quizWrongSections.length > 0) {
+          allWrongSections = [...allWrongSections, ...quizWrongSections]
+          hasAnyResults = true
+        }
+
+        if (quizCorrectSections.length > 0) {
+          allCorrectSections = [...allCorrectSections, ...quizCorrectSections]
+        }
+
+        if (quizPreviouslyWrongNowCorrect.length > 0) {
+          allPreviouslyWrongNowCorrect = [
+            ...allPreviouslyWrongNowCorrect,
+            ...quizPreviouslyWrongNowCorrect,
+          ]
+        }
       }
 
       // Always check for exam results (from diagnostic/practice exams)
       const { getExamWrongSections } = require('@/lib/unified-question-results')
-      const examWrongSections = getExamWrongSections(decodedTopic)
+      const examWrongSections = normalizeSections(
+        getExamWrongSections(decodedTopic),
+        { allowAll: true }
+      )
       if (examWrongSections.length > 0) {
         allWrongSections = [...allWrongSections, ...examWrongSections]
         hasAnyResults = true
@@ -229,8 +298,13 @@ export function TopicTeacherContent() {
 
       // Set highlight data with combined results
       if (hasAnyResults && allWrongSections.length > 0) {
+        let dedupedWrong = [...new Set(allWrongSections)]
+        if (dedupedWrong.includes('__ALL__')) {
+          dedupedWrong = ['__ALL__']
+        }
+
         setHighlightData({
-          recentlyWrongSections: [...new Set(allWrongSections)],
+          recentlyWrongSections: dedupedWrong,
           recentlyCorrectSections: [...new Set(allCorrectSections)],
           previouslyWrongNowCorrectSections: [
             ...new Set(allPreviouslyWrongNowCorrect),
@@ -238,7 +312,7 @@ export function TopicTeacherContent() {
         })
       }
     }
-  }, [topic, hasExamResults])
+  }, [decodedTopic, hasExamResults])
 
   // Initialize with lesson
   useEffect(() => {
@@ -513,48 +587,37 @@ export function TopicTeacherContent() {
     }
   }
 
-  const calculateSimilarity = (str1: string, str2: string): number => {
-    const s1 = str1.toLowerCase().trim()
-    const s2 = str2.toLowerCase().trim()
+  const normalizeLabel = (value: string): string => {
+    return value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+  }
 
-    // Exact match
-    if (s1 === s2) return 1
+  const labelsMatch = (headerText: string, sectionName: string): boolean => {
+    const h = normalizeLabel(headerText)
+    const s = normalizeLabel(sectionName)
+    if (!h || !s) return false
 
-    // One contains the other
-    if (s1.includes(s2) || s2.includes(s1)) return 0.9
+    if (h === s) return true
+    if (h.startsWith(s) || s.startsWith(h)) return true
 
-    // Word matching - check if key words overlap
-    const words1 = s1.split(/\s+/).filter(w => w.length > 2)
-    const words2 = s2.split(/\s+/).filter(w => w.length > 2)
-
-    if (words1.length === 0 || words2.length === 0) {
-      // If no words, check character overlap
-      let matchingChars = 0
-      for (let char of s2) {
-        if (s1.includes(char)) matchingChars++
-      }
-      return matchingChars / Math.max(s1.length, s2.length)
-    }
-
-    const matchedWords = words1.filter(w1 =>
-      words2.some(w2 => w2.startsWith(w1.substring(0, 3)) || w1.startsWith(w2.substring(0, 3)))
-    )
-
-    return matchedWords.length > 0 ? (matchedWords.length / Math.min(words1.length, words2.length)) : 0
+    return false
   }
 
   const getHighlightType = (text: string): 'recently-wrong' | 'previously-wrong-now-correct' | 'recently-correct' | null => {
-    if ((!hasQuizResults && !hasExamResults) || (highlightData.recentlyWrongSections.length === 0 &&
-        highlightData.previouslyWrongNowCorrectSections.length === 0 &&
-        highlightData.recentlyCorrectSections.length === 0)) {
+    if (
+      highlightData.recentlyWrongSections.length === 0 &&
+      highlightData.previouslyWrongNowCorrectSections.length === 0 &&
+      highlightData.recentlyCorrectSections.length === 0
+    ) {
       return null
     }
 
     if (!text || text.trim().length === 0) {
       return null
     }
-
-    const SIMILARITY_THRESHOLD = 0.25
 
     // Special case: mark all sections as recently wrong for exam-derived topics
     if (highlightData.recentlyWrongSections.includes('__ALL__')) {
@@ -563,24 +626,21 @@ export function TopicTeacherContent() {
 
     // Check if this header matches recently wrong sections
     for (const section of highlightData.recentlyWrongSections) {
-      const similarity = calculateSimilarity(text, section)
-      if (similarity > SIMILARITY_THRESHOLD) {
+      if (labelsMatch(text, section)) {
         return 'recently-wrong'
       }
     }
 
     // Check if this header matches previously wrong, now correct
     for (const section of highlightData.previouslyWrongNowCorrectSections) {
-      const similarity = calculateSimilarity(text, section)
-      if (similarity > SIMILARITY_THRESHOLD) {
+      if (labelsMatch(text, section)) {
         return 'previously-wrong-now-correct'
       }
     }
 
     // Check if this header matches recently correct
     for (const section of highlightData.recentlyCorrectSections) {
-      const similarity = calculateSimilarity(text, section)
-      if (similarity > SIMILARITY_THRESHOLD) {
+      if (labelsMatch(text, section)) {
         return 'recently-correct'
       }
     }
@@ -737,10 +797,10 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              🍏 Highlighting sections for growth:{' '}
-              {highlightData.recentlyWrongSections.includes('__ALL__')
-                ? 'All'
-                : highlightData.recentlyWrongSections.join(', ')}
+              🍏 Most recent practice exam
+              {!highlightData.recentlyWrongSections.includes('__ALL__') && highlightData.recentlyWrongSections.length > 0
+                ? `: ${highlightData.recentlyWrongSections.join(', ')}`
+                : ''}
             </p>
           </motion.div>
         )}
@@ -751,7 +811,7 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              🍎 Most recent quiz: {recentQuizWrongSections.join(', ')}
+              🍎 Most recent quiz
             </p>
           </motion.div>
         )}
@@ -912,12 +972,18 @@ export function TopicTeacherContent() {
                           },
                           p: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            const shouldHighlight = highlightType === 'recently-wrong'
+                            const isRecentlyWrong = highlightType === 'recently-wrong'
+                            const isRecentlyCorrect = highlightType === 'recently-correct'
+                            const isRecovered = highlightType === 'previously-wrong-now-correct'
+
+                            const showIcon = isRecentlyWrong || isRecentlyCorrect || isRecovered
+                            const icon = isRecentlyWrong ? '🍎' : '🍏'
+
                             return (
-                              <div className={`transition-colors ${shouldHighlight ? 'relative pl-6' : ''}`}>
-                                {shouldHighlight && (
+                              <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
+                                {showIcon && (
                                   <span className="absolute left-0 top-0 text-base leading-none">
-                                    🍏
+                                    {icon}
                                   </span>
                                 )}
                                 <p className="m-0">{children}</p>
@@ -926,12 +992,17 @@ export function TopicTeacherContent() {
                           },
                           ul: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            const shouldHighlight = highlightType === 'recently-wrong'
+                            const isRecentlyWrong = highlightType === 'recently-wrong'
+                            const isRecentlyCorrect = highlightType === 'recently-correct'
+                            const isRecovered = highlightType === 'previously-wrong-now-correct'
+
+                            const showIcon = isRecentlyWrong || isRecentlyCorrect || isRecovered
+                            const icon = isRecentlyWrong ? '🍎' : '🍏'
                             return (
-                              <div className={`transition-colors ${shouldHighlight ? 'relative pl-6' : ''}`}>
-                                {shouldHighlight && (
+                              <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
+                                {showIcon && (
                                   <span className="absolute left-0 top-0 text-base leading-none">
-                                    🍏
+                                    {icon}
                                   </span>
                                 )}
                                 <ul>{children}</ul>
@@ -940,12 +1011,17 @@ export function TopicTeacherContent() {
                           },
                           ol: ({ children }) => {
                             const highlightType = getHighlightType(currentSectionRef.current)
-                            const shouldHighlight = highlightType === 'recently-wrong'
+                            const isRecentlyWrong = highlightType === 'recently-wrong'
+                            const isRecentlyCorrect = highlightType === 'recently-correct'
+                            const isRecovered = highlightType === 'previously-wrong-now-correct'
+
+                            const showIcon = isRecentlyWrong || isRecentlyCorrect || isRecovered
+                            const icon = isRecentlyWrong ? '🍎' : '🍏'
                             return (
-                              <div className={`transition-colors ${shouldHighlight ? 'relative pl-6' : ''}`}>
-                                {shouldHighlight && (
+                              <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
+                                {showIcon && (
                                   <span className="absolute left-0 top-0 text-base leading-none">
-                                    🍏
+                                    {icon}
                                   </span>
                                 )}
                                 <ol>{children}</ol>

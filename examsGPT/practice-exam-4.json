@@ -18,7 +18,7 @@
     {
       "stem": "According to the APA Ethics Code, what is required when delegating professional work to others such as research assistants or interpreters?",
       "options": [
-        "Delegation is allowed regardless of the delegatee\u2019s relationships with clients if they have been trained",
+        "Delegation is allowed regardless of the delegatee’s relationships with clients if they have been trained",
         "Psychologists must ensure the delegatee has no conflicting multiple relationships and has adequate competence",
         "Psychologists can only delegate to licensed psychologists to avoid liability",
         "Delegation is only allowed if the delegatee receives direct supervision at all times"
@@ -86,9 +86,9 @@
       "kn_explanation": "Ecological validity is a subcategory of external validity concerned with applicability to practical settings, making it important to understand in research evaluation.",
       "difficulty": "easy",
       "quality_comment": "This straightforward item supplements existing external validity questions by focusing on a key subcategory that is well covered in the source content.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Internal-External Validity.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Internal-External Validity.json",
       "domain": 7,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Internal-External Validity.json::15",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Internal-External Validity.json::15",
       "scored": true
     },
     {
@@ -133,12 +133,12 @@
       "stem": "In assessing change after intervention for conduct disorder, which outcome measure is considered most appropriate to evaluate treatment effectiveness?",
       "options": [
         "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-        "Patient\u2019s subjective report of mood and feelings alone",
+        "Patient’s subjective report of mood and feelings alone",
         "Only teacher reports of classroom behavior",
         "Number of hospitalizations recorded during treatment"
       ],
       "answer": "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-      "explanation": "Multiple informants\u2019 standardized symptom measures before and after treatment provide objective data on changes in conduct disorder symptoms.",
+      "explanation": "Multiple informants’ standardized symptom measures before and after treatment provide objective data on changes in conduct disorder symptoms.",
       "kn": "KN40",
       "kn_explanation": "This question focuses on measuring outcomes and changes due to prevention or intervention (KN40), emphasizing multi-informant approaches.",
       "difficulty": "medium",
@@ -230,8 +230,7 @@
         "Combination of therapy and medication yields higher quit rates than either alone",
         "Medication alone is more effective than therapy or combination treatment",
         "Therapy alone is sufficient for most patients without medication",
-        "Neither therapy nor medication shows significant benefit alone or combined",
-        "Combination therapy has the same effect as no treatment"
+        "Neither therapy nor medication shows significant benefit alone or combined"
       ],
       "answer": "Combination of therapy and medication yields higher quit rates than either alone",
       "explanation": "Research shows that combining behavioral therapy and medication leads to better tobacco cessation outcomes than either approach alone.",
@@ -291,14 +290,14 @@
         "21%"
       ],
       "answer": "49%",
-      "explanation": "The squared validity coefficient (.70\u00b2 = .49) represents the proportion of variance in the criterion explained by the predictor, which is 49%.",
+      "explanation": "The squared validity coefficient (.70² = .49) represents the proportion of variance in the criterion explained by the predictor, which is 49%.",
       "kn": "KN29",
       "kn_explanation": "Calculating the amount of variance explained by a correlation coefficient is fundamental to understanding criterion-related validity statistics and psychometric properties.",
       "difficulty": "easy",
       "quality_comment": "The question requires a straightforward calculation; the incorrect options represent common miscalculations, enhancing discriminability.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Criterion-Related Validity.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Criterion-Related Validity.json",
       "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Criterion-Related Validity.json::1",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Criterion-Related Validity.json::1",
       "scored": true
     },
     {
@@ -325,7 +324,7 @@
       "options": [
         "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
         "If the client is unlikely to understand the data due to cognitive limitations",
-        "If the psychologist believes the data are irrelevant to the client\u2019s treatment",
+        "If the psychologist believes the data are irrelevant to the client’s treatment",
         "If the client requests only the summary report instead"
       ],
       "answer": "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
@@ -333,7 +332,7 @@
       "kn": "KN62",
       "kn_explanation": "This question covers ethical and legal standards about test data confidentiality and client rights, central to ethical practice (KN62).",
       "difficulty": "medium",
-      "quality_comment": "Answer choices are balanced and represent common client data release scenarios, enhancing the question\u2019s relevance and difficulty.",
+      "quality_comment": "Answer choices are balanced and represent common client data release scenarios, enhancing the question’s relevance and difficulty.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Standards 9 & 10.json",
       "domain": 8,
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Standards 9 & 10.json::7",
@@ -380,20 +379,20 @@
     {
       "stem": "What is the group attribution error as described by Allison and Messick (1985)?",
       "options": [
-        "Assuming an individual group member\u2019s beliefs represent the whole group\u2019s beliefs",
+        "Assuming an individual group member’s beliefs represent the whole group’s beliefs",
         "Believing individual group members are responsible for collective group failure",
-        "Assuming a group\u2019s decision reflects unanimous individual agreement, despite contrary evidence",
+        "Assuming a group’s decision reflects unanimous individual agreement, despite contrary evidence",
         "Attributing negative group behavior to situational causes"
       ],
-      "answer": "Assuming a group\u2019s decision reflects unanimous individual agreement, despite contrary evidence",
+      "answer": "Assuming a group’s decision reflects unanimous individual agreement, despite contrary evidence",
       "explanation": "Allison and Messick described the group attribution error as the mistaken belief that group decisions represent the unanimous opinions of all members even when evidence indicates dissent.",
       "kn": "KN14",
       "kn_explanation": "This item targets a nuanced social cognition bias concerning group decision-making, highly relevant to social cognition research in KN14.",
       "difficulty": "hard",
       "quality_comment": "The stem is specific and the distractors plausible, requiring careful knowledge of the subtle distinctions in group attribution biases.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Causal Attributions.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Causal Attributions.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Causal Attributions.json::6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Causal Attributions.json::6",
       "scored": false
     },
     {
@@ -440,7 +439,7 @@
         "Motivated to change her attitude toward country music or Oscar to restore balance",
         "Unconcerned because relationships are independent of attitudes toward objects",
         "Motivated to reinforce her liking of Oscar without changing her attitude toward country music",
-        "Likely to ignore Oscar\u2019s attitude since it does not affect her attitude"
+        "Likely to ignore Oscar’s attitude since it does not affect her attitude"
       ],
       "answer": "Motivated to change her attitude toward country music or Oscar to restore balance",
       "explanation": "According to balance theory, people are motivated to resolve inconsistency among person (P), other person (O), and object (X), restoring balance by changing attitudes.",
@@ -456,7 +455,6 @@
     {
       "stem": "What is the primary psychological explanation for why the foot-in-the-door technique increases compliance?",
       "options": [
-        "People feel obligated to reciprocate when concessions are made",
         "People want to appear consistent in their behavior by agreeing to a larger request after initially agreeing to a smaller one",
         "People experience psychological reactance and resist the initial request",
         "The large initial request makes the smaller request seem more reasonable",
@@ -468,9 +466,9 @@
       "kn_explanation": "This question addresses social influence and specific compliance strategies, fitting within group and systems processes (KN16).",
       "difficulty": "medium",
       "quality_comment": "Options offer various plausible influence explanations, encouraging test-takers to understand specific mechanisms underlying compliance strategies.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence \u2013 Types of Influence.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Types of Influence.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence \u2013 Types of Influence.json::5",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Types of Influence.json::5",
       "scored": true
     },
     {
@@ -493,7 +491,7 @@
       "scored": true
     },
     {
-      "stem": "In Rothbart\u2019s temperament model, what does 'effortful control' refer to?",
+      "stem": "In Rothbart’s temperament model, what does 'effortful control' refer to?",
       "options": [
         "The biological reactivity to stimuli",
         "The ability to inhibit a dominant response to perform a subdominant one",
@@ -506,16 +504,16 @@
       "kn_explanation": "This question concerns individual differences in temperament self-regulation, relevant to growth and lifespan development topics (KN21).",
       "difficulty": "medium",
       "quality_comment": "Answer choices align conceptually with temperament dimensions, requiring knowledge of this specific self-regulatory construct.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json::11",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json::11",
       "scored": true
     },
     {
       "stem": "Which of the following describes client-centered case consultation as defined by Caplan?",
       "options": [
-        "Improving program administrators\u2019 ability to clarify and resolve program issues",
-        "Enhancing the consultee\u2019s skills to better work with present and future clients",
+        "Improving program administrators’ ability to clarify and resolve program issues",
+        "Enhancing the consultee’s skills to better work with present and future clients",
         "Focusing on a specific client with treatment difficulties to guide the consultee's plan",
         "Improving professional functioning of administrators for future program evaluation"
       ],
@@ -569,12 +567,12 @@
       "scored": false
     },
     {
-      "stem": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children\u2019s cognitive performance in domains such as math and verbal abilities?",
+      "stem": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
       "options": [
-        "They have no effect on children\u2019s cognitive performance as abilities are biologically predetermined",
+        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
         "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They only affect adults\u2019 attitudes and do not influence children's cognitive skills",
-        "They enhance boys\u2019 and girls\u2019 abilities equally through positive reinforcement"
+        "They only affect adults’ attitudes and do not influence children's cognitive skills",
+        "They enhance boys’ and girls’ abilities equally through positive reinforcement"
       ],
       "answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
       "explanation": "Gender-role stereotypes influence children's cognitive development by shaping their self-perceptions and effort, often leading to performance consistent with societal expectations.",
@@ -588,7 +586,7 @@
       "scored": true
     },
     {
-      "stem": "In Lazarus\u2019s cognitive appraisal theory, what occurs during the primary appraisal of an event?",
+      "stem": "In Lazarus’s cognitive appraisal theory, what occurs during the primary appraisal of an event?",
       "options": [
         "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
         "Determining available coping options and their likelihood of success",
@@ -648,7 +646,7 @@
       "stem": "What is the primary goal of Community-Based Participatory Research (CBPR)?",
       "options": [
         "To test hypotheses in a controlled laboratory environment.",
-        "To develop abstract theories based solely on academic researchers\u2019 perspectives.",
+        "To develop abstract theories based solely on academic researchers’ perspectives.",
         "To collaborate with community partners to generate knowledge and promote social change.",
         "To utilize exclusively quantitative methods to study public health problems."
       ],
@@ -658,9 +656,9 @@
       "kn_explanation": "This question pertains to community involvement and participatory research approaches within research methods (KN59).",
       "difficulty": "medium",
       "quality_comment": "The distractors clearly contrast with key CBPR principles, making the correct answer stand out while testing conceptual understanding.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json",
       "domain": 7,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json::7",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json::7",
       "scored": true
     },
     {
@@ -753,9 +751,9 @@
       "kn_explanation": "This focuses on neurological motor planning deficits based on lesion location, consistent with biological bases of behavior (KN1).",
       "difficulty": "medium",
       "quality_comment": "The options include incorrect lobes and brain areas plausibly related to motor control, supporting effective discrimination.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Cerebral Cortex.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Cerebral Cortex.json::9",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json::9",
       "scored": true
     },
     {
@@ -873,15 +871,15 @@
       "scored": true
     },
     {
-      "stem": "A 72-year-old patient shows progressive memory loss and trouble with daily activities over several years. Genetic testing reveals an ApoE4 allele. What does this finding suggest about the patient\u2019s neurocognitive disorder?",
+      "stem": "A 72-year-old patient shows progressive memory loss and trouble with daily activities over several years. Genetic testing reveals an ApoE4 allele. What does this finding suggest about the patient’s neurocognitive disorder?",
       "options": [
-        "The presence of the ApoE4 allele decreases the likelihood of Alzheimer\u2019s disease",
-        "The ApoE4 allele is a risk factor for Alzheimer\u2019s disease and supports a probable diagnosis",
+        "The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease",
+        "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
         "The ApoE4 allele is diagnostic for Lewy body dementia",
         "ApoE4 presence suggests the disorder is due to vascular causes"
       ],
-      "answer": "The ApoE4 allele is a risk factor for Alzheimer\u2019s disease and supports a probable diagnosis",
-      "explanation": "The ApoE4 variant on chromosome 19 is a well-established genetic risk factor linked to increased likelihood of Alzheimer\u2019s disease.",
+      "answer": "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
+      "explanation": "The ApoE4 variant on chromosome 19 is a well-established genetic risk factor linked to increased likelihood of Alzheimer’s disease.",
       "kn": "KN4",
       "kn_explanation": "This question emphasizes behavioral genetics and the role of genetic risk factors in neurocognitive disorders.",
       "difficulty": "medium",
@@ -905,9 +903,9 @@
       "kn_explanation": "The question targets cultural variation in social norms and behaviors, a key area in cultural and sociopolitical psychology (KN18).",
       "difficulty": "medium",
       "quality_comment": "Distractors represent opposite traits of tight vs loose cultures, requiring examinees to know the conceptual framework for effective elimination.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Terms and Concepts.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Terms and Concepts.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Terms and Concepts.json::6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Terms and Concepts.json::6",
       "scored": true
     },
     {
@@ -930,7 +928,7 @@
       "scored": true
     },
     {
-      "stem": "McEwen\u2019s allostatic load model explains that prolonged or repeated stress leads to:",
+      "stem": "McEwen’s allostatic load model explains that prolonged or repeated stress leads to:",
       "options": [
         "Enhanced immune system functioning due to continuous adaptation",
         "Stable physiological states maintained without any adverse health effects",
@@ -990,23 +988,23 @@
       "stem": "A patient presents with fluent speech containing many word substitutions, impaired comprehension of spoken and written language, and impaired repetition, but intact grammar and prosody. Which brain region is most likely damaged?",
       "options": [
         "Broca's area in the left frontal lobe",
-        "Wernicke\u2019s area in the left temporal lobe",
+        "Wernicke’s area in the left temporal lobe",
         "Right parietal lobe",
         "Primary motor cortex in the left frontal lobe"
       ],
-      "answer": "Wernicke\u2019s area in the left temporal lobe",
-      "explanation": "Wernicke\u2019s aphasia results from damage to Wernicke\u2019s area and is characterized by fluent but nonsensical speech with impaired comprehension and repetition.",
+      "answer": "Wernicke’s area in the left temporal lobe",
+      "explanation": "Wernicke’s aphasia results from damage to Wernicke’s area and is characterized by fluent but nonsensical speech with impaired comprehension and repetition.",
       "kn": "KN1",
       "kn_explanation": "This question tests neurological localization of language comprehension deficits, a core concept of biological bases of behavior (KN1).",
       "difficulty": "medium",
       "quality_comment": "Distractors include anatomically adjacent or functionally related areas, making this a well-constructed differential diagnosis question.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Cerebral Cortex.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Cerebral Cortex.json::2",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json::2",
       "scored": true
     },
     {
-      "stem": "In Fiedler\u2019s model, which situational factor would NOT contribute to a very favorable situation for a leader?",
+      "stem": "In Fiedler’s model, which situational factor would NOT contribute to a very favorable situation for a leader?",
       "options": [
         "Strong position power",
         "Good leader-member relations",
@@ -1016,7 +1014,7 @@
       "answer": "Unstructured task",
       "explanation": "Unstructured tasks reduce situational favorableness; very favorable situations are characterized by structured tasks, strong position power, and good leader-member relations.",
       "kn": "KN46",
-      "kn_explanation": "The question assesses understanding of situational variables affecting leadership effectiveness according to Fiedler\u2019s contingency theory, relevant to treatment knowledge (KN46).",
+      "kn_explanation": "The question assesses understanding of situational variables affecting leadership effectiveness according to Fiedler’s contingency theory, relevant to treatment knowledge (KN46).",
       "difficulty": "medium",
       "quality_comment": "Clear distractors focus on key situational elements; discriminates well between knowledge levels about leadership contingencies.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 6 Organizational Leadership.json",
@@ -1027,7 +1025,7 @@
     {
       "stem": "Incremental validity is best exemplified by which of the following statements?",
       "options": [
-        "A predictor\u2019s ability to be free of measurement error",
+        "A predictor’s ability to be free of measurement error",
         "The score consistency across test forms",
         "The increase in decision accuracy from adding a new predictor",
         "The total variance explained by a single test score"
@@ -1038,9 +1036,9 @@
       "kn_explanation": "This question targets knowledge of psychometric principles underlying test evaluation and decision-making accuracy.",
       "difficulty": "easy",
       "quality_comment": "Clear wording and close distractors make this question an effective test of understanding incremental validity.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json",
       "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json::9",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json::9",
       "scored": true
     },
     {
@@ -1152,9 +1150,9 @@
       "kn_explanation": "This design is a classic technique in research methods to address external and internal validity threats, fitting well under critical appraisal of research design.",
       "difficulty": "hard",
       "quality_comment": "The question is clear and tests detailed knowledge of research design, with distractors referencing other study design principles, making it challenging.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Internal-External Validity.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Internal-External Validity.json",
       "domain": 7,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Internal-External Validity.json::4",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Internal-External Validity.json::4",
       "scored": false
     },
     {
@@ -1166,7 +1164,7 @@
         "The proposal that early memories are replaced by later experiences"
       ],
       "answer": "The idea that limited language ability in young children restricts memory encoding",
-      "explanation": "One explanation of childhood amnesia suggests that inadequate language skills in children under 3\u20134 years limit their ability to encode memories verbally.",
+      "explanation": "One explanation of childhood amnesia suggests that inadequate language skills in children under 3–4 years limit their ability to encode memories verbally.",
       "kn": "KN21",
       "kn_explanation": "The question deals with normal cognitive development and memory processes across the lifespan, falling under growth and lifespan development (KN21).",
       "difficulty": "medium",
@@ -1228,9 +1226,9 @@
       "kn_explanation": "This question assesses knowledge of research methods and statistical procedures, focusing on factor analysis techniques (KN55).",
       "difficulty": "medium",
       "quality_comment": "The distractors are believable steps related to test validation, making the question good for assessing procedural knowledge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Content and Construct Validity.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Content and Construct Validity.json",
       "domain": 7,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Content and Construct Validity.json::9",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Content and Construct Validity.json::9",
       "scored": true
     },
     {
@@ -1242,7 +1240,7 @@
         "Percentile scoring"
       ],
       "answer": "Ipsative scoring",
-      "explanation": "Due to the KOIS\u2019s forced-choice format where examinees choose most and least preferred activities, it yields ipsative scores that allow intra-individual but not inter-individual comparisons.",
+      "explanation": "Due to the KOIS’s forced-choice format where examinees choose most and least preferred activities, it yields ipsative scores that allow intra-individual but not inter-individual comparisons.",
       "kn": "KN29",
       "kn_explanation": "This question addresses test scoring methods and characteristics of specific assessments, central to psychometric theories and test interpretation (KN29).",
       "difficulty": "medium",
@@ -1266,9 +1264,9 @@
       "kn_explanation": "Understanding adverse effects related to physiological parameters like blood pressure is encompassed in drug mechanisms and side effects (KN2).",
       "difficulty": "medium",
       "quality_comment": "Clear and clinically significant question, with adequate distractors that might confuse due to some overlap in side effect profiles.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Antipsychotics and Antidepressants.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Antipsychotics and Antidepressants.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Antipsychotics and Antidepressants.json::6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Antipsychotics and Antidepressants.json::6",
       "scored": true
     },
     {
@@ -1296,7 +1294,7 @@
         "Occasionally telling off-color jokes that have been indicated as unwelcome or offensive.",
         "Engaging in consensual flirtation with a colleague.",
         "Providing constructive performance feedback in a professional manner.",
-        "Disagreeing with a coworker\u2019s work style."
+        "Disagreeing with a coworker’s work style."
       ],
       "answer": "Occasionally telling off-color jokes that have been indicated as unwelcome or offensive.",
       "explanation": "Sexual harassment includes sexual solicitation, physical advances, or verbal conduct that the recipient finds unwelcome or that creates a hostile environment.",
@@ -1322,7 +1320,7 @@
       "kn": "KN48",
       "kn_explanation": "This question tests knowledge of a major career development theory relevant to vocational and career development (KN48).",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and targets a fundamental concept from Super\u2019s theory with plausible distractors representing other stages.",
+      "quality_comment": "The question is clear and targets a fundamental concept from Super’s theory with plausible distractors representing other stages.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/6 Career Choice and Development.json",
       "domain": 6,
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/6 Career Choice and Development.json::0",
@@ -1353,7 +1351,6 @@
         "Increased appetite and weight gain",
         "Seizures and hallucinations",
         "Insomnia and decreased appetite",
-        "Excessive sedation",
         "Postural hypotension"
       ],
       "answer": "Insomnia and decreased appetite",
@@ -1362,9 +1359,9 @@
       "kn_explanation": "This question targets knowledge about side effect profiles of stimulant treatments for ADHD, focusing on clinical pharmacology in KN2.",
       "difficulty": "easy",
       "quality_comment": "Clear and straightforward, with plausible distractors reflecting other drug side effects, appropriate for standard testing.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Other Psychoactive Drugs.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Other Psychoactive Drugs.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Other Psychoactive Drugs.json::10",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Other Psychoactive Drugs.json::10",
       "scored": true
     },
     {
@@ -1457,9 +1454,9 @@
       "kn_explanation": "This item assesses recognition of motor and cognitive functions associated with key subcortical structures, relevant to biological bases of behavior.",
       "difficulty": "medium",
       "quality_comment": "Distractors represent other brain functions, increasing the need to distinguish basal ganglia involvement accurately.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Hindbrain, Midbrain, and Subcortical Forebrain\u2026.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Hindbrain, Midbrain, and Subcortical Forebrain….json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Hindbrain, Midbrain, and Subcortical Forebrain\u2026.json::8",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Hindbrain, Midbrain, and Subcortical Forebrain….json::8",
       "scored": true
     },
     {
@@ -1476,9 +1473,9 @@
       "kn_explanation": "This question tests knowledge of normal developmental stages and timing of vulnerability, which falls under normal growth and development across the lifespan (KN21).",
       "difficulty": "medium",
       "quality_comment": "The options are clearly defined and plausible; the stem focuses specifically on timing, which is important for prenatal development understanding.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Prenatal Development.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Prenatal Development.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Prenatal Development.json::0",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Prenatal Development.json::0",
       "scored": true
     },
     {
@@ -1486,11 +1483,11 @@
       "options": [
         "Beck's cognitive theory",
         "Lewinsohn's social reinforcement theory",
-        "Seligman\u2019s original learned helplessness model",
+        "Seligman’s original learned helplessness model",
         "Hopelessness theory"
       ],
       "answer": "Beck's cognitive theory",
-      "explanation": "Beck\u2019s theory centers on the negative cognitive triad: negative views of self, world, and future in depression.",
+      "explanation": "Beck’s theory centers on the negative cognitive triad: negative views of self, world, and future in depression.",
       "kn": "KN12",
       "kn_explanation": "This question evaluates knowledge of cognitive models explaining depression, directly related to cognition-affect bases of behavior (KN12).",
       "difficulty": "easy",
@@ -1560,12 +1557,12 @@
     {
       "stem": "Which of the following is a core assumption of the adaptive information processing (AIP) model upon which EMDR is based?",
       "options": [
-        "Pathology results from traumatic memories that are unprocessed or maladaptively processed by the brain\u2019s information system",
+        "Pathology results from traumatic memories that are unprocessed or maladaptively processed by the brain’s information system",
         "Anxiety responses are solely conditioned and extinguished through repeated exposure",
         "Relaxation response inhibits fear through reciprocal inhibition",
         "Addictions arise only from operant conditioning mechanisms"
       ],
-      "answer": "Pathology results from traumatic memories that are unprocessed or maladaptively processed by the brain\u2019s information system",
+      "answer": "Pathology results from traumatic memories that are unprocessed or maladaptively processed by the brain’s information system",
       "explanation": "The AIP model posits that trauma-related pathology occurs because traumatic experiences are not fully or adaptively processed, leading to dysfunction which EMDR aims to resolve.",
       "kn": "KN7",
       "kn_explanation": "This question targets theoretical foundations of EMDR, a classical conditioning-related intervention, fitting learning theories in KN7.",
@@ -1609,20 +1606,20 @@
       "kn_explanation": "Berry's acculturation strategies and associated stress are central to cultural psychology and acculturation processes, fitting under cultural and sociopolitical psychology (KN18).",
       "difficulty": "easy",
       "quality_comment": "The question is straightforward and tests knowledge of a fundamental concept in acculturation with well-known strategies as distractors.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Terms and Concepts.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Terms and Concepts.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Terms and Concepts.json::1",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Terms and Concepts.json::1",
       "scored": true
     },
     {
-      "stem": "Which factor related to early maternal employment is associated with small positive effects on children\u2019s behavior and academic achievement?",
+      "stem": "Which factor related to early maternal employment is associated with small positive effects on children’s behavior and academic achievement?",
       "options": [
-        "Maternal employment during the child\u2019s first year in a two-parent, middle-income family",
-        "Maternal employment during the child\u2019s first 3 years in low-income, single-parent families",
-        "Maternal unemployment during the child\u2019s first 3 years in two-parent, upper-income families",
-        "Maternal employment after the child\u2019s fifth birthday"
+        "Maternal employment during the child’s first year in a two-parent, middle-income family",
+        "Maternal employment during the child’s first 3 years in low-income, single-parent families",
+        "Maternal unemployment during the child’s first 3 years in two-parent, upper-income families",
+        "Maternal employment after the child’s fifth birthday"
       ],
-      "answer": "Maternal employment during the child\u2019s first 3 years in low-income, single-parent families",
+      "answer": "Maternal employment during the child’s first 3 years in low-income, single-parent families",
       "explanation": "Early maternal employment tends to have small positive effects on children in single-parent or low-income families, but small negative effects in higher income two-parent families.",
       "kn": "KN22",
       "kn_explanation": "The question addresses individual-environment interactions affecting child development, specifically the impact of maternal employment and family structure (KN22).",
@@ -1677,8 +1674,7 @@
         "Forced distribution rating scales",
         "Position Analysis Questionnaire (PAQ)",
         "Critical incident technique",
-        "Paired comparison method",
-        "Point system method"
+        "Paired comparison method"
       ],
       "answer": "Position Analysis Questionnaire (PAQ)",
       "explanation": "The PAQ is a standardized worker-oriented questionnaire focusing on KSAOs and categories such as mental processes and work output.",
@@ -1738,11 +1734,11 @@
         "The score is two standard deviations below the mean"
       ],
       "answer": "The score is one standard deviation below the mean",
-      "explanation": "Full-scale IQ scores have a mean of 100 and SD of 15; thus, a score of 85 is one SD below the mean (100 \u2013 15 = 85).",
+      "explanation": "Full-scale IQ scores have a mean of 100 and SD of 15; thus, a score of 85 is one SD below the mean (100 – 15 = 85).",
       "kn": "KN29",
       "kn_explanation": "This item assesses knowledge of major standardized score types and their interpretation (KN29).",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers\u2019 knowledge.",
+      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers’ knowledge.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Score Interpretation.json",
       "domain": 5,
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Score Interpretation.json::7",
@@ -1773,8 +1769,7 @@
         "Behaviorally anchored rating scales (BARS)",
         "Critical incident technique",
         "Paired comparison technique",
-        "Forced distribution method",
-        "Graphic rating scale"
+        "Forced distribution method"
       ],
       "answer": "Paired comparison technique",
       "explanation": "The paired comparison technique involves systematically comparing employees in pairs on each performance dimension to rank them.",
@@ -1820,9 +1815,9 @@
       "kn_explanation": "This question assesses knowledge of culturally appropriate assessment tools, which falls under criteria for selection and adaptation of assessment methods (KN35).",
       "difficulty": "medium",
       "quality_comment": "Distractors include well-known tests but only one focuses on reducing cultural and language bias, making the question discriminative.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Terms and Concepts.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Terms and Concepts.json",
       "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Terms and Concepts.json::8",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Terms and Concepts.json::8",
       "scored": true
     },
     {
@@ -1868,11 +1863,11 @@
       "options": [
         "Suicide rates are highest among females ages 75 and older.",
         "Veterans have suicide rates approximately twice that of non-veterans.",
-        "Men and women previously incarcerated have similar suicide rates because men\u2019s rates increase more following release.",
+        "Men and women previously incarcerated have similar suicide rates because men’s rates increase more following release.",
         "Suicide rates are highest among non-Hispanic White individuals compared to other ethnic groups."
       ],
       "answer": "Veterans have suicide rates approximately twice that of non-veterans.",
-      "explanation": "Veterans\u2019 suicide rates are about twice those of non-veterans; male rate is four times that of females; AI/AN individuals have the highest suicide rates among ethnic groups.",
+      "explanation": "Veterans’ suicide rates are about twice those of non-veterans; male rate is four times that of females; AI/AN individuals have the highest suicide rates among ethnic groups.",
       "kn": "KN38",
       "kn_explanation": "This question addresses knowledge of epidemiology and base rates of suicide risk within demographic groups (KN38).",
       "difficulty": "medium",
@@ -1905,7 +1900,7 @@
       "stem": "Which of the following best illustrates the concept of psychological reactance in response to a social influence attempt?",
       "options": [
         "Refusing to comply with a request after feeling one's freedom to choose was threatened",
-        "Conforming to a group\u2019s judgment because the task is ambiguous",
+        "Conforming to a group’s judgment because the task is ambiguous",
         "Obeying an authority figure by following instructions",
         "Accepting a smaller request after rejecting a larger one"
       ],
@@ -1915,13 +1910,13 @@
       "kn_explanation": "This item targets understanding of how threats to autonomy can motivate resistance to social influence, a key concept in social influence and group processes (KN16).",
       "difficulty": "medium",
       "quality_comment": "The question clearly differentiates psychological reactance from other forms of social influence, enhancing conceptual clarity.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence \u2013 Types of Influence.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Types of Influence.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence \u2013 Types of Influence.json::10",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Types of Influence.json::10",
       "scored": true
     },
     {
-      "stem": "According to research, what pattern of peer rejection is characterized by children who are hyperactive, impulsive, and misinterpret others\u2019 intentions as hostile?",
+      "stem": "According to research, what pattern of peer rejection is characterized by children who are hyperactive, impulsive, and misinterpret others’ intentions as hostile?",
       "options": [
         "Rejected-aggressive",
         "Rejected-withdrawn",
@@ -1934,9 +1929,9 @@
       "kn_explanation": "This item tests knowledge about peer status subtypes and associated behavioral and cognitive characteristics in childhood social relationships (KN21).",
       "difficulty": "medium",
       "quality_comment": "The distractors are other peer status groups which test-takers must differentiate based on characteristic behaviors and outcomes.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json::15",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json::15",
       "scored": true
     },
     {
@@ -1978,7 +1973,7 @@
       "scored": true
     },
     {
-      "stem": "Which MMPI-2 validity scale is most useful for detecting an examinee\u2019s fixed pattern of yea- or nay-saying?",
+      "stem": "Which MMPI-2 validity scale is most useful for detecting an examinee’s fixed pattern of yea- or nay-saying?",
       "options": [
         "TRIN (True Response Inconsistency)",
         "VRIN (Variable Response Inconsistency)",
@@ -2029,9 +2024,9 @@
       "kn_explanation": "This question pertains to group task types influencing group performance, a core aspect of group and systems processes (KN16).",
       "difficulty": "easy",
       "quality_comment": "Options include commonly referenced task types with different characteristics; question is clear with sufficiently similar option length.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence \u2013 Group Influences.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Group Influences.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence \u2013 Group Influences.json::5",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Group Influences.json::5",
       "scored": true
     },
     {
@@ -2048,13 +2043,13 @@
       "kn_explanation": "This question assesses knowledge of trade-offs between internal and external validity in specific research designs, central to experimental design (KN54).",
       "difficulty": "medium",
       "quality_comment": "The distractors reflect common research trade-off misconceptions, making the correct choice clear yet requiring understanding of validity concepts.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json",
       "domain": 7,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json::14",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json::14",
       "scored": true
     },
     {
-      "stem": "Which intervention has recently been FDA approved to slow progression of early-stage Alzheimer\u2019s disease by targeting amyloid plaques?",
+      "stem": "Which intervention has recently been FDA approved to slow progression of early-stage Alzheimer’s disease by targeting amyloid plaques?",
       "options": [
         "Memantine",
         "Haloperidol",
@@ -2062,7 +2057,7 @@
         "Donanemab"
       ],
       "answer": "Donanemab",
-      "explanation": "Donanemab is a recently approved intravenous treatment that slows early-stage Alzheimer\u2019s progression by reducing amyloid plaques in the brain.",
+      "explanation": "Donanemab is a recently approved intravenous treatment that slows early-stage Alzheimer’s progression by reducing amyloid plaques in the brain.",
       "kn": "KN3",
       "kn_explanation": "Involves knowledge about recent pharmacological treatment advances for neurocognitive disorders, under pharmacotherapy guidelines.",
       "difficulty": "medium",
@@ -2124,9 +2119,9 @@
       "kn_explanation": "The question assesses understanding of attachment patterns across the lifespan and intergenerational transmission, part of socioemotional development (KN21).",
       "difficulty": "medium",
       "quality_comment": "Options include major adult attachment categories, requiring accurate recall of their characteristics.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json::10",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json::10",
       "scored": true
     },
     {
@@ -2149,7 +2144,7 @@
       "scored": true
     },
     {
-      "stem": "In Adams\u2019 Equity Theory, how does underpayment inequity influence a worker\u2019s motivation and behavior?",
+      "stem": "In Adams’ Equity Theory, how does underpayment inequity influence a worker’s motivation and behavior?",
       "options": [
         "It typically motivates the worker to increase their output",
         "It has little to no effect on motivation or behavior",
@@ -2238,9 +2233,9 @@
       "kn_explanation": "Addresses understanding of ethical and legal issues in assessment fairness and adverse impact.",
       "difficulty": "medium",
       "quality_comment": "Distractors reflect related concepts making the examinee carefully analyze the fairness concepts.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json",
       "domain": 8,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json::6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json::6",
       "scored": true
     },
     {
@@ -2257,9 +2252,9 @@
       "kn_explanation": "Focuses on legal exceptions and justifications for selection practices under employment law and guidelines.",
       "difficulty": "medium",
       "quality_comment": "Options include plausible but incorrect scenarios that test knowledge of acceptable business necessity criteria.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json",
       "domain": 8,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json::7",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json::7",
       "scored": true
     },
     {
@@ -2282,7 +2277,7 @@
       "scored": true
     },
     {
-      "stem": "Which principle from Katz and Kahn\u2019s Open-System Theory states that an organization can reach the same goal through multiple different methods?",
+      "stem": "Which principle from Katz and Kahn’s Open-System Theory states that an organization can reach the same goal through multiple different methods?",
       "options": [
         "Homeostasis principle",
         "Differential reinforcement principle",
@@ -2333,9 +2328,9 @@
       "kn_explanation": "The question targets understanding of construct validity components and their interpretation using correlation patterns within validation research (KN29).",
       "difficulty": "medium",
       "quality_comment": "The scenario-based question integrates concepts well, with distractors reflecting common validity misconceptions.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Content and Construct Validity.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Content and Construct Validity.json",
       "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Content and Construct Validity.json::11",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Content and Construct Validity.json::11",
       "scored": true
     },
     {
@@ -2352,25 +2347,25 @@
       "kn_explanation": "This question pertains to combining multiple predictor scores in personnel selection, specifically noncompensatory decision methods in assessment methods (KN31).",
       "difficulty": "medium",
       "quality_comment": "The question is clear and tests understanding of specific selection techniques with well-differentiated options.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Techniques.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Techniques.json",
       "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Techniques.json::6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Techniques.json::6",
       "scored": true
     },
     {
       "stem": "Which theory best explains the difference between life-course-persistent and adolescence-limited types of conduct disorder in terms of their underlying causes and developmental pathways?",
       "options": [
         "Biosocial theory focusing on gene-environment interactions",
-        "Moffitt\u2019s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+        "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
         "Social learning theory emphasizing modeling and reinforcement",
         "Attachment theory focusing on early caregiver relationships"
       ],
-      "answer": "Moffitt\u2019s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
-      "explanation": "Moffitt\u2019s taxonomy explains life-course-persistent CD by neuropsychological deficits and adverse environments, and adolescence-limited CD by the maturity gap.",
+      "answer": "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+      "explanation": "Moffitt’s taxonomy explains life-course-persistent CD by neuropsychological deficits and adverse environments, and adolescence-limited CD by the maturity gap.",
       "kn": "KN39",
       "kn_explanation": "This question covers theories and models of psychopathology (KN39) relevant to conduct disorder developmental trajectories.",
       "difficulty": "medium",
-      "quality_comment": "Options reflect prominent theories, requiring examinees to correctly identify Moffitt\u2019s specific developmental model, making it a strong conceptual item.",
+      "quality_comment": "Options reflect prominent theories, requiring examinees to correctly identify Moffitt’s specific developmental model, making it a strong conceptual item.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Disruptive, Impulse-Control, and Conduct Disorders.json",
       "domain": 5,
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Disruptive, Impulse-Control, and Conduct Disorders.json::11",
@@ -2409,13 +2404,13 @@
       "kn_explanation": "This question addresses early emotional development and differentiation of primary versus secondary (self-conscious) emotions, important in socioemotional growth (KN21).",
       "difficulty": "easy",
       "quality_comment": "The options include plausible but developmentally distinct emotions, helping test conceptual clarity in emotional development stages.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json::14",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json::14",
       "scored": true
     },
     {
-      "stem": "Which of the following describes the pattern of gender typicality and contentedness according to Egan and Perry\u2019s multidimensional model and their relation to psychological adjustment?",
+      "stem": "Which of the following describes the pattern of gender typicality and contentedness according to Egan and Perry’s multidimensional model and their relation to psychological adjustment?",
       "options": [
         "Low typicality and low contentedness are linked to high self-esteem and peer acceptance",
         "High typicality and high contentedness relate to positive self-esteem and social outcomes",
@@ -2428,9 +2423,9 @@
       "kn_explanation": "This question involves theory and research on identity components and their psychosocial outcomes, fitting under developmental models of identity (KN23).",
       "difficulty": "hard",
       "quality_comment": "The options are complex and close in meaning, suitable for testing nuanced understanding at a higher difficulty level.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json::12",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json::12",
       "scored": false
     },
     {
@@ -2456,11 +2451,11 @@
       "stem": "What distinguishes duplicate publication from piecemeal publication according to APA guidelines?",
       "options": [
         "Duplicate publication involves splitting data into multiple works; piecemeal involves publishing identical data twice.",
-        "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study\u2019s findings into multiple publications.",
+        "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study’s findings into multiple publications.",
         "Both terms describe publishing the same manuscript simultaneously in multiple journals.",
         "Piecemeal publication always requires retraction, whereas duplicate publication does not."
       ],
-      "answer": "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study\u2019s findings into multiple publications.",
+      "answer": "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study’s findings into multiple publications.",
       "explanation": "Duplicate publication refers to republishing identical data; piecemeal publication is fragmenting data into multiple papers, potentially misrepresenting original research volume.",
       "kn": "KN69",
       "kn_explanation": "The question covers ethical issues related to research publication practices, including plagiarism and integrity (KN69).",
@@ -2539,7 +2534,7 @@
       "answer": "Indicated prevention",
       "explanation": "Indicated prevention addresses individuals with early or minimal signs of a disorder before diagnosis.",
       "kn": "KN45",
-      "kn_explanation": "Assesses understanding of prevention approaches, specifically Gordon\u2019s model (KN45).",
+      "kn_explanation": "Assesses understanding of prevention approaches, specifically Gordon’s model (KN45).",
       "difficulty": "easy",
       "quality_comment": "Clear presentation with distractors varying in prevention type and level of risk, effective for EPPP learners.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Prevention, Consultation, and Psychotherapy Research.json",
@@ -2572,7 +2567,7 @@
         "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
         "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
         "Wonderlic Cognitive Ability Test",
-        "Raven\u2019s Standard Progressive Matrices (SPM)"
+        "Raven’s Standard Progressive Matrices (SPM)"
       ],
       "answer": "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
       "explanation": "The PPVT-5 assesses receptive vocabulary by having examinees point to pictures illustrating words and does not require verbal or written responses.",
@@ -2618,9 +2613,9 @@
       "kn_explanation": "This question focuses on cross-cultural personality trait differences, pertinent to personality development and individual differences within lifespan development (KN21).",
       "difficulty": "medium",
       "quality_comment": "The options are traits commonly investigated in personality research, making it a solid question for assessing knowledge of sex differences in personality.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json::8",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json::8",
       "scored": true
     },
     {
@@ -2656,9 +2651,9 @@
       "kn_explanation": "This question targets Piaget's distinct stages of moral development, specifically the transition in reasoning about rules and consequences (KN23).",
       "difficulty": "medium",
       "quality_comment": "The item requires precise recall of Piagetian stages, with plausible distractors that challenge superficial understanding.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Moral Development.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Moral Development.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Moral Development.json::11",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Moral Development.json::11",
       "scored": true
     },
     {
@@ -2675,9 +2670,9 @@
       "kn_explanation": "This question concerns study design assumptions in behavioral genetics, important for interpreting developmental genetics data.",
       "difficulty": "medium",
       "quality_comment": "This item effectively measures understanding of a core methodological issue in twin research with clearly differentiated distractors.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Nature vs- Nurture.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Nature vs- Nurture.json::15",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json::15",
       "scored": true
     },
     {
@@ -2694,9 +2689,9 @@
       "kn_explanation": "This question assesses knowledge about genetic-environment interactions in cognitive development, relevant to behavioral genetics.",
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible but only one correctly reflects the SES impact on heritability estimates, making it fair for EPPP level.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Nature vs- Nurture.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Nature vs- Nurture.json::4",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json::4",
       "scored": true
     },
     {
@@ -2751,9 +2746,9 @@
       "kn_explanation": "This tests understanding of the specific pharmacological mechanism of a major antidepressant class, which is key content in KN2.",
       "difficulty": "easy",
       "quality_comment": "Straightforward and factual question with appropriate distractors, ideal for foundational knowledge assessment.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Antipsychotics and Antidepressants.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Antipsychotics and Antidepressants.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Antipsychotics and Antidepressants.json::10",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Antipsychotics and Antidepressants.json::10",
       "scored": true
     },
     {
@@ -2770,9 +2765,9 @@
       "kn_explanation": "This question tests understanding of correlational research and regression analysis within quantitative research methods (KN54).",
       "difficulty": "medium",
       "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json",
       "domain": 7,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json::8",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json::8",
       "scored": true
     },
     {
@@ -2795,7 +2790,7 @@
       "scored": true
     },
     {
-      "stem": "According to French and Raven\u2019s bases of social power, which type of power is most likely to foster commitment rather than mere compliance or resistance?",
+      "stem": "According to French and Raven’s bases of social power, which type of power is most likely to foster commitment rather than mere compliance or resistance?",
       "options": [
         "Coercive power",
         "Legitimate power",
@@ -2803,7 +2798,7 @@
         "Reward power"
       ],
       "answer": "Expert and referent power",
-      "explanation": "Expert and referent power are linked with subordinates\u2019 commitment because they stem from respect and admiration or knowledge, rather than control over rewards or punishments.",
+      "explanation": "Expert and referent power are linked with subordinates’ commitment because they stem from respect and admiration or knowledge, rather than control over rewards or punishments.",
       "kn": "KN46",
       "kn_explanation": "Understanding leadership power bases and their effects on subordinate motivation is important for intervention strategies covered in KN46.",
       "difficulty": "medium",
@@ -2846,9 +2841,9 @@
       "kn_explanation": "This question probes understanding of racial identity development specifically related to White identity formation.",
       "difficulty": "medium",
       "quality_comment": "Distractors are clearly defined statuses from the same model, requiring detailed knowledge for accurate identification.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Identity Development Models.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Identity Development Models.json::3",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json::3",
       "scored": true
     },
     {
@@ -2936,7 +2931,7 @@
         "Dynamic testing with qualitative scoring"
       ],
       "answer": "Computerized adaptive testing using item response theory",
-      "explanation": "Computerized adaptive testing (CAT) uses item response theory (IRT) to select items tailored to the examinee\u2019s ability, enhancing efficiency and precision.",
+      "explanation": "Computerized adaptive testing (CAT) uses item response theory (IRT) to select items tailored to the examinee’s ability, enhancing efficiency and precision.",
       "kn": "KN29",
       "kn_explanation": "This item focuses on the theoretical and technological basis of CAT, matching the content on assessment theories and models in this domain (KN29).",
       "difficulty": "medium",
@@ -2969,7 +2964,6 @@
       "stem": "In Project MATCH, which treatment showed a slight advantage in reducing drinking in clients diagnosed with alcohol dependence or abuse at one- and three-year follow-up?",
       "options": [
         "Twelve-step facilitation",
-        "Motivational enhancement therapy",
         "Cognitive behavioral coping skills therapy",
         "Community reinforcement approach",
         "Voucher-based reinforcement therapy"
@@ -2996,7 +2990,7 @@
       "answer": "Accommodation",
       "explanation": "Accommodation involves changing an existing cognitive schema or creating a new one to fit new information, helping to restore equilibrium.",
       "kn": "KN23",
-      "kn_explanation": "This question tests knowledge of Piaget\u2019s constructivist theory, a major research-based developmental theory under KN23.",
+      "kn_explanation": "This question tests knowledge of Piaget’s constructivist theory, a major research-based developmental theory under KN23.",
       "difficulty": "easy",
       "quality_comment": "The question clearly tests a fundamental Piagetian concept, with distractors that are related but distinct, supporting effective assessment of understanding.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
@@ -3018,9 +3012,9 @@
       "kn_explanation": "This question addresses non-probability sampling techniques focusing on practical sampling approaches and their limitations, fitting under research methods sampling knowledge (KN53).",
       "difficulty": "medium",
       "quality_comment": "The item clearly contrasts convenience sampling with other common sampling techniques, aiding differentiation and conceptual understanding.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json",
       "domain": 7,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research \u2013 Single-Subject and Group Designs.json::13",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Research – Single-Subject and Group Designs.json::13",
       "scored": true
     },
     {
@@ -3037,9 +3031,9 @@
       "kn_explanation": "This question deals with interpretation of psychometric fairness and differential outcomes related to protected groups.",
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible and require knowledge of nuanced fairness concepts in employment testing.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json",
       "domain": 8,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json::10",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json::10",
       "scored": true
     },
     {
@@ -3056,9 +3050,9 @@
       "kn_explanation": "This question assesses understanding of decision thresholds and classification outcomes in criterion-related validity and test interpretation.",
       "difficulty": "medium",
       "quality_comment": "The question is well-constructed with plausible alternatives that require conceptual understanding of cutoff adjustments and their impact.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Criterion-Related Validity.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Criterion-Related Validity.json",
       "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity \u2013 Criterion-Related Validity.json::5",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Test Validity – Criterion-Related Validity.json::5",
       "scored": true
     },
     {
@@ -3227,9 +3221,9 @@
       "kn_explanation": "This question pertains to the development of emotion recognition abilities, fitting within major theories and models of emotion development (KN10).",
       "difficulty": "medium",
       "quality_comment": "Distractors reflect plausible developmental timelines; the stem is precise, making this a well-constructed developmental question.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json",
       "domain": 2,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Attachment, Emotions, and Social Relationships.json::4",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json::4",
       "scored": true
     },
     {
@@ -3347,7 +3341,7 @@
       "scored": true
     },
     {
-      "stem": "In the actor-observer effect, how do people typically explain their own versus others\u2019 behavior?",
+      "stem": "In the actor-observer effect, how do people typically explain their own versus others’ behavior?",
       "options": [
         "Own behavior to dispositional factors; others' behavior to situational factors",
         "Own behavior to situational factors; others' behavior to dispositional factors",
@@ -3355,14 +3349,14 @@
         "Own behavior to distinctiveness; others' behavior to consensus"
       ],
       "answer": "Own behavior to situational factors; others' behavior to dispositional factors",
-      "explanation": "The actor-observer effect describes the tendency to attribute one's own behavior to situational causes while attributing others\u2019 behavior to internal traits.",
+      "explanation": "The actor-observer effect describes the tendency to attribute one's own behavior to situational causes while attributing others’ behavior to internal traits.",
       "kn": "KN14",
       "kn_explanation": "This tests knowledge of a foundational social cognition bias concerning self versus other attributions, covered in KN14.",
       "difficulty": "easy",
       "quality_comment": "The question is clear and the options are plausible, making it a good straightforward item for testing basic attribution concepts.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Causal Attributions.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Causal Attributions.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Causal Attributions.json::4",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Causal Attributions.json::4",
       "scored": true
     },
     {
@@ -3385,22 +3379,22 @@
       "scored": false
     },
     {
-      "stem": "What does Thomas and Chess\u2019s goodness-of-fit model primarily emphasize regarding child development?",
+      "stem": "What does Thomas and Chess’s goodness-of-fit model primarily emphasize regarding child development?",
       "options": [
         "Temperament is genetically fixed and unchangeable",
-        "The match between a child\u2019s temperament and social environment influences behavioral outcomes",
+        "The match between a child’s temperament and social environment influences behavioral outcomes",
         "All children fall neatly into easy, slow-to-warm-up, or difficult categories",
         "Parental strictness leads to better temperamental adjustment"
       ],
-      "answer": "The match between a child\u2019s temperament and social environment influences behavioral outcomes",
-      "explanation": "Thomas and Chess's goodness-of-fit model highlights how the compatibility between a child\u2019s temperament and the environment affects emotional and behavioral development.",
+      "answer": "The match between a child’s temperament and social environment influences behavioral outcomes",
+      "explanation": "Thomas and Chess's goodness-of-fit model highlights how the compatibility between a child’s temperament and the environment affects emotional and behavioral development.",
       "kn": "KN21",
       "kn_explanation": "The question targets the interaction between individual temperament and environmental factors in development, central to individual-environment interaction in development (KN21).",
       "difficulty": "medium",
       "quality_comment": "Distractors include common misconceptions, ensuring that only those familiar with the model select the correct conceptual emphasis.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json::9",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json::9",
       "scored": true
     },
     {
@@ -3425,20 +3419,20 @@
     {
       "stem": "Which language disorder is characterized by relatively preserved comprehension but impaired repetition and fluent speech with many errors, caused by damage to the arcuate fasciculus?",
       "options": [
-        "Broca\u2019s aphasia",
-        "Wernicke\u2019s aphasia",
+        "Broca’s aphasia",
+        "Wernicke’s aphasia",
         "Conduction aphasia",
         "Global aphasia"
       ],
       "answer": "Conduction aphasia",
-      "explanation": "Damage to the arcuate fasciculus disrupts communication between Broca\u2019s and Wernicke\u2019s areas, causing fluent speech and comprehension but impaired repetition and errors.",
+      "explanation": "Damage to the arcuate fasciculus disrupts communication between Broca’s and Wernicke’s areas, causing fluent speech and comprehension but impaired repetition and errors.",
       "kn": "KN1",
       "kn_explanation": "This assesses neuroanatomical pathways involved in language processing, fitting biological bases of behavior (KN1).",
       "difficulty": "medium",
       "quality_comment": "The question effectively differentiates between various aphasia types relying on lesion localization.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Cerebral Cortex.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions \u2013 Cerebral Cortex.json::13",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json::13",
       "scored": true
     },
     {
@@ -3511,7 +3505,7 @@
       "kn": "KN55",
       "kn_explanation": "This question tests understanding of statistical interpretation differences between classical and Bayesian methods, a key analytic method concept (KN55).",
       "difficulty": "hard",
-      "quality_comment": "The distractors include common misconceptions, which strengthens the question\u2019s ability to distinguish between novice and advanced understanding.",
+      "quality_comment": "The distractors include common misconceptions, which strengthens the question’s ability to distinguish between novice and advanced understanding.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Overview of Inferential Statistics.json",
       "domain": 7,
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research Methods & Statistics/7 Overview of Inferential Statistics.json::4",
@@ -3520,20 +3514,20 @@
     {
       "stem": "According to the Uniform Guidelines on Employee Selection Procedures, adverse impact occurs when:",
       "options": [
-        "Hiring rates for a protected group are greater than 80% of the majority group\u2019s rate",
-        "Hiring rates for a protected group are less than 80% of the majority group\u2019s rate",
+        "Hiring rates for a protected group are greater than 80% of the majority group’s rate",
+        "Hiring rates for a protected group are less than 80% of the majority group’s rate",
         "Job performance scores are identical across all groups",
         "All group members score equally on selection tests"
       ],
-      "answer": "Hiring rates for a protected group are less than 80% of the majority group\u2019s rate",
-      "explanation": "The 80% or four-fifths rule states adverse impact exists if the protected group\u2019s hiring rate is less than 80% of the majority group's hiring rate.",
+      "answer": "Hiring rates for a protected group are less than 80% of the majority group’s rate",
+      "explanation": "The 80% or four-fifths rule states adverse impact exists if the protected group’s hiring rate is less than 80% of the majority group's hiring rate.",
       "kn": "KN62",
       "kn_explanation": "This question aligns with professional standards and guidelines on fair employment practices and adverse impact determinations.",
       "difficulty": "easy",
       "quality_comment": "Straightforward stem with clearly differentiated options tests knowledge of a key legal criterion effectively.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json",
       "domain": 8,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection \u2013 Evaluation of Techniques.json::5",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/5 Employee Selection – Evaluation of Techniques.json::5",
       "scored": true
     },
     {
@@ -3577,7 +3571,7 @@
     {
       "stem": "After research is published, what are psychologists' obligations around sharing data for verification?",
       "options": [
-        "Psychologists may refuse to share data if participants\u2019 confidentiality might be moderately affected.",
+        "Psychologists may refuse to share data if participants’ confidentiality might be moderately affected.",
         "Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality.",
         "Psychologists should destroy data immediately after publication to protect privacy.",
         "Data sharing is optional and only encouraged for studies involving non-human subjects."
@@ -3602,14 +3596,14 @@
         "Goodness-of-fit"
       ],
       "answer": "Behavioral inhibition",
-      "explanation": "Kagan\u2019s research focused on behavioral inhibition, which involves withdrawal and negative reactions to novel situations and people, linked to risk for anxiety disorders.",
+      "explanation": "Kagan’s research focused on behavioral inhibition, which involves withdrawal and negative reactions to novel situations and people, linked to risk for anxiety disorders.",
       "kn": "KN21",
       "kn_explanation": "This question targets a specific temperament trait linked to emotional regulation and risk for psychopathology, falling under socioemotional development in growth and lifespan development (KN21).",
       "difficulty": "medium",
       "quality_comment": "The distractors are other temperament concepts, making the correct answer specific and requiring targeted knowledge of Kagan's focus.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development \u2013 Temperament and Personality.json::13",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json::13",
       "scored": true
     },
     {
@@ -3621,7 +3615,7 @@
         "Physiological measures"
       ],
       "answer": "Subjectively scored ratings by multiple raters",
-      "explanation": "Consensual observer drift occurs when raters influence one another\u2019s ratings, increasing agreement but potentially reducing accuracy in subjective assessments.",
+      "explanation": "Consensual observer drift occurs when raters influence one another’s ratings, increasing agreement but potentially reducing accuracy in subjective assessments.",
       "kn": "KN29",
       "kn_explanation": "Understanding factors affecting inter-rater reliability for subjective measures is important in psychometric theory and assessment (KN29).",
       "difficulty": "medium",
@@ -3645,13 +3639,13 @@
       "kn_explanation": "Understanding this ideology requires knowledge of racial identity frameworks and sociopolitical perceptions of group membership.",
       "difficulty": "medium",
       "quality_comment": "All options are racial ideologies defined by the model, ensuring plausible distractors and solid conceptual testing.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Identity Development Models.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Identity Development Models.json::5",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json::5",
       "scored": true
     },
     {
-      "stem": "In Maslow\u2019s Need Hierarchy Theory, which need is considered never fully satisfied and remains a continual motivator?",
+      "stem": "In Maslow’s Need Hierarchy Theory, which need is considered never fully satisfied and remains a continual motivator?",
       "options": [
         "Esteem needs",
         "Self-actualization needs",
@@ -3661,7 +3655,7 @@
       "answer": "Self-actualization needs",
       "explanation": "Maslow proposed that while lower-level needs become satisfied and lose motivational power, self-actualization continues to motivate throughout life.",
       "kn": "KN9",
-      "kn_explanation": "This assesses understanding of Maslow\u2019s hierarchical motivation model, part of major research-based motivation theories (KN9).",
+      "kn_explanation": "This assesses understanding of Maslow’s hierarchical motivation model, part of major research-based motivation theories (KN9).",
       "difficulty": "medium",
       "quality_comment": "Distractors are common hierarchical needs, increasing the challenge and relevance of the correct choice.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 Organizational Psychology/2 Theories of Motivation.json",
@@ -3735,14 +3729,14 @@
         "Racial ideology"
       ],
       "answer": "Racial centrality",
-      "explanation": "Racial centrality reflects the normative importance of race to a person\u2019s self-definition relative to other identities, and is relatively stable across situations.",
+      "explanation": "Racial centrality reflects the normative importance of race to a person’s self-definition relative to other identities, and is relatively stable across situations.",
       "kn": "KN19",
       "kn_explanation": "This question addresses key identity constructs within racial identity theory, falling within cultural and identity diversity issues.",
       "difficulty": "medium",
       "quality_comment": "Distractors are terms from the same model and related concepts, making the question appropriately challenging at the EPPP level.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Identity Development Models.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues \u2013 Identity Development Models.json::2",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json::2",
       "scored": true
     },
     {
@@ -3903,7 +3897,6 @@
         "Ignoring base rates leads to accurate interpretation of clinical symptoms.",
         "High prevalence of CD in a population decreases false alarms in diagnosis.",
         "Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor.",
-        "Confirmation bias ensures unbiased clinical judgments.",
         "Base rates are irrelevant when clinical interviews are comprehensive."
       ],
       "answer": "Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor.",
@@ -3918,7 +3911,7 @@
       "scored": true
     },
     {
-      "stem": "In Glasser\u2019s reality therapy, what term describes the client\u2019s adoption of positive, responsible ways to fulfill basic needs without infringing on others\u2019 rights?",
+      "stem": "In Glasser’s reality therapy, what term describes the client’s adoption of positive, responsible ways to fulfill basic needs without infringing on others’ rights?",
       "options": [
         "Neurotic anxiety",
         "Introjection",
@@ -3958,13 +3951,13 @@
     {
       "stem": "Which career development theory emphasizes the interaction between internal self-concept and external situational factors across multiple life roles and stages?",
       "options": [
-        "Dawis and Lofquist\u2019s Theory of Work Adjustment",
-        "Holland\u2019s Theory of Career Choice",
-        "Super\u2019s Life-Space, Life-Span Career Theory",
-        "Krumboltz\u2019s Social Learning Theory of Career Decision-Making"
+        "Dawis and Lofquist’s Theory of Work Adjustment",
+        "Holland’s Theory of Career Choice",
+        "Super’s Life-Space, Life-Span Career Theory",
+        "Krumboltz’s Social Learning Theory of Career Decision-Making"
       ],
-      "answer": "Super\u2019s Life-Space, Life-Span Career Theory",
-      "explanation": "Super\u2019s theory highlights self-concept development influenced by personal and situational factors across differing life roles and career stages over the lifespan.",
+      "answer": "Super’s Life-Space, Life-Span Career Theory",
+      "explanation": "Super’s theory highlights self-concept development influenced by personal and situational factors across differing life roles and career stages over the lifespan.",
       "kn": "KN48",
       "kn_explanation": "This question assesses knowledge of a major, integrative career development theory relevant to the vocational development domain (KN48).",
       "difficulty": "medium",
@@ -3998,11 +3991,11 @@
       "options": [
         "Illusions of invulnerability",
         "Self-censorship of dissenting opinions",
-        "Frequent devil\u2019s advocate roles in discussions",
+        "Frequent devil’s advocate roles in discussions",
         "Presence of self-appointed mindguards"
       ],
-      "answer": "Frequent devil\u2019s advocate roles in discussions",
-      "explanation": "Appointing a devil\u2019s advocate is a tactic to prevent groupthink, whereas the other options describe symptoms of groupthink.",
+      "answer": "Frequent devil’s advocate roles in discussions",
+      "explanation": "Appointing a devil’s advocate is a tactic to prevent groupthink, whereas the other options describe symptoms of groupthink.",
       "kn": "KN16",
       "kn_explanation": "Understanding symptoms and prevention of groupthink pertains to group and systems processes within organizations.",
       "difficulty": "medium",
@@ -4026,9 +4019,9 @@
       "kn_explanation": "The question focuses on heuristics used in social cognition, specifically on memory retrieval influencing judgments.",
       "difficulty": "easy",
       "quality_comment": "The item is straightforward with well-defined distractors that help the test-taker differentiate related heuristics.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Errors, Biases, and Heuristics.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Errors, Biases, and Heuristics.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Errors, Biases, and Heuristics.json::6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Errors, Biases, and Heuristics.json::6",
       "scored": true
     },
     {
@@ -4063,7 +4056,7 @@
       "kn": "KN1",
       "kn_explanation": "Assessing neurotransmitter hypotheses in mood disorders falls under biological bases of behavior and psychopharmacology (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are other well-known neurotransmitters, increasing the item\u2019s clinical relevance and discriminability.",
+      "quality_comment": "Distractors are other well-known neurotransmitters, increasing the item’s clinical relevance and discriminability.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Nervous System, Neurons, and Neurotransmitters.json",
       "domain": 1,
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Nervous System, Neurons, and Neurotransmitters.json::10",
@@ -4121,9 +4114,9 @@
       "kn_explanation": "The question addresses memory distortions and judgment errors related to event outcome evaluations within social cognition.",
       "difficulty": "medium",
       "quality_comment": "The scenario is distinct and the distractors are other known biases, fostering precise knowledge assessment.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Errors, Biases, and Heuristics.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Errors, Biases, and Heuristics.json",
       "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition \u2013 Errors, Biases, and Heuristics.json::9",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Cognition – Errors, Biases, and Heuristics.json::9",
       "scored": true
     },
     {
@@ -4189,8 +4182,7 @@
         "Cognitive symptoms such as excessive worry and fear.",
         "Physiological somatic symptoms like tremors and tachycardia.",
         "Depressive symptoms commonly comorbid with anxiety.",
-        "Seizure activity associated with anxiety disorders.",
-        "Psychotic symptoms triggered by stress."
+        "Seizure activity associated with anxiety disorders."
       ],
       "answer": "Physiological somatic symptoms like tremors and tachycardia.",
       "explanation": "Propranolol, a beta-blocker, reduces somatic symptoms of anxiety (e.g., tremors, palpitations), but has less impact on psychological symptoms like apprehension or worry.",
@@ -4198,9 +4190,9 @@
       "kn_explanation": "This item evaluates knowledge of pharmacodynamic effects of beta-blockers in anxiety treatment, consistent with drug classification and effects in KN2.",
       "difficulty": "easy",
       "quality_comment": "The stem clearly directs attention to symptom types; distractors represent other symptom domains to challenge the examinee's precision.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Other Psychoactive Drugs.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Other Psychoactive Drugs.json",
       "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology \u2013 Other Psychoactive Drugs.json::5",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Psychopharmacology – Other Psychoactive Drugs.json::5",
       "scored": true
     },
     {
@@ -4288,14 +4280,14 @@
         "Repetitive behaviors hinder the emergence of voluntary motor skills in infancy."
       ],
       "answer": "Motor skills develop through integration of simple repetitive behaviors influenced by multiple factors including environment and desires.",
-      "explanation": "DST explains motor development as a complex interaction of biology, environment, and the infant\u2019s goals, with repetitive behaviors preceding complex skills.",
+      "explanation": "DST explains motor development as a complex interaction of biology, environment, and the infant’s goals, with repetitive behaviors preceding complex skills.",
       "kn": "KN21",
       "kn_explanation": "This question addresses a major developmental theory on growth and lifespan development of motor skills.",
       "difficulty": "medium",
       "quality_comment": "Distractors reflect common misconceptions or oversimplifications, so the question tests higher-order comprehension well.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Nature vs- Nurture.json",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json",
       "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development \u2013 Nature vs- Nurture.json::13",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json::13",
       "scored": true
     }
   ]

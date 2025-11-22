@@ -1,13 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
-import { codeToHtml } from "shiki";
+import type { HTMLAttributes, ReactNode } from "react";
 
 export type CodeBlockProps = {
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
-} & React.HTMLProps<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
 
 function CodeBlock({ children, className, ...props }: CodeBlockProps) {
   return (
@@ -29,7 +28,7 @@ export type CodeBlockCodeProps = {
   language?: string;
   theme?: string;
   className?: string;
-} & React.HTMLProps<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
 
 function CodeBlockCode({
   code,
@@ -38,38 +37,23 @@ function CodeBlockCode({
   className,
   ...props
 }: CodeBlockCodeProps) {
-  const [highlightedHtml, setHighlightedHtml] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function highlight() {
-      const html = await codeToHtml(code, { lang: language, theme });
-      setHighlightedHtml(html);
-    }
-    highlight();
-  }, [code, language, theme]);
-
   const classNames = cn(
     "w-full overflow-x-auto text-[13px] [&>pre]:px-4 [&>pre]:py-4",
     className
   );
 
-  // SSR fallback: render plain code if not hydrated yet
-  return highlightedHtml ? (
-    <div
-      className={classNames}
-      dangerouslySetInnerHTML={{ __html: highlightedHtml }}
-      {...props}
-    />
-  ) : (
+  return (
     <div className={classNames} {...props}>
-      <pre>
-        <code>{code}</code>
+      <pre data-theme={theme} data-language={language}>
+        <code className={cn(language ? `language-${language}` : undefined)}>
+          {code}
+        </code>
       </pre>
     </div>
   );
 }
 
-export type CodeBlockGroupProps = React.HTMLAttributes<HTMLDivElement>;
+export type CodeBlockGroupProps = HTMLAttributes<HTMLDivElement>;
 
 function CodeBlockGroup({
   children,

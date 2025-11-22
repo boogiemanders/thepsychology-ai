@@ -6,8 +6,7 @@
         "Subjects experienced psychological reactance leading to compliance",
         "Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes",
         "Subjects conformed due to normative social influence",
-        "Subjects received financial incentives to continue",
-        "Subjects misunderstood the nature of the shock"
+        "Subjects received financial incentives to continue"
       ],
       "answer": "Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes",
       "explanation": "Milgram concluded that participants obeyed because they entered an agentic state where they viewed themselves as merely executing the authority's commands.",
@@ -19,7 +18,6 @@
     {
       "stem": "Which of the following best describes psychological reactance as it relates to social influence?",
       "options": [
-        "When people comply to avoid punishment from authority",
         "When people conform to group norms to gain acceptance",
         "When individuals resist influence because their sense of freedom is threatened",
         "When people accept others’ judgments as correct in uncertain situations",
@@ -38,7 +36,6 @@
         "Normative influence",
         "Informational influence",
         "Psychological reactance",
-        "Agentic state",
         "Foot-in-the-door technique"
       ],
       "answer": "Informational influence",
@@ -54,8 +51,7 @@
         "Asch found conformity only occurred in ambiguous situations",
         "Asch found conformity even when the correct answer was obvious and unambiguous",
         "Sherif’s study demonstrated conformity only in unambiguous situations",
-        "Sherif’s study involved foot-in-the-door compliance tactics",
-        "Asch used electric shocks to measure obedience"
+        "Sherif’s study involved foot-in-the-door compliance tactics"
       ],
       "answer": "Asch found conformity even when the correct answer was obvious and unambiguous",
       "explanation": "Asch’s research showed people conformed to group pressure even when the correct answer was clear, indicating normative influence, unlike Sherif’s work with ambiguous stimuli.",
@@ -69,7 +65,6 @@
       "options": [
         "Foot-in-the-door technique",
         "Door-in-the-face technique",
-        "Lowball technique",
         "That's-not-all technique",
         "Reciprocity technique"
       ],
@@ -83,7 +78,6 @@
     {
       "stem": "What is the primary psychological explanation for why the foot-in-the-door technique increases compliance?",
       "options": [
-        "People feel obligated to reciprocate when concessions are made",
         "People want to appear consistent in their behavior by agreeing to a larger request after initially agreeing to a smaller one",
         "People experience psychological reactance and resist the initial request",
         "The large initial request makes the smaller request seem more reasonable",
@@ -100,7 +94,6 @@
       "stem": "In Burger’s 2009 replication of Milgram's obedience experiment, which of the following was found?",
       "options": [
         "Participants were significantly less likely to deliver shocks at 150 volts compared to Milgram’s original study",
-        "Only male participants showed willingness to deliver shocks",
         "The majority of participants continued delivering shocks at 150 volts, with no significant gender differences",
         "The study found that informing participants fully decreased obedience",
         "Participants refused to continue once shocks reached 100 volts"
@@ -118,7 +111,6 @@
         "Desire to achieve accurate understanding in ambiguous situations",
         "Desire to avoid social rejection or ridicule",
         "Desire to reassert personal freedom when threatened",
-        "Desire to follow authoritative directives",
         "Desire to maintain consistency in behavior"
       ],
       "answer": "Desire to avoid social rejection or ridicule",
@@ -134,7 +126,6 @@
         "Having the experimenter deliver commands by phone rather than in person",
         "Increasing the number of confederates in the room",
         "Allowing the teacher to physically force the learner to answer",
-        "Giving participants monetary reward to continue",
         "Having the learner visibly express pain and scream"
       ],
       "answer": "Having the experimenter deliver commands by phone rather than in person",
@@ -150,8 +141,7 @@
         "Private acceptance via informational influence in an ambiguous setting",
         "Public compliance via normative influence in an unambiguous setting",
         "Psychological reactance to the group norm",
-        "Obedience to an authority figure directing the response",
-        "Foot-in-the-door compliance strategy"
+        "Obedience to an authority figure directing the response"
       ],
       "answer": "Private acceptance via informational influence in an ambiguous setting",
       "explanation": "Sherif’s findings involved ambiguous stimuli leading individuals to conform because they believed the group had valid information, reflecting private acceptance.",
@@ -166,7 +156,6 @@
         "Agreeing publicly with a friend’s opinion but privately disagreeing",
         "Refusing to comply with a request after feeling one's freedom to choose was threatened",
         "Conforming to a group’s judgment because the task is ambiguous",
-        "Obeying an authority figure by following instructions",
         "Accepting a smaller request after rejecting a larger one"
       ],
       "answer": "Refusing to comply with a request after feeling one's freedom to choose was threatened",
@@ -182,8 +171,7 @@
         "People desire to appear consistent in their actions after agreeing to a small initial request",
         "People feel obligated to reciprocate after perceiving the influencer has made a concession",
         "People assume the influencer holds valid factual information in ambiguous situations",
-        "People experience a psychological threat to their freedom, leading to compliance",
-        "People conform to avoid social rejection or ridicule"
+        "People experience a psychological threat to their freedom, leading to compliance"
       ],
       "answer": "People feel obligated to reciprocate after perceiving the influencer has made a concession",
       "explanation": "Door-in-the-face works because after the influencer reduces their initial large request, the person feels a social obligation to reciprocate by agreeing to the smaller request.",

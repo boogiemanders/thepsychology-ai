@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 import { inferIsOrgPsych } from '@/lib/org-psych-utils'
+import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
+import { loadFullTopicContent } from '@/lib/topic-content-manager'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -113,6 +115,86 @@ Generate the exam in JSON format with this structure:
 IMPORTANT: The "correct_answer" field must contain the actual option text (not A, B, C, or D), and the options array must contain the option text, not letters. This allows proper randomization.
 
 Start generating the exam now. Format each question clearly. Remember: exactly 180 questions with "isScored": true, and 45 questions with "isScored": false. Most importantly, randomize answer positions throughout the exam!`
+
+// --- Section matching helpers for exam questions ---
+type SectionInfo = { title: string; text: string }
+const topicSectionCache = new Map<string, SectionInfo[]>()
+
+function getTopicSections(topicName: string, domainId?: string | null): SectionInfo[] {
+  const key = `${topicName}__${domainId || ''}`
+  if (topicSectionCache.has(key)) return topicSectionCache.get(key)!
+
+  const content = loadFullTopicContent(topicName, domainId || '')
+  if (!content) {
+    topicSectionCache.set(key, [])
+    return []
+  }
+
+  const lines = content.split('\n')
+  const sections: SectionInfo[] = []
+  let current: SectionInfo | null = null
+
+  for (const line of lines) {
+    const headingMatch = line.match(/^(#{2,3})\s+(.*)$/)
+    if (headingMatch) {
+      if (current) sections.push(current)
+      current = { title: headingMatch[2].trim(), text: '' }
+    } else if (current) {
+      current.text += line + '\n'
+    }
+  }
+  if (current) sections.push(current)
+
+  topicSectionCache.set(key, sections)
+  return sections
+}
+
+function normalizeTokens(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]+/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w.length > 3)
+}
+
+function jaccardSimilarity(a: string[], b: string[]): number {
+  if (a.length === 0 || b.length === 0) return 0
+  const setA = new Set(a)
+  const setB = new Set(b)
+  let intersection = 0
+  setA.forEach((token) => {
+    if (setB.has(token)) intersection++
+  })
+  const union = setA.size + setB.size - intersection
+  return union === 0 ? 0 : intersection / union
+}
+
+function attachRelatedSections(question: any) {
+  const meta = deriveTopicMetaFromQuestionSource(question)
+  if (!meta || !meta.topicName) return question
+
+  const sections = getTopicSections(meta.topicName, meta.domainId)
+  if (!sections || sections.length === 0) return question
+
+  const questionText = `${question.stem ?? question.question ?? ''} ${question.explanation ?? ''}`
+  const qTokens = normalizeTokens(questionText)
+
+  const scoredSections = sections
+    .map((section) => {
+      const sectionTokens = normalizeTokens(section.title + ' ' + section.text)
+      const score = jaccardSimilarity(qTokens, sectionTokens)
+      return { title: section.title, score }
+    })
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+
+  const top = scoredSections.slice(0, 2).filter((s) => s.score >= 0.05)
+  if (top.length > 0) {
+    question.relatedSections = top.map((s) => s.title)
+  }
+
+  return question
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -238,7 +320,7 @@ function loadDiagnosticFromGpt() {
       sourceFolder,
     })
 
-    return {
+    const mapped = {
       id: idx + 1,
       question: q.stem ?? q.question ?? '',
       options: q.options ?? [],
@@ -256,6 +338,8 @@ function loadDiagnosticFromGpt() {
       source_folder: sourceFolder,
       is_org_psych: isOrgPsych,
     }
+
+    return attachRelatedSections(mapped)
   })
 
   return {
@@ -314,7 +398,7 @@ function loadPracticeFromGpt() {
         ? q.isScored
         : true
 
-    return {
+    const mapped = {
       id: questionId,
       question: q.stem ?? q.question ?? '',
       options,
@@ -332,6 +416,8 @@ function loadPracticeFromGpt() {
       source_folder: sourceFolder,
       is_org_psych: isOrgPsych,
     }
+
+    return attachRelatedSections(mapped)
   })
 
   return {
