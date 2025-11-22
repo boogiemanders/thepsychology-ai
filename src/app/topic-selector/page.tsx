@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { ChevronDown, Clock, Play, X, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { Progress } from '@/components/ui/progress'
 import { Kbd } from '@/components/ui/kbd'
@@ -16,7 +15,12 @@ import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { useAuth } from '@/context/auth-context'
-import { saveUserInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
+import {
+  getUserCurrentInterest,
+  subscribeToUserInterestChanges,
+  unsubscribeFromInterestChanges,
+  updateUserCurrentInterest,
+} from '@/lib/interests'
 import { getTopPriorities } from '@/lib/priority-storage'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { createClient } from '@supabase/supabase-js'
@@ -31,6 +35,14 @@ interface RecentActivity {
   timestamp: number
   score: number
 }
+
+const parseInterestList = (interest: string | null) =>
+  interest
+    ? interest
+        .split(',')
+        .map((item) => item.trim())
+        .filter((item) => item.length > 0)
+    : []
 
 function getTimeAgo(timestamp: number): string {
   const now = Date.now()
@@ -140,18 +152,67 @@ export default function TopicSelectorPage() {
     setDomains(domainsWithProgress)
   }, [])
 
+  // Load previously saved interests so topic-selector mirrors topic-teacher
+  useEffect(() => {
+    let isMounted = true
+
+    const loadInterests = async () => {
+      if (!user?.id) {
+        if (isMounted) {
+          setSavedInterests([])
+          setCurrentInput('')
+        }
+        return
+      }
+
+      try {
+        let currentInterest = await getUserCurrentInterest(user.id)
+
+        if (!currentInterest && typeof window !== 'undefined') {
+          currentInterest = localStorage.getItem(`interests_${user.id}`)
+        }
+
+        if (!isMounted) return
+
+        if (currentInterest) {
+          setSavedInterests(parseInterestList(currentInterest))
+          if (typeof window !== 'undefined') {
+            localStorage.setItem(`interests_${user.id}`, currentInterest)
+          }
+        } else {
+          setSavedInterests([])
+          if (typeof window !== 'undefined') {
+            localStorage.removeItem(`interests_${user.id}`)
+          }
+        }
+
+        setCurrentInput('')
+      } catch (error) {
+        console.debug('Failed to load interests for topic selector:', error)
+      }
+    }
+
+    loadInterests()
+
+    return () => {
+      isMounted = false
+    }
+  }, [user?.id])
+
   // Subscribe to interest changes from topic-teacher
   useEffect(() => {
     if (user?.id) {
       const channel = subscribeToUserInterestChanges(user.id, (newInterest) => {
-        if (newInterest) {
-          // Parse comma-separated interests
-          const interestsList = newInterest
-            .split(',')
-            .map((i) => i.trim())
-            .filter((i) => i.length > 0)
-          setSavedInterests(interestsList)
-          setCurrentInput('')
+        const interestsList = parseInterestList(newInterest)
+        setSavedInterests(interestsList)
+        setCurrentInput('')
+
+        if (typeof window !== 'undefined') {
+          if (newInterest && newInterest.trim().length > 0) {
+            localStorage.setItem(`interests_${user.id}`, newInterest)
+          } else {
+            localStorage.removeItem(`interests_${user.id}`)
+          }
         }
       })
       subscriptionRef.current = channel
@@ -176,31 +237,27 @@ export default function TopicSelectorPage() {
     if (currentInput.trim() && user?.id) {
       try {
         const newInterest = currentInput.trim()
-        // Add to local list
         const updatedInterests = [...savedInterests, newInterest]
         setSavedInterests(updatedInterests)
         setCurrentInput('')
 
         const interestsString = updatedInterests.join(', ')
 
-        // Save to localStorage as backup
         if (typeof window !== 'undefined') {
           localStorage.setItem(`interests_${user.id}`, interestsString)
         }
 
-        // Save all interests as comma-separated string to Supabase
-        await saveUserInterest(user.id, interestsString)
+        await updateUserCurrentInterest(user.id, interestsString)
       } catch (error) {
         console.debug('Failed to save interest:', error)
       }
     }
   }
 
-  const removeInterest = (index: number) => {
+  const removeInterest = async (index: number) => {
     const newInterests = savedInterests.filter((_, i) => i !== index)
     setSavedInterests(newInterests)
 
-    // Update localStorage as backup
     if (user?.id && typeof window !== 'undefined') {
       if (newInterests.length > 0) {
         localStorage.setItem(`interests_${user.id}`, newInterests.join(', '))
@@ -209,11 +266,8 @@ export default function TopicSelectorPage() {
       }
     }
 
-    // Update Supabase with remaining interests
     if (user?.id) {
-      if (newInterests.length > 0) {
-        saveUserInterest(user.id, newInterests.join(', '))
-      }
+      await updateUserCurrentInterest(user.id, newInterests.join(', '))
     }
   }
 

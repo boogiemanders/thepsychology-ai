@@ -95,6 +95,24 @@ export async function getUserCurrentInterest(userId: string): Promise<string | n
 
 export async function updateUserCurrentInterest(userId: string, interest: string) {
   try {
+    const normalizedInterest = interest.trim()
+
+    if (!normalizedInterest) {
+      const { error: deleteError } = await supabase
+        .from('user_current_interest')
+        .delete()
+        .eq('user_id', userId)
+
+      if (deleteError) {
+        if (deleteError.message && deleteError.message.includes('relation')) {
+          console.debug('Interest tables not created yet')
+          return
+        }
+        console.debug('Delete error while clearing interest:', deleteError)
+      }
+      return
+    }
+
     // Update current interest
     const { data: existingInterest, error: fetchError } = await supabase
       .from('user_current_interest')
@@ -121,7 +139,7 @@ export async function updateUserCurrentInterest(userId: string, interest: string
     if (existingInterest) {
       const { error: updateError } = await supabase
         .from('user_current_interest')
-        .update({ interest, updated_at: new Date() })
+        .update({ interest: normalizedInterest, updated_at: new Date() })
         .eq('user_id', userId)
 
       if (updateError) {
@@ -130,7 +148,7 @@ export async function updateUserCurrentInterest(userId: string, interest: string
     } else {
       const { error: insertError } = await supabase
         .from('user_current_interest')
-        .insert([{ user_id: userId, interest, created_at: new Date(), updated_at: new Date() }])
+        .insert([{ user_id: userId, interest: normalizedInterest, created_at: new Date(), updated_at: new Date() }])
 
       if (insertError) {
         console.debug('Insert error while inserting interest:', insertError)
@@ -140,7 +158,7 @@ export async function updateUserCurrentInterest(userId: string, interest: string
     // Also add to all_interests history
     const { error: historyError } = await supabase
       .from('user_all_interests')
-      .insert([{ user_id: userId, interest, created_at: new Date() }])
+      .insert([{ user_id: userId, interest: normalizedInterest, created_at: new Date() }])
 
     if (historyError) {
       console.debug('History error while saving interest history:', historyError)

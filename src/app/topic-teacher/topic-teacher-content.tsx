@@ -117,7 +117,6 @@ export function TopicTeacherContent() {
     quizWrongSections: [],
     examWrongSections: [],
   })
-  const [recentQuizWrongSections, setRecentQuizWrongSections] = useState<string[]>([])
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const currentSectionRef = useRef<string>('')
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
@@ -202,27 +201,10 @@ export function TopicTeacherContent() {
     }
   }, [user?.id])
 
-  useEffect(() => {
-    const param = searchParams.get('recentQuizWrongSections')
-    if (!param) {
-      setRecentQuizWrongSections([])
-      return
-    }
-
-    try {
-      const decoded = JSON.parse(decodeURIComponent(param))
-      if (Array.isArray(decoded)) {
-        setRecentQuizWrongSections(decoded)
-      } else if (typeof decoded === 'string') {
-        setRecentQuizWrongSections([decoded])
-      } else {
-        setRecentQuizWrongSections([])
-      }
-    } catch (error) {
-      console.warn('[Topic Teacher] Failed to parse recent quiz sections', error)
-      setRecentQuizWrongSections([])
-    }
-  }, [searchParams])
+  const formatSectionList = (sections: string[]) => {
+    if (!sections || sections.length === 0) return ''
+    return sections.includes('__ALL__') ? 'All sections' : sections.join('; ')
+  }
 
   // Load quiz/exam results and compute highlight data
   useEffect(() => {
@@ -777,7 +759,7 @@ export function TopicTeacherContent() {
           </motion.div>
         )}
 
-        {highlightData.recentlyWrongSections.length > 0 && (
+        {highlightData.examWrongSections.length > 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -785,13 +767,13 @@ export function TopicTeacherContent() {
           >
             <p className="text-sm text-foreground/80">
               🍏 Most recent practice exam
-              {!highlightData.recentlyWrongSections.includes('__ALL__') && highlightData.recentlyWrongSections.length > 0
-                ? `: ${highlightData.recentlyWrongSections.join('; ')}`
+              {highlightData.examWrongSections.length > 0
+                ? `: ${formatSectionList(highlightData.examWrongSections)}`
                 : ''}
             </p>
           </motion.div>
         )}
-        {recentQuizWrongSections.length > 0 && (
+        {highlightData.quizWrongSections.length > 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -799,6 +781,9 @@ export function TopicTeacherContent() {
           >
             <p className="text-sm text-foreground/80">
               🍎 Most recent quiz
+              {highlightData.quizWrongSections.length > 0
+                ? `: ${formatSectionList(highlightData.quizWrongSections)}`
+                : ''}
             </p>
           </motion.div>
         )}
@@ -966,9 +951,9 @@ export function TopicTeacherContent() {
                               (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
 
                             return (
-                              <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
+                              <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute left-0 top-0 text-base leading-none">
+                                  <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
                                     {icons}
                                   </span>
                                 )}
@@ -984,9 +969,9 @@ export function TopicTeacherContent() {
                             const icons =
                               (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
                             return (
-                              <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
+                              <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute left-0 top-0 text-base leading-none">
+                                  <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
                                     {icons}
                                   </span>
                                 )}
@@ -1002,9 +987,9 @@ export function TopicTeacherContent() {
                             const icons =
                               (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
                             return (
-                              <div className={`transition-colors ${showIcon ? 'relative pl-6' : ''}`}>
+                              <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute left-0 top-0 text-base leading-none">
+                                  <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
                                     {icons}
                                   </span>
                                 )}
