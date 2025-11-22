@@ -786,7 +786,7 @@ export function TopicTeacherContent() {
             <p className="text-sm text-foreground/80">
               🍏 Most recent practice exam
               {!highlightData.recentlyWrongSections.includes('__ALL__') && highlightData.recentlyWrongSections.length > 0
-                ? `: ${highlightData.recentlyWrongSections.join(', ')}`
+                ? `: ${highlightData.recentlyWrongSections.join('; ')}`
                 : ''}
             </p>
           </motion.div>

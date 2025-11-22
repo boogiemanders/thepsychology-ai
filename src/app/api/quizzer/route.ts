@@ -1,6 +1,8 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { loadTopicQuestions, TopicQuestion } from '@/lib/topic-question-loader'
+import { loadFullTopicContent } from '@/lib/topic-content-manager'
+import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -43,6 +45,109 @@ IMPORTANT: Include exactly 2 questions with "isScored": false (the hardest ones)
 
 Generate a quiz now. Return ONLY the JSON, no other text.`
 
+type SectionInfo = { title: string; text: string }
+const topicSectionCache = new Map<string, SectionInfo[]>()
+
+function getTopicSections(topicName: string, domainId?: string | null) {
+  const key = `${topicName}__${domainId || ''}`
+  if (topicSectionCache.has(key)) return topicSectionCache.get(key)!
+
+  const content = loadFullTopicContent(topicName, domainId || '')
+  if (!content) {
+    topicSectionCache.set(key, [])
+    return []
+  }
+
+  const lines = content.split('\n')
+  const sections: SectionInfo[] = []
+  let current: SectionInfo | null = null
+
+  for (const line of lines) {
+    const headingMatch = line.match(/^(#{2,3})\s+(.*)$/)
+    if (headingMatch) {
+      if (current) sections.push(current)
+      current = { title: headingMatch[2].trim(), text: '' }
+    } else if (current) {
+      current.text += line + '\n'
+    }
+  }
+  if (current) sections.push(current)
+
+  topicSectionCache.set(key, sections)
+  return sections
+}
+
+const normalizeTokens = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]+/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w.length > 3)
+
+const jaccardSimilarity = (a: string[], b: string[]): number => {
+  if (a.length === 0 || b.length === 0) return 0
+  const setA = new Set(a)
+  const setB = new Set(b)
+  let intersection = 0
+  setA.forEach((token) => {
+    if (setB.has(token)) intersection++
+  })
+  const union = setA.size + setB.size - intersection
+  return union === 0 ? 0 : intersection / union
+}
+
+function isMeaningfulSection(section: string, topicName: string) {
+  const normalizedSection = section.trim().toLowerCase()
+  const normalizedTopic = topicName.trim().toLowerCase()
+  if (!normalizedSection) return false
+  return normalizedSection !== normalizedTopic
+}
+
+function attachSectionsToQuestion(
+  question: any,
+  topicName: string,
+  domainId?: string | null
+) {
+  if (!topicName) return question
+
+  const hasMeaningful =
+    Array.isArray(question.relatedSections) &&
+    question.relatedSections.some((section: string) =>
+      section && isMeaningfulSection(section, topicName)
+    )
+
+  if (hasMeaningful) {
+    return question
+  }
+
+  const sections = getTopicSections(topicName, domainId)
+  if (!sections || sections.length === 0) {
+    question.relatedSections = [topicName]
+    return question
+  }
+
+  const questionText = `${question.question ?? ''} ${question.explanation ?? ''}`
+  const qTokens = normalizeTokens(questionText)
+
+  const scoredSections = sections
+    .map((section) => {
+      const sectionTokens = normalizeTokens(`${section.title} ${section.text}`)
+      const score = jaccardSimilarity(qTokens, sectionTokens)
+      return { title: section.title, score }
+    })
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+
+  const topMatches = scoredSections.slice(0, 2).filter((s) => s.score >= 0.05)
+  if (topMatches.length > 0) {
+    question.relatedSections = topMatches.map((s) => s.title)
+  } else {
+    question.relatedSections = [topicName]
+  }
+
+  return question
+}
+
 function safeDecode(value: string): string {
   try {
     return decodeURIComponent(value)
@@ -68,6 +173,10 @@ function shuffleArray<T>(input: T[]): T[] {
 function buildQuizFromLocalQuestions(topicName: string, domain?: string) {
   const loaded = loadTopicQuestions(topicName, domain)
   if (!loaded) return null
+
+  const fileMeta = deriveTopicMetaFromSourceFile(loaded.filePath)
+  const derivedTopicName = fileMeta?.topicName || topicName
+  const derivedDomainId = fileMeta?.domainId || domain
 
   const validQuestions = loaded.questions.filter((q: TopicQuestion) => {
     const prompt = q.stem ?? q.question
@@ -100,15 +209,17 @@ function buildQuizFromLocalQuestions(topicName: string, domain?: string) {
     )
     const correctAnswer = q.answer ?? q.correct_answer ?? baseOptions[0]
 
-    return {
+    const question = {
       id: idx + 1,
       question: q.stem ?? q.question ?? '',
       options: baseOptions,
       correctAnswer,
       explanation: q.explanation ?? '',
-      relatedSections: q.relatedSections && q.relatedSections.length > 0 ? q.relatedSections : [topicName],
+      relatedSections: q.relatedSections && q.relatedSections.length > 0 ? q.relatedSections : [derivedTopicName],
       isScored: !unscoredIndices.has(idx),
     }
+
+    return attachSectionsToQuestion(question, derivedTopicName, derivedDomainId)
   })
 }
 
@@ -155,6 +266,13 @@ export async function POST(request: NextRequest) {
     }
 
     const quizData = JSON.parse(jsonMatch[0])
+
+    if (decodedTopic && Array.isArray(quizData.questions)) {
+      quizData.questions = quizData.questions.map((question: any, idx: number) => {
+        const withId = { id: question.id ?? idx + 1, ...question }
+        return attachSectionsToQuestion(withId, decodedTopic, normalizedDomain)
+      })
+    }
 
     return NextResponse.json(quizData)
   } catch (error) {
