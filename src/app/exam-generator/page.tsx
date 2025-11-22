@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Checkbox } from '@/components/ui/checkbox'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { motion } from 'motion/react'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
 import {
@@ -23,6 +24,8 @@ import {
 import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { createClient } from '@supabase/supabase-js'
+import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
+import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/lib/unified-question-results'
 
 interface Question {
   id: number
@@ -30,11 +33,17 @@ interface Question {
   options: string[]
   correct_answer: string
   explanation: string
-  domain: string
+  domain: number | string
   difficulty: string
   type: string
   isScored?: boolean
+  scored?: boolean
   knId?: string
+  sourceFile?: string
+  source_file?: string
+  topicName?: string
+  domainId?: string
+  relatedSections?: string[]
 }
 
 export default function ExamGeneratorPage() {
@@ -47,8 +56,8 @@ export default function ExamGeneratorPage() {
   const [examType, setExamType] = useState<'diagnostic' | 'practice' | null>(null)
   const [mode, setMode] = useState<'study' | 'test' | null>(null)
   const [timeRemaining, setTimeRemaining] = useState(0)
-  const [isExamStarted, setIsExamStarted] = useState(false)
-  const [selectedMode, setSelectedMode] = useState<'study' | 'test'>('study')
+	const [isExamStarted, setIsExamStarted] = useState(false)
+	const [selectedMode, setSelectedMode] = useState<'study' | 'test' | null>(null)
   const [recommendedExamType, setRecommendedExamType] = useState<'diagnostic' | 'practice'>('diagnostic')
   const [recommendedMode, setRecommendedMode] = useState<'study' | 'test'>('study')
   const [isLoadingPreGen, setIsLoadingPreGen] = useState(false)
@@ -59,8 +68,10 @@ export default function ExamGeneratorPage() {
   const [isSavingResults, setIsSavingResults] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
+  const [shouldScrollToStep2, setShouldScrollToStep2] = useState(false)
   const questionContentRef = useRef<HTMLDivElement | null>(null)
   const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
+  const step2Ref = useRef<HTMLDivElement | null>(null)
 
   const resolveSelectionText = useCallback(() => {
     if (typeof window === 'undefined') return null
@@ -296,6 +307,66 @@ export default function ExamGeneratorPage() {
     window.location.href = '/dashboard'
   }
 
+  // Record per-question results for unified highlighting (Topic Teacher)
+  const recordExamQuestionResults = useCallback(() => {
+    if (!examType) return
+
+    questions.forEach((question, index) => {
+      if (!question) return
+      const selectedAnswer = selectedAnswers[index]
+      if (!selectedAnswer) return
+      if (question.isScored === false || question.scored === false) return
+
+      const meta =
+        question.topicName || question.domainId
+          ? null
+          : deriveTopicMetaFromSourceFile(question.sourceFile ?? (question as any).source_file)
+
+      const topicName = question.topicName || meta?.topicName
+      if (!topicName) return
+
+      const domainId =
+        question.domainId ||
+        meta?.domainId ||
+        (question.domain ? String(question.domain) : 'unknown')
+
+      // For exam-derived highlights, treat the whole topic as needing review.
+      // This ensures Topic Teacher shows apples even when we don't have
+      // granular section labels for each exam question.
+      const sections = ['__ALL__']
+
+      const isCorrect = selectedAnswer === question.correct_answer
+      const questionId = question.id?.toString() || `${topicName}_q${index}`
+
+      saveQuestionResult({
+        questionId,
+        question: question.question,
+        examType,
+        topic: topicName,
+        domain: domainId,
+        selectedAnswer,
+        correctAnswer: question.correct_answer,
+        isCorrect,
+        timestamp: Date.now(),
+      })
+
+      if (!isCorrect) {
+        sections.forEach((sectionName) =>
+          addSectionResult({
+            sectionName,
+            topicName,
+            domain: domainId,
+            wrongCount: 1,
+            lastAttempted: Date.now(),
+            isResolved: false,
+          }),
+        )
+      } else {
+        sections.forEach((sectionName) => resolveSectionResult(topicName, sectionName))
+      }
+    })
+  }, [examType, questions, selectedAnswers])
+
   // Handle end exam - save results to Supabase and navigate
   const handleEndExam = useCallback(async () => {
     if (!userId || !examType || !mode) {
@@ -311,6 +382,8 @@ export default function ExamGeneratorPage() {
         const q = questions[parseInt(qIdx)]
         return q && q.isScored !== false && answer === q.correct_answer
       }).length
+
+      recordExamQuestionResults()
 
       // Save exam completion to local storage
       const { saveExamCompletion } = require('@/lib/exam-history')
@@ -404,7 +477,7 @@ export default function ExamGeneratorPage() {
       setError('Failed to save exam results. Please try again.')
       setIsSavingResults(false)
     }
-  }, [userId, examType, mode, questions, selectedAnswers, flaggedQuestions])
+  }, [userId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults])
 
   // Resume last paused exam (manual resume via button)
   const handleResumeLastExam = () => {
@@ -456,6 +529,36 @@ export default function ExamGeneratorPage() {
 
   // Detect if user is on Mac
   const isMac = typeof navigator !== 'undefined' && navigator.platform.toUpperCase().indexOf('MAC') >= 0
+
+  const scrollToStep2 = useCallback(() => {
+    if (step2Ref.current) {
+      step2Ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
+
+  const handleExamTypeSelect = useCallback(
+    (type: 'diagnostic' | 'practice') => {
+      if (examType === type) {
+        scrollToStep2()
+        return
+      }
+
+      setExamType(type)
+      if (step2Ref.current) {
+        scrollToStep2()
+      } else {
+        setShouldScrollToStep2(true)
+      }
+    },
+    [examType, scrollToStep2],
+  )
+
+  useEffect(() => {
+    if (examType && shouldScrollToStep2) {
+      setShouldScrollToStep2(false)
+      scrollToStep2()
+    }
+  }, [examType, shouldScrollToStep2, scrollToStep2])
 
   const handleNext = useCallback(() => {
     if (currentQuestion < questions.length - 1) {
@@ -519,13 +622,12 @@ export default function ExamGeneratorPage() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isExamStarted, currentQuestion, questions.length, handleNext, handlePrevious, handleHighlightText, handleStrikethroughText, handleEndExam])
 
-  // Initialize recommended defaults from exam history
-  useEffect(() => {
-    const defaults = getRecommendedDefaults()
-    setRecommendedExamType(defaults.examType)
-    setRecommendedMode(defaults.examMode)
-    setSelectedMode(defaults.examMode)
-  }, [])
+	// Initialize recommended defaults from exam history
+	useEffect(() => {
+		const defaults = getRecommendedDefaults()
+		setRecommendedExamType(defaults.examType)
+		setRecommendedMode(defaults.examMode)
+	}, [])
 
   // Get current user ID for pre-generation
   useEffect(() => {
@@ -697,7 +799,25 @@ export default function ExamGeneratorPage() {
       }
       console.timeEnd('[Exam Gen] Question shuffle')
 
-      setQuestions(questionsToUse)
+      const enrichedQuestions = questionsToUse.map((question) => {
+        const meta = deriveTopicMetaFromSourceFile(question.sourceFile ?? (question as any)?.source_file)
+        const derivedDomainId = meta?.domainId ?? (question.domain ? String(question.domain) : undefined)
+        const derivedSections =
+          question.relatedSections && question.relatedSections.length > 0
+            ? question.relatedSections
+            : meta
+              ? [meta.sectionName]
+              : undefined
+
+        return {
+          ...question,
+          topicName: question.topicName || meta?.topicName,
+          domainId: derivedDomainId,
+          relatedSections: derivedSections,
+        }
+      })
+
+      setQuestions(enrichedQuestions as Question[])
       setIsExamStarted(true)
 
       const endTime = performance.now()
@@ -783,217 +903,414 @@ export default function ExamGeneratorPage() {
                 </motion.div>
               )}
 
-              {!isGenerating && (
-                <div>
-                  {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
-                  <div className="max-w-2xl mx-auto mb-8">
-                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 1: Select Exam Type</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {/* Diagnostic Card */}
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Card
-                        className={`cursor-pointer transition-all border-2 ${
-                          examType === 'diagnostic'
-                            ? 'bg-[#bdd1ca]/20 dark:bg-[#bdd1ca]/10'
-                            : 'border-border'
-                        }`}
-                        style={examType === 'diagnostic' ? { borderColor: '#bdd1ca' } : {}}
-                        onClick={() => setExamType('diagnostic')}
-                      >
-                        <CardHeader className="text-center">
-                          <div className="flex items-center justify-center flex-col">
-                            <div className="flex items-center gap-2 mb-2">
-                              <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
-                              {recommendedExamType === 'diagnostic' && (
-                                <Badge style={{ backgroundColor: '#bdd1ca' }}>Recommended</Badge>
-                              )}
-                            </div>
-                            <CardDescription>71 questions</CardDescription>
-                          </div>
-                        </CardHeader>
-                        <CardContent className="space-y-3">
-                          <ul className="space-y-2 text-sm text-left">
-                            <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                              Identify knowledge gaps
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                              Quick assessment (30-45 minutes)
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                              Get priority recommendations
-                            </li>
-                          </ul>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
+	              {!isGenerating && (
+	                <div>
+	                  {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
+	                  <div className="max-w-2xl mx-auto mb-8">
+	                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 1: Select Exam Type</p>
+	                    {/* Mobile: carousel with peek */}
+	                    <div className="md:hidden">
+	                      <Carousel className="w-full" opts={{ align: 'start' }}>
+	                        <CarouselContent className="pl-2 sm:pl-4 gap-4">
+	                          <CarouselItem className="basis-[85%] sm:basis-[70%]">
+	                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                              <Card
+	                                className={`cursor-pointer transition-all border-2 h-full ${
+	                                  examType === 'diagnostic'
+	                                    ? 'bg-[#bdd1ca]/20 dark:bg-[#bdd1ca]/10'
+	                                    : 'border-border'
+	                                }`}
+	                                style={examType === 'diagnostic' ? { borderColor: '#bdd1ca' } : {}}
+	                                onClick={() => handleExamTypeSelect('diagnostic')}
+	                              >
+	                                <CardHeader className="text-center">
+	                                  <div className="flex items-center justify-center flex-col">
+	                                    <div className="flex items-center gap-2 mb-2">
+	                                      <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+	                                      {recommendedExamType === 'diagnostic' && (
+	                                        <Badge style={{ backgroundColor: '#bdd1ca' }}>Recommended</Badge>
+	                                      )}
+	                                    </div>
+	                                    <CardDescription>71 questions</CardDescription>
+	                                  </div>
+	                                </CardHeader>
+	                                <CardContent className="space-y-3">
+	                                  <ul className="space-y-2 text-sm text-left">
+	                                    <li className="flex items-center gap-2">
+	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                      Identify knowledge gaps
+	                                    </li>
+	                                    <li className="flex items-center gap-2">
+	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                      Quick assessment (30-45 minutes)
+	                                    </li>
+	                                    <li className="flex items-center gap-2">
+	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                      Get priority recommendations
+	                                    </li>
+	                                  </ul>
+	                                </CardContent>
+	                              </Card>
+	                            </motion.div>
+	                          </CarouselItem>
 
-                    {/* Practice Card */}
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Card
-                        className={`cursor-pointer transition-all border-2 ${
-                          examType === 'practice'
-                            ? 'bg-[#788c5d]/20 dark:bg-[#788c5d]/10'
-                            : 'border-border'
-                        }`}
-                        style={examType === 'practice' ? { borderColor: '#788c5d' } : {}}
-                        onClick={() => setExamType('practice')}
-                      >
-                        <CardHeader className="text-center">
-                          <div className="flex items-center justify-center flex-col">
-                            <div className="flex items-center gap-2 mb-2">
-                              <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
-                              {recommendedExamType === 'practice' && (
-                                <Badge style={{ backgroundColor: '#788c5d' }}>Recommended</Badge>
-                              )}
-                            </div>
-                            <CardDescription>225 questions</CardDescription>
-                          </div>
-                        </CardHeader>
-                        <CardContent className="space-y-3">
-                          <ul className="space-y-2 text-sm text-left">
-                            <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                              Comprehensive knowledge check
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                              Full exam preparation (4-5 hours)
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                              Includes experimental questions
-                            </li>
-                          </ul>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                    </div>
-                  </div>
+	                          <CarouselItem className="basis-[85%] sm:basis-[70%]">
+	                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                              <Card
+	                                className={`cursor-pointer transition-all border-2 h-full ${
+	                                  examType === 'practice'
+	                                    ? 'bg-[#788c5d]/20 dark:bg-[#788c5d]/10'
+	                                    : 'border-border'
+	                                }`}
+	                                style={examType === 'practice' ? { borderColor: '#788c5d' } : {}}
+	                                onClick={() => handleExamTypeSelect('practice')}
+	                              >
+	                                <CardHeader className="text-center">
+	                                  <div className="flex items-center justify-center flex-col">
+	                                    <div className="flex items-center gap-2 mb-2">
+	                                      <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+	                                      {recommendedExamType === 'practice' && (
+	                                        <Badge style={{ backgroundColor: '#788c5d' }}>Recommended</Badge>
+	                                      )}
+	                                    </div>
+	                                    <CardDescription>225 questions</CardDescription>
+	                                  </div>
+	                                </CardHeader>
+	                                <CardContent className="space-y-3">
+	                                  <ul className="space-y-2 text-sm text-left">
+	                                    <li className="flex items-center gap-2">
+	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                      Comprehensive knowledge check
+	                                    </li>
+	                                    <li className="flex items-center gap-2">
+	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                      Full exam preparation (4-5 hours)
+	                                    </li>
+	                                    <li className="flex items-center gap-2">
+	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                      Includes experimental questions
+	                                    </li>
+	                                  </ul>
+	                                </CardContent>
+	                              </Card>
+	                            </motion.div>
+	                          </CarouselItem>
+	                        </CarouselContent>
+	                        <CarouselPrevious
+	                          className="flex md:hidden h-8 w-8 rounded-full border border-border/40 left-2 top-1/2 -translate-y-1/2"
+	                          aria-label="Previous exam type"
+	                        />
+	                        <CarouselNext
+	                          className="flex md:hidden h-8 w-8 rounded-full border border-border/40 right-2 top-1/2 -translate-y-1/2"
+	                          aria-label="Next exam type"
+	                        />
+	                      </Carousel>
+	                    </div>
 
-                  {/* Step 2: Mode Selection (Study vs Test) */}
-                  {examType && (
-                    <motion.div
-                    initial={{ opacity: 0, y: -20, scaleY: 0 }}
-                    animate={{ opacity: 1, y: 0, scaleY: 1 }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                    style={{ originY: 0 }}
-                    className="max-w-4xl mx-auto"
-                  >
-                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 2: Select Mode</p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      {/* Study Mode Card */}
-                      <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Card
-                          className={`cursor-pointer transition-all border-2 h-full ${
-                            selectedMode === 'study'
-                              ? 'bg-[#d87758]/20 dark:bg-[#d87758]/10'
-                              : 'border-border'
-                          }`}
-                          style={selectedMode === 'study' ? { borderColor: '#d87758' } : {}}
-                          onClick={() => setSelectedMode('study')}
-                        >
-                          <CardHeader className="text-center">
-                            <CardTitle className="text-xl font-semibold">Study Mode</CardTitle>
-                            <CardDescription>
-                              Learn at your own pace with immediate feedback
-                            </CardDescription>
-                          </CardHeader>
-                          <CardContent className="space-y-3">
-                            <ul className="space-y-2 text-sm text-left">
-                              <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                                Correct answers turn green immediately
-                              </li>
-                              <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                                Learn from mistakes with explanations
-                              </li>
-                              <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                                No time pressure
-                              </li>
-                            </ul>
-                          </CardContent>
-                          {selectedMode === 'study' && (
-                            <CardFooter>
-                              <Button
-                                onClick={() => handleGenerateExam(examType, 'study')}
-                                className="w-full px-8 py-6"
-                                size="lg"
-                              >
-                                Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Study Mode
-                              </Button>
-                            </CardFooter>
-                          )}
-                        </Card>
-                      </motion.div>
+	                    {/* Desktop: static side-by-side cards */}
+	                    <div className="hidden md:grid md:grid-cols-2 gap-4">
+	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                        <Card
+	                          className={`cursor-pointer transition-all border-2 ${
+	                            examType === 'diagnostic'
+	                              ? 'bg-[#bdd1ca]/20 dark:bg-[#bdd1ca]/10'
+	                              : 'border-border'
+	                          }`}
+	                          style={examType === 'diagnostic' ? { borderColor: '#bdd1ca' } : {}}
+	                          onClick={() => handleExamTypeSelect('diagnostic')}
+	                        >
+	                          <CardHeader className="text-center">
+	                            <div className="flex items-center justify-center flex-col">
+	                              <div className="flex items-center gap-2 mb-2">
+	                                <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+	                                {recommendedExamType === 'diagnostic' && (
+	                                  <Badge style={{ backgroundColor: '#bdd1ca' }}>Recommended</Badge>
+	                                )}
+	                              </div>
+	                              <CardDescription>71 questions</CardDescription>
+	                            </div>
+	                          </CardHeader>
+	                          <CardContent className="space-y-3">
+	                            <ul className="space-y-2 text-sm text-left">
+	                              <li className="flex items-center gap-2">
+	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                Identify knowledge gaps
+	                              </li>
+	                              <li className="flex items-center gap-2">
+	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                Quick assessment (30-45 minutes)
+	                              </li>
+	                              <li className="flex items-center gap-2">
+	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                Get priority recommendations
+	                              </li>
+	                            </ul>
+	                          </CardContent>
+	                        </Card>
+	                      </motion.div>
 
-                      {/* Test Mode Card */}
-                      <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Card
-                          className={`cursor-pointer transition-all border-2 h-full ${
-                            selectedMode === 'test'
-                              ? 'bg-[#c46685]/20 dark:bg-[#c46685]/10'
-                              : 'border-border'
-                          }`}
-                          style={selectedMode === 'test' ? { borderColor: '#c46685' } : {}}
-                          onClick={() => setSelectedMode('test')}
-                        >
-                          <CardHeader className="text-center">
-                            <CardTitle className="text-xl font-semibold">Test Mode</CardTitle>
-                            <CardDescription>
-                              Simulate real exam conditions
-                            </CardDescription>
-                          </CardHeader>
-                          <CardContent className="space-y-3">
-                            <ul className="space-y-2 text-sm text-left">
-                              <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                                See all answers only at the end
-                              </li>
-                              <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                                Timed exam with countdown
-                              </li>
-                              <li className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-                                Realistic EPPP exam experience
-                              </li>
-                            </ul>
-                          </CardContent>
-                          {selectedMode === 'test' && (
-                            <CardFooter>
-                              <Button
-                                onClick={() => handleGenerateExam(examType, 'test')}
-                                className="w-full px-8 py-6"
-                                size="lg"
-                              >
-                                Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Test Mode
-                              </Button>
-                            </CardFooter>
-                          )}
-                        </Card>
-                      </motion.div>
-                    </div>
-                  </motion.div>
-                  )}
-                </div>
-              )}
+	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                        <Card
+	                          className={`cursor-pointer transition-all border-2 ${
+	                            examType === 'practice'
+	                              ? 'bg-[#788c5d]/20 dark:bg-[#788c5d]/10'
+	                              : 'border-border'
+	                          }`}
+	                          style={examType === 'practice' ? { borderColor: '#788c5d' } : {}}
+	                          onClick={() => handleExamTypeSelect('practice')}
+	                        >
+	                          <CardHeader className="text-center">
+	                            <div className="flex items-center justify-center flex-col">
+	                              <div className="flex items-center gap-2 mb-2">
+	                                <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+	                                {recommendedExamType === 'practice' && (
+	                                  <Badge style={{ backgroundColor: '#788c5d' }}>Recommended</Badge>
+	                                )}
+	                              </div>
+	                              <CardDescription>225 questions</CardDescription>
+	                            </div>
+	                          </CardHeader>
+	                          <CardContent className="space-y-3">
+	                            <ul className="space-y-2 text-sm text-left">
+	                              <li className="flex items-center gap-2">
+	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                Comprehensive knowledge check
+	                              </li>
+	                              <li className="flex items-center gap-2">
+	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                Full exam preparation (4-5 hours)
+	                              </li>
+	                              <li className="flex items-center gap-2">
+	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                Includes experimental questions
+	                              </li>
+	                            </ul>
+	                          </CardContent>
+	                        </Card>
+	                      </motion.div>
+	                    </div>
+	                  </div>
+
+	                  {/* Step 2: Mode Selection (Study vs Test) */}
+	                  {examType && (
+	                    <motion.div
+	                      ref={step2Ref}
+	                      initial={{ opacity: 0, y: -20, scaleY: 0 }}
+	                      animate={{ opacity: 1, y: 0, scaleY: 1 }}
+	                      transition={{ duration: 0.4, ease: 'easeOut' }}
+	                      style={{ originY: 0 }}
+	                      className="max-w-4xl mx-auto"
+	                    >
+	                      <p className="text-sm font-semibold text-muted-foreground mb-4">Step 2: Select Mode</p>
+	                      {/* Mobile: carousel with peek */}
+	                      <div className="md:hidden">
+	                        <Carousel className="w-full" opts={{ align: 'start' }}>
+	                          <CarouselContent className="pl-2 sm:pl-4 gap-6">
+	                            <CarouselItem className="basis-[85%] sm:basis-[70%]">
+	                              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                                <Card
+	                                  className={`cursor-pointer transition-all border-2 h-full ${
+	                                    selectedMode === 'study'
+	                                      ? 'bg-[#d87758]/20 dark:bg-[#d87758]/10'
+	                                      : 'border-border'
+	                                  }`}
+	                                  style={selectedMode === 'study' ? { borderColor: '#d87758' } : {}}
+	                                  onClick={() => setSelectedMode('study')}
+	                                >
+	                                  <CardHeader className="text-center">
+	                                    <CardTitle className="text-xl font-semibold">Study Mode</CardTitle>
+	                                    <CardDescription>
+	                                      Learn at your own pace with immediate feedback
+	                                    </CardDescription>
+	                                  </CardHeader>
+	                                  <CardContent className="space-y-3">
+	                                    <ul className="space-y-2 text-sm text-left">
+	                                      <li className="flex items-center gap-2">
+	                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                        Correct answers turn green immediately
+	                                      </li>
+	                                      <li className="flex items-center gap-2">
+	                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                        Learn from mistakes with explanations
+	                                      </li>
+	                                      <li className="flex items-center gap-2">
+	                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                        No time pressure
+	                                      </li>
+	                                    </ul>
+	                                  </CardContent>
+	                                  {selectedMode === 'study' && (
+	                                    <CardFooter>
+	                                      <Button
+	                                        onClick={() => handleGenerateExam(examType, 'study')}
+	                                        className="w-full px-8 py-6"
+	                                        size="lg"
+	                                      >
+	                                        Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Study Mode
+	                                      </Button>
+	                                    </CardFooter>
+	                                  )}
+	                                </Card>
+	                              </motion.div>
+	                            </CarouselItem>
+
+	                            <CarouselItem className="basis-[85%] sm:basis-[70%]">
+	                              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                                <Card
+	                                  className={`cursor-pointer transition-all border-2 h-full ${
+	                                    selectedMode === 'test'
+	                                      ? 'bg-[#c46685]/20 dark:bg-[#c46685]/10'
+	                                      : 'border-border'
+	                                  }`}
+	                                  style={selectedMode === 'test' ? { borderColor: '#c46685' } : {}}
+	                                  onClick={() => setSelectedMode('test')}
+	                                >
+	                                  <CardHeader className="text-center">
+	                                    <CardTitle className="text-xl font-semibold">Test Mode</CardTitle>
+	                                    <CardDescription>
+	                                      Simulate real exam conditions
+	                                    </CardDescription>
+	                                  </CardHeader>
+	                                  <CardContent className="space-y-3">
+	                                    <ul className="space-y-2 text-sm text-left">
+	                                      <li className="flex items-center gap-2">
+	                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                        See all answers only at the end
+	                                      </li>
+	                                      <li className="flex items-center gap-2">
+	                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                        Timed exam with countdown
+	                                      </li>
+	                                      <li className="flex items-center gap-2">
+	                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                        Realistic EPPP exam experience
+	                                      </li>
+	                                    </ul>
+	                                  </CardContent>
+	                                  {selectedMode === 'test' && (
+	                                    <CardFooter>
+	                                      <Button
+	                                        onClick={() => handleGenerateExam(examType, 'test')}
+	                                        className="w-full px-8 py-6"
+	                                        size="lg"
+	                                      >
+	                                        Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Test Mode
+	                                      </Button>
+	                                    </CardFooter>
+	                                  )}
+	                                </Card>
+	                              </motion.div>
+	                            </CarouselItem>
+	                          </CarouselContent>
+	                          <CarouselPrevious
+	                            className="flex md:hidden h-8 w-8 rounded-full border border-border/40 left-2 top-1/2 -translate-y-1/2"
+	                            aria-label="Previous mode"
+	                          />
+	                          <CarouselNext
+	                            className="flex md:hidden h-8 w-8 rounded-full border border-border/40 right-2 top-1/2 -translate-y-1/2"
+	                            aria-label="Next mode"
+	                          />
+	                        </Carousel>
+	                      </div>
+
+	                      {/* Desktop: static side-by-side cards */}
+	                      <div className="hidden md:grid md:grid-cols-2 gap-6">
+	                        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                          <Card
+	                            className={`cursor-pointer transition-all border-2 h-full ${
+	                              selectedMode === 'study'
+	                                ? 'bg-[#d87758]/20 dark:bg-[#d87758]/10'
+	                                : 'border-border'
+	                            }`}
+	                            style={selectedMode === 'study' ? { borderColor: '#d87758' } : {}}
+	                            onClick={() => setSelectedMode('study')}
+	                          >
+	                            <CardHeader className="text-center">
+	                              <CardTitle className="text-xl font-semibold">Study Mode</CardTitle>
+	                              <CardDescription>
+	                                Learn at your own pace with immediate feedback
+	                              </CardDescription>
+	                            </CardHeader>
+	                            <CardContent className="space-y-3">
+	                              <ul className="space-y-2 text-sm text-left">
+	                                <li className="flex items-center gap-2">
+	                                  <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                  Correct answers turn green immediately
+	                                </li>
+	                                <li className="flex items-center gap-2">
+	                                  <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                  Learn from mistakes with explanations
+	                                </li>
+	                                <li className="flex items-center gap-2">
+	                                  <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                  No time pressure
+	                                </li>
+	                              </ul>
+	                            </CardContent>
+	                            {selectedMode === 'study' && (
+	                              <CardFooter>
+	                                <Button
+	                                  onClick={() => handleGenerateExam(examType, 'study')}
+	                                  className="w-full px-8 py-6"
+	                                  size="lg"
+	                                >
+	                                  Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Study Mode
+	                                </Button>
+	                              </CardFooter>
+	                            )}
+	                          </Card>
+	                        </motion.div>
+
+	                        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                          <Card
+	                            className={`cursor-pointer transition-all border-2 h-full ${
+	                              selectedMode === 'test'
+	                                ? 'bg-[#c46685]/20 dark:bg-[#c46685]/10'
+	                                : 'border-border'
+	                            }`}
+	                            style={selectedMode === 'test' ? { borderColor: '#c46685' } : {}}
+	                            onClick={() => setSelectedMode('test')}
+	                          >
+	                            <CardHeader className="text-center">
+	                              <CardTitle className="text-xl font-semibold">Test Mode</CardTitle>
+	                              <CardDescription>
+	                                Simulate real exam conditions
+	                              </CardDescription>
+	                            </CardHeader>
+	                            <CardContent className="space-y-3">
+	                              <ul className="space-y-2 text-sm text-left">
+	                                <li className="flex items-center gap-2">
+	                                  <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                  See all answers only at the end
+	                                </li>
+	                                <li className="flex items-center gap-2">
+	                                  <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                  Timed exam with countdown
+	                                </li>
+	                                <li className="flex items-center gap-2">
+	                                  <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+	                                  Realistic EPPP exam experience
+	                                </li>
+	                              </ul>
+	                            </CardContent>
+	                            {selectedMode === 'test' && (
+	                              <CardFooter>
+	                                <Button
+	                                  onClick={() => handleGenerateExam(examType, 'test')}
+	                                  className="w-full px-8 py-6"
+	                                  size="lg"
+	                                >
+	                                  Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} - Test Mode
+	                                </Button>
+	                              </CardFooter>
+	                            )}
+	                          </Card>
+	                        </motion.div>
+	                      </div>
+	                    </motion.div>
+	                  )}
+	                </div>
+	              )}
             </div>
 
             {isGenerating && (
@@ -1006,22 +1323,22 @@ export default function ExamGeneratorPage() {
               </div>
             )}
 
-            {error && (
-              <motion.div
+	            {error && (
+	              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="mb-8"
               >
-                <Alert variant="destructive">
-                  <AlertDescription className="space-y-3">
+	                <Alert variant="destructive">
+	                  <AlertDescription className="space-y-3">
                     <div>
                       <h3 className="font-semibold mb-1">Error</h3>
                       <p className="text-sm">{error}</p>
                     </div>
-                    <Button
-                      onClick={() => handleGenerateExam(examType || 'practice', selectedMode)}
-                      variant="outline"
-                      size="sm"
+	                    <Button
+	                      onClick={() => handleGenerateExam(examType || 'practice', selectedMode || 'study')}
+	                      variant="outline"
+	                      size="sm"
                     >
                       Try Again
                     </Button>
