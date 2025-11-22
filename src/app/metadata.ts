@@ -32,12 +32,28 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/agent-template-og.png`,
+        width: 1200,
+        height: 630,
+        alt: "thePsychology.ai - quickly pass the EPPP",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     creator: "@dillionverma",
+    images: [
+      {
+        url: `${siteConfig.url}/agent-template-og.png`,
+        width: 1200,
+        height: 630,
+        alt: "thePsychology.ai - quickly pass the EPPP",
+      },
+    ],
   },
   robots: {
     index: true,
