@@ -23,10 +23,11 @@ import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
 import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X, MessageSquare } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
-import { getTopPriorities } from '@/lib/priority-storage'
+import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { siteConfig } from '@/lib/config'
-import { SimplePromptInput } from '@/components/ui/simple-prompt-input'
+import { Switch } from '@/components/ui/switch'
+import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 
 export default function DashboardPage() {
@@ -61,6 +62,9 @@ export default function DashboardPage() {
   const [isPricingCarouselOpen, setIsPricingCarouselOpen] = useState(false)
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
   const [feedbackMessage, setFeedbackMessage] = useState('')
+  const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
+  const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
+  const [isAnonymousFeedback, setIsAnonymousFeedback] = useState(false)
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -68,35 +72,79 @@ export default function DashboardPage() {
     setIsPopoverOpen(false)
   }
 
-  const handleSendFeedback = async (message: string) => {
-    if (!message.trim() || !user) return
+  useEffect(() => {
+    if (!isFeedbackOpen) {
+      setFeedbackMessage('')
+      setFeedbackStatus(null)
+      setIsAnonymousFeedback(false)
+    }
+  }, [isFeedbackOpen])
+
+  const handleSendFeedback = async (message: string, screenshotFile?: File | null) => {
+    const trimmedMessage = message.trim()
+    if ((!trimmedMessage && !screenshotFile) || !user) return
+    const payloadMessage = trimmedMessage || (screenshotFile ? '[Screenshot attached]' : '')
+
+    setIsFeedbackSubmitting(true)
+    setFeedbackStatus(null)
+    setFeedbackMessage('')
 
     try {
-      // Save feedback to Supabase
-      const { error } = await supabase
-        .from('feedback')
-        .insert({
-          user_id: user.id,
-          message: message.trim(),
-          status: 'new'
-        })
+      let screenshotPath: string | null = null
+
+      if (screenshotFile) {
+        const extensionFromType = screenshotFile.type?.split('/').pop()
+        const extensionFromName = screenshotFile.name.split('.').pop()
+        const extension = extensionFromType || extensionFromName || 'png'
+        const uniqueSuffix = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
+        const storagePath = `${user.id}/${uniqueSuffix}.${extension}`
+        const { data: uploadData, error: uploadError } = await supabase.storage
+          .from('feedback-screenshot')
+          .upload(storagePath, screenshotFile, {
+            cacheControl: '3600',
+            upsert: false,
+            contentType: screenshotFile.type || undefined,
+          })
+
+        if (uploadError) {
+          throw uploadError
+        }
+
+        screenshotPath = uploadData?.path || storagePath
+      }
+
+      const pagePath = typeof window !== 'undefined' ? window.location.pathname : '/dashboard'
+      const { error } = await supabase.from('feedback').insert({
+        user_id: isAnonymousFeedback ? null : user.id,
+        user_email: isAnonymousFeedback ? null : user.email || null,
+        message: payloadMessage,
+        page_path: pagePath,
+        screenshot_path: screenshotPath,
+        is_anonymous: isAnonymousFeedback,
+        status: 'new',
+      })
 
       if (error) {
-        console.error('Failed to save feedback:', error)
-        setFeedbackMessage('Failed to send feedback. Please try again.')
-      } else {
-        console.log('Feedback successfully saved for user:', user.id)
-        setFeedbackMessage('Thank you for your feedback!')
+        throw error
       }
+
+      console.log('Feedback successfully saved for user:', user.id)
+      setFeedbackMessage('Thank you for your feedback!')
+      setFeedbackStatus('success')
+
+      setTimeout(() => {
+        setFeedbackMessage('')
+        setFeedbackStatus(null)
+        setIsFeedbackOpen(false)
+      }, 2000)
     } catch (err) {
       console.error('Error submitting feedback:', err)
       setFeedbackMessage('Failed to send feedback. Please try again.')
+      setFeedbackStatus('error')
+      throw err
+    } finally {
+      setIsFeedbackSubmitting(false)
     }
-
-    setTimeout(() => {
-      setFeedbackMessage('')
-      setIsFeedbackOpen(false)
-    }, 2000)
   }
 
   useEffect(() => {
@@ -183,7 +231,32 @@ export default function DashboardPage() {
   // Load priority recommendations from Supabase
   useEffect(() => {
     const loadPriorities = async () => {
-      if (!user?.id) return
+      const applyLocalPriorityFallback = () => {
+        const { diagnostic, practice } = getAllLatestRecommendations()
+        const available = [diagnostic, practice].filter(Boolean) as Array<{
+          timestamp: number
+          topPriorities: any[]
+        }>
+
+        if (available.length === 0) {
+          const localDiagnostic = getTopPriorities('diagnostic')
+          if (localDiagnostic && localDiagnostic.length > 0) {
+            setPriorityDomains(localDiagnostic)
+          } else {
+            setPriorityDomains([])
+          }
+          return
+        }
+
+        available.sort((a, b) => b.timestamp - a.timestamp)
+        const latest = available[0]
+        setPriorityDomains(latest.topPriorities || [])
+      }
+
+      if (!user?.id) {
+        applyLocalPriorityFallback()
+        return
+      }
 
       try {
         const { data, error } = await supabase
@@ -193,21 +266,13 @@ export default function DashboardPage() {
           .single()
 
         if (data && !error) {
-          setPriorityDomains(data.top_domains)
+          setPriorityDomains(data.top_domains || [])
         } else {
-          // Fallback to localStorage
-          const priorities = getTopPriorities('diagnostic')
-          if (priorities && priorities.length > 0) {
-            setPriorityDomains(priorities)
-          }
+          applyLocalPriorityFallback()
         }
       } catch (err) {
         console.error('Failed to load priorities from Supabase:', err)
-        // Fallback to localStorage
-        const priorities = getTopPriorities('diagnostic')
-        if (priorities && priorities.length > 0) {
-          setPriorityDomains(priorities)
-        }
+        applyLocalPriorityFallback()
       }
     }
 
@@ -539,7 +604,13 @@ export default function DashboardPage() {
           <ScrollArea className="w-full h-full pr-4">
             <div className="w-full space-y-2 opacity-60">
               {EPPP_DOMAINS.map((domain, idx) => {
-                const isPriority = priorityDomains.some(p => p.domainNumber === idx + 1)
+                const [prefix] = domain.id.split('-')
+                const domainNumber = parseInt(prefix, 10)
+                const hasOrgPsychPriority = priorityDomains.some((p: any) => p.type === 'org_psych')
+                const isOrgPsychDomain = domain.id === '3-5-6'
+                const isPriority = isOrgPsychDomain
+                  ? hasOrgPsychPriority
+                  : priorityDomains.some((p: any) => typeof p.domainNumber === 'number' && p.domainNumber === domainNumber)
                 return (
                   <div key={idx} className={`space-y-1 pr-2 ${isPriority ? 'opacity-100' : ''}`}>
                     <div className="flex items-center justify-between text-xs">
@@ -779,7 +850,7 @@ export default function DashboardPage() {
                 <InteractiveHoverButton
                   text="Change Tier"
                   hoverText="Upgrade"
-                  className="h-6 px-3 text-xs"
+                  size="sm"
                   onClick={() => setIsPricingCarouselOpen(true)}
                 />
               </div>
@@ -909,21 +980,41 @@ export default function DashboardPage() {
                     Send Feedback
                   </CardTitle>
                   <CardDescription>
-                    We'd love to hear your thoughts, suggestions, or report any issues
+                    Share quick thoughts, ideas, or issues.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {feedbackMessage ? (
-                    <div className="text-center py-8">
-                      <p className="text-green-600 dark:text-green-400 font-medium">{feedbackMessage}</p>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3 rounded-2xl border border-border/60 bg-muted/10 p-3">
+                      <Switch
+                        id="anonymous-feedback"
+                        checked={isAnonymousFeedback}
+                        onCheckedChange={setIsAnonymousFeedback}
+                      />
+                      <div>
+                        <label htmlFor="anonymous-feedback" className="text-sm font-semibold">
+                          Submit anonymously
+                        </label>
+                        <p className="text-xs text-muted-foreground">
+                          Feedback is stored without your name or email.
+                        </p>
+                      </div>
                     </div>
-                  ) : (
-                    <SimplePromptInput
-                      onSubmit={handleSendFeedback}
-                      placeholder="Type your feedback here..."
-                      disabled={false}
+                    <FeedbackInputBox
+                      onSend={handleSendFeedback}
+                      isLoading={isFeedbackSubmitting}
+                      placeholder="Share a quick note or screenshot..."
                     />
-                  )}
+                    {feedbackMessage && (
+                      <p
+                        className={`text-sm font-medium ${
+                          feedbackStatus === 'success' ? 'text-green-500' : 'text-red-400'
+                        }`}
+                      >
+                        {feedbackMessage}
+                      </p>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             </div>
