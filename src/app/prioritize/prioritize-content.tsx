@@ -32,6 +32,8 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { ExpandableDomainAnalysis } from '@/components/expandable-domain-analysis'
+import { getAllQuizResults } from '@/lib/quiz-results-storage'
+import { Progress } from '@/components/ui/progress'
 
 interface AnalysisData {
   overallScore?: number
@@ -84,6 +86,7 @@ export function PrioritizeContent() {
   const [isLoadingHistory, setIsLoadingHistory] = useState(false)
   const [historyError, setHistoryError] = useState<string | null>(null)
   const [selectedResultId, setSelectedResultId] = useState<string | null>(resultId)
+  const [topicScores, setTopicScores] = useState<Record<string, number>>({})
   const skipNextResultFetch = useRef(false)
   const historyPages = useMemo(() => {
     if (resultHistory.length === 0) return []
@@ -148,6 +151,24 @@ export function PrioritizeContent() {
   useEffect(() => {
     if (typeof window === 'undefined') return
     setStudyStats(calculateStudyStats())
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const results = getAllQuizResults()
+    const scores: Record<string, number> = {}
+
+    results.forEach((result) => {
+      if (!result?.topic) return
+      const normalized = result.topic.replace(/^[\d\s]+/, '').toLowerCase()
+      if (!normalized) return
+
+      const percentage =
+        result.totalQuestions > 0 ? (result.score / result.totalQuestions) * 100 : 0
+      scores[normalized] = percentage
+    })
+
+    setTopicScores(scores)
   }, [])
 
   // Fetch exam history for quick navigation
@@ -354,6 +375,12 @@ export function PrioritizeContent() {
         ? prev.filter((i) => i !== index)
         : [...prev, index]
     )
+  }
+
+  const getTopicScore = (topicName?: string | null) => {
+    if (!topicName) return null
+    const normalized = topicName.replace(/^[\d\s]+/, '').toLowerCase()
+    return typeof topicScores[normalized] === 'number' ? topicScores[normalized] : null
   }
 
   const parseAnalysis = () => {
@@ -732,11 +759,21 @@ export function PrioritizeContent() {
                           const isExpanded = expandedRecommendations.includes(idx)
                           const isOrgPsych = item.type === 'org_psych'
                           const displayName = isOrgPsych ? item.domainName : (item.domainName.split(': ')[1] || item.domainName)
-                          const topicCount = (item.recommendedTopics?.length || 0)
-                          const topicLabel = 'topic'
+                          const recommendedTopics = item.recommendedTopics || []
+                          const reviewTopics = recommendedTopics.filter((topic: any) => {
+                            const topicName = topic.topicName || topic.sourceFile
+                            const score = getTopicScore(topicName)
+                            return !(score !== null && score >= 70)
+                          })
+                          const topicCount = reviewTopics.length
+                          const topicLabel = topicCount === 1 ? 'topic' : 'topics'
+                          const descriptionText =
+                            topicCount > 0
+                              ? `${topicCount} ${topicLabel} to review`
+                              : 'All recommended topics completed'
 
                           return (
-                            <Card key={idx} className="overflow-hidden cursor-pointer hover:bg-accent/50 transition-colors">
+                            <Card key={idx} className="overflow-hidden hover:bg-accent/50 transition-colors">
                               <button
                                 onClick={() => toggleRecommendation(idx)}
                                 className="w-full text-left"
@@ -748,7 +785,7 @@ export function PrioritizeContent() {
                                       <div>
                                         <CardTitle className="text-base">{displayName}</CardTitle>
                                         <CardDescription>
-                                          {topicCount} {topicLabel}{topicCount !== 1 ? 's' : ''} to review
+                                          {descriptionText}
                                         </CardDescription>
                                       </div>
                                     </div>
@@ -776,55 +813,58 @@ export function PrioritizeContent() {
                                     style={{ overflow: 'hidden' }}
                                   >
                                     <CardContent className="pt-0">
-                                      {isOrgPsych ? (
-                                        item.recommendedTopics && item.recommendedTopics.length > 0 ? (
-                                          <ul className="text-sm space-y-2">
-                                            {item.recommendedTopics.map((topic: any, topicIdx: number) => {
-                                              // Prefer the human-readable topic name; fall back to sourceFile label if needed
-                                              const displayName = topic.topicName || topic.sourceFile
-                                              return (
-                                                <li key={topicIdx}>
+                                      {recommendedTopics.length > 0 ? (
+                                        <ul className="text-sm space-y-3">
+                                          {recommendedTopics.map((topic: any, topicIdx: number) => {
+                                            const topicName = topic.topicName || topic.sourceFile
+                                            const topicParam = topic.topicName || topic.sourceFile || ''
+                                            const topicScore = getTopicScore(topicName)
+                                            const isCompleted = topicScore !== null && topicScore >= 70
+                                            const progressValue =
+                                              topicScore !== null
+                                                ? Math.max(0, Math.min(100, Math.round(topicScore)))
+                                                : null
+
+                                            return (
+                                              <li key={topicIdx} className="space-y-1">
+                                                <div className="flex items-center justify-between gap-3">
                                                   <Link
-                                                    href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true&hasExamResults=true`}
-                                                    className="hover:underline"
-                                                    style={{ color: '#6a9bcc' }}
+                                                    href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topicParam)}&hasQuizResults=true&hasExamResults=true`}
+                                                    className={`hover:underline ${
+                                                      isCompleted ? 'text-muted-foreground' : 'text-foreground'
+                                                    }`}
+                                                    style={{ color: isCompleted ? undefined : '#6a9bcc' }}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                   >
-                                                    {displayName}
+                                                    {topicName}
                                                   </Link>
-                                                </li>
-                                              )
-                                            })}
-                                          </ul>
-                                        ) : (
-                                          <p className="text-sm text-muted-foreground">
-                                            Review all Organizational Psychology topics
-                                          </p>
-                                        )
-                                      ) : item.recommendedTopics && item.recommendedTopics.length > 0 ? (
-                                        <ul className="text-sm space-y-2">
-                                          {item.recommendedTopics.map((topic: any, topicIdx: number) => {
-                                            // Prefer the human-readable topic name; fall back to sourceFile label if needed
-                                            const displayName = topic.topicName || topic.sourceFile
-                                            return (
-                                              <li key={topicIdx}>
-                                                <Link
-                                                  href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topic.topicName)}&hasQuizResults=true&hasExamResults=true`}
-                                                  className="hover:underline"
-                                                  style={{ color: '#6a9bcc' }}
-                                                  target="_blank"
-                                                  rel="noopener noreferrer"
-                                                >
-                                                  {displayName}
-                                                </Link>
+                                                  {topicScore !== null && (
+                                                    <div className="flex items-center gap-2 text-xs">
+                                                      <span
+                                                        className={`font-semibold ${
+                                                          isCompleted ? 'text-emerald-500' : 'text-amber-500'
+                                                        }`}
+                                                      >
+                                                        {isCompleted
+                                                          ? `Completed (${Math.round(topicScore)}%)`
+                                                          : `${Math.round(topicScore)}%`}
+                                                      </span>
+                                                      {progressValue !== null && (
+                                                        <div className="w-20">
+                                                          <Progress value={progressValue} className="h-1" />
+                                                        </div>
+                                                      )}
+                                                    </div>
+                                                  )}
+                                                </div>
                                               </li>
                                             )
                                           })}
                                         </ul>
                                       ) : (
                                         <p className="text-sm text-muted-foreground">
-                                          Review all topics in this domain
+                                          {isOrgPsych ? 'Review all Organizational Psychology topics' : 'Review all topics in this domain'}
                                         </p>
                                       )}
                                     </CardContent>

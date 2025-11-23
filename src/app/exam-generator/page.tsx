@@ -389,37 +389,21 @@ export default function ExamGeneratorPage() {
         correctAnswers: score,
       })
 
-      // Generate priority recommendations if diagnostic exam
+      // Generate priority recommendations for diagnostic/practice exams
       let priorityData = null
-      if (examType === 'diagnostic') {
-        const { buildPriorityRecommendations, getAllDomainResults } = require('@/lib/priority-calculator')
+      if (examType === 'diagnostic' || examType === 'practice') {
+        const { calculatePriorities } = require('@/lib/priority-calculator')
         const { savePriorityRecommendation } = require('@/lib/priority-storage')
 
-        // Build wrong answers from selected answers (including skipped questions)
-        const wrongAnswers = questions
-          .map((q, idx) => {
-            // Only count scored questions
-            if (q.isScored === false) return null
+        // Use unified priority calculation so dashboard, topic-selector,
+        // and prioritizer all share the same priority model (including org psych).
+        const priorityResult = calculatePriorities({
+          questions,
+          selectedAnswers,
+          totalQuestions: scoredQuestions.length,
+        })
 
-            const answer = selectedAnswers[idx]
-
-            // Question was answered incorrectly OR skipped (no answer)
-            if (answer !== q.correct_answer) {
-              return {
-                questionId: idx + 1,
-                question: q.question,
-                selectedAnswer: answer || null, // null for skipped questions
-                correctAnswer: q.correct_answer,
-                relatedSections: [q.domain],
-                timestamp: Date.now(),
-              }
-            }
-            return null
-          })
-          .filter(Boolean)
-
-        const topPriorities = buildPriorityRecommendations(wrongAnswers, scoredQuestions.length)
-        const allResults = getAllDomainResults(wrongAnswers)
+        const { topPriorities, allResults } = priorityResult
 
         priorityData = {
           topPriorities,
@@ -428,7 +412,7 @@ export default function ExamGeneratorPage() {
 
         // Save to local storage
         savePriorityRecommendation({
-          examType: 'diagnostic',
+          examType: examType,
           examMode: mode || 'study',
           topPriorities,
           allResults,

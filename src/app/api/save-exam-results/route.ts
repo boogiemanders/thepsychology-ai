@@ -64,6 +64,32 @@ export async function POST(request: NextRequest) {
       } else {
         resultId = data.id
 
+        // Also upsert study_priorities so dashboard/topic-selector
+        // can immediately reflect the latest priority focus areas.
+        if (userId && topPriorities && Array.isArray(topPriorities)) {
+          try {
+            const topDomains = (topPriorities as any[]).slice(0, 3)
+            const { error: prioritiesError } = await supabase
+              .from('study_priorities')
+              .upsert(
+                {
+                  user_id: userId,
+                  top_domains: topDomains,
+                  exam_score: score,
+                  total_questions: totalQuestions,
+                  created_at: new Date().toISOString(),
+                },
+                { onConflict: 'user_id' },
+              )
+
+            if (prioritiesError) {
+              console.error('Error upserting study_priorities in save-exam-results:', prioritiesError)
+            }
+          } catch (prioritiesException) {
+            console.error('Exception upserting study_priorities in save-exam-results:', prioritiesException)
+          }
+        }
+
         // If assignmentId is provided, mark the assignment as completed
         if (assignmentId) {
           const { error: assignmentError } = await supabase
