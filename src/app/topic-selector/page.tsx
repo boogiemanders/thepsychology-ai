@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Clock, Play, X, AlertCircle } from 'lucide-react'
+import { ChevronDown, Clock, Play, X, AlertCircle, BadgeCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -30,6 +30,22 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
 
+// Free-tier topics: one curated topic per domain, backed by free-contentGPT
+const FREE_TOPICS_BY_DOMAIN: Record<string, string[]> = {
+  '1': ['Brain Regions/Functions – Cerebral Cortex'],
+  '2': ['Classical Conditioning'],
+  '3-social': ['Affiliation, Attraction, and Intimacy'],
+  '3-cultural': ['Cross-Cultural Issues – Identity Development Models'],
+  '4': ['Cognitive Development'],
+  '5-assessment': ['Clinical Tests'],
+  '5-diagnosis': ['Anxiety Disorders and Obsessive-Compulsive Disorder'],
+  '5-test': ['Item Analysis and Test Reliability'],
+  '6': ['Cognitive-Behavioral Therapies'],
+  '7': ['Correlation and Regression'],
+  '8': ['APA Ethics Code Over and Standards 1 & 2'],
+  '3-5-6': ['Satisfaction, Commitment, and Stress'],
+}
+
 interface RecentActivity {
   topic: string
   timestamp: number
@@ -56,6 +72,12 @@ const INTEREST_TAG_PALETTE = [
 const getInterestTagStyle = (index: number) =>
   INTEREST_TAG_PALETTE[index % INTEREST_TAG_PALETTE.length]
 
+const getRecentScoreColor = (score: number) => {
+  if (score > 70) return 'text-[#788c5d]' // Olive - strong/ready
+  if (score >= 40) return 'text-[#bdd1ca]' // Soft Sage - okay but needs refinement
+  return 'text-[#d87758]' // Coral - needs attention
+}
+
 function getTimeAgo(timestamp: number): string {
   const now = Date.now()
   const diff = now - timestamp
@@ -71,7 +93,9 @@ function getTimeAgo(timestamp: number): string {
 }
 
 export default function TopicSelectorPage() {
-  const { user } = useAuth()
+  const { user, userProfile } = useAuth()
+  const subscriptionTier = userProfile?.subscription_tier
+  const isFreeTier = subscriptionTier === 'free' || !subscriptionTier
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [currentInput, setCurrentInput] = useState<string>('')
   const [savedInterests, setSavedInterests] = useState<string[]>([])
@@ -360,6 +384,15 @@ export default function TopicSelectorPage() {
               </p>
             </div>
 
+            {isFreeTier && (
+              <div className="rounded-lg border border-dashed border-border/70 bg-muted/30 p-4 text-sm">
+                <p className="font-medium mb-1">You’re on the free plan.</p>
+                <p className="text-muted-foreground">
+                  You have access to one curated topic in each domain. Upgrade to Pro to unlock all topics and advanced tools.
+                </p>
+              </div>
+            )}
+
             <div className="flex-1 max-w-2xl">
               <div className="relative">
                 <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
@@ -460,9 +493,7 @@ export default function TopicSelectorPage() {
                 <div className="space-y-2">
                   {recentActivities.map((activity, idx) => {
                     const timeAgo = getTimeAgo(activity.timestamp)
-                    const scoreColor = activity.score >= 80 ? 'text-green-500' :
-                                      activity.score >= 60 ? 'text-yellow-500' :
-                                      'text-orange-500'
+                    const scoreColor = getRecentScoreColor(activity.score)
 
                     return (
                       <motion.div
@@ -512,12 +543,23 @@ export default function TopicSelectorPage() {
                   className="p-4 hover:bg-accent transition-colors text-left w-full"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-sm font-medium">{domain.name}</h3>
-                      {recommendedDomainIds.includes(domain.id) && (
-                        <Badge variant="outline" className="text-xs">Recommended</Badge>
-                      )}
-                    </div>
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-sm font-medium">{domain.name}</h3>
+                        {recommendedDomainIds.includes(domain.id) && (
+                          <Badge
+                            variant="secondary"
+                            className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
+                            style={{
+                              backgroundColor: '#d87758',
+                              borderColor: '#d87758',
+                              color: '#ffffff',
+                            }}
+                          >
+                            <BadgeCheck className="h-3 w-3" />
+                            Recommended
+                          </Badge>
+                        )}
+                      </div>
                     <div className="flex items-center gap-3">
                       <span className="text-xs text-muted-foreground">{domain.progress}%</span>
                       <motion.div
@@ -551,26 +593,62 @@ export default function TopicSelectorPage() {
                     <CardContent className="pt-4 pb-4 space-y-3">
                       {domain.topics.map((topic) => {
                         const isPriority = priorityTopicIds.includes(topic.id)
+                        const isFreeTopic =
+                          !isFreeTier ||
+                          (FREE_TOPICS_BY_DOMAIN[domain.id]?.includes(topic.name) ?? false)
+
+                        if (isFreeTopic) {
+                          return (
+                            <Link
+                              key={topic.name}
+                              href={`/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
+                              className="block hover:opacity-75 transition-opacity"
+                            >
+                              <div className="flex items-center justify-between mb-1">
+                                <div className="flex items-center gap-2 flex-1">
+                                  <span className="text-sm">{topic.name}</span>
+                                  {isPriority && (
+                                    <Badge
+                                      variant="outline"
+                                      className="text-xs flex items-center gap-1"
+                                      style={{ backgroundColor: '#cbc9db20', color: '#cbc9db', borderColor: '#cbc9db' }}
+                                    >
+                                      <AlertCircle className="w-3 h-3" />
+                                      Focus
+                                    </Badge>
+                                  )}
+                                </div>
+                                <span className="text-xs text-muted-foreground flex-shrink-0">
+                                  {topic.progress}%
+                                </span>
+                              </div>
+                              <Progress value={topic.progress} className="h-1.5" />
+                            </Link>
+                          )
+                        }
+
+                        // Locked (Pro-only) topic for free tier
                         return (
-                          <Link
+                          <div
                             key={topic.name}
-                            href={`/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
-                            className="block hover:opacity-75 transition-opacity"
+                            className="block opacity-70 cursor-not-allowed"
                           >
                             <div className="flex items-center justify-between mb-1">
                               <div className="flex items-center gap-2 flex-1">
                                 <span className="text-sm">{topic.name}</span>
-                                {isPriority && (
-                                  <Badge variant="outline" className="text-xs flex items-center gap-1" style={{ backgroundColor: '#cbc9db20', color: '#cbc9db', borderColor: '#cbc9db' }}>
-                                    <AlertCircle className="w-3 h-3" />
-                                    Focus
-                                  </Badge>
-                                )}
+                                <Badge
+                                  variant="outline"
+                                  className="text-[10px] uppercase tracking-wide"
+                                >
+                                  Pro
+                                </Badge>
                               </div>
-                              <span className="text-xs text-muted-foreground flex-shrink-0">{topic.progress}%</span>
+                              <span className="text-xs text-muted-foreground flex-shrink-0">
+                                {topic.progress}%
+                              </span>
                             </div>
                             <Progress value={topic.progress} className="h-1.5" />
-                          </Link>
+                          </div>
                         )
                       })}
                     </CardContent>

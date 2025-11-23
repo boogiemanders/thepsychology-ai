@@ -1,5 +1,4 @@
 import { readFileSync, readdirSync, existsSync } from 'fs'
-import { join } from 'path'
 import path from 'path'
 
 export interface TopicContentMetadata {
@@ -91,9 +90,13 @@ function slugifyTopicName(name: string): string {
  * - Always fall back to scanning all known domain folders so links that
  *   omit the domain (e.g., from quiz results) still work.
  */
-function resolveTopicFilePath(topicName: string, domain?: string | null): string | null {
+function resolveTopicFilePath(
+  topicName: string,
+  domain?: string | null,
+  rootDirName: string = 'topic-content-v3-test',
+): string | null {
   const slug = slugifyTopicName(topicName)
-  const rootDir = path.join(process.cwd(), 'topic-content-v3-test')
+  const rootDir = path.join(process.cwd(), rootDirName)
 
   // Build ordered list of folders to search: requested domain (if any) first,
   // then all other known domain folders.
@@ -255,6 +258,54 @@ export function loadFullTopicContent(
     return content
   } catch (error) {
     console.error(`Failed to load full topic content for ${topicName}:`, error)
+    return null
+  }
+}
+
+/**
+ * Load pre-generated topic content specifically from the free-contentGPT folder.
+ * Used for free-tier users so they only see the curated free topics.
+ */
+export function loadFreeTopicContent(
+  topicName: string,
+  domain: string
+): TopicContent | null {
+  try {
+    const filePath = resolveTopicFilePath(topicName, domain, 'free-contentGPT')
+    const domainFolder = getDomainFolder(domain)
+    const slug = slugifyTopicName(topicName)
+
+    if (!filePath) {
+      console.error(
+        `[Topic Content Manager] ❌ Could not resolve FREE file for topic "${topicName}" in domain "${domain}"`
+      )
+      return null
+    }
+
+    console.log(`[Topic Content Manager] Attempting to load FREE content from: ${filePath}`)
+    console.log(`[Topic Content Manager] Working directory: ${process.cwd()}`)
+    console.log(`[Topic Content Manager] Topic: "${topicName}", Domain: "${domain}"`)
+    console.log(`[Topic Content Manager] Computed slug: "${slug}", Domain folder: "${domainFolder}"`)
+
+    const fileContent = readFileSync(filePath, 'utf-8')
+    const { metadata, content } = parseFrontmatter(fileContent)
+
+    const baseContent = content.replace(/\n*## {{PERSONALIZED_EXAMPLES}}.*?(?=##|$)/s, '')
+
+    console.log(`[Topic Content Manager] ✅ Successfully loaded FREE content for ${topicName}`)
+
+    return {
+      metadata: metadata as TopicContentMetadata,
+      content,
+      baseContent: baseContent.trim(),
+    }
+  } catch (error) {
+    console.error(`[Topic Content Manager] ❌ Failed to load FREE topic content for ${topicName}:`, error)
+    console.error(`[Topic Content Manager] Error details:`, {
+      name: (error as Error).name,
+      message: (error as Error).message,
+      code: (error as any).code,
+    })
     return null
   }
 }

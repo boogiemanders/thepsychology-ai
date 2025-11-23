@@ -30,6 +30,11 @@ import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 
+type PaidPlanName = 'Pro' | 'Pro + Coaching'
+
+const isPaidPlan = (name: string): name is PaidPlanName =>
+  name === 'Pro' || name === 'Pro + Coaching'
+
 export default function DashboardPage() {
   const router = useRouter()
   const { user, userProfile, loading, signOut, refreshProfile } = useAuth()
@@ -56,6 +61,7 @@ export default function DashboardPage() {
   const [studyStats, setStudyStats] = useState(calculateStudyStats())
   const [dailyGoal, setDailyGoalState] = useState(getDailyGoal())
   const [todayQuizCount, setTodayQuizCount] = useState(0)
+  const [checkoutPlan, setCheckoutPlan] = useState<PaidPlanName | null>(null)
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
   const [priorityDomains, setPriorityDomains] = useState<any[]>([])
   const [hasPausedExam, setHasPausedExam] = useState(false)
@@ -146,6 +152,45 @@ export default function DashboardPage() {
       setIsFeedbackSubmitting(false)
     }
   }
+
+  const handleStripeCheckout = useCallback(async (planName: PaidPlanName) => {
+    if (!user?.id || !user?.email) {
+      router.push('/login')
+      return
+    }
+
+    try {
+      setCheckoutPlan(planName)
+      const response = await fetch('/api/stripe/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          planName,
+          userId: user.id,
+          userEmail: user.email,
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.error || 'Failed to start checkout')
+      }
+
+      const data = await response.json()
+      if (data?.url) {
+        window.location.href = data.url
+      } else {
+        throw new Error('Missing checkout URL')
+      }
+    } catch (err) {
+      console.error('Stripe checkout error:', err)
+      alert('Could not start checkout. Please try again.')
+    } finally {
+      setCheckoutPlan(null)
+    }
+  }, [router, user?.email, user?.id])
 
   useEffect(() => {
     setMounted(true)
@@ -939,12 +984,19 @@ export default function DashboardPage() {
                               <Button
                                 className={tier.buttonColor}
                                 onClick={() => {
-                                  // TODO: Save tier to user profile
-                                  console.log('Selected tier:', tier.name)
-                                  setIsPricingCarouselOpen(false)
+                                  if (isPaidPlan(tier.name)) {
+                                    handleStripeCheckout(tier.name)
+                                  } else {
+                                    router.push('/#get-started')
+                                  }
                                 }}
+                                disabled={isPaidPlan(tier.name) && checkoutPlan === tier.name}
                               >
-                                {tier.buttonText}
+                                {isPaidPlan(tier.name)
+                                  ? checkoutPlan === tier.name
+                                    ? 'Redirecting...'
+                                    : `Upgrade to ${tier.name}`
+                                  : tier.buttonText}
                               </Button>
                             </CardContent>
                           </Card>

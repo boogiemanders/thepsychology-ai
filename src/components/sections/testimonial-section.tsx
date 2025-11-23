@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { SectionHeader } from "@/components/section-header";
 import { SocialProofTestimonials } from "@/components/testimonial-scroll";
 import { siteConfig } from "@/lib/config";

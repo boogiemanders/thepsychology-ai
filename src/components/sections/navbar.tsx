@@ -139,6 +139,9 @@ export function Navbar() {
                     onClick={async () => {
                       try {
                         await signOut()
+                        if (typeof window !== "undefined") {
+                          window.location.href = "/"
+                        }
                       } catch (err) {
                         console.error('Logout failed:', err)
                       }
@@ -257,6 +260,9 @@ export function Navbar() {
                       onClick={async () => {
                         try {
                           await signOut()
+                          if (typeof window !== "undefined") {
+                            window.location.href = "/"
+                          }
                         } catch (err) {
                           console.error('Logout failed:', err)
                         }

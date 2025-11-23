@@ -53,7 +53,7 @@ const GENERIC_SECTION_NAMES = new Set([
 
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
-  const { user } = useAuth()
+  const { user, userProfile } = useAuth()
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
   const hasExamResults = searchParams.get('hasExamResults') === 'true'
@@ -330,6 +330,7 @@ export function TopicTeacherContent() {
 
   const initializeLesson = async () => {
     if (!topic) return
+    const subscriptionTier = userProfile?.subscription_tier ?? 'free'
 
     try {
       setIsLoading(true)
@@ -346,6 +347,7 @@ export function TopicTeacherContent() {
           messageHistory: [],
           isInitial: true,
           userInterests,
+          subscriptionTier,
         }),
       })
 
@@ -409,6 +411,7 @@ export function TopicTeacherContent() {
   // Refresh metaphors when interests change (after initial load)
   const refreshMetaphors = async (newInterests: string) => {
     if (!topic || !initialized) return
+    const subscriptionTier = userProfile?.subscription_tier ?? 'free'
 
     // Create cache key from topic + interests
     const cacheKey = `${topic}__${newInterests}`
@@ -453,6 +456,7 @@ export function TopicTeacherContent() {
           messageHistory: [],
           isInitial: true,
           userInterests: newInterests,
+          subscriptionTier,
         }),
       })
 
@@ -506,6 +510,7 @@ export function TopicTeacherContent() {
 
   const handleSendMessage = async (userMessage: string) => {
     if (!userMessage.trim() || isLoading || !topic) return
+    const subscriptionTier = userProfile?.subscription_tier ?? 'free'
 
     // Add user message immediately
     setMessages((prev) => [...prev, { role: 'user', content: userMessage }])
@@ -529,6 +534,7 @@ export function TopicTeacherContent() {
           userMessage,
           isInitial: false,
           userInterests,
+          subscriptionTier,
         }),
       })
 
@@ -692,8 +698,15 @@ export function TopicTeacherContent() {
                       const newInterests = savedInterests.filter((_, i) => i !== index)
                       setSavedInterests(newInterests)
                       if (user?.id) {
-                        if (newInterests.length > 0) {
-                          updateUserCurrentInterest(user.id, newInterests.join(', '))
+                        const joined = newInterests.join(', ')
+                        // Persist to Supabase (best-effort) and localStorage
+                        updateUserCurrentInterest(user.id, joined)
+                        if (typeof window !== 'undefined') {
+                          if (joined) {
+                            localStorage.setItem(`interests_${user.id}`, joined)
+                          } else {
+                            localStorage.removeItem(`interests_${user.id}`)
+                          }
                         }
                       }
                     }}
@@ -718,7 +731,12 @@ export function TopicTeacherContent() {
                     const updatedInterests = [...savedInterests, newInterest]
                     setSavedInterests(updatedInterests)
                     setCurrentInterestInput('')
-                    updateUserCurrentInterest(user.id, updatedInterests.join(', '))
+                    const joined = updatedInterests.join(', ')
+                    // Persist to Supabase (best-effort) and localStorage
+                    updateUserCurrentInterest(user.id, joined)
+                    if (typeof window !== 'undefined') {
+                      localStorage.setItem(`interests_${user.id}`, joined)
+                    }
                   }
                 }}
                 className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { loadTopicContent, replaceMetaphors, stripMetaphorMarkers } from '@/lib/topic-content-manager'
+import { loadTopicContent, loadFreeTopicContent, replaceMetaphors, stripMetaphorMarkers } from '@/lib/topic-content-manager'
 import { loadReferenceContent } from '@/lib/eppp-reference-loader'
 import OpenAI from 'openai'
 
@@ -51,7 +51,15 @@ interface Message {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { topic, domain, messageHistory = [], userMessage, isInitial, userInterests } = body
+    const {
+      topic,
+      domain,
+      messageHistory = [],
+      userMessage,
+      isInitial,
+      userInterests,
+      subscriptionTier,
+    } = body
 
     if (!topic) {
       return NextResponse.json(
@@ -64,11 +72,16 @@ export async function POST(request: NextRequest) {
     let lessonContent = ''
     let baseContentOnly = ''
 
+    const tier: string | undefined = subscriptionTier
+    const isFreeTier = tier === 'free' || !tier
+
     if (isInitial) {
       // Initial lesson request - use pre-generated content
       try {
         console.log(`[Topic Teacher] Loading topic: "${topic}", domain: "${domain}"`)
-        const preGeneratedContent = loadTopicContent(topic, domain)
+        const preGeneratedContent = isFreeTier
+          ? loadFreeTopicContent(topic, domain)
+          : loadTopicContent(topic, domain)
 
         if (preGeneratedContent) {
           console.log(`[Topic Teacher] ✅ Found pre-generated content for ${topic}`)
@@ -92,13 +105,18 @@ export async function POST(request: NextRequest) {
             lessonContent = stripMetaphorMarkers(lessonContent)
           }
         } else {
-          // No pre-generated content found - return error
+          // No pre-generated content found
           console.error(`[Topic Teacher] ❌ No pre-generated content for ${topic}`)
           console.error(`[Topic Teacher] Topic slug: ${topic.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
           console.error(`[Topic Teacher] Domain ID: ${domain}`)
+
+          const message = isFreeTier
+            ? `This topic is part of the full Pro library. Upgrade to Pro to unlock this lesson.`
+            : `No pre-generated content found for topic: ${topic}. Please ensure the content exists in topic-content-v3-test.`
+
           return NextResponse.json(
-            { error: `No pre-generated content found for topic: ${topic}. Please ensure the content exists in topic-content-v3-test.` },
-            { status: 404 }
+            { error: message },
+            { status: isFreeTier ? 403 : 404 }
           )
         }
       } catch (error) {

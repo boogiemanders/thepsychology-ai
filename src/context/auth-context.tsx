@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 import { User as SupabaseUser } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'
+import { handleUserSwitch } from '@/lib/local-study-storage'
 
 interface UserProfile {
   id: string
@@ -11,6 +12,7 @@ interface UserProfile {
   subscription_tier: 'free' | 'basic' | 'pro' | 'pro_coaching'
   exam_date?: string
   created_at: string
+  subscription_started_at?: string
 }
 
 interface AuthContextType {
@@ -45,6 +47,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
 
       setUser(session?.user ?? null)
+      handleUserSwitch(session?.user?.id ?? null)
 
       if (session?.user) {
         // Fetch user profile on auth change (don't await since it can hang)
@@ -73,6 +76,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 email: session.user.email || '',
                 subscription_tier: 'free',
                 created_at: new Date().toISOString(),
+                subscription_started_at: new Date().toISOString(),
               }
             }
             return prev

@@ -200,6 +200,21 @@ export async function POST(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
     const examType = searchParams.get('type') || 'practice' // 'diagnostic' or 'practice'
+    const source = searchParams.get('source') || 'default'
+
+    // Free-tier exams: always load from free-examsGPT and never call Anthropic
+    if (source === 'free') {
+      try {
+        const examData = loadFreeExamFromGpt(examType === 'diagnostic' ? 'diagnostic' : 'practice')
+        return NextResponse.json(examData)
+      } catch (freeError) {
+        console.error('[Exam Generator] Failed to load free exam from free-examsGPT:', freeError)
+        return NextResponse.json(
+          { error: 'Failed to load free exam' },
+          { status: 500 },
+        )
+      }
+    }
 
     // For diagnostic exams, prefer pre-generated GPT exams from diagnosticGPT
     if (examType === 'diagnostic') {
@@ -275,6 +290,102 @@ export async function POST(request: NextRequest) {
       { error: 'Failed to generate exam' },
       { status: 500 }
     )
+  }
+}
+
+/**
+ * Load a free exam from the free-examsGPT folder.
+ * For now, free exams are JSON files in free-examsGPT generated from free-questionsGPT.
+ * This is used for the "free" subscription tier so they never hit Anthropic
+ * or the full examsGPT pool.
+ */
+function loadFreeExamFromGpt(examType: 'diagnostic' | 'practice') {
+  const freeDir = join(process.cwd(), 'free-examsGPT')
+  if (!existsSync(freeDir)) {
+    throw new Error(`free-examsGPT directory not found at ${freeDir}`)
+  }
+
+  // Prefer type-specific patterns if available, otherwise fall back to any JSON file
+  let files = readdirSync(freeDir).filter((name) => name.endsWith('.json'))
+
+  const typePrefix =
+    examType === 'practice'
+      ? 'practice-exam-'
+      : 'diagnostic-exam-'
+
+  const typeSpecific = files.filter((name) => name.startsWith(typePrefix))
+  if (typeSpecific.length > 0) {
+    files = typeSpecific
+  }
+
+  if (files.length === 0) {
+    throw new Error('No exam JSON files found in free-examsGPT')
+  }
+
+  const chosen = files[Math.floor(Math.random() * files.length)]
+  const fullPath = join(freeDir, chosen)
+
+  const raw = readFileSync(fullPath, 'utf-8')
+  const parsed = JSON.parse(raw)
+  const questions = Array.isArray(parsed.questions) ? parsed.questions : []
+
+  const mappedQuestions = questions.map((q: any, idx: number) => {
+    const domainNumber =
+      typeof q.domain === 'number'
+        ? q.domain
+        : typeof q.domain === 'string'
+        ? parseInt(q.domain, 10)
+        : undefined
+
+    const questionId = typeof q.id === 'number' ? q.id : idx + 1
+    const options = Array.isArray(q.options) ? q.options : []
+    const sourceFile = q.sourceFile ?? q.source_file
+    const sourceFolder = q.sourceFolder ?? q.source_folder
+    const explicitOrgPsych =
+      typeof q.isOrgPsych === 'boolean'
+        ? q.isOrgPsych
+        : typeof q.is_org_psych === 'boolean'
+        ? q.is_org_psych
+        : undefined
+
+    const isOrgPsych = inferIsOrgPsych({
+      explicitFlag: explicitOrgPsych,
+      sourceFile,
+      sourceFolder,
+    })
+
+    const isScored =
+      typeof q.scored === 'boolean'
+        ? q.scored
+        : typeof q.isScored === 'boolean'
+        ? q.isScored
+        : true
+
+    const mapped = {
+      id: questionId,
+      question: q.stem ?? q.question ?? '',
+      options,
+      correct_answer: q.answer ?? q.correct_answer ?? '',
+      explanation: q.explanation ?? q.rationale ?? '',
+      domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
+      difficulty:
+        q.difficulty === 'easy' || q.difficulty === 'medium' || q.difficulty === 'hard'
+          ? q.difficulty
+          : 'medium',
+      isScored,
+      knId: q.kn ?? q.knId,
+      type: q.type ?? (isScored ? 'standard' : 'experimental'),
+      source_file: sourceFile,
+      source_folder: sourceFolder,
+      is_org_psych: isOrgPsych,
+    }
+
+    return attachRelatedSections(mapped)
+  })
+
+  return {
+    questions: mappedQuestions,
+    metadata: parsed.meta ?? null,
   }
 }
 

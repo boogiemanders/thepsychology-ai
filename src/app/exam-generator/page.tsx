@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
-import { Clock } from 'lucide-react'
+import { Clock, BadgeCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
@@ -13,6 +13,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { motion } from 'motion/react'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
+import { useAuth } from '@/context/auth-context'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -47,6 +48,9 @@ interface Question {
 }
 
 export default function ExamGeneratorPage() {
+  const { userProfile } = useAuth()
+  const subscriptionTier = userProfile?.subscription_tier
+  const isFreeTier = subscriptionTier === 'free' || !subscriptionTier
   const [isGenerating, setIsGenerating] = useState(false)
   const [questions, setQuestions] = useState<Question[]>([])
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -69,6 +73,24 @@ export default function ExamGeneratorPage() {
   const [isPaused, setIsPaused] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
   const [shouldScrollToStep2, setShouldScrollToStep2] = useState(false)
+  const diagnosticQuestionLabel = isFreeTier ? '≈60 questions' : '71 questions'
+  const diagnosticHighlights = isFreeTier
+    ? [
+        'Covers all EPPP domains',
+        'Fast 60-minute readiness check',
+        'See exact focus areas to study next',
+      ]
+    : [
+        'Identify knowledge gaps',
+        'Quick assessment (30-45 minutes)',
+        'Get priority recommendations',
+      ]
+  const practiceHighlights = [
+    'Comprehensive knowledge check',
+    'Full exam preparation (4-5 hours)',
+    'Includes experimental questions',
+  ]
+  const practiceLockMessage = 'Upgrade to Pro to unlock the complete 225-question practice exam.'
   const questionContentRef = useRef<HTMLDivElement | null>(null)
   const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
   const step2Ref = useRef<HTMLDivElement | null>(null)
@@ -516,6 +538,10 @@ export default function ExamGeneratorPage() {
 
   const handleExamTypeSelect = useCallback(
     (type: 'diagnostic' | 'practice') => {
+      if (isFreeTier && type === 'practice') {
+        setError('Practice exams are part of the Pro plan. Upgrade to unlock the full 225-question simulation.')
+        return
+      }
       if (examType === type) {
         scrollToStep2()
         return
@@ -529,7 +555,7 @@ export default function ExamGeneratorPage() {
         setShouldScrollToStep2(true)
       }
     },
-    [examType, scrollToStep2],
+    [examType, isFreeTier, scrollToStep2],
   )
 
   useEffect(() => {
@@ -552,6 +578,14 @@ export default function ExamGeneratorPage() {
       setShowExplanation(false)
     }
   }, [currentQuestion])
+
+  const handlePracticeCardClick = () => {
+    if (isFreeTier) {
+      setError(practiceLockMessage)
+      return
+    }
+    handleExamTypeSelect('practice')
+  }
 
   // Keyboard shortcuts for exam navigation
   useEffect(() => {
@@ -604,9 +638,15 @@ export default function ExamGeneratorPage() {
 	// Initialize recommended defaults from exam history
 	useEffect(() => {
 		const defaults = getRecommendedDefaults()
-		setRecommendedExamType(defaults.examType)
+    if (isFreeTier) {
+      setRecommendedExamType('diagnostic')
+      setExamType('diagnostic')
+    } else {
+      setRecommendedExamType(defaults.examType)
+      setExamType(defaults.examType)
+    }
 		setRecommendedMode(defaults.examMode)
-	}, [])
+	}, [isFreeTier])
 
   // Get current user ID for pre-generation
   useEffect(() => {
@@ -683,6 +723,11 @@ export default function ExamGeneratorPage() {
   const isTimeWarning = timeRemaining > 0 && timeRemaining <= 300
 
   const handleGenerateExam = async (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
+    if (isFreeTier && chosenExamType !== 'diagnostic') {
+      setError('Practice exams are part of the Pro plan. Upgrade to unlock the full 225-question simulation.')
+      return
+    }
+
     try {
       const startTime = performance.now()
       console.log(`[Exam Gen] Starting exam generation for ${chosenExamType}...`)
@@ -700,8 +745,9 @@ export default function ExamGeneratorPage() {
 
       let examData = null
 
-      // Try to fetch Git-backed exam if user is authenticated
-      if (userId) {
+      // For paid tiers, try to fetch Git-backed exams first.
+      // Free tier always uses free-examsGPT and skips assignments.
+      if (!isFreeTier && userId) {
         setIsLoadingPreGen(true)
         try {
           console.time('[Exam Gen] Assignment API call')
@@ -734,7 +780,12 @@ export default function ExamGeneratorPage() {
         console.log('[Exam Gen] Generating exam on-demand (this may take 30-60 seconds)')
         console.time('[Exam Gen] On-demand generation')
         let jsonContent = ''
-        const response = await fetch(`/api/exam-generator?type=${chosenExamType}`, {
+        const params = new URLSearchParams()
+        params.set('type', chosenExamType)
+        if (isFreeTier) {
+          params.set('source', 'free')
+        }
+        const response = await fetch(`/api/exam-generator?${params.toString()}`, {
           method: 'POST',
         })
 
@@ -887,6 +938,11 @@ export default function ExamGeneratorPage() {
 	                  {/* Step 1: Exam Type Selection (Diagnostic vs Practice) */}
 	                  <div className="max-w-2xl mx-auto mb-8">
 	                    <p className="text-sm font-semibold text-muted-foreground mb-4">Step 1: Select Exam Type</p>
+                    {isFreeTier && (
+                      <div className="mb-4 text-xs text-muted-foreground">
+                        Practice exams are included in the Pro plan. Your free trial includes the diagnostic experience below.
+                      </div>
+                    )}
 	                    {/* Mobile: carousel with peek */}
 	                    <div className="md:hidden">
 	                      <Carousel className="w-full" opts={{ align: 'start' }}>
@@ -904,29 +960,34 @@ export default function ExamGeneratorPage() {
 	                              >
 	                                <CardHeader className="text-center">
 	                                  <div className="flex items-center justify-center flex-col">
-	                                    <div className="flex items-center gap-2 mb-2">
-	                                      <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
-	                                      {recommendedExamType === 'diagnostic' && (
-	                                        <Badge style={{ backgroundColor: '#bdd1ca' }}>Recommended</Badge>
-	                                      )}
-	                                    </div>
-	                                    <CardDescription>71 questions</CardDescription>
+		                              <div className="flex items-center gap-2 mb-2">
+		                                <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+		                                {recommendedExamType === 'diagnostic' && (
+		                                  <Badge
+		                                    variant="secondary"
+		                                    className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+		                                    style={{
+		                                      backgroundColor: '#bdd1ca',
+		                                      borderColor: '#bdd1ca',
+		                                      color: '#1a2b24',
+		                                    }}
+		                                  >
+		                                    <BadgeCheck className="h-3 w-3" />
+		                                    Recommended
+		                                  </Badge>
+		                                )}
+		                              </div>
+	                                    <CardDescription>{diagnosticQuestionLabel}</CardDescription>
 	                                  </div>
 	                                </CardHeader>
 	                                <CardContent className="space-y-3">
 	                                  <ul className="space-y-2 text-sm text-left">
-	                                    <li className="flex items-center gap-2">
-	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                      Identify knowledge gaps
-	                                    </li>
-	                                    <li className="flex items-center gap-2">
-	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                      Quick assessment (30-45 minutes)
-	                                    </li>
-	                                    <li className="flex items-center gap-2">
-	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                      Get priority recommendations
-	                                    </li>
+                                      {diagnosticHighlights.map((highlight, idx) => (
+                                        <li key={idx} className="flex items-center gap-2">
+                                          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
+                                          {highlight}
+                                        </li>
+                                      ))}
 	                                  </ul>
 	                                </CardContent>
 	                              </Card>
@@ -936,40 +997,62 @@ export default function ExamGeneratorPage() {
 	                          <CarouselItem className="basis-[85%] sm:basis-[70%]">
 	                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
 	                              <Card
-	                                className={`cursor-pointer transition-all border-2 h-full ${
+	                                className={`transition-all border-2 h-full ${
 	                                  examType === 'practice'
 	                                    ? 'bg-[#788c5d]/20 dark:bg-[#788c5d]/10'
 	                                    : 'border-border'
-	                                }`}
+	                                } ${isFreeTier ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}`}
 	                                style={examType === 'practice' ? { borderColor: '#788c5d' } : {}}
-	                                onClick={() => handleExamTypeSelect('practice')}
+	                                onClick={handlePracticeCardClick}
 	                              >
 	                                <CardHeader className="text-center">
 	                                  <div className="flex items-center justify-center flex-col">
-	                                    <div className="flex items-center gap-2 mb-2">
-	                                      <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
-	                                      {recommendedExamType === 'practice' && (
-	                                        <Badge style={{ backgroundColor: '#788c5d' }}>Recommended</Badge>
-	                                      )}
-	                                    </div>
+		                              <div className="flex items-center gap-2 mb-2">
+		                                <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+		                                {isFreeTier ? (
+                                      <Badge
+                                        variant="secondary"
+                                        className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                        style={{
+                                          backgroundColor: '#1f1f1f',
+                                          borderColor: '#1f1f1f',
+                                          color: '#ffffff',
+                                        }}
+                                      >
+                                        Pro Only
+                                      </Badge>
+                                    ) : recommendedExamType === 'practice' && (
+                                      <Badge
+                                        variant="secondary"
+                                        className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                        style={{
+                                          backgroundColor: '#788c5d',
+                                          borderColor: '#788c5d',
+                                          color: '#ffffff',
+                                        }}
+                                      >
+                                        <BadgeCheck className="h-3 w-3" />
+                                        Recommended
+                                      </Badge>
+                                    )}
+		                              </div>
 	                                    <CardDescription>225 questions</CardDescription>
 	                                  </div>
 	                                </CardHeader>
 	                                <CardContent className="space-y-3">
 	                                  <ul className="space-y-2 text-sm text-left">
-	                                    <li className="flex items-center gap-2">
+                                      {practiceHighlights.map((highlight, idx) => (
+                                        <li key={idx} className="flex items-center gap-2">
 	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                      Comprehensive knowledge check
+	                                      {highlight}
 	                                    </li>
-	                                    <li className="flex items-center gap-2">
-	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                      Full exam preparation (4-5 hours)
-	                                    </li>
-	                                    <li className="flex items-center gap-2">
-	                                      <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                      Includes experimental questions
-	                                    </li>
+                                      ))}
 	                                  </ul>
+                                  {isFreeTier && (
+                                    <div className="text-sm text-muted-foreground border border-dashed border-border rounded-md p-3">
+                                      {practiceLockMessage}
+                                    </div>
+                                  )}
 	                                </CardContent>
 	                              </Card>
 	                            </motion.div>
@@ -1000,29 +1083,34 @@ export default function ExamGeneratorPage() {
 	                        >
 	                          <CardHeader className="text-center">
 	                            <div className="flex items-center justify-center flex-col">
-	                              <div className="flex items-center gap-2 mb-2">
-	                                <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
-	                                {recommendedExamType === 'diagnostic' && (
-	                                  <Badge style={{ backgroundColor: '#bdd1ca' }}>Recommended</Badge>
-	                                )}
-	                              </div>
-	                              <CardDescription>71 questions</CardDescription>
+		                              <div className="flex items-center gap-2 mb-2">
+		                                <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+		                                {recommendedExamType === 'diagnostic' && (
+		                                  <Badge
+		                                    variant="secondary"
+		                                    className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+		                                    style={{
+		                                      backgroundColor: '#bdd1ca',
+		                                      borderColor: '#bdd1ca',
+		                                      color: '#1a2b24',
+		                                    }}
+		                                  >
+		                                    <BadgeCheck className="h-3 w-3" />
+		                                    Recommended
+		                                  </Badge>
+		                                )}
+		                              </div>
+	                              <CardDescription>{diagnosticQuestionLabel}</CardDescription>
 	                            </div>
 	                          </CardHeader>
 	                          <CardContent className="space-y-3">
 	                            <ul className="space-y-2 text-sm text-left">
-	                              <li className="flex items-center gap-2">
+                                {diagnosticHighlights.map((highlight, idx) => (
+                                  <li key={idx} className="flex items-center gap-2">
 	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                Identify knowledge gaps
+	                                {highlight}
 	                              </li>
-	                              <li className="flex items-center gap-2">
-	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                Quick assessment (30-45 minutes)
-	                              </li>
-	                              <li className="flex items-center gap-2">
-	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                Get priority recommendations
-	                              </li>
+                                ))}
 	                            </ul>
 	                          </CardContent>
 	                        </Card>
@@ -1030,40 +1118,62 @@ export default function ExamGeneratorPage() {
 
 	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
 	                        <Card
-	                          className={`cursor-pointer transition-all border-2 ${
+	                          className={`transition-all border-2 ${
 	                            examType === 'practice'
 	                              ? 'bg-[#788c5d]/20 dark:bg-[#788c5d]/10'
 	                              : 'border-border'
-	                          }`}
+	                          } ${isFreeTier ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}`}
 	                          style={examType === 'practice' ? { borderColor: '#788c5d' } : {}}
-	                          onClick={() => handleExamTypeSelect('practice')}
+	                          onClick={handlePracticeCardClick}
 	                        >
 	                          <CardHeader className="text-center">
 	                            <div className="flex items-center justify-center flex-col">
-	                              <div className="flex items-center gap-2 mb-2">
-	                                <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
-	                                {recommendedExamType === 'practice' && (
-	                                  <Badge style={{ backgroundColor: '#788c5d' }}>Recommended</Badge>
-	                                )}
-	                              </div>
+		                              <div className="flex items-center gap-2 mb-2">
+		                                <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+		                                {isFreeTier ? (
+                                    <Badge
+                                      variant="secondary"
+                                      className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                      style={{
+                                        backgroundColor: '#1f1f1f',
+                                        borderColor: '#1f1f1f',
+                                        color: '#ffffff',
+                                      }}
+                                    >
+                                      Pro Only
+                                    </Badge>
+                                  ) : recommendedExamType === 'practice' && (
+                                    <Badge
+                                      variant="secondary"
+                                      className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                      style={{
+                                        backgroundColor: '#788c5d',
+                                        borderColor: '#788c5d',
+                                        color: '#ffffff',
+                                      }}
+                                    >
+                                      <BadgeCheck className="h-3 w-3" />
+                                      Recommended
+                                    </Badge>
+                                  )}
+		                              </div>
 	                              <CardDescription>225 questions</CardDescription>
 	                            </div>
 	                          </CardHeader>
 	                          <CardContent className="space-y-3">
 	                            <ul className="space-y-2 text-sm text-left">
-	                              <li className="flex items-center gap-2">
+                                {practiceHighlights.map((highlight, idx) => (
+                                  <li key={idx} className="flex items-center gap-2">
 	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                Comprehensive knowledge check
+	                                {highlight}
 	                              </li>
-	                              <li className="flex items-center gap-2">
-	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                Full exam preparation (4-5 hours)
-	                              </li>
-	                              <li className="flex items-center gap-2">
-	                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#e2dacd' }} />
-	                                Includes experimental questions
-	                              </li>
+                                ))}
 	                            </ul>
+                            {isFreeTier && (
+                              <div className="text-sm text-muted-foreground border border-dashed border-border rounded-md p-3">
+                                {practiceLockMessage}
+                              </div>
+                            )}
 	                          </CardContent>
 	                        </Card>
 	                      </motion.div>
