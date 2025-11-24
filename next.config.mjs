@@ -9,12 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  outputFileTracingIgnores: [
-    '**/.next/cache/**',
-    '**/.git/**',
-    '**/.pnpm-store/**',
-    '**/archive/**',
-  ],
 }
 
 export default nextConfig

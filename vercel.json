@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/*.js": {
+      "excludeFiles": "{.next/cache/**,.git/**,.pnpm-store/**,archive/**}"
+    }
+  }
+}
