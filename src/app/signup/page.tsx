@@ -114,6 +114,7 @@ function SignUpContent() {
     }
 
     setLoading(true)
+    const desiredTier = tierFromPricing === 'pro' || tierFromPricing === 'pro_coaching' ? tierFromPricing : null
 
     try {
       // Create auth user
@@ -187,16 +188,76 @@ function SignUpContent() {
         // Don't throw - account is created even if profile creation fails
       }
 
-      // If promo code was provided, apply it in background
       if (formData.promoCode && promoStatus.type === 'success') {
-        supabase
-          .from('promo_codes')
-          .update({ usage_count: supabase.rpc('increment', { amount: 1 }) })
-          .eq('code', formData.promoCode.toUpperCase())
-          .catch((err) => console.error('Promo code update error:', err))
+        try {
+          const promoResponse = await fetch('/api/promo/apply', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              userId: authData.user.id,
+              code: formData.promoCode,
+            }),
+          })
+
+          if (!promoResponse.ok) {
+            const promoError = await promoResponse.json().catch(() => null)
+            throw new Error(promoError?.error || 'Failed to apply promo code')
+          }
+
+          setSuccess(true)
+          setFormData({
+            email: '',
+            password: '',
+            confirmPassword: '',
+            fullName: '',
+            promoCode: '',
+          })
+          setLoading(false)
+          return
+        } catch (err) {
+          console.error('Promo application error:', err)
+          setError(err instanceof Error ? err.message : 'Failed to apply promo code')
+          setLoading(false)
+          return
+        }
       }
 
-      // Show success message after auth and profile creation
+      if (desiredTier) {
+        try {
+          const checkoutResponse = await fetch('/api/stripe/create-checkout-session', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              planTier: desiredTier,
+              userId: authData.user.id,
+              userEmail: formData.email,
+            }),
+          })
+
+          if (!checkoutResponse.ok) {
+            const errorData = await checkoutResponse.json().catch(() => ({}))
+            throw new Error(errorData?.error || 'Unable to start Stripe checkout')
+          }
+
+          const checkoutData = await checkoutResponse.json()
+          if (checkoutData?.url) {
+            window.location.href = checkoutData.url
+            return
+          }
+
+          throw new Error('Stripe checkout URL missing')
+        } catch (err) {
+          console.error('Stripe redirect error:', err)
+          setError(err instanceof Error ? err.message : 'Unable to start Stripe checkout')
+          setLoading(false)
+          return
+        }
+      }
+
       setSuccess(true)
       setFormData({
         email: '',
@@ -206,7 +267,8 @@ function SignUpContent() {
         promoCode: '',
       })
 
-      // Don't redirect - user needs to verify email first
+      setLoading(false)
+      return
     } catch (err) {
       console.error('Signup error details:', err)
 
