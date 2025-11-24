@@ -7,6 +7,8 @@ import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
+import { supabase } from "@/lib/supabase"
+import { STRIPE_PAYMENT_LINKS, type StripeTier } from "@/lib/stripe-links"
 
 type PricingSectionProps = {
   activeTier?: string
@@ -18,10 +20,10 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
   const pricingItems = siteConfig.pricing.pricingItems
   const [expandedTier, setExpandedTier] = useState<string | null>(null)
   const [formData, setFormData] = useState({
+    fullName: "",
     email: "",
-    phone: "",
-    testDate: "",
-    thoughtsGoalsQuestions: ""
+    password: "",
+    confirmPassword: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
@@ -116,10 +118,10 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
     setExpandedTier(expandedTier === tierName ? null : tierName)
     onActiveTierChange?.(tierName)
     setFormData({
+      fullName: "",
       email: "",
-      phone: "",
-      testDate: "",
-      thoughtsGoalsQuestions: ""
+      password: "",
+      confirmPassword: "",
     })
     setSubmitMessage(null)
   }
@@ -134,47 +136,99 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
     setSubmitMessage(null)
 
+    if (!expandedTier) {
+      setSubmitMessage({
+        type: 'error',
+        text: 'Please select a plan first.',
+      })
+      return
+    }
+
+    if (!formData.email || !formData.password) {
+      setSubmitMessage({
+        type: 'error',
+        text: 'Email and password are required.',
+      })
+      return
+    }
+
+    if (formData.password.length < 6) {
+      setSubmitMessage({
+        type: 'error',
+        text: 'Password must be at least 6 characters.',
+      })
+      return
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      setSubmitMessage({
+        type: 'error',
+        text: 'Passwords do not match.',
+      })
+      return
+    }
+
+    setIsSubmitting(true)
+
     try {
-      const response = await fetch('/api/pricing-submissions', {
+      const { data, error } = await supabase.auth.signUp({
+        email: formData.email,
+        password: formData.password,
+      })
+
+      if (error) {
+        throw new Error(error.message)
+      }
+
+      const userId = data.user?.id
+      if (!userId) {
+        throw new Error('Unable to create account. Please try again.')
+      }
+
+      await fetch('/api/auth/create-profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
-          tier: expandedTier,
+          userId,
+          email: formData.email,
+          fullName: formData.fullName || null,
+          subscriptionTier: 'free',
+          promoCodeUsed: null,
         }),
       })
 
-      const data = await response.json()
+      const tierKey: StripeTier | 'free' =
+        expandedTier === 'Pro'
+          ? 'pro'
+          : expandedTier === 'Pro + Coaching'
+            ? 'pro_coaching'
+            : 'free'
 
-      if (!response.ok) {
+      if (tierKey === 'free') {
         setSubmitMessage({
-          type: 'error',
-          text: data.error || 'Failed to submit form. Please try again.'
+          type: 'success',
+          text: 'Account created! Check your email to verify. Redirecting to login...',
         })
-        return
-      }
-
-      setSubmitMessage({
-        type: 'success',
-        text: 'Thank you! Redirecting to sign up...'
-      })
-
-      // Redirect to sign-up with email and tier pre-filled
-      setTimeout(() => {
-        if (data.redirectUrl) {
-          router.push(data.redirectUrl)
+        setTimeout(() => {
+          router.push('/login')
+        }, 2000)
+      } else {
+        const link = STRIPE_PAYMENT_LINKS[tierKey]
+        if (!link) {
+          throw new Error('Upgrade link is not configured. Please contact support.')
         }
-      }, 1500)
+        window.location.href = link
+      }
     } catch (error) {
-      console.error('Submission error:', error)
+      console.error('Signup error:', error)
+      const message = error instanceof Error ? error.message : 'Failed to create account. Please try again.'
       setSubmitMessage({
         type: 'error',
-        text: 'An error occurred. Please try again.'
+        text: message,
       })
     } finally {
       setIsSubmitting(false)
@@ -320,6 +374,21 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
           <div className="border-t border-border p-4 space-y-4">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
+                <label htmlFor={`fullName-${tier.name}`} className="block text-sm font-medium mb-2">
+                  Full Name (optional)
+                </label>
+                <input
+                  type="text"
+                  id={`fullName-${tier.name}`}
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  placeholder="Your name"
+                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              <div>
                 <label htmlFor={`email-${tier.name}`} className="block text-sm font-medium mb-2">
                   Email Address <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
                 </label>
@@ -336,17 +405,34 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
               </div>
 
               <div>
-                <label htmlFor={`thoughtsGoalsQuestions-${tier.name}`} className="block text-sm font-medium mb-2">
-                  Anything else? (optional)
+                <label htmlFor={`password-${tier.name}`} className="block text-sm font-medium mb-2">
+                  Password <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
                 </label>
-                <textarea
-                  id={`thoughtsGoalsQuestions-${tier.name}`}
-                  name="thoughtsGoalsQuestions"
-                  value={formData.thoughtsGoalsQuestions}
+                <input
+                  type="password"
+                  id={`password-${tier.name}`}
+                  name="password"
+                  value={formData.password}
                   onChange={handleInputChange}
-                  placeholder="Share anything with us - your goals, questions, or thoughts about your EPPP prep..."
-                  rows={3}
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                  placeholder="Minimum 6 characters"
+                  required
+                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              <div>
+                <label htmlFor={`confirmPassword-${tier.name}`} className="block text-sm font-medium mb-2">
+                  Confirm Password <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
+                </label>
+                <input
+                  type="password"
+                  id={`confirmPassword-${tier.name}`}
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleInputChange}
+                  placeholder="Re-enter password"
+                  required
+                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
