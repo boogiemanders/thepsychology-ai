@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     const tierMap: { [key: string]: string } = {
       '7-Day Free Trial': 'free',
       'Pro': 'pro',
-      'Pro + Coaching': 'premium',
+      'Pro + Coaching': 'pro_coaching',
     }
 
     const subscriptionTier = tierMap[body.tier] || 'free'

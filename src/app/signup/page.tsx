@@ -148,17 +148,15 @@ function SignUpContent() {
 
       console.log('User created successfully:', authData.user.id)
 
-      // Create user profile via server API endpoint
-      // Use tier from pricing form if available, otherwise use promo code or free tier
-      const subscriptionTier = tierFromPricing || (formData.promoCode ? 'pro' : 'free')
-
       console.log('Starting profile creation for user:', authData.user.id)
       try {
         const profileBody = {
           userId: authData.user.id,
           email: formData.email,
           fullName: formData.fullName || null,
-          subscriptionTier,
+          // All new accounts start on the free tier.
+          // Paid tiers are unlocked only via Stripe checkout or validated promo flows.
+          subscriptionTier: 'free',
           promoCodeUsed: formData.promoCode || null,
         }
         console.log('Profile creation request body:', profileBody)

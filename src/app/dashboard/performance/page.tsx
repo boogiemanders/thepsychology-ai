@@ -69,7 +69,7 @@ export default function PerformanceDashboard() {
     return null
   }
 
-  if (userProfile?.subscription_tier !== 'pro' && userProfile?.subscription_tier !== 'premium') {
+  if (userProfile?.subscription_tier !== 'pro' && userProfile?.subscription_tier !== 'pro_coaching') {
     return (
       <div className="min-h-screen bg-black text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-900 opacity-80"></div>
