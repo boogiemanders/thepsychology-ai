@@ -1,7 +1,6 @@
 'use client'
 
-import Link from 'next/link'
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'motion/react'
 import { AlertCircle } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
@@ -13,19 +12,15 @@ import { supabase } from '@/lib/supabase'
 import { siteConfig } from '@/lib/config'
 import { cn } from '@/lib/utils'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
-
-type PaidPlanName = 'Pro' | 'Pro + Coaching'
-
-const isPaidPlan = (name: string): name is PaidPlanName =>
-  name === 'Pro' || name === 'Pro + Coaching'
+import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 
 export default function TrialExpiredPage() {
-  const { user, userProfile, signOut } = useAuth()
+  const { user } = useAuth()
   const [isAnonymous, setIsAnonymous] = useState(false)
   const [feedbackMessage, setFeedbackMessage] = useState('')
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false)
-  const [checkoutPlan, setCheckoutPlan] = useState<PaidPlanName | null>(null)
+  const { startCheckout, checkoutTier, checkoutError } = useStripeCheckout()
 
   const handleSendFeedback = async (message: string, screenshotFile?: File | null) => {
     const trimmedMessage = message.trim()
@@ -96,45 +91,6 @@ export default function TrialExpiredPage() {
     }
   }
 
-  const handleCheckout = useCallback(async (planName: PaidPlanName) => {
-    if (!userProfile?.id || !userProfile?.email) {
-      alert('Please sign in again to upgrade your plan.')
-      return
-    }
-
-    try {
-      setCheckoutPlan(planName)
-      const response = await fetch('/api/stripe/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          planName,
-          userId: userProfile.id,
-          userEmail: userProfile.email,
-        }),
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.error || 'Failed to start checkout')
-      }
-
-      const data = await response.json()
-      if (data?.url) {
-        window.location.href = data.url
-      } else {
-        throw new Error('Missing checkout URL')
-      }
-    } catch (err) {
-      console.error('Checkout error:', err)
-      alert('Could not start the upgrade process. Please try again.')
-    } finally {
-      setCheckoutPlan(null)
-    }
-  }, [userProfile?.id])
-
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-[#07090f] to-black py-16 px-4">
       <motion.div
@@ -165,6 +121,15 @@ export default function TrialExpiredPage() {
                   const [displayAmount, displayPeriod] = tier.displayPrice
                     ? tier.displayPrice.split('/').map((part) => part.trim())
                     : [tier.price, tier.period]
+                  const planTier =
+                    tier.name === 'Pro'
+                      ? 'pro'
+                      : tier.name === 'Pro + Coaching'
+                        ? 'pro_coaching'
+                        : null
+                  const isPaidTier = Boolean(planTier)
+                  const isLoading = Boolean(planTier && checkoutTier === planTier)
+
                   return (
                     <div
                       key={tier.name}
@@ -203,20 +168,27 @@ export default function TrialExpiredPage() {
                         <InteractiveHoverButton
                           type="button"
                           text={
-                            checkoutPlan === tier.name
+                            isPaidTier && isLoading
                               ? 'Redirecting...'
                               : `Upgrade to ${tier.name}`
                           }
                           hoverText="Secure Checkout"
                           className="w-full border border-white/10 bg-primary text-primary-foreground"
-                          disabled={checkoutPlan === tier.name || !isPaidPlan(tier.name)}
-                          onClick={() => isPaidPlan(tier.name) && handleCheckout(tier.name)}
+                          disabled={isPaidTier && !!checkoutTier}
+                          onClick={() => {
+                            if (planTier) {
+                              startCheckout(planTier, { redirectPath: '/trial-expired' })
+                            }
+                          }}
                         />
                       </div>
                     </div>
                   )
                 })}
             </div>
+            {checkoutError && (
+              <p className="text-sm text-red-400 text-center">{checkoutError}</p>
+            )}
           </CardContent>
         </Card>
 
@@ -249,7 +221,13 @@ export default function TrialExpiredPage() {
             </p>
 
             {feedbackMessage && (
-              <p className={`text-sm font-medium ${feedbackStatus === 'success' ? 'text-emerald-400' : 'text-red-400'}`}>{feedbackMessage}</p>
+              <p
+                className={`text-sm font-medium ${
+                  feedbackStatus === 'success' ? 'text-emerald-400' : 'text-red-400'
+                }`}
+              >
+                {feedbackMessage}
+              </p>
             )}
           </CardContent>
         </Card>

@@ -2,23 +2,22 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { siteConfig } from '@/lib/config'
 
-const stripeSecret = process.env.STRIPE_SECRET_KEY
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 
-if (!stripeSecret) {
+if (!stripeSecretKey) {
   console.warn('[Stripe] STRIPE_SECRET_KEY is not set; checkout sessions cannot be created.')
 }
 
-const stripe = stripeSecret
-  ? new Stripe(stripeSecret, {
-      apiVersion: '2025-01-27.acacia',
-    })
-  : null
+const stripe = stripeSecretKey ? new Stripe(stripeSecretKey, { apiVersion: '2025-01-27.acacia' }) : null
 
-type PlanName = 'Pro' | 'Pro + Coaching'
+const FALLBACK_PRICE_IDS: Record<'pro' | 'pro_coaching', string> = {
+  pro: 'price_1SWflILfe9KP6dYg1x5x44Ep',
+  pro_coaching: 'price_1SWgnkLfe9KP6dYg8IgPfoez',
+}
 
-const PRICE_MAP: Record<PlanName, string> = {
-  Pro: 'price_1SWflILfe9KP6dYg1x5x44Ep',
-  'Pro + Coaching': 'price_1SWgnkLfe9KP6dYg8IgPfoez',
+const priceIdByTier: Record<'pro' | 'pro_coaching', string | undefined> = {
+  pro: process.env.STRIPE_PRICE_ID_PRO || FALLBACK_PRICE_IDS.pro,
+  pro_coaching: process.env.STRIPE_PRICE_ID_PRO_COACHING || FALLBACK_PRICE_IDS.pro_coaching,
 }
 
 function getBaseUrl(req: NextRequest) {
@@ -29,63 +28,51 @@ function getBaseUrl(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  try {
-    if (!stripe) {
-      return NextResponse.json(
-        { error: 'Stripe is not configured' },
-        { status: 500 },
-      )
-    }
+  if (!stripe) {
+    return NextResponse.json({ error: 'Stripe is not configured' }, { status: 500 })
+  }
 
-    const body = await req.json()
-    const { planName, userId, userEmail } = body as {
-      planName?: PlanName
+  try {
+    const { planTier, userId, userEmail } = (await req.json()) as {
+      planTier?: 'pro' | 'pro_coaching'
       userId?: string
       userEmail?: string | null
     }
 
-    if (!planName || !(planName in PRICE_MAP)) {
-      return NextResponse.json(
-        { error: 'Invalid or missing planName' },
-        { status: 400 },
-      )
+    if (!planTier || !userId || !userEmail) {
+      return NextResponse.json({ error: 'Missing required checkout fields' }, { status: 400 })
     }
 
-    if (!userId) {
-      return NextResponse.json(
-        { error: 'Missing userId' },
-        { status: 400 },
-      )
+    const priceId = priceIdByTier[planTier]
+    if (!priceId) {
+      return NextResponse.json({ error: 'Plan configuration missing' }, { status: 400 })
     }
-
-    if (!userEmail) {
-      return NextResponse.json(
-        { error: 'Missing user email' },
-        { status: 400 },
-      )
-    }
-
-    const priceId = PRICE_MAP[planName]
 
     const baseUrl = getBaseUrl(req)
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
+      customer_email: userEmail,
+      client_reference_id: userId,
       line_items: [
         {
           price: priceId,
           quantity: 1,
         },
       ],
-      customer_email: userEmail ?? undefined,
-      client_reference_id: userId,
       metadata: {
         userId,
-        planName,
+        planTier,
+      },
+      subscription_data: {
+        metadata: {
+          userId,
+          planTier,
+        },
       },
       success_url: `${baseUrl}/dashboard?upgrade=success`,
-      cancel_url: `${baseUrl}/#pricing`,
+      cancel_url: `${baseUrl}/trial-expired?upgrade=cancelled`,
     })
 
     return NextResponse.json({ url: session.url })

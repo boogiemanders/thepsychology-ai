@@ -29,11 +29,7 @@ import { siteConfig } from '@/lib/config'
 import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
-
-type PaidPlanName = 'Pro' | 'Pro + Coaching'
-
-const isPaidPlan = (name: string): name is PaidPlanName =>
-  name === 'Pro' || name === 'Pro + Coaching'
+import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -61,7 +57,6 @@ export default function DashboardPage() {
   const [studyStats, setStudyStats] = useState(calculateStudyStats())
   const [dailyGoal, setDailyGoalState] = useState(getDailyGoal())
   const [todayQuizCount, setTodayQuizCount] = useState(0)
-  const [checkoutPlan, setCheckoutPlan] = useState<PaidPlanName | null>(null)
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
   const [priorityDomains, setPriorityDomains] = useState<any[]>([])
   const [hasPausedExam, setHasPausedExam] = useState(false)
@@ -71,12 +66,26 @@ export default function DashboardPage() {
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
   const [isAnonymousFeedback, setIsAnonymousFeedback] = useState(false)
+  const { startCheckout, checkoutTier, checkoutError, resetCheckoutError } = useStripeCheckout()
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
     setDailyGoal(newGoal)
     setIsPopoverOpen(false)
   }
+
+  const handleTierSelection = useCallback(
+    (tierName: string) => {
+      if (tierName === 'Pro') {
+        startCheckout('pro', { redirectPath: '/dashboard' })
+      } else if (tierName === 'Pro + Coaching') {
+        startCheckout('pro_coaching', { redirectPath: '/dashboard' })
+      } else {
+        setIsPricingCarouselOpen(false)
+      }
+    },
+    [setIsPricingCarouselOpen, startCheckout]
+  )
 
   useEffect(() => {
     if (!isFeedbackOpen) {
@@ -85,6 +94,12 @@ export default function DashboardPage() {
       setIsAnonymousFeedback(false)
     }
   }, [isFeedbackOpen])
+
+  useEffect(() => {
+    if (!isPricingCarouselOpen) {
+      resetCheckoutError()
+    }
+  }, [isPricingCarouselOpen, resetCheckoutError])
 
   const handleSendFeedback = async (message: string, screenshotFile?: File | null) => {
     const trimmedMessage = message.trim()
@@ -152,45 +167,6 @@ export default function DashboardPage() {
       setIsFeedbackSubmitting(false)
     }
   }
-
-  const handleStripeCheckout = useCallback(async (planName: PaidPlanName) => {
-    if (!user?.id || !user?.email) {
-      router.push('/login')
-      return
-    }
-
-    try {
-      setCheckoutPlan(planName)
-      const response = await fetch('/api/stripe/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          planName,
-          userId: user.id,
-          userEmail: user.email,
-        }),
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.error || 'Failed to start checkout')
-      }
-
-      const data = await response.json()
-      if (data?.url) {
-        window.location.href = data.url
-      } else {
-        throw new Error('Missing checkout URL')
-      }
-    } catch (err) {
-      console.error('Stripe checkout error:', err)
-      alert('Could not start checkout. Please try again.')
-    } finally {
-      setCheckoutPlan(null)
-    }
-  }, [router, user?.email, user?.id])
 
   useEffect(() => {
     setMounted(true)
@@ -932,6 +908,11 @@ export default function DashboardPage() {
                       ? tier.displayPrice.split("/").map((part) => part.trim())
                       : [tier.price, tier.period]
 
+                    const planTier =
+                      tier.name === 'Pro' ? 'pro' : tier.name === 'Pro + Coaching' ? 'pro_coaching' : null
+                    const isPaidTier = Boolean(planTier)
+                    const isLoading = Boolean(planTier && checkoutTier === planTier)
+
                     return (
                       <CarouselItem key={index}>
                         <div className="p-1">
@@ -983,20 +964,10 @@ export default function DashboardPage() {
                               </div>
                               <Button
                                 className={tier.buttonColor}
-                                onClick={() => {
-                                  if (isPaidPlan(tier.name)) {
-                                    handleStripeCheckout(tier.name)
-                                  } else {
-                                    router.push('/#get-started')
-                                  }
-                                }}
-                                disabled={isPaidPlan(tier.name) && checkoutPlan === tier.name}
+                                disabled={isPaidTier && !!checkoutTier}
+                                onClick={() => handleTierSelection(tier.name)}
                               >
-                                {isPaidPlan(tier.name)
-                                  ? checkoutPlan === tier.name
-                                    ? 'Redirecting...'
-                                    : `Upgrade to ${tier.name}`
-                                  : tier.buttonText}
+                                {isPaidTier && isLoading ? 'Redirecting…' : tier.buttonText}
                               </Button>
                             </CardContent>
                           </Card>
@@ -1008,6 +979,11 @@ export default function DashboardPage() {
                 <CarouselPrevious className="-left-12" />
                 <CarouselNext className="-right-12" />
               </Carousel>
+              {checkoutError && (
+                <p className="text-sm text-red-500 mt-4 text-center">
+                  {checkoutError}
+                </p>
+              )}
             </div>
           </div>
         )}
