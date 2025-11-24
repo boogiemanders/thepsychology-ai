@@ -1,7 +1,16 @@
 {
   "functions": {
-    "src/app/api/**": {
-      "excludeFiles": "{.next/cache/**,.git/**,.pnpm-store/**,archive/**}"
+    "api/exam-generator.js": {
+      "excludeFiles": ".next/cache/**"
+    },
+    "api/get-topic-content.js": {
+      "excludeFiles": ".next/cache/**"
+    },
+    "api/quizzer.js": {
+      "excludeFiles": ".next/cache/**"
+    },
+    "api/topic-teacher.js": {
+      "excludeFiles": ".next/cache/**"
     }
   }
 }
