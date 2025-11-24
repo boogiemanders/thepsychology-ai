@@ -1,1 +1,0 @@
-questions/5 Diagnosis : Psychopathology/5 Sexual Dysfunctions, Gender Dysphoria, and Paraphilic Disorders done.md
