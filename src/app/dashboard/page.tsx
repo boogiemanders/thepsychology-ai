@@ -868,12 +868,26 @@ export default function DashboardPage() {
                    userProfile?.subscription_tier === 'pro' ? 'Pro' :
                    userProfile?.subscription_tier === 'basic' ? 'Basic' : 'Free Trial'}
                 </Badge>
-                <InteractiveHoverButton
-                  text="Change Tier"
-                  hoverText="Upgrade"
-                  size="sm"
-                  onClick={() => setIsPricingCarouselOpen(true)}
-                />
+                <div className="flex items-center gap-2">
+                  <InteractiveHoverButton
+                    text="Change Tier"
+                    hoverText="Upgrade"
+                    size="sm"
+                    onClick={() => setIsPricingCarouselOpen(true)}
+                  />
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="text-xs"
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.location.href = 'https://billing.stripe.com/p/login/4gM5kC6YjgvT7Bp39g8Vi00'
+                      }
+                    }}
+                  >
+                    Manage Billing
+                  </Button>
+                </div>
               </div>
             </div>
             <Button
