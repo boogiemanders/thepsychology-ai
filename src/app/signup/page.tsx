@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
 import { validatePromoCode } from '@/lib/promo-codes'
 import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
+import { STRIPE_PAYMENT_LINKS } from '@/lib/stripe-links'
 
 function SignUpContent() {
   const router = useRouter()
@@ -225,37 +226,14 @@ function SignUpContent() {
       }
 
       if (desiredTier) {
-        try {
-          const checkoutResponse = await fetch('/api/stripe/create-checkout-session', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              planTier: desiredTier,
-              userId: authData.user.id,
-              userEmail: formData.email,
-            }),
-          })
-
-          if (!checkoutResponse.ok) {
-            const errorData = await checkoutResponse.json().catch(() => ({}))
-            throw new Error(errorData?.error || 'Unable to start Stripe checkout')
-          }
-
-          const checkoutData = await checkoutResponse.json()
-          if (checkoutData?.url) {
-            window.location.href = checkoutData.url
-            return
-          }
-
-          throw new Error('Stripe checkout URL missing')
-        } catch (err) {
-          console.error('Stripe redirect error:', err)
-          setError(err instanceof Error ? err.message : 'Unable to start Stripe checkout')
+        const link = STRIPE_PAYMENT_LINKS[desiredTier]
+        if (!link) {
+          setError('Upgrade link is not configured. Please contact support.')
           setLoading(false)
           return
         }
+        window.location.href = link
+        return
       }
 
       setSuccess(true)
