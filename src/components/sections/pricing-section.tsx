@@ -9,6 +9,7 @@ import { motion } from "motion/react"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { supabase } from "@/lib/supabase"
 import { STRIPE_PAYMENT_LINKS, type StripeTier } from "@/lib/stripe-links"
+import { Badge } from "@/components/ui/badge"
 
 type PricingSectionProps = {
   activeTier?: string
@@ -263,12 +264,20 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
         )}
       >
         <div className="flex flex-col gap-4 p-4">
-          <p className="text-sm">
-            {tier.name}
+          <p className="text-sm flex items-center gap-2">
+            <span>{tier.name}</span>
             {tier.isPopular && (
-              <span className="brand-soft-blue-bg text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm ml-2 shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(0,0,0,0.15)]">
+              <span className="brand-soft-blue-bg text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(0,0,0,0.15)]">
                 Popular
               </span>
+            )}
+            {tier.name === 'Pro' && (
+              <Badge
+                variant="outline"
+                className="border-border/60 bg-transparent text-[11px] font-normal px-2 py-0.5"
+              >
+                $30/mo starting Jan 1, 2026
+              </Badge>
             )}
           </p>
           <div className="flex items-baseline mt-2">
