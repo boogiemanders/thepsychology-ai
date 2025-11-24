@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { siteConfig } from "@/lib/config";
 
 export function QuoteSection() {

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import {
@@ -154,4 +155,5 @@ export function ThirdBentoAnimation() {
   );
 
 }
+
 
