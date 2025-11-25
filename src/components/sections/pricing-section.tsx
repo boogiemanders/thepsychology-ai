@@ -25,6 +25,8 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
     email: "",
     password: "",
     confirmPassword: "",
+    goals: "",
+    examDate: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
@@ -123,6 +125,8 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
       email: "",
       password: "",
       confirmPassword: "",
+      goals: "",
+      examDate: "",
     })
     setSubmitMessage(null)
   }
@@ -201,6 +205,35 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
           promoCodeUsed: null,
         }),
       })
+
+      const hasGoalDetails = Boolean(formData.goals.trim() || formData.examDate)
+      if (hasGoalDetails && expandedTier) {
+        const goalParts = []
+        if (formData.goals.trim()) {
+          goalParts.push(`Goals: ${formData.goals.trim()}`)
+        }
+        if (formData.examDate) {
+          goalParts.push(`Exam Date: ${formData.examDate}`)
+        }
+
+        try {
+          await fetch('/api/pricing-submissions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: formData.email,
+              phone: '',
+              testDate: formData.examDate || '',
+              thoughtsGoalsQuestions: goalParts.join(' | '),
+              tier: expandedTier,
+            }),
+          })
+        } catch (submissionError) {
+          console.warn('Failed to save pricing submission', submissionError)
+        }
+      }
 
       const tierKey: StripeTier | 'free' =
         expandedTier === 'Pro'
@@ -443,6 +476,36 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
                   required
                   className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                 />
+              </div>
+
+              <div className="border border-dashed border-border/60 rounded-lg p-4 space-y-4">
+                <p className="text-sm font-medium text-muted-foreground">Share your EPPP goals (optional)</p>
+                <div>
+                  <label htmlFor={`goals-${tier.name}`} className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
+                    Goals or notes
+                  </label>
+                  <textarea
+                    id={`goals-${tier.name}`}
+                    name="goals"
+                    value={formData.goals}
+                    onChange={handleInputChange}
+                    placeholder="Tell us about your plans, concerns, or what success looks like."
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary min-h-[90px]"
+                  />
+                </div>
+                <div>
+                  <label htmlFor={`examDate-${tier.name}`} className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
+                    Planned exam date
+                  </label>
+                  <input
+                    type="date"
+                    id={`examDate-${tier.name}`}
+                    name="examDate"
+                    value={formData.examDate}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
               </div>
 
               <div className="flex justify-center">

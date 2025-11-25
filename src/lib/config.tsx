@@ -201,42 +201,6 @@ export const siteConfig = {
   },
   testimonials: [
     {
-      id: "1",
-      name: "Dr. Sarah Mitchell",
-      role: "Clinical Psychologist",
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
-      description: (
-        <p>
-          The <Highlight className="text-brand-soft-blue dark:text-brand-sage">adaptive quizzes</Highlight> were a game-changer for me. They identified my weak areas and
-          helped me focus my study time effectively. Passed on my first attempt!
-        </p>
-      ),
-    },
-    {
-      id: "2",
-      name: "Michael Chen",
-      role: "Psychology Graduate",
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
-      description: (
-        <p>
-          I loved the <Highlight className="text-brand-coral dark:text-brand-soft-blue">multimodal learning approach</Highlight>. Being able to switch between text, audio, and
-          video kept me engaged and helped me retain information better.
-        </p>
-      ),
-    },
-    {
-      id: "3",
-      name: "Dr. Emily Rodriguez",
-      role: "School Psychologist",
-      img: "https://randomuser.me/api/portraits/women/68.jpg",
-      description: (
-        <p>
-          The <Highlight className="text-brand-dusty-rose dark:text-brand-olive">coaching sessions with Dr. Chan</Highlight> were invaluable. His insights and study strategies
-          made all the difference in my preparation.
-        </p>
-      ),
-    },
-    {
       id: "4",
       name: "Anders Chan",
       role: "Founder of thePsychology.ai",
@@ -246,18 +210,6 @@ export const siteConfig = {
           I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and{" "}
           <Highlight className="text-brand-soft-blue dark:text-brand-coral">I got a 588 on my first try.</Highlight> This program is what I wish I had for a fraction of the
           time, cost, and stress.
-        </p>
-      ),
-    },
-    {
-      id: "5",
-      name: "Jessica Thompson",
-      role: "Counseling Psychologist",
-      img: "https://randomuser.me/api/portraits/women/90.jpg",
-      description: (
-        <p>
-          The <Highlight className="text-brand-coral dark:text-brand-dusty-rose">mobile-friendly platform</Highlight> allowed me to study during my commute and lunch breaks.
-          Made the most of every spare moment!
         </p>
       ),
     },
