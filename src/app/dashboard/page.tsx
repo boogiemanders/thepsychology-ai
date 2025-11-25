@@ -570,13 +570,15 @@ export default function DashboardPage() {
 
   // ACTION BUTTONS - Bigger, more prominent
   const actionCards = [
+    // Put the two primary actions first so they appear at the top on mobile
     {
       Icon: GraduationCap,
       name: "Practice",
       description: hasPausedExam ? "Resume your paused practice exam" : "Take practice exams to test your knowledge",
       href: "/exam-generator",
       cta: hasPausedExam ? "Resume?" : "Start Exam",
-      className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
+      className:
+        "col-span-2 col-start-1 row-span-2 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
       background: (
         <Marquee className="absolute inset-0 opacity-20" repeat={2}>
           <div className="flex gap-6 whitespace-nowrap px-4">
@@ -600,39 +602,19 @@ export default function DashboardPage() {
       ),
     },
     {
-      Icon: History,
-      name: "Prioritize",
-      description: "Review exams results",
-      href: prioritizeHref,
-      cta: "View Results",
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
-    },
-    {
-      Icon: Droplets,
-      name: "Recover",
-      description: "Improve focus and reduce burnout",
-      href: "#",
-      cta: "Coming Soon",
-      className: "lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
-      background: (
-        <div className="absolute inset-0 overflow-hidden">
-          <BreathingAnimation speed={0.596} />
-        </div>
-      ),
-    },
-    {
       Icon: FileTextIcon,
       name: "Study",
       description: `${studyStats.totalQuizzes} quizzes • ${progressData.completedTopics}/${progressData.totalTopics} topics`,
       href: "/topic-selector",
       cta: "Start Studying",
-      className: "lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
+      className:
+        "col-span-4 row-span-2 row-start-3 md:col-span-3 md:row-span-1 md:row-start-auto lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
       background: (
         <div className="absolute inset-0 flex flex-col items-start justify-start pt-4 p-4 h-full">
           {/* Priority Badges Section */}
           {priorityDomains.length > 0 && (
             <div className="w-full mb-3 pb-3 border-b border-border/40">
-              <div className="text-xs font-semibold text-foreground/70 mb-2 flex items-center gap-1">
+              <div className="text-xs md:text-sm font-semibold text-foreground/70 mb-2 flex items-center gap-1">
                 <AlertCircle className="w-3 h-3" style={{ color: '#c46685' }} />
                 Priority Focus
               </div>
@@ -644,7 +626,7 @@ export default function DashboardPage() {
                     <Badge
                       key={idx}
                       variant="outline"
-                      className="text-xs"
+                      className="text-xs md:text-sm"
                       style={{
                         borderColor: color,
                         backgroundColor: `${color}20`,
@@ -659,31 +641,70 @@ export default function DashboardPage() {
             </div>
           )}
 
-          <ScrollArea className="w-full h-full pr-4">
-            <div className="w-full space-y-2 opacity-60">
-              {EPPP_DOMAINS.map((domain, idx) => {
-                const [prefix] = domain.id.split('-')
-                const domainNumber = parseInt(prefix, 10)
-                const hasOrgPsychPriority = priorityDomains.some((p: any) => p.type === 'org_psych')
-                const isOrgPsychDomain = domain.id === '3-5-6'
-                const isPriority = isOrgPsychDomain
-                  ? hasOrgPsychPriority
-                  : priorityDomains.some((p: any) => typeof p.domainNumber === 'number' && p.domainNumber === domainNumber)
-                return (
-                  <div key={idx} className={`space-y-1 pr-2 ${isPriority ? 'opacity-100' : ''}`}>
-                    <div className="flex items-center justify-between text-xs">
-                      <div className="flex items-center gap-1 truncate">
-                        {isPriority && <AlertCircle className="w-3 h-3 flex-shrink-0" style={{ color: '#c46685' }} />}
-                        <span className="text-foreground/80 truncate">{domain.name}</span>
-                      </div>
-                      <span className="text-foreground/60 ml-1 flex-shrink-0">{Math.round(progressData.domainProgress[idx] || 0)}%</span>
-                    </div>
-                    <Progress value={progressData.domainProgress[idx] || 0} className="h-1" />
-                  </div>
-                )
-              })}
+          <div className="w-full h-full">
+            <div className="text-sm text-foreground/80 mb-2">
+              Overall completion: {progressData.totalCompletion}%. Tap Practice or Prioritize to see where to focus.
             </div>
-          </ScrollArea>
+            <ScrollArea className="w-full h-full pr-4">
+              <div className="w-full space-y-2 opacity-60">
+                {EPPP_DOMAINS.map((domain, idx) => {
+                  const [prefix] = domain.id.split('-')
+                  const domainNumber = parseInt(prefix, 10)
+                  const hasOrgPsychPriority = priorityDomains.some((p: any) => p.type === 'org_psych')
+                  const isOrgPsychDomain = domain.id === '3-5-6'
+                  const isPriority = isOrgPsychDomain
+                    ? hasOrgPsychPriority
+                    : priorityDomains.some(
+                        (p: any) => typeof p.domainNumber === 'number' && p.domainNumber === domainNumber
+                      )
+                  return (
+                    <div key={idx} className={`space-y-1 pr-2 ${isPriority ? 'opacity-100' : ''}`}>
+                      <div className="flex items-center justify-between text-xs md:text-sm">
+                        <div className="flex items-center gap-1 truncate">
+                          {isPriority && (
+                            <AlertCircle className="w-3 h-3 flex-shrink-0" style={{ color: '#c46685' }} />
+                          )}
+                          <span className="text-foreground/80 truncate">{domain.name}</span>
+                        </div>
+                        <span className="text-foreground/60 ml-1 flex-shrink-0">
+                          {Math.round(progressData.domainProgress[idx] || 0)}%
+                        </span>
+                      </div>
+                      <Progress value={progressData.domainProgress[idx] || 0} className="h-1" />
+                    </div>
+                  )
+                })}
+              </div>
+            </ScrollArea>
+          </div>
+        </div>
+      ),
+    },
+    {
+      Icon: History,
+      name: "Prioritize",
+      description: "Review exam results and focus areas",
+      href: prioritizeHref,
+      cta: "View Results",
+      className:
+        "col-span-2 col-start-3 row-span-1 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
+    },
+    {
+      Icon: Droplets,
+      name: "Recover",
+      description: (
+        <>
+          <span className="md:hidden">Coming soon</span>
+          <span className="hidden md:inline">Improve focus and reduce burnout</span>
+        </>
+      ),
+      href: "#",
+      cta: "Coming Soon",
+      className:
+        "col-span-2 col-start-3 row-span-1 row-start-2 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
+      background: (
+        <div className="absolute inset-0 overflow-hidden">
+          <BreathingAnimation speed={0.596} />
         </div>
       ),
     },
@@ -699,7 +720,8 @@ export default function DashboardPage() {
         : "Set your exam date",
       href: "#",
       cta: isExamDatePopoverOpen ? "" : "Edit Date", // Hide CTA when calendar is open
-      className: "lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
+      className:
+        "col-span-2 col-start-1 row-span-2 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
       background: (
         <div
           className="absolute inset-0 flex flex-col items-center justify-center pointer-events-auto cursor-pointer"
@@ -740,7 +762,8 @@ export default function DashboardPage() {
       description: "",
       href: "/topic-selector",
       cta: "Keep it going",
-      className: "lg:col-start-5 lg:col-end-6 lg:row-start-3 lg:row-end-5",
+      className:
+        "col-span-2 col-start-3 row-span-1 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-3 lg:row-end-5",
       background: (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
           <NumberTicker
@@ -748,7 +771,9 @@ export default function DashboardPage() {
             duration={1.5}
             className="text-4xl font-bold text-primary"
           />
-          <span className="text-xs text-muted-foreground">{studyStats.studyStreak === 1 ? 'day' : 'days'}</span>
+          <span className="text-xs md:text-sm text-muted-foreground">
+            {studyStats.studyStreak === 1 ? 'day' : 'days'}
+          </span>
         </div>
       ),
     },
@@ -758,7 +783,8 @@ export default function DashboardPage() {
       description: `${dailyGoal} lesson${dailyGoal > 1 ? 's' : ''}/day`,
       href: "#",
       cta: "Edit",
-      className: "lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
+      className:
+        "col-span-2 col-start-3 row-span-1 row-start-6 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
       background: (
         <div
           className="absolute inset-0 flex flex-col items-center justify-center gap-3 pointer-events-auto cursor-pointer"
@@ -822,7 +848,7 @@ export default function DashboardPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto px-6 py-12 space-y-8">
+      <div className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12 space-y-8">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
@@ -864,10 +890,10 @@ export default function DashboardPage() {
         </BentoGrid>
 
         {/* Account Status Box */}
-        <div className="border border-border/50 rounded-lg p-6 bg-white dark:bg-black backdrop-blur-sm">
+        <div className="border border-border/50 rounded-lg p-4 md:p-6 bg-white dark:bg-black backdrop-blur-sm">
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="hidden md:flex w-12 h-12 rounded-full bg-primary/10 items-center justify-center">
                 <PersonIcon className="w-6 h-6 text-primary" />
               </div>
               <div>

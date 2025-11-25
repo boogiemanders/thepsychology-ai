@@ -15,7 +15,7 @@ export function BentoGrid({
   return (
     <div
       className={cn(
-        "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
+        "grid w-full auto-rows-[12rem] sm:auto-rows-[16rem] md:auto-rows-[22rem] grid-cols-4 md:grid-cols-3 gap-4",
         className
       )}
     >
@@ -41,7 +41,7 @@ export function BentoCard({
   className: string
   background: ReactNode
   Icon: any
-  description: string
+  description: ReactNode
   href: string
   cta: string
   onClick?: () => void
@@ -53,7 +53,12 @@ export function BentoCard({
     <>
       <div>{background}</div>
       {showHeader && (
-        <div className={cn("pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10", classNameHeader)}>
+        <div
+          className={cn(
+            "pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-4 md:p-6 transition-all duration-300 group-hover:-translate-y-10",
+            classNameHeader
+          )}
+        >
           <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75 dark:text-neutral-300" />
           <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
             {name}
@@ -79,7 +84,7 @@ export function BentoCard({
   )
 
   const cardClasses = cn(
-    "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl cursor-pointer",
+    "group relative col-span-3 flex min-h-[10rem] flex-col justify-between overflow-hidden rounded-xl cursor-pointer",
     // light styles
     "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
     // dark styles
