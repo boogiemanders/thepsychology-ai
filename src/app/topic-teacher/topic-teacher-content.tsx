@@ -1063,10 +1063,7 @@ export function TopicTeacherContent() {
             <Link
               href={`/quizzer?topic=${encodeURIComponent(decodedTopic)}${domain ? `&domain=${encodeURIComponent(domain)}` : ''}`}
             >
-              <Button
-                variant="default"
-                className="w-full bg-brand-soft-blue text-white shadow-lg hover:bg-brand-soft-blue/90"
-              >
+              <Button variant="minimal" className="w-full">
                 Take Quiz on This Topic →
               </Button>
             </Link>
