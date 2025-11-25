@@ -16,6 +16,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getUserCurrentInterest, updateUserCurrentInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
 import { getUserLanguagePreference, updateUserLanguagePreference } from '@/lib/language-preference'
+import { getLessonDisplayName } from '@/lib/topic-display-names'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { useAuth } from '@/context/auth-context'
 import { getQuizResults } from '@/lib/quiz-results-storage'
@@ -71,6 +72,7 @@ export function TopicTeacherContent() {
     }
   }
   const decodedTopic = decodeParam(topic)
+  const displayLessonName = getLessonDisplayName(decodedTopic)
   const normalizedTopicName = decodedTopic ? decodedTopic.trim().toLowerCase() : ''
 
   const normalizeSectionName = (section?: string | null): string | null => {
@@ -1102,13 +1104,13 @@ export function TopicTeacherContent() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage>{decodeURIComponent(topic)}</BreadcrumbPage>
+              <BreadcrumbPage>{displayLessonName}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
 
         <div className="mb-6">
-          <TypographyH1>{decodeURIComponent(topic)}</TypographyH1>
+          <TypographyH1>{displayLessonName}</TypographyH1>
         </div>
 
         {isMetaphorUpdating && (
