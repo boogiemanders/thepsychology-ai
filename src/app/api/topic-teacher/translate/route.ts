@@ -140,7 +140,6 @@ ${protectedContent}`
                 const delta = parsed.choices?.[0]?.delta?.content
                 if (delta) {
                   pendingOutput += delta
-                  pendingOutput = restorePlaceholders(pendingOutput, placeholders)
 
                   // Only emit text that doesn't contain partial placeholder tokens
                   let emitLength = pendingOutput.length
@@ -156,7 +155,9 @@ ${protectedContent}`
 
                   if (emitLength > 0) {
                     const emitText = pendingOutput.slice(0, emitLength)
-                    controller.enqueue(encoder.encode(emitText))
+                    controller.enqueue(
+                      encoder.encode(restorePlaceholders(emitText, placeholders))
+                    )
                     pendingOutput = pendingOutput.slice(emitLength)
                   }
                 }
@@ -175,7 +176,6 @@ ${protectedContent}`
                 const delta = parsed.choices?.[0]?.delta?.content
                 if (delta) {
                   pendingOutput += delta
-                  pendingOutput = restorePlaceholders(pendingOutput, placeholders)
                 }
               } catch {
                 // ignore
@@ -183,7 +183,7 @@ ${protectedContent}`
             }
           }
           if (pendingOutput.length > 0) {
-            controller.enqueue(encoder.encode(pendingOutput))
+            controller.enqueue(encoder.encode(restorePlaceholders(pendingOutput, placeholders)))
           }
           controller.close()
         } catch (error) {
