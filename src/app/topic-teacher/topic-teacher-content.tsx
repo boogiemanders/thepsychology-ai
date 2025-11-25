@@ -11,7 +11,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Kbd } from '@/components/ui/kbd'
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { motion } from 'motion/react'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getUserCurrentInterest, updateUserCurrentInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
@@ -21,6 +21,9 @@ import { getQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import Lottie from 'lottie-react'
 import textLoadingAnimation from '@/../../public/animations/text-loading.json'
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
+import { MagicCard } from '@/components/ui/magic-card'
+import { PulsatingButton } from '@/components/ui/pulsating-button'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -53,6 +56,7 @@ const GENERIC_SECTION_NAMES = new Set([
 
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
+  const router = useRouter()
   const { user, userProfile } = useAuth()
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
@@ -120,6 +124,7 @@ export function TopicTeacherContent() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const currentSectionRef = useRef<string>('')
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
+  const [isNearBottom, setIsNearBottom] = useState(true)
 
   // Disabled auto-scroll - keep at top of page
   // const scrollToBottom = () => {
@@ -200,6 +205,31 @@ export function TopicTeacherContent() {
       }
     }
   }, [user?.id])
+
+  useEffect(() => {
+    if (!messagesEndRef.current) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0]
+        setIsNearBottom(entry?.isIntersecting ?? false)
+      },
+      {
+        root: null,
+        threshold: 0.9,
+      }
+    )
+
+    const node = messagesEndRef.current
+    if (node) {
+      observer.observe(node)
+    }
+
+    return () => {
+      if (node) observer.unobserve(node)
+      observer.disconnect()
+    }
+  }, [messages.length])
 
   const formatSectionList = (sections: string[]) => {
     if (!sections || sections.length === 0) return ''
@@ -658,7 +688,7 @@ export function TopicTeacherContent() {
 
   return (
     <main className="min-h-screen flex flex-col bg-background">
-      <div className="flex-1 flex flex-col w-full mx-auto p-6 max-w-4xl">
+      <div className="flex-1 flex flex-col w-full mx-auto p-6 pb-40 max-w-4xl">
         <Breadcrumb className="mb-6">
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -1047,28 +1077,58 @@ export function TopicTeacherContent() {
           {isLoading && <PulseSpinner message="Loading your lesson..." fullScreen={false} />}
 
           <div ref={messagesEndRef} />
-        </div>
+      </div>
 
-        {/* Input */}
-        <div className="-mx-6 px-6 pl-12 pr-32">
-          <SimplePromptInput
-            onSubmit={handleSendMessage}
-            placeholder="Ask a follow-up question..."
-            isLoading={isLoading || !initialized}
-          />
-        </div>
-
-        {initialized && messages.length > 0 && (
-          <div className="mt-6 pt-4 border-t border-border -mx-6 px-6 pl-12 pr-32">
-            <Link
-              href={`/quizzer?topic=${encodeURIComponent(decodedTopic)}${domain ? `&domain=${encodeURIComponent(domain)}` : ''}`}
+      <div className="sticky bottom-0 z-30 w-full border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:backdrop-blur shadow-[0_-12px_35px_rgba(0,0,0,0.12)]">
+        <div
+          className={`mx-auto w-full max-w-4xl px-6 overflow-hidden transition-all duration-300 ease-out ${
+            isNearBottom ? 'py-4' : 'py-1.5'
+          }`}
+          style={{ maxHeight: isNearBottom ? 240 : 140 }}
+        >
+          <div className="flex items-end gap-3">
+            <MagicCard
+              gradientColor="rgba(255,255,255,0.15)"
+              gradientOpacity={0.35}
+              gradientFrom="#91A3FF"
+              gradientTo="#B4FFE6"
+              className="flex-1 min-w-0 rounded-2xl border border-brand-soft-blue/40"
             >
-              <Button variant="minimal" className="w-full">
-                Take Quiz on This Topic →
-              </Button>
-            </Link>
+              <SimplePromptInput
+                className="flex-1 min-w-0 border-none bg-transparent shadow-none"
+                onSubmit={handleSendMessage}
+                placeholder="Ask a follow-up question..."
+                isLoading={isLoading || !initialized}
+                compact={!isNearBottom}
+                framed={false}
+              />
+            </MagicCard>
+
+            {initialized && messages.length > 0 && (
+              <PulsatingButton
+                className="flex-shrink-0 [--pulse-color:rgba(0,0,0,0.45)] dark:[--pulse-color:rgba(255,255,255,0.85)]"
+                duration="1.8s"
+                active={isNearBottom}
+              >
+                <InteractiveHoverButton
+                  type="button"
+                  size="sm"
+                  className="px-5 py-2 text-base font-medium text-foreground bg-transparent border border-border shadow-md"
+                  dotClassName="bg-foreground dark:bg-white"
+                  hoverTextClassName="text-primary-foreground"
+                  onClick={() => {
+                    const quizPath = `/quizzer?topic=${encodeURIComponent(decodedTopic)}${domain ? `&domain=${encodeURIComponent(domain)}` : ''}`
+                    router.push(quizPath)
+                  }}
+                  hoverText="Start"
+                >
+                  Quiz
+                </InteractiveHoverButton>
+              </PulsatingButton>
+            )}
           </div>
-        )}
+        </div>
+      </div>
 
         {/* Interests Modal - Only show if no interests saved */}
         {savedInterests.length === 0 && (
