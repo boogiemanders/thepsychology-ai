@@ -28,8 +28,42 @@ import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { siteConfig } from '@/lib/config'
 import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
-import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
+
+const subscriptionTierVisuals = {
+  pro_coaching: {
+    label: 'Pro + Coaching',
+    style: {
+      borderColor: '#c46685',
+      backgroundColor: 'rgba(196, 102, 133, 0.1)',
+      color: '#c46685',
+    },
+  },
+  pro: {
+    label: 'Pro',
+    style: {
+      borderColor: '#6a9bcc',
+      backgroundColor: 'rgba(106, 155, 204, 0.1)',
+      color: '#6a9bcc',
+    },
+  },
+  basic: {
+    label: 'Basic',
+    style: {
+      borderColor: '#bdd1ca',
+      backgroundColor: 'rgba(189, 209, 202, 0.1)',
+      color: '#bdd1ca',
+    },
+  },
+  default: {
+    label: 'Free Trial',
+    style: {
+      borderColor: '#cbc9db',
+      backgroundColor: 'rgba(203, 201, 219, 0.1)',
+      color: '#cbc9db',
+    },
+  },
+} as const
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -67,6 +101,9 @@ export default function DashboardPage() {
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
   const [isAnonymousFeedback, setIsAnonymousFeedback] = useState(false)
   const { startCheckout, checkoutTier, checkoutError, resetCheckoutError } = useStripeCheckout()
+  const subscriptionTierKey = (userProfile?.subscription_tier as keyof typeof subscriptionTierVisuals) ?? 'default'
+  const { label: subscriptionTierLabel, style: subscriptionTierStyle } =
+    subscriptionTierVisuals[subscriptionTierKey] ?? subscriptionTierVisuals.default
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -828,77 +865,61 @@ export default function DashboardPage() {
 
         {/* Account Status Box */}
         <div className="border border-border/50 rounded-lg p-6 bg-white dark:bg-black backdrop-blur-sm">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-              <PersonIcon className="w-6 h-6 text-primary" />
-            </div>
-            <div className="flex-1">
-              <h3
-                className="font-semibold text-foreground cursor-pointer hover:text-primary transition-colors"
-                onClick={() => {
-                  const newName = prompt('Enter your name:', userProfile?.email?.split('@')[0] || '')
-                  if (newName && newName.trim()) {
-                    // TODO: Save name to user profile
-                    console.log('Saving name:', newName)
-                  }
-                }}
-              >
-                {userProfile?.email?.split('@')[0]}
-              </h3>
-              <div className="flex items-center gap-2 mb-2">
-                <p className="text-sm text-muted-foreground">{userProfile?.email}</p>
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <PersonIcon className="w-6 h-6 text-primary" />
               </div>
-              <div className="flex items-center gap-2 flex-nowrap">
-                <Badge
-                  variant="outline"
-                  className="text-xs"
-                  style={{
-                    borderColor: userProfile?.subscription_tier === 'pro_coaching' ? '#c46685' :
-                                 userProfile?.subscription_tier === 'pro' ? '#6a9bcc' :
-                                 userProfile?.subscription_tier === 'basic' ? '#bdd1ca' : '#cbc9db',
-                    backgroundColor: userProfile?.subscription_tier === 'pro_coaching' ? 'rgba(196, 102, 133, 0.1)' :
-                                     userProfile?.subscription_tier === 'pro' ? 'rgba(106, 155, 204, 0.1)' :
-                                     userProfile?.subscription_tier === 'basic' ? 'rgba(189, 209, 202, 0.1)' : 'rgba(203, 201, 219, 0.1)',
-                    color: userProfile?.subscription_tier === 'pro_coaching' ? '#c46685' :
-                           userProfile?.subscription_tier === 'pro' ? '#6a9bcc' :
-                           userProfile?.subscription_tier === 'basic' ? '#bdd1ca' : '#cbc9db',
+              <div>
+                <h3
+                  className="font-semibold text-foreground cursor-pointer hover:text-primary transition-colors"
+                  onClick={() => {
+                    const newName = prompt('Enter your name:', userProfile?.email?.split('@')[0] || '')
+                    if (newName && newName.trim()) {
+                      // TODO: Save name to user profile
+                      console.log('Saving name:', newName)
+                    }
                   }}
                 >
-                  {userProfile?.subscription_tier === 'pro_coaching' ? 'Pro + Coaching' :
-                   userProfile?.subscription_tier === 'pro' ? 'Pro' :
-                   userProfile?.subscription_tier === 'basic' ? 'Basic' : 'Free Trial'}
-                </Badge>
-                <div className="flex items-center gap-2">
-                  <InteractiveHoverButton
-                    text="Change Tier"
-                    hoverText="Upgrade"
-                    size="sm"
-                    onClick={() => setIsPricingCarouselOpen(true)}
-                  />
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-xs"
-                    onClick={() => {
-                      if (typeof window !== 'undefined') {
-                        window.location.href = 'https://billing.stripe.com/p/login/4gM5kC6YjgvT7Bp39g8Vi00'
-                      }
-                    }}
-                  >
-                    Manage Billing
-                  </Button>
-                </div>
+                  {userProfile?.email?.split('@')[0]}
+                </h3>
+                <p className="text-sm text-muted-foreground">{userProfile?.email}</p>
               </div>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              className="gap-2"
-              onClick={() => setIsFeedbackOpen(true)}
-            >
-              <MessageSquare className="w-4 h-4" />
-              Feedback
-            </Button>
+            <div className="w-full md:flex-1">
+              <div className="flex flex-col gap-2 md:flex-row md:flex-nowrap md:items-center md:gap-3">
+                <div
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border px-5 text-sm font-medium md:w-auto"
+                  style={subscriptionTierStyle}
+                >
+                  Plan: {subscriptionTierLabel}
+                </div>
+                <Button
+                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
+                  onClick={() => setIsPricingCarouselOpen(true)}
+                >
+                  Change Tier
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
+                  onClick={() => {
+                    if (typeof window !== 'undefined') {
+                      window.location.href = 'https://billing.stripe.com/p/login/4gM5kC6YjgvT7Bp39g8Vi00'
+                    }
+                  }}
+                >
+                  Manage Billing
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
+                  onClick={() => setIsFeedbackOpen(true)}
+                >
+                  Feedback
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
 
