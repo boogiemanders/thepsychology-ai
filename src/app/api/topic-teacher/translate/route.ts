@@ -18,30 +18,73 @@ interface Placeholder {
   original: string
 }
 
+const PLACEHOLDER_PREFIX = '@@PROTECTED_'
+
 const protectAsteriskKeywords = (content: string): { protected: string; placeholders: Placeholder[] } => {
   const placeholders: Placeholder[] = []
-  const regex = /(\*\*[^*]+\*\*|\*[^*]+\*)/g
-  let match: RegExpExecArray | null
   let index = 0
-  let result = content
-
-  while ((match = regex.exec(content)) !== null) {
-    const original = match[0]
-    const placeholder = `@@PROTECTED_${index}@@`
-    placeholders.push({ placeholder, original })
-    result = result.replace(original, placeholder)
+  const protectedContent = content.replace(/(\*\*[^*]+\*\*|\*[^*]+\*)/g, (match) => {
+    const placeholder = `${PLACEHOLDER_PREFIX}${index}@@`
+    placeholders.push({ placeholder, original: match })
     index++
-  }
-
-  return { protected: result, placeholders }
+    return placeholder
+  })
+  return { protected: protectedContent, placeholders }
 }
 
-const restorePlaceholders = (text: string, placeholders: Placeholder[]): string => {
-  let restored = text
-  for (const { placeholder, original } of placeholders) {
-    restored = restored.replaceAll(placeholder, original)
+const getPartialPlaceholderStart = (text: string): number => {
+  for (let i = Math.min(text.length, PLACEHOLDER_PREFIX.length); i > 0; i--) {
+    const suffix = text.slice(-i)
+    if (PLACEHOLDER_PREFIX.startsWith(suffix)) {
+      return text.length - i
+    }
   }
-  return restored
+  return -1
+}
+
+const processBuffer = (
+  buffer: string,
+  placeholderMap: Map<string, string>,
+  flushAll: boolean = false
+): { emitText: string; remaining: string } => {
+  let working = buffer
+  let emitText = ''
+
+  while (working.length > 0) {
+    const start = working.indexOf(PLACEHOLDER_PREFIX)
+    if (start === -1) {
+      if (!flushAll) {
+        const partialStart = getPartialPlaceholderStart(working)
+        if (partialStart !== -1) {
+          emitText += working.slice(0, partialStart)
+          working = working.slice(partialStart)
+          break
+        }
+      }
+      emitText += working
+      working = ''
+      break
+    }
+
+    const closingIndex = working.indexOf('@@', start + PLACEHOLDER_PREFIX.length)
+    if (closingIndex === -1) {
+      emitText += working.slice(0, start)
+      working = working.slice(start)
+      break
+    }
+
+    const placeholder = working.slice(start, closingIndex + 2)
+    const original = placeholderMap.get(placeholder) ?? ''
+    emitText += working.slice(0, start) + original
+    working = working.slice(closingIndex + 2)
+  }
+
+  if (flushAll && working.length > 0) {
+    emitText += working.replace(/@@PROTECTED_\d+@@/g, (ph) => placeholderMap.get(ph) ?? '')
+    working = ''
+  }
+
+  return { emitText, remaining: working }
 }
 
 export async function POST(request: NextRequest) {
@@ -70,12 +113,16 @@ export async function POST(request: NextRequest) {
     }
 
     const { protected: protectedContent, placeholders } = protectAsteriskKeywords(trimmedContent)
+    const placeholderMap = new Map<string, string>()
+    placeholders.forEach(({ placeholder, original }) => {
+      placeholderMap.set(placeholder, original)
+    })
 
     const translationPrompt = `Translate the following EPPP lesson content into ${targetLanguage}.
 
 Important:
 - Preserve markdown structure (headers, lists, tables, etc.).
-- Do NOT translate placeholder tokens. When you see sequences like @@PROTECTED_0@@, copy them over exactly as-is and do not change their order or spacing.
+- Do NOT translate placeholder tokens. When you see sequences like @@PROTECTED_0@@, copy them exactly as-is; they will be replaced later with English keywords.
 - Use natural language appropriate for a study guide.
 
 Content to translate:
@@ -131,6 +178,10 @@ ${protectedContent}`
 
               const data = line.replace(/^data:\s*/, '')
               if (data === '[DONE]') {
+                const { emitText } = processBuffer(pendingOutput, placeholderMap, true)
+                if (emitText) {
+                  controller.enqueue(encoder.encode(emitText))
+                }
                 controller.close()
                 return
               }
@@ -140,25 +191,10 @@ ${protectedContent}`
                 const delta = parsed.choices?.[0]?.delta?.content
                 if (delta) {
                   pendingOutput += delta
-
-                  // Only emit text that doesn't contain partial placeholder tokens
-                  let emitLength = pendingOutput.length
-                  const lastPlaceholderIndex = pendingOutput.lastIndexOf('@@PROTECTED_')
-                  if (lastPlaceholderIndex !== -1) {
-                    const closingIndex = pendingOutput.indexOf('@@', lastPlaceholderIndex + '@@PROTECTED_'.length)
-                    if (closingIndex === -1) {
-                      emitLength = lastPlaceholderIndex
-                    } else {
-                      emitLength = closingIndex + 2
-                    }
-                  }
-
-                  if (emitLength > 0) {
-                    const emitText = pendingOutput.slice(0, emitLength)
-                    controller.enqueue(
-                      encoder.encode(restorePlaceholders(emitText, placeholders))
-                    )
-                    pendingOutput = pendingOutput.slice(emitLength)
+                  const { emitText, remaining } = processBuffer(pendingOutput, placeholderMap)
+                  pendingOutput = remaining
+                  if (emitText) {
+                    controller.enqueue(encoder.encode(emitText))
                   }
                 }
               } catch {
@@ -166,24 +202,10 @@ ${protectedContent}`
               }
             }
           }
-          // Flush any remaining buffer (if parseable)
-          const remaining = buffer.trim()
-          if (remaining.startsWith('data:')) {
-            const data = remaining.replace(/^data:\s*/, '')
-            if (data !== '[DONE]') {
-              try {
-                const parsed = JSON.parse(data)
-                const delta = parsed.choices?.[0]?.delta?.content
-                if (delta) {
-                  pendingOutput += delta
-                }
-              } catch {
-                // ignore
-              }
-            }
-          }
-          if (pendingOutput.length > 0) {
-            controller.enqueue(encoder.encode(restorePlaceholders(pendingOutput, placeholders)))
+
+          const { emitText } = processBuffer(pendingOutput, placeholderMap, true)
+          if (emitText) {
+            controller.enqueue(encoder.encode(emitText))
           }
           controller.close()
         } catch (error) {
