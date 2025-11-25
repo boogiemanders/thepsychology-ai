@@ -48,6 +48,83 @@ interface Message {
   content: string
 }
 
+function normalizeLanguagePreference(raw?: string | null): string | null {
+  if (!raw) return null
+  const trimmed = raw.trim()
+  if (!trimmed) return null
+  const lower = trimmed.toLowerCase()
+  if (lower === 'english' || lower === 'en' || lower === 'eng') {
+    return null
+  }
+  return trimmed
+}
+
+function protectAsteriskKeywords(
+  content: string
+): { protectedContent: string; placeholders: Array<{ placeholder: string; original: string }> } {
+  const placeholders: Array<{ placeholder: string; original: string }> = []
+  let protectedContent = content
+
+  const regex = /(\*\*[^*]+\*\*|\*[^*]+\*)/g
+  let match: RegExpExecArray | null
+  let index = 0
+
+  while ((match = regex.exec(content)) !== null) {
+    const original = match[0]
+    const placeholder = `@@PROTECTED_${index}@@`
+    placeholders.push({ placeholder, original })
+    protectedContent = protectedContent.replace(original, placeholder)
+    index++
+  }
+
+  return { protectedContent, placeholders }
+}
+
+async function translateLessonContent(
+  content: string,
+  languagePreference?: string | null
+): Promise<string> {
+  const targetLanguage = normalizeLanguagePreference(languagePreference)
+  if (!targetLanguage || !openai) return content
+
+  try {
+    const { protectedContent, placeholders } = protectAsteriskKeywords(content)
+
+    const translationPrompt = `Translate the following EPPP lesson content into ${targetLanguage}.
+
+Important:
+- Keep all placeholder tokens like @@PROTECTED_0@@ exactly as they are (do NOT translate or modify them).
+- Do not translate any markdown emphasis segments that have been replaced by these placeholders; they will be re-inserted later.
+- Preserve the markdown structure (headers, lists, tables, etc.).
+
+Content to translate:
+${protectedContent}`
+
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      temperature: 0.3,
+      messages: [
+        {
+          role: 'user',
+          content: translationPrompt,
+        },
+      ],
+    })
+
+    let translated = completion.choices[0]?.message?.content || protectedContent
+
+    for (const { placeholder, original } of placeholders) {
+      translated = translated.replaceAll(placeholder, original)
+    }
+
+    console.log(`[Topic Teacher] ✅ Translated lesson to ${targetLanguage}`)
+    return translated
+  } catch (error) {
+    console.error('[Topic Teacher] Error translating lesson content:', error)
+    return content
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -59,6 +136,7 @@ export async function POST(request: NextRequest) {
       isInitial,
       userInterests,
       subscriptionTier,
+      languagePreference,
     } = body
 
     if (!topic) {
@@ -104,6 +182,9 @@ export async function POST(request: NextRequest) {
             console.log(`[Topic Teacher] ⚡ Using pre-generated content with generic metaphors for ${topic}`)
             lessonContent = stripMetaphorMarkers(lessonContent)
           }
+
+          // Translate lesson content if user has a language preference
+          lessonContent = await translateLessonContent(lessonContent, languagePreference)
         } else {
           // No pre-generated content found
           console.error(`[Topic Teacher] ❌ No pre-generated content for ${topic}`)
@@ -198,7 +279,7 @@ export async function POST(request: NextRequest) {
     // For follow-ups, call OpenAI and then stream the full response text in chunks
     const systemPrompt = getTeacherSystemPrompt(userInterests, referenceMaterial)
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4.1-mini',
+      model: 'gpt-4o-mini',
       temperature: 0.7,
       messages: [
         { role: 'system', content: systemPrompt },
@@ -206,7 +287,10 @@ export async function POST(request: NextRequest) {
       ],
     })
 
-    const fullText = completion.choices[0]?.message?.content || ''
+    let fullText = completion.choices[0]?.message?.content || ''
+
+    // Translate follow-up responses if user has a language preference
+    fullText = await translateLessonContent(fullText, languagePreference)
 
     const stream = new ReadableStream({
       start(controller) {

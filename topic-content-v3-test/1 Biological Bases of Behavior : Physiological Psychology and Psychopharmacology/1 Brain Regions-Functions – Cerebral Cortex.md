@@ -36,7 +36,7 @@ The frontal lobe houses three critical areas that will come up repeatedly on the
 
 Located in the dominant hemisphere (left side for most people), Broca's area is your language production hub. When it's damaged, you get **Broca's aphasia**—also called expressive or nonfluent aphasia.
 
-Here's what's fascinating: people with Broca's aphasia can understand what you're saying. They know what they want to say. But getting the words out? That's the struggle. Their speech becomes slow and effortful, stripped down to mainly nouns and verbs. {{M}}It's like knowing exactly what you want to text but your phone's keyboard only works for certain letters—you can communicate, but it takes forever and comes out choppy.{{/M}}
+Here's what's fascinating: people with Broca's aphasia can understand what you're saying. They know what they want to say. But getting the words out? That's the struggle. Their speech becomes slow and effortful, stripped down to mainly nouns and verbs. {{M}}It's like knowing exactly what you want to text but your phone's keyboard only works for certain letters. You can communicate, but it takes forever and comes out choppy.{{/M}}
 
 Key features of Broca's aphasia:
 - Slow, labored speech

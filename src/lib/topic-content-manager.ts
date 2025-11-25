@@ -401,7 +401,7 @@ Return format:
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4.1-mini',
+        model: 'gpt-4o-mini',
         max_tokens: 2000,
         messages: [
           {
