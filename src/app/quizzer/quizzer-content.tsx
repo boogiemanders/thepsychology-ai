@@ -571,12 +571,12 @@ export function QuizzerContent() {
             </BreadcrumbList>
           </Breadcrumb>
           <div className="text-center py-20 space-y-3">
-            <TypographyH1 className="text-center">No topic selected</TypographyH1>
+            <TypographyH1 className="text-center">No lesson selected</TypographyH1>
             <TypographyMuted className="text-base text-center">
-              Please select a topic first
+              Please select a lesson first
             </TypographyMuted>
             <Link href="/topic-selector">
-              <Button>Go to Topics</Button>
+              <Button>Go to Lessons</Button>
             </Link>
           </div>
         </div>

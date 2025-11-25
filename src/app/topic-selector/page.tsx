@@ -24,6 +24,7 @@ import {
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { createClient } from '@supabase/supabase-js'
+import { getLessonDisplayName } from '@/lib/topic-display-names'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -371,16 +372,16 @@ export default function TopicSelectorPage() {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>Topics</BreadcrumbPage>
+                <BreadcrumbPage>Lessons</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 
           <div className="space-y-4">
             <div>
-              <h1 className="text-3xl font-bold mb-2">Topics</h1>
+              <h1 className="text-3xl font-bold mb-2">Lessons</h1>
               <p className="text-sm text-muted-foreground">
-                Select a topic to start studying
+                Select a lesson to start studying
               </p>
             </div>
 
@@ -388,7 +389,7 @@ export default function TopicSelectorPage() {
               <div className="rounded-lg border border-dashed border-border/70 bg-muted/30 p-4 text-sm">
                 <p className="font-medium mb-1">You’re on the free plan.</p>
                 <p className="text-muted-foreground">
-                  You have access to one curated topic in each domain. Upgrade to Pro to unlock all topics and advanced tools.
+                  You have access to one curated lesson in each domain. Upgrade to Pro to unlock all lessons and advanced tools.
                 </p>
               </div>
             )}
@@ -494,6 +495,7 @@ export default function TopicSelectorPage() {
                   {recentActivities.map((activity, idx) => {
                     const timeAgo = getTimeAgo(activity.timestamp)
                     const scoreColor = getRecentScoreColor(activity.score)
+                    const lessonName = getLessonDisplayName(activity.topic)
 
                     return (
                       <motion.div
@@ -506,7 +508,7 @@ export default function TopicSelectorPage() {
                           <div className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary hover:bg-accent transition-colors cursor-pointer group">
                             <div className="flex-1">
                               <p className="font-medium text-sm group-hover:text-primary transition-colors">
-                                {activity.topic}
+                                {lessonName}
                               </p>
                               <p className="text-xs text-muted-foreground">
                                 {timeAgo}
@@ -596,6 +598,7 @@ export default function TopicSelectorPage() {
                         const isFreeTopic =
                           !isFreeTier ||
                           (FREE_TOPICS_BY_DOMAIN[domain.id]?.includes(topic.name) ?? false)
+                        const lessonName = getLessonDisplayName(topic.name)
 
                         if (isFreeTopic) {
                           return (
@@ -606,7 +609,7 @@ export default function TopicSelectorPage() {
                             >
                               <div className="flex items-center justify-between mb-1">
                                 <div className="flex items-center gap-2 flex-1">
-                                  <span className="text-sm">{topic.name}</span>
+                                  <span className="text-sm">{lessonName}</span>
                                   {isPriority && (
                                     <Badge
                                       variant="outline"
@@ -635,7 +638,7 @@ export default function TopicSelectorPage() {
                           >
                             <div className="flex items-center justify-between mb-1">
                               <div className="flex items-center gap-2 flex-1">
-                                <span className="text-sm">{topic.name}</span>
+                                <span className="text-sm">{lessonName}</span>
                                 <Badge
                                   variant="outline"
                                   className="text-[10px] uppercase tracking-wide"

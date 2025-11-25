@@ -15,6 +15,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getUserCurrentInterest, updateUserCurrentInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
+import { getUserLanguagePreference, updateUserLanguagePreference } from '@/lib/language-preference'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { useAuth } from '@/context/auth-context'
 import { getQuizResults } from '@/lib/quiz-results-storage'
@@ -125,6 +126,243 @@ export function TopicTeacherContent() {
   const currentSectionRef = useRef<string>('')
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
   const [isNearBottom, setIsNearBottom] = useState(true)
+  const [languagePreference, setLanguagePreference] = useState<string | null>(null)
+  const [languageInput, setLanguageInput] = useState('')
+  const [lastTranslationCacheKey, setLastTranslationCacheKey] = useState<string | null>(null)
+  const [isTranslating, setIsTranslating] = useState(false)
+  const assistantEnglishContentRef = useRef<Record<number, string>>({})
+  const translationControllerRef = useRef<AbortController | null>(null)
+  const translationPromiseRef = useRef<Promise<void>>(Promise.resolve())
+  const translationSessionRef = useRef(0)
+  const interestSnapshotRef = useRef<string>('')
+  const [isMetaphorUpdating, setIsMetaphorUpdating] = useState(false)
+
+  const buildTranslationCacheKey = (
+    topicName?: string | null,
+    domainName?: string | null,
+    language?: string | null,
+    interests?: string | null
+  ): string | null => {
+    if (!topicName || !language) return null
+    const normalizedTopic = topicName.trim().toLowerCase()
+    const normalizedLanguage = language.trim().toLowerCase()
+    if (!normalizedTopic || !normalizedLanguage) return null
+    const normalizedDomain = domainName?.trim().toLowerCase() || 'none'
+    const normalizedInterests = interests?.trim().toLowerCase() || 'none'
+    return `tt_translation__${normalizedTopic}__${normalizedDomain}__${normalizedLanguage}__${normalizedInterests}`
+  }
+
+  const getCachedTranslation = (cacheKey: string): string | null => {
+    if (typeof window === 'undefined') return null
+    try {
+      return localStorage.getItem(cacheKey)
+    } catch (error) {
+      console.debug('Unable to read translation cache:', error)
+      return null
+    }
+  }
+
+  const storeCachedTranslation = (cacheKey: string, content: string) => {
+    if (typeof window === 'undefined') return
+    try {
+      localStorage.setItem(cacheKey, content)
+    } catch (error) {
+      console.debug('Unable to cache translation:', error)
+    }
+  }
+
+  const restoreAssistantEnglishContent = () => {
+    setMessages((prev) => {
+      let changed = false
+      const next = prev.map((message, idx) => {
+        if (message.role !== 'assistant') return message
+        const english = assistantEnglishContentRef.current[idx]
+        if (!english || message.content === english) return message
+        changed = true
+        return { ...message, content: english }
+      })
+      return changed ? next : prev
+    })
+  }
+
+  const queueTranslationTask = (
+    task: (sessionId: number) => Promise<void>
+  ) => {
+    const sessionId = translationSessionRef.current
+    translationPromiseRef.current = translationPromiseRef.current
+      .then(() => task(sessionId))
+      .catch((error) => {
+        if ((error as Error).name !== 'AbortError') {
+          console.error('Translation queue error:', error)
+        }
+      })
+    return translationPromiseRef.current
+  }
+
+  const startMessageTranslation = async (
+    messageIndex: number,
+    englishContent: string,
+    targetLanguage: string,
+    cacheKey: string | null,
+    sessionId: number,
+    options: { streamImmediately?: boolean } = {}
+  ) => {
+    if (!englishContent.trim()) return
+    if (translationSessionRef.current !== sessionId) return
+
+    if (cacheKey) {
+      const cached = getCachedTranslation(cacheKey)
+      if (cached) {
+        if (translationSessionRef.current !== sessionId) return
+        setMessages((prev) => {
+          const next = [...prev]
+          if (!next[messageIndex] || next[messageIndex].role !== 'assistant') {
+            return prev
+          }
+          next[messageIndex] = { ...next[messageIndex], content: cached }
+          return next
+        })
+        setLastTranslationCacheKey(cacheKey)
+        return
+      }
+    }
+
+    const controller = new AbortController()
+    translationControllerRef.current = controller
+    const streamImmediately = options.streamImmediately !== false
+    let bufferedTranslation = ''
+
+    try {
+      setIsTranslating(true)
+      const response = await fetch('/api/topic-teacher/translate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          content: englishContent,
+          languagePreference: targetLanguage,
+        }),
+        signal: controller.signal,
+      })
+
+      if (translationSessionRef.current !== sessionId) {
+        controller.abort()
+        return
+      }
+
+      if (!response.ok) {
+        const errorText = await response.text()
+        throw new Error(errorText || 'Failed to translate content')
+      }
+
+      if (!response.body) {
+        throw new Error('No response body')
+      }
+
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let translated = ''
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+
+        translated += decoder.decode(value, { stream: true })
+
+        if (translationSessionRef.current !== sessionId) {
+          controller.abort()
+          return
+        }
+
+        const currentContent = translated
+        if (streamImmediately) {
+          setMessages((prev) => {
+            const next = [...prev]
+            if (!next[messageIndex] || next[messageIndex].role !== 'assistant') {
+              return prev
+            }
+            next[messageIndex] = { ...next[messageIndex], content: currentContent }
+            return next
+          })
+        } else {
+          bufferedTranslation = currentContent
+        }
+      }
+
+      if (translationSessionRef.current !== sessionId) {
+        return
+      }
+
+      const finalContent = streamImmediately ? translated : bufferedTranslation || translated
+      if (!streamImmediately) {
+        setMessages((prev) => {
+          const next = [...prev]
+          if (!next[messageIndex] || next[messageIndex].role !== 'assistant') {
+            return prev
+          }
+          next[messageIndex] = { ...next[messageIndex], content: finalContent }
+          return next
+        })
+      }
+
+      if (cacheKey) {
+        storeCachedTranslation(cacheKey, finalContent)
+        setLastTranslationCacheKey(cacheKey)
+      }
+      return finalContent
+    } catch (error) {
+      if ((error as Error).name === 'AbortError') {
+        return
+      }
+      console.error('Translation stream error:', error)
+      setError(
+        error instanceof Error ? error.message : 'Failed to translate content'
+      )
+    } finally {
+      if (translationControllerRef.current === controller) {
+        translationControllerRef.current = null
+      }
+      setIsTranslating(false)
+    }
+    return null
+  }
+
+  const captureAssistantEnglishContent = (index: number, content: string) => {
+    assistantEnglishContentRef.current[index] = content
+
+    const targetLanguageRaw = languagePreference?.trim()
+    if (
+      !targetLanguageRaw ||
+      ['english', 'en', 'eng'].includes(targetLanguageRaw.toLowerCase())
+    ) {
+      return
+    }
+
+    const interestsSnapshot =
+      savedInterests.length > 0 ? savedInterests.join(', ') : userInterests || null
+    const cacheKey =
+      index === 0
+        ? buildTranslationCacheKey(
+            decodedTopic,
+            domain,
+            targetLanguageRaw,
+            interestsSnapshot
+          )
+        : null
+
+    setTimeout(() => {
+      queueTranslationTask((sessionId) =>
+        startMessageTranslation(
+          index,
+          content,
+          targetLanguageRaw,
+          cacheKey,
+          sessionId
+        )
+      )
+    }, 0)
+  }
 
   // Disabled auto-scroll - keep at top of page
   // const scrollToBottom = () => {
@@ -135,7 +373,7 @@ export function TopicTeacherContent() {
   //   scrollToBottom()
   // }, [messages])
 
-  // Check for user interests on mount and subscribe to changes
+  // Check for user interests and language preference on mount, and subscribe to interest changes
   useEffect(() => {
     const loadUserInterest = async () => {
       if (!user?.id) {
@@ -146,6 +384,7 @@ export function TopicTeacherContent() {
 
       try {
         let currentInterest = await getUserCurrentInterest(user.id)
+        let currentLanguage = await getUserLanguagePreference(user.id)
 
         // Fallback to localStorage if Supabase returns nothing
         if (!currentInterest && typeof window !== 'undefined') {
@@ -169,6 +408,15 @@ export function TopicTeacherContent() {
           setShowInterestsModal(true)
         }
 
+        // Load language preference with localStorage fallback
+        if (!currentLanguage && typeof window !== 'undefined') {
+          currentLanguage = localStorage.getItem(`language_pref_${user.id}`)
+        }
+        if (currentLanguage) {
+          setLanguagePreference(currentLanguage)
+          setLanguageInput('')
+        }
+
         // Subscribe to real-time interest changes
         const channel = subscribeToUserInterestChanges(user.id, (newInterest) => {
           setUserInterests(newInterest)
@@ -188,7 +436,7 @@ export function TopicTeacherContent() {
         })
         subscriptionRef.current = channel
       } catch (error) {
-        console.debug('Error loading user interest:', error)
+        console.debug('Error loading user interest or language preference:', error)
         setShowInterestsModal(true)
       } finally {
         // Mark interests as loaded regardless of outcome
@@ -334,6 +582,7 @@ export function TopicTeacherContent() {
   // Watch for interest changes and refresh metaphors
   useEffect(() => {
     if (!initialized || !interestsLoaded) return
+    if (isRefreshingMetaphors) return
 
     // Check if interests actually changed
     const currentInterestsStr = savedInterests.length > 0 ? savedInterests.join(', ') : null
@@ -353,14 +602,84 @@ export function TopicTeacherContent() {
             },
           ])
           setPreviousUserInterests(null)
+          setLastTranslationCacheKey(null)
+          captureAssistantEnglishContent(0, baseContent)
         }
       }
     }
   }, [savedInterests, initialized, interestsLoaded])
 
+  // Watch for language preference changes and refresh translated content (with caching)
+  useEffect(() => {
+    const rawPreference = languagePreference?.trim()
+    const normalized = rawPreference?.toLowerCase()
+
+    const resetToEnglish = () => {
+      translationSessionRef.current += 1
+      translationPromiseRef.current = Promise.resolve()
+      translationControllerRef.current?.abort()
+      setIsTranslating(false)
+      restoreAssistantEnglishContent()
+      setLastTranslationCacheKey(null)
+      setIsMetaphorUpdating(false)
+    }
+
+    if (
+      !rawPreference ||
+      !normalized ||
+      normalized === 'english' ||
+      normalized === 'en' ||
+      normalized === 'eng'
+    ) {
+      resetToEnglish()
+      return
+    }
+
+    translationSessionRef.current += 1
+    translationPromiseRef.current = Promise.resolve()
+    translationControllerRef.current?.abort()
+    restoreAssistantEnglishContent()
+
+    const interestsForCache =
+      interestSnapshotRef.current && interestSnapshotRef.current.length > 0
+        ? interestSnapshotRef.current
+        : null
+    const englishMap = assistantEnglishContentRef.current
+    const indices = Object.keys(englishMap)
+      .map(Number)
+      .sort((a, b) => a - b)
+
+    indices.forEach((idx) => {
+      const english = englishMap[idx]
+      if (!english) return
+      const cacheKey =
+        idx === 0
+          ? buildTranslationCacheKey(
+              decodedTopic,
+              domain,
+              rawPreference,
+              interestsForCache
+            )
+          : null
+      queueTranslationTask((sessionId) =>
+        startMessageTranslation(
+          idx,
+          english,
+          rawPreference,
+          cacheKey,
+          sessionId
+        )
+      )
+    })
+  }, [languagePreference, decodedTopic, domain])
+
   const initializeLesson = async () => {
     if (!topic) return
     const subscriptionTier = userProfile?.subscription_tier ?? 'free'
+    assistantEnglishContentRef.current = {}
+    translationSessionRef.current += 1
+    translationPromiseRef.current = Promise.resolve()
+    translationControllerRef.current?.abort()
 
     try {
       setIsLoading(true)
@@ -377,6 +696,7 @@ export function TopicTeacherContent() {
           messageHistory: [],
           isInitial: true,
           userInterests,
+          languagePreference: null,
           subscriptionTier,
         }),
       })
@@ -427,8 +747,10 @@ export function TopicTeacherContent() {
           content: lessonContent,
         },
       ])
+      captureAssistantEnglishContent(0, lessonContent)
       setInitialized(true)
       setPreviousUserInterests(userInterests)
+      setLastTranslationCacheKey(null)
     } catch (err) {
       console.error('Error loading lesson:', err)
       const errorMessage = err instanceof Error ? err.message : 'Failed to load lesson'
@@ -444,33 +766,65 @@ export function TopicTeacherContent() {
     const subscriptionTier = userProfile?.subscription_tier ?? 'free'
 
     // Create cache key from topic + interests
-    const cacheKey = `${topic}__${newInterests}`
+    const cacheKey = `${topic}__${newInterests || 'none'}`
 
     // Check cache first
     if (personalizedCache[cacheKey]) {
       console.log('[Topic Teacher] ⚡ Using cached personalized content for:', newInterests)
-      setMessages([
-        {
-          role: 'assistant',
-          content: personalizedCache[cacheKey],
-        },
-      ])
-      setPreviousUserInterests(newInterests)
+      const cachedLesson = personalizedCache[cacheKey]
+      assistantEnglishContentRef.current[0] = cachedLesson
+      const normalizedLang = languagePreference?.trim()
+      const normalizedLower = normalizedLang?.toLowerCase()
+
+      if (!normalizedLang || normalizedLower === 'english' || normalizedLower === 'en' || normalizedLower === 'eng') {
+        setMessages([
+          {
+            role: 'assistant',
+            content: cachedLesson,
+          },
+        ])
+        setPreviousUserInterests(newInterests)
+        setLastTranslationCacheKey(null)
+        return
+      }
+
+      setIsMetaphorUpdating(true)
+      const interestsForCache =
+        interestSnapshotRef.current && interestSnapshotRef.current.length > 0
+          ? interestSnapshotRef.current
+          : null
+
+      const translationCacheKey = buildTranslationCacheKey(
+        decodedTopic,
+        domain,
+        normalizedLang,
+        interestsForCache
+      )
+
+      queueTranslationTask((sessionId) =>
+        startMessageTranslation(
+          0,
+          cachedLesson,
+          normalizedLang,
+          translationCacheKey,
+          sessionId,
+          { streamImmediately: false }
+        )
+      )
+        .then(() => {
+          if (languagePreference !== normalizedLang) return
+          setPreviousUserInterests(newInterests)
+        })
+        .finally(() => {
+          setIsMetaphorUpdating(false)
+        })
       return
     }
 
     try {
       setIsRefreshingMetaphors(true)
+      setIsMetaphorUpdating(true)
       setError(null)
-
-      // First, show base content with loading placeholder immediately
-      const contentWithPlaceholder = baseContent + '\n\n[LOADING_METAPHORS]'
-      setMessages([
-        {
-          role: 'assistant',
-          content: contentWithPlaceholder,
-        },
-      ])
 
       console.log('[Topic Teacher] 🔄 Generating personalized metaphors for:', newInterests)
       const startTime = Date.now()
@@ -486,6 +840,7 @@ export function TopicTeacherContent() {
           messageHistory: [],
           isInitial: true,
           userInterests: newInterests,
+          languagePreference: null,
           subscriptionTier,
         }),
       })
@@ -520,19 +875,57 @@ export function TopicTeacherContent() {
         [cacheKey]: lessonContent
       }))
 
-      // Update the lesson content with new metaphors
-      setMessages([
-        {
-          role: 'assistant',
-          content: lessonContent,
-        },
-      ])
-      setPreviousUserInterests(newInterests)
+      const normalizedLang = languagePreference?.trim()
+      const normalizedLower = normalizedLang?.toLowerCase()
+      assistantEnglishContentRef.current[0] = lessonContent
+
+      if (!normalizedLang || normalizedLower === 'english' || normalizedLower === 'en' || normalizedLower === 'eng') {
+        setMessages([
+          {
+            role: 'assistant',
+            content: lessonContent,
+          },
+        ])
+        setPreviousUserInterests(newInterests)
+        setLastTranslationCacheKey(null)
+        setIsMetaphorUpdating(false)
+        return
+      }
+
+      const interestsForCache =
+        interestSnapshotRef.current && interestSnapshotRef.current.length > 0
+          ? interestSnapshotRef.current
+          : null
+      const translationCacheKey = buildTranslationCacheKey(
+        decodedTopic,
+        domain,
+        normalizedLang,
+        interestsForCache
+      )
+
+      queueTranslationTask((sessionId) =>
+        startMessageTranslation(
+          0,
+          lessonContent,
+          normalizedLang,
+          translationCacheKey,
+          sessionId,
+          { streamImmediately: false }
+        )
+      )
+        .then(() => {
+          if (languagePreference !== normalizedLang) return
+          setPreviousUserInterests(newInterests)
+        })
+        .finally(() => {
+          setIsMetaphorUpdating(false)
+        })
     } catch (err) {
       console.error('Error refreshing metaphors:', err)
       setError(
         err instanceof Error ? err.message : 'Failed to refresh metaphors'
       )
+      setIsMetaphorUpdating(false)
     } finally {
       setIsRefreshingMetaphors(false)
     }
@@ -564,6 +957,7 @@ export function TopicTeacherContent() {
           userMessage,
           isInitial: false,
           userInterests,
+          languagePreference,
           subscriptionTier,
         }),
       })
@@ -589,10 +983,12 @@ export function TopicTeacherContent() {
         assistantMessage += text
       }
 
-      setMessages((prev) => [
-        ...prev,
-        { role: 'assistant', content: assistantMessage },
-      ])
+      setMessages((prev) => {
+        const next = [...prev, { role: 'assistant', content: assistantMessage }]
+        const newIndex = next.length - 1
+        captureAssistantEnglishContent(newIndex, assistantMessage)
+        return next
+      })
     } catch (err) {
       console.error('Error sending message:', err)
       setError(
@@ -602,6 +998,12 @@ export function TopicTeacherContent() {
       setIsLoading(false)
     }
   }
+
+  useEffect(() => {
+    const snapshot =
+      savedInterests.length > 0 ? savedInterests.join(', ') : userInterests || ''
+    interestSnapshotRef.current = snapshot
+  }, [savedInterests, userInterests])
 
   const normalizeLabel = (value: string): string => {
     return value
@@ -664,7 +1066,7 @@ export function TopicTeacherContent() {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/topic-selector">Topics</BreadcrumbLink>
+                <BreadcrumbLink href="/topic-selector">Lessons</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -673,12 +1075,12 @@ export function TopicTeacherContent() {
             </BreadcrumbList>
           </Breadcrumb>
           <div className="text-center py-20">
-            <h1 className="text-2xl font-bold mb-4">No topic selected</h1>
+            <h1 className="text-2xl font-bold mb-4">No lesson selected</h1>
             <p className="text-muted-foreground mb-6">
-              Please select a topic from Topics
+              Please select a lesson from Lessons
             </p>
             <Link href="/topic-selector">
-              <Button>Go to Topics</Button>
+              <Button>Go to Lessons</Button>
             </Link>
           </div>
         </div>
@@ -696,7 +1098,7 @@ export function TopicTeacherContent() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/topic-selector">Topics</BreadcrumbLink>
+              <BreadcrumbLink href="/topic-selector">Lessons</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -708,6 +1110,12 @@ export function TopicTeacherContent() {
         <div className="mb-6">
           <TypographyH1>{decodeURIComponent(topic)}</TypographyH1>
         </div>
+
+        {isMetaphorUpdating && (
+          <div className="mb-4 rounded-md border border-dashed border-primary/50 bg-primary/5 px-4 py-2 text-sm text-primary">
+            Personalizing metaphors for your interests...
+          </div>
+        )}
 
         {/* Interest Tags Input */}
         <div className="mb-6 max-w-2xl">
@@ -774,6 +1182,93 @@ export function TopicTeacherContent() {
 
               {/* Enter key indicator */}
               {currentInterestInput.trim().length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="flex items-center gap-1 text-xs text-muted-foreground ml-auto"
+                >
+                  <Kbd className="text-xs px-1.5 py-0.5">Enter</Kbd>
+                </motion.div>
+              )}
+            </div>
+            {languagePreference && isTranslating && (
+              <div className="mt-2 text-xs text-muted-foreground px-1">
+                Translating to {languagePreference}...
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Language Preference Input */}
+        <div className="mb-6 max-w-2xl">
+          <div className="relative">
+            <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
+              {/* Display language preference as a single tag */}
+              {languagePreference && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  className="flex items-center gap-1 px-2 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium"
+                >
+                  <span>{languagePreference}</span>
+                  <button
+                    onClick={() => {
+                      setLanguagePreference(null)
+                      setLanguageInput('')
+                      setIsTranslating(false)
+                      setLastTranslationCacheKey(null)
+                      if (user?.id) {
+                        updateUserLanguagePreference(user.id, '')
+                        if (typeof window !== 'undefined') {
+                          localStorage.removeItem(`language_pref_${user.id}`)
+                        }
+                      }
+                      const cacheKeyToRemove = buildTranslationCacheKey(
+                        decodedTopic,
+                        domain,
+                        languagePreference,
+                        savedInterests.length > 0 ? savedInterests.join(', ') : userInterests || null
+                      )
+                      if (cacheKeyToRemove && typeof window !== 'undefined') {
+                        localStorage.removeItem(cacheKeyToRemove)
+                      }
+                    }}
+                    className="hover:opacity-70 transition-opacity"
+                    type="button"
+                  >
+                    <X size={14} />
+                  </button>
+                </motion.div>
+              )}
+
+              {/* Input field */}
+              {!languagePreference && (
+                <input
+                  type="text"
+                  placeholder="Preferred language (e.g., Spanish)..."
+                  value={languageInput}
+                  onChange={(e) => setLanguageInput(e.target.value)}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter' && languageInput.trim() && user?.id) {
+                      e.preventDefault()
+                      const newLanguage = languageInput.trim()
+                      setLanguagePreference(newLanguage)
+                      setLastTranslationCacheKey(null)
+                      setIsTranslating(false)
+                      setLanguageInput('')
+                      updateUserLanguagePreference(user.id, newLanguage)
+                      if (typeof window !== 'undefined') {
+                        localStorage.setItem(`language_pref_${user.id}`, newLanguage)
+                      }
+                    }
+                  }}
+                  className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"
+                />
+              )}
+
+              {/* Enter key indicator */}
+              {!languagePreference && languageInput.trim().length > 0 && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -1073,6 +1568,13 @@ export function TopicTeacherContent() {
               </motion.div>
             )
           })}
+
+          {isMetaphorUpdating && (
+            <div className="mt-4 flex items-center justify-center text-xs text-muted-foreground gap-2">
+              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+              Personalizing metaphors...
+            </div>
+          )}
 
           {isLoading && <PulseSpinner message="Loading your lesson..." fullScreen={false} />}
 

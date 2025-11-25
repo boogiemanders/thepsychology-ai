@@ -453,9 +453,9 @@ export function PrioritizeContent() {
                           <div className="flex items-center gap-3">
                             <AlertTriangle size={24} className="text-orange-500 flex-shrink-0" />
                             <div className="text-left">
-                              <CardTitle className="text-xl">Topics Needing Focus</CardTitle>
+                              <CardTitle className="text-xl">Lessons Needing Focus</CardTitle>
                               <CardDescription>
-                                These topics scored below 60% - prioritize them in your study plan
+                                These lessons scored below 60% - prioritize them in your study plan
                               </CardDescription>
                             </div>
                           </div>
@@ -492,7 +492,7 @@ export function PrioritizeContent() {
                             <div className="text-left">
                               <CardTitle className="text-xl">Great Progress!</CardTitle>
                               <CardDescription>
-                                All your topics are scoring above 60%. Keep up the excellent work!
+                                All your lessons are scoring above 60%. Keep up the excellent work!
                               </CardDescription>
                             </div>
                           </div>
@@ -518,7 +518,7 @@ export function PrioritizeContent() {
                         <Button size="lg">Take Practice Exam</Button>
                       </Link>
                       <Link href="/topic-selector">
-                        <Button size="lg" variant="outline">Study Topics</Button>
+                        <Button size="lg" variant="outline">Study Lessons</Button>
                       </Link>
                     </div>
                   </CardContent>
@@ -746,7 +746,7 @@ export function PrioritizeContent() {
                     <CardHeader>
                       <CardTitle className="text-2xl flex items-center gap-2">
                         <FileText size={24} className="text-muted-foreground" />
-                        Recommended Topics to Study
+                        Recommended Lessons to Study
                       </CardTitle>
                       <CardDescription>
                         Focus on these areas based on your performance
@@ -766,11 +766,11 @@ export function PrioritizeContent() {
                             return !(score !== null && score >= 70)
                           })
                           const topicCount = reviewTopics.length
-                          const topicLabel = topicCount === 1 ? 'topic' : 'topics'
+                          const topicLabel = topicCount === 1 ? 'lesson' : 'lessons'
                           const descriptionText =
                             topicCount > 0
                               ? `${topicCount} ${topicLabel} to review`
-                              : 'All recommended topics completed'
+                              : 'All recommended lessons completed'
 
                           return (
                             <Card key={idx} className="overflow-hidden hover:bg-accent/50 transition-colors">

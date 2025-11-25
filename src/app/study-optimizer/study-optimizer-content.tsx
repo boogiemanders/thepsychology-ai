@@ -142,9 +142,9 @@ export function StudyOptimizerContent() {
                           <div className="flex items-center gap-3">
                             <AlertTriangle size={24} className="text-orange-500 flex-shrink-0" />
                             <div className="text-left">
-                              <CardTitle className="text-xl">Topics Needing Focus</CardTitle>
+                              <CardTitle className="text-xl">Lessons Needing Focus</CardTitle>
                               <CardDescription>
-                                These topics scored below 60% - prioritize them in your study plan
+                                These lessons scored below 60% - prioritize them in your study plan
                               </CardDescription>
                             </div>
                           </div>
@@ -189,7 +189,7 @@ export function StudyOptimizerContent() {
                             <div className="text-left">
                               <CardTitle className="text-xl">Great Progress!</CardTitle>
                               <CardDescription>
-                                All your topics are scoring above 60%. Keep up the excellent work!
+                                All your lessons are scoring above 60%. Keep up the excellent work!
                               </CardDescription>
                             </div>
                           </div>
@@ -219,7 +219,7 @@ export function StudyOptimizerContent() {
                         <Button size="lg">Take Practice Exam</Button>
                       </Link>
                       <Link href="/topic-selector">
-                        <Button size="lg" variant="outline">Study Topics</Button>
+                        <Button size="lg" variant="outline">Study Lessons</Button>
                       </Link>
                     </div>
                   </CardContent>

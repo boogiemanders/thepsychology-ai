@@ -93,6 +93,7 @@ export default function DashboardPage() {
   const [todayQuizCount, setTodayQuizCount] = useState(0)
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
   const [priorityDomains, setPriorityDomains] = useState<any[]>([])
+  const [hasCompletedExam, setHasCompletedExam] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
   const [isPricingCarouselOpen, setIsPricingCarouselOpen] = useState(false)
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
@@ -295,6 +296,7 @@ export default function DashboardPage() {
           timestamp: number
           topPriorities: any[]
         }>
+        setHasCompletedExam(available.length > 0)
 
         if (available.length === 0) {
           const localDiagnostic = getTopPriorities('diagnostic')
@@ -325,6 +327,7 @@ export default function DashboardPage() {
 
         if (data && !error) {
           setPriorityDomains(data.top_domains || [])
+          setHasCompletedExam(Array.isArray(data.top_domains) && data.top_domains.length > 0)
         } else {
           applyLocalPriorityFallback()
         }
@@ -604,7 +607,7 @@ export default function DashboardPage() {
     {
       Icon: FileTextIcon,
       name: "Study",
-      description: `${studyStats.totalQuizzes} quizzes • ${progressData.completedTopics}/${progressData.totalTopics} topics`,
+      description: `${studyStats.totalQuizzes} quizzes • ${progressData.completedTopics}/${progressData.totalTopics} lessons`,
       href: "/topic-selector",
       cta: "Start Studying",
       className:
@@ -643,7 +646,8 @@ export default function DashboardPage() {
 
           <div className="w-full h-full">
             <div className="text-sm text-foreground/80 mb-2">
-              Overall completion: {progressData.totalCompletion}%. Tap Practice or Prioritize to see where to focus.
+              Overall completion: {progressData.totalCompletion}%.
+              {!hasCompletedExam && studyStats.totalQuizzes === 0 ? ' Tap Practice to see where to focus.' : ''}
             </div>
             <ScrollArea className="w-full h-full pr-4">
               <div className="w-full space-y-2 opacity-60">

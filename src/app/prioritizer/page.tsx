@@ -224,7 +224,7 @@ export default function PrioritizerPage() {
                         {/* Recommended Topics */}
                         {domain.recommendedTopicIds && domain.recommendedTopicIds.length > 0 && (
                           <div className="space-y-3">
-                            <h4 className="font-semibold text-sm">Recommended Topics to Study</h4>
+                            <h4 className="font-semibold text-sm">Recommended Lessons to Study</h4>
                             <div className="space-y-2">
                               {domain.recommendedTopicIds.map((topicId) => {
                                 const topic = getTopicById(topicId)
@@ -263,13 +263,13 @@ export default function PrioritizerPage() {
                             {domain.percentageWrong > 50 ? (
                               <>
                                 <li>• This is a major knowledge gap - prioritize immediate study</li>
-                                <li>• Spend 2-3 sessions studying the recommended topics</li>
+                                <li>• Spend 2-3 sessions studying the recommended lessons</li>
                                 <li>• Retake the diagnostic exam after studying to measure improvement</li>
                               </>
                             ) : domain.percentageWrong > 30 ? (
                               <>
                                 <li>• This domain needs focused review</li>
-                                <li>• Study the recommended topics over 1-2 sessions</li>
+                                <li>• Study the recommended lessons over 1-2 sessions</li>
                                 <li>• Review weak knowledge statements multiple times</li>
                               </>
                             ) : (
@@ -293,7 +293,7 @@ export default function PrioritizerPage() {
           <div className="flex gap-3 justify-center pt-8">
             <Link href="/topic-selector">
               <Button size="lg" variant="outline">
-                Browse All Topics
+                Browse All Lessons
               </Button>
             </Link>
             <Link href="/exam-generator">
