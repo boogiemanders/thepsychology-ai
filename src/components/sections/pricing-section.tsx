@@ -489,7 +489,7 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
                     name="goals"
                     value={formData.goals}
                     onChange={handleInputChange}
-                    placeholder="Tell us about your plans, concerns, or what success looks like."
+                    placeholder="Plans, concerns, or what success looks like."
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary min-h-[90px]"
                   />
                 </div>
