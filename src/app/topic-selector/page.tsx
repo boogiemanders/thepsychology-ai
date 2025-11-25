@@ -46,8 +46,6 @@ const FREE_TOPICS_BY_DOMAIN: Record<string, string[]> = {
   '3-5-6': ['Satisfaction, Commitment, and Stress'],
 }
 
-const SOCIAL_CULTURAL_DOMAIN_IDS = new Set(['3-social', '3-cultural'])
-
 interface RecentActivity {
   topic: string
   timestamp: number
@@ -362,144 +360,6 @@ export default function TopicSelectorPage() {
     }
   }
 
-  const socialCulturalDomains = domains.filter((domain) =>
-    SOCIAL_CULTURAL_DOMAIN_IDS.has(domain.id)
-  )
-  const otherDomains = domains.filter(
-    (domain) => !SOCIAL_CULTURAL_DOMAIN_IDS.has(domain.id)
-  )
-
-  const renderDomainCard = (domain: any, index: number) => (
-    <Card key={domain.id} className="border">
-      <button onClick={() => toggleDomain(domain.id)} className="w-full">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.05 }}
-          className="p-4 hover:bg-accent transition-colors text-left w-full"
-        >
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center gap-2">
-              <h3 className="text-sm font-medium">{domain.name}</h3>
-              {recommendedDomainIds.includes(domain.id) && (
-                <Badge
-                  variant="secondary"
-                  className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
-                  style={{
-                    backgroundColor: '#d87758',
-                    borderColor: '#d87758',
-                    color: '#ffffff',
-                  }}
-                >
-                  <BadgeCheck className="h-3 w-3" />
-                  Recommended
-                </Badge>
-              )}
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-muted-foreground">
-                {domain.progress}%
-              </span>
-              <motion.div
-                animate={{
-                  rotate: expandedDomains.includes(domain.id) ? 180 : 0,
-                }}
-                transition={{ duration: 0.2 }}
-              >
-                <ChevronDown size={16} />
-              </motion.div>
-            </div>
-          </div>
-          <Progress value={domain.progress} className="h-1" />
-        </motion.div>
-      </button>
-
-      <AnimatePresence initial={false}>
-        {expandedDomains.includes(domain.id) && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{
-              duration: 0.3,
-              ease: 'easeInOut',
-              opacity: { duration: 0.2 },
-            }}
-            style={{ overflow: 'hidden' }}
-          >
-            <Separator />
-            <CardContent className="pt-4 pb-4 space-y-3">
-              {domain.topics.map((topic: any) => {
-                const isPriority = priorityTopicIds.includes(topic.id)
-                const isFreeTopic =
-                  !isFreeTier ||
-                  (FREE_TOPICS_BY_DOMAIN[domain.id]?.includes(topic.name) ??
-                    false)
-
-                if (isFreeTopic) {
-                  return (
-                    <Link
-                      key={topic.name}
-                      href={`/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
-                      className="block hover:opacity-75 transition-opacity"
-                    >
-                      <div className="flex items-center justify-between mb-1">
-                        <div className="flex items-center gap-2 flex-1">
-                          <span className="text-sm">{topic.name}</span>
-                          {isPriority && (
-                            <Badge
-                              variant="outline"
-                              className="text-xs flex items-center gap-1"
-                              style={{
-                                backgroundColor: '#cbc9db20',
-                                color: '#cbc9db',
-                                borderColor: '#cbc9db',
-                              }}
-                            >
-                              <AlertCircle className="w-3 h-3" />
-                              Focus
-                            </Badge>
-                          )}
-                        </div>
-                        <span className="text-xs text-muted-foreground flex-shrink-0">
-                          {topic.progress}%
-                        </span>
-                      </div>
-                      <Progress value={topic.progress} className="h-1.5" />
-                    </Link>
-                  )
-                }
-
-                return (
-                  <div
-                    key={topic.name}
-                    className="block opacity-70 cursor-not-allowed"
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="flex items-center gap-2 flex-1">
-                        <span className="text-sm">{topic.name}</span>
-                        <Badge
-                          variant="outline"
-                          className="text-[10px] uppercase tracking-wide"
-                        >
-                          Pro
-                        </Badge>
-                      </div>
-                      <span className="text-xs text-muted-foreground flex-shrink-0">
-                        {topic.progress}%
-                      </span>
-                    </div>
-                    <Progress value={topic.progress} className="h-1.5" />
-                  </div>
-                )
-              })}
-            </CardContent>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </Card>
-  )
-
   return (
     <main className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto">
@@ -669,25 +529,134 @@ export default function TopicSelectorPage() {
           </div>
         )}
 
-        <div className="p-6 space-y-5">
-          {socialCulturalDomains.length > 0 && (
-            <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                Domain 3: Social & Cultural Bases
-              </p>
-              {socialCulturalDomains.map((domain, index) =>
-                renderDomainCard(domain, index)
-              )}
-            </div>
-          )}
+        <div className="p-6 space-y-3">
+          {domains.map((domain, index) => (
+            <Card key={domain.id} className="border">
+              <button
+                onClick={() => toggleDomain(domain.id)}
+                className="w-full"
+              >
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="p-4 hover:bg-accent transition-colors text-left w-full"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-sm font-medium">{domain.name}</h3>
+                        {recommendedDomainIds.includes(domain.id) && (
+                          <Badge
+                            variant="secondary"
+                            className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
+                            style={{
+                              backgroundColor: '#d87758',
+                              borderColor: '#d87758',
+                              color: '#ffffff',
+                            }}
+                          >
+                            <BadgeCheck className="h-3 w-3" />
+                            Recommended
+                          </Badge>
+                        )}
+                      </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs text-muted-foreground">{domain.progress}%</span>
+                      <motion.div
+                        animate={{
+                          rotate: expandedDomains.includes(domain.id) ? 180 : 0,
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ChevronDown size={16} />
+                      </motion.div>
+                    </div>
+                  </div>
+                  <Progress value={domain.progress} className="h-1" />
+                </motion.div>
+              </button>
 
-          {otherDomains.length > 0 && (
-            <div className="space-y-3">
-              {otherDomains.map((domain, index) =>
-                renderDomainCard(domain, socialCulturalDomains.length + index)
-              )}
-            </div>
-          )}
+              <AnimatePresence initial={false}>
+                {expandedDomains.includes(domain.id) && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: 'easeInOut',
+                      opacity: { duration: 0.2 },
+                    }}
+                    style={{ overflow: 'hidden' }}
+                  >
+                    <Separator />
+                    <CardContent className="pt-4 pb-4 space-y-3">
+                      {domain.topics.map((topic) => {
+                        const isPriority = priorityTopicIds.includes(topic.id)
+                        const isFreeTopic =
+                          !isFreeTier ||
+                          (FREE_TOPICS_BY_DOMAIN[domain.id]?.includes(topic.name) ?? false)
+
+                        if (isFreeTopic) {
+                          return (
+                            <Link
+                              key={topic.name}
+                              href={`/topic-teacher?domain=${domain.id}&topic=${encodeURIComponent(topic.name)}`}
+                              className="block hover:opacity-75 transition-opacity"
+                            >
+                              <div className="flex items-center justify-between mb-1">
+                                <div className="flex items-center gap-2 flex-1">
+                                  <span className="text-sm">{topic.name}</span>
+                                  {isPriority && (
+                                    <Badge
+                                      variant="outline"
+                                      className="text-xs flex items-center gap-1"
+                                      style={{ backgroundColor: '#cbc9db20', color: '#cbc9db', borderColor: '#cbc9db' }}
+                                    >
+                                      <AlertCircle className="w-3 h-3" />
+                                      Focus
+                                    </Badge>
+                                  )}
+                                </div>
+                                <span className="text-xs text-muted-foreground flex-shrink-0">
+                                  {topic.progress}%
+                                </span>
+                              </div>
+                              <Progress value={topic.progress} className="h-1.5" />
+                            </Link>
+                          )
+                        }
+
+                        // Locked (Pro-only) topic for free tier
+                        return (
+                          <div
+                            key={topic.name}
+                            className="block opacity-70 cursor-not-allowed"
+                          >
+                            <div className="flex items-center justify-between mb-1">
+                              <div className="flex items-center gap-2 flex-1">
+                                <span className="text-sm">{topic.name}</span>
+                                <Badge
+                                  variant="outline"
+                                  className="text-[10px] uppercase tracking-wide"
+                                >
+                                  Pro
+                                </Badge>
+                              </div>
+                              <span className="text-xs text-muted-foreground flex-shrink-0">
+                                {topic.progress}%
+                              </span>
+                            </div>
+                            <Progress value={topic.progress} className="h-1.5" />
+                          </div>
+                        )
+                      })}
+                    </CardContent>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </Card>
+          ))}
         </div>
       </div>
     </main>
