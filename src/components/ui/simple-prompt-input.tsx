@@ -54,30 +54,30 @@ export const SimplePromptInput = React.forwardRef<HTMLDivElement, SimplePromptIn
     const hasContent = value.trim().length > 0
 
     return (
-      <div
-        ref={ref}
+    <div
+      ref={ref}
+      className={cn(
+        'flex items-end gap-3 rounded-2xl border border-brand-soft-blue/70 bg-brand-soft-blue/10 p-4 transition-all duration-200 shadow-lg',
+        isLoading && 'opacity-60 cursor-not-allowed',
+        className
+      )}
+    >
+      {/* Textarea */}
+      <textarea
+        ref={textareaRef}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder={placeholder}
+        disabled={isLoading}
+        rows={1}
         className={cn(
-          'flex items-end gap-3 rounded-2xl border border-[#444444] bg-[#1F2023] p-3 transition-all duration-200',
-          isLoading && 'opacity-60 cursor-not-allowed',
-          className
+          'flex-1 resize-none rounded-lg bg-transparent text-white placeholder:text-brand-soft-blue/80',
+          'border-none outline-none focus:ring-0',
+          'max-h-[240px] overflow-y-auto',
+          'disabled:cursor-not-allowed disabled:opacity-50',
+          'scrollbar-thin scrollbar-thumb-[#444444] scrollbar-track-transparent'
         )}
-      >
-        {/* Textarea */}
-        <textarea
-          ref={textareaRef}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder}
-          disabled={isLoading}
-          rows={1}
-          className={cn(
-            'flex-1 resize-none rounded-lg bg-transparent text-base text-gray-100 placeholder:text-gray-500',
-            'border-none outline-none focus:ring-0',
-            'max-h-[240px] overflow-y-auto',
-            'disabled:cursor-not-allowed disabled:opacity-50',
-            'scrollbar-thin scrollbar-thumb-[#444444] scrollbar-track-transparent'
-          )}
           style={{
             height: 'auto',
             minHeight: '44px'
@@ -88,14 +88,14 @@ export const SimplePromptInput = React.forwardRef<HTMLDivElement, SimplePromptIn
         <button
           onClick={handleSubmit}
           disabled={isLoading || !hasContent}
-          className={cn(
-            'flex-shrink-0 rounded-full p-2 transition-all duration-200',
-            'flex items-center justify-center',
-            hasContent && !isLoading
-              ? 'bg-white hover:bg-white/90 text-[#1F2023] cursor-pointer'
-              : 'bg-gray-700/30 text-gray-500 cursor-not-allowed',
-            'disabled:opacity-50'
-          )}
+        className={cn(
+          'flex-shrink-0 rounded-full p-2 transition-all duration-200',
+          'flex items-center justify-center shadow',
+          hasContent && !isLoading
+            ? 'bg-brand-soft-blue text-white hover:bg-brand-soft-blue/90 cursor-pointer'
+            : 'bg-border text-muted-foreground cursor-not-allowed',
+          'disabled:opacity-50'
+        )}
           title={isLoading ? 'Generating response...' : 'Send message (Enter)'}
         >
           <ArrowUp className="h-4 w-4" />
