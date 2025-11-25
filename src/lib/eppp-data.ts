@@ -40,7 +40,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '3-social',
-    name: '3: Social Psychology',
+    name: '3: Social Bases',
     description: 'Social Behavior and Cognition',
     topics: [
       { name: 'Affiliation, Attraction, and Intimacy' },
@@ -55,7 +55,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '3-cultural',
-    name: '3: Cultural Psychology',
+    name: '3: Cultural Bases',
     description: 'Cross-Cultural Issues',
     topics: [
       { name: 'Cross-Cultural Issues – Identity Development Models' },
@@ -64,7 +64,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '4',
-    name: '4: Growth & Lifespan Development',
+    name: '4: Growth & Lifespan',
     description: 'Human Development Across the Lifespan',
     topics: [
       { name: 'Cognitive Development' },
@@ -93,7 +93,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
   },
   {
     id: '5-diagnosis',
-    name: '5: Diagnosis & Psychopathology',
+    name: '5: Diagnosis',
     description: 'Clinical Diagnosis and Mental Disorders',
     topics: [
       { name: 'Anxiety Disorders and Obsessive-Compulsive Disorder' },

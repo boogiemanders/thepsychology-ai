@@ -23,6 +23,7 @@ import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
 import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X, MessageSquare } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
+import type { EPPPDomain } from '@/lib/eppp-data'
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { siteConfig } from '@/lib/config'
@@ -64,6 +65,18 @@ const subscriptionTierVisuals = {
     },
   },
 } as const
+
+const SOCIAL_CULTURAL_DOMAIN_IDS = new Set(['3-social', '3-cultural'])
+const SOCIAL_CULTURAL_DOMAINS = EPPP_DOMAINS.filter((domain) =>
+  SOCIAL_CULTURAL_DOMAIN_IDS.has(domain.id)
+)
+const NON_SOCIAL_CULTURAL_DOMAINS = EPPP_DOMAINS.filter(
+  (domain) => !SOCIAL_CULTURAL_DOMAIN_IDS.has(domain.id)
+)
+const DOMAIN_ID_TO_INDEX = EPPP_DOMAINS.reduce((acc, domain, index) => {
+  acc[domain.id] = index
+  return acc
+}, {} as Record<string, number>)
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -568,6 +581,33 @@ export default function DashboardPage() {
   // Calculate study pace
   const studyPace = calculateStudyPace(examDate, progressData.completedTopics)
 
+  const hasOrgPsychPriority = priorityDomains.some((p: any) => p.type === 'org_psych')
+
+  const renderDomainRow = (domain: EPPPDomain) => {
+    const domainIndex = DOMAIN_ID_TO_INDEX[domain.id] ?? 0
+    const [prefix] = domain.id.split('-')
+    const domainNumber = parseInt(prefix, 10)
+    const isOrgPsychDomain = domain.id === '3-5-6'
+    const isPriority = isOrgPsychDomain
+      ? hasOrgPsychPriority
+      : priorityDomains.some((p: any) => typeof p.domainNumber === 'number' && p.domainNumber === domainNumber)
+
+    return (
+      <div key={domain.id} className={`space-y-1 pr-2 ${isPriority ? 'opacity-100' : ''}`}>
+        <div className="flex items-center justify-between text-xs">
+          <div className="flex items-center gap-1 truncate">
+            {isPriority && <AlertCircle className="w-3 h-3 flex-shrink-0" style={{ color: '#c46685' }} />}
+            <span className="text-foreground/80 truncate">{domain.name}</span>
+          </div>
+          <span className="text-foreground/60 ml-1 flex-shrink-0">
+            {Math.round(progressData.domainProgress[domainIndex] || 0)}%
+          </span>
+        </div>
+        <Progress value={progressData.domainProgress[domainIndex] || 0} className="h-1" />
+      </div>
+    )
+  }
+
   // ACTION BUTTONS - Bigger, more prominent
   const actionCards = [
     {
@@ -660,28 +700,18 @@ export default function DashboardPage() {
           )}
 
           <ScrollArea className="w-full h-full pr-4">
-            <div className="w-full space-y-2 opacity-60">
-              {EPPP_DOMAINS.map((domain, idx) => {
-                const [prefix] = domain.id.split('-')
-                const domainNumber = parseInt(prefix, 10)
-                const hasOrgPsychPriority = priorityDomains.some((p: any) => p.type === 'org_psych')
-                const isOrgPsychDomain = domain.id === '3-5-6'
-                const isPriority = isOrgPsychDomain
-                  ? hasOrgPsychPriority
-                  : priorityDomains.some((p: any) => typeof p.domainNumber === 'number' && p.domainNumber === domainNumber)
-                return (
-                  <div key={idx} className={`space-y-1 pr-2 ${isPriority ? 'opacity-100' : ''}`}>
-                    <div className="flex items-center justify-between text-xs">
-                      <div className="flex items-center gap-1 truncate">
-                        {isPriority && <AlertCircle className="w-3 h-3 flex-shrink-0" style={{ color: '#c46685' }} />}
-                        <span className="text-foreground/80 truncate">{domain.name}</span>
-                      </div>
-                      <span className="text-foreground/60 ml-1 flex-shrink-0">{Math.round(progressData.domainProgress[idx] || 0)}%</span>
-                    </div>
-                    <Progress value={progressData.domainProgress[idx] || 0} className="h-1" />
-                  </div>
-                )
-              })}
+            <div className="w-full space-y-4 opacity-60">
+              {SOCIAL_CULTURAL_DOMAINS.length > 0 && (
+                <div className="space-y-2">
+                  <p className="text-[10px] font-semibold uppercase tracking-wide text-foreground/60">
+                    Domain 3: Social & Cultural Bases
+                  </p>
+                  {SOCIAL_CULTURAL_DOMAINS.map((domain) => renderDomainRow(domain))}
+                </div>
+              )}
+              <div className="space-y-2">
+                {NON_SOCIAL_CULTURAL_DOMAINS.map((domain) => renderDomainRow(domain))}
+              </div>
             </div>
           </ScrollArea>
         </div>
