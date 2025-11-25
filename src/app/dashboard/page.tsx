@@ -718,7 +718,7 @@ export default function DashboardPage() {
     {
       Icon: Target,
       name: "Daily Goal",
-      description: `${dailyGoal} topic${dailyGoal > 1 ? 's' : ''}/day`,
+      description: `${dailyGoal} lesson${dailyGoal > 1 ? 's' : ''}/day`,
       href: "#",
       cta: "Edit",
       className: "lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
