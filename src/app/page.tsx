@@ -19,6 +19,7 @@ export default function Home() {
   const [activeTier, setActiveTier] = useState(() => siteConfig.pricing.pricingItems[0]?.name ?? "")
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const pricingRef = useRef<HTMLElement | null>(null)
+  const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
     const hero = document.getElementById("hero")
@@ -55,6 +56,21 @@ export default function Home() {
     setIsHeroVideoReady(true)
   }, [])
 
+  useEffect(() => {
+    if (!isHeroVideoReady) return
+    const video = heroVideoRef.current
+    if (!video) return
+    video.muted = true
+    const playPromise = video.play()
+    if (playPromise && typeof playPromise.then === "function") {
+      playPromise.catch(() => {
+        window.setTimeout(() => {
+          video.play().catch(() => null)
+        }, 500)
+      })
+    }
+  }, [isHeroVideoReady])
+
   const handleMiniTierClick = (tierName: string) => {
     setActiveTier(tierName)
     const pricing = pricingRef.current ?? document.getElementById("get-started")
@@ -77,12 +93,14 @@ export default function Home() {
           <div className="absolute inset-0 -z-10 pointer-events-none">
             {isHeroVideoReady ? (
               <video
+                ref={heroVideoRef}
                 className="h-full w-full object-cover"
                 src="/hero-background.mp4?v=refresh2"
                 autoPlay
                 muted
                 loop
                 playsInline
+                controls={false}
               />
             ) : (
               <div className="h-full w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950" />
