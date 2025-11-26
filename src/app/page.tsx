@@ -60,14 +60,47 @@ export default function Home() {
     if (!isHeroVideoReady) return
     const video = heroVideoRef.current
     if (!video) return
+    video.defaultMuted = true
     video.muted = true
-    const playPromise = video.play()
-    if (playPromise && typeof playPromise.then === "function") {
-      playPromise.catch(() => {
-        window.setTimeout(() => {
-          video.play().catch(() => null)
-        }, 500)
-      })
+    video.playsInline = true
+    video.setAttribute("playsinline", "")
+    video.setAttribute("webkit-playsinline", "")
+
+    let interactionBound = false
+
+    const handleUserResume = () => {
+      video.play().catch(() => null)
+      window.removeEventListener("touchstart", handleUserResume)
+      window.removeEventListener("click", handleUserResume)
+    }
+
+    const attachInteractionListeners = () => {
+      if (interactionBound) return
+      interactionBound = true
+      window.addEventListener("touchstart", handleUserResume, { once: true })
+      window.addEventListener("click", handleUserResume, { once: true })
+    }
+
+    const attemptPlay = () => {
+      const playPromise = video.play()
+      if (playPromise && typeof playPromise.then === "function") {
+        playPromise.catch(() => {
+          attachInteractionListeners()
+        })
+      }
+    }
+
+    const handleCanPlay = () => {
+      attemptPlay()
+    }
+
+    video.addEventListener("canplay", handleCanPlay)
+    attemptPlay()
+
+    return () => {
+      video.removeEventListener("canplay", handleCanPlay)
+      window.removeEventListener("touchstart", handleUserResume)
+      window.removeEventListener("click", handleUserResume)
     }
   }, [isHeroVideoReady])
 
@@ -95,11 +128,12 @@ export default function Home() {
               <video
                 ref={heroVideoRef}
                 className="h-full w-full object-cover"
-                src="/hero-background.mp4?v=refresh2"
+                src="/hero-background.mp4?v=refresh3"
                 autoPlay
                 muted
                 loop
                 playsInline
+                preload="auto"
                 controls={false}
               />
             ) : (
