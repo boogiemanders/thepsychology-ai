@@ -59,7 +59,7 @@ const GENERIC_SECTION_NAMES = new Set([
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
-  const { user, userProfile } = useAuth()
+  const { user, userProfile, loading: authLoading } = useAuth()
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
   const hasExamResults = searchParams.get('hasExamResults') === 'true'
@@ -576,10 +576,10 @@ export function TopicTeacherContent() {
 
   // Initialize with lesson
   useEffect(() => {
-    if (!initialized && topic && interestsLoaded) {
+    if (!initialized && topic && interestsLoaded && !authLoading) {
       initializeLesson()
     }
-  }, [topic, initialized, interestsLoaded])
+  }, [topic, initialized, interestsLoaded, authLoading])
 
   // Watch for interest changes and refresh metaphors
   useEffect(() => {
@@ -676,7 +676,7 @@ export function TopicTeacherContent() {
   }, [languagePreference, decodedTopic, domain])
 
   const initializeLesson = async () => {
-    if (!topic) return
+    if (!topic || authLoading) return
     const subscriptionTier = userProfile?.subscription_tier ?? 'free'
     assistantEnglishContentRef.current = {}
     translationSessionRef.current += 1
