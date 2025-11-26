@@ -24,7 +24,7 @@ export function CompanyShowcase() {
               <img
                 src={logo.src}
                 alt={logo.name}
-                className={`w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity dark:invert ${
+                className={`w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity brightness-0 invert ${
                   logo.id === 2 ? 'h-11 md:h-12' :
                   logo.id === 5 ? 'h-11 md:h-13' :
                   [4, 6].includes(logo.id) ? 'h-14 md:h-16' :
