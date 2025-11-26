@@ -72,7 +72,7 @@ export default function Home() {
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <video
               className="h-full w-full object-cover"
-              src="/hero-background.mp4?v=refresh"
+              src="/hero-background.mp4?v=refresh2"
               autoPlay
               muted
               loop
