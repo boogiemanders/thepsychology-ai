@@ -60,13 +60,24 @@ export default function Home() {
     if (!isHeroVideoReady) return
     const video = heroVideoRef.current
     if (!video) return
+
     video.defaultMuted = true
     video.muted = true
     video.playsInline = true
+    video.autoplay = true
     video.setAttribute("playsinline", "")
     video.setAttribute("webkit-playsinline", "")
+    video.setAttribute("muted", "")
 
-    let interactionBound = false
+    let attemptTimeout: number | null = null
+    let gestureListenersAttached = false
+
+    const cleanupAttemptTimeout = () => {
+      if (attemptTimeout) {
+        window.clearTimeout(attemptTimeout)
+        attemptTimeout = null
+      }
+    }
 
     const handleUserResume = () => {
       video.play().catch(() => null)
@@ -74,31 +85,49 @@ export default function Home() {
       window.removeEventListener("click", handleUserResume)
     }
 
-    const attachInteractionListeners = () => {
-      if (interactionBound) return
-      interactionBound = true
+    const attachGestureListeners = () => {
+      if (gestureListenersAttached) return
+      gestureListenersAttached = true
       window.addEventListener("touchstart", handleUserResume, { once: true })
       window.addEventListener("click", handleUserResume, { once: true })
     }
 
-    const attemptPlay = () => {
+    const tryPlay = (attempt = 0) => {
+      if (!video.paused) return
       const playPromise = video.play()
       if (playPromise && typeof playPromise.then === "function") {
-        playPromise.catch(() => {
-          attachInteractionListeners()
-        })
+        playPromise
+          .then(() => {
+            cleanupAttemptTimeout()
+          })
+          .catch(() => {
+            if (attempt < 5) {
+              attemptTimeout = window.setTimeout(() => tryPlay(attempt + 1), 800)
+            } else {
+              attachGestureListeners()
+            }
+          })
       }
     }
 
-    const handleCanPlay = () => {
-      attemptPlay()
+    const handleVisibilityChange = () => {
+      if (!document.hidden && video.paused) {
+        tryPlay()
+      }
     }
 
-    video.addEventListener("canplay", handleCanPlay)
-    attemptPlay()
+    const handleEnded = () => {
+      tryPlay()
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+    video.addEventListener("ended", handleEnded)
+    tryPlay()
 
     return () => {
-      video.removeEventListener("canplay", handleCanPlay)
+      cleanupAttemptTimeout()
+      document.removeEventListener("visibilitychange", handleVisibilityChange)
+      video.removeEventListener("ended", handleEnded)
       window.removeEventListener("touchstart", handleUserResume)
       window.removeEventListener("click", handleUserResume)
     }
@@ -127,8 +156,8 @@ export default function Home() {
             {isHeroVideoReady ? (
               <video
                 ref={heroVideoRef}
-                className="h-full w-full object-cover"
-                src="/hero-background.mp4?v=refresh3"
+                className="h-full min-h-[750px] w-full min-w-full object-cover object-center"
+                src="/hero-background.mp4?v=refresh4"
                 autoPlay
                 muted
                 loop
