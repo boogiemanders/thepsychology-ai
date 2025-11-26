@@ -17,6 +17,7 @@ import { MiniPricingBar } from "@/components/mini-pricing-bar"
 export default function Home() {
   const [showMiniBar, setShowMiniBar] = useState(false)
   const [activeTier, setActiveTier] = useState(() => siteConfig.pricing.pricingItems[0]?.name ?? "")
+  const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const pricingRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
@@ -50,6 +51,10 @@ export default function Home() {
     }
   }, [])
 
+  useEffect(() => {
+    setIsHeroVideoReady(true)
+  }, [])
+
   const handleMiniTierClick = (tierName: string) => {
     setActiveTier(tierName)
     const pricing = pricingRef.current ?? document.getElementById("get-started")
@@ -70,14 +75,18 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center divide-y divide-border min-h-screen w-full">
         <section className="relative w-full overflow-hidden">
           <div className="absolute inset-0 -z-10 pointer-events-none">
-            <video
-              className="h-full w-full object-cover"
-              src="/hero-background.mp4?v=refresh2"
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
+            {isHeroVideoReady ? (
+              <video
+                className="h-full w-full object-cover"
+                src="/hero-background.mp4?v=refresh2"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <div className="h-full w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950" />
+            )}
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
           </div>
           <div className="relative z-10">
