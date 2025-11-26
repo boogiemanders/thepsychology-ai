@@ -68,8 +68,23 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col items-center justify-center divide-y divide-border min-h-screen w-full">
-        <HeroSection />
-        <CompanyShowcase />
+        <section className="relative w-full overflow-hidden">
+          <div className="absolute inset-0 -z-10 pointer-events-none">
+            <video
+              className="h-full w-full object-cover"
+              src="/hero-background.mp4?v=refresh"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
+          </div>
+          <div className="relative z-10">
+            <HeroSection />
+            <CompanyShowcase />
+          </div>
+        </section>
         <OrbitingLoopSection />
         <BentoSection />
         <TestimonialSection />
