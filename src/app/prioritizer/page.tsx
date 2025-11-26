@@ -10,6 +10,7 @@ import { Progress } from '@/components/ui/progress'
 import { Separator } from '@/components/ui/separator'
 import { motion } from 'motion/react'
 import { getTopicById, getDomainById } from '@/lib/eppp-data'
+import { getLessonDisplayName } from '@/lib/topic-display-names'
 import { getKNsForTopic } from '@/lib/kn-topic-mapping'
 import { getTopPriorities } from '@/lib/priority-storage'
 import type { PriorityDomainRecommendation } from '@/lib/priority-storage'
@@ -227,7 +228,9 @@ export default function PrioritizerPage() {
                             <h4 className="font-semibold text-sm">Recommended Lessons to Study</h4>
                             <div className="space-y-2">
                               {domain.recommendedTopicIds.map((topicId) => {
-                                const topic = getTopicById(topicId)
+                                const topicInfo = getTopicById(topicId)
+                                const rawName = topicInfo?.topic.name || topicId
+                                const lessonName = getLessonDisplayName(rawName)
                                 return (
                                   <Link
                                     key={topicId}
@@ -240,7 +243,7 @@ export default function PrioritizerPage() {
                                       <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                                       <div className="flex-1 min-w-0">
                                         <p className="font-semibold text-sm text-blue-900 dark:text-blue-100 truncate">
-                                          {topic?.name || topicId}
+                                          {lessonName}
                                         </p>
                                       </div>
                                       <Badge variant="outline" className="text-xs flex-shrink-0">

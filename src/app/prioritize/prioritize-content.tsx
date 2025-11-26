@@ -34,6 +34,7 @@ import {
 import { ExpandableDomainAnalysis } from '@/components/expandable-domain-analysis'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { Progress } from '@/components/ui/progress'
+import { getLessonDisplayName } from '@/lib/topic-display-names'
 
 interface AnalysisData {
   overallScore?: number
@@ -817,6 +818,7 @@ export function PrioritizeContent() {
                                         <ul className="text-sm space-y-3">
                                           {recommendedTopics.map((topic: any, topicIdx: number) => {
                                             const topicName = topic.topicName || topic.sourceFile
+                                            const lessonName = getLessonDisplayName(topicName)
                                             const topicParam = topic.topicName || topic.sourceFile || ''
                                             const topicScore = getTopicScore(topicName)
                                             const isCompleted = topicScore !== null && topicScore >= 70
@@ -837,7 +839,7 @@ export function PrioritizeContent() {
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                   >
-                                                    {topicName}
+                                                    {lessonName}
                                                   </Link>
                                                   {topicScore !== null && (
                                                     <div className="flex items-center gap-2 text-xs">
