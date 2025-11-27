@@ -152,11 +152,11 @@ export default function Home() {
     <>
       <main className="flex flex-col items-center justify-center divide-y divide-border min-h-screen w-full">
         <section className="relative w-full overflow-hidden">
-          <div className="absolute inset-0 -z-10 pointer-events-none">
+          <div className="absolute inset-0 -z-10 pointer-events-none bg-black flex items-start justify-center">
             {isHeroVideoReady ? (
               <video
                 ref={heroVideoRef}
-                className="h-full min-h-[750px] w-full min-w-full object-cover object-center"
+                className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
                 src="/hero-background.mp4?v=refresh4"
                 autoPlay
                 muted
