@@ -22,6 +22,13 @@ export default function Home() {
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
+    if (typeof window === "undefined") return
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+    }
+  }, [])
+
+  useEffect(() => {
     const hero = document.getElementById("hero")
     const pricing = document.getElementById("get-started")
     if (pricing) {
