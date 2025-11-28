@@ -23,6 +23,11 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window === "undefined") return
+
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual"
+    }
+
     if (!window.location.hash) {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" })
     }
