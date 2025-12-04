@@ -30,38 +30,73 @@ async function updateUserSubscription(userId: string, tier: 'pro' | 'pro_coachin
     throw new Error('Supabase service role client is not configured')
   }
 
-  const { error } = await supabase
+  // First check if user exists
+  const { data: existingUser, error: fetchError } = await supabase
+    .from('users')
+    .select('id, subscription_tier')
+    .eq('id', userId)
+    .single()
+
+  console.log('[Stripe] User lookup result:', { userId, existingUser, fetchError })
+
+  if (fetchError || !existingUser) {
+    throw new Error(`User not found in database: ${userId}`)
+  }
+
+  const { data, error } = await supabase
     .from('users')
     .update({
       subscription_tier: tier,
       subscription_started_at: new Date().toISOString(),
     })
     .eq('id', userId)
+    .select()
+
+  console.log('[Stripe] Supabase update result:', { data, error, userId, tier })
 
   if (error) {
     throw error
+  }
+
+  if (!data || data.length === 0) {
+    throw new Error(`Update returned no rows for userId: ${userId}`)
   }
 }
 
 async function getTierFromSession(session: Stripe.Checkout.Session): Promise<'pro' | 'pro_coaching' | null> {
   // First check metadata
   if (session.metadata?.planTier) {
+    console.log('[Stripe] Got tier from metadata:', session.metadata.planTier)
     return session.metadata.planTier as 'pro' | 'pro_coaching'
   }
 
   // Otherwise, try to determine from line items
-  if (!stripe) return null
+  if (!stripe) {
+    console.error('[Stripe] Stripe client not initialized')
+    return null
+  }
 
   try {
+    console.log('[Stripe] Fetching line items for session:', session.id)
     const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 1 })
     const priceId = lineItems.data[0]?.price?.id
-    if (priceId && PRICE_TO_TIER[priceId]) {
-      return PRICE_TO_TIER[priceId]
+    const mappedTier = priceId ? PRICE_TO_TIER[priceId] : null
+
+    console.log('[Stripe] Line items result:', {
+      lineItemsCount: lineItems.data.length,
+      priceId,
+      mappedTier,
+      availablePriceIds: Object.keys(PRICE_TO_TIER),
+    })
+
+    if (priceId && mappedTier) {
+      return mappedTier
     }
   } catch (err) {
     console.error('[Stripe] Error fetching line items:', err)
   }
 
+  console.error('[Stripe] Could not determine tier from session')
   return null
 }
 
