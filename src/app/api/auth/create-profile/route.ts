@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { userId, email, fullName, subscriptionTier, promoCodeUsed } = body
+    const { userId, email, fullName, subscriptionTier, promoCodeUsed, referralSource } = body
 
     // Validate required fields
     if (!userId || !email) {
@@ -73,6 +73,7 @@ export async function POST(request: NextRequest) {
           full_name: fullName || null,
           subscription_tier: subscriptionTier || 'free',
           promo_code_used: promoCodeUsed || null,
+          referral_source: referralSource || null,
           subscription_started_at: new Date().toISOString(),
         },
       ])

@@ -27,9 +27,11 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
     confirmPassword: "",
     goals: "",
     examDate: "",
+    referralSource: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
+  const [showPasswordFields, setShowPasswordFields] = useState(false)
   const sliderRef = useRef<HTMLDivElement | null>(null)
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeSlide, setActiveSlide] = useState(0)
@@ -127,7 +129,9 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
       confirmPassword: "",
       goals: "",
       examDate: "",
+      referralSource: "",
     })
+    setShowPasswordFields(false)
     setSubmitMessage(null)
   }
 
@@ -137,6 +141,12 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
       ...prev,
       [name]: value
     }))
+  }
+
+  const handleEmailFocus = () => {
+    if (!showPasswordFields) {
+      setShowPasswordFields(true)
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -175,6 +185,14 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
       return
     }
 
+    if (!formData.referralSource.trim()) {
+      setSubmitMessage({
+        type: 'error',
+        text: 'Please let us know how you found us.',
+      })
+      return
+    }
+
     setIsSubmitting(true)
 
     try {
@@ -203,6 +221,7 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
           fullName: formData.fullName || null,
           subscriptionTier: 'free',
           promoCodeUsed: null,
+          referralSource: formData.referralSource,
         }),
       })
 
@@ -440,49 +459,58 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
+                  onFocus={handleEmailFocus}
                   placeholder="your@email.com"
                   required
                   className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
-              <div>
-                <label htmlFor={`password-${tier.name}`} className="block text-sm font-medium mb-2">
-                  Password <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
-                </label>
-                <input
-                  type="password"
-                  id={`password-${tier.name}`}
-                  name="password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  placeholder="Minimum 6 characters"
-                  required
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={showPasswordFields ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label htmlFor={`password-${tier.name}`} className="block text-sm font-medium mb-2">
+                      Password <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
+                    </label>
+                    <input
+                      type="password"
+                      id={`password-${tier.name}`}
+                      name="password"
+                      value={formData.password}
+                      onChange={handleInputChange}
+                      placeholder="Minimum 6 characters"
+                      required
+                      className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
 
-              <div>
-                <label htmlFor={`confirmPassword-${tier.name}`} className="block text-sm font-medium mb-2">
-                  Confirm Password <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
-                </label>
-                <input
-                  type="password"
-                  id={`confirmPassword-${tier.name}`}
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleInputChange}
-                  placeholder="Re-enter password"
-                  required
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
+                  <div>
+                    <label htmlFor={`confirmPassword-${tier.name}`} className="block text-sm font-medium mb-2">
+                      Confirm Password <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
+                    </label>
+                    <input
+                      type="password"
+                      id={`confirmPassword-${tier.name}`}
+                      name="confirmPassword"
+                      value={formData.confirmPassword}
+                      onChange={handleInputChange}
+                      placeholder="Re-enter password"
+                      required
+                      className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                </div>
+              </motion.div>
 
               <div className="border border-dashed border-border/60 rounded-lg p-4 space-y-4">
-                <p className="text-sm font-medium text-muted-foreground">Share your EPPP goals (optional)</p>
                 <div>
                   <label htmlFor={`goals-${tier.name}`} className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
-                    Goals or notes
+                    EPPP Goals
                   </label>
                   <textarea
                     id={`goals-${tier.name}`}
@@ -503,6 +531,22 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
                     name="examDate"
                     value={formData.examDate}
                     onChange={handleInputChange}
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor={`referralSource-${tier.name}`} className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
+                    How did you find us? <span className={asteriskClasses[tier.name] ?? "text-brand-coral"}>*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id={`referralSource-${tier.name}`}
+                    name="referralSource"
+                    value={formData.referralSource}
+                    onChange={handleInputChange}
+                    placeholder="Friend, Social Media, Web Search"
+                    required
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
