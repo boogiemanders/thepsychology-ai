@@ -139,6 +139,33 @@ export default function DashboardPage() {
     }
   }, [isPricingCarouselOpen, resetCheckoutError])
 
+  // Handle successful payment redirect
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const upgradeSuccess = params.get('upgrade') === 'success'
+
+    if (upgradeSuccess) {
+      // Refresh profile to get updated subscription tier
+      refreshProfile()
+
+      // Show success notification
+      const successMessage = 'Subscription upgraded successfully!'
+      setFeedbackMessage(successMessage)
+      setFeedbackStatus('success')
+
+      // Clear query parameter
+      window.history.replaceState({}, '', '/dashboard')
+
+      // Clear notification after 3 seconds
+      const timeout = setTimeout(() => {
+        setFeedbackMessage('')
+        setFeedbackStatus(null)
+      }, 3000)
+
+      return () => clearTimeout(timeout)
+    }
+  }, [refreshProfile])
+
   const handleSendFeedback = async (message: string, screenshotFile?: File | null) => {
     const trimmedMessage = message.trim()
     if ((!trimmedMessage && !screenshotFile) || !user) return

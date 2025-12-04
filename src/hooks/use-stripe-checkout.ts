@@ -1,7 +1,15 @@
 import { useCallback, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
-import { STRIPE_PAYMENT_LINKS, type StripeTier } from '@/lib/stripe-links'
+import { supabase } from '@/lib/supabase'
+
+export type StripeTier = 'pro' | 'pro_coaching'
+
+// Payment Links with your custom branding
+const PAYMENT_LINKS: Record<StripeTier, string> = {
+  pro: 'https://buy.stripe.com/4gM5kC6YjgvT7Bp39g8Vi00',
+  pro_coaching: 'https://buy.stripe.com/dRm7sK82nfrP8Ft7pw8Vi01',
+}
 
 interface CheckoutOptions {
   redirectPath?: string
@@ -11,6 +19,7 @@ export function useStripeCheckout() {
   const router = useRouter()
   const { user } = useAuth()
   const [activeTier, setActiveTier] = useState<StripeTier | null>(null)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const startCheckout = useCallback(
@@ -26,17 +35,35 @@ export function useStripeCheckout() {
         return
       }
 
-      const paymentLink = STRIPE_PAYMENT_LINKS[tier]
-      if (!paymentLink) {
-        setError('Upgrade link is not configured. Please contact support.')
-        return
-      }
-
       setActiveTier(tier)
       setError(null)
+      setLoading(true)
 
-      // Redirect straight to Stripe Payment Link
-      window.location.href = paymentLink
+      try {
+        // Safety check: Verify user profile exists before checkout
+        const { data: existingProfile, error: profileError } = await supabase
+          .from('users')
+          .select('id')
+          .eq('id', user.id)
+          .single()
+
+        if (profileError || !existingProfile) {
+          throw new Error('User profile not found. Please refresh and try again.')
+        }
+
+        // Build Payment Link URL with client_reference_id and prefilled_email
+        const paymentLink = PAYMENT_LINKS[tier]
+        const url = new URL(paymentLink)
+        url.searchParams.set('client_reference_id', user.id)
+        url.searchParams.set('prefilled_email', user.email)
+
+        // Redirect to Stripe Payment Link
+        window.location.href = url.toString()
+      } catch (err) {
+        const message = err instanceof Error ? err.message : 'Checkout failed. Please try again.'
+        setError(message)
+        setLoading(false)
+      }
     },
     [router, user]
   )
@@ -46,6 +73,7 @@ export function useStripeCheckout() {
   return {
     startCheckout,
     checkoutTier: activeTier,
+    checkoutLoading: loading,
     checkoutError: error,
     resetCheckoutError,
   }

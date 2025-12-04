@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { supabase } from "@/lib/supabase"
-import { STRIPE_PAYMENT_LINKS, type StripeTier } from "@/lib/stripe-links"
+import { type StripeTier } from "@/hooks/use-stripe-checkout"
 import { Badge } from "@/components/ui/badge"
 
 type PricingSectionProps = {
@@ -35,6 +35,31 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
   const sliderRef = useRef<HTMLDivElement | null>(null)
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeSlide, setActiveSlide] = useState(0)
+
+  // Auto-expand tier when clicked from mini pricing bar (listen for custom event)
+  useEffect(() => {
+    const handleMiniPricingSelect = (e: Event) => {
+      const customEvent = e as CustomEvent<{ tierName: string }>
+      const tierName = customEvent.detail?.tierName
+      if (tierName) {
+        // Delay to let scroll complete, then expand
+        setTimeout(() => {
+          setExpandedTier(tierName)
+          // After expansion animation, scroll again to correct position
+          setTimeout(() => {
+            const section = document.getElementById("get-started")
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth", block: "start" })
+            }
+          }, 450) // Wait for expansion animation (400ms) to complete
+        }, 800) // 800ms delay to let initial scrolls complete first
+      }
+    }
+
+    window.addEventListener("mini-pricing-select", handleMiniPricingSelect)
+    return () => window.removeEventListener("mini-pricing-select", handleMiniPricingSelect)
+  }, [])
+
   const scrollToCard = useCallback((index: number) => {
     const target = cardRefs.current[index]
     if (target) {
@@ -210,7 +235,7 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
         throw new Error('Unable to create account. Please try again.')
       }
 
-      await fetch('/api/auth/create-profile', {
+      const profileResponse = await fetch('/api/auth/create-profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -224,6 +249,11 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
           referralSource: formData.referralSource,
         }),
       })
+
+      if (!profileResponse.ok) {
+        const errorData = await profileResponse.json()
+        throw new Error(`Failed to create profile: ${errorData.error || 'Please try again'}`)
+      }
 
       const hasGoalDetails = Boolean(formData.goals.trim() || formData.examDate)
       if (hasGoalDetails && expandedTier) {
@@ -264,17 +294,26 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
       if (tierKey === 'free') {
         setSubmitMessage({
           type: 'success',
-          text: 'Account created! Check your email to verify. Redirecting to login...',
+          text: 'Account created! Redirecting to login...',
         })
+        // Use window.location for direct redirect to avoid router issues
         setTimeout(() => {
-          router.push('/login')
-        }, 2000)
+          window.location.href = '/login'
+        }, 1500)
       } else {
-        const link = STRIPE_PAYMENT_LINKS[tierKey]
-        if (!link) {
-          throw new Error('Upgrade link is not configured. Please contact support.')
+        // Payment Links with custom branding
+        const PAYMENT_LINKS: Record<'pro' | 'pro_coaching', string> = {
+          pro: 'https://buy.stripe.com/4gM5kC6YjgvT7Bp39g8Vi00',
+          pro_coaching: 'https://buy.stripe.com/dRm7sK82nfrP8Ft7pw8Vi01',
         }
-        window.location.href = link
+
+        // Build Payment Link URL with client_reference_id and prefilled_email
+        const paymentLink = PAYMENT_LINKS[tierKey]
+        const url = new URL(paymentLink)
+        url.searchParams.set('client_reference_id', userId)
+        url.searchParams.set('prefilled_email', formData.email)
+
+        window.location.href = url.toString()
       }
     } catch (error) {
       console.error('Signup error:', error)

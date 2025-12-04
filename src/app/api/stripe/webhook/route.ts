@@ -14,6 +14,16 @@ if (!stripeSecretKey || !webhookSecret) {
 
 const stripe = stripeSecretKey ? new Stripe(stripeSecretKey, { apiVersion: '2025-01-27.acacia' }) : null
 
+// Price IDs to determine plan tier (live mode)
+const PRICE_TO_TIER: Record<string, 'pro' | 'pro_coaching'> = {
+  // Live price IDs
+  'price_1SWv6wAHUPMmLYsCy5yObtDu': 'pro',
+  'price_1SWv6IAHUPMmLYsCa98Z3Po6': 'pro_coaching',
+  // Test price IDs
+  'price_1SaZCyAHUPMmLYsChA0LhNDs': 'pro',
+  'price_1SaZDyAHUPMmLYsCpskaQ7eU': 'pro_coaching',
+}
+
 async function updateUserSubscription(userId: string, tier: 'pro' | 'pro_coaching') {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) {
@@ -31,6 +41,28 @@ async function updateUserSubscription(userId: string, tier: 'pro' | 'pro_coachin
   if (error) {
     throw error
   }
+}
+
+async function getTierFromSession(session: Stripe.Checkout.Session): Promise<'pro' | 'pro_coaching' | null> {
+  // First check metadata
+  if (session.metadata?.planTier) {
+    return session.metadata.planTier as 'pro' | 'pro_coaching'
+  }
+
+  // Otherwise, try to determine from line items
+  if (!stripe) return null
+
+  try {
+    const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 1 })
+    const priceId = lineItems.data[0]?.price?.id
+    if (priceId && PRICE_TO_TIER[priceId]) {
+      return PRICE_TO_TIER[priceId]
+    }
+  } catch (err) {
+    console.error('[Stripe] Error fetching line items:', err)
+  }
+
+  return null
 }
 
 export async function POST(request: Request) {
@@ -57,18 +89,45 @@ export async function POST(request: Request) {
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session
       const userId = (session.metadata?.userId || session.client_reference_id) as string | undefined
-      const planTier = session.metadata?.planTier as 'pro' | 'pro_coaching' | undefined
+      const planTier = await getTierFromSession(session)
+
+      console.log('[Stripe] Processing checkout.session.completed', {
+        sessionId: session.id,
+        userId,
+        planTier,
+        customerEmail: session.customer_email,
+        paymentStatus: session.payment_status,
+        metadata: session.metadata,
+        clientReferenceId: session.client_reference_id,
+      })
 
       if (!userId || !planTier) {
-        console.warn('[Stripe] Missing userId or planTier on checkout session', session.id)
-      } else {
-        await updateUserSubscription(userId, planTier)
+        console.error('[Stripe] Missing critical metadata on checkout session', {
+          sessionId: session.id,
+          customerEmail: session.customer_email,
+          userId,
+          planTier,
+          metadata: session.metadata,
+          clientReferenceId: session.client_reference_id,
+          note: 'Cannot update subscription without userId and planTier',
+        })
+        // Still return success so Stripe doesn't retry
+        return NextResponse.json({ received: true })
       }
+
+      console.log('[Stripe] Updating subscription for user', { userId, planTier })
+      await updateUserSubscription(userId, planTier)
+      console.log('[Stripe] Subscription updated successfully', { userId, planTier })
     }
 
     return NextResponse.json({ received: true })
   } catch (error) {
-    console.error('[Stripe] Error handling webhook event:', error)
+    console.error('[Stripe] Error handling webhook event:', {
+      error,
+      eventType: event.type,
+      eventId: event.id,
+      timestamp: new Date().toISOString(),
+    })
     return NextResponse.json({ error: 'Webhook handler error' }, { status: 500 })
   }
 }
