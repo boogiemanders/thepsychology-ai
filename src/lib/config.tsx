@@ -71,7 +71,8 @@ export const siteConfig = {
   },
   companyShowcase: {
     title:
-      "AI exam prep built by psychologists with experience at the institutions below. Independent project; not affiliated or endorsed.",
+      "AI exam prep built by psychologists with experience at the institutions below.",
+    subtitle: "Independent project; not affiliated with or endorsed by these institutions.",
     companyLogos: [
       { id: 1, name: "David Geffen School of Medicine", src: "/dgsom.png" },
       { id: 2, name: "NYU Langone Health", src: "/nyu.png" },
