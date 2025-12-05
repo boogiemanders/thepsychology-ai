@@ -70,7 +70,8 @@ export const siteConfig = {
     },
   },
   companyShowcase: {
-    title: "AI developed by psychologists to save your time, money, and sanity.",
+    title:
+      "AI exam prep built by psychologists with experience at the institutions below. Independent project; not affiliated or endorsed.",
     companyLogos: [
       { id: 1, name: "David Geffen School of Medicine", src: "/dgsom.png" },
       { id: 2, name: "NYU Langone Health", src: "/nyu.png" },

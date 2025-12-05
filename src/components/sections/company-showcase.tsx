@@ -5,9 +5,10 @@ import Link from "next/link"
 export function CompanyShowcase() {
   const { companyShowcase } = siteConfig
   return (
-    <section id="company" className="flex flex-col items-center justify-center gap-10 py-10 pt-20 w-full relative px-6">
-      <p className="text-center text-muted-foreground font-medium md:text-left">{companyShowcase.title}</p>
-
+    <section
+      id="company"
+      className="flex flex-col items-center justify-center gap-6 py-10 pt-24 w-full relative px-6"
+    >
       <div className="grid w-full max-w-7xl grid-cols-2 md:grid-cols-4 overflow-hidden border-y border-border items-center justify-center z-20">
         {companyShowcase.companyLogos.map((logo: { id: number; name: string; src: string }) => (
           <Link
@@ -42,6 +43,12 @@ export function CompanyShowcase() {
           </Link>
         ))}
       </div>
+      <Link
+        href="/portfolio"
+        className="mt-4 text-center text-muted-foreground font-medium hover:text-primary transition-colors"
+      >
+        {companyShowcase.title}
+      </Link>
     </section>
   )
 }
