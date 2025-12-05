@@ -65,7 +65,7 @@ export const siteConfig = {
     title: "",
     description: "",
     cta: {
-      primary: { text: "Start free", href: "/#get-started" },
+      primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
     },
   },

@@ -1,8 +1,25 @@
+"use client"
+
 import { siteConfig } from "@/lib/config"
 import Link from "next/link"
 
 export function HeroSection() {
   const { hero } = siteConfig
+
+  const handleStartFree = () => {
+    const pricing = document.getElementById("get-started")
+    if (!pricing) return
+
+    // Two-stage scroll (same as mini pricing bar)
+    pricing.scrollIntoView({ behavior: "smooth", block: "center" })
+    setTimeout(() => {
+      pricing.scrollIntoView({ behavior: "smooth", block: "start" })
+    }, 220)
+
+    // Dispatch custom event to trigger accordion expansion with 800ms delay
+    const event = new CustomEvent("mini-pricing-select", { detail: { tierName: "Free" } })
+    window.dispatchEvent(event)
+  }
 
   return (
     <section id="hero" className="w-full relative">
@@ -25,12 +42,12 @@ export function HeroSection() {
             ) : null}
           </div>
           <div className="flex items-center gap-2.5 flex-wrap justify-center">
-          <Link
-            href={hero.cta.primary.href}
+          <button
+            onClick={handleStartFree}
             className="brand-soft-blue-bg h-9 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-white w-32 px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.35),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-[#4e7ba4] hover:brightness-95 transition-all ease-out active:scale-95 focus-visible:outline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/70"
           >
             {hero.cta.primary.text}
-          </Link>
+          </button>
             <Link
               href={hero.cta.secondary.href}
               className="h-10 flex items-center justify-center w-32 px-5 text-sm font-normal tracking-wide text-primary rounded-full transition-all ease-out active:scale-95 bg-white dark:bg-background border border-[#E5E7EB] dark:border-[#27272A] hover:bg-white/80 dark:hover:bg-background/80"
