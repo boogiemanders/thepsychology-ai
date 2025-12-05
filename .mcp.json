@@ -6,6 +6,28 @@
         "shadcn@latest",
         "mcp"
       ]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-postgrest",
+        "--apiUrl",
+        "https://hwkuxietvwvbgdowxzkw.supabase.co/rest/v1",
+        "--apiKey",
+        "YOUR_SUPABASE_API_KEY_HERE",
+        "--schema",
+        "public"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "YOUR_CONTEXT7_API_KEY_HERE"
+      ]
     }
   }
 }
