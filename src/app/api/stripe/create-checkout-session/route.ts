@@ -8,11 +8,11 @@ if (!stripeSecretKey) {
   console.warn('[Stripe] STRIPE_SECRET_KEY is not set; checkout sessions cannot be created.')
 }
 
-const stripe = stripeSecretKey ? new Stripe(stripeSecretKey, { apiVersion: '2025-01-27.acacia' }) : null
+const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
 
 const FALLBACK_PRICE_IDS: Record<'pro' | 'pro_coaching', string> = {
-  pro: 'price_1SWflILfe9KP6dYg1x5x44Ep',
-  pro_coaching: 'price_1SWgnkLfe9KP6dYg8IgPfoez',
+  pro: 'price_1SWv6wAHUPMmLYsCy5yObtDu',
+  pro_coaching: 'price_1SWv6IAHUPMmLYsCa98Z3Po6',
 }
 
 const priceIdByTier: Record<'pro' | 'pro_coaching', string | undefined> = {

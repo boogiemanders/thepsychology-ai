@@ -12,7 +12,7 @@ if (!stripeSecretKey || !webhookSecret) {
   console.warn('[Stripe] Missing STRIPE_SECRET_KEY or STRIPE_WEBHOOK_SECRET; webhook events cannot be processed.')
 }
 
-const stripe = stripeSecretKey ? new Stripe(stripeSecretKey, { apiVersion: '2025-01-27.acacia' }) : null
+const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
 
 // Price IDs to determine plan tier (live mode)
 const PRICE_TO_TIER: Record<string, 'pro' | 'pro_coaching'> = {
@@ -24,7 +24,11 @@ const PRICE_TO_TIER: Record<string, 'pro' | 'pro_coaching'> = {
   'price_1SaZDyAHUPMmLYsCpskaQ7eU': 'pro_coaching',
 }
 
-async function updateUserSubscription(userId: string, tier: 'pro' | 'pro_coaching') {
+async function updateUserSubscription(
+  userId: string,
+  tier: 'pro' | 'pro_coaching',
+  stripeCustomerId?: string
+) {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) {
     throw new Error('Supabase service role client is not configured')
@@ -33,7 +37,7 @@ async function updateUserSubscription(userId: string, tier: 'pro' | 'pro_coachin
   // First check if user exists
   const { data: existingUser, error: fetchError } = await supabase
     .from('users')
-    .select('id, subscription_tier')
+    .select('id, subscription_tier, stripe_customer_id')
     .eq('id', userId)
     .single()
 
@@ -43,16 +47,23 @@ async function updateUserSubscription(userId: string, tier: 'pro' | 'pro_coachin
     throw new Error(`User not found in database: ${userId}`)
   }
 
+  // Build update data - only set stripe_customer_id if provided and not already set
+  const updateData: Record<string, unknown> = {
+    subscription_tier: tier,
+    subscription_started_at: new Date().toISOString(),
+  }
+
+  if (stripeCustomerId && !existingUser.stripe_customer_id) {
+    updateData.stripe_customer_id = stripeCustomerId
+  }
+
   const { data, error } = await supabase
     .from('users')
-    .update({
-      subscription_tier: tier,
-      subscription_started_at: new Date().toISOString(),
-    })
+    .update(updateData)
     .eq('id', userId)
     .select()
 
-  console.log('[Stripe] Supabase update result:', { data, error, userId, tier })
+  console.log('[Stripe] Supabase update result:', { data, error, userId, tier, stripeCustomerId })
 
   if (error) {
     throw error
@@ -105,7 +116,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Stripe is not configured' }, { status: 500 })
   }
 
-  const signature = headers().get('stripe-signature')
+  const signature = (await headers()).get('stripe-signature')
   if (!signature) {
     return NextResponse.json({ error: 'Missing Stripe signature' }, { status: 400 })
   }
@@ -115,6 +126,11 @@ export async function POST(request: Request) {
   try {
     const rawBody = await request.text()
     event = stripe.webhooks.constructEvent(rawBody, signature, webhookSecret)
+    console.log('[Stripe] Webhook received:', {
+      eventType: event.type,
+      eventId: event.id,
+      timestamp: new Date().toISOString(),
+    })
   } catch (error) {
     console.error('[Stripe] Webhook signature verification failed:', error)
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
@@ -125,11 +141,15 @@ export async function POST(request: Request) {
       const session = event.data.object as Stripe.Checkout.Session
       const userId = (session.metadata?.userId || session.client_reference_id) as string | undefined
       const planTier = await getTierFromSession(session)
+      const stripeCustomerId = typeof session.customer === 'string'
+        ? session.customer
+        : (session.customer as { id?: string } | null)?.id
 
       console.log('[Stripe] Processing checkout.session.completed', {
         sessionId: session.id,
         userId,
         planTier,
+        stripeCustomerId,
         customerEmail: session.customer_email,
         paymentStatus: session.payment_status,
         metadata: session.metadata,
@@ -140,19 +160,23 @@ export async function POST(request: Request) {
         console.error('[Stripe] Missing critical metadata on checkout session', {
           sessionId: session.id,
           customerEmail: session.customer_email,
+          customerId: session.customer,
           userId,
           planTier,
           metadata: session.metadata,
           clientReferenceId: session.client_reference_id,
-          note: 'Cannot update subscription without userId and planTier',
+          note: 'Cannot update subscription without userId and planTier - returning 500 for retry',
         })
-        // Still return success so Stripe doesn't retry
-        return NextResponse.json({ received: true })
+        // Return 500 so Stripe retries the webhook (up to 8 times over 72 hours)
+        return NextResponse.json(
+          { error: 'Missing required userId or planTier' },
+          { status: 500 }
+        )
       }
 
-      console.log('[Stripe] Updating subscription for user', { userId, planTier })
-      await updateUserSubscription(userId, planTier)
-      console.log('[Stripe] Subscription updated successfully', { userId, planTier })
+      console.log('[Stripe] Updating subscription for user', { userId, planTier, stripeCustomerId })
+      await updateUserSubscription(userId, planTier, stripeCustomerId)
+      console.log('[Stripe] Subscription updated successfully', { userId, planTier, stripeCustomerId })
     }
 
     return NextResponse.json({ received: true })
