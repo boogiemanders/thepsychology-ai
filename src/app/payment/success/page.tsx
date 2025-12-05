@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
-import { CheckCircle, Loader2 } from 'lucide-react'
+import { CheckCircle, Loader2, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const MAX_POLL_ATTEMPTS = 15 // 15 attempts
@@ -16,6 +16,8 @@ export default function PaymentSuccessPage() {
   const [pollCount, setPollCount] = useState(0)
   const pollRef = useRef<NodeJS.Timeout | null>(null)
   const hasRedirected = useRef(false)
+  const [syncLoading, setSyncLoading] = useState(false)
+  const [syncError, setSyncError] = useState<string | null>(null)
 
   useEffect(() => {
     // If not logged in and not loading, redirect to login
@@ -94,6 +96,42 @@ export default function PaymentSuccessPage() {
     router.push('/dashboard')
   }
 
+  const handleManualSync = async () => {
+    if (!user?.id || syncLoading) return
+
+    setSyncLoading(true)
+    setSyncError(null)
+
+    try {
+      const response = await fetch('/api/stripe/request-sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: user.id }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok && data.success) {
+        // Refresh profile and check if subscription is now active
+        await refreshProfile()
+        // Give a moment for the profile to update
+        setTimeout(() => {
+          if (data.subscription_tier && data.subscription_tier !== 'free') {
+            setStatus('success')
+            setTimeout(() => router.push('/dashboard?upgrade=success'), 1500)
+          }
+        }, 500)
+      } else {
+        setSyncError(data.error || data.message || 'Sync failed. Please try again.')
+      }
+    } catch (err) {
+      console.error('Sync error:', err)
+      setSyncError('Unable to sync. Please try again or contact support.')
+    } finally {
+      setSyncLoading(false)
+    }
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -143,9 +181,40 @@ export default function PaymentSuccessPage() {
               <p className="text-muted-foreground mb-4">
                 Your subscription is being processed. It may take a moment to activate.
               </p>
-              <Button onClick={handleManualRedirect}>
-                Go to Dashboard
-              </Button>
+              {syncError && (
+                <p className="text-sm text-red-500 dark:text-red-400 mb-3">{syncError}</p>
+              )}
+              <div className="flex flex-col sm:flex-row gap-2 justify-center">
+                <Button
+                  onClick={handleManualSync}
+                  variant="outline"
+                  disabled={syncLoading}
+                >
+                  {syncLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Syncing...
+                    </>
+                  ) : (
+                    <>
+                      <RefreshCw className="w-4 h-4 mr-2" />
+                      Retry Sync
+                    </>
+                  )}
+                </Button>
+                <Button onClick={handleManualRedirect}>
+                  Go to Dashboard
+                </Button>
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                If your subscription doesn&apos;t activate within a few minutes,{' '}
+                <a
+                  href="mailto:support@thepsychology.ai"
+                  className="text-primary underline hover:no-underline"
+                >
+                  contact support
+                </a>
+              </p>
             </div>
           </>
         )}

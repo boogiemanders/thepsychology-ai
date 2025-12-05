@@ -13,6 +13,7 @@ interface UserProfile {
   exam_date?: string
   created_at: string
   subscription_started_at?: string
+  stripe_customer_id?: string
 }
 
 interface AuthContextType {
