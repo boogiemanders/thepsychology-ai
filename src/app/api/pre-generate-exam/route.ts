@@ -1,17 +1,20 @@
-import Anthropic from '@anthropic-ai/sdk'
+import OpenAI from 'openai'
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join } from 'path'
 
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
+const openaiApiKey = process.env.OPENAI_API_KEY
+const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 
 const DIAGNOSTIC_MODEL =
-  process.env.ANTHROPIC_DIAGNOSTIC_MODEL ?? 'claude-3-5-sonnet-20241022'
+  process.env.OPENAI_DIAGNOSTIC_MODEL ??
+  process.env.ANTHROPIC_DIAGNOSTIC_MODEL ??
+  'gpt-4o-mini'
 const PRACTICE_MODEL =
-  process.env.ANTHROPIC_PRACTICE_MODEL ?? 'claude-3-5-sonnet-20241022'
+  process.env.OPENAI_PRACTICE_MODEL ??
+  process.env.ANTHROPIC_PRACTICE_MODEL ??
+  'gpt-4o-mini'
 
 // Use same prompts as exam-generator
 const DIAGNOSTIC_EXAM_PROMPT = `You are an expert EPPP (Examination for Professional Practice in Psychology) exam creator.
@@ -195,11 +198,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if Anthropic API key is available
-    if (!process.env.ANTHROPIC_API_KEY) {
-      console.error('ANTHROPIC_API_KEY not set')
+    // Check if OpenAI API key is available
+    if (!openai) {
+      console.error('[Pre-Gen] OPENAI_API_KEY not set for exam generation')
       return NextResponse.json(
-        { error: 'API key not configured' },
+        { error: 'OpenAI API key not configured' },
         { status: 500 }
       )
     }
@@ -251,20 +254,18 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Generate exam using Claude
+    // Generate exam using OpenAI
     const prompt = examType === 'diagnostic' ? DIAGNOSTIC_EXAM_PROMPT : PRACTICE_EXAM_PROMPT
     const model = examType === 'diagnostic' ? DIAGNOSTIC_MODEL : PRACTICE_MODEL
-    let fullResponse = ''
 
     console.log(
-      `[Pre-Gen] Calling Claude API for ${examType} exam generation using model ${model}...`
+      `[Pre-Gen] Calling OpenAI API for ${examType} exam generation using model ${model}...`
     )
 
-    // Use Sonnet 4.5 for both exams - better model for large outputs
-    const stream = await client.messages.create({
+    const completion = await openai.chat.completions.create({
       model,
-      max_tokens: examType === 'diagnostic' ? 50000 : 64000, // Increased for detailed questions with comprehensive explanations (64K is max for Sonnet 4.5)
-      stream: true,
+      temperature: 0.3,
+      response_format: { type: 'json_object' },
       messages: [
         {
           role: 'user',
@@ -273,26 +274,27 @@ export async function POST(request: NextRequest) {
       ],
     })
 
-    // Collect all streamed content
-    for await (const event of stream) {
-      if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
-        fullResponse += event.delta.text
-      }
+    const content = completion.choices[0]?.message?.content
+    if (!content) {
+      console.error('[Pre-Gen] Empty response from OpenAI')
+      return NextResponse.json(
+        { error: 'Empty response from model' },
+        { status: 500 }
+      )
     }
 
-    console.log(`[Pre-Gen] Received response from Claude (${fullResponse.length} characters)`)
+    console.log(`[Pre-Gen] Received response from OpenAI (${content.length} characters)`)
 
-    // Extract JSON from response
-    const jsonMatch = fullResponse.match(/\{[\s\S]*\}/)
-    if (!jsonMatch) {
-      console.error('[Pre-Gen] Failed to extract JSON from Claude response')
+    let examData: any
+    try {
+      examData = JSON.parse(content)
+    } catch (parseError) {
+      console.error('[Pre-Gen] Failed to parse JSON from OpenAI response', parseError)
       return NextResponse.json(
         { error: 'Failed to parse exam data' },
         { status: 500 }
       )
     }
-
-    const examData = JSON.parse(jsonMatch[0])
 
     if (!examData.questions || !Array.isArray(examData.questions)) {
       console.error('[Pre-Gen] Invalid exam structure from Claude')
