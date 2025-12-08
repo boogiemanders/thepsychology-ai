@@ -72,7 +72,7 @@ export default function PortfolioPage() {
               Right after finishing my postdoc, I took my first EPPP diagnostic. I scored a 19%.
               <br />
               <br />
-              Even with years of schooling and wide clinical experience, the traditional study model failed me.
+              Even with years of schooling and wide clinical experience, the traditional study model was not enough.
               <br />
               <br />
               A month later, I passed on my first try with a 588.
