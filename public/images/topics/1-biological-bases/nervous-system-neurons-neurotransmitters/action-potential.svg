@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 320" width="550" height="320">
+  <!-- Y-axis -->
+  <line x1="70" y1="40" x2="70" y2="260" class="svg-axis" stroke-width="1.5"/>
+
+  <!-- Y-axis labels -->
+  <g font-family="system-ui, sans-serif" font-size="10" class="svg-subtle" text-anchor="end">
+    <text x="65" y="60">+40mV</text>
+    <text x="65" y="130">0</text>
+    <text x="65" y="200">-55mV</text>
+    <text x="65" y="230">-70mV</text>
+  </g>
+
+  <!-- X-axis -->
+  <line x1="70" y1="260" x2="500" y2="260" class="svg-axis" stroke-width="1.5"/>
+  <text x="285" y="295" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" class="svg-subtle">Time (ms)</text>
+
+  <!-- Threshold line -->
+  <line x1="70" y1="200" x2="500" y2="200" stroke="#D4A020" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <text x="505" y="204" font-family="system-ui, sans-serif" font-size="9" fill="#D4A020">Threshold</text>
+
+  <!-- Resting line -->
+  <line x1="70" y1="230" x2="500" y2="230" stroke="#2AA69A" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Action Potential Curve -->
+  <path d="M70,230
+           L150,230
+           Q170,230 185,200
+           Q200,150 220,80
+           Q240,55 260,60
+           Q280,80 300,150
+           Q320,210 340,245
+           Q360,255 380,240
+           Q400,230 430,230
+           L500,230"
+        fill="none" stroke="#2AA69A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Phase labels -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">
+    <text x="110" y="220" class="svg-label">Resting</text>
+
+    <text x="220" y="45" fill="#1A8A7A">Depolarization</text>
+    <text x="220" y="58" font-size="9" class="svg-subtle">Na+ in</text>
+
+    <text x="310" y="100" fill="#C02020">Repolarization</text>
+    <text x="310" y="113" font-size="9" class="svg-subtle">K+ out</text>
+
+    <text x="365" y="275" fill="#6A58DD">Refractory</text>
+
+    <text x="460" y="220" class="svg-label">Rest</text>
+  </g>
+</svg>

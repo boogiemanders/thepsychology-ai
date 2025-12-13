@@ -41,6 +41,8 @@ Your nervous system contains two cell types: **neurons** (which communicate info
 
 ### Neuron Structure: The Basic Blueprint
 
+![Neuron anatomy diagram](/images/topics/1-biological-bases/nervous-system-neurons-neurotransmitters/neuron-anatomy.svg)
+
 Every neuron contains three essential components:
 
 - **Dendrites**: Receive incoming signals from other neurons (the input receivers)
@@ -57,9 +59,13 @@ Communication inside the nervous system involves two distinct processes. First, 
 
 When this depolarization reaches a minimum threshold, complete depolarization occurs, triggering an **action potential**—an electrical impulse that travels down the axon. After firing, the neuron returns to its resting state and prepares to fire again.
 
+![Action potential diagram](/images/topics/1-biological-bases/nervous-system-neurons-neurotransmitters/action-potential.svg)
+
 Critical point for the exam: action potentials follow an **all-or-none principle**. They either occur or they don't, and when they occur, they're always the same intensity. {{M}}It's like a light switch, not a dimmer{{/M}}—there's no "weak" action potential or "strong" action potential. So how does your nervous system encode different stimulus intensities? Through two mechanisms: (1) the frequency of action potentials (rapid firing for intense stimuli), and (2) the number of neurons firing simultaneously.
 
 ### How Information Travels Between Neurons
+
+![Synapse diagram](/images/topics/1-biological-bases/nervous-system-neurons-neurotransmitters/synapse-diagram.svg)
 
 **Synaptic transmission** is how neurons talk to each other, and it's typically chemical (though some synapses are electrical). Here's the sequence EPPP questions often target:
 

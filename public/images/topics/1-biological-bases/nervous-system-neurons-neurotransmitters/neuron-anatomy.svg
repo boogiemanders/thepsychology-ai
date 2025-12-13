@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300">
+  <!-- Dendrites -->
+  <g stroke="#6B9BD2" stroke-width="3" fill="none" stroke-linecap="round">
+    <line x1="80" y1="130" x2="120" y2="150"/>
+    <line x1="70" y1="150" x2="120" y2="150"/>
+    <line x1="80" y1="170" x2="120" y2="150"/>
+  </g>
+
+  <!-- Cell Body -->
+  <circle cx="150" cy="150" r="35" fill="#5A8FBF" stroke="#4A7AA8" stroke-width="2"/>
+
+  <!-- Nucleus -->
+  <circle cx="150" cy="150" r="12" fill="#3D6A8F"/>
+
+  <!-- Axon -->
+  <line x1="185" y1="150" x2="580" y2="150" stroke="#5A9A6E" stroke-width="4"/>
+
+  <!-- Myelin Sheaths -->
+  <g fill="#E8C86B" stroke="#C9A94D" stroke-width="1">
+    <rect x="220" y="140" width="60" height="20" rx="10"/>
+    <rect x="320" y="140" width="60" height="20" rx="10"/>
+    <rect x="420" y="140" width="60" height="20" rx="10"/>
+  </g>
+
+  <!-- Axon Terminals -->
+  <g fill="#6BAF7D" stroke="#4D8F5D" stroke-width="1.5">
+    <circle cx="610" cy="130" r="12"/>
+    <circle cx="620" cy="150" r="12"/>
+    <circle cx="610" cy="170" r="12"/>
+  </g>
+  <line x1="580" y1="150" x2="598" y2="130" stroke="#5A9A6E" stroke-width="3"/>
+  <line x1="580" y1="150" x2="608" y2="150" stroke="#5A9A6E" stroke-width="3"/>
+  <line x1="580" y1="150" x2="598" y2="170" stroke="#5A9A6E" stroke-width="3"/>
+
+  <!-- Labels -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">
+    <text x="80" y="105" class="svg-label">Dendrites</text>
+    <text x="150" y="215" class="svg-label">Cell Body</text>
+    <text x="300" y="115" class="svg-label">Myelin Sheath</text>
+    <text x="400" y="195" class="svg-label">Axon</text>
+    <text x="615" y="215" class="svg-label">Terminals</text>
+  </g>
+
+  <!-- Signal direction -->
+  <text x="350" y="260" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" class="svg-subtle">Signal →</text>
+</svg>

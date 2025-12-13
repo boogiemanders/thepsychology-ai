@@ -31,6 +31,7 @@ import textLoadingAnimation from '../../../public/animations/text-loading.json'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 import { MagicCard } from '@/components/ui/magic-card'
 import { PulsatingButton } from '@/components/ui/pulsating-button'
+import { InlineSvg } from '@/components/ui/inline-svg'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -1609,6 +1610,26 @@ export function TopicTeacherContent() {
                               <th className="border-b-2 border-border">
                                 {children}
                               </th>
+                            )
+                          },
+                          img: ({ src, alt }) => {
+                            // Use InlineSvg for SVG files to enable theme-aware styling
+                            if (src && src.endsWith('.svg')) {
+                              return (
+                                <InlineSvg
+                                  src={src}
+                                  alt={alt || ''}
+                                  className="my-6 max-w-full"
+                                />
+                              )
+                            }
+                            // Regular images
+                            return (
+                              <img
+                                src={src}
+                                alt={alt || ''}
+                                className="rounded-lg my-6 shadow-md max-w-full"
+                              />
                             )
                           },
                         }}
