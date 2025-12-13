@@ -60,11 +60,22 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
     return () => window.removeEventListener("mini-pricing-select", handleMiniPricingSelect)
   }, [])
 
-  const scrollToCard = useCallback((index: number) => {
+  const scrollToCard = useCallback((index: number, behavior: ScrollBehavior = "smooth") => {
     const target = cardRefs.current[index]
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" })
-    }
+    const sliderEl = sliderRef.current
+    if (!target || !sliderEl) return
+
+    const sliderRect = sliderEl.getBoundingClientRect()
+    const targetRect = target.getBoundingClientRect()
+
+    // Only scroll the horizontal slider. Using `scrollIntoView` can cause mobile browsers to
+    // scroll the entire page down to the pricing section on initial load.
+    const scrollPaddingLeftRaw = window.getComputedStyle(sliderEl).scrollPaddingLeft
+    const scrollPaddingLeft = Number.parseFloat(scrollPaddingLeftRaw) || 0
+    const deltaX = targetRect.left - sliderRect.left - scrollPaddingLeft
+
+    if (Math.abs(deltaX) < 2) return
+    sliderEl.scrollBy({ left: deltaX, behavior })
   }, [])
   const tierIndexMap = useMemo(
     () =>

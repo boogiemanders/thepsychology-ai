@@ -39,7 +39,7 @@ export function CompanyShowcase() {
           </Link>
         </div>
 
-        <p className="text-center text-muted-foreground font-medium">
+        <p className="text-center text-muted-foreground font-medium mt-6">
           <span className="block">{companyShowcase.title}</span>
           {companyShowcase.subtitle ? (
             <span className="block">{companyShowcase.subtitle}</span>
