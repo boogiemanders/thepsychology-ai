@@ -22,7 +22,7 @@ export function HeroSection() {
               </h1>
             ) : null}
             {hero.description ? (
-              <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight">
+              <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight -mt-8 md:mt-0">
                 {hero.description}
               </p>
             ) : null}
