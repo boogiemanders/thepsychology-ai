@@ -17,12 +17,12 @@ export function HeroSection() {
           ) : null}
           <div className="flex flex-col items-center justify-center gap-5">
             {hero.title ? (
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center text-primary">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center text-primary -mt-5 md:mt-0">
                 {hero.title}
               </h1>
             ) : null}
             {hero.description ? (
-              <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight -mt-8 md:mt-0">
+              <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight -mt-[42px] md:mt-4 lg:mt-0">
                 {hero.description}
               </p>
             ) : null}
