@@ -28,8 +28,28 @@ export default function Home() {
       window.history.scrollRestoration = "manual"
     }
 
-    if (!window.location.hash) {
+    const shouldForceTop = () => !window.location.hash && window.location.pathname === "/"
+
+    const forceTop = () => {
+      if (!shouldForceTop()) return
       window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+    }
+
+    forceTop()
+
+    // Mobile browsers (esp. iOS) can restore scroll position or "anchor" the viewport
+    // after hydration/layout shifts. Re-assert top a few times early on.
+    const timers: Array<number> = []
+    timers.push(window.setTimeout(forceTop, 50))
+    timers.push(window.setTimeout(forceTop, 250))
+    timers.push(window.setTimeout(forceTop, 900))
+
+    const handlePageShow = () => forceTop()
+    window.addEventListener("pageshow", handlePageShow)
+
+    return () => {
+      timers.forEach((t) => window.clearTimeout(t))
+      window.removeEventListener("pageshow", handlePageShow)
     }
   }, [])
 
