@@ -15,7 +15,12 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getUserCurrentInterest, updateUserCurrentInterest, subscribeToUserInterestChanges, unsubscribeFromInterestChanges } from '@/lib/interests'
-import { getUserLanguagePreference, updateUserLanguagePreference } from '@/lib/language-preference'
+import {
+  getUserLanguagePreference,
+  subscribeToUserLanguagePreferenceChanges,
+  unsubscribeFromLanguagePreferenceChanges,
+  updateUserLanguagePreference,
+} from '@/lib/language-preference'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { useAuth } from '@/context/auth-context'
@@ -127,6 +132,7 @@ export function TopicTeacherContent() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const currentSectionRef = useRef<string>('')
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
+  const languageSubscriptionRef = useRef<RealtimeChannel | null>(null)
   const [isNearBottom, setIsNearBottom] = useState(true)
   const [languagePreference, setLanguagePreference] = useState<string | null>(null)
   const [languageInput, setLanguageInput] = useState('')
@@ -152,6 +158,14 @@ export function TopicTeacherContent() {
     const normalizedDomain = domainName?.trim().toLowerCase() || 'none'
     const normalizedInterests = interests?.trim().toLowerCase() || 'none'
     return `tt_translation__${normalizedTopic}__${normalizedDomain}__${normalizedLanguage}__${normalizedInterests}`
+  }
+
+  const normalizeLanguageInput = (raw: string): string | null => {
+    const trimmed = raw.trim()
+    if (!trimmed) return null
+    const lower = trimmed.toLowerCase()
+    if (lower === 'english' || lower === 'en' || lower === 'eng') return null
+    return trimmed
   }
 
   const getCachedTranslation = (cacheKey: string): string | null => {
@@ -411,11 +425,14 @@ export function TopicTeacherContent() {
         }
 
         // Load language preference with localStorage fallback
-        if (!currentLanguage && typeof window !== 'undefined') {
+        if (currentLanguage == null && typeof window !== 'undefined') {
           currentLanguage = localStorage.getItem(`language_pref_${user.id}`)
         }
-        if (currentLanguage) {
+        if (currentLanguage && currentLanguage.trim().length > 0) {
           setLanguagePreference(currentLanguage)
+          setLanguageInput('')
+        } else {
+          setLanguagePreference(null)
           setLanguageInput('')
         }
 
@@ -452,6 +469,31 @@ export function TopicTeacherContent() {
     return () => {
       if (subscriptionRef.current) {
         unsubscribeFromInterestChanges(subscriptionRef.current)
+      }
+    }
+  }, [user?.id])
+
+  useEffect(() => {
+    if (!user?.id) return
+
+    const channel = subscribeToUserLanguagePreferenceChanges(user.id, (newLanguage) => {
+      setLanguagePreference(newLanguage)
+      setLanguageInput('')
+
+      if (typeof window !== 'undefined') {
+        if (newLanguage && newLanguage.trim().length > 0) {
+          localStorage.setItem(`language_pref_${user.id}`, newLanguage)
+        } else {
+          localStorage.removeItem(`language_pref_${user.id}`)
+        }
+      }
+    })
+
+    languageSubscriptionRef.current = channel
+
+    return () => {
+      if (languageSubscriptionRef.current) {
+        unsubscribeFromLanguagePreferenceChanges(languageSubscriptionRef.current)
       }
     }
   }, [user?.id])
@@ -1215,15 +1257,20 @@ export function TopicTeacherContent() {
                 >
                   <span>{languagePreference}</span>
                   <button
-                    onClick={() => {
+                    onClick={async () => {
                       setLanguagePreference(null)
                       setLanguageInput('')
                       setIsTranslating(false)
                       setLastTranslationCacheKey(null)
                       if (user?.id) {
-                        updateUserLanguagePreference(user.id, '')
-                        if (typeof window !== 'undefined') {
-                          localStorage.removeItem(`language_pref_${user.id}`)
+                        try {
+                          await updateUserLanguagePreference(user.id, '')
+                        } catch (error) {
+                          console.debug('Failed to clear language preference:', error)
+                        } finally {
+                          if (typeof window !== 'undefined') {
+                            localStorage.removeItem(`language_pref_${user.id}`)
+                          }
                         }
                       }
                       const cacheKeyToRemove = buildTranslationCacheKey(
@@ -1251,17 +1298,25 @@ export function TopicTeacherContent() {
                   placeholder="Preferred language (e.g., Spanish)..."
                   value={languageInput}
                   onChange={(e) => setLanguageInput(e.target.value)}
-                  onKeyPress={(e) => {
+                  onKeyPress={async (e) => {
                     if (e.key === 'Enter' && languageInput.trim() && user?.id) {
                       e.preventDefault()
-                      const newLanguage = languageInput.trim()
+                      const newLanguage = normalizeLanguageInput(languageInput)
                       setLanguagePreference(newLanguage)
                       setLastTranslationCacheKey(null)
                       setIsTranslating(false)
                       setLanguageInput('')
-                      updateUserLanguagePreference(user.id, newLanguage)
-                      if (typeof window !== 'undefined') {
-                        localStorage.setItem(`language_pref_${user.id}`, newLanguage)
+                      try {
+                        await updateUserLanguagePreference(user.id, newLanguage ?? '')
+                        if (typeof window !== 'undefined') {
+                          if (newLanguage) {
+                            localStorage.setItem(`language_pref_${user.id}`, newLanguage)
+                          } else {
+                            localStorage.removeItem(`language_pref_${user.id}`)
+                          }
+                        }
+                      } catch (error) {
+                        console.debug('Failed to save language preference:', error)
                       }
                     }
                   }}

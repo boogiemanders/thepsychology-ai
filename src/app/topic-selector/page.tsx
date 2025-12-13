@@ -21,6 +21,12 @@ import {
   unsubscribeFromInterestChanges,
   updateUserCurrentInterest,
 } from '@/lib/interests'
+import {
+  getUserLanguagePreference,
+  subscribeToUserLanguagePreferenceChanges,
+  unsubscribeFromLanguagePreferenceChanges,
+  updateUserLanguagePreference,
+} from '@/lib/language-preference'
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { createClient } from '@supabase/supabase-js'
@@ -211,12 +217,23 @@ export default function TopicSelectorPage() {
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [currentInput, setCurrentInput] = useState<string>('')
   const [savedInterests, setSavedInterests] = useState<string[]>([])
+  const [languagePreference, setLanguagePreference] = useState<string | null>(null)
+  const [languageInput, setLanguageInput] = useState<string>('')
   const [domains, setDomains] = useState<any[]>([])
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
   const [priorityTopicIds, setPriorityTopicIds] = useState<string[]>([])
   const [recommendedDomainIds, setRecommendedDomainIds] = useState<string[]>([])
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
+  const languageSubscriptionRef = useRef<RealtimeChannel | null>(null)
   const studyStats = calculateStudyStats()
+
+  const normalizeLanguageInput = (raw: string): string | null => {
+    const trimmed = raw.trim()
+    if (!trimmed) return null
+    const lower = trimmed.toLowerCase()
+    if (lower === 'english' || lower === 'en' || lower === 'eng') return null
+    return trimmed
+  }
 
   // Calculate progress based on quiz results
   useEffect(() => {
@@ -251,15 +268,37 @@ export default function TopicSelectorPage() {
       const topicSet = new Set<string>()
       const domainSet = new Set<string>()
 
-      ;(topDomains || []).forEach((domain) => {
-        if (Array.isArray(domain?.recommendedTopicIds)) {
-          domain.recommendedTopicIds.forEach((id: string) => topicSet.add(id))
+      const addDomainFromTopicId = (topicId: string) => {
+        if (!topicId) return
+        const parts = topicId.split('-')
+        if (parts.length > 1) {
+          const domainId = parts.slice(0, parts.length - 1).join('-')
+          if (domainId) {
+            domainSet.add(domainId)
+          }
         }
+      }
+
+      ;(topDomains || []).forEach((domain) => {
+        const recommendedTopicIds: string[] = Array.isArray(domain?.recommendedTopicIds)
+          ? domain.recommendedTopicIds
+          : []
+
+        recommendedTopicIds.forEach((id) => {
+          topicSet.add(id)
+          addDomainFromTopicId(id)
+        })
 
         if (domain?.type === 'org_psych') {
           domainSet.add('3-5-6')
-        } else {
-          mapDomainNumberToIds(domain?.domainNumber).forEach((id) => domainSet.add(id))
+          return
+        }
+
+        if (recommendedTopicIds.length === 0) {
+          const fallbackDomainIds = mapDomainNumberToIds(domain?.domainNumber)
+          if (fallbackDomainIds.length > 0) {
+            domainSet.add(fallbackDomainIds[0])
+          }
         }
       })
 
@@ -403,6 +442,53 @@ export default function TopicSelectorPage() {
     }
   }, [user?.id])
 
+  // Load preferred language so topic-selector stays in sync with topic-teacher
+  useEffect(() => {
+    let isMounted = true
+
+    const loadLanguagePreference = async () => {
+      if (!user?.id) {
+        if (isMounted) {
+          setLanguagePreference(null)
+          setLanguageInput('')
+        }
+        return
+      }
+
+      try {
+        let currentLanguage = await getUserLanguagePreference(user.id)
+
+        if (currentLanguage == null && typeof window !== 'undefined') {
+          currentLanguage = localStorage.getItem(`language_pref_${user.id}`)
+        }
+
+        if (!isMounted) return
+
+        if (currentLanguage && currentLanguage.trim().length > 0) {
+          setLanguagePreference(currentLanguage)
+          if (typeof window !== 'undefined') {
+            localStorage.setItem(`language_pref_${user.id}`, currentLanguage)
+          }
+        } else {
+          setLanguagePreference(null)
+          if (typeof window !== 'undefined') {
+            localStorage.removeItem(`language_pref_${user.id}`)
+          }
+        }
+
+        setLanguageInput('')
+      } catch (error) {
+        console.debug('Failed to load language preference for topic selector:', error)
+      }
+    }
+
+    loadLanguagePreference()
+
+    return () => {
+      isMounted = false
+    }
+  }, [user?.id])
+
   // Subscribe to interest changes from topic-teacher
   useEffect(() => {
     if (user?.id) {
@@ -425,6 +511,32 @@ export default function TopicSelectorPage() {
     return () => {
       if (subscriptionRef.current) {
         unsubscribeFromInterestChanges(subscriptionRef.current)
+      }
+    }
+  }, [user?.id])
+
+  // Subscribe to language preference changes from topic-teacher (and other sessions)
+  useEffect(() => {
+    if (user?.id) {
+      const channel = subscribeToUserLanguagePreferenceChanges(user.id, (newLanguage) => {
+        setLanguagePreference(newLanguage)
+        setLanguageInput('')
+
+        if (typeof window !== 'undefined') {
+          if (newLanguage && newLanguage.trim().length > 0) {
+            localStorage.setItem(`language_pref_${user.id}`, newLanguage)
+          } else {
+            localStorage.removeItem(`language_pref_${user.id}`)
+          }
+        }
+      })
+
+      languageSubscriptionRef.current = channel
+    }
+
+    return () => {
+      if (languageSubscriptionRef.current) {
+        unsubscribeFromLanguagePreferenceChanges(languageSubscriptionRef.current)
       }
     }
   }, [user?.id])
@@ -472,6 +584,45 @@ export default function TopicSelectorPage() {
 
     if (user?.id) {
       await updateUserCurrentInterest(user.id, newInterests.join(', '))
+    }
+  }
+
+  const saveLanguagePreference = async () => {
+    if (!user?.id) return
+    const normalizedLanguage = normalizeLanguageInput(languageInput)
+
+    setLanguagePreference(normalizedLanguage)
+    setLanguageInput('')
+
+    try {
+      await updateUserLanguagePreference(user.id, normalizedLanguage ?? '')
+
+      if (typeof window !== 'undefined') {
+        if (normalizedLanguage) {
+          localStorage.setItem(`language_pref_${user.id}`, normalizedLanguage)
+        } else {
+          localStorage.removeItem(`language_pref_${user.id}`)
+        }
+      }
+    } catch (error) {
+      console.debug('Failed to save language preference:', error)
+    }
+  }
+
+  const clearLanguagePreference = async () => {
+    if (!user?.id) return
+
+    setLanguagePreference(null)
+    setLanguageInput('')
+
+    try {
+      await updateUserLanguagePreference(user.id, '')
+    } catch (error) {
+      console.debug('Failed to clear language preference:', error)
+    } finally {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem(`language_pref_${user.id}`)
+      }
     }
   }
 
@@ -576,6 +727,64 @@ export default function TopicSelectorPage() {
                 </div>
               </div>
             </div>
+
+            <div className="flex-1 max-w-2xl">
+              <div className="relative">
+                <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
+                  {languagePreference && (
+                    <Badge
+                      variant="outline"
+                      className="flex items-center gap-1 px-3 py-1 text-sm font-semibold transition-colors"
+                      style={{
+                        backgroundColor: '#cbc9db',
+                        borderColor: '#cbc9db',
+                        color: '#1b1a1f',
+                      }}
+                    >
+                      <span className="whitespace-nowrap">{languagePreference}</span>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          clearLanguagePreference()
+                        }}
+                        aria-label={`Remove preferred language ${languagePreference}`}
+                        className="ml-2 flex h-4 w-4 items-center justify-center rounded-full border border-transparent bg-black/10 text-current transition-colors hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
+                      >
+                        <X size={12} />
+                      </button>
+                    </Badge>
+                  )}
+
+                  {!languagePreference && (
+                    <input
+                      type="text"
+                      placeholder="Preferred language (e.g., Spanish)..."
+                      value={languageInput}
+                      onChange={(e) => setLanguageInput(e.target.value)}
+                      onKeyPress={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault()
+                          saveLanguagePreference()
+                        }
+                      }}
+                      className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"
+                    />
+                  )}
+
+                  {!languagePreference && languageInput.trim().length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="flex items-center gap-1 text-xs text-muted-foreground ml-auto"
+                    >
+                      <Kbd className="text-xs px-1.5 py-0.5">Enter</Kbd>
+                    </motion.div>
+                  )}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 

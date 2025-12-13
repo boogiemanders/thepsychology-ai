@@ -1,4 +1,5 @@
 import { supabase } from './supabase'
+import type { RealtimeChannel } from '@supabase/supabase-js'
 
 export async function getUserLanguagePreference(userId: string): Promise<string | null> {
   try {
@@ -17,7 +18,7 @@ export async function getUserLanguagePreference(userId: string): Promise<string 
       return null
     }
 
-    return data?.language || null
+    return data?.language ?? null
   } catch (error) {
     console.debug('Error fetching language preference:', error)
     return null
@@ -29,17 +30,19 @@ export async function updateUserLanguagePreference(userId: string, language: str
     const normalizedLanguage = language.trim()
 
     if (!normalizedLanguage) {
-      const { error: deleteError } = await supabase
+      // We intentionally use UPDATE to clear the preference instead of DELETE.
+      // The table migration includes SELECT/INSERT/UPDATE RLS policies but no DELETE policy.
+      const { error: updateError } = await supabase
         .from('user_language_preference')
-        .delete()
+        .update({ language: '', updated_at: new Date() })
         .eq('user_id', userId)
 
-      if (deleteError) {
-        if (deleteError.message && deleteError.message.includes('relation')) {
+      if (updateError) {
+        if (updateError.message && updateError.message.includes('relation')) {
           console.debug('Language preference table not created yet')
           return
         }
-        console.debug('Delete error while clearing language preference:', deleteError)
+        console.debug('Update error while clearing language preference:', updateError)
       }
       return
     }
@@ -87,3 +90,42 @@ export async function updateUserLanguagePreference(userId: string, language: str
   }
 }
 
+export function subscribeToUserLanguagePreferenceChanges(
+  userId: string,
+  callback: (language: string | null) => void
+): RealtimeChannel | null {
+  try {
+    const channel = supabase
+      .channel(`user_language_preference_${userId}`)
+      .on(
+        'postgres_changes',
+        {
+          event: '*',
+          schema: 'public',
+          table: 'user_language_preference',
+          filter: `user_id=eq.${userId}`,
+        },
+        (payload) => {
+          if (payload.eventType === 'DELETE') {
+            callback(null)
+            return
+          }
+
+          const next = (payload.new?.language as string | null | undefined) ?? null
+          callback(next && next.trim().length > 0 ? next : null)
+        }
+      )
+      .subscribe()
+
+    return channel
+  } catch (error) {
+    console.error('Error subscribing to language preference changes:', error)
+    return null
+  }
+}
+
+export function unsubscribeFromLanguagePreferenceChanges(channel: RealtimeChannel | null) {
+  if (channel) {
+    supabase.removeChannel(channel)
+  }
+}
