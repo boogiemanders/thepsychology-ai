@@ -187,6 +187,7 @@ export default function Home() {
           <div className="absolute inset-0 -z-10 pointer-events-none bg-black flex items-start justify-center">
             {isHeroVideoReady ? (
               <video
+                id="hero-video"
                 ref={heroVideoRef}
                 className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
                 src="/hero-background.mp4?v=refresh5"

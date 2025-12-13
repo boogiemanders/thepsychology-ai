@@ -4,6 +4,18 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+#hero-video::-webkit-media-controls-start-playback-button,
+#hero-video::-webkit-media-controls,
+#hero-video::-webkit-media-controls-enclosure,
+#hero-video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+#hero-video::-webkit-media-controls-play-button,
+#hero-video::-webkit-media-controls-pausebutton {
+  display: none !important;
+}
+
 /* Use Tahoma for exams and tests */
 .exam-ui,
 .exam-ui * {
