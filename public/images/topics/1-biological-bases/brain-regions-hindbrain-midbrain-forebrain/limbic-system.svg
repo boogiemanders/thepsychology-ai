@@ -1,88 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 320" width="450" height="320">
-  <!-- Title -->
-  <text x="225" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle" class="svg-label">LIMBIC SYSTEM</text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 640" width="512" height="320">
+  <!-- Embedded PNG image -->
+  <image xlink:href="/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/limbic-system-base.png" width="1024" height="640"/>
 
-  <!-- Brain silhouette (gray context) -->
-  <path d="M50,160
-           Q40,100 85,55
-           Q150,10 265,15
-           Q360,20 410,70
-           Q450,120 440,180
-           Q430,240 370,280
-           Q300,315 225,310
-           Q150,305 95,265
-           Q50,220 50,160"
-        fill="#E0E0E0" stroke="#C0C0C0" stroke-width="1.5"/>
+  <!-- Leader lines -->
+  <g stroke="#555" stroke-width="2" fill="none">
+    <line x1="500" y1="213" x2="324" y2="99"/>
+    <line x1="480" y1="300" x2="275" y2="218"/>
+    <line x1="491" y1="359" x2="270" y2="360"/>
+    <line x1="524" y1="340" x2="850" y2="300"/>
+    <line x1="599" y1="289" x2="768" y2="222"/>
+  </g>
 
-  <!-- Cerebellum silhouette -->
-  <path d="M350,230 Q400,215 420,245 Q435,280 405,305 Q365,325 325,305 Q300,285 320,255 Q335,235 350,230"
-        fill="#D5D5D5" stroke="#B5B5B5" stroke-width="1"/>
-
-  <!-- Cingulate gyrus (blue curved band) -->
-  <path d="M120,115
-           Q160,70 250,65
-           Q340,60 380,95
-           Q395,115 380,115
-           Q340,85 250,90
-           Q170,95 135,125
-           Q125,130 120,115"
-        fill="#6B9BD2" stroke="#4A7AA8" stroke-width="1.5"/>
-
-  <!-- Corpus Callosum (white/cream, under cingulate) -->
-  <path d="M135,130
-           Q175,105 255,100
-           Q335,95 370,120
-           Q355,115 255,115
-           Q175,118 145,135
-           Q140,138 135,130"
-        fill="#F5E8D0" stroke="#D5C8B0" stroke-width="1"/>
-
-  <!-- Thalamus (orange, central) -->
-  <ellipse cx="270" cy="155" rx="50" ry="35" fill="#E8A860" stroke="#C88840" stroke-width="1.5"/>
-
-  <!-- Hypothalamus (blue, small front) -->
-  <ellipse cx="195" cy="195" rx="22" ry="15" fill="#5BADD2" stroke="#3A8DB2" stroke-width="1.5"/>
-
-  <!-- Hippocampus (blue, curved bottom) -->
-  <path d="M280,200
-           Q320,195 350,215
-           Q375,235 365,260
-           Q350,280 315,275
-           Q285,270 270,245
-           Q260,225 280,200"
-        fill="#5BADD2" stroke="#3A8DB2" stroke-width="1.5"/>
-
-  <!-- Amygdala (blue, front) -->
-  <ellipse cx="195" cy="235" rx="25" ry="22" fill="#5BADD2" stroke="#3A8DB2" stroke-width="1.5"/>
-
-  <!-- Labels with leader lines -->
-  <g font-family="system-ui, -apple-system, sans-serif" font-size="11">
-    <!-- Cingulate gyrus -->
-    <line x1="145" y1="100" x2="95" y2="75" stroke="#666" stroke-width="1"/>
-    <text x="93" y="73" text-anchor="end" class="svg-label">Cingulate gyrus</text>
-
-    <!-- Corpus Callosum -->
-    <line x1="340" y1="110" x2="385" y2="85" stroke="#666" stroke-width="1"/>
-    <text x="387" y="88" text-anchor="start" class="svg-label">Corpus Callosum</text>
-
-    <!-- Thalamus -->
-    <line x1="310" y1="145" x2="365" y2="135" stroke="#666" stroke-width="1"/>
-    <text x="367" y="138" text-anchor="start" class="svg-label">Thalamus</text>
-
-    <!-- Hypothalamus -->
-    <line x1="175" y1="190" x2="100" y2="175" stroke="#666" stroke-width="1"/>
-    <text x="98" y="178" text-anchor="end" class="svg-label">Hypothalamus</text>
-
-    <!-- Amygdala -->
-    <line x1="175" y1="245" x2="100" y2="260" stroke="#666" stroke-width="1"/>
-    <text x="98" y="263" text-anchor="end" class="svg-label">Amygdala</text>
-
-    <!-- Hippocampus -->
-    <line x1="350" y1="250" x2="395" y2="245" stroke="#666" stroke-width="1"/>
-    <text x="397" y="248" text-anchor="start" class="svg-label">Hippocampus</text>
-
-    <!-- Cerebellum -->
-    <line x1="370" y1="275" x2="410" y2="290" stroke="#666" stroke-width="1"/>
-    <text x="412" y="293" text-anchor="start" class="svg-label">Cerebellum</text>
+  <!-- Labels with theme-aware text -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="500">
+    <text x="301" y="98" text-anchor="end" class="svg-label">Cingulate Gyrus</text>
+    <text x="249" y="218" text-anchor="end" class="svg-label">Basal Ganglia</text>
+    <text x="235" y="375" text-anchor="end" class="svg-label">Hypothalamus</text>
+    <text x="855" y="305" text-anchor="start" class="svg-label">Amygdala</text>
+    <text x="781" y="215" text-anchor="start" class="svg-label">Hippocampus</text>
   </g>
 </svg>

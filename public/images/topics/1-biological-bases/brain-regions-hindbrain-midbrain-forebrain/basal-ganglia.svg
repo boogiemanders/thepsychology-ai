@@ -1,71 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 320" width="450" height="320">
-  <!-- Brain silhouette (gray context) -->
-  <path d="M50,155
-           Q40,95 85,50
-           Q150,5 265,10
-           Q360,15 410,65
-           Q450,115 440,175
-           Q430,235 370,275
-           Q300,310 225,305
-           Q150,300 95,260
-           Q50,215 50,155"
-        fill="#D0D0D0" stroke="#B0B0B0" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024" width="380" height="380">
+  <!-- Embedded PNG image -->
+  <image xlink:href="/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/basal-ganglia-base.png" width="1024" height="1024"/>
 
-  <!-- Cerebellum silhouette -->
-  <path d="M350,225 Q395,210 415,235 Q430,265 405,290 Q370,310 335,295 Q310,280 325,255 Q335,235 350,225"
-        fill="#C5C5C5" stroke="#A5A5A5" stroke-width="1"/>
+  <!-- Leader line -->
+  <line x1="520" y1="400" x2="780" y2="350" stroke="#555" stroke-width="2"/>
 
-  <!-- Thalamus (green, posterior) -->
-  <ellipse cx="290" cy="145" rx="45" ry="35" fill="#6BAF7D" stroke="#4D8F5D" stroke-width="1.5"/>
-
-  <!-- Caudate nucleus (orange C-shape) -->
-  <path d="M140,95
-           Q180,70 240,75
-           Q300,80 340,105
-           Q360,125 355,150
-           Q350,175 330,195
-           Q310,215 280,210
-           Q260,205 255,185
-           Q250,165 260,145
-           Q270,130 260,115
-           Q250,100 220,95
-           Q190,92 160,100
-           Q140,105 140,95"
-        fill="#E8A040" stroke="#C88020" stroke-width="1.5" fill-opacity="0.9"/>
-
-  <!-- Putamen (orange, central) -->
-  <ellipse cx="210" cy="155" rx="55" ry="45" fill="#E8A040" stroke="#C88020" stroke-width="1.5"/>
-
-  <!-- Globus Pallidus (yellow-green, inner) -->
-  <ellipse cx="245" cy="155" rx="30" ry="30" fill="#C8D850" stroke="#A8B830" stroke-width="1.5"/>
-
-  <!-- Nucleus Accumbens (red, ventral) -->
-  <ellipse cx="150" cy="215" rx="25" ry="18" fill="#E05050" stroke="#C03030" stroke-width="1.5"/>
-
-  <!-- Labels -->
-  <g font-family="system-ui, -apple-system, sans-serif" font-size="11">
-    <!-- Caudate labels -->
-    <text x="165" y="85" text-anchor="middle" class="svg-label">Caudate</text>
-    <text x="165" y="97" text-anchor="middle" class="svg-label">Head</text>
-
-    <text x="270" y="90" text-anchor="middle" class="svg-label">Caudate Body</text>
-
-    <text x="340" y="175" text-anchor="start" class="svg-label">Caudate</text>
-    <text x="340" y="187" text-anchor="start" class="svg-label">Tail</text>
-
-    <!-- Putamen -->
-    <text x="185" y="145" text-anchor="middle" class="svg-label">Putamen</text>
-
-    <!-- Globus Pallidus -->
-    <text x="245" y="152" text-anchor="middle" font-size="9" class="svg-label">Globus</text>
-    <text x="245" y="163" text-anchor="middle" font-size="9" class="svg-label">Pallidus</text>
-
-    <!-- Thalamus -->
-    <text x="290" y="150" text-anchor="middle" class="svg-label">Thalamus</text>
-
-    <!-- Nucleus Accumbens -->
-    <text x="150" y="250" text-anchor="middle" class="svg-label">Nucleus</text>
-    <text x="150" y="262" text-anchor="middle" class="svg-label">Accumbens</text>
-    <line x1="150" y1="233" x2="150" y2="240" stroke="#666" stroke-width="1"/>
-  </g>
+  <!-- Label with theme-aware text -->
+  <text x="790" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="500" text-anchor="start" class="svg-label">Basal Ganglia</text>
 </svg>

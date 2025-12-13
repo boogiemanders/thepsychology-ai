@@ -1,59 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 320" width="450" height="320">
-  <!-- Brain outline (sagittal view) -->
-  <path d="M60,160
-           Q50,100 90,55
-           Q150,10 260,15
-           Q350,20 400,70
-           Q435,120 425,175
-           Q415,230 360,270
-           Q300,300 230,295
-           Q160,290 110,255
-           Q60,215 60,160"
-        fill="#F4C4A0" stroke="#D4A080" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 683" width="512" height="342">
+  <!-- Embedded PNG image -->
+  <image xlink:href="/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/brain-divisions-base.png" width="1024" height="683"/>
 
-  <!-- Cerebellum (part of hindbrain) -->
-  <path d="M340,220
-           Q380,200 400,220
-           Q420,245 400,275
-           Q370,300 330,290
-           Q300,280 310,255
-           Q320,235 340,220"
-        fill="#E8D868" stroke="#C9B848" stroke-width="1.5"/>
+  <!-- Leader lines -->
+  <g stroke="#555" stroke-width="2" fill="none">
+    <line x1="620" y1="150" x2="820" y2="80"/>
+    <line x1="420" y1="320" x2="200" y2="250"/>
+    <line x1="620" y1="520" x2="820" y2="560"/>
+  </g>
 
-  <!-- Hindbrain (brainstem lower) -->
-  <path d="M200,240
-           Q220,220 260,215
-           Q300,210 320,230
-           Q340,250 330,280
-           Q310,300 270,295
-           Q230,290 210,270
-           Q190,255 200,240"
-        fill="#E8D868" stroke="#C9B848" stroke-width="1.5"/>
-
-  <!-- Midbrain (small teal section) -->
-  <path d="M220,200
-           Q250,185 280,190
-           Q310,195 320,215
-           Q310,210 280,212
-           Q250,215 225,210
-           Q215,205 220,200"
-        fill="#5BBDB5" stroke="#3A9D95" stroke-width="1.5"/>
-
-  <!-- Spinal cord -->
-  <path d="M240,290 Q230,310 235,330" fill="none" stroke="#E8D060" stroke-width="6" stroke-linecap="round"/>
-
-  <!-- Labels with leader lines -->
-  <g font-family="system-ui, -apple-system, sans-serif" font-size="12">
-    <!-- Forebrain label -->
-    <line x1="200" y1="80" x2="140" y2="50" stroke="#666" stroke-width="1"/>
-    <text x="138" y="48" text-anchor="end" class="svg-label">Forebrain</text>
-
-    <!-- Midbrain label -->
-    <line x1="215" y1="200" x2="130" y2="180" stroke="#666" stroke-width="1"/>
-    <text x="128" y="183" text-anchor="end" class="svg-label">Midbrain</text>
-
-    <!-- Hindbrain label -->
-    <line x1="260" y1="260" x2="180" y2="275" stroke="#666" stroke-width="1"/>
-    <text x="178" y="278" text-anchor="end" class="svg-label">Hindbrain</text>
+  <!-- Labels with theme-aware text -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="500">
+    <text x="830" y="85" text-anchor="start" class="svg-label">Forebrain</text>
+    <text x="190" y="255" text-anchor="end" class="svg-label">Midbrain</text>
+    <text x="830" y="570" text-anchor="start" class="svg-label">Hindbrain</text>
   </g>
 </svg>
