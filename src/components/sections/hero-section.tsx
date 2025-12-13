@@ -17,7 +17,7 @@ export function HeroSection() {
           ) : null}
           <div className="flex flex-col items-center justify-center gap-5">
             {hero.title ? (
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center text-primary -mt-5 md:mt-0">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center text-primary -mt-[30px] md:mt-0">
                 {hero.title}
               </h1>
             ) : null}
