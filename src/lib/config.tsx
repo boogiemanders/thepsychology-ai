@@ -277,7 +277,7 @@ export const siteConfig = {
         id: 5,
         question: "How long is the EPPP exam and what format does it follow?",
         answer:
-          "The EPPP is a computer-based exam. Part 1 is multiple-choice and is 225 questions in 4 hours and 15 minutes (about 68 seconds per question). Part 2 (Skills) uses applied scenarios/vignettes. Timing, break rules, and which parts you need can vary by jurisdiction—always verify the current requirements before test day.",
+          "ASPPB lists Part 1 as: Questions: 225 multiple-choice questions (175 scored, 50 pilot items). Time Allotment: 4 hours and 15 minutes. Administration: computer-based exam administered by Pearson VUE. Part 2 (Skills) uses applied scenarios/vignettes. Requirements can vary by jurisdiction—always verify the current requirements before test day.",
       },
       {
         id: 6,
@@ -313,7 +313,7 @@ export const siteConfig = {
         id: 11,
         question: "Where can I find affordable EPPP prep courses near me?",
         answer:
-          "Start with your state/provincial psychological association, local university psychology departments, internship/postdoc networks, and study groups. If in-person options are limited, compare online EPPP prep programs by question bank quality, explanations, and update cadence. We’re building thePsychology.ai to be the most affordable EPPP exam prep—email us if you find a more affordable program.",
+          "Start with your state/provincial psychological association, local university psychology departments, internship/postdoc networks, and study groups. If in-person options are limited, compare online EPPP prep programs by question bank quality, explanations, and update cadence. We built thePsychology.ai to be way more affordable than what’s on the market while still delivering higher-quality practice, explanations, and tools. Email us if you find a more affordable program.",
       },
       {
         id: 12,
