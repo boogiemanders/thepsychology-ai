@@ -62,6 +62,7 @@ const TOPIC_DISPLAY_NAMES: Record<string, string> = {
   'Test Validity – Content and Construct Validity': 'Validity: Content & Construct',
   'Test Validity – Criterion-Related Validity': 'Validity: Criterion-Related',
   // Domain 6
+  'Brief Therapies': 'Brief Therapies',
   'Cognitive-Behavioral Therapies': 'Cognitive-Behavioral Therapies',
   'Family Therapies and Group Therapies': 'Family & Group Therapies',
   'Prevention, Consultation, and Psychotherapy Research': 'Prevention, Consultation & Therapy Research',

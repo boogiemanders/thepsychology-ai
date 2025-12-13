@@ -106,6 +106,13 @@ const TOPIC_DISPLAY_ORDER_OVERRIDES: Record<string, string[]> = {
     'Test Validity – Criterion-Related Validity',
     'Test Score Interpretation',
   ],
+  '6': [
+    'Brief Therapies',
+    'Cognitive-Behavioral Therapies',
+    'Psychodynamic and Humanistic Therapies',
+    'Family Therapies and Group Therapies',
+    'Prevention, Consultation, and Psychotherapy Research',
+  ],
   '7': [
     'Types of Variables and Data',
     'Research – Single-Subject and Group Designs',

@@ -125,6 +125,7 @@ export const EPPP_DOMAINS: EPPPDomain[] = [
     name: '6: Treatment & Intervention',
     description: 'Clinical Psychology',
     topics: [
+      { name: 'Brief Therapies' },
       { name: 'Cognitive-Behavioral Therapies' },
       { name: 'Family Therapies and Group Therapies' },
       { name: 'Prevention, Consultation, and Psychotherapy Research' },
