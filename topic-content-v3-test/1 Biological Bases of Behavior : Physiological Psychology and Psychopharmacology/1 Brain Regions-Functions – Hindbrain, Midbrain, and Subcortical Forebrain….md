@@ -15,6 +15,8 @@ Let's make these structures stick in your memory by connecting them to real clin
 
 ## The Three-Story Brain: Location Matters
 
+![Brain divisions diagram](/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/brain-divisions.svg)
+
 The brain develops from the bottom up, both evolutionally and individually. The hindbrain sits right above your spinal cord—the oldest, most primitive part. The midbrain connects everything in the middle. The forebrain caps it all off with both subcortical structures (buried beneath the surface) and the cerebral cortex (which we'll save for another lesson).
 
 Here's what you need to remember: The **brainstem** (hindbrain + midbrain) controls survival basics. Damage here can be catastrophic—we're talking respiratory failure, coma, or death. When you're reading case studies on the exam about someone with "brainstem damage," expect serious symptoms like trouble breathing, problems swallowing, balance issues, or altered consciousness.
@@ -146,6 +148,8 @@ Beyond sensory relay, the thalamus contributes to:
 
 ### Basal Ganglia - The Movement and Habit System
 
+![Basal ganglia diagram](/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/basal-ganglia.svg)
+
 The basal ganglia include:
 - Caudate nucleus
 - Putamen  
@@ -171,6 +175,8 @@ The caudate nucleus, putamen, and nucleus accumbens together form the **striatum
 **Why this matters:** When you see movement problems combined with cognitive or emotional symptoms, think basal ganglia. The classic is OCD—those repetitive behaviors involve dysfunctional basal ganglia circuits related to habit formation.
 
 ### Limbic System - Emotion, Motivation, and Memory Central
+
+![Limbic system diagram](/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/limbic-system.svg)
 
 The limbic system traditionally includes the amygdala, cingulate cortex, and hippocampus. However, brain imaging has revealed extensive connections with other structures, so there's no complete consensus anymore. Some definitions include the hypothalamus and thalamus too.
 

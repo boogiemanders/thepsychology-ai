@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320">
+  <!-- Brain outline context -->
+  <path d="M50,160
+           Q40,100 80,60
+           Q140,15 220,20
+           Q300,25 340,70
+           Q370,120 360,170
+           Q350,220 300,255
+           Q240,285 180,280
+           Q120,275 80,240
+           Q50,200 50,160"
+        fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Caudate Nucleus (C-shaped) -->
+  <path d="M140,80
+           Q180,60 220,70
+           Q260,80 280,110
+           Q295,140 290,170
+           Q285,200 260,220
+           Q240,235 220,230
+           Q200,225 190,200
+           Q180,170 185,140
+           Q190,110 180,95
+           Q170,85 140,80"
+        fill="#6B9BD2" fill-opacity="0.5" stroke="#4A7AA8" stroke-width="2"/>
+
+  <!-- Putamen (lens-shaped, lateral) -->
+  <ellipse cx="280" cy="150" rx="45" ry="55" fill="#7BC47F" fill-opacity="0.5" stroke="#4D8F5D" stroke-width="2"/>
+
+  <!-- Globus Pallidus (inner to putamen) -->
+  <ellipse cx="240" cy="150" rx="25" ry="40" fill="#E8C86B" fill-opacity="0.6" stroke="#C9A94D" stroke-width="2"/>
+
+  <!-- Nucleus Accumbens (small, ventral) -->
+  <ellipse cx="200" cy="220" rx="20" ry="15" fill="#E86B6B" fill-opacity="0.5" stroke="#C85050" stroke-width="2"/>
+
+  <!-- Thalamus reference (dotted) -->
+  <ellipse cx="180" cy="150" rx="30" ry="25" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Arrow from Globus Pallidus to Thalamus -->
+  <path d="M218,150 L195,150" fill="none" stroke="#888" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11">
+    <text x="200" y="55" text-anchor="middle" class="svg-label">Caudate Nucleus</text>
+
+    <text x="310" y="100" text-anchor="start" class="svg-label">Putamen</text>
+
+    <text x="240" y="155" text-anchor="middle" font-size="10" class="svg-label">Globus</text>
+    <text x="240" y="167" text-anchor="middle" font-size="10" class="svg-label">Pallidus</text>
+
+    <text x="200" y="250" text-anchor="middle" class="svg-label">Nucleus</text>
+    <text x="200" y="263" text-anchor="middle" class="svg-label">Accumbens</text>
+    <text x="200" y="276" text-anchor="middle" font-size="9" class="svg-subtle">reward</text>
+
+    <text x="180" y="130" text-anchor="middle" font-size="9" class="svg-subtle">Thalamus</text>
+  </g>
+
+  <!-- Striatum bracket -->
+  <path d="M120,280 L120,50 M115,55 L125,55 M115,275 L125,275" fill="none" stroke="#888" stroke-width="1"/>
+  <text x="100" y="165" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" transform="rotate(-90, 100, 165)" class="svg-subtle">Striatum (receives input)</text>
+
+  <!-- Title -->
+  <text x="200" y="305" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" class="svg-subtle">Basal Ganglia: movement, habits, cognition</text>
+</svg>

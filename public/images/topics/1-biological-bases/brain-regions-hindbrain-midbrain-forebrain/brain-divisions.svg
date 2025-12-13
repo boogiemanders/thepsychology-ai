@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="500" height="350">
+  <!-- Brain outline (simplified sagittal view) -->
+  <path d="M100,180
+           Q80,120 120,80
+           Q180,30 280,40
+           Q380,50 420,100
+           Q450,150 440,200
+           Q430,250 380,280
+           Q320,310 250,300
+           Q180,290 140,260
+           Q100,230 100,180"
+        fill="none" stroke="#888" stroke-width="2"/>
+
+  <!-- Forebrain region -->
+  <path d="M120,160
+           Q100,110 140,75
+           Q200,35 300,45
+           Q380,55 400,100
+           Q420,140 410,180
+           Q390,220 340,240
+           L280,220 L220,230 L160,200 Z"
+        fill="#6B9BD2" fill-opacity="0.4" stroke="#4A7AA8" stroke-width="1.5"/>
+
+  <!-- Midbrain region -->
+  <path d="M160,200 L220,230 L280,220
+           Q300,240 280,260
+           L220,270 L170,250
+           Q150,230 160,200"
+        fill="#7BC47F" fill-opacity="0.5" stroke="#4D8F5D" stroke-width="1.5"/>
+
+  <!-- Hindbrain region -->
+  <path d="M170,250 L220,270 L280,260
+           Q320,280 340,240
+           Q360,270 350,290
+           Q320,320 260,310
+           Q200,300 160,270
+           Q140,260 170,250"
+        fill="#E8C86B" fill-opacity="0.5" stroke="#C9A94D" stroke-width="1.5"/>
+
+  <!-- Cerebellum (part of hindbrain) -->
+  <ellipse cx="380" cy="260" rx="50" ry="40" fill="#E8C86B" fill-opacity="0.5" stroke="#C9A94D" stroke-width="1.5"/>
+
+  <!-- Spinal cord -->
+  <path d="M180,290 Q170,320 175,340" fill="none" stroke="#888" stroke-width="4"/>
+
+  <!-- Structure labels -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11">
+    <!-- Forebrain structures -->
+    <text x="260" y="90" text-anchor="middle" class="svg-label">Forebrain</text>
+    <text x="200" y="130" text-anchor="middle" font-size="9" class="svg-subtle">Thalamus</text>
+    <text x="200" y="145" text-anchor="middle" font-size="9" class="svg-subtle">Hypothalamus</text>
+    <text x="200" y="160" text-anchor="middle" font-size="9" class="svg-subtle">Basal Ganglia</text>
+    <text x="200" y="175" text-anchor="middle" font-size="9" class="svg-subtle">Limbic System</text>
+
+    <!-- Midbrain -->
+    <text x="230" y="250" text-anchor="middle" class="svg-label">Midbrain</text>
+    <text x="300" y="230" text-anchor="start" font-size="9" class="svg-subtle">RAS</text>
+    <text x="300" y="245" text-anchor="start" font-size="9" class="svg-subtle">Substantia Nigra</text>
+
+    <!-- Hindbrain -->
+    <text x="280" y="295" text-anchor="middle" class="svg-label">Hindbrain</text>
+    <text x="380" y="265" text-anchor="middle" font-size="9" class="svg-label">Cerebellum</text>
+
+    <!-- Brainstem labels -->
+    <text x="120" y="230" text-anchor="end" font-size="9" class="svg-subtle">Pons</text>
+    <text x="120" y="270" text-anchor="end" font-size="9" class="svg-subtle">Medulla</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 30)">
+    <rect x="0" y="0" width="12" height="12" fill="#6B9BD2" fill-opacity="0.4" stroke="#4A7AA8"/>
+    <text x="18" y="10" font-size="9" class="svg-subtle">Forebrain</text>
+
+    <rect x="0" y="18" width="12" height="12" fill="#7BC47F" fill-opacity="0.5" stroke="#4D8F5D"/>
+    <text x="18" y="28" font-size="9" class="svg-subtle">Midbrain</text>
+
+    <rect x="0" y="36" width="12" height="12" fill="#E8C86B" fill-opacity="0.5" stroke="#C9A94D"/>
+    <text x="18" y="46" font-size="9" class="svg-subtle">Hindbrain</text>
+  </g>
+</svg>

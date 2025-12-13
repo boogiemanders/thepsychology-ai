@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300" width="450" height="300">
+  <!-- Brain outline (simplified) -->
+  <path d="M80,150
+           Q60,100 100,60
+           Q160,20 250,25
+           Q340,30 380,80
+           Q410,130 400,180
+           Q390,230 340,260
+           Q280,285 220,280
+           Q160,275 120,245
+           Q80,210 80,150"
+        fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Cingulate Cortex (curved band above corpus callosum) -->
+  <path d="M120,120
+           Q180,70 280,75
+           Q350,80 370,110
+           Q350,95 280,90
+           Q180,85 120,120"
+        fill="#9B7ED9" fill-opacity="0.5" stroke="#7B5FC9" stroke-width="2"/>
+
+  <!-- Hippocampus (curved structure) -->
+  <path d="M280,180
+           Q320,170 340,190
+           Q355,210 340,230
+           Q320,245 290,240
+           Q260,235 250,215
+           Q245,195 280,180"
+        fill="#6BAF7D" fill-opacity="0.5" stroke="#4D8F5D" stroke-width="2"/>
+
+  <!-- Amygdala (almond shape) -->
+  <ellipse cx="230" cy="200" rx="25" ry="20" fill="#E86B6B" fill-opacity="0.5" stroke="#C85050" stroke-width="2"/>
+
+  <!-- Hypothalamus (small oval) -->
+  <ellipse cx="200" cy="170" rx="18" ry="12" fill="#E8C86B" fill-opacity="0.6" stroke="#C9A94D" stroke-width="1.5"/>
+
+  <!-- Thalamus (oval) -->
+  <ellipse cx="250" cy="140" rx="35" ry="22" fill="#6B9BD2" fill-opacity="0.4" stroke="#4A7AA8" stroke-width="1.5"/>
+
+  <!-- Connection lines -->
+  <g stroke="#888" stroke-width="1" stroke-dasharray="3,3" fill="none">
+    <!-- Amygdala to Hippocampus -->
+    <path d="M250,195 Q270,200 275,200"/>
+    <!-- Amygdala to Thalamus -->
+    <path d="M235,182 Q240,165 245,158"/>
+    <!-- Hippocampus to Thalamus -->
+    <path d="M275,185 Q265,165 260,158"/>
+    <!-- Cingulate to Thalamus -->
+    <path d="M250,95 Q250,115 250,118"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11">
+    <text x="250" y="55" text-anchor="middle" class="svg-label">Cingulate Cortex</text>
+    <text x="250" y="68" text-anchor="middle" font-size="9" class="svg-subtle">motivation, emotional pain</text>
+
+    <text x="250" y="145" text-anchor="middle" class="svg-label">Thalamus</text>
+
+    <text x="200" y="195" text-anchor="middle" font-size="9" class="svg-subtle">Hypothalamus</text>
+
+    <text x="230" y="240" text-anchor="middle" class="svg-label">Amygdala</text>
+    <text x="230" y="253" text-anchor="middle" font-size="9" class="svg-subtle">emotion, fear</text>
+
+    <text x="340" y="265" text-anchor="middle" class="svg-label">Hippocampus</text>
+    <text x="340" y="278" text-anchor="middle" font-size="9" class="svg-subtle">memory, spatial</text>
+  </g>
+
+  <!-- Title -->
+  <text x="225" y="20" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" class="svg-label">Limbic System</text>
+</svg>
