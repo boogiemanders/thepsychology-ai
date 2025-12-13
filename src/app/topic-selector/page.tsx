@@ -47,6 +47,110 @@ const FREE_TOPICS_BY_DOMAIN: Record<string, string[]> = {
   '3-5-6': ['Satisfaction, Commitment, and Stress'],
 }
 
+// Display order only (does NOT change stable topic IDs like "2-0", "2-1", etc.)
+const TOPIC_DISPLAY_ORDER_OVERRIDES: Record<string, string[]> = {
+  '1': [
+    'Nervous System, Neurons, and Neurotransmitters',
+    'Brain Regions/Functions – Hindbrain, Midbrain, and Subcortical Forebrain…',
+    'Brain Regions/Functions – Cerebral Cortex',
+    'Sensation and Perception',
+    'Memory and Sleep',
+    'Emotions and Stress',
+    'Neurological and Endocrine Disorders',
+    'Psychopharmacology – Antipsychotics and Antidepressants',
+    'Psychopharmacology – Other Psychoactive Drugs',
+  ],
+  '2': [
+    'Classical Conditioning',
+    'Interventions Based on Classical Conditioning',
+    'Operant Conditioning',
+    'Interventions Based on Operant Conditioning',
+    'Memory and Forgetting',
+  ],
+  '3-social': [
+    'Social Cognition – Errors, Biases, and Heuristics',
+    'Social Cognition – Causal Attributions',
+    'Attitudes and Attitude Change',
+    'Persuasion',
+    'Social Influence – Types of Influence',
+    'Social Influence – Group Influences',
+    'Prosocial Behavior and Prejudice/Discrimination',
+    'Affiliation, Attraction, and Intimacy',
+  ],
+  '3-cultural': [
+    'Cross-Cultural Issues – Terms and Concepts',
+    'Cross-Cultural Issues – Identity Development Models',
+  ],
+  '4': [
+    'Early Influences on Development – Prenatal Development',
+    'Early Influences on Development – Nature vs. Nurture',
+    'Physical Development',
+    'Cognitive Development',
+    'Language Development',
+    'Socioemotional Development – Attachment, Emotions, and Social Relationships',
+    'Socioemotional Development – Temperament and Personality',
+    'Socioemotional Development – Moral Development',
+    'School and Family Influences',
+  ],
+  '5-assessment': [
+    'Clinical Tests',
+    'Stanford-Binet and Wechsler Tests',
+    'Other Measures of Cognitive Ability',
+    'MMPI-2',
+    'Other Measures of Personality',
+    'Interest Inventories',
+  ],
+  '5-test': [
+    'Item Analysis and Test Reliability',
+    'Test Validity – Content and Construct Validity',
+    'Test Validity – Criterion-Related Validity',
+    'Test Score Interpretation',
+  ],
+  '7': [
+    'Types of Variables and Data',
+    'Research – Single-Subject and Group Designs',
+    'Research – Internal/External Validity',
+    'Overview of Inferential Statistics',
+    'Inferential Statistical Tests',
+    'Correlation and Regression',
+  ],
+  '3-5-6': [
+    'Organizational Theories',
+    'Theories of Motivation',
+    'Satisfaction, Commitment, and Stress',
+    'Organizational Leadership',
+    'Organizational Decision-Making',
+    'Organizational Change and Development',
+    'Job Analysis and Performance Assessment',
+    'Employee Selection – Techniques',
+    'Employee Selection – Evaluation of Techniques',
+    'Training Methods and Evaluation',
+    'Career Choice and Development',
+  ],
+}
+
+function sortTopicsForDisplay<T extends { name: string; sortIndex: number }>(
+  domainId: string,
+  topics: T[]
+): T[] {
+  const override = TOPIC_DISPLAY_ORDER_OVERRIDES[domainId]
+  if (!override) return topics
+
+  const rankByName = new Map<string, number>(override.map((name, index) => [name, index]))
+  const ranked = [...topics]
+  ranked.sort((a, b) => {
+    const aRank = rankByName.get(a.name)
+    const bRank = rankByName.get(b.name)
+
+    if (aRank === undefined && bRank === undefined) return a.sortIndex - b.sortIndex
+    if (aRank === undefined) return 1
+    if (bRank === undefined) return -1
+    return aRank - bRank
+  })
+
+  return ranked
+}
+
 interface RecentActivity {
   topic: string
   timestamp: number
@@ -216,26 +320,29 @@ export default function TopicSelectorPage() {
 
     // Build domains with dynamic progress
     const domainsWithProgress = EPPP_DOMAINS.map((domain) => {
-      const topicsWithProgress = domain.topics.map((topic) => {
+      const topicsWithProgress = domain.topics.map((topic, topicIndex) => {
         // If quiz exists, show actual score; otherwise show 0%
         const score = topicScores[topic.name] ?? 0
         return {
-          id: topic.id,
+          id: `${domain.id}-${topicIndex}`,
           name: topic.name,
           progress: Math.round(score),
+          sortIndex: topicIndex,
         }
       })
 
+      const sortedTopics = sortTopicsForDisplay(domain.id, topicsWithProgress)
+
       // Calculate domain progress as average of all topics
-      const avgProgress = topicsWithProgress.length > 0
-        ? Math.round(topicsWithProgress.reduce((sum, t) => sum + t.progress, 0) / topicsWithProgress.length)
+      const avgProgress = sortedTopics.length > 0
+        ? Math.round(sortedTopics.reduce((sum, t) => sum + t.progress, 0) / sortedTopics.length)
         : 0
 
       return {
         id: domain.id,
         name: domain.name,
         progress: avgProgress,
-        topics: topicsWithProgress,
+        topics: sortedTopics,
       }
     })
 
