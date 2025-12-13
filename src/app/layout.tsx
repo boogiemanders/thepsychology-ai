@@ -29,9 +29,35 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
   icons: {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/agent-template-og.png",
+        width: 1200,
+        height: 630,
+        alt: "thePsychology.ai - EPPP exam prep with practice questions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/agent-template-og.png"],
   },
 }
 

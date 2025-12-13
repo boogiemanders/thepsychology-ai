@@ -138,5 +138,20 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local dev artifacts
+.next-dev.log
+.next-dev.pid
+
+# Generated reports
+questionsGPT_answerability_report.tsv
+questionsGPT_answerability_summary.txt
+
 # EPPP reference content (private source material)
 eppp-reference/

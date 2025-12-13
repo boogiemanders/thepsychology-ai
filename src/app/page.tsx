@@ -169,7 +169,7 @@ export default function Home() {
               <video
                 ref={heroVideoRef}
                 className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
-                src="/hero-background.mp4?v=refresh4"
+                src="/hero-background.mp4?v=refresh5"
                 autoPlay
                 muted
                 loop

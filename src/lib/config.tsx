@@ -28,10 +28,27 @@ export const BLUR_FADE_DELAY = 0.15
 
 export const siteConfig = {
   name: "thePsychology.ai",
-  description: "Pass the EPPP 10x faster and cheaper",
+  description:
+    "EPPP exam prep with targeted EPPP practice questions, sample exams, and high-yield study materials—built by psychologists to help you pass faster.",
   cta: "Get Started",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-  keywords: ["EPPP", "Psychology", "Exam Prep", "AI Learning"],
+  keywords: [
+    "EPPP",
+    "EPPP exam prep",
+    "EPPP prep",
+    "EPPP practice questions",
+    "EPPP practice tests",
+    "EPPP sample exam",
+    "EPPP practice questions 2025-2026",
+    "EPPP study materials",
+    "EPPP study materials PDF",
+    "EPPP study programs",
+    "EPPP sections",
+    "EPPP scoring",
+    "EPPP score range",
+    "EPPP score transfer",
+    "EPPP sign up",
+  ],
   links: {
     email: "support@thepsychology.ai",
     twitter: "https://twitter.com/thepsychologyai",
@@ -61,9 +78,10 @@ export const siteConfig = {
         <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
       </svg>
     ),
-    badge: "Pass the EPPP 10x faster and cheaper",
-    title: "",
-    description: "",
+    badge: "",
+    title: "Get EPPP-Ready",
+    description:
+      "with",
     cta: {
       primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
@@ -71,8 +89,8 @@ export const siteConfig = {
   },
   companyShowcase: {
     title:
-      "AI exam prep built by psychologists with experience at the institutions below.",
-    subtitle: "Independent project; not affiliated with or endorsed by these institutions.",
+      "Made by psychologists trained at these institutions.",
+    subtitle: "Not affiliated or endorsed.",
     companyLogos: [
       { id: 1, name: "David Geffen School of Medicine", src: "/dgsom.png" },
       { id: 2, name: "NYU Langone Health", src: "/nyu.png" },
@@ -229,40 +247,86 @@ export const siteConfig = {
   ],
   faqSection: {
     title: "Questions People Actually Ask",
-    description:
-      "FAQs",
+    description: "FAQs",
     faQitems: [
       {
         id: 1,
-        question: "What is ThePsychology.ai?",
-      answer:
-          "A study coach powered by APIs that is helping psychologists increase their chances of passing the EPPP quickly (designed for 1 month) with less stress, zero data leaks, and minimal screen time. View this as an AI-augmented textbook where your learning is customized to your preferences",
+        question: "What is thePsychology.ai?",
+        answer:
+          "An EPPP exam prep platform built by psychologists. Use it for targeted EPPP practice questions, a diagnostic-style baseline, and a study plan organized around high-yield EPPP sections.",
       },
       {
         id: 2,
-        question: "How is it different from other EPPP tools?",
+        question: "How is it different from other EPPP exam prep programs?",
         answer:
-          "We don’t just dump info — we prioritize what matters. No filler. No guessing. No burnout. This program helps you study smarter, not longer. This is built by psychologists, not corporations. If we as psychologists are to practice what we preach, we must also bring psychological principles in our learning. ",
+          "We focus on prioritization: what to study next, why it matters, and how it shows up on the EPPP. Less filler, fewer random drills, more high-yield EPPP practice tests and targeted review.",
       },
       {
         id: 3,
-        question: "What about the environment?",
+        question: "Can I schedule my EPPP exam through an online portal?",
         answer:
-          "We are committed to awareness of consumption and consequently eco-efficiency with AI use (e.g., running smaller models locally where possible). One month on our system uses 96% less energy than six months of traditional prep. That’s about 50 kg of CO₂ saved per person.",
+          "In most jurisdictions, yes—after your licensing board authorizes you, scheduling is typically done online through the exam delivery vendor (commonly Pearson VUE). Requirements vary by jurisdiction, so confirm with your board and ASPPB.",
       },
       {
         id: 4,
-        question: "What happens to my data?",
-        answer: "Your data’s yours. Export it. Delete it. Done. We use the data only to improve your training plan, no other agenda.",
+        question: "How to register (EPPP sign up) for the EPPP exam online?",
+        answer:
+          "Most candidates apply through their state/provincial psychology board first. Once you’re approved/authorized, you’ll receive instructions to create an account and schedule the exam online with the testing vendor.",
       },
       {
         id: 5,
-        question: "Is there a free trial available?",
+        question: "How long is the EPPP exam and what format does it follow?",
         answer:
-          "Yes, we offer a 7-day free trial that gives you full access to all features. No credit card is required to start your trial.",
+          "The EPPP is a computer-based exam. Part 1 is multiple-choice and is 225 questions in 4 hours and 15 minutes (about 68 seconds per question). Part 2 (Skills) uses applied scenarios/vignettes. Timing, break rules, and which parts you need can vary by jurisdiction—always verify the current requirements before test day.",
       },
-
-      
+      {
+        id: 6,
+        question: "What is the average passing score required on the EPPP (and the EPPP score range)?",
+        answer:
+          "EPPP scores are reported on a scaled score range (commonly cited as 200–800). Many jurisdictions use a 500 cut score, but the required passing score is set by your licensing jurisdiction.",
+      },
+      {
+        id: 7,
+        question: "What are the EPPP sections (content domains) I should study?",
+        answer:
+          "The EPPP Part 1 blueprint is commonly organized into 8 domains (e.g., Biological Bases, Cognitive-Affective Bases, Social/Cultural Bases, Growth & Lifespan, Assessment/Diagnosis, Treatment/Intervention/Prevention, Research Methods/Statistics, Ethical/Legal/Professional Issues). Your best guide is the current ASPPB content outline.",
+      },
+      {
+        id: 8,
+        question: "How does EPPP scoring work?",
+        answer:
+          "EPPP scoring is scaled (not a simple percent correct), and forms can include unscored items used for testing. Your jurisdiction sets the passing standard, so focus on consistent performance across EPPP sections rather than chasing a single raw score target.",
+      },
+      {
+        id: 9,
+        question: "How does EPPP score transfer work?",
+        answer:
+          "EPPP score transfer is typically handled through ASPPB’s score transfer service. Fees, timelines, and eligibility depend on where you’re applying, so check both ASPPB and your destination board’s requirements.",
+      },
+      {
+        id: 10,
+        question: "What are the best study materials for preparing for the EPPP?",
+        answer:
+          "Use a mix of (1) the current exam content outline, (2) high-quality EPPP practice questions/practice tests with explanations, and (3) concise EPPP study materials (some programs include EPPP study materials PDF downloads). Prioritize active recall and timed sets over passive reading.",
+      },
+      {
+        id: 11,
+        question: "Where can I find affordable EPPP prep courses near me?",
+        answer:
+          "Start with your state/provincial psychological association, local university psychology departments, internship/postdoc networks, and study groups. If in-person options are limited, compare online EPPP prep programs by question bank quality, explanations, and update cadence. We’re building thePsychology.ai to be the most affordable EPPP exam prep—email us if you find a more affordable program.",
+      },
+      {
+        id: 12,
+        question: "What are the top-rated mobile apps for EPPP exam preparation?",
+        answer:
+          "Many candidates use top-rated study apps like Anki, Quizlet, or Brainscape for spaced repetition, then pair that with an EPPP question bank for timed practice. thePsychology.ai is mobile-friendly, so you can study on your phone like an app—and we’ll be developing a dedicated mobile app.",
+      },
+      {
+        id: 13,
+        question: "Do you have EPPP practice questions, an EPPP sample exam, or EPPP practice questions 2025-2026?",
+        answer:
+          "If you’re searching for EPPP practice questions 2025-2026, focus on materials aligned with the current ASPPB blueprint and updated regularly. Our approach is to generate targeted practice questions by topic and reinforce them with clear, exam-style explanations and review.",
+      },
     ],
   },
   ctaSection: {
