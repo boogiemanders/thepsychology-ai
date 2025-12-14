@@ -704,6 +704,17 @@ export function TopicTeacherContent() {
 
           const meta = deriveTopicMetaFromQuestionSource(question)
           const questionTopic = (question.topicName || meta?.topicName || '').trim()
+
+          // Debug logging
+          console.log('[Topic Teacher] Question topic matching:', {
+            index,
+            questionTopic,
+            questionTopicLower: questionTopic.toLowerCase(),
+            normalizedTopicName,
+            match: questionTopic.toLowerCase() === normalizedTopicName,
+            sourceFile: (question as any).source_file || (question as any).sourceFile,
+          })
+
           if (!questionTopic) return
           if (questionTopic.toLowerCase() !== normalizedTopicName) return
 
