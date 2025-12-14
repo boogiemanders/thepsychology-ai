@@ -668,7 +668,7 @@ export function TopicTeacherContent() {
         setPracticeExamWrongQuestionsError(null)
 
         const response = await fetch(
-          `/api/get-exam-results/latest?userId=${encodeURIComponent(user.id)}&examType=practice`,
+          `/api/get-exam-results/latest?userId=${encodeURIComponent(user.id)}`,
           { signal: controller.signal },
         )
 
