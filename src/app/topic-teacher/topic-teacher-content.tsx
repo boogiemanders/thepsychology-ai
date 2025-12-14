@@ -2005,37 +2005,6 @@ export function TopicTeacherContent() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-3 bg-muted/30 rounded-lg">
-                  <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                      Your Answer
-                    </div>
-                    <div className="font-semibold mt-1 text-red-600">
-                      {getAnswerLabel(
-                        activeMissedQuestion.question,
-                        activeMissedQuestion.selectedAnswer,
-                      ) || activeMissedQuestion.selectedAnswer}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                      Correct Answer
-                    </div>
-                    <div className="font-semibold mt-1 text-green-700">
-                      {getAnswerLabel(
-                        activeMissedQuestion.question,
-                        activeMissedQuestion.question.correct_answer,
-                      ) || activeMissedQuestion.question.correct_answer}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                      Result
-                    </div>
-                    <div className="font-semibold mt-1 text-red-600">Incorrect</div>
-                  </div>
-                </div>
-
                 {Array.isArray(activeMissedQuestion.question.options) &&
                   activeMissedQuestion.question.options.length > 0 && (
                     <div>

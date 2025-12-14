@@ -360,35 +360,6 @@ export function ExpandableDomainAnalysis({
                                       <p className="text-sm text-foreground">{question.question}</p>
                                     </div>
 
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-3 bg-muted/30 rounded-lg">
-                                      <div>
-                                        <div className="text-xs uppercase tracking-wide text-muted-foreground">Your Answer</div>
-                                        <div
-                                          className={`font-semibold mt-1 ${
-                                            status === 'correct'
-                                              ? 'text-green-600'
-                                              : status === 'skipped'
-                                                ? 'text-muted-foreground'
-                                                : 'text-red-600'
-                                          }`}
-                                        >
-                                          {selectedAnswerLabel || 'Skipped'}
-                                        </div>
-                                      </div>
-                                      <div>
-                                        <div className="text-xs uppercase tracking-wide text-muted-foreground">Correct Answer</div>
-                                        <div className="font-semibold mt-1 text-green-700">
-                                          {correctAnswerLabel || question.correct_answer}
-                                        </div>
-                                      </div>
-                                      <div>
-                                        <div className="text-xs uppercase tracking-wide text-muted-foreground">Result</div>
-                                        <div className={`font-semibold mt-1 ${statusDisplay.color}`}>
-                                          {statusDisplay.label}
-                                        </div>
-                                      </div>
-                                    </div>
-
                                     {/* All Options */}
                                     <div>
                                       <h4 className="font-semibold text-sm mb-2">Options</h4>
