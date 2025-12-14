@@ -173,4 +173,34 @@
     animation: magic-pulse var(--pulse-duration, 1.5s) ease-out infinite;
     border-color: var(--pulse-color, rgba(255, 255, 255, 0.4));
   }
+
+  @keyframes apple-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(134, 239, 172, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(134, 239, 172, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(134, 239, 172, 0);
+    }
+  }
+
+  .apple-pulsate {
+    position: relative;
+  }
+
+  .apple-pulsate::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .apple-pulsate:hover::before {
+    animation: apple-pulse 1.2s ease-out infinite;
+    opacity: 1;
+  }
 }

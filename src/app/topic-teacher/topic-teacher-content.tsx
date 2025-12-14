@@ -1845,7 +1845,7 @@ export function TopicTeacherContent() {
 	                            const appleButton = (
 	                              <button
 	                                type="button"
-	                                className="mt-0.5 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded hover:bg-secondary/50"
+	                                className="apple-pulsate mt-0.5 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
 	                                onClick={() => {
 	                                  setActiveMissedQuestion(matched)
 	                                  setMissedQuestionDialogOpen(true)
