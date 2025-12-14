@@ -545,33 +545,37 @@ export function TopicTeacherContent() {
           quizResults.wrongAnswers.flatMap((wa) => wa.relatedSections || []),
           { allowAll: true }
         )
-        const quizCorrectSections = normalizeSections(
-          quizResults.correctAnswers
-            .filter((ca) => !(ca as any).wasPreviouslyWrong)
-            .flatMap((ca) => ca.relatedSections || []),
-          { allowAll: false }
-        )
-        const quizPreviouslyWrongNowCorrect = normalizeSections(
-          quizResults.correctAnswers
-            .filter((ca) => (ca as any).wasPreviouslyWrong)
-            .flatMap((ca) => ca.relatedSections || []),
-          { allowAll: false }
-        )
+
+        // Guard for correctAnswers - may be undefined in malformed/old data
+        if (quizResults.correctAnswers && Array.isArray(quizResults.correctAnswers)) {
+          const quizCorrectSections = normalizeSections(
+            quizResults.correctAnswers
+              .filter((ca) => !(ca as any).wasPreviouslyWrong)
+              .flatMap((ca) => ca.relatedSections || []),
+            { allowAll: false }
+          )
+          const quizPreviouslyWrongNowCorrect = normalizeSections(
+            quizResults.correctAnswers
+              .filter((ca) => (ca as any).wasPreviouslyWrong)
+              .flatMap((ca) => ca.relatedSections || []),
+            { allowAll: false }
+          )
+
+          if (quizCorrectSections.length > 0) {
+            allCorrectSections = [...allCorrectSections, ...quizCorrectSections]
+          }
+
+          if (quizPreviouslyWrongNowCorrect.length > 0) {
+            allPreviouslyWrongNowCorrect = [
+              ...allPreviouslyWrongNowCorrect,
+              ...quizPreviouslyWrongNowCorrect,
+            ]
+          }
+        }
 
         if (quizWrongSections.length > 0) {
           allWrongSections = [...allWrongSections, ...quizWrongSections]
           hasAnyResults = true
-        }
-
-        if (quizCorrectSections.length > 0) {
-          allCorrectSections = [...allCorrectSections, ...quizCorrectSections]
-        }
-
-        if (quizPreviouslyWrongNowCorrect.length > 0) {
-          allPreviouslyWrongNowCorrect = [
-            ...allPreviouslyWrongNowCorrect,
-            ...quizPreviouslyWrongNowCorrect,
-          ]
         }
       }
 

@@ -32,7 +32,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { ExpandableDomainAnalysis } from '@/components/expandable-domain-analysis'
-import { getAllQuizResults } from '@/lib/quiz-results-storage'
+import { getAllQuizResults, hasQuizResults } from '@/lib/quiz-results-storage'
 import { Progress } from '@/components/ui/progress'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 
@@ -831,7 +831,7 @@ export function PrioritizeContent() {
                                               <li key={topicIdx} className="space-y-1">
                                                 <div className="flex items-center justify-between gap-3">
                                                   <Link
-                                                    href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topicParam)}&hasQuizResults=true&hasExamResults=true`}
+                                                    href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topicParam)}${hasQuizResults(topicParam) ? '&hasQuizResults=true' : ''}&hasExamResults=true`}
                                                     className={`hover:underline ${
                                                       isCompleted ? 'text-muted-foreground' : 'text-foreground'
                                                     }`}
