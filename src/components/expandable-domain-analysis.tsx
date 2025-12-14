@@ -183,11 +183,11 @@ export function ExpandableDomainAnalysis({
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'correct':
-        return <CheckCircle2 size={16} className="text-green-600 flex-shrink-0" />
+        return <CheckCircle2 size={16} className="text-brand-olive flex-shrink-0" />
       case 'wrong':
-        return <XCircle size={16} className="text-red-600 flex-shrink-0" />
+        return <XCircle size={16} className="text-brand-coral flex-shrink-0" />
       case 'skipped':
-        return <Circle size={16} className="text-amber-600 flex-shrink-0" />
+        return <Circle size={16} className="text-brand-lavender-gray flex-shrink-0" />
       case 'unscored':
         return <Circle size={16} className="text-slate-500 flex-shrink-0" />
       default:
@@ -198,11 +198,11 @@ export function ExpandableDomainAnalysis({
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'correct':
-        return 'rgba(34, 197, 94, 0.05)'
+        return 'rgba(120, 140, 93, 0.08)' // brand-olive
       case 'wrong':
-        return 'rgba(239, 68, 68, 0.05)'
+        return 'rgba(216, 119, 88, 0.08)' // brand-coral
       case 'skipped':
-        return 'rgba(217, 119, 16, 0.05)'
+        return 'rgba(203, 201, 219, 0.12)' // brand-lavender-gray
       case 'unscored':
         return 'rgba(148, 163, 184, 0.08)'
       default:
@@ -221,11 +221,11 @@ export function ExpandableDomainAnalysis({
   const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'correct':
-        return { label: 'Correct', color: 'text-green-600' }
+        return { label: 'Correct', color: 'text-brand-olive' }
       case 'wrong':
-        return { label: 'Incorrect', color: 'text-red-600' }
+        return { label: 'Incorrect', color: 'text-brand-coral' }
       case 'skipped':
-        return { label: 'Skipped', color: 'text-amber-600' }
+        return { label: 'Skipped', color: 'text-brand-lavender-gray' }
       case 'unscored':
         return { label: 'Unscored', color: 'text-muted-foreground' }
       default:
@@ -372,13 +372,19 @@ export function ExpandableDomainAnalysis({
                                           return (
                                             <div
                                               key={optIdx}
-                                              className={`text-sm p-2 rounded flex items-start gap-2 ${
-                                                isCorrect ? 'bg-green-100/50 text-green-900' : ''
-                                              } ${
-                                                isSelected && !isCorrect
-                                                  ? 'bg-red-100/50 text-red-900'
-                                                  : ''
-                                              }`}
+                                              className={`text-sm p-2 rounded flex items-start gap-2`}
+                                              style={{
+                                                backgroundColor: isCorrect
+                                                  ? 'rgba(120, 140, 93, 0.15)'
+                                                  : isSelected && !isCorrect
+                                                    ? 'rgba(216, 119, 88, 0.15)'
+                                                    : undefined,
+                                                color: isCorrect
+                                                  ? 'var(--brand-olive)'
+                                                  : isSelected && !isCorrect
+                                                    ? 'var(--brand-coral)'
+                                                    : undefined,
+                                              }}
                                             >
                                               <span className="font-semibold flex-shrink-0">{optionLetter}.</span>
                                               <span className="break-words">
@@ -559,10 +565,10 @@ export function ExpandableDomainAnalysis({
                                       <div
                                         className={`font-semibold mt-1 ${
                                           status === 'correct'
-                                            ? 'text-green-600'
+                                            ? 'text-brand-olive'
                                             : status === 'skipped'
                                               ? 'text-muted-foreground'
-                                              : 'text-red-600'
+                                              : 'text-brand-coral'
                                         }`}
                                       >
                                         {selectedAnswerLabel || 'Skipped'}
@@ -570,7 +576,7 @@ export function ExpandableDomainAnalysis({
                                     </div>
                                     <div>
                                       <div className="text-xs uppercase tracking-wide text-muted-foreground">Correct Answer</div>
-                                      <div className="font-semibold mt-1 text-green-700">
+                                      <div className="font-semibold mt-1 text-brand-olive">
                                         {correctAnswerLabel || question.correct_answer}
                                       </div>
                                     </div>
@@ -594,13 +600,19 @@ export function ExpandableDomainAnalysis({
                                         return (
                                           <div
                                             key={optIdx}
-                                            className={`text-sm p-2 rounded flex items-start gap-2 ${
-                                              isCorrect ? 'bg-green-100/50 text-green-900' : ''
-                                            } ${
-                                              isSelected && !isCorrect
-                                                ? 'bg-red-100/50 text-red-900'
-                                                : ''
-                                            }`}
+                                            className={`text-sm p-2 rounded flex items-start gap-2`}
+                                            style={{
+                                              backgroundColor: isCorrect
+                                                ? 'rgba(120, 140, 93, 0.15)'
+                                                : isSelected && !isCorrect
+                                                  ? 'rgba(216, 119, 88, 0.15)'
+                                                  : undefined,
+                                              color: isCorrect
+                                                ? 'var(--brand-olive)'
+                                                : isSelected && !isCorrect
+                                                  ? 'var(--brand-coral)'
+                                                  : undefined,
+                                            }}
                                           >
                                             <span className="font-semibold flex-shrink-0">
                                               {optionLetter}.
