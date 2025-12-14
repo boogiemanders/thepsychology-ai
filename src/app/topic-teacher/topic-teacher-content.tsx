@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { Children, cloneElement, isValidElement, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -25,6 +25,7 @@ import { getLessonDisplayName } from '@/lib/topic-display-names'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { useAuth } from '@/context/auth-context'
 import { getQuizResults } from '@/lib/quiz-results-storage'
+import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import Lottie from 'lottie-react'
 import textLoadingAnimation from '../../../public/animations/text-loading.json'
@@ -44,6 +45,26 @@ interface HighlightData {
   previouslyWrongNowCorrectSections: string[]
   quizWrongSections: string[]
   examWrongSections: string[]
+}
+
+interface PracticeExamQuestion {
+  id?: number | string
+  question: string
+  options: string[]
+  correct_answer: string
+  explanation?: string
+  source_file?: string
+  source_folder?: string
+  topicName?: string
+  domainId?: string
+  relatedSections?: string[]
+  [key: string]: any
+}
+
+interface WrongPracticeExamQuestion {
+  questionIndex: number
+  question: PracticeExamQuestion
+  selectedAnswer: string
 }
 
 const GENERIC_SECTION_NAMES = new Set([
@@ -130,6 +151,16 @@ export function TopicTeacherContent() {
     quizWrongSections: [],
     examWrongSections: [],
   })
+  const [practiceExamWrongQuestions, setPracticeExamWrongQuestions] = useState<
+    WrongPracticeExamQuestion[]
+  >([])
+  const [isLoadingPracticeExamWrongQuestions, setIsLoadingPracticeExamWrongQuestions] =
+    useState(false)
+  const [practiceExamWrongQuestionsError, setPracticeExamWrongQuestionsError] =
+    useState<string | null>(null)
+  const [missedQuestionDialogOpen, setMissedQuestionDialogOpen] = useState(false)
+  const [activeMissedQuestion, setActiveMissedQuestion] =
+    useState<WrongPracticeExamQuestion | null>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const currentSectionRef = useRef<string>('')
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
@@ -598,6 +629,8 @@ export function TopicTeacherContent() {
           recentlyWrongSections: ['__ALL__'],
           recentlyCorrectSections: [],
           previouslyWrongNowCorrectSections: [],
+          quizWrongSections: [],
+          examWrongSections: ['__ALL__'],
         })
         return
       }
@@ -620,6 +653,93 @@ export function TopicTeacherContent() {
       }
     }
   }, [decodedTopic, hasExamResults])
+
+  // Load latest practice-exam wrong questions for table-row 🍏 mapping
+  useEffect(() => {
+    if (!user?.id || !decodedTopic) return
+    if (!hasExamResults && highlightData.examWrongSections.length === 0) return
+
+    let cancelled = false
+    const controller = new AbortController()
+
+    const loadPracticeExamWrongQuestions = async () => {
+      try {
+        setIsLoadingPracticeExamWrongQuestions(true)
+        setPracticeExamWrongQuestionsError(null)
+
+        const response = await fetch(
+          `/api/get-exam-results/latest?userId=${encodeURIComponent(user.id)}&examType=practice`,
+          { signal: controller.signal },
+        )
+
+        if (response.status === 404) {
+          if (!cancelled) {
+            setPracticeExamWrongQuestions([])
+          }
+          return
+        }
+
+        if (!response.ok) {
+          const errorText = await response.text()
+          throw new Error(errorText || 'Failed to load practice exam results')
+        }
+
+        const data = await response.json()
+        if (!data?.success || !data.results) {
+          throw new Error(data?.error || 'Failed to load practice exam results')
+        }
+
+        const questions: PracticeExamQuestion[] = Array.isArray(data.results.questions)
+          ? data.results.questions
+          : []
+        const selectedAnswers: Record<string, string> = data.results.selectedAnswers || {}
+
+        const wrong: WrongPracticeExamQuestion[] = []
+
+        questions.forEach((question, index) => {
+          const selectedAnswer =
+            selectedAnswers[index as any] ?? selectedAnswers[String(index)] ?? null
+          if (!selectedAnswer) return
+          if (selectedAnswer === question.correct_answer) return
+
+          const meta = deriveTopicMetaFromQuestionSource(question)
+          const questionTopic = (question.topicName || meta?.topicName || '').trim()
+          if (!questionTopic) return
+          if (questionTopic.toLowerCase() !== normalizedTopicName) return
+
+          wrong.push({
+            questionIndex: index,
+            question,
+            selectedAnswer,
+          })
+        })
+
+        if (!cancelled) {
+          setPracticeExamWrongQuestions(wrong)
+        }
+      } catch (error) {
+        if ((error as Error).name === 'AbortError') return
+        console.error('[Topic Teacher] Failed to load practice exam wrong questions:', error)
+        if (!cancelled) {
+          setPracticeExamWrongQuestionsError(
+            error instanceof Error ? error.message : 'Failed to load practice exam results',
+          )
+          setPracticeExamWrongQuestions([])
+        }
+      } finally {
+        if (!cancelled) {
+          setIsLoadingPracticeExamWrongQuestions(false)
+        }
+      }
+    }
+
+    loadPracticeExamWrongQuestions()
+
+    return () => {
+      cancelled = true
+      controller.abort()
+    }
+  }, [user?.id, decodedTopic, hasExamResults, highlightData.examWrongSections.length, normalizedTopicName])
 
   // Initialize with lesson
   useEffect(() => {
@@ -1062,6 +1182,93 @@ export function TopicTeacherContent() {
       .trim()
   }
 
+  const preparedPracticeExamWrongQuestions = useMemo(() => {
+    const normalize = (value: string): string => {
+      return value
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+    }
+
+    return practiceExamWrongQuestions.map((entry) => {
+      const { question } = entry
+      return {
+        entry,
+        stem: ` ${normalize(question.question || '')} `,
+        correctAnswer: ` ${normalize(question.correct_answer || '')} `,
+        explanation: ` ${normalize(question.explanation || '')} `,
+        options: ` ${normalize(
+          Array.isArray(question.options) ? question.options.join(' ') : ''
+        )} `,
+      }
+    })
+  }, [practiceExamWrongQuestions])
+
+  const isAcronymLikeTerm = (term: string): boolean => {
+    const trimmed = term.trim()
+    if (trimmed.length > 5) return false
+    return /^[A-Z0-9]+$/.test(trimmed)
+  }
+
+  const findBestWrongPracticeExamQuestionForTableTerm = (
+    tableTerm: string
+  ): WrongPracticeExamQuestion | null => {
+    const raw = tableTerm.trim()
+    if (!raw) return null
+
+    // Avoid accidental matches for super-short non-acronyms (e.g., "to", "in")
+    if (raw.length <= 3 && !isAcronymLikeTerm(raw)) return null
+
+    const term = normalizeLabel(raw)
+    if (!term) return null
+
+    const needle = ` ${term} `
+
+    let best: WrongPracticeExamQuestion | null = null
+    let bestScore = 0
+
+    for (const prepared of preparedPracticeExamWrongQuestions) {
+      let score = 0
+
+      if (prepared.stem.includes(needle)) score += 4
+      if (prepared.correctAnswer.includes(needle)) score += 3
+      if (prepared.explanation.includes(needle)) score += 2
+      if (prepared.options.includes(needle)) score += 1
+
+      if (score > bestScore) {
+        bestScore = score
+        best = prepared.entry
+      }
+    }
+
+    // Require at least an explanation-level hit.
+    return bestScore >= 2 ? best : null
+  }
+
+  const extractTextFromMarkdownNode = (node: any): string => {
+    if (!node) return ''
+    if (node.type === 'text' && typeof node.value === 'string') {
+      return node.value
+    }
+    if (Array.isArray(node.children)) {
+      return node.children.map(extractTextFromMarkdownNode).join('')
+    }
+    return ''
+  }
+
+  const getAnswerLabel = (
+    question: PracticeExamQuestion,
+    answerText?: string | null
+  ): string | null => {
+    if (!answerText) return null
+    const options = Array.isArray(question.options) ? question.options : []
+    const index = options.findIndex((option) => option === answerText)
+    if (index < 0) return answerText
+    const letter = String.fromCharCode(65 + index)
+    return `${letter}. ${answerText}`
+  }
+
   const labelsMatch = (headerText: string, sectionName: string): boolean => {
     const h = normalizeLabel(headerText)
     const s = normalizeLabel(sectionName)
@@ -1364,20 +1571,29 @@ export function TopicTeacherContent() {
           </motion.div>
         )}
 
-        {highlightData.examWrongSections.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mb-4"
-          >
-            <p className="text-sm text-foreground/80">
-              🍏 Most recent practice exam
-              {highlightData.examWrongSections.length > 0
-                ? `: ${formatSectionList(highlightData.examWrongSections)}`
-                : ''}
-            </p>
-          </motion.div>
-        )}
+	        {highlightData.examWrongSections.length > 0 && (
+	          <motion.div
+	            initial={{ opacity: 0 }}
+	            animate={{ opacity: 1 }}
+	            className="mb-4"
+	          >
+	            <p className="text-sm text-foreground/80">
+	              🍏 Most recent practice exam
+	              {highlightData.examWrongSections.length > 0
+	                ? `: ${formatSectionList(highlightData.examWrongSections)}`
+	                : ''}
+	              {isLoadingPracticeExamWrongQuestions ? (
+	                <span className="ml-2 text-muted-foreground">
+	                  Loading missed questions…
+	                </span>
+	              ) : practiceExamWrongQuestionsError ? (
+	                <span className="ml-2 text-destructive">
+	                  Couldn&apos;t load missed questions
+	                </span>
+	              ) : null}
+	            </p>
+	          </motion.div>
+	        )}
         {highlightData.quizWrongSections.length > 0 && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -1442,30 +1658,13 @@ export function TopicTeacherContent() {
                       [&_table]:w-full [&_table]:border-collapse [&_table]:my-5 [&_table]:text-sm
                       [&_th]:border [&_th]:border-border [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground
                       [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90">
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        components={{
-                          p: ({ children }) => {
-                            // Check if this paragraph contains the loading placeholder
-                            const text = typeof children === 'string' ? children :
-                              Array.isArray(children) ? children.join('') : String(children)
-
-                            if (text.includes('[LOADING_METAPHORS]')) {
-                              return (
-                                <div className="flex flex-col items-center justify-center py-8 gap-3">
-                                  <div className="w-24 h-24">
-                                    <Lottie animationData={textLoadingAnimation} loop={true} />
-                                  </div>
-                                  <p className="text-sm text-muted-foreground">Personalizing metaphors for your interests...</p>
-                                </div>
-                              )
-                            }
-                            return <p>{children}</p>
-                          },
-                          h1: ({ children }) => {
-                            let text = ''
-                            if (typeof children === 'string') {
-                              text = children
+	                      <ReactMarkdown
+	                        remarkPlugins={[remarkGfm]}
+	                        components={{
+	                          h1: ({ children }) => {
+	                            let text = ''
+	                            if (typeof children === 'string') {
+	                              text = children
                             } else if (Array.isArray(children)) {
                               text = children
                                 .map((c) => {
@@ -1544,14 +1743,28 @@ export function TopicTeacherContent() {
                             return (
                               <TypographyH3>
                                 {children}
-                              </TypographyH3>
-                            )
-                          },
-                          p: ({ children }) => {
-                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
-                              getHighlightFlags(currentSectionRef.current)
+	                              </TypographyH3>
+	                            )
+	                          },
+	                          p: ({ children }) => {
+	                            const rawText = Children.toArray(children).join('')
+	                            if (rawText.includes('[LOADING_METAPHORS]')) {
+	                              return (
+	                                <div className="flex flex-col items-center justify-center py-8 gap-3">
+	                                  <div className="w-24 h-24">
+	                                    <Lottie animationData={textLoadingAnimation} loop={true} />
+	                                  </div>
+	                                  <p className="text-sm text-muted-foreground">
+	                                    Personalizing metaphors for your interests...
+	                                  </p>
+	                                </div>
+	                              )
+	                            }
 
-                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+	                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
+	                              getHighlightFlags(currentSectionRef.current)
+	
+	                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
                             const icons =
                               (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
 
@@ -1599,13 +1812,67 @@ export function TopicTeacherContent() {
                                   </span>
                                 )}
                                 <ol>{children}</ol>
-                              </div>
-                            )
-                          },
-                          thead: ({ children }) => {
-                            return (
-                              <thead>
-                                {children}
+	                              </div>
+	                            )
+	                          },
+	                          tr: ({ node, children }) => {
+	                            const rowChildren = Array.isArray((node as any)?.children)
+	                              ? ((node as any).children as any[])
+	                              : []
+	
+	                            // Header rows (thead) shouldn't have apples.
+	                            if (rowChildren.some((child) => child?.tagName === 'th')) {
+	                              return <tr>{children}</tr>
+	                            }
+	
+	                            const firstCell = rowChildren.find((child) => child?.tagName === 'td')
+	                            const firstCellText = extractTextFromMarkdownNode(firstCell).trim()
+	                            const matched = findBestWrongPracticeExamQuestionForTableTerm(firstCellText)
+	                            if (!matched) {
+	                              return <tr>{children}</tr>
+	                            }
+	
+	                            const childArray = Children.toArray(children)
+	                            if (childArray.length === 0) {
+	                              return <tr>{children}</tr>
+	                            }
+	
+	                            const first = childArray[0]
+	                            if (!isValidElement(first)) {
+	                              return <tr>{children}</tr>
+	                            }
+	
+	                            const appleButton = (
+	                              <button
+	                                type="button"
+	                                className="mt-0.5 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded hover:bg-secondary/50"
+	                                onClick={() => {
+	                                  setActiveMissedQuestion(matched)
+	                                  setMissedQuestionDialogOpen(true)
+	                                }}
+	                                aria-label="Review missed practice exam question"
+	                                title="Review missed practice exam question"
+	                              >
+	                                🍏
+	                              </button>
+	                            )
+	
+	                            const existingChildren = (first.props as any).children
+	                            const injectedFirst = cloneElement(first as any, {
+	                              children: (
+	                                <div className="flex items-start gap-2">
+	                                  {appleButton}
+	                                  <div className="min-w-0">{existingChildren}</div>
+	                                </div>
+	                              ),
+	                            })
+	
+	                            return <tr>{[injectedFirst, ...childArray.slice(1)]}</tr>
+	                          },
+	                          thead: ({ children }) => {
+	                            return (
+	                              <thead>
+	                                {children}
                               </thead>
                             )
                           },
@@ -1663,11 +1930,11 @@ export function TopicTeacherContent() {
           <div ref={messagesEndRef} />
       </div>
 
-      <div className="sticky bottom-0 z-30 w-full border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:backdrop-blur shadow-[0_-12px_35px_rgba(0,0,0,0.12)]">
-        <div
-          className={`mx-auto w-full max-w-4xl px-6 overflow-hidden transition-all duration-300 ease-out ${
-            isNearBottom ? 'py-4' : 'py-1.5'
-          }`}
+	      <div className="sticky bottom-0 z-30 w-full border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:backdrop-blur shadow-[0_-12px_35px_rgba(0,0,0,0.12)]">
+	        <div
+	          className={`mx-auto w-full max-w-4xl px-6 overflow-hidden transition-all duration-300 ease-out ${
+	            isNearBottom ? 'py-4' : 'py-1.5'
+	          }`}
           style={{ maxHeight: isNearBottom ? 240 : 140 }}
         >
           <div className="flex items-end gap-3">
@@ -1711,13 +1978,127 @@ export function TopicTeacherContent() {
               </PulsatingButton>
             )}
           </div>
-        </div>
-      </div>
+	        </div>
+	      </div>
 
-        {/* Interests Modal - Only show if no interests saved */}
-        {savedInterests.length === 0 && (
-          <Dialog open={showInterestsModal} onOpenChange={setShowInterestsModal}>
-            <DialogContent>
+        <Dialog
+          open={missedQuestionDialogOpen}
+          onOpenChange={(open) => {
+            setMissedQuestionDialogOpen(open)
+            if (!open) {
+              setActiveMissedQuestion(null)
+            }
+          }}
+        >
+          <DialogContent className="max-w-3xl">
+            <DialogHeader>
+              <DialogTitle>Review missed question</DialogTitle>
+              <DialogDescription>From your most recent practice exam.</DialogDescription>
+            </DialogHeader>
+
+            {activeMissedQuestion && (
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-sm mb-2">Question</h4>
+                  <p className="text-sm text-foreground">
+                    {activeMissedQuestion.question.question}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-3 bg-muted/30 rounded-lg">
+                  <div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                      Your Answer
+                    </div>
+                    <div className="font-semibold mt-1 text-red-600">
+                      {getAnswerLabel(
+                        activeMissedQuestion.question,
+                        activeMissedQuestion.selectedAnswer,
+                      ) || activeMissedQuestion.selectedAnswer}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                      Correct Answer
+                    </div>
+                    <div className="font-semibold mt-1 text-green-700">
+                      {getAnswerLabel(
+                        activeMissedQuestion.question,
+                        activeMissedQuestion.question.correct_answer,
+                      ) || activeMissedQuestion.question.correct_answer}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                      Result
+                    </div>
+                    <div className="font-semibold mt-1 text-red-600">Incorrect</div>
+                  </div>
+                </div>
+
+                {Array.isArray(activeMissedQuestion.question.options) &&
+                  activeMissedQuestion.question.options.length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-sm mb-2">Options</h4>
+                      <div className="space-y-1">
+                        {activeMissedQuestion.question.options.map((option, optIdx) => {
+                          const isCorrect = option === activeMissedQuestion.question.correct_answer
+                          const isSelected = option === activeMissedQuestion.selectedAnswer
+                          const optionLetter = String.fromCharCode(65 + optIdx)
+
+                          return (
+                            <div
+                              key={optIdx}
+                              className={`text-sm p-2 rounded flex items-start gap-2 ${
+                                isCorrect ? 'bg-green-100/50 text-green-900' : ''
+                              } ${
+                                isSelected && !isCorrect
+                                  ? 'bg-red-100/50 text-red-900'
+                                  : ''
+                              }`}
+                            >
+                              <span className="font-semibold flex-shrink-0">
+                                {optionLetter}.
+                              </span>
+                              <span className="break-words">
+                                {option}
+                                {isCorrect && (
+                                  <span className="font-semibold ml-2">✓ Correct</span>
+                                )}
+                                {isSelected && !isCorrect && (
+                                  <span className="font-semibold ml-2">✗ Your answer</span>
+                                )}
+                              </span>
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                {activeMissedQuestion.question.explanation ? (
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Explanation</h4>
+                    <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                      {activeMissedQuestion.question.explanation}
+                    </p>
+                  </div>
+                ) : null}
+              </div>
+            )}
+
+            <DialogFooter>
+              <Button variant="outline" onClick={() => setMissedQuestionDialogOpen(false)}>
+                Close
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+	        {/* Interests Modal - Only show if no interests saved */}
+	        {savedInterests.length === 0 && (
+	          <Dialog open={showInterestsModal} onOpenChange={setShowInterestsModal}>
+	            <DialogContent>
               <DialogHeader>
                 <DialogTitle>Tell us about your interests</DialogTitle>
                 <DialogDescription>

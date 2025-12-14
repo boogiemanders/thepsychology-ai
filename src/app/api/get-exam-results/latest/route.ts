@@ -14,6 +14,7 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
     const userId = searchParams.get('userId')
+    const examType = searchParams.get('examType')
 
     if (!userId) {
       return NextResponse.json(
@@ -23,12 +24,16 @@ export async function GET(request: NextRequest) {
     }
 
     if (supabase) {
-      const { data, error } = await supabase
+      let query = supabase
         .from('exam_results')
         .select('*')
         .eq('user_id', userId)
-        .order('created_at', { ascending: false })
-        .limit(1)
+
+      if (examType) {
+        query = query.eq('exam_type', examType)
+      }
+
+      const { data, error } = await query.order('created_at', { ascending: false }).limit(1)
 
       if (error) {
         console.error('Error fetching latest exam result from Supabase:', error)
@@ -54,7 +59,7 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    const localResult = getLatestDevExamResultForUser(userId)
+    const localResult = getLatestDevExamResultForUser(userId, examType)
     if (localResult) {
       return NextResponse.json({
         success: true,

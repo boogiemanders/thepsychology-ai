@@ -60,8 +60,13 @@ export function getDevExamResultsForUser(
 }
 
 export function getLatestDevExamResultForUser(
-  userId: string
+  userId: string,
+  examType?: string | null
 ): { id: string; record: DevExamResultRecord } | null {
-  const [latest] = getDevExamResultsForUser(userId)
-  return latest || null
+  const results = getDevExamResultsForUser(userId)
+  if (examType) {
+    const matched = results.find(({ record }) => record.exam_type === examType)
+    return matched || null
+  }
+  return results[0] || null
 }
