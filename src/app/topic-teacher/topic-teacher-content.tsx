@@ -689,6 +689,13 @@ export function TopicTeacherContent() {
           throw new Error(data?.error || 'Failed to load practice exam results')
         }
 
+        // Debug: Log API response
+        console.log('[Topic Teacher] API response:', {
+          questionsCount: data.results?.questions?.length,
+          sampleQuestion: data.results?.questions?.[0],
+          examType: data.results?.examType,
+        })
+
         const questions: PracticeExamQuestion[] = Array.isArray(data.results.questions)
           ? data.results.questions
           : []
@@ -704,6 +711,18 @@ export function TopicTeacherContent() {
 
           const meta = deriveTopicMetaFromQuestionSource(question)
           const questionTopic = (question.topicName || meta?.topicName || '').trim()
+
+          // Debug: Log topic matching
+          console.log('[Topic Teacher] Question topic matching:', {
+            index,
+            questionTopicName: question.topicName,
+            sourceFile: (question as any).source_file,
+            derivedTopic: meta?.topicName,
+            finalQuestionTopic: questionTopic,
+            normalizedTopicName,
+            match: questionTopic.toLowerCase() === normalizedTopicName,
+          })
+
           if (!questionTopic) return
           if (questionTopic.toLowerCase() !== normalizedTopicName) return
 
