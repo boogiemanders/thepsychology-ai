@@ -10,6 +10,7 @@ import {
   QuestionResult,
   SectionResult,
 } from './unified-question-results'
+import { deriveTopicMetaFromQuestionSource } from './topic-source-utils'
 
 export interface ExamQuestion {
   id?: string
@@ -25,6 +26,7 @@ export interface ExamQuestion {
   knId?: string
   difficulty?: 'easy' | 'medium' | 'hard'
   isScored?: boolean
+  relatedSections?: string[]
   [key: string]: any
 }
 
@@ -57,14 +59,36 @@ export function saveExamResults(summary: ExamResultsSummary): void {
     }
 
     const isCorrect = selectedAnswer === question.correct_answer
+    const meta = deriveTopicMetaFromQuestionSource(question)
+    const topicName =
+      question.topic ||
+      question.topicName ||
+      meta?.topicName ||
+      topic
+    const domainId =
+      question.domain ||
+      question.domainId ||
+      meta?.domainId ||
+      domain
+    const sectionCandidates = Array.isArray(question.relatedSections)
+      ? question.relatedSections
+          .map((section) => (typeof section === 'string' ? section.trim() : ''))
+          .filter((section) => section.length > 0)
+      : []
+    const sections =
+      sectionCandidates.length > 0
+        ? sectionCandidates
+        : meta?.sectionName
+          ? [meta.sectionName]
+          : ['__ALL__']
 
     // Create question result record
     const questionResult: QuestionResult = {
       questionId: question.id || `${topic}_q${index}`,
       question: question.question,
       examType,
-      topic,
-      domain,
+      topic: topicName,
+      domain: domainId,
       selectedAnswer,
       correctAnswer: question.correct_answer,
       isCorrect,
@@ -76,21 +100,25 @@ export function saveExamResults(summary: ExamResultsSummary): void {
 
     // If question was answered incorrectly, mark the topic's section as needing review
     if (!isCorrect) {
-      // For now, we track at the topic level
-      // In the future, this could be enhanced to track specific sections
-      const sectionResult: SectionResult = {
-        sectionName: 'Main Content', // Placeholder - could be enhanced to specific sections
-        topicName: topic,
-        domain,
-        wrongCount: 1,
-        lastAttempted: Date.now(),
-        isResolved: false,
-      }
-      addSectionResult(sectionResult)
+      sections.forEach((sectionName) => {
+        const cleanName = sectionName.trim() || '__ALL__'
+        const sectionResult: SectionResult = {
+          sectionName: cleanName,
+          topicName,
+          domain: domainId,
+          wrongCount: 1,
+          lastAttempted: Date.now(),
+          isResolved: false,
+        }
+        addSectionResult(sectionResult)
+      })
     } else {
       // If question was answered correctly, check if this resolves any sections
       // This marks the section as "mastered" since user got a question right
-      resolveSectionResult(topic, 'Main Content')
+      sections.forEach((sectionName) => {
+        const cleanName = sectionName.trim() || '__ALL__'
+        resolveSectionResult(topicName, cleanName)
+      })
     }
   })
 

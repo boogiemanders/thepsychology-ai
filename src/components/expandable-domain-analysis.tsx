@@ -1,13 +1,13 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useRef } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'motion/react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { CheckCircle2, XCircle, Circle, BookOpen } from 'lucide-react'
+import { CheckCircle2, XCircle, Circle, BookOpen, ChevronUp, ChevronDown } from 'lucide-react'
 import type { DomainPerformance } from '@/lib/priority-calculator'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
@@ -82,6 +82,9 @@ export function ExpandableDomainAnalysis({
   const shouldRenderHeader = hasTitle || hasDescription
 
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
+  // Track expanded question per domain (key = domain name, value = question accordion value)
+  const [expandedQuestions, setExpandedQuestions] = useState<Record<string, string>>({})
+  const navButtonsRef = useRef<HTMLDivElement>(null)
 
   const questionIndexLookup = useMemo(() => {
     const map = new Map<Question, number>()
@@ -327,37 +330,114 @@ export function ExpandableDomainAnalysis({
                       </div>
 
                       {/* Questions List - Nested Accordion */}
-                      <Accordion type="single" collapsible className="w-full space-y-2">
-                        {domainQuestions.length === 0 && (
-                          <p className="text-sm text-muted-foreground px-3 py-2 rounded border border-dashed border-border">
-                            No questions from this exam were tagged to this domain.
-                          </p>
-                        )}
-                        {domainQuestions
-                          .filter((question) => {
-                            if (!showOnlyWrong) return true
-                            const status = getQuestionStatus(question)
-                            return status === 'wrong' || status === 'skipped'
-                          })
-                          .map((question, idx) => {
+                      {(() => {
+                        const filteredQuestions = domainQuestions.filter((question) => {
+                          if (!showOnlyWrong) return true
                           const status = getQuestionStatus(question)
-                          const selectedAnswer = getSelectedAnswerForQuestion(question)
-                          const selectedAnswerLabel = getAnswerLabel(question, selectedAnswer)
-                          const correctAnswerLabel = getAnswerLabel(question, question.correct_answer)
-                          const statusDisplay = getStatusDisplay(status)
+                          return status === 'wrong' || status === 'skipped'
+                        })
 
-                          return (
-                            <motion.div
-                              key={question.id}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: idx * 0.05 }}
-                            >
-                              <AccordionItem
-                                value={`q-${question.id}`}
-                                className="border border-border rounded-lg"
-                                style={{ backgroundColor: getStatusColor(status) }}
-                              >
+                        const navigateToQuestion = (targetIdx: number) => {
+                          const targetQuestion = filteredQuestions[targetIdx]
+                          if (!targetQuestion) return
+
+                          // Get current nav button position before changing
+                          const currentY = navButtonsRef.current?.getBoundingClientRect().top
+
+                          // Change expanded question
+                          setExpandedQuestions(prev => ({
+                            ...prev,
+                            [domain.domainName]: `q-${targetQuestion.id}`
+                          }))
+
+                          // After render, scroll to keep buttons at same position
+                          if (currentY) {
+                            setTimeout(() => {
+                              const newY = navButtonsRef.current?.getBoundingClientRect().top
+                              if (newY) {
+                                window.scrollBy({ top: newY - currentY, behavior: 'instant' })
+                              }
+                            }, 50)
+                          }
+                        }
+
+                        return (
+                          <Accordion
+                            type="single"
+                            collapsible
+                            className="w-full space-y-2"
+                            value={expandedQuestions[domain.domainName] || ''}
+                            onValueChange={(value) => {
+                              setExpandedQuestions(prev => ({
+                                ...prev,
+                                [domain.domainName]: value
+                              }))
+                            }}
+                          >
+                            {filteredQuestions.length === 0 && (
+                              <p className="text-sm text-muted-foreground px-3 py-2 rounded border border-dashed border-border">
+                                No questions from this exam were tagged to this domain.
+                              </p>
+                            )}
+                            {filteredQuestions.map((question, idx) => {
+                              const status = getQuestionStatus(question)
+                              const selectedAnswer = getSelectedAnswerForQuestion(question)
+                              const selectedAnswerLabel = getAnswerLabel(question, selectedAnswer)
+                              const correctAnswerLabel = getAnswerLabel(question, question.correct_answer)
+                              const statusDisplay = getStatusDisplay(status)
+                              const isExpanded = expandedQuestions[domain.domainName] === `q-${question.id}`
+
+                              return (
+                                <motion.div
+                                  key={question.id}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{ delay: idx * 0.05 }}
+                                  className="relative"
+                                >
+                                  <AccordionItem
+                                    value={`q-${question.id}`}
+                                    className="border border-border rounded-lg"
+                                    style={{ backgroundColor: getStatusColor(status) }}
+                                  >
+                                    {/* Navigation arrows */}
+                                    <AnimatePresence>
+                                      {isExpanded && (
+                                        <motion.div
+                                          ref={navButtonsRef}
+                                          initial={{ opacity: 0, x: -10 }}
+                                          animate={{ opacity: 1, x: 0 }}
+                                          exit={{ opacity: 0, x: -10 }}
+                                          transition={{ duration: 0.2 }}
+                                          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full flex flex-col gap-1 pl-2 z-10"
+                                        >
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation()
+                                              navigateToQuestion(idx - 1)
+                                            }}
+                                            disabled={idx === 0}
+                                            className="p-1 text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed text-lg leading-none"
+                                            aria-label="Previous question"
+                                          >
+                                            <ChevronUp size={18} />
+                                          </button>
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation()
+                                              navigateToQuestion(idx + 1)
+                                            }}
+                                            disabled={idx === filteredQuestions.length - 1}
+                                            className="p-1 text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed text-lg leading-none"
+                                            aria-label="Next question"
+                                          >
+                                            <ChevronDown size={18} />
+                                          </button>
+                                        </motion.div>
+                                      )}
+                                    </AnimatePresence>
                                 <AccordionTrigger className="hover:no-underline px-3 py-2">
                                   <div className="flex items-start gap-3 flex-1">
                                     {getStatusIcon(status)}
@@ -454,11 +534,13 @@ export function ExpandableDomainAnalysis({
                                     })()}
                                   </div>
                                 </AccordionContent>
-                              </AccordionItem>
-                            </motion.div>
-                          )
-                        })}
-                      </Accordion>
+                                  </AccordionItem>
+                                </motion.div>
+                              )
+                            })}
+                          </Accordion>
+                        )
+                      })()}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -545,38 +627,115 @@ export function ExpandableDomainAnalysis({
                     </div>
 
                     {/* Organizational Psychology Questions List - Nested Accordion */}
-                    <Accordion type="single" collapsible className="w-full space-y-2">
-                      {orgQuestions.length === 0 && (
-                        <p className="text-sm text-muted-foreground px-3 py-2 rounded border border-dashed border-border">
-                          No org psych questions were included in this exam.
-                        </p>
-                      )}
-                      {orgQuestions
-                        .filter((question) => {
-                          if (!showOnlyWrong) return true
-                          const status = getQuestionStatus(question)
-                          return status === 'wrong' || status === 'skipped'
-                        })
-                        .map((question, idx) => {
+                    {(() => {
+                      const filteredOrgQuestions = orgQuestions.filter((question) => {
+                        if (!showOnlyWrong) return true
                         const status = getQuestionStatus(question)
-                        const selectedAnswer = getSelectedAnswerForQuestion(question)
-                        const selectedAnswerLabel = getAnswerLabel(question, selectedAnswer)
-                        const correctAnswerLabel = getAnswerLabel(question, question.correct_answer)
-                        const statusDisplay = getStatusDisplay(status)
+                        return status === 'wrong' || status === 'skipped'
+                      })
 
-                        return (
-                          <motion.div
-                            key={question.id}
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: idx * 0.05 }}
-                          >
-                            <AccordionItem
-                              value={`org-q-${question.id}`}
-                              className="border border-border rounded-lg"
-                              style={{ backgroundColor: getStatusColor(status) }}
-                            >
-                              <AccordionTrigger className="hover:no-underline px-3 py-2">
+                      const navigateToOrgQuestion = (targetIdx: number) => {
+                        const targetQuestion = filteredOrgQuestions[targetIdx]
+                        if (!targetQuestion) return
+
+                        // Get current nav button position before changing
+                        const currentY = navButtonsRef.current?.getBoundingClientRect().top
+
+                        // Change expanded question
+                        setExpandedQuestions(prev => ({
+                          ...prev,
+                          'Organizational Psychology': `org-q-${targetQuestion.id}`
+                        }))
+
+                        // After render, scroll to keep buttons at same position
+                        if (currentY) {
+                          setTimeout(() => {
+                            const newY = navButtonsRef.current?.getBoundingClientRect().top
+                            if (newY) {
+                              window.scrollBy({ top: newY - currentY, behavior: 'instant' })
+                            }
+                          }, 50)
+                        }
+                      }
+
+                      return (
+                        <Accordion
+                          type="single"
+                          collapsible
+                          className="w-full space-y-2"
+                          value={expandedQuestions['Organizational Psychology'] || ''}
+                          onValueChange={(value) => {
+                            setExpandedQuestions(prev => ({
+                              ...prev,
+                              'Organizational Psychology': value
+                            }))
+                          }}
+                        >
+                          {filteredOrgQuestions.length === 0 && (
+                            <p className="text-sm text-muted-foreground px-3 py-2 rounded border border-dashed border-border">
+                              No org psych questions were included in this exam.
+                            </p>
+                          )}
+                          {filteredOrgQuestions.map((question, idx) => {
+                            const status = getQuestionStatus(question)
+                            const selectedAnswer = getSelectedAnswerForQuestion(question)
+                            const selectedAnswerLabel = getAnswerLabel(question, selectedAnswer)
+                            const correctAnswerLabel = getAnswerLabel(question, question.correct_answer)
+                            const statusDisplay = getStatusDisplay(status)
+                            const isExpanded = expandedQuestions['Organizational Psychology'] === `org-q-${question.id}`
+
+                            return (
+                              <motion.div
+                                key={question.id}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: idx * 0.05 }}
+                                className="relative"
+                              >
+                                <AccordionItem
+                                  value={`org-q-${question.id}`}
+                                  className="border border-border rounded-lg"
+                                  style={{ backgroundColor: getStatusColor(status) }}
+                                >
+                                  {/* Navigation arrows */}
+                                  <AnimatePresence>
+                                    {isExpanded && (
+                                      <motion.div
+                                        ref={navButtonsRef}
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -10 }}
+                                        transition={{ duration: 0.2 }}
+                                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full flex flex-col gap-1 pl-2 z-10"
+                                      >
+                                        <button
+                                          type="button"
+                                          onClick={(e) => {
+                                            e.stopPropagation()
+                                            navigateToOrgQuestion(idx - 1)
+                                          }}
+                                          disabled={idx === 0}
+                                          className="p-1 text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed text-lg leading-none"
+                                          aria-label="Previous question"
+                                        >
+                                          <ChevronUp size={18} />
+                                        </button>
+                                        <button
+                                          type="button"
+                                          onClick={(e) => {
+                                            e.stopPropagation()
+                                            navigateToOrgQuestion(idx + 1)
+                                          }}
+                                          disabled={idx === filteredOrgQuestions.length - 1}
+                                          className="p-1 text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed text-lg leading-none"
+                                          aria-label="Next question"
+                                        >
+                                          <ChevronDown size={18} />
+                                        </button>
+                                      </motion.div>
+                                    )}
+                                  </AnimatePresence>
+                                  <AccordionTrigger className="hover:no-underline px-3 py-2">
                                 <div className="flex items-start gap-3 flex-1">
                                   {getStatusIcon(status)}
                                   <div className="flex-1 min-w-0 text-left">
@@ -710,14 +869,16 @@ export function ExpandableDomainAnalysis({
                             </AccordionItem>
                           </motion.div>
                         )
-                      })}
-                    </Accordion>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            )
-          })()}
-        </Accordion>
+                            })}
+                          </Accordion>
+                        )
+                      })()}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              )
+            })()}
+          </Accordion>
       </CardContent>
     </Card>
   )

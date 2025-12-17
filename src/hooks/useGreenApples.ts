@@ -43,7 +43,7 @@ export function useGreenApples(topic: string | null, content: string | null) {
 
       processed = processed.replace(
         headerRegex,
-        `$1$2 🍎 $3`
+        `$1$2 🍏 $3`
       )
     })
 

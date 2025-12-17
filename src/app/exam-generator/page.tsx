@@ -329,30 +329,37 @@ export default function ExamGeneratorPage() {
     window.location.href = '/dashboard'
   }
 
-  // Record per-question results for unified highlighting (Topic Teacher)
-  const recordExamQuestionResults = useCallback(() => {
-    if (!examType) return
+	  // Record per-question results for unified highlighting (Topic Teacher)
+	  const recordExamQuestionResults = useCallback(() => {
+	    if (!examType) return
 
-    questions.forEach((question, index) => {
-      if (!question) return
+	    questions.forEach((question, index) => {
+	      if (!question) return
       const selectedAnswer = selectedAnswers[index]
       if (!selectedAnswer) return
       if (question.isScored === false || question.scored === false) return
 
-      const meta = deriveTopicMetaFromQuestionSource(question as any)
-      const topicName = question.topicName || meta?.topicName
-      if (!topicName) return
+	      const meta = deriveTopicMetaFromQuestionSource(question as any)
+	      const topicName = question.topicName || meta?.topicName
+	      if (!topicName) return
 
-      const domainId =
-        question.domainId || meta?.domainId || (question.domain ? String(question.domain) : 'unknown')
+	      const domainId =
+	        question.domainId || meta?.domainId || (question.domain ? String(question.domain) : 'unknown')
 
-      // For exam-derived highlights, treat the whole topic as needing review.
-      // This ensures Topic Teacher shows apples even when we don't have
-      // granular section labels for each exam question.
-      const sections = ['__ALL__']
+	      let sections: string[]
+	      if (Array.isArray(question.relatedSections) && question.relatedSections.length > 0) {
+	        const normalized = question.relatedSections
+	          .map((section) => (typeof section === 'string' ? section.trim() : ''))
+	          .filter((section) => section.length > 0)
+	        sections = normalized.length > 0 ? normalized : ['__ALL__']
+	      } else if (meta?.sectionName) {
+	        sections = [meta.sectionName]
+	      } else {
+	        sections = ['__ALL__']
+	      }
 
-      const isCorrect = selectedAnswer === question.correct_answer
-      const questionId = question.id?.toString() || `${topicName}_q${index}`
+	      const isCorrect = selectedAnswer === question.correct_answer
+	      const questionId = question.id?.toString() || `${topicName}_q${index}`
 
       saveQuestionResult({
         questionId,
@@ -366,22 +373,26 @@ export default function ExamGeneratorPage() {
         timestamp: Date.now(),
       })
 
-      if (!isCorrect) {
-        sections.forEach((sectionName) =>
-          addSectionResult({
-            sectionName,
-            topicName,
-            domain: domainId,
-            wrongCount: 1,
-            lastAttempted: Date.now(),
-            isResolved: false,
-          }),
-        )
-      } else {
-        sections.forEach((sectionName) => resolveSectionResult(topicName, sectionName))
-      }
-    })
-  }, [examType, questions, selectedAnswers])
+	      if (!isCorrect) {
+	        sections.forEach((sectionName) => {
+	          const cleanName = sectionName && sectionName.trim() ? sectionName.trim() : '__ALL__'
+	          addSectionResult({
+	            sectionName: cleanName,
+	            topicName,
+	            domain: domainId,
+	            wrongCount: 1,
+	            lastAttempted: Date.now(),
+	            isResolved: false,
+	          })
+	        })
+	      } else {
+	        sections.forEach((sectionName) => {
+	          const cleanName = sectionName && sectionName.trim() ? sectionName.trim() : '__ALL__'
+	          resolveSectionResult(topicName, cleanName)
+	        })
+	      }
+	    })
+	  }, [examType, questions, selectedAnswers])
 
   // Handle end exam - save results to Supabase and navigate
   const handleEndExam = useCallback(async () => {
