@@ -1849,7 +1849,7 @@ export function TopicTeacherContent() {
                                 <div className="relative">
                                   <button
                                     type="button"
-                                    className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+                                    className="apple-pulsate absolute -left-10 top-2 flex h-6 w-6 items-center justify-center rounded-full"
                                     onClick={() => {
                                       setActiveMissedQuestion(matched)
                                       setMissedQuestionDialogOpen(true)
@@ -1902,7 +1902,7 @@ export function TopicTeacherContent() {
                                 <div className="relative">
                                   <button
                                     type="button"
-                                    className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+                                    className="apple-pulsate absolute -left-10 top-2 flex h-6 w-6 items-center justify-center rounded-full"
                                     onClick={() => {
                                       setActiveMissedQuestion(matched)
                                       setMissedQuestionDialogOpen(true)
