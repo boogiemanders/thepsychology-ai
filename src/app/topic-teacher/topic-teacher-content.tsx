@@ -33,6 +33,7 @@ import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button
 import { MagicCard } from '@/components/ui/magic-card'
 import { PulsatingButton } from '@/components/ui/pulsating-button'
 import { InlineSvg } from '@/components/ui/inline-svg'
+import { VariableStar } from '@/components/ui/variable-star'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -1698,7 +1699,7 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              🍏 Most recent practice exam
+              <VariableStar className="inline-block mr-1" /> Most recent practice exam
               {matchedExamTerms.length > 0
                 ? `: ${matchedExamTerms.join(', ')}`
                 : highlightData.examWrongSections.length > 0
@@ -1857,7 +1858,7 @@ export function TopicTeacherContent() {
                                       aria-label="Review missed practice exam question"
                                       title="Review missed practice exam question"
                                     >
-                                      🍏
+                                      <VariableStar />
                                     </button>
                                     <span>{children}</span>
                                   </span>
@@ -1912,7 +1913,7 @@ export function TopicTeacherContent() {
                                       aria-label="Review missed practice exam question"
                                       title="Review missed practice exam question"
                                     >
-                                      🍏
+                                      <VariableStar />
                                     </button>
                                     <span>{children}</span>
                                   </span>
@@ -1957,7 +1958,7 @@ export function TopicTeacherContent() {
                                     aria-label="Review missed practice exam question"
                                     title="Review missed practice exam question"
                                   >
-                                    🍏
+                                    <VariableStar />
                                   </button>
                                   <p className="m-0">{children}</p>
                                 </div>
@@ -1969,14 +1970,13 @@ export function TopicTeacherContent() {
                               getHighlightFlags(currentSectionRef.current)
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
-                            const icons =
-                              (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
 
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
-                                    {icons}
+                                    {quizWrong && <span>🍎</span>}
+                                    {examWrong && <VariableStar className="ml-0.5" />}
                                   </span>
                                 )}
                                 <p className="m-0">{children}</p>
@@ -1988,13 +1988,12 @@ export function TopicTeacherContent() {
                               getHighlightFlags(currentSectionRef.current)
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
-                            const icons =
-                              (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
-                                    {icons}
+                                    {quizWrong && <span>🍎</span>}
+                                    {examWrong && <VariableStar className="ml-0.5" />}
                                   </span>
                                 )}
                                 <ul>{children}</ul>
@@ -2006,17 +2005,41 @@ export function TopicTeacherContent() {
                               getHighlightFlags(currentSectionRef.current)
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
-                            const icons =
-                              (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
-                                    {icons}
+                                    {quizWrong && <span>🍎</span>}
+                                    {examWrong && <VariableStar className="ml-0.5" />}
                                   </span>
                                 )}
                                 <ol>{children}</ol>
 	                              </div>
+	                            )
+	                          },
+	                          li: ({ children }) => {
+	                            // Extract text content from children to check for highlighting
+	                            const getTextContent = (node: any): string => {
+	                              if (typeof node === 'string') return node
+	                              if (Array.isArray(node)) return node.map(getTextContent).join(' ')
+	                              if (node?.props?.children) return getTextContent(node.props.children)
+	                              return ''
+	                            }
+
+	                            const textContent = getTextContent(children)
+	                            const { quizWrong, examWrong } = getHighlightFlags(textContent)
+	                            const showIcon = quizWrong || examWrong
+
+	                            return (
+	                              <li className={showIcon ? 'relative pl-10' : ''}>
+	                                {showIcon && (
+	                                  <span className="absolute -left-8 top-1 w-8 flex items-center justify-center text-base leading-none">
+	                                    {quizWrong && <span>🍎</span>}
+	                                    {examWrong && <VariableStar />}
+	                                  </span>
+	                                )}
+	                                {children}
+	                              </li>
 	                            )
 	                          },
 	                          tr: ({ node, children }) => {
@@ -2057,7 +2080,7 @@ export function TopicTeacherContent() {
 	                                aria-label="Review missed practice exam question"
 	                                title="Review missed practice exam question"
 	                              >
-	                                🍏
+	                                <VariableStar />
 	                              </button>
 	                            )
 	
