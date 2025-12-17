@@ -1758,7 +1758,7 @@ export function TopicTeacherContent() {
                 }`}
               >
                 <div
-                  className={`px-4 py-3 rounded-lg ${
+                  className={`${message.role === 'user' ? 'px-4' : 'pl-12 pr-4'} py-3 rounded-lg ${
                     message.role === 'user'
                       ? 'bg-primary text-primary-foreground max-w-2xl'
                       : 'text-foreground w-full'
