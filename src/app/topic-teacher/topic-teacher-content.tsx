@@ -1947,10 +1947,10 @@ export function TopicTeacherContent() {
 
                             if (termMatch) {
                               return (
-                                <div className="relative pl-10">
+                                <div className="relative">
                                   <button
                                     type="button"
-                                    className="apple-pulsate absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+                                    className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
                                     onClick={() => {
                                       setActiveMissedQuestion(termMatch)
                                       setMissedQuestionDialogOpen(true)
