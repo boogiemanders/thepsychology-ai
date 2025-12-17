@@ -1770,8 +1770,8 @@ export function TopicTeacherContent() {
                       [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:leading-snug [&_h2:not(:first-child)]:mb-4 [&_h2:not(:first-child)]:border-t [&_h2:not(:first-child)]:border-border/20 [&_h2:not(:first-child)]:pt-8 [&_h2:not(:first-child)]:mt-0
                       [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:leading-snug [&_h3:not(:first-child)]:mt-7 [&_h3:not(:first-child)]:mb-3
                       [&_p]:my-4 [&_p]:text-base [&_p]:leading-relaxed [&_p]:text-foreground/90
-                      [&_ul]:my-5 [&_ul]:ml-5 [&_ul>li]:my-2.5 [&_ul>li]:text-base [&_ul>li]:leading-relaxed
-                      [&_ol]:my-5 [&_ol]:ml-5 [&_ol>li]:my-2.5 [&_ol>li]:text-base [&_ol>li]:leading-relaxed
+                      [&_ul]:my-5 [&_ul]:ml-0 [&_ul]:pl-5 [&_ul>li]:my-2.5 [&_ul>li]:text-base [&_ul>li]:leading-relaxed
+                      [&_ol]:my-5 [&_ol]:ml-0 [&_ol]:pl-5 [&_ol>li]:my-2.5 [&_ol>li]:text-base [&_ol>li]:leading-relaxed
                       [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 [&_a:hover]:text-primary/80 [&_a:hover]:no-underline
                       [&_hr]:my-8 [&_hr]:border-border/30
                       [&_img]:my-6
@@ -2040,6 +2040,61 @@ export function TopicTeacherContent() {
 	                                )}
 	                                {children}
 	                              </li>
+	                            )
+	                          },
+	                          table: ({ node, children }) => {
+	                            // Check if any row in the table matches wrong exam questions
+	                            const tableNode = node as any
+	                            const hasMatchingRow = tableNode?.children?.some((row: any) => {
+	                              if (row.tagName !== 'tbody') return false
+	                              return row.children?.some((tr: any) => {
+	                                const firstCell = tr.children?.find((cell: any) => cell.tagName === 'td')
+	                                if (!firstCell) return false
+	                                const text = extractTextFromMarkdownNode(firstCell).trim()
+	                                return findBestWrongPracticeExamQuestionForTableTerm(text) !== null
+	                              })
+	                            })
+
+	                            if (!hasMatchingRow) {
+	                              return <table>{children}</table>
+	                            }
+
+	                            // Find the first matching row to get the question
+	                            let matchedQuestion: WrongPracticeExamQuestion | null = null
+	                            tableNode?.children?.forEach((tbody: any) => {
+	                              if (tbody.tagName === 'tbody' && !matchedQuestion) {
+	                                tbody.children?.forEach((tr: any) => {
+	                                  if (!matchedQuestion) {
+	                                    const firstCell = tr.children?.find((cell: any) => cell.tagName === 'td')
+	                                    if (firstCell) {
+	                                      const text = extractTextFromMarkdownNode(firstCell).trim()
+	                                      matchedQuestion = findBestWrongPracticeExamQuestionForTableTerm(text)
+	                                    }
+	                                  }
+	                                })
+	                              }
+	                            })
+
+	                            return (
+	                              <div className="relative">
+	                                <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
+	                                  <button
+	                                    type="button"
+	                                    className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
+	                                    onClick={() => {
+	                                      if (matchedQuestion) {
+	                                        setActiveMissedQuestion(matchedQuestion)
+	                                        setMissedQuestionDialogOpen(true)
+	                                      }
+	                                    }}
+	                                    aria-label="Review missed practice exam question"
+	                                    title="Review missed practice exam question"
+	                                  >
+	                                    <VariableStar />
+	                                  </button>
+	                                </span>
+	                                <table>{children}</table>
+	                              </div>
 	                            )
 	                          },
 	                          tr: ({ node, children }) => {
