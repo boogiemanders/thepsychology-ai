@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react'
 
 const STAR_COUNT = 8
 const STAR_IMAGES = Array.from({ length: STAR_COUNT }, (_, i) => `/images/stars/star-${i + 1}.png`)
+const STAR_HOVER_GIF = '/images/stars/star-hover.gif'
 
 // Get a random star index different from the last one
 function getNextStarIndex(lastIndex: number): number {
@@ -21,6 +22,7 @@ export function VariableStar({ className = "", onClick, title }: {
 }) {
   const lastIndexRef = useRef(-1)
   const [starSrc, setStarSrc] = useState('')
+  const [isHovered, setIsHovered] = useState(false)
 
   useEffect(() => {
     const nextIndex = getNextStarIndex(lastIndexRef.current)
@@ -30,18 +32,30 @@ export function VariableStar({ className = "", onClick, title }: {
 
   if (!starSrc) return null
 
+  const displaySrc = isHovered ? STAR_HOVER_GIF : starSrc
+
   if (onClick) {
     return (
       <button
         type="button"
-        className={className}
+        className={`cursor-pointer ${className}`}
         onClick={onClick}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         title={title}
       >
-        <img src={starSrc} alt="Star" className="inline-block w-5 h-5 dark:invert" />
+        <img src={displaySrc} alt="Star" className="inline-block w-5 h-5 dark:invert" />
       </button>
     )
   }
 
-  return <img src={starSrc} alt="Star" className={`inline-block w-5 h-5 dark:invert ${className}`} />
+  return (
+    <img
+      src={displaySrc}
+      alt="Star"
+      className={`inline-block w-5 h-5 dark:invert cursor-pointer ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    />
+  )
 }
