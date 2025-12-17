@@ -2056,24 +2056,20 @@ export function TopicTeacherContent() {
 	                            }
 
 	                            return (
-	                              <td>
-	                                <div className="relative">
-	                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center text-base leading-none">
-	                                    <button
-	                                      type="button"
-	                                      className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
-	                                      onClick={() => {
-	                                        setActiveMissedQuestion(matched)
-	                                        setMissedQuestionDialogOpen(true)
-	                                      }}
-	                                      aria-label="Review missed practice exam question"
-	                                      title="Review missed practice exam question"
-	                                    >
-	                                      <VariableStar />
-	                                    </button>
-	                                  </span>
-	                                  {children}
-	                                </div>
+	                              <td className="relative">
+	                                <button
+	                                  type="button"
+	                                  className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+	                                  onClick={() => {
+	                                    setActiveMissedQuestion(matched)
+	                                    setMissedQuestionDialogOpen(true)
+	                                  }}
+	                                  aria-label="Review missed practice exam question"
+	                                  title="Review missed practice exam question"
+	                                >
+	                                  <VariableStar />
+	                                </button>
+	                                {children}
 	                              </td>
 	                            )
 	                          },
