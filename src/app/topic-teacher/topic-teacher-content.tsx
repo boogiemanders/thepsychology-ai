@@ -1972,9 +1972,9 @@ export function TopicTeacherContent() {
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
 
                             return (
-                              <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
+                              <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
+                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
                                     {quizWrong && <span>🍎</span>}
                                     {examWrong && <VariableStar className="ml-0.5" />}
                                   </span>
@@ -1989,9 +1989,9 @@ export function TopicTeacherContent() {
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
                             return (
-                              <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
+                              <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
+                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
                                     {quizWrong && <span>🍎</span>}
                                     {examWrong && <VariableStar className="ml-0.5" />}
                                   </span>
@@ -2006,9 +2006,9 @@ export function TopicTeacherContent() {
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
                             return (
-                              <div className={`transition-colors ${showIcon ? 'relative pl-10' : ''}`}>
+                              <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute left-0 top-1 w-8 flex items-center justify-center text-base leading-none">
+                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
                                     {quizWrong && <span>🍎</span>}
                                     {examWrong && <VariableStar className="ml-0.5" />}
                                   </span>
@@ -2031,9 +2031,9 @@ export function TopicTeacherContent() {
 	                            const showIcon = quizWrong || examWrong
 
 	                            return (
-	                              <li className={showIcon ? 'relative pl-10' : ''}>
+	                              <li className={showIcon ? 'relative' : ''}>
 	                                {showIcon && (
-	                                  <span className="absolute -left-8 top-1 w-8 flex items-center justify-center text-base leading-none">
+	                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
 	                                    {quizWrong && <span>🍎</span>}
 	                                    {examWrong && <VariableStar />}
 	                                  </span>
@@ -2069,32 +2069,25 @@ export function TopicTeacherContent() {
 	                              return <tr>{children}</tr>
 	                            }
 	
-	                            const appleButton = (
-	                              <button
-	                                type="button"
-	                                className="apple-pulsate mt-0.5 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
-	                                onClick={() => {
-	                                  setActiveMissedQuestion(matched)
-	                                  setMissedQuestionDialogOpen(true)
-	                                }}
-	                                aria-label="Review missed practice exam question"
-	                                title="Review missed practice exam question"
-	                              >
-	                                <VariableStar />
-	                              </button>
+	                            return (
+	                              <tr className="relative">
+	                                <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
+	                                  <button
+	                                    type="button"
+	                                    className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
+	                                    onClick={() => {
+	                                      setActiveMissedQuestion(matched)
+	                                      setMissedQuestionDialogOpen(true)
+	                                    }}
+	                                    aria-label="Review missed practice exam question"
+	                                    title="Review missed practice exam question"
+	                                  >
+	                                    <VariableStar />
+	                                  </button>
+	                                </span>
+	                                {children}
+	                              </tr>
 	                            )
-	
-	                            const existingChildren = (first.props as any).children
-	                            const injectedFirst = cloneElement(first as any, {
-	                              children: (
-	                                <div className="flex items-start gap-2">
-	                                  {appleButton}
-	                                  <div className="min-w-0">{existingChildren}</div>
-	                                </div>
-	                              ),
-	                            })
-	
-	                            return <tr>{[injectedFirst, ...childArray.slice(1)]}</tr>
 	                          },
 	                          thead: ({ children }) => {
 	                            return (
