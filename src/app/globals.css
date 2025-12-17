@@ -532,6 +532,15 @@ strong, b {
   opacity: 0.4;
 }
 
+/* Theory diagrams - invert in dark mode for white text visibility */
+.theory-diagram {
+  filter: none;
+}
+
+.dark .theory-diagram {
+  filter: invert(1) brightness(1.05);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

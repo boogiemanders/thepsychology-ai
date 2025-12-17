@@ -19,6 +19,8 @@ Understanding organizational theories is really about understanding how perspect
 
 Let's walk through each major theory chronologically, so you can see this evolution unfold.
 
+![Organizational theories visualization](/images/topics/3-5-6-organizational-psychology/organizational-theories/organizational-theories-diagram.png)
+
 ## Taylor's Scientific Management: The Efficiency Era
 
 Frederick Taylor introduced scientific management in 1911, and his approach dominated early 20th-century thinking about organizations. His core belief was simple: there's one best way to do any job, and science can find it.
@@ -205,7 +207,7 @@ It's really about understanding organizations as dynamic entities in constant in
 - **Weber** = Web of rules (bureaucracy's formal procedures)
 - **Mayo** = Mayo sounds like "My, oh!" (the surprise discovery at Hawthorne)
 - **McGregor** = X and Y are letters, think alphabet → assumptions shape reality
-- **Katz & Kahn** = K sounds like "cycle" → cycles of inputs and outputs
+- **Katz & Kahn** = Think "Open Can" → Organizations are open systems that constantly exchange with their environment through input-throughput-output cycles (like how your body takes in food/oxygen, processes it, outputs energy/waste)
 
 **Remember the paradigm shifts:**
 - Taylor: Workers = Economic beings

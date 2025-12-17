@@ -1773,7 +1773,7 @@ export function TopicTeacherContent() {
                       [&_ol]:my-5 [&_ol]:ml-5 [&_ol>li]:my-2.5 [&_ol>li]:text-base [&_ol>li]:leading-relaxed
                       [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 [&_a:hover]:text-primary/80 [&_a:hover]:no-underline
                       [&_hr]:my-8 [&_hr]:border-border/30
-                      [&_img]:rounded-lg [&_img]:my-6 [&_img]:shadow-md
+                      [&_img]:my-6
                       [&_code]:bg-secondary/50 [&_code]:text-foreground [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm [&_code]:font-mono
                       [&_pre]:bg-secondary/30 [&_pre]:border [&_pre]:border-border/50 [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:my-5 [&_pre_code]:bg-transparent [&_pre_code]:text-foreground
                       [&_blockquote]:border-l-4 [&_blockquote]:border-primary/30 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:my-5 [&_blockquote]:text-foreground/80
@@ -2098,12 +2098,14 @@ export function TopicTeacherContent() {
                                 />
                               )
                             }
+                            // Add theory-diagram class for images from organizational-theories path
+                            const isTheoryDiagram = src && src.includes('organizational-theories')
                             // Regular images
                             return (
                               <img
                                 src={src}
                                 alt={alt || ''}
-                                className="rounded-lg my-6 shadow-md max-w-full"
+                                className={`my-6 max-w-full ${isTheoryDiagram ? 'theory-diagram' : ''}`}
                               />
                             )
                           },
