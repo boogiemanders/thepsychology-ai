@@ -2042,50 +2042,32 @@ export function TopicTeacherContent() {
 	                              </li>
 	                            )
 	                          },
-	                          table: ({ node, children }) => {
-	                            // Check if any row in the table matches wrong exam questions
-	                            const tableNode = node as any
-	                            const hasMatchingRow = tableNode?.children?.some((row: any) => {
-	                              if (row.tagName !== 'tbody') return false
-	                              return row.children?.some((tr: any) => {
-	                                const firstCell = tr.children?.find((cell: any) => cell.tagName === 'td')
-	                                if (!firstCell) return false
-	                                const text = extractTextFromMarkdownNode(firstCell).trim()
-	                                return findBestWrongPracticeExamQuestionForTableTerm(text) !== null
-	                              })
-	                            })
+	                          td: ({ node, children }) => {
+	                            // Extract text content from the cell
+	                            const cellText = extractTextFromMarkdownNode(node as any).trim()
+	                            const matched = findBestWrongPracticeExamQuestionForTableTerm(cellText)
 
-	                            if (!hasMatchingRow) {
-	                              return <table>{children}</table>
+	                            if (!matched) {
+	                              return <td>{children}</td>
 	                            }
 
-	                            // Find the first matching row to get the question
-	                            let matchedQuestion: WrongPracticeExamQuestion | null = null
-	                            tableNode?.children?.forEach((tbody: any) => {
-	                              if (tbody.tagName === 'tbody' && !matchedQuestion) {
-	                                tbody.children?.forEach((tr: any) => {
-	                                  if (!matchedQuestion) {
-	                                    const firstCell = tr.children?.find((cell: any) => cell.tagName === 'td')
-	                                    if (firstCell) {
-	                                      const text = extractTextFromMarkdownNode(firstCell).trim()
-	                                      matchedQuestion = findBestWrongPracticeExamQuestionForTableTerm(text)
-	                                    }
-	                                  }
-	                                })
-	                              }
-	                            })
+	                            // Only add star to first cell (check if this is the first td in the row)
+	                            const parent = (node as any)?.parent
+	                            const isFirstCell = parent?.children?.findIndex((child: any) => child.tagName === 'td' && child === node) === 0
+
+	                            if (!isFirstCell) {
+	                              return <td>{children}</td>
+	                            }
 
 	                            return (
-	                              <div className="relative">
+	                              <td className="relative">
 	                                <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
 	                                  <button
 	                                    type="button"
 	                                    className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
 	                                    onClick={() => {
-	                                      if (matchedQuestion) {
-	                                        setActiveMissedQuestion(matchedQuestion)
-	                                        setMissedQuestionDialogOpen(true)
-	                                      }
+	                                      setActiveMissedQuestion(matched)
+	                                      setMissedQuestionDialogOpen(true)
 	                                    }}
 	                                    aria-label="Review missed practice exam question"
 	                                    title="Review missed practice exam question"
@@ -2093,8 +2075,8 @@ export function TopicTeacherContent() {
 	                                    <VariableStar />
 	                                  </button>
 	                                </span>
-	                                <table>{children}</table>
-	                              </div>
+	                                {children}
+	                              </td>
 	                            )
 	                          },
 	                          tr: ({ node, children }) => {
