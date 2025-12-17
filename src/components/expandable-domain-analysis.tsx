@@ -1,13 +1,16 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'motion/react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { CheckCircle2, XCircle, Circle } from 'lucide-react'
+import { CheckCircle2, XCircle, Circle, BookOpen } from 'lucide-react'
 import type { DomainPerformance } from '@/lib/priority-calculator'
+import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
+import { getLessonDisplayName } from '@/lib/topic-display-names'
 
 interface Question {
   id: number
@@ -218,6 +221,20 @@ export function ExpandableDomainAnalysis({
     return `${optionLetter}. ${answer}`
   }
 
+  const getLessonLinkInfo = (question: Question) => {
+    const meta = deriveTopicMetaFromSourceFile(question.source_file)
+    if (!meta?.topicName) return null
+
+    const displayName = getLessonDisplayName(meta.topicName)
+    const domainId = meta.domainId || (question.is_org_psych ? '3-5-6' : '')
+
+    if (!domainId) return null
+
+    const href = `/topic-teacher?domain=${encodeURIComponent(domainId)}&topic=${encodeURIComponent(meta.topicName)}&hasExamResults=true`
+
+    return { displayName, href }
+  }
+
   const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'correct':
@@ -416,6 +433,25 @@ export function ExpandableDomainAnalysis({
                                         </p>
                                       </div>
                                     ) : null}
+
+                                    {/* Lesson Link */}
+                                    {(() => {
+                                      const lessonInfo = getLessonLinkInfo(question)
+                                      if (!lessonInfo) return null
+                                      return (
+                                        <div className="pt-2 border-t border-border/50">
+                                          <Link
+                                            href={lessonInfo.href}
+                                            className="inline-flex items-center gap-2 text-sm text-brand-soft-blue hover:underline"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                          >
+                                            <BookOpen size={14} />
+                                            <span>Study this topic: {lessonInfo.displayName}</span>
+                                          </Link>
+                                        </div>
+                                      )
+                                    })()}
                                   </div>
                                 </AccordionContent>
                               </AccordionItem>
@@ -650,6 +686,25 @@ export function ExpandableDomainAnalysis({
                                       </p>
                                     </div>
                                   ) : null}
+
+                                  {/* Lesson Link */}
+                                  {(() => {
+                                    const lessonInfo = getLessonLinkInfo(question)
+                                    if (!lessonInfo) return null
+                                    return (
+                                      <div className="pt-2 border-t border-border/50">
+                                        <Link
+                                          href={lessonInfo.href}
+                                          className="inline-flex items-center gap-2 text-sm text-brand-soft-blue hover:underline"
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                        >
+                                          <BookOpen size={14} />
+                                          <span>Study this topic: {lessonInfo.displayName}</span>
+                                        </Link>
+                                      </div>
+                                    )
+                                  })()}
                                 </div>
                               </AccordionContent>
                             </AccordionItem>

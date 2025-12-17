@@ -158,6 +158,9 @@ export function TopicTeacherContent() {
     useState(false)
   const [practiceExamWrongQuestionsError, setPracticeExamWrongQuestionsError] =
     useState<string | null>(null)
+  const [matchedExamTerms, setMatchedExamTerms] = useState<string[]>([])
+  // Map from question index to best matched term (keeps only one term per question)
+  const matchedExamTermsRef = useRef<Map<number, string>>(new Map())
   const [missedQuestionDialogOpen, setMissedQuestionDialogOpen] = useState(false)
   const [activeMissedQuestion, setActiveMissedQuestion] =
     useState<WrongPracticeExamQuestion | null>(null)
@@ -655,9 +658,13 @@ export function TopicTeacherContent() {
   }, [decodedTopic, hasExamResults])
 
   // Load latest practice-exam wrong questions for table-row 🍏 mapping
+  // Always fetch when user is logged in - API returns 404 if no results (handled gracefully)
   useEffect(() => {
     if (!user?.id || !decodedTopic) return
-    if (!hasExamResults && highlightData.examWrongSections.length === 0) return
+
+    // Reset matched terms when topic changes
+    matchedExamTermsRef.current.clear()
+    setMatchedExamTerms([])
 
     let cancelled = false
     const controller = new AbortController()
@@ -689,13 +696,6 @@ export function TopicTeacherContent() {
           throw new Error(data?.error || 'Failed to load practice exam results')
         }
 
-        // Debug: Log API response
-        console.log('[Topic Teacher] API response:', {
-          questionsCount: data.results?.questions?.length,
-          sampleQuestion: data.results?.questions?.[0],
-          examType: data.results?.examType,
-        })
-
         const questions: PracticeExamQuestion[] = Array.isArray(data.results.questions)
           ? data.results.questions
           : []
@@ -703,28 +703,29 @@ export function TopicTeacherContent() {
 
         const wrong: WrongPracticeExamQuestion[] = []
 
+        // Normalize topic names for comparison (remove punctuation, extra spaces)
+        const normalizeTopic = (s: string) =>
+          s.toLowerCase()
+            .replace(/[,.:;'"!?()]/g, '')
+            .replace(/\s+/g, ' ')
+            .trim()
+
+        const normalizedUrlTopic = normalizeTopic(decodedTopic || '')
+
         questions.forEach((question, index) => {
           const selectedAnswer =
             selectedAnswers[index as any] ?? selectedAnswers[String(index)] ?? null
+
           if (!selectedAnswer) return
           if (selectedAnswer === question.correct_answer) return
 
           const meta = deriveTopicMetaFromQuestionSource(question)
           const questionTopic = (question.topicName || meta?.topicName || '').trim()
-
-          // Debug: Log topic matching
-          console.log('[Topic Teacher] Question topic matching:', {
-            index,
-            questionTopicName: question.topicName,
-            sourceFile: (question as any).source_file,
-            derivedTopic: meta?.topicName,
-            finalQuestionTopic: questionTopic,
-            normalizedTopicName,
-            match: questionTopic.toLowerCase() === normalizedTopicName,
-          })
-
           if (!questionTopic) return
-          if (questionTopic.toLowerCase() !== normalizedTopicName) return
+
+          const normalizedQuestionTopic = normalizeTopic(questionTopic)
+          const topicMatches = normalizedQuestionTopic === normalizedUrlTopic
+          if (!topicMatches) return
 
           wrong.push({
             questionIndex: index,
@@ -758,7 +759,7 @@ export function TopicTeacherContent() {
       cancelled = true
       controller.abort()
     }
-  }, [user?.id, decodedTopic, hasExamResults, highlightData.examWrongSections.length, normalizedTopicName])
+  }, [user?.id, decodedTopic])
 
   // Initialize with lesson
   useEffect(() => {
@@ -1210,7 +1211,7 @@ export function TopicTeacherContent() {
         .trim()
     }
 
-    return practiceExamWrongQuestions.map((entry) => {
+    const prepared = practiceExamWrongQuestions.map((entry) => {
       const { question } = entry
       return {
         entry,
@@ -1222,6 +1223,8 @@ export function TopicTeacherContent() {
         )} `,
       }
     })
+
+    return prepared
   }, [practiceExamWrongQuestions])
 
   const isAcronymLikeTerm = (term: string): boolean => {
@@ -1244,20 +1247,62 @@ export function TopicTeacherContent() {
 
     const needle = ` ${term} `
 
+    // Also extract significant words (4+ chars) for partial matching
+    const significantWords = term.split(/\s+/).filter(w => w.length >= 4)
+
     let best: WrongPracticeExamQuestion | null = null
     let bestScore = 0
 
     for (const prepared of preparedPracticeExamWrongQuestions) {
       let score = 0
 
+      // Exact phrase matching (original logic)
       if (prepared.stem.includes(needle)) score += 4
       if (prepared.correctAnswer.includes(needle)) score += 3
       if (prepared.explanation.includes(needle)) score += 2
       if (prepared.options.includes(needle)) score += 1
 
+      // Partial word matching: if most significant words from table term appear in question
+      if (score === 0 && significantWords.length >= 2) {
+        const matchedWords = significantWords.filter(word =>
+          prepared.stem.includes(` ${word} `) ||
+          prepared.stem.includes(` ${word}s `) ||  // plural
+          prepared.explanation.includes(` ${word} `)
+        )
+        // If at least 2/3 of significant words match, give partial score
+        if (matchedWords.length >= Math.ceil(significantWords.length * 0.6)) {
+          score = 2 // explanation-level hit
+        }
+      }
+
       if (score > bestScore) {
         bestScore = score
         best = prepared.entry
+      }
+    }
+
+    // Track matched terms for the header display (one best term per question)
+    if (bestScore >= 2 && best) {
+      const genericTerms = ['workers', 'theory', 'management', 'supervisor', 'employee', 'work', 'motivation', 'behavior']
+      const normalizedRaw = raw.toLowerCase().trim()
+      const words = normalizedRaw.split(/\s+/)
+
+      // Only track if NOT a generic single word
+      const isGeneric = genericTerms.includes(normalizedRaw) ||
+                        (words.length === 1 && normalizedRaw.length < 8 && !normalizedRaw.includes('/'))
+
+      if (!isGeneric) {
+        const questionIndex = best.questionIndex
+        const existingTerm = matchedExamTermsRef.current.get(questionIndex)
+
+        // Keep the longer/more specific term for each question
+        if (!existingTerm || raw.length > existingTerm.length) {
+          matchedExamTermsRef.current.set(questionIndex, raw)
+          // Batch state updates to avoid too many re-renders
+          setTimeout(() => {
+            setMatchedExamTerms(Array.from(matchedExamTermsRef.current.values()))
+          }, 0)
+        }
       }
     }
 
@@ -1274,6 +1319,62 @@ export function TopicTeacherContent() {
       return node.children.map(extractTextFromMarkdownNode).join('')
     }
     return ''
+  }
+
+  // Extract potential terms from paragraph text for matching against wrong questions
+  // Only extract specific terms (proper nouns, Theory X/Y patterns) - NOT generic words
+  const extractPotentialTerms = (text: string): string[] => {
+    if (!text) return []
+
+    const terms = new Set<string>()
+
+    // Match possessive proper nouns followed by theory/concept (e.g., "McGregor's Theory X/Y")
+    const possessivePatterns = text.match(/[A-Z][a-z]+'s\s+(?:Theory|Concept|Model|Approach|Hierarchy|Effect)(?:\s+[A-Z](?:\/[A-Z])?)?/g)
+    if (possessivePatterns) {
+      possessivePatterns.forEach(pattern => terms.add(pattern))
+    }
+
+    // Match "Theory X", "Theory Y", "Theory X/Y" patterns (specific letter designations)
+    const theoryLetterPatterns = text.match(/Theory\s+[A-Z](?:\s*\/\s*[A-Z])?/gi)
+    if (theoryLetterPatterns) {
+      theoryLetterPatterns.forEach(pattern => terms.add(pattern))
+    }
+
+    // Match known psychologist/researcher names (specific proper nouns)
+    const properNouns = text.match(/\b(McGregor|Maslow|Herzberg|Vroom|Locke|Adams|Bandura|Skinner|Freud|Jung|Piaget|Erikson|Kohlberg|Ainsworth|Bowlby)\b/g)
+    if (properNouns) {
+      properNouns.forEach(name => terms.add(name))
+    }
+
+    return Array.from(terms)
+  }
+
+  // Check if a term is too generic to trigger a paragraph match
+  const isGenericTerm = (term: string): boolean => {
+    const generic = ['workers', 'theory', 'management', 'supervisor', 'employee', 'work', 'motivation', 'behavior', 'mayo', 'hawthorne']
+    const normalized = term.toLowerCase().trim()
+    // "Mayo" and "Hawthorne" are generic here because they refer to different studies, not the wrong question's topic
+    return generic.includes(normalized)
+  }
+
+  // Check if a paragraph matches any wrong practice exam question
+  const findBestWrongPracticeExamQuestionForParagraph = (
+    paragraphText: string
+  ): WrongPracticeExamQuestion | null => {
+    if (!paragraphText || preparedPracticeExamWrongQuestions.length === 0) return null
+
+    const potentialTerms = extractPotentialTerms(paragraphText)
+
+    for (const term of potentialTerms) {
+      // Skip generic terms that would cause false positives
+      if (isGenericTerm(term)) continue
+
+      // Use the existing matching function
+      const matched = findBestWrongPracticeExamQuestionForTableTerm(term)
+      if (matched) return matched
+    }
+
+    return null
   }
 
   const getAnswerLabel = (
@@ -1590,26 +1691,28 @@ export function TopicTeacherContent() {
           </motion.div>
         )}
 
-	        {highlightData.examWrongSections.length > 0 && (
-	          <motion.div
-	            initial={{ opacity: 0 }}
-	            animate={{ opacity: 1 }}
-	            className="mb-4"
-	          >
-	            <p className="text-sm text-foreground/80">
-	              🍏 Most recent practice exam
-	              {highlightData.examWrongSections.length > 0
-	                ? `: ${formatSectionList(highlightData.examWrongSections)}`
-	                : ''}
-	              {isLoadingPracticeExamWrongQuestions ? (
-	                <span className="ml-2 text-muted-foreground">
-	                  Loading missed questions…
-	                </span>
-	              ) : practiceExamWrongQuestionsError ? (
-	                <span className="ml-2 text-destructive">
-	                  Couldn&apos;t load missed questions
-	                </span>
-	              ) : null}
+        {(highlightData.examWrongSections.length > 0 || matchedExamTerms.length > 0) && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mb-4"
+          >
+            <p className="text-sm text-foreground/80">
+              🍏 Most recent practice exam
+              {matchedExamTerms.length > 0
+                ? `: ${matchedExamTerms.join(', ')}`
+                : highlightData.examWrongSections.length > 0
+                  ? `: ${formatSectionList(highlightData.examWrongSections)}`
+                  : ''}
+              {isLoadingPracticeExamWrongQuestions ? (
+                <span className="ml-2 text-muted-foreground">
+                  Loading missed questions…
+                </span>
+              ) : practiceExamWrongQuestionsError ? (
+                <span className="ml-2 text-destructive">
+                  Couldn&apos;t load missed questions
+                </span>
+              ) : null}
 	            </p>
 	          </motion.div>
 	        )}
@@ -1733,6 +1836,35 @@ export function TopicTeacherContent() {
                             }
 
                             currentSectionRef.current = text
+
+                            // Check if header matches a wrong practice exam question
+                            // Use paragraph matching which extracts terms like "Theory Y" from the header
+                            const matched = preparedPracticeExamWrongQuestions.length > 0
+                              ? findBestWrongPracticeExamQuestionForParagraph(text)
+                              : null
+
+                            if (matched) {
+                              return (
+                                <TypographyH2>
+                                  <span className="inline-flex items-center gap-2">
+                                    <button
+                                      type="button"
+                                      className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
+                                      onClick={() => {
+                                        setActiveMissedQuestion(matched)
+                                        setMissedQuestionDialogOpen(true)
+                                      }}
+                                      aria-label="Review missed practice exam question"
+                                      title="Review missed practice exam question"
+                                    >
+                                      🍏
+                                    </button>
+                                    <span>{children}</span>
+                                  </span>
+                                </TypographyH2>
+                              )
+                            }
+
                             return (
                               <TypographyH2>
                                 {children}
@@ -1759,31 +1891,84 @@ export function TopicTeacherContent() {
                             }
 
                             currentSectionRef.current = text
+
+                            // Check if header matches a wrong practice exam question
+                            // Use paragraph matching which extracts terms like "Theory Y" from the header
+                            const matched = preparedPracticeExamWrongQuestions.length > 0
+                              ? findBestWrongPracticeExamQuestionForParagraph(text)
+                              : null
+
+                            if (matched) {
+                              return (
+                                <TypographyH3>
+                                  <span className="inline-flex items-center gap-2">
+                                    <button
+                                      type="button"
+                                      className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
+                                      onClick={() => {
+                                        setActiveMissedQuestion(matched)
+                                        setMissedQuestionDialogOpen(true)
+                                      }}
+                                      aria-label="Review missed practice exam question"
+                                      title="Review missed practice exam question"
+                                    >
+                                      🍏
+                                    </button>
+                                    <span>{children}</span>
+                                  </span>
+                                </TypographyH3>
+                              )
+                            }
+
                             return (
                               <TypographyH3>
                                 {children}
-	                              </TypographyH3>
-	                            )
-	                          },
-	                          p: ({ children }) => {
-	                            const rawText = Children.toArray(children).join('')
-	                            if (rawText.includes('[LOADING_METAPHORS]')) {
-	                              return (
-	                                <div className="flex flex-col items-center justify-center py-8 gap-3">
-	                                  <div className="w-24 h-24">
-	                                    <Lottie animationData={textLoadingAnimation} loop={true} />
-	                                  </div>
-	                                  <p className="text-sm text-muted-foreground">
-	                                    Personalizing metaphors for your interests...
-	                                  </p>
-	                                </div>
-	                              )
-	                            }
+                              </TypographyH3>
+                            )
+                          },
+                          p: ({ children }) => {
+                            const rawText = Children.toArray(children).join('')
+                            if (rawText.includes('[LOADING_METAPHORS]')) {
+                              return (
+                                <div className="flex flex-col items-center justify-center py-8 gap-3">
+                                  <div className="w-24 h-24">
+                                    <Lottie animationData={textLoadingAnimation} loop={true} />
+                                  </div>
+                                  <p className="text-sm text-muted-foreground">
+                                    Personalizing metaphors for your interests...
+                                  </p>
+                                </div>
+                              )
+                            }
 
-	                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
-	                              getHighlightFlags(currentSectionRef.current)
-	
-	                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+                            // Check for term-based match (clickable apple for wrong practice exam questions)
+                            const termMatch = findBestWrongPracticeExamQuestionForParagraph(rawText)
+
+                            if (termMatch) {
+                              return (
+                                <div className="relative pl-10">
+                                  <button
+                                    type="button"
+                                    className="apple-pulsate absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+                                    onClick={() => {
+                                      setActiveMissedQuestion(termMatch)
+                                      setMissedQuestionDialogOpen(true)
+                                    }}
+                                    aria-label="Review missed practice exam question"
+                                    title="Review missed practice exam question"
+                                  >
+                                    🍏
+                                  </button>
+                                  <p className="m-0">{children}</p>
+                                </div>
+                              )
+                            }
+
+                            // Fall back to section-based highlighting
+                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
+                              getHighlightFlags(currentSectionRef.current)
+
+                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
                             const icons =
                               (quizWrong ? '🍎' : '') + (examWrong ? '🍏' : '')
 

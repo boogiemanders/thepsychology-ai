@@ -174,11 +174,13 @@
     border-color: var(--pulse-color, rgba(255, 255, 255, 0.4));
   }
 
-  .apple-pulsate {
-    transition: transform 0.2s ease;
-  }
+}
 
-  .apple-pulsate:hover {
-    transform: scale(1.25);
-  }
+.apple-pulsate {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.apple-pulsate:hover {
+  transform: scale(1.25);
 }
