@@ -1780,7 +1780,7 @@ export function TopicTeacherContent() {
                       [&_blockquote]:border-l-4 [&_blockquote]:border-primary/30 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:my-5 [&_blockquote]:text-foreground/80
                       [&_table]:w-full [&_table]:border-collapse [&_table]:my-5 [&_table]:text-sm [&_table]:overflow-visible
                       [&_th]:border [&_th]:border-border [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground
-                      [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90">
+                      [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90 [&_td]:overflow-visible">
 	                      <ReactMarkdown
 	                        remarkPlugins={[remarkGfm]}
 	                        components={{
