@@ -1778,7 +1778,7 @@ export function TopicTeacherContent() {
                       [&_code]:bg-secondary/50 [&_code]:text-foreground [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm [&_code]:font-mono
                       [&_pre]:bg-secondary/30 [&_pre]:border [&_pre]:border-border/50 [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:my-5 [&_pre_code]:bg-transparent [&_pre_code]:text-foreground
                       [&_blockquote]:border-l-4 [&_blockquote]:border-primary/30 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:my-5 [&_blockquote]:text-foreground/80
-                      [&_table]:w-full [&_table]:border-collapse [&_table]:my-5 [&_table]:text-sm [&_table]:overflow-visible
+                      [&_table]:w-full [&_table]:border-separate [&_table]:border-spacing-0 [&_table]:my-5 [&_table]:text-sm [&_table]:overflow-visible
                       [&_th]:border [&_th]:border-border [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground
                       [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90 [&_td]:overflow-visible">
 	                      <ReactMarkdown
@@ -1846,23 +1846,21 @@ export function TopicTeacherContent() {
 
                             if (matched) {
                               return (
-                                <TypographyH2>
-                                  <span className="inline-flex items-center gap-2">
-                                    <button
-                                      type="button"
-                                      className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
-                                      onClick={() => {
-                                        setActiveMissedQuestion(matched)
-                                        setMissedQuestionDialogOpen(true)
-                                      }}
-                                      aria-label="Review missed practice exam question"
-                                      title="Review missed practice exam question"
-                                    >
-                                      <VariableStar />
-                                    </button>
-                                    <span>{children}</span>
-                                  </span>
-                                </TypographyH2>
+                                <div className="relative">
+                                  <button
+                                    type="button"
+                                    className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+                                    onClick={() => {
+                                      setActiveMissedQuestion(matched)
+                                      setMissedQuestionDialogOpen(true)
+                                    }}
+                                    aria-label="Review missed practice exam question"
+                                    title="Review missed practice exam question"
+                                  >
+                                    <VariableStar />
+                                  </button>
+                                  <TypographyH2>{children}</TypographyH2>
+                                </div>
                               )
                             }
 
@@ -1901,23 +1899,21 @@ export function TopicTeacherContent() {
 
                             if (matched) {
                               return (
-                                <TypographyH3>
-                                  <span className="inline-flex items-center gap-2">
-                                    <button
-                                      type="button"
-                                      className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
-                                      onClick={() => {
-                                        setActiveMissedQuestion(matched)
-                                        setMissedQuestionDialogOpen(true)
-                                      }}
-                                      aria-label="Review missed practice exam question"
-                                      title="Review missed practice exam question"
-                                    >
-                                      <VariableStar />
-                                    </button>
-                                    <span>{children}</span>
-                                  </span>
-                                </TypographyH3>
+                                <div className="relative">
+                                  <button
+                                    type="button"
+                                    className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+                                    onClick={() => {
+                                      setActiveMissedQuestion(matched)
+                                      setMissedQuestionDialogOpen(true)
+                                    }}
+                                    aria-label="Review missed practice exam question"
+                                    title="Review missed practice exam question"
+                                  >
+                                    <VariableStar />
+                                  </button>
+                                  <TypographyH3>{children}</TypographyH3>
+                                </div>
                               )
                             }
 
