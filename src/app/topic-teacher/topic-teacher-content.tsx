@@ -2052,42 +2052,8 @@ export function TopicTeacherContent() {
 	                              return <tr>{children}</tr>
 	                            }
 	
-	                            const firstCell = rowChildren.find((child) => child?.tagName === 'td')
-	                            const firstCellText = extractTextFromMarkdownNode(firstCell).trim()
-	                            const matched = findBestWrongPracticeExamQuestionForTableTerm(firstCellText)
-	                            if (!matched) {
-	                              return <tr>{children}</tr>
-	                            }
-	
-	                            const childArray = Children.toArray(children)
-	                            if (childArray.length === 0) {
-	                              return <tr>{children}</tr>
-	                            }
-	
-	                            const first = childArray[0]
-	                            if (!isValidElement(first)) {
-	                              return <tr>{children}</tr>
-	                            }
-	
-	                            return (
-	                              <tr className="relative">
-	                                <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
-	                                  <button
-	                                    type="button"
-	                                    className="apple-pulsate inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full"
-	                                    onClick={() => {
-	                                      setActiveMissedQuestion(matched)
-	                                      setMissedQuestionDialogOpen(true)
-	                                    }}
-	                                    aria-label="Review missed practice exam question"
-	                                    title="Review missed practice exam question"
-	                                  >
-	                                    <VariableStar />
-	                                  </button>
-	                                </span>
-	                                {children}
-	                              </tr>
-	                            )
+	                            // For tables, don't add stars - they interfere with table structure
+	                            return <tr>{children}</tr>
 	                          },
 	                          thead: ({ children }) => {
 	                            return (
