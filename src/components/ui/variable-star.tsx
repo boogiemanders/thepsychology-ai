@@ -15,15 +15,17 @@ function getNextStarIndex(lastIndex: number): number {
   return nextIndex
 }
 
-export function VariableStar({ className = "", onClick, title, color }: {
+export function VariableStar({ className = "", onClick, title, color, externalHoverState, onHoverChange }: {
   className?: string
   onClick?: () => void
   title?: string
   color?: string
+  externalHoverState?: boolean
+  onHoverChange?: (hovered: boolean) => void
 }) {
   const lastIndexRef = useRef(-1)
   const [starSrc, setStarSrc] = useState('')
-  const [isHovered, setIsHovered] = useState(false)
+  const [internalHovered, setInternalHovered] = useState(false)
 
   useEffect(() => {
     const nextIndex = getNextStarIndex(lastIndexRef.current)
@@ -33,7 +35,25 @@ export function VariableStar({ className = "", onClick, title, color }: {
 
   if (!starSrc) return null
 
+  // Use external hover state if provided, otherwise use internal state
+  const isHovered = externalHoverState !== undefined ? externalHoverState : internalHovered
   const displaySrc = isHovered ? STAR_HOVER_GIF : starSrc
+
+  const handleMouseEnter = () => {
+    if (onHoverChange) {
+      onHoverChange(true)
+    } else {
+      setInternalHovered(true)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (onHoverChange) {
+      onHoverChange(false)
+    } else {
+      setInternalHovered(false)
+    }
+  }
 
   // Determine if we should apply custom color
   const hasCustomColor = color && color !== '#000000'
@@ -53,8 +73,8 @@ export function VariableStar({ className = "", onClick, title, color }: {
         type="button"
         className={`cursor-pointer ${className}`}
         onClick={onClick}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         title={title}
       >
         <span style={hasCustomColor ? { display: 'inline-block', backgroundColor: color, WebkitMaskImage: `url(${displaySrc})`, WebkitMaskSize: 'contain', WebkitMaskRepeat: 'no-repeat', maskImage: `url(${displaySrc})`, maskSize: 'contain', maskRepeat: 'no-repeat', width: '32px', height: '32px' } : {}}>
@@ -68,8 +88,8 @@ export function VariableStar({ className = "", onClick, title, color }: {
     return (
       <span
         style={{ display: 'inline-block', backgroundColor: color, WebkitMaskImage: `url(${displaySrc})`, WebkitMaskSize: 'contain', WebkitMaskRepeat: 'no-repeat', maskImage: `url(${displaySrc})`, maskSize: 'contain', maskRepeat: 'no-repeat', width: '32px', height: '32px', cursor: 'pointer' }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       />
     )
   }
@@ -79,8 +99,8 @@ export function VariableStar({ className = "", onClick, title, color }: {
       src={displaySrc}
       alt="Star"
       className={`${imgClassName} cursor-pointer`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     />
   )
 }
