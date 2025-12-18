@@ -2390,7 +2390,41 @@ export function TopicTeacherContent() {
                             }
 
                             // Check for term-based match (clickable apple for wrong practice exam questions)
-                            const termMatch = findBestWrongPracticeExamQuestionForParagraph(rawText)
+                            let termMatch = findBestWrongPracticeExamQuestionForParagraph(rawText)
+
+                            // Also check if this paragraph is in a section that matches a question
+                            // and contains key terms from the question/explanation
+                            if (!termMatch && currentSectionRef.current) {
+                              const normalizedParagraph = rawText.toLowerCase()
+
+                              for (const wrongQ of practiceExamWrongQuestions) {
+                                const bestHeader = practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)
+
+                                // Check if we're in the section that matches this question
+                                if (bestHeader && labelsMatch(currentSectionRef.current, bestHeader)) {
+                                  // Extract key terms from question content
+                                  const questionText = (wrongQ.question.question || '').toLowerCase()
+                                  const explanation = (wrongQ.question.explanation || '').toLowerCase()
+                                  const combinedQuestionText = `${questionText} ${explanation}`
+
+                                  // Extract significant phrases (3+ word sequences)
+                                  const phrases = combinedQuestionText.match(/\b\w+(?:\s+\w+){2,}\b/g) || []
+
+                                  // Check if paragraph contains any significant phrases from the question
+                                  const hasMatchingPhrase = phrases.some(phrase => {
+                                    const words = phrase.split(/\s+/)
+                                    // Require at least 60% of words from the phrase to appear in paragraph
+                                    const matchingWords = words.filter(w => w.length > 3 && normalizedParagraph.includes(w))
+                                    return matchingWords.length >= Math.ceil(words.length * 0.6) && matchingWords.length >= 2
+                                  })
+
+                                  if (hasMatchingPhrase) {
+                                    termMatch = wrongQ
+                                    break
+                                  }
+                                }
+                              }
+                            }
 
                             if (termMatch) {
                               return (
