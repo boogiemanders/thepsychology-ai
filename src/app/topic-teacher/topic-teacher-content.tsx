@@ -1830,21 +1830,25 @@ export function TopicTeacherContent() {
         const lowerHeader = header.toLowerCase()
         if (lowerHeader.includes('key takeaways') || lowerHeader.includes('practice tips')) continue
 
-        // Extract significant words from header (4+ chars)
-        const headerWords = lowerHeader.split(/\s+/).filter(w => w.length >= 4)
+        // Extract significant words from header (4+ chars) and strip punctuation
+        const headerWords = lowerHeader
+          .split(/\s+/)
+          .map(w => w.replace(/[^a-z0-9]/g, '')) // Remove all non-alphanumeric characters
+          .filter(w => w.length >= 4)
 
         // Check if most header words appear in question/explanation
         const matchingWords = headerWords.filter(word => combinedText.includes(word))
 
-        // Require strong match (at least 60% of header words)
-        if (matchingWords.length >= Math.ceil(headerWords.length * 0.6) && matchingWords.length >= 2) {
+        // Require good match (at least 50% of header words, minimum 2 words)
+        // This allows headers with decorative subtitles like "Theory: The Catchy Subtitle"
+        if (matchingWords.length >= Math.ceil(headerWords.length * 0.5) && matchingWords.length >= 2) {
           // Score this match
           let score = matchingWords.length * 100
 
           // BONUS: Give huge boost if explanation directly mentions header topic
           // e.g., "Interference theory" in explanation should strongly match "Interference Theory: The Real Culprit"
           const explanationWords = headerWords.filter(word => explanation.includes(word))
-          if (explanationWords.length >= Math.ceil(headerWords.length * 0.6)) {
+          if (explanationWords.length >= Math.ceil(headerWords.length * 0.5)) {
             score += 10000 // Major bonus for explanation match
             console.log(`   🎯 Content match with explanation bonus: "${header}" score=${score} (matching: ${matchingWords.join(', ')})`)
           } else {
