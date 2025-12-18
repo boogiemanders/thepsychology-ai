@@ -1590,15 +1590,18 @@ export function TopicTeacherContent() {
 
       const normalizedHeader = bestHeader.toLowerCase()
 
-      // Extract significant words from the best header
-      // e.g., "Stimulus Generalization" -> ["stimulus", "generalization"]
-      const headerWords = normalizedHeader.split(/\s+/).filter(w => w.length > 3)
+      // Extract significant words from the best header and strip punctuation
+      // e.g., "Overshadowing: The Salience Effect" -> ["overshadowing", "salience", "effect"]
+      const headerWords = normalizedHeader
+        .split(/\s+/)
+        .map(w => w.replace(/[^a-z0-9]/g, '')) // Remove punctuation
+        .filter(w => w.length > 3)
 
       // Check if the list item contains most of these words
       const matchingWords = headerWords.filter(word => normalizedText.includes(word))
 
-      // Require a strong match (at least 60% of words)
-      if (matchingWords.length >= Math.ceil(headerWords.length * 0.6)) {
+      // Require a good match (at least 50% of words, to handle decorative subtitles)
+      if (matchingWords.length >= Math.ceil(headerWords.length * 0.5)) {
         return wrongQ
       }
     }
