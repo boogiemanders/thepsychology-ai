@@ -1818,7 +1818,10 @@ export function TopicTeacherContent() {
         const explanation = (wrongQ.question.explanation || '').toLowerCase()
         const combinedText = `${questionText} ${explanation}`
 
-        // Try to match headers based on question content
+        // Try to match headers based on question content - score all matches and pick best
+        let bestContentMatch: string | null = null
+        let bestContentScore = 0
+
         for (const header of headers) {
           const lowerHeader = header.toLowerCase()
           if (lowerHeader.includes('key takeaways') || lowerHeader.includes('practice tips')) continue
@@ -1831,18 +1834,38 @@ export function TopicTeacherContent() {
 
           // Require strong match (at least 60% of header words)
           if (matchingWords.length >= Math.ceil(headerWords.length * 0.6) && matchingWords.length >= 2) {
-            result.set(wrongQ.questionIndex, header)
-            matchedExamTermsRef.current.set(wrongQ.questionIndex, header)
-            break
+            // Score this match
+            let score = matchingWords.length * 100
+
+            // BONUS: Give huge boost if explanation directly mentions header topic
+            // e.g., "Interference theory" in explanation should strongly match "Interference Theory: The Real Culprit"
+            const explanationWords = headerWords.filter(word => explanation.includes(word))
+            if (explanationWords.length >= Math.ceil(headerWords.length * 0.6)) {
+              score += 10000 // Major bonus for explanation match
+            }
+
+            // Prefer longer/more specific headers
+            score += header.length
+
+            if (score > bestContentScore) {
+              bestContentScore = score
+              bestContentMatch = header
+            }
           }
+        }
+
+        if (bestContentMatch) {
+          result.set(wrongQ.questionIndex, bestContentMatch)
+          matchedExamTermsRef.current.set(wrongQ.questionIndex, bestContentMatch)
         }
       }
     }
 
-    // Update the displayed matched terms
+    // Update the displayed matched terms (deduplicate since multiple questions may match same header)
     if (result.size > 0) {
       setTimeout(() => {
-        setMatchedExamTerms(Array.from(matchedExamTermsRef.current.values()))
+        const uniqueHeaders = [...new Set(matchedExamTermsRef.current.values())]
+        setMatchedExamTerms(uniqueHeaders)
       }, 0)
     }
 
