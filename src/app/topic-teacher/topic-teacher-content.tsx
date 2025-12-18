@@ -1807,57 +1807,55 @@ export function TopicTeacherContent() {
         }
       }
 
-      if (bestHeader) {
-        result.set(wrongQ.questionIndex, bestHeader)
-        // Also track for the legend display
-        matchedExamTermsRef.current.set(wrongQ.questionIndex, bestHeader)
-      } else {
-        // Fall back to content-based matching when relatedSections is too generic
-        // Extract significant terms from the question text and explanation
-        const questionText = (wrongQ.question.question || '').toLowerCase()
-        const explanation = (wrongQ.question.explanation || '').toLowerCase()
-        const combinedText = `${questionText} ${explanation}`
+      // ALWAYS try content-based matching to compare against relatedSections match
+      // This ensures we pick the most specific header even when relatedSections is generic
+      const questionText = (wrongQ.question.question || '').toLowerCase()
+      const explanation = (wrongQ.question.explanation || '').toLowerCase()
+      const combinedText = `${questionText} ${explanation}`
 
-        // Try to match headers based on question content - score all matches and pick best
-        let bestContentMatch: string | null = null
-        let bestContentScore = 0
+      let bestContentMatch: string | null = null
+      let bestContentScore = 0
 
-        for (const header of headers) {
-          const lowerHeader = header.toLowerCase()
-          if (lowerHeader.includes('key takeaways') || lowerHeader.includes('practice tips')) continue
+      for (const header of headers) {
+        const lowerHeader = header.toLowerCase()
+        if (lowerHeader.includes('key takeaways') || lowerHeader.includes('practice tips')) continue
 
-          // Extract significant words from header (4+ chars)
-          const headerWords = lowerHeader.split(/\s+/).filter(w => w.length >= 4)
+        // Extract significant words from header (4+ chars)
+        const headerWords = lowerHeader.split(/\s+/).filter(w => w.length >= 4)
 
-          // Check if most header words appear in question/explanation
-          const matchingWords = headerWords.filter(word => combinedText.includes(word))
+        // Check if most header words appear in question/explanation
+        const matchingWords = headerWords.filter(word => combinedText.includes(word))
 
-          // Require strong match (at least 60% of header words)
-          if (matchingWords.length >= Math.ceil(headerWords.length * 0.6) && matchingWords.length >= 2) {
-            // Score this match
-            let score = matchingWords.length * 100
+        // Require strong match (at least 60% of header words)
+        if (matchingWords.length >= Math.ceil(headerWords.length * 0.6) && matchingWords.length >= 2) {
+          // Score this match
+          let score = matchingWords.length * 100
 
-            // BONUS: Give huge boost if explanation directly mentions header topic
-            // e.g., "Interference theory" in explanation should strongly match "Interference Theory: The Real Culprit"
-            const explanationWords = headerWords.filter(word => explanation.includes(word))
-            if (explanationWords.length >= Math.ceil(headerWords.length * 0.6)) {
-              score += 10000 // Major bonus for explanation match
-            }
+          // BONUS: Give huge boost if explanation directly mentions header topic
+          // e.g., "Interference theory" in explanation should strongly match "Interference Theory: The Real Culprit"
+          const explanationWords = headerWords.filter(word => explanation.includes(word))
+          if (explanationWords.length >= Math.ceil(headerWords.length * 0.6)) {
+            score += 10000 // Major bonus for explanation match
+          }
 
-            // Prefer longer/more specific headers
-            score += header.length
+          // Prefer longer/more specific headers
+          score += header.length
 
-            if (score > bestContentScore) {
-              bestContentScore = score
-              bestContentMatch = header
-            }
+          if (score > bestContentScore) {
+            bestContentScore = score
+            bestContentMatch = header
           }
         }
+      }
 
-        if (bestContentMatch) {
-          result.set(wrongQ.questionIndex, bestContentMatch)
-          matchedExamTermsRef.current.set(wrongQ.questionIndex, bestContentMatch)
-        }
+      // Use content-based match if it scored higher than relatedSections match
+      // This allows explanation-driven matching to override generic relatedSections
+      if (bestContentMatch && bestContentScore > bestScore) {
+        result.set(wrongQ.questionIndex, bestContentMatch)
+        matchedExamTermsRef.current.set(wrongQ.questionIndex, bestContentMatch)
+      } else if (bestHeader) {
+        result.set(wrongQ.questionIndex, bestHeader)
+        matchedExamTermsRef.current.set(wrongQ.questionIndex, bestHeader)
       }
     }
 
