@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { SimplePromptInput } from '@/components/ui/simple-prompt-input'
 import { TypographyH1, TypographyH2, TypographyH3, TypographyMuted } from '@/components/ui/typography'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
+import { HexColorPicker } from 'react-colorful'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Kbd } from '@/components/ui/kbd'
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
@@ -24,7 +25,7 @@ import {
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { useAuth } from '@/context/auth-context'
-import { getQuizResults } from '@/lib/quiz-results-storage'
+import { getQuizResults, type WrongAnswer } from '@/lib/quiz-results-storage'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import Lottie from 'lottie-react'
@@ -145,6 +146,10 @@ export function TopicTeacherContent() {
   const [interestsLoaded, setInterestsLoaded] = useState(false)
   const [baseContent, setBaseContent] = useState<string>('')
   const [personalizedCache, setPersonalizedCache] = useState<Record<string, string>>({})
+  const [showColorPicker, setShowColorPicker] = useState(false)
+  const [starColor, setStarColor] = useState('#000000')
+  const [showQuizColorPicker, setShowQuizColorPicker] = useState(false)
+  const [quizStarColor, setQuizStarColor] = useState('#00ff00')
   const [highlightData, setHighlightData] = useState<HighlightData>({
     recentlyWrongSections: [],
     recentlyCorrectSections: [],
@@ -159,9 +164,14 @@ export function TopicTeacherContent() {
     useState(false)
   const [practiceExamWrongQuestionsError, setPracticeExamWrongQuestionsError] =
     useState<string | null>(null)
+  const [quizWrongAnswers, setQuizWrongAnswers] = useState<WrongAnswer[]>([])
+  const [activeQuizQuestion, setActiveQuizQuestion] = useState<WrongAnswer | null>(null)
+  const [quizQuestionDialogOpen, setQuizQuestionDialogOpen] = useState(false)
   const [matchedExamTerms, setMatchedExamTerms] = useState<string[]>([])
   // Map from question index to best matched term (keeps only one term per question)
   const matchedExamTermsRef = useRef<Map<number, string>>(new Map())
+  // Map from quiz question ID to best matched term (keeps only one star per quiz question)
+  const matchedQuizTermsRef = useRef<Map<number, string>>(new Map())
   const [missedQuestionDialogOpen, setMissedQuestionDialogOpen] = useState(false)
   const [activeMissedQuestion, setActiveMissedQuestion] =
     useState<WrongPracticeExamQuestion | null>(null)
@@ -509,6 +519,18 @@ export function TopicTeacherContent() {
     }
   }, [user?.id])
 
+  // Load saved star colors from localStorage
+  useEffect(() => {
+    const savedColor = localStorage.getItem('starColor')
+    if (savedColor) {
+      setStarColor(savedColor)
+    }
+    const savedQuizColor = localStorage.getItem('quizStarColor')
+    if (savedQuizColor) {
+      setQuizStarColor(savedQuizColor)
+    }
+  }, [])
+
   useEffect(() => {
     if (!user?.id) return
 
@@ -576,8 +598,14 @@ export function TopicTeacherContent() {
 	      // Always check for quiz results
       const quizResults = getQuizResults(decodedTopic)
       if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
+        // Filter to only unresolved wrong answers (like practice exam stars)
+        const unresolvedWrongAnswers = quizResults.wrongAnswers.filter(wa => wa.isResolved !== true)
+
+        // Store quiz wrong answers for dialog display
+        setQuizWrongAnswers(unresolvedWrongAnswers)
+
         quizWrongSections = normalizeSections(
-          quizResults.wrongAnswers.flatMap((wa) => wa.relatedSections || []),
+          unresolvedWrongAnswers.flatMap((wa) => wa.relatedSections || []),
           { allowAll: true }
         )
 
@@ -666,6 +694,7 @@ export function TopicTeacherContent() {
     // Reset matched terms when topic changes
     matchedExamTermsRef.current.clear()
     setMatchedExamTerms([])
+    matchedQuizTermsRef.current.clear()
 
     let cancelled = false
     const controller = new AbortController()
@@ -1378,6 +1407,25 @@ export function TopicTeacherContent() {
     return null
   }
 
+  // Quiz question matching functions
+  const findBestQuizWrongAnswerForContent = (
+    contentText: string
+  ): WrongAnswer | null => {
+    if (!contentText || quizWrongAnswers.length === 0) {
+      return null
+    }
+
+    // Find the first quiz wrong answer that has a relatedSection matching this content
+    // Use the same labelsMatch logic as getHighlightFlags for consistency
+    const matched = quizWrongAnswers.find((answer) => {
+      return answer.relatedSections.some((section) =>
+        labelsMatch(contentText, section)
+      )
+    })
+
+    return matched || null
+  }
+
   const getAnswerLabel = (
     question: PracticeExamQuestion,
     answerText?: string | null
@@ -1699,7 +1747,12 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              <VariableStar className="inline-block mr-1" /> Most recent practice exam
+              <VariableStar
+                className="inline-block mr-1"
+                onClick={() => setShowColorPicker(true)}
+                title="Click to change star color"
+                color={starColor}
+              /> Most recent practice exam
               {matchedExamTerms.length > 0
                 ? `: ${matchedExamTerms.join(', ')}`
                 : highlightData.examWrongSections.length > 0
@@ -1724,7 +1777,12 @@ export function TopicTeacherContent() {
             className="mb-4"
           >
             <p className="text-sm text-foreground/80">
-              🍎 Most recent quiz
+              <VariableStar
+                className="inline-block mr-1"
+                onClick={() => setShowQuizColorPicker(true)}
+                title="Click to change quiz star color"
+                color={quizStarColor}
+              /> Most recent quiz
               {highlightData.quizWrongSections.length > 0
                 ? `: ${formatSectionList(highlightData.quizWrongSections)}`
                 : ''}
@@ -1857,7 +1915,7 @@ export function TopicTeacherContent() {
                                     aria-label="Review missed practice exam question"
                                     title="Review missed practice exam question"
                                   >
-                                    <VariableStar />
+                                    <VariableStar color={starColor} />
                                   </button>
                                   <TypographyH2>{children}</TypographyH2>
                                 </div>
@@ -1910,7 +1968,7 @@ export function TopicTeacherContent() {
                                     aria-label="Review missed practice exam question"
                                     title="Review missed practice exam question"
                                   >
-                                    <VariableStar />
+                                    <VariableStar color={starColor} />
                                   </button>
                                   <TypographyH3>{children}</TypographyH3>
                                 </div>
@@ -1954,7 +2012,7 @@ export function TopicTeacherContent() {
                                     aria-label="Review missed practice exam question"
                                     title="Review missed practice exam question"
                                   >
-                                    <VariableStar />
+                                    <VariableStar color={starColor} />
                                   </button>
                                   <p className="m-0">{children}</p>
                                 </div>
@@ -1967,12 +2025,26 @@ export function TopicTeacherContent() {
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
 
+                            // Try to find matching quiz question for clickable star
+                            const quizMatch = quizWrong ? findBestQuizWrongAnswerForContent(currentSectionRef.current) : null
+
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
-                                    {quizWrong && <span>🍎</span>}
-                                    {examWrong && <VariableStar className="ml-0.5" />}
+                                    {quizWrong && quizMatch && (
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          setActiveQuizQuestion(quizMatch)
+                                          setQuizQuestionDialogOpen(true)
+                                        }}
+                                        className="cursor-pointer"
+                                      >
+                                        <VariableStar color={quizStarColor} />
+                                      </button>
+                                    )}
+                                    {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
                                 <p className="m-0">{children}</p>
@@ -1984,12 +2056,27 @@ export function TopicTeacherContent() {
                               getHighlightFlags(currentSectionRef.current)
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+
+                            // Try to find matching quiz question for clickable star
+                            const quizMatch = quizWrong ? findBestQuizWrongAnswerForContent(currentSectionRef.current) : null
+
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
-                                    {quizWrong && <span>🍎</span>}
-                                    {examWrong && <VariableStar className="ml-0.5" />}
+                                    {quizWrong && quizMatch && (
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          setActiveQuizQuestion(quizMatch)
+                                          setQuizQuestionDialogOpen(true)
+                                        }}
+                                        className="cursor-pointer"
+                                      >
+                                        <VariableStar color={quizStarColor} />
+                                      </button>
+                                    )}
+                                    {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
                                 <ul>{children}</ul>
@@ -2001,12 +2088,27 @@ export function TopicTeacherContent() {
                               getHighlightFlags(currentSectionRef.current)
 
                             const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+
+                            // Try to find matching quiz question for clickable star
+                            const quizMatch = quizWrong ? findBestQuizWrongAnswerForContent(currentSectionRef.current) : null
+
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
                                   <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
-                                    {quizWrong && <span>🍎</span>}
-                                    {examWrong && <VariableStar className="ml-0.5" />}
+                                    {quizWrong && quizMatch && (
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          setActiveQuizQuestion(quizMatch)
+                                          setQuizQuestionDialogOpen(true)
+                                        }}
+                                        className="cursor-pointer"
+                                      >
+                                        <VariableStar color={quizStarColor} />
+                                      </button>
+                                    )}
+                                    {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
                                 <ol>{children}</ol>
@@ -2026,53 +2128,61 @@ export function TopicTeacherContent() {
 	                            const { quizWrong, examWrong } = getHighlightFlags(textContent)
 	                            const showIcon = quizWrong || examWrong
 
+	                            // Try to find matching quiz question for clickable star
+	                            const quizMatch = quizWrong ? findBestQuizWrongAnswerForContent(textContent) : null
+
 	                            return (
 	                              <li className={showIcon ? 'relative' : ''}>
 	                                {showIcon && (
 	                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
-	                                    {quizWrong && <span>🍎</span>}
-	                                    {examWrong && <VariableStar />}
+	                                    {quizWrong && quizMatch && (
+	                                      <button
+	                                        type="button"
+	                                        onClick={() => {
+	                                          setActiveQuizQuestion(quizMatch)
+	                                          setQuizQuestionDialogOpen(true)
+	                                        }}
+	                                        className="cursor-pointer"
+	                                      >
+	                                        <VariableStar color={quizStarColor} />
+	                                      </button>
+	                                    )}
+	                                    {examWrong && <VariableStar color={starColor} />}
 	                                  </span>
 	                                )}
 	                                {children}
 	                              </li>
 	                            )
 	                          },
-	                          td: ({ node, children }) => {
-	                            // Extract text content from the cell
-	                            const cellText = extractTextFromMarkdownNode(node as any).trim()
-	                            const matched = findBestWrongPracticeExamQuestionForTableTerm(cellText)
-
-	                            if (!matched) {
-	                              return <td>{children}</td>
+	                          table: ({ node, children }) => {
+	                            // Check if any cell in the table matches a wrong practice exam question
+	                            const checkForMatches = (n: any): boolean => {
+	                              if (n?.tagName === 'td') {
+	                                const cellText = extractTextFromMarkdownNode(n).trim()
+	                                return !!findBestWrongPracticeExamQuestionForParagraph(cellText)
+	                              }
+	                              if (n?.children) {
+	                                return n.children.some((child: any) => checkForMatches(child))
+	                              }
+	                              return false
 	                            }
 
-	                            // Only add star to first cell (check if this is the first td in the row)
-	                            const parent = (node as any)?.parent
-	                            const isFirstCell = parent?.children?.findIndex((child: any) => child.tagName === 'td' && child === node) === 0
+	                            const hasMatch = checkForMatches(node)
 
-	                            if (!isFirstCell) {
-	                              return <td>{children}</td>
+	                            if (hasMatch) {
+	                              return (
+	                                <div className="relative">
+	                                  <div style={{ position: 'absolute', left: '-40px', top: '8px' }}>
+	                                    <VariableStar color={starColor} />
+	                                  </div>
+	                                  <table>{children}</table>
+	                                </div>
+	                              )
 	                            }
 
-	                            return (
-	                              <td className="relative">
-	                                <button
-	                                  type="button"
-	                                  className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
-	                                  onClick={() => {
-	                                    setActiveMissedQuestion(matched)
-	                                    setMissedQuestionDialogOpen(true)
-	                                  }}
-	                                  aria-label="Review missed practice exam question"
-	                                  title="Review missed practice exam question"
-	                                >
-	                                  <VariableStar />
-	                                </button>
-	                                {children}
-	                              </td>
-	                            )
+	                            return <table>{children}</table>
 	                          },
+	                          td: ({ children }) => <td>{children}</td>,
 	                          tr: ({ node, children }) => {
 	                            const rowChildren = Array.isArray((node as any)?.children)
 	                              ? ((node as any).children as any[])
@@ -2238,10 +2348,10 @@ export function TopicTeacherContent() {
                             <div
                               key={optIdx}
                               className={`text-sm p-2 rounded flex items-start gap-2 ${
-                                isCorrect ? 'bg-green-100/50 text-green-900' : ''
+                                isCorrect ? 'brand-pill-olive' : ''
                               } ${
                                 isSelected && !isCorrect
-                                  ? 'bg-red-100/50 text-red-900'
+                                  ? 'brand-pill-dusty-rose'
                                   : ''
                               }`}
                             >
@@ -2277,6 +2387,204 @@ export function TopicTeacherContent() {
 
             <DialogFooter>
               <Button variant="outline" onClick={() => setMissedQuestionDialogOpen(false)}>
+                Close
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        {/* Color Picker Dialog */}
+        <Dialog open={showColorPicker} onOpenChange={setShowColorPicker}>
+          <DialogContent className="max-w-lg bg-background/95 backdrop-blur">
+            <DialogHeader>
+              <DialogTitle className="text-lg">Choose Star Color</DialogTitle>
+              <DialogDescription className="text-sm opacity-70">Pick any color for your stars</DialogDescription>
+            </DialogHeader>
+
+            <div className="space-y-6 py-4">
+              <div className="flex flex-col items-center gap-4">
+                <HexColorPicker
+                  color={starColor}
+                  onChange={(newColor) => {
+                    setStarColor(newColor)
+                    localStorage.setItem('starColor', newColor)
+                  }}
+                  style={{ width: '100%', height: '250px' }}
+                />
+                <div className="flex items-center justify-between w-full px-2">
+                  <span className="text-sm text-muted-foreground">Selected color:</span>
+                  <div className="flex items-center gap-2">
+                    <div
+                      className="w-10 h-10 rounded border-2 border-border shadow-sm"
+                      style={{ backgroundColor: starColor }}
+                    />
+                    <span className="text-sm font-mono font-semibold">{starColor}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <DialogFooter className="flex gap-2">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setStarColor('#000000')
+                  localStorage.setItem('starColor', '#000000')
+                }}
+              >
+                Reset to Default
+              </Button>
+              <Button onClick={() => setShowColorPicker(false)}>
+                Done
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        {/* Quiz Star Color Picker Dialog */}
+        <Dialog open={showQuizColorPicker} onOpenChange={setShowQuizColorPicker}>
+          <DialogContent className="max-w-lg bg-background/95 backdrop-blur">
+            <DialogHeader>
+              <DialogTitle className="text-lg">Choose Quiz Star Color</DialogTitle>
+              <DialogDescription className="text-sm opacity-70">Pick any color for quiz stars</DialogDescription>
+            </DialogHeader>
+
+            <div className="space-y-6 py-4">
+              <div className="flex flex-col items-center gap-4">
+                <HexColorPicker
+                  color={quizStarColor}
+                  onChange={(newColor) => {
+                    setQuizStarColor(newColor)
+                    localStorage.setItem('quizStarColor', newColor)
+                  }}
+                  style={{ width: '100%', height: '250px' }}
+                />
+                <div className="flex items-center justify-between w-full px-2">
+                  <span className="text-sm text-muted-foreground">Selected color:</span>
+                  <div className="flex items-center gap-2">
+                    <div
+                      className="w-10 h-10 rounded border-2 border-border shadow-sm"
+                      style={{ backgroundColor: quizStarColor }}
+                    />
+                    <span className="text-sm font-mono font-semibold">{quizStarColor}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <DialogFooter className="flex gap-2">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setQuizStarColor('#00ff00')
+                  localStorage.setItem('quizStarColor', '#00ff00')
+                }}
+              >
+                Reset to Default
+              </Button>
+              <Button onClick={() => setShowQuizColorPicker(false)}>
+                Done
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        {/* Quiz Question Dialog */}
+        <Dialog
+          open={quizQuestionDialogOpen}
+          onOpenChange={(open) => {
+            setQuizQuestionDialogOpen(open)
+            if (!open) {
+              setActiveQuizQuestion(null)
+            }
+          }}
+        >
+          <DialogContent className="max-w-3xl">
+            <DialogHeader>
+              <DialogTitle>Review missed question</DialogTitle>
+              <DialogDescription>From your most recent quiz.</DialogDescription>
+            </DialogHeader>
+
+            {activeQuizQuestion && (
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-sm mb-2">Question</h4>
+                  <p className="text-sm text-foreground">
+                    {activeQuizQuestion.question}
+                  </p>
+                </div>
+
+                {Array.isArray(activeQuizQuestion.options) && activeQuizQuestion.options.length > 0 ? (
+                  // Show full options like practice exam
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Options</h4>
+                    <div className="space-y-1">
+                      {activeQuizQuestion.options.map((option, optIdx) => {
+                        const isCorrect = option === activeQuizQuestion.correctAnswer
+                        const isSelected = option === activeQuizQuestion.selectedAnswer
+                        const optionLetter = String.fromCharCode(65 + optIdx)
+
+                        return (
+                          <div
+                            key={optIdx}
+                            className={`text-sm p-2 rounded flex items-start gap-2 ${
+                              isCorrect ? 'brand-pill-olive' : ''
+                            } ${
+                              isSelected && !isCorrect ? 'brand-pill-dusty-rose' : ''
+                            }`}
+                          >
+                            <span className="font-semibold flex-shrink-0">
+                              {optionLetter}.
+                            </span>
+                            <span className="break-words">
+                              {option}
+                              {isCorrect && (
+                                <span className="font-semibold ml-2">✓ Correct</span>
+                              )}
+                              {isSelected && !isCorrect && (
+                                <span className="font-semibold ml-2">✗ Your answer</span>
+                              )}
+                            </span>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                ) : (
+                  // Fallback for old quiz results without options
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Answers</h4>
+                    <div className="space-y-1">
+                      <div className="text-sm p-2 rounded flex items-start gap-2 brand-pill-dusty-rose">
+                        <span className="break-words">
+                          {activeQuizQuestion.selectedAnswer}
+                          <span className="font-semibold ml-2">✗ Your answer</span>
+                        </span>
+                      </div>
+                      <div className="text-sm p-2 rounded flex items-start gap-2 brand-pill-olive">
+                        <span className="break-words">
+                          {activeQuizQuestion.correctAnswer}
+                          <span className="font-semibold ml-2">✓ Correct</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Add explanation section (same as practice exam) */}
+                {activeQuizQuestion.explanation && (
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Explanation</h4>
+                    <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                      {activeQuizQuestion.explanation}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            <DialogFooter>
+              <Button variant="outline" onClick={() => setQuizQuestionDialogOpen(false)}>
                 Close
               </Button>
             </DialogFooter>

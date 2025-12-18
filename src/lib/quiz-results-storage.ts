@@ -9,6 +9,11 @@ export interface WrongAnswer {
   relatedSections: string[]
   timestamp: number
   previouslyWrong?: boolean // Was this wrong before and now correct?
+
+  // New fields for matching practice exam behavior
+  options?: string[]        // Answer choices (A, B, C, D)
+  explanation?: string      // Explanation text
+  isResolved?: boolean      // Whether this has been answered correctly since
 }
 
 export interface CorrectAnswer {

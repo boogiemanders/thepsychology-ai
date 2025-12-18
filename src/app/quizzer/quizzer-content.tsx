@@ -302,6 +302,9 @@ export function QuizzerContent() {
           correctAnswer: q.correctAnswer,
           relatedSections: q.relatedSections || [],
           timestamp: Date.now(),
+          options: q.options,           // Save options for dialog
+          explanation: q.explanation,   // Save explanation for dialog
+          isResolved: false,            // Mark as unresolved initially
         })
       } else {
         correctAnswers.push({
@@ -330,8 +333,20 @@ export function QuizzerContent() {
         )
         if (wasPreviouslyWrong) {
           ;(ca as any).wasPreviouslyWrong = true
+
+          // MARK THE PREVIOUS WRONG ANSWER AS RESOLVED
+          // User got it correct this time, so mark it resolved
+          const prevWrongAnswer = previousResults.wrongAnswers.find(
+            wa => wa.questionId === ca.questionId
+          )
+          if (prevWrongAnswer) {
+            prevWrongAnswer.isResolved = true
+          }
         }
       })
+
+      // Save updated previous results with resolved flags
+      saveQuizResults(previousResults)
     }
 
     const recentSections = Array.from(
