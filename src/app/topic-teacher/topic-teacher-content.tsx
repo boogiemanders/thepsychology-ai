@@ -1761,6 +1761,9 @@ export function TopicTeacherContent() {
       const sections = wrongQ.question.relatedSections
       if (!sections || !Array.isArray(sections)) continue
 
+      console.log('🔍 Processing question:', wrongQ.questionIndex, wrongQ.question.question?.substring(0, 80))
+      console.log('   relatedSections:', sections)
+
       let bestHeader: string | null = null
       let bestScore = 0
 
@@ -1798,6 +1801,8 @@ export function TopicTeacherContent() {
               score -= 5000
             }
 
+            console.log(`   📊 relatedSections match: "${header}" score=${score}`)
+
             // Update best match if this is better
             if (score > bestScore) {
               bestScore = score
@@ -1807,11 +1812,16 @@ export function TopicTeacherContent() {
         }
       }
 
+      console.log(`   ✅ Best relatedSections match: "${bestHeader}" score=${bestScore}`)
+
       // ALWAYS try content-based matching to compare against relatedSections match
       // This ensures we pick the most specific header even when relatedSections is generic
       const questionText = (wrongQ.question.question || '').toLowerCase()
       const explanation = (wrongQ.question.explanation || '').toLowerCase()
       const combinedText = `${questionText} ${explanation}`
+
+      console.log('   📝 Question text:', questionText.substring(0, 100))
+      console.log('   📝 Explanation:', explanation.substring(0, 100))
 
       let bestContentMatch: string | null = null
       let bestContentScore = 0
@@ -1836,6 +1846,9 @@ export function TopicTeacherContent() {
           const explanationWords = headerWords.filter(word => explanation.includes(word))
           if (explanationWords.length >= Math.ceil(headerWords.length * 0.6)) {
             score += 10000 // Major bonus for explanation match
+            console.log(`   🎯 Content match with explanation bonus: "${header}" score=${score} (matching: ${matchingWords.join(', ')})`)
+          } else {
+            console.log(`   📊 Content match: "${header}" score=${score} (matching: ${matchingWords.join(', ')})`)
           }
 
           // Prefer longer/more specific headers
@@ -1848,12 +1861,16 @@ export function TopicTeacherContent() {
         }
       }
 
+      console.log(`   ✅ Best content match: "${bestContentMatch}" score=${bestContentScore}`)
+
       // Use content-based match if it scored higher than relatedSections match
       // This allows explanation-driven matching to override generic relatedSections
       if (bestContentMatch && bestContentScore > bestScore) {
+        console.log(`   🏆 WINNER: Content-based match "${bestContentMatch}" (${bestContentScore} > ${bestScore})`)
         result.set(wrongQ.questionIndex, bestContentMatch)
         matchedExamTermsRef.current.set(wrongQ.questionIndex, bestContentMatch)
       } else if (bestHeader) {
+        console.log(`   🏆 WINNER: relatedSections match "${bestHeader}" (${bestScore} >= ${bestContentScore})`)
         result.set(wrongQ.questionIndex, bestHeader)
         matchedExamTermsRef.current.set(wrongQ.questionIndex, bestHeader)
       }
