@@ -1477,11 +1477,13 @@ export function TopicTeacherContent() {
   }
 
   // Check if a paragraph matches any wrong practice exam question
+  // Used for inline text/tables, NOT for headers (headers use pre-calculated map)
   const findBestWrongPracticeExamQuestionForParagraph = (
     paragraphText: string
   ): WrongPracticeExamQuestion | null => {
     if (!paragraphText || preparedPracticeExamWrongQuestions.length === 0) return null
 
+    // Extract potential terms and match against question content
     const potentialTerms = extractPotentialTerms(paragraphText)
 
     for (const term of potentialTerms) {
@@ -1570,6 +1572,40 @@ export function TopicTeacherContent() {
     }
 
     return null
+  }
+
+  // Flexible matching for practice exam questions in list items
+  // Uses the BEST header match (most specific section) to match list items
+  const findPracticeExamMatchForListItem = (listItemText: string): WrongPracticeExamQuestion | null => {
+    if (!listItemText || practiceExamWrongQuestions.length === 0) return null
+
+    const normalizedText = listItemText.toLowerCase()
+
+    // For each practice exam question, use its BEST matching section (from pre-calculation)
+    // This ensures we match the most specific section, not just any section
+    for (const wrongQ of practiceExamWrongQuestions) {
+      // Get the best header for this question (most specific section)
+      const bestHeader = practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)
+      if (!bestHeader) continue
+
+      const normalizedHeader = bestHeader.toLowerCase()
+
+      // Extract significant words from the best header
+      // e.g., "Stimulus Generalization" -> ["stimulus", "generalization"]
+      const headerWords = normalizedHeader.split(/\s+/).filter(w => w.length > 3)
+
+      // Check if the list item contains most of these words
+      const matchingWords = headerWords.filter(word => normalizedText.includes(word))
+
+      // Require a strong match (at least 60% of words)
+      if (matchingWords.length >= Math.ceil(headerWords.length * 0.6)) {
+        return wrongQ
+      }
+    }
+
+    // Fall back to term extraction from the list item
+    const match = findBestWrongPracticeExamQuestionForParagraph(listItemText)
+    return match
   }
 
   const getAnswerLabel = (
@@ -1702,6 +1738,116 @@ export function TopicTeacherContent() {
 
     return result
   }, [baseContent, quizWrongAnswers])
+
+  // Pre-calculate the best header match for each practice exam question
+  // This runs ONCE per content change, not during render
+  const practiceExamQuestionToBestHeader = useMemo(() => {
+    const result = new Map<number, string>() // questionIndex -> best header text
+
+    if (practiceExamWrongQuestions.length === 0 || !baseContent) return result
+
+    // Extract all h2/h3 headers from the markdown content
+    const headers: string[] = []
+    const lines = baseContent.split('\n')
+    for (const line of lines) {
+      const h2Match = line.match(/^##\s+(.+)$/)
+      const h3Match = line.match(/^###\s+(.+)$/)
+      if (h2Match) headers.push(h2Match[1].trim())
+      else if (h3Match) headers.push(h3Match[1].trim())
+    }
+
+    // For each practice exam question, find ALL matching headers and pick the best one
+    for (const wrongQ of practiceExamWrongQuestions) {
+      const sections = wrongQ.question.relatedSections
+      if (!sections || !Array.isArray(sections)) continue
+
+      let bestHeader: string | null = null
+      let bestScore = 0
+
+      for (const header of headers) {
+        // Skip section headers where list items should show stars instead
+        const lowerHeader = header.toLowerCase()
+        if (lowerHeader.includes('key takeaways') ||
+            lowerHeader.includes('practice tips')) continue
+
+        // Check if this header matches any of the question's relatedSections
+        for (const section of sections) {
+          if (section === '__ALL__') continue // Skip generic fallback
+
+          if (labelsMatch(header, section)) {
+            // Score this match - prefer longer, more specific headers
+            const normalizedHeader = normalizeLabel(header)
+            const normalizedSection = normalizeLabel(section)
+
+            // Base score: header length (longer headers are more specific)
+            let score = normalizedHeader.length
+
+            // Major bonus for exact match between header and section
+            if (normalizedHeader === normalizedSection) {
+              score += 10000
+            }
+
+            // Bonus based on how much of the header the section covers
+            // Higher ratio = section is more specific to this header
+            const matchRatio = normalizedSection.length / normalizedHeader.length
+            score += matchRatio * 1000
+
+            // Penalty for generic comparison/overview headers
+            if (lowerHeader.includes('comparing') || lowerHeader.includes('evolution') ||
+                lowerHeader.includes('overview') || lowerHeader.includes('introduction')) {
+              score -= 5000
+            }
+
+            // Update best match if this is better
+            if (score > bestScore) {
+              bestScore = score
+              bestHeader = header
+            }
+          }
+        }
+      }
+
+      if (bestHeader) {
+        result.set(wrongQ.questionIndex, bestHeader)
+        // Also track for the legend display
+        matchedExamTermsRef.current.set(wrongQ.questionIndex, bestHeader)
+      } else {
+        // Fall back to content-based matching when relatedSections is too generic
+        // Extract significant terms from the question text and explanation
+        const questionText = (wrongQ.question.question || '').toLowerCase()
+        const explanation = (wrongQ.question.explanation || '').toLowerCase()
+        const combinedText = `${questionText} ${explanation}`
+
+        // Try to match headers based on question content
+        for (const header of headers) {
+          const lowerHeader = header.toLowerCase()
+          if (lowerHeader.includes('key takeaways') || lowerHeader.includes('practice tips')) continue
+
+          // Extract significant words from header (4+ chars)
+          const headerWords = lowerHeader.split(/\s+/).filter(w => w.length >= 4)
+
+          // Check if most header words appear in question/explanation
+          const matchingWords = headerWords.filter(word => combinedText.includes(word))
+
+          // Require strong match (at least 60% of header words)
+          if (matchingWords.length >= Math.ceil(headerWords.length * 0.6) && matchingWords.length >= 2) {
+            result.set(wrongQ.questionIndex, header)
+            matchedExamTermsRef.current.set(wrongQ.questionIndex, header)
+            break
+          }
+        }
+      }
+    }
+
+    // Update the displayed matched terms
+    if (result.size > 0) {
+      setTimeout(() => {
+        setMatchedExamTerms(Array.from(matchedExamTermsRef.current.values()))
+      }, 0)
+    }
+
+    return result
+  }, [baseContent, practiceExamWrongQuestions])
 
   if (!topic) {
     return (
@@ -2130,11 +2276,10 @@ export function TopicTeacherContent() {
                               isInKeyTakeawaysSection.current = false
                             }
 
-                            // Check if header matches a wrong practice exam question
-                            // Use paragraph matching which extracts terms like "Theory Y" from the header
-                            const examMatched = preparedPracticeExamWrongQuestions.length > 0
-                              ? findBestWrongPracticeExamQuestionForParagraph(text)
-                              : null
+                            // Check if THIS header is the best match for any practice exam question
+                            const examMatched = practiceExamWrongQuestions.find(
+                              (q) => practiceExamQuestionToBestHeader.get(q.questionIndex) === text
+                            )
 
                             // Check if THIS header is the best match for any quiz question
                             const quizMatched = quizWrongAnswers.find(
@@ -2196,11 +2341,10 @@ export function TopicTeacherContent() {
                               isInKeyTakeawaysSection.current = false
                             }
 
-                            // Check if header matches a wrong practice exam question
-                            // Use paragraph matching which extracts terms like "Theory Y" from the header
-                            const examMatched = preparedPracticeExamWrongQuestions.length > 0
-                              ? findBestWrongPracticeExamQuestionForParagraph(text)
-                              : null
+                            // Check if THIS header is the best match for any practice exam question
+                            const examMatched = practiceExamWrongQuestions.find(
+                              (q) => practiceExamQuestionToBestHeader.get(q.questionIndex) === text
+                            )
 
                             // Check if THIS header is the best match for any quiz question
                             const quizMatched = quizWrongAnswers.find(
@@ -2329,15 +2473,38 @@ export function TopicTeacherContent() {
 	                            }
 
 	                            const textContent = getTextContent(children)
-	                            const { examWrong } = getHighlightFlags(textContent)
 
 	                            // Check for quiz match ONLY if we're in Key Takeaways/Practice Tips sections
-	                            // Use flexible matching based on author names for list items
 	                            const quizMatch = isInKeyTakeawaysSection.current
 	                              ? findQuizMatchForListItem(textContent)
 	                              : null
 
-	                            const showIcon = examWrong || !!quizMatch
+	                            // Check for practice exam match ONLY if we're in Key Takeaways/Practice Tips sections
+	                            const examMatch = isInKeyTakeawaysSection.current
+	                              ? findPracticeExamMatchForListItem(textContent)
+	                              : null
+
+	                            const showIcon = !!quizMatch || !!examMatch
+
+	                            // Use overlapping stars component if both matches exist
+	                            if (quizMatch && examMatch) {
+	                              return (
+	                                <li className="relative">
+	                                  <OverlappingStarButtons
+	                                    examMatched={examMatch}
+	                                    quizMatched={quizMatch}
+	                                    starColor={starColor}
+	                                    quizStarColor={quizStarColor}
+	                                    setActiveMissedQuestion={setActiveMissedQuestion}
+	                                    setMissedQuestionDialogOpen={setMissedQuestionDialogOpen}
+	                                    setActiveQuizQuestion={setActiveQuizQuestion}
+	                                    setQuizQuestionDialogOpen={setQuizQuestionDialogOpen}
+	                                  >
+	                                    {children}
+	                                  </OverlappingStarButtons>
+	                                </li>
+	                              )
+	                            }
 
 	                            return (
 	                              <li className={showIcon ? 'relative' : ''}>
@@ -2355,7 +2522,18 @@ export function TopicTeacherContent() {
 	                                        <VariableStar color={quizStarColor} />
 	                                      </button>
 	                                    )}
-	                                    {examWrong && <VariableStar color={starColor} />}
+	                                    {examMatch && (
+	                                      <button
+	                                        type="button"
+	                                        onClick={() => {
+	                                          setActiveMissedQuestion(examMatch)
+	                                          setMissedQuestionDialogOpen(true)
+	                                        }}
+	                                        className="cursor-pointer"
+	                                      >
+	                                        <VariableStar color={starColor} />
+	                                      </button>
+	                                    )}
 	                                  </span>
 	                                )}
 	                                {children}
