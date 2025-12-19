@@ -132,7 +132,14 @@ function attachSectionsToQuestion(
   const scoredSections = sections
     .map((section) => {
       const sectionTokens = normalizeTokens(`${section.title} ${section.text}`)
-      const score = jaccardSimilarity(qTokens, sectionTokens)
+      const titleTokens = normalizeTokens(section.title)
+      const baseScore = jaccardSimilarity(qTokens, sectionTokens)
+
+      // Bonus when question keywords appear in section TITLE (not just body)
+      const titleOverlap = qTokens.filter(t => titleTokens.includes(t)).length
+      const titleBonus = titleOverlap > 0 ? 0.2 + (titleOverlap * 0.1) : 0
+
+      const score = baseScore + titleBonus
       return { title: section.title, score }
     })
     .filter((s) => s.score > 0)

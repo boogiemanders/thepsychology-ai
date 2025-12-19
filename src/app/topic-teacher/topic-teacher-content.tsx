@@ -94,7 +94,6 @@ function OverlappingStarButtons({
   setActiveMissedQuestion,
   setMissedQuestionDialogOpen,
   setActiveQuizQuestion,
-  setQuizQuestionDialogOpen,
   children,
   isH2Header = false
 }: {
@@ -105,7 +104,6 @@ function OverlappingStarButtons({
   setActiveMissedQuestion: (q: any) => void
   setMissedQuestionDialogOpen: (open: boolean) => void
   setActiveQuizQuestion: (q: any) => void
-  setQuizQuestionDialogOpen: (open: boolean) => void
   children: React.ReactNode
   isH2Header?: boolean
 }) {
@@ -120,11 +118,8 @@ function OverlappingStarButtons({
           className={`apple-pulsate absolute -left-10 ${topClass} flex h-6 w-6 items-center justify-center rounded-full`}
           onClick={() => {
             setActiveMissedQuestion(examMatched)
+            if (quizMatched) setActiveQuizQuestion(quizMatched)
             setMissedQuestionDialogOpen(true)
-            if (quizMatched) {
-              setActiveQuizQuestion(quizMatched)
-              setQuizQuestionDialogOpen(true)
-            }
           }}
           aria-label={quizMatched ? "Review missed questions (exam + quiz)" : "Review missed practice exam question"}
           title={quizMatched ? "Review missed questions (exam + quiz)" : "Review missed practice exam question"}
@@ -142,15 +137,12 @@ function OverlappingStarButtons({
           className={`apple-pulsate absolute -left-10 ${topClass} flex h-6 w-6 items-center justify-center rounded-full`}
           onClick={() => {
             setActiveQuizQuestion(quizMatched)
-            setQuizQuestionDialogOpen(true)
-            if (examMatched) {
-              setActiveMissedQuestion(examMatched)
-              setMissedQuestionDialogOpen(true)
-            }
+            if (examMatched) setActiveMissedQuestion(examMatched)
+            setMissedQuestionDialogOpen(true)
           }}
           aria-label={examMatched ? "Review missed questions (quiz + exam)" : "Review missed quiz question"}
           title={examMatched ? "Review missed questions (quiz + exam)" : "Review missed quiz question"}
-          style={{ marginLeft: examMatched ? '32px' : '0' }}
+          style={examMatched ? { marginLeft: '4px', marginTop: '10px' } : {}}
         >
           <VariableStar
             color={quizStarColor}
@@ -245,7 +237,6 @@ export function TopicTeacherContent() {
     useState<string | null>(null)
   const [quizWrongAnswers, setQuizWrongAnswers] = useState<WrongAnswer[]>([])
   const [activeQuizQuestion, setActiveQuizQuestion] = useState<WrongAnswer | null>(null)
-  const [quizQuestionDialogOpen, setQuizQuestionDialogOpen] = useState(false)
   const [matchedExamTerms, setMatchedExamTerms] = useState<string[]>([])
   // Map from question index to best matched term (keeps only one term per question)
   const matchedExamTermsRef = useRef<Map<number, string>>(new Map())
@@ -1694,12 +1685,13 @@ export function TopicTeacherContent() {
 
       for (const header of headers) {
         // Skip section headers where list items should show stars instead
-        // Also skip generic overview/comparison headers
+        // Also skip generic overview/comparison headers and intro "why X matters" headers
         const lowerHeader = header.toLowerCase()
         if (lowerHeader.includes('key takeaways') ||
             lowerHeader.includes('practice tips') ||
             lowerHeader.includes('evolution of thinking') ||
-            lowerHeader.includes('comparing the theories')) continue
+            lowerHeader.includes('comparing the theories') ||
+            (lowerHeader.includes('why') && lowerHeader.includes('matter'))) continue
 
         // Check if this header matches any of the question's relatedSections
         for (const section of question.relatedSections) {
@@ -1775,9 +1767,11 @@ export function TopicTeacherContent() {
 
       for (const header of headers) {
         // Skip section headers where list items should show stars instead
+        // Also skip intro "why X matters" headers - questions aren't about lesson importance
         const lowerHeader = header.toLowerCase()
         if (lowerHeader.includes('key takeaways') ||
-            lowerHeader.includes('practice tips')) continue
+            lowerHeader.includes('practice tips') ||
+            (lowerHeader.includes('why') && lowerHeader.includes('matter'))) continue
 
         // Check if this header matches any of the question's relatedSections
         for (const section of sections) {
@@ -2345,7 +2339,6 @@ export function TopicTeacherContent() {
                                   setActiveMissedQuestion={setActiveMissedQuestion}
                                   setMissedQuestionDialogOpen={setMissedQuestionDialogOpen}
                                   setActiveQuizQuestion={setActiveQuizQuestion}
-                                  setQuizQuestionDialogOpen={setQuizQuestionDialogOpen}
                                 >
                                   <TypographyH2>{children}</TypographyH2>
                                 </OverlappingStarButtons>
@@ -2410,7 +2403,6 @@ export function TopicTeacherContent() {
                                   setActiveMissedQuestion={setActiveMissedQuestion}
                                   setMissedQuestionDialogOpen={setMissedQuestionDialogOpen}
                                   setActiveQuizQuestion={setActiveQuizQuestion}
-                                  setQuizQuestionDialogOpen={setQuizQuestionDialogOpen}
                                 >
                                   <TypographyH3>{children}</TypographyH3>
                                 </OverlappingStarButtons>
@@ -2480,7 +2472,7 @@ export function TopicTeacherContent() {
                                 <div className="relative">
                                   <button
                                     type="button"
-                                    className="apple-pulsate absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full"
+                                    className="apple-pulsate absolute -left-10 top-0 flex h-6 w-6 items-center justify-center rounded-full"
                                     onClick={() => {
                                       setActiveMissedQuestion(termMatch)
                                       setMissedQuestionDialogOpen(true)
@@ -2504,7 +2496,7 @@ export function TopicTeacherContent() {
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center text-base leading-none">
                                     {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
@@ -2521,7 +2513,7 @@ export function TopicTeacherContent() {
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center text-base leading-none">
                                     {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
@@ -2538,7 +2530,7 @@ export function TopicTeacherContent() {
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
                                 {showIcon && (
-                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center text-base leading-none">
                                     {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
@@ -2581,7 +2573,6 @@ export function TopicTeacherContent() {
 	                                    setActiveMissedQuestion={setActiveMissedQuestion}
 	                                    setMissedQuestionDialogOpen={setMissedQuestionDialogOpen}
 	                                    setActiveQuizQuestion={setActiveQuizQuestion}
-	                                    setQuizQuestionDialogOpen={setQuizQuestionDialogOpen}
 	                                  >
 	                                    {children}
 	                                  </OverlappingStarButtons>
@@ -2592,13 +2583,13 @@ export function TopicTeacherContent() {
 	                            return (
 	                              <li className={showIcon ? 'relative' : ''}>
 	                                {showIcon && (
-	                                  <span className="absolute -left-10 top-1 w-8 flex items-center justify-center text-base leading-none">
+	                                  <span className="absolute -left-10 top-[-24px] w-8 flex items-start justify-center text-base leading-none">
 	                                    {quizMatch && (
 	                                      <button
 	                                        type="button"
 	                                        onClick={() => {
 	                                          setActiveQuizQuestion(quizMatch)
-	                                          setQuizQuestionDialogOpen(true)
+	                                          setMissedQuestionDialogOpen(true)
 	                                        }}
 	                                        className="cursor-pointer"
 	                                      >
@@ -2785,32 +2776,107 @@ export function TopicTeacherContent() {
             setMissedQuestionDialogOpen(open)
             if (!open) {
               setActiveMissedQuestion(null)
+              setActiveQuizQuestion(null)
             }
           }}
         >
-          <DialogContent className="max-w-3xl">
+          <DialogContent className="max-w-3xl max-h-[85vh] flex flex-col">
             <DialogHeader>
-              <DialogTitle>Review missed question</DialogTitle>
-              <DialogDescription>From your most recent practice exam.</DialogDescription>
+              <DialogTitle>Review missed {activeMissedQuestion && activeQuizQuestion ? 'questions' : 'question'}</DialogTitle>
+              <DialogDescription>
+                {activeMissedQuestion && activeQuizQuestion
+                  ? 'From your practice exam and recent quiz.'
+                  : activeMissedQuestion
+                  ? 'From your most recent practice exam.'
+                  : 'From your most recent quiz.'}
+              </DialogDescription>
             </DialogHeader>
 
-            {activeMissedQuestion && (
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-sm mb-2">Question</h4>
-                  <p className="text-sm text-foreground">
-                    {activeMissedQuestion.question.question}
-                  </p>
-                </div>
+            <div className="overflow-y-auto flex-1 pr-2 space-y-6">
+              {/* Practice Exam Question */}
+              {activeMissedQuestion && (
+                <div className="space-y-4">
+                  {activeQuizQuestion && (
+                    <h3 className="font-semibold text-base border-b pb-2">Practice Exam Question</h3>
+                  )}
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Question</h4>
+                    <p className="text-sm text-foreground">
+                      {activeMissedQuestion.question.question}
+                    </p>
+                  </div>
 
-                {Array.isArray(activeMissedQuestion.question.options) &&
-                  activeMissedQuestion.question.options.length > 0 && (
+                  {Array.isArray(activeMissedQuestion.question.options) &&
+                    activeMissedQuestion.question.options.length > 0 && (
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2">Options</h4>
+                        <div className="space-y-1">
+                          {activeMissedQuestion.question.options.map((option, optIdx) => {
+                            const isCorrect = option === activeMissedQuestion.question.correct_answer
+                            const isSelected = option === activeMissedQuestion.selectedAnswer
+                            const optionLetter = String.fromCharCode(65 + optIdx)
+
+                            return (
+                              <div
+                                key={optIdx}
+                                className={`text-sm p-2 rounded flex items-start gap-2 ${
+                                  isCorrect ? 'brand-pill-olive' : ''
+                                } ${
+                                  isSelected && !isCorrect
+                                    ? 'brand-pill-dusty-rose'
+                                    : ''
+                                }`}
+                              >
+                                <span className="font-semibold flex-shrink-0">
+                                  {optionLetter}.
+                                </span>
+                                <span className="break-words">
+                                  {option}
+                                  {isCorrect && (
+                                    <span className="font-semibold ml-2">✓ Correct</span>
+                                  )}
+                                  {isSelected && !isCorrect && (
+                                    <span className="font-semibold ml-2">✗ Your answer</span>
+                                  )}
+                                </span>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                  {activeMissedQuestion.question.explanation ? (
+                    <div>
+                      <h4 className="font-semibold text-sm mb-2">Explanation</h4>
+                      <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                        {activeMissedQuestion.question.explanation}
+                      </p>
+                    </div>
+                  ) : null}
+                </div>
+              )}
+
+              {/* Quiz Question */}
+              {activeQuizQuestion && (
+                <div className="space-y-4">
+                  {activeMissedQuestion && (
+                    <h3 className="font-semibold text-base border-b pb-2 mt-4">Quiz Question</h3>
+                  )}
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Question</h4>
+                    <p className="text-sm text-foreground">
+                      {activeQuizQuestion.question}
+                    </p>
+                  </div>
+
+                  {Array.isArray(activeQuizQuestion.options) && activeQuizQuestion.options.length > 0 ? (
                     <div>
                       <h4 className="font-semibold text-sm mb-2">Options</h4>
                       <div className="space-y-1">
-                        {activeMissedQuestion.question.options.map((option, optIdx) => {
-                          const isCorrect = option === activeMissedQuestion.question.correct_answer
-                          const isSelected = option === activeMissedQuestion.selectedAnswer
+                        {activeQuizQuestion.options.map((option, optIdx) => {
+                          const isCorrect = option === activeQuizQuestion.correctAnswer
+                          const isSelected = option === activeQuizQuestion.selectedAnswer
                           const optionLetter = String.fromCharCode(65 + optIdx)
 
                           return (
@@ -2819,9 +2885,7 @@ export function TopicTeacherContent() {
                               className={`text-sm p-2 rounded flex items-start gap-2 ${
                                 isCorrect ? 'brand-pill-olive' : ''
                               } ${
-                                isSelected && !isCorrect
-                                  ? 'brand-pill-dusty-rose'
-                                  : ''
+                                isSelected && !isCorrect ? 'brand-pill-dusty-rose' : ''
                               }`}
                             >
                               <span className="font-semibold flex-shrink-0">
@@ -2841,18 +2905,37 @@ export function TopicTeacherContent() {
                         })}
                       </div>
                     </div>
+                  ) : (
+                    <div>
+                      <h4 className="font-semibold text-sm mb-2">Answers</h4>
+                      <div className="space-y-1">
+                        <div className="text-sm p-2 rounded flex items-start gap-2 brand-pill-dusty-rose">
+                          <span className="break-words">
+                            {activeQuizQuestion.selectedAnswer}
+                            <span className="font-semibold ml-2">✗ Your answer</span>
+                          </span>
+                        </div>
+                        <div className="text-sm p-2 rounded flex items-start gap-2 brand-pill-olive">
+                          <span className="break-words">
+                            {activeQuizQuestion.correctAnswer}
+                            <span className="font-semibold ml-2">✓ Correct</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   )}
 
-                {activeMissedQuestion.question.explanation ? (
-                  <div>
-                    <h4 className="font-semibold text-sm mb-2">Explanation</h4>
-                    <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
-                      {activeMissedQuestion.question.explanation}
-                    </p>
-                  </div>
-                ) : null}
-              </div>
-            )}
+                  {activeQuizQuestion.explanation && (
+                    <div>
+                      <h4 className="font-semibold text-sm mb-2">Explanation</h4>
+                      <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
+                        {activeQuizQuestion.explanation}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
 
             <DialogFooter>
               <Button variant="outline" onClick={() => setMissedQuestionDialogOpen(false)}>
@@ -2953,108 +3036,6 @@ export function TopicTeacherContent() {
               </Button>
               <Button onClick={() => setShowQuizColorPicker(false)}>
                 Done
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-
-        {/* Quiz Question Dialog */}
-        <Dialog
-          open={quizQuestionDialogOpen}
-          onOpenChange={(open) => {
-            setQuizQuestionDialogOpen(open)
-            if (!open) {
-              setActiveQuizQuestion(null)
-            }
-          }}
-        >
-          <DialogContent className="max-w-3xl">
-            <DialogHeader>
-              <DialogTitle>Review missed question</DialogTitle>
-              <DialogDescription>From your most recent quiz.</DialogDescription>
-            </DialogHeader>
-
-            {activeQuizQuestion && (
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-sm mb-2">Question</h4>
-                  <p className="text-sm text-foreground">
-                    {activeQuizQuestion.question}
-                  </p>
-                </div>
-
-                {Array.isArray(activeQuizQuestion.options) && activeQuizQuestion.options.length > 0 ? (
-                  // Show full options like practice exam
-                  <div>
-                    <h4 className="font-semibold text-sm mb-2">Options</h4>
-                    <div className="space-y-1">
-                      {activeQuizQuestion.options.map((option, optIdx) => {
-                        const isCorrect = option === activeQuizQuestion.correctAnswer
-                        const isSelected = option === activeQuizQuestion.selectedAnswer
-                        const optionLetter = String.fromCharCode(65 + optIdx)
-
-                        return (
-                          <div
-                            key={optIdx}
-                            className={`text-sm p-2 rounded flex items-start gap-2 ${
-                              isCorrect ? 'brand-pill-olive' : ''
-                            } ${
-                              isSelected && !isCorrect ? 'brand-pill-dusty-rose' : ''
-                            }`}
-                          >
-                            <span className="font-semibold flex-shrink-0">
-                              {optionLetter}.
-                            </span>
-                            <span className="break-words">
-                              {option}
-                              {isCorrect && (
-                                <span className="font-semibold ml-2">✓ Correct</span>
-                              )}
-                              {isSelected && !isCorrect && (
-                                <span className="font-semibold ml-2">✗ Your answer</span>
-                              )}
-                            </span>
-                          </div>
-                        )
-                      })}
-                    </div>
-                  </div>
-                ) : (
-                  // Fallback for old quiz results without options
-                  <div>
-                    <h4 className="font-semibold text-sm mb-2">Answers</h4>
-                    <div className="space-y-1">
-                      <div className="text-sm p-2 rounded flex items-start gap-2 brand-pill-dusty-rose">
-                        <span className="break-words">
-                          {activeQuizQuestion.selectedAnswer}
-                          <span className="font-semibold ml-2">✗ Your answer</span>
-                        </span>
-                      </div>
-                      <div className="text-sm p-2 rounded flex items-start gap-2 brand-pill-olive">
-                        <span className="break-words">
-                          {activeQuizQuestion.correctAnswer}
-                          <span className="font-semibold ml-2">✓ Correct</span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Add explanation section (same as practice exam) */}
-                {activeQuizQuestion.explanation && (
-                  <div>
-                    <h4 className="font-semibold text-sm mb-2">Explanation</h4>
-                    <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
-                      {activeQuizQuestion.explanation}
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
-
-            <DialogFooter>
-              <Button variant="outline" onClick={() => setQuizQuestionDialogOpen(false)}>
-                Close
               </Button>
             </DialogFooter>
           </DialogContent>
