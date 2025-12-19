@@ -110,7 +110,7 @@ function OverlappingStarButtons({
   isH2Header?: boolean
 }) {
   const [sharedHover, setSharedHover] = useState(false)
-  const topClass = isH2Header ? 'top-10' : 'top-2'
+  const topClass = isH2Header ? 'top-10' : 'top-0'
 
   return (
     <div className="relative">
