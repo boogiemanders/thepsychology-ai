@@ -955,7 +955,7 @@ export function QuizzerContent() {
                                 <div className="flex-1 min-w-0 pt-1">
                                   <div className="text-base text-foreground" style={{ fontFamily: 'Tahoma' }}>
                                     <span>{optionLetter}.</span>{' '}
-                                    <span dangerouslySetInnerHTML={{ __html: optionContent }} />
+                                    <span style={{ fontFamily: 'Tahoma' }} dangerouslySetInnerHTML={{ __html: optionContent }} />
                                   </div>
                                 </div>
                               </div>
