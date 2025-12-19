@@ -95,7 +95,8 @@ function OverlappingStarButtons({
   setMissedQuestionDialogOpen,
   setActiveQuizQuestion,
   setQuizQuestionDialogOpen,
-  children
+  children,
+  isH2Header = false
 }: {
   examMatched: any
   quizMatched: any
@@ -106,15 +107,17 @@ function OverlappingStarButtons({
   setActiveQuizQuestion: (q: any) => void
   setQuizQuestionDialogOpen: (open: boolean) => void
   children: React.ReactNode
+  isH2Header?: boolean
 }) {
   const [sharedHover, setSharedHover] = useState(false)
+  const topClass = isH2Header ? 'top-10' : 'top-2'
 
   return (
     <div className="relative">
       {examMatched && (
         <button
           type="button"
-          className="apple-pulsate absolute -left-10 top-2 flex h-6 w-6 items-center justify-center rounded-full"
+          className={`apple-pulsate absolute -left-10 ${topClass} flex h-6 w-6 items-center justify-center rounded-full`}
           onClick={() => {
             setActiveMissedQuestion(examMatched)
             setMissedQuestionDialogOpen(true)
@@ -136,7 +139,7 @@ function OverlappingStarButtons({
       {quizMatched && (
         <button
           type="button"
-          className="apple-pulsate absolute -left-10 top-2 flex h-6 w-6 items-center justify-center rounded-full"
+          className={`apple-pulsate absolute -left-10 ${topClass} flex h-6 w-6 items-center justify-center rounded-full`}
           onClick={() => {
             setActiveQuizQuestion(quizMatched)
             setQuizQuestionDialogOpen(true)
@@ -2334,6 +2337,7 @@ export function TopicTeacherContent() {
                             if (examMatched || quizMatched) {
                               return (
                                 <OverlappingStarButtons
+                                  isH2Header={true}
                                   examMatched={examMatched}
                                   quizMatched={quizMatched}
                                   starColor={starColor}
