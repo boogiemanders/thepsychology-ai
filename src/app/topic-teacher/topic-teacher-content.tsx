@@ -1593,13 +1593,18 @@ export function TopicTeacherContent() {
 
     const normalizedText = listItemText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
 
+    console.log('📋 Checking list item:', normalizedText.substring(0, 80))
+    console.log('   practiceExamQuestionKeywords size:', practiceExamQuestionKeywords.size)
+
     // First try keyword-based matching (correct answer words)
     for (const wrongQ of practiceExamWrongQuestions) {
       const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
+      console.log('   Q', wrongQ.questionIndex, 'keywords:', keywords)
 
       // Check if list item contains any keywords from the correct answer
       for (const keyword of keywords) {
         if (keyword.length >= 6 && normalizedText.includes(keyword)) {
+          console.log('   ✅ MATCH! keyword:', keyword)
           return wrongQ
         }
       }
@@ -1942,7 +1947,7 @@ export function TopicTeacherContent() {
     ])
 
     for (const wrongQ of practiceExamWrongQuestions) {
-      const correctAnswer = (wrongQ.question.correctAnswer || '')
+      const correctAnswer = (wrongQ.question.correct_answer || '')
 
       // Extract significant words (6+ chars) from the answer
       const words = correctAnswer
@@ -1950,6 +1955,8 @@ export function TopicTeacherContent() {
         .split(/\s+/)
         .map(w => w.replace(/[^a-z0-9]/g, ''))
         .filter(w => w.length >= 6 && !skipWords.has(w))
+
+      console.log('🔑 Keywords for question', wrongQ.questionIndex, ':', words, 'from answer:', correctAnswer)
 
       // Dedupe and store
       result.set(wrongQ.questionIndex, [...new Set(words)])
@@ -2539,12 +2546,19 @@ export function TopicTeacherContent() {
                             if (!termMatch && !isInKeyTakeawaysSection.current) {
                               const normalizedParagraph = rawText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
 
+                              // Debug: log paragraphs that might match "definitive" or "autopsy"
+                              if (normalizedParagraph.includes('definitive') || normalizedParagraph.includes('autopsy')) {
+                                console.log('📄 Paragraph with definitive/autopsy:', normalizedParagraph.substring(0, 100))
+                                console.log('   practiceExamQuestionKeywords size:', practiceExamQuestionKeywords.size)
+                              }
+
                               for (const wrongQ of practiceExamWrongQuestions) {
                                 const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
 
                                 // Check if paragraph contains any key terms (minimum 6 chars to avoid false positives)
                                 for (const keyword of keywords) {
                                   if (keyword.length >= 6 && normalizedParagraph.includes(keyword)) {
+                                    console.log('📄 ✅ PARAGRAPH MATCH! keyword:', keyword, 'in:', normalizedParagraph.substring(0, 60))
                                     termMatch = wrongQ
                                     break
                                   }
