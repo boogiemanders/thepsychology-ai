@@ -849,6 +849,24 @@ export function TopicTeacherContent() {
 
         if (!cancelled) {
           setPracticeExamWrongQuestions(wrong)
+
+          // Extract relatedSections from wrong questions and update highlightData
+          // This replaces the ['__ALL__'] fallback with actual section names
+          if (wrong.length > 0 && hasExamResults) {
+            const sectionsFromQuestions = wrong
+              .flatMap(w => w.question.relatedSections || [])
+              .filter((section, idx, arr) => arr.indexOf(section) === idx) // dedupe
+
+            if (sectionsFromQuestions.length > 0) {
+              setHighlightData(prev => ({
+                ...prev,
+                examWrongSections: sectionsFromQuestions,
+                recentlyWrongSections: prev.recentlyWrongSections.includes('__ALL__')
+                  ? sectionsFromQuestions
+                  : prev.recentlyWrongSections,
+              }))
+            }
+          }
         }
       } catch (error) {
         if ((error as Error).name === 'AbortError') return
