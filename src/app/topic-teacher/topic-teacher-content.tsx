@@ -1589,8 +1589,14 @@ export function TopicTeacherContent() {
   }
 
   // Flexible matching for practice exam questions in list items (Key Takeaways)
-  // Uses keyword matching, header matching, and term extraction
+  // DISABLED: Key Takeaways are summaries - stars should appear on actual content paragraphs instead
+  // This prevents false positives where generic summary text matches multiple questions
   const findPracticeExamMatchForListItem = (listItemText: string): WrongPracticeExamQuestion | null => {
+    // Return null to disable Key Takeaways starring for practice exam questions
+    // The actual paragraphs with specific content (e.g., "donepezil") will still be starred
+    return null
+
+    // Original implementation kept for reference:
     if (!listItemText || practiceExamWrongQuestions.length === 0) return null
 
     const normalizedText = listItemText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
@@ -1617,7 +1623,9 @@ export function TopicTeacherContent() {
     const genericHeaderWords = new Set([
       'disorders', 'symptoms', 'treatment', 'disease', 'cognitive',
       'patients', 'clinical', 'diagnosis', 'therapy', 'behavior',
-      'major', 'minor', 'other', 'types', 'causes', 'effects'
+      'major', 'minor', 'other', 'types', 'causes', 'effects',
+      // Drug-related generic words that appear across many medication sections
+      'medications', 'medication', 'drugs', 'pharmacological', 'treatments'
     ])
 
     for (const wrongQ of practiceExamWrongQuestions) {
