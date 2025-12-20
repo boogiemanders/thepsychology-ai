@@ -1915,22 +1915,33 @@ export function TopicTeacherContent() {
     return result
   }, [baseContent, practiceExamWrongQuestions])
 
-  // Extract the correct answer from practice exam questions for paragraph-level matching
-  // ONLY use the correct answer - it's the most specific identifier of what the question tests
-  // Using broader terms (Alzheimer's, cholinesterase) would match too many paragraphs
+  // Extract significant words from correct answers for paragraph-level matching
+  // For single-word answers (e.g., "Donepezil"), use the word directly
+  // For phrase answers (e.g., "Definitive diagnosis requires..."), extract distinctive words
   const practiceExamQuestionKeywords = useMemo(() => {
-    const result = new Map<number, string[]>() // questionIndex -> keywords (just correct answer)
+    const result = new Map<number, string[]>() // questionIndex -> keywords
+
+    // Common words to skip - these appear too frequently to be useful
+    const skipWords = new Set([
+      'the', 'and', 'that', 'this', 'with', 'from', 'have', 'been', 'were', 'are',
+      'was', 'will', 'would', 'could', 'should', 'which', 'their', 'there', 'where',
+      'what', 'when', 'most', 'more', 'than', 'other', 'into', 'only', 'also',
+      'diagnosis', 'disease', 'treatment', 'symptoms', 'patients', 'clinical',
+      'typically', 'usually', 'often', 'common', 'requires', 'showing'
+    ])
 
     for (const wrongQ of practiceExamWrongQuestions) {
-      const keywords: string[] = []
+      const correctAnswer = (wrongQ.question.correctAnswer || '')
 
-      // Only use the correct answer - this is the specific term the question is testing
-      const correctAnswer = (wrongQ.question.correctAnswer || '').toLowerCase()
-      if (correctAnswer.length >= 4) {
-        keywords.push(correctAnswer.replace(/[^a-z0-9]/g, ''))
-      }
+      // Extract significant words (6+ chars) from the answer
+      const words = correctAnswer
+        .toLowerCase()
+        .split(/\s+/)
+        .map(w => w.replace(/[^a-z0-9]/g, ''))
+        .filter(w => w.length >= 6 && !skipWords.has(w))
 
-      result.set(wrongQ.questionIndex, keywords)
+      // Dedupe and store
+      result.set(wrongQ.questionIndex, [...new Set(words)])
     }
 
     return result
