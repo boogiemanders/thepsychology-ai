@@ -9,7 +9,7 @@ version: 3
 
 ## Why Memory and Sleep Matter for Your EPPP Success
 
-You know that feeling when you stay up late cramming for an exam, only to find your brain feels foggy the next day? Or when you can't remember where you parked your car, but you can still ride a bike perfectly after years of not doing it? These everyday experiences reveal something profound about how our brains store and process information. For the EPPP, understanding memory and sleep isn't just about passing test questions—it's about grasping the fundamental biology that shapes everything your future clients will experience, from trauma memories to age-related cognitive changes.
+You know that feeling when you stay up late cramming for an exam, only to find your brain feels foggy the next day? Or when you can't remember where you parked your car, but you can still ride a bike perfectly after years of not doing it? These everyday experiences reveal something profound about how our brains store and process information. For the EPPP, understanding memory and sleep isn't just about passing test questions. It's about grasping the fundamental biology that shapes everything your future clients will experience, from trauma memories to age-related cognitive changes.
 
 Let's break down exactly what you need to know about the brain structures that handle memory and how sleep fits into this picture.
 
@@ -19,7 +19,7 @@ When we talk about memory, we're really talking about a team of brain regions, e
 
 ### The Hippocampus: Your Memory Transfer Agent
 
-The hippocampus became famous in psychology through a patient known as H.M. In 1953, surgeons removed portions of his brain—including both hippocampi, his amygdala, and parts of his medial temporal lobe—to treat severe seizures. The surgery worked for the seizures but created an unexpected problem: H.M. could no longer form new long-term declarative memories.
+The hippocampus became famous in psychology through a patient known as H.M. In 1953, surgeons removed portions of his brain including both hippocampi, his amygdala, and parts of his medial temporal lobe to treat severe seizures. The surgery worked for the seizures but created an unexpected problem: H.M. could no longer form new long-term declarative memories.
 
 Here's what that meant practically: H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you. He also had some gaps in memories from before the surgery, though his oldest memories remained relatively clear.
 
@@ -29,11 +29,11 @@ This tragic case taught us that the hippocampus serves as a **consolidation hub*
 
 While the hippocampus handles facts and events, the basal ganglia and cerebellum specialize in **procedural memories**—the "how to do things" memories that run automatically without conscious thought. When someone suffers damage to these areas, they struggle to learn new skills and may have difficulty performing skills they previously mastered.
 
-{{M}}Consider how you drive a car{{/M}}—you probably don't consciously think "press clutch, shift gear, release clutch" anymore. That automatic sequence lives in your basal ganglia and cerebellum. These structures handle implicit memories, which operate below your conscious awareness.
+{{M}}Consider how you drive a car{{/M}}, you probably don't consciously think "press clutch, shift gear, release clutch" anymore. That automatic sequence lives in your basal ganglia and cerebellum. These structures handle implicit memories, which operate below your conscious awareness.
 
 ### The Amygdala: Your Emotional Highlighter
 
-The amygdala does something fascinating: it attaches emotional significance to your memories. Research shows that people with functioning amygdalas remember emotional experiences more vividly than neutral ones. But people with amygdala damage? They recall emotional and non-emotional events equally—with equal lack of intensity.
+The amygdala does something fascinating: it attaches emotional significance to your memories. Research shows that people with functioning amygdalas remember emotional experiences more vividly than neutral ones. But people with amygdala damage? They recall emotional and non-emotional events equally with equal lack of intensity.
 
 This explains why you probably remember exactly where you were during significant emotional moments in your life, but you can't recall what you had for lunch three Tuesdays ago. The amygdala tags emotionally significant memories as "important," making them more likely to stick.
 
@@ -46,7 +46,7 @@ The prefrontal cortex handles several sophisticated memory functions:
 - **Item memory**: Recalling *what* happened
 - **Source memory**: Recalling *when and where* it happened
 
-That last distinction matters clinically. A client might remember an event (item memory) but struggle to recall the context (source memory)—a pattern you might see in certain neurological conditions.
+That last distinction matters clinically. A client might remember an event (item memory) but struggle to recall the context (source memory), a pattern you might see in certain neurological conditions.
 
 ### The Thalamus: A Processing Gateway
 
@@ -66,10 +66,10 @@ Here's a summary table to help you organize these regions:
 
 Now let's zoom in to what's happening at the cellular level when you learn something new.
 
-Back in the 1970s, Eric Kandel and his team studied sea slugs—yes, sea slugs—because their neurons are unusually large and easy to observe. They discovered something remarkable: when these slugs learned through classical conditioning, two things happened at the neural level:
+Back in the 1970s, Eric Kandel and his team studied sea slugs. Yes, sea slugs, because their neurons are unusually large and easy to observe. They discovered something remarkable: when these slugs learned through classical conditioning, two things happened at the neural level:
 
 1. **Short-term storage** involved increased release of the neurotransmitter serotonin
-2. **Long-term storage** involved actual physical changes—new synapses formed, and existing neurons changed structure
+2. **Long-term storage** involved actual physical changes — new synapses formed, and existing neurons changed structure
 
 Researchers found similar processes in humans and called it **long-term potentiation (LTP)**. This phenomenon was first observed in glutamate receptors in the hippocampus but later found in other areas like the amygdala and entorhinal cortex.
 
@@ -94,7 +94,7 @@ Sleep divides into two main categories: **NREM (non-rapid eye movement)** and **
 
 ### NREM Sleep: The Three Stages
 
-NREM sleep shows high-amplitude, low-frequency brain waves—synchronized activity that indicates your cortex is quieting down.
+NREM sleep shows high-amplitude, low-frequency brain waves, synchronized activity that indicates your cortex is quieting down.
 
 **Stage N1: The Transition Zone**
 
@@ -110,11 +110,11 @@ During N2, your muscles relax, body temperature drops, breathing slows, and hear
 
 **Stage N3: Deep Sleep (Slow-Wave Sleep)**
 
-Delta waves dominate here—these are the highest amplitude, lowest frequency waves. This is the deepest sleep, when you're hardest to wake. {{M}}If your partner tries to rouse you during N3, you might feel disoriented and groggy, like you've been pulled from underwater{{/M}}. This stage is crucial for physical restoration.
+Delta waves dominate here. These are the highest amplitude, lowest frequency waves. This is the deepest sleep, when you're hardest to wake. {{M}}If your partner tries to rouse you during N3, you might feel disoriented and groggy, like you've been pulled from underwater{{/M}}. This stage is crucial for physical restoration.
 
 ### REM Sleep: The Paradox
 
-Stage R (REM sleep) is called **paradoxical sleep** for good reason. Your brain shows beta waves (normally associated with being awake and alert) and theta waves. Your brain is highly active, your heart rate and breathing become irregular, and your eyes move rapidly beneath your eyelids. Yet your major muscle groups are essentially paralyzed—probably an evolutionary adaptation that keeps you from acting out your dreams.
+Stage R (REM sleep) is called **paradoxical sleep** for good reason. Your brain shows beta waves (normally associated with being awake and alert) and theta waves. Your brain is highly active, your heart rate and breathing become irregular, and your eyes move rapidly beneath your eyelids. Yet your major muscle groups are essentially paralyzed. Probably an evolutionary adaptation that keeps you from acting out your dreams.
 
 Most vivid, bizarre, detailed dreams occur during REM sleep. NREM dreams happen too, but they tend to be less intense and memorable.
 
@@ -136,7 +136,7 @@ But here's the important detail for the EPPP: **As the night progresses, your RE
 
 ## Sleep Across the Lifespan
 
-Sleep patterns change predictably as we age—this is prime EPPP material.
+Sleep patterns change predictably as we age. This is prime EPPP material.
 
 ### Infancy
 
@@ -164,7 +164,7 @@ Here's a critical point that surprises many students: **Older adults don't actua
 
 **Misconception 1: "All memory is stored in one place"**
 
-Wrong. Different memory types use different neural systems. The patient H.M. proves this—he kept his procedural memory despite losing the ability to form new declarative memories.
+Wrong. Different memory types use different neural systems. The patient H.M. proves this; he kept his procedural memory despite losing the ability to form new declarative memories.
 
 **Misconception 2: "The hippocampus stores long-term memories"**
 
@@ -221,4 +221,4 @@ Understanding memory systems and sleep has direct clinical applications:
 - **Infants** begin sleep with REM; this reverses to NREM-first by 3 months
 - **Older adults** don't need less sleep but experience advanced sleep phase, less N3 sleep, and more nighttime awakenings
 
-Remember: The EPPP loves testing the specifics—which structure does what, what happened to H.M., and the specific characteristics of each sleep stage. Use the tables in this lesson as quick reference guides as you review. Understanding these biological foundations will serve you well not just on test day, but throughout your career as you work with clients experiencing memory difficulties, sleep disorders, or age-related changes.
+Remember: The EPPP loves testing the specifics: which structure does what, what happened to H.M., and the specific characteristics of each sleep stage. Use the tables in this lesson as quick reference guides as you review. Understanding these biological foundations will serve you well not just on test day, but throughout your career as you work with clients experiencing memory difficulties, sleep disorders, or age-related changes.
