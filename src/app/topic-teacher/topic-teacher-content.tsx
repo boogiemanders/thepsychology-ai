@@ -1836,7 +1836,8 @@ export function TopicTeacherContent() {
       // This ensures we pick the most specific header even when relatedSections is generic
       const questionText = (wrongQ.question.question || '').toLowerCase()
       const explanation = (wrongQ.question.explanation || '').toLowerCase()
-      const combinedText = `${questionText} ${explanation}`
+      // Normalize text by removing punctuation so "alzheimer's" matches "alzheimers" in headers
+      const combinedText = `${questionText} ${explanation}`.replace(/[^a-z0-9\s]/g, '')
 
       console.log('   📝 Question text:', questionText.substring(0, 100))
       console.log('   📝 Explanation:', explanation.substring(0, 100))
@@ -1848,11 +1849,15 @@ export function TopicTeacherContent() {
         const lowerHeader = header.toLowerCase()
         if (lowerHeader.includes('key takeaways') || lowerHeader.includes('practice tips')) continue
 
-        // Extract significant words from header (4+ chars) and strip punctuation
-        const headerWords = lowerHeader
-          .split(/\s+/)
-          .map(w => w.replace(/[^a-z0-9]/g, '')) // Remove all non-alphanumeric characters
-          .filter(w => w.length >= 4)
+        // Extract significant words from header (4+ chars), strip punctuation, and deduplicate
+        // Deduplication prevents headers like "Prion Disease (Creutzfeldt-Jakob Disease)"
+        // from getting inflated match counts because "disease" appears twice
+        const headerWords = [...new Set(
+          lowerHeader
+            .split(/\s+/)
+            .map(w => w.replace(/[^a-z0-9]/g, '')) // Remove all non-alphanumeric characters
+            .filter(w => w.length >= 4)
+        )]
 
         // Check if most header words appear in question/explanation
         const matchingWords = headerWords.filter(word => combinedText.includes(word))
@@ -1865,7 +1870,8 @@ export function TopicTeacherContent() {
 
           // BONUS: Give huge boost if explanation directly mentions header topic
           // e.g., "Interference theory" in explanation should strongly match "Interference Theory: The Real Culprit"
-          const explanationWords = headerWords.filter(word => explanation.includes(word))
+          const normalizedExplanation = explanation.replace(/[^a-z0-9\s]/g, '')
+          const explanationWords = headerWords.filter(word => normalizedExplanation.includes(word))
           if (explanationWords.length >= Math.ceil(headerWords.length * 0.5)) {
             score += 10000 // Major bonus for explanation match
             console.log(`   🎯 Content match with explanation bonus: "${header}" score=${score} (matching: ${matchingWords.join(', ')})`)
