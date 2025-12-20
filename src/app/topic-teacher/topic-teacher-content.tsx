@@ -1586,15 +1586,26 @@ export function TopicTeacherContent() {
     return null
   }
 
-  // Flexible matching for practice exam questions in list items
-  // Uses the BEST header match (most specific section) to match list items
+  // Flexible matching for practice exam questions in list items (Key Takeaways)
+  // Uses keyword matching, header matching, and term extraction
   const findPracticeExamMatchForListItem = (listItemText: string): WrongPracticeExamQuestion | null => {
     if (!listItemText || practiceExamWrongQuestions.length === 0) return null
 
-    const normalizedText = listItemText.toLowerCase()
+    const normalizedText = listItemText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
 
-    // For each practice exam question, use its BEST matching section (from pre-calculation)
-    // This ensures we match the most specific section, not just any section
+    // First try keyword-based matching (correct answer words)
+    for (const wrongQ of practiceExamWrongQuestions) {
+      const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
+
+      // Check if list item contains any keywords from the correct answer
+      for (const keyword of keywords) {
+        if (keyword.length >= 6 && normalizedText.includes(keyword)) {
+          return wrongQ
+        }
+      }
+    }
+
+    // Then try header-based matching
     for (const wrongQ of practiceExamWrongQuestions) {
       // Get the best header for this question (most specific section)
       const bestHeader = practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)
