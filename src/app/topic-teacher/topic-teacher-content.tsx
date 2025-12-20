@@ -1915,6 +1915,47 @@ export function TopicTeacherContent() {
     return result
   }, [baseContent, practiceExamWrongQuestions])
 
+  // Extract key terms from practice exam questions for paragraph-level matching
+  // This enables matching paragraphs that contain the answer (e.g., "donepezil") directly
+  const practiceExamQuestionKeywords = useMemo(() => {
+    const result = new Map<number, string[]>() // questionIndex -> keywords
+
+    for (const wrongQ of practiceExamWrongQuestions) {
+      const keywords: string[] = []
+
+      // Extract from correct answer (most specific - this is what the question is testing)
+      const correctAnswer = (wrongQ.question.correctAnswer || '').toLowerCase()
+      if (correctAnswer.length >= 4) {
+        keywords.push(correctAnswer.replace(/[^a-z0-9]/g, ''))
+      }
+
+      // Extract capitalized terms from explanation (proper nouns, drug names, conditions)
+      const explanation = wrongQ.question.explanation || ''
+      const capitalizedTerms = explanation.match(/\b[A-Z][a-z]{3,}\b/g) || []
+      capitalizedTerms.forEach(term => {
+        const normalized = term.toLowerCase()
+        // Skip common words that happen to be capitalized at sentence starts
+        if (!['this', 'that', 'which', 'when', 'where', 'what', 'these', 'those', 'however', 'therefore'].includes(normalized)) {
+          keywords.push(normalized)
+        }
+      })
+
+      // Extract technical terms (long words that appear in both question and explanation)
+      const questionText = (wrongQ.question.question || '').toLowerCase()
+      const expText = explanation.toLowerCase()
+      const technicalTerms = questionText.match(/\b[a-z]{8,}\b/g) || []
+      technicalTerms.forEach(term => {
+        if (expText.includes(term)) {
+          keywords.push(term)
+        }
+      })
+
+      result.set(wrongQ.questionIndex, [...new Set(keywords)])
+    }
+
+    return result
+  }, [practiceExamWrongQuestions])
+
   if (!topic) {
     return (
       <main className="min-h-screen p-6 bg-background">
@@ -2488,6 +2529,25 @@ export function TopicTeacherContent() {
                                     break
                                   }
                                 }
+                              }
+                            }
+
+                            // Keyword-based matching: find paragraphs containing answer keywords (e.g., "donepezil")
+                            // Only match outside Key Takeaways sections to avoid duplicate stars
+                            if (!termMatch && !isInKeyTakeawaysSection.current) {
+                              const normalizedParagraph = rawText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
+
+                              for (const wrongQ of practiceExamWrongQuestions) {
+                                const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
+
+                                // Check if paragraph contains any key terms (minimum 6 chars to avoid false positives)
+                                for (const keyword of keywords) {
+                                  if (keyword.length >= 6 && normalizedParagraph.includes(keyword)) {
+                                    termMatch = wrongQ
+                                    break
+                                  }
+                                }
+                                if (termMatch) break
                               }
                             }
 
