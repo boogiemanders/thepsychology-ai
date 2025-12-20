@@ -1603,10 +1603,10 @@ export function TopicTeacherContent() {
 
     // First try keyword-based matching (correct answer words)
     // Use higher threshold (8+ chars) for Key Takeaways to avoid false positives
+    // Note: We allow this even for questions with header matches because drug names
+    // like "Atomoxetine" are specific and should match. Generic words like "especially"
+    // are filtered out in practiceExamQuestionKeywords skipWords.
     for (const wrongQ of practiceExamWrongQuestions) {
-      // Skip questions that already have a header match (star will be on header)
-      if (practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)) continue
-
       const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
 
       // Check if list item contains any keywords from the correct answer
@@ -1980,6 +1980,8 @@ export function TopicTeacherContent() {
       'alzheimers', 'memory', 'brain', 'neurocognitive', 'characteristic',
       // Drug-related terms that appear across multiple categories
       'overdose', 'effects', 'causes', 'leading', 'impairment',
+      // Common words that appear in explanations but aren't specific to the topic
+      'especially', 'commonly', 'prescribed', 'considered', 'including',
       // Alzheimer's/dementia-related terms that appear throughout NCD content
       'plaques', 'tangles', 'insidious', 'accounts', 'features', 'involves',
       'depression', 'responds', 'patterns', 'reversible', 'cortical', 'subcortical',
