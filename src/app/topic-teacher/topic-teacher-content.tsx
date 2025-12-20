@@ -2669,7 +2669,7 @@ export function TopicTeacherContent() {
 	                            return (
 	                              <li className={showIcon ? 'relative' : ''}>
 	                                {showIcon && (
-	                                  <span className="absolute -left-10 top-[-24px] w-8 flex items-start justify-center text-base leading-none">
+	                                  <span className="absolute -left-10 top-0 w-8 flex items-start justify-center text-base leading-none">
 	                                    {quizMatch && (
 	                                      <button
 	                                        type="button"
