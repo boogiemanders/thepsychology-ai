@@ -1598,6 +1598,9 @@ export function TopicTeacherContent() {
     // First try keyword-based matching (correct answer words)
     // Use higher threshold (8+ chars) for Key Takeaways to avoid false positives
     for (const wrongQ of practiceExamWrongQuestions) {
+      // Skip questions that already have a header match (star will be on header)
+      if (practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)) continue
+
       const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
 
       // Check if list item contains any keywords from the correct answer
