@@ -42,6 +42,7 @@ interface QuizQuestion {
   correctAnswer: string
   explanation: string
   relatedSections?: string[]
+  isScored?: boolean
 }
 
 interface QuizState {
@@ -280,13 +281,14 @@ export function QuizzerContent() {
       setQuizState((prev) => ({
         ...prev,
         question: prev.question + 1,
-        score: prev.score + (isCorrect ? 1 : 0),
+        score: prev.score + (isCorrect && currentQuestion.isScored !== false ? 1 : 0),
       }))
       setError(null)
       return
     }
 
-    const finalScore = state.score + (isCorrect ? 1 : 0)
+    const finalScore = state.score + (isCorrect && currentQuestion.isScored !== false ? 1 : 0)
+    const scoredQuestionCount = questions.filter(q => q.isScored !== false).length
     const wrongAnswers: WrongAnswer[] = []
     const correctAnswers = []
 
@@ -357,7 +359,7 @@ export function QuizzerContent() {
       topic: decodedTopic,
       timestamp: Date.now(),
       score: finalScore,
-      totalQuestions: questions.length,
+      totalQuestions: scoredQuestionCount,
       wrongAnswers,
       correctAnswers,
     }
@@ -663,11 +665,11 @@ export function QuizzerContent() {
               {/* Score Summary */}
               <div className="text-center mb-6">
                 <div className="text-6xl font-bold text-primary mb-2">
-                  {quizState.score}/{questions.length}
+                  {quizState.score}/{questions.filter(q => q.isScored !== false).length}
                 </div>
                 <p className="text-muted-foreground">
                   {Math.round(
-                    (quizState.score / questions.length) * 100
+                    (quizState.score / questions.filter(q => q.isScored !== false).length) * 100
                   )}% Correct
                 </p>
               </div>

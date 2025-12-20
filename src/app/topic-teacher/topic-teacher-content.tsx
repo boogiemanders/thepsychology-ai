@@ -1588,24 +1588,16 @@ export function TopicTeacherContent() {
     return null
   }
 
-  // Flexible matching for practice exam questions in list items (Key Takeaways)
-  // DISABLED: Key Takeaways are summaries - stars should appear on actual content paragraphs instead
-  // This prevents false positives where generic summary text matches multiple questions
+  // Matching for practice exam questions in list items (Key Takeaways)
+  // ONLY uses keyword matching - requires the exact correct answer word (8+ chars) to appear
+  // No header-based or term extraction matching (those cause too many false positives)
   const findPracticeExamMatchForListItem = (listItemText: string): WrongPracticeExamQuestion | null => {
-    // Return null to disable Key Takeaways starring for practice exam questions
-    // The actual paragraphs with specific content (e.g., "donepezil") will still be starred
-    return null
-
-    // Original implementation kept for reference:
     if (!listItemText || practiceExamWrongQuestions.length === 0) return null
 
     const normalizedText = listItemText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
 
-    // First try keyword-based matching (correct answer words)
-    // Use higher threshold (8+ chars) for Key Takeaways to avoid false positives
-    // Note: We allow this even for questions with header matches because drug names
-    // like "Atomoxetine" are specific and should match. Generic words like "especially"
-    // are filtered out in practiceExamQuestionKeywords skipWords.
+    // Only use keyword-based matching (correct answer words like "atomoxetine", "donepezil")
+    // Requires 8+ character keywords to avoid false positives from short generic words
     for (const wrongQ of practiceExamWrongQuestions) {
       const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
 
@@ -1617,51 +1609,7 @@ export function TopicTeacherContent() {
       }
     }
 
-    // Then try header-based matching
-    // Generic words that shouldn't count toward header matching
-    // These appear too frequently in medical content to be specific
-    const genericHeaderWords = new Set([
-      'disorders', 'symptoms', 'treatment', 'disease', 'cognitive',
-      'patients', 'clinical', 'diagnosis', 'therapy', 'behavior',
-      'major', 'minor', 'other', 'types', 'causes', 'effects',
-      // Drug-related generic words that appear across many medication sections
-      'medications', 'medication', 'drugs', 'pharmacological', 'treatments'
-    ])
-
-    for (const wrongQ of practiceExamWrongQuestions) {
-      // Get the best header for this question (most specific section)
-      const bestHeader = practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)
-      if (!bestHeader) continue
-
-      const normalizedHeader = bestHeader.toLowerCase()
-
-      // Extract significant words from the best header, excluding generic terms
-      // e.g., "Overshadowing: The Salience Effect" -> ["overshadowing", "salience", "effect"]
-      const headerWords = normalizedHeader
-        .split(/\s+/)
-        .map(w => w.replace(/[^a-z0-9]/g, '')) // Remove punctuation
-        .filter(w => w.length > 3 && !genericHeaderWords.has(w))
-
-      // Require at least 2 non-generic words to match
-      // This prevents matching on just generic words like "disorders"
-      if (headerWords.length < 2) continue
-
-      // Check if the list item contains most of these words
-      const matchingWords = headerWords.filter(word => normalizedText.includes(word))
-
-      // Require a good match (at least 50% of words, to handle decorative subtitles)
-      if (matchingWords.length >= Math.ceil(headerWords.length * 0.5)) {
-        return wrongQ
-      }
-    }
-
-    // Fall back to term extraction from the list item
-    const match = findBestWrongPracticeExamQuestionForParagraph(listItemText)
-    // Skip if the question already has a header match (star will be on header instead)
-    if (match && practiceExamQuestionToBestHeader.get(match.questionIndex)) {
-      return null
-    }
-    return match
+    return null
   }
 
   const getAnswerLabel = (
