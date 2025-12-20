@@ -244,6 +244,8 @@ export function TopicTeacherContent() {
   const matchedQuizTermsRef = useRef<Map<number, string>>(new Map())
   // Track when we're inside the "Key Takeaways for the EPPP" section
   const isInKeyTakeawaysSection = useRef(false)
+  // Track when we're inside an intro "Why X Matters" section - skip matching there
+  const isInIntroSection = useRef(false)
   const [missedQuestionDialogOpen, setMissedQuestionDialogOpen] = useState(false)
   const [activeMissedQuestion, setActiveMissedQuestion] =
     useState<WrongPracticeExamQuestion | null>(null)
@@ -1594,18 +1596,27 @@ export function TopicTeacherContent() {
     const normalizedText = listItemText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
 
     // First try keyword-based matching (correct answer words)
+    // Use higher threshold (8+ chars) for Key Takeaways to avoid false positives
     for (const wrongQ of practiceExamWrongQuestions) {
       const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
 
       // Check if list item contains any keywords from the correct answer
       for (const keyword of keywords) {
-        if (keyword.length >= 6 && normalizedText.includes(keyword)) {
+        if (keyword.length >= 8 && normalizedText.includes(keyword)) {
           return wrongQ
         }
       }
     }
 
     // Then try header-based matching
+    // Generic words that shouldn't count toward header matching
+    // These appear too frequently in medical content to be specific
+    const genericHeaderWords = new Set([
+      'disorders', 'symptoms', 'treatment', 'disease', 'cognitive',
+      'patients', 'clinical', 'diagnosis', 'therapy', 'behavior',
+      'major', 'minor', 'other', 'types', 'causes', 'effects'
+    ])
+
     for (const wrongQ of practiceExamWrongQuestions) {
       // Get the best header for this question (most specific section)
       const bestHeader = practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)
@@ -1613,12 +1624,16 @@ export function TopicTeacherContent() {
 
       const normalizedHeader = bestHeader.toLowerCase()
 
-      // Extract significant words from the best header and strip punctuation
+      // Extract significant words from the best header, excluding generic terms
       // e.g., "Overshadowing: The Salience Effect" -> ["overshadowing", "salience", "effect"]
       const headerWords = normalizedHeader
         .split(/\s+/)
         .map(w => w.replace(/[^a-z0-9]/g, '')) // Remove punctuation
-        .filter(w => w.length > 3)
+        .filter(w => w.length > 3 && !genericHeaderWords.has(w))
+
+      // Require at least 2 non-generic words to match
+      // This prevents matching on just generic words like "disorders"
+      if (headerWords.length < 2) continue
 
       // Check if the list item contains most of these words
       const matchingWords = headerWords.filter(word => normalizedText.includes(word))
@@ -1631,6 +1646,10 @@ export function TopicTeacherContent() {
 
     // Fall back to term extraction from the list item
     const match = findBestWrongPracticeExamQuestionForParagraph(listItemText)
+    // Skip if the question already has a header match (star will be on header instead)
+    if (match && practiceExamQuestionToBestHeader.get(match.questionIndex)) {
+      return null
+    }
     return match
   }
 
@@ -1870,12 +1889,17 @@ export function TopicTeacherContent() {
             .filter(w => w.length >= 4)
         )]
 
+        // Get the topic word (first significant word) - handles headers like "Barbiturates: The Old Guard"
+        const topicWord = headerWords[0]
+        const topicWordMatches = topicWord && combinedText.includes(topicWord)
+
         // Check if most header words appear in question/explanation
         const matchingWords = headerWords.filter(word => combinedText.includes(word))
 
-        // Require good match (at least 50% of header words, minimum 2 words)
-        // This allows headers with decorative subtitles like "Theory: The Catchy Subtitle"
-        if (matchingWords.length >= Math.ceil(headerWords.length * 0.5) && matchingWords.length >= 2) {
+        // Allow match if:
+        // 1. Standard: 50% of words match AND at least 2 words match
+        // 2. OR: The topic word (first word) matches - handles "Barbiturates: The Old Guard" matching "barbiturates"
+        if ((matchingWords.length >= Math.ceil(headerWords.length * 0.5) && matchingWords.length >= 2) || topicWordMatches) {
           // Score this match
           let score = matchingWords.length * 100
 
@@ -1932,13 +1956,24 @@ export function TopicTeacherContent() {
   const practiceExamQuestionKeywords = useMemo(() => {
     const result = new Map<number, string[]>() // questionIndex -> keywords
 
-    // Common words to skip - these appear too frequently to be useful
+    // Common words to skip - these appear too frequently to be useful for matching
+    // Including generic medical terms that appear throughout content
     const skipWords = new Set([
       'the', 'and', 'that', 'this', 'with', 'from', 'have', 'been', 'were', 'are',
       'was', 'will', 'would', 'could', 'should', 'which', 'their', 'there', 'where',
       'what', 'when', 'most', 'more', 'than', 'other', 'into', 'only', 'also',
       'diagnosis', 'disease', 'treatment', 'symptoms', 'patients', 'clinical',
-      'typically', 'usually', 'often', 'common', 'requires', 'showing'
+      'typically', 'usually', 'often', 'common', 'requires', 'showing',
+      // Generic medical terms that cause false positives
+      'associated', 'protein', 'amyloid', 'cognitive', 'disorder', 'disorders',
+      'alzheimers', 'memory', 'brain', 'neurocognitive', 'characteristic',
+      // Drug-related terms that appear across multiple categories
+      'overdose', 'effects', 'causes', 'leading', 'impairment',
+      // Alzheimer's/dementia-related terms that appear throughout NCD content
+      'plaques', 'tangles', 'insidious', 'accounts', 'features', 'involves',
+      'depression', 'responds', 'patterns', 'reversible', 'cortical', 'subcortical',
+      'frontotemporal', 'personality', 'language', 'initially', 'distinguishes',
+      'pseudodementia', 'delirium', 'fluctuating', 'physiological', 'identification'
     ])
 
     for (const wrongQ of practiceExamWrongQuestions) {
@@ -2373,16 +2408,23 @@ export function TopicTeacherContent() {
                             }
 
                             currentSectionRef.current = text
+                            const lowerText = text.toLowerCase()
 
                             // Track if we're entering/leaving sections where list items should show quiz stars
-                            if (text.toLowerCase().includes('key takeaways for the eppp') ||
-                                text.toLowerCase().includes('key takeaways') ||
-                                text.toLowerCase().includes('practice tips for remembering') ||
-                                text.toLowerCase().includes('practice tips')) {
+                            if (lowerText.includes('key takeaways for the eppp') ||
+                                lowerText.includes('key takeaways') ||
+                                lowerText.includes('practice tips for remembering') ||
+                                lowerText.includes('practice tips')) {
                               isInKeyTakeawaysSection.current = true
+                              isInIntroSection.current = false
+                            } else if (lowerText.includes('why') && lowerText.includes('matter')) {
+                              // Track intro "why X matters" sections - don't match paragraphs here
+                              isInIntroSection.current = true
+                              isInKeyTakeawaysSection.current = false
                             } else if (text) {
                               // New h2 header means we've left these sections
                               isInKeyTakeawaysSection.current = false
+                              isInIntroSection.current = false
                             }
 
                             // Check if THIS header is the best match for any practice exam question
@@ -2440,14 +2482,18 @@ export function TopicTeacherContent() {
                             currentSectionRef.current = text
 
                             // Track if we're entering/leaving sections where list items should show quiz stars
-                            if (text.toLowerCase().includes('key takeaways for the eppp') ||
-                                text.toLowerCase().includes('key takeaways') ||
-                                text.toLowerCase().includes('practice tips for remembering') ||
-                                text.toLowerCase().includes('practice tips')) {
+                            const lowerText = text.toLowerCase()
+                            if (lowerText.includes('key takeaways for the eppp') ||
+                                lowerText.includes('key takeaways') ||
+                                lowerText.includes('practice tips for remembering') ||
+                                lowerText.includes('practice tips')) {
                               isInKeyTakeawaysSection.current = true
+                              isInIntroSection.current = false
                             } else if (text) {
                               // New h3 header means we've left these sections
                               isInKeyTakeawaysSection.current = false
+                              // Also reset intro section flag - intro content is only at the very beginning
+                              isInIntroSection.current = false
                             }
 
                             // Check if THIS header is the best match for any practice exam question
@@ -2500,9 +2546,17 @@ export function TopicTeacherContent() {
                             // Check for term-based match (clickable apple for wrong practice exam questions)
                             let termMatch = findBestWrongPracticeExamQuestionForParagraph(rawText)
 
+                            // Skip paragraph matches for questions that already have a header match
+                            // This prevents e.g. barbiturate question from matching benzodiazepine paragraphs
+                            // because both mention "drowsiness" - the star should be on the header instead
+                            if (termMatch && practiceExamQuestionToBestHeader.get(termMatch.questionIndex)) {
+                              termMatch = null
+                            }
+
                             // Also check if this paragraph is in a section that matches a question
                             // and contains key terms from the question/explanation
-                            if (!termMatch && currentSectionRef.current) {
+                            // Skip intro "why matters" sections
+                            if (!termMatch && currentSectionRef.current && !isInIntroSection.current) {
                               const normalizedParagraph = rawText.toLowerCase()
 
                               for (const wrongQ of practiceExamWrongQuestions) {
@@ -2535,11 +2589,15 @@ export function TopicTeacherContent() {
                             }
 
                             // Keyword-based matching: find paragraphs containing answer keywords (e.g., "donepezil")
-                            // Only match outside Key Takeaways sections to avoid duplicate stars
-                            if (!termMatch && !isInKeyTakeawaysSection.current) {
+                            // Only match outside Key Takeaways and intro "why matters" sections
+                            // Only for questions that DON'T have a header match (to avoid duplicate stars)
+                            if (!termMatch && !isInKeyTakeawaysSection.current && !isInIntroSection.current) {
                               const normalizedParagraph = rawText.toLowerCase().replace(/[^a-z0-9\s]/g, '')
 
                               for (const wrongQ of practiceExamWrongQuestions) {
+                                // Skip questions that already have a header match
+                                if (practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)) continue
+
                                 const keywords = practiceExamQuestionKeywords.get(wrongQ.questionIndex) || []
 
                                 // Check if paragraph contains any key terms (minimum 6 chars to avoid false positives)
