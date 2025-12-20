@@ -220,7 +220,7 @@ export function TopicTeacherContent() {
   const [showColorPicker, setShowColorPicker] = useState(false)
   const [starColor, setStarColor] = useState('#000000')
   const [showQuizColorPicker, setShowQuizColorPicker] = useState(false)
-  const [quizStarColor, setQuizStarColor] = useState('#00ff00')
+  const [quizStarColor, setQuizStarColor] = useState('#000000')
   const [highlightData, setHighlightData] = useState<HighlightData>({
     recentlyWrongSections: [],
     recentlyCorrectSections: [],
@@ -3133,8 +3133,8 @@ export function TopicTeacherContent() {
               <Button
                 variant="outline"
                 onClick={() => {
-                  setQuizStarColor('#00ff00')
-                  localStorage.setItem('quizStarColor', '#00ff00')
+                  setQuizStarColor('#000000')
+                  localStorage.setItem('quizStarColor', '#000000')
                 }}
               >
                 Reset to Default
