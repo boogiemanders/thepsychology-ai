@@ -11,6 +11,7 @@ import { supabase } from "@/lib/supabase"
 import { type StripeTier } from "@/hooks/use-stripe-checkout"
 import { Badge } from "@/components/ui/badge"
 import { trackFunnelEvent } from "@/lib/funnel-events"
+import { getProPromoConfig } from "@/lib/promo-pro"
 
 type PricingSectionProps = {
   activeTier?: string
@@ -20,6 +21,7 @@ type PricingSectionProps = {
 export function PricingSection({ activeTier, onActiveTierChange }: PricingSectionProps) {
   const router = useRouter()
   const pricingItems = siteConfig.pricing.pricingItems
+  const proPromo = useMemo(() => getProPromoConfig(), [])
   const [expandedTier, setExpandedTier] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     fullName: "",
@@ -357,6 +359,7 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
       keySuffix?: string
     }
   ) => {
+    const isProPromoActive = tier.name === "Pro" && Boolean(proPromo)
     const [displayAmount, displayPeriod] = tier.displayPrice
       ? tier.displayPrice.split("/").map((part) => part.trim())
       : [tier.price, tier.period]
@@ -383,23 +386,33 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
                 Popular
               </span>
             )}
-            {tier.name === 'Pro' && (
+            {tier.name === "Pro" && isProPromoActive && (
               <Badge
                 variant="outline"
                 className="border-border/60 bg-transparent text-[11px] font-normal px-2 py-0.5"
               >
-                $30/mo starting Jan 1, 2026
+                Free until end of January
               </Badge>
             )}
           </p>
-          <div className="flex items-baseline mt-2">
-            <span className="text-4xl font-semibold">{displayAmount}</span>
-            {displayPeriod && (
-              <span className="ml-2 text-lg font-medium text-muted-foreground">
-                /{displayPeriod}
+          {isProPromoActive ? (
+            <div className="flex items-baseline mt-2">
+              <span className="text-4xl font-semibold">$0</span>
+              <span className="ml-2 text-lg font-medium text-muted-foreground">/month</span>
+              <span className="ml-3 text-sm text-muted-foreground line-through">
+                {tier.price}/month
               </span>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="flex items-baseline mt-2">
+              <span className="text-4xl font-semibold">{displayAmount}</span>
+              {displayPeriod && (
+                <span className="ml-2 text-lg font-medium text-muted-foreground">
+                  /{displayPeriod}
+                </span>
+              )}
+            </div>
+          )}
           <p className="text-sm mt-2">{tier.description}</p>
         </div>
 

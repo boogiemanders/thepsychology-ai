@@ -3,6 +3,7 @@
 
 export interface WrongAnswer {
   questionId: number
+  questionKey?: string
   question: string
   selectedAnswer: string
   correctAnswer: string
@@ -13,11 +14,13 @@ export interface WrongAnswer {
   // New fields for matching practice exam behavior
   options?: string[]        // Answer choices (A, B, C, D)
   explanation?: string      // Explanation text
+  isScored?: boolean
   isResolved?: boolean      // Whether this has been answered correctly since
 }
 
 export interface CorrectAnswer {
   questionId: number
+  questionKey?: string
   question: string
   relatedSections: string[]
   timestamp: number

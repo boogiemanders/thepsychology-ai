@@ -2889,7 +2889,8 @@ export function TopicTeacherContent() {
                   dotClassName="bg-foreground dark:bg-white"
                   hoverTextClassName="text-primary-foreground"
                   onClick={() => {
-                    const quizPath = `/quizzer?topic=${encodeURIComponent(decodedTopic)}${domain ? `&domain=${encodeURIComponent(domain)}` : ''}`
+                    const reviewParam = quizWrongAnswers.length > 0 ? '&review=wrong' : ''
+                    const quizPath = `/quizzer?topic=${encodeURIComponent(decodedTopic)}${domain ? `&domain=${encodeURIComponent(domain)}` : ''}${reviewParam}`
                     router.push(quizPath)
                   }}
                   hoverText="Start"

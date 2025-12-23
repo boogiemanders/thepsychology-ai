@@ -188,7 +188,7 @@ export const siteConfig = {
         description: "Limited to one topic per domain.",
         buttonText: "Select",
         buttonColor: "bg-primary text-primary-foreground",
-        isPopular: true,
+        isPopular: false,
         displayPrice: "$0/week",
       },
       {
@@ -202,7 +202,7 @@ export const siteConfig = {
         description: "Unlimited access to all topics and tools.",
         buttonText: "Select",
         buttonColor: "bg-primary text-primary-foreground",
-        isPopular: false,
+        isPopular: true,
       },
       {
         name: "Pro + Coaching",

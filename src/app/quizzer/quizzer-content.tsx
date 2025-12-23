@@ -18,6 +18,7 @@ import { useAuth } from '@/context/auth-context'
 import { supabase } from '@/lib/supabase'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { computeQuestionKeyClient } from '@/lib/question-key-client'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -81,6 +82,7 @@ export function QuizzerContent() {
   const { user } = useAuth()
   const topic = searchParams.get('topic')
   const domain = searchParams.get('domain')
+  const review = searchParams.get('review')
   const decodeParam = (value: string | null): string => {
     if (!value) return ''
     try {
@@ -377,10 +379,16 @@ export function QuizzerContent() {
     questions.forEach((q, idx) => {
       const selected = state.selectedAnswers[idx] ?? ''
       const questionWasCorrect = selected === q.correctAnswer
+      const questionKey = computeQuestionKeyClient({
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+      })
 
       if (!questionWasCorrect) {
         wrongAnswers.push({
           questionId: q.id,
+          questionKey,
           question: q.question,
           selectedAnswer: selected,
           correctAnswer: q.correctAnswer,
@@ -388,11 +396,13 @@ export function QuizzerContent() {
           timestamp: Date.now(),
           options: q.options,           // Save options for dialog
           explanation: q.explanation,   // Save explanation for dialog
+          isScored: q.isScored !== false,
           isResolved: false,            // Mark as unresolved initially
         })
       } else {
         correctAnswers.push({
           questionId: q.id,
+          questionKey,
           question: q.question,
           relatedSections: q.relatedSections || [],
           timestamp: Date.now(),
@@ -400,38 +410,42 @@ export function QuizzerContent() {
       }
     })
 
-    const previousResults = getQuizResults(topic || '')
-    if (previousResults) {
-      wrongAnswers.forEach((wa) => {
-        const wasPreviouslyCorrect = previousResults.correctAnswers.some(
-          (ca) => ca.questionId === wa.questionId
-        )
-        if (wasPreviouslyCorrect) {
-          wa.previouslyWrong = false
-        }
+    const previousResults = decodedTopic ? getQuizResults(decodedTopic) : null
+    const keyFor = (entry: { questionKey?: string; questionId?: number }) =>
+      entry.questionKey || `id:${entry.questionId ?? -1}`
+
+    const mergedWrongByKey = new Map<string, WrongAnswer>()
+    previousResults?.wrongAnswers?.forEach((wa) => {
+      if (!wa) return
+      mergedWrongByKey.set(keyFor(wa), wa)
+    })
+
+    correctAnswers.forEach((ca) => {
+      const key = keyFor(ca as any)
+      const existing = mergedWrongByKey.get(key)
+      if (existing && existing.isResolved !== true) {
+        ;(ca as any).wasPreviouslyWrong = true
+      }
+      if (existing) {
+        existing.isResolved = true
+        existing.timestamp = Date.now()
+      }
+    })
+
+    wrongAnswers.forEach((wa) => {
+      const key = keyFor(wa)
+      const existing = mergedWrongByKey.get(key)
+      mergedWrongByKey.set(key, {
+        ...(existing ?? {}),
+        ...wa,
+        isResolved: false,
+        timestamp: Date.now(),
       })
+    })
 
-      correctAnswers.forEach((ca) => {
-        const wasPreviouslyWrong = previousResults.wrongAnswers.some(
-          (wa) => wa.questionId === ca.questionId
-        )
-        if (wasPreviouslyWrong) {
-          ;(ca as any).wasPreviouslyWrong = true
-
-          // MARK THE PREVIOUS WRONG ANSWER AS RESOLVED
-          // User got it correct this time, so mark it resolved
-          const prevWrongAnswer = previousResults.wrongAnswers.find(
-            wa => wa.questionId === ca.questionId
-          )
-          if (prevWrongAnswer) {
-            prevWrongAnswer.isResolved = true
-          }
-        }
-      })
-
-      // Save updated previous results with resolved flags
-      saveQuizResults(previousResults)
-    }
+    const mergedWrongAnswers = Array.from(mergedWrongByKey.values()).sort(
+      (a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0)
+    )
 
     const recentSections = Array.from(
       new Set(wrongAnswers.flatMap((wa) => wa.relatedSections || []))
@@ -442,7 +456,7 @@ export function QuizzerContent() {
       timestamp: Date.now(),
       score: finalScore,
       totalQuestions: scoredQuestionCount,
-      wrongAnswers,
+      wrongAnswers: mergedWrongAnswers,
       correctAnswers,
     }
 
@@ -519,6 +533,38 @@ export function QuizzerContent() {
       setIsLoading(true)
       setError(null)
 
+      if (review === 'wrong' && decodedTopic) {
+        const previous = getQuizResults(decodedTopic)
+        const unresolved = previous?.wrongAnswers?.filter((wa) => wa && wa.isResolved !== true) ?? []
+        const eligible = unresolved.filter(
+          (wa) => Array.isArray(wa.options) && wa.options.length >= 2 && typeof wa.correctAnswer === 'string' && wa.correctAnswer.length > 0
+        )
+
+        if (eligible.length > 0) {
+          const retryQuestions = shuffleArray(eligible).map((wa, idx) => ({
+            id: typeof wa.questionId === 'number' ? wa.questionId : idx,
+            question: wa.question,
+            options: shuffleArray([...(wa.options ?? [])]),
+            correctAnswer: wa.correctAnswer,
+            explanation: wa.explanation ?? '',
+            relatedSections: wa.relatedSections || [],
+            isScored: wa.isScored !== false,
+          })) as QuizQuestion[]
+
+          setQuestions(retryQuestions)
+          const initialFormats: Record<number, { question: string; options: string[] }> = {}
+          retryQuestions.forEach((q, idx) => {
+            initialFormats[idx] = {
+              question: escapeHtml(q.question),
+              options: q.options.map(escapeHtml),
+            }
+          })
+          setTextFormats(initialFormats)
+          lastSelectionRef.current = null
+          return
+        }
+      }
+
       const response = await fetch('/api/quizzer', {
         method: 'POST',
         headers: {
@@ -587,7 +633,7 @@ export function QuizzerContent() {
     } else if (!topic && questions.length === 0 && !isLoading) {
       setError('No topic provided')
     }
-  }, [topic])
+  }, [topic, review])
 
   // Timer effect: 68 seconds per question
   useEffect(() => {
