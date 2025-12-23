@@ -27,6 +27,9 @@ import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { createClient } from '@supabase/supabase-js'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/lib/unified-question-results'
+import { recordStudySession } from '@/lib/study-sessions'
+import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { supabase } from '@/lib/supabase'
 
 interface Question {
   id: number
@@ -48,7 +51,7 @@ interface Question {
 }
 
 export default function ExamGeneratorPage() {
-  const { userProfile } = useAuth()
+  const { user, userProfile } = useAuth()
   const subscriptionTier = userProfile?.subscription_tier
   const isFreeTier = subscriptionTier === 'free' || !subscriptionTier
   const [isGenerating, setIsGenerating] = useState(false)
@@ -94,6 +97,28 @@ export default function ExamGeneratorPage() {
   const questionContentRef = useRef<HTMLDivElement | null>(null)
   const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
   const step2Ref = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    if (!user?.id) return
+    const start = Date.now()
+
+    return () => {
+      const end = Date.now()
+      const durationSeconds = Math.round((end - start) / 1000)
+      if (durationSeconds < 5) return
+      recordStudySession({
+        userId: user.id,
+        feature: 'exam-generator',
+        startedAt: new Date(start),
+        endedAt: new Date(end),
+        durationSeconds,
+        metadata: {
+          examType,
+          mode,
+        },
+      })
+    }
+  }, [user?.id, examType, mode])
 
   const resolveSelectionText = useCallback(() => {
     if (typeof window === 'undefined') return null
@@ -453,9 +478,20 @@ export default function ExamGeneratorPage() {
       }
 
       // Save to Supabase
+      const {
+        data: { session },
+        error: sessionError,
+      } = await supabase.auth.getSession()
+      if (sessionError) throw sessionError
+      const token = session?.access_token
+      if (!token) throw new Error('Not authenticated')
+
       const response = await fetch('/api/save-exam-results', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
         body: JSON.stringify({
           userId,
           examType,
@@ -798,6 +834,8 @@ export default function ExamGeneratorPage() {
         }
         const response = await fetch(`/api/exam-generator?${params.toString()}`, {
           method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userId }),
         })
 
         if (!response.ok) {
@@ -971,12 +1009,12 @@ export default function ExamGeneratorPage() {
 	                              >
 	                                <CardHeader className="text-center">
 	                                  <div className="flex items-center justify-center flex-col">
-		                              <div className="flex items-center gap-2 mb-2">
-		                                <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+		                              <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+		                                <CardTitle className="text-xl font-semibold whitespace-nowrap">Diagnostic Exam</CardTitle>
 		                                {recommendedExamType === 'diagnostic' && (
 		                                  <Badge
 		                                    variant="secondary"
-		                                    className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+		                                    className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap"
 		                                    style={{
 		                                      backgroundColor: '#bdd1ca',
 		                                      borderColor: '#bdd1ca',
@@ -1018,12 +1056,12 @@ export default function ExamGeneratorPage() {
 	                              >
 	                                <CardHeader className="text-center">
 	                                  <div className="flex items-center justify-center flex-col">
-		                              <div className="flex items-center gap-2 mb-2">
-		                                <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+		                              <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+		                                <CardTitle className="text-xl font-semibold whitespace-nowrap">Practice Exam</CardTitle>
 		                                {isFreeTier ? (
                                       <Badge
                                         variant="secondary"
-                                        className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                        className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap"
                                         style={{
                                           backgroundColor: '#1f1f1f',
                                           borderColor: '#1f1f1f',
@@ -1035,7 +1073,7 @@ export default function ExamGeneratorPage() {
                                     ) : recommendedExamType === 'practice' && (
                                       <Badge
                                         variant="secondary"
-                                        className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                        className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap"
                                         style={{
                                           backgroundColor: '#788c5d',
                                           borderColor: '#788c5d',
@@ -1082,9 +1120,9 @@ export default function ExamGeneratorPage() {
 
 	                    {/* Desktop: static side-by-side cards */}
 	                    <div className="hidden md:grid md:grid-cols-2 gap-4">
-	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="h-full">
 	                        <Card
-	                          className={`cursor-pointer transition-all border-2 ${
+	                          className={`cursor-pointer transition-all border-2 h-full flex flex-col ${
 	                            examType === 'diagnostic'
 	                              ? 'bg-[#bdd1ca]/20 dark:bg-[#bdd1ca]/10'
 	                              : 'border-border'
@@ -1094,12 +1132,12 @@ export default function ExamGeneratorPage() {
 	                        >
 	                          <CardHeader className="text-center">
 	                            <div className="flex items-center justify-center flex-col">
-		                              <div className="flex items-center gap-2 mb-2">
-		                                <CardTitle className="text-xl font-semibold">Diagnostic Exam</CardTitle>
+		                              <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+		                                <CardTitle className="text-xl font-semibold whitespace-nowrap">Diagnostic Exam</CardTitle>
 		                                {recommendedExamType === 'diagnostic' && (
 		                                  <Badge
 		                                    variant="secondary"
-		                                    className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+		                                    className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap"
 		                                    style={{
 		                                      backgroundColor: '#bdd1ca',
 		                                      borderColor: '#bdd1ca',
@@ -1114,7 +1152,7 @@ export default function ExamGeneratorPage() {
 	                              <CardDescription>{diagnosticQuestionLabel}</CardDescription>
 	                            </div>
 	                          </CardHeader>
-	                          <CardContent className="space-y-3">
+	                          <CardContent className="space-y-3 flex-1">
 	                            <ul className="space-y-2 text-sm text-left">
                                 {diagnosticHighlights.map((highlight, idx) => (
                                   <li key={idx} className="flex items-center gap-2">
@@ -1127,9 +1165,9 @@ export default function ExamGeneratorPage() {
 	                        </Card>
 	                      </motion.div>
 
-	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="h-full">
 	                        <Card
-	                          className={`transition-all border-2 ${
+	                          className={`transition-all border-2 h-full flex flex-col ${
 	                            examType === 'practice'
 	                              ? 'bg-[#788c5d]/20 dark:bg-[#788c5d]/10'
 	                              : 'border-border'
@@ -1139,12 +1177,12 @@ export default function ExamGeneratorPage() {
 	                        >
 	                          <CardHeader className="text-center">
 	                            <div className="flex items-center justify-center flex-col">
-		                              <div className="flex items-center gap-2 mb-2">
-		                                <CardTitle className="text-xl font-semibold">Practice Exam</CardTitle>
+		                              <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+		                                <CardTitle className="text-xl font-semibold whitespace-nowrap">Practice Exam</CardTitle>
 		                                {isFreeTier ? (
                                     <Badge
                                       variant="secondary"
-                                      className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                      className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap"
                                       style={{
                                         backgroundColor: '#1f1f1f',
                                         borderColor: '#1f1f1f',
@@ -1156,7 +1194,7 @@ export default function ExamGeneratorPage() {
                                   ) : recommendedExamType === 'practice' && (
                                     <Badge
                                       variant="secondary"
-                                      className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                                      className="flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap"
                                       style={{
                                         backgroundColor: '#788c5d',
                                         borderColor: '#788c5d',
@@ -1171,7 +1209,7 @@ export default function ExamGeneratorPage() {
 	                              <CardDescription>225 questions</CardDescription>
 	                            </div>
 	                          </CardHeader>
-	                          <CardContent className="space-y-3">
+	                          <CardContent className="space-y-3 flex-1">
 	                            <ul className="space-y-2 text-sm text-left">
                                 {practiceHighlights.map((highlight, idx) => (
                                   <li key={idx} className="flex items-center gap-2">
@@ -1479,7 +1517,28 @@ export default function ExamGeneratorPage() {
                   </Badge>
                 </div>
                 <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                  Question {currentQuestion + 1} of {questions.length}
+                  <span className="inline-flex items-center gap-2">
+                    Question {currentQuestion + 1} of {questions.length}
+                    <QuestionFeedbackButton
+                      examType={examType === 'diagnostic' ? 'diagnostic' : 'practice'}
+                      questionId={question?.id ?? currentQuestion + 1}
+                      question={question?.question ?? ''}
+                      options={question?.options ?? []}
+                      selectedAnswer={typeof selectedAnswer === 'string' ? selectedAnswer : null}
+                      correctAnswer={typeof correctOption === 'string' ? correctOption : null}
+                      wasCorrect={typeof selectedAnswer === 'string' ? isCorrect : null}
+                      metadata={{
+                        examMode: mode,
+                        topic: question?.topicName || null,
+                        domain: question?.domainId || (question?.domain !== undefined ? String(question.domain) : null),
+                        relatedSections: question?.relatedSections || [],
+                        isScored: question?.isScored !== false && question?.scored !== false,
+                        sourceFile: question?.sourceFile || question?.source_file || null,
+                        knId: question?.knId || null,
+                        difficulty: question?.difficulty || null,
+                      }}
+                    />
+                  </span>
                 </p>
               </div>
               {mode === 'test' && timeRemaining > 0 && (
