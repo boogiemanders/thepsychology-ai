@@ -2,14 +2,9 @@ import { useCallback, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
 import { supabase } from '@/lib/supabase'
+import { trackFunnelEvent } from '@/lib/funnel-events'
 
 export type StripeTier = 'pro' | 'pro_coaching'
-
-// Payment Links with your custom branding
-const PAYMENT_LINKS: Record<StripeTier, string> = {
-  pro: 'https://buy.stripe.com/4gM5kC6YjgvT7Bp39g8Vi00',
-  pro_coaching: 'https://buy.stripe.com/dRm7sK82nfrP8Ft7pw8Vi01',
-}
 
 interface CheckoutOptions {
   redirectPath?: string
@@ -51,14 +46,28 @@ export function useStripeCheckout() {
           throw new Error('User profile not found. Please refresh and try again.')
         }
 
-        // Build Payment Link URL with client_reference_id and prefilled_email
-        const paymentLink = PAYMENT_LINKS[tier]
-        const url = new URL(paymentLink)
-        url.searchParams.set('client_reference_id', user.id)
-        url.searchParams.set('prefilled_email', user.email)
+        trackFunnelEvent(user.id, 'checkout_started', {
+          planTier: tier,
+          source: 'dashboard',
+        })
 
-        // Redirect to Stripe Payment Link
-        window.location.href = url.toString()
+        const response = await fetch('/api/stripe/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            planTier: tier,
+            userId: user.id,
+            userEmail: user.email,
+          }),
+        })
+
+        const data = (await response.json().catch(() => null)) as { url?: string; error?: string } | null
+        const url = data?.url
+        if (!response.ok || !url) {
+          throw new Error(data?.error || 'Checkout failed. Please try again.')
+        }
+
+        window.location.href = url
       } catch (err) {
         const message = err instanceof Error ? err.message : 'Checkout failed. Please try again.'
         setError(message)

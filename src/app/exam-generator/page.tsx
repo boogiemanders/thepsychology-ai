@@ -1517,28 +1517,7 @@ export default function ExamGeneratorPage() {
                   </Badge>
                 </div>
                 <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
-                  <span className="inline-flex items-center gap-2">
-                    Question {currentQuestion + 1} of {questions.length}
-                    <QuestionFeedbackButton
-                      examType={examType === 'diagnostic' ? 'diagnostic' : 'practice'}
-                      questionId={question?.id ?? currentQuestion + 1}
-                      question={question?.question ?? ''}
-                      options={question?.options ?? []}
-                      selectedAnswer={typeof selectedAnswer === 'string' ? selectedAnswer : null}
-                      correctAnswer={typeof correctOption === 'string' ? correctOption : null}
-                      wasCorrect={typeof selectedAnswer === 'string' ? isCorrect : null}
-                      metadata={{
-                        examMode: mode,
-                        topic: question?.topicName || null,
-                        domain: question?.domainId || (question?.domain !== undefined ? String(question.domain) : null),
-                        relatedSections: question?.relatedSections || [],
-                        isScored: question?.isScored !== false && question?.scored !== false,
-                        sourceFile: question?.sourceFile || question?.source_file || null,
-                        knId: question?.knId || null,
-                        difficulty: question?.difficulty || null,
-                      }}
-                    />
-                  </span>
+                  Question {currentQuestion + 1} of {questions.length}
                 </p>
               </div>
               {mode === 'test' && timeRemaining > 0 && (
@@ -1689,59 +1668,80 @@ export default function ExamGeneratorPage() {
             className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6"
           >
             <div className="flex items-center justify-between gap-4">
-              {/* Flag Checkbox on Left */}
-              <label className="flex items-center gap-3 cursor-pointer group hover:bg-accent p-2 rounded transition-colors">
-                <Checkbox
-                  checked={flaggedQuestions[currentQuestion] || false}
-                  onCheckedChange={(checked) => {
-                    setFlaggedQuestions(prev => ({
-                      ...prev,
-                      [currentQuestion]: checked === true
-                    }))
-                  }}
-                  id={`flag-q${currentQuestion}`}
-                />
-                <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" style={{ fontFamily: 'Tahoma' }}>
-                  Flag for review
-                </span>
-              </label>
+              {/* Flag + Feedback on Left */}
+              <div className="flex items-center gap-3">
+                <label className="inline-flex h-10 items-center gap-3 cursor-pointer group hover:bg-accent px-3 rounded transition-colors">
+                  <Checkbox
+                    checked={flaggedQuestions[currentQuestion] || false}
+                    onCheckedChange={(checked) => {
+                      setFlaggedQuestions(prev => ({
+                        ...prev,
+                        [currentQuestion]: checked === true
+                      }))
+                    }}
+                    id={`flag-q${currentQuestion}`}
+                  />
+                  <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" style={{ fontFamily: 'Tahoma' }}>
+                    Flag for review
+                  </span>
+                </label>
+                {question && (
+                  <QuestionFeedbackButton
+                    examType={examType === 'diagnostic' ? 'diagnostic' : 'practice'}
+                    questionId={question.id ?? currentQuestion + 1}
+                    question={question.question}
+                    options={question.options}
+                    selectedAnswer={typeof selectedAnswer === 'string' ? selectedAnswer : null}
+                    correctAnswer={typeof correctOption === 'string' ? correctOption : null}
+                    wasCorrect={typeof selectedAnswer === 'string' ? isCorrect : null}
+                    metadata={{
+                      examMode: mode,
+                      topic: question.topicName || null,
+                      domain: question.domainId || (question.domain !== undefined ? String(question.domain) : null),
+                      relatedSections: question.relatedSections || [],
+                      isScored: question.isScored !== false && question.scored !== false,
+                      sourceFile: question.sourceFile || question.source_file || null,
+                      knId: question.knId || null,
+                      difficulty: question.difficulty || null,
+                      source: 'exam-navigation',
+                    }}
+                    className="h-10 w-10"
+                  />
+                )}
+              </div>
 
               {/* Navigation Buttons on Right */}
-              <div className="flex items-center gap-4">
-                <div className="flex flex-col gap-1 items-center">
-                  <Button
-                    onClick={handlePrevious}
-                    disabled={currentQuestion === 0}
-                    variant="outline"
-                    className="min-w-[100px] rounded-none"
-                    style={{ fontFamily: 'Tahoma' }}
-                  >
-                    Previous
-                  </Button>
-                  <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + P</span>
-                </div>
+              <div className="flex items-center gap-3">
+                <Button
+                  onClick={handlePrevious}
+                  disabled={currentQuestion === 0}
+                  variant="outline"
+                  className="min-w-[100px] rounded-none"
+                  style={{ fontFamily: 'Tahoma' }}
+                  title={`${isMac ? 'Option' : 'Alt'} + P`}
+                >
+                  Previous
+                </Button>
 
                 {currentQuestion === questions.length - 1 ? (
-                  <div className="flex flex-col gap-1 items-center">
-                    <Button
-                      onClick={handleEndExam}
-                      disabled={isSavingResults}
-                      className="min-w-[100px] rounded-none"
-                      style={{ fontFamily: 'Tahoma' }}
-                    >
-                      {isSavingResults ? 'Saving...' : 'End Exam'}
-                    </Button>
-                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
-                      {isMac ? 'Option' : 'Alt'} + E
-                    </span>
-                  </div>
+                  <Button
+                    onClick={handleEndExam}
+                    disabled={isSavingResults}
+                    className="min-w-[100px] rounded-none"
+                    style={{ fontFamily: 'Tahoma' }}
+                    title={`${isMac ? 'Option' : 'Alt'} + E`}
+                  >
+                    {isSavingResults ? 'Saving...' : 'End Exam'}
+                  </Button>
                 ) : (
-                  <div className="flex flex-col gap-1 items-center">
-                    <Button onClick={handleNext} className="min-w-[100px] rounded-none" style={{ fontFamily: 'Tahoma' }}>
-                      Next
-                    </Button>
-                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + N</span>
-                  </div>
+                  <Button
+                    onClick={handleNext}
+                    className="min-w-[100px] rounded-none"
+                    style={{ fontFamily: 'Tahoma' }}
+                    title={`${isMac ? 'Option' : 'Alt'} + N`}
+                  >
+                    Next
+                  </Button>
                 )}
               </div>
             </div>

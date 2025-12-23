@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { loadTopicQuestions, TopicQuestion } from '@/lib/topic-question-loader'
 import { loadFullTopicContent } from '@/lib/topic-content-manager'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
+import { logUsageEvent } from '@/lib/usage-events'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -233,7 +234,7 @@ function buildQuizFromLocalQuestions(topicName: string, domain?: string) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { topic, domain } = body
+    const { topic, domain, userId } = body
 
     if (!topic) {
       return NextResponse.json(
@@ -260,6 +261,17 @@ export async function POST(request: NextRequest) {
           content: `${QUIZZER_PROMPT}\n\nTopic: ${decodedTopic}`,
         },
       ],
+    })
+
+    await logUsageEvent({
+      userId: typeof userId === 'string' ? userId : null,
+      eventName: 'quizzer.generate',
+      endpoint: '/api/quizzer',
+      model: 'claude-haiku-4-5-20251001',
+      metadata: {
+        topic: decodedTopic,
+        domain: normalizedDomain ?? null,
+      },
     })
 
     const textContent = response.content.find((c) => c.type === 'text')

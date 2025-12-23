@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { loadTopicContent, loadFreeTopicContent, replaceMetaphors, stripMetaphorMarkers } from '@/lib/topic-content-manager'
 import { loadReferenceContent } from '@/lib/eppp-reference-loader'
 import OpenAI from 'openai'
+import { logUsageEvent } from '@/lib/usage-events'
 
 const openaiApiKey = process.env.OPENAI_API_KEY
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
@@ -137,6 +138,7 @@ export async function POST(request: NextRequest) {
       userInterests,
       subscriptionTier,
       languagePreference,
+      userId,
     } = body
 
     if (!topic) {
@@ -285,6 +287,18 @@ export async function POST(request: NextRequest) {
         { role: 'system', content: systemPrompt },
         ...(messages as Array<{ role: 'user' | 'assistant'; content: string }>),
       ],
+    })
+
+    await logUsageEvent({
+      userId: typeof userId === 'string' ? userId : null,
+      eventName: 'topic-teacher.followup',
+      endpoint: '/api/topic-teacher',
+      model: 'gpt-4o-mini',
+      metadata: {
+        topic,
+        domain,
+        languagePreference: languagePreference ?? null,
+      },
     })
 
     let fullText = completion.choices[0]?.message?.content || ''

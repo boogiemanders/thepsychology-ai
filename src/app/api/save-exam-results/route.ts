@@ -1,14 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 import { saveDevExamResult } from '@/lib/dev-exam-results-store'
+import { applyTopicMasteryDeltas, accumulateTopicMasteryDeltas, TopicAttempt } from '@/lib/topic-mastery'
+import { applyReviewQueueUpdates, type ReviewAttempt } from '@/lib/review-queue'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 const supabase: SupabaseClient | null =
   supabaseUrl && supabaseServiceRoleKey
     ? createClient(supabaseUrl, supabaseServiceRoleKey)
     : null
+
+async function requireAuthedUserId(req: NextRequest): Promise<string | null> {
+  const authHeader = req.headers.get('authorization') || ''
+  const token = authHeader.toLowerCase().startsWith('bearer ')
+    ? authHeader.slice(7).trim()
+    : null
+
+  if (!token || !supabaseUrl || !supabaseAnonKey) return null
+
+  const anon = createClient(supabaseUrl, supabaseAnonKey)
+  const { data, error } = await anon.auth.getUser(token)
+  if (error || !data.user?.id) return null
+  return data.user.id
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -33,6 +50,16 @@ export async function POST(request: NextRequest) {
         { error: 'Missing required fields' },
         { status: 400 }
       )
+    }
+
+    if (supabase) {
+      const authedUserId = await requireAuthedUserId(request)
+      if (!authedUserId) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      }
+      if (authedUserId !== userId) {
+        return NextResponse.json({ error: 'User mismatch' }, { status: 403 })
+      }
     }
 
     // Prepare record payload for Supabase or local storage fallback
@@ -105,6 +132,116 @@ export async function POST(request: NextRequest) {
             console.error('Error updating assignment:', assignmentError)
             // Don't fail the entire request if assignment update fails
           }
+        }
+      }
+
+      // Store a summary row for chart-friendly analytics.
+      if (userId && examType && examMode && totalQuestions) {
+        const percentage = totalQuestions > 0 ? (score / totalQuestions) * 100 : 0
+        try {
+          const { error: historyError } = await supabase
+            .from('exam_history')
+            .insert({
+              user_id: userId,
+              exam_type: examType,
+              exam_mode: examMode,
+              score: Number(percentage.toFixed(2)),
+              total_questions: totalQuestions,
+              correct_answers: score,
+              created_at: new Date().toISOString(),
+            })
+
+          if (historyError) {
+            console.error('Error inserting exam_history in save-exam-results:', historyError)
+          }
+        } catch (historyException) {
+          console.error('Exception inserting exam_history in save-exam-results:', historyException)
+        }
+      }
+
+      // Update topic mastery rollups for per-topic/section progress tracking.
+      if (userId && Array.isArray(questions) && selectedAnswers) {
+        try {
+          const attempts: TopicAttempt[] = []
+          questions.forEach((question: any, index: number) => {
+            const selected = selectedAnswers[index]
+            if (!selected) return
+
+            const topic = question.topicName || question.topic || question.topicName || ''
+            const domain = question.domainId || question.domain || null
+            const relatedSections = Array.isArray(question.relatedSections)
+              ? question.relatedSections
+              : []
+
+            attempts.push({
+              topic,
+              domain,
+              relatedSections,
+              isCorrect: selected === question.correct_answer,
+              timestamp: Date.now(),
+            })
+          })
+
+          const deltas = accumulateTopicMasteryDeltas(attempts)
+          if (deltas.length > 0) {
+            await applyTopicMasteryDeltas(supabase, userId, deltas)
+          }
+        } catch (masteryError) {
+          console.error('Error updating topic_mastery in save-exam-results:', masteryError)
+        }
+      }
+
+      // Update spaced repetition review queue (primarily wrong answers).
+      if (userId && Array.isArray(questions) && selectedAnswers) {
+        try {
+          const reviewAttempts: ReviewAttempt[] = []
+          questions.forEach((question: any, index: number) => {
+            const selected = selectedAnswers[index]
+            if (!selected) return
+            if (question.isScored === false || question.scored === false) return
+
+            const topic = question.topicName || question.topic || ''
+            const domain = question.domainId || question.domain || null
+            const relatedSections = Array.isArray(question.relatedSections)
+              ? question.relatedSections
+              : []
+
+            const options = Array.isArray(question.options) ? question.options : null
+            const rawCorrect = typeof question.correct_answer === 'string' ? question.correct_answer : ''
+            let correctAnswer = rawCorrect
+            if (options && /^[A-D]$/.test(rawCorrect)) {
+              const idx = rawCorrect.charCodeAt(0) - 65
+              correctAnswer = options[idx] ?? rawCorrect
+            }
+
+            reviewAttempts.push({
+              examType,
+              questionId: question.id ? String(question.id) : null,
+              question: question.question ?? '',
+              options,
+              correctAnswer: correctAnswer || null,
+              selectedAnswer: selected,
+              wasCorrect: selected === correctAnswer,
+              attemptedAtMs: Date.now(),
+              topic: topic || null,
+              domain: domain ? String(domain) : null,
+              relatedSections,
+              metadata: {
+                examMode,
+                assignmentId: assignmentId ?? null,
+                isScored: question.isScored !== false && question.scored !== false,
+                sourceFile: question.sourceFile || question.source_file || null,
+                knId: question.knId || null,
+                difficulty: question.difficulty || null,
+              },
+            })
+          })
+
+          if (reviewAttempts.length > 0) {
+            await applyReviewQueueUpdates(supabase, userId, reviewAttempts)
+          }
+        } catch (reviewError) {
+          console.error('Error updating review_queue in save-exam-results:', reviewError)
         }
       }
     } else {

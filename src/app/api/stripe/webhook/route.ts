@@ -111,6 +111,82 @@ async function getTierFromSession(session: Stripe.Checkout.Session): Promise<'pr
   return null
 }
 
+async function getTierFromSubscription(subscription: Stripe.Subscription): Promise<'pro' | 'pro_coaching' | null> {
+  const priceId = subscription.items.data[0]?.price?.id
+  return priceId ? PRICE_TO_TIER[priceId] ?? null : null
+}
+
+async function findUserForStripeCustomer(
+  stripeCustomerId: string,
+  subscription?: Stripe.Subscription
+): Promise<{ id: string; subscription_tier?: string | null; stripe_customer_id?: string | null } | null> {
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) {
+    throw new Error('Supabase service role client is not configured')
+  }
+
+  // Prefer explicit userId on subscription metadata when available.
+  const metadataUserId = subscription?.metadata?.userId
+  if (metadataUserId) {
+    const { data, error } = await supabase
+      .from('users')
+      .select('id, subscription_tier, stripe_customer_id')
+      .eq('id', metadataUserId)
+      .single()
+    if (!error && data) return data
+  }
+
+  const { data, error } = await supabase
+    .from('users')
+    .select('id, subscription_tier, stripe_customer_id')
+    .eq('stripe_customer_id', stripeCustomerId)
+    .single()
+
+  if (error || !data) return null
+  return data
+}
+
+async function setUserTierById(
+  userId: string,
+  update: { subscription_tier: 'free' | 'pro' | 'pro_coaching'; stripe_customer_id?: string; subscription_started_at?: string | null }
+) {
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) {
+    throw new Error('Supabase service role client is not configured')
+  }
+
+  const { error } = await supabase
+    .from('users')
+    .update({
+      subscription_tier: update.subscription_tier,
+      stripe_customer_id: update.stripe_customer_id,
+      subscription_started_at: update.subscription_started_at ?? undefined,
+    })
+    .eq('id', userId)
+
+  if (error) throw error
+}
+
+async function logFunnelEvent(
+  userId: string | null,
+  eventName: string,
+  metadata?: Record<string, unknown>
+) {
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) return
+
+  try {
+    await supabase.from('funnel_events').insert({
+      user_id: userId,
+      event_name: eventName,
+      metadata: metadata ?? null,
+      created_at: new Date().toISOString(),
+    })
+  } catch (error) {
+    console.error('[Stripe] Failed to log funnel event:', error)
+  }
+}
+
 export async function POST(request: Request) {
   if (!stripe || !webhookSecret) {
     return NextResponse.json({ error: 'Stripe is not configured' }, { status: 500 })
@@ -177,6 +253,54 @@ export async function POST(request: Request) {
       console.log('[Stripe] Updating subscription for user', { userId, planTier, stripeCustomerId })
       await updateUserSubscription(userId, planTier, stripeCustomerId)
       console.log('[Stripe] Subscription updated successfully', { userId, planTier, stripeCustomerId })
+
+      await logFunnelEvent(userId ?? null, 'checkout_completed', {
+        planTier,
+        stripeCustomerId,
+        sessionId: session.id,
+      })
+    }
+
+    if (event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
+      const subscription = event.data.object as Stripe.Subscription
+      const stripeCustomerId =
+        typeof subscription.customer === 'string'
+          ? subscription.customer
+          : (subscription.customer as { id?: string } | null)?.id
+
+      if (!stripeCustomerId) {
+        console.warn('[Stripe] Subscription event missing customer id', { eventType: event.type, eventId: event.id })
+        return NextResponse.json({ received: true })
+      }
+
+      const user = await findUserForStripeCustomer(stripeCustomerId, subscription)
+      if (!user) {
+        console.warn('[Stripe] No user found for customer', { stripeCustomerId, eventType: event.type })
+        return NextResponse.json({ received: true })
+      }
+
+      const status = subscription.status
+      const isEntitled = status === 'active' || status === 'trialing' || status === 'past_due'
+      const tier = await getTierFromSubscription(subscription)
+
+      if (isEntitled && tier) {
+        await setUserTierById(user.id, {
+          subscription_tier: tier,
+          stripe_customer_id: stripeCustomerId,
+          subscription_started_at: new Date().toISOString(),
+        })
+      } else {
+        await setUserTierById(user.id, {
+          subscription_tier: 'free',
+          stripe_customer_id: stripeCustomerId,
+        })
+
+        await logFunnelEvent(user.id, 'subscription_cancelled', {
+          status,
+          cancelAtPeriodEnd: subscription.cancel_at_period_end ?? null,
+          cancellationReason: subscription.cancellation_details?.reason ?? null,
+        })
+      }
     }
 
     return NextResponse.json({ received: true })

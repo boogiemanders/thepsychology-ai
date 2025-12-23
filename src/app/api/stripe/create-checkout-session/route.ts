@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { siteConfig } from '@/lib/config'
+import { getProPromoConfig } from '@/lib/promo-pro'
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 
@@ -50,9 +51,12 @@ export async function POST(req: NextRequest) {
 
     const baseUrl = getBaseUrl(req)
 
+    const promo = planTier === 'pro' ? getProPromoConfig() : null
+
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
+      payment_method_collection: promo ? 'always' : undefined,
       customer_email: userEmail,
       client_reference_id: userId,
       line_items: [
@@ -70,6 +74,7 @@ export async function POST(req: NextRequest) {
           userId,
           planTier,
         },
+        trial_end: promo ? promo.trialEndSeconds : undefined,
       },
       success_url: `${baseUrl}/dashboard?upgrade=success`,
       cancel_url: `${baseUrl}/trial-expired?upgrade=cancelled`,

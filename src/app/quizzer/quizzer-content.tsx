@@ -8,11 +8,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
+import { Checkbox } from '@/components/ui/checkbox'
 import { motion } from 'motion/react'
 import { useSearchParams } from 'next/navigation'
 import { saveQuizResults, getQuizResults, WrongAnswer, getAllQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
+import { useAuth } from '@/context/auth-context'
+import { supabase } from '@/lib/supabase'
+import { recordStudySession } from '@/lib/study-sessions'
+import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -73,6 +78,7 @@ const escapeHtml = (value: string): string => {
 
 export function QuizzerContent() {
   const searchParams = useSearchParams()
+  const { user } = useAuth()
   const topic = searchParams.get('topic')
   const domain = searchParams.get('domain')
   const decodeParam = (value: string | null): string => {
@@ -104,11 +110,40 @@ export function QuizzerContent() {
   const [quizStarted, setQuizStarted] = useState(false)
   const [isFirstQuiz, setIsFirstQuiz] = useState(false)
   const [recentQuizSectionsParam, setRecentQuizSectionsParam] = useState('')
+  const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
+  const quizStartedAtRef = useRef<number | null>(null)
 
   const quizStateRef = useRef<QuizState>(quizState)
   useEffect(() => {
     quizStateRef.current = quizState
   }, [quizState])
+
+  useEffect(() => {
+    if (!quizStarted || quizStartedAtRef.current) return
+    quizStartedAtRef.current = Date.now()
+  }, [quizStarted])
+
+  useEffect(() => {
+    if (!user?.id) return
+    const start = Date.now()
+
+    return () => {
+      const end = Date.now()
+      const durationSeconds = Math.round((end - start) / 1000)
+      if (durationSeconds < 5) return
+      recordStudySession({
+        userId: user.id,
+        feature: 'quizzer',
+        startedAt: new Date(start),
+        endedAt: new Date(end),
+        durationSeconds,
+        metadata: {
+          topic: decodedTopic,
+          domain,
+        },
+      })
+    }
+  }, [user?.id, decodedTopic, domain])
 
   const shuffleArray = <T,>(array: T[]): T[] => {
     const shuffled = [...array]
@@ -263,6 +298,53 @@ export function QuizzerContent() {
     setError(null)
   }, [])
 
+  const persistQuizResults = useCallback(
+    async (
+      attempt: {
+        topic: string
+        domain?: string | null
+        score: number
+        totalQuestions: number
+        correctQuestions: number
+        durationSeconds?: number | null
+        questionAttempts: Array<{
+          questionId: string
+          question: string
+          options?: string[]
+          selectedAnswer: string
+          correctAnswer: string
+          isCorrect: boolean
+          isScored?: boolean
+          relatedSections?: string[]
+        }>
+      }
+    ) => {
+      if (!user?.id) return
+
+      try {
+        const { data, error } = await supabase.auth.getSession()
+        if (error) throw error
+        const token = data.session?.access_token
+        if (!token) return
+
+        await fetch('/api/save-quiz-results', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            userId: user.id,
+            ...attempt,
+          }),
+        })
+      } catch (err) {
+        console.error('[Quizzer] Failed to save quiz results:', err)
+      }
+    },
+    [user?.id]
+  )
+
   const handleNext = useCallback(() => {
     const state = quizStateRef.current
     const currentIndex = state.question
@@ -292,8 +374,8 @@ export function QuizzerContent() {
     const wrongAnswers: WrongAnswer[] = []
     const correctAnswers = []
 
-    questions.forEach((q) => {
-      const selected = state.selectedAnswers[q.id] ?? ''
+    questions.forEach((q, idx) => {
+      const selected = state.selectedAnswers[idx] ?? ''
       const questionWasCorrect = selected === q.correctAnswer
 
       if (!questionWasCorrect) {
@@ -366,6 +448,46 @@ export function QuizzerContent() {
 
     saveQuizResults(quizResults)
 
+    const questionAttempts = questions
+      .map((q, idx) => {
+        const selected = state.selectedAnswers[idx]
+        if (!selected) return null
+        return {
+          questionId: String(q.id),
+          question: q.question,
+          options: q.options,
+          selectedAnswer: selected,
+          correctAnswer: q.correctAnswer,
+          isCorrect: selected === q.correctAnswer,
+          isScored: q.isScored !== false,
+          relatedSections: q.relatedSections || [],
+        }
+      })
+      .filter(Boolean) as Array<{
+      questionId: string
+      question: string
+      options?: string[]
+      selectedAnswer: string
+      correctAnswer: string
+      isCorrect: boolean
+      isScored?: boolean
+      relatedSections?: string[]
+    }>
+
+    const durationSeconds = quizStartedAtRef.current
+      ? Math.max(Math.round((Date.now() - quizStartedAtRef.current) / 1000), 0)
+      : Math.max(questions.length * 68 - (state.timeRemaining || 0), 0)
+
+    void persistQuizResults({
+      topic: decodedTopic || 'unknown',
+      domain,
+      score: finalScore,
+      totalQuestions: scoredQuestionCount,
+      correctQuestions: finalScore,
+      durationSeconds,
+      questionAttempts,
+    })
+
     const resultsParam = encodeURIComponent(JSON.stringify(quizResults))
     const sectionsParam = encodeURIComponent(JSON.stringify(recentSections))
     window.history.replaceState(
@@ -402,7 +524,7 @@ export function QuizzerContent() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ topic, domain }),
+        body: JSON.stringify({ topic, domain, userId: user?.id ?? null }),
       })
 
       if (!response.ok) {
@@ -702,7 +824,7 @@ export function QuizzerContent() {
               <div className="space-y-4 mb-6">
                 <TypographyH2 className="text-center border-none">Review Your Answers</TypographyH2>
                 {questions.map((q, idx) => {
-                  const selectedAnswer = quizState.selectedAnswers[q.id]
+                  const selectedAnswer = quizState.selectedAnswers[idx]
                   const isCorrect = selectedAnswer === q.correctAnswer
 
                   return (
@@ -711,8 +833,27 @@ export function QuizzerContent() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 }}
-                      className="rounded-lg p-6 border border-border"
+                      className="relative rounded-lg p-6 border border-border"
                     >
+                      <div className="absolute right-3 top-3">
+                        <QuestionFeedbackButton
+                          examType="quiz"
+                          questionId={q.id}
+                          question={q.question}
+                          options={q.options}
+                          selectedAnswer={selectedAnswer ?? null}
+                          correctAnswer={q.correctAnswer ?? null}
+                          wasCorrect={typeof selectedAnswer === 'string' ? isCorrect : null}
+                          metadata={{
+                            topic: decodedTopic || null,
+                            domain: domain || null,
+                            relatedSections: q.relatedSections || [],
+                            isScored: q.isScored !== false,
+                            source: 'quiz-review',
+                          }}
+                          className="h-8 w-8"
+                        />
+                      </div>
                       {/* Question Header */}
                       <div className="flex items-start gap-3 mb-4">
                         {isCorrect ? (
@@ -987,33 +1128,70 @@ export function QuizzerContent() {
                 className="sticky bottom-0 bg-card border-t border-border shadow-lg p-6 mt-8"
               >
                 <div className="flex items-center justify-between gap-6">
-                  <div className="flex flex-col gap-1 items-center">
+                  {/* Flag + Feedback on Left */}
+                  <div className="flex items-center gap-3">
+                    <label className="inline-flex h-10 items-center gap-3 cursor-pointer group hover:bg-accent px-3 rounded transition-colors">
+                      <Checkbox
+                        checked={flaggedQuestions[quizState.question] || false}
+                        onCheckedChange={(checked) => {
+                          setFlaggedQuestions(prev => ({
+                            ...prev,
+                            [quizState.question]: checked === true
+                          }))
+                        }}
+                        id={`flag-q${quizState.question}`}
+                      />
+                      <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" style={{ fontFamily: 'Tahoma' }}>
+                        Flag for review
+                      </span>
+                    </label>
+                    {questions[quizState.question] && (
+                      <QuestionFeedbackButton
+                        examType="quiz"
+                        questionId={questions[quizState.question].id}
+                        question={questions[quizState.question].question}
+                        options={questions[quizState.question].options}
+                        selectedAnswer={quizState.selectedAnswers[quizState.question] ?? null}
+                        correctAnswer={questions[quizState.question].correctAnswer ?? null}
+                        wasCorrect={
+                          typeof quizState.selectedAnswers[quizState.question] === 'string'
+                            ? quizState.selectedAnswers[quizState.question] === questions[quizState.question].correctAnswer
+                            : null
+                        }
+                        metadata={{
+                          topic: decodedTopic || null,
+                          domain: domain || null,
+                          relatedSections: questions[quizState.question].relatedSections || [],
+                          isScored: questions[quizState.question].isScored !== false,
+                          source: 'quiz-navigation',
+                        }}
+                        className="h-10 w-10"
+                      />
+                    )}
+                  </div>
+
+                  {/* Navigation Buttons on Right */}
+                  <div className="flex items-center gap-3">
                     <Button
                       onClick={handlePrevious}
                       disabled={quizState.question === 0}
                       className="min-w-[120px] rounded-none"
                       variant="outline"
                       style={{ fontFamily: 'Tahoma' }}
+                      title={`${modifierLabel} + P`}
                     >
                       Previous
                     </Button>
-                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
-                      {modifierLabel} + P
-                    </span>
-                  </div>
 
-                  <div className="flex flex-col gap-1 items-center">
                     <Button
                       onClick={handleNext}
                       disabled={!quizState.selectedAnswers[quizState.question]}
                       className="min-w-[120px] rounded-none"
                       style={{ fontFamily: 'Tahoma' }}
+                      title={`${modifierLabel} + ${quizState.question === questions.length - 1 ? 'E' : 'N'}`}
                     >
                       {quizState.question === questions.length - 1 ? 'Finish Quiz' : 'Next'}
                     </Button>
-                    <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
-                      {modifierLabel} + {quizState.question === questions.length - 1 ? 'E' : 'N'}
-                    </span>
                   </div>
                 </div>
               </motion.div>

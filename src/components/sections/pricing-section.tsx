@@ -10,6 +10,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { supabase } from "@/lib/supabase"
 import { type StripeTier } from "@/hooks/use-stripe-checkout"
 import { Badge } from "@/components/ui/badge"
+import { trackFunnelEvent } from "@/lib/funnel-events"
 
 type PricingSectionProps = {
   activeTier?: string
@@ -312,19 +313,28 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
           window.location.href = '/login'
         }, 1500)
       } else {
-        // Payment Links with custom branding
-        const PAYMENT_LINKS: Record<'pro' | 'pro_coaching', string> = {
-          pro: 'https://buy.stripe.com/4gM5kC6YjgvT7Bp39g8Vi00',
-          pro_coaching: 'https://buy.stripe.com/dRm7sK82nfrP8Ft7pw8Vi01',
+        trackFunnelEvent(userId, 'checkout_started', {
+          planTier: tierKey,
+          source: 'pricing-section',
+        })
+
+        const checkoutResponse = await fetch('/api/stripe/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            planTier: tierKey,
+            userId,
+            userEmail: formData.email,
+          }),
+        })
+
+        const checkoutData = (await checkoutResponse.json().catch(() => null)) as { url?: string; error?: string } | null
+        const url = checkoutData?.url
+        if (!checkoutResponse.ok || !url) {
+          throw new Error(checkoutData?.error || 'Failed to start checkout. Please try again.')
         }
 
-        // Build Payment Link URL with client_reference_id and prefilled_email
-        const paymentLink = PAYMENT_LINKS[tierKey]
-        const url = new URL(paymentLink)
-        url.searchParams.set('client_reference_id', userId)
-        url.searchParams.set('prefilled_email', formData.email)
-
-        window.location.href = url.toString()
+        window.location.href = url
       }
     } catch (error) {
       console.error('Signup error:', error)

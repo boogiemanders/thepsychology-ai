@@ -12,6 +12,8 @@ import { useSearchParams } from 'next/navigation'
 import * as animations from '@/lib/animations'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { Switch } from '@/components/ui/switch'
+import { useAuth } from '@/context/auth-context'
+import { recordStudySession } from '@/lib/study-sessions'
 
 interface AnalysisData {
   overallScore?: number
@@ -22,6 +24,7 @@ interface AnalysisData {
 
 export function StudyOptimizerContent() {
   const searchParams = useSearchParams()
+  const { user } = useAuth()
   const resultsParam = searchParams.get('results')
 
   const [analysis, setAnalysis] = useState('')
@@ -36,6 +39,27 @@ export function StudyOptimizerContent() {
     }
   }, [resultsParam])
 
+  useEffect(() => {
+    if (!user?.id) return
+    const start = Date.now()
+
+    return () => {
+      const end = Date.now()
+      const durationSeconds = Math.round((end - start) / 1000)
+      if (durationSeconds < 5) return
+      recordStudySession({
+        userId: user.id,
+        feature: 'study-optimizer',
+        startedAt: new Date(start),
+        endedAt: new Date(end),
+        durationSeconds,
+        metadata: {
+          hasResults: Boolean(resultsParam),
+        },
+      })
+    }
+  }, [user?.id, resultsParam])
+
   const analyzeResults = async () => {
     if (!resultsParam) return
 
@@ -49,7 +73,7 @@ export function StudyOptimizerContent() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ examResults: resultsParam }),
+        body: JSON.stringify({ examResults: resultsParam, userId: user?.id ?? null }),
       })
 
       if (!response.ok) {

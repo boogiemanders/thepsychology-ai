@@ -101,6 +101,8 @@ export default function DashboardPage() {
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
   const [isAnonymousFeedback, setIsAnonymousFeedback] = useState(false)
+  const [isBillingPortalLoading, setIsBillingPortalLoading] = useState(false)
+  const [billingPortalError, setBillingPortalError] = useState<string | null>(null)
   const { startCheckout, checkoutTier, checkoutError, resetCheckoutError } = useStripeCheckout()
   const subscriptionTierKey = (userProfile?.subscription_tier as keyof typeof subscriptionTierVisuals) ?? 'default'
   const { label: subscriptionTierLabel, style: subscriptionTierStyle } =
@@ -124,6 +126,51 @@ export default function DashboardPage() {
     },
     [setIsPricingCarouselOpen, startCheckout]
   )
+
+  const handleManageBilling = useCallback(async () => {
+    if (isBillingPortalLoading) return
+    setIsBillingPortalLoading(true)
+    setBillingPortalError(null)
+
+    try {
+      const { data, error } = await supabase.auth.getSession()
+      if (error) throw error
+      const token = data.session?.access_token
+      if (!token) throw new Error('Not authenticated')
+
+      const response = await fetch('/api/stripe/create-portal-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      })
+
+      const payload = (await response.json().catch(() => null)) as { url?: string; error?: string } | null
+      const url = payload?.url
+      if (!response.ok || !url) {
+        throw new Error(payload?.error || 'Failed to open billing portal')
+      }
+
+      window.location.href = url
+    } catch (err) {
+      console.error('[Billing Portal] Failed to open:', err)
+      const message = err instanceof Error ? err.message : 'Failed to open billing portal'
+      if (message === 'Stripe is not configured') {
+        setBillingPortalError('Billing portal is not configured. Set STRIPE_SECRET_KEY and restart the dev server.')
+      } else if (message === 'Database not configured') {
+        setBillingPortalError('Billing portal needs Supabase env vars. Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.')
+      } else if (message === 'No Stripe customer found for this user') {
+        setBillingPortalError('No Stripe customer found. Complete a checkout first, then try again.')
+      } else if (message === 'Not authenticated') {
+        setBillingPortalError('Please sign in again to open billing.')
+      } else {
+        setBillingPortalError('Unable to open billing. Please try again in a moment.')
+      }
+    } finally {
+      setIsBillingPortalLoading(false)
+    }
+  }, [isBillingPortalLoading])
 
   useEffect(() => {
     if (!isFeedbackOpen) {
@@ -960,13 +1007,10 @@ export default function DashboardPage() {
                 <Button
                   variant="outline"
                   className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
-                  onClick={() => {
-                    if (typeof window !== 'undefined') {
-                      window.location.href = 'https://billing.stripe.com/p/login/4gM5kC6YjgvT7Bp39g8Vi00'
-                    }
-                  }}
+                  onClick={handleManageBilling}
+                  disabled={isBillingPortalLoading}
                 >
-                  Manage Billing
+                  {isBillingPortalLoading ? 'Opening Billing…' : 'Manage Billing'}
                 </Button>
                 <Button
                   variant="outline"
@@ -976,6 +1020,12 @@ export default function DashboardPage() {
                   Feedback
                 </Button>
               </div>
+              {billingPortalError && (
+                <div className="mt-2 flex items-start gap-2 text-sm text-red-600">
+                  <AlertCircle className="w-4 h-4 mt-0.5" />
+                  <span>{billingPortalError}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>

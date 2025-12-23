@@ -11,6 +11,7 @@ import { CheckCircle2, XCircle, Circle, BookOpen, ChevronUp, ChevronDown } from 
 import type { DomainPerformance } from '@/lib/priority-calculator'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
+import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 
 interface Question {
   id: number
@@ -42,6 +43,7 @@ interface ExpandableDomainAnalysisProps {
     percentageWrong: number
     priorityScore: number
   }
+  examType?: 'diagnostic' | 'practice' | null
   title?: string | null
   description?: string | null
   showOnlyWrong?: boolean
@@ -64,6 +66,7 @@ export function ExpandableDomainAnalysis({
   examQuestions,
   selectedAnswers,
   orgPsychPerformance,
+  examType,
   title,
   description,
   showOnlyWrong = false,
@@ -453,7 +456,29 @@ export function ExpandableDomainAnalysis({
                                   <div className="space-y-4">
                                     {/* Full Question */}
                                     <div>
-                                      <h4 className="font-semibold text-sm mb-2">Question</h4>
+                                      <div className="flex items-center justify-between gap-3 mb-2">
+                                        <h4 className="font-semibold text-sm">Question</h4>
+                                        <QuestionFeedbackButton
+                                          examType={examType ?? 'practice'}
+                                          questionId={question.id}
+                                          question={question.question}
+                                          options={question.options}
+                                          selectedAnswer={selectedAnswer ?? null}
+                                          correctAnswer={question.correct_answer ?? null}
+                                          wasCorrect={
+                                            typeof selectedAnswer === 'string'
+                                              ? selectedAnswer === question.correct_answer
+                                              : null
+                                          }
+                                          metadata={{
+                                            domain: question.domain ?? null,
+                                            sourceFile: question.source_file ?? null,
+                                            isOrgPsych: question.is_org_psych ?? null,
+                                            source: 'prioritize-review',
+                                          }}
+                                          className="h-7 w-7"
+                                        />
+                                      </div>
                                       <p className="text-sm text-foreground">{question.question}</p>
                                     </div>
 
@@ -750,7 +775,29 @@ export function ExpandableDomainAnalysis({
                                 <div className="space-y-4">
                                   {/* Full Question */}
                                   <div>
-                                    <h4 className="font-semibold text-sm mb-2">Question</h4>
+                                    <div className="flex items-center justify-between gap-3 mb-2">
+                                      <h4 className="font-semibold text-sm">Question</h4>
+                                      <QuestionFeedbackButton
+                                        examType={examType ?? 'practice'}
+                                        questionId={question.id}
+                                        question={question.question}
+                                        options={question.options}
+                                        selectedAnswer={selectedAnswer ?? null}
+                                        correctAnswer={question.correct_answer ?? null}
+                                        wasCorrect={
+                                          typeof selectedAnswer === 'string'
+                                            ? selectedAnswer === question.correct_answer
+                                            : null
+                                        }
+                                        metadata={{
+                                          domain: question.domain ?? null,
+                                          sourceFile: question.source_file ?? null,
+                                          isOrgPsych: question.is_org_psych ?? null,
+                                          source: 'prioritize-review',
+                                        }}
+                                        className="h-7 w-7"
+                                      />
+                                    </div>
                                     <p className="text-sm text-foreground">{question.question}</p>
                                   </div>
 

@@ -5,6 +5,7 @@ import { join } from 'path'
 import { inferIsOrgPsych } from '@/lib/org-psych-utils'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { loadFullTopicContent } from '@/lib/topic-content-manager'
+import { logUsageEvent } from '@/lib/usage-events'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -198,6 +199,14 @@ function attachRelatedSections(question: any) {
 
 export async function POST(request: NextRequest) {
   try {
+    let userId: string | null = null
+    try {
+      const body = await request.json()
+      if (body?.userId) userId = body.userId
+    } catch {
+      userId = null
+    }
+
     const { searchParams } = new URL(request.url)
     const examType = searchParams.get('type') || 'practice' // 'diagnostic' or 'practice'
     const source = searchParams.get('source') || 'default'
@@ -254,6 +263,17 @@ export async function POST(request: NextRequest) {
           content: prompt,
         },
       ],
+    })
+
+    await logUsageEvent({
+      userId,
+      eventName: 'exam-generator.generate',
+      endpoint: '/api/exam-generator',
+      model: 'claude-haiku-4-5-20251001',
+      metadata: {
+        examType,
+        source,
+      },
     })
 
     // Convert stream to ReadableStream for NextResponse

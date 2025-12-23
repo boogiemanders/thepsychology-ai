@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { AlertCircle } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
@@ -13,6 +13,7 @@ import { siteConfig } from '@/lib/config'
 import { cn } from '@/lib/utils'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
+import { trackFunnelEvent } from '@/lib/funnel-events'
 
 export default function TrialExpiredPage() {
   const { user } = useAuth()
@@ -21,6 +22,12 @@ export default function TrialExpiredPage() {
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false)
   const { startCheckout, checkoutTier, checkoutError } = useStripeCheckout()
+
+  useEffect(() => {
+    trackFunnelEvent(user?.id ?? null, 'paywall_viewed', {
+      page: 'trial-expired',
+    })
+  }, [user?.id])
 
   const handleSendFeedback = async (message: string, screenshotFile?: File | null) => {
     const trimmedMessage = message.trim()

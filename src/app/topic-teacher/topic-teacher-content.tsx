@@ -35,6 +35,8 @@ import { MagicCard } from '@/components/ui/magic-card'
 import { PulsatingButton } from '@/components/ui/pulsating-button'
 import { InlineSvg } from '@/components/ui/inline-svg'
 import { VariableStar } from '@/components/ui/variable-star'
+import { recordStudySession } from '@/lib/study-sessions'
+import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -218,6 +220,28 @@ export function TopicTeacherContent() {
   const [baseContent, setBaseContent] = useState<string>('')
   const [personalizedCache, setPersonalizedCache] = useState<Record<string, string>>({})
   const [showColorPicker, setShowColorPicker] = useState(false)
+
+  useEffect(() => {
+    if (!user?.id) return
+    const start = Date.now()
+
+    return () => {
+      const end = Date.now()
+      const durationSeconds = Math.round((end - start) / 1000)
+      if (durationSeconds < 5) return
+      recordStudySession({
+        userId: user.id,
+        feature: 'topic-teacher',
+        startedAt: new Date(start),
+        endedAt: new Date(end),
+        durationSeconds,
+        metadata: {
+          topic: decodedTopic,
+          domain,
+        },
+      })
+    }
+  }, [user?.id, decodedTopic, domain])
   const [starColor, setStarColor] = useState('#000000')
   const [showQuizColorPicker, setShowQuizColorPicker] = useState(false)
   const [quizStarColor, setQuizStarColor] = useState('#000000')
@@ -1020,6 +1044,7 @@ export function TopicTeacherContent() {
           userInterests,
           languagePreference: null,
           subscriptionTier,
+          userId: user?.id ?? null,
         }),
       })
 
@@ -1164,6 +1189,7 @@ export function TopicTeacherContent() {
           userInterests: newInterests,
           languagePreference: null,
           subscriptionTier,
+          userId: user?.id ?? null,
         }),
       })
 
@@ -1281,6 +1307,7 @@ export function TopicTeacherContent() {
           userInterests,
           languagePreference,
           subscriptionTier,
+          userId: user?.id ?? null,
         }),
       })
 
@@ -2905,7 +2932,31 @@ export function TopicTeacherContent() {
                     <h3 className="font-semibold text-base border-b pb-2">Practice Exam Question</h3>
                   )}
                   <div>
-                    <h4 className="font-semibold text-sm mb-2">Question</h4>
+                    <div className="flex items-center justify-between gap-3 mb-2">
+                      <h4 className="font-semibold text-sm">Question</h4>
+                      <QuestionFeedbackButton
+                        examType={
+                          activeMissedQuestion.question.examType === 'diagnostic'
+                            ? 'diagnostic'
+                            : 'practice'
+                        }
+                        questionId={activeMissedQuestion.question.id ?? null}
+                        question={activeMissedQuestion.question.question}
+                        options={activeMissedQuestion.question.options}
+                        selectedAnswer={activeMissedQuestion.selectedAnswer ?? null}
+                        correctAnswer={activeMissedQuestion.question.correct_answer ?? null}
+                        wasCorrect={false}
+                        metadata={{
+                          topic: activeMissedQuestion.question.topicName ?? null,
+                          domain: activeMissedQuestion.question.domainId ?? null,
+                          relatedSections: activeMissedQuestion.question.relatedSections ?? [],
+                          sourceFile: activeMissedQuestion.question.source_file ?? null,
+                          sourceFolder: activeMissedQuestion.question.source_folder ?? null,
+                          source: 'topic-teacher-missed-exam',
+                        }}
+                        className="h-7 w-7"
+                      />
+                    </div>
                     <p className="text-sm text-foreground">
                       {activeMissedQuestion.question.question}
                     </p>
@@ -2969,7 +3020,23 @@ export function TopicTeacherContent() {
                     <h3 className="font-semibold text-base border-b pb-2 mt-4">Quiz Question</h3>
                   )}
                   <div>
-                    <h4 className="font-semibold text-sm mb-2">Question</h4>
+                    <div className="flex items-center justify-between gap-3 mb-2">
+                      <h4 className="font-semibold text-sm">Question</h4>
+                      <QuestionFeedbackButton
+                        examType="quiz"
+                        questionId={activeQuizQuestion.questionId ?? null}
+                        question={activeQuizQuestion.question}
+                        options={activeQuizQuestion.options ?? null}
+                        selectedAnswer={activeQuizQuestion.selectedAnswer ?? null}
+                        correctAnswer={activeQuizQuestion.correctAnswer ?? null}
+                        wasCorrect={false}
+                        metadata={{
+                          relatedSections: activeQuizQuestion.relatedSections ?? [],
+                          source: 'topic-teacher-missed-quiz',
+                        }}
+                        className="h-7 w-7"
+                      />
+                    </div>
                     <p className="text-sm text-foreground">
                       {activeQuizQuestion.question}
                     </p>

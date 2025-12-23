@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
+import { logUsageEvent } from '@/lib/usage-events'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -29,7 +30,7 @@ Format your response clearly with headers and bullet points for easy reading.`
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { examResults } = body
+    const { examResults, userId } = body
 
     if (!examResults) {
       return NextResponse.json(
@@ -48,6 +49,13 @@ export async function POST(request: NextRequest) {
           content: `${STUDY_OPTIMIZER_PROMPT}\n\nHere are the exam results to analyze:\n\n${examResults}`,
         },
       ],
+    })
+
+    await logUsageEvent({
+      userId: typeof userId === 'string' ? userId : null,
+      eventName: 'study-optimizer.analyze',
+      endpoint: '/api/study-optimizer',
+      model: 'claude-haiku-4-5-20251001',
     })
 
     // Convert stream to ReadableStream for NextResponse

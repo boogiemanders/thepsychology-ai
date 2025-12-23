@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { logUsageEvent } from '@/lib/usage-events'
 
 const openaiApiKey = process.env.OPENAI_API_KEY
 
@@ -145,6 +146,16 @@ ${protectedContent}`
           },
         ],
       }),
+    })
+
+    await logUsageEvent({
+      userId: null,
+      eventName: 'topic-teacher.translate',
+      endpoint: '/api/topic-teacher/translate',
+      model: 'gpt-4o-mini',
+      metadata: {
+        targetLanguage,
+      },
     })
 
     if (!openaiResponse.ok || !openaiResponse.body) {

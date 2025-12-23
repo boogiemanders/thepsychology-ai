@@ -99,6 +99,25 @@ export function PrioritizeContent() {
     return pages
   }, [resultHistory])
 
+  const resolvedExamType = useMemo(() => {
+    if (priorityData?.examType) {
+      return priorityData.examType as 'diagnostic' | 'practice'
+    }
+
+    if (examResults) {
+      try {
+        const parsed = JSON.parse(examResults)
+        if (parsed?.examType === 'diagnostic' || parsed?.examType === 'practice') {
+          return parsed.examType as 'diagnostic' | 'practice'
+        }
+      } catch {
+        return null
+      }
+    }
+
+    return null
+  }, [priorityData, examResults])
+
   const handleHistorySelect = (historyId: string, options?: { updateUrl?: boolean }) => {
     if (!historyId || historyId === selectedResultId) return
 
@@ -731,6 +750,7 @@ export function PrioritizeContent() {
                     examQuestions={priorityData.examQuestions || []}
                     selectedAnswers={priorityData.selectedAnswers || {}}
                     orgPsychPerformance={priorityData.orgPsychPerformance}
+                    examType={resolvedExamType}
                   />
                 </motion.div>
               )}
