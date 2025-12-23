@@ -391,7 +391,7 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
                 variant="outline"
                 className="border-border/60 bg-transparent text-[11px] font-normal px-2 py-0.5"
               >
-                Free until end of January
+                Free until end of January 2026
               </Badge>
             )}
           </p>
@@ -399,7 +399,7 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
             <div className="flex items-baseline mt-2">
               <span className="text-4xl font-semibold">$0</span>
               <span className="ml-2 text-lg font-medium text-muted-foreground">/month</span>
-              <span className="ml-3 text-sm text-muted-foreground line-through">
+              <span className="ml-3 text-xl font-medium text-muted-foreground line-through">
                 {tier.price}/month
               </span>
             </div>
