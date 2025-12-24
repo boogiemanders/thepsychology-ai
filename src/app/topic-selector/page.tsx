@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Clock, Play, X, AlertCircle, BadgeCheck } from 'lucide-react'
+import { ChevronDown, Clock, Play, X, AlertCircle, BadgeCheck, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -14,6 +14,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
+import { QUIZ_PASS_PERCENT } from '@/lib/quiz-passing'
 import { useAuth } from '@/context/auth-context'
 import {
   getUserCurrentInterest,
@@ -191,7 +192,7 @@ const getInterestTagStyle = (index: number) =>
   INTEREST_TAG_PALETTE[index % INTEREST_TAG_PALETTE.length]
 
 const getRecentScoreColor = (score: number) => {
-  if (score > 70) return 'text-[#788c5d]' // Olive - strong/ready
+  if (score >= QUIZ_PASS_PERCENT) return 'text-[#788c5d]' // Olive - strong/ready
   if (score >= 40) return 'text-[#bdd1ca]' // Soft Sage - okay but needs refinement
   return 'text-[#d87758]' // Coral - needs attention
 }
@@ -252,7 +253,8 @@ export default function TopicSelectorPage() {
     const topicScores: Record<string, number> = {}
     allResults.forEach((result) => {
       const percentage = (result.score / result.totalQuestions) * 100
-      topicScores[result.topic] = percentage
+      const current = topicScores[result.topic] ?? 0
+      topicScores[result.topic] = Math.max(current, percentage)
     })
 
     const mapDomainNumberToIds = (domainNumber?: number | null) => {
@@ -373,6 +375,7 @@ export default function TopicSelectorPage() {
           id: `${domain.id}-${topicIndex}`,
           name: topic.name,
           progress: Math.round(score),
+          isCompleted: score >= QUIZ_PASS_PERCENT,
           sortIndex: topicIndex,
         }
       })
@@ -933,6 +936,16 @@ export default function TopicSelectorPage() {
                               <div className="flex items-center justify-between mb-1">
                                 <div className="flex items-center gap-2 flex-1">
                                   <span className="text-sm">{lessonName}</span>
+                                  {topic.isCompleted && (
+                                    <Badge
+                                      variant="outline"
+                                      className="text-xs flex items-center gap-1"
+                                      style={{ backgroundColor: '#bdd1ca20', color: '#788c5d', borderColor: '#bdd1ca' }}
+                                    >
+                                      <CheckCircle2 className="w-3 h-3" />
+                                      Completed
+                                    </Badge>
+                                  )}
                                   {isPriority && (
                                     <Badge
                                       variant="outline"
@@ -962,6 +975,16 @@ export default function TopicSelectorPage() {
                             <div className="flex items-center justify-between mb-1">
                               <div className="flex items-center gap-2 flex-1">
                                 <span className="text-sm">{lessonName}</span>
+                                {topic.isCompleted && (
+                                  <Badge
+                                    variant="outline"
+                                    className="text-xs flex items-center gap-1"
+                                    style={{ backgroundColor: '#bdd1ca20', color: '#788c5d', borderColor: '#bdd1ca' }}
+                                  >
+                                    <CheckCircle2 className="w-3 h-3" />
+                                    Completed
+                                  </Badge>
+                                )}
                                 <Badge
                                   variant="outline"
                                   className="text-[10px] uppercase tracking-wide"

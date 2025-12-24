@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
 import { useEffect, useState, useCallback } from 'react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
+import { QUIZ_PASS_PERCENT } from '@/lib/quiz-passing'
 import { supabase } from '@/lib/supabase'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
@@ -455,13 +456,16 @@ export default function DashboardPage() {
     // Process all quiz results
     let totalScore = 0
     let totalQuizzes = 0
-    const completedTopics = new Set<string>()
+    const topicBestScores = new Map<string, number>()
 
     allResults.forEach((result) => {
       const percentage = (result.score / result.totalQuestions) * 100
-      completedTopics.add(result.topic)
       totalScore += percentage
       totalQuizzes++
+      const currentBest = topicBestScores.get(result.topic) ?? 0
+      if (percentage > currentBest) {
+        topicBestScores.set(result.topic, percentage)
+      }
 
       // Find which domain this topic belongs to
       for (let domainIdx = 0; domainIdx < EPPP_DOMAINS.length; domainIdx++) {
@@ -474,6 +478,12 @@ export default function DashboardPage() {
       }
     })
 
+    const completedTopics = new Set(
+      Array.from(topicBestScores.entries())
+        .filter(([, score]) => score >= QUIZ_PASS_PERCENT)
+        .map(([topic]) => topic)
+    )
+
     // Calculate domain progress as average of all topics in domain
     EPPP_DOMAINS.forEach((_, domainIdx) => {
       const topicsInDomain = topicsByDomain[domainIdx] || []
@@ -482,15 +492,19 @@ export default function DashboardPage() {
         return
       }
 
-      const scores = topicsInDomain.map(t => topicScores[domainIdx][t] || 0)
-      const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length
-      domainProgress[domainIdx] = avgScore
+      const completedCount = topicsInDomain.filter((topic) => {
+        const score = topicScores[domainIdx][topic] || 0
+        return score >= QUIZ_PASS_PERCENT
+      }).length
+      domainProgress[domainIdx] = Math.round((completedCount / topicsInDomain.length) * 100)
     })
 
     // Calculate overall completion
-    const totalCompletion = totalQuizzes > 0 ? Math.round(totalScore / totalQuizzes) : 0
-    const completedDomainsCount = domainProgress.filter(p => p >= 80).length
     const totalTopics = Object.values(topicsByDomain).reduce((sum, topics) => sum + topics.length, 0)
+    const totalCompletion = totalTopics > 0
+      ? Math.round((completedTopics.size / totalTopics) * 100)
+      : 0
+    const completedDomainsCount = domainProgress.filter(p => p >= 80).length
 
     setProgressData({
       totalCompletion,

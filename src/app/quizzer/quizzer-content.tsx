@@ -19,6 +19,7 @@ import { supabase } from '@/lib/supabase'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { computeQuestionKeyClient } from '@/lib/question-key-client'
+import { isQuizPass } from '@/lib/quiz-passing'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -761,7 +762,8 @@ export function QuizzerContent() {
   // Fire confetti on quiz completion
   useEffect(() => {
     if (quizState.showResults) {
-      const passed = quizState.score >= 8
+      const scoredQuestionCount = questions.filter(q => q.isScored !== false).length
+      const passed = isQuizPass(quizState.score, scoredQuestionCount)
       // Fire confetti if: first quiz (regardless of pass/fail) OR passed (subsequent quizzes)
       if (isFirstQuiz || passed) {
         setTimeout(() => {
@@ -769,7 +771,7 @@ export function QuizzerContent() {
         }, 500)
       }
     }
-  }, [quizState.showResults, isFirstQuiz, quizState.score])
+  }, [quizState.showResults, isFirstQuiz, quizState.score, questions])
 
   // Auto-generate quiz when page loads with a topic
   useEffect(() => {
