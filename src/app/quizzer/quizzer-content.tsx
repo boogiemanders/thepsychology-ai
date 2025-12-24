@@ -77,6 +77,14 @@ const escapeHtml = (value: string): string => {
     .replace(/'/g, '&#39;')
 }
 
+const normalizeQuestionText = (value: string): string => {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 export function QuizzerContent() {
   const searchParams = useSearchParams()
   const { user } = useAuth()
@@ -404,6 +412,10 @@ export function QuizzerContent() {
           questionId: q.id,
           questionKey,
           question: q.question,
+          correctAnswer: q.correctAnswer,
+          options: q.options,
+          explanation: q.explanation,
+          isScored: q.isScored !== false,
           relatedSections: q.relatedSections || [],
           timestamp: Date.now(),
         })
@@ -458,6 +470,8 @@ export function QuizzerContent() {
       totalQuestions: scoredQuestionCount,
       wrongAnswers: mergedWrongAnswers,
       correctAnswers,
+      lastAttemptWrongAnswers: wrongAnswers,
+      lastAttemptCorrectAnswers: correctAnswers,
     }
 
     saveQuizResults(quizResults)
@@ -533,27 +547,177 @@ export function QuizzerContent() {
       setIsLoading(true)
       setError(null)
 
+      const fetchFreshQuiz = async (): Promise<QuizQuestion[]> => {
+        const response = await fetch('/api/quizzer', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ topic, domain, userId: user?.id ?? null }),
+        })
+
+        if (!response.ok) {
+          throw new Error('Failed to generate quiz')
+        }
+
+        const data = await response.json()
+        const questionsData = Array.isArray(data.questions) ? data.questions : []
+
+        return shuffleArray(questionsData).map((q: QuizQuestion, idx: number) => ({
+          ...q,
+          options: shuffleArray(q.options),
+          id: idx,
+        }))
+      }
+
       if (review === 'wrong' && decodedTopic) {
         const previous = getQuizResults(decodedTopic)
-        const unresolved = previous?.wrongAnswers?.filter((wa) => wa && wa.isResolved !== true) ?? []
-        const eligible = unresolved.filter(
+        const lastAttemptWrong =
+          previous?.lastAttemptWrongAnswers ??
+          previous?.wrongAnswers
+            ?.filter((wa) => wa && wa.isResolved !== true)
+            .sort((a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0))
+            .slice(0, 10) ??
+          []
+        const lastAttemptCorrect =
+          previous?.lastAttemptCorrectAnswers ?? previous?.correctAnswers ?? []
+
+        const eligibleWrong = lastAttemptWrong.filter(
           (wa) => Array.isArray(wa.options) && wa.options.length >= 2 && typeof wa.correctAnswer === 'string' && wa.correctAnswer.length > 0
         )
 
-        if (eligible.length > 0) {
-          const retryQuestions = shuffleArray(eligible).map((wa, idx) => ({
-            id: typeof wa.questionId === 'number' ? wa.questionId : idx,
-            question: wa.question,
-            options: shuffleArray([...(wa.options ?? [])]),
-            correctAnswer: wa.correctAnswer,
-            explanation: wa.explanation ?? '',
-            relatedSections: wa.relatedSections || [],
-            isScored: wa.isScored !== false,
-          })) as QuizQuestion[]
+        if (eligibleWrong.length > 0) {
+          type GeneratedQuestion = QuizQuestion & { __source: 'wrong' | 'new' }
 
-          setQuestions(retryQuestions)
+          const TOTAL_QUESTIONS = 10
+          const TARGET_UNSCORED = 2
+
+          const exclude = new Set<string>()
+          const addExclude = (text: string | null | undefined) => {
+            if (!text) return
+            const normalized = normalizeQuestionText(text)
+            if (normalized) exclude.add(normalized)
+          }
+
+          eligibleWrong.forEach((wa) => addExclude(wa.question))
+          lastAttemptCorrect.forEach((ca) => addExclude((ca as any)?.question))
+          previous?.wrongAnswers?.forEach((wa) => {
+            if (wa?.isResolved) addExclude(wa.question)
+          })
+
+          const retryQuestions: GeneratedQuestion[] = shuffleArray(eligibleWrong)
+            .slice(0, TOTAL_QUESTIONS)
+            .map((wa) => ({
+              id: 0,
+              question: wa.question,
+              options: shuffleArray([...(wa.options ?? [])]),
+              correctAnswer: wa.correctAnswer,
+              explanation: wa.explanation ?? '',
+              relatedSections: wa.relatedSections || [],
+              isScored: wa.isScored !== false,
+              __source: 'wrong',
+            }))
+
+          const assembled: GeneratedQuestion[] = [...retryQuestions]
+          const candidatesScored: GeneratedQuestion[] = []
+          const candidatesUnscored: GeneratedQuestion[] = []
+
+          const pushCandidate = (q: QuizQuestion) => {
+            const normalized = normalizeQuestionText(q.question)
+            if (!normalized || exclude.has(normalized)) return
+            exclude.add(normalized)
+            const wrapped: GeneratedQuestion = { ...q, __source: 'new' }
+            if (q.isScored === false) candidatesUnscored.push(wrapped)
+            else candidatesScored.push(wrapped)
+          }
+
+          const maxFetchAttempts = 3
+          for (let attempt = 0; attempt < maxFetchAttempts && assembled.length < TOTAL_QUESTIONS; attempt++) {
+            const fresh = await fetchFreshQuiz().catch(() => null)
+            if (!fresh) break
+            fresh.forEach((q) => pushCandidate(q))
+          }
+
+          const countUnscored = (qs: Array<{ isScored?: boolean }>) =>
+            qs.filter((q) => q.isScored === false).length
+
+          while (assembled.length < TOTAL_QUESTIONS) {
+            const currentUnscored = countUnscored(assembled)
+            const needsUnscored = currentUnscored < TARGET_UNSCORED
+
+            let next: GeneratedQuestion | undefined
+            if (needsUnscored && candidatesUnscored.length > 0) {
+              next = candidatesUnscored.shift()
+              if (next) next.isScored = false
+            } else if (candidatesScored.length > 0) {
+              next = candidatesScored.shift()
+              if (next) next.isScored = true
+            } else if (candidatesUnscored.length > 0) {
+              next = candidatesUnscored.shift()
+              if (next) next.isScored = true
+            } else {
+              break
+            }
+
+            if (next) assembled.push(next)
+          }
+
+          if (assembled.length < TOTAL_QUESTIONS) {
+            const fallbackFresh = await fetchFreshQuiz().catch(() => [])
+            for (const q of fallbackFresh) {
+              if (assembled.length >= TOTAL_QUESTIONS) break
+              const normalized = normalizeQuestionText(q.question)
+              if (!normalized) continue
+              if (assembled.some((existing) => normalizeQuestionText(existing.question) === normalized)) continue
+              assembled.push({ ...q, __source: 'new', isScored: true })
+            }
+          }
+
+          // Enforce exactly 2 unscored questions, preferring "new" questions for unscored slots.
+          let currentUnscored = countUnscored(assembled)
+          if (currentUnscored > TARGET_UNSCORED) {
+            for (let i = assembled.length - 1; i >= 0 && currentUnscored > TARGET_UNSCORED; i--) {
+              if (assembled[i].isScored === false && assembled[i].__source === 'new') {
+                assembled[i].isScored = true
+                currentUnscored--
+              }
+            }
+            for (let i = assembled.length - 1; i >= 0 && currentUnscored > TARGET_UNSCORED; i--) {
+              if (assembled[i].isScored === false) {
+                assembled[i].isScored = true
+                currentUnscored--
+              }
+            }
+          } else if (currentUnscored < TARGET_UNSCORED) {
+            for (let i = assembled.length - 1; i >= 0 && currentUnscored < TARGET_UNSCORED; i--) {
+              if (assembled[i].isScored !== false && assembled[i].__source === 'new') {
+                assembled[i].isScored = false
+                currentUnscored++
+              }
+            }
+            for (let i = assembled.length - 1; i >= 0 && currentUnscored < TARGET_UNSCORED; i--) {
+              if (assembled[i].isScored !== false) {
+                assembled[i].isScored = false
+                currentUnscored++
+              }
+            }
+          }
+
+          const finalQuestions = shuffleArray(assembled)
+            .slice(0, TOTAL_QUESTIONS)
+            .map((q, idx) => ({
+              id: idx,
+              question: q.question,
+              options: shuffleArray(q.options),
+              correctAnswer: q.correctAnswer,
+              explanation: q.explanation,
+              relatedSections: q.relatedSections || [],
+              isScored: q.isScored !== false,
+            })) as QuizQuestion[]
+
+          setQuestions(finalQuestions)
           const initialFormats: Record<number, { question: string; options: string[] }> = {}
-          retryQuestions.forEach((q, idx) => {
+          finalQuestions.forEach((q, idx) => {
             initialFormats[idx] = {
               question: escapeHtml(q.question),
               options: q.options.map(escapeHtml),
@@ -565,26 +729,7 @@ export function QuizzerContent() {
         }
       }
 
-      const response = await fetch('/api/quizzer', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ topic, domain, userId: user?.id ?? null }),
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to generate quiz')
-      }
-
-      const data = await response.json()
-      let questionsData = data.questions || []
-
-      const shuffled = shuffleArray(questionsData).map((q: QuizQuestion, idx: number) => ({
-        ...q,
-        options: shuffleArray(q.options),
-        id: idx,
-      }))
+      const shuffled = await fetchFreshQuiz()
 
       const finalQuestions = shuffled.slice(0, 10)
       setQuestions(finalQuestions)

@@ -22,6 +22,10 @@ export interface CorrectAnswer {
   questionId: number
   questionKey?: string
   question: string
+  correctAnswer?: string
+  options?: string[]
+  explanation?: string
+  isScored?: boolean
   relatedSections: string[]
   timestamp: number
   wasPreviouslyWrong?: boolean // Was this wrong before but now correct?
@@ -35,6 +39,8 @@ export interface QuizResults {
   totalQuestions: number
   wrongAnswers: WrongAnswer[]
   correctAnswers: CorrectAnswer[]
+  lastAttemptWrongAnswers?: WrongAnswer[]
+  lastAttemptCorrectAnswers?: CorrectAnswer[]
 }
 
 const QUIZ_RESULTS_PREFIX = 'quizResults_'
