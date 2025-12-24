@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { computeQuestionKey } from '@/lib/question-key'
+import { isNotificationEmailConfigured, sendNotificationEmail } from '@/lib/notify-email'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -21,6 +22,11 @@ async function requireAuthedUserId(req: NextRequest): Promise<string | null> {
 }
 
 type ExamType = 'quiz' | 'diagnostic' | 'practice'
+
+function truncate(value: string, maxLen: number) {
+  if (value.length <= maxLen) return value
+  return `${value.slice(0, Math.max(0, maxLen - 1))}…`
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -112,10 +118,61 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to submit feedback' }, { status: 500 })
     }
 
+    if (isNotificationEmailConfigured()) {
+      try {
+        const { data: userProfile } = await supabase
+          .from('users')
+          .select('email, full_name')
+          .eq('id', authedUserId)
+          .maybeSingle()
+
+        const userEmail = userProfile?.email ?? 'unknown'
+        const fullName = userProfile?.full_name ?? null
+
+        const subject = `[Question Feedback] ${normalizedRating}/5 • ${examType} • ${userEmail}`
+        const textLines = [
+          `New question feedback submitted`,
+          `- Time: ${payload.created_at}`,
+          `- Exam type: ${examType}`,
+          `- User: ${userEmail}${fullName ? ` (${fullName})` : ''}`,
+          `- User ID: ${authedUserId}`,
+          `- Question key: ${questionKey}`,
+          `- Question ID: ${payload.question_id ?? 'n/a'}`,
+          `- Rating (quality): ${normalizedRating}/5`,
+          `- Was correct: ${payload.was_correct === null ? 'n/a' : payload.was_correct ? 'yes' : 'no'}`,
+          `- Selected answer: ${payload.selected_answer ?? 'n/a'}`,
+          `- Correct answer: ${payload.correct_answer ?? 'n/a'}`,
+          '',
+          'Question:',
+          truncate(question.trim(), 1200),
+        ]
+
+        if (Array.isArray(payload.options) && payload.options.length > 0) {
+          textLines.push('', 'Answer choices:')
+          payload.options.slice(0, 12).forEach((opt, idx) => {
+            textLines.push(`${idx + 1}. ${truncate(String(opt), 300)}`)
+          })
+          if (payload.options.length > 12) {
+            textLines.push(`... (${payload.options.length - 12} more)`)
+          }
+        }
+
+        if (payload.comment) {
+          textLines.push('', 'Comment:', truncate(payload.comment, 2000))
+        }
+
+        await sendNotificationEmail({
+          subject,
+          text: textLines.join('\n'),
+        })
+      } catch (emailError) {
+        console.error('[question-feedback] email notify failed (continuing):', emailError)
+      }
+    }
+
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('[question-feedback] error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
-

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sendNotificationEmail } from '@/lib/notify-email'
 
 type SupabaseWebhookPayload = {
   type?: string
@@ -9,11 +10,6 @@ type SupabaseWebhookPayload = {
 }
 
 const WEBHOOK_SECRET = process.env.SUPABASE_WEBHOOK_SECRET
-const RESEND_API_KEY = process.env.RESEND_API_KEY
-const NOTIFY_EMAIL_TO = process.env.NOTIFY_EMAIL_TO
-const NOTIFY_EMAIL_FROM = process.env.NOTIFY_EMAIL_FROM
-
-const RESEND_ENDPOINT = 'https://api.resend.com/emails'
 
 const formatTimestamp = (value?: unknown) => {
   if (!value || typeof value !== 'string') return 'unknown'
@@ -111,32 +107,6 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
   return null
 }
 
-const sendEmail = async (subject: string, text: string, html?: string) => {
-  if (!RESEND_API_KEY || !NOTIFY_EMAIL_TO || !NOTIFY_EMAIL_FROM) {
-    throw new Error('Email configuration missing (RESEND_API_KEY / NOTIFY_EMAIL_FROM / NOTIFY_EMAIL_TO)')
-  }
-
-  const response = await fetch(RESEND_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: NOTIFY_EMAIL_FROM,
-      to: [NOTIFY_EMAIL_TO],
-      subject,
-      text,
-      html: html || text.replace(/\n/g, '<br/>'),
-    }),
-  })
-
-  if (!response.ok) {
-    const body = await response.text()
-    throw new Error(`Resend returned ${response.status}: ${body}`)
-  }
-}
-
 export async function POST(request: NextRequest) {
   if (!WEBHOOK_SECRET) {
     return NextResponse.json(
@@ -169,7 +139,11 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    await sendEmail(emailPayload.subject, emailPayload.text, emailPayload.html)
+    await sendNotificationEmail({
+      subject: emailPayload.subject,
+      text: emailPayload.text,
+      html: emailPayload.html,
+    })
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Failed to send notification email', error)
