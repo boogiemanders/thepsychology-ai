@@ -1701,13 +1701,13 @@ export function TopicTeacherContent() {
     if (quizWrongAnswers.length === 0 || !baseContent) return result
 
     // Extract all h2/h3 headers from the markdown content
-    const headers: string[] = []
+    const headers: Array<{ text: string; level: 2 | 3 }> = []
     const lines = baseContent.split('\n')
     for (const line of lines) {
       const h2Match = line.match(/^##\s+(.+)$/)
       const h3Match = line.match(/^###\s+(.+)$/)
-      if (h2Match) headers.push(h2Match[1].trim())
-      else if (h3Match) headers.push(h3Match[1].trim())
+      if (h2Match) headers.push({ text: h2Match[1].trim(), level: 2 })
+      else if (h3Match) headers.push({ text: h3Match[1].trim(), level: 3 })
     }
 
     // For each quiz question, find ALL matching headers and pick the best one
@@ -1717,7 +1717,8 @@ export function TopicTeacherContent() {
       let bestHeader: string | null = null
       let bestScore = 0
 
-      for (const header of headers) {
+      for (const headerInfo of headers) {
+        const header = headerInfo.text
         // Skip section headers where list items should show stars instead
         // Also skip generic overview/comparison headers and intro "why X matters" headers
         const lowerHeader = header.toLowerCase()
@@ -1747,6 +1748,11 @@ export function TopicTeacherContent() {
             const matchRatio = normalizedSection.length / normalizedHeader.length
             score += matchRatio * 1000
 
+            // Prefer h3 headers over h2 when all else is equal (more specific)
+            if (headerInfo.level === 3) {
+              score += 250
+            }
+
             // Penalty for generic comparison/overview headers
             const lowerHeader = header.toLowerCase()
             if (lowerHeader.includes('comparing') || lowerHeader.includes('evolution') ||
@@ -1761,6 +1767,86 @@ export function TopicTeacherContent() {
             }
           }
         }
+      }
+
+      // Content-based matching fallback (and override) for when relatedSections are noisy.
+      // This prevents cases like "Cue Exposure Therapy" being starred for an "Implosive therapy" question.
+      const stopWords = new Set([
+        'the',
+        'a',
+        'an',
+        'and',
+        'or',
+        'of',
+        'to',
+        'in',
+        'on',
+        'for',
+        'with',
+        'from',
+        'by',
+        'is',
+        'are',
+      ])
+      const questionText = (question.question || '').toLowerCase()
+      const explanation = (question.explanation || '').toLowerCase()
+      const combinedText = `${questionText} ${explanation}`.replace(/[^a-z0-9\s]/g, ' ')
+
+      let bestContentHeader: string | null = null
+      let bestContentScore = 0
+
+      for (const headerInfo of headers) {
+        const header = headerInfo.text
+        const lowerHeader = header.toLowerCase()
+        if (lowerHeader.includes('key takeaways') ||
+            lowerHeader.includes('practice tips') ||
+            lowerHeader.includes('evolution of thinking') ||
+            lowerHeader.includes('comparing the theories') ||
+            (lowerHeader.includes('why') && lowerHeader.includes('matter'))) continue
+
+        const headerWordsRaw = lowerHeader
+          .replace(/[^a-z0-9\s]/g, ' ')
+          .split(/\s+/)
+          .map((w) => w.trim())
+          .filter(Boolean)
+
+        const topicWord = headerWordsRaw.find((w) => !stopWords.has(w)) ?? null
+        const topicWordMatches = Boolean(topicWord && combinedText.includes(topicWord))
+
+        const significantWords = [...new Set(
+          headerWordsRaw.filter((w) => w.length >= 4 && !stopWords.has(w))
+        )]
+        const matchingWords = significantWords.filter((word) => combinedText.includes(word))
+
+        const ratioThreshold = Math.ceil(significantWords.length * 0.5)
+        const hasStrongOverlap =
+          significantWords.length > 0 &&
+          matchingWords.length >= 2 &&
+          matchingWords.length >= ratioThreshold
+
+        if (!topicWordMatches && !hasStrongOverlap) continue
+
+        let score = 0
+        if (topicWordMatches) score += 20000
+        score += matchingWords.length * 200
+
+        const normalizedExplanation = explanation.replace(/[^a-z0-9\s]/g, ' ')
+        const explanationWords = significantWords.filter((word) => normalizedExplanation.includes(word))
+        if (significantWords.length > 0 && explanationWords.length >= ratioThreshold) {
+          score += 5000
+        }
+
+        if (headerInfo.level === 3) score += 250
+
+        if (score > bestContentScore) {
+          bestContentScore = score
+          bestContentHeader = header
+        }
+      }
+
+      if (bestContentHeader && bestContentScore > bestScore) {
+        bestScore = bestContentScore
+        bestHeader = bestContentHeader
       }
 
       if (bestHeader) {
