@@ -39,30 +39,6 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeSlide, setActiveSlide] = useState(0)
 
-  // Auto-expand tier when clicked from mini pricing bar (listen for custom event)
-  useEffect(() => {
-    const handleMiniPricingSelect = (e: Event) => {
-      const customEvent = e as CustomEvent<{ tierName: string }>
-      const tierName = customEvent.detail?.tierName
-      if (tierName) {
-        // Delay to let scroll complete, then expand
-        setTimeout(() => {
-          setExpandedTier(tierName)
-          // After expansion animation, scroll again to correct position
-          setTimeout(() => {
-            const section = document.getElementById("get-started")
-            if (section) {
-              section.scrollIntoView({ behavior: "smooth", block: "start" })
-            }
-          }, 450) // Wait for expansion animation (400ms) to complete
-        }, 800) // 800ms delay to let initial scrolls complete first
-      }
-    }
-
-    window.addEventListener("mini-pricing-select", handleMiniPricingSelect)
-    return () => window.removeEventListener("mini-pricing-select", handleMiniPricingSelect)
-  }, [])
-
   const scrollToCard = useCallback((index: number, behavior: ScrollBehavior = "smooth") => {
     const target = cardRefs.current[index]
     const sliderEl = sliderRef.current
@@ -88,6 +64,36 @@ export function PricingSection({ activeTier, onActiveTierChange }: PricingSectio
       }, {}),
     [pricingItems]
   )
+  // Auto-expand tier when clicked from mini pricing bar (listen for custom event)
+  useEffect(() => {
+    const handleMiniPricingSelect = (e: Event) => {
+      const customEvent = e as CustomEvent<{ tierName: string }>
+      const tierName = customEvent.detail?.tierName
+      if (!tierName) return
+
+      const normalizedTierName = tierName === "Free" ? "7-Day Free Trial" : tierName
+      const targetIndex = tierIndexMap[normalizedTierName]
+
+      // Delay to let scroll complete, then expand
+      setTimeout(() => {
+        if (typeof targetIndex === "number") {
+          scrollToCard(targetIndex)
+          setActiveSlide(targetIndex)
+        }
+        setExpandedTier(normalizedTierName)
+        // After expansion animation, scroll again to correct position
+        setTimeout(() => {
+          const section = document.getElementById("get-started")
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" })
+          }
+        }, 450) // Wait for expansion animation (400ms) to complete
+      }, 800) // 800ms delay to let initial scrolls complete first
+    }
+
+    window.addEventListener("mini-pricing-select", handleMiniPricingSelect)
+    return () => window.removeEventListener("mini-pricing-select", handleMiniPricingSelect)
+  }, [scrollToCard, tierIndexMap])
   const tierBrandSettings: Record<string, { base: string; hover: string; hoverText: string; dot: string }> = {
     "7-Day Free Trial": {
       base: "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",

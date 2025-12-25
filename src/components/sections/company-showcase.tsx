@@ -17,7 +17,7 @@ export function CompanyShowcase() {
       pricing.scrollIntoView({ behavior: "smooth", block: "start" })
     }, 220)
 
-    const event = new CustomEvent("mini-pricing-select", { detail: { tierName: "Free" } })
+    const event = new CustomEvent("mini-pricing-select", { detail: { tierName: "Pro" } })
     window.dispatchEvent(event)
   }
 

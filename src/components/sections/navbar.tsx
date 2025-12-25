@@ -111,7 +111,7 @@ export function Navbar() {
     }, 220)
 
     // Dispatch custom event to trigger accordion expansion with 800ms delay
-    const event = new CustomEvent("mini-pricing-select", { detail: { tierName: "Free" } })
+    const event = new CustomEvent("mini-pricing-select", { detail: { tierName: "Pro" } })
     window.dispatchEvent(event)
   }, []);
 
