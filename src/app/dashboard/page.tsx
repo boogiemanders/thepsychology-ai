@@ -786,14 +786,14 @@ export default function DashboardPage() {
       name: "Recover",
       description: (
         <>
-          <span className="md:hidden">Coming soon</span>
+          <span className="md:hidden">Reduce burnout</span>
           <span className="hidden md:inline">Improve focus and reduce burnout</span>
         </>
       ),
-      href: "#",
-      cta: "Coming Soon",
+      href: "/recover",
+      cta: "Open",
       className:
-        "col-span-2 col-start-3 row-span-1 row-start-2 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7 group cursor-not-allowed opacity-75",
+        "col-span-2 col-start-3 row-span-1 row-start-2 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7",
       background: (
         <div className="absolute inset-0 overflow-hidden">
           <BreathingAnimation speed={0.596} />

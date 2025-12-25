@@ -148,6 +148,7 @@ __pycache__/
 # Local dev artifacts
 .next-dev.log
 .next-dev.pid
+.env.local
 
 # Generated reports
 questionsGPT_answerability_report.tsv
@@ -155,3 +156,6 @@ questionsGPT_answerability_summary.txt
 
 # EPPP reference content (private source material)
 eppp-reference/
+
+# Recover PDF sources (private source material)
+recover-pdfs/

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "ingest:recover": "node scripts/ingest-recover-pdfs.mjs",
     "lint": "next lint",
     "start": "next start"
   },
@@ -64,6 +65,7 @@
     "next-themes": "latest",
     "openai": "^6.9.1",
     "path": "latest",
+    "pdf-parse": "^2.4.5",
     "react": "^19.2.1",
     "react-colorful": "^5.6.1",
     "react-day-picker": "^9.11.1",
