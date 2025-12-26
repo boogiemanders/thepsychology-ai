@@ -1,6 +1,28 @@
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { NextRequest, NextResponse } from 'next/server'
 
+type SignupDevice = 'phone' | 'desktop' | 'unknown'
+
+function inferSignupDevice(headers: Headers): { device: SignupDevice; userAgent: string | null } {
+  const userAgent = headers.get('user-agent')
+  const chMobile = headers.get('sec-ch-ua-mobile')
+
+  if (chMobile === '?1') return { device: 'phone', userAgent }
+  if (chMobile === '?0') return { device: 'desktop', userAgent }
+  if (!userAgent) return { device: 'unknown', userAgent: null }
+
+  const ua = userAgent.toLowerCase()
+  const isMobile =
+    ua.includes('mobi') ||
+    ua.includes('iphone') ||
+    ua.includes('ipod') ||
+    ua.includes('android') ||
+    ua.includes('ipad') ||
+    ua.includes('tablet')
+
+  return { device: isMobile ? 'phone' : 'desktop', userAgent }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -63,6 +85,8 @@ export async function POST(request: NextRequest) {
     // For requests without auth token, we trust the userId from the request
     // This is acceptable for new signups where auth context isn't available yet
 
+    const { device: signupDevice, userAgent: signupUserAgent } = inferSignupDevice(request.headers)
+
     // Create the user profile
     const { error: profileError, data } = await supabase
       .from('users')
@@ -75,6 +99,8 @@ export async function POST(request: NextRequest) {
           promo_code_used: promoCodeUsed || null,
           referral_source: referralSource || null,
           subscription_started_at: new Date().toISOString(),
+          signup_device: signupDevice,
+          signup_user_agent: signupUserAgent,
         },
       ])
       .select()

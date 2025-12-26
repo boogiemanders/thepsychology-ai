@@ -11,8 +11,9 @@ const NOTIFY_EMAIL_FROM = process.env.NOTIFY_EMAIL_FROM
 
 const RESEND_ENDPOINT = 'https://api.resend.com/emails'
 
-export function isNotificationEmailConfigured(): boolean {
-  return Boolean(RESEND_API_KEY && NOTIFY_EMAIL_TO && NOTIFY_EMAIL_FROM)
+export function isNotificationEmailConfigured(toOverride?: string | string[]): boolean {
+  const resolvedTo = toOverride ?? NOTIFY_EMAIL_TO
+  return Boolean(RESEND_API_KEY && resolvedTo && NOTIFY_EMAIL_FROM)
 }
 
 export async function sendNotificationEmail({ subject, text, html, to }: SendEmailArgs): Promise<void> {
@@ -44,4 +45,3 @@ export async function sendNotificationEmail({ subject, text, html, to }: SendEma
     throw new Error(`Resend returned ${response.status}: ${body}`)
   }
 }
-

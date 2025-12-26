@@ -15,7 +15,7 @@ const formatTimestamp = (value?: unknown) => {
   if (!value || typeof value !== 'string') return 'unknown'
   const date = new Date(value)
   if (Number.isNaN(date.getTime())) return value
-  return `${date.toLocaleString('en-US', { timeZone: 'UTC' })} UTC`
+  return date.toLocaleString('en-US', { timeZone: 'America/New_York', timeZoneName: 'short' })
 }
 
 const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
@@ -71,9 +71,13 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
 
   if (table === 'users') {
     const subject = `[Signup] ${(record.email as string) || 'New user'} (${schema || 'public'})`
+    const rawDevice = (record.signup_device as string | null | undefined) ?? 'unknown'
+    const signupDevice =
+      rawDevice === 'desktop' ? 'laptop/desktop' : rawDevice === 'phone' ? 'phone' : 'unknown'
     const textLines = [
       `New user profile created`,
       `- Time: ${formatTimestamp(record.created_at)}`,
+      `- Device: ${signupDevice}`,
       `- Email: ${(record.email as string) || 'unknown'}`,
       `- Full name: ${(record.full_name as string | null | undefined) ?? 'not provided'}`,
       `- Subscription tier: ${(record.subscription_tier as string | null | undefined) ?? 'unknown'}`,
@@ -91,6 +95,7 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
         <p><strong>New user profile created</strong></p>
         <ul>
           <li><strong>Time:</strong> ${formatTimestamp(record.created_at)}</li>
+          <li><strong>Device:</strong> ${signupDevice}</li>
           <li><strong>Email:</strong> ${(record.email as string) || 'unknown'}</li>
           <li><strong>Full name:</strong> ${(record.full_name as string | null | undefined) ?? 'not provided'}</li>
           <li><strong>Subscription tier:</strong> ${(record.subscription_tier as string | null | undefined) ?? 'unknown'}</li>

@@ -28,7 +28,7 @@ This repo now exposes a webhook endpoint that turns Supabase insert events into 
 
 ## What the emails contain
 
-- `public.users` (signups): email, full name, tier, referral source, promo code, Stripe customer id, exam date, timestamps, and user id.
+- `public.users` (signups): email, full name, tier, referral source, promo code, Stripe customer id, exam date, device (phone vs laptop/desktop), timestamps (ET), and user id.
 - `feedback`: message, page path, anonymous flag, user id/email (when present), status, screenshot path, and timestamp.
 
 ## Testing

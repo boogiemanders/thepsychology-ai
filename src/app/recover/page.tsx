@@ -3,8 +3,10 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { useRouter } from 'next/navigation'
 import { ShieldAlert, RotateCcw, Send } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { useAuth } from '@/context/auth-context'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { INITIAL_RECOVER_ASSISTANT_MESSAGE } from '@/lib/recover'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -15,9 +17,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Textarea } from '@/components/ui/textarea'
 
@@ -34,13 +35,56 @@ type ChatMessage = {
 }
 
 function newMessageId(): string {
-  return typeof crypto !== 'undefined' && 'randomUUID' in crypto
-    ? crypto.randomUUID()
-    : `${Date.now()}-${Math.random().toString(16).slice(2)}`
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+    return crypto.randomUUID()
+  }
+
+  const bytes = new Uint8Array(16)
+  if (typeof crypto !== 'undefined' && 'getRandomValues' in crypto) {
+    crypto.getRandomValues(bytes)
+  } else {
+    for (let i = 0; i < bytes.length; i += 1) {
+      bytes[i] = Math.floor(Math.random() * 256)
+    }
+  }
+
+  bytes[6] = (bytes[6] & 0x0f) | 0x40
+  bytes[8] = (bytes[8] & 0x3f) | 0x80
+  const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('')
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`
 }
 
-const INITIAL_ASSISTANT_MESSAGE =
-  "How's studying been going?"
+function isUuid(value: string): boolean {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value)
+}
+
+function MarkdownMessage({ content }: { content: string }) {
+  return (
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      components={{
+        p: ({ children }) => <p className="whitespace-pre-wrap">{children}</p>,
+        strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+        em: ({ children }) => <em className="italic">{children}</em>,
+        ul: ({ children }) => <ul className="list-disc pl-5 my-2 space-y-1">{children}</ul>,
+        ol: ({ children }) => <ol className="list-decimal pl-5 my-2 space-y-1">{children}</ol>,
+        li: ({ children }) => <li className="leading-relaxed">{children}</li>,
+        a: ({ children, href }) => (
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-2"
+          >
+            {children}
+          </a>
+        ),
+      }}
+    >
+      {content}
+    </ReactMarkdown>
+  )
+}
 
 export default function RecoverPage() {
   const router = useRouter()
@@ -48,8 +92,9 @@ export default function RecoverPage() {
 
   const [disclaimerOpen, setDisclaimerOpen] = useState(false)
   const [disclaimerAccepted, setDisclaimerAccepted] = useState(false)
+  const [sessionId, setSessionId] = useState<string>(newMessageId)
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: newMessageId(), role: 'assistant', content: INITIAL_ASSISTANT_MESSAGE },
+    { id: newMessageId(), role: 'assistant', content: INITIAL_RECOVER_ASSISTANT_MESSAGE },
   ])
   const [draft, setDraft] = useState('')
   const [isSending, setIsSending] = useState(false)
@@ -67,6 +112,16 @@ export default function RecoverPage() {
 
   useEffect(() => {
     if (!user?.id) return
+    const sessionKey = `recover_session_${user.id}`
+    const existingSession = localStorage.getItem(sessionKey)
+    if (existingSession && isUuid(existingSession)) {
+      setSessionId(existingSession.trim())
+    } else {
+      const nextSession = newMessageId()
+      localStorage.setItem(sessionKey, nextSession)
+      setSessionId(nextSession)
+    }
+
     const key = `recover_disclaimer_ack_${user.id}`
     const value = localStorage.getItem(key)
     const accepted = value === '1'
@@ -81,7 +136,14 @@ export default function RecoverPage() {
   const resetChat = () => {
     setError(null)
     setDraft('')
-    setMessages([{ id: newMessageId(), role: 'assistant', content: INITIAL_ASSISTANT_MESSAGE }])
+    setMessages([{ id: newMessageId(), role: 'assistant', content: INITIAL_RECOVER_ASSISTANT_MESSAGE }])
+    if (user?.id) {
+      const nextSession = newMessageId()
+      localStorage.setItem(`recover_session_${user.id}`, nextSession)
+      setSessionId(nextSession)
+    } else {
+      setSessionId(newMessageId())
+    }
   }
 
   const sendMessage = async () => {
@@ -106,6 +168,7 @@ export default function RecoverPage() {
         body: JSON.stringify({
           userId: user?.id ?? null,
           userEmail: user?.email ?? null,
+          sessionId,
           messages: nextMessages.map(({ role, content }) => ({ role, content })),
         }),
       })
@@ -154,16 +217,15 @@ export default function RecoverPage() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
-      <div className="mx-auto max-w-3xl px-4 py-6 md:px-6 md:py-10 space-y-4">
+    <main className="h-dvh bg-background overflow-hidden">
+      <div className="mx-auto max-w-3xl px-4 py-6 md:px-6 md:py-10 h-full flex flex-col gap-4">
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="flex items-center gap-3">
               <h1 className="text-3xl font-bold tracking-tight">Recover</h1>
-              <Badge variant="outline">Not psychotherapy</Badge>
             </div>
             <p className="text-muted-foreground">
-              A supportive chat that blends Acceptance & Commitment Therapy (ACT) and Motivational Interviewing (MI).
+              Supportive chat informed by ACT and MI.
             </p>
           </div>
           <Button variant="outline" onClick={resetChat} className="shrink-0">
@@ -172,15 +234,16 @@ export default function RecoverPage() {
           </Button>
         </div>
 
-        <Alert>
-          <ShieldAlert className="h-4 w-4" />
-          <AlertTitle>Not psychotherapy or mental health advice</AlertTitle>
-          <AlertDescription>
-            This is an educational tool for general support and skill-building, not diagnosis or treatment. If you’re
-            in immediate danger or considering self-harm, call 911 or 988 (US), or your local emergency number.
-            If you indicate imminent risk of harm, the site administrator may be notified for safety.
-          </AlertDescription>
-        </Alert>
+        <div className="rounded-md border border-border bg-background px-3 py-2 text-xs text-muted-foreground">
+          <div className="flex gap-2">
+            <ShieldAlert className="h-4 w-4 shrink-0" />
+            <div>
+              Educational support tool, not diagnosis or treatment. If you’re in immediate danger or considering
+              self-harm, call 911 or 988 (US), or your local emergency number. If you indicate imminent risk of harm,
+              the site administrator may be notified for safety.
+            </div>
+          </div>
+        </div>
 
         <AlertDialog open={disclaimerOpen} onOpenChange={setDisclaimerOpen}>
           <AlertDialogContent>
@@ -207,28 +270,25 @@ export default function RecoverPage() {
           </AlertDialogContent>
         </AlertDialog>
 
-        <Card className="overflow-hidden">
-          <CardHeader className="border-b">
-            <CardTitle className="text-base">Chat</CardTitle>
-          </CardHeader>
-          <CardContent className="p-0">
-            <ScrollArea className="h-[52vh]">
+        <Card className="overflow-hidden flex flex-col flex-1 min-h-0">
+          <CardContent className="p-0 flex-1 min-h-0">
+            <ScrollArea className="h-full">
               <div className="p-4 space-y-3">
                 {messages.map((m) => (
                   <div key={m.id} className={m.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
                     <div
                       className={
                         m.role === 'user'
-                          ? 'max-w-[85%] rounded-2xl bg-primary text-primary-foreground px-4 py-2 text-sm whitespace-pre-wrap'
-                          : 'max-w-[85%] rounded-2xl bg-muted px-4 py-2 text-sm whitespace-pre-wrap'
+                          ? 'max-w-[85%] rounded-2xl bg-primary text-primary-foreground px-4 py-2 text-sm'
+                          : 'max-w-[85%] rounded-2xl bg-muted px-4 py-2 text-sm'
                       }
                     >
-                      <div>{m.content}</div>
+                      <div className="space-y-2">
+                        <MarkdownMessage content={m.content} />
+                      </div>
                       {m.role === 'assistant' && m.sources && m.sources.length > 0 && (
                         <details className="mt-2 text-xs text-muted-foreground">
-                          <summary className="cursor-pointer select-none">
-                            References ({m.sources.length})
-                          </summary>
+                          <summary className="cursor-pointer select-none">References ({m.sources.length})</summary>
                           <ul className="mt-1 list-disc pl-4">
                             {m.sources.map((source, idx) => (
                               <li key={`${source.citation}-${idx}`} className="break-words">

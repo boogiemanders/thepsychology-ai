@@ -3,6 +3,7 @@ import OpenAI from 'openai'
 import { createClient } from '@supabase/supabase-js'
 import { z } from 'zod'
 import { isNotificationEmailConfigured, sendNotificationEmail } from '@/lib/notify-email'
+import { INITIAL_RECOVER_ASSISTANT_MESSAGE } from '@/lib/recover'
 
 function getOpenAIClient(): OpenAI | null {
   const apiKey = (process.env.OPENAI_API_KEY || '').trim()
@@ -34,7 +35,8 @@ const MessageSchema = z.object({
 
 const BodySchema = z.object({
   messages: z.array(MessageSchema).optional(),
-  userId: z.string().nullable().optional(),
+  sessionId: z.string().uuid(),
+  userId: z.string().uuid().nullable().optional(),
   userEmail: z.string().email().nullable().optional(),
 })
 
@@ -93,9 +95,14 @@ async function maybeSendAlertEmail(input: {
   userEmail?: string | null
   messages: Array<{ role: string; content: string }>
 }): Promise<void> {
-  if (!isNotificationEmailConfigured()) return
   if (RECOVER_ALERT_MODE === 'off') return
   if (RECOVER_ALERT_MODE === 'harm' && input.reason !== 'harm') return
+
+  const to = (RECOVER_ALERT_EMAIL_TO || process.env.NOTIFY_EMAIL_TO || '').trim() || undefined
+  if (!isNotificationEmailConfigured(to)) {
+    console.warn('[recover-chat] Alert triggered but email is not configured (RESEND_API_KEY / NOTIFY_EMAIL_FROM / NOTIFY_EMAIL_TO or RECOVER_ALERT_EMAIL_TO).')
+    return
+  }
 
   const identifier = input.userEmail || input.userId || 'unknown user'
   const subject = `[Recover Alert] ${input.reason.toUpperCase()} – ${identifier}`
@@ -112,8 +119,9 @@ async function maybeSendAlertEmail(input: {
     await sendNotificationEmail({
       subject,
       text,
-      to: RECOVER_ALERT_EMAIL_TO,
+      to,
     })
+    console.log('[recover-chat] Alert email sent:', { reason: input.reason, to: Array.isArray(to) ? to : [to] })
   } catch (error) {
     console.error('[recover-chat] Failed to send alert email:', error)
   }
@@ -147,6 +155,8 @@ Evidence-based learning (when the user asks about EPPP performance):
 Style:
 - Warm, calm, concise. Prefer short paragraphs.
 - Start with reflection + an open question.
+- Reflections should be direct, without filler like "It sounds like" or "It seems like". Prefer starting with "You're..." or naming the situation plainly.
+- Ask one question at a time. Do not ask multiple questions in a single response. If you have more questions, hold them for later and ask them one by one.
 - Ask permission before offering suggestions or exercises.
 - Offer 2–4 small options when appropriate; avoid overwhelming lists.
 - Avoid em dashes; use commas or periods instead.
@@ -222,6 +232,107 @@ function getOpenAIErrorMessage(error: unknown): string | null {
   return null
 }
 
+async function persistRecoverTranscript(input: {
+  supabase: ReturnType<typeof getSupabaseClient>
+  sessionId: string
+  userId: string
+  messages: Array<{ role: 'user' | 'assistant'; content: string }>
+  assistantMessage: string
+  assistantSources?: Array<{ citation: string; similarity?: number }>
+  alertReason: 'harm' | 'stress' | null
+}): Promise<void> {
+  const supabase = input.supabase
+  if (!supabase) return
+
+  const now = new Date().toISOString()
+  const lastUserIndex = [...input.messages].map((m) => m.role).lastIndexOf('user')
+  const lastUserMessage = lastUserIndex >= 0 ? input.messages[lastUserIndex]?.content : null
+
+  try {
+    const { error: sessionError } = await supabase
+      .from('recover_chat_sessions')
+      .upsert({ id: input.sessionId, user_id: input.userId }, { onConflict: 'id' })
+
+    if (sessionError) throw sessionError
+
+    const { error: initialError } = await supabase
+      .from('recover_chat_messages')
+      .upsert(
+        {
+          session_id: input.sessionId,
+          user_id: input.userId,
+          message_index: 0,
+          role: 'assistant',
+          content: INITIAL_RECOVER_ASSISTANT_MESSAGE,
+        },
+        { onConflict: 'session_id,message_index' }
+      )
+
+    if (initialError) throw initialError
+
+    if (typeof lastUserMessage === 'string' && lastUserMessage.trim().length > 0 && lastUserIndex > 0) {
+      const { error: userMsgError } = await supabase
+        .from('recover_chat_messages')
+        .upsert(
+          {
+            session_id: input.sessionId,
+            user_id: input.userId,
+            message_index: lastUserIndex,
+            role: 'user',
+            content: lastUserMessage,
+            alert_reason: input.alertReason,
+            created_at: now,
+          },
+          { onConflict: 'session_id,message_index' }
+        )
+
+      if (userMsgError) throw userMsgError
+    }
+
+    const assistantIndex = input.messages.length
+    const { error: assistantMsgError } = await supabase
+      .from('recover_chat_messages')
+      .upsert(
+        {
+          session_id: input.sessionId,
+          user_id: input.userId,
+          message_index: assistantIndex,
+          role: 'assistant',
+          content: input.assistantMessage,
+          sources: input.assistantSources ?? null,
+          created_at: now,
+        },
+        { onConflict: 'session_id,message_index' }
+      )
+
+    if (assistantMsgError) throw assistantMsgError
+
+    const sessionUpdate: Record<string, unknown> = {
+      last_message_at: now,
+      message_count: assistantIndex + 1,
+    }
+
+    if (input.alertReason === 'harm') {
+      sessionUpdate.has_harm_alert = true
+      sessionUpdate.last_alert_reason = 'harm'
+      sessionUpdate.last_alert_at = now
+    } else if (input.alertReason === 'stress') {
+      sessionUpdate.has_stress_alert = true
+      sessionUpdate.last_alert_reason = 'stress'
+      sessionUpdate.last_alert_at = now
+    }
+
+    const { error: updateError } = await supabase
+      .from('recover_chat_sessions')
+      .update(sessionUpdate)
+      .eq('id', input.sessionId)
+
+    if (updateError) throw updateError
+  } catch (error) {
+    console.error('[recover-chat] Failed to persist transcript:', error)
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const openai = getOpenAIClient()
@@ -248,17 +359,15 @@ export async function POST(request: NextRequest) {
     }
 
     const lastUserMessage = [...messages].reverse().find((message) => message.role === 'user')?.content
+    const alertReason = lastUserMessage ? getAlertReason(lastUserMessage) : null
 
-    if (lastUserMessage) {
-      const reason = getAlertReason(lastUserMessage)
-      if (reason) {
-        await maybeSendAlertEmail({
-          reason,
-          userId: parsed.data.userId ?? null,
-          userEmail: parsed.data.userEmail ?? null,
-          messages,
-        })
-      }
+    if (alertReason) {
+      await maybeSendAlertEmail({
+        reason: alertReason,
+        userId: parsed.data.userId ?? null,
+        userEmail: parsed.data.userEmail ?? null,
+        messages,
+      })
     }
 
     const { context, sources } = lastUserMessage
@@ -293,10 +402,24 @@ export async function POST(request: NextRequest) {
           )
         : undefined
 
-    return NextResponse.json({
+    const responsePayload = {
       message,
       sources: uniqueSources?.map(({ citation, similarity }) => ({ citation, similarity })),
-    })
+    }
+
+    if (parsed.data.userId) {
+      void persistRecoverTranscript({
+        supabase,
+        sessionId: parsed.data.sessionId,
+        userId: parsed.data.userId,
+        messages,
+        assistantMessage: message,
+        assistantSources: responsePayload.sources,
+        alertReason,
+      })
+    }
+
+    return NextResponse.json(responsePayload)
   } catch (error) {
     console.error('[recover-chat] Error:', error)
     const openaiMessage = getOpenAIErrorMessage(error)
