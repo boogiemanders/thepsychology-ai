@@ -19,8 +19,8 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function StudyProgressChart({ recentScores, averageScore }: StudyProgressChartProps) {
-  // Use a bright accent color that's visible in both light and dark mode
-  const chartColor = '#22c55e' // green-500 - visible on both backgrounds
+  // Use brand color that's visible in both light and dark mode
+  const chartColor = '#6a9bcc' // Soft Blue - brand color
   const [mutedForeground, setMutedForeground] = useState('hsl(215.4, 16.3%, 46.9%)')
   const [borderColor, setBorderColor] = useState('hsl(214.3, 31.8%, 91.4%)')
 
