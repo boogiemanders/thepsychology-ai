@@ -15,6 +15,14 @@ import { Input } from '@/components/ui/input'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { UserListSkeleton } from './components/user-list-skeleton'
+import { UserDetailSkeleton } from './components/user-detail-skeleton'
+import { TranscriptSkeleton } from './components/transcript-skeleton'
+import { EmptyUserList } from './components/empty-user-list'
+import { EmptyTranscript } from './components/empty-transcript'
+import { EmptyTable } from './components/empty-table'
+import { ExamScoreTrendChart } from './components/exam-score-trend-chart'
+import { TopicMasteryProgress } from './components/topic-mastery-progress'
 
 type AdminUserSummary = {
   userId: string
@@ -262,12 +270,12 @@ export default function AdminRecoverPage() {
           <Separator />
 
           <ScrollArea className="flex-1">
+            {loadingUsers ? (
+              <UserListSkeleton />
+            ) : filteredUsers.length === 0 ? (
+              <EmptyUserList isSearching={!!query.trim()} />
+            ) : (
             <div className="p-2 space-y-1">
-              {filteredUsers.length === 0 && (
-                <div className="p-3 text-sm text-muted-foreground">
-                  {loadingUsers ? 'Loading…' : 'No Recover chats found.'}
-                </div>
-              )}
               {filteredUsers.map((u) => {
                 const selected = u.userId === selectedUserId
                 return (
@@ -306,11 +314,12 @@ export default function AdminRecoverPage() {
                 )
               })}
             </div>
+            )}
           </ScrollArea>
         </aside>
 
-        <section className="flex-1 h-full overflow-hidden">
-          <div className="h-full flex flex-col">
+        <section className="flex-1 h-full overflow-y-auto">
+          <div className="flex flex-col">
             <div className="p-4 flex items-start justify-between gap-4">
               <div className="min-w-0">
                 <div className="text-lg font-semibold truncate">
@@ -327,7 +336,6 @@ export default function AdminRecoverPage() {
               </div>
 
               <div className="flex items-center gap-2">
-                {loadingDetail && <div className="text-sm text-muted-foreground">Loading…</div>}
                 {selectedUserId && (
                   <Button variant="outline" onClick={() => loadDetail(selectedUserId)} disabled={loadingDetail}>
                     Refresh user
@@ -392,25 +400,22 @@ export default function AdminRecoverPage() {
 
               <Card>
                 <CardHeader className="py-3">
-                  <CardTitle className="text-sm">Studied so far</CardTitle>
+                  <CardTitle className="text-sm">Topic Mastery</CardTitle>
+                  {detail && detail.topicMasteryCount > 0 && (
+                    <p className="text-xs text-muted-foreground">{detail.topicMasteryCount} sections studied</p>
+                  )}
                 </CardHeader>
                 <CardContent className="pb-4">
-                  <div className="text-sm text-muted-foreground">
-                    {detail ? `${detail.topicMasteryCount} sections with attempts` : '—'}
-                  </div>
-                  {detail?.topicMasteryRecent?.length ? (
-                    <ul className="mt-2 text-sm space-y-1">
-                      {detail.topicMasteryRecent.slice(0, 4).map((t) => (
-                        <li key={`${t.topic}-${t.section}`} className="flex items-center justify-between gap-3">
-                          <span className="truncate">{t.section}</span>
-                          <span className="text-xs text-muted-foreground shrink-0">{formatRelative(t.last_attempted)}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
+                  <TopicMasteryProgress topics={detail?.topicMasteryRecent || []} />
                 </CardContent>
               </Card>
             </div>
+
+            {detail?.practiceExams && detail.practiceExams.length >= 2 && (
+              <div className="px-4 pb-4">
+                <ExamScoreTrendChart exams={detail.practiceExams} />
+              </div>
+            )}
 
             <div className="px-4 pb-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
               <Card className="overflow-hidden">
@@ -453,12 +458,8 @@ export default function AdminRecoverPage() {
                             </TableRow>
                           )
                         })}
-                        {(detail?.sessions || []).length === 0 && (
-                          <TableRow>
-                            <TableCell colSpan={4} className="text-sm text-muted-foreground">
-                              {loadingDetail ? 'Loading…' : 'No sessions found.'}
-                            </TableCell>
-                          </TableRow>
+                        {(detail?.sessions || []).length === 0 && !loadingDetail && (
+                          <EmptyTable type="sessions" colSpan={4} />
                         )}
                       </TableBody>
                     </Table>
@@ -494,12 +495,8 @@ export default function AdminRecoverPage() {
                             </TableCell>
                           </TableRow>
                         ))}
-                        {(detail?.practiceExams || []).length === 0 && (
-                          <TableRow>
-                            <TableCell colSpan={3} className="text-sm text-muted-foreground">
-                              {loadingDetail ? 'Loading…' : 'No practice exams found.'}
-                            </TableCell>
-                          </TableRow>
+                        {(detail?.practiceExams || []).length === 0 && !loadingDetail && (
+                          <EmptyTable type="exams" colSpan={3} />
                         )}
                       </TableBody>
                     </Table>
@@ -518,46 +515,48 @@ export default function AdminRecoverPage() {
                 </CardHeader>
                 <CardContent className="p-0 flex-1 min-h-0">
                   <ScrollArea className="h-full">
-                    <div className="p-4 space-y-3">
-                      {messages.map((m) => (
-                        <div key={m.id} className={m.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
-                          <div
-                            className={
-                              m.role === 'user'
-                                ? 'max-w-[85%] rounded-2xl bg-primary text-primary-foreground px-4 py-2 text-sm'
-                                : 'max-w-[85%] rounded-2xl bg-muted px-4 py-2 text-sm'
-                            }
-                          >
-                            <div className="space-y-2">
-                              <MarkdownMessage content={m.content} />
-                            </div>
-                            {m.alert_reason && (
-                              <div className="mt-2 text-xs text-muted-foreground">
-                                Flag: {m.alert_reason}
+                    {loadingMessages ? (
+                      <TranscriptSkeleton />
+                    ) : !selectedSessionId ? (
+                      <EmptyTranscript noSession />
+                    ) : messages.length === 0 ? (
+                      <EmptyTranscript />
+                    ) : (
+                      <div className="p-4 space-y-3">
+                        {messages.map((m) => (
+                          <div key={m.id} className={m.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
+                            <div
+                              className={
+                                m.role === 'user'
+                                  ? 'max-w-[85%] rounded-2xl bg-primary text-primary-foreground px-4 py-2 text-sm'
+                                  : 'max-w-[85%] rounded-2xl bg-muted px-4 py-2 text-sm'
+                              }
+                            >
+                              <div className="space-y-2">
+                                <MarkdownMessage content={m.content} />
                               </div>
-                            )}
-                            {Array.isArray(m.sources) && m.sources.length > 0 && (
-                              <details className="mt-2 text-xs text-muted-foreground">
-                                <summary className="cursor-pointer select-none">References ({m.sources.length})</summary>
-                                <ul className="mt-1 list-disc pl-4">
-                                  {m.sources.map((s: any, idx: number) => (
-                                    <li key={`${idx}-${String(s?.citation ?? '')}`} className="break-words">
-                                      {typeof s?.citation === 'string' ? s.citation : JSON.stringify(s)}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </details>
-                            )}
+                              {m.alert_reason && (
+                                <div className="mt-2 text-xs text-muted-foreground">
+                                  Flag: {m.alert_reason}
+                                </div>
+                              )}
+                              {Array.isArray(m.sources) && m.sources.length > 0 && (
+                                <details className="mt-2 text-xs text-muted-foreground">
+                                  <summary className="cursor-pointer select-none">References ({m.sources.length})</summary>
+                                  <ul className="mt-1 list-disc pl-4">
+                                    {m.sources.map((s: any, idx: number) => (
+                                      <li key={`${idx}-${String(s?.citation ?? '')}`} className="break-words">
+                                        {typeof s?.citation === 'string' ? s.citation : JSON.stringify(s)}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </details>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      ))}
-                      {!selectedSessionId && (
-                        <div className="text-sm text-muted-foreground">Select a session above to view the transcript.</div>
-                      )}
-                      {selectedSessionId && messages.length === 0 && !loadingMessages && (
-                        <div className="text-sm text-muted-foreground">No messages for this session yet.</div>
-                      )}
-                    </div>
+                        ))}
+                      </div>
+                    )}
                   </ScrollArea>
                 </CardContent>
               </Card>
