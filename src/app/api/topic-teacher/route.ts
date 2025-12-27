@@ -4,8 +4,9 @@ import { loadReferenceContent } from '@/lib/eppp-reference-loader'
 import OpenAI from 'openai'
 import { logUsageEvent } from '@/lib/usage-events'
 import { isProPromoActive } from '@/lib/subscription-utils'
+import { getOpenAIApiKey } from '@/lib/openai-api-key'
 
-const openaiApiKey = process.env.OPENAI_API_KEY
+const openaiApiKey = getOpenAIApiKey()
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 
 const getTeacherSystemPrompt = (userInterests?: string | null, referenceMaterial?: string): string => {

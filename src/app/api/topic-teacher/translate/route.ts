@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { logUsageEvent } from '@/lib/usage-events'
+import { getOpenAIApiKey } from '@/lib/openai-api-key'
 
-const openaiApiKey = process.env.OPENAI_API_KEY
+const openaiApiKey = getOpenAIApiKey()
 
 const normalizeLanguagePreference = (raw?: string | null): string | null => {
   if (!raw) return null
@@ -160,8 +161,16 @@ ${protectedContent}`
 
     if (!openaiResponse.ok || !openaiResponse.body) {
       const errorText = await openaiResponse.text()
+      const normalized = errorText.toLowerCase()
+      const isInvalidKey =
+        openaiResponse.status === 401 &&
+        (normalized.includes('incorrect api key') || normalized.includes('invalid_api_key'))
       return NextResponse.json(
-        { error: errorText || 'Failed to translate content' },
+        {
+          error: isInvalidKey
+            ? 'Invalid OpenAI API key. Update `OPENAI_API_KEY` in `.env.local` (and redeploy/restart) and try again.'
+            : errorText || 'Failed to translate content',
+        },
         { status: openaiResponse.status || 500 }
       )
     }

@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
-import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts'
+import { Area, AreaChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts'
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from '@/components/ui/chart'
@@ -49,43 +49,45 @@ export function StudyProgressChart({ recentScores, averageScore }: StudyProgress
       </CardHeader>
       <CardContent className="pb-2">
         <ChartContainer config={chartConfig} className="h-[140px] w-full">
-          <AreaChart data={chartData} margin={{ left: -20, right: 8, top: 8, bottom: 0 }}>
-            <CartesianGrid vertical={false} strokeDasharray="3 3" className="stroke-border/30" />
-            <XAxis
-              dataKey="quiz"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              fontSize={10}
-              className="fill-muted-foreground"
-            />
-            <YAxis
-              domain={[0, 100]}
-              tickLine={false}
-              axisLine={false}
-              fontSize={10}
-              width={35}
-              tickFormatter={(v) => `${v}%`}
-              className="fill-muted-foreground"
-            />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent labelFormatter={(label) => `Quiz ${label}`} />}
-            />
-            <defs>
-              <linearGradient id="fillProgress" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="var(--color-score)" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="var(--color-score)" stopOpacity={0.1} />
-              </linearGradient>
-            </defs>
-            <Area
-              dataKey="score"
-              type="monotone"
-              fill="url(#fillProgress)"
-              stroke="var(--color-score)"
-              strokeWidth={2}
-            />
-          </AreaChart>
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={chartData} margin={{ left: -20, right: 8, top: 8, bottom: 0 }}>
+              <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="hsl(var(--border))" strokeOpacity={0.3} />
+              <XAxis
+                dataKey="quiz"
+                tickLine={false}
+                axisLine={false}
+                tickMargin={8}
+                fontSize={10}
+                tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              />
+              <YAxis
+                domain={[0, 100]}
+                tickLine={false}
+                axisLine={false}
+                fontSize={10}
+                width={35}
+                tickFormatter={(v) => `${v}%`}
+                tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              />
+              <ChartTooltip
+                cursor={false}
+                content={<ChartTooltipContent labelFormatter={(label) => `Quiz ${label}`} />}
+              />
+              <defs>
+                <linearGradient id="fillProgress" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.8} />
+                  <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.1} />
+                </linearGradient>
+              </defs>
+              <Area
+                dataKey="score"
+                type="monotone"
+                fill="url(#fillProgress)"
+                stroke="hsl(var(--primary))"
+                strokeWidth={2}
+              />
+            </AreaChart>
+          </ResponsiveContainer>
         </ChartContainer>
       </CardContent>
       {trend !== null && (

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { logUsageEvent } from '@/lib/usage-events'
+import { getOpenAIApiKey } from '@/lib/openai-api-key'
 
-const openaiApiKey = process.env.OPENAI_API_KEY
+const openaiApiKey = getOpenAIApiKey()
 
 type AudioFormat = 'mp3' | 'wav' | 'aac' | 'opus' | 'flac'
 
@@ -111,8 +112,17 @@ export async function POST(request: NextRequest) {
 
   if (!openaiResponse.ok) {
     const finalErrorText = errorText ?? (await openaiResponse.text())
+    const normalized = finalErrorText.toLowerCase()
+    const isInvalidKey =
+      openaiResponse.status === 401 &&
+      (normalized.includes('incorrect api key') || normalized.includes('invalid_api_key'))
+
     return NextResponse.json(
-      { error: finalErrorText || 'Failed to generate audio.' },
+      {
+        error: isInvalidKey
+          ? 'Invalid OpenAI API key. Update `OPENAI_API_KEY` in `.env.local` (and redeploy/restart) and try again.'
+          : finalErrorText || 'Failed to generate audio.',
+      },
       { status: openaiResponse.status || 500 }
     )
   }

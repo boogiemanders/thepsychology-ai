@@ -6,6 +6,7 @@ import { isNotificationEmailConfigured, sendNotificationEmail } from '@/lib/noti
 import { INITIAL_RECOVER_ASSISTANT_MESSAGE } from '@/lib/recover'
 import fs from 'node:fs'
 import path from 'node:path'
+import { sanitizeOpenAIApiKey } from '@/lib/openai-api-key'
 
 export const runtime = 'nodejs'
 
@@ -32,10 +33,10 @@ function readDotenvLocalValue(key: string): string | null {
 }
 
 function resolveOpenAIApiKey(): string {
-  const fromProcess = (process.env.OPENAI_API_KEY || '').trim()
+  const fromProcess = sanitizeOpenAIApiKey(process.env.OPENAI_API_KEY) ?? ''
   if (process.env.NODE_ENV === 'production') return fromProcess
 
-  const fromEnvLocal = (readDotenvLocalValue('OPENAI_API_KEY') || '').trim()
+  const fromEnvLocal = sanitizeOpenAIApiKey(readDotenvLocalValue('OPENAI_API_KEY')) ?? ''
   if (fromEnvLocal && fromEnvLocal !== fromProcess) {
     console.warn(
       '[recover-chat] Detected differing OPENAI_API_KEY values; using .env.local value (shell env vars override .env.local).'

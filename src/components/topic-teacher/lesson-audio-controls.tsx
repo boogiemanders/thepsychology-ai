@@ -22,6 +22,24 @@ const VOICE_OPTIONS = ['alloy', 'nova', 'shimmer', 'onyx', 'fable', 'echo'] as c
 
 const MAX_CHARS_PER_TTS_REQUEST = 3200
 
+async function readApiErrorMessage(response: Response, fallback: string): Promise<string> {
+  const contentType = response.headers.get('Content-Type') || ''
+  if (contentType.includes('application/json')) {
+    const data: any = await response.json().catch(() => null)
+    const errorValue = data?.error
+    if (typeof errorValue === 'string' && errorValue.trim()) {
+      return errorValue.trim()
+    }
+    const messageValue = data?.message
+    if (typeof messageValue === 'string' && messageValue.trim()) {
+      return messageValue.trim()
+    }
+  }
+
+  const text = await response.text().catch(() => '')
+  return text.trim() || fallback
+}
+
 export function LessonAudioControls(props: {
   lessonMarkdown: string
   topic: string
@@ -170,8 +188,7 @@ export function LessonAudioControls(props: {
       })
 
       if (!response.ok) {
-        const errorText = await response.text()
-        throw new Error(errorText || 'Failed to generate audio.')
+        throw new Error(await readApiErrorMessage(response, 'Failed to generate audio.'))
       }
 
       const blob = await response.blob()
@@ -213,8 +230,7 @@ export function LessonAudioControls(props: {
         })
 
         if (!scriptResponse.ok) {
-          const errorText = await scriptResponse.text()
-          throw new Error(errorText || 'Failed to create podcast script.')
+          throw new Error(await readApiErrorMessage(scriptResponse, 'Failed to create podcast script.'))
         }
 
         const script = (await scriptResponse.json()) as PodcastScriptResponse

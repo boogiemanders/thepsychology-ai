@@ -961,14 +961,6 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* Progress Chart */}
-        {studyStats.recentScores.length >= 2 && (
-          <StudyProgressChart
-            recentScores={studyStats.recentScores}
-            averageScore={studyStats.averageScore}
-          />
-        )}
-
         {/* Bento Grid - Practice above, Review Exams and Prioritize side-by-side, Recover below, Study on right, Info cards on far right */}
         <BentoGrid className="lg:grid-rows-6 lg:grid-cols-5">
           {/* Action Cards */}
@@ -1003,6 +995,14 @@ export default function DashboardPage() {
             />
           ))}
         </BentoGrid>
+
+        {/* Progress Chart */}
+        {studyStats.recentScores.length >= 2 && (
+          <StudyProgressChart
+            recentScores={studyStats.recentScores}
+            averageScore={studyStats.averageScore}
+          />
+        )}
 
         {/* Account Status Box */}
         <div className="border border-border/50 rounded-lg p-4 md:p-6 bg-white dark:bg-black backdrop-blur-sm">

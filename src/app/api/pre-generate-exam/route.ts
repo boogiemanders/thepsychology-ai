@@ -3,8 +3,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join } from 'path'
+import { getOpenAIApiKey } from '@/lib/openai-api-key'
 
-const openaiApiKey = process.env.OPENAI_API_KEY
+const openaiApiKey = getOpenAIApiKey()
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 
 const DIAGNOSTIC_MODEL =

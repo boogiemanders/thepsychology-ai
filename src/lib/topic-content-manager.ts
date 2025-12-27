@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, existsSync } from 'fs'
 import path from 'path'
+import { getOpenAIApiKey } from '@/lib/openai-api-key'
 
 export interface TopicContentMetadata {
   topic_name: string
@@ -346,7 +347,7 @@ export async function replaceMetaphors(
   userInterests: string,
   topicName: string
 ): Promise<string> {
-  const apiKey = process.env.OPENAI_API_KEY
+  const apiKey = getOpenAIApiKey()
   if (!apiKey) {
     console.warn('[Metaphor Replacement] OPENAI_API_KEY not set, returning content without markers')
     return stripMetaphorMarkers(baseContent)
