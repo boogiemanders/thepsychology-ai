@@ -30,6 +30,7 @@ import { siteConfig } from '@/lib/config'
 import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
+import { getLatestChangelogEntry } from '@/lib/changelog'
 
 const subscriptionTierVisuals = {
   pro_coaching: {
@@ -108,6 +109,7 @@ export default function DashboardPage() {
   const subscriptionTierKey = (userProfile?.subscription_tier as keyof typeof subscriptionTierVisuals) ?? 'default'
   const { label: subscriptionTierLabel, style: subscriptionTierStyle } =
     subscriptionTierVisuals[subscriptionTierKey] ?? subscriptionTierVisuals.default
+  const latestChangelog = getLatestChangelogEntry()
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -945,6 +947,18 @@ export default function DashboardPage() {
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
         </div>
+
+        {latestChangelog && (
+          <div className="border border-border/60 rounded-lg p-4 md:p-5 bg-card/80 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div className="min-w-0">
+              <div className="text-sm font-semibold">What&apos;s new</div>
+              <div className="text-sm text-muted-foreground truncate">{latestChangelog.title}</div>
+            </div>
+            <Button variant="outline" className="md:shrink-0" onClick={() => router.push('/dashboard/changelog')}>
+              View updates
+            </Button>
+          </div>
+        )}
 
         {/* Bento Grid - Practice above, Review Exams and Prioritize side-by-side, Recover below, Study on right, Info cards on far right */}
         <BentoGrid className="lg:grid-rows-6 lg:grid-cols-5">
