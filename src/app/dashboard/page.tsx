@@ -31,6 +31,7 @@ import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 import { getLatestChangelogEntry } from '@/lib/changelog'
+import { StudyProgressChart } from './components/study-progress-chart'
 
 const subscriptionTierVisuals = {
   pro_coaching: {
@@ -958,6 +959,14 @@ export default function DashboardPage() {
               View updates
             </Button>
           </div>
+        )}
+
+        {/* Progress Chart */}
+        {studyStats.recentScores.length >= 2 && (
+          <StudyProgressChart
+            recentScores={studyStats.recentScores}
+            averageScore={studyStats.averageScore}
+          />
         )}
 
         {/* Bento Grid - Practice above, Review Exams and Prioritize side-by-side, Recover below, Study on right, Info cards on far right */}

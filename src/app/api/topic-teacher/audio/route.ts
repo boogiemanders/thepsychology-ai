@@ -6,6 +6,7 @@ const openaiApiKey = process.env.OPENAI_API_KEY
 type AudioFormat = 'mp3' | 'wav' | 'aac' | 'opus' | 'flac'
 
 const DEFAULT_TTS_MODEL = 'gpt-4o-mini-tts'
+const FALLBACK_TTS_MODEL = 'tts-1'
 const DEFAULT_VOICE = 'alloy'
 const MAX_INPUT_CHARS = 5000
 
@@ -74,25 +75,44 @@ export async function POST(request: NextRequest) {
   const mode = typeof body.mode === 'string' ? body.mode : null
   const languagePreference = typeof body.languagePreference === 'string' ? body.languagePreference : null
 
-  const openaiResponse = await fetch('https://api.openai.com/v1/audio/speech', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${openaiApiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      voice,
-      input: text,
-      response_format: format,
-      speed,
-    }),
-  })
+  const requestSpeech = (modelToUse: string) =>
+    fetch('https://api.openai.com/v1/audio/speech', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${openaiApiKey}`,
+      },
+      body: JSON.stringify({
+        model: modelToUse,
+        voice,
+        input: text,
+        response_format: format,
+        speed,
+      }),
+    })
+
+  let modelUsed = model
+  let openaiResponse = await requestSpeech(modelUsed)
+  let errorText: string | null = null
+
+  // Best-effort fallback for projects that don't yet have access to newer TTS models.
+  if (!openaiResponse.ok && modelUsed === DEFAULT_TTS_MODEL) {
+    errorText = await openaiResponse.text()
+    const lower = errorText.toLowerCase()
+    const looksLikeModelError =
+      lower.includes('model') || lower.includes('not found') || openaiResponse.status === 404
+
+    if (looksLikeModelError) {
+      modelUsed = FALLBACK_TTS_MODEL
+      openaiResponse = await requestSpeech(modelUsed)
+      errorText = null
+    }
+  }
 
   if (!openaiResponse.ok) {
-    const errorText = await openaiResponse.text()
+    const finalErrorText = errorText ?? (await openaiResponse.text())
     return NextResponse.json(
-      { error: errorText || 'Failed to generate audio.' },
+      { error: finalErrorText || 'Failed to generate audio.' },
       { status: openaiResponse.status || 500 }
     )
   }
@@ -103,7 +123,7 @@ export async function POST(request: NextRequest) {
     userId,
     eventName: 'topic-teacher.audio',
     endpoint: '/api/topic-teacher/audio',
-    model,
+    model: modelUsed,
     metadata: {
       voice,
       format,
@@ -124,4 +144,3 @@ export async function POST(request: NextRequest) {
     },
   })
 }
-

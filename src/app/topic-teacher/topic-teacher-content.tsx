@@ -38,6 +38,7 @@ import { VariableStar } from '@/components/ui/variable-star'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
+import { LessonAudioControls } from '@/components/topic-teacher/lesson-audio-controls'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -2306,6 +2307,24 @@ export function TopicTeacherContent() {
             </div>
           </div>
         </div>
+
+        <LessonAudioControls
+          lessonMarkdown={messages[0]?.role === 'assistant' ? messages[0].content : ''}
+          topic={displayLessonName}
+          domain={domain}
+          userId={user?.id ?? null}
+          userInterests={savedInterests.length > 0 ? savedInterests.join(', ') : userInterests}
+          languagePreference={languagePreference}
+          disabledReason={
+            isLoading
+              ? 'Loading lesson...'
+              : isMetaphorUpdating || isRefreshingMetaphors
+                ? 'Personalizing metaphors...'
+                : languagePreference && isTranslating
+                  ? `Translating to ${languagePreference}...`
+                  : null
+          }
+        />
 
         {error && (
           <motion.div
