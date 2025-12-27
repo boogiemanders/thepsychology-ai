@@ -3,7 +3,7 @@
 import { useEffect, type ReactNode } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
-import { getFreeTrialStatus } from '@/lib/subscription-utils'
+import { getFreeTrialStatus, isProPromoActive } from '@/lib/subscription-utils'
 
 const ALLOWED_PATHS = ['/trial-expired', '/signup', '/login']
 
@@ -15,6 +15,8 @@ export function SubscriptionGate({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (loading) return
     if (!userProfile) return
+
+    if (isProPromoActive()) return
 
     const { isFreeTier, expired } = getFreeTrialStatus(userProfile)
     if (!isFreeTier || !expired) return
