@@ -671,7 +671,7 @@ export default function DashboardPage() {
       href: "/exam-generator",
       cta: hasPausedExam ? "Resume?" : "Start Exam",
       className:
-        "col-span-2 col-start-1 row-span-2 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
+        "col-span-1 row-span-2 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
       background: (
         <Marquee className="absolute inset-0 opacity-20" repeat={2}>
           <div className="flex gap-6 whitespace-nowrap px-4">
@@ -701,7 +701,7 @@ export default function DashboardPage() {
       href: "/topic-selector",
       cta: "Start Studying",
       className:
-        "col-span-4 row-span-2 row-start-3 md:col-span-3 md:row-span-1 md:row-start-auto lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
+        "col-span-2 row-span-2 row-start-3 md:col-span-3 md:row-span-1 md:row-start-auto lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
       background: (
         <div className="absolute inset-0 flex flex-col items-start justify-start pt-4 p-4 h-full">
           {/* Priority Badges Section */}
@@ -781,7 +781,7 @@ export default function DashboardPage() {
       href: prioritizeHref,
       cta: "View Results",
       className:
-        "col-span-2 col-start-3 row-span-1 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
+        "col-span-1 col-start-2 row-span-1 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
     },
     {
       Icon: Droplets,
@@ -795,7 +795,7 @@ export default function DashboardPage() {
       href: "/recover",
       cta: "Open",
       className:
-        "col-span-2 col-start-3 row-span-1 row-start-2 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7",
+        "col-span-1 col-start-2 row-span-1 row-start-2 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7",
       background: (
         <div className="absolute inset-0 overflow-hidden">
           <BreathingAnimation speed={0.596} />
@@ -815,7 +815,7 @@ export default function DashboardPage() {
       href: "#",
       cta: isExamDatePopoverOpen ? "" : "Edit Date", // Hide CTA when calendar is open
       className:
-        "col-span-2 col-start-1 row-span-2 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
+        "col-span-1 row-span-1 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
       background: (
         <div
           className="absolute inset-0 flex flex-col items-center justify-center pointer-events-auto cursor-pointer"
@@ -857,7 +857,7 @@ export default function DashboardPage() {
       href: "/topic-selector",
       cta: "Keep it going",
       className:
-        "col-span-2 col-start-3 row-span-1 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-3 lg:row-end-5",
+        "col-span-1 col-start-2 row-span-1 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-3 lg:row-end-5",
       background: (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
           <NumberTicker
@@ -878,7 +878,7 @@ export default function DashboardPage() {
       href: "#",
       cta: "Edit",
       className:
-        "col-span-2 col-start-3 row-span-1 row-start-6 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
+        "col-span-2 row-span-1 row-start-6 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
       background: (
         <div
           className="absolute inset-0 flex flex-col items-center justify-center gap-3 pointer-events-auto cursor-pointer"
