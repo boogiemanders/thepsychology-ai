@@ -1,3 +1,5 @@
+import { getProPromoConfig } from '@/lib/promo-pro'
+
 export interface SubscriptionLike {
   subscription_tier?: string | null
   created_at?: string | null
@@ -12,10 +14,37 @@ export function isFreeTier(user?: SubscriptionLike | null): boolean {
   return !user.subscription_tier || user.subscription_tier === 'free'
 }
 
+export function isProPromoActive(nowMs: number = Date.now()): boolean {
+  return Boolean(getProPromoConfig(nowMs))
+}
+
+export function getEntitledSubscriptionTier(
+  user?: SubscriptionLike | null,
+  nowMs: number = Date.now()
+): string | null {
+  if (!user) return null
+  if (isFreeTier(user) && isProPromoActive(nowMs)) return 'pro'
+  return user.subscription_tier || 'free'
+}
+
+export function hasProAccess(user?: SubscriptionLike | null, nowMs: number = Date.now()): boolean {
+  const tier = getEntitledSubscriptionTier(user, nowMs)
+  return tier === 'pro' || tier === 'pro_coaching'
+}
+
 export function getFreeTrialStatus(user?: SubscriptionLike | null) {
   if (!user || !isFreeTier(user)) {
     return {
       isFreeTier: false,
+      expired: false,
+      daysRemaining: Infinity,
+      expiresAt: null as string | null,
+    }
+  }
+
+  if (isProPromoActive()) {
+    return {
+      isFreeTier: true,
       expired: false,
       daysRemaining: Infinity,
       expiresAt: null as string | null,
