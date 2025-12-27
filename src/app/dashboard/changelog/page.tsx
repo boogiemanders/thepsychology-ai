@@ -1,9 +1,8 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
-import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -30,13 +29,72 @@ const CHANGELOG_MARKDOWN_COMPONENTS: Partial<Components> = {
   ),
 }
 
+type ApiChangelogEntry = {
+  id: string
+  date: string
+  title: string
+  body?: string
+  url?: string
+  author?: string | null
+}
+
+type ApiChangelogResponse = {
+  entries: ApiChangelogEntry[]
+  source: 'github' | 'fallback'
+  generatedAt: string
+  error?: string
+}
+
 export default function DashboardChangelogPage() {
   const router = useRouter()
   const { user, loading } = useAuth()
+  const [entries, setEntries] = useState<ApiChangelogEntry[]>([])
+  const [source, setSource] = useState<ApiChangelogResponse['source']>('github')
+  const [error, setError] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     if (!loading && !user) router.push('/login')
   }, [loading, router, user])
+
+  useEffect(() => {
+    if (!user) return
+    let cancelled = false
+
+    const run = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        const response = await fetch('/api/changelog?days=31&limit=100')
+        const data = (await response.json().catch(() => null)) as ApiChangelogResponse | null
+        if (cancelled) return
+        if (!response.ok || !data || !Array.isArray(data.entries)) {
+          throw new Error(typeof (data as any)?.error === 'string' ? (data as any).error : 'Failed to load changelog.')
+        }
+        setEntries(data.entries)
+        setSource(data.source)
+        setError(typeof data.error === 'string' ? data.error : null)
+      } catch (err) {
+        if (cancelled) return
+        setEntries([])
+        setSource('fallback')
+        setError(err instanceof Error ? err.message : 'Failed to load changelog.')
+      } finally {
+        if (!cancelled) setIsLoading(false)
+      }
+    }
+
+    void run()
+    return () => {
+      cancelled = true
+    }
+  }, [user])
+
+  const displayEntries = useMemo(() => {
+    return entries
+      .filter((entry) => entry && typeof entry.title === 'string')
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  }, [entries])
 
   if (!user) return null
 
@@ -45,39 +103,64 @@ export default function DashboardChangelogPage() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-6 py-10">
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-semibold tracking-tight">Changelog</h1>
-          <p className="text-sm text-muted-foreground">Product updates and improvements.</p>
+          <p className="text-sm text-muted-foreground">Updates from the last month (auto-updates on new pushes).</p>
         </div>
 
         <Card className="border-border/60 bg-card/80">
-          <CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between gap-3">
             <CardTitle className="text-base">What&apos;s new</CardTitle>
+            <div className="flex items-center gap-2">
+              {source === 'github' ? (
+                <Badge variant="outline">Live</Badge>
+              ) : (
+                <Badge variant="secondary">Fallback</Badge>
+              )}
+            </div>
           </CardHeader>
           <CardContent className="p-0">
             <ScrollArea className="h-[70dvh]">
               <div className="divide-y divide-border/60">
-                {CHANGELOG_ENTRIES.map((entry) => (
-                  <div key={`${entry.date}-${entry.title}`} className="p-5">
+                {isLoading && (
+                  <div className="p-5 text-sm text-muted-foreground">Loading updates…</div>
+                )}
+                {!isLoading && error && (
+                  <div className="p-5">
+                    <div className="rounded-md border border-border bg-muted/30 p-3 text-sm text-muted-foreground">
+                      {error}
+                    </div>
+                  </div>
+                )}
+
+                {!isLoading &&
+                  displayEntries.map((entry) => (
+                    <div key={entry.id} className="p-5">
                     <div className="flex flex-wrap items-start justify-between gap-3">
                       <div className="min-w-0">
-                        <div className="text-sm font-semibold">{entry.title}</div>
-                        <div className="mt-1 text-xs text-muted-foreground">{formatDate(entry.date)}</div>
-                      </div>
-                      {entry.tags?.length ? (
-                        <div className="flex flex-wrap items-center justify-end gap-2">
-                          {entry.tags.map((tag) => (
-                            <Badge key={`${entry.date}-${tag}`} variant="outline">
-                              {tag}
-                            </Badge>
-                          ))}
+                        <div className="text-sm font-semibold">
+                          {entry.url ? (
+                            <a href={entry.url} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+                              {entry.title}
+                            </a>
+                          ) : (
+                            entry.title
+                          )}
                         </div>
-                      ) : null}
+                        <div className="mt-1 text-xs text-muted-foreground">{formatDate(entry.date)}</div>
+                        {entry.author ? (
+                          <div className="mt-1 text-xs text-muted-foreground/80">by {entry.author}</div>
+                        ) : null}
+                      </div>
                     </div>
-                    <Markdown className="mt-4 space-y-2" components={CHANGELOG_MARKDOWN_COMPONENTS}>
-                      {entry.body}
-                    </Markdown>
+
+                    {entry.body ? (
+                      <Markdown className="mt-4 space-y-2" components={CHANGELOG_MARKDOWN_COMPONENTS}>
+                        {entry.body}
+                      </Markdown>
+                    ) : null}
                   </div>
-                ))}
-                {CHANGELOG_ENTRIES.length === 0 && (
+                  ))}
+
+                {!isLoading && displayEntries.length === 0 && (
                   <div className="p-5 text-sm text-muted-foreground">No updates yet.</div>
                 )}
               </div>

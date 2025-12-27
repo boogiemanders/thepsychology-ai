@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useMemo } from 'react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { QUIZ_PASS_PERCENT } from '@/lib/quiz-passing'
 import { supabase } from '@/lib/supabase'
@@ -32,6 +32,22 @@ import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { StudyProgressChart } from './components/study-progress-chart'
+
+type ApiChangelogEntry = {
+  id: string
+  date: string
+  title: string
+  body?: string
+  url?: string
+  author?: string | null
+}
+
+type ApiChangelogResponse = {
+  entries: ApiChangelogEntry[]
+  source: 'github' | 'fallback'
+  generatedAt: string
+  error?: string
+}
 
 const subscriptionTierVisuals = {
   pro_coaching: {
@@ -101,6 +117,9 @@ export default function DashboardPage() {
   const [isPricingCarouselOpen, setIsPricingCarouselOpen] = useState(false)
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
   const [isChangelogOpen, setIsChangelogOpen] = useState(false)
+  const [changelogEntries, setChangelogEntries] = useState<ApiChangelogEntry[] | null>(null)
+  const [changelogSource, setChangelogSource] = useState<ApiChangelogResponse['source']>('github')
+  const [changelogError, setChangelogError] = useState<string | null>(null)
   const [feedbackMessage, setFeedbackMessage] = useState('')
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
@@ -111,6 +130,54 @@ export default function DashboardPage() {
   const subscriptionTierKey = (userProfile?.subscription_tier as keyof typeof subscriptionTierVisuals) ?? 'default'
   const { label: subscriptionTierLabel, style: subscriptionTierStyle } =
     subscriptionTierVisuals[subscriptionTierKey] ?? subscriptionTierVisuals.default
+
+  useEffect(() => {
+    if (!user?.id) return
+    let cancelled = false
+
+    const run = async () => {
+      try {
+        const response = await fetch('/api/changelog?days=31&limit=50')
+        const data = (await response.json().catch(() => null)) as ApiChangelogResponse | null
+        if (cancelled) return
+        if (!response.ok || !data || !Array.isArray(data.entries)) {
+          throw new Error(typeof (data as any)?.error === 'string' ? (data as any).error : 'Failed to load updates.')
+        }
+        setChangelogEntries(data.entries)
+        setChangelogSource(data.source)
+        setChangelogError(typeof data.error === 'string' ? data.error : null)
+      } catch (err) {
+        if (cancelled) return
+        setChangelogEntries(null)
+        setChangelogSource('fallback')
+        setChangelogError(err instanceof Error ? err.message : 'Failed to load updates.')
+      }
+    }
+
+    void run()
+    return () => {
+      cancelled = true
+    }
+  }, [user?.id])
+
+  const effectiveChangelogEntries = useMemo(() => {
+    if (Array.isArray(changelogEntries) && changelogEntries.length > 0) {
+      return changelogEntries
+    }
+    return CHANGELOG_ENTRIES.map((entry) => ({
+      id: `${entry.date}-${entry.title}`,
+      date: entry.date,
+      title: entry.title,
+      body: entry.body,
+      author: null,
+    }))
+  }, [changelogEntries])
+
+  const formatChangelogDate = (isoDate: string): string => {
+    const date = new Date(isoDate)
+    if (Number.isNaN(date.getTime())) return isoDate
+    return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
+  }
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -1239,30 +1306,49 @@ export default function DashboardPage() {
               <Card className="max-h-[80vh] overflow-hidden flex flex-col">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg">What&apos;s New</CardTitle>
-                  <CardDescription>Recent updates and improvements</CardDescription>
+                  <CardDescription>
+                    Recent updates and improvements (last 30 days){' '}
+                    {changelogSource === 'github' ? '• Live' : '• Fallback'}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="overflow-y-auto">
                   <div className="space-y-4">
-                    {CHANGELOG_ENTRIES.map((entry, idx) => (
-                      <div key={idx} className="border-b border-border/50 pb-4 last:border-0 last:pb-0">
+                    {changelogError && (
+                      <div className="rounded-md border border-border bg-muted/30 p-3 text-sm text-muted-foreground">
+                        {changelogError}
+                      </div>
+                    )}
+
+                    {effectiveChangelogEntries.map((entry) => (
+                      <div key={entry.id} className="border-b border-border/50 pb-4 last:border-0 last:pb-0">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="font-medium text-sm">{entry.title}</span>
-                          <span className="text-xs text-muted-foreground">{entry.date}</span>
+                          <span className="font-medium text-sm">
+                            {entry.url ? (
+                              <a href={entry.url} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+                                {entry.title}
+                              </a>
+                            ) : (
+                              entry.title
+                            )}
+                          </span>
+                          <span className="text-xs text-muted-foreground">{formatChangelogDate(entry.date)}</span>
                         </div>
-                        {entry.tags && entry.tags.length > 0 && (
-                          <div className="flex gap-1 mb-2">
-                            {entry.tags.map((tag) => (
-                              <Badge key={tag} variant="secondary" className="text-xs px-2 py-0">
-                                {tag}
-                              </Badge>
-                            ))}
+                        {entry.author ? (
+                          <div className="mb-2 text-xs text-muted-foreground/80">by {entry.author}</div>
+                        ) : null}
+                        {entry.body ? (
+                          <div className="text-sm text-muted-foreground whitespace-pre-line">
+                            {entry.body.split('\n').filter(Boolean).slice(0, 3).join('\n')}
                           </div>
-                        )}
-                        <div className="text-sm text-muted-foreground whitespace-pre-line">
-                          {entry.body}
-                        </div>
+                        ) : null}
                       </div>
                     ))}
+
+                    <div className="pt-2">
+                      <Button variant="outline" size="sm" onClick={() => router.push('/dashboard/changelog')}>
+                        View all updates
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
