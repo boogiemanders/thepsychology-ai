@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts'
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -19,6 +19,35 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function StudyProgressChart({ recentScores, averageScore }: StudyProgressChartProps) {
+  // Use a bright accent color that's visible in both light and dark mode
+  const chartColor = '#22c55e' // green-500 - visible on both backgrounds
+  const [mutedForeground, setMutedForeground] = useState('hsl(215.4, 16.3%, 46.9%)')
+  const [borderColor, setBorderColor] = useState('hsl(214.3, 31.8%, 91.4%)')
+
+  useEffect(() => {
+    const updateColors = () => {
+      const styles = getComputedStyle(document.documentElement)
+      const muted = styles.getPropertyValue('--muted-foreground').trim()
+      const border = styles.getPropertyValue('--border').trim()
+      if (muted) setMutedForeground(`hsl(${muted})`)
+      if (border) setBorderColor(`hsl(${border})`)
+    }
+
+    updateColors()
+
+    // Listen for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class' || mutation.attributeName === 'style') {
+          updateColors()
+        }
+      })
+    })
+
+    observer.observe(document.documentElement, { attributes: true })
+
+    return () => observer.disconnect()
+  }, [])
   const chartData = useMemo(() => {
     return recentScores.map((score, idx) => ({
       quiz: `#${idx + 1}`,
@@ -51,14 +80,14 @@ export function StudyProgressChart({ recentScores, averageScore }: StudyProgress
         <ChartContainer config={chartConfig} className="h-[140px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={chartData} margin={{ left: -20, right: 8, top: 8, bottom: 0 }}>
-              <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="hsl(var(--border))" strokeOpacity={0.3} />
+              <CartesianGrid vertical={false} strokeDasharray="3 3" stroke={borderColor} strokeOpacity={0.3} />
               <XAxis
                 dataKey="quiz"
                 tickLine={false}
                 axisLine={false}
                 tickMargin={8}
                 fontSize={10}
-                tick={{ fill: 'hsl(var(--muted-foreground))' }}
+                tick={{ fill: mutedForeground }}
               />
               <YAxis
                 domain={[0, 100]}
@@ -67,7 +96,7 @@ export function StudyProgressChart({ recentScores, averageScore }: StudyProgress
                 fontSize={10}
                 width={35}
                 tickFormatter={(v) => `${v}%`}
-                tick={{ fill: 'hsl(var(--muted-foreground))' }}
+                tick={{ fill: mutedForeground }}
               />
               <ChartTooltip
                 cursor={false}
@@ -75,15 +104,15 @@ export function StudyProgressChart({ recentScores, averageScore }: StudyProgress
               />
               <defs>
                 <linearGradient id="fillProgress" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.8} />
-                  <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.1} />
+                  <stop offset="5%" stopColor={chartColor} stopOpacity={0.8} />
+                  <stop offset="95%" stopColor={chartColor} stopOpacity={0.1} />
                 </linearGradient>
               </defs>
               <Area
                 dataKey="score"
                 type="monotone"
                 fill="url(#fillProgress)"
-                stroke="hsl(var(--primary))"
+                stroke={chartColor}
                 strokeWidth={2}
               />
             </AreaChart>

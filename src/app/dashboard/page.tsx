@@ -30,7 +30,7 @@ import { siteConfig } from '@/lib/config'
 import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
-import { getLatestChangelogEntry } from '@/lib/changelog'
+import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { StudyProgressChart } from './components/study-progress-chart'
 
 const subscriptionTierVisuals = {
@@ -100,6 +100,7 @@ export default function DashboardPage() {
   const [hasPausedExam, setHasPausedExam] = useState(false)
   const [isPricingCarouselOpen, setIsPricingCarouselOpen] = useState(false)
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
+  const [isChangelogOpen, setIsChangelogOpen] = useState(false)
   const [feedbackMessage, setFeedbackMessage] = useState('')
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
@@ -110,7 +111,6 @@ export default function DashboardPage() {
   const subscriptionTierKey = (userProfile?.subscription_tier as keyof typeof subscriptionTierVisuals) ?? 'default'
   const { label: subscriptionTierLabel, style: subscriptionTierStyle } =
     subscriptionTierVisuals[subscriptionTierKey] ?? subscriptionTierVisuals.default
-  const latestChangelog = getLatestChangelogEntry()
 
   const handleDailyGoalChange = (newGoal: number) => {
     setDailyGoalState(newGoal)
@@ -949,18 +949,6 @@ export default function DashboardPage() {
           <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
         </div>
 
-        {latestChangelog && (
-          <div className="border border-border/60 rounded-lg p-4 md:p-5 bg-card/80 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <div className="min-w-0">
-              <div className="text-sm font-semibold">What&apos;s new</div>
-              <div className="text-sm text-muted-foreground truncate">{latestChangelog.title}</div>
-            </div>
-            <Button variant="outline" className="md:shrink-0" onClick={() => router.push('/dashboard/changelog')}>
-              View updates
-            </Button>
-          </div>
-        )}
-
         {/* Bento Grid - Practice above, Review Exams and Prioritize side-by-side, Recover below, Study on right, Info cards on far right */}
         <BentoGrid className="lg:grid-rows-6 lg:grid-cols-5">
           {/* Action Cards */}
@@ -1048,6 +1036,13 @@ export default function DashboardPage() {
                   disabled={isBillingPortalLoading}
                 >
                   {isBillingPortalLoading ? 'Opening Billing…' : 'Manage Billing'}
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
+                  onClick={() => setIsChangelogOpen(true)}
+                >
+                  View Updates
                 </Button>
                 <Button
                   variant="outline"
@@ -1221,6 +1216,53 @@ export default function DashboardPage() {
                         {feedbackMessage}
                       </p>
                     )}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        )}
+
+        {/* Changelog Modal */}
+        {isChangelogOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsChangelogOpen(false)}
+          >
+            <div className="relative w-full max-w-md mx-4 max-h-[80vh]" onClick={(e) => e.stopPropagation()}>
+              <button
+                onClick={() => setIsChangelogOpen(false)}
+                className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-background/80 hover:bg-background border border-border text-foreground/60 hover:text-foreground transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+              <Card className="max-h-[80vh] overflow-hidden flex flex-col">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">What&apos;s New</CardTitle>
+                  <CardDescription>Recent updates and improvements</CardDescription>
+                </CardHeader>
+                <CardContent className="overflow-y-auto">
+                  <div className="space-y-4">
+                    {CHANGELOG_ENTRIES.map((entry, idx) => (
+                      <div key={idx} className="border-b border-border/50 pb-4 last:border-0 last:pb-0">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-medium text-sm">{entry.title}</span>
+                          <span className="text-xs text-muted-foreground">{entry.date}</span>
+                        </div>
+                        {entry.tags && entry.tags.length > 0 && (
+                          <div className="flex gap-1 mb-2">
+                            {entry.tags.map((tag) => (
+                              <Badge key={tag} variant="secondary" className="text-xs px-2 py-0">
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                        <div className="text-sm text-muted-foreground whitespace-pre-line">
+                          {entry.body}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
