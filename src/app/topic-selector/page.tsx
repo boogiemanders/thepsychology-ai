@@ -32,6 +32,7 @@ import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-st
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { createClient } from '@supabase/supabase-js'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
+import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -213,8 +214,8 @@ function getTimeAgo(timestamp: number): string {
 
 export default function TopicSelectorPage() {
   const { user, userProfile } = useAuth()
-  const subscriptionTier = userProfile?.subscription_tier
-  const isFreeTier = subscriptionTier === 'free' || !subscriptionTier
+  const entitledTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
+  const isFreeTier = entitledTier === 'free'
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [currentInput, setCurrentInput] = useState<string>('')
   const [savedInterests, setSavedInterests] = useState<string[]>([])

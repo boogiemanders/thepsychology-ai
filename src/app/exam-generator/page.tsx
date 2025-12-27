@@ -30,6 +30,7 @@ import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/li
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { supabase } from '@/lib/supabase'
+import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 
 interface Question {
   id: number
@@ -52,8 +53,8 @@ interface Question {
 
 export default function ExamGeneratorPage() {
   const { user, userProfile } = useAuth()
-  const subscriptionTier = userProfile?.subscription_tier
-  const isFreeTier = subscriptionTier === 'free' || !subscriptionTier
+  const entitledTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
+  const isFreeTier = entitledTier === 'free'
   const [isGenerating, setIsGenerating] = useState(false)
   const [questions, setQuestions] = useState<Question[]>([])
   const [currentQuestion, setCurrentQuestion] = useState(0)

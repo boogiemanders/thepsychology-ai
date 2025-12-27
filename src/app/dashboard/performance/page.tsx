@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
+import { hasProAccess } from '@/lib/subscription-utils'
 
 interface ExamResult {
   id: string
@@ -33,9 +34,9 @@ export default function PerformanceDashboard() {
   }, [user, loading, mounted, router])
 
   useEffect(() => {
-    if (mounted && user && userProfile?.subscription_tier === 'pro') {
+    if (mounted && user && hasProAccess(userProfile)) {
       fetchExamResults()
-    } else if (mounted && user && userProfile?.subscription_tier !== 'pro') {
+    } else if (mounted && user && !hasProAccess(userProfile)) {
       setLoadingResults(false)
     }
   }, [mounted, user, userProfile])
@@ -69,7 +70,7 @@ export default function PerformanceDashboard() {
     return null
   }
 
-  if (userProfile?.subscription_tier !== 'pro' && userProfile?.subscription_tier !== 'pro_coaching') {
+  if (!hasProAccess(userProfile)) {
     return (
       <div className="min-h-screen bg-black text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-900 opacity-80"></div>

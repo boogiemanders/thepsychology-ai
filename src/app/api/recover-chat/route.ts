@@ -4,9 +4,50 @@ import { createClient } from '@supabase/supabase-js'
 import { z } from 'zod'
 import { isNotificationEmailConfigured, sendNotificationEmail } from '@/lib/notify-email'
 import { INITIAL_RECOVER_ASSISTANT_MESSAGE } from '@/lib/recover'
+import fs from 'node:fs'
+import path from 'node:path'
+
+export const runtime = 'nodejs'
+
+function readDotenvLocalValue(key: string): string | null {
+  try {
+    const envPath = path.join(process.cwd(), '.env.local')
+    const text = fs.readFileSync(envPath, 'utf8')
+    const line = text
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .find((l) => l.length > 0 && !l.startsWith('#') && l.startsWith(`${key}=`))
+    if (!line) return null
+    let value = line.slice(key.length + 1).trim()
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1)
+    }
+    return value.trim() || null
+  } catch {
+    return null
+  }
+}
+
+function resolveOpenAIApiKey(): string {
+  const fromProcess = (process.env.OPENAI_API_KEY || '').trim()
+  if (process.env.NODE_ENV === 'production') return fromProcess
+
+  const fromEnvLocal = (readDotenvLocalValue('OPENAI_API_KEY') || '').trim()
+  if (fromEnvLocal && fromEnvLocal !== fromProcess) {
+    console.warn(
+      '[recover-chat] Detected differing OPENAI_API_KEY values; using .env.local value (shell env vars override .env.local).'
+    )
+    return fromEnvLocal
+  }
+
+  return fromProcess || fromEnvLocal
+}
 
 function getOpenAIClient(): OpenAI | null {
-  const apiKey = (process.env.OPENAI_API_KEY || '').trim()
+  const apiKey = resolveOpenAIApiKey()
   if (!apiKey) return null
   return new OpenAI({ apiKey })
 }
@@ -226,7 +267,13 @@ function getOpenAIErrorMessage(error: unknown): string | null {
   if (!error || typeof error !== 'object') return null
   const maybeStatus = (error as { status?: unknown }).status
   const status = typeof maybeStatus === 'number' ? maybeStatus : null
-  if (status === 401) return 'OpenAI authentication failed. Check OPENAI_API_KEY.'
+  if (status === 401) {
+    const hint =
+      process.env.NODE_ENV === 'production'
+        ? ''
+        : ' (Local dev tip: exported shell env vars override .env.local; restart `next dev` after updating.)'
+    return `OpenAI authentication failed. Check OPENAI_API_KEY.${hint}`
+  }
   if (status === 429) return 'OpenAI rate limit reached. Try again in a moment.'
   if (status && status >= 500) return 'OpenAI service error. Try again in a moment.'
   return null

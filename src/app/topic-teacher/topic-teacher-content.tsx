@@ -37,6 +37,7 @@ import { InlineSvg } from '@/components/ui/inline-svg'
 import { VariableStar } from '@/components/ui/variable-star'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -1021,7 +1022,7 @@ export function TopicTeacherContent() {
 
   const initializeLesson = async () => {
     if (!topic || authLoading) return
-    const subscriptionTier = userProfile?.subscription_tier ?? 'free'
+    const subscriptionTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
     assistantEnglishContentRef.current = {}
     translationSessionRef.current += 1
     translationPromiseRef.current = Promise.resolve()
@@ -1110,7 +1111,7 @@ export function TopicTeacherContent() {
   // Refresh metaphors when interests change (after initial load)
   const refreshMetaphors = async (newInterests: string) => {
     if (!topic || !initialized) return
-    const subscriptionTier = userProfile?.subscription_tier ?? 'free'
+    const subscriptionTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
 
     // Create cache key from topic + interests
     const cacheKey = `${topic}__${newInterests || 'none'}`
@@ -1281,7 +1282,7 @@ export function TopicTeacherContent() {
 
   const handleSendMessage = async (userMessage: string) => {
     if (!userMessage.trim() || isLoading || !topic) return
-    const subscriptionTier = userProfile?.subscription_tier ?? 'free'
+    const subscriptionTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
 
     // Add user message immediately
     setMessages((prev) => [...prev, { role: 'user', content: userMessage }])

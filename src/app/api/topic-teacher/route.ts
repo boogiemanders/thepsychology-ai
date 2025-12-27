@@ -3,6 +3,7 @@ import { loadTopicContent, loadFreeTopicContent, replaceMetaphors, stripMetaphor
 import { loadReferenceContent } from '@/lib/eppp-reference-loader'
 import OpenAI from 'openai'
 import { logUsageEvent } from '@/lib/usage-events'
+import { isProPromoActive } from '@/lib/subscription-utils'
 
 const openaiApiKey = process.env.OPENAI_API_KEY
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
@@ -153,7 +154,8 @@ export async function POST(request: NextRequest) {
     let baseContentOnly = ''
 
     const tier: string | undefined = subscriptionTier
-    const isFreeTier = tier === 'free' || !tier
+    const promoActive = isProPromoActive()
+    const isFreeTier = (tier === 'free' || !tier) && !promoActive
 
     if (isInitial) {
       // Initial lesson request - use pre-generated content

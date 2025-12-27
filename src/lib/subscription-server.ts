@@ -1,5 +1,5 @@
 import { getSupabaseClient } from '@/lib/supabase-server'
-import { getFreeTrialStatus, isFreeTier } from '@/lib/subscription-utils'
+import { getFreeTrialStatus, isFreeTier, isProPromoActive } from '@/lib/subscription-utils'
 
 export interface ServerSubscriptionStatus {
   userId: string
@@ -37,6 +37,7 @@ export async function getServerSubscriptionStatus(
 
   const trialStatus = getFreeTrialStatus(user)
   const isPaidTier = !isFreeTier(user)
+  const promoActive = isProPromoActive()
 
   return {
     userId: user.id,
@@ -44,7 +45,7 @@ export async function getServerSubscriptionStatus(
     subscription_tier: user.subscription_tier || 'free',
     isTrialExpired: trialStatus.expired,
     daysRemaining: trialStatus.daysRemaining,
-    hasAccess: isPaidTier || !trialStatus.expired,
+    hasAccess: isPaidTier || promoActive || !trialStatus.expired,
     stripe_customer_id: user.stripe_customer_id,
   }
 }
@@ -72,9 +73,15 @@ export async function requireActiveSubscription(
   }
 
   const isPaidTier = status.subscription_tier !== 'free'
+  const promoActive = isProPromoActive()
 
   // Paid users always have access
   if (isPaidTier) {
+    return { allowed: true, status }
+  }
+
+  // Free users are temporarily allowed during promo window
+  if (promoActive) {
     return { allowed: true, status }
   }
 
