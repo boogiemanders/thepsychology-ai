@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { chunkTextForTts, markdownToSpeakableText, prepareTextForTts } from '@/lib/speech-text'
-import { Play, Pause, SkipBack, SkipForward, Volume2, ScrollText } from 'lucide-react'
+import { Play, Pause, SkipBack, SkipForward, ScrollText } from 'lucide-react'
 
 type MetaphorRange = { start: number; end: number }
 
@@ -19,7 +19,10 @@ const RECOMMENDED_PLAYBACK_RATE = 1.75
 const DEFAULT_TTS_MODEL = 'gpt-4o-mini-tts'
 const FALLBACK_TTS_MODEL = 'tts-1'
 const DEFAULT_TTS_SPEED = 1
-const PREGENERATED_AUDIO_BASE_PATH = '/topic-teacher-audio/v1'
+const PREGENERATED_AUDIO_BASE_PATH = (process.env.NEXT_PUBLIC_TOPIC_TEACHER_AUDIO_BASE_URL || '/topic-teacher-audio/v1').replace(
+  /\/+$/,
+  ''
+)
 
 const WORD_REGEX = /[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
 
@@ -174,7 +177,7 @@ export function LessonAudioControls(props: {
   } = props
 
   const [voice, setVoice] = useState<string>(DEFAULT_VOICE)
-  const [playbackRate, setPlaybackRate] = useState<number>(RECOMMENDED_PLAYBACK_RATE)
+  const [playbackRate, setPlaybackRate] = useState<number>(1)
 
   const [isGenerating, setIsGenerating] = useState(false)
   const [progress, setProgress] = useState<{ current: number; total: number }>({ current: 0, total: 0 })
@@ -186,7 +189,6 @@ export function LessonAudioControls(props: {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
-  const [scrollY, setScrollY] = useState(0)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const abortRef = useRef<AbortController | null>(null)
   const autoPlayNextRef = useRef(false)
@@ -199,6 +201,9 @@ export function LessonAudioControls(props: {
   const lessonReady = Boolean(lessonMarkdown && lessonMarkdown.trim())
   const effectiveDisabledReason = disabledReason ?? (!lessonReady ? 'Load a lesson to enable audio.' : null)
   const isDisabled = Boolean(effectiveDisabledReason)
+  const interestsActive = Boolean(userInterests && userInterests.trim())
+  const shouldAutoLoadPregenFullLesson =
+    lessonReady && voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
 
   const speakableFullText = useMemo(() => {
     if (!lessonReady) return ''
@@ -256,16 +261,6 @@ export function LessonAudioControls(props: {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  // Track scroll position for dynamic audio bar positioning
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
 
   const handleEnded = () => {
     const next = currentIndex + 1
@@ -577,17 +572,21 @@ export function LessonAudioControls(props: {
   }
 
   const hasAudio = audioUrls.length > 0
+  const showStickyBar = hasAudio || shouldAutoLoadPregenFullLesson
+  const showGenerateButton = !shouldAutoLoadPregenFullLesson || voice !== DEFAULT_VOICE || interestsActive
+  const showRegenerateButton = hasAudio && (interestsActive || voice !== DEFAULT_VOICE || !isEnglishish(languagePreference))
 
-  // Calculate dynamic top position for audio bar
-  // At scroll 0, top is 104px (below breadcrumb); as user scrolls, it moves up to 56px (top-14)
-  const breadcrumbHeight = 48 // gap between nav and audio bar for breadcrumb
-  const baseTop = 56 // top-14 in pixels (below main nav)
-  const audioBarTop = Math.max(baseTop, baseTop + breadcrumbHeight - scrollY)
+  useEffect(() => {
+    if (!shouldAutoLoadPregenFullLesson) return
+    if (isDisabled || isGenerating || hasAudio || error) return
+    void handleGenerate()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [shouldAutoLoadPregenFullLesson, isDisabled, isGenerating, hasAudio, error])
 
   return (
     <>
       {/* Spacer when unified audio bar is visible */}
-      {hasAudio && <div className="h-16" />}
+      {showStickyBar && <div className="h-16" />}
 
       {/* Initial Settings Panel - only shown when NO audio exists */}
       {!hasAudio && (
@@ -616,7 +615,9 @@ export function LessonAudioControls(props: {
                 onChange={(e) => setPlaybackRate(PLAYBACK_RATE_OPTIONS[parseInt(e.target.value)])}
                 className="w-20 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
               />
-              <span className="text-xs text-muted-foreground tabular-nums w-10">{playbackRate}×</span>
+              <span className="text-xs text-muted-foreground tabular-nums w-24">
+                {playbackRate}×{playbackRate === RECOMMENDED_PLAYBACK_RATE ? ' recommended' : ''}
+              </span>
             </div>
 
             {/* Spacer */}
@@ -624,9 +625,11 @@ export function LessonAudioControls(props: {
 
             {/* Generate button */}
             <div className="flex items-center gap-1">
-              <Button type="button" size="sm" onClick={handleGenerate} disabled={isDisabled || isGenerating} className="h-7 px-2 text-xs">
-                Generate Audio
-              </Button>
+              {showGenerateButton && (
+                <Button type="button" size="sm" onClick={handleGenerate} disabled={isDisabled || isGenerating} className="h-7 px-2 text-xs">
+                  Generate Audio
+                </Button>
+              )}
               {isGenerating && (
                 <Button type="button" size="sm" variant="outline" onClick={handleCancel} className="h-7 px-2 text-xs">
                   Cancel
@@ -636,9 +639,9 @@ export function LessonAudioControls(props: {
           </div>
 
           {/* Status messages */}
-          {(effectiveDisabledReason || progressText) && (
+          {(effectiveDisabledReason || progressText || sourceText) && (
             <div className="mt-1 text-xs text-muted-foreground">
-              {effectiveDisabledReason || progressText}
+              {effectiveDisabledReason || progressText || sourceText}
             </div>
           )}
 
@@ -668,13 +671,12 @@ export function LessonAudioControls(props: {
         />
       )}
 
-      {/* Unified Sticky Audio Bar - ALL controls in one bar when audio exists */}
-      {hasAudio && (
+      {/* Unified Sticky Audio Bar */}
+      {showStickyBar && (
         <div
-          className="fixed left-0 right-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 transition-[top] duration-100"
-          style={{ top: `${audioBarTop}px` }}
+          className="fixed left-0 right-0 top-20 z-50 border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80"
         >
-          <div className="mx-auto max-w-4xl px-4 py-2">
+          <div className="mx-auto max-w-[800px] px-4 py-2">
             <div className="flex items-center gap-2">
               {/* Left section: Voice selector */}
               <div className="hidden md:flex items-center gap-1.5 shrink-0">
@@ -697,7 +699,7 @@ export function LessonAudioControls(props: {
                 <button
                   type="button"
                   onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
-                  disabled={currentIndex === 0}
+                  disabled={!hasAudio || currentIndex === 0}
                   className="p-1 rounded-full hover:bg-muted disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                   aria-label="Previous segment"
                 >
@@ -706,6 +708,7 @@ export function LessonAudioControls(props: {
                 <button
                   type="button"
                   onClick={handlePlayPause}
+                  disabled={!hasAudio}
                   className="p-1.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   aria-label={isPlaying ? 'Pause' : 'Play'}
                 >
@@ -714,7 +717,7 @@ export function LessonAudioControls(props: {
                 <button
                   type="button"
                   onClick={() => setCurrentIndex((prev) => Math.min(audioUrls.length - 1, prev + 1))}
-                  disabled={currentIndex >= audioUrls.length - 1}
+                  disabled={!hasAudio || currentIndex >= audioUrls.length - 1}
                   className="p-1 rounded-full hover:bg-muted disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                   aria-label="Next segment"
                 >
@@ -733,6 +736,7 @@ export function LessonAudioControls(props: {
                   max={duration || 0}
                   value={currentTime}
                   onChange={handleSeek}
+                  disabled={!hasAudio}
                   className="flex-1 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
                 />
                 <span className="text-xs text-muted-foreground tabular-nums w-8 shrink-0">
@@ -752,11 +756,13 @@ export function LessonAudioControls(props: {
                     onChange={(e) => setPlaybackRate(PLAYBACK_RATE_OPTIONS[parseInt(e.target.value)])}
                     className="w-16 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
                   />
-                  <span className="text-xs text-muted-foreground tabular-nums w-8">{playbackRate}×</span>
+                  <span className="text-xs text-muted-foreground tabular-nums w-16">
+                    {playbackRate}×{playbackRate === RECOMMENDED_PLAYBACK_RATE ? ' recommended' : ''}
+                  </span>
                 </div>
 
                 <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">
-                  {currentIndex + 1}/{audioUrls.length}
+                  {hasAudio ? `${currentIndex + 1}/${audioUrls.length}` : ''}
                 </span>
 
                 {onAutoScrollToggle && (
@@ -777,16 +783,18 @@ export function LessonAudioControls(props: {
 
                 <div className="w-px h-4 bg-border mx-0.5 hidden sm:block" />
 
-                <Button
-                  type="button"
-                  size="sm"
-                  variant="ghost"
-                  onClick={handleGenerate}
-                  disabled={isDisabled || isGenerating}
-                  className="h-6 px-2 text-xs hidden sm:inline-flex"
-                >
-                  {isGenerating ? 'Generating...' : 'Regenerate'}
-                </Button>
+                {showRegenerateButton && (
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="ghost"
+                    onClick={handleGenerate}
+                    disabled={isDisabled || isGenerating}
+                    className="h-6 px-2 text-xs hidden sm:inline-flex"
+                  >
+                    {isGenerating ? 'Generating...' : 'Regenerate'}
+                  </Button>
+                )}
                 {isGenerating ? (
                   <Button type="button" size="sm" variant="ghost" onClick={handleCancel} className="h-6 px-2 text-xs">
                     Cancel
@@ -798,6 +806,12 @@ export function LessonAudioControls(props: {
                 )}
               </div>
             </div>
+
+            {(progressText || sourceText) && (
+              <div className="mt-1 text-xs text-muted-foreground">
+                {progressText || sourceText}
+              </div>
+            )}
 
             {/* Error message if any */}
             {error && (
