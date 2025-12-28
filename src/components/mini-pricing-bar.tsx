@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "motion/react"
 import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
 import { ChevronDown } from "lucide-react"
-import { getProPromoConfig } from "@/lib/promo-pro"
 
 type MiniPricingBarProps = {
   show: boolean
@@ -17,7 +16,8 @@ export function MiniPricingBar({ show, activeTier, onTierClick }: MiniPricingBar
   const [isMounted, setIsMounted] = useState(false)
 
   const tiers = useMemo(() => siteConfig.pricing.pricingItems, [])
-  const proPromoActive = useMemo(() => Boolean(getProPromoConfig()), [])
+  const desktopGridColsClass =
+    tiers.length === 1 ? "grid-cols-1" : tiers.length === 2 ? "grid-cols-2" : "grid-cols-3"
 
   useEffect(() => {
     setIsMounted(true)
@@ -64,7 +64,6 @@ export function MiniPricingBar({ show, activeTier, onTierClick }: MiniPricingBar
               </div>
               <div className="mt-2 flex gap-2">
                 {tiers.map((tier) => {
-                  const isProPromo = tier.name === "Pro" && proPromoActive
                   const [amount, period] = tier.displayPrice
                     ? tier.displayPrice.split("/").map((part) => part.trim())
                     : [tier.price, tier.period]
@@ -85,12 +84,7 @@ export function MiniPricingBar({ show, activeTier, onTierClick }: MiniPricingBar
                     >
                       <p className="font-semibold text-[0.7rem]">{tier.name}</p>
                       <div className="flex items-baseline gap-1">
-                        {isProPromo && (
-                          <span className="text-[0.7rem] font-medium text-muted-foreground line-through">
-                            {tier.price}
-                          </span>
-                        )}
-                        <span className="text-xl font-semibold text-current">{isProPromo ? "$0" : amount}</span>
+                        <span className="text-xl font-semibold text-current">{amount}</span>
                         {period && (
                           <span className="text-[0.65rem] text-muted-foreground">/{period}</span>
                         )}
@@ -107,9 +101,8 @@ export function MiniPricingBar({ show, activeTier, onTierClick }: MiniPricingBar
                 <span>Pricing</span>
                 <span>Scroll for full view</span>
               </div>
-              <div className="grid grid-cols-3 gap-2">
+              <div className={cn("grid gap-2", desktopGridColsClass)}>
                 {tiers.map((tier) => {
-                  const isProPromo = tier.name === "Pro" && proPromoActive
                   const cardClasses = cn(
                     "group relative flex h-full flex-col rounded-2xl border border-border bg-accent/90 px-3 py-2 text-left transition-all duration-150",
                     tier.isPopular &&
@@ -139,12 +132,7 @@ export function MiniPricingBar({ show, activeTier, onTierClick }: MiniPricingBar
                         )}
                       </div>
                       <div className="mt-3 flex items-baseline gap-1">
-                        {isProPromo && (
-                          <span className="text-sm font-medium text-muted-foreground line-through">
-                            {tier.price}
-                          </span>
-                        )}
-                        <span className="text-2xl font-semibold text-foreground">{isProPromo ? "$0" : tier.price}</span>
+                        <span className="text-2xl font-semibold text-foreground">{tier.price}</span>
                         <span className="text-xs text-muted-foreground">/{tier.period}</span>
                       </div>
                       <p className="mt-2 text-xs text-muted-foreground">{tier.description}</p>

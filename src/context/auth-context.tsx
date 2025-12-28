@@ -75,7 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               return {
                 id: session.user.id,
                 email: session.user.email || '',
-                subscription_tier: 'free',
+                subscription_tier: 'pro',
                 created_at: new Date().toISOString(),
                 subscription_started_at: new Date().toISOString(),
               }

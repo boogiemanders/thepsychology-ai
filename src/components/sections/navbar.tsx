@@ -172,7 +172,7 @@ export function Navbar() {
                     onClick={handleStartFree}
                     className="border border-foreground/40 h-8 hidden md:flex items-center justify-center text-sm font-normal tracking-wide rounded-sm text-foreground w-fit px-4 hover:bg-foreground/5 hover:border-foreground/60 transition-colors cursor-pointer"
                   >
-                    Try for free
+                    Get Started
                   </button>
                 ) : null}
               </div>
@@ -293,7 +293,7 @@ export function Navbar() {
                       onClick={handleStartFree}
                       className="bg-secondary h-8 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-primary-foreground dark:text-secondary-foreground w-full px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-white/[0.12] hover:bg-secondary/80 transition-all ease-out active:scale-95 cursor-pointer"
                     >
-                      Try for free
+                      Get Started
                     </button>
                   ) : null}
                 </div>

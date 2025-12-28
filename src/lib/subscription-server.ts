@@ -1,5 +1,4 @@
 import { getSupabaseClient } from '@/lib/supabase-server'
-import { getFreeTrialStatus, isFreeTier, isProPromoActive } from '@/lib/subscription-utils'
 
 export interface ServerSubscriptionStatus {
   userId: string
@@ -35,17 +34,15 @@ export async function getServerSubscriptionStatus(
     return null
   }
 
-  const trialStatus = getFreeTrialStatus(user)
-  const isPaidTier = !isFreeTier(user)
-  const promoActive = isProPromoActive()
+  const resolvedTier = user.subscription_tier === 'pro_coaching' ? 'pro_coaching' : 'pro'
 
   return {
     userId: user.id,
     email: user.email,
-    subscription_tier: user.subscription_tier || 'free',
-    isTrialExpired: trialStatus.expired,
-    daysRemaining: trialStatus.daysRemaining,
-    hasAccess: isPaidTier || promoActive || !trialStatus.expired,
+    subscription_tier: resolvedTier,
+    isTrialExpired: false,
+    daysRemaining: Infinity,
+    hasAccess: true,
     stripe_customer_id: user.stripe_customer_id,
   }
 }
@@ -64,7 +61,7 @@ export interface AccessCheckResult {
  */
 export async function requireActiveSubscription(
   userId: string,
-  allowTrial: boolean = true
+  _allowTrial: boolean = true
 ): Promise<AccessCheckResult> {
   const status = await getServerSubscriptionStatus(userId)
 
@@ -72,30 +69,7 @@ export async function requireActiveSubscription(
     return { allowed: false, reason: 'User not found' }
   }
 
-  const isPaidTier = status.subscription_tier !== 'free'
-  const promoActive = isProPromoActive()
-
-  // Paid users always have access
-  if (isPaidTier) {
-    return { allowed: true, status }
-  }
-
-  // Free users are temporarily allowed during promo window
-  if (promoActive) {
-    return { allowed: true, status }
-  }
-
-  // Free tier with active trial
-  if (allowTrial && !status.isTrialExpired) {
-    return { allowed: true, status }
-  }
-
-  // Free tier with expired trial (or trial not allowed)
-  return {
-    allowed: false,
-    reason: status.isTrialExpired ? 'Trial expired' : 'Subscription required',
-    status,
-  }
+  return { allowed: true, status }
 }
 
 /**

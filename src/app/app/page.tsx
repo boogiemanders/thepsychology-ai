@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { getCurrentUser, isTrialExpired } from '@/lib/user-management'
+import { getCurrentUser } from '@/lib/user-management'
 
 export default function AppPage() {
   const router = useRouter()
@@ -16,14 +16,7 @@ export default function AppPage() {
       return
     }
 
-    // Check if free trial has expired
-    if (user.tier === '7-Day Free Trial' && isTrialExpired(user)) {
-      // Trial expired, redirect to expired page
-      router.push('/trial-expired')
-      return
-    }
-
-    // User is logged in and trial is valid, redirect to tools
+    // User is logged in, redirect to tools
     router.push('/tools')
   }, [router])
 

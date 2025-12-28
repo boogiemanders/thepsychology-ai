@@ -12,7 +12,6 @@ import { Badge } from '@/components/ui/badge'
 import { Calendar } from '@/components/ui/calendar'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid'
@@ -29,7 +28,6 @@ import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { siteConfig } from '@/lib/config'
 import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
-import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { StudyProgressChart } from './components/study-progress-chart'
 
@@ -75,11 +73,11 @@ const subscriptionTierVisuals = {
     },
   },
   default: {
-    label: 'Free Trial',
+    label: 'Pro',
     style: {
-      borderColor: '#cbc9db',
-      backgroundColor: 'rgba(203, 201, 219, 0.1)',
-      color: '#cbc9db',
+      borderColor: '#6a9bcc',
+      backgroundColor: 'rgba(106, 155, 204, 0.1)',
+      color: '#6a9bcc',
     },
   },
 } as const
@@ -114,7 +112,6 @@ export default function DashboardPage() {
   const [priorityDomains, setPriorityDomains] = useState<any[]>([])
   const [hasCompletedExam, setHasCompletedExam] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
-  const [isPricingCarouselOpen, setIsPricingCarouselOpen] = useState(false)
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
   const [isChangelogOpen, setIsChangelogOpen] = useState(false)
   const [changelogEntries, setChangelogEntries] = useState<ApiChangelogEntry[] | null>(null)
@@ -124,12 +121,13 @@ export default function DashboardPage() {
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
   const [isAnonymousFeedback, setIsAnonymousFeedback] = useState(false)
-  const [isBillingPortalLoading, setIsBillingPortalLoading] = useState(false)
-  const [billingPortalError, setBillingPortalError] = useState<string | null>(null)
-  const { startCheckout, checkoutTier, checkoutError, resetCheckoutError } = useStripeCheckout()
-  const subscriptionTierKey = (userProfile?.subscription_tier as keyof typeof subscriptionTierVisuals) ?? 'default'
-  const { label: subscriptionTierLabel, style: subscriptionTierStyle } =
-    subscriptionTierVisuals[subscriptionTierKey] ?? subscriptionTierVisuals.default
+  const subscriptionTierKey = userProfile?.subscription_tier ?? 'pro'
+  const subscriptionTierVisual =
+    subscriptionTierKey in subscriptionTierVisuals
+      ? subscriptionTierVisuals[subscriptionTierKey as keyof typeof subscriptionTierVisuals]
+      : subscriptionTierVisuals.pro
+  const subscriptionTierLabel = subscriptionTierVisual.label
+  const subscriptionTierStyle = subscriptionTierVisual.style
 
   useEffect(() => {
     if (!user?.id) return
@@ -185,64 +183,6 @@ export default function DashboardPage() {
     setIsPopoverOpen(false)
   }
 
-  const handleTierSelection = useCallback(
-    (tierName: string) => {
-      if (tierName === 'Pro') {
-        startCheckout('pro', { redirectPath: '/dashboard' })
-      } else if (tierName === 'Pro + Coaching') {
-        startCheckout('pro_coaching', { redirectPath: '/dashboard' })
-      } else {
-        setIsPricingCarouselOpen(false)
-      }
-    },
-    [setIsPricingCarouselOpen, startCheckout]
-  )
-
-  const handleManageBilling = useCallback(async () => {
-    if (isBillingPortalLoading) return
-    setIsBillingPortalLoading(true)
-    setBillingPortalError(null)
-
-    try {
-      const { data, error } = await supabase.auth.getSession()
-      if (error) throw error
-      const token = data.session?.access_token
-      if (!token) throw new Error('Not authenticated')
-
-      const response = await fetch('/api/stripe/create-portal-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-      })
-
-      const payload = (await response.json().catch(() => null)) as { url?: string; error?: string } | null
-      const url = payload?.url
-      if (!response.ok || !url) {
-        throw new Error(payload?.error || 'Failed to open billing portal')
-      }
-
-      window.location.href = url
-    } catch (err) {
-      console.error('[Billing Portal] Failed to open:', err)
-      const message = err instanceof Error ? err.message : 'Failed to open billing portal'
-      if (message === 'Stripe is not configured') {
-        setBillingPortalError('Billing portal is not configured. Set STRIPE_SECRET_KEY and restart the dev server.')
-      } else if (message === 'Database not configured') {
-        setBillingPortalError('Billing portal needs Supabase env vars. Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.')
-      } else if (message === 'No Stripe customer found for this user') {
-        setBillingPortalError('No Stripe customer found. Complete a checkout first, then try again.')
-      } else if (message === 'Not authenticated') {
-        setBillingPortalError('Please sign in again to open billing.')
-      } else {
-        setBillingPortalError('Unable to open billing. Please try again in a moment.')
-      }
-    } finally {
-      setIsBillingPortalLoading(false)
-    }
-  }, [isBillingPortalLoading])
-
   useEffect(() => {
     if (!isFeedbackOpen) {
       setFeedbackMessage('')
@@ -250,39 +190,6 @@ export default function DashboardPage() {
       setIsAnonymousFeedback(false)
     }
   }, [isFeedbackOpen])
-
-  useEffect(() => {
-    if (!isPricingCarouselOpen) {
-      resetCheckoutError()
-    }
-  }, [isPricingCarouselOpen, resetCheckoutError])
-
-  // Handle successful payment redirect
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search)
-    const upgradeSuccess = params.get('upgrade') === 'success'
-
-    if (upgradeSuccess) {
-      // Refresh profile to get updated subscription tier
-      refreshProfile()
-
-      // Show success notification
-      const successMessage = 'Subscription upgraded successfully!'
-      setFeedbackMessage(successMessage)
-      setFeedbackStatus('success')
-
-      // Clear query parameter
-      window.history.replaceState({}, '', '/dashboard')
-
-      // Clear notification after 3 seconds
-      const timeout = setTimeout(() => {
-        setFeedbackMessage('')
-        setFeedbackStatus(null)
-      }, 3000)
-
-      return () => clearTimeout(timeout)
-    }
-  }, [refreshProfile])
 
   const handleSendFeedback = async (message: string, screenshotFile?: File | null) => {
     const trimmedMessage = message.trim()
@@ -1091,20 +998,6 @@ export default function DashboardPage() {
                   Plan: {subscriptionTierLabel}
                 </div>
                 <Button
-                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
-                  onClick={() => setIsPricingCarouselOpen(true)}
-                >
-                  Change Tier
-                </Button>
-                <Button
-                  variant="outline"
-                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
-                  onClick={handleManageBilling}
-                  disabled={isBillingPortalLoading}
-                >
-                  {isBillingPortalLoading ? 'Opening Billing…' : 'Manage Billing'}
-                </Button>
-                <Button
                   variant="outline"
                   className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
                   onClick={() => setIsChangelogOpen(true)}
@@ -1119,115 +1012,9 @@ export default function DashboardPage() {
                   Feedback
                 </Button>
               </div>
-              {billingPortalError && (
-                <div className="mt-2 flex items-start gap-2 text-sm text-red-600">
-                  <AlertCircle className="w-4 h-4 mt-0.5" />
-                  <span>{billingPortalError}</span>
-                </div>
-              )}
             </div>
           </div>
         </div>
-
-        {/* Pricing Tier Carousel Modal */}
-        {isPricingCarouselOpen && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsPricingCarouselOpen(false)}
-          >
-            <div className="relative w-full max-w-md px-4" onClick={(e) => e.stopPropagation()}>
-              <button
-                onClick={() => setIsPricingCarouselOpen(false)}
-                className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-background/80 hover:bg-background border border-border text-foreground/60 hover:text-foreground transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-              <Carousel className="w-full px-12">
-                <CarouselContent>
-                  {siteConfig.pricing.pricingItems.map((tier, index) => {
-                    const [displayAmount, displayPeriod] = tier.displayPrice
-                      ? tier.displayPrice.split("/").map((part) => part.trim())
-                      : [tier.price, tier.period]
-
-                    const planTier =
-                      tier.name === 'Pro' ? 'pro' : tier.name === 'Pro + Coaching' ? 'pro_coaching' : null
-                    const isPaidTier = Boolean(planTier)
-                    const isLoading = Boolean(planTier && checkoutTier === planTier)
-
-                    return (
-                      <CarouselItem key={index}>
-                        <div className="p-1">
-                          <Card className="border-2">
-                            <CardContent className="flex flex-col p-6 h-[500px]">
-                              <div className="flex-1">
-                                <div className="flex items-center justify-between mb-4">
-                                  <h3 className="text-2xl font-bold">{tier.name}</h3>
-                                  {tier.isPopular && (
-                                    <Badge className="bg-primary text-primary-foreground">Popular</Badge>
-                                  )}
-                                </div>
-                                <div className="mb-6">
-                                  <div className="text-4xl font-bold mb-2">
-                                    {displayAmount}
-                                    {displayPeriod && (
-                                      <span className="text-lg font-medium text-muted-foreground ml-2">
-                                        /{displayPeriod}
-                                      </span>
-                                    )}
-                                  </div>
-                                  <p className="text-sm text-muted-foreground">{tier.description}</p>
-                                </div>
-                                <div className="space-y-3 mb-6">
-                                  <p className="text-sm font-semibold text-muted-foreground">
-                                    {tier.featuresLabel}
-                                  </p>
-                                  {tier.features.map((feature, idx) => (
-                                    <div key={idx} className="flex items-start gap-2">
-                                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg
-                                          className="w-3 h-3 text-primary"
-                                          fill="none"
-                                          viewBox="0 0 24 24"
-                                          stroke="currentColor"
-                                        >
-                                          <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M5 13l4 4L19 7"
-                                          />
-                                        </svg>
-                                      </div>
-                                      <span className="text-sm">{feature}</span>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                              <Button
-                                className={tier.buttonColor}
-                                disabled={isPaidTier && !!checkoutTier}
-                                onClick={() => handleTierSelection(tier.name)}
-                              >
-                                {isPaidTier && isLoading ? 'Redirecting…' : tier.buttonText}
-                              </Button>
-                            </CardContent>
-                          </Card>
-                        </div>
-                      </CarouselItem>
-                    )
-                  })}
-                </CarouselContent>
-                <CarouselPrevious className="-left-12" />
-                <CarouselNext className="-right-12" />
-              </Carousel>
-              {checkoutError && (
-                <p className="text-sm text-red-500 mt-4 text-center">
-                  {checkoutError}
-                </p>
-              )}
-            </div>
-          </div>
-        )}
 
         {/* Feedback Chat Modal */}
         {isFeedbackOpen && (

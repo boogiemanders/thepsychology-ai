@@ -30,14 +30,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Map tier names to subscription tiers
-    const tierMap: { [key: string]: string } = {
-      '7-Day Free Trial': 'free',
-      'Pro': 'pro',
-      'Pro + Coaching': 'pro_coaching',
-    }
-
-    const subscriptionTier = tierMap[body.tier] || 'free'
+    const normalizedTier = body.tier.trim().toLowerCase()
+    const subscriptionTier =
+      normalizedTier === 'pro + coaching' ||
+      normalizedTier === 'pro_coaching' ||
+      normalizedTier === 'pro-coaching'
+        ? 'pro_coaching'
+        : 'pro'
 
     // Insert into Supabase
     const { data, error } = await supabase
