@@ -34,6 +34,18 @@ type GitHubCommit = {
 
 const DEFAULT_REPO = 'boogiemanders/thepsychology-ai'
 const DAY_MS = 24 * 60 * 60 * 1000
+const CANONICAL_CHANGELOG_AUTHOR = 'Anders Chan, Psy.D.'
+const CANONICAL_CHANGELOG_AUTHOR_ALIASES = new Set(['boogiemanders', 'anders chan'])
+
+function normalizeChangelogAuthor(author: string | null | undefined): string | null {
+  if (!author) return null
+  const trimmed = author.trim()
+  if (!trimmed) return null
+
+  const normalized = trimmed.toLowerCase()
+  if (CANONICAL_CHANGELOG_AUTHOR_ALIASES.has(normalized)) return CANONICAL_CHANGELOG_AUTHOR
+  return trimmed
+}
 
 function clampInt(value: string | null, fallback: number, min: number, max: number): number {
   if (!value) return fallback
@@ -51,8 +63,25 @@ function toApiEntriesFromFallback(entries: ChangelogEntry[]): ApiChangelogEntry[
   }))
 }
 
+function stripClaudeAttribution(message: string): string {
+  const lines = (message || '').split('\n')
+  const filtered = lines.filter((line) => {
+    const trimmed = line.trim()
+    if (!trimmed) return true
+
+    const lower = trimmed.toLowerCase()
+    if (trimmed.includes('claude.com/claude-code') || trimmed.includes('claude.ai/claude-code')) return false
+    if (lower.includes('generated with') && lower.includes('claude code')) return false
+    if (lower.startsWith('co-authored-by:') && (lower.includes('anthropic.com') || lower.includes('claude'))) return false
+
+    return true
+  })
+
+  return filtered.join('\n').trim()
+}
+
 function normalizeCommitMessage(message: string): { title: string; body?: string } {
-  const trimmed = (message || '').trim()
+  const trimmed = stripClaudeAttribution(message).trim()
   if (!trimmed) return { title: 'Update' }
   const [firstLine, ...rest] = trimmed.split('\n')
   const title = (firstLine || '').trim()
@@ -105,13 +134,14 @@ export async function GET(request: NextRequest) {
     const entries: ApiChangelogEntry[] = (Array.isArray(commits) ? commits : [])
       .map((commit) => {
         const { title, body } = normalizeCommitMessage(commit.commit?.message || '')
+        const author = normalizeChangelogAuthor(commit.author?.login || commit.commit?.author?.name || null)
         return {
           id: commit.sha,
           date: commit.commit?.author?.date || new Date().toISOString(),
           title,
           body,
           url: commit.html_url,
-          author: commit.author?.login || commit.commit?.author?.name || null,
+          author,
         }
       })
       .filter((entry) => (includeMerges ? true : !isMergeCommit(entry.title)))
@@ -138,4 +168,3 @@ export async function GET(request: NextRequest) {
     })
   }
 }
-
