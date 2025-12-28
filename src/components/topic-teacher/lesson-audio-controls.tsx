@@ -175,8 +175,6 @@ export function LessonAudioControls(props: {
 
   const [voice, setVoice] = useState<string>(DEFAULT_VOICE)
   const [playbackRate, setPlaybackRate] = useState<number>(RECOMMENDED_PLAYBACK_RATE)
-  const [showSpeedMenu, setShowSpeedMenu] = useState(false)
-  const speedMenuRef = useRef<HTMLDivElement>(null)
 
   const [isGenerating, setIsGenerating] = useState(false)
   const [progress, setProgress] = useState<{ current: number; total: number }>({ current: 0, total: 0 })
@@ -268,18 +266,6 @@ export function LessonAudioControls(props: {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close speed menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (speedMenuRef.current && !speedMenuRef.current.contains(e.target as Node)) {
-        setShowSpeedMenu(false)
-      }
-    }
-    if (showSpeedMenu) {
-      document.addEventListener('mousedown', handleClickOutside)
-      return () => document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [showSpeedMenu])
 
   const handleEnded = () => {
     const next = currentIndex + 1
@@ -620,31 +606,17 @@ export function LessonAudioControls(props: {
               ))}
             </select>
 
-            {/* Playback speed button with popover */}
-            <div className="relative" ref={speedMenuRef}>
-              <button
-                type="button"
-                onClick={() => setShowSpeedMenu(!showSpeedMenu)}
-                className="h-7 px-2 rounded-md border border-input bg-background text-xs hover:bg-muted transition-colors"
-              >
-                {playbackRate}×
-              </button>
-              {showSpeedMenu && (
-                <div className="absolute bottom-full left-0 mb-1 py-1 rounded-md border border-border bg-background shadow-lg z-50">
-                  {PLAYBACK_RATE_OPTIONS.map((rate) => (
-                    <button
-                      key={rate}
-                      type="button"
-                      onClick={() => { setPlaybackRate(rate); setShowSpeedMenu(false) }}
-                      className={`block w-full px-3 py-1 text-xs text-left hover:bg-muted transition-colors ${
-                        rate === playbackRate ? 'bg-primary/10 text-primary' : ''
-                      }`}
-                    >
-                      {rate}×{rate === RECOMMENDED_PLAYBACK_RATE ? ' (recommended)' : ''}
-                    </button>
-                  ))}
-                </div>
-              )}
+            {/* Playback speed slider */}
+            <div className="flex items-center gap-2">
+              <input
+                type="range"
+                min={0}
+                max={PLAYBACK_RATE_OPTIONS.length - 1}
+                value={PLAYBACK_RATE_OPTIONS.indexOf(playbackRate as typeof PLAYBACK_RATE_OPTIONS[number])}
+                onChange={(e) => setPlaybackRate(PLAYBACK_RATE_OPTIONS[parseInt(e.target.value)])}
+                className="w-20 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
+              />
+              <span className="text-xs text-muted-foreground tabular-nums w-10">{playbackRate}×</span>
             </div>
 
             {/* Spacer */}
@@ -770,31 +742,17 @@ export function LessonAudioControls(props: {
 
               {/* Right section: Speed, segment, auto-scroll, actions */}
               <div className="flex items-center gap-1.5 shrink-0">
-                {/* Speed button with popover */}
-                <div className="relative" ref={speedMenuRef}>
-                  <button
-                    type="button"
-                    onClick={() => setShowSpeedMenu(!showSpeedMenu)}
-                    className="h-6 px-1.5 rounded border border-border/60 bg-background text-xs hover:bg-muted transition-colors"
-                  >
-                    {playbackRate}×
-                  </button>
-                  {showSpeedMenu && (
-                    <div className="absolute bottom-full right-0 mb-1 py-1 rounded-md border border-border bg-background shadow-lg z-50">
-                      {PLAYBACK_RATE_OPTIONS.map((rate) => (
-                        <button
-                          key={rate}
-                          type="button"
-                          onClick={() => { setPlaybackRate(rate); setShowSpeedMenu(false) }}
-                          className={`block w-full px-3 py-1 text-xs text-left hover:bg-muted transition-colors whitespace-nowrap ${
-                            rate === playbackRate ? 'bg-primary/10 text-primary' : ''
-                          }`}
-                        >
-                          {rate}×{rate === RECOMMENDED_PLAYBACK_RATE ? ' (recommended)' : ''}
-                        </button>
-                      ))}
-                    </div>
-                  )}
+                {/* Speed slider */}
+                <div className="flex items-center gap-1.5">
+                  <input
+                    type="range"
+                    min={0}
+                    max={PLAYBACK_RATE_OPTIONS.length - 1}
+                    value={PLAYBACK_RATE_OPTIONS.indexOf(playbackRate as typeof PLAYBACK_RATE_OPTIONS[number])}
+                    onChange={(e) => setPlaybackRate(PLAYBACK_RATE_OPTIONS[parseInt(e.target.value)])}
+                    className="w-16 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
+                  />
+                  <span className="text-xs text-muted-foreground tabular-nums w-8">{playbackRate}×</span>
                 </div>
 
                 <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">

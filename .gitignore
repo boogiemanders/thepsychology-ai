@@ -159,3 +159,6 @@ eppp-reference/
 
 # Recover PDF sources (private source material)
 recover-pdfs/
+
+# Pre-generated Topic Teacher audio (large)
+public/topic-teacher-audio/
