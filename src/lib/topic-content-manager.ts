@@ -155,6 +155,45 @@ export function stripMetaphorMarkers(content: string): string {
   return content.replace(/\{\{\/?M\}\}/g, '')
 }
 
+export type MetaphorRange = { start: number; end: number }
+
+/**
+ * Remove {{M}}...{{/M}} markers while leaving the inner metaphor text intact,
+ * and also return the ranges (in the stripped string) corresponding to each
+ * metaphor block. This lets clients treat metaphor spans as "dynamic".
+ */
+export function stripMetaphorMarkersWithRanges(content: string): {
+  content: string
+  ranges: MetaphorRange[]
+} {
+  const ranges: MetaphorRange[] = []
+  let out = ''
+  let cursor = 0
+
+  const regex = /\{\{M\}\}([\s\S]*?)\{\{\/M\}\}/g
+  let match: RegExpExecArray | null
+
+  while ((match = regex.exec(content)) !== null) {
+    const before = content.slice(cursor, match.index)
+    out += before
+
+    const inner = match[1] ?? ''
+    const start = out.length
+    out += inner
+    const end = out.length
+    ranges.push({ start, end })
+
+    cursor = match.index + match[0].length
+  }
+
+  out += content.slice(cursor)
+
+  // Defensive cleanup if malformed markers exist.
+  out = out.replace(/\{\{\/?M\}\}/g, '')
+
+  return { content: out, ranges }
+}
+
 /**
  * Load pre-generated topic content from filesystem
  */

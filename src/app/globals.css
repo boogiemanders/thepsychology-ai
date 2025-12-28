@@ -551,6 +551,15 @@ strong, b {
   body {
     @apply bg-background text-foreground;
   }
+  .tt-word {
+    transition: background-color 120ms ease, box-shadow 120ms ease;
+  }
+  .tt-word-active {
+    background-color: color-mix(in oklch, var(--primary) 25%, transparent);
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--primary) 35%, transparent);
+    border-radius: 0.2em;
+    padding: 0 0.08em;
+  }
   .rdp-vhidden {
     @apply hidden;
   }

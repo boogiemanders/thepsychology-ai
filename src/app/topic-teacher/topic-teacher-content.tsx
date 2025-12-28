@@ -1,6 +1,6 @@
 'use client'
 
-import { Children, cloneElement, isValidElement, useEffect, useMemo, useRef, useState } from 'react'
+import { cloneElement, isValidElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -88,6 +88,85 @@ const GENERIC_SECTION_NAMES = new Set([
   'entire section',
   'lesson overview',
 ])
+
+type HastNode = {
+  type: string
+  tagName?: string
+  value?: string
+  children?: HastNode[]
+  properties?: Record<string, unknown>
+}
+
+const READ_ALONG_WORD_REGEX = /[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
+const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg'])
+const EPPP_WORD_REGEX = /\bE\.?P\.?P\.?P\.?\b/i
+
+function splitTextForReadAlong(value: string, wordIndexRef: { current: number }): HastNode[] {
+  if (!value) return []
+
+  const nodes: HastNode[] = []
+  let lastIndex = 0
+  READ_ALONG_WORD_REGEX.lastIndex = 0
+
+  let match: RegExpExecArray | null
+  while ((match = READ_ALONG_WORD_REGEX.exec(value)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push({ type: 'text', value: value.slice(lastIndex, match.index) })
+    }
+
+    const word = match[0]
+    nodes.push({
+      type: 'element',
+      tagName: 'span',
+      properties: {
+        className: 'tt-word',
+        'data-tt-word-index': String(wordIndexRef.current),
+      },
+      children: [{ type: 'text', value: word }],
+    })
+    wordIndexRef.current += 1
+    lastIndex = match.index + word.length
+  }
+
+  if (lastIndex < value.length) {
+    nodes.push({ type: 'text', value: value.slice(lastIndex) })
+  }
+
+  return nodes.length > 0 ? nodes : [{ type: 'text', value }]
+}
+
+function rehypeReadAlongWords() {
+  return (tree: HastNode) => {
+    const wordIndexRef = { current: 0 }
+
+    const visit = (node: HastNode) => {
+      if (!node || !node.children) return
+      if (node.type === 'element' && node.tagName && READ_ALONG_SKIP_TAGS.has(node.tagName)) {
+        return
+      }
+
+      const nextChildren: HastNode[] = []
+      for (const child of node.children) {
+        if (child.type === 'text') {
+          nextChildren.push(...splitTextForReadAlong(child.value ?? '', wordIndexRef))
+          continue
+        }
+        visit(child)
+        nextChildren.push(child)
+      }
+      node.children = nextChildren
+    }
+
+    visit(tree)
+  }
+}
+
+function extractTextFromReactNode(node: React.ReactNode): string {
+  if (typeof node === 'string' || typeof node === 'number') return String(node)
+  if (Array.isArray(node)) return node.map(extractTextFromReactNode).join('')
+  if (isValidElement(node)) return extractTextFromReactNode(node.props.children)
+  return ''
+}
 
 // Helper component for overlapping stars with shared hover state
 function OverlappingStarButtons({
@@ -208,6 +287,7 @@ export function TopicTeacherContent() {
   }
 
   const [messages, setMessages] = useState<Message[]>([])
+  const lessonMarkdown = messages[0]?.role === 'assistant' ? messages[0].content : ''
   const [isLoading, setIsLoading] = useState(false)
   const [isRefreshingMetaphors, setIsRefreshingMetaphors] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -220,8 +300,16 @@ export function TopicTeacherContent() {
   const [previousUserInterests, setPreviousUserInterests] = useState<string | null>(null)
   const [interestsLoaded, setInterestsLoaded] = useState(false)
   const [baseContent, setBaseContent] = useState<string>('')
+  const [metaphorRanges, setMetaphorRanges] = useState<Array<{ start: number; end: number }>>([])
   const [personalizedCache, setPersonalizedCache] = useState<Record<string, string>>({})
   const [showColorPicker, setShowColorPicker] = useState(false)
+  const lessonContentRef = useRef<HTMLDivElement | null>(null)
+  const wordSpansRef = useRef<HTMLSpanElement[]>([])
+  const wordIndexMapRef = useRef<number[]>([])
+  const activeWordIndexRef = useRef<number | null>(null)
+  const autoScrollRef = useRef(false)
+  const [readAlongReady, setReadAlongReady] = useState(false)
+  const [autoScrollEnabled, setAutoScrollEnabled] = useState(false)
 
   useEffect(() => {
     if (!user?.id) return
@@ -244,6 +332,83 @@ export function TopicTeacherContent() {
       })
     }
   }, [user?.id, decodedTopic, domain])
+
+  useEffect(() => {
+    autoScrollRef.current = autoScrollEnabled
+  }, [autoScrollEnabled])
+
+  useEffect(() => {
+    const container = lessonContentRef.current
+    if (!container || !lessonMarkdown.trim()) {
+      wordSpansRef.current = []
+      wordIndexMapRef.current = []
+      activeWordIndexRef.current = null
+      setReadAlongReady(false)
+      return
+    }
+
+    const spans = Array.from(
+      container.querySelectorAll<HTMLSpanElement>('span[data-tt-word-index]')
+    )
+    wordSpansRef.current = spans
+    wordIndexMapRef.current = spans.reduce<number[]>((acc, span, index) => {
+      const text = (span.textContent || '').trim()
+      if (text && EPPP_WORD_REGEX.test(text)) {
+        acc.push(index, index, index)
+      } else if (text) {
+        acc.push(index)
+      }
+      return acc
+    }, [])
+    activeWordIndexRef.current = null
+    spans.forEach((span) => span.classList.remove('tt-word-active'))
+    setReadAlongReady(spans.length > 0)
+  }, [lessonMarkdown])
+
+  const handleWordProgress = useCallback(
+    (payload: { wordIndex: number | null; totalWords: number }) => {
+      const spans = wordSpansRef.current
+      if (spans.length === 0) return
+      const map = wordIndexMapRef.current
+      if (map.length === 0) return
+
+      const nextWordIndex = payload.wordIndex
+      if (nextWordIndex === null || !Number.isFinite(nextWordIndex)) {
+        if (activeWordIndexRef.current !== null) {
+          spans[activeWordIndexRef.current]?.classList.remove('tt-word-active')
+        }
+        activeWordIndexRef.current = null
+        return
+      }
+
+      const clampedWordIndex = Math.max(0, Math.min(Math.floor(nextWordIndex), map.length - 1))
+      const spanIndex = map[clampedWordIndex]
+      if (spanIndex === undefined) return
+      if (activeWordIndexRef.current === spanIndex) return
+
+      if (activeWordIndexRef.current !== null) {
+        spans[activeWordIndexRef.current]?.classList.remove('tt-word-active')
+      }
+
+      const target = spans[spanIndex]
+      if (!target) {
+        activeWordIndexRef.current = null
+        return
+      }
+
+      target.classList.add('tt-word-active')
+      activeWordIndexRef.current = spanIndex
+
+      if (!autoScrollRef.current || typeof window === 'undefined') return
+      const rect = target.getBoundingClientRect()
+      const topBuffer = 140
+      const bottomBuffer = 220
+      if (rect.top < topBuffer || rect.bottom > window.innerHeight - bottomBuffer) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    },
+    []
+  )
   const [starColor, setStarColor] = useState('#000000')
   const [showQuizColorPicker, setShowQuizColorPicker] = useState(false)
   const [quizStarColor, setQuizStarColor] = useState('#000000')
@@ -1066,6 +1231,25 @@ export function TopicTeacherContent() {
           console.log('[Topic Teacher] ✅ Stored base content from API headers')
         } catch (error) {
           console.warn('[Topic Teacher] Failed to decode base content from headers:', error)
+        }
+      }
+
+      const metaphorRangesHeader = response.headers.get('X-Metaphor-Ranges')
+      if (metaphorRangesHeader) {
+        try {
+          const decodedRangesJson = atob(metaphorRangesHeader)
+          const parsed = JSON.parse(decodedRangesJson)
+          if (Array.isArray(parsed)) {
+            const normalized = parsed
+              .map((r) => ({
+                start: typeof r?.start === 'number' ? r.start : NaN,
+                end: typeof r?.end === 'number' ? r.end : NaN,
+              }))
+              .filter((r) => Number.isFinite(r.start) && Number.isFinite(r.end) && r.start >= 0 && r.end >= r.start)
+            setMetaphorRanges(normalized)
+          }
+        } catch (error) {
+          console.warn('[Topic Teacher] Failed to decode metaphor ranges header:', error)
         }
       }
 
@@ -2121,17 +2305,31 @@ export function TopicTeacherContent() {
           </BreadcrumbList>
         </Breadcrumb>
 
-        <div className="mb-6">
-          <TypographyH1>{displayLessonName}</TypographyH1>
-        </div>
+        {/* 1. Audio Controls - at top */}
+        <LessonAudioControls
+          lessonMarkdown={lessonMarkdown}
+          baseLessonMarkdown={baseContent}
+          metaphorRanges={metaphorRanges}
+          topic={displayLessonName}
+          domain={domain}
+          userId={user?.id ?? null}
+          userInterests={savedInterests.length > 0 ? savedInterests.join(', ') : userInterests}
+          languagePreference={languagePreference}
+          onWordProgress={handleWordProgress}
+          autoScrollEnabled={autoScrollEnabled}
+          onAutoScrollToggle={() => setAutoScrollEnabled((prev) => !prev)}
+          disabledReason={
+            isLoading
+              ? 'Loading lesson...'
+              : isMetaphorUpdating || isRefreshingMetaphors
+                ? 'Personalizing metaphors...'
+                : languagePreference && isTranslating
+                  ? `Translating to ${languagePreference}...`
+                  : null
+          }
+        />
 
-        {isMetaphorUpdating && (
-          <div className="mb-4 rounded-md border border-dashed border-primary/50 bg-primary/5 px-4 py-2 text-sm text-primary">
-            Personalizing metaphors for your interests...
-          </div>
-        )}
-
-        {/* Interest Tags Input */}
+        {/* 2. Interest Tags Input */}
         <div className="mb-6 max-w-2xl">
           <div className="relative">
             <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
@@ -2213,7 +2411,7 @@ export function TopicTeacherContent() {
           </div>
         </div>
 
-        {/* Language Preference Input */}
+        {/* 3. Language Preference Input */}
         <div className="mb-6 max-w-2xl">
           <div className="relative">
             <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
@@ -2308,23 +2506,17 @@ export function TopicTeacherContent() {
           </div>
         </div>
 
-        <LessonAudioControls
-          lessonMarkdown={messages[0]?.role === 'assistant' ? messages[0].content : ''}
-          topic={displayLessonName}
-          domain={domain}
-          userId={user?.id ?? null}
-          userInterests={savedInterests.length > 0 ? savedInterests.join(', ') : userInterests}
-          languagePreference={languagePreference}
-          disabledReason={
-            isLoading
-              ? 'Loading lesson...'
-              : isMetaphorUpdating || isRefreshingMetaphors
-                ? 'Personalizing metaphors...'
-                : languagePreference && isTranslating
-                  ? `Translating to ${languagePreference}...`
-                  : null
-          }
-        />
+        {/* 4. Title - after inputs */}
+        <div className="mb-6">
+          <TypographyH1>{displayLessonName}</TypographyH1>
+        </div>
+
+        {/* 5. Metaphor updating message */}
+        {isMetaphorUpdating && (
+          <div className="mb-4 rounded-md border border-dashed border-primary/50 bg-primary/5 px-4 py-2 text-sm text-primary">
+            Personalizing metaphors for your interests...
+          </div>
+        )}
 
         {error && (
           <motion.div
@@ -2430,7 +2622,9 @@ export function TopicTeacherContent() {
                   }`}
                 >
                   {message.role === 'assistant' ? (
-                    <div className="text-base leading-relaxed max-w-none prose prose-invert
+                    <div
+                      ref={message.role === 'assistant' && idx === 0 ? lessonContentRef : undefined}
+                      className="text-base leading-relaxed max-w-none prose prose-invert
                       [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:leading-tight [&_h1:not(:first-child)]:mt-12 [&_h1:not(:first-child)]:mb-6
                       [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:leading-snug [&_h2:not(:first-child)]:mb-4 [&_h2:not(:first-child)]:border-t [&_h2:not(:first-child)]:border-border/20 [&_h2:not(:first-child)]:pt-8 [&_h2:not(:first-child)]:mt-0
                       [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:leading-snug [&_h3:not(:first-child)]:mt-7 [&_h3:not(:first-child)]:mb-3
@@ -2445,28 +2639,14 @@ export function TopicTeacherContent() {
                       [&_blockquote]:border-l-4 [&_blockquote]:border-primary/30 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:my-5 [&_blockquote]:text-foreground/80
                       [&_table]:w-full [&_table]:border-separate [&_table]:border-spacing-0 [&_table]:my-5 [&_table]:text-sm [&_table]:overflow-visible
                       [&_th]:border [&_th]:border-border [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground
-                      [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90 [&_td]:overflow-visible">
-	                      <ReactMarkdown
-	                        remarkPlugins={[remarkGfm]}
-	                        components={{
-	                          h1: ({ children }) => {
-	                            let text = ''
-	                            if (typeof children === 'string') {
-	                              text = children
-                            } else if (Array.isArray(children)) {
-                              text = children
-                                .map((c) => {
-                                  if (typeof c === 'string') return c
-                                  if (c?.props?.children) {
-                                    if (typeof c.props.children === 'string') return c.props.children
-                                    if (Array.isArray(c.props.children)) {
-                                      return c.props.children.filter(x => typeof x === 'string').join('')
-                                    }
-                                  }
-                                  return ''
-                                })
-                                .join('')
-                            }
+                      [&_td]:border [&_td]:border-border [&_td]:p-3 [&_td]:text-foreground/90 [&_td]:overflow-visible"
+                    >
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={message.role === 'assistant' && idx === 0 ? [rehypeReadAlongWords] : []}
+                        components={{
+                          h1: ({ children }) => {
+                            const text = extractTextFromReactNode(children)
 
                             // Skip if this h1 matches the topic name (avoid duplicate)
                             const decodedTopic = topic ? decodeURIComponent(topic) : ''
@@ -2483,23 +2663,7 @@ export function TopicTeacherContent() {
                             )
                           },
                           h2: ({ children }) => {
-                            let text = ''
-                            if (typeof children === 'string') {
-                              text = children
-                            } else if (Array.isArray(children)) {
-                              text = children
-                                .map((c) => {
-                                  if (typeof c === 'string') return c
-                                  if (c?.props?.children) {
-                                    if (typeof c.props.children === 'string') return c.props.children
-                                    if (Array.isArray(c.props.children)) {
-                                      return c.props.children.filter(x => typeof x === 'string').join('')
-                                    }
-                                  }
-                                  return ''
-                                })
-                                .join('')
-                            }
+                            const text = extractTextFromReactNode(children)
 
                             currentSectionRef.current = text
                             const lowerText = text.toLowerCase()
@@ -2555,23 +2719,7 @@ export function TopicTeacherContent() {
                             )
                           },
                           h3: ({ children }) => {
-                            let text = ''
-                            if (typeof children === 'string') {
-                              text = children
-                            } else if (Array.isArray(children)) {
-                              text = children
-                                .map((c) => {
-                                  if (typeof c === 'string') return c
-                                  if (c?.props?.children) {
-                                    if (typeof c.props.children === 'string') return c.props.children
-                                    if (Array.isArray(c.props.children)) {
-                                      return c.props.children.filter(x => typeof x === 'string').join('')
-                                    }
-                                  }
-                                  return ''
-                                })
-                                .join('')
-                            }
+                            const text = extractTextFromReactNode(children)
 
                             currentSectionRef.current = text
 
@@ -2623,7 +2771,7 @@ export function TopicTeacherContent() {
                             )
                           },
                           p: ({ children }) => {
-                            const rawText = Children.toArray(children).join('')
+                            const rawText = extractTextFromReactNode(children)
                             if (rawText.includes('[LOADING_METAPHORS]')) {
                               return (
                                 <div className="flex flex-col items-center justify-center py-8 gap-3">
@@ -2919,14 +3067,19 @@ export function TopicTeacherContent() {
                                 />
                               )
                             }
-                            // Add theory-diagram class for images from organizational-theories path
-                            const isTheoryDiagram = src && src.includes('organizational-theories')
+                            // Add theory-diagram class for images that need dark mode inversion
+                            const needsDarkModeInvert = src && (
+                              src.includes('organizational-theories') ||
+                              src.includes('/images/topics/')
+                            )
+                            // Topic illustration images should be smaller
+                            const isTopicIllustration = src && src.includes('/images/topics/')
                             // Regular images
                             return (
                               <img
                                 src={src}
                                 alt={alt || ''}
-                                className={`my-6 max-w-full ${isTheoryDiagram ? 'theory-diagram' : ''}`}
+                                className={`my-6 ${isTopicIllustration ? 'max-w-[420px]' : 'max-w-full'} ${needsDarkModeInvert ? 'theory-diagram' : ''}`}
                               />
                             )
                           },

@@ -52,6 +52,14 @@ export function markdownToSpeakableText(markdown: string): string {
   return text.trim()
 }
 
+export function prepareTextForTts(text: string): string {
+  const input = typeof text === 'string' ? text : ''
+  if (!input.trim()) return ''
+
+  // Ensure "EPPP" is spoken as "E triple P".
+  return input.replace(/\bE\.?P\.?P\.?P\.?\b/gi, 'E triple P').trim()
+}
+
 function splitLongTextBySentences(text: string, maxChars: number): string[] {
   const sentenceMatches = text.match(/[^.!?]+[.!?]+(?=\s|$)|[^.!?]+$/g)
   const sentences = sentenceMatches?.map((s) => s.trim()).filter(Boolean) ?? [text]
@@ -136,4 +144,3 @@ export function chunkTextForTts(text: string, maxChars: number): string[] {
   if (current.trim()) chunks.push(current.trim())
   return chunks.filter(Boolean)
 }
-
