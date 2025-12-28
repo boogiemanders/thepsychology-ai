@@ -9,7 +9,7 @@ version: 3
 
 ## Why You Need to Master This (And Why It's Actually Fascinating)
 
-Let's be real: Psychopharmacology can feel overwhelming. You're preparing for the EPPP, and suddenly you're staring at lists of drug names that sound like alphabet soup. But here's the thing—this knowledge is going to show up not just on your exam, but in nearly every professional interaction you have as a psychologist. When your client mentions their psychiatrist just switched them from Haldol to Abilify, you'll need to understand what that means for their symptoms and side effects. When someone on Prozac asks if their new medication could be causing their sexual difficulties, you'll want to have an informed response.
+Let's be real: Psychopharmacology can feel overwhelming. You're preparing for the EPPP, and suddenly you're staring at lists of drug names that sound like alphabet soup. But here's the thing. This knowledge is going to show up not just on your exam, but in nearly every professional interaction you have as a psychologist. When your client mentions their psychiatrist just switched them from Haldol to Abilify, you'll need to understand what that means for their symptoms and side effects. When someone on Prozac asks if their new medication could be causing their sexual difficulties, you'll want to have an informed response.
 
 Think of this lesson as your essential field guide to the two most critical medication families in mental health: antipsychotics and antidepressants. We're going to break down complex mechanisms into understandable pieces, help you remember the differences between drug generations, and give you the tools to keep all those generic names straight.
 
@@ -23,7 +23,7 @@ Here's what you need to know about how drugs modify neurotransmitter activity:
 - **Antagonists** decrease neurotransmitter activity by blocking receptors
 - **Reuptake inhibitors** prevent neurotransmitters from being sucked back up by the sending neuron, leaving more available in the synapse
 
-{{M}}Think of neurotransmitters like emails between coworkers. An agonist is like someone who keeps hitting "reply all" to make sure everyone stays in the conversation. An antagonist is like your spam filter blocking certain messages from getting through. A reuptake inhibitor? That's like preventing someone from recalling an email they already sent—once it's out there, it stays in people's inboxes longer.{{/M}}
+{{M}}Think of neurotransmitters like emails between coworkers. An agonist is like someone who keeps hitting "reply all" to make sure everyone stays in the conversation. An antagonist is like your spam filter blocking certain messages from getting through. A reuptake inhibitor? That's like preventing someone from recalling an email they already sent. Once it's out there, it stays in people's inboxes longer.{{/M}}
 
 ## Antipsychotics: The Three Generations
 
@@ -31,7 +31,7 @@ Antipsychotics (also called neuroleptics) have evolved significantly over the de
 
 ### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters
 
-The first-generation antipsychotics—also called "typical" antipsychotics—were revolutionary when they arrived. Common ones include:
+The first-generation antipsychotics (also called "typical" antipsychotics) were revolutionary when they arrived. Common ones include:
 
 - Chlorpromazine (Thorazine)
 - Haloperidol (Haldol)
@@ -40,7 +40,7 @@ The first-generation antipsychotics—also called "typical" antipsychotics—wer
 
 **How They Work:** FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.
 
-**What They Treat Well:** FGAs are effective for positive symptoms of schizophrenia—things like hallucinations, delusions, and disorganized thinking. However, they're much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation).
+**What They Treat Well:** FGAs are effective for positive symptoms of schizophrenia. Things like hallucinations, delusions, and disorganized thinking. However, they're much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation).
 
 **The Side Effect Problem:** This is where FGAs get tricky. They cause three major categories of side effects, and understanding these is exam-essential:
 
@@ -50,11 +50,11 @@ The first-generation antipsychotics—also called "typical" antipsychotics—wer
 | **Extrapyramidal Side Effects** | High-potency FGAs (haloperidol, fluphenazine) | Parkinsonism (tremor, rigidity), dystonia (muscle spasms), akathisia (restlessness), tardive dyskinesia |
 | **Neuroleptic Malignant Syndrome** | Any FGA (rare but serious) | Muscle rigidity, high fever, confusion, unstable vital signs |
 
-Let's focus on the most concerning: **tardive dyskinesia**. This condition typically emerges after long-term use and involves involuntary movements—usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk. It's more common in women and older adults, and here's the scary part: it can be irreversible. {{M}}It's like wearing headphones at maximum volume for too long—the damage to your hearing might not show up immediately, but once it does, you can't always undo it.{{/M}}
+Let's focus on the most concerning: **tardive dyskinesia**. This condition typically emerges after long-term use and involves involuntary movements (usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk. It's more common in women and older adults, and here's the scary part: it can be irreversible. {{M}}It's like wearing headphones at maximum volume for too long) the damage to your hearing might not show up immediately, but once it does, you can't always undo it.{{/M}}
 
 ### Second-Generation Antipsychotics (SGAs): The Game Changers
 
-Second-generation antipsychotics—also called "atypical" antipsychotics—represented a major advancement. Key players include:
+Second-generation antipsychotics (also called "atypical" antipsychotics) represented a major advancement. Key players include:
 
 - Clozapine (Clozaril)
 - Risperidone (Risperdal)
@@ -63,7 +63,7 @@ Second-generation antipsychotics—also called "atypical" antipsychotics—repre
 
 **How They Work:** SGAs are dopamine-serotonin antagonists. They block both dopamine receptors (especially D2, D3, and D4) and serotonin receptors (especially 5-HT2A). This dual action is key to their broader effectiveness.
 
-**What They Treat:** SGAs treat both positive and negative symptoms of schizophrenia more effectively than FGAs. Some are FDA-approved for bipolar disorder and as add-on treatments for major depression. Clozapine deserves special mention: it's the only FDA-approved medication for treatment-resistant schizophrenia—meaning when everything else has failed, clozapine is the option.
+**What They Treat:** SGAs treat both positive and negative symptoms of schizophrenia more effectively than FGAs. Some are FDA-approved for bipolar disorder and as add-on treatments for major depression. Clozapine deserves special mention: it's the only FDA-approved medication for treatment-resistant schizophrenia. Meaning when everything else has failed, clozapine is the option.
 
 **The Trade-Off:** SGAs cause fewer extrapyramidal side effects than FGAs, which sounds great. But they introduced a new major concern: **metabolic syndrome**. This includes:
 
@@ -72,9 +72,9 @@ Second-generation antipsychotics—also called "atypical" antipsychotics—repre
 - Insulin resistance and high blood sugar
 - Increased risk for diabetes and heart disease
 
-{{M}}If FGAs are like an aggressive security guard who occasionally roughhouses innocent people (extrapyramidal effects), SGAs are like a more selective security system that lets the right people through—but it comes with a maintenance plan that might expand your waistline and mess with your metabolism.{{/M}}
+{{M}}If FGAs are like an aggressive security guard who occasionally roughhouses innocent people (extrapyramidal effects), SGAs are like a more selective security system that lets the right people through. But it comes with a maintenance plan that might expand your waistline and mess with your metabolism.{{/M}}
 
-Clozapine has an additional serious risk: agranulocytosis, a dangerous drop in white blood cells that compromises the immune system. Patients on clozapine need regular blood monitoring—this isn't optional.
+Clozapine has an additional serious risk: agranulocytosis, a dangerous drop in white blood cells that compromises the immune system. Patients on clozapine need regular blood monitoring. This isn't optional.
 
 ### Third-Generation Antipsychotics (TGAs): The Fine-Tuners
 
@@ -88,7 +88,7 @@ The newest generation includes:
 
 In brain areas with too much dopamine, they reduce it (acting as antagonists), which decreases positive symptoms. In areas with too little dopamine, they increase it (acting as partial agonists), which helps with negative and cognitive symptoms. They do similar balancing with serotonin.
 
-{{M}}Think of TGAs like a smart thermostat that adjusts room-by-room. If your bedroom is too hot, it cools that specific room down. If your living room is too cold, it warms only that space up. Traditional thermostats just blast the whole house the same way—TGAs are more sophisticated.{{/M}}
+{{M}}Think of TGAs like a smart thermostat that adjusts room-by-room. If your bedroom is too hot, it cools that specific room down. If your living room is too cold, it warms only that space up. Traditional thermostats just blast the whole house the same way. TGAs are more sophisticated.{{/M}}
 
 **The Advantage:** TGAs appear to be similarly effective to SGAs but with fewer side effects. They're less likely to cause movement problems, anticholinergic effects, or metabolic syndrome. However, they can cause akathisia (that restless feeling), fatigue, headache, and nausea. There's also emerging evidence that aripiprazole can trigger impulse control problems, including compulsive gambling.
 
@@ -109,23 +109,23 @@ Selective Serotonin Reuptake Inhibitors are the most commonly prescribed antidep
 
 **How They Work:** SSRIs block the reuptake pump that normally sucks serotonin back into the sending neuron. With the pump blocked, more serotonin stays in the synapse, available to bind to receptors.
 
-**What They Treat:** Depression is the primary target, but SSRIs are also used for anxiety disorders (panic, social anxiety, GAD, PTSD), OCD, bulimia, premenstrual dysphoric disorder, and even premature ejaculation. For bipolar disorder, they're used cautiously—usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes.
+**What They Treat:** Depression is the primary target, but SSRIs are also used for anxiety disorders (panic, social anxiety, GAD, PTSD), OCD, bulimia, premenstrual dysphoric disorder, and even premature ejaculation. For bipolar disorder, they're used cautiously. Usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes.
 
 **Side Effects to Know:**
 
 The good news: SSRIs are generally safer than older antidepressants. They're less cardiotoxic and have fewer anticholinergic effects than tricyclics.
 
-The challenging news: SSRIs commonly cause sexual dysfunction in both men and women—problems with desire, arousal, and orgasm. This can persist even after stopping the medication, and it's a major reason people discontinue treatment.
+The challenging news: SSRIs commonly cause sexual dysfunction in both men and women. Problems with desire, arousal, and orgasm. This can persist even after stopping the medication, and it's a major reason people discontinue treatment.
 
 Three critical syndromes you must know:
 
-1. **Discontinuation Syndrome:** Happens when someone stops SSRIs abruptly. Symptoms include headaches, dizziness, mood swings, concentration problems, sleep issues, and flu-like feelings. {{M}}It's like your brain got used to having extra serotonin around, and suddenly cutting it off creates a adjustment period—similar to how your sleep schedule gets thrown off after a week of staying up late.{{/M}}
+1. **Discontinuation Syndrome:** Happens when someone stops SSRIs abruptly. Symptoms include headaches, dizziness, mood swings, concentration problems, sleep issues, and flu-like feelings. {{M}}It's like your brain got used to having extra serotonin around, and suddenly cutting it off creates a adjustment period. Similar to how your sleep schedule gets thrown off after a week of staying up late.{{/M}}
 
 2. **Serotonin Syndrome:** A potentially fatal condition caused by combining SSRIs with other serotonergic drugs (like MAOIs). Signs include extreme agitation, confusion, fever, tremors, seizures, and delirium. This requires immediate medical attention.
 
 3. **Tachyphylaxis (Antidepressant Poop-Out):** When a medication that was working suddenly stops being effective, despite maintaining the same dose. Symptoms include returning apathy, fatigue, dulled thinking, and sleep problems. Treatment options include increasing the dose, switching medications, or augmenting with another drug or therapy.
 
-**The Timing Issue:** All antidepressants have a delayed onset. Initial effects appear around 2-4 weeks, but full therapeutic benefits take 6-8 weeks. This is crucial for patient education—people need to know they won't feel better immediately.
+**The Timing Issue:** All antidepressants have a delayed onset. Initial effects appear around 2-4 weeks, but full therapeutic benefits take 6-8 weeks. This is crucial for patient education. People need to know they won't feel better immediately.
 
 ### SNRIs: The Dual-Action Option
 
@@ -140,7 +140,7 @@ Serotonin-Norepinephrine Reuptake Inhibitors include:
 
 **What They Treat:** Depression, anxiety disorders, and chronic pain conditions (especially neuropathic pain).
 
-**Key Differences:** SNRIs are similar in effectiveness to SSRIs for most depression, though some evidence suggests they may work better for severe depression. Side effects are comparable to SSRIs, including sexual dysfunction and risk of discontinuation syndrome and serotonin syndrome. However, because they affect norepinephrine, SNRIs can elevate blood pressure—something to monitor in patients with hypertension.
+**Key Differences:** SNRIs are similar in effectiveness to SSRIs for most depression, though some evidence suggests they may work better for severe depression. Side effects are comparable to SSRIs, including sexual dysfunction and risk of discontinuation syndrome and serotonin syndrome. However, because they affect norepinephrine, SNRIs can elevate blood pressure, something to monitor in patients with hypertension.
 
 ### NDRIs: The Energizing Alternative
 
@@ -150,9 +150,9 @@ Norepinephrine-Dopamine Reuptake Inhibitors are primarily represented by:
 
 **How It Works:** Bupropion inhibits reuptake of norepinephrine and dopamine.
 
-**What Makes It Different:** Bupropion is the SSRI alternative for people who can't tolerate sexual side effects—it doesn't cause them. It also doesn't cause significant weight gain or cardiac toxicity. {{M}}Bupropion is like coffee for your brain chemistry—it has an energizing effect that makes it great for people with low energy and motivation, but terrible for people who are already anxious or having trouble sleeping.{{/M}}
+**What Makes It Different:** Bupropion is the SSRI alternative for people who can't tolerate sexual side effects (it doesn't cause them. It also doesn't cause significant weight gain or cardiac toxicity. {{M}}Bupropion is like coffee for your brain chemistry) it has an energizing effect that makes it great for people with low energy and motivation, but terrible for people who are already anxious or having trouble sleeping.{{/M}}
 
-**Side Effects:** Skin rash, decreased appetite and weight loss, agitation, insomnia, and importantly—seizures at higher doses.
+**Side Effects:** Skin rash, decreased appetite and weight loss, agitation, insomnia, and importantly. Seizures at higher doses.
 
 ### TCAs: The Older But Still Useful Option
 
@@ -174,7 +174,7 @@ Tricyclic Antidepressants come in two types:
 
 **The Problem:** TCAs are effective but have significant side effects: cardiovascular effects (including dangerous drops in blood pressure when standing), anticholinergic effects, sedation, weight gain, and sexual dysfunction. Secondary amines have fewer side effects than tertiary amines.
 
-The biggest concern: **TCAs are cardiotoxic and lethal in overdose**. This means you must be very cautious prescribing them to anyone with heart disease or who may be suicidal. {{M}}TCAs are like powerful tools in a workshop—effective when used properly, but requiring serious safety precautions because the potential for harm is real.{{/M}}
+The biggest concern: **TCAs are cardiotoxic and lethal in overdose**. This means you must be very cautious prescribing them to anyone with heart disease or who may be suicidal. {{M}}TCAs are like powerful tools in a workshop. Effective when used properly, but requiring serious safety precautions because the potential for harm is real.{{/M}}
 
 ### MAOIs: The Last Resort (Usually)
 
@@ -292,4 +292,4 @@ Understanding these medications helps you:
 - **TCAs are effective but cardiotoxic:** lethal in overdose, require caution
 - **Know medications by generic names:** the exam preferentially uses these
 
-With this foundation, you're prepared not just for exam questions, but for real-world practice where these medications show up daily in clients' lives. Focus on understanding mechanisms and patterns rather than pure memorization—the logic will help you reason through questions you haven't seen before.
+With this foundation, you're prepared not just for exam questions, but for real-world practice where these medications show up daily in clients' lives. Focus on understanding mechanisms and patterns rather than pure memorization, the logic will help you reason through questions you haven't seen before.

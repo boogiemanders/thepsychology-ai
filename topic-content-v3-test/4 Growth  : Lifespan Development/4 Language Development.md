@@ -9,9 +9,9 @@ version: 3
 
 ## Why Language Development Matters for the EPPP
 
-Language development is one of those topics that shows up more often on the EPPP than many students expect. Why? Because language isn't just about words—it's the foundation of how we connect with others, process our experiences, and develop cognitively. As a psychologist, you'll work with clients across the lifespan who struggle with communication, assess children's developmental progress, and need to understand how language shapes mental health.
+Language development is one of those topics that shows up more often on the EPPP than many students expect. Why? Because language isn't just about words. It's the foundation of how we connect with others, process our experiences, and develop cognitively. As a psychologist, you'll work with clients across the lifespan who struggle with communication, assess children's developmental progress, and need to understand how language shapes mental health.
 
-{{M}}Think about the last time you traveled somewhere and didn't speak the language fluently. That frustration, that isolation—that's what we're trying to prevent when we understand language development.{{/M}} Let's dig into what you need to know for the exam and for your future practice.
+{{M}}Think about the last time you traveled somewhere and didn't speak the language fluently. That frustration, that isolation. That's what we're trying to prevent when we understand language development.{{/M}} Let's dig into what you need to know for the exam and for your future practice.
 
 ## The Big Three Theories: Understanding How We Learn to Talk
 
@@ -19,26 +19,26 @@ When it comes to explaining how humans acquire language, psychologists have deba
 
 ### Learning Theory: Practice Makes Perfect
 
-Learning theory says that language develops through **imitation** and **reinforcement**. {{M}}It's like learning to use professional jargon in your workplace—you hear your supervisor say certain phrases, you copy them, and when people respond positively, you keep using them.{{/M}} Children hear "thank you," they repeat it, caregivers smile and praise them, and boom—the phrase sticks.
+Learning theory says that language develops through **imitation** and **reinforcement**. {{M}}It's like learning to use professional jargon in your workplace (you hear your supervisor say certain phrases, you copy them, and when people respond positively, you keep using them.{{/M}} Children hear "thank you," they repeat it, caregivers smile and praise them, and boom) the phrase sticks.
 
 The limitation? This theory doesn't fully explain why all children progress through similar language stages at similar ages, regardless of how much reinforcement they receive. It also doesn't account for kids creating sentences they've never heard before.
 
 ### Nativist Theory: Born Ready
 
-Noam Chomsky flipped the script with **nativist theory**, arguing that humans come pre-wired for language. He proposed the **Language Acquisition Device (LAD)**—an inborn processor that helps children understand and produce rule-governed speech.
+Noam Chomsky flipped the script with **nativist theory**, arguing that humans come pre-wired for language. He proposed the **Language Acquisition Device (LAD)**, an inborn processor that helps children understand and produce rule-governed speech.
 
 Evidence supporting this view includes:
 - All languages share the same basic grammatical structure
 - Children worldwide hit language milestones at similar ages
 - Kids naturally figure out grammar rules without explicit teaching
 
-{{M}}Think of the LAD like the operating system on your smartphone—it comes pre-installed with the basic architecture to run language apps, even though the specific language (English, Spanish, Mandarin) gets downloaded through experience.{{/M}}
+{{M}}Think of the LAD like the operating system on your smartphone. It comes pre-installed with the basic architecture to run language apps, even though the specific language (English, Spanish, Mandarin) gets downloaded through experience.{{/M}}
 
 ### Social Interactionist Theory: It Takes a Village
 
 This theory combines both biological readiness and social environment. According to social interactionists, children need three things: native capacity, motivation to communicate, and a rich language environment.
 
-One key piece of evidence is **child-directed speech** (also called "parentese"). This is when caregivers naturally adjust their speech patterns—slowing down, using a higher pitch, simplifying sentences, and emphasizing key words. Research shows this style actually facilitates language learning. {{M}}It's similar to how a good mentor at work doesn't just dump information on you—they break it down, repeat important points, and check for understanding.{{/M}}
+One key piece of evidence is **child-directed speech** (also called "parentese"). This is when caregivers naturally adjust their speech patterns (slowing down, using a higher pitch, simplifying sentences, and emphasizing key words. Research shows this style actually facilitates language learning. {{M}}It's similar to how a good mentor at work doesn't just dump information on you) they break it down, repeat important points, and check for understanding.{{/M}}
 
 ## The Building Blocks: Five Components of Language
 
@@ -69,7 +69,7 @@ Pragmatics often trips students up, so pay special attention. It includes:
 
 Here's something fascinating: language awareness begins in the **third trimester**. Fetuses can distinguish their mother's voice from strangers' voices, showing changes in heart rate and movement. Newborns prefer speech sounds over other sounds and can already distinguish vowel sounds from their native language.
 
-By 12 months, infants understand that language has a **communicative function**—it transfers information between people—even when hearing unfamiliar languages. Bilingual children as young as 20 months can code-switch appropriately, using French with their French-speaking parent and English with their English-speaking parent.
+By 12 months, infants understand that language has a **communicative function** (it transfers information between people) even when hearing unfamiliar languages. Bilingual children as young as 20 months can code-switch appropriately, using French with their French-speaking parent and English with their English-speaking parent.
 
 ### Crying: The First Communication
 
@@ -105,7 +105,7 @@ Babbling initially includes sounds from ALL languages but narrows by 9 months to
 - More limited sound range
 - Vocalizations decrease without intervention
 
-However, when deaf infants are exposed to sign language from birth, they exhibit **manual babbling** at 6-8 months—repetitive hand movements that replicate components of American Sign Language. This parallel development supports nativist theory's claim about innate language capacity.
+However, when deaf infants are exposed to sign language from birth, they exhibit **manual babbling** at 6-8 months. Repetitive hand movements that replicate components of American Sign Language. This parallel development supports nativist theory's claim about innate language capacity.
 
 ## The Critical Period: Use It or Lose It
 
@@ -118,7 +118,7 @@ Key points to remember:
 - For first-language syntax, the critical period may be as early as the first year
 - Spoken and sign language show parallel developmental trajectories when acquisition begins at birth
 
-{{M}}It's somewhat like learning to play an instrument—you can start as an adult and become competent, but those who start young typically develop more native-like fluency and ease.{{/M}}
+{{M}}It's somewhat like learning to play an instrument. You can start as an adult and become competent, but those who start young typically develop more native-like fluency and ease.{{/M}}
 
 ## Language in Deaf and Hard-of-Hearing Children
 
@@ -149,7 +149,7 @@ Around ages 2-3, children make predictable errors that actually demonstrate they
 - "I goed to the store" (applying regular past tense rule)
 - "Two foots" (applying regular plural rule)
 
-{{M}}These errors are like when you learn a new app and try to apply gestures that work in one app to another—you're testing the rules to figure out how the system works.{{/M}} They're signs of active learning, not problems.
+{{M}}These errors are like when you learn a new app and try to apply gestures that work in one app to another. You're testing the rules to figure out how the system works.{{/M}} They're signs of active learning, not problems.
 
 ## Beyond Basic Language: Paralanguage and Code-Switching
 
@@ -162,11 +162,11 @@ Around ages 2-3, children make predictable errors that actually demonstrate they
 
 Some definitions also include gestures and facial expressions, though others classify these as **kinesics**.
 
-{{M}}Think about receiving a text message versus hearing someone speak—you lose the paralanguage in text, which is why we sometimes misinterpret tone or add emojis to clarify meaning.{{/M}}
+{{M}}Think about receiving a text message versus hearing someone speak. You lose the paralanguage in text, which is why we sometimes misinterpret tone or add emojis to clarify meaning.{{/M}}
 
 ### Code-Switching: Linguistic Flexibility
 
-**Code-switching** occurs when bilingual/multilingual speakers use multiple languages within a single conversation. This isn't random—it serves specific purposes:
+**Code-switching** occurs when bilingual/multilingual speakers use multiple languages within a single conversation. This isn't random. It serves specific purposes:
 - Compensating for language gaps
 - Building rapport
 - Expressing particular emotions
@@ -188,18 +188,18 @@ Often, speakers code-switch unconsciously, but when deliberate, it demonstrates 
 - Role reversal and family boundary issues
 - Increased parent-child conflict (in high-frequency brokering)
 
-{{M}}Imagine being in your twenties and having to translate your parent's medical appointments, legal documents, and financial matters—you'd develop skills quickly, but also carry stress beyond your developmental stage.{{/M}}
+{{M}}Imagine being in your twenties and having to translate your parent's medical appointments, legal documents, and financial matters. You'd develop skills quickly, but also carry stress beyond your developmental stage.{{/M}}
 
 ## Common Misconceptions Students Get Wrong
 
 **Misconception #1**: "Telegraphic speech is named after telegraph messages."
-**Reality**: While the name comes from the clipped style of telegrams, the EPPP wants you to know the developmental significance—it's when children start combining content words meaningfully.
+**Reality**: While the name comes from the clipped style of telegrams, the EPPP wants you to know the developmental significance. It's when children start combining content words meaningfully.
 
 **Misconception #2**: "All language components develop at the same rate."
 **Reality**: Comprehension precedes production. Pragmatics develops throughout childhood and adolescence, long after basic vocabulary and grammar are established.
 
 **Misconception #3**: "Overregularization is a language delay."
-**Reality**: It's actually evidence of rule learning. Kids who say "goed" understand past tense rules—they're just overapplying them.
+**Reality**: It's actually evidence of rule learning. Kids who say "goed" understand past tense rules. They're just overapplying them.
 
 **Misconception #4**: "The critical period ends at puberty for all language aspects."
 **Reality**: Different components have different sensitive periods. Syntax may have the earliest critical period (first year), while vocabulary is much more flexible.

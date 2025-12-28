@@ -9,9 +9,9 @@ version: 3
 
 ## Understanding Trauma, Dissociation, and Somatic Symptoms: A Practical Guide
 
-When someone walks into your office complaining of paralysis that no medical test can explain, or a combat veteran who can't stop reliving the moment his convoy was attacked, or a parent who reports memory gaps around a childhood trauma—you're dealing with some of psychology's most challenging presentations. These disorders sit at the intersection of mind and body, often blurring the lines between physical symptoms and psychological pain.
+When someone walks into your office complaining of paralysis that no medical test can explain, or a combat veteran who can't stop reliving the moment his convoy was attacked, or a parent who reports memory gaps around a childhood trauma. You're dealing with some of psychology's most challenging presentations. These disorders sit at the intersection of mind and body, often blurring the lines between physical symptoms and psychological pain.
 
-This lesson will walk you through three major categories that frequently appear on the EPPP: Trauma/Stressor-Related Disorders, Dissociative Disorders, and Somatic Symptom Disorders. Understanding these conditions isn't just about memorizing criteria—it's about recognizing how the human mind protects itself, sometimes in ways that create more problems than they solve.
+This lesson will walk you through three major categories that frequently appear on the EPPP: Trauma/Stressor-Related Disorders, Dissociative Disorders, and Somatic Symptom Disorders. Understanding these conditions isn't just about memorizing criteria. It's about recognizing how the human mind protects itself, sometimes in ways that create more problems than they solve.
 
 ## Why These Disorders Matter for Your Practice
 
@@ -19,13 +19,13 @@ These three categories share a common thread: they all involve the body and mind
 
 ## Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks
 
-All disorders in this category require exposure to a traumatic or stressful event as part of the diagnosis. This is crucial for the EPPP—you can't diagnose any of these conditions without establishing that a triggering event occurred.
+All disorders in this category require exposure to a traumatic or stressful event as part of the diagnosis. This is crucial for the EPPP. You can't diagnose any of these conditions without establishing that a triggering event occurred.
 
 ### Reactive Attachment Disorder (RAD)
 
 This diagnosis applies when a child's early caregiving was so inadequate that it fundamentally disrupted their ability to form healthy emotional connections. You're looking for two core features:
 
-1. The child consistently pulls away from adult caregivers emotionally—they don't seek comfort when upset and don't respond when comfort is offered
+1. The child consistently pulls away from adult caregivers emotionally. They don't seek comfort when upset and don't respond when comfort is offered
 2. Persistent social and emotional problems that include at least two symptoms: minimal emotional responsiveness, limited positive emotions, or unexplained fear/sadness/irritability around adult caregivers
 
 Critical diagnostic requirements:
@@ -33,7 +33,7 @@ Critical diagnostic requirements:
 - Symptoms started before age 5
 - Child has a developmental age of at least 9 months (so you know they're developmentally capable of attachment)
 
-{{M}}Think of attachment like learning your first language—there's a critical window when the brain is primed to develop these connections. When that window closes without proper input, catching up becomes much harder.{{/M}}
+{{M}}Think of attachment like learning your first language. There's a critical window when the brain is primed to develop these connections. When that window closes without proper input, catching up becomes much harder.{{/M}}
 
 ### Disinhibited Social Engagement Disorder (DSED)
 
@@ -65,7 +65,7 @@ The neuroscience here is testable, so pay attention:
 
 - **Hyperactive amygdala**: The brain's alarm system is stuck in overdrive
 - **Hyperactive anterior cingulate cortex**: Increased emotional processing
-- **Hypoactive ventromedial prefrontal cortex**: The "brake pedal" that normally calms the amygdala isn't working properly—this creates a runaway fear response
+- **Hypoactive ventromedial prefrontal cortex**: The "brake pedal" that normally calms the amygdala isn't working properly. This creates a runaway fear response
 - **Reduced hippocampal volume**: The memory center is actually smaller
 - **Neurotransmitter changes**: Increased dopamine, norepinephrine, and glutamate; decreased serotonin and GABA
 
@@ -150,7 +150,7 @@ This involves an inability to recall important personal information that goes wa
 | **Systematized** | Loss of memory for a specific category of information | Rare |
 | **Continuous** | Can't remember new events as they occur | Rare |
 
-**Dissociative Fugue**: This is a specifier for dissociative amnesia that involves purposeful travel or aimless wandering combined with memory loss. {{M}}Imagine someone who suddenly finds themselves in a different city with no memory of how they got there or why they left—that's dissociative fugue.{{/M}}
+**Dissociative Fugue**: This is a specifier for dissociative amnesia that involves purposeful travel or aimless wandering combined with memory loss. {{M}}Imagine someone who suddenly finds themselves in a different city with no memory of how they got there or why they left. That's dissociative fugue.{{/M}}
 
 Dissociative amnesia typically relates to victimization or trauma exposure.
 
@@ -161,7 +161,7 @@ This disorder involves persistent or recurrent episodes of:
 - **Depersonalization**: Feeling unreal, detached, or like an outside observer of your own thoughts and actions
 - **Derealization**: Feeling that your surroundings are unreal or distant
 
-Critical requirement: Reality testing remains intact. The person knows these experiences aren't real—they just feel that way. Symptoms must cause significant distress or impairment.
+Critical requirement: Reality testing remains intact. The person knows these experiences aren't real. They just feel that way. Symptoms must cause significant distress or impairment.
 
 {{M}}Some people describe depersonalization as feeling like they're watching themselves in a movie, or like they're operating their body remotely. Derealization is often described as feeling like the world is behind a fog or glass wall.{{/M}}
 
@@ -207,10 +207,10 @@ This is one of the most fascinating diagnoses for many clinicians. The person ha
 This is a specific presentation worth knowing. PNES look like epileptic seizures behaviorally, but:
 
 - They're NOT accompanied by abnormal brain electrical activity
-- Video EEG is the gold standard for identification—it records behavior and brain activity simultaneously
+- Video EEG is the gold standard for identification. It records behavior and brain activity simultaneously
 - When EEG patterns don't correspond to seizure-like behaviors, PNES is likely
 
-{{M}}Think of PNES like a fire alarm going off without any actual fire—the alarm system (behavior) activates, but the trigger (abnormal brain electrical activity) isn't present.{{/M}}
+{{M}}Think of PNES like a fire alarm going off without any actual fire, the alarm system (behavior) activates, but the trigger (abnormal brain electrical activity) isn't present.{{/M}}
 
 ### Factitious Disorder: The Intent to Deceive
 
@@ -261,7 +261,7 @@ The **forced-choice method** is valuable for detecting malingering. It presents 
 ## Common Misconceptions Students Have
 
 **Misconception 1**: "PTSD only happens to combat veterans."
-Reality: PTSD can develop after any trauma involving actual or threatened death, serious injury, or sexual violence—car accidents, assaults, natural disasters, medical emergencies, etc.
+Reality: PTSD can develop after any trauma involving actual or threatened death, serious injury, or sexual violence. Car accidents, assaults, natural disasters, medical emergencies, etc.
 
 **Misconception 2**: "Dissociative amnesia is just 'forgetting' due to not paying attention."
 Reality: This is an inability to recall important personal information that far exceeds ordinary forgetting and is typically trauma-related.
@@ -328,4 +328,4 @@ Reality: Factitious disorder is a mental disorder involving deception without ob
 - Forced-choice testing showing below-chance performance suggests malingering
 - Genuine memory loss has gradual onset/termination; feigned memory loss often has sudden onset/termination
 
-Understanding these disorders requires appreciating how trauma, stress, and psychological distress can manifest in diverse ways—from intrusive memories to disconnection from reality to unexplained physical symptoms. For the EPPP, focus on distinguishing similar disorders, knowing treatment hierarchies, and understanding the role of trauma exposure in diagnosis.
+Understanding these disorders requires appreciating how trauma, stress, and psychological distress can manifest in diverse ways. From intrusive memories to disconnection from reality to unexplained physical symptoms. For the EPPP, focus on distinguishing similar disorders, knowing treatment hierarchies, and understanding the role of trauma exposure in diagnosis.

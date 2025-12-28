@@ -9,7 +9,7 @@ version: 3
 
 ## Why This Topic Matters for Your Practice
 
-When you start working as a psychologist, you'll quickly realize that many of your clients aren't struggling with mental disorders—they're struggling with work. They'll talk about impossible workloads, unfair bosses, burnout, and the constant juggle between career demands and family life. Understanding job satisfaction, organizational commitment, and workplace stress isn't just academic knowledge—it's essential for helping real people navigate one of the most significant parts of their lives.
+When you start working as a psychologist, you'll quickly realize that many of your clients aren't struggling with mental disorders (they're struggling with work. They'll talk about impossible workloads, unfair bosses, burnout, and the constant juggle between career demands and family life. Understanding job satisfaction, organizational commitment, and workplace stress isn't just academic knowledge) it's essential for helping real people navigate one of the most significant parts of their lives.
 
 This material also appears frequently on the EPPP because it bridges multiple domains: social psychology, cognitive-affective processes, and organizational behavior. Let's break it down into concepts you can actually use and remember.
 
@@ -17,19 +17,19 @@ This material also appears frequently on the EPPP because it bridges multiple do
 
 ### What Determines Job Satisfaction?
 
-You might assume that job satisfaction is all about external factors—salary, benefits, office environment. But research reveals something surprising: some people tend to be satisfied (or dissatisfied) across different jobs throughout their careers. This stability suggests that internal factors play a major role.
+You might assume that job satisfaction is all about external factors. Salary, benefits, office environment. But research reveals something surprising: some people tend to be satisfied (or dissatisfied) across different jobs throughout their careers. This stability suggests that internal factors play a major role.
 
 **Three Key Internal Factors:**
 
-**Self-esteem** significantly predicts both job satisfaction and life satisfaction. People who feel good about themselves generally feel better about their work. This makes intuitive sense—{{M}}it's like having a pair of glasses that tint everything you see{{/M}}. If you view yourself positively, you're more likely to interpret workplace experiences favorably.
+**Self-esteem** significantly predicts both job satisfaction and life satisfaction. People who feel good about themselves generally feel better about their work. This makes intuitive sense, {{M}}it's like having a pair of glasses that tint everything you see{{/M}}. If you view yourself positively, you're more likely to interpret workplace experiences favorably.
 
-**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts. This isn't about being realistic or pessimistic—it's about baseline emotional responses.
+**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts. This isn't about being realistic or pessimistic. It's about baseline emotional responses.
 
 **Genetic predisposition** might sound far-fetched, but there's actual evidence for it. A famous study of male identical twins who were separated at birth found they had similar levels of job satisfaction as adults, despite working in completely different fields and environments. Researchers estimated that about 30% of the variation in job satisfaction can be attributed to genetic factors. The other 70%? That's where environment, choice, and circumstance come in.
 
 ### Organizational Justice: The Fairness Factor
 
-While internal factors matter, external workplace conditions are crucial. One of the most powerful predictors of job satisfaction is organizational justice—how fair people perceive their workplace to be. There are three types:
+While internal factors matter, external workplace conditions are crucial. One of the most powerful predictors of job satisfaction is organizational justice. How fair people perceive their workplace to be. There are three types:
 
 | Type of Justice | What It Means | Example |
 |----------------|---------------|---------|
@@ -39,7 +39,7 @@ While internal factors matter, external workplace conditions are crucial. One of
 
 Interactional justice breaks down further into interpersonal (how you're treated during interactions) and informational (how thoroughly decisions are explained to you).
 
-All three types relate positively to job satisfaction, though researchers debate which matters most. What's clear is that feeling treated unfairly—whether in outcomes, processes, or communication—significantly damages job satisfaction.
+All three types relate positively to job satisfaction, though researchers debate which matters most. What's clear is that feeling treated unfairly (whether in outcomes, processes, or communication) significantly damages job satisfaction.
 
 ### What Job Satisfaction Actually Predicts
 
@@ -48,24 +48,24 @@ This is crucial for the EPPP: the relationships between job satisfaction and var
 **Job satisfaction relates to:**
 
 - **Longevity and health**: Satisfied employees live longer and enjoy better physical and psychological health (the link with psychological health is stronger)
-- **Job performance**: The correlation ranges from .17 to .30 depending on the study—statistically significant but not enormous
+- **Job performance**: The correlation ranges from .17 to .30 depending on the study. Statistically significant but not enormous
 - **Absenteeism and turnover**: Satisfied employees are less likely to miss work or quit, but again, the relationships are moderate
 
-The relationship between satisfaction and performance is particularly interesting because the direction of causality remains debated. Does satisfaction lead to better performance, or does better performance lead to satisfaction? Research suggests that when pay is closely tied to performance, performance might actually drive satisfaction rather than the other way around. {{M}}Think about it like exercising—you might not love working out initially, but when you see results, you start enjoying it more{{/M}}.
+The relationship between satisfaction and performance is particularly interesting because the direction of causality remains debated. Does satisfaction lead to better performance, or does better performance lead to satisfaction? Research suggests that when pay is closely tied to performance, performance might actually drive satisfaction rather than the other way around. {{M}}Think about it like exercising. You might not love working out initially, but when you see results, you start enjoying it more{{/M}}.
 
 ## Organizational Commitment: Why People Stay (or Leave)
 
-Organizational commitment differs from job satisfaction. You might not love your daily tasks but still feel committed to your organization—or vice versa. There are three distinct types:
+Organizational commitment differs from job satisfaction. You might not love your daily tasks but still feel committed to your organization. Or vice versa. There are three distinct types:
 
-**Affective commitment** is emotional attachment. {{M}}It's like staying in a relationship because you genuinely love the person{{/M}}—you want to be there. Employees with high affective commitment identify with organizational values and goals.
+**Affective commitment** is emotional attachment. {{M}}It's like staying in a relationship because you genuinely love the person{{/M}}. You want to be there. Employees with high affective commitment identify with organizational values and goals.
 
 **Continuance commitment** is staying because leaving would be costly. {{M}}It's like remaining in a relationship because you share a lease and can't afford to move out{{/M}}. Financial considerations, lack of alternative jobs, or loss of benefits keep people in place.
 
 **Normative commitment** involves feeling obligated to stay. {{M}}It's like staying because you feel loyal or because the organization invested heavily in training you{{/M}}. There's a sense of duty or moral obligation.
 
-Of these three, **affective commitment consistently shows the strongest relationships with positive job outcomes**. People who are emotionally attached to their organizations perform better, are more satisfied, and are less likely to leave. For the EPPP, remember that affective commitment is the "golden" type—it's what organizations should cultivate.
+Of these three, **affective commitment consistently shows the strongest relationships with positive job outcomes**. People who are emotionally attached to their organizations perform better, are more satisfied, and are less likely to leave. For the EPPP, remember that affective commitment is the "golden" type. It's what organizations should cultivate.
 
-The correlation coefficients between organizational commitment and job outcomes are similar to those for job satisfaction—low to moderate. The relationship is somewhat stronger for satisfaction than for performance or turnover.
+The correlation coefficients between organizational commitment and job outcomes are similar to those for job satisfaction. Low to moderate. The relationship is somewhat stronger for satisfaction than for performance or turnover.
 
 ## Stress: When Work Pushes You Beyond Your Limits
 
@@ -82,11 +82,11 @@ Hans Selye proposed that our bodies respond to all stressors with the same three
 - The sympathetic nervous system activates, and the adrenal medulla releases epinephrine and norepinephrine
 - The pituitary gland releases ACTH, which stimulates the adrenal cortex to release cortisol
 
-These hormones increase heart rate, respiration, and glucose levels—preparing you for fight-or-flight. This response is adaptive for acute threats.
+These hormones increase heart rate, respiration, and glucose levels, preparing you for fight-or-flight. This response is adaptive for acute threats.
 
 **Stage 2: Resistance**
 
-If the stressor continues, you enter the resistance stage. Some physiological functions normalize, but cortisol remains elevated to maintain high energy levels and help you cope. {{M}}It's like your body shifting from panic mode to sustained high alert{{/M}}—you're managing, but at a cost.
+If the stressor continues, you enter the resistance stage. Some physiological functions normalize, but cortisol remains elevated to maintain high energy levels and help you cope. {{M}}It's like your body shifting from panic mode to sustained high alert{{/M}}. You're managing, but at a cost.
 
 **Stage 3: Exhaustion**
 
@@ -102,7 +102,7 @@ Prolonged stress and chronically elevated cortisol have serious consequences:
 - **Sleep disruption**: Insomnia becomes common
 - **Cognitive impairment**: Elevated cortisol can damage hippocampal cells, impairing your ability to form new long-term memories
 
-This last point is particularly relevant for psychologists. If your clients are under chronic stress, their memory formation may be literally compromised—something to consider when teaching coping strategies or processing trauma.
+This last point is particularly relevant for psychologists. If your clients are under chronic stress, their memory formation may be literally compromised, something to consider when teaching coping strategies or processing trauma.
 
 ## Major Sources of Workplace Stress
 
@@ -115,7 +115,7 @@ One of the most consistent findings in stress research is that lacking control o
 - Emotional distress
 - Physical health problems
 
-The research on machine-paced versus self-paced work is particularly striking—workers on assembly lines with no control over pace show higher cortisol levels than those who can control their work speed. {{M}}It's the difference between being stuck in bumper-to-bumper traffic versus choosing a scenic route at your own pace{{/M}}—even if both trips take the same time, the experience feels entirely different.
+The research on machine-paced versus self-paced work is particularly striking (workers on assembly lines with no control over pace show higher cortisol levels than those who can control their work speed. {{M}}It's the difference between being stuck in bumper-to-bumper traffic versus choosing a scenic route at your own pace{{/M}}) even if both trips take the same time, the experience feels entirely different.
 
 ### Work-Family Conflict
 
@@ -129,7 +129,7 @@ Interestingly, research across multiple countries found that men and women repor
 
 ### Downsizing: The Stress Everyone Feels
 
-Downsizing—the planned elimination of jobs to cut costs—creates obvious stress for those who lose jobs. Less obvious but equally important is the impact on survivors.
+Downsizing (the planned elimination of jobs to cut costs) creates obvious stress for those who lose jobs. Less obvious but equally important is the impact on survivors.
 
 **Survivor syndrome** includes:
 - Reduced job satisfaction and organizational commitment
@@ -138,7 +138,7 @@ Downsizing—the planned elimination of jobs to cut costs—creates obvious stre
 - Somatic symptoms
 - Guilt about surviving when colleagues didn't
 
-This syndrome often stems from the organization violating the **psychological contract**—the unspoken, implied exchange relationship between employee and employer. {{M}}When you start a job, there's an invisible handshake that says, "Work hard and you'll have security"{{/M}}. Downsizing shatters that trust, even for those who keep their jobs.
+This syndrome often stems from the organization violating the **psychological contract**, the unspoken, implied exchange relationship between employee and employer. {{M}}When you start a job, there's an invisible handshake that says, "Work hard and you'll have security"{{/M}}. Downsizing shatters that trust, even for those who keep their jobs.
 
 To minimize damage, organizations should use fair procedures for determining layoffs and communicate these procedures clearly to all employees.
 
@@ -150,11 +150,11 @@ Burnout is a specific syndrome resulting from chronic work stress. Christina Mas
 
 | Dimension | What It Means |
 |-----------|---------------|
-| **Exhaustion** | Deep physical and emotional depletion—you're running on empty |
+| **Exhaustion** | Deep physical and emotional depletion. You're running on empty |
 | **Depersonalization/Cynicism** | Treating clients or coworkers as objects rather than people; developing a negative, detached attitude |
 | **Reduced Sense of Efficacy** | Feeling incompetent and doubting your ability to accomplish anything meaningful |
 
-An early warning sign of burnout is putting in more time and effort without seeing increased productivity—{{M}}like spinning your wheels in sand, working harder but going nowhere{{/M}}. This is often accompanied by irritability, negativity, social withdrawal, and physical symptoms like headaches or digestive problems.
+An early warning sign of burnout is putting in more time and effort without seeing increased productivity, {{M}}like spinning your wheels in sand, working harder but going nowhere{{/M}}. This is often accompanied by irritability, negativity, social withdrawal, and physical symptoms like headaches or digestive problems.
 
 ### What Increases Burnout Risk?
 
@@ -181,7 +181,7 @@ Kobasa's research on hardiness identified three interconnected characteristics t
 - **Commitment**: They're deeply invested in their activities, relationships, and work
 - **Challenge**: They view new experiences as opportunities for growth rather than threats
 
-{{M}}Think of hardy individuals as having psychological shock absorbers{{/M}}—they experience the same bumps but handle them with less damage. Research confirms that hardiness protects both physical and mental health.
+{{M}}Think of hardy individuals as having psychological shock absorbers{{/M}}. They experience the same bumps but handle them with less damage. Research confirms that hardiness protects both physical and mental health.
 
 ### Organization-Based Self-Esteem (OBSE)
 
@@ -191,7 +191,7 @@ OBSE refers to how valuable you perceive yourself to be as an organization membe
 - Stronger organizational commitment
 - Better stress management (active rather than passive coping)
 
-People with low OBSE are more vulnerable to stress and tend to cope passively—enduring rather than addressing problems.
+People with low OBSE are more vulnerable to stress and tend to cope passively, enduring rather than addressing problems.
 
 ### Type A Behavior Pattern: The Risk Factor
 
@@ -201,9 +201,9 @@ Unlike hardiness and OBSE, Type A behavior increases vulnerability to stress's n
 - Excessive competitiveness
 - Hostility
 
-Initially, researchers thought the entire pattern predicted heart disease. More recent evidence suggests that **hostility** is the component most strongly linked to cardiovascular problems. {{M}}It's not the hurrying or the ambition that hurts you—it's the anger and antagonism{{/M}}.
+Initially, researchers thought the entire pattern predicted heart disease. More recent evidence suggests that **hostility** is the component most strongly linked to cardiovascular problems. {{M}}It's not the hurrying or the ambition that hurts you. It's the anger and antagonism{{/M}}.
 
-For the EPPP, remember that Type A is the outlier here—it's associated with worse outcomes, while hardiness and OBSE are protective.
+For the EPPP, remember that Type A is the outlier here. It's associated with worse outcomes, while hardiness and OBSE are protective.
 
 ## Common Misconceptions Students Hold
 
@@ -261,6 +261,6 @@ For the EPPP, remember that Type A is the outlier here—it's associated with wo
 - Job burnout has three core characteristics: exhaustion, depersonalization/cynicism, and reduced efficacy
 - Hardiness (control, commitment, challenge) and organization-based self-esteem increase stress resistance
 - Type A behavior pattern, particularly the hostility component, increases vulnerability to stress-related health problems, especially cardiovascular disease
-- The psychological contract (implied exchange relationship) matters—its violation through downsizing causes survivor syndrome even in those who keep their jobs
+- The psychological contract (implied exchange relationship) matters. Its violation through downsizing causes survivor syndrome even in those who keep their jobs
 
-Understanding these concepts prepares you not only for EPPP questions but also for the reality of practice, where workplace issues will be a constant theme in your clients' lives—and potentially in your own career management.
+Understanding these concepts prepares you not only for EPPP questions but also for the reality of practice, where workplace issues will be a constant theme in your clients' lives. And potentially in your own career management.

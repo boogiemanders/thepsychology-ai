@@ -9,13 +9,13 @@ version: 3
 
 ## Why Choosing Employees Matters More Than You Think
 
-When you accept a job offer, have you ever wondered what happened behind the scenes to get you into that interview chair? Organizations invest serious time and money into figuring out who to hire—and for good reason. The wrong hire can cost a company thousands of dollars in training, lost productivity, and the hassle of starting the search all over again. On the flip side, the right hire can transform a team's performance.
+When you accept a job offer, have you ever wondered what happened behind the scenes to get you into that interview chair? Organizations invest serious time and money into figuring out who to hire. And for good reason. The wrong hire can cost a company thousands of dollars in training, lost productivity, and the hassle of starting the search all over again. On the flip side, the right hire can transform a team's performance.
 
 For the EPPP, understanding employee selection techniques isn't just about memorizing a list of methods. You need to know which techniques actually work, why they work, and how organizations combine them to make smart hiring decisions. Let's break this down in a way that'll stick with you long after exam day.
 
 ## The Building Blocks: What Are Selection Techniques?
 
-Selection techniques are tools organizations use to predict who will succeed in a job. Think of them as predictors—they're trying to forecast future job performance based on information gathered during the hiring process. The big question every organization faces is: "Which predictors actually work?"
+Selection techniques are tools organizations use to predict who will succeed in a job. Think of them as predictors. They're trying to forecast future job performance based on information gathered during the hiring process. The big question every organization faces is: "Which predictors actually work?"
 
 Here's what you need to understand: not all selection techniques are created equal. Some have strong validity (meaning they accurately predict job performance), while others seem like they should work but don't hold up under scientific scrutiny.
 
@@ -25,7 +25,7 @@ Here's what you need to understand: not all selection techniques are created equ
 
 Interviews come in two main flavors: structured and unstructured.
 
-**Unstructured interviews** are what most of us experience. The interviewer asks whatever comes to mind, follows interesting tangents, and might ask completely different questions to different candidates. {{M}}It's like having a first date where the conversation flows naturally but unpredictably{{/M}}—you might spend most of the time discussing travel experiences with one person and career goals with another.
+**Unstructured interviews** are what most of us experience. The interviewer asks whatever comes to mind, follows interesting tangents, and might ask completely different questions to different candidates. {{M}}It's like having a first date where the conversation flows naturally but unpredictably{{/M}}. You might spend most of the time discussing travel experiences with one person and career goals with another.
 
 **Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system. For years, researchers believed structured interviews were clearly superior predictors of job performance.
 
@@ -37,15 +37,15 @@ Within structured interviews, you'll encounter two important types:
 
 **Situational interviews** are future-oriented and hypothetical: "Imagine a customer becomes angry and starts raising their voice. How would you handle this situation?" You're describing what you *would* do, not what you *did* do.
 
-Here's a twist the research revealed: When behavioral and situational questions are designed to assess the same job requirements and asked of the same applicants, situational questions actually predict job performance better. This suggests that intentions about future behavior may be more predictive than past behaviors—a counterintuitive finding worth remembering for the exam.
+Here's a twist the research revealed: When behavioral and situational questions are designed to assess the same job requirements and asked of the same applicants, situational questions actually predict job performance better. This suggests that intentions about future behavior may be more predictive than past behaviors, a counterintuitive finding worth remembering for the exam.
 
 ### 2. General Mental Ability Tests: The Champion Predictor
 
 These tests go by several names: general cognitive ability tests, intelligence tests, or simply cognitive ability tests. Here's what you absolutely need to know: **these are the most valid predictors of job performance** across different types of jobs, performance criteria, and organizations.
 
-Why do they work so well? Intelligence relates to learning ability, problem-solving, and the capacity to handle complex tasks—all crucial for job success regardless of the specific position.
+Why do they work so well? Intelligence relates to learning ability, problem-solving, and the capacity to handle complex tasks. All crucial for job success regardless of the specific position.
 
-But there's a significant downside: general mental ability tests have the highest risk of adverse impact on applicants from certain ethnic and racial minority groups. This creates a legal and ethical tension for organizations—they want the most valid predictor, but they also need to ensure fair hiring practices.
+But there's a significant downside: general mental ability tests have the highest risk of adverse impact on applicants from certain ethnic and racial minority groups. This creates a legal and ethical tension for organizations. They want the most valid predictor, but they also need to ensure fair hiring practices.
 
 ### 3. Personality Tests: The Big Five and Beyond
 
@@ -56,7 +56,7 @@ Many organizations use personality assessments based on the Big Five personality
 - Agreeableness
 - Emotional stability
 
-Of these five traits, **conscientiousness** consistently emerges as the best predictor of job performance across different jobs and performance criteria. {{M}}This makes intuitive sense—like choosing a reliable friend to water your plants while you're on vacation{{/M}}, employers want someone who shows up, follows through, and pays attention to details.
+Of these five traits, **conscientiousness** consistently emerges as the best predictor of job performance across different jobs and performance criteria. {{M}}This makes intuitive sense, like choosing a reliable friend to water your plants while you're on vacation{{/M}}, employers want someone who shows up, follows through, and pays attention to details.
 
 The other traits matter too, but their predictive power depends more on the specific job. Extraversion might predict success in sales but matter less for a software developer working independently.
 
@@ -76,7 +76,7 @@ One more critical finding: When researchers examined which combination of select
 
 Work samples require applicants to actually perform job tasks under realistic conditions. {{M}}Instead of asking a chef to describe how they'd prepare a dish, you hand them ingredients and watch them cook{{/M}}.
 
-The validity of work samples has shifted over time. Earlier research suggested they were as valid as—or even more valid than—general mental ability tests. However, more recent findings show lower validity coefficients. Why the change? Work samples were traditionally used for manual skilled jobs (like welding or carpentry), where they work exceptionally well. As organizations increasingly use them for service-sector jobs, their accuracy has decreased.
+The validity of work samples has shifted over time. Earlier research suggested they were as valid as (or even more valid than) general mental ability tests. However, more recent findings show lower validity coefficients. Why the change? Work samples were traditionally used for manual skilled jobs (like welding or carpentry), where they work exceptionally well. As organizations increasingly use them for service-sector jobs, their accuracy has decreased.
 
 There's a specialized version called **trainability work sample tests** designed for applicants without previous experience. These incorporate training periods followed by evaluation, helping organizations determine whether inexperienced applicants are likely to benefit from on-the-job training.
 
@@ -84,19 +84,19 @@ Work samples often appear in **realistic job previews (RJPs)**, which show appli
 
 ### 6. Assessment Centers: The Multi-Method Approach
 
-Assessment centers aren't physical locations—they're comprehensive evaluation processes typically used for managerial positions. They involve multiple raters evaluating candidates on several performance dimensions using multiple methods, including personality tests, ability tests, structured interviews, and simulations.
+Assessment centers aren't physical locations. They're comprehensive evaluation processes typically used for managerial positions. They involve multiple raters evaluating candidates on several performance dimensions using multiple methods, including personality tests, ability tests, structured interviews, and simulations.
 
 Two classic simulations you should know:
 
 **The in-basket exercise** assesses decision-making skills. {{M}}Imagine arriving at your desk to find 30 emails, 15 voicemails, and a stack of memos all demanding immediate attention{{/M}}. Participants must prioritize, delegate, respond, and make decisions just as they would in the actual job.
 
-**The leaderless group discussion** evaluates leadership potential. A small group receives a job-related problem to solve together—but no one is appointed leader. Raters observe who emerges as a leader, how they influence others, and how they navigate group dynamics.
+**The leaderless group discussion** evaluates leadership potential. A small group receives a job-related problem to solve together. But no one is appointed leader. Raters observe who emerges as a leader, how they influence others, and how they navigate group dynamics.
 
 The strength of assessment centers lies in their comprehensiveness. By using multiple methods and multiple raters, they reduce the bias and error that can affect single-method approaches.
 
 ### 7. Biographical Information: Your History Predicts Your Future
 
-When organizations systematically collect biographical information to predict job performance, they create a **biodata form** or **biographical information blank (BIB)**. These aren't just basic resume facts—empirically derived items might ask about family history, health history, interests, social relationships, and life experiences.
+When organizations systematically collect biographical information to predict job performance, they create a **biodata form** or **biographical information blank (BIB)**. These aren't just basic resume facts. Empirically derived items might ask about family history, health history, interests, social relationships, and life experiences.
 
 Questions typically use multiple-choice or other easily scored formats. The items are chosen because research shows they predict job performance, even if the connection isn't immediately obvious.
 
@@ -122,7 +122,7 @@ There are two main approaches: compensatory and noncompensatory methods.
 
 ### Compensatory Methods: Balance Is Possible
 
-With compensatory methods, a high score on one predictor can compensate for a lower score on another. {{M}}It's like balancing your monthly budget—spending more on rent might be okay if you're spending less on transportation{{/M}}.
+With compensatory methods, a high score on one predictor can compensate for a lower score on another. {{M}}It's like balancing your monthly budget, spending more on rent might be okay if you're spending less on transportation{{/M}}.
 
 **Clinical prediction** relies on human judgment. Decision-makers use their understanding of the job to evaluate whether an applicant's overall profile fits the position. The major problem? This approach is susceptible to biases and errors. Research consistently shows that statistical methods outperform human judgment for predicting job performance.
 
@@ -132,7 +132,7 @@ With compensatory methods, a high score on one predictor can compensate for a lo
 
 With noncompensatory methods, a low score on one predictor cannot be compensated for by high scores on others. You must meet minimum standards on every measure.
 
-**Multiple cutoff** administers all predictors to all applicants. To move forward, applicants must score above the cutoff on every single predictor. {{M}}Think of it like college admission requirements where you need both a minimum GPA and a minimum test score—excellence in one doesn't excuse deficiency in the other{{/M}}.
+**Multiple cutoff** administers all predictors to all applicants. To move forward, applicants must score above the cutoff on every single predictor. {{M}}Think of it like college admission requirements where you need both a minimum GPA and a minimum test score. Excellence in one doesn't excuse deficiency in the other{{/M}}.
 
 **Multiple hurdles** takes a sequential approach. Predictors are administered in a specific order, and applicants must pass each hurdle before advancing to the next one. This saves money when some predictors are expensive or time-consuming. Why give an expensive assessment center evaluation to everyone when you can first screen out candidates who don't meet basic qualifications?
 
@@ -187,7 +187,7 @@ Reality: While statistical validity is crucial, low face validity can cause appl
 
 - **General mental ability tests are the single most valid predictor** of job performance across all jobs, but they carry the highest risk of adverse impact on minority groups.
 
-- **Both structured and unstructured interviews have equal validity (.58)**, making them the second-best predictor after cognitive ability tests—this challenges older assumptions.
+- **Both structured and unstructured interviews have equal validity (.58)**, making them the second-best predictor after cognitive ability tests. This challenges older assumptions.
 
 - **Situational interview questions predict performance better than behavioral questions** when both assess the same job requirements, suggesting intentions matter more than past behavior.
 

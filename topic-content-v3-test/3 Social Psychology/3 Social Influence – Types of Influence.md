@@ -9,7 +9,7 @@ version: 3
 
 ## Introduction: Why Understanding Social Influence Matters for Your Practice
 
-You've probably found yourself agreeing to something you didn't really want to do, or maybe you've watched someone completely change their opinion when others in the room disagreed. These moments aren't random quirks of human behavior—they're predictable patterns that psychologists call social influence. Understanding these patterns is essential for your EPPP exam, but more importantly, they'll help you understand your clients, recognize when people are being manipulated, and even notice when these forces are affecting your own professional decisions.
+You've probably found yourself agreeing to something you didn't really want to do, or maybe you've watched someone completely change their opinion when others in the room disagreed. These moments aren't random quirks of human behavior. They're predictable patterns that psychologists call social influence. Understanding these patterns is essential for your EPPP exam, but more importantly, they'll help you understand your clients, recognize when people are being manipulated, and even notice when these forces are affecting your own professional decisions.
 
 Social influence shows up everywhere: in your therapy room when a client describes peer pressure, in organizational settings when you consult on workplace dynamics, and even in your own life when you make decisions based on what others think. Let's break down the three major types of social influence and what makes people so susceptible to them.
 
@@ -31,15 +31,15 @@ Before we dive deep into each type, let's get a quick overview:
 
 Stanley Milgram's research in 1974 revealed something disturbing about human nature: ordinary people will follow orders to hurt others when those orders come from someone they perceive as an authority figure. 
 
-Here's how his study worked: Participants thought they were testing how punishment affects learning. They were assigned the role of "teacher" while a confederate (someone secretly working with the researchers) played the "learner." The researcher, wearing a lab coat and clipboard, instructed the teacher to deliver electric shocks to the learner every time they got a word wrong. With each mistake, the shock intensity increased. The learner wasn't actually receiving shocks, but they acted like they were—screaming, begging to stop, and eventually going silent.
+Here's how his study worked: Participants thought they were testing how punishment affects learning. They were assigned the role of "teacher" while a confederate (someone secretly working with the researchers) played the "learner." The researcher, wearing a lab coat and clipboard, instructed the teacher to deliver electric shocks to the learner every time they got a word wrong. With each mistake, the shock intensity increased. The learner wasn't actually receiving shocks, but they acted like they were, screaming, begging to stop, and eventually going silent.
 
-Before running the study, Milgram asked psychiatrists to predict how many participants would deliver the maximum shock level (450 volts, labeled as potentially lethal). They estimated maybe 1 in 1,000—only people with serious psychological problems. The actual result? The majority of participants, both men and women, delivered the highest shock levels.
+Before running the study, Milgram asked psychiatrists to predict how many participants would deliver the maximum shock level (450 volts, labeled as potentially lethal). They estimated maybe 1 in 1,000. Only people with serious psychological problems. The actual result? The majority of participants, both men and women, delivered the highest shock levels.
 
-{{M}}Think about receiving instructions from your clinical supervisor to try a treatment approach that makes you uncomfortable. That internal tension—wanting to trust their expertise while also trusting your own judgment—captures just a fraction of what Milgram's participants experienced.{{/M}}
+{{M}}Think about receiving instructions from your clinical supervisor to try a treatment approach that makes you uncomfortable. That internal tension (wanting to trust their expertise while also trusting your own judgment) captures just a fraction of what Milgram's participants experienced.{{/M}}
 
 ### Why Did They Obey?
 
-Milgram proposed that participants entered an "agentic state"—they saw themselves as agents carrying out someone else's wishes rather than making their own choices. When you're in this state, you mentally shift responsibility to the authority figure. You're just following orders, so you tell yourself you're not really responsible for the consequences.
+Milgram proposed that participants entered an "agentic state". They saw themselves as agents carrying out someone else's wishes rather than making their own choices. When you're in this state, you mentally shift responsibility to the authority figure. You're just following orders, so you tell yourself you're not really responsible for the consequences.
 
 Other researchers have offered additional explanations:
 
@@ -72,11 +72,11 @@ Jerry Burger replicated Milgram's work in 2009, with some ethical modifications.
 
 Muzafer Sherif was one of the first researchers to study conformity systematically. He used a clever trick of perception: when you stare at a single point of light in a completely dark room, the light appears to move even though it's stationary. This is called the autokinetic effect.
 
-When Sherif asked people to estimate how far the light moved while they were alone, estimates varied widely—some said a few inches, others said several feet. But when people made their estimates after hearing others (confederates) give their answers first, something interesting happened: people's estimates converged toward the group norm. They started reporting numbers similar to what they'd just heard.
+When Sherif asked people to estimate how far the light moved while they were alone, estimates varied widely. Some said a few inches, others said several feet. But when people made their estimates after hearing others (confederates) give their answers first, something interesting happened: people's estimates converged toward the group norm. They started reporting numbers similar to what they'd just heard.
 
 ### Asch's Line Studies: Conforming Despite Obvious Truth
 
-Solomon Asch took conformity research further in 1951. He showed participants a simple task: look at a line, then pick which of three comparison lines matched it in length. The answer was obvious—no trick of perception involved.
+Solomon Asch took conformity research further in 1951. He showed participants a simple task: look at a line, then pick which of three comparison lines matched it in length. The answer was obvious. No trick of perception involved.
 
 But here's the twist: participants sat in a room with several confederates who all gave the same wrong answer before the real participant responded. Even though the correct answer was clear, many participants went along with the group and gave the obviously incorrect response.
 
@@ -86,9 +86,9 @@ But here's the twist: participants sat in a room with several confederates who a
 
 Researchers distinguish between two reasons people conform:
 
-**Informational Influence**: This happens when you genuinely believe others know more than you do. You're not just going along to avoid conflict—you're actually changing your mind. This explains conformity in ambiguous situations, like Sherif's moving light. When you're unsure, it's reasonable to think, "Well, everyone else is saying 10 inches, maybe I'm wrong about seeing 3 inches." This leads to private acceptance—you really change your belief.
+**Informational Influence**: This happens when you genuinely believe others know more than you do. You're not just going along to avoid conflict (you're actually changing your mind. This explains conformity in ambiguous situations, like Sherif's moving light. When you're unsure, it's reasonable to think, "Well, everyone else is saying 10 inches, maybe I'm wrong about seeing 3 inches." This leads to private acceptance) you really change your belief.
 
-**Normative Influence**: This happens when you conform to avoid ridicule or rejection, even though you privately disagree. This explains conformity in unambiguous situations, like Asch's lines. You know the group is wrong, but you don't want to be the odd one out. This leads to public compliance without private acceptance—you go along outwardly but don't actually change your mind.
+**Normative Influence**: This happens when you conform to avoid ridicule or rejection, even though you privately disagree. This explains conformity in unambiguous situations, like Asch's lines. You know the group is wrong, but you don't want to be the odd one out. This leads to public compliance without private acceptance. You go along outwardly but don't actually change your mind.
 
 | Type | When It Occurs | Result | Example |
 |------|----------------|--------|---------|
@@ -105,7 +105,7 @@ This is a two-step process:
 1. First, make a small request that most people will agree to
 2. Then, once they've agreed, make a larger request
 
-{{M}}A colleague asks if you can cover their morning client—just one session. You agree because it's not a big deal. A few days later, they ask if you can cover their entire day next week. You're much more likely to say yes to this bigger request because you already said yes to the smaller one.{{/M}}
+{{M}}A colleague asks if you can cover their morning client. Just one session. You agree because it's not a big deal. A few days later, they ask if you can cover their entire day next week. You're much more likely to say yes to this bigger request because you already said yes to the smaller one.{{/M}}
 
 Why does this work? People like to be consistent. Once you've agreed to something, turning down a related request feels inconsistent with the image of yourself as helpful or agreeable. You've already identified yourself as someone who does this type of thing, so refusing the second request creates uncomfortable cognitive dissonance.
 
@@ -115,7 +115,7 @@ This technique works in reverse:
 1. First, make a large request that most people will reject
 2. When they refuse, make a smaller request
 
-{{M}}Imagine a nonprofit calls asking if you'll volunteer every Saturday for the next year. You decline—that's way too much commitment. Then they ask if you could volunteer just once next month. Suddenly, that sounds reasonable, and you're more likely to agree.{{/M}}
+{{M}}Imagine a nonprofit calls asking if you'll volunteer every Saturday for the next year. You decline. That's way too much commitment. Then they ask if you could volunteer just once next month. Suddenly, that sounds reasonable, and you're more likely to agree.{{/M}}
 
 Two explanations account for why this works:
 
@@ -131,13 +131,13 @@ Not everyone responds to influence attempts by going along. Sometimes people rea
 
 Reactance occurs when people feel that pressure to behave a certain way threatens their personal freedom. Instead of complying, they do the opposite of what's requested or act aggressively toward the person making the request.
 
-{{M}}You've probably experienced this when someone tells you that you "have to" do something in a particularly demanding way. That feeling of bristling, of wanting to refuse just to prove you're not being controlled—that's reactance.{{/M}}
+{{M}}You've probably experienced this when someone tells you that you "have to" do something in a particularly demanding way. That feeling of bristling, of wanting to refuse just to prove you're not being controlled. That's reactance.{{/M}}
 
 This has important clinical implications. If you push clients too hard toward a particular course of action, they might resist not because they disagree with your suggestion, but because they need to preserve their sense of autonomy. This is why motivational interviewing emphasizes client autonomy and avoids direct persuasion.
 
 ## Real-World Applications for Your Practice
 
-Understanding social influence isn't just about passing your EPPP—it's practical knowledge you'll use regularly:
+Understanding social influence isn't just about passing your EPPP. It's practical knowledge you'll use regularly:
 
 **In Therapy Sessions**: 
 - Recognize when clients are conforming to family or peer pressure rather than making autonomous choices
@@ -162,7 +162,7 @@ Understanding social influence isn't just about passing your EPPP—it's practic
 
 Reality: Milgram's participants were ordinary people from all backgrounds. Intelligence and personality matter far less than situational factors. The situation's power often overwhelms individual differences.
 
-**Misconception 2: "These findings are outdated—modern people would behave differently"**
+**Misconception 2: "These findings are outdated. Modern people would behave differently"**
 
 Reality: Burger's 2009 replication showed remarkably similar results to Milgram's 1970s studies. Human social psychology hasn't fundamentally changed.
 
@@ -176,7 +176,7 @@ Reality: This belief itself can make you more vulnerable. When you think you're 
 
 **Misconception 5: "Authority must be explicit (like a police officer) to trigger obedience"**
 
-Reality: Authority can be subtle. A lab coat, a professional title, an institutional setting—these trigger obedience even without explicit power structures.
+Reality: Authority can be subtle. A lab coat, a professional title, an institutional setting. These trigger obedience even without explicit power structures.
 
 ## Practice Tips for Remembering This Material
 
@@ -201,7 +201,7 @@ Reality: Authority can be subtle. A lab coat, a professional title, an instituti
 
 - **Situational factors** matter more than personality traits in predicting obedience. Proximity to the victim, proximity to the authority, and the setting's prestige all significantly affect compliance rates.
 
-- **The agentic state** explains why people obey—they see themselves as carrying out someone else's wishes rather than acting autonomously, which psychologically shifts responsibility away from themselves.
+- **The agentic state** explains why people obey. They see themselves as carrying out someone else's wishes rather than acting autonomously, which psychologically shifts responsibility away from themselves.
 
 - **Conformity** occurs in both ambiguous and unambiguous situations, but for different reasons. Informational influence (genuine belief change) dominates in ambiguous situations, while normative influence (going along to avoid rejection) dominates when the correct answer is obvious.
 

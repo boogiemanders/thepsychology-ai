@@ -11,7 +11,7 @@ version: 3
 
 You've probably seen those late-night TV commercials with "life coaches" making wild promises, or stumbled across a therapist's website that feels more like a personal fan page with glowing reviews from current clients. Something feels off, right? That gut feeling exists because these situations violate fundamental ethical principles that protect both clients and the psychology profession itself.
 
-Standards 5 and 6 of the APA Ethics Code govern how psychologists present themselves to the world and manage the business side of practice. These aren't just bureaucratic rules—they're the framework that maintains public trust and protects vulnerable people from exploitation. {{M}}Think of these standards as the operating system that runs in the background of your professional life{{/M}}, making sure every public statement, every financial transaction, and every record you keep meets ethical requirements.
+Standards 5 and 6 of the APA Ethics Code govern how psychologists present themselves to the world and manage the business side of practice. These aren't just bureaucratic rules. They're the framework that maintains public trust and protects vulnerable people from exploitation. {{M}}Think of these standards as the operating system that runs in the background of your professional life{{/M}}, making sure every public statement, every financial transaction, and every record you keep meets ethical requirements.
 
 Let's dive into what you need to know for the EPPP and your future practice.
 
@@ -19,7 +19,7 @@ Let's dive into what you need to know for the EPPP and your future practice.
 
 ### The Core Principle: Truth in All Forms
 
-Standard 5.01 establishes the foundation: psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work. This applies to everything—your website, your LinkedIn profile, what you say in a lecture, your resume, even your listing in a directory.
+Standard 5.01 establishes the foundation: psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work. This applies to everything. Your website, your LinkedIn profile, what you say in a lecture, your resume, even your listing in a directory.
 
 The key word here is "public." Once you put information out there for others to see, you're accountable for its accuracy. This includes statements about:
 
@@ -42,15 +42,15 @@ Here's something that catches many psychology graduates off guard: you can only 
 
 ### Who's Responsible for What Others Say About You
 
-Standard 5.02 addresses an increasingly common scenario: you hire someone to help market your practice—maybe a social media manager or a PR consultant. Here's the deal: you're still responsible for what they say about you.
+Standard 5.02 addresses an increasingly common scenario: you hire someone to help market your practice. Maybe a social media manager or a PR consultant. Here's the deal: you're still responsible for what they say about you.
 
-If you pay someone to create promotional content, you must ensure it's accurate and ethical. This standard also prohibits paying media employees (journalists, producers, etc.) for publicity disguised as news coverage. {{M}}It's like the difference between paying for a clearly labeled Instagram ad versus secretly paying an influencer to recommend your services without disclosing the financial relationship{{/M}}—one is transparent, the other is deceptive.
+If you pay someone to create promotional content, you must ensure it's accurate and ethical. This standard also prohibits paying media employees (journalists, producers, etc.) for publicity disguised as news coverage. {{M}}It's like the difference between paying for a clearly labeled Instagram ad versus secretly paying an influencer to recommend your services without disclosing the financial relationship{{/M}}. One is transparent, the other is deceptive.
 
 Additionally, when you do pay for advertising, it must be clearly identified as such. No sneaky product placement allowed in psychology.
 
 ### Media Appearances and Online Advice
 
-Standard 5.04 governs what you say in media presentations—podcasts, social media posts, online articles, TV interviews, or any other public commentary. Two critical requirements:
+Standard 5.04 governs what you say in media presentations. Podcasts, social media posts, online articles, TV interviews, or any other public commentary. Two critical requirements:
 
 1. **Base statements on professional knowledge**: Don't just share opinions. Your public statements should reflect actual psychological knowledge, training, or experience.
 
@@ -121,11 +121,11 @@ Modern protection strategies include:
 | Two-factor authentication | Adds extra security layer beyond passwords | Requiring both password and phone code to access records |
 | Air-gapped computers | Complete isolation from internet/network | Using offline computers for highly sensitive records |
 
-{{M}}Using your personal Gmail to email session notes to yourself would be like shouting client information across a crowded coffee shop{{/M}}—even if no one's actively listening, you're exposing confidential information unnecessarily.
+{{M}}Using your personal Gmail to email session notes to yourself would be like shouting client information across a crowded coffee shop{{/M}}. Even if no one's actively listening, you're exposing confidential information unnecessarily.
 
 **Planning for Unexpected Withdrawal from Practice**
 
-Standard 6.02(c) requires having a plan for what happens to client records if you can no longer practice—whether due to retirement, illness, disability, or death. This is called a "professional will."
+Standard 6.02(c) requires having a plan for what happens to client records if you can no longer practice. Whether due to retirement, illness, disability, or death. This is called a "professional will."
 
 Your plan might include:
 
@@ -150,7 +150,7 @@ These are minimums. Many psychologists keep records longer because:
 
 ### Discussing Fees Early
 
-Standard 6.04 requires reaching agreement with clients about fees "as early as feasible"—ideally during your initial contact or first session. This conversation should cover:
+Standard 6.04 requires reaching agreement with clients about fees "as early as feasible". Ideally during your initial contact or first session. This conversation should cover:
 
 - Fees for different types of sessions (individual, couples, family, etc.)
 - Billing and payment schedules
@@ -214,7 +214,7 @@ If you do accept barter (perhaps in rural areas with limited resources), barteri
 
 ### Accurate Billing
 
-Standard 6.06 requires providing accurate information to whoever pays for services—whether that's the client, an insurance company, or another third party. This means accurately reporting:
+Standard 6.06 requires providing accurate information to whoever pays for services. Whether that's the client, an insurance company, or another third party. This means accurately reporting:
 
 - Diagnosis codes
 - Types of services provided
@@ -287,7 +287,7 @@ This standard doesn't prohibit:
 - **E**mergency treatment records can't be withheld for payment
 - **D**iscuss fees early
 
-**For remembering what makes degrees acceptable credentials**: "Regional OR basis for licensure"—it's an OR statement, not AND. Either condition makes the degree usable.
+**For remembering what makes degrees acceptable credentials**: "Regional OR basis for licensure". It's an OR statement, not AND. Either condition makes the degree usable.
 
 **For testimonial rules**: "Current = Can't ask." Current clients and vulnerable people cannot be solicited for testimonials.
 
@@ -334,7 +334,7 @@ This standard doesn't prohibit:
 - **Emergency treatment records** cannot be withheld solely for nonpayment
 - **Warn clients before using collection agencies** and share only minimal necessary information with collectors
 - **Barter is allowed** but discouraged due to complications it creates
-- **All billing must be accurate**—never misrepresent diagnoses, services, or providers for insurance coverage
+- **All billing must be accurate**. Never misrepresent diagnoses, services, or providers for insurance coverage
 - **Referral fees** can only compensate for actual services provided, not for the referral itself
 
 These standards protect both clients and the profession. They ensure transparency, maintain public trust, and prevent exploitation of vulnerable individuals. Master these for the EPPP, but more importantly, internalize them for ethical practice throughout your career.

@@ -9,15 +9,15 @@ version: 3
 
 ## Why Causal Attributions Matter in Your Career as a Psychologist
 
-You've probably caught yourself doing this: A client cancels their appointment, and you immediately wonder if you said something wrong in the last session. Or maybe a colleague seems distant, and you assume they're upset with you. Meanwhile, when you're running late to a meeting, you know it's because traffic was terrible—not because you're a disorganized person.
+You've probably caught yourself doing this: A client cancels their appointment, and you immediately wonder if you said something wrong in the last session. Or maybe a colleague seems distant, and you assume they're upset with you. Meanwhile, when you're running late to a meeting, you know it's because traffic was terrible. Not because you're a disorganized person.
 
-Welcome to the world of causal attributions. These are the split-second judgments we all make about why things happen—why people (including ourselves) behave the way they do. Understanding these mental shortcuts isn't just academic exercise; it's essential for understanding your clients, your relationships, and even your own thought patterns. For the EPPP, you'll need to recognize different types of attribution biases and understand how people decide whether behavior stems from someone's personality or their circumstances.
+Welcome to the world of causal attributions. These are the split-second judgments we all make about why things happen. Why people (including ourselves) behave the way they do. Understanding these mental shortcuts isn't just academic exercise; it's essential for understanding your clients, your relationships, and even your own thought patterns. For the EPPP, you'll need to recognize different types of attribution biases and understand how people decide whether behavior stems from someone's personality or their circumstances.
 
 Let's break this down in a way that sticks.
 
 ## What Are Causal Attributions?
 
-At its core, a causal attribution is simply your answer to the question "Why did that happen?" When your romantic partner forgets your anniversary, when a coworker gets promoted, when you ace a presentation, or when a client relapses—your brain immediately starts generating explanations.
+At its core, a causal attribution is simply your answer to the question "Why did that happen?" When your romantic partner forgets your anniversary, when a coworker gets promoted, when you ace a presentation, or when a client relapses. Your brain immediately starts generating explanations.
 
 These explanations fall into different categories:
 
@@ -27,13 +27,13 @@ These explanations fall into different categories:
 
 **Specific vs. Global**: Does the cause apply to just this one situation, or does it affect everything?
 
-These three dimensions combine to create your explanatory style—your characteristic way of explaining events. Research by Peterson and Seligman in the 1980s showed that people with an optimistic explanatory style explain bad events as external, unstable, and specific. {{M}}When they don't get a job offer, they think "The timing wasn't right" (external), "This particular position wasn't a good match" (specific), and "The next interview will go better" (unstable){{/M}}.
+These three dimensions combine to create your explanatory style. Your characteristic way of explaining events. Research by Peterson and Seligman in the 1980s showed that people with an optimistic explanatory style explain bad events as external, unstable, and specific. {{M}}When they don't get a job offer, they think "The timing wasn't right" (external), "This particular position wasn't a good match" (specific), and "The next interview will go better" (unstable){{/M}}.
 
 People with a pessimistic explanatory style do the opposite with negative events, attributing them to internal, stable, and global factors. {{M}}They think "I'm not qualified" (internal), "I'm always bad at interviews" (stable), and "I can't do anything right" (global){{/M}}. You can see why this matters for understanding depression and anxiety in your clients.
 
 ## The Major Attribution Biases You Need to Know
 
-Here's where things get interesting. Our brains don't make these attributions randomly or objectively. We have systematic biases—predictable errors in judgment that affect how we explain behavior. For the EPPP, you need to distinguish between five major biases.
+Here's where things get interesting. Our brains don't make these attributions randomly or objectively. We have systematic biases. Predictable errors in judgment that affect how we explain behavior. For the EPPP, you need to distinguish between five major biases.
 
 ### The Fundamental Attribution Error
 
@@ -41,7 +41,7 @@ This is the big one, identified by Lee Ross in 1977. The fundamental attribution
 
 {{M}}You see someone yelling at a barista, and you immediately think "What a rude person" rather than considering that maybe they just got devastating news or have been awake for 36 hours{{/M}}. We jump to conclusions about character when we observe others, ignoring the power of circumstances.
 
-Here's what makes this fascinating: culture shapes this bias significantly. Joan Miller's 1984 research compared North Americans and Asian Indians and found that children from both cultures made similar attributions. But as they grew into adolescence and adulthood, Americans increasingly made dispositional attributions while Indians made more situational attributions. This tells us that the fundamental attribution error isn't hardwired—it's learned through cultural values about individualism versus collectivism.
+Here's what makes this fascinating: culture shapes this bias significantly. Joan Miller's 1984 research compared North Americans and Asian Indians and found that children from both cultures made similar attributions. But as they grew into adolescence and adulthood, Americans increasingly made dispositional attributions while Indians made more situational attributions. This tells us that the fundamental attribution error isn't hardwired. It's learned through cultural values about individualism versus collectivism.
 
 ### The Actor-Observer Effect
 
@@ -57,17 +57,17 @@ Ross and Sicoly described this in 1979, and you'll recognize it immediately. The
 
 {{M}}Land a new client? "I've really developed strong therapeutic skills." Lose a client? "They weren't ready for change," or "Insurance issues made it impossible."{{/M}}
 
-This bias serves an important psychological function—it protects our self-esteem. But it can also prevent growth and learning. In clinical supervision, you'll see this when therapists struggle to examine their own contributions to therapeutic ruptures.
+This bias serves an important psychological function. It protects our self-esteem. But it can also prevent growth and learning. In clinical supervision, you'll see this when therapists struggle to examine their own contributions to therapeutic ruptures.
 
 ### The Ultimate Attribution Error
 
-Thomas Pettigrew refined this concept in 2001, though the underlying ideas are older. The ultimate attribution error applies the same self-serving logic to entire groups—specifically, in-groups (groups we belong to) versus out-groups (groups we don't belong to).
+Thomas Pettigrew refined this concept in 2001, though the underlying ideas are older. The ultimate attribution error applies the same self-serving logic to entire groups. Specifically, in-groups (groups we belong to) versus out-groups (groups we don't belong to).
 
 When someone in our in-group does something negative, we attribute it to situational factors or dismiss it as an exception. When someone in an out-group does something negative, we attribute it to their character or culture. The reverse happens with positive behaviors.
 
 {{M}}If someone from your professional community makes an error in treatment, you might think "They had inadequate training in that specific technique" or "That's a really challenging case." If someone from a different professional community makes an error, you might think "Those people aren't rigorous enough" or "That approach is fundamentally flawed."{{/M}}
 
-This bias directly fuels prejudice and discrimination. It's why stereotypes persist even in the face of contradictory evidence—we treat in-group members as individuals with complex motivations, but we treat out-group members as representatives of their entire group.
+This bias directly fuels prejudice and discrimination. It's why stereotypes persist even in the face of contradictory evidence. We treat in-group members as individuals with complex motivations, but we treat out-group members as representatives of their entire group.
 
 ### The Group Attribution Error
 
@@ -81,7 +81,7 @@ Both versions matter for understanding workplace dynamics, committee work, and h
 
 ## Kelley's Covariation Model: A Systematic Approach
 
-While the biases above describe our errors, Harold Kelley's 1967 covariation model describes how we ideally should make attributions—and sometimes actually do, when we slow down and think carefully.
+While the biases above describe our errors, Harold Kelley's 1967 covariation model describes how we ideally should make attributions. And sometimes actually do, when we slow down and think carefully.
 
 According to Kelley, when we try to figure out why someone did something, we unconsciously consider three types of information:
 
@@ -99,7 +99,7 @@ Let me show you how this works with a practical example:
 - **Consistency**: Does Dr. Martinez usually snap during case conferences? (No, this is the first time = Low consistency)  
 - **Distinctiveness**: Does Dr. Martinez snap in other situations too? (No, she's normally very professional = High distinctiveness)
 
-When consensus is LOW, consistency is LOW, and distinctiveness is HIGH, you make an external (situational) attribution: {{M}}"Something must be going on with her today—maybe she got bad news or she's dealing with something stressful."{{/M}}
+When consensus is LOW, consistency is LOW, and distinctiveness is HIGH, you make an external (situational) attribution: {{M}}"Something must be going on with her today. Maybe she got bad news or she's dealing with something stressful."{{/M}}
 
 Now consider a different scenario:
 
@@ -119,15 +119,15 @@ Here's a table to help you remember:
 | Pattern 2 | High | High | High | External (Situational) | "Anyone would act that way in those circumstances" |
 | Pattern 3 | Low | Low | High | External (Situational) | "Something unusual must be happening" |
 
-The covariation model describes rational attribution—but remember, we often don't go through this analysis. Instead, we fall prey to the biases described earlier, especially the fundamental attribution error.
+The covariation model describes rational attribution. But remember, we often don't go through this analysis. Instead, we fall prey to the biases described earlier, especially the fundamental attribution error.
 
 ## Real-World Applications in Clinical Practice
 
 Understanding attribution patterns is crucial for effective therapy:
 
-**Depression and Anxiety**: Clients with depression often show pessimistic attributional styles. {{M}}When something goes wrong—say, a difficult conversation with their partner—they conclude "I'm a terrible communicator" (internal), "I'll always mess up relationships" (stable), and "I can't do anything right" (global){{/M}}. Cognitive therapy directly addresses these attribution patterns.
+**Depression and Anxiety**: Clients with depression often show pessimistic attributional styles. {{M}}When something goes wrong (say, a difficult conversation with their partner) they conclude "I'm a terrible communicator" (internal), "I'll always mess up relationships" (stable), and "I can't do anything right" (global){{/M}}. Cognitive therapy directly addresses these attribution patterns.
 
-**Couples Therapy**: Distressed couples often display attribution patterns that maintain conflict. Partners attribute negative behaviors to internal, stable causes {{M}}("You're always selfish"){{/M}} while attributing positive behaviors to external, unstable causes {{M}}("You only helped because your mother was visiting"){{/M}}. Meanwhile, they do the opposite for their own behaviors—classic self-serving bias.
+**Couples Therapy**: Distressed couples often display attribution patterns that maintain conflict. Partners attribute negative behaviors to internal, stable causes {{M}}("You're always selfish"){{/M}} while attributing positive behaviors to external, unstable causes {{M}}("You only helped because your mother was visiting"){{/M}}. Meanwhile, they do the opposite for their own behaviors. Classic self-serving bias.
 
 **Therapeutic Relationships**: When a client seems resistant or makes slow progress, check your own attributions. Are you committing the fundamental attribution error by assuming {{M}}"This client lacks motivation"{{/M}} rather than considering situational factors like limited resources, ongoing trauma, or inadequate social support?
 
@@ -141,11 +141,11 @@ Not quite. We do consider situations, but we don't weigh them heavily enough whe
 
 **Misconception 2**: "The actor-observer effect and self-serving bias are the same thing."
 
-They're related but distinct. Actor-observer is about the difference between explaining our behavior versus others' behavior in general. Self-serving bias specifically refers to how we explain our successes versus our failures. You can remember this by noting that self-serving bias has "self" in the name—it's about protecting our ego.
+They're related but distinct. Actor-observer is about the difference between explaining our behavior versus others' behavior in general. Self-serving bias specifically refers to how we explain our successes versus our failures. You can remember this by noting that self-serving bias has "self" in the name. It's about protecting our ego.
 
 **Misconception 3**: "Kelley's model says we always use consensus, consistency, and distinctiveness."
 
-Kelley's model describes the information we could use to make accurate attributions, and sometimes we do use it—especially for important judgments or when we have time to reflect. But often we rely on mental shortcuts instead, which is when biases creep in.
+Kelley's model describes the information we could use to make accurate attributions, and sometimes we do use it, especially for important judgments or when we have time to reflect. But often we rely on mental shortcuts instead, which is when biases creep in.
 
 **Misconception 4**: "Attribution biases are personality flaws."
 
@@ -155,13 +155,13 @@ These are normal cognitive processes that happen to everyone. They're features o
 
 For the EPPP, you need to quickly identify which bias applies in different scenarios. Here are memory strategies:
 
-**For Fundamental Attribution Error**: Think "Fundamentally, I Focus on the person (not the situation) when judging others." The word "fundamental" contains "fun"—but there's nothing fun about being judged by personality rather than circumstances.
+**For Fundamental Attribution Error**: Think "Fundamentally, I Focus on the person (not the situation) when judging others." The word "fundamental" contains "fun". But there's nothing fun about being judged by personality rather than circumstances.
 
 **For Actor-Observer Effect**: You're the Actor in your own life story, and you know all the situational pressures affecting your performance. You're just an Observer of others' lives, seeing only their actions without the full context.
 
-**For Self-Serving Bias**: "Self-Serving" sounds selfish—and it kind of is. You serve yourself by taking credit for success and deflecting blame for failure.
+**For Self-Serving Bias**: "Self-Serving" sounds selfish. And it kind of is. You serve yourself by taking credit for success and deflecting blame for failure.
 
-**For Ultimate Attribution Error**: "Ultimate" sounds extreme, and this is the extreme version—applying attribution biases to entire groups, which is ultimately about prejudice.
+**For Ultimate Attribution Error**: "Ultimate" sounds extreme, and this is the extreme version. Applying attribution biases to entire groups, which is ultimately about prejudice.
 
 **For Group Attribution Error**: There are two members of this pair, just like there are two versions of this error. One generalizes from member to group; the other assumes the group speaks for all members.
 
@@ -185,9 +185,9 @@ Here's a comparison table to study:
 
 - **Fundamental attribution error**: We overestimate personality and underestimate situations when explaining others' behavior; this bias is culturally influenced (stronger in individualistic cultures)
 
-- **Actor-observer effect**: We attribute our own behavior to situations but others' behavior to personality—same event, different explanations depending on whose behavior it is
+- **Actor-observer effect**: We attribute our own behavior to situations but others' behavior to personality. Same event, different explanations depending on whose behavior it is
 
-- **Self-serving bias**: We take credit for success (internal attribution) but blame situations for failure (external attribution)—protects self-esteem but can prevent learning
+- **Self-serving bias**: We take credit for success (internal attribution) but blame situations for failure (external attribution). Protects self-esteem but can prevent learning
 
 - **Ultimate attribution error**: In-group members' negative behaviors get situational explanations while out-group members' negative behaviors get dispositional explanations; directly relates to prejudice and discrimination
 
@@ -201,6 +201,6 @@ Here's a comparison table to study:
 
 - Attribution patterns are central to understanding and treating depression, anxiety, relationship conflicts, and therapeutic impasses
 
-- Cultural competence requires recognizing that attribution styles vary across cultures—individualistic cultures favor dispositional attributions while collectivistic cultures favor situational attributions
+- Cultural competence requires recognizing that attribution styles vary across cultures. Individualistic cultures favor dispositional attributions while collectivistic cultures favor situational attributions
 
 Understanding these attribution processes helps you recognize cognitive patterns in clients, avoid judgment errors in case conceptualization, and understand your own reactions to therapeutic challenges. For the EPPP, focus on distinguishing between the different biases and recognizing which pattern of consensus, consistency, and distinctiveness leads to which type of attribution in Kelley's model.

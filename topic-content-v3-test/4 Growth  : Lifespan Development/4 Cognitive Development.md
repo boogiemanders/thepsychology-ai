@@ -9,7 +9,7 @@ version: 3
 
 ## Why Cognitive Development Matters for Your Practice
 
-You're about to learn some of the most testable material on the EPPP. Cognitive development isn't just about understanding how kids think—it's about knowing when certain abilities emerge, what goes wrong when development takes unexpected turns, and how to assess whether someone's cognitive functioning matches what we'd expect for their age. Whether you're working with a child who's struggling in school, an adolescent making risky decisions, or an older adult worried about memory loss, understanding cognitive development gives you a roadmap.
+You're about to learn some of the most testable material on the EPPP. Cognitive development isn't just about understanding how kids think. It's about knowing when certain abilities emerge, what goes wrong when development takes unexpected turns, and how to assess whether someone's cognitive functioning matches what we'd expect for their age. Whether you're working with a child who's struggling in school, an adolescent making risky decisions, or an older adult worried about memory loss, understanding cognitive development gives you a roadmap.
 
 Let's break this down into manageable pieces that will stick with you through exam day and beyond.
 
@@ -19,15 +19,15 @@ Three major theories dominate how we understand cognitive development, and the E
 
 ### Piaget's Constructivist Theory: The Active Builder
 
-Piaget saw children as active participants in their own development. They're not passive sponges soaking up information—they're constantly building and rebuilding their understanding of the world.
+Piaget saw children as active participants in their own development. They're not passive sponges soaking up information. They're constantly building and rebuilding their understanding of the world.
 
-The engine driving this process is **equilibration**: an innate push toward balance between what you currently understand and what you're experiencing. {{M}}When you start a new job and encounter unfamiliar software, you feel that mental discomfort—that's disequilibrium.{{/M}} You're motivated to restore balance through **adaptation**, which happens in two ways:
+The engine driving this process is **equilibration**: an innate push toward balance between what you currently understand and what you're experiencing. {{M}}When you start a new job and encounter unfamiliar software, you feel that mental discomfort. That's disequilibrium.{{/M}} You're motivated to restore balance through **adaptation**, which happens in two ways:
 
 **Assimilation** means fitting new information into existing mental frameworks (schemas). {{M}}If you've used one project management app and download a different one, you might initially try to use it the same way, clicking where the "save" button was in your old app.{{/M}}
 
 **Accommodation** means changing your mental frameworks or creating new ones when the old ones don't work. {{M}}After clicking the wrong spots repeatedly, you eventually learn the new layout and adjust your expectations.{{/M}}
 
-Here's what makes Piaget's theory unique: He proposed four **universal stages** that emerge in the same order for everyone. These are **discontinuous stages**—meaning each involves qualitatively different ways of thinking, not just "more" thinking. They're also **active stages** because the child constructs knowledge through interaction with the environment.
+Here's what makes Piaget's theory unique: He proposed four **universal stages** that emerge in the same order for everyone. These are **discontinuous stages**, meaning each involves qualitatively different ways of thinking, not just "more" thinking. They're also **active stages** because the child constructs knowledge through interaction with the environment.
 
 #### Piaget's Four Stages: The Essential Framework
 
@@ -48,7 +48,7 @@ Two major accomplishments define this stage:
 
 **Object permanence** begins around 8-12 months (substage 4). {{M}}Before this, when someone puts your keys in a drawer, it's as if they cease to exist in the infant's mind. After object permanence develops, the infant knows those keys are still there, hidden.{{/M}}
 
-**Representational thought** emerges around 18-24 months (substage 6), allowing children to use symbols—mental images, gestures, words—to represent reality. This enables **make-believe play** and **deferred imitation** (remembering and copying actions seen earlier).
+**Representational thought** emerges around 18-24 months (substage 6), allowing children to use symbols (mental images, gestures, words) to represent reality. This enables **make-believe play** and **deferred imitation** (remembering and copying actions seen earlier).
 
 Important note for the exam: Research shows Piaget underestimated infant abilities. Deferred imitation of simple behaviors appears as early as substage 4, not just substage 6.
 
@@ -58,7 +58,7 @@ Representational thinking expands dramatically here. Children can think about th
 
 - **Transductive reasoning**: Believing that events occurring together are causally related. {{M}}Like assuming that because you wore your lucky socks and got a job offer, the socks caused the offer.{{/M}}
 
-- **Egocentrism**: Difficulty understanding that others experience things differently. {{M}}Imagine telling someone about "that restaurant we went to" without realizing they weren't there—young children do this constantly.{{/M}}
+- **Egocentrism**: Difficulty understanding that others experience things differently. {{M}}Imagine telling someone about "that restaurant we went to" without realizing they weren't there. Young children do this constantly.{{/M}}
 
 - **Magical thinking**: Believing thoughts can cause events
 
@@ -73,7 +73,7 @@ The classic conservation test: Show a child two identical glasses with equal wat
 
 **3. Concrete Operational Stage (7 to 12 years)**
 
-Children can now use **logical operations**—mental activities that allow logical thinking about concrete situations. They can:
+Children can now use **logical operations**. Mental activities that allow logical thinking about concrete situations. They can:
 
 - Classify objects by physical characteristics
 - Order items by quantitative dimensions
@@ -98,7 +98,7 @@ Early formal operations bring renewed egocentrism:
 
 - **Imaginary audience**: {{M}}Feeling like everyone's watching and judging you, like when you're convinced everyone at the meeting noticed your coffee stain when they probably didn't.{{/M}}
 
-- **Personal fable**: Believing you're uniquely special and invulnerable. {{M}}That feeling in your early twenties that "bad things happen to other people, but I'm different"—that's personal fable in action.{{/M}}
+- **Personal fable**: Believing you're uniquely special and invulnerable. {{M}}That feeling in your early twenties that "bad things happen to other people, but I'm different". That's personal fable in action.{{/M}}
 
 ### Vygotsky's Sociocultural Theory: The Social Architect
 
@@ -106,7 +106,7 @@ While Piaget emphasized individual construction, Vygotsky emphasized social inte
 
 {{M}}Think about learning a new therapeutic technique. First, your supervisor guides you through it, prompting specific questions and interventions. Eventually, you internalize those prompts, and they become your own internal dialogue during sessions.{{/M}}
 
-**Private speech** is the verbal self-guidance children use aloud. Research confirms it's associated with better problem-solving and gradually becomes internal by age 7. {{M}}Adults revert to private speech when tasks get challenging—muttering through a difficult diagnosis or talking yourself through parallel parking.{{/M}}
+**Private speech** is the verbal self-guidance children use aloud. Research confirms it's associated with better problem-solving and gradually becomes internal by age 7. {{M}}Adults revert to private speech when tasks get challenging, muttering through a difficult diagnosis or talking yourself through parallel parking.{{/M}}
 
 Two critical concepts:
 
@@ -114,7 +114,7 @@ Two critical concepts:
 
 **Scaffolding**: The assistance provided by someone more skilled. Effective scaffolding uses prompts, questions, and feedback rather than direct answers.
 
-For the exam, remember: Vygotsky viewed **make-believe play** as creating a ZPD that lets children practice new social roles and behaviors—it's not just fun, it's developmental work.
+For the exam, remember: Vygotsky viewed **make-believe play** as creating a ZPD that lets children practice new social roles and behaviors. It's not just fun, it's developmental work.
 
 ### Information Processing Theories: The Gradual Upgrader
 
@@ -126,7 +126,7 @@ The key distinction: Piaget described qualitative stage differences; information
 
 ## Theory of Mind: Understanding Other Minds
 
-**Theory of Mind (ToM)** is the ability to attribute mental states—beliefs, desires, intentions—to others and use those attributions to predict behavior. This develops between ages 3 and 5.
+**Theory of Mind (ToM)** is the ability to attribute mental states (beliefs, desires, intentions) to others and use those attributions to predict behavior. This develops between ages 3 and 5.
 
 The gold standard test is the **false-belief task**, typically using a change-of-location scenario:
 
@@ -134,7 +134,7 @@ The gold standard test is the **false-belief task**, typically using a change-of
 
 Children under 4 typically say the cabinet (where it actually is) because they can't separate their knowledge from Person A's knowledge. By 4.5 to 5 years, most children correctly predict Person A will look in the drawer.
 
-Interestingly, children with imaginary companions and those who frequently role-play imaginary characters show more advanced ToM by age 4—pretend play apparently facilitates understanding different perspectives.
+Interestingly, children with imaginary companions and those who frequently role-play imaginary characters show more advanced ToM by age 4. Pretend play apparently facilitates understanding different perspectives.
 
 ## Eyewitness Testimony: Memory's Fragility
 
@@ -182,7 +182,7 @@ Why the decline in recent long-term memory? Older adults use encoding strategies
 
 A subset of episodic memory is **self-defining memory (SDM)**: emotionally intense, vivid memories that shape personal identity. Older adults' SDMs are rated as more vivid, positive, important, and include more integrative meaning statements about self-understanding.
 
-**Nondeclarative (implicit) memory**: Automatically retrieved memories, including procedural memories, classically conditioned associations, and priming effects. Research shows mixed results—some studies show stability, others show modest decline (less than episodic memory decline).
+**Nondeclarative (implicit) memory**: Automatically retrieved memories, including procedural memories, classically conditioned associations, and priming effects. Research shows mixed results. Some studies show stability, others show modest decline (less than episodic memory decline).
 
 ### The Synchrony Effect
 
@@ -217,7 +217,7 @@ Cultural variations: The gender gap in self-esteem is larger in individualistic,
 
 Race/ethnicity findings in the U.S.: A "Black self-esteem advantage" appears among children, adolescents, and young adults, with Black individuals showing higher self-esteem than White individuals and other racial/ethnic groups. Males show higher self-esteem across all racial/ethnic groups.
 
-**Critical point for the exam**: These sex differences aren't purely biological—they reflect social and cultural factors, including gender-role stereotypes that create self-fulfilling prophecies. {{M}}Parents expect sons to excel at math and attribute their success to ability, but attribute daughters' success to effort. Children internalize these views, affecting confidence, interest, course selection, and career choices.{{/M}}
+**Critical point for the exam**: These sex differences aren't purely biological. They reflect social and cultural factors, including gender-role stereotypes that create self-fulfilling prophecies. {{M}}Parents expect sons to excel at math and attribute their success to ability, but attribute daughters' success to effort. Children internalize these views, affecting confidence, interest, course selection, and career choices.{{/M}}
 
 Gender-typing begins before birth when parents learn biological sex, choosing gender-stereotyped items and describing newborns differently (daughters as soft, delicate, pretty; sons as strong, alert, coordinated).
 
@@ -227,7 +227,7 @@ Gender-typing begins before birth when parents learn biological sex, choosing ge
 Reality: While stages emerge in sequence, the exact ages vary based on culture and environment. Focus on the sequence and characteristics, not rigid age cutoffs.
 
 **Misconception 2**: "Vygotsky and Piaget completely disagreed."
-Reality: Both were constructivists who viewed children as active participants. They differed on the role of social interaction—Vygotsky emphasized it more than Piaget.
+Reality: Both were constructivists who viewed children as active participants. They differed on the role of social interaction. Vygotsky emphasized it more than Piaget.
 
 **Misconception 3**: "All memory declines equally with age."
 Reality: Recent long-term memory and working memory decline most; short-term storage and remote long-term memory remain relatively stable. Semantic memory holds up better than episodic memory.
@@ -240,14 +240,14 @@ Reality: Social and cultural factors, including stereotypes and differential tre
 
 ## Practice Tips for Exam Success
 
-**For Piaget's stages**: Create a table comparing all four stages side-by-side with age ranges, key abilities, and limitations. The substages of sensorimotor need special attention—know that object permanence begins in substage 4 and representational thought in substage 6.
+**For Piaget's stages**: Create a table comparing all four stages side-by-side with age ranges, key abilities, and limitations. The substages of sensorimotor need special attention. Know that object permanence begins in substage 4 and representational thought in substage 6.
 
 **For distinguishing theories**: Make a comparison chart:
 - Piaget = individual construction, discontinuous stages, equilibration
 - Vygotsky = social construction, ZPD, scaffolding, interpersonal to intrapersonal
 - Information processing = gradual continuous change, focus on mental processes
 
-**For memory in adulthood**: Remember the pattern "RWRS"—Recent declines, Working declines, Remote stable, Storage stable.
+**For memory in adulthood**: Remember the pattern "RWRS". Recent declines, Working declines, Remote stable, Storage stable.
 
 **For sex differences**: Remember there are MORE similarities than differences, differences are SMALL when present, and CONTEXT matters (cultural and social factors).
 

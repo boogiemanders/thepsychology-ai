@@ -11,7 +11,7 @@ version: 3
 
 You've probably taken dozens of tests in your life, from college exams to professional assessments. But have you ever wondered what makes a good test actually good? When you're sitting across from a client, interpreting their depression inventory scores, or reviewing cognitive assessment results, you need to trust that those numbers mean something real and consistent.
 
-That's where item analysis and test reliability come in. These concepts aren't just abstract statistics—they're the foundation that determines whether the tests you use in practice are worth the paper they're printed on. Understanding these principles will help you choose appropriate assessments, interpret scores accurately, and explain results to clients with confidence.
+That's where item analysis and test reliability come in. These concepts aren't just abstract statistics. They're the foundation that determines whether the tests you use in practice are worth the paper they're printed on. Understanding these principles will help you choose appropriate assessments, interpret scores accurately, and explain results to clients with confidence.
 
 ## Classical Test Theory: The Foundation
 
@@ -19,7 +19,7 @@ Let's start with the basic framework that underlies most psychological testing: 
 
 **Obtained Score = True Score + Measurement Error**
 
-The **true score** represents the person's actual level of whatever you're measuring—their real intelligence, their genuine depression level, their authentic personality traits. {{M}}Think of it like your actual skill at cooking. You know roughly how good you are in the kitchen, regardless of whether someone's watching or what recipe you're following.{{/M}}
+The **true score** represents the person's actual level of whatever you're measuring. Their real intelligence, their genuine depression level, their authentic personality traits. {{M}}Think of it like your actual skill at cooking. You know roughly how good you are in the kitchen, regardless of whether someone's watching or what recipe you're following.{{/M}}
 
 **Measurement error** is all the random stuff that messes with the score but doesn't reflect the person's true ability. {{M}}It's like when you're cooking and the smoke alarm goes off, distracting you, or when the oven temperature runs hot that day, or you're exhausted from a bad night's sleep.{{/M}} In testing situations, this includes things like:
 
@@ -29,7 +29,7 @@ The **true score** represents the person's actual level of whatever you're measu
 - Lucky guesses on multiple-choice items
 - Simple fatigue from a long test
 
-Classical Test Theory assumes that true scores are stable—they don't change based on which version of a test you take or who scores it. But measurement error? That's unpredictable and random, changing every time.
+Classical Test Theory assumes that true scores are stable. They don't change based on which version of a test you take or who scores it. But measurement error? That's unpredictable and random, changing every time.
 
 ## Understanding Reliability: What Does "Consistent" Really Mean?
 
@@ -50,13 +50,13 @@ The acceptable level depends on what's at stake:
 | Test Type | Minimum Acceptable | Why |
 |-----------|-------------------|-----|
 | Research measures, preliminary screening | .70 | Lower stakes; you're looking at group averages or just getting initial information |
-| Clinical diagnosis, personnel selection, high-stakes decisions | .90+ | You're making important decisions about someone's life—you need to be very confident |
+| Clinical diagnosis, personnel selection, high-stakes decisions | .90+ | You're making important decisions about someone's life. You need to be very confident |
 | Personality and attitude measures | .70-.80 | These traits are inherently more variable and harder to measure precisely |
 | Cognitive ability tests | .80-.90+ | These should be highly reliable given their standardized nature |
 
 ## Four Ways to Measure Reliability
 
-Just like {{M}}you might evaluate a new restaurant by checking multiple sources—online reviews, asking friends, trying it yourself at different times{{/M}}—there are different ways to evaluate test reliability. Each method answers a different question about consistency.
+Just like {{M}}you might evaluate a new restaurant by checking multiple sources (online reviews, asking friends, trying it yourself at different times{{/M}}) there are different ways to evaluate test reliability. Each method answers a different question about consistency.
 
 ### 1. Test-Retest Reliability: Consistency Over Time
 
@@ -70,7 +70,7 @@ This method checks whether people get similar scores when they take the same tes
 
 **When it's useful:** Test-retest reliability matters for characteristics that should be stable over time, like intelligence or enduring personality traits.
 
-**When it's not appropriate:** Don't use this for things that change rapidly, like current mood or state anxiety. {{M}}It's like weighing yourself twice to check if your scale is consistent—that works if you're checking the scale's reliability, but not if you're trying to track actual weight loss over time.{{/M}}
+**When it's not appropriate:** Don't use this for things that change rapidly, like current mood or state anxiety. {{M}}It's like weighing yourself twice to check if your scale is consistent. That works if you're checking the scale's reliability, but not if you're trying to track actual weight loss over time.{{/M}}
 
 ### 2. Alternate Forms Reliability: Consistency Across Different Versions
 
@@ -83,7 +83,7 @@ Some tests have multiple versions (Form A, Form B, etc.) to prevent people from 
 
 **When it's useful:** Essential when your test has multiple forms and you need to know they're interchangeable. Also tells you about stability over time if you administer the forms at different times.
 
-{{M}}Think about taking the driver's license test at different DMV locations. You want to know that passing at one location is just as meaningful as passing at another—that the different versions are equivalent.{{/M}}
+{{M}}Think about taking the driver's license test at different DMV locations. You want to know that passing at one location is just as meaningful as passing at another. That the different versions are equivalent.{{/M}}
 
 ### 3. Internal Consistency Reliability: Do the Items Work Together?
 
@@ -103,11 +103,11 @@ This checks whether all the items on your test are measuring the same thing cons
 
 ### 4. Inter-Rater Reliability: Consistency Across Scorers
 
-When tests require judgment to score—like evaluating therapy session quality, rating behavioral observations, or scoring projective tests—you need to know that different raters would give similar scores.
+When tests require judgment to score (like evaluating therapy session quality, rating behavioral observations, or scoring projective tests) you need to know that different raters would give similar scores.
 
 **Methods:**
 
-**Percent Agreement:** Simple calculation: What percentage of the time do two raters agree? Easy to understand but has a major flaw—it doesn't account for chance agreement.
+**Percent Agreement:** Simple calculation: What percentage of the time do two raters agree? Easy to understand but has a major flaw. It doesn't account for chance agreement.
 
 {{M}}Imagine two people randomly guessing "yes" or "no" to coin flips. They'd agree about 50% of the time just by chance, even though neither knows what they're doing.{{/M}}
 
@@ -115,7 +115,7 @@ When tests require judgment to score—like evaluating therapy session quality, 
 
 **The Danger of Consensual Observer Drift**
 
-Here's something that can quietly ruin your inter-rater reliability: when raters talk to each other while rating, they start agreeing more and more with each other—but not necessarily with reality. Their ratings become consistent but inaccurate.
+Here's something that can quietly ruin your inter-rater reliability: when raters talk to each other while rating, they start agreeing more and more with each other. But not necessarily with reality. Their ratings become consistent but inaccurate.
 
 {{M}}It's like when two friends binge-watch a TV series together and start finishing each other's sentences about what will happen next. They're very consistent with each other, but they might both be completely wrong about the plot.{{/M}}
 
@@ -136,7 +136,7 @@ A depression inventory asking only about sadness, crying, and hopelessness will 
 
 ### 2. Range of Scores (Sample Heterogeneity)
 
-You get higher reliability coefficients when your sample includes people across the full spectrum of whatever you're measuring—high, medium, and low scorers.
+You get higher reliability coefficients when your sample includes people across the full spectrum of whatever you're measuring. High, medium, and low scorers.
 
 {{M}}Imagine trying to test whether a thermometer is accurate by only measuring temperatures between 70-72 degrees. You'd have trouble seeing if it really works across the full range. But if you measure temperatures from 0 to 100 degrees, you can really see how consistent it is.{{/M}}
 
@@ -146,7 +146,7 @@ If you only test your anxiety measure on people with severe anxiety disorders, y
 
 The easier it is to guess the right answer, the lower your reliability will be. Random guessing adds error to scores.
 
-True/false questions are the worst for this—50% chance of guessing correctly. Multiple-choice with four options? 25% chance. The more options, the less impact guessing has on reliability.
+True/false questions are the worst for this. 50% Chance of guessing correctly. Multiple-choice with four options? 25% chance. The more options, the less impact guessing has on reliability.
 
 ## From Reliability Coefficient to Reliability Index
 
@@ -193,10 +193,10 @@ The **D-value** tells you whether an item successfully distinguishes between hig
 **Calculation:**
 1. Identify the top 27% of test-takers (based on total test scores)
 2. Identify the bottom 27% of test-takers
-3. Calculate: D = (% of high scorers who got it right) - (% of low scorers who got it right)
+3. Calculate: D = (% of high scorers who got it right). (% Of low scorers who got it right)
 
 Example: If 85% of high scorers and 40% of low scorers answered correctly:
-D = .85 - .40 = .45
+D = .85. .40 = .45
 
 **Interpreting D-values:**
 - D = +1.0: All high scorers got it right, no low scorers did (perfect discrimination)
@@ -205,7 +205,7 @@ D = .85 - .40 = .45
 
 **What's acceptable?** Generally, you want D ≥ .30
 
-**Important connection:** Item difficulty affects discrimination. Moderately difficult items can discriminate better because they give both groups room to show differences. {{M}}It's like trying to judge running ability—if you give everyone a 10-foot race, even slow runners finish quickly, so you can't tell them apart. A 5K race better shows the differences.{{/M}}
+**Important connection:** Item difficulty affects discrimination. Moderately difficult items can discriminate better because they give both groups room to show differences. {{M}}It's like trying to judge running ability, if you give everyone a 10-foot race, even slow runners finish quickly, so you can't tell them apart. A 5K race better shows the differences.{{/M}}
 
 ## Standard Error of Measurement: Embracing Uncertainty
 
@@ -213,13 +213,13 @@ Here's a truth that makes testing more honest: When a test's reliability is less
 
 The **standard error of measurement (SEM)** quantifies this uncertainty.
 
-**Formula:** SEM = SD × √(1 - reliability coefficient)
+**Formula:** SEM = SD × √(1. Reliability coefficient)
 
 Where SD is the test's standard deviation.
 
 **Example calculation:**
 - Test has SD = 15 and reliability = .91
-- SEM = 15 × √(1 - .91)
+- SEM = 15 × √(1. .91)
 - SEM = 15 × √.09
 - SEM = 15 × .3
 - SEM = 4.5
@@ -258,7 +258,7 @@ Item Response Theory (IRT) represents a more sophisticated approach to test deve
 
 ### The Core Idea: Item Characteristic Curves
 
-IRT examines how each item relates to the underlying trait (the latent trait) you're measuring—ability, depression severity, extroversion, etc.
+IRT examines how each item relates to the underlying trait (the latent trait) you're measuring. Ability, depression severity, extroversion, etc.
 
 For each item, you create an **Item Characteristic Curve (ICC)** that shows:
 - **X-axis:** Level of the trait (low to high)
@@ -298,7 +298,7 @@ Not quite. It means that 70% of the variance in scores is due to true difference
 Wrong. A test could consistently measure the wrong thing. Reliability is necessary but not sufficient for validity. {{M}}A bathroom scale might consistently give you the same reading every time (reliable), but if it's always 10 pounds off, it's not accurate (not valid).{{/M}}
 
 **"Internal consistency reliability is always the best method to use."**
-No—it's inappropriate for speed tests and for tests measuring multiple different constructs. Choose your reliability method based on what the test measures and how it will be used.
+No. It's inappropriate for speed tests and for tests measuring multiple different constructs. Choose your reliability method based on what the test measures and how it will be used.
 
 **"Small differences in scores are meaningful if the test is reliable."**
 Not necessarily. Always consider the standard error of measurement. Two scores need to differ by at least 1-2 SEMs before you can be confident they reflect real differences.
@@ -338,7 +338,7 @@ Remember "1-2-3 for 68-95-99":
 
 - **Four reliability methods:** test-retest (consistency over time), alternate forms (consistency across versions), internal consistency (items measuring the same thing), and inter-rater (consistency across scorers)
 
-- **Internal consistency is inappropriate for speed tests**—use test-retest or alternate forms instead
+- **Internal consistency is inappropriate for speed tests**. Use test-retest or alternate forms instead
 
 - **Higher reliability comes from:** homogeneous content, unrestricted score range, and less susceptibility to guessing
 

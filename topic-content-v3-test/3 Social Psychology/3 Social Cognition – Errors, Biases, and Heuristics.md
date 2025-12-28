@@ -9,15 +9,15 @@ version: 3
 
 ## Why Your Brain Takes Shortcuts (And How That Shows Up on the EPPP)
 
-Let's start with something you probably did today: You scrolled through your social media feed, saw a headline about a rare disease outbreak, and suddenly felt more worried about it than you did about driving your car—even though you're statistically far more likely to be in a car accident. Welcome to social cognition errors and heuristics in action.
+Let's start with something you probably did today: You scrolled through your social media feed, saw a headline about a rare disease outbreak, and suddenly felt more worried about it than you did about driving your car. Even though you're statistically far more likely to be in a car accident. Welcome to social cognition errors and heuristics in action.
 
-Understanding how people make judgments and decisions is crucial for the EPPP, but it's also essential for your future clinical work. Your clients will make decisions based on these same mental shortcuts. They'll jump to conclusions, overestimate risks, and maintain beliefs that contradict evidence. The more you understand these patterns, the better equipped you'll be to help them—and to catch yourself making the same mistakes.
+Understanding how people make judgments and decisions is crucial for the EPPP, but it's also essential for your future clinical work. Your clients will make decisions based on these same mental shortcuts. They'll jump to conclusions, overestimate risks, and maintain beliefs that contradict evidence. The more you understand these patterns, the better equipped you'll be to help them. And to catch yourself making the same mistakes.
 
 ## Two Systems Running Your Brain
 
 Before we dive into specific errors and biases, you need to understand that your brain operates on two different speeds:
 
-**Automatic processing** is fast, runs in the background, and requires no conscious effort. {{M}}It's like your phone's background processes updating apps while you sleep{{/M}}—you don't think about it, but it's constantly happening.
+**Automatic processing** is fast, runs in the background, and requires no conscious effort. {{M}}It's like your phone's background processes updating apps while you sleep{{/M}}. You don't think about it, but it's constantly happening.
 
 **Controlled processing** is slow, deliberate, and requires conscious attention. {{M}}It's like manually editing a document, where you carefully consider each word{{/M}}.
 
@@ -29,9 +29,9 @@ The automatic system is incredibly efficient, which is why we rely on it so heav
 
 **Confirmation bias** is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.
 
-{{M}}Imagine you're convinced that a particular therapy approach works best for anxiety. You'll probably remember all your clients who improved with that approach and forget or downplay the ones who didn't{{/M}}. This isn't intentional deception—it's your automatic processing system at work.
+{{M}}Imagine you're convinced that a particular therapy approach works best for anxiety. You'll probably remember all your clients who improved with that approach and forget or downplay the ones who didn't{{/M}}. This isn't intentional deception. It's your automatic processing system at work.
 
-This bias extends to how we see ourselves through **self-verification theory**. According to research by Swann and colleagues, people actually seek feedback that confirms their existing self-concept—even if that self-concept is negative. {{M}}If someone views themselves as socially awkward, they'll gravitate toward people who confirm this view rather than those who contradict it{{/M}}. This has major implications when you're working with clients who have negative self-images.
+This bias extends to how we see ourselves through **self-verification theory**. According to research by Swann and colleagues, people actually seek feedback that confirms their existing self-concept. Even if that self-concept is negative. {{M}}If someone views themselves as socially awkward, they'll gravitate toward people who confirm this view rather than those who contradict it{{/M}}. This has major implications when you're working with clients who have negative self-images.
 
 ### Illusory Correlation: Seeing Patterns That Aren't There
 
@@ -47,27 +47,27 @@ The **base rate fallacy** occurs when we ignore statistical information about th
 
 {{M}}Let's say a client tells you about someone they met at a party who seemed anxious and withdrawn. They ask if you think that person might have social anxiety disorder. Even if you know that social anxiety affects only about 7% of the population (the base rate), you might focus instead on those specific behavioral details and overestimate the likelihood{{/M}}.
 
-This matters in forensic settings too. Juries are notoriously susceptible to the base rate fallacy—they'll be more influenced by a compelling individual story than by statistical probability evidence. Kahneman and Tversky's research demonstrated this repeatedly.
+This matters in forensic settings too. Juries are notoriously susceptible to the base rate fallacy. They'll be more influenced by a compelling individual story than by statistical probability evidence. Kahneman and Tversky's research demonstrated this repeatedly.
 
 ### False Consensus Effect: Everyone Thinks Like Me, Right?
 
 The **false consensus effect** is our tendency to overestimate how many other people share our opinions, values, and beliefs.
 
-In a clever study by Alicke and Largo, students took a bogus "social sensitivity test" and were told they either passed or failed. When asked to predict how other students would perform, those who failed predicted most others would fail too, and those who passed predicted most others would pass. Neither group was accurate—they were projecting their own results onto everyone else.
+In a clever study by Alicke and Largo, students took a bogus "social sensitivity test" and were told they either passed or failed. When asked to predict how other students would perform, those who failed predicted most others would fail too, and those who passed predicted most others would pass. Neither group was accurate. They were projecting their own results onto everyone else.
 
 {{M}}You might see this in supervision when a supervisee says, "Obviously everyone would find that client challenging," when actually, their reaction is quite personal{{/M}}.
 
 ### Gambler's Fallacy: Chance Doesn't Have Memory
 
-The **gambler's fallacy** is the mistaken belief that previous random events affect future random events—that random outcomes will "even out" in the short run.
+The **gambler's fallacy** is the mistaken belief that previous random events affect future random events. That random outcomes will "even out" in the short run.
 
-{{M}}After your favorite coffee shop runs out of your preferred pastry three days in a row, you think, "They've got to have it today—I'm due!"{{/M}} But each day is independent. Coin flips don't remember their previous results, and random events don't owe you anything.
+{{M}}After your favorite coffee shop runs out of your preferred pastry three days in a row, you think, "They've got to have it today. I'm due!"{{/M}} But each day is independent. Coin flips don't remember their previous results, and random events don't owe you anything.
 
 This comes up clinically when clients talk about luck or fate. Understanding that they're exhibiting the gambler's fallacy can help you address magical thinking.
 
 ### Counterfactual Thinking: The "What If" Game
 
-**Counterfactual thinking** involves imagining alternative outcomes—what might have happened but didn't. We can imagine either better outcomes ("If only I had...") or worse ones ("At least I didn't...").
+**Counterfactual thinking** involves imagining alternative outcomes. What might have happened but didn't. We can imagine either better outcomes ("If only I had...") or worse ones ("At least I didn't...").
 
 This type of thinking is most likely when the outcome is personally significant and it's easy to imagine how things could have gone differently. Research by Kahneman and Miller, along with Roese and Hur, identified these conditions.
 
@@ -77,7 +77,7 @@ This type of thinking is most likely when the outcome is personally significant 
 
 **Illusory control** (also called illusion of control) happens when people believe they can influence outcomes that are actually outside their control.
 
-This explains many superstitious behaviors. {{M}}The person who wears their "lucky" shirt to every job interview or the student who insists on using the same pen for every exam{{/M}}—they're exhibiting illusory control. A gambler blowing on dice before rolling them genuinely believes this action affects the outcome.
+This explains many superstitious behaviors. {{M}}The person who wears their "lucky" shirt to every job interview or the student who insists on using the same pen for every exam{{/M}}. They're exhibiting illusory control. A gambler blowing on dice before rolling them genuinely believes this action affects the outcome.
 
 While this can seem harmless, it becomes problematic when people fail to take actual control where they could, or when they blame themselves for random negative outcomes.
 
@@ -87,7 +87,7 @@ The **spotlight effect** occurs when people believe others notice their actions 
 
 Gilovich and colleagues' research showed that people consistently overestimate how much attention others pay to them. {{M}}You arrive five minutes late to a meeting and feel like everyone is judging you, but most people barely noticed you came in{{/M}}. 
 
-This is especially common in people with social anxiety—a connection worth remembering for the EPPP. It's also similar to the imaginary audience phenomenon that Elkind identified in adolescent development, though the spotlight effect occurs across the lifespan.
+This is especially common in people with social anxiety, a connection worth remembering for the EPPP. It's also similar to the imaginary audience phenomenon that Elkind identified in adolescent development, though the spotlight effect occurs across the lifespan.
 
 ### Illusion of Transparency: They Can See Right Through Me
 
@@ -97,31 +97,31 @@ In Gilovich and colleagues' research, participants drank disgusting liquids whil
 
 ### Hindsight Bias: I Knew It All Along
 
-**Hindsight bias** is the tendency to believe, after an event occurs, that we predicted it would happen—or that we could have predicted it—more than we actually could have or did.
+**Hindsight bias** is the tendency to believe, after an event occurs, that we predicted it would happen (or that we could have predicted it) more than we actually could have or did.
 
 Blank and colleagues found that after political elections, people's memories of their own predictions shifted to become closer to the actual results. {{M}}After a celebrity couple breaks up, you might think, "I always knew they wouldn't last," conveniently forgetting that you actually thought they were perfect for each other{{/M}}.
 
-This bias exists partly because we need to see the world as predictable and orderly. It's also related to how memory works—new information automatically updates what's already stored, making it hard to remember what we thought before we had that information.
+This bias exists partly because we need to see the world as predictable and orderly. It's also related to how memory works. New information automatically updates what's already stored, making it hard to remember what we thought before we had that information.
 
 ### Sunk-Cost Fallacy: Throwing Good Money After Bad
 
 The **sunk-cost fallacy** happens when people continue investing resources (time, money, effort) into something that isn't working because they've already invested so much.
 
-The classic example is the Concorde supersonic plane—the British and French governments kept funding it long after it was clear they'd never recover their initial investment. That's why this is also called the Concorde fallacy.
+The classic example is the Concorde supersonic plane, the British and French governments kept funding it long after it was clear they'd never recover their initial investment. That's why this is also called the Concorde fallacy.
 
-{{M}}You might see this when someone stays in a graduate program they hate because they've already completed two years, or when a couple stays together despite being miserable because they've been together for five years{{/M}}. The thinking goes: "I can't quit now—I've already invested so much!"
+{{M}}You might see this when someone stays in a graduate program they hate because they've already completed two years, or when a couple stays together despite being miserable because they've been together for five years{{/M}}. The thinking goes: "I can't quit now. I've already invested so much!"
 
-Why do we do this? We don't want to be wasteful, and we don't want to admit our initial decision was wrong. Interestingly, research by Strough and colleagues found that older adults are actually less susceptible to this fallacy than younger adults—a potentially useful piece of developmental information for the exam.
+Why do we do this? We don't want to be wasteful, and we don't want to admit our initial decision was wrong. Interestingly, research by Strough and colleagues found that older adults are actually less susceptible to this fallacy than younger adults, a potentially useful piece of developmental information for the exam.
 
 ## Mental Shortcuts: The Heuristics
 
-While errors and biases are flaws in our thinking, **heuristics** are mental shortcuts we deliberately (though unconsciously) use to make quick judgments. They're often helpful but can lead to inaccurate conclusions. Kahneman and Tversky's work on heuristics is foundational—learn their names.
+While errors and biases are flaws in our thinking, **heuristics** are mental shortcuts we deliberately (though unconsciously) use to make quick judgments. They're often helpful but can lead to inaccurate conclusions. Kahneman and Tversky's work on heuristics is foundational. Learn their names.
 
 ### Representativeness Heuristic: Does This Match My Mental Picture?
 
 When using the **representativeness heuristic**, we judge probability based on how well something matches our prototype (typical example), while ignoring base rates and other important statistical information.
 
-{{M}}Imagine you meet someone who's quiet, loves books, wears glasses, and speaks softly. Is this person more likely to be a librarian or an elementary school teacher? Most people say librarian because the description matches their mental image{{/M}}. But there are far more elementary school teachers than librarians in the population—the base rate matters.
+{{M}}Imagine you meet someone who's quiet, loves books, wears glasses, and speaks softly. Is this person more likely to be a librarian or an elementary school teacher? Most people say librarian because the description matches their mental image{{/M}}. But there are far more elementary school teachers than librarians in the population, the base rate matters.
 
 This heuristic explains the **conjunction fallacy**, where people incorrectly judge that two events happening together are more likely than either event alone.
 
@@ -135,7 +135,7 @@ Which is more probable?
 1. Linda is a bank teller
 2. Linda is a bank teller AND active in the feminist movement
 
-Most people (85% in the original study) chose option 2. But this is mathematically impossible—there cannot be more people who are bank tellers AND feminists than people who are just bank tellers. The group of "bank tellers and feminists" is a subset of "bank tellers."
+Most people (85% in the original study) chose option 2. But this is mathematically impossible. There cannot be more people who are bank tellers AND feminists than people who are just bank tellers. The group of "bank tellers and feminists" is a subset of "bank tellers."
 
 Why do people get this wrong? Linda's description is highly representative of a feminist activist and not very representative of a bank teller. When representativeness clashes with logic, representativeness usually wins in our automatic processing. Even the famous scientist Stephen Jay Gould admitted knowing the right answer but still feeling like it must be wrong!
 
@@ -143,13 +143,13 @@ Why do people get this wrong? Linda's description is highly representative of a 
 
 The **availability heuristic** involves judging the frequency or likelihood of events based on how easily we can recall examples.
 
-{{M}}After seeing news coverage of shark attacks or plane crashes, people dramatically overestimate the likelihood of these events, even though they're extremely rare. Meanwhile, they underestimate the risk of heart disease or car accidents—common killers that don't generate dramatic, memorable headlines{{/M}}.
+{{M}}After seeing news coverage of shark attacks or plane crashes, people dramatically overestimate the likelihood of these events, even though they're extremely rare. Meanwhile, they underestimate the risk of heart disease or car accidents. Common killers that don't generate dramatic, memorable headlines{{/M}}.
 
 This has major implications for risk assessment in clinical work. {{M}}If you've recently had three clients with bipolar disorder, you might temporarily overestimate the prevalence of bipolar disorder in your next few assessments{{/M}} because those cases are highly available in your memory.
 
 ### Anchoring and Adjustment Heuristic: Starting Points Matter
 
-When using the **anchoring and adjustment heuristic**, we start with an initial value (the anchor) and then adjust up or down from there. The problem is that our adjustments are usually insufficient—we stay too close to the anchor, even when it's arbitrary.
+When using the **anchoring and adjustment heuristic**, we start with an initial value (the anchor) and then adjust up or down from there. The problem is that our adjustments are usually insufficient. We stay too close to the anchor, even when it's arbitrary.
 
 {{M}}In salary negotiations, whoever names a figure first sets the anchor. If an employer offers $50,000, you'll probably counter with something like $58,000. But if you had started by requesting $65,000, the employer might have countered with $58,000. The starting point dramatically influences the final outcome{{/M}}.
 
@@ -168,7 +168,7 @@ Here's Kahneman and Tversky's classic example:
 
 Which man feels worse? Nearly everyone says Man B, who missed his flight by just 5 minutes. Why? Because it's much easier to imagine how Man B could have made his flight with minor changes (leaving home five minutes earlier, hitting fewer red lights). It's harder to imagine how Man B could have made up 30 minutes.
 
-The key insight: When a negative outcome could have easily been different, we experience (or predict others will experience) stronger emotional reactions. This requires **counterfactual thinking**—imagining the "what ifs" or "if onlys" of alternative outcomes.
+The key insight: When a negative outcome could have easily been different, we experience (or predict others will experience) stronger emotional reactions. This requires **counterfactual thinking**, imagining the "what ifs" or "if onlys" of alternative outcomes.
 
 ## Common Misconceptions to Avoid
 
@@ -182,7 +182,7 @@ Not necessarily. Heuristics are shortcuts that often work well enough, especiall
 
 **Misconception 3: "These only affect other people, not me."**
 
-Every single person, including expert psychologists, falls prey to these biases. Awareness helps, but it doesn't make you immune. This is why research protocols include blind conditions and peer review—to guard against our inevitable biases.
+Every single person, including expert psychologists, falls prey to these biases. Awareness helps, but it doesn't make you immune. This is why research protocols include blind conditions and peer review. To guard against our inevitable biases.
 
 **Misconception 4: "The base rate fallacy and representativeness heuristic are the same."**
 
@@ -226,7 +226,7 @@ Notice that three use "illusion" or "illusory" and involve overestimating connec
 
 Let's see how these concepts might show up in different contexts:
 
-**Clinical example**: {{M}}A client comes in convinced they have a rare neurological disorder after reading about symptoms online. They're exhibiting both the availability heuristic (the information is fresh in their mind) and possibly illusory correlation (connecting unrelated symptoms). Your job is to gently help them consider base rates—how common is this disorder compared to more likely explanations for their symptoms?{{/M}}
+**Clinical example**: {{M}}A client comes in convinced they have a rare neurological disorder after reading about symptoms online. They're exhibiting both the availability heuristic (the information is fresh in their mind) and possibly illusory correlation (connecting unrelated symptoms). Your job is to gently help them consider base rates. How common is this disorder compared to more likely explanations for their symptoms?{{/M}}
 
 **Research example**: A researcher interprets ambiguous results as supporting their hypothesis while dismissing contradictory findings as methodological problems. This is confirmation bias in action and highlights why peer review and replication are essential.
 
@@ -251,6 +251,6 @@ Let's see how these concepts might show up in different contexts:
 - **Availability heuristic** judges probability by ease of recalling examples
 - **Anchoring and adjustment** uses initial values as starting points for estimates
 - **Simulation heuristic** judges probability by ease of imagining; requires counterfactual thinking
-- Associate **Kahneman and Tversky** with heuristics research—they're the foundational names for this topic
+- Associate **Kahneman and Tversky** with heuristics research. They're the foundational names for this topic
 
-Understanding these concepts isn't just about passing the EPPP—it's about becoming a more effective clinician who can recognize these patterns in clients and yourself. These mental shortcuts shape every judgment and decision we make, from diagnosis to treatment planning to understanding why our clients think and behave the way they do.
+Understanding these concepts isn't just about passing the EPPP. It's about becoming a more effective clinician who can recognize these patterns in clients and yourself. These mental shortcuts shape every judgment and decision we make, from diagnosis to treatment planning to understanding why our clients think and behave the way they do.

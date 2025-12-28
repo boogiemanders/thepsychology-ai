@@ -9,7 +9,7 @@ version: 3
 
 ## Why Your Brain's "Support System" Matters for the EPPP
 
-You know that moment when you reach for your coffee mug without thinking, or when you automatically hit the brakes when someone cuts you off in traffic? Those seamless responses happen thanks to brain structures you might not have thought much about since undergrad. For the EPPP, understanding the hindbrain, midbrain, and subcortical forebrain isn't just about memorizing parts—it's about recognizing how damage to these areas shows up in your future clients, and how medications affect these systems to produce therapeutic (or harmful) effects.
+You know that moment when you reach for your coffee mug without thinking, or when you automatically hit the brakes when someone cuts you off in traffic? Those seamless responses happen thanks to brain structures you might not have thought much about since undergrad. For the EPPP, understanding the hindbrain, midbrain, and subcortical forebrain isn't just about memorizing parts. It's about recognizing how damage to these areas shows up in your future clients, and how medications affect these systems to produce therapeutic (or harmful) effects.
 
 Let's make these structures stick in your memory by connecting them to real clinical scenarios you'll encounter.
 
@@ -17,31 +17,31 @@ Let's make these structures stick in your memory by connecting them to real clin
 
 ![Brain divisions diagram](/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/brain-divisions.svg)
 
-The brain develops from the bottom up, both evolutionally and individually. The hindbrain sits right above your spinal cord—the oldest, most primitive part. The midbrain connects everything in the middle. The forebrain caps it all off with both subcortical structures (buried beneath the surface) and the cerebral cortex (which we'll save for another lesson).
+The brain develops from the bottom up, both evolutionally and individually. The hindbrain sits right above your spinal cord, the oldest, most primitive part. The midbrain connects everything in the middle. The forebrain caps it all off with both subcortical structures (buried beneath the surface) and the cerebral cortex (which we'll save for another lesson).
 
-Here's what you need to remember: The **brainstem** (hindbrain + midbrain) controls survival basics. Damage here can be catastrophic—we're talking respiratory failure, coma, or death. When you're reading case studies on the exam about someone with "brainstem damage," expect serious symptoms like trouble breathing, problems swallowing, balance issues, or altered consciousness.
+Here's what you need to remember: The **brainstem** (hindbrain + midbrain) controls survival basics. Damage here can be catastrophic. We're talking respiratory failure, coma, or death. When you're reading case studies on the exam about someone with "brainstem damage," expect serious symptoms like trouble breathing, problems swallowing, balance issues, or altered consciousness.
 
 ## Hindbrain: The Survival Center
 
-### Medulla - The Non-Negotiables
+### Medulla (The Non-Negotiables)
 
 The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.
 
 **Critical EPPP connection:** This is why opioid overdoses are fatal. Opioids suppress the medulla's respiratory centers. When you see a question about substance-related death mechanisms or why naloxone (Narcan) is life-saving, think medulla. When a client presents with opioid use disorder, part of your risk assessment involves understanding that their substance of choice directly threatens this survival center.
 
-### Pons - The Coordinator and Sleep Regulator
+### Pons (The Coordinator and Sleep Regulator)
 
 The pons does two main jobs:
 1. **Coordinates movement between body sides** by connecting the two halves of the cerebellum
 2. **Regulates sleep**, particularly deep sleep and REM sleep
 
-{{M}}Think of the pons as the coordinator in a group text thread between your cerebellum's two halves and your cerebral cortex—making sure messages get where they need to go and nothing gets lost in translation.{{/M}}
+{{M}}Think of the pons as the coordinator in a group text thread between your cerebellum's two halves and your cerebral cortex, making sure messages get where they need to go and nothing gets lost in translation.{{/M}}
 
 **EPPP alert:** When you encounter questions about sleep disorders or neurological conditions affecting coordination, consider pons involvement. If someone has damage affecting both their sleep-wake cycle AND bilateral coordination problems, the pons is your answer.
 
-### Cerebellum - More Than Just Balance
+### Cerebellum (More Than Just Balance)
 
-Most students remember "cerebellum = balance and coordination," but that's only scratching the surface. Yes, it coordinates voluntary movements and maintains posture. Yes, damage causes **ataxia**—that stumbling, slurred-speech, jerky-eye-movement presentation that looks exactly like intoxication.
+Most students remember "cerebellum = balance and coordination," but that's only scratching the surface. Yes, it coordinates voluntary movements and maintains posture. Yes, damage causes **ataxia**. That stumbling, slurred-speech, jerky-eye-movement presentation that looks exactly like intoxication.
 
 But here's what separates EPPP-ready students from everyone else: The cerebellum stores **procedural memories** and other implicit memories. When your client with cerebellar damage can describe how to ride a bike but can't actually do it, that's the cerebellum's memory function at work.
 
@@ -54,9 +54,9 @@ The cerebellum also contributes to:
 
 ## Midbrain: The Alert System and Movement Moderator
 
-### Reticular Formation and the RAS - Your Internal Alarm Clock
+### Reticular Formation and the RAS (Your Internal Alarm Clock)
 
-The reticular formation is a network of neurons extending from the medulla into the midbrain. Within it lies the **reticular activating system (RAS)**—also called the ascending reticular activating system (ARAS).
+The reticular formation is a network of neurons extending from the medulla into the midbrain. Within it lies the **reticular activating system (RAS)**. Also called the ascending reticular activating system (ARAS).
 
 The RAS is your consciousness control center. It:
 - Mediates consciousness and arousal
@@ -66,9 +66,9 @@ The RAS is your consciousness control center. It:
 
 **Critical for exam day:** RAS lesions can cause coma. Direct stimulation (or even sensory input like your alarm going off) can wake a sleeping person or increase alertness in someone already awake.
 
-{{M}}Imagine the RAS as your phone's notification system—it doesn't process the actual content of messages, but it alerts you that something needs your attention and brings you from "sleep mode" to "active."{{/M}}
+{{M}}Imagine the RAS as your phone's notification system. It doesn't process the actual content of messages, but it alerts you that something needs your attention and brings you from "sleep mode" to "active."{{/M}}
 
-### Substantia Nigra - The Dopamine Factory
+### Substantia Nigra (The Dopamine Factory)
 
 The substantia nigra plays a role in reward-seeking and drug addiction, but its claim to fame is its connection to motor control through the basal ganglia. The substantia nigra produces dopamine, and when its dopamine-producing cells die off, you get **Parkinson's disease**.
 
@@ -76,9 +76,9 @@ The substantia nigra plays a role in reward-seeking and drug addiction, but its 
 
 ## Subcortical Forebrain: Where Emotion Meets Regulation
 
-### Hypothalamus - Small but Mighty
+### Hypothalamus (Small but Mighty)
 
-Despite being tiny, the hypothalamus punches way above its weight class. It maintains **homeostasis**—keeping your internal environment stable—by influencing the autonomic nervous system and pituitary gland.
+Despite being tiny, the hypothalamus punches way above its weight class. It maintains **homeostasis** (keeping your internal environment stable) by influencing the autonomic nervous system and pituitary gland.
 
 **The hypothalamus regulates:**
 
@@ -89,7 +89,7 @@ Despite being tiny, the hypothalamus punches way above its weight class. It main
 | Stress response | Activates the HPA axis |
 | Additional | Emotions, memory (via mammillary bodies), circadian rhythms (via SCN) |
 
-**The HPA axis connection:** When you're studying stress, you'll see "hypothalamus" repeatedly. The hypothalamus initiates the stress response by releasing hormones that trigger the pituitary, which triggers the adrenal glands—the HPA (hypothalamic-pituitary-adrenal) axis. This is fundamental for understanding trauma responses, chronic stress effects, and conditions like PTSD and depression.
+**The HPA axis connection:** When you're studying stress, you'll see "hypothalamus" repeatedly. The hypothalamus initiates the stress response by releasing hormones that trigger the pituitary, which triggers the adrenal glands, the HPA (hypothalamic-pituitary-adrenal) axis. This is fundamental for understanding trauma responses, chronic stress effects, and conditions like PTSD and depression.
 
 #### The Hypothalamus-Pituitary Partnership
 
@@ -99,7 +99,7 @@ The hypothalamus controls the pituitary in two ways:
 
 **2. Posterior pituitary:** The hypothalamus actually makes oxytocin and vasopressin, then sends them to the posterior pituitary for storage. The posterior pituitary releases them when needed.
 
-#### Oxytocin and Vasopressin - The Social Hormones
+#### Oxytocin and Vasopressin (The Social Hormones)
 
 These two hormones deserve special attention for the EPPP:
 
@@ -112,41 +112,41 @@ These two hormones deserve special attention for the EPPP:
 - Triggers milk release during breastfeeding
 - Involved in social bonding, trust, cooperation, emotion recognition, social memory
 
-**Clinical applications:** Research shows oxytocin can improve emotion recognition in people with autism spectrum disorder and schizophrenia. Intranasal oxytocin administration has shown promise for improving social-emotional cognition deficits. However, the research is mixed—some studies with healthy adults show benefits, others don't, and some even show that too much oxytocin can impair emotion recognition by making people overly sensitive to facial expressions.
+**Clinical applications:** Research shows oxytocin can improve emotion recognition in people with autism spectrum disorder and schizophrenia. Intranasal oxytocin administration has shown promise for improving social-emotional cognition deficits. However, the research is mixed. Some studies with healthy adults show benefits, others don't, and some even show that too much oxytocin can impair emotion recognition by making people overly sensitive to facial expressions.
 
-**Stress reduction:** Elevated oxytocin levels inhibit HPA axis responses to stress, reducing blood pressure, heart rate, and cortisol. {{M}}It's like having a friend who can talk you down when you're spiraling—oxytocin literally calms your stress response system.{{/M}}
+**Stress reduction:** Elevated oxytocin levels inhibit HPA axis responses to stress, reducing blood pressure, heart rate, and cortisol. {{M}}It's like having a friend who can talk you down when you're spiraling. Oxytocin literally calms your stress response system.{{/M}}
 
-#### Suprachiasmatic Nucleus (SCN) - Your Biological Clock
+#### Suprachiasmatic Nucleus (SCN) (Your Biological Clock)
 
 Located in the hypothalamus, the SCN regulates circadian rhythms and the sleep-wake cycle. When you're studying sleep disorders or questions about jet lag and shift work, remember the SCN is your body's timekeeper.
 
-#### Mammillary Bodies - Memory's Supporting Player
+#### Mammillary Bodies (Memory's Supporting Player)
 
 Also part of the hypothalamus, these structures contribute to memory formation. They're significant because damage to the mammillary bodies (plus the thalamus) from chronic alcohol-related thiamine deficiency causes **Korsakoff syndrome**.
 
-### Thalamus - The Relay Station
+### Thalamus (The Relay Station)
 
-The thalamus receives sensory information and transmits it to the cortex for **all senses except smell**. (Smell goes straight to the olfactory cortex—important exception to know!)
+The thalamus receives sensory information and transmits it to the cortex for **all senses except smell**. (Smell goes straight to the olfactory cortex. Important exception to know!)
 
 Beyond sensory relay, the thalamus contributes to:
 - Coordination of sensory and motor functioning
 - Language and speech
 - Declarative memory
 
-#### Korsakoff Syndrome - The Thalamus-Memory Connection
+#### Korsakoff Syndrome (The Thalamus-Memory Connection)
 
 **Korsakoff syndrome** results from thiamine (vitamin B1) deficiency, usually from chronic alcoholism. It damages neurons in the **thalamus and mammillary bodies**.
 
 **Primary symptoms:**
-- **Anterograde amnesia** - can't form new memories
-- **Retrograde amnesia** - loses past memories  
-- **Confabulation** - fills memory gaps with false information they genuinely seem to believe
+- **Anterograde amnesia**. Can't form new memories
+- **Retrograde amnesia**. Loses past memories  
+- **Confabulation**. Fills memory gaps with false information they genuinely seem to believe
 
-{{M}}Imagine someone whose recording function is broken—they can't save new files (anterograde amnesia), some old files got corrupted (retrograde amnesia), and when they can't find a file, their system automatically generates a plausible substitute that they can't distinguish from real memories (confabulation).{{/M}}
+{{M}}Imagine someone whose recording function is broken. They can't save new files (anterograde amnesia), some old files got corrupted (retrograde amnesia), and when they can't find a file, their system automatically generates a plausible substitute that they can't distinguish from real memories (confabulation).{{/M}}
 
-**EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome. The exam might present a case of chronic alcoholism with severe memory problems and confabulation—that's your Korsakoff answer.
+**EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome. The exam might present a case of chronic alcoholism with severe memory problems and confabulation. That's your Korsakoff answer.
 
-### Basal Ganglia - The Movement and Habit System
+### Basal Ganglia (The Movement and Habit System)
 
 ![Basal ganglia diagram](/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/basal-ganglia.svg)
 
@@ -172,9 +172,9 @@ The caudate nucleus, putamen, and nucleus accumbens together form the **striatum
 | Psychiatric conditions | Major depression, schizophrenia, OCD |
 | Developmental disorders | ADHD, Tourette's disorder |
 
-**Why this matters:** When you see movement problems combined with cognitive or emotional symptoms, think basal ganglia. The classic is OCD—those repetitive behaviors involve dysfunctional basal ganglia circuits related to habit formation.
+**Why this matters:** When you see movement problems combined with cognitive or emotional symptoms, think basal ganglia. The classic is OCD. Those repetitive behaviors involve dysfunctional basal ganglia circuits related to habit formation.
 
-### Limbic System - Emotion, Motivation, and Memory Central
+### Limbic System (Emotion, Motivation, and Memory Central)
 
 ![Limbic system diagram](/images/topics/1-biological-bases/brain-regions-hindbrain-midbrain-forebrain/limbic-system.svg)
 
@@ -182,7 +182,7 @@ The limbic system traditionally includes the amygdala, cingulate cortex, and hip
 
 For the EPPP, focus on the core three and their specific functions.
 
-#### Amygdala - The Emotion Processor
+#### Amygdala (The Emotion Processor)
 
 The amygdala is your emotional headquarters, but it does more than just process feelings:
 
@@ -193,9 +193,9 @@ The amygdala is your emotional headquarters, but it does more than just process 
 - Pain modulation and emotional responses to pain
 - Risk-taking decisions (along with insula and ventromedial prefrontal cortex)
 
-**Flashbulb memories:** Those vivid, enduring memories of shocking events—where you were when you heard about 9/11, when you got life-changing news. The amygdala stamps these memories with emotional intensity, making them feel crystal clear (though research shows they're not always accurate).
+**Flashbulb memories:** Those vivid, enduring memories of shocking events, where you were when you heard about 9/11, when you got life-changing news. The amygdala stamps these memories with emotional intensity, making them feel crystal clear (though research shows they're not always accurate).
 
-**Clinical significance - Kluver-Bucy Syndrome:** Bilateral amygdala damage (usually including hippocampus and temporal lobes) causes:
+**Clinical significance. Kluver-Bucy Syndrome:** Bilateral amygdala damage (usually including hippocampus and temporal lobes) causes:
 - Hyperphagia (excessive eating)
 - Hyperorality (examining objects by mouth)
 - Reduced fear
@@ -209,21 +209,21 @@ The amygdala is your emotional headquarters, but it does more than just process 
 - Autism spectrum disorder
 - Substance use disorders
 
-**Pain connection:** The amygdala is part of the "pain matrix"—brain regions that respond to painful stimuli. It doesn't just register pain; it modulates it (amplifying or reducing sensation) and generates emotional responses like anxiety and fear.
+**Pain connection:** The amygdala is part of the "pain matrix". Brain regions that respond to painful stimuli. It doesn't just register pain; it modulates it (amplifying or reducing sensation) and generates emotional responses like anxiety and fear.
 
 **EPPP scenario:** A patient has bilateral temporal lobe damage including the amygdala. They show no appropriate fear responses, put non-food items in their mouth, and can look directly at objects but can't identify them. You're looking at Kluver-Bucy syndrome, not a psychiatric condition.
 
-#### Cingulate Cortex - Motivation, Memory, and Emotional Pain
+#### Cingulate Cortex (Motivation, Memory, and Emotional Pain)
 
-The cingulate cortex contributes to motivation, memory, and emotions—particularly **emotional reactions to pain**. People with cingulate cortex damage can feel pain but aren't emotionally distressed by it. They'll tell you "yes, it hurts" but won't seem bothered.
+The cingulate cortex contributes to motivation, memory, and emotions, particularly **emotional reactions to pain**. People with cingulate cortex damage can feel pain but aren't emotionally distressed by it. They'll tell you "yes, it hurts" but won't seem bothered.
 
 **Depression connection:** Abnormalities in the cingulate cortex (especially the anterior cingulate cortex or ACC) have been linked to major depressive disorder. Research shows:
 - Reduced ACC volume is associated with depression
 - Improvements in depressive symptoms after cognitive-behavioral therapy correspond with increases in ACC volume
 
-{{M}}It's like the cingulate cortex provides the "this matters" signal for both pain and motivation—when it's not functioning properly, life loses its emotional color and urgency.{{/M}}
+{{M}}It's like the cingulate cortex provides the "this matters" signal for both pain and motivation, when it's not functioning properly, life loses its emotional color and urgency.{{/M}}
 
-#### Hippocampus - The Memory Converter
+#### Hippocampus (The Memory Converter)
 
 The hippocampus is less about emotions and more about memory than other limbic structures. Its two main roles:
 
@@ -237,13 +237,13 @@ The hippocampus helps you remember the spatial layout of your environment. {{M}}
 
 **Alzheimer's disease:** Degeneration of cells in the hippocampus and adjacent entorhinal cortex causes the episodic memory problems and spatial navigation difficulties characteristic of Alzheimer's. Patients forget recent events (anterograde amnesia) and get lost in familiar places because their hippocampus can't do its job anymore.
 
-**Stress and cortisol effects:** Acute or chronic increases in hippocampal cortisol levels (from stress, Cushing's syndrome, or corticosteroid administration) impair retrieval of declarative memories. This is why your stressed-out clients might struggle to recall information during sessions—their elevated cortisol is literally interfering with hippocampal function.
+**Stress and cortisol effects:** Acute or chronic increases in hippocampal cortisol levels (from stress, Cushing's syndrome, or corticosteroid administration) impair retrieval of declarative memories. This is why your stressed-out clients might struggle to recall information during sessions. Their elevated cortisol is literally interfering with hippocampal function.
 
 **PTSD connection:** Research consistently finds hippocampal abnormalities in people with PTSD, and the more severe the trauma and symptoms, the more likely someone is to have a smaller hippocampus. The debate continues about whether:
 - Traumatic stress exposure causes hippocampal reduction, OR
 - Reduced hippocampal volume is a pre-existing risk factor for developing PTSD after trauma
 
-Both might be true—smaller hippocampus increases vulnerability, and severe trauma further damages it.
+Both might be true. Smaller hippocampus increases vulnerability, and severe trauma further damages it.
 
 **Other disorders:** Hippocampal abnormalities also contribute to major depressive disorder, bipolar disorder, and schizophrenia.
 
@@ -253,10 +253,10 @@ Both might be true—smaller hippocampus increases vulnerability, and severe tra
 Wrong. It's also crucial for procedural memory, implicit memory, attention, language processing, and visuospatial abilities. Don't miss questions that link cerebellar damage to memory problems.
 
 **2. "All sensory information goes through the thalamus."**
-Almost—but smell bypasses the thalamus and goes straight to the olfactory cortex. This exception appears on the exam.
+Almost. But smell bypasses the thalamus and goes straight to the olfactory cortex. This exception appears on the exam.
 
 **3. "The hypothalamus makes all pituitary hormones."**
-No—it makes releasing/inhibiting hormones that control the anterior pituitary (which makes its own hormones), and it makes oxytocin and vasopressin that are stored in the posterior pituitary. Know the distinction.
+No. It makes releasing/inhibiting hormones that control the anterior pituitary (which makes its own hormones), and it makes oxytocin and vasopressin that are stored in the posterior pituitary. Know the distinction.
 
 **4. "Oxytocin is always beneficial for social functioning."**
 Research is mixed. While it can improve emotion recognition in people with autism or schizophrenia, too much in healthy adults can actually impair emotion recognition by causing oversensitivity to facial expressions.
@@ -265,25 +265,25 @@ Research is mixed. While it can improve emotion recognition in people with autis
 Technically, it starts with substantia nigra degeneration (midbrain), which then affects the basal ganglia because they're interconnected. Some sources include substantia nigra as part of the basal ganglia, some don't. Know both perspectives.
 
 **6. "The nucleus accumbens is part of the basal ganglia."**
-Or is it part of the limbic system? Actually, it connects both systems and coordinates their activities. The EPPP might accept either answer depending on context—pay attention to what the question is asking about (movement/habits vs. emotion/reward).
+Or is it part of the limbic system? Actually, it connects both systems and coordinates their activities. The EPPP might accept either answer depending on context. Pay attention to what the question is asking about (movement/habits vs. emotion/reward).
 
 ## Memory Aids for Exam Day
 
 **Hindbrain structures (low to high):**
-- **M**edulla - **M**andatory for life (breathing, heart rate)
-- **P**ons - **P**erfect sleep and bilateral coordination
-- **C**erebellum - **C**oordination plus procedural memory
+- **M**edulla. **M**andatory for life (breathing, heart rate)
+- **P**ons. **P**erfect sleep and bilateral coordination
+- **C**erebellum. **C**oordination plus procedural memory
 
 **Midbrain quick hits:**
 - **RAS** = **R**aises **A**lertness and **S**tate of consciousness
 - **Substantia nigra** = **S**ubstance for **N**ormal movement (dopamine for Parkinson's)
 
-**Subcortical forebrain - HTHBAL:**
-- **H**ypothalamus - **H**omeostasis and **H**ormones
-- **T**halamus - **T**ransmits sensory info (except smell!)
-- **B**asal ganglia - **B**ig role in movement and habits
-- **A**mygdala - **A**ffect (emotions) and fear
-- **L**imbic system (cingulate, hippocampus) - **L**ong-term memories and motivation
+**Subcortical forebrain. HTHBAL:**
+- **H**ypothalamus. **H**omeostasis and **H**ormones
+- **T**halamus. **T**ransmits sensory info (except smell!)
+- **B**asal ganglia. **B**ig role in movement and habits
+- **A**mygdala, **A**ffect (emotions) and fear
+- **L**imbic system (cingulate, hippocampus). **L**ong-term memories and motivation
 
 **Korsakoff syndrome = TAM:**
 - **T**halamus damage
@@ -325,7 +325,7 @@ When you encounter a question about brain damage or dysfunction:
 
 - **Oxytocin and vasopressin matter clinically:** Social bonding, stress reduction, potential treatment for autism and schizophrenia social deficits (but results are mixed).
 
-- **Thalamus = sensory relay (except smell):** Also crucial for declarative memory—damage plus mammillary bodies = Korsakoff syndrome.
+- **Thalamus = sensory relay (except smell):** Also crucial for declarative memory. Damage plus mammillary bodies = Korsakoff syndrome.
 
 - **Korsakoff syndrome triad:** Anterograde amnesia, retrograde amnesia, confabulation from thiamine deficiency (usually alcoholism).
 

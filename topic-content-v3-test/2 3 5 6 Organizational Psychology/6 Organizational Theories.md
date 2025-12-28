@@ -11,7 +11,7 @@ version: 3
 
 You might be wondering why a psychology exam wants you to know about how companies are structured. Here's the thing: psychologists don't just work in therapy rooms. Many of you will consult with organizations, help design better workplaces, or need to understand the systems that affect your clients' mental health. Plus, this content shows up consistently on the exam, so let's make sure you really get it.
 
-These organizational theories tell us how people thought about work, productivity, and human motivation throughout the past century. More importantly, they reveal fundamental truths about human behavior in groups and systems—knowledge that's useful whether you're running a private practice, working in a hospital, or consulting with businesses.
+These organizational theories tell us how people thought about work, productivity, and human motivation throughout the past century. More importantly, they reveal fundamental truths about human behavior in groups and systems. Knowledge that's useful whether you're running a private practice, working in a hospital, or consulting with businesses.
 
 ## The Evolution of Thinking About Work and Workers
 
@@ -27,22 +27,22 @@ Frederick Taylor introduced scientific management in 1911, and his approach domi
 
 **Taylor's Four Key Principles:**
 
-1. **Scientific methods identify optimal work processes** - Use time-and-motion studies to find the most efficient way to complete each task
-2. **Scientific selection and training** - Match workers' skills to job requirements through careful assessment and training
-3. **Division of labor** - Managers plan and organize; workers execute those plans
-4. **Cooperation over coercion** - Work with employees rather than forcing compliance (though still within the manager's framework)
+1. **Scientific methods identify optimal work processes**. Use time-and-motion studies to find the most efficient way to complete each task
+2. **Scientific selection and training**. Match workers' skills to job requirements through careful assessment and training
+3. **Division of labor**. Managers plan and organize; workers execute those plans
+4. **Cooperation over coercion**. Work with employees rather than forcing compliance (though still within the manager's framework)
 
 Taylor believed workers were motivated primarily by money. {{M}}Think of it like assuming everyone would choose their career solely based on salary, ignoring passion, purpose, or work-life balance.{{/M}} He advocated for a differential piece-rate system, where more productive workers earned higher wages per unit produced.
 
 **The Taylor Mindset:**
 
-The underlying assumption here is mechanistic. {{M}}Picture treating employees like apps on your phone—each one has a specific function, and the goal is to optimize their performance through technical adjustments.{{/M}} There's little consideration for human emotion, social needs, or psychological complexity.
+The underlying assumption here is mechanistic. {{M}}Picture treating employees like apps on your phone. Each one has a specific function, and the goal is to optimize their performance through technical adjustments.{{/M}} There's little consideration for human emotion, social needs, or psychological complexity.
 
-While this approach sounds outdated, you still see it in modern workplaces. Commission-based sales jobs, productivity tracking software, and standardized procedures all have roots in scientific management. The theory had value—efficiency did improve in many cases—but it missed crucial aspects of what makes humans tick.
+While this approach sounds outdated, you still see it in modern workplaces. Commission-based sales jobs, productivity tracking software, and standardized procedures all have roots in scientific management. The theory had value (efficiency did improve in many cases) but it missed crucial aspects of what makes humans tick.
 
 ## Weber's Bureaucracy: The Rational Organization
 
-Max Weber described bureaucracy in 1947 as an impersonal, rational system designed to ensure orderly and efficient operations. Before you groan about bureaucratic red tape, understand that Weber was actually proposing a reform. {{M}}In his era, getting a job was often about who you knew or who your family was—like needing an "in" to get past the velvet rope at an exclusive club.{{/M}} Weber wanted merit-based systems where competence mattered more than connections.
+Max Weber described bureaucracy in 1947 as an impersonal, rational system designed to ensure orderly and efficient operations. Before you groan about bureaucratic red tape, understand that Weber was actually proposing a reform. {{M}}In his era, getting a job was often about who you knew or who your family was, like needing an "in" to get past the velvet rope at an exclusive club.{{/M}} Weber wanted merit-based systems where competence mattered more than connections.
 
 **Essential Elements of Weber's Bureaucracy:**
 
@@ -57,9 +57,9 @@ Max Weber described bureaucracy in 1947 as an impersonal, rational system design
 
 **Why This Mattered:**
 
-Weber's bureaucracy introduced fairness and predictability. {{M}}It's like having a clear rulebook for a game instead of making up rules as you go{{/M}}—everyone knows what's expected, and decisions follow logical principles rather than personal whims.
+Weber's bureaucracy introduced fairness and predictability. {{M}}It's like having a clear rulebook for a game instead of making up rules as you go{{/M}}. Everyone knows what's expected, and decisions follow logical principles rather than personal whims.
 
-The downside? Bureaucracies can become rigid and impersonal. They can prioritize following procedures over achieving actual goals. You've probably experienced this frustration yourself—situations where the rules don't make sense for your specific case, but "that's just how we do things."
+The downside? Bureaucracies can become rigid and impersonal. They can prioritize following procedures over achieving actual goals. You've probably experienced this frustration yourself. Situations where the rules don't make sense for your specific case, but "that's just how we do things."
 
 For the EPPP, remember that Weber viewed bureaucracy positively as a rational system, even though we often use the term negatively today.
 
@@ -69,15 +69,15 @@ Everything changed with Elton Mayo's research at Western Electric's Hawthorne Pl
 
 **The Unexpected Discovery:**
 
-Mayo started with a scientific management approach. He wanted to test how physical conditions—lighting levels, break times, temperature—affected productivity. {{M}}Imagine trying to figure out if people work better with bright lights or dim lights, expecting a simple cause-and-effect relationship.{{/M}} But something strange happened: productivity kept increasing regardless of the changes made. Workers produced more with brighter lights. Then they produced more when lights were dimmed. Then more when other conditions changed. What was going on?
+Mayo started with a scientific management approach. He wanted to test how physical conditions (lighting levels, break times, temperature) affected productivity. {{M}}Imagine trying to figure out if people work better with bright lights or dim lights, expecting a simple cause-and-effect relationship.{{/M}} But something strange happened: productivity kept increasing regardless of the changes made. Workers produced more with brighter lights. Then they produced more when lights were dimmed. Then more when other conditions changed. What was going on?
 
-Through interviews and observations, Mayo discovered the answer: **workers were responding to the attention they received as research participants**. This became known as the **Hawthorne effect**—the phenomenon where people change their behavior simply because they know they're being observed or given special attention.
+Through interviews and observations, Mayo discovered the answer: **workers were responding to the attention they received as research participants**. This became known as the **Hawthorne effect**, the phenomenon where people change their behavior simply because they know they're being observed or given special attention.
 
 **The Social Factor:**
 
 Mayo also uncovered something else crucial: informal social norms within work groups powerfully influenced productivity. Workers had their own ideas about appropriate work pace, and they enforced these norms through social pressure.
 
-Here's a memorable example from the research: Workers used "binging"—punching a coworker on the upper arm—to sanction peers who violated group norms. If someone worked too fast and made others look bad, they'd get binged. {{M}}Think of this like the unwritten rules in your friend group about texting response times. If everyone usually responds within an hour, the person who always replies in two minutes might get teased for being too eager, while someone who takes three days gets called out for being a bad friend.{{/M}} These weren't official policies, but they powerfully shaped behavior.
+Here's a memorable example from the research: Workers used "binging" (punching a coworker on the upper arm) to sanction peers who violated group norms. If someone worked too fast and made others look bad, they'd get binged. {{M}}Think of this like the unwritten rules in your friend group about texting response times. If everyone usually responds within an hour, the person who always replies in two minutes might get teased for being too eager, while someone who takes three days gets called out for being a bad friend.{{/M}} These weren't official policies, but they powerfully shaped behavior.
 
 **Mayo's Conclusion:**
 
@@ -111,13 +111,13 @@ Here's the psychological mechanism at work: A supervisor's beliefs determine how
 
 {{M}}Imagine you're dating someone who constantly checks your phone because they assume you're untrustworthy. Their suspicious behavior might make you defensive and secretive about innocent things, which makes them more suspicious, creating a negative cycle. Their assumption about you helped create the very behavior they feared.{{/M}}
 
-A Theory X supervisor who believes workers are lazy will micromanage, distrust, and control. Workers respond by doing the minimum required, avoiding initiative (why bother when you're not trusted?), and becoming disengaged. The supervisor sees this and thinks, "See? I was right—they're lazy."
+A Theory X supervisor who believes workers are lazy will micromanage, distrust, and control. Workers respond by doing the minimum required, avoiding initiative (why bother when you're not trusted?), and becoming disengaged. The supervisor sees this and thinks, "See? I was right. They're lazy."
 
 A Theory Y supervisor who trusts employees and gives them autonomy creates an environment where people take initiative, show creativity, and engage meaningfully. Workers rise to meet expectations.
 
 **McGregor's Position:**
 
-McGregor was influenced by Mayo's human relations approach and Abraham Maslow's work on human motivation. He believed Theory Y produces better outcomes for both employees and organizations. Modern research largely supports this—autonomy, trust, and intrinsic motivation typically lead to better performance and satisfaction than control and external rewards alone.
+McGregor was influenced by Mayo's human relations approach and Abraham Maslow's work on human motivation. He believed Theory Y produces better outcomes for both employees and organizations. Modern research largely supports this. Autonomy, trust, and intrinsic motivation typically lead to better performance and satisfaction than control and external rewards alone.
 
 **For the EPPP:**
 
@@ -129,7 +129,7 @@ Daniel Katz and Robert Kahn introduced open-system theory to organizational psyc
 
 **What Makes Something an Open System?**
 
-Open systems exchange resources with their environment. {{M}}Your body is an open system—you take in food and oxygen, process them, and output energy and waste products. You're constantly interacting with your environment to survive and function.{{/M}} Organizations work similarly.
+Open systems exchange resources with their environment. {{M}}Your body is an open system. You take in food and oxygen, process them, and output energy and waste products. You're constantly interacting with your environment to survive and function.{{/M}} Organizations work similarly.
 
 **Key Characteristics of Organizations as Open Systems:**
 
@@ -156,7 +156,7 @@ This is crucial for the EPPP, so let's break it down clearly:
 
 **Why This Matters:**
 
-Open-system theory helps us understand that organizations don't exist in isolation. They're constantly influenced by and influencing their environment. Changes in the external world—economic conditions, regulations, cultural shifts, technological advances—require organizational adaptation.
+Open-system theory helps us understand that organizations don't exist in isolation. They're constantly influenced by and influencing their environment. Changes in the external world (economic conditions, regulations, cultural shifts, technological advances) require organizational adaptation.
 
 {{M}}If you've ever tried to maintain a consistent workout routine, you've experienced this. Your exercise plan (the system) must constantly adapt to changes in your work schedule, weather, gym hours, injuries, and motivation levels (environmental inputs). The results you get (outputs) then feed back into your motivation and future planning.{{/M}}
 
@@ -164,7 +164,7 @@ Open-system theory helps us understand that organizations don't exist in isolati
 
 **Equifinality** means different organizations can achieve the same goals through different methods. One therapy practice might succeed through specialization in trauma while another thrives by being a generalist clinic. Both achieve financial stability and help clients, but through different pathways.
 
-**Multifinality** means organizations starting from similar positions can end up in vastly different places. Two mental health clinics might start identically, but one adapts to telehealth quickly while another sticks with in-person only—leading to very different outcomes during a pandemic.
+**Multifinality** means organizations starting from similar positions can end up in vastly different places. Two mental health clinics might start identically, but one adapts to telehealth quickly while another sticks with in-person only, leading to very different outcomes during a pandemic.
 
 ## Comparing the Theories: Your EPPP Quick Reference
 
@@ -184,7 +184,7 @@ Not quite. While its view of human motivation was limited, the emphasis on train
 
 **Misconception 2: "Weber loved bureaucracy and thought it was perfect."**
 
-Weber described bureaucracy as rational and efficient for achieving organizational goals, but he actually worried about the "iron cage" of rationalization—where bureaucracy could dehumanize people and stifle creativity. For the EPPP, know that he presented it as an ideal type of rational organization, not necessarily perfect in every way.
+Weber described bureaucracy as rational and efficient for achieving organizational goals, but he actually worried about the "iron cage" of rationalization, where bureaucracy could dehumanize people and stifle creativity. For the EPPP, know that he presented it as an ideal type of rational organization, not necessarily perfect in every way.
 
 **Misconception 3: "The Hawthorne effect means any attention always improves performance."**
 
@@ -192,7 +192,7 @@ The Hawthorne effect is more nuanced. It's about awareness of observation changi
 
 **Misconception 4: "Theory X is wrong and Theory Y is right."**
 
-While McGregor advocated for Theory Y, the real insight is about self-fulfilling prophecies and management assumptions. Some situations might warrant more structure, and some employees might need clearer direction—but the default assumption about human nature matters enormously.
+While McGregor advocated for Theory Y, the real insight is about self-fulfilling prophecies and management assumptions. Some situations might warrant more structure, and some employees might need clearer direction. But the default assumption about human nature matters enormously.
 
 **Misconception 5: "Open-system theory is just about inputs and outputs."**
 
@@ -244,4 +244,4 @@ It's really about understanding organizations as dynamic entities in constant in
 
 - These theories remain relevant for understanding modern workplace dynamics, organizational consultation, and the systems that affect clients' lives.
 
-You've got this. These theories might seem dry at first, but they tell a fascinating story about how we came to understand human behavior in groups and systems—knowledge you'll use throughout your career as a psychologist.
+You've got this. These theories might seem dry at first, but they tell a fascinating story about how we came to understand human behavior in groups and systems. Knowledge you'll use throughout your career as a psychologist.

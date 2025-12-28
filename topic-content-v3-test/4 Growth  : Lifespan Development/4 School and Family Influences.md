@@ -9,11 +9,11 @@ version: 3
 
 ## Why This Topic Matters for Your Career
 
-Understanding how families and schools shape development isn't just academic trivia—it's essential for your future practice. Whether you're planning to work with children, families, or adults, the patterns that start in childhood echo throughout life. That client struggling with intimacy issues? Their parents' divorce might be part of the story. The college student with crippling anxiety? Helicopter parenting could be a factor. These connections will help you understand your clients and recognize patterns you might have missed otherwise.
+Understanding how families and schools shape development isn't just academic trivia. It's essential for your future practice. Whether you're planning to work with children, families, or adults, the patterns that start in childhood echo throughout life. That client struggling with intimacy issues? Their parents' divorce might be part of the story. The college student with crippling anxiety? Helicopter parenting could be a factor. These connections will help you understand your clients and recognize patterns you might have missed otherwise.
 
 ## The Foundation: How Relationships Shape Us
 
-Family and school experiences are the laboratories where people first learn about relationships, conflict, success, and failure. These early lessons become templates—often unconscious ones—that people carry into adulthood. Let's break down what the research tells us.
+Family and school experiences are the laboratories where people first learn about relationships, conflict, success, and failure. These early lessons become templates (often unconscious ones) that people carry into adulthood. Let's break down what the research tells us.
 
 ## Marriage, Divorce, and What Comes After
 
@@ -50,7 +50,7 @@ The research identifies several predictors beyond communication:
 
 ### The Aftermath: How Divorce Affects Adults
 
-Divorce doesn't just end a legal contract—it reshapes lives. Research shows divorced individuals report lower happiness, more psychological distress, and more physical health problems compared to married people. But the impact differs by gender:
+Divorce doesn't just end a legal contract. It reshapes lives. Research shows divorced individuals report lower happiness, more psychological distress, and more physical health problems compared to married people. But the impact differs by gender:
 
 **For women**: Economic hardship is the primary challenge. When women have custody of children, their financial situation typically worsens significantly after divorce. This financial strain creates a cascade of stress affecting mental and physical health. These economic consequences tend to be chronic.
 
@@ -68,7 +68,7 @@ Preschoolers often show the worst immediate effects. {{M}}They're like passenger
 
 **Gender Differences Are Complex**
 
-Early research suggested boys suffered more, but we now know girls experience significant problems too—they just show them differently. Boys tend to "act out" with visible externalizing behaviors. Girls more often "act in" with depression and anxiety that's less obvious to adults.
+Early research suggested boys suffered more, but we now know girls experience significant problems too. They just show them differently. Boys tend to "act out" with visible externalizing behaviors. Girls more often "act in" with depression and anxiety that's less obvious to adults.
 
 The "sleeper effect" is particularly important: Girls who seem fine after their parents' divorce may develop serious problems in adolescence. They may become noncompliant, develop low self-esteem, become pregnant before marriage, or experience intense fears about abandonment in their own romantic relationships.
 
@@ -78,7 +78,7 @@ Here's a critical finding: High-conflict intact families produce worse outcomes 
 
 **Economic Impact**
 
-When family income drops after divorce (which typically happens for custodial mothers), children face increased risk for academic, behavioral, and emotional problems. Research confirms that increasing single mothers' incomes directly improves their children's outcomes—the problems aren't about single parenting itself, but about the financial stress it often creates.
+When family income drops after divorce (which typically happens for custodial mothers), children face increased risk for academic, behavioral, and emotional problems. Research confirms that increasing single mothers' incomes directly improves their children's outcomes, the problems aren't about single parenting itself, but about the financial stress it often creates.
 
 **Father Involvement**
 
@@ -106,7 +106,7 @@ Boys and girls respond differently to stepparents:
 
 **Age Considerations**
 
-Pre-adolescence and early adolescence (roughly ages 9-15) is the worst time for stepfamily formation. {{M}}These kids are already dealing with identity questions and hormonal changes—adding a new parental figure is like trying to merge onto a highway that's already congested{{/M}}.
+Pre-adolescence and early adolescence (roughly ages 9-15) is the worst time for stepfamily formation. {{M}}These kids are already dealing with identity questions and hormonal changes. Adding a new parental figure is like trying to merge onto a highway that's already congested{{/M}}.
 
 **Stepfather Adjustment**
 
@@ -147,11 +147,11 @@ The data consistently shows:
 3. Cohabiting women
 4. Divorced/separated individuals (both genders)
 
-There's debate about causation—do people become happier because they marry, or were already-happy people more likely to marry and stay married?
+There's debate about causation. Do people become happier because they marry, or were already-happy people more likely to marry and stay married?
 
 ## Becoming Parents: The Transition
 
-Most couples experience decreased relationship satisfaction and increased conflict when they become parents. {{M}}It's like adding a demanding new project at work that never sleeps—relationships that worked smoothly before suddenly face constant interruptions and stress{{/M}}.
+Most couples experience decreased relationship satisfaction and increased conflict when they become parents. {{M}}It's like adding a demanding new project at work that never sleeps. Relationships that worked smoothly before suddenly face constant interruptions and stress{{/M}}.
 
 However, effects vary:
 - Couples who have children early in marriage experience the steepest decline in satisfaction
@@ -161,7 +161,7 @@ However, effects vary:
 
 ## Adopted Children: Understanding the Challenges
 
-Adoptive parents typically have advantages—better education and higher incomes than average. Yet adopted children face higher risks for psychological, behavioral, and academic problems. Common issues include ADHD, learning disabilities, speech impairments, and developmental delays.
+Adoptive parents typically have advantages. Better education and higher incomes than average. Yet adopted children face higher risks for psychological, behavioral, and academic problems. Common issues include ADHD, learning disabilities, speech impairments, and developmental delays.
 
 Why? The answer lies in pre-adoption experiences. Many adopted children experienced:
 - Birth complications
@@ -173,7 +173,7 @@ Interestingly, international adoptees have better outcomes than domestic adoptee
 
 ## Parenting Styles That Harm: Helicopter Parents
 
-**Helicopter parents** hover constantly, making decisions for their children and preventing them from experiencing failure. {{M}}Imagine a GPS that not only gives directions but physically prevents you from making any wrong turns—you'd never learn to navigate on your own{{/M}}.
+**Helicopter parents** hover constantly, making decisions for their children and preventing them from experiencing failure. {{M}}Imagine a GPS that not only gives directions but physically prevents you from making any wrong turns. You'd never learn to navigate on your own{{/M}}.
 
 This overinvolved parenting style differs from authoritarian parenting (which is harsh and punitive) because it's well-intentioned. But the outcomes are similarly problematic:
 
@@ -220,7 +220,7 @@ Negative consequences:
 
 ### The Empty Nest
 
-Contrary to old beliefs about crisis and loss, research shows the empty nest brings more positive than negative outcomes. Married women experience increased marital satisfaction after the last child leaves home—primarily because the quality of interactions with their husbands improves, not necessarily because they spend more time together.
+Contrary to old beliefs about crisis and loss, research shows the empty nest brings more positive than negative outcomes. Married women experience increased marital satisfaction after the last child leaves home. Primarily because the quality of interactions with their husbands improves, not necessarily because they spend more time together.
 
 ## Maternal Employment and Childcare
 
@@ -313,7 +313,7 @@ Worse outcomes occur when:
 
 ### Cultural Socialization
 
-Parents from ethnic/racial minority groups often engage in cultural socialization—teaching children about their heritage, customs, traditions, and pride in their culture. Some groups (particularly African American families) also teach children how to cope with prejudice and discrimination.
+Parents from ethnic/racial minority groups often engage in cultural socialization, teaching children about their heritage, customs, traditions, and pride in their culture. Some groups (particularly African American families) also teach children how to cope with prejudice and discrimination.
 
 Benefits include:
 - Positive self-concept and ethnic/racial identity
@@ -337,7 +337,7 @@ Research reveals gender-biased teaching patterns from elementary through graduat
 **Reality**: High-conflict intact families produce worse outcomes than low-conflict divorced families.
 
 **Misconception 2**: "Boys handle divorce better than girls."
-**Reality**: Girls experience significant problems too—they just show them differently (internalizing vs. externalizing). Girls may also experience delayed "sleeper effects."
+**Reality**: Girls experience significant problems too. They just show them differently (internalizing vs. externalizing). Girls may also experience delayed "sleeper effects."
 
 **Misconception 3**: "Frequent contact with non-custodial fathers is the most important factor for children."
 **Reality**: Quality of relationship, child support payment, and parenting style matter more than contact frequency.

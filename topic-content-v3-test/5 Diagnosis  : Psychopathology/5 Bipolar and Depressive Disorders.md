@@ -9,20 +9,20 @@ version: 3
 
 ## Understanding Bipolar and Depressive Disorders: Your EPPP Guide
 
-When you're scrolling through social media late at night, you might see a post from someone saying, "I'm so bipolar today—happy one minute, sad the next!" But here's the thing: what we're about to study is vastly different from everyday mood swings. Bipolar and depressive disorders are serious mental health conditions that affect millions of people, and as a future psychologist, you'll need to diagnose them accurately, understand their origins, and know how to treat them effectively. This isn't just exam material—it's knowledge that could literally save someone's life.
+When you're scrolling through social media late at night, you might see a post from someone saying, "I'm so bipolar today (happy one minute, sad the next!" But here's the thing: what we're about to study is vastly different from everyday mood swings. Bipolar and depressive disorders are serious mental health conditions that affect millions of people, and as a future psychologist, you'll need to diagnose them accurately, understand their origins, and know how to treat them effectively. This isn't just exam material) it's knowledge that could literally save someone's life.
 
 Let's dive into what makes these disorders tick and how to spot the differences between them.
 
 ## The Three Building Blocks: Understanding Mood Episodes
 
-Before we can diagnose any bipolar or depressive disorder, we need to understand three fundamental mood episodes. {{M}}Think of these as the basic ingredients in different recipes{{/M}}—the same ingredients combined in different ways create entirely different dishes.
+Before we can diagnose any bipolar or depressive disorder, we need to understand three fundamental mood episodes. {{M}}Think of these as the basic ingredients in different recipes{{/M}}, the same ingredients combined in different ways create entirely different dishes.
 
 ### Manic Episode: The Accelerator Stuck Down
 
 A **manic episode** involves an abnormally elevated, expansive, or irritable mood plus increased energy lasting at least one week. But it's not just feeling really good after landing a promotion. We're talking about three or more of these symptoms:
 
 - Inflated self-esteem or grandiosity
-- Decreased need for sleep (not just insomnia—they genuinely don't feel tired)
+- Decreased need for sleep (not just insomnia. They genuinely don't feel tired)
 - More talkative than usual or pressure to keep talking
 - Flight of ideas or racing thoughts
 - Distractibility
@@ -33,7 +33,7 @@ The key here: these symptoms cause **marked impairment** in functioning, require
 
 ### Hypomanic Episode: The Milder Version
 
-A **hypomanic episode** looks similar but less intense. Same elevated or irritable mood, same symptoms, but only needs to last four consecutive days. The crucial difference? No severe impairment, no hospitalization needed, and no psychotic features. {{M}}If mania is driving 100 mph on the highway, hypomania is going 75 in a 55 zone{{/M}}—still not normal, but you're less likely to crash.
+A **hypomanic episode** looks similar but less intense. Same elevated or irritable mood, same symptoms, but only needs to last four consecutive days. The crucial difference? No severe impairment, no hospitalization needed, and no psychotic features. {{M}}If mania is driving 100 mph on the highway, hypomania is going 75 in a 55 zone{{/M}}. Still not normal, but you're less likely to crash.
 
 ### Major Depressive Episode: When Everything Goes Dark
 
@@ -49,13 +49,13 @@ Now let's combine those episodes into actual diagnoses:
 | **Bipolar II** | At least one hypomanic AND one major depressive episode | 4 days (hypomania) + 2 weeks (depression) | Never had full manic episode; depression is primary problem |
 | **Cyclothymic Disorder** | Multiple periods of hypomanic symptoms + depressive symptoms | 2 years (adults) or 1 year (children/adolescents) | Symptoms don't meet full criteria for episodes; chronic but less severe |
 
-Here's what trips people up: Bipolar I only requires ONE manic episode. That person might never have depression, but they still have Bipolar I. Bipolar II, however, requires both hypomania AND depression—the depressive episodes are actually the more problematic feature for most people with this diagnosis.
+Here's what trips people up: Bipolar I only requires ONE manic episode. That person might never have depression, but they still have Bipolar I. Bipolar II, however, requires both hypomania AND depression, the depressive episodes are actually the more problematic feature for most people with this diagnosis.
 
 ## Where Do Bipolar Disorders Come From?
 
 ### The Genetics Are Strong
 
-Bipolar disorder runs in families—heavily. Heritability estimates range from 60% to 90%, which is huge. {{M}}If your genes were a playlist determining your mental health, bipolar disorder would be one of the songs with the volume turned way up{{/M}}. 
+Bipolar disorder runs in families. Heavily. Heritability estimates range from 60% to 90%, which is huge. {{M}}If your genes were a playlist determining your mental health, bipolar disorder would be one of the songs with the volume turned way up{{/M}}. 
 
 The concordance rates tell the story:
 - Monozygotic (identical) twins: 40-80%
@@ -127,7 +127,7 @@ Requires five or more depressive symptoms for at least two weeks, with at least 
 
 ### Persistent Depressive Disorder
 
-A depressed mood plus two or more symptoms lasting at least two years (adults) or one year (children/adolescents). {{M}}Think of this as the marathon version of depression{{/M}}—it's chronic and long-lasting, though often less severe than MDD at any given moment.
+A depressed mood plus two or more symptoms lasting at least two years (adults) or one year (children/adolescents). {{M}}Think of this as the marathon version of depression{{/M}}. It's chronic and long-lasting, though often less severe than MDD at any given moment.
 
 ### Disruptive Mood Dysregulation Disorder
 
@@ -148,7 +148,7 @@ The "with peripartum onset" specifier applies when symptoms begin during pregnan
 - A smaller percentage develop full MDD
 - Of those with MDD, about 50% had symptoms before delivery
 
-Effective treatments include CBT, interpersonal therapy, and antidepressants (especially sertraline). However, {{M}}prescribing medication becomes a balancing act{{/M}}—weighing potential effects on the fetus or nursing infant against the risks of untreated maternal depression.
+Effective treatments include CBT, interpersonal therapy, and antidepressants (especially sertraline). However, {{M}}prescribing medication becomes a balancing act{{/M}}, weighing potential effects on the fetus or nursing infant against the risks of untreated maternal depression.
 
 Exercise helps too, with research showing that exercise combined with other interventions is more effective than those interventions alone.
 
@@ -184,9 +184,9 @@ Low levels of serotonin, dopamine, and norepinephrine are associated with depres
 
 Three major theories you need to know:
 
-**Lewinsohn's Social Reinforcement Theory**: Depression results from low rates of positive reinforcement for social behaviors. This could be due to lack of environmental reinforcement or poor social skills. {{M}}The person becomes isolated, which leads to more depression, which leads to more isolation—a downward spiral{{/M}}.
+**Lewinsohn's Social Reinforcement Theory**: Depression results from low rates of positive reinforcement for social behaviors. This could be due to lack of environmental reinforcement or poor social skills. {{M}}The person becomes isolated, which leads to more depression, which leads to more isolation, a downward spiral{{/M}}.
 
-**Seligman's Learned Helplessness Model**: Started with the idea that repeated exposure to uncontrollable negative events creates helplessness. The reformulated version added cognitive style—specifically, attributing negative events to stable, internal, and global factors. The latest version (hopelessness theory) says hopelessness is the direct cause of depression, resulting from negative events plus negative cognitive style.
+**Seligman's Learned Helplessness Model**: Started with the idea that repeated exposure to uncontrollable negative events creates helplessness. The reformulated version added cognitive style. Specifically, attributing negative events to stable, internal, and global factors. The latest version (hopelessness theory) says hopelessness is the direct cause of depression, resulting from negative events plus negative cognitive style.
 
 **Beck's Cognitive Theory**: Depression stems from a negative cognitive triad:
 1. Negative thoughts about oneself
@@ -250,7 +250,7 @@ For adults with chronic or treatment-resistant depression, combining CBT or IPT 
 
 ### Alternative and Adjunctive Treatments
 
-**St. John's Wort**: Effective for mild-to-moderate depression with fewer side effects than SSRIs. But watch out—it doesn't work for severe depression and interacts dangerously with SSRIs (causing serotonin syndrome) and reduces effectiveness of some other medications.
+**St. John's Wort**: Effective for mild-to-moderate depression with fewer side effects than SSRIs. But watch out. It doesn't work for severe depression and interacts dangerously with SSRIs (causing serotonin syndrome) and reduces effectiveness of some other medications.
 
 **Ketamine (Esketamine nasal spray)**: Fast-acting for treatment-resistant depression and suicidal ideation. Works by increasing glutamate. Must be self-administered under supervision in a healthcare setting due to potential side effects.
 
@@ -322,7 +322,7 @@ Reality: Modern ECT is safe and highly effective for severe depression, with the
 - **D**orso**L**ateral prefrontal cortex: **Down** (decreased activity)
 - **V**entro**M**edial prefrontal cortex: u**P** (increased activity)
 
-**For suicide rates**, remember "males complete, females attempt"—males have higher completion rates, females have higher attempt rates (though this pattern reverses in previously incarcerated populations).
+**For suicide rates**, remember "males complete, females attempt". Males have higher completion rates, females have higher attempt rates (though this pattern reverses in previously incarcerated populations).
 
 ## Key Takeaways for the EPPP
 
@@ -348,4 +348,4 @@ Reality: Modern ECT is safe and highly effective for severe depression, with the
 
 - **Suicide demographics**: Males 4x higher rate, highest for males 75+, females 45-64, American Indian/Alaskan Native individuals have highest ethnic rates
 
-You've got this. These disorders are complex, but understanding the building blocks—those three mood episodes—gives you the foundation for everything else. Keep reviewing the distinctions, practice applying the criteria, and you'll be well-prepared for whatever the EPPP throws at you.
+You've got this. These disorders are complex, but understanding the building blocks (those three mood episodes) gives you the foundation for everything else. Keep reviewing the distinctions, practice applying the criteria, and you'll be well-prepared for whatever the EPPP throws at you.

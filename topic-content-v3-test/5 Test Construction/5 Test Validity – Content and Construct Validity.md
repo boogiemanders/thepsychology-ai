@@ -53,7 +53,7 @@ Subject matter experts systematically review the items to ensure they're appropr
 
 Students often confuse content validity with face validity, so let's clear this up now.
 
-**Face validity** refers to whether a test *looks* valid to the people taking it. It's not actual validity at all—it's about appearances and perceptions.
+**Face validity** refers to whether a test *looks* valid to the people taking it. It's not actual validity at all. It's about appearances and perceptions.
 
 Sometimes face validity is helpful. {{M}}If you're administering a career interest inventory to college students, and the questions seem relevant and professional, they're more likely to take it seriously and answer thoughtfully. But if the questions seem random or silly, they might rush through it without genuine reflection.{{/M}}
 
@@ -65,7 +65,7 @@ Here's a simple way to remember the difference:
 
 ## Construct Validity: Measuring What You Can't See
 
-Now we move into trickier territory. Construct validity is essential when you're measuring hypothetical traits—things you can't directly observe but must infer from behavior.
+Now we move into trickier territory. Construct validity is essential when you're measuring hypothetical traits. Things you can't directly observe but must infer from behavior.
 
 What are these constructs? Intelligence, personality traits, motivation, depression, anxiety, self-esteem, locus of control. You can't directly measure any of these things the way you measure height or blood pressure. Instead, you observe behaviors, responses, and patterns, then make inferences about the underlying construct.
 
@@ -79,7 +79,7 @@ Because you can't directly observe constructs, proving that a test measures them
 
 **Divergent Validity** (also called discriminant validity): Scores on your test should have low correlations with measures of unrelated constructs. Your new depression measure shouldn't correlate highly with a test of spatial reasoning ability, because depression and spatial reasoning aren't related. If they do correlate strongly, your depression test might be measuring something else entirely.
 
-Together, convergent and divergent validity help you build a case that your test measures what you think it measures—and not something else.
+Together, convergent and divergent validity help you build a case that your test measures what you think it measures. And not something else.
 
 ## The Multitrait-Multimethod Matrix: A Powerful Tool
 
@@ -107,7 +107,7 @@ Now you correlate all pairs of scores. Four specific correlations matter for val
 | Heterotrait-Monomethod | Different trait, same method | Low | Divergent validity |
 | Heterotrait-Heteromethod | Different trait, different method | Low | Divergent validity |
 
-**Monotrait-Monomethod** (same trait, same method): This is actually a reliability coefficient for your test—something like coefficient alpha or test-retest reliability. It should be high.
+**Monotrait-Monomethod** (same trait, same method): This is actually a reliability coefficient for your test, something like coefficient alpha or test-retest reliability. It should be high.
 
 **Monotrait-Heteromethod** (same trait, different method): This correlation between your self-report sociability test and the teacher-report sociability test. A high correlation here provides evidence of convergent validity. Both methods are measuring sociability, and they agree.
 
@@ -151,7 +151,7 @@ After running the factor analysis, you get this rotated factor matrix:
 
 ### Understanding Factor Loadings
 
-The numbers under Factor I and Factor II are **factor loadings**—essentially correlation coefficients between each test and each factor. They range from -1.00 to +1.00, just like regular correlations.
+The numbers under Factor I and Factor II are **factor loadings**. Essentially correlation coefficients between each test and each factor. They range from -1.00 to +1.00, just like regular correlations.
 
 To interpret a factor loading, square it to see how much variability in the test is explained by that factor:
 - Test A's loading on Factor I is .80, which squared is .64 or 64%
@@ -180,7 +180,7 @@ For your new Test A, this provides strong evidence of both convergent and diverg
 - **Convergent validity**: Test A loads highly (.80) on the same factor as other locus of control tests
 - **Divergent validity**: Test A loads minimally (.10) on the self-esteem factor, showing it's not confusing the two unrelated constructs
 
-{{M}}Think of factor analysis like organizing your music library. You might notice that certain songs always get played together—they cluster. Some songs cluster with other jazz tracks, some with rock, some with classical. The factors are like genres: hidden organizing principles that explain why certain things go together. If your new "jazz" song clusters with other jazz songs and not with death metal, you've got good evidence it's actually jazz.{{/M}}
+{{M}}Think of factor analysis like organizing your music library. You might notice that certain songs always get played together. They cluster. Some songs cluster with other jazz tracks, some with rock, some with classical. The factors are like genres: hidden organizing principles that explain why certain things go together. If your new "jazz" song clusters with other jazz songs and not with death metal, you've got good evidence it's actually jazz.{{/M}}
 
 ## Common Misconceptions to Avoid
 
@@ -194,7 +194,7 @@ Reality: Reliability is necessary but not sufficient for validity. That bathroom
 
 **Misconception 3: "Face validity is the same as content validity."**
 
-Reality: Face validity is about perception and appearance; content validity is about actual, systematic domain coverage. Face validity isn't even real validity—it's just about whether test-takers think the test looks appropriate.
+Reality: Face validity is about perception and appearance; content validity is about actual, systematic domain coverage. Face validity isn't even real validity. It's just about whether test-takers think the test looks appropriate.
 
 **Misconception 4: "Construct validity is established by a single study showing convergent validity."**
 
@@ -206,7 +206,7 @@ Reality: Communality tells you how much variance is explained by the extracted f
 
 ## Practical Applications in Your Future Career
 
-Understanding content and construct validity isn't just about passing the EPPP—it shapes your practice:
+Understanding content and construct validity isn't just about passing the EPPP. It shapes your practice:
 
 **Selecting Assessment Tools**: When you're choosing a test for clinical, educational, or organizational use, you'll evaluate its validity evidence. Is there proof that this ADHD screening tool actually measures ADHD symptoms (content validity)? Is there evidence that scores correlate with clinical diagnosis and don't just reflect general anxiety (construct validity)?
 
@@ -219,7 +219,7 @@ Understanding content and construct validity isn't just about passing the EPPP�
 ## Practice Tips for Remembering These Concepts
 
 **For Content Validity:**
-- Associate "content" with "comprehensive coverage"—like a comprehensive exam that covers all course content
+- Associate "content" with "comprehensive coverage", like a comprehensive exam that covers all course content
 - Remember: Content validity = Expert review + Representative sampling
 - Think of achievement tests and job samples as prime examples
 
@@ -229,10 +229,10 @@ Understanding content and construct validity isn't just about passing the EPPP�
 
 **For the Multitrait-Multimethod Matrix:**
 Create an acronym for the four coefficients:
-- **M-M**: Monotrait-Monomethod (reliability—should be high)
-- **M-H**: Monotrait-Heteromethod (convergent validity—should be high)
-- **H-M**: Heterotrait-Monomethod (divergent validity—should be low)
-- **H-H**: Heterotrait-Heteromethod (divergent validity—should be low)
+- **M-M**: Monotrait-Monomethod (reliability. Should be high)
+- **M-H**: Monotrait-Heteromethod (convergent validity. Should be high)
+- **H-M**: Heterotrait-Monomethod (divergent validity. Should be low)
+- **H-H**: Heterotrait-Heteromethod (divergent validity. Should be low)
 
 The pattern: Same traits should correlate high, different traits should correlate low.
 
@@ -255,7 +255,7 @@ The pattern: Same traits should correlate high, different traits should correlat
 
 - **Content validity** is established through systematic domain definition, representative sampling, and expert review. It's crucial for achievement tests and work samples.
 
-- **Face validity** is not real validity—it's just whether a test looks appropriate to examinees. Sometimes helpful, sometimes undesirable.
+- **Face validity** is not real validity. It's just whether a test looks appropriate to examinees. Sometimes helpful, sometimes undesirable.
 
 - **Construct validity** is essential for measuring hypothetical traits that can't be directly observed. It requires accumulated evidence.
 

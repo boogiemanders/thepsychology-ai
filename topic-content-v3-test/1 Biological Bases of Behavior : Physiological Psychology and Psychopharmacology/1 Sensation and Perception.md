@@ -9,7 +9,7 @@ version: 3
 
 ## Why Sensation and Perception Matter for Your EPPP (And Your Practice)
 
-You walk into a crowded coffee shop to meet a new client for the first time. Within seconds, your brain processes an incredible amount of information: the dim lighting, the background music, the smell of espresso, and somehow, you spot your client among dozens of faces. How does your brain do this? Understanding sensation and perception isn't just an EPPP requirement—it's fundamental to understanding how every client you'll ever work with experiences their world.
+You walk into a crowded coffee shop to meet a new client for the first time. Within seconds, your brain processes an incredible amount of information: the dim lighting, the background music, the smell of espresso, and somehow, you spot your client among dozens of faces. How does your brain do this? Understanding sensation and perception isn't just an EPPP requirement. It's fundamental to understanding how every client you'll ever work with experiences their world.
 
 Sensation and perception are where psychology meets biology. They explain how physical energy becomes psychological experience, and this matters deeply in clinical work. When a client says "I feel pain but doctors can't find anything wrong," or when you're assessing someone with visual hallucinations, you're dealing directly with sensation and perception issues.
 
@@ -17,7 +17,7 @@ Let's break down these concepts in a way that sticks with you through exam day a
 
 ## The Foundation: Sensation vs. Perception
 
-Here's the core distinction: **Sensation** is your nervous system receiving raw data from the environment—light waves hitting your eyes, sound waves vibrating your eardrums, chemicals triggering receptors in your nose. **Perception** is your brain making sense of that data—recognizing that those light waves form your friend's face, that those sound waves are your favorite song, that those chemicals mean someone's baking bread.
+Here's the core distinction: **Sensation** is your nervous system receiving raw data from the environment (light waves hitting your eyes, sound waves vibrating your eardrums, chemicals triggering receptors in your nose. **Perception** is your brain making sense of that data) recognizing that those light waves form your friend's face, that those sound waves are your favorite song, that those chemicals mean someone's baking bread.
 
 Think of sensation as collecting the puzzle pieces, and perception as assembling them into a recognizable picture. But here's where it gets interesting: you don't always build the puzzle from scratch.
 
@@ -25,21 +25,21 @@ Think of sensation as collecting the puzzle pieces, and perception as assembling
 
 Your brain uses two simultaneous strategies to understand sensory information:
 
-**Bottom-up processing** starts with the raw sensory data and builds upward. {{M}}It's like reading a text message from an unknown number—you start with the individual letters, build words, construct meaning, all without any context.{{/M}}
+**Bottom-up processing** starts with the raw sensory data and builds upward. {{M}}It's like reading a text message from an unknown number. You start with the individual letters, build words, construct meaning, all without any context.{{/M}}
 
-**Top-down processing** starts with your existing knowledge and expectations. {{M}}It's what happens when you see "C_ff_e" on a café sign with burnt-out bulbs—your brain instantly fills in the missing letters because you expect to see "Coffee."{{/M}}
+**Top-down processing** starts with your existing knowledge and expectations. {{M}}It's what happens when you see "C_ff_e" on a café sign with burnt-out bulbs. Your brain instantly fills in the missing letters because you expect to see "Coffee."{{/M}}
 
 Most real-world perception uses both simultaneously. When your client describes their symptoms, you're using bottom-up processing to hear their actual words while using top-down processing based on your diagnostic knowledge. This dual process explains why two therapists might hear the same client presentation differently based on their training and experience.
 
 ## Vision: More Than Meets the Eye
 
-Vision dominates human perception—roughly 30% of your brain's cortex is dedicated to processing visual information. Light waves enter your eyes and hit the retina, where specialized cells called photoreceptors convert light into neural signals.
+Vision dominates human perception. Roughly 30% of your brain's cortex is dedicated to processing visual information. Light waves enter your eyes and hit the retina, where specialized cells called photoreceptors convert light into neural signals.
 
 You have two types of photoreceptors, each with distinct jobs:
 
-**Rods** are your night-vision specialists. They're extremely sensitive to light but can't detect color. They dominate your peripheral vision. {{M}}Think of them as the security cameras that work in low light—great for detecting movement in your periphery but not for reading fine print.{{/M}}
+**Rods** are your night-vision specialists. They're extremely sensitive to light but can't detect color. They dominate your peripheral vision. {{M}}Think of them as the security cameras that work in low light. Great for detecting movement in your periphery but not for reading fine print.{{/M}}
 
-**Cones** handle color vision and fine detail, but they need good lighting to function. They're concentrated in the center of your retina (the fovea). {{M}}They're like your smartphone camera in bright conditions—excellent for detail and color, but pretty useless when lighting is poor.{{/M}}
+**Cones** handle color vision and fine detail, but they need good lighting to function. They're concentrated in the center of your retina (the fovea). {{M}}They're like your smartphone camera in bright conditions. Excellent for detail and color, but pretty useless when lighting is poor.{{/M}}
 
 This explains a practical reality: when you're driving at night and see something in your peripheral vision, if you look directly at it, it might seem to disappear. That's because you've shifted from using your sensitive rods to your less-sensitive (in darkness) cones.
 
@@ -63,13 +63,13 @@ The opponent-process theory beautifully explains two phenomena:
 
 2. **Negative afterimages**: {{M}}Stare at a red square for 30 seconds, then look at a white wall, and you'll see a green square. It's like your red-detecting system got tired and its opponent (green) temporarily takes over.{{/M}}
 
-Both theories are correct—they just describe different stages of visual processing. Trichromatic applies to the cones in your retina; opponent-process applies to neural processing beyond the retina.
+Both theories are correct. They just describe different stages of visual processing. Trichromatic applies to the cones in your retina; opponent-process applies to neural processing beyond the retina.
 
 ## Color Blindness: Genetics Matter
 
-Understanding the genetics of color blindness helps clarify why certain conditions affect different populations differently—a concept relevant beyond just vision.
+Understanding the genetics of color blindness helps clarify why certain conditions affect different populations differently, a concept relevant beyond just vision.
 
-**Red-green color blindness** is the most common type (affecting about 8% of males and 0.5% of females). It's caused by a recessive gene on the X chromosome. Males have only one X chromosome (inherited from their mothers), so one copy of the mutated gene causes color blindness. Females have two X chromosomes and need the mutated gene on both to be colorblind—much rarer.
+**Red-green color blindness** is the most common type (affecting about 8% of males and 0.5% of females). It's caused by a recessive gene on the X chromosome. Males have only one X chromosome (inherited from their mothers), so one copy of the mutated gene causes color blindness. Females have two X chromosomes and need the mutated gene on both to be colorblind. Much rarer.
 
 **Blue-yellow color blindness** is caused by an autosomal dominant gene (not on a sex chromosome), so it affects males and females equally. It's much less common overall.
 
@@ -85,7 +85,7 @@ These cues work for objects relatively close to you:
 
 **Retinal disparity**: Your eyes are spaced apart, so each sees a slightly different image. Your brain compares these images, and the difference (disparity) tells you how far away something is. The closer the object, the greater the disparity.
 
-**Convergence**: Your eyes rotate inward as objects get closer. {{M}}Try looking at your finger while slowly moving it toward your nose—you'll feel your eyes turning inward. Your brain uses feedback from these eye muscles to judge distance.{{/M}}
+**Convergence**: Your eyes rotate inward as objects get closer. {{M}}Try looking at your finger while slowly moving it toward your nose. You'll feel your eyes turning inward. Your brain uses feedback from these eye muscles to judge distance.{{/M}}
 
 ### Monocular Cues (One Eye Sufficient)
 
@@ -95,7 +95,7 @@ These cues work at greater distances and explain why people with vision in only 
 - **Interposition**: Closer objects block our view of farther objects  
 - **Linear perspective**: Parallel lines appear to converge with distance
 - **Texture gradient**: Details become less distinct with distance
-- **Motion parallax**: {{M}}When you're driving, nearby trees seem to whiz past while distant mountains barely move—your brain uses this motion difference to judge distance{{/M}}
+- **Motion parallax**: {{M}}When you're driving, nearby trees seem to whiz past while distant mountains barely move. Your brain uses this motion difference to judge distance{{/M}}
 
 Understanding depth perception is clinically relevant when assessing clients with visual impairments or certain neurological conditions that affect spatial processing.
 
@@ -113,9 +113,9 @@ Here's how it works: Your spinal cord contains two types of nerve fibers. Small 
 
 The gate can be influenced from two directions:
 
-1. **From the body**: Non-pain signals can close the gate. {{M}}This explains why rubbing your shin after banging it into a table actually helps—you're activating large fibers that close the pain gate.{{/M}}
+1. **From the body**: Non-pain signals can close the gate. {{M}}This explains why rubbing your shin after banging it into a table actually helps. You're activating large fibers that close the pain gate.{{/M}}
 
-2. **From the brain**: Cognitive and emotional factors can close the gate through descending signals. {{M}}This is why watching an engaging movie or using guided imagery can reduce pain—your brain sends signals that literally close the spinal gate to pain transmission.{{/M}}
+2. **From the brain**: Cognitive and emotional factors can close the gate through descending signals. {{M}}This is why watching an engaging movie or using guided imagery can reduce pain. Your brain sends signals that literally close the spinal gate to pain transmission.{{/M}}
 
 | **Gate Opens (More Pain)** | **Gate Closes (Less Pain)** |
 |---------------------------|----------------------------|
@@ -125,11 +125,11 @@ The gate can be influenced from two directions:
 | Boredom | Engaging activities |
 | Expecting pain | Positive expectations |
 
-This theory has practical implications: it validates why psychological interventions (hypnosis, distraction, cognitive techniques) can effectively reduce genuine physical pain. When clients with chronic pain report that therapy helps their pain, they're not imagining it—you're helping them close the gate.
+This theory has practical implications: it validates why psychological interventions (hypnosis, distraction, cognitive techniques) can effectively reduce genuine physical pain. When clients with chronic pain report that therapy helps their pain, they're not imagining it. You're helping them close the gate.
 
 ## Synesthesia: When Senses Cross
 
-Synesthesia occurs when stimulating one sense automatically triggers another. The most common type is grapheme-color synesthesia, where specific numbers or letters consistently evoke specific colors. {{M}}Someone might always see the number 5 as distinctly red, or the letter A as blue—not imagining it or associating it, but actually perceiving it.{{/M}}
+Synesthesia occurs when stimulating one sense automatically triggers another. The most common type is grapheme-color synesthesia, where specific numbers or letters consistently evoke specific colors. {{M}}Someone might always see the number 5 as distinctly red, or the letter A as blue. Not imagining it or associating it, but actually perceiving it.{{/M}}
 
 Synesthesia appears to have a genetic component and results from increased cross-connectivity between sensory areas of the brain. It's relatively rare (affecting perhaps 2-4% of people) but significantly more common in artists and creative individuals.
 
@@ -141,7 +141,7 @@ Psychophysics studies the relationship between physical stimuli and psychologica
 
 ### Weber's Law
 
-Weber's law states that the just noticeable difference (JND)—the smallest change you can detect—is a constant proportion of the original stimulus intensity.
+Weber's law states that the just noticeable difference (JND) (the smallest change you can detect) is a constant proportion of the original stimulus intensity.
 
 For example, the JND for weight is about 2%. If you're holding a 100-gram weight, you'll notice when it changes by 2 grams. If you're holding a 1,000-gram weight, you'll need a 20-gram change to notice the difference. The absolute difference needed increases, but the proportion (2%) stays constant.
 
@@ -176,9 +176,9 @@ What Stevens discovered: different sensations scale differently. Electric shock 
 
 Signal detection theory differs fundamentally from the laws above by acknowledging that perception involves both sensory ability and decision-making. This makes it particularly important for clinical psychology.
 
-SDT recognizes that perception always occurs against "noise"—random neural activity, environmental distractions, fatigue, motivation levels. The theory proposes two key factors:
+SDT recognizes that perception always occurs against "noise". Random neural activity, environmental distractions, fatigue, motivation levels. The theory proposes two key factors:
 
-**Sensitivity (d-prime)**: Your ability to distinguish signal from noise. {{M}}Think of it as the quality of your signal reception—some people are like high-end headphones that pick up subtle sounds, while others are like phone speakers that need louder volumes to detect anything.{{/M}}
+**Sensitivity (d-prime)**: Your ability to distinguish signal from noise. {{M}}Think of it as the quality of your signal reception. Some people are like high-end headphones that pick up subtle sounds, while others are like phone speakers that need louder volumes to detect anything.{{/M}}
 
 **Decision criterion (response bias)**: Your willingness to say a signal is present in ambiguous situations. This is independent of sensitivity. Two people with identical sensitivity might make different decisions based on their criterion.
 
@@ -201,15 +201,15 @@ Understanding SDT helps you recognize that perfect accuracy is impossible when d
 
 1. **"Sensation and perception are the same thing"**: They're related but distinct. Sensation is reception; perception is interpretation.
 
-2. **"Trichromatic and opponent-process theories contradict each other"**: They're both correct, applying to different stages of visual processing. Don't choose between them—understand both.
+2. **"Trichromatic and opponent-process theories contradict each other"**: They're both correct, applying to different stages of visual processing. Don't choose between them. Understand both.
 
-3. **"Pain is purely physical"**: Pain has essential psychological components, as gate control theory demonstrates. This isn't dismissing pain as "all in your head"—it's recognizing that brain processes legitimately modulate pain experience.
+3. **"Pain is purely physical"**: Pain has essential psychological components, as gate control theory demonstrates. This isn't dismissing pain as "all in your head". It's recognizing that brain processes legitimately modulate pain experience.
 
 4. **"Weber's law works for all stimuli at all intensities"**: It works for mid-range intensities of some stimuli. Know its limitations.
 
 5. **"Higher sensitivity in SDT always means better decisions"**: Decision accuracy depends on both sensitivity AND appropriate criterion setting for the situation. A radiologist screening for cancer should have a different criterion than when confirming a diagnosis.
 
-6. **"Only females can be carriers of red-green colorblindness"**: Females can be carriers (one mutated X chromosome) OR colorblind themselves (two mutated X chromosomes). Males can't be carriers—they either have it or don't.
+6. **"Only females can be carriers of red-green colorblindness"**: Females can be carriers (one mutated X chromosome) OR colorblind themselves (two mutated X chromosomes). Males can't be carriers. They either have it or don't.
 
 ## Practice Tips for Remembering
 
@@ -225,7 +225,7 @@ Understanding SDT helps you recognize that perfect accuracy is impossible when d
 - Stevens = Power function (different for different stimuli)
 - SDT = Sensitivity + Decision criterion (the only one considering decision-making)
 
-**For gate control theory**: Think of concrete examples—rubbing a bruise, distraction during blood draws, athletes who don't notice injuries during competition. These real-world examples make the theory memorable.
+**For gate control theory**: Think of concrete examples, rubbing a bruise, distraction during blood draws, athletes who don't notice injuries during competition. These real-world examples make the theory memorable.
 
 **For SDT outcomes**: Make a 2x2 table and practice filling it out until it's automatic. The terminology is consistent across applications, so learning it well for sensation/perception helps you in memory, attention, and clinical decision-making sections.
 
@@ -249,4 +249,4 @@ Understanding SDT helps you recognize that perfect accuracy is impossible when d
 
 - **Signal detection theory** recognizes that perception involves both sensory sensitivity and decision criteria, directly applicable to clinical diagnosis and assessment.
 
-This material connects directly to neuropsychological assessment, understanding client complaints about sensory experiences, and recognizing how cognitive factors influence perception—all crucial for both the EPPP and clinical practice.
+This material connects directly to neuropsychological assessment, understanding client complaints about sensory experiences, and recognizing how cognitive factors influence perception. All crucial for both the EPPP and clinical practice.

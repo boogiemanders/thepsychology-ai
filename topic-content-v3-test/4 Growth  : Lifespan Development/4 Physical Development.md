@@ -19,25 +19,25 @@ Let's break down what you need to know, making it clear and memorable.
 
 When a baby is born, their brain weighs about 25% of what it will weigh as an adult. But here's what's remarkable: by age two, it's already at 80% of adult weight. That's explosive growth in just 24 months.
 
-What drives this growth? It's not actually new neurons being created—most neurons are already present at birth. Instead, three major processes are happening:
+What drives this growth? It's not actually new neurons being created. Most neurons are already present at birth. Instead, three major processes are happening:
 
 **Synaptogenesis** is the creation of new synapses (connections between neurons). {{M}}Think of it like building a massive social network where each neuron is constantly making new connections with other neurons.{{/M}} This process peaks between ages two and three.
 
 **Dendritic growth** involves neurons growing more branches (dendrites) to receive signals from other neurons. More branches mean more potential connections and more complex information processing.
 
-**Myelination** is when axons get covered in myelin, a fatty substance that acts as insulation. This speeds up nerve impulse transmission dramatically. {{M}}If you've ever wondered why your internet runs faster with a better cable connection, myelin works similarly for your nervous system{{/M}}—it makes signals travel faster and more efficiently.
+**Myelination** is when axons get covered in myelin, a fatty substance that acts as insulation. This speeds up nerve impulse transmission dramatically. {{M}}If you've ever wondered why your internet runs faster with a better cable connection, myelin works similarly for your nervous system{{/M}}. It makes signals travel faster and more efficiently.
 
 ### Synaptic Pruning: Use It or Lose It
 
 After this explosive growth in synapses, something counterintuitive happens: the brain starts cutting connections. This process is called **synaptic pruning**, and it continues through adolescence.
 
-Here's the logic: synapses that get used frequently become stronger and more efficient. Those that don't get used? They fade away. {{M}}It's like when you first move to a new city and explore lots of different routes to work, but eventually you stick with the two or three that work best and forget about all the others.{{/M}} This isn't a loss—it's optimization. The brain is becoming more specialized and efficient.
+Here's the logic: synapses that get used frequently become stronger and more efficient. Those that don't get used? They fade away. {{M}}It's like when you first move to a new city and explore lots of different routes to work, but eventually you stick with the two or three that work best and forget about all the others.{{/M}} This isn't a loss. It's optimization. The brain is becoming more specialized and efficient.
 
 ### The Prefrontal Cortex: The Last to Mature
 
 The cerebral cortex is the least developed brain area at birth. Within the cortex, the **prefrontal cortex** (responsible for executive functions like planning, impulse control, and decision-making) doesn't reach full maturity until the late teens to mid-20s.
 
-This has massive implications for understanding adolescent behavior. When teenagers make impulsive decisions or seem unable to fully think through consequences, it's not just rebellion—their prefrontal cortex literally isn't finished developing yet. This matters for the EPPP because you need to understand why certain interventions work better at different ages and why some disorders emerge when they do.
+This has massive implications for understanding adolescent behavior. When teenagers make impulsive decisions or seem unable to fully think through consequences, it's not just rebellion. Their prefrontal cortex literally isn't finished developing yet. This matters for the EPPP because you need to understand why certain interventions work better at different ages and why some disorders emerge when they do.
 
 ### Adult Brain Changes: The Long Decline
 
@@ -48,13 +48,13 @@ But here's the good news: the brain isn't helpless against this decline. It comp
 - **Developing new connections** between remaining neurons
 - **Neurogenesis** (producing new neurons) in the hippocampus and possibly other areas
 
-This explains why many older adults maintain strong cognitive abilities despite some neuron loss—the brain adapts.
+This explains why many older adults maintain strong cognitive abilities despite some neuron loss, the brain adapts.
 
 ## Sensory Development: How We Experience the World
 
 ### Vision: From Blur to Clarity
 
-Vision is the least developed sense at birth. A newborn's visual acuity is roughly 20/400 to 20/600—what they see at 20 feet, adults with normal vision see clearly at 400-600 feet. By 7-8 months, though, infants have visual acuity similar to normal adults.
+Vision is the least developed sense at birth. A newborn's visual acuity is roughly 20/400 to 20/600. What they see at 20 feet, adults with normal vision see clearly at 400-600 feet. By 7-8 months, though, infants have visual acuity similar to normal adults.
 
 Despite limited vision, newborns show fascinating preferences:
 - They prefer patterned stimuli over plain ones
@@ -71,7 +71,7 @@ Despite limited vision, newborns show fascinating preferences:
 
 ### Vision in Adulthood: Presbyopia and Beyond
 
-Around age 40, many adults develop **presbyopia**—difficulty focusing on nearby objects due to hardening of the eye's lens. {{M}}You know how some people start holding their phone at arm's length to read texts?{{/M}} That's presbyopia in action.
+Around age 40, many adults develop **presbyopia**. Difficulty focusing on nearby objects due to hardening of the eye's lens. {{M}}You know how some people start holding their phone at arm's length to read texts?{{/M}} That's presbyopia in action.
 
 Other age-related vision changes include:
 - Decreased sensitivity to low light
@@ -84,18 +84,18 @@ Other age-related vision changes include:
 
 Newborns are somewhat less sensitive to sound than adults, especially high-frequency sounds. But sensitivity develops quickly, approaching adult levels by six months.
 
-Within days after birth, infants prefer their mother's voice over other sounds. They also show **auditory localization**—reflexively turning toward sound sources. Interestingly, this ability temporarily decreases between 2-4 months before re-emerging more deliberately and precisely, reaching near-adult levels by 12 months.
+Within days after birth, infants prefer their mother's voice over other sounds. They also show **auditory localization**. Reflexively turning toward sound sources. Interestingly, this ability temporarily decreases between 2-4 months before re-emerging more deliberately and precisely, reaching near-adult levels by 12 months.
 
 **Presbycusis** (age-related hearing loss) typically starts around age 40, beginning with decreased sensitivity to high-frequency sounds. This makes certain sounds harder to hear:
 - Women's and children's voices
-- Fricative consonants (f, s, t)—softer and higher-pitched
+- Fricative consonants (f, s, t). Softer and higher-pitched
 - Non-human sounds (microwave beeps, dryer buzzers, bird chirping)
 
 Background noise makes presbycusis effects worse. Here's something critical for the EPPP: research shows that severity of age-related hearing loss correlates with increased risk for Alzheimer's disease and other neurocognitive disorders. This connection between sensory loss and cognitive decline is important for understanding older adult populations.
 
 ### Touch and Pain: Our Earliest Sense
 
-Touch develops first in utero, and newborns have well-developed touch sensitivity at birth. They respond to a cheek touch by turning their head toward the touch—that's the rooting reflex.
+Touch develops first in utero, and newborns have well-developed touch sensitivity at birth. They respond to a cheek touch by turning their head toward the touch. That's the rooting reflex.
 
 Newborns are also sensitive to pain. Research shows that male infants who received circumcision without anesthetic at three days old cried intensely during the procedure. More importantly, early pain exposure affects future pain responses. Infants circumcised without topical anesthetic responded more intensely to routine vaccinations 4-6 months later compared to those who received anesthetic.
 
@@ -148,7 +148,7 @@ The sequence matters more than exact timing. A child who skips crawling but walk
 
 ### The Growth Spurt
 
-The adolescent growth spurt—rapid height and weight increase—marks adolescence's beginning. It typically starts at:
+The adolescent growth spurt (rapid height and weight increase) marks adolescence's beginning. It typically starts at:
 - Girls: 10-11 years
 - Boys: 12-13 years
 
@@ -156,7 +156,7 @@ The spurt peaks about two years after starting and lasts 3-4 years total.
 
 ### Puberty Timing: Different Outcomes for Boys and Girls
 
-**Early Puberty in Boys** - Mixed bag:
+**Early Puberty in Boys**. Mixed bag:
 
 Positive effects:
 - Higher self-esteem
@@ -174,7 +174,7 @@ Negative effects:
 - Poorer academic performance
 - Higher anxiety and depression
 
-**Early Puberty in Girls** - Predominantly negative:
+**Early Puberty in Girls**. Predominantly negative:
 - Lower self-esteem and popularity
 - Poorer academic achievement
 - Higher risk for precocious sexual behavior
@@ -222,7 +222,7 @@ According to 2024 data from youth ages 12-17:
 - Good self-control
 - Religiosity
 
-Some protective factors have a **buffering effect**—they reduce adverse effects of stressful life events on substance use. Research shows this buffering effect for religiosity, self-control, and parental support.
+Some protective factors have a **buffering effect**. They reduce adverse effects of stressful life events on substance use. Research shows this buffering effect for religiosity, self-control, and parental support.
 
 ## Adolescent Sleep Deprivation: A Perfect Storm
 
@@ -285,19 +285,19 @@ Strong evidence supports biological contributions, particularly genetic factors 
 
 **For brain development:** Create a timeline visual with age markers (birth, 2 years, adolescence, 20s, 30, 60) and note what's happening at each point.
 
-**For sensory development:** Remember the acronym "VHL" - Vision Lags, Hearing develops, touch is there from the start (L for Lags, not present).
+**For sensory development:** Remember the acronym "VHL". Vision Lags, Hearing develops, touch is there from the start (L for Lags, not present).
 
-**For depth perception sequence:** "Kids Before Preschool" - Kinetic (3-4 weeks), Binocular (2-3 months), Pictorial (5-6 months).
+**For depth perception sequence:** "Kids Before Preschool". Kinetic (3-4 weeks), Binocular (2-3 months), Pictorial (5-6 months).
 
 **For puberty timing effects:** Girls = Generally negative for early; Boys = Both positive and negative for early.
 
-**For adolescent substance use:** Think "Risk vs. Shield" - list risk factors on one side, protective factors on the other. Remember that self-control, religiosity, and parental support have buffering effects.
+**For adolescent substance use:** Think "Risk vs. Shield". List risk factors on one side, protective factors on the other. Remember that self-control, religiosity, and parental support have buffering effects.
 
 **For motor milestones:** Don't memorize exact ages. Focus on sequence: head control → rolling → sitting → crawling → standing → walking → running → jumping/hopping. This progression makes logical sense.
 
 ## Key Takeaways
 
-- **Brain development is rapid in the first two years** (25% to 80% of adult weight) due to synaptogenesis, dendritic growth, and myelination—not new neurons.
+- **Brain development is rapid in the first two years** (25% to 80% of adult weight) due to synaptogenesis, dendritic growth, and myelination. Not new neurons.
 
 - **Synaptic pruning continues through adolescence**, strengthening used connections and eliminating unused ones for efficiency.
 

@@ -11,13 +11,13 @@ version: 3
 
 When most people imagine becoming a psychologist, they picture helping clients through difficult times, conducting therapy sessions, maybe doing research. What they don't always picture? The legal paperwork, the insurance claims, the angry online reviews, or the moment when a subpoena shows up at your office.
 
-But here's the reality: professional issues aren't just administrative headaches. They're the protective framework that keeps you licensed, your clients safe, and your practice viable. Understanding these issues isn't optional—it's what separates psychologists who thrive from those who face disciplinary actions, lawsuits, or worse.
+But here's the reality: professional issues aren't just administrative headaches. They're the protective framework that keeps you licensed, your clients safe, and your practice viable. Understanding these issues isn't optional. It's what separates psychologists who thrive from those who face disciplinary actions, lawsuits, or worse.
 
 Let's break down what you actually need to know.
 
 ## Understanding Malpractice: The Four Ds You Can't Forget
 
-Malpractice claims follow a predictable pattern called the "Four Ds." {{M}}Think of it like a chain reaction—all four links must connect for a malpractice claim to succeed.{{/M}}
+Malpractice claims follow a predictable pattern called the "Four Ds." {{M}}Think of it like a chain reaction. All four links must connect for a malpractice claim to succeed.{{/M}}
 
 | The Four Ds | What It Means | Example |
 |------------|---------------|---------|
@@ -26,7 +26,7 @@ Malpractice claims follow a predictable pattern called the "Four Ds." {{M}}Think
 | **Damages** | The client suffered measurable harm | The client attempted suicide and required hospitalization (measurable economic harm) |
 | **Direct Cause** | Your breach directly caused the harm | The suicide attempt was a direct result of your failure to assess and intervene |
 
-Here's the crucial part: if even one D is missing, the malpractice claim typically fails. The client must also prove monetary damages—emotional distress alone usually isn't enough unless it results in quantifiable economic losses.
+Here's the crucial part: if even one D is missing, the malpractice claim typically fails. The client must also prove monetary damages. Emotional distress alone usually isn't enough unless it results in quantifiable economic losses.
 
 {{M}}It's like a four-part lock on a safe.{{/M}} The client needs all four numbers to open the case against you. Your job? Make sure you're meeting that duty of care consistently, so those other dominoes never fall.
 
@@ -76,7 +76,7 @@ If your client authorizes release? You're good to go (but only release what's sp
 
 **Step 4: Seek court guidance if needed**
 
-Still stuck? Ask the court for help—either informally through a letter or formally with a motion to quash the subpoena or request a protective order.
+Still stuck? Ask the court for help. Either informally through a letter or formally with a motion to quash the subpoena or request a protective order.
 
 **Step 5: Assert privilege if necessary**
 
@@ -105,7 +105,7 @@ This distinction matters because it determines what you can say in court:
 | Must have firsthand knowledge | Doesn't need personal knowledge of the case |
 | Can only testify with client authorization or court order | Qualified by the court as having expertise |
 
-{{M}}A fact witness is like a security camera—they can only report what they recorded.{{/M}} An expert witness is more like a detective who analyzes the footage and explains what it means.
+{{M}}A fact witness is like a security camera. They can only report what they recorded.{{/M}} An expert witness is more like a detective who analyzes the footage and explains what it means.
 
 ## Psychological Autopsies: Understanding Death After the Fact
 
@@ -113,7 +113,7 @@ When someone dies and the manner of death is unclear, investigators sometimes co
 
 There are two main types:
 
-**Equivocal Death Psychological Autopsy (EDPA)**: Used when manner of death is ambiguous—was it suicide, accident, homicide, natural causes, or undetermined?
+**Equivocal Death Psychological Autopsy (EDPA)**: Used when manner of death is ambiguous. Was it suicide, accident, homicide, natural causes, or undetermined?
 
 **Suicide Psychological Autopsy (SPA)**: Used to understand the psychosocial factors that contributed to a confirmed or suspected suicide. These serve forensic purposes (insurance claims, legal cases), research purposes (identifying risk factors), and clinical purposes (helping families understand and grieve).
 
@@ -155,13 +155,13 @@ Use person-first language ("person with schizophrenia") or, when preferred by th
 
 ### Race and Ethnicity
 
-Always capitalize racial and ethnic groups (Blacks, Whites, Latinx). Don't hyphenate when used with third terms (Asian American, not Asian-American). Avoid "minority" without a modifier—use "ethnic minority" or "racial-ethnic minority." Make parallel comparisons: "African Americans and European Americans" or "Blacks and Whites," not mixed.
+Always capitalize racial and ethnic groups (Blacks, Whites, Latinx). Don't hyphenate when used with third terms (Asian American, not Asian-American). Avoid "minority" without a modifier. Use "ethnic minority" or "racial-ethnic minority." Make parallel comparisons: "African Americans and European Americans" or "Blacks and Whites," not mixed.
 
 ## Handling Negative Online Reviews
 
 {{M}}You wake up one morning, check your practice's online presence, and there it is: a scathing one-star review claiming you're the worst therapist ever.{{/M}} Your stomach drops. What now?
 
-Here's the hard truth: you probably can't get it removed unless it violates the website's terms of service. And you absolutely cannot respond directly—doing so risks violating confidentiality and HIPAA privacy rules. Even confirming that someone was your client is problematic.
+Here's the hard truth: you probably can't get it removed unless it violates the website's terms of service. And you absolutely cannot respond directly, doing so risks violating confidentiality and HIPAA privacy rules. Even confirming that someone was your client is problematic.
 
 You also can't fight fire with fire by soliciting positive reviews from current clients. That violates ethical guidelines because clients are vulnerable to undue influence from their therapist.
 
@@ -171,13 +171,13 @@ And here's the uncomfortable question: if you're getting multiple negative revie
 
 ## Telepsychology and Crossing State Lines
 
-Telepsychology—providing services via video, phone, or other technology—exploded during the pandemic. But here's the legal headache: every state has different rules about when you can practice across state lines.
+Telepsychology (providing services via video, phone, or other technology) exploded during the pandemic. But here's the legal headache: every state has different rules about when you can practice across state lines.
 
 ### Without PSYPACT
 
 If jurisdictions aren't part of PSYPACT (we'll get to that), you must determine legal requirements for both your location and your client's location. Some states require full in-state licensure. Others allow limited practice. Some don't permit it at all.
 
-You also need to know local laws for the client's location regarding mandatory reporting, duty to warn, and civil commitment procedures. {{M}}Imagine providing therapy to someone in another state and they become suicidal—you need to know the local emergency resources and legal procedures before that crisis happens.{{/M}}
+You also need to know local laws for the client's location regarding mandatory reporting, duty to warn, and civil commitment procedures. {{M}}Imagine providing therapy to someone in another state and they become suicidal. You need to know the local emergency resources and legal procedures before that crisis happens.{{/M}}
 
 ### With PSYPACT
 
@@ -207,7 +207,7 @@ The ASPPB's supervision guidelines emphasize that supervision is its own distinc
 - Maintain professional boundaries
 - Keep detailed supervision records for 7 years or until licensure (whichever is longer)
 
-**Delegated supervisors** are licensed health professionals to whom primary supervisors can delegate specific responsibilities when appropriate—for example, when the service requires expertise beyond the primary supervisor's area or when continuity of supervision is needed.
+**Delegated supervisors** are licensed health professionals to whom primary supervisors can delegate specific responsibilities when appropriate, for example, when the service requires expertise beyond the primary supervisor's area or when continuity of supervision is needed.
 
 ### Telepsychology Supervision Rules
 
@@ -217,7 +217,7 @@ Telepsychology supervision can account for no more than 50% of total supervision
 
 Three main categories exist:
 
-**Psychotherapy-based models** apply therapeutic orientations to supervision. For example, cognitive-behavioral supervision (CBS) mirrors CBT therapy—it's structured, goal-directed, time-limited, and uses techniques like Socratic questioning and behavioral rehearsal. {{M}}Each session follows a predictable format: check-in, set the agenda, bridge from last time, review cases, assign homework, summarize, get feedback.{{/M}}
+**Psychotherapy-based models** apply therapeutic orientations to supervision. For example, cognitive-behavioral supervision (CBS) mirrors CBT therapy. It's structured, goal-directed, time-limited, and uses techniques like Socratic questioning and behavioral rehearsal. {{M}}Each session follows a predictable format: check-in, set the agenda, bridge from last time, review cases, assign homework, summarize, get feedback.{{/M}}
 
 **Developmental models** assume supervisees progress through stages requiring different supervisory approaches. The Integrated Developmental Model identifies three levels:
 
@@ -225,7 +225,7 @@ Three main categories exist:
 - **Level 2**: Better client focus, fluctuating confidence, alternates between dependence and independence. Needs less structure, shared responsibility, constructive feedback.
 - **Level 3**: Balanced self-other awareness, consistent motivation, confident. Needs collegial relationship and fostering of independence.
 
-**Process-based models** focus on supervisory roles and tasks. Bernard's discrimination model identifies three focus areas (intervention skills, conceptualization skills, personalization skills) and three supervisor roles (educator, counselor, consultant). {{M}}The supervisor shifts between these nine possible combinations based on what the supervisee needs at that moment—like selecting the right tool from a toolbox.{{/M}}
+**Process-based models** focus on supervisory roles and tasks. Bernard's discrimination model identifies three focus areas (intervention skills, conceptualization skills, personalization skills) and three supervisor roles (educator, counselor, consultant). {{M}}The supervisor shifts between these nine possible combinations based on what the supervisee needs at that moment, like selecting the right tool from a toolbox.{{/M}}
 
 ### The Working Alliance in Supervision
 
@@ -283,9 +283,9 @@ Why does this matter for the exam? Understanding reporting standards helps you e
 
 **For the Four Ds**: Create a mnemonic story: "**D**octor **D**enise **D**ropped **D**ishes" (Duty, Dereliction, Damages, Direct cause)
 
-**For subpoena response**: Remember "VCANS" - Verify, Contact client, Authorize or negotiate, Need court guidance?, Shield with privilege
+**For subpoena response**: Remember "VCANS". Verify, Contact client, Authorize or negotiate, Need court guidance?, Shield with privilege
 
-**For insanity vs. competency**: TIME matters—insanity is about THEN (past), competency is about NOW (present)
+**For insanity vs. competency**: TIME matters. Insanity is about THEN (past), competency is about NOW (present)
 
 **For supervision levels**: Level 1 = "Me, me, me" (self-focused), Level 2 = "Maybe, maybe not" (fluctuating), Level 3 = "Mutual respect" (collegial)
 
@@ -293,7 +293,7 @@ Why does this matter for the exam? Understanding reporting standards helps you e
 
 ## Key Takeaways
 
-- **Malpractice requires all Four Ds**: duty, dereliction, damages, direct cause—missing even one breaks the chain
+- **Malpractice requires all Four Ds**: duty, dereliction, damages, direct cause, missing even one breaks the chain
 - **Most disciplinary actions involve**: unprofessional conduct, sexual misconduct, negligence, dual relationships, or surprisingly mundane issues like poor record-keeping
 - **Responding to subpoenas**: verify legitimacy, contact client, get authorization, negotiate if needed, assert privilege without authorization
 - **Insanity ≠ competency**: insanity concerns mental state during the crime; competency concerns current ability to participate in proceedings

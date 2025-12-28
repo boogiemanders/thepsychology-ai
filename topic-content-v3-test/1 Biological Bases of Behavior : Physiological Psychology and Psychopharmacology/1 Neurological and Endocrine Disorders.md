@@ -9,13 +9,13 @@ version: 3
 
 ## Why Neurological and Endocrine Disorders Matter for Clinical Practice
 
-When a client walks into your office complaining of depression, memory problems, or sudden personality changes, you might assume these are purely psychological issues. But what if the real culprit is something happening at the biological level—a stroke, a thyroid problem, or a progressive brain disease? Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.
+When a client walks into your office complaining of depression, memory problems, or sudden personality changes, you might assume these are purely psychological issues. But what if the real culprit is something happening at the biological level, a stroke, a thyroid problem, or a progressive brain disease? Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.
 
 This section covers the brain and hormonal conditions that can mimic or cause psychological symptoms. We'll break down strokes, brain injuries, movement disorders, seizures, and endocrine problems in a way that sticks with you long after exam day.
 
 ## Strokes: When Blood Flow Gets Cut Off
 
-A **cerebrovascular accident (CVA)**, commonly called a stroke, happens when blood flow to part of the brain suddenly stops. {{M}}Think of it like your internet connection dropping during an important video meeting{{/M}}—when the connection is lost, communication stops, and things stop working properly. In the brain, no blood flow means no oxygen and nutrients, which causes brain cells to die within minutes.
+A **cerebrovascular accident (CVA)**, commonly called a stroke, happens when blood flow to part of the brain suddenly stops. {{M}}Think of it like your internet connection dropping during an important video meeting{{/M}}, when the connection is lost, communication stops, and things stop working properly. In the brain, no blood flow means no oxygen and nutrients, which causes brain cells to die within minutes.
 
 ### Risk Factors You Need to Know
 
@@ -60,7 +60,7 @@ Notice the pattern: symptoms appear on the **opposite side** of the body from wh
 After someone regains consciousness from a TBI, they typically experience a mix of problems:
 
 **Memory issues** are particularly important to understand:
-- **Anterograde amnesia** (also called post-traumatic amnesia): Can't form new memories after the injury. {{M}}It's like trying to save a document when your computer's hard drive is temporarily damaged{{/M}}—new information just won't stick. The length of this amnesia predicts how well someone will recover.
+- **Anterograde amnesia** (also called post-traumatic amnesia): Can't form new memories after the injury. {{M}}It's like trying to save a document when your computer's hard drive is temporarily damaged{{/M}}. New information just won't stick. The length of this amnesia predicts how well someone will recover.
 - **Retrograde amnesia**: Can't remember things from before the injury. Recent memories disappear first, and when memories return, the oldest ones come back first.
 
 **Other common symptoms include:**
@@ -75,35 +75,35 @@ After someone regains consciousness from a TBI, they typically experience a mix 
 
 ### Recovery Timeline
 
-Most recovery happens in the first three months, with significant additional improvement during the first year. However, many people—especially those with moderate to severe injuries—continue having symptoms indefinitely. This is important for setting realistic expectations with clients and their families.
+Most recovery happens in the first three months, with significant additional improvement during the first year. However, many people (especially those with moderate to severe injuries) continue having symptoms indefinitely. This is important for setting realistic expectations with clients and their families.
 
 ## Movement Disorders: When Motor Control Breaks Down
 
 ### Huntington's Disease: The Genetic Movement Disorder
 
-**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4. Because it's autosomal dominant, each child of an affected parent has a 50% chance of inheriting it. {{M}}It's like flipping a coin that determines whether you'll develop this disease{{/M}}—there's no way to reduce the odds through lifestyle changes.
+**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4. Because it's autosomal dominant, each child of an affected parent has a 50% chance of inheriting it. {{M}}It's like flipping a coin that determines whether you'll develop this disease{{/M}}. There's no way to reduce the odds through lifestyle changes.
 
 The disease destroys cells in the **caudate nucleus** and **putamen** (parts of the basal ganglia), plus the cerebral cortex, cerebellum, and thalamus. Brain imaging can detect glucose problems and shrinkage in these areas years before symptoms appear.
 
 **Symptom progression** typically follows this pattern:
 
-1. **Early stage** (ages 30-50): Depression and mood swings often appear first—these aren't just reactions to having the disease; they're caused by brain changes
+1. **Early stage** (ages 30-50): Depression and mood swings often appear first. These aren't just reactions to having the disease; they're caused by brain changes
 2. **Middle stage**: Short-term memory problems, poor concentration and judgment, **chorea** (jerky, uncontrollable movements in hands, face, limbs, and torso)
 3. **Late stage**: Severe rigidity and **bradykinesia** (slowed movement), difficulty walking, speaking, and swallowing, possible neurocognitive disorder
 
-Life expectancy after symptom onset is usually 10 to 30 years. There's no cure—treatment focuses on managing symptoms and maintaining quality of life.
+Life expectancy after symptom onset is usually 10 to 30 years. There's no cure. Treatment focuses on managing symptoms and maintaining quality of life.
 
 ### Parkinson's Disease: The Dopamine Disorder
 
-**Parkinson's disease** results from both genetic and environmental factors. The core problem is degeneration of dopamine-producing cells in the **substantia nigra**, which reduces dopamine in the basal ganglia. But it's not just about dopamine—low levels of acetylcholine, norepinephrine, and excessive glutamate activity also play roles in various symptoms.
+**Parkinson's disease** results from both genetic and environmental factors. The core problem is degeneration of dopamine-producing cells in the **substantia nigra**, which reduces dopamine in the basal ganglia. But it's not just about dopamine. Low levels of acetylcholine, norepinephrine, and excessive glutamate activity also play roles in various symptoms.
 
 **The five primary motor symptoms** (easy to remember as the "TRAP" plus one):
 
-1. **Tremor** at rest—starts in the hands with characteristic "pill rolling"
+1. **Tremor** at rest. Starts in the hands with characteristic "pill rolling"
 2. **Rigidity** in limbs and trunk
-3. **Akinesia**—sudden freezing episodes where voluntary movement becomes impossible
-4. **Postural instability**—balance and coordination problems
-5. **Bradykinesia**—slowed voluntary movement causing shuffling walk, reduced blinking, and mask-like facial expression
+3. **Akinesia**. Sudden freezing episodes where voluntary movement becomes impossible
+4. **Postural instability**. Balance and coordination problems
+5. **Bradykinesia**. Slowed voluntary movement causing shuffling walk, reduced blinking, and mask-like facial expression
 
 **Non-motor symptoms** include gastrointestinal problems, sleep disturbances, pain, loss of smell, anxiety, and depression. Up to 50% of people with Parkinson's experience depression at some point, and about 20% have depressive symptoms even before motor symptoms appear.
 
@@ -117,7 +117,7 @@ Life expectancy after symptom onset is usually 10 to 30 years. There's no cure�
 
 ## Seizures: When Electrical Activity Goes Wrong
 
-A **seizure** is a temporary physical or behavioral change caused by abnormal electrical activity in the brain. {{M}}Think of it like an electrical surge that disrupts normal function{{/M}}—circuits that usually work smoothly suddenly fire chaotically.
+A **seizure** is a temporary physical or behavioral change caused by abnormal electrical activity in the brain. {{M}}Think of it like an electrical surge that disrupts normal function{{/M}}. Circuits that usually work smoothly suddenly fire chaotically.
 
 **Provoked seizures** have a known cause (brain injury, infection, stroke, fever, alcohol withdrawal). **Unprovoked seizures** occur without an identifiable trigger. When unprovoked seizures recur, the diagnosis becomes **epilepsy**.
 
@@ -138,7 +138,7 @@ The symptoms depend entirely on where the seizure originates:
 | **Parietal lobe** | Tingling, numbness, pain; feelings of floating; body image distortions (feeling enlarged, shrunken, or missing body parts) |
 | **Occipital lobe** | Rapid blinking, eye fluttering; visual hallucinations (flashing lights, colored patterns); vision problems (partial blindness, blurred vision) |
 
-Note that psychological stress frequently triggers temporal lobe seizures—important to know when working with clients who have epilepsy.
+Note that psychological stress frequently triggers temporal lobe seizures. Important to know when working with clients who have epilepsy.
 
 ### Generalized Onset Seizures: Affecting Both Hemispheres
 
@@ -183,7 +183,7 @@ Treatment emphasizes lifestyle changes plus possible medications (diuretics, bet
 
 ### Thyroid Disorders
 
-The thyroid gland controls metabolism—think of it as your body's thermostat and energy regulator.
+The thyroid gland controls metabolism. Think of it as your body's thermostat and energy regulator.
 
 **Hyperthyroidism** (too much thyroid hormone):
 - Increased metabolism, elevated temperature, heat intolerance
@@ -198,7 +198,7 @@ The thyroid gland controls metabolism—think of it as your body's thermostat an
 - Depression, lethargy, decreased libido
 - Confusion, impaired concentration and memory
 
-Notice how these symptoms can easily be mistaken for psychiatric conditions—that's why ruling out medical causes is crucial.
+Notice how these symptoms can easily be mistaken for psychiatric conditions. That's why ruling out medical causes is crucial.
 
 ### Pituitary Disorders: Diabetes Insipidus
 
@@ -244,7 +244,7 @@ Common symptoms for both types:
 
 ### Electroencephalography (EEG)
 
-**EEG** measures electrical impulses between neurons using small electrodes on the scalp. {{M}}It's like putting microphones on the outside of a concert hall to hear what's happening inside{{/M}}—you get information about groups of neurons near each electrode.
+**EEG** measures electrical impulses between neurons using small electrodes on the scalp. {{M}}It's like putting microphones on the outside of a concert hall to hear what's happening inside{{/M}}. You get information about groups of neurons near each electrode.
 
 The computer records electrical activity as brain waves showing frequency and amplitude. EEG is useful for:
 - Identifying rapid changes in brain activity in response to stimuli
@@ -324,7 +324,7 @@ Important note: While neuroimaging helps with diagnosing neurocognitive disorder
 - **Huntington's disease** is autosomal dominant with 50% inheritance risk; affects basal ganglia; progression goes from mood problems to chorea to severe motor impairment
 - **Parkinson's disease** results from dopamine depletion in substantia nigra; five motor symptoms (TRAP + B); treated with levodopa, dopamine agonists, or deep brain stimulation
 - **Seizures** can be focal (one hemisphere, localized symptoms) or generalized (both hemispheres); status epilepticus is a medical emergency
-- **Migraine headaches** involve more than pain—they're linked to neurotransmitter abnormalities and have both preventive and acute treatment approaches
+- **Migraine headaches** involve more than pain. They're linked to neurotransmitter abnormalities and have both preventive and acute treatment approaches
 - **Hypertension** is often asymptomatic but is the leading risk factor for stroke
 - **Thyroid disorders** produce symptoms that mimic psychiatric conditions (hyperthyroidism = high energy/anxiety-like; hypothyroidism = low energy/depression-like)
 - **Diabetes insipidus** (ADH problem) and **diabetes mellitus** (insulin problem) are completely different conditions

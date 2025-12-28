@@ -9,11 +9,11 @@ version: 3
 
 ## Memory and Forgetting: Your Complete EPPP Guide
 
-Welcome to one of the most tested topics on the EPPP. Memory isn't just about helping clients who forget things—it's about understanding how we learn, why therapy techniques work, and how trauma affects recall. Plus, you'll need these concepts locked in your own memory to pass the exam. Let's make sure you actually remember this material.
+Welcome to one of the most tested topics on the EPPP. Memory isn't just about helping clients who forget things. It's about understanding how we learn, why therapy techniques work, and how trauma affects recall. Plus, you'll need these concepts locked in your own memory to pass the exam. Let's make sure you actually remember this material.
 
 ## Why Memory Matters for Psychologists
 
-Every time a client tells you their story, you're witnessing memory in action. When someone can't remember childhood events, when a trauma survivor has intrusive flashbacks, when an older adult worries about forgetting names—you're dealing with different memory systems. Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.
+Every time a client tells you their story, you're witnessing memory in action. When someone can't remember childhood events, when a trauma survivor has intrusive flashbacks, when an older adult worries about forgetting names. You're dealing with different memory systems. Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.
 
 ## The Three-Store Model: How Information Moves Through Your Brain
 
@@ -21,9 +21,9 @@ Atkinson and Shiffrin gave us the multi-store model in 1968, and it's still the 
 
 ### Sensory Memory: The Brief Snapshot
 
-**Sensory memory** holds incoming information for barely long enough to decide if it matters. Visual information (iconic memory) lasts about half a second, while sounds (echoic memory) stick around for about two seconds. {{M}}It's like when someone tells you their phone number—you hear all the digits, but if you don't immediately pay attention, they vanish before you can write them down.{{/M}}
+**Sensory memory** holds incoming information for barely long enough to decide if it matters. Visual information (iconic memory) lasts about half a second, while sounds (echoic memory) stick around for about two seconds. {{M}}It's like when someone tells you their phone number. You hear all the digits, but if you don't immediately pay attention, they vanish before you can write them down.{{/M}}
 
-This explains why clients might say they "heard" what you said but can't recall it—the information never made it past sensory memory because their attention was elsewhere.
+This explains why clients might say they "heard" what you said but can't recall it, the information never made it past sensory memory because their attention was elsewhere.
 
 ### Short-Term Memory: The Temporary Workspace
 
@@ -31,30 +31,30 @@ When you pay attention to sensory information, it moves into **short-term memory
 
 **Duration**: About 20 seconds without rehearsal (repeating the information)
 
-**Capacity**: Miller's famous finding—7 plus or minus 2 units of information
+**Capacity**: Miller's famous finding. 7 Plus or minus 2 units of information
 
 **Chunking**: You can expand capacity by grouping information. {{M}}Instead of remembering the individual digits 3-1-0-5-5-5-2-3-6-8, you chunk them as 310-555-2368, reducing 10 units to 3 units.{{/M}}
 
 Short-term memory has two components:
 
-**Memory span** (also called primary memory): The basic storage capacity—how much you can hold
+**Memory span** (also called primary memory): The basic storage capacity. How much you can hold
 
-**Working memory**: The active processing system—what lets you manipulate information mentally, like calculating a tip or solving therapy scenarios in your head
+**Working memory**: The active processing system. What lets you manipulate information mentally, like calculating a tip or solving therapy scenarios in your head
 
 ### Long-Term Memory: The Permanent Archive
 
 **Long-term memory** has essentially unlimited capacity and duration. It's divided into:
 
-- **Recent (secondary) memory**: Minutes to years old—most affected by aging
-- **Remote (tertiary) memory**: Years to decades old—more resistant to aging
+- **Recent (secondary) memory**: Minutes to years old. Most affected by aging
+- **Remote (tertiary) memory**: Years to decades old. More resistant to aging
 
-Information moves from short-term to long-term memory through **encoding**—connecting new information to something already stored in long-term memory.
+Information moves from short-term to long-term memory through **encoding**, connecting new information to something already stored in long-term memory.
 
 ### The Serial Position Effect: Proof the Model Works
 
 {{M}}Imagine studying a list of 15 unrelated therapy techniques.{{/M}} If tested immediately, you'll remember techniques from the beginning (primacy effect) and end (recency effect) better than the middle ones. The beginning items made it to long-term memory through rehearsal, while the end items are still in short-term memory.
 
-Wait 30 seconds before the test, and the recency effect disappears—those end items faded from short-term memory. Only the primacy effect remains. This pattern confirms that we're dealing with separate memory systems.
+Wait 30 seconds before the test, and the recency effect disappears. Those end items faded from short-term memory. Only the primacy effect remains. This pattern confirms that we're dealing with separate memory systems.
 
 ## Baddeley's Working Memory Model: A Closer Look
 
@@ -66,13 +66,13 @@ Baddeley refined our understanding of working memory. Instead of one simple stor
 | Visuo-spatial sketchpad | Stores visual and spatial information | Visualizing a client's genogram or seating arrangement in family therapy |
 | Episodic buffer | Integrates all types of information and links to long-term memory | Connecting what a client just said to their history |
 
-The central executive coordinates these systems—{{M}}like a project manager directing different teams—deciding what deserves attention and organizing your cognitive resources.{{/M}}
+The central executive coordinates these systems ({{M}}like a project manager directing different teams) deciding what deserves attention and organizing your cognitive resources.{{/M}}
 
 ## Types of Long-Term Memory: Not All Memories Are Equal
 
 ### Procedural vs. Declarative Memory
 
-**Procedural memory** (nondeclarative): Skills and actions you perform without conscious thought. {{M}}Once you've conducted enough intake interviews, you navigate the process automatically—you don't consciously think "now I'll ask about family history."{{/M}} This includes riding a bike, typing, and clinical techniques you've mastered.
+**Procedural memory** (nondeclarative): Skills and actions you perform without conscious thought. {{M}}Once you've conducted enough intake interviews, you navigate the process automatically. You don't consciously think "now I'll ask about family history."{{/M}} This includes riding a bike, typing, and clinical techniques you've mastered.
 
 **Declarative memory**: Facts and events you consciously recall. It splits into:
 
@@ -85,7 +85,7 @@ The central executive coordinates these systems—{{M}}like a project manager di
 
 **Prospective memory**: Remembering to do something in the future (remembering you have supervision next Tuesday, that you need to submit case notes by Friday)
 
-Prospective memory failures are what clients mean when they say "I forgot my appointment"—not a recall problem, but a failure to remember an intention.
+Prospective memory failures are what clients mean when they say "I forgot my appointment". Not a recall problem, but a failure to remember an intention.
 
 ### Explicit vs. Implicit Memory
 
@@ -97,7 +97,7 @@ This distinction matters clinically. Trauma survivors may lack explicit memories
 
 ## Priming: Memory Without Awareness
 
-**Priming** occurs when exposure to something influences your later response without conscious awareness. {{M}}You watch a documentary about anxiety disorders before bed, and the next day you find yourself more attuned to anxious behaviors in your clients—that's priming in action.{{/M}}
+**Priming** occurs when exposure to something influences your later response without conscious awareness. {{M}}You watch a documentary about anxiety disorders before bed, and the next day you find yourself more attuned to anxious behaviors in your clients. That's priming in action.{{/M}}
 
 ### How Researchers Study Priming
 
@@ -105,9 +105,9 @@ This distinction matters clinically. Trauma survivors may lack explicit memories
 
 1. Participants read a word list (LADDER, STRONG, TABLE)
 2. Later, they complete word fragments (L__D_R, STR____, T__LE)
-3. They typically complete fragments with words from the original list—without consciously remembering they saw those words
+3. They typically complete fragments with words from the original list. Without consciously remembering they saw those words
 
-**Critical finding**: Amnesic patients with no explicit memory for new information perform normally on priming tasks. This proves implicit memory operates independently from explicit memory—crucial for understanding patients with memory disorders.
+**Critical finding**: Amnesic patients with no explicit memory for new information perform normally on priming tasks. This proves implicit memory operates independently from explicit memory. Crucial for understanding patients with memory disorders.
 
 Priming explains several real-world phenomena:
 - Why mere exposure makes things feel familiar
@@ -116,13 +116,13 @@ Priming explains several real-world phenomena:
 
 ## False Memories: When Memory Betrays Us
 
-False memories don't just matter for forensic work—they're relevant whenever clients "remember" events, especially in trauma therapy. Here's what the research shows:
+False memories don't just matter for forensic work. They're relevant whenever clients "remember" events, especially in trauma therapy. Here's what the research shows:
 
 ### The DRM Procedure
 
 Present words: candy, sugar, bitter, chocolate, taste, cake, honey
 
-Result: Many people confidently "remember" seeing the word SWEET—even though it wasn't on the list. They're remembering the concept, not the actual words.
+Result: Many people confidently "remember" seeing the word SWEET. Even though it wasn't on the list. They're remembering the concept, not the actual words.
 
 **Clinical relevance**: Clients may confidently recall events that fit the narrative or theme of their experiences without those specific events occurring.
 
@@ -130,7 +130,7 @@ Result: Many people confidently "remember" seeing the word SWEET—even though i
 
 {{M}}Researchers tell participants "Your parents mentioned you got lost at the mall as a kid."{{/M}} With repeated questioning, many participants develop detailed "memories" of events that never happened. They add sensory details, emotions, and narrative elements on their own.
 
-**Key insight**: Memory is reconstructive, not reproductive. Each time we recall something, we rebuild it—and potentially alter it.
+**Key insight**: Memory is reconstructive, not reproductive. Each time we recall something, we rebuild it. And potentially alter it.
 
 ### Imagination Inflation
 
@@ -140,7 +140,7 @@ The more times people imagine an event, the more confident they become that it a
 
 ### Trace Decay Theory
 
-This theory suggests memories physically deteriorate over time without use—but research doesn't support it well. You can probably still remember your childhood address even if you haven't thought about it in years.
+This theory suggests memories physically deteriorate over time without use. But research doesn't support it well. You can probably still remember your childhood address even if you haven't thought about it in years.
 
 ### Interference Theory: The Real Culprit
 
@@ -158,13 +158,13 @@ This theory suggests memories physically deteriorate over time without use—but
 
 ## Techniques for Improving Memory: Study Smarter
 
-These aren't just study tips—they're evidence-based cognitive strategies you should be using.
+These aren't just study tips. They're evidence-based cognitive strategies you should be using.
 
 ### Elaborative Rehearsal: Make It Meaningful
 
-Simply repeating information (rote rehearsal) is weak. **Elaborative rehearsal** works better—connect new information to what you already know or create personally meaningful examples.
+Simply repeating information (rote rehearsal) is weak. **Elaborative rehearsal** works better. Connect new information to what you already know or create personally meaningful examples.
 
-{{M}}Don't just memorize "proactive interference = old blocks new." Instead, connect it: "Last week I kept using my ex's name with my new partner—that's proactive interference, the old relationship blocking the new one."{{/M}}
+{{M}}Don't just memorize "proactive interference = old blocks new." Instead, connect it: "Last week I kept using my ex's name with my new partner. That's proactive interference, the old relationship blocking the new one."{{/M}}
 
 This process, called **semantic encoding**, is the most effective way to transfer information to long-term memory.
 
@@ -181,7 +181,7 @@ This process, called **semantic encoding**, is the most effective way to transfe
 - To remember thalamus = sensory relay, {{M}}picture a relay race with runners passing sensory batons through the center of the brain{{/M}}
 
 **Method of loci**: For lists
-- {{M}}Link each concept to objects in your apartment—proactive interference sitting on your couch, retroactive interference at your desk, semantic encoding in your kitchen{{/M}}
+- {{M}}Link each concept to objects in your apartment. Proactive interference sitting on your couch, retroactive interference at your desk, semantic encoding in your kitchen{{/M}}
 - Mentally walk through your space during the exam to retrieve information
 
 ### Encoding Specificity: Match Learning and Testing Conditions
@@ -216,15 +216,15 @@ These theories shifted psychology from pure behaviorism to recognizing mental pr
 
 ### Tolman's Latent Learning
 
-Tolman's rats learned maze layouts without reinforcement—they formed **cognitive maps** through exploration alone. Once reinforced, they immediately performed as well as rats who'd been reinforced all along.
+Tolman's rats learned maze layouts without reinforcement. They formed **cognitive maps** through exploration alone. Once reinforced, they immediately performed as well as rats who'd been reinforced all along.
 
 **Clinical application**: Clients may learn coping skills in therapy but not demonstrate them until properly motivated. The learning happened before the behavior appeared.
 
 ### Köhler's Insight Learning
 
-Sultan the chimpanzee paced, then suddenly moved a box under a banana to reach it—an "aha" moment. **Insight learning** involves mentally working through problems until the solution becomes clear.
+Sultan the chimpanzee paced, then suddenly moved a box under a banana to reach it, an "aha" moment. **Insight learning** involves mentally working through problems until the solution becomes clear.
 
-{{M}}You've experienced this when a client's case suddenly makes sense after weeks of puzzlement—all the pieces click into place at once.{{/M}}
+{{M}}You've experienced this when a client's case suddenly makes sense after weeks of puzzlement. All the pieces click into place at once.{{/M}}
 
 ### Bandura's Social Cognitive Theory
 
@@ -244,7 +244,7 @@ Bandura's bobo doll experiments showed children learn through observation withou
 - External reinforcement (from others)
 - Vicarious reinforcement (seeing the model rewarded)
 
-**Clinical application**: Modeling works best with **guided participation** (participant modeling)—therapist demonstrates each step, then assists client in performing each step. **Coping models** (who show initial difficulty) work better than mastery models (who perform perfectly).
+**Clinical application**: Modeling works best with **guided participation** (participant modeling). Therapist demonstrates each step, then assists client in performing each step. **Coping models** (who show initial difficulty) work better than mastery models (who perform perfectly).
 
 ## Common Misconceptions Students Make
 
@@ -252,16 +252,16 @@ Bandura's bobo doll experiments showed children learn through observation withou
 - **Reality**: Implicit memory is broader and includes procedural memory, classical conditioning, and priming
 
 **Misconception 2**: "Working memory and short-term memory are different systems"
-- **Reality**: Working memory is part of short-term memory—it's the active processing component
+- **Reality**: Working memory is part of short-term memory. It's the active processing component
 
 **Misconception 3**: "Memory works like a video recording"
-- **Reality**: Memory is reconstructive—we rebuild memories each time, making them vulnerable to distortion
+- **Reality**: Memory is reconstructive. We rebuild memories each time, making them vulnerable to distortion
 
 **Misconception 4**: "Recent memory means memory from the recent past"
-- **Reality**: In the three-store model terminology, recent (secondary) long-term memory can include events from years ago—anything not in remote (tertiary) memory
+- **Reality**: In the three-store model terminology, recent (secondary) long-term memory can include events from years ago, anything not in remote (tertiary) memory
 
 **Misconception 5**: "Forgetting always means the memory is gone"
-- **Reality**: Most forgetting is retrieval failure, not storage failure—the memory exists but you can't access it
+- **Reality**: Most forgetting is retrieval failure, not storage failure, the memory exists but you can't access it
 
 ## Memory Aids for the EPPP
 
@@ -293,12 +293,12 @@ Bandura's bobo doll experiments showed children learn through observation withou
 - **Multi-store model**: Sensory (brief snapshot) → Short-term (20 seconds, 7±2 items) → Long-term (unlimited)
 - **Working memory**: Central executive + phonological loop + visuo-spatial sketchpad + episodic buffer
 - **Memory types matter**: Procedural vs. declarative, explicit vs. implicit, retrospective vs. prospective
-- **Priming**: Exposure influences later responses without conscious awareness—survives in amnesia
+- **Priming**: Exposure influences later responses without conscious awareness. Survives in amnesia
 - **False memories**: Memory is reconstructive, not reproductive; confidence doesn't equal accuracy
 - **Interference beats decay**: We forget mainly because similar information interferes, not because memories fade
-- **Elaborative rehearsal**: Make information meaningful—don't just repeat it
+- **Elaborative rehearsal**: Make information meaningful. Don't just repeat it
 - **Practice testing wins**: The testing effect is one of the strongest learning tools available
 - **Encoding specificity**: Match your study conditions to test conditions when possible
-- **Observational learning**: Requires attention, retention, production, and motivation—not just reinforcement
+- **Observational learning**: Requires attention, retention, production, and motivation. Not just reinforcement
 
-Now practice retrieving this information. Close these notes and write down everything you remember—that's using the testing effect to strengthen your own memory for the exam.
+Now practice retrieving this information. Close these notes and write down everything you remember. That's using the testing effect to strengthen your own memory for the exam.

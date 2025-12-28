@@ -9,7 +9,7 @@ version: 3
 
 ## Introduction: Why Groups Change Everything
 
-You've probably noticed something interesting about your own behavior: you're not quite the same person when you're alone versus when you're surrounded by others. Maybe you crush presentations when it's just you and your slides, but freeze up in front of a crowd. Or perhaps you've been part of a team project where everyone seemed to contribute less than they would have working solo. These aren't random quirks—they're predictable patterns that social psychologists have studied for decades.
+You've probably noticed something interesting about your own behavior: you're not quite the same person when you're alone versus when you're surrounded by others. Maybe you crush presentations when it's just you and your slides, but freeze up in front of a crowd. Or perhaps you've been part of a team project where everyone seemed to contribute less than they would have working solo. These aren't random quirks. They're predictable patterns that social psychologists have studied for decades.
 
 Understanding group influences matters tremendously for the EPPP and your future practice. Your clients don't exist in isolation; they're constantly navigating family dynamics, workplace teams, social circles, and community settings. When someone tells you they're struggling at work or feeling lost in their relationships, group psychology often holds the key to understanding what's really happening.
 
@@ -21,9 +21,9 @@ Here's a fascinating puzzle: sometimes having an audience makes us better at wha
 
 **Social facilitation** occurs when other people's presence improves your performance. **Social inhibition** happens when their presence makes your performance worse. The deciding factor? Whether the task is easy and well-practiced, or difficult and unfamiliar.
 
-{{M}}Think about making your grandmother's famous recipe that you've prepared dozens of times. If your partner walks into the kitchen and watches you cook, you'll probably move smoothly through each step—maybe even with a bit of extra flair. That's social facilitation in action.{{/M}} But {{M}}now imagine you're attempting a complex recipe you've never tried before, something with precise timing and unfamiliar techniques. That same audience suddenly makes you more nervous, more likely to second-guess yourself, and more prone to mistakes.{{/M}}
+{{M}}Think about making your grandmother's famous recipe that you've prepared dozens of times. If your partner walks into the kitchen and watches you cook, you'll probably move smoothly through each step. Maybe even with a bit of extra flair. That's social facilitation in action.{{/M}} But {{M}}now imagine you're attempting a complex recipe you've never tried before, something with precise timing and unfamiliar techniques. That same audience suddenly makes you more nervous, more likely to second-guess yourself, and more prone to mistakes.{{/M}}
 
-Zajonc's drive theory explains why this happens. The presence of others increases your physiological arousal—your heart rate picks up, your alertness increases. This arousal strengthens whatever response is dominant (most likely to occur) in that situation. For well-learned tasks, your dominant response is the correct one, so arousal helps. For difficult or new tasks, your dominant response is often incorrect or hesitant, so arousal hurts your performance.
+Zajonc's drive theory explains why this happens. The presence of others increases your physiological arousal. Your heart rate picks up, your alertness increases. This arousal strengthens whatever response is dominant (most likely to occur) in that situation. For well-learned tasks, your dominant response is the correct one, so arousal helps. For difficult or new tasks, your dominant response is often incorrect or hesitant, so arousal hurts your performance.
 
 **Clinical Relevance:** When clients describe anxiety in social situations, ask about the specific tasks they're performing. Someone might handle routine work presentations fine but panic when asked to tackle unfamiliar material in front of colleagues. Understanding this distinction helps you normalize their experience and develop targeted interventions.
 
@@ -37,7 +37,7 @@ Social loafing happens when people in groups contribute less than they would wor
 
 Two main forces drive social loafing:
 
-**Diffusion of responsibility** means that when you're working collectively, your sense of personal responsibility for the outcome decreases. {{M}}It's like when you see a notification in a group chat with twenty people—you assume someone else will respond, so you don't feel as obligated to reply yourself.{{/M}}
+**Diffusion of responsibility** means that when you're working collectively, your sense of personal responsibility for the outcome decreases. {{M}}It's like when you see a notification in a group chat with twenty people. You assume someone else will respond, so you don't feel as obligated to reply yourself.{{/M}}
 
 **Decreased evaluation apprehension** occurs because your individual contribution gets lost in the group's collective output. When nobody can identify exactly what you personally contributed, you feel less concerned about being judged. The psychological pressure to perform diminishes.
 
@@ -53,11 +53,11 @@ The good news? Social loafing isn't inevitable. Research shows it's less likely 
 
 There's also a fascinating cultural dimension: people from individualist-Western cultures show more social loafing than those from collectivist-Eastern cultures. This makes sense when you consider that collectivist cultures emphasize group harmony and collective responsibility more strongly.
 
-**For Your Practice:** When working with clients in organizational settings, social loafing often underlies team dysfunction. A manager might complain about "lazy employees," but the real issue could be structural—tasks aren't designed to make individual contributions visible. Similarly, in group therapy, you'll want to structure activities so each member's participation is meaningful and identifiable.
+**For Your Practice:** When working with clients in organizational settings, social loafing often underlies team dysfunction. A manager might complain about "lazy employees," but the real issue could be structural. Tasks aren't designed to make individual contributions visible. Similarly, in group therapy, you'll want to structure activities so each member's participation is meaningful and identifiable.
 
 ## Losing Yourself in the Crowd: Deindividuation
 
-**Deindividuation** refers to losing your sense of individuality and the normal restraints against behavior you'd typically avoid. It happens when you can act anonymously—either because you're in a large crowd or because your identity is somehow disguised.
+**Deindividuation** refers to losing your sense of individuality and the normal restraints against behavior you'd typically avoid. It happens when you can act anonymously. Either because you're in a large crowd or because your identity is somehow disguised.
 
 The research on this phenomenon is sobering. In one study, researchers analyzed situations where crowds gathered while someone threatened to jump from a bridge or building. When it was nighttime and the crowd was large, people were more likely to taunt the person and urge them to jump. During daytime with smaller crowds, this cruel behavior was less common.
 
@@ -69,11 +69,11 @@ The research on this phenomenon is sobering. In one study, researchers analyzed 
 
 Groups don't always follow the majority blindly. Sometimes, a single person or small minority can shift the entire group's opinion. But how?
 
-According to Moscovici, minority influence works differently than majority influence. The majority typically influences others through informational influence (providing new information) or normative influence (pressure to conform). A minority can't rely on these—they lack the numbers.
+According to Moscovici, minority influence works differently than majority influence. The majority typically influences others through informational influence (providing new information) or normative influence (pressure to conform). A minority can't rely on these. They lack the numbers.
 
 Instead, minorities must depend on **behavioral style**. The key is consistency without rigidity. {{M}}Imagine you're in a team meeting where everyone wants to launch a new service immediately, but one colleague consistently argues for waiting until more research is done. If that person presents their case repeatedly, backing it up with data and reasoning but remaining open to discussion, they might eventually sway the group. However, if they simply repeat the same argument stubbornly without engaging with others' concerns, the group will likely dismiss them.{{/M}}
 
-Here's something particularly interesting: Moscovici proposed that minority influence leads to different outcomes than majority influence. When a minority changes someone's mind, it tends to result in **private acceptance** (genuine conversion)—the person truly believes the new position. When a majority influences someone, it more often produces **public acceptance** (compliance)—the person goes along outwardly but may not genuinely agree.
+Here's something particularly interesting: Moscovici proposed that minority influence leads to different outcomes than majority influence. When a minority changes someone's mind, it tends to result in **private acceptance** (genuine conversion) (the person truly believes the new position. When a majority influences someone, it more often produces **public acceptance** (compliance)) the person goes along outwardly but may not genuinely agree.
 
 **Why This Matters:** In therapeutic groups, family therapy, or organizational consultation, recognizing minority influence dynamics helps you understand how change actually happens. Sometimes the quietest voice in the room, if consistent and credible, can shift everyone's perspective.
 
@@ -91,15 +91,15 @@ Not all group tasks are created equal. Steiner identified five distinct task typ
 
 ### Understanding Each Task Type
 
-**Additive tasks** don't require coordination—everyone contributes independently and you add up the results. {{M}}Think of a fundraising campaign where each team member contacts their own network. The total money raised is simply the sum of everyone's individual efforts.{{/M}} Groups outperform even their best individual member because you're literally adding up multiple contributions.
+**Additive tasks** don't require coordination. Everyone contributes independently and you add up the results. {{M}}Think of a fundraising campaign where each team member contacts their own network. The total money raised is simply the sum of everyone's individual efforts.{{/M}} Groups outperform even their best individual member because you're literally adding up multiple contributions.
 
-**Compensatory tasks** involve averaging judgments or estimates. {{M}}If you ask ten colleagues to estimate how long a project will take, the average of their estimates is typically more accurate than any single person's guess.{{/M}} This is why groups can be wise—individual errors tend to cancel out.
+**Compensatory tasks** involve averaging judgments or estimates. {{M}}If you ask ten colleagues to estimate how long a project will take, the average of their estimates is typically more accurate than any single person's guess.{{/M}} This is why groups can be wise. Individual errors tend to cancel out.
 
-**Disjunctive tasks** require selecting the best solution from those proposed. {{M}}When a clinical team discusses a complex case and must choose a diagnosis or treatment approach, they're engaging in a disjunctive task.{{/M}} The group's performance depends on whether they actually recognize and select the best member's contribution—which doesn't always happen due to group dynamics or status differences.
+**Disjunctive tasks** require selecting the best solution from those proposed. {{M}}When a clinical team discusses a complex case and must choose a diagnosis or treatment approach, they're engaging in a disjunctive task.{{/M}} The group's performance depends on whether they actually recognize and select the best member's contribution, which doesn't always happen due to group dynamics or status differences.
 
-**Conjunctive tasks** demand that everyone contribute, and the group's performance is limited by the weakest member. {{M}}It's like planning a surprise party—if even one person accidentally reveals the surprise, the whole effort fails regardless of how well everyone else maintained secrecy.{{/M}} This is why these tasks can be frustrating; one struggling member affects the entire outcome.
+**Conjunctive tasks** demand that everyone contribute, and the group's performance is limited by the weakest member. {{M}}It's like planning a surprise party, if even one person accidentally reveals the surprise, the whole effort fails regardless of how well everyone else maintained secrecy.{{/M}} This is why these tasks can be frustrating; one struggling member affects the entire outcome.
 
-**Discretionary tasks** give groups flexibility in combining contributions. Performance depends entirely on how wisely the group structures participation. {{M}}A research team writing a paper might assign sections based on expertise, have one person draft while others critique, or rotate responsibilities—each approach yields different results.{{/M}}
+**Discretionary tasks** give groups flexibility in combining contributions. Performance depends entirely on how wisely the group structures participation. {{M}}A research team writing a paper might assign sections based on expertise, have one person draft while others critique, or rotate responsibilities. Each approach yields different results.{{/M}}
 
 **For the EPPP:** Questions about group performance often present a scenario and ask you to predict outcomes. Identify the task type first, then apply the corresponding performance principle.
 
@@ -109,11 +109,11 @@ Groups don't spring into existence fully formed. They evolve through predictable
 
 ### The Five Stages
 
-**Forming (Stage 1):** This is the tentative beginning. Members feel uncertain about their roles and responsibilities. They rely heavily on the designated leader for guidance and structure. Everyone's on their best behavior, being polite and avoiding conflict. {{M}}It's like the first week at a new job—you're observing carefully, asking lots of questions, and probably not challenging anyone's ideas yet.{{/M}}
+**Forming (Stage 1):** This is the tentative beginning. Members feel uncertain about their roles and responsibilities. They rely heavily on the designated leader for guidance and structure. Everyone's on their best behavior, being polite and avoiding conflict. {{M}}It's like the first week at a new job. You're observing carefully, asking lots of questions, and probably not challenging anyone's ideas yet.{{/M}}
 
 **Storming (Stage 2):** Once people feel somewhat comfortable, the politeness facade cracks. This stage brings power struggles, conflicts over procedures, and trust issues. Members might question the leader's authority or clash over different approaches. This feels uncomfortable, but it's actually a necessary and healthy stage. {{M}}Think of it as the relationship phase when you stop being on your best behavior constantly and start revealing your authentic preferences and boundaries. Conflict emerges, but that's how you figure out if you're compatible.{{/M}}
 
-**Norming (Stage 3):** If the group survives storming, cohesion and commitment grow. Members work to resolve the conflicts and issues from the previous stage. They establish rules, procedures, and group norms—the unwritten (and sometimes written) guidelines for how things work. Trust begins to develop. People know what to expect from each other.
+**Norming (Stage 3):** If the group survives storming, cohesion and commitment grow. Members work to resolve the conflicts and issues from the previous stage. They establish rules, procedures, and group norms, the unwritten (and sometimes written) guidelines for how things work. Trust begins to develop. People know what to expect from each other.
 
 **Performing (Stage 4):** Now the group hits its stride. The emphasis shifts to working efficiently and cooperatively toward shared goals. Members understand their roles, trust each other's capabilities, and can navigate disagreements constructively. The group becomes productive and effective. This is what most groups aspire to reach.
 

@@ -9,19 +9,19 @@ version: 3
 
 ## Understanding Neurocognitive Disorders: A Practical Guide for Future Psychologists
 
-You're going to encounter patients with memory problems, confusion, and cognitive decline throughout your career. Some of them will have symptoms that developed overnight in a hospital room. Others will have families who've watched their loved one slowly fade over years. Understanding neurocognitive disorders isn't just about memorizing criteria—it's about recognizing patterns that will help you provide accurate diagnoses and appropriate care.
+You're going to encounter patients with memory problems, confusion, and cognitive decline throughout your career. Some of them will have symptoms that developed overnight in a hospital room. Others will have families who've watched their loved one slowly fade over years. Understanding neurocognitive disorders isn't just about memorizing criteria. It's about recognizing patterns that will help you provide accurate diagnoses and appropriate care.
 
 Let's break down this complex category into understandable pieces that will stick with you long after the exam.
 
 ## What Makes Neurocognitive Disorders Different
 
-Neurocognitive disorders all share one critical feature: **acquired cognitive dysfunction**. This means the person's brain was working normally at one point, and then something changed. We're not talking about developmental issues here—these are declines from a previous level of functioning.
+Neurocognitive disorders all share one critical feature: **acquired cognitive dysfunction**. This means the person's brain was working normally at one point, and then something changed. We're not talking about developmental issues here. These are declines from a previous level of functioning.
 
 The DSM-5-TR divides these disorders into three main groups: delirium (the acute crisis), mild neurocognitive disorder (noticeable problems that don't disrupt independence), and major neurocognitive disorder (significant impairment that interferes with daily living).
 
 ## Delirium: The Cognitive Emergency
 
-Delirium is the disorder you'll see when something has gone seriously wrong, and it's happening fast. {{M}}Think of it like your computer suddenly freezing and displaying error messages—something in the system is critically malfunctioning right now.{{/M}}
+Delirium is the disorder you'll see when something has gone seriously wrong, and it's happening fast. {{M}}Think of it like your computer suddenly freezing and displaying error messages. Something in the system is critically malfunctioning right now.{{/M}}
 
 ### Core Features You Must Know
 
@@ -44,7 +44,7 @@ Delirium always has a physiological cause. Common culprits include:
 - Head injuries
 - Medications and substances (alcohol, lithium, sedatives, anticholinergic drugs)
 
-It's most common in hospitalized older adults, which makes sense—they're dealing with medical crises, unfamiliar environments, disrupted sleep, and multiple medications all at once.
+It's most common in hospitalized older adults, which makes sense. They're dealing with medical crises, unfamiliar environments, disrupted sleep, and multiple medications all at once.
 
 ### Treatment Approach
 
@@ -93,9 +93,9 @@ Here's where it gets interesting. Alzheimer's involves a toxic protein buildup t
 
 **Neurofibrillary tangles**: Abnormal tau protein accumulation inside neurons that creates twisted threads
 
-{{M}}Think of plaques and tangles like accumulated junk mail and tangled cables behind your entertainment center—individually annoying, but together they completely disrupt the system's ability to function.{{/M}}
+{{M}}Think of plaques and tangles like accumulated junk mail and tangled cables behind your entertainment center. Individually annoying, but together they completely disrupt the system's ability to function.{{/M}}
 
-These abnormalities follow a predictable path: they start in the medial temporal lobe (including the hippocampus—your memory center), then spread to frontal and parietal lobes, and eventually throughout the cortex.
+These abnormalities follow a predictable path: they start in the medial temporal lobe (including the hippocampus. Your memory center), then spread to frontal and parietal lobes, and eventually throughout the cortex.
 
 The neurotransmitter problems are equally important: reduced acetylcholine (ACh) and excessive glutamate, both critical for learning and memory.
 
@@ -153,7 +153,7 @@ No cure exists, but several medications can temporarily slow progression or mana
 
 Additional treatments include antidepressants for mood symptoms, anxiolytics for agitation, and antipsychotics for severe behavioral problems or psychosis.
 
-Don't overlook caregiver support—it's not just compassionate, it's clinically effective. Supported caregivers are less likely to place family members in nursing homes, and staying at home is associated with better patient outcomes.
+Don't overlook caregiver support. It's not just compassionate, it's clinically effective. Supported caregivers are less likely to place family members in nursing homes, and staying at home is associated with better patient outcomes.
 
 ### Risk Factors You Should Know
 
@@ -197,7 +197,7 @@ This diagnosis requires three components:
 
 The course varies dramatically: you might see acute onset with partial recovery, stepwise decline, or progressive deterioration with plateaus.
 
-Prevention targets the risk factors: hypertension, heart disease, diabetes, obesity, high cholesterol, and smoking. {{M}}It's like maintaining your car—address the warning signs before the engine fails.{{/M}}
+Prevention targets the risk factors: hypertension, heart disease, diabetes, obesity, high cholesterol, and smoking. {{M}}It's like maintaining your car. Address the warning signs before the engine fails.{{/M}}
 
 ## Frontotemporal Neurocognitive Disorder: The Early-Onset Personality Changer
 
@@ -236,7 +236,7 @@ Caused by HIV infection affecting the brain. Shows **subcortical symptoms**: for
 
 ### Prion Disease (Creutzfeldt-Jakob Disease)
 
-The rapidly progressive one—often meets major NCD criteria within six months. Look for cognitive decline plus prominent motor symptoms (ataxia, myoclonus, chorea) and possible psychiatric symptoms.
+The rapidly progressive one. Often meets major NCD criteria within six months. Look for cognitive decline plus prominent motor symptoms (ataxia, myoclonus, chorea) and possible psychiatric symptoms.
 
 Types to know:
 - **Sporadic CJD**: Most common, unknown cause
@@ -255,7 +255,7 @@ This is your catch-all for NCDs caused by treatable or untreatable medical issue
 - Poisoning
 - Nutritional deficiencies (like B12 deficiency)
 
-{{M}}This is like your smoke detector going off—sometimes it's an actual fire requiring major intervention, and sometimes it's just burnt toast that you can fix immediately.{{/M}} Always rule out reversible causes before assuming permanent damage.
+{{M}}This is like your smoke detector going off. Sometimes it's an actual fire requiring major intervention, and sometimes it's just burnt toast that you can fix immediately.{{/M}} Always rule out reversible causes before assuming permanent damage.
 
 ## Common Misconceptions That Trip Up Test-Takers
 
@@ -297,4 +297,4 @@ This is your catch-all for NCDs caused by treatable or untreatable medical issue
 - **Pseudodementia** (depression with cognitive symptoms) responds well to treatment and shows different patterns than true NCD
 - **Definitive Alzheimer's diagnosis** requires autopsy; clinical diagnosis is based on characteristic patterns plus exclusion of alternatives
 
-Understanding neurocognitive disorders means seeing patterns, understanding timelines, and connecting brain regions to symptom clusters. Master these connections, and you'll not only ace this section of the EPPP—you'll be prepared to provide competent care throughout your career.
+Understanding neurocognitive disorders means seeing patterns, understanding timelines, and connecting brain regions to symptom clusters. Master these connections, and you'll not only ace this section of the EPPP. You'll be prepared to provide competent care throughout your career.

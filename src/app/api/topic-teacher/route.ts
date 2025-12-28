@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { loadTopicContent, loadFreeTopicContent, replaceMetaphors, stripMetaphorMarkers } from '@/lib/topic-content-manager'
+import {
+  loadTopicContent,
+  replaceMetaphors,
+  stripMetaphorMarkers,
+  stripMetaphorMarkersWithRanges,
+} from '@/lib/topic-content-manager'
 import { loadReferenceContent } from '@/lib/eppp-reference-loader'
 import OpenAI from 'openai'
 import { logUsageEvent } from '@/lib/usage-events'
-import { isProPromoActive } from '@/lib/subscription-utils'
 import { getOpenAIApiKey } from '@/lib/openai-api-key'
 
 const openaiApiKey = getOpenAIApiKey()
@@ -20,6 +24,7 @@ Your teaching style:
 - Use stories and examples to illustrate points
 - End lessons with key takeaways
 - Use a measured, calm tone - avoid excessive enthusiasm or exclamation marks
+- Avoid em dashes and dash punctuation (like "word - word"). Prefer commas, parentheses, or shorter sentences.
 - Never start lessons with "Hey!" or similar casual greetings
 
 Formatting guidelines:
@@ -60,6 +65,11 @@ function normalizeLanguagePreference(raw?: string | null): string | null {
     return null
   }
   return trimmed
+}
+
+function replaceEmDashes(text: string): string {
+  if (!text.includes('—')) return text
+  return text.replace(/[ \t]*—[ \t]*/g, ', ')
 }
 
 function protectAsteriskKeywords(
@@ -138,7 +148,6 @@ export async function POST(request: NextRequest) {
       userMessage,
       isInitial,
       userInterests,
-      subscriptionTier,
       languagePreference,
       userId,
     } = body
@@ -153,25 +162,22 @@ export async function POST(request: NextRequest) {
     let messages: Message[] = []
     let lessonContent = ''
     let baseContentOnly = ''
-
-    const tier: string | undefined = subscriptionTier
-    const promoActive = isProPromoActive()
-    const isFreeTier = (tier === 'free' || !tier) && !promoActive
+    let metaphorRangesHeader = ''
 
     if (isInitial) {
       // Initial lesson request - use pre-generated content
       try {
         console.log(`[Topic Teacher] Loading topic: "${topic}", domain: "${domain}"`)
-        const preGeneratedContent = isFreeTier
-          ? loadFreeTopicContent(topic, domain)
-          : loadTopicContent(topic, domain)
+        const preGeneratedContent = loadTopicContent(topic, domain)
 
         if (preGeneratedContent) {
           console.log(`[Topic Teacher] ✅ Found pre-generated content for ${topic}`)
           console.log(`[Topic Teacher] Content length: ${preGeneratedContent.baseContent.length} chars`)
 
           // Store the base content
-          baseContentOnly = stripMetaphorMarkers(preGeneratedContent.baseContent)
+          const { content: strippedBase, ranges } = stripMetaphorMarkersWithRanges(preGeneratedContent.baseContent)
+          baseContentOnly = strippedBase
+          metaphorRangesHeader = Buffer.from(JSON.stringify(ranges)).toString('base64')
 
           // Use pre-generated base content (with adult-friendly metaphors)
           lessonContent = preGeneratedContent.baseContent
@@ -190,19 +196,16 @@ export async function POST(request: NextRequest) {
 
           // Translate lesson content if user has a language preference
           lessonContent = await translateLessonContent(lessonContent, languagePreference)
+          lessonContent = replaceEmDashes(lessonContent)
         } else {
           // No pre-generated content found
           console.error(`[Topic Teacher] ❌ No pre-generated content for ${topic}`)
           console.error(`[Topic Teacher] Topic slug: ${topic.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`)
           console.error(`[Topic Teacher] Domain ID: ${domain}`)
 
-          const message = isFreeTier
-            ? `This topic is part of the full Pro library. Upgrade to Pro to unlock this lesson.`
-            : `No pre-generated content found for topic: ${topic}. Please ensure the content exists in topic-content-v3-test.`
-
           return NextResponse.json(
-            { error: message },
-            { status: isFreeTier ? 403 : 404 }
+            { error: `No pre-generated content found for topic: ${topic}. Please ensure the content exists in topic-content-v3-test.` },
+            { status: 404 }
           )
         }
       } catch (error) {
@@ -248,6 +251,8 @@ export async function POST(request: NextRequest) {
           'X-Base-Content-Length': baseContentOnly.length.toString(),
           // Encode base content in base64 to avoid header encoding issues
           'X-Base-Content': baseContentOnly ? Buffer.from(baseContentOnly).toString('base64') : '',
+          // Ranges (in X-Base-Content) corresponding to {{M}}...{{/M}} spans in the source.
+          'X-Metaphor-Ranges': metaphorRangesHeader,
         },
       })
     }
@@ -308,6 +313,7 @@ export async function POST(request: NextRequest) {
 
     // Translate follow-up responses if user has a language preference
     fullText = await translateLessonContent(fullText, languagePreference)
+    fullText = replaceEmDashes(fullText)
 
     const stream = new ReadableStream({
       start(controller) {

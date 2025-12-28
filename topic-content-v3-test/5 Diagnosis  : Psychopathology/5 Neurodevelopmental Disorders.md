@@ -9,15 +9,15 @@ version: 3
 
 ## Understanding Neurodevelopmental Disorders: A Practical Guide for EPPP Success
 
-When you're preparing to become a licensed psychologist, understanding neurodevelopmental disorders isn't just about memorizing criteria—it's about recognizing patterns that can shape a person's entire life trajectory. These disorders start early, often before a child enters school, and they affect how people learn, communicate, move through social situations, and manage daily responsibilities. Let's break down what you need to know in a way that sticks.
+When you're preparing to become a licensed psychologist, understanding neurodevelopmental disorders isn't just about memorizing criteria. It's about recognizing patterns that can shape a person's entire life trajectory. These disorders start early, often before a child enters school, and they affect how people learn, communicate, move through social situations, and manage daily responsibilities. Let's break down what you need to know in a way that sticks.
 
 ## Why This Material Matters for Your Practice
 
-Neurodevelopmental disorders represent some of the most common conditions you'll encounter in practice. {{M}}Think about your own school years—in any classroom of 30 students, statistically at least one had ADHD, and you probably knew someone who struggled with learning to read despite being bright in other areas.{{/M}} Understanding these disorders means you can spot them early, provide appropriate interventions, and help families navigate complex treatment decisions. Plus, this content consistently appears on the EPPP, so getting comfortable with it now pays dividends on test day.
+Neurodevelopmental disorders represent some of the most common conditions you'll encounter in practice. {{M}}Think about your own school years. In any classroom of 30 students, statistically at least one had ADHD, and you probably knew someone who struggled with learning to read despite being bright in other areas.{{/M}} Understanding these disorders means you can spot them early, provide appropriate interventions, and help families navigate complex treatment decisions. Plus, this content consistently appears on the EPPP, so getting comfortable with it now pays dividends on test day.
 
 ## The Big Picture: What Makes These "Neurodevelopmental"?
 
-All neurodevelopmental disorders share a common thread: they involve developmental deficits that impair functioning in personal, social, academic, or work settings. The key word here is "developmental"—these conditions emerge during the developmental period, typically before adolescence. They're rooted in how the brain develops and functions, not caused by trauma or life circumstances that happen later.
+All neurodevelopmental disorders share a common thread: they involve developmental deficits that impair functioning in personal, social, academic, or work settings. The key word here is "developmental". These conditions emerge during the developmental period, typically before adolescence. They're rooted in how the brain develops and functions, not caused by trauma or life circumstances that happen later.
 
 ## Intellectual Developmental Disorder (Intellectual Disability)
 
@@ -25,13 +25,13 @@ All neurodevelopmental disorders share a common thread: they involve development
 
 For this diagnosis, you need three components working together:
 
-1. **Deficits in intellectual functioning** - Confirmed by both clinical assessment and standardized IQ testing (typically two or more standard deviations below the mean, which translates to an IQ around 70 or below)
-2. **Deficits in adaptive functioning** - The person struggles to meet age-appropriate standards for independence and social responsibility
-3. **Onset during the developmental period** - This started early, not after a brain injury at age 25
+1. **Deficits in intellectual functioning**. Confirmed by both clinical assessment and standardized IQ testing (typically two or more standard deviations below the mean, which translates to an IQ around 70 or below)
+2. **Deficits in adaptive functioning**, The person struggles to meet age-appropriate standards for independence and social responsibility
+3. **Onset during the developmental period**. This started early, not after a brain injury at age 25
 
 ### Understanding Severity Levels
 
-Here's where many students get confused: severity isn't primarily about IQ scores anymore. Instead, the DSM-5-TR focuses on adaptive functioning across three domains—conceptual (thinking and problem-solving), social (interpersonal skills), and practical (self-care, job responsibilities). This approach helps determine what level of support someone needs in daily life.
+Here's where many students get confused: severity isn't primarily about IQ scores anymore. Instead, the DSM-5-TR focuses on adaptive functioning across three domains. Conceptual (thinking and problem-solving), social (interpersonal skills), and practical (self-care, job responsibilities). This approach helps determine what level of support someone needs in daily life.
 
 | Severity Level | What It Means |
 |----------------|---------------|
@@ -48,7 +48,7 @@ The etiology breaks down into timing categories:
 - **Perinatal factors (5-10%)**: {{M}}Think of complications during the birth process itself, like a baby experiencing oxygen deprivation during delivery{{/M}}
 - **Postnatal factors (5-10%)**: Events after birth, such as traumatic brain injury or severe infections
 
-**EPPP Alert**: Know the difference between Down syndrome and Fragile X syndrome. Down syndrome results from a chromosomal abnormality (usually an extra copy of chromosome 21) due to errors during cell division—it's not typically inherited. Fragile X syndrome is the most common *inherited* form, caused by a mutated gene on the X chromosome that gets passed down through families.
+**EPPP Alert**: Know the difference between Down syndrome and Fragile X syndrome. Down syndrome results from a chromosomal abnormality (usually an extra copy of chromosome 21) due to errors during cell division. It's not typically inherited. Fragile X syndrome is the most common *inherited* form, caused by a mutated gene on the X chromosome that gets passed down through families.
 
 ## Autism Spectrum Disorder (ASD)
 
@@ -69,13 +69,13 @@ ASD requires two main symptom clusters, and both must be present:
 
 ### The Face and Emotion Recognition Problem
 
-Research reveals something fascinating about ASD: children with autism process faces differently than neurotypical children. In one pivotal study, children without autism could distinguish between novel and familiar faces, but children with autism treated all faces similarly—though they could still distinguish between novel and familiar objects. {{M}}Imagine if every person you met looked equally unfamiliar to you, even people you'd known for years—that's the kind of challenge many individuals with ASD face when building social connections.{{/M}}
+Research reveals something fascinating about ASD: children with autism process faces differently than neurotypical children. In one pivotal study, children without autism could distinguish between novel and familiar faces, but children with autism treated all faces similarly (though they could still distinguish between novel and familiar objects. {{M}}Imagine if every person you met looked equally unfamiliar to you, even people you'd known for years) that's the kind of challenge many individuals with ASD face when building social connections.{{/M}}
 
 This extends to emotion recognition. People with ASD show deficits in recognizing both basic emotions (happiness, sadness, anger) and complex emotions (pride, embarrassment) across all three modalities: face, voice, and body language.
 
 ### Prevalence and Gender Differences
 
-The numbers vary by location: globally, about 1% of the population has ASD, but in the United States, the rate is higher—3.2% for 8-year-olds and 2.2% for adults. Males receive diagnoses three to four times more often than females.
+The numbers vary by location: globally, about 1% of the population has ASD, but in the United States, the rate is higher, 3.2% for 8-year-olds and 2.2% for adults. Males receive diagnoses three to four times more often than females.
 
 ### What Predicts Better Outcomes?
 
@@ -88,7 +88,7 @@ Three factors consistently predict better prognosis:
 
 **Brain Development**: Children with ASD experience accelerated brain growth starting around 6 months, leading to larger head circumference and increased brain volume during early childhood. This plateaus by preschool years. Key structures affected include the cerebellum, corpus callosum, and amygdala.
 
-**Neurotransmitters**: The serotonin paradox is worth remembering—people with ASD often have *lower* serotonin in the brain but *elevated* serotonin in the blood. One explanation: before the blood-brain barrier fully matures, serotonin from the blood enters the developing fetal brain and damages serotonergic neurons. Other implicated neurotransmitters include dopamine, GABA, glutamate, and acetylcholine.
+**Neurotransmitters**: The serotonin paradox is worth remembering. People with ASD often have *lower* serotonin in the brain but *elevated* serotonin in the blood. One explanation: before the blood-brain barrier fully matures, serotonin from the blood enters the developing fetal brain and damages serotonergic neurons. Other implicated neurotransmitters include dopamine, GABA, glutamate, and acetylcholine.
 
 **Genetics and Environment**: Twin studies show heritability around 62%, with concordance rates of 59-84% for identical twins versus 3.5-29% for fraternal twins. Environmental risk factors include very premature birth (before 26 weeks), prenatal exposure to certain drugs like valproic acid, and advanced parental age.
 
@@ -127,7 +127,7 @@ ADHD requires a persistent pattern of inattention and/or hyperactivity-impulsivi
 
 ### Inattention Symptoms to Remember
 
-People with inattention don't listen when spoken to directly, fail to pay attention to details, don't follow through on instructions, get easily distracted, and frequently forget daily activities. {{M}}If you've ever had a colleague who consistently misses deadlines, loses important documents, and spaces out during meetings despite genuinely trying to focus—that's what significant inattention looks like in adult life.{{/M}}
+People with inattention don't listen when spoken to directly, fail to pay attention to details, don't follow through on instructions, get easily distracted, and frequently forget daily activities. {{M}}If you've ever had a colleague who consistently misses deadlines, loses important documents, and spaces out during meetings despite genuinely trying to focus. That's what significant inattention looks like in adult life.{{/M}}
 
 ### Hyperactivity-Impulsivity Symptoms
 
@@ -143,7 +143,7 @@ Most people with childhood ADHD continue experiencing at least some core symptom
 
 - **Hyperactivity**: Motor restlessness decreases, replaced by inability to relax, impatience, and internal restlessness
 - **Impulsivity**: Slightly decreases but manifests as reckless driving, abruptly quitting jobs, ending relationships impulsively, overspending
-- **Inattention**: Persists most stubbornly, showing up as missed deadlines, careless mistakes, procrastination—especially with boring or tedious tasks
+- **Inattention**: Persists most stubbornly, showing up as missed deadlines, careless mistakes, procrastination, especially with boring or tedious tasks
 
 ### The Neurobiology
 
@@ -208,7 +208,7 @@ This disorder involves disturbed fluency and speech timing inappropriate for the
 
 Onset typically occurs between ages 2-7. Good news: 65-85% of children recover from dysfluency. The severity of symptoms at age 8 strongly predicts whether symptoms will persist or resolve.
 
-**Treatment**: Habit reversal training incorporating competing response training—for stuttering, this means regulated breathing.
+**Treatment**: Habit reversal training incorporating competing response training, for stuttering, this means regulated breathing.
 
 ## Specific Learning Disorder
 
@@ -227,7 +227,7 @@ Academic skills must be substantially below age expectations, interfere with fun
 
 ### The Numbers
 
-About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder. The most common reading disorder is dyslexia, and the most common type of dyslexia is dysphonic (also called dysphonetic, auditory, or phonological) dyslexia—which involves difficulty connecting sounds to letters.
+About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder. The most common reading disorder is dyslexia, and the most common type of dyslexia is dysphonic (also called dysphonetic, auditory, or phonological) dyslexia, which involves difficulty connecting sounds to letters.
 
 ### Important Characteristics
 
@@ -248,11 +248,11 @@ People with specific learning disorders typically have average to above-average 
 - **Reality**: Most people continue experiencing at least some core symptoms into adulthood, though symptoms may change form.
 
 **Misconception 5**: "Learning disorders mean low intelligence."
-- **Reality**: People with specific learning disorders typically have average or above-average IQ—that's part of what defines it as a learning disorder rather than intellectual disability.
+- **Reality**: People with specific learning disorders typically have average or above-average IQ. That's part of what defines it as a learning disorder rather than intellectual disability.
 
 ## Memory Strategies for EPPP Success
 
-**For ASD diagnostic criteria**, remember "Social Communication + Restricted Repetitive" (both required). {{M}}Think "SC+RR" like a sports car model name{{/M}}—you need both letters in the name.
+**For ASD diagnostic criteria**, remember "Social Communication + Restricted Repetitive" (both required). {{M}}Think "SC+RR" like a sports car model name{{/M}}. You need both letters in the name.
 
 **For ADHD symptom counts**, use the rule: **6 until sweet 16, then 5 at 17+**. Under 17 needs six symptoms; 17 and up needs five.
 
@@ -268,9 +268,9 @@ People with specific learning disorders typically have average to above-average 
 
 - **Neurodevelopmental disorders begin early** (usually before school age) and affect multiple areas of functioning throughout life
 
-- **Intellectual disability requires three components**: low intellectual functioning, impaired adaptive functioning, and developmental period onset—with severity based on adaptive functioning, not just IQ
+- **Intellectual disability requires three components**: low intellectual functioning, impaired adaptive functioning, and developmental period onset. With severity based on adaptive functioning, not just IQ
 
-- **ASD diagnosis needs both** deficits in social communication AND restricted/repetitive behaviors—both clusters are required
+- **ASD diagnosis needs both** deficits in social communication AND restricted/repetitive behaviors. Both clusters are required
 
 - **ASD prognosis improves with** IQ >70, functional language by age 5, and no comorbid mental health problems
 
@@ -278,7 +278,7 @@ People with specific learning disorders typically have average to above-average 
 
 - **ADHD comorbidity**: ODD is most common, affecting about half of children with combined presentation
 
-- **Treatment age matters**: For ADHD, recommended approaches differ by developmental stage—behavior-focused for preschoolers, combined approaches for school-age, medication-primary for adults
+- **Treatment age matters**: For ADHD, recommended approaches differ by developmental stage. Behavior-focused for preschoolers, combined approaches for school-age, medication-primary for adults
 
 - **Stimulant medication for ADHD** neither increases nor decreases risk for future substance use disorders
 
@@ -290,4 +290,4 @@ People with specific learning disorders typically have average to above-average 
 
 - **Brain volume patterns differ**: Children with ASD show accelerated early brain growth; children with ADHD show reduced total brain volume in key regions
 
-When you're sitting for the EPPP, these disorders will likely appear in multiple questions across different formats. Understanding not just the criteria but also the developmental course, treatment approaches, and neurobiological foundations will help you answer questions confidently. Remember: this isn't just about test day—this is knowledge you'll use throughout your career every time you conduct an assessment, make a diagnosis, or develop a treatment plan.
+When you're sitting for the EPPP, these disorders will likely appear in multiple questions across different formats. Understanding not just the criteria but also the developmental course, treatment approaches, and neurobiological foundations will help you answer questions confidently. Remember: this isn't just about test day. This is knowledge you'll use throughout your career every time you conduct an assessment, make a diagnosis, or develop a treatment plan.

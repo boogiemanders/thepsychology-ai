@@ -9,13 +9,13 @@ version: 3
 
 ## Why Cognitive-Behavioral Therapies Matter for Your EPPP (and Your Future Practice)
 
-If you're studying for the EPPP, you'll quickly discover that cognitive-behavioral therapies (CBT) show up everywhere. They're the most researched, most widely practiced, and most validated treatments in modern psychology. Understanding CBT isn't just about passing the exam—it's about grasping the foundation of how most psychologists help people change their thinking, feelings, and behaviors.
+If you're studying for the EPPP, you'll quickly discover that cognitive-behavioral therapies (CBT) show up everywhere. They're the most researched, most widely practiced, and most validated treatments in modern psychology. Understanding CBT isn't just about passing the exam. It's about grasping the foundation of how most psychologists help people change their thinking, feelings, and behaviors.
 
 Here's what makes CBT special: it's structured, time-limited, and focused on solving problems in the present. While some therapies explore childhood for months, CBT gets to work immediately on what's causing distress right now. This practical approach has made it the go-to treatment for depression, anxiety, eating disorders, PTSD, and even chronic pain management.
 
 ## Beck's Cognitive Therapy: The Foundation
 
-Aaron Beck developed cognitive therapy in the 1960s while treating depression. What he discovered changed psychology forever: people's distress doesn't come directly from events in their lives, but from how they interpret those events. {{M}}It's like two people experiencing the same rainy weekend—one feels cozy and relaxed, while the other feels trapped and miserable. Same rain, different interpretations, completely different emotional experiences.{{/M}}
+Aaron Beck developed cognitive therapy in the 1960s while treating depression. What he discovered changed psychology forever: people's distress doesn't come directly from events in their lives, but from how they interpret those events. {{M}}It's like two people experiencing the same rainy weekend. One feels cozy and relaxed, while the other feels trapped and miserable. Same rain, different interpretations, completely different emotional experiences.{{/M}}
 
 ### The Three Core Components
 
@@ -23,13 +23,13 @@ Beck identified three elements that create and maintain psychological distress:
 
 **1. Cognitive Schemas (Core Beliefs)**
 
-These are deep, enduring beliefs we develop in childhood based on our experiences. {{M}}Think of schemas as the operating system running in the background of your mind{{/M}}—you're not always aware of them, but they influence everything. 
+These are deep, enduring beliefs we develop in childhood based on our experiences. {{M}}Think of schemas as the operating system running in the background of your mind{{/M}}. You're not always aware of them, but they influence everything. 
 
 For depression specifically, Beck identified what he called the "cognitive triad": negative beliefs about oneself ("I'm worthless"), the world ("Nobody cares"), and the future ("Things will never improve"). Different disorders have different cognitive profiles. Someone with social anxiety might have schemas centered on being judged or humiliated, while someone with panic disorder might have schemas about physical sensations being dangerous.
 
 **2. Automatic Thoughts**
 
-These are the moment-to-moment thoughts that pop into your mind when something happens. They're called "automatic" because they occur spontaneously—you don't deliberately choose to think them.
+These are the moment-to-moment thoughts that pop into your mind when something happens. They're called "automatic" because they occur spontaneously. You don't deliberately choose to think them.
 
 {{M}}Picture this: you send a text to a friend and don't hear back for hours. The automatic thought might be, "They're mad at me" or "They don't want to be friends anymore."{{/M}} These thoughts happen between the event (no text response) and your emotional reaction (feeling anxious or sad).
 
@@ -64,17 +64,17 @@ CBT uses both cognitive techniques (like reframing thoughts and examining eviden
 
 ## Rational Emotive Behavior Therapy (REBT): Ellis's Approach
 
-Albert Ellis developed REBT around the same time as Beck, but with a more confrontational style. Ellis believed that psychological problems stem from irrational beliefs—rigid, absolute demands we place on ourselves, others, and the world.
+Albert Ellis developed REBT around the same time as Beck, but with a more confrontational style. Ellis believed that psychological problems stem from irrational beliefs. Rigid, absolute demands we place on ourselves, others, and the world.
 
 ### The A-B-C-D-E Model
 
 This is essential for the EPPP. Here's how it breaks down:
 
-- **A (Activating Event)**: Something happens—you make a mistake at work
-- **B (Belief)**: Your irrational belief gets triggered—"I MUST be perfect. This proves I'm incompetent"
-- **C (Consequence)**: You feel terrible—shame, anxiety, depression
-- **D (Disputation)**: The therapist challenges the irrational belief—"Where's it written that humans must be perfect? How does one mistake prove total incompetence?"
-- **E (Effect)**: You develop a more rational belief—"I'd prefer to do well, but mistakes are normal and don't define my worth"
+- **A (Activating Event)**: Something happens. You make a mistake at work
+- **B (Belief)**: Your irrational belief gets triggered. "I MUST be perfect. This proves I'm incompetent"
+- **C (Consequence)**: You feel terrible. Shame, anxiety, depression
+- **D (Disputation)**: The therapist challenges the irrational belief. "Where's it written that humans must be perfect? How does one mistake prove total incompetence?"
+- **E (Effect)**: You develop a more rational belief. "I'd prefer to do well, but mistakes are normal and don't define my worth"
 
 Notice the key difference from regular worry: irrational beliefs contain absolute demands expressed as "must," "should," "have to," or "ought." These inflexible demands create unnecessary suffering.
 
@@ -98,15 +98,15 @@ The self-instructions address four skills: understanding what needs to be done, 
 
 ## Stress Inoculation Training: Building Resilience
 
-Also developed by Meichenbaum, stress inoculation training prepares people to handle stress better—not just current stressors, but future ones too. {{M}}The name comes from medical inoculations: you're exposed to manageable doses of stress to build immunity to larger stressors later.{{/M}}
+Also developed by Meichenbaum, stress inoculation training prepares people to handle stress better. Not just current stressors, but future ones too. {{M}}The name comes from medical inoculations: you're exposed to manageable doses of stress to build immunity to larger stressors later.{{/M}}
 
 The three phases are:
 
-**Phase 1: Conceptualization/Education** - Learn about stress, how it affects you, and start viewing stressful situations as problems to solve rather than threats to endure.
+**Phase 1: Conceptualization/Education**. Learn about stress, how it affects you, and start viewing stressful situations as problems to solve rather than threats to endure.
 
-**Phase 2: Skills Acquisition and Consolidation** - Learn coping skills like relaxation techniques, positive self-talk, problem-solving strategies, and emotion regulation.
+**Phase 2: Skills Acquisition and Consolidation**. Learn coping skills like relaxation techniques, positive self-talk, problem-solving strategies, and emotion regulation.
 
-**Phase 3: Application and Follow-Through** - Practice skills first in imagined scenarios, then role-plays, then gradually in real situations.
+**Phase 3: Application and Follow-Through**. Practice skills first in imagined scenarios, then role-plays, then gradually in real situations.
 
 ## Acceptance and Commitment Therapy (ACT): The Third Wave
 
@@ -116,9 +116,9 @@ ACT represents a shift in cognitive-behavioral therapy. Instead of focusing prim
 
 This distinction is crucial for understanding ACT:
 
-**Clean pain** is the unavoidable discomfort that's part of being human—loss, disappointment, physical pain, anxiety before important events. We can't eliminate it.
+**Clean pain** is the unavoidable discomfort that's part of being human. Loss, disappointment, physical pain, anxiety before important events. We can't eliminate it.
 
-**Dirty pain** is the additional suffering we create by struggling against clean pain. {{M}}It's like getting a small cut (clean pain) and then obsessively picking at it, making it infected and worse (dirty pain).{{/M}} The anxiety about feeling anxious, the depression about being depressed, the shame about having panic attacks—that's dirty pain.
+**Dirty pain** is the additional suffering we create by struggling against clean pain. {{M}}It's like getting a small cut (clean pain) and then obsessively picking at it, making it infected and worse (dirty pain).{{/M}} The anxiety about feeling anxious, the depression about being depressed, the shame about having panic attacks. That's dirty pain.
 
 ### The Six Core Processes
 
@@ -143,9 +143,9 @@ Mindfulness means paying attention to present-moment experience without judgment
 
 **Mindfulness-Based Stress Reduction (MBSR)**: An eight-session group program originally developed for medical settings. It teaches various mindfulness meditation practices including breath awareness, yoga, and sitting and walking meditation. Used primarily for stress, pain, and illness.
 
-**Mindfulness-Based Cognitive Therapy (MBCT)**: Combines MBSR with CBT elements. Originally developed for recurrent depression, it's now used for anxiety, chronic pain, and insomnia. The goal is to help clients become aware of distressing thoughts and feelings and learn to "de-center" from them—observe them without getting caught up in them.
+**Mindfulness-Based Cognitive Therapy (MBCT)**: Combines MBSR with CBT elements. Originally developed for recurrent depression, it's now used for anxiety, chronic pain, and insomnia. The goal is to help clients become aware of distressing thoughts and feelings and learn to "de-center" from them. Observe them without getting caught up in them.
 
-Both typically use eight-session group formats. Research shows mindfulness interventions are effective for both psychological and physical conditions, but especially effective for depression, anxiety, and stress. The main change mechanism appears to be decreased emotional and cognitive reactivity—people become less likely to automatically react to difficult thoughts and feelings.
+Both typically use eight-session group formats. Research shows mindfulness interventions are effective for both psychological and physical conditions, but especially effective for depression, anxiety, and stress. The main change mechanism appears to be decreased emotional and cognitive reactivity. People become less likely to automatically react to difficult thoughts and feelings.
 
 ## Cognitive-Behavioral Therapy for Suicide Prevention
 
@@ -173,7 +173,7 @@ This six-step approach is essential to know for the EPPP. It starts with interna
 
 **Important distinction**: Safety plans are evidence-based. No-suicide contracts (written or verbal promises not to attempt suicide) are NOT supported by research and should not be used.
 
-Research shows that CBT for suicide prevention reduces suicidal ideation, suicide attempts, hopelessness, and depression—regardless of gender, severity of ideation, or number of previous attempts.
+Research shows that CBT for suicide prevention reduces suicidal ideation, suicide attempts, hopelessness, and depression. Regardless of gender, severity of ideation, or number of previous attempts.
 
 ## Common Misconceptions to Avoid
 
@@ -227,4 +227,4 @@ Reality: Safety plans are evidence-based tools that provide concrete steps. No-s
 
 - **All CBT approaches** share common ground: they're present-focused, structured, time-limited, and emphasize the connection between thoughts, feelings, and behaviors. But they differ in their specific mechanisms and techniques.
 
-Understanding these therapies deeply will serve you not just on the EPPP, but throughout your career. They represent the most thoroughly researched and widely applicable interventions in modern psychology—tools you'll likely use regardless of your theoretical orientation or specialty area.
+Understanding these therapies deeply will serve you not just on the EPPP, but throughout your career. They represent the most thoroughly researched and widely applicable interventions in modern psychology. Tools you'll likely use regardless of your theoretical orientation or specialty area.

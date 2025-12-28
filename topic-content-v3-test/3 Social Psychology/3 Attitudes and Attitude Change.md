@@ -11,11 +11,11 @@ version: 3
 
 You've probably heard someone say, "Actions speak louder than words." But here's a puzzling fact that confused psychologists for decades: people's attitudes (their thoughts and feelings about something) often don't match up with what they actually do. Someone might say they care deeply about climate change but never recycle. A friend might claim they value healthy eating while ordering fast food three times a week.
 
-Understanding attitudes and how they change isn't just academic trivia—it's essential for predicting human behavior, creating effective health campaigns, understanding why therapy clients struggle to change, and recognizing your own patterns of behavior change. For the EPPP, you'll need to know the major theories that explain when attitudes predict behavior and how attitudes shift over time.
+Understanding attitudes and how they change isn't just academic trivia. It's essential for predicting human behavior, creating effective health campaigns, understanding why therapy clients struggle to change, and recognizing your own patterns of behavior change. For the EPPP, you'll need to know the major theories that explain when attitudes predict behavior and how attitudes shift over time.
 
 ## When Do Attitudes Actually Predict Behavior?
 
-Early researchers were disappointed to find that knowing someone's attitude barely helped predict what they'd do. {{M}}It's like asking someone if they enjoy exercise and then being surprised when knowing their answer doesn't tell you whether they'll show up at the gym tomorrow.{{/M}} But later research revealed that the attitude-behavior relationship isn't broken—it just depends on specific conditions.
+Early researchers were disappointed to find that knowing someone's attitude barely helped predict what they'd do. {{M}}It's like asking someone if they enjoy exercise and then being surprised when knowing their answer doesn't tell you whether they'll show up at the gym tomorrow.{{/M}} But later research revealed that the attitude-behavior relationship isn't broken. It just depends on specific conditions.
 
 ### Three Critical Conditions
 
@@ -38,7 +38,7 @@ An accessible attitude is one that comes to mind easily and quickly. Two factors
 
 **Specificity Match**
 
-This is where many early studies went wrong. They'd measure general attitudes and try to predict specific behaviors—and it didn't work well.
+This is where many early studies went wrong. They'd measure general attitudes and try to predict specific behaviors. And it didn't work well.
 
 {{M}}Imagine trying to predict whether someone will attend a specific yoga class on Tuesday evening by asking if they generally value wellness.{{/M}} That's too broad. But if you ask about their attitude toward that particular yoga class, you'll get a much better prediction of whether they'll show up.
 
@@ -56,19 +56,19 @@ This framework says that **behavioral intention** is the best predictor of actua
 | Subjective norms | What you believe others think you should do | "My family and doctor think I should quit" |
 | Perceived behavioral control | Your confidence in your ability to do it | "I believe I can successfully quit smoking" |
 
-All three need to align for strong behavioral intention. {{M}}It's like needing three keys to open a vault{{/M}}—you might want to change careers (attitude), and your partner might support it (subjective norm), but if you don't believe you can afford to go back to school (low perceived control), your intention to change careers stays weak.
+All three need to align for strong behavioral intention. {{M}}It's like needing three keys to open a vault{{/M}}. You might want to change careers (attitude), and your partner might support it (subjective norm), but if you don't believe you can afford to go back to school (low perceived control), your intention to change careers stays weak.
 
 ### Prototype/Willingness Model
 
 This model recognizes that not all behavior follows a rational, planned path. There are two routes to behavior:
 
-**The Reasoned Path**: This follows the theory of planned behavior—you plan and intend to do something.
+**The Reasoned Path**: This follows the theory of planned behavior. You plan and intend to do something.
 
 **The Social Reaction Path**: This happens more spontaneously based on your willingness in the moment, which depends on your prototype (mental image) of people who engage in that behavior.
 
 Here's the key: If you have a positive prototype of people who do something, you're more willing to do it when the opportunity arises, even without planning.
 
-**Clinical Application**: This model has been especially useful for understanding adolescent and young adult risk behaviors. {{M}}Consider a young professional who doesn't plan to drink heavily but has a positive image of "party people" as fun and socially successful.{{/M}} At a networking event where others are drinking, their willingness to drink heavily increases—not because they planned it, but because the positive prototype makes the behavior feel acceptable in that context.
+**Clinical Application**: This model has been especially useful for understanding adolescent and young adult risk behaviors. {{M}}Consider a young professional who doesn't plan to drink heavily but has a positive image of "party people" as fun and socially successful.{{/M}} At a networking event where others are drinking, their willingness to drink heavily increases. Not because they planned it, but because the positive prototype makes the behavior feel acceptable in that context.
 
 ### Health Belief Model
 
@@ -107,7 +107,7 @@ This is the automatic, surface-level path. People use it when:
 - They don't have the cognitive resources to process carefully
 - They're in a good mood (which reduces critical thinking)
 
-When persuasion happens through the peripheral route, it relies on peripheral cues—things unrelated to the argument's quality:
+When persuasion happens through the peripheral route, it relies on peripheral cues. Things unrelated to the argument's quality:
 - Is the speaker attractive or likeable?
 - Does the communicator seem credible or famous?
 - Is the message long (which may seem more thorough)?
@@ -115,7 +115,7 @@ When persuasion happens through the peripheral route, it relies on peripheral cu
 
 The resulting attitude change is weak, temporary, and doesn't reliably predict behavior.
 
-**Practical Application**: {{M}}Imagine you're developing a mental health awareness campaign.{{/M}} For people directly affected by mental health issues (high personal relevance), you need strong, evidence-based arguments—they'll process centrally. For general public awareness (lower personal relevance), focusing on credible spokespeople and emotionally compelling stories (peripheral cues) might be more effective.
+**Practical Application**: {{M}}Imagine you're developing a mental health awareness campaign.{{/M}} For people directly affected by mental health issues (high personal relevance), you need strong, evidence-based arguments. They'll process centrally. For general public awareness (lower personal relevance), focusing on credible spokespeople and emotionally compelling stories (peripheral cues) might be more effective.
 
 ### Social Judgment Theory: The Latitude Framework
 
@@ -125,7 +125,7 @@ According to this model, everyone has three "latitudes" or ranges of positions:
 
 **Latitude of Acceptance**: Positions similar enough to yours that you find them acceptable. You're open to messages in this range.
 
-**Latitude of Noncommitment**: Positions moderately different from yours. You won't automatically accept or reject them—you'll actually consider them. This is the "sweet spot" for persuasion.
+**Latitude of Noncommitment**: Positions moderately different from yours. You won't automatically accept or reject them. You'll actually consider them. This is the "sweet spot" for persuasion.
 
 **Latitude of Rejection**: Positions so different from yours that you immediately reject them. Messages here can backfire, making you more entrenched in your original position.
 
@@ -136,7 +136,7 @@ Here's the twist: **Ego-involvement** (how personally important the issue is to 
 
 {{M}}Think about a passionate amateur photographer who identifies strongly with a particular camera brand.{{/M}} Their ego-involvement is high, so they'll reject most arguments for competing brands (large latitude of rejection) and only accept positions very close to their own (small latitude of acceptance). Someone who just needs a camera for occasional use has lower ego-involvement, so they're open to considering a wider range of options.
 
-**Clinical Relevance**: When working with clients on strongly held beliefs, effective attitude change requires starting with positions just slightly different from their current stance—staying within or near their latitude of noncommitment. Pushing too far too fast lands in their latitude of rejection and can damage progress.
+**Clinical Relevance**: When working with clients on strongly held beliefs, effective attitude change requires starting with positions just slightly different from their current stance, staying within or near their latitude of noncommitment. Pushing too far too fast lands in their latitude of rejection and can damage progress.
 
 ### Balance Theory: The P-O-X Triangle
 
@@ -174,15 +174,15 @@ Participants completed an extremely boring task (turning pegs on a board). Then 
 
 **Results**: Those paid $1 rated the boring task as significantly more enjoyable than those paid $20.
 
-**Why?** The $1 participants experienced dissonance: "I told someone this boring task was fun, but I only got a dollar for lying." They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude—convincing themselves the task was actually somewhat enjoyable.
+**Why?** The $1 participants experienced dissonance: "I told someone this boring task was fun, but I only got a dollar for lying." They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude. Convincing themselves the task was actually somewhat enjoyable.
 
 The $20 participants had no dissonance: "I lied, but hey, I got paid well for it." Sufficient external justification meant no need to change their true attitude about the task.
 
-**Real-World Example**: {{M}}Imagine you buy an expensive gym membership despite being unsure about your commitment to fitness.{{/M}} You've now created dissonance between your behavior (spending significant money) and your lukewarm attitude. To reduce this dissonance, you're likely to convince yourself that fitness is actually very important to you—changing your attitude to match your behavior. The gym industry depends on this phenomenon.
+**Real-World Example**: {{M}}Imagine you buy an expensive gym membership despite being unsure about your commitment to fitness.{{/M}} You've now created dissonance between your behavior (spending significant money) and your lukewarm attitude. To reduce this dissonance, you're likely to convince yourself that fitness is actually very important to you, changing your attitude to match your behavior. The gym industry depends on this phenomenon.
 
 ### Self-Perception Theory: Observing Yourself
 
-Bem's self-perception theory offers a different explanation for some of the same phenomena. The idea: we learn about our own attitudes by observing our behavior and the circumstances around it—just like we'd learn about someone else's attitudes by watching them.
+Bem's self-perception theory offers a different explanation for some of the same phenomena. The idea: we learn about our own attitudes by observing our behavior and the circumstances around it. Just like we'd learn about someone else's attitudes by watching them.
 
 **The Overjustification Effect**
 
@@ -211,10 +211,10 @@ The key distinction: Self-perception theory works best when initial attitudes ar
 **Reality**: They apply to different situations. Cognitive dissonance works when attitudes are strong and clear (creating that uncomfortable tension). Self-perception theory works when attitudes are weak or ambiguous (you genuinely aren't sure what you think, so you look to your behavior for clues).
 
 **Misconception 4**: "The health belief model says perceived severity is most important"
-**Reality**: All six factors matter, and different factors may be the bottleneck for different people. One person might underestimate susceptibility while another faces high perceived barriers—same behavior, different intervention needs.
+**Reality**: All six factors matter, and different factors may be the bottleneck for different people. One person might underestimate susceptibility while another faces high perceived barriers. Same behavior, different intervention needs.
 
 **Misconception 5**: "Balance theory only applies to attitudes about objects"
-**Reality**: The X in P-O-X can be any attitude object, including beliefs, values, political positions, lifestyle choices, or behaviors—anything two people might have an opinion about.
+**Reality**: The X in P-O-X can be any attitude object, including beliefs, values, political positions, lifestyle choices, or behaviors, anything two people might have an opinion about.
 
 ## Memory Aids for the EPPP
 
@@ -248,11 +248,11 @@ The key distinction: Self-perception theory works best when initial attitudes ar
 
 - **Attitudes predict behavior when they're strong (from experience/personal relevance), accessible (easily brought to mind), and matched in specificity to the behavior being predicted**
 
-- **Theory of Planned Behavior**: Behavioral intention predicts behavior, and intention comes from three factors—attitude toward the behavior, subjective norms, and perceived behavioral control
+- **Theory of Planned Behavior**: Behavioral intention predicts behavior, and intention comes from three factors. Attitude toward the behavior, subjective norms, and perceived behavioral control
 
 - **Prototype/Willingness Model**: Behavior can follow a reasoned path (planned intention) or social reaction path (willingness based on positive/negative prototypes)
 
-- **Health Belief Model**: Six factors predict health behavior—perceived susceptibility, perceived severity, perceived benefits, perceived barriers, self-efficacy, and cues to action
+- **Health Belief Model**: Six factors predict health behavior. Perceived susceptibility, perceived severity, perceived benefits, perceived barriers, self-efficacy, and cues to action
 
 - **Elaboration Likelihood Model**: Persuasion works through central route (careful argument evaluation, lasting change) or peripheral route (superficial cues, temporary change)
 
@@ -266,4 +266,4 @@ The key distinction: Self-perception theory works best when initial attitudes ar
 
 - **Key distinction**: Cognitive dissonance applies to strong, clear attitudes; self-perception theory applies to weak or ambiguous attitudes
 
-Understanding these theories doesn't just help you pass the EPPP—it gives you frameworks for understanding client resistance to change, designing effective interventions, and recognizing your own patterns of attitude change. These aren't abstract academic concepts; they're descriptions of how humans actually think, feel, and behave in the real world.
+Understanding these theories doesn't just help you pass the EPPP. It gives you frameworks for understanding client resistance to change, designing effective interventions, and recognizing your own patterns of attitude change. These aren't abstract academic concepts; they're descriptions of how humans actually think, feel, and behave in the real world.

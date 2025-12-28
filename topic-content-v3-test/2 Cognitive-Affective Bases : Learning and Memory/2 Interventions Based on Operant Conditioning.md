@@ -177,7 +177,7 @@ Example: A client with social anxiety asks for reassurance excessively – maybe
 
 **For differential reinforcement types**, use: **"I Am On Loans"** (DRI, DRA, DRO, DRL). Each letter reminds you of a type.
 
-**For extinction characteristics**: Think **"BE-SURE"** (Burst Expected - Stay Uniform in Response, Expect recovery). These are the two phenomena you must remember about extinction.
+**For extinction characteristics**: Think **"BE-SURE"** (Burst Expected. Stay Uniform in Response, Expect recovery). These are the two phenomena you must remember about extinction.
 
 **For overcorrection components**: **"RePo"** = Restitution and Positive practice.
 

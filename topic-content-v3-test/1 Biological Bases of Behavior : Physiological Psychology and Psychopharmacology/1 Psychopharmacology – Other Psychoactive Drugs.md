@@ -9,7 +9,7 @@ version: 3
 
 ## Why These "Other" Psychoactive Drugs Matter for Your EPPP Success
 
-When you're knee-deep in EPPP prep, it's easy to focus all your energy on the heavy hitters: antidepressants and antipsychotics. But here's the reality check—the exam loves to test your knowledge of the full medication toolbox. Understanding sedatives, mood stabilizers, ADHD medications, and drugs for substance use disorders isn't just about passing the test. These medications show up constantly in real clinical work, and knowing their mechanisms, side effects, and contraindications will make you a more competent psychologist from day one.
+When you're knee-deep in EPPP prep, it's easy to focus all your energy on the heavy hitters: antidepressants and antipsychotics. But here's the reality check, the exam loves to test your knowledge of the full medication toolbox. Understanding sedatives, mood stabilizers, ADHD medications, and drugs for substance use disorders isn't just about passing the test. These medications show up constantly in real clinical work, and knowing their mechanisms, side effects, and contraindications will make you a more competent psychologist from day one.
 
 This lesson breaks down the "other" psychoactive drugs you need to know for the EPPP. We'll cover everything from benzodiazepines to beta-blockers, from ADHD stimulants to emerging psychedelic therapies. More importantly, we'll help you remember these details using practical connections and clear comparisons.
 
@@ -17,13 +17,13 @@ This lesson breaks down the "other" psychoactive drugs you need to know for the 
 
 ### Benzodiazepines: Fast Relief with a Catch
 
-Benzodiazepines include diazepam (Valium), alprazolam (Xanax), and lorazepam (Ativan). These drugs work by increasing GABA activity—essentially turning up the volume on your brain's natural "calm down" system. They're used for anxiety, insomnia, seizures, and alcohol withdrawal.
+Benzodiazepines include diazepam (Valium), alprazolam (Xanax), and lorazepam (Ativan). These drugs work by increasing GABA activity. Essentially turning up the volume on your brain's natural "calm down" system. They're used for anxiety, insomnia, seizures, and alcohol withdrawal.
 
-Here's the crucial comparison for the exam: **Benzodiazepines versus SSRIs/SNRIs for anxiety**. {{M}}Think of benzodiazepines as the fast-food option{{/M}}—they work quickly (within 30-60 minutes), provide immediate relief, and are great when you need rapid results. But just like fast food, they're not ideal for long-term use. Benzodiazepines excel at reducing physical anxiety symptoms (racing heart, sweating, trembling) but don't do much for the cognitive symptoms (worried thoughts, rumination). They also come with significant risks: tolerance, physical dependence, and withdrawal problems.
+Here's the crucial comparison for the exam: **Benzodiazepines versus SSRIs/SNRIs for anxiety**. {{M}}Think of benzodiazepines as the fast-food option{{/M}}. They work quickly (within 30-60 minutes), provide immediate relief, and are great when you need rapid results. But just like fast food, they're not ideal for long-term use. Benzodiazepines excel at reducing physical anxiety symptoms (racing heart, sweating, trembling) but don't do much for the cognitive symptoms (worried thoughts, rumination). They also come with significant risks: tolerance, physical dependence, and withdrawal problems.
 
-SSRIs and SNRIs, in contrast, {{M}}are more like meal prepping for the week{{/M}}—they take longer to show effects (2-4 weeks), but they're better for sustained, long-term anxiety management. They target cognitive symptoms more effectively and don't create the same dependence issues, though they come with their own side effect profile.
+SSRIs and SNRIs, in contrast, {{M}}are more like meal prepping for the week{{/M}}. They take longer to show effects (2-4 weeks), but they're better for sustained, long-term anxiety management. They target cognitive symptoms more effectively and don't create the same dependence issues, though they come with their own side effect profile.
 
-**Common side effects** of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults). Watch for the **paradoxical effect**—particularly in children and elderly patients—where the drug causes the opposite of its intended effect, producing excitability and increased anxiety instead of calmness.
+**Common side effects** of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults). Watch for the **paradoxical effect** (particularly in children and elderly patients) where the drug causes the opposite of its intended effect, producing excitability and increased anxiety instead of calmness.
 
 **Critical safety concerns:**
 - Combining benzodiazepines with alcohol creates a synergistic depressant effect that can be lethal
@@ -34,11 +34,11 @@ SSRIs and SNRIs, in contrast, {{M}}are more like meal prepping for the week{{/M}
 
 Barbiturates like thiopental (Pentothal) and secobarbital (Seconal) also enhance GABA activity. They're less commonly prescribed today because they're more dangerous than benzodiazepines. They're used as general anesthetics and for treating anxiety, insomnia, and seizures.
 
-Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though—sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.
+Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.
 
 ### Azapirones: The Safer Alternative
 
-Buspirone (BuSpar) represents a different approach to treating generalized anxiety disorder. The major advantages: no sedation, no dependence, no tolerance. Side effects are relatively mild—dizziness, dry mouth, nausea, headache. This makes buspirone a good option for patients with a history of substance use or those who need to remain alert for work or driving.
+Buspirone (BuSpar) represents a different approach to treating generalized anxiety disorder. The major advantages: no sedation, no dependence, no tolerance. Side effects are relatively mild. Dizziness, dry mouth, nausea, headache. This makes buspirone a good option for patients with a history of substance use or those who need to remain alert for work or driving.
 
 ## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis
 
@@ -54,7 +54,7 @@ Chronic use leads to dependence and tolerance. Withdrawal symptoms start flu-lik
 
 Beta-blockers like propranolol (Inderal) work by inhibiting sympathetic nervous system activity. Primary uses include hypertension, cardiac arrhythmias, migraines, and essential tremor.
 
-For psychologists, the key use is **anxiety treatment**—specifically, the physical symptoms of anxiety. Propranolol is particularly effective for performance anxiety. {{M}}Picture a musician about to perform on stage or someone giving a major presentation{{/M}}—propranolol reduces the trembling hands, racing heart, and sweating, but doesn't do much for the psychological worry and dread. This makes it useful for situational anxiety where physical symptoms are the main concern.
+For psychologists, the key use is **anxiety treatment** (specifically, the physical symptoms of anxiety. Propranolol is particularly effective for performance anxiety. {{M}}Picture a musician about to perform on stage or someone giving a major presentation{{/M}}) propranolol reduces the trembling hands, racing heart, and sweating, but doesn't do much for the psychological worry and dread. This makes it useful for situational anxiety where physical symptoms are the main concern.
 
 **Important warning:** Never stop beta-blockers abruptly. Sudden discontinuation can cause rebound hypertension, tremors, headaches, confusion, and cardiac arrhythmia. Tapering is essential.
 
@@ -64,7 +64,7 @@ For psychologists, the key use is **anxiety treatment**—specifically, the phys
 
 Lithium (Eskalith, Lithobid) remains the first-line treatment for acute mania and classic bipolar disorder (euphoric mania without rapid cycling). It's one of the oldest psychiatric medications still in wide use.
 
-Common side effects: nausea, vomiting, diarrhea, metallic taste, increased thirst, weight gain, hand tremor, fatigue, memory impairment. The critical concern with lithium is its **narrow therapeutic window**—the difference between an effective dose and a toxic dose is small. Lithium levels require regular monitoring to avoid toxicity, which can cause seizures, coma, and death.
+Common side effects: nausea, vomiting, diarrhea, metallic taste, increased thirst, weight gain, hand tremor, fatigue, memory impairment. The critical concern with lithium is its **narrow therapeutic window**, the difference between an effective dose and a toxic dose is small. Lithium levels require regular monitoring to avoid toxicity, which can cause seizures, coma, and death.
 
 ### Anticonvulsant Drugs: The Alternatives
 
@@ -149,11 +149,11 @@ Both are serotonin agonists, though LSD also increases dopamine effects and psil
 
 ### Drug Half-Life: Timing Is Everything
 
-The half-life is the time needed for blood levels to decrease to 50% of peak levels. This determines dosing intervals—short half-life means more frequent doses, and vice versa.
+The half-life is the time needed for blood levels to decrease to 50% of peak levels. This determines dosing intervals. Short half-life means more frequent doses, and vice versa.
 
-**Critical age-related consideration:** Older adults have longer half-lives for most psychoactive drugs due to age-related changes in metabolism and elimination. {{M}}If a benzodiazepine normally leaves a younger person's system in 24 hours, it might take 72+ hours in an older adult—like the difference between trash pickup once a week versus once a month.{{/M}}
+**Critical age-related consideration:** Older adults have longer half-lives for most psychoactive drugs due to age-related changes in metabolism and elimination. {{M}}If a benzodiazepine normally leaves a younger person's system in 24 hours, it might take 72+ hours in an older adult, like the difference between trash pickup once a week versus once a month.{{/M}}
 
-This is why the prescribing rule for older adults is "**start low and go slow**"—begin with low doses and gradually increase until you reach therapeutic effects.
+This is why the prescribing rule for older adults is "**start low and go slow**". Begin with low doses and gradually increase until you reach therapeutic effects.
 
 ### Tolerance and Cross-Tolerance
 
@@ -177,7 +177,7 @@ The therapeutic index (TI) measures how safe a drug is:
 
 **Wide therapeutic window (TI greater than 1.0):** The therapeutic dose is lower than the toxic/lethal dose. These drugs are safer and more desirable.
 
-{{M}}Think of therapeutic window like the margin of error in following a recipe—some recipes are forgiving (cookies), while others require exact measurements or they become inedible (soufflés). Drugs with narrow therapeutic windows are like soufflés—precision matters enormously.{{/M}}
+{{M}}Think of therapeutic window like the margin of error in following a recipe (some recipes are forgiving (cookies), while others require exact measurements or they become inedible (soufflés). Drugs with narrow therapeutic windows are like soufflés) precision matters enormously.{{/M}}
 
 ## Common Misconceptions to Avoid
 
@@ -226,11 +226,11 @@ Think "1-2-3": (1) Stimulants first, (2) Atomoxetine and alpha-agonists second, 
 
 - **Barbiturates** are older, more dangerous versions of benzodiazepines with similar uses and higher lethality risk.
 
-- **Buspirone** is the anxiety medication without sedation, dependence, or tolerance—useful for GAD and patients with substance use history.
+- **Buspirone** is the anxiety medication without sedation, dependence, or tolerance. Useful for GAD and patients with substance use history.
 
 - **Opioids** are effective for pain but are the leading cause of accidental overdose deaths in the U.S. Methadone reduces heroin craving without euphoria.
 
-- **Beta-blockers** (especially propranolol) reduce physical anxiety symptoms better than psychological symptoms—think performance anxiety. Require tapering, not abrupt discontinuation.
+- **Beta-blockers** (especially propranolol) reduce physical anxiety symptoms better than psychological symptoms. Think performance anxiety. Require tapering, not abrupt discontinuation.
 
 - **Lithium** is first-line for classic bipolar disorder but has a narrow therapeutic window requiring regular blood level monitoring to avoid toxicity.
 
@@ -248,6 +248,6 @@ Think "1-2-3": (1) Stimulants first, (2) Atomoxetine and alpha-agonists second, 
 
 - **Therapeutic index** measures safety: Higher numbers mean wider therapeutic windows and safer drugs. Lithium has a narrow therapeutic window.
 
-- **Cross-tolerance** occurs between drugs in the same class—alcohol tolerance creates benzodiazepine and barbiturate tolerance.
+- **Cross-tolerance** occurs between drugs in the same class. Alcohol tolerance creates benzodiazepine and barbiturate tolerance.
 
-Understanding these medications isn't just about exam success—it's about becoming a psychologist who can collaborate effectively with prescribers, educate clients about their medications, recognize concerning side effects, and provide comprehensive, integrated care. Keep these principles clear, and you'll handle EPPP questions on psychopharmacology with confidence.
+Understanding these medications isn't just about exam success. It's about becoming a psychologist who can collaborate effectively with prescribers, educate clients about their medications, recognize concerning side effects, and provide comprehensive, integrated care. Keep these principles clear, and you'll handle EPPP questions on psychopharmacology with confidence.

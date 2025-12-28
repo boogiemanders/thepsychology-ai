@@ -17,9 +17,9 @@ Inferential statistics help us make educated guesses about larger populations ba
 
 Let's start with a core concept that trips up many students: the sampling distribution of means.
 
-Here's what you need to understand: {{M}}Imagine you're taste-testing coffee to determine the average quality at a new café. You take one sip on Monday morning. Then another visit on Tuesday afternoon. Then Wednesday evening. Each time, the coffee tastes slightly different—not because the café's quality wildly changes, but because of random variations in how hot it is, which beans were used that batch, whether you just ate something sweet, and so on.{{/M}}
+Here's what you need to understand: {{M}}Imagine you're taste-testing coffee to determine the average quality at a new café. You take one sip on Monday morning. Then another visit on Tuesday afternoon. Then Wednesday evening. Each time, the coffee tastes slightly different. Not because the café's quality wildly changes, but because of random variations in how hot it is, which beans were used that batch, whether you just ate something sweet, and so on.{{/M}}
 
-A sampling distribution works the same way. If you could magically draw hundreds of different samples from the same population and calculate the mean for each one, you'd get a distribution of those means. Some would be higher than the true population mean, some lower, not because anything actually changed, but because of **sampling error**—random variation that happens when you select different people.
+A sampling distribution works the same way. If you could magically draw hundreds of different samples from the same population and calculate the mean for each one, you'd get a distribution of those means. Some would be higher than the true population mean, some lower, not because anything actually changed, but because of **sampling error**. Random variation that happens when you select different people.
 
 The brilliant news? You don't actually need to draw hundreds of samples. This is where the **central limit theorem** becomes your best friend.
 
@@ -33,7 +33,7 @@ The central limit theorem tells us three things about sampling distributions:
 
 3. **Spread**: The standard deviation of this sampling distribution (called the **standard error**) equals the population standard deviation divided by the square root of your sample size.
 
-That third point is huge for understanding why bigger samples are better—the standard error gets smaller as sample size increases, meaning your sample means cluster more tightly around the true population mean.
+That third point is huge for understanding why bigger samples are better, the standard error gets smaller as sample size increases, meaning your sample means cluster more tightly around the true population mean.
 
 ## Setting Up Your Statistical Test: Hypotheses
 
@@ -41,7 +41,7 @@ Before you run any statistical test, you need to set up two competing hypotheses
 
 **The null hypothesis (H₀)**: This is the skeptical position. It says your independent variable has NO effect on your dependent variable. Any differences you observe are just due to chance or sampling error.
 
-**The alternative hypothesis (H₁)**: This is usually what you actually believe—that your independent variable DOES have a real effect.
+**The alternative hypothesis (H₁)**: This is usually what you actually believe. That your independent variable DOES have a real effect.
 
 {{M}}Think of it like a trial in the legal system. The null hypothesis is "innocent until proven guilty." You start by assuming there's no effect (innocence), and you need strong enough evidence to reject that assumption.{{/M}}
 
@@ -62,19 +62,19 @@ When you run your statistical test, you'll make a decision: either retain (keep)
 
 ### Type I Error: The False Alarm
 
-A **Type I error** happens when you reject a true null hypothesis. {{M}}You've declared something works when it actually doesn't—like announcing you've found your soulmate on the third date, only to realize six months later there's no real connection.{{/M}}
+A **Type I error** happens when you reject a true null hypothesis. {{M}}You've declared something works when it actually doesn't, like announcing you've found your soulmate on the third date, only to realize six months later there's no real connection.{{/M}}
 
 The probability of making a Type I error is **alpha (α)**, also called your **significance level**. Researchers typically set this at .05 or .01 before collecting data. If α = .05, you're accepting a 5% chance of a false positive. If α = .01, you're being more conservative with only a 1% chance.
 
 ### Type II Error: The Missed Opportunity
 
-A **Type II error** happens when you retain a false null hypothesis. {{M}}Something really does work, but you failed to detect it—like dismissing a great job candidate because they had a bad interview day, missing out on someone who would have been excellent.{{/M}}
+A **Type II error** happens when you retain a false null hypothesis. {{M}}Something really does work, but you failed to detect it, like dismissing a great job candidate because they had a bad interview day, missing out on someone who would have been excellent.{{/M}}
 
 The probability of making a Type II error is **beta (β)**. Unlike alpha, you don't directly set beta. However, you can reduce it by increasing your study's **statistical power**.
 
 ## Statistical Power: Your Ability to Detect Real Effects
 
-**Statistical power** is the probability that you'll correctly reject a false null hypothesis—in other words, your ability to detect a real effect when one exists. Think of it as the sensitivity of your study.
+**Statistical power** is the probability that you'll correctly reject a false null hypothesis. In other words, your ability to detect a real effect when one exists. Think of it as the sensitivity of your study.
 
 Power is affected by five main factors:
 
@@ -85,21 +85,21 @@ Increasing alpha increases power. If you use α = .10 instead of α = .05, you'r
 This is about how strong the independent variable's effect actually is. {{M}}If you're testing whether a single therapy session reduces severe trauma symptoms, you're looking for a subtle effect. If you're testing whether twelve weeks of intensive therapy helps, you're likely to see a larger effect.{{/M}} Bigger, more sustained interventions generally produce larger effects that are easier to detect.
 
 ### 3. Sample Size
-This is the most practical factor you can control. Larger samples increase power substantially. {{M}}It's like trying to hear a whisper in a noisy restaurant versus a quiet library—the "signal" (real effect) becomes clearer when you reduce the "noise" (random variation), and bigger samples do exactly that.{{/M}}
+This is the most practical factor you can control. Larger samples increase power substantially. {{M}}It's like trying to hear a whisper in a noisy restaurant versus a quiet library, the "signal" (real effect) becomes clearer when you reduce the "noise" (random variation), and bigger samples do exactly that.{{/M}}
 
 ### 4. Type of Statistical Test
 **Parametric tests** (like t-tests and ANOVA) are more powerful than **nonparametric tests** (like chi-square). However, parametric tests require:
 - Interval or ratio data (not just categories)
 - Certain assumptions about your data (like normal distribution)
 
-When you can legitimately use parametric tests, do so—they give you better odds of detecting real effects.
+When you can legitimately use parametric tests, do so. They give you better odds of detecting real effects.
 
 ### 5. Population Homogeneity
-If your population is very similar on the dependent variable, it's easier to detect differences caused by your independent variable. However, unlike the other factors, you can't control this—it's just a characteristic of what you're studying.
+If your population is very similar on the dependent variable, it's easier to detect differences caused by your independent variable. However, unlike the other factors, you can't control this. It's just a characteristic of what you're studying.
 
 ## A Modern Alternative: Bayesian Statistics
 
-Everything we've discussed so far falls under **frequentist statistics**—the traditional approach that's dominated psychology for decades. But there's an alternative approach gaining popularity: **Bayesian statistics**.
+Everything we've discussed so far falls under **frequentist statistics**, the traditional approach that's dominated psychology for decades. But there's an alternative approach gaining popularity: **Bayesian statistics**.
 
 ### The Fundamental Difference
 
@@ -119,7 +119,7 @@ Here's where things get philosophically interesting:
 
 This difference shows up clearly in how we interpret intervals:
 
-**95% Frequentist Confidence Interval**: If we repeated this study many times and calculated a confidence interval each time, 95% of those intervals would contain the true population mean. (Note: We CANNOT say there's a 95% chance the true mean is in THIS specific interval—but people often make this mistake.)
+**95% Frequentist Confidence Interval**: If we repeated this study many times and calculated a confidence interval each time, 95% of those intervals would contain the true population mean. (Note: We CANNOT say there's a 95% chance the true mean is in THIS specific interval. But people often make this mistake.)
 
 **95% Bayesian Credibility Interval**: There's a 95% probability that the true population mean falls within this specific interval. This is actually how most people intuitively want to interpret confidence intervals!
 
@@ -133,7 +133,7 @@ Bayesian analysis uses three components:
 | **Likelihood Function** | The probability distribution from your current study's data | Your actual collected data |
 | **Posterior** | The updated probability distribution combining prior and likelihood | Mathematical synthesis using Bayes' theorem |
 
-The posterior becomes your final answer—and could serve as the prior for the next study, creating a knowledge-building chain.
+The posterior becomes your final answer. And could serve as the prior for the next study, creating a knowledge-building chain.
 
 ### Advantages of Bayesian Statistics
 
@@ -144,7 +144,7 @@ The posterior becomes your final answer—and could serve as the prior for the n
 
 ### The Major Criticism
 
-The **prior** is subjective. Two researchers could use different priors for the same study and reach different conclusions. {{M}}It's like two movie critics watching the same film—one comes in having loved the director's previous work (positive prior), another hated it (negative prior), and they walk out with different overall impressions despite seeing identical content.{{/M}}
+The **prior** is subjective. Two researchers could use different priors for the same study and reach different conclusions. {{M}}It's like two movie critics watching the same film. One comes in having loved the director's previous work (positive prior), another hated it (negative prior), and they walk out with different overall impressions despite seeing identical content.{{/M}}
 
 Critics argue this subjectivity undermines the objectivity that science requires. Supporters counter that making assumptions explicit (choosing a prior) is more honest than pretending frequentist methods don't also involve subjective choices.
 
@@ -186,9 +186,9 @@ Critics argue this subjectivity undermines the objectivity that science requires
 - **T**est type (use parametric when possible)
 - **H**omogeneity (more homogeneous populations help, though you can't control this)
 
-**For Bayesian components**: Think **PLP** - Prior, Likelihood, Posterior. {{M}}It's like updating your GPS route: you start with a planned route (prior), get current traffic data (likelihood), and generate an updated route (posterior).{{/M}}
+**For Bayesian components**: Think **PLP**. Prior, Likelihood, Posterior. {{M}}It's like updating your GPS route: you start with a planned route (prior), get current traffic data (likelihood), and generate an updated route (posterior).{{/M}}
 
-**For the Central Limit Theorem**: Remember "SCS" - Shape (becomes normal), Center (equals population mean), Spread (standard error = SD/√n).
+**For the Central Limit Theorem**: Remember "SCS". Shape (becomes normal), Center (equals population mean), Spread (standard error = SD/√n).
 
 ## Key Takeaways
 
@@ -214,4 +214,4 @@ Critics argue this subjectivity undermines the objectivity that science requires
 
 - Main criticism of Bayesian statistics: subjectivity in choosing priors can lead different researchers to different conclusions from the same data
 
-Understanding these concepts isn't just about passing the EPPP—it's about being able to critically evaluate research throughout your career and make evidence-based decisions in your practice. Every treatment outcome study, assessment validation study, and meta-analysis you read will use these principles. Master them now, and you'll be a more informed, effective psychologist for decades to come.
+Understanding these concepts isn't just about passing the EPPP. It's about being able to critically evaluate research throughout your career and make evidence-based decisions in your practice. Every treatment outcome study, assessment validation study, and meta-analysis you read will use these principles. Master them now, and you'll be a more informed, effective psychologist for decades to come.

@@ -9,13 +9,13 @@ version: 3
 
 ## Introduction: Why Understanding Psychotic Disorders Matters
 
-You're preparing for the EPPP, which means you're getting ready to work with real people facing real challenges. Among the most misunderstood and stigmatized conditions you'll encounter are psychotic disorders. These aren't rare—about 3% of people will experience a psychotic episode at some point in their lives. Understanding schizophrenia spectrum disorders isn't just about passing an exam; it's about being equipped to help people maintain their relationships, careers, and sense of self when their reality becomes fundamentally disrupted.
+You're preparing for the EPPP, which means you're getting ready to work with real people facing real challenges. Among the most misunderstood and stigmatized conditions you'll encounter are psychotic disorders. These aren't rare. About 3% of people will experience a psychotic episode at some point in their lives. Understanding schizophrenia spectrum disorders isn't just about passing an exam; it's about being equipped to help people maintain their relationships, careers, and sense of self when their reality becomes fundamentally disrupted.
 
 Let's break down these disorders in a way that makes sense and sticks with you.
 
 ## The Psychotic Disorders Landscape: A Quick Overview
 
-The DSM-5-TR groups several disorders under the psychotic spectrum umbrella. {{M}}Think of this like a continuum of severity and duration—from a brief storm that passes quickly to a chronic condition requiring long-term management.{{/M}} Here's what we're working with:
+The DSM-5-TR groups several disorders under the psychotic spectrum umbrella. {{M}}Think of this like a continuum of severity and duration. From a brief storm that passes quickly to a chronic condition requiring long-term management.{{/M}} Here's what we're working with:
 
 - **Brief Psychotic Disorder**: Symptoms last 1 day to less than 1 month
 - **Schizophreniform Disorder**: Symptoms last 1 to less than 6 months
@@ -29,23 +29,23 @@ Before diving into specific disorders, you need to understand the characteristic
 
 ### The Five Characteristic Symptoms
 
-1. **Delusions**: False beliefs held firmly despite clear evidence to the contrary. The person with schizophrenia who believes the government planted a tracking device in their tooth isn't being stubborn—they genuinely experience this as real.
+1. **Delusions**: False beliefs held firmly despite clear evidence to the contrary. The person with schizophrenia who believes the government planted a tracking device in their tooth isn't being stubborn. They genuinely experience this as real.
 
-2. **Hallucinations**: Perceptual experiences without external stimuli. These have the full clarity and impact of real perceptions. The most common in schizophrenia are auditory hallucinations—hearing voices that aren't there. Note: This is different from illusions, where an actual stimulus is misperceived (like mistaking a shadow for a person).
+2. **Hallucinations**: Perceptual experiences without external stimuli. These have the full clarity and impact of real perceptions. The most common in schizophrenia are auditory hallucinations. Hearing voices that aren't there. Note: This is different from illusions, where an actual stimulus is misperceived (like mistaking a shadow for a person).
 
-3. **Disorganized Speech**: This includes derailment (jumping between unrelated topics) or tangentiality (answering questions in ways that miss the point entirely). {{M}}It's like trying to follow GPS directions when the system keeps recalculating to random destinations—there's no logical path from point A to point B.{{/M}}
+3. **Disorganized Speech**: This includes derailment (jumping between unrelated topics) or tangentiality (answering questions in ways that miss the point entirely). {{M}}It's like trying to follow GPS directions when the system keeps recalculating to random destinations. There's no logical path from point A to point B.{{/M}}
 
 4. **Grossly Disorganized or Catatonic Behavior**: This can range from unpredictable agitation to complete immobility. Someone might wear winter coats in summer, or become so rigid they maintain uncomfortable positions for hours.
 
-5. **Negative Symptoms**: These are reductions in normal functioning—avolition (lack of motivation), alogia (reduced speech), anhedonia (inability to experience pleasure). {{M}}These symptoms are particularly challenging because they look like someone's not trying, when in reality, their brain has lost the capacity to initiate and sustain goal-directed activities.{{/M}}
+5. **Negative Symptoms**: These are reductions in normal functioning. Avolition (lack of motivation), alogia (reduced speech), anhedonia (inability to experience pleasure). {{M}}These symptoms are particularly challenging because they look like someone's not trying, when in reality, their brain has lost the capacity to initiate and sustain goal-directed activities.{{/M}}
 
 ## The Disorders: Understanding Each One
 
 ### Brief Psychotic Disorder
 
-This is the shortest-duration psychotic disorder. The person needs at least one (but possibly more) of the four characteristic symptoms listed above—though at least one must be delusions, hallucinations, or disorganized speech. Duration? At least one day but less than one month.
+This is the shortest-duration psychotic disorder. The person needs at least one (but possibly more) of the four characteristic symptoms listed above. Though at least one must be delusions, hallucinations, or disorganized speech. Duration? At least one day but less than one month.
 
-{{M}}Think of this like a psychological crisis response—something overwhelms the system, causing a temporary break from reality, but the system can recover relatively quickly with proper support.{{/M}}
+{{M}}Think of this like a psychological crisis response, something overwhelms the system, causing a temporary break from reality, but the system can recover relatively quickly with proper support.{{/M}}
 
 ### Schizophreniform Disorder
 
@@ -81,7 +81,7 @@ This is crucial EPPP material. Schizophrenia is strongly genetic but not purely 
 
 **The Genetics Story**
 
-Schizophrenia is polygenic—meaning multiple genes contribute to risk. The heritability estimates range from 70% to 80%, which is substantial. But here's what you need to remember for the exam:
+Schizophrenia is polygenic, meaning multiple genes contribute to risk. The heritability estimates range from 70% to 80%, which is substantial. But here's what you need to remember for the exam:
 
 | Relationship to Person with Schizophrenia | Concordance Rate |
 |-------------------------------------------|------------------|
@@ -93,9 +93,9 @@ Schizophrenia is polygenic—meaning multiple genes contribute to risk. The heri
 | Child of two affected parents | 46% |
 | Monozygotic (identical) twin | 48% |
 
-Notice that even identical twins—with 100% genetic similarity—only have about a 48% concordance rate. This tells you that genes aren't destiny; environment matters too.
+Notice that even identical twins (with 100% genetic similarity) only have about a 48% concordance rate. This tells you that genes aren't destiny; environment matters too.
 
-Here's a fascinating research finding: When studying identical twins where only one has schizophrenia, the offspring of both twins (affected and unaffected) show similar increased risk. {{M}}It's like carrying a loaded genetic program that doesn't always activate—the unaffected twin carries the code but doesn't run it, yet can still pass it to their children.{{/M}}
+Here's a fascinating research finding: When studying identical twins where only one has schizophrenia, the offspring of both twins (affected and unaffected) show similar increased risk. {{M}}It's like carrying a loaded genetic program that doesn't always activate, the unaffected twin carries the code but doesn't run it, yet can still pass it to their children.{{/M}}
 
 **The Brain Chemistry Story**
 
@@ -121,7 +121,7 @@ This diagnosis is tricky because it requires symptoms of both schizophrenia and 
 - Concurrent symptoms of schizophrenia and a major depressive or manic episode for most of the illness duration
 - BUT there must be a period of at least 2 weeks where delusions or hallucinations occur without mood symptoms
 
-{{M}}This is like experiencing two separate health conditions simultaneously—imagine having both a broken leg and the flu at the same time. They're distinct problems, but they're both affecting you together, making life significantly more complicated than either would alone.{{/M}}
+{{M}}This is like experiencing two separate health conditions simultaneously. Imagine having both a broken leg and the flu at the same time. They're distinct problems, but they're both affecting you together, making life significantly more complicated than either would alone.{{/M}}
 
 ### Delusional Disorder: Highly Focused Beliefs
 
@@ -130,7 +130,7 @@ This is different from schizophrenia in important ways:
 - Overall functioning is NOT markedly impaired (except for direct effects of the delusion)
 - No prominent hallucinations, disorganized speech, or negative symptoms
 
-Someone with delusional disorder might hold their job, maintain relationships, and function normally in most areas—except for the specific domain affected by their delusion.
+Someone with delusional disorder might hold their job, maintain relationships, and function normally in most areas. Except for the specific domain affected by their delusion.
 
 **Subtypes to Know:**
 
@@ -142,7 +142,7 @@ Someone with delusional disorder might hold their job, maintain relationships, a
 | Persecutory | They're being conspired against, followed, poisoned, or maligned |
 | Somatic | Something is wrong with their body or bodily functions |
 
-{{M}}The jealous type might check their partner's phone obsessively, install tracking apps, and interpret innocent interactions as evidence of infidelity—all while maintaining their job performance and other relationships.{{/M}}
+{{M}}The jealous type might check their partner's phone obsessively, install tracking apps, and interpret innocent interactions as evidence of infidelity. All while maintaining their job performance and other relationships.{{/M}}
 
 ## Course, Onset, and Prognosis: The Timeline
 
@@ -152,7 +152,7 @@ Psychotic symptoms usually first appear between late teens and early 30s. Peak o
 - Males: early to mid-20s
 - Females: late 20s
 
-Why this age range? {{M}}This is when people are typically launching careers, forming serious relationships, and establishing independence—the brain is finalizing its development, and stress levels are often high. The combination of neurobiological maturation and life stress may trigger vulnerable systems.{{/M}}
+Why this age range? {{M}}This is when people are typically launching careers, forming serious relationships, and establishing independence, the brain is finalizing its development, and stress levels are often high. The combination of neurobiological maturation and life stress may trigger vulnerable systems.{{/M}}
 
 **What Happens Over Time**
 
@@ -173,7 +173,7 @@ Why this age range? {{M}}This is when people are typically launching careers, fo
 - **Anosognosia**: Lack of insight into having the disorder (leads to treatment non-adherence)
 - **High expressed emotion** in family: When family members show high criticism, hostility, or emotional overinvolvement
 
-The expressed emotion finding is particularly important. Families who are critical, hostile, or overly enmeshed with the patient increase relapse risk. This doesn't mean families cause schizophrenia—but their response affects recovery.
+The expressed emotion finding is particularly important. Families who are critical, hostile, or overly enmeshed with the patient increase relapse risk. This doesn't mean families cause schizophrenia. But their response affects recovery.
 
 **Cultural Considerations**
 
@@ -217,7 +217,7 @@ Antipsychotics are divided into three generations:
 - Second-generation antipsychotics (SGAs): Newer medications
 - Third-generation antipsychotics (TGAs): Newest medications
 
-**Clozapine** (an SGA) is the most effective for treatment-resistant schizophrenia—defined as showing no response or partial response to two adequate trials of antipsychotic medication (at least 6 weeks each at adequate dosage).
+**Clozapine** (an SGA) is the most effective for treatment-resistant schizophrenia. Defined as showing no response or partial response to two adequate trials of antipsychotic medication (at least 6 weeks each at adequate dosage).
 
 Medication non-adherence is a major challenge. Involving family or support systems in care increases adherence and decreases relapse risk.
 
@@ -294,7 +294,7 @@ Remember "FALA" (sounds like "fa-la"):
 
 - **All three require at least one "big three"**: delusions, hallucinations, or disorganized speech
 
-- **Schizophrenia is highly heritable (70-80%)** but not purely genetic—environment matters
+- **Schizophrenia is highly heritable (70-80%)** but not purely genetic. Environment matters
 
 - **Concordance rates increase with genetic similarity**, peaking around 48% for identical twins
 
@@ -318,4 +318,4 @@ Remember "FALA" (sounds like "fa-la"):
 
 - **Early intervention programs** targeting first episodes show promise for better long-term outcomes
 
-Understanding these disorders deeply—not just memorizing criteria—will serve you well on the EPPP and throughout your career. These are real people with real lives disrupted by neurobiological conditions. Your knowledge becomes their pathway to recovery and meaning.
+Understanding these disorders deeply (not just memorizing criteria) will serve you well on the EPPP and throughout your career. These are real people with real lives disrupted by neurobiological conditions. Your knowledge becomes their pathway to recovery and meaning.

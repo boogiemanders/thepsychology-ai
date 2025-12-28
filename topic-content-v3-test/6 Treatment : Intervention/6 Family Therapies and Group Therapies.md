@@ -9,23 +9,23 @@ version: 3
 
 ## Why Family and Group Therapies Matter for Your EPPP Journey
 
-When you're working with someone in individual therapy, you're seeing just one side of their story. But people don't exist in isolation—they're part of families, friend groups, and communities that shape their behavior in ways they might not even recognize. Family and group therapies work with these larger systems, and understanding them is crucial for the EPPP because they represent fundamentally different ways of thinking about psychological problems and their solutions.
+When you're working with someone in individual therapy, you're seeing just one side of their story. But people don't exist in isolation. They're part of families, friend groups, and communities that shape their behavior in ways they might not even recognize. Family and group therapies work with these larger systems, and understanding them is crucial for the EPPP because they represent fundamentally different ways of thinking about psychological problems and their solutions.
 
-{{M}}Imagine your friend complains that their laptop keeps freezing. You could focus on fixing individual files, or you could step back and realize the whole operating system needs an update.{{/M}} That's the shift that happens when moving from individual to systemic therapy—you're looking at the bigger picture and how all the parts interact.
+{{M}}Imagine your friend complains that their laptop keeps freezing. You could focus on fixing individual files, or you could step back and realize the whole operating system needs an update.{{/M}} That's the shift that happens when moving from individual to systemic therapy. You're looking at the bigger picture and how all the parts interact.
 
 ## The Foundation: Systems Thinking
 
-Most family therapy approaches grew from **general systems theory**, which biologists originally used to understand how living organisms work. The key insight is that systems—whether they're families, ecosystems, or organizations—are made up of interconnected parts that influence each other. You can't understand one piece without understanding how it fits into the whole.
+Most family therapy approaches grew from **general systems theory**, which biologists originally used to understand how living organisms work. The key insight is that systems (whether they're families, ecosystems, or organizations) are made up of interconnected parts that influence each other. You can't understand one piece without understanding how it fits into the whole.
 
 Here are the core principles:
 
-**Homeostasis**: Systems naturally try to maintain balance and stability. Families develop patterns and rules that keep things predictable, even when those patterns are unhealthy. {{M}}Think about a friend group where everyone has their "role"—the funny one, the responsible one, the unpredictable one. When someone tries to change their role, the group might unconsciously push back to keep things familiar.{{/M}}
+**Homeostasis**: Systems naturally try to maintain balance and stability. Families develop patterns and rules that keep things predictable, even when those patterns are unhealthy. {{M}}Think about a friend group where everyone has their "role", the funny one, the responsible one, the unpredictable one. When someone tries to change their role, the group might unconsciously push back to keep things familiar.{{/M}}
 
 **Cybernetic theory** adds another layer by explaining how systems maintain or change their functioning:
 
 - **Negative feedback loops** resist change and maintain the status quo. {{M}}Like a thermostat turning off the heat when a room gets warm enough,{{/M}} these loops keep the family functioning in familiar ways.
 
-- **Positive feedback loops** amplify change and disrupt stability. They push the system toward transformation—sometimes healthy, sometimes problematic.
+- **Positive feedback loops** amplify change and disrupt stability. They push the system toward transformation. Sometimes healthy, sometimes problematic.
 
 ### Communication Patterns That Create Problems
 
@@ -33,9 +33,9 @@ Gregory Bateson and his colleagues made crucial discoveries about how families c
 
 **Double-bind communication**: This happens when someone receives two contradictory messages and can't comment on the contradiction. {{M}}Imagine your manager says "I want you to take initiative," but every time you do, they criticize your decisions. You're damned if you do, damned if you don't, and you can't even bring up the contradiction without seeming difficult.{{/M}} Bateson linked this pattern to schizophrenia development.
 
-**Symmetrical interactions**: These reflect equality. When one person does something, the other responds in kind. This can escalate—{{M}}like two roommates each leaving more dishes in the sink because the other one did{{/M}}—creating a competitive dynamic.
+**Symmetrical interactions**: These reflect equality. When one person does something, the other responds in kind. This can escalate ({{M}}like two roommates each leaving more dishes in the sink because the other one did{{/M}}) creating a competitive dynamic.
 
-**Complementary interactions**: These reflect inequality, with one person taking a dominant role and the other submitting. Problems arise when relationships are exclusively one type or the other—families need flexibility.
+**Complementary interactions**: These reflect inequality, with one person taking a dominant role and the other submitting. Problems arise when relationships are exclusively one type or the other. Families need flexibility.
 
 ### The Postmodern Shift
 
@@ -51,7 +51,7 @@ Murray Bowen believed that emotional processes get transmitted across generation
 - *Intrapersonal*: Can you distinguish between your feelings and your thoughts?
 - *Interpersonal*: Can you maintain your own identity while staying emotionally connected to family?
 
-People with low differentiation become "emotionally fused" with family members. {{M}}It's like having no privacy settings on your social media—every emotional reaction gets shared and influences everyone else immediately.{{/M}}
+People with low differentiation become "emotionally fused" with family members. {{M}}It's like having no privacy settings on your social media. Every emotional reaction gets shared and influences everyone else immediately.{{/M}}
 
 **Emotional triangles**: When two people experience tension, they often pull in a third person to ease the discomfort. {{M}}Think about when two coworkers are in conflict, and they both start complaining to you separately instead of addressing each other directly.{{/M}} Parents might reduce their marital conflict by focusing all their energy on a "problem child."
 
@@ -59,11 +59,11 @@ People with low differentiation become "emotionally fused" with family members. 
 
 **Multigenerational transmission process**: Over several generations, this projection compounds. The least differentiated child grows up, partners with someone similarly undifferentiated, and the pattern intensifies in their children.
 
-**Treatment approach**: Bowenian therapists often work with just the parents or the most capable family member. They use a **genogram**—a family tree that maps relationships and events across three generations—to help families see patterns. The therapist stays emotionally neutral, acting as a coach rather than getting pulled into family dynamics. Family members talk to the therapist rather than each other, which reduces emotional reactivity.
+**Treatment approach**: Bowenian therapists often work with just the parents or the most capable family member. They use a **genogram** (a family tree that maps relationships and events across three generations) to help families see patterns. The therapist stays emotionally neutral, acting as a coach rather than getting pulled into family dynamics. Family members talk to the therapist rather than each other, which reduces emotional reactivity.
 
 ### 2. Structural Family Therapy (Minuchin)
 
-Salvador Minuchin focused on the family's structure—how it's organized and what rules govern interactions. Two concepts are central:
+Salvador Minuchin focused on the family's structure. How it's organized and what rules govern interactions. Two concepts are central:
 
 **Subsystems**: Smaller units within the family with specific functions (like the parental subsystem responsible for childcare).
 
@@ -139,7 +139,7 @@ Virginia Satir's humanistic approach emphasizes communication patterns. She iden
 | Blaming | Accusing, judging | Hiding vulnerability |
 | Computing | Overly intellectual, detached | Avoiding emotional engagement |
 | Distracting | Changing subject, inappropriate joking | Avoiding conflict |
-| Congruent (healthy) | Direct, authentic, emotionally engaged | N/A - this is the goal |
+| Congruent (healthy) | Direct, authentic, emotionally engaged | N/A. This is the goal |
 
 **Treatment approach**: Goals include increasing self-esteem, strengthening problem-solving, and promoting congruent communication. Satir emphasized the therapist's "use of self" as the primary tool, serving as facilitator, mediator, advocate, educator, and role model.
 
@@ -188,18 +188,18 @@ Some practitioners integrate EMDR with EFT, particularly for couples affected by
 
 ### 8. Evidence-Based Approaches for Adolescents
 
-**Functional Family Therapy (FFT)**: Designed for at-risk adolescents with conduct disorder or substance use. Assumes problematic behaviors serve relationship functions—they regulate connections and hierarchies. Treatment replaces problem behaviors with healthier ones serving the same functions.
+**Functional Family Therapy (FFT)**: Designed for at-risk adolescents with conduct disorder or substance use. Assumes problematic behaviors serve relationship functions. They regulate connections and hierarchies. Treatment replaces problem behaviors with healthier ones serving the same functions.
 
 **Three stages** (8-30 sessions over 3-6 months):
 1. *Engagement and motivation*: Build alliance, reduce hopelessness, reframe problems
 2. *Behavior change*: Set goals, implement individualized plans, teach skills
 3. *Generalization*: Link to community resources, prevent relapse
 
-**Multisystemic Therapy (MST)**: Originally for adolescent offenders at risk for out-of-home placement. Based on Bronfenbrenner's ecological model—individuals exist within multiple interacting systems (family, peers, school, neighborhood).
+**Multisystemic Therapy (MST)**: Originally for adolescent offenders at risk for out-of-home placement. Based on Bronfenbrenner's ecological model. Individuals exist within multiple interacting systems (family, peers, school, neighborhood).
 
 Treatment is delivered in home and community settings where problems occur. Uses a multidisciplinary team targeting specific drivers of problem behavior. {{M}}If an adolescent's marijuana use is driven by low parental monitoring, friendships with drug-using peers, and neighborhood availability, the team addresses all these factors simultaneously rather than treating the teen in isolation.{{/M}}
 
-MST effectiveness depends heavily on **treatment fidelity**—following the model as designed. A quality assurance system includes training, supervision, adherence measures, and regular program reviews.
+MST effectiveness depends heavily on **treatment fidelity**, following the model as designed. A quality assurance system includes training, supervision, adherence measures, and regular program reviews.
 
 ## Group Therapy: Stages and Therapeutic Factors
 
@@ -250,7 +250,7 @@ Reality: Some approaches (like Bowenian therapy) often work with just one or two
 Reality: Structural and strategic approaches emphasize behavior change over insight.
 
 **Misconception 3**: "Group cohesiveness alone creates therapeutic change."
-Reality: Cohesiveness is necessary but not sufficient—it enables the other therapeutic factors to work.
+Reality: Cohesiveness is necessary but not sufficient. It enables the other therapeutic factors to work.
 
 **Misconception 4**: "Systems theory and postmodern approaches are the same."
 Reality: Postmodern approaches explicitly reject systems theory's assumption of universal laws governing families.
@@ -284,7 +284,7 @@ Reality: It's about recognizing that our stories are socially constructed and ca
 
 - For Yalom's stages: **"OCD"** = Orientation, Conflict, Development (of cohesiveness)
 
-**For group therapy therapeutic factors**: Remember that **cohesiveness** is foundational—it's like the therapeutic alliance in individual therapy. Without it, the other factors can't operate effectively.
+**For group therapy therapeutic factors**: Remember that **cohesiveness** is foundational. It's like the therapeutic alliance in individual therapy. Without it, the other factors can't operate effectively.
 
 ## Key Takeaways
 
@@ -312,4 +312,4 @@ Reality: It's about recognizing that our stories are socially constructed and ca
 
 - **Therapeutic factors** in groups include cohesiveness (most important), universality, altruism, interpersonal learning, and eight others. Cohesiveness is like the therapeutic alliance in individual therapy.
 
-Understanding these approaches isn't just about memorizing names and techniques for the EPPP—it's about recognizing that human problems exist in context and that effective intervention sometimes means working with that context rather than just the individual.
+Understanding these approaches isn't just about memorizing names and techniques for the EPPP. It's about recognizing that human problems exist in context and that effective intervention sometimes means working with that context rather than just the individual.

@@ -9,13 +9,13 @@ version: 3
 
 ## Why Identity Development Models Matter for Your EPPP (and Your Practice)
 
-When you're sitting across from a client, understanding their identity development isn't just academic theory—it's the difference between connecting with their experience and missing the mark entirely. A Black client who seems "angry at everyone" might be in the Resistance and Immersion stage, working through justified responses to racism. A White client who insists they "don't see color" might be stuck in the Contact status, unaware of how race shapes their worldview. These models give you a roadmap for understanding where clients are in their journey and how to meet them there effectively.
+When you're sitting across from a client, understanding their identity development isn't just academic theory. It's the difference between connecting with their experience and missing the mark entirely. A Black client who seems "angry at everyone" might be in the Resistance and Immersion stage, working through justified responses to racism. A White client who insists they "don't see color" might be stuck in the Contact status, unaware of how race shapes their worldview. These models give you a roadmap for understanding where clients are in their journey and how to meet them there effectively.
 
-For the EPPP, you'll need to recognize the stages of each model and their key characteristics. But more importantly, you'll need to understand the pattern: almost all racial and cultural identity models start with people rejecting or being unaware of their cultural identity, then move through conflict and exploration, and finally arrive at acceptance and integration. Think of it {{M}}like learning to embrace parts of yourself you once ignored—similar to how some people in their twenties reject their family's traditions, then gradually reconnect with them in a more mature, chosen way by their thirties{{/M}}.
+For the EPPP, you'll need to recognize the stages of each model and their key characteristics. But more importantly, you'll need to understand the pattern: almost all racial and cultural identity models start with people rejecting or being unaware of their cultural identity, then move through conflict and exploration, and finally arrive at acceptance and integration. Think of it {{M}}like learning to embrace parts of yourself you once ignored. Similar to how some people in their twenties reject their family's traditions, then gradually reconnect with them in a more mature, chosen way by their thirties{{/M}}.
 
 ## The Big Picture: What All These Models Share
 
-Before we dig into specific models, notice the common thread: identity development typically moves from cultural unawareness or rejection toward cultural acceptance and appreciation. This isn't a smooth highway—people often zigzag, stall, or circle back. But the general direction matters.
+Before we dig into specific models, notice the common thread: identity development typically moves from cultural unawareness or rejection toward cultural acceptance and appreciation. This isn't a smooth highway. People often zigzag, stall, or circle back. But the general direction matters.
 
 Here's the pattern you'll see repeated:
 
@@ -27,7 +27,7 @@ Here's the pattern you'll see repeated:
 
 ## Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model
 
-This is your foundational model—it applies broadly to members of any racial or cultural minority group. The model tracks how people view three groups: their own minority group, other minority groups, and the majority group.
+This is your foundational model. It applies broadly to members of any racial or cultural minority group. The model tracks how people view three groups: their own minority group, other minority groups, and the majority group.
 
 ### Stage 1: Conformity
 
@@ -65,9 +65,9 @@ This model has gone through several revisions, which tells you something importa
 
 ### The Original Five Stages:
 
-**Pre-Encounter:** Black individuals idealize White culture and view their own Black culture negatively—as an obstacle or source of stigma.
+**Pre-Encounter:** Black individuals idealize White culture and view their own Black culture negatively, as an obstacle or source of stigma.
 
-**Encounter:** Something happens that forces awareness of racism's impact. {{M}}It's like suddenly noticing a pattern you'd been blind to—maybe you realize you've been passed over for promotions repeatedly while less qualified White colleagues advance{{/M}}. This triggers questioning and interest in their own culture.
+**Encounter:** Something happens that forces awareness of racism's impact. {{M}}It's like suddenly noticing a pattern you'd been blind to. Maybe you realize you've been passed over for promotions repeatedly while less qualified White colleagues advance{{/M}}. This triggers questioning and interest in their own culture.
 
 **Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.
 
@@ -85,11 +85,11 @@ Cross (1991) combined the last two stages into one, reducing the model to four s
 | Immersion-Emersion | Intense Black Involvement, Anti-White |
 | Internalization | Black Nationalist, Biculturalist, Multiculturalist |
 
-The subtypes matter because they show that people in the same stage can express it differently. Two people in Internalization might look very different—one might embrace a Black nationalist perspective while another takes a multiculturalist approach.
+The subtypes matter because they show that people in the same stage can express it differently. Two people in Internalization might look very different. One might embrace a Black nationalist perspective while another takes a multiculturalist approach.
 
 ## Sellers' Multidimensional Model of Racial Identity
 
-Here's where things get interesting. This model breaks from the stage approach entirely. Sellers and colleagues argue that racial identity isn't a linear journey—it varies across time and situations. This model was developed specifically for African Americans.
+Here's where things get interesting. This model breaks from the stage approach entirely. Sellers and colleagues argue that racial identity isn't a linear journey. It varies across time and situations. This model was developed specifically for African Americans.
 
 ### The Four Dimensions:
 
@@ -116,11 +116,11 @@ The brilliant part? Sellers says your ideology might shift depending on context.
 
 ### Why This Model Matters:
 
-It explains why two African Americans with similar beliefs might respond completely differently to the same situation. If race has high salience for one person in that moment but low salience for the other, they'll react differently—even if they share the same racial ideology and regard.
+It explains why two African Americans with similar beliefs might respond completely differently to the same situation. If race has high salience for one person in that moment but low salience for the other, they'll react differently. Even if they share the same racial ideology and regard.
 
 ## Helms's White Racial Identity Development Model
 
-Finally, a model for White individuals. Helms was one of the first to argue that White people have a racial identity too—it's just often invisible to them. The model has two phases (abandonment of racism, then defining a nonracist White identity) with three statuses in each phase. Each status uses a different information processing strategy (IPS)—basically, a mental filter for thinking about race.
+Finally, a model for White individuals. Helms was one of the first to argue that White people have a racial identity too (it's just often invisible to them. The model has two phases (abandonment of racism, then defining a nonracist White identity) with three statuses in each phase. Each status uses a different information processing strategy (IPS)) basically, a mental filter for thinking about race.
 
 ### Phase 1: Abandonment of Racism
 
@@ -140,7 +140,7 @@ Finally, a model for White individuals. Helms was one of the first to argue that
 
 ### Why This Matters for Therapists:
 
-Helms argues that a White therapist's identity status directly impacts their effectiveness with minority clients. The best scenario is a "progressive" relationship where the therapist has a more integrated, flexible racial identity than the client. Research supports this—White therapists with higher racial identity statuses show higher multicultural counseling competence.
+Helms argues that a White therapist's identity status directly impacts their effectiveness with minority clients. The best scenario is a "progressive" relationship where the therapist has a more integrated, flexible racial identity than the client. Research supports this. White therapists with higher racial identity statuses show higher multicultural counseling competence.
 
 ## Troiden's Model of Homosexual Identity Development
 
@@ -157,9 +157,9 @@ Moving from racial to sexual identity development, Troiden's model tracks how ga
 - Redefinition (viewing it as just a phase)
 - Acceptance
 
-**Identity Assumption (Around Age 19-21 for males, 21-23 for females):** They begin accepting their gay or lesbian identity. They seek out social and sexual relationships with other gay and lesbian individuals. They start disclosing their orientation to trusted people—first to other gay and lesbian friends, then to some heterosexual family members and friends.
+**Identity Assumption (Around Age 19-21 for males, 21-23 for females):** They begin accepting their gay or lesbian identity. They seek out social and sexual relationships with other gay and lesbian individuals. They start disclosing their orientation to trusted people. First to other gay and lesbian friends, then to some heterosexual family members and friends.
 
-**Identity Commitment:** They've fully internalized their gay or lesbian identity, accepted homosexuality as a way of life, and are comfortable disclosing their orientation broadly—to family, friends, coworkers.
+**Identity Commitment:** They've fully internalized their gay or lesbian identity, accepted homosexuality as a way of life, and are comfortable disclosing their orientation broadly. To family, friends, coworkers.
 
 ## Worthington's Multidimensional Model of Heterosexual Identity Development
 
@@ -195,7 +195,7 @@ Reality: Identity development is ongoing. Even people in Integrative Awareness o
 
 Reality: Sellers' Multidimensional Model explicitly rejects the stage approach. It's fundamentally different from the others.
 
-**Misconception 4:** "White people don't have racial identity—these models are only for minorities."
+**Misconception 4:** "White people don't have racial identity. These models are only for minorities."
 
 Reality: Helms's model specifically addresses White racial identity development. Everyone has a racial identity, even when it's invisible to them.
 
@@ -215,7 +215,7 @@ Reality: Each stage makes sense given the person's experiences and awareness at 
 
 **Focus on Therapy Implications:** For each stage, ask yourself: "What would this client want from therapy? What therapist would they prefer?" This helps cement the stages in memory and prepares you for application questions.
 
-**Remember the Outliers:** Sellers' model is the odd one out—it's not stage-based. Worthington's model is the other outlier—it's for heterosexual identity. These distinctive features make them easier to remember.
+**Remember the Outliers:** Sellers' model is the odd one out (it's not stage-based. Worthington's model is the other outlier) it's for heterosexual identity. These distinctive features make them easier to remember.
 
 **Use the Revisions as Memory Aids:** Cross's model went from 5 stages to 4 to 3-with-subtypes. The direction is toward fewer, more nuanced stages. This evolution helps you remember the model exists in multiple versions.
 
@@ -237,7 +237,7 @@ Reality: Each stage makes sense given the person's experiences and awareness at 
 
 ## Key Takeaways
 
-- **All racial/cultural identity models start with cultural rejection or unawareness and move toward acceptance and appreciation**—this is your foundational pattern for the EPPP.
+- **All racial/cultural identity models start with cultural rejection or unawareness and move toward acceptance and appreciation**. This is your foundational pattern for the EPPP.
 
 - **Atkinson, Morten, and Sue's R/CID Model has five stages:** Conformity, Dissonance, Resistance and Immersion, Introspection, and Integrative Awareness. Track attitudes toward own group, other minority groups, and majority group.
 

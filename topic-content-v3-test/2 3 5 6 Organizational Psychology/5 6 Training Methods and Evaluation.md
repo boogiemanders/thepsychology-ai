@@ -11,17 +11,17 @@ version: 3
 
 You know that feeling when you start a new job and someone just throws you into the work without any guidance? Or maybe you've been on the other side, watching a new team member struggle because nobody took the time to show them the ropes properly? Training is one of those things that seems simple on the surface but gets surprisingly complex when you dig into it. For the EPPP, you'll need to understand not just what training methods exist, but how to evaluate whether they're actually working.
 
-Understanding training and evaluation matters because organizations invest massive amounts of money and time into developing their employees. When training fails, it's not just frustrating—it costs companies real money and can even put people in danger if the job involves safety-critical tasks. As a psychologist working in organizational settings, you might be asked to design training programs, evaluate their effectiveness, or figure out why employees aren't performing as expected.
+Understanding training and evaluation matters because organizations invest massive amounts of money and time into developing their employees. When training fails, it's not just frustrating. It costs companies real money and can even put people in danger if the job involves safety-critical tasks. As a psychologist working in organizational settings, you might be asked to design training programs, evaluate their effectiveness, or figure out why employees aren't performing as expected.
 
 ## Starting at the Beginning: Needs Analysis
 
-Before any training happens, you need to figure out what training is actually needed. This is where **needs analysis** (also called needs assessment) comes in. {{M}}Think of it like going to the doctor—before prescribing treatment, they need to diagnose what's actually wrong.{{/M}} You wouldn't want a doctor to just guess at your problem, and organizations shouldn't guess at their training needs either.
+Before any training happens, you need to figure out what training is actually needed. This is where **needs analysis** (also called needs assessment) comes in. {{M}}Think of it like going to the doctor. Before prescribing treatment, they need to diagnose what's actually wrong.{{/M}} You wouldn't want a doctor to just guess at your problem, and organizations shouldn't guess at their training needs either.
 
 A thorough needs analysis includes four types of analysis:
 
 **Organizational Analysis** looks at the big picture. Is the problem really about training, or is something else going on? {{M}}Imagine a restaurant where food keeps getting sent back to the kitchen. The owner might think the cooks need training, but what if the real problem is that the menu is confusing, or the suppliers are delivering poor-quality ingredients?{{/M}} This analysis identifies organizational goals and determines whether performance problems stem from lack of training or from other issues like poor selection procedures, inadequate resources, or unclear expectations.
 
-**Task Analysis** (also called job analysis) breaks down exactly what the job requires. This identifies the specific tasks someone needs to perform and the knowledge, skills, abilities, and other characteristics—KSAOs for short—needed to do each task successfully. {{M}}If you were teaching someone to drive, you'd need to identify all the separate skills: checking mirrors, using turn signals, maintaining speed, parallel parking, and so on.{{/M}}
+**Task Analysis** (also called job analysis) breaks down exactly what the job requires. This identifies the specific tasks someone needs to perform and the knowledge, skills, abilities, and other characteristics (KSAOs for short) needed to do each task successfully. {{M}}If you were teaching someone to drive, you'd need to identify all the separate skills: checking mirrors, using turn signals, maintaining speed, parallel parking, and so on.{{/M}}
 
 **Person Analysis** identifies which specific employees need training. Not everyone requires the same training. Some people might excel at certain skills but need help with others.
 
@@ -41,7 +41,7 @@ Training methods fall into two main categories based on where they happen.
 - **Job rotation** moves trainees through different positions in a predetermined sequence, commonly used for manager training
 - **Cross-training** teaches employees how to do each other's jobs, typically used for team members doing similar work
 
-The advantages of on-the-job training are clear: it's usually less expensive, and you don't have to worry as much about whether skills will **transfer** from training to actual work—they're already learning in the real environment. But there are downsides too. Errors can happen during learning, which might create safety problems or slow down productivity. {{M}}It's like learning to play guitar at a live concert instead of in your bedroom—sure, you're in the real environment, but your mistakes affect everyone around you.{{/M}}
+The advantages of on-the-job training are clear: it's usually less expensive, and you don't have to worry as much about whether skills will **transfer** from training to actual work (they're already learning in the real environment. But there are downsides too. Errors can happen during learning, which might create safety problems or slow down productivity. {{M}}It's like learning to play guitar at a live concert instead of in your bedroom) sure, you're in the real environment, but your mistakes affect everyone around you.{{/M}}
 
 ### Off-the-Job Methods
 
@@ -51,11 +51,11 @@ The advantages of on-the-job training are clear: it's usually less expensive, an
 
 **Technology-based training** uses computers, online platforms, or virtual reality to deliver content. {{M}}Just like how you might learn a new language through an app instead of sitting in a classroom{{/M}}, employees can often complete this training at their own pace.
 
-**Behavior modeling** is based on Bandura's social learning theory. Trainees watch a model demonstrate the desired behaviors, then practice those behaviors themselves while receiving feedback and reinforcement. {{M}}Think about learning to make coffee at a specialty café—you watch an experienced barista pull the perfect espresso shot, then you try it yourself while they give you tips on your technique.{{/M}}
+**Behavior modeling** is based on Bandura's social learning theory. Trainees watch a model demonstrate the desired behaviors, then practice those behaviors themselves while receiving feedback and reinforcement. {{M}}Think about learning to make coffee at a specialty café. You watch an experienced barista pull the perfect espresso shot, then you try it yourself while they give you tips on your technique.{{/M}}
 
-**Simulation training** recreates the work environment without the actual risks or costs. This is especially useful when real-world practice would be dangerous or expensive. **Vestibule training** is a specific type of simulation where trainees use the actual equipment they'll work with, just not in the live work environment. {{M}}Flight simulators are the classic example—pilots can practice emergency procedures without risking an actual plane or passengers.{{/M}}
+**Simulation training** recreates the work environment without the actual risks or costs. This is especially useful when real-world practice would be dangerous or expensive. **Vestibule training** is a specific type of simulation where trainees use the actual equipment they'll work with, just not in the live work environment. {{M}}Flight simulators are the classic example. Pilots can practice emergency procedures without risking an actual plane or passengers.{{/M}}
 
-Off-the-job training offers several advantages: greater control over the learning environment, ability to train many people simultaneously, and opportunities to use multiple teaching methods. The disadvantages? It can be more expensive in some situations, and it may not provide adequate **transfer of training**—the skills learned in training might not translate smoothly to the actual job.
+Off-the-job training offers several advantages: greater control over the learning environment, ability to train many people simultaneously, and opportunities to use multiple teaching methods. The disadvantages? It can be more expensive in some situations, and it may not provide adequate **transfer of training**, the skills learned in training might not translate smoothly to the actual job.
 
 ## Mentoring versus Coaching: Understanding the Difference
 
@@ -101,15 +101,15 @@ For most tasks, **distributed practice** (spaced practice) beats **massed practi
 
 **Whole-task training** teaches an entire task at once. **Part-task training** breaks the task into subtasks and teaches each separately. Which works better depends on the task itself.
 
-When a task is highly organized and its subtasks are closely interrelated, whole-task training is more effective. {{M}}Learning to drive is taught as a whole task because you can't really separate steering from acceleration and braking—everything happens together in a coordinated flow.{{/M}} But for complex tasks with independent components, part-task training might work better.
+When a task is highly organized and its subtasks are closely interrelated, whole-task training is more effective. {{M}}Learning to drive is taught as a whole task because you can't really separate steering from acceleration and braking, everything happens together in a coordinated flow.{{/M}} But for complex tasks with independent components, part-task training might work better.
 
 ### Overlearning
 
-**Overlearning** means continuing to practice beyond the point where you've achieved basic mastery. This creates **automaticity**—the ability to recall information or perform behaviors with minimal conscious effort.
+**Overlearning** means continuing to practice beyond the point where you've achieved basic mastery. This creates **automaticity**, the ability to recall information or perform behaviors with minimal conscious effort.
 
-Automaticity is crucial for tasks that happen infrequently but must be performed correctly because errors have serious consequences. {{M}}Emergency medical procedures are trained to the point of automaticity because when an actual emergency happens, you don't want to be consciously thinking through each step—you need to just do it.{{/M}}
+Automaticity is crucial for tasks that happen infrequently but must be performed correctly because errors have serious consequences. {{M}}Emergency medical procedures are trained to the point of automaticity because when an actual emergency happens, you don't want to be consciously thinking through each step. You need to just do it.{{/M}}
 
-Important note: Don't confuse **overlearning** with **overtraining**. Overtraining is a completely different concept referring to the physical and psychological problems athletes experience from excessive training—decreased performance, fatigue, muscle soreness, gastrointestinal issues, depression, and anxiety.
+Important note: Don't confuse **overlearning** with **overtraining**. Overtraining is a completely different concept referring to the physical and psychological problems athletes experience from excessive training. Decreased performance, fatigue, muscle soreness, gastrointestinal issues, depression, and anxiety.
 
 ## Making Training Transfer to the Job
 
@@ -148,7 +148,7 @@ Training evaluation determines whether programs achieve their intended goals and
 
 Scriven coined these terms to describe evaluation's two main functions:
 
-**Formative evaluation** happens during program development to improve the program. It's like beta testing—you're trying to identify problems and fix them before the final version.
+**Formative evaluation** happens during program development to improve the program. It's like beta testing. You're trying to identify problems and fix them before the final version.
 
 **Summative evaluation** happens after the program is complete to determine whether it met its goals. This is the final assessment of whether the training worked.
 
@@ -178,7 +178,7 @@ This model expands on Scriven's framework by distinguishing four evaluation type
 
 **Confirmative evaluation** occurs later to assess long-term effects, using measures similar to the summative evaluation but administered after trainees have had time to apply their learning.
 
-**Meta-evaluation** is an ongoing process that assesses the reliability and validity of the other evaluations themselves—basically, evaluating the evaluations.
+**Meta-evaluation** is an ongoing process that assesses the reliability and validity of the other evaluations themselves. Basically, evaluating the evaluations.
 
 ### Kirkpatrick's Four Levels of Evaluation
 
@@ -191,7 +191,7 @@ This is probably the most commonly referenced evaluation framework. Kirkpatrick 
 | Behavior | Job performance changes | Do they use it? | Challenging |
 | Results | Organizational outcomes | Does it matter? | Very Difficult |
 
-**Reaction criteria** assess trainee satisfaction. Did they find the training valuable, engaging, and relevant? This is the easiest to measure but least informative—people can enjoy training without learning anything, or learn a lot from training they didn't particularly enjoy.
+**Reaction criteria** assess trainee satisfaction. Did they find the training valuable, engaging, and relevant? This is the easiest to measure but least informative. People can enjoy training without learning anything, or learn a lot from training they didn't particularly enjoy.
 
 **Learning criteria** measure how well trainees acquired the presented information and skills. This typically involves tests, demonstrations, or assessments administered during or immediately after training.
 

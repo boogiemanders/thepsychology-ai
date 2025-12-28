@@ -9,7 +9,7 @@ version: 3
 
 ## Why Leadership Matters in Psychology
 
-Here's something that might surprise you about the EPPP: organizational psychology shows up more than you'd expect, and leadership is a major piece of that puzzle. Whether you're planning to run a private practice, supervise clinical staff, or consult with organizations, understanding what makes leaders effective isn't just academic—it's practical knowledge you'll use throughout your career.
+Here's something that might surprise you about the EPPP: organizational psychology shows up more than you'd expect, and leadership is a major piece of that puzzle. Whether you're planning to run a private practice, supervise clinical staff, or consult with organizations, understanding what makes leaders effective isn't just academic. It's practical knowledge you'll use throughout your career.
 
 The research on leadership gives us concrete answers to questions you've probably already wondered about: Why do some supervisors bring out the best in their teams while others create chaos? What makes one clinician a natural mentor while another struggles to guide interns? When should you step in with direct guidance versus letting someone figure things out themselves?
 
@@ -23,7 +23,7 @@ The answer is... sort of. But not as much as you might think.
 
 ### Intelligence and Leadership
 
-Judge, Colbert, and Ilies (2004) found that intelligence correlates with leader effectiveness at .27. That's a real relationship, but it's modest. {{M}}Think of it like the connection between your phone's processing speed and your actual productivity—having a faster processor helps, but it's not the whole story.{{/M}} You still need the right apps, good organization, and knowledge of how to use your tools.
+Judge, Colbert, and Ilies (2004) found that intelligence correlates with leader effectiveness at .27. That's a real relationship, but it's modest. {{M}}Think of it like the connection between your phone's processing speed and your actual productivity, having a faster processor helps, but it's not the whole story.{{/M}} You still need the right apps, good organization, and knowledge of how to use your tools.
 
 Here's what's interesting: Intelligence predicts effectiveness better when stress is low and when leaders use a directive (telling people what to do) rather than participative (involving people in decisions) style. When stress ramps up or you're trying to facilitate group decisions, raw IQ becomes less important than other skills.
 
@@ -37,7 +37,7 @@ The Big Five personality traits show similarly modest relationships with leaders
 | Conscientiousness | .28 |
 | Other Big Five traits | Lower correlations |
 
-Extraversion makes sense—leaders who are outgoing, energetic, and comfortable with social interaction tend to do better. Conscientiousness (being organized, reliable, and goal-focused) also helps. But notice these correlations are around .30, meaning they explain less than 10% of the variance in leadership effectiveness.
+Extraversion makes sense. Leaders who are outgoing, energetic, and comfortable with social interaction tend to do better. Conscientiousness (being organized, reliable, and goal-focused) also helps. But notice these correlations are around .30, meaning they explain less than 10% of the variance in leadership effectiveness.
 
 The takeaway? Traits matter, but they're just one piece of a much larger picture.
 
@@ -105,7 +105,7 @@ Now we get to the major theories. Each proposes that effective leadership depend
 
 ### Fiedler's Contingency Model
 
-Fiedler (1978) believed leaders have a stable style—you're fundamentally task-oriented or person-oriented, and that doesn't really change. Instead of changing your style, you should change situations to fit you.
+Fiedler (1978) believed leaders have a stable style. You're fundamentally task-oriented or person-oriented, and that doesn't really change. Instead of changing your style, you should change situations to fit you.
 
 **Measuring Leadership Style: The LPC Scale**
 
@@ -132,7 +132,7 @@ These combine to create situations ranging from very favorable to very unfavorab
 
 ### Situational Leadership Theory
 
-Hersey and Blanchard (1988) took a different approach. They focused on subordinate readiness, which they called "job maturity"—a combination of willingness (motivation) and ability (competence).
+Hersey and Blanchard (1988) took a different approach. They focused on subordinate readiness, which they called "job maturity", a combination of willingness (motivation) and ability (competence).
 
 Their framework matches four leadership styles to four readiness levels:
 
@@ -145,7 +145,7 @@ Their framework matches four leadership styles to four readiness levels:
 
 Notice the progression: As people develop, leaders should become less directive and more hands-off.
 
-{{M}}Imagine supervising a new intern versus an experienced clinician.{{/M}} With the intern (low ability, hopefully high willingness), you'd use a "selling" style—providing lots of direction while also building the relationship. With the experienced clinician (high ability and willingness), you'd use "delegating"—giving them autonomy to do their work.
+{{M}}Imagine supervising a new intern versus an experienced clinician.{{/M}} With the intern (low ability, hopefully high willingness), you'd use a "selling" style (providing lots of direction while also building the relationship. With the experienced clinician (high ability and willingness), you'd use "delegating") giving them autonomy to do their work.
 
 ### Path-Goal Theory
 
@@ -161,7 +161,7 @@ The best style depends on subordinate characteristics and task characteristics:
 - Directive style works best when: Subordinates are dogmatic/authoritarian AND the task is ambiguous and complex
 - Supportive style works best when: Subordinates have high affiliation needs and low satisfaction AND the task is mundane and unchallenging
 
-{{M}}Picture yourself managing a research team.{{/M}} For a complex statistical analysis (ambiguous task) with team members who prefer clear direction (dogmatic), you'd be directive. For tedious data entry (mundane task) with people who value social connection (high affiliation needs), you'd be supportive—making the work environment pleasant even if the work itself isn't exciting.
+{{M}}Picture yourself managing a research team.{{/M}} For a complex statistical analysis (ambiguous task) with team members who prefer clear direction (dogmatic), you'd be directive. For tedious data entry (mundane task) with people who value social connection (high affiliation needs), you'd be supportive, making the work environment pleasant even if the work itself isn't exciting.
 
 ### Vroom-Yetton-Jago Contingency Model
 
@@ -190,7 +190,7 @@ LMX theory (Dansereau, Graen, & Haga, 1975) focuses on the quality of relationsh
 - Get routine, less interesting tasks
 - Show lower levels of positive outcomes
 
-{{M}}Think about faculty advisors you've known.{{/M}} Some graduate students become part of the advisor's "inner circle"—they're invited to collaborate on research, get mentoring beyond what's required, and receive advocacy for opportunities. Others have a more distant relationship limited to checking in about dissertation progress. LMX theory says this isn't just happening randomly; it's based on the leader's perceptions of competence, trustworthiness, and initiative.
+{{M}}Think about faculty advisors you've known.{{/M}} Some graduate students become part of the advisor's "inner circle". They're invited to collaborate on research, get mentoring beyond what's required, and receive advocacy for opportunities. Others have a more distant relationship limited to checking in about dissertation progress. LMX theory says this isn't just happening randomly; it's based on the leader's perceptions of competence, trustworthiness, and initiative.
 
 ## Transformational vs. Transactional Leadership
 
@@ -198,7 +198,7 @@ This distinction is hugely important for the EPPP. Let's break it down clearly.
 
 ### Transformational Leadership
 
-Transformational leadership elevates both leaders and followers to higher levels of ethics, morality, and motivation (Bass, 1997; Bass & Steidlmeier, 1999). It has four components—remember them with the "Four I's":
+Transformational leadership elevates both leaders and followers to higher levels of ethics, morality, and motivation (Bass, 1997; Bass & Steidlmeier, 1999). It has four components. Remember them with the "Four I's":
 
 1. **Idealized Influence**: Acting as a charismatic role model that others want to emulate
 2. **Inspirational Motivation**: Creating and communicating a compelling vision (using framing to make goals meaningful)
@@ -209,7 +209,7 @@ Transformational leadership elevates both leaders and followers to higher levels
 
 Transactional leadership focuses on exchanges and managing performance (Bass, 1990). Two key elements:
 
-**Contingent Rewards**: Making rewards depend on performance—"If you accomplish X, you'll receive Y"
+**Contingent Rewards**: Making rewards depend on performance, "If you accomplish X, you'll receive Y"
 
 **Management-by-Exception (MBE)**: Intervening to correct mistakes or rule violations
 - **Active MBE**: Closely monitoring and taking immediate corrective action to prevent problems
@@ -217,7 +217,7 @@ Transactional leadership focuses on exchanges and managing performance (Bass, 19
 
 ### The Laissez-Faire Non-Approach
 
-There's also laissez-faire leadership, which isn't really leadership at all—it's a hands-off approach with minimal guidance.
+There's also laissez-faire leadership, which isn't really leadership at all. It's a hands-off approach with minimal guidance.
 
 {{M}}Consider two clinical directors. The transformational director creates an inspiring vision for client care, encourages staff to think creatively about treatment approaches, mentors each clinician individually, and embodies the values they want to see. The transactional director establishes clear performance metrics with associated bonuses, monitors for policy violations, and intervenes when problems arise.{{/M}} Both can be effective, but they create very different work environments.
 
@@ -261,7 +261,7 @@ LMX theory is descriptive, not prescriptive. It describes what actually happens 
 
 ## Key Takeaways
 
-- **Intelligence correlates with leadership effectiveness at .27**—real but modest. It's a better predictor when stress is low and style is directive.
+- **Intelligence correlates with leadership effectiveness at .27**. Real but modest. It's a better predictor when stress is low and style is directive.
 
 - **Extraversion (.31) and conscientiousness (.28) are the Big Five traits most associated with leadership effectiveness**, but correlations are still modest.
 
@@ -283,4 +283,4 @@ LMX theory is descriptive, not prescriptive. It describes what actually happens 
 
 - **Transformational leadership has four components (the Four I's)** and elevates both leaders and followers. Transactional leadership uses contingent rewards and management-by-exception (active or passive).
 
-Understanding these theories isn't just about passing the EPPP—it's about becoming a more effective psychologist, supervisor, and colleague throughout your career. The research shows there's no single "best" leadership style; effectiveness comes from understanding yourself, your team members, and the situation, then choosing approaches that fit all three.
+Understanding these theories isn't just about passing the EPPP. It's about becoming a more effective psychologist, supervisor, and colleague throughout your career. The research shows there's no single "best" leadership style; effectiveness comes from understanding yourself, your team members, and the situation, then choosing approaches that fit all three.

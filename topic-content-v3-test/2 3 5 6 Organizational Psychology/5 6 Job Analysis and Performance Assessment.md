@@ -9,9 +9,9 @@ version: 3
 
 ## Why Job Analysis and Performance Assessment Matter for Your Career
 
-Whether you're preparing to work in organizational psychology, consulting, or any applied setting, understanding how jobs are analyzed and performance is assessed is crucial. These aren't just abstract HR concepts—they're the systems that determine who gets hired, who gets promoted, and whether someone's work is valued fairly. You'll encounter these principles whether you're designing workplace interventions, testifying about employment practices, or simply navigating your own career.
+Whether you're preparing to work in organizational psychology, consulting, or any applied setting, understanding how jobs are analyzed and performance is assessed is crucial. These aren't just abstract HR concepts. They're the systems that determine who gets hired, who gets promoted, and whether someone's work is valued fairly. You'll encounter these principles whether you're designing workplace interventions, testifying about employment practices, or simply navigating your own career.
 
-Let's break down these complex systems into practical knowledge you can use—and remember for the EPPP.
+Let's break down these complex systems into practical knowledge you can use. And remember for the EPPP.
 
 ## The Foundation: Job Analysis
 
@@ -25,7 +25,7 @@ Job analysis can take two different paths, and understanding the difference is e
 
 The most common work-oriented method is **task analysis**. Here's how it works: employees and supervisors create a comprehensive list of job tasks, then subject matter experts rate each task on how frequently it occurs and how important it is. Tasks that score high on both dimensions make it into the official job description.
 
-**Worker-oriented job analysis** focuses on the characteristics people need to perform those tasks—the knowledge, skills, abilities, and other characteristics (KSAOs). {{M}}For that same barista position, this approach would identify: manual dexterity, customer service skills, ability to work under pressure, knowledge of coffee preparation techniques.{{/M}} This approach answers: "What kind of person can do this job well?"
+**Worker-oriented job analysis** focuses on the characteristics people need to perform those tasks, the knowledge, skills, abilities, and other characteristics (KSAOs). {{M}}For that same barista position, this approach would identify: manual dexterity, customer service skills, ability to work under pressure, knowledge of coffee preparation techniques.{{/M}} This approach answers: "What kind of person can do this job well?"
 
 The **Position Analysis Questionnaire (PAQ)** is a widely-used worker-oriented tool that examines six categories:
 - Information input (how do you get job information?)
@@ -49,7 +49,7 @@ Organizations use multiple methods to understand jobs:
 
 ## Beyond Job Analysis: Competency Modeling
 
-While job analysis examines individual positions, **competency modeling** takes a broader view. It identifies the core attributes needed across multiple jobs within an organization—characteristics tied to the organization's values and strategic goals.
+While job analysis examines individual positions, **competency modeling** takes a broader view. It identifies the core attributes needed across multiple jobs within an organization. Characteristics tied to the organization's values and strategic goals.
 
 {{M}}If job analysis is like creating a detailed recipe for one specific dish, competency modeling is like identifying the fundamental cooking techniques that matter across your entire restaurant's menu.{{/M}}
 
@@ -58,15 +58,15 @@ Examples of core competencies might include:
 - "Adapts quickly to changing organizational priorities"
 - "Maintains current knowledge of evidence-based practices"
 
-Notice how these apply across different roles rather than describing one specific job. An organization might use competency modeling to ensure everyone—from receptionists to senior clinicians—embodies certain values.
+Notice how these apply across different roles rather than describing one specific job. An organization might use competency modeling to ensure everyone (from receptionists to senior clinicians) embodies certain values.
 
 Both approaches serve similar functions: guiding hiring decisions, shaping training programs, and assessing performance. The key difference? Job analysis is job-specific; competency modeling is organization-wide.
 
 ## Job Evaluation: Determining Fair Pay
 
-**Job evaluation** uses job analysis as a starting point but has one specific goal: determining appropriate compensation. It's particularly important for establishing **comparable worth**—the principle that jobs requiring similar skills, responsibilities, and value to the employer should receive similar pay, regardless of who typically holds those positions.
+**Job evaluation** uses job analysis as a starting point but has one specific goal: determining appropriate compensation. It's particularly important for establishing **comparable worth**, the principle that jobs requiring similar skills, responsibilities, and value to the employer should receive similar pay, regardless of who typically holds those positions.
 
-Comparable worth has been crucial in addressing gender-based wage gaps. {{M}}Consider two positions: an administrative coordinator (historically female-dominated) and a warehouse supervisor (historically male-dominated). If job evaluation shows they require comparable skill levels and responsibility, they should receive comparable pay—even if market forces or historical biases suggest otherwise.{{/M}}
+Comparable worth has been crucial in addressing gender-based wage gaps. {{M}}Consider two positions: an administrative coordinator (historically female-dominated) and a warehouse supervisor (historically male-dominated). If job evaluation shows they require comparable skill levels and responsibility, they should receive comparable pay. Even if market forces or historical biases suggest otherwise.{{/M}}
 
 The **point system** is a common evaluation method:
 1. Identify compensable factors (effort, skill, responsibility, working conditions)
@@ -89,7 +89,7 @@ Once someone is hired, organizations need ways to measure performance. These mea
 - Accidents occurred
 - Days absent
 
-{{M}}These are like checking your phone's screen time statistics—hard numbers that can't be argued with.{{/M}} However, objective measures have limitations. They're not available for many jobs (how do you quantify a therapist's effectiveness objectively?), they don't capture the complete picture of performance, and they can be influenced by factors outside the employee's control, like inadequate resources or poor management.
+{{M}}These are like checking your phone's screen time statistics. Hard numbers that can't be argued with.{{/M}} However, objective measures have limitations. They're not available for many jobs (how do you quantify a therapist's effectiveness objectively?), they don't capture the complete picture of performance, and they can be influenced by factors outside the employee's control, like inadequate resources or poor management.
 
 **Subjective measures** involve ratings and judgments, typically from supervisors. They're the most common type of performance assessment because they can:
 - Assess aspects of performance that can't be measured objectively
@@ -106,11 +106,11 @@ Rating scales come in two fundamental varieties, and the distinction matters for
 
 **Relative scales** require comparing employees against each other rather than against an absolute standard.
 
-**Paired comparison technique**: The rater compares each employee to every other employee in pairs. {{M}}If you have five employees, you'd compare Employee A to B, A to C, A to D, A to E, then B to C, B to D, and so on—indicating who's better in each pairing.{{/M}} For each performance dimension (like "communication skills" or "technical knowledge"), you note who's superior in each pair. This method eliminates central tendency, leniency, and strictness biases, but it becomes extremely time-consuming with large groups.
+**Paired comparison technique**: The rater compares each employee to every other employee in pairs. {{M}}If you have five employees, you'd compare Employee A to B, A to C, A to D, A to E, then B to C, B to D, and so on, indicating who's better in each pairing.{{/M}} For each performance dimension (like "communication skills" or "technical knowledge"), you note who's superior in each pair. This method eliminates central tendency, leniency, and strictness biases, but it becomes extremely time-consuming with large groups.
 
-**Forced distribution method**: The rater must assign specific percentages of employees to predetermined categories—perhaps 10% to "poor," 20% to "below average," 40% to "average," 20% to "above average," and 10% to "excellent."
+**Forced distribution method**: The rater must assign specific percentages of employees to predetermined categories. Perhaps 10% to "poor," 20% to "below average," 40% to "average," 20% to "above average," and 10% to "excellent."
 
-This approach also prevents rating everyone as average or above average. However, it creates problems when reality doesn't match the distribution. {{M}}Imagine you're managing a team where everyone genuinely performs at an above-average level—maybe you've hired exceptionally well or provided excellent training. The forced distribution would require you to label some people as "poor" or "below average" even though they're actually doing fine work.{{/M}} This can damage morale and accuracy.
+This approach also prevents rating everyone as average or above average. However, it creates problems when reality doesn't match the distribution. {{M}}Imagine you're managing a team where everyone genuinely performs at an above-average level. Maybe you've hired exceptionally well or provided excellent training. The forced distribution would require you to label some people as "poor" or "below average" even though they're actually doing fine work.{{/M}} This can damage morale and accuracy.
 
 ### Absolute Rating Scales
 
@@ -120,7 +120,7 @@ This approach also prevents rating everyone as average or above average. However
 
 These behavioral examples then become the basis for evaluation. CIT provides excellent feedback because it focuses on observable behaviors rather than vague judgments. However, it's time-consuming to develop, focuses only on extreme behaviors rather than typical performance, and must be recreated for each different job.
 
-**Graphic rating scales**: These present several performance dimensions with Likert-type scales—typically ranging from 1 (poor) to 5 (excellent). A rater might evaluate an employee on "job knowledge," "teamwork," "communication," and "reliability," assigning a number to each.
+**Graphic rating scales**: These present several performance dimensions with Likert-type scales. Typically ranging from 1 (poor) to 5 (excellent). A rater might evaluate an employee on "job knowledge," "teamwork," "communication," and "reliability," assigning a number to each.
 
 They're easy to create and use, which explains their popularity. Unfortunately, they're highly vulnerable to rater biases because the scale points are often vague.
 
@@ -133,15 +133,15 @@ They're easy to create and use, which explains their popularity. Unfortunately, 
 | 3 = Average communication | 3 = Usually explains treatment plans adequately but occasionally uses jargon; sometimes addresses client questions |
 | 1 = Poor communication | 1 = Frequently uses technical terms without explanation; dismisses or overlooks client questions; provides minimal information |
 
-BARS reduce rater biases because the behavioral anchors clarify what each rating means, and they provide specific, actionable feedback. The downside? They require substantial time and expertise to develop, and they're job-specific—you need different BARS for different positions.
+BARS reduce rater biases because the behavioral anchors clarify what each rating means, and they provide specific, actionable feedback. The downside? They require substantial time and expertise to develop, and they're job-specific. You need different BARS for different positions.
 
 ## The Gap Between Ideal and Real: Ultimate Versus Actual Criteria
 
 Performance measurement theory distinguishes between what we want to measure and what we actually measure.
 
-The **ultimate criterion** is a perfect, comprehensive measure capturing everything important about job performance. It's theoretical—we can conceptualize it but never fully achieve it in practice.
+The **ultimate criterion** is a perfect, comprehensive measure capturing everything important about job performance. It's theoretical. We can conceptualize it but never fully achieve it in practice.
 
-The **actual criterion** is what our measures actually capture—always an imperfect approximation of the ultimate criterion.
+The **actual criterion** is what our measures actually capture. Always an imperfect approximation of the ultimate criterion.
 
 Two problems create the gap between ultimate and actual criteria:
 
@@ -175,7 +175,7 @@ All three distribution errors make ratings useless for distinguishing performanc
 
 The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.
 
-{{M}}Imagine you're supervising an intern who is exceptionally punctual—always early, never misses deadlines, incredibly organized with time management. You might unconsciously rate them highly on clinical skills, case conceptualization, and theoretical knowledge simply because you're so impressed with their punctuality, even though these dimensions aren't actually related.{{/M}}
+{{M}}Imagine you're supervising an intern who is exceptionally punctual. Always early, never misses deadlines, incredibly organized with time management. You might unconsciously rate them highly on clinical skills, case conceptualization, and theoretical knowledge simply because you're so impressed with their punctuality, even though these dimensions aren't actually related.{{/M}}
 
 The halo can be positive (one strong trait inflates all ratings) or negative (one weak trait deflates all ratings). It's particularly problematic because raters usually don't realize they're doing it.
 
@@ -183,7 +183,7 @@ The halo can be positive (one strong trait inflates all ratings) or negative (on
 
 **Contrast error** occurs when ratings of one employee are influenced by the performance of a previously evaluated employee rather than by absolute standards.
 
-{{M}}If you evaluate an outstanding employee first, the next employee you rate might seem worse by comparison even if they're actually performing well. It's like tasting an exceptional wine first—everything that comes after seems less impressive, even wines that would normally taste quite good.{{/M}}
+{{M}}If you evaluate an outstanding employee first, the next employee you rate might seem worse by comparison even if they're actually performing well. It's like tasting an exceptional wine first, everything that comes after seems less impressive, even wines that would normally taste quite good.{{/M}}
 
 This error is especially likely when raters evaluate multiple employees in sequence without breaks or recalibration.
 
@@ -209,7 +209,7 @@ BARS reduce all types of biases by clarifying what each rating point means throu
 
 ### Provide Effective Rater Training
 
-Training is the most powerful tool for improving rating accuracy—but only if done correctly.
+Training is the most powerful tool for improving rating accuracy. But only if done correctly.
 
 Research shows that training focused solely on avoiding biases can actually reduce overall accuracy. Apparently, when raters become hyperaware of potential biases, they overcorrect and introduce new distortions.
 
@@ -286,4 +286,4 @@ Reality: Job analysis gathers information about jobs; job evaluation uses that i
 
 - **Behaviorally anchored rating scales (BARS)** and **FOR training** work together powerfully to improve performance assessment accuracy
 
-Understanding these concepts prepares you not just for EPPP questions but for real organizational consultation, personnel psychology work, and navigating your own career. These aren't abstract theories—they're the systems that shape workplace fairness and effectiveness every day.
+Understanding these concepts prepares you not just for EPPP questions but for real organizational consultation, personnel psychology work, and navigating your own career. These aren't abstract theories. They're the systems that shape workplace fairness and effectiveness every day.

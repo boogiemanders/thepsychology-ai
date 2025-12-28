@@ -29,13 +29,13 @@ Freud divided personality into three competing forces:
 | **Ego** | ~6 months | Reality principle | Rational problem-solving | To satisfy id's needs realistically |
 | **Superego** | Later childhood | Moral principle | Society's rules internalized | To block id's "bad" impulses completely |
 
-{{M}}Imagine three coworkers trying to make a decision: The id is the impulsive one who wants to skip the boring meeting and go day-drinking. The superego is the rigid rule-follower who insists you must stay for every minute because that's what good employees do. The ego is the one trying to negotiate—maybe you can attend the important parts and leave early if you finish your tasks.{{/M}}
+{{M}}Imagine three coworkers trying to make a decision: The id is the impulsive one who wants to skip the boring meeting and go day-drinking. The superego is the rigid rule-follower who insists you must stay for every minute because that's what good employees do. The ego is the one trying to negotiate. Maybe you can attend the important parts and leave early if you finish your tasks.{{/M}}
 
 When the ego can't resolve conflicts between id and superego rationally, it uses defense mechanisms. These are unconscious psychological strategies that distort or deny reality to reduce anxiety.
 
 **Key Defense Mechanisms You Need to Know**
 
-- **Repression**: The foundation of all other defenses. Keeping threatening thoughts completely out of awareness—not conscious avoidance, but truly not knowing they exist.
+- **Repression**: The foundation of all other defenses. Keeping threatening thoughts completely out of awareness. Not conscious avoidance, but truly not knowing they exist.
 
 - **Denial**: Refusing to acknowledge distressing reality. {{M}}Like someone whose relationship is clearly ending but keeps planning their future wedding.{{/M}}
 
@@ -58,7 +58,7 @@ The analysis follows four steps:
 
 **Confrontation** → **Clarification** → **Interpretation** → **Working Through**
 
-First, you help clients notice behaviors they weren't aware of. Then you focus on what's important. Then you connect conscious behaviors to unconscious processes. Finally, through repeated interpretation, clients experience catharsis (releasing repressed emotions) and insight, which leads to working through—gradually accepting and integrating these new understandings into their lives.
+First, you help clients notice behaviors they weren't aware of. Then you focus on what's important. Then you connect conscious behaviors to unconscious processes. Finally, through repeated interpretation, clients experience catharsis (releasing repressed emotions) and insight, which leads to working through. Gradually accepting and integrating these new understandings into their lives.
 
 ### Jung's Analytical Psychology: Beyond Freud
 
@@ -71,11 +71,11 @@ Jung split the unconscious into two parts:
 - **Personal unconscious**: Your own forgotten or repressed memories (similar to Freud's idea)
 - **Collective unconscious**: Memories shared by all humans, passed down through generations
 
-The collective unconscious contains **archetypes**—universal patterns of thought and imagery that predispose us to act in similar ways. These show up in myths, dreams, and symbols across all cultures. Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).
+The collective unconscious contains **archetypes**. Universal patterns of thought and imagery that predispose us to act in similar ways. These show up in myths, dreams, and symbols across all cultures. Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).
 
 **The Goal: Individuation**
 
-Jung's therapy aims for individuation, which happens mainly in the second half of life. This is the process of becoming a whole, complete individual—integrating all aspects of yourself, including those from the collective unconscious. The therapist uses dream interpretation and transference analysis to bring unconscious material into awareness.
+Jung's therapy aims for individuation, which happens mainly in the second half of life. This is the process of becoming a whole, complete individual, integrating all aspects of yourself, including those from the collective unconscious. The therapist uses dream interpretation and transference analysis to bring unconscious material into awareness.
 
 ## The Humanistic and Existential Perspective: Freedom, Growth, and Meaning
 
@@ -93,11 +93,11 @@ These approaches emerged partly as a reaction against psychoanalysis's determini
 
 ### Person-Centered Therapy: Creating the Right Conditions
 
-Carl Rogers developed this approach based on one key assumption: humans have an innate drive toward self-actualization—becoming the best version of themselves. Problems arise when there's incongruence between self-concept and actual experience.
+Carl Rogers developed this approach based on one key assumption: humans have an innate drive toward self-actualization, becoming the best version of themselves. Problems arise when there's incongruence between self-concept and actual experience.
 
 **Conditions of Worth: Where Things Go Wrong**
 
-{{M}}Imagine growing up where your parents only showed love when you got straight A's, acted cheerful, and never expressed anger. You learn that your worth is conditional—you're only lovable when you meet certain standards.{{/M}} This creates incongruence. Your actual feelings (sometimes angry, sometimes sad, sometimes just average) don't match the self-concept you need to maintain (always happy, always excellent). You start distorting or denying your real experiences, leading to psychological problems.
+{{M}}Imagine growing up where your parents only showed love when you got straight A's, acted cheerful, and never expressed anger. You learn that your worth is conditional. You're only lovable when you meet certain standards.{{/M}} This creates incongruence. Your actual feelings (sometimes angry, sometimes sad, sometimes just average) don't match the self-concept you need to maintain (always happy, always excellent). You start distorting or denying your real experiences, leading to psychological problems.
 
 **The Three Facilitative Conditions**
 
@@ -109,7 +109,7 @@ Rogers believed that providing these three core conditions creates an environmen
 | **Unconditional Positive Regard** | Valuing and accepting the client as a person, regardless of their behaviors | Maintaining warmth even when discussing the client's harmful actions |
 | **Congruence** | Being genuine, authentic, and honest | Not hiding behind a professional facade; being real |
 
-The goal is helping clients become "fully functioning"—open to experience, living in the present, trusting their own judgment, and actively self-actualizing.
+The goal is helping clients become "fully functioning". Open to experience, living in the present, trusting their own judgment, and actively self-actualizing.
 
 ### Gestalt Therapy: Awareness and Contact
 
@@ -154,7 +154,7 @@ Existential therapists believe psychological disturbances come from failing to r
 
 {{M}}Normal anxiety is like feeling nervous before a major career transition because you're genuinely uncertain about the future. Neurotic anxiety is having panic attacks about leaving your job when you have solid plans, because you're really avoiding deeper questions about whether you've been living authentically.{{/M}}
 
-The goal is helping clients live more authentically—taking charge of their lives, choosing their own values and purposes, and acting in ways that express those values. The therapist-client relationship itself is the primary tool, though therapists may also use questioning, interpretation, and reframing.
+The goal is helping clients live more authentically, taking charge of their lives, choosing their own values and purposes, and acting in ways that express those values. The therapist-client relationship itself is the primary tool, though therapists may also use questioning, interpretation, and reframing.
 
 ### Reality Therapy: Making Better Choices
 
@@ -186,7 +186,7 @@ Reality therapists follow this structured approach:
 
 This is the newest addition to this category. Positive psychology focuses on "valued subjective experiences": well-being, contentment, satisfaction, hope, optimism, flow, and happiness.
 
-**Flow**: A key concept referring to being so absorbed in an activity that nothing else matters. {{M}}That state when you're doing something challenging but well-matched to your skills—time disappears, self-consciousness fades, and you're completely engaged.{{/M}}
+**Flow**: A key concept referring to being so absorbed in an activity that nothing else matters. {{M}}That state when you're doing something challenging but well-matched to your skills. Time disappears, self-consciousness fades, and you're completely engaged.{{/M}}
 
 Flow happens most when there's a challenge-skill balance: you believe you have the skills needed, and both the challenge and your skill level are relatively high. A distinctive feature of positive psychology is its commitment to empirical research. Studies have linked positive emotions and optimism to longer life and improved physical health.
 
@@ -263,6 +263,6 @@ Elements of all these approaches still appear in modern integrative practice. Un
 
 - **Personal construct therapy** focuses on how people construe events using bipolar personal constructs; helps clients try out alternative ways of perceiving through techniques like fixed-role therapy
 
-- **Humanistic approaches** emphasize growth and self-actualization; **existential approaches** emphasize freedom, responsibility, and confronting life's inherent anxieties—they share some similarities but have distinct philosophical differences
+- **Humanistic approaches** emphasize growth and self-actualization; **existential approaches** emphasize freedom, responsibility, and confronting life's inherent anxieties. They share some similarities but have distinct philosophical differences
 
 Understanding these foundational approaches gives you the framework for understanding modern integrative therapies and provides essential knowledge for the EPPP's treatment and intervention domain. Focus on distinguishing between approaches, knowing their key techniques and goals, and being able to identify examples of concepts like defense mechanisms and boundary disturbances.

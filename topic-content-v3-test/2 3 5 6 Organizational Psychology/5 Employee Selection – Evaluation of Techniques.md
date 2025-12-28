@@ -11,7 +11,7 @@ version: 3
 
 Here's the deal: Organizations spend huge amounts of money hiring people. Sometimes they get it right and hire someone amazing. Other times, they hire someone who causes chaos, costs money, and eventually quits or gets fired. The difference? Usually, it's how they evaluated their selection techniques.
 
-For the EPPP, this topic bridges organizational psychology with measurement principles. You'll need to understand not just *what* makes a good selection tool, but *how* we determine if it's actually worth using. This isn't abstract theory—understanding these concepts means you could genuinely help a company save hundreds of thousands of dollars or avoid costly discrimination lawsuits.
+For the EPPP, this topic bridges organizational psychology with measurement principles. You'll need to understand not just *what* makes a good selection tool, but *how* we determine if it's actually worth using. This isn't abstract theory, understanding these concepts means you could genuinely help a company save hundreds of thousands of dollars or avoid costly discrimination lawsuits.
 
 Let's break down how psychologists evaluate whether a hiring tool (like a test, interview, or work sample) is worth using.
 
@@ -30,7 +30,7 @@ Let's tackle each one.
 
 ### Reliability: Consistency is Key
 
-**Reliability** means the selection tool gives you consistent results. {{M}}Think of reliability like your bathroom scale. If you step on it five times in a row and get five wildly different numbers, that scale isn't reliable—it's measuring inconsistently due to random error. But if it gives you the same number each time, you know it's at least consistent.{{/M}}
+**Reliability** means the selection tool gives you consistent results. {{M}}Think of reliability like your bathroom scale. If you step on it five times in a row and get five wildly different numbers, that scale isn't reliable. It's measuring inconsistently due to random error. But if it gives you the same number each time, you know it's at least consistent.{{/M}}
 
 A reliability coefficient ranges from 0 to 1.0. The closer to 1.0, the less random error is messing with your measurements. Most good selection tools aim for reliability coefficients above .70 or .80.
 
@@ -39,7 +39,7 @@ There are different ways to check reliability:
 - **Internal consistency**: Do different items on the test measure the same thing?
 - **Inter-rater**: Do different evaluators give similar scores?
 
-Here's the catch: A selection tool can be perfectly reliable but still useless for hiring. {{M}}Your bathroom scale might consistently tell you that you weigh 150 pounds, but if you actually weigh 180 pounds, that scale is reliable but not valid—it's consistently measuring the wrong thing.{{/M}}
+Here's the catch: A selection tool can be perfectly reliable but still useless for hiring. {{M}}Your bathroom scale might consistently tell you that you weigh 150 pounds, but if you actually weigh 180 pounds, that scale is reliable but not valid. It's consistently measuring the wrong thing.{{/M}}
 
 ### Validity: Measuring What Matters
 
@@ -51,7 +51,7 @@ Here's the catch: A selection tool can be perfectly reliable but still useless f
 - Basing the tool on a thorough job analysis
 - Having subject matter experts review it
 
-{{M}}Imagine you're hiring a barista, and your selection test only asks about coffee bean origins but nothing about operating an espresso machine, handling customer complaints, or working during a rush. That test has poor content validity—it's missing huge chunks of what the job actually requires.{{/M}}
+{{M}}Imagine you're hiring a barista, and your selection test only asks about coffee bean origins but nothing about operating an espresso machine, handling customer complaints, or working during a rush. That test has poor content validity. It's missing huge chunks of what the job actually requires.{{/M}}
 
 Content validity is crucial for:
 - Job knowledge tests
@@ -123,9 +123,9 @@ The **base rate** is the percentage of people hired under your *current* system 
 
 A **moderate base rate (around .50) gives you the most room for improvement**. Here's why:
 
-If your base rate is already .80, your current system is doing great—adding a new tool probably won't help much. {{M}}It's like trying to optimize an already excellent recipe. Sure, you might make it slightly better, but you won't see dramatic improvement.{{/M}}
+If your base rate is already .80, your current system is doing great, adding a new tool probably won't help much. {{M}}It's like trying to optimize an already excellent recipe. Sure, you might make it slightly better, but you won't see dramatic improvement.{{/M}}
 
-If your base rate is very low (.20), the problem probably isn't the selection process—it's something else, like terrible training, awful management, or unrealistic job demands. {{M}}It's like if 80% of people who join your gym quit within a month. The problem isn't your membership screening process; the problem is probably your gym.{{/M}}
+If your base rate is very low (.20), the problem probably isn't the selection process. It's something else, like terrible training, awful management, or unrealistic job demands. {{M}}It's like if 80% of people who join your gym quit within a month. The problem isn't your membership screening process; the problem is probably your gym.{{/M}}
 
 ### The Taylor-Russell Tables: Putting It All Together
 
@@ -136,9 +136,9 @@ Here's an example from the tables:
 - New predictor's validity coefficient: .30 (fairly modest)
 - Selection ratio: .10 (hiring 1 out of 10 applicants)
 
-**Result**: Adding the new predictor increases success rate to 71%—a 21% improvement!
+**Result**: Adding the new predictor increases success rate to 71%, a 21% improvement!
 
-But change the selection ratio to .90 (hiring 9 out of 10 applicants), and that same predictor only increases success to 53%—barely a 3% improvement.
+But change the selection ratio to .90 (hiring 9 out of 10 applicants), and that same predictor only increases success to 53%. Barely a 3% improvement.
 
 This is why tech companies and consulting firms can use selection tools with moderate validity and still see big benefits: they have very low selection ratios (hundreds of applicants for each position).
 
@@ -164,7 +164,7 @@ Example:
 - The test's validity coefficient for men: .70 (strong predictor)
 - The test's validity coefficient for women: .20 (weak predictor)
 
-This means the test predicts job performance well for men but poorly for women—it's not working the same way for both groups.
+This means the test predicts job performance well for men but poorly for women. It's not working the same way for both groups.
 
 ### The 80% Rule (Four-Fifths Rule)
 
@@ -202,7 +202,7 @@ To show a procedure is job-related, the employer must demonstrate:
 | **Business Necessity** | The requirement is necessary for safe and efficient operation | Airline requiring pilots to have excellent vision |
 | **Bona Fide Occupational Qualification (BFOQ)** | The requirement is essential for normal business operations | Religious school requiring teachers to be members of that religion |
 
-**Important EPPP note**: BFOQ can apply to gender, age, religion, and national origin—but *never* to race.
+**Important EPPP note**: BFOQ can apply to gender, age, religion, and national origin. But *never* to race.
 
 ## Utility Analysis: Show Me the Money
 
@@ -253,7 +253,7 @@ For a company hiring 100 employees per year where the difference between a good 
 - **C**onstruct: Does it measure the **C**onstruct?
 - **C**riterion: Does it predict the **C**riterion?
 
-**For incremental validity factors**: Remember "VBS" - Validity coefficient, Base rate, Selection ratio. {{M}}Think of it like adjusting three dials to see if a new hire tool is worth adding.{{/M}}
+**For incremental validity factors**: Remember "VBS". Validity coefficient, Base rate, Selection ratio. {{M}}Think of it like adjusting three dials to see if a new hire tool is worth adding.{{/M}}
 
 **For the 80% rule**: Practice the calculation with different numbers until it's automatic. Make up scenarios: "If 60% of men are hired, what's the minimum for women?" (.60 × .80 = .48 or 48%)
 

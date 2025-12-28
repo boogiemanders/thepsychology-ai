@@ -9,7 +9,7 @@ version: 3
 
 ## Why Your Brain's Outer Layer Matters More Than You Think
 
-You're studying for the EPPP, which means you're preparing to work with actual human beings—people whose brains control everything from their ability to hold a conversation to their capacity to recognize their own face in a mirror. The cerebral cortex is where much of that magic happens. It's also where things can go dramatically wrong in ways that will walk into your future office.
+You're studying for the EPPP, which means you're preparing to work with actual human beings. People whose brains control everything from their ability to hold a conversation to their capacity to recognize their own face in a mirror. The cerebral cortex is where much of that magic happens. It's also where things can go dramatically wrong in ways that will walk into your future office.
 
 Understanding the cerebral cortex isn't just about passing an exam. When a client struggles to find the right words, or when someone insists they're fine despite clear signs of stroke, or when a patient shows surprisingly poor judgment despite normal intelligence, you'll need to recognize what's happening neurologically. This knowledge helps you make appropriate referrals, understand limitations, and set realistic treatment goals.
 
@@ -34,7 +34,7 @@ The frontal lobe houses three critical areas that will come up repeatedly on the
 
 ### Broca's Area: The Speech Production Center
 
-Located in the dominant hemisphere (left side for most people), Broca's area is your language production hub. When it's damaged, you get **Broca's aphasia**—also called expressive or nonfluent aphasia.
+Located in the dominant hemisphere (left side for most people), Broca's area is your language production hub. When it's damaged, you get **Broca's aphasia**. Also called expressive or nonfluent aphasia.
 
 Here's what's fascinating: people with Broca's aphasia can understand what you're saying. They know what they want to say. But getting the words out? That's the struggle. Their speech becomes slow and effortful, stripped down to mainly nouns and verbs. {{M}}It's like knowing exactly what you want to text but your phone's keyboard only works for certain letters. You can communicate, but it takes forever and comes out choppy.{{/M}}
 
@@ -55,7 +55,7 @@ The PFC has four regions you need to know, and each one has distinct functions a
 
 **Dorsolateral Prefrontal Cortex (DLPFC)**
 
-This is your goal-directed behavior center. It handles most executive functions and working memory—that mental workspace where you hold and manipulate information.
+This is your goal-directed behavior center. It handles most executive functions and working memory. That mental workspace where you hold and manipulate information.
 
 Damage causes:
 - Impaired goal-directed behavior
@@ -94,7 +94,7 @@ Associated disorders: Major depression, OCD, generalized anxiety disorder, PTSD,
 
 **Orbitofrontal Cortex (OFC)**
 
-The OFC manages emotion regulation, response inhibition, and social behaviors. {{M}}It's like your internal social filter—the thing that stops you from saying every thought that pops into your head during a family dinner.{{/M}}
+The OFC manages emotion regulation, response inhibition, and social behaviors. {{M}}It's like your internal social filter, the thing that stops you from saying every thought that pops into your head during a family dinner.{{/M}}
 
 Damage causes:
 - Impulsivity
@@ -107,7 +107,7 @@ Associated disorders: Major depression, bipolar disorder, OCD, PTSD, schizophren
 
 ### Primary Motor Cortex: Initiating Movement
 
-This area initiates purposeful movements. Interestingly, it's active not just when you move, but when you imagine moving or watch someone else move—crucial for learning new skills and for mirror neuron activity.
+This area initiates purposeful movements. Interestingly, it's active not just when you move, but when you imagine moving or watch someone else move. Crucial for learning new skills and for mirror neuron activity.
 
 Damage produces weakness to paralysis on the opposite (contralateral) side of the body. The specific effects depend on which part is damaged and how extensive the damage is.
 
@@ -124,9 +124,9 @@ This processes sound. Damage can cause:
 
 ### Wernicke's Area: Understanding Language
 
-Located in the dominant hemisphere (usually left), Wernicke's area is where language comprehension happens. Damage produces **Wernicke's aphasia**—also called receptive or fluent aphasia.
+Located in the dominant hemisphere (usually left), Wernicke's area is where language comprehension happens. Damage produces **Wernicke's aphasia**. Also called receptive or fluent aphasia.
 
-This is the opposite pattern from Broca's aphasia. People with Wernicke's aphasia speak fluently—the words flow easily. The problem? Nothing they say makes sense, and they can't understand what others are saying.
+This is the opposite pattern from Broca's aphasia. People with Wernicke's aphasia speak fluently, the words flow easily. The problem? Nothing they say makes sense, and they can't understand what others are saying.
 
 Key features of Wernicke's aphasia:
 - Fluent but meaningless speech
@@ -136,7 +136,7 @@ Key features of Wernicke's aphasia:
 - Anomia
 - Often unaware of their deficits
 
-{{M}}If Broca's aphasia is like having a broken keyboard, Wernicke's aphasia is like autocorrect gone wild—the words come out easily but they're completely wrong, and you don't realize it.{{/M}}
+{{M}}If Broca's aphasia is like having a broken keyboard, Wernicke's aphasia is like autocorrect gone wild, the words come out easily but they're completely wrong, and you don't realize it.{{/M}}
 
 ### Bonus Connection: Conduction Aphasia
 
@@ -160,7 +160,7 @@ Damage can produce various types of agnosia (inability to recognize despite inta
 
 ### Apraxias: When Movement Planning Breaks Down
 
-Apraxia is the inability to perform purposeful, skilled movements despite having the physical ability to move. {{M}}Imagine you're trying to follow a dance tutorial—your body works perfectly, but somehow you can't translate the steps you see into movements you make.{{/M}} It's not a motor problem, sensory problem, or language problem—it's a planning and execution problem.
+Apraxia is the inability to perform purposeful, skilled movements despite having the physical ability to move. {{M}}Imagine you're trying to follow a dance tutorial (your body works perfectly, but somehow you can't translate the steps you see into movements you make.{{/M}} It's not a motor problem, sensory problem, or language problem) it's a planning and execution problem.
 
 Three types typically result from left (dominant) parietal damage:
 
@@ -172,7 +172,7 @@ Three types typically result from left (dominant) parietal damage:
 
 ### Contralateral Neglect
 
-Also called unilateral or hemispatial neglect, this typically results from right (nondominant) parietal damage. Patients neglect the left side of their body and stimuli on their left side. They might only eat food from the right side of their plate, only shave the right side of their face, or only draw the right half of a clock. {{M}}It's not that they can't see the left side—it's more like that entire side of space has been deleted from their awareness.{{/M}}
+Also called unilateral or hemispatial neglect, this typically results from right (nondominant) parietal damage. Patients neglect the left side of their body and stimuli on their left side. They might only eat food from the right side of their plate, only shave the right side of their face, or only draw the right half of a clock. {{M}}It's not that they can't see the left side. It's more like that entire side of space has been deleted from their awareness.{{/M}}
 
 ### Gerstmann's Syndrome
 
@@ -191,7 +191,7 @@ The occipital lobe, at the very back of your brain, contains the visual cortex. 
 Damage can cause:
 - Visual agnosia (seeing but not recognizing what you're looking at)
 - Visual hallucinations
-- Achromatopsia (loss of color vision—seeing only in grayscale)
+- Achromatopsia (loss of color vision, seeing only in grayscale)
 - Cortical blindness
 
 ### Cortical Blindness and the Curious Case of Blindsight
@@ -204,9 +204,9 @@ Here's where it gets weird: some people with cortical blindness exhibit **blinds
 
 ### Prosopagnosia: Face Blindness
 
-Bilateral lesions in the occipitotemporal junction (where occipital and temporal lobes meet) can cause **prosopagnosia**—the inability to recognize familiar faces. In severe cases, people can't recognize their own face in photos, their spouse's face, or even their pet's face. They recognize people by other cues: voice, gait, clothing, context.
+Bilateral lesions in the occipitotemporal junction (where occipital and temporal lobes meet) can cause **prosopagnosia**, the inability to recognize familiar faces. In severe cases, people can't recognize their own face in photos, their spouse's face, or even their pet's face. They recognize people by other cues: voice, gait, clothing, context.
 
-{{M}}Imagine running into your best friend at the grocery store but having no idea who they are until they speak—that's the daily reality for someone with prosopagnosia.{{/M}}
+{{M}}Imagine running into your best friend at the grocery store but having no idea who they are until they speak. That's the daily reality for someone with prosopagnosia.{{/M}}
 
 ## Brain Lateralization: Left Brain, Right Brain, and Why It Matters
 
@@ -225,14 +225,14 @@ While both hemispheres work together on most tasks, each is dominant for certain
 - Creativity
 - Negative emotions
 - Emotional prosody (the emotional "music" of speech)
-- Pragmatics (using language appropriately in social contexts—humor, sarcasm, hyperbole)
+- Pragmatics (using language appropriately in social contexts. Humor, sarcasm, hyperbole)
 - Controls left side of body
 
 **Exception alert:** Smell is different. Odors entering the left nostril go directly to the left hemisphere, and vice versa. Everything else crosses over.
 
 ### Split-Brain Research: How We Learned About Lateralization
 
-Much of what we know comes from Sperry's work with split-brain patients—people whose corpus callosums (the bridge connecting the two hemispheres) were surgically severed to treat severe epilepsy.
+Much of what we know comes from Sperry's work with split-brain patients. People whose corpus callosums (the bridge connecting the two hemispheres) were surgically severed to treat severe epilepsy.
 
 In one classic experiment: When researchers showed a picture of a spoon to the right visual field (processed by the left hemisphere), patients could:
 - Say "spoon" (language is left hemisphere)
@@ -262,7 +262,7 @@ This technique confirms speech lateralization. Two different words are presented
 
 **Misconception 3:** "Agnosia means sensory loss."
 
-**Reality:** Agnosia occurs with intact sensory function. The sensory information gets through; the problem is recognition or awareness. A person with visual agnosia can see perfectly—they just can't recognize what they're looking at.
+**Reality:** Agnosia occurs with intact sensory function. The sensory information gets through; the problem is recognition or awareness. A person with visual agnosia can see perfectly. They just can't recognize what they're looking at.
 
 **Misconception 4:** "Prefrontal cortex damage always causes obvious problems."
 
@@ -299,7 +299,7 @@ Remember the phrase "**RAFF**" (like a drawing raffle):
 Remember: "**L**eft is **L**anguage and **L**ogic" (three L's). Everything else creative, spatial, and emotional tends right.
 
 **For Motor/Sensory Control:**
-"Cross your heart"—motor and sensory information crosses to the opposite side (except smell).
+"Cross your heart". Motor and sensory information crosses to the opposite side (except smell).
 
 ## Key Takeaways
 
@@ -323,4 +323,4 @@ Remember: "**L**eft is **L**anguage and **L**ogic" (three L's). Everything else 
 
 - **Split-brain research revealed lateralization**: Each hemisphere has specialized functions that become apparent when they can't communicate
 
-Understanding these brain regions and their functions isn't just academic—it's foundational for recognizing neurological contributions to psychological symptoms, making appropriate referrals, and understanding client limitations. When someone struggles with emotion regulation, can't recognize faces, or speaks fluently but makes no sense, you'll know what might be happening neurologically and can respond appropriately.
+Understanding these brain regions and their functions isn't just academic. It's foundational for recognizing neurological contributions to psychological symptoms, making appropriate referrals, and understanding client limitations. When someone struggles with emotion regulation, can't recognize faces, or speaks fluently but makes no sense, you'll know what might be happening neurologically and can respond appropriately.

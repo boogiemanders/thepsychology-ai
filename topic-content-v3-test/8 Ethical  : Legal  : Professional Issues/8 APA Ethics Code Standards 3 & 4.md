@@ -9,15 +9,15 @@ version: 3
 
 ## Why Standards 3 & 4 Matter for Your Future Practice
 
-You're preparing to become a licensed psychologist, which means you'll be making dozens of ethical decisions every single week. Should you accept a friend's cousin as a client? What do you tell a client's employer who's paying for therapy? When can you break confidentiality? These aren't abstract academic questions—they're real dilemmas that will shape your career and your clients' wellbeing.
+You're preparing to become a licensed psychologist, which means you'll be making dozens of ethical decisions every single week. Should you accept a friend's cousin as a client? What do you tell a client's employer who's paying for therapy? When can you break confidentiality? These aren't abstract academic questions. They're real dilemmas that will shape your career and your clients' wellbeing.
 
 Standards 3 and 4 of the APA Ethics Code cover Human Relations and Privacy/Confidentiality. Think of these as your ethical GPS for navigating the complex relationships and sensitive information you'll handle daily. Let's break them down into practical, memorable guidance.
 
-## Standard 3: Human Relations—Navigating Professional Boundaries
+## Standard 3: Human Relations (Navigating Professional Boundaries)
 
 ### Discrimination: When Can You Say No?
 
-Here's what confuses many psychology students: The Ethics Code prohibits discrimination based on age, gender, race, ethnicity, and other protected categories—but that doesn't mean you must accept every single person who contacts you for services.
+Here's what confuses many psychology students: The Ethics Code prohibits discrimination based on age, gender, race, ethnicity, and other protected categories. But that doesn't mean you must accept every single person who contacts you for services.
 
 The distinction is crucial. You cannot refuse services because you don't like someone's race or gender. However, you *can* refer someone elsewhere when you genuinely believe their situation falls outside your competence or when specific circumstances would prevent you from providing effective care.
 
@@ -30,7 +30,7 @@ Standard 3.02 defines sexual harassment with crystal clarity. It occurs when sex
 1. **The "told you" standard**: The behavior is unwelcome or offensive, creates a hostile environment, *and* you know or have been told this
 2. **The "reasonable person" standard**: The behavior is severe or intense enough that a reasonable person would find it abusive
 
-The key insight? A single severe incident counts as harassment. So does a pattern of less severe behaviors. {{M}}Imagine someone keeps sending you flirty texts after you've said you're not interested. That first rejection creates the line—anything after that crosses it.{{/M}}
+The key insight? A single severe incident counts as harassment. So does a pattern of less severe behaviors. {{M}}Imagine someone keeps sending you flirty texts after you've said you're not interested. That first rejection creates the line, anything after that crosses it.{{/M}}
 
 The ambiguous situations trip people up on the EPPP. An occasional off-color joke might not constitute harassment initially, but if someone continues after being told it's unwelcome, it absolutely becomes harassment. The Ethics Code is clear: once you're told to stop, you stop.
 
@@ -40,7 +40,7 @@ Multiple relationships happen when you have a professional relationship with som
 - Simultaneously have another role with them or someone close to them
 - Promise a future relationship with them or someone close to them
 
-Not all multiple relationships are prohibited—only those that "could reasonably be expected to impair objectivity, competence, or effectiveness" or risk exploitation or harm.
+Not all multiple relationships are prohibited. Only those that "could reasonably be expected to impair objectivity, competence, or effectiveness" or risk exploitation or harm.
 
 Here's the tricky part that appears frequently on the EPPP: **post-therapy friendships**. Many students think these are fine since therapy has ended. Wrong. These relationships still count as problematic because they prevent the former client from returning to therapy and prevent you from providing other professional services (like court testimony) in the future.
 
@@ -62,7 +62,7 @@ The greater the power differential, the longer the expected duration, and the mo
 
 - **Child custody evaluations**: Never conduct evaluations with current or former therapy clients
 - **Forensic work**: Providing both therapeutic and forensic services to the same person impairs objectivity
-- When a potentially harmful multiple relationship occurs anyway, you must take reasonable steps to resolve it—discuss it with those involved, consult colleagues, prioritize the affected person's best interests
+- When a potentially harmful multiple relationship occurs anyway, you must take reasonable steps to resolve it. Discuss it with those involved, consult colleagues, prioritize the affected person's best interests
 
 ### Conflict of Interest: Following the Money
 
@@ -100,13 +100,13 @@ Standard 3.10 requires informed consent using understandable language before pro
 
 Important exceptions where minors *can* consent:
 - Emancipated minors
-- "Mature minors" (varies by state—those with sufficient maturity and intelligence)
+- "Mature minors" (varies by state. Those with sufficient maturity and intelligence)
 - Minors with certain conditions like substance abuse or STDs (state-dependent)
 - Emergency situations where parental consent isn't available and the minor's life is at risk
 
 {{M}}Think of informed consent with minors like a group project at work: the manager (parent) has final authority, but you still explain the project to the junior employee (minor) and get their buy-in for the best outcome.{{/M}}
 
-**When parents disagree about treatment**: In intact families, consent from one parent usually suffices legally. But getting both parents on board often serves the child's best interests because it improves treatment compliance. When parents are divorced, check the court order—it specifies whose consent is required.
+**When parents disagree about treatment**: In intact families, consent from one parent usually suffices legally. But getting both parents on board often serves the child's best interests because it improves treatment compliance. When parents are divorced, check the court order. It specifies whose consent is required.
 
 **Unaccompanied immigrant children (UIC)** present special challenges. These minors enter the U.S. without parents or legal guardians and are in custody of government agencies. The agency holding custody must consent, not the child. You provide informed consent information to both the agency and the child as appropriate.
 
@@ -116,7 +116,7 @@ When services are mandated by the court, you still discuss the nature of service
 
 #### Documentation Matters
 
-Standard 3.10(d) requires documenting consent appropriately. Sometimes written consent is legally required. Other times, oral consent with documentation is better—like when working with clients from cultures that distrust written documents, clients with limited literacy, or research participants whose anonymity you're protecting.
+Standard 3.10(d) requires documenting consent appropriately. Sometimes written consent is legally required. Other times, oral consent with documentation is better, like when working with clients from cultures that distrust written documents, clients with limited literacy, or research participants whose anonymity you're protecting.
 
 ### Interruption of Services: Planning for the Unexpected
 
@@ -124,13 +124,13 @@ Standard 3.12 requires planning for service interruptions due to your illness, d
 
 **For foreseeable interruptions**: Discuss the situation with clients early, provide pretermination counseling, offer referrals.
 
-**For your death**: Create a professional will naming a professional executor—ideally another psychologist who understands ethical obligations. This person contacts your clients and secures their records. According to ASPPB guidelines, don't name a family member as executor due to inherent conflicts of interest.
+**For your death**: Create a professional will naming a professional executor. Ideally another psychologist who understands ethical obligations. This person contacts your clients and secures their records. According to ASPPB guidelines, don't name a family member as executor due to inherent conflicts of interest.
 
-## Standard 4: Privacy and Confidentiality—Protecting What's Shared
+## Standard 4: Privacy and Confidentiality (Protecting What's Shared)
 
 ### Discussing Confidentiality Limits: The Upfront Conversation
 
-Standard 4.02 requires discussing confidentiality limits at the relationship's outset and whenever circumstances change. This isn't just good practice—it's an ethical mandate.
+Standard 4.02 requires discussing confidentiality limits at the relationship's outset and whenever circumstances change. This isn't just good practice. It's an ethical mandate.
 
 But different contexts create different confidentiality challenges:
 
@@ -138,7 +138,7 @@ But different contexts create different confidentiality challenges:
 
 You must clarify upfront: Who are the clients? How will information shared privately by one person be handled?
 
-{{M}}Imagine treating a married couple. The husband calls you between sessions to say he's having an affair. Do you keep this secret in couple's sessions, or do you tell the wife?{{/M}} There's no universal answer—but you must establish your policy *before* this situation arises. Some therapists maintain "no secrets" policies; others keep individual disclosures confidential unless they directly threaten the therapy. Whatever you decide, make it explicit from session one.
+{{M}}Imagine treating a married couple. The husband calls you between sessions to say he's having an affair. Do you keep this secret in couple's sessions, or do you tell the wife?{{/M}} There's no universal answer. But you must establish your policy *before* this situation arises. Some therapists maintain "no secrets" policies; others keep individual disclosures confidential unless they directly threaten the therapy. Whatever you decide, make it explicit from session one.
 
 #### Group Therapy
 
@@ -154,7 +154,7 @@ Your job is risk reduction:
 
 Minors generally don't have confidentiality rights unless they're emancipated or legally able to consent to treatment. The parent or legal guardian has rights to information disclosed by the minor.
 
-Best practice: Establish a confidentiality agreement at treatment start. Specify what you will and won't share. Be clear about when you'll contact parents—typically when the minor is engaging in potentially harmful behavior or when legally required (suspected abuse, suicide risk).
+Best practice: Establish a confidentiality agreement at treatment start. Specify what you will and won't share. Be clear about when you'll contact parents. Typically when the minor is engaging in potentially harmful behavior or when legally required (suspected abuse, suicide risk).
 
 Even when disclosing information to parents, tell the minor beforehand when possible. Including them in conversations with parents often improves outcomes.
 
@@ -164,15 +164,15 @@ Even when disclosing information to parents, tell the minor beforehand when poss
 
 **Correctional facilities**: Confidentiality ranges from essentially none (court-ordered assessments) to near-typical levels (voluntary therapy). Always clarify limits upfront.
 
-Treatment-driven decisions prioritize the therapeutic relationship. Security-driven decisions prioritize safety of staff and inmates when values conflict. {{M}}If an inmate threatens to harm a guard, that's security-driven—you report it. If an inmate discusses plans to harm someone outside prison but has no means to carry it out, that's different and requires clinical judgment about treatment versus disclosure.{{/M}}
+Treatment-driven decisions prioritize the therapeutic relationship. Security-driven decisions prioritize safety of staff and inmates when values conflict. {{M}}If an inmate threatens to harm a guard, that's security-driven. You report it. If an inmate discusses plans to harm someone outside prison but has no means to carry it out, that's different and requires clinical judgment about treatment versus disclosure.{{/M}}
 
-**Employee Assistance Programs (EAPs)**: Confidentiality works the same as in other therapy—information isn't shared with supervisors or employers without written authorization, even for mandatory referrals. Standard exceptions apply (danger to self/others, mandated reporting).
+**Employee Assistance Programs (EAPs)**: Confidentiality works the same as in other therapy. Information isn't shared with supervisors or employers without written authorization, even for mandatory referrals. Standard exceptions apply (danger to self/others, mandated reporting).
 
 **Telepsychology**: Technology introduces new risks. Protect confidentiality through:
 - Private, soundproof locations
 - Password protection on all devices
 - Encryption for emails, texts, documents
-- HIPAA-compliant videoconferencing (Zoom for Healthcare, Doxy.me, thera-LINK—but NOT Consumer Skype)
+- HIPAA-compliant videoconferencing (Zoom for Healthcare, Doxy.me, thera-LINK. But NOT Consumer Skype)
 - Updated virus/malware protection
 - Discussing with clients how they'll maintain privacy on their end
 
@@ -182,13 +182,13 @@ Standard 4.05 permits disclosure with appropriate authorization OR without autho
 
 #### Risk for Suicide
 
-When clients are at high risk for suicide, protecting their safety may require breaching confidentiality—contacting family or hospitalizing them.
+When clients are at high risk for suicide, protecting their safety may require breaching confidentiality, contacting family or hospitalizing them.
 
 **Important EPPP note**: No-suicide contracts (agreements where clients promise not to harm themselves) have no evidence supporting their effectiveness and don't protect you from liability. Don't rely on them as your sole intervention.
 
 #### Risk for Abuse
 
-Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. Many jurisdictions extend this to elder abuse and abuse of adults with disabilities. You report when you have "reasonable cause to suspect"—not when you're certain.
+Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. Many jurisdictions extend this to elder abuse and abuse of adults with disabilities. You report when you have "reasonable cause to suspect". Not when you're certain.
 
 #### Risk for Physical Harm: The Tarasoff Duty
 
@@ -212,7 +212,7 @@ Always check your jurisdiction's specific laws and consult with colleagues and a
 Standard 4.06 allows consulting with colleagues about clients but requires not disclosing identifying information without authorization. Disclose only what's necessary for the consultation purpose.
 
 Standard 4.07 permits using client information in writings or lectures only if you:
-1. Disguise the person adequately (pseudonyms alone aren't enough—change ages, locations, family composition, timing)
+1. Disguise the person adequately (pseudonyms alone aren't enough. Change ages, locations, family composition, timing)
 2. Obtain written consent, or
 3. Have legal authorization
 
@@ -281,14 +281,14 @@ The court determines whether an exception applies.
 
 ## Key Takeaways
 
-- **Discrimination prohibition** doesn't mean accepting every client—you can refer when appropriate
+- **Discrimination prohibition** doesn't mean accepting every client. You can refer when appropriate
 - **Sexual harassment** becomes clear once someone is told the behavior is unwelcome
 - **Multiple relationships** aren't always prohibited, but evaluate power, duration, and termination clarity
 - **Third-party situations** require clarifying who the client is and how information will be used
 - **Informed consent** requires age-appropriate explanation for minors, even when they can't legally consent
 - **Professional wills** should name another psychologist as executor, not family members
 - **Confidentiality limits** must be discussed at the relationship's outset and when circumstances change
-- **Group therapy** confidentiality can't be guaranteed—only managed through education
+- **Group therapy** confidentiality can't be guaranteed. Only managed through education
 - **Minor clients** generally lack confidentiality rights unless emancipated or legally able to consent
 - **Tarasoff duty** requires clear, imminent threat to identifiable victim with means to carry it out
 - **Confidentiality** (ethical duty) and **privilege** (legal right) are distinct concepts

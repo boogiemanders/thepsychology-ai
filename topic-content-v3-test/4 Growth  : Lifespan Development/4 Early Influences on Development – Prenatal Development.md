@@ -9,9 +9,9 @@ version: 3
 
 ## Why Prenatal Development Matters for Your Practice
 
-You're going to work with clients who grew up with learning disabilities, behavioral challenges, or chronic health conditions. Understanding prenatal development isn't just academic trivia—it's the foundation for recognizing how early biological events shape someone's entire life trajectory. When a parent comes to you worried about their child's development, or when you're assessing an adult with cognitive differences, knowing these patterns helps you ask better questions, provide informed guidance, and connect people with the right resources.
+You're going to work with clients who grew up with learning disabilities, behavioral challenges, or chronic health conditions. Understanding prenatal development isn't just academic trivia. It's the foundation for recognizing how early biological events shape someone's entire life trajectory. When a parent comes to you worried about their child's development, or when you're assessing an adult with cognitive differences, knowing these patterns helps you ask better questions, provide informed guidance, and connect people with the right resources.
 
-Think about it: A 32-year-old client struggling with executive function and social communication might have undiagnosed Klinefelter syndrome. A child's hyperactivity and attention problems could relate to prenatal alcohol exposure. These aren't excuses—they're explanations that open doors to appropriate interventions.
+Think about it: A 32-year-old client struggling with executive function and social communication might have undiagnosed Klinefelter syndrome. A child's hyperactivity and attention problems could relate to prenatal alcohol exposure. These aren't excuses. They're explanations that open doors to appropriate interventions.
 
 ## The Three-Part Timeline of Prenatal Development
 
@@ -19,17 +19,17 @@ Prenatal development follows a predictable path divided into three distinct peri
 
 ### The Germinal Period (Conception through Week 2)
 
-The germinal period covers those first two weeks when the fertilized egg—called a zygote—travels down the fallopian tube and burrows into the uterine wall. This implantation moment is crucial.
+The germinal period covers those first two weeks when the fertilized egg (called a zygote) travels down the fallopian tube and burrows into the uterine wall. This implantation moment is crucial.
 
-Here's the key concept for this period: the **"all-or-none" effect**. {{M}}It's like a strict security checkpoint at a exclusive event{{/M}}—either you get in completely, or you don't get in at all. If the zygote encounters toxic chemicals or other harmful substances during these first two weeks, one of two things happens: Either the damage is so severe that implantation fails (often before a woman even knows she's pregnant), or the damage is minimal enough that implantation succeeds and development continues relatively normally. There's rarely an in-between during this window.
+Here's the key concept for this period: the **"all-or-none" effect**. {{M}}It's like a strict security checkpoint at a exclusive event{{/M}}. Either you get in completely, or you don't get in at all. If the zygote encounters toxic chemicals or other harmful substances during these first two weeks, one of two things happens: Either the damage is so severe that implantation fails (often before a woman even knows she's pregnant), or the damage is minimal enough that implantation succeeds and development continues relatively normally. There's rarely an in-between during this window.
 
 ### The Embryonic Period (Weeks 3-8)
 
 This is the high-stakes period. During weeks three through eight, all the major organs and body structures are forming. The heart starts beating. The neural tube closes to form the brain and spinal cord. Limb buds appear. Eyes and ears begin developing.
 
-Because everything is forming so rapidly, this is when exposure to harmful substances—called **teratogens**—causes the most serious damage. A teratogen that reaches the embryo during week four might affect heart development, while the same substance at week six might impact brain formation.
+Because everything is forming so rapidly, this is when exposure to harmful substances (called **teratogens**) causes the most serious damage. A teratogen that reaches the embryo during week four might affect heart development, while the same substance at week six might impact brain formation.
 
-{{M}}Think of it like building a house's foundation and framework{{/M}}—if something goes wrong during this structural phase, you end up with major architectural problems. Fixes become complicated or impossible. This is why the embryonic period represents the window of greatest vulnerability for major birth defects.
+{{M}}Think of it like building a house's foundation and framework{{/M}}, if something goes wrong during this structural phase, you end up with major architectural problems. Fixes become complicated or impossible. This is why the embryonic period represents the window of greatest vulnerability for major birth defects.
 
 ### The Fetal Period (Week 9 through Birth)
 
@@ -37,7 +37,7 @@ Starting at week nine, the main structures exist, and the focus shifts to growth
 
 Teratogen exposure during this period typically causes minor defects or functional problems rather than major structural abnormalities. However, there's one critical exception: **the central nervous system continues developing throughout the fetal period and remains vulnerable to serious damage**. Brain development doesn't follow the "major structures first, refinements later" rule that other organs do.
 
-Around weeks 22-26, the fetus reaches the **age of viability**—the earliest point where a premature baby could potentially survive outside the womb with intensive medical support.
+Around weeks 22-26, the fetus reaches the **age of viability**, the earliest point where a premature baby could potentially survive outside the womb with intensive medical support.
 
 ### The Trimester System
 
@@ -51,7 +51,7 @@ For the EPPP, know both systems. The period system (germinal, embryonic, fetal) 
 
 ## When Chromosomes Tell a Different Story
 
-Chromosomes carry our genetic blueprint—23 pairs in every cell, with one chromosome from each parent. But sometimes there are copying errors, deletions, or unusual combinations that lead to lifelong conditions.
+Chromosomes carry our genetic blueprint. 23 Pairs in every cell, with one chromosome from each parent. But sometimes there are copying errors, deletions, or unusual combinations that lead to lifelong conditions.
 
 ### Deletion Disorders: Missing Genetic Material
 
@@ -65,7 +65,7 @@ Chromosomes carry our genetic blueprint—23 pairs in every cell, with one chrom
 
 Notice something interesting about Prader-Willi and Angelman: They both involve chromosome 15, but one comes from the father's chromosome and one from the mother's. Same location, completely different outcomes. This shows how genetic expression isn't just about what genes you have, but which parent they came from.
 
-For clinical practice, remember that Prader-Willi involves a distinctive eating pattern. {{M}}Imagine never feeling full, no matter how much you eat{{/M}}—that constant hunger drive leads to the obesity and food-seeking behaviors that define this condition. Behavioral interventions need to account for this biological reality.
+For clinical practice, remember that Prader-Willi involves a distinctive eating pattern. {{M}}Imagine never feeling full, no matter how much you eat{{/M}}. That constant hunger drive leads to the obesity and food-seeking behaviors that define this condition. Behavioral interventions need to account for this biological reality.
 
 ### Sex Chromosome Variations
 
@@ -80,7 +80,7 @@ Sex chromosomes (X and Y) determine biological sex, but also carry genes affecti
 - Executive function challenges (attention, working memory, cognitive flexibility)
 - Social and communication difficulties
 
-The social struggles connect to specific cognitive issues: trouble recognizing faces, identifying emotional expressions, understanding others' perspectives (theory of mind), and processing visual-spatial information. {{M}}It's like trying to navigate social situations with crucial sensory information filtered out{{/M}}—the person can't pick up on the facial and spatial cues most people process automatically.
+The social struggles connect to specific cognitive issues: trouble recognizing faces, identifying emotional expressions, understanding others' perspectives (theory of mind), and processing visual-spatial information. {{M}}It's like trying to navigate social situations with crucial sensory information filtered out{{/M}}, the person can't pick up on the facial and spatial cues most people process automatically.
 
 **Turner Syndrome** affects females who have only one X chromosome (or a partially deleted X chromosome) instead of the typical XX pattern. Physical features include:
 
@@ -102,7 +102,7 @@ The social struggles connect to specific cognitive issues: trouble recognizing f
 - Sleep disturbances and seizures
 - Autism-like behaviors (reduced eye contact, social withdrawal)
 
-Motor skills progressively decline, then often stabilize or slightly improve. {{M}}Imagine learning your child is developing typically, planning for their future, then watching them lose abilities they had mastered{{/M}}—this trajectory creates unique grief and adjustment challenges for families you might work with.
+Motor skills progressively decline, then often stabilize or slightly improve. {{M}}Imagine learning your child is developing typically, planning for their future, then watching them lose abilities they had mastered{{/M}}. This trajectory creates unique grief and adjustment challenges for families you might work with.
 
 **Fragile X Syndrome** (FXS) is also X-linked dominant but affects both males and females, with males typically showing more severe symptoms. It's caused by mutations in the FMR1 gene and is the most common inherited cause of intellectual developmental disorder. Features include:
 
@@ -132,9 +132,9 @@ All types share common features:
 - Developmental delays
 - Elevated risk for vision/hearing problems, heart defects, hypothyroidism, and early-onset Alzheimer's disease
 
-**The maternal age connection**: Risk for trisomy 21 increases with maternal age, particularly after age 30, with the risk curve steepening significantly. {{M}}It's like equipment that functions reliably for years, then starts showing wear patterns at a predictable point{{/M}}—cell division during egg formation becomes more error-prone as women age.
+**The maternal age connection**: Risk for trisomy 21 increases with maternal age, particularly after age 30, with the risk curve steepening significantly. {{M}}It's like equipment that functions reliably for years, then starts showing wear patterns at a predictable point{{/M}}. Cell division during egg formation becomes more error-prone as women age.
 
-However—and this is a common test question trap—**translocation trisomy 21 risk doesn't increase with maternal age**. It can either occur spontaneously during cell division or be inherited from a parent who carries the translocation. When a parent carries the translocation, they may have multiple children with Down syndrome, and other relatives may also be carriers at increased risk.
+However (and this is a common test question trap) **translocation trisomy 21 risk doesn't increase with maternal age**. It can either occur spontaneously during cell division or be inherited from a parent who carries the translocation. When a parent carries the translocation, they may have multiple children with Down syndrome, and other relatives may also be carriers at increased risk.
 
 ## Gene Disorders: Dominant vs. Recessive
 
@@ -144,11 +144,11 @@ Some disorders come from abnormal genes rather than chromosome structure problem
 
 **Huntington's disease** requires only one copy of the abnormal gene to cause the disorder. If one parent has Huntington's, each biological child has a 50% chance of inheriting it. If both parents have it, the child has a 75% chance.
 
-{{M}}Think of a dominant gene like a master override switch{{/M}}—one copy is enough to trigger the condition regardless of what the other gene says.
+{{M}}Think of a dominant gene like a master override switch{{/M}}. One copy is enough to trigger the condition regardless of what the other gene says.
 
 ### Autosomal Recessive: Phenylketonuria (PKU)
 
-**Phenylketonuria** (PKU) requires two copies of the recessive gene—one from each parent. When both parents are carriers (meaning they each have one recessive PKU gene but don't have PKU themselves), each child has:
+**Phenylketonuria** (PKU) requires two copies of the recessive gene. One from each parent. When both parents are carriers (meaning they each have one recessive PKU gene but don't have PKU themselves), each child has:
 
 - 25% chance of having PKU (two recessive genes)
 - 50% chance of being a carrier (one recessive gene)
@@ -164,7 +164,7 @@ People with PKU cannot properly metabolize phenylalanine, an amino acid found in
 - Light skin and hair coloring (hypopigmentation)
 - Stunted growth
 
-The good news: PKU is manageable with a strict low-phenylalanine diet (no milk, cheese, meat, fish, eggs) maintained throughout life. This is why newborns are routinely screened for PKU—early intervention prevents the devastating cognitive effects.
+The good news: PKU is manageable with a strict low-phenylalanine diet (no milk, cheese, meat, fish, eggs) maintained throughout life. This is why newborns are routinely screened for PKU. Early intervention prevents the devastating cognitive effects.
 
 ## Teratogens: Environmental Threats to Development
 
@@ -174,7 +174,7 @@ The good news: PKU is manageable with a strict low-phenylalanine diet (no milk, 
 2. **Amount of exposure** (dose matters)
 3. **Timing of exposure** (when in development it occurs)
 
-Generally, weeks 3-8 (the embryonic period) represent the highest risk window for major structural damage, though timing varies by organ system. Some teratogens work by causing epigenetic changes—altering how genes are expressed without changing the DNA sequence itself.
+Generally, weeks 3-8 (the embryonic period) represent the highest risk window for major structural damage, though timing varies by organ system. Some teratogens work by causing epigenetic changes. Altering how genes are expressed without changing the DNA sequence itself.
 
 ### Alcohol: A Spectrum of Effects
 
@@ -182,14 +182,14 @@ Prenatal alcohol exposure can cause **Fetal Alcohol Spectrum Disorder** (FASD), 
 
 | Condition | Symptoms |
 |-----------|----------|
-| **Fetal Alcohol Syndrome (FAS)** - Most severe | Small eye openings, thin upper lip, other facial anomalies; retarded physical growth; CNS dysfunction (intellectual deficits, slowed processing, hyperactivity); heart, kidney, liver, and other organ problems; hearing/vision impairments |
+| **Fetal Alcohol Syndrome (FAS)**. Most severe | Small eye openings, thin upper lip, other facial anomalies; retarded physical growth; CNS dysfunction (intellectual deficits, slowed processing, hyperactivity); heart, kidney, liver, and other organ problems; hearing/vision impairments |
 | **Partial FAS (pFAS)** | Same CNS dysfunction as FAS; less severe facial anomalies; physical growth problems may or may not be present |
 | **Alcohol-Related Neurodevelopmental Disorder (ARND)** | CNS dysfunction without prominent facial features, growth retardation, or physical defects |
 | **Alcohol-Related Birth Defects (ARBD)** | Heart, kidney, vision, and other physical defects without other prominent symptoms |
 
 **Critical point**: No amount of alcohol has been proven safe during pregnancy. While the embryonic period (weeks 3-8) when organs form represents the highest risk for major defects, alcohol can harm development at any stage.
 
-For clinical practice, understand that FASD effects are permanent and affect daily functioning. {{M}}Someone with FASD processing information at a slower speed is like running modern software on outdated hardware{{/M}}—no amount of effort speeds up the fundamental processing capacity. Interventions need to provide structure, reduce complexity, and work within existing cognitive capabilities rather than trying to "fix" the underlying deficits.
+For clinical practice, understand that FASD effects are permanent and affect daily functioning. {{M}}Someone with FASD processing information at a slower speed is like running modern software on outdated hardware{{/M}}. No amount of effort speeds up the fundamental processing capacity. Interventions need to provide structure, reduce complexity, and work within existing cognitive capabilities rather than trying to "fix" the underlying deficits.
 
 ### Cocaine: Variable and Context-Dependent Effects
 
@@ -204,13 +204,13 @@ Prenatal cocaine exposure can cause:
 
 As these children grow, they may show motor problems, attention and memory difficulties, behavior problems, and challenges with problem-solving and abstract reasoning. Adolescents face increased delinquency risk.
 
-However—and this is important—consequences vary considerably between individuals. Outcomes depend on:
+However (and this is important) consequences vary considerably between individuals. Outcomes depend on:
 
 - Amount and potency of cocaine used
 - Other prenatal risk factors
 - Postnatal environment (poverty, caregiving quality, ongoing substance abuse in the home)
 
-{{M}}Cocaine exposure is like starting a race with a disadvantage{{/M}}—it makes the journey harder, but it doesn't determine the destination. Environmental factors after birth significantly influence outcomes. This matters for treatment planning: Addressing family dynamics, parenting skills, and environmental stressors becomes just as important as addressing the child's symptoms directly.
+{{M}}Cocaine exposure is like starting a race with a disadvantage{{/M}}. It makes the journey harder, but it doesn't determine the destination. Environmental factors after birth significantly influence outcomes. This matters for treatment planning: Addressing family dynamics, parenting skills, and environmental stressors becomes just as important as addressing the child's symptoms directly.
 
 ## Common Misconceptions to Avoid
 
@@ -238,9 +238,9 @@ However—and this is important—consequences vary considerably between individ
 
 **For the three developmental periods**, remember **"GEF"**: Germinal (conception-2 weeks), Embryonic (3-8 weeks), Fetal (9 weeks-birth).
 
-**For critical timing**, remember: **"3-8 is not great"**—weeks 3 through 8 (embryonic period) are when major defects occur.
+**For critical timing**, remember: **"3-8 is not great"**. Weeks 3 through 8 (embryonic period) are when major defects occur.
 
-**For chromosome 15 deletions**: **"PWS is Paternal; Angelman has the A for mAternal"**—Prader-Willi involves the paternal chromosome 15, Angelman involves the maternal one.
+**For chromosome 15 deletions**: **"PWS is Paternal; Angelman has the A for mAternal"**. Prader-Willi involves the paternal chromosome 15, Angelman involves the maternal one.
 
 **For Down syndrome types**, remember **"Most Tri, Some Trans, Rare Mos"**: Most common is Trisomy 21 (~95%), Translocation accounts for some (~4%), Mosaic is rare (~1%).
 
@@ -254,15 +254,15 @@ However—and this is important—consequences vary considerably between individ
 
 **Scenario 1**: Parents bring in their 8-year-old with attention problems, hyperactivity, and difficulty with abstract reasoning. Mom mentions she used cocaine occasionally during pregnancy but stopped when she found out she was pregnant at 10 weeks. What do you consider?
 
-*Application*: Cocaine exposure can affect attention and abstract reasoning, but onset at 10 weeks means embryonic period exposure was limited. The child experienced most exposure during the fetal period. However, consider the full context—what was the postnatal environment like? Are there ongoing stressors? The prenatal exposure may have created vulnerability, but current environment significantly influences outcomes.
+*Application*: Cocaine exposure can affect attention and abstract reasoning, but onset at 10 weeks means embryonic period exposure was limited. The child experienced most exposure during the fetal period. However, consider the full context. What was the postnatal environment like? Are there ongoing stressors? The prenatal exposure may have created vulnerability, but current environment significantly influences outcomes.
 
 **Scenario 2**: A 30-year-old male client describes lifelong social awkwardness, difficulties understanding facial expressions, problems with organization and attention, and mentions he's always been taller than his peers with disproportionately long limbs. He's never been formally diagnosed with anything. What might you consider?
 
-*Application*: This constellation suggests possible Klinefelter syndrome—tall stature, long limbs, social-cognitive deficits affecting face recognition and social understanding, executive function problems. A referral for genetic testing would be appropriate.
+*Application*: This constellation suggests possible Klinefelter syndrome. Tall stature, long limbs, social-cognitive deficits affecting face recognition and social understanding, executive function problems. A referral for genetic testing would be appropriate.
 
 **Scenario 3**: Parents of a 14-month-old are concerned because their daughter, who was babbling and starting to use a few words, has stopped talking and seems less interested in social interaction. What's important to rule out?
 
-*Application*: Rett syndrome shows this exact pattern—normal development until 6-18 months, then regression including loss of speech and reduced social engagement. This would require immediate medical evaluation.
+*Application*: Rett syndrome shows this exact pattern. Normal development until 6-18 months, then regression including loss of speech and reduced social engagement. This would require immediate medical evaluation.
 
 ## Key Takeaways
 

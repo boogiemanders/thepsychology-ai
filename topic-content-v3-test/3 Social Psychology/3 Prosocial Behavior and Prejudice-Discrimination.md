@@ -9,13 +9,13 @@ version: 3
 
 ## Why This Matters for Your Psychology Career
 
-Every day, people make split-second decisions about whether to help someone, who to trust, and how to treat others. These decisions shape everything from workplace dynamics to life-or-death situations. Understanding prosocial behavior and prejudice isn't just about passing the EPPP—it's about recognizing patterns that affect your clients, your community, and yes, even your own behavior. Whether you're working in clinical practice, organizational settings, or research, these concepts will help you understand why people act the way they do when others need help, and why discrimination persists even among people who genuinely believe in equality.
+Every day, people make split-second decisions about whether to help someone, who to trust, and how to treat others. These decisions shape everything from workplace dynamics to life-or-death situations. Understanding prosocial behavior and prejudice isn't just about passing the EPPP. It's about recognizing patterns that affect your clients, your community, and yes, even your own behavior. Whether you're working in clinical practice, organizational settings, or research, these concepts will help you understand why people act the way they do when others need help, and why discrimination persists even among people who genuinely believe in equality.
 
 Let's break this down into practical, memorable pieces.
 
 ## When Bad Things Happen: The Bystander Effect
 
-In 1964, Kitty Genovese was murdered outside her apartment while 38 people allegedly heard her screams. (Note: later research showed the original story was exaggerated, but it still sparked crucial research.) The shocking part wasn't just the crime—it was that nobody called for help. This launched decades of research into why people fail to help in emergencies.
+In 1964, Kitty Genovese was murdered outside her apartment while 38 people allegedly heard her screams. (Note: later research showed the original story was exaggerated, but it still sparked crucial research.) The shocking part wasn't just the crime. It was that nobody called for help. This launched decades of research into why people fail to help in emergencies.
 
 ### The Five Steps to Helping (And Where Things Go Wrong)
 
@@ -23,7 +23,7 @@ Latané and Darley discovered that helping someone isn't automatic. It's a decis
 
 **Step 1: Noticing the Event**
 
-You can't help if you don't notice something's wrong. The main barrier? **Stimulus overload**—especially in busy environments. {{M}}Think about walking through a crowded downtown area during rush hour. Your brain filters out most of what's happening because otherwise you'd be overwhelmed by every conversation, car horn, and storefront display.{{/M}} Unfortunately, this filtering can cause you to miss genuine emergencies.
+You can't help if you don't notice something's wrong. The main barrier? **Stimulus overload**, especially in busy environments. {{M}}Think about walking through a crowded downtown area during rush hour. Your brain filters out most of what's happening because otherwise you'd be overwhelmed by every conversation, car horn, and storefront display.{{/M}} Unfortunately, this filtering can cause you to miss genuine emergencies.
 
 **Step 2: Interpreting It as an Emergency**
 
@@ -45,13 +45,13 @@ Even when you know what to do, **evaluation apprehension** (also called audience
 
 ### Urban vs. Rural Helping
 
-Research consistently shows people are less likely to help in urban areas than rural ones. Interestingly, it's not about where you grew up—it's about where you are right now. Someone raised in a small town is just as unlikely to help in a city as someone who's lived there their whole life. The current environment matters more than your background.
+Research consistently shows people are less likely to help in urban areas than rural ones. Interestingly, it's not about where you grew up. It's about where you are right now. Someone raised in a small town is just as unlikely to help in a city as someone who's lived there their whole life. The current environment matters more than your background.
 
 ## Why Do People Help? Altruism vs. Egoism
 
 When people do help, what motivates them? Two competing theories offer different answers:
 
-**The Empathy-Altruism Hypothesis** suggests people help because they genuinely care about others' well-being. You help because you feel empathic concern—you're focused on reducing the other person's suffering, not your own discomfort.
+**The Empathy-Altruism Hypothesis** suggests people help because they genuinely care about others' well-being. You help because you feel empathic concern. You're focused on reducing the other person's suffering, not your own discomfort.
 
 **The Negative State Relief Model** takes a more cynical view: you help to make yourself feel better. {{M}}Maybe you see someone struggling with groceries in a parking lot, and helping them relieves the guilt or discomfort you'd feel if you just walked away.{{/M}} You're still helping, but the motivation is self-focused.
 
@@ -59,11 +59,11 @@ Current research favors the empathy-altruism hypothesis. More importantly, peopl
 
 ## Reducing Conflict Through Cooperation
 
-Sherif's famous Robbers Cave study (1966) showed how quickly groups can turn hostile—and how to fix it. {{M}}Imagine taking two groups of kids to summer camp, creating strong team identities, then pitting them against each other in competitions.{{/M}} The groups quickly became hostile, calling each other names and eventually stealing from each other.
+Sherif's famous Robbers Cave study (1966) showed how quickly groups can turn hostile. And how to fix it. {{M}}Imagine taking two groups of kids to summer camp, creating strong team identities, then pitting them against each other in competitions.{{/M}} The groups quickly became hostile, calling each other names and eventually stealing from each other.
 
-The solution? **Superordinate goals**—objectives that could only be achieved through cooperation between groups. When the water supply "broke" and both groups had to work together to fix it, hostility decreased.
+The solution? **Superordinate goals**. Objectives that could only be achieved through cooperation between groups. When the water supply "broke" and both groups had to work together to fix it, hostility decreased.
 
-This principle led to the **jigsaw classroom** technique. In diverse classrooms, students are divided into multiethnic groups where each person learns one piece of a project and teaches it to their teammates. {{M}}It's like assembling furniture where each person has instructions for one section—you need everyone's piece to complete the whole thing.{{/M}}
+This principle led to the **jigsaw classroom** technique. In diverse classrooms, students are divided into multiethnic groups where each person learns one piece of a project and teaches it to their teammates. {{M}}It's like assembling furniture where each person has instructions for one section. You need everyone's piece to complete the whole thing.{{/M}}
 
 Results were impressive: reduced prejudice, improved self-esteem and empathy for all students, and better academic performance for minority students without hurting majority students' performance.
 
@@ -88,7 +88,7 @@ To cope, we invest in two defenses:
 1. Cultural worldview (our beliefs about how the world works and what gives life meaning)
 2. Self-esteem (feeling we meet our culture's standards of value)
 
-When reminded of death—called **mortality salience**—people grip these defenses tighter. They evaluate in-group members more positively and out-group members more negatively. They also prefer people who confirm stereotypes because stereotypes make the world feel more predictable and orderly.
+When reminded of death (called **mortality salience**) people grip these defenses tighter. They evaluate in-group members more positively and out-group members more negatively. They also prefer people who confirm stereotypes because stereotypes make the world feel more predictable and orderly.
 
 Researchers increase mortality salience through various methods: asking people to imagine their death, interviewing them near funeral homes, or flashing death-related words during computer tasks.
 
@@ -103,7 +103,7 @@ People attribute more secondary emotions to their in-group members, which genera
 
 ## Reducing Prejudice: The Contact Hypothesis
 
-Allport's contact hypothesis remains foundational. Simply putting different groups together isn't enough—contact reduces prejudice when:
+Allport's contact hypothesis remains foundational. Simply putting different groups together isn't enough. Contact reduces prejudice when:
 
 1. **Equal status**: Members have the same power and position
 2. **Common goals**: They work toward shared objectives (remember superordinate goals?)
@@ -114,15 +114,15 @@ Allport's contact hypothesis remains foundational. Simply putting different grou
 
 ## Modern Racism: When Prejudice Goes Underground
 
-Overt racism—openly hostile attitudes and blatant discrimination—has decreased, but **covert racism** persists in more subtle forms. This matters enormously for your clinical work because your clients will encounter it constantly, and you need to recognize it.
+Overt racism (openly hostile attitudes and blatant discrimination) has decreased, but **covert racism** persists in more subtle forms. This matters enormously for your clinical work because your clients will encounter it constantly, and you need to recognize it.
 
 ### Three Types of Covert Racism
 
-**Symbolic Racism**: People believe in equality and deny that discrimination exists, while simultaneously believing that minority groups violate traditional values and that their struggles are due to lack of effort. {{M}}It's like someone saying, "I'm not racist, but those people just need to work harder. Look at me—I worked hard and succeeded, so anyone can."{{/M}} This person opposes policies like affirmative action as "unfair" while ignoring historical and systemic barriers.
+**Symbolic Racism**: People believe in equality and deny that discrimination exists, while simultaneously believing that minority groups violate traditional values and that their struggles are due to lack of effort. {{M}}It's like someone saying, "I'm not racist, but those people just need to work harder. Look at me. I worked hard and succeeded, so anyone can."{{/M}} This person opposes policies like affirmative action as "unfair" while ignoring historical and systemic barriers.
 
-**Aversive Racism**: People have a non-prejudiced self-image and genuinely believe they're egalitarian, but harbor negative feelings about minorities (often unconscious) acquired in childhood. They avoid contact with minorities when possible and discriminate only when they can justify it on non-racial grounds. {{M}}Picture a hiring manager who prefers the white candidate because of "cultural fit" or "better communication style"—criteria that seem neutral but mask racial bias.{{/M}}
+**Aversive Racism**: People have a non-prejudiced self-image and genuinely believe they're egalitarian, but harbor negative feelings about minorities (often unconscious) acquired in childhood. They avoid contact with minorities when possible and discriminate only when they can justify it on non-racial grounds. {{M}}Picture a hiring manager who prefers the white candidate because of "cultural fit" or "better communication style". Criteria that seem neutral but mask racial bias.{{/M}}
 
-**Ambivalent Racism**: People hold conflicting positive and negative attitudes toward minorities, creating emotional tension. To reduce this tension, they respond in extreme ways—either very positively or very negatively. The response depends on the situation. {{M}}Someone might be extra generous to a minority person in one context but harshly judgmental in another—both responses more extreme than they'd show toward a majority group member in similar situations.{{/M}}
+**Ambivalent Racism**: People hold conflicting positive and negative attitudes toward minorities, creating emotional tension. To reduce this tension, they respond in extreme ways (either very positively or very negatively. The response depends on the situation. {{M}}Someone might be extra generous to a minority person in one context but harshly judgmental in another) both responses more extreme than they'd show toward a majority group member in similar situations.{{/M}}
 
 ## Four Levels of Racism
 
@@ -143,7 +143,7 @@ The APA identifies racism operating at multiple levels. This framework is crucia
 
 **Hostile sexism**: Direct antipathy toward women who challenge traditional gender roles (feminists, career women, assertive women)
 
-**Benevolent sexism**: Seemingly positive but paternalistic attitudes toward women who embrace conventional roles—treating them as needing protection and being inherently delicate or pure
+**Benevolent sexism**: Seemingly positive but paternalistic attitudes toward women who embrace conventional roles, treating them as needing protection and being inherently delicate or pure
 
 {{M}}Imagine a workplace where men resent a female manager who's assertive and ambitious (hostile sexism) but are "chivalrous" toward the female receptionist, insisting on helping her with tasks she can easily do herself (benevolent sexism).{{/M}} Both attitudes reinforce the idea that women are inferior and should stay in traditional roles.
 
@@ -153,7 +153,7 @@ Research shows men often reconcile these competing attitudes by categorizing wom
 
 ### Self-Stereotyping
 
-People unconsciously internalize stereotypes applied to their groups. Surprisingly, this can sometimes protect self-esteem. Research shows women are more likely to endorse the "women are bad at math" stereotype after failing a math test—it provides an external explanation that protects their self-concept.
+People unconsciously internalize stereotypes applied to their groups. Surprisingly, this can sometimes protect self-esteem. Research shows women are more likely to endorse the "women are bad at math" stereotype after failing a math test. It provides an external explanation that protects their self-concept.
 
 ### Stereotype Threat
 
@@ -193,15 +193,15 @@ The key finding: Familiarity with cultural stereotypes (that Black men are dange
 
 **For the five-step bystander intervention model**: Think "NIRAΔ" (Notice, Interpret, Responsibility, Able, Decide). Or use the phrase "**N**ice **I**deas **R**equire **A**ction **D**aily"
 
-**For types of covert racism**: **SAA** - Symbolic, Aversive, Ambivalent
+**For types of covert racism**: **SAA**. Symbolic, Aversive, Ambivalent
 
-**For contact hypothesis conditions**: **ECNA** - Equal status, Common goals, No competition, Authority support
+**For contact hypothesis conditions**: **ECNA**. Equal status, Common goals, No competition, Authority support
 
-**For levels of racism**: **SIIII** - Structural, Institutional, Interpersonal, Internalized (four I's after the S)
+**For levels of racism**: **SIIII**. Structural, Institutional, Interpersonal, Internalized (four I's after the S)
 
-**For ambivalent sexism**: Think "H&B" like a hardware store—**H**ostile and **B**enevolent work together to maintain the structure
+**For ambivalent sexism**: Think "H&B" like a hardware store. **H**ostile and **B**enevolent work together to maintain the structure
 
-**Shooter bias studies**: Remember that cultural stereotype exposure matters MORE than personal prejudice—this counterintuitive finding often appears on exams
+**Shooter bias studies**: Remember that cultural stereotype exposure matters MORE than personal prejudice. This counterintuitive finding often appears on exams
 
 **Jigsaw classroom vs. superordinate goals**: Both involve cooperation, but jigsaw is the classroom application requiring individual expertise
 
@@ -213,7 +213,7 @@ The key finding: Familiarity with cultural stereotypes (that Black men are dange
 - **Six major theories explain prejudice**: realistic conflict, social identity, scapegoat, authoritarian personality, terror management, and dehumanization
 - **Contact hypothesis**: Equal status, common goals, no competition, and institutional support make intergroup contact effective
 - **Covert racism** (symbolic, aversive, ambivalent) persists even when people endorse egalitarian values
-- **Four levels of racism**: structural, institutional, interpersonal, and internalized—all require different interventions
+- **Four levels of racism**: structural, institutional, interpersonal, and internalized. All require different interventions
 - **Ambivalent sexism** includes both hostile attitudes toward nontraditional women and benevolent attitudes toward traditional women
 - **Stereotype threat** impairs performance by consuming cognitive resources with anxiety and self-monitoring
 - **Shooter bias** reflects cultural stereotype exposure more than personal prejudice and affects both civilians and police officers

@@ -9,17 +9,17 @@ version: 3
 
 ## Why Clinical Tests Matter for Your EPPP Success
 
-You're studying for the EPPP, and you've hit the assessment section. Clinical tests might feel like memorizing a phone book of acronyms and score ranges, but here's the truth: these tools are how psychologists translate a person's struggles into actionable insights. When someone walks into your office saying "I just can't think straight anymore," these tests help you determine whether they're dealing with depression, a traumatic brain injury, or early dementia. Getting comfortable with these instruments now means you'll recognize them instantly on test day—and more importantly, you'll know how to use them effectively in your future practice.
+You're studying for the EPPP, and you've hit the assessment section. Clinical tests might feel like memorizing a phone book of acronyms and score ranges, but here's the truth: these tools are how psychologists translate a person's struggles into actionable insights. When someone walks into your office saying "I just can't think straight anymore," these tests help you determine whether they're dealing with depression, a traumatic brain injury, or early dementia. Getting comfortable with these instruments now means you'll recognize them instantly on test day. And more importantly, you'll know how to use them effectively in your future practice.
 
 Let's break down the essential clinical tests you need to know, organized by what they actually do in the real world.
 
 ## Neuropsychological Assessment: Understanding Brain Function
 
-Neuropsychological tests help answer a critical question: Is the brain working as it should? These aren't personality inventories or depression scales—they're detective tools that reveal how injury, disease, or developmental differences affect cognitive functioning.
+Neuropsychological tests help answer a critical question: Is the brain working as it should? These aren't personality inventories or depression scales. They're detective tools that reveal how injury, disease, or developmental differences affect cognitive functioning.
 
 ### The Heavy Hitters: Comprehensive Batteries
 
-**Halstead-Reitan Neuropsychological Battery** is the comprehensive physical exam of brain function testing. Available for ages 5 and up, it evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration. {{M}}Think of it like running a full diagnostic scan on a computer—you're checking multiple systems to see where the problems lie.{{/M}}
+**Halstead-Reitan Neuropsychological Battery** is the comprehensive physical exam of brain function testing. Available for ages 5 and up, it evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration. {{M}}Think of it like running a full diagnostic scan on a computer. You're checking multiple systems to see where the problems lie.{{/M}}
 
 The key score here is the **Halstead Impairment Index**, which works elegantly simple: divide the number of impaired subtests by the total number given. This gives you a score between 0 and 1.0:
 
@@ -42,7 +42,7 @@ Raw scores convert to T-scores, which you then compare to cutoff scores based on
 
 ### The Flexible Approach: Boston Process Approach
 
-The **Boston Process Approach** (BPA) breaks from the rigid test-administration mold. Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly—continuing past normal stopping points, giving extra time, or providing cues that aren't in the standard protocol.
+The **Boston Process Approach** (BPA) breaks from the rigid test-administration mold. Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly, continuing past normal stopping points, giving extra time, or providing cues that aren't in the standard protocol.
 
 {{M}}Imagine you're troubleshooting why someone keeps missing deadlines at work. You could just note that they're late, or you could observe their process: Are they getting distracted? Misunderstanding instructions? Starting strong but losing steam?{{/M}} The BPA emphasizes this deeper investigation.
 
@@ -53,13 +53,13 @@ The **Boston Process Approach** (BPA) breaks from the rigid test-administration 
 1. **Copy phase**: Show them geometric designs, ask them to copy each one
 2. **Recall phase**: Ask them to draw as many designs as they remember
 
-The Global Scoring System rates each drawing from 0 (no resemblance) to 4 (nearly perfect). It's excellent for screening neuropsychological impairment but—and this is important for the EPPP—it's *not* accurate for identifying personality characteristics or making psychiatric diagnoses. Don't let a test question trick you into thinking otherwise.
+The Global Scoring System rates each drawing from 0 (no resemblance) to 4 (nearly perfect). It's excellent for screening neuropsychological impairment but (and this is important for the EPPP) it's *not* accurate for identifying personality characteristics or making psychiatric diagnoses. Don't let a test question trick you into thinking otherwise.
 
 **Benton Visual Retention Test, 5th Edition (BVRT)** serves a similar purpose for ages 8 and up, focusing on visual perception, visual memory, and visuo-constructive skills. The person views cards with geometric figures and reproduces them from memory. It's particularly useful for screening learning disabilities, ADHD, traumatic brain injury, and neurocognitive disorders.
 
 ### Executive Function Tests
 
-**Wisconsin Card Sorting Test (WCST)** evaluates abstract reasoning, cognitive flexibility, and the ability to shift strategies based on feedback—all executive functions linked to frontal lobe activity. {{M}}Picture yourself learning a new app where the rules suddenly change without warning—maybe the swipe direction reverses or buttons move locations. How quickly do you adapt versus continuing the old pattern?{{/M}} That's essentially what the WCST measures.
+**Wisconsin Card Sorting Test (WCST)** evaluates abstract reasoning, cognitive flexibility, and the ability to shift strategies based on feedback (all executive functions linked to frontal lobe activity. {{M}}Picture yourself learning a new app where the rules suddenly change without warning) maybe the swipe direction reverses or buttons move locations. How quickly do you adapt versus continuing the old pattern?{{/M}} That's essentially what the WCST measures.
 
 The test comes in three versions (128-card, 64-card, and 48-card Modified) covering ages 6.5 to 90. The examiner asks the person to sort cards under four stimulus cards using an unstated rule, provides right/wrong feedback, then changes the rule without warning. Key scores include:
 - Number of correct responses
@@ -68,19 +68,19 @@ The test comes in three versions (128-card, 64-card, and 48-card Modified) cover
 
 Poor performance connects to frontal lobe dysfunction and appears in autism spectrum disorder, schizophrenia, major depressive disorder, and malingering.
 
-**Stroop Color and Word Test** assesses cognitive inhibition—your ability to suppress an automatic response for a less natural one. {{M}}It's like when your phone's autocorrect suggests the wrong word, and you have to consciously override it to type what you actually mean.{{/M}} In the test, color names appear printed in non-matching ink colors (the word "yellow" in blue ink), and the person must name the ink color, not read the word.
+**Stroop Color and Word Test** assesses cognitive inhibition. Your ability to suppress an automatic response for a less natural one. {{M}}It's like when your phone's autocorrect suggests the wrong word, and you have to consciously override it to type what you actually mean.{{/M}} In the test, color names appear printed in non-matching ink colors (the word "yellow" in blue ink), and the person must name the ink color, not read the word.
 
 Available in versions for ages 5-14 and 15-90, the Stroop Test evaluates cognitive flexibility, processing speed, selective attention, and response inhibition. Like the WCST, it's sensitive to frontal lobe dysfunction and shows impairment in ADHD, bipolar disorder, major depressive disorder, and schizophrenia.
 
-**Tower of London, 2nd Edition** measures problem-solving, planning, and impulse control to evaluate frontal lobe functioning in people ages 7 to 80. The person must move colored disks on a pegboard to match a target configuration, following specific rules and working one disk at a time. Scores track total correct moves, total time, and rule violations—essentially measuring how well someone can plan multiple steps ahead.
+**Tower of London, 2nd Edition** measures problem-solving, planning, and impulse control to evaluate frontal lobe functioning in people ages 7 to 80. The person must move colored disks on a pegboard to match a target configuration, following specific rules and working one disk at a time. Scores track total correct moves, total time, and rule violations. Essentially measuring how well someone can plan multiple steps ahead.
 
 ### Cognitive Screening Tools
 
 **Mini-Mental State Exam (MMSE)** is the quick cognitive screening tool you'll see everywhere, particularly in settings with older adults. For ages 18 to 85, its 11 items evaluate orientation, registration, attention and calculation, delayed recall, language, and visual construction.
 
-The scoring is straightforward: 30 maximum points, with 24 as the typical cutoff. Below 24 suggests cognitive impairment, and lower scores indicate greater severity. However—critical point for the EPPP—the MMSE relies heavily on verbal responses, reading, and writing. Someone with hearing loss, vision problems, limited English proficiency, or communication disorders might score low despite having no cognitive impairment.
+The scoring is straightforward: 30 maximum points, with 24 as the typical cutoff. Below 24 suggests cognitive impairment, and lower scores indicate greater severity. However (critical point for the EPPP) the MMSE relies heavily on verbal responses, reading, and writing. Someone with hearing loss, vision problems, limited English proficiency, or communication disorders might score low despite having no cognitive impairment.
 
-**Glasgow Coma Scale (GCS)** serves a different screening purpose: evaluating consciousness level after acute or traumatic brain injury. It rates three areas—eye opening, motor response, and verbal response—for a total score between 3 and 15:
+**Glasgow Coma Scale (GCS)** serves a different screening purpose: evaluating consciousness level after acute or traumatic brain injury. It rates three areas (eye opening, motor response, and verbal response) for a total score between 3 and 15:
 
 | Score Range | Severity |
 |-------------|----------|
@@ -105,11 +105,11 @@ Total scores range from 0 to 63:
 | 20 to 28 | Moderate |
 | 29 to 63 | Severe |
 
-{{M}}The BDI-II works like a symptom severity tracker on a health app—it doesn't diagnose depression by itself, but it quantifies how intense the symptoms are and tracks changes over time.{{/M}}
+{{M}}The BDI-II works like a symptom severity tracker on a health app. It doesn't diagnose depression by itself, but it quantifies how intense the symptoms are and tracks changes over time.{{/M}}
 
 ### Adaptive Functioning Assessment
 
-**Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)** assesses how well someone functions in daily life, from birth to age 90. Information comes from parents, caregivers, or teachers—not direct testing—making it particularly valuable for individuals who might not perform well in formal testing situations.
+**Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)** assesses how well someone functions in daily life, from birth to age 90. Information comes from parents, caregivers, or teachers (not direct testing) making it particularly valuable for individuals who might not perform well in formal testing situations.
 
 The Vineland-3 provides scores for:
 - **Adaptive Behavior Composite** (overall functioning)
@@ -141,9 +141,9 @@ Four main index scales emerge from the primary subtests:
 
 The WMS-IV uses standard scores: subtests have a mean of 10 (SD = 3), while index scales have a mean of 100 (SD = 15). An index score of 70 or below signals significant dysfunction.
 
-Here's a practical advantage: because the WMS-IV and WAIS-IV were co-normed, you can directly compare performance across tests. {{M}}It's like having two apps that share the same data format—you can sync information between them seamlessly.{{/M}} For instance, comparing WAIS-IV Perceptual Reasoning Index with WMS-IV Visual Memory Index reveals whether a low visual memory score reflects broader visual-perceptual problems or a specific memory deficit.
+Here's a practical advantage: because the WMS-IV and WAIS-IV were co-normed, you can directly compare performance across tests. {{M}}It's like having two apps that share the same data format. You can sync information between them seamlessly.{{/M}} For instance, comparing WAIS-IV Perceptual Reasoning Index with WMS-IV Visual Memory Index reveals whether a low visual memory score reflects broader visual-perceptual problems or a specific memory deficit.
 
-The WMS-IV also includes a Brief Cognitive Status Exam (BCSE) as an optional subtest that doesn't factor into index scores—useful for contextual information.
+The WMS-IV also includes a Brief Cognitive Status Exam (BCSE) as an optional subtest that doesn't factor into index scores. Useful for contextual information.
 
 ## Common Misconceptions and Testing Pitfalls
 
@@ -246,4 +246,4 @@ A 10-year-old struggles in school despite average intelligence test scores. The 
 
 - **WMS-IV** specialized memory assessment with four index scales (AMI, VMI, VWMI, IMI); co-normed with WAIS-IV for direct comparison; scores ≤70 indicate significant dysfunction
 
-You've got this. These tests might seem overwhelming initially, but they follow logical patterns. Comprehensive batteries give broad overviews. Specific tests target particular functions. Screening tools offer quick answers. Understanding what each test actually does—and what it doesn't do—will serve you well on the EPPP and throughout your career.
+You've got this. These tests might seem overwhelming initially, but they follow logical patterns. Comprehensive batteries give broad overviews. Specific tests target particular functions. Screening tools offer quick answers. Understanding what each test actually does (and what it doesn't do) will serve you well on the EPPP and throughout your career.

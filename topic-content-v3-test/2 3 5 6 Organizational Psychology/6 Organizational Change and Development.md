@@ -90,7 +90,7 @@ This three-phase method is straightforward:
 2. **Provide feedback**: Results are summarized and shared so everyone understands current strengths and weaknesses
 3. **Develop action plan**: Employees offer recommendations, and management creates a plan (usually with consultant help)
 
-The power of survey feedback lies in its democratic approach. {{M}}It's like when your friend group uses a poll to decide where to eat dinner—everyone gets input, the results are transparent, and the final decision reflects collective preferences rather than just the loudest voice in the room.{{/M}}
+The power of survey feedback lies in its democratic approach. {{M}}It's like when your friend group uses a poll to decide where to eat dinner. Everyone gets input, the results are transparent, and the final decision reflects collective preferences rather than just the loudest voice in the room.{{/M}}
 
 ### Process Consultation
 
@@ -108,7 +108,7 @@ SMWTs represent a radical departure from traditional hierarchical management. Th
 
 These interventions focus on changing technology or organizational structure to improve efficiency and relationships. They include several specific approaches:
 
-**Business Process Reengineering (BPR)** involves radically redesigning core organizational processes like financial systems and communication channels. It's not about tweaking—it's about fundamental reconstruction for dramatic efficiency gains.
+**Business Process Reengineering (BPR)** involves radically redesigning core organizational processes like financial systems and communication channels. It's not about tweaking. It's about fundamental reconstruction for dramatic efficiency gains.
 
 **Job Enrichment**, originally described by Herzberg in 1966, means designing jobs to include more responsibility, challenge, advancement opportunities, and other motivating factors that increase satisfaction and drive.
 
@@ -119,7 +119,7 @@ These interventions focus on changing technology or organizational structure to 
 | Compressed Workweek | Fewer days with longer hours (e.g., four 10-hour days) | Strong positive effect on job satisfaction; positive but weaker effect on productivity; unclear effects on absenteeism |
 | Flextime | Fixed total hours and core time (e.g., 10am-2pm) but flexible start/end times | Strongest effect on reducing absenteeism; weakest effect on self-rated performance; beneficial for job satisfaction |
 
-Notice the research findings differ between these two schedules. {{M}}It's like how some people thrive working out in the morning while others prefer evening gym sessions—the same goal (fitness) but different schedules produce different results for different people.{{/M}}
+Notice the research findings differ between these two schedules. {{M}}It's like how some people thrive working out in the morning while others prefer evening gym sessions, the same goal (fitness) but different schedules produce different results for different people.{{/M}}
 
 ### Total Quality Management (TQM)
 
@@ -227,7 +227,7 @@ The exam might present scenarios where you need to:
 
 Pay attention to key words in questions. If you see "continuous improvement" and "incremental changes," think TQM. If you see "building on strengths" and "positive," think appreciative inquiry. If a question describes a consultant who won't provide answers but asks questions, that's process consultation.
 
-Also watch for questions about sequencing. What comes first—collecting data or providing feedback? What happens after implementing change but before evaluating? Understanding the logical flow of these models helps you eliminate wrong answers quickly.
+Also watch for questions about sequencing. What comes first, collecting data or providing feedback? What happens after implementing change but before evaluating? Understanding the logical flow of these models helps you eliminate wrong answers quickly.
 
 ## Key Takeaways
 

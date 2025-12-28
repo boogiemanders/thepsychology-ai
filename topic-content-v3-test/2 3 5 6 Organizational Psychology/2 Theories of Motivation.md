@@ -15,11 +15,11 @@ Let's break down the major theories in a way that makes sense and sticks with yo
 
 ## The Foundation: Drive-Reduction Theory
 
-Before we dive into workplace motivation theories, we need to understand where this all started. Clark Hull introduced drive-reduction theory in 1943, arguing that humans are basically motivated to maintain balance—what he called homeostasis. {{M}}Think of your body like a thermostat trying to maintain a comfortable temperature.{{/M}} When you're hungry (imbalance), you feel uncomfortable, which creates a drive to eat (behavior), which satisfies the need and restores balance.
+Before we dive into workplace motivation theories, we need to understand where this all started. Clark Hull introduced drive-reduction theory in 1943, arguing that humans are basically motivated to maintain balance. What he called homeostasis. {{M}}Think of your body like a thermostat trying to maintain a comfortable temperature.{{/M}} When you're hungry (imbalance), you feel uncomfortable, which creates a drive to eat (behavior), which satisfies the need and restores balance.
 
 Hull also suggested that when a behavior successfully meets a need, it becomes a habit. You'll repeat it automatically next time that need shows up.
 
-Here's why this theory fell out of favor: It couldn't explain why people do things that have nothing to do with basic physical needs. Why do people climb mountains? Seek promotions? Stay up late scrolling through social media when they're exhausted? Drive-reduction theory didn't have good answers for these behaviors. That's where the workplace motivation theories come in—they fill the gaps Hull left behind.
+Here's why this theory fell out of favor: It couldn't explain why people do things that have nothing to do with basic physical needs. Why do people climb mountains? Seek promotions? Stay up late scrolling through social media when they're exhausted? Drive-reduction theory didn't have good answers for these behaviors. That's where the workplace motivation theories come in. They fill the gaps Hull left behind.
 
 ## The Big Seven: Theories You'll See on the EPPP
 
@@ -45,26 +45,26 @@ You've probably seen the pyramid. Maslow proposed five needs arranged in order f
 4. **Esteem** (respect, recognition)
 5. **Self-Actualization** (personal growth, fulfilling potential)
 
-The key concept: The lowest unsatisfied need is "prepotent"—it dominates motivation. You can't focus on self-actualization when you're worried about paying rent. Once a need is satisfied, it stops motivating you, and the next level up takes over.
+The key concept: The lowest unsatisfied need is "prepotent". It dominates motivation. You can't focus on self-actualization when you're worried about paying rent. Once a need is satisfied, it stops motivating you, and the next level up takes over.
 
 The exception? Self-actualization never gets fully satisfied. There's always room for more growth and development.
 
-For the EPPP, remember this is a *hierarchical* theory—lower needs must be met before higher needs become motivating.
+For the EPPP, remember this is a *hierarchical* theory. Lower needs must be met before higher needs become motivating.
 
 ### Theory #3: Herzberg's Two-Factor Theory
 
 This theory addresses both motivation and satisfaction, but here's the twist: It treats them as independent rather than opposite ends of the same scale. Herzberg identified two separate categories:
 
-**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied—they're not necessarily satisfied or motivated either. {{M}}It's like having a reliable internet connection. You only notice it when it's not working, but having fast WiFi doesn't make you love your job.{{/M}}
+**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either. {{M}}It's like having a reliable internet connection. You only notice it when it's not working, but having fast WiFi doesn't make you love your job.{{/M}}
 
-**Motivator Factors** (job content): These include responsibility, challenge, achievement, recognition, and advancement opportunities. When present, these create both satisfaction and motivation. When absent, workers aren't dissatisfied—they're just neutral.
+**Motivator Factors** (job content): These include responsibility, challenge, achievement, recognition, and advancement opportunities. When present, these create both satisfaction and motivation. When absent, workers aren't dissatisfied. They're just neutral.
 
 | Factor Type | Examples | When Adequate | When Inadequate |
 |-------------|----------|---------------|-----------------|
 | Hygiene (Job Context) | Pay, benefits, working conditions, policies | No dissatisfaction (but not motivated) | Dissatisfaction |
 | Motivator (Job Content) | Challenge, responsibility, recognition, growth | Satisfaction and motivation | No dissatisfaction (but not motivated) |
 
-**Job Enrichment** emerged from this theory. It's about redesigning jobs to include more motivator factors—adding meaningful challenges, autonomy, and responsibility. This works best for younger, well-educated workers and those with high achievement needs.
+**Job Enrichment** emerged from this theory. It's about redesigning jobs to include more motivator factors, adding meaningful challenges, autonomy, and responsibility. This works best for younger, well-educated workers and those with high achievement needs.
 
 Don't confuse job enrichment with **job enlargement**. Job enlargement just means piling on more tasks at the same level. {{M}}It's the difference between being promoted to design an entire marketing strategy versus being asked to also handle the company's Twitter account in addition to Instagram.{{/M}} One adds depth and meaning; the other just adds volume.
 
@@ -201,7 +201,7 @@ Additional findings important for the EPPP:
 
 ## Key Takeaways
 
-- **Drive-reduction theory** explained basic physiological motivation but failed to account for psychological drives—that's why workplace theories developed
+- **Drive-reduction theory** explained basic physiological motivation but failed to account for psychological drives. That's why workplace theories developed
 
 - **McClelland's acquired needs** (achievement, power, affiliation) are shaped by experience and predict what work environments will motivate different people
 
@@ -221,4 +221,4 @@ Additional findings important for the EPPP:
 
 - Participation in goal-setting isn't always necessary but helps when workers have high achievement needs or resist assigned goals
 
-Understanding these theories gives you a comprehensive toolkit for analyzing workplace motivation questions on the EPPP. Pay attention to the specific language used in questions—it often points directly to which theory is being tested. And remember, these aren't just abstract concepts for an exam; they're frameworks that explain real behavior you'll observe throughout your psychology career.
+Understanding these theories gives you a comprehensive toolkit for analyzing workplace motivation questions on the EPPP. Pay attention to the specific language used in questions. It often points directly to which theory is being tested. And remember, these aren't just abstract concepts for an exam; they're frameworks that explain real behavior you'll observe throughout your psychology career.

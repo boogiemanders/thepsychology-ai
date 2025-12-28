@@ -9,7 +9,7 @@ version: 3
 
 ## Why Variables and Data Types Matter for Your EPPP Success
 
-Understanding variables and data types isn't just about passing a test question—it's the foundation for reading research, evaluating treatment effectiveness, and making evidence-based decisions in your future practice. When you read that a new therapy approach "significantly reduces depression," you need to know what variables were measured, how they were measured, and whether the conclusions make sense. This lesson will break down these concepts so they stick with you not just for exam day, but for your entire career.
+Understanding variables and data types isn't just about passing a test question. It's the foundation for reading research, evaluating treatment effectiveness, and making evidence-based decisions in your future practice. When you read that a new therapy approach "significantly reduces depression," you need to know what variables were measured, how they were measured, and whether the conclusions make sense. This lesson will break down these concepts so they stick with you not just for exam day, but for your entire career.
 
 ## The Cast of Characters: Types of Variables
 
@@ -17,9 +17,9 @@ Every research study tells a story with different players. Let's meet the main c
 
 ### Independent and Dependent Variables: The "What Affects What" Relationship
 
-The **independent variable** is what researchers manipulate or compare—it's the "cause" side of the equation. The **dependent variable** is what they measure to see if anything changed—it's the "effect" side.
+The **independent variable** is what researchers manipulate or compare (it's the "cause" side of the equation. The **dependent variable** is what they measure to see if anything changed) it's the "effect" side.
 
-{{M}}Think of planning a dinner party where you're testing whether background music affects how much your guests enjoy the meal. The type of music (jazz, classical, or silence) is your independent variable—you control it. Your guests' enjoyment ratings are the dependent variable—you measure it to see if the music made a difference.{{/M}}
+{{M}}Think of planning a dinner party where you're testing whether background music affects how much your guests enjoy the meal. The type of music (jazz, classical, or silence) is your independent variable (you control it. Your guests' enjoyment ratings are the dependent variable) you measure it to see if the music made a difference.{{/M}}
 
 Here's a practical trick that works every time: Convert any study description into this question format: "What are the effects of [independent variable] on [dependent variable]?"
 
@@ -28,19 +28,19 @@ Let's practice:
 - Question: "What are the effects of **treatment type** on **panic attack frequency**?"
 - Answer: Treatment type (with three levels: CBT, medication, combined) is the independent variable. Panic attack frequency is the dependent variable.
 
-Remember: The independent variable always has at least two levels. You're always comparing something to something else—treatment versus no treatment, high dose versus low dose, Group A versus Group B.
+Remember: The independent variable always has at least two levels. You're always comparing something to something else. Treatment versus no treatment, high dose versus low dose, Group A versus Group B.
 
 ### Moderator Variables: The "It Depends" Factor
 
 A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables. {{M}}It's like how the effectiveness of your morning coffee (independent variable) on your alertness (dependent variable) might depend on whether you're a regular coffee drinker or someone who rarely has caffeine (moderator variable). The same cup affects different people differently.{{/M}}
 
-Clinical example: You're studying whether exposure therapy reduces social anxiety. You find it works great for some clients but not others. When you dig deeper, you discover that clients with strong social support networks improve more than those without support. Social support is a moderator variable—it changes how effective the treatment is.
+Clinical example: You're studying whether exposure therapy reduces social anxiety. You find it works great for some clients but not others. When you dig deeper, you discover that clients with strong social support networks improve more than those without support. Social support is a moderator variable. It changes how effective the treatment is.
 
 ### Mediator Variables: The "Why It Works" Explanation
 
 A **mediator variable** explains *why* or *how* an independent variable affects a dependent variable. It's the mechanism, the middle step in the process.
 
-{{M}}If you notice that people who start meal planning (independent variable) lose weight (dependent variable), the mediator might be that meal planning leads to fewer impulsive fast-food purchases, which then leads to weight loss. The reduced fast-food consumption is the mediator—it explains the connection.{{/M}}
+{{M}}If you notice that people who start meal planning (independent variable) lose weight (dependent variable), the mediator might be that meal planning leads to fewer impulsive fast-food purchases, which then leads to weight loss. The reduced fast-food consumption is the mediator. It explains the connection.{{/M}}
 
 In psychotherapy research, cognitive therapy for depression assumes this pathway:
 - Therapy (independent variable) → Changes in negative thinking patterns (mediator) → Reduced depressive symptoms (dependent variable)
@@ -53,7 +53,7 @@ The mediator answers the question: "What's happening between the treatment and t
 
 {{M}}Imagine you're comparing two exercise classes for stress reduction. Class A meets at 6 AM and Class B meets at 6 PM. If Class B shows better results, is it because of something special about the instructor, or because people who choose evening classes are already less stressed (since they don't have to wake up early)? Time of day becomes an extraneous variable that confounds your results.{{/M}}
 
-Good research design tries to control or eliminate extraneous variables. That's why randomization matters—it helps spread out potential confounds evenly across groups.
+Good research design tries to control or eliminate extraneous variables. That's why randomization matters. It helps spread out potential confounds evenly across groups.
 
 ## Scales of Measurement: How We Quantify Experience
 
@@ -69,7 +69,7 @@ Examples:
 - Diagnosis (depression, anxiety, PTSD)
 - Treatment group assignment (Group A, Group B)
 
-You can count how many people fall into each category, but you can't say one category is "more" or "better" than another in a quantitative sense. {{M}}It's like organizing your streaming services—Netflix, Hulu, and Disney+ are different categories, but none is mathematically "greater" than the others.{{/M}}
+You can count how many people fall into each category, but you can't say one category is "more" or "better" than another in a quantitative sense. {{M}}It's like organizing your streaming services. Netflix, Hulu, and Disney+ are different categories, but none is mathematically "greater" than the others.{{/M}}
 
 A special type of nominal variable is the **dichotomous variable**, which has only two categories (yes/no, treated/untreated, improved/not improved).
 
@@ -90,7 +90,7 @@ With ordinal data, you know the order but not the exact distance between points.
 
 **Interval scales** have equal distances between adjacent points, but no absolute zero point where the quality being measured completely disappears.
 
-IQ scores are the classic example. The difference between IQ scores of 100 and 101 equals the difference between 130 and 131. However, an IQ of 0 doesn't mean "no intelligence"—there's no true zero point on the scale.
+IQ scores are the classic example. The difference between IQ scores of 100 and 101 equals the difference between 130 and 131. However, an IQ of 0 doesn't mean "no intelligence". There's no true zero point on the scale.
 
 Most standardized psychological tests produce interval data. The key feature: equal intervals mean you can add and subtract scores meaningfully, but you can't make ratio statements.
 
@@ -118,7 +118,7 @@ Here's the key distinction between interval and ratio: You *cannot* say someone 
 
 ## Visualizing Data: Choosing the Right Graph
 
-Your measurement scale determines which graph type is appropriate. Using the wrong graph for your data type is like trying to eat soup with a fork—technically possible but definitely not right.
+Your measurement scale determines which graph type is appropriate. Using the wrong graph for your data type is like trying to eat soup with a fork. Technically possible but definitely not right.
 
 ### Bar Graphs: For Categories
 
@@ -159,7 +159,7 @@ Many statistical tests assume your data follows a normal distribution, so unders
 
 **Negatively skewed distribution**: Most scores are high, with a few low scores stretching out the left tail. {{M}}Think of scores on an easy exam where most students get As and Bs, but a few students who didn't study get Ds and Fs.{{/M}}
 
-**Positively skewed distribution**: Most scores are low, with a few high scores stretching out the right tail. {{M}}Annual income in the general population is positively skewed—most people earn moderate amounts, but a few high earners create a long tail on the high end.{{/M}}
+**Positively skewed distribution**: Most scores are low, with a few high scores stretching out the right tail. {{M}}Annual income in the general population is positively skewed. Most people earn moderate amounts, but a few high earners create a long tail on the high end.{{/M}}
 
 Here's the memory trick: **The tail tells the tale.** The tail points toward the skew direction. Negative skew = tail points left (toward negative numbers). Positive skew = tail points right (toward positive numbers).
 
@@ -180,9 +180,9 @@ When data is skewed, the median is usually better than the mean for representing
 
 These describe how pointy or flat a distribution looks compared to a normal curve.
 
-**Leptokurtic distribution**: Sharper peak and flatter tails than normal. {{M}}Picture everyone's scores bunched tightly around the average on a test that had very predictable content—lots of people got scores right in the middle range, with few very high or very low scores.{{/M}}
+**Leptokurtic distribution**: Sharper peak and flatter tails than normal. {{M}}Picture everyone's scores bunched tightly around the average on a test that had very predictable content. Lots of people got scores right in the middle range, with few very high or very low scores.{{/M}}
 
-**Platykurtic distribution**: Flatter peak and fatter tails than normal. {{M}}Imagine a test so unpredictable that scores spread out more evenly across the range—no strong clustering in the middle.{{/M}}
+**Platykurtic distribution**: Flatter peak and fatter tails than normal. {{M}}Imagine a test so unpredictable that scores spread out more evenly across the range. No strong clustering in the middle.{{/M}}
 
 These terms come up less frequently on the EPPP than skewness, but they're worth knowing for recognition purposes.
 
@@ -198,7 +198,7 @@ They're fundamentally different. A moderator changes *whether* or *how much* som
 
 **Misconception 3: "Higher level scales are always better."**
 
-While ratio scales provide more information than nominal scales, the appropriate scale depends on what you're measuring. You can't measure someone's diagnosis category on a ratio scale—some variables are inherently categorical. Use the scale that matches your construct.
+While ratio scales provide more information than nominal scales, the appropriate scale depends on what you're measuring. You can't measure someone's diagnosis category on a ratio scale. Some variables are inherently categorical. Use the scale that matches your construct.
 
 **Misconception 4: "If bars touch, it's always a histogram."**
 
@@ -214,8 +214,8 @@ No! The direction of skew refers to where the tail points, not the sign of the s
 Create the question "What are the effects of ___ on ___?" The first blank is always your independent variable, the second is your dependent variable.
 
 **For Moderator vs. Mediator:**
-- **Moderator**: Sounds like "moderate" or "modify"—it modifies the strength of the effect
-- **Mediator**: Think of the word "medium" or "middle"—it's the middle step that explains the connection
+- **Moderator**: Sounds like "moderate" or "modify". It modifies the strength of the effect
+- **Mediator**: Think of the word "medium" or "middle". It's the middle step that explains the connection
 
 **For Scales of Measurement (NOIR):**
 Use the acronym NOIR (French for "black"): **N**ominal, **O**rdinal, **I**nterval, **R**atio. They go from least to most information.

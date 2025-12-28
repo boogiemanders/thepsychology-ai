@@ -9,13 +9,13 @@ version: 3
 
 ## Why This Topic Matters for Your EPPP Prep
 
-You're studying for the EPPP, which means you're preparing to be someone who truly helps people. The disorders we're covering today—feeding and eating disorders, elimination disorders, and sleep-wake disorders—might seem less dramatic than some other psychological conditions, but they're absolutely essential to understand. These disorders affect physical health directly, sometimes in life-threatening ways. They're also surprisingly common: you'll encounter them in nearly any practice setting, from pediatric clinics to adult therapy offices. Plus, the EPPP loves testing on the specifics of these disorders because they require you to distinguish between similar presentations and remember precise diagnostic criteria.
+You're studying for the EPPP, which means you're preparing to be someone who truly helps people. The disorders we're covering today (feeding and eating disorders, elimination disorders, and sleep-wake disorders) might seem less dramatic than some other psychological conditions, but they're absolutely essential to understand. These disorders affect physical health directly, sometimes in life-threatening ways. They're also surprisingly common: you'll encounter them in nearly any practice setting, from pediatric clinics to adult therapy offices. Plus, the EPPP loves testing on the specifics of these disorders because they require you to distinguish between similar presentations and remember precise diagnostic criteria.
 
 Let's break down these three disorder categories in a way that makes sense and sticks with you through exam day and beyond.
 
 ## Feeding and Eating Disorders: When Food Becomes the Problem
 
-Eating disorders involve persistent disturbances in eating or eating-related behavior that mess with physical health or how someone functions in daily life. The key word here is "persistent"—we're not talking about occasional dieting or skipping breakfast when you're running late. These are patterns that take over someone's life.
+Eating disorders involve persistent disturbances in eating or eating-related behavior that mess with physical health or how someone functions in daily life. The key word here is "persistent". We're not talking about occasional dieting or skipping breakfast when you're running late. These are patterns that take over someone's life.
 
 ### Pica: Eating What Isn't Food
 
@@ -23,7 +23,7 @@ Pica involves persistently eating non-nutritive, non-food substances for at leas
 
 While pica can happen at any age, it's most common in children. There's also an elevated rate among pregnant women. The dangers are real: intestinal obstruction, lead poisoning from paint chips, and other medical complications that can require emergency intervention.
 
-{{M}}Think of it like someone repeatedly putting diesel fuel in a regular gasoline car—the system isn't designed to process what's being put in, and serious damage results.{{/M}}
+{{M}}Think of it like someone repeatedly putting diesel fuel in a regular gasoline car, the system isn't designed to process what's being put in, and serious damage results.{{/M}}
 
 ### Anorexia Nervosa: The Restriction Disorder
 
@@ -37,7 +37,7 @@ Anorexia nervosa is one of the deadliest psychiatric disorders, and understandin
 | Intense fear | Fear of gaining weight or becoming fat, OR behavior that interferes with weight gain |
 | Distorted body experience | Disturbance in experiencing weight/shape, self-evaluation unduly influenced by weight/shape, OR lack of awareness of seriousness of low weight |
 
-Notice the "OR" statements in the table. You don't need all symptoms—for example, someone might not verbally express fear of weight gain but might engage in behaviors that prevent it (like exercising for hours daily or hiding food).
+Notice the "OR" statements in the table. You don't need all symptoms, for example, someone might not verbally express fear of weight gain but might engage in behaviors that prevent it (like exercising for hours daily or hiding food).
 
 **Important Specifiers to Know:**
 
@@ -49,7 +49,7 @@ Anorexia frequently co-occurs with depression or anxiety disorders, especially o
 
 **Treatment Challenges and Approaches:**
 
-Anorexia is notoriously difficult to treat. {{M}}Imagine trying to help someone who genuinely believes that the thing slowly killing them is actually keeping them safe—that's the treatment paradox with anorexia.{{/M}} People with this disorder often deny they have a problem and resist treatment.
+Anorexia is notoriously difficult to treat. {{M}}Imagine trying to help someone who genuinely believes that the thing slowly killing them is actually keeping them safe. That's the treatment paradox with anorexia.{{/M}} People with this disorder often deny they have a problem and resist treatment.
 
 Treatment goals follow a logical sequence:
 
@@ -61,7 +61,7 @@ Treatment goals follow a logical sequence:
 
 - **CBT for Anorexia Nervosa**: A post-hospitalization intervention assuming that concerns about shape and weight lead to dietary restriction that maintains symptoms. Uses behavioral strategies for regular eating and cognitive strategies to change problematic thinking.
 
-- **CBT-E (Enhanced CBT)**: A transdiagnostic treatment proposing all eating disorders share the same core problem—giving too much value to physical appearance and weight. It's personalized and flexible, focusing on whatever factors maintain that specific patient's symptoms.
+- **CBT-E (Enhanced CBT)**: A transdiagnostic treatment proposing all eating disorders share the same core problem, giving too much value to physical appearance and weight. It's personalized and flexible, focusing on whatever factors maintain that specific patient's symptoms.
 
 - **Family-Based Treatment (FBT)**: An outpatient intervention for medically stable adolescents with three phases:
   1. Parents take charge of nutritional rehabilitation and weight restoration
@@ -85,7 +85,7 @@ Bulimia nervosa involves a cycle of binge eating followed by compensatory behavi
 
 **Key Distinctions from Anorexia:**
 
-Most people with bulimia are normal weight or overweight—that's a major difference from anorexia. The medical complications come primarily from the compensatory behaviors rather than starvation. Purging causes dental erosion, gastroesophageal reflux, and dehydration. That dehydration leads to electrolyte imbalances that can cause heart arrhythmias and death.
+Most people with bulimia are normal weight or overweight. That's a major difference from anorexia. The medical complications come primarily from the compensatory behaviors rather than starvation. Purging causes dental erosion, gastroesophageal reflux, and dehydration. That dehydration leads to electrolyte imbalances that can cause heart arrhythmias and death.
 
 **Treatment Approaches:**
 
@@ -93,9 +93,9 @@ Treatment typically combines nutritional rehabilitation with psychotherapy:
 
 - **CBT and CBT-E**: Same approaches as for anorexia, both effective
 - **Interpersonal Therapy (IPT)**: Works as well as CBT but takes longer to show effects
-- **FBT for Bulimia**: Similar to FBT for anorexia but with a key difference—adolescents with bulimia often experience their symptoms as ego-dystonic (unwanted), so they're more motivated to change. Treatment is more collaborative, with adolescent and parents working together.
+- **FBT for Bulimia**: Similar to FBT for anorexia but with a key difference. Adolescents with bulimia often experience their symptoms as ego-dystonic (unwanted), so they're more motivated to change. Treatment is more collaborative, with adolescent and parents working together.
 
-**Medication**: Antidepressants, especially fluoxetine, help both with comorbid depression and with reducing binge eating and purging—even in patients without depression.
+**Medication**: Antidepressants, especially fluoxetine, help both with comorbid depression and with reducing binge eating and purging. Even in patients without depression.
 
 ### Binge-Eating Disorder: Binges Without Compensatory Behaviors
 
@@ -147,7 +147,7 @@ Elimination disorders involve problems with urination or defecation control. For
 
 **Treatment:**
 
-The moisture alarm (bell-and-pad) is the most common treatment for nocturnal enuresis. {{M}}It works like a very specific type of classical conditioning—when the child begins to urinate, a bell rings, waking them up and helping them learn to recognize the sensation of a full bladder.{{/M}}
+The moisture alarm (bell-and-pad) is the most common treatment for nocturnal enuresis. {{M}}It works like a very specific type of classical conditioning, when the child begins to urinate, a bell rings, waking them up and helping them learn to recognize the sensation of a full bladder.{{/M}}
 
 The antidiuretic hormone desmopressin also works for many children but has a high relapse rate when discontinued.
 
@@ -176,7 +176,7 @@ Sleep maintenance insomnia is the most common single type, but having all three 
 
 **Important Research Finding:**
 
-When people with insomnia report their sleep patterns, they typically overestimate how long it takes them to fall asleep, overestimate time awake during the night, and underestimate total sleep time compared to objective measures like polysomnography. {{M}}It's like how a frustrating commute feels longer than it actually is—the subjective experience differs from the objective reality.{{/M}}
+When people with insomnia report their sleep patterns, they typically overestimate how long it takes them to fall asleep, overestimate time awake during the night, and underestimate total sleep time compared to objective measures like polysomnography. {{M}}It's like how a frustrating commute feels longer than it actually is, the subjective experience differs from the objective reality.{{/M}}
 
 **Treatment: CBT-I (The Gold Standard)**
 
@@ -220,7 +220,7 @@ Many people with narcolepsy also experience:
 - **Hypnopompic hallucinations**: Vivid hallucinations just after awakening
 - **Sleep paralysis**: Inability to move when falling asleep or awakening
 
-Because cataplexy is often triggered by strong emotions, people with narcolepsy may try to control their emotions to prevent sleep episodes. {{M}}Imagine having to suppress laughter at a funny moment because laughing might literally make you collapse—that's the daily reality for someone with narcolepsy and cataplexy.{{/M}}
+Because cataplexy is often triggered by strong emotions, people with narcolepsy may try to control their emotions to prevent sleep episodes. {{M}}Imagine having to suppress laughter at a funny moment because laughing might literally make you collapse. That's the daily reality for someone with narcolepsy and cataplexy.{{/M}}
 
 **Treatment Approach:**
 
@@ -259,7 +259,7 @@ Nightmare disorder involves repeated occurrences of extended, extremely upsettin
 - When awakened during a nightmare, the person is oriented and alert
 - May continue experiencing dysphoric mood after awakening
 
-This is different from sleep terrors—people with nightmare disorder wake up oriented and remember the dream, while people experiencing sleep terrors don't remember and aren't responsive when it's happening.
+This is different from sleep terrors. People with nightmare disorder wake up oriented and remember the dream, while people experiencing sleep terrors don't remember and aren't responsive when it's happening.
 
 ## Common Misconceptions to Avoid
 
@@ -284,7 +284,7 @@ This is different from sleep terrors—people with nightmare disorder wake up or
 
 **For Insomnia Types, remember "I'M LATE":**
 - **I**nitial insomnia (trouble falling asleep)
-- **M**iddle insomnia (waking during night) - most common single type
+- **M**iddle insomnia (waking during night). Most common single type
 - **LATE** insomnia (early morning awakening)
 
 **For Narcolepsy, think "CHINS":**
@@ -295,7 +295,7 @@ This is different from sleep terrors—people with nightmare disorder wake up or
 - **S**hort REM latency (15 minutes or less)
 
 **For Treatment Approaches:**
-- CBT-E is **E**verywhere (transdiagnostic - works across eating disorders)
+- CBT-E is **E**verywhere (transdiagnostic. Works across eating disorders)
 - FBT has three **F**amily phases (1. Parents in charge, 2. Return control, 3. Independence)
 - CBT-I has **5 components** (stimulus control, sleep restriction, sleep hygiene, relaxation, cognitive restructuring)
 

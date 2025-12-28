@@ -9,7 +9,7 @@ version: 3
 
 ## Why Standards 7 and 8 Matter for Your Future Practice
 
-You're about to step into a career where you'll wear many hats: educator, researcher, supervisor, mentor. Standards 7 and 8 of the APA Ethics Code cover the nitty-gritty of how you operate in these roles. These aren't abstract rules—they're practical guidelines that protect both you and the people you work with from real problems that happen all the time in psychology.
+You're about to step into a career where you'll wear many hats: educator, researcher, supervisor, mentor. Standards 7 and 8 of the APA Ethics Code cover the nitty-gritty of how you operate in these roles. These aren't abstract rules. They're practical guidelines that protect both you and the people you work with from real problems that happen all the time in psychology.
 
 Standard 7 focuses on education and training, while Standard 8 covers research and publication. {{M}}Think of these as your professional GPS for two major highways you'll travel regularly in your career{{/M}}. Let's break down what you actually need to know.
 
@@ -19,14 +19,14 @@ Standard 7 focuses on education and training, while Standard 8 covers research a
 
 Here's the basic principle: Don't oversell what you're offering. If you're advertising a workshop on hypnotherapy, and it's actually just a two-hour lecture with no hands-on practice, you can't call it "interactive" or "experiential." 
 
-{{M}}It's like advertising a cooking class where participants will "prepare a gourmet meal" but then just watching you cook while they take notes{{/M}}. People signed up expecting one thing and got another—that's a problem.
+{{M}}It's like advertising a cooking class where participants will "prepare a gourmet meal" but then just watching you cook while they take notes{{/M}}. People signed up expecting one thing and got another. That's a problem.
 
 The same goes for course syllabi. You need to accurately describe:
 - What topics you'll cover
 - How you'll evaluate students
 - What the course experience will actually be like
 
-Now, life happens. Sometimes you need to change course requirements mid-semester. That's allowed—but you must tell students about the change in a way that gives them enough time to meet the new requirements. {{M}}You can't change the rules of the game in the fourth quarter without making sure everyone knows the new playbook{{/M}}.
+Now, life happens. Sometimes you need to change course requirements mid-semester. That's allowed. But you must tell students about the change in a way that gives them enough time to meet the new requirements. {{M}}You can't change the rules of the game in the fourth quarter without making sure everyone knows the new playbook{{/M}}.
 
 ### Personal Disclosure Requirements (7.04)
 
@@ -48,7 +48,7 @@ Fisher (2017) provides helpful guidelines for programs with mandatory therapy:
 | Guideline | What It Means |
 |-----------|---------------|
 | Justified by training objectives | The therapy requirement must make sense for what the program is teaching |
-| Disclosed in application materials | No surprises—applicants know upfront about the requirement and its risks/benefits |
+| Disclosed in application materials | No surprises. Applicants know upfront about the requirement and its risks/benefits |
 | Student choice in therapist selection | Students get some say in who they work with |
 | No multiple relationships | Students and therapists maintain clear boundaries |
 | Financially feasible options | The therapy requirement doesn't create unreasonable financial hardship |
@@ -68,7 +68,7 @@ When a supervisee isn't performing well, dismissal should be the last resort. Be
 - Requiring additional coursework
 - Suggesting a leave of absence or second internship
 
-{{M}}It's similar to performance improvement plans in corporate settings{{/M}}—you document the problems, provide support and opportunities for improvement, and only move to termination if nothing else works. Throughout this process, you must respect due process rights and keep thorough documentation.
+{{M}}It's similar to performance improvement plans in corporate settings{{/M}}. You document the problems, provide support and opportunities for improvement, and only move to termination if nothing else works. Throughout this process, you must respect due process rights and keep thorough documentation.
 
 ### Sexual Relationships (7.07)
 
@@ -135,7 +135,7 @@ If your study involves experimental treatments, you also need to tell participan
 
 Offering incentives for research participation is okay, but there are rules. If participation is required for a course or offered for extra credit, students must have equitable alternative options.
 
-You also can't offer incentives so excessive that they coerce participation. {{M}}It's like offering a struggling college student $10,000 to participate in a risky study—the money might be so tempting that it overrides their better judgment about the risks{{/M}}.
+You also can't offer incentives so excessive that they coerce participation. {{M}}It's like offering a struggling college student $10,000 to participate in a risky study, the money might be so tempting that it overrides their better judgment about the risks{{/M}}.
 
 You can offer professional services in exchange for participation, but participants need to understand the nature of those services and any associated risks or limitations.
 
@@ -147,7 +147,7 @@ Deception in research is controversial because it prevents true informed consent
 2. Non-deceptive alternatives aren't available
 3. You're not deceiving people about procedures likely to cause physical pain or severe emotional distress
 
-Additionally, participants must be allowed to withdraw their data at any time, and you must debrief them about the deception as early as feasible—preferably right after their participation, but no later than when data collection ends.
+Additionally, participants must be allowed to withdraw their data at any time, and you must debrief them about the deception as early as feasible. Preferably right after their participation, but no later than when data collection ends.
 
 ### Research with Animals (8.09)
 
@@ -176,13 +176,13 @@ Lesser contributions (like data entry, recruiting participants, or suggesting an
 
 **Plagiarism**: Standard 8.11 prohibits presenting others' work as your own, even if you cite the source occasionally. This includes both word-for-word copying and paraphrasing without proper citations.
 
-Self-plagiarism—presenting your own previously published work as new—is generally considered unethical. However, it may be acceptable to reuse limited amounts of your own previously published wording when rewording would cause inaccuracies.
+Self-plagiarism (presenting your own previously published work as new) is generally considered unethical. However, it may be acceptable to reuse limited amounts of your own previously published wording when rewording would cause inaccuracies.
 
 **Duplicate and piecemeal publication**: You can't publish the same data as original in multiple places without proper acknowledgment. Duplicate publication means publishing the same data in two separate works. Piecemeal publication means splitting findings from one study into multiple publications.
 
-There are exceptions—for example, you can republish work that was previously published in limited-circulation venues. When in doubt, inform journal editors about any overlap with previously published work so they can make informed decisions.
+There are exceptions, for example, you can republish work that was previously published in limited-circulation venues. When in doubt, inform journal editors about any overlap with previously published work so they can make informed decisions.
 
-**Concurrent submission**: Although not explicitly in the Ethics Code, you cannot submit the same manuscript to multiple journals simultaneously. {{M}}It's like applying for multiple jobs and accepting offers from all of them—you can only work at one place at a time{{/M}}. Submit to one journal, wait for a decision, then move to the next if needed.
+**Concurrent submission**: Although not explicitly in the Ethics Code, you cannot submit the same manuscript to multiple journals simultaneously. {{M}}It's like applying for multiple jobs and accepting offers from all of them. You can only work at one place at a time{{/M}}. Submit to one journal, wait for a decision, then move to the next if needed.
 
 ### Sharing Data for Verification (8.14)
 
@@ -207,7 +207,7 @@ If you want someone else to help review a document, get permission from the edit
 
 ## Common Misconceptions
 
-**Misconception 1**: "I can change course requirements whenever I want—I'm the instructor."
+**Misconception 1**: "I can change course requirements whenever I want. I'm the instructor."
 Reality: You can change requirements, but you must inform students in a way that gives them time to meet the new requirements.
 
 **Misconception 2**: "If I cite a source once, I can use their ideas throughout my paper without citing again."
@@ -216,7 +216,7 @@ Reality: That's still plagiarism. You need to cite appropriately throughout your
 **Misconception 3**: "Once the IRB approves my study, I can make minor tweaks without going back to them."
 Reality: Even minor modifications to approved or expedited research require IRB approval before implementation.
 
-**Misconception 4**: "Students who need therapy should work with faculty—we know the program requirements best."
+**Misconception 4**: "Students who need therapy should work with faculty. We know the program requirements best."
 Reality: Faculty who evaluate students cannot provide their therapy. Students must be able to choose unaffiliated therapists.
 
 **Misconception 5**: "If I split my dissertation into three papers, I'm being productive."

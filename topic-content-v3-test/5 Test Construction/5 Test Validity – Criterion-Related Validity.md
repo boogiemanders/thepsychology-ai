@@ -73,14 +73,14 @@ Unless your validity coefficient is exactly +1.0 or -1.0 (which never happens in
 
 ### How to Calculate It
 
-The formula is: Standard Error = SD of criterion × √(1 - r²)
+The formula is: Standard Error = SD of criterion × √(1. R²)
 
 Where SD is the standard deviation of your criterion measure, and r is the validity coefficient.
 
 Let's work through an example: Your criterion measure has a standard deviation of 5, and your validity coefficient is .60.
 
 1. Square the validity coefficient: .60² = .36
-2. Subtract from 1: 1 - .36 = .64
+2. Subtract from 1: 1. .36 = .64
 3. Take the square root: √.64 = .8
 4. Multiply by the SD: 5 × .8 = 4
 
@@ -160,8 +160,8 @@ This is the proportion who succeeded without using your new test.
 
 This is the proportion who would succeed if you used your new test.
 
-**Incremental Validity** = Positive Hit Rate - Base Rate
-= .75 - .45 = .30 or 30%
+**Incremental Validity** = Positive Hit Rate. Base Rate
+= .75. .45 = .30 Or 30%
 
 Your new test would increase successful hires by 30 percentage points. Whether that's worth the cost and effort depends on your situation.
 

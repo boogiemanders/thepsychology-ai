@@ -9,9 +9,13 @@ version: 3
 
 ## Why Brief Therapies Matter for Your Practice
 
-Not every client needs years on the couch. Sometimes people need targeted, time-limited help to get unstuck. Brief therapies emerged from the practical reality that many clients can't afford—financially or emotionally—lengthy treatment. The EPPP expects you to know the major approaches, their techniques, and when to use them.
+Not every client needs years on the couch. Sometimes people need targeted, time-limited help to get unstuck. Brief therapies emerged from the practical reality that many clients can't afford (financially or emotionally) lengthy treatment. The EPPP expects you to know the major approaches, their techniques, and when to use them.
 
-These aren't watered-down versions of "real" therapy. They're distinct approaches with their own theoretical foundations and evidence bases. {{M}}Think of them as specialized tools rather than a Swiss Army knife—each designed to do specific jobs efficiently.{{/M}}
+These aren't watered-down versions of "real" therapy. They're distinct approaches with their own theoretical foundations and evidence bases. {{M}}Think of them as specialized tools rather than a Swiss Army knife. Each designed to do specific jobs efficiently.{{/M}}
+
+### Big Picture of Brief Therapy
+
+![Brief Therapies Overview](/images/topics/6-treatment-intervention/brief-therapies-overview.png)
 
 ## Interpersonal Psychotherapy (IPT)
 
@@ -29,10 +33,10 @@ Developed by Klerman and Weissman originally for depression, IPT operates from a
 
 IPT identifies one primary problem area to target:
 
-1. **Interpersonal role disputes** - conflicts with significant others about expectations
-2. **Interpersonal role transitions** - difficulty adjusting to life changes (new job, divorce, retirement)
-3. **Interpersonal deficits** - chronic difficulties forming or maintaining relationships
-4. **Grief** - complicated bereavement
+1. **Interpersonal role disputes**. Conflicts with significant others about expectations
+2. **Interpersonal role transitions**. Difficulty adjusting to life changes (new job, divorce, retirement)
+3. **Interpersonal deficits**. Chronic difficulties forming or maintaining relationships
+4. **Grief**. Complicated bereavement
 
 The "sick role" is a distinctive IPT concept. It allows clients to acknowledge they're ill without self-blame and frames the condition as temporary and treatable. {{M}}It's like getting a doctor's note that says "this person has a real illness" rather than "this person just needs to try harder."{{/M}}
 
@@ -85,9 +89,9 @@ Prochaska and DiClemente developed this model by studying how people successfull
 
 ### Three Factors Affecting Motivation
 
-1. **Decisional balance** - weighing pros and cons of change; most important during contemplation
-2. **Self-efficacy** - confidence in ability to change; crucial for moving from contemplation → preparation → action
-3. **Temptation** - urge to engage in the old behavior; strongest in early stages
+1. **Decisional balance**, weighing pros and cons of change; most important during contemplation
+2. **Self-efficacy**. Confidence in ability to change; crucial for moving from contemplation → preparation → action
+3. **Temptation**. Urge to engage in the old behavior; strongest in early stages
 
 {{M}}Imagine someone considering whether to quit their comfortable but unfulfilling job. In precontemplation, they're not even thinking about it. In contemplation, they're weighing the pros and cons endlessly. In preparation, they're updating their resume. In action, they're interviewing. In maintenance, they're thriving in the new role.{{/M}}
 
@@ -131,18 +135,18 @@ Research supports MI as:
 
 ## Brief Psychodynamic Psychotherapy
 
-This isn't one therapy but a family of time-limited approaches derived from longer psychodynamic work. Different versions focus on different things—some on unconscious conflicts, others on dysfunctional interaction patterns.
+This isn't one therapy but a family of time-limited approaches derived from longer psychodynamic work. Different versions focus on different things. Some on unconscious conflicts, others on dysfunctional interaction patterns.
 
 ### Shared Characteristics
 
 Despite variations, brief psychodynamic therapies share these features:
 
-1. **Change can happen quickly** - or therapy can start a process that continues after termination
-2. **Limited, agreed-upon goals** - identified early in treatment
-3. **Selective about clients** - works best for those who can benefit from insight and form a therapeutic alliance
-4. **Active therapist role** - from the start, to establish alliance and maintain focus
-5. **Emphasis on positive transference** - more exploration/education than interpretation
-6. **Early termination focus** - address loss and separation concerns from the beginning
+1. **Change can happen quickly**. Or therapy can start a process that continues after termination
+2. **Limited, agreed-upon goals**. Identified early in treatment
+3. **Selective about clients**. Works best for those who can benefit from insight and form a therapeutic alliance
+4. **Active therapist role**. From the start, to establish alliance and maintain focus
+5. **Emphasis on positive transference**. More exploration/education than interpretation
+6. **Early termination focus**. Address loss and separation concerns from the beginning
 
 {{M}}Unlike traditional psychoanalysis where you might wander through the client's history like exploring a vast library, brief psychodynamic therapy is more like going to a library with a specific research question and a deadline.{{/M}}
 
@@ -160,13 +164,13 @@ Despite variations, brief psychodynamic therapies share these features:
 
 1. **Confusing IPT problem areas**: Role disputes (conflicts about expectations) vs. role transitions (adjusting to changes) vs. deficits (chronic relationship difficulties)
 
-2. **Miracle question purpose**: It's not about fantasizing—it establishes future focus and identifies concrete goals
+2. **Miracle question purpose**: It's not about fantasizing. It establishes future focus and identifies concrete goals
 
 3. **Stages of change timing**: Precontemplation = no intention to change in next 6 months; Contemplation = intending within 6 months; Preparation = within 1 month
 
-4. **Decisional balance in MI**: Remember the revision—it's not always appropriate and can backfire when the goal is promoting change
+4. **Decisional balance in MI**: Remember the revision. It's not always appropriate and can backfire when the goal is promoting change
 
-5. **Brief psychodynamic client selection**: Not for everyone—clients need capacity for insight and ability to form therapeutic alliance
+5. **Brief psychodynamic client selection**: Not for everyone. Clients need capacity for insight and ability to form therapeutic alliance
 
 ## Key Takeaways
 

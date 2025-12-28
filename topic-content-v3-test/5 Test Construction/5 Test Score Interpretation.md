@@ -11,13 +11,13 @@ version: 3
 
 You've just completed an assessment with a client. They look at you expectantly and ask, "So what does my score mean? Am I doing okay?" This is the moment where your understanding of test score interpretation becomes critical. You can't just say "You got 75 correct." You need to put that number in context, explain what it reveals, and help your client understand their results in a meaningful way.
 
-Test score interpretation isn't just about crunching numbers—it's about translating raw data into insights that can guide treatment, inform hiring decisions, support educational planning, and help people understand themselves better. For the EPPP, you'll need to master two major approaches: norm-referenced scores (comparing someone to others) and criterion-referenced scores (measuring against a standard). Let's break this down.
+Test score interpretation isn't just about crunching numbers. It's about translating raw data into insights that can guide treatment, inform hiring decisions, support educational planning, and help people understand themselves better. For the EPPP, you'll need to master two major approaches: norm-referenced scores (comparing someone to others) and criterion-referenced scores (measuring against a standard). Let's break this down.
 
 ## The Foundation: Raw Scores Need Context
 
 A raw score by itself tells you almost nothing. {{M}}If I told you I ran a race in 8 minutes, you'd immediately ask: "How long was the race? What's a good time? How did others do?"{{/M}} The same principle applies to psychological testing. When a client scores 75 on a test, that number only becomes meaningful when we have a reference point.
 
-This is where standardization comes in. When test developers create a test, they administer it to a large, representative sample of people—the standardization sample. This process establishes uniform procedures for giving and scoring the test, and it creates norms (comparison data) that let us interpret individual scores.
+This is where standardization comes in. When test developers create a test, they administer it to a large, representative sample of people, the standardization sample. This process establishes uniform procedures for giving and scoring the test, and it creates norms (comparison data) that let us interpret individual scores.
 
 ## Norm-Referenced Scores: The Comparison Approach
 
@@ -27,7 +27,7 @@ Norm-referenced scores answer the question: "How did this person do compared to 
 
 A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score. If your client receives a percentile rank of 82, it means 82% of people in the comparison group scored the same or lower.
 
-Here's something crucial to understand: percentile ranks use a nonlinear transformation. Every raw score distribution—whether it's bell-shaped, skewed, or lumpy—gets converted into a perfectly flat (rectangular) distribution. Why? Because exactly 1% of scores get assigned to each percentile rank. The highest 1% become percentile rank 100, the next 1% become percentile rank 99, and so on.
+Here's something crucial to understand: percentile ranks use a nonlinear transformation. Every raw score distribution (whether it's bell-shaped, skewed, or lumpy) gets converted into a perfectly flat (rectangular) distribution. Why? Because exactly 1% of scores get assigned to each percentile rank. The highest 1% become percentile rank 100, the next 1% become percentile rank 99, and so on.
 
 {{M}}Think of it like a TV singing competition where contestants get ranked from 1 to 100, regardless of whether the talent pool is evenly distributed or if there's a huge gap between the top two singers.{{/M}} The ranking system forces an even distribution even when the actual talent differences aren't even at all.
 
@@ -35,7 +35,7 @@ This creates an important limitation: the difference between percentile ranks of
 
 ### Standard Scores: Speaking the Language of Standard Deviations
 
-Standard scores tell you how far someone's score falls from the average, measured in standard deviations. Unlike percentile ranks, converting raw scores to standard scores is a linear transformation—the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.
+Standard scores tell you how far someone's score falls from the average, measured in standard deviations. Unlike percentile ranks, converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.
 
 Let's look at the four types of standard scores you need to know:
 
@@ -87,7 +87,7 @@ While norm-referenced scores compare people to each other, criterion-referenced 
 
 Percentage scores simply indicate what proportion of test content the person answered correctly. Answer 75 out of 150 questions correctly, and you get 50%.
 
-{{M}}This is like getting a driver's license—you need to demonstrate you can perform the required skills, regardless of how well others drive.{{/M}} When organizations use percentage scores for decision-making, they typically establish a cutoff score (like 80% correct) to determine who has achieved mastery.
+{{M}}This is like getting a driver's license. You need to demonstrate you can perform the required skills, regardless of how well others drive.{{/M}} When organizations use percentage scores for decision-making, they typically establish a cutoff score (like 80% correct) to determine who has achieved mastery.
 
 This approach makes the most sense when you have a clearly defined content domain and you want to know if someone has learned it. {{M}}If you're training new therapists in suicide risk assessment, you care whether they can accurately identify warning signs, not whether they're in the top 20% of trainees.{{/M}}
 
@@ -106,7 +106,7 @@ For example:
 | 70-79 | 40% | 40% | 20% |
 | 60-69 | 60% | 30% | 10% |
 
-{{M}}This gives hiring managers a realistic picture, like checking restaurant reviews before visiting—you see the full range of experiences, not just an average rating.{{/M}} A job applicant who scores 95 still has a 10% chance of underperforming, but their odds are much better than someone who scores 65.
+{{M}}This gives hiring managers a realistic picture, like checking restaurant reviews before visiting. You see the full range of experiences, not just an average rating.{{/M}} A job applicant who scores 95 still has a 10% chance of underperforming, but their odds are much better than someone who scores 65.
 
 ## Using Test Scores for Selection Decisions
 
@@ -116,7 +116,7 @@ When organizations use tests for hiring, promotions, or admissions, they need a 
 
 With a cutoff approach, you set a minimum score and select everyone at or above that threshold. One method for determining the cutoff is to link test scores to criterion scores (like job performance ratings) and use the test score associated with the lowest acceptable performance as your cutoff.
 
-{{M}}It's similar to setting a minimum GPA for graduate school admission—it's a clear, objective line in the sand.{{/M}} The challenge is setting the cutoff at the right level. Too high, and you exclude qualified candidates; too low, and you admit people who'll struggle.
+{{M}}It's similar to setting a minimum GPA for graduate school admission. It's a clear, objective line in the sand.{{/M}} The challenge is setting the cutoff at the right level. Too high, and you exclude qualified candidates; too low, and you admit people who'll struggle.
 
 ### Ranking: Top-Down Selection
 
@@ -126,7 +126,7 @@ The main issue is that it treats all score differences as meaningful, even tiny 
 
 ### Banding: Accounting for Measurement Error
 
-Banding groups scores into ranges based on the test's standard error of measurement. All scores within a band are considered statistically equivalent—you can't confidently say one is truly higher than another.
+Banding groups scores into ranges based on the test's standard error of measurement. All scores within a band are considered statistically equivalent. You can't confidently say one is truly higher than another.
 
 Here's how it works: The band containing the highest scores gets considered first. All candidates within that band are evaluated using additional criteria like experience, interviews, or interpersonal skills. Only after that band is exhausted do you move to the next band down.
 
@@ -150,7 +150,7 @@ False. Standard scores preserve the shape of the raw score distribution through 
 
 **Misconception 4: "An IQ of 115 is 15% above average."**
 
-This confuses standard deviations with percentages. An IQ of 115 is one standard deviation above the mean of 100, which corresponds to approximately the 84th percentile—meaning the person scored higher than about 84% of people, not 15% above average.
+This confuses standard deviations with percentages. An IQ of 115 is one standard deviation above the mean of 100, which corresponds to approximately the 84th percentile, meaning the person scored higher than about 84% of people, not 15% above average.
 
 **Misconception 5: "Criterion-referenced scores don't compare people to each other at all."**
 
@@ -180,11 +180,11 @@ While the primary purpose is evaluating mastery of content, criterion-referenced
 
 ## Real-World Applications
 
-Understanding test score interpretation isn't just about passing the EPPP—it's essential for competent practice:
+Understanding test score interpretation isn't just about passing the EPPP. It's essential for competent practice:
 
 **Clinical assessment:** When you administer cognitive tests, personality inventories, or symptom measures, you'll need to explain results to clients in understandable terms. Knowing that their T-score of 65 on an anxiety measure means they're scoring higher than about 93% of people helps them understand the significance.
 
-**Educational planning:** School psychologists use standard scores to determine eligibility for special education services. Understanding that a child with an IQ of 85 is one standard deviation below average—not "below average by 15 points"—matters for accurate interpretation.
+**Educational planning:** School psychologists use standard scores to determine eligibility for special education services. Understanding that a child with an IQ of 85 is one standard deviation below average (not "below average by 15 points") matters for accurate interpretation.
 
 **Forensic work:** When providing expert testimony about test results, you need to explain what scores mean to judges and juries who have no statistical background. Can you clearly articulate the difference between a percentile rank and a percentage score?
 

@@ -17,13 +17,13 @@ You're going to spend years working with clients, and you need to know which tre
 
 Internal validity tells you whether a study's conclusions about cause-and-effect are accurate. {{M}}If you started a new diet and lost weight, but also started a new job with longer hours and more stress during that same period, you couldn't be sure which factor caused the weight loss.{{/M}} Research studies face the same problem. Did the therapy help, or was it something else that happened during the study?
 
-External validity tells you how far you can extend those findings. A study might have solid internal validity—the treatment definitely caused the improvement—but if it only worked with college students in a lab setting, will it work with your 45-year-old client dealing with job loss and divorce? That's external validity.
+External validity tells you how far you can extend those findings. A study might have solid internal validity (the treatment definitely caused the improvement) but if it only worked with college students in a lab setting, will it work with your 45-year-old client dealing with job loss and divorce? That's external validity.
 
 Here's what makes this tricky: these two types of validity often conflict. {{M}}It's like trying to test whether a new kitchen gadget works. You could test it in a perfectly controlled test kitchen with ideal conditions (high internal validity), but that doesn't tell you if it'll work in your actual messy kitchen with your habits and constraints (external validity).{{/M}} Researchers constantly balance these priorities.
 
 ## Breaking Down External Validity Into Five Parts
 
-External validity isn't just one thing—it has five distinct components:
+External validity isn't just one thing. It has five distinct components:
 
 | Type of External Validity | What It Measures | Example Question |
 |---------------------------|------------------|------------------|
@@ -41,7 +41,7 @@ Think of these as the ways a study can go wrong when trying to establish cause-a
 
 ### 1. History
 
-History occurs when outside events during the study affect the results. {{M}}Imagine you're testing a new stress-reduction app with participants over three months, and halfway through the study, a major company in your city announces massive layoffs. Suddenly, everyone's stress levels spike—not because of anything in your study, but because of this external event.{{/M}}
+History occurs when outside events during the study affect the results. {{M}}Imagine you're testing a new stress-reduction app with participants over three months, and halfway through the study, a major company in your city announces massive layoffs. Suddenly, everyone's stress levels spike. Not because of anything in your study, but because of this external event.{{/M}}
 
 The solution? Use multiple groups with random assignment. If you randomly assign participants to a treatment group (gets the app) and a control group (doesn't get the app), both groups experience the same historical events. Any difference between them at the end isn't due to history.
 
@@ -49,7 +49,7 @@ There's a trickier version: when you're testing groups separately and something 
 
 ### 2. Maturation
 
-Maturation refers to natural changes that happen over time—physical growth, mental development, getting tired, or just getting older. {{M}}If you're testing whether a reading program improves children's skills over a school year, kids naturally get better at reading as they age anyway.{{/M}} How do you know the program caused the improvement versus just natural development?
+Maturation refers to natural changes that happen over time. Physical growth, mental development, getting tired, or just getting older. {{M}}If you're testing whether a reading program improves children's skills over a school year, kids naturally get better at reading as they age anyway.{{/M}} How do you know the program caused the improvement versus just natural development?
 
 Random assignment to multiple groups solves this too. If you have a treatment group and a control group, both mature at roughly the same rate. The difference between them shows the treatment effect beyond maturation. The longer your study runs, the more maturation threatens your results.
 
@@ -63,15 +63,15 @@ Random assignment is your defense here. When you randomly assign participants to
 
 This one's subtle but important. Statistical regression happens when you select people specifically because they scored extremely high or low on something, and their scores naturally drift toward average over time.
 
-{{M}}Think about performance reviews at work. If you had your worst quarter ever, your next quarter will probably be better—not necessarily because you improved, but because that awful quarter was an outlier influenced by random bad luck. Similarly, if you had your best quarter ever, the next one probably won't be quite as good.{{/M}}
+{{M}}Think about performance reviews at work. If you had your worst quarter ever, your next quarter will probably be better. Not necessarily because you improved, but because that awful quarter was an outlier influenced by random bad luck. Similarly, if you had your best quarter ever, the next one probably won't be quite as good.{{/M}}
 
-In research, if you only study people with the most severe depression (extreme scorers), their scores might improve somewhat over time simply because they're unlikely to maintain that extreme level—even without treatment. You might wrongly conclude your treatment worked when it was really just regression to the mean.
+In research, if you only study people with the most severe depression (extreme scorers), their scores might improve somewhat over time simply because they're unlikely to maintain that extreme level. Even without treatment. You might wrongly conclude your treatment worked when it was really just regression to the mean.
 
 Control this by either avoiding selecting only extreme scorers or making sure all your groups have similar numbers of extreme scorers.
 
 ### 5. Testing
 
-Taking a test can change how you perform on that test later. {{M}}If you take a practice EPPP exam, you'll likely do better on the next one—not just because you studied, but because you remember some questions, you're less anxious, or you've learned test-taking strategies specific to that format.{{/M}}
+Taking a test can change how you perform on that test later. {{M}}If you take a practice EPPP exam, you'll likely do better on the next one. Not just because you studied, but because you remember some questions, you're less anxious, or you've learned test-taking strategies specific to that format.{{/M}}
 
 In research, if you pretest participants on depression, then provide treatment, then posttest them, some improvement might come from taking the pretest rather than from the treatment. They might have thought more about their symptoms after the pretest, or they learned how to answer the questions in a way that looks better.
 
@@ -99,7 +99,7 @@ Now we shift from "Did the treatment cause the effect?" to "Will this work outsi
 
 Reactivity means people act differently because they know they're being studied. This includes two specific problems:
 
-**Demand characteristics** are cues that tell participants what you expect. {{M}}If you're in a study testing a new relaxation technique and the researcher keeps asking "Do you feel more relaxed now? Notice how calm you feel?" you'll probably report feeling relaxed whether you actually do or not—you've picked up on what's expected.{{/M}}
+**Demand characteristics** are cues that tell participants what you expect. {{M}}If you're in a study testing a new relaxation technique and the researcher keeps asking "Do you feel more relaxed now? Notice how calm you feel?" you'll probably report feeling relaxed whether you actually do or not. You've picked up on what's expected.{{/M}}
 
 **Experimenter expectancy** occurs when researchers inadvertently influence results. {{M}}This could be as subtle as a researcher nodding and smiling when a participant gives the "right" answer, or as blatant as recording data in a biased way that supports the hypothesis.{{/M}}
 
@@ -121,7 +121,7 @@ This occurs in within-subjects designs where each person receives multiple treat
 
 Your sample might differ from the general population in ways that affect how they respond to treatment. {{M}}People who volunteer for psychology studies tend to be more educated, more psychologically minded, and more motivated than average. A therapy that works great with motivated volunteers might flop with reluctant clients who only came because their partner insisted.{{/M}}
 
-The best control is random selection from the population—but this is often impractical or impossible. Be aware of how your sample might differ from those you want to generalize to, and be cautious about overextending your conclusions.
+The best control is random selection from the population. But this is often impractical or impossible. Be aware of how your sample might differ from those you want to generalize to, and be cautious about overextending your conclusions.
 
 ### 4. Pretest-Treatment Interaction
 
@@ -166,7 +166,7 @@ Both are controlled through multiple groups with random assignment. Students som
 - **H**istory
 - **I**nstrumentation
 - **M**aturation
-- **I** (skip this one—just helps the acronym work)
+- **I** (skip this one. Just helps the acronym work)
 - **S**tatistical regression
 - **S**election (differential selection)
 - **D**ifferential attrition

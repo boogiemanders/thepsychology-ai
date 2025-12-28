@@ -9,13 +9,13 @@ version: 3
 
 ## Introduction: Why Anxiety Disorders Matter for Your Practice
 
-When you start working as a psychologist, anxiety disorders will likely be the most common conditions you encounter. They're the most prevalent mental disorders worldwide, which means you'll see them across almost every setting—whether you're doing therapy, assessments, or consultation work. Understanding these disorders isn't just about passing the EPPP; it's about being prepared for the daily reality of clinical practice.
+When you start working as a psychologist, anxiety disorders will likely be the most common conditions you encounter. They're the most prevalent mental disorders worldwide, which means you'll see them across almost every setting. Whether you're doing therapy, assessments, or consultation work. Understanding these disorders isn't just about passing the EPPP; it's about being prepared for the daily reality of clinical practice.
 
 Here's what makes anxiety disorders particularly important: they often show up alongside other conditions, they respond well to specific treatments when you apply them correctly, and they can significantly disrupt someone's ability to work, maintain relationships, and handle everyday responsibilities. Let's break down what you need to know.
 
 ## Understanding the Anxiety Disorders Family
 
-Anxiety disorders all share a common thread: excessive fear and anxiety that leads to behavioral problems. But each disorder has its own specific triggers and patterns. {{M}}Think of it like different types of allergic reactions—they all involve an immune system overreaction, but one person reacts to peanuts while another reacts to pollen.{{/M}} The anxiety response is similar across disorders, but what triggers it and how it manifests varies significantly.
+Anxiety disorders all share a common thread: excessive fear and anxiety that leads to behavioral problems. But each disorder has its own specific triggers and patterns. {{M}}Think of it like different types of allergic reactions. They all involve an immune system overreaction, but one person reacts to peanuts while another reacts to pollen.{{/M}} The anxiety response is similar across disorders, but what triggers it and how it manifests varies significantly.
 
 ### The Foundation: What Makes Someone Vulnerable?
 
@@ -30,7 +30,7 @@ Notice that genetics plays a role, but it's not destiny. The heritability estima
 
 ## Separation Anxiety Disorder
 
-This disorder involves excessive fear about being separated from attachment figures—and it's not just for kids. Adults can have it too, though the diagnostic criteria differ slightly in duration.
+This disorder involves excessive fear about being separated from attachment figures. And it's not just for kids. Adults can have it too, though the diagnostic criteria differ slightly in duration.
 
 ### Core Features
 
@@ -43,7 +43,7 @@ The person needs at least three of eight symptoms, including:
 
 ### School Refusal: A Common Presentation
 
-{{M}}Picture a child on Sunday evening who starts complaining about stomachaches and headaches that mysteriously disappear on Saturday morning.{{/M}} School refusal often signals separation anxiety disorder, though it can also indicate social anxiety or other conditions. These kids aren't being manipulative—they genuinely experience physical symptoms driven by anxiety. They cry, plead, and sometimes show full panic symptoms when it's time to leave home.
+{{M}}Picture a child on Sunday evening who starts complaining about stomachaches and headaches that mysteriously disappear on Saturday morning.{{/M}} School refusal often signals separation anxiety disorder, though it can also indicate social anxiety or other conditions. These kids aren't being manipulative. They genuinely experience physical symptoms driven by anxiety. They cry, plead, and sometimes show full panic symptoms when it's time to leave home.
 
 ### Treatment Approach
 
@@ -80,9 +80,9 @@ Specific phobia is intense fear or anxiety about a particular object or situatio
 
 This is important for the EPPP because it explains the maintenance of phobias through learning principles:
 
-**Stage 1 - Classical Conditioning:** {{M}}Imagine someone who gets trapped in an elevator during a power outage.{{/M}} The elevator (previously neutral) becomes associated with the frightening experience (being trapped, feeling panic). Now the elevator itself triggers anxiety.
+**Stage 1. Classical Conditioning:** {{M}}Imagine someone who gets trapped in an elevator during a power outage.{{/M}} The elevator (previously neutral) becomes associated with the frightening experience (being trapped, feeling panic). Now the elevator itself triggers anxiety.
 
-**Stage 2 - Operant Conditioning:** The person learns that avoiding elevators prevents anxiety. This avoidance is negatively reinforced (it removes the unpleasant anxiety feeling), which makes the person more likely to avoid elevators in the future. The problem? They never get the chance to learn that elevators are generally safe, so the fear never extinguishes.
+**Stage 2. Operant Conditioning:** The person learns that avoiding elevators prevents anxiety. This avoidance is negatively reinforced (it removes the unpleasant anxiety feeling), which makes the person more likely to avoid elevators in the future. The problem? They never get the chance to learn that elevators are generally safe, so the fear never extinguishes.
 
 ### Brain Activity in Specific Phobia
 
@@ -181,7 +181,7 @@ Agoraphobia involves marked fear or anxiety about at least two of five situation
 
 ### The Core Fear
 
-The person fears these situations because escape might be difficult or help might be unavailable if they develop panic symptoms or other incapacitating symptoms. {{M}}It's like someone mapping out their entire day based on proximity to safe exits and familiar people who could help in a crisis—except the crisis they're avoiding likely won't happen.{{/M}}
+The person fears these situations because escape might be difficult or help might be unavailable if they develop panic symptoms or other incapacitating symptoms. {{M}}It's like someone mapping out their entire day based on proximity to safe exits and familiar people who could help in a crisis. Except the crisis they're avoiding likely won't happen.{{/M}}
 
 ### Treatment
 
@@ -220,7 +220,7 @@ The content of worry varies by age: Children worry about catastrophic events and
 ### Why Do People with GAD Worry? Three Theoretical Models
 
 **1. Cognitive Avoidance Theory (Borkovec)**
-Worry is a verbal-linguistic activity that creates low mental imagery. This helps people with GAD avoid vivid, disturbing images and the intense emotions that accompany them. {{M}}It's like reading a news article about a car accident rather than watching video footage—both convey information, but one is easier to tolerate emotionally.{{/M}}
+Worry is a verbal-linguistic activity that creates low mental imagery. This helps people with GAD avoid vivid, disturbing images and the intense emotions that accompany them. {{M}}It's like reading a news article about a car accident rather than watching video footage. Both convey information, but one is easier to tolerate emotionally.{{/M}}
 
 **2. Contrast Avoidance Model (Newman & Llera)**
 People with GAD maintain chronic worry to stay in a sustained negative emotional state, which prevents jarring shifts from positive/neutral states to negative states when something bad happens. They'd rather feel consistently moderately anxious than experience sudden emotional drops.
@@ -263,7 +263,7 @@ OCD involves recurrent obsessions and/or compulsions that are time-consuming (mo
 - Are done in response to an obsession or according to rigid rules
 - Aim to reduce anxiety or prevent something bad (but are excessive or unrealistically connected to their goal)
 
-{{M}}Think of obsessions as intrusive spam emails that keep appearing in your inbox no matter how many times you delete them, and compulsions as the repetitive checking and deleting behaviors you perform trying to make them stop—except the behaviors actually make the spam worse by confirming your email address is active.{{/M}}
+{{M}}Think of obsessions as intrusive spam emails that keep appearing in your inbox no matter how many times you delete them, and compulsions as the repetitive checking and deleting behaviors you perform trying to make them stop. Except the behaviors actually make the spam worse by confirming your email address is active.{{/M}}
 
 ### Demographics and Comorbidity
 
@@ -328,7 +328,7 @@ People with BDD often:
 **Reality:** For agoraphobia specifically, research shows that adding relaxation, breathing retraining, or cognitive techniques doesn't significantly improve outcomes beyond exposure alone. The key is learning to tolerate high anxiety, not reduce it.
 
 **Misconception 3:** "OCD is just about being neat and organized."
-**Reality:** OCD involves intrusive, unwanted thoughts that cause significant distress and time-consuming rituals that are performed to reduce anxiety—not preference for organization.
+**Reality:** OCD involves intrusive, unwanted thoughts that cause significant distress and time-consuming rituals that are performed to reduce anxiety. Not preference for organization.
 
 **Misconception 4:** "Specific phobias always develop from traumatic experiences with the feared object."
 **Reality:** While classical conditioning explains many phobias, genetics and brain activity also play significant roles. Not everyone with a dog phobia was bitten by a dog.
@@ -338,7 +338,7 @@ People with BDD often:
 
 ## Memory Aids for the EPPP
 
-**Panic Attack Symptoms - Remember "STUDENTS FEAR CRASHING":**
+**Panic Attack Symptoms. Remember "STUDENTS FEAR CRASHING":**
 - **S**weating
 - **T**rembling
 - **U**nsteadiness/dizziness
@@ -367,10 +367,10 @@ People with BDD often:
 - **Graded** = Gradual steps (like using the stairs of a pool)
 
 **GAD vs. Normal Worry:**
-If you can't control it, it covers multiple topics, and it comes with physical symptoms—that's GAD territory.
+If you can't control it, it covers multiple topics, and it comes with physical symptoms. That's GAD territory.
 
 **OCD Treatment Success:**
-Remember "ERP FIRST" - Exposure and Response Prevention is the first-line psychological treatment, whether alone or with SSRIs.
+Remember "ERP FIRST". Exposure and Response Prevention is the first-line psychological treatment, whether alone or with SSRIs.
 
 ## Clinical Application Tips
 
@@ -391,11 +391,11 @@ Medical rule-outs are essential. Document that you've considered hyperthyroidism
 
 ## Key Takeaways
 
-- **Anxiety disorders are the most prevalent mental disorders worldwide**—you'll see them frequently in practice
+- **Anxiety disorders are the most prevalent mental disorders worldwide**. You'll see them frequently in practice
 
 - **Each anxiety disorder has specific features** that differentiate it, despite sharing the common thread of excessive fear and anxiety
 
-- **Genetics matter but aren't destiny**—heritability estimates range from 30-50%, meaning environment and learning play major roles
+- **Genetics matter but aren't destiny**. Heritability estimates range from 30-50%, meaning environment and learning play major roles
 
 - **Exposure and Response Prevention (ERP) is the gold-standard psychological treatment** for specific phobia, OCD, and agoraphobia
 
@@ -411,10 +411,10 @@ Medical rule-outs are essential. Document that you've considered hyperthyroidism
 
 - **For GAD, understand the three theoretical models** of why people worry: cognitive avoidance, contrast avoidance, and intolerance of uncertainty
 
-- **OCD has clear brain pathway involvement**—the CSTC pathway shows hyperactivity
+- **OCD has clear brain pathway involvement**, the CSTC pathway shows hyperactivity
 
 - **Duration matters for diagnosis:** Know the timeline requirements (4 weeks vs. 6 months for separation anxiety; 6 months for most anxiety disorders)
 
-- **Comorbidity is common**—major depressive disorder is the most common comorbid condition with GAD, and anxiety disorders are most common with OCD
+- **Comorbidity is common**. Major depressive disorder is the most common comorbid condition with GAD, and anxiety disorders are most common with OCD
 
 Understanding these disorders thoroughly will serve you well on the EPPP and in your clinical work. Focus on distinguishing features, treatment approaches, and the research findings that differentiate best practices from common but less effective interventions.

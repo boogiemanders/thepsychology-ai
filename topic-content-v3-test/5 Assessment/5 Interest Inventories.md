@@ -9,9 +9,9 @@ version: 3
 
 ## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)
 
-You're preparing for the EPPP, which means you've already made major career decisions yourself. Maybe you chose psychology over law, or clinical work over research. How did you know? Probably through a mix of gut feeling, experience, and exploration. Now imagine if someone had handed you a tool that could map your preferences against thousands of satisfied professionals in your field. That's exactly what interest inventories do—and understanding them is crucial both for the exam and for helping clients navigate one of life's biggest questions: "What should I do with my career?"
+You're preparing for the EPPP, which means you've already made major career decisions yourself. Maybe you chose psychology over law, or clinical work over research. How did you know? Probably through a mix of gut feeling, experience, and exploration. Now imagine if someone had handed you a tool that could map your preferences against thousands of satisfied professionals in your field. That's exactly what interest inventories do. And understanding them is crucial both for the exam and for helping clients navigate one of life's biggest questions: "What should I do with my career?"
 
-Here's what makes interest inventories unique in the assessment world: they don't measure ability or personality directly. Instead, they measure preferences—what people like and dislike. And here's the key finding you need to remember for the exam: interest inventories are excellent at predicting job choice, satisfaction, and persistence, but they're much less accurate at predicting actual job success. {{M}}It's like knowing someone loves cooking doesn't tell you if they'll become a master chef, but it does suggest they'll probably stick with culinary school longer than someone who hates being in a kitchen.{{/M}}
+Here's what makes interest inventories unique in the assessment world: they don't measure ability or personality directly. Instead, they measure preferences. What people like and dislike. And here's the key finding you need to remember for the exam: interest inventories are excellent at predicting job choice, satisfaction, and persistence, but they're much less accurate at predicting actual job success. {{M}}It's like knowing someone loves cooking doesn't tell you if they'll become a master chef, but it does suggest they'll probably stick with culinary school longer than someone who hates being in a kitchen.{{/M}}
 
 ## The Two Heavy Hitters You Need to Know
 
@@ -19,7 +19,7 @@ For the EPPP, you need to understand two major interest inventories in detail: t
 
 ## The Strong Interest Inventory: Five Layers of Career Insight
 
-The Strong Interest Inventory is designed for high school students, college students, and adults—basically anyone old enough to have formed real opinions about work and activities. It contains 291 items that people respond to using a five-point scale from "strongly like" to "strongly dislike."
+The Strong Interest Inventory is designed for high school students, college students, and adults. Basically anyone old enough to have formed real opinions about work and activities. It contains 291 items that people respond to using a five-point scale from "strongly like" to "strongly dislike."
 
 ### The Five Components of the SII
 
@@ -38,7 +38,7 @@ This is your broadest view. The GOTs are based on Holland's six occupational the
 | **Enterprising** | Leading, persuading, managing for goals | Sales, management, politics |
 | **Conventional** | Organizing, detailed work, clear structures | Accountant, administrator, data specialist |
 
-{{M}}If you're struggling to remember these, try the acronym RIASEC (just like your client might need a "RE-A-SEC" to think about their career path).{{/M}} These themes aren't about what someone can do well—they're about what environments and activities energize them.
+{{M}}If you're struggling to remember these, try the acronym RIASEC (just like your client might need a "RE-A-SEC" to think about their career path).{{/M}} These themes aren't about what someone can do well. They're about what environments and activities energize them.
 
 **2. Basic Interest Scales (BISs)**
 
@@ -46,11 +46,11 @@ Here's where we zoom in closer. The BISs break down those six broad themes into 
 
 **3. Occupational Scales (OSs)**
 
-Now we're getting very specific. The Occupational Scales compare the test-taker's interests with those of people who are currently employed—and importantly, satisfied—in 130 different occupations. The comparison is gender-specific, meaning your male client's responses are compared with satisfied men in each occupation, and your female client's with satisfied women.
+Now we're getting very specific. The Occupational Scales compare the test-taker's interests with those of people who are currently employed (and importantly, satisfied) in 130 different occupations. The comparison is gender-specific, meaning your male client's responses are compared with satisfied men in each occupation, and your female client's with satisfied women.
 
 Here's the technical detail that matters for the EPPP: these scales were created using **empirical criterion keying**. This means the test developers didn't just guess which questions would matter. They actually compared responses from people employed in specific occupations with responses from a general representative sample of employed adults. Only the items that actually distinguished between these groups made it onto each Occupational Scale.
 
-{{M}}Think of it like building a dating profile algorithm—you don't just ask what people think matters, you look at which questions actually predict whether two people will match well.{{/M}}
+{{M}}Think of it like building a dating profile algorithm. You don't just ask what people think matters, you look at which questions actually predict whether two people will match well.{{/M}}
 
 **4. Personal Styles Scales (PSSs)**
 
@@ -64,7 +64,7 @@ These five scales capture how someone prefers to work, beyond just what they wan
 
 **5. Administrative Indices**
 
-These check for unusual or inconsistent response patterns—basically quality control to make sure the results are valid.
+These check for unusual or inconsistent response patterns. Basically quality control to make sure the results are valid.
 
 ## The Kuder Occupational Interest Survey: A Different Approach
 
@@ -82,13 +82,13 @@ You're forced to rank these even if you love all three or hate all three.
 
 This creates what's called **ipsative scores**. This is exam-critical terminology: ipsative scores allow you to compare a person's interests against their own other interests (intra-individual comparison), but you cannot meaningfully compare one person's scores to another person's scores (no inter-individual comparison).
 
-{{M}}Imagine asking three friends to split $100 among pizza, sushi, and tacos based on their preferences. One friend might give $70 to pizza, $20 to sushi, and $10 to tacos. Another gives $60 to sushi, $35 to pizza, and $5 to tacos. The second person's $35 for pizza doesn't mean they like pizza less than the first person's $70—maybe they just love sushi even more.{{/M}} The forced-choice format creates this same limitation.
+{{M}}Imagine asking three friends to split $100 among pizza, sushi, and tacos based on their preferences. One friend might give $70 to pizza, $20 to sushi, and $10 to tacos. Another gives $60 to sushi, $35 to pizza, and $5 to tacos. The second person's $35 for pizza doesn't mean they like pizza less than the first person's $70. Maybe they just love sushi even more.{{/M}} The forced-choice format creates this same limitation.
 
 ### The Four Components of the KOIS
 
 **1. Occupational Scales**
 
-These show how closely the test-taker's interests match those of satisfied workers in 109 occupations. Like the SII, these were developed using empirical criterion keying—but with an important difference. The KOIS didn't compare occupational groups to a general sample. Instead, it compared different occupational groups directly to each other, including only items that could distinguish between them.
+These show how closely the test-taker's interests match those of satisfied workers in 109 occupations. Like the SII, these were developed using empirical criterion keying. But with an important difference. The KOIS didn't compare occupational groups to a general sample. Instead, it compared different occupational groups directly to each other, including only items that could distinguish between them.
 
 **2. College Major Scales**
 
@@ -131,7 +131,7 @@ Why does this matter? {{M}}Because a client might walk into your office frustrat
 
 ## Real-World Clinical Applications
 
-Understanding interest inventories isn't just about passing the exam—it's about knowing when to use (and not use) these tools with clients.
+Understanding interest inventories isn't just about passing the exam. It's about knowing when to use (and not use) these tools with clients.
 
 **When they're helpful:**
 
@@ -149,7 +149,7 @@ Someone is trying to decide between two job offers in fields they're already int
 
 **Misconception #1: "Interest inventories predict job performance"**
 
-Wrong. They predict choice, satisfaction, and persistence—whether someone will enter a field, like it, and stay in it. Performance depends on abilities, skills, and other factors.
+Wrong. They predict choice, satisfaction, and persistence. Whether someone will enter a field, like it, and stay in it. Performance depends on abilities, skills, and other factors.
 
 **Misconception #2: "The KOIS and SII measure the same thing the same way"**
 
@@ -157,7 +157,7 @@ Not quite. While both measure occupational interests, the forced-choice format o
 
 **Misconception #3: "Higher scores mean better fit"**
 
-Be careful here. On the SII's Occupational Scales, higher scores mean greater similarity to people in that occupation—which generally suggests better fit. But remember these are compared to satisfied workers, not all workers. On the KOIS, you're looking at strength of relationship between interests, not absolute measures.
+Be careful here. On the SII's Occupational Scales, higher scores mean greater similarity to people in that occupation, which generally suggests better fit. But remember these are compared to satisfied workers, not all workers. On the KOIS, you're looking at strength of relationship between interests, not absolute measures.
 
 **Misconception #4: "Gender-specific norms are outdated"**
 
@@ -212,7 +212,7 @@ Let's test your understanding with realistic exam-style situations:
 
 **Scenario 3**: On the SII, how were items selected for the Occupational Scales?
 
-*Answer*: Through empirical criterion keying—comparing responses from people employed in specific occupations with responses from a general representative sample of employed adults, then including items that distinguished between the two groups.
+*Answer*: Through empirical criterion keying, comparing responses from people employed in specific occupations with responses from a general representative sample of employed adults, then including items that distinguished between the two groups.
 
 **Scenario 4**: A client scores high on the SII's Social theme. What additional information from the SII would help narrow down specific career directions?
 

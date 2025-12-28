@@ -9,7 +9,7 @@ version: 3
 
 ## Understanding Personality Disorders: A Practical Guide for EPPP Prep
 
-You've probably encountered people who seem stuck in patterns that cause them endless problems. Maybe it's a coworker who sees betrayal everywhere, or a family member who can't handle being alone. When these patterns are so rigid and pervasive that they create significant distress and impairment—and they've been there since early adulthood—we might be looking at a personality disorder.
+You've probably encountered people who seem stuck in patterns that cause them endless problems. Maybe it's a coworker who sees betrayal everywhere, or a family member who can't handle being alone. When these patterns are so rigid and pervasive that they create significant distress and impairment (and they've been there since early adulthood) we might be looking at a personality disorder.
 
 For the EPPP, you need to know these patterns inside and out. Not just the symptom lists, but how to distinguish between disorders that look similar and how to think about treatment. Let's break this down in a way that'll stick with you.
 
@@ -22,7 +22,7 @@ According to DSM-5-TR, personality disorders aren't just quirks or bad habits. T
 - Remain stable over time
 - Lead to distress or impairment
 
-The key word here is "enduring." {{M}}These aren't phases like changing your fashion style or going through a breakup recovery period.{{/M}} We're talking about deeply ingrained patterns that show up consistently across different contexts—at work, in relationships, with family, among strangers.
+The key word here is "enduring." {{M}}These aren't phases like changing your fashion style or going through a breakup recovery period.{{/M}} We're talking about deeply ingrained patterns that show up consistently across different contexts. At work, in relationships, with family, among strangers.
 
 Here's an important clinical note: You can diagnose most personality disorders in someone under 18 if symptoms have been present for at least one year. The exception? Antisocial personality disorder requires the person to be at least 18.
 
@@ -52,7 +52,7 @@ This framework helps explain why someone with borderline personality disorder (h
 
 ### Paranoid Personality Disorder
 
-This is about pervasive distrust and suspiciousness—seeing malevolent motives where none exist. You need at least four of these seven symptoms:
+This is about pervasive distrust and suspiciousness, seeing malevolent motives where none exist. You need at least four of these seven symptoms:
 
 - Suspects exploitation, harm, or deception without sufficient reason
 - Preoccupied with unjustified doubts about others' loyalty
@@ -62,7 +62,7 @@ This is about pervasive distrust and suspiciousness—seeing malevolent motives 
 - Quick to perceive attacks on character and counterattack
 - Suspicious about partner's fidelity without justification
 
-{{M}}Picture someone who reads your group text asking "Can we talk?" and immediately assumes you're plotting against them.{{/M}} That's the kind of automatic negative interpretation we're talking about—but happening constantly, across all relationships.
+{{M}}Picture someone who reads your group text asking "Can we talk?" and immediately assumes you're plotting against them.{{/M}} That's the kind of automatic negative interpretation we're talking about. But happening constantly, across all relationships.
 
 ### Schizoid Personality Disorder
 
@@ -76,7 +76,7 @@ This involves detachment from social relationships and restricted emotional expr
 - Indifferent to praise or criticism
 - Emotionally cold, detached, or flat affect
 
-The critical distinction: People with schizoid personality disorder genuinely don't want close relationships. {{M}}It's not like declining party invitations because you're tired—they simply don't find social connection rewarding.{{/M}}
+The critical distinction: People with schizoid personality disorder genuinely don't want close relationships. {{M}}It's not like declining party invitations because you're tired. They simply don't find social connection rewarding.{{/M}}
 
 ### Schizotypal Personality Disorder
 
@@ -111,7 +111,7 @@ This is the only personality disorder that requires the person to be at least 18
 - Consistently irresponsible
 - Lacks remorse
 
-Important clinical notes: This disorder often becomes less severe by the fourth decade of life, especially criminal behaviors. The most common comorbidities are substance use disorders, mood disorders, borderline personality disorder, and anxiety disorders—in that order.
+Important clinical notes: This disorder often becomes less severe by the fourth decade of life, especially criminal behaviors. The most common comorbidities are substance use disorders, mood disorders, borderline personality disorder, and anxiety disorders. In that order.
 
 Treatment is notoriously difficult because these individuals don't believe they have a problem. However, cognitive-behavioral group interventions may reduce reoffending, and contingency management can help with comorbid substance use.
 
@@ -139,7 +139,7 @@ Good news: Up to 75% of individuals no longer meet full criteria by age 40. Symp
 2. **Individual psychotherapy**: Prioritizes reducing (a) suicidal/life-threatening behaviors, (b) therapy-interfering behaviors (TIBs) like missing sessions or not doing homework, and (c) quality-of-life interfering behaviors like relationship and financial crises
 3. **Intersession coaching**: Telephone support to generalize skills to real situations and repair therapeutic relationships
 
-(Therapists also participate in consultation teams to maintain their own effectiveness—important for preventing burnout with this challenging population.)
+(Therapists also participate in consultation teams to maintain their own effectiveness. Important for preventing burnout with this challenging population.)
 
 ### Histrionic Personality Disorder
 
@@ -162,7 +162,7 @@ There's debate about whether these disorders represent gender-biased expressions
 
 ### Narcissistic Personality Disorder
 
-This requires grandiosity, need for admiration, and lack of empathy—at least five of nine symptoms:
+This requires grandiosity, need for admiration, and lack of empathy. At least five of nine symptoms:
 
 - Grandiose sense of self-importance
 - Preoccupied with fantasies of unlimited success/power/beauty
@@ -190,7 +190,7 @@ This involves social inhibition, feelings of inadequacy, and hypersensitivity to
 - Views self as socially inept or inferior
 - Reluctant to try new activities that might be embarrassing
 
-Remember the distinction from earlier: These individuals desperately want relationships but avoid them due to fear of rejection—very different from schizoid (no desire) or schizotypal (discomfort and odd behavior).
+Remember the distinction from earlier: These individuals desperately want relationships but avoid them due to fear of rejection. Very different from schizoid (no desire) or schizotypal (discomfort and odd behavior).
 
 ### Dependent Personality Disorder
 
@@ -283,7 +283,7 @@ Reality: Completely different disorders. OCPD = rigid personality traits. OCD = 
 
 - **Core definition**: Personality disorders are enduring, pervasive, inflexible patterns starting in adolescence/early adulthood that cause distress or impairment
 
-- **The three clusters**: A (odd/eccentric), B (dramatic/erratic), C (anxious/fearful)—know which disorders fall into each
+- **The three clusters**: A (odd/eccentric), B (dramatic/erratic), C (anxious/fearful). Know which disorders fall into each
 
 - **Age requirements**: Only antisocial personality disorder requires age 18+; all others can be diagnosed under 18 if symptoms present for 1+ year
 
@@ -300,4 +300,4 @@ Reality: Completely different disorders. OCPD = rigid personality traits. OCD = 
 
 - **Comorbidity matters**: For antisocial personality disorder, watch for substance use disorders as the most common comorbidity
 
-Remember, personality disorders aren't just extreme versions of normal personality traits—they're pervasive patterns that cause significant dysfunction across multiple life domains. Understanding these patterns will help you not only on the EPPP but in recognizing and conceptualizing complex cases throughout your career.
+Remember, personality disorders aren't just extreme versions of normal personality traits. They're pervasive patterns that cause significant dysfunction across multiple life domains. Understanding these patterns will help you not only on the EPPP but in recognizing and conceptualizing complex cases throughout your career.

@@ -19,7 +19,7 @@ For the exam, this material falls under Domain 1: Biological Bases of Behavior. 
 
 The limbic system has traditionally been called the "emotional brain," though modern neuroscience shows us that emotions are more distributed than we once thought. Still, several key players deserve your attention:
 
-**The Amygdala** sits deep in your temporal lobes and acts as your threat detection system. It processes emotional significance, especially fear and threat-related information. When it activates, it does so fast—much faster than your conscious thinking. This is why {{M}}you might jump at a sound in a parking garage before you even realize what you heard{{/M}}. The amygdala has direct connections to the hypothalamus, which kicks off the stress response before your prefrontal cortex even gets the memo.
+**The Amygdala** sits deep in your temporal lobes and acts as your threat detection system. It processes emotional significance, especially fear and threat-related information. When it activates, it does so fast. Much faster than your conscious thinking. This is why {{M}}you might jump at a sound in a parking garage before you even realize what you heard{{/M}}. The amygdala has direct connections to the hypothalamus, which kicks off the stress response before your prefrontal cortex even gets the memo.
 
 **The Hippocampus** sits right next to the amygdala and handles memory formation, particularly contextual and spatial memory. It's crucial for understanding stress because chronic stress and elevated cortisol can actually damage hippocampal neurons, leading to memory problems. This structure helps you remember where and when something emotional happened.
 
@@ -27,11 +27,11 @@ The limbic system has traditionally been called the "emotional brain," though mo
 
 **The Prefrontal Cortex** (PFC), particularly the ventromedial and orbitofrontal areas, provides top-down regulation of emotions. {{M}}Think of it as the diplomatic advisor trying to calm down the impulsive amygdala{{/M}}. The PFC helps with emotion regulation, decision-making about emotional situations, and inhibiting inappropriate emotional responses. When someone "loses their cool," this system has been overwhelmed.
 
-**The Anterior Cingulate Cortex** (ACC) monitors for conflicts and errors, contributing to emotional awareness and regulation. It lights up when you're experiencing emotional pain—physical and social pain activate overlapping neural networks, which is why rejection genuinely hurts.
+**The Anterior Cingulate Cortex** (ACC) monitors for conflicts and errors, contributing to emotional awareness and regulation. It lights up when you're experiencing emotional pain. Physical and social pain activate overlapping neural networks, which is why rejection genuinely hurts.
 
 ### The Insula
 
-Don't overlook the insula. This structure processes interoceptive awareness—your perception of internal bodily states. It helps you recognize that your heart is pounding, that you feel nauseous, or that tension in your shoulders. For anxiety disorders, the insula often shows hyperactivity, making people overly aware of normal bodily sensations.
+Don't overlook the insula. This structure processes interoceptive awareness. Your perception of internal bodily states. It helps you recognize that your heart is pounding, that you feel nauseous, or that tension in your shoulders. For anxiety disorders, the insula often shows hyperactivity, making people overly aware of normal bodily sensations.
 
 ## The Stress Response: From Perception to Action
 
@@ -49,7 +49,7 @@ This is your immediate response. Here's the sequence:
 4. Adrenal medulla releases epinephrine (adrenaline) and norepinephrine into bloodstream
 5. Result: Increased heart rate, blood pressure, respiration, glucose availability
 
-This happens in seconds. {{M}}It's like hitting the gas pedal—immediate acceleration{{/M}}. This is your fight-or-flight response, and it evolved to help you deal with acute threats.
+This happens in seconds. {{M}}It's like hitting the gas pedal. Immediate acceleration{{/M}}. This is your fight-or-flight response, and it evolved to help you deal with acute threats.
 
 **The Slow Path: Hypothalamic-Pituitary-Adrenal (HPA) Axis**
 
@@ -87,7 +87,7 @@ Several neurotransmitter systems play crucial roles:
 
 ## Chronic Stress: When The System Stays On
 
-Acute stress is adaptive—it helps you respond to genuine threats. But chronic stress, where the HPA axis remains activated, causes significant problems:
+Acute stress is adaptive. It helps you respond to genuine threats. But chronic stress, where the HPA axis remains activated, causes significant problems:
 
 ### Neurobiological Consequences
 
@@ -115,7 +115,7 @@ Understanding these helps you explain to clients why stress isn't "just in their
 
 William James and Carl Lange proposed that emotions arise from physiological responses. You don't run because you're afraid; you're afraid because you run. The sequence: Stimulus → Physiological response → Emotion.
 
-This theory has partial merit—bodily feedback does influence emotional experience—but it can't explain everything. People with spinal cord injuries still experience emotions, though sometimes less intensely.
+This theory has partial merit (bodily feedback does influence emotional experience) but it can't explain everything. People with spinal cord injuries still experience emotions, though sometimes less intensely.
 
 ### Cannon-Bard Theory
 
@@ -204,7 +204,7 @@ When clients say "I'm always on edge," you're hearing about sympathetic nervous 
 
 ### Treatment Implications
 
-**Psychoeducation**: Explaining the stress response normalizes symptoms. {{M}}When you tell a client that their racing heart during panic isn't dangerous—it's just their SAM system activating when there's no actual threat{{/M}}—you're providing cognitive restructuring material.
+**Psychoeducation**: Explaining the stress response normalizes symptoms. {{M}}When you tell a client that their racing heart during panic isn't dangerous (it's just their SAM system activating when there's no actual threat{{/M}}) you're providing cognitive restructuring material.
 
 **Somatic Interventions**: Understanding the autonomic nervous system supports interventions like:
 - Deep breathing (activates parasympathetic response)
@@ -243,13 +243,13 @@ Reality: Cortisol is essential for daily functioning, showing a normal diurnal r
 **Create a Flow Chart**: Draw out the HPA axis from start to finish. Physically writing "Hypothalamus → CRH → Anterior Pituitary → ACTH → Adrenal Cortex → Cortisol → Negative Feedback" helps cement the sequence.
 
 **Use Mnemonics**: 
-- For amygdala functions: "FEAR" - Fast Emotional Alarm Response
+- For amygdala functions: "FEAR". Fast Emotional Alarm Response
 - For parasympathetic effects: "Rest and Digest"
 - For sympathetic effects: "Fight or Flight"
 
 **Make Comparison Tables**: Create your own tables comparing theories, systems, or neurotransmitters. The act of organizing information helps encoding.
 
-**Connect to Cases**: As you encounter practice questions or case studies, identify the biological mechanisms at play. "This client with panic disorder shows heightened interoceptive awareness—that's the insula. The racing heart is SAM system activation."
+**Connect to Cases**: As you encounter practice questions or case studies, identify the biological mechanisms at play. "This client with panic disorder shows heightened interoceptive awareness. That's the insula. The racing heart is SAM system activation."
 
 **Timeline Method**: Create a timeline showing:
 - 0-5 seconds: Amygdala detection, sympathetic activation
@@ -281,4 +281,4 @@ Reality: Cortisol is essential for daily functioning, showing a normal diurnal r
 
 - **Context influences interpretation**: The same physiological arousal can be experienced as different emotions depending on cognitive appraisal (Schachter-Singer).
 
-Remember, this isn't just test material—this is the foundation for understanding why your clients experience what they do and how interventions work at a biological level. When you can explain to a client why their body responds the way it does, you're building the therapeutic alliance and providing hope that change is possible through multiple pathways.
+Remember, this isn't just test material. This is the foundation for understanding why your clients experience what they do and how interventions work at a biological level. When you can explain to a client why their body responds the way it does, you're building the therapeutic alliance and providing hope that change is possible through multiple pathways.

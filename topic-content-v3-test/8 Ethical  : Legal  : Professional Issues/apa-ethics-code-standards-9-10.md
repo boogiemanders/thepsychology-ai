@@ -9,11 +9,11 @@ version: 3
 
 ## Why These Standards Matter for Your Career
 
-You're about to become a licensed psychologist, which means clients will trust you with their most vulnerable moments, test results that could shape their lives, and personal information that could harm them if mishandled. Standards 9 and 10 of the APA Ethics Code aren't just exam fodder—they're your roadmap for handling assessments and therapy relationships without accidentally causing harm or losing your license.
+You're about to become a licensed psychologist, which means clients will trust you with their most vulnerable moments, test results that could shape their lives, and personal information that could harm them if mishandled. Standards 9 and 10 of the APA Ethics Code aren't just exam fodder. They're your roadmap for handling assessments and therapy relationships without accidentally causing harm or losing your license.
 
 {{M}}Think of these standards as the safety features in your car.{{/M}} You might not think about airbags and anti-lock brakes every day, but when you need them, you're incredibly grateful they're there. These ethics standards work the same way: they protect both you and your clients when situations get complicated.
 
-## Standard 9: Assessment—Getting It Right
+## Standard 9: Assessment (Getting It Right)
 
 ### The Foundation: Base Your Conclusions on Solid Ground
 
@@ -21,17 +21,17 @@ Standard 9.01 establishes a critical rule: don't make claims about someone's psy
 
 Here's what this means practically: You need enough information to support your conclusions. If you're writing a report about someone's cognitive abilities, you can't just glance at one subtest and call it done. You need comprehensive data that actually supports what you're saying.
 
-**When you can't examine someone directly**, you're still allowed to offer opinions, but you must clearly explain the limitations. {{M}}It's like writing a restaurant review based on someone else's photos and descriptions—you can share your thoughts, but you need to be upfront that you haven't actually tasted the food yourself.{{/M}} For example, if you're commenting on someone's mental competence using another professional's evaluation, document why you relied on that evaluation and how it might affect your conclusions.
+**When you can't examine someone directly**, you're still allowed to offer opinions, but you must clearly explain the limitations. {{M}}It's like writing a restaurant review based on someone else's photos and descriptions. You can share your thoughts, but you need to be upfront that you haven't actually tasted the food yourself.{{/M}} For example, if you're commenting on someone's mental competence using another professional's evaluation, document why you relied on that evaluation and how it might affect your conclusions.
 
 ### Using the Right Tools the Right Way
 
-Standard 9.02 requires that you use assessment techniques appropriately—meaning they're backed by research and evidence. This covers several important practices:
+Standard 9.02 requires that you use assessment techniques appropriately, meaning they're backed by research and evidence. This covers several important practices:
 
 **Using tests for their intended purpose**: A test designed to screen for depression shouldn't be used to diagnose ADHD, no matter how convenient that would be. The research hasn't validated it for that use.
 
 **Following standardized procedures**: Tests are normed using specific administration procedures. When you deviate from those procedures, you're essentially creating a different test, and the norms no longer apply reliably.
 
-**Using tests with established validity and reliability for your specific population**: Here's where it gets interesting. The standard acknowledges that sometimes you won't have perfectly validated measures for your client's specific demographic. When that happens, you don't just avoid testing—you proceed with caution and clearly describe the limitations in your reports.
+**Using tests with established validity and reliability for your specific population**: Here's where it gets interesting. The standard acknowledges that sometimes you won't have perfectly validated measures for your client's specific demographic. When that happens, you don't just avoid testing. You proceed with caution and clearly describe the limitations in your reports.
 
 ### Accommodations vs. Modifications: A Critical Distinction
 
@@ -42,7 +42,7 @@ When working with clients who have disabilities, you'll need to understand the d
 | **Accommodation** | Minor changes to format or presentation that maintain the original construct | Scores remain comparable to standard test | Providing a large-print version of a knowledge test for someone with visual impairment |
 | **Modification** | Changes that alter what the test actually measures | Scores have different meaning than standard test | Using a screen reader for a reading comprehension test (changes what's being measured) |
 
-{{M}}Think of accommodations like adjusting your seat and mirrors before driving—the car works the same way, you're just making it accessible. Modifications are more like switching from a manual to automatic transmission—the fundamental experience changes.{{/M}}
+{{M}}Think of accommodations like adjusting your seat and mirrors before driving (the car works the same way, you're just making it accessible. Modifications are more like switching from a manual to automatic transmission) the fundamental experience changes.{{/M}}
 
 **Critical requirement**: Document any accommodations or modifications in your test reports and explain how they affect score interpretation. If you modify a test significantly, treat it like a newly developed assessment that needs its own validation.
 
@@ -63,7 +63,7 @@ Standard 9.07 is straightforward: don't let unqualified people use psychological
 
 ### Outdated vs. Obsolete: A Nuanced Decision
 
-Standards 9.08(a) and (b) prohibit using test results or tests that are outdated or obsolete "for the current purpose." That last part is crucial—it's context-dependent.
+Standards 9.08(a) and (b) prohibit using test results or tests that are outdated or obsolete "for the current purpose." That last part is crucial. It's context-dependent.
 
 When a new version of a test comes out, you don't automatically need to abandon the old version. Consider these scenarios:
 
@@ -71,19 +71,19 @@ When a new version of a test comes out, you don't automatically need to abandon 
 
 **When the older version might be better**: If the new version doesn't yet have norms for your client's racial or ethnic group, but the previous version does, using the older version might actually provide more valid results.
 
-The Ethics Code doesn't specify exact timeframes for when tests become obsolete—this requires your professional judgment based on the specific situation.
+The Ethics Code doesn't specify exact timeframes for when tests become obsolete. This requires your professional judgment based on the specific situation.
 
 ### Automated Scoring and Interpretation Services
 
 Standard 9.09 addresses computer-generated reports and automated scoring. You can use these services, but remember: you retain full responsibility for the appropriate application and interpretation of the results.
 
-{{M}}Using automated scoring is like using spell-check when writing an important email to your supervisor—it's a helpful tool, but you're still responsible if something wrong gets sent.{{/M}} Don't just copy and paste a computer-generated report without reviewing it critically.
+{{M}}Using automated scoring is like using spell-check when writing an important email to your supervisor. It's a helpful tool, but you're still responsible if something wrong gets sent.{{/M}} Don't just copy and paste a computer-generated report without reviewing it critically.
 
 ### Explaining Results to Clients
 
 Standard 9.10 requires you to explain assessment results to clients unless there's a valid reason not to (like employment screening or forensic evaluations). Even in those exceptions, you should explain beforehand why you won't be providing feedback.
 
-This isn't about dumping technical information on someone—it's about helping them understand what the results mean for their lives. Your client doesn't need to know the technical details of factor analysis; they need to understand what their results suggest about their concerns.
+This isn't about dumping technical information on someone. It's about helping them understand what the results mean for their lives. Your client doesn't need to know the technical details of factor analysis; they need to understand what their results suggest about their concerns.
 
 ### Informed Consent for Assessment
 
@@ -109,9 +109,9 @@ Understanding this distinction is crucial:
 
 **Test materials** (Standard 9.11): Manuals, instruments, protocols, actual test questions. You must protect these to maintain test security and integrity. However, discussing a specific test item with a client to help them understand their results is acceptable.
 
-{{M}}Think of test materials like the recipe for a proprietary medication—they need protection. But test data is like the patient's lab results—it belongs to them.{{/M}}
+{{M}}Think of test materials like the recipe for a proprietary medication (they need protection. But test data is like the patient's lab results) it belongs to them.{{/M}}
 
-## Standard 10: Therapy—Navigating the Therapeutic Relationship
+## Standard 10: Therapy (Navigating the Therapeutic Relationship)
 
 ### Informed Consent: Starting on Solid Ground
 
@@ -123,7 +123,7 @@ Standard 10.01(a) requires informed consent "as early as feasible" in therapy. C
 - Confidentiality limits
 - Opportunity for questions
 
-**Important point**: Informed consent isn't a one-time checkbox. {{M}}It's more like your GPS app—it needs regular updates as conditions change.{{/M}} When treatment goals shift, new issues emerge, or the therapy approach changes, revisit the informed consent discussion.
+**Important point**: Informed consent isn't a one-time checkbox. {{M}}It's more like your GPS app. It needs regular updates as conditions change.{{/M}} When treatment goals shift, new issues emerge, or the therapy approach changes, revisit the informed consent discussion.
 
 ### Special Informed Consent Situations
 
@@ -133,9 +133,9 @@ Standard 10.01(a) requires informed consent "as early as feasible" in therapy. C
 - Alternative treatments available
 - Voluntary nature of their participation
 
-**Trainee therapists** (Standard 10.01(c)): Clients must know if their therapist is in training, that they're supervised, and who the supervisor is. This isn't optional information—it's essential for informed consent.
+**Trainee therapists** (Standard 10.01(c)): Clients must know if their therapist is in training, that they're supervised, and who the supervisor is. This isn't optional information. It's essential for informed consent.
 
-**Telepsychology consent**: When providing therapy via video or phone, address specific considerations like technology failures that might disrupt sessions and increased confidentiality risks. Many experts recommend a "dual consent approach"—one consent form for in-person services and another addressing telepsychology-specific issues.
+**Telepsychology consent**: When providing therapy via video or phone, address specific considerations like technology failures that might disrupt sessions and increased confidentiality risks. Many experts recommend a "dual consent approach". One consent form for in-person services and another addressing telepsychology-specific issues.
 
 ### Working with Clients Who Have Other Providers
 
@@ -143,7 +143,7 @@ Standard 10.04 requires caution when someone asks for your services while receiv
 
 **Proceed with extreme caution or decline** when:
 - The client wants you for the same problem their current therapist is treating
-- {{M}}It's like having two captains trying to steer the same ship—the conflict creates confusion and potential harm{{/M}}
+- {{M}}It's like having two captains trying to steer the same ship, the conflict creates confusion and potential harm{{/M}}
 
 **May be appropriate** when:
 - The client seeks your help for a different issue than their current therapy addresses
@@ -178,7 +178,7 @@ If you're even considering a relationship with a former client after two years, 
 
 Standard 10.10 addresses termination from two angles:
 
-**When to terminate**: End therapy when the client no longer needs it or isn't benefiting from it. This doesn't mean you must terminate the moment progress slows—you and the client can reevaluate goals and determine if there's valid reason to continue.
+**When to terminate**: End therapy when the client no longer needs it or isn't benefiting from it. This doesn't mean you must terminate the moment progress slows. You and the client can reevaluate goals and determine if there's valid reason to continue.
 
 **How to terminate**: Provide pretermination counseling and suggest alternative service providers. This helps ensure continuity of care and gives the client options.
 
@@ -188,7 +188,7 @@ Standard 10.10 addresses termination from two angles:
 
 The Ethics Code doesn't specify how many referrals to provide, but experts often recommend at least three. This gives clients options without overwhelming them.
 
-{{M}}Think of it like suggesting restaurants to an out-of-town friend—one suggestion feels limiting, three gives them choices that match different preferences and needs.{{/M}}
+{{M}}Think of it like suggesting restaurants to an out-of-town friend. One suggestion feels limiting, three gives them choices that match different preferences and needs.{{/M}}
 
 The aspirational Principle B makes clear that referral decisions should prioritize the client's welfare above all other considerations.
 

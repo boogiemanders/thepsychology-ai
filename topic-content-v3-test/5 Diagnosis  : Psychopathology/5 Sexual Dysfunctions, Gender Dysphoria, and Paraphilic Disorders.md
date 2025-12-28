@@ -9,7 +9,7 @@ version: 3
 
 ## Introduction: Why This Topic Matters for Your Practice
 
-If you're preparing for the EPPP, you've probably noticed that sexual health disorders often get glossed over in study sessions. Maybe they feel uncomfortable, or maybe they just seem less common than mood disorders or anxiety. But here's the reality: these concerns will walk through your office door, and understanding them thoroughly isn't just test prep—it's essential practice competence.
+If you're preparing for the EPPP, you've probably noticed that sexual health disorders often get glossed over in study sessions. Maybe they feel uncomfortable, or maybe they just seem less common than mood disorders or anxiety. But here's the reality: these concerns will walk through your office door, and understanding them thoroughly isn't just test prep. It's essential practice competence.
 
 Sexual dysfunctions, gender dysphoria, and paraphilic disorders represent three distinct categories that affect millions of people. They touch on deeply personal aspects of identity, pleasure, and functioning. Getting comfortable with this material now means you'll be ready both for exam questions and for the real humans who need your help.
 
@@ -19,7 +19,7 @@ Let's break this down into digestible pieces, starting with the most common cate
 
 Sexual dysfunctions involve a significant disturbance in someone's ability to respond sexually or experience sexual pleasure. Before jumping to this diagnosis, you need to rule out three other explanations: nonsexual mental disorders (like depression causing low libido), relationship problems or major stressors, and medical conditions or substance effects.
 
-{{M}}Think of it like troubleshooting a technical issue at work—you don't blame the software until you've checked whether the internet connection is down or the hardware is malfunctioning.{{/M}} Sexual dysfunctions are what remain when those other factors aren't the primary cause.
+{{M}}Think of it like troubleshooting a technical issue at work. You don't blame the software until you've checked whether the internet connection is down or the hardware is malfunctioning.{{/M}} Sexual dysfunctions are what remain when those other factors aren't the primary cause.
 
 Most sexual dysfunctions include specifiers for:
 - **Onset**: Lifelong (always been present) or Acquired (developed after a period of normal functioning)
@@ -30,7 +30,7 @@ The one exception is genito-pelvic pain/penetration disorder, which only uses on
 
 ### Erectile Disorder: Understanding the Numbers
 
-For an erectile disorder diagnosis, symptoms must occur on 75-100% of sexual occasions—that's the vast majority of attempts, not just occasional difficulties. The person must experience at least one of three symptoms:
+For an erectile disorder diagnosis, symptoms must occur on 75-100% of sexual occasions. That's the vast majority of attempts, not just occasional difficulties. The person must experience at least one of three symptoms:
 
 - Marked difficulty obtaining an erection during sexual activity
 - Marked difficulty maintaining an erection until completion
@@ -38,7 +38,7 @@ For an erectile disorder diagnosis, symptoms must occur on 75-100% of sexual occ
 
 These symptoms must persist for at least six months and cause significant distress.
 
-Here's a useful diagnostic clue: If the problem is psychological rather than purely medical, the person typically still has spontaneous erections at unexpected times, morning erections, or successful erections during masturbation or with a different partner. {{M}}It's like when your laptop works fine at home but crashes at the office—the hardware isn't broken; something about the environment or context is interfering.{{/M}}
+Here's a useful diagnostic clue: If the problem is psychological rather than purely medical, the person typically still has spontaneous erections at unexpected times, morning erections, or successful erections during masturbation or with a different partner. {{M}}It's like when your laptop works fine at home but crashes at the office, the hardware isn't broken; something about the environment or context is interfering.{{/M}}
 
 **Treatment approaches** combine behavioral techniques and medication:
 
@@ -47,7 +47,7 @@ Here's a useful diagnostic clue: If the problem is psychological rather than pur
 2. Sexual touching (still no intercourse)
 3. Finally, sexual intercourse
 
-{{M}}This graduated approach works similarly to exposure therapy—you start with lower-stakes situations to reduce anxiety before moving to higher-stakes ones.{{/M}}
+{{M}}This graduated approach works similarly to exposure therapy. You start with lower-stakes situations to reduce anxiety before moving to higher-stakes ones.{{/M}}
 
 **Medications** include sildenafil (Viagra), tadalafil (Cialis), and vardenafil (Levitra). These increase blood flow to the penis and have proven highly effective for many men.
 
@@ -83,7 +83,7 @@ This condition often has a history of sexual or physical abuse, or may develop a
 
 ### Female Orgasmic Disorder: Delay, Absence, or Reduced Intensity
 
-The diagnosis requires marked delay, infrequency, or absence of orgasm—or markedly reduced intensity of orgasmic sensations—on nearly all occasions of sexual activity for at least six months.
+The diagnosis requires marked delay, infrequency, or absence of orgasm (or markedly reduced intensity of orgasmic sensations) on nearly all occasions of sexual activity for at least six months.
 
 **Directed masturbation** is the most empirically supported treatment, especially for lifelong cases. This makes sense: it's the first-line intervention because it allows someone to learn their own body's responses in a private, pressure-free environment.
 
@@ -96,7 +96,7 @@ Additional treatments include:
 
 ## Gender Dysphoria: When Assigned and Experienced Gender Don't Match
 
-Gender dysphoria involves a marked incongruence between someone's assigned gender (what they were designated at birth) and their experienced or expressed gender. This isn't simply gender nonconformity or preference—it involves significant distress or impairment.
+Gender dysphoria involves a marked incongruence between someone's assigned gender (what they were designated at birth) and their experienced or expressed gender. This isn't simply gender nonconformity or preference. It involves significant distress or impairment.
 
 ### Diagnostic Criteria Differ by Age
 
@@ -188,7 +188,7 @@ Treatment combines several strategies:
 - Involves touching or rubbing against a nonconsenting adult
 - Must last at least six months with recurrent, intense sexual arousal
 - Person has either acted on urges OR experienced significant distress/impairment
-- {{M}}This often occurs in crowded settings like public transportation where contact can be disguised as accidental—think of someone who deliberately creates situations where "accidental" contact occurs repeatedly.{{/M}}
+- {{M}}This often occurs in crowded settings like public transportation where contact can be disguised as accidental. Think of someone who deliberately creates situations where "accidental" contact occurs repeatedly.{{/M}}
 
 **2. Transvestic Disorder**
 - Cross-dressing specifically for sexual arousal (not for gender expression)
@@ -204,7 +204,7 @@ Treatment combines several strategies:
 **4. Fetishistic Disorder**
 - Sexual arousal in response to nonliving objects or specific non-genital body parts
 - At least six months causing significant distress or impairment
-- {{M}}This is different from simply finding certain features attractive—it's when arousal becomes dependent on these specific objects or body parts, similar to how some people can't concentrate without specific environmental conditions.{{/M}}
+- {{M}}This is different from simply finding certain features attractive. It's when arousal becomes dependent on these specific objects or body parts, similar to how some people can't concentrate without specific environmental conditions.{{/M}}
 
 **5. Exhibitionistic Disorder**
 - Exposing genitals to unsuspecting persons for sexual arousal
@@ -216,7 +216,7 @@ Treatment combines several strategies:
 ## Common Misconceptions to Avoid
 
 **Misconception 1**: "Sexual dysfunction diagnoses require complete inability to function."
-Reality: Most require symptoms on 75-100% of occasions, but "marked difficulty" counts—not just complete inability.
+Reality: Most require symptoms on 75-100% of occasions, but "marked difficulty" counts. Not just complete inability.
 
 **Misconception 2**: "Gender dysphoria is the same as being gender nonconforming."
 Reality: Gender dysphoria requires significant distress or impairment. Many gender nonconforming people don't experience dysphoria and wouldn't meet diagnostic criteria.
@@ -261,7 +261,7 @@ Reality: Some (like pedophilic disorder when acted upon or frotteuristic disorde
 
 - **Premature ejaculation responds to** behavioral techniques (start-stop, pause-squeeze) and SSRIs (especially paroxetine) due to serotonin's role
 
-- **Gender dysphoria requires marked incongruence** between assigned and experienced gender causing significant distress or impairment—not just gender nonconformity
+- **Gender dysphoria requires marked incongruence** between assigned and experienced gender causing significant distress or impairment. Not just gender nonconformity
 
 - **Children need six of eight symptoms** for gender dysphoria; **adolescents/adults need two of six**
 

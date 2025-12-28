@@ -11,19 +11,19 @@ version: 3
 
 When you work with clients, you'll quickly notice that many of their struggles center on relationships: Why can't they make friends? Why do they keep choosing the wrong partners? Why does their marriage feel flat after years together? This lesson covers the psychological research that explains how people form connections, what draws us to certain individuals, and how intimate relationships evolve over time.
 
-Understanding these patterns isn't just academic—it's practical knowledge you'll use almost daily. Whether you're helping someone navigate social anxiety, work through relationship conflicts, or understand their attachment patterns, these concepts provide the foundation. Plus, this material consistently appears on the EPPP, so mastering it serves both your exam preparation and your future clinical work.
+Understanding these patterns isn't just academic. It's practical knowledge you'll use almost daily. Whether you're helping someone navigate social anxiety, work through relationship conflicts, or understand their attachment patterns, these concepts provide the foundation. Plus, this material consistently appears on the EPPP, so mastering it serves both your exam preparation and your future clinical work.
 
 ## The Need for Affiliation: Why We Seek Others
 
-Let's start with a basic question: Why do humans bother with relationships at all? We could technically survive alone, but we rarely choose to. The **need for affiliation** refers to our desire to establish and maintain rewarding connections with other people. Psychologists generally agree this need has biological roots—from an evolutionary standpoint, our ancestors who formed strong social bonds were more likely to survive threats, find food, and successfully raise children.
+Let's start with a basic question: Why do humans bother with relationships at all? We could technically survive alone, but we rarely choose to. The **need for affiliation** refers to our desire to establish and maintain rewarding connections with other people. Psychologists generally agree this need has biological roots. From an evolutionary standpoint, our ancestors who formed strong social bonds were more likely to survive threats, find food, and successfully raise children.
 
 ### Schachter's Anxiety Studies: Misery Loves Company (But Only Certain Company)
 
-Stanley Schachter conducted fascinating research in 1959 that revealed something surprising about when and why we seek others. He created anxiety in research participants by telling them they'd receive painful electric shocks (don't worry—no one actually got shocked). Then he gave them a choice: wait alone or wait with other people.
+Stanley Schachter conducted fascinating research in 1959 that revealed something surprising about when and why we seek others. He created anxiety in research participants by telling them they'd receive painful electric shocks (don't worry. No one actually got shocked). Then he gave them a choice: wait alone or wait with other people.
 
 When highly anxious participants could choose between waiting alone or with other participants facing the same shock experiment, they overwhelmingly chose to wait together. But here's the twist: when given the choice between waiting alone or with people who weren't part of the study, they chose to wait alone.
 
-Schachter summarized this beautifully: "Misery doesn't love any kind of company, it loves only miserable company." {{M}}It's like when you're stressed about a major work deadline—you don't necessarily want to grab coffee with just anyone. You want to talk to a colleague who understands exactly what you're facing, who can validate that, yes, this project really is as challenging as you think.{{/M}}
+Schachter summarized this beautifully: "Misery doesn't love any kind of company, it loves only miserable company." {{M}}It's like when you're stressed about a major work deadline. You don't necessarily want to grab coffee with just anyone. You want to talk to a colleague who understands exactly what you're facing, who can validate that, yes, this project really is as challenging as you think.{{/M}}
 
 **Social comparison theory**, developed by Leon Festinger in 1954, explains why. When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate. Those anxious participants wanted to be around people in the same situation because they could compare their reactions and get information about whether their anxiety level was normal.
 
@@ -41,7 +41,7 @@ There's an important limitation here: This effect works when our initial reactio
 
 ### Similarity: Birds of a Feather Really Do Flock Together
 
-Despite the romantic notion that "opposites attract," research consistently shows we're drawn to people similar to ourselves—particularly regarding important attitudes and values.
+Despite the romantic notion that "opposites attract," research consistently shows we're drawn to people similar to ourselves, particularly regarding important attitudes and values.
 
 Donn Byrne formulated the **law of attraction** in 1971, stating there's a positive linear relationship between attitude similarity and attraction. Why? Because interacting with people who share our views is reinforcing. When someone agrees with us about things we care about, it validates our perspective and makes us feel good.
 
@@ -52,7 +52,7 @@ Donn Byrne formulated the **law of attraction** in 1971, stating there's a posit
 | Interest similarity | Moderate positive effect | Creates opportunities for shared activities |
 | Personality similarity | Variable effect | Some traits benefit from similarity, others from difference |
 
-{{M}}Consider your closest friendships. You likely share core values about what matters in life—maybe you both prioritize career growth, or family time, or creative pursuits. Even if you have different specific interests (one friend loves hiking, another loves theater), you probably align on fundamental questions about how to live a good life.{{/M}}
+{{M}}Consider your closest friendships. You likely share core values about what matters in life. Maybe you both prioritize career growth, or family time, or creative pursuits. Even if you have different specific interests (one friend loves hiking, another loves theater), you probably align on fundamental questions about how to live a good life.{{/M}}
 
 ### The Pratfall Effect: When Imperfection Makes You More Attractive
 
@@ -60,7 +60,7 @@ Here's something counterintuitive: Sometimes making a mistake actually increases
 
 Why would this be? The researchers suggest that minor mistakes humanize highly competent individuals, making them seem more approachable and relatable. However, for someone already perceived as mediocre, mistakes just reinforce the perception of incompetence.
 
-{{M}}Imagine a highly respected supervisor giving a major presentation. Midway through, they spill coffee on their notes and laugh it off. You might actually like them more afterward—the small fumble makes them seem more human and less intimidating. But if a colleague who already struggles with presentations makes the same mistake, it might just reinforce doubts about their capability.{{/M}}
+{{M}}Imagine a highly respected supervisor giving a major presentation. Midway through, they spill coffee on their notes and laugh it off. You might actually like them more afterward, the small fumble makes them seem more human and less intimidating. But if a colleague who already struggles with presentations makes the same mistake, it might just reinforce doubts about their capability.{{/M}}
 
 ### Reciprocity and the Gain-Loss Effect: It's Complicated
 
@@ -71,7 +71,7 @@ Aronson and Linder's 1965 research on the **gain-loss effect** found two surpris
 1. We're MORE attracted to people who initially dislike us but warm up over time than to people who consistently like us
 2. We're LESS attracted to people who initially like us but then cool off than to people who consistently dislike us
 
-{{M}}Think about someone you were convinced didn't like you at first - maybe a skeptical client or a critical coworker. Then, over time, they started showing genuine appreciation for your work. That shift probably felt more meaningful than praise from someone who liked you immediately, right? We seem to value earned approval more than automatic acceptance.{{/M}}
+{{M}}Think about someone you were convinced didn't like you at first. Maybe a skeptical client or a critical coworker. Then, over time, they started showing genuine appreciation for your work. That shift probably felt more meaningful than praise from someone who liked you immediately, right? We seem to value earned approval more than automatic acceptance.{{/M}}
 
 Researchers also distinguish between two types of reciprocity:
 

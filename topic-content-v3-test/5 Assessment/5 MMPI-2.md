@@ -17,15 +17,15 @@ The Minnesota Multiphasic Personality Inventory-2 (MMPI-2) is the most widely us
 
 The MMPI-2 is a 567-item true/false questionnaire designed for adults 18 and older. What sets it apart from other personality tests isn't just what it measures, but how it was created and how it catches people trying to manipulate their results.
 
-{{M}}Think of the MMPI-2 like a sophisticated spam filter for your email.{{/M}} Just as your email program doesn't just look at message content but also checks for suspicious patterns, red flags, and signs of deception, the MMPI-2 doesn't just measure symptoms—it actively checks whether someone's being honest, exaggerating, or trying to look better than they are.
+{{M}}Think of the MMPI-2 like a sophisticated spam filter for your email.{{/M}} Just as your email program doesn't just look at message content but also checks for suspicious patterns, red flags, and signs of deception, the MMPI-2 doesn't just measure symptoms. It actively checks whether someone's being honest, exaggerating, or trying to look better than they are.
 
 ## How Scores Work: The T-Score System
 
 Raw scores on the MMPI-2 get converted into T-scores, which have a mean of 50 and a standard deviation of 10. This standardization lets you compare anyone's results to the general population.
 
 Here's what the numbers mean:
-- **T-scores around 50**: Normal range—nothing clinically significant
-- **T-scores of 65 and above**: Clinically significant—this is where you pay attention
+- **T-scores around 50**: Normal range, nothing clinically significant
+- **T-scores of 65 and above**: Clinically significant. This is where you pay attention
 - **T-scores below 35-40**: On some scales, unusually low scores also matter
 
 {{M}}If T-scores were like your credit score,{{/M}} a score around 50 would be average, 65+ would be like having serious financial red flags, and scores below 35 might indicate you're so risk-averse that it's actually unusual.
@@ -34,7 +34,7 @@ Here's what the numbers mean:
 
 The MMPI-2 has 10 original clinical scales, each numbered and abbreviated. These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.
 
-This approach was revolutionary. {{M}}Instead of having psychologists sit around theorizing about what questions might reveal depression, they let the data speak for itself—like A/B testing different versions of a website to see which actually gets better results, rather than just guessing.{{/M}}
+This approach was revolutionary. {{M}}Instead of having psychologists sit around theorizing about what questions might reveal depression, they let the data speak for itself, like A/B testing different versions of a website to see which actually gets better results, rather than just guessing.{{/M}}
 
 Here are the 10 clinical scales you need to know:
 
@@ -53,7 +53,7 @@ Here are the 10 clinical scales you need to know:
 
 ## Reading Code Types: The Power of Patterns
 
-While single high scores tell you something, the real clinical gold is in **code types**—patterns of which scales are elevated together. These combinations reveal much more than individual scales alone.
+While single high scores tell you something, the real clinical gold is in **code types**. Patterns of which scales are elevated together. These combinations reveal much more than individual scales alone.
 
 ### Two-Point Codes
 
@@ -62,7 +62,7 @@ A **two-point code** identifies the two highest scales, listed from highest to l
 **Common two-point codes to memorize:**
 
 **4-9 / 9-4 (Psychopathic Deviate + Hypomania)**
-{{M}}Picture someone who lives life like they're always running late to catch a flight—impulsive decisions, breaking rules to get ahead, charming but unreliable.{{/M}} These individuals often struggle with substance abuse, have narcissistic traits, and show antisocial tendencies. They might be the person who talks their way out of consequences repeatedly.
+{{M}}Picture someone who lives life like they're always running late to catch a flight. Impulsive decisions, breaking rules to get ahead, charming but unreliable.{{/M}} These individuals often struggle with substance abuse, have narcissistic traits, and show antisocial tendencies. They might be the person who talks their way out of consequences repeatedly.
 
 **2-7 / 7-2 (Depression + Psychasthenia)**
 This is one of the most common profiles in psychiatric settings. {{M}}Imagine someone stuck in a loop of worry and sadness, like refreshing bad news on their phone while simultaneously catastrophizing about everything that could go wrong.{{/M}} These clients present with depression, excessive anxiety, physical complaints, and often feel agitated and overwhelmed.
@@ -72,15 +72,15 @@ This is one of the most common profiles in psychiatric settings. {{M}}Imagine so
 Three-point codes reveal even more complex clinical pictures. Three critical patterns appear frequently on the EPPP:
 
 **Conversion V (1-3-2 pattern)**
-This happens when scales 1 (Hypochondriasis) and 3 (Hysteria) are both elevated, but scale 2 (Depression) is notably lower—creating a V shape on the profile graph.
+This happens when scales 1 (Hypochondriasis) and 3 (Hysteria) are both elevated, but scale 2 (Depression) is notably lower, creating a V shape on the profile graph.
 
-{{M}}Think of someone who channels emotional distress into physical symptoms the way a circuit breaker redirects excess electricity.{{/M}} These individuals might come to you complaining of chronic pain, fatigue, or mysterious symptoms that medical tests can't explain. They're not faking—they genuinely experience these physical problems—but the root cause is psychological stress being converted into somatic complaints.
+{{M}}Think of someone who channels emotional distress into physical symptoms the way a circuit breaker redirects excess electricity.{{/M}} These individuals might come to you complaining of chronic pain, fatigue, or mysterious symptoms that medical tests can't explain. They're not faking (they genuinely experience these physical problems) but the root cause is psychological stress being converted into somatic complaints.
 
 **Psychotic V (6-8-7 pattern)**
-Here, scales 6 (Paranoia) and 8 (Schizophrenia) are elevated with a lower scale 7 (Psychasthenia), creating another V pattern. This profile suggests serious psychotic symptoms: delusions, hallucinations, paranoid thinking, and disorganized thought processes. The lower anxiety (scale 7) is actually concerning—it suggests the person lacks insight into how unusual their thinking has become.
+Here, scales 6 (Paranoia) and 8 (Schizophrenia) are elevated with a lower scale 7 (Psychasthenia), creating another V pattern. This profile suggests serious psychotic symptoms: delusions, hallucinations, paranoid thinking, and disorganized thought processes. The lower anxiety (scale 7) is actually concerning. It suggests the person lacks insight into how unusual their thinking has become.
 
 **Neurotic Triad (1-2-3 elevation)**
-When scales 1 (Hypochondriasis), 2 (Depression), and 3 (Hysteria) are all elevated together, you're looking at someone experiencing significant distress across multiple domains. These individuals struggle with depression, physical complaints, work problems, relationship issues, and general life dissatisfaction. {{M}}They're like someone dealing with a major system crash—multiple programs failing at once.{{/M}}
+When scales 1 (Hypochondriasis), 2 (Depression), and 3 (Hysteria) are all elevated together, you're looking at someone experiencing significant distress across multiple domains. These individuals struggle with depression, physical complaints, work problems, relationship issues, and general life dissatisfaction. {{M}}They're like someone dealing with a major system crash. Multiple programs failing at once.{{/M}}
 
 ## Validity Scales: Your Built-In Lie Detector
 
@@ -96,8 +96,8 @@ This is where the MMPI-2 really shines. The validity scales detect whether someo
 | Fb (F Back) | Problems with later items | Lost focus, got tired, or started faking on second half of test |
 | Fp (Infrequency-Psychopathology) | Faking bad among psych patients | Either severe distress or exaggerating beyond what even psychiatric patients report |
 | S (Superlative Self-Presentation) | Presenting as exceptionally virtuous | Defensiveness about appearing moral, patient, serene, and problem-free |
-| VRIN (Variable Response Inconsistency) | Random answering | Answered similar questions differently—invalid profile |
-| TRIN (True Response Inconsistency) | Fixed response pattern | Just answered "true" or "false" to everything—invalid profile |
+| VRIN (Variable Response Inconsistency) | Random answering | Answered similar questions differently. Invalid profile |
+| TRIN (True Response Inconsistency) | Fixed response pattern | Just answered "true" or "false" to everything. Invalid profile |
 | ? (Cannot Say) | Unanswered items | Too many skipped items make the test uninterpretable |
 
 ### Reading Validity Scale Combinations
@@ -108,10 +108,10 @@ The real skill comes in interpreting combinations of validity scales:
 {{M}}This is like someone mashing buttons on a survey just to finish it quickly.{{/M}} When both scales are elevated, the person likely wasn't paying attention and just answered randomly. The profile is invalid and shouldn't be interpreted.
 
 **High F + Low VRIN = Genuine Pathology or Deliberate Faking**
-When F is elevated but VRIN is normal, the person answered consistently—they weren't random. They're either experiencing genuine severe symptoms or deliberately trying to appear more disturbed than they are. You'll need other information (clinical interview, collateral data) to determine which.
+When F is elevated but VRIN is normal, the person answered consistently. They weren't random. They're either experiencing genuine severe symptoms or deliberately trying to appear more disturbed than they are. You'll need other information (clinical interview, collateral data) to determine which.
 
 **High L + High K + Low F = Faking Good**
-{{M}}This pattern shows up like an overly filtered social media profile—everything looks perfect, no flaws admitted, problems denied.{{/M}} This combination is particularly common in custody evaluations, where parents want to appear flawless. Research has even linked this pattern to parental alienation syndrome, where one parent tries to turn children against the other.
+{{M}}This pattern shows up like an overly filtered social media profile, everything looks perfect, no flaws admitted, problems denied.{{/M}} This combination is particularly common in custody evaluations, where parents want to appear flawless. Research has even linked this pattern to parental alienation syndrome, where one parent tries to turn children against the other.
 
 ## Real-World Applications
 
@@ -123,14 +123,14 @@ Understanding when and how to use the MMPI-2 matters beyond test questions:
 
 **Custody Evaluations**: {{M}}When a parent's validity scales show the "too good to be true" pattern (high L and K, low F), you know to dig deeper rather than taking their self-report at face value.{{/M}} This doesn't mean they're a bad parent, but it signals defensiveness that needs addressing.
 
-**Pre-employment Screening**: Law enforcement agencies use the MMPI-2 to screen candidates. A 4-9 code type might raise concerns about impulsivity and authority problems—critical issues for someone who'll carry a weapon and make split-second decisions.
+**Pre-employment Screening**: Law enforcement agencies use the MMPI-2 to screen candidates. A 4-9 code type might raise concerns about impulsivity and authority problems. Critical issues for someone who'll carry a weapon and make split-second decisions.
 
 **Therapy Resistance**: High K scale scores often predict resistance to treatment. Knowing this upfront helps you anticipate and address defensiveness before it derails therapy.
 
 ## The MMPI Family: Other Versions You Need to Know
 
 ### MMPI-2-RF (Restructured Form)
-This is the streamlined version with 338 items instead of 567. It includes the Restructured Clinical (RC) scales, which were designed to reduce overlap between the original clinical scales. {{M}}Think of it like going from a full diagnostic workup to a focused assessment—you still get valuable information but in less time.{{/M}} It's increasingly popular in settings where testing time is limited.
+This is the streamlined version with 338 items instead of 567. It includes the Restructured Clinical (RC) scales, which were designed to reduce overlap between the original clinical scales. {{M}}Think of it like going from a full diagnostic workup to a focused assessment. You still get valuable information but in less time.{{/M}} It's increasingly popular in settings where testing time is limited.
 
 ### MMPI-3
 The newest version (released 2020) has 335 items and updated norms that match current U.S. demographics. It modernized outdated language and includes Spanish-language norms. For the EPPP, know that it exists and maintains the same basic scale structure as the MMPI-2-RF, but most questions will still focus on the MMPI-2 since it's been around longer and has more research backing it.
@@ -150,10 +150,10 @@ Not necessarily. High F can indicate severe genuine pathology, random responding
 Sometimes yes, sometimes no. A skilled person with good insight might have an accurate, elevated profile. Someone defensive or lacking insight might have a falsely normal profile. Always consider validity scales.
 
 **Misconception 4: "Code types have to be exact"**
-EPPP questions might present slight variations in elevation patterns. Remember that 4-9 and 9-4 are interpreted the same way—what matters is that both scales are the highest two, not which is slightly higher.
+EPPP questions might present slight variations in elevation patterns. Remember that 4-9 and 9-4 are interpreted the same way. What matters is that both scales are the highest two, not which is slightly higher.
 
 **Misconception 5: "You can interpret the MMPI-2 from a single scale"**
-Competent interpretation requires looking at validity scales, code types, and patterns—not just individual scale elevations. Context matters enormously.
+Competent interpretation requires looking at validity scales, code types, and patterns. Not just individual scale elevations. Context matters enormously.
 
 ## Memory Tips for the EPPP
 
@@ -198,7 +198,7 @@ Create flashcards with just the numbers on one side and the interpretation on th
 
 - **T-scores of 65+ are clinically significant**; scores around 50 are average; some scales have meaningful low scores below 35-40
 
-- **The 10 clinical scales** were developed through empirical criterion keying—items were chosen based on their ability to discriminate between clinical and non-clinical groups
+- **The 10 clinical scales** were developed through empirical criterion keying. Items were chosen based on their ability to discriminate between clinical and non-clinical groups
 
 - **Code types matter more than single scales**: two-point codes (like 2-7 or 4-9) and three-point patterns (Conversion V, Psychotic V, Neurotic Triad) provide richer clinical information
 
@@ -214,4 +214,4 @@ Create flashcards with just the numbers on one side and the interpretation on th
 
 - **High L, K, and S with low F in custody evaluations** has been linked to parental alienation syndrome
 
-The MMPI-2 appears throughout the assessment section of the EPPP, and understanding it thoroughly will serve you well beyond test day. Master the validity scales, memorize key code types, and practice interpreting scale combinations. This knowledge will make you a more effective clinician and help you spot when someone's test results don't quite add up to their presentation—a skill that proves invaluable in real-world practice.
+The MMPI-2 appears throughout the assessment section of the EPPP, and understanding it thoroughly will serve you well beyond test day. Master the validity scales, memorize key code types, and practice interpreting scale combinations. This knowledge will make you a more effective clinician and help you spot when someone's test results don't quite add up to their presentation, a skill that proves invaluable in real-world practice.

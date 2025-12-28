@@ -15,7 +15,7 @@ Let's break down exactly what you need to know about the brain structures that h
 
 ## The Memory Department: Your Brain's Filing System
 
-When we talk about memory, we're really talking about a team of brain regions, each with specialized jobs. No single area does all the work. {{M}}Think of it like a restaurant kitchen where different stations handle different aspects of getting food to the table{{/M}}—one station preps, another cooks, another plates. Your brain works similarly with memories.
+When we talk about memory, we're really talking about a team of brain regions, each with specialized jobs. No single area does all the work. {{M}}Think of it like a restaurant kitchen where different stations handle different aspects of getting food to the table{{/M}}. One station preps, another cooks, another plates. Your brain works similarly with memories.
 
 ### The Hippocampus: Your Memory Transfer Agent
 
@@ -23,11 +23,11 @@ The hippocampus became famous in psychology through a patient known as H.M. In 1
 
 Here's what that meant practically: H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you. He also had some gaps in memories from before the surgery, though his oldest memories remained relatively clear.
 
-This tragic case taught us that the hippocampus serves as a **consolidation hub**—it takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage. Later research using brain imaging confirmed this role and added another discovery: the hippocampus also handles spatial memory, which is your mental map of where things are located in your environment.
+This tragic case taught us that the hippocampus serves as a **consolidation hub**. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage. Later research using brain imaging confirmed this role and added another discovery: the hippocampus also handles spatial memory, which is your mental map of where things are located in your environment.
 
 ### The Basal Ganglia and Cerebellum: Your Skill Keepers
 
-While the hippocampus handles facts and events, the basal ganglia and cerebellum specialize in **procedural memories**—the "how to do things" memories that run automatically without conscious thought. When someone suffers damage to these areas, they struggle to learn new skills and may have difficulty performing skills they previously mastered.
+While the hippocampus handles facts and events, the basal ganglia and cerebellum specialize in **procedural memories**, the "how to do things" memories that run automatically without conscious thought. When someone suffers damage to these areas, they struggle to learn new skills and may have difficulty performing skills they previously mastered.
 
 {{M}}Consider how you drive a car{{/M}}, you probably don't consciously think "press clutch, shift gear, release clutch" anymore. That automatic sequence lives in your basal ganglia and cerebellum. These structures handle implicit memories, which operate below your conscious awareness.
 
@@ -69,11 +69,11 @@ Now let's zoom in to what's happening at the cellular level when you learn somet
 Back in the 1970s, Eric Kandel and his team studied sea slugs. Yes, sea slugs, because their neurons are unusually large and easy to observe. They discovered something remarkable: when these slugs learned through classical conditioning, two things happened at the neural level:
 
 1. **Short-term storage** involved increased release of the neurotransmitter serotonin
-2. **Long-term storage** involved actual physical changes — new synapses formed, and existing neurons changed structure
+2. **Long-term storage** involved actual physical changes. New synapses formed, and existing neurons changed structure
 
 Researchers found similar processes in humans and called it **long-term potentiation (LTP)**. This phenomenon was first observed in glutamate receptors in the hippocampus but later found in other areas like the amygdala and entorhinal cortex.
 
-Here's the key concept: When a neuron receives rapid or high-frequency stimulation, it undergoes lasting changes that make future signaling more efficient. {{M}}It's somewhat like how a path through grass becomes clearer and easier to walk as more people use it{{/M}}—the repeated activation strengthens the neural pathway.
+Here's the key concept: When a neuron receives rapid or high-frequency stimulation, it undergoes lasting changes that make future signaling more efficient. {{M}}It's somewhat like how a path through grass becomes clearer and easier to walk as more people use it{{/M}}, the repeated activation strengthens the neural pathway.
 
 For long-term memory formation, your brain needs to synthesize RNA, which is necessary for creating proteins that build these new connections. Studies have shown that blocking RNA synthesis prevents long-term memory formation while leaving short-term memory intact. This tells us that short-term and long-term memory truly operate through different biological mechanisms.
 
@@ -168,7 +168,7 @@ Wrong. Different memory types use different neural systems. The patient H.M. pro
 
 **Misconception 2: "The hippocampus stores long-term memories"**
 
-Not quite. The hippocampus **consolidates** memories—it helps transfer them from short-term to long-term storage. The actual long-term storage likely involves widespread cortical areas.
+Not quite. The hippocampus **consolidates** memories. It helps transfer them from short-term to long-term storage. The actual long-term storage likely involves widespread cortical areas.
 
 **Misconception 3: "You need less sleep as you get older"**
 
@@ -192,7 +192,7 @@ Understanding these systems can improve your own studying:
 
 **Attach emotion**: Since the amygdala strengthens emotional memories, create emotional connections to dry material. {{M}}Feel frustrated about a confusing concept? Channel that emotion into a memorable mental image or story{{/M}}.
 
-**Create spatial contexts**: Your hippocampus handles spatial memory well. {{M}}Try studying different topics in different rooms or even different corners of the same room{{/M}}—the spatial context can serve as a retrieval cue.
+**Create spatial contexts**: Your hippocampus handles spatial memory well. {{M}}Try studying different topics in different rooms or even different corners of the same room{{/M}}, the spatial context can serve as a retrieval cue.
 
 **Practice retrieval, not just recognition**: Your prefrontal cortex manages working memory and strategic retrieval. Testing yourself (retrieval practice) strengthens memories more than simply rereading material.
 

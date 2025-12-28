@@ -9,13 +9,13 @@ version: 3
 
 ## Why These Intelligence Tests Matter for Your Career as a Psychologist
 
-You're preparing for the EPPP, which means you're on your way to becoming a licensed psychologist. Here's something that might surprise you: intelligence testing will likely be one of your most frequently used assessment tools, regardless of whether you end up in schools, hospitals, private practice, or forensic settings. The Stanford-Binet and Wechsler tests aren't just abstract academic concepts—they're the workhorses of psychological assessment. Understanding them deeply will help you make life-changing recommendations about educational placements, diagnose cognitive disorders, evaluate brain injuries, and support legal determinations about intellectual disability.
+You're preparing for the EPPP, which means you're on your way to becoming a licensed psychologist. Here's something that might surprise you: intelligence testing will likely be one of your most frequently used assessment tools, regardless of whether you end up in schools, hospitals, private practice, or forensic settings. The Stanford-Binet and Wechsler tests aren't just abstract academic concepts. They're the workhorses of psychological assessment. Understanding them deeply will help you make life-changing recommendations about educational placements, diagnose cognitive disorders, evaluate brain injuries, and support legal determinations about intellectual disability.
 
 Let's make sense of these tests and the theories behind them in a way that sticks with you through exam day and into your practice.
 
 ## Understanding Intelligence: The Theoretical Foundation
 
-Before we dive into the tests themselves, we need to understand what different psychologists think intelligence actually is. {{M}}Think of intelligence theories like different maps of the same city—each one highlights different features and routes, but they're all describing the same place.{{/M}}
+Before we dive into the tests themselves, we need to understand what different psychologists think intelligence actually is. {{M}}Think of intelligence theories like different maps of the same city. Each one highlights different features and routes, but they're all describing the same place.{{/M}}
 
 ### Spearman's Two-Factor Theory: The Foundation
 
@@ -25,7 +25,7 @@ Spearman identified two components of intelligence: **g** (general intelligence)
 
 Horn and Cattell made a crucial distinction that you'll see echoed throughout intelligence testing:
 
-**Crystallized intelligence (Gc)** represents what you've learned through experience—your vocabulary, factual knowledge, and acquired skills. {{M}}It's like your personal database of information you've collected over the years.{{/M}}
+**Crystallized intelligence (Gc)** represents what you've learned through experience. Your vocabulary, factual knowledge, and acquired skills. {{M}}It's like your personal database of information you've collected over the years.{{/M}}
 
 **Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge. {{M}}It's your ability to think on your feet when you encounter something completely unfamiliar.{{/M}}
 
@@ -38,7 +38,7 @@ Carroll organized intelligence into three levels:
 - **Stratum II**: Eight broad abilities (including Gc, Gf, short-term memory)
 - **Stratum I**: Numerous specific abilities
 
-{{M}}Picture this like a company org chart with a CEO at the top, department heads in the middle, and specialized workers at the bottom—all levels matter and work together.{{/M}}
+{{M}}Picture this like a company org chart with a CEO at the top, department heads in the middle, and specialized workers at the bottom. All levels matter and work together.{{/M}}
 
 ### CHC Theory: The Modern Framework
 
@@ -64,11 +64,11 @@ Here's the practical connection you need to know:
 
 ## The Flynn Effect: Why Test Norms Matter
 
-Here's something fascinating: IQ scores increased by about 3 points per decade throughout the 20th century. This "Flynn effect" means that if you took an IQ test with 1980s norms today, you'd score higher than if you took a test with current norms. {{M}}It's like grade inflation in reverse—the test itself stays the same, but the comparison group gets smarter.{{/M}}
+Here's something fascinating: IQ scores increased by about 3 points per decade throughout the 20th century. This "Flynn effect" means that if you took an IQ test with 1980s norms today, you'd score higher than if you took a test with current norms. {{M}}It's like grade inflation in reverse, the test itself stays the same, but the comparison group gets smarter.{{/M}}
 
 **Clinical implications**: This matters tremendously for intellectual disability diagnoses. Someone tested on an older test might score above the intellectual disability threshold, but on a newer test with updated norms, they might fall below it. Recent research shows the Flynn effect has plateaued or even reversed in some populations, particularly those with IQs above 110.
 
-The changes happen too fast to be genetic—they're environmental. Better nutrition, more education, increased cognitive complexity in daily life, and other environmental factors likely drive these changes.
+The changes happen too fast to be genetic. They're environmental. Better nutrition, more education, increased cognitive complexity in daily life, and other environmental factors likely drive these changes.
 
 ## Stanford-Binet Intelligence Scale, 5th Edition (SB5)
 
@@ -86,9 +86,9 @@ The SB5 assesses individuals from age 2 to 85+ and measures five cognitive facto
 
 ### How It Works
 
-**Administration** begins with two routing subtests: Object Series/Matrices (nonverbal) and Vocabulary (verbal). {{M}}These routing tests are like a GPS finding your starting position{{/M}}—they determine where to begin testing based on the person's age or estimated ability.
+**Administration** begins with two routing subtests: Object Series/Matrices (nonverbal) and Vocabulary (verbal). {{M}}These routing tests are like a GPS finding your starting position{{/M}}. They determine where to begin testing based on the person's age or estimated ability.
 
-After routing, you establish a **basal level**—the highest point where the person answers all questions correctly for two consecutive age levels. Testing continues until you reach the **ceiling level**—the point where they miss 75% of questions at two consecutive age levels.
+After routing, you establish a **basal level** (the highest point where the person answers all questions correctly for two consecutive age levels. Testing continues until you reach the **ceiling level**) the point where they miss 75% of questions at two consecutive age levels.
 
 **Scoring** provides:
 - Subtest scores (mean = 10, SD = 3)
@@ -114,17 +114,17 @@ The WAIS-IV serves ages 16-90 and provides four Index scores plus a Full Scale I
 
 Each subtest has a designated start point. For most subtests, there's a **reverse rule**: if someone scores zero on the first one or two items, you go backward until they get two consecutive items perfect. This ensures you haven't started too high for their ability level.
 
-The **discontinue rule** varies by subtest—either a certain number of consecutive zeros or a time limit.
+The **discontinue rule** varies by subtest. Either a certain number of consecutive zeros or a time limit.
 
 ### Scoring and Interpretation
 
 Subtest scores (mean = 10, SD = 3) combine to create Index scores and Full Scale IQ (mean = 100, SD = 15).
 
-The **General Ability Index (GAI)** combines only VCI and PRI, excluding working memory and processing speed. {{M}}This is useful when you suspect someone's overall ability is being dragged down by attention problems or slow processing—like judging a runner's athletic ability without factoring in an ankle injury.{{/M}}
+The **General Ability Index (GAI)** combines only VCI and PRI, excluding working memory and processing speed. {{M}}This is useful when you suspect someone's overall ability is being dragged down by attention problems or slow processing, like judging a runner's athletic ability without factoring in an ankle injury.{{/M}}
 
 ### Critical Clinical Patterns for the EPPP
 
-Memorize these patterns—they show up on the exam:
+Memorize these patterns. They show up on the exam:
 
 | Clinical Group | Lowest Index | Highest Index | Pattern Meaning |
 |----------------|-------------|---------------|-----------------|
@@ -135,7 +135,7 @@ Memorize these patterns—they show up on the exam:
 | Autistic Disorder | PSI | PRI | Processing speed lowest; visual-spatial reasoning strongest |
 | Mild Cognitive Impairment | PRI | VCI | Early decline in reasoning; verbal knowledge preserved |
 
-**Notice a pattern?** Processing Speed (PSI) is often the lowest score in clinical populations, while Verbal Comprehension (VCI)—representing crystallized intelligence—tends to hold up best. This reflects the fact that verbal knowledge acquired over a lifetime is typically the most resilient cognitive ability.
+**Notice a pattern?** Processing Speed (PSI) is often the lowest score in clinical populations, while Verbal Comprehension (VCI) (representing crystallized intelligence) tends to hold up best. This reflects the fact that verbal knowledge acquired over a lifetime is typically the most resilient cognitive ability.
 
 ### Special Diagnostic Patterns
 
@@ -150,7 +150,7 @@ The four indexes age differently:
 - **PRI**: Begins declining around age 30 (fluid intelligence pattern)
 - **PSI**: Steepest age-related decline, starting around 30
 
-This creates the "classic aging pattern"—verbal abilities stay strong while performance (nonverbal) abilities decline earlier. {{M}}It's why your older clients might still have sharp conversation skills but struggle more with puzzles or learning new technology.{{/M}}
+This creates the "classic aging pattern". Verbal abilities stay strong while performance (nonverbal) abilities decline earlier. {{M}}It's why your older clients might still have sharp conversation skills but struggle more with puzzles or learning new technology.{{/M}}
 
 ## Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)
 
@@ -170,11 +170,11 @@ These patterns are exam favorites:
 | Clinical Group | Lowest Index | Highest Index |
 |----------------|-------------|---------------|
 | ADHD | PSI | VCI |
-| Specific Learning Disorder - Reading | WMI | VSI |
+| Specific Learning Disorder, Reading | WMI | VSI |
 | Autism Spectrum Disorder with Language Impairment | PSI | FRI |
 | Autism Spectrum Disorder without Language Impairment | PSI | VCI |
 
-**Key insight**: Children with ADHD show the same pattern as adults—processing speed is their weak spot. Reading disabilities particularly impact working memory (the mental workspace needed for decoding and comprehension), while visual-spatial skills remain relatively intact.
+**Key insight**: Children with ADHD show the same pattern as adults. Processing speed is their weak spot. Reading disabilities particularly impact working memory (the mental workspace needed for decoding and comprehension), while visual-spatial skills remain relatively intact.
 
 ## Wechsler Preschool and Primary Scale of Intelligence, 4th Edition (WPPSI-IV)
 
@@ -196,9 +196,9 @@ Reality: IQ tests measure current cognitive performance, which is influenced by 
 
 Reality: Different disorders create different cognitive profiles. Autistic Disorder shows strength in PRI, while Mild Cognitive Impairment shows weakness in PRI. These patterns help with differential diagnosis.
 
-**Misconception 3**: "Processing Speed isn't that important—it's just how fast someone works."
+**Misconception 3**: "Processing Speed isn't that important. It's just how fast someone works."
 
-Reality: Processing Speed reflects the efficiency of cognitive operations. When it's significantly low, it affects nearly everything else—learning, social interaction, and daily functioning. It's often the first thing to decline in neurological conditions.
+Reality: Processing Speed reflects the efficiency of cognitive operations. When it's significantly low, it affects nearly everything else, learning, social interaction, and daily functioning. It's often the first thing to decline in neurological conditions.
 
 **Misconception 4**: "The Full Scale IQ is always the most important score."
 
@@ -237,7 +237,7 @@ Remember: "**Words Win, Speed Sinks**"
 
 When you're sitting across from a client who just completed a WAIS-IV, you won't just report numbers. You'll interpret patterns:
 
-{{M}}A 22-year-old college student struggling academically shows FSIQ = 108, but VCI = 125 and PSI = 85. This 40-point spread tells a story{{/M}}: They have excellent verbal reasoning and knowledge, but their slow processing speed makes timed tests and note-taking extremely difficult. Your recommendations might include extended time accommodations, reduced workload, and teaching compensatory strategies—not because they lack intelligence, but because their cognitive profile requires specific support.
+{{M}}A 22-year-old college student struggling academically shows FSIQ = 108, but VCI = 125 and PSI = 85. This 40-point spread tells a story{{/M}}: They have excellent verbal reasoning and knowledge, but their slow processing speed makes timed tests and note-taking extremely difficult. Your recommendations might include extended time accommodations, reduced workload, and teaching compensatory strategies. Not because they lack intelligence, but because their cognitive profile requires specific support.
 
 {{M}}A 70-year-old referred for memory concerns scores FSIQ = 95, VCI = 110, PRI = 95, WMI = 90, PSI = 85.{{/M}} This pattern shows the classic aging effect with well-preserved crystallized knowledge. But if you saw PRI = 75 with everything else higher, you'd be more concerned about mild cognitive impairment affecting reasoning abilities.
 
@@ -265,6 +265,6 @@ When you're sitting across from a client who just completed a WAIS-IV, you won't
 
 - **General Ability Index (GAI)** uses only VCI and PRI, useful when working memory or processing speed problems aren't representative of overall ability
 
-- **Large discrepancies** between indexes (23+ points) make FSIQ less meaningful—interpret index and subtest scores instead
+- **Large discrepancies** between indexes (23+ points) make FSIQ less meaningful. Interpret index and subtest scores instead
 
-Understanding these tests isn't about memorizing tables—it's about recognizing patterns that reveal how people think, learn, and function. This knowledge will guide your recommendations and interventions throughout your career.
+Understanding these tests isn't about memorizing tables. It's about recognizing patterns that reveal how people think, learn, and function. This knowledge will guide your recommendations and interventions throughout your career.

@@ -9,7 +9,7 @@ version: 3
 
 ## Understanding Disruptive, Impulse-Control, and Conduct Disorders: A Practical Guide for EPPP Prep
 
-You're about to encounter a teenager in your future practice who just punched a hole through the school counselor's wall. Or maybe you'll work with a child whose parents are exhausted from constant defiance and arguments. These aren't just "bad kids"—they're individuals with diagnosable disorders that follow specific patterns we can identify and treat. Understanding disruptive, impulse-control, and conduct disorders isn't just exam material; it's essential knowledge for recognizing when behavior crosses from normal development into clinical territory.
+You're about to encounter a teenager in your future practice who just punched a hole through the school counselor's wall. Or maybe you'll work with a child whose parents are exhausted from constant defiance and arguments. These aren't just "bad kids". They're individuals with diagnosable disorders that follow specific patterns we can identify and treat. Understanding disruptive, impulse-control, and conduct disorders isn't just exam material; it's essential knowledge for recognizing when behavior crosses from normal development into clinical territory.
 
 This category includes disorders where people struggle with controlling their emotions and behaviors, specifically: Oppositional Defiant Disorder (ODD), Conduct Disorder (CD), and Intermittent Explosive Disorder (IED). Let's break down each one in a way that'll stick with you through the exam and into your clinical work.
 
@@ -17,7 +17,7 @@ This category includes disorders where people struggle with controlling their em
 
 ### The Core Pattern
 
-Oppositional Defiant Disorder involves a persistent pattern of angry, argumentative, defiant, or vindictive behavior. But here's the critical distinction: {{M}}it's like the difference between occasionally getting frustrated with your boss versus consistently arguing with every directive, blaming colleagues for your own mistakes, and deliberately undermining team projects—for at least six months straight{{/M}}.
+Oppositional Defiant Disorder involves a persistent pattern of angry, argumentative, defiant, or vindictive behavior. But here's the critical distinction: {{M}}it's like the difference between occasionally getting frustrated with your boss versus consistently arguing with every directive, blaming colleagues for your own mistakes, and deliberately undermining team projects, for at least six months straight{{/M}}.
 
 ### Diagnostic Criteria You Need to Know
 
@@ -33,11 +33,11 @@ To diagnose ODD, you need at least **four symptoms** from these categories, last
 
 ### Gender and Age Patterns
 
-In young children, ODD appears more commonly in boys. However, by adolescence, the gender distribution evens out—males and females are affected about equally. This shift is worth remembering for exam questions that include age specifications.
+In young children, ODD appears more commonly in boys. However, by adolescence, the gender distribution evens out. Males and females are affected about equally. This shift is worth remembering for exam questions that include age specifications.
 
 ### The Concerning Trajectory
 
-Here's a statistic that carries weight: approximately **30% of children with ODD** eventually develop Conduct Disorder. Early onset increases this risk significantly. {{M}}Think of ODD as potentially being the opening chapter in a longer story—not everyone progresses to the next chapter, but clinicians need to watch for warning signs that indicate escalation{{/M}}.
+Here's a statistic that carries weight: approximately **30% of children with ODD** eventually develop Conduct Disorder. Early onset increases this risk significantly. {{M}}Think of ODD as potentially being the opening chapter in a longer story. Not everyone progresses to the next chapter, but clinicians need to watch for warning signs that indicate escalation{{/M}}.
 
 ## Conduct Disorder (CD): When Behavior Violates Rights and Rules
 
@@ -60,7 +60,7 @@ Conduct Disorder represents a more serious pattern than ODD. While ODD involves 
 
 The DSM-5-TR specifies three onset subtypes that have different prognoses:
 
-**Childhood-Onset Type:** At least one symptom appears before age 10. This subtype carries worse outcomes—higher aggressiveness, greater risk for future Antisocial Personality Disorder, and increased likelihood of substance-related disorders.
+**Childhood-Onset Type:** At least one symptom appears before age 10. This subtype carries worse outcomes. Higher aggressiveness, greater risk for future Antisocial Personality Disorder, and increased likelihood of substance-related disorders.
 
 **Adolescent-Onset Type:** No symptoms before age 10. This subtype generally has a better prognosis.
 
@@ -70,7 +70,7 @@ The DSM-5-TR specifies three onset subtypes that have different prognoses:
 
 ### What Causes Conduct Disorder?
 
-CD doesn't have a single cause—it's multifactorial. Here are the key contributors you need to know:
+CD doesn't have a single cause. It's multifactorial. Here are the key contributors you need to know:
 
 **Genetic Factors:** Twin studies provide compelling evidence. One frequently cited study (Slutske et al., 1997) found heritability estimates of **65% for men and 43% for women**. Concordance rates for monozygotic (identical) twins were **53% for males and 30% for females**, compared to **37% and 18%** respectively for dizygotic (fraternal) twins. These numbers tell us genetics play a substantial role.
 
@@ -86,7 +86,7 @@ CD doesn't have a single cause—it's multifactorial. Here are the key contribut
 - Reduced skin conductance responses to aversive stimuli
 - Blunted cortisol and cardiovascular responses to stressful procedures
 
-In one notable study (Fairchild et al., 2019), adolescents with CD reported feeling similarly distressed as controls during a stressful procedure, but their bodies didn't show the typical stress response. {{M}}It's like having a smoke detector that never goes off even when there's actually smoke—the alarm system exists but doesn't activate properly{{/M}}. This discrepancy suggests poor coordination between emotional experience and physiological arousal.
+In one notable study (Fairchild et al., 2019), adolescents with CD reported feeling similarly distressed as controls during a stressful procedure, but their bodies didn't show the typical stress response. {{M}}It's like having a smoke detector that never goes off even when there's actually smoke, the alarm system exists but doesn't activate properly{{/M}}. This discrepancy suggests poor coordination between emotional experience and physiological arousal.
 
 ### Moffitt's Two-Path Theory
 
@@ -101,10 +101,10 @@ Psychologist Terrie Moffitt (1993) proposed an influential framework distinguish
 **Adolescence-Limited Type:**
 - Temporary, situational antisocial behavior
 - Emerges during adolescence
-- Attributed to a "maturity gap"—{{M}}when someone is biologically and sexually mature but not yet granted adult social status or privileges, like having your driver's license but still needing permission to go places{{/M}}
+- Attributed to a "maturity gap", {{M}}when someone is biologically and sexually mature but not yet granted adult social status or privileges, like having your driver's license but still needing permission to go places{{/M}}
 - Antisocial behaviors serve as a way to claim mature status
 
-This distinction aligns with DSM's childhood-onset versus adolescent-onset subtypes and explains why most individuals with CD improve by adulthood—they're primarily the adolescence-limited type.
+This distinction aligns with DSM's childhood-onset versus adolescent-onset subtypes and explains why most individuals with CD improve by adulthood. They're primarily the adolescence-limited type.
 
 ### Treatment Approaches for CD and ODD
 
@@ -149,7 +149,7 @@ PCIT is also evidence-based for children who've experienced or are at risk for m
 
 **Functional Family Therapy (FFT)**
 
-For families with children ages 11-18 who have externalizing disorders, substance problems, or high delinquency risk. FFT assumes that problematic behaviors serve functions within the family system—they regulate relationships and power structures. {{M}}Maybe a teenager's defiance is actually maintaining connection with parents (even if negative), like how some people maintain contact with ex-partners through arguments rather than letting the relationship fade{{/M}}. The goal is replacing problematic behaviors with healthier ones that serve the same functions.
+For families with children ages 11-18 who have externalizing disorders, substance problems, or high delinquency risk. FFT assumes that problematic behaviors serve functions within the family system. They regulate relationships and power structures. {{M}}Maybe a teenager's defiance is actually maintaining connection with parents (even if negative), like how some people maintain contact with ex-partners through arguments rather than letting the relationship fade{{/M}}. The goal is replacing problematic behaviors with healthier ones that serve the same functions.
 
 **Multidimensional Family Therapy (MDFT)**
 
@@ -167,7 +167,7 @@ MST is intensive, community-based intervention for adolescents ages 12-18 at imm
 
 Based on Bronfenbrenner's ecological theory, MST assumes problems stem from multiple risk factors across individual, family, peer, school, and community levels. Therefore, interventions must address all these levels simultaneously.
 
-**Critical research point:** MST has been extensively tested with economically disadvantaged families, single-parent families, and racial/ethnic minority families—and it's equally effective across these populations. This makes MST particularly valuable in diverse clinical settings.
+**Critical research point:** MST has been extensively tested with economically disadvantaged families, single-parent families, and racial/ethnic minority families. And it's equally effective across these populations. This makes MST particularly valuable in diverse clinical settings.
 
 **MST-CAN** is a specialized version for families of abused and neglected children ages 6-17.
 
@@ -197,7 +197,7 @@ The aggression must be:
 - Causing significant distress, impairment, or negative consequences
 - The individual must be at least **six years old** or at equivalent developmental level
 
-{{M}}IED is like a pressure cooker with a faulty release valve—instead of managing pressure gradually, everything explodes suddenly and excessively, far beyond what the situation warranted{{/M}}.
+{{M}}IED is like a pressure cooker with a faulty release valve. Instead of managing pressure gradually, everything explodes suddenly and excessively, far beyond what the situation warranted{{/M}}.
 
 Onset typically occurs in childhood or adolescence.
 
@@ -259,10 +259,10 @@ Remember the three G's plus F: **Genes, Gut reactions (low physiological arousal
 
 - **MST is equally effective across diverse populations**, including economically disadvantaged and minority families
 
-- **Scared Straight programs increase criminal behavior**—they're contraindicated despite common-sense appeal
+- **Scared Straight programs increase criminal behavior**. They're contraindicated despite common-sense appeal
 
 - **IED involves disproportionate, non-premeditated aggressive outbursts** occurring either twice weekly for three months or three times in 12 months with damage
 
-- **CD cannot be diagnosed after age 18 if ASPD criteria are met**—CD is the developmental precursor
+- **CD cannot be diagnosed after age 18 if ASPD criteria are met**. CD is the developmental precursor
 
-Remember, these disorders represent genuine struggles with self-control that respond to structured, evidence-based interventions. Your job as a clinician will be recognizing these patterns, understanding their developmental trajectories, and implementing treatments proven to help. When you encounter questions about disruptive disorders on the EPPP, focus on the specific numbers (symptom counts, duration requirements, age cutoffs) and the evidence base for treatments—these details frequently appear in exam questions.
+Remember, these disorders represent genuine struggles with self-control that respond to structured, evidence-based interventions. Your job as a clinician will be recognizing these patterns, understanding their developmental trajectories, and implementing treatments proven to help. When you encounter questions about disruptive disorders on the EPPP, focus on the specific numbers (symptom counts, duration requirements, age cutoffs) and the evidence base for treatments. These details frequently appear in exam questions.
