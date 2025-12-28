@@ -2,6 +2,7 @@ import type React from "react"
 import { Navbar } from "@/components/sections/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AuthProvider } from "@/context/auth-context"
+import { CopyProtection } from "@/components/copy-protection"
 import { siteConfig } from "@/lib/config"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
@@ -75,6 +76,7 @@ export default function RootLayout({
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background`} suppressHydrationWarning>
         <AuthProvider>
+          <CopyProtection />
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <SubscriptionGate>
               <div className="max-w-7xl mx-auto border-x relative">
