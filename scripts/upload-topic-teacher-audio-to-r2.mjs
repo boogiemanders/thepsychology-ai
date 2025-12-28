@@ -40,8 +40,30 @@ function parseArgs(argv) {
   return args
 }
 
+function readDotenvLocalValue(key) {
+  try {
+    const envPath = path.join(process.cwd(), '.env.local')
+    const text = fs.readFileSync(envPath, 'utf8')
+    const line = text
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .find((l) => l.length > 0 && !l.startsWith('#') && l.startsWith(`${key}=`))
+    if (!line) return null
+    let value = line.slice(key.length + 1).trim()
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1)
+    }
+    return value.trim() || null
+  } catch {
+    return null
+  }
+}
+
 function requiredEnv(key) {
-  const value = (process.env[key] || '').trim()
+  const value = (process.env[key] || readDotenvLocalValue(key) || '').trim()
   if (!value) {
     console.error(`Missing required env var: ${key}`)
     process.exit(1)
@@ -73,7 +95,11 @@ async function main() {
   const accessKeyId = requiredEnv('CLOUDFLARE_R2_ACCESS_KEY_ID')
   const secretAccessKey = requiredEnv('CLOUDFLARE_R2_SECRET_ACCESS_KEY')
   const endpoint =
-    (process.env.CLOUDFLARE_R2_ENDPOINT || `https://${accountId}.r2.cloudflarestorage.com`).trim()
+    (
+      process.env.CLOUDFLARE_R2_ENDPOINT ||
+      readDotenvLocalValue('CLOUDFLARE_R2_ENDPOINT') ||
+      `https://${accountId}.r2.cloudflarestorage.com`
+    ).trim()
 
   const localDirAbs = path.join(process.cwd(), args.localDir)
   const files = listFiles(localDirAbs).slice(0, args.limit)
@@ -159,4 +185,3 @@ main().catch((err) => {
   console.error(err)
   process.exit(1)
 })
-
