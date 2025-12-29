@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "ingest:recover": "node scripts/ingest-recover-pdfs.mjs",
-    "lint": "next lint",
+    "lint": "eslint .",
     "start": "next start",
     "upload:topic-teacher-audio:r2": "node scripts/upload-topic-teacher-audio-to-r2.mjs"
   },

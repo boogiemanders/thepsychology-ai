@@ -15,6 +15,7 @@ The Vercel build failed because the Supabase environment variables weren't avail
 |---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://hwkuxietvwvbgdowxzkw.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3a3V4aWV0dnd2Ymdkb3d4emt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI4OTM1NTMsImV4cCI6MjA3ODQ2OTU1M30.ElDXc-JBYORsA4MGZ53y0NZfgGh9tpa81Yax9fENT6U` |
+| `NEXT_PUBLIC_APP_URL` | `https://thepsychology.ai` |
 
 5. Make sure both are visible in:
    - Production

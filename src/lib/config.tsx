@@ -31,7 +31,9 @@ export const siteConfig = {
   description:
     "EPPP exam prep with targeted EPPP practice questions, sample exams, and high-yield study materials—built by psychologists to help you pass faster.",
   cta: "Get Started",
-  url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+  url:
+    process.env.NEXT_PUBLIC_APP_URL ||
+    (process.env.NODE_ENV === "production" ? "https://thepsychology.ai" : "http://localhost:3000"),
   keywords: [
     "EPPP",
     "EPPP exam prep",
@@ -329,27 +331,27 @@ export const siteConfig = {
       title: "Company",
       links: [
         { id: 1, title: "About", url: "/portfolio" },
-        { id: 2, title: "Contact", url: "#" },
-        { id: 3, title: "Blog", url: "#" },
-        { id: 4, title: "Story", url: "#" },
+        { id: 2, title: "Contact", url: "/contact" },
+        { id: 3, title: "Blog", url: "/blog" },
+        { id: 4, title: "Resources", url: "/resources" },
       ],
     },
     {
       title: "Products",
       links: [
-        { id: 5, title: "Company", url: "#" },
-        { id: 6, title: "Product", url: "#" },
-        { id: 7, title: "Press", url: "#" },
-        { id: 8, title: "More", url: "#" },
+        { id: 5, title: "Pricing", url: "/#get-started" },
+        { id: 6, title: "FAQ", url: "/#faq" },
+        { id: 7, title: "Practice Questions", url: "/resources/practice-questions" },
+        { id: 8, title: "Sample Exams", url: "/resources/sample-exams" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { id: 9, title: "Press", url: "#" },
-        { id: 10, title: "Careers", url: "#" },
-        { id: 11, title: "Newsletters", url: "#" },
-        { id: 12, title: "More", url: "#" },
+        { id: 9, title: "EPPP Sections", url: "/eppp-sections" },
+        { id: 10, title: "EPPP Practice Questions", url: "/eppp-practice-questions" },
+        { id: 11, title: "EPPP Passing Score", url: "/eppp-passing-score" },
+        { id: 12, title: "All Resources", url: "/resources" },
       ],
     },
   ],

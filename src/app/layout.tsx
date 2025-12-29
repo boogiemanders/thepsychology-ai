@@ -37,9 +37,6 @@ export const metadata: Metadata = {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
   },
-  alternates: {
-    canonical: siteConfig.url,
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -69,11 +66,40 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const baseUrl = siteConfig.url.replace(/\/$/, "")
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: baseUrl,
+      logo: `${baseUrl}/images/logo.png`,
+      email: siteConfig.links.email,
+      sameAs: Object.values(siteConfig.links).filter((value) => value.startsWith("http")),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: baseUrl,
+      description: siteConfig.description,
+      publisher: {
+        "@type": "Organization",
+        name: siteConfig.name,
+      },
+    },
+  ]
+
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <head>
-        <Script src="https://unpkg.com/react-scan/dist/auto.global.js" />
-      </head> */}
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background`} suppressHydrationWarning>
         <AuthProvider>
