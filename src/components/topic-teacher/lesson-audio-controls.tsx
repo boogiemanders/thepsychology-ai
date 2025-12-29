@@ -10,8 +10,6 @@ type MetaphorRange = { start: number; end: number }
 
 const DEFAULT_VOICE = 'alloy'
 
-const VOICE_OPTIONS = ['alloy', 'nova', 'shimmer', 'onyx', 'fable', 'echo'] as const
-
 const MAX_CHARS_PER_TTS_REQUEST = 3200
 
 const PLAYBACK_RATE_OPTIONS = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3] as const
@@ -197,7 +195,7 @@ export function LessonAudioControls(props: {
     onAutoScrollToggle,
   } = props
 
-  const [voice, setVoice] = useState<string>(DEFAULT_VOICE)
+  const voice = DEFAULT_VOICE
   const [playbackRate, setPlaybackRate] = useState<number>(1)
 
   const [isGenerating, setIsGenerating] = useState(false)
@@ -647,19 +645,6 @@ export function LessonAudioControls(props: {
       {!hasAudio && !showStickyBar && (
         <div className="mb-4 max-w-2xl">
           <div className="flex flex-wrap items-center gap-3 rounded-md border border-border/60 bg-background px-3 py-2">
-            {/* Voice selector with label */}
-            <select
-              className="h-7 rounded-md border border-input bg-background px-1.5 text-xs"
-              value={voice}
-              onChange={(e) => setVoice(e.target.value)}
-              disabled={isGenerating}
-            >
-              <option value="" disabled>Voice</option>
-              {VOICE_OPTIONS.map((v) => (
-                <option key={v} value={v}>{v}</option>
-              ))}
-            </select>
-
             {/* Playback speed slider */}
             <div className="flex items-center gap-2">
               <input
@@ -869,21 +854,6 @@ export function LessonAudioControls(props: {
                   </Button>
                 )}
 
-                {/* Voice selector - moved to end */}
-                <div className="hidden sm:flex items-center gap-1.5 shrink-0">
-                  <div className="w-px h-4 bg-border mx-0.5" />
-                  <select
-                    className="h-6 rounded border border-border/60 bg-background px-1 text-xs cursor-pointer"
-                    value={voice}
-                    onChange={(e) => setVoice(e.target.value)}
-                    disabled={isGenerating}
-                  >
-                    <option value="" disabled>Voice</option>
-                    {VOICE_OPTIONS.map((v) => (
-                      <option key={v} value={v}>{v}</option>
-                    ))}
-                  </select>
-                </div>
               </div>
             </div>
 
