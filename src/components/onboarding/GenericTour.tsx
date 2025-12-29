@@ -131,8 +131,13 @@ export function GenericTour({
       const element = document.querySelector(step.targetSelector) as HTMLElement
       if (!element) return false
 
-      // Scroll element into view
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      // For first step, scroll to top of page first to ensure visibility
+      if (currentStep === 0) {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        // For other steps, scroll element into view only if needed
+        element.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
 
       // Wait for scroll to complete, then calculate position
       setTimeout(() => {

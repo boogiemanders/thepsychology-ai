@@ -23,6 +23,68 @@ const PREGENERATED_AUDIO_BASE_PATH = (process.env.NEXT_PUBLIC_TOPIC_TEACHER_AUDI
 )
 
 const WORD_REGEX = /[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
+const VOWEL_GROUP_REGEX = /[aeiouy]+/gi
+
+function estimateSyllables(word: string): number {
+  const matches = word.toLowerCase().match(VOWEL_GROUP_REGEX)
+  return matches ? Math.max(1, matches.length) : 1
+}
+
+function computeWordProgressMap(text: string): number[] {
+  const matches = Array.from(text.matchAll(WORD_REGEX))
+  if (matches.length === 0) return []
+
+  const weights: number[] = []
+  for (let i = 0; i < matches.length; i += 1) {
+    const match = matches[i]
+    const word = match[0] ?? ''
+    const start = (match.index ?? 0) + word.length
+    const nextIndex = matches[i + 1]?.index ?? text.length
+    const gap = text.slice(start, nextIndex)
+
+    const syllables = estimateSyllables(word)
+    let pauseWeight = 0
+
+    if (gap.includes('\n\n')) {
+      pauseWeight += 1.2
+    } else if (gap.includes('\n')) {
+      pauseWeight += 0.8
+    }
+    if (/[.!?]/.test(gap)) pauseWeight += 0.9
+    if (/[,:;]/.test(gap)) pauseWeight += 0.5
+    if (/(?:--|\u2014|\u2013)/.test(gap)) pauseWeight += 0.3
+
+    weights.push(Math.max(0.9, syllables) + pauseWeight)
+  }
+
+  const total = weights.reduce((acc, w) => acc + w, 0)
+  if (!Number.isFinite(total) || total <= 0) return []
+
+  let cumulative = 0
+  return weights.map((w) => {
+    cumulative += w
+    return Math.min(1, cumulative / total)
+  })
+}
+
+function findWordIndexForRatio(progressMap: number[], ratio: number): number {
+  if (progressMap.length === 0) return 0
+  if (ratio <= progressMap[0]) return 0
+  const lastIndex = progressMap.length - 1
+  if (ratio >= progressMap[lastIndex]) return lastIndex
+
+  let lo = 0
+  let hi = lastIndex
+  while (lo <= hi) {
+    const mid = Math.floor((lo + hi) / 2)
+    if (progressMap[mid] < ratio) {
+      lo = mid + 1
+    } else {
+      hi = mid - 1
+    }
+  }
+  return Math.min(Math.max(lo, 0), lastIndex)
+}
 
 function countWords(text: string): number {
   const matches = text.match(WORD_REGEX)
@@ -217,6 +279,7 @@ export function LessonAudioControls(props: {
   const autoPlayNextRef = useRef(false)
   const audioUrlsRef = useRef<string[]>([])
   const segmentWordCountsRef = useRef<number[]>([])
+  const segmentWordProgressRef = useRef<number[][]>([])
   const segmentWordOffsetsRef = useRef<number[]>([])
   const totalWordsRef = useRef(0)
   const lastWordIndexRef = useRef<number | null>(null)
@@ -261,6 +324,7 @@ export function LessonAudioControls(props: {
       return []
     })
     segmentWordCountsRef.current = []
+    segmentWordProgressRef.current = []
     segmentWordOffsetsRef.current = []
     totalWordsRef.current = 0
     lastWordIndexRef.current = null
@@ -321,10 +385,13 @@ export function LessonAudioControls(props: {
         ? Math.min(1, Math.max(0, audio.currentTime / durationSeconds))
         : null
 
+    const progressMap = segmentWordProgressRef.current[currentIndex]
     const localIndex =
       ratio === null
         ? Math.min(currentCount - 1, Math.floor(audio.currentTime * 2.6))
-        : Math.min(currentCount - 1, Math.floor(ratio * currentCount))
+        : progressMap && progressMap.length === currentCount
+          ? findWordIndexForRatio(progressMap, ratio)
+          : Math.min(currentCount - 1, Math.floor(ratio * currentCount))
 
     const offset = segmentWordOffsetsRef.current[currentIndex] ?? 0
     const globalIndex = offset + localIndex
@@ -355,6 +422,19 @@ export function LessonAudioControls(props: {
     updateWordProgressFromAudio()
   }, [audioUrls, currentIndex, updateWordProgressFromAudio])
 
+  useEffect(() => {
+    if (!isPlaying || audioUrls.length === 0) return
+    let rafId = 0
+    const tick = () => {
+      updateWordProgressFromAudio()
+      rafId = requestAnimationFrame(tick)
+    }
+    rafId = requestAnimationFrame(tick)
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId)
+    }
+  }, [audioUrls.length, isPlaying, updateWordProgressFromAudio])
+
   const generateAudioForSegments = async (
     segments: Array<{ text: string; voice: string; cacheable?: boolean }>,
     trackWords: boolean
@@ -366,6 +446,7 @@ export function LessonAudioControls(props: {
     if (onWordProgress) {
       if (trackWords) {
         const counts = segments.map((segment) => countWords(segment.text))
+        const progressMaps = segments.map((segment) => computeWordProgressMap(segment.text))
         const offsets: number[] = []
         let total = 0
         counts.forEach((count) => {
@@ -373,6 +454,7 @@ export function LessonAudioControls(props: {
           total += count
         })
         segmentWordCountsRef.current = counts
+        segmentWordProgressRef.current = progressMaps
         segmentWordOffsetsRef.current = offsets
         totalWordsRef.current = total
         lastWordIndexRef.current = null
@@ -381,6 +463,7 @@ export function LessonAudioControls(props: {
         onWordProgress({ wordIndex: null, totalWords: total })
       } else {
         segmentWordCountsRef.current = []
+        segmentWordProgressRef.current = []
         segmentWordOffsetsRef.current = []
         totalWordsRef.current = 0
         lastWordIndexRef.current = null
