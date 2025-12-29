@@ -66,6 +66,7 @@ interface PracticeExamQuestion {
   source_file?: string
   source_folder?: string
   topicName?: string
+  topic?: string
   domainId?: string
   relatedSections?: string[]
   [key: string]: any
@@ -1420,10 +1421,13 @@ export function TopicTeacherContent() {
 
         const wrong: WrongPracticeExamQuestion[] = []
 
-        // Normalize topic names for comparison (remove punctuation, extra spaces)
-        const normalizeTopic = (s: string) =>
-          s.toLowerCase()
-            .replace(/[,.:;'"!?()]/g, '')
+        // Normalize topic names for comparison (handles / vs -, smart quotes, ellipses, etc.)
+        const normalizeTopic = (value: string) =>
+          value
+            .toLowerCase()
+            .replace(/^[\d\s]+/, '') // strip leading numeric prefixes like "1 " or "5 6 "
+            .replace(/[&]/g, 'and')
+            .replace(/[^a-z0-9]+/g, ' ')
             .replace(/\s+/g, ' ')
             .trim()
 
@@ -1431,13 +1435,23 @@ export function TopicTeacherContent() {
 
         questions.forEach((question, index) => {
           const selectedAnswer =
-            selectedAnswers[index as any] ?? selectedAnswers[String(index)] ?? null
+            selectedAnswers[index as any] ??
+            selectedAnswers[String(index)] ??
+            (question.id != null ? selectedAnswers[String(question.id)] : null) ??
+            null
 
           if (!selectedAnswer) return
-          if (selectedAnswer === question.correct_answer) return
+
+          // Support correct answers stored as A-D letters (selected answers are stored as option text).
+          const rawCorrect = typeof question.correct_answer === 'string' ? question.correct_answer : ''
+          const correctAnswer =
+            Array.isArray(question.options) && /^[A-D]$/.test(rawCorrect)
+              ? question.options[rawCorrect.charCodeAt(0) - 65] ?? rawCorrect
+              : rawCorrect
+          if (selectedAnswer === correctAnswer) return
 
           const meta = deriveTopicMetaFromQuestionSource(question)
-          const questionTopic = (question.topicName || meta?.topicName || '').trim()
+          const questionTopic = (question.topicName || question.topic || meta?.topicName || '').trim()
           if (!questionTopic) return
 
           const normalizedQuestionTopic = normalizeTopic(questionTopic)
