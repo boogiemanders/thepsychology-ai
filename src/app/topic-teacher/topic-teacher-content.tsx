@@ -309,7 +309,8 @@ export function TopicTeacherContent() {
   const activeWordIndexRef = useRef<number | null>(null)
   const autoScrollRef = useRef(false)
   const [readAlongReady, setReadAlongReady] = useState(false)
-  const [autoScrollEnabled, setAutoScrollEnabled] = useState(false)
+  const [readAlongEnabled, setReadAlongEnabled] = useState(true)
+  const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
 
   useEffect(() => {
     if (!user?.id) return
@@ -334,12 +335,12 @@ export function TopicTeacherContent() {
   }, [user?.id, decodedTopic, domain])
 
   useEffect(() => {
-    autoScrollRef.current = autoScrollEnabled
-  }, [autoScrollEnabled])
+    autoScrollRef.current = readAlongEnabled && autoScrollEnabled
+  }, [autoScrollEnabled, readAlongEnabled])
 
   useEffect(() => {
     const container = lessonContentRef.current
-    if (!container || !lessonMarkdown.trim()) {
+    if (!readAlongEnabled || !container || !lessonMarkdown.trim()) {
       wordSpansRef.current = []
       wordIndexMapRef.current = []
       activeWordIndexRef.current = null
@@ -363,7 +364,7 @@ export function TopicTeacherContent() {
     activeWordIndexRef.current = null
     spans.forEach((span) => span.classList.remove('tt-word-active'))
     setReadAlongReady(spans.length > 0)
-  }, [lessonMarkdown])
+  }, [lessonMarkdown, readAlongEnabled])
 
   const handleWordProgress = useCallback(
     (payload: { wordIndex: number | null; totalWords: number }) => {
@@ -2287,9 +2288,10 @@ export function TopicTeacherContent() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col bg-background">
-      <div className="flex-1 flex flex-col w-full mx-auto p-6 pb-40 max-w-4xl">
-        <Breadcrumb className="mb-6">
+    <main className="min-h-screen flex flex-col bg-background overflow-x-hidden">
+      <div className="flex-1 flex flex-col w-full mx-auto px-4 py-6 pb-40 max-w-[800px]">
+        {/* 1. Breadcrumb - above audio bar */}
+        <Breadcrumb className="mb-4">
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
@@ -2305,7 +2307,7 @@ export function TopicTeacherContent() {
           </BreadcrumbList>
         </Breadcrumb>
 
-        {/* 1. Audio Controls - at top */}
+        {/* 2. Audio Controls */}
         <LessonAudioControls
           lessonMarkdown={lessonMarkdown}
           baseLessonMarkdown={baseContent}
@@ -2315,9 +2317,13 @@ export function TopicTeacherContent() {
           userId={user?.id ?? null}
           userInterests={savedInterests.length > 0 ? savedInterests.join(', ') : userInterests}
           languagePreference={languagePreference}
-          onWordProgress={handleWordProgress}
-          autoScrollEnabled={autoScrollEnabled}
-          onAutoScrollToggle={() => setAutoScrollEnabled((prev) => !prev)}
+          readAlongEnabled={readAlongEnabled}
+          onReadAlongToggle={() => setReadAlongEnabled((prev) => !prev)}
+          onWordProgress={readAlongEnabled ? handleWordProgress : undefined}
+          autoScrollEnabled={readAlongEnabled ? autoScrollEnabled : false}
+          onAutoScrollToggle={
+            readAlongEnabled ? () => setAutoScrollEnabled((prev) => !prev) : undefined
+          }
           disabledReason={
             isLoading
               ? 'Loading lesson...'
@@ -2329,9 +2335,11 @@ export function TopicTeacherContent() {
           }
         />
 
-        {/* 2. Interest Tags Input */}
-        <div className="mb-6 max-w-2xl">
-          <div className="relative">
+        {/* 3. Interest & Language Inputs */}
+        <div className="mb-4 w-full max-w-[800px] flex flex-col sm:flex-row gap-4">
+          {/* Interest Tags Input */}
+          <div className="flex-1">
+            <div className="relative">
             <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
               {/* Display saved interests as tags */}
               {savedInterests.map((interest, index) => (
@@ -2408,12 +2416,12 @@ export function TopicTeacherContent() {
                 Translating to {languagePreference}...
               </div>
             )}
+            </div>
           </div>
-        </div>
 
-        {/* 3. Language Preference Input */}
-        <div className="mb-6 max-w-2xl">
-          <div className="relative">
+          {/* Language Preference Input */}
+          <div className="flex-1 sm:max-w-xs">
+            <div className="relative">
             <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
               {/* Display language preference as a single tag */}
               {languagePreference && (
@@ -2503,10 +2511,11 @@ export function TopicTeacherContent() {
                 </motion.div>
               )}
             </div>
+            </div>
           </div>
         </div>
 
-        {/* 4. Title - after inputs */}
+        {/* 3. Title - after inputs */}
         <div className="mb-6">
           <TypographyH1>{displayLessonName}</TypographyH1>
         </div>
@@ -2590,7 +2599,7 @@ export function TopicTeacherContent() {
         )}
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto space-y-4 mb-6 rounded-lg p-4">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden space-y-4 mb-6 rounded-lg p-4">
           {messages.length === 0 && !initialized && !isLoading && (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">
@@ -2643,7 +2652,7 @@ export function TopicTeacherContent() {
                     >
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
-                        rehypePlugins={message.role === 'assistant' && idx === 0 ? [rehypeReadAlongWords] : []}
+                        rehypePlugins={message.role === 'assistant' && idx === 0 && readAlongEnabled ? [rehypeReadAlongWords] : []}
                         components={{
                           h1: ({ children }) => {
                             const text = extractTextFromReactNode(children)

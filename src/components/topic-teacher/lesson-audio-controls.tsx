@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { chunkTextForTts, markdownToSpeakableText, prepareTextForTts } from '@/lib/speech-text'
-import { Play, Pause, SkipBack, SkipForward, ScrollText } from 'lucide-react'
+import { Highlighter, Pause, Play, ScrollText, SkipBack, SkipForward } from 'lucide-react'
 
 type MetaphorRange = { start: number; end: number }
 
@@ -157,6 +157,8 @@ export function LessonAudioControls(props: {
   userInterests: string | null
   languagePreference: string | null
   disabledReason?: string | null
+  readAlongEnabled?: boolean
+  onReadAlongToggle?: () => void
   onWordProgress?: (payload: { wordIndex: number | null; totalWords: number }) => void
   autoScrollEnabled?: boolean
   onAutoScrollToggle?: () => void
@@ -171,6 +173,8 @@ export function LessonAudioControls(props: {
     userInterests,
     languagePreference,
     disabledReason,
+    readAlongEnabled = Boolean(props.onWordProgress),
+    onReadAlongToggle,
     onWordProgress,
     autoScrollEnabled = false,
     onAutoScrollToggle,
@@ -189,6 +193,7 @@ export function LessonAudioControls(props: {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
+  const [scrollY, setScrollY] = useState(0)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const abortRef = useRef<AbortController | null>(null)
   const autoPlayNextRef = useRef(false)
@@ -261,6 +266,16 @@ export function LessonAudioControls(props: {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  // Track scroll position for dynamic sticky bar positioning
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Dynamic top position - starts at 120px (below breadcrumb), moves up to 64px as user scrolls
+  const stickyTop = Math.max(120 - scrollY, 64)
 
   const handleEnded = () => {
     const next = currentIndex + 1
@@ -586,10 +601,10 @@ export function LessonAudioControls(props: {
   return (
     <>
       {/* Spacer when unified audio bar is visible */}
-      {showStickyBar && <div className="h-16" />}
+      {showStickyBar && <div className="h-20" />}
 
-      {/* Initial Settings Panel - only shown when NO audio exists */}
-      {!hasAudio && (
+      {/* Initial Settings Panel - only shown when NO audio exists and sticky bar is not visible */}
+      {!hasAudio && !showStickyBar && (
         <div className="mb-4 max-w-2xl">
           <div className="flex flex-wrap items-center gap-3 rounded-md border border-border/60 bg-background px-3 py-2">
             {/* Voice selector with label */}
@@ -674,27 +689,12 @@ export function LessonAudioControls(props: {
       {/* Unified Sticky Audio Bar */}
       {showStickyBar && (
         <div
-          className="fixed left-0 right-0 top-20 z-50 border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80"
+          className="fixed left-0 right-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 transition-[top] duration-100"
+          style={{ top: `${stickyTop}px` }}
         >
           <div className="mx-auto max-w-[800px] px-4 py-2">
             <div className="flex items-center gap-2">
-              {/* Left section: Voice selector */}
-              <div className="hidden md:flex items-center gap-1.5 shrink-0">
-                <select
-                  className="h-6 rounded border border-border/60 bg-background px-1 text-xs cursor-pointer"
-                  value={voice}
-                  onChange={(e) => setVoice(e.target.value)}
-                  disabled={isGenerating}
-                >
-                  <option value="" disabled>Voice</option>
-                  {VOICE_OPTIONS.map((v) => (
-                    <option key={v} value={v}>{v}</option>
-                  ))}
-                </select>
-                <div className="w-px h-4 bg-border mx-1" />
-              </div>
-
-              {/* Center section: Playback controls */}
+              {/* Playback controls - first for prominence */}
               <div className="flex items-center gap-1 shrink-0">
                 <button
                   type="button"
@@ -781,6 +781,22 @@ export function LessonAudioControls(props: {
                   </button>
                 )}
 
+                {onReadAlongToggle && (
+                  <button
+                    type="button"
+                    onClick={onReadAlongToggle}
+                    className={`p-1 rounded-full transition-colors ${
+                      readAlongEnabled
+                        ? 'bg-primary/20 text-primary'
+                        : 'hover:bg-muted text-muted-foreground'
+                    }`}
+                    aria-label={readAlongEnabled ? 'Disable read-along highlighting' : 'Enable read-along highlighting'}
+                    title={readAlongEnabled ? 'Read-along: On' : 'Read-along: Off'}
+                  >
+                    <Highlighter className="h-3.5 w-3.5" />
+                  </button>
+                )}
+
                 <div className="w-px h-4 bg-border mx-0.5 hidden sm:block" />
 
                 {showRegenerateButton && (
@@ -804,12 +820,28 @@ export function LessonAudioControls(props: {
                     Clear
                   </Button>
                 )}
+
+                {/* Voice selector - moved to end */}
+                <div className="hidden sm:flex items-center gap-1.5 shrink-0">
+                  <div className="w-px h-4 bg-border mx-0.5" />
+                  <select
+                    className="h-6 rounded border border-border/60 bg-background px-1 text-xs cursor-pointer"
+                    value={voice}
+                    onChange={(e) => setVoice(e.target.value)}
+                    disabled={isGenerating}
+                  >
+                    <option value="" disabled>Voice</option>
+                    {VOICE_OPTIONS.map((v) => (
+                      <option key={v} value={v}>{v}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 
-            {(progressText || sourceText) && (
+            {progressText && (
               <div className="mt-1 text-xs text-muted-foreground">
-                {progressText || sourceText}
+                {progressText}
               </div>
             )}
 
