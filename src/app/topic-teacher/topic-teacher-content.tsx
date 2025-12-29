@@ -37,9 +37,11 @@ import { InlineSvg } from '@/components/ui/inline-svg'
 import { VariableStar } from '@/components/ui/variable-star'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { SmartExplanationButton } from '@/components/smart-explanation-button'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { LessonAudioControls } from '@/components/topic-teacher/lesson-audio-controls'
-import { markdownToSpeakableText, prepareTextForTts } from '@/lib/speech-text'
+import { normalizeTextForReadAlong } from '@/lib/speech-text'
+import { markdownToSpeakableText } from '@/lib/speech-text'
 import { TopicTeacherTourProvider, useTopicTeacherTour } from '@/components/onboarding/TopicTeacherTourProvider'
 
 interface Message {
@@ -103,7 +105,8 @@ const READ_ALONG_WORD_REGEX = /[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
 const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code'])
 const READ_ALONG_SKIP_SELECTOR = Array.from(READ_ALONG_SKIP_TAGS).join(',')
 const EPPP_WORD_REGEX = /\bE\.?P\.?P\.?P\.?\b/i
-const READ_ALONG_LOOKAHEAD = 12
+const ACRONYM_WORD_REGEX = /^[A-Z]{2,5}$/
+const ACRONYM_VOWEL_REGEX = /[AEIOUY]/
 
 function splitTextForReadAlong(value: string, wordIndexRef: { current: number }): HastNode[] {
   if (!value) return []
@@ -259,7 +262,8 @@ function wrapReadAlongWordsInContainer(container: HTMLElement): HTMLSpanElement[
 type ReadAlongWordEntry = { word: string; index: number }
 
 function normalizeReadAlongWord(word: string): string {
-  return word.trim().toLowerCase()
+  const normalized = word.trim().toLowerCase()
+  return normalized.replace(/['\u2019]s$/i, '')
 }
 
 function buildSequentialReadAlongMap(spans: HTMLSpanElement[]): Array<number | null> {
@@ -287,6 +291,10 @@ function buildReadAlongWordEntries(spans: HTMLSpanElement[]): ReadAlongWordEntry
         { word: 'triple', index },
         { word: 'p', index }
       )
+    } else if (ACRONYM_WORD_REGEX.test(text) && !ACRONYM_VOWEL_REGEX.test(text)) {
+      text.split('').forEach((letter) => {
+        entries.push({ word: letter.toLowerCase(), index })
+      })
     } else {
       entries.push({ word: normalizeReadAlongWord(text), index })
     }
@@ -304,54 +312,54 @@ function buildReadAlongIndexMap(
   if (entries.length === 0) return []
 
   const displayWords = entries.map((entry) => entry.word)
+  const n = spokenWords.length
+  const m = displayWords.length
+
+  if (n === 0 || m === 0) return []
+  if (n > 65000 || m > 65000) {
+    return new Array(spokenWords.length).fill(null)
+  }
+
+  const rowLen = m + 1
+  const dirs = new Uint8Array((n + 1) * rowLen)
+  let prev = new Uint16Array(rowLen)
+  let curr = new Uint16Array(rowLen)
+
+  for (let i = 1; i <= n; i += 1) {
+    curr[0] = 0
+    const spokenWord = spokenWords[i - 1]
+    const baseIdx = i * rowLen
+    for (let j = 1; j <= m; j += 1) {
+      if (spokenWord === displayWords[j - 1]) {
+        curr[j] = prev[j - 1] + 1
+        dirs[baseIdx + j] = 1
+      } else if (prev[j] >= curr[j - 1]) {
+        curr[j] = prev[j]
+        dirs[baseIdx + j] = 2
+      } else {
+        curr[j] = curr[j - 1]
+        dirs[baseIdx + j] = 3
+      }
+    }
+    const swap = prev
+    prev = curr
+    curr = swap
+  }
+
   const map: Array<number | null> = new Array(spokenWords.length).fill(null)
-  let displayPos = 0
-
-  for (let i = 0; i < spokenWords.length; i += 1) {
-    const spokenWord = spokenWords[i]
-    if (!spokenWord) continue
-
-    if (displayPos >= displayWords.length) {
-      map[i] = null
-      continue
+  let i = n
+  let j = m
+  while (i > 0 && j > 0) {
+    const dir = dirs[i * rowLen + j]
+    if (dir === 1) {
+      map[i - 1] = entries[j - 1].index
+      i -= 1
+      j -= 1
+    } else if (dir === 2) {
+      i -= 1
+    } else {
+      j -= 1
     }
-
-    if (displayWords[displayPos] === spokenWord) {
-      map[i] = entries[displayPos].index
-      displayPos += 1
-      continue
-    }
-
-    let nextDisplay = -1
-    const displayEnd = Math.min(displayWords.length, displayPos + READ_ALONG_LOOKAHEAD)
-    for (let j = displayPos + 1; j < displayEnd; j += 1) {
-      if (displayWords[j] === spokenWord) {
-        nextDisplay = j
-        break
-      }
-    }
-
-    let nextSpoken = -1
-    const spokenEnd = Math.min(spokenWords.length, i + READ_ALONG_LOOKAHEAD)
-    const currentDisplayWord = displayWords[displayPos]
-    for (let k = i + 1; k < spokenEnd; k += 1) {
-      if (spokenWords[k] === currentDisplayWord) {
-        nextSpoken = k
-        break
-      }
-    }
-
-    if (
-      nextDisplay !== -1 &&
-      (nextSpoken === -1 || nextDisplay - displayPos <= nextSpoken - i)
-    ) {
-      displayPos = nextDisplay
-      map[i] = entries[displayPos].index
-      displayPos += 1
-      continue
-    }
-
-    map[i] = null
   }
 
   return map
@@ -552,9 +560,9 @@ export function TopicTeacherContent() {
   const readAlongWordCounterRef = useRef(0)
   const spokenWords = useMemo(() => {
     if (!lessonMarkdown.trim()) return []
-    const speakable = prepareTextForTts(markdownToSpeakableText(lessonMarkdown))
+    const speakable = normalizeTextForReadAlong(markdownToSpeakableText(lessonMarkdown))
     const matches = speakable.match(READ_ALONG_WORD_REGEX)
-    return matches ? matches.map((word) => word.toLowerCase()) : []
+    return matches ? matches.map((word) => normalizeReadAlongWord(word)) : []
   }, [lessonMarkdown])
 
   const syncReadAlongSpans = (options: { updateState?: boolean } = {}) => {
@@ -658,13 +666,7 @@ export function TopicTeacherContent() {
 
       const clampedWordIndex = Math.max(0, Math.min(Math.floor(nextWordIndex), map.length - 1))
       const spanIndex = map[clampedWordIndex]
-      if (spanIndex === null || spanIndex === undefined) {
-        if (activeWordIndexRef.current !== null) {
-          spans[activeWordIndexRef.current]?.classList.remove('tt-word-active')
-        }
-        activeWordIndexRef.current = null
-        return
-      }
+      if (spanIndex === null || spanIndex === undefined) return
       if (activeWordIndexRef.current === spanIndex) return
 
       if (activeWordIndexRef.current !== null) {
@@ -2837,6 +2839,7 @@ export function TopicTeacherContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="mb-4"
+            data-tour="star-legend-top"
           >
             <p className="text-sm text-foreground/80">
               <VariableStar
@@ -3361,14 +3364,21 @@ export function TopicTeacherContent() {
                             )
                           },
                           img: ({ src, alt }) => {
+                            const readAlongAlt =
+                              shouldWrapReadAlong && alt ? (
+                                <span className="sr-only">{wrapReadAlongChildren(alt)}</span>
+                              ) : null
                             // Use InlineSvg for SVG files to enable theme-aware styling
                             if (src && src.endsWith('.svg')) {
                               return (
-                                <InlineSvg
-                                  src={src}
-                                  alt={alt || ''}
-                                  className="my-6 max-w-full"
-                                />
+                                <>
+                                  <InlineSvg
+                                    src={src}
+                                    alt={alt || ''}
+                                    className="my-6 max-w-full"
+                                  />
+                                  {readAlongAlt}
+                                </>
                               )
                             }
                             // Add theory-diagram class for images that need dark mode inversion
@@ -3380,11 +3390,14 @@ export function TopicTeacherContent() {
                             const isTopicIllustration = src && src.includes('/images/topics/')
                             // Regular images
                             return (
-                              <img
-                                src={src}
-                                alt={alt || ''}
-                                className={`my-6 ${isTopicIllustration ? 'max-w-[420px]' : 'max-w-full'} ${needsDarkModeInvert ? 'theory-diagram' : ''}`}
-                              />
+                              <>
+                                <img
+                                  src={src}
+                                  alt={alt || ''}
+                                  className={`my-6 ${isTopicIllustration ? 'max-w-[420px]' : 'max-w-full'} ${needsDarkModeInvert ? 'theory-diagram' : ''}`}
+                                />
+                                {readAlongAlt}
+                              </>
                             )
                           },
                         }}
@@ -3578,6 +3591,21 @@ export function TopicTeacherContent() {
                       </p>
                     </div>
                   ) : null}
+
+                  {/* Smart Explanation for missed exam questions */}
+                  {activeMissedQuestion.selectedAnswer &&
+                   activeMissedQuestion.selectedAnswer !== activeMissedQuestion.question.correct_answer &&
+                   activeMissedQuestion.question.topicName && (
+                    <SmartExplanationButton
+                      question={activeMissedQuestion.question.question}
+                      options={activeMissedQuestion.question.options}
+                      correctAnswer={activeMissedQuestion.question.correct_answer}
+                      selectedAnswer={activeMissedQuestion.selectedAnswer}
+                      topicName={activeMissedQuestion.question.topicName}
+                      domain={activeMissedQuestion.question.domainId || ''}
+                      userId={user?.id}
+                    />
+                  )}
                 </div>
               )}
 
@@ -3672,6 +3700,21 @@ export function TopicTeacherContent() {
                         {activeQuizQuestion.explanation}
                       </p>
                     </div>
+                  )}
+
+                  {/* Smart Explanation for missed quiz questions */}
+                  {activeQuizQuestion.selectedAnswer &&
+                   activeQuizQuestion.selectedAnswer !== activeQuizQuestion.correctAnswer &&
+                   decodedTopic && (
+                    <SmartExplanationButton
+                      question={activeQuizQuestion.question}
+                      options={activeQuizQuestion.options || []}
+                      correctAnswer={activeQuizQuestion.correctAnswer}
+                      selectedAnswer={activeQuizQuestion.selectedAnswer}
+                      topicName={decodedTopic}
+                      domain={domain || ''}
+                      userId={user?.id}
+                    />
                   )}
                 </div>
               )}

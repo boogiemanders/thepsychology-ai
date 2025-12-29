@@ -60,6 +60,43 @@ export function prepareTextForTts(text: string): string {
   return input.replace(/\bE\.?P\.?P\.?P\.?\b/gi, 'E triple P').trim()
 }
 
+export function normalizeTextForReadAlong(text: string): string {
+  const input = typeof text === 'string' ? text : ''
+  if (!input.trim()) return ''
+
+  let normalized = input
+
+  // Expand EPPP to match typical spoken form.
+  normalized = normalized.replace(/\bE\.?P\.?P\.?P\.?\b/gi, 'E triple P')
+
+  // Spell out ampersands so word counts match speech.
+  normalized = normalized.replace(/&/g, ' and ')
+
+  // Expand numeric ranges with percent first (e.g., 8-10% -> 8 to 10 percent).
+  normalized = normalized.replace(
+    /\b(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)%\b/g,
+    '$1 to $2 percent'
+  )
+
+  // Expand numeric ranges without percent (e.g., 8-10 -> 8 to 10).
+  normalized = normalized.replace(
+    /\b(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)\b/g,
+    '$1 to $2'
+  )
+
+  // Expand standalone percentages (e.g., 8% -> 8 percent).
+  normalized = normalized.replace(/\b(\d+(?:\.\d+)?)%\b/g, '$1 percent')
+
+  // Spell out short acronyms (e.g., CNS -> C N S). Skip EPPP (already handled).
+  normalized = normalized.replace(/\b([A-Z]{2,5})\b/g, (match) => {
+    if (/^EPPP$/i.test(match)) return match
+    if (/[AEIOUY]/.test(match)) return match
+    return match.split('').join(' ')
+  })
+
+  return normalized.trim()
+}
+
 function splitLongTextBySentences(text: string, maxChars: number): string[] {
   const sentenceMatches = text.match(/[^.!?]+[.!?]+(?=\s|$)|[^.!?]+$/g)
   const sentences = sentenceMatches?.map((s) => s.trim()).filter(Boolean) ?? [text]

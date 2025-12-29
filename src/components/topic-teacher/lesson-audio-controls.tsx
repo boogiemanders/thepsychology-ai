@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
-import { chunkTextForTts, markdownToSpeakableText, prepareTextForTts } from '@/lib/speech-text'
+import { chunkTextForTts, markdownToSpeakableText, normalizeTextForReadAlong, prepareTextForTts } from '@/lib/speech-text'
 import { Highlighter, Pause, Play, ScrollText, SkipBack, SkipForward } from 'lucide-react'
 
 type MetaphorRange = { start: number; end: number }
@@ -445,8 +445,10 @@ export function LessonAudioControls(props: {
 
     if (onWordProgress) {
       if (trackWords) {
-        const counts = segments.map((segment) => countWords(segment.text))
-        const progressMaps = segments.map((segment) => computeWordProgressMap(segment.text))
+        const counts = segments.map((segment) => countWords(normalizeTextForReadAlong(segment.text)))
+        const progressMaps = segments.map((segment) =>
+          computeWordProgressMap(normalizeTextForReadAlong(segment.text))
+        )
         const offsets: number[] = []
         let total = 0
         counts.forEach((count) => {
