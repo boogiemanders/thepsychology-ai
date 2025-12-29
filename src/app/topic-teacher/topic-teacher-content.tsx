@@ -39,7 +39,7 @@ import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { SmartExplanationButton } from '@/components/smart-explanation-button'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
-import { LessonAudioControls } from '@/components/topic-teacher/lesson-audio-controls'
+import { LessonAudioControls, type LessonAudioControlsHandle } from '@/components/topic-teacher/lesson-audio-controls'
 import { normalizeTextForReadAlong } from '@/lib/speech-text'
 import { markdownToSpeakableText } from '@/lib/speech-text'
 import { TopicTeacherTourProvider, useTopicTeacherTour } from '@/components/onboarding/TopicTeacherTourProvider'
@@ -519,6 +519,37 @@ function TutorialStarLegend({ hasRealStars, starColor, onStarClick }: TutorialSt
   )
 }
 
+// Tutorial section star - wraps a section header with a tutorial star when needed
+interface TutorialSectionStarProps {
+  hasRealStars: boolean
+  starColor: string
+  children: React.ReactNode
+  isFirstSection: boolean
+}
+
+function TutorialSectionStar({ hasRealStars, starColor, children, isFirstSection }: TutorialSectionStarProps) {
+  const { showTutorialStars } = useTopicTeacherTour()
+
+  // Only show on first section, when tour needs stars, and user has no real stars
+  const shouldShow = showTutorialStars && !hasRealStars && isFirstSection
+
+  if (!shouldShow) {
+    return <>{children}</>
+  }
+
+  return (
+    <div className="relative">
+      <div
+        className="absolute -left-10 top-0 flex h-6 w-6 items-center justify-center rounded-full opacity-70"
+        title="Example star for tutorial"
+      >
+        <VariableStar color={starColor} />
+      </div>
+      {children}
+    </div>
+  )
+}
+
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -584,8 +615,10 @@ export function TopicTeacherContent() {
   const [personalizedCache, setPersonalizedCache] = useState<Record<string, string>>({})
   const [showColorPicker, setShowColorPicker] = useState(false)
   const lessonContentRef = useRef<HTMLDivElement | null>(null)
+  const audioControlsRef = useRef<LessonAudioControlsHandle | null>(null)
   const wordSpansRef = useRef<HTMLSpanElement[]>([])
   const wordIndexMapRef = useRef<Array<number | null>>([])
+  const displayToSpokenIndexRef = useRef<Array<number | null>>([])
   const activeWordIndexRef = useRef<number | null>(null)
   const autoScrollRef = useRef(false)
   const [readAlongReady, setReadAlongReady] = useState(false)
@@ -604,6 +637,7 @@ export function TopicTeacherContent() {
     if (!container) {
       wordSpansRef.current = []
       wordIndexMapRef.current = []
+      displayToSpokenIndexRef.current = []
       if (options.updateState) {
         setReadAlongReady(false)
       }
@@ -619,7 +653,16 @@ export function TopicTeacherContent() {
 
     wordSpansRef.current = spans
     const alignedMap = buildReadAlongIndexMap(spans, spokenWords)
-    wordIndexMapRef.current = alignedMap.length > 0 ? alignedMap : buildSequentialReadAlongMap(spans)
+    const spokenToDisplay = alignedMap.length > 0 ? alignedMap : buildSequentialReadAlongMap(spans)
+    wordIndexMapRef.current = spokenToDisplay
+    const inverseMap: Array<number | null> = new Array(spans.length).fill(null)
+    spokenToDisplay.forEach((spanIndex, spokenIndex) => {
+      if (spanIndex === null || spanIndex === undefined) return
+      if (inverseMap[spanIndex] === null) {
+        inverseMap[spanIndex] = spokenIndex
+      }
+    })
+    displayToSpokenIndexRef.current = inverseMap
 
     if (options.updateState) {
       setReadAlongReady(spans.length > 0)
@@ -659,6 +702,7 @@ export function TopicTeacherContent() {
     if (!readAlongEnabled || !container || !lessonMarkdown.trim()) {
       wordSpansRef.current = []
       wordIndexMapRef.current = []
+      displayToSpokenIndexRef.current = []
       activeWordIndexRef.current = null
       setReadAlongReady(false)
       return
@@ -726,6 +770,54 @@ export function TopicTeacherContent() {
     },
     []
   )
+
+  const handleReadAlongClick = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (!readAlongEnabled) return
+      const audioControls = audioControlsRef.current
+      if (!audioControls) return
+
+      const target = event.target as HTMLElement | null
+      if (!target) return
+      if (target.closest('a, button, input, textarea, select, label')) return
+
+      const wordEl = target.closest('span.tt-word') as HTMLSpanElement | null
+      if (!wordEl) return
+      const indexAttr = wordEl.getAttribute('data-tt-word-index')
+      if (!indexAttr) return
+      const displayIndex = Number.parseInt(indexAttr, 10)
+      if (!Number.isFinite(displayIndex)) return
+
+      const inverseMap = displayToSpokenIndexRef.current
+      let spokenIndex = inverseMap[displayIndex]
+
+      if (spokenIndex === null || spokenIndex === undefined) {
+        const maxDistance = 6
+        for (let offset = 1; offset <= maxDistance; offset += 1) {
+          const prev = inverseMap[displayIndex - offset]
+          const next = inverseMap[displayIndex + offset]
+          if (prev !== null && prev !== undefined) {
+            spokenIndex = prev
+            break
+          }
+          if (next !== null && next !== undefined) {
+            spokenIndex = next
+            break
+          }
+        }
+      }
+
+      if (spokenIndex === null || spokenIndex === undefined) {
+        if (displayIndex >= 0 && displayIndex < spokenWords.length) {
+          spokenIndex = displayIndex
+        }
+      }
+
+      if (spokenIndex === null || spokenIndex === undefined) return
+      audioControls.seekToWord(spokenIndex)
+    },
+    [readAlongEnabled, spokenWords.length]
+  )
   const [starColor, setStarColor] = useState('#000000')
   const [showQuizColorPicker, setShowQuizColorPicker] = useState(false)
   const [quizStarColor, setQuizStarColor] = useState('#000000')
@@ -754,6 +846,8 @@ export function TopicTeacherContent() {
   const isInKeyTakeawaysSection = useRef(false)
   // Track when we're inside an intro "Why X Matters" section - skip matching there
   const isInIntroSection = useRef(false)
+  // Track if we've shown the first tutorial star (reset when tour changes)
+  const hasShownTutorialStar = useRef(false)
   const [missedQuestionDialogOpen, setMissedQuestionDialogOpen] = useState(false)
   const [activeMissedQuestion, setActiveMissedQuestion] =
     useState<WrongPracticeExamQuestion | null>(null)
@@ -2629,6 +2723,7 @@ export function TopicTeacherContent() {
 
         {/* 2. Audio Controls */}
         <LessonAudioControls
+          ref={audioControlsRef}
           lessonMarkdown={lessonMarkdown}
           baseLessonMarkdown={baseContent}
           metaphorRanges={metaphorRanges}
@@ -2943,6 +3038,10 @@ export function TopicTeacherContent() {
             if (shouldWrapReadAlong) {
               readAlongWordCounterRef.current = 0
             }
+            // Reset tutorial star tracking for first assistant message
+            if (message.role === 'assistant' && idx === 0) {
+              hasShownTutorialStar.current = false
+            }
 
             const wrapReadAlongChildren = (children: React.ReactNode) =>
               shouldWrapReadAlong ? wrapReactNodeWords(children, readAlongWordCounterRef) : children
@@ -2969,6 +3068,7 @@ export function TopicTeacherContent() {
                   {message.role === 'assistant' ? (
                     <div
                       ref={message.role === 'assistant' && idx === 0 ? lessonContentRef : undefined}
+                      onClick={shouldWrapReadAlong ? handleReadAlongClick : undefined}
                       className="text-base leading-relaxed max-w-none prose prose-invert
                       [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:leading-tight [&_h1:not(:first-child)]:mt-12 [&_h1:not(:first-child)]:mb-6
                       [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:leading-snug [&_h2:not(:first-child)]:mb-4 [&_h2:not(:first-child)]:border-t [&_h2:not(:first-child)]:border-border/20 [&_h2:not(:first-child)]:pt-8 [&_h2:not(:first-child)]:mt-0
@@ -3106,6 +3206,25 @@ export function TopicTeacherContent() {
                                 >
                                   <TypographyH3>{wrapReadAlongChildren(children)}</TypographyH3>
                                 </OverlappingStarButtons>
+                              )
+                            }
+
+                            // Check if this should be the first tutorial star (when user has no real stars)
+                            const hasRealStars = highlightData.examWrongSections.length > 0 ||
+                                                 matchedExamTerms.length > 0 ||
+                                                 highlightData.quizWrongSections.length > 0
+                            const isFirstForTutorial = !hasShownTutorialStar.current && !isInIntroSection.current
+
+                            if (isFirstForTutorial) {
+                              hasShownTutorialStar.current = true
+                              return (
+                                <TutorialSectionStar
+                                  hasRealStars={hasRealStars}
+                                  starColor={starColor}
+                                  isFirstSection={true}
+                                >
+                                  <TypographyH3>{wrapReadAlongChildren(children)}</TypographyH3>
+                                </TutorialSectionStar>
                               )
                             }
 
