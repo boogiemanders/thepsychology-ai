@@ -29,6 +29,7 @@ import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/lib/unified-question-results'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { RecoverNudge } from '@/components/recover-nudge'
 import { supabase } from '@/lib/supabase'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 
@@ -60,6 +61,7 @@ export default function ExamGeneratorPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({})
   const [showExplanation, setShowExplanation] = useState(false)
+  const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [examType, setExamType] = useState<'diagnostic' | 'practice' | null>(null)
   const [mode, setMode] = useState<'study' | 'test' | null>(null)
@@ -98,6 +100,8 @@ export default function ExamGeneratorPage() {
   const questionContentRef = useRef<HTMLDivElement | null>(null)
   const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
   const step2Ref = useRef<HTMLDivElement | null>(null)
+  const wrongStreakRef = useRef(0)
+  const lastScoredQuestionRef = useRef<number | null>(null)
 
   useEffect(() => {
     if (!user?.id) return
@@ -615,10 +619,32 @@ export default function ExamGeneratorPage() {
 
   const handleNext = useCallback(() => {
     if (currentQuestion < questions.length - 1) {
+      if (mode === 'study' && currentQuestion !== lastScoredQuestionRef.current) {
+        const current = questions[currentQuestion]
+        const selected = selectedAnswers[currentQuestion]
+
+        if (current && selected && current.isScored !== false && current.scored !== false) {
+          const answerKey = current.correct_answer.trim()
+          let correctOption = current.correct_answer
+          if (/^[A-D]$/i.test(answerKey)) {
+            const optionIndex = answerKey.toUpperCase().charCodeAt(0) - 65
+            correctOption = current.options[optionIndex] ?? current.correct_answer
+          }
+
+          const isCorrect = selected === correctOption
+          wrongStreakRef.current = isCorrect ? 0 : wrongStreakRef.current + 1
+          if (wrongStreakRef.current >= 3) {
+            setShowRecoverNudge(true)
+          }
+
+          lastScoredQuestionRef.current = currentQuestion
+        }
+      }
+
       setCurrentQuestion((prev) => prev + 1)
       setShowExplanation(false)
     }
-  }, [currentQuestion, questions.length])
+  }, [currentQuestion, mode, questions, selectedAnswers])
 
   const handlePrevious = useCallback(() => {
     if (currentQuestion > 0) {
@@ -898,6 +924,9 @@ export default function ExamGeneratorPage() {
       })
 
       setQuestions(enrichedQuestions as Question[])
+      wrongStreakRef.current = 0
+      lastScoredQuestionRef.current = null
+      setShowRecoverNudge(false)
       setIsExamStarted(true)
 
       const endTime = performance.now()
@@ -1505,6 +1534,15 @@ export default function ExamGeneratorPage() {
           transition={{ duration: 0.3 }}
           className={`space-y-6 ${isPaused ? 'blur-sm pointer-events-none' : ''}`}
         >
+          {showRecoverNudge && mode === 'study' && (
+            <RecoverNudge
+              message="Quick 5-minute reset. Open Recover if you want."
+              onDismiss={() => {
+                wrongStreakRef.current = 0
+                setShowRecoverNudge(false)
+              }}
+            />
+          )}
           {/* Header with Question Number, Progress, and Timer */}
           <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
             <div className="flex justify-between items-start mb-4">

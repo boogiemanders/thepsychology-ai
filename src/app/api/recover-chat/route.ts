@@ -178,7 +178,8 @@ Primary goal: help the user reduce burnout and regain focus/motivation by clarif
 
 Conversation opening:
 - The UI opens with: "How's studying been going?"
-- After the user's first response, ask: "What has been hardest?"
+- If the user arrives from a wrong-streak reset, the UI opens with a short quick reset prompt and asks how studying has been going.
+- After the user's first response, ask: "What has been hardest?" unless it was already asked in the opening.
 - After they answer that, ask: "What would you like to be different?"
 
 Session structure (adapt as needed):
@@ -295,6 +296,10 @@ async function persistRecoverTranscript(input: {
   const now = new Date().toISOString()
   const lastUserIndex = [...input.messages].map((m) => m.role).lastIndexOf('user')
   const lastUserMessage = lastUserIndex >= 0 ? input.messages[lastUserIndex]?.content : null
+  const initialAssistantMessage =
+    input.messages[0]?.role === 'assistant' && input.messages[0]?.content.trim()
+      ? input.messages[0].content
+      : INITIAL_RECOVER_ASSISTANT_MESSAGE
 
   try {
     const { error: sessionError } = await supabase
@@ -311,7 +316,7 @@ async function persistRecoverTranscript(input: {
           user_id: input.userId,
           message_index: 0,
           role: 'assistant',
-          content: INITIAL_RECOVER_ASSISTANT_MESSAGE,
+          content: initialAssistantMessage,
         },
         { onConflict: 'session_id,message_index' }
       )

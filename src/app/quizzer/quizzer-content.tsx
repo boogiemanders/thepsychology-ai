@@ -20,6 +20,7 @@ import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { computeQuestionKeyClient } from '@/lib/question-key-client'
 import { isQuizPass } from '@/lib/quiz-passing'
+import { RECOVER_RECOMMENDATION_HOUR_KEY } from '@/lib/recover'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -132,6 +133,7 @@ export function QuizzerContent() {
   const quizStartedAtRef = useRef<number | null>(null)
   const wrongStreakRef = useRef(0)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
+  const [recoverRecommendationFromHour, setRecoverRecommendationFromHour] = useState(false)
 
   const quizStateRef = useRef<QuizState>(quizState)
   useEffect(() => {
@@ -557,6 +559,20 @@ export function QuizzerContent() {
   }
 
   const isTimeWarning = quizState.timeRemaining > 0 && quizState.timeRemaining <= 120
+  const scoredQuestionCount = questions.filter(q => q.isScored !== false).length
+  const passedQuiz = isQuizPass(quizState.score, scoredQuestionCount)
+  const recoverIsRecommended = showRecoverNudge || recoverRecommendationFromHour
+
+  const handleRecoverClick = () => {
+    wrongStreakRef.current = 0
+    setShowRecoverNudge(false)
+    setRecoverRecommendationFromHour(false)
+    try {
+      localStorage.removeItem(RECOVER_RECOMMENDATION_HOUR_KEY)
+    } catch (error) {
+      console.debug('Failed to clear recover recommendation flag:', error)
+    }
+  }
 
   const generateQuiz = async () => {
     if (!topic) return
@@ -799,6 +815,12 @@ export function QuizzerContent() {
   }, [quizState.showResults, isFirstQuiz, quizState.score, questions])
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    const stored = window.localStorage.getItem(RECOVER_RECOMMENDATION_HOUR_KEY)
+    setRecoverRecommendationFromHour(stored === '1')
+  }, [quizState.showResults])
+
+  useEffect(() => {
     if (!quizState.showResults || typeof window === 'undefined') return
     setReturnTo(`${window.location.pathname}${window.location.search}`)
   }, [quizState.showResults])
@@ -1014,16 +1036,18 @@ export function QuizzerContent() {
               {/* Score Summary */}
               <div className="text-center mb-6">
                 <div className="text-6xl font-bold text-primary mb-2">
-                  {quizState.score}/{questions.filter(q => q.isScored !== false).length}
+                  {quizState.score}/{scoredQuestionCount}
                 </div>
                 <p className="text-muted-foreground">
                   {Math.round(
-                    (quizState.score / questions.filter(q => q.isScored !== false).length) * 100
+                    scoredQuestionCount > 0
+                      ? (quizState.score / scoredQuestionCount) * 100
+                      : 0
                   )}% Correct
                 </p>
               </div>
 
-              {quizState.score >= 8 ? (
+              {passedQuiz ? (
                 <div className="rounded-lg p-6 mb-6">
                   <CheckCircle2
                     className="mx-auto mb-3"
@@ -1225,29 +1249,34 @@ export function QuizzerContent() {
                     Select Another Topic
                   </Button>
                 </Link>
-                <Link
-                  href={`/topic-teacher?topic=${encodeURIComponent(decodedTopic || '')}&hasQuizResults=true${
-                    recentQuizSectionsParam
-                      ? `&recentQuizWrongSections=${recentQuizSectionsParam}`
-                      : ''
-                  }`}
-                  className="block"
-                >
-                  <Button className="w-full">Relearn the Topic</Button>
+                {!passedQuiz && (
+                  <Link
+                    href={`/topic-teacher?topic=${encodeURIComponent(decodedTopic || '')}&hasQuizResults=true${
+                      recentQuizSectionsParam
+                        ? `&recentQuizWrongSections=${recentQuizSectionsParam}`
+                        : ''
+                    }`}
+                    className="block"
+                  >
+                    <Button className="w-full">Relearn the Topic</Button>
+                  </Link>
+                )}
+                <Link href={recoverHref} className="block" onClick={handleRecoverClick}>
+                  <Button variant="minimal" className="w-full">
+                    <span className="flex items-center justify-center gap-2">
+                      Take a 5-minute reset in Recover
+                      {recoverIsRecommended && (
+                        <span className="rounded-full border border-amber-400/60 bg-amber-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-700 dark:border-amber-300/50 dark:bg-amber-300/10 dark:text-amber-200">
+                          Recommended
+                        </span>
+                      )}
+                    </span>
+                  </Button>
                 </Link>
               </div>
             </div>
           ) : (
             <div className="space-y-6">
-              {showRecoverNudge && (
-                <RecoverNudge
-                  message="Quick 5-minute reset. Open Recover if you want."
-                  onDismiss={() => {
-                    wrongStreakRef.current = 0
-                    setShowRecoverNudge(false)
-                  }}
-                />
-              )}
               {/* Header with Question Number, Progress, and Timer */}
               <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
                 <div className="flex justify-between items-start mb-4">
