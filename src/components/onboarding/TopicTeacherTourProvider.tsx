@@ -1,20 +1,20 @@
 'use client'
 
 import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from 'react'
-import { TOUR_STEPS } from '@/lib/onboarding/tour-steps'
+import { TOPIC_TEACHER_TOUR_STEPS } from '@/lib/onboarding/topic-teacher-tour-steps'
 import {
-  shouldShowOnboarding,
-  markOnboardingComplete,
-  markOnboardingSkipped,
+  shouldShowTour,
+  markTourComplete,
+  markTourSkipped,
   getCurrentTourStep,
   saveCurrentTourStep,
   clearTourStep,
   resetTour,
 } from '@/lib/onboarding/onboarding-storage'
 import { useAuth } from '@/context/auth-context'
-import { OnboardingTour } from './OnboardingTour'
+import { GenericTour } from './GenericTour'
 
-interface OnboardingContextType {
+interface TopicTeacherTourContextType {
   isActive: boolean
   currentStep: number
   totalSteps: number
@@ -26,29 +26,32 @@ interface OnboardingContextType {
   goToStep: (step: number) => void
 }
 
-const OnboardingContext = createContext<OnboardingContextType | undefined>(undefined)
+const TopicTeacherTourContext = createContext<TopicTeacherTourContextType | undefined>(undefined)
 
-export function OnboardingProvider({ children }: { children: ReactNode }) {
+export function TopicTeacherTourProvider({ children }: { children: ReactNode }) {
   const { user } = useAuth()
   const [isActive, setIsActive] = useState(false)
   const [currentStep, setCurrentStep] = useState(0)
   const [hasChecked, setHasChecked] = useState(false)
 
-  const totalSteps = TOUR_STEPS.length
+  const totalSteps = TOPIC_TEACHER_TOUR_STEPS.length
 
   // Check if we should auto-start the tour
   useEffect(() => {
     if (!user?.id || hasChecked) return
 
     const checkAndStart = async () => {
-      const shouldShow = await shouldShowOnboarding(user.id)
+      const shouldShow = await shouldShowTour(user.id, 'topic-teacher')
       if (shouldShow) {
         // Check if there's a saved step
-        const savedStep = getCurrentTourStep(user.id)
+        const savedStep = getCurrentTourStep(user.id, 'topic-teacher')
         if (savedStep > 0 && savedStep < totalSteps) {
           setCurrentStep(savedStep)
         }
-        // We'll let the dashboard trigger the tour after it mounts
+        // Auto-start the tour after a delay for elements to render
+        setTimeout(() => {
+          setIsActive(true)
+        }, 1000)
       }
       setHasChecked(true)
     }
@@ -60,8 +63,8 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
 
   const startTour = useCallback(() => {
     if (user?.id) {
-      // Reset tour state so it can be shown again
-      resetTour(user.id, 'dashboard')
+      // Reset tour state first
+      resetTour(user.id, 'topic-teacher')
     }
     setCurrentStep(0)
     setIsActive(true)
@@ -72,14 +75,14 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
       const newStep = currentStep + 1
       setCurrentStep(newStep)
       if (user?.id) {
-        saveCurrentTourStep(user.id, newStep)
+        saveCurrentTourStep(user.id, newStep, 'topic-teacher')
       }
     } else {
       // Complete the tour
       setIsActive(false)
       if (user?.id) {
-        markOnboardingComplete(user.id)
-        clearTourStep(user.id)
+        markTourComplete(user.id, 'topic-teacher')
+        clearTourStep(user.id, 'topic-teacher')
       }
     }
   }, [currentStep, totalSteps, user?.id])
@@ -89,7 +92,7 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
       const newStep = currentStep - 1
       setCurrentStep(newStep)
       if (user?.id) {
-        saveCurrentTourStep(user.id, newStep)
+        saveCurrentTourStep(user.id, newStep, 'topic-teacher')
       }
     }
   }, [currentStep, user?.id])
@@ -97,16 +100,16 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
   const skipTour = useCallback(() => {
     setIsActive(false)
     if (user?.id) {
-      markOnboardingSkipped(user.id)
-      clearTourStep(user.id)
+      markTourSkipped(user.id, 'topic-teacher')
+      clearTourStep(user.id, 'topic-teacher')
     }
   }, [user?.id])
 
   const completeTour = useCallback(() => {
     setIsActive(false)
     if (user?.id) {
-      markOnboardingComplete(user.id)
-      clearTourStep(user.id)
+      markTourComplete(user.id, 'topic-teacher')
+      clearTourStep(user.id, 'topic-teacher')
     }
   }, [user?.id])
 
@@ -115,7 +118,7 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
       if (step >= 0 && step < totalSteps) {
         setCurrentStep(step)
         if (user?.id) {
-          saveCurrentTourStep(user.id, step)
+          saveCurrentTourStep(user.id, step, 'topic-teacher')
         }
       }
     },
@@ -123,7 +126,7 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
   )
 
   return (
-    <OnboardingContext.Provider
+    <TopicTeacherTourContext.Provider
       value={{
         isActive,
         currentStep,
@@ -137,15 +140,26 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
       }}
     >
       {children}
-      {isActive && <OnboardingTour />}
-    </OnboardingContext.Provider>
+      {isActive && (
+        <GenericTour
+          steps={TOPIC_TEACHER_TOUR_STEPS}
+          currentStep={currentStep}
+          totalSteps={totalSteps}
+          nextStep={nextStep}
+          prevStep={prevStep}
+          skipTour={skipTour}
+          completeTour={completeTour}
+          finishButtonText="Got It!"
+        />
+      )}
+    </TopicTeacherTourContext.Provider>
   )
 }
 
-export function useOnboarding() {
-  const context = useContext(OnboardingContext)
+export function useTopicTeacherTour() {
+  const context = useContext(TopicTeacherTourContext)
   if (context === undefined) {
-    throw new Error('useOnboarding must be used within an OnboardingProvider')
+    throw new Error('useTopicTeacherTour must be used within a TopicTeacherTourProvider')
   }
   return context
 }

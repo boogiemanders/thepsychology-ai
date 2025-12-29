@@ -559,7 +559,7 @@ strong, b {
     box-shadow: 0 0 0 1px color-mix(in oklch, var(--brand-highlight) 70%, transparent);
     border-radius: 0.25em;
     padding: 0 0.1em;
-    font-weight: 700;
+    font-weight: inherit;
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
     text-decoration-color: var(--brand-highlight);

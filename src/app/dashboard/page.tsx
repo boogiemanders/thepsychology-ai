@@ -22,7 +22,7 @@ import { Ripple } from '@/components/ui/ripple'
 import { BreathingAnimation } from '@/components/ui/breathing-animation'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
-import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X, MessageSquare } from 'lucide-react'
+import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X, MessageSquare, HelpCircle } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
@@ -1035,6 +1035,14 @@ export default function DashboardPage() {
                   onClick={() => setIsFeedbackOpen(true)}
                 >
                   Feedback
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
+                  onClick={startTour}
+                >
+                  <HelpCircle className="w-4 h-4 mr-2" />
+                  Tutorial
                 </Button>
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 import { cloneElement, isValidElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { X } from 'lucide-react'
+import { X, HelpCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SimplePromptInput } from '@/components/ui/simple-prompt-input'
 import { TypographyH1, TypographyH2, TypographyH3, TypographyMuted } from '@/components/ui/typography'
@@ -39,6 +39,8 @@ import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { LessonAudioControls } from '@/components/topic-teacher/lesson-audio-controls'
+import { markdownToSpeakableText, prepareTextForTts } from '@/lib/speech-text'
+import { TopicTeacherTourProvider, useTopicTeacherTour } from '@/components/onboarding/TopicTeacherTourProvider'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -98,8 +100,10 @@ type HastNode = {
 }
 
 const READ_ALONG_WORD_REGEX = /[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
-const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg'])
+const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code'])
+const READ_ALONG_SKIP_SELECTOR = Array.from(READ_ALONG_SKIP_TAGS).join(',')
 const EPPP_WORD_REGEX = /\bE\.?P\.?P\.?P\.?\b/i
+const READ_ALONG_LOOKAHEAD = 12
 
 function splitTextForReadAlong(value: string, wordIndexRef: { current: number }): HastNode[] {
   if (!value) return []
@@ -133,6 +137,224 @@ function splitTextForReadAlong(value: string, wordIndexRef: { current: number })
   }
 
   return nodes.length > 0 ? nodes : [{ type: 'text', value }]
+}
+
+function wrapReactNodeWords(node: React.ReactNode, wordIndexRef: { current: number }): React.ReactNode {
+  if (node === null || node === undefined || typeof node === 'boolean') return node
+
+  if (typeof node === 'string' || typeof node === 'number') {
+    const text = String(node)
+    if (!text) return node
+    READ_ALONG_WORD_REGEX.lastIndex = 0
+    let match: RegExpExecArray | null
+    let lastIndex = 0
+    const parts: React.ReactNode[] = []
+
+    while ((match = READ_ALONG_WORD_REGEX.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index))
+      }
+
+      const word = match[0]
+      parts.push(
+        <span
+          key={`tt-word-${wordIndexRef.current}`}
+          className="tt-word"
+          data-tt-word-index={wordIndexRef.current}
+        >
+          {word}
+        </span>
+      )
+
+      wordIndexRef.current += 1
+      lastIndex = match.index + word.length
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex))
+    }
+
+    return parts.length > 0 ? parts : text
+  }
+
+  if (Array.isArray(node)) {
+    const wrapped = node.flatMap((child) => {
+      const next = wrapReactNodeWords(child, wordIndexRef)
+      return Array.isArray(next) ? next : [next]
+    })
+    return wrapped.length > 0 ? wrapped : node
+  }
+
+  if (isValidElement(node)) {
+    const type = node.type
+    if (typeof type === 'string') {
+      if (READ_ALONG_SKIP_TAGS.has(type)) return node
+      if (type === 'span') {
+        const className = typeof node.props?.className === 'string' ? node.props.className : ''
+        if (className.includes('tt-word') || node.props?.['data-tt-word-index'] !== undefined) {
+          return node
+        }
+      }
+    }
+
+    const wrappedChildren = wrapReactNodeWords(node.props?.children, wordIndexRef)
+    return cloneElement(node, node.props, wrappedChildren)
+  }
+
+  return node
+}
+
+function wrapReadAlongWordsInContainer(container: HTMLElement): HTMLSpanElement[] {
+  const wordIndexRef = { current: 0 }
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT)
+  const textNodes: Text[] = []
+
+  while (walker.nextNode()) {
+    textNodes.push(walker.currentNode as Text)
+  }
+
+  for (const textNode of textNodes) {
+    const text = textNode.nodeValue ?? ''
+    if (!text.trim()) continue
+    const parent = textNode.parentElement
+    if (!parent) continue
+    if (parent.closest(READ_ALONG_SKIP_SELECTOR)) continue
+    if (parent.closest('span.tt-word')) continue
+
+    READ_ALONG_WORD_REGEX.lastIndex = 0
+    let match: RegExpExecArray | null
+    let lastIndex = 0
+    let hasWord = false
+    const fragment = document.createDocumentFragment()
+
+    while ((match = READ_ALONG_WORD_REGEX.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        fragment.append(document.createTextNode(text.slice(lastIndex, match.index)))
+      }
+
+      const word = match[0]
+      const span = document.createElement('span')
+      span.className = 'tt-word'
+      span.setAttribute('data-tt-word-index', String(wordIndexRef.current))
+      span.textContent = word
+      fragment.append(span)
+
+      wordIndexRef.current += 1
+      lastIndex = match.index + word.length
+      hasWord = true
+    }
+
+    if (!hasWord) continue
+
+    if (lastIndex < text.length) {
+      fragment.append(document.createTextNode(text.slice(lastIndex)))
+    }
+
+    parent.replaceChild(fragment, textNode)
+  }
+
+  return Array.from(container.querySelectorAll<HTMLSpanElement>('span.tt-word'))
+}
+
+type ReadAlongWordEntry = { word: string; index: number }
+
+function normalizeReadAlongWord(word: string): string {
+  return word.trim().toLowerCase()
+}
+
+function buildSequentialReadAlongMap(spans: HTMLSpanElement[]): Array<number | null> {
+  const map: Array<number | null> = []
+  spans.forEach((span, index) => {
+    const text = (span.textContent || '').trim()
+    if (!text) return
+    if (EPPP_WORD_REGEX.test(text)) {
+      map.push(index, index, index)
+    } else {
+      map.push(index)
+    }
+  })
+  return map
+}
+
+function buildReadAlongWordEntries(spans: HTMLSpanElement[]): ReadAlongWordEntry[] {
+  const entries: ReadAlongWordEntry[] = []
+  spans.forEach((span, index) => {
+    const text = (span.textContent || '').trim()
+    if (!text) return
+    if (EPPP_WORD_REGEX.test(text)) {
+      entries.push(
+        { word: 'e', index },
+        { word: 'triple', index },
+        { word: 'p', index }
+      )
+    } else {
+      entries.push({ word: normalizeReadAlongWord(text), index })
+    }
+  })
+  return entries
+}
+
+function buildReadAlongIndexMap(
+  spans: HTMLSpanElement[],
+  spokenWords: string[]
+): Array<number | null> {
+  if (spans.length === 0 || spokenWords.length === 0) return []
+
+  const entries = buildReadAlongWordEntries(spans)
+  if (entries.length === 0) return []
+
+  const displayWords = entries.map((entry) => entry.word)
+  const map: Array<number | null> = new Array(spokenWords.length).fill(null)
+  let displayPos = 0
+
+  for (let i = 0; i < spokenWords.length; i += 1) {
+    const spokenWord = spokenWords[i]
+    if (!spokenWord) continue
+
+    if (displayPos >= displayWords.length) {
+      map[i] = null
+      continue
+    }
+
+    if (displayWords[displayPos] === spokenWord) {
+      map[i] = entries[displayPos].index
+      displayPos += 1
+      continue
+    }
+
+    let nextDisplay = -1
+    const displayEnd = Math.min(displayWords.length, displayPos + READ_ALONG_LOOKAHEAD)
+    for (let j = displayPos + 1; j < displayEnd; j += 1) {
+      if (displayWords[j] === spokenWord) {
+        nextDisplay = j
+        break
+      }
+    }
+
+    let nextSpoken = -1
+    const spokenEnd = Math.min(spokenWords.length, i + READ_ALONG_LOOKAHEAD)
+    const currentDisplayWord = displayWords[displayPos]
+    for (let k = i + 1; k < spokenEnd; k += 1) {
+      if (spokenWords[k] === currentDisplayWord) {
+        nextSpoken = k
+        break
+      }
+    }
+
+    if (
+      nextDisplay !== -1 &&
+      (nextSpoken === -1 || nextDisplay - displayPos <= nextSpoken - i)
+    ) {
+      displayPos = nextDisplay
+      map[i] = entries[displayPos].index
+      displayPos += 1
+      continue
+    }
+
+    map[i] = null
+  }
+
+  return map
 }
 
 function rehypeReadAlongWords() {
@@ -239,6 +461,22 @@ function OverlappingStarButtons({
   )
 }
 
+// Tutorial button component - uses the tour hook from inside the provider
+function TutorialButton() {
+  const { startTour } = useTopicTeacherTour()
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      onClick={startTour}
+      className="h-8 px-2 text-muted-foreground hover:text-foreground"
+    >
+      <HelpCircle className="w-4 h-4 mr-1" />
+      Tutorial
+    </Button>
+  )
+}
+
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -305,12 +543,48 @@ export function TopicTeacherContent() {
   const [showColorPicker, setShowColorPicker] = useState(false)
   const lessonContentRef = useRef<HTMLDivElement | null>(null)
   const wordSpansRef = useRef<HTMLSpanElement[]>([])
-  const wordIndexMapRef = useRef<number[]>([])
+  const wordIndexMapRef = useRef<Array<number | null>>([])
   const activeWordIndexRef = useRef<number | null>(null)
   const autoScrollRef = useRef(false)
   const [readAlongReady, setReadAlongReady] = useState(false)
   const [readAlongEnabled, setReadAlongEnabled] = useState(true)
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
+  const readAlongWordCounterRef = useRef(0)
+  const spokenWords = useMemo(() => {
+    if (!lessonMarkdown.trim()) return []
+    const speakable = prepareTextForTts(markdownToSpeakableText(lessonMarkdown))
+    const matches = speakable.match(READ_ALONG_WORD_REGEX)
+    return matches ? matches.map((word) => word.toLowerCase()) : []
+  }, [lessonMarkdown])
+
+  const syncReadAlongSpans = (options: { updateState?: boolean } = {}) => {
+    const container = lessonContentRef.current
+    if (!container) {
+      wordSpansRef.current = []
+      wordIndexMapRef.current = []
+      if (options.updateState) {
+        setReadAlongReady(false)
+      }
+      return []
+    }
+
+    let spans = Array.from(
+      container.querySelectorAll<HTMLSpanElement>('span.tt-word, span[data-tt-word-index]')
+    )
+    if (spans.length === 0 && typeof window !== 'undefined') {
+      spans = wrapReadAlongWordsInContainer(container)
+    }
+
+    wordSpansRef.current = spans
+    const alignedMap = buildReadAlongIndexMap(spans, spokenWords)
+    wordIndexMapRef.current = alignedMap.length > 0 ? alignedMap : buildSequentialReadAlongMap(spans)
+
+    if (options.updateState) {
+      setReadAlongReady(spans.length > 0)
+    }
+
+    return spans
+  }
 
   useEffect(() => {
     if (!user?.id) return
@@ -348,29 +622,29 @@ export function TopicTeacherContent() {
       return
     }
 
-    const spans = Array.from(
-      container.querySelectorAll<HTMLSpanElement>('span[data-tt-word-index]')
-    )
-    wordSpansRef.current = spans
-    wordIndexMapRef.current = spans.reduce<number[]>((acc, span, index) => {
-      const text = (span.textContent || '').trim()
-      if (text && EPPP_WORD_REGEX.test(text)) {
-        acc.push(index, index, index)
-      } else if (text) {
-        acc.push(index)
-      }
-      return acc
-    }, [])
+    const spans = syncReadAlongSpans({ updateState: true })
     activeWordIndexRef.current = null
     spans.forEach((span) => span.classList.remove('tt-word-active'))
-    setReadAlongReady(spans.length > 0)
   }, [lessonMarkdown, readAlongEnabled])
 
   const handleWordProgress = useCallback(
     (payload: { wordIndex: number | null; totalWords: number }) => {
-      const spans = wordSpansRef.current
+      const container = lessonContentRef.current
+      let spans = wordSpansRef.current
+      let map = wordIndexMapRef.current
+
+      const spansConnected =
+        spans.length > 0 &&
+        spans[0] instanceof HTMLElement &&
+        spans[0].isConnected &&
+        (!container || container.contains(spans[0]))
+
+      if (spans.length === 0 || map.length === 0 || !spansConnected) {
+        spans = syncReadAlongSpans()
+        map = wordIndexMapRef.current
+      }
+
       if (spans.length === 0) return
-      const map = wordIndexMapRef.current
       if (map.length === 0) return
 
       const nextWordIndex = payload.wordIndex
@@ -384,7 +658,13 @@ export function TopicTeacherContent() {
 
       const clampedWordIndex = Math.max(0, Math.min(Math.floor(nextWordIndex), map.length - 1))
       const spanIndex = map[clampedWordIndex]
-      if (spanIndex === undefined) return
+      if (spanIndex === null || spanIndex === undefined) {
+        if (activeWordIndexRef.current !== null) {
+          spans[activeWordIndexRef.current]?.classList.remove('tt-word-active')
+        }
+        activeWordIndexRef.current = null
+        return
+      }
       if (activeWordIndexRef.current === spanIndex) return
 
       if (activeWordIndexRef.current !== null) {
@@ -2288,24 +2568,28 @@ export function TopicTeacherContent() {
   }
 
   return (
+    <TopicTeacherTourProvider>
     <main className="min-h-screen flex flex-col bg-background overflow-x-hidden">
       <div className="flex-1 flex flex-col w-full mx-auto px-4 py-6 pb-40 max-w-[800px]">
         {/* 1. Breadcrumb - above audio bar */}
-        <Breadcrumb className="mb-4">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/topic-selector">Lessons</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>{displayLessonName}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <div className="flex items-center justify-between mb-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/topic-selector">Lessons</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{displayLessonName}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          <TutorialButton />
+        </div>
 
         {/* 2. Audio Controls */}
         <LessonAudioControls
@@ -2338,7 +2622,7 @@ export function TopicTeacherContent() {
         {/* 3. Interest & Language Inputs */}
         <div className="mb-4 w-full max-w-[800px] flex flex-col sm:flex-row gap-4">
           {/* Interest Tags Input */}
-          <div className="flex-1">
+          <div className="flex-1" data-tour="interests-input">
             <div className="relative">
             <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
               {/* Display saved interests as tags */}
@@ -2599,7 +2883,7 @@ export function TopicTeacherContent() {
         )}
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto overflow-x-hidden space-y-4 mb-6 rounded-lg p-4">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden space-y-4 mb-6 rounded-lg p-4" data-tour="lesson-content">
           {messages.length === 0 && !initialized && !isLoading && (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">
@@ -2611,6 +2895,14 @@ export function TopicTeacherContent() {
           )}
 
           {messages.map((message, idx) => {
+            const shouldWrapReadAlong = readAlongEnabled && message.role === 'assistant' && idx === 0
+            if (shouldWrapReadAlong) {
+              readAlongWordCounterRef.current = 0
+            }
+
+            const wrapReadAlongChildren = (children: React.ReactNode) =>
+              shouldWrapReadAlong ? wrapReactNodeWords(children, readAlongWordCounterRef) : children
+
             return (
               <motion.div
                 key={idx}
@@ -2667,7 +2959,7 @@ export function TopicTeacherContent() {
 
                             return (
                               <TypographyH1>
-                                {children}
+                                {wrapReadAlongChildren(children)}
                               </TypographyH1>
                             )
                           },
@@ -2716,14 +3008,14 @@ export function TopicTeacherContent() {
                                   setMissedQuestionDialogOpen={setMissedQuestionDialogOpen}
                                   setActiveQuizQuestion={setActiveQuizQuestion}
                                 >
-                                  <TypographyH2>{children}</TypographyH2>
+                                  <TypographyH2>{wrapReadAlongChildren(children)}</TypographyH2>
                                 </OverlappingStarButtons>
                               )
                             }
 
                             return (
                               <TypographyH2>
-                                {children}
+                                {wrapReadAlongChildren(children)}
                               </TypographyH2>
                             )
                           },
@@ -2768,14 +3060,14 @@ export function TopicTeacherContent() {
                                   setMissedQuestionDialogOpen={setMissedQuestionDialogOpen}
                                   setActiveQuizQuestion={setActiveQuizQuestion}
                                 >
-                                  <TypographyH3>{children}</TypographyH3>
+                                  <TypographyH3>{wrapReadAlongChildren(children)}</TypographyH3>
                                 </OverlappingStarButtons>
                               )
                             }
 
                             return (
                               <TypographyH3>
-                                {children}
+                                {wrapReadAlongChildren(children)}
                               </TypographyH3>
                             )
                           },
@@ -2793,6 +3085,8 @@ export function TopicTeacherContent() {
                                 </div>
                               )
                             }
+
+                            const wrappedChildren = wrapReadAlongChildren(children)
 
                             // Check for term-based match (clickable apple for wrong practice exam questions)
                             let termMatch = findBestWrongPracticeExamQuestionForParagraph(rawText)
@@ -2877,7 +3171,7 @@ export function TopicTeacherContent() {
                                   >
                                     <VariableStar color={starColor} />
                                   </button>
-                                  <p className="m-0">{children}</p>
+                                  <p className="m-0">{wrappedChildren}</p>
                                 </div>
                               )
                             }
@@ -2895,7 +3189,7 @@ export function TopicTeacherContent() {
                                     {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
-                                <p className="m-0">{children}</p>
+                                <p className="m-0">{wrappedChildren}</p>
                               </div>
                             )
                           },
@@ -2955,6 +3249,7 @@ export function TopicTeacherContent() {
 	                              : null
 
 	                            const showIcon = !!quizMatch || !!examMatch
+                              const wrappedChildren = wrapReadAlongChildren(children)
 
 	                            // Use overlapping stars component if both matches exist
 	                            if (quizMatch && examMatch) {
@@ -2969,7 +3264,7 @@ export function TopicTeacherContent() {
 	                                    setMissedQuestionDialogOpen={setMissedQuestionDialogOpen}
 	                                    setActiveQuizQuestion={setActiveQuizQuestion}
 	                                  >
-	                                    {children}
+	                                    {wrappedChildren}
 	                                  </OverlappingStarButtons>
 	                                </li>
 	                              )
@@ -3005,7 +3300,7 @@ export function TopicTeacherContent() {
 	                                    )}
 	                                  </span>
 	                                )}
-	                                {children}
+	                                {wrappedChildren}
 	                              </li>
 	                            )
 	                          },
@@ -3037,7 +3332,7 @@ export function TopicTeacherContent() {
 
 	                            return <table>{children}</table>
 	                          },
-	                          td: ({ children }) => <td>{children}</td>,
+	                          td: ({ children }) => <td>{wrapReadAlongChildren(children)}</td>,
 	                          tr: ({ node, children }) => {
 	                            const rowChildren = Array.isArray((node as any)?.children)
 	                              ? ((node as any).children as any[])
@@ -3061,7 +3356,7 @@ export function TopicTeacherContent() {
                           th: ({ children }) => {
                             return (
                               <th className="border-b-2 border-border">
-                                {children}
+                                {wrapReadAlongChildren(children)}
                               </th>
                             )
                           },
@@ -3127,29 +3422,32 @@ export function TopicTeacherContent() {
           style={{ maxHeight: isNearBottom ? 240 : 140 }}
         >
           <div className="flex items-end gap-3">
-            <MagicCard
-              gradientColor="rgba(255,255,255,0.15)"
-              gradientOpacity={0.35}
-              gradientFrom="#91A3FF"
-              gradientTo="#B4FFE6"
-              className="flex-1 min-w-0 rounded-2xl border border-brand-soft-blue/40"
-            >
-              <SimplePromptInput
-                className="flex-1 min-w-0 border-none bg-transparent shadow-none"
-                onSubmit={handleSendMessage}
-                placeholder="Ask a follow-up question..."
-                isLoading={isLoading || !initialized}
-                compact={!isNearBottom}
-                framed={false}
-              />
-            </MagicCard>
+            <div data-tour="question-input" className="flex-1 min-w-0">
+              <MagicCard
+                gradientColor="rgba(255,255,255,0.15)"
+                gradientOpacity={0.35}
+                gradientFrom="#91A3FF"
+                gradientTo="#B4FFE6"
+                className="rounded-2xl border border-brand-soft-blue/40"
+              >
+                <SimplePromptInput
+                  className="flex-1 min-w-0 border-none bg-transparent shadow-none"
+                  onSubmit={handleSendMessage}
+                  placeholder="Ask a follow-up question..."
+                  isLoading={isLoading || !initialized}
+                  compact={!isNearBottom}
+                  framed={false}
+                />
+              </MagicCard>
+            </div>
 
             {initialized && messages.length > 0 && (
-              <PulsatingButton
-                className="flex-shrink-0 [--pulse-color:rgba(0,0,0,0.45)] dark:[--pulse-color:rgba(255,255,255,0.85)]"
-                duration="1.8s"
-                active={isNearBottom}
-              >
+              <div data-tour="quiz-button">
+                <PulsatingButton
+                  className="flex-shrink-0 [--pulse-color:rgba(0,0,0,0.45)] dark:[--pulse-color:rgba(255,255,255,0.85)]"
+                  duration="1.8s"
+                  active={isNearBottom}
+                >
                 <InteractiveHoverButton
                   type="button"
                   size="sm"
@@ -3166,6 +3464,7 @@ export function TopicTeacherContent() {
                   Quiz
                 </InteractiveHoverButton>
               </PulsatingButton>
+              </div>
             )}
           </div>
 	        </div>
@@ -3577,5 +3876,6 @@ export function TopicTeacherContent() {
         )}
       </div>
     </main>
+    </TopicTeacherTourProvider>
   )
 }

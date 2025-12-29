@@ -226,6 +226,7 @@ export function LessonAudioControls(props: {
   const interestsActive = Boolean(userInterests && userInterests.trim())
   const shouldAutoLoadPregenFullLesson =
     lessonReady && voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
+  const canUsePregen = voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
 
   const speakableFullText = useMemo(() => {
     if (!lessonReady) return ''
@@ -508,7 +509,7 @@ export function LessonAudioControls(props: {
 
           if (!metaphorTexts || metaphorTexts.length !== normalizedRanges.length) {
             const chunks = chunkTextForTts(speakableFullText, MAX_CHARS_PER_TTS_REQUEST)
-            const segments = chunks.map((text) => ({ text, voice }))
+            const segments = chunks.map((text) => ({ text, voice, cacheable: canUsePregen }))
             await generateAudioForSegments(segments, true)
             return
           }
@@ -544,7 +545,7 @@ export function LessonAudioControls(props: {
         }
 
       const chunks = chunkTextForTts(speakableFullText, MAX_CHARS_PER_TTS_REQUEST)
-      const segments = chunks.map((text) => ({ text, voice }))
+      const segments = chunks.map((text) => ({ text, voice, cacheable: canUsePregen }))
       await generateAudioForSegments(segments, true)
     } catch (err) {
       if ((err as Error)?.name === 'AbortError') {
@@ -736,6 +737,7 @@ export function LessonAudioControls(props: {
                   disabled={!hasAudio}
                   className="p-1.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   aria-label={isPlaying ? 'Pause' : 'Play'}
+                  data-tour="audio-play"
                 >
                   {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 ml-0.5" />}
                 </button>
@@ -772,7 +774,7 @@ export function LessonAudioControls(props: {
               {/* Right section: Speed, segment, auto-scroll, actions */}
               <div className="flex items-center gap-1.5 shrink-0">
                 {/* Speed slider */}
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5" data-tour="playback-speed">
                   <input
                     type="range"
                     min={0}
@@ -825,6 +827,7 @@ export function LessonAudioControls(props: {
                     }`}
                     aria-label={readAlongEnabled ? 'Disable read-along highlighting' : 'Enable read-along highlighting'}
                     title={readAlongEnabled ? 'Read-along: On' : 'Read-along: Off'}
+                    data-tour="read-along"
                   >
                     <Highlighter className="h-3.5 w-3.5" />
                   </button>
