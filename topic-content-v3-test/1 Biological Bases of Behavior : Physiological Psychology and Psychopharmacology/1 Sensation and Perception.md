@@ -9,7 +9,7 @@ version: 3
 
 ## Why Sensation and Perception Matter for Your EPPP (And Your Practice)
 
-You walk into a crowded coffee shop to meet a new client for the first time. Within seconds, your brain processes an incredible amount of information: the dim lighting, the background music, the smell of espresso, and somehow, you spot your client among dozens of faces. How does your brain do this? Understanding sensation and perception isn't just an EPPP requirement. It's fundamental to understanding how every client you'll ever work with experiences their world.
+You step into your clinic's waiting room to greet a new client for the first time. Within seconds, your brain processes an incredible amount of information: the overhead lighting, the low murmur of voices, the scent of hand sanitizer, and somehow, you pick out your client among unfamiliar faces. How does your brain do this? Understanding sensation and perception isn't just an EPPP requirement. It's fundamental to understanding how every client you'll ever work with experiences their world.
 
 Sensation and perception are where psychology meets biology. They explain how physical energy becomes psychological experience, and this matters deeply in clinical work. When a client says "I feel pain but doctors can't find anything wrong," or when you're assessing someone with visual hallucinations, you're dealing directly with sensation and perception issues.
 
