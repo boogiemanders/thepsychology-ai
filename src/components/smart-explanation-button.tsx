@@ -81,16 +81,16 @@ export function SmartExplanationButton({
   }, [question, options, correctAnswer, selectedAnswer, topicName, domain, userId, explanation])
 
   return (
-    <div className="mt-3">
+    <div>
       {!explanation && !isLoading && (
         <Button
           variant="outline"
           size="sm"
           onClick={generateExplanation}
-          className="gap-2"
+          className="gap-2 h-9"
         >
-          <Sparkles className="w-4 h-4 text-amber-500" />
-          Explain Why I Got This Wrong
+          <Sparkles className="w-4 h-4" style={{ color: '#6a9bcc' }} />
+          Get AI Explanation
         </Button>
       )}
 
@@ -120,8 +120,8 @@ export function SmartExplanationButton({
       )}
 
       {explanation && (
-        <div className="mt-3 p-4 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800">
-          <div className="flex items-center gap-2 mb-2 text-sm font-medium text-amber-700 dark:text-amber-400">
+        <div className="mt-3 p-4 rounded-lg border" style={{ backgroundColor: 'rgba(106, 155, 204, 0.1)', borderColor: 'rgba(106, 155, 204, 0.3)' }}>
+          <div className="flex items-center gap-2 mb-2 text-sm font-medium" style={{ color: '#6a9bcc' }}>
             <Sparkles className="w-4 h-4" />
             Personalized Explanation
           </div>

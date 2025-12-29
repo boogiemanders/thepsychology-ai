@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { Checkbox } from '@/components/ui/checkbox'
 import { motion } from 'motion/react'
-import { useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import { saveQuizResults, getQuizResults, WrongAnswer, getAllQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
@@ -43,7 +43,6 @@ import {
 } from '@/components/ui/accordion'
 import { SmartExplanationButton } from '@/components/smart-explanation-button'
 import { LockInDrillButton } from '@/components/lock-in-drill-button'
-import { RecoverNudge } from '@/components/recover-nudge'
 
 interface QuizQuestion {
   id: number
@@ -91,6 +90,7 @@ const normalizeQuestionText = (value: string): string => {
 
 export function QuizzerContent() {
   const searchParams = useSearchParams()
+  const pathname = usePathname()
   const { user } = useAuth()
   const topic = searchParams.get('topic')
   const domain = searchParams.get('domain')
@@ -110,8 +110,12 @@ export function QuizzerContent() {
   const questionContentRef = useRef<HTMLDivElement | null>(null)
   const [textFormats, setTextFormats] = useState<Record<number, { question: string; options: string[] }>>({})
   const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
+  const initialReturnTo = `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`
+  const [returnTo, setReturnTo] = useState(initialReturnTo)
+  const recoverHref = `/recover?entry=quick-reset&returnTo=${encodeURIComponent(returnTo || pathname)}`
 
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
+  const [effectiveDomain, setEffectiveDomain] = useState<string | null>(null)
   const [quizState, setQuizState] = useState<QuizState>({
     question: 0,
     score: 0,
@@ -544,7 +548,6 @@ export function QuizzerContent() {
       score: finalScore,
     }))
     wrongStreakRef.current = 0
-    setShowRecoverNudge(false)
   }, [questions, topic, decodedTopic])
 
   const formatTime = (seconds: number): string => {
@@ -562,7 +565,7 @@ export function QuizzerContent() {
       setIsLoading(true)
       setError(null)
 
-      const fetchFreshQuiz = async (): Promise<QuizQuestion[]> => {
+      const fetchFreshQuiz = async (): Promise<{ questions: QuizQuestion[]; domainId: string | null }> => {
         const response = await fetch('/api/quizzer', {
           method: 'POST',
           headers: {
@@ -576,13 +579,16 @@ export function QuizzerContent() {
         }
 
         const data = await response.json()
-        const questionsData = Array.isArray(data.questions) ? data.questions : []
+        const questionsData: QuizQuestion[] = Array.isArray(data.questions) ? data.questions : []
+        const domainId: string | null = data.domainId ?? null
 
-        return shuffleArray(questionsData).map((q: QuizQuestion, idx: number) => ({
+        const questions = shuffleArray(questionsData).map((q, idx) => ({
           ...q,
           options: shuffleArray(q.options),
           id: idx,
         }))
+
+        return { questions, domainId }
       }
 
       if (review === 'wrong' && decodedTopic) {
@@ -647,10 +653,12 @@ export function QuizzerContent() {
           }
 
           const maxFetchAttempts = 3
+          let fetchedDomainId: string | null = null
           for (let attempt = 0; attempt < maxFetchAttempts && assembled.length < TOTAL_QUESTIONS; attempt++) {
-            const fresh = await fetchFreshQuiz().catch(() => null)
-            if (!fresh) break
-            fresh.forEach((q) => pushCandidate(q))
+            const freshResult = await fetchFreshQuiz().catch(() => null)
+            if (!freshResult) break
+            if (!fetchedDomainId && freshResult.domainId) fetchedDomainId = freshResult.domainId
+            freshResult.questions.forEach((q) => pushCandidate(q))
           }
 
           const countUnscored = (qs: Array<{ isScored?: boolean }>) =>
@@ -678,8 +686,9 @@ export function QuizzerContent() {
           }
 
           if (assembled.length < TOTAL_QUESTIONS) {
-            const fallbackFresh = await fetchFreshQuiz().catch(() => [])
-            for (const q of fallbackFresh) {
+            const fallbackResult = await fetchFreshQuiz().catch(() => ({ questions: [], domainId: null }))
+            if (!fetchedDomainId && fallbackResult.domainId) fetchedDomainId = fallbackResult.domainId
+            for (const q of fallbackResult.questions) {
               if (assembled.length >= TOTAL_QUESTIONS) break
               const normalized = normalizeQuestionText(q.question)
               if (!normalized) continue
@@ -731,6 +740,7 @@ export function QuizzerContent() {
             })) as QuizQuestion[]
 
           setQuestions(finalQuestions)
+          setEffectiveDomain(fetchedDomainId ?? domain ?? null)
           const initialFormats: Record<number, { question: string; options: string[] }> = {}
           finalQuestions.forEach((q, idx) => {
             initialFormats[idx] = {
@@ -744,10 +754,11 @@ export function QuizzerContent() {
         }
       }
 
-      const shuffled = await fetchFreshQuiz()
+      const quizResult = await fetchFreshQuiz()
 
-      const finalQuestions = shuffled.slice(0, 10)
+      const finalQuestions = quizResult.questions.slice(0, 10)
       setQuestions(finalQuestions)
+      setEffectiveDomain(quizResult.domainId ?? domain ?? null)
       const initialFormats: Record<number, { question: string; options: string[] }> = {}
       finalQuestions.forEach((q, idx) => {
         initialFormats[idx] = {
@@ -786,6 +797,11 @@ export function QuizzerContent() {
       }
     }
   }, [quizState.showResults, isFirstQuiz, quizState.score, questions])
+
+  useEffect(() => {
+    if (!quizState.showResults || typeof window === 'undefined') return
+    setReturnTo(`${window.location.pathname}${window.location.search}`)
+  }, [quizState.showResults])
 
   // Auto-generate quiz when page loads with a topic
   useEffect(() => {
@@ -1162,30 +1178,24 @@ export function QuizzerContent() {
                             })}
                           </div>
 
-                          {/* Explanation */}
-                          <Accordion type="single" collapsible className="w-full border border-border rounded-lg">
-                            <AccordionItem value={`exp-${q.id}`}>
-                              <AccordionTrigger className="text-sm font-semibold">
-                                Explanation
-                              </AccordionTrigger>
-                              <AccordionContent className="p-0">
-                                <TypographyP className="text-sm text-muted-foreground px-1 pt-2 pb-4">
-                                  {q.explanation}
-                                </TypographyP>
-                              </AccordionContent>
-                            </AccordionItem>
-                          </Accordion>
+                          {/* Explanation - expanded by default */}
+                          <div className="rounded-lg border border-border p-4">
+                            <h4 className="text-sm font-semibold mb-2">Explanation</h4>
+                            <p className="text-sm text-muted-foreground">
+                              {q.explanation}
+                            </p>
+                          </div>
 
-                          {/* Smart Explanation for wrong answers */}
+                          {/* Action buttons for wrong answers */}
                           {!isCorrect && selectedAnswer && (
-                            <div className="mt-3 flex flex-wrap gap-2">
+                            <div className="mt-3 flex flex-wrap gap-2 items-center">
                               <SmartExplanationButton
                                 question={q.question}
                                 options={q.options}
                                 correctAnswer={q.correctAnswer}
                                 selectedAnswer={selectedAnswer}
                                 topicName={decodedTopic || ''}
-                                domain={domain || ''}
+                                domain={effectiveDomain || domain || ''}
                                 userId={user?.id}
                               />
                               <LockInDrillButton
@@ -1194,6 +1204,7 @@ export function QuizzerContent() {
                                 question={q.question}
                                 options={q.options}
                                 correctAnswer={q.correctAnswer}
+                                explanation={q.explanation}
                                 selectedAnswer={selectedAnswer}
                                 relatedSections={q.relatedSections || null}
                                 userId={user?.id ?? null}
@@ -1230,8 +1241,11 @@ export function QuizzerContent() {
             <div className="space-y-6">
               {showRecoverNudge && (
                 <RecoverNudge
-                  message="A few tough misses in a row is a good time to reset. Take 2 minutes in Recover, then jump back in."
-                  onDismiss={() => setShowRecoverNudge(false)}
+                  message="Quick 5-minute reset. Open Recover if you want."
+                  onDismiss={() => {
+                    wrongStreakRef.current = 0
+                    setShowRecoverNudge(false)
+                  }}
                 />
               )}
               {/* Header with Question Number, Progress, and Timer */}

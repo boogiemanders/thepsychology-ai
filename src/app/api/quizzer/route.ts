@@ -4,6 +4,7 @@ import { loadTopicQuestions, TopicQuestion } from '@/lib/topic-question-loader'
 import { loadFullTopicContent } from '@/lib/topic-content-manager'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 import { logUsageEvent } from '@/lib/usage-events'
+import { getCaseQuestionsForTopic } from '@/lib/case-bank'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -178,15 +179,31 @@ function shuffleArray<T>(input: T[]): T[] {
   return arr
 }
 
-function buildQuizFromLocalQuestions(topicName: string, domain?: string) {
+function isLockInDrillQuestion(question: TopicQuestion): boolean {
+  return (
+    question.is_lock_in_drill === true ||
+    (Array.isArray(question.tags) && question.tags.includes('lock_in_drill'))
+  )
+}
+
+function buildQuizFromLocalQuestions(topicName: string, domain?: string): { questions: any[]; domainId: string | null } | null {
   const loaded = loadTopicQuestions(topicName, domain)
   if (!loaded) return null
 
   const fileMeta = deriveTopicMetaFromSourceFile(loaded.filePath)
   const derivedTopicName = fileMeta?.topicName || topicName
-  const derivedDomainId = fileMeta?.domainId || domain
+  const derivedDomainId = fileMeta?.domainId || domain || null
+
+  const caseQuestions = getCaseQuestionsForTopic(derivedTopicName, derivedDomainId)
+  const caseAsTopicQuestions: TopicQuestion[] = caseQuestions.map((item) => ({
+    stem: item.stem,
+    options: item.options,
+    answer: item.answer,
+    explanation: item.explanation,
+  }))
 
   const validQuestions = loaded.questions.filter((q: TopicQuestion) => {
+    if (isLockInDrillQuestion(q)) return false
     const prompt = q.stem ?? q.question
     const options = Array.isArray(q.options) ? q.options.filter((opt) => typeof opt === 'string' && opt.trim().length > 0) : []
     const answer = q.answer ?? q.correct_answer
@@ -199,19 +216,21 @@ function buildQuizFromLocalQuestions(topicName: string, domain?: string) {
     )
   })
 
-  if (validQuestions.length < 10) {
-    console.warn(`[Quizzer] Not enough valid questions for topic "${topicName}" (found ${validQuestions.length})`)
+  const combined = [...validQuestions, ...caseAsTopicQuestions]
+
+  if (combined.length < 10) {
+    console.warn(`[Quizzer] Not enough valid questions for topic "${topicName}" (found ${combined.length})`)
     return null
   }
 
-  const selected = shuffleArray(validQuestions).slice(0, 10)
+  const selected = shuffleArray(combined).slice(0, 10)
   const unscoredIndices = new Set<number>()
 
   while (unscoredIndices.size < Math.min(2, selected.length)) {
     unscoredIndices.add(Math.floor(Math.random() * selected.length))
   }
 
-  return selected.map((q, idx) => {
+  const questions = selected.map((q, idx) => {
     const baseOptions = shuffleArray(
       (Array.isArray(q.options) ? q.options : []).filter((opt) => typeof opt === 'string' && opt.trim().length > 0)
     )
@@ -229,6 +248,8 @@ function buildQuizFromLocalQuestions(topicName: string, domain?: string) {
 
     return attachSectionsToQuestion(question, derivedTopicName, derivedDomainId)
   })
+
+  return { questions, domainId: derivedDomainId }
 }
 
 export async function POST(request: NextRequest) {
@@ -248,8 +269,8 @@ export async function POST(request: NextRequest) {
 
     const localQuiz = decodedTopic ? buildQuizFromLocalQuestions(decodedTopic, normalizedDomain) : null
     if (localQuiz) {
-      console.log(`[Quizzer] Serving local quiz for topic "${decodedTopic}" (${normalizedDomain ?? 'any domain'})`)
-      return NextResponse.json({ questions: localQuiz })
+      console.log(`[Quizzer] Serving local quiz for topic "${decodedTopic}" (${localQuiz.domainId ?? 'any domain'})`)
+      return NextResponse.json({ questions: localQuiz.questions, domainId: localQuiz.domainId })
     }
 
     const response = await client.messages.create({
