@@ -2,6 +2,8 @@
 
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
+import { useOnboarding } from '@/hooks/use-onboarding'
+import { shouldShowOnboarding } from '@/lib/onboarding/onboarding-storage'
 import { useEffect, useState, useCallback, useMemo } from 'react'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { QUIZ_PASS_PERCENT } from '@/lib/quiz-passing'
@@ -85,6 +87,7 @@ const subscriptionTierVisuals = {
 export default function DashboardPage() {
   const router = useRouter()
   const { user, userProfile, loading, signOut, refreshProfile } = useAuth()
+  const { startTour, isActive: isTourActive } = useOnboarding()
   const getBaseUrl = () => {
     if (typeof window !== 'undefined') {
       return window.location.origin
@@ -261,6 +264,21 @@ export default function DashboardPage() {
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // Auto-start onboarding tour for first-time users
+  useEffect(() => {
+    if (!mounted || !user?.id || isTourActive) return
+
+    const checkAndStartTour = async () => {
+      const shouldShow = await shouldShowOnboarding(user.id)
+      if (shouldShow) {
+        // Small delay to let the page fully render
+        setTimeout(() => startTour(), 800)
+      }
+    }
+
+    checkAndStartTour()
+  }, [mounted, user?.id, isTourActive, startTour])
 
   const storeExamDateLocally = useCallback((dateString: string) => {
     if (typeof window === 'undefined') return
@@ -645,6 +663,7 @@ export default function DashboardPage() {
       description: hasPausedExam ? "Resume your paused practice exam" : "Take practice exams to test your knowledge",
       href: "/exam-generator",
       cta: hasPausedExam ? "Resume?" : "Start Exam",
+      dataTour: "practice-card",
       className:
         "col-span-1 row-span-2 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-5",
       background: (
@@ -675,6 +694,7 @@ export default function DashboardPage() {
       description: `${studyStats.totalQuizzes} quizzes • ${progressData.completedTopics}/${progressData.totalTopics} lessons`,
       href: "/topic-selector",
       cta: "Start Studying",
+      dataTour: "study-card",
       className:
         "col-span-2 row-span-2 row-start-3 md:col-span-3 md:row-span-1 md:row-start-auto lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-7",
       background: (
@@ -755,6 +775,7 @@ export default function DashboardPage() {
       description: "Review exam results and focus areas",
       href: prioritizeHref,
       cta: "View Results",
+      dataTour: "prioritize-card",
       className:
         "col-span-1 col-start-2 row-span-1 row-start-1 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-1 lg:col-end-2 lg:row-start-5 lg:row-end-7",
     },
@@ -769,6 +790,7 @@ export default function DashboardPage() {
       ),
       href: "/recover",
       cta: "Open",
+      dataTour: "recover-card",
       className:
         "col-span-1 col-start-2 row-span-1 row-start-2 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-2 lg:col-end-3 lg:row-start-5 lg:row-end-7",
       background: (
@@ -789,6 +811,7 @@ export default function DashboardPage() {
         : "Set your exam date",
       href: "#",
       cta: isExamDatePopoverOpen ? "" : "Edit Date", // Hide CTA when calendar is open
+      dataTour: "exam-date-card",
       className:
         "col-span-1 row-span-1 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3",
       background: (
@@ -831,6 +854,7 @@ export default function DashboardPage() {
       description: "",
       href: "/topic-selector",
       cta: "Keep it going",
+      dataTour: "study-streak-card",
       className:
         "col-span-1 col-start-2 row-span-1 row-start-5 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-3 lg:row-end-5",
       background: (
@@ -852,6 +876,7 @@ export default function DashboardPage() {
       description: `${dailyGoal} lesson${dailyGoal > 1 ? 's' : ''}/day`,
       href: "#",
       cta: "Edit",
+      dataTour: "daily-goal-card",
       className:
         "col-span-2 row-span-1 row-start-6 md:col-span-3 md:col-start-auto md:row-span-1 md:row-start-auto lg:col-start-5 lg:col-end-6 lg:row-start-5 lg:row-end-7",
       background: (
@@ -918,7 +943,7 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12 space-y-8">
-        <div>
+        <div data-tour="dashboard-header">
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>
         </div>

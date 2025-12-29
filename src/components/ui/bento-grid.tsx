@@ -36,10 +36,11 @@ export function BentoCard({
   classNameHeader,
   showHeader = true,
   style,
+  dataTour,
 }: {
   name: string
   className: string
-  background: ReactNode
+  background?: ReactNode
   Icon: any
   description: ReactNode
   href: string
@@ -48,6 +49,7 @@ export function BentoCard({
   classNameHeader?: string
   showHeader?: boolean
   style?: React.CSSProperties
+  dataTour?: string
 }) {
   const content = (
     <>
@@ -99,6 +101,7 @@ export function BentoCard({
         className={cardClasses}
         onClick={onClick}
         style={style}
+        data-tour={dataTour}
       >
         {content}
       </div>
@@ -111,6 +114,7 @@ export function BentoCard({
         key={name}
         className={cardClasses}
         style={style}
+        data-tour={dataTour}
       >
         {content}
       </div>
@@ -123,6 +127,7 @@ export function BentoCard({
       href={href}
       className={cardClasses}
       style={style}
+      data-tour={dataTour}
     >
       {content}
     </Link>
