@@ -555,14 +555,14 @@ strong, b {
     transition: background-color 120ms ease, box-shadow 120ms ease;
   }
   .tt-word-active {
-    background-color: color-mix(in oklch, var(--primary) 32%, transparent);
-    box-shadow: 0 0 0 1px color-mix(in oklch, var(--primary) 45%, transparent);
-    border-radius: 0.2em;
-    padding: 0 0.08em;
-    font-weight: 600;
+    background-color: color-mix(in oklch, var(--brand-highlight) 45%, transparent);
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--brand-highlight) 70%, transparent);
+    border-radius: 0.25em;
+    padding: 0 0.1em;
+    font-weight: 700;
     text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--primary);
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--brand-highlight);
     text-underline-offset: 2px;
   }
   .rdp-vhidden {

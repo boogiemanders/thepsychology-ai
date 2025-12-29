@@ -3482,8 +3482,8 @@ export function TopicTeacherContent() {
           </DialogContent>
         </Dialog>
 
-	        {/* Interests Modal - Only show if no interests saved */}
-	        {savedInterests.length === 0 && (
+	        {/* Interests Modal - Disabled since inline input is now visible on page */}
+	        {false && savedInterests.length === 0 && (
 	          <Dialog open={showInterestsModal} onOpenChange={setShowInterestsModal}>
 	            <DialogContent>
               <DialogHeader>

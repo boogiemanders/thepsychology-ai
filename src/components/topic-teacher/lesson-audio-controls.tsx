@@ -31,6 +31,23 @@ function countWords(text: string): number {
   return matches ? matches.length : 0
 }
 
+function getEffectiveDurationSeconds(audio: HTMLAudioElement): number {
+  const direct = audio.duration
+  if (Number.isFinite(direct) && direct > 0) return direct
+
+  const seekable = audio.seekable
+  if (seekable && seekable.length > 0) {
+    try {
+      const end = seekable.end(seekable.length - 1)
+      if (Number.isFinite(end) && end > 0) return end
+    } catch {
+      // ignore
+    }
+  }
+
+  return NaN
+}
+
 async function sha256Hex(input: string): Promise<string | null> {
   if (typeof window === 'undefined') return null
   const subtle = window.crypto?.subtle
@@ -193,6 +210,8 @@ export function LessonAudioControls(props: {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
+  const [readAlongWordIndex, setReadAlongWordIndex] = useState<number | null>(null)
+  const [readAlongTotalWords, setReadAlongTotalWords] = useState(0)
   const [scrollY, setScrollY] = useState(0)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const abortRef = useRef<AbortController | null>(null)
@@ -234,6 +253,8 @@ export function LessonAudioControls(props: {
     setError(null)
     setCurrentIndex(0)
     setSourceCounts({ pregen: 0, live: 0 })
+    setReadAlongWordIndex(null)
+    setReadAlongTotalWords(0)
     setAudioUrls((prev) => {
       revokeUrls(prev)
       return []
@@ -292,14 +313,23 @@ export function LessonAudioControls(props: {
     if (counts.length === 0) return
     const currentCount = counts[currentIndex] ?? 0
     if (currentCount <= 0) return
-    const duration = audio.duration
-    if (!Number.isFinite(duration) || duration <= 0) return
-    const ratio = Math.min(1, Math.max(0, audio.currentTime / duration))
-    const localIndex = Math.min(currentCount - 1, Math.floor(ratio * currentCount))
+
+    const durationSeconds = getEffectiveDurationSeconds(audio)
+    const ratio =
+      Number.isFinite(durationSeconds) && durationSeconds > 0
+        ? Math.min(1, Math.max(0, audio.currentTime / durationSeconds))
+        : null
+
+    const localIndex =
+      ratio === null
+        ? Math.min(currentCount - 1, Math.floor(audio.currentTime * 2.6))
+        : Math.min(currentCount - 1, Math.floor(ratio * currentCount))
+
     const offset = segmentWordOffsetsRef.current[currentIndex] ?? 0
     const globalIndex = offset + localIndex
     if (lastWordIndexRef.current === globalIndex) return
     lastWordIndexRef.current = globalIndex
+    setReadAlongWordIndex(globalIndex)
     onWordProgress({ wordIndex: globalIndex, totalWords: totalWordsRef.current })
   }, [currentIndex, onWordProgress])
 
@@ -345,12 +375,16 @@ export function LessonAudioControls(props: {
         segmentWordOffsetsRef.current = offsets
         totalWordsRef.current = total
         lastWordIndexRef.current = null
+        setReadAlongWordIndex(null)
+        setReadAlongTotalWords(total)
         onWordProgress({ wordIndex: null, totalWords: total })
       } else {
         segmentWordCountsRef.current = []
         segmentWordOffsetsRef.current = []
         totalWordsRef.current = 0
         lastWordIndexRef.current = null
+        setReadAlongWordIndex(null)
+        setReadAlongTotalWords(0)
         onWordProgress({ wordIndex: null, totalWords: 0 })
       }
     }
@@ -575,14 +609,20 @@ export function LessonAudioControls(props: {
     const audio = audioRef.current
     if (!audio) return
     setCurrentTime(audio.currentTime)
-    setDuration(audio.duration)
+    const nextDuration = getEffectiveDurationSeconds(audio)
+    if (Number.isFinite(nextDuration) && nextDuration > 0) {
+      setDuration(nextDuration)
+    }
     updateWordProgressFromAudio()
   }
 
   const handleLoadedMetadata = () => {
     const audio = audioRef.current
     if (!audio) return
-    setDuration(audio.duration)
+    const nextDuration = getEffectiveDurationSeconds(audio)
+    if (Number.isFinite(nextDuration) && nextDuration > 0) {
+      setDuration(nextDuration)
+    }
     updateWordProgressFromAudio()
   }
 
@@ -764,6 +804,14 @@ export function LessonAudioControls(props: {
                 <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">
                   {hasAudio ? `${currentIndex + 1}/${audioUrls.length}` : ''}
                 </span>
+
+                {readAlongEnabled && hasAudio && (
+                  <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">
+                    {readAlongTotalWords > 0
+                      ? `Word ${readAlongWordIndex !== null ? readAlongWordIndex + 1 : 0}/${readAlongTotalWords}`
+                      : 'Word —'}
+                  </span>
+                )}
 
                 {onAutoScrollToggle && (
                   <button
