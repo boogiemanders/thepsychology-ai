@@ -24,9 +24,14 @@ interface TopicTeacherTourContextType {
   skipTour: () => void
   completeTour: () => void
   goToStep: (step: number) => void
+  // For showing temporary stars during tutorial when user has none
+  showTutorialStars: boolean
 }
 
 const TopicTeacherTourContext = createContext<TopicTeacherTourContextType | undefined>(undefined)
+
+// Step IDs that need stars to be visible
+const STAR_STEP_IDS = ['star-legend-top', 'star-sections']
 
 export function TopicTeacherTourProvider({ children }: { children: ReactNode }) {
   const { user } = useAuth()
@@ -35,6 +40,10 @@ export function TopicTeacherTourProvider({ children }: { children: ReactNode }) 
   const [hasChecked, setHasChecked] = useState(false)
 
   const totalSteps = TOPIC_TEACHER_TOUR_STEPS.length
+
+  // Check if current step needs stars to be visible
+  const currentStepId = TOPIC_TEACHER_TOUR_STEPS[currentStep]?.id
+  const showTutorialStars = isActive && STAR_STEP_IDS.includes(currentStepId)
 
   // Check if we should auto-start the tour
   useEffect(() => {
@@ -137,6 +146,7 @@ export function TopicTeacherTourProvider({ children }: { children: ReactNode }) 
         skipTour,
         completeTour,
         goToStep,
+        showTutorialStars,
       }}
     >
       {children}

@@ -485,6 +485,40 @@ function TutorialButton() {
   )
 }
 
+// Tutorial star legend - shows fake stars during tutorial if user has none
+interface TutorialStarLegendProps {
+  hasRealStars: boolean
+  starColor: string
+  onStarClick: () => void
+}
+
+function TutorialStarLegend({ hasRealStars, starColor, onStarClick }: TutorialStarLegendProps) {
+  const { showTutorialStars } = useTopicTeacherTour()
+
+  // Only show tutorial stars if tour needs them AND user has no real stars
+  if (!showTutorialStars || hasRealStars) {
+    return null
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="mb-4"
+      data-tour="star-legend-top"
+    >
+      <p className="text-sm text-foreground/80">
+        <VariableStar
+          className="inline-block mr-1"
+          onClick={onStarClick}
+          title="Click to change star color"
+          color={starColor}
+        /> Most recent practice exam: <span className="italic text-muted-foreground">(Example for tutorial)</span>
+      </p>
+    </motion.div>
+  )
+}
+
 export function TopicTeacherContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -2833,6 +2867,13 @@ export function TopicTeacherContent() {
             </Alert>
           </motion.div>
         )}
+
+        {/* Tutorial stars - only shown during tutorial if user has no real stars */}
+        <TutorialStarLegend
+          hasRealStars={highlightData.examWrongSections.length > 0 || matchedExamTerms.length > 0 || highlightData.quizWrongSections.length > 0}
+          starColor={starColor}
+          onStarClick={() => setShowColorPicker(true)}
+        />
 
         {(highlightData.examWrongSections.length > 0 || matchedExamTerms.length > 0) && (
           <motion.div

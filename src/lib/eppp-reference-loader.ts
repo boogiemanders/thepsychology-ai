@@ -10,7 +10,7 @@ import { DOMAIN_FOLDER_MAP, DOMAIN_NUMBER_MAP, findTopicFile } from './topic-pat
  * It serves as source material for generating personalized teaching content.
  */
 
-const EPPP_REFERENCE_DIR = path.join(process.cwd(), 'eppp-reference')
+const EPPP_REFERENCE_DIR = path.join(process.cwd(), 'eppp-reference og')
 
 /**
  * Loads reference content for a given topic and domain

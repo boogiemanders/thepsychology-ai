@@ -41,6 +41,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import { SmartExplanationButton } from '@/components/smart-explanation-button'
+import { LockInDrillButton } from '@/components/lock-in-drill-button'
+import { RecoverNudge } from '@/components/recover-nudge'
 
 interface QuizQuestion {
   id: number
@@ -123,6 +126,8 @@ export function QuizzerContent() {
   const [recentQuizSectionsParam, setRecentQuizSectionsParam] = useState('')
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
   const quizStartedAtRef = useRef<number | null>(null)
+  const wrongStreakRef = useRef(0)
+  const [showRecoverNudge, setShowRecoverNudge] = useState(false)
 
   const quizStateRef = useRef<QuizState>(quizState)
   useEffect(() => {
@@ -370,6 +375,13 @@ export function QuizzerContent() {
     const currentQuestion = questions[currentIndex]
     const isCorrect = selectedAnswer === currentQuestion.correctAnswer
 
+    if (currentQuestion.isScored !== false) {
+      wrongStreakRef.current = isCorrect ? 0 : wrongStreakRef.current + 1
+      if (wrongStreakRef.current >= 3) {
+        setShowRecoverNudge(true)
+      }
+    }
+
     if (currentIndex < questions.length - 1) {
       setQuizState((prev) => ({
         ...prev,
@@ -531,6 +543,8 @@ export function QuizzerContent() {
       showResults: true,
       score: finalScore,
     }))
+    wrongStreakRef.current = 0
+    setShowRecoverNudge(false)
   }, [questions, topic, decodedTopic])
 
   const formatTime = (seconds: number): string => {
@@ -967,7 +981,11 @@ export function QuizzerContent() {
                 10 questions · Total time: {formatTime(questions.length * 68)}
               </TypographyMuted>
               <Button
-                onClick={() => setQuizStarted(true)}
+                onClick={() => {
+                  wrongStreakRef.current = 0
+                  setShowRecoverNudge(false)
+                  setQuizStarted(true)
+                }}
                 size="lg"
                 variant="minimal"
                 className="gap-2"
@@ -1157,6 +1175,31 @@ export function QuizzerContent() {
                               </AccordionContent>
                             </AccordionItem>
                           </Accordion>
+
+                          {/* Smart Explanation for wrong answers */}
+                          {!isCorrect && selectedAnswer && (
+                            <div className="mt-3 flex flex-wrap gap-2">
+                              <SmartExplanationButton
+                                question={q.question}
+                                options={q.options}
+                                correctAnswer={q.correctAnswer}
+                                selectedAnswer={selectedAnswer}
+                                topicName={decodedTopic || ''}
+                                domain={domain || ''}
+                                userId={user?.id}
+                              />
+                              <LockInDrillButton
+                                topicName={decodedTopic || ''}
+                                domainId={domain || null}
+                                question={q.question}
+                                options={q.options}
+                                correctAnswer={q.correctAnswer}
+                                selectedAnswer={selectedAnswer}
+                                relatedSections={q.relatedSections || null}
+                                userId={user?.id ?? null}
+                              />
+                            </div>
+                          )}
                         </div>
                       </div>
                     </motion.div>
@@ -1185,6 +1228,12 @@ export function QuizzerContent() {
             </div>
           ) : (
             <div className="space-y-6">
+              {showRecoverNudge && (
+                <RecoverNudge
+                  message="A few tough misses in a row is a good time to reset. Take 2 minutes in Recover, then jump back in."
+                  onDismiss={() => setShowRecoverNudge(false)}
+                />
+              )}
               {/* Header with Question Number, Progress, and Timer */}
               <div className="sticky top-0 z-40 bg-background border-b border-border pb-4 mb-6">
                 <div className="flex justify-between items-start mb-4">

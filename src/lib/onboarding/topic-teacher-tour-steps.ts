@@ -57,12 +57,28 @@ export const TOPIC_TEACHER_TOUR_STEPS: TourStep[] = [
     order: 6,
   },
   {
+    id: 'star-legend-top',
+    targetSelector: '[data-tour="star-legend-top"]',
+    title: 'Your Growth Areas',
+    description: 'Stars show topics from questions you got wrong on practice exams or quizzes. Click a star to change its color for easy tracking.',
+    placement: 'bottom',
+    order: 7,
+  },
+  {
+    id: 'star-sections',
+    targetSelector: '[data-tour="lesson-content"]',
+    title: 'Review Starred Sections',
+    description: 'Stars appear next to sections where you missed questions. Click any star to see the original question and a detailed explanation.',
+    placement: 'bottom',
+    order: 8,
+  },
+  {
     id: 'question-input',
     targetSelector: '[data-tour="question-input"]',
     title: 'Ask Questions',
     description: 'Confused about something? Ask follow-up questions and get instant AI explanations.',
     placement: 'top',
-    order: 7,
+    order: 9,
   },
   {
     id: 'quiz-button',
@@ -70,6 +86,6 @@ export const TOPIC_TEACHER_TOUR_STEPS: TourStep[] = [
     title: 'Test Your Knowledge',
     description: 'Ready to practice? Take a quick quiz to reinforce what you learned.',
     placement: 'top',
-    order: 8,
+    order: 10,
   },
 ]

@@ -12,6 +12,7 @@ import type { DomainPerformance } from '@/lib/priority-calculator'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { SmartExplanationButton } from '@/components/smart-explanation-button'
 
 interface Question {
   id: number
@@ -50,6 +51,7 @@ interface ExpandableDomainAnalysisProps {
   showSourceFile?: boolean
   // Optional scored-status map per question index to avoid recomputing
   scoredStatusByIndex?: Record<number, 'correct' | 'wrong' | 'skipped'>
+  userId?: string | null
 }
 
 const BRAND_COLORS = {
@@ -72,6 +74,7 @@ export function ExpandableDomainAnalysis({
   showOnlyWrong = false,
   showSourceFile = false,
   scoredStatusByIndex,
+  userId,
 }: ExpandableDomainAnalysisProps) {
   const resolvedTitle = title === undefined ? 'Domain Analysis' : title
   const resolvedDescription =
@@ -539,6 +542,23 @@ export function ExpandableDomainAnalysis({
                                       </div>
                                     ) : null}
 
+                                    {/* Smart Explanation for wrong answers */}
+                                    {status === 'wrong' && selectedAnswer && (() => {
+                                      const meta = deriveTopicMetaFromSourceFile(question.source_file)
+                                      if (!meta?.topicName) return null
+                                      return (
+                                        <SmartExplanationButton
+                                          question={question.question}
+                                          options={question.options}
+                                          correctAnswer={question.correct_answer}
+                                          selectedAnswer={selectedAnswer}
+                                          topicName={meta.topicName}
+                                          domain={meta.domainId || ''}
+                                          userId={userId}
+                                        />
+                                      )
+                                    })()}
+
                                     {/* Lesson Link */}
                                     {(() => {
                                       const lessonInfo = getLessonLinkInfo(question)
@@ -892,6 +912,23 @@ export function ExpandableDomainAnalysis({
                                       </p>
                                     </div>
                                   ) : null}
+
+                                  {/* Smart Explanation for wrong answers */}
+                                  {status === 'wrong' && selectedAnswer && (() => {
+                                    const meta = deriveTopicMetaFromSourceFile(question.source_file)
+                                    if (!meta?.topicName) return null
+                                    return (
+                                      <SmartExplanationButton
+                                        question={question.question}
+                                        options={question.options}
+                                        correctAnswer={question.correct_answer}
+                                        selectedAnswer={selectedAnswer}
+                                        topicName={meta.topicName}
+                                        domain={meta.domainId || ''}
+                                        userId={userId}
+                                      />
+                                    )
+                                  })()}
 
                                   {/* Lesson Link */}
                                   {(() => {
