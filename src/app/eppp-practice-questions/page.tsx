@@ -37,6 +37,13 @@ export default function EpppPracticeQuestionsPage() {
               <p className="text-base font-semibold text-primary">Study Guides</p>
               <p className="mt-1 text-sm text-muted-foreground">Browse topics by domain.</p>
             </Link>
+            <Link
+              href="/case-bank?id=ethics-duty-to-warn"
+              className="rounded-xl border border-border bg-accent/40 px-4 py-4 hover:bg-accent/60 transition-colors"
+            >
+              <p className="text-base font-semibold text-primary">Branching Case Vignette</p>
+              <p className="mt-1 text-sm text-muted-foreground">Try the free sample scenario.</p>
+            </Link>
           </div>
         </section>
 
@@ -53,4 +60,3 @@ export default function EpppPracticeQuestionsPage() {
     </main>
   )
 }
-

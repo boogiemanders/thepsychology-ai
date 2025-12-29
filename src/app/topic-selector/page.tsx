@@ -11,6 +11,7 @@ import { Kbd } from '@/components/ui/kbd'
 import { Badge } from '@/components/ui/badge'
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { motion, AnimatePresence } from 'motion/react'
+import { RecoverNudge } from '@/components/recover-nudge'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
@@ -29,6 +30,7 @@ import {
   updateUserLanguagePreference,
 } from '@/lib/language-preference'
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
+import { RECOVER_RECOMMENDATION_HOUR_KEY } from '@/lib/recover'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { createClient } from '@supabase/supabase-js'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
@@ -144,6 +146,8 @@ const TOPIC_DISPLAY_ORDER_OVERRIDES: Record<string, string[]> = {
   ],
 }
 
+const CASE_VIGNETTE_DOMAIN_IDS = new Set(['5-diagnosis', '6', '8'])
+
 function sortTopicsForDisplay<T extends { name: string; sortIndex: number }>(
   domainId: string,
   topics: T[]
@@ -225,9 +229,22 @@ export default function TopicSelectorPage() {
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
   const [priorityTopicIds, setPriorityTopicIds] = useState<string[]>([])
   const [recommendedDomainIds, setRecommendedDomainIds] = useState<string[]>([])
+  const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const subscriptionRef = useRef<RealtimeChannel | null>(null)
   const languageSubscriptionRef = useRef<RealtimeChannel | null>(null)
   const studyStats = calculateStudyStats()
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShowRecoverNudge(true)
+      try {
+        localStorage.setItem(RECOVER_RECOMMENDATION_HOUR_KEY, '1')
+      } catch (error) {
+        console.debug('Failed to set recover recommendation flag:', error)
+      }
+    }, 60 * 60 * 1000)
+    return () => window.clearTimeout(timer)
+  }, [])
 
   const normalizeLanguageInput = (raw: string): string | null => {
     const trimmed = raw.trim()
@@ -654,6 +671,13 @@ export default function TopicSelectorPage() {
               </p>
             </div>
 
+            {showRecoverNudge && (
+              <RecoverNudge
+                message="Nice work studying for an hour. Want a quick 5-minute reset? Open Recover if you want."
+                onDismiss={() => setShowRecoverNudge(false)}
+              />
+            )}
+
             {isFreeTier && (
               <div className="rounded-lg border border-dashed border-border/70 bg-muted/30 p-4 text-sm">
                 <p className="font-medium mb-1">You’re on the free plan.</p>
@@ -920,6 +944,22 @@ export default function TopicSelectorPage() {
                   >
                     <Separator />
                     <CardContent className="pt-4 pb-4 space-y-3">
+                      {CASE_VIGNETTE_DOMAIN_IDS.has(domain.id) && (
+                        <Link
+                          href={`/case-bank?domain=${encodeURIComponent(domain.id)}`}
+                          className="block rounded-xl border border-border bg-accent/40 px-4 py-4 hover:bg-accent/60 transition-colors"
+                        >
+                          <div className="flex items-start justify-between gap-3">
+                            <div className="space-y-1">
+                              <p className="text-sm font-semibold text-primary">Branching Case Vignettes</p>
+                              <p className="text-xs text-muted-foreground">
+                                Applied scenarios with scoring + rationale (optional).
+                              </p>
+                            </div>
+                            <span className="text-sm text-muted-foreground">→</span>
+                          </div>
+                        </Link>
+                      )}
                       {domain.topics.map((topic) => {
                         const isPriority = priorityTopicIds.includes(topic.id)
                         const isFreeTopic =

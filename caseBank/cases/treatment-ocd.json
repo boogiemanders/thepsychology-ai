@@ -1,0 +1,144 @@
+{
+  "id": "treatment-ocd",
+  "title": "OCD: First-Line Treatment Planning",
+  "domainId": "6",
+  "domainLabel": "Treatment / Intervention / Prevention",
+  "estimatedMinutes": 5,
+  "difficulty": "medium",
+  "isPremium": true,
+  "tags": ["treatment", "ocd", "erp", "ssri"],
+  "version": 1,
+  "rootNodeId": "start",
+  "scoring": {
+    "maxScore": 4,
+    "levels": [
+      { "minScore": 4, "label": "Ready", "message": "You selected ERP/CBT principles and appropriate pharmacotherapy sequencing—classic EPPP targets." },
+      { "minScore": 2, "label": "Close", "message": "You’re close—review the strongest evidence base for OCD and what to do when response is partial." },
+      { "minScore": 0, "label": "Review Needed", "message": "OCD treatment is highly testable. Review ERP and SSRI strategies vs. non–first-line options." }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "type": "decision",
+      "knId": "KN44",
+      "topicName": "Cognitive-Behavioral Therapies",
+      "prompt": "A 28-year-old reports intrusive contamination obsessions and spends 3–4 hours/day washing and cleaning. Symptoms have caused work impairment. There is no current substance use and no psychosis. What is the BEST first-line treatment approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supportive therapy focused on insight and emotional expression, without behavioral exposure.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Supportive approaches can help engagement, but the most evidence-based first-line psychotherapy for OCD is exposure and response prevention (ERP), typically within CBT."
+        },
+        {
+          "id": "B",
+          "text": "Exposure and response prevention (ERP) and/or CBT, with consideration of an SSRI if symptoms are moderate-to-severe or if psychotherapy alone is insufficient.",
+          "nextNodeId": "partial-response",
+          "scoreDelta": 2,
+          "isBest": true,
+          "rationale": "ERP is a core first-line treatment for OCD. SSRIs are also first-line medications; combined treatment may be indicated with higher severity or functional impairment."
+        },
+        {
+          "id": "C",
+          "text": "Benzodiazepine monotherapy to reduce anxiety, continued long-term.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Benzodiazepines are not first-line for OCD and carry risks with long-term use; they do not target the obsessions/compulsions as effectively as ERP/SSRIs."
+        },
+        {
+          "id": "D",
+          "text": "Antipsychotic monotherapy as the primary treatment because compulsions indicate severe pathology.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Antipsychotics are not first-line monotherapy for OCD; they may be used as augmentation in select partial responders to SSRIs, not as initial standalone treatment."
+        }
+      ]
+    },
+    {
+      "id": "partial-response",
+      "type": "decision",
+      "knId": "KN42",
+      "topicName": "Cognitive-Behavioral Therapies",
+      "prompt": "After an adequate ERP trial plus an SSRI at a therapeutic dose for several weeks, the patient has only partial improvement. What is a reasonable next step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stop ERP because exposure increases distress and replace it with reassurance and avoidance strategies.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Avoidance and reassurance can reinforce OCD cycles. ERP discomfort is expected; optimizing ERP is often part of effective care."
+        },
+        {
+          "id": "B",
+          "text": "Optimize evidence-based care: ensure ERP is delivered with sufficient intensity and consider medication adjustments (e.g., SSRI optimization/switch) or augmentation when indicated.",
+          "nextNodeId": "end-good",
+          "scoreDelta": 2,
+          "isBest": true,
+          "rationale": "EPPP-style items reward “optimize first-line treatment” before moving to non-evidence-based options. For partial responders, intensifying ERP and adjusting SSRI strategy are common next steps."
+        },
+        {
+          "id": "C",
+          "text": "Switch immediately to long-term benzodiazepines because they reduce anxiety faster than SSRIs.",
+          "nextNodeId": "end-partial",
+          "scoreDelta": 1,
+          "isBest": false,
+          "rationale": "Speed of symptom relief is not the main criterion. Benzodiazepines are not a core OCD treatment and do not directly reduce obsessions/compulsions."
+        },
+        {
+          "id": "D",
+          "text": "Recommend stopping all medication and using only relaxation training because it is less activating.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Relaxation can help general stress but is not sufficient as a primary OCD intervention in a patient with significant functional impairment."
+        }
+      ]
+    },
+    {
+      "id": "end-good",
+      "type": "end",
+      "summary": "First-line OCD treatment is ERP (often within CBT) and/or SSRIs. If response is partial, optimize ERP delivery and medication strategy before pivoting away from evidence-based care.",
+      "takeaways": [
+        "ERP is the hallmark psychotherapy for OCD.",
+        "SSRIs are first-line pharmacotherapy; combined care can be appropriate with higher severity.",
+        "Partial response: optimize ERP intensity and adjust SSRI strategy; augmentation may be considered in select cases."
+      ],
+      "recommendedLessons": [
+        { "topic": "Anxiety Disorders and Obsessive-Compulsive Disorder", "domainId": "5-diagnosis" },
+        { "topic": "Cognitive-Behavioral Therapies", "domainId": "6" }
+      ]
+    },
+    {
+      "id": "end-partial",
+      "type": "end",
+      "summary": "You aimed to reduce distress quickly, but OCD outcomes are best when you optimize ERP/SSRI strategies rather than relying on anxiolytic-only approaches.",
+      "takeaways": [
+        "OCD treatment targets obsessions/compulsions, not just distress.",
+        "ERP discomfort is expected and can be therapeutic.",
+        "If response is partial, adjust the evidence-based plan rather than abandoning it."
+      ],
+      "recommendedLessons": [
+        { "topic": "Cognitive-Behavioral Therapies", "domainId": "6" }
+      ]
+    },
+    {
+      "id": "end-poor",
+      "type": "end",
+      "summary": "This scenario is a classic EPPP treatment item: ERP/CBT and SSRIs are core first-line treatments for OCD. Review the evidence base and next-step planning for partial response.",
+      "takeaways": [
+        "ERP is a first-line psychotherapy for OCD.",
+        "SSRIs are a first-line medication class for OCD.",
+        "Avoidance/reassurance can reinforce compulsions."
+      ],
+      "recommendedLessons": [
+        { "topic": "Cognitive-Behavioral Therapies", "domainId": "6" }
+      ]
+    }
+  ]
+}

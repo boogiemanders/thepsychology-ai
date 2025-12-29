@@ -1,6 +1,7 @@
 "use client";
 
 import { NavMenu } from "@/components/nav-menu";
+import { LOGGED_IN_NAVS } from "@/components/nav-menu";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
@@ -97,6 +98,8 @@ export function Navbar() {
 
   const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
   const handleOverlayClick = () => setIsDrawerOpen(false);
+
+  const mobileNavItems = user ? LOGGED_IN_NAVS : siteConfig.nav.links;
 
   const handleStartFree = useCallback(() => {
     setIsDrawerOpen(false); // Close mobile drawer if open
@@ -241,20 +244,33 @@ export function Navbar() {
                   variants={drawerMenuContainerVariants}
                 >
                   <AnimatePresence>
-                    {siteConfig.nav.links.map((item) => (
+                    {mobileNavItems.map((item: any) => (
                       <motion.li
-                        key={item.id}
+                        key={String(item.id ?? item.href ?? item.name)}
                         className="p-2.5 border-b border-border last:border-b-0"
                         variants={drawerMenuVariants}
                       >
                         <a
                           href={item.href}
                           onClick={(e) => {
+                            // Logged-in items are normal routes; let them navigate.
+                            if (!item.href?.startsWith("#")) {
+                              setIsDrawerOpen(false);
+                              return;
+                            }
+
                             e.preventDefault();
-                            const element = document.getElementById(
-                              item.href.substring(1),
-                            );
-                            element?.scrollIntoView({ behavior: "smooth" });
+
+                            const targetId = item.href.substring(1);
+                            const element = document.getElementById(targetId);
+
+                            // If element doesn't exist on current page, navigate to home page with hash.
+                            if (!element) {
+                              window.location.href = "/" + item.href;
+                              return;
+                            }
+
+                            element.scrollIntoView({ behavior: "smooth" });
                             setIsDrawerOpen(false);
                           }}
                           className={`underline-offset-4 hover:text-primary/80 transition-colors ${

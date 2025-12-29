@@ -12,7 +12,7 @@ interface NavItem {
 
 const navs: NavItem[] = siteConfig.nav.links;
 
-const loggedInNavs: NavItem[] = [
+export const LOGGED_IN_NAVS: NavItem[] = [
   { name: "Dashboard", href: "/dashboard" },
   { name: "Practice", href: "/exam-generator" },
   { name: "Prioritize", href: "/prioritize" },
@@ -30,7 +30,7 @@ export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
   const pathname = usePathname();
 
   // Prevent hydration mismatch by only showing logged-in state after mount
-  const currentNavs = mounted && isLoggedIn ? loggedInNavs : navs;
+  const currentNavs = mounted && isLoggedIn ? LOGGED_IN_NAVS : navs;
 
   React.useEffect(() => {
     setMounted(true);

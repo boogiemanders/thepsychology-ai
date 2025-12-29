@@ -6,6 +6,7 @@ import { inferIsOrgPsych } from '@/lib/org-psych-utils'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { loadFullTopicContent } from '@/lib/topic-content-manager'
 import { logUsageEvent } from '@/lib/usage-events'
+import { getCaseQuestionsByKnId } from '@/lib/case-bank'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -195,6 +196,122 @@ function attachRelatedSections(question: any) {
   }
 
   return question
+}
+
+function parseDomainNumber(domain: unknown): number | null {
+  if (typeof domain === 'number' && Number.isFinite(domain)) {
+    const num = Math.trunc(domain)
+    return num >= 1 && num <= 8 ? num : null
+  }
+  const text = String(domain || '')
+  const match = text.match(/Domain\s*(\d+)/i) ?? text.match(/(\d+)/)
+  const num = match ? Number.parseInt(match[1] ?? '', 10) : NaN
+  return Number.isFinite(num) && num >= 1 && num <= 8 ? num : null
+}
+
+function isQuestionScored(question: any): boolean {
+  return question?.isScored !== false && question?.scored !== false
+}
+
+function getCaseQuestionMapSafe(): Map<string, any> {
+  try {
+    return getCaseQuestionsByKnId()
+  } catch (error) {
+    console.warn('[Exam Generator] Failed to load case questions:', error)
+    return new Map()
+  }
+}
+
+function injectCaseQuestionsIntoExam(
+  questions: any[],
+  examType: 'diagnostic' | 'practice'
+): any[] {
+  const caseByKn = getCaseQuestionMapSafe()
+  if (!questions || questions.length === 0 || caseByKn.size === 0) return questions
+
+  const alreadyReplaced = new Set<number>()
+
+  // Diagnostic: replace by knId (preserves the 1-per-KN structure).
+  if (examType === 'diagnostic') {
+    for (let i = 0; i < questions.length; i++) {
+      const q = questions[i]
+      const knId = typeof q?.knId === 'string' ? q.knId : typeof q?.kn === 'string' ? q.kn : null
+      if (!knId) continue
+      const item = caseByKn.get(knId)
+      if (!item) continue
+
+      const replaced = attachRelatedSections({
+        ...q,
+        question: item.stem,
+        options: item.options,
+        correct_answer: item.answer,
+        explanation: item.explanation,
+        difficulty: item.difficulty ?? q.difficulty,
+        knId: item.knId ?? q.knId,
+        topicName: item.topicName ?? q.topicName ?? null,
+        domainId: item.domainId ?? q.domainId ?? null,
+        source_file: item.source_file,
+        source_folder: item.source_folder,
+        is_org_psych: false,
+      })
+
+      questions[i] = replaced
+      alreadyReplaced.add(i)
+    }
+
+    return questions
+  }
+
+  // Practice: inject by domain into scored questions (keeps 180/45 scoring split intact).
+  const caseItems = Array.from(caseByKn.values())
+
+  for (const item of caseItems) {
+    const targetDomain = typeof item?.domainNumber === 'number' ? item.domainNumber : parseDomainNumber(item?.domainId)
+    if (!targetDomain) continue
+
+    // Prefer exact knId match when present in the exam set.
+    const preferredIndex = questions.findIndex(
+      (q, idx) => !alreadyReplaced.has(idx) && isQuestionScored(q) && q?.knId === item?.knId
+    )
+
+    const index =
+      preferredIndex !== -1
+        ? preferredIndex
+        : questions.findIndex((q, idx) => {
+            if (alreadyReplaced.has(idx)) return false
+            if (!isQuestionScored(q)) return false
+            const domainNumber = parseDomainNumber(q?.domain)
+            return domainNumber === targetDomain
+          })
+
+    if (index === -1) continue
+
+    const base = questions[index]
+    const replaced = attachRelatedSections({
+      ...base,
+      question: item.stem,
+      options: item.options,
+      correct_answer: item.answer,
+      explanation: item.explanation,
+      domain: base.domain ?? `Domain ${targetDomain}`,
+      difficulty: item.difficulty ?? base.difficulty,
+      knId: item.knId ?? base.knId,
+      topicName: item.topicName ?? base.topicName ?? null,
+      domainId: item.domainId ?? base.domainId ?? null,
+      source_file: item.source_file,
+      source_folder: item.source_folder,
+      is_org_psych: false,
+      // Preserve scoring flags and type from the original question.
+      isScored: base.isScored,
+      scored: base.scored,
+      type: base.type,
+    })
+
+    questions[index] = replaced
+    alreadyReplaced.add(index)
+  }
+
+  return questions
 }
 
 export async function POST(request: NextRequest) {
@@ -403,6 +520,8 @@ function loadFreeExamFromGpt(examType: 'diagnostic' | 'practice') {
     return attachRelatedSections(mapped)
   })
 
+  injectCaseQuestionsIntoExam(mappedQuestions, examType)
+
   return {
     questions: mappedQuestions,
     metadata: parsed.meta ?? null,
@@ -472,6 +591,8 @@ function loadDiagnosticFromGpt() {
 
     return attachRelatedSections(mapped)
   })
+
+  injectCaseQuestionsIntoExam(mappedQuestions, 'diagnostic')
 
   return {
     questions: mappedQuestions,
@@ -550,6 +671,8 @@ function loadPracticeFromGpt() {
 
     return attachRelatedSections(mapped)
   })
+
+  injectCaseQuestionsIntoExam(mappedQuestions, 'practice')
 
   return {
     questions: mappedQuestions,

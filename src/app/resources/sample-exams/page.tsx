@@ -82,8 +82,17 @@ export default function SampleExamsPage() {
             .
           </p>
         </section>
+
+        <section className="rounded-xl border border-border bg-accent/40 p-5">
+          <p className="text-sm text-muted-foreground">
+            Want applied, EPPP-style vignettes? Try our branching case vignette (free sample):{" "}
+            <Link href="/case-bank?id=ethics-duty-to-warn" className="text-primary underline underline-offset-4">
+              Start the case
+            </Link>
+            .
+          </p>
+        </section>
       </div>
     </main>
   )
 }
-

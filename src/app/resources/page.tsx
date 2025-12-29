@@ -76,13 +76,6 @@ export default function ResourcesPage() {
               <p className="text-base font-semibold text-primary">Sample Exams</p>
               <p className="mt-1 text-sm text-muted-foreground">A small sample from diagnostic + practice.</p>
             </Link>
-            <Link
-              href="/case-bank"
-              className="rounded-xl border border-border bg-accent/40 px-4 py-4 hover:bg-accent/60 transition-colors"
-            >
-              <p className="text-base font-semibold text-primary">Branching Case Vignettes</p>
-              <p className="mt-1 text-sm text-muted-foreground">Interactive ethics/diagnosis/treatment scenarios.</p>
-            </Link>
           </div>
         </section>
 

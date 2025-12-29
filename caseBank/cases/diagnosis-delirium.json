@@ -1,0 +1,184 @@
+{
+  "id": "diagnosis-delirium",
+  "title": "Delirium vs. Major Neurocognitive Disorder",
+  "domainId": "5-diagnosis",
+  "domainLabel": "Diagnosis / Psychopathology",
+  "estimatedMinutes": 5,
+  "difficulty": "medium",
+  "isPremium": true,
+  "tags": ["diagnosis", "delirium", "dementia", "differential"],
+  "version": 1,
+  "rootNodeId": "start",
+  "scoring": {
+    "maxScore": 4,
+    "levels": [
+      { "minScore": 4, "label": "Ready", "message": "You correctly identified the syndrome and prioritized a medical workup, which is the core EPPP move." },
+      { "minScore": 2, "label": "Close", "message": "You’re close—review distinguishing features (acute onset, fluctuating course, inattention) and the “rule out medical causes first” principle." },
+      { "minScore": 0, "label": "Review Needed", "message": "This is a high-yield differential. Review delirium criteria and first-line management priorities." }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "type": "decision",
+      "knId": "KN33",
+      "topicName": "Neurocognitive Disorders",
+      "prompt": "A 74-year-old inpatient develops sudden confusion over 24 hours. Staff report the patient is “fine in the morning, worse by evening,” is easily distracted, and has trouble sustaining attention. The patient recently started a new anticholinergic medication. What is the MOST likely diagnosis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Major neurocognitive disorder (dementia)",
+          "nextNodeId": "workup-missed",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Major neurocognitive disorder typically has an insidious onset and more stable course. Acute onset + fluctuating course + inattention strongly point to delirium."
+        },
+        {
+          "id": "B",
+          "text": "Delirium",
+          "nextNodeId": "workup",
+          "scoreDelta": 2,
+          "isBest": true,
+          "rationale": "Delirium is characterized by acute onset, fluctuating course, and impaired attention/awareness, often due to medical factors or medications."
+        },
+        {
+          "id": "C",
+          "text": "Schizophrenia",
+          "nextNodeId": "workup-missed",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Primary psychotic disorders do not typically present with acute fluctuating attention deficits tied to medical changes; delirium is more likely."
+        },
+        {
+          "id": "D",
+          "text": "Major depressive disorder with psychotic features",
+          "nextNodeId": "workup-missed",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Depression can affect cognition, but the acute onset, fluctuating course, and prominent inattention suggest delirium rather than depression."
+        }
+      ]
+    },
+    {
+      "id": "workup",
+      "type": "decision",
+      "knId": "KN31",
+      "topicName": "Neurocognitive Disorders",
+      "prompt": "What is the BEST next step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Begin long-term cognitive rehabilitation and schedule outpatient neuropsychological testing after discharge.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Delirium is often reversible and requires urgent identification/treatment of the underlying cause rather than long-term cognitive rehab planning as the first step."
+        },
+        {
+          "id": "B",
+          "text": "Order an urgent medical evaluation to identify/treat underlying causes and review medications (including stopping potential offending agents).",
+          "nextNodeId": "end-good",
+          "scoreDelta": 2,
+          "isBest": true,
+          "rationale": "First-line management is to find and treat the medical/medication cause. The EPPP often rewards “medical workup first” when delirium is suspected."
+        },
+        {
+          "id": "C",
+          "text": "Start an SSRI for presumed depression-related cognitive symptoms.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Treating depression without evaluating medical causes misses the urgent delirium workup."
+        },
+        {
+          "id": "D",
+          "text": "Provide psychoeducation about dementia progression and encourage the family to plan for long-term care placement.",
+          "nextNodeId": "end-partial",
+          "scoreDelta": 1,
+          "isBest": false,
+          "rationale": "Family planning can be relevant if dementia is present, but delirium requires immediate medical evaluation and medication review first."
+        }
+      ]
+    },
+    {
+      "id": "workup-missed",
+      "type": "decision",
+      "knId": "KN36",
+      "topicName": "Neurocognitive Disorders",
+      "prompt": "You’re asked to justify your impression. Which feature most strongly supports delirium over major neurocognitive disorder?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Impaired attention with acute onset and fluctuating course",
+          "nextNodeId": "end-partial",
+          "scoreDelta": 2,
+          "isBest": true,
+          "rationale": "Acute onset + fluctuating course + inattention is the classic delirium cluster."
+        },
+        {
+          "id": "B",
+          "text": "Gradual decline in multiple cognitive domains over years",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "That pattern is more consistent with major neurocognitive disorder."
+        },
+        {
+          "id": "C",
+          "text": "Persistent hallucinations starting in adolescence",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "This pattern points away from delirium and toward a primary psychotic disorder."
+        },
+        {
+          "id": "D",
+          "text": "A stable cognitive profile with prominent apathy",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Stability and apathy can occur in depression or dementia; they are not the most diagnostic delirium features."
+        }
+      ]
+    },
+    {
+      "id": "end-good",
+      "type": "end",
+      "summary": "Delirium is high-yield: acute onset, fluctuating course, and impaired attention/awareness—often due to medical conditions or medications. The best next step is urgent medical evaluation and medication review.",
+      "takeaways": [
+        "Key discriminators: acute + fluctuating + inattention.",
+        "First move: rule out/treat medical causes and review meds.",
+        "Delirium can coexist with dementia, but the management priority is still the acute medical issue."
+      ],
+      "recommendedLessons": [
+        { "topic": "Neurocognitive Disorders", "domainId": "5-diagnosis" }
+      ]
+    },
+    {
+      "id": "end-partial",
+      "type": "end",
+      "summary": "You recognized some key delirium features, but tighten the sequence: identify delirium → urgent medical workup/med review → manage safety and reorientation as needed.",
+      "takeaways": [
+        "EPPP pattern: acute cognitive change = medical workup first.",
+        "Fluctuation + inattention are more diagnostic than “memory problems.”",
+        "Avoid premature dementia counseling until delirium is addressed."
+      ],
+      "recommendedLessons": [
+        { "topic": "Neurocognitive Disorders", "domainId": "5-diagnosis" }
+      ]
+    },
+    {
+      "id": "end-poor",
+      "type": "end",
+      "summary": "This presentation fits delirium more than a primary psychiatric disorder or a gradual neurocognitive disorder. Review delirium criteria and management priorities.",
+      "takeaways": [
+        "Delirium: acute onset, fluctuating course, impaired attention/awareness.",
+        "Often due to meds (e.g., anticholinergics), infections, metabolic issues.",
+        "First-line is medical evaluation, not psychotherapy-first planning."
+      ],
+      "recommendedLessons": [
+        { "topic": "Neurocognitive Disorders", "domainId": "5-diagnosis" }
+      ]
+    }
+  ]
+}

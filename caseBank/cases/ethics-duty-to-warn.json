@@ -1,0 +1,157 @@
+{
+  "id": "ethics-duty-to-warn",
+  "title": "Duty to Protect vs. Confidentiality",
+  "domainId": "8",
+  "domainLabel": "Ethical / Legal / Professional Issues",
+  "estimatedMinutes": 6,
+  "difficulty": "medium",
+  "isPremium": false,
+  "tags": ["ethics", "confidentiality", "duty-to-protect", "tarasoff"],
+  "version": 1,
+  "rootNodeId": "start",
+  "scoring": {
+    "maxScore": 4,
+    "levels": [
+      {
+        "minScore": 4,
+        "label": "Ready",
+        "message": "You took the key steps that EPPP-style items usually reward: assess, consult, act to protect, and document with minimal disclosure."
+      },
+      {
+        "minScore": 2,
+        "label": "Close",
+        "message": "You’re on the right track, but review the “duty to protect” decision points and how to limit disclosures."
+      },
+      {
+        "minScore": 0,
+        "label": "Review Needed",
+        "message": "This is a high-stakes area. Review confidentiality exceptions, duty to protect, and documentation/consultation best practices."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "type": "decision",
+      "knId": "KN63",
+      "topicName": "APA Ethics Code Standards 3 & 4",
+      "prompt": "During a session, your client says: “I bought a gun. Tomorrow I’m going to shoot my former supervisor, Alex, at their office.” The client provides the supervisor’s name and workplace and appears angry but organized. What is the BEST next step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maintain confidentiality and schedule a follow-up session to continue exploring the client’s feelings.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "When there is a credible, imminent threat to an identifiable person, confidentiality exceptions may permit/require protective action. Doing nothing risks harm and is not consistent with standard risk-management practice."
+        },
+        {
+          "id": "B",
+          "text": "Immediately call Alex and the police and disclose all details of the client’s treatment to ensure everyone is fully informed.",
+          "nextNodeId": "end-partial",
+          "scoreDelta": 1,
+          "isBest": false,
+          "rationale": "Protective action may be appropriate, but “all details” is over-disclosure. EPPP-style answers usually emphasize assessing imminence/credibility, consulting resources, and making the minimum necessary disclosure."
+        },
+        {
+          "id": "C",
+          "text": "Conduct an immediate violence risk assessment and consult relevant legal/ethical resources; if the threat is imminent/credible, take reasonable steps to protect the potential victim (e.g., warn and/or notify law enforcement) with minimal necessary disclosure and documentation.",
+          "nextNodeId": "followup",
+          "scoreDelta": 2,
+          "isBest": true,
+          "rationale": "This matches typical duty-to-protect risk management: assess, consult, document, and act to protect when a credible imminent threat is made toward an identifiable person—while limiting disclosure to what is necessary."
+        },
+        {
+          "id": "D",
+          "text": "Terminate therapy immediately to avoid liability and refer the client to another provider.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "Termination does not resolve an imminent risk. In EPPP-style scenarios, abandoning care or avoiding action increases risk and is not considered a best response."
+        }
+      ]
+    },
+    {
+      "id": "followup",
+      "type": "decision",
+      "knId": "KN64",
+      "topicName": "APA Ethics Code Standards 3 & 4",
+      "prompt": "Your assessment indicates an imminent, credible threat toward an identifiable person. What action best fits ethical risk management principles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Take reasonable protective steps (e.g., notify law enforcement and/or warn the potential victim as permitted/required), document your assessment and consultations, and limit disclosure to the minimum necessary.",
+          "nextNodeId": "end-good",
+          "scoreDelta": 2,
+          "isBest": true,
+          "rationale": "This aligns with standard duty-to-protect practice: protective action plus thorough documentation/consultation, with minimum necessary disclosure."
+        },
+        {
+          "id": "B",
+          "text": "Document the threat in your notes but do not inform anyone to preserve confidentiality unless the client consents in writing.",
+          "nextNodeId": "end-poor",
+          "scoreDelta": 0,
+          "isBest": false,
+          "rationale": "When threats are imminent/credible, relying solely on documentation and waiting for consent can be inadequate and may conflict with duty-to-protect standards."
+        },
+        {
+          "id": "C",
+          "text": "Warn the potential victim but avoid contacting law enforcement to reduce the chance the client becomes angry and drops out of therapy.",
+          "nextNodeId": "end-partial",
+          "scoreDelta": 1,
+          "isBest": false,
+          "rationale": "Warning may be part of protection, but EPPP-style items typically emphasize taking reasonable protective steps, which may include law enforcement depending on jurisdiction and risk level."
+        },
+        {
+          "id": "D",
+          "text": "Seek a court order to break confidentiality before taking any protective action, regardless of urgency.",
+          "nextNodeId": "end-partial",
+          "scoreDelta": 1,
+          "isBest": false,
+          "rationale": "In urgent situations, waiting for a court order may delay necessary protection. Many jurisdictions allow/require disclosure without a court order when there is imminent risk."
+        }
+      ]
+    },
+    {
+      "id": "end-good",
+      "type": "end",
+      "summary": "When a client makes a credible, imminent threat toward an identifiable person, best practice is to assess risk, consult relevant resources, document, and take reasonable protective steps while limiting disclosures to the minimum necessary.",
+      "takeaways": [
+        "High-yield pattern: assess → consult → document → protect.",
+        "Disclose the minimum necessary information to achieve protection.",
+        "Exact legal duties vary by jurisdiction, but the EPPP tests the risk-management decision sequence."
+      ],
+      "recommendedLessons": [
+        { "topic": "APA Ethics Code Standards 4", "domainId": "8" },
+        { "topic": "APA Ethics Code Standards 10", "domainId": "8" }
+      ]
+    },
+    {
+      "id": "end-partial",
+      "type": "end",
+      "summary": "You prioritized protection, but review “minimum necessary disclosure” and the typical EPPP sequence: assess risk, consult resources, document, then take reasonable protective steps.",
+      "takeaways": [
+        "Protective action can be appropriate, but avoid unnecessary disclosures.",
+        "Document risk assessment and consultations.",
+        "EPPP answers often reward the structured decision sequence more than “act fast” alone."
+      ],
+      "recommendedLessons": [
+        { "topic": "APA Ethics Code Standards 4", "domainId": "8" }
+      ]
+    },
+    {
+      "id": "end-poor",
+      "type": "end",
+      "summary": "In credible, imminent threats to an identifiable person, “do nothing” or “avoid the situation” is usually not the best answer on EPPP-style items. Review confidentiality exceptions and duty-to-protect risk management.",
+      "takeaways": [
+        "Confidentiality has exceptions related to safety in many jurisdictions.",
+        "The EPPP often tests how to balance confidentiality with protection obligations.",
+        "Use consultation and documentation as part of the response, not as the entire response."
+      ],
+      "recommendedLessons": [
+        { "topic": "APA Ethics Code Standards 4", "domainId": "8" },
+        { "topic": "Professional Issues", "domainId": "8" }
+      ]
+    }
+  ]
+}
