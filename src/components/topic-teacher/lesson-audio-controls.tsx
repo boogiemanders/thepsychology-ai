@@ -202,6 +202,7 @@ export function LessonAudioControls(props: {
   const [progress, setProgress] = useState<{ current: number; total: number }>({ current: 0, total: 0 })
   const [error, setError] = useState<string | null>(null)
   const [sourceCounts, setSourceCounts] = useState<{ pregen: number; live: number }>({ pregen: 0, live: 0 })
+  const [segmentSources, setSegmentSources] = useState<Array<'pregen' | 'live'>>([])
 
   const [audioUrls, setAudioUrls] = useState<string[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -252,6 +253,7 @@ export function LessonAudioControls(props: {
     setError(null)
     setCurrentIndex(0)
     setSourceCounts({ pregen: 0, live: 0 })
+    setSegmentSources([])
     setReadAlongWordIndex(null)
     setReadAlongTotalWords(0)
     setAudioUrls((prev) => {
@@ -397,6 +399,8 @@ export function LessonAudioControls(props: {
     setProgress({ current: 0, total: segments.length })
 
     setSourceCounts({ pregen: 0, live: 0 })
+    setSegmentSources([])
+    const sources: Array<'pregen' | 'live'> = []
 
     const incrementSource = (key: 'pregen' | 'live') => {
       setSourceCounts((prev) => ({ ...prev, [key]: prev[key] + 1 }))
@@ -421,13 +425,15 @@ export function LessonAudioControls(props: {
 	          speed: DEFAULT_TTS_SPEED,
 	          text: preparedText,
 	        })
-	        if (primaryUrl) {
+	          if (primaryUrl) {
 	          const pre = await fetch(primaryUrl, { signal: controller.signal }).catch(() => null)
 	          if (pre?.ok) {
 	            const blob = await pre.blob()
 	            const url = URL.createObjectURL(blob)
 	            urls.push(url)
 	            setAudioUrls([...urls])
+              sources.push('pregen')
+              setSegmentSources([...sources])
 	            incrementSource('pregen')
 	            continue
 	          }
@@ -447,6 +453,8 @@ export function LessonAudioControls(props: {
 	            const url = URL.createObjectURL(blob)
 	            urls.push(url)
 	            setAudioUrls([...urls])
+              sources.push('pregen')
+              setSegmentSources([...sources])
 	            incrementSource('pregen')
 	            continue
 	          }
@@ -479,6 +487,8 @@ export function LessonAudioControls(props: {
 	      const url = URL.createObjectURL(blob)
 	      urls.push(url)
 	      setAudioUrls([...urls])
+        sources.push('live')
+        setSegmentSources([...sources])
 	      incrementSource('live')
 	    }
 
@@ -626,6 +636,7 @@ export function LessonAudioControls(props: {
   }
 
   const hasAudio = audioUrls.length > 0
+  const currentSegmentSource = hasAudio ? segmentSources[currentIndex] : null
   const showStickyBar = hasAudio || shouldAutoLoadPregenFullLesson
   const showGenerateButton = !shouldAutoLoadPregenFullLesson || voice !== DEFAULT_VOICE || interestsActive
   const showRegenerateButton = hasAudio && (interestsActive || voice !== DEFAULT_VOICE || !isEnglishish(languagePreference))
@@ -791,6 +802,28 @@ export function LessonAudioControls(props: {
                 <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">
                   {hasAudio ? `${currentIndex + 1}/${audioUrls.length}` : ''}
                 </span>
+
+                {currentSegmentSource && (
+                  <span
+                    className={`hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${
+                      currentSegmentSource === 'pregen'
+                        ? 'border-emerald-400/40 text-emerald-500'
+                        : 'border-amber-400/40 text-amber-500'
+                    }`}
+                    title={
+                      currentSegmentSource === 'pregen'
+                        ? 'This segment is pre-generated.'
+                        : 'This segment was generated live.'
+                    }
+                  >
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full ${
+                        currentSegmentSource === 'pregen' ? 'bg-emerald-500' : 'bg-amber-500'
+                      }`}
+                    />
+                    {currentSegmentSource === 'pregen' ? 'Pregen' : 'Live'}
+                  </span>
+                )}
 
                 {readAlongEnabled && hasAudio && (
                   <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">

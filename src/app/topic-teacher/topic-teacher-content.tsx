@@ -2704,7 +2704,7 @@ export function TopicTeacherContent() {
           </div>
 
           {/* Language Preference Input */}
-          <div className="flex-1 sm:max-w-xs">
+          <div className="flex-1 sm:max-w-xs" data-tour="language-input">
             <div className="relative">
             <div className="flex flex-wrap items-center gap-2 p-2 pl-3 border border-input rounded-md bg-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
               {/* Display language preference as a single tag */}

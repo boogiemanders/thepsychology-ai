@@ -49,12 +49,20 @@ export const TOPIC_TEACHER_TOUR_STEPS: TourStep[] = [
     order: 5,
   },
   {
+    id: 'language-input',
+    targetSelector: '[data-tour="language-input"]',
+    title: 'Choose Your Language',
+    description: 'Prefer learning in another language? Set your preferred language and lessons will be translated for you.',
+    placement: 'bottom',
+    order: 6,
+  },
+  {
     id: 'question-input',
     targetSelector: '[data-tour="question-input"]',
     title: 'Ask Questions',
     description: 'Confused about something? Ask follow-up questions and get instant AI explanations.',
     placement: 'top',
-    order: 6,
+    order: 7,
   },
   {
     id: 'quiz-button',
@@ -62,6 +70,6 @@ export const TOPIC_TEACHER_TOUR_STEPS: TourStep[] = [
     title: 'Test Your Knowledge',
     description: 'Ready to practice? Take a quick quiz to reinforce what you learned.',
     placement: 'top',
-    order: 7,
+    order: 8,
   },
 ]
