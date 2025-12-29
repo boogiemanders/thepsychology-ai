@@ -274,8 +274,8 @@ export function LessonAudioControls(props: {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Dynamic top position - starts at 120px (below breadcrumb), moves up to 64px as user scrolls
-  const stickyTop = Math.max(120 - scrollY, 64)
+  // Dynamic top position - starts at 120px (below breadcrumb), moves up to 76px as user scrolls
+  const stickyTop = Math.max(120 - scrollY, 76)
 
   const handleEnded = () => {
     const next = currentIndex + 1
@@ -689,10 +689,10 @@ export function LessonAudioControls(props: {
       {/* Unified Sticky Audio Bar */}
       {showStickyBar && (
         <div
-          className="fixed left-0 right-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 transition-[top] duration-100"
+          className="fixed left-0 right-0 z-50 transition-[top] duration-100 pointer-events-none"
           style={{ top: `${stickyTop}px` }}
         >
-          <div className="mx-auto max-w-[800px] px-4 py-2">
+          <div className="mx-auto max-w-[800px] px-4 py-2 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border/40 pointer-events-auto">
             <div className="flex items-center gap-2">
               {/* Playback controls - first for prominence */}
               <div className="flex items-center gap-1 shrink-0">
