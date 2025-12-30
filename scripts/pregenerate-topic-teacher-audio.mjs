@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import crypto from 'node:crypto'
+import https from 'node:https'
 
 const DEFAULT_CONTENT_ROOT = 'topic-content-v3-test'
 const DEFAULT_OUT_DIR = path.join('public', 'topic-teacher-audio', 'v1')
@@ -12,6 +13,7 @@ const DEFAULT_FORMAT = 'mp3'
 const DEFAULT_SPEED = 1
 const DEFAULT_MAX_CHARS_PER_SEGMENT = 1400
 const DEFAULT_SECTION_SPLIT_LEVEL = 2
+const DEFAULT_REQUEST_TIMEOUT_MS = 10 * 60 * 1000
 const DEFAULT_CONCURRENCY = 3
 const DEFAULT_MAX_RETRIES = 3
 const DEFAULT_RETRY_DELAY_MS = 1200
@@ -28,6 +30,7 @@ function parseArgs(argv) {
     speed: DEFAULT_SPEED,
     maxCharsPerSegment: DEFAULT_MAX_CHARS_PER_SEGMENT,
     sectionSplitLevel: DEFAULT_SECTION_SPLIT_LEVEL,
+    requestTimeoutMs: DEFAULT_REQUEST_TIMEOUT_MS,
     limit: Infinity,
     concurrency: DEFAULT_CONCURRENCY,
     maxRetries: DEFAULT_MAX_RETRIES,
@@ -50,6 +53,8 @@ function parseArgs(argv) {
       args.maxCharsPerSegment = Number.parseInt(argv[++i] ?? '', 10)
     } else if (arg === '--section-split-level') {
       args.sectionSplitLevel = Number.parseInt(argv[++i] ?? '', 10)
+    } else if (arg === '--request-timeout-ms') {
+      args.requestTimeoutMs = Number.parseInt(argv[++i] ?? '', 10)
     }
     else if (arg === '--limit') args.limit = Number.parseInt(argv[++i] ?? '', 10)
     else if (arg === '--concurrency') args.concurrency = Number.parseInt(argv[++i] ?? '', 10)
@@ -69,6 +74,9 @@ function parseArgs(argv) {
     args.sectionSplitLevel > 6
   ) {
     args.sectionSplitLevel = DEFAULT_SECTION_SPLIT_LEVEL
+  }
+  if (!Number.isFinite(args.requestTimeoutMs) || args.requestTimeoutMs <= 0) {
+    args.requestTimeoutMs = DEFAULT_REQUEST_TIMEOUT_MS
   }
   if (!Number.isFinite(args.concurrency) || args.concurrency <= 0) args.concurrency = DEFAULT_CONCURRENCY
   if (!Number.isFinite(args.maxRetries) || args.maxRetries < 0) args.maxRetries = DEFAULT_MAX_RETRIES
@@ -476,40 +484,96 @@ function buildSegmentsFromLegacyContent(baseContentStripped, metaphorRanges, max
   return segments
 }
 
-async function requestSpeech({ apiKey, model, voice, format, speed, text }) {
-  return fetch('https://api.openai.com/v1/audio/speech', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      voice,
-      input: text,
-      response_format: format,
-      speed,
-    }),
+async function requestSpeech({ apiKey, model, voice, format, speed, text, timeoutMs }) {
+  const payload = JSON.stringify({
+    model,
+    voice,
+    input: text,
+    response_format: format,
+    speed,
+  })
+
+  return new Promise((resolve, reject) => {
+    const timeout = timeoutMs ?? DEFAULT_REQUEST_TIMEOUT_MS
+    const req = https.request(
+      {
+        method: 'POST',
+        hostname: 'api.openai.com',
+        path: '/v1/audio/speech',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Length': Buffer.byteLength(payload),
+        },
+      },
+      (res) => {
+        const status = res.statusCode ?? 0
+        const chunks = []
+
+        res.setTimeout(timeout, () => {
+          res.destroy(new Error(`OpenAI response timed out after ${timeout}ms`))
+        })
+
+        res.on('data', (chunk) => {
+          chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk))
+        })
+        res.on('end', () => {
+          const buffer = Buffer.concat(chunks)
+          if (status >= 200 && status < 300) {
+            resolve({ ok: true, status, buffer, errorText: null })
+            return
+          }
+          resolve({ ok: false, status, buffer: null, errorText: buffer.toString('utf8') })
+        })
+        res.on('error', reject)
+      }
+    )
+
+    req.on('error', reject)
+    req.setTimeout(timeout, () => {
+      req.destroy(new Error(`OpenAI request timed out after ${timeout}ms`))
+    })
+    req.write(payload)
+    req.end()
   })
 }
 
-async function requestSpeechWithRetry({ apiKey, model, voice, format, speed, text, maxRetries, retryDelayMs }) {
+async function requestSpeechWithRetry({
+  apiKey,
+  model,
+  voice,
+  format,
+  speed,
+  text,
+  maxRetries,
+  retryDelayMs,
+  timeoutMs,
+}) {
   let attempt = 0
 
   while (true) {
-    const resp = await requestSpeech({ apiKey, model, voice, format, speed, text })
-    if (resp.ok) return { resp, errorText: null }
+    let resp
+    try {
+      resp = await requestSpeech({ apiKey, model, voice, format, speed, text, timeoutMs })
+    } catch (err) {
+      const retryable = attempt < maxRetries
+      if (!retryable) {
+        return { ok: false, status: 0, buffer: null, errorText: err?.message ?? String(err) }
+      }
+      await sleep(retryDelayMs * Math.pow(2, attempt))
+      attempt += 1
+      continue
+    }
+
+    if (resp.ok) return resp
 
     if (resp.status === 401 || resp.status === 403) {
-      const errText = await resp.text().catch(() => '')
+      const errText = resp.errorText ?? ''
       throw new Error(`OpenAI auth error (${resp.status}): ${errText}`)
     }
 
     const retryable = resp.status === 429 || resp.status >= 500
-    if (!retryable || attempt >= maxRetries) {
-      const errText = await resp.text().catch(() => '')
-      return { resp, errorText: errText }
-    }
+    if (!retryable || attempt >= maxRetries) return resp
 
     await sleep(retryDelayMs * Math.pow(2, attempt))
     attempt += 1
@@ -576,7 +640,7 @@ async function processSegments({
 
       try {
         let modelUsed = args.model
-        let { resp, errorText } = await requestSpeechWithRetry({
+        let result = await requestSpeechWithRetry({
           apiKey,
           model: modelUsed,
           voice: args.voice,
@@ -585,14 +649,15 @@ async function processSegments({
           text,
           maxRetries: args.maxRetries,
           retryDelayMs: args.retryDelayMs,
+          timeoutMs: args.requestTimeoutMs,
         })
 
-        if (!resp.ok && modelUsed === args.model) {
-          const lower = (errorText || '').toLowerCase()
-          const looksLikeModelError = lower.includes('model') || lower.includes('not found') || resp.status === 404
+        if (!result.ok && modelUsed === args.model) {
+          const lower = (result.errorText || '').toLowerCase()
+          const looksLikeModelError = lower.includes('model') || lower.includes('not found') || result.status === 404
           if (looksLikeModelError) {
             modelUsed = args.fallbackModel
-            const retryResult = await requestSpeechWithRetry({
+            result = await requestSpeechWithRetry({
               apiKey,
               model: modelUsed,
               voice: args.voice,
@@ -601,25 +666,23 @@ async function processSegments({
               text,
               maxRetries: args.maxRetries,
               retryDelayMs: args.retryDelayMs,
+              timeoutMs: args.requestTimeoutMs,
             })
-            resp = retryResult.resp
-            errorText = retryResult.errorText
-          } else if (errorText) {
-            console.warn(`  ⚠️  OpenAI error (${resp.status}): ${errorText.slice(0, 200)}`)
+          } else if (result.errorText) {
+            console.warn(`  ⚠️  OpenAI error (${result.status}): ${result.errorText.slice(0, 200)}`)
           }
         }
 
-        if (!resp.ok) {
-          const errText = errorText ?? (await resp.text().catch(() => ''))
-          console.warn(`  ⚠️  OpenAI error (${resp.status}): ${errText.slice(0, 200)}`)
+        if (!result.ok) {
+          const errText = result.errorText ?? ''
+          console.warn(`  ⚠️  OpenAI error (${result.status}): ${errText.slice(0, 200)}`)
           failed += 1
           processed += 1
           maybeLog()
           continue
         }
 
-        const buffer = Buffer.from(await resp.arrayBuffer())
-        fs.writeFileSync(outPath, buffer)
+        fs.writeFileSync(outPath, result.buffer)
         generated += 1
         processed += 1
         maybeLog()
@@ -657,6 +720,7 @@ async function main() {
   console.log(`Voice: ${args.voice}, format: ${args.format}, speed: ${args.speed}`)
   console.log(`Max chars per segment: ${args.maxCharsPerSegment}`)
   console.log(`Section split level: H${args.sectionSplitLevel}`)
+  console.log(`Request timeout: ${args.requestTimeoutMs}ms`)
   console.log(`Concurrency: ${args.concurrency}, retries: ${args.maxRetries}`)
   console.log(args.run ? 'Mode: RUN (will call OpenAI)' : 'Mode: DRY RUN (no API calls)')
 
