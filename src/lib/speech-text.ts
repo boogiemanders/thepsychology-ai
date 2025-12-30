@@ -60,6 +60,85 @@ export function prepareTextForTts(text: string): string {
   return input.replace(/\bE\.?P\.?P\.?P\.?\b/gi, 'E triple P').trim()
 }
 
+const DIGIT_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+const TEEN_WORDS = [
+  'ten',
+  'eleven',
+  'twelve',
+  'thirteen',
+  'fourteen',
+  'fifteen',
+  'sixteen',
+  'seventeen',
+  'eighteen',
+  'nineteen',
+]
+const TENS_WORDS = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+
+function numberToWordsUnder100(value: number): string {
+  if (value < 10) return DIGIT_WORDS[value]
+  if (value < 20) return TEEN_WORDS[value - 10]
+  const tens = Math.floor(value / 10)
+  const ones = value % 10
+  const tensWord = TENS_WORDS[tens - 2]
+  return ones ? `${tensWord} ${DIGIT_WORDS[ones]}` : tensWord
+}
+
+function numberToWordsUnder1000(value: number): string {
+  if (value < 100) return numberToWordsUnder100(value)
+  const hundreds = Math.floor(value / 100)
+  const rest = value % 100
+  const base = `${DIGIT_WORDS[hundreds]} hundred`
+  return rest ? `${base} ${numberToWordsUnder100(rest)}` : base
+}
+
+function numberToWords(value: number): string {
+  if (!Number.isFinite(value)) return ''
+  if (value < 0) {
+    const positive = numberToWords(Math.abs(value))
+    return positive ? `minus ${positive}` : ''
+  }
+  if (value < 1000) return numberToWordsUnder1000(value)
+  if (value < 1_000_000) {
+    const thousands = Math.floor(value / 1000)
+    const rest = value % 1000
+    const base = `${numberToWordsUnder1000(thousands)} thousand`
+    return rest ? `${base} ${numberToWordsUnder1000(rest)}` : base
+  }
+  if (value < 1_000_000_000) {
+    const millions = Math.floor(value / 1_000_000)
+    const rest = value % 1_000_000
+    const base = `${numberToWordsUnder1000(millions)} million`
+    return rest ? `${base} ${numberToWords(rest)}` : base
+  }
+  return String(value)
+}
+
+function expandNumericToken(token: string): string {
+  const normalized = token.replace(/,/g, '')
+  if (!/^\d+(\.\d+)?$/.test(normalized)) return token
+
+  const [wholeRaw, fraction] = normalized.split('.')
+  const wholeValue = Number.parseInt(wholeRaw, 10)
+  const wholeWords = numberToWords(wholeValue)
+  if (!wholeWords) return token
+  if (!fraction) return wholeWords
+
+  const fractionWords = fraction
+    .split('')
+    .map((digit) => DIGIT_WORDS[Number.parseInt(digit, 10)])
+    .filter(Boolean)
+    .join(' ')
+
+  return fractionWords ? `${wholeWords} point ${fractionWords}` : wholeWords
+}
+
+export function expandNumericTokenForReadAlong(token: string): string[] {
+  const expanded = expandNumericToken(token)
+  if (expanded === token) return []
+  return expanded.split(/\s+/).filter(Boolean)
+}
+
 export function normalizeTextForReadAlong(text: string): string {
   const input = typeof text === 'string' ? text : ''
   if (!input.trim()) return ''
@@ -72,20 +151,26 @@ export function normalizeTextForReadAlong(text: string): string {
   // Spell out ampersands so word counts match speech.
   normalized = normalized.replace(/&/g, ' and ')
 
-  // Expand numeric ranges with percent first (e.g., 8-10% -> 8 to 10 percent).
+  // Expand numeric ranges with percent first (e.g., 8-10% -> eight to ten percent).
   normalized = normalized.replace(
     /\b(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)%\b/g,
-    '$1 to $2 percent'
+    (_match, start, end) => `${expandNumericToken(start)} to ${expandNumericToken(end)} percent`
   )
 
-  // Expand numeric ranges without percent (e.g., 8-10 -> 8 to 10).
+  // Expand numeric ranges without percent (e.g., 8-10 -> eight to ten).
   normalized = normalized.replace(
     /\b(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)\b/g,
-    '$1 to $2'
+    (_match, start, end) => `${expandNumericToken(start)} to ${expandNumericToken(end)}`
   )
 
-  // Expand standalone percentages (e.g., 8% -> 8 percent).
-  normalized = normalized.replace(/\b(\d+(?:\.\d+)?)%\b/g, '$1 percent')
+  // Expand standalone percentages (e.g., 8% -> eight percent).
+  normalized = normalized.replace(
+    /\b(\d+(?:\.\d+)?)%\b/g,
+    (_match, value) => `${expandNumericToken(value)} percent`
+  )
+
+  // Expand remaining numeric tokens to spoken words (e.g., 128 -> one hundred twenty eight).
+  normalized = normalized.replace(/\b\d+(?:\.\d+)?\b/g, (match) => expandNumericToken(match))
 
   // Spell out short acronyms (e.g., CNS -> C N S). Skip EPPP (already handled).
   normalized = normalized.replace(/\b([A-Z]{2,5})\b/g, (match) => {

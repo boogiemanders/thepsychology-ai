@@ -1,12 +1,20 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { chunkTextForTts, markdownToSpeakableText, normalizeTextForReadAlong, prepareTextForTts } from '@/lib/speech-text'
 import { Highlighter, Pause, Play, ScrollText, SkipBack, SkipForward } from 'lucide-react'
 
 type MetaphorRange = { start: number; end: number }
+
+type MarkdownSection = {
+  title: string | null
+  level: number
+  start: number
+  end: number
+  markdown: string
+}
 
 const DEFAULT_VOICE = 'alloy'
 
@@ -34,6 +42,29 @@ function computeWordProgressMap(text: string): number[] {
   const matches = Array.from(text.matchAll(WORD_REGEX))
   if (matches.length === 0) return []
 
+  const lines = text
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean)
+  const tableLike =
+    lines.length >= 2 &&
+    lines.filter((line) => line.includes(',')).length / lines.length >= 0.6 &&
+    lines.some((line) => /\d/.test(line))
+  const tableLineWordCounts = tableLike
+    ? lines
+        .map((line) => (line.match(WORD_REGEX) || []).length)
+        .filter((count) => count > 0)
+    : []
+  const avgWordsPerTableLine =
+    tableLineWordCounts.length > 0
+      ? tableLineWordCounts.reduce((sum, count) => sum + count, 0) / tableLineWordCounts.length
+      : 0
+  const tableRowPauseBoost = tableLike
+    ? Math.min(3.5, Math.max(1.4, avgWordsPerTableLine * 0.5))
+    : 0
+  const tableCommaBoost = tableLike ? 0.9 : 0
+  const tableWordMultiplier = tableLike ? 1.35 : 1
+
   const weights: number[] = []
   for (let i = 0; i < matches.length; i += 1) {
     const match = matches[i]
@@ -42,16 +73,16 @@ function computeWordProgressMap(text: string): number[] {
     const nextIndex = matches[i + 1]?.index ?? text.length
     const gap = text.slice(start, nextIndex)
 
-    const syllables = estimateSyllables(word)
+    const syllables = estimateSyllables(word) * tableWordMultiplier
     let pauseWeight = 0
 
     if (gap.includes('\n\n')) {
-      pauseWeight += 1.2
+      pauseWeight += 1.2 + tableRowPauseBoost
     } else if (gap.includes('\n')) {
-      pauseWeight += 0.8
+      pauseWeight += 0.8 + tableRowPauseBoost
     }
     if (/[.!?]/.test(gap)) pauseWeight += 0.9
-    if (/[,:;]/.test(gap)) pauseWeight += 0.5
+    if (/[,:;]/.test(gap)) pauseWeight += 0.5 + (tableLike && /,/.test(gap) ? tableCommaBoost : 0)
     if (/(?:--|\u2014|\u2013)/.test(gap)) pauseWeight += 0.3
 
     weights.push(Math.max(0.9, syllables) + pauseWeight)
@@ -224,7 +255,70 @@ function isEnglishish(raw: string | null): boolean {
   return !normalized || normalized === 'english' || normalized === 'en' || normalized === 'eng'
 }
 
-export function LessonAudioControls(props: {
+function splitMarkdownIntoSections(markdown: string, splitLevel: number): MarkdownSection[] {
+  const input = typeof markdown === 'string' ? markdown : ''
+  if (!input.trim()) return []
+
+  const sections: MarkdownSection[] = []
+  const lines = input.split('\n')
+  let inFence = false
+
+  let currentStart = 0
+  let currentTitle: string | null = null
+  let currentLevel = 0
+
+  let offset = 0
+
+  const flush = (end: number) => {
+    if (end <= currentStart) return
+    const slice = input.slice(currentStart, end)
+    if (!slice.trim()) return
+
+    const title = currentTitle ?? 'Intro'
+    sections.push({
+      title,
+      level: currentLevel,
+      start: currentStart,
+      end,
+      markdown: slice,
+    })
+  }
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i]
+    const lineStart = offset
+    const hasNewline = i < lines.length - 1
+    offset += line.length + (hasNewline ? 1 : 0)
+
+    const trimmed = line.trim()
+    if (trimmed.startsWith('```')) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+
+    const match = line.match(/^(#{1,6})\s+(.+)$/)
+    if (!match) continue
+    const level = match[1]?.length ?? 0
+    const title = match[2]?.trim() ?? ''
+    if (!title) continue
+    if (level !== splitLevel) continue
+
+    flush(lineStart)
+    currentStart = lineStart
+    currentTitle = title
+    currentLevel = level
+  }
+
+  flush(input.length)
+  return sections
+}
+
+export type LessonAudioControlsHandle = {
+  seekToWord: (wordIndex: number) => void
+}
+
+type LessonAudioControlsProps = {
   lessonMarkdown: string
   baseLessonMarkdown: string
   metaphorRanges: MetaphorRange[]
@@ -239,7 +333,9 @@ export function LessonAudioControls(props: {
   onWordProgress?: (payload: { wordIndex: number | null; totalWords: number }) => void
   autoScrollEnabled?: boolean
   onAutoScrollToggle?: () => void
-}) {
+}
+
+export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonAudioControlsProps>((props, ref) => {
   const {
     lessonMarkdown,
     baseLessonMarkdown,
@@ -283,14 +379,28 @@ export function LessonAudioControls(props: {
   const segmentWordOffsetsRef = useRef<number[]>([])
   const totalWordsRef = useRef(0)
   const lastWordIndexRef = useRef<number | null>(null)
+  const pendingSeekRef = useRef<{ segmentIndex: number; ratio: number } | null>(null)
+  const pendingSeekWordRef = useRef<number | null>(null)
+  const handleGenerateRef = useRef<(() => void) | null>(null)
+  const segmentSectionIndexRef = useRef<number[]>([])
+  const sectionStartIndexRef = useRef<number[]>([])
+  const [sectionTitles, setSectionTitles] = useState<string[]>([])
 
   const lessonReady = Boolean(lessonMarkdown && lessonMarkdown.trim())
-  const effectiveDisabledReason = disabledReason ?? (!lessonReady ? 'Load a lesson to enable audio.' : null)
-  const isDisabled = Boolean(effectiveDisabledReason)
   const interestsActive = Boolean(userInterests && userInterests.trim())
-  const shouldAutoLoadPregenFullLesson =
-    lessonReady && voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
   const canUsePregen = voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
+  const baseContentReady = Boolean(baseLessonMarkdown && baseLessonMarkdown.trim())
+  const pregenReady = !canUsePregen || baseContentReady
+  const shouldAutoLoadPregenFullLesson =
+    lessonReady && voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference) && pregenReady
+  const effectiveDisabledReason =
+    disabledReason ??
+    (!lessonReady
+      ? 'Load a lesson to enable audio.'
+      : !pregenReady
+        ? 'Loading base content for pre-generated audio...'
+        : null)
+  const isDisabled = Boolean(effectiveDisabledReason)
 
   const speakableFullText = useMemo(() => {
     if (!lessonReady) return ''
@@ -312,9 +422,12 @@ export function LessonAudioControls(props: {
     abortRef.current = null
     autoPlayNextRef.current = false
     setIsGenerating(false)
+    setIsPlaying(false)
     setProgress({ current: 0, total: 0 })
     setError(null)
     setCurrentIndex(0)
+    setCurrentTime(0)
+    setDuration(0)
     setSourceCounts({ pregen: 0, live: 0 })
     setSegmentSources([])
     setReadAlongWordIndex(null)
@@ -328,6 +441,11 @@ export function LessonAudioControls(props: {
     segmentWordOffsetsRef.current = []
     totalWordsRef.current = 0
     lastWordIndexRef.current = null
+    pendingSeekRef.current = null
+    pendingSeekWordRef.current = null
+    segmentSectionIndexRef.current = []
+    sectionStartIndexRef.current = []
+    setSectionTitles([])
     onWordProgress?.({ wordIndex: null, totalWords: 0 })
     if (audioRef.current) {
       audioRef.current.pause()
@@ -338,7 +456,6 @@ export function LessonAudioControls(props: {
 
   useEffect(() => {
     clearAudio()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonMarkdown])
 
   useEffect(() => {
@@ -350,7 +467,6 @@ export function LessonAudioControls(props: {
       abortRef.current?.abort()
       revokeUrls(audioUrlsRef.current)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Track scroll position for dynamic sticky bar positioning
@@ -364,6 +480,7 @@ export function LessonAudioControls(props: {
   const stickyTop = Math.max(120 - scrollY, 76)
 
   const handleEnded = () => {
+    setIsPlaying(false)
     const next = currentIndex + 1
     if (next >= audioUrls.length) return
     autoPlayNextRef.current = true
@@ -401,6 +518,92 @@ export function LessonAudioControls(props: {
     onWordProgress({ wordIndex: globalIndex, totalWords: totalWordsRef.current })
   }, [currentIndex, onWordProgress])
 
+  const applyPendingSeek = useCallback(() => {
+    const pending = pendingSeekRef.current
+    const audio = audioRef.current
+    if (!pending || !audio) return
+    if (pending.segmentIndex !== currentIndex) return
+    if (!audioUrls[pending.segmentIndex]) return
+
+    const apply = () => {
+      const durationSeconds = getEffectiveDurationSeconds(audio)
+      if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) return
+      const clampedRatio = Math.min(1, Math.max(0, pending.ratio))
+      const targetTime = Math.min(durationSeconds, durationSeconds * clampedRatio)
+      audio.currentTime = targetTime
+      setCurrentTime(targetTime)
+      updateWordProgressFromAudio()
+      pendingSeekRef.current = null
+      audio.play().catch(() => {})
+    }
+
+    const durationSeconds = getEffectiveDurationSeconds(audio)
+    if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) {
+      let handled = false
+      const handleReady = () => {
+        if (handled) return
+        handled = true
+        apply()
+      }
+      audio.addEventListener('loadedmetadata', handleReady, { once: true })
+      audio.addEventListener('loadeddata', handleReady, { once: true })
+      audio.load()
+      return
+    }
+
+    apply()
+  }, [audioUrls, currentIndex, updateWordProgressFromAudio])
+
+  const seekToWord = useCallback(
+    (wordIndex: number) => {
+      if (!Number.isFinite(wordIndex)) return
+      const counts = segmentWordCountsRef.current
+      if (counts.length === 0) {
+        pendingSeekWordRef.current = Math.max(0, Math.floor(wordIndex))
+        if (audioUrls.length === 0 && !isGenerating) {
+          handleGenerateRef.current?.()
+        }
+        return
+      }
+
+      const totalWords =
+        totalWordsRef.current || counts.reduce((sum, count) => sum + (Number.isFinite(count) ? count : 0), 0)
+      if (totalWords <= 0) return
+
+      const clamped = Math.max(0, Math.min(Math.floor(wordIndex), totalWords - 1))
+      let segmentIndex = counts.length - 1
+      for (let i = 0; i < counts.length; i += 1) {
+        const offset = segmentWordOffsetsRef.current[i] ?? 0
+        const count = counts[i] ?? 0
+        if (clamped >= offset && clamped < offset + count) {
+          segmentIndex = i
+          break
+        }
+      }
+
+      const localIndex = Math.max(0, clamped - (segmentWordOffsetsRef.current[segmentIndex] ?? 0))
+      const progressMap = segmentWordProgressRef.current[segmentIndex]
+      const ratio =
+        progressMap && progressMap.length > 0
+          ? localIndex <= 0
+            ? 0
+            : Math.max(0, Math.min(1, progressMap[localIndex - 1] ?? 0))
+          : counts[segmentIndex] > 0
+            ? Math.max(0, Math.min(1, localIndex / counts[segmentIndex]))
+            : 0
+
+      pendingSeekRef.current = { segmentIndex, ratio }
+      if (segmentIndex !== currentIndex) {
+        setCurrentIndex(segmentIndex)
+        return
+      }
+      applyPendingSeek()
+    },
+    [applyPendingSeek, audioUrls.length, currentIndex, isGenerating]
+  )
+
+  useImperativeHandle(ref, () => ({ seekToWord }), [seekToWord])
+
   useEffect(() => {
     if (!autoPlayNextRef.current) return
     const audio = audioRef.current
@@ -421,6 +624,30 @@ export function LessonAudioControls(props: {
   useEffect(() => {
     updateWordProgressFromAudio()
   }, [audioUrls, currentIndex, updateWordProgressFromAudio])
+
+  useEffect(() => {
+    applyPendingSeek()
+  }, [applyPendingSeek, currentIndex, audioUrls])
+
+  useEffect(() => {
+    if (audioUrls.length > 0 || !isPlaying) return
+    setIsPlaying(false)
+  }, [audioUrls.length, isPlaying])
+
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+    const urls = audioUrlsRef.current
+    if (!urls[currentIndex]) return
+    const wasPlaying = isPlaying
+    audio.load()
+    if (wasPlaying) {
+      audio.play().catch(() => {
+        setIsPlaying(false)
+      })
+    }
+    setCurrentTime(0)
+  }, [currentIndex, isPlaying])
 
   useEffect(() => {
     if (!isPlaying || audioUrls.length === 0) return
@@ -463,6 +690,12 @@ export function LessonAudioControls(props: {
         setReadAlongWordIndex(null)
         setReadAlongTotalWords(total)
         onWordProgress({ wordIndex: null, totalWords: total })
+
+        if (pendingSeekWordRef.current !== null) {
+          const pendingIndex = pendingSeekWordRef.current
+          pendingSeekWordRef.current = null
+          setTimeout(() => seekToWord(pendingIndex), 0)
+        }
       } else {
         segmentWordCountsRef.current = []
         segmentWordProgressRef.current = []
@@ -492,96 +725,100 @@ export function LessonAudioControls(props: {
     }
 
     for (let i = 0; i < segments.length; i++) {
-	      if (controller.signal.aborted) {
-	        throw new DOMException('Aborted', 'AbortError')
-	      }
+      if (controller.signal.aborted) {
+        throw new DOMException('Aborted', 'AbortError')
+      }
 
-	      setProgress({ current: i, total: segments.length })
+      setProgress({ current: i, total: segments.length })
 
-	      const segment = segments[i]
-	      const preparedText = prepareTextForTts(segment.text)
+      const segment = segments[i]
+      const preparedText = prepareTextForTts(segment.text)
 
-	      const shouldTryPregenerated = segment.cacheable && segment.voice === DEFAULT_VOICE
-	      if (shouldTryPregenerated) {
-	        const primaryUrl = await computePublicAudioUrl({
-	          model: DEFAULT_TTS_MODEL,
-	          voice: segment.voice,
-	          format: 'mp3',
-	          speed: DEFAULT_TTS_SPEED,
-	          text: preparedText,
-	        })
-	          if (primaryUrl) {
-	          const pre = await fetch(primaryUrl, { signal: controller.signal }).catch(() => null)
-	          if (pre?.ok) {
-	            const blob = await pre.blob()
-	            const url = URL.createObjectURL(blob)
-	            urls.push(url)
-	            setAudioUrls([...urls])
-              sources.push('pregen')
-              setSegmentSources([...sources])
-	            incrementSource('pregen')
-	            continue
-	          }
-	        }
+      const shouldTryPregenerated = segment.cacheable && segment.voice === DEFAULT_VOICE
+      if (shouldTryPregenerated) {
+        const primaryUrl = await computePublicAudioUrl({
+          model: DEFAULT_TTS_MODEL,
+          voice: segment.voice,
+          format: 'mp3',
+          speed: DEFAULT_TTS_SPEED,
+          text: preparedText,
+        })
+        if (primaryUrl) {
+          const pre = await fetch(primaryUrl, { signal: controller.signal }).catch(() => null)
+          if (pre?.ok) {
+            const blob = await pre.blob()
+            const url = URL.createObjectURL(blob)
+            urls.push(url)
+            setAudioUrls([...urls])
+            sources.push('pregen')
+            setSegmentSources([...sources])
+            incrementSource('pregen')
+            continue
+          }
+        }
 
-	        const fallbackUrl = await computePublicAudioUrl({
-	          model: FALLBACK_TTS_MODEL,
-	          voice: segment.voice,
-	          format: 'mp3',
-	          speed: DEFAULT_TTS_SPEED,
-	          text: preparedText,
-	        })
-	        if (fallbackUrl) {
-	          const pre = await fetch(fallbackUrl, { signal: controller.signal }).catch(() => null)
-	          if (pre?.ok) {
-	            const blob = await pre.blob()
-	            const url = URL.createObjectURL(blob)
-	            urls.push(url)
-	            setAudioUrls([...urls])
-              sources.push('pregen')
-              setSegmentSources([...sources])
-	            incrementSource('pregen')
-	            continue
-	          }
-	        }
-	      }
+        const fallbackUrl = await computePublicAudioUrl({
+          model: FALLBACK_TTS_MODEL,
+          voice: segment.voice,
+          format: 'mp3',
+          speed: DEFAULT_TTS_SPEED,
+          text: preparedText,
+        })
+        if (fallbackUrl) {
+          const pre = await fetch(fallbackUrl, { signal: controller.signal }).catch(() => null)
+          if (pre?.ok) {
+            const blob = await pre.blob()
+            const url = URL.createObjectURL(blob)
+            urls.push(url)
+            setAudioUrls([...urls])
+            sources.push('pregen')
+            setSegmentSources([...sources])
+            incrementSource('pregen')
+            continue
+          }
+        }
+      }
 
-	      const response = await fetch('/api/topic-teacher/audio', {
-	        method: 'POST',
-	        headers: {
-	          'Content-Type': 'application/json',
-	        },
-	        signal: controller.signal,
-	        body: JSON.stringify({
-	          text: preparedText,
-	          voice: segment.voice,
-	          format: 'mp3',
-	          cacheable: Boolean(segment.cacheable),
-	          userId,
-	          topic,
-	          domain,
-	          languagePreference,
-	        }),
-	      })
+      const response = await fetch('/api/topic-teacher/audio', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        signal: controller.signal,
+        body: JSON.stringify({
+          text: preparedText,
+          voice: segment.voice,
+          format: 'mp3',
+          cacheable: Boolean(segment.cacheable),
+          userId,
+          topic,
+          domain,
+          languagePreference,
+        }),
+      })
 
       if (!response.ok) {
         throw new Error(await readApiErrorMessage(response, 'Failed to generate audio.'))
       }
 
-	      const blob = await response.blob()
-	      const url = URL.createObjectURL(blob)
-	      urls.push(url)
-	      setAudioUrls([...urls])
-        sources.push('live')
-        setSegmentSources([...sources])
-	      incrementSource('live')
-	    }
+      const blob = await response.blob()
+      const url = URL.createObjectURL(blob)
+      urls.push(url)
+      setAudioUrls([...urls])
+      sources.push('live')
+      setSegmentSources([...sources])
+      incrementSource('live')
+    }
 
     setProgress({ current: segments.length, total: segments.length })
   }
 
   const handleGenerate = async () => {
     if (isDisabled || isGenerating) return
+    if (canUsePregen && !baseContentReady) return
+
+    const maxCharsPerTtsRequest = readAlongEnabled ? 1400 : MAX_CHARS_PER_TTS_REQUEST
+    const sectionSplitLevel = 2
 
     setError(null)
     setIsGenerating(true)
@@ -594,53 +831,111 @@ export function LessonAudioControls(props: {
 
     try {
       const normalizedRanges =
-          baseLessonMarkdown && metaphorRanges.length > 0 && isEnglishish(languagePreference)
-            ? normalizeRanges(baseLessonMarkdown, metaphorRanges)
-            : []
+        baseLessonMarkdown && metaphorRanges.length > 0 && isEnglishish(languagePreference)
+          ? normalizeRanges(baseLessonMarkdown, metaphorRanges)
+          : []
 
-        if (baseLessonMarkdown && normalizedRanges.length > 0) {
-          const staticParts = buildStaticPartsFromRanges(baseLessonMarkdown, normalizedRanges)
-          const metaphorTexts = extractMetaphorTextsFromLesson(lessonMarkdown, staticParts)
+      const segments: Array<{ text: string; voice: string; cacheable?: boolean }> = []
+      const nextSectionTitles: string[] = []
+      const nextSectionStarts: number[] = []
+      const nextSegmentSectionIndices: number[] = []
+      let segmentCursor = 0
 
-          if (!metaphorTexts || metaphorTexts.length !== normalizedRanges.length) {
-            const chunks = chunkTextForTts(speakableFullText, MAX_CHARS_PER_TTS_REQUEST)
-            const segments = chunks.map((text) => ({ text, voice, cacheable: canUsePregen }))
-            await generateAudioForSegments(segments, true)
-            return
+      const pushSpeakableChunks = (options: { sectionIndex: number; text: string; cacheable?: boolean }) => {
+        const chunks = chunkTextForTts(options.text, maxCharsPerTtsRequest)
+        chunks.forEach((text) => {
+          if (!text.trim()) return
+          segments.push({ text, voice, cacheable: options.cacheable })
+          nextSegmentSectionIndices.push(options.sectionIndex)
+          segmentCursor += 1
+        })
+      }
+
+      if (baseLessonMarkdown && normalizedRanges.length > 0) {
+        const sections = splitMarkdownIntoSections(baseLessonMarkdown, sectionSplitLevel)
+        const staticPartsForExtraction = buildStaticPartsFromRanges(baseLessonMarkdown, normalizedRanges)
+        const extractedMetaphors = extractMetaphorTextsFromLesson(lessonMarkdown, staticPartsForExtraction)
+        const metaphorTexts =
+          extractedMetaphors && extractedMetaphors.length === normalizedRanges.length
+            ? extractedMetaphors
+            : normalizedRanges.map((range) => baseLessonMarkdown.slice(range.start, range.end))
+        const metaphorCacheable = !Boolean(userInterests && userInterests.trim())
+
+        for (let sectionIndex = 0; sectionIndex < sections.length; sectionIndex += 1) {
+          const section = sections[sectionIndex]
+          nextSectionTitles.push(section.title ?? 'Intro')
+          nextSectionStarts.push(segmentCursor)
+
+          const sectionRangesIndices: number[] = []
+          const sectionRanges: MetaphorRange[] = []
+          for (let i = 0; i < normalizedRanges.length; i += 1) {
+            const range = normalizedRanges[i]
+            if (range.start < section.start || range.end > section.end) continue
+            sectionRangesIndices.push(i)
+            sectionRanges.push({
+              start: range.start - section.start,
+              end: range.end - section.start,
+            })
           }
 
-	          const segments: Array<{ text: string; voice: string; cacheable?: boolean }> = []
-	          const metaphorCacheable = !Boolean(userInterests && userInterests.trim())
-	          for (let i = 0; i < staticParts.length; i++) {
-	            const staticMarkdown = staticParts[i]
-	            if (staticMarkdown.trim()) {
-	              const speakable = prepareTextForTts(markdownToSpeakableText(staticMarkdown))
-	              const chunks = chunkTextForTts(speakable, MAX_CHARS_PER_TTS_REQUEST)
-              chunks.forEach((text) => {
-                if (!text.trim()) return
-                segments.push({ text, voice, cacheable: true })
-              })
+          if (sectionRanges.length === 0) {
+            const speakable = prepareTextForTts(markdownToSpeakableText(section.markdown))
+            if (speakable.trim()) {
+              pushSpeakableChunks({ sectionIndex, text: speakable, cacheable: true })
+            }
+            continue
+          }
+
+          const baseSectionMarkdown = baseLessonMarkdown.slice(section.start, section.end)
+          const staticParts = buildStaticPartsFromRanges(baseSectionMarkdown, sectionRanges)
+          for (let partIndex = 0; partIndex < staticParts.length; partIndex += 1) {
+            const staticMarkdown = staticParts[partIndex]
+            if (staticMarkdown.trim()) {
+              const speakable = prepareTextForTts(markdownToSpeakableText(staticMarkdown))
+              if (speakable.trim()) {
+                pushSpeakableChunks({ sectionIndex, text: speakable, cacheable: true })
+              }
             }
 
-	            if (i < metaphorTexts.length) {
-	              const metaphorMarkdown = metaphorTexts[i]
-	              if (metaphorMarkdown.trim()) {
-	                const speakable = prepareTextForTts(markdownToSpeakableText(metaphorMarkdown))
-	                const chunks = chunkTextForTts(speakable, MAX_CHARS_PER_TTS_REQUEST)
-	                chunks.forEach((text) => {
-	                  if (!text.trim()) return
-	                  segments.push({ text, voice, cacheable: metaphorCacheable })
-	                })
-	              }
-	            }
-	          }
-
-          await generateAudioForSegments(segments, true)
-          return
+            if (partIndex < sectionRangesIndices.length) {
+              const metaphorMarkdown = metaphorTexts[sectionRangesIndices[partIndex]] ?? ''
+              if (metaphorMarkdown.trim()) {
+                const speakable = prepareTextForTts(markdownToSpeakableText(metaphorMarkdown))
+                if (speakable.trim()) {
+                  pushSpeakableChunks({
+                    sectionIndex,
+                    text: speakable,
+                    cacheable: metaphorCacheable,
+                  })
+                }
+              }
+            }
+          }
         }
 
-      const chunks = chunkTextForTts(speakableFullText, MAX_CHARS_PER_TTS_REQUEST)
-      const segments = chunks.map((text) => ({ text, voice, cacheable: canUsePregen }))
+        segmentSectionIndexRef.current = nextSegmentSectionIndices
+        sectionStartIndexRef.current = nextSectionStarts
+        setSectionTitles(nextSectionTitles)
+
+        await generateAudioForSegments(segments, true)
+        return
+      }
+
+      const sections = splitMarkdownIntoSections(lessonMarkdown, sectionSplitLevel)
+      for (let sectionIndex = 0; sectionIndex < sections.length; sectionIndex += 1) {
+        const section = sections[sectionIndex]
+        nextSectionTitles.push(section.title ?? 'Intro')
+        nextSectionStarts.push(segmentCursor)
+
+        const speakable = prepareTextForTts(markdownToSpeakableText(section.markdown))
+        if (!speakable.trim()) continue
+        pushSpeakableChunks({ sectionIndex, text: speakable, cacheable: canUsePregen })
+      }
+
+      segmentSectionIndexRef.current = nextSegmentSectionIndices
+      sectionStartIndexRef.current = nextSectionStarts
+      setSectionTitles(nextSectionTitles)
+
       await generateAudioForSegments(segments, true)
     } catch (err) {
       if ((err as Error)?.name === 'AbortError') {
@@ -657,6 +952,10 @@ export function LessonAudioControls(props: {
       setIsGenerating(false)
       abortRef.current = null
     }
+  }
+
+  handleGenerateRef.current = () => {
+    void handleGenerate()
   }
 
   const handleCancel = () => {
@@ -681,7 +980,42 @@ export function LessonAudioControls(props: {
     return `${mins}:${secs.toString().padStart(2, '0')}`
   }
 
+  const hasAudio = audioUrls.length > 0
+  const currentSectionIndex = hasAudio ? segmentSectionIndexRef.current[currentIndex] ?? 0 : 0
+  const sectionCount = sectionTitles.length
+
+  const jumpToSection = useCallback(
+    (targetSectionIndex: number) => {
+      if (!hasAudio) return
+      const starts = sectionStartIndexRef.current
+      if (starts.length === 0 || audioUrls.length === 0) {
+        setCurrentIndex((prev) => Math.max(0, Math.min(audioUrls.length - 1, prev)))
+        return
+      }
+
+      const clampedSection = Math.max(0, Math.min(targetSectionIndex, starts.length - 1))
+      const targetSegment = starts[clampedSection] ?? 0
+      const maxIndex = Math.max(0, audioUrls.length - 1)
+      setCurrentIndex(Math.max(0, Math.min(targetSegment, maxIndex)))
+    },
+    [audioUrls.length, hasAudio]
+  )
+
+  const handlePrevSection = () => {
+    jumpToSection(currentSectionIndex - 1)
+  }
+
+  const handleNextSection = () => {
+    jumpToSection(currentSectionIndex + 1)
+  }
+
   const handlePlayPause = () => {
+    if (audioUrls.length === 0) {
+      if (isDisabled || isGenerating) return
+      autoPlayNextRef.current = true
+      handleGenerateRef.current?.()
+      return
+    }
     const audio = audioRef.current
     if (!audio) return
     if (isPlaying) {
@@ -720,7 +1054,6 @@ export function LessonAudioControls(props: {
     updateWordProgressFromAudio()
   }
 
-  const hasAudio = audioUrls.length > 0
   const currentSegmentSource = hasAudio ? segmentSources[currentIndex] : null
   const showStickyBar = hasAudio || shouldAutoLoadPregenFullLesson
   const showGenerateButton = !shouldAutoLoadPregenFullLesson || voice !== DEFAULT_VOICE || interestsActive
@@ -730,7 +1063,6 @@ export function LessonAudioControls(props: {
     if (!shouldAutoLoadPregenFullLesson) return
     if (isDisabled || isGenerating || hasAudio || error) return
     void handleGenerate()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldAutoLoadPregenFullLesson, isDisabled, isGenerating, hasAudio, error])
 
   return (
@@ -820,17 +1152,18 @@ export function LessonAudioControls(props: {
               <div className="flex items-center gap-1 shrink-0">
                 <button
                   type="button"
-                  onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
-                  disabled={!hasAudio || currentIndex === 0}
+                  onClick={handlePrevSection}
+                  disabled={!hasAudio || currentSectionIndex <= 0}
                   className="p-1 rounded-full hover:bg-muted disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
-                  aria-label="Previous segment"
+                  aria-label="Previous section"
+                  title={sectionCount > 0 ? `Previous section (${currentSectionIndex + 1}/${sectionCount})` : 'Previous section'}
                 >
                   <SkipBack className="h-3.5 w-3.5" />
                 </button>
                 <button
                   type="button"
                   onClick={handlePlayPause}
-                  disabled={!hasAudio}
+                  disabled={!hasAudio && (isDisabled || isGenerating)}
                   className="p-1.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   aria-label={isPlaying ? 'Pause' : 'Play'}
                   data-tour="audio-play"
@@ -839,10 +1172,11 @@ export function LessonAudioControls(props: {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCurrentIndex((prev) => Math.min(audioUrls.length - 1, prev + 1))}
-                  disabled={!hasAudio || currentIndex >= audioUrls.length - 1}
+                  onClick={handleNextSection}
+                  disabled={!hasAudio || currentSectionIndex >= sectionCount - 1}
                   className="p-1 rounded-full hover:bg-muted disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
-                  aria-label="Next segment"
+                  aria-label="Next section"
+                  title={sectionCount > 0 ? `Next section (${currentSectionIndex + 1}/${sectionCount})` : 'Next section'}
                 >
                   <SkipForward className="h-3.5 w-3.5" />
                 </button>
@@ -884,9 +1218,11 @@ export function LessonAudioControls(props: {
                   </span>
                 </div>
 
-                <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">
-                  {hasAudio ? `${currentIndex + 1}/${audioUrls.length}` : ''}
-                </span>
+                {hasAudio && sectionCount > 0 && (
+                  <span className="text-xs text-muted-foreground tabular-nums hidden sm:block" title={sectionTitles[currentSectionIndex] ?? ''}>
+                    {`Section ${Math.min(sectionCount, currentSectionIndex + 1)}/${sectionCount}`}
+                  </span>
+                )}
 
                 {currentSegmentSource && (
                   <span
@@ -995,4 +1331,4 @@ export function LessonAudioControls(props: {
       )}
     </>
   )
-}
+})

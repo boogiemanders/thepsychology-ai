@@ -10,7 +10,8 @@ const FALLBACK_MODEL = 'tts-1'
 const DEFAULT_VOICE = 'alloy'
 const DEFAULT_FORMAT = 'mp3'
 const DEFAULT_SPEED = 1
-const MAX_CHARS_PER_SEGMENT = 3200
+const DEFAULT_MAX_CHARS_PER_SEGMENT = 1400
+const DEFAULT_SECTION_SPLIT_LEVEL = 2
 const DEFAULT_CONCURRENCY = 3
 const DEFAULT_MAX_RETRIES = 3
 const DEFAULT_RETRY_DELAY_MS = 1200
@@ -25,6 +26,8 @@ function parseArgs(argv) {
     voice: DEFAULT_VOICE,
     format: DEFAULT_FORMAT,
     speed: DEFAULT_SPEED,
+    maxCharsPerSegment: DEFAULT_MAX_CHARS_PER_SEGMENT,
+    sectionSplitLevel: DEFAULT_SECTION_SPLIT_LEVEL,
     limit: Infinity,
     concurrency: DEFAULT_CONCURRENCY,
     maxRetries: DEFAULT_MAX_RETRIES,
@@ -43,6 +46,11 @@ function parseArgs(argv) {
     else if (arg === '--model') args.model = argv[++i] ?? args.model
     else if (arg === '--fallback-model') args.fallbackModel = argv[++i] ?? args.fallbackModel
     else if (arg === '--speed') args.speed = Number.parseFloat(argv[++i] ?? `${args.speed}`)
+    else if (arg === '--max-chars-per-segment') {
+      args.maxCharsPerSegment = Number.parseInt(argv[++i] ?? '', 10)
+    } else if (arg === '--section-split-level') {
+      args.sectionSplitLevel = Number.parseInt(argv[++i] ?? '', 10)
+    }
     else if (arg === '--limit') args.limit = Number.parseInt(argv[++i] ?? '', 10)
     else if (arg === '--concurrency') args.concurrency = Number.parseInt(argv[++i] ?? '', 10)
     else if (arg === '--max-retries') args.maxRetries = Number.parseInt(argv[++i] ?? '', 10)
@@ -52,6 +60,16 @@ function parseArgs(argv) {
 
   if (!Number.isFinite(args.speed)) args.speed = DEFAULT_SPEED
   if (!Number.isFinite(args.limit)) args.limit = Infinity
+  if (!Number.isFinite(args.maxCharsPerSegment) || args.maxCharsPerSegment <= 0) {
+    args.maxCharsPerSegment = DEFAULT_MAX_CHARS_PER_SEGMENT
+  }
+  if (
+    !Number.isFinite(args.sectionSplitLevel) ||
+    args.sectionSplitLevel < 1 ||
+    args.sectionSplitLevel > 6
+  ) {
+    args.sectionSplitLevel = DEFAULT_SECTION_SPLIT_LEVEL
+  }
   if (!Number.isFinite(args.concurrency) || args.concurrency <= 0) args.concurrency = DEFAULT_CONCURRENCY
   if (!Number.isFinite(args.maxRetries) || args.maxRetries < 0) args.maxRetries = DEFAULT_MAX_RETRIES
   if (!Number.isFinite(args.retryDelayMs) || args.retryDelayMs <= 0) args.retryDelayMs = DEFAULT_RETRY_DELAY_MS
@@ -228,6 +246,63 @@ function prepareTextForTts(text) {
   return input.replace(/\bE\.?P\.?P\.?P\.?\b/gi, 'E triple P').trim()
 }
 
+function splitMarkdownIntoSections(markdown, splitLevel) {
+  const input = typeof markdown === 'string' ? markdown : ''
+  if (!input.trim()) return []
+
+  const sections = []
+  const lines = input.split('\n')
+  let inFence = false
+
+  let currentStart = 0
+  let currentTitle = null
+  let currentLevel = 0
+
+  let offset = 0
+
+  const flush = (end) => {
+    if (end <= currentStart) return
+    const slice = input.slice(currentStart, end)
+    if (!slice.trim()) return
+    sections.push({
+      title: currentTitle ?? 'Intro',
+      level: currentLevel,
+      start: currentStart,
+      end,
+      markdown: slice,
+    })
+  }
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i]
+    const lineStart = offset
+    const hasNewline = i < lines.length - 1
+    offset += line.length + (hasNewline ? 1 : 0)
+
+    const trimmed = line.trim()
+    if (trimmed.startsWith('```')) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+
+    const match = line.match(/^(#{1,6})\s+(.+)$/)
+    if (!match) continue
+    const level = match[1]?.length ?? 0
+    const title = match[2]?.trim() ?? ''
+    if (!title) continue
+    if (level !== splitLevel) continue
+
+    flush(lineStart)
+    currentStart = lineStart
+    currentTitle = title
+    currentLevel = level
+  }
+
+  flush(input.length)
+  return sections
+}
+
 function splitLongTextBySentences(text, maxChars) {
   const sentenceMatches = text.match(/[^.!?]+[.!?]+(?=\s|$)|[^.!?]+$/g)
   const sentences = sentenceMatches?.map((s) => s.trim()).filter(Boolean) ?? [text]
@@ -312,7 +387,71 @@ function chunkTextForTts(text, maxChars) {
   return chunks.filter(Boolean)
 }
 
-function buildSegmentsFromContent(baseContentStripped, metaphorRanges) {
+function buildStaticPartsFromRanges(baseMarkdown, ranges) {
+  const staticParts = []
+  let cursor = 0
+  for (const range of ranges) {
+    staticParts.push(baseMarkdown.slice(cursor, range.start))
+    cursor = range.end
+  }
+  staticParts.push(baseMarkdown.slice(cursor))
+  return staticParts
+}
+
+function buildSegmentsFromContent(baseContentStripped, metaphorRanges, options) {
+  const maxCharsPerSegment = options?.maxCharsPerSegment ?? DEFAULT_MAX_CHARS_PER_SEGMENT
+  const sectionSplitLevel = options?.sectionSplitLevel ?? DEFAULT_SECTION_SPLIT_LEVEL
+
+  const segments = []
+  const sections = splitMarkdownIntoSections(baseContentStripped, sectionSplitLevel)
+
+  for (const section of sections) {
+    const sectionRanges = []
+    for (const range of metaphorRanges) {
+      if (range.start < section.start || range.end > section.end) continue
+      sectionRanges.push({
+        start: range.start - section.start,
+        end: range.end - section.start,
+      })
+    }
+
+    if (sectionRanges.length === 0) {
+      const speakable = prepareTextForTts(markdownToSpeakableText(section.markdown))
+      for (const chunk of chunkTextForTts(speakable, maxCharsPerSegment)) {
+        if (chunk.trim()) segments.push(chunk)
+      }
+      continue
+    }
+
+    const sectionMarkdown = baseContentStripped.slice(section.start, section.end)
+    const staticParts = buildStaticPartsFromRanges(sectionMarkdown, sectionRanges)
+
+    for (let partIndex = 0; partIndex < staticParts.length; partIndex += 1) {
+      const staticMarkdown = staticParts[partIndex]
+      if (staticMarkdown.trim()) {
+        const speakable = prepareTextForTts(markdownToSpeakableText(staticMarkdown))
+        for (const chunk of chunkTextForTts(speakable, maxCharsPerSegment)) {
+          if (chunk.trim()) segments.push(chunk)
+        }
+      }
+
+      if (partIndex < sectionRanges.length) {
+        const range = sectionRanges[partIndex]
+        const metaphorMarkdown = sectionMarkdown.slice(range.start, range.end)
+        if (metaphorMarkdown.trim()) {
+          const speakable = prepareTextForTts(markdownToSpeakableText(metaphorMarkdown))
+          for (const chunk of chunkTextForTts(speakable, maxCharsPerSegment)) {
+            if (chunk.trim()) segments.push(chunk)
+          }
+        }
+      }
+    }
+  }
+
+  return segments
+}
+
+function buildSegmentsFromLegacyContent(baseContentStripped, metaphorRanges, maxCharsPerSegment) {
   const segments = []
   let cursor = 0
   for (let i = 0; i < metaphorRanges.length; i++) {
@@ -320,17 +459,17 @@ function buildSegmentsFromContent(baseContentStripped, metaphorRanges) {
     const staticMarkdown = baseContentStripped.slice(cursor, range.start)
     const metaphorMarkdown = baseContentStripped.slice(range.start, range.end)
 
-    for (const chunk of chunkTextForTts(prepareTextForTts(markdownToSpeakableText(staticMarkdown)), MAX_CHARS_PER_SEGMENT)) {
+    for (const chunk of chunkTextForTts(prepareTextForTts(markdownToSpeakableText(staticMarkdown)), maxCharsPerSegment)) {
       if (chunk.trim()) segments.push(chunk)
     }
-    for (const chunk of chunkTextForTts(prepareTextForTts(markdownToSpeakableText(metaphorMarkdown)), MAX_CHARS_PER_SEGMENT)) {
+    for (const chunk of chunkTextForTts(prepareTextForTts(markdownToSpeakableText(metaphorMarkdown)), maxCharsPerSegment)) {
       if (chunk.trim()) segments.push(chunk)
     }
     cursor = range.end
   }
 
   const tail = baseContentStripped.slice(cursor)
-  for (const chunk of chunkTextForTts(prepareTextForTts(markdownToSpeakableText(tail)), MAX_CHARS_PER_SEGMENT)) {
+  for (const chunk of chunkTextForTts(prepareTextForTts(markdownToSpeakableText(tail)), maxCharsPerSegment)) {
     if (chunk.trim()) segments.push(chunk)
   }
 
@@ -516,6 +655,8 @@ async function main() {
   console.log(`Output dir: ${args.outDir}`)
   console.log(`Model: ${args.model} (fallback: ${args.fallbackModel})`)
   console.log(`Voice: ${args.voice}, format: ${args.format}, speed: ${args.speed}`)
+  console.log(`Max chars per segment: ${args.maxCharsPerSegment}`)
+  console.log(`Section split level: H${args.sectionSplitLevel}`)
   console.log(`Concurrency: ${args.concurrency}, retries: ${args.maxRetries}`)
   console.log(args.run ? 'Mode: RUN (will call OpenAI)' : 'Mode: DRY RUN (no API calls)')
 
@@ -541,7 +682,14 @@ async function main() {
     const { content } = parseFrontmatter(raw)
     const baseContent = content.replace(/\n*## {{PERSONALIZED_EXAMPLES}}.*?(?=##|$)/s, '').trim()
     const { content: stripped, ranges } = stripMetaphorMarkersWithRanges(baseContent)
-    const segments = buildSegmentsFromContent(stripped, ranges)
+    const segments = buildSegmentsFromContent(stripped, ranges, {
+      maxCharsPerSegment: args.maxCharsPerSegment,
+      sectionSplitLevel: args.sectionSplitLevel,
+    })
+    const fallbackLegacy = buildSegmentsFromLegacyContent(stripped, ranges, args.maxCharsPerSegment)
+    if (segments.length === 0 && fallbackLegacy.length > 0) {
+      segments.push(...fallbackLegacy)
+    }
 
     console.log(`  Segments: ${segments.length}`)
     totalSegments += segments.length

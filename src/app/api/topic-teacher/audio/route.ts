@@ -191,6 +191,8 @@ export async function POST(request: NextRequest) {
           'Content-Type': contentTypeForFormat(format),
           'Cache-Control': 'no-store',
           'Content-Disposition': `inline; filename="topic-teacher.${format}"`,
+          'X-Topic-Teacher-Audio-Key': primaryKey,
+          'X-Topic-Teacher-Audio-Model': model,
         },
       })
     }
@@ -204,6 +206,8 @@ export async function POST(request: NextRequest) {
             'Content-Type': contentTypeForFormat(format),
             'Cache-Control': 'no-store',
             'Content-Disposition': `inline; filename="topic-teacher.${format}"`,
+            'X-Topic-Teacher-Audio-Key': fallbackKey,
+            'X-Topic-Teacher-Audio-Model': FALLBACK_TTS_MODEL,
           },
         })
       }
@@ -292,6 +296,8 @@ export async function POST(request: NextRequest) {
       'Content-Type': contentTypeForFormat(format),
       'Cache-Control': 'no-store',
       'Content-Disposition': `inline; filename="topic-teacher.${format}"`,
+      'X-Topic-Teacher-Audio-Key': computeCacheKey({ model: modelUsed, voice, format, speed, text }),
+      'X-Topic-Teacher-Audio-Model': modelUsed,
     },
   })
 }
