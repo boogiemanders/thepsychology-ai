@@ -21,8 +21,8 @@ export async function GET() {
         <img
           src={logoUrl.toString()}
           alt="thePsychology.ai"
-          width={300}
-          height={300}
+          width={450}
+          height={450}
           style={{
             objectFit: "contain",
           }}
