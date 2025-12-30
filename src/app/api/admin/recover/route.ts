@@ -19,6 +19,11 @@ type AdminUserSummary = {
     totalQuestions: number
     createdAt: string
   } | null
+  // Activity tracking fields
+  lastActivityAt: string | null
+  currentPage: string | null
+  timeSpentTodaySeconds: number
+  timeSpentAllTimeSeconds: number
 }
 
 type AdminUserDetail = {
@@ -74,6 +79,7 @@ type AdminSessionMessage = {
 const QuerySchema = z.object({
   userId: z.string().uuid().optional(),
   sessionId: z.string().uuid().optional(),
+  showAll: z.enum(['true', 'false']).optional(),
 })
 
 function getBearerToken(req: NextRequest): string | null {
@@ -127,6 +133,7 @@ export async function GET(request: NextRequest) {
     const parsedQuery = QuerySchema.safeParse({
       userId: searchParams.get('userId') || undefined,
       sessionId: searchParams.get('sessionId') || undefined,
+      showAll: searchParams.get('showAll') || undefined,
     })
     if (!parsedQuery.success) {
       return NextResponse.json({ error: 'Invalid query' }, { status: 400 })
@@ -137,7 +144,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Supabase is not configured' }, { status: 500 })
     }
 
-    const { userId, sessionId } = parsedQuery.data
+    const { userId, sessionId, showAll } = parsedQuery.data
 
     if (sessionId) {
       const { data, error } = await supabase
@@ -250,6 +257,41 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(detail)
     }
 
+    const summaryByUser = new Map<string, AdminUserSummary>()
+
+    // If showAll=true, first fetch all users from users table
+    if (showAll === 'true') {
+      const { data: allUsers, error: usersError } = await supabase
+        .from('users')
+        .select('id, email, full_name, subscription_tier, created_at, last_activity_at, current_page')
+        .order('created_at', { ascending: false })
+        .limit(1000)
+
+      if (usersError) {
+        console.error('[admin/recover] all users error:', usersError)
+      } else {
+        for (const user of allUsers || []) {
+          summaryByUser.set(user.id, {
+            userId: user.id,
+            email: user.email ?? null,
+            fullName: user.full_name ?? null,
+            subscriptionTier: user.subscription_tier ?? null,
+            lastMessageAt: null,
+            sessionsCount: 0,
+            messagesCount: 0,
+            hasHarmAlert: false,
+            hasStressAlert: false,
+            latestPracticeExam: null,
+            lastActivityAt: (user as any).last_activity_at ?? null,
+            currentPage: (user as any).current_page ?? null,
+            timeSpentTodaySeconds: 0,
+            timeSpentAllTimeSeconds: 0,
+          })
+        }
+      }
+    }
+
+    // Fetch session data (always)
     const { data: sessions, error: sessionsError } = await supabase
       .from('admin_recover_chat_sessions')
       .select(
@@ -260,16 +302,20 @@ export async function GET(request: NextRequest) {
 
     if (sessionsError) {
       console.error('[admin/recover] sessions list error:', sessionsError)
-      return NextResponse.json({ error: 'Failed to load sessions' }, { status: 500 })
+      // Don't fail if we already have users from showAll
+      if (summaryByUser.size === 0) {
+        return NextResponse.json({ error: 'Failed to load sessions' }, { status: 500 })
+      }
     }
 
-    const summaryByUser = new Map<string, AdminUserSummary>()
+    // Merge session data into user summaries
     for (const row of sessions || []) {
       const userKey = String((row as any).user_id)
       const existing = summaryByUser.get(userKey)
       const lastMessageAt = (row as any).last_message_at ? String((row as any).last_message_at) : null
 
       if (!existing) {
+        // User not in map (showAll=false or user wasn't in users table)
         summaryByUser.set(userKey, {
           userId: userKey,
           email: (row as any).email ?? null,
@@ -281,10 +327,15 @@ export async function GET(request: NextRequest) {
           hasHarmAlert: Boolean((row as any).has_harm_alert),
           hasStressAlert: Boolean((row as any).has_stress_alert),
           latestPracticeExam: null,
+          lastActivityAt: null,
+          currentPage: null,
+          timeSpentTodaySeconds: 0,
+          timeSpentAllTimeSeconds: 0,
         })
         continue
       }
 
+      // Update existing entry with session data
       existing.sessionsCount += 1
       existing.messagesCount += Number((row as any).message_count ?? 0)
       existing.hasHarmAlert = existing.hasHarmAlert || Boolean((row as any).has_harm_alert)
@@ -292,10 +343,16 @@ export async function GET(request: NextRequest) {
       if (compareNullableIsoDesc(lastMessageAt, existing.lastMessageAt) < 0) {
         existing.lastMessageAt = lastMessageAt
       }
+      // Update email/name if we didn't have it from users table
+      if (!existing.email && (row as any).email) existing.email = (row as any).email
+      if (!existing.fullName && (row as any).full_name) existing.fullName = (row as any).full_name
+      if (!existing.subscriptionTier && (row as any).subscription_tier) existing.subscriptionTier = (row as any).subscription_tier
     }
 
+    // Fetch practice exam summaries and activity data
     const userIds = Array.from(summaryByUser.keys())
     if (userIds.length > 0) {
+      // Practice exams
       const { data: practiceSummaries, error: examError } = await supabase
         .from('exam_results')
         .select('user_id, score, total_questions, created_at')
@@ -321,9 +378,69 @@ export async function GET(request: NextRequest) {
           }
         }
       }
+
+      // Fetch activity data for users not loaded with showAll
+      if (showAll !== 'true') {
+        const { data: activityData, error: activityError } = await supabase
+          .from('users')
+          .select('id, last_activity_at, current_page')
+          .in('id', userIds)
+
+        if (!activityError && activityData) {
+          for (const row of activityData) {
+            const entry = summaryByUser.get(row.id)
+            if (entry) {
+              entry.lastActivityAt = (row as any).last_activity_at ?? null
+              entry.currentPage = (row as any).current_page ?? null
+            }
+          }
+        }
+      }
+
+      // Fetch page view times (today and all-time)
+      const todayStart = new Date()
+      todayStart.setHours(0, 0, 0, 0)
+
+      const { data: pageViewData, error: pageViewError } = await supabase
+        .from('user_page_views')
+        .select('user_id, duration_seconds, created_at')
+        .in('user_id', userIds)
+        .not('duration_seconds', 'is', null)
+
+      if (!pageViewError && pageViewData) {
+        // Aggregate time spent
+        for (const row of pageViewData) {
+          const id = String((row as any).user_id)
+          const entry = summaryByUser.get(id)
+          if (!entry) continue
+
+          const duration = Number((row as any).duration_seconds ?? 0)
+          entry.timeSpentAllTimeSeconds += duration
+
+          // Check if today
+          const createdAt = new Date((row as any).created_at)
+          if (createdAt >= todayStart) {
+            entry.timeSpentTodaySeconds += duration
+          }
+        }
+      } else if (pageViewError && !pageViewError.message?.includes('does not exist')) {
+        console.error('[admin/recover] page views error:', pageViewError)
+      }
     }
 
-    const users = Array.from(summaryByUser.values()).sort((a, b) => compareNullableIsoDesc(a.lastMessageAt, b.lastMessageAt))
+    // Sort: users with sessions first (by lastMessageAt), then users without sessions (by email)
+    const users = Array.from(summaryByUser.values()).sort((a, b) => {
+      // Both have sessions - sort by last message
+      if (a.sessionsCount > 0 && b.sessionsCount > 0) {
+        return compareNullableIsoDesc(a.lastMessageAt, b.lastMessageAt)
+      }
+      // One has sessions, one doesn't - sessions first
+      if (a.sessionsCount > 0) return -1
+      if (b.sessionsCount > 0) return 1
+      // Neither has sessions - sort by email
+      return (a.email || '').localeCompare(b.email || '')
+    })
+
     return NextResponse.json({ users })
   } catch (error) {
     console.error('[admin/recover] Error:', error)

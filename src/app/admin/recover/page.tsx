@@ -1,18 +1,20 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { formatDistanceToNowStrict } from 'date-fns'
-import { AlertTriangle, RefreshCcw } from 'lucide-react'
+import { AlertTriangle, Circle, RefreshCcw } from 'lucide-react'
 import { useAuth } from '@/context/auth-context'
 import { supabase } from '@/lib/supabase'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Separator } from '@/components/ui/separator'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { UserListSkeleton } from './components/user-list-skeleton'
@@ -39,6 +41,11 @@ type AdminUserSummary = {
     totalQuestions: number
     createdAt: string
   } | null
+  // Activity tracking fields
+  lastActivityAt: string | null
+  currentPage: string | null
+  timeSpentTodaySeconds: number
+  timeSpentAllTimeSeconds: number
 }
 
 type AdminUserDetail = {
@@ -99,6 +106,31 @@ function formatRelative(iso: string | null): string {
   }
 }
 
+function formatMessageTime(iso: string | null): string {
+  if (!iso) return ''
+  try {
+    const date = new Date(iso)
+    return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })
+  } catch {
+    return ''
+  }
+}
+
+function formatDuration(seconds: number): string {
+  if (seconds < 60) return `${seconds}s`
+  const minutes = Math.floor(seconds / 60)
+  if (minutes < 60) return `${minutes}m`
+  const hours = Math.floor(minutes / 60)
+  const remainingMins = minutes % 60
+  return remainingMins > 0 ? `${hours}h ${remainingMins}m` : `${hours}h`
+}
+
+function isUserOnline(lastActivityAt: string | null): boolean {
+  if (!lastActivityAt) return false
+  const fiveMinutesAgo = Date.now() - 5 * 60 * 1000
+  return new Date(lastActivityAt).getTime() > fiveMinutesAgo
+}
+
 async function getAccessToken(): Promise<string> {
   const { data } = await supabase.auth.getSession()
   const token = data.session?.access_token
@@ -144,6 +176,8 @@ export default function AdminRecoverPage() {
   const { user, loading: authLoading } = useAuth()
 
   const [query, setQuery] = useState('')
+  const [showAllUsers, setShowAllUsers] = useState(false)
+  const [sortBy, setSortBy] = useState<'lastActive' | 'messages' | 'name' | 'sessions' | 'timeToday' | 'timeTotal'>('lastActive')
   const [users, setUsers] = useState<AdminUserSummary[]>([])
   const [selectedUserId, setSelectedUserId] = useState<string | null>(null)
   const [detail, setDetail] = useState<AdminUserDetail | null>(null)
@@ -160,19 +194,48 @@ export default function AdminRecoverPage() {
 
   const filteredUsers = useMemo(() => {
     const q = query.trim().toLowerCase()
-    if (!q) return users
-    return users.filter((u) => {
-      const email = (u.email || '').toLowerCase()
-      const name = (u.fullName || '').toLowerCase()
-      return email.includes(q) || name.includes(q)
+    let result = users
+    if (q) {
+      result = result.filter((u) => {
+        const email = (u.email || '').toLowerCase()
+        const name = (u.fullName || '').toLowerCase()
+        return email.includes(q) || name.includes(q)
+      })
+    }
+    // Sort based on selected option
+    return [...result].sort((a, b) => {
+      switch (sortBy) {
+        case 'lastActive':
+          // Prefer lastActivityAt, fall back to lastMessageAt
+          const aActive = a.lastActivityAt || a.lastMessageAt
+          const bActive = b.lastActivityAt || b.lastMessageAt
+          if (!aActive && !bActive) return 0
+          if (!aActive) return 1
+          if (!bActive) return -1
+          return bActive.localeCompare(aActive)
+        case 'messages':
+          return b.messagesCount - a.messagesCount
+        case 'sessions':
+          return b.sessionsCount - a.sessionsCount
+        case 'name':
+          return (a.fullName || a.email || '').localeCompare(b.fullName || b.email || '')
+        case 'timeToday':
+          return (b.timeSpentTodaySeconds || 0) - (a.timeSpentTodaySeconds || 0)
+        case 'timeTotal':
+          return (b.timeSpentAllTimeSeconds || 0) - (a.timeSpentAllTimeSeconds || 0)
+        default:
+          return 0
+      }
     })
-  }, [query, users])
+  }, [query, users, sortBy])
 
-  const loadUsers = async () => {
+  const loadUsers = async (includeAll?: boolean) => {
     setError(null)
     setLoadingUsers(true)
+    const showAll = includeAll ?? showAllUsers
     try {
-      const data = await fetchAdminJson<{ users: AdminUserSummary[] }>('/api/admin/recover')
+      const url = showAll ? '/api/admin/recover?showAll=true' : '/api/admin/recover'
+      const data = await fetchAdminJson<{ users: AdminUserSummary[] }>(url)
       setUsers(data.users || [])
       if (!selectedUserId && data.users?.length) {
         setSelectedUserId(data.users[0].userId)
@@ -225,6 +288,26 @@ export default function AdminRecoverPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.id])
 
+  // Polling for auto-refresh every 20 seconds
+  useEffect(() => {
+    if (!user) return
+
+    const interval = setInterval(() => {
+      // Silent refresh - don't show loading state
+      const showAll = showAllUsers
+      const url = showAll ? '/api/admin/recover?showAll=true' : '/api/admin/recover'
+      fetchAdminJson<{ users: AdminUserSummary[] }>(url)
+        .then((data) => {
+          setUsers(data.users || [])
+        })
+        .catch(() => {
+          // Silently fail on polling errors
+        })
+    }, 20000)
+
+    return () => clearInterval(interval)
+  }, [user?.id, showAllUsers])
+
   useEffect(() => {
     if (!selectedUserId) return
     void loadDetail(selectedUserId)
@@ -263,8 +346,38 @@ export default function AdminRecoverPage() {
             </Button>
           </div>
 
-          <div className="px-4 pb-3">
+          <div className="px-4 pb-3 space-y-3">
             <Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search email or name…" />
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground shrink-0">Sort:</span>
+              <Select value={sortBy} onValueChange={(v) => setSortBy(v as typeof sortBy)}>
+                <SelectTrigger className="h-8 text-xs">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="lastActive">Last Active</SelectItem>
+                  <SelectItem value="messages">Most Messages</SelectItem>
+                  <SelectItem value="sessions">Most Sessions</SelectItem>
+                  <SelectItem value="timeToday">Time Today</SelectItem>
+                  <SelectItem value="timeTotal">Time All-Time</SelectItem>
+                  <SelectItem value="name">Name</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="showAll"
+                checked={showAllUsers}
+                onCheckedChange={(checked) => {
+                  const newValue = checked === true
+                  setShowAllUsers(newValue)
+                  loadUsers(newValue)
+                }}
+              />
+              <label htmlFor="showAll" className="text-xs text-muted-foreground cursor-pointer">
+                Show all users (including those without sessions)
+              </label>
+            </div>
           </div>
 
           <Separator />
@@ -278,6 +391,7 @@ export default function AdminRecoverPage() {
             <div className="p-2 space-y-1">
               {filteredUsers.map((u) => {
                 const selected = u.userId === selectedUserId
+                const online = isUserOnline(u.lastActivityAt)
                 return (
                   <button
                     key={u.userId}
@@ -288,19 +402,39 @@ export default function AdminRecoverPage() {
                     ].join(' ')}
                   >
                     <div className="flex items-start justify-between gap-2">
-                      <div className="min-w-0">
-                        <div className="text-sm font-medium truncate">{u.email || u.userId}</div>
-                        <div className="text-xs text-muted-foreground truncate">{u.fullName || '—'}</div>
+                      <div className="min-w-0 flex items-center gap-2">
+                        {online && (
+                          <Circle className="h-2 w-2 fill-green-500 text-green-500 shrink-0" />
+                        )}
+                        <div className="min-w-0">
+                          <div className="text-sm font-medium truncate">{u.email || u.userId}</div>
+                          <div className="text-xs text-muted-foreground truncate">{u.fullName || '—'}</div>
+                        </div>
                       </div>
                       <div className="flex flex-col items-end gap-1 shrink-0">
                         {u.hasHarmAlert && <Badge variant="destructive">Harm</Badge>}
                         {!u.hasHarmAlert && u.hasStressAlert && <Badge variant="secondary">Stress</Badge>}
                       </div>
                     </div>
+                    {online && u.currentPage && (
+                      <div className="mt-1 text-[10px] text-green-600 truncate">
+                        On: {u.currentPage}
+                      </div>
+                    )}
                     <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
                       <span>{u.sessionsCount} sessions</span>
-                      <span>{formatRelative(u.lastMessageAt)}</span>
+                      <span>{formatRelative(u.lastActivityAt || u.lastMessageAt)}</span>
                     </div>
+                    {(u.timeSpentTodaySeconds > 0 || u.timeSpentAllTimeSeconds > 0) && (
+                      <div className="mt-1 text-[11px] text-muted-foreground flex gap-3">
+                        {u.timeSpentTodaySeconds > 0 && (
+                          <span>Today: {formatDuration(u.timeSpentTodaySeconds)}</span>
+                        )}
+                        {u.timeSpentAllTimeSeconds > 0 && (
+                          <span>Total: {formatDuration(u.timeSpentAllTimeSeconds)}</span>
+                        )}
+                      </div>
+                    )}
                     {u.latestPracticeExam && (
                       <div className="mt-1 text-xs text-muted-foreground">
                         Practice: {u.latestPracticeExam.score}/{u.latestPracticeExam.totalQuestions} (
@@ -552,6 +686,9 @@ export default function AdminRecoverPage() {
                                   </ul>
                                 </details>
                               )}
+                              <div className={`mt-1 text-[10px] ${m.role === 'user' ? 'text-primary-foreground/60' : 'text-muted-foreground/60'}`}>
+                                {formatMessageTime(m.created_at)}
+                              </div>
                             </div>
                           </div>
                         ))}
