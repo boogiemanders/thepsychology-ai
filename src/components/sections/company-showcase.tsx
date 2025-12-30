@@ -1,7 +1,6 @@
 "use client"
 
 import { siteConfig } from "@/lib/config"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
@@ -47,25 +46,20 @@ export function CompanyShowcase() {
         </p>
       </div>
 
-      <div className="grid w-full max-w-7xl grid-cols-2 md:grid-cols-4 overflow-hidden border-y border-border items-center justify-center z-20">
-        {companyShowcase.companyLogos.map((logo: { id: number; name: string; src: string }) => (
+      <div className="grid w-full max-w-7xl grid-cols-2 md:grid-cols-4 items-center justify-center z-20">
+        {companyShowcase.companyLogos.map((logo: { id: number; name: string; src: string | null; member?: string }) => (
           <Link
-            href="/portfolio"
+            href={logo.member ? `/portfolio?member=${logo.member}` : "/portfolio"}
             key={logo.id}
-            className="group w-full h-28 flex items-center justify-center relative p-4
-                       before:absolute before:-left-1 before:top-0 before:z-10 before:h-screen before:w-px before:bg-border
-                       after:absolute after:-top-1 after:left-0 after:z-10 after:h-px after:w-screen after:bg-border"
+            className="group w-full h-24 flex items-center justify-center relative p-4"
           >
             <div
               className="transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]
                          translate-y-0 group-hover:-translate-y-4 flex items-center justify-center w-full h-full"
             >
-              <Badge
-                variant="outline"
-                className="bg-transparent text-white border-white text-xs md:text-sm px-3 py-1 rounded-full"
-              >
+              <span className="text-xs md:text-sm font-medium tracking-wide text-primary/80">
                 {logo.name}
-              </Badge>
+              </span>
             </div>
 
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100
