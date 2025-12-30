@@ -9,7 +9,7 @@
         "The breach directly caused injury to the client."
       ],
       "answer": "The client gave informed consent.",
-      "explanation": "The four conditions required for malpractice are duty, breach of duty, harm (damages), and direct cause. Informed consent is important ethically but not one of the four legal conditions.",
+      "explanation": "1. \"The client gave informed consent\" is the correct answer because it is not one of the four conditions necessary for a client to succeed in a malpractice claim against a psychologist. The essential conditions, often referred to as the \"4 Ds,\" include the psychologist's duty to care for the client, a breach of that duty, measurable damages or injury to the client, and a direct causal link between the breach and the injury. Informed consent, while important in ethical practice, does not constitute a condition for establishing malpractice.\n\n2. \n- \"The psychologist owed a duty to the client\" is incorrect because establishing a professional relationship creates the psychologist's duty to conform to a professional standard of care, which is a fundamental condition for a malpractice claim.\n- \"There was a breach of duty by the psychologist\" is incorrect because a breach of duty signifies that the psychologist failed to meet the professional standard of care, which is essential for the claim.\n- \"The breach directly caused injury to the client\" is incorrect because demonstrating that the psychologist's breach of duty was the direct or proximate cause of the client's harm or injury is crucial for the client to succeed in their malpractice claim.",
       "kn": "KN63",
       "kn_explanation": "This question pertains to legal requirements for malpractice claims, fitting under laws and judicial decisions affecting psychological practice.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "File a motion to quash without reviewing the subpoena."
       ],
       "answer": "Determine if the subpoena is legally valid.",
-      "explanation": "APA guidelines recommend first verifying subpoena validity before taking any further action to ensure legal compliance and protect client confidentiality.",
+      "explanation": "1. The correct answer, \"Determine if the subpoena is legally valid,\" is essential because a psychologist must first assess the legality of the subpoena before taking any further action. A valid subpoena must include specific elements such as the court's name, jurisdiction, and details about the case, and it must not violate the psychologist's or client's rights to confidentiality. Ensuring the subpoena's validity protects both the psychologist and the client from potential legal issues.\n\n2. The option \"Immediately provide the requested records to the attorney who issued the subpoena\" is incorrect because psychologists should not release client records without first verifying the subpoena's validity and discussing the implications with the client. \n\nThe option \"Consult with the client after responding to the subpoena\" is wrong because the psychologist should consult with the client before responding to the subpoena, not after, to ensure the client's interests and rights are prioritized. \n\nLastly, \"File a motion to quash without reviewing the subpoena\" is incorrect because it is crucial to first examine the subpoena to determine its validity and the appropriate course of action before considering legal motions.",
       "kn": "KN63",
       "kn_explanation": "This question assesses knowledge of the proper legal procedures when dealing with subpoenas, relevant to laws and statutes impacting practice.",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "A fact witness is required to have specialized education, but an expert witness is not."
       ],
       "answer": "A fact witness cannot offer opinions or address issues outside of personal knowledge, while an expert witness can.",
-      "explanation": "Fact witnesses testify about observed facts only; expert witnesses, due to their specialized knowledge, can offer opinions and testify about hypotheticals.",
+      "explanation": "1. The correct answer, \"A fact witness cannot offer opinions or address issues outside of personal knowledge, while an expert witness can,\" accurately reflects the definitions provided in the reference material. A fact witness is limited to testifying about what they have directly observed or experienced, without the ability to provide opinions or address hypothetical scenarios. In contrast, an expert witness possesses specialized knowledge and is qualified to offer opinions on matters outside their direct observation, as they can draw on their education and experience to inform their testimony.\n\n2. The first incorrect option, \"A fact witness can offer opinions about hypothetical situations, but an expert witness cannot,\" is wrong because fact witnesses are strictly prohibited from providing opinions and can only testify to their direct observations. The second incorrect option, \"An expert witness testifies only about what they personally observed directly,\" is incorrect because expert witnesses are allowed to offer opinions and insights based on their specialized knowledge, not just personal observations. Finally, the option stating \"A fact witness is required to have specialized education, but an expert witness is not\" is misleading, as fact witnesses do not need specialized education; it is the expert witness who is required to have advanced knowledge and training in their field to provide informed opinions.",
       "kn": "KN63",
       "kn_explanation": "This question addresses legal definitions and roles in psychological testimony, fitting under relevant laws and judicial decisions.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "To assess risk factors for future violent behavior."
       ],
       "answer": "To clarify equivocal deaths by evaluating psychosocial factors surrounding death.",
-      "explanation": "Psychological autopsies are conducted primarily to clarify uncertain causes or manners of death, especially suicide versus accident or homicide.",
+      "explanation": "1. The correct answer, \"To clarify equivocal deaths by evaluating psychosocial factors surrounding death,\" accurately reflects the purpose of a psychological autopsy as described by Shneidman (1994) and La Fon (1999). Psychological autopsies are primarily conducted to gather information that helps classify ambiguous deaths, determining whether they were due to suicide, accident, homicide, natural causes, or remain undetermined. This process involves assessing the psychosocial factors that may have contributed to the death, thus clarifying the circumstances surrounding it.\n\n2. The option \"To diagnose mental disorders for legal competency proceedings\" is incorrect because psychological autopsies focus on understanding the circumstances of a death rather than diagnosing mental disorders related to a living individual's competency. The option \"To evaluate malingering in criminal defendants\" is wrong because psychological autopsies are not designed to assess the truthfulness or deception of defendants regarding their mental state but rather to analyze past death circumstances. Lastly, \"To assess risk factors for future violent behavior\" is incorrect as psychological autopsies are retrospective and do not involve predicting future behaviors, but rather understanding factors that led to the death in question.",
       "kn": "KN63",
       "kn_explanation": "This question assesses knowledge of forensic procedures relevant to psychological-legal practice and forensic assessment.",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "She"
       ],
       "answer": "They, them, and their",
-      "explanation": "Using 'they/them/their' as singular pronouns is recommended when gender is unknown, irrelevant, or for generic individuals to avoid bias.",
+      "explanation": "1. “They, them, and their” is the correct answer because the APA Inclusive Language Guidelines recommend using these singular pronouns when referring to a hypothetical individual whose gender is unknown or irrelevant to the context. This approach avoids assuming gender and promotes inclusivity by respecting the diverse identities that individuals may hold.\n\n2. The option \"He or she\" is incorrect because it assumes a binary understanding of gender, which does not encompass non-binary identities. \"He\" is inappropriate as it exclusively refers to a male individual, thereby excluding individuals of other genders. Similarly, \"She\" is incorrect because it exclusively refers to a female individual, also excluding other gender identities.",
       "kn": "KN18",
       "kn_explanation": "This question relates to cultural and sociopolitical psychology by addressing inclusive language and identity diversity.",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Telepsychology services can be provided without consideration of local emergency resources."
       ],
       "answer": "A psychologist must comply with the legal requirements of both the state where the psychologist is licensed and the state where the client is located.",
-      "explanation": "When jurisdictions are not part of PSYPACT, psychologists must follow legal requirements in both locations, including licensure and local laws.",
+      "explanation": "1. The correct answer, \"A psychologist must comply with the legal requirements of both the state where the psychologist is licensed and the state where the client is located,\" is accurate because when providing telepsychology services across state lines in jurisdictions not participating in PSYPACT, psychologists are required to understand and adhere to the specific legal regulations of both states. This includes laws related to child and elder abuse reporting, duty to warn, and civil commitment, as well as any licensing requirements that may differ from their home state.\n\n2. The first incorrect option, \"A psychologist licensed in any state may freely provide telepsychology services to clients located anywhere in the U.S.,\" is incorrect because it ignores the necessity of adhering to each state’s legal requirements, which can vary significantly. The second incorrect option, \"Licensure is irrelevant for telepsychology services under current federal regulations,\" is wrong because licensure is a critical component of legal compliance for telepsychology, and federal regulations do not negate state-specific licensure requirements. Lastly, the third incorrect option, \"Telepsychology services can be provided without consideration of local emergency resources,\" is incorrect as psychologists must familiarize themselves with local resources available to clients in emergency situations to ensure proper care and support.",
       "kn": "KN63",
       "kn_explanation": "This question assesses knowledge about legal and regulatory issues related to telepsychology practice.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "To provide continuing education for licensed psychologists"
       ],
       "answer": "To ensure educational programs meet professional and scientific standards to protect the public",
-      "explanation": "APA accreditation aims to assure defined training aims meet professional standards to benefit students and protect the public.",
+      "explanation": "1. The correct answer, \"To ensure educational programs meet professional and scientific standards to protect the public,\" accurately reflects the primary purpose of the APA Commission on Accreditation (APA-CoA). The APA-CoA is responsible for accrediting doctoral programs, internships, and postdoctoral residencies in psychology, ensuring that these educational programs adhere to defined standards that support the ethical and skillful delivery of psychological services, thereby safeguarding public interests.\n\n2. The option \"To develop national licensure examinations for psychology\" is incorrect because the APA-CoA focuses on accreditation rather than the development of licensure exams, which is typically managed by other organizations. The statement \"To manage ethical complaints against psychologists\" is also wrong, as the APA-CoA's role does not involve handling ethical complaints; this responsibility lies with other bodies, such as state licensing boards and the APA’s ethics committees. Lastly, the option \"To provide continuing education for licensed psychologists\" is inaccurate because while continuing education is important, it is not a direct function of the APA-CoA; instead, this is usually facilitated by various professional organizations and training programs.",
       "kn": "KN62",
       "kn_explanation": "This question relates to professional standards and guidelines regarding training and education in psychology.",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "Consulting on administrative and ethical matters"
       ],
       "answer": "Helping the supervisee explore their personal reactions interfering with therapy",
-      "explanation": "The counselor role in Bernard’s model entails addressing personalization problems, such as supervisee blind spots and personal issues affecting therapy.",
+      "explanation": "1. The correct answer, \"Helping the supervisee explore their personal reactions interfering with therapy,\" aligns with Bernard’s discrimination model, where the supervisor acts as a counselor focusing on personalization skills. This role involves addressing the supervisee's emotional responses and self-awareness, which can significantly impact their therapeutic effectiveness and client interactions.\n\n2. The first incorrect option, \"Teaching therapeutic interventions and techniques,\" is wrong because it pertains to the supervisor acting as an educator, focusing on intervention skills rather than personalization. The second incorrect option, \"Advising on theoretical conceptualizations of client cases,\" is incorrect as it involves the supervisor providing guidance on conceptualization skills, not addressing the supervisee's personal reactions. Lastly, \"Consulting on administrative and ethical matters\" is incorrect because this falls under the supervisor's role as a consultant, which does not pertain to the personalization skills emphasized in the counselor role.",
       "kn": "KN70",
       "kn_explanation": "This question assesses knowledge of supervision models and related ethical and professional issues in clinical supervision.",
       "difficulty": "hard",
@@ -129,7 +129,7 @@
         "Disclose supervisee’s client data only with supervisee’s verbal consent"
       ],
       "answer": "Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records",
-      "explanation": "Supervisors must clarify confidentiality limits and have access and responsibility for client records as part of supervision.",
+      "explanation": "1. The correct answer, \"Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records,\" aligns with the ASPPB’s Supervision Guidelines, which state that supervisors must inform supervisees of the limits of confidentiality regarding personal disclosures and evaluations. Additionally, supervisors are responsible for ensuring that supervisees' clients are aware of the supervisee's status as a trainee and that the supervisor has access to all client records, thereby maintaining accountability and protecting client welfare.\n\n2. The incorrect options are as follows:\n\n- **Keep supervisee’s personal disclosures confidential with no exceptions:** This is incorrect because supervisors must inform supervisees of the limits of confidentiality, indicating that there are circumstances under which disclosures may not remain confidential.\n  \n- **Share supervisee disclosures freely with other staff members for feedback purposes:** This option is wrong as it violates confidentiality principles; supervisors should not disclose supervisee information without appropriate limits and considerations for confidentiality.\n  \n- **Disclose supervisee’s client data only with supervisee’s verbal consent:** This is incorrect because while consent is important, supervisors must also ensure that they have access to client records for oversight and accountability, which may not always be contingent on verbal consent alone.",
       "kn": "KN70",
       "kn_explanation": "This question addresses ethical issues specific to supervision, including confidentiality responsibilities.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Level 4"
       ],
       "answer": "Level 1",
-      "explanation": "Level 1 supervisees are self-focused, anxious about evaluation, and highly dependent on the supervisor, requiring more structure and support.",
+      "explanation": "1. **Correct Answer - Level 1:** Level 1 in Stoltenberg's Integrated Developmental Model is characterized by supervisees who are anxious about evaluation, highly dependent on their supervisor, and primarily focused on themselves. This level reflects a stage where supervisees engage in limited self-evaluation and require significant support and structure from their supervisor to develop their clinical skills.\n\n2. **Incorrect Options:**\n   - **Level 2:** Level 2 supervisees are better able to focus on their clients and exhibit empathy, indicating they have progressed beyond the self-focused and dependent characteristics of Level 1.\n   - **Level 3:** Level 3 supervisees demonstrate consistent motivation, confidence, and the ability to attend to both their clients and their own reactions, showing a significant shift from the anxiety and dependency seen in Level 1.\n   - **Level 4:** While the reference material does not specifically describe a Level 4, it implies that higher levels would involve greater autonomy and competence, which would not align with the characteristics of anxiety and dependence found in Level 1.",
       "kn": "KN70",
       "kn_explanation": "This question tests understanding of developmental models of supervision, a key professional development topic.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Report the reviewer to the licensing board for defamation."
       ],
       "answer": "Ignore the reviews and focus on maintaining a positive online presence.",
-      "explanation": "Responding publicly or soliciting testimonials often violates ethical or privacy guidelines; developing a positive online reputation is recommended.",
+      "explanation": "1. The correct answer, \"Ignore the reviews and focus on maintaining a positive online presence,\" aligns with ethical guidelines because directly responding to negative reviews can violate ethical responsibilities and HIPAA’s privacy rule. Instead, psychologists are encouraged to establish a positive online presence through patient-satisfaction ratings or positive evaluations from colleagues, which helps mitigate the impact of negative reviews without compromising client confidentiality.\n\n2. The option to \"Reply publicly to the reviewer to clarify the situation\" is incorrect because engaging publicly could breach confidentiality and ethical guidelines, potentially exposing sensitive client information. \"Solicit positive testimonials from clients to counteract the negative review\" is inappropriate as it violates ethical requirements by potentially exerting undue influence on clients to provide favorable feedback. Lastly, the option to \"Report the reviewer to the licensing board for defamation\" is misguided because it does not address the ethical implications of responding to reviews and may not be a valid basis for defamation if the review does not violate the terms of service of the platform.",
       "kn": "KN68",
       "kn_explanation": "This question involves client rights and ethical considerations in professional practice and online behavior.",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Competence in administrative tasks but not necessarily clinical issues."
       ],
       "answer": "Competence in both the clinical services provided by the supervisee and in the provision of supervision.",
-      "explanation": "APA Supervision Guidelines state supervisors must be competent in the services supervisees provide and in the supervision process itself to ensure effective oversight.",
+      "explanation": "1. The correct answer, \"Competence in both the clinical services provided by the supervisee and in the provision of supervision,\" aligns with the ASPPB’s *Supervision Guidelines*, which state that a supervisor must be competent in the services being provided by the supervisee as well as in the supervision itself. This dual competence ensures that the supervisor can effectively guide the supervisee while also safeguarding the welfare of the supervisee’s clients.\n\n2. \n- **Competence only in the clinical services provided by the supervisee:** This option is incorrect because it neglects the necessity for supervisors to also possess expertise in the supervision process itself, which is essential for effective guidance and support.\n  \n- **Competence only in general psychological theory without regard to supervisee services:** This choice is inadequate as it fails to recognize that knowledge of general psychological theory alone does not equip a supervisor to address the specific needs and challenges of the supervisee’s clinical practice.\n\n- **Competence in administrative tasks but not necessarily clinical issues:** This option is misleading because while administrative skills are important, they do not substitute for the clinical knowledge required to provide effective supervision and support for the supervisee’s clinical work.",
       "kn": "KN70",
       "kn_explanation": "This question relates to supervisor ethical responsibilities regarding competence under professional standards.",
       "difficulty": "medium",
@@ -189,11 +189,51 @@
         "There are no specific risks or limitations to discuss with supervisees during telepsychology supervision."
       ],
       "answer": "Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact.",
-      "explanation": "APA guidelines require identity verification and informing supervisees about risks and limitations, including confidentiality concerns, in telepsychology supervision.",
+      "explanation": "1. The statement \"Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact\" is correct because the APA guidelines emphasize the importance of ensuring that supervisors confirm the identity of supervisees to maintain the integrity and security of the supervision process. This verification is crucial to uphold confidentiality and protect client welfare in telepsychology settings.\n\n2. The first incorrect option, \"Telepsychology supervision can constitute 100% of a supervisee's supervision at any practicum site,\" is wrong because the guidelines specify that telepsychology supervision should not account for more than 50% of a supervisee’s supervision at any given practicum site. The second incorrect option, \"Interjurisdictional telepsychology supervision is permitted under all circumstances,\" is incorrect as the guidelines state that such supervision is not allowed except in emergency situations, highlighting the need for jurisdictional compliance. Lastly, the option \"There are no specific risks or limitations to discuss with supervisees during telepsychology supervision\" is incorrect because the guidelines explicitly require supervisors to inform supervisees about the potential risks and limitations associated with telepsychology supervision, including issues related to confidentiality, security, and privacy.",
       "kn": "KN70",
       "kn_explanation": "This question assesses knowledge of telepsychology practices and ethical issues in supervision under professional guidelines.",
       "difficulty": "medium",
       "quality_comment": "Options provide clear contrasts; this question addresses an emerging and underrepresented topic well."
+    },
+    {
+      "stem": "Which of the following elements is NOT essential for establishing negligence in a psychological practice?",
+      "options": [
+        "The psychologist acted in good faith.",
+        "The psychologist owed a duty to the client.",
+        "There was a breach of duty by the psychologist.",
+        "The breach directly caused injury to the client."
+      ],
+      "answer": "The psychologist acted in good faith.",
+      "explanation": "Good faith is not a legal requirement for establishing negligence; the necessary elements are duty, breach, causation, and damages. Thus, this option does not fit within the framework of negligence claims.",
+      "difficulty": "easy",
+      "kn": "KN63",
+      "kn_explanation": "This question pertains to legal requirements for malpractice claims, fitting under laws and judicial decisions affecting psychological practice.",
+      "quality_comment": "This question effectively tests knowledge of negligence elements in psychology, reinforcing understanding of legal standards.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of a malpractice lawsuit against a psychologist, which of the following must be demonstrated to establish a successful claim?",
+      "options": [
+        "The client experienced emotional distress.",
+        "The psychologist failed to follow ethical guidelines.",
+        "There was a direct cause of harm resulting from the psychologist's actions.",
+        "The psychologist had a prior history of malpractice."
+      ],
+      "answer": "There was a direct cause of harm resulting from the psychologist's actions.",
+      "explanation": "To succeed in a malpractice claim, it is crucial to demonstrate that the psychologist's breach of duty directly caused harm to the client. This is one of the four essential elements of a malpractice claim.",
+      "difficulty": "hard",
+      "kn": "KN63",
+      "kn_explanation": "This question pertains to legal requirements for malpractice claims, fitting under laws and judicial decisions affecting psychological practice.",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of malpractice claims in a nuanced way, focusing on causation.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -9,7 +9,7 @@
         "Attributing physiological arousal to environmental cues"
       ],
       "answer": "Physiological reactions to a stimulus preceding the emotional experience",
-      "explanation": "James-Lange theory asserts that an emotionally salient stimulus causes physiological changes, and the perception of these changes leads to the experience of emotion.",
+      "explanation": "1. The correct answer, \"Physiological reactions to a stimulus preceding the emotional experience,\" aligns with the James-Lange Theory, which posits that an emotional experience arises after a physiological reaction to an emotionally salient stimulus. In this theory, the physiological response, such as increased heart rate or deeper breathing, occurs first, and it is this physiological change that leads to the perception of the emotion, such as fear when encountering a growling bear.\n\n2. The option \"Simultaneous occurrence of physiological arousal and emotional experience\" is incorrect because it describes the Cannon-Bard Theory, which posits that emotional experience and physiological arousal occur at the same time rather than sequentially. The option \"Cognitive appraisal of the situation before physiological response\" is wrong as it reflects Lazarus's Cognitive Appraisal Theory, which asserts that cognitive appraisal occurs before physiological arousal, not after. Lastly, the option \"Attributing physiological arousal to environmental cues\" is incorrect because it pertains to Schachter and Singer's Two-Factor Theory, which emphasizes the role of cognitive labeling of arousal based on environmental cues, rather than the direct physiological response leading to emotion as proposed by the James-Lange Theory.",
       "kn": "KN10",
       "kn_explanation": "This question tests knowledge of a major emotion theory, which belongs to research-based theories and models of emotion in cognitive-affective bases of behavior (KN10).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Facial expressions are simply outcomes of emotional experiences"
       ],
       "answer": "Mimicking facial expressions can induce the corresponding emotion",
-      "explanation": "The facial feedback hypothesis suggests that producing facial expressions associated with an emotion can initiate physiological changes and thus help induce the experience of that emotion.",
+      "explanation": "1. The statement \"Mimicking facial expressions can induce the corresponding emotion\" is correct because it aligns with the facial feedback hypothesis, which posits that our facial expressions can trigger physiological changes that are consistent with specific emotions. Research supporting this hypothesis indicates that when individuals mimic facial expressions associated with certain emotions, they tend to actually experience those emotions, such as feeling happy when smiling.\n\n2. The option \"Physiological responses to emotional stimuli occur without conscious awareness\" is incorrect because it does not specifically relate to the facial feedback hypothesis, which emphasizes the role of facial expressions in emotion generation. The statement \"Emotions cause facial expressions that then trigger physiological arousal\" reverses the causal order proposed by the facial feedback hypothesis, which suggests that facial expressions lead to emotional experiences, not the other way around. Lastly, \"Facial expressions are simply outcomes of emotional experiences\" is wrong because it overlooks the active role that facial expressions play in generating emotions, as posited by the facial feedback hypothesis, rather than just being passive outcomes of emotions.",
       "kn": "KN10",
       "kn_explanation": "This question foregrounds a specific proposed mechanism relating physical expression to emotion, integral to the study of emotion in cognitive-affective bases of behavior (KN10).",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Cognitive appraisal occurs only after the emotion is experienced"
       ],
       "answer": "Emotional experience depends on physiological arousal and cognitive interpretation of that arousal",
-      "explanation": "Schachter and Singer’s two-factor theory states emotion results from physiological arousal plus a cognitive label (interpretation) of that arousal based on external context.",
+      "explanation": "1. The correct answer, \"Emotional experience depends on physiological arousal and cognitive interpretation of that arousal,\" accurately reflects Schachter and Singer's two-factor theory of emotion. This theory posits that physiological arousal occurs first and is followed by a cognitive label or interpretation of that arousal, which ultimately leads to the experience of emotion. Thus, both physiological arousal and the cognitive appraisal of that arousal are essential for determining emotional experience.\n\n2. The option \"Each emotion has a distinct pattern of physiological arousal\" is incorrect because Schachter and Singer's theory asserts that physiological arousal is generally similar across different emotions; it is the cognitive interpretation that differentiates the emotions. The statement \"The thalamus sends simultaneous signals to the cortex and autonomic nervous system\" is wrong because this describes the Cannon-Bard theory, not Schachter and Singer's approach, which emphasizes cognitive interpretation following arousal. Lastly, \"Cognitive appraisal occurs only after the emotion is experienced\" is incorrect because Schachter and Singer's theory indicates that cognitive appraisal follows physiological arousal but is necessary for the experience of emotion, not the other way around.",
       "kn": "KN10",
       "kn_explanation": "This question tests understanding of a major research-based theory of emotion focusing on cognitive-affective processes, relevant to KN10.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Cause a gradual dissipation of emotional intensity over time"
       ],
       "answer": "Intensify emotional reactions to a later unrelated event due to misattribution of arousal",
-      "explanation": "Excitation transfer theory posits that lingering arousal from one event can augment the intensity of a subsequent emotional response when that residual arousal is misattributed.",
+      "explanation": "1. The correct answer, \"Intensify emotional reactions to a later unrelated event due to misattribution of arousal,\" aligns with Zillman's excitation transfer theory, which posits that residual physiological arousal from one event can enhance the emotional response to a subsequent, unrelated event. This occurs because individuals may misattribute their lingering arousal to the new situation, leading to a heightened emotional reaction that is not solely based on the current context.\n\n2. The first incorrect option, \"Decrease the physiological response to a subsequent unrelated event,\" is wrong because excitation transfer theory suggests that residual arousal actually increases, rather than decreases, emotional responses. The second incorrect option, \"Be fully attributed to the original stimulus regardless of context,\" is incorrect because excitation transfer theory emphasizes that arousal can be misattributed to new stimuli rather than being solely linked to the original event. Lastly, the option \"Cause a gradual dissipation of emotional intensity over time\" is not aligned with the theory, which indicates that residual arousal can persist and even amplify emotional intensity rather than simply fade away.",
       "kn": "KN10",
       "kn_explanation": "This question addresses theories linking physiological responses and cognitive interpretations in emotional processes, fitting within KN10.",
       "difficulty": "hard",
@@ -69,7 +69,7 @@
         "Experiencing physiological arousal in response to the event"
       ],
       "answer": "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
-      "explanation": "Primary appraisal involves evaluating an event to determine its significance, including whether it is stressful and the type of stress it presents.",
+      "explanation": "1. The correct answer, \"Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss,\" aligns with Lazarus’s cognitive appraisal theory, which posits that primary appraisal involves assessing an event's significance. During this stage, individuals determine whether the event is benign, irrelevant, or potentially harmful, and if harmful, they classify it as a threat, challenge, or loss, setting the stage for subsequent emotional responses and coping strategies.\n\n2. The option \"Determining available coping options and their likelihood of success\" is incorrect because this process occurs during secondary appraisal, not primary appraisal. The statement \"Monitoring and changing previous appraisals as new information emerges\" refers to reappraisal, which happens after the initial appraisals have been made, making it an incorrect choice for primary appraisal. Lastly, \"Experiencing physiological arousal in response to the event\" is also incorrect, as Lazarus's theory asserts that physiological arousal follows cognitive appraisal rather than occurring simultaneously or prior to it.",
       "kn": "KN10",
       "kn_explanation": "This question probes the cognitive process central to appraisal theory of emotion, a key research-based model under KN10.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "To integrate episodic and semantic memory during fear evaluation"
       ],
       "answer": "To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors",
-      "explanation": "The subcortical system, or survival system, responds rapidly and automatically to threats by generating physiological and behavioral fear responses, with the amygdala playing a central role.",
+      "explanation": "1. The correct answer, \"To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors,\" accurately reflects the primary role of the subcortical system in LeDoux’s two-system theory. This system, primarily involving the amygdala, responds rapidly and automatically to threatening stimuli, triggering physiological reactions and defensive behaviors without the need for conscious processing. This immediate response is crucial for survival, allowing for quick reactions to potential dangers.\n\n2. The option \"To process sensory information consciously and generate the feeling of fear\" is incorrect because this function is associated with the cortical system, which involves conscious processing and evaluation of sensory information to determine if a stimulus warrants a fear response. The statement \"To regulate hormonal responses via communication with the pituitary gland\" is also wrong, as this role pertains more to the hypothalamus, which regulates hormonal responses in conjunction with the autonomic nervous system. Lastly, the option \"To integrate episodic and semantic memory during fear evaluation\" is inaccurate because the integration of memory types is a function of the cortical system, which processes information and evaluates the emotional significance of stimuli, rather than the subcortical system that reacts automatically.",
       "kn": "KN10",
       "kn_explanation": "This question concerns brain mechanisms underlying emotion, specifically fear, which falls under research-based emotion theories in KN10.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Loss of all emotional experience including positive and negative emotions"
       ],
       "answer": "A catastrophic reaction characterized by depression, anxiety, fear, and paranoia",
-      "explanation": "Damage to left hemisphere regions mediating happiness and positive emotions can produce a catastrophic reaction featuring intense negative emotional states.",
+      "explanation": "1. \"A catastrophic reaction characterized by depression, anxiety, fear, and paranoia\" is the correct answer because, according to the reference material, areas in the left hemisphere of the cerebral cortex are associated with mediating happiness and other positive emotions. Damage to these areas can lead to significant emotional disturbances, resulting in a catastrophic reaction that manifests as depression, anxiety, fear, and paranoia.\n\n2. The option \"An indifference reaction with inappropriate euphoria and lack of emotional response\" is incorrect because this reaction is associated with damage to the right hemisphere, which mediates sadness and negative emotions, not the left. The option \"Increased expression of sadness and negative emotions without cognitive awareness\" is wrong because it does not accurately reflect the emotional outcomes of left hemisphere damage, which primarily affects positive emotions rather than increasing negative emotions. Lastly, \"Loss of all emotional experience including positive and negative emotions\" is incorrect as damage to the left hemisphere does not result in a total loss of emotional experience; rather, it specifically leads to the predominance of negative emotional reactions.",
       "kn": "KN1",
       "kn_explanation": "This question addresses brain function and lesion effects on emotional processing, aligned with biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "The cognitive reappraisal of the stressor leading to a calm emotional state"
       ],
       "answer": "A stage where physiological functions normalize but cortisol remains elevated to sustain coping",
-      "explanation": "In the resistance stage, the body attempts to adapt to persistent stress; some functions return to normal while cortisol continues at high levels to maintain energy and coping.",
+      "explanation": "1. The correct answer, \"A stage where physiological functions normalize but cortisol remains elevated to sustain coping,\" accurately describes the resistance stage in Selye’s general adaptation syndrome (GAS). During this stage, while some physiological functions begin to return to normalcy after the initial alarm reaction, cortisol levels remain elevated to help the body maintain energy and cope with the ongoing stressor. This balance allows the individual to manage stress effectively for a period.\n\n2. The first incorrect option, \"An initial sympathetic nervous system activation releasing energy for immediate response,\" describes the alarm reaction stage, not the resistance stage, where the body first reacts to the stressor with heightened sympathetic activity. The second incorrect option, \"Physiological systems break down due to prolonged stress exposure,\" refers to the exhaustion stage, which occurs after the resistance stage when the body's resources are depleted. Lastly, the option \"The cognitive reappraisal of the stressor leading to a calm emotional state\" does not align with Selye's model, as the resistance stage focuses on physiological responses rather than cognitive processes or emotional calmness.",
       "kn": "KN1",
       "kn_explanation": "This question concerns physiological stress responses and hormonal regulation, relevant to neurobiological and physiological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Immediate physiological exhaustion without adaptation phases"
       ],
       "answer": "Wear-and-tear on the body and brain increasing risk of physical and psychiatric disorders",
-      "explanation": "The allostatic load refers to the cumulative biological burden from chronic stress, potentially causing dysregulation and increased vulnerability to diseases and mental health problems.",
+      "explanation": "1. The correct answer, \"Wear-and-tear on the body and brain increasing risk of physical and psychiatric disorders,\" aligns with McEwen’s allostatic load model, which posits that chronic stress or repeated episodes of acute stress can lead to an allostatic load. This load results in physiological dysregulation, making individuals more vulnerable to various health issues, including physical ailments and psychiatric disorders such as PTSD and major depressive disorder.\n\n2. The option \"Enhanced immune system functioning due to continuous adaptation\" is incorrect because McEwen’s model indicates that chronic stress can lead to dysregulation of the immune system, not enhancement. The statement \"Stable physiological states maintained without any adverse health effects\" is also wrong, as prolonged allostatic states can have negative consequences on health, contrary to the idea of stability. Lastly, \"Immediate physiological exhaustion without adaptation phases\" is misleading because McEwen’s model describes a process where physiological responses adapt over time before leading to exhaustion, highlighting that adaptation phases do occur.",
       "kn": "KN1",
       "kn_explanation": "This question examines stress physiology and its consequences, central to understanding biological mechanisms in behavior under KN1.",
       "difficulty": "hard",
@@ -144,7 +144,7 @@
         "Prefrontal cortex"
       ],
       "answer": "Amygdala",
-      "explanation": "The amygdala is key for processing fear-related stimuli, recognizing fearful faces, associating emotions with memories, and initiating emotional responses.",
+      "explanation": "1. The correct answer is \"Amygdala\" because it is a key component of the limbic system responsible for recognizing fear in facial expressions and attaching emotions to memories. The amygdala evaluates incoming information to determine its emotional significance and mediates the emotional reaction to it, making it crucial for processing fear-related stimuli.\n\n2. The **Hippocampus** is primarily involved in memory formation and is not directly responsible for recognizing emotions or fear in facial expressions. The **Hypothalamus** regulates the physical signs of emotion through its communication with the autonomic nervous system but does not specifically recognize fear or attach emotions to memories. The **Prefrontal Cortex** is involved in higher cognitive functions, such as decision-making and emotional regulation, rather than the direct recognition of fear in others' expressions.",
       "kn": "KN1",
       "kn_explanation": "This question targets knowledge of brain structures involved in emotion processing, directly related to the biological bases of behavior (KN1).",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "Cognitive appraisal precedes physiological responses"
       ],
       "answer": "Emotion and physiological arousal occur simultaneously but independently",
-      "explanation": "Cannon-Bard theory posits that environmental stimuli trigger the thalamus to send signals simultaneously to the cortex (emotion) and sympathetic nervous system (arousal), which happen together.",
+      "explanation": "1. The statement \"Emotion and physiological arousal occur simultaneously but independently\" accurately reflects Cannon-Bard theory because this theory posits that when an environmental stimulus is encountered, the thalamus sends signals to both the cerebral cortex (which processes the emotional experience) and the sympathetic nervous system (which triggers physiological arousal) at the same time. This means that emotional experience and physiological responses do not rely on one another and occur concurrently.\n\n2. The option \"Emotion is experienced only after physiological arousal is perceived\" is incorrect because it aligns with the James-Lange theory, which suggests that physiological arousal precedes and leads to the experience of emotion. The option \"Emotion results from labeling physiological arousal according to situational cues\" is wrong because it describes Schachter and Singer’s Two-Factor Theory, which emphasizes the role of cognitive labeling after physiological arousal. Lastly, the statement \"Cognitive appraisal precedes physiological responses\" is incorrect as it reflects Lazarus’s Cognitive Appraisal Theory, which asserts that emotional responses are based on cognitive appraisal before any physiological changes occur.",
       "kn": "KN10",
       "kn_explanation": "This question assesses understanding of a major theory of emotion emphasizing simultaneity of arousal and experience, a core topic within KN10.",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Primary appraisal assesses physiological responses before cognitive evaluation"
       ],
       "answer": "Secondary appraisal involves identifying coping options and their effectiveness after an event is appraised as stressful",
-      "explanation": "Secondary appraisal happens after the event is deemed stressful, focusing on coping resources and perceived ability to manage the stressor.",
+      "explanation": "1. The correct answer, \"Secondary appraisal involves identifying coping options and their effectiveness after an event is appraised as stressful,\" accurately reflects Lazarus's cognitive appraisal theory. In this model, primary appraisal determines whether an event is perceived as stressful, while secondary appraisal occurs only after this determination, focusing on evaluating potential coping strategies and assessing their likelihood of success in managing the stressor.\n\n2. The first incorrect option, \"Secondary appraisal focuses on evaluating if the event is stressful, primary appraisal evaluates coping options,\" is wrong because primary appraisal is specifically concerned with assessing the nature of the event (whether it is irrelevant, benign-positive, or stressful), while secondary appraisal is about coping strategies. \n\nThe second incorrect option, \"Primary appraisal is about monitoring ongoing stress while secondary appraisal identifies emotional reactions,\" is incorrect because primary appraisal evaluates the initial perception of the event, not ongoing stress, while secondary appraisal does not specifically identify emotional reactions but rather the coping mechanisms available. \n\nThe third incorrect option, \"Primary appraisal assesses physiological responses before cognitive evaluation,\" is misleading as primary appraisal does not involve assessing physiological responses; it focuses solely on the cognitive evaluation of the event's significance before any physiological or emotional responses occur.",
       "kn": "KN10",
       "kn_explanation": "This question highlights a specific component of the cognitive appraisal process, essential to theories of emotion appraisal within KN10.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Cingulate gyrus"
       ],
       "answer": "Hypothalamus",
-      "explanation": "The hypothalamus controls physiological emotional responses by regulating autonomic functions and interacting with the pituitary gland.",
+      "explanation": "1. The **hypothalamus** is the correct answer because it regulates the physical signs of emotion by communicating with the autonomic nervous system and the pituitary gland. This regulation is essential for the body's physiological responses to emotional stimuli, such as changes in heart rate and blood pressure, which are critical components of emotional experiences.\n\n2. The **amygdala** is incorrect because, while it is involved in recognizing fear and mediating emotional reactions, it does not primarily regulate the physical signs of emotion through the autonomic nervous system or the pituitary gland. The **hippocampus** is also incorrect as it is more associated with memory processes rather than the direct regulation of emotional responses. Lastly, the **cingulate gyrus** is wrong because it is primarily involved in emotional processing and decision-making, but it does not play a direct role in regulating the physical signs of emotion through autonomic and endocrine pathways.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of brain regions mediating physiological aspects of emotion, relevant to biological bases of behavior (KN1).",
       "difficulty": "easy",
@@ -204,7 +204,7 @@
         "An immediate physiological response to a threatening stimulus"
       ],
       "answer": "A stable internal state achieved through adaptation to environmental demands",
-      "explanation": "Allostasis refers to the process by which the body achieves stability through physiological or behavioral changes in response to stress, enabling adaptation to environmental demands.",
+      "explanation": "1. \"A stable internal state achieved through adaptation to environmental demands\" is the correct answer because McEwen’s allostasis refers to the processes that enable the body to maintain stability while adapting to changes in the environment. This concept emphasizes that the body can achieve a balanced state through physiological adjustments, which is integral to coping with stressors effectively.\n\n2. The option \"The cumulative biological burden from chronic stress\" is incorrect because this describes allostatic load, which refers to the wear-and-tear on the body resulting from prolonged stress rather than the adaptive processes of allostasis. \"A pathological breakdown of physiological systems due to prolonged stress\" is wrong because it characterizes allostatic overload, which occurs when the allostatic state is maintained too long, leading to negative health outcomes, rather than the adaptive state itself. Lastly, \"An immediate physiological response to a threatening stimulus\" is incorrect as it pertains to the alarm reaction stage in Selye’s general adaptation syndrome, which is focused on immediate responses rather than the long-term stabilization achieved through allostasis.",
       "kn": "KN1",
       "kn_explanation": "This question targets the concept of allostasis, a key component of McEwen’s stress model tied to physiological adaptation in response to stress, aligned with KN1.",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "Allostatic load effects are random and unpredictable across individuals"
       ],
       "answer": "Genetic makeup, resilience, and perceptions of stressor controllability influence outcomes",
-      "explanation": "McEwen’s model emphasizes that individual differences such as genetics, resilience, and cognitive appraisal affect how chronic stress impacts health and vulnerability to disorder.",
+      "explanation": "1. The correct answer, \"Genetic makeup, resilience, and perceptions of stressor controllability influence outcomes,\" aligns with McEwen’s allostatic load model, which emphasizes that individual differences in responses to chronic stress stem from various factors. According to McEwen, the brain plays a crucial role in determining what is perceived as stressful, and individual genetic factors, levels of resilience, and beliefs about the controllability of stressors all significantly affect how one copes with stress and the resulting physiological and psychological outcomes.\n\n2. The first incorrect option, \"All individuals experience similar physiological breakdowns after prolonged stress,\" is wrong because McEwen’s model asserts that responses to stress vary significantly based on individual differences rather than being uniform across all people. The second incorrect option, \"Only prior physical health determines vulnerability to stress-related disorders,\" is incorrect because McEwen highlights multiple factors, including genetic and psychological aspects, not just physical health, in determining vulnerability to stress. Lastly, the option \"Allostatic load effects are random and unpredictable across individuals\" is incorrect as McEwen's model indicates that while the effects can vary, they are influenced by identifiable factors such as genetic makeup and resilience, rather than being random.",
       "kn": "KN1",
       "kn_explanation": "This question explores individual variability in the biological and psychological response to stress, a core aspect of McEwen’s stress theory under biological bases (KN1).",
       "difficulty": "medium",
@@ -239,6 +239,46 @@
       "kn_explanation": "This question assesses understanding of the misattribution of arousal phenomenon within two-factor theories of emotion, related to cognitive-affective bases of behavior (KN10).",
       "difficulty": "medium",
       "quality_comment": "Scenarios present subtle differences, testing real comprehension of the experimental basis of misattribution, suitable for EPPP."
+    },
+    {
+      "stem": "Which of the following best describes the sequence of events according to the James-Lange theory of emotion?",
+      "options": [
+        "Emotional experience occurs before physiological arousal",
+        "Physiological arousal leads to emotional experience",
+        "Cognitive appraisal occurs after physiological changes",
+        "Physiological reactions and emotional experiences occur simultaneously"
+      ],
+      "answer": "Physiological arousal leads to emotional experience",
+      "explanation": "1. The correct answer, \"Physiological arousal leads to emotional experience,\" aligns with the James-Lange Theory, which posits that an emotionally salient stimulus triggers a physiological reaction (e.g., increased heart rate), and this physiological response is then interpreted as an emotion (e.g., feeling fear). The theory emphasizes that the experience of emotion follows physiological arousal, not the other way around.\n\n2. The option \"Emotional experience occurs before physiological arousal\" is incorrect because it contradicts the James-Lange Theory, which asserts that physiological changes must occur first for emotions to be felt. \"Cognitive appraisal occurs after physiological changes\" is wrong as it misrepresents the sequence in Lazarus’s Cognitive Appraisal Theory, which emphasizes that cognitive appraisal precedes emotional response. Lastly, \"Physiological reactions and emotional experiences occur simultaneously\" is incorrect because it aligns more with Cannon-Bard Theory, which states that both physiological arousal and emotional experience happen at the same time, contrary to the sequential nature of the James-Lange Theory.",
+      "difficulty": "easy",
+      "kn": "KN10",
+      "kn_explanation": "This question tests knowledge of a major emotion theory, which belongs to research-based theories and models of emotion in cognitive-affective bases of behavior (KN10).",
+      "quality_comment": "This question effectively tests understanding of the sequence of events in the James-Lange theory.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In a situation where an individual feels fear after noticing their heart racing, which theory of emotion best explains this experience?",
+      "options": [
+        "Cannon-Bard theory",
+        "James-Lange theory",
+        "Schachter-Singer theory",
+        "Lazarus theory"
+      ],
+      "answer": "James-Lange theory",
+      "explanation": "The individual's experience of fear is based on the physiological response (heart racing), which aligns with the James-Lange theory that emphasizes physiological reactions preceding emotional experiences.",
+      "difficulty": "hard",
+      "kn": "KN10",
+      "kn_explanation": "This question tests knowledge of a major emotion theory, which belongs to research-based theories and models of emotion in cognitive-affective bases of behavior (KN10).",
+      "quality_comment": "This question challenges the test-taker to apply the James-Lange theory to a specific scenario, enhancing comprehension.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

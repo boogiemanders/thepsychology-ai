@@ -9,7 +9,7 @@
         "Sympathetic nervous system"
       ],
       "answer": "Somatic nervous system",
-      "explanation": "The somatic nervous system transmits sensory information to the CNS and motor information from the CNS to skeletal muscles, facilitating voluntary movements.",
+      "explanation": "1. The \"Somatic nervous system\" is the correct answer because it specifically transmits information from the body's sensory receptors to the central nervous system (CNS) and conveys signals from the CNS to the skeletal muscles. This system is responsible for voluntary actions, allowing individuals to respond to sensory stimuli through muscle movement.\n\n2. The \"Autonomic nervous system\" is incorrect because it primarily manages involuntary functions, transmitting information between the CNS and smooth muscles and organs rather than skeletal muscles. The \"Peripheral nervous system\" is also incorrect as it encompasses both the somatic and autonomic nervous systems, without specifying the voluntary control of skeletal muscles. Lastly, the \"Sympathetic nervous system\" is incorrect because it is a subdivision of the autonomic nervous system focused on preparing the body for action during emergencies, rather than transmitting sensory information to and from the skeletal muscles.",
       "kn": "KN1",
       "kn_explanation": "This question assesses knowledge about structural and functional aspects of the nervous system, which falls under biological bases of behavior (KN1).",
       "difficulty": "easy",
@@ -24,7 +24,7 @@
         "Sweating"
       ],
       "answer": "Sweating",
-      "explanation": "The sympathetic nervous system activates sweating and increases heart rate and pupil dilation while inhibiting digestion and sexual activity during fight-or-flight.",
+      "explanation": "1. \"Sweating\" is the correct answer because it is a physiological change primarily mediated by the sympathetic nervous system during the fight-or-flight response. The sympathetic nervous system activates bodily functions that prepare the body for action, which includes increasing perspiration to help cool the body during stressful situations.\n\n2. The option \"Increased digestion\" is incorrect because the sympathetic nervous system inhibits digestion to conserve energy for immediate physical responses. \"Pupil constriction\" is also incorrect, as the sympathetic nervous system causes pupil dilation to enhance vision and allow more light during emergencies. Lastly, \"Decreased heart rate\" is wrong because the sympathetic nervous system increases heart rate to pump more blood and oxygen to muscles, facilitating a quick reaction to threats.",
       "kn": "KN1",
       "kn_explanation": "The item focuses on autonomic nervous system functions, specifically sympathetic responses, relating to biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Myelin sheath"
       ],
       "answer": "Dendrite",
-      "explanation": "Dendrites receive chemical signals from the axon terminals of presynaptic neurons and transmit this information to the soma.",
+      "explanation": "1. The correct answer is \"Dendrite\" because dendrites are specialized structures of a neuron that receive information from other neurons. They play a crucial role in the communication process within the nervous system by collecting chemical signals, which can then lead to the stimulation of the neuron if the signals are sufficient.\n\n2. The \"Axon\" is incorrect because it is responsible for transmitting information away from the neuron to other cells, rather than receiving signals. The \"Soma\" (cell body) is also incorrect; while it contains the nucleus and other essential components for the neuron's survival, it does not directly receive chemical signals from other neurons. Lastly, the \"Myelin sheath\" is incorrect because it serves to insulate the axon and speed up the conduction of electrical impulses, but it does not play a role in receiving signals from other neurons.",
       "kn": "KN1",
       "kn_explanation": "Identifying neuron structure and function is fundamental to understanding biological bases of behavior (KN1).",
       "difficulty": "easy",
@@ -54,7 +54,7 @@
         "A decrease in sodium ion concentration inside the neuron"
       ],
       "answer": "An electrical impulse triggered when depolarization exceeds a threshold",
-      "explanation": "Action potentials are all-or-none electrical impulses generated when sufficient depolarization (threshold) occurs, leading to an electrical signal down the axon.",
+      "explanation": "1. The correct answer, \"An electrical impulse triggered when depolarization exceeds a threshold,\" accurately describes an action potential because it highlights the all-or-none nature of action potentials. When a neuron is sufficiently stimulated, positively charged sodium ions enter the cell, causing depolarization. If this depolarization reaches a minimum threshold, it triggers an action potential, which is an electrical impulse that travels along the axon.\n\n2. The option \"A graded response varying in intensity with stimulus strength\" is incorrect because action potentials are all-or-none responses; they do not vary in intensity but are instead characterized by a consistent magnitude once the threshold is reached. The option \"A chemical release from dendrites to other neurons\" is incorrect because action potentials are electrical impulses that travel along the axon, not chemical releases; neurotransmitters are released at the synapse after an action potential occurs. Lastly, \"A decrease in sodium ion concentration inside the neuron\" is incorrect because action potentials are initiated by an increase in sodium ion concentration inside the neuron, leading to depolarization, not a decrease.",
       "kn": "KN1",
       "kn_explanation": "This question addresses neurophysiological processes essential to the biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Neurotransmitters directly conduct electrical impulses across synapses."
       ],
       "answer": "They are released from the presynaptic axon terminal and activate receptors on the postsynaptic neuron.",
-      "explanation": "Synaptic transmission involves neurotransmitters released from presynaptic terminals binding to postsynaptic receptors to facilitate or inhibit neuronal signaling.",
+      "explanation": "1. The statement \"They are released from the presynaptic axon terminal and activate receptors on the postsynaptic neuron\" is correct because synaptic transmission begins when an action potential reaches the axon terminal of the presynaptic neuron, leading to the release of neurotransmitters into the synaptic cleft. These neurotransmitters then bind to receptors on the postsynaptic neuron, which can either increase or decrease the likelihood of an action potential occurring in that neuron.\n\n2. The incorrect options are as follows:\n- **Neurotransmitters are released from dendrites into the synaptic cleft.** This is incorrect because neurotransmitters are released from the axon terminal of the presynaptic neuron, not from dendrites.\n- **They are stored in the postsynaptic neuron and block receptor sites.** This is incorrect because neurotransmitters are stored in synaptic vesicles at the presynaptic terminal, not in the postsynaptic neuron, and they do not block receptor sites; instead, they activate them.\n- **Neurotransmitters directly conduct electrical impulses across synapses.** This is incorrect because neurotransmitters facilitate communication between neurons chemically rather than conducting electrical impulses directly across the synapse.",
       "kn": "KN1",
       "kn_explanation": "This question targets understanding of chemical communication between neurons, a key neurobiological concept (KN1).",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Compensatory masquerade"
       ],
       "answer": "Cross-modal reassignment",
-      "explanation": "Cross-modal reassignment occurs when a deprived brain area adapts by processing input from a different sensory modality, such as visual cortex areas processing somatosensory input in blindness.",
+      "explanation": "1. **Correct Answer: Cross-modal reassignment**  \n\"Cross-modal reassignment\" is the correct answer because it refers to the phenomenon where a brain area that typically processes a specific type of sensory input adapts to take on new functions when deprived of its usual sensory input. For example, neurons in the visual cortex of a person born blind may shift to process somatosensory input, allowing the individual to create cognitive representations of the world without visual information.\n\n2. **Incorrect Options:**\n\n- **Homologous area adaptation:** This type of neuroplasticity occurs when functions shift from a damaged brain area to the corresponding area in the opposite hemisphere, rather than processing different sensory modalities.\n  \n- **Map expansion:** Map expansion involves the enlargement of a functioning cortical region due to practice or exercise, which does not pertain to the reassignment of sensory processing areas after deprivation.\n  \n- **Compensatory masquerade:** This process refers to the use of alternative cognitive strategies by intact brain areas to perform tasks that were previously managed by damaged areas, rather than the reassignment of sensory modalities in response to deprivation.",
       "kn": "KN1",
       "kn_explanation": "This question focuses on neuroplasticity types and brain functional adaptation within biological bases (KN1).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Norepinephrine"
       ],
       "answer": "Dopamine",
-      "explanation": "Dopamine plays diverse roles including movement, mood, and reward; its dysfunction contributes to Parkinson’s, ADHD, and schizophrenia symptoms.",
+      "explanation": "1. **Dopamine** is the correct answer because it plays a crucial role in motor control, mood regulation, and the brain’s reward system. It is associated with several disorders, including Parkinson's disease, which is linked to low levels of dopamine in the substantia nigra, ADHD, where dopamine deficiency in the prefrontal cortex is implicated, and schizophrenia, which is connected to dopamine hyperactivity in certain brain regions.\n\n2. **Serotonin** is primarily an inhibitory neurotransmitter involved in mood, sleep, and appetite regulation, but it is not directly related to motor control or the specific disorders mentioned. **Acetylcholine (ACh)** is involved in movement and memory but is not primarily linked to reward systems or the disorders listed; instead, it is associated with conditions like myasthenia gravis and Alzheimer's disease. **Norepinephrine** primarily functions in the sympathetic nervous system's fight-or-flight response and affects attention and mood but does not have the same direct involvement in motor control or the specific disorders noted for dopamine.",
       "kn": "KN1",
       "kn_explanation": "The question assesses knowledge of neurotransmitter functions and their relevance to neurobehavioral disorders (KN1).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Regulating blood flow"
       ],
       "answer": "Stimulating muscle contraction",
-      "explanation": "Acetylcholine causes skeletal muscle contraction by binding to nicotinic receptors at neuromuscular junctions.",
+      "explanation": "1. The correct answer, \"Stimulating muscle contraction,\" is accurate because acetylcholine (ACh) is a neurotransmitter that causes muscles to contract at the neuromuscular junction. ACh binds to nicotinic receptors located at the neuromuscular junction, mediating rapid excitatory neurotransmission that leads to muscle contraction.\n\n2. \n\n- **Inhibiting muscle contraction:** This option is incorrect because ACh is primarily excitatory at the neuromuscular junction, promoting muscle contraction rather than inhibiting it.\n  \n- **Modulating mood and motivation:** While ACh plays roles in arousal and attention, its primary function at the neuromuscular junction is not related to mood and motivation but rather to motor function.\n\n- **Regulating blood flow:** This option is misleading because, although ACh can have effects on blood vessels through its action on the autonomic nervous system, its primary role at the neuromuscular junction is specifically to stimulate muscle contraction, not to regulate blood flow.",
       "kn": "KN1",
       "kn_explanation": "Testing understanding of neurotransmitter function relevant to motor systems fits the biological bases domain (KN1).",
       "difficulty": "easy",
@@ -129,7 +129,7 @@
         "A hormone regulating sleep-wake cycles"
       ],
       "answer": "An inhibitory neurotransmitter involved in anxiety regulation",
-      "explanation": "GABA is the major inhibitory neurotransmitter, reducing neuronal excitability and regulating anxiety and arousal.",
+      "explanation": "1. The correct answer, \"An inhibitory neurotransmitter involved in anxiety regulation,\" accurately describes gamma-aminobutyric acid (GABA) because GABA is identified as the primary inhibitory neurotransmitter in the nervous system. It plays a crucial role in regulating mood and anxiety; abnormal levels of GABA can lead to conditions such as anxiety and insomnia, highlighting its importance in anxiety regulation.\n\n2. The option \"An excitatory neurotransmitter involved in mood elevation\" is incorrect because GABA is primarily inhibitory, not excitatory, and does not elevate mood but rather helps to regulate anxiety and inhibit excessive neuronal activity. The option \"A neurotransmitter that causes muscle contraction\" is wrong because muscle contraction is primarily mediated by acetylcholine (ACh), not GABA. Lastly, \"A hormone regulating sleep-wake cycles\" is incorrect as GABA is a neurotransmitter, not a hormone, and while it is involved in sleep regulation, it does not function as a hormone in this context.",
       "kn": "KN1",
       "kn_explanation": "This item examines neurotransmitter action and its behavioral effects within biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Produces effects opposite to those of the natural neurotransmitter"
       ],
       "answer": "Mimics a neurotransmitter but produces a weaker effect",
-      "explanation": "Partial agonists bind to receptors and activate them but generate a submaximal response compared to full agonists.",
+      "explanation": "1. The correct answer, \"Mimics a neurotransmitter but produces a weaker effect,\" accurately describes a partial agonist because, as stated in the reference material, partial agonists generate effects similar to those of a neurotransmitter, but these effects are less potent than those produced by the full agonists. This means that while a partial agonist can activate receptors, it does so to a lesser degree than the natural neurotransmitter, resulting in a milder physiological response.\n\n2. The incorrect options are as follows:\n- \"Blocks neurotransmitter receptors without activating them\": This describes an antagonist, which prevents neurotransmitters from binding and producing effects, rather than mimicking their action.\n- \"Increases neurotransmitter release without receptor binding\": This does not align with the definition of a partial agonist, which involves receptor binding and mimicking neurotransmitter effects, rather than merely increasing release.\n- \"Produces effects opposite to those of the natural neurotransmitter\": This describes an inverse agonist, which induces effects that counteract those of the neurotransmitter, rather than mimicking or partially activating the receptor.",
       "kn": "KN2",
       "kn_explanation": "This question focuses on drug mechanisms and their effects on neurotransmitter systems, a key area in drug classification and pharmacology (KN2).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Acetylcholine"
       ],
       "answer": "Norepinephrine",
-      "explanation": "The catecholamine hypothesis proposes that some forms of depression result from deficient norepinephrine activity.",
+      "explanation": "1. \"Norepinephrine\" is the correct answer because, according to the catecholamine hypothesis, some forms of depression are attributed to a deficiency of norepinephrine. This neurotransmitter is essential for the sympathetic nervous system’s fight-or-flight response and is involved in various functions, including attention, arousal, and mood regulation. A lack of norepinephrine can lead to depressive symptoms, highlighting its critical role in emotional health.\n\n2. \n- **Dopamine:** While dopamine is linked to several disorders, including depression, it is more specifically associated with issues related to motivation and reward rather than being directly implicated as a primary cause of depression according to the catecholamine hypothesis.\n- **Serotonin:** Although low levels of serotonin are associated with depression, the question specifically asks about the catecholamine hypothesis, which focuses on norepinephrine rather than serotonin's role in mood disorders.\n- **Acetylcholine:** Acetylcholine is involved in movement, arousal, attention, and memory, but it is not specifically tied to the catecholamine hypothesis regarding depression, making it an incorrect choice in this context.",
       "kn": "KN1",
       "kn_explanation": "Assessing neurotransmitter hypotheses in mood disorders falls under biological bases of behavior and psychopharmacology (KN1).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Neurotransmitters keep the neuron in a constant action potential state"
       ],
       "answer": "Sodium ions are actively transported out of the neuron to maintain negative charge inside",
-      "explanation": "The resting membrane potential is maintained by active transport of sodium out and potassium into the cell, keeping the inside negatively charged.",
+      "explanation": "1. The correct answer, \"Sodium ions are actively transported out of the neuron to maintain negative charge inside,\" accurately describes the resting state of a neuron. In this state, the fluid inside the neuron is negatively charged compared to the fluid outside. This negative charge is primarily maintained by the active transport of sodium ions (Na+) out of the neuron, which helps to establish and maintain the resting membrane potential necessary for the neuron to respond to stimulation.\n\n2. The statement \"The inside of the neuron is positively charged compared to outside\" is incorrect because, during the resting state, the inside of the neuron is actually negatively charged relative to the outside, not positively charged. The option \"Potassium ions flood into the neuron to depolarize it\" is misleading because, in the resting state, potassium ions (K+) are more concentrated inside the neuron, and they do not flood in; rather, they flow out during depolarization. Lastly, \"Neurotransmitters keep the neuron in a constant action potential state\" is incorrect because neurotransmitters are involved in synaptic transmission and do not maintain a resting state; instead, action potentials occur only when a neuron is sufficiently stimulated, not in a constant state.",
       "kn": "KN1",
       "kn_explanation": "This question assesses basic neurophysiological mechanisms crucial to the biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "GABA"
       ],
       "answer": "Endocannabinoids",
-      "explanation": "Endocannabinoids are unconventional neurotransmitters synthesized on demand and regulate functions including pain, memory, appetite, and sleep.",
+      "explanation": "1. **Endocannabinoids** are the correct answer because they are classified as unconventional neurotransmitters that are synthesized on demand in response to stimuli. They play a role in regulating various functions, including pain, memory, appetite, and sleep, and are involved in maintaining the body's homeostasis through the endocannabinoid system.\n\n2. **Acetylcholine** is incorrect because it is a conventional neurotransmitter that is stored in synaptic vesicles and is primarily involved in movement, arousal, attention, and memory, rather than being synthesized on demand. **Dopamine** is also incorrect; while it serves both excitatory and inhibitory functions and is involved in movement, mood, and reward, it is not classified as an unconventional neurotransmitter nor synthesized on demand. **GABA** is incorrect as well, since it is a primary inhibitory neurotransmitter involved in motor control, memory, and anxiety, and is not synthesized on demand like endocannabinoids.",
       "kn": "KN4",
       "kn_explanation": "This question addresses the classification and function of unconventional neurotransmitters, highlighting knowledge of neurochemical systems (KN4).",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "Homologous area adaptation"
       ],
       "answer": "Map expansion",
-      "explanation": "Map expansion involves enlargement of a cortical region by recruiting neurons from neighboring areas as a result of practice or experience.",
+      "explanation": "1. **Correct Answer - Map Expansion:** \"Map expansion\" refers to the temporary or permanent enlargement of a functioning cortical region due to practice or exercise. This process involves recruiting neurons from the borders of that region, which enhances the brain's capacity to process information related to the newly learned skill or behavior.\n\n2. **Incorrect Options:**\n   - **Compensatory Masquerade:** This process occurs when a person uses alternative cognitive processes mediated by intact areas of the brain to perform tasks that were previously managed by a damaged area, rather than expanding cortical regions.\n   - **Cross-modal Reassignment:** This type of neuroplasticity happens when a brain area, deprived of its usual sensory input, repurposes its neurons to process different types of sensory information, not through the recruitment of surrounding neurons.\n   - **Homologous Area Adaptation:** This process involves the shift of functions from a damaged brain area to the corresponding area in the opposite hemisphere, rather than the expansion of a functioning cortical region due to practice or exercise.",
       "kn": "KN3",
       "kn_explanation": "This question tests understanding of types of neuroplasticity and the brain's capacity to adapt through functional reorganization (KN3).",
       "difficulty": "medium",
@@ -219,11 +219,51 @@
         "Serotonergic receptors"
       ],
       "answer": "Nicotinic receptors",
-      "explanation": "Nicotinic receptors bind acetylcholine and nicotine, mediating rapid excitatory neurotransmission especially at the neuromuscular junction.",
+      "explanation": "1. **Nicotinic receptors** are the correct answer because they mediate rapid excitatory neurotransmission at the neuromuscular junction and are responsive to both acetylcholine (ACh) and nicotine. These receptors are located in both the central and peripheral nervous systems and play a crucial role in stimulating muscle contraction at the neuromuscular junction, facilitating voluntary movement.\n\n2. **Muscarinic receptors** are incorrect because they mediate both excitatory and inhibitory neurotransmission, primarily in the parasympathetic nervous system, rather than rapid excitatory responses at the neuromuscular junction. **Dopamine receptors** are also incorrect as they are primarily involved in mediating the effects of dopamine, which contributes to various functions including movement and mood, but they do not respond to ACh or nicotine. Lastly, **serotonergic receptors** are incorrect because they respond to serotonin and are involved in functions such as mood and sleep, rather than mediating excitatory neurotransmission at the neuromuscular junction.",
       "kn": "KN1",
       "kn_explanation": "This question focuses on receptor subtypes of neurotransmitters, relevant to neurochemical signaling knowledge (KN1).",
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible receptor types making the test-taker apply specific knowledge about receptor function."
+    },
+    {
+      "stem": "Which of the following actions is primarily regulated by the sympathetic nervous system during a stressful situation?",
+      "options": [
+        "Increased salivation",
+        "Increased heart rate",
+        "Decreased respiration",
+        "Pupil dilation"
+      ],
+      "answer": "Increased heart rate",
+      "explanation": "1. \"Increased heart rate\" is the correct answer because the sympathetic nervous system is responsible for preparing the body for action during stressful situations, commonly referred to as the fight-or-flight response. Activation of the sympathetic nervous system leads to physiological changes that include increased heart rate, which helps to pump more blood to muscles and vital organs, enhancing physical readiness and response to threats.\n\n2. \n- **Increased salivation:** This option is incorrect because the sympathetic nervous system inhibits salivation as part of its response to stress, redirecting resources away from non-essential functions like digestion.\n- **Decreased respiration:** This option is wrong because the sympathetic nervous system actually increases respiration rates to ensure more oxygen is available for the body during stressful situations.\n- **Pupil dilation:** Although pupil dilation occurs during sympathetic activation, it is not the primary action regulated in the context of stress compared to increased heart rate, which is a more direct response to prepare the body for immediate action.",
+      "difficulty": "easy",
+      "kn": "KN1",
+      "kn_explanation": "The item focuses on autonomic nervous system functions, specifically sympathetic responses, relating to biological bases of behavior (KN1).",
+      "quality_comment": "This question effectively tests understanding of the sympathetic nervous system's role in stress responses.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In response to a perceived threat, which physiological response is NOT typically associated with the activation of the sympathetic nervous system?",
+      "options": [
+        "Increased blood flow to muscles",
+        "Inhibition of digestive processes",
+        "Decreased pupil size",
+        "Increased respiratory rate"
+      ],
+      "answer": "Decreased pupil size",
+      "explanation": "1. \"Decreased pupil size\" is the correct answer because the activation of the sympathetic nervous system is associated with the body's fight-or-flight response, which includes physiological changes such as pupil dilation to enhance vision in threatening situations. In contrast, decreased pupil size would indicate a state of rest or relaxation, which is governed by the parasympathetic nervous system, not the sympathetic.\n\n2. \n- **Increased blood flow to muscles:** This response is correct as the sympathetic nervous system prepares the body for action by redirecting blood flow to the muscles, enhancing physical readiness to respond to threats.\n- **Inhibition of digestive processes:** This is incorrect because the sympathetic nervous system inhibits digestive processes to conserve energy for immediate physical responses, which is a typical reaction during perceived threats.\n- **Increased respiratory rate:** This is also incorrect as the sympathetic nervous system increases the respiratory rate to supply more oxygen to the body, facilitating heightened alertness and readiness to act in response to danger.",
+      "difficulty": "hard",
+      "kn": "KN1",
+      "kn_explanation": "The item focuses on autonomic nervous system functions, specifically sympathetic responses, relating to biological bases of behavior (KN1).",
+      "quality_comment": "This question challenges the test-taker to differentiate between sympathetic and parasympathetic responses, enhancing their understanding of autonomic nervous system functions.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

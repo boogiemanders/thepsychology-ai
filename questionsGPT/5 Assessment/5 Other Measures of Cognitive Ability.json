@@ -9,7 +9,7 @@
         "Columbia Mental Maturity Scale-Third Edition (CMMS)"
       ],
       "answer": "Cognitive Assessment System, Second Edition (CAS2)",
-      "explanation": "The CAS2 uses the PASS cognitive/neurological theory which distinguishes planning, attention, simultaneous, and successive processing.",
+      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it is explicitly described as a measure of cognitive processing abilities for individuals aged 5 to 18 years, based on the PASS cognitive/neurological theory. This theory identifies four cognitive functions: planning, attention, simultaneous processing, and successive processing, which are directly assessed by the CAS2.\n\n2. \n- The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because, while it assesses cognitive abilities in children aged 3 to 18 years, it is designed to be culturally fair and does not specifically utilize the PASS theory framework.\n- The **Leiter International Performance Scale-Third Edition (Leiter-3)** is also incorrect as it is a nonverbal measure of cognitive abilities for individuals aged 3 to 75+ years, focusing on fluid intelligence without reference to the PASS theory.\n- The **Columbia Mental Maturity Scale-Third Edition (CMMS)** is incorrect because it measures general reasoning ability specifically for children aged 3:6 through 9:11 and does not incorporate the four cognitive functions outlined in the PASS theory.",
       "kn": "KN6",
       "kn_explanation": "This question covers theory-based cognitive assessment development and models of intelligence, aligning with major research-based theories and models of intelligence (KN6).",
       "difficulty": "medium",
@@ -21,10 +21,10 @@
         "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
         "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
         "Wonderlic Cognitive Ability Test",
-        "Raven’s Standard Progressive Matrices (SPM)"
+        "Raven\u2019s Standard Progressive Matrices (SPM)"
       ],
       "answer": "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
-      "explanation": "The PPVT-5 assesses receptive vocabulary by having examinees point to pictures illustrating words and does not require verbal or written responses.",
+      "explanation": "1. The **Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)** is the correct answer because it specifically assesses receptive vocabulary without requiring reading or writing skills, making it ideal for individuals with speech or motor impairments. The test utilizes stimulus cards with pictures, allowing the examinee to indicate which image best represents the meaning of a spoken word, thus accommodating those who may struggle with verbal responses.\n\n2. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because it is a broader measure of cognitive ability that includes various scales, but it does not specifically focus on receptive vocabulary or accommodate individuals with speech or motor impairments as effectively as the PPVT-5. The **Wonderlic Cognitive Ability Test** is also incorrect; while it assesses general intelligence, it primarily consists of verbal, numerical, and spatial items that require reading and comprehension skills, making it unsuitable for those with speech or motor difficulties. Lastly, the **Raven\u2019s Standard Progressive Matrices (SPM)** is incorrect because it measures abstract reasoning and fluid intelligence through nonverbal tasks, but it does not focus on vocabulary assessment or cater specifically to individuals with speech or motor impairments.",
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of specific assessment instruments and their appropriate application (KN32).",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Columbia Mental Maturity Scale-Third Edition (CMMS)"
       ],
       "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-      "explanation": "KABC-II was designed to be culturally fair by reducing cultural content and verbal demands, and can be interpreted using CHC or Luria’s models.",
+      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it was specifically designed to be a culturally fair test by minimizing cultural content and verbal instructions, thereby reducing cultural bias. Additionally, it allows for interpretation using both the Cattell-Horn-Carroll (CHC) model of cognitive abilities and Luria\u2019s neuropsychological processing model, making it versatile for diverse populations.\n\n2. The **Leiter International Performance Scale-Third Edition (Leiter-3)** is incorrect because, while it is a nonverbal test designed for individuals with cognitive delays and other impairments, it does not explicitly mention the use of both CHC and Luria's models for interpretation. The **Cognitive Assessment System, Second Edition (CAS2)** is also incorrect as it focuses on cognitive processing abilities based on the PASS theory rather than minimizing cultural content or verbal instructions. Lastly, the **Columbia Mental Maturity Scale-Third Edition (CMMS)** is not the correct answer because it primarily assesses general reasoning ability without the comprehensive cultural fairness and interpretative frameworks offered by the KABC-II.",
       "kn": "KN35",
       "kn_explanation": "This question relates to test selection and adaptation for cultural appropriateness and minimizing bias (KN35).",
       "difficulty": "medium",
@@ -54,14 +54,14 @@
         "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)"
       ],
       "answer": "Leiter International Performance Scale-Third Edition (Leiter-3)",
-      "explanation": "Leiter-3 is a nonverbal cognitive test focusing on visualization, reasoning, memory, and attention, suited for individuals with speech, hearing, or language limitations.",
+      "explanation": "1. The \"Leiter International Performance Scale-Third Edition (Leiter-3)\" is the correct answer because it is specifically designed as a nonverbal measure of cognitive abilities, emphasizing fluid intelligence. It is suitable for individuals with speech or hearing impairments, autism spectrum disorder, or limited English proficiency, as it can be administered without verbal instructions and focuses on visual and reasoning skills.\n\n2. The \"Cognitive Assessment System, Second Edition (CAS2)\" is incorrect because it is based on the PASS theory and assesses cognitive processing abilities through verbal and nonverbal tasks, making it less suitable for individuals with significant communication challenges. The \"Wonderlic Cognitive Ability Test\" is incorrect as it is a verbal, numerical, and spatial test primarily designed for adults and does not specifically cater to nonverbal assessment or individuals with communication impairments. The \"Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)\" is incorrect because it measures receptive vocabulary using verbal stimuli and requires the examinee to respond verbally, making it unsuitable for those with speech impairments.",
       "kn": "KN32",
       "kn_explanation": "This question addresses knowledge of assessment tools and their appropriate uses with special populations (KN32).",
       "difficulty": "medium",
       "quality_comment": "The distractors test knowledge of other assessments, with plausible but incorrect matches, making the question effective."
     },
     {
-      "stem": "Raven’s Standard Progressive Matrices (SPM) is best described as:",
+      "stem": "Raven\u2019s Standard Progressive Matrices (SPM) is best described as:",
       "options": [
         "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
         "A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension",
@@ -69,7 +69,7 @@
         "A test measuring motor, cognitive, and language development in infants up to 42 months"
       ],
       "answer": "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
-      "explanation": "Raven’s SPM measures abstract reasoning, estimates fluid intelligence, and is less influenced by culture or education compared to other tests.",
+      "explanation": "1. The correct answer, \"A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences,\" accurately describes Raven\u2019s Standard Progressive Matrices (SPM) because it is designed to assess abstract reasoning through nonverbal tasks, thus focusing on fluid intelligence rather than learned knowledge. Additionally, the test is structured to reduce the impact of educational background and cultural factors, making it a fair assessment across diverse populations.\n\n2. The first incorrect option, \"A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension,\" is wrong because it describes the Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5), which focuses on receptive vocabulary rather than abstract reasoning. \n\nThe second incorrect option, \"A group-administered test assessing verbal, quantitative, and nonverbal domains for students in grades 2-12,\" is incorrect as it refers to the Cognitive Abilities Test, Form 7 (CogAT7), which evaluates multiple cognitive domains in a group setting rather than focusing solely on nonverbal abstract reasoning like the SPM. \n\nThe third incorrect option, \"A test measuring motor, cognitive, and language development in infants up to 42 months,\" is inaccurate because it describes the Bayley Scales of Infant and Toddler Development, Fourth Edition (Bayley-4), which assesses developmental status rather than abstract reasoning in older children and adults as Raven\u2019s SPM does.",
       "kn": "KN32",
       "kn_explanation": "This question evaluates knowledge of cognitive ability measures, specifically nonverbal tests and their applicable constructs (KN32).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Graduate Record Exam (GRE)"
       ],
       "answer": "Wonderlic Cognitive Ability Test",
-      "explanation": "The Wonderlic is a brief group intelligence test used with adults, especially in employment settings, consisting of 50 items across verbal, numerical, and spatial domains.",
+      "explanation": "1. The **Wonderlic Cognitive Ability Test** is the correct answer because it is specifically designed as a 12-minute assessment that includes 50 verbal, numerical, and spatial items, making it a quick measure of general intelligence. It is frequently utilized in adult hiring decisions, providing employers with a tool to evaluate potential employees' cognitive abilities efficiently.\n\n2. The **Cognitive Abilities Test, Form 7 (CogAT7)** is incorrect because it assesses cognitive abilities in three domains (verbal, quantitative, and nonverbal) for students in grades 2 through 12, rather than being aimed at adults for hiring purposes. The **SAT** is also incorrect since it is a college admissions test primarily intended for high school students, focusing on reading, writing, and math skills rather than general cognitive ability for adult hiring. Lastly, the **Graduate Record Exam (GRE)** is not the correct answer because it is an admissions test for graduate and professional schools that measures skills important for academic achievement, rather than a general intelligence test used for hiring decisions.",
       "kn": "KN32",
       "kn_explanation": "This question tests familiarity with commonly used group intelligence tests and their purposes (KN32).",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Reducing test administration to paper and pencil formats emphasizing manual scoring"
       ],
       "answer": "Tailoring item difficulty in real time based on examinee responses, thus improving efficiency and precision",
-      "explanation": "CAT adapts item difficulty based on performance, enhancing efficiency by avoiding irrelevant item difficulty, and improving measurement precision.",
+      "explanation": "1. The correct answer, \"Tailoring item difficulty in real time based on examinee responses, thus improving efficiency and precision,\" accurately reflects the primary advantage of computerized adaptive testing (CAT). CAT assesses an examinee's ability by presenting questions that adapt in difficulty based on their previous responses, allowing for a more precise measurement of their cognitive abilities while significantly reducing testing time. This adaptive approach ensures that the questions are appropriately challenging, enhancing the overall testing experience and accuracy of the results.\n\n2. The option \"Presenting the same set of standardized items to all examinees for comparability\" is incorrect because CAT specifically tailors questions to each individual, rather than using a uniform set of items. \"Allowing examinees to review and change previously answered items during the test session\" is wrong as CAT typically does not permit this feature, focusing instead on real-time adaptation without review. Finally, \"Reducing test administration to paper and pencil formats emphasizing manual scoring\" is incorrect because CAT is primarily a digital format that leverages technology for automated scoring, rather than a shift to traditional paper-based testing.",
       "kn": "KN29",
       "kn_explanation": "This question assesses understanding of test construction and psychometric properties, particularly the advantages of computerized adaptive testing (KN29).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Leiter International Performance Scale-Third Edition (Leiter-3)"
       ],
       "answer": "Columbia Mental Maturity Scale-Third Edition (CMMS)",
-      "explanation": "The CMMS measures general reasoning ability in young children, requiring no verbal or fine motor responses, making it suitable for children with motor or language impairments.",
+      "explanation": "1. The **Columbia Mental Maturity Scale-Third Edition (CMMS)** is the correct answer because it is specifically designed to assess general reasoning ability in young children aged 3:6 to 9:11 years old. It is particularly useful for children with cerebral palsy, sensory, speech or other motor impairments, or limited English proficiency, as it does not require verbal responses or fine motor skills.\n\n2. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because it measures cognitive ability across a broader age range (3:0 to 18:11) and focuses on multiple cognitive functions rather than specifically assessing general reasoning ability for young children. The **Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)** is also incorrect as it evaluates receptive vocabulary rather than general reasoning ability and is suitable for a wider age range (2:6 to 90+ years). Lastly, the **Leiter International Performance Scale-Third Edition (Leiter-3)** is not the correct answer because it is a nonverbal measure of cognitive abilities for a broader age range (3 to 75+ years) and emphasizes fluid intelligence rather than specifically targeting reasoning ability in young children.",
       "kn": "KN32",
       "kn_explanation": "This question pertains to knowledge of specialized assessment tools appropriate for specific age groups and disabilities (KN32).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Adaptive behavior"
       ],
       "answer": "Crystallized intelligence abilities",
-      "explanation": "The Bayley-4 assesses five domains including cognitive, motor, language, social-emotional, and adaptive behavior, but not crystallized intelligence specifically.",
+      "explanation": "1. **Explanation of the Correct Answer:**\nThe Bayley Scales of Infant and Toddler Development, Fourth Edition (Bayley-4), do not assess crystallized intelligence abilities, which refer to the knowledge and skills that one acquires through experience and education. Instead, the Bayley-4 focuses on evaluating developmental status across various domains, such as cognitive, motor, language, social-emotional, and adaptive behavior, which are distinct from crystallized intelligence.\n\n2. **Explanation of Incorrect Options:**\n- **Motor development:** The Bayley-4 includes subtests specifically designed to assess motor skills in infants and toddlers, measuring their ability to perform physical tasks.\n- **Social-emotional development:** This domain is also covered by the Bayley-4, which evaluates how infants and toddlers interact socially and manage their emotions.\n- **Adaptive behavior:** The Bayley-4 assesses adaptive behavior, which refers to the skills necessary for daily living, including communication and self-care abilities, making it a crucial part of the developmental evaluation.",
       "kn": "KN32",
       "kn_explanation": "This question requires knowledge of infant/toddler developmental assessments and their target domains, a key part of assessment instruments (KN32).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Assesses all examinees at approximately equal precision levels"
       ],
       "answer": "Allows examinees to review and change previous answers",
-      "explanation": "CAT typically does not allow examinees to review or change answers once submitted as item difficulty adapts dynamically.",
+      "explanation": "1. The correct answer, \"Allows examinees to review and change previous answers,\" is an advantage that is NOT associated with computerized adaptive testing (CAT). According to the reference material, CAT does not typically allow examinees to review questions they have already answered, which is a limitation of this testing method.\n\n2. The first incorrect option, \"Reduces testing time by not administering all items,\" is wrong because one of the primary advantages of CAT is its efficiency in reducing testing time by only presenting questions that are appropriate to the examinee's ability level, thus avoiding unnecessary items. The second incorrect option, \"Maintains test security by varying items between examinees,\" is incorrect because CAT enhances test security by ensuring that different examinees receive different sets of questions, which helps prevent cheating and item exposure. Lastly, the option \"Assesses all examinees at approximately equal precision levels\" is incorrect because CAT is designed to assess each examinee's ability with a high level of precision tailored to their individual performance, ensuring that all examinees are evaluated fairly and accurately based on their responses.",
       "kn": "KN29",
       "kn_explanation": "This question tests knowledge of key strengths and limitations of computerized adaptive testing in assessment theory and practice (KN29).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Receptive vocabulary skills for individuals with speech impairments"
       ],
       "answer": "Verbal reasoning, quantitative reasoning, and analytical reasoning skills relevant to graduate academic achievement",
-      "explanation": "The GRE General Test assesses general academic skills important for graduate studies and provides scores in verbal, quantitative, and analytical reasoning.",
+      "explanation": "1. The correct answer, \"Verbal reasoning, quantitative reasoning, and analytical reasoning skills relevant to graduate academic achievement,\" accurately reflects the purpose of the GRE General Test. This test measures skills that are essential for success in graduate and professional schools, focusing on areas that assess the examinee's readiness for advanced academic work.\n\n2. The first incorrect option, \"Specific knowledge in biology, chemistry, psychology, and literature,\" is wrong because the GRE General Test does not assess specific subject knowledge; instead, it evaluates general reasoning abilities across verbal, quantitative, and analytical domains. The second incorrect option, \"General cognitive ability including verbal, numerical, and spatial capacity for employment screening,\" is incorrect as it describes the Wonderlic Cognitive Ability Test, which is used primarily for employment decisions, not the GRE. Lastly, the option \"Receptive vocabulary skills for individuals with speech impairments\" is incorrect because it pertains to the Peabody Picture Vocabulary Test, which focuses specifically on vocabulary assessment rather than the broader reasoning skills measured by the GRE.",
       "kn": "KN32",
       "kn_explanation": "This question addresses knowledge of standardized testing for higher education admissions and their constructs (KN32).",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Dynamic testing with qualitative scoring"
       ],
       "answer": "Computerized adaptive testing using item response theory",
-      "explanation": "Computerized adaptive testing (CAT) uses item response theory (IRT) to select items tailored to the examinee’s ability, enhancing efficiency and precision.",
+      "explanation": "1. **Correct Answer Explanation**: \"Computerized adaptive testing using item response theory\" is the correct answer because this approach tailors test items to the individual examinee\u2019s ability level in real time. It begins with a moderately difficult question, adjusting the difficulty of subsequent questions based on the examinee's responses, allowing for a precise assessment of cognitive ability.\n\n2. **Incorrect Options Explanation**:\n   - **Traditional fixed-form paper-and-pencil testing**: This method presents the same set of questions to all examinees, regardless of their individual ability levels, and does not adapt to their performance during the test.\n   - **Interview-based cognitive evaluations**: These evaluations rely on subjective questioning and responses rather than a standardized item format, and do not adapt items based on cognitive ability in real time.\n   - **Dynamic testing with qualitative scoring**: While dynamic testing assesses learning potential through various methods, it does not primarily focus on real-time adaptation of item difficulty based on the examinee's performance like computerized adaptive testing does.",
       "kn": "KN29",
       "kn_explanation": "This item focuses on the theoretical and technological basis of CAT, matching the content on assessment theories and models in this domain (KN29).",
       "difficulty": "medium",
@@ -186,17 +186,17 @@
         "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
         "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
         "Wonderlic Cognitive Ability Test",
-        "Raven’s Standard Progressive Matrices (SPM)"
+        "Raven\u2019s Standard Progressive Matrices (SPM)"
       ],
       "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-      "explanation": "The KABC-II was specifically designed to limit cultural and language bias, enabling interpretation via CHC or Luria’s models depending on the examinee's needs.",
+      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it was specifically designed to be a culturally fair test, minimizing cultural content and verbal instructions, which helps reduce bias related to language and cultural background. Furthermore, it allows for interpretation using either the Cattell-Horn-Carroll (CHC) model or Luria's neuropsychological processing model, making it versatile in assessing cognitive abilities without being influenced by cultural or language factors.\n\n2. The **Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)** is incorrect because it primarily measures receptive vocabulary rather than broader cognitive abilities, and while it is useful for individuals with speech or motor impairments, it does not specifically address cultural bias in cognitive assessment. The **Wonderlic Cognitive Ability Test** is also incorrect as it is a general intelligence test primarily used for hiring decisions and is not designed to minimize cultural or language bias in children. Lastly, the **Raven\u2019s Standard Progressive Matrices (SPM)**, while a nonverbal measure of abstract reasoning that reduces educational and cultural bias, does not provide the flexibility of interpretation based on the CHC or Luria models, making it less suited for the specified purpose compared to the KABC-II.",
       "kn": "KN35",
-      "kn_explanation": "This question covers assessment theories and models related to cultural fairness and test interpretation, fitting with the domain’s focus on psychometric models and bias (KN35).",
+      "kn_explanation": "This question covers assessment theories and models related to cultural fairness and test interpretation, fitting with the domain\u2019s focus on psychometric models and bias (KN35).",
       "difficulty": "medium",
       "quality_comment": "The options provide tests with varying cultural fairness, emphasizing the distinctiveness of the KABC-II for reducing bias, enhancing item validity."
     },
     {
-      "stem": "In the context of cognitive assessments, what is a major benefit of nonverbal tests such as Raven’s Standard Progressive Matrices and Leiter-3?",
+      "stem": "In the context of cognitive assessments, what is a major benefit of nonverbal tests such as Raven\u2019s Standard Progressive Matrices and Leiter-3?",
       "options": [
         "They reduce the influence of language proficiency and cultural knowledge on test performance",
         "They primarily assess motor skills alongside cognitive abilities",
@@ -204,11 +204,51 @@
         "They emphasize crystallized intelligence over fluid reasoning"
       ],
       "answer": "They reduce the influence of language proficiency and cultural knowledge on test performance",
-      "explanation": "Nonverbal cognitive tests minimize biases due to language and cultural background, making them suitable for diverse populations.",
+      "explanation": "1. The correct answer, \"They reduce the influence of language proficiency and cultural knowledge on test performance,\" is accurate because nonverbal tests like Raven\u2019s Standard Progressive Matrices (SPM) and Leiter-3 are designed to minimize the impact of verbal instructions and responses. This makes them particularly beneficial for individuals with limited English proficiency, cultural differences, or other communication challenges, allowing for a fairer assessment of cognitive abilities that are not reliant on language skills.\n\n2. The option \"They primarily assess motor skills alongside cognitive abilities\" is incorrect because nonverbal tests like the SPM and Leiter-3 focus specifically on cognitive functions such as reasoning and visualization, rather than on motor skills. The statement \"They are designed exclusively for group administration\" is misleading as these tests can be administered individually, making them suitable for a wide range of settings, not just group contexts. Lastly, the option \"They emphasize crystallized intelligence over fluid reasoning\" is wrong because both the SPM and Leiter-3 emphasize fluid intelligence, which involves abstract reasoning and problem-solving, rather than crystallized intelligence, which is more related to knowledge acquired through experience and education.",
       "kn": "KN35",
       "kn_explanation": "This question highlights the use of assessment models and theories emphasizing fairness and cultural considerations in test selection (KN35).",
       "difficulty": "easy",
       "quality_comment": "The distractors are plausible yet incorrect, effectively assessing understanding of the rationale behind nonverbal assessment tools."
+    },
+    {
+      "stem": "Which cognitive assessment tool is designed to evaluate the cognitive abilities of children and adolescents aged 3 to 16 years, using the PASS theory framework?",
+      "options": [
+        "Cognitive Assessment System, Second Edition (CAS2)",
+        "Wechsler Intelligence Scale for Children, Fifth Edition (WISC-V)",
+        "Stanford-Binet Intelligence Scales, Fifth Edition (SB5)",
+        "Woodcock-Johnson Tests of Cognitive Abilities, Fourth Edition (WJ IV)"
+      ],
+      "answer": "Cognitive Assessment System, Second Edition (CAS2)",
+      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it is specifically designed to evaluate cognitive processing abilities in individuals aged 5 to 18 years, utilizing the PASS theory framework, which focuses on planning, attention, simultaneous processing, and successive processing. This aligns directly with the question\u2019s requirement for a tool aimed at children and adolescents within that age range and based on the PASS cognitive theory.\n\n2. The **Wechsler Intelligence Scale for Children, Fifth Edition (WISC-V)** is incorrect because it primarily assesses cognitive abilities for children ages 6 to 16 years but does not specifically utilize the PASS theory framework. The **Stanford-Binet Intelligence Scales, Fifth Edition (SB5)** is also incorrect as it measures cognitive ability across a broader age range (2 to 85+ years) and does not adhere to the PASS framework. Lastly, the **Woodcock-Johnson Tests of Cognitive Abilities, Fourth Edition (WJ IV)** is wrong because it assesses cognitive abilities across a wide age range (2 to 90+ years) and does not specifically utilize the PASS theory, focusing instead on the Cattell-Horn-Carroll model.",
+      "difficulty": "easy",
+      "kn": "KN6",
+      "kn_explanation": "This question covers theory-based cognitive assessment development and models of intelligence, aligning with major research-based theories and models of intelligence (KN6).",
+      "quality_comment": "This question effectively tests knowledge of specific cognitive assessments related to the PASS theory.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of cognitive assessments, which test employs the PASS model to assess cognitive functioning in children and is known for its emphasis on non-verbal skills?",
+      "options": [
+        "Cognitive Assessment System, Second Edition (CAS2)",
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Leiter International Performance Scale-Third Edition (Leiter-3)",
+        "Differential Ability Scales, Second Edition (DAS-II)"
+      ],
+      "answer": "Cognitive Assessment System, Second Edition (CAS2)",
+      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it specifically employs the PASS model, which focuses on four cognitive functions: planning, attention, simultaneous processing, and successive processing. This model is designed to assess cognitive functioning in children aged five to 18 years, emphasizing the understanding of cognitive processing abilities rather than just verbal skills.\n\n2. \n- The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because, while it is a measure of cognitive ability for children, it is not based on the PASS model; instead, it can be interpreted using the Cattell-Horn-Carroll (CHC) model or Luria\u2019s neuropsychological processing model.\n- The **Leiter International Performance Scale-Third Edition (Leiter-3)** is also incorrect as it is primarily a nonverbal measure of cognitive abilities but does not utilize the PASS model, focusing instead on fluid intelligence and nonverbal tasks.\n- The **Differential Ability Scales, Second Edition (DAS-II)** is incorrect because it is not mentioned in the reference material provided, and it does not utilize the PASS model for cognitive assessment.",
+      "difficulty": "hard",
+      "kn": "KN6",
+      "kn_explanation": "This question covers theory-based cognitive assessment development and models of intelligence, aligning with major research-based theories and models of intelligence (KN6).",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of cognitive assessments within a specific theoretical framework.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

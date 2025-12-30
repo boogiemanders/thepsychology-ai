@@ -9,7 +9,7 @@
         "Edwards Personal Preference Schedule (EPPS)"
       ],
       "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
-      "explanation": "The 16 PF was developed by Cattell using the lexical strategy, assuming important traits are embedded in language, and applied factor analysis to derive 16 primary and five global traits.",
+      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which posits that important personality traits are encoded in language. Cattell employed factor analysis to distill a large number of personality descriptors into 16 primary traits and five broader global traits, effectively identifying both specific and overarching aspects of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, while it also uses a lexical approach and factor analysis, it focuses specifically on the Big Five personality traits rather than identifying a broader range of primary and global traits like the 16 PF. The \"Myers-Briggs Type Indicator (MBTI)\" is wrong because it is based on Jung\u2019s personality typology and identifies personality types through four bipolar dimensions, rather than deriving traits from language and factor analysis. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect as it assesses basic needs through a forced-choice format, focusing on relative strengths of needs rather than employing factor analysis to identify personality traits.",
       "kn": "KN32",
       "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
       "difficulty": "medium",
@@ -24,14 +24,14 @@
         "Raw scores, which directly reflect absolute strength of needs"
       ],
       "answer": "Ipsative scoring, which allows intra-individual but not inter-individual comparisons",
-      "explanation": "The EPPS uses a forced-choice format yielding ipsative scores that show relative strengths of an individual's needs but do not permit valid comparisons between individuals.",
+      "explanation": "1. The correct answer is \"Ipsative scoring, which allows intra-individual but not inter-individual comparisons\" because the Edwards Personal Preference Schedule (EPPS) uses a forced-choice format that yields ipsative scores. This means that the scores reflect the relative strength of an individual's needs by comparing choices made within the test but do not provide absolute measures that can be compared across different individuals, thus limiting inter-individual comparisons.\n\n2. The option \"Norm-referenced scoring, which allows extensive inter-individual comparisons\" is incorrect because norm-referenced scoring involves comparing an individual's score to a normative sample, which the EPPS does not provide. \"Criterion-referenced scoring, which compares examinees to fixed standards\" is also incorrect as the EPPS does not assess performance against fixed criteria but rather focuses on relative preferences. Lastly, \"Raw scores, which directly reflect absolute strength of needs\" is incorrect because the EPPS does not generate raw scores that indicate absolute strengths; instead, it produces ipsative scores that only suggest relative strengths of needs within the individual.",
       "kn": "KN32",
       "kn_explanation": "This question targets understanding of assessment scoring methods and their implications for test interpretation.",
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible but incorrect scoring types, making the correct choice clear for knowledgeable candidates."
     },
     {
-      "stem": "Which personality test categorizes individuals into 16 types based on four bipolar dimensions derived from Jung’s theory?",
+      "stem": "Which personality test categorizes individuals into 16 types based on four bipolar dimensions derived from Jung\u2019s theory?",
       "options": [
         "Myers-Briggs Type Indicator (MBTI)",
         "NEO Personality Inventory-3 (NEO-PI-3)",
@@ -39,7 +39,7 @@
         "Edwards Personal Preference Schedule (EPPS)"
       ],
       "answer": "Myers-Briggs Type Indicator (MBTI)",
-      "explanation": "The MBTI assesses four dimensions (introversion-extraversion, sensing-intuition, thinking-feeling, judging-perceiving) resulting in 16 personality types.",
+      "explanation": "1. The \"Myers-Briggs Type Indicator (MBTI)\" is the correct answer because it categorizes individuals into 16 distinct personality types based on four bipolar dimensions derived from Jung\u2019s personality typology: introversion-extraversion, sensing-intuition, thinking-feeling, and judging-perceiving. Each type represents a unique combination of these dimensions, allowing for a nuanced understanding of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because it assesses the Big Five personality traits (openness, conscientiousness, extraversion, agreeableness, and neuroticism) rather than categorizing individuals into types. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is also incorrect as it identifies 16 primary traits through factor analysis but does not classify individuals into types based on bipolar dimensions. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect because it measures 15 basic needs using a forced-choice format, focusing on relative strengths of needs rather than categorizing personality types.",
       "kn": "KN32",
       "kn_explanation": "This question assesses knowledge of specific personality assessment instruments and their theoretical underpinnings.",
       "difficulty": "easy",
@@ -54,14 +54,14 @@
         "Myers-Briggs Type Indicator (MBTI)"
       ],
       "answer": "NEO Personality Inventory-3 (NEO-PI-3)",
-      "explanation": "The NEO-PI-3 measures the Big Five personality traits—openness, conscientiousness, extraversion, agreeableness, and neuroticism—and includes facet-level scores.",
+      "explanation": "1. The **NEO Personality Inventory-3 (NEO-PI-3)** is the correct answer because it specifically assesses the \"Big Five\" personality traits: openness to experience, conscientiousness, extraversion, agreeableness, and neuroticism. Additionally, it provides scores not only on these broad traits but also on six or more facets for each, allowing for a detailed understanding of an individual's personality.\n\n2. The **Sixteen Personality Factor Questionnaire (16 PF)** is incorrect because it identifies 16 primary traits and five global traits, rather than the Big Five traits. The **Edwards Personal Preference Schedule (EPPS)** is not the correct answer as it focuses on 15 basic needs derived from Murray\u2019s system, using a forced-choice format that does not assess broad personality traits. Lastly, the **Myers-Briggs Type Indicator (MBTI)** is incorrect because it is based on Jung\u2019s personality typology and measures four bipolar dimensions, resulting in 16 personality types rather than the Big Five traits.",
       "kn": "KN32",
       "kn_explanation": "This question tests understanding of major personality inventories and their trait models.",
       "difficulty": "medium",
       "quality_comment": "Good distractor options that are also personality tests enhance the question's rigor without ambiguity."
     },
     {
-      "stem": "According to meta-analytic research, which Big Five personality traits are most consistently associated with an increased risk for Alzheimer’s disease and other neurocognitive disorders?",
+      "stem": "According to meta-analytic research, which Big Five personality traits are most consistently associated with an increased risk for Alzheimer\u2019s disease and other neurocognitive disorders?",
       "options": [
         "High neuroticism and low conscientiousness",
         "High extraversion and high openness",
@@ -69,7 +69,7 @@
         "Low neuroticism and high conscientiousness"
       ],
       "answer": "High neuroticism and low conscientiousness",
-      "explanation": "Research has found that higher neuroticism and lower conscientiousness levels are significantly associated with elevated risk for Alzheimer’s and related disorders.",
+      "explanation": "1. The correct answer, \"High neuroticism and low conscientiousness,\" is supported by Aschwanden et al.\u2019s (2021) meta-analysis, which found that these two traits were significantly and most consistently linked to an increased risk for Alzheimer\u2019s disease and other forms of neurocognitive disorders. Neuroticism is associated with emotional instability and anxiety, while low conscientiousness relates to a lack of organization and reliability, both of which may contribute to cognitive decline.\n\n2. The incorrect options are as follows:\n- **High extraversion and high openness:** These traits are generally associated with sociability and a willingness to engage in new experiences, which do not correlate with increased risk for neurocognitive disorders according to the research.\n- **Low agreeableness and low extraversion:** While these traits may reflect certain personality styles, they have not been identified in the meta-analysis as significant risk factors for Alzheimer\u2019s disease or neurocognitive disorders.\n- **Low neuroticism and high conscientiousness:** This combination is typically associated with better mental health and cognitive functioning, making it unlikely to be linked to an increased risk for neurocognitive disorders.",
       "kn": "KN1",
       "kn_explanation": "This question integrates personality traits with neurobehavioral disease risk, fitting within biological bases of behavior.",
       "difficulty": "hard",
@@ -84,7 +84,7 @@
         "Sixteen Personality Factor Questionnaire (16 PF)"
       ],
       "answer": "Rorschach Inkblot Test",
-      "explanation": "The Rorschach consists of 10 inkblots administered in free association and inquiry phases to explore perceptual and personality processes.",
+      "explanation": "1. The \"Rorschach Inkblot Test\" is the correct answer because it specifically consists of 10 bilaterally symmetrical inkblots and employs a two-phase administration process. In the first phase, the examinee describes what they see in each inkblot, and in the second inquiry phase, the examiner explores the determinants of the examinee's responses, such as the characteristics of the inkblot that influenced their perceptions.\n\n2. The \"Thematic Apperception Test (TAT)\" is incorrect because it involves storytelling based on pictures, not inkblots, and focuses on the narratives created by the examinee rather than their perceptions of ambiguous stimuli. The \"Edwards Personal Preference Schedule (EPPS)\" is also incorrect as it assesses basic human needs through a forced-choice format with statements, rather than using ambiguous inkblots for projection. Lastly, the \"Sixteen Personality Factor Questionnaire (16 PF)\" is incorrect because it is a structured personality test that relies on objective items and factor analysis to measure personality traits, rather than utilizing projective techniques like the Rorschach test.",
       "kn": "KN32",
       "kn_explanation": "This question addresses knowledge of projective personality assessment methods and procedures, part of assessment instrument familiarity.",
       "difficulty": "medium",
@@ -99,22 +99,22 @@
         "Social conformity and realism"
       ],
       "answer": "Emotionality and impulsiveness",
-      "explanation": "Many color responses indicate heightened emotional responsiveness and impulsive tendencies in the examinee’s personality.",
+      "explanation": "1. The correct answer, \"Emotionality and impulsiveness,\" is supported by the Exner Comprehensive System for the Rorschach Inkblot Test, which indicates that a high number of color responses reflects an examinee's emotional state and tendency toward impulsive behavior. Color responses are interpreted as indicative of strong feelings and emotional reactions, suggesting that the individual may experience emotions intensely and act on them without much restraint.\n\n2. The option \"Creative or theoretical thinking\" is incorrect because high color responses do not specifically correlate with creativity or abstract thought; instead, they are more aligned with emotional expression. \"Brain injury or cognitive impairment\" is also misleading, as such conditions are typically indicated by confabulation or unusual response patterns rather than merely a high number of color responses. Lastly, \"Social conformity and realism\" does not fit because high color responses suggest emotional expression rather than adherence to social norms or realistic thinking; these responses reflect personal emotional experiences rather than conformity.",
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of specific scoring interpretation techniques for projective measures, critical in assessment.",
       "difficulty": "hard",
-      "quality_comment": "Distractors are related to other possible interpretations, increasing the question’s discriminative power."
+      "quality_comment": "Distractors are related to other possible interpretations, increasing the question\u2019s discriminative power."
     },
     {
       "stem": "The Thematic Apperception Test (TAT) was developed based on which of the following theoretical frameworks?",
       "options": [
-        "Murray’s system of human needs involving needs and press",
-        "Jung’s typology of personality dimensions",
-        "Costa and McCrae’s Big Five factors",
-        "Cattell’s lexical hypothesis and factor analysis"
+        "Murray\u2019s system of human needs involving needs and press",
+        "Jung\u2019s typology of personality dimensions",
+        "Costa and McCrae\u2019s Big Five factors",
+        "Cattell\u2019s lexical hypothesis and factor analysis"
       ],
-      "answer": "Murray’s system of human needs involving needs and press",
-      "explanation": "The TAT is based on Murray’s theory emphasizing personality needs and external/internal press affecting behavior.",
+      "answer": "Murray\u2019s system of human needs involving needs and press",
+      "explanation": "1. \"Murray\u2019s system of human needs involving needs and press\" is the correct answer because the Thematic Apperception Test (TAT) was specifically developed by Henry Murray to assess human needs through storytelling. The test prompts examinees to create narratives based on ambiguous images, allowing insights into their internal needs and the external pressures (press) that influence their behavior.\n\n2. The option \"Jung\u2019s typology of personality dimensions\" is incorrect because while the Myers-Briggs Type Indicator (MBTI) is based on Jung\u2019s theories, the TAT is not; it focuses on needs rather than typological dimensions. \"Costa and McCrae\u2019s Big Five factors\" is wrong because the NEO Personality Inventory assesses these traits, not the TAT, which is centered on needs and press rather than broad personality dimensions. Lastly, \"Cattell\u2019s lexical hypothesis and factor analysis\" is incorrect as it pertains to the development of the Sixteen Personality Factor Questionnaire (16 PF), not the TAT, which is based on a different theoretical framework focused on human needs.",
       "kn": "KN32",
       "kn_explanation": "This item focuses on the theoretical foundation of a specific projective test, relevant for assessment knowledge.",
       "difficulty": "medium",
@@ -129,14 +129,14 @@
         "They utilize forced-choice formats to avoid social desirability bias"
       ],
       "answer": "They present unstructured, ambiguous stimuli to elicit projections of personality",
-      "explanation": "Projective tests rely on ambiguous stimuli intended to evoke unconscious aspects of personality through projection.",
+      "explanation": "1. The correct answer, \"They present unstructured, ambiguous stimuli to elicit projections of personality,\" accurately describes projective personality tests because these tests operate on the assumption that individuals will project their personalities when presented with ambiguous stimuli. For example, in the Rorschach Inkblot Test, examinees interpret inkblots that lack clear meaning, allowing their responses to reveal underlying thoughts, feelings, and personality traits.\n\n2. The option \"They use direct self-report items with objective, non-ambiguous wording\" is incorrect because this characteristic describes structured personality tests, not projective tests. The statement \"They score examinees based on their absolute levels of traits relative to norms\" is misleading since projective tests do not provide absolute scores but rather interpret responses qualitatively. Lastly, \"They utilize forced-choice formats to avoid social desirability bias\" is incorrect as forced-choice formats, like those in the Edwards Personal Preference Schedule, are a feature of some structured tests, not projective tests, which allow for open-ended responses.",
       "kn": "KN32",
       "kn_explanation": "This question assesses understanding of the fundamental nature of projective personality testing within assessment.",
       "difficulty": "easy",
       "quality_comment": "Simple yet important distinction, with distractors reflecting characteristics of structured tests, enhancing clarity."
     },
     {
-      "stem": "In the Rorschach test, what does a 'whole' response location typically indicate about the examinee’s cognitive style?",
+      "stem": "In the Rorschach test, what does a 'whole' response location typically indicate about the examinee\u2019s cognitive style?",
       "options": [
         "Creative or theoretical thinking",
         "Emotional reactivity",
@@ -144,7 +144,7 @@
         "Social conformity"
       ],
       "answer": "Creative or theoretical thinking",
-      "explanation": "Many 'whole' responses suggest the examinee processes stimuli in an integrative, creative, or abstract manner.",
+      "explanation": "1. The correct answer, \"Creative or theoretical thinking,\" is indicated by a 'whole' response location in the Rorschach test because it suggests that the examinee is able to perceive and integrate the entire inkblot as a cohesive unit. This ability to see the whole reflects a cognitive style that is often associated with creativity and theoretical reasoning, as it demonstrates a capacity for abstract thinking and synthesis of information.\n\n2. \n- **Emotional reactivity:** This option is incorrect because emotional reactivity is typically indicated by many color responses, which reflect impulsiveness and emotional expression rather than a holistic perception of the inkblot.\n- **Tendency to confabulate:** This is incorrect because confabulation, which involves overgeneralizing a part of the inkblot to the whole, suggests cognitive impairment rather than creative or theoretical thinking, as it reflects a lack of coherent integration.\n- **Social conformity:** This option is wrong because social conformity is not assessed through 'whole' responses; it is more related to how responses align with those of other examinees, which is measured by the popularity of responses rather than the cognitive style reflected in a holistic interpretation.",
       "kn": "KN32",
       "kn_explanation": "This question involves the interpretation of a specific Rorschach scoring category within personality assessment knowledge.",
       "difficulty": "hard",
@@ -159,7 +159,7 @@
         "A hierarchical model of five broad traits with specific facets"
       ],
       "answer": "A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis",
-      "explanation": "The 16 PF is based on the lexical strategy, assuming traits are encoded in language and extracted via factor analysis.",
+      "explanation": "1. The correct answer, \"A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis,\" accurately describes the theoretical model of the 16 Personality Factor Questionnaire (16 PF) because it was developed by Cattell using a lexical strategy to identify personality traits. This approach assumes that significant personality traits are embedded in language, and Cattell utilized factor analysis to distill these traits into 16 primary traits and five broader global traits.\n\n2. The incorrect options are as follows:  \n- \"A typology based on Jungian psychological functions and attitudes\" is wrong because the 16 PF is not based on Jung's typology; instead, it is rooted in Cattell\u2019s lexical approach and factor analysis.  \n- \"A system of ipsative scoring contrasting human needs\" is incorrect because the 16 PF does not use ipsative scoring or focus on human needs, which is characteristic of the Edwards Personal Preference Schedule (EPPS).  \n- \"A hierarchical model of five broad traits with specific facets\" is misleading as it describes the structure of the NEO Personality Inventory-3 (NEO-PI-3), which assesses the Big Five traits, whereas the 16 PF focuses on 16 primary traits and five global traits without the same hierarchical facet structure.",
       "kn": "KN30",
       "kn_explanation": "This question taps knowledge of assessment theories/models, focusing on the theoretical basis for a widely used personality test.",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Ipsative formats measure absolute need strengths allowing inter-individual comparison"
       ],
       "answer": "Ipsative scores prevent valid comparisons between different individuals because they indicate relative, not absolute, trait strength",
-      "explanation": "Ipsative scoring yields relative scores within individuals, precluding meaningful inter-individual comparisons due to scale dependency.",
+      "explanation": "1. The correct answer, \"Ipsative scores prevent valid comparisons between different individuals because they indicate relative, not absolute, trait strength,\" accurately reflects the nature of ipsative scoring used in the Edwards Personal Preference Schedule (EPPS). In this format, examinees choose between two statements that assess different needs, resulting in scores that reflect the relative strength of their needs compared to one another. However, these scores do not provide information on how strong each need is in an absolute sense, making it impossible to compare one individual's need profile directly with another's.\n\n2. The first incorrect option, \"Ipsative scores are norm-based and require large sample sizes for accurate interpretation,\" is wrong because ipsative scoring does not rely on normative data; rather, it focuses on an individual's relative preferences, making norms irrelevant. The second incorrect option, \"Ipsative scoring inflates inter-individual variability and undermines reliability,\" is incorrect because ipsative scores do not inflate variability; they limit the ability to make inter-individual comparisons, which does not inherently affect reliability. Lastly, the option \"Ipsative formats measure absolute need strengths allowing inter-individual comparison\" is incorrect because ipsative formats specifically measure relative strengths, not absolute ones, thus precluding valid comparisons between different individuals.",
       "kn": "KN30",
       "kn_explanation": "This item assesses understanding of test scoring models and their psychometric implications in assessment practice.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Anchoring bias"
       ],
       "answer": "Base rate neglect",
-      "explanation": "Base rate neglect occurs when interpreters ignore the actual prevalence of a disorder, causing misinterpretation of test results and overestimation of rare conditions.",
+      "explanation": "1. **Base rate neglect** is the correct answer because it refers to the cognitive bias where individuals overlook the general prevalence of a condition (the base rate) when evaluating specific cases. In the context of personality test data analysis, this can lead to an overestimation of the prevalence of rare disorders, as the analyst may focus on individual test results without considering how often those results occur in the general population.\n\n2. **Confirmation bias** is incorrect because it involves favoring information that confirms existing beliefs rather than overlooking base rates; it does not specifically relate to the misinterpretation of prevalence rates. **Hindsight bias** is also incorrect, as it refers to the tendency to see events as having been predictable after they have already occurred, rather than affecting how base rates are interpreted. Lastly, **anchoring bias** is wrong because it pertains to relying too heavily on the first piece of information encountered (the \"anchor\") when making decisions, which does not directly relate to the neglect of base rates in prevalence assessments.",
       "kn": "KN37",
       "kn_explanation": "This question addresses biases and heuristics relevant to evidence-based interpretation of assessment data.",
       "difficulty": "hard",
@@ -204,11 +204,51 @@
         "Assuming ipsative scores provide absolute trait levels"
       ],
       "answer": "Considering base rates of disorders to avoid misclassification errors",
-      "explanation": "Incorporating base rates helps accurately interpret data and reduces false positives or negatives in clinical assessment.",
+      "explanation": "1. **Correct Answer Explanation:** \"Considering base rates of disorders to avoid misclassification errors\" is crucial in evidence-based interpretation of personality assessment data because it ensures that clinicians understand the prevalence of disorders within specific populations. This consideration helps in accurately diagnosing individuals by providing context for the test results, reducing the likelihood of misclassifying normal variations in personality as pathological.\n\n2. **Incorrect Options Explanation:**\n   - **Relying solely on test score cutoffs without contextual information:** This approach is flawed because it overlooks the importance of individual differences and situational factors that can influence test scores, leading to potentially misleading conclusions.\n   - **Ignoring potential response biases for expediency:** Ignoring response biases can compromise the validity of the assessment, as individuals may respond in a socially desirable manner or be influenced by their current mood, which skews the results.\n   - **Assuming ipsative scores provide absolute trait levels:** Ipsative scores, such as those from the Edwards Personal Preference Schedule (EPPS), only allow for intra-individual comparisons and do not provide information on absolute trait levels, making them unsuitable for understanding an individual\u2019s personality in a broader context.",
       "kn": "KN37",
       "kn_explanation": "This item examines the application of evidence-based principles including biases and base rates in personality test interpretation.",
       "difficulty": "medium",
       "quality_comment": "Provides a foundational concept in test data interpretation with clear distractors emphasizing common errors."
+    },
+    {
+      "stem": "Which personality test categorizes individuals into 16 distinct personality profiles based on their responses to a series of questions regarding their traits and behaviors?",
+      "options": [
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "Myers-Briggs Type Indicator (MBTI)",
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "Minnesota Multiphasic Personality Inventory (MMPI)"
+      ],
+      "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
+      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using factor analysis to identify 16 primary personality traits. The test categorizes individuals into distinct personality profiles based on their responses to structured questions about their traits and behaviors, effectively capturing a comprehensive view of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because it assesses the \"Big Five\" personality traits (openness, conscientiousness, extraversion, agreeableness, and neuroticism) rather than categorizing individuals into 16 distinct profiles. The \"Myers-Briggs Type Indicator (MBTI)\" is also incorrect, as it classifies individuals into 16 personality types based on four bipolar dimensions, but it does not focus on the same primary traits as the 16 PF. Lastly, the \"Minnesota Multiphasic Personality Inventory (MMPI)\" is incorrect because it is primarily a psychological assessment tool designed to identify psychopathology rather than categorizing personality traits into distinct profiles.",
+      "difficulty": "easy",
+      "kn": "KN32",
+      "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
+      "quality_comment": "This question effectively tests knowledge of personality assessments and their specific characteristics.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following assessments utilizes a lexical approach to identify key personality traits, focusing on the language used to describe these traits?",
+      "options": [
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "California Psychological Inventory (CPI)",
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "Myers-Briggs Type Indicator (MBTI)"
+      ],
+      "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
+      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which assumes that important personality traits are encoded in language. Cattell identified words that describe personality and applied factor analysis to distill them into 16 primary traits and five global traits, focusing on the language used to characterize these traits.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, although it assesses the Big Five personality traits using a lexical approach, the question specifically asks for the assessment that identifies key traits through a lexical strategy as the primary method, making the 16 PF more directly aligned with this definition. The \"California Psychological Inventory (CPI)\" is not mentioned in the reference material, and therefore, it does not fit the criteria of using a lexical approach as described. Lastly, the \"Myers-Briggs Type Indicator (MBTI)\" is incorrect because it is based on Jung\u2019s personality typology and focuses on bipolar dimensions rather than deriving traits from language through a lexical approach.",
+      "difficulty": "hard",
+      "kn": "KN32",
+      "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
+      "quality_comment": "This question challenges test-takers to connect the lexical approach to specific assessments, reinforcing understanding of personality measurement.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -9,7 +9,7 @@
         "The expected score on a criterion measure based on an obtained predictor score"
       ],
       "answer": "The percentage of individuals in the reference group who scored at or below an examinee's score",
-      "explanation": "A percentile rank indicates the percentage of examinees in the reference group who obtained a score equal to or lower than the examinee’s score.",
+      "explanation": "1. The correct answer, \"The percentage of individuals in the reference group who scored at or below an examinee's score,\" accurately defines a percentile rank. Percentile ranks indicate how an examinee's score compares to others in the standardization sample, reflecting the proportion of examinees who scored equal to or lower than the given score. For example, a percentile rank of 82 means that 82% of the reference group scored at or below that score, highlighting the relative standing of the examinee.\n\n2. The incorrect options are as follows:\n\n- \"The number of standard deviations an individual's score is from the mean\" is incorrect because this describes a z-score, which quantifies how far a score is from the mean in terms of standard deviations, rather than comparing it to a reference group.\n  \n- \"The proportion of test items answered correctly by an examinee\" is incorrect because this defines a percentage score, which measures the correctness of responses rather than how an examinee's score relates to others in the reference group.\n\n- \"The expected score on a criterion measure based on an obtained predictor score\" is incorrect because this describes an expectancy table, which predicts future performance based on a test score, rather than indicating the relative standing of an examinee's score within a reference group.",
       "kn": "KN29",
       "kn_explanation": "This question pertains to psychometric score interpretation, a key aspect of test construction and interpretation (KN29).",
       "difficulty": "easy",
@@ -24,14 +24,14 @@
         "The examinee scored 2 standard deviations above the mean"
       ],
       "answer": "The examinee scored 1 standard deviation below the mean",
-      "explanation": "T-scores have a mean of 50 and SD of 10, so a T-score of 40 is exactly one standard deviation below the mean.",
+      "explanation": "1. The correct answer, \"The examinee scored 1 standard deviation below the mean,\" is accurate because T-scores are standardized scores with a mean of 50 and a standard deviation of 10. A T-score of 40 indicates that the examinee's score is one standard deviation below the mean (50 - 10 = 40).\n\n2. The option \"The examinee scored 0.5 standard deviations below the mean\" is incorrect because a T-score of 45 would represent 0.5 standard deviations below the mean, not 40. The option \"The examinee scored 1 standard deviation above the mean\" is wrong because a T-score of 60 would indicate one standard deviation above the mean, not 40. Lastly, the option \"The examinee scored 2 standard deviations above the mean\" is incorrect since a T-score of 70 would represent two standard deviations above the mean, not 40.",
       "kn": "KN29",
       "kn_explanation": "Understanding standard score conversions and interpretations is essential for psychometric test interpretation (KN29).",
       "difficulty": "medium",
       "quality_comment": "Clear and concise, the options are numerically close, requiring test-takers to apply knowledge rather than guess."
     },
     {
-      "stem": "If an individual’s raw score on a test corresponds to a z-score of +2.0, what is the approximate percentile rank equivalent in a normal distribution?",
+      "stem": "If an individual\u2019s raw score on a test corresponds to a z-score of +2.0, what is the approximate percentile rank equivalent in a normal distribution?",
       "options": [
         "About the 98th percentile",
         "About the 50th percentile",
@@ -39,7 +39,7 @@
         "About the 2nd percentile"
       ],
       "answer": "About the 98th percentile",
-      "explanation": "In a normal distribution, a z-score of +2.0 corresponds approximately to the 98th percentile rank.",
+      "explanation": "1. The correct answer, \"About the 98th percentile,\" is based on the relationship between z-scores and percentile ranks in a normal distribution. A z-score of +2.0 indicates that the individual's score is two standard deviations above the mean. According to the reference material, a percentile rank of 98 corresponds to a z-score of +2.0, meaning that approximately 98% of examinees scored at or below this individual's score.\n\n2. The option \"About the 50th percentile\" is incorrect because a percentile rank of 50 indicates a z-score of 0, which corresponds to the mean, not two standard deviations above it. \"About the 16th percentile\" is wrong because this percentile corresponds to a z-score of -1.0, indicating a score one standard deviation below the mean. Lastly, \"About the 2nd percentile\" is incorrect as it aligns with a z-score of -2.0, indicating a score two standard deviations below the mean, which is the opposite of the given z-score of +2.0.",
       "kn": "KN29",
       "kn_explanation": "This question involves converting standard scores to percentile ranks, a fundamental part of test score interpretation (KN29).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Stanines represent the percentage of test items an examinee answered correctly"
       ],
       "answer": "Stanines range from 1 to 9, with a mean of 5 and a standard deviation of 2, representing roughly half a standard deviation per unit except for extremes",
-      "explanation": "Stanines are a standard scoring system with these characteristics where each unit corresponds approximately to 0.5 of an SD except the 1st and 9th stanine.",
+      "explanation": "1. The correct statement, \"Stanines range from 1 to 9, with a mean of 5 and a standard deviation of 2, representing roughly half a standard deviation per unit except for extremes,\" accurately describes stanines as they are defined in the reference material. Stanines are a standardized scoring system where each unit represents approximately half a standard deviation around the mean, which is set at 5, with the range of scores being from 1 to 9. This structure allows for a clear interpretation of an examinee's performance relative to a reference group.\n\n2. The first incorrect option, \"Stanines are scores scaled to have a mean of 100 and standard deviation of 15, used mainly for IQ tests,\" is wrong because stanines do not have a mean of 100 or a standard deviation of 15; those characteristics apply to IQ scores, not stanines. The second incorrect option, \"Stanines have a mean of 50 and SD of 10 and are identical to T-scores,\" is incorrect because stanines have a mean of 5 and a standard deviation of 2, which distinguishes them from T-scores, which indeed have a mean of 50 and a standard deviation of 10. Lastly, the statement \"Stanines represent the percentage of test items an examinee answered correctly\" is incorrect because stanines are not percentage scores; they are a ranking system that categorizes performance into nine distinct levels rather than directly measuring the proportion of correct responses.",
       "kn": "KN29",
       "kn_explanation": "This question tests knowledge of standard score types and their interpretations (KN29).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "When converting raw scores into z-scores to determine relative standing"
       ],
       "answer": "When determining if an examinee has achieved mastery of specific content based on a pre-established cutoff",
-      "explanation": "Criterion-referenced scores evaluate performance against a fixed standard or cutoff to measure mastery rather than relative rankings.",
+      "explanation": "1. The correct answer, \"When determining if an examinee has achieved mastery of specific content based on a pre-established cutoff,\" is appropriate because criterion-referenced scores are specifically designed to evaluate an individual's competence or mastery of a skill against a predetermined standard. This approach focuses on whether the examinee meets a specific level of performance, rather than comparing their score to others, which is the primary goal of norm-referenced scores.\n\n2. The option \"When comparing an individual's test score to the performance of a normative group\" is incorrect because this describes the use of norm-referenced scores, which assess how an examinee's performance compares to a reference group rather than measuring mastery against a standard. The option \"When ranking a group of candidates from highest to lowest to select the top performers\" is wrong because ranking involves norm-referenced scoring, where individuals are compared against one another, rather than assessing mastery of specific content. Lastly, the option \"When converting raw scores into z-scores to determine relative standing\" is incorrect as this process pertains to transforming raw scores into standard scores for norm-referenced interpretation, rather than evaluating mastery based on a criterion.",
       "kn": "KN29",
       "kn_explanation": "This question addresses score interpretation types and their appropriate applications in assessment (KN29).",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Selecting candidates solely based on their exact test score differences"
       ],
       "answer": "Grouping scores into ranges based on the test's standard error of measurement and considering all candidates within a band equivalent",
-      "explanation": "Banding groups scores into score ranges to account for measurement error, treating scores within a band as equivalent for selection decisions.",
+      "explanation": "1. The correct answer, \"Grouping scores into ranges based on the test's standard error of measurement and considering all candidates within a band equivalent,\" accurately characterizes banding because it reflects the principle that small differences in test scores may arise from measurement unreliability. Banding treats candidates with scores within the same range as equivalent, allowing for selection based on additional factors beyond test scores, thereby addressing potential adverse impact and promoting fairness in the selection process.\n\n2. The first incorrect option, \"Grouping test scores into ranks from highest to lowest and selecting top candidates accordingly,\" misrepresents banding, as it does not involve ranking but rather grouping scores into bands. The second incorrect option, \"Setting a score cutoff and accepting any candidates who exceed it,\" is incorrect because banding does not rely on a strict cutoff score; instead, it considers ranges of scores. Lastly, the option \"Selecting candidates solely based on their exact test score differences\" is wrong because banding emphasizes the equivalence of scores within a band rather than making decisions based on precise score differences, which could overlook other important candidate attributes.",
       "kn": "KN29",
       "kn_explanation": "This question concerns test score use in applied contexts, focusing on fairness and decision-making based on test reliability (KN29).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Expectancy tables are used exclusively for criterion-referenced tests, while regression equations apply to norm-referenced tests"
       ],
       "answer": "Expectancy tables show the distribution of criterion scores for each predictor score, whereas regression equations predict a single criterion score",
-      "explanation": "Expectancy tables provide the percentage distribution of criterion scores at each predictor score level; regression equations predict one expected criterion score.",
+      "explanation": "1. The correct answer states that \"Expectancy tables show the distribution of criterion scores for each predictor score, whereas regression equations predict a single criterion score.\" This is accurate because expectancy tables provide a breakdown of how different test scores (predictor scores) correlate with various performance outcomes (criterion scores) in a distribution format. In contrast, regression equations generate a specific predicted value for a criterion score based on a given predictor score, focusing on a single outcome rather than a distribution.\n\n2. The first incorrect option, \"Expectancy tables predict a single criterion score, whereas regression equations show the distribution of criterion scores for a given predictor score,\" is wrong because it reverses the functions of expectancy tables and regression equations; expectancy tables do not predict a single score but rather display a distribution. The second incorrect option, \"Expectancy tables assess ranking only, whereas regression equations are used for cutoff score setting,\" is incorrect because expectancy tables provide a distribution of scores rather than just ranking, and regression equations do not specifically relate to cutoff scores but predict outcomes. Lastly, the third incorrect option, \"Expectancy tables are used exclusively for criterion-referenced tests, while regression equations apply to norm-referenced tests,\" is misleading since both expectancy tables and regression equations can be used in various contexts, not limited to the type of test (norm-referenced or criterion-referenced).",
       "kn": "KN29",
       "kn_explanation": "Understanding how predictive information from tests is represented reflects deep knowledge of assessment and test interpretation (KN29).",
       "difficulty": "hard",
@@ -114,11 +114,11 @@
         "The score is two standard deviations below the mean"
       ],
       "answer": "The score is one standard deviation below the mean",
-      "explanation": "Full-scale IQ scores have a mean of 100 and SD of 15; thus, a score of 85 is one SD below the mean (100 – 15 = 85).",
+      "explanation": "1. The correct answer, \"The score is one standard deviation below the mean,\" is accurate because full-scale IQ scores on the Wechsler tests have a mean of 100 and a standard deviation of 15. A score of 85 is calculated as one standard deviation below the mean (100 - 15 = 85), confirming that the individual\u2019s performance is lower than the average population score.\n\n2. The option \"The score is one standard deviation above the mean\" is incorrect because a score of 85 is lower than the mean of 100, not higher. The statement \"The score is equal to the population mean\" is wrong because 85 does not equal 100, which is the mean IQ score for the Wechsler tests. Lastly, \"The score is two standard deviations below the mean\" is incorrect because a score of 85 is only one standard deviation below the mean, which would correspond to a score of 70 (100 - 30 = 70) if it were two standard deviations below.",
       "kn": "KN29",
       "kn_explanation": "This item assesses knowledge of major standardized score types and their interpretation (KN29).",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers’ knowledge."
+      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers\u2019 knowledge."
     },
     {
       "stem": "Why is the conversion of raw scores to percentile ranks considered a nonlinear transformation?",
@@ -129,7 +129,7 @@
         "Because percentile ranks involve adding a constant value to raw scores"
       ],
       "answer": "Because each percentile rank corresponds to exactly 1% of scores, resulting in a uniform distribution",
-      "explanation": "Percentile ranks assign equal proportions (1%) of examinees to each rank, creating a flat distribution regardless of raw score distribution shape.",
+      "explanation": "1. The correct answer, \"Because each percentile rank corresponds to exactly 1% of scores, resulting in a uniform distribution,\" is accurate because percentile ranks are assigned in a way that each rank represents a fixed percentage (1%) of the total scores. This creates a rectangular or flat distribution, regardless of the actual shape of the raw score distribution, as the highest 1% of scores is ranked 100, the next highest 1% is ranked 99, and so forth. This non-linear transformation contrasts with standard scores, which maintain the shape of the raw score distribution.\n\n2. The option \"Because percentile ranks represent equal intervals of raw scores\" is incorrect because percentile ranks do not represent equal intervals; they are based on the relative standing of scores within the distribution rather than fixed score differences. The statement \"Because the shape of the raw score distribution is preserved in percentile ranks\" is inaccurate since percentile ranks do not preserve the shape of the raw score distribution; they create a uniform distribution instead. Lastly, the option \"Because percentile ranks involve adding a constant value to raw scores\" is misleading because percentile ranks are derived from the ranking of scores rather than through arithmetic operations like adding constants to raw scores.",
       "kn": "KN29",
       "kn_explanation": "This question taps into understanding score transformations and distributions, a core psychometric concept (KN29).",
       "difficulty": "medium",
@@ -140,11 +140,11 @@
       "options": [
         "Ranking candidates from highest to lowest scores and selecting the top scorers until positions are filled",
         "Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance",
-        "Banding candidates’ scores into groups based on score unreliability and randomly selecting within bands",
-        "Comparing candidates’ scores to the distribution of scores in the general population"
+        "Banding candidates\u2019 scores into groups based on score unreliability and randomly selecting within bands",
+        "Comparing candidates\u2019 scores to the distribution of scores in the general population"
       ],
       "answer": "Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance",
-      "explanation": "Linking a cutoff score to an acceptable criterion score is a criterion-referenced approach focused on minimal competence or mastery.",
+      "explanation": "1. The correct answer, \"Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance,\" is accurate because criterion-referenced scores evaluate a candidate's competence against a pre-established standard of performance. In this case, the hiring manager sets a cutoff score linked to a criterion measure of job performance, which aligns with the definition of criterion-referenced testing aimed at determining if candidates meet a minimum level of proficiency.\n\n2. The first incorrect option, \"Ranking candidates from highest to lowest scores and selecting the top scorers until positions are filled,\" is wrong because this describes a norm-referenced approach, which focuses on comparing candidates to one another rather than assessing their performance against a specific standard. \n\nThe second incorrect option, \"Banding candidates\u2019 scores into groups based on score unreliability and randomly selecting within bands,\" is incorrect as it pertains to a method that groups scores based on their standard error of measurement rather than evaluating candidates against a criterion-based cutoff score. \n\nThe third incorrect option, \"Comparing candidates\u2019 scores to the distribution of scores in the general population,\" is wrong because this approach reflects norm-referenced scoring, which assesses how candidates perform relative to a broader population, rather than measuring their performance against a specific criterion or standard.",
       "kn": "KN29",
       "kn_explanation": "This question addresses applying test score interpretations for practical decision making in personnel selection (KN29).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Calculating percentage of items answered correctly"
       ],
       "answer": "Converting raw scores to z-scores",
-      "explanation": "Z-score transformation is linear, preserving the shape of the distribution by expressing scores in terms of standard deviations from the mean.",
+      "explanation": "1. \"Converting raw scores to z-scores\" is the correct answer because this process involves a linear transformation where the z-score expresses an examinee\u2019s score in terms of standard deviations from the mean. The formula for calculating a z-score, \\( z = (X - M)/SD \\), shows that it maintains the same distribution shape as the raw scores, thus qualifying it as a linear transformation.\n\n2. The option \"Converting raw scores to percentile ranks\" is incorrect because this transformation is nonlinear; percentile ranks are assigned based on a flat distribution where each percentile represents an equal percentage of scores, regardless of the raw score distribution shape. \"Using expectancy tables to predict criterion scores\" is not a transformation of raw scores but rather a method of interpreting test scores based on established relationships between predictor and criterion measures. Lastly, \"Calculating percentage of items answered correctly\" is incorrect as it represents a criterion-referenced score rather than a transformation of raw scores; it simply indicates the proportion of correct responses without altering the original score distribution.",
       "kn": "KN29",
       "kn_explanation": "Understanding types of score transformations is fundamental for psychometric interpretation (KN29).",
       "difficulty": "medium",
@@ -169,11 +169,11 @@
       "stem": "What primary purpose do expectancy tables serve in test score interpretation?",
       "options": [
         "To estimate the percentile rank equivalent of a raw score",
-        "To predict an examinee’s distribution of criterion scores based on their predictor score",
+        "To predict an examinee\u2019s distribution of criterion scores based on their predictor score",
         "To establish cutoff scores for mastery of skills",
         "To convert raw scores into norm-referenced standard scores"
       ],
-      "answer": "To predict an examinee’s distribution of criterion scores based on their predictor score",
+      "answer": "To predict an examinee\u2019s distribution of criterion scores based on their predictor score",
       "explanation": "Expectancy tables provide the proportion of individuals expected to achieve various levels on a criterion measure given their predictor test score, showing the distribution rather than a single point estimate.",
       "kn": "KN30",
       "kn_explanation": "This question addresses assessment models and their application in predicting criterion performance from predictor test scores (KN30).",
@@ -189,7 +189,7 @@
         "That test scores should be converted to percentile ranks before banding"
       ],
       "answer": "That small score differences within a band are due to measurement error rather than meaningful differences",
-      "explanation": "Banding groups scores within a range defined by the test’s standard error of measurement, assuming differences within bands are not meaningful for selection decisions.",
+      "explanation": "1. The correct answer, \"That small score differences within a band are due to measurement error rather than meaningful differences,\" reflects the foundational assumption of banding in selection techniques. Banding posits that minor variations in test scores may not accurately reflect true differences in ability due to the inherent unreliability of the test. Therefore, candidates with scores that fall within the same band are considered equivalent, allowing for a more equitable selection process that accounts for potential measurement errors.\n\n2. The option \"That all scores within a band represent identical true ability levels\" is incorrect because banding acknowledges that while scores within a band are treated as equivalent, they may not reflect identical true abilities; rather, they are seen as potentially influenced by measurement error. The statement \"That higher raw scores always indicate superior ability regardless of error\" is wrong because banding specifically addresses the unreliability of test scores, suggesting that not all higher scores are indicative of true ability due to possible measurement error. Lastly, the option \"That test scores should be converted to percentile ranks before banding\" is incorrect because the banding process does not necessitate the conversion of scores to percentile ranks; it focuses on grouping scores based on their standard error of measurement without altering their original format.",
       "kn": "KN30",
       "kn_explanation": "This item relates to assessment theory by addressing how measurement error influences interpretation and use of scores in decision making (KN30).",
       "difficulty": "medium",
@@ -204,11 +204,51 @@
         "Expectancy tables normalize score distributions before transformation"
       ],
       "answer": "Standard score distributions have the same shape as the raw score distributions unless a nonlinear transformation is applied",
-      "explanation": "Linear transformations to standard scores preserve the raw score distribution shape; nonlinear transformations can normalize scores but are not always applied.",
+      "explanation": "1. The statement \"Standard score distributions have the same shape as the raw score distributions unless a nonlinear transformation is applied\" is correct because converting raw scores to standard scores (like z-scores or T-scores) involves a linear transformation, preserving the distribution's shape. This means that if the raw score distribution is normal, the standard score distribution will also be normal, unless a nonlinear transformation is specifically applied to normalize it.\n\n2. The option \"Standard scores always produce a flat distribution regardless of raw score distribution shape\" is incorrect because standard scores maintain the shape of the raw score distribution unless a nonlinear transformation is applied, meaning they do not inherently produce a flat distribution. The statement \"Percentile ranks maintain the exact shape of the original raw score distribution\" is wrong because percentile ranks result in a rectangular distribution, which does not reflect the shape of the raw score distribution. Lastly, the option \"Expectancy tables normalize score distributions before transformation\" is incorrect because expectancy tables do not involve normalizing distributions; they simply provide predicted outcomes based on obtained test scores without altering the shape of the score distributions.",
       "kn": "KN29",
       "kn_explanation": "This question tests knowledge of assessment theory concepts regarding score transformations and distribution shapes (KN29).",
       "difficulty": "medium",
       "quality_comment": "The options contrast key concepts well, requiring nuanced understanding of transformation effects."
+    },
+    {
+      "stem": "An examinee receives a T-score of 60 on a different standardized test. What is the best interpretation of this score?",
+      "options": [
+        "The examinee scored 0.5 standard deviations above the mean",
+        "The examinee scored 1 standard deviation above the mean",
+        "The examinee scored 1.5 standard deviations above the mean",
+        "The examinee scored 2 standard deviations above the mean"
+      ],
+      "answer": "The examinee scored 1 standard deviation above the mean",
+      "explanation": "1. The correct answer, \"The examinee scored 1 standard deviation above the mean,\" is accurate because T-scores are standardized scores that have a mean of 50 and a standard deviation of 10. A T-score of 60 indicates that the examinee's score is 10 points above the mean (50), which corresponds to 1 standard deviation above the mean (since 60 - 50 = 10, and 10 divided by the standard deviation of 10 equals 1).\n\n2. The incorrect options are as follows:\n\n- **The examinee scored 0.5 standard deviations above the mean:** This is incorrect because a T-score of 55 would represent 0.5 standard deviations above the mean, not 60.\n  \n- **The examinee scored 1.5 standard deviations above the mean:** This is incorrect because a T-score of 65 would represent 1.5 standard deviations above the mean, not 60.\n\n- **The examinee scored 2 standard deviations above the mean:** This is incorrect because a T-score of 70 would indicate 2 standard deviations above the mean, not 60.",
+      "difficulty": "easy",
+      "kn": "KN29",
+      "kn_explanation": "Understanding standard score conversions and interpretations is essential for psychometric test interpretation (KN29).",
+      "quality_comment": "This question effectively tests understanding of T-score interpretation in a straightforward context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "If an examinee has a T-score of 30 on a standardized test, how should this score be interpreted?",
+      "options": [
+        "The examinee scored 1.5 standard deviations below the mean",
+        "The examinee scored 2 standard deviations below the mean",
+        "The examinee scored 1 standard deviation below the mean",
+        "The examinee scored 2.5 standard deviations below the mean"
+      ],
+      "answer": "The examinee scored 2 standard deviations below the mean",
+      "explanation": "1. The correct answer, \"The examinee scored 2 standard deviations below the mean,\" is accurate because T-scores have a mean of 50 and a standard deviation of 10. Therefore, a T-score of 30 is calculated as follows: (30 - 50) / 10 = -2, indicating that the examinee is 2 standard deviations below the mean.\n\n2. The incorrect options are as follows:\n- \"The examinee scored 1.5 standard deviations below the mean\" is incorrect because a T-score of 30 is not 15 points below the mean of 50, which would be the case for a 1.5 standard deviation difference (45).\n- \"The examinee scored 1 standard deviation below the mean\" is wrong because a T-score of 40 (50 - 10) would represent a score that is 1 standard deviation below the mean, not 30.\n- \"The examinee scored 2.5 standard deviations below the mean\" is incorrect as a T-score of 25 (50 - 2.5 * 10) would indicate a score that is 2.5 standard deviations below the mean, not 30.",
+      "difficulty": "hard",
+      "kn": "KN29",
+      "kn_explanation": "Understanding standard score conversions and interpretations is essential for psychometric test interpretation (KN29).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of T-scores in a more complex scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

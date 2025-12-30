@@ -9,7 +9,7 @@
         "At least six months continuously"
       ],
       "answer": "At least one day but less than one month",
-      "explanation": "Brief psychotic disorder requires symptoms, including at least one core symptom, to be present for more than one day but less than one month.",
+      "explanation": "1. The correct answer, \"At least one day but less than one month,\" aligns with the DSM-5-TR criteria for diagnosing brief psychotic disorder. This disorder requires the presence of one or more characteristic symptoms, including delusions, hallucinations, or disorganized speech, for a duration that meets this specific time frame, distinguishing it from other psychotic disorders that have longer duration requirements.\n\n2. The option \"At least one week but less than two months\" is incorrect because it does not fit within the specified duration for brief psychotic disorder, which is limited to less than one month. The option \"At least one month but less than six months\" is wrong because this duration applies to schizophreniform disorder, not brief psychotic disorder. Lastly, \"At least six months continuously\" is incorrect as it describes the duration required for a diagnosis of schizophrenia, which involves continuous signs of the disorder for at least six months, far exceeding the criteria for brief psychotic disorder.",
       "kn": "KN36",
       "kn_explanation": "This question focuses on diagnostic criteria, which is part of classification systems and applying diagnostic classification rationales and limitations (KN36).",
       "difficulty": "medium",
@@ -24,14 +24,14 @@
         "Negative symptoms and hallucinations"
       ],
       "answer": "Delusions or hallucinations",
-      "explanation": "Schizoaffective disorder requires symptoms of schizophrenia and a mood episode, but delusions or hallucinations must be present for at least two weeks without mood symptoms.",
+      "explanation": "1. \"Delusions or hallucinations\" is the correct answer for diagnosing schizoaffective disorder because the criteria specify that there must be concurrent symptoms of schizophrenia, including either delusions or hallucinations, along with a major depressive or manic episode. Importantly, these psychotic symptoms must be present for at least two weeks without mood symptoms to confirm the diagnosis.\n\n2. The option \"Disorganized speech and negative symptoms\" is incorrect because, while disorganized speech is one of the characteristic symptoms of schizophrenia, it is not required for diagnosing schizoaffective disorder; the focus is on delusions or hallucinations. \"Grossly disorganized behavior and catatonia\" is wrong because, although these symptoms can be associated with schizophrenia, they are not necessary for the diagnosis of schizoaffective disorder, which specifically emphasizes the presence of mood symptoms alongside delusions or hallucinations. Lastly, \"Negative symptoms and hallucinations\" is incorrect because, while hallucinations are relevant, negative symptoms alone do not fulfill the diagnostic criteria without the presence of delusions or a mood episode.",
       "kn": "KN36",
       "kn_explanation": "This question addresses specific diagnostic criteria for schizoaffective disorder, reflecting classification systems and categorical diagnosis rationale.",
       "difficulty": "hard",
       "quality_comment": "Distractors contain recognizable schizophrenia symptoms but only the correct option specifies symptoms required independent of mood symptoms, making it challenging."
     },
     {
-      "stem": "Which subtype of delusional disorder is characterized by the belief that one’s spouse or partner is unfaithful?",
+      "stem": "Which subtype of delusional disorder is characterized by the belief that one\u2019s spouse or partner is unfaithful?",
       "options": [
         "Jealous subtype",
         "Erotomanic subtype",
@@ -39,7 +39,7 @@
         "Grandiose subtype"
       ],
       "answer": "Jealous subtype",
-      "explanation": "The jealous subtype of delusional disorder involves delusions that one’s spouse or partner is unfaithful.",
+      "explanation": "1. The \"Jealous subtype\" is the correct answer because it specifically involves the belief that one's spouse or partner is unfaithful. This delusion is characterized by the individual\u2019s conviction that their partner is engaging in infidelity, which aligns directly with the definition provided for this subtype in the DSM-5-TR.\n\n2. The \"Erotomanic subtype\" is incorrect because it involves the belief that another person, often of higher social status, is in love with the individual. The \"Persecutory subtype\" is not applicable here as it pertains to the belief that one is being conspired against or harmed by others. Lastly, the \"Grandiose subtype\" is incorrect because it involves the belief that one has great, unrecognized talent or insight, rather than concerns about a partner's fidelity.",
       "kn": "KN36",
       "kn_explanation": "This question tests knowledge of peripheral schizophrenia spectrum disorders and subtypes of delusional disorder under classification approaches.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Glutamate deficiency in hippocampal neurons"
       ],
       "answer": "Dopamine hyperactivity in subcortical regions",
-      "explanation": "The revised dopamine hypothesis posits that positive symptoms result from dopamine hyperactivity in subcortical (striatal) brain areas.",
+      "explanation": "1. The correct answer, \"Dopamine hyperactivity in subcortical regions,\" aligns with the revised dopamine hypothesis, which posits that the positive symptoms of schizophrenia, such as delusions and hallucinations, are due to increased dopamine activity in subcortical areas of the brain, particularly the striatum. This hypothesis is supported by evidence showing that substances like amphetamines, which elevate dopamine levels, can induce schizophrenia-like symptoms, while medications that reduce dopamine activity alleviate these symptoms.\n\n2. The incorrect options are as follows:\n- **Dopamine hypoactivity in cortical regions**: This statement incorrectly suggests that decreased dopamine activity in cortical areas is linked to positive symptoms; instead, it relates to negative symptoms of schizophrenia.\n- **Serotonin hyperactivity in the limbic system**: While serotonin is involved in various psychiatric disorders, it is not specifically implicated in the positive symptoms of schizophrenia according to the revised dopamine hypothesis.\n- **Glutamate deficiency in hippocampal neurons**: Although glutamate dysregulation has been studied in schizophrenia, it does not specifically account for the positive symptoms, which are primarily attributed to dopamine hyperactivity.",
       "kn": "KN1",
       "kn_explanation": "This question addresses neurobiological mechanisms underlying schizophrenia symptoms, fitting under genetic and neurotransmitter bases of behavior (KN1).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "High expressed emotion in the family"
       ],
       "answer": "Acute and late onset of symptoms",
-      "explanation": "A better prognosis is related to acute, late symptom onset, female gender, and predominantly positive symptoms, while other options predict poorer prognosis.",
+      "explanation": "1. \"Acute and late onset of symptoms\" is associated with a better prognosis in schizophrenia because individuals who experience an acute onset tend to have a more favorable course of the illness and are more likely to achieve remission. Additionally, late onset is linked to a better outcome compared to early onset, as it often indicates a different trajectory of the disorder and may be associated with less severe symptomatology.\n\n2. The option \"Male gender\" is incorrect because research indicates that female gender is associated with a better prognosis in schizophrenia. \"Predominantly negative symptoms\" is also wrong, as negative symptoms are typically linked to a poorer prognosis, while positive symptoms are associated with a better outcome. Lastly, \"High expressed emotion in the family\" is incorrect because high expressed emotion is associated with an increased risk of relapse and poorer outcomes, rather than a better prognosis.",
       "kn": "KN28",
       "kn_explanation": "This question focuses on factors influencing the course and prognosis of schizophrenia, consistent with disorders and diseases impacting development (KN28).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Olanzapine"
       ],
       "answer": "Clozapine",
-      "explanation": "Clozapine is the recommended antipsychotic for treatment-resistant schizophrenia after trials of at least two other antipsychotics.",
+      "explanation": "1. **Clozapine is the correct answer** because it has been identified as the most effective antipsychotic for treatment-resistant schizophrenia, as defined by the American Psychiatric Association\u2019s Practice Guidelines. Treatment-resistant schizophrenia occurs when a patient shows no response or only a partial response to two antipsychotic medication trials at adequate dosages, and clozapine is specifically noted for its effectiveness in these challenging cases.\n\n2. **Haloperidol** is incorrect because, while it is a first-generation antipsychotic, it is not specifically indicated for treatment-resistant cases compared to clozapine. **Risperidone** is also incorrect as it is a second-generation antipsychotic that may be effective for many patients but does not have the same level of efficacy as clozapine for those who are treatment-resistant. **Olanzapine**, another second-generation antipsychotic, is effective for many individuals but, like risperidone, does not surpass clozapine in effectiveness for patients who do not respond to other treatments.",
       "kn": "KN3",
       "kn_explanation": "This question pertains to evidence-based pharmacological treatments for schizophrenia, fitting within treatment guidelines and drug knowledge (KN3).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Delusional disorder"
       ],
       "answer": "Schizophreniform disorder",
-      "explanation": "Schizophreniform disorder requires at least two characteristic symptoms for between one and six months, including delusions or hallucinations, whereas brief psychotic disorder is under one month.",
+      "explanation": "1. **Correct Answer: Schizophreniform Disorder**  \nThe 23-year-old man meets the criteria for schizophreniform disorder because he has experienced hallucinations and delusions for four months, which falls within the required duration of at least one month but less than six months. Additionally, he exhibits prominent negative symptoms and marked impairment in functioning, both of which are characteristic of this diagnosis.\n\n2. **Incorrect Options:**\n- **Brief Psychotic Disorder:** This diagnosis requires symptoms to last for at least one day but less than one month; since the man's symptoms have persisted for four months, this diagnosis is not applicable.\n- **Schizoaffective Disorder:** This disorder requires concurrent symptoms of schizophrenia and a major depressive or manic episode, which is not indicated in the case presented, making this diagnosis inappropriate.\n- **Delusional Disorder:** This diagnosis involves having one or more delusions for at least one month without significant impairment in overall functioning, which contradicts the marked impairment reported in this case.",
       "kn": "KN36",
       "kn_explanation": "The question tests the application of duration and symptom criteria distinguishing schizophrenia spectrum diagnoses, pertinent to classification systems (KN36).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "There is no difference in concordance rates between monozygotic and dizygotic twins"
       ],
       "answer": "Monozygotic twins have approximately a 48% concordance rate, while dizygotic twins have about a 17% concordance rate",
-      "explanation": "Research finds 48% concordance among identical twins and 17% among fraternal twins, evidencing genetic but not complete heritability.",
+      "explanation": "1. The statement \"Monozygotic twins have approximately a 48% concordance rate, while dizygotic twins have about a 17% concordance rate\" is correct because research indicates that monozygotic (identical) twins, who share 100% of their genes, show a concordance rate of 42% to 48% for schizophrenia, while dizygotic (fraternal) twins, who share about 50% of their genes, have a concordance rate of 17%. This significant difference in concordance rates supports the genetic basis of schizophrenia, as higher genetic similarity correlates with a greater likelihood of both twins developing the disorder.\n\n2. The incorrect option stating \"Monozygotic twins have nearly 100% concordance, while dizygotic twins have about 50%\" is wrong because the actual concordance rate for monozygotic twins is around 48%, not nearly 100%, and dizygotic twins have a much lower concordance rate than 50%. The option claiming \"First-degree relatives have only a 2% risk of developing schizophrenia\" is incorrect as first-degree relatives have a higher risk, with concordance rates indicating a 6% risk for parents and 9% for siblings. Lastly, the statement \"There is no difference in concordance rates between monozygotic and dizygotic twins\" is false because substantial evidence shows that monozygotic twins have a significantly higher concordance rate for schizophrenia compared to dizygotic twins, highlighting the role of genetic factors in the disorder.",
       "kn": "KN4",
       "kn_explanation": "This question tests knowledge of behavioral genetics and heritability estimates for schizophrenia, consistent with genetics and transmission of disorders (KN4).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Temporal lobe hyperactivity"
       ],
       "answer": "Hypofrontality",
-      "explanation": "Hypofrontality refers to reduced activity in the prefrontal cortex, implicated in schizophrenia’s negative and cognitive symptoms.",
+      "explanation": "1. \"Hypofrontality\" is the correct answer because it refers to lower-than-normal activity in the prefrontal cortex, which is associated with the negative and cognitive symptoms of schizophrenia. This concept is crucial in understanding how brain abnormalities contribute to the disorder, as hypofrontality is implicated in the dysfunction of the temporal-limbic-frontal network, leading to these specific symptoms.\n\n2. \n- **Hyperdopaminergia:** This term refers to increased dopamine activity, which is associated with the positive symptoms of schizophrenia, not the negative and cognitive symptoms linked to hypofrontality.\n- **Neuroleptic malignant syndrome:** This is a rare but serious reaction to antipsychotic medications characterized by severe muscle rigidity and autonomic instability, unrelated to the brain activity patterns seen in schizophrenia.\n- **Temporal lobe hyperactivity:** This term suggests increased activity in the temporal lobe, which is not directly related to the prefrontal cortex's functioning and does not specifically explain the negative and cognitive symptoms associated with schizophrenia.",
       "kn": "KN1",
       "kn_explanation": "This question assesses understanding of neurobiological correlates of schizophrenia symptoms, falling under neurobiological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Supported employment services"
       ],
       "answer": "Individualized resiliency training based on cognitive-behavioral therapy for psychosis",
-      "explanation": "Individualized resiliency training uses CBTp principles to teach coping strategies, cognitive restructuring, and managing illness triggers.",
+      "explanation": "1. **Correct Answer Explanation**: \"Individualized resiliency training based on cognitive-behavioral therapy for psychosis\" is the correct answer because it specifically focuses on teaching patients skills to manage their illness by processing precursors, triggers, and effects of their psychotic episodes. This training also includes cognitive restructuring to help patients challenge self-stigmatizing beliefs, thereby enhancing their psychological well-being.\n\n2. **Incorrect Options**:\n   - **Assertive community treatment**: This intervention provides comprehensive, community-based support for individuals with severe mental illness but does not focus specifically on developing skills to manage triggers or self-stigmatization.\n   - **Family psychoeducation**: While this approach educates families about the disorder and improves communication, it does not directly involve training patients in managing their illness or addressing self-stigmatizing beliefs.\n   - **Supported employment services**: These services assist individuals in finding and maintaining employment, but they do not specifically address the psychological skills needed to process triggers or challenge negative beliefs about oneself.",
       "kn": "KN44",
       "kn_explanation": "This question evaluates knowledge of evidence-based psychosocial treatments and their mechanisms for schizophrenia (KN44).",
       "difficulty": "hard",
@@ -159,7 +159,7 @@
         "Risk for offspring depends solely on environmental factors"
       ],
       "answer": "Offspring of affected and nonaffected monozygotic twins have a similarly increased risk for schizophrenia",
-      "explanation": "Studies show that both offspring of affected and unaffected MZ twins have similarly increased schizophrenia risk, indicating latent genetic liability.",
+      "explanation": "1. The correct answer, \"Offspring of affected and nonaffected monozygotic twins have a similarly increased risk for schizophrenia,\" is supported by research indicating that the offspring of discordant monozygotic twins (where one twin has schizophrenia and the other does not) exhibit an increased risk for schizophrenia, regardless of whether the affected twin manifests the disorder. This suggests a genetic liability that can be transmitted to their offspring, highlighting the significant genetic contribution to schizophrenia.\n\n2. The option \"Only offspring of affected monozygotic twins have increased risk\" is incorrect because studies show that both offspring of affected and nonaffected twins have a similarly elevated risk, not just those of the affected twin. The statement \"Offspring of monozygotic twins have no increased risk compared to the general population\" is wrong because the research indicates that offspring of discordant monozygotic twins do have an increased risk for schizophrenia compared to the general population. Lastly, the option \"Risk for offspring depends solely on environmental factors\" is misleading as it ignores the substantial genetic component established by studies showing the heritability of schizophrenia, which is not solely reliant on environmental influences.",
       "kn": "KN4",
       "kn_explanation": "This question probes understanding of complex genetic transmission patterns in schizophrenia from behavioral genetics research (KN4).",
       "difficulty": "hard",
@@ -170,11 +170,11 @@
       "options": [
         "Temporal-limbic-frontal network dysfunction model",
         "Monoamine oxidase hypothesis",
-        "Benedikt’s syndrome",
+        "Benedikt\u2019s syndrome",
         "Schizoaffective dysregulation theory"
       ],
       "answer": "Temporal-limbic-frontal network dysfunction model",
-      "explanation": "The temporal-limbic-frontal network dysfunction model accounts for negative symptoms via cortical dysfunction and positive symptoms via subcortical dopamine dysregulation.",
+      "explanation": "1. The \"Temporal-limbic-frontal network dysfunction model\" is the correct answer because it specifically describes how dysfunction in the cortical and subcortical regions of the brain contributes to both positive and negative symptoms of schizophrenia. This model aligns with the revised dopamine hypothesis, which posits that hyperactivity of dopamine in subcortical areas leads to positive symptoms, while hypoactivity in cortical regions is responsible for negative symptoms. \n\n2. The \"Monoamine oxidase hypothesis\" is incorrect because it primarily focuses on the role of monoamine oxidase in the metabolism of neurotransmitters, rather than explaining the coexistence of symptoms through brain network dysfunction. \"Benedikt\u2019s syndrome\" is also incorrect as it refers to a specific neurological condition characterized by contralateral hemiplegia and ocular abnormalities, not a model of schizophrenia symptomatology. Lastly, \"Schizoaffective dysregulation theory\" is incorrect because it pertains to schizoaffective disorder, which involves mood episodes alongside psychotic symptoms, rather than addressing the underlying brain dysfunction responsible for the positive and negative symptoms of schizophrenia.",
       "kn": "KN39",
       "kn_explanation": "This question pertains to theoretical models of psychopathology underlying schizophrenia symptoms (KN39).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Anchoring bias"
       ],
       "answer": "Availability heuristic",
-      "explanation": "The availability heuristic causes overestimation of unlikely but memorable events, which can bias clinical interpretation and diagnosis.",
+      "explanation": "1. The **availability heuristic** is the correct answer because it refers to the cognitive bias where individuals overestimate the likelihood of events based on how easily examples come to mind. In the context of interpreting assessment data for schizophrenia, clinicians may focus on rare but dramatic outcomes\u2014such as severe psychotic episodes\u2014because these cases are more memorable or striking, leading to an inflated perception of their frequency.\n\n2. **Confirmation bias** is incorrect because it refers to the tendency to search for, interpret, and remember information that confirms one\u2019s pre-existing beliefs rather than focusing on all relevant data. **Representativeness heuristic** is incorrect as it involves judging the probability of an event based on how similar it is to a typical case, rather than on the actual statistical likelihood of the event occurring. Lastly, **anchoring bias** is incorrect because it involves relying too heavily on the first piece of information encountered (the \"anchor\") when making decisions, rather than assessing the overall evidence or data comprehensively.",
       "kn": "KN37",
       "kn_explanation": "This assesses knowledge of cognitive biases and heuristics relevant to evidence-based interpretation of assessment data (KN37).",
       "difficulty": "medium",
@@ -204,11 +204,51 @@
         "FACT (Flexible Assertive Community Treatment)"
       ],
       "answer": "NAVIGATE",
-      "explanation": "NAVIGATE is a comprehensive, team-based early intervention program targeting first-episode psychosis with multiple psychosocial components.",
+      "explanation": "1. \"NAVIGATE\" is the correct answer because it is specifically designed as a team-based early intervention program for individuals experiencing their first episode of psychosis. This program includes essential components such as family education, individual resiliency training, and supported employment, all aimed at helping patients manage their illness effectively.\n\n2. The option \"TOMPKINS\" is incorrect because it is not mentioned in the reference material as a program associated with first-episode psychosis or any specific treatment components. \"Illness Management and Recovery (IMR)\" is also incorrect, as it is not highlighted in the context of early interventions for first-episode psychosis in the provided material. Lastly, \"FACT (Flexible Assertive Community Treatment)\" is incorrect because the reference material does not identify it as part of the early intervention strategies for first-episode psychosis, unlike NAVIGATE, which is specifically detailed.",
       "kn": "KN40",
       "kn_explanation": "This question addresses assessment and outcome measurement through early intervention programs in schizophrenia (KN40).",
       "difficulty": "medium",
       "quality_comment": "Options include real programs but only NAVIGATE matches the described multidisciplinary, early psychosis model."
+    },
+    {
+      "stem": "What is the minimum duration of symptoms required for a diagnosis of schizophreniform disorder according to DSM-5-TR?",
+      "options": [
+        "At least one month but less than six months",
+        "At least one day but less than one month",
+        "At least two weeks but less than three months",
+        "At least six months continuously"
+      ],
+      "answer": "At least one month but less than six months",
+      "explanation": "1. The correct answer, \"At least one month but less than six months,\" aligns with the diagnostic criteria for schizophreniform disorder as outlined in the DSM-5-TR. This disorder requires the presence of at least two of five characteristic symptoms, including delusions, hallucinations, or disorganized speech, for a duration that meets these specific time frames\u2014specifically, symptoms must last for at least one month but less than six months.\n\n2. The option \"At least one day but less than one month\" is incorrect because this duration pertains to brief psychotic disorder, which requires symptoms for at least one day but less than one month. The option \"At least two weeks but less than three months\" is wrong as it does not meet the minimum duration requirement for schizophreniform disorder, which is one month. Lastly, \"At least six months continuously\" is incorrect because this duration is necessary for a diagnosis of schizophrenia, not for schizophreniform disorder, which requires a shorter duration of symptoms.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on diagnostic criteria, which is part of classification systems and applying diagnostic classification rationales and limitations (KN36).",
+      "quality_comment": "This question effectively tests knowledge of symptom duration criteria in a related disorder.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In diagnosing schizoaffective disorder, what is the required duration of mood episode symptoms in relation to psychotic symptoms according to DSM-5-TR?",
+      "options": [
+        "At least two weeks of active psychotic symptoms",
+        "At least one month of mood symptoms",
+        "At least six months of continuous symptoms",
+        "At least one week of mood symptoms"
+      ],
+      "answer": "At least two weeks of active psychotic symptoms",
+      "explanation": "For schizoaffective disorder, there must be a period of at least two weeks during which the individual experiences active psychotic symptoms without mood symptoms, ensuring a clear distinction between the two sets of symptoms.",
+      "difficulty": "hard",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on diagnostic criteria, which is part of classification systems and applying diagnostic classification rationales and limitations (KN36).",
+      "quality_comment": "This question challenges the test-taker to integrate knowledge of symptom duration across different psychotic disorders.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

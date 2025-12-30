@@ -9,7 +9,7 @@
         "The likelihood of a behavior is unrelated to its consequences."
       ],
       "answer": "Behaviors followed by satisfying consequences are more likely to recur.",
-      "explanation": "Thorndike's law of effect states that behaviors followed by satisfying consequences tend to be repeated, while those followed by dissatisfying consequences are less likely to occur again.",
+      "explanation": "1. The correct answer, \"Behaviors followed by satisfying consequences are more likely to recur,\" aligns with Thorndike's law of effect, which states that behaviors that yield positive outcomes are reinforced and will be repeated in the future. Thorndike’s experiments with cats demonstrated that the likelihood of a behavior being repeated is contingent upon the satisfaction it produces, leading to a decrease in the time taken to perform the successful behavior over trials.\n\n2. The first incorrect option, \"Behaviors followed by satisfying consequences are less likely to occur again,\" contradicts the law of effect, which specifically states that satisfying consequences increase the likelihood of behavior recurrence. The second incorrect option, \"Behaviors followed by dissatisfying consequences are more likely to be repeated,\" is incorrect because the law of effect asserts that negative outcomes decrease the likelihood of those behaviors being repeated. Lastly, the option \"The likelihood of a behavior is unrelated to its consequences\" is wrong because Thorndike emphasized the direct relationship between behavior and its consequences, indicating that consequences are fundamental in shaping future behavior.",
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of a fundamental principle of learning related to operant conditioning, best categorized under theories and principles of learning (KN7).",
       "difficulty": "easy",
@@ -24,7 +24,7 @@
         "A behavior increases because a stimulus is removed following the behavior."
       ],
       "answer": "A behavior increases because a stimulus is removed following the behavior.",
-      "explanation": "Negative reinforcement involves the removal of an aversive stimulus following a behavior, which increases the likelihood of that behavior occurring again.",
+      "explanation": "1. The correct answer, \"A behavior increases because a stimulus is removed following the behavior,\" accurately defines negative reinforcement. In negative reinforcement, a behavior is strengthened because it leads to the removal of an aversive stimulus, thereby increasing the likelihood of that behavior occurring again in the future. For example, if a child cleans their room to stop their parents from nagging, the removal of the nagging reinforces the cleaning behavior.\n\n2. The first incorrect option, \"A behavior increases because a stimulus is applied after the behavior,\" describes positive reinforcement, where a behavior is strengthened through the addition of a pleasant stimulus, not the removal of an unpleasant one. The second incorrect option, \"A behavior decreases because a stimulus is removed after the behavior,\" suggests that the behavior is weakened, which is characteristic of negative punishment rather than negative reinforcement. Lastly, the third incorrect option, \"A behavior decreases because a stimulus is applied after the behavior,\" describes positive punishment, where the introduction of an aversive stimulus leads to a decrease in the behavior, which is contrary to the concept of reinforcement.",
       "kn": "KN7",
       "kn_explanation": "This question assesses understanding of operant conditioning concepts involving reinforcement types, relevant to major theories and models of learning (KN7).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Fixed ratio schedule"
       ],
       "answer": "Fixed ratio schedule",
-      "explanation": "A fixed ratio schedule provides reinforcement after a fixed number of responses; in this case, after every 15 lever presses.",
+      "explanation": "1. The correct answer is \"Fixed ratio schedule\" because this type of reinforcement schedule provides reinforcement after a specific number of responses. In this scenario, the rat receives a food pellet each time it presses the lever exactly 15 times, which aligns with the definition of a fixed ratio schedule, where reinforcement is consistently given after a predetermined number of responses.\n\n2. The incorrect options are as follows:\n- **Variable ratio schedule:** This schedule provides reinforcement after an unpredictable number of responses, which does not apply here since the rat is reinforced after a fixed number of lever presses (15).\n- **Fixed interval schedule:** In this schedule, reinforcement is delivered after a fixed period of time, regardless of the number of responses, which is not the case in this scenario where the number of responses is specified.\n- **Variable interval schedule:** This schedule involves reinforcement after varying and unpredictable lengths of time, not based on the number of responses, which again does not match the scenario where reinforcement is contingent on pressing the lever a specific number of times.",
       "kn": "KN7",
       "kn_explanation": "Scheduling of reinforcement is a key operant conditioning concept within major learning theories and models (KN7).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Variable interval schedule"
       ],
       "answer": "Variable ratio schedule",
-      "explanation": "Variable ratio schedules reinforce behavior after an unpredictable number of responses, resulting in high response rates and strong resistance to extinction.",
+      "explanation": "1. The \"Variable ratio schedule\" is the correct answer because it provides reinforcement after a varying number of responses, which leads to a high and steady rate of responding. This schedule creates unpredictability in reinforcement, making the behavior more resistant to extinction compared to other schedules, as individuals continue to respond in anticipation of a reward.\n\n2. The \"Fixed ratio schedule\" is incorrect because, although it produces a steady and relatively high rate of responding, it does not offer the same level of unpredictability as the variable ratio schedule, making it less resistant to extinction. The \"Fixed interval schedule\" is also incorrect, as it results in a low rate of responding, with behavior typically increasing only just before the reinforcement period, leading to less overall engagement. Lastly, the \"Variable interval schedule\" is incorrect because, while it produces a steady rate of responding, it does not achieve the same high rate of response as the variable ratio schedule, which is more effective at maintaining behavior over time.",
       "kn": "KN7",
       "kn_explanation": "This question assesses knowledge of reinforcement schedules and their effects on behavior, a foundational part of operant conditioning (KN7).",
       "difficulty": "hard",
@@ -69,7 +69,7 @@
         "A rat stops pressing a lever that no longer yields food."
       ],
       "answer": "A child is given extra chores for not doing homework.",
-      "explanation": "Positive punishment involves applying a stimulus (extra chores) to decrease an unwanted behavior (not doing homework).",
+      "explanation": "1. The correct answer, \"A child is given extra chores for not doing homework,\" exemplifies positive punishment because a stimulus (extra chores) is added following a behavior (not doing homework), which decreases the likelihood of that behavior occurring again. In this case, the addition of chores serves as a consequence intended to discourage the child from neglecting their homework in the future.\n\n2. The option \"A teenager loses phone privileges after coming home late\" is incorrect because it represents negative punishment, where a privilege (phone access) is taken away to decrease the behavior of coming home late. \"A student avoids detention by submitting assignments early\" is also incorrect, as it describes negative reinforcement; the student is increasing a behavior (submitting assignments) to avoid an unpleasant outcome (detention). Lastly, \"A rat stops pressing a lever that no longer yields food\" is incorrect because it illustrates operant extinction, where the behavior (pressing the lever) decreases due to the absence of reinforcement (food) rather than being punished.",
       "kn": "KN7",
       "kn_explanation": "Distinguishing reinforcement and punishment types is central to operant conditioning theory, fitting under learning principles (KN7).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Habituation"
       ],
       "answer": "Extinction burst",
-      "explanation": "An extinction burst is a temporary increase in a behavior when reinforcement is first withheld before the behavior eventually decreases.",
+      "explanation": "1. The correct answer is \"extinction burst\" because this term describes the phenomenon where a behavior initially increases in frequency after reinforcement has been discontinued before it gradually decreases. During the extinction process, the individual may exhibit an increase in the behavior as they attempt to elicit the previously reinforcing consequence, leading to the temporary spike in behavior known as an extinction burst.\n\n2. The incorrect options are as follows:  \n- **Spontaneous recovery** refers to the reappearance of a previously extinguished behavior after a period of time without reinforcement, not the initial increase observed during extinction.  \n- **Generalization** is the tendency for a response to occur in the presence of stimuli similar to the original discriminative stimulus, rather than describing a behavior's response to the cessation of reinforcement.  \n- **Habituation** is the process of becoming accustomed to a stimulus, leading to a decrease in response over time, but it does not specifically relate to the initial increase in behavior after reinforcement has stopped.",
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of operant conditioning procedures related to extinction, part of major learning theories (KN7).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "A behavior decreases because a stimulus is removed following the behavior."
       ],
       "answer": "An increase in reinforcement for one behavior leads to a decrease in an unaltered behavior.",
-      "explanation": "Negative behavioral contrast occurs when increasing reinforcement for Behavior A decreases the frequency of Behavior B, which has unaltered reinforcement.",
+      "explanation": "1. The correct answer, \"An increase in reinforcement for one behavior leads to a decrease in an unaltered behavior,\" describes **negative behavioral contrast**. This phenomenon occurs when the reinforcement for one behavior (Behavior A) is increased while the reinforcement for another behavior (Behavior B) remains unchanged, resulting in an increase in Behavior A and a decrease in Behavior B. This reflects how changes in reinforcement rates can impact the frequency of competing behaviors.\n\n2. The first incorrect option, \"Two behaviors reinforced at constant rates both increase simultaneously,\" is wrong because it does not involve a change in the reinforcement for one of the behaviors, which is essential for behavioral contrast to occur. The second incorrect option, \"Reinforcement is withheld, leading to a burst in responding,\" is incorrect as it describes an **extinction burst** rather than behavioral contrast, focusing on the effect of withholding reinforcement rather than changing reinforcement rates. The last incorrect option, \"A behavior decreases because a stimulus is removed following the behavior,\" is wrong because it refers to **negative punishment**, where behavior decreases due to the removal of a stimulus, not due to changes in reinforcement for competing behaviors.",
       "kn": "KN7",
       "kn_explanation": "Understanding behavioral contrast involves knowledge of operant reinforcement dynamics, aligned with learning theory content (KN7).",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "Any stimulus that increases a behavior through relief from discomfort."
       ],
       "answer": "A secondary reinforcer that is associated with a variety of primary reinforcers.",
-      "explanation": "Generalized reinforcers are secondary reinforcers like money, which can be exchanged for multiple primary reinforcers and thus are broadly reinforcing.",
+      "explanation": "1. The correct answer, \"A secondary reinforcer that is associated with a variety of primary reinforcers,\" accurately describes a generalized reinforcer because it highlights that these reinforcers are not inherently satisfying on their own but gain their reinforcing properties through their association with multiple primary reinforcers, such as food or water. For example, money is considered a generalized reinforcer because it can be exchanged for various primary reinforcers, fulfilling different needs.\n\n2. The first incorrect option, \"A stimulus that meets basic biological needs, such as food,\" is wrong because it describes a primary reinforcer, not a generalized reinforcer, which relies on secondary associations. The second incorrect option, \"A neutral stimulus that acquires reinforcing properties by pairing with other reinforcers,\" is too vague and does not specify that a generalized reinforcer is specifically associated with a variety of primary reinforcers, rather than just any reinforcer. Lastly, the option \"Any stimulus that increases a behavior through relief from discomfort\" is incorrect because it confuses the concept of reinforcement with the specific mechanisms of negative reinforcement, which involves the removal of an unpleasant stimulus rather than the broader category of generalized reinforcers.",
       "kn": "KN7",
       "kn_explanation": "Knowledge of types of reinforcers is part of operant conditioning theory typically covered in learning models and principles (KN7).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Negative punishment"
       ],
       "answer": "Negative reinforcement",
-      "explanation": "Negative reinforcement involves a behavior increasing because an aversive stimulus (nagging) is removed after the behavior (cleaning) occurs.",
+      "explanation": "1. \"Negative reinforcement\" is the correct answer because it describes a situation where a behavior (cleaning her room) increases or is maintained in order to remove an unpleasant stimulus (the parents' nagging). In this case, the child engages in the behavior to escape the nagging, which is a form of negative reinforcement as it involves the removal of an aversive stimulus following the desired behavior.\n\n2. \n- **Positive reinforcement** is incorrect because it involves the application of a pleasant stimulus following a behavior to increase its occurrence, which does not apply here as the child is trying to stop nagging, not gain a reward.\n- **Positive punishment** is incorrect because it refers to applying an unpleasant stimulus to decrease a behavior, whereas the child is not being punished; she is simply trying to avoid nagging.\n- **Negative punishment** is incorrect because it involves the removal of a pleasant stimulus to decrease a behavior, which does not fit this scenario since the child is not losing something positive; instead, she is trying to avoid the negative experience of being nagged.",
       "kn": "KN7",
       "kn_explanation": "The question requires application of operant conditioning principles—specifically reinforcement types—to everyday examples (KN7).",
       "difficulty": "easy",
@@ -144,7 +144,7 @@
         "Gradually removing prompts while maintaining the behavior."
       ],
       "answer": "Gradually removing prompts while maintaining the behavior.",
-      "explanation": "Fading involves systematically reducing prompts to promote independent performance of a behavior once it has been learned.",
+      "explanation": "1. The correct answer, \"Gradually removing prompts while maintaining the behavior,\" accurately describes fading in operant conditioning because it involves the process of gradually reducing the assistance or cues (prompts) that help initiate a behavior once the behavior has been established. This technique ensures that the individual can perform the behavior independently while still reinforcing the desired action.\n\n2. The option \"Gradually increasing reinforcement frequency to strengthen behavior\" is incorrect because it describes a method of enhancing behavior through increased reinforcement rather than the gradual removal of prompts. The option \"Introducing punishment after reinforcement to discourage behavior\" is wrong because it involves using punishment, which is not related to the process of fading, which focuses on reinforcement and prompts. Lastly, \"Providing a prompt to elicit behavior without reinforcement\" is incorrect because it suggests using prompts without reinforcement, contradicting the principle of fading, which relies on reinforcing the behavior before gradually removing the prompts.",
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of operant conditioning procedures and techniques used in behavior modification (KN7).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Behaviors that require both classical and operant conditioning."
       ],
       "answer": "Behaviors that increase because they were accidentally reinforced.",
-      "explanation": "Superstitious behavior arises when behavior is accidentally followed by reinforcement, creating an erroneous association.",
+      "explanation": "1. The correct answer, \"Behaviors that increase because they were accidentally reinforced,\" reflects Skinner's concept of superstitious behavior. In his studies, Skinner found that when pigeons were given food at regular intervals regardless of their actions, they began to associate their random behaviors with the reinforcement of food. This led to an increase in those behaviors, even though they were not directly linked to obtaining the food, illustrating how accidental reinforcement can shape behavior.\n\n2. The option \"Behaviors maintained by punishment rather than reinforcement\" is incorrect because superstitious behavior specifically involves reinforcement, not punishment; punishment decreases behavior rather than increasing it. \"Behaviors that cease when reinforcement is discontinued\" is wrong because superstitious behaviors can persist even after reinforcement stops due to their accidental reinforcement history. Lastly, \"Behaviors that require both classical and operant conditioning\" is incorrect because superstitious behavior primarily arises from operant conditioning, specifically through accidental reinforcement, rather than the combination of classical conditioning and operant conditioning.",
       "kn": "KN7",
       "kn_explanation": "Understanding superstitious behavior falls under key operant conditioning concepts in learning theory (KN7).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Primary reinforcer"
       ],
       "answer": "Positive discriminative stimulus",
-      "explanation": "The blinking light signals that reinforcement is available for lever pressing, making it a positive discriminative stimulus controlling the behavior.",
+      "explanation": "1. The correct answer, \"positive discriminative stimulus,\" is appropriate because the blinking light signals to the rat that pressing the lever will result in reinforcement (food). In this scenario, the blinking light indicates the availability of reinforcement, thereby controlling the behavior of lever pressing; hence, it serves as a cue that prompts the rat to perform the desired behavior only in its presence.\n\n2. The option \"conditioned stimulus\" is incorrect because, in operant conditioning, a conditioned stimulus typically refers to a stimulus that has been paired with an unconditioned stimulus to elicit a conditioned response, which is not the case here. \"Negative punishment\" is wrong because it involves the removal of a stimulus to decrease a behavior, whereas the blinking light is not removing anything but rather signaling reinforcement. Lastly, \"primary reinforcer\" is incorrect because a primary reinforcer is an inherent stimulus that satisfies basic needs (like food), while the blinking light does not fulfill a need but instead indicates when reinforcement is available.",
       "kn": "KN7",
       "kn_explanation": "This question assesses understanding of stimulus control, an important operant conditioning process and component of learning models (KN7).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "The organism will cease responding to the behavior with less frequent reinforcement."
       ],
       "answer": "The organism's response rates will be proportional to the schedules of reinforcement for each behavior.",
-      "explanation": "The matching law states that the rate of responding matches the frequency or magnitude of reinforcement for each behavior when options are concurrently available.",
+      "explanation": "1. The correct answer, \"The organism's response rates will be proportional to the schedules of reinforcement for each behavior,\" aligns with the matching law, which states that when two or more behaviors are concurrently reinforced on different schedules, the rate of performing each behavior is proportional to the frequency of reinforcement. This means that if one behavior is reinforced more frequently or with greater magnitude, the organism will allocate more responses to that behavior compared to others.\n\n2. The first incorrect option, \"The organism will respond equally to both behaviors regardless of reinforcement frequency,\" is wrong because the matching law indicates that response rates vary based on the reinforcement schedules, not that they are equal. The second incorrect option, \"The organism will respond more frequently to the behavior with lower magnitude of reinforcement,\" is incorrect as the matching law predicts that higher magnitude reinforcement will lead to higher response rates, not lower. Lastly, the option \"The organism will cease responding to the behavior with less frequent reinforcement\" is incorrect because while response rates may decrease, they do not necessarily stop entirely; the organism may still respond, albeit less frequently, depending on the context and reinforcement received.",
       "kn": "KN7",
       "kn_explanation": "This question covers a quantitative principle of operant behavior allocation, fitting within major research-based learning models (KN7).",
       "difficulty": "hard",
@@ -204,7 +204,7 @@
         "Results in the application of an unpleasant consequence."
       ],
       "answer": "Removes or terminates an ongoing unpleasant stimulus.",
-      "explanation": "Escape conditioning involves performing a behavior that stops an unpleasant stimulus that is currently present; this behavior is negatively reinforced.",
+      "explanation": "1. The correct answer, \"Removes or terminates an ongoing unpleasant stimulus,\" accurately describes escape conditioning because this type of conditioning involves a behavior that allows an individual to escape from an unpleasant stimulus that is already present. For example, if a dog jumps over a barrier to avoid an electric shock, the act of jumping removes the unpleasant shock, reinforcing the behavior through negative reinforcement.\n\n2. The first incorrect option, \"Prevents the occurrence of an aversive stimulus signaled by a conditioned stimulus,\" describes avoidance conditioning rather than escape conditioning, as avoidance involves behaviors that prevent an unpleasant stimulus from occurring in the first place. The second incorrect option, \"Produces reinforcement through receiving a reward after the behavior,\" is misleading because escape conditioning is focused on the removal of an aversive stimulus rather than the acquisition of a reward; reinforcement in this context is about alleviating discomfort. Lastly, the option \"Results in the application of an unpleasant consequence\" incorrectly describes punishment rather than escape conditioning; escape conditioning specifically involves the removal of an unpleasant consequence, not its application.",
       "kn": "KN7",
       "kn_explanation": "This question addresses types of negative reinforcement procedures, relevant to operant learning theory (KN7).",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "To rapidly extinguish an undesired behavior by removing reinforcement entirely."
       ],
       "answer": "To gradually decrease the amount of reinforcement to reduce satiation and improve resistance to extinction.",
-      "explanation": "Thinning refers to reducing reinforcement frequency gradually after a behavior is established to prevent satiation and increase resistance to extinction.",
+      "explanation": "1. The correct answer, \"To gradually decrease the amount of reinforcement to reduce satiation and improve resistance to extinction,\" accurately reflects the purpose of thinning in operant conditioning. Thinning involves transitioning from a continuous reinforcement schedule to an intermittent one, which helps maintain the behavior while preventing the loss of the reinforcing value due to overuse (satiation). This gradual reduction in reinforcement also enhances the behavior's resistance to extinction, meaning the behavior is less likely to stop when reinforcement is eventually withheld.\n\n2. The option \"To increase the frequency of a behavior by adding more reinforcements\" is incorrect because thinning involves reducing reinforcement rather than increasing it, which is counterproductive to the goal of maintaining behavior. The statement \"To change the type of reinforcer from primary to secondary\" is not relevant to thinning, as thinning focuses on the amount of reinforcement rather than its type. Lastly, \"To rapidly extinguish an undesired behavior by removing reinforcement entirely\" is incorrect because thinning does not aim for rapid extinction; instead, it seeks to maintain behavior while gradually decreasing reinforcement, preventing sudden drops in behavior frequency.",
       "kn": "KN7",
       "kn_explanation": "This question targets knowledge of reinforcement schedules and their strategic manipulation in operant conditioning (KN7).",
       "difficulty": "medium",
@@ -234,11 +234,51 @@
         "Behavioral contrast"
       ],
       "answer": "Habituation",
-      "explanation": "Habituation is the process of becoming accustomed to a stimulus, causing punishment to become less effective as the individual adapts to the punishing stimulus over time.",
+      "explanation": "1. **Correct Answer: Habituation**  \nHabituation refers to the gradual decline in the frequency or magnitude of a response due to repeated exposure to a stimulus. In the context of punishment, this means that as individuals become accustomed to the punishing stimulus, they may respond less to it over time, leading to a decrease in its effectiveness. This phenomenon highlights why punishment often fails to produce lasting behavioral change, as individuals may habituate to the punishment and thus continue the undesired behavior.\n\n2. **Incorrect Options:**\n\n- **Extinction Burst:** An extinction burst refers to a temporary increase in the frequency of a behavior when reinforcement is withheld, not punishment. It does not explain the decrease in effectiveness of punishment over time.\n\n- **Superstitious Behavior:** Superstitious behavior occurs when a behavior is accidentally reinforced, creating an association that is not based on the actual consequences of the behavior. This does not relate to the diminishing effectiveness of punishment.\n\n- **Behavioral Contrast:** Behavioral contrast involves changes in the frequency of two behaviors when the reinforcement rate for one behavior is altered, affecting the other. It does not address the specific issue of punishment losing its effectiveness over time.",
       "kn": "KN7",
       "kn_explanation": "This item assesses knowledge of behavioral processes affecting the long-term efficacy of punishment, aligned with operant conditioning principles (KN7).",
       "difficulty": "medium",
       "quality_comment": "Distractors are related behavioral phenomena, which requires candidates to distinguish habituation specifically in this context."
+    },
+    {
+      "stem": "Which of the following scenarios best illustrates negative reinforcement?",
+      "options": [
+        "A student studies hard to avoid failing a test.",
+        "A child receives praise for cleaning their room.",
+        "A dog barks to be let outside and is allowed to go out.",
+        "A teenager is grounded for breaking curfew."
+      ],
+      "answer": "A student studies hard to avoid failing a test.",
+      "explanation": "1. The scenario \"A student studies hard to avoid failing a test\" illustrates negative reinforcement because the student's behavior of studying is reinforced by the removal of the unpleasant consequence of failing the test. In this case, the avoidance of failure (the unpleasant stimulus) increases the likelihood that the student will continue to study hard in the future.\n\n2. \n- \"A child receives praise for cleaning their room\": This scenario describes positive reinforcement, where the child’s behavior (cleaning the room) is strengthened by the application of praise (a positive stimulus).\n- \"A dog barks to be let outside and is allowed to go out\": This scenario also represents positive reinforcement, as the dog’s barking behavior is reinforced by the application of the opportunity to go outside (a positive outcome).\n- \"A teenager is grounded for breaking curfew\": This scenario demonstrates positive punishment, where the teenager's behavior (breaking curfew) results in the application of a negative consequence (being grounded), thereby decreasing the likelihood of the behavior being repeated.",
+      "difficulty": "easy",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses understanding of operant conditioning concepts involving reinforcement types, relevant to major theories and models of learning (KN7).",
+      "quality_comment": "This question effectively tests understanding of negative reinforcement through a relatable scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of operant conditioning, which of the following best exemplifies the principle of negative reinforcement?",
+      "options": [
+        "A worker receives a bonus for completing a project ahead of schedule.",
+        "A person takes pain medication to alleviate a headache.",
+        "A cat is rewarded with treats for using the litter box.",
+        "A child is scolded for not doing their homework."
+      ],
+      "answer": "A person takes pain medication to alleviate a headache.",
+      "explanation": "1. The correct answer, \"A person takes pain medication to alleviate a headache,\" exemplifies negative reinforcement because the behavior of taking medication increases as it removes the unpleasant stimulus of pain (the headache). In this case, the alleviation of the headache serves as a reinforcing consequence that encourages the individual to repeat the behavior of taking pain medication in the future when they experience similar discomfort.\n\n2. The option \"A worker receives a bonus for completing a project ahead of schedule\" is incorrect because it illustrates positive reinforcement, where the bonus (a positive stimulus) is given to increase the likelihood of the worker completing projects early. The option \"A cat is rewarded with treats for using the litter box\" is wrong as it also represents positive reinforcement; the treats are a positive consequence that increases the likelihood of the cat using the litter box. Lastly, \"A child is scolded for not doing their homework\" is incorrect because it describes a scenario of positive punishment, where the scolding (a negative stimulus) is intended to decrease the behavior of not doing homework, rather than reinforcing any behavior.",
+      "difficulty": "hard",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses understanding of operant conditioning concepts involving reinforcement types, relevant to major theories and models of learning (KN7).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of negative reinforcement in a more complex context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

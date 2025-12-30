@@ -9,7 +9,7 @@
         "Assuming a group's decision reflects the unanimous opinions of all individual members"
       ],
       "answer": "Overestimating dispositional causes and underestimating situational causes when explaining others' behaviors",
-      "explanation": "The fundamental attribution error is the tendency to overemphasize personality traits (dispositional factors) and underestimate situational influences when explaining the behavior of others.",
+      "explanation": "1. The correct answer, \"Overestimating dispositional causes and underestimating situational causes when explaining others' behaviors,\" accurately describes the fundamental attribution error as defined by Ross (1977). This error reflects a common cognitive bias where individuals attribute the behaviors of others more to their personality traits or dispositions rather than considering the situational factors that may have influenced those behaviors. This tendency often leads to misinterpretations of others’ actions, particularly in social contexts.\n\n2. The first incorrect option, \"Attributing one's own successes to dispositional factors and failures to situational factors,\" describes the self-serving bias, not the fundamental attribution error. This bias specifically pertains to how individuals evaluate their own actions rather than those of others. \n\nThe second incorrect option, \"Attributing in-group members' negative behavior to situational factors and out-group members' negative behavior to dispositional factors,\" refers to the ultimate attribution error, which focuses on group dynamics rather than individual behavior. It highlights biases in evaluating groups rather than the fundamental attribution error's emphasis on individual attributions.\n\nThe third incorrect option, \"Assuming a group's decision reflects the unanimous opinions of all individual members,\" describes the group attribution error, which concerns misattributions about group consensus rather than the individual attributions involved in the fundamental attribution error. This option misrepresents the nature of the fundamental attribution error by shifting the focus from individual behaviors to group decision-making processes.",
       "kn": "KN14",
       "kn_explanation": "This question tests knowledge of social cognition theories related to person perception and attribution, which is central to KN14.",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Ultimate attribution error"
       ],
       "answer": "Self-serving bias",
-      "explanation": "The self-serving bias involves attributing positive outcomes to internal causes and negative outcomes to external causes as a way to protect self-esteem.",
+      "explanation": "1. The \"self-serving bias\" is the correct answer because it specifically refers to the tendency of individuals to attribute their successes to internal, dispositional factors while attributing their failures to external, situational factors. This bias serves to protect self-esteem by allowing individuals to take credit for positive outcomes while deflecting blame for negative outcomes onto external circumstances.\n\n2. The \"actor-observer effect\" is incorrect because it describes the tendency to attribute one's own behaviors to situational factors and others' behaviors to dispositional factors, rather than focusing specifically on successes and failures. The \"group attribution error\" is also wrong because it pertains to the erroneous belief that an individual member’s characteristics reflect the group as a whole, rather than individual attribution patterns of success and failure. Lastly, the \"ultimate attribution error\" is not applicable here, as it involves attributing behaviors of in-group and out-group members differently, rather than focusing on an individual’s own successes and failures.",
       "kn": "KN14",
       "kn_explanation": "This question targets understanding of attributional biases relevant to self-perception, a key concept within social cognition research covered in KN14.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Ignoring situational influences when explaining another person’s actions"
       ],
       "answer": "Attributing negative behaviors of out-group members to dispositional causes and those of in-group members to situational causes",
-      "explanation": "The ultimate attribution error involves attributing negative behaviors of out-group members to inherent traits and those of in-group members to external circumstances, often underlying prejudice.",
+      "explanation": "1. The correct answer, \"Attributing negative behaviors of out-group members to dispositional causes and those of in-group members to situational causes,\" accurately describes the ultimate attribution error. This error highlights how individuals tend to view the negative actions of those in groups they do not belong to (out-groups) as stemming from their character or personality (dispositional), while they attribute the negative actions of their own group members (in-groups) to external circumstances (situational). This bias is often linked to prejudice and can reinforce stereotypes.\n\n2. The first incorrect option, \"Assuming a group's decisions represent all individual group members’ opinions,\" describes the group attribution error, which involves the belief that an individual member's views reflect those of the entire group, rather than the ultimate attribution error. The second option, \"Attributing one’s own actions to external factors while others’ actions are seen as dispositional,\" refers to the actor-observer effect, which focuses on the different attribution styles we use for ourselves compared to others, rather than the group-based attributions of the ultimate attribution error. Lastly, \"Ignoring situational influences when explaining another person’s actions\" is a general description of the fundamental attribution error, which is about overemphasizing dispositional factors in others' behaviors, rather than the specific group-based attributions involved in the ultimate attribution error.",
       "kn": "KN14",
       "kn_explanation": "This question addresses bias in intergroup attribution processes, a central topic in social cognition and prejudice research within KN14.",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Own behavior to distinctiveness; others' behavior to consensus"
       ],
       "answer": "Own behavior to situational factors; others' behavior to dispositional factors",
-      "explanation": "The actor-observer effect describes the tendency to attribute one's own behavior to situational causes while attributing others’ behavior to internal traits.",
+      "explanation": "1. The correct answer, \"Own behavior to situational factors; others' behavior to dispositional factors,\" reflects the essence of the actor-observer effect, which posits that individuals tend to attribute their own actions to external circumstances while attributing others' actions to their internal characteristics. This tendency arises because we have more insight into our own situations and motivations, leading us to consider external factors for ourselves, whereas we often lack that insight for others and thus rely on dispositional explanations.\n\n2. \n- \"Own behavior to dispositional factors; others' behavior to situational factors\" is incorrect because this option reverses the fundamental premise of the actor-observer effect, misrepresenting how individuals typically attribute their actions versus those of others.\n- \"Own behavior to stable causes; others' behavior to unstable causes\" is incorrect as it does not accurately capture the actor-observer effect; it mixes the concepts of stability and situational versus dispositional factors, which are not the focus of this bias.\n- \"Own behavior to distinctiveness; others' behavior to consensus\" is incorrect because this option incorrectly applies Kelley’s covariation model concepts instead of addressing the actor-observer effect, which specifically deals with the attribution of personal versus others' behaviors.",
       "kn": "KN14",
       "kn_explanation": "This tests knowledge of a foundational social cognition bias concerning self versus other attributions, covered in KN14.",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Attributing negative group behavior to situational causes"
       ],
       "answer": "Assuming a group’s decision reflects unanimous individual agreement, despite contrary evidence",
-      "explanation": "Allison and Messick described the group attribution error as the mistaken belief that group decisions represent the unanimous opinions of all members even when evidence indicates dissent.",
+      "explanation": "1. The correct answer, \"Assuming a group’s decision reflects unanimous individual agreement, despite contrary evidence,\" accurately describes the group attribution error as defined by Allison and Messick (1985). This error occurs when individuals mistakenly believe that a collective decision made by a group is representative of the beliefs or conclusions of each individual member, even when there is evidence suggesting that the decision was not unanimous. This misattribution can lead to oversimplified views of group dynamics and individual contributions.\n\n2. \n- \"Assuming an individual group member’s beliefs represent the whole group’s beliefs\" is incorrect because it specifically describes the other version of the group attribution error as outlined by Hamill, Wilson, and Nisbett (1980), which focuses on individual member beliefs rather than group decisions.\n- \"Believing individual group members are responsible for collective group failure\" is wrong because it does not capture the essence of the group attribution error, which is about misattributing group consensus rather than assigning blame for failures.\n- \"Attributing negative group behavior to situational causes\" is incorrect as it does not align with the group attribution error; instead, it refers to a different attribution process that considers external factors affecting group behavior, which is not the focus of the group attribution error.",
       "kn": "KN14",
       "kn_explanation": "This item targets a nuanced social cognition bias concerning group decision-making, highly relevant to social cognition research in KN14.",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "Internal, unstable, and specific factors"
       ],
       "answer": "External, unstable, and specific factors",
-      "explanation": "An optimistic explanatory style attributes negative outcomes to factors outside the self that are temporary and limited in scope.",
+      "explanation": "1. The correct answer, \"External, unstable, and specific factors,\" aligns with the characteristics of an optimistic explanatory style. Individuals with this style attribute negative outcomes to factors outside of themselves (external), that are likely to change over time (unstable), and that are particular to the situation at hand (specific). This perspective helps maintain a positive outlook by minimizing the perception of personal failure.\n\n2. The option \"Internal, stable, and global factors\" is incorrect because it describes a pessimistic explanatory style, where individuals attribute negative events to enduring personal traits (internal), that do not change (stable), and that affect many areas of life (global). \n\nThe option \"External, stable, and global factors\" is also incorrect since it suggests that negative outcomes are attributed to external factors that are consistent and pervasive, which does not reflect an optimistic outlook. \n\nLastly, \"Internal, unstable, and specific factors\" is incorrect because it combines internal attributions with instability and specificity, which is contradictory to the essence of optimism, as it implies a focus on personal traits that are temporary and situational rather than external influences.",
       "kn": "KN14",
       "kn_explanation": "This question assesses understanding of attributional styles related to explanatory patterns, a key concept in social cognition under KN14.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Attributing the negative behavior of another group to their personality"
       ],
       "answer": "Blaming your own failure on bad luck but your friend's failure on lack of ability",
-      "explanation": "The self-serving bias involves attributing one’s own negative outcomes to external causes (like bad luck) and positive outcomes or others’ failures to internal causes.",
+      "explanation": "1. \"Blaming your own failure on bad luck but your friend's failure on lack of ability\" exemplifies the self-serving bias because it reflects the tendency to attribute personal successes to internal, dispositional factors (e.g., one's abilities) while attributing failures to external, situational factors (e.g., bad luck). In contrast, the individual attributes their friend's failure to a lack of ability, demonstrating a shift toward internal attributions for others, which is characteristic of the self-serving bias.\n\n2. The first incorrect option, \"Assuming your group members all agree with your opinion without checking,\" is wrong because it reflects the group attribution error, where one assumes individual group members' beliefs align with the group consensus without verification. The second incorrect option, \"Explaining your late arrival by traffic while explaining a stranger’s lateness by irresponsibility,\" is incorrect as it illustrates the actor-observer effect, where one attributes their own behavior to situational factors and others' behaviors to dispositional factors. The third incorrect option, \"Attributing the negative behavior of another group to their personality,\" is wrong because it pertains to the ultimate attribution error, where negative behaviors of out-group members are attributed to dispositional factors rather than situational influences.",
       "kn": "KN14",
       "kn_explanation": "This question examines bias in self-attribution, a fundamental aspect of social cognition and attribution theory in KN14.",
       "difficulty": "easy",
@@ -144,7 +144,7 @@
         "The behavior is attributed to global personality traits"
       ],
       "answer": "An external attribution is most likely",
-      "explanation": "High consensus, high consistency, and high distinctiveness indicate the behavior is specific to the situation and shared by others, leading to an external (situational) attribution.",
+      "explanation": "1. \"An external attribution is most likely\" is the correct answer because, according to Kelley’s covariation model, when consensus, consistency, and distinctiveness are all high, it indicates that the behavior is influenced by situational factors. High consensus means others would behave similarly in the same situation, high consistency indicates the person typically acts this way in similar situations, and high distinctiveness shows they do not behave this way in different contexts, leading to the conclusion that external circumstances are causing the behavior.\n\n2. The option \"An internal attribution is most likely\" is incorrect because internal attributions are made when consensus is low, consistency is high, and distinctiveness is low, which is the opposite of the conditions described in the question. The option \"Attributions are ambiguous and cannot be determined\" is wrong because high levels of consensus, consistency, and distinctiveness provide clear evidence for making an external attribution, rather than ambiguity. Lastly, \"The behavior is attributed to global personality traits\" is incorrect since global personality traits suggest a stable, internal attribution, while the conditions stated in the question indicate that the behavior is more likely influenced by external factors.",
       "kn": "KN14",
       "kn_explanation": "This question specifically tests knowledge of Kelley's covariation model, a foundational social cognition theory under KN14.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Explaining one’s own behavior in terms of distinctiveness"
       ],
       "answer": "Attributing a group’s decision to individual members’ unanimous agreement despite dissent",
-      "explanation": "The group attribution error involves assuming that a group's decision reflects unanimous agreement among its members, even when there is evidence to the contrary.",
+      "explanation": "1. \"Attributing a group’s decision to individual members’ unanimous agreement despite dissent\" is the correct answer because it exemplifies the group attribution error, which occurs when people mistakenly believe that a group's decision reflects the consensus of all its members, ignoring any dissenting opinions. This aligns with the second version of the group attribution error described by Allison and Messick (1985), where individuals attribute a group's conclusion to each member's agreement, even when there is evidence of disagreement.\n\n2. The option \"Believing an individual group member’s views reflect the entire group’s attitudes\" is incorrect because it describes the first version of the group attribution error, which focuses on assuming that an individual’s beliefs mirror those of the group rather than on group decisions. \"Attributing personal failures to situational factors\" is wrong as it pertains to the self-serving bias, where individuals attribute undesirable outcomes to external factors, not a group decision. Lastly, \"Explaining one’s own behavior in terms of distinctiveness\" is incorrect because it relates to Kelley’s covariation model, specifically the distinctiveness component, rather than addressing group attributions.",
       "kn": "KN14",
       "kn_explanation": "This question probes understanding of group-level attribution biases, a key topic in social cognition in KN14.",
       "difficulty": "medium",
@@ -174,11 +174,51 @@
         "People attribute others’ behavior to situational factors and their own to dispositional factors"
       ],
       "answer": "People tend to attribute their own behavior to situational factors and others’ behavior to dispositional factors",
-      "explanation": "The actor-observer effect describes the tendency for individuals to attribute their own actions to external situational causes but to attribute other people's actions to internal dispositional causes.",
+      "explanation": "1. The correct answer, \"People tend to attribute their own behavior to situational factors and others’ behavior to dispositional factors,\" reflects the essence of the actor-observer effect. This psychological phenomenon, identified by Jones and Nisbett (1971), indicates that individuals are more likely to consider external circumstances when evaluating their own actions, while they tend to emphasize internal traits or characteristics when interpreting the actions of others. This bias creates a disparity in attribution styles between self and others.\n\n2. The first incorrect option, \"People tend to attribute both their own and others’ behaviors to dispositional factors,\" is wrong because it overlooks the fundamental distinction of the actor-observer effect, which highlights that individuals attribute their own behaviors to situational factors rather than solely to dispositional factors. The second incorrect option, \"People attribute their own behaviors to consensus and others’ to distinctiveness,\" misrepresents the principles of Kelley’s covariation model, as consensus and distinctiveness are not the primary attributions made by individuals regarding their own behaviors. Lastly, the third incorrect option, \"People attribute others’ behavior to situational factors and their own to dispositional factors,\" is incorrect because it reverses the actor-observer effect, which specifically states that individuals attribute their own behavior to situational factors and not to dispositional ones.",
       "kn": "KN14",
       "kn_explanation": "This item focuses on self versus other attribution systems, an important social cognition concept represented in KN14.",
       "difficulty": "easy",
       "quality_comment": "The distractors are plausible but clearly incorrect; the item succinctly tests the core idea."
+    },
+    {
+      "stem": "What is the tendency to attribute one's own negative behaviors to external factors while attributing others' similar behaviors to their character called?",
+      "options": [
+        "Self-serving bias",
+        "Fundamental attribution error",
+        "Actor-observer bias",
+        "Confirmation bias"
+      ],
+      "answer": "Self-serving bias",
+      "explanation": "Self-serving bias refers to the tendency to attribute personal failures to situational factors while attributing others' failures to their character, which is a related but distinct concept from the fundamental attribution error.",
+      "difficulty": "easy",
+      "kn": "KN14",
+      "kn_explanation": "This question tests knowledge of social cognition theories related to person perception and attribution, which is central to KN14.",
+      "quality_comment": "This question effectively tests understanding of attribution biases in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In a study examining how people explain the behaviors of their peers versus their own, which of the following findings would be consistent with the fundamental attribution error?",
+      "options": [
+        "Participants attribute their own mistakes to bad luck while blaming peers for lack of effort.",
+        "Participants believe their friends are more influenced by their environment than they are.",
+        "Participants claim that both they and their peers are equally affected by situational factors.",
+        "Participants show no difference in attribution styles between self and others."
+      ],
+      "answer": "Participants attribute their own mistakes to bad luck while blaming peers for lack of effort.",
+      "explanation": "This finding aligns with the fundamental attribution error as it demonstrates the tendency to attribute others' behaviors to their dispositions while attributing one's own behaviors to external factors.",
+      "difficulty": "hard",
+      "kn": "KN14",
+      "kn_explanation": "This question tests knowledge of social cognition theories related to person perception and attribution, which is central to KN14.",
+      "quality_comment": "This question challenges the test-taker to apply the concept of the fundamental attribution error in a research context, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

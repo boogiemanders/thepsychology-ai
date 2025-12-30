@@ -9,7 +9,7 @@
         "Is angry and resentful"
       ],
       "answer": "Persistent pattern of stealing or deceitfulness",
-      "explanation": "A pattern of stealing or deceitfulness is characteristic of conduct disorder, not oppositional defiant disorder.",
+      "explanation": "1. \"Persistent pattern of stealing or deceitfulness\" is the correct answer because this symptom is associated with conduct disorder (CD), not oppositional defiant disorder (ODD). ODD is characterized by a recurrent pattern of angry/irritable mood, argumentative/defiant behavior, and vindictiveness, which does not include stealing or deceitfulness as part of its diagnostic criteria.\n\n2. The option \"Deliberately annoys others\" is incorrect because it is one of the characteristic symptoms of ODD, indicating a defiant behavior towards others. \"Often blames others for their mistakes\" is also incorrect, as this symptom reflects a common behavior seen in individuals with ODD, demonstrating a lack of responsibility for their actions. Lastly, \"Is angry and resentful\" is incorrect because it is a key symptom of ODD, highlighting the individual's emotional state that aligns with the disorder's diagnostic criteria.",
       "kn": "KN36",
       "kn_explanation": "This question tests knowledge of classification systems and differential diagnosis (KN36) by distinguishing features of ODD versus conduct disorder.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Late adolescent-onset type"
       ],
       "answer": "Childhood-onset type",
-      "explanation": "Childhood-onset CD, with symptoms before age 10, is linked to a worse prognosis and greater risk for antisocial personality disorder in adulthood.",
+      "explanation": "1. The \"Childhood-onset type\" of conduct disorder (CD) is associated with a higher risk of developing antisocial personality disorder in adulthood because it involves at least one symptom occurring before age 10, leading to a pattern of increasingly serious antisocial behaviors that persist into adulthood. This subtype is linked to neuropsychological deficits and adverse child-rearing environments, which contribute to a greater likelihood of long-term negative outcomes, including criminal behavior and substance-related disorders.\n\n2. \n- **Adolescent-onset type**: This subtype does not have symptoms before age 10 and is typically associated with a temporary pattern of antisocial behavior, which is less likely to lead to antisocial personality disorder in adulthood.\n- **Unspecified onset type**: This category does not provide specific information about the timing of symptom onset, making it impossible to determine the associated risks for antisocial personality disorder.\n- **Late adolescent-onset type**: Similar to the adolescent-onset type, this variant occurs after age 10 and is characterized by behaviors that are often situational and less likely to result in long-term antisocial personality disorder.",
       "kn": "KN28",
       "kn_explanation": "This question focuses on developmental psychopathology and prognosis related to disorders impacting expected developmental course (KN28).",
       "difficulty": "medium",
@@ -39,14 +39,14 @@
         "Problem-solving skills training (PSST)"
       ],
       "answer": "Parent management training - Oregon model (PMTO)",
-      "explanation": "PMTO specifically targets replacing coercive parenting with positive parenting strategies like reinforcement and monitoring.",
+      "explanation": "1. **Correct Answer Explanation:** The \"Parent management training - Oregon model (PMTO)\" is the correct answer because it is specifically designed to help parents of children with conduct disorder replace coercive parenting practices with positive reinforcement strategies. PMTO focuses on enhancing positive parenting behaviors, such as positive reinforcement and non-coercive discipline, which is essential for addressing the behavioral issues associated with conduct disorder.\n\n2. **Incorrect Options Explanation:**\n   - **Multisystemic therapy (MST):** MST is an intensive, community-based intervention aimed at adolescents with antisocial behaviors and their families, but it is not specifically a parent-focused intervention that targets parenting practices.\n   - **Functional family therapy (FFT):** FFT is designed for families with a child exhibiting externalizing behaviors and focuses on improving family dynamics, rather than specifically training parents to replace coercive practices with positive reinforcement.\n   - **Problem-solving skills training (PSST):** PSST is a child-focused intervention that aims to enhance children's cognitive processes and social skills, rather than addressing parenting practices directly.",
       "kn": "KN44",
       "kn_explanation": "This question assesses knowledge of treatment techniques and evidence for their effectiveness, specifically parent management interventions (KN44).",
       "difficulty": "medium",
       "quality_comment": "Distractors are other empirically supported treatments for conduct disorder, which adds complexity, while the stem clearly focuses on parental coercion replacement."
     },
     {
-      "stem": "According to Moffitt’s developmental taxonomy, which type of antisocial behavior is characterized by a temporary pattern related to a 'maturity gap' during adolescence?",
+      "stem": "According to Moffitt\u2019s developmental taxonomy, which type of antisocial behavior is characterized by a temporary pattern related to a 'maturity gap' during adolescence?",
       "options": [
         "Life-course-persistent type",
         "Adolescence-limited type",
@@ -54,11 +54,11 @@
         "Late-onset type"
       ],
       "answer": "Adolescence-limited type",
-      "explanation": "The adolescence-limited type occurs mainly during teens due to a discrepancy between biological maturity and social maturity.",
+      "explanation": "1. The \"Adolescence-limited type\" is the correct answer because it represents a temporary and situational pattern of antisocial behavior that arises due to a \"maturity gap\" between an adolescent's biological and social maturity. This type of behavior is not consistent across situations and typically resolves as the individual matures, distinguishing it from more chronic forms of antisocial behavior.\n\n2. The \"Life-course-persistent type\" is incorrect because it refers to a pattern of increasingly serious antisocial behaviors that begins in early childhood and continues into adulthood, indicating a stable trajectory rather than a temporary one. The \"Childhood-onset type\" is also incorrect as it involves symptoms appearing before age 10 and is associated with a higher degree of aggressiveness and a greater likelihood of ongoing antisocial behavior into adulthood. Finally, the \"Late-onset type\" is not a recognized category in Moffitt\u2019s taxonomy; the correct terms are \"childhood-onset\" and \"adolescence-limited,\" making \"late-onset\" an invalid choice.",
       "kn": "KN23",
       "kn_explanation": "The question evaluates knowledge of major developmental theories and models related to disorder onset and course (KN23).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include related but incorrect options which require understanding Moffitt’s theory, making this question effective for EPPP-level testing."
+      "quality_comment": "Distractors include related but incorrect options which require understanding Moffitt\u2019s theory, making this question effective for EPPP-level testing."
     },
     {
       "stem": "Which physiological finding has been associated with conduct disorder in children?",
@@ -69,7 +69,7 @@
         "Increased cardiovascular reactivity during stress"
       ],
       "answer": "Lower physiological reactions to aversive stimuli",
-      "explanation": "Children with conduct disorder often show reduced physiological responses to stress and aversive stimuli, including lower heart rate and skin conductance.",
+      "explanation": "1. \"Lower physiological reactions to aversive stimuli\" is the correct answer because research has shown that children with conduct disorder (CD) exhibit reduced physiological responses, such as lower heart rate and skin conductance, when exposed to stressful situations. Studies indicate that compared to healthy children, those with CD do not experience the typical increase in physiological arousal in response to aversive stimuli, suggesting a discrepancy between their emotional and physiological reactions.\n\n2. The option \"Elevated resting heart rate compared to healthy peers\" is incorrect because children with conduct disorder typically have a lower resting heart rate, which is associated with their reduced physiological reactivity. \"Heightened skin conductance responses\" is wrong because evidence indicates that children with CD have lower skin conductance responses, not heightened ones, in stressful situations. Lastly, \"Increased cardiovascular reactivity during stress\" is incorrect as children with CD do not show the expected increase in cardiovascular responses, further highlighting their atypical physiological functioning in response to stressors.",
       "kn": "KN1",
       "kn_explanation": "This question relates to neurobiological bases and physiological correlates of behavior in psychopathology (KN1).",
       "difficulty": "hard",
@@ -84,7 +84,7 @@
         "The disorder can be diagnosed in children younger than six years old."
       ],
       "answer": "Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage.",
-      "explanation": "IED includes recurrent outbursts of aggression typically occurring twice weekly without damage or injury over at least three months; premeditation and proportionality are exclusionary.",
+      "explanation": "1. The statement \"Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage\" is correct because it aligns with the diagnostic criteria for intermittent explosive disorder (IED). According to the reference material, IED is characterized by recurrent behavioral outbursts due to a failure to control aggressive impulses, which can manifest as verbal or physical aggression occurring at least twice weekly for a minimum of three months. Importantly, these outbursts do not result in damage or destruction to property or physical injury to others.\n\n2. The incorrect options are as follows:\n- \"IED involves premeditated aggressive acts aimed at achieving tangible outcomes\": This is incorrect because IED requires that outbursts are not premeditated and are not committed with the intention of achieving a tangible outcome.\n- \"Aggressive outbursts in IED are proportional to the provocation or social stressor\": This statement is false because the level of aggressiveness in IED must not be proportional to the provocation or any precipitating social stressor, indicating a disproportionate response.\n- \"The disorder can be diagnosed in children younger than six years old\": This is incorrect as the diagnosis of IED requires that the individual be at least six years old or at the equivalent developmental level, thus excluding younger children.",
       "kn": "KN36",
       "kn_explanation": "This question tests knowledge of classification criteria and diagnostic thresholds for impulse-control disorders (KN36).",
       "difficulty": "medium",
@@ -94,12 +94,12 @@
       "stem": "Which of the following best characterizes Problem-Solving Skills Training (PSST) used in children with conduct disorder?",
       "options": [
         "It emphasizes operant conditioning techniques to modify externalizing behavior.",
-        "It helps children identify others’ feelings and develop prosocial conflict resolution skills.",
+        "It helps children identify others\u2019 feelings and develop prosocial conflict resolution skills.",
         "It focuses on altering power structures within family systems.",
         "It uses intensive therapy involving community and school interventions."
       ],
-      "answer": "It helps children identify others’ feelings and develop prosocial conflict resolution skills.",
-      "explanation": "PSST focuses on cognitive processes and interpersonal problem-solving skills in children to reduce disruptive behaviors.",
+      "answer": "It helps children identify others\u2019 feelings and develop prosocial conflict resolution skills.",
+      "explanation": "1. The correct answer, \"It helps children identify others\u2019 feelings and develop prosocial conflict resolution skills,\" accurately characterizes Problem-Solving Skills Training (PSST) because PSST focuses on the cognitive processes underlying problematic behaviors in children with conduct disorder. This intervention teaches children to accurately perceive the feelings of others, understand the consequences of their actions, and identify positive ways to resolve interpersonal conflicts, which are essential for improving their social interactions and reducing disruptive behaviors.\n\n2. The option \"It emphasizes operant conditioning techniques to modify externalizing behavior\" is incorrect because this description aligns more closely with Parent Management Training (PMT), which uses operant conditioning principles to change parenting approaches and child behavior. The statement \"It focuses on altering power structures within family systems\" is wrong as it pertains to Functional Family Therapy (FFT), which addresses family dynamics rather than individual skill development. Lastly, \"It uses intensive therapy involving community and school interventions\" is not accurate for PSST, as this description better fits Multisystemic Therapy (MST), which involves broader community and school-based interventions to address antisocial behaviors.",
       "kn": "KN44",
       "kn_explanation": "This question involves treatment techniques and interventions designed for children with conduct disorder (KN44).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Consistent positive parenting and supervision"
       ],
       "answer": "Parental history of criminology and substance abuse",
-      "explanation": "Parental criminology and substance abuse are linked to increased conduct disorder risk, supported by family and twin study findings.",
+      "explanation": "1. \"Parental history of criminology and substance abuse\" is the correct answer because research has linked an increased risk for conduct disorder (CD) to adverse family experiences, including parental criminality and substance abuse. Family studies indicate that these factors contribute significantly to the likelihood of developing CD, emphasizing the role of the family environment in the disorder's etiology.\n\n2. The option \"High concordance rates in dizygotic twins compared to monozygotic twins\" is incorrect because studies show that monozygotic twins have higher concordance rates than dizygotic twins, indicating a stronger genetic influence in conduct disorder. \"Increased physiological reactions to aversive stimuli\" is wrong because children with conduct disorder typically exhibit lower physiological reactions to stress, not increased reactions, as evidenced by research measuring heart rate and cortisol levels. Lastly, \"Consistent positive parenting and supervision\" is not a risk factor; rather, it is the absence of positive parenting and the presence of coercive interactions that increase the risk for conduct disorder.",
       "kn": "KN4",
       "kn_explanation": "This question relates to behavioral genetics and environmental contributions to conduct disorder etiology (KN4).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Multidimensional family therapy (MDFT)"
       ],
       "answer": "Multisystemic therapy (MST)",
-      "explanation": "MST is a comprehensive family- and community-based intervention addressing multiple ecological levels to reduce antisocial behavior.",
+      "explanation": "1. **Correct Answer Explanation:**\n   Multisystemic therapy (MST) is the correct answer because it is specifically designed as an intensive, community-based intervention for adolescents aged 12 to 18 who exhibit antisocial behaviors and are at imminent risk for out-of-home placement. MST is grounded in ecological theory, which posits that problematic behaviors arise from multiple interconnected risk factors at individual, family, peer, school, and community levels, necessitating interventions across these domains.\n\n2. **Incorrect Options:**\n   - **Parent Management Training (PMT):** PMT focuses on training parents to modify their child's behavior through positive reinforcement and discipline, but it does not specifically target adolescents at risk for out-of-home placement or utilize an ecological approach.\n   - **Functional Family Therapy (FFT):** FFT is aimed at addressing problematic behaviors within the family context but does not specifically focus on adolescents at risk for out-of-home placement or base its approach on ecological theory.\n   - **Multidimensional Family Therapy (MDFT):** MDFT targets families with adolescents who have substance use issues and comorbid symptoms, but it is not exclusively an intensive community-based intervention for those at imminent risk for out-of-home placement like MST is.",
       "kn": "KN44",
       "kn_explanation": "Assesses knowledge of evidence-based psychotherapeutic interventions for conduct disorder, specifically multimodal ecological therapy (KN44).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Are recommended as first-line prevention interventions."
       ],
       "answer": "Increase the likelihood of future delinquent behaviors.",
-      "explanation": "Studies have shown Scared Straight programs tend to have harmful effects, increasing criminal behavior likelihood among juvenile offenders.",
+      "explanation": "1. The correct answer, \"Increase the likelihood of future delinquent behaviors,\" is supported by research indicating that \"Scared Straight\" programs have harmful effects on youth with conduct disorder. Studies have shown that participation in these programs tends to increase the likelihood that juvenile offenders and at-risk juveniles will engage in criminal behaviors in the future, contradicting the intended purpose of these interventions.\n\n2. The option \"Are effective in reducing future criminal behaviors\" is incorrect because research consistently shows that these programs do not achieve their goal of reducing criminal behavior; rather, they have the opposite effect. The option \"Have no significant impact compared to no intervention\" is wrong because the evidence suggests that these programs actually lead to negative outcomes, rather than having a neutral effect. Lastly, \"Are recommended as first-line prevention interventions\" is incorrect as the literature indicates that \"Scared Straight\" programs are not recommended; instead, they have been shown to be counterproductive for at-risk youth.",
       "kn": "KN44",
       "kn_explanation": "This addresses evidence-based evaluation of intervention effectiveness and comparative outcomes in treatment/prevention (KN44).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "More common in boys throughout childhood and adolescence."
       ],
       "answer": "More common in boys during early childhood; equal occurrence in older children and adolescents.",
-      "explanation": "ODD is more prevalent in boys during early childhood but tends to occur about equally in boys and girls later in development.",
+      "explanation": "1. The correct answer, \"More common in boys during early childhood; equal occurrence in older children and adolescents,\" reflects the findings from the reference material, which states that oppositional defiant disorder (ODD) is more prevalent in boys than girls during early childhood. However, as children grow into older ages, particularly during adolescence, the occurrence of ODD becomes approximately equal between boys and girls.\n\n2. The first incorrect option, \"More common in girls during early childhood, with equal incidence in adolescence,\" is wrong because the material specifies that ODD is more common in boys during early childhood, not girls. The second incorrect option, \"More common in girls throughout childhood and adolescence,\" is incorrect as it contradicts the information that indicates a higher prevalence in boys, especially in early childhood. Lastly, the option \"More common in boys throughout childhood and adolescence\" is misleading because while it is true for early childhood, the reference notes that the occurrence becomes equal in older children and adolescents, thus not supporting the claim of consistent prevalence in boys throughout both stages.",
       "kn": "KN21",
       "kn_explanation": "This question assesses knowledge of normal growth and development patterns relevant to prevalence of childhood disorders (KN21).",
       "difficulty": "easy",
@@ -169,16 +169,16 @@
       "stem": "Which theory best explains the difference between life-course-persistent and adolescence-limited types of conduct disorder in terms of their underlying causes and developmental pathways?",
       "options": [
         "Biosocial theory focusing on gene-environment interactions",
-        "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+        "Moffitt\u2019s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
         "Social learning theory emphasizing modeling and reinforcement",
         "Attachment theory focusing on early caregiver relationships"
       ],
-      "answer": "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
-      "explanation": "Moffitt’s taxonomy explains life-course-persistent CD by neuropsychological deficits and adverse environments, and adolescence-limited CD by the maturity gap.",
+      "answer": "Moffitt\u2019s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+      "explanation": "1. **Correct Answer Explanation:** \"Moffitt\u2019s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps\" is the correct answer because it specifically outlines the different underlying causes for life-course-persistent and adolescence-limited types of conduct disorder. Moffitt posits that the life-course-persistent type is associated with neuropsychological deficits that lead to a consistent pattern of antisocial behavior starting in early childhood, whereas the adolescence-limited type arises from a maturity gap between biological and social maturity, resulting in temporary antisocial behaviors during adolescence.\n\n2. **Incorrect Options Explanation:**\n   - **Biosocial theory focusing on gene-environment interactions:** This theory addresses the interplay between genetic predispositions and environmental factors but does not specifically differentiate the developmental pathways of the two types of conduct disorder as Moffitt\u2019s taxonomy does.\n   - **Social learning theory emphasizing modeling and reinforcement:** While this theory explains behavior acquisition through observation and reinforcement, it does not account for the neuropsychological aspects and the distinct developmental trajectories proposed by Moffitt.\n   - **Attachment theory focusing on early caregiver relationships:** This theory highlights the importance of early relationships in emotional and social development but does not specifically address the neuropsychological deficits or the maturity gap that characterize the life-course-persistent and adolescence-limited types of conduct disorder.",
       "kn": "KN39",
       "kn_explanation": "This question covers theories and models of psychopathology (KN39) relevant to conduct disorder developmental trajectories.",
       "difficulty": "medium",
-      "quality_comment": "Options reflect prominent theories, requiring examinees to correctly identify Moffitt’s specific developmental model, making it a strong conceptual item."
+      "quality_comment": "Options reflect prominent theories, requiring examinees to correctly identify Moffitt\u2019s specific developmental model, making it a strong conceptual item."
     },
     {
       "stem": "Which of the following best describes the role of base rates and bias in interpreting conduct disorder assessment data?",
@@ -189,7 +189,7 @@
         "Base rates are irrelevant when clinical interviews are comprehensive."
       ],
       "answer": "Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor.",
-      "explanation": "Heuristics like availability bias can lead to overestimating disorder prevalence based on memorable cases, affecting clinical interpretation and emphasizing the importance of base rates.",
+      "explanation": "1. The correct answer, \"Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor,\" reflects how cognitive biases can influence clinical judgment. When assessors are recently exposed to vivid cases of conduct disorder (CD), they may overestimate its prevalence in their evaluations due to the ease with which these examples come to mind, leading to a skewed interpretation of assessment data. This can result in an inflated perception of the disorder's occurrence in the population, affecting diagnosis and treatment decisions.\n\n2. The option \"Ignoring base rates leads to accurate interpretation of clinical symptoms\" is incorrect because disregarding base rates can often lead to misdiagnosis or overdiagnosis, as clinicians may not accurately contextualize symptoms within the larger population. The statement \"High prevalence of CD in a population decreases false alarms in diagnosis\" is misleading; a high prevalence could actually increase the likelihood of false positives if assessors do not consider base rates properly, as they may assume that symptoms are more indicative of CD than they are. Lastly, \"Base rates are irrelevant when clinical interviews are comprehensive\" is incorrect because comprehensive clinical interviews still need to consider base rates to avoid misinterpretation; understanding the prevalence of CD helps clinicians contextualize individual cases within the broader population, ensuring more accurate diagnoses.",
       "kn": "KN37",
       "kn_explanation": "This item pertains to evidence-based interpretation of data, biases, and heuristics in assessment (KN37), crucial for accurate diagnosis of conduct disorder.",
       "difficulty": "medium",
@@ -199,12 +199,12 @@
       "stem": "In assessing change after intervention for conduct disorder, which outcome measure is considered most appropriate to evaluate treatment effectiveness?",
       "options": [
         "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-        "Patient’s subjective report of mood and feelings alone",
+        "Patient\u2019s subjective report of mood and feelings alone",
         "Only teacher reports of classroom behavior",
         "Number of hospitalizations recorded during treatment"
       ],
       "answer": "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-      "explanation": "Multiple informants’ standardized symptom measures before and after treatment provide objective data on changes in conduct disorder symptoms.",
+      "explanation": "1. **Correct Answer Explanation:** \"Pre- and post-treatment symptom checklists completed by caregivers and teachers\" is the most appropriate outcome measure for evaluating treatment effectiveness in conduct disorder because it provides a comprehensive assessment from multiple perspectives, capturing changes in behavior across different environments (home and school). This multimodal approach aligns with the evidence-based treatments for conduct disorder, which emphasize the importance of feedback from caregivers and teachers in understanding the child's functioning and progress.\n\n2. **Incorrect Options Explanation:**\n   - **Patient\u2019s subjective report of mood and feelings alone:** This option is inadequate because it relies solely on the individual\u2019s perspective, which may not fully capture observable behavioral changes or the impact of conduct disorder on their functioning in various contexts.\n   - **Only teacher reports of classroom behavior:** This option is limited as it does not consider the child's behavior at home or in other settings, potentially missing critical aspects of their overall functioning and treatment response.\n   - **Number of hospitalizations recorded during treatment:** This measure focuses on a specific outcome rather than a comprehensive assessment of symptom change and does not account for improvements in daily functioning or behavior that may not lead to hospitalization.",
       "kn": "KN40",
       "kn_explanation": "This question focuses on measuring outcomes and changes due to prevention or intervention (KN40), emphasizing multi-informant approaches.",
       "difficulty": "medium",
@@ -219,11 +219,51 @@
         "Replacing clinical observation with computer algorithms"
       ],
       "answer": "Using telehealth platforms to conduct clinical interviews remotely",
-      "explanation": "Telehealth technology has enhanced accessibility and feasibility of assessments, particularly for children with disruptive behavior disorders.",
+      "explanation": "1. **Correct Answer Explanation:** \"Using telehealth platforms to conduct clinical interviews remotely\" is the correct answer because it enhances accessibility for families and individuals seeking assessments for disruptive behavior disorders, such as conduct disorder. Telehealth allows clinicians to conduct interviews in a comfortable environment, which can lead to more accurate reporting of symptoms and behaviors, ultimately improving the assessment process.\n\n2. **Incorrect Options:**\n   - **Employing advanced polygraph techniques:** This option is incorrect because polygraph tests are primarily used for detecting deception and are not standard or effective tools for diagnosing psychological disorders like conduct disorder.\n   - **Implementing EEG as a routine diagnostic tool:** While EEG can provide insights into neurological functions, it is not routinely used for assessing disruptive behavior disorders; such disorders are typically diagnosed through clinical interviews and behavioral assessments rather than neurophysiological measures.\n   - **Replacing clinical observation with computer algorithms:** This option is incorrect as clinical observation remains a critical component of assessing behavior disorders, and algorithms cannot fully capture the nuances of human behavior and interactions that are essential for accurate diagnosis.",
       "kn": "KN41",
-      "kn_explanation": "This question covers technology in assessment/testing (KN41) highlighting telehealth’s role in conducting psychological evaluations.",
+      "kn_explanation": "This question covers technology in assessment/testing (KN41) highlighting telehealth\u2019s role in conducting psychological evaluations.",
       "difficulty": "easy",
       "quality_comment": "The item addresses current technology use relevant to the topic with plausible but incorrect distractors, making it straightforward yet relevant."
+    },
+    {
+      "stem": "Which of the following behaviors is NOT typically associated with conduct disorder?",
+      "options": [
+        "Frequent truancy from school",
+        "Aggressive behavior towards peers",
+        "Excessive arguing with authority figures",
+        "Destruction of property"
+      ],
+      "answer": "Excessive arguing with authority figures",
+      "explanation": "1. \"Excessive arguing with authority figures\" is the correct answer because it is a behavior characteristic of Oppositional Defiant Disorder (ODD), not Conduct Disorder (CD). CD is defined by a persistent pattern of behavior that violates the rights of others or societal norms, such as aggression, deceitfulness, and destruction of property, rather than simply argumentative behavior.\n\n2. \n- **Frequent truancy from school**: This behavior is associated with conduct disorder as it represents a serious violation of rules, which is one of the symptom categories for CD.\n- **Aggressive behavior towards peers**: This is a hallmark symptom of conduct disorder, as aggression towards others falls under the category of aggression to people and animals.\n- **Destruction of property**: This behavior is explicitly listed as one of the characteristic symptoms of conduct disorder, indicating a violation of societal norms and rights of others.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of classification systems and differential diagnosis (KN36) by distinguishing features of ODD versus conduct disorder.",
+      "quality_comment": "This question effectively distinguishes between conduct disorder and oppositional defiant disorder, reinforcing diagnostic criteria.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of disruptive behavior disorders, which of the following symptoms would be indicative of a diagnosis of conduct disorder rather than oppositional defiant disorder?",
+      "options": [
+        "Often loses temper",
+        "Engaging in physical fights",
+        "Argues actively with adults",
+        "Has a negative attitude towards authority"
+      ],
+      "answer": "Engaging in physical fights",
+      "explanation": "1. \"Engaging in physical fights\" is indicative of conduct disorder (CD) because it falls under the category of aggression towards people, which is a characteristic symptom required for a CD diagnosis. Conduct disorder is defined by a persistent pattern of behavior that violates the rights of others or social norms, and physical aggression is a clear violation of these rights. In contrast, oppositional defiant disorder (ODD) primarily involves angry/irritable moods and argumentative behaviors without the severe aggression that characterizes CD.\n\n2. \n- **Often loses temper:** This symptom is associated with oppositional defiant disorder, where individuals frequently exhibit irritability and anger but do not necessarily engage in aggressive behaviors that violate others' rights.\n- **Argues actively with adults:** This behavior is characteristic of ODD, indicating a defiant attitude towards authority figures, rather than the more severe and aggressive behaviors seen in conduct disorder.\n- **Has a negative attitude towards authority:** This symptom reflects the defiant and oppositional nature of ODD, which involves challenging authority without the significant aggression or rule-breaking behaviors required for a diagnosis of conduct disorder.",
+      "difficulty": "hard",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of classification systems and differential diagnosis (KN36) by distinguishing features of ODD versus conduct disorder.",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of the distinctions between conduct disorder and oppositional defiant disorder in a nuanced way.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

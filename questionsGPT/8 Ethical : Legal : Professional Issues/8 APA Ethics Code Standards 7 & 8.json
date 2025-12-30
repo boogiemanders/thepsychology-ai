@@ -9,7 +9,7 @@
         "When students voluntarily choose to share personal information to enhance learning experiences."
       ],
       "answer": "If the program or training facility explicitly states this requirement in admissions and program materials, or the information is needed to assess performance or safety risks.",
-      "explanation": "Personal disclosure can be required only if the program clearly states it in materials, or when the information is necessary to address performance problems or safety risks.",
+      "explanation": "1. The correct answer states that a psychology training program can require students to disclose personal information if this requirement is clearly outlined in the admissions and program materials or if the information is necessary to evaluate performance or assess safety risks. This aligns with Standard 7.04 of the APA Ethics Code, which emphasizes the importance of transparency in program requirements and the need for personal information to be relevant to the students' training and safety.\n\n2. The first incorrect option, \"Only if the information is unrelated to the student's performance or safety concerns,\" is wrong because it contradicts the requirement that personal information must be relevant to performance or safety to be disclosed. The second incorrect option, \"When the program materials do not specify the requirement but the therapist requests it,\" is incorrect as it fails to recognize that explicit program requirements must be documented in official materials, not based solely on a therapist's request. Lastly, the third incorrect option, \"When students voluntarily choose to share personal information to enhance learning experiences,\" is misleading because it implies that voluntary sharing suffices, whereas the standards require clear guidelines for mandatory disclosures related to assessments and safety.",
       "kn": "KN61",
       "kn_explanation": "This question assesses knowledge of ethical principles regarding education and training programs, specifically confidentiality and disclosure requirements, falling under ethical, legal, and professional issues (KN61).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Providing financially feasible therapy options to students."
       ],
       "answer": "Faculty members who evaluate students providing personal therapy to those students.",
-      "explanation": "Faculty who evaluate students should not also provide their personal therapy; students should be able to choose therapists without evaluation power over them.",
+      "explanation": "1. The correct answer, \"Faculty members who evaluate students providing personal therapy to those students,\" is correct because it violates the ethical guideline outlined in Standard 7.05. This standard prohibits faculty from providing therapy to students they evaluate, as it creates a dual relationship that can impair objectivity and compromise the therapeutic process, potentially affecting the student’s ability to perform competently.\n\n2. \n- \"Allowing students to choose their own therapist unaffiliated with the program\" is incorrect because it supports ethical practices by giving students autonomy in selecting their therapists, thereby reducing the risk of dual relationships.\n- \"Describing personal therapy requirements, including risks and safeguards, in program materials\" is incorrect because it aligns with ethical standards by ensuring transparency and informing students about the nature of the therapy requirement, which is essential for informed consent.\n- \"Providing financially feasible therapy options to students\" is incorrect because it is a positive practice that helps ensure accessibility to therapy, thus supporting students’ well-being and reducing potential barriers to their participation in required therapy.",
       "kn": "KN61",
       "kn_explanation": "This question evaluates understanding of ethical standards on avoiding dual relationships and conflicts of interest within supervision and training (KN61 Ethics).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "If participants are told about the deception only after publication."
       ],
       "answer": "If alternative nondeceptive procedures are unavailable and the study has significant scientific or educational value.",
-      "explanation": "Deception is justified only when it is necessary for an important study and no adequate nondeceptive alternative exists, while risks remain minimal.",
+      "explanation": "1. The correct answer, \"If alternative nondeceptive procedures are unavailable and the study has significant scientific or educational value,\" aligns with Standard 8.07 of the APA Ethics Code. This standard stipulates that deception in research must be justified by the study's significant prospective scientific, educational, or applied value and that researchers must demonstrate that no nondeceptive alternatives exist. Thus, the ethical justification for using deception hinges on both the absence of other options and the potential value of the research findings.\n\n2. The first incorrect option, \"When the deception will increase the likelihood of participant enjoyment,\" is wrong because ethical guidelines do not justify deception based solely on enhancing enjoyment; the justification must be rooted in scientific or educational value. The second incorrect option, \"If the deception involves physical pain but is brief,\" is incorrect as it violates the requirement that participants must not be deceived about procedures likely to cause physical pain or severe emotional distress. Lastly, the option \"If participants are told about the deception only after publication\" is incorrect because the Ethics Code requires that participants be informed about the deception as early as feasible, preferably at the conclusion of their participation, not post-publication.",
       "kn": "KN69",
       "kn_explanation": "This question addresses ethical considerations in research conduct, specifically the appropriateness of deception (KN69 - Ethical issues in research).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Obtain verbal approval from colleagues instead of formal IRB approval."
       ],
       "answer": "Provide accurate research information and obtain IRB approval prior to research commencement.",
-      "explanation": "They need to submit accurate study information and obtain IRB approval prior to commencing data collection.",
+      "explanation": "1. The correct answer, \"Provide accurate research information and obtain IRB approval prior to research commencement,\" aligns with Standard 8.01 of the APA Ethics Code, which mandates that psychologists must provide accurate information about their research proposals and secure institutional approval before conducting research. This ensures that the rights and welfare of human subjects are protected, as required by federal regulations.\n\n2. The first incorrect option, \"Obtain IRB approval only after completing data collection,\" is wrong because it contradicts the requirement to secure IRB approval before starting any research involving human participants, as stated in Standard 8.01. The second incorrect option, \"Obtain approval only if the research involves experimental treatments,\" is incorrect because all research involving human subjects, not just experimental treatments, requires IRB approval. Lastly, the option \"Obtain verbal approval from colleagues instead of formal IRB approval\" is incorrect since the APA Ethics Code specifies that formal IRB approval is necessary, and verbal approval does not meet the ethical and regulatory standards for conducting research.",
       "kn": "KN69",
       "kn_explanation": "The question covers ethical and procedural standards for research oversight, core to ethical issues in research (KN69).",
       "difficulty": "easy",
@@ -63,13 +63,13 @@
     {
       "stem": "Which statement best describes the APA Ethics Code requirements for informed consent in research involving children who are unable to provide consent themselves?",
       "options": [
-        "Children\u2019s assent is always required and cannot be waived under any circumstance.",
-        "Consent from legal guardians is sufficient, and a child\u2019s dissent must be respected regardless of benefits.",
-        "Federal regulations permit waiving a child\u2019s assent if the research offers direct health benefits unavailable outside the study.",
+        "Children’s assent is always required and cannot be waived under any circumstance.",
+        "Consent from legal guardians is sufficient, and a child’s dissent must be respected regardless of benefits.",
+        "Federal regulations permit waiving a child’s assent if the research offers direct health benefits unavailable outside the study.",
         "No consent or assent is needed for children because they have limited capacity to understand research risks."
       ],
-      "answer": "Federal regulations permit waiving a child\u2019s assent if the research offers direct health benefits unavailable outside the study.",
-      "explanation": "U.S. federal regulations allow waiving assent when a child lacks capacity and the research provides benefits not otherwise obtainable, superseding dissent in these cases.",
+      "answer": "Federal regulations permit waiving a child’s assent if the research offers direct health benefits unavailable outside the study.",
+      "explanation": "1. The statement \"Federal regulations permit waiving a child’s assent if the research offers direct health benefits unavailable outside the study\" is correct because it reflects the guidelines established by U.S. federal regulations regarding research involving children. Specifically, when research provides direct health benefits to a child that cannot be obtained through other means, the consent of the child's legal guardians can override the child's dissent, allowing for participation in the study.\n\n2. The first incorrect option, \"Children’s assent is always required and cannot be waived under any circumstance,\" is wrong because it does not account for the exceptions provided by federal regulations that allow for waiving assent when direct health benefits are involved. The second incorrect option, \"Consent from legal guardians is sufficient, and a child’s dissent must be respected regardless of benefits,\" is incorrect because it overlooks the provision that allows legal guardians' consent to take precedence over a child's dissent when the research offers significant benefits. Lastly, the option \"No consent or assent is needed for children because they have limited capacity to understand research risks\" is misleading because it fails to recognize that informed consent and assent processes are still necessary, even for children, to ensure ethical standards are upheld in research practices.",
       "kn": "KN69",
       "kn_explanation": "This question assesses knowledge of ethical issues involving vulnerable populations in research, especially consent/assent requirements (KN69).",
       "difficulty": "hard",
@@ -84,7 +84,7 @@
         "Privately inform colleagues but not make public corrections."
       ],
       "answer": "Take reasonable steps to correct errors via published corrections, retractions, or errata.",
-      "explanation": "Psychologists must take reasonable steps to correct significant published errors, such as issuing corrections or retractions, to maintain scientific integrity.",
+      "explanation": "1. The correct answer, \"Take reasonable steps to correct errors via published corrections, retractions, or errata,\" aligns with Standard 8.10(b) of the Ethics Code, which mandates that psychologists must address significant errors in their published data responsibly. This ensures that the integrity of the scientific record is maintained and that readers can accurately interpret the research findings.\n\n2. The first incorrect option, \"Ignore the errors if they are unlikely to affect interpretations,\" is wrong because it violates the ethical obligation to maintain the accuracy and reliability of published work, regardless of the perceived impact of the errors. The second incorrect option, \"Retract the entire publication immediately without notifying the journal,\" is incorrect as it does not follow the required protocol for addressing errors, which includes communicating with the journal before taking such actions. Lastly, the option \"Privately inform colleagues but not make public corrections\" is incorrect because it fails to uphold the ethical standard of transparency in the scientific community, which requires public acknowledgment and correction of errors to ensure that all readers are informed.",
       "kn": "KN69",
       "kn_explanation": "This question targets ethical responsibilities related to reporting research results and maintaining the integrity of the scientific record (KN69).",
       "difficulty": "medium",
@@ -94,12 +94,12 @@
       "stem": "What distinguishes duplicate publication from piecemeal publication according to APA guidelines?",
       "options": [
         "Duplicate publication involves splitting data into multiple works; piecemeal involves publishing identical data twice.",
-        "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study\u2019s findings into multiple publications.",
+        "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study’s findings into multiple publications.",
         "Both terms describe publishing the same manuscript simultaneously in multiple journals.",
         "Piecemeal publication always requires retraction, whereas duplicate publication does not."
       ],
-      "answer": "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study\u2019s findings into multiple publications.",
-      "explanation": "Duplicate publication refers to republishing identical data; piecemeal publication is fragmenting data into multiple papers, potentially misrepresenting original research volume.",
+      "answer": "Duplicate publication is publishing the same data in two venues; piecemeal is dividing one study’s findings into multiple publications.",
+      "explanation": "1. The correct answer states that \"duplicate publication is publishing the same data in two venues; piecemeal is dividing one study’s findings into multiple publications.\" This is accurate because duplicate publication refers to the act of presenting the same data or ideas in separate works, which is explicitly prohibited unless properly acknowledged. In contrast, piecemeal publication involves the fragmentation of findings from a single research effort into multiple works, which is considered undesirable unless justified. This distinction is crucial in maintaining the integrity of the scientific literature.\n\n2. The first incorrect option, \"Duplicate publication involves splitting data into multiple works; piecemeal involves publishing identical data twice,\" is wrong because it misrepresents the definitions; duplicate publication is about publishing the same data in different works, not splitting it, while piecemeal publication refers to splitting findings, not identical data. The second option, \"Both terms describe publishing the same manuscript simultaneously in multiple journals,\" is incorrect because it conflates the definitions; duplicate publication refers to the same data in different venues, not necessarily simultaneous submission. Finally, the statement \"Piecemeal publication always requires retraction, whereas duplicate publication does not,\" is inaccurate because piecemeal publication does not inherently require retraction; rather, it is about the undesirable division of findings, while duplicate publication can be acknowledged under certain circumstances.",
       "kn": "KN69",
       "kn_explanation": "The question covers ethical issues related to research publication practices, including plagiarism and integrity (KN69).",
       "difficulty": "medium",
@@ -108,13 +108,13 @@
     {
       "stem": "After research is published, what are psychologists' obligations around sharing data for verification?",
       "options": [
-        "Psychologists may refuse to share data if participants\u2019 confidentiality might be moderately affected.",
+        "Psychologists may refuse to share data if participants’ confidentiality might be moderately affected.",
         "Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality.",
         "Psychologists should destroy data immediately after publication to protect privacy.",
         "Data sharing is optional and only encouraged for studies involving non-human subjects."
       ],
       "answer": "Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality.",
-      "explanation": "They should share data with qualified professionals for reanalysis while safeguarding participant confidentiality.",
+      "explanation": "1. The correct answer, \"Psychologists must share data with competent professionals for reanalysis while protecting participant confidentiality,\" aligns with Standard 8.14 of the APA Ethics Code. This standard explicitly states that psychologists are required to share their research data with competent professionals who wish to verify the findings, provided that the confidentiality of participants is maintained. This obligation promotes transparency and integrity in research practices.\n\n2. The first incorrect option, \"Psychologists may refuse to share data if participants’ confidentiality might be moderately affected,\" is wrong because the obligation to share data is contingent on maintaining confidentiality, not on the potential risk of moderate effects. The second incorrect option, \"Psychologists should destroy data immediately after publication to protect privacy,\" is incorrect as the Ethics Code does not advocate for immediate destruction; instead, data should be retained for verification purposes. Lastly, the option \"Data sharing is optional and only encouraged for studies involving non-human subjects\" is misleading because the requirement to share data applies to all research involving human subjects, not just studies involving non-human subjects, and is not optional.",
       "kn": "KN69",
       "kn_explanation": "This item evaluates ethical responsibilities for transparency and verification in research, an important ethical research issue (KN69).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Citing unpublished manuscripts in their publications to credit authors."
       ],
       "answer": "Treating submitted materials as confidential and not disclosing content without permission.",
-      "explanation": "Reviewers must treat submitted materials as confidential and respect the authors' intellectual property.",
+      "explanation": "1. The correct answer, \"Treating submitted materials as confidential and not disclosing content without permission,\" aligns with Standard 8.15 of the APA Ethics Code, which emphasizes that peer reviewers must keep the content of reviewed documents confidential. This obligation ensures that the intellectual property rights of authors are respected and maintains the integrity of the review process by preventing unauthorized sharing of sensitive information.\n\n2. The first incorrect option, \"Sharing manuscripts with colleagues freely to gain feedback without permission,\" is wrong because it violates the confidentiality requirement, as reviewers must not disclose any information without the author's consent. The second incorrect option, \"Using proprietary ideas from manuscripts in their own work before publication,\" is incorrect because it breaches the ethical obligation to respect the intellectual property rights of the authors, as reviewers must not use unique ideas without permission. Lastly, the option \"Citing unpublished manuscripts in their publications to credit authors\" is incorrect because it contravenes the ethical standard that prohibits reviewers from citing or referring to unpublished manuscripts in their own work without the authors' explicit permission.",
       "kn": "KN69",
       "kn_explanation": "This question examines ethical conduct in peer review, an important professional responsibility covered under research ethics (KN69).",
       "difficulty": "easy",
@@ -144,7 +144,7 @@
         "If participants have previously given consent for any research participation."
       ],
       "answer": "If the research involves anonymous questionnaires and presents no risk or legal liability.",
-      "explanation": "Consent can be waived only for minimal-risk activities like anonymous surveys when participation poses no meaningful risk or liability.",
+      "explanation": "1. The correct answer, \"If the research involves anonymous questionnaires and presents no risk or legal liability,\" aligns with Standard 8.05, which states that informed consent may be waived when the research is unlikely to cause distress or harm, such as studies using anonymous questionnaires. In this context, the confidentiality of participants is maintained, and there is no risk of legal liability, making informed consent unnecessary.\n\n2. The option \"When the study involves experimental treatments or high risk of distress\" is incorrect because informed consent is especially critical in such situations to ensure participants are fully aware of the risks involved. The option \"Whenever the research is conducted in educational settings regardless of procedures involved\" is wrong because it overlooks the requirement for informed consent in studies that may pose risks or involve identifiable information. Lastly, the option \"If participants have previously given consent for any research participation\" is incorrect because prior consent does not negate the need for informed consent specific to each new study, particularly if the nature of the research differs or involves new risks.",
       "kn": "KN69",
       "kn_explanation": "This item tests knowledge about ethical exceptions to informed consent requirements in minimal-risk research, a core research ethics issue (KN69).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Keep therapy requirements undisclosed to avoid influencing student applications."
       ],
       "answer": "Justify the requirement by training objectives, describe it clearly, avoid multiple relationships, and provide affordable options.",
-      "explanation": "Fisher's guidelines emphasize that mandatory personal therapy must be justified, openly described, avoid dual relationships, and be affordable to meet ethical standards.",
+      "explanation": "1. The correct answer, \"Justify the requirement by training objectives, describe it clearly, avoid multiple relationships, and provide affordable options,\" aligns with Standard 7.05 and Fisher's guidelines. This standard mandates that any requirement for personal psychotherapy must be justified by the program's training objectives and clearly outlined in application materials. Additionally, to prevent conflicts of interest, students should have the option to choose therapists who are not affiliated with the training program, and affordable therapy options must be provided to ensure accessibility.\n\n2. The first incorrect option, \"Require therapy only if the therapist is a faculty member involved in evaluation,\" is wrong because it violates the guideline that prohibits faculty responsible for evaluation from providing therapy, thus creating a potential conflict of interest. The second incorrect option, \"Allow students no choice in selecting therapists to ensure uniformity,\" is incorrect as it goes against the requirement for students to have some choice in selecting their therapists, which is essential to avoid multiple relationships and ensure their comfort. Lastly, the option \"Keep therapy requirements undisclosed to avoid influencing student applications\" is inappropriate because it contradicts the ethical obligation to provide clear and accurate information about program requirements, ensuring that students can make informed decisions regarding their participation.",
       "kn": "KN61",
       "kn_explanation": "This question examines ethical considerations in training and supervision practices, relevant to ethical standards for education (KN61).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Continuing professional development is solely the responsibility of employers, not the individual psychologist."
       ],
       "answer": "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
-      "explanation": "Ethical standards require psychologists to engage in continuing professional development to maintain competence throughout their careers.",
+      "explanation": "1. The correct answer, \"Psychologists must undertake ongoing education to maintain competence and ensure current knowledge,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly Standard 7.02. This standard emphasizes that psychologists must take \"reasonable steps\" to ensure their education and training descriptions are accurate, indicating a commitment to continuous professional development to stay informed and competent in their field.\n\n2. The first incorrect option, \"Psychologists may choose to engage in continuing education when convenient without formal documentation,\" is wrong because ethical standards require psychologists to maintain accurate records of their education and training, suggesting that ongoing education should be a structured and documented process rather than a casual choice. \n\nThe second incorrect option, \"Once licensed, psychologists are not ethically required to pursue further training,\" is incorrect because the APA Ethics Code implies an ongoing responsibility for professional development beyond initial licensure to ensure competence in practice. \n\nFinally, the third incorrect option, \"Continuing professional development is solely the responsibility of employers, not the individual psychologist,\" is inaccurate because it places the onus of professional growth entirely on employers, whereas ethical standards highlight the individual psychologist's obligation to engage in ongoing education and training for their own competence.",
       "kn": "KN66",
       "kn_explanation": "This question covers the underrepresented area of continuing professional development within ethical, legal, and professional issues, which is relevant to maintaining ethical competence (KN66).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Waiting for formal complaints before addressing ethical dilemmas."
       ],
       "answer": "Discussing concerns openly with supervisors or ethics committees to seek guidance.",
-      "explanation": "Managing potential ethical issues involves proactively seeking consultation and guidance to resolve dilemmas appropriately and ethically.",
+      "explanation": "1. The correct answer, \"Discussing concerns openly with supervisors or ethics committees to seek guidance,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly regarding the importance of supervision and consultation in managing ethical dilemmas. Psychologists are encouraged to seek guidance when faced with ethical issues to ensure they are making informed decisions that adhere to professional standards and protect the welfare of clients and students.\n\n2. The option \"Ignoring minor issues to avoid complications\" is incorrect because neglecting even minor ethical concerns can lead to larger problems and undermine professional integrity. \"Handling issues independently without documentation\" is wrong as proper documentation is essential for accountability and transparency in ethical decision-making, as well as for protecting the rights of all parties involved. Lastly, \"Waiting for formal complaints before addressing ethical dilemmas\" is inappropriate because proactive management of ethical issues is crucial; addressing concerns before they escalate into formal complaints demonstrates a commitment to ethical practice and the well-being of clients and students.",
       "kn": "KN64",
       "kn_explanation": "This question targets the ethical knowledge area involving the identification and management of ethical issues, emphasizing consultation and ethical problem-solving (KN64).",
       "difficulty": "medium",
@@ -204,11 +204,51 @@
         "Disregard emerging issues as they generally do not impact direct practice."
       ],
       "answer": "Stay informed through professional organizations and update their practice accordingly.",
-      "explanation": "Psychologists are ethically obligated to remain aware of emerging issues and update their practice to comply with new social, legal, and ethical standards.",
+      "explanation": "1. The correct answer, \"Stay informed through professional organizations and update their practice accordingly,\" is vital because psychologists must remain aware of emerging social, legal, and ethical issues that can impact their practice. Engaging with professional organizations ensures that psychologists receive timely updates and guidance on best practices, allowing them to adapt their approaches to align with current standards and ethical guidelines, as emphasized in the APA Ethics Code.\n\n2. The option \"Avoid adapting practice standards until official code revisions occur\" is incorrect because it suggests a passive approach that could leave psychologists unprepared for current issues affecting their practice, which can be detrimental to clients and the profession. \"Refer all new issues to legal counsel and avoid ethical decision-making\" is wrong as it undermines the psychologist's responsibility to engage in ethical decision-making and take proactive steps in addressing issues rather than deferring entirely to legal counsel. Lastly, \"Disregard emerging issues as they generally do not impact direct practice\" is flawed because it dismisses the significant influence that evolving social and ethical concerns have on psychological practice, potentially compromising the well-being of clients and the integrity of the profession.",
       "kn": "KN67",
       "kn_explanation": "This question addresses the emerging social, legal, and ethical issues impacting practice and the ethical imperative for psychologists to adapt and maintain competence (KN67).",
       "difficulty": "medium",
       "quality_comment": "The question tests understanding of professional responsibility towards evolving ethical and legal issues, fitting for current practice demands."
+    },
+    {
+      "stem": "Under what circumstances can a psychologist require clients to share personal information during therapy sessions?",
+      "options": [
+        "Only if the client agrees to share information voluntarily.",
+        "When the psychologist believes it will directly impact the therapeutic process.",
+        "If the client is informed that such information is necessary for treatment planning.",
+        "When the psychologist feels that the client is withholding critical information."
+      ],
+      "answer": "If the client is informed that such information is necessary for treatment planning.",
+      "explanation": "1. The correct answer, \"If the client is informed that such information is necessary for treatment planning,\" aligns with Standard 7.04 of the APA Ethics Code, which states that personal information can only be required if it is clearly identified in program materials or necessary for evaluating or assisting students. In therapy, informing clients that sharing personal information is essential for their treatment planning adheres to ethical guidelines, ensuring clients understand the relevance of the information to their care.\n\n2. The option \"Only if the client agrees to share information voluntarily\" is incorrect because it does not acknowledge that there are situations where specific information may be essential for effective treatment planning, which necessitates disclosure beyond voluntary agreement. The statement \"When the psychologist believes it will directly impact the therapeutic process\" is misleading since it lacks the requirement of informing the client about the necessity of the information, which is crucial for ethical practice. Lastly, \"When the psychologist feels that the client is withholding critical information\" is also incorrect, as it does not meet the ethical standard of requiring clear communication about the necessity of sharing personal information for treatment purposes; instead, it implies a subjective judgment without proper client involvement.",
+      "difficulty": "easy",
+      "kn": "KN61",
+      "kn_explanation": "This question assesses knowledge of ethical principles regarding education and training programs, specifically confidentiality and disclosure requirements, falling under ethical, legal, and professional issues (KN61).",
+      "quality_comment": "This question effectively tests understanding of ethical requirements for client disclosures in therapy.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In what situation might a psychologist ethically request personal information from a supervisee during supervision?",
+      "options": [
+        "When the supervisee's personal issues are impacting their professional responsibilities.",
+        "If the supervision contract does not mention personal disclosures.",
+        "Only if the supervisee has a history of ethical violations.",
+        "When it is necessary to evaluate the supervisee's competency and safety in practice."
+      ],
+      "answer": "When it is necessary to evaluate the supervisee's competency and safety in practice.",
+      "explanation": "1. The correct answer, \"When it is necessary to evaluate the supervisee's competency and safety in practice,\" aligns with Standard 7.04 of the APA Ethics Code. This standard states that psychologists may require personal information only if it is necessary to evaluate or obtain assistance for students whose personal issues could reasonably be judged to impede their training-related activities or pose a threat to themselves or others. Thus, when assessing a supervisee's competency and safety, it is ethically permissible to request personal information.\n\n2. The option \"When the supervisee's personal issues are impacting their professional responsibilities\" is incorrect because, while relevant, it lacks the explicit connection to the necessity of evaluating competency and safety as outlined in Standard 7.04. The option \"If the supervision contract does not mention personal disclosures\" is incorrect because the absence of such a mention does not negate the ethical obligation to evaluate competency and safety when necessary. Lastly, the option \"Only if the supervisee has a history of ethical violations\" is incorrect because the need for personal information is not limited to past ethical violations; it can also arise from current concerns regarding competency and safety in practice.",
+      "difficulty": "hard",
+      "kn": "KN61",
+      "kn_explanation": "This question assesses knowledge of ethical principles regarding education and training programs, specifically confidentiality and disclosure requirements, falling under ethical, legal, and professional issues (KN61).",
+      "quality_comment": "This question challenges the test-taker to apply ethical standards in a supervision context, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

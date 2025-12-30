@@ -9,7 +9,7 @@
         "A high-level decision involving legal issue response"
       ],
       "answer": "A routine decision governed by established rules and policies",
-      "explanation": "Programmed decisions are routine, repetitive, and made according to predetermined rules, often by lower-level personnel.",
+      "explanation": "1. \"A routine decision governed by established rules and policies\" is the correct answer because programmed decisions are characterized as repetitive and routine, made according to established guidelines. These decisions are typically made by lower-level personnel and involve predictable scenarios, such as hiring or billing, which align with the definition provided in the reference material.\n\n2. The option \"A novel and complex decision requiring creative problem-solving\" is incorrect because this describes nonprogrammed decisions, which are unique and require judgment and creativity, contrasting with the routine nature of programmed decisions. The option \"A decision focused on developing new products and services\" is wrong because such decisions are typically nonprogrammed, involving complexity and the need for innovative solutions rather than established rules. Lastly, \"A high-level decision involving legal issue response\" is incorrect as it also pertains to nonprogrammed decisions, which are usually made by upper-level personnel and require unique problem-solving rather than following routine procedures.",
       "kn": "KN16",
       "kn_explanation": "This question relates to group and systems processes within organizations, specifically organizational decision-making classifications.",
       "difficulty": "easy",
@@ -24,7 +24,7 @@
         "They make incremental choices responding to short-term conditions"
       ],
       "answer": "They satisfice by selecting the first minimally acceptable alternative",
-      "explanation": "Bounded rationality recognizes limits like time and cognitive resources, leading decision-makers to satisfice rather than optimize their decisions.",
+      "explanation": "1. The correct answer, \"They satisfice by selecting the first minimally acceptable alternative,\" aligns with Simon's bounded rationality model, which posits that individuals face limitations such as time constraints and cognitive abilities when making decisions. As a result, rather than seeking the optimal solution, individuals often stop searching for alternatives once they find one that meets their minimum criteria, a process known as \"satisficing.\"\n\n2. The incorrect option \"They identify and evaluate all possible alternatives to find the optimal choice\" is wrong because this describes the rational model of decision-making, which assumes that decision-makers have the capacity to evaluate every possible alternative thoroughly, contrary to the limitations highlighted in the bounded rationality model. \n\nThe option \"They rely on organizational routines and standard operating procedures\" is incorrect because this describes the organizational process model, which focuses on how decisions are constrained by existing routines rather than the cognitive limitations of individual decision-makers emphasized by bounded rationality.\n\nLastly, \"They make incremental choices responding to short-term conditions\" is incorrect because this statement pertains to the organizational process model, which emphasizes the influence of organizational routines and incremental decision-making rather than the individual cognitive constraints that define Simon's bounded rationality model.",
       "kn": "KN16",
       "kn_explanation": "This question addresses organizational decision-making models related to individual cognitive limitations and organizational constraints.",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Decision-making is limited by time and incomplete information"
       ],
       "answer": "Decision-makers objectively evaluate all alternatives to choose the optimal solution",
-      "explanation": "The rational model assumes a deliberate, systematic evaluation of all possible choices to find the best alternative.",
+      "explanation": "1. The correct answer, \"Decision-makers objectively evaluate all alternatives to choose the optimal solution,\" aligns with the key assumption of the rational (classical) model of organizational decision-making. This model posits that decision-makers engage in a systematic and thorough evaluation of all possible alternatives, aiming to select the best option based on objective criteria. Such an approach emphasizes a deliberate and orderly decision-making process, which is foundational to the rational model.\n\n2. The option \"Decisions are made by multiple groups limited by organizational routines\" is incorrect because it describes the organizational process model, which focuses on decisions made by various individuals or groups constrained by established routines rather than the individual, objective evaluation emphasized in the rational model. \n\nThe statement \"Decision-makers select outcomes based on intuition and judgment alone\" is also wrong, as it contradicts the rational model's emphasis on objective evaluation and systematic analysis rather than relying solely on intuition or personal judgment. \n\nLastly, \"Decision-making is limited by time and incomplete information\" is inaccurate in the context of the rational model, as this limitation aligns more closely with the bounded rationality model, which acknowledges that real-world decision-making is often constrained by factors like time and information availability, leading to a \"satisficing\" approach rather than an optimal one.",
       "kn": "KN16",
       "kn_explanation": "This question evaluates knowledge of the classical model of organizational decision-making, a core concept in group and systems processes.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "A lengthy decision-making process with multiple stages"
       ],
       "answer": "A directive leader and strong group cohesiveness",
-      "explanation": "High cohesiveness combined with a strong directive leader, isolation, and pressure to decide quickly are conditions that promote groupthink.",
+      "explanation": "1. \"A directive leader and strong group cohesiveness\" is the correct answer because these factors create an environment where the desire for unanimity can overshadow critical evaluation of alternatives. According to Janis (1982), a cohesive group with a strong directive leader is more susceptible to groupthink, as members may prioritize harmony over realistic appraisals of the situation, leading to poor decision-making.\n\n2. The presence of diverse external opinions is incorrect because exposure to differing viewpoints can actually help mitigate groupthink by encouraging critical evaluation and reducing the risk of conformity. Members encouraged to express contradictory views is also incorrect; promoting dissenting opinions is a strategy to counteract groupthink, fostering a more thorough examination of alternatives. Lastly, a lengthy decision-making process with multiple stages is incorrect because such complexity can allow for more discussion and reflection, reducing the likelihood of groupthink rather than increasing it.",
       "kn": "KN16",
       "kn_explanation": "This question covers group decision-making processes and social influences on organizational functioning.",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Presence of self-appointed mindguards"
       ],
       "answer": "Frequent devil’s advocate roles in discussions",
-      "explanation": "Appointing a devil’s advocate is a tactic to prevent groupthink, whereas the other options describe symptoms of groupthink.",
+      "explanation": "1. \"Frequent devil’s advocate roles in discussions\" is the correct answer because it is a method proposed by Janis to combat groupthink, rather than a symptom of it. The role of a devil’s advocate encourages critical evaluation of ideas and promotes the consideration of alternative viewpoints, which directly counters the consensus-seeking behavior characteristic of groupthink.\n\n2. \n- **Illusions of invulnerability**: This symptom refers to the group's belief that they are invulnerable and cannot fail, leading to overconfidence and risky decision-making, which is a hallmark of groupthink.\n- **Self-censorship of dissenting opinions**: This occurs when group members suppress their own doubts or disagreements to maintain harmony, a key symptom of groupthink that stifles open discussion.\n- **Presence of self-appointed mindguards**: This symptom involves individuals shielding the group from dissenting information or viewpoints, reinforcing the cohesiveness of the group and inhibiting critical analysis, which is a central feature of groupthink.",
       "kn": "KN16",
       "kn_explanation": "Understanding symptoms and prevention of groupthink pertains to group and systems processes within organizations.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Prioritize minority opinions over majority views"
       ],
       "answer": "Make more extreme (risky or cautious) decisions than individual members",
-      "explanation": "Group polarization is when group discussion leads members to adopt more extreme positions than they held individually.",
+      "explanation": "1. The correct answer, \"Make more extreme (risky or cautious) decisions than individual members,\" accurately reflects the concept of group polarization. This phenomenon occurs when group discussions lead to decisions that are more extreme than those individuals would make alone, either leaning towards riskier or more cautious choices. The research indicates that this shift happens due to social comparison and exposure to persuasive arguments during discussions.\n\n2. The option \"Make more moderate decisions than individuals would alone\" is incorrect because group polarization specifically involves making more extreme decisions, not moderate ones. The statement \"Become less cohesive after extended group discussion\" is wrong, as group discussions often enhance cohesiveness rather than diminish it. Lastly, \"Prioritize minority opinions over majority views\" is incorrect because group polarization typically leads to the majority viewpoint becoming more pronounced, rather than elevating minority opinions.",
       "kn": "KN16",
       "kn_explanation": "This question relates to social influences on group decision-making, a major aspect of group and systems processes.",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "All group members have similar skill sets"
       ],
       "answer": "The task is complex and members have complementary skills",
-      "explanation": "Research shows groups excel when tasks are complex and members bring different, complementary abilities.",
+      "explanation": "1. \"The task is complex and members have complementary skills\" is the correct answer because research indicates that groups tend to outperform individuals when faced with complex tasks, particularly when group members possess diverse skills that complement each other. This diversity allows for a more thorough exploration of alternatives and solutions, leveraging different perspectives and expertise to address the intricacies of the task at hand.\n\n2. The option \"The task is poorly structured and requires creativity\" is incorrect because individuals generally outperform groups in poorly structured tasks that demand high creativity, as the flexibility and unique insights of individuals can lead to more innovative solutions than a group consensus might produce. \"Decisions need to be made rapidly with little information\" is wrong because rapid decision-making often favors individual decision-makers who can act quickly without the need for group deliberation, which can slow down the process. Lastly, \"All group members have similar skill sets\" is incorrect because homogeneity in skills can limit the range of perspectives and solutions available, reducing the group's effectiveness in tackling complex tasks compared to a group with diverse, complementary skills.",
       "kn": "KN16",
       "kn_explanation": "This question assesses understanding of conditions affecting effectiveness of group versus individual decision-making.",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Experts who rely solely on objective data analysis"
       ],
       "answer": "Many people or groups constrained by routines and incremental choices",
-      "explanation": "This model posits organizational decisions emerge from multiple actors’ small, incremental choices within standard procedures.",
+      "explanation": "1. The correct answer, \"Many people or groups constrained by routines and incremental choices,\" aligns with the organizational process model, which posits that decisions within organizations are typically made by multiple individuals or groups rather than a single decision-maker. This model emphasizes that decisions are influenced by established routines and standard operating procedures, leading to small incremental choices that respond to immediate conditions rather than seeking an optimal solution.\n\n2. The option \"A single, high-level decision maker seeking an optimal solution\" is incorrect because it suggests a rational model approach, where one individual evaluates all alternatives to find the best choice, which is not representative of the collaborative and routine-bound nature described in the organizational process model. The statement \"Individuals making isolated choices without procedural constraints\" is wrong as it overlooks the influence of organizational routines and the collective nature of decision-making emphasized in the organizational process model. Lastly, the option \"Experts who rely solely on objective data analysis\" is incorrect because it implies a focus on objective analysis without considering the collaborative and incremental decision-making processes that involve various individuals and established procedures as highlighted in the organizational process model.",
       "kn": "KN16",
       "kn_explanation": "The question relates to organizational decision-making models specifically focusing on how group dynamics and processes influence decisions.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Exclude members with dissenting views"
       ],
       "answer": "Appoint a member to play devil’s advocate",
-      "explanation": "Assigning a devil’s advocate encourages expression of alternative views, helping prevent groupthink.",
+      "explanation": "1. The correct answer, \"Appoint a member to play devil’s advocate,\" is recommended for leaders to reduce the risk of groupthink because it encourages critical evaluation of ideas and alternative courses of action. By designating someone to challenge prevailing opinions, the group is prompted to consider diverse perspectives and avoid the pitfalls of unanimous decision-making, which can lead to poor judgments due to the desire for cohesiveness.\n\n2. The option \"Encourage consensus early to speed up decision-making\" is incorrect because promoting early consensus can stifle open discussion and discourage dissenting viewpoints, increasing the risk of groupthink rather than mitigating it. \"Isolate the group from outside opinions\" is wrong as isolation can exacerbate groupthink by limiting exposure to alternative perspectives and critical feedback, which are essential for realistic appraisals of decisions. Lastly, \"Exclude members with dissenting views\" is incorrect because excluding dissenters removes valuable insights and critical perspectives that could help the group evaluate its decisions more thoroughly, thus increasing the likelihood of groupthink.",
       "kn": "KN16",
       "kn_explanation": "This question targets methods to mitigate biases and improve group decision-making in organizational settings.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Decisions aimed at routine ordering and billing"
       ],
       "answer": "Complex, novel decisions requiring judgment and creativity",
-      "explanation": "Nonprogrammed decisions involve unique problems requiring creative solutions, usually made by upper management.",
+      "explanation": "1. The correct answer, \"Complex, novel decisions requiring judgment and creativity,\" accurately describes nonprogrammed decisions as outlined in the reference material. Nonprogrammed decisions are characterized by their non-repetitive and complex nature, requiring unique solutions that depend on the decision-maker’s judgment and problem-solving skills. These decisions are typically made by upper-level personnel, addressing situations that do not have established rules or procedures.\n\n2. The first incorrect option, \"Repetitive decisions governed by clear policies,\" is wrong because it describes programmed decisions, which are routine and follow established rules and procedures. The second incorrect option, \"Routine decisions made by lower-level personnel,\" is also incorrect as it pertains to programmed decisions typically made at lower organizational levels rather than the complex decisions made by upper-level personnel. Lastly, the option \"Decisions aimed at routine ordering and billing\" is incorrect because these decisions are examples of programmed decisions, which involve established processes rather than the unique and creative solutions required for nonprogrammed decisions.",
       "kn": "KN16",
       "kn_explanation": "Focuses on classification of decision types within organizations addressing complexity and role levels, part of group and systems processes.",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "Using intuition instead of systematic evaluation"
       ],
       "answer": "Selecting the first alternative that meets an acceptable threshold",
-      "explanation": "Satisficing involves choosing the first solution that is good enough rather than searching for the optimal choice, due to cognitive and time limitations.",
+      "explanation": "1. The correct answer, \"Selecting the first alternative that meets an acceptable threshold,\" accurately describes the concept of \"satisficing\" as proposed by the bounded rationality model. This model, introduced by Simon in 1957, suggests that decision-makers often do not seek the optimal solution due to limitations such as time constraints and cognitive capabilities. Instead, they settle for the first option that meets their minimal acceptable criteria, rather than exhaustively analyzing all possible alternatives.\n\n2. The incorrect options are as follows:\n\n- \"Choosing the best possible option after exhaustive analysis\" is incorrect because satisficing involves not optimizing or thoroughly analyzing all alternatives, but rather selecting the first acceptable one.\n- \"Deferring decisions to higher management when uncertain\" is wrong because satisficing is about making a decision within one's own capacity rather than passing the responsibility to others.\n- \"Using intuition instead of systematic evaluation\" is misleading since satisficing does not necessarily imply relying on intuition; rather, it involves a systematic but limited evaluation until a satisfactory option is found.",
       "kn": "KN16",
       "kn_explanation": "Satisficing is a central concept in bounded rationality and reflects decision-making under cognitive constraints, fitting group and systems processes.",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Appointing a devil’s advocate"
       ],
       "answer": "Limiting the group’s exposure to outside experts",
-      "explanation": "Isolation from outside opinions increases the risk of groupthink; openness to external views helps prevent it.",
+      "explanation": "### Explanation of the Correct Answer\n\n\"Limiting the group’s exposure to outside experts\" is the correct answer because it increases the risk of groupthink rather than reducing it. Janis (1982) indicated that groupthink is more likely to occur when groups are isolated from outside opinions, as this can lead to a lack of diverse perspectives and critical evaluation of alternatives. Exposure to outside experts can provide new insights and challenge the group’s assumptions, thereby helping to mitigate groupthink.\n\n### Explanation of Incorrect Options\n\n- **A leader who remains neutral during discussions:** This condition helps reduce groupthink by preventing the leader's biases from influencing the group’s decision-making process, allowing for a more open exchange of ideas and opinions.\n\n- **Encouraging open expression of dissenting opinions:** Promoting an environment where dissent is welcomed can counteract groupthink by ensuring that alternative viewpoints are considered, fostering critical discussion and evaluation of options.\n\n- **Appointing a devil’s advocate:** This strategy is effective in reducing groupthink as it deliberately introduces opposing viewpoints, encouraging the group to critically assess their decisions and consider potential flaws in their thinking. \n\nBy implementing these strategies, groups can enhance their decision-making processes and minimize the likelihood of falling into the traps of groupthink.",
       "kn": "KN16",
       "kn_explanation": "This question addresses strategies to manage biases and improve group decision processes, central to organizational group dynamics.",
       "difficulty": "medium",
@@ -189,11 +189,51 @@
         "A manager using intuition to resolve an unforeseen legal issue"
       ],
       "answer": "Multiple departments making small adjustments based on short-term conditions and routines",
-      "explanation": "The organizational process model emphasizes decisions emerging from many actors constrained by routines and incremental steps reflecting short-term responses.",
+      "explanation": "1. The correct answer, \"Multiple departments making small adjustments based on short-term conditions and routines,\" exemplifies the organizational process model because it emphasizes decision-making that involves multiple individuals or groups operating within established routines and standard operating procedures. This model highlights how decisions are often made incrementally in response to immediate circumstances, aligning perfectly with the scenario described.\n\n2. The first incorrect option, \"A CEO carefully reviews all investment options to select the most profitable,\" is wrong because it reflects the rational model, where the decision-maker evaluates all alternatives systematically to choose the optimal solution. The second option, \"Frontline employees following established procedures to handle customer complaints,\" is incorrect as it represents a programmed decision rather than the incremental and complex nature of decisions described by the organizational process model. Lastly, \"A manager using intuition to resolve an unforeseen legal issue\" is incorrect because it illustrates a nonprogrammed decision that relies on individual judgment and creativity, which is not characteristic of the organizational process model that focuses on routine adjustments.",
       "kn": "KN16",
       "kn_explanation": "This item assesses understanding of organizational decision-making as a decentralized and incremental process, a core concept in group and systems processes.",
       "difficulty": "medium",
       "quality_comment": "The options contrast different decision approaches well, highlighting key features of the organizational process model clearly."
+    },
+    {
+      "stem": "In a workplace setting, how might employees approach problem-solving when faced with limited information and time?",
+      "options": [
+        "They seek extensive data to ensure the best solution",
+        "They choose the first solution that meets their basic requirements",
+        "They consult with multiple colleagues for diverse opinions",
+        "They implement changes gradually based on feedback"
+      ],
+      "answer": "They choose the first solution that meets their basic requirements",
+      "explanation": "1. The correct answer, \"They choose the first solution that meets their basic requirements,\" aligns with the bounded rationality model proposed by Simon (1957). This model suggests that decision-makers often face limitations such as time constraints and limited access to information, leading them to \"satisfice\" rather than \"optimize.\" In this context, employees are likely to select the first acceptable solution they encounter rather than exhaustively searching for the best possible option.\n\n2. The option \"They seek extensive data to ensure the best solution\" is incorrect because it contradicts the bounded rationality model, which emphasizes that individuals often do not have the time or resources to gather extensive information. The option \"They consult with multiple colleagues for diverse opinions\" is also incorrect, as this approach would require more time and collaboration than is typically feasible under conditions of limited information and urgency. Lastly, \"They implement changes gradually based on feedback\" is not applicable in this scenario, as it implies a more systematic and deliberate decision-making process that is inconsistent with the urgency and constraints described in the bounded rationality model.",
+      "difficulty": "easy",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses organizational decision-making models related to individual cognitive limitations and organizational constraints.",
+      "quality_comment": "This question effectively tests understanding of bounded rationality in a practical context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "When managers are faced with tight deadlines and incomplete data, which decision-making strategy is most likely to be employed?",
+      "options": [
+        "They analyze all possible outcomes before deciding",
+        "They rely on past experiences to guide their choices",
+        "They prioritize quick decisions that meet basic criteria",
+        "They defer decisions until more information is available"
+      ],
+      "answer": "They prioritize quick decisions that meet basic criteria",
+      "explanation": "1. \"They prioritize quick decisions that meet basic criteria\" is the correct answer because, in situations with tight deadlines and incomplete data, decision-makers are likely to use the bounded rationality model. This model suggests that individuals often \"satisfice,\" choosing alternatives that meet minimum acceptable standards rather than exhaustively analyzing all options, due to limitations in time and information.\n\n2. The option \"They analyze all possible outcomes before deciding\" is incorrect because this approach aligns with the rational model, which assumes ample time and information to evaluate all alternatives, which is not the case under tight deadlines. \"They rely on past experiences to guide their choices\" is wrong because, while past experiences can inform decisions, the scenario specifically highlights the urgency and lack of complete data, suggesting a more immediate decision-making process rather than reliance on historical data. Lastly, \"They defer decisions until more information is available\" is incorrect because deferring decisions contradicts the need for quick decision-making in the context of tight deadlines; instead, managers are likely to make timely decisions with the information at hand, even if it is incomplete.",
+      "difficulty": "hard",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses organizational decision-making models related to individual cognitive limitations and organizational constraints.",
+      "quality_comment": "This question challenges the test-taker to apply the concept of bounded rationality in a managerial context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

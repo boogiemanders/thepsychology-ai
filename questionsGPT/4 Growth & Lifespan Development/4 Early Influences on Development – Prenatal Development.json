@@ -9,7 +9,7 @@
         "First trimester (weeks 1 through 13)"
       ],
       "answer": "Embryonic period (weeks 3 through 8)",
-      "explanation": "The embryonic period is when major organs and structures form, making the fetus highly vulnerable to teratogens that can cause major defects.",
+      "explanation": "1. The correct answer is the **embryonic period (weeks 3 through 8)** because this is the stage during which major organs and structures are forming, and exposure to teratogens is most likely to cause significant defects. The reference material indicates that the likelihood of major structural damage from teratogens peaks during this critical period of rapid development.\n\n2. The **germinal period (conception to week 2)** is incorrect because it involves initial cell division and implantation, where exposure to teratogens typically results in an \"all-or-none\" effect, meaning significant damage would prevent implantation altogether. The **fetal period (weeks 9 through birth)** is also incorrect as this stage is characterized by the growth and maturation of already formed organs and structures, where exposure to teratogens generally causes minor defects rather than major structural issues. Lastly, the **first trimester (weeks 1 through 13)** includes the embryonic period, but it is too broad; while teratogen exposure during the embryonic phase is critical, the first trimester also encompasses the germinal period where the risk of major defects is lower.",
       "kn": "KN21",
       "kn_explanation": "This question tests knowledge of normal developmental stages and timing of vulnerability, which falls under normal growth and development across the lifespan (KN21).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Fragile X syndrome"
       ],
       "answer": "Prader-Willi syndrome",
-      "explanation": "Prader-Willi syndrome results from a deletion on the paternal chromosome 15 and presents with those characteristic symptoms including hypotonia and hyperphagia.",
+      "explanation": "1. **Correct Answer Explanation:**\n\"Prader-Willi syndrome\" is the correct answer because it is specifically caused by a deletion on the paternal chromosome 15. This syndrome is characterized by symptoms such as hypotonia (poor muscle tone), hyperphagia (chronic overeating), obesity, intellectual disabilities, and self-injurious behaviors, which align with the symptoms described in the question.\n\n2. **Incorrect Options Explanation:**\n- **Angelman syndrome:** This disorder is caused by a deletion on the maternal chromosome 15 and is characterized by severe developmental delays, communication and intellectual disabilities, and a happy demeanor, which differ from the symptoms of Prader-Willi syndrome.\n- **Cri-du-chat syndrome:** This syndrome is caused by a deletion on chromosome 5 and is marked by a high-pitched cry, intellectual disability, and developmental delays, which are not related to the paternal chromosome 15 deletion associated with Prader-Willi syndrome.\n- **Fragile X syndrome:** This is an X-linked dominant disorder caused by mutations in the FMR1 gene, leading to intellectual developmental disorder and specific physical features, rather than the symptoms associated with Prader-Willi syndrome.",
       "kn": "KN4",
       "kn_explanation": "This question assesses understanding of behavioral genetics and chromosomal abnormalities affecting development (KN4).",
       "difficulty": "hard",
@@ -39,7 +39,7 @@
         "Angelman syndrome"
       ],
       "answer": "Rett syndrome",
-      "explanation": "Rett syndrome is an X-linked dominant disorder affecting mostly females, caused by MECP2 mutations, with characteristic regression after 6–18 months.",
+      "explanation": "1. **Rett syndrome** is the correct answer because it is characterized by a mutation in the MECP2 gene, which typically affects females and leads to symptoms such as slowed head and brain growth, loss of speech, abnormal hand movements, breathing problems, and seizures. The infant's presentation aligns with these symptoms, particularly the developmental regression after an initial period of normal development.\n\n2. **Turner syndrome** is incorrect because it primarily affects females and is caused by the partial or complete deletion of one X chromosome, resulting in symptoms such as short stature and lack of secondary sex characteristics, rather than neurological symptoms like those seen in this case. \n\n**Fragile X syndrome** is also incorrect as it affects both males and females and is characterized by symptoms like delayed speech and motor skills, but it does not specifically present with the regression of skills and the specific hand movements associated with Rett syndrome. \n\n**Angelman syndrome** is not the correct diagnosis because, while it involves developmental delays and seizures, it is usually associated with a deletion on the maternal chromosome 15 and presents with a distinct happy demeanor, which is not mentioned in this infant's symptoms.",
       "kn": "KN4",
       "kn_explanation": "This question involves genetic basis and phenotypic presentation of a neurodevelopmental disorder, fitting within behavioral genetics (KN4).",
       "difficulty": "hard",
@@ -54,7 +54,7 @@
         "Fragile X syndrome"
       ],
       "answer": "Klinefelter syndrome",
-      "explanation": "Klinefelter syndrome involves an extra X chromosome in males and is characterized by incomplete secondary sex characteristics and cognitive/social difficulties.",
+      "explanation": "1. **Klinefelter syndrome** is the correct answer because it is characterized by males having two or more X chromosomes in addition to a single Y chromosome. Symptoms include gynecomastia (breast enlargement), taller stature, incomplete development of secondary sex characteristics, and various cognitive and social difficulties stemming from impaired executive functions and social cognitive deficits.\n\n2. **Turner syndrome** is incorrect because it affects females and is caused by the partial or complete deletion of one X chromosome, leading to symptoms such as short stature and lack of secondary sex characteristics, not excess X chromosomes in males. **Down syndrome** is also incorrect as it is an autosomal disorder caused by an extra chromosome 21, leading to intellectual disability and distinct physical features, which do not include the symptoms associated with Klinefelter syndrome. Finally, **Fragile X syndrome** is incorrect because it is an X-linked dominant disorder that affects both males and females, primarily characterized by intellectual disabilities and specific physical features, rather than the presence of multiple X chromosomes in males.",
       "kn": "KN4",
       "kn_explanation": "The question tests understanding of sex chromosome abnormalities and their behavioral and cognitive sequelae under behavioral genetics (KN4).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Mitochondrial inheritance"
       ],
       "answer": "Autosomal dominant",
-      "explanation": "Huntington’s disease is transmitted in an autosomal dominant fashion, meaning one copy of the mutant gene can cause the disorder.",
+      "explanation": "1. **Correct Answer: Autosomal dominant**  \nHuntington’s disease is classified as an autosomal dominant disorder, meaning it is caused by a single dominant gene located on an autosome (non-sex chromosome). When one parent has Huntington’s disease, there is a 50% chance that their biological child will inherit the disorder, indicating the dominant nature of the gene responsible for this condition.\n\n2. **Incorrect Options:**  \n- **A: Autosomal recessive**: This option is incorrect because autosomal recessive disorders require two copies of a recessive gene for the condition to manifest, which does not apply to Huntington’s disease.  \n- **B: X-linked dominant**: This option is incorrect as Huntington’s disease is not linked to the X chromosome; it is associated with an autosome, making it an autosomal disorder.  \n- **C: Mitochondrial inheritance**: This option is incorrect because mitochondrial inheritance involves genes located in mitochondrial DNA, which is not the case for Huntington’s disease, as it is caused by a gene on an autosome.",
       "kn": "KN4",
       "kn_explanation": "This question focuses on genetic transmission and inheritance patterns of disorders, which is central in behavioral genetics (KN4).",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Valproic acid"
       ],
       "answer": "Alcohol",
-      "explanation": "Prenatal exposure to alcohol can cause fetal alcohol syndrome, which includes distinct facial features, growth delays, and central nervous system dysfunction.",
+      "explanation": "1. **Correct Answer: Alcohol**  \nAlcohol is the substance most strongly associated with fetal alcohol syndrome (FAS), which is characterized by distinct facial anomalies, growth retardation, central nervous system dysfunction, and various organ defects. Prenatal exposure to alcohol can lead to FAS and other disorders within the fetal alcohol spectrum, particularly during the embryonic period when major organs and structures are forming most rapidly.\n\n2. **Incorrect Options:**\n- **Nicotine:** While prenatal exposure to nicotine can have harmful effects, it is not specifically linked to the distinct features of fetal alcohol syndrome, which include the specific facial anomalies and CNS dysfunction associated with alcohol exposure.\n- **Cocaine:** Prenatal exposure to cocaine is associated with issues such as low birth weight and irritability in infants but does not cause the characteristic facial anomalies and organ defects seen in fetal alcohol syndrome.\n- **Valproic acid:** This teratogen can cause developmental defects, but it is not specifically associated with the symptoms of fetal alcohol syndrome, which are unique to alcohol exposure during pregnancy.",
       "kn": "KN2",
       "kn_explanation": "This question pertains to teratogenic effects of substances on development, including drug action and developmental impact (KN2).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Second trimester"
       ],
       "answer": "Age of viability",
-      "explanation": "The age of viability refers to the earliest gestational age when a fetus can survive ex utero, generally between 22 and 26 weeks.",
+      "explanation": "1. The correct answer, \"age of viability,\" refers to the earliest point in gestation, typically between 22 and 26 weeks, at which a premature baby has a reasonable chance of surviving outside the womb. This term is significant because it marks the transition from a fetus that is unlikely to survive without intensive medical intervention to one that can potentially thrive with appropriate care.\n\n2. The option \"embryonic period\" is incorrect because it refers to the stage of prenatal development from the third through the eighth weeks, during which major organs and structures are forming, not the viability of the fetus. \"Fetal period\" is also incorrect as it describes the time from week 9 until birth, focusing on the growth and maturation of already formed structures rather than the specific milestone of survival outside the womb. Lastly, the \"second trimester\" is wrong because it spans weeks 14 through 27 of gestation and does not specifically denote the age at which a fetus can survive outside the womb; it simply describes a broader timeframe in prenatal development.",
       "kn": "KN21",
       "kn_explanation": "This question pertains to prenatal developmental milestones and survival thresholds, an element of normal growth and development (KN21).",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "The fetus is most vulnerable to teratogen-related brain damage at this stage."
       ],
       "answer": "Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs.",
-      "explanation": "During the germinal period, teratogen exposure typically results either in failure of implantation or no effect, rather than specific malformations.",
+      "explanation": "1. The correct answer, \"Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs,\" accurately describes the germinal period of prenatal development. During this period, which extends from conception to the end of the second week, if a zygote is exposed to teratogens, the exposure can lead to significant damage that prevents implantation. Conversely, if implantation occurs, it indicates that the exposure likely had little or no detrimental effect on the developing zygote.\n\n2. The option \"It commonly causes specific organ malformations\" is incorrect because organ formation primarily occurs during the embryonic period (weeks 3 to 8), not the germinal period. The statement \"It causes minor physical abnormalities without affecting cognition\" is also wrong, as the germinal period's all-or-none effect means that either significant damage occurs (preventing implantation) or no effect is seen; it does not lead to minor abnormalities. Finally, the option \"The fetus is most vulnerable to teratogen-related brain damage at this stage\" is incorrect because the central nervous system is most susceptible to teratogens during the embryonic and fetal periods, not during the germinal period.",
       "kn": "KN21",
       "kn_explanation": "The question examines understanding of prenatal development timing and teratogenic vulnerability in early stages, linking to growth and development (KN21).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Klinefelter syndrome"
       ],
       "answer": "Down syndrome (trisomy 21)",
-      "explanation": "Trisomy 21 is the most common form of Down syndrome, with an extra chromosome 21 leading to characteristic physical and cognitive symptoms.",
+      "explanation": "1. **Down syndrome (trisomy 21)** is characterized by the presence of an extra chromosome 21 in all cells, which leads to symptoms such as intellectual disability, hypotonia (decreased muscle tone), and a short stocky build. This disorder is the most common genetic cause of intellectual developmental disorder and is primarily caused by an error during cell division, resulting in 47 chromosomes instead of the usual 46 (Nussbaum, McInnes, & Willard, 2007).\n\n2. **Cri-du-chat syndrome** is caused by a deletion on chromosome 5, not an extra chromosome 21, and its symptoms include a high-pitched cry, intellectual disability, and developmental delays. **Prader-Willi syndrome** results from a deletion on the paternal chromosome 15 and is characterized by symptoms such as hypotonia, hyperphagia, and obesity, not an extra chromosome 21. **Klinefelter syndrome** affects males and is due to the presence of two or more X chromosomes in addition to a Y chromosome, leading to symptoms like incomplete development of secondary sex characteristics and not an extra chromosome 21.",
       "kn": "KN4",
       "kn_explanation": "This question addresses chromosomal abnormalities and their phenotypic manifestations, key content in behavioral genetics (KN4).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Mitochondrial inheritance; supportive care only"
       ],
       "answer": "Autosomal recessive; lifelong phenylalanine-restricted diet",
-      "explanation": "PKU is inherited in an autosomal recessive pattern, and management requires a lifelong diet low in phenylalanine to prevent intellectual disability.",
+      "explanation": "1. The correct answer is \"Autosomal recessive; lifelong phenylalanine-restricted diet\" because phenylketonuria (PKU) is caused by two autosomal recessive genes, requiring a child to inherit the PKU gene from both parents to manifest the disorder. The key management strategy for PKU is a lifelong diet low in phenylalanine, as this amino acid cannot be adequately metabolized by individuals with PKU, leading to severe health issues if not managed.\n\n2. The option \"Autosomal dominant; gene therapy to replace defective gene\" is incorrect because PKU is not caused by a dominant gene; it requires both parents to pass the recessive gene for the child to develop the disorder. The option \"X-linked recessive; enzyme replacement therapy\" is wrong because PKU is not an X-linked disorder; it is autosomal, and enzyme replacement therapy is not a recognized treatment for PKU. Lastly, \"Mitochondrial inheritance; supportive care only\" is incorrect because PKU does not follow mitochondrial inheritance patterns, and while supportive care is important, the primary management involves dietary restrictions rather than just supportive care.",
       "kn": "KN4",
       "kn_explanation": "This question deals with genetic transmission and management of an autosomal recessive metabolic disorder, within behavioral genetics (KN4).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Valproic acid"
       ],
       "answer": "Cocaine",
-      "explanation": "Prenatal cocaine exposure is linked to spontaneous abortion, prematurity, low birth weight, irritability, and later cognitive and behavioral difficulties.",
+      "explanation": "1. \"Cocaine\" is the correct answer because prenatal exposure to cocaine is specifically linked to spontaneous abortion, premature birth, and low birth weight. Additionally, infants exposed to cocaine tend to be irritable, exhibit a piercing cry, and are at risk for attention and behavior problems later in life, as outlined in the reference material.\n\n2. **Alcohol:** While prenatal exposure to alcohol can lead to fetal alcohol spectrum disorder (FASD) and various developmental issues, it is not primarily associated with spontaneous abortion or the specific symptoms described in the question. \n\n**Nicotine:** Prenatal exposure to nicotine is known to have harmful effects, including low birth weight and developmental issues, but it is not mentioned in the reference material as a direct cause of spontaneous abortion or the specific irritability and behavior problems outlined.\n\n**Valproic acid:** Valproic acid is noted in the reference material for causing teratogenic effects, but it is not specifically associated with the symptoms of spontaneous abortion, premature birth, or the described irritability and behavior problems in infants, making it an incorrect choice for this question.",
       "kn": "KN2",
       "kn_explanation": "This question examines knowledge of drug teratogenicity and its effects on prenatal and postnatal development, fitting under mechanisms of action of drugs of abuse (KN2).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Down syndrome"
       ],
       "answer": "Cri-du-chat syndrome",
-      "explanation": "Cri-du-chat syndrome results from a deletion on chromosome 5 and features the hallmark cat-like cry along with developmental delays and distinctive facial characteristics.",
+      "explanation": "1. \"Cri-du-chat syndrome\" is the correct answer because it is specifically caused by a deletion on chromosome 5 and is characterized by a high-pitched, cat-like cry, intellectual disability, microcephaly, and distinctive facial features such as widely set eyes and low-set ears. The symptoms of cri-du-chat syndrome align perfectly with the details provided in the question.\n\n2. \n- **Angelman syndrome** is incorrect because it is caused by a deletion on the maternal chromosome 15 and is characterized by symptoms such as severe developmental delays, communication difficulties, and a happy demeanor, rather than the features associated with cri-du-chat syndrome.\n- **Prader-Willi syndrome** is incorrect as it is also linked to a deletion on chromosome 15 (paternal) and is primarily characterized by symptoms like hypotonia, hyperphagia, and obesity, which do not include the distinctive features of cri-du-chat syndrome.\n- **Down syndrome** is incorrect because it is caused by an abnormality on chromosome 21, specifically trisomy 21, and its symptoms include intellectual disability and distinct physical features, but do not include a high-pitched cry or the specific characteristics associated with cri-du-chat syndrome.",
       "kn": "KN4",
       "kn_explanation": "The question tests knowledge of chromosomal deletion disorders and their clinical presentations, a major part of behavioral genetics (KN4).",
       "difficulty": "hard",
@@ -189,7 +189,7 @@
         "Epigenetic mechanisms protect the fetus from teratogen-related damage."
       ],
       "answer": "Some teratogens exert effects by causing epigenetic modifications that alter gene expression without changing DNA sequence.",
-      "explanation": "Research indicates teratogens like valproic acid and alcohol can cause epigenetic changes, affecting gene regulation without altering the DNA sequence itself.",
+      "explanation": "1. The correct answer, \"Some teratogens exert effects by causing epigenetic modifications that alter gene expression without changing DNA sequence,\" accurately reflects the understanding that certain teratogens can influence how genes are expressed through epigenetic mechanisms. This means that while the underlying DNA sequence remains unchanged, the way genes function and are regulated can be modified, potentially leading to developmental defects and abnormalities (Zhou et al., 2017).\n\n2. The first incorrect option, \"Teratogens primarily cause DNA sequence mutations leading to birth defects,\" is wrong because teratogens do not primarily induce changes in the DNA sequence; rather, they can influence gene expression through epigenetic modifications. The second incorrect option, \"Epigenetic changes due to teratogens only occur during the fetal period,\" is incorrect because the reference material indicates that teratogenic effects can occur at various stages of prenatal development, particularly during critical periods like the embryonic stage. Finally, the third incorrect option, \"Epigenetic mechanisms protect the fetus from teratogen-related damage,\" is misleading because epigenetic changes can actually contribute to teratogenic effects rather than provide protection; they can alter gene expression in ways that may lead to developmental issues.",
       "kn": "KN21",
       "kn_explanation": "This question assesses understanding of mechanisms of teratogen action during prenatal development, specifically epigenetic influences relevant to growth and lifespan development (KN21).",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "Cocaine exposure only affects physical development, not cognitive or behavioral domains."
       ],
       "answer": "Postnatal environmental factors and caregiving quality mediate the impact of prenatal cocaine exposure on development.",
-      "explanation": "The consequences of prenatal cocaine exposure vary and are influenced by postnatal environment, including poverty and caregiving factors, which mediate developmental outcomes.",
+      "explanation": "1. The correct answer, \"Postnatal environmental factors and caregiving quality mediate the impact of prenatal cocaine exposure on development,\" is accurate because the consequences of prenatal cocaine exposure can vary significantly among individuals based on their postnatal environment. Factors such as poverty, caregiving quality, and exposure to sensitive or insensitive parenting can influence developmental outcomes, impacting cognitive, behavioral, and emotional functioning in children exposed to cocaine in utero.\n\n2. The statement \"All cocaine-exposed infants show severe cognitive deficits regardless of environment\" is incorrect because it overlooks the variability in outcomes based on individual circumstances and environmental factors, suggesting a uniformity that does not exist. The option \"Developmental outcomes depend only on the amount of cocaine exposure during pregnancy\" is wrong because it fails to consider the role of postnatal influences, which can significantly alter the effects of prenatal exposure. Lastly, the assertion \"Cocaine exposure only affects physical development, not cognitive or behavioral domains\" is misleading, as the reference material indicates that cocaine-exposed infants can experience a range of issues including cognitive, attention, and behavioral problems, not just physical deficits.",
       "kn": "KN21",
       "kn_explanation": "This item integrates prenatal exposure effects with postnatal environment interactions, emphasizing contextual factors in growth and lifespan development (KN21).",
       "difficulty": "medium",
@@ -219,11 +219,51 @@
         "Weeks 3–8; establishment of major organ systems"
       ],
       "answer": "Weeks 14–27; growth and maturation of organs and structures",
-      "explanation": "The second trimester spans weeks 14–27, characterized by continued growth and maturation of organs and bodily structures.",
+      "explanation": "1. The correct answer, \"Weeks 14–27; growth and maturation of organs and structures,\" accurately describes the second trimester of prenatal development. During this period, the major organs and structures formed in the embryonic period continue to grow and mature, preparing the fetus for survival outside the womb.\n\n2. The first incorrect option, \"Weeks 1–13; organ formation and implantation,\" refers to the first trimester, which is characterized by the germinal and early embryonic periods where implantation and initial organ formation occur, not growth and maturation. The second incorrect option, \"Weeks 28–birth; initial cellular differentiation,\" incorrectly identifies the third trimester, which primarily involves further growth and maturation rather than initial differentiation. Lastly, the option \"Weeks 3–8; establishment of major organ systems\" describes the embryonic period when major organs are forming, rather than the growth and maturation processes that occur in the second trimester.",
       "kn": "KN21",
       "kn_explanation": "This question assesses precise knowledge of prenatal trimester timing and associated developmental processes, relevant to normal growth and development (KN21).",
       "difficulty": "easy",
       "quality_comment": "Clear and straightforward item that reinforces basic knowledge of prenatal developmental periods; distractors are conceptually related but incorrect."
+    },
+    {
+      "stem": "During which stage of prenatal development is the risk of miscarriage highest due to chromosomal abnormalities?",
+      "options": [
+        "Germinal period (conception to week 2)",
+        "Embryonic period (weeks 3 through 8)",
+        "Fetal period (weeks 9 through birth)",
+        "First trimester (weeks 1 through 13)"
+      ],
+      "answer": "Germinal period (conception to week 2)",
+      "explanation": "1. The \"Germinal period (conception to week 2)\" is the correct answer because it is during this stage that the zygote is implanting on the uterine wall, and exposure to toxic chemicals, drugs, or teratogens can lead to significant damage. If such exposure occurs and causes serious harm, implantation may not happen at all, resulting in a higher risk of miscarriage due to chromosomal abnormalities during this early stage.\n\n2. The \"Embryonic period (weeks 3 through 8)\" is incorrect because, although it is a critical time for organ formation and exposure to teratogens can cause major defects, the risk of miscarriage is lower compared to the germinal period. The \"Fetal period (weeks 9 through birth)\" is also incorrect since, during this stage, the major organs have already formed, and while exposure can lead to minor defects, the risk of miscarriage due to chromosomal abnormalities is not as pronounced. Lastly, the \"First trimester (weeks 1 through 13)\" is not the correct answer because it encompasses both the germinal and embryonic periods, and while miscarriage risk is present, the highest risk specifically due to chromosomal abnormalities occurs in the earlier germinal stage.",
+      "difficulty": "easy",
+      "kn": "KN21",
+      "kn_explanation": "This question tests knowledge of normal developmental stages and timing of vulnerability, which falls under normal growth and development across the lifespan (KN21).",
+      "quality_comment": "This question effectively assesses knowledge of prenatal stages and their associated risks.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which prenatal stage is particularly sensitive to environmental factors that can influence brain development?",
+      "options": [
+        "Germinal period (conception to week 2)",
+        "Embryonic period (weeks 3 through 8)",
+        "Fetal period (weeks 9 through birth)",
+        "Second trimester (weeks 14 through 27)"
+      ],
+      "answer": "Fetal period (weeks 9 through birth)",
+      "explanation": "1. The \"Fetal period (weeks 9 through birth)\" is the correct answer because, during this stage, the major organs and structures have already formed, and the brain continues to grow and mature. This period is particularly sensitive to environmental factors, as exposure to teratogens can lead to minor defects or abnormalities, especially in the central nervous system, which is susceptible to significant damage during this time.\n\n2. The \"Germinal period (conception to week 2)\" is incorrect because it is characterized by the initial stages of cell division and implantation, where exposure to teratogens typically results in an all-or-none effect, preventing implantation if significant damage occurs. The \"Embryonic period (weeks 3 through 8)\" is also incorrect; although it is a critical time for organ formation and is sensitive to teratogens, it is primarily during this stage that major structural defects are most likely to occur. Lastly, the \"Second trimester (weeks 14 through 27)\" is incorrect as it occurs after the embryonic period and while the brain continues to develop, the most critical brain development occurs earlier, particularly in the fetal period.",
+      "difficulty": "hard",
+      "kn": "KN21",
+      "kn_explanation": "This question tests knowledge of normal developmental stages and timing of vulnerability, which falls under normal growth and development across the lifespan (KN21).",
+      "quality_comment": "This question challenges the test-taker to connect knowledge of environmental influences with specific developmental stages.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

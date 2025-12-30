@@ -9,7 +9,7 @@
         "Thematic Analysis"
       ],
       "answer": "Grounded Theory",
-      "explanation": "Grounded theory seeks to generate an abstract theory based directly on the data collected from participants’ perspectives, typically through interviews and observations.",
+      "explanation": "1. **Grounded Theory** is the correct answer because its primary goal is to derive a general, abstract theory of a process, action, or interaction that is grounded in the views of the participants in a study. This approach utilizes methods such as interviews and observations to collect data, which are then analyzed to construct the theory based on participants' experiences.\n\n2. **Phenomenology** is incorrect because it focuses on gaining an in-depth understanding of the \"lived experience\" of participants rather than developing a general theory. **Ethnography** is also incorrect because it involves studying participants within their natural culture or setting, emphasizing their engagement in naturally occurring activities rather than theory development. Lastly, **Thematic Analysis** is incorrect as it is a method for identifying and analyzing patterns (themes) within qualitative data, rather than specifically aimed at developing a grounded theory based on participant views.",
       "kn": "KN53",
       "kn_explanation": "This question tests knowledge of qualitative research methods under sampling and research design, which is part of research methods (KN53).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "It eliminates the need for a baseline phase."
       ],
       "answer": "It controls for history effects by demonstrating reversibility of behavior change.",
-      "explanation": "The ABAB design includes withdrawing and reapplying treatment, showing that behavior changes correspond with treatment phases rather than extraneous events, thus controlling for history effects.",
+      "explanation": "In single-subject experimental designs, the ABAB reversal design is advantageous because it includes multiple phases that allow researchers to observe changes in behavior across different conditions. This design demonstrates reversibility; if a behavior returns to baseline levels when the treatment is withdrawn (during the second baseline phase), it indicates that the observed changes were likely due to the treatment rather than external historical events that could have influenced the results. Thus, it effectively controls for history effects.\n\nNow, let’s examine why the incorrect options are not valid:\n\n- **It allows for random assignment of subjects to groups.** This statement is incorrect because single-subject designs, including ABAB designs, do not involve random assignment; they focus on repeated measures of the same individual or individuals treated as a single group.\n\n- **It uses multiple subjects simultaneously to improve external validity.** This is incorrect as well; while multiple subjects can be included in single-subject designs, the primary focus of an ABAB design is on changes within the same subject, not on improving external validity through simultaneous group comparisons.\n\n- **It eliminates the need for a baseline phase.** This option is also wrong because both AB and ABAB designs require a baseline phase to establish a reference point for measuring the effects of the treatment. The ABAB design actually emphasizes the importance of having at least two baseline phases to assess the impact of the treatment more effectively. \n\nIn summary, the ABAB design's ability to demonstrate reversibility of behavior change is its main advantage over the simpler AB design, while the incorrect options misrepresent the characteristics and methodologies of single-subject experimental designs.",
       "kn": "KN54",
       "kn_explanation": "This question focuses on single-subject experimental design features and control of internal validity threats, central to experimental design knowledge (KN54).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Multiple baseline design"
       ],
       "answer": "Between-subjects design",
-      "explanation": "In a between-subjects design, different groups of participants are each exposed to one level of the independent variable, such as different drug doses assigned randomly.",
+      "explanation": "1. The correct answer is \"Between-subjects design\" because this research design involves randomly assigning different participants to each group receiving a different level of the independent variable—in this case, the low, moderate, and high doses of an antidepressant. This method allows the researcher to compare the effects of the varying doses on depressive symptoms while ensuring that each participant is only exposed to one level of the independent variable, thus minimizing potential confounding variables.\n\n2. \n- **Within-subjects design**: This option is incorrect because a within-subjects design would require each participant to be exposed to multiple levels of the independent variable (e.g., all doses), rather than assigning different participants to different dose groups.\n  \n- **Mixed design**: This option is incorrect because a mixed design involves at least one between-subjects variable and one within-subjects variable, which is not the case here as all participants are only assigned to one dose level.\n\n- **Multiple baseline design**: This option is incorrect because a multiple baseline design involves sequentially applying the independent variable across different behaviors, tasks, settings, or subjects, rather than comparing different groups receiving different levels of a treatment simultaneously.",
       "kn": "KN54",
       "kn_explanation": "This question tests understanding of experimental group designs, particularly between-subjects versus within-subjects, pertinent to research design principles (KN54).",
       "difficulty": "easy",
@@ -54,7 +54,7 @@
         "Theory Triangulation"
       ],
       "answer": "Methodological Triangulation",
-      "explanation": "Methodological triangulation refers to using multiple data collection methods to improve study credibility and reduce bias in qualitative research.",
+      "explanation": "1. **Why \"Methodological Triangulation\" is Correct**: Methodological triangulation involves using multiple methods to collect data, such as interviews, questionnaires, and observations, which enhances the credibility and validity of qualitative research findings. By combining different data collection techniques, researchers can cross-verify results and gain a more comprehensive understanding of the research topic.\n\n2. **Why Each Incorrect Option is Wrong**:\n   - **Data Triangulation**: This type involves using the same method to collect data at different times, in different settings, or from different people, rather than employing multiple methods.\n   - **Investigator Triangulation**: This approach refers to using two or more researchers to collect and analyze data, focusing on the diversity of perspectives rather than the methods of data collection.\n   - **Theory Triangulation**: This type involves interpreting data using multiple theories or perspectives, which does not pertain to the use of various data collection methods.",
       "kn": "KN53",
       "kn_explanation": "The question assesses knowledge of qualitative research validation strategies such as triangulation types, categorized under sampling and data collection methods (KN53).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "It produces the highest external validity among single-subject designs."
       ],
       "answer": "It eliminates the need to withdraw the treatment once applied to a behavior.",
-      "explanation": "A key advantage of multiple baseline designs is that treatment does not have to be withdrawn to establish experimental control, unlike reversal designs.",
+      "explanation": "1. The correct answer, \"It eliminates the need to withdraw the treatment once applied to a behavior,\" highlights a key advantage of the multiple baseline design over a reversal design. In a multiple baseline design, the independent variable is sequentially applied across different behaviors without the need to remove the treatment once it has been implemented, allowing researchers to assess the effectiveness of the treatment without the ethical or practical concerns associated with withdrawing treatment from participants. This approach helps ensure that the effects observed are due to the treatment rather than external factors or the withdrawal of treatment.\n\n2. The option \"It requires fewer baseline phases to establish stable behavior\" is incorrect because multiple baseline designs typically involve multiple baseline phases to assess different behaviors, making them potentially more complex than reversal designs, which may require fewer phases. The statement \"It randomly assigns participants to treatment conditions\" is wrong because multiple baseline designs do not involve random assignment; they focus on the sequential application of treatment across behaviors, tasks, or subjects. Lastly, \"It produces the highest external validity among single-subject designs\" is incorrect because while multiple baseline designs can offer good internal validity, they do not inherently guarantee higher external validity compared to other designs, such as group designs or well-implemented single-subject studies.",
       "kn": "KN54",
       "kn_explanation": "This item targets understanding of single-subject design strengths related to internal validity and experimental control (KN54).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Experimental research"
       ],
       "answer": "Cross-sectional research",
-      "explanation": "Cross-sectional research compares different age groups at a single point in time rather than following the same individuals over time.",
+      "explanation": "1. **Cross-sectional research** is the correct answer because it involves assessing cognitive functioning in individuals of different ages, such as 40, 50, 60, 70, and 80 years, at one specific point in time. This design allows researchers to compare the scores of various age groups simultaneously, making it distinct from other designs that measure changes over time.\n\n2. **Longitudinal research** is incorrect because it involves repeated assessments of the same group of individuals over an extended period, rather than measuring different age groups at one point in time. **Cross-sequential research** is also incorrect as it combines elements of both longitudinal and cross-sectional designs, involving repeated measures of the same individuals at different ages over time. **Experimental research** is not applicable here because it typically evaluates causal relationships through manipulation of independent variables, rather than simply measuring cognitive functioning across different age groups at a single time point.",
       "kn": "KN54",
       "kn_explanation": "This question assesses knowledge of developmental research designs, particularly cross-sectional studies, an essential part of research design (KN54).",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Systematic random sampling"
       ],
       "answer": "Stratified random sampling",
-      "explanation": "Stratified random sampling involves dividing the population into strata and randomly sampling from each to ensure representative subgroups are included.",
+      "explanation": "1. **Stratified random sampling** is the correct answer because it involves dividing the population into subgroups (or strata) based on relevant characteristics, such as gender or age, and then randomly selecting samples from each of these subgroups. This method ensures that each subgroup is adequately represented in the sample, enhancing the study's representativeness and validity.\n\n2. **Cluster random sampling** is incorrect because it involves randomly selecting entire clusters from a population, rather than dividing the population into subgroups and sampling from each one. **Simple random sampling** is not the correct answer because it gives every member of the population an equal chance of being selected without considering any subgroup characteristics. **Systematic random sampling** is also incorrect as it involves selecting every nth individual from a list, rather than dividing the population into subgroups and sampling from each.",
       "kn": "KN53",
       "kn_explanation": "This question covers sampling methods fundamental to obtaining representative samples, key to sampling and data collection methods (KN53).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "To utilize exclusively quantitative methods to study public health problems."
       ],
       "answer": "To collaborate with community partners to generate knowledge and promote social change.",
-      "explanation": "CBPR emphasizes equitable collaboration with community members throughout the research process to address community-relevant problems and effect social change.",
+      "explanation": "1. The correct answer, \"To collaborate with community partners to generate knowledge and promote social change,\" accurately reflects the primary goal of Community-Based Participatory Research (CBPR). CBPR emphasizes equitable partnerships between researchers and community members, recognizing their unique strengths and fostering collaboration throughout the research process to address issues of importance to the community and achieve social change (Kellogg Community Health Scholars Program, 2001).\n\n2. The option \"To test hypotheses in a controlled laboratory environment\" is incorrect because CBPR is not limited to laboratory settings; it aims to engage with communities in real-world contexts to address relevant social issues. The statement \"To develop abstract theories based solely on academic researchers’ perspectives\" is wrong as CBPR prioritizes community input and perspectives rather than relying solely on those of academic researchers. Lastly, \"To utilize exclusively quantitative methods to study public health problems\" is inaccurate because CBPR can employ both qualitative and quantitative methods, focusing on a collaborative approach rather than adhering to a single methodology.",
       "kn": "KN59",
       "kn_explanation": "This question pertains to community involvement and participatory research approaches within research methods (KN59).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Determine the population mean exam score."
       ],
       "answer": "Predict an individual's exam score based on their hours studied.",
-      "explanation": "Regression analysis allows prediction of scores on a criterion variable (exam score) based on scores on one or more predictor variables (hours studied).",
+      "explanation": "1. The correct answer, \"Predict an individual's exam score based on their hours studied,\" is accurate because a regression equation derived from correlational analysis allows researchers to use the relationship between the predictor variable (hours studied) and the criterion variable (exam score) to make predictions about individual outcomes. In this context, the regression equation provides a formula that estimates the expected exam score for a given number of hours studied, demonstrating the predictive utility of the correlation.\n\n2. The option \"Establish a causal relationship between hours studied and exam score\" is incorrect because correlational studies do not manipulate variables or control for confounding factors, meaning they cannot confirm causation. \"Describe the characteristics of the sample using descriptive statistics\" is wrong because while descriptive statistics summarize data, they do not utilize the regression equation to make predictions about individual scores. Lastly, \"Determine the population mean exam score\" is incorrect as the regression equation focuses on individual predictions rather than calculating the mean for the entire population, which would require different statistical approaches.",
       "kn": "KN54",
       "kn_explanation": "This question tests understanding of correlational research and regression analysis within quantitative research methods (KN54).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Inability to demonstrate causality"
       ],
       "answer": "Strict inclusion/exclusion criteria and controlled study conditions",
-      "explanation": "While RCTs have high internal validity due to random assignment, their strict criteria and controlled conditions can limit external validity, reducing generalizability.",
+      "explanation": "1. The correct answer, \"Strict inclusion/exclusion criteria and controlled study conditions,\" highlights a major limitation of randomized controlled trials (RCTs) that affects generalizability. While RCTs are considered the gold standard in clinical research due to their ability to establish causal relationships through random assignment, the stringent criteria for participant selection and the highly controlled environments can limit the applicability of the findings to broader, more diverse populations and real-world settings.\n\n2. The option \"Use of random assignment to groups\" is incorrect because random assignment is a strength of RCTs that enhances internal validity by ensuring that groups are equivalent at the study's outset. The option \"Lack of a control group\" is incorrect because RCTs typically include a control group, which is essential for comparing treatment effects. Lastly, \"Inability to demonstrate causality\" is incorrect since RCTs are specifically designed to determine causal relationships between variables, making them effective for establishing causality.",
       "kn": "KN54",
       "kn_explanation": "This item addresses experimental design concepts, specifically internal and external validity considerations in clinical trials (KN54).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "To randomly assign participants to treatment groups."
       ],
       "answer": "To identify, analyze, and report patterns or themes within qualitative data.",
-      "explanation": "Thematic analysis is a qualitative method focused on systematically finding themes and patterns within textual or interview data.",
+      "explanation": "1. The correct answer, \"To identify, analyze, and report patterns or themes within qualitative data,\" accurately reflects the primary purpose of thematic analysis as described in the reference material. Thematic analysis is defined as a method for recognizing and reporting patterns (themes) within qualitative data, which is essential for interpreting and summarizing the information gathered from in-depth interviews and focus groups.\n\n2. The first incorrect option, \"To test specific hypotheses using numerical data,\" is wrong because thematic analysis does not involve hypothesis testing or quantitative data; it focuses on qualitative data interpretation. The second incorrect option, \"To develop large-scale statistical models of behavior,\" is incorrect as thematic analysis is not concerned with statistical modeling but rather with identifying themes in qualitative research. Lastly, the option \"To randomly assign participants to treatment groups\" is incorrect because this process pertains to experimental designs and randomization, which is not a component of thematic analysis or qualitative research methods.",
       "kn": "KN53",
       "kn_explanation": "This question evaluates comprehension of qualitative analytic methods, an important aspect of qualitative research methodology (KN53).",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Case study"
       ],
       "answer": "Interval recording",
-      "explanation": "Interval recording involves noting if the behavior occurred within set time intervals, useful for frequent behaviors lacking clear start and end points.",
+      "explanation": "1. **Correct Answer: Interval recording**  \nInterval recording is the correct answer because it involves recording whether or not a behavior occurred during specific time intervals, making it ideal for behaviors that happen frequently and do not have clear beginnings or ends. This method allows researchers to capture the occurrence of behaviors within structured time frames, thus providing a systematic approach to monitoring behaviors that are continuous or repetitive.\n\n2. **Incorrect Options:**\n- **Event recording:** This method involves counting the number of times a specific behavior occurs during an observation period and is best suited for behaviors that have clear beginnings and ends, making it inappropriate for frequent behaviors without clear demarcations.\n- **Unstructured observation:** This approach involves observing and recording behaviors as they occur without a predefined plan or system, which lacks the systematic intervals required for effective data collection of frequent behaviors.\n- **Case study:** A case study is an in-depth examination of a particular individual, group, or situation, and does not focus on the systematic observation of behaviors over predefined intervals, making it unsuitable for the question's context.",
       "kn": "KN53",
       "kn_explanation": "This question tests knowledge of structured observational techniques used in quantitative descriptive research designs (KN53).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Independent variable"
       ],
       "answer": "Within-subjects variable",
-      "explanation": "Time-related measurements repeated on the same individuals represent within-subjects variables in a mixed design, while drug dose is between-subjects.",
+      "explanation": "1. The correct answer, \"Within-subjects variable,\" is accurate because, in this mixed research design, each participant is assessed on depressive symptoms multiple times over the course of the study, specifically measuring their symptoms weekly after being assigned to different drug doses. This means that each participant serves as their own control across the different time points, which is characteristic of a within-subjects design.\n\n2. The option \"Between-subjects variable\" is incorrect because, in a between-subjects design, different groups of participants would receive different levels of the independent variable, but here, the same participants are measured over time. \"Confounding variable\" is not applicable in this context, as it refers to an extraneous factor that may affect the dependent variable, but the question specifically addresses the manipulation and measurement of the independent variable. Lastly, \"Independent variable\" is incorrect because, while drug dose is indeed an independent variable in this study, the question specifically asks about the type of variable represented by the weekly measurements of depressive symptoms, which is classified as a within-subjects variable.",
       "kn": "KN54",
       "kn_explanation": "This item focuses on understanding mixed research designs involving both between- and within-subjects variables, a core research design concept (KN54).",
       "difficulty": "hard",
@@ -204,7 +204,7 @@
         "Simple random sampling"
       ],
       "answer": "Convenience sampling",
-      "explanation": "Convenience sampling includes participants who are readily available but may not represent the population well, increasing risk of sampling bias.",
+      "explanation": "1. **Convenience sampling** is the correct answer because it involves selecting participants who are readily accessible to the researcher, such as students in a class or individuals in a particular location. This method often leads to potential sampling bias, as the sample may not accurately represent the broader population due to the non-random criteria used for selection.\n\n2. **Stratified random sampling** is incorrect because it involves dividing the population into subgroups based on relevant characteristics and then randomly selecting samples from each subgroup, ensuring a more representative sample. **Snowball sampling** is also incorrect because it relies on existing participants to recommend others, which can introduce bias but is not based on ease of access like convenience sampling. Lastly, **simple random sampling** is incorrect because it ensures that every member of the population has an equal chance of being selected, thereby minimizing sampling bias compared to convenience sampling.",
       "kn": "KN53",
       "kn_explanation": "This question addresses non-probability sampling techniques focusing on practical sampling approaches and their limitations, fitting under research methods sampling knowledge (KN53).",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "It does not allow any experimental control"
       ],
       "answer": "It limits the external validity or generalizability of findings",
-      "explanation": "Analogue research increases internal validity through controlled conditions but limits external validity because it doesn't fully replicate real-world settings.",
+      "explanation": "1. The correct answer, \"It limits the external validity or generalizability of findings,\" is accurate because analogue research is conducted in controlled settings that do not fully replicate real-life situations. This controlled environment can restrict the applicability of the findings to broader, more varied contexts, making it difficult to generalize results to real-world scenarios where multiple uncontrolled variables may exist.\n\n2. The option \"It produces less internally valid results\" is incorrect because analogue research can actually enhance internal validity by allowing researchers greater control over extraneous variables compared to naturalistic settings. \"It cannot be ethically conducted\" is also wrong, as analogue research can be conducted ethically; the ethical concerns arise more commonly in real-life settings where manipulation may be impractical or unethical. Lastly, \"It does not allow any experimental control\" is incorrect because analogue research is characterized by its ability to implement experimental control, which is one of its primary advantages over naturalistic research.",
       "kn": "KN54",
       "kn_explanation": "This question assesses knowledge of trade-offs between internal and external validity in specific research designs, central to experimental design (KN54).",
       "difficulty": "medium",
@@ -234,11 +234,51 @@
         "It exclusively studies a single individual across different time points"
       ],
       "answer": "It combines longitudinal and cross-sectional methods to distinguish age and cohort effects",
-      "explanation": "Cross-sequential designs measure multiple cohorts longitudinally, helping separate effects of age from those due to cohort (generational) differences.",
+      "explanation": "1. The correct answer, \"It combines longitudinal and cross-sectional methods to distinguish age and cohort effects,\" accurately describes cross-sequential research because it involves assessing individuals of different ages at multiple time points, allowing researchers to differentiate between changes due to aging (age effects) and differences due to the time period in which individuals were born (cohort effects). This design effectively merges the strengths of both longitudinal and cross-sectional approaches, providing a more nuanced understanding of developmental changes over time.\n\n2. The option \"It assesses different age groups only at one point in time\" is incorrect because this describes a cross-sectional design, not a cross-sequential design, which involves multiple assessments over time. The statement \"It follows the same group of individuals repeatedly over many years\" mischaracterizes cross-sequential research as it describes longitudinal research, which focuses solely on a single group rather than incorporating multiple age groups. Lastly, \"It exclusively studies a single individual across different time points\" is inaccurate because this describes a single-subject design, while cross-sequential research involves multiple individuals across various age groups and time points.",
       "kn": "KN54",
       "kn_explanation": "This item focuses on understanding developmental research designs, specifically cross-sequential methods distinguishing confounding factors (KN54).",
       "difficulty": "medium",
       "quality_comment": "The item provides clear, distinct plausible options that require knowledge beyond basic developmental design definitions."
+    },
+    {
+      "stem": "Which qualitative research method focuses on understanding the lived experiences of individuals and often involves in-depth interviews?",
+      "options": [
+        "Case Study",
+        "Phenomenology",
+        "Grounded Theory",
+        "Narrative Analysis"
+      ],
+      "answer": "Phenomenology",
+      "explanation": "1. **Phenomenology** is the correct answer because it specifically aims to gain an in-depth understanding of the \"lived experience\" of participants. This approach focuses on how individuals perceive, describe, and make sense of their experiences, often utilizing in-depth interviews as the primary method of data collection.\n\n2. **Case Study** is incorrect because it involves collecting in-depth information about a particular individual, group, or situation, but does not specifically focus on understanding lived experiences as phenomenology does. **Grounded Theory** is also incorrect; while it seeks to derive a general, abstract theory based on participants' views, it does not primarily focus on the lived experiences in the same way as phenomenology. Lastly, **Narrative Analysis** is incorrect because it involves analyzing personal stories and accounts but does not emphasize the in-depth exploration of lived experiences as phenomenology does.",
+      "difficulty": "easy",
+      "kn": "KN53",
+      "kn_explanation": "This question tests knowledge of qualitative research methods under sampling and research design, which is part of research methods (KN53).",
+      "quality_comment": "This question effectively tests knowledge of qualitative research methods by focusing on a specific approach.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In qualitative research, which method emphasizes the development of theories based on data collected from participants, often through iterative coding processes?",
+      "options": [
+        "Ethnography",
+        "Case Study",
+        "Grounded Theory",
+        "Content Analysis"
+      ],
+      "answer": "Grounded Theory",
+      "explanation": "1. **Grounded Theory** is the correct answer because it specifically aims to derive a general, abstract theory of a process, action, or interaction grounded in the views of participants. This method relies heavily on data collected through interviews and observations, employing iterative coding processes to develop theories directly from the data rather than testing pre-existing theories.\n\n2. **Ethnography** is incorrect because it focuses on studying participants within their natural culture or setting, emphasizing the context of behaviors rather than theory development. **Case Study** is also incorrect as it involves in-depth information collection about a particular individual, group, or situation, but does not primarily aim to generate theories through iterative coding. Lastly, **Content Analysis** is incorrect because it is a method used to analyze textual or visual data to identify patterns or themes, rather than developing theories based on participant data through coding processes.",
+      "difficulty": "hard",
+      "kn": "KN53",
+      "kn_explanation": "This question tests knowledge of qualitative research methods under sampling and research design, which is part of research methods (KN53).",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of qualitative research methodologies in a more complex context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

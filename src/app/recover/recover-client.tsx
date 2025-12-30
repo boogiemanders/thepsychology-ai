@@ -8,6 +8,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { useAuth } from '@/context/auth-context'
 import { getRecoverInitialAssistantMessage } from '@/lib/recover'
+import { supabase } from '@/lib/supabase'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -33,6 +34,7 @@ type ChatMessage = {
   role: 'user' | 'assistant'
   content: string
   sources?: ChatSource[]
+  tag?: string
 }
 
 function newMessageId(): string {
@@ -117,6 +119,7 @@ export default function RecoverPage() {
   const [isSending, setIsSending] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const bottomRef = useRef<HTMLDivElement | null>(null)
+  const insightsInjectedRef = useRef(false)
 
   const canSend = useMemo(
     () => draft.trim().length > 0 && !isSending && disclaimerAccepted,
@@ -151,6 +154,54 @@ export default function RecoverPage() {
     const accepted = value === '1'
     setDisclaimerAccepted(accepted)
     setDisclaimerOpen(!accepted)
+  }, [user?.id])
+
+  useEffect(() => {
+    if (!user?.id || insightsInjectedRef.current) return
+
+    const loadInsights = async () => {
+      try {
+        const { data, error } = await supabase.auth.getSession()
+        if (error) throw error
+        const token = data.session?.access_token
+        if (!token) return
+
+        const response = await fetch('/api/recover-insights', {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+
+        const payload = await response.json().catch(() => null)
+        if (!response.ok) {
+          throw new Error(payload?.error || 'Failed to load insights')
+        }
+
+        const insights = Array.isArray(payload?.insights) ? payload.insights : []
+        if (insights.length === 0) return
+
+        const nextMessages = insights
+          .map((insight: any) => {
+            const content = typeof insight?.message === 'string' ? insight.message.trim() : ''
+            if (!content) return null
+            return {
+              id: newMessageId(),
+              role: 'assistant' as const,
+              content,
+              tag: 'New Recommendation from Founder',
+            }
+          })
+          .filter(Boolean) as ChatMessage[]
+
+        if (nextMessages.length > 0) {
+          setMessages((prev) => [...prev, ...nextMessages])
+        }
+      } catch (err) {
+        console.error('[recover] Failed to load approved insights:', err)
+      } finally {
+        insightsInjectedRef.current = true
+      }
+    }
+
+    void loadInsights()
   }, [user?.id])
 
   useEffect(() => {
@@ -319,6 +370,11 @@ export default function RecoverPage() {
                       }
                     >
                       <div className="space-y-2">
+                        {m.tag && (
+                          <span className="inline-flex items-center rounded-full border border-border/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+                            {m.tag}
+                          </span>
+                        )}
                         <MarkdownMessage content={m.content} />
                       </div>
                       {m.role === 'assistant' && m.sources && m.sources.length > 0 && (

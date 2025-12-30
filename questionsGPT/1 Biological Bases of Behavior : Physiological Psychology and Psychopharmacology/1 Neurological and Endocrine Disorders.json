@@ -9,7 +9,7 @@
         "Subarachnoid hemorrhage"
       ],
       "answer": "Ischemic stroke",
-      "explanation": "Ischemic strokes are the most common type and occur when a cerebral artery is blocked by a blood clot, either thrombotic or embolic in origin.",
+      "explanation": "1. \"Ischemic stroke\" is the correct answer because it is the most common type of stroke, resulting from a blockage in a cerebral artery due to a blood clot. This blockage can occur through a thrombotic stroke, where the clot forms in an artery within the brain, or an embolic stroke, where the clot travels from another part of the body to the brain. In contrast to other stroke types, ischemic strokes account for the majority of stroke cases.\n\n2. The incorrect options are as follows:\n- **Hemorrhagic stroke**: This type involves bleeding due to a rupture in a cerebral artery, not a blockage, and is less common than ischemic strokes.\n- **Transient ischemic attack (TIA)**: A TIA is characterized by temporary symptoms caused by a brief blockage of blood flow, but it is not classified as a full stroke and typically resolves within a short period without lasting effects.\n- **Subarachnoid hemorrhage**: This condition specifically refers to bleeding in the space between the brain and the membrane covering it, which is distinct from the blockage that characterizes ischemic strokes.",
       "kn": "KN1",
       "kn_explanation": "This question relates to the neurobiological bases of vascular brain injury and neurological disease processes, fitting KN1.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Basilar artery"
       ],
       "answer": "Anterior cerebral artery",
-      "explanation": "Anterior cerebral artery strokes produce contralateral leg weakness and sensory loss, impaired judgment, mutism, apathy, and urinary incontinence.",
+      "explanation": "1. The correct answer is the **anterior cerebral artery** because its involvement in a stroke is associated with symptoms such as contralateral hemiparesis that predominantly affects the leg, urinary incontinence, impaired insight and judgment, and mutism. These symptoms align with the characteristics of a stroke affecting the anterior cerebral artery, which supplies blood to the medial portions of the frontal lobes and the superior medial parietal lobes.\n\n2. The **middle cerebral artery** is incorrect because it typically presents with contralateral sensory loss and hemiparesis affecting the arm and face more than the leg, along with potential dysarthria and aphasia. The **posterior cerebral artery** is also incorrect, as it primarily causes contralateral sensory loss and visual impairments, not the leg-specific symptoms and urinary incontinence seen here. Lastly, the **basilar artery** is incorrect because it supplies the brainstem and cerebellum, leading to symptoms like ataxia, cranial nerve deficits, and altered consciousness rather than the specific symptoms presented in this case.",
       "kn": "KN1",
       "kn_explanation": "This tests knowledge of functional neuroanatomy and clinical neurological signs, a core concept within neurobiological bases (KN1).",
       "difficulty": "hard",
@@ -39,7 +39,7 @@
         "Rapid muscle atrophy without cognitive decline"
       ],
       "answer": "Irregular, uncontrollable jerky movements (chorea)",
-      "explanation": "Chorea, characterized by irregular, involuntary jerky movements, is the primary motor symptom of Huntington’s disease.",
+      "explanation": "1. \"Irregular, uncontrollable jerky movements (chorea)\" is the correct answer because chorea is the primary motor symptom associated with Huntington's disease. This neurodegenerative disorder manifests with chorea, which involves irregular, uncontrollable movements in various parts of the body, including the hands, face, limbs, and torso, and is a hallmark sign of the disease.\n\n2. The option \"Resting tremor and rigidity\" is incorrect because these symptoms are primarily associated with Parkinson's disease, not Huntington's disease. \"Areflexia and muscle weakness\" is wrong as Huntington's disease does not typically present with areflexia (loss of reflexes) or generalized muscle weakness; instead, it features chorea and other specific motor symptoms. Lastly, \"Rapid muscle atrophy without cognitive decline\" is incorrect because Huntington's disease involves not only motor symptoms like chorea but also cognitive decline, which often appears alongside the motor symptoms as the disease progresses.",
       "kn": "KN1",
       "kn_explanation": "This question addresses the neurobiological basis of motor disorders and genetic neurodegenerative disease processes, aligning with KN1.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Glutamate"
       ],
       "answer": "Dopamine",
-      "explanation": "Parkinson’s disease motor symptoms are mainly due to degeneration of dopamine-producing cells in the substantia nigra, leading to dopamine deficiency.",
+      "explanation": "1. **Dopamine** is the correct answer because Parkinson’s disease is primarily characterized by the degeneration of dopamine-producing cells in the substantia nigra, which leads to a significant reduction in dopamine levels in the basal ganglia. This deficiency in dopamine is directly linked to the prominent motor symptoms of Parkinson's disease, including resting tremor, rigidity, bradykinesia, and postural instability.\n\n2. The other options are incorrect for the following reasons:\n- **GABA**: While GABA is an important inhibitory neurotransmitter in the brain, it is not primarily implicated in the motor symptoms of Parkinson’s disease.\n- **Acetylcholine**: Although low levels of acetylcholine are associated with gait and balance impairments in Parkinson's disease, it is not the primary neurotransmitter deficiency responsible for the motor symptoms.\n- **Glutamate**: Excessive glutamate activity has been linked to the progression of Parkinson's disease, but it is not a deficiency; thus, it does not account for the primary motor symptoms observed in the disorder.",
       "kn": "KN1",
       "kn_explanation": "This question focuses on neurochemical processes underlying Parkinson’s disease motor symptoms, fitting the neurobiological bases domain (KN1).",
       "difficulty": "easy",
@@ -69,7 +69,7 @@
         "Focal onset impaired awareness seizure"
       ],
       "answer": "Generalized onset non-motor seizure (absence seizure)",
-      "explanation": "Absence seizures involve brief lapses in consciousness with staring and sometimes rapid blinking, without convulsions.",
+      "explanation": "1. The correct answer is \"Generalized onset non-motor seizure (absence seizure)\" because this type of seizure is characterized by a brief loss of consciousness, often accompanied by a blank stare and rapid blinking, without any convulsive movements. In the scenario described, the patient exhibits these hallmark features, aligning perfectly with the definition of an absence seizure.\n\n2. The option \"Generalized tonic-clonic seizure\" is incorrect because this type of seizure involves convulsive movements, including a tonic phase (muscle stiffening) followed by a clonic phase (jerky movements), which are not present in the patient's presentation. \"Focal onset aware seizure\" is also incorrect as it does not involve a loss of consciousness; instead, the patient remains aware and alert during the seizure, which contradicts the symptoms described. Lastly, \"Focal onset impaired awareness seizure\" is incorrect because this type of seizure includes a change in consciousness but typically presents with more complex behaviors or automatisms, which are not indicated in the patient's symptoms of staring and rapid blinking without convulsive activity.",
       "kn": "KN1",
       "kn_explanation": "This assesses understanding of seizure classification by clinical presentation, falling under neurological disease and neurobiological bases (KN1).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Autoimmune destruction of insulin-producing pancreatic cells"
       ],
       "answer": "Reduced secretion of antidiuretic hormone leading to excessive urination and thirst",
-      "explanation": "Central diabetes insipidus results from low ADH secretion causing excessive urine output and thirst.",
+      "explanation": "1. The correct answer, \"Reduced secretion of antidiuretic hormone leading to excessive urination and thirst,\" accurately describes central diabetes insipidus. This condition occurs when there is a low level of antidiuretic hormone (ADH), which is responsible for regulating water excretion in the urine. As a result, individuals experience frequent and excessive urination, extreme thirst, dehydration, and other related symptoms.\n\n2. The option \"Excessive secretion of antidiuretic hormone causing fluid retention\" is incorrect because it describes a condition where there is too much ADH, which would lead to fluid retention rather than the excessive urination seen in diabetes insipidus. The statement \"Resistance of kidney to antidiuretic hormone causing low urine output\" is also incorrect, as it refers to nephrogenic diabetes insipidus, where the kidneys do not respond to ADH, resulting in low urine output, not central diabetes insipidus. Lastly, \"Autoimmune destruction of insulin-producing pancreatic cells\" is wrong because it pertains to Type 1 diabetes mellitus, which involves insulin and blood glucose regulation, not the secretion of ADH or the symptoms associated with diabetes insipidus.",
       "kn": "KN1",
       "kn_explanation": "This question covers endocrine neurobiology and hormone-related disorders, within KN1’s scope of physiological neurobehavioral disease processes.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Positron emission tomography (PET)"
       ],
       "answer": "Magnetic resonance imaging (MRI)",
-      "explanation": "MRI offers detailed 3D images and better detection of small brain lesions such as microhemorrhages compared to CT scans.",
+      "explanation": "1. **Correct Answer: Magnetic Resonance Imaging (MRI)**  \nMagnetic resonance imaging (MRI) is the correct answer because it produces detailed three-dimensional images of brain structures, allowing for the identification of structural changes such as microhemorrhages, contusions, and gliosis. MRI is preferred over other imaging techniques like CT scans due to its ability to provide more detailed and precise images of brain tissue without exposing patients to ionizing radiation.\n\n2. **Incorrect Options:**  \n- **Electroencephalography (EEG):** EEG measures electrical impulses in the brain and is primarily used to diagnose seizure disorders and assess brain activity, but it does not provide structural images of the brain.  \n- **Computerized Axial Tomography (CT scan):** While CT scans can identify abnormalities in brain density and are useful for quick imaging, they do not offer the same level of detail or capability to detect microhemorrhages as MRI.  \n- **Positron Emission Tomography (PET):** PET measures brain activity by assessing glucose consumption and provides functional information rather than detailed structural images, making it less suitable for detecting microhemorrhages compared to MRI.",
       "kn": "KN5",
       "kn_explanation": "This question addresses the applications and strengths of structural brain imaging, matching knowledge in brain imaging methods (KN5).",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "Acetylcholinesterase inhibitors"
       ],
       "answer": "Levodopa",
-      "explanation": "Levodopa is converted into dopamine in the brain and is most effective for treating bradykinesia in Parkinson’s disease.",
+      "explanation": "1. **Correct Answer: Levodopa**  \nLevodopa is the first-line medication for alleviating bradykinesia symptoms of Parkinson’s disease because it is converted to dopamine in the brain, directly addressing the deficiency of dopamine that causes these motor symptoms. It is particularly effective for treating bradykinesia and may also help reduce muscle rigidity and tremor, making it a primary treatment option for individuals with Parkinson's disease.\n\n2. **Incorrect Options:**  \n- **Dopamine agonists:** While dopamine agonists mimic dopamine at receptor sites and can be used to treat Parkinson’s disease, they are not the first-line treatment for bradykinesia; levodopa is preferred for its direct conversion to dopamine.\n- **Beta blockers:** Beta blockers are primarily used to manage cardiovascular conditions and are not indicated for treating the motor symptoms of Parkinson’s disease, including bradykinesia.\n- **Acetylcholinesterase inhibitors:** These medications are typically used to treat cognitive symptoms in neurocognitive disorders, such as Alzheimer's disease, and do not address the motor symptoms associated with Parkinson’s disease.",
       "kn": "KN2",
       "kn_explanation": "This question focuses on the pharmacological treatment mechanisms for neurological disorders, fitting drug classifications and effects (KN2).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "There is no difference; the terms are interchangeable"
       ],
       "answer": "PTS are provoked seizures occurring within one week of injury; PTE are seizures occurring after one week and are harder to treat",
-      "explanation": "Post-traumatic seizures occur within seven days after injury whereas post-traumatic epilepsy refers to recurrent seizures starting after that period and is more difficult to manage.",
+      "explanation": "1. The correct answer states that post-traumatic seizures (PTS) are provoked seizures occurring within one week of a traumatic brain injury (TBI), while post-traumatic epilepsy (PTE) refers to seizures that occur more than one week after the injury. This distinction is crucial because PTS are typically a direct result of the immediate effects of the injury, whereas PTE represents a chronic condition that may develop later and is generally more challenging to manage and treat effectively.\n\n2. The first incorrect option, \"PTS occur only years after injury, PTE occurs within one week,\" is wrong because PTS occur shortly after the injury (within one week), not years later. The second incorrect option, \"PTS involve only focal seizures; PTE involve generalized seizures,\" is incorrect as PTS can include various types of seizures, not limited to focal, while PTE can also present with different seizure types. Lastly, the third incorrect option, \"There is no difference; the terms are interchangeable,\" is incorrect because there is a clear distinction between the timing and treatment challenges associated with PTS and PTE, as outlined in the reference material.",
       "kn": "KN1",
       "kn_explanation": "This question addresses neurological sequelae and prognosis following brain injury, fitting neurobiological disease understanding (KN1).",
       "difficulty": "hard",
@@ -144,7 +144,7 @@
         "Excessive antidiuretic hormone secretion"
       ],
       "answer": "Genetic predisposition, being overweight, sedentary lifestyle, and age over 45",
-      "explanation": "Type 2 diabetes risk factors include genetic predisposition combined with lifestyle factors such as obesity, inactivity, and older age.",
+      "explanation": "1. The correct answer, \"Genetic predisposition, being overweight, sedentary lifestyle, and age over 45,\" identifies key risk factors for developing type 2 diabetes mellitus. The reference material states that type 2 diabetes occurs when the pancreas produces insufficient insulin or the body cannot effectively use the insulin produced. Risk factors include genetic predisposition, obesity, a lack of physical activity, and being over 45 years of age, all of which contribute to insulin resistance and impaired glucose metabolism.\n\n2. The option \"Autoimmune destruction of pancreatic beta cells\" is incorrect because this describes type 1 diabetes, where the immune system attacks insulin-producing cells, rather than type 2 diabetes. \"Primary insulin overproduction leading to hypoglycemia\" is also wrong, as type 2 diabetes is characterized by insufficient insulin production or resistance, not overproduction. Lastly, \"Excessive antidiuretic hormone secretion\" is not relevant to diabetes mellitus; it relates to conditions like diabetes insipidus, which affects water regulation rather than blood glucose levels.",
       "kn": "KN1",
       "kn_explanation": "This question relates to endocrine system disorders and their neurobiological and physiological risk factors, consistent with KN1.",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "Repetitive movements such as bicycle pedaling without aura"
       ],
       "answer": "Aura involving an unusual smell or taste, automatisms like lip-smacking, and impaired comprehension",
-      "explanation": "Temporal lobe complex partial seizures often begin with a sensory or emotional aura and include automatisms such as lip-smacking and impaired awareness.",
+      "explanation": "1. The correct answer, \"Aura involving an unusual smell or taste, automatisms like lip-smacking, and impaired comprehension,\" accurately describes features of a complex partial seizure originating in the temporal lobe. Temporal lobe seizures often begin with an aura, which can manifest as unusual sensory experiences such as strange tastes or smells. Additionally, they commonly feature automatisms, such as lip-smacking, and can lead to impaired comprehension during the seizure.\n\n2. The first incorrect option, \"Sudden loss of consciousness with tonic-clonic movements,\" describes generalized onset seizures rather than complex partial seizures, which do not typically involve such abrupt loss of consciousness or the tonic-clonic motor activity associated with grand mal seizures. The second incorrect option, \"Visual hallucinations like flashing lights with rapid eye blinking,\" is more characteristic of occipital lobe seizures, which involve visual disturbances rather than the specific symptoms associated with temporal lobe seizures. Lastly, the option \"Repetitive movements such as bicycle pedaling without aura\" pertains to frontal lobe seizures, which can involve motor activities but do not typically start with an aura, making it inconsistent with the features of a temporal lobe complex partial seizure.",
       "kn": "KN1",
       "kn_explanation": "This item evaluates knowledge of focal seizure semiology and neuroanatomical localization, key concepts in neurobehavioral disorders (KN1).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Mild headache relieved by physical activity"
       ],
       "answer": "Intense, throbbing unilateral head pain preceded by sensory or visual disturbances",
-      "explanation": "Migraine with aura involves unilateral throbbing pain often preceded by sensory or visual phenomena known as aura.",
+      "explanation": "1. The correct answer, \"Intense, throbbing unilateral head pain preceded by sensory or visual disturbances,\" accurately describes migraine headaches with aura, also known as classic migraines. These migraines are characterized by intense, throbbing pain typically on one side of the head and often preceded by sensory or visual disturbances, which can include phenomena such as flashing lights or visual patterns, aligning with the definition provided in the reference material.\n\n2. The first incorrect option, \"Bilateral dull headache without visual disturbances,\" is wrong because migraines with aura are specifically associated with unilateral (one-sided) pain and sensory or visual disturbances, not bilateral dull pain. The second incorrect option, \"Headache precipitated by neck injury with no nausea,\" is incorrect as migraines are not typically triggered by neck injury and are often accompanied by nausea. Lastly, the option \"Mild headache relieved by physical activity\" is incorrect because migraines are usually intense and can be worsened by physical activity rather than relieved by it.",
       "kn": "KN1",
       "kn_explanation": "This question addresses neurological symptomatology and neurochemical underpinnings of migraine headaches, relevant to KN1.",
       "difficulty": "easy",
@@ -189,7 +189,7 @@
         "Seizure activity detected only on EEG without clinical signs"
       ],
       "answer": "A single seizure lasting more than 5 minutes or multiple seizures without full recovery of consciousness between them",
-      "explanation": "Status epilepticus involves a prolonged seizure (typically >5 minutes) or recurrent seizures with no recovery between episodes and is a medical emergency.",
+      "explanation": "1. The correct answer, \"A single seizure lasting more than 5 minutes or multiple seizures without full recovery of consciousness between them,\" defines status epilepticus (SE) as it emphasizes the prolonged nature of seizure activity and the critical aspect of consciousness. According to the reference material, SE is characterized by either a single seizure lasting at least 5 minutes or recurrent seizures that occur without a return to consciousness, highlighting the urgency and potential for severe neurological damage associated with this condition.\n\n2. The first incorrect option, \"Seizures limited to focal motor activity lasting less than 30 seconds,\" is wrong because it describes a type of focal seizure that does not meet the criteria for SE, which requires prolonged seizure duration or multiple seizures without recovery. The second incorrect option, \"Repeated absence seizures with fully preserved consciousness,\" is incorrect because absence seizures, despite occurring repeatedly, do not involve significant loss of consciousness and thus do not fulfill the definition of SE. The third incorrect option, \"Seizure activity detected only on EEG without clinical signs,\" is incorrect as SE requires observable clinical signs or symptoms, whereas EEG findings alone do not constitute a diagnosis of SE without accompanying physical manifestations.",
       "kn": "KN1",
       "kn_explanation": "The question covers clinical diagnostic criteria and neurobiological emergency management of seizure disorders (KN1).",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "EEG assesses glucose metabolism to differentiate types of dementia"
       ],
       "answer": "EEG detects electrical impulses of neurons to diagnose seizure disorders and monitor brain activity",
-      "explanation": "EEG records the brain’s electrical activity to assist in diagnosing seizure disorders and other brain function abnormalities.",
+      "explanation": "1. The correct answer, \"EEG detects electrical impulses of neurons to diagnose seizure disorders and monitor brain activity,\" accurately reflects the primary function of electroencephalography (EEG). According to the reference material, EEG measures the electrical impulses used by neurons to communicate, which allows it to assist in diagnosing seizure disorders and to identify changes in brain activity in response to stimuli. This capability is essential for understanding various neurological conditions.\n\n2. The first incorrect option, \"EEG directly images structural brain abnormalities such as tumors,\" is wrong because EEG does not provide images of brain structures; instead, it records electrical activity. The second incorrect option, \"EEG measures regional cerebral blood flow using radioactive tracers,\" is incorrect because EEG does not assess blood flow; this function is associated with functional imaging techniques like PET and SPECT. Lastly, the option \"EEG assesses glucose metabolism to differentiate types of dementia\" is also incorrect, as EEG does not measure glucose metabolism; this task is performed by techniques like fluorodeoxyglucose PET (FDG-PET), which is specifically used for assessing metabolic activity in the brain.",
       "kn": "KN5",
       "kn_explanation": "This question focuses on the principle and clinical applications of EEG, a key neurodiagnostic tool covered under neurological diagnostic tests (KN5).",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "Functional magnetic resonance imaging (fMRI)"
       ],
       "answer": "Diffusion tensor imaging (DTI)",
-      "explanation": "DTI is an MRI-based technique that measures water molecule diffusion to assess white matter tract integrity.",
+      "explanation": "1. **Correct Answer Explanation:**\n   Diffusion tensor imaging (DTI) is the correct answer because it is specifically designed to assess the structural integrity of white matter tracts in the brain by tracking the diffusion of water molecules along myelinated axons. This technique evaluates abnormalities in the rate and direction of water diffusion, making it particularly useful for studying conditions like traumatic brain injury and neurocognitive disorders.\n\n2. **Incorrect Options Explanation:**\n   - **Computerized axial tomography (CT):** CT is primarily used to identify structural changes in brain tissue density and is not focused on assessing white matter integrity or water diffusion.\n   - **Positron emission tomography (PET):** PET measures brain activity by assessing glucose metabolism using radioactive tracers, rather than examining the structural integrity of white matter tracts.\n   - **Functional magnetic resonance imaging (fMRI):** fMRI assesses brain activity by measuring changes in blood flow and oxygen consumption, not the structural characteristics of white matter tracts as DTI does.",
       "kn": "KN5",
       "kn_explanation": "This question tests knowledge of advanced neuroimaging modalities that evaluate brain microstructure, an important topic in neurological diagnostic methods (KN5).",
       "difficulty": "medium",
@@ -234,11 +234,51 @@
         "Increased GABA activity"
       ],
       "answer": "Low levels of norepinephrine",
-      "explanation": "Low norepinephrine contributes to non-motor symptoms like depression, cognitive deficits, and sleep disturbances in Parkinson’s disease.",
+      "explanation": "1. \"Low levels of norepinephrine\" is the correct answer because research indicates that low norepinephrine levels contribute to non-motor symptoms in Parkinson’s disease, including depression, cognitive deficits, and sleep disturbances. This neurotransmitter's deficiency is associated with various non-motor symptoms that significantly impact the quality of life in individuals with Parkinson’s disease.\n\n2. The option \"Excess glutamate activity\" is incorrect because, while glutamate is implicated in the progression of Parkinson’s disease, it primarily affects motor symptoms rather than being directly linked to non-motor symptoms like depression. \"High acetylcholine levels\" is also incorrect because low levels of acetylcholine are associated with cognitive decline and gait impairments in Parkinson’s disease, rather than high levels. Lastly, \"Increased GABA activity\" is incorrect as GABA (gamma-aminobutyric acid) is typically known for its inhibitory effects on neuronal activity, and its role is not specifically tied to the non-motor symptoms of Parkinson’s disease in the context provided.",
       "kn": "KN1",
       "kn_explanation": "This tests understanding of neurochemical contributions to Parkinson’s disease symptoms beyond dopamine, relevant to the biological bases of neurological diseases (KN1).",
       "difficulty": "medium",
       "quality_comment": "Includes plausible neurotransmitter options, requiring integration of neurochemical and clinical symptom knowledge."
+    },
+    {
+      "stem": "What type of stroke is characterized by bleeding in the brain, often due to a ruptured blood vessel?",
+      "options": [
+        "Ischemic stroke",
+        "Hemorrhagic stroke",
+        "Transient ischemic attack (TIA)",
+        "Cerebral edema"
+      ],
+      "answer": "Hemorrhagic stroke",
+      "explanation": "1. \"Hemorrhagic stroke\" is the correct answer because it is defined as a type of stroke that occurs due to bleeding in the brain, which typically results from a rupture in a cerebral artery. This bleeding can lead to a loss of neurological functioning due to the disruption of blood flow and the pressure it exerts on surrounding brain tissue.\n\n2. \n- **Ischemic stroke**: This type of stroke is caused by a blockage in a cerebral artery, usually due to a blood clot, rather than bleeding in the brain.\n- **Transient ischemic attack (TIA)**: A TIA is characterized by a temporary blockage of blood flow to the brain that causes short-lived symptoms, not bleeding, and it serves as a warning sign for potential future strokes.\n- **Cerebral edema**: Cerebral edema refers to the swelling of brain tissue due to various causes, including injury or stroke, but it is not a type of stroke itself and does not specifically involve bleeding.",
+      "difficulty": "easy",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to the neurobiological bases of vascular brain injury and neurological disease processes, fitting KN1.",
+      "quality_comment": "This question effectively tests knowledge of stroke types by contrasting hemorrhagic and ischemic strokes.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following conditions is a temporary episode of neurological dysfunction caused by a brief interruption of blood flow to the brain, often considered a warning sign for future strokes?",
+      "options": [
+        "Cerebral hemorrhage",
+        "Transient ischemic attack (TIA)",
+        "Ischemic stroke",
+        "Stroke in evolution"
+      ],
+      "answer": "Transient ischemic attack (TIA)",
+      "explanation": "1. **Correct Answer: Transient Ischemic Attack (TIA)**  \nA transient ischemic attack (TIA) is a temporary episode of neurological dysfunction caused by a brief interruption of blood flow to the brain. TIAs are medical emergencies and serve as a warning sign that a more severe stroke may occur in the future, distinguishing them from more permanent conditions resulting from strokes.\n\n2. **Incorrect Options:**\n- **Cerebral Hemorrhage:** This refers to bleeding in the brain due to a rupture in a cerebral artery, which leads to immediate neurological deficits rather than a temporary interruption of blood flow.\n- **Ischemic Stroke:** This condition involves a more prolonged blockage of blood flow to the brain due to a blood clot, resulting in lasting neurological damage rather than a temporary episode.\n- **Stroke in Evolution:** This term describes a stroke that is in the process of developing, indicating ongoing neurological impairment rather than a brief, reversible episode like a TIA.",
+      "difficulty": "hard",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to the neurobiological bases of vascular brain injury and neurological disease processes, fitting KN1.",
+      "quality_comment": "This question challenges the test-taker to differentiate between types of cerebrovascular events, emphasizing the significance of TIAs.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -553,6 +553,17 @@ strong, b {
   }
   .tt-word {
     transition: background-color 120ms ease, box-shadow 120ms ease;
+    cursor: inherit;
+  }
+  .tt-read-along-root :is(p, li, table, h1, h2, h3, blockquote) {
+    cursor: pointer;
+  }
+  .tt-block-active {
+    background-color: color-mix(in oklch, var(--brand-highlight) 16%, transparent);
+    box-shadow:
+      inset 3px 0 0 color-mix(in oklch, var(--brand-highlight) 70%, transparent),
+      0 0 0 1px color-mix(in oklch, var(--brand-highlight) 25%, transparent);
+    border-radius: 0.5rem;
   }
   .tt-word-active {
     background-color: color-mix(in oklch, var(--brand-highlight) 45%, transparent);

@@ -9,7 +9,7 @@
         "Complete inability to recognize faces of familiar individuals"
       ],
       "answer": "Nonfluent, labored speech with relatively intact comprehension",
-      "explanation": "Broca’s aphasia is characterized by expressive, nonfluent speech that is slow and labored, but comprehension remains relatively intact.",
+      "explanation": "1. The correct answer, \"Nonfluent, labored speech with relatively intact comprehension,\" describes the clinical presentation associated with damage to Broca's area, which is located in the dominant (usually left) frontal lobe. Individuals with Broca's aphasia, also known as expressive aphasia, exhibit slow and effortful speech that primarily consists of nouns and verbs, while their ability to comprehend spoken and written language remains relatively unaffected.\n\n2. The first incorrect option, \"Fluent speech with impaired comprehension and word substitutions,\" describes Wernicke’s aphasia, which results from damage to Wernicke’s area in the temporal lobe, not Broca's area. The second incorrect option, \"Loss of writing skills and right-left disorientation,\" relates to Gerstmann’s syndrome, which occurs due to damage to the dominant parietal lobe and is not associated with Broca's area. The third incorrect option, \"Complete inability to recognize faces of familiar individuals,\" refers to prosopagnosia, which is caused by bilateral lesions in the occipitotemporal junction and is unrelated to Broca's area and its functions.",
       "kn": "KN1",
       "kn_explanation": "This question pertains to neurobiological bases of language processing and neurological deficits, aligned with biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Ventrolateral prefrontal cortex (VLPFC)"
       ],
       "answer": "Dorsolateral prefrontal cortex (DLPFC)",
-      "explanation": "The DLPFC is crucial for executive functions including working memory and goal-directed behavior; damage causes related impairments.",
+      "explanation": "1. The **Dorsolateral prefrontal cortex (DLPFC)** is the correct answer because it is primarily responsible for most executive functions, including goal-directed behavior and working memory. Damage to the DLPFC can lead to impairments in these areas, resulting in deficits in judgment, insight, and overall executive functioning.\n\n2. The **Ventromedial prefrontal cortex (VMPFC)** is incorrect because it is more involved in decision-making, social cognition, and emotion regulation rather than specifically in goal-directed behavior and working memory. The **Orbitofrontal cortex (OFC)** is also incorrect as it primarily plays a role in emotion regulation and social behaviors, not directly in executive functions or working memory. Lastly, the **Ventrolateral prefrontal cortex (VLPFC)** is wrong because it is associated with decision-making and emotional self-control but does not encompass the broader executive functions and working memory deficits characteristic of DLPFC damage.",
       "kn": "KN1",
       "kn_explanation": "This assesses knowledge of neuroanatomical correlates of executive functions, under neurological and genetic bases of behavior (KN1).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Primary motor cortex in the left frontal lobe"
       ],
       "answer": "Wernicke’s area in the left temporal lobe",
-      "explanation": "Wernicke’s aphasia results from damage to Wernicke’s area and is characterized by fluent but nonsensical speech with impaired comprehension and repetition.",
+      "explanation": "1. \"Wernicke’s area in the left temporal lobe\" is the correct answer because damage to this area results in Wernicke’s aphasia, characterized by fluent speech that includes many word substitutions, impaired comprehension of spoken and written language, and impaired repetition. Although individuals with Wernicke’s aphasia can produce grammatically correct sentences and maintain prosody, their speech lacks meaningful content, which aligns with the patient's symptoms.\n\n2. The incorrect options are as follows:\n\n- **Broca's area in the left frontal lobe**: Damage to Broca's area leads to Broca’s aphasia, which is marked by nonfluent speech, slow and labored production, and relatively intact comprehension, contradicting the fluent speech observed in the patient.\n\n- **Right parietal lobe**: Damage to the right parietal lobe typically results in contralateral neglect and sensory processing issues rather than the language deficits described in the patient’s presentation.\n\n- **Primary motor cortex in the left frontal lobe**: Damage to the primary motor cortex affects motor functions and movement initiation, not language comprehension or production, and would not result in the fluent speech and language impairments exhibited by the patient.",
       "kn": "KN1",
       "kn_explanation": "This question tests neurological localization of language comprehension deficits, a core concept of biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Contralateral neglect"
       ],
       "answer": "Gerstmann’s syndrome",
-      "explanation": "Gerstmann’s syndrome includes those specific symptoms due to left (dominant) parietal lobe damage.",
+      "explanation": "1. **Gerstmann’s syndrome** is the correct answer because it is specifically caused by damage to the dominant parietal lobe and is characterized by symptoms including right-left disorientation, finger agnosia (the inability to identify one’s own fingers), agraphia (loss of writing skills), and acalculia (loss of arithmetic skills). These symptoms directly align with the description provided in the reference material, confirming Gerstmann’s syndrome as the appropriate choice.\n\n2. **Conduction aphasia** is incorrect because it results from damage to the arcuate fasciculus, which connects Wernicke’s area to Broca’s area, and is characterized by fluent speech with impaired repetition and comprehension, rather than the specific deficits seen in Gerstmann’s syndrome. **Limb-kinetic apraxia** is also incorrect as it involves an inability to make precise, coordinated movements due to damage to the dominant parietal lobe, but does not encompass the broader cognitive deficits associated with Gerstmann’s syndrome. Lastly, **contralateral neglect** is incorrect because it typically arises from damage to the right (nondominant) parietal lobe, leading to neglect of the left side of the body and stimuli, rather than the specific cognitive impairments seen in Gerstmann’s syndrome.",
       "kn": "KN1",
       "kn_explanation": "The question evaluates knowledge of neurological syndromes linked to specific brain regions, fitting biological bases of behavior (KN1).",
       "difficulty": "hard",
@@ -69,7 +69,7 @@
         "Broca’s aphasia"
       ],
       "answer": "Cortical blindness",
-      "explanation": "Cortical blindness results from damage to the primary visual cortex despite intact ocular structures.",
+      "explanation": "1. \"Cortical blindness\" is the correct answer because it occurs when the primary visual cortex in the occipital lobe is damaged while the eyes and optic nerves remain intact. This condition results in the inability to consciously see visual stimuli, despite having functional visual pathways, leading to a lack of awareness of visual information.\n\n2. The incorrect options are as follows:\n- **Prosopagnosia**: This condition is characterized by an inability to recognize familiar faces and is caused by bilateral lesions in the occipitotemporal junction, not damage to the primary visual cortex alone.\n- **Tactile agnosia**: This refers to the inability to recognize objects by touch and is associated with damage to the parietal lobe, specifically the somatosensory cortex, rather than the occipital lobe.\n- **Broca’s aphasia**: Also known as expressive aphasia, this disorder arises from damage to Broca’s area in the frontal lobe, affecting speech production and language expression, which is unrelated to visual processing in the occipital lobe.",
       "kn": "KN1",
       "kn_explanation": "This question tests neuroanatomical understanding of visual processing deficits, within the biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Ventromedial prefrontal cortex (VMPFC)"
       ],
       "answer": "Orbitofrontal cortex (OFC)",
-      "explanation": "The OFC is key for emotion regulation and social behavior; damage produces the listed social and emotional deficits.",
+      "explanation": "1. The correct answer is the **orbitofrontal cortex (OFC)** because damage to this area is associated with impulsivity, social inappropriateness, lack of empathy, and emotional dysregulation. The OFC plays a crucial role in emotion regulation and social behaviors, and when it is impaired, individuals may exhibit behaviors such as immature conduct, inappropriate jocularity, and aggressive actions, all of which reflect difficulties in managing emotions and social interactions.\n\n2. The **ventrolateral prefrontal cortex (VLPFC)** is incorrect because it primarily contributes to decision-making and emotional self-control, and damage here leads to impairments in these areas rather than impulsivity or social inappropriateness. The **dorsolateral prefrontal cortex (DLPFC)** is also incorrect; while it is involved in executive functions and goal-directed behavior, damage results in impaired judgment and apathy, not specifically impulsivity or emotional dysregulation. Finally, the **ventromedial prefrontal cortex (VMPFC)** is not the correct answer because damage to this area affects decision-making and social cognition, leading to moral judgment impairments rather than the impulsivity and emotional dysregulation characteristic of OFC damage.",
       "kn": "KN1",
       "kn_explanation": "This question addresses the neurobiological underpinnings of emotional and social regulation functions, aligned with KN1.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Loss of color vision and visual hallucinations"
       ],
       "answer": "Denial of illness and neglect of the left side of the body",
-      "explanation": "Right parietal lobe damage commonly causes contralateral (left) neglect and anosognosia (denial of illness).",
+      "explanation": "1. The correct answer, \"Denial of illness and neglect of the left side of the body,\" is associated with damage to the right parietal lobe, which can lead to *contralateral neglect* (neglect of the left side of the body) and *anosognosia* (denial of one’s illness). This is consistent with the reference material, which states that right parietal lobe damage typically results in neglect of stimuli on the left side.\n\n2. The incorrect options are as follows:\n\n- **Inability to repeat phrases and impaired comprehension**: These symptoms are indicative of damage to Wernicke’s area or Broca’s area, which are located in the temporal and frontal lobes, respectively, rather than the parietal lobe.\n  \n- **Nonfluent speech and anomia**: These symptoms are characteristic of *Broca’s aphasia*, which arises from damage to Broca’s area in the left frontal lobe, not the right parietal lobe.\n\n- **Loss of color vision and visual hallucinations**: These symptoms are associated with damage to the occipital lobe, which processes visual information, rather than the parietal lobe.",
       "kn": "KN1",
       "kn_explanation": "This focuses on sensory and spatial neuropsychological deficits following lesion localization, within biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Primary region for logical and analytical language functions"
       ],
       "answer": "Essential for emotional prosody and understanding pragmatics",
-      "explanation": "The right hemisphere governs emotional tone and pragmatic use of language, while the left hemisphere is dominant for grammatical and analytical language.",
+      "explanation": "1. The correct answer, \"Essential for emotional prosody and understanding pragmatics,\" accurately reflects the role of the right hemisphere in language because it is responsible for the expression of emotion through variations in speech (emotional prosody) and for the use and understanding of language in social contexts (pragmatics). While the left hemisphere is dominant for most language functions, including grammar and syntax, the right hemisphere contributes significantly to how language is used in social interactions and emotional expression.\n\n2. The option \"Dominant for producing grammatical and syntactic language\" is incorrect because grammatical and syntactic functions are primarily associated with the left hemisphere, which is dominant for language in most individuals. The statement \"Controls the majority of phoneme discrimination in adults learning their first language\" is also wrong, as the left hemisphere is primarily responsible for phoneme discrimination, particularly in language acquisition. Lastly, \"Primary region for logical and analytical language functions\" is incorrect because logical and analytical thinking is a function of the left hemisphere, which is where most language processing occurs, rather than the right hemisphere.",
       "kn": "KN1",
       "kn_explanation": "Examines lateralization and specialization of brain functions related to language processing, central to biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Correctly identifying the spoon verbally and by touch with either hand"
       ],
       "answer": "Unable to verbally identify the spoon but able to pick it up with the left hand",
-      "explanation": "Information from the left visual field goes to the right hemisphere, which in split-brain patients cannot produce speech but can guide the left hand to select the object.",
+      "explanation": "1. The correct answer, \"Unable to verbally identify the spoon but able to pick it up with the left hand,\" reflects the unique functioning of split-brain patients. When a picture of a spoon is presented to the left visual field, the visual information is processed by the right hemisphere, which does not have direct access to language capabilities. Consequently, the patient cannot verbally identify the spoon, but they can use their left hand (controlled by the right hemisphere) to pick it up.\n\n2. The first incorrect option, \"Verbally declaring they see a spoon and picking it up with the right hand,\" is wrong because the left hemisphere, which controls verbal communication and the right hand, does not receive the visual information when it is presented to the left visual field. The second incorrect option, \"Inability to recognize or pick up the spoon with either hand,\" is incorrect because while the patient cannot verbally identify the spoon, they can still use their left hand to pick it up, as the right hemisphere can process the visual information. Lastly, the option \"Correctly identifying the spoon verbally and by touch with either hand\" is incorrect because the right hemisphere, which processes the visual information, lacks the language function necessary for verbal identification, thus making it impossible for the patient to verbally identify the spoon.",
       "kn": "KN1",
       "kn_explanation": "Tests knowledge of cerebral lateralization and split-brain research findings relating to sensory processing and language, within biological bases of behavior (KN1).",
       "difficulty": "hard",
@@ -144,7 +144,7 @@
         "Right dorsolateral prefrontal cortex"
       ],
       "answer": "Left dominant parietal lobe causing ideomotor apraxia",
-      "explanation": "Ideomotor apraxia results from left parietal lobe damage and is characterized by difficulty imitating or performing motor activities on command.",
+      "explanation": "1. The correct answer is \"Left dominant parietal lobe causing ideomotor apraxia\" because the left parietal lobe is responsible for the ability to plan and execute purposeful movements. Damage to this area can lead to ideomotor apraxia, which specifically impairs a person's ability to imitate motor activities or perform them in response to verbal commands, such as \"pretend to comb your hair.\"\n\n2. The \"Right temporal lobe\" is incorrect because it primarily processes auditory information and is not involved in the execution or imitation of motor activities. The \"Left occipital lobe\" is wrong as it is responsible for processing visual information, and damage here would not affect motor imitation. Lastly, the \"Right dorsolateral prefrontal cortex\" is incorrect because, while it contributes to executive functions and decision-making, it does not specifically relate to the ability to imitate motor actions as the parietal lobe does.",
       "kn": "KN1",
       "kn_explanation": "This focuses on neurological motor planning deficits based on lesion location, consistent with biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "The left hemisphere controls sensory functions; the right hemisphere controls motor functions"
       ],
       "answer": "The right hemisphere controls most functions of the left side of the body and vice versa",
-      "explanation": "Typically, each hemisphere controls motor and sensory function contralaterally, with the right hemisphere controlling the left body side and vice versa.",
+      "explanation": "1. The statement \"The right hemisphere controls most functions of the left side of the body and vice versa\" is correct because, as noted in the reference material, for most sensory and motor functions, the right hemisphere is responsible for controlling the left side of the body, while the left hemisphere controls the right side. This contralateral organization is a fundamental aspect of brain lateralization and functional specialization.\n\n2. The option \"The left hemisphere controls the left side of the body; the right hemisphere controls the right side\" is incorrect because it misrepresents the contralateral control principle; each hemisphere controls the opposite side of the body. The statement \"Both hemispheres equally control sensory and motor functions on both body sides\" is wrong because it fails to acknowledge the distinct lateralization, where one hemisphere is primarily responsible for each side. Lastly, \"The left hemisphere controls sensory functions; the right hemisphere controls motor functions\" is incorrect as both hemispheres are involved in both sensory and motor functions but have specific lateralized roles; the left hemisphere is generally dominant for language and analytical tasks, while the right hemisphere excels in holistic and spatial tasks.",
       "kn": "KN1",
       "kn_explanation": "This question pertains to the neuroanatomical organization of motor and sensory pathways, falling under biological bases of behavior (KN1).",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Visual field deficits and difficulty recognizing faces"
       ],
       "answer": "Impaired moral judgment, reduced empathy, blunted emotional responses, and confabulation",
-      "explanation": "Damage to the VMPFC causes impaired decision-making and moral judgment, reduced social cognition (like empathy), blunted emotions, and confabulation.",
+      "explanation": "1. The correct answer, \"Impaired moral judgment, reduced empathy, blunted emotional responses, and confabulation,\" is associated with damage to the ventromedial prefrontal cortex (VMPFC). According to the reference material, the VMPFC is involved in decision-making, social cognition, memory, and emotion regulation; damage to this area can lead to deficits in moral judgment, a lack of empathy, blunted emotional responses, and confabulation, which is the fabrication of memories without the intention to deceive.\n\n2. The first incorrect option, \"Nonfluent aphasia, impaired repetition, and word substitutions,\" is wrong because these symptoms are characteristic of damage to Broca’s area, not the VMPFC. The second incorrect option, \"Severe memory loss, inability to form new memories, and spatial disorientation,\" is incorrect as these symptoms are more typical of damage to the hippocampus or related structures involved in memory, rather than the VMPFC. Lastly, the option \"Visual field deficits and difficulty recognizing faces\" is incorrect because these symptoms are associated with damage to the occipital lobe or the fusiform gyrus, not the VMPFC, which does not primarily handle visual processing or face recognition.",
       "kn": "KN1",
       "kn_explanation": "This question assesses knowledge of functional localization within the prefrontal cortex related to decision-making and social cognition, consistent with biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Regulates emotional responses and social behavior"
       ],
       "answer": "Initiates voluntary movements and activates during movement imagination or observation",
-      "explanation": "The primary motor cortex initiates purposeful, voluntary movements and is active during both movement execution and motor imagery or observation.",
+      "explanation": "1. The correct answer, \"Initiates voluntary movements and activates during movement imagination or observation,\" accurately describes the primary motor cortex's function. The primary motor cortex is responsible for the initiation of purposeful movements and is engaged not only when individuals execute movements but also when they imagine performing them or observe others performing them. This highlights its critical role in both active motor control and the mental representation of movement.\n\n2. The first incorrect option, \"Processes sensory input from the body including touch and temperature,\" is wrong because this function is attributed to the somatosensory cortex, not the primary motor cortex. The second option, \"Processes auditory information and language comprehension,\" is incorrect as it pertains to the auditory cortex and areas like Wernicke’s area, which are involved in language processing, rather than the primary motor cortex. Lastly, the option \"Regulates emotional responses and social behavior\" is incorrect because this function is primarily associated with areas such as the orbitofrontal cortex and the ventromedial prefrontal cortex, not the primary motor cortex.",
       "kn": "KN1",
       "kn_explanation": "This question evaluates understanding of motor cortex function in movement control, a core biological bases of behavior content (KN1).",
       "difficulty": "easy",
@@ -204,11 +204,51 @@
         "Global aphasia"
       ],
       "answer": "Conduction aphasia",
-      "explanation": "Damage to the arcuate fasciculus disrupts communication between Broca’s and Wernicke’s areas, causing fluent speech and comprehension but impaired repetition and errors.",
+      "explanation": "1. \"Conduction aphasia\" is the correct answer because it is specifically characterized by relatively preserved comprehension of language, impaired repetition, and fluent speech that contains numerous errors. This disorder results from damage to the arcuate fasciculus, which connects Wernicke’s area (responsible for language comprehension) to Broca’s area (involved in speech production). Individuals with conduction aphasia can understand language but struggle to repeat phrases accurately, leading to fluent yet nonsensical speech.\n\n2. **Broca’s aphasia** is incorrect because it is characterized by nonfluent speech, slow and labored output, and relatively intact comprehension, not fluent speech with errors. **Wernicke’s aphasia** is also incorrect as it involves impaired comprehension and fluent speech filled with nonsensical word substitutions, rather than preserved comprehension. **Global aphasia** is incorrect because it entails significant impairments in both comprehension and production of speech, rather than the specific pattern of preserved comprehension seen in conduction aphasia.",
       "kn": "KN1",
       "kn_explanation": "This assesses neuroanatomical pathways involved in language processing, fitting biological bases of behavior (KN1).",
       "difficulty": "medium",
       "quality_comment": "The question effectively differentiates between various aphasia types relying on lesion localization."
+    },
+    {
+      "stem": "Which of the following clinical presentations is most likely to occur following damage to Wernicke's area in the dominant hemisphere?",
+      "options": [
+        "Nonfluent, labored speech with relatively intact comprehension",
+        "Fluent speech with impaired comprehension and nonsensical output",
+        "Complete inability to recognize faces of familiar individuals",
+        "Loss of writing skills and right-left disorientation"
+      ],
+      "answer": "Fluent speech with impaired comprehension and nonsensical output",
+      "explanation": "1. The correct answer, \"Fluent speech with impaired comprehension and nonsensical output,\" accurately describes the clinical presentation of Wernicke's aphasia, which results from damage to Wernicke's area in the dominant hemisphere. Individuals with Wernicke's aphasia exhibit fluent speech that is often filled with word substitutions and errors, leading to nonsensical output, while their comprehension of both written and spoken language is significantly impaired.\n\n2. The option \"Nonfluent, labored speech with relatively intact comprehension\" is incorrect because it describes Broca's aphasia, which is characterized by slow, effortful speech and better comprehension. \"Complete inability to recognize faces of familiar individuals\" is wrong as it refers to prosopagnosia, associated with damage to the occipitotemporal junction, not Wernicke's area. Lastly, \"Loss of writing skills and right-left disorientation\" is incorrect because it pertains to Gerstmann's syndrome, which results from damage to the left parietal lobe, not Wernicke's area.",
+      "difficulty": "easy",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to neurobiological bases of language processing and neurological deficits, aligned with biological bases of behavior (KN1).",
+      "quality_comment": "This question effectively tests knowledge of aphasia types and their associated symptoms.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "A patient presents with the ability to speak in long, complex sentences but makes little sense and has difficulty understanding questions. Which area of the brain is most likely affected?",
+      "options": [
+        "Broca's area",
+        "Wernicke's area",
+        "Angular gyrus",
+        "Hippocampus"
+      ],
+      "answer": "Wernicke's area",
+      "explanation": "1. \"Wernicke's area\" is the correct answer because it is associated with receptive language functions, including comprehension of spoken and written language. Damage to this area results in Wernicke's aphasia, characterized by fluent but nonsensical speech and impaired understanding of questions, which matches the patient's symptoms of speaking in long, complex sentences that lack meaning and difficulty comprehending questions.\n\n2. \"Broca's area\" is incorrect because damage to this area leads to Broca's aphasia, which is characterized by nonfluent speech and relatively intact comprehension, opposite to the patient's presentation. The \"angular gyrus\" is not the correct answer as it is involved in language processing and reading but does not specifically account for the fluent yet nonsensical speech described. Lastly, the \"hippocampus\" is unrelated to language production or comprehension; it primarily plays a role in memory formation, and damage here would not produce the specific symptoms seen in this patient.",
+      "difficulty": "hard",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to neurobiological bases of language processing and neurological deficits, aligned with biological bases of behavior (KN1).",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of language processing areas in the brain to a clinical scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -9,14 +9,14 @@
         "T-scores are raw scores without conversion and do not indicate clinical significance"
       ],
       "answer": "T-scores around 50 are considered normal, and scores above 65 are clinically significant",
-      "explanation": "In the MMPI-2, raw scores are converted to T-scores with a mean of 50 and SD of 10; scores above 65 are generally considered clinically significant.",
+      "explanation": "1. The correct answer, \"T-scores around 50 are considered normal, and scores above 65 are clinically significant,\" accurately reflects the interpretation of T-scores in the MMPI-2. According to the reference material, T-scores have a mean of 50 and a standard deviation of 10, meaning that scores near 50 indicate typical functioning, while scores of 65 and above are deemed clinically significant, suggesting potential psychopathology or personality disorders.\n\n2. The first incorrect option states, \"T-scores below 30 indicate severe pathology, scores near 50 are borderline.\" This is incorrect because the reference material does not define T-scores below 30 as indicating severe pathology; instead, it mentions that low scores (under 35 or 40) may have clinical meaning but does not classify them as severe pathology. The second incorrect option claims, \"T-scores above 70 are borderline, while those near 40 are clinically significant.\" This is wrong because T-scores above 70 are typically considered clinically significant, not borderline, and scores near 40 do not indicate clinical significance according to the material. Lastly, the third incorrect option states, \"T-scores are raw scores without conversion and do not indicate clinical significance.\" This is incorrect because T-scores are indeed derived from raw scores through conversion and are critical for indicating clinical significance, as outlined in the reference material.",
       "kn": "KN32",
       "kn_explanation": "This question targets knowledge of commonly used instruments and interpretation of test scores, fitting with assessment methods and their appropriate use (KN32).",
       "difficulty": "medium",
       "quality_comment": "The question is clearly phrased, and distractors present plausible but incorrect interpretations minimizing guessing."
     },
     {
-      "stem": "A patient’s MMPI-2 profile shows elevated scores on scales 1 (Hypochondriasis) and 3 (Hysteria) with a notably lower score on scale 2 (Depression). Which code type best describes this pattern?",
+      "stem": "A patient\u2019s MMPI-2 profile shows elevated scores on scales 1 (Hypochondriasis) and 3 (Hysteria) with a notably lower score on scale 2 (Depression). Which code type best describes this pattern?",
       "options": [
         "Conversion V (Conversion valley)",
         "Psychotic V (Paranoid valley)",
@@ -24,14 +24,14 @@
         "Two-point code 4-9"
       ],
       "answer": "Conversion V (Conversion valley)",
-      "explanation": "The Conversion V pattern involves elevated scales 1 and 3 with a lower 2, indicating psychological distress expressed as somatic symptoms.",
+      "explanation": "1. The correct answer is \"Conversion V (Conversion valley)\" because this code type is characterized by elevated scores on scales 1 (Hypochondriasis) and 3 (Hysteria) with a notably lower score on scale 2 (Depression). This pattern indicates that the individual is expressing psychological problems through somatic complaints rather than through depressive symptoms, aligning perfectly with the definition of the Conversion V.\n\n2. The option \"Psychotic V (Paranoid valley)\" is incorrect because this code type is associated with elevated scores on scales 6 (Paranoia) and 8 (Schizophrenia) along with a lower score on scale 7 (Psychasthenia), which does not match the elevated scales in this scenario. \"Neurotic triad\" is also incorrect, as it involves elevated scores on scales 1 (Hypochondriasis), 2 (Depression), and 3 (Hysteria), which is not the case here since scale 2 is lower. Finally, the option \"Two-point code 4-9\" is wrong because it refers to elevated scores on scales 4 (Psychopathic Deviate) and 9 (Hypomania), which are unrelated to the elevated scores of scales 1 and 3 in this profile.",
       "kn": "KN32",
       "kn_explanation": "This tests knowledge of scale interpretation and code types specific to MMPI-2 clinical scales, falling under usage of commonly used instruments (KN32).",
       "difficulty": "hard",
       "quality_comment": "Distractors include other code types with close but distinct scale configurations, increasing the need for specific content knowledge."
     },
     {
-      "stem": "Which MMPI-2 validity scale is most useful for detecting an examinee’s fixed pattern of yea- or nay-saying?",
+      "stem": "Which MMPI-2 validity scale is most useful for detecting an examinee\u2019s fixed pattern of yea- or nay-saying?",
       "options": [
         "TRIN (True Response Inconsistency)",
         "VRIN (Variable Response Inconsistency)",
@@ -39,7 +39,7 @@
         "L (Lie)"
       ],
       "answer": "TRIN (True Response Inconsistency)",
-      "explanation": "The TRIN scale detects a fixed response pattern such as consistent yea- or nay-saying to items with opposite content, indicating invalid responding.",
+      "explanation": "1. \"TRIN (True Response Inconsistency)\" is the correct answer because it specifically detects a fixed pattern of responding, particularly when an examinee answers pairs of items with opposite content in the same way, indicating a tendency to either agree or disagree uniformly regardless of the actual content. This pattern is commonly referred to as yea-saying or nay-saying, which is precisely what the TRIN scale assesses.\n\n2. The incorrect options are as follows:\n- **VRIN (Variable Response Inconsistency):** This scale detects random responding by identifying inconsistencies in answers to paired items that have similar or opposite content, rather than a fixed pattern of responding.\n- **F (Infrequency):** The F scale identifies overreporting of symptoms through infrequent responses in the general population, focusing on unusual or exaggerated responses rather than consistent answering patterns.\n- **L (Lie):** The L scale is designed to detect underreporting of symptoms, indicating an attempt to present oneself in an overly favorable light, without addressing the consistency of responses across items.",
       "kn": "KN32",
       "kn_explanation": "Understanding validity scales is essential to interpreting the MMPI-2 and falls under knowledge of assessment instruments and their appropriate use (KN32).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "1 (Hypochondriasis) and 3 (Hysteria)"
       ],
       "answer": "4 (Psychopathic Deviate) and 9 (Hypomania)",
-      "explanation": "The 4-9 code type relates to impulsivity, social alienation, antisocial behavior, and substance use.",
+      "explanation": "1. The correct answer is \"4 (Psychopathic Deviate) and 9 (Hypomania)\" because this two-point code is specifically associated with impulsive, narcissistic, and antisocial tendencies, which are often linked to substance abuse. The Psychopathic Deviate scale (4) reflects social alienation and disinhibition, while the Hypomania scale (9) indicates unstable mood and hyperarousal, both of which can contribute to risky behaviors characteristic of substance abuse.\n\n2. The option \"2 (Depression) and 7 (Psychasthenia)\" is incorrect because this combination indicates a profile associated with depression and excessive worry, agitation, and physical complaints, rather than impulsivity or antisocial behavior. The option \"6 (Paranoia) and 8 (Schizophrenia)\" is also incorrect, as it represents a profile linked to delusions, hallucinations, and disordered thought, which does not align with impulsive or narcissistic tendencies. Lastly, \"1 (Hypochondriasis) and 3 (Hysteria)\" is incorrect because this combination reflects preoccupation with physical complaints and stress expressed as physical symptoms, rather than the impulsive behaviors associated with substance abuse.",
       "kn": "KN32",
       "kn_explanation": "Evaluating clinical scales of major personality inventories is an important skill in psychological assessment (KN32).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Severe psychopathology or significant distress"
       ],
       "answer": "Attempt to present oneself in an overly favorable light with symptom underreporting",
-      "explanation": "Elevated L and K with low F scores indicate defensiveness and attempts to 'fake good' by denying symptoms.",
+      "explanation": "1. The correct answer, \"Attempt to present oneself in an overly favorable light with symptom underreporting,\" is supported by the elevated scores on the L (Lie) and K (Defensiveness/Correction) scales combined with a low score on the F (Infrequency) scale. Elevated L and K scores indicate that the examinee is likely attempting to minimize their issues and present themselves positively, while a low F score suggests they are not exaggerating or reporting symptoms randomly, which aligns with underreporting rather than overreporting of symptoms.\n\n2. The option \"Random responding due to fatigue or lack of interest\" is incorrect because this pattern would be indicated by high scores on the F scale, which detects overreporting, particularly due to random responding. \"Exaggeration or overreporting of symptoms\" is wrong since a low F score indicates that the examinee is not reporting symptoms excessively or randomly. Lastly, \"Severe psychopathology or significant distress\" is not applicable because the low F score suggests that the examinee is not experiencing significant distress or endorsing severe symptoms, contradicting the notion of severe psychopathology.",
       "kn": "KN32",
       "kn_explanation": "Interpreting validity scales is critical to evaluating the validity of assessment results, relevant under assessment methods and their limitations (KN32).",
       "difficulty": "medium",
@@ -84,11 +84,11 @@
         "To evaluate only normal personality traits in non-clinical populations"
       ],
       "answer": "To assist with diagnosis, treatment planning, and occupational screening through assessing personality and psychopathology",
-      "explanation": "The MMPI-2 mainly assesses personality and psychopathology to assist clinicians in diagnosis, planning treatment, and screening applicants.",
+      "explanation": "1. The correct answer, \"To assist with diagnosis, treatment planning, and occupational screening through assessing personality and psychopathology,\" accurately reflects the primary purpose of the MMPI-2 as stated in the reference material. The MMPI-2 is designed to measure personality and psychopathology in individuals aged 18 and older, providing valuable insights that support clinicians in diagnosing mental disorders, planning treatment, and selecting candidates for high-risk occupations.\n\n2. The first incorrect option, \"To provide an intelligence quotient (IQ) score for cognitive assessment,\" is wrong because the MMPI-2 does not measure cognitive abilities or provide IQ scores; it focuses on personality and psychopathology. The second option, \"To diagnose specific neurological conditions based on behavioral symptoms,\" is incorrect as the MMPI-2 is not intended for diagnosing neurological conditions; it primarily assesses personality traits and psychopathological symptoms. Lastly, the option \"To evaluate only normal personality traits in non-clinical populations\" is misleading because the MMPI-2 is primarily used to assist in diagnosing mental disorders, rather than solely evaluating normal personality traits in non-clinical populations.",
       "kn": "KN32",
       "kn_explanation": "This question emphasizes the commonly used instruments and their clinical applications, part of assessment knowledge (KN32).",
       "difficulty": "easy",
-      "quality_comment": "The correct option concisely states the MMPI-2’s purpose; distractors effectively contrast different tests or incorrect uses."
+      "quality_comment": "The correct option concisely states the MMPI-2\u2019s purpose; distractors effectively contrast different tests or incorrect uses."
     },
     {
       "stem": "Which MMPI-2 validity scale is designed to detect symptom overreporting specifically in psychiatric populations?",
@@ -99,7 +99,7 @@
         "K (Defensiveness/Correction)"
       ],
       "answer": "Fp (Infrequency/Psychopathology)",
-      "explanation": "Fp detects overreporting of symptoms in psychiatric populations, helping identify exaggeration distinct from general population infrequency (F scale).",
+      "explanation": "1. The correct answer is \"Fp (Infrequency/Psychopathology)\" because this validity scale specifically detects overreporting of symptoms in psychiatric populations. It identifies instances where examinees may exaggerate their symptoms or report severe pathology and distress, making it essential for assessing the validity of responses in clinical settings.\n\n2. The option \"F (Infrequency)\" is incorrect because it measures overreporting of symptoms in the general population rather than specifically within psychiatric groups. \"L (Lie)\" is also incorrect as it focuses on detecting underreporting of symptoms and self-righteousness, indicating an attempt to present oneself in a favorable light rather than exaggerating issues. Lastly, \"K (Defensiveness/Correction)\" is not the correct choice because it identifies subtle underreporting of symptoms and defensiveness, rather than addressing symptom overreporting in psychiatric contexts.",
       "kn": "KN32",
       "kn_explanation": "Identifying and interpreting validity scales for different types of response distortion is a key part of psychological assessment (KN32).",
       "difficulty": "hard",
@@ -114,14 +114,14 @@
         "MMPI-A-RF (Adolescent-Restructured Form)"
       ],
       "answer": "MMPI-A (Minnesota Multiphasic Personality Inventory-Adolescent)",
-      "explanation": "The MMPI-A is the standard adolescent version with 478 true/false items assessing similar scales as the MMPI-2 for ages 14 to 18.",
+      "explanation": "1. The correct answer is \"MMPI-A (Minnesota Multiphasic Personality Inventory-Adolescent)\" because it is specifically designed for adolescents aged 14 to 18 years and includes a range of scales that assess psychopathology and personality, similar to those found in the MMPI-2. The MMPI-A consists of 478 true/false items, providing scores for clinical scales, validity scales, and content scales, making it suitable for evaluating this age group.\n\n2. The incorrect options are as follows:\n\n- **MMPI-2-RF (Restructured Form):** This inventory is designed for adults aged 18 and older and contains 338 items, making it inappropriate for the adolescent age range.\n\n- **MMPI-3:** Like the MMPI-2-RF, the MMPI-3 is intended for individuals aged 18 and above, and it focuses on adult populations with 335 items, thus not suitable for adolescents.\n\n- **MMPI-A-RF (Adolescent-Restructured Form):** Although this inventory is designed for adolescents, it is a brief alternative with fewer items (241 true/false) and does not include the full range of clinical, validity, and content scales found in the MMPI-A.",
       "kn": "KN32",
       "kn_explanation": "Understanding appropriate instruments for different populations, including adolescents, is an important competency in psychological assessment (KN32).",
       "difficulty": "medium",
       "quality_comment": "Distractors include related but different versions of the MMPI, requiring knowledge of age-appropriate forms."
     },
     {
-      "stem": "If an examinee’s MMPI-2 profile shows elevated scores on scales 6 (Paranoia) and 8 (Schizophrenia) with a lower score on scale 7 (Psychasthenia), which three-point code is most likely indicated?",
+      "stem": "If an examinee\u2019s MMPI-2 profile shows elevated scores on scales 6 (Paranoia) and 8 (Schizophrenia) with a lower score on scale 7 (Psychasthenia), which three-point code is most likely indicated?",
       "options": [
         "Psychotic V (Paranoid valley)",
         "Conversion V (Conversion valley)",
@@ -129,7 +129,7 @@
         "Two-point code 2-7"
       ],
       "answer": "Psychotic V (Paranoid valley)",
-      "explanation": "The psychotic V occurs when scales 6 and 8 are elevated surrounding a lower 7 and is linked to delusions, hallucinations, and disordered thought.",
+      "explanation": "1. The correct answer is \"Psychotic V (Paranoid valley)\" because this code is defined by elevated scores on scales 6 (Paranoia) and 8 (Schizophrenia) with a lower score on scale 7 (Psychasthenia). This pattern indicates issues related to delusions, hallucinations, paranoia, and disordered thought processes, aligning perfectly with the characteristics associated with the Psychotic V.\n\n2. The option \"Conversion V (Conversion valley)\" is incorrect because it requires elevated scores on scales 1 (Hypochondriasis) and 3 (Hysteria) along with a lower score on scale 2 (Depression), which does not match the given profile. The \"Neurotic triad\" is also incorrect as it involves elevated scores on scales 1 (Hypochondriasis), 2 (Depression), and 3 (Hysteria), none of which are present in the examinee's profile. Lastly, the \"Two-point code 2-7\" is incorrect because it indicates the highest scores on scales 2 (Depression) and 7 (Psychasthenia), which is not the case here, as the highest scores are on scales 6 and 8.",
       "kn": "KN32",
       "kn_explanation": "Interpretation of complex MMPI-2 profiles, including three-point code types, falls under knowledge of assessment instruments (KN32).",
       "difficulty": "hard",
@@ -144,7 +144,7 @@
         "Severe cognitive impairment causing inconsistent answers"
       ],
       "answer": "Endorsement of genuine or faked psychopathology but consistent responding",
-      "explanation": "High F with low VRIN suggests the person’s responses reflect true or exaggerated symptoms rather than random responding.",
+      "explanation": "1. The correct answer, \"Endorsement of genuine or faked psychopathology but consistent responding,\" is supported by the interpretation of the MMPI-2 validity scales. When the F scale score is elevated, it suggests that the examinee has reported symptoms that may indicate actual or feigned psychopathology. A low VRIN scale score indicates that the responses were consistent rather than random, which reinforces the likelihood that the reported symptoms are either genuine or deliberately exaggerated.\n\n2. The first incorrect option, \"Random responding and invalid profile,\" is incorrect because a low VRIN score indicates that the responses were consistent, not random. The second option, \"Attempt to fake good with symptom underreporting,\" is wrong because an elevated F scale suggests overreporting of symptoms rather than underreporting. Lastly, \"Severe cognitive impairment causing inconsistent answers\" is incorrect as a low VRIN score contradicts the notion of inconsistent responding, indicating that the examinee's cognitive functioning is likely intact enough to provide consistent answers.",
       "kn": "KN32",
       "kn_explanation": "This assesses interpretation of validity scale combinations, a key domain in evaluating psychological test responses (KN32).",
       "difficulty": "medium",
@@ -159,14 +159,14 @@
         "Classical test theory"
       ],
       "answer": "Empirical criterion keying",
-      "explanation": "The MMPI-2 clinical scales were developed using empirical criterion keying, which selects items based on their ability to differentiate clinical groups from controls.",
+      "explanation": "1. \"Empirical criterion keying\" is the correct answer because the original MMPI-2 clinical scales were developed by administering a large number of items to both clinical groups (hospital in-patients with specific diagnoses) and a non-clinical control group. Items that effectively discriminated between these groups were included in the clinical scales, ensuring that the scales were based on actual responses from individuals with known psychological conditions.\n\n2. The option \"Factor analytic theory\" is incorrect because, while factor analysis can identify underlying relationships between variables, it was not the primary method used in developing the MMPI-2 clinical scales; the focus was on empirical data from specific clinical populations. \"Psychoanalytic theory\" is also wrong, as the MMPI-2 was not based on psychoanalytic concepts but rather on observable behaviors and self-reported symptoms rather than unconscious processes. Lastly, \"Classical test theory\" is incorrect because it primarily deals with the reliability and validity of tests in general, rather than the specific empirical approach used to create the MMPI-2 clinical scales.",
       "kn": "KN30",
       "kn_explanation": "KN30 covers assessment theories and models, including those underlying test construction like empirical criterion keying.",
       "difficulty": "medium",
       "quality_comment": "The question distinguishes key theoretical approaches in test construction, which is central to understanding MMPI-2 development."
     },
     {
-      "stem": "Which MMPI-2 scale is most sensitive to detecting an examinee’s attempt to exaggerate symptoms during a psychiatric evaluation?",
+      "stem": "Which MMPI-2 scale is most sensitive to detecting an examinee\u2019s attempt to exaggerate symptoms during a psychiatric evaluation?",
       "options": [
         "Fp (Infrequency/Psychopathology)",
         "L (Lie)",
@@ -174,7 +174,7 @@
         "S (Superlative Self-Presentation)"
       ],
       "answer": "Fp (Infrequency/Psychopathology)",
-      "explanation": "The Fp scale is calibrated to detect overreporting or exaggeration of symptoms in psychiatric populations, distinguishing genuine from feigned pathology.",
+      "explanation": "1. The correct answer is \"Fp (Infrequency/Psychopathology)\" because this scale specifically detects overreporting of symptoms within a psychiatric population. Elevated scores on the Fp scale indicate that the examinee may be exaggerating symptoms or experiencing severe pathology or distress, making it particularly sensitive to identifying attempts to present oneself as more impaired than is accurate.\n\n2. The incorrect options are as follows:\n- **L (Lie):** This scale detects underreporting of symptoms and is focused on self-righteousness or denial, rather than exaggeration of symptoms.\n- **K (Defensiveness/Correction):** Similar to the L scale, K identifies subtle underreporting of symptoms and defensiveness, which does not address symptom exaggeration.\n- **S (Superlative Self-Presentation):** This scale assesses a tendency to present oneself in an overly virtuous manner while denying problems, which is not directly related to the exaggeration of psychiatric symptoms.",
       "kn": "KN37",
       "kn_explanation": "KN37 involves evidence-based interpretation of test data, base rates, and response biases such as exaggeration of symptoms.",
       "difficulty": "medium",
@@ -189,11 +189,51 @@
         "Only low scores on clinical scales require validity scale checks"
       ],
       "answer": "Elevated clinical scales may reflect overreporting or faking unless validity scales exclude such bias",
-      "explanation": "Validity scales help identify whether elevations in clinical scales are due to genuine pathology or invalid responding such as symptom exaggeration or faking.",
+      "explanation": "1. The correct answer, \"Elevated clinical scales may reflect overreporting or faking unless validity scales exclude such bias,\" highlights the importance of considering validity scales when interpreting MMPI-2 results. Elevated scores on clinical scales can be misleading if the examinee has engaged in overreporting symptoms or faking responses, which is why validity scales are essential to verify the authenticity of the responses and ensure accurate clinical interpretations.\n\n2. The option \"All elevated clinical scales unequivocally indicate true psychopathology\" is incorrect because elevated scores may arise from factors like overreporting or response biases, not just indicative of genuine psychopathology. The statement \"Validity scales are irrelevant to clinical interpretations\" is wrong because validity scales are crucial for assessing the reliability of the clinical scale scores and ensuring the accuracy of the interpretation. Lastly, the option \"Only low scores on clinical scales require validity scale checks\" is misleading, as elevated scores also necessitate validity checks to rule out potential biases in reporting.",
       "kn": "KN37",
       "kn_explanation": "This item assesses understanding of evidence-based interpretation involving validity scales and response bias (KN37).",
       "difficulty": "medium",
       "quality_comment": "The question underscores critical assessment practices supported by evidence-based test interpretation."
+    },
+    {
+      "stem": "In interpreting MMPI-2 results, what is the significance of a T-score of 60?",
+      "options": [
+        "It indicates severe psychopathology.",
+        "It is considered within the normal range.",
+        "It suggests potential clinical concerns.",
+        "It reflects a high level of anxiety."
+      ],
+      "answer": "It suggests potential clinical concerns.",
+      "explanation": "1. The correct answer, \"It suggests potential clinical concerns,\" is accurate because a T-score of 60 on the MMPI-2 indicates an elevation above the average range, which begins at a T-score of 50. While not reaching the clinically significant threshold of 65, a score of 60 may still reflect emerging issues that warrant further investigation or monitoring, suggesting that the individual may be experiencing some psychological distress or symptoms that could be of clinical interest.\n\n2. The option \"It indicates severe psychopathology\" is incorrect because a T-score of 60 does not reach the clinically significant level of 65, which is typically associated with severe psychopathology. \"It is considered within the normal range\" is wrong because a T-score of 60 is above the normal mean of 50, indicating potential concerns rather than normal functioning. Lastly, \"It reflects a high level of anxiety\" is misleading because while a score of 60 may suggest some level of concern, it does not specifically indicate high anxiety, as it could pertain to various issues across different clinical scales.",
+      "difficulty": "easy",
+      "kn": "KN32",
+      "kn_explanation": "This question targets knowledge of commonly used instruments and interpretation of test scores, fitting with assessment methods and their appropriate use (KN32).",
+      "quality_comment": "This question effectively tests understanding of T-score interpretations in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following statements about MMPI-2 T-scores is accurate regarding their interpretation in clinical settings?",
+      "options": [
+        "Scores above 70 are considered normal.",
+        "T-scores are interpreted in relation to a normative sample.",
+        "Scores below 50 indicate clinical significance.",
+        "T-scores are not useful for diagnosing mental disorders."
+      ],
+      "answer": "T-scores are interpreted in relation to a normative sample.",
+      "explanation": "1. The statement \"T-scores are interpreted in relation to a normative sample\" is correct because T-scores are standardized scores derived from raw scores, which allow for comparison to a normative group. In the MMPI-2, T-scores have a mean of 50 and a standard deviation of 10, meaning that scores are evaluated based on where they fall within this distribution, with scores of 65 and above considered clinically significant.\n\n2. The option \"Scores above 70 are considered normal\" is incorrect because scores above 65 are actually considered clinically significant, not normal. The statement \"Scores below 50 indicate clinical significance\" is also wrong, as scores near 50 are viewed as normal, while low scores (under 35 or 40) may have clinical meaning but do not directly indicate clinical significance. Lastly, the statement \"T-scores are not useful for diagnosing mental disorders\" is incorrect because T-scores are essential for diagnosing mental disorders, as they provide a standardized way to evaluate an individual's psychological functioning compared to a normative sample.",
+      "difficulty": "hard",
+      "kn": "KN32",
+      "kn_explanation": "This question targets knowledge of commonly used instruments and interpretation of test scores, fitting with assessment methods and their appropriate use (KN32).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of T-score interpretation in a clinical context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

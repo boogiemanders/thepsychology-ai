@@ -12,6 +12,9 @@ export interface TopicQuestion {
   correct_answer?: string
   explanation?: string
   relatedSections?: string[]
+  is_lock_in_drill?: boolean
+  lock_in_level?: string
+  tags?: string[]
 }
 
 export interface LoadedTopicQuestions {

@@ -9,7 +9,7 @@
         "To measure depressive symptoms across mood, cognitive, and physical domains"
       ],
       "answer": "To evaluate severity and nature of brain damage from trauma or neurocognitive disorders",
-      "explanation": "The Halstead-Reitan Battery is specifically designed to assess the severity and nature of brain damage, commonly from traumatic brain injury or neurocognitive disorders.",
+      "explanation": "1. The correct answer, \"To evaluate severity and nature of brain damage from trauma or neurocognitive disorders,\" accurately describes the purpose of the Halstead-Reitan Neuropsychological Battery. This battery is specifically designed to assess brain damage and includes subtests that measure various cognitive abilities such as memory, abstract reasoning, and concentration, which are impacted by traumatic brain injuries and neurocognitive disorders.\n\n2. The option \"To estimate the severity of cognitive impairment in Alzheimer's disease\" is incorrect because the Halstead-Reitan is not specifically tailored for Alzheimer's; it assesses brain damage more broadly rather than focusing solely on cognitive impairment due to Alzheimer's disease. The option \"To assess adaptive functioning in individuals with intellectual disability\" is wrong because this purpose aligns with the Vineland Adaptive Behavior Scales, not the Halstead-Reitan. Lastly, \"To measure depressive symptoms across mood, cognitive, and physical domains\" is incorrect as it describes the Beck Depression Inventory-II, which is specifically designed to evaluate depressive symptoms, rather than the Halstead-Reitan's focus on neuropsychological functioning.",
       "kn": "KN29",
       "kn_explanation": "This question relates to the appropriate use of neuropsychological assessment tools and their strengths, which is encompassed by test characteristics and commonly used instruments (KN29).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Moderate impairment"
       ],
       "answer": "Moderate impairment",
-      "explanation": "Scores from 0.5 to 0.7 on the Halstead Impairment Index indicate moderate impairment.",
+      "explanation": "1. The correct answer, \"Moderate impairment,\" is indicated by a Halstead Impairment Index score of 0.6. According to the reference material, scores ranging from 0.5 to 0.7 reflect moderate impairment in neuropsychological functioning, suggesting that the examinee experiences difficulties that are significant but not as severe as those classified under higher scores.\n\n2. The option \"Severe impairment\" is incorrect because it corresponds to scores from 0.8 to 1.0, which indicate a higher level of dysfunction than a score of 0.6. \"Normal functioning\" is also incorrect, as scores from 0 to 0.2 represent normal functioning, clearly below the 0.6 score. The option \"Mild impairment\" is wrong because it applies to scores from 0.3 to 0.4, which is lower than the 0.6 score indicating moderate impairment.",
       "kn": "KN29",
       "kn_explanation": "This question tests knowledge of interpreting scores from a specific neuropsychological measure, falling under understanding common instruments and scoring (KN29).",
       "difficulty": "easy",
@@ -54,7 +54,7 @@
         "Halstead-Reitan Battery"
       ],
       "answer": "Wisconsin Card Sorting Test",
-      "explanation": "The Wisconsin Card Sorting Test measures abstract reasoning and the ability to shift cognitive strategies by having examinees sort cards without being told the correct sorting criteria.",
+      "explanation": "1. The **Wisconsin Card Sorting Test (WCST)** is the correct answer because it specifically assesses executive functions such as abstract reasoning, perseveration, and the ability to change cognitive strategies in response to feedback. The test requires examinees to sort cards according to undisclosed rules, which they must discover through trial and error, making it a direct measure of cognitive flexibility and executive functioning.\n\n2. The **Stroop Color and Word Test** is incorrect because it primarily evaluates cognitive flexibility, selective attention, and response inhibition, rather than executive functions like abstract reasoning and set shifting. The **Tower of London** is also incorrect as it focuses on problem-solving and planning rather than card sorting and abstract reasoning. Lastly, the **Halstead-Reitan Battery** is not the correct choice because it is designed to determine the severity and nature of brain damage, assessing various cognitive functions but not specifically targeting executive functions through card sorting tasks.",
       "kn": "KN11",
       "kn_explanation": "This question asks about executive functioning and related assessment tools, which fits within elements of cognition and executive functions (KN11).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Falls within normal limits for age"
       ],
       "answer": "Suggests moderate cognitive impairment",
-      "explanation": "Scores below 24 on the MMSE suggest cognitive impairment; a score of 22 falls in the range indicating moderate impairment.",
+      "explanation": "1. The correct answer \"Suggests moderate cognitive impairment\" is supported by the Mini-Mental State Exam (MMSE) scoring guidelines. A score of 22 falls below the commonly used cutoff of 24, indicating cognitive impairment, and according to the reference material, scores below 24 suggest varying degrees of impairment, with lower scores reflecting greater severity. Specifically, while the MMSE does not provide exact classifications for scores between 24 and lower thresholds, a score of 22 typically aligns with moderate cognitive impairment.\n\n2. The incorrect options are as follows:\n\n- **Indicates intact cognitive functioning**: This option is incorrect because a score of 22 is below the cutoff of 24, which is indicative of cognitive impairment rather than intact functioning.\n  \n- **Demonstrates mild cognitive impairment**: This option is misleading as it underestimates the severity; a score of 22 suggests moderate impairment, not mild, based on the scoring criteria.\n\n- **Falls within normal limits for age**: This is incorrect since normal cognitive functioning would typically be represented by scores at or above 24 on the MMSE, and a score of 22 does not meet this criterion.",
       "kn": "KN32",
       "kn_explanation": "This question tests the interpretation of a common cognitive screening measure and the significance of cutoff scores (KN32).",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Stroop Color and Word Test"
       ],
       "answer": "Bender Visual-Motor Gestalt Test, 2nd Edition",
-      "explanation": "The Bender-Gestalt II uses a five-point Global Scoring System for evaluating the quality of copied and recalled geometric figures to assess visual-motor perception and integration.",
+      "explanation": "1. The \"Bender Visual-Motor Gestalt Test, 2nd Edition\" is the correct answer because it specifically evaluates visual-motor perception and integration through a two-phase process: first, examinees copy geometric figures, and then they recall and draw those figures from memory. The test uses a five-point Global Scoring System to assess the quality of the designs, which ranges from 0 (no resemblance) to 4 (nearly perfect), making it a valid tool for measuring visual-motor skills.\n\n2. The \"Benton Visual Retention Test, 5th Edition\" is incorrect because, while it assesses visual memory and perception, it does not use a five-point scoring system and focuses solely on recalling geometric figures rather than copying them first. The \"Luria-Nebraska Neuropsychological Battery\" is also incorrect as it evaluates various neuropsychological functions across multiple scales, rather than specifically focusing on visual-motor integration through a scoring system related to copying and recalling figures. Lastly, the \"Stroop Color and Word Test\" is not the correct answer because it measures cognitive flexibility and response inhibition, not visual-motor integration, and does not involve copying geometric figures.",
       "kn": "KN32",
       "kn_explanation": "This question assesses knowledge of commonly used instruments for visual-motor assessment and their scoring methods (KN32).",
       "difficulty": "medium",
@@ -99,14 +99,14 @@
         "Normal brain functioning"
       ],
       "answer": "Coma and severe injury",
-      "explanation": "A GCS score of 8 or less corresponds to coma and indicates severe brain injury.",
+      "explanation": "1. The correct answer, \"Coma and severe injury,\" is based on the scoring criteria of the Glasgow Coma Scale (GCS). A GCS score of 7 indicates a total score that falls within the range of 3 to 8, which signifies a coma and severe injury. This score reflects a critically low level of consciousness, suggesting that the patient is unresponsive and requires significant medical attention.\n\n2. The option \"Mild injury and full consciousness\" is incorrect because a GCS score of 7 does not indicate any level of consciousness, let alone full consciousness, which would require a higher score. The option \"Moderate injury with possible confusion\" is wrong as well; a score of 7 indicates severe impairment, not moderate injury, which would typically range from 9 to 12. Lastly, the option \"Normal brain functioning\" is incorrect because a GCS score of 7 signifies a severe deficit in consciousness and neurological function, far from normal functioning.",
       "kn": "KN29",
       "kn_explanation": "The question involves the interpretation of a neurobehavioral rating scale used for acute brain injury assessment (KN29).",
       "difficulty": "easy",
       "quality_comment": "Clear clinical relevance and straightforward scoring criteria make this question effective for exam preparation."
     },
     {
-      "stem": "Which of the following is TRUE regarding the Wechsler Memory Scale – Fourth Edition (WMS-IV)?",
+      "stem": "Which of the following is TRUE regarding the Wechsler Memory Scale \u2013 Fourth Edition (WMS-IV)?",
       "options": [
         "It exclusively assesses long-term visual memory in individuals over 90 years old.",
         "It provides separate index scales for auditory memory, visual memory, and visual working memory.",
@@ -114,7 +114,7 @@
         "It does not allow comparison of memory performance to general intellectual ability."
       ],
       "answer": "It provides separate index scales for auditory memory, visual memory, and visual working memory.",
-      "explanation": "The WMS-IV includes index scales measuring auditory memory, visual memory, and visual working memory, allowing detailed assessment of different memory domains.",
+      "explanation": "1. The statement \"It provides separate index scales for auditory memory, visual memory, and visual working memory\" is correct because the Wechsler Memory Scale \u2013 Fourth Edition (WMS-IV) includes specific index scales that measure distinct aspects of memory. These index scales are the Auditory Memory Index (AMI), Visual Memory Index (VMI), and Visual Working Memory Index (VWMI), each assessing immediate and delayed recall for auditory and visual information, thereby offering a comprehensive evaluation of memory functions.\n\n2. The option \"It exclusively assesses long-term visual memory in individuals over 90 years old\" is incorrect because the WMS-IV is designed for individuals aged 16 to 90 years, and it evaluates both immediate and delayed memory rather than focusing solely on long-term visual memory. The statement \"It is normed only for children and adolescents between 10 and 18 years of age\" is false since the WMS-IV is normed for a broader age range, specifically from ages 16 to 90 years, including both adults and older adults. Lastly, the claim \"It does not allow comparison of memory performance to general intellectual ability\" is incorrect because the WMS-IV is co-normed with the WAIS-IV, allowing for comparisons between memory performance and general intellectual ability, particularly through the examination of subtest scores.",
       "kn": "KN32",
       "kn_explanation": "This question pertains to knowledge about specific assessment instruments and their constructs measured, a core part of clinical assessment (KN32).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Frontal lobe"
       ],
       "answer": "Frontal lobe",
-      "explanation": "The Stroop Test assesses inhibition and cognitive flexibility, functions most affected by frontal lobe dysfunction.",
+      "explanation": "1. The correct answer is \"Frontal lobe\" because the Stroop Color and Word Test assesses cognitive flexibility, selective attention, and response inhibition, which are functions primarily associated with the frontal lobe. Poor performance on this test has been linked to frontal lobe dysfunction, indicating that this brain region plays a crucial role in managing the cognitive processes required to inhibit a habitual response in favor of a less familiar one.\n\n2. The incorrect options are as follows:\n   - **Temporal lobe**: This region is primarily involved in auditory processing and memory, not the cognitive flexibility and inhibition tasks assessed by the Stroop Test.\n   - **Occipital lobe**: The occipital lobe is mainly responsible for visual processing, which does not directly relate to the cognitive functions measured by the Stroop Test.\n   - **Parietal lobe**: While the parietal lobe is involved in sensory integration and spatial awareness, it is not primarily associated with the executive functions of inhibition and attention that the Stroop Test evaluates.",
       "kn": "KN11",
       "kn_explanation": "This question assesses knowledge of brain-behavior relations involving cognitive processes such as executive function and inhibition (KN11).",
       "difficulty": "easy",
@@ -144,7 +144,7 @@
         "It measures visual memory deficits in children over 8 years."
       ],
       "answer": "It rates levels of cognitive recovery after head injury across ten levels.",
-      "explanation": "The Rancho Scale is designed to evaluate cognitive recovery following head injury through ten hierarchical levels ranging from unresponsiveness to purposeful, appropriate functioning.",
+      "explanation": "1. The correct answer, \"It rates levels of cognitive recovery after head injury across ten levels,\" accurately describes the Rancho Scale of Cognitive Functioning Revised. This scale evaluates cognitive recovery in patients following a head injury by categorizing their level of response and assistance needs into ten distinct levels, ranging from unresponsive to purposeful and appropriate responses.\n\n2. The incorrect options are as follows:\n- \"It quantifies severity of depression during neurorehabilitation.\" This statement is incorrect because the Rancho Scale does not assess depression; it focuses specifically on cognitive recovery levels after brain injury.\n- \"It assesses adaptive behavior from birth to 90 years of age.\" This option is wrong as it describes the Vineland Adaptive Behavior Scales, not the Rancho Scale, which is specifically aimed at cognitive functioning post-injury.\n- \"It measures visual memory deficits in children over 8 years.\" This statement is incorrect because it pertains to tests like the Benton Visual Retention Test, while the Rancho Scale evaluates cognitive recovery levels, not visual memory.",
       "kn": "KN29",
       "kn_explanation": "This item addresses classification and measurement of cognitive recovery, which is part of clinical assessment and diagnosis (KN29).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Mini-Mental State Exam (MMSE)"
       ],
       "answer": "Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)",
-      "explanation": "The Vineland-3 assesses adaptive functioning across communication, daily living, and socialization domains, critical for diagnosing intellectual disability.",
+      "explanation": "1. The **Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)** is the correct answer because it specifically assesses adaptive functioning across various domains, such as communication, daily living skills, and socialization, which are crucial for diagnosing intellectual disability. This tool is designed for individuals from birth to 90 years of age and provides valuable information that can aid in treatment planning and diagnosis.\n\n2. The **Beck Depression Inventory-II (BDI-II)** is incorrect because it measures the severity of depressive symptoms rather than adaptive functioning, making it unsuitable for diagnosing intellectual disability. The **Benton Visual Retention Test (BVRT)** is also inappropriate as it assesses visual perception, visual memory, and visuo-constructive skills, not adaptive behavior. Finally, the **Mini-Mental State Exam (MMSE)** primarily screens for cognitive impairment and does not focus on adaptive functioning, which is essential for diagnosing intellectual disabilities.",
       "kn": "KN32",
       "kn_explanation": "This question evaluates knowledge about an adaptive behavior measure used in clinical diagnosis and intervention planning (KN32).",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Tower of London"
       ],
       "answer": "Luria-Nebraska Neuropsychological Battery",
-      "explanation": "The Luria-Nebraska's items are scored 0 for normal, 1 for borderline, and 2 for impaired, then raw scores are converted to age- and education-adjusted T scores.",
+      "explanation": "1. The **Luria-Nebraska Neuropsychological Battery** is the correct answer because it consists of 11 scales that assess various aspects of neuropsychological functioning, with each item scored on a 3-point scale: 0 for normal performance, 1 for borderline performance, and 2 for impaired performance. The raw scale scores obtained from these items are then converted to T scores, which are interpreted based on the examinee's age and education level.\n\n2. The **Halstead-Reitan Neuropsychological Battery** is incorrect because it utilizes a different scoring method, specifically the Halstead Impairment Index, which ranges from 0 to 1.0 to indicate levels of impairment rather than a 3-point scale. The **Bender Visual-Motor Gestalt Test** is also incorrect as it evaluates designs using a Global Scoring System on a five-point scale, not a 3-point scale. Finally, the **Tower of London** is incorrect because it assesses problem-solving and planning without the use of a 3-point scoring system; it focuses on total correct responses and rule violations instead.",
       "kn": "KN29",
       "kn_explanation": "This question focuses on scoring methods and interpretive considerations of neuropsych assessment tools, reflecting key aspects of clinical assessment (KN29).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Mini-Mental State Exam (MMSE)"
       ],
       "answer": "Benton Visual Retention Test (BVRT)",
-      "explanation": "The BVRT involves reproducing geometric figures from memory and assesses visual perception and visuoconstructive skills in individuals 8 years and older.",
+      "explanation": "1. The **Benton Visual Retention Test (BVRT)** is the correct answer because it specifically assesses visual perception, visual memory, and visuoconstructive skills by requiring individuals aged 8 and older to reproduce geometric figures from memory. The BVRT includes ten cards with geometric figures that the examinee must remember and accurately reproduce, making it ideal for evaluating these specific cognitive abilities.\n\n2. The **Bender Visual-Motor Gestalt Test** is incorrect because, while it also assesses visual-motor perception and integration, it focuses on copying and recalling geometric designs but is not exclusively aimed at visual perception and memory as the BVRT is. The **Stroop Color and Word Test** is not suitable because it primarily measures cognitive flexibility, selective attention, and response inhibition rather than visual perception or memory. Lastly, the **Mini-Mental State Exam (MMSE)** is inappropriate for this question as it is a screening tool for cognitive impairment that evaluates various cognitive domains, but it does not specifically target visual perception or memory skills like the BVRT does.",
       "kn": "KN32",
       "kn_explanation": "This tests knowledge of specific neuropsychological instruments and their appropriate uses in assessing visual memory and perception (KN32).",
       "difficulty": "medium",
@@ -234,11 +234,51 @@
         "It screens for cognitive impairment through immediate and delayed recall tasks."
       ],
       "answer": "It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning.",
-      "explanation": "The Vineland-3 gathers caregiver and teacher reports to assess adaptive functioning in communication, daily living skills, and socialization, aiding diagnosis and intervention planning.",
+      "explanation": "1. The statement \"It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning\" is correct because the Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3) is specifically designed to evaluate adaptive functioning across various domains, including Communication, Daily Living Skills, and Socialization. This comprehensive assessment aids in diagnosing conditions such as intellectual disability and autism spectrum disorder and assists in treatment planning based on the individual's adaptive behavior profile.\n\n2. The incorrect options are as follows:\n- \"It provides quantitative data on depressive symptom severity over two weeks.\" This statement is incorrect because it describes the Beck Depression Inventory-II (BDI-II), which specifically measures depressive symptoms rather than adaptive behavior.\n- \"It is a performance-based test requiring direct patient interaction with visual stimuli.\" This is inaccurate as the Vineland-3 primarily gathers information through caregiver or teacher reports rather than direct performance-based assessments.\n- \"It screens for cognitive impairment through immediate and delayed recall tasks.\" This option is wrong because it refers to tests like the Wechsler Memory Scale, which assess memory functions, not the adaptive behaviors evaluated by the Vineland-3.",
       "kn": "KN32",
       "kn_explanation": "This question relates to the practical use of adaptive behavior measures in clinical assessment frameworks, matching the knowledge area on test applications (KN32).",
       "difficulty": "easy",
       "quality_comment": "The item clearly contrasts different types of assessments, making it suitable for assessing real-world clinical decision-making knowledge."
+    },
+    {
+      "stem": "What is the primary aim of the Wechsler Adult Intelligence Scale (WAIS)?",
+      "options": [
+        "To assess cognitive abilities and intelligence in adults",
+        "To measure emotional distress and anxiety levels",
+        "To evaluate personality traits and characteristics",
+        "To diagnose specific learning disabilities"
+      ],
+      "answer": "To assess cognitive abilities and intelligence in adults",
+      "explanation": "1. The correct answer, \"To assess cognitive abilities and intelligence in adults,\" aligns with the primary purpose of the Wechsler Adult Intelligence Scale (WAIS), which is designed to evaluate the cognitive functioning of adults. Although the reference material does not explicitly mention the WAIS, it is commonly known as a standard tool for measuring various cognitive abilities, including verbal comprehension, perceptual reasoning, working memory, and processing speed, which collectively contribute to an individual's overall intelligence.\n\n2. The option \"To measure emotional distress and anxiety levels\" is incorrect because the WAIS is not designed to assess emotional states; instead, it focuses on cognitive assessment. \"To evaluate personality traits and characteristics\" is also wrong, as personality assessment typically involves different tools, such as the MMPI-2, rather than an intelligence scale. Lastly, \"To diagnose specific learning disabilities\" is incorrect because the WAIS primarily measures cognitive abilities rather than diagnosing learning disabilities, which often requires other assessments tailored specifically for that purpose.",
+      "difficulty": "easy",
+      "kn": "KN29",
+      "kn_explanation": "This question relates to the appropriate use of neuropsychological assessment tools and their strengths, which is encompassed by test characteristics and commonly used instruments (KN29).",
+      "quality_comment": "This question effectively tests knowledge of a widely-used intelligence assessment tool.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which neuropsychological assessment is specifically focused on identifying deficits in executive functioning?",
+      "options": [
+        "The Wisconsin Card Sorting Test",
+        "The Beck Depression Inventory",
+        "The Rorschach Inkblot Test",
+        "The Minnesota Multiphasic Personality Inventory"
+      ],
+      "answer": "The Wisconsin Card Sorting Test",
+      "explanation": "1. The correct answer, \"The Wisconsin Card Sorting Test (WCST),\" is specifically focused on identifying deficits in executive functioning. The WCST measures abstract reasoning, cognitive flexibility, and the ability to adapt cognitive strategies in response to feedback, which are essential components of executive functioning. Additionally, it is sensitive to frontal lobe dysfunction, making it a valuable tool for assessing executive deficits.\n\n2. The Beck Depression Inventory (BDI-II) is a self-report measure that assesses the severity of depressive symptoms, not executive functioning. The Rorschach Inkblot Test is a projective personality assessment that provides insights into an individual's personality and emotional functioning rather than specifically targeting executive functions. The Minnesota Multiphasic Personality Inventory (MMPI-2) is a comprehensive personality assessment tool designed to evaluate psychological conditions and personality structure, but it does not focus on executive functioning deficits.",
+      "difficulty": "hard",
+      "kn": "KN29",
+      "kn_explanation": "This question relates to the appropriate use of neuropsychological assessment tools and their strengths, which is encompassed by test characteristics and commonly used instruments (KN29).",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of specific neuropsychological assessments related to executive functioning.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

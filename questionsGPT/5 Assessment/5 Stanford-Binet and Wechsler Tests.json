@@ -9,7 +9,7 @@
         "Fluid intelligence peaks earliest, typically between 60 and 70 years old."
       ],
       "answer": "Fluid intelligence peaks earliest, typically between 30 and 40 years old.",
-      "explanation": "Fluid intelligence, reflecting inherent capacity to learn and solve novel problems, peaks earlier in adulthood (30–40 years), whereas crystallized intelligence peaks later (60–70 years).",
+      "explanation": "1. The correct answer, \"Fluid intelligence peaks earliest, typically between 30 and 40 years old,\" aligns with Horn and Cattell's theory, which distinguishes between two types of intelligence: fluid and crystallized. Fluid intelligence (Gf) represents the inherent capacity to learn and solve novel problems, and research indicates that it reaches its peak in early adulthood, specifically between the ages of 30 and 40.\n\n2. The option \"Crystallized intelligence peaks earliest, typically between 30 and 40 years old\" is incorrect because crystallized intelligence (Gc) is dependent on prior learning and experience and does not peak until later in life, around 60 to 70 years old. The option \"Crystallized intelligence peaks earliest, typically between 60 and 70 years old\" is misleading as it inaccurately suggests that this is the earliest peak, while it is actually the correct age range for crystallized intelligence. Lastly, the option \"Fluid intelligence peaks earliest, typically between 60 and 70 years old\" is incorrect since fluid intelligence actually peaks much earlier, and by that age, it typically begins to decline.",
       "kn": "KN6",
       "kn_explanation": "This question tests knowledge of Horn and Cattell's crystallized and fluid intelligence theory, which is a major research-based theory of intelligence.",
       "difficulty": "medium",
@@ -26,7 +26,7 @@
       "answer": "Stratum I consists of numerous specific abilities; Stratum II of broad abilities; Stratum III of general intelligence.",
       "explanation": "Carroll's model has Stratum III as general intelligence (g), Stratum II as eight broad abilities (including fluid and crystallized intelligence), and Stratum I as many specific abilities linked to the broad abilities.",
       "kn": "KN6",
-      "kn_explanation": "This question assesses understanding of Carroll’s hierarchical model of intelligence, a fundamental research-based theory of intelligence.",
+      "kn_explanation": "This question assesses understanding of Carroll\u2019s hierarchical model of intelligence, a fundamental research-based theory of intelligence.",
       "difficulty": "hard",
       "quality_comment": "Options are structured similarly but contain subtle reversals in the order of strata, requiring detailed knowledge; well-designed for EPPP difficulty."
     },
@@ -39,7 +39,7 @@
         "Woodcock-Johnson Tests of Cognitive Abilities"
       ],
       "answer": "Stanford-Binet Intelligence Test, 5th Edition",
-      "explanation": "The CHC theory was explicitly used in developing the SB5 and some tests like the Kaufman Battery, though it influenced but was not the explicit framework for the Wechsler tests.",
+      "explanation": "1. The correct answer is \"Stanford-Binet Intelligence Test, 5th Edition\" because the CHC theory, which combines elements of Horn-Cattell and Carroll theories, explicitly influenced its development. The SB5 is based on a hierarchical general mental ability model that incorporates five cognitive factors derived from the CHC theory, making it a direct application of this theoretical framework.\n\n2. The \"Wechsler Adult Intelligence Scale, 3rd Edition\" is incorrect because, although it is based on a hierarchical model of intelligence, it is not explicitly identified as being influenced by the CHC theory, unlike its more recent versions. \"Raven's Progressive Matrices\" is also incorrect as it primarily measures fluid intelligence without a direct connection to the CHC theory's broader cognitive abilities framework. Lastly, the \"Woodcock-Johnson Tests of Cognitive Abilities\" is incorrect because, while it includes various cognitive assessments, it is not explicitly stated in the reference material as being influenced by the CHC theory in the same way as the SB5.",
       "kn": "KN6",
       "kn_explanation": "This question requires knowledge of how current intelligence theories impact test development and revision, fitting under major research-based theories of intelligence.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Processing speed (Gs)"
       ],
       "answer": "Visual processing (Gv)",
-      "explanation": "The Visual Spatial Index of the WISC-V assesses visual processing ability, corresponding to Gv in CHC theory.",
+      "explanation": "1. The correct answer, \"Visual processing (Gv),\" is accurate because the Visual Spatial Index (VSI) of the WISC-V specifically assesses an individual's ability to visualize and manipulate spatial relationships and visual information. This ability is integral to tasks that require understanding and processing visual stimuli, which aligns directly with the definition of visual processing.\n\n2. The option \"Short-term memory (Gsm)\" is incorrect because short-term memory refers to the ability to temporarily hold and manipulate information, which is assessed by the Working Memory Index (WMI) of the WISC-V, not the VSI. \"Crystallized intelligence (Gc)\" is also wrong, as crystallized intelligence involves the application of acquired knowledge and skills, typically assessed by the Verbal Comprehension Index (VCI), rather than visual processing. Lastly, \"Processing speed (Gs)\" is incorrect because processing speed pertains to the efficiency of cognitive operations and is measured by the Processing Speed Index (PSI), not the VSI, which focuses specifically on visual spatial abilities.",
       "kn": "KN6",
       "kn_explanation": "This question tests knowledge about how specific cognitive abilities map onto index scores in a major intelligence test, central to theories and models of intelligence.",
       "difficulty": "easy",
@@ -69,7 +69,7 @@
         "Older test norms systematically bias scores downward due to cultural changes."
       ],
       "answer": "IQ scores tend to increase by about 3 points per decade, so older norms may inflate scores.",
-      "explanation": "Due to the Flynn effect, IQ test scores have increased over decades, so using outdated norms can lead to higher standardized scores relative to current norms.",
+      "explanation": "1. The correct answer states that \"IQ scores tend to increase by about 3 points per decade, so older norms may inflate scores\" because research, particularly by Flynn (1987, 1998), has shown a consistent rise in IQ scores over time across various populations. This phenomenon, known as the Flynn Effect, indicates that individuals tested on older IQ tests with outdated norms may receive higher scores than they would on newer tests that reflect the current population's performance, leading to an inflation of their IQ scores when compared to contemporary norms.\n\n2. The option \"IQ scores tend to decrease over time, so older norms may deflate scores\" is incorrect because the Flynn Effect specifically documents an increase in scores rather than a decrease. The statement \"There is no systematic difference in IQ scores across different test norms\" is wrong because the Flynn Effect demonstrates a clear trend of increasing scores over decades, indicating a systematic difference. Lastly, the option \"Older test norms systematically bias scores downward due to cultural changes\" is incorrect as it contradicts the Flynn Effect, which illustrates that older norms typically lead to inflated scores rather than a downward bias.",
       "kn": "KN6",
       "kn_explanation": "The question focuses on research-based findings about intelligence measurement and test interpretation, a subtopic of intelligence theories and models.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "General Ability Index (GAI)"
       ],
       "answer": "Processing Speed Index (PSI)",
-      "explanation": "Research shows that PSI begins to decline around age 30 and has the steepest age-related decrease compared to other indexes.",
+      "explanation": "1. The **Processing Speed Index (PSI)** is the correct answer because research indicates that this index begins to decline around age 30 and experiences the greatest age-related decline compared to other indices on the WAIS-IV. The PSI assesses how quickly and accurately an individual can process information, which tends to diminish with age due to factors such as cognitive slowing and decreased processing efficiency.\n\n2. The **Verbal Comprehension Index (VCI)** is incorrect because it shows the least decline over time, remaining stable until about age 80, as it primarily assesses crystallized intelligence. The **Working Memory Index (WMI)** is also incorrect because it remains relatively stable until around age 60, after which it begins to decline, but not as significantly as the PSI. Lastly, the **General Ability Index (GAI)** is incorrect because it is derived from the VCI and Perceptual Reasoning Index (PRI), both of which do not exhibit the same level of decline as the PSI, particularly because the GAI minimizes the effects of working memory and processing speed.",
       "kn": "KN6",
       "kn_explanation": "Understanding age-related changes in cognitive abilities assessed by intelligence tests concerns theories and models of cognition and intelligence.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Working Memory Index (WMI) significantly higher than Processing Speed Index (PSI)."
       ],
       "answer": "Verbal Comprehension Index (VCI) significantly higher than Perceptual Reasoning Index (PRI).",
-      "explanation": "NVLD individuals typically score much higher on verbal comprehension than perceptual reasoning, reflecting difficulty with nonverbal tasks despite good verbal abilities.",
+      "explanation": "1. The correct answer, \"Verbal Comprehension Index (VCI) significantly higher than Perceptual Reasoning Index (PRI),\" is characteristic of individuals with nonverbal learning disability (NVLD). This pattern indicates that the individual has strong verbal skills while struggling with nonverbal reasoning and visual-spatial tasks, which is a hallmark of NVLD. Research indicates that a significant discrepancy between VCI and PRI scores is commonly observed in individuals with NVLD, reflecting their difficulties with nonverbal communication and mathematical concepts.\n\n2. The option \"Perceptual Reasoning Index (PRI) significantly higher than Verbal Comprehension Index (VCI)\" is incorrect because it suggests stronger nonverbal reasoning abilities, which is contrary to the profile seen in NVLD. The option \"Processing Speed Index (PSI) significantly higher than Working Memory Index (WMI)\" is also incorrect, as NVLD typically does not show a pattern where processing speed is stronger than working memory; instead, both may be affected. Lastly, \"Working Memory Index (WMI) significantly higher than Processing Speed Index (PSI)\" is incorrect because NVLD is not characterized by a stronger working memory in comparison to processing speed, and individuals with NVLD often have discrepancies that do not favor working memory over processing speed.",
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of assessment interpretation for a specific clinical presentation using an intelligence test, which belongs to commonly used instruments and their appropriate use.",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "Spearman's Two-Factor Theory"
       ],
       "answer": "Das, Naglieri, and Kirby's PASS theory",
-      "explanation": "The PASS theory, derived from Luria’s work, proposes intelligence consists of planning, attention, simultaneous processing, and sequential processing.",
+      "explanation": "1. \"Das, Naglieri, and Kirby's PASS theory\" is the correct answer because it specifically identifies four interdependent functions of intelligence: planning, attention, simultaneous processing, and sequential processing. This theory is rooted in Luria's research on cognitive functions and emphasizes how these functions interact with a person's knowledge to facilitate intelligent behavior.\n\n2. The incorrect options are as follows: \n- **Gardner's Theory of Multiple Intelligences** focuses on the existence of multiple distinct intelligences that vary in strength among individuals, rather than interdependent cognitive functions.\n- **Sternberg's Triarchic Theory of Successful Intelligence** comprises three components\u2014analytical, creative, and practical intelligence\u2014rather than the four functions outlined in the PASS theory.\n- **Spearman's Two-Factor Theory** distinguishes between a general intelligence factor (g) and specific factors (s) affecting performance on cognitive tasks, without addressing the specific functions of planning, attention, simultaneous processing, and sequential processing.",
       "kn": "KN6",
       "kn_explanation": "This question focuses on a major research-based model of intelligence, an essential area under cognitive-affective bases of behavior.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Working Memory Index (WMI)"
       ],
       "answer": "Verbal Comprehension Index (VCI)",
-      "explanation": "The VCI primarily taps into crystallized intelligence, reflecting acquired knowledge and verbal skills.",
+      "explanation": "1. The \"Verbal Comprehension Index (VCI)\" is the correct answer because it corresponds to crystallized intelligence (Gc) based on CHC theory. Independent factor analyses, such as those conducted by Weiss et al. (2013), have identified the VCI as a measure that specifically assesses crystallized knowledge, which involves the application of acquired knowledge and skills, aligning with the characteristics of Gc.\n\n2. The \"Processing Speed Index (PSI)\" is incorrect because it measures processing speed (Gs), not crystallized intelligence. The \"Perceptual Reasoning Index (PRI)\" is also incorrect as it primarily assesses fluid reasoning (Gf) and visual processing (Gv), rather than crystallized knowledge. Lastly, the \"Working Memory Index (WMI)\" is wrong because it evaluates short-term memory (Gsm) and does not directly relate to crystallized intelligence.",
       "kn": "KN6",
       "kn_explanation": "This question requires understanding the relationships between test indexes and CHC cognitive abilities, part of major theories of intelligence.",
       "difficulty": "easy",
@@ -144,7 +144,7 @@
         "Working Memory Index (WMI)"
       ],
       "answer": "Verbal Comprehension Index (VCI)",
-      "explanation": "Children with ASD without language impairment tend to have their highest scores on the VCI and lowest on the PSI.",
+      "explanation": "1. The correct answer is the Verbal Comprehension Index (VCI) because, for children diagnosed with Autism Spectrum Disorder (ASD) without language impairment, the VCI typically reflects their ability to utilize verbal skills and knowledge effectively. Research indicates that these children often perform better on verbal tasks compared to nonverbal tasks, leading to a higher VCI score relative to other indexes.\n\n2. The Processing Speed Index (PSI) is incorrect because children with ASD tend to show slower processing speeds, which often results in lower scores on this index. The Fluid Reasoning Index (FRI) is not the highest for this group, as it assesses the ability to solve novel problems and is typically lower for children with ASD who may struggle with such tasks. Lastly, the Working Memory Index (WMI) is also incorrect because it measures short-term memory capabilities, which can be a challenge for children with ASD, leading to scores that are generally lower than the VCI.",
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge on psychological assessment and interpretation of index score patterns for clinical groups on standardized tests.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Testing ends when the examinee fails to respond within the time limit."
       ],
       "answer": "Testing ends when the examinee misses 75% of items at two consecutive age levels.",
-      "explanation": "The ceiling is reached when the examinee misses 75% of items on two consecutive age levels, indicating maximal level has been tested.",
+      "explanation": "1. The correct answer, \"Testing ends when the examinee misses 75% of items at two consecutive age levels,\" accurately reflects the stopping rule (ceiling) for the Stanford-Binet 5th Edition (SB5). According to the SB5 administration guidelines, testing continues until the examinee reaches a ceiling level, defined as the point where they miss 75% of the questions at two consecutive age levels, indicating that they can no longer answer questions correctly at that level of difficulty.\n\n2. The first incorrect option, \"Testing ends after the examinee answers one question incorrectly at any age level,\" is wrong because the ceiling rule requires multiple incorrect answers at consecutive age levels, not just one incorrect answer. The second incorrect option, \"Testing stops after the examinee answers all items correctly at a single age level,\" is incorrect because the ceiling is not determined by answering all items correctly but rather by missing a specific percentage of items at consecutive levels. Lastly, the option \"Testing ends when the examinee fails to respond within the time limit\" is incorrect because the SB5 does not define a ceiling based on response time but rather on the examinee's ability to answer questions correctly.",
       "kn": "KN32",
       "kn_explanation": "This question addresses knowledge of assessment methods and administration rules for a standardized intelligence test.",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Wechsler Primary and Preschool Scale of Intelligence, 4th Edition (WPPSI-IV)"
       ],
       "answer": "Stanford-Binet Intelligence Test, 5th Edition (SB5)",
-      "explanation": "The SB5 is normed for ages 2 to 85+, structured around five cognitive factors with verbal and nonverbal domains.",
+      "explanation": "1. The \"Stanford-Binet Intelligence Test, 5th Edition (SB5)\" is the correct answer because it is specifically designed for individuals aged 2 to 85 years and incorporates a hierarchical model of intelligence that includes five cognitive factors: Fluid Reasoning, Knowledge, Quantitative Reasoning, Visual-Spatial Processing, and Working Memory, each subdivided into verbal and nonverbal domains. This structure allows for a comprehensive assessment of cognitive abilities across a wide age range.\n\n2. The \"Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)\" is incorrect because it is designed for individuals aged 16 to 90 years and does not encompass the full age range of 2 to 85 years. The \"Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)\" is also incorrect as it is intended for children and adolescents aged 6 to 16 years, thus excluding younger children. Lastly, the \"Wechsler Primary and Preschool Scale of Intelligence, 4th Edition (WPPSI-IV)\" is not correct because it is specifically designed for children aged 2 years, 6 months to 7 years, 7 months, which is a much narrower age range compared to the SB5.",
       "kn": "KN32",
       "kn_explanation": "This question covers knowledge of commonly used intelligence instruments and their key characteristics and populations.",
       "difficulty": "easy",
@@ -189,7 +189,7 @@
         "A score derived from supplemental subtests assessing social cognition"
       ],
       "answer": "A summary score combining Verbal Comprehension and Perceptual Reasoning Indexes that minimizes working memory and processing speed effects",
-      "explanation": "The GAI is calculated from the VCI and PRI scores to provide an estimate of general intellectual ability less affected by working memory and processing speed variations.",
+      "explanation": "1. The correct answer, \"A summary score combining Verbal Comprehension and Perceptual Reasoning Indexes that minimizes working memory and processing speed effects,\" accurately describes the General Ability Index (GAI) on the WAIS-IV. The GAI is specifically derived from the Verbal Comprehension Index (VCI) and the Perceptual Reasoning Index (PRI) scores, providing a summary of an individual's cognitive abilities while reducing the influence of working memory (WMI) and processing speed (PSI) scores, which can be affected by various factors.\n\n2. The first incorrect option, \"An index score that combines all four WAIS-IV indexes to provide a composite IQ score,\" is wrong because the GAI only combines the VCI and PRI, not all four indexes. The second incorrect option, \"A score measuring processing speed and working memory only,\" is incorrect as the GAI does not focus on these aspects but rather excludes them to highlight general cognitive ability. Lastly, the option \"A score derived from supplemental subtests assessing social cognition\" is incorrect because the GAI is not based on supplemental subtests but strictly on the primary indexes of verbal comprehension and perceptual reasoning.",
       "kn": "KN32",
       "kn_explanation": "This question relates to interpretation and scoring of intelligence tests, focusing on derived indexes used clinically and in assessment.",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "Increased test familiarity due to technology use"
       ],
       "answer": "Changes in education quality and environmental stimulation",
-      "explanation": "Rapid changes in IQ scores over decades are too fast to be genetic and are attributed primarily to environmental influences such as education and early life experiences.",
+      "explanation": "1. \"Changes in education quality and environmental stimulation\" is the correct answer because research indicates that the increases and decreases in IQ scores, as observed in the Flynn effect, are primarily influenced by environmental factors rather than genetic ones. The rapid nature of these changes suggests that variations in educational practices, access to resources, and overall cognitive engagement in the environment can significantly impact cognitive abilities, as noted in the reference material.\n\n2. The option \"Genetic mutations occurring within a few generations\" is incorrect because changes in IQ scores occur too quickly to be attributed to genetic factors, which typically require much longer time frames to manifest. \"Stable socio-economic conditions\" is also wrong, as socio-economic stability does not account for the observed fluctuations in IQ scores; rather, it is the quality of education and environmental factors that drive these changes. Lastly, \"Increased test familiarity due to technology use\" is incorrect because while technology may enhance familiarity with testing formats, it does not sufficiently explain the broader environmental influences that impact cognitive development and performance as indicated by the Flynn effect.",
       "kn": "KN37",
       "kn_explanation": "This question highlights biases and interpretation factors in assessment derived from research on IQ test score trends and environmental influences.",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "Horn and Cattell's Crystallized and Fluid Intelligence Theory"
       ],
       "answer": "Sternberg's Triarchic Theory of Successful Intelligence",
-      "explanation": "Sternberg's theory posits intelligence includes analytical, creative, and practical components, noting typical IQ tests focus mainly on analytical intelligence.",
+      "explanation": "1. **Correct Answer Explanation:** Sternberg's Triarchic Theory of Successful Intelligence critiques traditional IQ tests by emphasizing that they primarily measure analytical intelligence, which is akin to general intelligence (g), while neglecting other crucial components such as creative intelligence and practical intelligence. According to Sternberg, successful intelligence involves the ability to apply knowledge and skills in novel situations and everyday tasks, which are often overlooked in standard IQ assessments.\n\n2. **Incorrect Options Explanation:**\n   - **Spearman's Two-Factor Theory:** This theory focuses on distinguishing between a general intellectual factor (g) and specific factors (s) related to particular tasks, without addressing the importance of creative or practical intelligence.\n   - **Gardner's Theory of Multiple Intelligences:** While Gardner's theory acknowledges various types of intelligence, it does not specifically critique traditional IQ tests for neglecting creative and practical intelligence as Sternberg does; rather, it proposes a broader range of intelligences.\n   - **Horn and Cattell's Crystallized and Fluid Intelligence Theory:** This theory differentiates between crystallized intelligence (Gc) and fluid intelligence (Gf) but does not critique traditional IQ tests for their limitations regarding creative and practical intelligence. Instead, it focuses on the nature and development of these two types of intelligence.",
       "kn": "KN39",
       "kn_explanation": "This question maps onto theories of psychopathology and models of intelligence, particularly critiques of traditional IQ assessments and their scope.",
       "difficulty": "medium",
@@ -234,11 +234,51 @@
         "Norms are only relevant for local, not national, populations"
       ],
       "answer": "Proper norms adjust for cultural and environmental changes affecting test performance over time",
-      "explanation": "Updated norms account for changes like those demonstrated by the Flynn effect, ensuring IQ scores accurately reflect current population functioning.",
+      "explanation": "1. The correct answer, \"Proper norms adjust for cultural and environmental changes affecting test performance over time,\" highlights the necessity of using updated normative data to ensure that intelligence tests remain valid and relevant. As the Flynn effect indicates, IQ scores can increase due to environmental factors, necessitating updated norms to accurately reflect current population performance and to avoid misinterpretation of an individual's abilities based on outdated standards.\n\n2. The option \"Older norms provide more stable and reliable scores\" is incorrect because older norms may not account for recent cultural and educational shifts that can significantly impact test performance, leading to misleading results. The statement \"Test norms have no effect on IQ score interpretation\" is false, as norms are essential for contextualizing an individual's score within the population, influencing how that score is understood and utilized. Lastly, the claim \"Norms are only relevant for local, not national, populations\" is misleading because intelligence tests are designed with national norms in mind to ensure their applicability across diverse populations, making national norms crucial for accurate interpretation.",
       "kn": "KN37",
       "kn_explanation": "This question tests knowledge about evidence-based interpretation of assessment data and the impact of biases and base rates in test norms.",
       "difficulty": "easy",
       "quality_comment": "Distractors contrast commonly held misconceptions, allowing clear discrimination for those understanding test norm updates."
+    },
+    {
+      "stem": "In the context of cognitive development, which type of intelligence is characterized by the ability to reason and solve new problems without relying on previously acquired knowledge?",
+      "options": [
+        "Crystallized intelligence",
+        "Fluid intelligence",
+        "Emotional intelligence",
+        "Social intelligence"
+      ],
+      "answer": "Fluid intelligence",
+      "explanation": "1. **Fluid intelligence** is the correct answer because it represents the inherent capacity to learn and reason, allowing individuals to solve new problems and think abstractly without relying on prior knowledge or experiences. As described in Horn and Cattell's theory, fluid intelligence (Gf) is crucial for tasks that involve forming concepts, drawing inferences, and solving unfamiliar problems, distinguishing it from other types of intelligence.\n\n2. **Crystallized intelligence** is incorrect because it depends on prior learning and experiences, involving the application of acquired knowledge and skills, such as vocabulary and factual recall. **Emotional intelligence** is also incorrect as it pertains to the ability to recognize, understand, and manage emotions in oneself and others, rather than cognitive reasoning or problem-solving abilities. Lastly, **social intelligence** is incorrect because it refers to the ability to navigate social situations and understand social dynamics, which does not specifically relate to reasoning or solving new problems independently of prior knowledge.",
+      "difficulty": "easy",
+      "kn": "KN6",
+      "kn_explanation": "This question tests knowledge of Horn and Cattell's crystallized and fluid intelligence theory, which is a major research-based theory of intelligence.",
+      "quality_comment": "This question effectively assesses understanding of fluid intelligence in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following statements best describes the trend of crystallized intelligence across the lifespan, according to Horn and Cattell's theory?",
+      "options": [
+        "Crystallized intelligence tends to decline steadily after early adulthood.",
+        "Crystallized intelligence remains stable and can increase with age.",
+        "Crystallized intelligence peaks in childhood and then declines.",
+        "Crystallized intelligence is independent of age and remains constant."
+      ],
+      "answer": "Crystallized intelligence remains stable and can increase with age.",
+      "explanation": "1. The statement \"Crystallized intelligence remains stable and can increase with age\" is correct because, according to Horn and Cattell's theory, crystallized intelligence (Gc) is dependent on prior learning and experiences, which accumulate over time. Research indicates that crystallized intelligence continues to develop, peaking around the ages of 60 to 70, and remains relatively stable throughout adulthood.\n\n2. The option \"Crystallized intelligence tends to decline steadily after early adulthood\" is incorrect because crystallized intelligence does not show a decline until much later in life, typically after it has peaked. The statement \"Crystallized intelligence peaks in childhood and then declines\" is also wrong, as crystallized intelligence actually peaks in later adulthood, not childhood. Lastly, the option \"Crystallized intelligence is independent of age and remains constant\" is misleading because it ignores the fact that crystallized intelligence can increase with age due to accumulated knowledge and experience, rather than remaining constant.",
+      "difficulty": "hard",
+      "kn": "KN6",
+      "kn_explanation": "This question tests knowledge of Horn and Cattell's crystallized and fluid intelligence theory, which is a major research-based theory of intelligence.",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of crystallized intelligence trends effectively.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

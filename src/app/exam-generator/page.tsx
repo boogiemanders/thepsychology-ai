@@ -52,6 +52,20 @@ interface Question {
   relatedSections?: string[]
 }
 
+type QuestionTelemetry = {
+  firstShownAt: number | null
+  lastShownAt: number | null
+  timeSpentMs: number
+  visitCount: number
+  answerChanges: number
+  changedCorrectToWrong: boolean
+  changedWrongToCorrect: boolean
+  highlightCount: number
+  strikethroughCount: number
+  flagged: boolean
+  lastSelectedAnswer?: string
+}
+
 export default function ExamGeneratorPage() {
   const { user, userProfile } = useAuth()
   const entitledTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
@@ -102,6 +116,47 @@ export default function ExamGeneratorPage() {
   const step2Ref = useRef<HTMLDivElement | null>(null)
   const wrongStreakRef = useRef(0)
   const lastScoredQuestionRef = useRef<number | null>(null)
+  const questionTelemetryRef = useRef<Record<number, QuestionTelemetry>>({})
+  const lastQuestionIndexRef = useRef<number | null>(null)
+
+  const getTelemetry = useCallback((index: number): QuestionTelemetry => {
+    const store = questionTelemetryRef.current
+    if (!store[index]) {
+      store[index] = {
+        firstShownAt: null,
+        lastShownAt: null,
+        timeSpentMs: 0,
+        visitCount: 0,
+        answerChanges: 0,
+        changedCorrectToWrong: false,
+        changedWrongToCorrect: false,
+        highlightCount: 0,
+        strikethroughCount: 0,
+        flagged: false,
+      }
+    }
+    return store[index]
+  }, [])
+
+  const resolveCorrectAnswer = useCallback((question: Question): string => {
+    const raw = typeof question.correct_answer === 'string' ? question.correct_answer : ''
+    if (Array.isArray(question.options) && /^[A-D]$/i.test(raw)) {
+      const idx = raw.toUpperCase().charCodeAt(0) - 65
+      return question.options[idx] ?? raw
+    }
+    return raw
+  }, [])
+
+  const finalizeCurrentTiming = useCallback(() => {
+    const now = Date.now()
+    const currentIndex = lastQuestionIndexRef.current
+    if (currentIndex === null) return
+    const telemetry = getTelemetry(currentIndex)
+    if (telemetry.lastShownAt) {
+      telemetry.timeSpentMs += Math.max(now - telemetry.lastShownAt, 0)
+      telemetry.lastShownAt = null
+    }
+  }, [getTelemetry])
 
   useEffect(() => {
     if (!user?.id) return
@@ -124,6 +179,44 @@ export default function ExamGeneratorPage() {
       })
     }
   }, [user?.id, examType, mode])
+
+  useEffect(() => {
+    questionTelemetryRef.current = {}
+    lastQuestionIndexRef.current = null
+  }, [questions])
+
+  useEffect(() => {
+    if (!isExamStarted || questions.length === 0) return
+    const now = Date.now()
+    const prevIndex = lastQuestionIndexRef.current
+
+    if (prevIndex !== null && prevIndex !== currentQuestion) {
+      const prevTelemetry = getTelemetry(prevIndex)
+      if (prevTelemetry.lastShownAt) {
+        prevTelemetry.timeSpentMs += Math.max(now - prevTelemetry.lastShownAt, 0)
+      }
+      prevTelemetry.lastShownAt = null
+    }
+
+    const currentTelemetry = getTelemetry(currentQuestion)
+    if (!currentTelemetry.firstShownAt) {
+      currentTelemetry.firstShownAt = now
+    }
+    currentTelemetry.visitCount += 1
+    currentTelemetry.lastShownAt = now
+    lastQuestionIndexRef.current = currentQuestion
+  }, [currentQuestion, getTelemetry, isExamStarted, questions.length])
+
+  useEffect(() => {
+    if (!isExamStarted || questions.length === 0) return
+    if (isPaused) {
+      finalizeCurrentTiming()
+      return
+    }
+    const now = Date.now()
+    const telemetry = getTelemetry(currentQuestion)
+    telemetry.lastShownAt = now
+  }, [currentQuestion, finalizeCurrentTiming, getTelemetry, isExamStarted, isPaused, questions.length])
 
   const resolveSelectionText = useCallback(() => {
     if (typeof window === 'undefined') return null
@@ -248,10 +341,12 @@ export default function ExamGeneratorPage() {
             options: newOptions
           }
         }))
+        const telemetry = getTelemetry(currentQuestion)
+        telemetry.highlightCount += 1
         lastSelectionRef.current = null
       }
     }
-  }, [currentQuestion, questions, textFormats, resolveSelectionText])
+  }, [currentQuestion, getTelemetry, questions, textFormats, resolveSelectionText])
 
   // Apply strikethrough to selected text (question and answer choices)
   const handleStrikethroughText = useCallback(() => {
@@ -317,10 +412,12 @@ export default function ExamGeneratorPage() {
             options: newOptions
           }
         }))
+        const telemetry = getTelemetry(currentQuestion)
+        telemetry.strikethroughCount += 1
         lastSelectionRef.current = null
       }
     }
-  }, [currentQuestion, questions, textFormats, resolveSelectionText])
+  }, [currentQuestion, getTelemetry, questions, textFormats, resolveSelectionText])
 
   // Save paused exam state to localStorage
   const savePausedExamState = () => {
@@ -345,6 +442,7 @@ export default function ExamGeneratorPage() {
   // Handle pause button click
   const handlePause = () => {
     savePausedExamState()
+    finalizeCurrentTiming()
     setIsPaused(true)
   }
 
@@ -441,6 +539,39 @@ export default function ExamGeneratorPage() {
       }).length
 
       recordExamQuestionResults()
+      finalizeCurrentTiming()
+
+      const questionAttempts = questions.map((question, index) => {
+        const selected = selectedAnswers[index] ?? null
+        const telemetry = questionTelemetryRef.current[index]
+        const resolvedCorrect = resolveCorrectAnswer(question)
+        const isCorrect = selected != null && selected === resolvedCorrect
+        const isScored = question.isScored !== false && question.scored !== false
+
+        return {
+          questionIndex: index,
+          questionId: question.id ? String(question.id) : String(index + 1),
+          question: question.question,
+          options: question.options,
+          selectedAnswer: selected,
+          correctAnswer: resolvedCorrect,
+          isCorrect,
+          isScored,
+          relatedSections: question.relatedSections || [],
+          topic: question.topicName || null,
+          domain: question.domainId || (question.domain ? String(question.domain) : null),
+          knId: question.knId || null,
+          difficulty: question.difficulty || null,
+          timeSpentMs: telemetry?.timeSpentMs ?? null,
+          visitCount: telemetry?.visitCount ?? null,
+          answerChanges: telemetry?.answerChanges ?? null,
+          changedCorrectToWrong: telemetry?.changedCorrectToWrong ?? false,
+          changedWrongToCorrect: telemetry?.changedWrongToCorrect ?? false,
+          flagged: telemetry?.flagged ?? false,
+          highlightCount: telemetry?.highlightCount ?? null,
+          strikethroughCount: telemetry?.strikethroughCount ?? null,
+        }
+      })
 
       // Save exam completion to local storage
       const { saveExamCompletion } = require('@/lib/exam-history')
@@ -509,6 +640,7 @@ export default function ExamGeneratorPage() {
           topPriorities: priorityData?.topPriorities || null,
           allResults: priorityData?.allResults || null,
           assignmentId: assignmentId || null,
+          questionAttempts,
         }),
       })
 
@@ -529,7 +661,7 @@ export default function ExamGeneratorPage() {
       setError('Failed to save exam results. Please try again.')
       setIsSavingResults(false)
     }
-  }, [userId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults])
+  }, [userId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults, finalizeCurrentTiming, resolveCorrectAnswer])
 
   // Resume last paused exam (manual resume via button)
   const handleResumeLastExam = () => {
@@ -941,6 +1073,28 @@ export default function ExamGeneratorPage() {
   }
 
   const handleSelectAnswer = (option: string) => {
+    const current = questions[currentQuestion]
+    const correct = current ? resolveCorrectAnswer(current) : ''
+    const prevAnswer = selectedAnswers[currentQuestion]
+    const nextAnswer = prevAnswer === option ? null : option
+    const telemetry = getTelemetry(currentQuestion)
+
+    if (prevAnswer && nextAnswer && prevAnswer !== nextAnswer) {
+      telemetry.answerChanges += 1
+      if (correct) {
+        if (prevAnswer === correct && nextAnswer !== correct) {
+          telemetry.changedCorrectToWrong = true
+        }
+        if (prevAnswer !== correct && nextAnswer === correct) {
+          telemetry.changedWrongToCorrect = true
+        }
+      }
+    } else if (prevAnswer && !nextAnswer) {
+      telemetry.answerChanges += 1
+    }
+
+    telemetry.lastSelectedAnswer = nextAnswer ?? undefined
+
     setSelectedAnswers((prev) => {
       // Allow unclicking - if clicking the same option, remove it
       if (prev[currentQuestion] === option) {
@@ -1710,14 +1864,16 @@ export default function ExamGeneratorPage() {
               {/* Flag + Feedback on Left */}
               <div className="flex items-center gap-3">
                 <label className="inline-flex h-10 items-center gap-3 cursor-pointer group hover:bg-accent px-3 rounded transition-colors">
-                  <Checkbox
-                    checked={flaggedQuestions[currentQuestion] || false}
-                    onCheckedChange={(checked) => {
-                      setFlaggedQuestions(prev => ({
-                        ...prev,
-                        [currentQuestion]: checked === true
-                      }))
-                    }}
+                    <Checkbox
+                      checked={flaggedQuestions[currentQuestion] || false}
+                      onCheckedChange={(checked) => {
+                        const telemetry = getTelemetry(currentQuestion)
+                        telemetry.flagged = checked === true
+                        setFlaggedQuestions(prev => ({
+                          ...prev,
+                          [currentQuestion]: checked === true
+                        }))
+                      }}
                     id={`flag-q${currentQuestion}`}
                   />
                   <span className="text-sm font-medium text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" style={{ fontFamily: 'Tahoma' }}>

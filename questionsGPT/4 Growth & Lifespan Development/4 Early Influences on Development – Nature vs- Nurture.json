@@ -9,7 +9,7 @@
         "Mitochondrial inheritance"
       ],
       "answer": "Polygenic inheritance",
-      "explanation": "Polygenic inheritance involves multiple genes contributing to a characteristic, such as height, weight, or intelligence.",
+      "explanation": "1. **Correct Answer: Polygenic inheritance**  \nPolygenic inheritance refers to characteristics that are influenced by multiple genes, rather than a single gene pair. This is applicable to traits such as height and intelligence, which are determined by the cumulative effects of many genes, reflecting the complexity of developmental influences outlined in the reference material.\n\n2. **Incorrect Options:**  \n- **Single gene-pair inheritance:** This type of inheritance occurs when a characteristic is influenced by a single pair of genes, typically involving two recessive genes or one dominant and one recessive gene, which does not apply to traits like height or intelligence.  \n- **Sex-linked inheritance:** This refers to characteristics influenced by genes located on sex chromosomes, most often the X chromosome, and does not encompass traits that are polygenic in nature.  \n- **Mitochondrial inheritance:** This involves traits transmitted through mitochondrial DNA, which is inherited only from the mother, and is not relevant to polygenic traits like height or intelligence that involve multiple genes.",
       "kn": "KN4",
       "kn_explanation": "This question tests knowledge of behavioral genetics, specifically types of genetic inheritance influencing psychological phenotypes.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Macrosystem"
       ],
       "answer": "Microsystem",
-      "explanation": "The microsystem consists of the child’s immediate environment and direct interactions with people such as family and peers.",
+      "explanation": "1. The correct answer is \"Microsystem\" because, according to Bronfenbrenner's ecological theory, the microsystem encompasses the child's immediate environment, which includes direct relationships with family, friends, school, and other settings where the child interacts on a daily basis. This system is foundational in shaping the child's development through these close, personal connections.\n\n2. The incorrect options are as follows:\n- **Mesosystem**: This system refers to the interactions between different elements of the microsystem, such as how family relationships influence a child's experiences at school, rather than the immediate relationships themselves.\n- **Exosystem**: The exosystem includes elements in the broader environment that indirectly affect the child, such as parents' workplaces or community services, but does not involve direct interactions with the child.\n- **Macrosystem**: This system encompasses the wider social and cultural context, including cultural values, economic conditions, and political ideologies, which influence the child indirectly rather than through immediate relationships.",
       "kn": "KN22",
       "kn_explanation": "This question relates to individual-environment interactions over time, fitting with developmental influence theories.",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Reactive genotype-environment correlation"
       ],
       "answer": "Active genotype-environment correlation",
-      "explanation": "Active genotype-environment correlation (also known as niche-picking) involves individuals seeking environments that fit their inherited traits.",
+      "explanation": "1. The correct answer is \"Active genotype-environment correlation\" because this type of correlation occurs when children actively seek out experiences that align with their genetic predispositions. As children grow, they gain the ability to choose environments and activities that resonate with their innate traits, thereby reinforcing those characteristics through their choices.\n\n2. \n- **Passive genotype-environment correlation** is incorrect because it refers to situations where children inherit genes from their parents that predispose them to certain traits, and those parents provide environments that support the development of those traits, rather than the children actively seeking experiences themselves.\n  \n- **Evocative genotype-environment correlation** is wrong because it describes how a child's genetic traits elicit specific responses from others in their environment, rather than the child choosing experiences that match their genetic predispositions.\n\n- **Reactive genotype-environment correlation** is not a recognized term in the context provided; the correct terms are passive, evocative, and active genotype-environment correlations, making this option invalid based on the reference material.",
       "kn": "KN4",
       "kn_explanation": "This question addresses behavioral genetics concepts about the interaction of genetics and environment shaping development.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Neither shared nor non-shared environmental factors have significant effects on personality."
       ],
       "answer": "Non-shared environmental influences have a substantial impact on personality, while shared influences have little effect.",
-      "explanation": "Research indicates non-shared environmental factors, such as unique experiences, strongly influence personality, while shared family environment has little impact.",
+      "explanation": "1. The correct answer, \"Non-shared environmental influences have a substantial impact on personality, while shared influences have little effect,\" is supported by research indicating that shared environmental factors, such as parenting style and family socioeconomic status, have minimal influence on personality throughout the lifespan. In contrast, non-shared factors, which include unique experiences and differential treatment by parents and peers, significantly shape personality development and their influence increases with age (Briley & Tucker-Drob, 2014; Plomin & Daniels, 2011).\n\n2. The first incorrect option, \"Shared environmental influences have a strong impact throughout the lifespan, while non-shared influences are negligible,\" is wrong because studies show that shared environmental factors have little to no effect on personality, contradicting the claim of a strong impact. The second incorrect option, \"Both shared and non-shared environmental factors equally influence personality throughout life,\" is inaccurate as it overlooks the evidence that non-shared factors have a more substantial influence compared to shared factors. Lastly, the option \"Neither shared nor non-shared environmental factors have significant effects on personality\" is incorrect because it dismisses the established impact of non-shared environmental influences, which are shown to be significant in shaping personality traits.",
       "kn": "KN4",
       "kn_explanation": "This question focuses on the behavioral genetics of personality traits, highlighting environmental versus genetic influences.",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Heritability is negligible regardless of SES."
       ],
       "answer": "Heritability is low (.10) in low-SES and higher (.70) in high-SES families.",
-      "explanation": "Research shows that environment limits heritability in low-SES families, reducing genetic influence on intelligence in these children.",
+      "explanation": "1. The correct answer, \"Heritability is low (.10) in low-SES and higher (.70) in high-SES families,\" reflects research findings that indicate the heritability of intelligence is significantly influenced by socioeconomic status (SES). Specifically, the heritability estimate for intelligence is reported to be about .10 for young children from low-SES families, suggesting that environmental factors play a larger role in their cognitive development, while it rises to .70 for children from high-SES families, indicating a greater influence of genetic factors in more enriched environments.\n\n2. The first incorrect option, \"Heritability is equally high (.70) in both low- and high-SES families,\" is wrong because it overlooks the substantial difference in heritability estimates based on SES, which indicates that genetics plays a more significant role in higher SES contexts. The second option, \"Heritability is higher (.70) in low-SES and lower (.10) in high-SES families,\" is incorrect as it reverses the established pattern, contradicting the evidence that higher SES leads to higher heritability. Lastly, the option \"Heritability is negligible regardless of SES\" is incorrect since it fails to acknowledge that heritability estimates exist and vary significantly across different SES levels, indicating that genetic influences do play a role in intelligence, especially in high-SES contexts.",
       "kn": "KN4",
       "kn_explanation": "This question assesses knowledge about genetic-environment interactions in cognitive development, relevant to behavioral genetics.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "A point at which development is irreversible regardless of environmental input."
       ],
       "answer": "A period during which environmental exposure is optimal but not absolutely necessary for development.",
-      "explanation": "Sensitive periods allow for optimal development if environmental inputs occur but development can still proceed outside this period.",
+      "explanation": "1. The correct answer, \"A period during which environmental exposure is optimal but not absolutely necessary for development,\" accurately describes a sensitive period because it highlights that during these times, certain experiences can enhance development, but their absence does not preclude it. Sensitive periods allow for more flexibility in development compared to critical periods, where specific environmental exposures are essential for certain developmental milestones to occur.\n\n2. The first incorrect option, \"A brief time when environmental exposure is mandatory for development to occur,\" is wrong because it describes a critical period rather than a sensitive period, emphasizing a necessity rather than an optimal condition. The second incorrect option, \"A permanent stage where genetic factors override environmental effects,\" is incorrect because it misrepresents the interaction between genetics and environment, suggesting that genetic factors can completely negate environmental influences, which is not the case in human development. Lastly, the option \"A point at which development is irreversible regardless of environmental input\" is incorrect because it implies that development cannot be influenced by later experiences, contradicting the concept of sensitive periods, which allows for the possibility of change and growth even if optimal conditions are not met.",
       "kn": "KN21",
       "kn_explanation": "This question is about developmental concepts related to critical versus sensitive periods, fitting normal growth and development across lifespan.",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Case-control genetic studies"
       ],
       "answer": "Twin-adoption studies",
-      "explanation": "Twin-adoption studies compare monozygotic twins reared together and apart, combining twin and adoption methodologies for genetic-environment separation.",
+      "explanation": "1. **Correct Answer: Twin-adoption studies**  \nTwin-adoption studies are considered the most powerful design for disentangling genetic and environmental contributions to a trait because they combine the strengths of both twin studies and adoption studies. This approach allows researchers to compare the correlation coefficients for traits between monozygotic twins raised together and those raised apart, providing insights into the relative influence of genetics versus environmental factors without relying on the equal environment assumption inherent in twin studies.\n\n2. **Incorrect Options:**\n- **Longitudinal cohort studies:** These studies track the same individuals over time to observe changes and developments but do not specifically focus on disentangling genetic and environmental influences like twin-adoption studies do.\n- **Cross-sectional family studies:** These studies examine different individuals at a single point in time and do not provide the longitudinal perspective needed to assess the impact of genetics and environment on traits over time.\n- **Case-control genetic studies:** These studies compare individuals with a particular trait or disorder to those without, focusing on genetic associations rather than the interplay of genetic and environmental factors, which is the primary goal of twin-adoption studies.",
       "kn": "KN4",
       "kn_explanation": "This question tests understanding of research methods used in behavioral genetics and their relative power and assumptions.",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "The direct transmission of traits through dominant and recessive genes"
       ],
       "answer": "Changes in gene expression without alteration of the DNA sequence",
-      "explanation": "Epigenetics involves mechanisms that modify gene expression and phenotype without changing the underlying DNA sequence.",
+      "explanation": "1. The correct answer, \"Changes in gene expression without alteration of the DNA sequence,\" accurately reflects the definition of epigenetics as outlined in the reference material. Epigenetics studies modifications that affect how genes are expressed without changing the actual genetic code (DNA). This means that environmental factors can lead to changes in phenotype through mechanisms like DNA methylation, which can influence gene expression while keeping the underlying DNA sequence intact.\n\n2. The first incorrect option, \"Mutations in DNA sequence causing permanent genetic changes,\" is wrong because epigenetics focuses on changes in gene expression rather than permanent alterations to the DNA sequence itself. The second incorrect option, \"Inheritance of mitochondrial DNA exclusively from the mother,\" is incorrect as it pertains to a specific type of genetic inheritance rather than the broader concept of gene expression changes studied in epigenetics. Lastly, the option \"The direct transmission of traits through dominant and recessive genes\" is also incorrect because it describes classical genetics, which involves the transmission of traits based on genetic inheritance patterns, rather than the regulatory processes of gene expression emphasized in epigenetics.",
       "kn": "KN4",
       "kn_explanation": "This question addresses genetic bases and behavioral genetics related to gene expression and modification impacting development.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Decreased risk of hypertension and cardiovascular problems"
       ],
       "answer": "Increased risk for coronary heart disease and type 2 diabetes in adulthood",
-      "explanation": "Barker’s hypothesis posits that prenatal undernutrition programs changes in organ systems that increase adult risk for heart disease and diabetes.",
+      "explanation": "1. The correct answer, \"Increased risk for coronary heart disease and type 2 diabetes in adulthood,\" aligns with Barker’s fetal origins hypothesis, which posits that undernutrition during prenatal development can lead to permanent changes in the structure and function of organ systems. Barker's research indicates that such adaptations can predispose individuals to health issues like coronary heart disease and type 2 diabetes later in life.\n\n2. The option \"Increased likelihood of developing autism spectrum disorder\" is incorrect because the reference material does not link prenatal undernutrition specifically to autism; it focuses on cardiovascular and metabolic issues. \"Permanent intellectual disability regardless of postnatal environment\" is also wrong, as the material emphasizes that prenatal factors can influence outcomes, but they do not guarantee permanent disability irrespective of the environment. Lastly, \"Decreased risk of hypertension and cardiovascular problems\" is incorrect because Barker’s hypothesis suggests that undernutrition increases the risk of such problems, not decreases it.",
       "kn": "KN1",
       "kn_explanation": "This question relates to the biological bases of behavior and how prenatal environmental factors influence long-term health outcomes.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Adoptive parent and adopted child: .18"
       ],
       "answer": "Identical twins reared together: .85",
-      "explanation": "The highest correlation among identical twins reared together indicates a strong genetic influence on IQ compared to other relationships.",
+      "explanation": "1. The correlation coefficient for IQ scores of identical twins reared together is .85, indicating a very strong genetic influence on intelligence. This high correlation suggests that identical twins, who share 100% of their genetic material, have similar IQ scores largely due to their genetic similarities, supporting the conclusion that genetics play a substantial role in intelligence.\n\n2. The correlation coefficient for adoptive siblings reared together is .31, which indicates a low correlation and suggests that environmental factors have a more significant impact than genetics in this group. The coefficient for biological siblings reared apart is .24, reflecting a weak genetic influence on IQ scores when siblings are raised in different environments, further supporting the idea that shared genetics alone does not account for intelligence. Lastly, the correlation of .18 for adoptive parent and adopted child indicates minimal genetic influence, as these children do not share genetic material with their adoptive parents, showing that environmental factors are more significant in this context.",
       "kn": "KN4",
       "kn_explanation": "This question assesses interpretation of genetic influence on intelligence using correlation data, aligned with behavioral genetics.",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "Mitochondrial inheritance"
       ],
       "answer": "Sex-linked inheritance",
-      "explanation": "Sex-linked inheritance involves genes on sex chromosomes, most often the X chromosome, affecting characteristics like color blindness.",
+      "explanation": "1. **Correct Answer: Sex-linked inheritance**  \nSex-linked inheritance is the correct answer because it specifically refers to traits influenced by genes located on the sex chromosomes, most commonly the X chromosome. This means that characteristics associated with sex-linked inheritance can be passed down through generations via the X chromosome, which is particularly relevant for traits that exhibit different patterns of inheritance based on gender.\n\n2. **Incorrect Options:**\n\n- **Single gene-pair inheritance:** This form of inheritance involves a characteristic influenced by a single pair of genes, not specifically related to the location of those genes on sex chromosomes.\n\n- **Polygenic inheritance:** Polygenic inheritance refers to traits influenced by multiple genes, and does not pertain to genes located on specific chromosomes, including the X chromosome.\n\n- **Mitochondrial inheritance:** Mitochondrial inheritance involves genes found in mitochondrial DNA, which is inherited exclusively from the mother, and is unrelated to genes located on sex chromosomes.",
       "kn": "KN4",
       "kn_explanation": "This question targets specific genetic mechanisms underpinning behavior and development genetics.",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Genetic expression is directly altered by environmental chemicals or toxins."
       ],
       "answer": "Parents provide both genes and supportive environments consistent with the child’s genetic traits.",
-      "explanation": "Passive genotype-environment correlation occurs because children inherit genes and are raised in environments influenced by those same parental genetics.",
+      "explanation": "1. The correct answer, \"Parents provide both genes and supportive environments consistent with the child’s genetic traits,\" accurately describes passive genotype-environment correlation because it highlights how parents pass on genetic predispositions to their children while also creating environments that nurture those traits. For instance, a child of sociable parents is likely to inherit genes that predispose them to sociability, and their parents will provide opportunities for social interaction, reinforcing this genetic inclination.\n\n2. The first incorrect option, \"A child’s genetic traits evoke reactions from others that reinforce those traits,\" describes evocative genotype-environment correlation, not passive correlation, as it focuses on how a child's traits elicit responses from their environment rather than being shaped directly by parental provision of genes and environment.\n\nThe second incorrect option, \"The child actively seeks environments that suit their genetic predispositions,\" refers to active genotype-environment correlation, which emphasizes the child’s role in choosing environments that align with their genetic traits, contrasting with the passive role of parents in this context.\n\nThe third incorrect option, \"Genetic expression is directly altered by environmental chemicals or toxins,\" does not pertain to genotype-environment correlation but rather addresses the concept of epigenetics, which involves changes in gene expression due to environmental factors rather than the correlation between genetics and environmental influences.",
       "kn": "KN4",
       "kn_explanation": "This question evaluates knowledge of genotype-environment interplay relevant to behavioral genetics.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "It is highest during infancy and declines during adolescence."
       ],
       "answer": "It increases from about .20 in infancy to about .60-.80 in early and middle adulthood.",
-      "explanation": "Heritability of intelligence rises as individuals age, reflecting growing genetic influence over time.",
+      "explanation": "1. The correct answer, \"It increases from about .20 in infancy to about .60-.80 in early and middle adulthood,\" reflects the findings that heritability estimates for intelligence vary with age. Specifically, research indicates that heritability is approximately .20 for infants, increases to about .40 for children and adolescents, and reaches .60 to .80 for individuals in early and middle adulthood, demonstrating a significant rise in genetic influence on intelligence as individuals mature.\n\n2. The option \"It remains constant at approximately .50 throughout life\" is incorrect because heritability estimates for intelligence actually fluctuate with age, starting lower in infancy and increasing significantly in adulthood. The statement \"It decreases steadily from birth through old age\" is wrong as research shows heritability increases rather than decreases over the lifespan. Lastly, the option \"It is highest during infancy and declines during adolescence\" is inaccurate because heritability is lowest during infancy and increases during adolescence and adulthood, contrary to the claim of a decline.",
       "kn": "KN4",
       "kn_explanation": "This question focuses on genetic influences on cognitive development and their variation by age.",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "Repetitive behaviors hinder the emergence of voluntary motor skills in infancy."
       ],
       "answer": "Motor skills develop through integration of simple repetitive behaviors influenced by multiple factors including environment and desires.",
-      "explanation": "DST explains motor development as a complex interaction of biology, environment, and the infant’s goals, with repetitive behaviors preceding complex skills.",
+      "explanation": "1. The correct answer, \"Motor skills develop through integration of simple repetitive behaviors influenced by multiple factors including environment and desires,\" aligns with Dynamic Systems Theory (DST), which posits that development is a complex process involving interactions between biology, environment, and individual goals. According to DST, simple repetitive behaviors, such as kicking and reaching, precede and integrate to form more complex motor skills, highlighting the role of environmental factors and personal motivations in this developmental process.\n\n2. The first incorrect option, \"Motor milestones emerge suddenly due purely to brain and body maturation without environmental influence,\" is wrong because DST emphasizes that motor development is not solely the result of maturation but requires environmental support and interaction. The second incorrect option, \"Motor development is exclusively determined by genetic programming unaffected by social environment,\" is incorrect since DST acknowledges that both genetic and environmental factors play significant roles in motor skill development. Lastly, the option \"Repetitive behaviors hinder the emergence of voluntary motor skills in infancy\" is incorrect because DST suggests that these repetitive behaviors are foundational for the development of voluntary skills, rather than hindering them.",
       "kn": "KN21",
       "kn_explanation": "This question addresses a major developmental theory on growth and lifespan development of motor skills.",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "Only genetic inheritance without environmental influence"
       ],
       "answer": "Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption",
-      "explanation": "Prenatal epigenetic changes can be triggered by environmental factors including maternal diet, teratogens, infections, smoking, and alcohol use.",
+      "explanation": "1. The correct answer, \"Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption,\" is supported by the reference material, which identifies these factors as potential causes of epigenetic changes during prenatal development. Specifically, it mentions that maternal diet and exposure to teratogenic medications, as well as infections, tobacco, and alcohol, can trigger changes in gene expression that may lead to lasting effects on the developing fetus.\n\n2. The first incorrect option, \"Physical exercise, trauma, drug use, and environmental toxins,\" is wrong because while some of these factors can influence development postnatally, the reference material specifically lists the factors affecting prenatal epigenetic changes as maternal diet, teratogenic medications, infections, tobacco, and alcohol. The second incorrect option, \"Genetic mutations and chromosomal abnormalities,\" is incorrect because it pertains to changes in genetic code rather than epigenetic modifications, which involve alterations in gene expression without changing the DNA sequence. Lastly, the option \"Only genetic inheritance without environmental influence\" is incorrect because the reference material emphasizes that both genetic and environmental factors contribute to development, highlighting the significant role of environmental influences in epigenetic changes.",
       "kn": "KN24",
       "kn_explanation": "This question targets diverse identity and developmental influences by focusing on prenatal environment effects on gene expression.",
       "difficulty": "medium",
@@ -249,11 +249,51 @@
         "Both shared and non-shared environmental influences remain negligible."
       ],
       "answer": "It increases with age while genetic influence decreases.",
-      "explanation": "Studies indicate that non-shared environmental effects on personality grow as individuals age, while genetic influence decreases over time.",
+      "explanation": "1. The correct answer, \"It increases with age while genetic influence decreases,\" is supported by research indicating that non-shared environmental factors have a substantial influence on personality and that this influence increases as individuals age. Conversely, the impact of genetic factors on personality tends to decrease over time, suggesting that as people grow older, their unique experiences and environments play a more significant role in shaping their personality traits (Briley & Tucker-Drob, 2014; Plomin & Daniels, 2011).\n\n2. The option \"It remains constant while genetic influence increases\" is incorrect because research shows that non-shared environmental influences do not remain constant; they actually increase over time, while genetic influences decrease. The statement \"It decreases and shared environmental influence increases\" is also wrong, as shared environmental factors are found to have little or no influence on personality throughout the lifespan. Lastly, the option \"Both shared and non-shared environmental influences remain negligible\" is inaccurate because non-shared environmental influences are significant and increase in importance with age, while shared factors are not negligible but have minimal impact on personality.",
       "kn": "KN21",
       "kn_explanation": "This question fits developmental growth domain by focusing on longitudinal changes in personality determinants.",
       "difficulty": "medium",
       "quality_comment": "The options balance longitudinal trends in environmental and genetic impact, requiring nuanced understanding of personality development."
+    },
+    {
+      "stem": "What term describes the genetic contribution to traits that are influenced by more than one gene, such as skin color or eye color?",
+      "options": [
+        "Polygenic inheritance",
+        "Mendelian inheritance",
+        "Chromosomal inheritance",
+        "Autosomal inheritance"
+      ],
+      "answer": "Polygenic inheritance",
+      "explanation": "1. **Correct Answer: Polygenic inheritance**  \n\"Polygenic inheritance\" is the correct term because it refers to traits influenced by multiple genes, such as skin color and eye color. The reference material states that most characteristics, including these traits, are polygenic, meaning their expression results from the cumulative effects of several different genes.\n\n2. **Incorrect Options:**\n- **Mendelian inheritance:** This term describes traits influenced by a single gene pair, following the inheritance patterns established by Gregor Mendel, and does not apply to traits influenced by multiple genes.\n- **Chromosomal inheritance:** This term refers to the inheritance of traits related to the structure and number of chromosomes, rather than the influence of multiple genes on specific traits.\n- **Autosomal inheritance:** This term pertains to traits carried on non-sex chromosomes (autosomes) and does not specifically denote the involvement of multiple genes in trait expression.",
+      "difficulty": "easy",
+      "kn": "KN4",
+      "kn_explanation": "This question tests knowledge of behavioral genetics, specifically types of genetic inheritance influencing psychological phenotypes.",
+      "quality_comment": "This question effectively tests understanding of polygenic traits in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of behavioral genetics, which term refers to behaviors that are the result of the interaction between multiple genes and environmental factors?",
+      "options": [
+        "Polygenic inheritance",
+        "Epigenetics",
+        "Genetic predisposition",
+        "Heritability"
+      ],
+      "answer": "Polygenic inheritance",
+      "explanation": "1. **Polygenic inheritance** is the correct answer because it refers to characteristics that are influenced by multiple genes, which interact with environmental factors. This concept highlights the complexity of traits such as height, weight, and intelligence, indicating that these traits cannot be attributed to a single gene but rather to a combination of genetic contributions and environmental influences.\n\n2. **Epigenetics** is incorrect because it specifically focuses on changes in gene expression caused by environmental factors without altering the genetic code itself, rather than the interaction of multiple genes with the environment. **Genetic predisposition** is also incorrect as it refers to the inherited likelihood of developing certain traits or behaviors due to specific genes, but does not encompass the broader interaction of multiple genes and environmental influences. Lastly, **heritability** is incorrect because it measures the extent to which genetic differences contribute to observed variability in a trait within a population, but it does not specifically refer to the interaction of multiple genes with environmental factors.",
+      "difficulty": "hard",
+      "kn": "KN4",
+      "kn_explanation": "This question tests knowledge of behavioral genetics, specifically types of genetic inheritance influencing psychological phenotypes.",
+      "quality_comment": "This question challenges the test-taker to apply the concept of polygenic inheritance to behavioral genetics, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

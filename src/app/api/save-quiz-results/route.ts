@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { applyTopicMasteryDeltas, accumulateTopicMasteryDeltas, TopicAttempt } from '@/lib/topic-mastery'
 import { applyReviewQueueUpdates, type ReviewAttempt } from '@/lib/review-queue'
+import { createRecoverInsight } from '@/lib/recover-insights'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -50,6 +51,14 @@ export async function POST(request: NextRequest) {
         isCorrect: boolean
         isScored?: boolean
         relatedSections?: string[]
+        timeSpentMs?: number | null
+        visitCount?: number | null
+        answerChanges?: number | null
+        changedCorrectToWrong?: boolean
+        changedWrongToCorrect?: boolean
+        flagged?: boolean
+        highlightCount?: number | null
+        strikethroughCount?: number | null
       }>
     }
 
@@ -108,6 +117,14 @@ export async function POST(request: NextRequest) {
         is_correct: attempt.isCorrect,
         is_scored: attempt.isScored !== false,
         related_sections: Array.isArray(attempt.relatedSections) ? attempt.relatedSections : null,
+        time_spent_ms: typeof attempt.timeSpentMs === 'number' ? attempt.timeSpentMs : null,
+        visit_count: typeof attempt.visitCount === 'number' ? attempt.visitCount : null,
+        answer_changes: typeof attempt.answerChanges === 'number' ? attempt.answerChanges : null,
+        changed_correct_to_wrong: attempt.changedCorrectToWrong === true,
+        changed_wrong_to_correct: attempt.changedWrongToCorrect === true,
+        flagged: attempt.flagged === true,
+        highlight_count: typeof attempt.highlightCount === 'number' ? attempt.highlightCount : null,
+        strikethrough_count: typeof attempt.strikethroughCount === 'number' ? attempt.strikethroughCount : null,
         created_at: new Date().toISOString(),
       }))
 
@@ -161,6 +178,39 @@ export async function POST(request: NextRequest) {
       }
     } catch (reviewError) {
       console.error('[save-quiz-results] Failed to update review queue:', reviewError)
+    }
+
+    try {
+      const insightAttempts = (questionAttempts || []).map((attempt) => ({
+        questionId: attempt.questionId,
+        question: attempt.question,
+        topic,
+        domain: domain ?? null,
+        relatedSections: Array.isArray(attempt.relatedSections) ? attempt.relatedSections : null,
+        isCorrect: attempt.isCorrect,
+        isScored: attempt.isScored !== false,
+        timeSpentMs: attempt.timeSpentMs ?? null,
+        visitCount: attempt.visitCount ?? null,
+        answerChanges: attempt.answerChanges ?? null,
+        changedCorrectToWrong: attempt.changedCorrectToWrong ?? null,
+        changedWrongToCorrect: attempt.changedWrongToCorrect ?? null,
+        flagged: attempt.flagged ?? null,
+        highlightCount: attempt.highlightCount ?? null,
+        strikethroughCount: attempt.strikethroughCount ?? null,
+      }))
+
+      await createRecoverInsight(supabase, {
+        userId,
+        sourceType: 'quiz',
+        sourceId: attemptId,
+        topic,
+        domain: domain ?? null,
+        totalQuestions,
+        correctQuestions,
+        questionAttempts: insightAttempts,
+      })
+    } catch (insightError) {
+      console.error('[save-quiz-results] Failed to generate Recover insight:', insightError)
     }
 
     return NextResponse.json({ success: true, attemptId })

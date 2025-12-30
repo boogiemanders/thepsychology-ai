@@ -9,7 +9,7 @@
         "Backward conditioning, where the US is presented before the CS"
       ],
       "answer": "Delay conditioning, where the CS precedes and overlaps with the US",
-      "explanation": "Delay conditioning is the most effective procedure because presenting the CS shortly before and overlapping with the US creates a strong contingency that facilitates acquisition of the CR.",
+      "explanation": "1. **Correct Answer Explanation**: Delay conditioning is considered the most effective procedure for acquiring a conditioned response (CR) because the conditioned stimulus (CS) is presented just before and overlaps with the unconditioned stimulus (US). This timing creates a strong association between the two stimuli, enhancing the likelihood that the CS will elicit the CR when presented alone. The optimal delay of about one-half second between the CS and US further contributes to the effectiveness of this procedure.\n\n2. **Incorrect Options Explanation**:\n   - **Simultaneous conditioning**: This procedure is ineffective because the CS and US occur at the same time, which does not allow for a clear association to be formed, reducing the likelihood of the CR being established.\n   - **Trace conditioning**: In this method, the CS is presented and terminated before the US begins, which can weaken the association since there is a gap between the two stimuli, making it less effective than delay conditioning.\n   - **Backward conditioning**: This procedure is generally ineffective because the US is presented before the CS, which disrupts the typical contingency that is necessary for classical conditioning to occur, making it unlikely for the CS to elicit a CR.",
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of conditioning procedures within classical learning theories, which is central to the major research-based theories and principles of learning (KN7).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Conditioned inhibition"
       ],
       "answer": "Spontaneous recovery",
-      "explanation": "Spontaneous recovery refers to the return of a CR in a less intense form after extinction when the CS is presented again following a pause.",
+      "explanation": "1. \"Spontaneous recovery\" is the correct answer because it refers to the phenomenon where a conditioned response (CR) that has been extinguished by repeatedly presenting the conditioned stimulus (CS) without the unconditioned stimulus (US) reappears after a rest period. This suggests that the association between the CS and CR is not completely eliminated but rather suppressed, as indicated by Pavlov's findings on internal inhibition.\n\n2. The incorrect options are as follows:\n- **Stimulus generalization**: This phenomenon occurs when stimuli similar to the original CS elicit the CR without any prior pairing with the US, which does not describe the reappearance of a previously extinguished CR.\n- **Classical extinction**: This refers to the process of diminishing or eliminating a CR by repeatedly presenting the CS without the US, rather than the return of a CR after a rest period.\n- **Conditioned inhibition**: This involves inhibiting a previously established CR by pairing the CS with a new neutral stimulus without presenting the US, which does not relate to the re-emergence of an extinguished CR.",
       "kn": "KN7",
       "kn_explanation": "Spontaneous recovery is a key concept in learning theory relating to how conditioned responses change over time, fitting under major theories of learning (KN7).",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Higher-order conditioning"
       ],
       "answer": "Stimulus generalization",
-      "explanation": "Stimulus generalization occurs when stimuli similar to the original CS elicit the CR, even though they were never paired with the US.",
+      "explanation": "1. \"Stimulus generalization\" is the correct answer because it refers to the phenomenon where a conditioned response (CR), such as salivation, occurs in response to stimuli that are similar to the original conditioned stimulus (CS). In Pavlov's studies, dogs salivated not only to the specific tone they were conditioned to but also to tones that were similar, demonstrating that the CR can be elicited by stimuli that share characteristics with the CS.\n\n2. \n- **Stimulus discrimination** is incorrect because it refers to the ability to differentiate between the CS and similar stimuli, leading to a CR only in response to the specific CS rather than to similar stimuli.\n- **Conditioned inhibition** is incorrect as it involves inhibiting a previously established CR to a CS by introducing a new neutral stimulus that signals the absence of the unconditioned stimulus (US), rather than eliciting a CR from similar stimuli.\n- **Higher-order conditioning** is incorrect because it describes a process where a conditioned stimulus (CS) is paired with a new neutral stimulus to create a second CS, rather than the response to similar stimuli associated with the original CS.",
       "kn": "KN7",
       "kn_explanation": "Understanding generalization and discrimination of stimuli is fundamental to learning theory, situated in models and principles of learning (KN7).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Pairing a CS with a new UNCONDITIONED stimulus to create a second-order condition"
       ],
       "answer": "A light (CS-) consistently presented with a bell (CS+) yet no unconditioned stimulus (US), causing the light to predict no US and inhibit the response",
-      "explanation": "Conditioned inhibition involves a stimulus (CS-) indicating that the US will not occur, thereby suppressing the conditioned response when presented with the excitatory CS+.",
+      "explanation": "1. The correct answer, \"A light (CS-) consistently presented with a bell (CS+) yet no unconditioned stimulus (US), causing the light to predict no US and inhibit the response,\" exemplifies conditioned inhibition because the light (CS-) is paired with the bell (CS+) without the presentation of the US. This pairing results in the light signaling that the US will not occur, effectively inhibiting the conditioned response (CR) that would normally be elicited by the bell (CS+). This process demonstrates how conditioned inhibition works to diminish or eliminate a previously established CR.\n\n2. The first incorrect option, \"Presenting two neutral stimuli simultaneously before a US, one of which fails to elicit a response later,\" describes overshadowing, where one stimulus is more salient and inhibits the other from becoming a CS, rather than conditioned inhibition. The second incorrect option, \"Introducing a novel stimulus far removed from the CS that nevertheless produces the conditioned response,\" does not relate to conditioned inhibition at all, as it suggests the novel stimulus directly elicits a CR without any prior conditioning. The third incorrect option, \"Pairing a CS with a new UNCONDITIONED stimulus to create a second-order condition,\" incorrectly describes higher-order conditioning, where a new CS is paired with an established CS, rather than illustrating the concept of conditioned inhibition.",
       "kn": "KN7",
       "kn_explanation": "Conditioned inhibition illustrates how conditioned responses can be suppressed, important in theories of learning and classical conditioning (KN7).",
       "difficulty": "hard",
@@ -69,7 +69,7 @@
         "A conditioned stimulus suppresses a response to another previously conditioned stimulus"
       ],
       "answer": "A previously conditioned stimulus prevents conditioning of a new stimulus when both are presented together before the US",
-      "explanation": "Blocking happens when the first CS already fully predicts the US, so adding a second stimulus provides no new information and thus does not become conditioned.",
+      "explanation": "1. The correct answer, \"A previously conditioned stimulus prevents conditioning of a new stimulus when both are presented together before the US,\" accurately describes the blocking effect in compound conditioning. In this scenario, the first conditioned stimulus (CS) has already established an association with the unconditioned stimulus (US). When a new neutral stimulus is presented alongside the already conditioned CS, it fails to gain any new information about the US, thereby preventing the new stimulus from becoming a conditioned stimulus itself.\n\n2. The first incorrect option, \"Two stimuli are presented together and both equally elicit a conditioned response when presented alone,\" is wrong because, in blocking, only the previously conditioned stimulus elicits the conditioned response; the new stimulus does not elicit a response when presented alone. The second incorrect option, \"A neutral stimulus gains control of a conditioned response by being paired directly with the US,\" is incorrect because the blocking effect specifically involves a neutral stimulus that does not gain control due to the prior conditioning of another stimulus. Lastly, the option \"A conditioned stimulus suppresses a response to another previously conditioned stimulus\" is incorrect because blocking does not involve suppression; instead, it refers to the inability of the new stimulus to become conditioned due to the pre-existing association of the first stimulus with the US.",
       "kn": "KN7",
       "kn_explanation": "This question tests understanding of compound conditioning phenomena, which are integral to models explaining learning processes (KN7).",
       "difficulty": "hard",
@@ -84,7 +84,7 @@
         "Repeated presentation of the conditioned stimulus without the unconditioned stimulus diminishes the conditioned response"
       ],
       "answer": "A neutral stimulus is paired with an already established conditioned stimulus, causing the neutral stimulus to evoke the conditioned response",
-      "explanation": "Higher-order conditioning occurs when a neutral stimulus acquires the ability to evoke the CR by being paired with a previously conditioned stimulus rather than the US directly.",
+      "explanation": "1. The correct answer, \"A neutral stimulus is paired with an already established conditioned stimulus, causing the neutral stimulus to evoke the conditioned response,\" accurately describes higher-order conditioning. In this process, a neutral stimulus is treated as an unconditioned stimulus and is paired with an existing conditioned stimulus, leading the neutral stimulus to elicit the conditioned response on its own. This reflects the nature of higher-order conditioning, where the new neutral stimulus becomes a conditioned stimulus through its association with the already established conditioned stimulus.\n\n2. The first incorrect option, \"A neutral stimulus is paired directly with the unconditioned stimulus to produce a conditioned response,\" is wrong because this describes the basic classical conditioning process, not higher-order conditioning. The second incorrect option, \"Two stimuli are paired with the unconditioned stimulus simultaneously to create a compound conditioned response,\" is incorrect because it refers to compound conditioning rather than the sequential pairing characteristic of higher-order conditioning. Lastly, the option \"Repeated presentation of the conditioned stimulus without the unconditioned stimulus diminishes the conditioned response\" describes classical extinction, which involves the weakening of a conditioned response, rather than the process of higher-order conditioning where a neutral stimulus is established as a conditioned stimulus.",
       "kn": "KN7",
       "kn_explanation": "This concept is key in understanding the extension and complexity of conditioning in learning theory (KN7).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Stimulus generalization"
       ],
       "answer": "Experimental neurosis",
-      "explanation": "Experimental neurosis refers to Pavlov's term for abnormal behaviors like agitation and aggression that arise from difficult discrimination learning, due to conflict in neural processes.",
+      "explanation": "1. \"Experimental neurosis\" is the correct answer because it refers to the unusual behaviors observed by Pavlov when dogs were subjected to difficult discrimination tasks. In these situations, the dogs exhibited agitation and aggression, which Pavlov attributed to a conflict between excitatory and inhibitory processes in the central nervous system when they struggled to differentiate between similar stimuli.\n\n2. The incorrect options are as follows:\n- **Conditioned inhibition** refers to the process of inhibiting a previously established conditioned response by pairing a conditioned stimulus with a new neutral stimulus without presenting the unconditioned stimulus; it does not involve agitation or aggression.\n- **Spontaneous recovery** is the phenomenon where a conditioned response reappears after a period of extinction, but it does not relate to the agitation observed in difficult discrimination tasks.\n- **Stimulus generalization** occurs when a conditioned response is elicited by stimuli similar to the conditioned stimulus, but it does not explain the extreme agitation and aggression seen in the dogs during challenging discrimination trials.",
       "kn": "KN7",
       "kn_explanation": "Understanding behavioral consequences of complex discrimination is important for learning models and their CNS correlates (KN7).",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "The two stimuli plan a role in conditioned inhibition, reducing the CR"
       ],
       "answer": "The more salient stimulus conditions and elicits the CR, while the less salient stimulus fails to become conditioned",
-      "explanation": "Overshadowing occurs when the more salient stimulus in a compound captures conditioning, preventing the less salient stimulus from becoming conditioned despite pairing with the US.",
+      "explanation": "1. The correct answer, \"The more salient stimulus conditions and elicits the CR, while the less salient stimulus fails to become conditioned,\" is accurate because, in overshadowing, two neutral stimuli are presented together before the unconditioned stimulus (US). The more salient stimulus captures attention and becomes a conditioned stimulus (CS) that elicits the conditioned response (CR), while the less salient stimulus does not gain sufficient associative strength to elicit the CR when tested alone.\n\n2. The option \"Both stimuli become equally conditioned and elicit the CR when tested alone\" is incorrect because overshadowing results in unequal conditioning; only the more salient stimulus becomes a CS. The statement \"Neither stimulus becomes conditioned because they compete for association with the US\" is wrong because, in overshadowing, the more salient stimulus does become conditioned, while the less salient does not. Lastly, \"The two stimuli play a role in conditioned inhibition, reducing the CR\" is incorrect because overshadowing does not involve conditioned inhibition; instead, it refers to the failure of the less salient stimulus to condition due to overshadowing by the more salient stimulus.",
       "kn": "KN7",
       "kn_explanation": "This question involves understanding complex interactions between stimuli during conditioning trials, a key aspect of learning theory models (KN7).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Conditioned inhibition"
       ],
       "answer": "Classical extinction",
-      "explanation": "Classical extinction occurs when repeated presentation of the CS without the US results in a decrease and eventual loss of the CR.",
+      "explanation": "1. **Correct Answer - Classical Extinction:** \"Classical extinction\" is the correct answer because it specifically refers to the process where a conditioned response (CR) diminishes or disappears when the conditioned stimulus (CS) is presented repeatedly without the unconditioned stimulus (US). This means that the learned association between the CS and US is weakened, leading to a reduction in the CR.\n\n2. **Incorrect Options:**\n   - **Spontaneous Recovery:** This term refers to the reappearance of a conditioned response after a period of time has passed since extinction, rather than the reduction or elimination of the response itself.\n   - **Stimulus Generalization:** This concept involves the tendency for stimuli similar to the original CS to elicit the CR, not the reduction of the CR through repeated presentations of the CS without the US.\n   - **Conditioned Inhibition:** This term describes the process of inhibiting a CR by presenting a new neutral stimulus (CS-) alongside the original CS (CS+) without the US, which is different from the extinction of a response through repeated presentations of the CS alone.",
       "kn": "KN7",
       "kn_explanation": "Extinction is a fundamental process in learning theory, critical for understanding how conditioned responses change and are modulated (KN7).",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "Experimental neurosis"
       ],
       "answer": "Magnitude of conditioned response",
-      "explanation": "The magnitude of the CR is always less than the UR initially but increases with repeated CS-US pairings due to the strengthening of the association.",
+      "explanation": "1. The \"Magnitude of conditioned response\" is the correct answer because it specifically refers to the strength of the conditioned response (CR) in relation to the unconditioned response (UR). The reference material states that the magnitude of a CR is always less than the magnitude of the UR and that this magnitude increases with repeated pairings of the conditioned stimulus (CS) and unconditioned stimulus (US), indicating a direct relationship between the frequency of pairings and the strength of the CR.\n\n2. The incorrect options are as follows:\n\n- **Stimulus discrimination** is incorrect because it refers to the ability to differentiate between the conditioned stimulus and similar stimuli, rather than the strength or magnitude of the conditioned response itself.\n  \n- **Conditioned inhibition** is incorrect because it involves reducing or eliminating a conditioned response, rather than illustrating the relationship between the magnitude of the CR and the frequency of CS-US pairings.\n  \n- **Experimental neurosis** is incorrect because it describes the unusual behaviors exhibited by subjects when faced with difficult discriminations, not the relationship between the strength of conditioned responses and repeated pairings of stimuli.",
       "kn": "KN7",
       "kn_explanation": "Understanding the strength and magnitude of conditioned responses is part of the core principles and mechanisms in classical conditioning (KN7).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Because multiple CSs compete for association with the US"
       ],
       "answer": "Because the US precedes the CS, preventing the CS from predicting the US",
-      "explanation": "Backward conditioning is ineffective because the CS does not predict the US; the required contingency for learning is absent.",
+      "explanation": "### Explanation of the Correct Answer\nThe correct answer, \"Because the US precedes the CS, preventing the CS from predicting the US,\" is accurate because, in backward conditioning, the unconditioned stimulus (US) is presented before the conditioned stimulus (CS). This sequence disrupts the ability of the CS to signal or predict the occurrence of the US, which is essential for effective classical conditioning. Without this predictive relationship, the CS fails to elicit the conditioned response (CR).\n\n### Explanation of Incorrect Options\n- **\"Because the CS and US are presented simultaneously, making discrimination difficult\":** This statement is incorrect because simultaneous conditioning involves the CS and US being presented at the same time, not in the backward conditioning procedure where the US precedes the CS.\n\n- **\"Because the CS is repeatedly presented without the US, leading to extinction\":** This option is wrong as it describes a scenario of classical extinction rather than backward conditioning. In backward conditioning, the CS is not presented alone but rather follows the US.\n\n- **\"Because multiple CSs compete for association with the US\":** This option is incorrect because backward conditioning does not involve multiple CSs competing; it specifically refers to a single CS following the US, which does not allow for the necessary conditioning to occur. \n\nBy understanding these principles, we can see how the timing of stimulus presentation is crucial for effective classical conditioning.",
       "kn": "KN7",
       "kn_explanation": "This question tests understanding of the importance of stimulus order and contingency in classical conditioning, central to learning theory (KN7).",
       "difficulty": "medium",
@@ -189,11 +189,51 @@
         "Several seconds between CS termination and US onset"
       ],
       "answer": "About one-half second delay between CS onset and US onset",
-      "explanation": "A half-second delay between CS onset and US onset is optimal for the strongest acquisition in delay conditioning.",
+      "explanation": "1. The correct answer, \"About one-half second delay between CS onset and US onset,\" is optimal for delay conditioning because this timing allows the conditioned stimulus (CS) to precede and overlap with the unconditioned stimulus (US), enhancing the association between the two stimuli. This optimal delay facilitates effective learning, as it reinforces the connection between the CS and the US, leading to a stronger conditioned response (CR).\n\n2. The option \"US is presented immediately before the CS\" is incorrect because this describes backward conditioning, which is generally ineffective as it fails to establish the necessary contingency between the CS and US. The option \"CS and US presented simultaneously\" is wrong because simultaneous conditioning does not allow for the CS to predict the US effectively, leading to weaker conditioning. Lastly, \"Several seconds between CS termination and US onset\" is incorrect because such a long interval disrupts the association, making it difficult for the CS to signal the impending US, thus diminishing the likelihood of a strong CR.",
       "kn": "KN7",
       "kn_explanation": "This item probes specific parameters influencing conditioning strength, emphasizing procedural nuances recognized in classical conditioning research (KN7).",
       "difficulty": "medium",
       "quality_comment": "This focused question reinforces knowledge of timing critical to optimal conditioning, balancing specificity with plausible distractors."
+    },
+    {
+      "stem": "Which of the following conditioning procedures is most likely to lead to a strong association between the conditioned stimulus (CS) and the unconditioned stimulus (US)?",
+      "options": [
+        "Simultaneous conditioning, where the CS and US occur at the same time",
+        "Trace conditioning, where the CS is presented and ends before the US begins",
+        "Delay conditioning, where the CS is presented before and during the US",
+        "Backward conditioning, where the US is presented before the CS"
+      ],
+      "answer": "Delay conditioning, where the CS is presented before and during the US",
+      "explanation": "1. \"Delay conditioning, where the CS is presented before and during the US,\" is the correct answer because it is the most effective conditioning procedure. In delay conditioning, the CS precedes and overlaps with the US, allowing for a strong association to form between the two stimuli, which enhances the likelihood of the conditioned response (CR) being elicited.\n\n2. The incorrect options are as follows:\n- **Simultaneous conditioning**: This method presents the CS and US at the same time, which is less effective because it does not establish a clear predictive relationship between the CS and US, weakening the association.\n- **Trace conditioning**: In this procedure, the CS is presented and then terminated before the US begins, leading to a weaker association since the CS and US are not overlapping, making it harder for the subject to connect the two stimuli.\n- **Backward conditioning**: This approach presents the US before the CS, which is usually ineffective as it disrupts the contingency required for classical conditioning; the CS does not predict the US, thereby failing to establish a strong association.",
+      "difficulty": "easy",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of conditioning procedures within classical learning theories, which is central to the major research-based theories and principles of learning (KN7).",
+      "quality_comment": "This question effectively tests understanding of the effectiveness of different classical conditioning procedures.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In a study on classical conditioning, a researcher uses a procedure where the conditioned stimulus (CS) is presented continuously while the unconditioned stimulus (US) is introduced shortly after the CS begins. What is this conditioning method called?",
+      "options": [
+        "Simultaneous conditioning, where the CS and US occur at the same time",
+        "Trace conditioning, where the CS is presented and then removed before the US",
+        "Delay conditioning, where the CS is presented and overlaps with the US",
+        "Backward conditioning, where the US is presented before the CS"
+      ],
+      "answer": "Delay conditioning, where the CS is presented and overlaps with the US",
+      "explanation": "1. The correct answer is \"Delay conditioning, where the CS is presented and overlaps with the US\" because, in this method, the conditioned stimulus (CS) is presented and continues to overlap with the unconditioned stimulus (US). This overlap allows for the most effective conditioning, as the CS precedes the US, creating a strong association between the two stimuli, which enhances the likelihood of a conditioned response (CR) being established.\n\n2. The incorrect options are as follows:\n- **Simultaneous conditioning:** This method involves the CS and US being presented and terminated at the same time, which is less effective for establishing a CR compared to delay conditioning.\n- **Trace conditioning:** In this method, the CS is presented and then removed before the US is introduced, which does not allow for the overlapping of the two stimuli and typically results in weaker conditioning.\n- **Backward conditioning:** This procedure involves presenting the US before the CS, which is usually ineffective because it disrupts the contingency necessary for classical conditioning to occur.",
+      "difficulty": "hard",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of conditioning procedures within classical learning theories, which is central to the major research-based theories and principles of learning (KN7).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of classical conditioning procedures in a more complex scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

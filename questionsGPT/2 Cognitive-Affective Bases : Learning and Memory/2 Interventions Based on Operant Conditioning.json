@@ -24,7 +24,7 @@
         "Differential reinforcement of low rates (DRL)"
       ],
       "answer": "Differential reinforcement of alternative behavior (DRA)",
-      "explanation": "DRA involves reinforcing a specified alternative behavior to replace an undesirable behavior, regardless of whether the behaviors are incompatible.",
+      "explanation": "1. The correct answer is **Differential reinforcement of alternative behavior (DRA)** because the teacher is reinforcing a specific alternative behavior—raising her hand—rather than the undesirable behavior of shouting out answers. DRA involves reinforcing an individual when they engage in one or more specified alternative behaviors instead of the undesirable behavior, which aligns perfectly with the scenario described.\n\n2. **Differential reinforcement of incompatible behavior (DRI)** is incorrect because DRI focuses on reinforcing a behavior that cannot occur simultaneously with the undesirable behavior; in this case, raising a hand is not incompatible with shouting. **Differential reinforcement of other behavior (DRO)** is wrong because DRO involves reinforcing any behavior other than the undesirable behavior, rather than a specific alternative behavior like raising a hand. **Differential reinforcement of low rates (DRL)** is also incorrect because DRL reinforces the target behavior at or below a specified low rate, rather than promoting an alternative behavior; in this scenario, the focus is on encouraging the alternative of raising a hand instead of reducing the frequency of shouting.",
       "kn": "KN7",
       "kn_explanation": "This question focuses on applying operant learning principles to behavior modification strategies, fitting under KN7's coverage of learning theories.",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Ignoring a child's whining to reduce its frequency"
       ],
       "answer": "A child must clean up chairs knocked over after becoming angry",
-      "explanation": "Positive punishment involves presenting an aversive stimulus following a behavior to decrease its occurrence; requiring cleanup is an application of overcorrection, a form of positive punishment.",
+      "explanation": "1. \"A child must clean up chairs knocked over after becoming angry\" is the correct answer because it exemplifies **overcorrection**, a form of positive punishment. Overcorrection involves applying a penalty following an undesirable behavior—in this case, the child must restore the environment to a better state by cleaning up the mess created by their anger, thereby reducing the likelihood of the undesirable behavior occurring again.\n\n2. The option \"A child loses 15 minutes of video game time for aggressive behavior\" is incorrect because it describes **response cost**, a type of negative punishment, where a specific reinforcer (video game time) is removed to decrease undesirable behavior. \"A child sits in the corner for a few minutes after misbehaving\" is also incorrect as it refers to **time out**, which involves removing all sources of reinforcement for a brief period, making it a form of negative punishment rather than positive punishment. Lastly, \"Ignoring a child's whining to reduce its frequency\" is incorrect because it illustrates **extinction**, where reinforcement (attention) is withheld to decrease the behavior, rather than applying a penalty for the behavior.",
       "kn": "KN7",
       "kn_explanation": "The question assesses knowledge of operant conditioning punishment definitions and examples, falling under learning principles in KN7.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "To collect indirect information from family reports"
       ],
       "answer": "To test hypotheses about the function of the behavior",
-      "explanation": "The third step involves systematically modifying antecedents and consequences to determine whether the behavior changes as predicted, thus testing the hypothesized function.",
+      "explanation": "1. The correct answer, \"To test hypotheses about the function of the behavior,\" is accurate because the third step of a functional behavioral assessment (FBA) involves systematically altering antecedents and consequences to observe how these changes affect the target behavior. This process allows the practitioner to determine whether the initial hypotheses about what maintains the behavior are correct, thereby gaining insight into the function of the behavior.\n\n2. The option \"To reinforce appropriate alternative behaviors\" is incorrect because the focus of systematically altering antecedents and consequences is to observe the effects on the target behavior, not to implement reinforcement strategies at this stage. The option \"To evaluate the effectiveness of the interventions\" is wrong because evaluation occurs in the final step of the FBA process, not during the systematic alteration phase. Finally, \"To collect indirect information from family reports\" is incorrect as this step is about testing hypotheses through direct manipulation and observation, rather than gathering additional indirect information.",
       "kn": "KN7",
       "kn_explanation": "Understanding functional assessment procedures is part of applied learning theory and intervention selection, aligning with KN7.",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Requiring a child to clean the room after causing damage"
       ],
       "answer": "Allowing a child to play video games only after completing homework",
-      "explanation": "The Premack principle uses a high-frequency or preferred behavior (playing video games) to reinforce a low-frequency or less preferred behavior (doing homework).",
+      "explanation": "1. The correct answer, \"Allowing a child to play video games only after completing homework,\" illustrates the Premack principle because it uses a high-frequency, preferred behavior (playing video games) to reinforce a low-frequency, less preferred behavior (completing homework). This strategy increases the likelihood that the child will engage in the less preferred behavior by making the preferred activity contingent upon its completion.\n\n2. The option \"Giving a child a time-out following an aggressive episode\" is incorrect because time-out is a form of punishment, not a reinforcement strategy like the Premack principle. \"Extinguishing a behavior by ignoring it consistently\" is wrong because extinction involves withholding reinforcement rather than using a preferred behavior to reinforce a less preferred one. Lastly, \"Requiring a child to clean the room after causing damage\" is incorrect as it represents a form of overcorrection (a type of positive punishment) rather than using a preferred behavior as a reward for completing a less preferred task.",
       "kn": "KN7",
       "kn_explanation": "This question addresses reinforcement contingencies within operant learning theories consistent with KN7.",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Time out should be discontinued even if the individual continues the undesirable behavior"
       ],
       "answer": "Time out should be discontinued even if the individual continues the undesirable behavior",
-      "explanation": "Time out should not end until the individual is no longer engaging in the undesirable behavior; ending it earlier reduces its effectiveness.",
+      "explanation": "1. The statement \"Time out should be discontinued even if the individual continues the undesirable behavior\" is FALSE because time out should not be ended until the individual is no longer engaging in the undesirable behavior. This means that the intervention must be consistently applied and should not be prematurely terminated, even if the behavior persists during the time out period.\n\n2. The option \"Time out involves removing reinforcement immediately following an undesirable behavior\" is incorrect because it accurately reflects the definition of time out, which is to remove all sources of reinforcement right after the undesirable behavior occurs. The statement \"The individual should be informed about the behaviors that will lead to time out and its duration\" is also incorrect because it correctly describes an important factor for the effectiveness of time out, ensuring that the individual understands the consequences of their actions. Lastly, the option \"The length of time out can extend beyond 10 minutes if the behavior persists\" is incorrect as it contradicts the guideline that the time out should be brief, lasting only one to ten minutes, and should not extend based on the persistence of the behavior.",
       "kn": "KN7",
       "kn_explanation": "This question evaluates knowledge of operant punishment procedures and best practice guidelines, related to learning theories in KN7.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Response cost"
       ],
       "answer": "Extinction",
-      "explanation": "Extinction involves withholding reinforcement (attention) for a behavior (whining) that was previously maintained by that reinforcement.",
+      "explanation": "1. \"Extinction\" is the correct answer because it involves withholding reinforcement from a behavior that has previously been reinforced. In this case, the parent stops responding to the child's whining, which had previously resulted in attention, thereby removing the reinforcement that maintained the whining behavior.\n\n2. The option \"Positive punishment\" is incorrect because it involves applying a penalty following an undesirable behavior to decrease that behavior, which is not the case here since the parent is not applying a penalty but rather stopping reinforcement. \"Differential reinforcement of incompatible behavior\" is incorrect because it specifically involves reinforcing a behavior that is incompatible with the undesirable behavior, rather than simply withholding reinforcement. Lastly, \"Response cost\" is incorrect because it refers to removing a specific reinforcer following a behavior to decrease that behavior, whereas in this scenario, the parent is not removing a reinforcer but stopping attention altogether.",
       "kn": "KN7",
       "kn_explanation": "Understanding extinction as a learning principle applies directly to operant conditioning concepts in KN7.",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "Reinforcement is omitted until all behaviors are mastered"
       ],
       "answer": "Training begins with the last behavior in the sequence and moves backward",
-      "explanation": "Backward chaining starts teaching the last step of a behavior chain first and then proceeds backward toward the first step, reinforcing each newly learned link.",
+      "explanation": "1. The correct answer, \"Training begins with the last behavior in the sequence and moves backward,\" accurately describes backward chaining because this method starts with teaching the final response in a behavior chain first. Once the learner masters this last step, the trainer then teaches the preceding step in the sequence, continuing backward until the entire behavior chain is learned. This approach emphasizes the importance of the final behavior as a reinforcement for learning the earlier steps.\n\n2. The option \"Each response is reinforced only after the entire sequence is completed\" is incorrect because, in backward chaining, each response is reinforced immediately after it is mastered, not after the entire sequence is performed. The statement \"Only the final target behavior is important, intermediate behaviors are ignored\" is misleading; while the final behavior is crucial, each intermediate behavior is also essential as it contributes to the overall sequence. Finally, \"Reinforcement is omitted until all behaviors are mastered\" is inaccurate because reinforcement is provided after each individual response is learned, not withheld until the entire chain is completed.",
       "kn": "KN7",
       "kn_explanation": "This question targets chaining methods, a specialized operant conditioning technique within learning models, making KN7 most relevant.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Differential reinforcement of low rates of behavior (DRL)"
       ],
       "answer": "Differential reinforcement of incompatible behavior (DRI)",
-      "explanation": "DRI involves reinforcing a behavior that cannot occur simultaneously with the undesirable behavior, such as sitting (incompatible) instead of getting up.",
+      "explanation": "1. The correct answer is \"Differential reinforcement of incompatible behavior (DRI)\" because the teacher is reinforcing the student for staying seated, a behavior that cannot occur simultaneously with the undesirable behavior of leaving the seat. DRI specifically involves reinforcing a desirable behavior that is incompatible with the target undesirable behavior, effectively reducing the frequency of the latter.\n\n2. \n- **Differential reinforcement of alternative behavior (DRA)** is incorrect because it involves reinforcing an alternative behavior that is not necessarily incompatible with the undesirable behavior; in this case, the student is not being reinforced for an alternative behavior but rather for a behavior that directly opposes the undesired behavior.\n- **Differential reinforcement of other behavior (DRO)** is incorrect because it focuses on reinforcing any behavior other than the undesirable behavior, rather than specifically reinforcing a behavior that is incompatible with it.\n- **Differential reinforcement of low rates of behavior (DRL)** is incorrect because it involves reinforcing the individual for engaging in the target behavior at or below a specified low rate, rather than reinforcing a behavior that is incompatible with the target behavior.",
       "kn": "KN7",
       "kn_explanation": "Classifying differential reinforcement procedures falls under operant learning models included in KN7.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Step 3: Test hypotheses by altering antecedents and consequences"
       ],
       "answer": "Step 2: Collect information about antecedents and consequences and develop hypotheses",
-      "explanation": "Step 2 focuses on gathering detailed information about factors maintaining the behavior and forming functional hypotheses to guide intervention.",
+      "explanation": "1. **Correct Answer Explanation**: \"Step 2: Collect information about antecedents and consequences and develop hypotheses\" is the correct answer because this step specifically focuses on gathering information about what triggers (antecedents) and follows (consequences) the target behavior. This information is crucial for forming hypotheses about why the behavior occurs, which is essential for developing effective interventions.\n\n2. **Incorrect Options**:\n   - **Step 1: Collect information using direct and indirect methods**: This step involves gathering general information about the target behavior but does not specifically address the antecedents and consequences or the formation of hypotheses.\n   - **Step 4: Identify and implement function-based interventions**: This step occurs after hypotheses have been formed and focuses on applying interventions based on the identified functions of the behavior, not on collecting antecedent and consequence data.\n   - **Step 3: Test hypotheses by altering antecedents and consequences**: This step involves experimenting with changes to the antecedents and consequences to see if the behavior changes, but it does not focus on the initial collection of information or the development of hypotheses.",
       "kn": "KN7",
       "kn_explanation": "This question addresses the behavioral assessment process fundamental to designing operant interventions, consistent with KN7.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Reinforcing a behavior that is alternative but not incompatible"
       ],
       "answer": "Removing a specific reinforcer following a behavior to reduce its frequency",
-      "explanation": "Response cost is a form of negative punishment involving loss of a reinforcer contingent on behavior to decrease its future occurrence.",
+      "explanation": "1. The correct answer, \"Removing a specific reinforcer following a behavior to reduce its frequency,\" accurately describes response cost, which is a type of negative punishment. In this intervention, a specific reinforcer is taken away temporarily or permanently after an undesirable behavior occurs, with the goal of decreasing the frequency of that behavior.\n\n2. The option \"Providing an aversive stimulus to decrease behavior\" is incorrect because this describes positive punishment, where an unpleasant stimulus is introduced rather than a reinforcer being removed. The option \"Withholding all reinforcement following the behavior\" is wrong because it describes operant extinction, which involves stopping all reinforcement, not just a specific reinforcer. Lastly, \"Reinforcing a behavior that is alternative but not incompatible\" is incorrect because it refers to differential reinforcement of alternative behavior (DRA), which focuses on reinforcing alternative behaviors rather than the removal of a reinforcer in response cost.",
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of operant conditioning punishment procedures according to learning theories (KN7).",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Reinforcing a child for staying seated during class intervals"
       ],
       "answer": "Reinforcing a child for asking three or fewer questions during a 60-minute period",
-      "explanation": "DRL involves reinforcing the target behavior only if it occurs at or below a specified low rate rather than reinforcing a different behavior.",
+      "explanation": "1. The correct answer, \"Reinforcing a child for asking three or fewer questions during a 60-minute period,\" exemplifies differential reinforcement of low rates of behavior (DRL) because it involves reinforcing the child when they engage in the target behavior (asking questions) at or below a specified low rate (three questions). This approach aims to reduce the frequency of the behavior by encouraging the child to limit their questions to an acceptable level, rather than eliminating the behavior entirely.\n\n2. The option \"Reinforcing a child for any behavior other than hand-flapping\" is incorrect because it represents differential reinforcement of other behavior (DRO), which focuses on reinforcing any behavior other than the undesirable one, rather than specifying a low rate of the same behavior. The option \"Reinforcing a child for raising their hand instead of shouting out answers\" is wrong because it illustrates differential reinforcement of alternative behavior (DRA), which reinforces a different, appropriate behavior rather than controlling the rate of the same behavior. Lastly, \"Reinforcing a child for staying seated during class intervals\" is incorrect because it describes a behavior that is not related to controlling the rate of an existing behavior; it does not specify a low rate of a target behavior but rather encourages a completely different behavior.",
       "kn": "KN7",
       "kn_explanation": "This question evaluates understanding of a specific operant conditioning reinforcement strategy, appropriate under learning theories (KN7).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Allowing the behavior to occur without any intervention to observe natural decrease"
       ],
       "answer": "Consistently withholding the reinforcement maintaining the behavior while reinforcing appropriate alternatives",
-      "explanation": "Extinction requires the consistent removal of the maintaining reinforcement and is more effective when combined with reinforcement for appropriate behaviors.",
+      "explanation": "1. The correct answer, \"Consistently withholding the reinforcement maintaining the behavior while reinforcing appropriate alternatives,\" is critical for effective extinction because it ensures that the behavior no longer receives the reinforcement that previously supported it. This consistent removal of reinforcement, combined with the reinforcement of appropriate alternative behaviors, helps to weaken the undesirable behavior while promoting more desirable actions, leading to a more sustainable change.\n\n2. The option \"Applying punishment immediately after the behavior occurs\" is incorrect because punishment does not address the reinforcement maintaining the behavior and may not lead to a long-term reduction in the behavior. \"Using time out without providing any reinforcement for appropriate behavior\" is wrong because time out alone does not involve the necessary component of reinforcing alternative behaviors, which is essential for effective behavior modification. Lastly, \"Allowing the behavior to occur without any intervention to observe natural decrease\" is incorrect because this passive approach does not actively target the reinforcement maintaining the behavior, making it unlikely to achieve a reduction in the undesirable behavior.",
       "kn": "KN7",
       "kn_explanation": "This question focuses on extinction principles and effective intervention strategies within operant conditioning, fitting under KN7.",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "They replace the need for direct observation in stressful situations"
       ],
       "answer": "They provide information about antecedents and consequences in natural environments that may not be observable directly",
-      "explanation": "Indirect methods supplement direct observation by providing additional contextual information that might be missed or impractical to observe.",
+      "explanation": "1. The correct answer, \"They provide information about antecedents and consequences in natural environments that may not be observable directly,\" is accurate because indirect methods, such as family member reports, can reveal contextual factors influencing behavior that may not be evident through direct observation alone. These reports can shed light on specific triggers and outcomes associated with the behavior in everyday settings, thereby enriching the functional behavioral assessment (FBA) process.\n\n2. The option \"They confirm the effectiveness of the intervention\" is incorrect because indirect methods are primarily used for data collection during the assessment phase, not for evaluating intervention effectiveness, which occurs later. The option \"They are used primarily to test hypotheses about behavior function\" is misleading; while they can inform hypotheses, their main purpose is to gather contextual information rather than to serve as a testing mechanism. Lastly, the option \"They replace the need for direct observation in stressful situations\" is wrong because indirect methods complement direct observation rather than replace it, ensuring a comprehensive understanding of behavior in various contexts.",
       "kn": "KN7",
       "kn_explanation": "This item relates to behavioral assessment methodology, aligning with applied learning theory content in KN7.",
       "difficulty": "medium",
@@ -219,11 +219,51 @@
         "It teaches an alternative behavior incompatible with the target behavior"
       ],
       "answer": "It requires the individual to restore the environment to a better state following the behavior",
-      "explanation": "Overcorrection includes restitution, where the individual must correct the impact of their undesirable behavior by restoring the environment.",
+      "explanation": "1. The correct answer, \"It requires the individual to restore the environment to a better state following the behavior,\" accurately reflects a key component of overcorrection, which is a type of positive punishment. Overcorrection involves two procedures, one of which is restitution, where the individual must correct the consequences of their undesirable behavior and restore the environment to a better state. This process serves to reduce or eliminate the undesirable behavior by holding the individual accountable for their actions.\n\n2. The incorrect option \"It involves removal of a preferred item to reduce behavior\" is wrong because this describes response cost, a form of negative punishment, rather than overcorrection. The statement \"It makes the individual sit quietly during a time out\" is incorrect because time out is a separate intervention that involves removing all sources of reinforcement, not the specific penalties associated with overcorrection. Lastly, \"It teaches an alternative behavior incompatible with the target behavior\" is incorrect because this describes differential reinforcement of incompatible behavior (DRI), which focuses on reinforcing a behavior that cannot occur simultaneously with the undesired behavior, rather than the restorative aspect of overcorrection.",
       "kn": "KN7",
       "kn_explanation": "This question evaluates specific procedures for punishment strategies within operant conditioning theory, appropriate under KN7.",
       "difficulty": "medium",
       "quality_comment": "The distractors represent varied operant concepts, enhancing discrimination of overcorrection's unique features."
+    },
+    {
+      "stem": "In the context of teaching a child to tie their shoes, which of the following best illustrates the process of shaping?",
+      "options": [
+        "Reinforcing the child for making a loop with the laces.",
+        "Rewarding the child for tying the laces together.",
+        "Encouraging the child to pull the laces tight.",
+        "Praising the child for picking up the laces."
+      ],
+      "answer": "Reinforcing the child for making a loop with the laces.",
+      "explanation": "1. \"Reinforcing the child for making a loop with the laces\" is the correct answer because it exemplifies the process of shaping, where successive approximations of the desired behavior are reinforced. In this case, making a loop is a step towards the final goal of tying shoes, and by reinforcing this specific action, the child is gradually guided toward mastering the complete task.\n\n2. The option \"Rewarding the child for tying the laces together\" is incorrect because it refers to the final desired behavior rather than a step in the shaping process; shaping focuses on reinforcing intermediate steps. \"Encouraging the child to pull the laces tight\" is also incorrect as it does not represent a successive approximation towards the goal of tying shoes, but rather a different aspect of the task. Lastly, \"Praising the child for picking up the laces\" is incorrect because this action does not directly contribute to the specific skill of tying shoes and is not a step in the process leading to that behavior.",
+      "difficulty": "easy",
+      "kn": "KN7",
+      "kn_explanation": "This question evaluates understanding of core operant conditioning procedures, which aligns with theories and principles of learning under KN7.",
+      "quality_comment": "This question effectively assesses understanding of shaping by applying it to a relatable scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following scenarios best exemplifies the use of chaining in operant conditioning?",
+      "options": [
+        "Teaching a dog to roll over by rewarding each step of the action.",
+        "Training a child to read by rewarding them for recognizing letters.",
+        "Helping a student complete a math problem by rewarding each correct step.",
+        "Encouraging a person to cook a meal by rewarding them for gathering ingredients."
+      ],
+      "answer": "Helping a student complete a math problem by rewarding each correct step.",
+      "explanation": "This scenario demonstrates chaining as it involves reinforcing each individual step in a sequence to achieve the final goal of solving the math problem, where each step is necessary for the completion of the task.",
+      "difficulty": "hard",
+      "kn": "KN7",
+      "kn_explanation": "This question evaluates understanding of core operant conditioning procedures, which aligns with theories and principles of learning under KN7.",
+      "quality_comment": "This question challenges the test-taker to apply the concept of chaining to a more complex educational context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

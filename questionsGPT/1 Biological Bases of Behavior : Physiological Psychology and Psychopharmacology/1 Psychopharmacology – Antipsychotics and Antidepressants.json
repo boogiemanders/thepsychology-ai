@@ -24,7 +24,7 @@
         "Olanzapine"
       ],
       "answer": "Clozapine",
-      "explanation": "Clozapine is the only antipsychotic approved for treatment-resistant schizophrenia and can cause severe neutropenia and agranulocytosis necessitating routine blood tests.",
+      "explanation": "1. **Clozapine** is the correct answer because it is the only FDA-approved antipsychotic specifically indicated for treatment-resistant schizophrenia. It requires regular blood monitoring due to the risk of neutropenia and agranulocytosis, which are potentially life-threatening conditions characterized by dangerously low levels of neutrophils, a type of white blood cell essential for immune function.\n\n2. **Risperidone** is incorrect because, while it is an atypical antipsychotic used to treat schizophrenia, it is not specifically approved for treatment-resistant cases and does not require regular blood monitoring for neutropenia. **Haloperidol** is also incorrect because it is a first-generation antipsychotic primarily effective for positive symptoms of schizophrenia but lacks the specific indication for treatment-resistant cases and does not have the same blood monitoring requirements as clozapine. **Olanzapine**, while an effective atypical antipsychotic for schizophrenia, is not specifically approved for treatment-resistant schizophrenia and does not necessitate regular blood tests for neutropenia.",
       "kn": "KN2",
       "kn_explanation": "Understanding specific drug indications, side effects, and monitoring protocols fits within the drug classification and adverse effects knowledge area (KN2).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Block norepinephrine reuptake"
       ],
       "answer": "Act as partial agonists at dopamine D2 receptors",
-      "explanation": "Third-generation antipsychotics are dopamine-serotonin stabilizers that act as partial agonists at D2 receptors, modulating dopamine activity in different brain regions.",
+      "explanation": "1. The correct answer, \"Act as partial agonists at dopamine D2 receptors,\" accurately describes the mechanism of action of third-generation antipsychotics (TGAs) like aripiprazole. Unlike second-generation antipsychotics (SGAs), which primarily act as dopamine-serotonin antagonists, TGAs have a dual action: they can reduce dopamine levels in areas of the brain where they are too high (acting as antagonists) and increase dopamine levels in areas where they are too low (acting as partial agonists). This unique mechanism allows TGAs to effectively manage both positive and negative symptoms of schizophrenia with potentially fewer side effects.\n\n2. The option \"Are pure dopamine D2 antagonists\" is incorrect because TGAs do not function solely as antagonists; they exhibit partial agonist activity at D2 receptors. \"Cause more extrapyramidal side effects\" is also wrong, as TGAs are less likely than both FGAs and SGAs to produce extrapyramidal side effects. Lastly, \"Block norepinephrine reuptake\" is incorrect because TGAs primarily target dopamine and serotonin receptors rather than blocking norepinephrine reuptake, which is characteristic of other antidepressants like SNRIs and NDRIs.",
       "kn": "KN2",
       "kn_explanation": "This question tests knowledge of the mechanisms of action of different classes of antipsychotic medications, which is under KN2.",
       "difficulty": "hard",
@@ -54,7 +54,7 @@
         "Neuroleptic malignant syndrome"
       ],
       "answer": "Serotonin syndrome",
-      "explanation": "Combining SSRIs with MAOIs can lead to serotonin syndrome, a potentially fatal condition characterized by agitation, confusion, hyperthermia, and autonomic instability.",
+      "explanation": "1. \"Serotonin syndrome\" is the correct answer because it is a potentially fatal condition that can occur when an SSRI is combined with an MAOI or other serotonergic drugs. This syndrome is characterized by extreme agitation, confusion, autonomic instability, hyperthermia, tremor, seizures, and delirium, necessitating immediate withdrawal of the serotonergic drugs and medical intervention.\n\n2. The option \"Hypertensive crisis\" is incorrect because it is specifically associated with MAOIs when combined with certain foods containing tyramine or other medications, not with SSRIs. \"Neutropenia\" is also incorrect, as it is a severe side effect primarily linked to clozapine, a second-generation antipsychotic, rather than SSRIs or MAOIs. Lastly, \"Neuroleptic malignant syndrome\" is wrong because it is a rare life-threatening side effect associated with antipsychotic medications, not with SSRIs or MAOIs.",
       "kn": "KN2",
       "kn_explanation": "This item evaluates knowledge of drug interactions and their dangerous consequences, covered by drug mechanisms and adverse effects (KN2).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Hypertensive crisis"
       ],
       "answer": "Discontinuation syndrome",
-      "explanation": "Discontinuation syndrome occurs after abrupt cessation of SSRIs and includes symptoms like dizziness, headaches, mood lability, and flu-like manifestations.",
+      "explanation": "1. \"Discontinuation syndrome\" is the correct answer because it refers to the withdrawal symptoms that can occur when a patient abruptly stops taking an SSRI like fluoxetine. Symptoms such as headaches, dizziness, mood swings, and flu-like symptoms are characteristic of this syndrome, which results from the sudden decrease in serotonin availability due to the cessation of the medication.\n\n2. \n- **Tardive dyskinesia**: This condition is a potential side effect of long-term use of first-generation antipsychotics and is characterized by involuntary, rhythmic movements, not the symptoms described in this scenario.\n- **Anticholinergic syndrome**: This syndrome results from the use of medications with anticholinergic properties, leading to symptoms like dry mouth and blurred vision, which are not present in the patient's symptoms.\n- **Hypertensive crisis**: This serious condition occurs due to interactions with monoamine oxidase inhibitors (MAOIs) and certain foods or medications, leading to severe headaches and other symptoms; however, it is unrelated to the discontinuation of SSRIs and the symptoms listed.",
       "kn": "KN2",
       "kn_explanation": "Recognizing withdrawal effects and side effects of therapeutic drugs fits within KN2's focus on drug effects and adverse reactions.",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Duloxetine"
       ],
       "answer": "Bupropion",
-      "explanation": "Bupropion inhibits norepinephrine and dopamine reuptake, has an energizing effect, and is notable for causing minimal sexual dysfunction.",
+      "explanation": "1. **Correct Answer - Bupropion:** Bupropion is the least likely antidepressant to cause sexual dysfunction because it does not have the same serotonergic effects that are commonly associated with sexual side effects in other antidepressants. Additionally, it has an activating effect due to its mechanism of inhibiting the reuptake of norepinephrine and dopamine, making it particularly useful for patients with low energy and motivation.\n\n2. **Incorrect Options:**\n   - **Paroxetine:** Paroxetine is a selective serotonin reuptake inhibitor (SSRI) known to cause sexual dysfunction, including difficulties with desire, arousal, and orgasm.\n   - **Amitriptyline:** Amitriptyline, a tricyclic antidepressant (TCA), can also lead to sexual dysfunction as a common side effect, along with sedation and weight gain.\n   - **Duloxetine:** Duloxetine is a serotonin and norepinephrine reuptake inhibitor (SNRI) that can cause sexual dysfunction, particularly due to its effects on serotonin levels.",
       "kn": "KN2",
       "kn_explanation": "This tests knowledge of antidepressant mechanisms and side effect profiles aligning with drug classification and effects (KN2).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "NDRIs"
       ],
       "answer": "SNRIs",
-      "explanation": "SNRIs increase norepinephrine levels, which can elevate blood pressure; therefore, they may be contraindicated in patients with hypertension.",
+      "explanation": "1. **Correct Answer - SNRIs:** SNRIs (serotonin-norepinephrine reuptake inhibitors) are contraindicated for patients with uncontrolled hypertension because they can elevate blood pressure due to their effects on norepinephrine. By blocking the reuptake of both serotonin and norepinephrine, SNRIs increase the availability of these neurotransmitters, which can lead to increased blood pressure, making them unsuitable for individuals with hypertension.\n\n2. **Incorrect Options:**\n   - **SSRIs:** Selective serotonin reuptake inhibitors (SSRIs) primarily affect serotonin levels and do not significantly elevate blood pressure, making them safer for patients with hypertension.\n   - **MAOIs:** While monoamine oxidase inhibitors (MAOIs) can cause hypertensive crises when interacting with certain foods or medications, they do not inherently elevate blood pressure in the same way as SNRIs.\n   - **NDRIs:** Norepinephrine dopamine reuptake inhibitors (NDRIs), like bupropion, are not specifically contraindicated for hypertension and are known for having fewer cardiovascular side effects compared to other antidepressants.",
       "kn": "KN2",
       "kn_explanation": "Understanding adverse effects related to physiological parameters like blood pressure is encompassed in drug mechanisms and side effects (KN2).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Hypertensive crisis associated with TCAs"
       ],
       "answer": "Anticholinergic and cardiovascular side effects of TCAs",
-      "explanation": "TCAs commonly produce anticholinergic side effects (dry mouth, sedation) and cardiovascular effects (orthostatic hypotension, weight gain).",
+      "explanation": "1. The correct answer, \"Anticholinergic and cardiovascular side effects of TCAs,\" is supported by the reference material, which states that tricyclic antidepressants (TCAs) can cause various side effects, including orthostatic hypotension (a cardiovascular effect), dry mouth (an anticholinergic effect), sedation, and weight gain. These symptoms align with the known side effects of TCAs, particularly their anticholinergic properties and cardiovascular impacts.\n\n2. The option \"Cardiotoxic effects of TCAs\" is incorrect because, while TCAs can have cardiovascular side effects like orthostatic hypotension, they are not classified as cardiotoxic in the context of the symptoms presented. \"Serotonin syndrome\" is not applicable here as it involves symptoms such as extreme agitation and confusion due to excessive serotonin, which do not match the patient's symptoms. Lastly, \"Hypertensive crisis associated with TCAs\" is also incorrect because hypertensive crises are linked to MAOIs, not TCAs, and the symptoms presented do not indicate a hypertensive crisis, which typically involves severe headache and rapid heart rate rather than orthostatic hypotension and sedation.",
       "kn": "KN2",
       "kn_explanation": "This question addresses the understanding of typical adverse effects associated with a major drug class, a key component of KN2.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Discontinuation syndrome"
       ],
       "answer": "Neuroleptic malignant syndrome",
-      "explanation": "Neuroleptic malignant syndrome is a rare but life-threatening reaction to FGAs characterized by rigidity, hyperthermia, unstable vital signs, and altered mental status.",
+      "explanation": "1. \"Neuroleptic malignant syndrome\" (NMS) is the correct answer because it is a rare but life-threatening side effect associated primarily with first-generation antipsychotics. NMS is characterized by symptoms such as muscle rigidity, high fever, autonomic dysfunction (e.g., unstable blood pressure), and altered mental state, making it a critical condition requiring immediate medical attention.\n\n2. \n- **Tardive dyskinesia**: This is a movement disorder that can occur after long-term use of antipsychotics, marked by involuntary rhythmic movements, but it is not immediately life-threatening like NMS.\n- **Serotonin syndrome**: This syndrome results from excessive serotonergic activity, usually due to drug interactions, and while it can be severe, it is not specifically associated with first-generation antipsychotics.\n- **Discontinuation syndrome**: This condition occurs upon abrupt cessation of certain antidepressants, characterized by flu-like symptoms and mood disturbances, but it is not a life-threatening effect associated with antipsychotics.",
       "kn": "KN2",
       "kn_explanation": "This evaluates recognition of dangerous drug-induced syndromes, a critical area within drug effects knowledge (KN2).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Tardive dyskinesia"
       ],
       "answer": "Hypertensive crisis",
-      "explanation": "MAOIs inhibit metabolism of tyramine-containing foods; dietary tyramine can cause hypertensive crisis, a sudden dangerous increase in blood pressure.",
+      "explanation": "1. \"Hypertensive crisis\" is the correct answer because monoamine oxidase inhibitors (MAOIs) can lead to dangerously high blood pressure when combined with foods containing tyramine or certain medications. This reaction occurs because MAOIs inhibit the enzyme that deactivates norepinephrine, serotonin, and dopamine, leading to excessive levels of these neurotransmitters and resulting in a hypertensive crisis, which can be life-threatening.\n\n2. \n- **Serotonin syndrome** is incorrect because it is a potentially fatal condition that arises from the combination of serotonergic drugs, such as SSRIs or SNRIs, not from MAOIs alone.\n- **Neuroleptic malignant syndrome (NMS)** is wrong as it is a rare and life-threatening side effect associated with antipsychotic medications, not MAOIs.\n- **Tardive dyskinesia** is incorrect because it is a movement disorder that can occur with long-term use of antipsychotics, particularly first-generation antipsychotics, and is not related to MAOIs.",
       "kn": "KN2",
       "kn_explanation": "Understanding serious drug-food interactions and their adverse effects falls under drug classification and side effect knowledge (KN2).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Increasing dopamine release at synapses"
       ],
       "answer": "Blocking presynaptic serotonin reuptake to increase synaptic serotonin",
-      "explanation": "SSRIs act by blocking the reuptake of serotonin into presynaptic neurons, increasing serotonin availability at postsynaptic receptors.",
+      "explanation": "1. The correct answer, \"Blocking presynaptic serotonin reuptake to increase synaptic serotonin,\" accurately describes the mechanism of action of selective serotonin reuptake inhibitors (SSRIs). SSRIs function as indirect agonists by blocking the reuptake of serotonin by presynaptic neurons, which increases the availability of serotonin at postsynaptic serotonin receptors (e.g., 5-HT1A, 5-HT2A, 5-HT2C). This action enhances serotonin's effects on mood and emotional regulation, making SSRIs effective in treating major depressive disorder and other anxiety-related conditions.\n\n2. The option \"Blocking postsynaptic serotonin receptors\" is incorrect because SSRIs do not block these receptors; instead, they increase serotonin availability at these sites. \"Inhibiting monoamine oxidase activity\" is wrong as this describes the mechanism of action for monoamine oxidase inhibitors (MAOIs), not SSRIs. Lastly, \"Increasing dopamine release at synapses\" is incorrect because SSRIs primarily target serotonin reuptake and do not directly increase dopamine release; they specifically enhance serotonin levels, not dopamine.",
       "kn": "KN2",
       "kn_explanation": "This tests understanding of the specific pharmacological mechanism of a major antidepressant class, which is key content in KN2.",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "All antipsychotic generations have equal risk"
       ],
       "answer": "Second-generation antipsychotics",
-      "explanation": "Second-generation (atypical) antipsychotics have a higher likelihood of causing metabolic syndrome than first- or third-generation drugs.",
+      "explanation": "1. **Correct Answer: Second-generation antipsychotics**  \nSecond-generation antipsychotics (SGAs) are associated with a higher risk of metabolic syndrome, which includes significant weight gain, insulin resistance, and an increased risk for diabetes mellitus and heart disease. This is particularly noted with drugs like clozapine and other SGAs, which can lead to substantial metabolic changes compared to first-generation antipsychotics (FGAs) and third-generation antipsychotics (TGAs).\n\n2. **Incorrect Options:**\n- **First-generation antipsychotics:** FGAs primarily cause extrapyramidal side effects and are less commonly associated with metabolic syndrome compared to SGAs.\n- **Third-generation antipsychotics:** TGAs are noted to have fewer side effects overall, including a lower risk of metabolic syndrome compared to SGAs.\n- **All antipsychotic generations have equal risk:** This option is incorrect because the evidence clearly shows that SGAs have a significantly higher risk for metabolic syndrome than either FGAs or TGAs.",
       "kn": "KN2",
       "kn_explanation": "This item focuses on adverse effect profiles related to different drug classes, fitting within the drug classification and effects knowledge area (KN2).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "They produce excessive sedation"
       ],
       "answer": "They may trigger rapid cycling or mania",
-      "explanation": "SSRIs can induce mania or rapid cycling in bipolar I patients if not combined with mood stabilizers, which is why caution is necessary.",
+      "explanation": "1. The correct answer, \"They may trigger rapid cycling or mania,\" is accurate because SSRIs, when prescribed alone for bipolar I disorder, can destabilize mood and lead to increased episodes of mania or rapid cycling between depressive and manic states. This risk necessitates the cautious use of SSRIs in conjunction with mood stabilizers to mitigate these potential adverse effects and ensure better management of bipolar symptoms.\n\n2. The option \"They increase blood pressure dangerously\" is incorrect because, while SNRIs can elevate blood pressure due to their norepinephrine effects, SSRIs do not have this significant effect and are not typically associated with dangerous blood pressure increases. The statement \"They cause tardive dyskinesia\" is also wrong, as tardive dyskinesia is primarily associated with first-generation antipsychotics, not SSRIs. Lastly, \"They produce excessive sedation\" is inaccurate because SSRIs are generally noted for having fewer sedative effects compared to other antidepressants like tricyclic antidepressants (TCAs) and are not primarily sedating.",
       "kn": "KN2",
       "kn_explanation": "This question assesses knowledge of drug effects and treatment considerations in comorbid psychiatric conditions, under drug effects (KN2).",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "GABA receptor"
       ],
       "answer": "Serotonin 5-HT2A receptor",
-      "explanation": "Second-generation antipsychotics alleviate negative and cognitive symptoms primarily by blocking serotonin 5-HT2A receptors.",
+      "explanation": "1. The correct answer is \"Serotonin 5-HT2A receptor\" because second-generation antipsychotics (SGAs) primarily alleviate negative and cognitive symptoms of schizophrenia by blocking serotonin 5-HT2A receptors. While SGAs also block dopamine receptors, their effectiveness in addressing negative symptoms is attributed to their action on serotonin pathways, which helps improve mood and cognitive functioning.\n\n2. The option \"Dopamine D2 receptor\" is incorrect because, although SGAs do block D2 receptors to alleviate positive symptoms of schizophrenia, they primarily target serotonin receptors for negative and cognitive symptoms. \"Norepinephrine receptor\" is wrong as second-generation antipsychotics do not primarily act on norepinephrine receptors to alleviate symptoms of schizophrenia; their primary focus is on dopamine and serotonin. Lastly, \"GABA receptor\" is incorrect because SGAs do not primarily interact with GABA receptors; their mechanism of action is centered around dopamine and serotonin receptor modulation.",
       "kn": "KN2",
       "kn_explanation": "This question focuses on the mechanistic differences of antipsychotics, particularly the serotonin receptor involvement in SGAs, fitting KN2.",
       "difficulty": "medium",
@@ -219,11 +219,51 @@
         "Tardive dyskinesia"
       ],
       "answer": "Agranulocytosis",
-      "explanation": "Clozapine can cause agranulocytosis, a severe neutropenia requiring regular blood tests to monitor for dangerously low white blood cell counts.",
+      "explanation": "1. \"Agranulocytosis\" is the correct answer because it is a severe form of neutropenia specifically associated with clozapine, a second-generation antipsychotic. This condition involves dangerously low levels of neutrophils, which are crucial for the immune system, and necessitates regular blood monitoring to ensure patient safety and manage potential complications.\n\n2. The option \"Metabolic syndrome\" is incorrect because, while it can occur with several second-generation antipsychotics, it is not unique to clozapine. \"Neuroleptic malignant syndrome\" is also incorrect as it is a rare life-threatening side effect that can occur with both first and second-generation antipsychotics, not just clozapine. Lastly, \"Tardive dyskinesia\" is incorrect because it is primarily associated with first-generation antipsychotics and can occur with long-term use of any antipsychotic, but is not uniquely linked to clozapine.",
       "kn": "KN2",
       "kn_explanation": "The question targets a uniquely serious adverse effect related to clozapine treatment, a core component of drug side effects knowledge (KN2).",
       "difficulty": "medium",
       "quality_comment": "This item focuses on an important safety consideration with distinct distractors, making it clinically meaningful."
+    },
+    {
+      "stem": "Which side effect, often seen with prolonged use of antipsychotic medications, involves repetitive, involuntary movements, especially in the facial area?",
+      "options": [
+        "Dystonia",
+        "Tardive dyskinesia",
+        "Akathisia",
+        "Neuroleptic malignant syndrome"
+      ],
+      "answer": "Tardive dyskinesia",
+      "explanation": "1. \"Tardive dyskinesia\" is the correct answer because it refers to a serious side effect associated with prolonged use of antipsychotic medications, particularly first-generation antipsychotics. It is characterized by repetitive, involuntary movements, especially of the tongue, face, and jaw, and can also affect limbs and trunk over time. This condition is irreversible for some patients and typically arises after long-term use of these medications.\n\n2. **Dystonia** is incorrect because it involves uncontrollable muscle contractions and spasms, which can occur acutely rather than as a result of prolonged medication use. **Akathisia** is also incorrect; it refers to a sense of inner restlessness and an inability to remain still, rather than repetitive movements. Finally, **neuroleptic malignant syndrome** is incorrect as it is a rare, life-threatening condition characterized by muscle rigidity, high fever, and altered mental state, rather than involuntary movements associated with tardive dyskinesia.",
+      "difficulty": "easy",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses knowledge of drug side effects, mechanisms, and classifications of therapeutic agents, which is covered under KN2.",
+      "quality_comment": "This question effectively tests knowledge of a specific side effect related to antipsychotics in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of psychopharmacology, which of the following conditions is a late-onset movement disorder associated with the use of antipsychotic medications, particularly after extended treatment?",
+      "options": [
+        "Dystonia",
+        "Tardive dyskinesia",
+        "Parkinsonism",
+        "Neuroleptic malignant syndrome"
+      ],
+      "answer": "Tardive dyskinesia",
+      "explanation": "1. **Tardive dyskinesia** is the correct answer because it is a late-onset movement disorder that occurs after long-term use of antipsychotic medications, particularly first-generation antipsychotics. It is characterized by involuntary, rhythmic movements of the tongue, face, and jaw, which can become more widespread over time, affecting limbs and trunk. Tardive dyskinesia can be irreversible for some patients and is a significant concern in the management of antipsychotic treatment.\n\n2. **Dystonia** is incorrect because it refers to uncontrollable muscle contractions that can occur early in the treatment with antipsychotics, rather than after extended use. **Parkinsonism** is also incorrect as it consists of symptoms like resting tremor and muscle rigidity, which can occur shortly after starting antipsychotic treatment, not as a late-onset disorder. Lastly, **neuroleptic malignant syndrome** is incorrect because it is a rare, life-threatening side effect that occurs acutely, typically within days of starting or increasing the dose of antipsychotic medication, rather than being associated with long-term use.",
+      "difficulty": "hard",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses knowledge of drug side effects, mechanisms, and classifications of therapeutic agents, which is covered under KN2.",
+      "quality_comment": "This question challenges the test-taker to differentiate between various movement disorders associated with antipsychotics, promoting deeper understanding.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -9,7 +9,7 @@
         "Reticular formation"
       ],
       "answer": "Medulla oblongata",
-      "explanation": "The medulla oblongata regulates vital involuntary functions such as respiration, heart rate, and blood pressure; damage here can be fatal.",
+      "explanation": "1. The \"Medulla oblongata\" is the correct answer because it is responsible for regulating vital autonomic functions such as respiration, heart rate, and blood pressure. Damage to the medulla can disrupt these critical functions and potentially lead to death, as it controls involuntary movements necessary for survival.\n\n2. The \"Pons\" is incorrect because, while it plays a role in respiration and coordinating movements, it does not directly regulate vital autonomic functions to the extent that the medulla does. The \"Cerebellum\" is also incorrect as it primarily coordinates voluntary movements and balance rather than autonomic functions. Lastly, the \"Reticular formation\" is not the correct answer because, although it is involved in consciousness and arousal, it does not directly control respiration, heart rate, or blood pressure like the medulla oblongata does.",
       "kn": "KN1",
       "kn_explanation": "This question examines knowledge of neurobiological bases of vital autonomic functions, relevant to the biological bases of behavior.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Basal ganglia"
       ],
       "answer": "Cerebellum",
-      "explanation": "The cerebellum controls coordination, posture, and balance; damage results in ataxia, characterized by impaired motor control and balance.",
+      "explanation": "1. The **cerebellum** is the correct answer because it is specifically responsible for coordinating voluntary movements and maintaining posture and balance. Damage to the cerebellum can lead to ataxia, which is characterized by symptoms such as lack of muscle control, impaired balance, and coordination issues, resembling the effects of alcohol intoxication.\n\n2. The **hypothalamus** is incorrect because it primarily regulates essential bodily functions such as homeostasis, temperature, and emotional responses, rather than coordinating movement and balance. The **pons** is also incorrect; while it connects the cerebellum and cerebral cortex and plays a role in movement coordination, it does not specifically manage voluntary movement or balance to the extent that the cerebellum does. Finally, the **basal ganglia** is incorrect as it is involved in the initiation and control of voluntary movements and procedural learning, but it does not directly coordinate balance and posture like the cerebellum does.",
       "kn": "KN1",
       "kn_explanation": "This question addresses the neurobiological function of a specific brain region critical to motor coordination, under biological bases of behavior.",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Thalamus"
       ],
       "answer": "Reticular formation",
-      "explanation": "The reticular formation, particularly the reticular activating system, regulates consciousness, arousal, and sleep/wake cycles.",
+      "explanation": "1. The \"reticular formation\" is the correct answer because it contains the reticular activating system (RAS), which is crucial for mediating consciousness, arousal, and the sleep/wake cycle. The RAS alerts the cerebral cortex to incoming sensory signals and regulates overall arousal levels, making it essential for maintaining wakefulness and alertness.\n\n2. The \"substantia nigra\" is incorrect because it primarily plays a role in reward-seeking, drug addiction, and motor control, particularly in relation to Parkinson's disease, rather than directly mediating arousal or the sleep/wake cycle. The \"pons\" is also incorrect; while it assists in coordinating movements and has some role in respiration and REM sleep, it does not directly manage arousal like the reticular formation does. Lastly, the \"thalamus,\" although it acts as a relay station for sensory information and is involved in motor functioning and memory, does not specifically regulate arousal or the sleep/wake cycle as the reticular formation does.",
       "kn": "KN1",
       "kn_explanation": "The question tests knowledge of neurobiological regulatory mechanisms of arousal and consciousness affiliated with the brainstem.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Amygdala"
       ],
       "answer": "Substantia nigra",
-      "explanation": "Degeneration of dopamine-producing cells in the substantia nigra disrupts motor control, causing the characteristic Parkinson’s symptoms.",
+      "explanation": "1. The \"substantia nigra\" is the correct answer because it is a midbrain structure that plays a crucial role in motor control and is involved in reward-seeking behaviors. Degeneration of dopamine-producing cells in the substantia nigra is specifically linked to the motor symptoms of Parkinson's disease, including tremors and rigidity.\n\n2. The \"basal ganglia\" is incorrect as it refers to a group of structures involved in motor control, but it is the substantia nigra within the basal ganglia that specifically degenerates in Parkinson's disease. The \"thalamus\" is also incorrect because it serves primarily as a relay station for sensory information and does not directly cause the motor symptoms associated with Parkinson's disease. Lastly, the \"amygdala\" is incorrect as it is primarily involved in processing emotions and memory, not in the motor control deficits seen in Parkinson's disease.",
       "kn": "KN1",
       "kn_explanation": "This question focuses on neurological substrates of disease, integrating neurobiology and pathology within biological bases of behavior.",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Thalamus"
       ],
       "answer": "Hypothalamus",
-      "explanation": "The hypothalamus controls homeostatic functions and influences the autonomic nervous system and pituitary gland hormone secretion.",
+      "explanation": "1. The \"Hypothalamus\" is the correct answer because it plays a crucial role in maintaining homeostasis by regulating essential functions such as body temperature, hunger, thirst, and the body's response to stress. Additionally, it links the nervous and endocrine systems through its influence on the autonomic nervous system and the pituitary gland, producing hormones that control various physiological processes.\n\n2. \n- **Amygdala:** The amygdala is primarily involved in processing and regulating emotions such as fear and anxiety, rather than in maintaining homeostasis.\n- **Hippocampus:** The hippocampus is mainly responsible for memory functions, particularly transferring declarative memories from short-term to long-term memory, and does not regulate homeostatic processes.\n- **Thalamus:** The thalamus acts as a relay station for sensory information and is involved in coordinating sensory and motor functions, but it does not directly regulate homeostasis like the hypothalamus does.",
       "kn": "KN1",
       "kn_explanation": "The item assesses knowledge of neuroendocrine systems foundational for understanding biological regulation.",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Sensory relay"
       ],
       "answer": "Emotional processing",
-      "explanation": "The hypothalamus contributes to emotion regulation, as demonstrated by stimulation producing aggressive or affective behaviors.",
+      "explanation": "1. \"Emotional processing\" is the correct answer because the hypothalamus plays a key role in regulating emotions, as evidenced by studies showing that electrical stimulation of different areas can elicit strong emotional responses such as rage or laughter. This demonstrates its significant influence on emotional behavior and responses, linking it directly to emotional processing.\n\n2. The option \"Motor control regulation\" is incorrect because, while the hypothalamus influences various bodily functions, its primary role is not in the direct regulation of motor control, which is more associated with structures like the basal ganglia and cerebellum. The option \"Procedural memory\" is also incorrect since procedural memory is primarily processed and stored in the cerebellum and basal ganglia, rather than the hypothalamus. Lastly, \"Sensory relay\" is incorrect because the thalamus, not the hypothalamus, serves as the primary relay station for sensory information to the cortex, except for smell.",
       "kn": "KN10",
       "kn_explanation": "This question focuses on the biological basis of emotion, linking brain structures to emotional behavior.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Amygdala"
       ],
       "answer": "Thalamus",
-      "explanation": "The thalamus receives various sensory inputs and relays them to the cortex but does not process smell.",
+      "explanation": "1. The **thalamus** is the correct answer because it functions as a \"relay station\" for sensory information, receiving sensory input and transmitting it to the cerebral cortex for processing. It is specifically noted for transmitting all sensory information except for olfactory stimuli, which makes it essential for the coordination of sensory and motor functioning, language, speech, and declarative memory.\n\n2. The **hypothalamus** is incorrect because, while it regulates various bodily functions and maintains homeostasis, it does not serve as a sensory relay station for transmitting sensory information to the cortex. The **basal ganglia** is also incorrect as it is involved in the initiation and control of voluntary movements and cognitive functions, rather than acting as a relay for sensory information. Lastly, the **amygdala** is incorrect because it primarily processes emotions and emotional memories, rather than functioning as a relay for sensory information to the cerebral cortex.",
       "kn": "KN1",
       "kn_explanation": "This question assesses understanding of sensory pathways in the brain, a core topic in biological bases of behavior.",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "Cingulate cortex"
       ],
       "answer": "Mammillary bodies",
-      "explanation": "Korsakoff syndrome results from thiamine deficiency damaging the thalamus and mammillary bodies, causing anterograde amnesia and confabulation.",
+      "explanation": "1. The correct answer is \"Mammillary bodies\" because confabulation, a symptom characterized by filling memory gaps with false information, is primarily associated with damage to the thalamus and the mammillary bodies. In Korsakoff syndrome, which is linked to thiamine deficiency and often results from chronic alcoholism, damage to these areas disrupts memory functioning, leading to anterograde and retrograde amnesia and confabulation.\n\n2. \n- **Amygdala:** The amygdala is primarily involved in processing emotions and forming emotional memories, rather than in the specific memory deficits and confabulation seen in Korsakoff syndrome.\n- **Substantia nigra:** The substantia nigra is mainly associated with motor control and reward-seeking behaviors, and its degeneration is linked to Parkinson’s disease, not directly to memory impairments like confabulation.\n- **Cingulate cortex:** While the cingulate cortex is involved in motivation and emotional responses, it is not specifically implicated in the memory-related symptoms of Korsakoff syndrome, such as confabulation.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of neuroanatomical pathology associated with memory disorders.",
       "difficulty": "hard",
@@ -129,7 +129,7 @@
         "Sleep-wake cycle control"
       ],
       "answer": "Voluntary movement initiation and procedural learning",
-      "explanation": "The basal ganglia coordinate voluntary motor activity and play roles in habit formation and cognitive functions.",
+      "explanation": "1. The correct answer, \"Voluntary movement initiation and procedural learning,\" reflects the primary functions of the basal ganglia, which include the initiation and control of voluntary movements as well as the learning of procedural and habit-based tasks. The basal ganglia receive input from the cerebral cortex and are integral to cognitive functions such as attention and decision-making, making them crucial for motor control and learning processes.\n\n2. The option \"Language comprehension\" is incorrect because language comprehension is primarily associated with the cerebral cortex, particularly areas such as Broca's and Wernicke's areas, rather than the basal ganglia. \"Emotional regulation and fear responses\" is also wrong, as these functions are mainly linked to the amygdala and other limbic system structures, not the basal ganglia. Lastly, \"Sleep-wake cycle control\" is incorrect because this function is primarily managed by the reticular formation and other brainstem structures, rather than the basal ganglia.",
       "kn": "KN1",
       "kn_explanation": "This item assesses recognition of motor and cognitive functions associated with key subcortical structures, relevant to biological bases of behavior.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Control body temperature"
       ],
       "answer": "Recognize fear in facial expressions",
-      "explanation": "The amygdala is critical for processing emotions, especially fear recognition and attaching emotions to memories.",
+      "explanation": "1. \"Recognize fear in facial expressions\" is the correct answer because the amygdala is specifically responsible for processing and regulating emotions, including fear. It plays a critical role in recognizing emotions in facial expressions, particularly fear, which is essential for social interactions and emotional responses.\n\n2. The option \"Coordinate voluntary movement\" is incorrect because this function is primarily associated with the cerebellum and basal ganglia, not the amygdala. \"Process declarative memory\" is incorrect as this function is mainly the role of the hippocampus, which is involved in transferring declarative memories from short-term to long-term memory. Lastly, \"Control body temperature\" is incorrect because body temperature regulation is the responsibility of the hypothalamus, not the amygdala, which does not have a direct role in maintaining homeostasis.",
       "kn": "KN10",
       "kn_explanation": "The question pertains to the role of brain structures in emotional processing, fitting within cognitive-affective bases of behavior.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Basal ganglia"
       ],
       "answer": "Hippocampus",
-      "explanation": "The hippocampus is essential for declarative memory consolidation and spatial navigation.",
+      "explanation": "1. The **hippocampus** is the correct answer because it is specifically responsible for transferring declarative memories from short-term to long-term memory and plays a crucial role in spatial memory, which involves remembering the spatial characteristics of the environment. Damage to the hippocampus is linked to impairments in episodic memory and spatial navigation, demonstrating its essential function in memory processing.\n\n2. The **cingulate cortex** is incorrect because, while it plays a role in motivation, memory, and emotions, it is not primarily responsible for transferring memories between short-term and long-term storage. The **hypothalamus** is also incorrect as it regulates essential bodily functions and homeostasis but does not play a significant role in memory transfer. Lastly, the **basal ganglia** are incorrect because they are involved in the initiation and control of voluntary movements and procedural learning, rather than the specific transfer of declarative memories.",
       "kn": "KN8",
       "kn_explanation": "This question assesses memory systems and brain structures involved in memory processing, central to cognitive-affective bases of behavior.",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Memory loss of recent events"
       ],
       "answer": "Pain without emotional distress",
-      "explanation": "Damage to the cingulate cortex causes individuals to experience pain but without the accompanying emotional distress.",
+      "explanation": "**Correct Answer Explanation: \"Pain without emotional distress\"**  \nDamage to the cingulate cortex affects emotional responses to pain, resulting in individuals experiencing pain sensations without the accompanying emotional distress typically associated with it. This is supported by the reference material, which states that people with cingulate cortex damage can feel pain but are not emotionally distressed by it.\n\n**Incorrect Options Explanation:**\n\n- **Unable to feel pain:** This option is incorrect because damage to the cingulate cortex does not eliminate the ability to feel pain; rather, it alters the emotional response to pain.\n\n- **Loss of voluntary movement:** This is incorrect as the cingulate cortex is not primarily responsible for motor control; such functions are mainly managed by other brain regions, particularly in the basal ganglia and motor cortex.\n\n- **Memory loss of recent events:** This option is also incorrect because memory functions, especially for recent events, are primarily associated with the hippocampus, not the cingulate cortex, which is more involved in emotional processing and motivation.",
       "kn": "KN10",
       "kn_explanation": "The item focuses on emotional processing of pain, linking neuroanatomy to affective experience.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Gonadotropin-releasing hormone"
       ],
       "answer": "Oxytocin",
-      "explanation": "Oxytocin synthesized in the hypothalamus and secreted by the posterior pituitary is key in social bonding and modulating stress responses.",
+      "explanation": "1. **Oxytocin** is the correct answer because it is produced by the hypothalamus and released via the posterior pituitary. It plays a critical role in social bonding, trust, and emotional recognition, as well as moderating the body's stress response by inhibiting the hypothalamic-pituitary-adrenal (HPA) axis and sympathetic nervous system responses, which helps reduce blood pressure and cortisol levels.\n\n2. **Cortisol** is incorrect because it is a hormone released from the adrenal glands in response to stress, but it is not produced by the hypothalamus nor is it involved in social bonding. **Dopamine** is also incorrect; while it is involved in reward-seeking and motor control, it is not directly linked to social bonding or the stress response in the same way oxytocin is. Lastly, **Gonadotropin-releasing hormone (GnRH)** is produced by the hypothalamus but primarily regulates reproductive functions and does not play a significant role in social bonding or the stress response.",
       "kn": "KN1",
       "kn_explanation": "This item addresses neuroendocrine mechanisms and their psychological effects, falling within biological bases of behavior.",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "Basal ganglia"
       ],
       "answer": "Temporal lobes",
-      "explanation": "Kluver-Bucy syndrome is caused by bilateral lesions of the amygdala, hippocampus, and temporal lobes resulting in characteristic behavioral symptoms.",
+      "explanation": "1. The correct answer is \"Temporal lobes\" because Kluver-Bucy syndrome is associated with bilateral lesioning of the amygdala and the temporal lobes, which includes the amygdala itself. This syndrome is characterized by symptoms such as hyperorality, hypersexuality, and reduced fear, all of which are linked to the dysfunction in these brain regions.\n\n2. The option \"Hippocampus\" is incorrect because, while the hippocampus is located in the temporal lobe and plays a role in memory, it is not specifically mentioned as part of the lesioning that causes Kluver-Bucy syndrome. \"Thalamus\" is incorrect because the thalamus acts as a relay station for sensory information and does not have a direct connection to the symptoms of Kluver-Bucy syndrome. Finally, \"Basal ganglia\" is incorrect as this structure is primarily involved in movement control and does not relate to the emotional and behavioral symptoms characteristic of Kluver-Bucy syndrome.",
       "kn": "KN1",
       "kn_explanation": "The question addresses neuroanatomical pathology associated with emotional and behavioral regulation, valid for biological bases knowledge.",
       "difficulty": "hard",
@@ -219,7 +219,7 @@
         "Medulla oblongata"
       ],
       "answer": "Reticular formation",
-      "explanation": "The reticular formation is involved in regulation of muscle tone and coordination of eye movements among its many functions.",
+      "explanation": "1. The correct answer is \"Reticular formation\" because it is involved in a variety of functions, including the regulation of muscle tone and coordination of eye movements. The reticular formation, which extends from the medulla into the midbrain, contains the reticular activating system (RAS) that mediates consciousness and arousal, further emphasizing its role in coordinating sensory and motor functions.\n\n2. \n- **Substantia nigra**: While the substantia nigra is important for motor control and reward-seeking, it primarily relates to the production of dopamine and does not directly coordinate eye movements or regulate muscle tone.\n- **Pons**: Although the pons connects the two halves of the cerebellum and helps coordinate movements, its primary role is in relaying messages between the cerebellum and cerebral cortex rather than directly regulating muscle tone or eye movements.\n- **Medulla oblongata**: The medulla is primarily responsible for autonomic functions such as respiration and heart rate, and it does not play a significant role in coordinating eye movements or muscle tone.",
       "kn": "KN1",
       "kn_explanation": "Tests knowledge of midbrain structures involved in motor coordination and arousal functions within the biological bases of behavior.",
       "difficulty": "medium",
@@ -234,7 +234,7 @@
         "Mediating emotional responses"
       ],
       "answer": "Regulating circadian rhythms",
-      "explanation": "The SCN acts as the body's biological clock, regulating the sleep-wake cycle and other circadian rhythms.",
+      "explanation": "1. \"Regulating circadian rhythms\" is the correct answer because the suprachiasmatic nucleus (SCN), located within the hypothalamus, serves as the body's biological clock. It plays a crucial role in maintaining homeostasis by regulating the sleep-wake cycle and other circadian rhythms, which are essential for coordinating various physiological processes in response to the day-night cycle.\n\n2. The option \"Processing visual information\" is incorrect because visual processing primarily occurs in the occipital lobe of the cerebral cortex, not in the SCN. \"Controlling voluntary movement\" is also incorrect as voluntary movement is primarily managed by structures such as the basal ganglia and the motor cortex, rather than the SCN. Lastly, \"Mediating emotional responses\" is not accurate since while the hypothalamus contributes to emotions, the SCN specifically regulates circadian rhythms and does not directly mediate emotional responses.",
       "kn": "KN1",
       "kn_explanation": "This question focuses on brain mechanisms underlying biological rhythms, fitting the biological bases of behavior domain.",
       "difficulty": "medium",
@@ -249,7 +249,7 @@
         "Cortisol"
       ],
       "answer": "Gonadotropin-releasing hormone (GnRH)",
-      "explanation": "GnRH produced by the hypothalamus triggers the anterior pituitary to release gonadotropins, vital for reproduction.",
+      "explanation": "1. **Correct Answer Explanation**: Gonadotropin-releasing hormone (GnRH) is the correct answer because it is specifically produced by the hypothalamus and plays a crucial role in regulating reproductive functions by stimulating the anterior pituitary gland to release gonadotropins. These gonadotropins are essential for the maturation and maintenance of the reproductive system, influencing processes such as the development of secondary sex characteristics.\n\n2. **Incorrect Options Explanation**:\n   - **Oxytocin**: Oxytocin is released from the posterior pituitary and is primarily involved in processes such as uterine contractions during childbirth and lactation, rather than directly stimulating the anterior pituitary.\n   - **Vasopressin**: Also known as antidiuretic hormone, vasopressin regulates water balance in the body and influences blood pressure but does not stimulate the anterior pituitary to release gonadotropins.\n   - **Cortisol**: Cortisol is a steroid hormone produced by the adrenal glands in response to stress; it is not involved in the stimulation of the anterior pituitary or the regulation of reproductive functions.",
       "kn": "KN1",
       "kn_explanation": "Assesses understanding of hypothalamic-pituitary endocrine interactions crucial to biological regulation.",
       "difficulty": "medium",
@@ -264,11 +264,51 @@
         "Increase in trust and social bonding"
       ],
       "answer": "Consistent significant improvement in emotion recognition in healthy adults",
-      "explanation": "Although oxytocin shows some beneficial effects on emotion recognition, results in healthy adults are often inconsistent or non-significant.",
+      "explanation": "1. The correct answer, \"Consistent significant improvement in emotion recognition in healthy adults,\" is accurate because research has produced inconsistent results regarding the effects of oxytocin on emotion recognition in this population. While some studies suggest potential benefits, these effects are often not statistically significant or only apply to certain emotions, indicating that there is no reliable improvement across the board in healthy adults.\n\n2. The option \"Enhancement of emotion recognition in autism spectrum disorder\" is incorrect because studies indicate that intranasal administration of oxytocin has been found to improve emotion recognition specifically in youth and adults with autism spectrum disorder. \n\nThe choice \"Reduction of stress responses via HPA axis inhibition\" is also incorrect, as research shows that elevated oxytocin levels can inhibit the HPA axis response to stress, leading to reduced blood pressure, heart rate, and cortisol levels. \n\nLastly, the option \"Increase in trust and social bonding\" is incorrect because oxytocin is known to play a role in enhancing social bonding and trust, as evidenced by its involvement in social behaviors and emotional recognition.",
       "kn": "KN1",
       "kn_explanation": "This item emphasizes the neurobiological basis of hormone effects on social cognition, within biological bases of behavior.",
       "difficulty": "medium",
       "quality_comment": "Plausible alternatives and nuanced interpretation of research findings enhance the question's discrimination."
+    },
+    {
+      "stem": "Which structure in the hindbrain is primarily responsible for regulating balance and coordination of voluntary movements?",
+      "options": [
+        "Cerebellum",
+        "Medulla oblongata",
+        "Pons",
+        "Reticular formation"
+      ],
+      "answer": "Cerebellum",
+      "explanation": "1. The **cerebellum** is the correct answer because it is specifically responsible for coordinating voluntary movements and maintaining posture and balance. It processes information related to muscle control and is essential for activities that require precision and timing, making it crucial for balance and coordination.\n\n2. The **medulla oblongata** is incorrect because it primarily regulates involuntary functions essential for survival, such as respiration and heart rate, rather than voluntary movements. The **pons** is also incorrect as its main functions include connecting the two halves of the cerebellum and relaying messages between the cerebellum and cerebral cortex, but it does not directly coordinate balance and voluntary movements. Lastly, the **reticular formation** is incorrect because it is involved in regulating muscle tone, coordinating eye movements, and controlling arousal and consciousness, rather than specifically managing balance and coordination of voluntary movements.",
+      "difficulty": "easy",
+      "kn": "KN1",
+      "kn_explanation": "This question examines knowledge of neurobiological bases of vital autonomic functions, relevant to the biological bases of behavior.",
+      "quality_comment": "This question effectively tests knowledge of hindbrain functions in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of brain injury, which hindbrain structure is most likely to lead to severe disruptions in arousal and alertness when damaged?",
+      "options": [
+        "Medulla oblongata",
+        "Cerebellum",
+        "Pons",
+        "Reticular formation"
+      ],
+      "answer": "Reticular formation",
+      "explanation": "1. The \"reticular formation\" is the correct answer because it contains the reticular activating system (RAS), which is crucial for mediating consciousness and arousal. Damage to the reticular formation can lead to a comatose state, severely disrupting a person's ability to be alert and responsive to stimuli.\n\n2. The \"medulla oblongata\" is primarily responsible for regulating vital autonomic functions such as respiration and heart rate, but it is not directly involved in arousal and alertness. The \"cerebellum\" coordinates voluntary movements and balance, and while it plays a role in cognitive functions, it does not primarily regulate arousal. The \"pons\" connects different parts of the brain and aids in sleep regulation, but it does not have the same direct impact on arousal and alertness as the reticular formation.",
+      "difficulty": "hard",
+      "kn": "KN1",
+      "kn_explanation": "This question examines knowledge of neurobiological bases of vital autonomic functions, relevant to the biological bases of behavior.",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of the reticular formation's role in arousal, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -24,7 +24,7 @@
         "Major depressive disorder with mixed features"
       ],
       "answer": "Bipolar II disorder",
-      "explanation": "Bipolar II disorder is diagnosed when there is at least one hypomanic episode and one major depressive episode, while Bipolar I requires a manic episode.",
+      "explanation": "1. **Correct Answer: Bipolar II Disorder**  \nBipolar II disorder is characterized by the presence of at least one hypomanic episode and at least one major depressive episode. This diagnosis specifically requires the occurrence of these two types of mood episodes, distinguishing it from other bipolar disorders.\n\n2. **Incorrect Options:**  \n- **Bipolar I Disorder:** This disorder requires at least one manic episode, which may be preceded or followed by hypomanic or major depressive episodes, but does not necessitate the presence of a hypomanic episode.  \n- **Cyclothymic Disorder:** This diagnosis involves numerous periods of hypomanic symptoms that do not meet the criteria for a hypomanic episode and depressive symptoms that do not meet the criteria for a major depressive episode, thus it does not require a major depressive episode.  \n- **Major Depressive Disorder with Mixed Features:** This is a depressive disorder that includes mixed features of mania but does not meet the criteria for bipolar disorder, as it focuses solely on depressive episodes rather than the specific requirements of bipolar disorders.",
       "kn": "KN36",
       "kn_explanation": "This question focuses on the diagnostic distinctions within bipolar disorders per DSM-5-TR criteria, falling under classification systems and diagnostic criteria (KN36).",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Excessive caffeine intake"
       ],
       "answer": "Excessive caffeine intake",
-      "explanation": "Research identifies early parental loss, emotional abuse, medical comorbidities, substance use, and life stress as environmental risks; excessive caffeine intake is not among these factors.",
+      "explanation": "1. **Excessive caffeine intake** is the correct answer because it is not mentioned in the reference material as an environmental risk factor for bipolar disorder. The material specifically identifies factors such as early parental loss, childhood maltreatment (especially emotional abuse), and medical comorbidities like irritable bowel syndrome as significant contributors to the risk of developing bipolar disorder, but does not include caffeine consumption.\n\n2. **Early parental loss** is incorrect because it is explicitly listed as an environmental risk factor for bipolar disorder, indicating that such loss can contribute to the development of the disorder. **Childhood emotional abuse** is also incorrect as it is categorized under childhood maltreatment, which is recognized as a risk factor for bipolar disorder. Lastly, **chronic medical illnesses like irritable bowel syndrome** are mentioned in the reference material as environmental risk factors, highlighting their association with an increased likelihood of developing bipolar disorder.",
       "kn": "KN4",
       "kn_explanation": "This question involves understanding environmental contributions to the etiology of bipolar disorder, which relates to behavioral genetics and environmental factors in disorders (KN4).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Fatigue following loss of sleep"
       ],
       "answer": "Increased self-esteem or grandiosity",
-      "explanation": "Mania is characterized by increased self-esteem or grandiosity, while ADHD typically shows labile mood and distractibility from wandering thoughts without grandiosity.",
+      "explanation": "1. \"Increased self-esteem or grandiosity\" is the correct answer because it is a hallmark symptom of manic episodes in bipolar disorder. Adults experiencing mania typically exhibit an elevated or euphoric mood accompanied by inflated self-esteem or grandiosity, which is not characteristic of adult ADHD. In contrast, individuals with ADHD often experience reduced self-esteem rather than inflated self-views.\n\n2. The option \"Labile and dysphoric mood\" is incorrect because adults with ADHD typically exhibit a labile mood that is dysphoric, while mania is characterized by an elevated or euphoric mood. \"Distractibility due to wandering thoughts\" is incorrect as ADHD involves distractibility caused by wandering thoughts, whereas mania is characterized by distractibility due to thought acceleration, not wandering. Lastly, \"Fatigue following loss of sleep\" is incorrect because individuals with mania often have a decreased need for sleep and do not experience fatigue; in contrast, adults with ADHD may experience fatigue due to poor sleep quality or quantity.",
       "kn": "KN33",
       "kn_explanation": "This question pertains to differential diagnosis by distinguishing symptoms of bipolar mania versus ADHD, an assessment and diagnosis domain topic (KN33).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Second-generation antipsychotics"
       ],
       "answer": "Lithium",
-      "explanation": "Lithium is most effective for classic bipolar disorder with episodic mood states, minimal rapid cycling, and onset between ages 15 and 19.",
+      "explanation": "1. **Lithium** is the correct answer because it is identified as the most effective pharmacological treatment for \u201cclassic bipolar disorder,\u201d which is characterized by a low likelihood of mixed mood states, rapid cycling, long periods of recovery between episodes, and an onset between the ages of 15 and 19. The reference material specifically states that lithium is typically the preferred treatment for this subtype due to its effectiveness in stabilizing mood and reducing the frequency of episodes.\n\n2. The other options are incorrect for the following reasons:\n\n- **Valproic acid**: While it is effective for \"atypical bipolar disorder,\" which is characterized by mixed mood states and rapid cycling, it is not the primary treatment for classic bipolar disorder.\n  \n- **Carbamazepine**: Similar to valproic acid, carbamazepine is more suited for atypical bipolar disorder rather than classic bipolar disorder, making it less effective for the specified subtype.\n\n- **Second-generation antipsychotics**: These medications are also indicated for atypical bipolar disorder, particularly for managing acute episodes and mixed states, but they are not the first-line treatment for classic bipolar disorder, where lithium is preferred.",
       "kn": "KN3",
       "kn_explanation": "This question targets knowledge of pharmacotherapy for bipolar disorder, focusing on drug classifications and guidelines (KN3).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Persistent depressive disorder"
       ],
       "answer": "Cyclothymic disorder",
-      "explanation": "Cyclothymic disorder involves periods of hypomanic and depressive symptoms that do not meet full episode criteria, lasting at least two years in adults.",
+      "explanation": "1. **Cyclothymic disorder** is the correct diagnosis because it is characterized by numerous periods of hypomanic symptoms that do not meet the criteria for a hypomanic episode and numerous periods of depressive symptoms that do not meet the criteria for a major depressive episode, lasting for at least two years in adults. The patient\u2019s experience of numerous periods of hypomanic and depressive symptoms, without meeting full criteria for episodes, aligns perfectly with this diagnosis.\n\n2. **Bipolar I disorder** is incorrect because it requires at least one full manic episode, which the patient does not have. **Bipolar II disorder** is also incorrect as it necessitates at least one hypomanic episode and one major depressive episode, neither of which the patient fully meets. **Persistent depressive disorder** is not applicable since it involves a depressed mood with two or more characteristic symptoms for at least two years, but the patient\u2019s symptoms are hypomanic and do not meet the criteria for a major depressive episode.",
       "kn": "KN36",
       "kn_explanation": "This question assesses correct diagnostic classification for mood disorders based on symptom duration and severity (KN36).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Hopelessness theory"
       ],
       "answer": "Social reinforcement theory",
-      "explanation": "Lewinsohn's social reinforcement theory explains depression as resulting from low levels of positive social reinforcement, leading to isolation and low self-worth.",
+      "explanation": "1. **Correct Answer: Social reinforcement theory**  \nSocial reinforcement theory, proposed by Lewinsohn, attributes depression to a low rate of response-contingent reinforcement for social behaviors. This lack of reinforcement can lead to social isolation and low self-esteem, which further exacerbates depressive symptoms. The theory emphasizes the role of environmental factors and social interactions in the development of depression.\n\n2. **Incorrect Options:**\n- **Learned helplessness model:** This model, developed by Seligman, links depression to repeated exposure to uncontrollable negative life events, leading to a sense of helplessness rather than focusing on social reinforcement.\n- **Cognitive triad theory:** Beck's cognitive theory posits that depression arises from a negative cognitive triad involving negative thoughts about oneself, the world, and the future, which does not specifically address social reinforcement.\n- **Hopelessness theory:** This theory, a revision of learned helplessness, suggests that a sense of hopelessness is the proximal cause of depression, emphasizing cognitive styles rather than the impact of social reinforcement on behavior.",
       "kn": "KN12",
       "kn_explanation": "The question targets knowledge of cognitive and behavioral theories explaining mood disorders, a core part of cognition-affect bases of behavior (KN12).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Decreased activity in both dorsolateral and ventromedial prefrontal cortex"
       ],
       "answer": "Decreased dorsolateral prefrontal cortex activity and increased ventromedial prefrontal cortex activity",
-      "explanation": "Depression is linked to hypoactivity in dorsolateral PFC and hyperactivity in ventromedial PFC, with remission showing the reverse pattern.",
+      "explanation": "1. The correct answer, \"Decreased dorsolateral prefrontal cortex activity and increased ventromedial prefrontal cortex activity,\" is based on neuroimaging studies that show a specific brain activity pattern associated with depression. In individuals with depression, there is abnormally high activity in the ventromedial prefrontal cortex (vmPFC) and abnormally low activity in the dorsolateral prefrontal cortex (dlPFC). This pattern is reversed in individuals who achieve remission from depressive symptoms, indicating that changes in these brain areas are linked to the presence and alleviation of depressive symptoms.\n\n2. The first incorrect option, \"Increased dorsolateral prefrontal cortex activity and decreased ventromedial prefrontal cortex activity,\" is wrong because it describes the opposite pattern of brain activity seen in depression; increased dlPFC activity and decreased vmPFC activity are associated with remission, not depression. The second incorrect option, \"Increased activity in both dorsolateral and ventromedial prefrontal cortex,\" is incorrect as both areas show contrasting activity levels during depression compared to remission, with the vmPFC being hyperactive and the dlPFC hypoactive in depressed individuals. Lastly, the option \"Decreased activity in both dorsolateral and ventromedial prefrontal cortex\" is incorrect because it does not reflect the characteristic pattern of depression; instead, it misrepresents the vmPFC, which is actually overactive in depressive states.",
       "kn": "KN1",
       "kn_explanation": "This question addresses neurobiological findings regarding brain activity associated with mood disorders, relevant to biological bases of behavior (KN1).",
       "difficulty": "hard",
@@ -129,7 +129,7 @@
         "Repetitive transcranial magnetic stimulation"
       ],
       "answer": "Electroconvulsive therapy",
-      "explanation": "ECT has the highest response (~80%) and remission (~70%) rates and produces remission more quickly (1–3 weeks) than other treatments for severe depression.",
+      "explanation": "1. **Electroconvulsive therapy (ECT)** is the correct answer because it has a high success rate for treating severe major depressive disorder, with reported response rates approaching 80% and remission rates around 70%. Additionally, ECT provides a faster time to remission, typically achieving results within 1 to 3 weeks, compared to other treatments that may take longer to show effects.\n\n2. **Cognitive-behavioral therapy (CBT)** is incorrect because, while effective, its response and remission rates are generally lower (30-60% for response) and it typically takes longer (6 to 10 weeks) to achieve remission compared to ECT. **Second-generation antidepressants** also have lower response and remission rates (25-45% for remission) and longer timeframes for effectiveness, making them less optimal for severe cases than ECT. **Repetitive transcranial magnetic stimulation (rTMS)**, while a noninvasive treatment option for treatment-resistant depression, has lower response and remission rates than ECT and does not achieve the same rapid results.",
       "kn": "KN44",
       "kn_explanation": "This question assesses knowledge of treatment efficacy and comparative outcomes in depression, under treatment and intervention (KN44).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Limitations in cognitive problem-solving"
       ],
       "answer": "Chronic medical illness and physical disability",
-      "explanation": "In older adults, chronic medical illnesses that reduce physical function and lead to social isolation are strong risk factors for depression.",
+      "explanation": "1. **Correct Answer: Chronic medical illness and physical disability**  \nChronic medical illness and physical disability are strongly linked to an increased risk of major depressive disorder (MDD) in older adults, as these conditions often lead to decreased physical functioning and contribute to social isolation. This relationship is particularly significant for older adults, as they are more likely to experience these health issues compared to younger adults, who may be more influenced by factors like genetics and stressful life events.\n\n2. **Incorrect Options:**\n\n- **Genetic predisposition**: While genetic factors do play a role in the risk of developing depression, they are not specifically associated with increasing depression risk in older adults compared to younger adults, as genetic predisposition affects individuals across all age groups.\n\n- **Stressful life events**: Stressful life events can impact individuals of all ages; however, they are not uniquely associated with older adults in the same way that chronic medical conditions are, which are more prevalent in this age group.\n\n- **Limitations in cognitive problem-solving**: Limitations in cognitive problem-solving can affect individuals of any age, but they are not a primary risk factor for depression in older adults compared to the impact of chronic medical illnesses and physical disabilities.",
       "kn": "KN27",
       "kn_explanation": "The question probes knowledge of risk and protective factors influencing development of mood disorders across the lifespan (KN27).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Bipolar II disorder"
       ],
       "answer": "Disruptive mood dysregulation disorder",
-      "explanation": "Disruptive mood dysregulation disorder requires severe recurrent temper outbursts and persistent irritability lasting at least 12 months in youth.",
+      "explanation": "1. **Correct Answer: Disruptive Mood Dysregulation Disorder (DMDD)**  \nDisruptive mood dysregulation disorder is characterized by severe temper outbursts that are verbal and/or behavioral, occurring three or more times weekly, along with a persistently irritable or angry mood observable to others most of the day, nearly every day for at least 12 months. The client's report of severe temper outbursts and a persistently irritable mood for over a year aligns perfectly with the diagnostic criteria for DMDD, which is typically diagnosed in children.\n\n2. **Incorrect Options:**\n\n- **Major Depressive Disorder (MDD):** MDD requires at least five symptoms of a major depressive episode, including depressed mood or loss of interest, lasting at least two weeks, which does not match the client's primary symptoms of temper outbursts and irritability.\n\n- **Persistent Depressive Disorder (PDD):** PDD involves a depressed mood with two or more characteristic symptoms lasting for at least two years, but the client's symptoms focus on irritability and temper outbursts rather than a pervasive depressive mood.\n\n- **Bipolar II Disorder:** Bipolar II disorder requires at least one hypomanic episode and one major depressive episode; the client's symptoms do not indicate any episodes of hypomania or major depression, making this diagnosis inappropriate.",
       "kn": "KN36",
       "kn_explanation": "This question tests accurate differential diagnosis of depressive and mood dysregulation disorders in children (KN36).",
       "difficulty": "medium",
@@ -170,11 +170,11 @@
       "options": [
         "Suicide rates are highest among females ages 75 and older.",
         "Veterans have suicide rates approximately twice that of non-veterans.",
-        "Men and women previously incarcerated have similar suicide rates because men’s rates increase more following release.",
+        "Men and women previously incarcerated have similar suicide rates because men\u2019s rates increase more following release.",
         "Suicide rates are highest among non-Hispanic White individuals compared to other ethnic groups."
       ],
       "answer": "Veterans have suicide rates approximately twice that of non-veterans.",
-      "explanation": "Veterans’ suicide rates are about twice those of non-veterans; male rate is four times that of females; AI/AN individuals have the highest suicide rates among ethnic groups.",
+      "explanation": "1. The statement \"Veterans have suicide rates approximately twice that of non-veterans\" is correct based on data collected by the U.S. Department of Veterans Affairs in 2022, which indicated a suicide rate of 34.7 per 100,000 for veterans compared to 17.1 per 100,000 for non-veterans. This significant difference highlights the increased vulnerability of veterans to suicide.\n\n2. The option stating \"Suicide rates are highest among females ages 75 and older\" is incorrect because the highest suicide rate for females is actually among those ages 45 to 64, not 75 and older. The statement \"Men and women previously incarcerated have similar suicide rates because men\u2019s rates increase more following release\" is misleading; while men and women do have similar rates after release, the increase in rates for women is notably higher, indicating a unique vulnerability rather than a direct comparison. Lastly, the claim \"Suicide rates are highest among non-Hispanic White individuals compared to other ethnic groups\" is inaccurate; the data shows that the highest suicide rates are among non-Hispanic American Indian/Alaskan Native individuals, not non-Hispanic White individuals.",
       "kn": "KN38",
       "kn_explanation": "This question addresses knowledge of epidemiology and base rates of suicide risk within demographic groups (KN38).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Electroconvulsive therapy"
       ],
       "answer": "Cognitive-behavioral therapy",
-      "explanation": "CBT and interpersonal therapy are evidence-based psychotherapies effective for prevention and treatment of peripartum depression.",
+      "explanation": "1. **Cognitive-behavioral therapy (CBT)** is the correct answer because it is specifically noted in the reference material as an evidence-based psychotherapy for the prevention and treatment of peripartum major depressive disorder. The text emphasizes that CBT is effective in addressing depressive symptoms during the peripartum period, making it a validated choice for this particular condition.\n\n2. **Psychoanalysis** is incorrect because the reference material does not mention it as a recommended treatment for peripartum major depressive disorder; instead, it focuses on evidence-based therapies like CBT. **Exposure therapy** is also not relevant, as it is primarily used for anxiety disorders and phobias rather than for treating depression, particularly in the peripartum context. Lastly, **electroconvulsive therapy (ECT)** is not considered a psychotherapy; rather, it is a medical treatment used for severe depression when other treatments are ineffective, and it does not fall under the category of psychotherapeutic interventions.",
       "kn": "KN44",
       "kn_explanation": "This question targets knowledge of evidence-based psychosocial treatments for specific depressive disorder presentations (KN44).",
       "difficulty": "easy",
@@ -204,7 +204,7 @@
         "Low acetylcholine and histamine levels"
       ],
       "answer": "Low levels of serotonin, dopamine, and norepinephrine",
-      "explanation": "Depression has been associated with decreased functioning of serotonin, dopamine, and norepinephrine neurotransmitter systems.",
+      "explanation": "1. The correct answer, \"Low levels of serotonin, dopamine, and norepinephrine,\" is supported by research indicating that major depressive disorder (MDD) is associated with deficiencies in these neurotransmitters. Specifically, studies have shown that low levels of serotonin, dopamine, and norepinephrine contribute to the symptoms of depression, suggesting that these neurotransmitter abnormalities play a significant role in the etiology of MDD.\n\n2. The option \"Elevated serotonin and norepinephrine levels\" is incorrect because research indicates that depression is related to low, not elevated, levels of these neurotransmitters. The option \"High dopamine with low serotonin\" is also incorrect, as it misrepresents the relationship; MDD is characterized by low levels of both dopamine and serotonin, rather than a combination of high dopamine and low serotonin. Lastly, \"Low acetylcholine and histamine levels\" is incorrect because the primary neurotransmitter abnormalities linked to MDD are specifically serotonin, dopamine, and norepinephrine, not acetylcholine or histamine.",
       "kn": "KN1",
       "kn_explanation": "This question assesses biological bases of mood disorders focusing on neurotransmitter abnormalities (KN1).",
       "difficulty": "medium",
@@ -215,11 +215,11 @@
       "options": [
         "Beck's cognitive theory",
         "Lewinsohn's social reinforcement theory",
-        "Seligman’s original learned helplessness model",
+        "Seligman\u2019s original learned helplessness model",
         "Hopelessness theory"
       ],
       "answer": "Beck's cognitive theory",
-      "explanation": "Beck’s theory centers on the negative cognitive triad: negative views of self, world, and future in depression.",
+      "explanation": "1. \"Beck's cognitive theory\" is the correct answer because it specifically attributes depression to a negative cognitive triad that consists of negative thoughts about oneself, the world, and the future. This theory posits that these pervasive negative thoughts contribute significantly to the development and maintenance of depressive symptoms.\n\n2. The incorrect options are as follows:\n- **Lewinsohn's social reinforcement theory** focuses on the lack of response-contingent reinforcement for social behaviors, leading to social isolation and depression, rather than specifically addressing negative thoughts about oneself or the future.\n- **Seligman\u2019s original learned helplessness model** links depression to repeated exposure to uncontrollable negative life events, emphasizing helplessness rather than a cognitive triad of negative thoughts.\n- **Hopelessness theory** describes hopelessness as a proximal cause of depression but does not specifically emphasize the triad of negative thoughts about oneself, the world, and the future that Beck's theory highlights.",
       "kn": "KN12",
       "kn_explanation": "This question evaluates knowledge of cognitive models explaining depression, directly related to cognition-affect bases of behavior (KN12).",
       "difficulty": "easy",
@@ -234,7 +234,7 @@
         "High base rates of a disorder should generally lower the estimated likelihood of diagnosis."
       ],
       "answer": "Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases.",
-      "explanation": "The availability heuristic can cause clinicians to overestimate the likelihood of diagnosis based on recent memorable cases, impacting accuracy; understanding base rates helps prevent such biases.",
+      "explanation": "1. The correct answer, \"Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases,\" highlights how recent exposure to cases can skew a clinician's perception of the prevalence of mood disorders. When clinicians encounter unusual cases frequently, they may mistakenly perceive these disorders as more common than they are, leading to overdiagnosis. This cognitive bias occurs because the availability heuristic relies on easily recalled examples rather than statistical base rates, which are critical for accurate diagnosis.\n\n2. The option \"Ignoring base rates improves diagnostic accuracy in low-prevalence disorders\" is incorrect because disregarding base rates can lead to misdiagnosis; clinicians should consider prevalence to avoid overestimating the likelihood of rare disorders. The statement \"Confirmation bias encourages clinicians to consider all contradictory evidence\" is misleading, as confirmation bias actually leads clinicians to favor information that supports their initial hypotheses while ignoring contradictory evidence. Lastly, \"High base rates of a disorder should generally lower the estimated likelihood of diagnosis\" is incorrect because higher base rates typically increase the likelihood of diagnosis; clinicians should adjust their estimates based on the prevalence of the disorder in the population.",
       "kn": "KN37",
       "kn_explanation": "This question addresses evidence-based interpretation of data, including the effects of cognitive biases and base rates on clinical decision-making (KN37).",
       "difficulty": "medium",
@@ -249,7 +249,7 @@
         "Psychodynamic formulation"
       ],
       "answer": "Biopsychosocial model",
-      "explanation": "The biopsychosocial model integrates biological, psychological, and social/contextual influences to provide a comprehensive understanding of mood disorders.",
+      "explanation": "1. The \"Biopsychosocial model\" is the correct answer because it emphasizes the integration of biological, psychological, and social factors, including historical and contextual elements, in understanding mood disorders such as bipolar and depressive disorders. This model aligns with the etiology of these disorders, which includes heredity, environmental influences, and cognitive-behavioral factors, thereby providing a comprehensive framework for assessment and treatment.\n\n2. \n- **Classical test theory**: This theory focuses on the reliability and validity of psychological tests, emphasizing measurement rather than the integration of contextual and systemic factors in understanding mood disorders.\n- **Behavioral activation model**: This model primarily centers on changing behaviors that contribute to depression, focusing on the present and immediate factors rather than the historical and contextual influences on mood disorders.\n- **Psychodynamic formulation**: While this approach considers unconscious processes and early experiences, it does not systematically integrate biological and social factors, making it less comprehensive than the biopsychosocial model in understanding mood disorders.",
       "kn": "KN30",
       "kn_explanation": "This question targets assessment theories that guide comprehensive evaluation of mood disorders by integrating diverse factors (KN30).",
       "difficulty": "medium",
@@ -264,11 +264,51 @@
         "Manual scoring of inventories without software assistance"
       ],
       "answer": "Use of smartphone mood-tracking apps for symptom monitoring",
-      "explanation": "Emerging technology like smartphone mood-tracking apps facilitates continuous symptom monitoring and timely intervention in depressive disorders.",
+      "explanation": "1. The correct answer, \"Use of smartphone mood-tracking apps for symptom monitoring,\" is appropriate because the reference material highlights the growing integration of technology in mental health treatment, including the use of digital tools for monitoring symptoms and enhancing patient engagement. While specific studies on smartphone apps are not detailed in the reference, the trend towards technology-assisted interventions suggests that such apps can facilitate ongoing assessment and provide valuable data for treatment adjustments.\n\n2. The option \"Traditional paper-and-pencil questionnaires only\" is incorrect because it does not incorporate modern technology that can enhance symptom tracking and patient engagement, limiting the potential for timely and dynamic assessments. \"In-person only psychological testing without digital aids\" is wrong as it overlooks the benefits of digital tools that can streamline the assessment process and improve accessibility for clients. Lastly, \"Manual scoring of inventories without software assistance\" is incorrect because it lacks the efficiency and accuracy that software can provide, which is crucial for effective monitoring and treatment of depressive disorders.",
       "kn": "KN41",
       "kn_explanation": "This item relates to the application of technology in assessment and monitoring of mood disorders, consistent with the role of technology in testing and evaluation (KN41).",
       "difficulty": "easy",
       "quality_comment": "The question highlights an important emerging practice area, relevant to current assessment trends."
+    },
+    {
+      "stem": "Which of the following is a key characteristic that differentiates major depressive disorder from persistent depressive disorder (dysthymia) according to DSM-5-TR criteria?",
+      "options": [
+        "Major depressive disorder requires a minimum duration of two weeks, while persistent depressive disorder lasts for at least two years.",
+        "Major depressive disorder includes only emotional symptoms, while persistent depressive disorder includes only physical symptoms.",
+        "Major depressive disorder can occur without any prior episodes, while persistent depressive disorder cannot.",
+        "Major depressive disorder requires hospitalization, while persistent depressive disorder does not."
+      ],
+      "answer": "Major depressive disorder requires a minimum duration of two weeks, while persistent depressive disorder lasts for at least two years.",
+      "explanation": "Major depressive disorder is characterized by a duration of at least two weeks for a major depressive episode, whereas persistent depressive disorder involves depressive symptoms lasting for at least two years.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of diagnostic criteria for mood episodes, which involves understanding DSM-5-TR classification systems and diagnostic criteria (KN36).",
+      "quality_comment": "This question effectively tests the understanding of the duration criteria for different depressive disorders.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of bipolar disorder, which of the following statements accurately describes the difference between a mixed episode and a manic episode according to DSM-5-TR criteria?",
+      "options": [
+        "A mixed episode includes both manic and depressive symptoms occurring simultaneously, while a manic episode consists only of elevated mood and increased energy.",
+        "A mixed episode lasts for at least one week, while a manic episode can last for as little as four days.",
+        "A mixed episode requires hospitalization, while a manic episode does not.",
+        "A mixed episode is characterized by the absence of irritability, while a manic episode often includes it."
+      ],
+      "answer": "A mixed episode includes both manic and depressive symptoms occurring simultaneously, while a manic episode consists only of elevated mood and increased energy.",
+      "explanation": "A mixed episode is defined by the presence of both manic and depressive symptoms at the same time, whereas a manic episode is characterized by elevated mood and increased energy without concurrent depressive symptoms.",
+      "difficulty": "hard",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of diagnostic criteria for mood episodes, which involves understanding DSM-5-TR classification systems and diagnostic criteria (KN36).",
+      "quality_comment": "This question challenges the test-taker's understanding of complex bipolar disorder criteria, making it a valuable assessment tool.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -62,6 +62,20 @@ interface QuizState {
   timeRemaining: number
 }
 
+type QuestionTelemetry = {
+  firstShownAt: number | null
+  lastShownAt: number | null
+  timeSpentMs: number
+  visitCount: number
+  answerChanges: number
+  changedCorrectToWrong: boolean
+  changedWrongToCorrect: boolean
+  highlightCount: number
+  strikethroughCount: number
+  flagged: boolean
+  lastSelectedAnswer?: string
+}
+
 const BRAND_COLORS = {
   softSage: '#bdd1ca',
   coral: '#d87758',
@@ -131,6 +145,8 @@ export function QuizzerContent() {
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
   const quizStartedAtRef = useRef<number | null>(null)
   const wrongStreakRef = useRef(0)
+  const questionTelemetryRef = useRef<Record<number, QuestionTelemetry>>({})
+  const lastQuestionIndexRef = useRef<number | null>(null)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const [recoverRecommendationFromHour, setRecoverRecommendationFromHour] = useState(false)
 
@@ -143,6 +159,65 @@ export function QuizzerContent() {
     if (!quizStarted || quizStartedAtRef.current) return
     quizStartedAtRef.current = Date.now()
   }, [quizStarted])
+
+  const getTelemetry = useCallback((index: number): QuestionTelemetry => {
+    const store = questionTelemetryRef.current
+    if (!store[index]) {
+      store[index] = {
+        firstShownAt: null,
+        lastShownAt: null,
+        timeSpentMs: 0,
+        visitCount: 0,
+        answerChanges: 0,
+        changedCorrectToWrong: false,
+        changedWrongToCorrect: false,
+        highlightCount: 0,
+        strikethroughCount: 0,
+        flagged: false,
+      }
+    }
+    return store[index]
+  }, [])
+
+  const finalizeCurrentTiming = useCallback(() => {
+    const now = Date.now()
+    const currentIndex = lastQuestionIndexRef.current
+    if (currentIndex === null) return
+    const telemetry = getTelemetry(currentIndex)
+    if (telemetry.lastShownAt) {
+      telemetry.timeSpentMs += Math.max(now - telemetry.lastShownAt, 0)
+      telemetry.lastShownAt = null
+    }
+  }, [getTelemetry])
+
+  // Reset telemetry when questions change
+  useEffect(() => {
+    questionTelemetryRef.current = {}
+    lastQuestionIndexRef.current = null
+  }, [questions])
+
+  // Track question navigation timing
+  useEffect(() => {
+    if (!quizStarted || questions.length === 0) return
+    const now = Date.now()
+    const prevIndex = lastQuestionIndexRef.current
+
+    if (prevIndex !== null && prevIndex !== quizState.question) {
+      const prevTelemetry = getTelemetry(prevIndex)
+      if (prevTelemetry.lastShownAt) {
+        prevTelemetry.timeSpentMs += Math.max(now - prevTelemetry.lastShownAt, 0)
+      }
+      prevTelemetry.lastShownAt = null
+    }
+
+    const currentTelemetry = getTelemetry(quizState.question)
+    if (!currentTelemetry.firstShownAt) {
+      currentTelemetry.firstShownAt = now
+    }
+    currentTelemetry.visitCount += 1
+    currentTelemetry.lastShownAt = now
+    lastQuestionIndexRef.current = quizState.question
+  }, [quizStarted, quizState.question, questions.length, getTelemetry])
 
   useEffect(() => {
     if (!user?.id) return
@@ -303,13 +378,17 @@ export function QuizzerContent() {
     const selectedText = resolveSelectionText()
     if (!selectedText) return
     applyTextFormat(selectedText, 'mark')
-  }, [applyTextFormat, resolveSelectionText])
+    const telemetry = getTelemetry(quizState.question)
+    telemetry.highlightCount += 1
+  }, [applyTextFormat, resolveSelectionText, getTelemetry, quizState.question])
 
   const handleStrikethroughText = useCallback(() => {
     const selectedText = resolveSelectionText()
     if (!selectedText) return
     applyTextFormat(selectedText, 'del')
-  }, [applyTextFormat, resolveSelectionText])
+    const telemetry = getTelemetry(quizState.question)
+    telemetry.strikethroughCount += 1
+  }, [applyTextFormat, resolveSelectionText, getTelemetry, quizState.question])
 
   const handlePrevious = useCallback(() => {
     setQuizState((prev) => ({
@@ -337,6 +416,14 @@ export function QuizzerContent() {
           isCorrect: boolean
           isScored?: boolean
           relatedSections?: string[]
+          timeSpentMs?: number | null
+          visitCount?: number | null
+          answerChanges?: number | null
+          changedCorrectToWrong?: boolean
+          changedWrongToCorrect?: boolean
+          flagged?: boolean
+          highlightCount?: number | null
+          strikethroughCount?: number | null
         }>
       }
     ) => {
@@ -494,10 +581,14 @@ export function QuizzerContent() {
 
     saveQuizResults(quizResults)
 
+    // Finalize timing for the current question before building attempts
+    finalizeCurrentTiming()
+
     const questionAttempts = questions
       .map((q, idx) => {
         const selected = state.selectedAnswers[idx]
         if (!selected) return null
+        const telemetry = questionTelemetryRef.current[idx]
         return {
           questionId: String(q.id),
           question: q.question,
@@ -507,6 +598,14 @@ export function QuizzerContent() {
           isCorrect: selected === q.correctAnswer,
           isScored: q.isScored !== false,
           relatedSections: q.relatedSections || [],
+          timeSpentMs: telemetry?.timeSpentMs ?? null,
+          visitCount: telemetry?.visitCount ?? null,
+          answerChanges: telemetry?.answerChanges ?? null,
+          changedCorrectToWrong: telemetry?.changedCorrectToWrong ?? false,
+          changedWrongToCorrect: telemetry?.changedWrongToCorrect ?? false,
+          flagged: telemetry?.flagged ?? false,
+          highlightCount: telemetry?.highlightCount ?? null,
+          strikethroughCount: telemetry?.strikethroughCount ?? null,
         }
       })
       .filter(Boolean) as Array<{
@@ -518,6 +617,14 @@ export function QuizzerContent() {
       isCorrect: boolean
       isScored?: boolean
       relatedSections?: string[]
+      timeSpentMs?: number | null
+      visitCount?: number | null
+      answerChanges?: number | null
+      changedCorrectToWrong?: boolean
+      changedWrongToCorrect?: boolean
+      flagged?: boolean
+      highlightCount?: number | null
+      strikethroughCount?: number | null
     }>
 
     const durationSeconds = quizStartedAtRef.current
@@ -549,7 +656,7 @@ export function QuizzerContent() {
       score: finalScore,
     }))
     wrongStreakRef.current = 0
-  }, [questions, topic, decodedTopic])
+  }, [questions, topic, decodedTopic, domain, finalizeCurrentTiming])
 
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60)
@@ -920,6 +1027,25 @@ export function QuizzerContent() {
 
   const handleSelectAnswer = (option: string) => {
     if (quizState.showResults) return
+
+    const currentIndex = quizState.question
+    const telemetry = getTelemetry(currentIndex)
+    const previousAnswer =
+      telemetry.lastSelectedAnswer ?? quizStateRef.current.selectedAnswers[currentIndex]
+
+    if (previousAnswer && previousAnswer !== option) {
+      telemetry.answerChanges += 1
+      const correct = questions[currentIndex]?.correctAnswer
+      if (correct) {
+        if (previousAnswer === correct && option !== correct) {
+          telemetry.changedCorrectToWrong = true
+        }
+        if (previousAnswer !== correct && option === correct) {
+          telemetry.changedWrongToCorrect = true
+        }
+      }
+    }
+    telemetry.lastSelectedAnswer = option
 
     setQuizState((prev) => ({
       ...prev,
@@ -1409,6 +1535,8 @@ export function QuizzerContent() {
                       <Checkbox
                         checked={flaggedQuestions[quizState.question] || false}
                         onCheckedChange={(checked) => {
+                          const telemetry = getTelemetry(quizState.question)
+                          telemetry.flagged = checked === true
                           setFlaggedQuestions(prev => ({
                             ...prev,
                             [quizState.question]: checked === true

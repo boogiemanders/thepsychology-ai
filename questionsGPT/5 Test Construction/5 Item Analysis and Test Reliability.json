@@ -9,7 +9,7 @@
         "Standard error and confidence interval"
       ],
       "answer": "True score variability and measurement error",
-      "explanation": "Classical test theory posits that an obtained score (X) equals the true score (T) plus random error (E), representing measurement error.",
+      "explanation": "1. The correct answer, \"True score variability and measurement error,\" reflects the foundational concept of classical test theory, which posits that an observed test score (X) is the result of a combination of a true score (T) that represents the actual differences among examinees and measurement error (E) that arises from random factors affecting test performance. This equation, X = T + E, emphasizes that observed scores are influenced by both stable traits and unpredictable errors.\n\n2. The option \"Observed score and reliability coefficient\" is incorrect because it misrepresents the components of the observed score; the reliability coefficient is a measure of consistency rather than a component of the score itself. The option \"Item difficulty and item discrimination\" is wrong because these terms refer to specific characteristics of test items rather than components that make up an observed test score. Lastly, \"Standard error and confidence interval\" is incorrect as these terms relate to the interpretation of test scores and the estimation of true scores, not the fundamental components that constitute the observed score.",
       "kn": "KN29",
       "kn_explanation": "Understanding the basics of test score components and psychometric theory directly relates to psychometric theories and measurement (KN29).",
       "difficulty": "easy",
@@ -24,14 +24,14 @@
         "Inter-rater reliability"
       ],
       "answer": "Test-retest reliability",
-      "explanation": "Test-retest reliability assesses score stability over time, making it suitable for tests measuring stable characteristics.",
+      "explanation": "1. **Test-retest reliability** is the correct answer because it specifically assesses the consistency of test scores over time. This method involves administering the same test to the same group of examinees at two different points in time, making it suitable for measuring stable traits that are expected to remain consistent, such as personality or cognitive abilities.\n\n2. **Alternate forms reliability** is incorrect because it evaluates consistency between different forms of a test rather than the same test over time, which is not suitable for measuring stable traits. **Internal consistency reliability** is not appropriate here as it measures the consistency of scores across different items within a single test, rather than over time. Lastly, **inter-rater reliability** is not applicable because it assesses the consistency of scores assigned by different raters, which is irrelevant when measuring a stable trait over time.",
       "kn": "KN29",
       "kn_explanation": "This question assesses knowledge of reliability assessment methods critical to test construction and evaluation under psychometric theories (KN29).",
       "difficulty": "medium",
       "quality_comment": "The question is clear with well-differentiated options, focusing on appropriate reliability methods."
     },
     {
-      "stem": "Cronbach’s alpha is commonly used to estimate which type of reliability?",
+      "stem": "Cronbach\u2019s alpha is commonly used to estimate which type of reliability?",
       "options": [
         "Internal consistency reliability",
         "Test-retest reliability",
@@ -39,7 +39,7 @@
         "Inter-rater reliability"
       ],
       "answer": "Internal consistency reliability",
-      "explanation": "Cronbach’s alpha calculates the average inter-item correlation to estimate the degree to which items measure the same construct within a test.",
+      "explanation": "1. **Internal Consistency Reliability** is the correct answer because Cronbach\u2019s alpha is specifically designed to assess the consistency of scores across different test items within a single test. This method evaluates how closely related the items are as a group, making it suitable for tests measuring a single content domain or aspect of behavior.\n\n2. **Test-Retest Reliability** is incorrect because it measures the consistency of scores over time by administering the same test to the same group on two different occasions, rather than assessing item consistency. **Alternate Forms Reliability** is also incorrect because it evaluates the consistency of scores across different forms of the same test, rather than focusing on the internal consistency of items within a single test. Lastly, **Inter-Rater Reliability** is wrong because it assesses the agreement between different raters scoring the same test or item, which is unrelated to the internal consistency of test items.",
       "kn": "KN29",
       "kn_explanation": "This question covers knowledge of a major internal consistency reliability statistic, important in evaluating psychometric properties (KN29).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Use of short test forms"
       ],
       "answer": "Homogeneity of test content",
-      "explanation": "Tests with homogeneous content often have higher internal consistency, thereby increasing reliability coefficients.",
+      "explanation": "1. **Homogeneity of test content** is the correct answer because tests that are homogeneous with regard to content tend to have larger reliability coefficients than heterogeneous tests. This is especially true for internal consistency reliability, as a consistent focus on a single content domain enhances the test's ability to measure the intended construct accurately and consistently.\n\n2. The **restriction of test score range** is incorrect because reliability coefficients are larger when test scores are unrestricted; a restricted range can lead to an underestimation of reliability. **Increased guessing probability on test items** is also incorrect, as higher chances of guessing correctly can lower the reliability coefficient, making it less reliable overall. Finally, the **use of short test forms** is incorrect because shorter tests tend to be less reliable than longer ones; reliability coefficients are typically underestimated when tests are shorter.",
       "kn": "KN29",
       "kn_explanation": "The question addresses factors affecting reliability magnitude, essential in psychometric test evaluation (KN29).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "It is too easy and should be removed from the test"
       ],
       "answer": "It is a relatively difficult item, with only 30% of examinees answering correctly",
-      "explanation": "The difficulty index (p) represents the proportion of examinees answering correctly, so p = 0.30 means 30% answered correctly, indicating difficulty.",
+      "explanation": "1. The correct answer, \"It is a relatively difficult item, with only 30% of examinees answering correctly,\" is accurate because the difficulty index (p) of 0.30 indicates that only 30% of examinees answered the item correctly. In general, a lower p value signifies a more difficult item, and for most tests, items with a p value between 0.30 and 0.70 are considered moderately difficult, with 0.30 being on the more challenging side.\n\n2. The option \"It is a relatively easy item, with 70% of examinees answering correctly\" is incorrect because a p value of 0.30 indicates that only 30% answered correctly, not 70%. The statement \"It discriminates poorly between high and low scorers\" is also incorrect; while the discrimination index is not provided, items with moderate difficulty often have better discrimination abilities, especially when the p value is around 0.30. Finally, the statement \"It is too easy and should be removed from the test\" is incorrect because a p value of 0.30 suggests that the item is actually difficult, not easy, and therefore does not warrant removal based on ease.",
       "kn": "KN29",
       "kn_explanation": "This question evaluates understanding of item difficulty, a critical item analysis concept in test construction (KN29).",
       "difficulty": "easy",
@@ -80,15 +80,15 @@
       "options": [
         "Spearman-Brown prophecy formula",
         "Kuder-Richardson 20 formula",
-        "Cronbach’s alpha",
-        "Cohen’s kappa coefficient"
+        "Cronbach\u2019s alpha",
+        "Cohen\u2019s kappa coefficient"
       ],
       "answer": "Spearman-Brown prophecy formula",
-      "explanation": "The Spearman-Brown formula adjusts the split-half reliability coefficient to estimate the reliability of the full-length test.",
+      "explanation": "1. The **Spearman-Brown prophecy formula** is the correct answer because it is specifically designed to correct for the underestimation of reliability that occurs when a test is split in half for the calculation of split-half reliability. When a test is divided into two halves, each half is shorter than the original test, which typically leads to a lower reliability coefficient; the Spearman-Brown formula adjusts this coefficient to reflect the reliability of the full-length test.\n\n2. The **Kuder-Richardson 20 formula** is incorrect because it is used to evaluate internal consistency reliability for dichotomously scored items, rather than correcting split-half reliability underestimations. **Cronbach\u2019s alpha** is also incorrect because, while it assesses internal consistency reliability, it does not specifically address the issue of underestimating reliability from split-half testing. Lastly, **Cohen\u2019s kappa coefficient** is incorrect because it measures inter-rater reliability for nominal scales and does not relate to the correction of split-half reliability coefficients.",
       "kn": "KN29",
       "kn_explanation": "This question relates to methods for estimating reliability coefficients and their correction, grounded in psychometric theory (KN29).",
       "difficulty": "hard",
-      "quality_comment": "The question is technically detailed and challenges test-takers’ knowledge of specific reliability corrections."
+      "quality_comment": "The question is technically detailed and challenges test-takers\u2019 knowledge of specific reliability corrections."
     },
     {
       "stem": "A test has a reliability coefficient of .81. What is the reliability index (index of reliability), as defined by taking the square root of the coefficient?",
@@ -99,7 +99,7 @@
         "1.62"
       ],
       "answer": "0.90",
-      "explanation": "The reliability index equals the square root of the reliability coefficient: √0.81 = 0.90, representing the correlation between observed and true scores.",
+      "explanation": "1. The correct answer is \"0.90\" because the reliability index, or index of reliability, is calculated by taking the square root of the reliability coefficient. In this case, the reliability coefficient is .81, and when you take the square root of .81, you get approximately 0.90 (\u221a.81 = 0.90). This value represents the theoretical correlation between the observed test scores and the true test scores.\n\n2. The option \"0.81\" is incorrect because it simply restates the reliability coefficient rather than providing the reliability index, which requires taking the square root. The option \"0.18\" is wrong as it does not relate to the square root of .81 and is significantly lower than expected; it may arise from a misunderstanding of the calculation. Lastly, \"1.62\" is incorrect because it exceeds the maximum value of 1.0 for reliability indices, which is not possible as reliability coefficients range from 0 to 1.0.",
       "kn": "KN29",
       "kn_explanation": "Understanding the relationship between reliability coefficients and their indices is part of psychometric measurement concepts (KN29).",
       "difficulty": "medium",
@@ -108,13 +108,13 @@
     {
       "stem": "Inter-rater reliability is most accurately estimated by which statistic that accounts for chance agreement when two raters assign nominal ratings?",
       "options": [
-        "Cohen’s kappa coefficient",
+        "Cohen\u2019s kappa coefficient",
         "Percent agreement",
-        "Cronbach’s alpha",
+        "Cronbach\u2019s alpha",
         "Spearman-Brown prophecy formula"
       ],
-      "answer": "Cohen’s kappa coefficient",
-      "explanation": "Cohen’s kappa adjusts for chance agreement between two raters when ratings are categorical, making it more accurate than percent agreement.",
+      "answer": "Cohen\u2019s kappa coefficient",
+      "explanation": "1. **Cohen\u2019s kappa coefficient** is the correct answer because it is specifically designed to measure inter-rater reliability for nominal ratings while accounting for chance agreement between raters. This means it provides a more accurate assessment of the consistency of ratings assigned by different raters compared to other methods that do not consider chance agreement.\n\n2. **Percent agreement** is incorrect because it does not account for chance agreement, which can lead to an overestimate of reliability. **Cronbach\u2019s alpha** is not suitable because it evaluates internal consistency reliability, not inter-rater reliability, and is used for tests measuring a single content domain rather than for comparing ratings from different raters. **Spearman-Brown prophecy formula** is also incorrect as it is used to adjust split-half reliability coefficients and does not pertain to inter-rater reliability assessment.",
       "kn": "KN29",
       "kn_explanation": "Inter-rater reliability measurement techniques are integral to psychometric evaluation in assessment (KN29).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "The chance of correctly guessing the answer"
       ],
       "answer": "The level of the latent trait where there is a 50% chance of endorsing or answering correctly",
-      "explanation": "In IRT, the difficulty (location) parameter indicates the latent trait level associated with a 50% probability of a correct or endorsed response.",
+      "explanation": "1. The correct answer, \"The level of the latent trait where there is a 50% chance of endorsing or answering correctly,\" accurately reflects the definition of the difficulty parameter in item response theory (IRT). This parameter indicates the level of the trait required for an examinee to have a 50% probability of answering the item correctly, thereby serving as a key indicator of how challenging the item is relative to the trait being measured.\n\n2. The option \"The average score of examinees on the item\" is incorrect because the difficulty parameter is not about an average score but rather the specific level of the latent trait associated with a 50% probability of a correct response. \"The slope of the item characteristic curve indicating discrimination\" is wrong because the slope relates to how well an item differentiates between high and low levels of the trait, not its difficulty. Lastly, \"The chance of correctly guessing the answer\" is misleading since the difficulty parameter does not measure guessing probability; instead, it focuses on the level of the trait needed for a correct response, independent of guessing factors.",
       "kn": "KN29",
       "kn_explanation": "This assesses knowledge of item parameters central to modern test theory and item response theory used in test construction (KN29).",
       "difficulty": "hard",
@@ -144,7 +144,7 @@
         "2.0"
       ],
       "answer": "4.0",
-      "explanation": "SEM = SD × √(1 - reliability) = 10 × √(1 - 0.84) = 10 × √0.16 = 10 × 0.4 = 4.0.",
+      "explanation": "To calculate the standard error of measurement (SEM), we use the formula: SEM = standard deviation \u00d7 \u221a(1 - reliability coefficient). Given a standard deviation of 10 and a reliability coefficient of 0.84, we first calculate 1 - 0.84, which equals 0.16. The square root of 0.16 is 0.4. Therefore, SEM = 10 \u00d7 0.4 = 4.0, making \"4.0\" the correct answer.\n\nNow, let's examine the incorrect options:\n\n- **8.4**: This option suggests a misunderstanding of the SEM formula; it does not accurately apply the calculation involving the reliability coefficient and standard deviation.\n  \n- **1.6**: This value appears to result from an incorrect calculation, possibly misapplying the square root or not using the standard deviation correctly in the SEM formula.\n\n- **2.0**: This option likely arises from a miscalculation of the square root or the multiplication step, as it does not align with the correct application of the SEM formula. \n\nIn summary, the correct SEM calculation leads to \"4.0,\" while the incorrect options stem from errors in applying the formula or misunderstanding the relationship between standard deviation and reliability.",
       "kn": "KN29",
       "kn_explanation": "Calculating SEM requires understanding of reliability and variability concepts in psychological measurement (KN29).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "85 to 95"
       ],
       "answer": "75 to 95",
-      "explanation": "A 95% confidence interval is obtained by adding and subtracting 2 SEMs: 85 ± 2(5) = 85 ± 10 = 75 to 95.",
+      "explanation": "1. The correct answer \"75 to 95\" is derived by calculating the 95% confidence interval around the obtained test score of 85, using the standard error of measurement (SEM) of 5. To construct this interval, we add and subtract two standard errors (2 x 5 = 10) from the obtained score: 85 - 10 = 75 and 85 + 10 = 95. Thus, the 95% confidence interval for the examinee's true score is from 75 to 95.\n\n2. The option \"80 to 90\" is incorrect because it does not account for the full range of two standard errors; it only subtracts 5 from the obtained score and adds 5, which is insufficient. \"70 to 100\" is wrong as it incorrectly extends the interval beyond the appropriate range, adding too much to the obtained score and subtracting too much from it. The option \"85 to 95\" is incorrect because it fails to subtract the necessary two standard errors from the obtained score, only providing the upper boundary without adjusting for the lower limit.",
       "kn": "KN29",
       "kn_explanation": "This question tests applying SEM to construct confidence intervals, a key psychometric interpretation skill (KN29).",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Physiological measures"
       ],
       "answer": "Subjectively scored ratings by multiple raters",
-      "explanation": "Consensual observer drift occurs when raters influence one another’s ratings, increasing agreement but potentially reducing accuracy in subjective assessments.",
+      "explanation": "1. \"Subjectively scored ratings by multiple raters\" is the correct answer because consensual observer drift occurs when raters communicate while assigning scores, leading to increased consistency among their ratings but often at the expense of accuracy. This phenomenon is particularly relevant in subjective assessments where personal interpretation can vary significantly, making the reliability of the ratings susceptible to bias introduced by interactions between raters.\n\n2. \n- **Objective multiple-choice cognitive tests**: These tests are scored based on predetermined correct answers, so their reliability is not influenced by rater subjectivity or communication between raters.\n- **Self-report personality inventories**: While these assessments rely on individuals' self-reports, they do not involve multiple raters assessing the same responses, thus reducing the risk of observer drift affecting reliability.\n- **Physiological measures**: These measures are based on objective data (e.g., heart rate, blood pressure) rather than subjective interpretation, making them less susceptible to the biases associated with consensual observer drift.",
       "kn": "KN29",
       "kn_explanation": "Understanding factors affecting inter-rater reliability for subjective measures is important in psychometric theory and assessment (KN29).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Exactly zero"
       ],
       "answer": "0.30 or higher",
-      "explanation": "A discrimination index of 0.30 or greater indicates good ability of an item to differentiate between high- and low-scoring examinees.",
+      "explanation": "1. The correct answer, \"0.30 or higher,\" is considered acceptable for item discrimination indices (D) because it indicates a sufficient difference in item performance between high-scoring and low-scoring examinees. A D value of 0.30 suggests that a significant proportion of high scorers answered the item correctly compared to low scorers, reflecting the item\u2019s effectiveness in distinguishing between varying levels of knowledge or ability among test-takers.\n\n2. The option \"0.10 or lower\" is incorrect because such a low D value indicates minimal discrimination, suggesting the item does not effectively differentiate between high and low performers. The option \"-0.25 or below\" is wrong as negative values indicate that more low-scoring examinees answered the item correctly than high-scoring ones, which is undesirable in test construction. Lastly, \"exactly zero\" is incorrect because a D value of zero means no difference in performance between groups, rendering the item ineffective for discrimination purposes.",
       "kn": "KN29",
       "kn_explanation": "This question focuses on item analysis and interpretation of discrimination values, central to psychometric test development (KN29).",
       "difficulty": "easy",
@@ -201,10 +201,10 @@
         "The consistency of scores across two different versions of a test",
         "The consistency of scores over repeated test administrations",
         "The internal consistency of items within the same test",
-        "The agreement between two raters’ scores"
+        "The agreement between two raters\u2019 scores"
       ],
       "answer": "The consistency of scores across two different versions of a test",
-      "explanation": "Alternate forms reliability measures the correlation between scores on different but equivalent versions of the same test.",
+      "explanation": "### Explanation of the Correct Answer\n\n\"Alternate forms reliability is best described as an assessment of the consistency of scores across two different versions of a test\" because this method specifically evaluates how well scores from one form of a test correlate with scores from another form administered to the same examinees. This reliability type is crucial when a test has multiple forms, ensuring that different versions yield similar results, which is essential for maintaining test integrity and validity.\n\n### Explanation of Incorrect Options\n\n- **The consistency of scores over repeated test administrations**: This describes test-retest reliability, which measures how stable scores are when the same test is given to the same group at different times, not across different forms of a test.\n\n- **The internal consistency of items within the same test**: This refers to internal consistency reliability, which assesses how well items on a single test measure the same construct, rather than comparing different test forms.\n\n- **The agreement between two raters\u2019 scores**: This describes inter-rater reliability, which evaluates the consistency of scores assigned by different raters, focusing on subjective scoring rather than the consistency of scores across different test versions.",
       "kn": "KN29",
       "kn_explanation": "This question asks about a key method for estimating reliability, covered in psychometric test evaluation (KN29).",
       "difficulty": "easy",
@@ -219,7 +219,7 @@
         "Does not require large sample sizes for parameter estimation"
       ],
       "answer": "Focuses on examinee responses to individual test items rather than total test scores",
-      "explanation": "IRT focuses on modeling the probability of specific item responses based on latent traits, differing from CTT's emphasis on total test scores.",
+      "explanation": "1. The correct answer, \"Focuses on examinee responses to individual test items rather than total test scores,\" accurately reflects a key distinction between item response theory (IRT) and classical test theory (CTT). IRT is item-based, concentrating on how examinees respond to individual items, which allows for a more nuanced understanding of item characteristics and the probability of a correct response based on the latent trait being measured. In contrast, CTT is test-based and primarily focuses on total test scores, limiting its ability to analyze item-level data.\n\n2. The first incorrect option, \"Assumes test scores are composed of true score plus error score,\" is wrong because this assumption is a fundamental principle of classical test theory (CTT), not item response theory (IRT). The second option, \"Uses total test scores to estimate item difficulty and discrimination,\" is incorrect because IRT specifically estimates item parameters independently of total test scores, focusing instead on individual item responses. Lastly, the option \"Does not require large sample sizes for parameter estimation\" is incorrect because IRT relies on large sample sizes to derive stable and sample-invariant item parameters, which is a significant advantage over CTT.",
       "kn": "KN30",
       "kn_explanation": "This item assesses understanding of differing assessment theories and models, specifically the contrast between CTT and IRT (KN30).",
       "difficulty": "medium",
@@ -234,7 +234,7 @@
         "They represent the internal consistency of test items"
       ],
       "answer": "They plot the probability of endorsing or correctly answering an item against levels of the latent trait",
-      "explanation": "ICCs graphically display how the probability of a correct or endorsed response varies with latent trait level in IRT models.",
+      "explanation": "1. The correct answer, \"They plot the probability of endorsing or correctly answering an item against levels of the latent trait,\" accurately describes the function of item characteristic curves (ICCs) in item response theory (IRT). ICCs depict the relationship between an individual\u2019s performance on a specific test item and their latent trait level, showing how the probability of answering the item correctly changes with varying levels of the trait being measured. This graphical representation is essential for understanding item difficulty and discrimination in IRT.\n\n2. The option \"They illustrate the variability of total test scores across examinees\" is incorrect because ICCs focus on individual item responses rather than total test scores, which are a broader measure. The statement \"They show the correlation between test items and overall test scores\" is wrong because ICCs specifically assess item-level performance in relation to the latent trait, not the correlation with overall test scores. Lastly, \"They represent the internal consistency of test items\" is incorrect as ICCs do not measure internal consistency; instead, they focus on the characteristics of individual items, such as difficulty and discrimination, rather than how consistently items measure the same construct across a test.",
       "kn": "KN30",
       "kn_explanation": "This question targets the interpretation of key graphical tools used in modern test theories aligning with assessment models (KN30).",
       "difficulty": "medium",
@@ -249,11 +249,51 @@
         "Reliability coefficient"
       ],
       "answer": "Discrimination parameter",
-      "explanation": "The discrimination parameter reflects how sharply an item can distinguish between examinees with low versus high levels of the trait.",
+      "explanation": "1. The \"Discrimination parameter\" is the correct answer because it indicates how well an item differentiates among examinees with varying levels of the latent trait measured by the test. In item response theory (IRT), the discrimination parameter is represented by the slope of the item characteristic curve (ICC); a steeper slope signifies that the item effectively distinguishes between individuals with high and low levels of the trait.\n\n2. The \"Difficulty parameter\" is incorrect because it refers to the level of the trait required for a 50% probability of answering the item correctly, not its ability to differentiate among examinees. The \"Guessing parameter\" is also incorrect, as it indicates the likelihood of answering correctly by chance, rather than the item\u2019s discriminative ability. Lastly, the \"Reliability coefficient\" is incorrect because it measures the consistency of test scores overall, rather than the performance of a specific item in distinguishing between different levels of the latent trait.",
       "kn": "KN30",
       "kn_explanation": "This item highlights understanding of specific IRT parameters central to assessment theories and models (KN30).",
       "difficulty": "medium",
       "quality_comment": "This question clarifies key distinctions among item parameters, reinforcing core conceptual knowledge required for the EPPP."
+    },
+    {
+      "stem": "A psychologist is evaluating the reliability of a personality assessment that is administered to the same group of individuals twice, several weeks apart. Which reliability method is she using?",
+      "options": [
+        "Test-retest reliability",
+        "Alternate forms reliability",
+        "Internal consistency reliability",
+        "Inter-rater reliability"
+      ],
+      "answer": "Test-retest reliability",
+      "explanation": "1. **Test-retest reliability** is the correct answer because it specifically measures the consistency of scores over time by administering the same test to the same group of individuals on two separate occasions. This method is suitable for assessing characteristics that are stable over time, which aligns with the scenario described in the question.\n\n2. **Alternate forms reliability** is incorrect because it involves administering different forms of the test to the same group, rather than the same test on two occasions. **Internal consistency reliability** is not applicable here as it assesses the consistency of scores across different items of a single test rather than across time. Lastly, **inter-rater reliability** is inappropriate in this context because it evaluates the consistency of scores assigned by different raters, not the stability of scores over time for the same individuals.",
+      "difficulty": "easy",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses knowledge of reliability assessment methods critical to test construction and evaluation under psychometric theories (KN29).",
+      "quality_comment": "This question effectively assesses understanding of test-retest reliability in a practical scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "A researcher is conducting a longitudinal study to determine the stability of a cognitive ability test over a period of five years. Which reliability method should the researcher utilize to ensure that the test scores remain consistent across this time frame?",
+      "options": [
+        "Test-retest reliability",
+        "Alternate forms reliability",
+        "Internal consistency reliability",
+        "Inter-rater reliability"
+      ],
+      "answer": "Test-retest reliability",
+      "explanation": "1. **Test-retest reliability** is the correct answer because it specifically assesses the consistency of test scores over time. In a longitudinal study, this method involves administering the same cognitive ability test to the same group of examinees at two different points in time and correlating the scores to determine stability, which is crucial for evaluating changes or consistency in cognitive ability over five years.\n\n2. **Alternate forms reliability** is incorrect because it evaluates the consistency of scores between different forms of the same test rather than the same test over time, which is not applicable in a longitudinal study focusing on stability. **Internal consistency reliability** is not suitable in this context as it measures the consistency of scores across different items on a single test at one point in time, rather than over multiple time points. Lastly, **inter-rater reliability** is inappropriate here because it assesses the agreement between different raters scoring the same test rather than the stability of test scores over time.",
+      "difficulty": "hard",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses knowledge of reliability assessment methods critical to test construction and evaluation under psychometric theories (KN29).",
+      "quality_comment": "This question challenges the test-taker to apply the concept of test-retest reliability in a complex, real-world research context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

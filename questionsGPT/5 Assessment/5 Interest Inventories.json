@@ -9,7 +9,7 @@
         "Personal Styles Scales (PSSs)"
       ],
       "answer": "General Occupational Themes (GOTs)",
-      "explanation": "The General Occupational Themes (GOTs) in the SII provide scores on Holland’s six occupational themes including realistic, investigative, artistic, social, enterprising, and conventional.",
+      "explanation": "1. The correct answer is \"General Occupational Themes (GOTs)\" because this scale of the Strong Interest Inventory (SII) specifically provides scores based on Holland's six occupational themes, which include realistic, investigative, artistic, social, enterprising, and conventional. This allows examinees to understand their interests in relation to these established categories of occupations.\n\n2. The \"Basic Interest Scales (BISs)\" are incorrect because they provide scores on 30 specific interests that represent the six occupational themes, rather than directly scoring on the themes themselves. The \"Occupational Scales (OSs)\" are also incorrect as they indicate the similarity of the examinee's interests to those of individuals in specific occupations, rather than categorizing them into Holland's themes. Lastly, the \"Personal Styles Scales (PSSs)\" are incorrect because they focus on the examinee\u2019s preferences regarding personal work styles and environments, rather than on the occupational themes defined by Holland.",
       "kn": "KN32",
       "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Percentile scoring"
       ],
       "answer": "Ipsative scoring",
-      "explanation": "Due to the KOIS’s forced-choice format where examinees choose most and least preferred activities, it yields ipsative scores that allow intra-individual but not inter-individual comparisons.",
+      "explanation": "1. **Ipsative scoring** is the correct answer for the Kuder Occupational Interest Survey (KOIS) because the test employs a forced-choice format where examinees select their most and least preferred activities from sets of three options. This method yields ipsative scores that allow for comparisons of an individual's preferences within themselves, rather than against a normative group, which is characteristic of ipsative scoring.\n\n2. The other options are incorrect for the following reasons:\n\n- **Norm-referenced scoring** compares an individual's scores to a normative sample, which is not applicable in the KOIS due to its ipsative nature that focuses on individual preferences rather than group comparisons.\n  \n- **Criterion-referenced scoring** evaluates an individual's performance against a specific criterion or standard, rather than comparing preferences within the individual, which does not align with the KOIS's forced-choice design.\n  \n- **Percentile scoring** indicates the percentage of scores in a normative sample that fall below a given score, which is not relevant for the KOIS as it does not provide comparisons to a normative group but rather focuses on intra-individual comparisons.",
       "kn": "KN29",
       "kn_explanation": "This question addresses test scoring methods and characteristics of specific assessments, central to psychometric theories and test interpretation (KN29).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Team orientation"
       ],
       "answer": "Work-life balance",
-      "explanation": "The PSSs assess five personal styles including work style, leadership style, learning environment, risk taking, and team orientation; work-life balance is not one of them.",
+      "explanation": "1. \"Work-life balance\" is the correct answer because it is not one of the five personal styles assessed by the Personal Styles Scales (PSSs) in the Strong Interest Inventory (SII). The PSSs specifically evaluate preferences related to work style, leadership style, learning environment, risk taking, and team orientation, but do not include work-life balance as a category.\n\n2. \n- **Leadership style** is incorrect because it is one of the five personal styles specifically measured by the PSSs in the SII, assessing how individuals prefer to lead and manage in work settings.\n- **Risk taking** is incorrect as it is also included in the PSSs, measuring how comfortable individuals are with taking risks in their personal and professional lives.\n- **Team orientation** is incorrect because it is another personal style assessed by the PSSs, focusing on an individual's preference for working collaboratively within teams versus independently.",
       "kn": "KN32",
       "kn_explanation": "This question examines detailed knowledge of assessment instrument components, fitting under commonly used measurement instruments (KN32).",
       "difficulty": "hard",
@@ -51,10 +51,10 @@
         "Using factor analysis of interest items across occupations",
         "By comparing responses of employed individuals to a representative adult sample (empirical criterion keying)",
         "Through expert consensus on occupational traits",
-        "Based on theoretical predictions from Holland’s model"
+        "Based on theoretical predictions from Holland\u2019s model"
       ],
       "answer": "By comparing responses of employed individuals to a representative adult sample (empirical criterion keying)",
-      "explanation": "The OSs were developed using empirical criterion keying by comparing responses of employed men and women in various occupations to a general representative sample of employed adults.",
+      "explanation": "1. The correct answer, \"By comparing responses of employed individuals to a representative adult sample (empirical criterion keying),\" is accurate because the Occupational Scales (OSs) of the Strong Interest Inventory (SII) were constructed using empirical criterion keying. This method involved analyzing the responses of men and women in various occupations and comparing them to a general representative sample of employed adults, allowing for the identification of items that effectively distinguished between different occupational preferences.\n\n2. The option \"Using factor analysis of interest items across occupations\" is incorrect because the SII did not utilize factor analysis for the construction of the OSs; rather, it relied on empirical criterion keying. The option \"Through expert consensus on occupational traits\" is wrong because the development of the OSs was not based on expert opinions but rather on empirical data from actual occupational groups. Lastly, \"Based on theoretical predictions from Holland\u2019s model\" is incorrect because, while the SII is informed by Holland's model, the OSs were constructed through empirical comparison rather than theoretical predictions.",
       "kn": "KN29",
       "kn_explanation": "This question deals with test construction and standardization procedures, a core topic within psychometric theories and test characteristics (KN29).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Both inventories employ criterion-referenced scoring based on occupational satisfaction"
       ],
       "answer": "The SII provides normative scores allowing inter-individual comparisons, while the KOIS provides ipsative scores allowing only intra-individual comparisons",
-      "explanation": "The SII uses a Likert scale with normative scores for inter-individual comparisons, whereas the KOIS’s forced-choice format yields ipsative scores that allow only intra-individual comparisons.",
+      "explanation": "1. The statement \"The SII provides normative scores allowing inter-individual comparisons, while the KOIS provides ipsative scores allowing only intra-individual comparisons\" is correct because the Strong Interest Inventory (SII) uses empirical criterion keying to generate scores that can be compared across individuals, making it suitable for normative assessments. In contrast, the Kuder Occupational Interest Survey (KOIS) employs a forced-choice format that yields ipsative scores, which only allow comparisons within the same individual rather than between different individuals.\n\n2. The option \"Only the KOIS uses a Likert-type scale for responses\" is incorrect because the SII, not the KOIS, uses a five-point Likert-type scale for its 291 items, while the KOIS uses a forced-choice format. The statement \"The SII is designed exclusively for adults, while the KOIS is only for high school students\" is misleading since both inventories are intended for high school students and adults, with the SII also being appropriate for college students. Lastly, the assertion \"Both inventories employ criterion-referenced scoring based on occupational satisfaction\" is inaccurate; while both use empirical criterion keying for their Occupational Scales, the SII is more focused on normative scores, whereas the KOIS yields ipsative scores that do not allow for inter-individual comparisons.",
       "kn": "KN29",
       "kn_explanation": "Understanding scoring and interpretive differences between assessments fits psychometric knowledge about test characteristics (KN29).",
       "difficulty": "medium",
@@ -114,14 +114,14 @@
         "It uses a paper-and-pencil administration format only"
       ],
       "answer": "It offers age-appropriate career exploration programs ranging from pre-K through adulthood",
-      "explanation": "The KCPS includes Kuder Galaxy (pre-K–grade 5), Kuder Navigator (grades 6–12), and Kuder Journey (college and adults), each with age-appropriate assessments and career exploration tools.",
+      "explanation": "1. The statement \"It offers age-appropriate career exploration programs ranging from pre-K through adulthood\" is correct because the Kuder Career Planning System (KCPS) provides tailored programs for different age groups, including Kuder Galaxy for pre-K to grade 5, Kuder Navigator for grades 6 through 12, and Kuder Journey for college students and adults. This structured approach ensures that each program is developmentally appropriate and meets the specific needs of users at various educational stages.\n\n2. The incorrect option \"It includes only assessments designed for college students and adults\" is wrong because the KCPS encompasses a range of programs for younger students, starting from pre-K. The statement \"It excludes assessment of work values\" is incorrect because the KCPS includes various assessments, such as Super\u2019s Work Values Inventory, which specifically evaluates work values. Lastly, the option \"It uses a paper-and-pencil administration format only\" is false since the KCPS is available online, indicating that it utilizes a digital format rather than being limited to paper-and-pencil assessments.",
       "kn": "KN32",
       "kn_explanation": "Testing knowledge of evidence-based vocational and career assessments and systems aligns with commonly used instruments and their applications (KN32).",
       "difficulty": "easy",
       "quality_comment": "This question is straightforward with clear true/false options, good for foundational knowledge testing at the EPPP level."
     },
     {
-      "stem": "The Strong Interest Inventory’s Personal Styles Scales assess preferences related to all of the following EXCEPT:",
+      "stem": "The Strong Interest Inventory\u2019s Personal Styles Scales assess preferences related to all of the following EXCEPT:",
       "options": [
         "Learning environment",
         "Risk taking",
@@ -138,13 +138,13 @@
     {
       "stem": "Which of the following is the primary purpose of the Dependability Indices on the Kuder Occupational Interest Survey?",
       "options": [
-        "To assess the consistency and validity of the examinee’s responses",
+        "To assess the consistency and validity of the examinee\u2019s responses",
         "To measure the desire for stable employment positions",
         "To evaluate reliability of the vocational skills reported",
         "To predict job satisfaction based on interests"
       ],
-      "answer": "To assess the consistency and validity of the examinee’s responses",
-      "explanation": "Dependability Indices are designed to help determine the validity and internal consistency of the examinee’s test responses to ensure reliable interpretation.",
+      "answer": "To assess the consistency and validity of the examinee\u2019s responses",
+      "explanation": "1. The correct answer, \"To assess the consistency and validity of the examinee\u2019s responses,\" accurately reflects the purpose of the Dependability Indices in the Kuder Occupational Interest Survey (KOIS). These indices are specifically designed to provide information that helps determine how reliable the examinee's responses are, ensuring that the results are valid for interpreting their interests and preferences.\n\n2. The option \"To measure the desire for stable employment positions\" is incorrect because the Dependability Indices do not assess employment desires but rather focus on the reliability of the responses given. The statement \"To evaluate reliability of the vocational skills reported\" is misleading, as the Dependability Indices do not measure vocational skills directly; they assess the consistency of the examinee\u2019s responses instead. Lastly, \"To predict job satisfaction based on interests\" is incorrect because the Dependability Indices do not predict job satisfaction; they only evaluate the validity of the responses related to interests, not the outcomes of those interests in terms of job satisfaction.",
       "kn": "KN29",
       "kn_explanation": "Assessment of response validity is central to psychometric test scoring, reliability, and validity concepts (KN29).",
       "difficulty": "medium",
@@ -156,10 +156,10 @@
         "It allows for reliable inter-individual comparisons but not intra-individual comparisons",
         "It provides trait-level scores that are directly comparable across populations",
         "It limits the ability to compare scores between individuals, restricting normative interpretation",
-        "It produces scores that are unaffected by an examinee’s relative preferences"
+        "It produces scores that are unaffected by an examinee\u2019s relative preferences"
       ],
       "answer": "It limits the ability to compare scores between individuals, restricting normative interpretation",
-      "explanation": "Ipsative scoring compares preferences within an individual but does not allow for direct comparison between examinees, limiting normative and inter-individual interpretations.",
+      "explanation": "1. The correct answer, \"It limits the ability to compare scores between individuals, restricting normative interpretation,\" accurately describes a limitation of ipsative scoring used in the Kuder Occupational Interest Survey (KOIS). Ipsative scoring means that scores are relative to an individual's own preferences rather than compared to a normative sample, making it impossible to determine how one individual\u2019s scores stack up against another\u2019s. This restricts the ability to draw broad conclusions about how an examinee's interests compare to others, limiting normative interpretation of the results.\n\n2. The option \"It allows for reliable inter-individual comparisons but not intra-individual comparisons\" is incorrect because ipsative scoring specifically does not support inter-individual comparisons; it only allows for comparisons within an individual\u2019s own responses. The statement \"It provides trait-level scores that are directly comparable across populations\" is wrong because ipsative scoring does not yield scores that are comparable across different individuals or groups, as it is based on individual preferences rather than normative data. Lastly, \"It produces scores that are unaffected by an examinee\u2019s relative preferences\" is inaccurate because ipsative scoring is inherently influenced by an examinee's preferences, as it measures and ranks those preferences against one another rather than in relation to a normative standard.",
       "kn": "KN29",
       "kn_explanation": "Knowledge of scoring methods and their interpretive implications is central to understanding interest inventories and assessment methodology (KN29).",
       "difficulty": "medium",
@@ -169,31 +169,71 @@
       "stem": "What type of vocational interests do the Basic Interest Scales (BISs) of the Strong Interest Inventory (SII) assess?",
       "options": [
         "Broad occupational themes such as realistic or social interests",
-        "Specific interests representing subdivisions within Holland’s occupational themes",
+        "Specific interests representing subdivisions within Holland\u2019s occupational themes",
         "The extent to which interests align with specific occupations",
         "Preferences related to leadership and teamwork styles"
       ],
-      "answer": "Specific interests representing subdivisions within Holland’s occupational themes",
-      "explanation": "BISs provide scores on 30 specific interests that map to the six broad occupational themes, representing more detailed interest areas within those themes.",
+      "answer": "Specific interests representing subdivisions within Holland\u2019s occupational themes",
+      "explanation": "1. The correct answer, \"Specific interests representing subdivisions within Holland\u2019s occupational themes,\" is accurate because the Basic Interest Scales (BISs) of the Strong Interest Inventory (SII) provide scores on 30 specific interests that align with Holland\u2019s six occupational themes. This means that the BISs break down broader themes into more nuanced areas of interest, allowing for a detailed assessment of an individual's preferences within those themes.\n\n2. The option \"Broad occupational themes such as realistic or social interests\" is incorrect because the BISs focus on specific interests rather than the overarching themes themselves. The choice \"The extent to which interests align with specific occupations\" is also wrong, as this aligns more with the Occupational Scales (OSs) of the SII, which compare examinee interests to those of individuals in various occupations. Lastly, the option \"Preferences related to leadership and teamwork styles\" is incorrect because these preferences are assessed by the Personal Styles Scales (PSSs) of the SII, not the BISs, which concentrate solely on specific interests.",
       "kn": "KN32",
       "kn_explanation": "This item focuses on knowledge of SII scale content and differentiation of interest levels within vocational assessment instruments (KN32).",
       "difficulty": "medium",
-      "quality_comment": "Plausible distractors related to other scale types strengthen the question’s discriminative power and relevance."
+      "quality_comment": "Plausible distractors related to other scale types strengthen the question\u2019s discriminative power and relevance."
     },
     {
       "stem": "Which of the following is a primary advantage of empirical criterion keying in the development of interest inventory scales such as the Strong Interest Inventory's Occupational Scales?",
       "options": [
         "It ensures that test items are theoretically derived from vocational models",
-        "It increases the instrument’s reliability by excluding inconsistent responders",
+        "It increases the instrument\u2019s reliability by excluding inconsistent responders",
         "It selects items that best differentiate groups with known occupational satisfaction",
         "It simplifies scoring by using Likert-type responses exclusively"
       ],
       "answer": "It selects items that best differentiate groups with known occupational satisfaction",
-      "explanation": "Empirical criterion keying involves choosing items that statistically discriminate between groups such as satisfied workers in particular occupations, enhancing validity for occupational prediction.",
+      "explanation": "1. The correct answer, \"It selects items that best differentiate groups with known occupational satisfaction,\" accurately reflects the purpose of empirical criterion keying used in the development of interest inventory scales like the Strong Interest Inventory's Occupational Scales. This method involves comparing the responses of individuals in specific occupations with those of a general representative sample to identify items that effectively distinguish between groups based on their occupational satisfaction. By focusing on the actual preferences of satisfied workers, the scales are tailored to better predict job choice and satisfaction for examinees.\n\n2. The option \"It ensures that test items are theoretically derived from vocational models\" is incorrect because empirical criterion keying relies on actual data from occupational groups rather than purely theoretical frameworks. The statement \"It increases the instrument\u2019s reliability by excluding inconsistent responders\" is also wrong, as the reliability of the instrument is not primarily enhanced by excluding inconsistent responses but rather through the selection of items that differentiate groups effectively. Lastly, \"It simplifies scoring by using Likert-type responses exclusively\" is misleading; while the Strong Interest Inventory does utilize a Likert-type scale, empirical criterion keying is focused on item selection based on group differentiation rather than scoring simplification.",
       "kn": "KN29",
       "kn_explanation": "Understanding test construction methodologies like criterion keying informs how vocational inventories optimize predictive validity (KN29).",
       "difficulty": "medium",
       "quality_comment": "The question effectively contrasts empirical and theoretical scale development methods, important for advanced test knowledge."
+    },
+    {
+      "stem": "Which component of the Strong Interest Inventory (SII) focuses on specific careers and compares an individual's interests with those of people in various occupations?",
+      "options": [
+        "Basic Interest Scales (BISs)",
+        "Occupational Scales (OSs)",
+        "Personal Styles Scales (PSSs)",
+        "General Occupational Themes (GOTs)"
+      ],
+      "answer": "Occupational Scales (OSs)",
+      "explanation": "1. The **Occupational Scales (OSs)** of the Strong Interest Inventory (SII) are designed to provide information on how closely an individual's interests align with those of people employed in 130 different occupations. This component specifically compares an examinee\u2019s interests with those of satisfied workers in various careers, making it the correct answer to the question.\n\n2. The **Basic Interest Scales (BISs)** provide scores on 30 specific interests related to Holland\u2019s six occupational themes but do not focus on specific careers or compare interests with individuals in those occupations. The **Personal Styles Scales (PSSs)** assess an individual's preferences regarding work styles and other personal attributes but do not relate directly to occupational comparisons. The **General Occupational Themes (GOTs)** categorize interests into broad themes based on Holland\u2019s model, rather than focusing on specific careers or comparing individual interests to those in particular occupations.",
+      "difficulty": "easy",
+      "kn": "KN32",
+      "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
+      "quality_comment": "This question effectively assesses knowledge of the SII components while remaining closely related to the original concept.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of the Strong Interest Inventory (SII), which scale is primarily used to assess an individual's preferences in work environments and personal styles?",
+      "options": [
+        "Basic Interest Scales (BISs)",
+        "General Occupational Themes (GOTs)",
+        "Occupational Scales (OSs)",
+        "Personal Styles Scales (PSSs)"
+      ],
+      "answer": "Personal Styles Scales (PSSs)",
+      "explanation": "1. The **Personal Styles Scales (PSSs)** is the correct answer because it specifically assesses an individual's preferences regarding five personal styles: work style, leadership style, learning environment, risk taking, and team orientation. This scale focuses on how individuals prefer to engage in their work environments and interact with others, making it central to understanding personal styles.\n\n2. The **Basic Interest Scales (BISs)** are incorrect because they provide scores on specific interests related to Holland's six occupational themes rather than personal preferences in work environments. The **General Occupational Themes (GOTs)** are also incorrect as they assess broad occupational themes rather than individual work style preferences. Lastly, the **Occupational Scales (OSs)** are not the correct answer because they focus on the similarity of an examinee's interests to those of individuals in specific occupations, rather than assessing personal styles or preferences directly.",
+      "difficulty": "hard",
+      "kn": "KN32",
+      "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of the SII's structure in a nuanced way, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

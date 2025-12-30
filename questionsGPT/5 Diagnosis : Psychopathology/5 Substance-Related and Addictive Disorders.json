@@ -9,7 +9,7 @@
         "Only physiological withdrawal symptoms"
       ],
       "answer": "Presence of two or more characteristic symptoms within a 12-month period",
-      "explanation": "DSM-5-TR requires at least two characteristic symptoms within a 12-month period to diagnose substance use disorders, reflecting clinical significance.",
+      "explanation": "1. The correct answer, \"Presence of two or more characteristic symptoms within a 12-month period,\" aligns with the DSM-5-TR criteria for diagnosing Substance Use Disorders. According to the DSM-5-TR, an individual must exhibit a cluster of cognitive, behavioral, and physiological symptoms, specifically two or more symptoms, that indicate continued substance use despite significant related problems within the past year.\n\n2. The option \"At least one symptom of impairment lasting more than six months\" is incorrect because the DSM-5-TR specifies the need for two or more symptoms within a 12-month period, not just one symptom over six months. The statement \"Symptoms causing distress but no behavioral changes\" is also incorrect because the diagnosis requires behavioral symptoms indicating continued use, not just distress without behavioral changes. Lastly, \"Only physiological withdrawal symptoms\" is incorrect, as the diagnosis encompasses a broader range of symptoms, including cognitive and behavioral changes, not limited to withdrawal symptoms alone.",
       "kn": "KN36",
       "kn_explanation": "This question tests understanding of diagnostic criteria and classification systems relevant to substance use disorders, aligned with diagnostic frameworks (KN36).",
       "difficulty": "easy",
@@ -24,7 +24,7 @@
         "Unsteady gait"
       ],
       "answer": "Pupillary constriction",
-      "explanation": "Pupillary constriction is characteristic of opioid intoxication, not alcohol intoxication; alcohol intoxication includes symptoms like slurred speech, incoordination, nystagmus, and unsteady gait.",
+      "explanation": "1. \"Pupillary constriction\" is the correct answer because it is not listed as one of the six symptoms required for the diagnosis of Alcohol Intoxication in the DSM-5-TR. The symptoms for Alcohol Intoxication include behavioral and psychological changes along with specific physical symptoms, but pupillary constriction is primarily associated with opioid intoxication rather than alcohol.\n\n2. \n- **Incoordination** is incorrect because it is one of the six symptoms of Alcohol Intoxication, indicating impaired motor skills that can result from alcohol use.\n- **Slurred speech** is incorrect as it is also a recognized symptom of Alcohol Intoxication, reflecting the impact of alcohol on speech and motor control.\n- **Unsteady gait** is incorrect since it is included among the symptoms of Alcohol Intoxication, demonstrating how alcohol affects balance and coordination.",
       "kn": "KN36",
       "kn_explanation": "This question assesses knowledge of specific symptom criteria used in psychiatric diagnosis (KN36).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Transient hallucinations and illusions during withdrawal"
       ],
       "answer": "Anterograde and retrograde amnesia with confabulation linked to thiamine deficiency",
-      "explanation": "Korsakoff syndrome is a form of alcohol-induced major neurocognitive disorder involving profound memory impairment and confabulation, caused by thiamine deficiency.",
+      "explanation": "1. The correct answer, \"Anterograde and retrograde amnesia with confabulation linked to thiamine deficiency,\" accurately describes Korsakoff syndrome, which is classified as an alcohol-induced major neurocognitive disorder. This condition is characterized by significant cognitive decline, particularly in memory functions, due to thiamine (vitamin B1) deficiency often associated with chronic alcohol use, leading to both anterograde amnesia (difficulty forming new memories) and retrograde amnesia (loss of previously formed memories), along with confabulation (filling in memory gaps with fabricated stories).\n\n2. The option \"Psychomotor agitation and autonomic hyperactivity following alcohol cessation\" is incorrect because these symptoms are associated with alcohol withdrawal, not Korsakoff syndrome. The option \"Severe mood lability and inappropriate aggression during intoxication\" is wrong as it describes symptoms of alcohol intoxication rather than the cognitive deficits characteristic of Korsakoff syndrome. Lastly, \"Transient hallucinations and illusions during withdrawal\" is not applicable because these symptoms are also related to alcohol withdrawal, not to the cognitive impairments seen in Korsakoff syndrome.",
       "kn": "KN1",
       "kn_explanation": "This question relates to neurobiological bases and complications of substance use, focusing on brain damage and cognitive deficits (KN1).",
       "difficulty": "medium",
@@ -54,14 +54,14 @@
         "Slurred speech plus nystagmus and unsteady gait"
       ],
       "answer": "Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory",
-      "explanation": "Opioid intoxication involves pupillary constriction and at least one of the listed behavioral/psychological symptoms during or shortly after use.",
+      "explanation": "1. The correct answer, \"Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory,\" aligns with the criteria for diagnosing Opioid Intoxication. According to the reference material, Opioid Intoxication is characterized by significant behavioral or psychological changes, including pupillary constriction and the presence of at least one of the specified symptoms during or shortly after opioid use, such as drowsiness or impaired attention/memory.\n\n2. The first incorrect option, \"Pupillary dilation plus hypervigilance and psychomotor agitation,\" is wrong because opioid intoxication is associated with pupillary constriction, not dilation, and does not include hypervigilance or psychomotor agitation as primary symptoms. \n\nThe second incorrect option, \"Autonomic hyperactivity plus anxiety and transient hallucinations,\" is incorrect because these symptoms are more characteristic of Opioid Withdrawal rather than Opioid Intoxication, which focuses on behavioral changes and specific symptoms like drowsiness. \n\nLastly, the third incorrect option, \"Slurred speech plus nystagmus and unsteady gait,\" is incorrect because while slurred speech is a symptom of Opioid Intoxication, nystagmus and unsteady gait are specifically associated with Alcohol Intoxication rather than opioids.",
       "kn": "KN36",
       "kn_explanation": "Focus on diagnostic symptomatology of opioid intoxication reflects understanding of classification criteria (KN36).",
       "difficulty": "medium",
       "quality_comment": "Distractors include symptoms of other substances' intoxication or withdrawal, appropriately challenging test-takers."
     },
     {
-      "stem": "Which of the following interventions focuses primarily on arranging an individual’s lifestyle so that healthy, drug-free living is more rewarding than substance use?",
+      "stem": "Which of the following interventions focuses primarily on arranging an individual\u2019s lifestyle so that healthy, drug-free living is more rewarding than substance use?",
       "options": [
         "Community Reinforcement Approach (CRA)",
         "Personalized Normative Feedback (PNF)",
@@ -69,7 +69,7 @@
         "Relapse Prevention Therapy (RPT)"
       ],
       "answer": "Community Reinforcement Approach (CRA)",
-      "explanation": "CRA is based on operant conditioning principles and helps individuals make their lifestyle rewarding to compete with drug use.",
+      "explanation": "1. The **Community Reinforcement Approach (CRA)** is the correct answer because it is designed to help individuals arrange their lifestyles so that healthy, drug-free living becomes more rewarding, thus competing with substance use. This approach is based on the principles of operant conditioning, focusing on enhancing positive reinforcement for sobriety and reducing the rewards associated with substance use.\n\n2. The **Personalized Normative Feedback (PNF)** intervention is incorrect because it primarily aims to correct misperceptions about peer behavior to reduce substance use, rather than directly arranging an individual's lifestyle for greater rewards from sobriety. \n\nThe **Voucher-Based Reinforcement Therapy (VBRT)** is also incorrect as it focuses on providing vouchers for achieving treatment goals, which is a form of external reinforcement rather than restructuring an individual\u2019s lifestyle to prioritize healthy living. \n\nLastly, **Relapse Prevention Therapy (RPT)** is incorrect because it is centered on teaching coping skills and strategies to prevent relapse after a period of abstinence, rather than on arranging lifestyle changes to make drug-free living more rewarding.",
       "kn": "KN44",
       "kn_explanation": "This question examines evidence-based behavioral treatment approaches for substance use, focusing on intervention mechanisms (KN44).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Relapse prevention by identifying high-risk situations"
       ],
       "answer": "Contingency management by providing vouchers contingent on treatment goals",
-      "explanation": "VBRT is a contingency management approach where patients receive vouchers as positive reinforcement for meeting treatment goals like negative drug screens.",
+      "explanation": "1. The correct answer, \"Contingency management by providing vouchers contingent on treatment goals,\" is accurate because Voucher-Based Reinforcement Therapy (VBRT) operates on the principle of contingency management. This approach rewards patients with vouchers that can be exchanged for goods and services when they achieve specific treatment goals, such as maintaining abstinence or producing negative urine drug screens, thereby reinforcing positive behavior.\n\n2. The option \"Cognitive restructuring to alter beliefs about substance use\" is incorrect because VBRT does not focus on changing cognitive beliefs; instead, it emphasizes tangible rewards for achieving specific goals. \"Motivational interviewing to enhance readiness to change\" is also wrong, as VBRT is not primarily about enhancing motivation but rather about providing rewards for meeting established treatment targets. Lastly, \"Relapse prevention by identifying high-risk situations\" is inaccurate because while relapse prevention involves recognizing triggers for relapse, VBRT specifically emphasizes the use of vouchers as incentives for maintaining abstinence rather than addressing high-risk situations directly.",
       "kn": "KN44",
       "kn_explanation": "This question targets the understanding of specific evidence-based behavioral techniques for substance use disorders (KN44).",
       "difficulty": "medium",
@@ -93,13 +93,13 @@
     {
       "stem": "Personalized Normative Feedback (PNF) reduces problematic substance use primarily by:",
       "options": [
-        "Correcting clients’ overestimations of peer substance use prevalence",
-        "Increasing clients’ awareness of physiological withdrawal symptoms",
+        "Correcting clients\u2019 overestimations of peer substance use prevalence",
+        "Increasing clients\u2019 awareness of physiological withdrawal symptoms",
         "Teaching coping skills to handle high-risk situations",
         "Reminding clients of appointment schedules via text messages"
       ],
-      "answer": "Correcting clients’ overestimations of peer substance use prevalence",
-      "explanation": "PNF works by giving feedback that contrasts clients' perceptions with actual peer behaviors to reduce misperceptions and thus decrease use.",
+      "answer": "Correcting clients\u2019 overestimations of peer substance use prevalence",
+      "explanation": "1. **Correct Answer Explanation:** \"Correcting clients\u2019 overestimations of peer substance use prevalence\" is the correct answer because Personalized Normative Feedback (PNF) is designed to address the misconception that individuals have about the frequency of substance use among their peers. By providing clients with accurate information about the actual average frequency of substance use in their peer group, PNF helps reduce their own substance use, as they often overestimate how much their peers consume, which can lead to higher consumption levels themselves.\n\n2. **Incorrect Options Explanation:**\n- **Increasing clients\u2019 awareness of physiological withdrawal symptoms:** This option is incorrect because PNF focuses on correcting misperceptions about peer behavior rather than educating clients about withdrawal symptoms, which is not a primary function of this intervention.\n- **Teaching coping skills to handle high-risk situations:** This option is wrong as PNF does not specifically teach coping skills; it is centered on providing normative feedback rather than skill development for managing high-risk situations.\n- **Reminding clients of appointment schedules via text messages:** This is incorrect because while text messaging can serve as a reminder function, PNF specifically aims to change clients' perceptions of peer behavior, not to remind them of appointments.",
       "kn": "KN44",
       "kn_explanation": "This question focuses on cognitive-behavioral treatment models and mechanisms to reduce substance use (KN44).",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "Receives personalized normative feedback about peer substance use"
       ],
       "answer": "Has poor coping skills, low self-efficacy, and experiences an abstinence violation effect",
-      "explanation": "RPT emphasizes that lapses combined with inadequate coping and negative cognitions about the lapse often lead to full relapse.",
+      "explanation": "1. The correct answer, \"Has poor coping skills, low self-efficacy, and experiences an abstinence violation effect,\" aligns with Relapse Prevention Therapy (RPT) principles, which suggest that lapses in substance use can escalate to full relapses when individuals are ill-equipped to cope with high-risk situations. When a person lacks coping skills and has low self-efficacy, they are more likely to view a lapse as a failure, which can trigger negative emotions and increase the likelihood of a full relapse.\n\n2. \n- \"Experiences withdrawal symptoms during the first 48 hours post-cessation\": While withdrawal symptoms can be challenging, RPT focuses on cognitive and behavioral strategies rather than the physiological aspects of withdrawal as a primary factor in relapse.\n- \"Is given vouchers contingent on negative drug test results\": Voucher-based reinforcement therapy is a separate treatment method that incentivizes abstinence but does not address the cognitive and emotional factors that contribute to lapses leading to relapse.\n- \"Receives personalized normative feedback about peer substance use\": Personalized normative feedback is designed to correct misperceptions about peer behaviors and reduce substance use, but it does not specifically address the individual\u2019s coping skills or emotional responses related to lapses.",
       "kn": "KN44",
       "kn_explanation": "This question assesses understanding of cognitive-behavioral theories and relapse prevention techniques in substance use treatment (KN44).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Voucher-based reinforcement therapy"
       ],
       "answer": "Twelve-step facilitation",
-      "explanation": "Project MATCH results indicated that all three treatments produced significant reductions but twelve-step facilitation had a slight advantage at follow-ups.",
+      "explanation": "1. \"Twelve-step facilitation\" is the correct answer because, according to the results of Project MATCH, it demonstrated a slight advantage over cognitive behavioral coping skills therapy and motivational enhancement therapy in reducing drinking among clients diagnosed with alcohol dependence or abuse at both the one-year and three-year follow-ups. This finding suggests that twelve-step facilitation may be particularly effective for certain individuals, especially those whose social networks support drinking.\n\n2. The option \"Cognitive behavioral coping skills therapy\" is incorrect because, while it was one of the treatments evaluated in Project MATCH, it did not show the same level of effectiveness in reducing drinking as twelve-step facilitation. \"Community reinforcement approach\" is not listed as a treatment in Project MATCH, making it irrelevant to the question. Lastly, \"Voucher-based reinforcement therapy\" was not part of the treatments compared in Project MATCH, so it cannot be considered correct in this context.",
       "kn": "KN44",
       "kn_explanation": "This question assesses knowledge of outcome research and comparative efficacy of treatments for substance use disorders (KN44).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Transient psychosis occurring during acute intoxication with hallucinations"
       ],
       "answer": "Re-experiencing perceptual symptoms from prior intoxication with intact reality testing",
-      "explanation": "This disorder involves brief, recurring visual disturbances similar to those experienced during intoxication, with the individual aware that symptoms are due to prior substance use.",
+      "explanation": "**1. Explanation of the Correct Answer:**\n\"Re-experiencing perceptual symptoms from prior intoxication with intact reality testing\" accurately describes Hallucinogen Persisting Perception Disorder (HPPD). According to the reference material, this disorder involves the re-experiencing of perceptual symptoms that were present during previous intoxication with hallucinogens, such as visual disturbances, while the individual maintains an awareness that these symptoms are a result of past drug use, indicating intact reality testing.\n\n**2. Explanation of Incorrect Options:**\n- **Hallucinations accompanied by impaired reality testing and cognitive deficits:** This option is incorrect because HPPD specifically involves intact reality testing, meaning the individual is aware that the symptoms are not part of their current reality, unlike in conditions where reality testing is impaired.\n- **Withdrawal symptoms that include autonomic hyperactivity and seizures:** This option is incorrect as it describes withdrawal symptoms, which are not characteristic of HPPD; rather, HPPD relates to the re-experiencing of perceptual symptoms without withdrawal.\n- **Transient psychosis occurring during acute intoxication with hallucinations:** This option is incorrect because HPPD symptoms occur after the acute intoxication phase has ended, not during it, and are not classified as psychosis but rather as persistent perceptual disturbances.",
       "kn": "KN36",
       "kn_explanation": "Focuses on understanding diagnosis and symptom presentation of substance-induced disorders (KN36).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Cognitive dissonance theory addressing conflicting beliefs"
       ],
       "answer": "Operant conditioning principles focusing on positive reinforcement",
-      "explanation": "CRA is based on operant conditioning, helping individuals find rewarding alternatives to substance use to support abstinence.",
+      "explanation": "1. The correct answer, \"Operant conditioning principles focusing on positive reinforcement,\" aligns with the Community Reinforcement Approach (CRA) because CRA is explicitly based on operant conditioning principles. This approach helps individuals arrange their lifestyles so that healthy, drug-free living becomes rewarding, thereby competing with substance use, which is a key aspect of positive reinforcement.\n\n2. The option \"Psychodynamic theory emphasizing unconscious conflict resolution\" is incorrect because CRA does not focus on unconscious processes or conflicts; instead, it emphasizes behavior modification through reinforcement strategies. The \"Biological model targeting neurochemical imbalances\" is also wrong, as CRA does not primarily address neurochemical factors but rather behavioral changes through environmental adjustments. Lastly, \"Cognitive dissonance theory addressing conflicting beliefs\" is incorrect because CRA does not center on resolving cognitive conflicts; it focuses on modifying behaviors by enhancing the rewards of healthy living rather than addressing belief discrepancies.",
       "kn": "KN30",
       "kn_explanation": "This question targets knowledge of assessment theories and models, specifically behavioral theories underpinning substance use treatments (KN30).",
       "difficulty": "medium",
@@ -186,10 +186,10 @@
         "Abstinence violation effect leading to feelings of guilt and failure",
         "Confirmation bias reinforcing substance-related beliefs",
         "Availability heuristic causing exaggerated recall of drug use benefits",
-        "Fundamental attribution error blaming others for one’s relapse"
+        "Fundamental attribution error blaming others for one\u2019s relapse"
       ],
       "answer": "Abstinence violation effect leading to feelings of guilt and failure",
-      "explanation": "Relapse Prevention Therapy highlights the abstinence violation effect, where a lapse causes negative emotions that increase relapse likelihood.",
+      "explanation": "1. The correct answer, \"Abstinence violation effect leading to feelings of guilt and failure,\" is most relevant to relapse in substance use disorders as described in Relapse Prevention Therapy (RPT). RPT posits that a lapse in abstinence can trigger negative emotions, such as guilt and a sense of personal failure, especially when individuals perceive their lapse as a significant setback rather than a manageable mistake. This emotional response can exacerbate the likelihood of a full-blown relapse, as individuals may feel demoralized and less capable of coping with their substance use challenges.\n\n2. The incorrect options are as follows:\n\n- **Confirmation bias reinforcing substance-related beliefs:** This bias pertains to how individuals may selectively interpret information to confirm their pre-existing beliefs, but it does not specifically address the emotional response and coping mechanisms that lead to relapse as described in RPT.\n\n- **Availability heuristic causing exaggerated recall of drug use benefits:** While this heuristic involves recalling positive experiences associated with substance use, it does not capture the critical emotional aspects and cognitive distortions related to lapses and guilt that are central to the abstinence violation effect in RPT.\n\n- **Fundamental attribution error blaming others for one\u2019s relapse:** This error involves attributing one's failures to external factors rather than internal ones, but it does not align with the focus of RPT on personal responsibility and the internal emotional landscape that contributes to relapse following a lapse in abstinence.",
       "kn": "KN37",
       "kn_explanation": "This item focuses on evidence-based interpretation of biases affecting substance use relapse, consistent with cognitive and behavioral models (KN37).",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "By tracking physiological withdrawal symptoms automatically"
       ],
       "answer": "By providing reminders, health information, support, and self-monitoring tools",
-      "explanation": "Text-message interventions aid treatment by offering appointment and medication reminders, information, support, and tools for self-monitoring.",
+      "explanation": "1. The correct answer, \"By providing reminders, health information, support, and self-monitoring tools,\" accurately reflects the functions of text-message interventions in treating substance use disorders. Text messages serve as a versatile tool that can remind clients about appointments and medication, provide essential health information, offer support, and facilitate self-monitoring, all of which can enhance engagement and adherence to treatment.\n\n2. The option \"By delivering cognitive-behavioral therapy sessions remotely\" is incorrect because text-message interventions do not replace the therapeutic process of cognitive-behavioral therapy; instead, they complement it by offering additional support. \"By administering medication through mobile technology\" is wrong since text messaging does not involve the direct administration of medication; it merely provides reminders or information related to medication. Lastly, \"By tracking physiological withdrawal symptoms automatically\" is incorrect because text-message interventions do not automatically track physiological symptoms; they may encourage clients to report symptoms but do not perform automated tracking.",
       "kn": "KN41",
       "kn_explanation": "This question pertains to the use of technology in assessment and intervention for substance use disorders, addressing KN41.",
       "difficulty": "easy",
@@ -219,11 +219,51 @@
         "Neither therapy nor medication shows significant benefit alone or combined"
       ],
       "answer": "Combination of therapy and medication yields higher quit rates than either alone",
-      "explanation": "Research shows that combining behavioral therapy and medication leads to better tobacco cessation outcomes than either approach alone.",
+      "explanation": "1. The correct answer, \"Combination of therapy and medication yields higher quit rates than either alone,\" is supported by the reference material, which states that studies evaluating treatments for tobacco use disorder show that both therapy and medication are effective when used individually, but their combination is most effective. Specifically, therapy that includes critical thinking skills training and social support, alongside medications like nicotine nasal spray and varenicline, leads to better outcomes than using either treatment modality alone.\n\n2. The option \"Medication alone is more effective than therapy or combination treatment\" is incorrect because the reference material indicates that while medication can be effective, it does not outperform the combination of therapy and medication. The statement \"Therapy alone is sufficient for most patients without medication\" is also wrong, as the material emphasizes that although therapy is beneficial, it is not as effective when used without medication compared to the combination approach. Lastly, \"Neither therapy nor medication shows significant benefit alone or combined\" is incorrect because the material clearly indicates that both therapy and medication have demonstrated effectiveness, especially when combined, contradicting the assertion that neither shows significant benefit.",
       "kn": "KN40",
       "kn_explanation": "This question addresses measuring outcomes and changes due to intervention, highlighting evidence-based efficacy (KN40).",
       "difficulty": "medium",
       "quality_comment": "A clear clinically relevant item about intervention efficacy that broadens assessment coverage in outcome measurement."
+    },
+    {
+      "stem": "Which symptom is NOT one of the criteria for Cannabis Intoxication in DSM-5-TR?",
+      "options": [
+        "Increased appetite",
+        "Dry mouth",
+        "Euphoria",
+        "Pupillary constriction"
+      ],
+      "answer": "Pupillary constriction",
+      "explanation": "1. \"Pupillary constriction\" is the correct answer because it is not listed as a symptom of Cannabis Intoxication in the DSM-5-TR. Instead, Cannabis Intoxication is characterized by symptoms such as increased appetite, dry mouth, and euphoria, which are associated with the effects of cannabis use. Pupillary constriction is more commonly associated with opioid intoxication rather than cannabis.\n\n2. \n- **Increased appetite**: This is a recognized symptom of Cannabis Intoxication, often referred to as \"the munchies,\" where users experience heightened hunger.\n- **Dry mouth**: Also known as \"cottonmouth,\" dry mouth is a common symptom of Cannabis Intoxication due to its effects on salivary glands.\n- **Euphoria**: This symptom reflects the mood-enhancing effects of cannabis, making it a key feature of Cannabis Intoxication.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of specific symptom criteria used in psychiatric diagnosis (KN36).",
+      "quality_comment": "This question effectively tests knowledge of intoxication criteria while maintaining a clear distinction between substances.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following symptoms is NOT a criterion for Opioid Intoxication according to DSM-5-TR?",
+      "options": [
+        "Drowsiness",
+        "Pupillary constriction",
+        "Respiratory depression",
+        "Increased energy"
+      ],
+      "answer": "Increased energy",
+      "explanation": "1. \"Increased energy\" is the correct answer because it is not listed as a symptom of Opioid Intoxication in the DSM-5-TR. Instead, opioid intoxication is characterized by significant behavioral or psychological changes, typically resulting in sedation or drowsiness, rather than increased energy. The symptoms specifically include drowsiness, pupillary constriction, and respiratory depression, all of which indicate a depressant effect on the central nervous system.\n\n2. \n- **Drowsiness**: This is a criterion for Opioid Intoxication and reflects the sedative effects of opioids on the central nervous system.\n- **Pupillary constriction**: This symptom, often referred to as \"miosis,\" is a classic indicator of opioid use and is included in the criteria for Opioid Intoxication.\n- **Respiratory depression**: This is a critical symptom of Opioid Intoxication and indicates a dangerous reduction in respiratory function, which can be life-threatening.",
+      "difficulty": "hard",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of specific symptom criteria used in psychiatric diagnosis (KN36).",
+      "quality_comment": "This question challenges the test-taker to differentiate between the effects of opioids and other substances, reinforcing their understanding of diagnostic criteria.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -39,7 +39,7 @@
         "Self-efficacy"
       ],
       "answer": "Perceived ambivalence",
-      "explanation": "Perceived ambivalence is not part of the health belief model, which includes perceived susceptibility, severity, benefits, barriers, self-efficacy, and cues to action.",
+      "explanation": "1. \"Perceived ambivalence\" is the correct answer because it is not listed as a component of the health belief model, which identifies specific factors that predict a person’s likelihood of engaging in health-promoting behavior. The model includes perceived susceptibility, perceived severity, perceived benefits, perceived barriers, self-efficacy, and cues to action, but does not mention ambivalence as a relevant factor.\n\n2. \n- **Perceived susceptibility**: This component refers to a person’s perception of their likelihood of developing a health disorder, making it a crucial factor in determining health-related behaviors.\n- **Perceived severity**: This refers to an individual's beliefs about the seriousness of the consequences associated with a health disorder, influencing their motivation to engage in health-promoting behaviors.\n- **Self-efficacy**: This component describes a person's confidence in their ability to take action to reduce their risk for a disorder, which is essential for fostering health-promoting behaviors.",
       "kn": "KN13",
       "kn_explanation": "The health belief model is a psychosocial model explaining health behavior change, directly linked to the study of psychosocial influences on cognition and behavior (KN13).",
       "difficulty": "easy",
@@ -54,7 +54,7 @@
         "Central route, involving reliance on heuristics"
       ],
       "answer": "Central route, involving thoughtful evaluation of message content",
-      "explanation": "The central route involves high elaboration and careful consideration of message arguments, leading to strong, enduring attitude change predictive of behavior.",
+      "explanation": "1. The correct answer, \"Central route, involving thoughtful evaluation of message content,\" is accurate because, according to the elaboration likelihood model, attitude change that is strong, enduring, and predictive of behavior occurs through a high level of elaborative processing. This central route is characterized by careful evaluation of the message when the individual perceives the message as personally relevant and has the cognitive ability to process it, leading to a more substantial and lasting change in attitude.\n\n2. The incorrect options are as follows:\n- **Peripheral route, relying on source attractiveness:** This option is incorrect because the peripheral route involves low elaboration and relies on superficial cues, such as the attractiveness of the source, which does not lead to strong or enduring attitude change.\n- **Peripheral route, relying on message length:** This option is also incorrect as the peripheral route focuses on low-level processing and cues like message length rather than the content, resulting in temporary attitude changes that are not predictive of behavior.\n- **Central route, involving reliance on heuristics:** This option is incorrect because reliance on heuristics pertains to the peripheral route, where individuals make quick judgments based on mental shortcuts rather than engaging in thoughtful evaluation of the message content, leading to less stable attitude changes.",
       "kn": "KN13",
       "kn_explanation": "Understanding the elaboration likelihood model involves knowledge of social cognition and attitude change theories, classified under psychosocial influences on cognition and behavior (KN13).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Latency of noncommitment increases while acceptance and rejection remain unchanged"
       ],
       "answer": "Latitude of acceptance decreases and latitude of rejection increases",
-      "explanation": "With higher ego-involvement, people become less open to alternative views, resulting in smaller latitude of acceptance and larger latitude of rejection.",
+      "explanation": "1. The correct answer is \"latitude of acceptance decreases and latitude of rejection increases\" because social judgment theory posits that as a person's ego-involvement with an issue increases, they become more rigid in their beliefs. This heightened ego-involvement leads to a narrower latitude of acceptance for positions that closely align with their own views, while simultaneously expanding the latitude of rejection for positions that are significantly different from their own.\n\n2. The option \"latitude of acceptance increases and latitude of rejection decreases\" is incorrect because increased ego-involvement does not allow for greater acceptance of differing views; rather, it causes individuals to reject more opposing positions. The choice \"both latitudes of acceptance and rejection increase\" is wrong because an increase in ego-involvement results in a decrease in acceptance and an increase in rejection, not both increasing. Lastly, \"latitude of noncommitment increases while acceptance and rejection remain unchanged\" is incorrect because increased ego-involvement typically reduces the latitude of noncommitment, making individuals less open to considering moderate positions.",
       "kn": "KN13",
       "kn_explanation": "This question addresses a key aspect of social judgment theory, a social cognition model emphasizing attitudes and persuasion, fitting well within psychosocial influences (KN13).",
       "difficulty": "hard",
@@ -84,7 +84,7 @@
         "Likely to ignore Oscar’s attitude since it does not affect her attitude"
       ],
       "answer": "Motivated to change her attitude toward country music or Oscar to restore balance",
-      "explanation": "According to balance theory, people are motivated to resolve inconsistency among person (P), other person (O), and object (X), restoring balance by changing attitudes.",
+      "explanation": "1. The correct answer, \"Motivated to change her attitude toward country music or Oscar to restore balance,\" aligns with Heider's balance theory, which posits that individuals seek consistency among their attitudes and relationships. In this scenario, Patricia (P) likes Oscar (O) but he dislikes country music (X), which she likes; this creates an unbalanced state that leads to cognitive discomfort, motivating her to adjust her attitudes toward either Oscar or country music to re-establish balance.\n\n2. The option \"Unconcerned because relationships are independent of attitudes toward objects\" is incorrect because balance theory specifically emphasizes the interdependence of attitudes and relationships; discomfort arises precisely because they are connected. The statement \"Motivated to reinforce her liking of Oscar without changing her attitude toward country music\" is wrong because it ignores the necessity of addressing the inconsistency between her liking of Oscar and her fondness for country music, which creates dissonance. Lastly, \"Likely to ignore Oscar’s attitude since it does not affect her attitude\" is incorrect because balance theory asserts that conflicting attitudes within a relational context cannot be easily ignored; they compel the individual to resolve the inconsistency.",
       "kn": "KN13",
       "kn_explanation": "Balance theory is a social psychological theory explaining attitude consistency and motivation, fitting under social cognition theories within psychosocial factors (KN13).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "They were more cognitively capable of attending to the task"
       ],
       "answer": "They had insufficient external justification for lying, leading to attitude change to reduce dissonance",
-      "explanation": "Participants paid $1 experienced dissonance because the reward was too small to justify lying; to reduce discomfort, they changed their attitudes to view the task more positively.",
+      "explanation": "1. The correct answer, \"They had insufficient external justification for lying, leading to attitude change to reduce dissonance,\" is based on Festinger's cognitive dissonance theory. Participants paid only $1 had little justification for their lie about the task being enjoyable, which created cognitive dissonance between their true feelings (the task was boring) and their behavior (lying). To relieve this dissonance, they changed their attitude and rated the task as more enjoyable, as they needed to justify their actions internally.\n\n2. The option \"They were bribed and thus motivated to genuinely enjoy the task\" is incorrect because the participants were not bribed in a way that would create genuine enjoyment; rather, the low payment led to cognitive dissonance. The choice \"They had more positive subjective norms about the task\" is wrong because the study did not indicate that participants had any pre-existing positive beliefs about the task; their enjoyment was influenced by the need to resolve dissonance. Finally, \"They were more cognitively capable of attending to the task\" is incorrect because cognitive capability was not a factor in the results; the difference in enjoyment ratings was due to the level of justification for their behavior, not their cognitive abilities.",
       "kn": "KN13",
       "kn_explanation": "This classic study illustrates cognitive dissonance theory, a core concept in social cognition and attitude change within psychosocial bases (KN13).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Self-serving bias"
       ],
       "answer": "Overjustification effect",
-      "explanation": "The overjustification effect occurs when external rewards reduce intrinsic motivation by shifting the perceived reason for behavior from internal to external.",
+      "explanation": "1. The \"overjustification effect\" is the correct answer because it describes the phenomenon where individuals, particularly children, experience a decrease in intrinsic motivation for an activity when they receive external rewards for it. This effect occurs because the external rewards can lead individuals to attribute their engagement in the activity to the rewards rather than their intrinsic enjoyment, thus diminishing their internal motivation to participate in the activity.\n\n2. The incorrect options are as follows:\n   - **Cognitive dissonance**: This theory relates to the discomfort experienced when there is an inconsistency between cognitions or between cognition and behavior, not specifically about intrinsic motivation being affected by external rewards.\n   - **Social facilitation**: This phenomenon refers to the tendency for individuals to perform better on tasks in the presence of others, which does not explain the decrease in intrinsic motivation due to external rewards.\n   - **Self-serving bias**: This bias involves attributing successes to oneself and failures to external factors, and it does not address the relationship between external rewards and intrinsic motivation in activities.",
       "kn": "KN13",
       "kn_explanation": "The question focuses on self-perception theory and motivation changes, core to research on attitudes and behavior in social cognition (KN13).",
       "difficulty": "easy",
@@ -129,7 +129,7 @@
         "When the issue is relevant to the person’s self-interest"
       ],
       "answer": "When attitude and behavior are measured at different levels of specificity",
-      "explanation": "Attitudes better predict behavior when both are matched in specificity; mismatch weakens the relationship.",
+      "explanation": "1. The correct answer, \"When attitude and behavior are measured at different levels of specificity,\" is correct because early studies indicated that attitudes are better predictors of behavior when both are assessed at the same level of specificity. When a general attitude is used to predict a specific behavior, the relationship weakens, as the mismatch in specificity makes it difficult to accurately predict behavior.\n\n2. The option \"When attitude is based on direct experience\" is incorrect because attitudes formed from direct experience tend to be stronger and more predictive of behavior, as they are more personally relevant. \"When attitude toward the issue is highly accessible\" is also incorrect since easily accessible attitudes are more likely to influence behavior, as individuals are well-informed and can quickly recall their attitudes when making decisions. Lastly, \"When the issue is relevant to the person’s self-interest\" is incorrect because attitudes that align with a person's self-interests are typically stronger and thus more likely to predict corresponding behaviors effectively.",
       "kn": "KN13",
       "kn_explanation": "This question addresses factors influencing attitude-behavior consistency, a crucial concept in social cognition research and psychosocial influence on behavior (KN13).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Relevance of the message to the individual"
       ],
       "answer": "Communicator's attractiveness",
-      "explanation": "Peripheral cues include factors unrelated to message content such as source attractiveness, which influence attitude change when elaboration is low.",
+      "explanation": "1. \"Communicator's attractiveness\" is the correct answer because it is identified as a peripheral cue in the elaboration likelihood model. The peripheral route involves low elaboration and relies on factors that are not central to the content of the message, such as the attractiveness, likability, or credibility of the communicator, which can influence attitude change without deep processing of the message itself.\n\n2. The \"strength of the argument presented\" is incorrect because it pertains to the central route, where attitude change is based on careful evaluation of the message's content rather than peripheral cues. \"Cognitive ability to process the message\" is also incorrect, as it relates to the central route; individuals with the cognitive ability to engage deeply with the message are more likely to process it thoughtfully rather than relying on peripheral cues. Lastly, the \"relevance of the message to the individual\" is incorrect because it influences the likelihood of using the central route; when a message is personally relevant, individuals are more inclined to engage in thorough processing rather than being swayed by superficial cues.",
       "kn": "KN13",
       "kn_explanation": "This item tests knowledge of key elements influencing attitude change processes within social cognition frameworks (KN13).",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "They reflect the person's confidence in their ability to act"
       ],
       "answer": "They act as motivating triggers that initiate health-related behavior",
-      "explanation": "Cues to action are external or internal stimuli that motivate a person to engage in health-promoting behaviors.",
+      "explanation": "1. The correct answer, \"They act as motivating triggers that initiate health-related behavior,\" accurately reflects the role of 'cues to action' within the health belief model. Cues to action are factors that prompt an individual to engage in health-related behaviors, such as advice from health providers or reminders from mass media campaigns. These cues serve as catalysts that enhance an individual's motivation to act in response to potential health threats.\n\n2. The option \"They represent the perceived severity of the health threat\" is incorrect because perceived severity refers specifically to an individual's beliefs about the seriousness of the consequences of developing a disorder, not a trigger for action. \"They reduce perceived barriers to taking action\" is also wrong, as perceived barriers refer to the material and psychological costs associated with taking action, rather than being a motivating trigger. Lastly, \"They reflect the person's confidence in their ability to act\" is incorrect because this pertains to self-efficacy, which is the belief in one's capability to perform a behavior, rather than serving as a cue to initiate action.",
       "kn": "KN13",
       "kn_explanation": "This question assesses understanding of specific components of the health belief model, part of social psychological models of health behavior (KN13).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "The number of different attitudes held by the person"
       ],
       "answer": "The strength of the attitude derived from direct experience",
-      "explanation": "Attitudes formed through direct experience are stronger and more predictive of behavior than those based on indirect information or weak bases.",
+      "explanation": "1. \"The strength of the attitude derived from direct experience\" is the correct answer because attitudes are better predictors of behavior when they are strong. According to the reference material, attitudinal strength is greater when the attitude is based on direct experience and is relevant to the individual's self-interests, making it more likely to influence behavior.\n\n2. The option \"The general positivity of the attitude\" is incorrect because the mere positivity of an attitude does not guarantee its strength or predictive power regarding behavior; it is the strength and relevance of the attitude that matter. \"The amount of time elapsed since attitude formation\" is also wrong, as the reference material does not indicate that time alone affects the strength of the attitude-behavior relationship; rather, it emphasizes the strength and accessibility of the attitude. Lastly, \"The number of different attitudes held by the person\" is incorrect because having multiple attitudes does not inherently strengthen the relationship between any specific attitude and behavior; the focus is on the strength and specificity of individual attitudes.",
       "kn": "KN14",
       "kn_explanation": "KN14 includes knowledge of social and cultural bases of behavior such as factors influencing attitude-behavior consistency; attitude strength from direct experience is a key factor.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Ignore peer influences on their behavior"
       ],
       "answer": "Have higher willingness to try marijuana in social settings",
-      "explanation": "The prototype/willingness model explains that a positive prototype increases willingness to engage in the behavior in social situations conducive to it, especially among adolescents.",
+      "explanation": "1. The correct answer, \"Have higher willingness to try marijuana in social settings,\" aligns with the prototype/willingness model, which posits that a person's willingness to engage in a behavior is influenced by their social image (prototype) of individuals who engage in that behavior. If an adolescent has a positive social image of peers who smoke marijuana, they are more likely to feel accepted and willing to try it in social situations where it is present.\n\n2. \n- **Avoid marijuana use due to perceived risks:** This option is incorrect because the prototype/willingness model suggests that a positive social image would increase willingness to engage in the behavior, not avoid it due to risks.\n- **Depend solely on behavioral intentions to decide:** This option is incorrect as the model emphasizes both willingness in social contexts and behavioral intentions, indicating that willingness is influenced by social perceptions rather than solely by intentions.\n- **Ignore peer influences on their behavior:** This option is incorrect because the prototype/willingness model explicitly highlights the importance of peer influences in shaping willingness to engage in behaviors like marijuana use.",
       "kn": "KN14",
       "kn_explanation": "This item addresses social-cognitive mechanisms explaining risky health behaviors, aligned with social and cultural bases of behavior in KN14.",
       "difficulty": "medium",
@@ -204,11 +204,51 @@
         "The person perceives the message as neutral and considers it"
       ],
       "answer": "The person experiences contrast effect and rejects the message more strongly",
-      "explanation": "Messages within the latitude of rejection are perceived as more discrepant than they are (contrast effect), leading to stronger rejection.",
+      "explanation": "In social judgment theory, when a persuasive message falls within a person’s latitude of rejection, the person experiences a contrast effect, leading them to reject the message even more strongly. This occurs because the message is perceived as significantly different from their existing beliefs, causing them to view it unfavorably and potentially exaggerating their opposition to it.\n\nNow, let’s examine the incorrect options:\n\n- **The person is more likely to accept the message:** This is incorrect because a message within the latitude of rejection is seen as unacceptable, leading to stronger opposition rather than acceptance.\n\n- **The person with low ego-involvement will accept the message:** This is wrong because low ego-involvement typically leads to a broader latitude of acceptance, but if the message is still within the latitude of rejection, it will not be accepted regardless of ego-involvement.\n\n- **The person perceives the message as neutral and considers it:** This option is incorrect because messages within the latitude of rejection are not viewed as neutral; they are actively rejected, not considered. \n\nOverall, social judgment theory emphasizes the importance of a person's current position on an issue and how it affects their response to persuasive messages.",
       "kn": "KN14",
       "kn_explanation": "This question focuses on attitude change mechanisms involving social judgment theory, part of the social and cultural bases domain relevant to KN14.",
       "difficulty": "medium",
       "quality_comment": "Distractors involve plausible misunderstandings, requiring knowledge of nuanced effects within attitude change theories to answer correctly."
+    },
+    {
+      "stem": "In the context of the theory of planned behavior, which of the following is NOT a component that influences behavioral intention?",
+      "options": [
+        "Behavioral beliefs",
+        "Normative beliefs",
+        "Control beliefs",
+        "Personal feelings about the behavior"
+      ],
+      "answer": "Personal feelings about the behavior",
+      "explanation": "The theory of planned behavior identifies behavioral beliefs, normative beliefs, and control beliefs as the main components influencing intention, while personal feelings are not included as a determinant.",
+      "difficulty": "easy",
+      "kn": "KN13",
+      "kn_explanation": "This question assesses understanding of the theory of planned behavior, a major social cognition model explaining the link between attitudes and behaviors, which is covered by KN13 (Influence of psychosocial factors on cognitions/beliefs and behaviors).",
+      "quality_comment": "This question effectively assesses understanding of the components of the theory of planned behavior in a simplified manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following statements best describes a factor that is NOT part of the theory of planned behavior's framework for predicting intentions?",
+      "options": [
+        "Attitudes formed through direct experience",
+        "Social pressures from peers",
+        "Confidence in one's ability to perform the behavior",
+        "Past emotional responses to similar behaviors"
+      ],
+      "answer": "Past emotional responses to similar behaviors",
+      "explanation": "1. \"Past emotional responses to similar behaviors\" is the correct answer because it is not included in the framework of the theory of planned behavior. This theory posits that intentions to perform a behavior are influenced by three specific factors: a person's attitude toward the behavior, subjective norms (social pressures), and perceived behavioral control (confidence in one's ability). Past emotional responses are not directly addressed as a determinant of intention in this model.\n\n2. \n- **Attitudes formed through direct experience**: This option is incorrect because strong attitudes, especially those derived from direct experience, significantly influence a person's intentions to engage in a behavior according to the theory of planned behavior.\n- **Social pressures from peers**: This option is incorrect as it aligns with the concept of subjective norms, which are one of the three key factors in predicting behavioral intentions in the theory of planned behavior.\n- **Confidence in one's ability to perform the behavior**: This option is incorrect because it directly corresponds to perceived behavioral control, which is another critical component of the theory of planned behavior that affects intentions.",
+      "difficulty": "hard",
+      "kn": "KN13",
+      "kn_explanation": "This question assesses understanding of the theory of planned behavior, a major social cognition model explaining the link between attitudes and behaviors, which is covered by KN13 (Influence of psychosocial factors on cognitions/beliefs and behaviors).",
+      "quality_comment": "This question challenges the test-taker to differentiate between relevant and irrelevant concepts within the theory of planned behavior.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

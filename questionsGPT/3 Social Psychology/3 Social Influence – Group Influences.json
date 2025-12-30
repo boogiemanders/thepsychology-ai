@@ -9,7 +9,7 @@
         "Tasks involving new or complex skills"
       ],
       "answer": "Easy and well-learned tasks",
-      "explanation": "Zajonc’s drive theory states that the dominant response strengthened by arousal is usually correct for easy or well-learned tasks, resulting in social facilitation (improved performance).",
+      "explanation": "1. \"Easy and well-learned tasks\" is the correct answer because, according to Zajonc’s drive theory, the presence of others increases physiological arousal, which in turn strengthens the dominant response. For tasks that are easy and well-learned, the dominant response is typically the correct one, leading to improved performance when others are present.\n\n2. The option \"Difficult and unfamiliar tasks\" is incorrect because, in such tasks, the increased arousal from the presence of others can lead to social inhibition, resulting in decreased performance as the dominant response is often incorrect. \"Tasks requiring creative problem solving\" is also wrong, as these tasks do not align with the straightforward nature of easy tasks; they often require more complex thought processes that may not benefit from heightened arousal. Lastly, \"Tasks involving new or complex skills\" is incorrect because, similar to difficult tasks, these require a level of proficiency that can be hindered by increased arousal, leading to poor performance rather than improvement.",
       "kn": "KN16",
       "kn_explanation": "This question focuses on social influence and group processes impacting individual behavior, which aligns with Group and systems processes (KN16).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "The loss of self-awareness and self-restraint in group settings"
       ],
       "answer": "A decrease in individual effort when working in a group compared to working alone",
-      "explanation": "Social loafing refers to individuals exerting less effort when working as part of a group than when working individually, often due to diffusion of responsibility.",
+      "explanation": "1. The correct answer, \"A decrease in individual effort when working in a group compared to working alone,\" accurately describes social loafing. Social loafing occurs when group members contribute less to a group's output than they would if they were working individually. This phenomenon is attributed to factors such as diffusion of responsibility and decreased evaluation apprehension, which lead individuals to feel less motivated to exert effort in a collective task.\n\n2. The option \"An increase in effort when task difficulty is perceived as low\" is incorrect because social loafing specifically involves a decrease in effort, not an increase. The statement \"Strengthening of dominant responses in the presence of others\" is wrong as it refers to social facilitation and inhibition, where performance is influenced by the presence of others, rather than a reduction in effort. Lastly, \"The loss of self-awareness and self-restraint in group settings\" describes deindividuation, not social loafing; deindividuation focuses on anonymity and behavior changes in a crowd, rather than the motivation to contribute less in a group context.",
       "kn": "KN16",
       "kn_explanation": "This question tests knowledge of group influences on individual behavior, specifically a group process concept central to social and cultural bases of behavior (KN16).",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Presence of a large and anonymous crowd"
       ],
       "answer": "Presence of a large and anonymous crowd",
-      "explanation": "Large anonymous groups tend to increase social loafing, while small cohesive groups and identifiable contributions help reduce it.",
+      "explanation": "1. The \"Presence of a large and anonymous crowd\" is the correct answer because it is associated with increased social loafing rather than a reduction in it. When individuals are in a large crowd and feel anonymous, they experience diffusion of responsibility, which decreases their motivation to contribute to the group's efforts. This anonymity can lead to a lack of accountability, making individuals less likely to exert effort compared to when they are in smaller, identifiable groups.\n\n2. The option \"Small and cohesive group membership\" is incorrect because smaller groups tend to foster accountability and personal responsibility, which reduces social loafing. \"Clear individual contributions that can be evaluated\" is also incorrect, as identifiable contributions enhance motivation and discourage loafing, since individuals are aware their efforts will be recognized. Lastly, \"Tasks perceived as personally meaningful\" is incorrect because when individuals find a task meaningful, they are more motivated to contribute, thus reducing the likelihood of social loafing.",
       "kn": "KN16",
       "kn_explanation": "Understanding factors influencing social loafing involves knowledge of group and systems processes, consistent with KN16.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "The tendency of a minority opinion to affect majority attitudes through consistent expression"
       ],
       "answer": "Loss of self-awareness and normal behavioral constraints due to anonymity or large groups",
-      "explanation": "Deindividuation occurs when individuals in groups lose their sense of individuality, often leading to deviant behavior because they feel anonymous and less accountable.",
+      "explanation": "1. The correct answer, \"Loss of self-awareness and normal behavioral constraints due to anonymity or large groups,\" accurately characterizes deindividuation as it highlights how individuals may lose their sense of individuality and the usual inhibitions against deviant behavior when they are part of a large crowd or when their identities are concealed. This phenomenon can lead to behaviors that individuals would typically avoid if they were alone or identifiable, as demonstrated by Mann's (1981) findings regarding crowd behavior during threatening situations.\n\n2. The first incorrect option, \"Improved performance on simple, repetitive tasks due to increased arousal,\" is wrong because it describes social facilitation, which refers to enhanced performance on easy tasks due to the presence of others, rather than the loss of self-awareness associated with deindividuation. The second incorrect option, \"Effort reduction in groups because individual contributions are unidentifiable,\" relates to social loafing, where individuals exert less effort in a group setting due to a diffusion of responsibility, not to the loss of self-awareness seen in deindividuation. Lastly, the option \"The tendency of a minority opinion to affect majority attitudes through consistent expression\" pertains to minority influence, which focuses on how a minority can sway the majority's opinion, rather than the behavioral changes associated with anonymity and group size in deindividuation.",
       "kn": "KN16",
       "kn_explanation": "This question addresses group influences on individual behavior, specifically mechanisms of deindividuation, which fit under Group and systems processes (KN16).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Accept public compliance but avoid conversion"
       ],
       "answer": "Express their opinion consistently but without rigidity or dogmatism",
-      "explanation": "Moscovici's model states that consistent, non-dogmatic minority expression increases their influence on the majority.",
+      "explanation": "1. The correct answer, \"Express their opinion consistently but without rigidity or dogmatism,\" aligns with Moscovici's (1980) findings on minority influence. He emphasized that for a minority to effectively persuade the majority, they must consistently express their opinion while maintaining a flexible approach, avoiding a dogmatic stance. This balance allows the minority to be perceived as credible and reasonable, increasing the likelihood of influencing the majority's views.\n\n2. The option \"Apply pressure through repeated majority normative influence\" is incorrect because it describes a tactic typically used by the majority to maintain conformity, rather than a strategy employed by minorities who rely on consistency and behavioral style. \"Rely on informal social sanctions against the majority\" is wrong because Moscovici's theory focuses on persuasion through consistent expression rather than coercive methods or sanctions. Lastly, \"Accept public compliance but avoid conversion\" is incorrect as it misrepresents the goal of minority influence; Moscovici posited that minorities aim for private acceptance (conversion) rather than mere public compliance, which is more characteristic of majority influence.",
       "kn": "KN16",
       "kn_explanation": "This question tests understanding of social influence, particularly minority influence processes within groups, aligned with KN16.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Compensatory task"
       ],
       "answer": "Additive task",
-      "explanation": "In additive tasks, individual efforts are combined by summing contributions, resulting in group performance better than any member alone.",
+      "explanation": "1. The correct answer is \"Additive task\" because, in this type of task, group members work independently, and the final output is simply the sum of each member's contributions. This means that the group's performance is enhanced as the individual efforts are combined, leading to a total output that exceeds the performance of any single member.\n\n2. The option \"Conjunctive task\" is incorrect because it requires all group members to contribute, and the overall performance is limited by the least capable member, rather than being the sum of contributions. \"Disjunctive task\" is also incorrect as it involves group members providing solutions, with the group's performance being equal to or less than the best individual member's performance, not a sum of contributions. Lastly, \"Compensatory task\" is incorrect because, in this case, group members work independently, but the group output is the average of their contributions, not the total sum.",
       "kn": "KN16",
       "kn_explanation": "This question pertains to group task types influencing group performance, a core aspect of group and systems processes (KN16).",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Conjunctive task"
       ],
       "answer": "Conjunctive task",
-      "explanation": "Conjunctive tasks require all members to contribute effectively; the group's overall performance is constrained by the weakest member's contribution.",
+      "explanation": "1. The correct answer is \"conjunctive task\" because, in this type of task, all group members must contribute successfully for the group to succeed, and the overall performance is limited by the contribution of the least capable member. This means that if any member fails to perform adequately, the group's success is compromised, making it essential for every individual to contribute effectively.\n\n2. The incorrect options are as follows:\n\n- **Discretionary task:** In a discretionary task, group members decide how to combine their contributions, meaning the group's performance is not strictly limited by the poorest member but rather by how the contributions are integrated.\n  \n- **Additive task:** An additive task allows group members to work independently, with the final output being the sum of each member's contributions; thus, the performance is not limited by the weakest member.\n  \n- **Disjunctive task:** In a disjunctive task, the group's performance is determined by the best solution or judgment provided by any member, meaning that the overall success can be achieved even if some members perform poorly, as the group's performance is equal to or less than the best member's performance.",
       "kn": "KN16",
       "kn_explanation": "Understanding the relationship between task type and group outcome is within group and systems processes (KN16).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Group focuses on task completion and recognition of accomplishments"
       ],
       "answer": "Group cohesion increases along with attempts to resolve conflicts and develop norms",
-      "explanation": "The norming stage involves resolving earlier conflicts, growing group cohesion, and establishing norms and procedures.",
+      "explanation": "1. The correct answer, \"Group cohesion increases along with attempts to resolve conflicts and develop norms,\" accurately describes the norming stage of group development according to Tuckman and Jensen's model. During this stage, group members begin to feel a sense of belonging, leading to enhanced cohesion. Additionally, they work collaboratively to address and resolve conflicts that arose during the previous storming stage, while also establishing rules, procedures, and group norms that guide their interactions.\n\n2. The first incorrect option, \"Members experience uncertainty about roles and rely heavily on the leader,\" is wrong because this describes the forming stage, where members are still figuring out their roles and looking to the leader for guidance. The second incorrect option, \"Group members experience power struggles and conflicts,\" is incorrect as it pertains to the storming stage, which is characterized by these conflicts and struggles for power rather than the resolution seen in the norming stage. Lastly, the option \"Group focuses on task completion and recognition of accomplishments\" is incorrect because it reflects the adjourning stage, where the emphasis is on completing tasks and recognizing achievements, rather than the development of cohesion and norms that occurs during the norming stage.",
       "kn": "KN16",
       "kn_explanation": "This question focuses on group developmental processes as part of group and systems functioning (KN16).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Both minority and majority influence lead only to public conformity"
       ],
       "answer": "Minority influence is more likely to lead to private acceptance (conversion) of opinion",
-      "explanation": "Moscovici proposed that minority influence tends to result in private acceptance and internal change, whereas majority influence more often results in public compliance.",
+      "explanation": "1. The statement \"Minority influence is more likely to lead to private acceptance (conversion) of opinion\" is correct because, according to Moscovici (1980), individuals with a minority opinion persuade the majority through a consistent expression of their views, which can lead to genuine changes in beliefs. This process results in private acceptance, meaning that individuals truly adopt the minority opinion as their own, rather than merely conforming publicly.\n\n2. The option \"Minority influence leads to public compliance without private acceptance\" is incorrect because Moscovici suggests that minority influence is more effective in fostering private acceptance, not just public compliance. The statement \"Majority influence leads to private acceptance, while minority influence leads to public compliance\" is wrong because it reverses the roles; majority influence typically results in public compliance rather than genuine private acceptance. Finally, the option \"Both minority and majority influence lead only to public conformity\" is incorrect because it overlooks the distinct outcomes of each influence type; minority influence can lead to private acceptance, while majority influence often leads to public conformity.",
       "kn": "KN16",
       "kn_explanation": "The question tests understanding of mechanisms and effects of social influence on opinion change within groups, central to KN16.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Norming stage"
       ],
       "answer": "Forming stage",
-      "explanation": "In the forming stage, group members are uncertain about roles, rely on the leader, and try to avoid conflict, interacting politely.",
+      "explanation": "1. The \"Forming stage\" is the correct answer because, during this initial phase of group development, members are uncertain about their roles and responsibilities. They tend to act politely toward each other to avoid conflict, relying on the leader for guidance as they navigate their new group dynamics.\n\n2. The \"Performing stage\" is incorrect because, at this point, the group focuses on working efficiently and cooperatively to achieve goals, and conflict avoidance is not a primary characteristic. The \"Storming stage\" is wrong because it is characterized by power struggles and conflicts over procedures, where members are more likely to confront issues rather than avoid them. Lastly, the \"Norming stage\" is not the correct answer because, while group cohesion grows and conflicts are addressed, members are more engaged in resolving issues than simply avoiding conflict.",
       "kn": "KN16",
       "kn_explanation": "This question assesses knowledge about early group dynamics and stages of development, aligned with social and cultural bases of behavior (KN16).",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "Social loafing occurs only in Western cultures"
       ],
       "answer": "Individualist-Western cultures tend to exhibit more social loafing than collectivist-Eastern cultures",
-      "explanation": "Research indicates that social loafing is more common in individualist-Western cultures, likely due to differing social norms regarding individual responsibility.",
+      "explanation": "1. The correct answer, \"Individualist-Western cultures tend to exhibit more social loafing than collectivist-Eastern cultures,\" is supported by research indicating that individuals from individualist cultures are more likely to engage in social loafing due to a greater emphasis on personal achievement and autonomy. In contrast, collectivist cultures prioritize group cohesion and responsibility, which reduces the likelihood of individuals shirking their efforts in group tasks.\n\n2. The option \"Collectivist-Eastern cultures tend to exhibit more social loafing than individualist-Western cultures\" is incorrect because it contradicts the established finding that collectivist cultures encourage individuals to contribute more to group efforts to maintain harmony and cohesion. The statement \"No difference in social loafing between individualist and collectivist cultures\" is wrong because research has specifically highlighted a significant difference in social loafing tendencies between these cultural orientations. Lastly, the option \"Social loafing occurs only in Western cultures\" is incorrect as social loafing can occur in any cultural context, but its prevalence varies, with individualist cultures showing a higher tendency compared to collectivist cultures.",
       "kn": "KN18",
       "kn_explanation": "KN18 covers cultural influences on social behavior, making it appropriate for this question about cultural differences in social loafing within social influence.",
       "difficulty": "medium",
@@ -174,11 +174,51 @@
         "Group members focus more on shared goals"
       ],
       "answer": "Individuals feel less diffusion of responsibility and increased evaluation apprehension",
-      "explanation": "When individual efforts can be identified and evaluated, people feel more accountable and motivated, reducing social loafing.",
+      "explanation": "1. The correct answer, \"Individuals feel less diffusion of responsibility and increased evaluation apprehension,\" accurately describes why social loafing decreases when individual contributions are identifiable. When contributions can be recognized, individuals feel a greater sense of personal accountability for their output, reducing the tendency to rely on others (diffusion of responsibility). Additionally, knowing that their performance will be evaluated by others increases their concern about how they are perceived (evaluation apprehension), motivating them to contribute more actively.\n\n2. The option \"Group cohesion decreases and individuals act independently\" is incorrect because social loafing is less likely to occur in cohesive groups, where members feel a stronger connection and responsibility towards one another. The statement \"Individuals experience reduced physiological arousal\" is wrong because increased arousal, as per Zajonc’s drive theory, is what typically influences performance; identifiable contributions do not inherently reduce arousal levels. Lastly, \"Group members focus more on shared goals\" is misleading, as social loafing is primarily about individual accountability rather than shared goals; identifiable contributions foster individual motivation rather than diminishing focus on collective objectives.",
       "kn": "KN14",
       "kn_explanation": "This item involves understanding social psychological mechanisms affecting individual behavior in groups, aligned with social cognition and group processes (KN14).",
       "difficulty": "medium",
       "quality_comment": "This item asks about underlying psychological processes related to group behavior, connecting well to fundamental social influence concepts."
+    },
+    {
+      "stem": "In a study on social influence, researchers found that individuals performed better on tasks they were already skilled at when in the presence of others. What type of task is most likely to benefit from this phenomenon?",
+      "options": [
+        "Complex and unfamiliar tasks",
+        "Easy and familiar tasks",
+        "Tasks requiring extensive learning",
+        "Tasks that involve high levels of creativity"
+      ],
+      "answer": "Easy and familiar tasks",
+      "explanation": "1. \"Easy and familiar tasks\" is the correct answer because, according to Zajonc’s (1980) drive theory, the presence of others leads to increased physiological arousal, which enhances performance on tasks that are well-learned and straightforward. In contrast, individuals are likely to perform better on these tasks when they are confident in their skills, as the dominant response in such situations is typically correct.\n\n2. The option \"Complex and unfamiliar tasks\" is incorrect because these tasks are affected by social inhibition, where the presence of others can decrease performance due to increased anxiety and arousal leading to incorrect responses. \"Tasks requiring extensive learning\" is also wrong, as these tasks are typically complex and unfamiliar, which would not benefit from social facilitation. Lastly, \"Tasks that involve high levels of creativity\" is incorrect because creative tasks often require divergent thinking and may not benefit from the social presence that enhances performance on well-learned tasks, potentially leading to social inhibition instead.",
+      "difficulty": "easy",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on social influence and group processes impacting individual behavior, which aligns with Group and systems processes (KN16).",
+      "quality_comment": "This question effectively tests understanding of social facilitation in a clear and relatable context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "A researcher is examining the effects of audience presence on performance across various types of tasks. Which scenario is most likely to illustrate the principle of social facilitation as described by Zajonc's drive theory?",
+      "options": [
+        "An athlete performing a complex routine in front of a crowd",
+        "A musician playing a new composition for the first time",
+        "A student solving simple math problems during a study group",
+        "An artist creating an original painting in a public space"
+      ],
+      "answer": "A student solving simple math problems during a study group",
+      "explanation": "1. \"A student solving simple math problems during a study group\" is the correct answer because it exemplifies social facilitation, where the presence of others enhances performance on easy and well-learned tasks. According to Zajonc's drive theory, the physiological arousal from being in a group can strengthen the dominant response, which, in this case, is the correct solution to simple math problems.\n\n2. The incorrect options are as follows:\n- \"An athlete performing a complex routine in front of a crowd\" is wrong because complex tasks typically lead to social inhibition, where performance decreases due to increased arousal from the audience.\n- \"A musician playing a new composition for the first time\" is incorrect since performing a new piece is a difficult and unfamiliar task, likely resulting in social inhibition rather than facilitation.\n- \"An artist creating an original painting in a public space\" is also incorrect because creating an original piece is typically challenging and may cause anxiety or decreased performance in the presence of an audience, aligning more with social inhibition.",
+      "difficulty": "hard",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on social influence and group processes impacting individual behavior, which aligns with Group and systems processes (KN16).",
+      "quality_comment": "This question challenges the test-taker to apply the concept of social facilitation in a more complex scenario, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

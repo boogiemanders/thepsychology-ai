@@ -9,7 +9,7 @@
         "Believing you can influence a random event by your actions"
       ],
       "answer": "Seeking out news sources that align with your political views while ignoring opposing viewpoints",
-      "explanation": "The confirmation bias is the tendency to seek and attend to information that confirms existing attitudes and beliefs while ignoring contradictory information.",
+      "explanation": "1. The correct answer, \"Seeking out news sources that align with your political views while ignoring opposing viewpoints,\" exemplifies the confirmation bias because it reflects the tendency to seek and pay attention to information that confirms existing beliefs while disregarding information that contradicts them. This behavior aligns with the definition of confirmation bias, which is rooted in the desire to maintain one’s self-concept and beliefs, as noted in self-verification theory.\n\n2. The first incorrect option, \"Remembering events that contradict your beliefs but discounting those that support them,\" is wrong because it describes a different cognitive process where contradictory information is acknowledged but not valued, rather than actively seeking confirming information. The second incorrect option, \"Overestimating the relationship between two unrelated variables,\" does not relate to confirmation bias; it instead describes illusory correlation, where individuals mistakenly perceive a relationship between variables that are not truly connected. Lastly, \"Believing you can influence a random event by your actions\" is incorrect because it illustrates illusory control, which involves the false belief in one’s ability to affect outcomes that are actually random, rather than the selective attention to confirming information characteristic of confirmation bias.",
       "kn": "KN14",
       "kn_explanation": "This question pertains to major research-based theories and models of social cognition, specifically cognitive biases and processing errors.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Hindsight bias"
       ],
       "answer": "Base rate fallacy",
-      "explanation": "The base rate fallacy occurs when people ignore statistical base rate information and rely on distinctive or anecdotal cases instead, leading to biased judgments.",
+      "explanation": "1. The \"base rate fallacy\" is the correct answer because it describes the tendency to ignore or underuse statistical base rate information—in this case, national conviction rates—while being influenced by distinctive anecdotal stories of rare wrongful convictions. The jury focuses on these specific cases presented by the defense attorney rather than considering the broader statistical context, leading to a flawed judgment.\n\n2. \n- **Illusory correlation** is incorrect because it refers to the overestimation of the relationship between two variables that are not actually related, such as associating negative stereotypes with minority groups, rather than focusing on statistical information.\n  \n- **Gambler’s fallacy** is incorrect because it involves the belief that past random events influence future outcomes, such as thinking a coin toss will result in tails after several heads, which does not apply to the situation of jury decision-making based on anecdotal evidence.\n\n- **Hindsight bias** is incorrect because it pertains to the tendency to believe, after an event has occurred, that one could have predicted the outcome, rather than the error in judgment being made at the time of the jury's decision based on anecdotal information.",
       "kn": "KN14",
       "kn_explanation": "This question examines understanding of social cognition biases, specifically how judgment errors arise from misuse or ignoring of base rate information.",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Confirmation bias"
       ],
       "answer": "False consensus effect",
-      "explanation": "The false consensus effect involves overestimating how common one's own opinions, values, and beliefs are among others.",
+      "explanation": "1. The \"false consensus effect\" is the correct answer because it describes the tendency to overestimate the extent to which others share our opinions, values, and beliefs. This cognitive bias leads individuals to believe that their perspectives are more common than they actually are, affecting their judgments about how others think and act in various situations.\n\n2. The \"spotlight effect\" is incorrect because it refers to the belief that more people notice our actions and appearance than they actually do, rather than opinions or beliefs. The \"illusion of control\" is also incorrect, as it involves the belief that one can influence events outside of their control, such as superstitions, rather than the perception of shared beliefs. Lastly, the \"confirmation bias\" is not the right choice because it pertains to seeking information that confirms our existing beliefs while ignoring contradictory evidence, rather than estimating how widely those beliefs are shared by others.",
       "kn": "KN14",
       "kn_explanation": "This item tests knowledge of social cognition biases concerning self and social perception.",
       "difficulty": "easy",
@@ -54,7 +54,7 @@
         "Imagining alternative outcomes after missing an important deadline"
       ],
       "answer": "Believing that after several coin tosses landing on heads, the next toss will likely be tails",
-      "explanation": "The gambler’s fallacy is the mistaken belief that random independent events are influenced by previous outcomes, expecting outcomes to 'even out' in the short run.",
+      "explanation": "1. The correct answer, \"Believing that after several coin tosses landing on heads, the next toss will likely be tails,\" illustrates the gambler’s fallacy because it reflects the erroneous belief that past independent events (the previous coin tosses) influence the outcome of future independent events. In this case, the individual mistakenly assumes that the frequency of heads in prior tosses will affect the probability of tails in the next toss, which remains 50% regardless of previous outcomes.\n\n2. The incorrect options are as follows:\n- \"Thinking that your lucky charm will increase your chances of winning the lottery\" is incorrect because it represents illusory control, where a person believes they can influence random outcomes through superstitious behaviors.\n- \"Expecting confirmation of your political beliefs while ignoring opposing evidence\" is incorrect because it reflects confirmation bias, the tendency to seek information that supports existing beliefs while disregarding contradictory evidence.\n- \"Imagining alternative outcomes after missing an important deadline\" is incorrect because it pertains to counterfactual thinking, where individuals contemplate what might have happened differently rather than misjudging probabilities based on past events.",
       "kn": "KN14",
       "kn_explanation": "This question assesses understanding of heuristics and fallacies affecting judgment about chance events in social cognition theories.",
       "difficulty": "easy",
@@ -69,7 +69,7 @@
         "Illusory correlation"
       ],
       "answer": "Counterfactual thinking",
-      "explanation": "Counterfactual thinking involves imagining what could have happened but did not, often contributing to emotional reactions such as regret or relief.",
+      "explanation": "1. **Counterfactual thinking** is the correct answer because it refers to the tendency to imagine what might have happened but didn’t, often leading individuals to evaluate alternative outcomes. This type of thinking is particularly likely to occur when the outcome is personally significant, resulting in feelings of regret or relief based on the imagined alternatives (Kahneman & Miller, 1986; Roese & Hur, 1997).\n\n2. **Hindsight bias** is incorrect because it refers to the tendency of people to believe they could have predicted an event after it has occurred, rather than imagining alternative outcomes. \n\n**Anchoring and adjustment heuristic** is not the right answer since it involves estimating values based on an initial starting point and making adjustments, rather than contemplating what could have happened differently.\n\n**Illusory correlation** is also incorrect as it describes the overestimation of the relationship between two unrelated variables, rather than the process of imagining alternative outcomes to past events.",
       "kn": "KN14",
       "kn_explanation": "This question targets knowledge about social cognition errors related to hypothetical alternatives and their emotional impact.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Conjunction fallacy"
       ],
       "answer": "Illusory control",
-      "explanation": "Illusory control refers to the mistaken belief that one can influence outcomes that are actually random or uncontrollable.",
+      "explanation": "1. **Illusory control** is the correct answer because it refers to the belief that individuals can influence events that are actually outside their control. In this case, the person thinks that choosing a 'lucky number' will enhance their chances of winning the lottery, despite the lottery being a completely random event, exemplifying the illusion of control over an uncontrollable outcome.\n\n2. The **availability heuristic** is incorrect because it involves making judgments based on how easily examples come to mind, rather than a belief in controlling outcomes. The **simulation heuristic** is also not applicable here, as it relates to judging the likelihood of events based on how easily one can imagine the event occurring, rather than believing in personal influence. Lastly, the **conjunction fallacy** is wrong because it pertains to incorrectly estimating the probability of two events occurring together as more likely than either event occurring alone, which does not apply to the belief in a 'lucky number' affecting lottery outcomes.",
       "kn": "KN14",
       "kn_explanation": "This item assesses understanding of cognitive biases regarding perceived control over chance events in social cognition.",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Simulation heuristic"
       ],
       "answer": "Availability heuristic",
-      "explanation": "The availability heuristic entails estimating frequency or probability based on how readily examples can be recalled.",
+      "explanation": "1. The **availability heuristic** is the correct answer because it involves making judgments about the frequency or likelihood of an event based on how easily relevant examples come to mind. For instance, people may overestimate the frequency of events like shark attacks or plane crashes because these incidents are memorable, leading them to believe they are more common than they actually are.\n\n2. The **representativeness heuristic** is incorrect because it involves assessing the likelihood of an event based on how much it resembles a typical case or prototype, rather than the ease of recalling examples. The **anchoring and adjustment heuristic** is also incorrect, as it refers to estimating values by starting with a specific reference point and making adjustments, not by recalling examples. Lastly, the **simulation heuristic** is wrong because it judges the likelihood of an event based on how easily one can mentally simulate the event occurring, which differs from recalling specific instances or examples.",
       "kn": "KN14",
       "kn_explanation": "The question focuses on heuristics used in social cognition, specifically on memory retrieval influencing judgments.",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "Believing you have more control over chance events than you actually do"
       ],
       "answer": "Estimating the probability of two events occurring together as greater than the probability of either event alone",
-      "explanation": "The conjunction fallacy occurs when people incorrectly judge the probability of a conjunction of two events as more likely than the individual events.",
+      "explanation": "1. The correct answer, \"Estimating the probability of two events occurring together as greater than the probability of either event alone,\" accurately describes the conjunction fallacy as explained by Tversky and Kahneman. This fallacy occurs when people mistakenly believe that the likelihood of two events happening together is higher than the likelihood of either event occurring on its own, often because they rely on representativeness rather than logical probability calculations.\n\n2. The first incorrect option, \"Ignoring base rate information in favor of anecdotal evidence,\" describes the base rate fallacy, which involves neglecting general statistical information in favor of specific, memorable examples, rather than the conjunction of events. The second incorrect option, \"Overestimating how easily events can be imagined happening,\" refers to the simulation heuristic, which focuses on how easily one can mentally simulate an event occurring, not the probability of two events occurring together. Lastly, the option \"Believing you have more control over chance events than you actually do\" relates to the illusion of control, which involves misjudging one’s influence over random events, rather than the estimation of event probabilities in conjunction.",
       "kn": "KN14",
       "kn_explanation": "This question addresses understanding of errors in probability judgment under the representativeness heuristic in social cognition.",
       "difficulty": "hard",
@@ -129,7 +129,7 @@
         "Hindsight bias"
       ],
       "answer": "False consensus effect",
-      "explanation": "The false consensus effect is the tendency to overestimate the extent to which others share one's own attributes or outcomes.",
+      "explanation": "1. The \"false consensus effect\" is the correct answer because it describes the tendency of individuals to overestimate the extent to which others share their opinions, values, and beliefs. In the scenario, the student who passed the test assumes that most others also passed, while the student who failed believes most others failed, illustrating how each student projects their own experience onto the larger group.\n\n2. The \"spotlight effect\" is incorrect because it refers to the belief that others notice one's actions and appearance more than they actually do, rather than projecting personal outcomes onto others. The \"confirmation bias\" is not applicable here as it involves seeking information that confirms one’s existing beliefs rather than estimating others' experiences based on one’s own. Lastly, the \"hindsight bias\" is unrelated because it pertains to the tendency to believe one could have predicted an event after it has occurred, rather than making judgments about others based on personal outcomes.",
       "kn": "KN14",
       "kn_explanation": "This question focuses on biases in self-other perception, a core topic in social cognition research.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Sunk-cost fallacy"
       ],
       "answer": "Hindsight bias",
-      "explanation": "Hindsight bias refers to the tendency to believe, after an event, that one accurately predicted the outcome or that it was more predictable than it actually was.",
+      "explanation": "1. **Hindsight bias** is the correct answer because it refers to the tendency of individuals to believe they predicted an event after it has occurred, leading them to inaccurately recall their pre-election predictions as being closer to the actual outcomes. This phenomenon occurs as people reconstruct their memories to align with the known results, making it seem as if they had a better understanding of the situation beforehand than they actually did.\n\n2. The **base rate fallacy** is incorrect because it involves ignoring or underusing statistical information about the general population in favor of specific case details; it does not pertain to the distortion of memory after an event. **Illusory correlation** is also wrong, as it refers to the overestimation of the relationship between two unrelated variables, which does not apply to the context of memory and prediction accuracy following an event. Lastly, the **sunk-cost fallacy** is not applicable here because it relates to the tendency to continue investing in a failing endeavor due to prior investments, rather than the retrospective evaluation of predictions after an event has occurred.",
       "kn": "KN14",
       "kn_explanation": "The question addresses memory distortions and judgment errors related to event outcome evaluations within social cognition.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Illusory control"
       ],
       "answer": "Sunk-cost fallacy",
-      "explanation": "The sunk-cost fallacy causes people to irrationally continue investing in a failing endeavor to avoid waste or admitting mistakes.",
+      "explanation": "1. The \"sunk-cost fallacy\" is the correct answer because it refers to the tendency for individuals to continue investing resources into an unsuccessful endeavor due to the significant resources they have already committed, which are unrecoverable. This bias leads people to irrationally justify further investment instead of evaluating the current situation based on potential future outcomes.\n\n2. The \"gambler’s fallacy\" is incorrect because it involves the belief that past random events affect the outcomes of future independent events, such as thinking a coin toss will be tails after several heads, rather than focusing on previous investments. The \"anchoring and adjustment heuristic\" is also incorrect as it pertains to estimating values based on an initial starting point and making adjustments, rather than the emotional attachment to unrecoverable investments. Lastly, \"illusory control\" is wrong because it describes the belief that one can influence events outside their control, such as superstitions, which does not relate to the decision-making process surrounding sunk costs.",
       "kn": "KN14",
       "kn_explanation": "This question tests knowledge of decision-making errors related to resource investment, a key concept in social and economic cognition.",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Estimating frequency based on ease of recall"
       ],
       "answer": "Overestimating how much others notice our appearance and behavior",
-      "explanation": "The spotlight effect is people’s tendency to think others pay more attention to their actions and appearance than they actually do.",
+      "explanation": "1. The correct answer, \"Overestimating how much others notice our appearance and behavior,\" accurately describes the Spotlight Effect, which occurs when individuals believe that their actions and appearance are more noticeable to others than they actually are. This cognitive bias can lead to heightened self-consciousness, particularly in socially anxious individuals, as they assume that others are acutely aware of their behavior and appearance (Gilovich, Medvec, & Savitsky, 2000).\n\n2. The first incorrect option, \"Believing that one's thoughts and feelings are transparent to others,\" refers to the Illusion of Transparency, which specifically involves overestimating how well others can discern our internal states rather than our external actions or appearance. The second incorrect option, \"Judging the likelihood of an event based on how representative it is,\" describes the Representativeness Heuristic, which focuses on making judgments based on how closely an example matches a prototype rather than on social perceptions. Lastly, the third incorrect option, \"Estimating frequency based on ease of recall,\" pertains to the Availability Heuristic, where individuals assess the likelihood of events based on how easily they can recall relevant instances, rather than on the awareness of their own behaviors or appearances.",
       "kn": "KN14",
       "kn_explanation": "This question pertains to theories of self-awareness and social perception biases in social cognition.",
       "difficulty": "easy",
@@ -189,7 +189,7 @@
         "Representativeness heuristic"
       ],
       "answer": "Anchoring and adjustment heuristic",
-      "explanation": "This heuristic involves starting from an initial anchor value and then adjusting it, often not enough, resulting in biased judgments.",
+      "explanation": "1. The \"anchoring and adjustment heuristic\" is the correct answer because it describes a cognitive process where individuals start with an initial estimate (the anchor) and then make adjustments to reach a final judgment. However, these adjustments are often insufficient, leading to a final estimate that remains biased towards the initial anchor. This heuristic illustrates how initial information can disproportionately influence decision-making.\n\n2. The \"availability heuristic\" is incorrect because it involves making judgments based on how easily relevant examples come to mind, rather than starting with an initial estimate and adjusting it. The \"simulation heuristic,\" while related to how easily events can be imagined, focuses on how these imagined scenarios influence feelings about the likelihood of an event rather than adjusting an initial estimate. Lastly, the \"representativeness heuristic\" is incorrect because it pertains to judging the likelihood of an event based on how closely it resembles a prototype, rather than beginning with an anchor and making adjustments.",
       "kn": "KN14",
       "kn_explanation": "This question addresses heuristics relevant to judgment and decision-making processes central to social cognition research.",
       "difficulty": "medium",
@@ -204,7 +204,7 @@
         "Past decisions and outcomes"
       ],
       "answer": "Internal thoughts and feelings",
-      "explanation": "The illusion of transparency is the tendency to overestimate how much others can discern one’s internal emotional states or thoughts.",
+      "explanation": "1. The correct answer, \"Internal thoughts and feelings,\" accurately reflects the definition of the illusion of transparency, which is the tendency for individuals to overestimate the extent to which others can discern their internal states. This contrasts with the spotlight effect, which focuses on the belief that others notice one's actions and appearance more than they actually do.\n\n2. The option \"Physical appearance and actions\" is incorrect because it pertains to the spotlight effect, which involves the perception of how others notice one's external behaviors rather than internal states. \"Likelihood of chance events\" is wrong because it relates to cognitive biases such as the gambler’s fallacy, which deals with misjudgments about probabilities rather than perceptions of internal thoughts. Lastly, \"Past decisions and outcomes\" is not accurate since it pertains to hindsight bias, which involves the belief that one could have predicted past events rather than the perception of one's internal emotional or cognitive processes.",
       "kn": "KN14",
       "kn_explanation": "This question covers social cognitive biases related to perception of self by others, an important topic in social cognition theories.",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "Believing others' opinions match your own"
       ],
       "answer": "Overestimating the frequency of negative behaviors in minority groups",
-      "explanation": "Illusory correlation causes people to overestimate the relationship between two unrelated variables, such as associating negative behaviors disproportionately with certain minority groups.",
+      "explanation": "1. \"Overestimating the frequency of negative behaviors in minority groups\" is the correct answer because it exemplifies the concept of *illusory correlation*, which occurs when individuals mistakenly perceive a relationship between two variables that are not significantly related. This cognitive error leads people to overestimate how often negative behaviors occur among minority groups, reinforcing stereotypes and biases.\n\n2. The option \"Ignoring base rate statistics in favor of anecdotes\" is incorrect because it describes the *base rate fallacy*, which specifically involves neglecting statistical information about the general population in favor of specific, often anecdotal, cases. \"Assuming a chance event's outcome will change due to past outcomes\" is wrong because this describes the *gambler’s fallacy*, where individuals believe that previous outcomes influence future random events, not illusory correlations. Lastly, \"Believing others' opinions match your own\" is incorrect as it refers to the *false consensus effect*, which involves overestimating the extent to which others share one's beliefs, rather than misjudging the frequency of behaviors in a group.",
       "kn": "KN14",
       "kn_explanation": "This item assesses understanding of illusory correlation, a bias in social cognition relating to stereotype formation and erroneous associations.",
       "difficulty": "medium",
@@ -234,7 +234,7 @@
         "False consensus effect"
       ],
       "answer": "Sunk-cost fallacy",
-      "explanation": "Older adults have been found to be less susceptible to the sunk-cost fallacy, the bias of continuing investment due to previous unrecoverable costs.",
+      "explanation": "1. The \"sunk-cost fallacy\" is the correct answer because it refers to the tendency of individuals to continue investing resources in a failing endeavor due to the significant resources they have already committed, despite the lack of desired outcomes. Older adults are generally found to be less susceptible to this fallacy than younger adults, possibly because they are more willing to recognize when to cut their losses rather than persist in a failing project due to past investments.\n\n2. The \"confirmation bias\" is incorrect because it involves seeking information that reinforces one’s existing beliefs rather than evaluating the viability of a project based on past investments. The \"availability heuristic\" is not applicable because it relates to estimating the likelihood of events based on how easily examples come to mind, rather than decisions influenced by prior investments. Lastly, the \"false consensus effect\" is incorrect as it pertains to overestimating the extent to which others share one’s opinions and values, which does not directly relate to the decision-making process regarding continued investment in a failing project.",
       "kn": "KN14",
       "kn_explanation": "This question examines developmental differences in susceptibility to decision-making biases within social cognition research.",
       "difficulty": "medium",
@@ -249,11 +249,51 @@
         "The availability of similar instances in memory"
       ],
       "answer": "How easily one can imagine an event and the emotional reactions to its occurrence or nonoccurrence",
-      "explanation": "The simulation heuristic involves judging likelihood based on ease of mental simulation and also affects emotional responses to those events.",
+      "explanation": "1. The correct answer, \"How easily one can imagine an event and the emotional reactions to its occurrence or nonoccurrence,\" aligns with the definition of the simulation heuristic, which states that we judge the likelihood of an event based on how easily we can mentally simulate it happening. This heuristic not only influences our perception of the probability of the event occurring but also affects our emotional responses to the potential outcomes, as demonstrated in the example of two men missing their flights.\n\n2. The first incorrect option, \"The perceived representativeness of event characteristics compared to stereotypes,\" is wrong because it relates to the representativeness heuristic, which focuses on how closely an event resembles a prototype rather than on the ease of imagining the event. The second incorrect option, \"The initial anchor value used in judgment adjustments,\" is incorrect because it pertains to the anchoring and adjustment heuristic, which involves starting from an initial value and making adjustments, not the imaginative aspect of the simulation heuristic. Lastly, the third incorrect option, \"The availability of similar instances in memory,\" is incorrect as it refers to the availability heuristic, where judgments are based on how easily examples come to mind, rather than on the capacity to mentally simulate events and their emotional impacts.",
       "kn": "KN14",
       "kn_explanation": "This item targets understanding of heuristics that influence both probability judgments and emotional evaluations within social cognition.",
       "difficulty": "medium",
       "quality_comment": "Options reflect related heuristics requiring careful analysis, making this a useful question to probe nuanced comprehension."
+    },
+    {
+      "stem": "Which of the following scenarios illustrates the concept of confirmation bias in decision-making?",
+      "options": [
+        "A person only reads reviews that praise a product they intend to buy.",
+        "A researcher only publishes studies that support their hypothesis.",
+        "An individual recalls only the times they were successful in a task, ignoring failures.",
+        "A student studies only the topics they are already familiar with for an exam."
+      ],
+      "answer": "A person only reads reviews that praise a product they intend to buy.",
+      "explanation": "1. The correct answer, \"A person only reads reviews that praise a product they intend to buy,\" illustrates confirmation bias because it demonstrates the tendency to seek and pay attention to information that confirms one's existing beliefs or attitudes about the product. This behavior aligns with the definition of confirmation bias, which involves ignoring information that contradicts one's preconceived notions, thereby reinforcing their initial decision to purchase the product.\n\n2. The option \"A researcher only publishes studies that support their hypothesis\" is incorrect because it describes a form of selective reporting rather than confirmation bias, which focuses on the cognitive processing of information rather than the publication of research findings. The statement \"An individual recalls only the times they were successful in a task, ignoring failures\" is wrong because it pertains to selective memory or cognitive distortion, not the active seeking of confirming information. Lastly, \"A student studies only the topics they are already familiar with for an exam\" is incorrect because it reflects a strategy for studying based on comfort rather than an active effort to confirm existing knowledge or beliefs, which is central to confirmation bias.",
+      "difficulty": "easy",
+      "kn": "KN14",
+      "kn_explanation": "This question pertains to major research-based theories and models of social cognition, specifically cognitive biases and processing errors.",
+      "quality_comment": "This question effectively tests the understanding of confirmation bias through a relatable consumer behavior scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In which of the following situations is confirmation bias most likely to occur?",
+      "options": [
+        "A scientist reviews literature that contradicts their previous findings.",
+        "A manager only considers employee feedback that aligns with their own opinions.",
+        "A group discusses a problem and includes diverse viewpoints.",
+        "An individual reflects on their past decisions with a critical lens."
+      ],
+      "answer": "A manager only considers employee feedback that aligns with their own opinions.",
+      "explanation": "1. The correct answer, \"A manager only considers employee feedback that aligns with their own opinions,\" exemplifies confirmation bias because it illustrates the tendency to seek and focus on information that supports one’s existing beliefs while disregarding contradictory evidence. This behavior aligns with the definition of confirmation bias, which emphasizes the inclination to pay attention to feedback that confirms one’s attitudes and beliefs, thus undermining objective decision-making.\n\n2. The option \"A scientist reviews literature that contradicts their previous findings\" is incorrect because it involves engaging with information that challenges existing beliefs, contrary to confirmation bias. \"A group discusses a problem and includes diverse viewpoints\" is also incorrect, as this scenario promotes the consideration of varied perspectives, which counters the essence of confirmation bias. Lastly, \"An individual reflects on their past decisions with a critical lens\" is wrong because critical reflection typically involves evaluating and questioning one’s beliefs, rather than selectively focusing on confirming evidence.",
+      "difficulty": "hard",
+      "kn": "KN14",
+      "kn_explanation": "This question pertains to major research-based theories and models of social cognition, specifically cognitive biases and processing errors.",
+      "quality_comment": "This question challenges the test-taker to apply the concept of confirmation bias in a workplace context, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

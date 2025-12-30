@@ -9,7 +9,7 @@
         "Only one variable is measured on an ordinal scale"
       ],
       "answer": "Variability of the criterion scores is consistent across all levels of the predictor",
-      "explanation": "Homoscedasticity means the variability of criterion scores is similar for all predictor scores; violating this leads to unequal accuracy in prediction.",
+      "explanation": "1. The correct answer, \"Variability of the criterion scores is consistent across all levels of the predictor,\" refers to the assumption of homoscedasticity, which is crucial for accurate correlation and regression analysis. When this assumption is met, it ensures that the variability of the criterion scores remains similar across different predictor scores, leading to more reliable predictions and interpretations of the relationship between the variables.\n\n2. The option \"Variables have a nonlinear relationship\" is incorrect because correlation coefficients, particularly the Pearson r, are designed for linear relationships; a nonlinear relationship violates the assumption but does not directly relate to the accuracy of variability in criterion scores. \"Predictor scores show restricted range\" is wrong because a restricted range can lead to an underestimation of the correlation, but it does not address the consistency of variability across levels of the predictor. Lastly, \"Only one variable is measured on an ordinal scale\" is incorrect since the assumption regarding variability pertains to the consistency of scores across levels of the predictor, and the scale of measurement does not inherently affect this aspect.",
       "kn": "KN53",
       "kn_explanation": "This question addresses fundamental assumptions in correlation and regression, which align with sampling and data collection methods (KN53) and proper use of statistical tests.",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Two ranked variables are being compared"
       ],
       "answer": "Two continuous variables have a linear relationship",
-      "explanation": "Pearson r is used when both variables are continuous (interval or ratio) and related linearly; nonlinear relationships are not well captured.",
+      "explanation": "1. The correct answer, \"Two continuous variables have a linear relationship,\" is appropriate for the Pearson product-moment correlation coefficient (Pearson r) because this coefficient is specifically designed to measure the strength and direction of the linear association between two continuous variables measured on interval or ratio scales. When both variables exhibit a linear relationship, Pearson r provides an accurate assessment of their correlation.\n\n2. The option \"Both variables are measured on a nominal scale with two categories each\" is incorrect because Pearson r is not applicable for nominal data; it requires continuous data to evaluate linear relationships. The option \"One variable is continuous and the other is an artificial dichotomy\" is wrong because an artificial dichotomy, created by dividing a continuous variable into two categories, should use the biserial correlation coefficient instead of Pearson r. Lastly, the option \"Two ranked variables are being compared\" is incorrect because ranked data should utilize the Spearman rank correlation coefficient, not the Pearson r, which is intended for continuous data only.",
       "kn": "KN53",
       "kn_explanation": "This question pertains to choosing statistical tests based on measurement scales, a topic central to research methods and statistics (KN53).",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "The correlation is unreliable due to nonlinear relationship"
       ],
       "answer": "49% of performance variance is explained by job knowledge",
-      "explanation": "The coefficient of determination (r²) represents shared variability; .70 squared is .49, meaning 49% of variance in job performance is explained by job knowledge.",
+      "explanation": "1. The correct answer, \"49% of performance variance is explained by job knowledge,\" is derived from the coefficient of determination, which is calculated by squaring the correlation coefficient. In this case, with a correlation of .70, squaring it results in .49, indicating that 49% of the variability in job performance can be accounted for by differences in job knowledge. This reflects the shared variability between the two variables, demonstrating how job knowledge influences job performance.\n\n2. The option \"70% of performance variance is due to job knowledge\" is incorrect because it misinterprets the correlation coefficient; the coefficient itself (0.70) does not represent the percentage of variance explained. The option \"30% of performance variance is unexplained error\" is misleading; while it's true that not all variance is explained, this statement does not directly relate to the coefficient of determination, which specifically indicates the explained variance. Lastly, the statement \"The correlation is unreliable due to nonlinear relationship\" is incorrect because the reference material states that the Pearson r correlation is only unreliable when the relationship is nonlinear, but it does not imply that a correlation of .70 is inherently unreliable without evidence of nonlinearity.",
       "kn": "KN53",
       "kn_explanation": "Understanding the coefficient of determination is part of interpreting statistical results in correlation, fitting within analytic methods in research methods and statistics (KN53).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Contingency correlation coefficient"
       ],
       "answer": "Point biserial correlation coefficient",
-      "explanation": "Point biserial correlation is used when one variable is continuous and the other is a true dichotomy, such as pregnant vs. not pregnant.",
+      "explanation": "1. The \"Point biserial correlation coefficient\" is the correct answer because it is specifically used when one variable is continuous and the other is a true dichotomy, which is a categorical variable with exactly two categories. This coefficient quantifies the relationship between these two types of variables, allowing for an assessment of how the continuous variable differs across the two categories of the dichotomous variable.\n\n2. The \"Biserial correlation coefficient\" is incorrect because it is used when one variable is continuous and the other is an artificial dichotomy, meaning the dichotomy is created from a continuous variable rather than being a true categorical variable. The \"Spearman rho\" is incorrect because it is designed for rank-ordered data rather than a continuous variable paired with a dichotomous one. Lastly, the \"Contingency correlation coefficient\" is incorrect as it is applicable only when both variables are measured on a nominal scale, not when one is continuous and the other is dichotomous.",
       "kn": "KN53",
       "kn_explanation": "Choosing correct correlation coefficients based on variable type aligns with knowledge of data collection and analysis methods in research methods (KN53).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "It indicates a nonlinear relationship between predictors and the criterion"
       ],
       "answer": "It reduces the unique contribution of each predictor to the criterion prediction",
-      "explanation": "Multicollinearity occurs when predictors are highly correlated with one another, reducing their ability to contribute unique information to the prediction.",
+      "explanation": "1. The correct answer, \"It reduces the unique contribution of each predictor to the criterion prediction,\" is accurate because multicollinearity occurs when predictor variables in a multiple regression are highly correlated with one another. This high correlation means that the predictors do not provide unique information, making it difficult to determine the individual effect of each predictor on the criterion variable. As a result, the regression model may not accurately reflect the relationships among the predictors and the criterion, leading to less effective predictions.\n\n2. The option \"It inflates the sample size requirements for the study\" is incorrect because multicollinearity does not directly affect the necessary sample size; rather, it complicates the interpretation of the regression coefficients. The statement \"It violates the assumption of homoscedasticity\" is wrong because multicollinearity is related to the correlations among predictors, while homoscedasticity pertains to the variability of the criterion scores across predictor scores, which are separate assumptions. Lastly, \"It indicates a nonlinear relationship between predictors and the criterion\" is incorrect because multicollinearity refers to the linear relationships among predictor variables, not to the nature of their relationship with the criterion variable.",
       "kn": "KN53",
       "kn_explanation": "Understanding multicollinearity effects is critical in multiple regression analysis, an analytic method evaluated under research methods and statistics (KN53).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Using multiple continuous predictors to estimate two or more continuous criteria"
       ],
       "answer": "Using multiple predictors to estimate a nominal criterion with more than two categories",
-      "explanation": "Discriminant function analysis is used when predicting a categorical (nominal) dependent variable using multiple predictors.",
+      "explanation": "1. \"Using multiple predictors to estimate a nominal criterion with more than two categories\" is correct because discriminant function analysis is specifically designed for situations where multiple predictors are used to predict a single nominal outcome, particularly when that outcome has more than two categories. This technique allows researchers to classify observations into predefined groups based on predictor variables.\n\n2. The option \"Using multiple predictors to estimate a continuous criterion\" is incorrect because this scenario is best suited for multiple regression analysis, which is used when the criterion variable is continuous. \"Using a single predictor to estimate a continuous criterion\" is wrong as well because it also pertains to simple linear regression, which focuses on one predictor variable. Lastly, \"Using multiple continuous predictors to estimate two or more continuous criteria\" is incorrect because this situation calls for canonical correlation analysis, which is appropriate for evaluating the relationship between multiple predictors and multiple continuous outcomes.",
       "kn": "KN53",
       "kn_explanation": "This question tests knowledge of appropriate multivariate techniques, key analytic methods in research methods and statistics (KN53).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Is limited to bivariate correlation between two variables"
       ],
       "answer": "Combines factor analysis with multiple regression and incorporates latent variables",
-      "explanation": "SEM includes testing relationships among observed and latent variables, combining features of factor analysis and regression.",
+      "explanation": "1. The correct answer, \"Combines factor analysis with multiple regression and incorporates latent variables,\" accurately describes Structural Equation Modeling (SEM) because SEM integrates these two statistical techniques to test hypotheses about relationships among both observed and latent variables. Unlike multiple regression, which typically focuses on direct relationships among observed variables, SEM allows for the inclusion of latent variables that cannot be directly measured but are inferred from observed data, thus providing a more comprehensive analysis of complex relationships.\n\n2. The option \"Only analyzes relationships among observed variables\" is incorrect because SEM specifically includes latent variables, which are not directly observed but are inferred from measured variables, allowing for a more nuanced analysis. The statement \"Requires all variables to be measured on nominal scales\" is false, as SEM can incorporate variables measured on continuous scales, not just nominal scales. Finally, the option \"Is limited to bivariate correlation between two variables\" is misleading because SEM can analyze relationships among multiple variables simultaneously, extending beyond the limitations of bivariate correlation.",
       "kn": "KN53",
       "kn_explanation": "SEM is a complex analytic method requiring understanding of latent constructs and multivariate models, which falls within analytic methods in research methods and statistics (KN53).",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "Spearman rho"
       ],
       "answer": "Contingency correlation coefficient",
-      "explanation": "The contingency correlation coefficient is designed for use when both variables are nominal.",
+      "explanation": "1. The \"Contingency correlation coefficient\" is the correct answer because it is specifically designed for situations where both variables are measured on nominal scales. This coefficient assesses the degree of association between two categorical variables, making it suitable for analyzing nominal data.\n\n2. The \"Point biserial correlation coefficient\" is incorrect because it is used when one variable is continuous and the other is a true dichotomy, not for two nominal variables. The \"Pearson r\" is not suitable because it is intended for continuous (interval or ratio) variables and assumes a linear relationship, which does not apply to nominal scales. Lastly, the \"Spearman rho\" is inappropriate in this context as it is used for rank-ordered data, requiring ordinal or continuous variables rather than nominal ones.",
       "kn": "KN53",
       "kn_explanation": "Selecting appropriate statistics depending on level of measurement is a foundational concept in research methods and statistics (KN53).",
       "difficulty": "easy",
@@ -129,7 +129,7 @@
         "Disregards multicollinearity among predictors"
       ],
       "answer": "Adds or removes predictors one at a time to find the most parsimonious model",
-      "explanation": "Stepwise regression involves sequentially adding or removing predictors to identify the smallest set needed for accurate prediction.",
+      "explanation": "1. The correct answer, \"Adds or removes predictors one at a time to find the most parsimonious model,\" accurately describes stepwise multiple regression, which involves a systematic approach to include or exclude predictors based on their contribution to the predictive power of the model. This method aims to identify the fewest number of predictors necessary for accurate predictions, enhancing model simplicity and interpretability.\n\n2. The option \"Includes all predictors at once to assess their combined predictive power\" is incorrect because that describes simultaneous multiple regression, which evaluates all predictors together without sequentially adding or removing them. The statement \"Is limited to only two predictor variables\" is wrong because stepwise multiple regression can involve any number of predictor variables, not just two. Lastly, \"Disregards multicollinearity among predictors\" is inaccurate since stepwise regression can still be affected by multicollinearity; it aims to minimize this by selecting the best combination of predictors.",
       "kn": "KN53",
       "kn_explanation": "This question addresses different strategies for predictor selection in regression, which is important in understanding statistical modeling techniques (KN53).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "That all variables are measured on ratio scales"
       ],
       "answer": "That variance of the errors is the same across all values of the predictor variable",
-      "explanation": "Homoscedasticity means the variability around the regression line (errors) is constant at all levels of the predictor.",
+      "explanation": "1. The correct answer, \"That variance of the errors is the same across all values of the predictor variable,\" reflects the assumption of homoscedasticity in regression analysis. Homoscedasticity means that the variability of criterion scores (errors) remains consistent across all levels of the predictor variable. When this assumption is violated, the accuracy of predictions made using the regression equation can differ significantly depending on the predictor scores, leading to unreliable results.\n\n2. The option \"That the residuals have a nonlinear distribution\" is incorrect because homoscedasticity specifically addresses the consistency of variance, not the shape of the distribution of residuals. \"That predictor variables are perfectly correlated with the criterion\" is wrong as it misinterprets the nature of correlation; perfect correlation is not a requirement for homoscedasticity, which focuses on variance. Lastly, \"That all variables are measured on ratio scales\" is incorrect because homoscedasticity does not depend on the scale of measurement used for the variables; it is concerned solely with the consistency of error variance across predictor values.",
       "kn": "KN53",
       "kn_explanation": "Homoscedasticity is a critical assumption underlying regression and correlation analyses covered in research methods and statistics (KN53).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "The number of predictors exceeds the number of observations"
       ],
       "answer": "Predictors share variance, making it difficult to determine their individual effects",
-      "explanation": "Multicollinearity occurs when predictor variables are highly correlated with each other, making their individual contributions to the criterion difficult to separate.",
+      "explanation": "1. The correct answer, \"Predictors share variance, making it difficult to determine their individual effects,\" accurately describes the problem of multicollinearity in multiple regression. When predictors are highly correlated with one another, they share a significant amount of variance, which complicates the estimation of their unique contributions to the criterion variable. This overlap can lead to unstable estimates of regression coefficients and obscure the true relationship between each predictor and the outcome.\n\n2. The option \"Each predictor contributes unique information that is independent of the others\" is incorrect because, in the presence of multicollinearity, predictors do not provide unique information; rather, they overlap significantly. The statement \"Predictor variables have no relationship with the criterion variable\" is also wrong, as multicollinearity refers to the relationship among predictors, not their relationship with the criterion variable. Lastly, the option \"The number of predictors exceeds the number of observations\" is misleading because multicollinearity can occur regardless of the ratio of predictors to observations; it specifically pertains to the correlation between predictors, not their quantity relative to observations.",
       "kn": "KN53",
       "kn_explanation": "This question again addresses multicollinearity, an important concept in regression analysis within research methods and statistics (KN53).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Point biserial coefficient is always higher than biserial"
       ],
       "answer": "Point biserial is for true dichotomies, biserial is for artificially dichotomized continuous variables",
-      "explanation": "Point biserial correlation is appropriate when one variable is continuous and the other is a true dichotomy; biserial is used when the dichotomy is artificial.",
+      "explanation": "1. The correct answer, \"Point biserial is for true dichotomies, biserial is for artificially dichotomized continuous variables,\" accurately reflects the definitions provided in the reference material. The point biserial correlation coefficient is specifically used when one variable is continuous and the other is a true dichotomy, meaning it has only two distinct categories (e.g., pregnant vs. not pregnant). In contrast, the biserial correlation coefficient is applied when one variable is continuous and the other is an artificial dichotomy, which occurs when a continuous variable is divided into two categories (e.g., passing vs. failing based on a cutoff score).\n\n2. The option \"Point biserial is used for continuous variables, biserial is for nominal variables\" is incorrect because it mischaracterizes the application of both coefficients; point biserial is specifically for a continuous variable with a true dichotomy, while biserial is for a continuous variable with an artificially created dichotomy. The statement \"Point biserial assumes nonlinear relationships, biserial assumes linear\" is wrong as both coefficients can be used in the context of linear relationships; the distinction lies in the type of dichotomy, not the nature of the relationship. Lastly, the claim \"Point biserial coefficient is always higher than biserial\" is inaccurate because there is no inherent rule that suggests one coefficient will always be higher than the other; their values depend on the specific data and context in which they are used.",
       "kn": "KN53",
       "kn_explanation": "Distinguishing different types of correlation coefficients based on variable characteristics fits within analytic procedures in research methods and statistics (KN53).",
       "difficulty": "medium",
@@ -189,11 +189,51 @@
         "To classify cases into nominal categories based on predictors"
       ],
       "answer": "To analyze relationships between two or more sets of continuous variables",
-      "explanation": "Canonical correlation assesses the relationship between two sets of continuous variables, extending beyond bivariate correlation.",
+      "explanation": "1. The correct answer, \"To analyze relationships between two or more sets of continuous variables,\" accurately reflects the purpose of canonical correlation analysis as described in the reference material. Canonical correlation is specifically designed to assess the relationship between two or more continuous predictors and two or more continuous criteria, making it distinct from other correlational methods that focus on simpler relationships.\n\n2. The option \"To predict a single continuous criterion from multiple continuous predictors\" is incorrect because this describes multiple regression analysis, which focuses on estimating a single outcome rather than analyzing relationships across multiple sets of variables. The option \"To estimate the relationship between a single predictor and criterion\" is wrong as it pertains to bivariate correlation methods, which evaluate the relationship between just one predictor and one criterion rather than multiple sets. Finally, \"To classify cases into nominal categories based on predictors\" is incorrect because this describes discriminant function analysis, which is used for classification rather than analyzing relationships among continuous variables.",
       "kn": "KN53",
       "kn_explanation": "This item covers multivariate statistical techniques, a critical analytic method within research methods and statistics (KN53).",
       "difficulty": "medium",
       "quality_comment": "Provides a clear description of canonical correlation's function compared to related methods, promoting nuanced understanding."
+    },
+    {
+      "stem": "What condition must be satisfied to ensure that the relationship between two variables can be accurately assessed using Pearson's correlation coefficient?",
+      "options": [
+        "The relationship is linear",
+        "Both variables are measured on a nominal scale",
+        "One variable is a categorical variable",
+        "The sample size is less than 30"
+      ],
+      "answer": "The relationship is linear",
+      "explanation": "1. \"The relationship is linear\" is the correct answer because the Pearson r correlation coefficient is specifically designed to assess the degree of association between two continuous variables when their relationship is linear. If the relationship is nonlinear, the Pearson r may underestimate the actual strength of the relationship, leading to inaccurate conclusions about the correlation between the variables.\n\n2. The option \"Both variables are measured on a nominal scale\" is incorrect because Pearson's correlation requires both variables to be on a continuous (interval or ratio) scale, not nominal. The option \"One variable is a categorical variable\" is wrong because, for Pearson's correlation, both variables must be continuous; if one is categorical, other correlation methods (like point biserial) should be used. Lastly, the option \"The sample size is less than 30\" is incorrect because while larger sample sizes can improve the reliability of correlation estimates, the Pearson correlation can still be computed with smaller samples, although caution is warranted regarding the stability of the estimate.",
+      "difficulty": "easy",
+      "kn": "KN53",
+      "kn_explanation": "This question addresses fundamental assumptions in correlation and regression, which align with sampling and data collection methods (KN53) and proper use of statistical tests.",
+      "quality_comment": "This question effectively tests the foundational understanding of the assumptions underlying correlation analysis.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "When conducting a regression analysis, which assumption is critical for ensuring that the regression coefficients are valid estimates of the relationships among the variables?",
+      "options": [
+        "The residuals are normally distributed",
+        "The predictor variables are independent",
+        "The sample includes outliers",
+        "The dependent variable is measured on a nominal scale"
+      ],
+      "answer": "The residuals are normally distributed",
+      "explanation": "For valid regression coefficients, it is important that the residuals (the differences between observed and predicted values) are normally distributed, as this affects the reliability of hypothesis tests and confidence intervals.",
+      "difficulty": "hard",
+      "kn": "KN53",
+      "kn_explanation": "This question addresses fundamental assumptions in correlation and regression, which align with sampling and data collection methods (KN53) and proper use of statistical tests.",
+      "quality_comment": "This question challenges the test-taker to apply knowledge of regression assumptions in a more complex context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

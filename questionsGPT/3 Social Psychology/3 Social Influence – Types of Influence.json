@@ -9,7 +9,7 @@
         "Subjects received financial incentives to continue"
       ],
       "answer": "Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes",
-      "explanation": "Milgram concluded that participants obeyed because they entered an agentic state where they viewed themselves as merely executing the authority's commands.",
+      "explanation": "1. The correct answer, \"Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes,\" reflects Milgram's conclusion that participants obeyed the experimenter because they perceived themselves as instruments executing the authority's commands. This agentic state diminished their sense of personal responsibility for the learner’s suffering, allowing them to continue administering shocks despite the apparent harm.\n\n2. The option \"Subjects experienced psychological reactance leading to compliance\" is incorrect because psychological reactance refers to a response where individuals resist perceived threats to their freedom, often resulting in defiance rather than compliance. The statement \"Subjects conformed due to normative social influence\" is also incorrect, as normative social influence involves conforming to group norms to avoid ridicule or rejection, which does not adequately explain the obedience seen in Milgram's study. Lastly, the option \"Subjects received financial incentives to continue\" is wrong because Milgram's study did not involve any financial rewards for participants; rather, it focused on the psychological dynamics of obedience to authority.",
       "kn": "KN16",
       "kn_explanation": "This question addresses social influence theories and group processes—specifically obedience to authority—categorized under group and systems processes (KN16).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "When individuals comply with requests due to perceived reciprocity"
       ],
       "answer": "When individuals resist influence because their sense of freedom is threatened",
-      "explanation": "Psychological reactance occurs when people feel their freedom to choose is threatened and respond by resisting or doing the opposite of what is requested.",
+      "explanation": "1. The correct answer, \"When individuals resist influence because their sense of freedom is threatened,\" accurately describes psychological reactance as outlined in the reference material. Psychological reactance occurs when individuals feel pressured to behave in a certain way, leading them to resist that pressure in an effort to reclaim their personal freedom. This reaction can manifest as doing the opposite of what is requested or acting aggressively toward the source of the influence.\n\n2. The option \"When people conform to group norms to gain acceptance\" is incorrect because it describes normative influence, which involves conforming to avoid ridicule or rejection rather than resisting influence. The statement \"When people accept others’ judgments as correct in uncertain situations\" is also incorrect, as it refers to informational influence, where individuals conform because they believe others have more accurate information. Lastly, \"When individuals comply with requests due to perceived reciprocity\" is wrong because it pertains to the norm of mutual reciprocity in compliance tactics, not to the resistance described by psychological reactance.",
       "kn": "KN16",
       "kn_explanation": "This question covers a concept related to social influence and individual responses to pressure, thus relating to group and systems processes (KN16).",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Foot-in-the-door technique"
       ],
       "answer": "Informational influence",
-      "explanation": "Informational influence leads people to conform because they believe others have more accurate information, especially in ambiguous situations, which results in private acceptance.",
+      "explanation": "1. **Informational influence** is the correct answer because it occurs when individuals conform to the judgments of others in ambiguous situations, believing that those others possess more accurate information. This type of influence often leads to private acceptance, meaning that individuals genuinely adopt the group's viewpoint rather than merely conforming outwardly.\n\n2. **Normative influence** is incorrect because it pertains to conforming to avoid ridicule or rejection, leading to public compliance without genuine acceptance of the group's viewpoint. **Psychological reactance** is also incorrect as it describes a reaction against perceived pressure to conform, where individuals may do the opposite of what is requested to regain their freedom, rather than accepting the group's viewpoint. Lastly, the **foot-in-the-door technique** is not applicable here because it is a compliance strategy involving a two-step request process rather than a mechanism of conformity or acceptance of group norms.",
       "kn": "KN16",
       "kn_explanation": "This question assesses understanding of social cognition processes involved in conformity and social influence, which falls under group and systems processes (KN16).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Sherif’s study involved foot-in-the-door compliance tactics"
       ],
       "answer": "Asch found conformity even when the correct answer was obvious and unambiguous",
-      "explanation": "Asch’s research showed people conformed to group pressure even when the correct answer was clear, indicating normative influence, unlike Sherif’s work with ambiguous stimuli.",
+      "explanation": "1. The correct answer, \"Asch found conformity even when the correct answer was obvious and unambiguous,\" highlights a significant distinction in Asch's experiments compared to Sherif's. In Asch's studies, participants conformed to the group norm even when the correct answer was clear, demonstrating that social influence can occur in situations where there is no ambiguity. This contrasts with Sherif's work, where conformity was primarily observed in ambiguous situations, such as the autokinetic effect, where individuals were uncertain about the correct response.\n\n2. The option \"Asch found conformity only occurred in ambiguous situations\" is incorrect because Asch's findings specifically show that conformity happened in clear, unambiguous scenarios, which is a key difference from Sherif's research. The statement \"Sherif’s study demonstrated conformity only in unambiguous situations\" is also wrong, as Sherif's research focused on ambiguous situations, where participants were unsure of the light's movement. Lastly, the option \"Sherif’s study involved foot-in-the-door compliance tactics\" is incorrect because Sherif's study did not utilize compliance tactics like foot-in-the-door; it was primarily an investigation into conformity based on ambiguous stimuli rather than compliance techniques.",
       "kn": "KN16",
       "kn_explanation": "Understanding these seminal studies in conformity highlights group dynamics and social influences, core topics within group and systems processes (KN16).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Reciprocity technique"
       ],
       "answer": "Door-in-the-face technique",
-      "explanation": "The door-in-the-face technique uses a large, often refused request followed by a smaller one to increase compliance through perceptual contrast and reciprocity norms.",
+      "explanation": "1. The \"Door-in-the-face technique\" is the correct answer because it involves a two-step process where an influencer first makes a large request that is likely to be refused, followed by a smaller, more reasonable request. This technique relies on perceptual contrast, making the second request appear more acceptable after the first larger request, and utilizes the norm of mutual reciprocity, as individuals may feel compelled to agree after the influencer has made a concession.\n\n2. The \"Foot-in-the-door technique\" is incorrect because it starts with a small request that is easily accepted, followed by a larger request, rather than beginning with a large request. The \"That's-not-all technique\" is wrong as it involves adding additional incentives to a request before the person has a chance to respond, rather than using a two-step process of large to small requests. Lastly, the \"Reciprocity technique\" is not a standalone compliance technique but rather a principle that underlies various strategies, including the door-in-the-face technique, and does not specifically describe the process of making initial large requests followed by smaller ones.",
       "kn": "KN16",
       "kn_explanation": "This question evaluates knowledge of compliance tactics, a key aspect of social influence and group processes (KN16).",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "People assume the requester has more information and trust their judgment"
       ],
       "answer": "People want to appear consistent in their behavior by agreeing to a larger request after initially agreeing to a smaller one",
-      "explanation": "The foot-in-the-door technique works because once people agree to a small request, they tend to maintain consistency by agreeing to a related larger one.",
+      "explanation": "1. The correct answer, \"People want to appear consistent in their behavior by agreeing to a larger request after initially agreeing to a smaller one,\" aligns with the explanation for the effectiveness of the foot-in-the-door technique. This technique operates on the principle that once individuals commit to a small request, they feel a psychological pressure to act consistently with that commitment, making them more likely to agree to a subsequent larger request.\n\n2. The option \"People experience psychological reactance and resist the initial request\" is incorrect because psychological reactance occurs when individuals feel their freedom is threatened, leading them to resist requests rather than comply. The statement \"The large initial request makes the smaller request seem more reasonable\" is wrong as it describes the door-in-the-face technique, not the foot-in-the-door technique, which relies on initial compliance with a small request. Lastly, \"People assume the requester has more information and trust their judgment\" is incorrect because this explanation pertains more to informational influence in conformity rather than the consistency motivation that drives compliance in the foot-in-the-door technique.",
       "kn": "KN16",
       "kn_explanation": "This question addresses social influence and specific compliance strategies, fitting within group and systems processes (KN16).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Participants refused to continue once shocks reached 100 volts"
       ],
       "answer": "The majority of participants continued delivering shocks at 150 volts, with no significant gender differences",
-      "explanation": "Burger found similar obedience rates at 150 volts as Milgram, with both males and females showing comparable levels of compliance.",
+      "explanation": "1. The correct answer, \"The majority of participants continued delivering shocks at 150 volts, with no significant gender differences,\" reflects Burger's (2009) findings that closely mirrored Milgram's original results. Specifically, Burger found that 70% of participants delivered shocks at 150 volts, which is similar to the 82.5% in Milgram's study, indicating that the tendency to obey authority persists even in more ethically guided research. Additionally, there were no significant differences between male and female participants in their willingness to deliver shocks, aligning with Milgram’s original findings.\n\n2. The option stating \"Participants were significantly less likely to deliver shocks at 150 volts compared to Milgram’s original study\" is incorrect because Burger's results showed no statistically significant difference in obedience levels at that voltage. The statement \"The study found that informing participants fully decreased obedience\" is wrong because Burger's adherence to ethical guidelines did not lead to a decrease in the percentage of participants willing to shock the learner. Lastly, the option \"Participants refused to continue once shocks reached 100 volts\" is incorrect as the data indicated that many participants continued to deliver shocks beyond that point, specifically up to 150 volts.",
       "kn": "KN16",
       "kn_explanation": "This examines knowledge of updated research on obedience to authority, a key aspect of social influence and group dynamics (KN16).",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "Desire to maintain consistency in behavior"
       ],
       "answer": "Desire to avoid social rejection or ridicule",
-      "explanation": "Normative influence causes conformity based on the need to avoid negative social consequences like rejection, especially in unambiguous situations.",
+      "explanation": "1. The correct answer, \"Desire to avoid social rejection or ridicule,\" reflects the essence of normative social influence, which occurs when individuals conform to the judgments or behaviors of others to fit in and avoid being criticized or rejected by the group. This type of influence is particularly relevant in unambiguous situations where individuals may conform publicly without genuinely changing their beliefs or judgments.\n\n2. The option \"Desire to achieve accurate understanding in ambiguous situations\" is incorrect because this motivation aligns with informational influence, where individuals conform due to the belief that others possess more accurate information, particularly in uncertain contexts. The option \"Desire to reassert personal freedom when threatened\" is also incorrect, as it describes psychological reactance, a response to perceived pressure that leads individuals to resist compliance, rather than conforming. Lastly, \"Desire to maintain consistency in behavior\" is incorrect because it pertains more to compliance techniques like the foot-in-the-door approach, where individuals agree to requests to remain consistent, rather than the social dynamics of normative influence aimed at avoiding rejection.",
       "kn": "KN16",
       "kn_explanation": "This question probes core reasons behind adherence to group norms, central to understanding social and cultural bases of behavior (KN16).",
       "difficulty": "easy",
@@ -129,7 +129,7 @@
         "Having the learner visibly express pain and scream"
       ],
       "answer": "Having the experimenter deliver commands by phone rather than in person",
-      "explanation": "Milgram found that obedience decreased when the authority figure was not physically present, such as giving orders over the phone.",
+      "explanation": "1. The correct answer, \"Having the experimenter deliver commands by phone rather than in person,\" is supported by Milgram's findings that variations in the experimental conditions influenced obedience levels. When the experimenter was not physically present, subjects were less likely to feel the authority and pressure to obey, leading to decreased compliance in delivering high shocks. This change in the method created a psychological distance that reduced the perceived obligation to follow the experimenter's commands.\n\n2. The option \"Increasing the number of confederates in the room\" is incorrect because the presence of additional confederates does not directly relate to the authority of the experimenter or the obedience levels; it could potentially increase conformity but not necessarily reduce obedience to authority. \n\n\"Allowing the teacher to physically force the learner to answer\" is wrong as this scenario would likely increase the sense of personal responsibility and pressure on the teacher, potentially leading to higher obedience rather than decreased levels.\n\nLastly, \"Having the learner visibly express pain and scream\" is also incorrect because while this might evoke empathy, it does not alter the authority dynamics of the experiment; in fact, Milgram's studies showed that participants continued to obey despite the learner's visible distress.",
       "kn": "KN16",
       "kn_explanation": "This item covers situational variables influencing obedience in social influence research, a core aspect of group and systems processes (KN16).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Obedience to an authority figure directing the response"
       ],
       "answer": "Private acceptance via informational influence in an ambiguous setting",
-      "explanation": "Sherif’s findings involved ambiguous stimuli leading individuals to conform because they believed the group had valid information, reflecting private acceptance.",
+      "explanation": "1. \"Private acceptance via informational influence in an ambiguous setting\" is the correct answer because Sherif's study utilized the autokinetic phenomenon, which created uncertainty about the movement of the light. In such ambiguous situations, participants conformed to the group norm, believing that others had more accurate information, leading to genuine acceptance of the group’s estimates.\n\n2. The option \"Public compliance via normative influence in an unambiguous setting\" is incorrect because Sherif's study involved ambiguity, not an unambiguous setting, and the conformity observed was based on informational influence rather than merely avoiding ridicule. \"Psychological reactance to the group norm\" is wrong because reactance refers to a defensive response against perceived pressure, which does not apply in Sherif's context where participants were conforming rather than resisting. Lastly, \"Obedience to an authority figure directing the response\" is incorrect because Sherif's study did not involve an authority figure; instead, it focused on peer influence in a group setting without direct commands.",
       "kn": "KN16",
       "kn_explanation": "The question assesses understanding of foundational research on social influence and conformity mechanisms within social and cultural bases of behavior (KN16).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Accepting a smaller request after rejecting a larger one"
       ],
       "answer": "Refusing to comply with a request after feeling one's freedom to choose was threatened",
-      "explanation": "Psychological reactance occurs when individuals perceive their personal freedom is threatened and respond by resisting or refusing to comply.",
+      "explanation": "1. The correct answer, \"Refusing to comply with a request after feeling one's freedom to choose was threatened,\" exemplifies psychological reactance as it directly aligns with the concept described by Brehm and Brehm (1981). Psychological reactance occurs when individuals perceive that their freedom to act is being restricted, prompting them to resist the influence by refusing to comply with the request, often as a means of regaining their autonomy.\n\n2. The option \"Agreeing publicly with a friend’s opinion but privately disagreeing\" is incorrect because it describes a situation of compliance without genuine acceptance, rather than a reaction against perceived threats to freedom. \"Conforming to a group’s judgment because the task is ambiguous\" is also incorrect, as it illustrates informational influence, where individuals conform due to uncertainty, rather than reactance against authority or influence. Finally, \"Accepting a smaller request after rejecting a larger one\" is not an example of psychological reactance; instead, it reflects the door-in-the-face technique, where compliance is achieved through a strategic concession rather than a response to a perceived threat to freedom.",
       "kn": "KN16",
       "kn_explanation": "This item targets understanding of how threats to autonomy can motivate resistance to social influence, a key concept in social influence and group processes (KN16).",
       "difficulty": "medium",
@@ -174,11 +174,51 @@
         "People experience a psychological threat to their freedom, leading to compliance"
       ],
       "answer": "People feel obligated to reciprocate after perceiving the influencer has made a concession",
-      "explanation": "Door-in-the-face works because after the influencer reduces their initial large request, the person feels a social obligation to reciprocate by agreeing to the smaller request.",
+      "explanation": "1. The correct answer, \"People feel obligated to reciprocate after perceiving the influencer has made a concession,\" is accurate because the door-in-the-face technique relies on the norm of mutual reciprocity. When the influencer first makes a large request and then concedes by making a smaller, more reasonable request, the person feels a social obligation to reciprocate this concession by agreeing to the second request.\n\n2. The option \"People desire to appear consistent in their actions after agreeing to a small initial request\" is incorrect because it describes the foot-in-the-door technique, where consistency is key after an initial small request, not the door-in-the-face method. The option \"People assume the influencer holds valid factual information in ambiguous situations\" is wrong because it pertains to informational influence, which explains conformity rather than compliance in the context of the door-in-the-face technique. Lastly, \"People experience a psychological threat to their freedom, leading to compliance\" is incorrect because this explanation relates to psychological reactance, which is not relevant to the dynamics of the door-in-the-face technique and its reliance on perceived concessions.",
       "kn": "KN16",
       "kn_explanation": "This question examines compliance tactics and social norms of reciprocity, a fundamental aspect of social influence in group and system processes (KN16).",
       "difficulty": "medium",
       "quality_comment": "Distractors reflect common misconceptions about compliance mechanisms, stimulating discrimination of subtle influence processes."
+    },
+    {
+      "stem": "In a study on group dynamics, what was found to be a primary reason individuals often conform to group opinions, even when they personally disagree?",
+      "options": [
+        "A. Individuals fear social rejection from the group",
+        "B. Individuals are unaware of their own beliefs",
+        "C. Individuals seek to enhance their personal identity",
+        "D. Individuals are motivated by financial rewards"
+      ],
+      "answer": "A. Individuals fear social rejection from the group",
+      "explanation": "1. The correct answer, \"A. Individuals fear social rejection from the group,\" aligns with the concept of normative influence, which explains that people often conform to group judgments to avoid ridicule or rejection. This type of influence is particularly relevant in unambiguous situations, where individuals may outwardly accept the group's opinions despite their personal disagreement, driven by the desire to fit in and maintain social harmony.\n\n2. Option B, \"Individuals are unaware of their own beliefs,\" is incorrect because conformity does not stem from a lack of self-awareness; rather, it involves a conscious decision to align with the group to avoid social disapproval. Option C, \"Individuals seek to enhance their personal identity,\" is also wrong as conformity typically involves aligning with group norms rather than seeking personal identity enhancement; it often leads to public compliance without genuine belief change. Lastly, option D, \"Individuals are motivated by financial rewards,\" is incorrect because conformity in social situations is primarily driven by social factors, such as the fear of rejection, rather than financial incentives.",
+      "difficulty": "easy",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses social influence theories and group processes—specifically obedience to authority—categorized under group and systems processes (KN16).",
+      "quality_comment": "This question effectively assesses understanding of conformity and social influence in a different context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In a corporate setting, what psychological mechanism might explain why employees follow unethical directives from their superiors even when they believe such actions are wrong?",
+      "options": [
+        "A. Employees are motivated by a desire for promotion",
+        "B. Employees enter an agentic state, viewing themselves as instruments of authority",
+        "C. Employees conform to the group's unethical norms",
+        "D. Employees experience cognitive dissonance that leads to compliance"
+      ],
+      "answer": "B. Employees enter an agentic state, viewing themselves as instruments of authority",
+      "explanation": "1. The correct answer, \"B. Employees enter an agentic state, viewing themselves as instruments of authority,\" is supported by Milgram's research, which indicates that individuals may obey authority figures because they perceive themselves as agents executing the wishes of that authority. In this state, employees may prioritize the directives of their superiors over their personal moral judgments, leading them to comply with unethical orders.\n\n2. \n- A. Employees are motivated by a desire for promotion: While the desire for promotion may influence behavior, it does not specifically explain the psychological mechanism of compliance with unethical directives; the agentic state is more directly related to obedience to authority.\n- C. Employees conform to the group's unethical norms: Although group norms can influence behavior, the agentic state specifically addresses the role of authority in directing actions, rather than peer conformity.\n- D. Employees experience cognitive dissonance that leads to compliance: Cognitive dissonance refers to the discomfort arising from conflicting beliefs or behaviors; however, the agentic state focuses on obedience to authority rather than the internal conflict that might lead to compliance.",
+      "difficulty": "hard",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses social influence theories and group processes—specifically obedience to authority—categorized under group and systems processes (KN16).",
+      "quality_comment": "This question challenges the test-taker to apply the concept of the agentic state to a real-world scenario, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

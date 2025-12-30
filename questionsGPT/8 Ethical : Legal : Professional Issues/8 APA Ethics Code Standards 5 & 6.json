@@ -9,7 +9,7 @@
         "Psychologists are allowed to include honorary degrees as evidence of their qualifications."
       ],
       "answer": "Psychologists can list as credentials only doctoral degrees from regionally accredited educational institutions or those approved by the state for licensure.",
-      "explanation": "Public information about credentials must be accurate and limited to degrees and training that legitimately qualify the psychologist for practice.",
+      "explanation": "1. The correct answer states that \"psychologists can list as credentials only doctoral degrees from regionally accredited educational institutions or those approved by the state for licensure\" because Standard 5.01 of the APA Ethics Code explicitly prohibits psychologists from making false or misleading statements about their qualifications. This means that psychologists must accurately represent their degrees, ensuring that only those from accredited institutions or state-approved programs for licensure are claimed as credentials.\n\n2. The first incorrect option, \"Psychologists may claim degrees from nonaccredited institutions regardless of state licensure status,\" is wrong because the Ethics Code requires that psychologists only list degrees that are either from regionally accredited institutions or state-approved programs for licensure, thus excluding nonaccredited degrees. \n\nThe second incorrect option, \"Psychologists may inflate their training or experience if it helps attract clients ethically,\" is incorrect because the Ethics Code prohibits any deceptive or misleading statements regarding a psychologist's qualifications, training, or experience, regardless of intent. \n\nThe third incorrect option, \"Psychologists are allowed to include honorary degrees as evidence of their qualifications,\" is wrong because honorary degrees do not meet the criteria set forth in Standard 5.01, which only recognizes degrees earned from accredited institutions or state-approved programs as valid credentials for practice.",
       "kn": "KN61",
       "kn_explanation": "This question is focused on the ethical standards governing accurate representation of credentials, fitting within the ethical and professional issues domain (KN61).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Using anonymized summaries of treatment outcomes for promotional use."
       ],
       "answer": "Seeking testimonials from current therapy clients who may be vulnerable to undue influence.",
-      "explanation": "Soliciting testimonials from current clients or others who could feel pressured exploits their vulnerability and is not allowed.",
+      "explanation": "1. The correct answer, \"Seeking testimonials from current therapy clients who may be vulnerable to undue influence,\" is unethical because Standard 5.05 of the APA Ethics Code explicitly prohibits psychologists from soliciting testimonials from current therapy clients. This is to protect individuals who may be in a vulnerable position due to their therapy status, ensuring they are not unduly influenced to provide positive feedback that may not reflect their true feelings or experiences.\n\n2. The first incorrect option, \"Requesting testimonials from former clients who have completed therapy,\" is not unethical because the Ethics Code does not prohibit soliciting testimonials from former clients, as they are no longer in a vulnerable position. \n\nThe second incorrect option, \"Accepting unsolicited testimonials posted on public forums,\" is also acceptable since these testimonials are not solicited, and individuals posting them are not under the influence of the therapist.\n\nLastly, the option \"Using anonymized summaries of treatment outcomes for promotional use\" is permissible because it does not involve direct client testimonials and maintains client confidentiality while providing information about treatment effectiveness.",
       "kn": "KN61",
       "kn_explanation": "This question assesses knowledge of ethical prohibitions related to client interactions and public statements, corresponding to professional ethical standards (KN61).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Sharing encrypted files only via unsecured email to trusted colleagues."
       ],
       "answer": "Using coding or other methods to avoid including personal identifiers.",
-      "explanation": "They should use coding or similar methods so records exclude personal identifiers accessible to unauthorized people.",
+      "explanation": "1. The correct answer, \"Using coding or other methods to avoid including personal identifiers,\" aligns with Standard 6.02(b) of the APA Ethics Code, which emphasizes the importance of confidentiality in record-keeping. This standard mandates that psychologists utilize techniques such as coding to protect client identities when entering confidential information into databases, thereby minimizing the risk of unauthorized access to personal identifiers.\n\n2. The first incorrect option, \"Removing all clinical data and storing it separately offline,\" is wrong because it does not address the need for maintaining comprehensive records while ensuring confidentiality; simply removing data may hinder effective treatment and record-keeping. The second incorrect option, \"Saving client information only in physical files to avoid digital breaches,\" is inadequate because it ignores the necessity of secure digital record-keeping practices and may not comply with legal requirements for record maintenance. Lastly, the option \"Sharing encrypted files only via unsecured email to trusted colleagues\" is incorrect as it contradicts ethical guidelines regarding confidentiality; using unsecured email poses a significant risk of data breaches, regardless of encryption.",
       "kn": "KN61",
       "kn_explanation": "This item deals with confidentiality and record-keeping practices grounded in ethical standards, situating it within ethical and professional issues (KN61).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Clients must be told about fees only after the first therapy session."
       ],
       "answer": "Psychologists must inform clients about fees and billing practices as early as is practicable in therapy.",
-      "explanation": "Fees, billing procedures, and policies such as charges for missed appointments should be discussed as early as feasible.",
+      "explanation": "1. The correct answer, \"Psychologists must inform clients about fees and billing practices as early as is practicable in therapy,\" aligns with Standard 6.04 of the APA Ethics Code, which mandates that psychologists reach an agreement with clients regarding fees and billing arrangements as soon as feasible. This ensures transparency and helps clients understand their financial obligations before services begin, promoting ethical practice and informed consent.\n\n2. The incorrect options are as follows:\n- \"Psychologists may refuse service if a client has unpaid fees without informing the client first.\" This is incorrect because Standard 6.03 prohibits psychologists from withholding client records needed for emergency treatment solely due to unpaid fees, emphasizing the importance of client care over financial issues.\n- \"Fee discussions are optional as long as services are rendered professionally.\" This is wrong because Standard 6.04 clearly states that discussing fees and billing arrangements is a necessary part of the therapeutic process and should not be optional.\n- \"Clients must be told about fees only after the first therapy session.\" This is incorrect as it contradicts Standard 6.04, which requires that fee discussions occur as early as feasible, not after services have commenced.",
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of ethical guidelines on financial transparency and agreements, which fall under ethical and professional standards (KN61).",
       "difficulty": "easy",
@@ -66,10 +66,10 @@
         "Providing a detailed, truthful description of psychological services to payors.",
         "Assigning an inaccurate diagnosis to a client to receive reimbursement.",
         "Reporting the actual provider of psychological services to insurance companies.",
-        "Avoiding routine waiving of client co-payments without insurers\u2019 approval."
+        "Avoiding routine waiving of client co-payments without insurers’ approval."
       ],
       "answer": "Assigning an inaccurate diagnosis to a client to receive reimbursement.",
-      "explanation": "Intentionally using an inaccurate diagnosis or service description to obtain payment from an insurer is unethical and fraudulent.",
+      "explanation": "1. \"Assigning an inaccurate diagnosis to a client to receive reimbursement\" is the correct answer because it constitutes fraud, as it involves providing false information to an insurance company to obtain financial gain. According to Standard 6.06, psychologists must provide accurate information about a client's diagnosis and the services rendered; misrepresenting this information undermines ethical practice and violates legal regulations.\n\n2. The option \"Providing a detailed, truthful description of psychological services to payors\" is incorrect because it aligns with ethical standards, ensuring transparency and accuracy in billing practices. \"Reporting the actual provider of psychological services to insurance companies\" is also incorrect, as it adheres to ethical guidelines by accurately representing who delivered the services. Lastly, \"Avoiding routine waiving of client co-payments without insurers’ approval\" is incorrect because it complies with ethical requirements, ensuring that psychologists do not engage in practices that could mislead insurance companies or violate contractual agreements.",
       "kn": "KN61",
       "kn_explanation": "This item pertains to ethical and legal requirements for honest billing and insurance documentation, fitting within ethical and professional issues (KN61).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Soliciting referrals from past clients in a respectful manner."
       ],
       "answer": "Uninvited in-person solicitation of business from potential therapy clients who may be vulnerable to undue influence.",
-      "explanation": "Approaching vulnerable individuals in person to solicit services is prohibited, while encouraging family participation or offering disaster relief support is acceptable.",
+      "explanation": "1. The correct answer, \"Uninvited in-person solicitation of business from potential therapy clients who may be vulnerable to undue influence,\" is prohibited under Standard 5.06 of the APA Ethics Code. This standard specifically prohibits psychologists from engaging in such solicitation to protect individuals who may be in vulnerable situations from being unduly influenced or pressured into seeking therapy.\n\n2. The first incorrect option, \"Encouraging family members to participate in therapy when it benefits a current client,\" is permissible as it falls outside the prohibition of uninvited solicitation, aiming to support the therapeutic process for the current client. The second incorrect option, \"Providing disaster relief services in a community setting,\" is also acceptable since it is not considered uninvited solicitation and serves a humanitarian purpose. Lastly, \"Soliciting referrals from past clients in a respectful manner\" is not prohibited, as it does not involve uninvited solicitation and respects the autonomy of past clients in deciding whether to refer others.",
       "kn": "KN61",
       "kn_explanation": "This question focuses on ethical rules about solicitation and client vulnerability, which relate to professional conduct standards (KN61).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "To discard forensic notes to protect client privacy post-trial."
       ],
       "answer": "To facilitate accurate billing and ensure legal compliance.",
-      "explanation": "Good records support continuity of care, billing, and legal or institutional requirements, including retention of forensic notes when legally prudent.",
+      "explanation": "1. The correct answer, \"To facilitate accurate billing and ensure legal compliance,\" is supported by Standard 6.01, which emphasizes the importance of maintaining professional records for reasons such as ensuring accurate billing and complying with legal and institutional requirements. Accurate records are crucial not only for the financial aspects of practice but also for meeting legal obligations, particularly in forensic settings where detailed documentation is essential.\n\n2. The option \"To create marketing materials for future client recruitment\" is incorrect because the Ethics Code does not endorse using client records for marketing purposes, as it would violate confidentiality and ethical standards. The statement \"To share with colleagues without client consent for peer review\" is wrong because psychologists must respect client confidentiality and cannot share records without consent, even for peer review. Finally, the option \"To discard forensic notes to protect client privacy post-trial\" is inaccurate since maintaining records, especially in forensic contexts, is critical for legal compliance and they should not be discarded prematurely, as they may be subject to discovery.",
       "kn": "KN61",
       "kn_explanation": "The question targets ethical standards involving record maintenance and legal considerations, focusing on professional and ethical conduct (KN61).",
       "difficulty": "medium",
@@ -114,11 +114,11 @@
         "Paying a fixed fee solely to secure new client referrals from another psychologist."
       ],
       "answer": "Dividing fees with another professional who both provided services to the client.",
-      "explanation": "Fee division is ethical only when each professional provided services; paying solely for a referral or incentive violates ethical guidelines.",
+      "explanation": "1. The correct answer, \"Dividing fees with another professional who both provided services to the client,\" is acceptable because Standard 6.07 states that referral fees must be based on the services provided rather than the referral itself. This means that if both psychologists contributed to the client's care, it is ethical to share the fees in proportion to the services rendered.\n\n2. The first incorrect option, \"Paying a colleague a set fee for each client referred regardless of services provided,\" is wrong because it violates the principle that fees must be based on actual services rendered and not merely on the act of referral. The second incorrect option, \"Offering a financial incentive to friends for client referrals,\" is incorrect because it constitutes a financial incentive that is not based on services provided, which is unethical. Lastly, the option \"Paying a fixed fee solely to secure new client referrals from another psychologist\" is also incorrect as it does not comply with the requirement that referral fees must be tied to the services provided, making it an unethical practice.",
       "kn": "KN61",
       "kn_explanation": "This question involves ethical financial practices in referrals, classified under professional and ethical standards in psychological practice (KN61).",
       "difficulty": "medium",
-      "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item\u2019s ability to discriminate knowledge of nuanced ethical guidance."
+      "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item’s ability to discriminate knowledge of nuanced ethical guidance."
     },
     {
       "stem": "Which statement reflects ethical bartering for services?",
@@ -129,14 +129,14 @@
         "Bartering must be reported to insurance companies as nonmonetary income always."
       ],
       "answer": "Bartering goods for therapy sessions is generally discouraged but can be acceptable if not clinically contraindicated.",
-      "explanation": "Bartering is acceptable only when it avoids exploitation or clinical harm, with goods generally posing less risk than exchanging services.",
+      "explanation": "1. The statement \"Bartering goods for therapy sessions is generally discouraged but can be acceptable if not clinically contraindicated\" is correct because Standard 6.05 allows for barter arrangements as long as they are not exploitative or clinically contraindicated. Although many experts advise caution due to potential negative consequences, such arrangements can be ethically permissible under specific conditions, emphasizing the importance of clinical judgment in each case.\n\n2. The option \"Bartering is always prohibited due to high risk of exploitation\" is incorrect because the Ethics Code does not impose an absolute prohibition on bartering; rather, it acknowledges that bartering can be acceptable under certain circumstances. The statement \"Bartering services for therapy is preferred over monetary payment to improve client access\" is misleading because the Ethics Code does not endorse bartering as a preferred method of payment, but rather allows it under specific conditions, emphasizing that it should not be exploitative. Lastly, the option \"Bartering must be reported to insurance companies as nonmonetary income always\" is incorrect because the Ethics Code does not require psychologists to report barter arrangements to insurance companies, as such transactions typically do not fall under the same reporting obligations as monetary payments.",
       "kn": "KN61",
       "kn_explanation": "This question assesses ethical considerations regarding financial arrangements beyond typical payment methods, consistent with ethical and professional guidelines (KN61).",
       "difficulty": "hard",
       "quality_comment": "The question presents nuanced options requiring detailed knowledge of ethical standards and professional discretion, suitable for higher-level cognitive processing."
     },
     {
-      "stem": "Regarding maintenance and storage of professional records, APA\u2019s Record Keeping Guidelines recommend retaining client records for at least how long if no legal requirement supersedes?",
+      "stem": "Regarding maintenance and storage of professional records, APA’s Record Keeping Guidelines recommend retaining client records for at least how long if no legal requirement supersedes?",
       "options": [
         "3 years after the date of the last service for adult clients.",
         "7 years after the date of the last service for adult clients or 3 years post majority for minors, whichever is later.",
@@ -144,7 +144,7 @@
         "Indefinitely to ensure full historical accuracy."
       ],
       "answer": "7 years after the date of the last service for adult clients or 3 years post majority for minors, whichever is later.",
-      "explanation": "Guideline 7 recommends retaining records for 7 years after last service for adults or until 3 years after a minor reaches majority, absent stricter legal/institutional mandates.",
+      "explanation": "1. The correct answer is \"7 years after the date of the last service for adult clients or 3 years post majority for minors, whichever is later,\" because APA’s Record Keeping Guidelines specify that psychologists should consider retaining full records for this duration in the absence of any legal or institutional requirements that dictate otherwise. This ensures proper documentation and facilitates continuity of care while also complying with ethical standards.\n\n2. The option \"3 years after the date of the last service for adult clients\" is incorrect because it does not meet the recommended duration for adult clients, which is 7 years. The option \"10 years after the last session for all clients regardless of age\" is wrong because it exceeds the specified retention period and does not align with the guidelines, which differentiate based on age. Lastly, the option \"Indefinitely to ensure full historical accuracy\" is incorrect because it suggests retaining records for an unlimited time, which is not supported by the guidelines; they recommend a specific timeframe based on the age of the client at the time of service.",
       "kn": "KN61",
       "kn_explanation": "This question covers ethical and professional record-keeping standards, a core ethical practice issue (KN61).",
       "difficulty": "easy",
@@ -159,7 +159,7 @@
         "Allowing direct access to client files by all clinic staff irrespective of role."
       ],
       "answer": "Encrypting client records and communications using HIPAA-compliant cloud providers.",
-      "explanation": "The Ethics Code and guidelines recommend encrypting digital client data and using HIPAA-compliant cloud providers to protect confidentiality and comply with regulations.",
+      "explanation": "1. The correct answer, \"Encrypting client records and communications using HIPAA-compliant cloud providers,\" is explicitly recommended by the APA Ethics Code under Standard 6.02, which emphasizes the importance of maintaining confidentiality in records. This standard highlights that psychologists should use techniques like encryption to protect client information from unauthorized access, ensuring compliance with legal and ethical obligations regarding confidentiality.\n\n2. The option \"Storing all client data on personal devices without password protection\" is incorrect because it poses a significant risk to client confidentiality by exposing sensitive information to unauthorized access. \"Using unsecured public Wi-Fi networks for transmitting sensitive client information\" is wrong as it increases vulnerability to data breaches, compromising the confidentiality of client communications. Lastly, \"Allowing direct access to client files by all clinic staff irrespective of role\" is inappropriate because it violates the principle of confidentiality, as not all staff members may need access to sensitive client information, thus increasing the risk of unauthorized disclosure.",
       "kn": "KN64",
       "kn_explanation": "This item relates to identifying and managing potential ethical issues involving confidentiality and digital security measures (KN64).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Transferring records to a nonprofessional friend for safekeeping."
       ],
       "answer": "Arranging for a professional colleague or association to manage access and confidentiality of client records.",
-      "explanation": "They should plan for confidential management of records\u2014such as designating a colleague or custodian\u2014so clients' information remains protected.",
+      "explanation": "1. **Correct Answer Explanation:** Arranging for a professional colleague or association to manage access and confidentiality of client records is the correct answer because Standard 6.02(c) requires psychologists to have plans for transferring client records and maintaining their confidentiality in the event of a planned or unplanned withdrawal from practice. This ensures that client information is handled appropriately, adhering to ethical standards and legal requirements, thereby protecting client confidentiality.\n\n2. **Incorrect Options Explanation:**\n   - **Destroying all client records to maintain confidentiality after the last session:** This option is incorrect because it violates the ethical requirement to maintain records for a minimum duration, as psychologists must retain records for at least seven years after the last date of service for adults or until three years after a minor reaches the age of majority.\n   - **Leaving records with administrative staff without instructions:** This option is wrong because it does not ensure that client confidentiality is maintained, as administrative staff may not have the appropriate training or ethical obligation to handle sensitive information securely.\n   - **Transferring records to a nonprofessional friend for safekeeping:** This choice is incorrect because it poses a significant risk to client confidentiality, as a nonprofessional friend may lack the necessary understanding of ethical and legal obligations regarding the handling of sensitive client information.",
       "kn": "KN64",
       "kn_explanation": "This question relates to ethical management and protection of client information when psychologists end their practice, illustrating responsible professional conduct (KN64).",
       "difficulty": "medium",
@@ -204,11 +204,51 @@
         "Assuming all digital platforms are equally secure and confidential by default."
       ],
       "answer": "Needing informed consent discussions to include risks of digital data storage and communication.",
-      "explanation": "The Ethics Code highlights that informed consent must address risks related to digital record keeping and communication, reflecting emerging social and ethical issues in practice.",
+      "explanation": "1. The correct answer, \"Needing informed consent discussions to include risks of digital data storage and communication,\" reflects an emerging social and ethical issue because Standard 6.02 emphasizes the necessity for psychologists to inform clients about the risks associated with digital data storage and communication. This includes discussing potential breaches of confidentiality and the importance of using secure methods for handling client information, which is crucial in the digital age.\n\n2. The option \"Avoiding any use of electronic communication with clients regardless of security\" is incorrect because while caution is necessary, completely avoiding electronic communication is impractical and not required by the Ethics Code, which focuses on secure practices instead. The option \"Releasing all digital client data routinely for research purposes without informing clients\" is wrong as it violates confidentiality and informed consent principles, which require client awareness and agreement before sharing their data. Lastly, the option \"Assuming all digital platforms are equally secure and confidential by default\" is incorrect because it overlooks the necessity for psychologists to evaluate the security measures of each platform, as not all digital solutions offer the same level of protection for sensitive client information.",
       "kn": "KN67",
       "kn_explanation": "This item covers emerging ethical issues about technology's impact on confidentiality and informed consent, reflecting Domain 8's focus on evolving ethical challenges (KN67).",
       "difficulty": "medium",
       "quality_comment": "The question is current and relevant, requiring knowledge of ethics as they apply to evolving technological practices in psychology."
+    },
+    {
+      "stem": "What is the appropriate way for psychologists to represent their professional experience in advertisements?",
+      "options": [
+        "A. Psychologists should only include experiences that are directly relevant to their current practice.",
+        "B. Psychologists can exaggerate their past experiences to make their services more appealing.",
+        "C. Psychologists may include any work experience, regardless of its relevance to their practice.",
+        "D. Psychologists are permitted to list volunteer experiences as if they were formal employment."
+      ],
+      "answer": "A. Psychologists should only include experiences that are directly relevant to their current practice.",
+      "explanation": "1. The correct answer, \"A. Psychologists should only include experiences that are directly relevant to their current practice,\" aligns with Standard 5.01 of the APA Ethics Code, which prohibits psychologists from making false, deceptive, or fraudulent public statements about their qualifications. Including only relevant experiences ensures that psychologists accurately represent their training and expertise, thereby maintaining ethical standards in advertising.\n\n2. \n- **B. Psychologists can exaggerate their past experiences to make their services more appealing.** This option is incorrect because exaggerating experiences violates the ethical mandate to provide truthful and accurate information about one’s qualifications, as stated in Standard 5.01. \n\n- **C. Psychologists may include any work experience, regardless of its relevance to their practice.** This is wrong because including irrelevant work experience could mislead clients about the psychologist's qualifications, contradicting the requirement of truthful representation in advertisements.\n\n- **D. Psychologists are permitted to list volunteer experiences as if they were formal employment.** This option is incorrect as it misrepresents the nature of volunteer work, which could be considered deceptive and misleading in advertisements, violating the ethical standards of accurate representation outlined in Standard 5.01.",
+      "difficulty": "easy",
+      "kn": "KN61",
+      "kn_explanation": "This question is focused on the ethical standards governing accurate representation of credentials, fitting within the ethical and professional issues domain (KN61).",
+      "quality_comment": "This question effectively assesses understanding of ethical representation of professional experience.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In what manner should psychologists disclose their affiliations in professional communications?",
+      "options": [
+        "A. Psychologists can omit affiliations if they believe it may negatively impact their reputation.",
+        "B. Psychologists must disclose any affiliations that could influence their professional judgment.",
+        "C. Psychologists are encouraged to highlight only positive affiliations in their communications.",
+        "D. Psychologists may selectively disclose affiliations based on the audience's perception."
+      ],
+      "answer": "B. Psychologists must disclose any affiliations that could influence their professional judgment.",
+      "explanation": "1. Option B is correct because the APA Ethics Code emphasizes the importance of transparency in professional communications. Psychologists are required to disclose any affiliations that could potentially affect their professional judgment, ensuring that their statements and actions remain ethical and unbiased, as outlined in Standard 5.01, which prohibits false or misleading representations regarding their work.\n\n2. Option A is incorrect because psychologists cannot omit affiliations solely to protect their reputation; transparency is vital for maintaining ethical standards. Option C is wrong because psychologists should not selectively highlight only positive affiliations, as all relevant affiliations must be disclosed to avoid misleading clients or the public. Option D is incorrect because psychologists should not selectively disclose affiliations based on audience perception; ethical communication requires full transparency regardless of the audience's potential biases or reactions.",
+      "difficulty": "hard",
+      "kn": "KN61",
+      "kn_explanation": "This question is focused on the ethical standards governing accurate representation of credentials, fitting within the ethical and professional issues domain (KN61).",
+      "quality_comment": "This question challenges the test-taker to apply ethical principles regarding transparency in professional relationships.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

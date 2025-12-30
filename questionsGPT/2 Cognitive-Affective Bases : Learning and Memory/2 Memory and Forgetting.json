@@ -9,7 +9,7 @@
         "Working memory"
       ],
       "answer": "Sensory memory",
-      "explanation": "Sensory memory stores a large amount of sensory information for a very brief period, typically less than a few seconds, depending on sensory modality.",
+      "explanation": "1. **Correct Answer: Sensory Memory**  \n\"Sensory memory\" is the correct answer because it is characterized by its ability to store a large amount of incoming sensory information for a very brief duration. According to the multi-store model of memory, sensory memory retains information for only a fraction of a second (e.g., about one-half second for visual information and about two seconds for auditory information), making it distinct from other types of memory.\n\n2. **Incorrect Options:**\n- **Short-term Memory**: This type of memory has a limited capacity and retains information for approximately 20 seconds unless rehearsed, which is longer than the duration of sensory memory.\n- **Long-term Memory**: Long-term memory is believed to have an unlimited capacity and can store information for extended periods, ranging from minutes to decades, making it fundamentally different from the brief storage of sensory memory.\n- **Working Memory**: Working memory is a component of short-term memory that involves the processing and manipulation of information, but it does not have the brief duration characteristic of sensory memory and is also limited in capacity.",
       "kn": "KN8",
       "kn_explanation": "This question addresses foundational theories and models of memory, which is under the domain of major research-based theories and models of memory and their application (KN8).",
       "difficulty": "easy",
@@ -24,7 +24,7 @@
         "Directing attention to relevant information and coordinating cognitive processes"
       ],
       "answer": "Temporary storage of verbal information",
-      "explanation": "The phonological loop is specialized for temporarily storing verbal and auditory information within working memory.",
+      "explanation": "1. The correct answer, \"Temporary storage of verbal information,\" accurately describes the function of the phonological loop in Baddeley's model of working memory. According to the reference material, the phonological loop is specifically responsible for the temporary storage of verbal information, allowing individuals to hold and manipulate spoken language and sounds for short periods.\n\n2. The first incorrect option, \"Temporary storage and manipulation of visual and spatial information,\" is wrong because this function is attributed to the visuo-spatial sketchpad, not the phonological loop. The second incorrect option, \"Integration of verbal, visual, and spatial information linking working memory to long-term memory,\" is incorrect because this function is performed by the episodic buffer, which integrates different types of information. Lastly, the option \"Directing attention to relevant information and coordinating cognitive processes\" is incorrect as it describes the role of the central executive, which oversees and coordinates the activities of the phonological loop and other subsystems, rather than being a function of the phonological loop itself.",
       "kn": "KN8",
       "kn_explanation": "This question focuses on components of working memory, a key theoretical model in memory research under KN8.",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Because words in the middle are repeated more often"
       ],
       "answer": "Because words at the end remain in short-term memory",
-      "explanation": "The recency effect occurs because the last words are still in short-term memory immediately after presentation, making them easier to recall right away.",
+      "explanation": "1. The correct answer, \"Because words at the end remain in short-term memory,\" is accurate because, according to the multi-store model of memory, items presented at the end of a list are still within the limited duration of short-term memory (approximately 20 seconds) at the time of recall. This allows individuals to easily access and retrieve these words immediately after presentation, demonstrating the recency effect associated with short-term memory.\n\n2. The option \"Because words at the end of the list enter sensory memory and are easily recognized\" is incorrect because sensory memory only holds information for a very brief period (iconic memory for about half a second and echoic memory for about two seconds) and does not account for the immediate recall of words after they have been processed into short-term memory. \n\nThe statement \"Because words at the end are stored in long-term memory due to rehearsal\" is misleading because words at the end of the list are typically not rehearsed sufficiently to be transferred into long-term memory before recall; they remain in short-term memory instead. \n\nLastly, \"Because words in the middle are repeated more often\" is incorrect because, in the serial position effect, words in the middle of the list are often less recalled due to a lack of rehearsal and are not as readily accessible as those at the beginning or end of the list, which can benefit from the primacy and recency effects, respectively.",
       "kn": "KN8",
       "kn_explanation": "This question tests understanding of classic memory phenomena explained by theoretical models of memory, appropriate for KN8.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Implicit memory"
       ],
       "answer": "Implicit memory",
-      "explanation": "Implicit memory operates without conscious awareness, allowing priming effects such as word-stem completion despite impaired explicit memory.",
+      "explanation": "1. \"Implicit memory\" is the correct answer because it refers to memories that can be recalled without conscious effort, which aligns with the patient's performance on the word-stem completion task despite having no explicit recollection of the words. This phenomenon is evidenced by studies showing that individuals with amnesia can still perform well on tasks that rely on implicit memory, indicating that their ability to recall information is intact even when they lack conscious awareness of it.\n\n2. \"Explicit memory\" is incorrect because it involves conscious effort to retrieve information, which the patient with amnesia does not demonstrate. \"Declarative memory\" is also incorrect as it includes explicit memory, which requires conscious recall, and the patient shows no such ability. Lastly, \"semantic memory\" is incorrect because it specifically refers to a type of declarative memory focused on facts and concepts, and the patient’s performance does not reflect conscious recall of semantic information.",
       "kn": "KN8",
       "kn_explanation": "This question involves understanding distinctions between types of long-term memory and evidence from research on memory systems, central to KN8.",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Rehearsing a list of words repeatedly to store them in short-term memory"
       ],
       "answer": "Associating grocery list items with familiar objects placed in a familiar location",
-      "explanation": "The method of loci involves visualizing items to be remembered by mentally placing them at specific locations in a well-known environment to enhance recall.",
+      "explanation": "1. The correct answer, \"Associating grocery list items with familiar objects placed in a familiar location,\" exemplifies the method of loci because this mnemonic technique involves linking each item on a list to a specific object in a known environment. By mentally walking through this familiar location, the individual can retrieve the items associated with each object, enhancing memory recall through visual imagery.\n\n2. The first incorrect option, \"Creating an acronym to remember the order of operations in mathematics,\" is wrong because it describes a verbal mnemonic rather than the method of loci, which relies on spatial associations. The second option, \"Using a phrase where each word’s first letter cues the item to be recalled,\" is incorrect because it also represents an acrostic mnemonic, not the spatial imagery central to the method of loci. Lastly, \"Rehearsing a list of words repeatedly to store them in short-term memory\" is incorrect because it focuses on rote memorization rather than the distinct spatial and visual associations utilized in the method of loci.",
       "kn": "KN8",
       "kn_explanation": "Mnemonic techniques for improving memory are aspects of applied memory theory and learning models, which align with KN8.",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Latent learning theory"
       ],
       "answer": "Interference theory",
-      "explanation": "Interference theory explains forgetting as the disruption of memories by previously learned (proactive) or newly learned (retroactive) similar information.",
+      "explanation": "1. **Interference theory** is the correct answer because it specifically attributes memory loss to the disruption caused by previously learned or more recently acquired information that is similar to the target memory. This theory distinguishes between two types of interference: proactive interference, where old information interferes with new learning, and retroactive interference, where new information disrupts the recall of old memories.\n\n2. **Trace decay theory** is incorrect because it posits that memories fade over time due to physical changes in the brain rather than interference from other information. **Encoding specificity hypothesis** is also incorrect as it suggests that memory retrieval is optimized when the conditions during encoding match those during recall, focusing on the context rather than interference. Lastly, **latent learning theory** is wrong because it explains the acquisition of knowledge that occurs without reinforcement, emphasizing cognitive maps rather than the forgetting process related to interference.",
       "kn": "KN8",
       "kn_explanation": "This question assesses knowledge of research-based theories explaining memory and forgetting, which is central to KN8.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Motivation"
       ],
       "answer": "Encoding",
-      "explanation": "The four mediational processes are attention, retention, production, and motivation; encoding is not specifically named as one of these processes.",
+      "explanation": "1. **Why \"Encoding\" is the Correct Answer**: \"Encoding\" is the correct answer because it is not one of the four mediational processes identified by Bandura in his social cognitive theory. The four processes are attention, retention, production, and motivation, which describe the steps necessary for observational learning to occur. Encoding, while related to memory processes, is not explicitly mentioned as a mediational process in Bandura's framework.\n\n2. **Why Each Incorrect Option is Wrong**:\n   - **Attention**: Attention is essential because the learner must notice and focus on the model's behavior for observational learning to take place.\n   - **Retention**: Retention refers to the learner's ability to store information about the model's behavior in memory, which is crucial for later imitation.\n   - **Motivation**: Motivation is necessary as it determines whether the learner is willing to perform the observed behavior, influenced by various forms of reinforcement.",
       "kn": "KN7",
       "kn_explanation": "This question addresses major theories of learning, specifically observational learning, covered in KN7.",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Recalling words in the exact order they were presented"
       ],
       "answer": "Falsely recalling a critical lure word that was semantically related but not presented",
-      "explanation": "The DRM procedure causes false recall of a critical lure— a word strongly associated with list items but never actually presented.",
+      "explanation": "1. The correct answer, \"falsely recalling a critical lure word that was semantically related but not presented,\" is supported by the Deese-Roediger-McDermott (DRM) procedure, which involves presenting participants with a list of semantically related words. Research has consistently shown that after a delay, participants often recall a critical lure—a word that is related to the list but was not actually included—demonstrating the phenomenon of false memories.\n\n2. The option \"confusing words from different semantic lists\" is incorrect because the DRM procedure specifically focuses on words that are semantically related within the same list rather than mixing words from different lists. The option \"accurately recalling only the first words of the list\" is wrong because the DRM effect highlights false memories, not the accurate recall of items, especially at the beginning of the list, which relates to the primacy effect. Lastly, \"recalling words in the exact order they were presented\" is incorrect as the DRM procedure does not emphasize order recall; rather, it illustrates how participants can remember words that were never presented at all.",
       "kn": "KN8",
       "kn_explanation": "This question tests experimental paradigms and findings related to false memories, which are important in memory research under KN8.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Practice testing"
       ],
       "answer": "Elaborative rehearsal",
-      "explanation": "Elaborative rehearsal involves making incoming information meaningful by connecting it to prior knowledge, aiding semantic encoding and long-term retention.",
+      "explanation": "1. **Elaborative rehearsal** is the correct answer because it involves making new information meaningful by relating it to existing knowledge, which enhances the likelihood of transferring that information to long-term memory. This technique is specifically designed to facilitate deeper processing of information, known as semantic encoding, thereby improving memory retention and retrieval.\n\n2. **Maintenance rehearsal** is incorrect because it refers to the simple repetition of information to keep it in short-term memory, rather than relating it to existing concepts. **Encoding specificity** is not the correct answer because it focuses on the conditions under which information is learned and retrieved, rather than the process of making information meaningful. Lastly, **practice testing** is incorrect because it involves actively recalling information to enhance memory, rather than relating new information to prior knowledge for better encoding.",
       "kn": "KN8",
       "kn_explanation": "This question assesses understanding of effective memory encoding techniques, a key applied concept in KN8.",
       "difficulty": "easy",
@@ -144,7 +144,7 @@
         "Learned to avoid the maze after experiencing shocks"
       ],
       "answer": "Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced",
-      "explanation": "Tolman found rats could learn the maze layout without reinforcement (latent learning), demonstrated when performance improved once reinforcement began.",
+      "explanation": "1. The correct answer, \"Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced,\" accurately reflects Tolman's findings from his research with rats. In his study, rats that initially received no reinforcement were able to navigate the maze and demonstrate improved performance once reinforcement was provided, indicating they had formed cognitive maps of the maze during the initial trials. This illustrates the concept of latent learning, where learning occurs without immediate reinforcement and is later exhibited when a reward is introduced.\n\n2. The option \"Gradually improved maze performance only when reinforced from the start\" is incorrect because it misrepresents Tolman's findings; the rats in Group 3 did not improve until reinforcement was introduced after a delay, demonstrating latent learning without initial reinforcement. The option \"Showed insight by suddenly solving the maze without trial-and-error learning\" is wrong because insight learning, as described by Kohler, involves sudden problem-solving, which is not applicable to Tolman’s rats that learned through cognitive mapping rather than immediate insight. Lastly, the option \"Learned to avoid the maze after experiencing shocks\" is incorrect because Tolman's study did not involve punishment or avoidance learning; instead, it focused on how the rats learned the layout of the maze without reinforcement.",
       "kn": "KN7",
       "kn_explanation": "This question targets foundational research and theories in cognitive learning, specifically latent learning, which falls under KN7.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Better memory for words that are semantically linked to previously learned information"
       ],
       "answer": "Improved recall of items from the end of the list still present in short-term memory immediately after learning",
-      "explanation": "The recency effect occurs because the last items remain active in short-term memory right after learning, enhancing immediate recall.",
+      "explanation": "1. The correct answer, \"Improved recall of items from the end of the list still present in short-term memory immediately after learning,\" accurately characterizes the recency effect. This phenomenon occurs because items at the end of a list are still retained in short-term memory, allowing for easier recall when asked to remember the list immediately after learning it. According to the multi-store model of memory, the recency effect reflects the retrieval of information that has not yet decayed from short-term memory.\n\n2. The first incorrect option, \"Enhanced recall of items stored in long-term memory from the start of the list,\" is wrong because it describes the primacy effect, which pertains to better recall of items at the beginning of a list that have been transferred to long-term memory. The second option, \"Recall bias toward emotionally charged words in a memory list,\" is incorrect because it does not specifically relate to the recency effect, which focuses on the position of items in a list rather than their emotional impact. Lastly, the option \"Better memory for words that are semantically linked to previously learned information\" is incorrect as it refers to semantic memory and does not address the recency effect, which is about the immediate recall of items from the end of the list that are still in short-term memory.",
       "kn": "KN8",
       "kn_explanation": "This question tests understanding of specific memory effects explained by theoretical models, a key part of KN8.",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Semantic interference"
       ],
       "answer": "Retroactive interference",
-      "explanation": "Retroactive interference involves new memories disrupting retrieval of older memories previously stored.",
+      "explanation": "1. **Retroactive interference** is the correct answer because it specifically refers to the phenomenon where newly acquired information disrupts the ability to recall previously learned information. According to interference theory, this occurs when the new information interferes with the retrieval of older memories, making it difficult to recall what was learned before.\n\n2. **Proactive interference** is incorrect because it describes the situation where previously learned information interferes with the learning or recall of new information, not the other way around. **Decay interference** is not a recognized term in the provided material; the relevant theory discussed is trace decay theory, which suggests that memories deteriorate over time but does not specifically address interference between memories. Lastly, **semantic interference** is also not mentioned in the reference material; it implies interference based on the meanings of words or concepts, which is not the focus of the interference theory discussed.",
       "kn": "KN8",
       "kn_explanation": "This question covers memory forgetting theories and interference effects, core topics in the study of memory under KN8.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Rehearsing a list of words by repeating them aloud multiple times"
       ],
       "answer": "Using the phrase 'Please Excuse My Dear Aunt Sally' to recall the order of operations",
-      "explanation": "An acrostic mnemonic uses a phrase where the first letter of each word corresponds to the item to be remembered.",
+      "explanation": "1. The correct answer, \"Using the phrase 'Please Excuse My Dear Aunt Sally' to recall the order of operations,\" exemplifies an acrostic mnemonic because it creates a memorable sentence where each word's initial letter corresponds to a specific mathematical operation (Parentheses, Exponents, Multiplication, Division, Addition, Subtraction). This technique helps in memorizing a sequence by forming a familiar phrase, making it easier to recall the order of operations.\n\n2. The option \"Remembering a list of planets by linking each to specific rooms in your house\" is incorrect because it describes the method of loci, which involves associating items with physical locations rather than using an acrostic. The option \"Visualizing a duck with a pot on its head to remember that 'pato' means duck in Spanish\" is incorrect because it represents the keyword method, which uses imagery to link a foreign word to its meaning, not an acrostic. Lastly, \"Rehearsing a list of words by repeating them aloud multiple times\" is incorrect as it refers to rote rehearsal, a memorization technique that does not involve creating a mnemonic structure like an acrostic.",
       "kn": "KN8",
       "kn_explanation": "Mnemonic techniques for enhancing memory recall are practical applications of memory models, well covered in KN8.",
       "difficulty": "easy",
@@ -219,7 +219,7 @@
         "Masked priming"
       ],
       "answer": "Repetition priming",
-      "explanation": "Repetition priming occurs when prior exposure to an identical stimulus facilitates its later identification, often measured by tasks like word-stem or word-fragment completion.",
+      "explanation": "1. **Repetition priming** is the correct answer because it specifically refers to the phenomenon where prior exposure to a word or object facilitates later identification of that same word or object, particularly in tasks like word-stem or word-fragment completion. This type of priming demonstrates how previous encounters with stimuli enhance recognition or recall, as evidenced by studies showing that individuals are more likely to complete stems or fragments with words they have previously seen.\n\n2. **Conceptual priming** is incorrect because it involves the facilitation of responses based on the meaning of related concepts rather than the exact stimuli themselves. **Semantic priming** is also incorrect as it refers to the activation of related meanings or concepts, which can enhance retrieval but does not focus on the direct repetition of the same word or object. **Masked priming** is not correct because it involves presenting a stimulus briefly and obscuring it, which influences responses without relying on direct prior exposure to the same stimuli.",
       "kn": "KN8",
       "kn_explanation": "This question assesses understanding of implicit memory and priming mechanisms, central topics in memory research under KN8.",
       "difficulty": "medium",
@@ -234,11 +234,51 @@
         "Source monitoring error"
       ],
       "answer": "Imagination inflation",
-      "explanation": "Imagination inflation refers to the inflation of confidence in a false memory resulting from repeated imagining of an event that never occurred.",
+      "explanation": "1. **Imagination inflation** is the correct answer because it refers to a technique where a researcher has participants repeatedly imagine an event that did not actually occur, leading to an increased confidence in the belief that the event did happen. This phenomenon is well-documented, with studies showing that the more frequently individuals are prompted to imagine a fictitious event, the more likely they are to later assert that they remember it, often with added details.\n\n2. The **Deese-Roediger-McDermott (DRM) procedure** is incorrect because it specifically involves presenting participants with a list of semantically related words and measuring false memories for related words (critical lures) that were not actually presented, rather than having participants imagine an event. **False memory induction** is also incorrect because, while it involves creating a false memory through suggestion (e.g., telling participants they experienced an event), it does not specifically focus on the act of imagining the event repeatedly as a means of inducing false memories. Lastly, a **source monitoring error** is incorrect because it refers to a failure in accurately identifying the origins of a memory, rather than the process of imagining an event that never happened, which is the core of the imagination inflation effect.",
       "kn": "KN8",
       "kn_explanation": "This question covers false memory mechanisms and research methods, which are key concepts in the study of memory phenomena under KN8.",
       "difficulty": "medium",
       "quality_comment": "Options include related memory distortion techniques, requiring detailed knowledge to accurately select imagination inflation."
+    },
+    {
+      "stem": "In Baddeley's model of working memory, which component is primarily responsible for the temporary storage of auditory information?",
+      "options": [
+        "Visuospatial sketchpad",
+        "Episodic buffer",
+        "Phonological loop",
+        "Central executive"
+      ],
+      "answer": "Phonological loop",
+      "explanation": "1. The \"phonological loop\" is the correct answer because it is specifically responsible for the temporary storage of verbal and auditory information in Baddeley's model of working memory. This component allows individuals to hold and manipulate sounds, such as spoken words, which is essential for tasks involving language comprehension and verbal rehearsal.\n\n2. \n- **Visuospatial sketchpad**: This component is responsible for the temporary storage of visual and spatial information, not auditory information.\n- **Episodic buffer**: The episodic buffer integrates information from the phonological loop and visuospatial sketchpad and links it to long-term memory, but it does not specifically store auditory information.\n- **Central executive**: The central executive controls attention and coordinates the activities of the phonological loop and visuospatial sketchpad, but it does not serve as a storage system for auditory information.",
+      "difficulty": "easy",
+      "kn": "KN8",
+      "kn_explanation": "This question focuses on components of working memory, a key theoretical model in memory research under KN8.",
+      "quality_comment": "This question effectively tests knowledge of the specific components of Baddeley's model in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following best illustrates the role of the phonological loop when a person is trying to remember a phone number by repeating it silently?",
+      "options": [
+        "Visualizing the layout of the numbers",
+        "Connecting the numbers to a personal story",
+        "Rehearsing the numbers verbally",
+        "Focusing on the meaning of the numbers"
+      ],
+      "answer": "Rehearsing the numbers verbally",
+      "explanation": "1. \"Rehearsing the numbers verbally\" is the correct answer because the phonological loop is responsible for the temporary storage and rehearsal of verbal information. In this case, silently repeating the phone number utilizes the phonological loop to maintain the numbers in short-term memory, allowing for better recall.\n\n2. The option \"Visualizing the layout of the numbers\" is incorrect because this process involves the visuo-spatial sketchpad, which is responsible for storing visual and spatial information, rather than verbal information. \"Connecting the numbers to a personal story\" is wrong because this method relates to elaborative rehearsal, which involves semantic encoding and does not specifically engage the phonological loop. Lastly, \"Focusing on the meaning of the numbers\" is incorrect because it pertains to semantic processing, which is outside the function of the phonological loop, as it emphasizes understanding rather than verbal rehearsal.",
+      "difficulty": "hard",
+      "kn": "KN8",
+      "kn_explanation": "This question focuses on components of working memory, a key theoretical model in memory research under KN8.",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of the phonological loop in a practical scenario, enhancing comprehension of the concept.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

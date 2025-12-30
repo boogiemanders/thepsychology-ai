@@ -9,7 +9,7 @@
         "Mediator variable"
       ],
       "answer": "Independent variable",
-      "explanation": "The independent variable is what the researcher manipulates or categorizes participants by (type of therapy) to observe its effect on the dependent variable (depressive symptoms).",
+      "explanation": "1. The correct answer is \"Independent variable\" because the type of therapy given is the variable that the researcher manipulates to observe its effect on reducing depressive symptoms. In this study, the different therapies represent the levels of the independent variable, which aims to determine how they influence the dependent variable, in this case, the severity of depressive symptoms.\n\n2. The \"Dependent variable\" is incorrect because it refers to the outcome being measured, which, in this study, is the severity of depressive symptoms, not the type of therapy. A \"Moderator variable\" is also incorrect because it influences the strength or direction of the relationship between the independent and dependent variables but does not represent the variable being manipulated in the study. Lastly, the \"Mediator variable\" is incorrect because it explains the process through which the independent variable affects the dependent variable, rather than being the variable itself that is manipulated in the research.",
       "kn": "KN53",
       "kn_explanation": "This question involves understanding key variables in research design, a topic covered under sampling and data collection methods (KN53).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "A variable that is an unintended source of influence on study results"
       ],
       "answer": "A variable that explains the relationship between an independent and dependent variable",
-      "explanation": "A mediator variable accounts for how or why an independent variable affects a dependent variable by explaining the mechanism of the relationship.",
+      "explanation": "1. The correct answer, \"A variable that explains the relationship between an independent and dependent variable,\" accurately defines a mediator variable. Mediator variables serve to clarify how or why an independent variable affects a dependent variable by providing an explanatory mechanism within the relationship. For instance, in cognitive therapies, the independent variable (therapy) may lead to changes in dysfunctional thinking (mediator), which subsequently reduces anxiety (dependent variable).\n\n2. The option \"A variable that strengthens or weakens the relationship between two other variables\" is incorrect because this describes a moderator variable, which influences the strength or direction of the relationship rather than explaining it. The statement \"A variable that is manipulated by the researcher to measure its effect\" is wrong because it refers to an independent variable, which is intentionally changed to observe its effect on the dependent variable. Lastly, \"A variable that is an unintended source of influence on study results\" is incorrect as it describes an extraneous variable, which can confound results but does not serve as a mediator in explaining the relationship between independent and dependent variables.",
       "kn": "KN53",
       "kn_explanation": "Understanding mediator variables is fundamental to research design and analysis, fitting within data collection and experimental design methods (KN53).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Moderator variable"
       ],
       "answer": "Extraneous variable",
-      "explanation": "An extraneous variable is an unintended factor that can affect the dependent variable and complicate attribution of effects to the independent variable.",
+      "explanation": "1. The correct answer is \"Extraneous variable\" because noise level is not an intentional part of the study but influences the relationship between the teaching methods (independent variable) and the outcomes (dependent variable). As the noise level varies across groups, it can confound the results, making it difficult to determine whether any observed effects on learning are due to the teaching methods or the noise conditions.\n\n2. The option \"Dependent variable\" is incorrect because the dependent variable is the outcome being measured in the study, such as student performance, rather than a variable that influences the outcome. \"Mediator variable\" is also incorrect because a mediator explains the relationship between the independent and dependent variables; noise does not explain the effect of teaching methods on outcomes. Lastly, \"Moderator variable\" is incorrect because a moderator affects the strength or direction of the relationship between independent and dependent variables, while noise is an external factor that complicates the interpretation of results rather than modifying the relationship itself.",
       "kn": "KN53",
       "kn_explanation": "This question tests knowledge about confounding factors in research methods, aligned with sampling and study design content (KN53).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Nominal scale"
       ],
       "answer": "Ratio scale",
-      "explanation": "Ratio scales have ordered categories with equal intervals and an absolute zero point, enabling ratio comparisons between values.",
+      "explanation": "1. The \"Ratio scale\" is the correct answer because it is defined as a scale that assigns people to ordered categories with equal differences between adjacent categories and includes an absolute zero point. This absolute zero allows for meaningful statements about ratios, such as concluding that one value can be twice as much as another, which is not possible with other scales.\n\n2. The \"Ordinal scale\" is incorrect because, while it allows for ordered categories, it does not provide information about the magnitude of differences between values, making it impossible to make ratio comparisons. The \"Interval scale\" is also incorrect because, although it has equal differences between values, it lacks an absolute zero, so ratio statements cannot be made (e.g., a score of 0 does not indicate the absence of the characteristic being measured). Lastly, the \"Nominal scale\" is incorrect as it categorizes data into unordered groups without any quantitative value or meaningful way to compare ratios among the categories.",
       "kn": "KN53",
       "kn_explanation": "Assessment of scale types is essential in research methods and statistics, particularly measurement and data collection (KN53).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Ratio scale"
       ],
       "answer": "Ordinal scale",
-      "explanation": "Ordinal scales rank order categories where relative magnitude can be determined, but the intervals between categories are not necessarily equal.",
+      "explanation": "1. The correct answer is \"Ordinal scale\" because this scale divides individuals into ordered categories that reflect the magnitude of their responses. In this case, the categories 'strongly agree,' 'agree,' 'disagree,' and 'strongly disagree' indicate a ranking of agreement, allowing us to determine that one response is more or less favorable than another, but not how much more or less.\n\n2. The \"Nominal scale\" is incorrect because it categorizes individuals into unordered categories without any inherent ranking or magnitude, such as gender or eye color. The \"Interval scale\" is also incorrect because it involves ordered categories with equal differences between adjacent values, but does not have an absolute zero point, as seen in temperature or IQ scores. Lastly, the \"Ratio scale\" is wrong because it assigns ordered categories with equal differences and an absolute zero point, allowing for meaningful comparisons of ratios, such as weight or height, which is not applicable to the categories of agreement.",
       "kn": "KN53",
       "kn_explanation": "This question relates to measurement theory, an important element of research methods focusing on understanding different data scales (KN53).",
       "difficulty": "easy",
@@ -84,7 +84,7 @@
         "Median > Mean > Mode"
       ],
       "answer": "Mode > Median > Mean",
-      "explanation": "In negatively skewed distributions, the mode (peak) has the highest value, the median is intermediate, and the mean is pulled toward the lower (negative) tail.",
+      "explanation": "1. \"Mode > Median > Mean\" is the correct answer for a negatively skewed distribution because, in such distributions, most scores cluster at the higher end, resulting in the mode (the most frequently occurring score) being the highest. The median, which is the middle value, falls next, while the mean, influenced by the lower scores in the tail, ends up being the lowest value. This arrangement reflects the asymmetrical nature of negatively skewed distributions.\n\n2. \n- \"Mean > Median > Mode\": This option is incorrect because, in a negatively skewed distribution, the mean is less than both the median and the mode, not greater.\n- \"Mean = Median = Mode\": This option is wrong because it describes a normal distribution where all three measures of central tendency are equal, which does not occur in a negatively skewed distribution.\n- \"Median > Mean > Mode\": This option is incorrect because it suggests that the median is greater than the mean, which is true, but it incorrectly positions the mode as less than the median, whereas the mode is actually the highest in a negatively skewed distribution.",
       "kn": "KN53",
       "kn_explanation": "Understanding distribution shapes and measures of central tendency is fundamental in statistics, linked to analytic methods and statistics (KN53).",
       "difficulty": "hard",
@@ -99,7 +99,7 @@
         "Scatterplot"
       ],
       "answer": "Bar graph",
-      "explanation": "Bar graphs display categorical data with separate bars for each category; they're ideal for nominal or ordinal data.",
+      "explanation": "1. The correct answer is \"Bar graph\" because bar graphs are specifically designed to represent nominal and ordinal data by categorizing them into unordered groups. In the case of eye color, each color represents a distinct category, and a bar graph visually depicts the number or percentage of observations for each category, with bars separated by spaces to emphasize the distinctness of each category.\n\n2. The incorrect options are as follows:\n\n- **Histogram:** A histogram is used for interval and ratio data, where the data is continuous and the bars are not separated, making it inappropriate for nominal data like eye color categories.\n  \n- **Frequency polygon:** Similar to histograms, frequency polygons are also used for interval and ratio data and require continuous data points, which does not apply to nominal categories such as eye color.\n  \n- **Scatterplot:** A scatterplot is used to display the relationship between two continuous variables, making it unsuitable for nominal data, which consists of discrete categories without a meaningful relationship to plot.",
       "kn": "KN53",
       "kn_explanation": "Selecting appropriate graphical representations for data types is part of research methods and statistics concerning data visualization (KN53).",
       "difficulty": "easy",
@@ -114,7 +114,7 @@
         "Extraneous variable"
       ],
       "answer": "Mediator variable",
-      "explanation": "The altered thinking explains how therapy affects anxiety, serving as a mediator that links the independent variable (therapy) to the dependent variable (anxiety).",
+      "explanation": "1. The correct answer is \"mediator variable\" because it explains the relationship between the independent variable (cognitive-behavioral therapy) and the dependent variable (anxiety reduction). In this context, the change in clients' thinking serves as the mechanism through which therapy leads to reduced anxiety, thus qualifying it as a mediator that clarifies how the independent variable affects the dependent variable.\n\n2. \n- **Moderator variable**: This option is incorrect because a moderator variable influences the strength or direction of the relationship between the independent and dependent variables, rather than explaining the process by which the independent variable affects the dependent variable.\n- **Independent variable**: This option is incorrect because the independent variable is the treatment itself (cognitive-behavioral therapy) that is being manipulated, not the change in thinking that occurs as a result of the therapy.\n- **Extraneous variable**: This option is incorrect because extraneous variables are not part of the study's design and do not explain the relationship between the independent and dependent variables; instead, they can complicate the interpretation of the results if they are not controlled.",
       "kn": "KN53",
       "kn_explanation": "This question requires understanding the concepts of mediation in research design, part of analytic methods and causal modeling (KN53).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Allowed to perform meaningful ratio comparisons"
       ],
       "answer": "Equal intervals between values",
-      "explanation": "Both interval and ratio scales have ordered categories with equal intervals, but only ratio scales have an absolute zero point.",
+      "explanation": "1. The correct answer, \"Equal intervals between values,\" is true of interval scales because they assign values to ordered categories with equal differences between adjacent categories, allowing for meaningful comparisons of the magnitude of differences. In contrast, while ratio scales also have equal intervals, they are distinguished by the presence of an absolute zero point, which is not a characteristic of interval scales.\n\n2. The option \"Variables can be ordered\" is incorrect because both interval and ratio scales allow for variables to be ordered; this characteristic applies to both types of scales. The statement \"An absolute zero point\" is incorrect because interval scales do not have an absolute zero point, which is a defining feature of ratio scales. Lastly, the option \"Allowed to perform meaningful ratio comparisons\" is incorrect because meaningful ratio comparisons can only be made with ratio scales due to their absolute zero point, whereas interval scales do not support such comparisons.",
       "kn": "KN53",
       "kn_explanation": "This item tests detailed knowledge of measurement scales essential for research methods and statistics (KN53).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "It is measured after the dependent variable"
       ],
       "answer": "It changes the strength or direction of the effect between independent and dependent variables",
-      "explanation": "A moderator variable alters the relationship between the independent and dependent variables, affecting how or when an effect occurs.",
+      "explanation": "1. The correct answer, \"It changes the strength or direction of the effect between independent and dependent variables,\" accurately describes a moderator variable because it influences how strongly or in what direction the independent variable affects the dependent variable. For instance, in a study where the effectiveness of cognitive-behavior therapy varies based on parenting styles, the parenting style acts as a moderator by affecting the therapeutic outcome.\n\n2. The option \"It explains why the independent variable influences the dependent variable\" is incorrect because this describes a mediator variable, which clarifies the mechanism through which the independent variable impacts the dependent variable. The statement \"It represents an unintended influence on the dependent variable\" is wrong because this describes extraneous variables, which are not part of the study's design but can affect the results. Lastly, \"It is measured after the dependent variable\" is incorrect because moderator variables are typically assessed concurrently with the independent and dependent variables, not after the dependent variable.",
       "kn": "KN53",
       "kn_explanation": "Moderators are key concepts in study design and statistical analysis, consistent with research methods knowledge (KN53).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Distribution with the mean pulled toward an extended tail"
       ],
       "answer": "Flatter peak and thicker tails compared to a normal distribution",
-      "explanation": "Platykurtic distributions are characterized by a flattened peak and heavier tails than normal distributions, indicating scores are more evenly spread out.",
+      "explanation": "1. The correct answer, \"Flatter peak and thicker tails compared to a normal distribution,\" accurately describes a platykurtic distribution. According to the reference material, a platykurtic distribution is characterized by a flatter shape in the middle and thicker tails than a normal distribution, indicating that scores are more evenly distributed throughout the distribution rather than being concentrated around the mean.\n\n2. The option \"A distribution with a sharp peak and thin tails\" is incorrect because it describes a leptokurtic distribution, which has a sharper peak and thinner tails than a normal distribution. The option \"Symmetrical distribution where mean, median, and mode are equal\" is incorrect as it refers to a normal distribution, not a platykurtic one; platykurtic distributions can still be asymmetrical. Lastly, the option \"Distribution with the mean pulled toward an extended tail\" is incorrect because this describes a skewed distribution, where the mean is affected by extreme scores, rather than the characteristics of a platykurtic distribution.",
       "kn": "KN53",
       "kn_explanation": "This question concerns distribution shapes and properties, relevant to analytic and descriptive statistics in research methods (KN53).",
       "difficulty": "hard",
@@ -174,7 +174,7 @@
         "It is a variable that the researcher manipulates intentionally"
       ],
       "answer": "It is an unintended variable related to the independent variable affecting the dependent variable",
-      "explanation": "A confounding variable is a specific type of extraneous variable that is related to the independent variable and may falsely appear to affect the dependent variable.",
+      "explanation": "1. The correct answer, \"It is an unintended variable related to the independent variable affecting the dependent variable,\" accurately describes a confounding variable because it is an extraneous variable that inadvertently influences the relationship between the independent and dependent variables. This means that the confounding variable can obscure the true effect of the independent variable on the dependent variable, making it difficult to determine causation in a research study.\n\n2. The option \"It is a type of mediator variable explaining the relationship between independent and dependent variables\" is incorrect because a mediator variable specifically clarifies how or why an independent variable influences a dependent variable, rather than confounding the relationship. The statement \"It changes the strength or direction of a relationship between variables\" is wrong because this describes a moderator variable, which does influence the relationship but is not necessarily an unintended variable. Finally, \"It is a variable that the researcher manipulates intentionally\" is incorrect because confounding variables are not manipulated; they are extraneous factors that can affect the results without the researcher’s intent.",
       "kn": "KN53",
       "kn_explanation": "Confounding variables are part of extraneous variable concepts important for study validity and research methodology (KN53).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Pie chart"
       ],
       "answer": "Histogram",
-      "explanation": "Histograms are ideal for interval or ratio data showing frequency distributions, with bars touching to indicate continuous data.",
+      "explanation": "1. A **histogram** is the most appropriate graph to show the distribution of IQ scores because IQ scores are measured on an interval scale, where the differences between adjacent scores are equal. Histograms effectively represent interval data by placing scores on the x-axis and the frequency of those scores on the y-axis, with bars that are not separated by spaces, allowing for a clear visualization of the distribution.\n\n2. The **bar graph** is incorrect because it is used for nominal and ordinal data, where categories are unordered or ranked, and does not appropriately depict the continuous nature of interval data like IQ scores. The **boxplot** is also not suitable as it primarily summarizes data through quartiles and does not show the frequency distribution of scores across the entire range. Lastly, the **pie chart** is inappropriate for this context because it is designed to represent parts of a whole for categorical data, rather than the frequency distribution of continuous interval-scale data like IQ scores.",
       "kn": "KN53",
       "kn_explanation": "Understanding the correct visual display based on data scale is a core component of research methods and statistics (KN53).",
       "difficulty": "easy",
@@ -204,11 +204,51 @@
         "Independent variable"
       ],
       "answer": "Moderator variable",
-      "explanation": "Parenting style affects the strength or direction of the treatment effect, making it a moderator variable.",
+      "explanation": "1. The correct answer is \"Moderator variable\" because parenting style affects the direction and/or strength of the relationship between the independent variable (type of treatment for social anxiety) and the dependent variable (effectiveness of the treatment). In this context, the effectiveness of the treatment varies depending on the parenting style, demonstrating how a moderator influences the outcome of the independent variable.\n\n2. The option \"Mediator variable\" is incorrect because a mediator explains the relationship between the independent and dependent variables, rather than modifying the effectiveness of the treatment. \"Dependent variable\" is incorrect because it represents the outcome being measured (effectiveness of treatment) rather than a factor that influences that outcome. Lastly, \"Independent variable\" is incorrect because it refers to the treatment itself (e.g., cognitive-behavior therapy), not the variable (parenting style) that alters the treatment's effectiveness.",
       "kn": "KN53",
       "kn_explanation": "This question tests the concept of moderator variables affecting relationships between IV and DV, central to experimental design knowledge (KN53).",
       "difficulty": "medium",
       "quality_comment": "The realistic example enhances understanding; distractors involve related variable types for candidate discrimination."
+    },
+    {
+      "stem": "In a study examining the impact of different diets on weight loss, the variable indicating the type of diet participants follow is classified as which of the following?",
+      "options": [
+        "Dependent variable",
+        "Independent variable",
+        "Control variable",
+        "Extraneous variable"
+      ],
+      "answer": "Independent variable",
+      "explanation": "1. The correct answer is \"Independent variable\" because the type of diet that participants follow is the variable that the researcher manipulates to observe its effect on weight loss. In this study, participants are assigned to different diet groups, making the diet the factor believed to influence the dependent variable, which is weight loss.\n\n2. The option \"Dependent variable\" is incorrect because the dependent variable is the outcome being measured—in this case, weight loss—rather than the variable being manipulated. \"Control variable\" is incorrect because control variables are those that are kept constant to prevent them from influencing the results, rather than being the primary focus of the study. Lastly, \"Extraneous variable\" is incorrect because extraneous variables are unintended factors that can affect the relationship between the independent and dependent variables, but they are not the main variables of interest in the study.",
+      "difficulty": "easy",
+      "kn": "KN53",
+      "kn_explanation": "This question involves understanding key variables in research design, a topic covered under sampling and data collection methods (KN53).",
+      "quality_comment": "This question effectively tests understanding of variable classification in a different context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In an experiment investigating the effects of various teaching methods on student performance, the variable that denotes the specific teaching method used is best described as which type of variable?",
+      "options": [
+        "Dependent variable",
+        "Independent variable",
+        "Confounding variable",
+        "Moderator variable"
+      ],
+      "answer": "Independent variable",
+      "explanation": "1. The correct answer is \"Independent variable\" because it represents the specific teaching method used in the experiment, which the researcher believes has an effect on student performance. In this context, the independent variable is manipulated or varied to observe its influence on the dependent variable, which is student performance.\n\n2. The option \"Dependent variable\" is incorrect because the dependent variable is the outcome being measured—in this case, student performance—rather than the teaching method itself. \"Confounding variable\" is not applicable here since a confounding variable is an extraneous factor that might affect the relationship between the independent and dependent variables, but it is not the variable being manipulated. Lastly, \"Moderator variable\" is incorrect because a moderator variable influences the strength or direction of the relationship between the independent and dependent variables, rather than being the variable of interest in terms of manipulation.",
+      "difficulty": "hard",
+      "kn": "KN53",
+      "kn_explanation": "This question involves understanding key variables in research design, a topic covered under sampling and data collection methods (KN53).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of variables in an educational research context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

@@ -9,7 +9,7 @@
         "Selective prevention"
       ],
       "answer": "Primary prevention",
-      "explanation": "Primary prevention aims to prevent new cases of a disorder by focusing on entire populations or groups, not just those at elevated risk.",
+      "explanation": "1. **Primary prevention** is the correct answer because it is defined by Caplan as the type of prevention aimed at reducing the occurrence of new cases of a mental or physical disorder by targeting entire populations or groups, regardless of their risk status. This approach focuses on preventive measures that can be applied broadly, such as public education programs or community health initiatives.\n\n2. **Secondary prevention** is incorrect because it focuses on reducing the prevalence of a disorder through early detection and intervention, specifically targeting individuals identified as at elevated risk for the disorder. **Tertiary prevention** is also incorrect because it aims to reduce the severity and duration of an already diagnosed disorder, targeting individuals who have received a diagnosis rather than preventing new cases. Lastly, **selective prevention** is incorrect as it targets individuals who are at increased risk for a disorder due to specific biological, psychological, or social characteristics, rather than addressing the entire population.",
       "kn": "KN45",
       "kn_explanation": "This question assesses knowledge of prevention models relevant to intervention and prevention methods (KN45).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "Improving professional functioning of administrators for future program evaluation"
       ],
       "answer": "Focusing on a specific client with treatment difficulties to guide the consultee's plan",
-      "explanation": "Client-centered case consultation focuses on assisting the consultee with a particular client who is challenging treatment or services.",
+      "explanation": "1. The correct answer, \"Focusing on a specific client with treatment difficulties to guide the consultee's plan,\" accurately reflects Caplan's definition of client-centered case consultation. This type of consultation specifically targets a consultee's individual client who is experiencing challenges in receiving effective services, with the consultant's goal being to develop a plan that will benefit that particular client.\n\n2. The first incorrect option, \"Improving program administrators’ ability to clarify and resolve program issues,\" describes program-centered administrative consultation, which focuses on helping administrators address problems within a mental health program rather than individual clients. The second incorrect option, \"Enhancing the consultee’s skills to better work with present and future clients,\" refers to consultee-centered case consultation, which aims to improve the consultee's overall capabilities rather than focusing on a single client. Lastly, \"Improving professional functioning of administrators for future program evaluation\" also pertains to consultee-centered administrative consultation, which is aimed at enhancing the skills of program administrators for better future performance, not at addressing specific client issues.",
       "kn": "KN47",
       "kn_explanation": "Focuses on models and processes of consultation, specifically mental health consultation types (KN47).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Common factors model"
       ],
       "answer": "Phase model",
-      "explanation": "The phase model conceptualizes psychotherapy as progressing through remoralization, remediation, and rehabilitation phases.",
+      "explanation": "1. The **Phase model** is the correct answer because it specifically describes three distinct phases of psychotherapy outcomes: remoralization, remediation, and rehabilitation. This model outlines the progression of therapy, starting with an increase in hopefulness during the initial phase, followed by a reduction in symptoms in the second phase, and concluding with the unlearning of maladaptive behaviors and the establishment of new coping strategies in the final phase.\n\n2. The **Dosage (dose-effect) model** is incorrect because it focuses on the relationship between the number of therapy sessions and the probability of improvement, rather than distinct phases of therapy. The **Meta-analytic model** is wrong as it refers to a statistical method used to combine results from multiple studies to assess overall treatment effectiveness, rather than detailing phases of therapy. Lastly, the **Common factors model** is incorrect because it emphasizes the shared elements across different therapeutic approaches that contribute to positive outcomes, rather than defining specific phases of the therapeutic process.",
       "kn": "KN44",
       "kn_explanation": "Tests knowledge of psychotherapy outcome research and treatment models (KN44).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Tertiary prevention"
       ],
       "answer": "Indicated prevention",
-      "explanation": "Indicated prevention addresses individuals with early or minimal signs of a disorder before diagnosis.",
+      "explanation": "1. **Indicated prevention** is the correct answer because it specifically targets individuals who exhibit early or minimal signs of a disorder but have not yet received a formal diagnosis. In Gordon's model of prevention, indicated prevention aims to intervene at this initial stage to prevent the development of a full-blown disorder, thereby addressing potential issues before they escalate.\n\n2. The other options are incorrect for the following reasons:\n\n- **Universal prevention** targets entire populations or groups, regardless of their risk status, and is not focused on individuals with any signs of a disorder.\n- **Selective prevention** is aimed at individuals identified as being at increased risk for a disorder due to specific biological, psychological, or social characteristics, rather than those with minimal signs or symptoms.\n- **Tertiary prevention** focuses on individuals who have already been diagnosed with a disorder, aiming to reduce the severity and duration of the condition, which is not applicable to those who have not yet received a diagnosis.",
       "kn": "KN45",
       "kn_explanation": "Assesses understanding of prevention approaches, specifically Gordon’s model (KN45).",
       "difficulty": "easy",
@@ -69,7 +69,7 @@
         "Psychotherapy effects were only evident in inpatient settings"
       ],
       "answer": "Average patient receiving psychotherapy was better off than 80% of untreated patients",
-      "explanation": "Their meta-analysis produced a mean effect size of .85, indicating the average treated patient fared better than 80% of untreated controls.",
+      "explanation": "1. The correct answer, \"Average patient receiving psychotherapy was better off than 80% of untreated patients,\" accurately reflects the findings of Smith, Glass, and Miller's meta-analysis, which reported a mean effect size of .85. This indicates that the average patient who received psychotherapy had outcomes that were better than 80% of patients who did not receive any psychotherapy, demonstrating the effectiveness of psychotherapy in improving patient outcomes.\n\n2. The option \"Psychotherapy was ineffective compared to no treatment\" is incorrect because it misrepresents the findings; the analysis showed that psychotherapy is effective, with patients experiencing significant improvements compared to untreated individuals. The statement \"Combined treatments involving medication were superior to psychotherapy alone\" is wrong as the meta-analysis did not focus on medication and specifically highlighted the effectiveness of psychotherapy alone. Lastly, \"Psychotherapy effects were only evident in inpatient settings\" is incorrect because the meta-analysis examined a broad range of studies, not limited to inpatient settings, supporting the effectiveness of psychotherapy in various contexts.",
       "kn": "KN44",
       "kn_explanation": "Evaluates knowledge of psychotherapy outcome research and meta-analytic findings (KN44).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Use of imaging techniques to assess brain changes across therapy"
       ],
       "answer": "Regular assessment of client symptoms and feedback to inform collaborative treatment planning",
-      "explanation": "ROM includes routine symptom measurement before sessions with shared review and collaborative treatment adjustments.",
+      "explanation": "1. The correct answer, \"Regular assessment of client symptoms and feedback to inform collaborative treatment planning,\" accurately reflects the essence of Routine Outcome Monitoring (ROM). ROM is defined as a process that includes routinely administered symptom measures before each clinical encounter, practitioner and patient review of data, and collaborative reevaluation of the treatment plan based on this data (Scott & Lewis, 2015). This systematic approach ensures that treatment is tailored to the client's evolving needs and enhances overall therapeutic effectiveness.\n\n2. The option \"Therapist-only evaluation of treatment progress at therapy termination\" is incorrect because ROM emphasizes ongoing assessments throughout therapy rather than solely at the end, ensuring continuous feedback and adaptation. \"Collecting client data only at baseline and final sessions\" is also wrong, as ROM involves regular assessments throughout the treatment process, not just at the beginning and end. Lastly, \"Use of imaging techniques to assess brain changes across therapy\" is incorrect because ROM focuses on symptom and outcome measures rather than neuroimaging, which is not part of the ROM framework.",
       "kn": "KN44",
       "kn_explanation": "Concerns evidence-based treatment practices and integration of measurement-based care (KN44).",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "Cost-minimization analysis"
       ],
       "answer": "Cost-benefit analysis",
-      "explanation": "Cost-benefit analysis expresses both costs and benefits in dollars to compare interventions directly.",
+      "explanation": "**1. Explanation of the Correct Answer: Cost-benefit analysis**  \nCost-benefit analysis (CBA) is the correct answer because it is specifically designed to compare the costs and benefits of one or multiple interventions by converting both into monetary terms. This allows decision-makers to evaluate the net benefit of interventions based on their financial implications, facilitating a clear understanding of the economic feasibility of various options.\n\n**2. Explanation of Incorrect Options:**  \n- **Cost-effectiveness analysis:** This method compares the costs and benefits of two or more interventions, but it does not express benefits in monetary terms; instead, it measures benefits using non-monetary outcomes (e.g., health improvements).\n  \n- **Cost-utility analysis:** Similar to cost-effectiveness analysis, cost-utility analysis compares costs to benefits but focuses specifically on quality-adjusted life-years (QALYs) rather than converting benefits into monetary values.\n\n- **Cost-minimization analysis:** This approach is used when the outcomes of interventions are assumed to be equivalent, focusing solely on comparing the costs to identify the least expensive option. It does not involve the conversion of benefits into monetary terms.",
       "kn": "KN58",
       "kn_explanation": "This question addresses economic evaluation methods related to healthcare program decisions (KN58).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Disability requires legal proof of impairment to determine benefits"
       ],
       "answer": "Disability arises from barriers created by societal attitudes and environments",
-      "explanation": "The social model views disability as stemming from societal barriers rather than intrinsic medical conditions.",
+      "explanation": "1. The correct answer, \"Disability arises from barriers created by societal attitudes and environments,\" aligns with the social model of disability, which views disability as a difference rather than an abnormality. This model emphasizes that societal factors, such as negative attitudes and physical barriers, create obstacles for individuals with disabilities, rather than the disabilities being solely intrinsic medical conditions. Therefore, interventions should focus on changing societal structures and attitudes to improve accessibility and inclusion.\n\n2. The option \"Disability results primarily from biological impairments intrinsic to the individual\" is incorrect because it reflects the biomedical model, which sees disabilities as medical conditions that deviate from the norm, focusing on treating the individual rather than addressing societal barriers. The statement \"Disability is a functional inability to perform work or social roles\" is misleading as it represents the functional model, which recognizes disabilities but emphasizes the need for accommodations rather than societal change. Lastly, the option \"Disability requires legal proof of impairment to determine benefits\" is wrong because it describes the forensic model, which focuses on legal criteria and motivations for seeking disability recognition, rather than addressing the societal context of disability.",
       "kn": "KN18",
       "kn_explanation": "Focuses on cultural and social conceptualizations of disability and oppression (KN18).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Therapy outcomes improve more when therapists share the same personality traits as clients"
       ],
       "answer": "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
-      "explanation": "Meta-analysis finds racial/ethnic matching improves clients' perceptions more than actual therapy outcomes.",
+      "explanation": "1. The correct answer, \"Matching has a stronger effect on client perceptions of the therapist than on outcome measures,\" is supported by the findings of Cabral and Smith (2011), which reported an effect size of .32 for the impact of racial/ethnic matching on clients’ perceptions of their therapists, but only an effect size of .09 on therapy outcomes. This indicates that while clients may feel more positively about their therapists when there is a match in race or ethnicity, this does not necessarily translate into improved therapy results.\n\n2. The first incorrect option, \"Matching consistently improves therapy outcomes across all racial/ethnic groups,\" is inaccurate because research shows that matching effects vary by racial/ethnic group, with some groups benefiting more than others. The second incorrect option, \"Matching is irrelevant once therapist cultural competence is established,\" is wrong because cultural competence can enhance therapy effectiveness, but matching still plays a role in client perceptions and engagement. Lastly, the option \"Therapy outcomes improve more when therapists share the same personality traits as clients\" is misleading, as research indicates that while personality matching may influence the therapeutic alliance, it is not as consistently impactful on therapy outcomes as racial/ethnic matching.",
       "kn": "KN18",
       "kn_explanation": "Pertains to cultural and diversity factors influencing therapy process and outcomes (KN18).",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "They are limited to treating only anxiety disorders"
       ],
       "answer": "They reduce training costs by addressing commonalities across disorders",
-      "explanation": "Transdiagnostic treatments target shared mechanisms, enabling clinicians to treat multiple disorders efficiently.",
+      "explanation": "1. The correct answer, \"They reduce training costs by addressing commonalities across disorders,\" highlights a primary advantage of transdiagnostic treatments. These treatments are designed to target shared symptoms and underlying mechanisms across different disorders, which allows for a more streamlined training process for therapists. By focusing on commonalities rather than unique aspects of each diagnosis, transdiagnostic approaches can reduce the costs and time associated with training clinicians in multiple diagnosis-specific interventions.\n\n2. The option \"They focus exclusively on biological mechanisms of disorders\" is incorrect because transdiagnostic treatments consider a range of biological, psychological, and environmental factors, rather than exclusively biological mechanisms. \"They require less therapist involvement than diagnosis-based treatments\" is also wrong; transdiagnostic treatments often involve similar levels of therapist engagement as diagnosis-specific therapies, as they still necessitate a strong therapeutic alliance and active participation. Lastly, \"They are limited to treating only anxiety disorders\" is incorrect because transdiagnostic treatments can be applied to a variety of disorders, including depression and related conditions, not just anxiety disorders.",
       "kn": "KN44",
       "kn_explanation": "Tests understanding of evidence-based treatment models in psychotherapy (KN44).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Consultee-centered consultation model"
       ],
       "answer": "Stepped care model",
-      "explanation": "Stepped care aims to provide minimal effective intervention and escalate treatment based on systematic outcome monitoring.",
+      "explanation": "1. The \"Stepped care model\" is the correct answer because it is designed to prioritize the least restrictive yet effective treatments first while systematically monitoring treatment responses. This model allows for adjustments in care, known as \"stepping up,\" if the current treatments do not achieve significant health gains, ensuring that patients receive appropriate levels of care based on their needs.\n\n2. The **Biomedical model** focuses on viewing disabilities as medical conditions that deviate from the norm, emphasizing medical treatments rather than a systematic approach to adjusting care based on treatment responses. The **Phase model** describes psychotherapy outcomes in terms of distinct phases (remoralization, remediation, and rehabilitation) but does not specifically address the prioritization of treatment types or systematic monitoring. The **Consultee-centered consultation model** aims to improve the consultee's professional functioning to enhance their effectiveness with clients but does not involve a structured approach to adjusting treatment based on patient responses.",
       "kn": "KN50",
       "kn_explanation": "Addresses healthcare systems and models impacting intervention choices integrated with economic allocation (KN50).",
       "difficulty": "medium",
@@ -174,7 +174,7 @@
         "Therapeutic alliance cannot be established effectively via telepsychology"
       ],
       "answer": "Videoconferencing therapy shows equivalent improvements and similar dropout rates compared to in-person therapy",
-      "explanation": "Systematic reviews indicate videoconferencing CBT for anxiety yields comparable effectiveness and dropout rates to in-person therapy.",
+      "explanation": "1. The statement \"Videoconferencing therapy shows equivalent improvements and similar dropout rates compared to in-person therapy\" is correct because research indicates that psychotherapy delivered via telepsychology, particularly cognitive-behavioral therapy (CBT), is effective for treating anxiety disorders and shows no significant differences in outcomes when compared to in-person therapy. Studies, such as those by Berryhill and colleagues, demonstrate that videoconferencing therapy leads to significant improvements in anxiety symptoms, with controlled studies reporting similar dropout rates for both modalities.\n\n2. The option \"Videoconferencing therapy is generally less effective than in-person therapy\" is incorrect because research has shown that the effectiveness of telepsychology for anxiety disorders is comparable to that of in-person therapy, not less effective. The statement \"Telepsychology is only effective for individual anxiety disorders, not comorbid conditions\" is false since studies have indicated that telepsychology is effective for treating both individual anxiety disorders and comorbid conditions. Lastly, the option \"Therapeutic alliance cannot be established effectively via telepsychology\" is misleading because while some therapists reported challenges in developing rapport, many studies have found that therapeutic alliances can still be effectively established through telepsychology.",
       "kn": "KN49",
       "kn_explanation": "Concerns telepsychology and technology-assisted psychological services (KN49).",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Custodial care produced worse outcomes than psychoanalytic therapy"
       ],
       "answer": "Psychotherapy may be ineffective or even detrimental compared to spontaneous remission",
-      "explanation": "Eysenck concluded that recovery rates for psychotherapy patients were lower than spontaneous remission rates in untreated patients.",
+      "explanation": "1. The correct answer, \"Psychotherapy may be ineffective or even detrimental compared to spontaneous remission,\" is based on Eysenck's 1952 review, which concluded that a significant percentage of neurotic patients improved without therapy, suggesting that the recovery rates for psychotherapy patients were lower than those for patients who did not receive treatment. Eysenck's findings indicated that 44% of patients in psychoanalytic therapy and 64% in eclectic therapy improved, which were lower than the 72% spontaneous remission rate, leading him to propose that psychotherapy could be ineffective or even harmful.\n\n2. The option \"Psychotherapy was highly effective for neurotic patients compared to no treatment\" is incorrect because Eysenck's review indicated that the recovery rates for psychotherapy patients were actually lower than those for patients who did not receive treatment. The statement \"All forms of psychotherapy have equivalent, significant positive outcomes\" is also wrong, as Eysenck's findings highlighted variability in outcomes and did not support the idea of equivalence across different therapies. Lastly, the claim \"Custodial care produced worse outcomes than psychoanalytic therapy\" is inaccurate because Eysenck's analysis suggested that custodial care had a higher spontaneous remission rate than psychoanalytic therapy, thus indicating better outcomes for custodial care compared to psychotherapy.",
       "kn": "KN44",
       "kn_explanation": "Evaluates understanding of classic psychotherapy outcome research and critique (KN44).",
       "difficulty": "hard",
@@ -204,7 +204,7 @@
         "Measuring the economic costs and benefits of treatments"
       ],
       "answer": "Ensuring therapists deliver treatment protocols consistently and competently",
-      "explanation": "Treatment fidelity ensures that the intervention is implemented as intended to assess true treatment effectiveness.",
+      "explanation": "1. The correct answer, \"Ensuring therapists deliver treatment protocols consistently and competently,\" reflects the primary focus of treatment fidelity in psychotherapy research and practice. Treatment fidelity, also known as intervention fidelity, is crucial for evaluating a treatment's effectiveness, as it ensures that the therapy is delivered as intended according to the established protocols. High fidelity is essential for determining whether treatment outcomes are due to the intervention itself or other extraneous factors, thereby enhancing the validity of research findings and clinical practice.\n\n2. The option \"Matching therapist and client personality traits for optimal outcomes\" is incorrect because while client-therapist matching can influence therapy outcomes, it does not address the consistency and competence of how treatments are delivered, which is the essence of treatment fidelity. \n\nThe option \"Providing feedback to clients about session progress and alliance quality\" is also incorrect as it pertains to the therapeutic process and client engagement rather than the adherence to treatment protocols, which is the focus of treatment fidelity. \n\nLastly, \"Measuring the economic costs and benefits of treatments\" is incorrect because this option relates to economic evaluation rather than the fidelity of treatment delivery, which emphasizes the importance of how well the therapy is implemented rather than its financial implications.",
       "kn": "KN44",
       "kn_explanation": "Focuses on treatment delivery and assessment of intervention quality (KN44).",
       "difficulty": "easy",
@@ -219,7 +219,7 @@
         "Preference for convenience samples from clinical populations"
       ],
       "answer": "Overrepresentation of industrialized countries leading to limited generalizability of findings",
-      "explanation": "WEIRD refers to samples from Western, Educated, Industrialized, Rich, Democratic societies, limiting external validity.",
+      "explanation": "1. The correct answer, \"Overrepresentation of industrialized countries leading to limited generalizability of findings,\" accurately describes the WEIRD sampling bias, as it highlights that psychological research has predominantly drawn samples from Western, Educated, Industrialized, Rich, and Democratic cultures. This overreliance on such samples limits the applicability of research findings to diverse populations, potentially skewing our understanding of psychological phenomena across different cultural contexts (Henrich, Heine, & Norenzayan, 2010).\n\n2. The option \"Underrepresentation of women in psychological research studies\" is incorrect because it does not specifically address the broader issue of cultural bias inherent in WEIRD sampling; rather, it focuses solely on gender representation. The option \"Bias that exaggerates gender differences in mental health presentations\" is also incorrect, as it pertains to the alpha and beta biases in gender research rather than the geographic and cultural biases associated with WEIRD samples. Lastly, \"Preference for convenience samples from clinical populations\" is inaccurate because it misrepresents the WEIRD bias, which is more about cultural homogeneity rather than convenience sampling from specific clinical groups.",
       "kn": "KN57",
       "kn_explanation": "Concerns biases affecting research generalizability and validity (KN57).",
       "difficulty": "medium",
@@ -234,7 +234,7 @@
         "Reduces the need for mental health professionals in primary care"
       ],
       "answer": "Generally increases patient satisfaction and access to care for older adults",
-      "explanation": "Research indicates IPC is associated with improved access to care and increased patient satisfaction, especially for older adults.",
+      "explanation": "1. The correct answer, \"Generally increases patient satisfaction and access to care for older adults,\" is supported by research indicating that interprofessional collaboration (IPC) is particularly beneficial for addressing the complex healthcare needs of older patients. Studies have shown that integrated care models, which involve collaboration among various healthcare providers, can improve access to services and enhance patient satisfaction, ultimately leading to better health outcomes for this demographic.\n\n2. The option \"Consistently improves quality of life and health behaviors for all patients\" is incorrect because research on IPC has produced mixed results regarding its effects on quality of life and health behaviors, indicating that improvements are not guaranteed for all patients. The statement \"Requires no special coordination among health providers\" is false as effective IPC necessitates careful coordination and communication among team members to ensure comprehensive care. Lastly, the option \"Reduces the need for mental health professionals in primary care\" is misleading because IPC does not eliminate the need for mental health professionals; rather, it aims to enhance collaboration and integrate their expertise into patient care.",
       "kn": "KN50",
       "kn_explanation": "This question taps into knowledge of health promotion, risk reduction, and collaborative care models in healthcare (KN50).",
       "difficulty": "medium",
@@ -249,7 +249,7 @@
         "Behavioral model"
       ],
       "answer": "Psychodynamic model",
-      "explanation": "The psychodynamic supervision model emphasizes interpersonal dynamics between supervisor and supervisee to enhance clinical skills and outcomes.",
+      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
       "kn": "KN52",
       "kn_explanation": "Addresses supervision theories and models relevant to clinical psychology practice (KN52).",
       "difficulty": "medium",
@@ -264,11 +264,51 @@
         "Focus exclusively on pharmacological treatments"
       ],
       "answer": "Enhance resilience and well-being before onset of disorder",
-      "explanation": "Health promotion seeks to improve wellness and resilience proactively to prevent disorders from developing.",
+      "explanation": "1. The correct answer, \"Enhance resilience and well-being before onset of disorder,\" aligns with the goals of primary prevention, which focuses on reducing the occurrence of new cases of mental or physical disorders. This approach emphasizes health promotion strategies that improve overall well-being and resilience in populations, thereby preventing the development of disorders before they manifest.\n\n2. The option \"Reduce severity and duration of diagnosed disorders\" is incorrect because it pertains to tertiary prevention, which targets individuals who have already received a diagnosis and aims to mitigate the impact of existing disorders. The option \"Target individuals already receiving treatment\" is wrong as it suggests a focus on secondary or tertiary prevention rather than the proactive health promotion associated with primary prevention strategies. Lastly, \"Focus exclusively on pharmacological treatments\" is incorrect because health promotion strategies in psychological interventions encompass a broader range of approaches, including psychological, social, and educational interventions, rather than being limited to pharmacological methods.",
       "kn": "KN51",
       "kn_explanation": "This item assesses knowledge of health promotion, risk reduction, and wellness concepts in prevention (KN51).",
       "difficulty": "medium",
       "quality_comment": "Distractors contrast stages of intervention to ensure understanding of health promotion's proactive nature."
+    },
+    {
+      "stem": "In the context of public health, which type of intervention is designed to prevent the onset of mental health disorders in the general population before any symptoms appear?",
+      "options": [
+        "Primary intervention",
+        "Secondary intervention",
+        "Tertiary intervention",
+        "Universal intervention"
+      ],
+      "answer": "Universal intervention",
+      "explanation": "1. **Universal intervention** is the correct answer because it is designed to prevent the onset of mental health disorders in the general population before any symptoms appear. According to Gordon's model of prevention, universal interventions target entire populations or groups that are not restricted to individuals at risk for a disorder, such as public health campaigns aimed at promoting mental wellness or reducing stigma.\n\n2. The other options are incorrect for the following reasons:\n   - **Primary intervention** is not a distinct category in this context; rather, it is often used interchangeably with universal intervention, but it typically refers to broader strategies aimed at reducing the occurrence of new cases in a population, which may include universal interventions.\n   - **Secondary intervention** focuses on early detection and intervention for individuals who have been identified as being at elevated risk for a disorder, rather than preventing the onset in the general population.\n   - **Tertiary intervention** targets people who have already received a diagnosis of a mental or physical disorder, aiming to reduce the severity and duration of their condition, which is not applicable to preventing onset in the general population.",
+      "difficulty": "easy",
+      "kn": "KN45",
+      "kn_explanation": "This question assesses knowledge of prevention models relevant to intervention and prevention methods (KN45).",
+      "quality_comment": "This question effectively assesses understanding of prevention types in a public health context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which prevention strategy focuses on reducing the incidence of mental health disorders by implementing programs that target all individuals in a community, regardless of their risk factors?",
+      "options": [
+        "Selective prevention",
+        "Universal prevention",
+        "Tertiary prevention",
+        "Targeted prevention"
+      ],
+      "answer": "Universal prevention",
+      "explanation": "1. **Universal prevention** is the correct answer because it targets entire populations or groups without restriction to individuals who are at risk for a disorder. This approach aims to reduce the incidence of mental health disorders through broad-based programs, such as public education campaigns or community-wide initiatives, which are designed to benefit everyone in the community, not just those identified as being at risk.\n\n2. **Selective prevention** is incorrect because it focuses on individuals identified as being at increased risk for a disorder due to specific characteristics, rather than the entire population. **Tertiary prevention** is also incorrect as it targets individuals who have already been diagnosed with a mental health disorder, aiming to reduce the severity and duration of their condition rather than preventing new cases. Lastly, **targeted prevention** is not a term defined in the reference material; instead, the terms used are universal, selective, and indicated prevention, making it an inappropriate choice for this question.",
+      "difficulty": "hard",
+      "kn": "KN45",
+      "kn_explanation": "This question assesses knowledge of prevention models relevant to intervention and prevention methods (KN45).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of prevention strategies in a community context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

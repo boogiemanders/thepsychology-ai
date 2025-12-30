@@ -9,7 +9,7 @@
         "When the independent variable has more than two levels"
       ],
       "answer": "When the dependent variable is nominal or ordinal and assumptions of normality and homogeneity of variances are violated",
-      "explanation": "Nonparametric tests are used primarily for nominal or ordinal data or when parametric assumptions (normality, equal variances) are violated, especially with small and unequal group sizes.",
+      "explanation": "1. The correct answer, \"When the dependent variable is nominal or ordinal and assumptions of normality and homogeneity of variances are violated,\" is accurate because nonparametric tests are specifically designed to analyze nominal and ordinal data. Additionally, parametric tests require the assumptions of normality (data being normally distributed) and homogeneity of variances (similar variances across groups) to be met; when these assumptions are violated, nonparametric tests are preferred as they do not rely on these conditions.\n\n2. The first incorrect option, \"When the sample size is large and data are measured on an interval scale,\" is wrong because large sample sizes do not negate the need for normality and homogeneity of variances when using parametric tests; parametric tests are appropriate for interval data under these conditions. The second incorrect option, \"When the data are normally distributed and variances are equal across groups,\" is incorrect because this scenario supports the use of parametric tests rather than nonparametric tests, as the assumptions for parametric tests are met. Lastly, the option \"When the independent variable has more than two levels\" is incorrect because the number of levels of the independent variable does not determine whether a nonparametric test is preferred; instead, it is the scale of measurement and the fulfillment of assumptions that guide the choice of statistical test.",
       "kn": "KN53",
       "kn_explanation": "This question focuses on understanding statistical test selection based on data scale and assumptions, which relates to sampling and data collection methods and statistical analysis (KN53).",
       "difficulty": "medium",
@@ -24,7 +24,7 @@
         "T-test for related samples"
       ],
       "answer": "T-test for unrelated samples",
-      "explanation": "When comparing means between two independent groups on a continuous outcome, the t-test for unrelated (uncorrelated) samples is appropriate.",
+      "explanation": "1. The \"T-test for unrelated samples\" is the correct answer because it is specifically designed to compare the means of two independent groups when the dependent variable is measured on an interval or ratio scale. In this scenario, the participants in the two treatment groups are unrelated, which aligns with the assumptions of this test, making it the most suitable choice for analyzing the data.\n\n2. The \"Chi-square test for contingency tables\" is incorrect because it is used for analyzing nominal data, not interval-scaled data, which is required in this study. The \"One-way analysis of variance (ANOVA)\" is not appropriate here because it is intended for comparing means across more than two groups, while the study only involves two treatment groups. Lastly, the \"T-test for related samples\" is unsuitable because it is meant for comparing means of related groups, such as matched pairs or repeated measures, which does not apply to the unrelated participants in this study.",
       "kn": "KN53",
       "kn_explanation": "Selecting the correct inferential test requires knowledge of analytic methods and study design, aligned with KN53 on sampling, data collection, and analysis.",
       "difficulty": "easy",
@@ -39,7 +39,7 @@
         "Student’s t-test for unrelated samples"
       ],
       "answer": "Single-sample chi-square test",
-      "explanation": "With one nominal variable having two categories, the single-sample (goodness-of-fit) chi-square test compares observed frequencies to expected frequencies.",
+      "explanation": "1. The \"Single-sample chi-square test\" is the correct answer because the researcher is analyzing a single nominal variable (preference for hard-copy or online textbooks) with two categories. This test is specifically designed for situations where there is one variable and the goal is to determine if the observed frequencies differ from expected frequencies, making it ideal for this study's purpose.\n\n2. The \"Multiple-sample chi-square test\" is incorrect because it is used when analyzing two or more variables, whereas this study only involves one variable (textbook preference). The \"One-way ANOVA\" is unsuitable because it requires a dependent variable measured on an interval or ratio scale and involves more than two levels of an independent variable, which is not the case here. Lastly, the \"Student’s t-test for unrelated samples\" is inappropriate because it is meant for comparing means between two unrelated groups measured on an interval or ratio scale, not for nominal data like textbook preferences.",
       "kn": "KN53",
       "kn_explanation": "Understanding when to use chi-square tests for nominal data is part of analytic methods and test selection covered in KN53.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "T-test for related samples"
       ],
       "answer": "One-way analysis of variance (ANOVA)",
-      "explanation": "The one-way ANOVA compares means across multiple groups and uses the F-ratio, which is the ratio of between-group to within-group variance.",
+      "explanation": "1. The \"One-way analysis of variance (ANOVA)\" is the correct answer because it is specifically designed to compare means across three or more unrelated groups when the dependent variable is measured on an interval or ratio scale. The one-way ANOVA produces an F-ratio, which assesses the variability between group means relative to the variability within groups, indicating whether the independent variable has a significant effect on the dependent variable.\n\n2. The \"T-test for unrelated samples\" is incorrect because it is only applicable for comparing means between two unrelated groups, not three or more. The \"Chi-square test for contingency tables\" is not suitable because it analyzes nominal data rather than interval or ratio data and does not produce an F-ratio as a test statistic. Lastly, the \"T-test for related samples\" is inappropriate because it is used for comparing means of two related groups, rather than for three or more unrelated groups.",
       "kn": "KN53",
       "kn_explanation": "This question involves analytic methods and statistical interpretation relevant to the use of ANOVA covered in KN53.",
       "difficulty": "easy",
@@ -69,7 +69,7 @@
         "1 and 35"
       ],
       "answer": "2 and 33",
-      "explanation": "Degrees of freedom for MSB are C-1 = 3-1 = 2; for MSW are N - C = 36 - 3 = 33.",
+      "explanation": "1. The correct answer is \"2 and 33\" because in a one-way ANOVA, the degrees of freedom for the mean square between groups (MSB) is calculated as the number of groups minus one (C-1), where C is the number of levels of the independent variable. In this case, there are 3 groups (C = 3), so the degrees of freedom for MSB is 3 - 1 = 2. The degrees of freedom for the mean square within groups (MSW) is calculated as the total number of participants minus the number of groups (N-C). With 36 participants (N = 36) and 3 groups, the degrees of freedom for MSW is 36 - 3 = 33.\n\n2. The option \"3 and 36\" is incorrect because it misapplies the calculations for degrees of freedom, mistakenly suggesting that both MSB and MSW should equal the total number of participants. The option \"35 and 2\" is wrong because it incorrectly assigns the degrees of freedom for MSB as 35, which is not possible since it exceeds the total number of participants. The option \"1 and 35\" is incorrect because it miscalculates the degrees of freedom for MSB as 1, which would only apply if there were 2 groups (C-1 = 1).",
       "kn": "KN53",
       "kn_explanation": "Understanding degrees of freedom calculations in analysis of variance is a key element of analytic methods and statistical interpretation in KN53.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Conducting separate t-tests without adjustment to preserve Type I error at .05 per test"
       ],
       "answer": "Dividing the overall alpha level by the number of statistical tests to control the experimentwise error rate",
-      "explanation": "Bonferroni correction adjusts the alpha level by dividing it by the number of comparisons to reduce the increased chance of Type I error from multiple testing.",
+      "explanation": "1. The correct answer, \"Dividing the overall alpha level by the number of statistical tests to control the experimentwise error rate,\" accurately describes the Bonferroni procedure because it is a method used to adjust the significance level for multiple comparisons. By dividing the alpha level by the number of tests, researchers aim to reduce the risk of making Type I errors, which increases with the number of statistical tests conducted.\n\n2. The option \"Increasing the alpha level with each additional test to maintain power\" is incorrect because increasing the alpha level would actually heighten the risk of Type I errors rather than control them. The statement \"Using only one statistical test to avoid errors altogether\" is wrong because it does not address the situation of multiple comparisons, where multiple tests are necessary. Lastly, \"Conducting separate t-tests without adjustment to preserve Type I error at .05 per test\" is incorrect because this approach does not control for the cumulative Type I error rate, which can lead to misleading results when multiple t-tests are performed without adjustments.",
       "kn": "KN53",
       "kn_explanation": "This question addresses statistical interpretation and control of error rates in multiple testing, relevant to analytic methods and statistical inference in KN53.",
       "difficulty": "medium",
@@ -99,7 +99,7 @@
         "F-ratio"
       ],
       "answer": "Cohen’s d",
-      "explanation": "Cohen’s d quantifies the difference between two group means in standard deviation units, reflecting practical significance in two-group comparisons.",
+      "explanation": "1. **Cohen’s d** is the correct answer because it specifically measures the effect size when comparing the magnitude of difference between two groups on an interval or ratio dependent variable. It is calculated by dividing the mean difference between the groups by the pooled standard deviation, providing a standard deviation unit measure of the effect size, making it ideal for this type of analysis.\n\n2. The **chi-square statistic** is inappropriate because it is used for analyzing nominal data, not interval or ratio data, which is required for comparing group differences. **Pearson’s r** measures the strength and direction of a linear relationship between two variables, rather than the magnitude of difference between groups, making it unsuitable for this context. The **F-ratio** is used in ANOVA to compare variances between groups but does not directly measure effect size in terms of mean differences between two groups.",
       "kn": "KN56",
       "kn_explanation": "The question involves understanding of effect size and practical significance, fitting within statistical interpretation and analytic methods covered in KN56.",
       "difficulty": "easy",
@@ -129,7 +129,7 @@
         "T-test for unrelated samples"
       ],
       "answer": "Factorial ANOVA",
-      "explanation": "Factorial ANOVA is used when a study has two or more independent variables and a continuous dependent variable, allowing examination of main and interaction effects.",
+      "explanation": "1. The correct answer is \"Factorial ANOVA\" because this statistical test is specifically designed to analyze data with more than one independent variable. In this case, there are two independent variables, each with two levels, and one continuous dependent variable, making the factorial ANOVA the appropriate choice to evaluate the interaction effects and main effects of the independent variables on the dependent variable.\n\n2. The \"One-way ANOVA\" is incorrect because it is used when there is only one independent variable with more than two levels, not multiple independent variables. The \"Multiple-sample chi-square test\" is inappropriate because this test is designed for nominal data and is used to analyze relationships between categorical variables, not continuous dependent variables. Lastly, the \"T-test for unrelated samples\" is not suitable as it is used to compare the means of two groups based on one independent variable with two levels, rather than accommodating multiple independent variables.",
       "kn": "KN53",
       "kn_explanation": "Choosing appropriate analytic methods for multiple independent variables in factorial designs fits within KN53’s focus on quantitative analytic methods and study design.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "It requires fewer assumptions about normality and homogeneity of variance"
       ],
       "answer": "It controls the overall experimentwise error rate, reducing the risk of Type I error inflation",
-      "explanation": "Conducting multiple t-tests increases probability of Type I error, while one-way ANOVA maintains the experimentwise error rate at the specified alpha level.",
+      "explanation": "1. The correct answer, \"It controls the overall experimentwise error rate, reducing the risk of Type I error inflation,\" is accurate because using a one-way ANOVA allows researchers to make all comparisons between group means simultaneously while maintaining the alpha level set by the researcher. In contrast, conducting multiple t-tests increases the probability of making at least one Type I error, as each t-test carries its own risk of error, leading to an inflated overall error rate.\n\n2. The option \"It increases statistical power by ignoring variance within groups\" is incorrect because a one-way ANOVA does not ignore variance; instead, it accounts for both between-group and within-group variance to assess differences. The statement \"It allows for separate hypothesis testing for each pair of groups independently\" is wrong because a one-way ANOVA tests all groups together rather than treating each pairwise comparison as an independent hypothesis test. Lastly, the option \"It requires fewer assumptions about normality and homogeneity of variance\" is misleading because a one-way ANOVA still requires these assumptions, and if they are violated, alternative methods or nonparametric tests should be considered.",
       "kn": "KN53",
       "kn_explanation": "This question addresses statistical inference and error control in hypothesis testing, topics central to analytic methods and statistics in KN53.",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Comparing mean scores of three unrelated treatment groups"
       ],
       "answer": "Comparing pre- and post-treatment test scores of the same participants",
-      "explanation": "The related samples t-test is used when comparing two means from related observations, such as pretest-posttest measures from the same individuals.",
+      "explanation": "1. The correct answer, \"Comparing pre- and post-treatment test scores of the same participants,\" is appropriate for a t-test for related samples because this test is specifically designed to analyze situations where the same subjects are measured twice, such as before and after an intervention. This design creates a natural pairing of scores, allowing for the assessment of changes in scores due to the treatment.\n\n2. The first incorrect option, \"Comparing scores between two independent groups randomly assigned to separate treatments,\" is wrong because it necessitates a t-test for unrelated samples, which compares means from two different groups rather than the same group measured at two points in time. The second option, \"Comparing frequencies of categorical responses between two independent samples,\" is incorrect as it requires a chi-square test, which is used for nominal data rather than means from interval or ratio data. Lastly, the third option, \"Comparing mean scores of three unrelated treatment groups,\" is not suitable because it calls for a one-way ANOVA, which is used when comparing means across more than two groups, rather than a t-test, which is limited to two groups.",
       "kn": "KN53",
       "kn_explanation": "This question focuses on selecting the correct inferential test based on participant relatedness and design, fitting analytic methods content in KN53.",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "T-test for unrelated samples"
       ],
       "answer": "Multivariate analysis of variance (MANOVA)",
-      "explanation": "MANOVA is used when there are multiple dependent variables measured on interval or ratio scales and one or more independent variables, allowing for simultaneous tests of group differences.",
+      "explanation": "1. The correct answer is \"Multivariate analysis of variance (MANOVA)\" because this statistical test is specifically designed to analyze data that includes one or more independent variables and two or more dependent variables, all measured on interval or ratio scales. MANOVA allows researchers to assess the impact of independent variables on multiple dependent variables simultaneously, making it suitable for studies with complex relationships among variables.\n\n2. The \"One-way ANOVA\" is incorrect because it is used when there is only one independent variable with more than two levels and one dependent variable, not multiple dependent variables. The \"Chi-square test for contingency tables\" is also incorrect as it is used for analyzing nominal data and does not accommodate interval or ratio scales or multiple dependent variables. Lastly, the \"T-test for unrelated samples\" is inappropriate because it is limited to comparing means from two groups for a single dependent variable, rather than handling multiple dependent variables as required in this question.",
       "kn": "KN53",
       "kn_explanation": "This question involves selecting a statistical test appropriate for multiple dependent variables, which aligns with analytic methods in KN53.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "To test differences between paired samples on ordinal data"
       ],
       "answer": "To examine whether a significant linear or nonlinear relationship exists between one or more quantitative independent variables and one dependent variable",
-      "explanation": "Trend analysis tests for specific patterns (linear, quadratic, cubic, quartic) in the relationship between quantitative independent variables and dependent variable outcomes.",
+      "explanation": "1. The correct answer, \"To examine whether a significant linear or nonlinear relationship exists between one or more quantitative independent variables and one dependent variable,\" is accurate because trend analysis is specifically designed to assess relationships between quantitative variables. It allows researchers to determine if changes in independent variables correspond to changes in the dependent variable, capturing both linear and nonlinear trends.\n\n2. The option \"To compare means of three or more groups on a categorical dependent variable\" is incorrect because this describes the one-way ANOVA, which is used for comparing means rather than analyzing relationships. The statement \"To control for extraneous variables in experimental designs\" is also wrong, as this function is characteristic of ANCOVA or randomized block ANOVA, not trend analysis. Lastly, \"To test differences between paired samples on ordinal data\" is incorrect because this describes tests like the Wilcoxon signed-rank test, which is not the focus of trend analysis, which deals with quantitative independent variables and their relationships with a dependent variable.",
       "kn": "KN53",
       "kn_explanation": "This assesses understanding of a specific analytic method used to evaluate functional relationships in data, fitting within KN53’s scope.",
       "difficulty": "medium",
@@ -204,11 +204,51 @@
         "Chi-square test for independence"
       ],
       "answer": "Randomized block ANOVA",
-      "explanation": "Randomized block ANOVA includes an extraneous variable as a blocking factor to control its effects on the dependent variable, by analyzing main and interaction effects.",
+      "explanation": "1. The \"Randomized block ANOVA\" is the correct answer because it is specifically designed to control the effects of an extraneous variable by including it as an independent variable in the analysis. This method allows researchers to determine the main and interaction effects of the blocking variable on the dependent variable, thereby isolating the impact of the primary independent variable of interest.\n\n2. The \"ANCOVA\" is incorrect because, although it also controls for extraneous variables, it does so by statistically removing their effects from the dependent variable rather than including them as independent variables in the analysis. The \"One-way ANOVA\" is not suitable because it does not account for extraneous variables; it only analyzes one independent variable without controlling for any additional factors. Lastly, the \"Chi-square test for independence\" is inappropriate because it is used for analyzing nominal data and does not involve controlling for extraneous variables as an independent variable within the analysis framework.",
       "kn": "KN53",
       "kn_explanation": "This item focuses on understanding designs that control extraneous variability via blocking, which relates to advanced research design and analyses in KN53.",
       "difficulty": "hard",
       "quality_comment": "The question requires knowledge of specialized inferential designs with plausible distractors involving control of extraneous factors."
+    },
+    {
+      "stem": "In which scenario would you choose a nonparametric test instead of a parametric test?",
+      "options": [
+        "A. When the data are measured on a ratio scale and are normally distributed",
+        "B. When the sample size is small and the data are ordinal",
+        "C. When the independent variable is continuous",
+        "D. When the dependent variable is interval and variances are equal"
+      ],
+      "answer": "B. When the sample size is small and the data are ordinal",
+      "explanation": "1. The correct answer is \"B. When the sample size is small and the data are ordinal\" because nonparametric tests are designed to analyze ordinal data and are particularly useful when the sample size is small, which may violate the assumptions required for parametric tests, such as normality and homogeneity of variances. In contrast, parametric tests require interval or ratio data and assume that the data meet specific distributional requirements.\n\n2. \n- **A. When the data are measured on a ratio scale and are normally distributed:** This option is incorrect because parametric tests, such as t-tests and ANOVA, are appropriate for data measured on a ratio scale that meet normality assumptions; therefore, a nonparametric test would not be necessary in this scenario.\n- **C. When the independent variable is continuous:** This option is incorrect because the choice between parametric and nonparametric tests is based on the scale of measurement of the dependent variable and the assumptions met, not on whether the independent variable is continuous.\n- **D. When the dependent variable is interval and variances are equal:** This option is incorrect because if the dependent variable is measured on an interval scale and the variances are equal, a parametric test would be appropriate, thus making a nonparametric test unnecessary.",
+      "difficulty": "easy",
+      "kn": "KN53",
+      "kn_explanation": "This question focuses on understanding statistical test selection based on data scale and assumptions, which relates to sampling and data collection methods and statistical analysis (KN53).",
+      "quality_comment": "This question effectively assesses understanding of when to apply nonparametric tests.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "Which of the following situations would justify the use of a nonparametric test over a parametric test?",
+      "options": [
+        "A. When the sample size is large and the data are normally distributed",
+        "B. When the dependent variable is categorical and the assumptions of normality are unmet",
+        "C. When the independent variable has only two levels and data are interval",
+        "D. When the dependent variable is normally distributed and variances are assumed to be equal"
+      ],
+      "answer": "B. When the dependent variable is categorical and the assumptions of normality are unmet",
+      "explanation": "1. **Correct Answer Explanation**: Option B is correct because nonparametric tests are specifically designed for analyzing nominal and ordinal data, which are categorical in nature. Additionally, when the assumptions of normality (i.e., that the data follow a normal distribution) are unmet, a parametric test would not be appropriate, making a nonparametric test the suitable choice.\n\n2. **Incorrect Options Explanation**:\n- **A. When the sample size is large and the data are normally distributed**: This option is incorrect because parametric tests are appropriate and preferred when data are normally distributed, regardless of sample size.\n- **C. When the independent variable has only two levels and data are interval**: This is incorrect because if the data are interval and the assumptions for parametric tests are met, a t-test would be the appropriate choice, not a nonparametric test.\n- **D. When the dependent variable is normally distributed and variances are assumed to be equal**: This option is incorrect because if the dependent variable is normally distributed and the variances are equal, a parametric test is justified, making the use of a nonparametric test unnecessary.",
+      "difficulty": "hard",
+      "kn": "KN53",
+      "kn_explanation": "This question focuses on understanding statistical test selection based on data scale and assumptions, which relates to sampling and data collection methods and statistical analysis (KN53).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of statistical tests in a nuanced context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

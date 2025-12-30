@@ -24,7 +24,7 @@
         "Reducing the dose only if withdrawal symptoms develop."
       ],
       "answer": "Gradually tapering the dose over an extended period.",
-      "explanation": "Long-term use of benzodiazepines like alprazolam requires gradual tapering to prevent severe withdrawal symptoms such as rebound anxiety, seizures, or delirium.",
+      "explanation": "1. The correct answer, \"Gradually tapering the dose over an extended period,\" is appropriate because discontinuing alprazolam, a benzodiazepine, after long-term use can lead to withdrawal symptoms. The reference material highlights that discontinuation requires gradual tapering to prevent symptom reemergence and severe withdrawal symptoms, which can include rebound anxiety and depression, among others. A longer taper is especially necessary for benzodiazepines with a short half-life like alprazolam.\n\n2. The option \"Switching immediately to a barbiturate for cross-tolerance\" is incorrect because abruptly switching to another sedative can introduce additional risks and does not address the need for gradual tapering to minimize withdrawal symptoms. The option \"Replacing alprazolam with an SSRI without tapering\" is wrong because SSRIs have a delayed onset of action and do not mitigate withdrawal symptoms effectively; they also require careful management when transitioning from benzodiazepines. Lastly, \"Reducing the dose only if withdrawal symptoms develop\" is inappropriate because this reactive approach does not prevent withdrawal symptoms and could lead to severe discomfort; proactive tapering is necessary to manage withdrawal effectively.",
       "kn": "KN2",
       "kn_explanation": "This question assesses knowledge of the pharmacological management and withdrawal characteristics of anxiolytic drugs, a key component of KN2.",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Dry mouth, sweating, and headache."
       ],
       "answer": "Cognitive impairment and risk of fatal overdose especially with alcohol.",
-      "explanation": "Barbiturates cause significant central nervous system depression leading to cognitive impairment, and when combined with alcohol, they can cause potentially fatal synergistic effects.",
+      "explanation": "1. The correct answer, \"Cognitive impairment and risk of fatal overdose especially with alcohol,\" is accurate because barbiturates are known to cause significant cognitive impairment, including confusion and ataxia, as noted in the reference material. Additionally, barbiturates, like benzodiazepines, can have a lethal effect when combined with alcohol, making the risk of overdose particularly severe and warranting caution.\n\n2. The option \"Rebound anxiety upon discontinuation\" is incorrect because rebound anxiety is more characteristic of benzodiazepines rather than barbiturates. The option \"Sexual dysfunction and disorientation in older adults\" is not specific to barbiturates; while these side effects can occur, they are more commonly associated with benzodiazepines. Lastly, the option \"Dry mouth, sweating, and headache\" is incorrect as these side effects are more typical of azapirones like buspirone, rather than being the primary concerns for barbiturate use.",
       "kn": "KN2",
       "kn_explanation": "This question tests knowledge of drug adverse effects and risks associated with sedative-hypnotic barbiturates, core content in KN2.",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Alprazolam"
       ],
       "answer": "Buspirone",
-      "explanation": "Buspirone is an azapirone that treats anxiety without causing sedation, tolerance, or physical dependence, unlike benzodiazepines or barbiturates.",
+      "explanation": "1. **Buspirone** is the correct answer because it is an azapirone that is specifically indicated for treating generalized anxiety disorder and other anxiety disorders without causing sedation, dependence, or tolerance. Unlike benzodiazepines and barbiturates, which can lead to significant issues with sedation and physical dependence, buspirone offers an effective treatment option for anxiety while minimizing these risks.\n\n2. **Secobarbital** is incorrect because it is a barbiturate that enhances GABA activity, leading to sedation and a high potential for tolerance and dependence, making it unsuitable when these concerns are significant. **Lorazepam** is also incorrect; as a benzodiazepine, it is effective for anxiety but is associated with sedation, tolerance, and dependence, which are exactly the concerns highlighted in the question. Lastly, **Alprazolam**, like lorazepam, is a benzodiazepine that provides fast-acting relief for anxiety but carries similar risks of sedation and the development of tolerance and dependence, making it an inappropriate choice in this context.",
       "kn": "KN2",
       "kn_explanation": "The question focuses on pharmacological properties distinguishing anxiolytic agents, specifically drug side effect profiles, which aligns with KN2.",
       "difficulty": "easy",
@@ -69,7 +69,7 @@
         "Nicotine addiction treatment, by mimicking nicotine effects."
       ],
       "answer": "Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.",
-      "explanation": "Methadone is a synthetic opioid that helps heroin users by reducing cravings and withdrawal symptoms without producing heroin's pleasurable effects.",
+      "explanation": "1. The correct answer is \"Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.\" Methadone is a synthetic opioid that is specifically used to treat opioid dependence, particularly for individuals detoxifying from heroin. It helps manage withdrawal symptoms and cravings without producing the same euphoric effects associated with heroin, making it effective for stabilizing individuals during the detoxification process.\n\n2. The option \"Generalized anxiety disorder, due to its calming properties\" is incorrect because methadone is not primarily indicated for anxiety disorders; instead, it is used for opioid addiction treatment. The choice \"Chronic pain management, since it has no risk of tolerance or dependence\" is also wrong, as methadone does carry a risk of tolerance and dependence, similar to other opioids. Lastly, the statement \"Nicotine addiction treatment, by mimicking nicotine effects\" is incorrect because methadone is not used for nicotine addiction; instead, medications like bupropion or nicotine replacement therapies are indicated for that purpose.",
       "kn": "KN2",
       "kn_explanation": "This item assesses understanding of opioid pharmacotherapy in substance use disorders, a drug mechanism and clinical application topic in KN2.",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Seizure activity associated with anxiety disorders."
       ],
       "answer": "Physiological somatic symptoms like tremors and tachycardia.",
-      "explanation": "Propranolol, a beta-blocker, reduces somatic symptoms of anxiety (e.g., tremors, palpitations), but has less impact on psychological symptoms like apprehension or worry.",
+      "explanation": "1. The correct answer, \"Physiological somatic symptoms like tremors and tachycardia,\" is accurate because propranolol, a beta-blocker, is specifically effective in alleviating the physical symptoms associated with anxiety. Research indicates that propranolol is more effective at reducing somatic symptoms such as tremors and tachycardia than addressing the psychological symptoms like apprehension or worry.\n\n2. The option \"Cognitive symptoms such as excessive worry and fear\" is incorrect because propranolol does not primarily target cognitive aspects of anxiety; its effects are more pronounced on physiological symptoms. \"Depressive symptoms commonly comorbid with anxiety\" is also incorrect, as propranolol is not indicated for treating depression but rather focuses on the physical manifestations of anxiety. Lastly, \"Seizure activity associated with anxiety disorders\" is wrong because propranolol does not have a direct impact on seizure activity; it is used for physiological symptoms rather than seizure management.",
       "kn": "KN2",
       "kn_explanation": "This item evaluates knowledge of pharmacodynamic effects of beta-blockers in anxiety treatment, consistent with drug classification and effects in KN2.",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Short half-life drugs are usually more dangerous due to accumulation in the body."
       ],
       "answer": "Half-life is the time needed for blood drug levels to decline to 50% and guides dosing intervals.",
-      "explanation": "Drug half-life is the time required for blood concentration of the drug to fall to half its peak level and helps determine the frequency of drug dosing.",
+      "explanation": "1. The correct answer, \"Half-life is the time needed for blood drug levels to decline to 50% and guides dosing intervals,\" accurately defines drug half-life as the duration required for the concentration of a drug in the bloodstream to decrease by half. This measurement is crucial in medication management because it helps determine the appropriate intervals between doses, ensuring effective therapeutic levels while minimizing toxicity and side effects.\n\n2. The first incorrect option, \"Half-life refers to the time for the drug's therapeutic effect to be noticeable,\" is wrong because half-life specifically measures the decline of drug concentration in the blood, not the onset of therapeutic effects, which can vary independently of half-life. The second incorrect option, \"Older adults typically have shorter drug half-lives due to faster metabolism,\" is incorrect because older adults generally experience longer drug half-lives due to age-related changes in metabolism and elimination processes. Lastly, the option \"Short half-life drugs are usually more dangerous due to accumulation in the body\" is misleading; short half-life drugs typically do not accumulate in the body as they are eliminated quickly, whereas drugs with longer half-lives are more likely to accumulate and pose a risk of toxicity.",
       "kn": "KN2",
       "kn_explanation": "This question assesses foundational pharmacokinetic concepts relevant to drug action and dosing, a key pharmacological principle in KN2.",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "It produces no adverse effects at therapeutic levels."
       ],
       "answer": "Its effective dose is equal to or greater than its lethal or toxic dose, requiring close monitoring.",
-      "explanation": "A narrow therapeutic window means the drug’s effective dose is close to or overlaps with the toxic or lethal dose, necessitating careful dosing and monitoring.",
+      "explanation": "1. The correct answer, \"Its effective dose is equal to or greater than its lethal or toxic dose, requiring close monitoring,\" accurately describes a drug with a narrow therapeutic window. In this context, the effective dose (ED50) is the minimum dose that produces the desired therapeutic effect, while the lethal dose (LD50) or toxic dose (TD50) is the minimum dose that causes harmful or lethal effects. When the ED50 is equal to or higher than the LD50 or TD50, it indicates that the drug is not very safe and necessitates careful monitoring to avoid potentially dangerous outcomes.\n\n2. The option \"Its effective dose is much lower than its toxic dose, making it very safe\" is incorrect because a narrow therapeutic window implies that the effective dose is not much lower than the toxic dose, which actually indicates a lack of safety. The statement \"It typically requires no dosing adjustments for older adults\" is wrong because drugs with a narrow therapeutic window often require careful dosing adjustments, especially in older adults due to altered metabolism and increased sensitivity. Lastly, the option \"It produces no adverse effects at therapeutic levels\" is incorrect since a narrow therapeutic window suggests that adverse effects can occur at or near therapeutic levels, highlighting the need for monitoring.",
       "kn": "KN2",
       "kn_explanation": "Understanding therapeutic index and drug safety is fundamental to pharmacology, which fits well within KN2’s scope of drug classification and safety.",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Modafinil"
       ],
       "answer": "Atomoxetine",
-      "explanation": "Atomoxetine, a norepinephrine reuptake inhibitor, is a commonly prescribed nonstimulant second-line treatment for ADHD, especially when stimulants are not tolerated.",
+      "explanation": "1. **Correct Answer: Atomoxetine**  \nAtomoxetine is the correct answer because it is classified as a second-line medication for treating ADHD, specifically designed for patients who cannot tolerate the side effects of stimulant medications. As a norepinephrine reuptake inhibitor, it effectively improves core symptoms of ADHD and is particularly beneficial for individuals with comorbid conditions such as tic disorders or anxiety.\n\n2. **Incorrect Options:**\n- **Methylphenidate:** This is a first-line psychostimulant treatment for ADHD, not a second-line option, and can cause side effects that some patients may find intolerable.\n- **Amphetamine-dextroamphetamine:** Like methylphenidate, this is also a first-line stimulant treatment for ADHD and is not suitable for patients who cannot tolerate stimulant side effects.\n- **Modafinil:** While modafinil is a wakefulness-promoting agent, it is not recognized as a standard treatment for ADHD and does not serve as a second-line option for managing ADHD symptoms.",
       "kn": "KN2",
       "kn_explanation": "This question targets knowledge about pharmacological treatment alternatives for ADHD, an important clinical drug application in KN2.",
       "difficulty": "medium",
@@ -144,7 +144,7 @@
         "Rivastigmine"
       ],
       "answer": "Memantine",
-      "explanation": "Memantine is an NMDA receptor antagonist approved for moderate to severe Alzheimer's disease that works by regulating glutamate, unlike cholinesterase inhibitors which affect acetylcholine.",
+      "explanation": "1. **Correct Answer - Memantine:** Memantine is the FDA-approved NMDA receptor antagonist specifically indicated for moderate to severe Alzheimer's disease. It is believed to exert its effects by regulating the activity of glutamate, which is important for learning and memory functions that are impaired in Alzheimer's disease.\n\n2. **Incorrect Options:**\n   - **Donepezil:** Donepezil is a cholinesterase inhibitor approved for mild and moderate Alzheimer's disease, but it does not specifically target glutamate activity or is indicated for severe Alzheimer's disease.\n   - **Galantamine:** Similar to donepezil, galantamine is also a cholinesterase inhibitor approved for mild to moderate Alzheimer's disease and does not have a mechanism related to glutamate regulation.\n   - **Rivastigmine:** Rivastigmine is another cholinesterase inhibitor used for mild to moderate Alzheimer's disease and does not function through the regulation of glutamate activity.",
       "kn": "KN2",
       "kn_explanation": "This assesses knowledge of Alzheimer's pharmacotherapy and drug mechanisms outside classical neurotransmitter systems, fitting in KN2.",
       "difficulty": "hard",
@@ -159,7 +159,7 @@
         "Postural hypotension"
       ],
       "answer": "Insomnia and decreased appetite",
-      "explanation": "Psychostimulants commonly cause insomnia and decreased appetite in children, along with nervousness and abdominal pain.",
+      "explanation": "1. \"Insomnia and decreased appetite\" is the correct answer because psychostimulant medications, such as methylphenidate and amphetamine-dextroamphetamine, are known to cause these side effects in children. These medications increase dopamine and norepinephrine activity in the prefrontal cortex, which can lead to insomnia as a result of heightened alertness, and decreased appetite due to their stimulating effects on the central nervous system.\n\n2. \n- **Increased appetite and weight gain**: This option is incorrect because psychostimulants typically suppress appetite rather than increase it, leading to potential weight loss rather than weight gain.\n- **Seizures and hallucinations**: While seizures can occur with some medications, they are not common side effects of psychostimulants for ADHD; hallucinations are also not typical side effects associated with these medications.\n- **Postural hypotension**: This is incorrect as postural hypotension is not a commonly reported side effect of psychostimulant medications; instead, they may cause increased blood pressure or heart rate.",
       "kn": "KN2",
       "kn_explanation": "This question targets knowledge about side effect profiles of stimulant treatments for ADHD, focusing on clinical pharmacology in KN2.",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "Topiramate"
       ],
       "answer": "Bupropion",
-      "explanation": "Bupropion was initially an antidepressant but also reduces nicotine cravings and withdrawal symptoms, aiding smoking cessation.",
+      "explanation": "1. **Correct Answer: Bupropion**  \nBupropion is the correct answer because it was originally developed to treat major depressive disorder and has been found to effectively prevent relapse following smoking cessation by reducing nicotine craving and withdrawal symptoms. This dual action makes it a valuable pharmacological treatment for tobacco use disorder.\n\n2. **Incorrect Options:**\n- **Nicotine Replacement Therapy (NRT):** NRT is designed to provide a stable, low level of nicotine to prevent withdrawal symptoms but does not directly reduce cravings in the same way bupropion does.\n- **Varenicline:** While varenicline reduces nicotine craving and the rewarding effects of smoking, it was not originally developed as an antidepressant, distinguishing it from bupropion.\n- **Topiramate:** Topiramate is an anti-seizure medication used off-label for alcohol use disorder and is not primarily indicated for tobacco use disorder, nor does it have the same mechanism of action as bupropion.",
       "kn": "KN2",
       "kn_explanation": "This question assesses pharmacological interventions for substance use disorders, an essential part of KN2's drug mechanism and treatment focus.",
       "difficulty": "medium",
@@ -189,7 +189,7 @@
         "Glutamatergic system"
       ],
       "answer": "GABAergic system",
-      "explanation": "Benzodiazepines act as agonists at GABA receptors, enhancing GABAergic inhibition leading to anxiolytic and sedative effects.",
+      "explanation": "1. The correct answer is the \"GABAergic system\" because benzodiazepines act as agonists at GABA receptors, which increases GABA activity in the brain. This enhancement of GABAergic activity is responsible for their anxiolytic and sedative effects, helping to alleviate anxiety and promote relaxation.\n\n2. The \"dopaminergic system\" is incorrect because benzodiazepines do not primarily influence dopamine levels; their main action is on GABA receptors. The \"serotonergic system\" is also wrong, as benzodiazepines do not directly target serotonin receptors; instead, they focus on enhancing GABAergic neurotransmission. Lastly, the \"glutamatergic system\" is incorrect because benzodiazepines do not primarily affect glutamate, which is the main excitatory neurotransmitter, but rather work to inhibit neuronal activity through GABA.",
       "kn": "KN2",
       "kn_explanation": "Understanding the mechanism of benzodiazepines involves knowledge of neurotransmitter systems, a fundamental topic in KN2.",
       "difficulty": "easy",
@@ -204,7 +204,7 @@
         "Development of physical dependence causing withdrawal symptoms"
       ],
       "answer": "Suppression of growth that can be reversed during drug-free periods",
-      "explanation": "Psychostimulants can suppress growth in children, but this effect can be mitigated by drug holidays during school vacations to allow catch-up growth.",
+      "explanation": "1. \"Suppression of growth that can be reversed during drug-free periods\" is the correct answer because psychostimulants, while effective for treating ADHD, can have side effects that include decreased appetite and weight loss, which may lead to growth suppression in children. Implementing \"drug holidays\" during school vacations allows for periods without medication, enabling children to regain their appetite and potentially reverse any growth suppression that occurred during treatment.\n\n2. The option \"Development of drug tolerance leading to loss of efficacy\" is incorrect because the reference material does not indicate that tolerance is a significant concern for psychostimulants in the context of ADHD treatment. \"Accumulation of toxic metabolites causing adverse effects\" is also incorrect, as the material does not mention the accumulation of toxic metabolites as a concern for psychostimulants used in ADHD. Lastly, \"Development of physical dependence causing withdrawal symptoms\" is incorrect because, while dependence can occur with some medications, the reference does not suggest that physical dependence or withdrawal symptoms are a primary issue with psychostimulants for ADHD, especially since they are typically prescribed in a controlled manner.",
       "kn": "KN2",
       "kn_explanation": "This question highlights an important clinical pharmacological consideration related to ADHD medications and their side effects, fitting within drug effects and management (KN2).",
       "difficulty": "medium",
@@ -219,7 +219,7 @@
         "Anticonvulsants"
       ],
       "answer": "Benzodiazepines",
-      "explanation": "Benzodiazepines can sometimes have paradoxical effects such as excitability, anxiety, and agitation particularly in children and older adults despite their usual sedative properties.",
+      "explanation": "1. **Benzodiazepines** are the correct answer because they can cause a paradoxical effect, leading to increased excitability and anxiety, particularly in children and older adults. This is in contrast to their primary use of reducing anxiety and promoting sedation. The reference material highlights that while benzodiazepines are designed to alleviate anxiety, they can sometimes produce the opposite effect in certain populations.\n\n2. **Barbiturates** are incorrect because, although they can also produce paradoxical excitement, the reference material does not emphasize this effect as significantly as it does for benzodiazepines. **Beta-blockers** are not associated with paradoxical excitability; rather, they are used to treat anxiety and are noted for alleviating somatic symptoms rather than psychological symptoms. **Anticonvulsants** are primarily used to treat seizures and bipolar disorder and do not have a noted tendency to cause increased anxiety or excitability as a side effect.",
       "kn": "KN2",
       "kn_explanation": "This item addresses drug side effect profiles, specifically paradoxical reactions to benzodiazepines, a relevant topic in drug action and adverse effects (KN2).",
       "difficulty": "medium",
@@ -234,11 +234,51 @@
         "Enhancement of GABAergic neurotransmission to promote relaxation"
       ],
       "answer": "Inhibition of beta-adrenergic receptors to reduce sympathetic nervous system stimulation",
-      "explanation": "Beta-blockers reduce the physical symptoms of anxiety by blocking beta-adrenergic receptors, thereby inhibiting sympathetic nervous system activity like tachycardia and tremors.",
+      "explanation": "1. The correct answer, \"Inhibition of beta-adrenergic receptors to reduce sympathetic nervous system stimulation,\" accurately describes the pharmacological action of beta-blockers like propranolol. These medications work by inhibiting the activity of the sympathetic nervous system, which helps alleviate somatic symptoms of anxiety, such as increased heart rate and tremors, thus providing a calming effect during anxiety-provoking situations.\n\n2. The first incorrect option, \"Inhibition of norepinephrine reuptake in the central nervous system,\" is wrong because beta-blockers do not primarily act on norepinephrine reuptake; this action is characteristic of norepinephrine reuptake inhibitors, not beta-blockers. The second incorrect option, \"Blockade of alpha-1 adrenergic receptors to reduce anxiety-associated tremor,\" is incorrect because beta-blockers primarily target beta-adrenergic receptors rather than alpha-1 receptors, which are not the main mechanism involved in reducing anxiety. Finally, the option \"Enhancement of GABAergic neurotransmission to promote relaxation\" is incorrect because this action is associated with benzodiazepines and other drugs that enhance GABA activity, rather than with beta-blockers, which do not have a direct effect on GABAergic neurotransmission.",
       "kn": "KN2",
       "kn_explanation": "This question assesses understanding of the pharmacodynamics of beta-blockers in anxiety treatment, consistent with drug mechanism knowledge in KN2.",
       "difficulty": "medium",
       "quality_comment": "The options provide plausible pharmacological actions, requiring precise knowledge of adrenergic receptor pharmacology."
+    },
+    {
+      "stem": "What is a primary reason benzodiazepines are often preferred for acute anxiety episodes over other medications?",
+      "options": [
+        "They are non-addictive and safe for long-term use.",
+        "They act quickly to reduce anxiety symptoms.",
+        "They are effective for treating depression as well.",
+        "They have minimal side effects compared to all other medications."
+      ],
+      "answer": "They act quickly to reduce anxiety symptoms.",
+      "explanation": "1. The correct answer, \"They act quickly to reduce anxiety symptoms,\" is accurate because benzodiazepines are known for their fast-acting properties, providing immediate short-term relief from acute anxiety. These medications increase GABA activity by acting as agonists at GABA receptors, which leads to a rapid calming effect, making them particularly useful in situations requiring prompt intervention for anxiety.\n\n2. The option \"They are non-addictive and safe for long-term use\" is incorrect because benzodiazepines can lead to tolerance, dependence, and withdrawal symptoms with long-term use, making them not safe for prolonged periods. The statement \"They are effective for treating depression as well\" is misleading since benzodiazepines primarily address anxiety and have less impact on cognitive symptoms compared to antidepressants, which are more effective for depression. Lastly, \"They have minimal side effects compared to all other medications\" is false; while benzodiazepines may be effective, they are associated with common side effects such as drowsiness, sedation, and impaired memory, and can cause paradoxical effects, especially in certain populations.",
+      "difficulty": "easy",
+      "kn": "KN2",
+      "kn_explanation": "This question focuses on drug mechanisms and clinical application of anxiolytics, which falls under drug classification, mechanisms of action, and therapeutic effects (KN2).",
+      "quality_comment": "This question effectively tests the understanding of the unique characteristics of benzodiazepines in treating anxiety.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In the context of treating panic attacks, which of the following statements accurately reflects a significant benefit of using benzodiazepines?",
+      "options": [
+        "They can prevent future panic attacks when taken regularly.",
+        "They provide immediate relief from overwhelming panic symptoms.",
+        "They are the first-line treatment for chronic anxiety disorders.",
+        "They are less likely to cause withdrawal symptoms than SSRIs."
+      ],
+      "answer": "They provide immediate relief from overwhelming panic symptoms.",
+      "explanation": "1. The statement \"They provide immediate relief from overwhelming panic symptoms.\" is correct because benzodiazepines are fast-acting medications that increase GABA activity, providing quick relief from acute anxiety and panic symptoms. This rapid onset is particularly beneficial during panic attacks, where immediate symptom alleviation is critical for the patient’s comfort and safety.\n\n2. The statement \"They can prevent future panic attacks when taken regularly.\" is incorrect because benzodiazepines are not preventive medications; they are primarily used for short-term relief and do not address the underlying causes of panic attacks. The option \"They are the first-line treatment for chronic anxiety disorders.\" is also wrong, as first-line treatments for chronic anxiety disorders typically include SSRIs and SNRIs, which are more effective for long-term management. Finally, the statement \"They are less likely to cause withdrawal symptoms than SSRIs.\" is misleading because benzodiazepines can lead to tolerance and withdrawal symptoms with chronic use, while SSRIs generally have a more gradual discontinuation process and are less likely to cause severe withdrawal effects.",
+      "difficulty": "hard",
+      "kn": "KN2",
+      "kn_explanation": "This question focuses on drug mechanisms and clinical application of anxiolytics, which falls under drug classification, mechanisms of action, and therapeutic effects (KN2).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of benzodiazepines in a specific clinical scenario, enhancing understanding of their application.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }

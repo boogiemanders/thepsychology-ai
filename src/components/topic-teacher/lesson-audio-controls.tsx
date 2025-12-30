@@ -38,6 +38,14 @@ function estimateSyllables(word: string): number {
   return matches ? Math.max(1, matches.length) : 1
 }
 
+function extractAudioKeyFromPublicUrl(url: string): string | null {
+  if (!url) return null
+  const base = url.split('#')[0]?.split('?')[0] ?? ''
+  const file = base.split('/').pop() ?? ''
+  const match = file.match(/^([a-f0-9]{64})\.mp3$/i)
+  return match?.[1] ?? null
+}
+
 function computeWordProgressMap(text: string): number[] {
   const matches = Array.from(text.matchAll(WORD_REGEX))
   if (matches.length === 0) return []
@@ -109,6 +117,27 @@ function findWordIndexForRatio(progressMap: number[], ratio: number): number {
   while (lo <= hi) {
     const mid = Math.floor((lo + hi) / 2)
     if (progressMap[mid] < ratio) {
+      lo = mid + 1
+    } else {
+      hi = mid - 1
+    }
+  }
+  return Math.min(Math.max(lo, 0), lastIndex)
+}
+
+function findWordIndexForEndTimes(endTimes: number[], seconds: number): number {
+  if (endTimes.length === 0) return 0
+  if (!Number.isFinite(seconds) || seconds <= 0) return 0
+
+  const lastIndex = endTimes.length - 1
+  if (seconds >= (endTimes[lastIndex] ?? 0)) return lastIndex
+
+  let lo = 0
+  let hi = lastIndex
+  while (lo <= hi) {
+    const mid = Math.floor((lo + hi) / 2)
+    const end = endTimes[mid] ?? 0
+    if (end < seconds) {
       lo = mid + 1
     } else {
       hi = mid - 1

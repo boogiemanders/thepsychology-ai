@@ -24,7 +24,7 @@
         "Purple and green"
       ],
       "answer": "Blue and yellow",
-      "explanation": "The opponent-process theory posits three opponent pairs: red/green, blue/yellow, and white/black. Blue and yellow form one of these opponent channels involved in color processing beyond the retina.",
+      "explanation": "1. \"Blue and yellow\" is the correct answer because, according to opponent-process theory, color vision is based on three pairs of opponent colors: red/green, blue/yellow, and white/black. This theory posits that the visual system processes these color pairs in opposing channels, meaning that the activation of one color in a pair inhibits the perception of the other color, making blue and yellow a valid opposing pair.\n\n2. The option \"Red and blue\" is incorrect because, while both colors are part of the color spectrum, they are not processed as opposites in the opponent-process theory; instead, red is paired with green. \"Green and orange\" is also incorrect since green is paired with red in the opponent-process model, and orange is not one of the defined opponent color pairs. Lastly, \"Purple and green\" is wrong because purple is not an opponent color of green in this theory; green is paired with red, while purple is typically associated with blue in terms of color processing.",
       "kn": "KN11",
       "kn_explanation": "This tests knowledge of visual perception theories related to color processing, fitting within elements of sensation and perception (KN11).",
       "difficulty": "medium",
@@ -39,7 +39,7 @@
         "Monochromacy"
       ],
       "answer": "Red-green color blindness",
-      "explanation": "Red-green color blindness is commonly due to a recessive gene on the X chromosome, making it more common in males who have only one X chromosome inherited from their mothers.",
+      "explanation": "1. \"Red-green color blindness\" is the correct answer because it is the most frequent type of color blindness and is primarily caused by a recessive gene located on the X chromosome. This genetic basis explains why it affects males more often than females; males have only one X chromosome, so inheriting a single mutated gene is sufficient for them to develop color blindness, while females require two copies of the mutated gene from both parents.\n\n2. The incorrect options are as follows:\n- **Blue-yellow color blindness**: This type of color blindness is caused by an autosomal dominant gene, which affects males and females equally, rather than being linked to the X chromosome.\n- **Total color blindness (achromatopsia)**: Achromatopsia is a different condition characterized by a complete inability to perceive color, which is not specifically linked to the X chromosome or more common in males.\n- **Monochromacy**: Monochromacy refers to a condition where an individual perceives no color at all, and it is not specifically associated with the X chromosome or gender differences in prevalence.",
       "kn": "KN4",
       "kn_explanation": "This question addresses genetic transmission of color vision deficiencies, specifically X-linked recessive inheritance, related to behavioral genetics (KN4).",
       "difficulty": "medium",
@@ -54,7 +54,7 @@
         "Motion parallax"
       ],
       "answer": "Retinal disparity",
-      "explanation": "Retinal disparity occurs because each eye views an object from a slightly different angle, and the brain combines these views to perceive depth, a binocular cue important for nearby objects.",
+      "explanation": "1. **Retinal disparity** is the correct answer because it specifically refers to the difference in the images perceived by each eye due to their slightly different positions. This binocular cue is essential for depth perception, as the brain integrates these two images to gauge the distance of objects, with greater disparity indicating closer proximity.\n\n2. The other options are incorrect for the following reasons: \n   - **Linear perspective** is a monocular cue that relies on the convergence of parallel lines as they recede into the distance, helping to create the illusion of depth but not involving the integration of images from both eyes.\n   - **Texture gradients** are also a monocular cue that involves the gradual change in texture detail as objects recede into the background, relying on information from a single eye rather than both.\n   - **Motion parallax** is a monocular cue that describes how objects closer to the observer appear to move faster than those further away when the observer is in motion, again not requiring input from both eyes for depth perception.",
       "kn": "KN11",
       "kn_explanation": "This question evaluates understanding of depth perception cues linked to visual-spatial processing under cognition (KN11).",
       "difficulty": "medium",
@@ -69,7 +69,7 @@
         "Non-painful stimuli increase pain signal transmission for faster healing."
       ],
       "answer": "Non-painful stimuli close the spinal cord gate by activating large myelinated fibers, inhibiting pain signal transmission.",
-      "explanation": "Gate control theory proposes that large myelinated fibers transmit non-pain information and can close a spinal gate, reducing the transmission of pain signals from small fibers to the brain.",
+      "explanation": "1. The correct answer, \"Non-painful stimuli close the spinal cord gate by activating large myelinated fibers, inhibiting pain signal transmission,\" aligns with gate control theory. This theory posits that the spinal cord contains a \"gate\" that can be opened or closed based on the type of incoming signals. When non-painful stimuli are present, they activate larger myelinated fibers, which can effectively close the gate to pain signals transmitted by smaller unmyelinated fibers, thereby reducing the perception of pain.\n\n2. The first incorrect option, \"Non-painful stimuli deactivate nociceptors directly,\" is wrong because nociceptors are specifically responsible for detecting pain, and their deactivation is not the mechanism described in gate control theory. The second incorrect option, \"Non-painful stimuli reduce emotional response to pain via higher brain structures only,\" is incorrect because gate control theory focuses on spinal cord mechanisms rather than emotional processing in the brain. Lastly, the option \"Non-painful stimuli increase pain signal transmission for faster healing\" is incorrect because it contradicts the principle of gate control theory, which suggests that non-painful stimuli inhibit pain signal transmission rather than enhance it.",
       "kn": "KN1",
       "kn_explanation": "This question relates to neurobiological mechanisms of pain and sensory processing, best categorized under biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -84,7 +84,7 @@
         "Visual stimuli cause olfactory experiences."
       ],
       "answer": "Letters or numbers evoke specific colors automatically.",
-      "explanation": "Grapheme-color synesthesia involves the automatic association of letters or numbers with specific colors, the most common form of synesthesia.",
+      "explanation": "1. The correct answer, \"Letters or numbers evoke specific colors automatically,\" accurately describes grapheme-color synesthesia, a condition where an individual experiences a sensory cross-activation between visual stimuli (like letters and numbers) and color perception. In grapheme-color synesthesia, the perception of certain graphemes triggers an involuntary experience of color, illustrating the unique way in which sensory modalities can interact in this condition.\n\n2. The option \"Sounds trigger tactile sensations on the skin\" is incorrect because it describes a different type of synesthetic experience, not grapheme-color synesthesia, which specifically involves visual stimuli and color. \"Emotions produce automatic taste sensations\" is also incorrect as it refers to a sensory interaction involving taste and emotion, which is not related to the visual nature of grapheme-color synesthesia. Lastly, \"Visual stimuli cause olfactory experiences\" is incorrect because it suggests a combination of visual and olfactory senses, whereas grapheme-color synesthesia is specifically about the automatic association of colors with letters and numbers, not with smells.",
       "kn": "KN11",
       "kn_explanation": "The question addresses cross-modal sensory experiences and perception variations, fitting within sensation and perception (KN11).",
       "difficulty": "easy",
@@ -99,7 +99,7 @@
         "Signal detection theory"
       ],
       "answer": "Weber's law",
-      "explanation": "Weber's law states that the JND is a constant proportion of the original stimulus intensity (e.g., 2% difference in weight to detect a change).",
+      "explanation": "1. **Weber's Law** is the correct answer because it specifically predicts that the just noticeable difference (JND) for a stimulus is a constant proportion of the original stimulus intensity. For example, it states that to notice a change in weight, the second object must differ by a specific percentage (2%) from the first, regardless of the actual weight of the first object.\n\n2. **Fechner's Law** is incorrect because it describes a logarithmic relationship between psychological sensation and the magnitude of a physical stimulus, rather than focusing on a constant proportion for the JND. **Stevens's Power Law** is also incorrect as it proposes an exponential relationship between psychological sensation and physical stimulus magnitude, differing by stimulus type, rather than a constant proportion for JND. Lastly, **Signal Detection Theory** is not applicable here because it emphasizes the decision-making process in perceiving stimuli amidst background noise, rather than predicting the JND based on stimulus intensity.",
       "kn": "KN11",
       "kn_explanation": "This question concerns psychophysical principles and laws relating physical stimuli to perception, which is part of sensation and perception studies (KN11).",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Stimulus absent and correctly reported as absent"
       ],
       "answer": "Stimulus absent but reported as present",
-      "explanation": "A false alarm occurs when the stimulus is not present but a participant responds 'yes' indicating they perceive the stimulus.",
+      "explanation": "In signal detection theory, a \"false alarm\" occurs when the perceiver incorrectly reports the presence of a stimulus that is not actually there. This means that the individual has mistakenly identified a signal amidst background noise, leading to a perception that something is present when it is not. This aligns with the definition provided in the reference material, which states that a false alarm happens when the stimulus is absent, but the person indicates it is present.\n\nNow, let's examine the incorrect options:\n\n1. **Stimulus present and correctly detected**: This option is incorrect because it describes a \"hit,\" where the stimulus is indeed present, and the perceiver accurately identifies it.\n\n2. **Stimulus present but not detected**: This option is wrong because it represents a \"miss,\" which occurs when the stimulus is present, but the individual fails to recognize or report it.\n\n3. **Stimulus absent and correctly reported as absent**: This option is incorrect as it describes a \"correct rejection,\" which happens when the stimulus is not present, and the individual correctly identifies that it is absent. \n\nIn summary, a false alarm specifically refers to the misidentification of a nonexistent stimulus, whereas the other options describe accurate or incorrect responses to an actual stimulus.",
       "kn": "KN11",
       "kn_explanation": "Understanding the components of signal detection theory and decision-making processes concerning perception aligns with sensation and perception content (KN11).",
       "difficulty": "medium",
@@ -129,7 +129,7 @@
         "Signal detection theory"
       ],
       "answer": "Stevens's power law",
-      "explanation": "Stevens's power law states that sensation magnitude is related exponentially to stimulus intensity and that the exponent differs depending on the type of stimulus.",
+      "explanation": "1. **Stevens's power law** is the correct answer because it proposes an exponential relationship between psychological sensation and the magnitude of a physical stimulus, indicating that the relationship varies for different stimuli based on a specific exponent. This law is more accurate than both Weber’s and Fechner’s laws, as it accounts for the differences in how various stimuli affect sensory perception, determined through the method of magnitude estimation.\n\n2. **Fechner's law** is incorrect because it describes a logarithmic relationship between psychological sensation and physical stimulus magnitude, rather than an exponential one. **Weber's law** is also incorrect as it predicts that the just noticeable difference (JND) is a constant proportion of the original stimulus, which does not reflect the exponential relationship outlined in Stevens's power law. Lastly, **signal detection theory** is not applicable here since it focuses on the decision-making processes involved in perception, rather than the relationship between physical stimuli and psychological sensation as proposed by Stevens's power law.",
       "kn": "KN11",
       "kn_explanation": "This question tests knowledge of advanced psychophysical models explaining stimulus-sensation relationships, within perception studies (KN11).",
       "difficulty": "hard",
@@ -144,7 +144,7 @@
         "Because females inherit only one X chromosome from their mothers."
       ],
       "answer": "Because red-green color blindness is linked to a recessive gene on the X chromosome, and males have only one X chromosome.",
-      "explanation": "Males have a single X chromosome, so inheriting one recessive mutant gene causes red-green color blindness, whereas females require two copies to be affected.",
+      "explanation": "1. The correct answer states that \"red-green color blindness is linked to a recessive gene on the X chromosome, and males have only one X chromosome.\" This is accurate because red-green color blindness is primarily caused by a recessive gene located on the X chromosome. Males, having only one X chromosome inherited from their mothers, are more likely to express color blindness when they inherit the mutated gene, whereas females require the mutated gene to be present on both of their X chromosomes to exhibit the condition.\n\n2. The first incorrect option, \"Because blue-yellow color blindness affects only females,\" is wrong because blue-yellow color blindness is caused by an autosomal dominant gene, affecting both males and females equally, not just females. The second incorrect option, \"Because red-green color blindness is caused by an autosomal dominant gene,\" is incorrect because red-green color blindness is specifically linked to a recessive gene on the X chromosome, not an autosomal dominant gene. Lastly, the option \"Because females inherit only one X chromosome from their mothers,\" is incorrect because females actually inherit two X chromosomes (one from each parent), which means they require mutations on both X chromosomes to be color blind, unlike males who only need one.",
       "kn": "KN4",
       "kn_explanation": "This question focuses on the genetic basis and sex-linked inheritance patterns of color blindness, within behavioral genetics (KN4).",
       "difficulty": "medium",
@@ -159,7 +159,7 @@
         "Motion parallax"
       ],
       "answer": "Relative size",
-      "explanation": "Relative size is a monocular cue referring to the perception that smaller objects are perceived as farther away compared to objects perceived as larger.",
+      "explanation": "1. \"Relative size\" is the correct answer because it is a monocular depth cue that allows us to judge the distance of an object by comparing its size to that of other objects in the visual field. When two objects are known to be of similar size, the one that appears smaller is perceived as being farther away, helping us to determine depth based on their relative sizes.\n\n2. **Retinal disparity** is incorrect because it is a binocular cue that relies on the slightly different views each eye has of an object, rather than a single eye's perspective. **Convergence** is also incorrect as it is a binocular cue that involves the inward turning of the eyes when focusing on a close object, which does not pertain to monocular depth perception. **Motion parallax** is incorrect because it involves the perception of depth based on the relative motion of objects as we move, which is distinct from the static comparison of sizes used in relative size.",
       "kn": "KN11",
       "kn_explanation": "Assessing knowledge of depth perception cues involving vision, particularly monocular cues, falls under sensation and perception (KN11).",
       "difficulty": "easy",
@@ -174,7 +174,7 @@
         "By relying solely on the strength of the stimulus to determine perception."
       ],
       "answer": "By separating the sensory processing from decision processes and incorporating response bias and sensitivity.",
-      "explanation": "Signal detection theory posits that perception results from sensory processes combined with decision-making affected by sensitivity and decision criterion, especially under uncertainty.",
+      "explanation": "1. The correct answer, \"By separating the sensory processing from decision processes and incorporating response bias and sensitivity,\" accurately reflects the principles of signal detection theory (SDT). SDT posits that perception is influenced by both sensory information and decision-making processes, which include the perceiver's sensitivity to stimuli and their decision criterion or bias. This separation allows for a more nuanced understanding of how individuals make judgments about stimuli in the presence of uncertainty and background noise.\n\n2. The option \"By assuming sensory input is always clear and reliable\" is incorrect because SDT explicitly acknowledges that perception occurs in the presence of uncertainty and noise, rather than assuming clarity. The statement \"By predicting a linear relationship between stimulus intensity and sensation\" is wrong as SDT does not rely on linear relationships; it recognizes that the relationship can vary based on individual differences in sensitivity and decision criteria. Lastly, the option \"By relying solely on the strength of the stimulus to determine perception\" is incorrect because SDT emphasizes that perception is not determined solely by stimulus strength but also by the decision-making processes influenced by factors like motivation, fatigue, and background noise.",
       "kn": "KN11",
       "kn_explanation": "This question addresses the cognitive-affective process of integrating sensation with decision biases in perception, fitting sensation and perception knowledge (KN11).",
       "difficulty": "hard",
@@ -189,7 +189,7 @@
         "Ganglion cells"
       ],
       "answer": "Rods",
-      "explanation": "Rods are more sensitive to light, do not detect color, and support vision in dim light and peripheral vision, whereas cones function best in bright light and detect color.",
+      "explanation": "1. **Correct Answer - Rods:** Rods are the photoreceptors primarily responsible for vision in dim light and peripheral vision. They are more sensitive to light than cones and do not perceive color, making them essential for seeing in low-light conditions and detecting movement in the peripheral visual field.\n\n2. **Incorrect Options:**\n   - **Cones:** Cones are responsible for visual acuity and color perception, functioning best in bright light rather than dim light.\n   - **Bipolar cells:** Bipolar cells are not photoreceptors; they are interneurons in the retina that transmit signals from photoreceptors (rods and cones) to ganglion cells.\n   - **Ganglion cells:** Ganglion cells are also not photoreceptors; they receive input from bipolar cells and transmit visual information from the retina to the brain.",
       "kn": "KN1",
       "kn_explanation": "This question focuses on the biological basis of vision and the function of photoreceptors, which pertains to sensory neurobiology (KN1).",
       "difficulty": "easy",
@@ -204,7 +204,7 @@
         "Pictorial cues"
       ],
       "answer": "Binocular cues",
-      "explanation": "Both retinal disparity and convergence require input from both eyes and contribute to depth perception of nearby objects, classifying them as binocular cues.",
+      "explanation": "1. \"Binocular cues\" is the correct answer because retinal disparity and convergence are both depth perception cues that rely on the input from both eyes. Retinal disparity occurs when the two eyes perceive slightly different images due to their horizontal separation, while convergence refers to the inward movement of the eyes when focusing on a nearby object. Together, these cues help the brain gauge the distance of objects that are relatively close.\n\n2. **Monocular cues** are incorrect because they depend on the input from only one eye and are used for depth perception of objects at greater distances, not for those that require binocular processing. \n\n**Kinesthetic cues** are also incorrect as they refer to the sense of body position and movement, which is not directly related to visual depth perception. \n\n**Pictorial cues** are wrong because they involve techniques used in two-dimensional images to create the illusion of depth, rather than relying on the physiological mechanisms of binocular vision.",
       "kn": "KN1",
       "kn_explanation": "Understanding the neurobiological mechanisms underlying depth perception relates to sensory processing in biological bases of behavior (KN1).",
       "difficulty": "medium",
@@ -219,11 +219,51 @@
         "Distraction shifts attention to emotional pain, thereby reducing physical pain."
       ],
       "answer": "Distraction stimulates large myelinated fibers that close the spinal cord gate, reducing pain signal transmission.",
-      "explanation": "Gate control theory proposes that non-painful stimuli, such as distraction, activate large fibers that inhibit transmission of pain signals through a spinal gate system, reducing pain perception.",
+      "explanation": "1. The correct answer, \"Distraction stimulates large myelinated fibers that close the spinal cord gate, reducing pain signal transmission,\" aligns with gate control theory, which posits that small unmyelinated fibers transmit pain signals while larger myelinated fibers can inhibit these signals. When distraction occurs, it activates these larger fibers, effectively closing the \"gate\" in the spinal cord and preventing pain signals from reaching the brain, thereby reducing the perception of pain.\n\n2. The option \"Distraction decreases the sensitivity of nociceptors directly at the site of injury\" is incorrect because gate control theory does not suggest that distraction affects nociceptors; instead, it focuses on the spinal cord's role in pain signal transmission. The statement \"Guided imagery produces endorphins that deactivate pain receptors locally\" is misleading, as gate control theory does not attribute pain relief to endorphin activity but rather to the inhibition of pain signal transmission via spinal mechanisms. Lastly, \"Distraction shifts attention to emotional pain, thereby reducing physical pain\" is inaccurate because gate control theory emphasizes the physiological mechanism of pain signal modulation rather than a psychological shift in attention.",
       "kn": "KN1",
       "kn_explanation": "This question targets biological mechanisms modulating pain perception as explained by gate control theory (KN1).",
       "difficulty": "medium",
       "quality_comment": "The options provide common misconceptions about pain relief, with the correct option reflecting accurate neurobiological mechanisms."
+    },
+    {
+      "stem": "Which of the following statements best describes the role of bottom-up processing in the perception of a new musical piece?",
+      "options": [
+        "Bottom-up processing involves analyzing the melody based on previous experiences with music.",
+        "Bottom-up processing begins with the auditory input of notes and rhythms before forming an understanding of the piece.",
+        "Bottom-up processing relies solely on the lyrics of the song to interpret its meaning.",
+        "Bottom-up processing is only relevant for visual arts and does not apply to music."
+      ],
+      "answer": "Bottom-up processing begins with the auditory input of notes and rhythms before forming an understanding of the piece.",
+      "explanation": "1. The statement \"Bottom-up processing begins with the auditory input of notes and rhythms before forming an understanding of the piece\" is correct because bottom-up processing refers to data-driven processing that starts with the sensory input—in this case, the sounds of notes and rhythms in music. This initial auditory information is then processed by the brain to create an understanding of the musical piece, aligning perfectly with the definition of bottom-up processing as described in the reference material.\n\n2. The first incorrect option, \"Bottom-up processing involves analyzing the melody based on previous experiences with music,\" is wrong because this describes top-down processing, which relies on preexisting knowledge and expectations rather than starting with sensory input. The second incorrect option, \"Bottom-up processing relies solely on the lyrics of the song to interpret its meaning,\" is incorrect because bottom-up processing focuses on sensory input (like melodies and rhythms) rather than solely on lyrics, which are more abstract and involve interpretation. Finally, the third incorrect option, \"Bottom-up processing is only relevant for visual arts and does not apply to music,\" is incorrect because bottom-up processing is applicable to all sensory modalities, including auditory processing in music, not just visual arts.",
+      "difficulty": "easy",
+      "kn": "KN11",
+      "kn_explanation": "This question targets knowledge about sensation and perception processes, which falls under elements of cognition including sensation and perception (KN11).",
+      "quality_comment": "This question effectively tests understanding of bottom-up processing in a different sensory modality.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ]
+    },
+    {
+      "stem": "In a psychological experiment, participants are asked to identify shapes presented briefly on a screen. Which processing method would most likely help them recognize familiar shapes based on previous experiences?",
+      "options": [
+        "Top-down processing allows participants to use their knowledge of shapes to interpret the visual input.",
+        "Bottom-up processing enables participants to analyze each shape individually without prior knowledge.",
+        "Top-down processing is irrelevant in recognizing shapes as it relies solely on sensory input.",
+        "Bottom-up processing is faster than top-down processing in all recognition tasks."
+      ],
+      "answer": "Top-down processing allows participants to use their knowledge of shapes to interpret the visual input.",
+      "explanation": "1. The correct answer, \"Top-down processing allows participants to use their knowledge of shapes to interpret the visual input,\" is accurate because top-down processing involves the brain's use of preexisting knowledge and expectations to interpret sensory information. In this experiment, participants rely on their familiarity with shapes, drawing from past experiences to quickly recognize and interpret the shapes presented on the screen.\n\n2. The option \"Bottom-up processing enables participants to analyze each shape individually without prior knowledge\" is incorrect because bottom-up processing is data-driven and starts with sensory information, meaning it does not utilize prior knowledge or experiences. The statement \"Top-down processing is irrelevant in recognizing shapes as it relies solely on sensory input\" is also wrong, as top-down processing specifically involves the use of prior knowledge, making it highly relevant in recognizing familiar shapes. Lastly, the claim \"Bottom-up processing is faster than top-down processing in all recognition tasks\" is misleading because the speed of recognition can vary based on the context and familiarity with the shapes; top-down processing can often be quicker when prior knowledge is applicable.",
+      "difficulty": "hard",
+      "kn": "KN11",
+      "kn_explanation": "This question targets knowledge about sensation and perception processes, which falls under elements of cognition including sensation and perception (KN11).",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of processing methods in a specific experimental context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ]
     }
   ]
 }
