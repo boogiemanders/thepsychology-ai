@@ -25,8 +25,7 @@ function getDisplayPrice(tier: Tier): { amount: string; period: string } {
 
 export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
   const tiers = useMemo(() => siteConfig.pricing.pricingItems, [])
-  const defaultTier = tiers.find((tier) => tier.isPopular)?.name ?? tiers[0]?.name ?? ""
-  const [selectedTier, setSelectedTier] = useState(defaultTier)
+  const [expandedTier, setExpandedTier] = useState<string | null>(null)
   const [showPasswordFields, setShowPasswordFields] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null)
@@ -40,12 +39,11 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
     referralSource: "",
   })
 
-  const selectedTierData = tiers.find((tier) => tier.name === selectedTier) ?? tiers[0]
   const gridColsClass = tiers.length > 1 ? "md:grid-cols-2" : "md:grid-cols-1"
 
   useEffect(() => {
-    if (selectedTier) onActiveTierChange?.(selectedTier)
-  }, [onActiveTierChange, selectedTier])
+    if (expandedTier) onActiveTierChange?.(expandedTier)
+  }, [onActiveTierChange, expandedTier])
 
   useEffect(() => {
     const handleMiniPricingSelect = (e: Event) => {
@@ -53,7 +51,18 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
       const tierName = customEvent.detail?.tierName
       if (!tierName) return
       if (!tiers.some((tier) => tier.name === tierName)) return
-      setSelectedTier(tierName)
+      setExpandedTier(tierName)
+      setFormData({
+        fullName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        goals: "",
+        examDate: "",
+        referralSource: "",
+      })
+      setSubmitMessage(null)
+      setShowPasswordFields(false)
     }
 
     window.addEventListener("mini-pricing-select", handleMiniPricingSelect)
@@ -104,7 +113,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
         throw new Error("Unable to create account. Please try again.")
       }
 
-      const subscriptionTier = selectedTier === "Pro + Coaching" ? "pro_coaching" : "pro"
+      const subscriptionTier = expandedTier === "Pro + Coaching" ? "pro_coaching" : "pro"
 
       const profileResponse = await fetch("/api/auth/create-profile", {
         method: "POST",
@@ -139,7 +148,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
               phone: "",
               testDate: formData.examDate || "",
               thoughtsGoalsQuestions: goalParts.join(" | "),
-              tier: selectedTier,
+              tier: expandedTier,
             }),
           })
         } catch (submissionError) {
@@ -160,7 +169,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
     }
   }
 
-  if (!tiers.length || !selectedTierData) return null
+  if (!tiers.length) return null
 
   return (
     <section id="get-started" className="flex flex-col items-center justify-center gap-10 pb-10 w-full relative">
@@ -174,16 +183,16 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
       </SectionHeader>
 
       <div className="w-full max-w-5xl mx-auto px-6 space-y-8">
-        <div className={cn("grid gap-4", gridColsClass)}>
+        <div className={cn("grid gap-4 items-start", gridColsClass)}>
           {tiers.map((tier) => {
             const { amount, period } = getDisplayPrice(tier)
-            const isSelected = tier.name === selectedTier
+            const isExpanded = tier.name === expandedTier
             return (
               <div
                 key={tier.name}
                 className={cn(
-                  "rounded-xl border bg-accent p-5 transition-shadow",
-                  isSelected ? "border-primary shadow-[0px_20px_60px_rgba(15,23,42,0.12)]" : "border-border"
+                  "rounded-xl border bg-accent p-5 transition-shadow flex flex-col",
+                  isExpanded ? "border-primary shadow-[0px_20px_60px_rgba(15,23,42,0.12)]" : "border-border"
                 )}
               >
                 <div className="flex items-center justify-between gap-2">
@@ -199,7 +208,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
                   {period && <span className="text-sm text-muted-foreground">/{period}</span>}
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="mt-4 space-y-2 text-sm flex-grow">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary/10 text-[10px]">
@@ -211,194 +220,214 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
                 </ul>
                 <button
                   type="button"
-                  onClick={() => setSelectedTier(tier.name)}
+                  onClick={() => {
+                    if (isExpanded) {
+                      setExpandedTier(null)
+                    } else {
+                      setExpandedTier(tier.name)
+                      setFormData({
+                        fullName: "",
+                        email: "",
+                        password: "",
+                        confirmPassword: "",
+                        goals: "",
+                        examDate: "",
+                        referralSource: "",
+                      })
+                      setSubmitMessage(null)
+                      setShowPasswordFields(false)
+                    }
+                  }}
                   className={cn(
                     "mt-5 h-10 w-full rounded-full text-sm font-medium transition-all",
-                    isSelected
+                    isExpanded
                       ? "bg-primary text-primary-foreground"
                       : "border border-border bg-background hover:bg-muted/50"
                   )}
                 >
-                  {isSelected ? "Selected" : "Select"}
+                  {isExpanded ? "Selected" : "Select"}
                 </button>
+
+                <motion.div
+                  className="overflow-hidden"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={isExpanded ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
+                  <div className="border-t border-border mt-5 pt-5 space-y-4">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                      <p className="text-sm text-muted-foreground">
+                        {tier.name === "Pro + Coaching"
+                          ? "We'll reach out to schedule coaching and billing."
+                          : "Free until Jan 31, 2026."}
+                      </p>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div>
+                        <label htmlFor={`fullName-${tier.name}`} className="block text-sm font-medium mb-2">
+                          Full Name (optional)
+                        </label>
+                        <input
+                          type="text"
+                          id={`fullName-${tier.name}`}
+                          name="fullName"
+                          value={formData.fullName}
+                          onChange={handleInputChange}
+                          placeholder="Your name"
+                          className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label htmlFor={`email-${tier.name}`} className="block text-sm font-medium mb-2">
+                          Email Address <span className="text-brand-lavender-gray">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          id={`email-${tier.name}`}
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          onFocus={() => setShowPasswordFields(true)}
+                          placeholder="your@email.com"
+                          required
+                          className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={showPasswordFields ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="space-y-4">
+                          <div>
+                            <label htmlFor={`password-${tier.name}`} className="block text-sm font-medium mb-2">
+                              Password <span className="text-brand-lavender-gray">*</span>
+                            </label>
+                            <input
+                              type="password"
+                              id={`password-${tier.name}`}
+                              name="password"
+                              value={formData.password}
+                              onChange={handleInputChange}
+                              placeholder="Minimum 6 characters"
+                              required
+                              className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          </div>
+
+                          <div>
+                            <label htmlFor={`confirmPassword-${tier.name}`} className="block text-sm font-medium mb-2">
+                              Confirm Password <span className="text-brand-lavender-gray">*</span>
+                            </label>
+                            <input
+                              type="password"
+                              id={`confirmPassword-${tier.name}`}
+                              name="confirmPassword"
+                              value={formData.confirmPassword}
+                              onChange={handleInputChange}
+                              placeholder="Re-enter password"
+                              required
+                              className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          </div>
+                        </div>
+                      </motion.div>
+
+                      <div className="border border-dashed border-border/60 rounded-lg p-4 space-y-4">
+                        <div>
+                          <label htmlFor={`goals-${tier.name}`} className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
+                            EPPP Goals
+                          </label>
+                          <textarea
+                            id={`goals-${tier.name}`}
+                            name="goals"
+                            value={formData.goals}
+                            onChange={handleInputChange}
+                            placeholder="Plans, concerns, or what success looks like."
+                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary min-h-[90px]"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor={`examDate-${tier.name}`}
+                            className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
+                          >
+                            Planned exam date
+                          </label>
+                          <input
+                            type="date"
+                            id={`examDate-${tier.name}`}
+                            name="examDate"
+                            value={formData.examDate}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor={`referralSource-${tier.name}`}
+                            className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
+                          >
+                            How did you find us? <span className="text-brand-lavender-gray">*</span>
+                          </label>
+                          <input
+                            type="text"
+                            id={`referralSource-${tier.name}`}
+                            name="referralSource"
+                            value={formData.referralSource}
+                            onChange={handleInputChange}
+                            placeholder="Friend, Social Media, Web Search"
+                            required
+                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex justify-center">
+                        <InteractiveHoverButton
+                          type="submit"
+                          disabled={isSubmitting}
+                          text={isSubmitting ? "Submitting..." : "Start"}
+                          className={cn(
+                            "transition-colors duration-150 focus-visible:outline focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/60 border border-border shadow-sm",
+                            "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
+                            "hover:!bg-brand-coral hover:!text-white dark:hover:!bg-black dark:hover:!text-white"
+                          )}
+                          hoverTextClassName="text-white dark:text-white"
+                          dotClassName="brand-coral-bg dark:brand-lavender-gray-bg"
+                        >
+                          {isSubmitting ? "Submitting..." : "Start"}
+                        </InteractiveHoverButton>
+                      </div>
+
+                      {submitMessage && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className={`p-3 rounded-lg text-sm text-center ${
+                            submitMessage.type === "success"
+                              ? "bg-green-50 text-green-700 border border-green-200"
+                              : "bg-red-50 text-red-700 border border-red-200"
+                          }`}
+                        >
+                          {submitMessage.text}
+                        </motion.div>
+                      )}
+
+                      <p className="text-xs text-foreground/60 text-center leading-relaxed">
+                        Educational tool, not therapy. Not affiliated with ASPPB.
+                      </p>
+                    </form>
+                  </div>
+                </motion.div>
               </div>
             )
           })}
-        </div>
-
-        <div className="rounded-xl border border-border bg-background p-6">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-sm text-muted-foreground">Selected plan</p>
-              <p className="text-lg font-semibold">{selectedTier}</p>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              {selectedTier === "Pro + Coaching"
-                ? "We’ll reach out to schedule coaching and billing."
-                : "Free until Jan 31, 2026."}
-            </p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-            <div>
-              <label htmlFor="fullName" className="block text-sm font-medium mb-2">
-                Full Name (optional)
-              </label>
-              <input
-                type="text"
-                id="fullName"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleInputChange}
-                placeholder="Your name"
-                className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email Address <span className="text-brand-lavender-gray">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                onFocus={() => setShowPasswordFields(true)}
-                placeholder="your@email.com"
-                required
-                className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
-
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={showPasswordFields ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="overflow-hidden"
-            >
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="password" className="block text-sm font-medium mb-2">
-                    Password <span className="text-brand-lavender-gray">*</span>
-                  </label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleInputChange}
-                    placeholder="Minimum 6 characters"
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="confirmPassword" className="block text-sm font-medium mb-2">
-                    Confirm Password <span className="text-brand-lavender-gray">*</span>
-                  </label>
-                  <input
-                    type="password"
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    value={formData.confirmPassword}
-                    onChange={handleInputChange}
-                    placeholder="Re-enter password"
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            <div className="border border-dashed border-border/60 rounded-lg p-4 space-y-4">
-              <div>
-                <label htmlFor="goals" className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
-                  EPPP Goals
-                </label>
-                <textarea
-                  id="goals"
-                  name="goals"
-                  value={formData.goals}
-                  onChange={handleInputChange}
-                  placeholder="Plans, concerns, or what success looks like."
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary min-h-[90px]"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="examDate"
-                  className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
-                >
-                  Planned exam date
-                </label>
-                <input
-                  type="date"
-                  id="examDate"
-                  name="examDate"
-                  value={formData.examDate}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="referralSource"
-                  className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
-                >
-                  How did you find us? <span className="text-brand-lavender-gray">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="referralSource"
-                  name="referralSource"
-                  value={formData.referralSource}
-                  onChange={handleInputChange}
-                  placeholder="Friend, Social Media, Web Search"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <InteractiveHoverButton
-                type="submit"
-                disabled={isSubmitting}
-                text={isSubmitting ? "Submitting..." : "Start"}
-                className={cn(
-                  "transition-colors duration-150 focus-visible:outline focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/60 border border-border shadow-sm",
-                  "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
-                  "hover:!bg-brand-coral hover:!text-white dark:hover:!bg-black dark:hover:!text-white"
-                )}
-                hoverTextClassName="text-white dark:text-white"
-                dotClassName="brand-coral-bg dark:brand-lavender-gray-bg"
-              >
-                {isSubmitting ? "Submitting..." : "Start"}
-              </InteractiveHoverButton>
-            </div>
-
-            {submitMessage && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className={`p-3 rounded-lg text-sm text-center ${
-                  submitMessage.type === "success"
-                    ? "bg-green-50 text-green-700 border border-green-200"
-                    : "bg-red-50 text-red-700 border border-red-200"
-                }`}
-              >
-                {submitMessage.text}
-              </motion.div>
-            )}
-
-            <p className="text-xs text-foreground/60 text-center leading-relaxed">
-              Educational tool, not therapy. Not affiliated with ASPPB.
-            </p>
-          </form>
         </div>
       </div>
     </section>
