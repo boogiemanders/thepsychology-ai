@@ -3036,7 +3036,7 @@ export function TopicTeacherContent() {
         )}
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto overflow-x-hidden space-y-4 mb-6 rounded-lg p-4" data-tour="lesson-content">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden space-y-4 mb-6 rounded-lg p-4 pl-12" data-tour="lesson-content">
           {messages.length === 0 && !initialized && !isLoading && (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">
