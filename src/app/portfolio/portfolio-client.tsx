@@ -235,7 +235,7 @@ export default function PortfolioClient() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 bg-background py-20">
-      <div className="mx-auto w-full max-w-2xl space-y-8 px-4">
+      <div className="mx-auto w-full max-w-2xl space-y-8 px-6">
         {/* Tab Navigation */}
         <div className="flex gap-8 border-b border-border">
           {teamMembers.map((tm, idx) => (
