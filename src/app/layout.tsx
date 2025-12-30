@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/agent-template-og.png",
+        url: "/og",
         width: 1200,
         height: 630,
-        alt: "thePsychology.ai - EPPP exam prep with practice questions",
+        alt: "thePsychology.ai",
       },
     ],
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/agent-template-og.png"],
+    images: ["/og"],
   },
 }
 
