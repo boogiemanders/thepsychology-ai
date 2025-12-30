@@ -12,7 +12,6 @@ import type { DomainPerformance } from '@/lib/priority-calculator'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
-import { SmartExplanationButton } from '@/components/smart-explanation-button'
 
 interface Question {
   id: number
@@ -542,23 +541,6 @@ export function ExpandableDomainAnalysis({
                                       </div>
                                     ) : null}
 
-                                    {/* Smart Explanation for wrong answers */}
-                                    {status === 'wrong' && selectedAnswer && (() => {
-                                      const meta = deriveTopicMetaFromSourceFile(question.source_file)
-                                      if (!meta?.topicName) return null
-                                      return (
-                                        <SmartExplanationButton
-                                          question={question.question}
-                                          options={question.options}
-                                          correctAnswer={question.correct_answer}
-                                          selectedAnswer={selectedAnswer}
-                                          topicName={meta.topicName}
-                                          domain={meta.domainId || ''}
-                                          userId={userId}
-                                        />
-                                      )
-                                    })()}
-
                                     {/* Lesson Link */}
                                     {(() => {
                                       const lessonInfo = getLessonLinkInfo(question)
@@ -912,23 +894,6 @@ export function ExpandableDomainAnalysis({
                                       </p>
                                     </div>
                                   ) : null}
-
-                                  {/* Smart Explanation for wrong answers */}
-                                  {status === 'wrong' && selectedAnswer && (() => {
-                                    const meta = deriveTopicMetaFromSourceFile(question.source_file)
-                                    if (!meta?.topicName) return null
-                                    return (
-                                      <SmartExplanationButton
-                                        question={question.question}
-                                        options={question.options}
-                                        correctAnswer={question.correct_answer}
-                                        selectedAnswer={selectedAnswer}
-                                        topicName={meta.topicName}
-                                        domain={meta.domainId || ''}
-                                        userId={userId}
-                                      />
-                                    )
-                                  })()}
 
                                   {/* Lesson Link */}
                                   {(() => {

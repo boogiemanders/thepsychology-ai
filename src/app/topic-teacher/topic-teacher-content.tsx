@@ -37,10 +37,9 @@ import { InlineSvg } from '@/components/ui/inline-svg'
 import { VariableStar } from '@/components/ui/variable-star'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
-import { SmartExplanationButton } from '@/components/smart-explanation-button'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { LessonAudioControls, type LessonAudioControlsHandle } from '@/components/topic-teacher/lesson-audio-controls'
-import { normalizeTextForReadAlong } from '@/lib/speech-text'
+import { expandNumericTokenForReadAlong, normalizeTextForReadAlong } from '@/lib/speech-text'
 import { markdownToSpeakableText } from '@/lib/speech-text'
 import { TopicTeacherTourProvider, useTopicTeacherTour } from '@/components/onboarding/TopicTeacherTourProvider'
 
@@ -102,7 +101,7 @@ type HastNode = {
   properties?: Record<string, unknown>
 }
 
-const READ_ALONG_WORD_REGEX = /[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
+const READ_ALONG_WORD_REGEX = /\d+(?:\.\d+)+|[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
 const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code'])
 const READ_ALONG_SKIP_SELECTOR = Array.from(READ_ALONG_SKIP_TAGS).join(',')
 const EPPP_WORD_REGEX = /\bE\.?P\.?P\.?P\.?\b/i
@@ -292,12 +291,19 @@ function buildReadAlongWordEntries(spans: HTMLSpanElement[]): ReadAlongWordEntry
         { word: 'triple', index },
         { word: 'p', index }
       )
-    } else if (ACRONYM_WORD_REGEX.test(text) && !ACRONYM_VOWEL_REGEX.test(text)) {
-      text.split('').forEach((letter) => {
-        entries.push({ word: letter.toLowerCase(), index })
-      })
     } else {
-      entries.push({ word: normalizeReadAlongWord(text), index })
+      const numericWords = expandNumericTokenForReadAlong(text)
+      if (numericWords.length > 0) {
+        numericWords.forEach((word) => {
+          entries.push({ word: normalizeReadAlongWord(word), index })
+        })
+      } else if (ACRONYM_WORD_REGEX.test(text) && !ACRONYM_VOWEL_REGEX.test(text)) {
+        text.split('').forEach((letter) => {
+          entries.push({ word: letter.toLowerCase(), index })
+        })
+      } else {
+        entries.push({ word: normalizeReadAlongWord(text), index })
+      }
     }
   })
   return entries
@@ -777,12 +783,21 @@ export function TopicTeacherContent() {
       if (!readAlongEnabled) return
       const audioControls = audioControlsRef.current
       if (!audioControls) return
+      if (displayToSpokenIndexRef.current.length === 0) {
+        syncReadAlongSpans()
+      }
 
-      const target = event.target as HTMLElement | null
+      const rawTarget = event.target
+      const target =
+        rawTarget instanceof Element
+          ? rawTarget
+          : rawTarget instanceof Node
+            ? rawTarget.parentElement
+            : null
       if (!target) return
       if (target.closest('a, button, input, textarea, select, label')) return
 
-      const wordEl = target.closest('span.tt-word') as HTMLSpanElement | null
+      const wordEl = target.closest('span.tt-word, span[data-tt-word-index]') as HTMLSpanElement | null
       if (!wordEl) return
       const indexAttr = wordEl.getAttribute('data-tt-word-index')
       if (!indexAttr) return
@@ -817,7 +832,7 @@ export function TopicTeacherContent() {
       if (spokenIndex === null || spokenIndex === undefined) return
       audioControls.seekToWord(spokenIndex)
     },
-    [readAlongEnabled, spokenWords.length]
+    [readAlongEnabled, spokenWords.length, syncReadAlongSpans]
   )
   const [starColor, setStarColor] = useState('#000000')
   const [showQuizColorPicker, setShowQuizColorPicker] = useState(false)
@@ -1648,34 +1663,79 @@ export function TopicTeacherContent() {
 
       // Extract base content from response headers
       const baseContentHeader = response.headers.get('X-Base-Content')
+      const baseContentLengthHeader = response.headers.get('X-Base-Content-Length')
+      const expectedBaseLength = baseContentLengthHeader ? Number.parseInt(baseContentLengthHeader, 10) : NaN
+      let baseContentLoaded = false
+
       if (baseContentHeader) {
         try {
-          // Decode from base64
           const decodedBaseContent = atob(baseContentHeader)
-          setBaseContent(decodedBaseContent)
-          console.log('[Topic Teacher] ✅ Stored base content from API headers')
+          if (Number.isFinite(expectedBaseLength) && decodedBaseContent.length !== expectedBaseLength) {
+            console.warn(
+              '[Topic Teacher] Base content header truncated; falling back to base-content endpoint.',
+              {
+                expected: expectedBaseLength,
+                received: decodedBaseContent.length,
+              }
+            )
+          } else {
+            setBaseContent(decodedBaseContent)
+            baseContentLoaded = true
+            console.log('[Topic Teacher] ✅ Stored base content from API headers')
+          }
         } catch (error) {
           console.warn('[Topic Teacher] Failed to decode base content from headers:', error)
         }
       }
 
-      const metaphorRangesHeader = response.headers.get('X-Metaphor-Ranges')
-      if (metaphorRangesHeader) {
+      if (baseContentLoaded) {
+        const metaphorRangesHeader = response.headers.get('X-Metaphor-Ranges')
+        if (metaphorRangesHeader) {
+          try {
+            const decodedRangesJson = atob(metaphorRangesHeader)
+            const parsed = JSON.parse(decodedRangesJson)
+            if (Array.isArray(parsed)) {
+              const normalized = parsed
+                .map((r) => ({
+                  start: typeof r?.start === 'number' ? r.start : NaN,
+                  end: typeof r?.end === 'number' ? r.end : NaN,
+                }))
+                .filter((r) => Number.isFinite(r.start) && Number.isFinite(r.end) && r.start >= 0 && r.end >= r.start)
+              setMetaphorRanges(normalized)
+            }
+          } catch (error) {
+            console.warn('[Topic Teacher] Failed to decode metaphor ranges header:', error)
+          }
+        }
+      } else if (topic && domain) {
         try {
-          const decodedRangesJson = atob(metaphorRangesHeader)
-          const parsed = JSON.parse(decodedRangesJson)
-          if (Array.isArray(parsed)) {
-            const normalized = parsed
-              .map((r) => ({
-                start: typeof r?.start === 'number' ? r.start : NaN,
-                end: typeof r?.end === 'number' ? r.end : NaN,
-              }))
-              .filter((r) => Number.isFinite(r.start) && Number.isFinite(r.end) && r.start >= 0 && r.end >= r.start)
-            setMetaphorRanges(normalized)
+          const baseResponse = await fetch(
+            `/api/topic-teacher/base?topic=${encodeURIComponent(topic)}&domain=${encodeURIComponent(domain ?? '')}`
+          )
+          if (baseResponse.ok) {
+            const payload = await baseResponse.json()
+            if (typeof payload?.baseContent === 'string') {
+              setBaseContent(payload.baseContent)
+            }
+            if (Array.isArray(payload?.metaphorRanges)) {
+              const normalized = payload.metaphorRanges
+                .map((r: any) => ({
+                  start: typeof r?.start === 'number' ? r.start : NaN,
+                  end: typeof r?.end === 'number' ? r.end : NaN,
+                }))
+                .filter((r: any) => Number.isFinite(r.start) && Number.isFinite(r.end) && r.start >= 0 && r.end >= r.start)
+              setMetaphorRanges(normalized)
+            }
+            console.log('[Topic Teacher] ✅ Loaded base content via API fallback')
+          } else {
+            const errorText = await baseResponse.text().catch(() => '')
+            console.warn('[Topic Teacher] Failed to load base content via API fallback:', errorText)
           }
         } catch (error) {
-          console.warn('[Topic Teacher] Failed to decode metaphor ranges header:', error)
+          console.warn('[Topic Teacher] Failed to load base content via API fallback:', error)
         }
+      } else {
+        console.warn('[Topic Teacher] Base content fallback skipped: missing topic or domain.')
       }
 
       if (!response.body) {
@@ -3766,20 +3826,6 @@ export function TopicTeacherContent() {
                     </div>
                   ) : null}
 
-                  {/* Smart Explanation for missed exam questions */}
-                  {activeMissedQuestion.selectedAnswer &&
-                   activeMissedQuestion.selectedAnswer !== activeMissedQuestion.question.correct_answer &&
-                   activeMissedQuestion.question.topicName && (
-                    <SmartExplanationButton
-                      question={activeMissedQuestion.question.question}
-                      options={activeMissedQuestion.question.options}
-                      correctAnswer={activeMissedQuestion.question.correct_answer}
-                      selectedAnswer={activeMissedQuestion.selectedAnswer}
-                      topicName={activeMissedQuestion.question.topicName}
-                      domain={activeMissedQuestion.question.domainId || ''}
-                      userId={user?.id}
-                    />
-                  )}
                 </div>
               )}
 
@@ -3876,20 +3922,6 @@ export function TopicTeacherContent() {
                     </div>
                   )}
 
-                  {/* Smart Explanation for missed quiz questions */}
-                  {activeQuizQuestion.selectedAnswer &&
-                   activeQuizQuestion.selectedAnswer !== activeQuizQuestion.correctAnswer &&
-                   decodedTopic && (
-                    <SmartExplanationButton
-                      question={activeQuizQuestion.question}
-                      options={activeQuizQuestion.options || []}
-                      correctAnswer={activeQuizQuestion.correctAnswer}
-                      selectedAnswer={activeQuizQuestion.selectedAnswer}
-                      topicName={decodedTopic}
-                      domain={domain || ''}
-                      userId={user?.id}
-                    />
-                  )}
                 </div>
               )}
             </div>

@@ -42,7 +42,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { SmartExplanationButton } from '@/components/smart-explanation-button'
 import { LockInDrillButton } from '@/components/lock-in-drill-button'
 
 interface QuizQuestion {
@@ -1213,15 +1212,6 @@ export function QuizzerContent() {
                           {/* Action buttons for wrong answers */}
                           {!isCorrect && selectedAnswer && (
                             <div className="mt-3 flex flex-wrap gap-2 items-center">
-                              <SmartExplanationButton
-                                question={q.question}
-                                options={q.options}
-                                correctAnswer={q.correctAnswer}
-                                selectedAnswer={selectedAnswer}
-                                topicName={decodedTopic || ''}
-                                domain={effectiveDomain || domain || ''}
-                                userId={user?.id}
-                              />
                               <LockInDrillButton
                                 topicName={decodedTopic || ''}
                                 domainId={domain || null}
