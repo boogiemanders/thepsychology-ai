@@ -715,7 +715,12 @@ export default function AdminRecoverPage() {
             </div>
           </div>
         </section>
-      </div>
+        </TabsContent>
+
+        <TabsContent value="marketing" className="flex-1 overflow-auto m-0">
+          <MarketingAnalytics />
+        </TabsContent>
+      </Tabs>
     </main>
   )
 }
