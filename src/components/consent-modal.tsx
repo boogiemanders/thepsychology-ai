@@ -33,8 +33,8 @@ export function ConsentModal({ open, onClose }: ConsentModalProps) {
   const [preferences, setPreferences] = useState({
     consent_personal_tracking: true,
     consent_ai_insights: true,
-    consent_research_contribution: false,
-    consent_marketing_communications: false,
+    consent_research_contribution: true,
+    consent_marketing_communications: true,
   })
 
   const handleSave = async () => {

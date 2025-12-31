@@ -35,6 +35,15 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
+import {
   ArrowLeft,
   Shield,
   GraduationCap,
@@ -43,6 +52,7 @@ import {
   Loader2,
   Check,
   Info,
+  Plus,
 } from 'lucide-react'
 
 interface GraduateProgram {
@@ -65,6 +75,14 @@ export default function SettingsPage() {
   const [selectedProgram, setSelectedProgram] = useState<string | null>(null)
   const [researchProfile, setResearchProfile] = useState<any>(null)
   const [loadingPrograms, setLoadingPrograms] = useState(false)
+  const [showAddProgram, setShowAddProgram] = useState(false)
+  const [newProgram, setNewProgram] = useState({
+    name: 'Clinical Psychology',
+    institution: '',
+    program_type: 'PhD',
+    state: '',
+  })
+  const [addingProgram, setAddingProgram] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -161,6 +179,57 @@ export default function SettingsPage() {
     alert(
       'To request data deletion, please contact support@thepsychologyai.com. Your request will be processed within 30 days.'
     )
+  }
+
+  const handleAddProgram = async () => {
+    if (!newProgram.institution.trim()) {
+      alert('Please enter the institution name')
+      return
+    }
+    if (!newProgram.state.trim()) {
+      alert('Please enter the state')
+      return
+    }
+    setAddingProgram(true)
+    try {
+      const { data: session } = await supabase.auth.getSession()
+      const response = await fetch('/api/research/programs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${session?.session?.access_token}`,
+        },
+        body: JSON.stringify({
+          ...newProgram,
+          accreditation: 'Pending',
+        }),
+      })
+      if (response.ok) {
+        const data = await response.json()
+        // Add to local list and select it
+        setPrograms((prev) => [...prev, data.program])
+        setSelectedProgram(data.program.id)
+        // Update research profile with the new program
+        await fetch('/api/research/profile', {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${session?.session?.access_token}`,
+          },
+          body: JSON.stringify({ graduate_program_id: data.program.id }),
+        })
+        setShowAddProgram(false)
+        setNewProgram({ name: 'Clinical Psychology', institution: '', program_type: 'PhD', state: '' })
+      } else {
+        const error = await response.json()
+        alert(error.error || 'Failed to add program')
+      }
+    } catch (err) {
+      console.error('Failed to add program:', err)
+      alert('Failed to add program. Please try again.')
+    } finally {
+      setAddingProgram(false)
+    }
   }
 
   useEffect(() => {
@@ -387,7 +456,7 @@ export default function SettingsPage() {
                         <div className="p-2 text-sm text-muted-foreground">Loading...</div>
                       ) : filteredPrograms.length === 0 ? (
                         <div className="p-2 text-sm text-muted-foreground">
-                          No programs found. Contact us to add yours.
+                          No programs found matching your search.
                         </div>
                       ) : (
                         filteredPrograms.map((program) => (
@@ -398,6 +467,100 @@ export default function SettingsPage() {
                       )}
                     </SelectContent>
                   </Select>
+
+                  {/* Add Program Dialog */}
+                  <Dialog open={showAddProgram} onOpenChange={setShowAddProgram}>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="sm" className="w-full">
+                        <Plus className="w-4 h-4 mr-2" />
+                        Don&apos;t see your program? Add it
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Add Your Graduate Program</DialogTitle>
+                        <DialogDescription>
+                          Enter your program details. We&apos;ll add it to the list after verification.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="space-y-4 py-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="institution">Institution Name *</Label>
+                          <Input
+                            id="institution"
+                            placeholder="e.g., Long Island University Post"
+                            value={newProgram.institution}
+                            onChange={(e) =>
+                              setNewProgram({ ...newProgram, institution: e.target.value })
+                            }
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="program-name">Program Name</Label>
+                          <Select
+                            value={newProgram.name}
+                            onValueChange={(value) => setNewProgram({ ...newProgram, name: value })}
+                          >
+                            <SelectTrigger id="program-name">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="Clinical Psychology">Clinical Psychology</SelectItem>
+                              <SelectItem value="Counseling Psychology">Counseling Psychology</SelectItem>
+                              <SelectItem value="School Psychology">School Psychology</SelectItem>
+                              <SelectItem value="Health Psychology">Health Psychology</SelectItem>
+                              <SelectItem value="Neuropsychology">Neuropsychology</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="program-type">Degree Type</Label>
+                          <Select
+                            value={newProgram.program_type}
+                            onValueChange={(value) =>
+                              setNewProgram({ ...newProgram, program_type: value })
+                            }
+                          >
+                            <SelectTrigger id="program-type">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="PhD">PhD</SelectItem>
+                              <SelectItem value="PsyD">PsyD</SelectItem>
+                              <SelectItem value="EdD">EdD</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="state">State *</Label>
+                          <Input
+                            id="state"
+                            placeholder="e.g., NY"
+                            maxLength={2}
+                            value={newProgram.state}
+                            onChange={(e) =>
+                              setNewProgram({ ...newProgram, state: e.target.value.toUpperCase() })
+                            }
+                          />
+                        </div>
+                      </div>
+                      <DialogFooter>
+                        <Button variant="outline" onClick={() => setShowAddProgram(false)}>
+                          Cancel
+                        </Button>
+                        <Button onClick={handleAddProgram} disabled={addingProgram}>
+                          {addingProgram ? (
+                            <>
+                              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                              Adding...
+                            </>
+                          ) : (
+                            'Add Program'
+                          )}
+                        </Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               )}
             </div>

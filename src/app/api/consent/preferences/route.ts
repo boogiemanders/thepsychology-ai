@@ -55,8 +55,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         consent_personal_tracking: true,
         consent_ai_insights: true,
-        consent_research_contribution: false,
-        consent_marketing_communications: false,
+        consent_research_contribution: true,
+        consent_marketing_communications: true,
         consent_version: CURRENT_CONSENT_VERSION,
         privacy_policy_version: null,
         terms_version: null,
