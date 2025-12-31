@@ -4,6 +4,8 @@ import { useMemo } from 'react'
 import Link from 'next/link'
 import { useAuth } from '@/context/auth-context'
 import { Button } from '@/components/ui/button'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { ChevronUp, Users, GraduationCap } from 'lucide-react'
 
 function getAdminAllowlist(): string[] {
   // Require explicit configuration - no hardcoded fallback for security
@@ -31,9 +33,30 @@ export function AdminFab() {
 
   return (
     <div className="fixed bottom-4 left-4 z-50">
-      <Button asChild variant="minimal" size="sm" className="text-xs opacity-60 hover:opacity-100">
-        <Link href="/admin/recover">Admin</Link>
-      </Button>
+      <Popover>
+        <PopoverTrigger asChild>
+          <Button variant="minimal" size="sm" className="text-xs opacity-60 hover:opacity-100">
+            Admin
+            <ChevronUp className="w-3 h-3 ml-1" />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent align="start" side="top" className="w-48 p-1">
+          <Link
+            href="/admin/recover"
+            className="flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors"
+          >
+            <Users className="w-4 h-4" />
+            Users & Recover
+          </Link>
+          <Link
+            href="/admin/programs"
+            className="flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors"
+          >
+            <GraduationCap className="w-4 h-4" />
+            Graduate Programs
+          </Link>
+        </PopoverContent>
+      </Popover>
     </div>
   )
 }
