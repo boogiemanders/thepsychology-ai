@@ -4,6 +4,7 @@ import { saveDevExamResult } from '@/lib/dev-exam-results-store'
 import { applyTopicMasteryDeltas, accumulateTopicMasteryDeltas, TopicAttempt } from '@/lib/topic-mastery'
 import { applyReviewQueueUpdates, type ReviewAttempt } from '@/lib/review-queue'
 import { createRecoverInsight } from '@/lib/recover-insights'
+import { checkUserMilestone } from '@/lib/user-milestones'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -155,6 +156,11 @@ export async function POST(request: NextRequest) {
 
           if (historyError) {
             console.error('Error inserting exam_history in save-exam-results:', historyError)
+          } else {
+            // Check for user milestones after successful exam_history insert
+            checkUserMilestone(supabase, userId, totalQuestions).catch(err => {
+              console.error('Error checking user milestone:', err)
+            })
           }
         } catch (historyException) {
           console.error('Exception inserting exam_history in save-exam-results:', historyException)
