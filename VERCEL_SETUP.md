@@ -13,9 +13,9 @@ The Vercel build failed because the Supabase environment variables weren't avail
 
 | Variable Name | Value |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | `https://hwkuxietvwvbgdowxzkw.supabase.co` |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3a3V4aWV0dnd2Ymdkb3d4emt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI4OTM1NTMsImV4cCI6MjA3ODQ2OTU1M30.ElDXc-JBYORsA4MGZ53y0NZfgGh9tpa81Yax9fENT6U` |
-| `NEXT_PUBLIC_APP_URL` | `https://thepsychology.ai` |
+| `NEXT_PUBLIC_SUPABASE_URL` | (Get from Supabase Dashboard → Settings → API) |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | (Get from Supabase Dashboard → Settings → API → anon/public key) |
+| `NEXT_PUBLIC_APP_URL` | Your production URL (e.g., `https://yourapp.vercel.app`) |
 
 5. Make sure both are visible in:
    - Production
@@ -41,10 +41,10 @@ The build should now succeed!
 
 ### Local Development
 
-For local development, these variables are already in your `.env.local` file:
+For local development, create a `.env.local` file with these variables:
 ```
-NEXT_PUBLIC_SUPABASE_URL=https://hwkuxietvwvbgdowxzkw.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 ```
 
 These are picked up automatically when you run `npm run dev`.
