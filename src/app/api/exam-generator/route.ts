@@ -7,6 +7,7 @@ import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { loadFullTopicContent } from '@/lib/topic-content-manager'
 import { logUsageEvent } from '@/lib/usage-events'
 import { getCaseQuestionsByKnId } from '@/lib/case-bank'
+import { sendSlackNotification } from '@/lib/notify-slack'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -431,6 +432,52 @@ export async function POST(request: NextRequest) {
 }
 
 /**
+ * Validate and normalize question options to exactly 4.
+ * If more than 4, truncates to first 4 and logs a warning.
+ * If fewer than 4, returns null to skip the question.
+ * Sends Slack alert for any invalid questions.
+ */
+function validateQuestionOptions(
+  options: any[],
+  questionId: number | string,
+  sourceFile: string | undefined
+): string[] | null {
+  if (!Array.isArray(options)) {
+    console.warn(`[Exam Generator] Q${questionId}: options is not an array, skipping`)
+    sendSlackNotification(
+      `[Exam Generator] Invalid question options\nQuestion ID: ${questionId}\nSource: ${sourceFile || 'unknown'}\nIssue: options is not an array`,
+      'feedback'
+    )
+    return null
+  }
+
+  if (options.length === 4) {
+    return options
+  }
+
+  if (options.length > 4) {
+    console.warn(
+      `[Exam Generator] Q${questionId}: has ${options.length} options, truncating to 4`
+    )
+    sendSlackNotification(
+      `[Exam Generator] Question has too many options\nQuestion ID: ${questionId}\nSource: ${sourceFile || 'unknown'}\nOption count: ${options.length} (truncated to 4)`,
+      'feedback'
+    )
+    return options.slice(0, 4)
+  }
+
+  // Fewer than 4 options - skip question
+  console.warn(
+    `[Exam Generator] Q${questionId}: has only ${options.length} options, skipping`
+  )
+  sendSlackNotification(
+    `[Exam Generator] Question has too few options\nQuestion ID: ${questionId}\nSource: ${sourceFile || 'unknown'}\nOption count: ${options.length} (skipped)`,
+    'feedback'
+  )
+  return null
+}
+
+/**
  * Load a free exam from the free-examsGPT folder.
  * For now, free exams are JSON files in free-examsGPT generated from free-questionsGPT.
  * This is used for the "free" subscription tier so they never hit Anthropic
@@ -475,9 +522,15 @@ function loadFreeExamFromGpt(examType: 'diagnostic' | 'practice') {
         : undefined
 
     const questionId = typeof q.id === 'number' ? q.id : idx + 1
-    const options = Array.isArray(q.options) ? q.options : []
     const sourceFile = q.sourceFile ?? q.source_file
     const sourceFolder = q.sourceFolder ?? q.source_folder
+
+    // Validate options count (must be exactly 4)
+    const validatedOptions = validateQuestionOptions(q.options, questionId, sourceFile)
+    if (!validatedOptions) {
+      return null // Skip questions with invalid options
+    }
+
     const explicitOrgPsych =
       typeof q.isOrgPsych === 'boolean'
         ? q.isOrgPsych
@@ -501,7 +554,7 @@ function loadFreeExamFromGpt(examType: 'diagnostic' | 'practice') {
     const mapped = {
       id: questionId,
       question: q.stem ?? q.question ?? '',
-      options,
+      options: validatedOptions,
       correct_answer: q.answer ?? q.correct_answer ?? '',
       explanation: q.explanation ?? q.rationale ?? '',
       domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
@@ -518,7 +571,7 @@ function loadFreeExamFromGpt(examType: 'diagnostic' | 'practice') {
     }
 
     return attachRelatedSections(mapped)
-  })
+  }).filter(Boolean) as any[] // Filter out nulls from skipped questions
 
   injectCaseQuestionsIntoExam(mappedQuestions, examType)
 
@@ -564,6 +617,13 @@ function loadDiagnosticFromGpt() {
         : undefined
     const sourceFile = q.sourceFile ?? q.source_file
     const sourceFolder = q.sourceFolder ?? q.source_folder
+
+    // Validate options count (must be exactly 4)
+    const validatedOptions = validateQuestionOptions(q.options, idx + 1, sourceFile)
+    if (!validatedOptions) {
+      return null // Skip questions with invalid options
+    }
+
     const isOrgPsych = inferIsOrgPsych({
       explicitFlag: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : undefined,
       sourceFile,
@@ -573,7 +633,7 @@ function loadDiagnosticFromGpt() {
     const mapped = {
       id: idx + 1,
       question: q.stem ?? q.question ?? '',
-      options: q.options ?? [],
+      options: validatedOptions,
       correct_answer: q.answer ?? q.correct_answer ?? '',
       explanation: q.explanation ?? '',
       domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
@@ -590,7 +650,7 @@ function loadDiagnosticFromGpt() {
     }
 
     return attachRelatedSections(mapped)
-  })
+  }).filter(Boolean) as any[] // Filter out nulls from skipped questions
 
   injectCaseQuestionsIntoExam(mappedQuestions, 'diagnostic')
 
@@ -634,9 +694,15 @@ function loadPracticeFromGpt() {
         : undefined
 
     const questionId = typeof q.id === 'number' ? q.id : idx + 1
-    const options = Array.isArray(q.options) ? q.options : []
     const sourceFile = q.sourceFile ?? q.source_file
     const sourceFolder = q.sourceFolder ?? q.source_folder
+
+    // Validate options count (must be exactly 4)
+    const validatedOptions = validateQuestionOptions(q.options, questionId, sourceFile)
+    if (!validatedOptions) {
+      return null // Skip questions with invalid options
+    }
+
     const isOrgPsych = inferIsOrgPsych({
       explicitFlag: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : undefined,
       sourceFile,
@@ -653,7 +719,7 @@ function loadPracticeFromGpt() {
     const mapped = {
       id: questionId,
       question: q.stem ?? q.question ?? '',
-      options,
+      options: validatedOptions,
       correct_answer: q.answer ?? q.correct_answer ?? '',
       explanation: q.explanation ?? q.rationale ?? '',
       domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
@@ -670,7 +736,7 @@ function loadPracticeFromGpt() {
     }
 
     return attachRelatedSections(mapped)
-  })
+  }).filter(Boolean) as any[] // Filter out nulls from skipped questions
 
   injectCaseQuestionsIntoExam(mappedQuestions, 'practice')
 
