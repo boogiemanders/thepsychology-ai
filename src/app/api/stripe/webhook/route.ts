@@ -2,6 +2,7 @@ import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { getSupabaseClient } from '@/lib/supabase-server'
+import { sendSlackNotification } from '@/lib/notify-slack'
 
 export const dynamic = 'force-dynamic'
 
@@ -259,6 +260,13 @@ export async function POST(request: Request) {
         stripeCustomerId,
         sessionId: session.id,
       })
+
+      // Slack notification for new subscription
+      const tierLabel = planTier === 'pro_coaching' ? 'Pro + Coaching' : 'Pro'
+      await sendSlackNotification(
+        `💰 New subscription! ${session.customer_email || 'Unknown'} subscribed to ${tierLabel}`,
+        'payments'
+      )
     }
 
     if (event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
@@ -300,7 +308,26 @@ export async function POST(request: Request) {
           cancelAtPeriodEnd: subscription.cancel_at_period_end ?? null,
           cancellationReason: subscription.cancellation_details?.reason ?? null,
         })
+
+        // Slack notification for cancellation
+        const reason = subscription.cancellation_details?.reason || 'no reason given'
+        await sendSlackNotification(
+          `😢 Subscription cancelled (${reason})`,
+          'payments'
+        )
       }
+    }
+
+    // Handle failed payments
+    if (event.type === 'invoice.payment_failed') {
+      const invoice = event.data.object as Stripe.Invoice
+      const customerEmail = invoice.customer_email || 'Unknown'
+      const attemptCount = invoice.attempt_count || 1
+
+      await sendSlackNotification(
+        `⚠️ Payment failed for ${customerEmail} (attempt ${attemptCount})`,
+        'payments'
+      )
     }
 
     return NextResponse.json({ received: true })
