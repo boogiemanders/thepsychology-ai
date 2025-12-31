@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { sendNotificationEmail } from '@/lib/notify-email'
+import { sendSlackNotification, SlackChannel } from '@/lib/notify-slack'
 
 type SupabaseWebhookPayload = {
   type?: string
@@ -16,6 +17,32 @@ const formatTimestamp = (value?: unknown) => {
   const date = new Date(value)
   if (Number.isNaN(date.getTime())) return value
   return date.toLocaleString('en-US', { timeZone: 'America/New_York', timeZoneName: 'short' })
+}
+
+const buildSlackMessage = (payload: SupabaseWebhookPayload): { message: string; channel: SlackChannel } | null => {
+  const { table, record } = payload
+  if (!record || typeof record !== 'object') return null
+
+  if (table === 'feedback') {
+    const pagePath = (record.page_path as string) || 'Unknown page'
+    const isAnonymous = Boolean(record.is_anonymous)
+    return {
+      message: `📝 New feedback submitted on ${pagePath}${isAnonymous ? ' (anonymous)' : ''}`,
+      channel: 'feedback',
+    }
+  }
+
+  if (table === 'users') {
+    const email = (record.email as string) || 'Unknown'
+    const device = (record.signup_device as string) || 'unknown'
+    const referral = (record.referral_source as string) || 'direct'
+    return {
+      message: `🎉 New signup: ${email} (${device}, via ${referral})`,
+      channel: 'signups',
+    }
+  }
+
+  return null
 }
 
 const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
@@ -139,22 +166,37 @@ export async function POST(request: NextRequest) {
   }
 
   const emailPayload = buildEmailPayload(payload)
-  if (!emailPayload) {
+  const slackMessage = buildSlackMessage(payload)
+
+  if (!emailPayload && !slackMessage) {
     return NextResponse.json({ ignored: true, reason: 'No handler for this table' })
   }
 
-  try {
-    await sendNotificationEmail({
-      subject: emailPayload.subject,
-      text: emailPayload.text,
-      html: emailPayload.html,
-    })
-    return NextResponse.json({ success: true })
-  } catch (error) {
-    console.error('Failed to send notification email', error)
-    return NextResponse.json(
-      { error: 'Failed to send email notification' },
-      { status: 500 },
-    )
+  const results: { email?: boolean; slack?: boolean } = {}
+
+  if (emailPayload) {
+    try {
+      await sendNotificationEmail({
+        subject: emailPayload.subject,
+        text: emailPayload.text,
+        html: emailPayload.html,
+      })
+      results.email = true
+    } catch (error) {
+      console.error('Failed to send notification email', error)
+      results.email = false
+    }
   }
+
+  if (slackMessage) {
+    try {
+      await sendSlackNotification(slackMessage.message, slackMessage.channel)
+      results.slack = true
+    } catch (error) {
+      console.error('Failed to send Slack notification', error)
+      results.slack = false
+    }
+  }
+
+  return NextResponse.json({ success: true, results })
 }

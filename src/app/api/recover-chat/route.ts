@@ -3,6 +3,7 @@ import OpenAI from 'openai'
 import { createClient } from '@supabase/supabase-js'
 import { z } from 'zod'
 import { isNotificationEmailConfigured, sendNotificationEmail } from '@/lib/notify-email'
+import { sendSlackNotification } from '@/lib/notify-slack'
 import { INITIAL_RECOVER_ASSISTANT_MESSAGE } from '@/lib/recover'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -131,39 +132,50 @@ function formatTranscript(messages: Array<{ role: string; content: string }>): s
     .trim()
 }
 
-async function maybeSendAlertEmail(input: {
+async function maybeSendAlert(input: {
   reason: 'harm' | 'stress'
   userId?: string | null
-  userEmail?: string | null
-  messages: Array<{ role: string; content: string }>
+  sessionId: string
 }): Promise<void> {
   if (RECOVER_ALERT_MODE === 'off') return
   if (RECOVER_ALERT_MODE === 'harm' && input.reason !== 'harm') return
 
+  const alertEmoji = input.reason === 'harm' ? '🚨' : '⚠️'
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://www.thepsychology.ai'
+
+  // PHI-free Slack notification
+  try {
+    await sendSlackNotification(
+      `${alertEmoji} Recover ${input.reason.toUpperCase()} alert triggered. Review in admin dashboard.`,
+      'recover'
+    )
+    console.log('[recover-chat] Slack alert sent:', { reason: input.reason })
+  } catch (error) {
+    console.error('[recover-chat] Failed to send Slack alert:', error)
+  }
+
+  // PHI-free email notification (no transcript, no user identity)
   const to = (RECOVER_ALERT_EMAIL_TO || process.env.NOTIFY_EMAIL_TO || '').trim() || undefined
   if (!isNotificationEmailConfigured(to)) {
-    console.warn('[recover-chat] Alert triggered but email is not configured (RESEND_API_KEY / NOTIFY_EMAIL_FROM / NOTIFY_EMAIL_TO or RECOVER_ALERT_EMAIL_TO).')
+    console.warn('[recover-chat] Alert triggered but email is not configured.')
     return
   }
 
-  const identifier = input.userEmail || input.userId || 'unknown user'
-  const subject = `[Recover Alert] ${input.reason.toUpperCase()} – ${identifier}`
-  const transcript = formatTranscript(input.messages)
+  const subject = `[Recover Alert] ${input.reason.toUpperCase()} – Action Required`
   const text = [
-    `Reason: ${input.reason}`,
-    `User: ${identifier}`,
+    `A ${input.reason} alert was triggered in a Recover chat session.`,
     '',
-    'Transcript:',
-    transcript,
+    'For HIPAA compliance, user details and transcript are not included in this email.',
+    '',
+    `Review the session in your admin dashboard:`,
+    `${baseUrl}/admin/recover?session=${input.sessionId}`,
+    '',
+    'Please follow up appropriately based on your protocols.',
   ].join('\n')
 
   try {
-    await sendNotificationEmail({
-      subject,
-      text,
-      to,
-    })
-    console.log('[recover-chat] Alert email sent:', { reason: input.reason, to: Array.isArray(to) ? to : [to] })
+    await sendNotificationEmail({ subject, text, to })
+    console.log('[recover-chat] Alert email sent (PHI-free):', { reason: input.reason })
   } catch (error) {
     console.error('[recover-chat] Failed to send alert email:', error)
   }
@@ -415,11 +427,10 @@ export async function POST(request: NextRequest) {
     const alertReason = lastUserMessage ? getAlertReason(lastUserMessage) : null
 
     if (alertReason) {
-      await maybeSendAlertEmail({
+      await maybeSendAlert({
         reason: alertReason,
         userId: parsed.data.userId ?? null,
-        userEmail: parsed.data.userEmail ?? null,
-        messages,
+        sessionId: parsed.data.sessionId,
       })
     }
 

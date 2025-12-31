@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/notify-email'
+import { sendSlackNotification } from '@/lib/notify-slack'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -203,6 +204,18 @@ This is an automated daily digest from ThePsychology.AI
         sentCount++
       } catch (emailError) {
         console.error(`[recover-digest] Failed to send email for user ${userId}:`, emailError)
+      }
+    }
+
+    // Send Slack summary (PHI-free)
+    if (sentCount > 0) {
+      try {
+        await sendSlackNotification(
+          `📊 Daily Recover digest: ${pendingInsights.length} insight(s) for ${sentCount} user(s) ready for review`,
+          'insights'
+        )
+      } catch (slackError) {
+        console.error('[recover-digest] Slack notification failed:', slackError)
       }
     }
 

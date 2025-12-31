@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { computeQuestionKey } from '@/lib/question-key'
 import { isNotificationEmailConfigured, sendNotificationEmail } from '@/lib/notify-email'
+import { sendSlackNotification } from '@/lib/notify-slack'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -167,6 +168,17 @@ export async function POST(request: NextRequest) {
         })
       } catch (emailError) {
         console.error('[question-feedback] email notify failed (continuing):', emailError)
+      }
+
+      // Send Slack notification (non-PHI summary)
+      try {
+        const ratingEmoji = normalizedRating <= 2 ? '⚠️' : normalizedRating >= 4 ? '✅' : '📝'
+        await sendSlackNotification(
+          `${ratingEmoji} Question feedback: ${normalizedRating}/5 (${examType})${payload.comment ? ' - has comment' : ''}`,
+          'feedback'
+        )
+      } catch (slackError) {
+        console.error('[question-feedback] slack notify failed (continuing):', slackError)
       }
     }
 
