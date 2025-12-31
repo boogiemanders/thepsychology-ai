@@ -242,8 +242,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               data || {
                 consent_personal_tracking: true,
                 consent_ai_insights: true,
-                consent_research_contribution: false,
-                consent_marketing_communications: false,
+                consent_research_contribution: true,
+                consent_marketing_communications: true,
                 consent_version: '1.0',
                 is_default: true,
               }
@@ -328,8 +328,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         data || {
           consent_personal_tracking: true,
           consent_ai_insights: true,
-          consent_research_contribution: false,
-          consent_marketing_communications: false,
+          consent_research_contribution: true,
+          consent_marketing_communications: true,
           consent_version: '1.0',
           is_default: true,
         }
@@ -376,6 +376,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signOut = async () => {
     try {
       setError(null)
+      clearSessionTimers()
       await supabase.auth.signOut()
       setUser(null)
       setUserProfile(null)
@@ -394,10 +395,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         consentPreferences,
         loading,
         error,
+        showSessionWarning,
+        sessionExpiresIn,
         signOut,
         refreshProfile,
         refreshConsent,
         updateConsent,
+        extendSession,
+        dismissSessionWarning,
       }}
     >
       {children}

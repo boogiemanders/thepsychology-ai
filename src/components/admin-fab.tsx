@@ -6,15 +6,16 @@ import { useAuth } from '@/context/auth-context'
 import { Button } from '@/components/ui/button'
 
 function getAdminAllowlist(): string[] {
+  // Require explicit configuration - no hardcoded fallback for security
   const configured = process.env.NEXT_PUBLIC_RECOVER_ADMIN_EMAILS
-  if (configured && configured.trim().length > 0) {
-    return configured
-      .split(',')
-      .map((email) => email.trim().toLowerCase())
-      .filter(Boolean)
+  if (!configured || configured.trim().length === 0) {
+    return []
   }
 
-  return ['chanders0@yahoo.com']
+  return configured
+    .split(',')
+    .map((email) => email.trim().toLowerCase())
+    .filter(Boolean)
 }
 
 export function AdminFab() {

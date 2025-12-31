@@ -55,14 +55,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (supabase) {
-      const authedUserId = await requireAuthedUserId(request)
-      if (!authedUserId) {
-        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-      }
-      if (authedUserId !== userId) {
-        return NextResponse.json({ error: 'User mismatch' }, { status: 403 })
-      }
+    // Always enforce authentication - never skip auth checks
+    const authedUserId = await requireAuthedUserId(request)
+    if (!authedUserId) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+    if (authedUserId !== userId) {
+      return NextResponse.json({ error: 'User mismatch' }, { status: 403 })
     }
 
     // Prepare record payload for Supabase or local storage fallback

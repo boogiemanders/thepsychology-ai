@@ -59,8 +59,9 @@ export async function POST(request: NextRequest) {
     const { data: user, error: userError } = await userQuery.single()
 
     if (userError || !user) {
+      console.error('[Admin Sync] User lookup failed:', userError)
       return NextResponse.json(
-        { error: 'User not found', details: userError?.message },
+        { error: 'User not found' },
         { status: 404 }
       )
     }
@@ -138,8 +139,9 @@ export async function POST(request: NextRequest) {
         .single()
 
       if (updateError) {
+        console.error('[Admin Sync] Failed to update user:', updateError)
         return NextResponse.json(
-          { error: 'Failed to update user', details: updateError.message },
+          { error: 'Failed to update user' },
           { status: 500 }
         )
       }
@@ -187,8 +189,9 @@ export async function POST(request: NextRequest) {
       .single()
 
     if (updateError) {
+      console.error('[Admin Sync] Failed to update user:', updateError)
       return NextResponse.json(
-        { error: 'Failed to update user', details: updateError.message },
+        { error: 'Failed to update user' },
         { status: 500 }
       )
     }
@@ -217,10 +220,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('[Admin Sync] Error:', error)
     return NextResponse.json(
-      {
-        error: 'Internal server error',
-        details: error instanceof Error ? error.message : 'Unknown',
-      },
+      { error: 'Internal server error' },
       { status: 500 }
     )
   }

@@ -10,7 +10,6 @@ import { HeroSection } from "@/components/sections/hero-section"
 import { OrbitingLoopSection } from "@/components/sections/orbiting-loop-section"
 import { BentoSection } from "@/components/sections/bento-section"
 import { PricingSection } from "@/components/sections/pricing-section"
-// import { SignupSection } from "@/components/sections/signup-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 import { MiniPricingBar } from "@/components/mini-pricing-bar"
 
@@ -218,8 +217,7 @@ export default function HomeClient() {
         {/* <FeatureSection /> */}
         {/* <GrowthSection /> */}
         <PricingSection activeTier={activeTier} onActiveTierChange={setActiveTier} />
-        {/* <SignupSection /> */}
-        <FAQSection />
+                <FAQSection />
         {/* <CTASection /> */}
         <FooterSection />
       </main>

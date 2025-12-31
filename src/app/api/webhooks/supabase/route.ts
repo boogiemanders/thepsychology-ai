@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { timingSafeEqual } from 'crypto'
 import { sendNotificationEmail } from '@/lib/notify-email'
 import { sendSlackNotification, SlackChannel } from '@/lib/notify-slack'
 
@@ -147,9 +148,19 @@ export async function POST(request: NextRequest) {
     )
   }
 
+  // Use timing-safe comparison to prevent timing attacks
   const authHeader = request.headers.get('authorization') || ''
   const token = authHeader.replace('Bearer ', '').trim()
-  if (token !== WEBHOOK_SECRET) {
+
+  try {
+    const tokenBuffer = Buffer.from(token)
+    const secretBuffer = Buffer.from(WEBHOOK_SECRET)
+
+    // Timing-safe comparison requires equal length buffers
+    if (tokenBuffer.length !== secretBuffer.length || !timingSafeEqual(tokenBuffer, secretBuffer)) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+  } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
