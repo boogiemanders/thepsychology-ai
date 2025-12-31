@@ -16,13 +16,25 @@ interface UserProfile {
   stripe_customer_id?: string
 }
 
+interface ConsentPreferences {
+  consent_personal_tracking: boolean
+  consent_ai_insights: boolean
+  consent_research_contribution: boolean
+  consent_marketing_communications: boolean
+  consent_version: string
+  is_default?: boolean
+}
+
 interface AuthContextType {
   user: SupabaseUser | null
   userProfile: UserProfile | null
+  consentPreferences: ConsentPreferences | null
   loading: boolean
   error: string | null
   signOut: () => Promise<void>
   refreshProfile: () => Promise<void>
+  refreshConsent: () => Promise<void>
+  updateConsent: (updates: Partial<ConsentPreferences>) => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -30,6 +42,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined)
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<SupabaseUser | null>(null)
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null)
+  const [consentPreferences, setConsentPreferences] = useState<ConsentPreferences | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -68,6 +81,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             console.error('Profile fetch failed:', err)
           })
 
+        // Fetch consent preferences
+        supabase
+          .from('user_consent_preferences')
+          .select('*')
+          .eq('user_id', session.user.id)
+          .single()
+          .then(({ data, error: fetchError }) => {
+            if (fetchError && fetchError.code !== 'PGRST116') {
+              console.error('Error fetching consent preferences:', fetchError)
+            }
+            // Set defaults if no preferences exist
+            setConsentPreferences(
+              data || {
+                consent_personal_tracking: true,
+                consent_ai_insights: true,
+                consent_research_contribution: false,
+                consent_marketing_communications: false,
+                consent_version: '1.0',
+                is_default: true,
+              }
+            )
+          })
+          .catch(err => {
+            console.error('Consent fetch failed:', err)
+          })
+
         // Set a timeout to create a basic profile if fetch doesn't complete
         setTimeout(() => {
           setUserProfile(prev => {
@@ -85,6 +124,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }, 3000)
       } else {
         setUserProfile(null)
+        setConsentPreferences(null)
       }
     })
 
@@ -122,6 +162,69 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  const refreshConsent = async () => {
+    if (!user) return
+
+    try {
+      const { data, error: fetchError } = await supabase
+        .from('user_consent_preferences')
+        .select('*')
+        .eq('user_id', user.id)
+        .single()
+
+      if (fetchError && fetchError.code !== 'PGRST116') {
+        console.error('Error refreshing consent preferences:', fetchError)
+      }
+
+      setConsentPreferences(
+        data || {
+          consent_personal_tracking: true,
+          consent_ai_insights: true,
+          consent_research_contribution: false,
+          consent_marketing_communications: false,
+          consent_version: '1.0',
+          is_default: true,
+        }
+      )
+    } catch (err) {
+      console.error('Consent refresh failed:', err)
+    }
+  }
+
+  const updateConsent = async (updates: Partial<ConsentPreferences>) => {
+    if (!user) return
+
+    try {
+      const { data: session } = await supabase.auth.getSession()
+      if (!session?.session?.access_token) {
+        throw new Error('No active session')
+      }
+
+      const response = await fetch('/api/consent/preferences', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${session.session.access_token}`,
+        },
+        body: JSON.stringify(updates),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to update consent preferences')
+      }
+
+      const result = await response.json()
+      if (result.preferences) {
+        setConsentPreferences(result.preferences)
+      } else {
+        await refreshConsent()
+      }
+    } catch (err) {
+      console.error('Consent update failed:', err)
+      throw err
+    }
+  }
+
   const signOut = async () => {
     try {
       setError(null)
@@ -140,10 +243,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       value={{
         user,
         userProfile,
+        consentPreferences,
         loading,
         error,
         signOut,
         refreshProfile,
+        refreshConsent,
+        updateConsent,
       }}
     >
       {children}

@@ -13,7 +13,7 @@ import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Calendar } from '@/components/ui/calendar'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid'
@@ -22,7 +22,7 @@ import { Ripple } from '@/components/ui/ripple'
 import { BreathingAnimation } from '@/components/ui/breathing-animation'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { CalendarIcon, FileTextIcon, PersonIcon } from '@radix-ui/react-icons'
-import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X, MessageSquare, HelpCircle } from 'lucide-react'
+import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X, MessageSquare, HelpCircle, Settings } from 'lucide-react'
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
@@ -32,6 +32,7 @@ import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { StudyProgressChart } from './components/study-progress-chart'
+import { ConsentModal, useConsentModal } from '@/components/consent-modal'
 
 type ApiChangelogEntry = {
   id: string
@@ -88,6 +89,7 @@ export default function DashboardPage() {
   const router = useRouter()
   const { user, userProfile, loading, signOut, refreshProfile } = useAuth()
   const { startTour, isActive: isTourActive } = useOnboarding()
+  const { shouldShow: shouldShowConsentModal, dismiss: dismissConsentModal } = useConsentModal()
   const getBaseUrl = () => {
     if (typeof window !== 'undefined') {
       return window.location.origin
@@ -1044,6 +1046,14 @@ export default function DashboardPage() {
                   <HelpCircle className="w-4 h-4 mr-2" />
                   Tutorial
                 </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
+                  onClick={() => router.push('/dashboard/settings')}
+                >
+                  <Settings className="w-4 h-4 mr-2" />
+                  Settings
+                </Button>
               </div>
             </div>
           </div>
@@ -1175,6 +1185,9 @@ export default function DashboardPage() {
             </div>
           </div>
         )}
+
+        {/* Consent Modal for new users */}
+        <ConsentModal open={shouldShowConsentModal ?? false} onClose={dismissConsentModal} />
 
       </div>
     </main>

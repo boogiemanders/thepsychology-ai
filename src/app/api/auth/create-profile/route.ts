@@ -26,7 +26,20 @@ function inferSignupDevice(headers: Headers): { device: SignupDevice; userAgent:
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { userId, email, fullName, subscriptionTier, promoCodeUsed, referralSource } = body
+    const {
+      userId,
+      email,
+      fullName,
+      subscriptionTier,
+      promoCodeUsed,
+      referralSource,
+      // UTM tracking params
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_content,
+      utm_term,
+    } = body
 
     // Validate required fields
     if (!userId || !email) {
@@ -101,6 +114,12 @@ export async function POST(request: NextRequest) {
           subscription_started_at: new Date().toISOString(),
           signup_device: signupDevice,
           signup_user_agent: signupUserAgent,
+          // UTM tracking for marketing attribution
+          utm_source: utm_source || null,
+          utm_medium: utm_medium || null,
+          utm_campaign: utm_campaign || null,
+          utm_content: utm_content || null,
+          utm_term: utm_term || null,
         },
       ])
       .select()

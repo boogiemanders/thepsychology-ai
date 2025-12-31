@@ -7,6 +7,8 @@ import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { supabase } from "@/lib/supabase"
+import { REFERRAL_SOURCES, CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
+import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI } from "@/lib/utm-tracking"
 
 type PricingSectionProps = {
   activeTier?: string
@@ -37,7 +39,13 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
     goals: "",
     examDate: "",
     referralSource: "",
+    referralSourceOther: "", // For "Other" option
   })
+
+  // Store UTM params when component mounts
+  useEffect(() => {
+    storeUTMParams()
+  }, [])
 
   const gridColsClass = tiers.length > 1 ? "md:grid-cols-2" : "md:grid-cols-1"
 
@@ -60,6 +68,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
         goals: "",
         examDate: "",
         referralSource: "",
+        referralSourceOther: "",
       })
       setSubmitMessage(null)
       setShowPasswordFields(false)
@@ -69,7 +78,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
     return () => window.removeEventListener("mini-pricing-select", handleMiniPricingSelect)
   }, [tiers])
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
@@ -93,8 +102,14 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
       return
     }
 
-    if (!formData.referralSource.trim()) {
+    if (!formData.referralSource) {
       setSubmitMessage({ type: "error", text: "Please let us know how you found us." })
+      return
+    }
+
+    // If "Other" is selected, require the text field
+    if (formData.referralSource === 'other' && !formData.referralSourceOther.trim()) {
+      setSubmitMessage({ type: "error", text: "Please specify how you found us." })
       return
     }
 
@@ -115,6 +130,17 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
 
       const subscriptionTier = expandedTier === "Pro + Coaching" ? "pro_coaching" : "pro"
 
+      // Get UTM params for attribution
+      const utmParams = formatUTMForAPI(getStoredUTMParams())
+
+      // Determine final referral source (append "Other" text if selected)
+      let finalReferralSource = formData.referralSource
+      if (formData.referralSource === 'other' && formData.referralSourceOther.trim()) {
+        finalReferralSource = `other: ${formData.referralSourceOther.trim()}`
+      } else if (formData.referralSource === 'fb_other' && formData.referralSourceOther.trim()) {
+        finalReferralSource = `fb_other: ${formData.referralSourceOther.trim()}`
+      }
+
       const profileResponse = await fetch("/api/auth/create-profile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -124,7 +150,8 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
           fullName: formData.fullName || null,
           subscriptionTier,
           promoCodeUsed: null,
-          referralSource: formData.referralSource,
+          referralSource: finalReferralSource,
+          ...utmParams,
         }),
       })
 
@@ -155,6 +182,9 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
           console.warn("Failed to save pricing submission", submissionError)
         }
       }
+
+      // Clear stored UTM params after successful signup
+      clearStoredUTMParams()
 
       setSubmitMessage({ type: "success", text: "Account created! Redirecting to login..." })
       setTimeout(() => {
@@ -233,6 +263,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
                         goals: "",
                         examDate: "",
                         referralSource: "",
+                        referralSourceOther: "",
                       })
                       setSubmitMessage(null)
                       setShowPasswordFields(false)
@@ -375,16 +406,52 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
                           >
                             How did you find us? <span className="text-brand-lavender-gray">*</span>
                           </label>
-                          <input
-                            type="text"
+                          <select
                             id={`referralSource-${tier.name}`}
                             name="referralSource"
                             value={formData.referralSource}
                             onChange={handleInputChange}
-                            placeholder="Friend, Social Media, Web Search"
                             required
-                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                          />
+                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer"
+                          >
+                            <option value="">Select an option...</option>
+                            {Object.entries(getReferralSourcesByCategory()).map(([category, sources]) => (
+                              <optgroup key={category} label={CATEGORY_LABELS[category as keyof typeof CATEGORY_LABELS]}>
+                                {sources.map((source) => (
+                                  <option key={source.value} value={source.value}>
+                                    {source.label}
+                                  </option>
+                                ))}
+                              </optgroup>
+                            ))}
+                          </select>
+
+                          {/* Show text input when "Other" is selected */}
+                          {formData.referralSource === 'other' && (
+                            <input
+                              type="text"
+                              id={`referralSourceOther-${tier.name}`}
+                              name="referralSourceOther"
+                              value={formData.referralSourceOther}
+                              onChange={handleInputChange}
+                              placeholder="Please specify..."
+                              required
+                              className="w-full mt-2 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          )}
+
+                          {/* Show text input for "Facebook: Other Group" */}
+                          {formData.referralSource === 'fb_other' && (
+                            <input
+                              type="text"
+                              id={`referralSourceOther-${tier.name}`}
+                              name="referralSourceOther"
+                              value={formData.referralSourceOther}
+                              onChange={handleInputChange}
+                              placeholder="Which Facebook group?"
+                              className="w-full mt-2 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          )}
                         </div>
                       </div>
 

@@ -36,6 +36,85 @@ export async function GET(request: NextRequest) {
   try {
     const now = new Date()
     const isMonday = now.getDay() === 1
+    const sendMonthly = request.nextUrl.searchParams.get('monthly') === 'true'
+
+    // === MONTHLY STATS (on-demand) ===
+    if (sendMonthly) {
+      const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000)
+      const monthAgoISO = monthAgo.toISOString()
+
+      const { count: signupsMonth } = await supabase
+        .from('users')
+        .select('*', { count: 'exact', head: true })
+        .gte('created_at', monthAgoISO)
+
+      const { count: examsMonth } = await supabase
+        .from('exam_history')
+        .select('*', { count: 'exact', head: true })
+        .gte('created_at', monthAgoISO)
+
+      const { count: quizzesMonth } = await supabase
+        .from('quiz_attempts')
+        .select('*', { count: 'exact', head: true })
+        .gte('created_at', monthAgoISO)
+
+      const { count: totalUsers } = await supabase
+        .from('users')
+        .select('*', { count: 'exact', head: true })
+
+      const { count: activeUsersMonth } = await supabase
+        .from('users')
+        .select('*', { count: 'exact', head: true })
+        .gte('last_activity_at', monthAgoISO)
+
+      const { data: tierCounts } = await supabase
+        .from('users')
+        .select('subscription_tier')
+
+      const tiers = tierCounts || []
+      const proCount = tiers.filter(u => u.subscription_tier === 'pro').length
+      const proCoachingCount = tiers.filter(u => u.subscription_tier === 'pro_coaching').length
+      const paidCount = proCount + proCoachingCount
+
+      const { count: newPaidMonth } = await supabase
+        .from('users')
+        .select('*', { count: 'exact', head: true })
+        .gte('subscription_started_at', monthAgoISO)
+        .neq('subscription_tier', 'free')
+
+      const monthlyMessage = [
+        `📈 *Monthly Stats* (Last 30 days)`,
+        '',
+        `*Users*`,
+        `👥 Total users: ${totalUsers ?? 0}`,
+        `🆕 New signups: ${signupsMonth ?? 0}`,
+        `🔥 Active users (30d): ${activeUsersMonth ?? 0}`,
+        '',
+        `*Engagement*`,
+        `📝 Exams taken: ${examsMonth ?? 0}`,
+        `❓ Quizzes taken: ${quizzesMonth ?? 0}`,
+        '',
+        `*Revenue*`,
+        `💳 Total paid subscribers: ${paidCount} (${proCount} Pro + ${proCoachingCount} Pro+Coaching)`,
+        `🆕 New paid (30d): ${newPaidMonth ?? 0}`,
+      ].join('\n')
+
+      await sendSlackNotification(monthlyMessage, 'metrics')
+
+      return NextResponse.json({
+        success: true,
+        type: 'monthly',
+        stats: {
+          totalUsers: totalUsers ?? 0,
+          signupsMonth: signupsMonth ?? 0,
+          activeUsersMonth: activeUsersMonth ?? 0,
+          examsMonth: examsMonth ?? 0,
+          quizzesMonth: quizzesMonth ?? 0,
+          paidCount,
+          newPaidMonth: newPaidMonth ?? 0,
+        },
+      })
+    }
 
     // === DAILY STATS ===
     const todayStart = new Date(now)

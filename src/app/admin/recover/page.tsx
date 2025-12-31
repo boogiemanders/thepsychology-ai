@@ -17,6 +17,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Separator } from '@/components/ui/separator'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { UserListSkeleton } from './components/user-list-skeleton'
 import { UserDetailSkeleton } from './components/user-detail-skeleton'
 import { TranscriptSkeleton } from './components/transcript-skeleton'
@@ -25,6 +26,7 @@ import { EmptyTranscript } from './components/empty-transcript'
 import { EmptyTable } from './components/empty-table'
 import { ExamScoreTrendChart } from './components/exam-score-trend-chart'
 import { TopicMasteryProgress } from './components/topic-mastery-progress'
+import { MarketingAnalytics } from './components/marketing-analytics'
 
 type AdminUserSummary = {
   userId: string
@@ -327,24 +329,37 @@ export default function AdminRecoverPage() {
       : null
 
   return (
-    <main className="h-dvh bg-background overflow-hidden px-6">
-      <div className="h-full w-full flex">
-        <aside className="w-[360px] border-r border-border h-full flex flex-col">
-          <div className="p-4 flex items-center justify-between gap-2">
-            <div>
-              <div className="text-sm font-semibold">Recover Admin</div>
-              <div className="text-xs text-muted-foreground">View Recover chats and study stats</div>
-            </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={loadUsers}
-              disabled={loadingUsers}
-              title="Refresh"
-            >
-              <RefreshCcw className="h-4 w-4" />
-            </Button>
+    <main className="h-dvh bg-background overflow-hidden">
+      <Tabs defaultValue="learning" className="h-full flex flex-col">
+        <div className="px-6 pt-4 pb-2 border-b border-border flex items-center justify-between">
+          <div>
+            <h1 className="text-lg font-semibold">Admin Dashboard</h1>
+            <p className="text-xs text-muted-foreground">Manage users and track growth</p>
           </div>
+          <TabsList>
+            <TabsTrigger value="learning">Users & Learning</TabsTrigger>
+            <TabsTrigger value="marketing">Marketing</TabsTrigger>
+          </TabsList>
+        </div>
+
+        <TabsContent value="learning" className="flex-1 overflow-hidden m-0 px-6">
+          <div className="h-full w-full flex">
+            <aside className="w-[360px] border-r border-border h-full flex flex-col">
+              <div className="p-4 flex items-center justify-between gap-2">
+                <div>
+                  <div className="text-sm font-semibold">Recover Admin</div>
+                  <div className="text-xs text-muted-foreground">View Recover chats and study stats</div>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => loadUsers()}
+                  disabled={loadingUsers}
+                  title="Refresh"
+                >
+                  <RefreshCcw className="h-4 w-4" />
+                </Button>
+              </div>
 
           <div className="px-4 pb-3 space-y-3">
             <Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search email or name…" />
