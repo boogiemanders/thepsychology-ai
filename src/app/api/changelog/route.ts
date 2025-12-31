@@ -37,6 +37,13 @@ const DAY_MS = 24 * 60 * 60 * 1000
 const CANONICAL_CHANGELOG_AUTHOR = 'Anders Chan, Psy.D.'
 const CANONICAL_CHANGELOG_AUTHOR_ALIASES = new Set(['boogiemanders', 'anders chan'])
 
+// Keywords to filter out from user-facing changelog (payment/billing related)
+const EXCLUDED_CHANGELOG_KEYWORDS = [
+  'stripe', 'payment', 'billing', 'subscription',
+  'price', 'pricing', 'checkout', 'invoice',
+  'charge', 'revenue', 'money', 'paid', 'purchase'
+]
+
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {
   if (!author) return null
   const trimmed = author.trim()
@@ -94,6 +101,11 @@ function isMergeCommit(title: string): boolean {
   return t.startsWith('merge ') || t.startsWith('merge:')
 }
 
+function isUserRelevantEntry(entry: ApiChangelogEntry): boolean {
+  const text = `${entry.title} ${entry.body || ''}`.toLowerCase()
+  return !EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => text.includes(keyword))
+}
+
 export async function GET(request: NextRequest) {
   const url = new URL(request.url)
   const days = clampInt(url.searchParams.get('days'), 30, 1, 90)
@@ -120,7 +132,7 @@ export async function GET(request: NextRequest) {
     if (!response.ok) {
       const errorText = await response.text().catch(() => '')
       const payload: ApiChangelogResponse = {
-        entries: toApiEntriesFromFallback(CHANGELOG_ENTRIES),
+        entries: toApiEntriesFromFallback(CHANGELOG_ENTRIES).filter(isUserRelevantEntry),
         source: 'fallback',
         generatedAt: new Date().toISOString(),
         error: errorText || `GitHub API error (${response.status})`,
@@ -145,6 +157,7 @@ export async function GET(request: NextRequest) {
         }
       })
       .filter((entry) => (includeMerges ? true : !isMergeCommit(entry.title)))
+      .filter(isUserRelevantEntry)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
     const payload: ApiChangelogResponse = {
@@ -158,7 +171,7 @@ export async function GET(request: NextRequest) {
     })
   } catch (err) {
     const payload: ApiChangelogResponse = {
-      entries: toApiEntriesFromFallback(CHANGELOG_ENTRIES),
+      entries: toApiEntriesFromFallback(CHANGELOG_ENTRIES).filter(isUserRelevantEntry),
       source: 'fallback',
       generatedAt: new Date().toISOString(),
       error: err instanceof Error ? err.message : 'Failed to load changelog',
