@@ -12,6 +12,7 @@ import "./globals.css"
 import { SubscriptionGate } from "@/components/subscription-gate"
 import { AdminFab } from "@/components/admin-fab"
 import { SessionWarningDialog } from "@/components/session-warning-dialog"
+import { PWAInstallPrompt } from "@/components/pwa-install-prompt"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,11 @@ const geistMono = Geist_Mono({
 })
 
 export const viewport: Viewport = {
-  themeColor: "black",
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export const metadata: Metadata = {
@@ -35,9 +40,21 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "thePsychology.ai",
+  },
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: [
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icons/icon-152x152.png", sizes: "152x152", type: "image/png" },
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
   },
   openGraph: {
     type: "website",
@@ -119,6 +136,7 @@ export default function RootLayout({
                   {children}
                 </div>
               </SubscriptionGate>
+              <PWAInstallPrompt />
               </ThemeProvider>
             </OnboardingProvider>
           </ActivityProvider>

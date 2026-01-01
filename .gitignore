@@ -162,3 +162,9 @@ recover-pdfs/
 
 # Pre-generated Topic Teacher audio (stored in R2 for production)
 public/topic-teacher-audio/
+
+# PWA generated files (regenerated on build)
+public/sw.js
+public/sw.js.map
+public/workbox-*.js
+public/workbox-*.js.map
