@@ -509,10 +509,32 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const stickyTop = Math.max(120 - scrollY, 76)
 
   const handleEnded = () => {
-    setIsPlaying(false)
     const next = currentIndex + 1
     if (next >= audioUrls.length) return
+
+    const nextUrl = audioUrls[next]
+    if (!nextUrl) return
+
+    const audio = audioRef.current
+    if (!audio) return
+
+    // Prevent effect from interfering
     autoPlayNextRef.current = true
+
+    // Add listener BEFORE setting src to guarantee we catch the event
+    const playWhenReady = () => {
+      audio.play()
+        .then(() => { autoPlayNextRef.current = false })
+        .catch(() => { autoPlayNextRef.current = false })
+      audio.removeEventListener('canplay', playWhenReady)
+      audio.removeEventListener('loadeddata', playWhenReady)
+    }
+
+    audio.addEventListener('canplay', playWhenReady)
+    audio.addEventListener('loadeddata', playWhenReady)
+
+    // Now set src (triggers load) and update React state
+    audio.src = nextUrl
     setCurrentIndex(next)
   }
 
@@ -633,22 +655,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
   useImperativeHandle(ref, () => ({ seekToWord }), [seekToWord])
 
-  useEffect(() => {
-    if (!autoPlayNextRef.current) return
-    const audio = audioRef.current
-    if (!audio) return
-    if (!audioUrls[currentIndex]) return
-
-    audio.load()
-    audio
-      .play()
-      .catch(() => {
-        // Autoplay might be blocked; user can press play manually.
-      })
-      .finally(() => {
-        autoPlayNextRef.current = false
-      })
-  }, [audioUrls, currentIndex])
+  // Auto-play is now handled directly in handleEnded for reliability
 
   useEffect(() => {
     updateWordProgressFromAudio()
@@ -664,13 +671,16 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   }, [audioUrls.length, isPlaying])
 
   useEffect(() => {
+    // Don't interfere if handleEnded is managing auto-play directly
+    if (autoPlayNextRef.current) return
+
     const audio = audioRef.current
     if (!audio) return
     const urls = audioUrlsRef.current
     if (!urls[currentIndex]) return
-    const wasPlaying = isPlaying
+
     audio.load()
-    if (wasPlaying) {
+    if (isPlaying) {
       audio.play().catch(() => {
         setIsPlaying(false)
       })
@@ -1105,6 +1115,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           <div className="flex flex-wrap items-center gap-3 rounded-md border border-border/60 bg-background px-3 py-2">
             {/* Playback speed slider */}
             <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground">Speed</span>
               <input
                 type="range"
                 min={0}
@@ -1113,8 +1124,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                 onChange={(e) => setPlaybackRate(PLAYBACK_RATE_OPTIONS[parseInt(e.target.value)])}
                 className="w-20 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
               />
-              <span className="text-xs text-muted-foreground tabular-nums w-24">
-                {playbackRate}×{playbackRate === RECOMMENDED_PLAYBACK_RATE ? ' recommended' : ''}
+              <span className="text-xs text-muted-foreground tabular-nums">
+                {playbackRate}×
               </span>
             </div>
 
@@ -1225,25 +1236,26 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   disabled={!hasAudio}
                   className="flex-1 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
                 />
-                <span className="text-xs text-muted-foreground tabular-nums w-8 shrink-0">
+                <span className="text-xs text-muted-foreground tabular-nums w-10 shrink-0">
                   {formatTime(duration)}
                 </span>
               </div>
 
               {/* Right section: Speed, segment, auto-scroll, actions */}
-              <div className="flex items-center gap-1.5 shrink-0">
+              <div className="flex items-center gap-2 shrink-0 ml-3 pl-3 border-l border-border/40">
                 {/* Speed slider */}
                 <div className="flex items-center gap-1.5" data-tour="playback-speed">
+                  <span className="text-xs text-muted-foreground">Speed</span>
                   <input
                     type="range"
                     min={0}
                     max={PLAYBACK_RATE_OPTIONS.length - 1}
                     value={PLAYBACK_RATE_OPTIONS.indexOf(playbackRate as typeof PLAYBACK_RATE_OPTIONS[number])}
                     onChange={(e) => setPlaybackRate(PLAYBACK_RATE_OPTIONS[parseInt(e.target.value)])}
-                    className="w-16 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
+                    className="w-14 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
                   />
-                  <span className="text-xs text-muted-foreground tabular-nums w-16">
-                    {playbackRate}×{playbackRate === RECOMMENDED_PLAYBACK_RATE ? ' recommended' : ''}
+                  <span className="text-xs text-muted-foreground tabular-nums">
+                    {playbackRate}×
                   </span>
                 </div>
 

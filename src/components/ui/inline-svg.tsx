@@ -37,13 +37,13 @@ export function InlineSvg({ src, alt, className }: InlineSvgProps) {
   }
 
   if (!svgContent) {
-    // Loading placeholder
-    return <div className={`animate-pulse bg-muted rounded-lg h-48 ${className || ''}`} />
+    // Loading placeholder - use span to avoid hydration errors when inside <p> tags
+    return <span className={`block animate-pulse bg-muted rounded-lg h-48 ${className || ''}`} />
   }
 
   return (
-    <div
-      className={`inline-svg-container ${className || ''}`}
+    <span
+      className={`inline-svg-container block ${className || ''}`}
       role="img"
       aria-label={alt}
       dangerouslySetInnerHTML={{ __html: svgContent }}
