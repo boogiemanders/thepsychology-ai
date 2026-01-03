@@ -7,6 +7,7 @@ import { chunkTextForTts, markdownToSpeakableText, normalizeTextForReadAlong, pr
 import { Highlighter, Pause, Play, ScrollText, SkipBack, SkipForward } from 'lucide-react'
 
 type MetaphorRange = { start: number; end: number }
+type WordTiming = { word: string; start: number; end: number }
 
 type MarkdownSection = {
   title: string | null
@@ -166,6 +167,58 @@ function getEffectiveDurationSeconds(audio: HTMLAudioElement): number {
   }
 
   return NaN
+}
+
+async function loadAudioDurationSeconds(url: string, signal?: AbortSignal): Promise<number> {
+  if (typeof window === 'undefined') return NaN
+  if (!url) return NaN
+
+  return await new Promise<number>((resolve) => {
+    const audio = new Audio()
+    audio.preload = 'metadata'
+
+    let resolved = false
+    let abortListener: (() => void) | null = null
+
+    const cleanup = () => {
+      audio.removeEventListener('loadedmetadata', handleLoaded)
+      audio.removeEventListener('error', handleError)
+      if (abortListener && signal) {
+        signal.removeEventListener('abort', abortListener)
+      }
+      abortListener = null
+      try {
+        audio.removeAttribute('src')
+        audio.load()
+      } catch {
+        // ignore
+      }
+    }
+
+    const finish = (value: number) => {
+      if (resolved) return
+      resolved = true
+      cleanup()
+      resolve(value)
+    }
+
+    const handleLoaded = () => finish(getEffectiveDurationSeconds(audio))
+    const handleError = () => finish(NaN)
+
+    audio.addEventListener('loadedmetadata', handleLoaded, { once: true })
+    audio.addEventListener('error', handleError, { once: true })
+
+    if (signal) {
+      abortListener = () => finish(NaN)
+      if (signal.aborted) {
+        abortListener()
+        return
+      }
+      signal.addEventListener('abort', abortListener, { once: true })
+    }
+
+    audio.src = url
+  })
 }
 
 async function sha256Hex(input: string): Promise<string | null> {
@@ -390,6 +443,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const [error, setError] = useState<string | null>(null)
   const [sourceCounts, setSourceCounts] = useState<{ pregen: number; live: number }>({ pregen: 0, live: 0 })
   const [segmentSources, setSegmentSources] = useState<Array<'pregen' | 'live'>>([])
+  const [isPreparingTimings, setIsPreparingTimings] = useState(false)
 
   const [audioUrls, setAudioUrls] = useState<string[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -402,22 +456,46 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const abortRef = useRef<AbortController | null>(null)
   const autoPlayNextRef = useRef(false)
+  const isPlayingRef = useRef(false)
+  const pendingAutoAdvanceIndexRef = useRef<number | null>(null)
   const audioUrlsRef = useRef<string[]>([])
   const segmentWordCountsRef = useRef<number[]>([])
   const segmentWordProgressRef = useRef<number[][]>([])
   const segmentWordOffsetsRef = useRef<number[]>([])
+  const segmentAudioKeysRef = useRef<Array<string | null>>([])
+  const segmentTextsRef = useRef<string[]>([])
+  const segmentWordStartTimesRef = useRef<number[][]>([])
+  const segmentWordEndTimesRef = useRef<number[][]>([])
+  const segmentDurationSecondsRef = useRef<number[]>([])
+  const segmentStartSecondsRef = useRef<number[]>([])
+  const totalDurationSecondsRef = useRef(0)
+  const wordTimingsAbortRef = useRef<AbortController | null>(null)
+  const wordTimingsInFlightRef = useRef<Set<number>>(new Set())
+  const wordTimingsFailedRef = useRef<Set<number>>(new Set())
+  const wordTimingsPromisesRef = useRef<Map<number, Promise<boolean>>>(new Map())
   const totalWordsRef = useRef(0)
   const lastWordIndexRef = useRef<number | null>(null)
-  const pendingSeekRef = useRef<{ segmentIndex: number; ratio: number } | null>(null)
+  const pendingSeekRef = useRef<
+    { segmentIndex: number; ratio?: number; timeSeconds?: number; autoplay?: boolean } | null
+  >(null)
   const pendingSeekWordRef = useRef<number | null>(null)
+  const seekRequestIdRef = useRef(0)
   const handleGenerateRef = useRef<(() => void) | null>(null)
   const segmentSectionIndexRef = useRef<number[]>([])
   const sectionStartIndexRef = useRef<number[]>([])
+  const sectionWordStartIndexRef = useRef<number[]>([])
   const [sectionTitles, setSectionTitles] = useState<string[]>([])
 
   const lessonReady = Boolean(lessonMarkdown && lessonMarkdown.trim())
   const interestsActive = Boolean(userInterests && userInterests.trim())
   const canUsePregen = voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
+  const wordTimingsEnabled = !['0', 'false', 'no', 'off'].includes(
+    (process.env.NEXT_PUBLIC_TOPIC_TEACHER_WORD_TIMINGS || '').trim().toLowerCase()
+  )
+  const continuousAudioEnabled = !['0', 'false', 'no', 'off'].includes(
+    (process.env.NEXT_PUBLIC_TOPIC_TEACHER_CONTINUOUS_AUDIO || '').trim().toLowerCase()
+  )
+  const continuousModeActive = continuousAudioEnabled
   const baseContentReady = Boolean(baseLessonMarkdown && baseLessonMarkdown.trim())
   const pregenReady = !canUsePregen || baseContentReady
   const shouldAutoLoadPregenFullLesson =
@@ -450,7 +528,9 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     abortRef.current?.abort()
     abortRef.current = null
     autoPlayNextRef.current = false
+    isPlayingRef.current = false
     setIsGenerating(false)
+    setIsPreparingTimings(false)
     setIsPlaying(false)
     setProgress({ current: 0, total: 0 })
     setError(null)
@@ -461,6 +541,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     setSegmentSources([])
     setReadAlongWordIndex(null)
     setReadAlongTotalWords(0)
+    audioUrlsRef.current = []
     setAudioUrls((prev) => {
       revokeUrls(prev)
       return []
@@ -468,12 +549,27 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     segmentWordCountsRef.current = []
     segmentWordProgressRef.current = []
     segmentWordOffsetsRef.current = []
+    segmentAudioKeysRef.current = []
+    segmentTextsRef.current = []
+    segmentWordStartTimesRef.current = []
+    segmentWordEndTimesRef.current = []
+    segmentDurationSecondsRef.current = []
+    segmentStartSecondsRef.current = []
+    totalDurationSecondsRef.current = 0
+    wordTimingsAbortRef.current?.abort()
+    wordTimingsAbortRef.current = null
+    wordTimingsInFlightRef.current.clear()
+    wordTimingsFailedRef.current.clear()
+    wordTimingsPromisesRef.current.clear()
     totalWordsRef.current = 0
     lastWordIndexRef.current = null
     pendingSeekRef.current = null
     pendingSeekWordRef.current = null
+    seekRequestIdRef.current = 0
+    pendingAutoAdvanceIndexRef.current = null
     segmentSectionIndexRef.current = []
     sectionStartIndexRef.current = []
+    sectionWordStartIndexRef.current = []
     setSectionTitles([])
     onWordProgress?.({ wordIndex: null, totalWords: 0 })
     if (audioRef.current) {
@@ -490,6 +586,23 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   useEffect(() => {
     audioUrlsRef.current = audioUrls
   }, [audioUrls])
+
+  useEffect(() => {
+    const pending = pendingAutoAdvanceIndexRef.current
+    if (pending === null) return
+
+    if (pending < audioUrls.length) {
+      pendingAutoAdvanceIndexRef.current = null
+      autoPlayNextRef.current = true
+      setCurrentIndex(pending)
+      return
+    }
+
+    if (!isGenerating) {
+      pendingAutoAdvanceIndexRef.current = null
+      autoPlayNextRef.current = false
+    }
+  }, [audioUrls.length, isGenerating])
 
   useEffect(() => {
     return () => {
@@ -510,33 +623,114 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
   const handleEnded = () => {
     const next = currentIndex + 1
-    if (next >= audioUrls.length) return
+    const urls = audioUrlsRef.current
 
-    const nextUrl = audioUrls[next]
-    if (!nextUrl) return
+    if (next >= urls.length) {
+      if (isGenerating) {
+        pendingAutoAdvanceIndexRef.current = next
+        autoPlayNextRef.current = true
+        return
+      }
 
-    const audio = audioRef.current
-    if (!audio) return
-
-    // Prevent effect from interfering
-    autoPlayNextRef.current = true
-
-    // Add listener BEFORE setting src to guarantee we catch the event
-    const playWhenReady = () => {
-      audio.play()
-        .then(() => { autoPlayNextRef.current = false })
-        .catch(() => { autoPlayNextRef.current = false })
-      audio.removeEventListener('canplay', playWhenReady)
-      audio.removeEventListener('loadeddata', playWhenReady)
+      pendingAutoAdvanceIndexRef.current = null
+      setIsPlaying(false)
+      isPlayingRef.current = false
+      return
     }
 
-    audio.addEventListener('canplay', playWhenReady)
-    audio.addEventListener('loadeddata', playWhenReady)
-
-    // Now set src (triggers load) and update React state
-    audio.src = nextUrl
+    pendingAutoAdvanceIndexRef.current = null
+    autoPlayNextRef.current = true
     setCurrentIndex(next)
   }
+
+  const fetchWordTimingsForSegment = useCallback(
+    (segmentIndex: number): Promise<boolean> => {
+      if (!wordTimingsEnabled) return Promise.resolve(false)
+      if (!readAlongEnabled || !onWordProgress) return Promise.resolve(false)
+      if (segmentIndex < 0) return Promise.resolve(false)
+
+      const expectedWords = segmentWordCountsRef.current[segmentIndex] ?? 0
+      if (expectedWords <= 0) return Promise.resolve(false)
+
+      const existingEndTimes = segmentWordEndTimesRef.current[segmentIndex]
+      if (existingEndTimes && existingEndTimes.length === expectedWords) return Promise.resolve(true)
+      if (wordTimingsFailedRef.current.has(segmentIndex)) return Promise.resolve(false)
+
+      const existingPromise = wordTimingsPromisesRef.current.get(segmentIndex)
+      if (existingPromise) return existingPromise
+
+      const audioKey = segmentAudioKeysRef.current[segmentIndex]
+      const text = segmentTextsRef.current[segmentIndex]
+      if (!audioKey || !text) return Promise.resolve(false)
+
+      if (!wordTimingsAbortRef.current || wordTimingsAbortRef.current.signal.aborted) {
+        wordTimingsAbortRef.current = new AbortController()
+      }
+
+      const promise = (async (): Promise<boolean> => {
+        wordTimingsInFlightRef.current.add(segmentIndex)
+        try {
+          const response = await fetch('/api/topic-teacher/word-timings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            signal: wordTimingsAbortRef.current.signal,
+            body: JSON.stringify({ audioKey, text }),
+          })
+
+          if (!response.ok) {
+            wordTimingsFailedRef.current.add(segmentIndex)
+            return false
+          }
+
+          const data: any = await response.json().catch(() => null)
+          const timings: WordTiming[] = Array.isArray(data?.timings) ? data.timings : []
+          if (timings.length !== expectedWords) {
+            wordTimingsFailedRef.current.add(segmentIndex)
+            return false
+          }
+
+          const startTimes = timings.map((t) => (typeof t?.start === 'number' ? t.start : NaN))
+          const endTimes = timings.map((t) => (typeof t?.end === 'number' ? t.end : NaN))
+          if (!startTimes.every((t) => Number.isFinite(t)) || !endTimes.every((t) => Number.isFinite(t))) {
+            wordTimingsFailedRef.current.add(segmentIndex)
+            return false
+          }
+
+          segmentWordStartTimesRef.current[segmentIndex] = startTimes
+          segmentWordEndTimesRef.current[segmentIndex] = endTimes
+          return true
+        } catch (err) {
+          if ((err as Error)?.name === 'AbortError') return false
+          wordTimingsFailedRef.current.add(segmentIndex)
+          return false
+        } finally {
+          wordTimingsInFlightRef.current.delete(segmentIndex)
+          wordTimingsPromisesRef.current.delete(segmentIndex)
+        }
+      })()
+
+      wordTimingsPromisesRef.current.set(segmentIndex, promise)
+      return promise
+    },
+    [onWordProgress, readAlongEnabled, wordTimingsEnabled]
+  )
+
+  useEffect(() => {
+    if (!wordTimingsEnabled) return
+    if (!readAlongEnabled || !onWordProgress) return
+    if (!isPlaying) return
+    if (audioUrls.length === 0) return
+    void fetchWordTimingsForSegment(currentIndex)
+    void fetchWordTimingsForSegment(currentIndex + 1)
+  }, [
+    audioUrls.length,
+    currentIndex,
+    fetchWordTimingsForSegment,
+    isPlaying,
+    onWordProgress,
+    readAlongEnabled,
+    wordTimingsEnabled,
+  ])
 
   const updateWordProgressFromAudio = useCallback(() => {
     if (!onWordProgress) return
@@ -547,6 +741,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     const currentCount = counts[currentIndex] ?? 0
     if (currentCount <= 0) return
 
+    const endTimes = segmentWordEndTimesRef.current[currentIndex]
     const durationSeconds = getEffectiveDurationSeconds(audio)
     const ratio =
       Number.isFinite(durationSeconds) && durationSeconds > 0
@@ -555,11 +750,13 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
     const progressMap = segmentWordProgressRef.current[currentIndex]
     const localIndex =
-      ratio === null
-        ? Math.min(currentCount - 1, Math.floor(audio.currentTime * 2.6))
-        : progressMap && progressMap.length === currentCount
-          ? findWordIndexForRatio(progressMap, ratio)
-          : Math.min(currentCount - 1, Math.floor(ratio * currentCount))
+      endTimes && endTimes.length === currentCount
+        ? findWordIndexForEndTimes(endTimes, audio.currentTime)
+        : ratio === null
+          ? Math.min(currentCount - 1, Math.floor(audio.currentTime * 2.6))
+          : progressMap && progressMap.length === currentCount
+            ? findWordIndexForRatio(progressMap, ratio)
+            : Math.min(currentCount - 1, Math.floor(ratio * currentCount))
 
     const offset = segmentWordOffsetsRef.current[currentIndex] ?? 0
     const globalIndex = offset + localIndex
@@ -579,13 +776,20 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     const apply = () => {
       const durationSeconds = getEffectiveDurationSeconds(audio)
       if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) return
-      const clampedRatio = Math.min(1, Math.max(0, pending.ratio))
-      const targetTime = Math.min(durationSeconds, durationSeconds * clampedRatio)
+      const hasTimeSeconds = typeof pending.timeSeconds === 'number' && Number.isFinite(pending.timeSeconds)
+      const ratioRaw = typeof pending.ratio === 'number' && Number.isFinite(pending.ratio) ? pending.ratio : 0
+      const clampedRatio = Math.min(1, Math.max(0, ratioRaw))
+      const targetTime = hasTimeSeconds
+        ? Math.min(durationSeconds, Math.max(0, pending.timeSeconds as number))
+        : Math.min(durationSeconds, durationSeconds * clampedRatio)
       audio.currentTime = targetTime
-      setCurrentTime(targetTime)
+      const globalOffset = continuousModeActive ? (segmentStartSecondsRef.current[pending.segmentIndex] ?? 0) : 0
+      setCurrentTime(globalOffset + targetTime)
       updateWordProgressFromAudio()
       pendingSeekRef.current = null
-      audio.play().catch(() => {})
+      if (pending.autoplay ?? true) {
+        audio.play().catch(() => {})
+      }
     }
 
     const durationSeconds = getEffectiveDurationSeconds(audio)
@@ -603,10 +807,10 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     }
 
     apply()
-  }, [audioUrls, currentIndex, updateWordProgressFromAudio])
+  }, [audioUrls, continuousModeActive, currentIndex, updateWordProgressFromAudio])
 
-  const seekToWord = useCallback(
-    (wordIndex: number) => {
+  const queueSeekToWord = useCallback(
+    (wordIndex: number, autoplay: boolean) => {
       if (!Number.isFinite(wordIndex)) return
       const counts = segmentWordCountsRef.current
       if (counts.length === 0) {
@@ -621,6 +825,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         totalWordsRef.current || counts.reduce((sum, count) => sum + (Number.isFinite(count) ? count : 0), 0)
       if (totalWords <= 0) return
 
+      const requestId = (seekRequestIdRef.current += 1)
       const clamped = Math.max(0, Math.min(Math.floor(wordIndex), totalWords - 1))
       let segmentIndex = counts.length - 1
       for (let i = 0; i < counts.length; i += 1) {
@@ -633,37 +838,80 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       }
 
       const localIndex = Math.max(0, clamped - (segmentWordOffsetsRef.current[segmentIndex] ?? 0))
+      const expectedCount = counts[segmentIndex] ?? 0
+      const startTimes = segmentWordStartTimesRef.current[segmentIndex]
+
       const progressMap = segmentWordProgressRef.current[segmentIndex]
       const ratio =
         progressMap && progressMap.length > 0
           ? localIndex <= 0
             ? 0
             : Math.max(0, Math.min(1, progressMap[localIndex - 1] ?? 0))
-          : counts[segmentIndex] > 0
-            ? Math.max(0, Math.min(1, localIndex / counts[segmentIndex]))
+          : expectedCount > 0
+            ? Math.max(0, Math.min(1, localIndex / expectedCount))
             : 0
 
-      pendingSeekRef.current = { segmentIndex, ratio }
+      if (startTimes && startTimes.length === expectedCount) {
+        pendingSeekRef.current = {
+          segmentIndex,
+          timeSeconds: Math.max(0, startTimes[Math.min(localIndex, startTimes.length - 1)] ?? 0),
+          autoplay,
+        }
+      } else if (
+        autoplay &&
+        wordTimingsEnabled &&
+        readAlongEnabled &&
+        onWordProgress &&
+        !wordTimingsFailedRef.current.has(segmentIndex)
+      ) {
+        void (async () => {
+          const ok = await fetchWordTimingsForSegment(segmentIndex)
+          if (seekRequestIdRef.current !== requestId) return
+
+          const updatedStartTimes = segmentWordStartTimesRef.current[segmentIndex]
+          if (ok && updatedStartTimes && updatedStartTimes.length === expectedCount) {
+            pendingSeekRef.current = {
+              segmentIndex,
+              timeSeconds: Math.max(
+                0,
+                updatedStartTimes[Math.min(localIndex, updatedStartTimes.length - 1)] ?? 0
+              ),
+              autoplay,
+            }
+          } else {
+            pendingSeekRef.current = { segmentIndex, ratio, autoplay }
+          }
+
+          setCurrentIndex(segmentIndex)
+          applyPendingSeek()
+        })()
+        return
+      } else {
+        pendingSeekRef.current = { segmentIndex, ratio, autoplay }
+      }
+
       if (segmentIndex !== currentIndex) {
         setCurrentIndex(segmentIndex)
         return
       }
+
       applyPendingSeek()
     },
-    [applyPendingSeek, audioUrls.length, currentIndex, isGenerating]
+    [
+      applyPendingSeek,
+      audioUrls.length,
+      currentIndex,
+      fetchWordTimingsForSegment,
+      isGenerating,
+      onWordProgress,
+      readAlongEnabled,
+      wordTimingsEnabled,
+    ]
   )
 
+  const seekToWord = useCallback((wordIndex: number) => queueSeekToWord(wordIndex, true), [queueSeekToWord])
+
   useImperativeHandle(ref, () => ({ seekToWord }), [seekToWord])
-
-  // Auto-play is now handled directly in handleEnded for reliability
-
-  useEffect(() => {
-    updateWordProgressFromAudio()
-  }, [audioUrls, currentIndex, updateWordProgressFromAudio])
-
-  useEffect(() => {
-    applyPendingSeek()
-  }, [applyPendingSeek, currentIndex, audioUrls])
 
   useEffect(() => {
     if (audioUrls.length > 0 || !isPlaying) return
@@ -671,22 +919,63 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   }, [audioUrls.length, isPlaying])
 
   useEffect(() => {
-    // Don't interfere if handleEnded is managing auto-play directly
-    if (autoPlayNextRef.current) return
-
     const audio = audioRef.current
     if (!audio) return
     const urls = audioUrlsRef.current
     if (!urls[currentIndex]) return
 
     audio.load()
-    if (isPlaying) {
+    const pendingSeek = pendingSeekRef.current
+    const hasPendingSeek = pendingSeek?.segmentIndex === currentIndex
+    if (!hasPendingSeek) {
+      try {
+        audio.currentTime = 0
+      } catch {
+        // ignore
+      }
+      const globalOffset = continuousModeActive ? (segmentStartSecondsRef.current[currentIndex] ?? 0) : 0
+      setCurrentTime(globalOffset)
+      updateWordProgressFromAudio()
+    }
+
+    const shouldPlay = !hasPendingSeek && (isPlayingRef.current || autoPlayNextRef.current)
+    autoPlayNextRef.current = false
+    if (shouldPlay) {
+      if (wordTimingsEnabled && readAlongEnabled && onWordProgress) {
+        void (async () => {
+          setIsPreparingTimings(true)
+          try {
+            await fetchWordTimingsForSegment(currentIndex)
+            void fetchWordTimingsForSegment(currentIndex + 1)
+          } finally {
+            setIsPreparingTimings(false)
+          }
+          audio.play().catch(() => {
+            setIsPlaying(false)
+            isPlayingRef.current = false
+          })
+        })()
+        return
+      }
+
       audio.play().catch(() => {
         setIsPlaying(false)
+        isPlayingRef.current = false
       })
     }
-    setCurrentTime(0)
-  }, [currentIndex, isPlaying])
+  }, [
+    continuousModeActive,
+    currentIndex,
+    fetchWordTimingsForSegment,
+    onWordProgress,
+    readAlongEnabled,
+    updateWordProgressFromAudio,
+    wordTimingsEnabled,
+  ])
+
+  useEffect(() => {
+    applyPendingSeek()
+  }, [applyPendingSeek, currentIndex, audioUrls])
 
   useEffect(() => {
     if (!isPlaying || audioUrls.length === 0) return
@@ -700,6 +989,24 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       if (rafId) cancelAnimationFrame(rafId)
     }
   }, [audioUrls.length, isPlaying, updateWordProgressFromAudio])
+
+  const recomputeSegmentTimeline = useCallback(() => {
+    const durations = segmentDurationSecondsRef.current
+    const starts = new Array(durations.length).fill(0)
+    let total = 0
+    for (let i = 0; i < durations.length; i += 1) {
+      starts[i] = total
+      const durationSeconds = durations[i]
+      if (Number.isFinite(durationSeconds) && durationSeconds > 0) {
+        total += durationSeconds
+      }
+    }
+    segmentStartSecondsRef.current = starts
+    totalDurationSecondsRef.current = total
+    if (continuousModeActive) {
+      setDuration(total)
+    }
+  }, [continuousModeActive])
 
   const generateAudioForSegments = async (
     segments: Array<{ text: string; voice: string; cacheable?: boolean }>,
@@ -749,8 +1056,25 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
     const controller = new AbortController()
     abortRef.current = controller
+    wordTimingsAbortRef.current?.abort()
+    wordTimingsAbortRef.current = new AbortController()
+    wordTimingsInFlightRef.current.clear()
+    wordTimingsFailedRef.current.clear()
+    wordTimingsPromisesRef.current.clear()
+    segmentAudioKeysRef.current = []
+    segmentTextsRef.current = []
+    segmentWordStartTimesRef.current = []
+    segmentWordEndTimesRef.current = []
+    segmentDurationSecondsRef.current = new Array(segments.length).fill(NaN)
+    segmentStartSecondsRef.current = new Array(segments.length).fill(0)
+    totalDurationSecondsRef.current = 0
+    if (continuousModeActive) {
+      setDuration(0)
+      setCurrentTime(0)
+    }
 
     const urls: string[] = []
+    audioUrlsRef.current = []
     setAudioUrls([])
     setCurrentIndex(0)
     setProgress({ current: 0, total: segments.length })
@@ -761,6 +1085,31 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
     const incrementSource = (key: 'pregen' | 'live') => {
       setSourceCounts((prev) => ({ ...prev, [key]: prev[key] + 1 }))
+    }
+
+  const registerSegment = async (options: {
+      index: number
+      url: string
+      source: 'pregen' | 'live'
+      audioKey: string | null
+      text: string
+    }) => {
+      urls.push(options.url)
+      const nextUrls = [...urls]
+      audioUrlsRef.current = nextUrls
+      setAudioUrls(nextUrls)
+      sources.push(options.source)
+      setSegmentSources([...sources])
+      incrementSource(options.source)
+      segmentAudioKeysRef.current.push(options.audioKey)
+      segmentTextsRef.current.push(options.text)
+
+      void (async () => {
+        const durationSeconds = await loadAudioDurationSeconds(options.url, controller.signal)
+        if (controller.signal.aborted) return
+        segmentDurationSecondsRef.current[options.index] = durationSeconds
+        recomputeSegmentTimeline()
+      })()
     }
 
     for (let i = 0; i < segments.length; i++) {
@@ -787,11 +1136,13 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           if (pre?.ok) {
             const blob = await pre.blob()
             const url = URL.createObjectURL(blob)
-            urls.push(url)
-            setAudioUrls([...urls])
-            sources.push('pregen')
-            setSegmentSources([...sources])
-            incrementSource('pregen')
+            await registerSegment({
+              index: i,
+              url,
+              source: 'pregen',
+              audioKey: extractAudioKeyFromPublicUrl(primaryUrl),
+              text: preparedText,
+            })
             continue
           }
         }
@@ -808,11 +1159,13 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           if (pre?.ok) {
             const blob = await pre.blob()
             const url = URL.createObjectURL(blob)
-            urls.push(url)
-            setAudioUrls([...urls])
-            sources.push('pregen')
-            setSegmentSources([...sources])
-            incrementSource('pregen')
+            await registerSegment({
+              index: i,
+              url,
+              source: 'pregen',
+              audioKey: extractAudioKeyFromPublicUrl(fallbackUrl),
+              text: preparedText,
+            })
             continue
           }
         }
@@ -842,53 +1195,60 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
       const blob = await response.blob()
       const url = URL.createObjectURL(blob)
-      urls.push(url)
-      setAudioUrls([...urls])
-      sources.push('live')
-      setSegmentSources([...sources])
-      incrementSource('live')
+      await registerSegment({
+        index: i,
+        url,
+        source: 'live',
+        audioKey: response.headers.get('X-Topic-Teacher-Audio-Key')?.trim() || null,
+        text: preparedText,
+      })
     }
 
     setProgress({ current: segments.length, total: segments.length })
   }
 
-  const handleGenerate = async () => {
-    if (isDisabled || isGenerating) return
-    if (canUsePregen && !baseContentReady) return
+	  const handleGenerate = async () => {
+	    if (isDisabled || isGenerating) return
+	    if (canUsePregen && !baseContentReady) return
 
     const maxCharsPerTtsRequest = readAlongEnabled ? 1400 : MAX_CHARS_PER_TTS_REQUEST
     const sectionSplitLevel = 2
 
-    setError(null)
-    setIsGenerating(true)
-    setProgress({ current: 0, total: 0 })
-    setAudioUrls((prev) => {
-      revokeUrls(prev)
-      return []
-    })
-    setCurrentIndex(0)
+	    setError(null)
+	    setIsGenerating(true)
+	    setIsPreparingTimings(false)
+	    setProgress({ current: 0, total: 0 })
+	    audioUrlsRef.current = []
+	    setAudioUrls((prev) => {
+	      revokeUrls(prev)
+	      return []
+	    })
+	    setCurrentIndex(0)
 
-    try {
+	    try {
       const normalizedRanges =
         baseLessonMarkdown && metaphorRanges.length > 0 && isEnglishish(languagePreference)
           ? normalizeRanges(baseLessonMarkdown, metaphorRanges)
           : []
 
-      const segments: Array<{ text: string; voice: string; cacheable?: boolean }> = []
-      const nextSectionTitles: string[] = []
-      const nextSectionStarts: number[] = []
-      const nextSegmentSectionIndices: number[] = []
-      let segmentCursor = 0
+	      const segments: Array<{ text: string; voice: string; cacheable?: boolean }> = []
+	      const nextSectionTitles: string[] = []
+	      const nextSectionStarts: number[] = []
+	      const nextSectionWordStarts: number[] = []
+	      const nextSegmentSectionIndices: number[] = []
+	      let segmentCursor = 0
+	      let wordCursor = 0
 
-      const pushSpeakableChunks = (options: { sectionIndex: number; text: string; cacheable?: boolean }) => {
-        const chunks = chunkTextForTts(options.text, maxCharsPerTtsRequest)
-        chunks.forEach((text) => {
-          if (!text.trim()) return
-          segments.push({ text, voice, cacheable: options.cacheable })
-          nextSegmentSectionIndices.push(options.sectionIndex)
-          segmentCursor += 1
-        })
-      }
+	      const pushSpeakableChunks = (options: { sectionIndex: number; text: string; cacheable?: boolean }) => {
+	        const chunks = chunkTextForTts(options.text, maxCharsPerTtsRequest)
+	        chunks.forEach((text) => {
+	          if (!text.trim()) return
+	          segments.push({ text, voice, cacheable: options.cacheable })
+	          nextSegmentSectionIndices.push(options.sectionIndex)
+	          segmentCursor += 1
+	          wordCursor += countWords(normalizeTextForReadAlong(text))
+	        })
+	      }
 
       if (baseLessonMarkdown && normalizedRanges.length > 0) {
         const sections = splitMarkdownIntoSections(baseLessonMarkdown, sectionSplitLevel)
@@ -900,10 +1260,11 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
             : normalizedRanges.map((range) => baseLessonMarkdown.slice(range.start, range.end))
         const metaphorCacheable = !Boolean(userInterests && userInterests.trim())
 
-        for (let sectionIndex = 0; sectionIndex < sections.length; sectionIndex += 1) {
-          const section = sections[sectionIndex]
-          nextSectionTitles.push(section.title ?? 'Intro')
-          nextSectionStarts.push(segmentCursor)
+	        for (let sectionIndex = 0; sectionIndex < sections.length; sectionIndex += 1) {
+	          const section = sections[sectionIndex]
+	          nextSectionTitles.push(section.title ?? 'Intro')
+	          nextSectionStarts.push(segmentCursor)
+	          nextSectionWordStarts.push(wordCursor)
 
           const sectionRangesIndices: number[] = []
           const sectionRanges: MetaphorRange[] = []
@@ -954,6 +1315,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
         segmentSectionIndexRef.current = nextSegmentSectionIndices
         sectionStartIndexRef.current = nextSectionStarts
+        sectionWordStartIndexRef.current = nextSectionWordStarts
         setSectionTitles(nextSectionTitles)
 
         await generateAudioForSegments(segments, true)
@@ -965,6 +1327,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         const section = sections[sectionIndex]
         nextSectionTitles.push(section.title ?? 'Intro')
         nextSectionStarts.push(segmentCursor)
+        nextSectionWordStarts.push(wordCursor)
 
         const speakable = prepareTextForTts(markdownToSpeakableText(section.markdown))
         if (!speakable.trim()) continue
@@ -973,6 +1336,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
       segmentSectionIndexRef.current = nextSegmentSectionIndices
       sectionStartIndexRef.current = nextSectionStarts
+      sectionWordStartIndexRef.current = nextSectionWordStarts
       setSectionTitles(nextSectionTitles)
 
       await generateAudioForSegments(segments, true)
@@ -983,6 +1347,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       console.error('[LessonAudioControls] Error generating audio:', err)
       const message = err instanceof Error ? err.message : 'Failed to generate audio.'
       setError(message)
+      audioUrlsRef.current = []
       setAudioUrls((prev) => {
         revokeUrls(prev)
         return []
@@ -1005,7 +1370,11 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   }
 
   const progressText =
-    isGenerating && progress.total > 0 ? `Generating audio ${Math.min(progress.current + 1, progress.total)}/${progress.total}…` : null
+    isGenerating && progress.total > 0
+      ? `Generating audio ${Math.min(progress.current + 1, progress.total)}/${progress.total}…`
+      : isPreparingTimings
+        ? 'Preparing word timings…'
+        : null
   const sourceTotal = sourceCounts.pregen + sourceCounts.live
   const sourceText =
     sourceTotal > 0
@@ -1020,12 +1389,44 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   }
 
   const hasAudio = audioUrls.length > 0
-  const currentSectionIndex = hasAudio ? segmentSectionIndexRef.current[currentIndex] ?? 0 : 0
   const sectionCount = sectionTitles.length
+  const currentSectionIndex = (() => {
+    if (!hasAudio) return 0
+    if (!continuousModeActive) return segmentSectionIndexRef.current[currentIndex] ?? 0
+
+    const starts = sectionWordStartIndexRef.current
+    if (starts.length === 0) return 0
+    const wordIndex = readAlongWordIndex ?? 0
+
+    let lo = 0
+    let hi = starts.length - 1
+    let best = 0
+    while (lo <= hi) {
+      const mid = Math.floor((lo + hi) / 2)
+      const start = starts[mid] ?? 0
+      if (wordIndex >= start) {
+        best = mid
+        lo = mid + 1
+      } else {
+        hi = mid - 1
+      }
+    }
+    return Math.max(0, Math.min(best, starts.length - 1))
+  })()
 
   const jumpToSection = useCallback(
     (targetSectionIndex: number) => {
       if (!hasAudio) return
+
+      if (continuousModeActive) {
+        const starts = sectionWordStartIndexRef.current
+        if (starts.length === 0) return
+        const clampedSection = Math.max(0, Math.min(targetSectionIndex, starts.length - 1))
+        const wordIndex = starts[clampedSection] ?? 0
+        queueSeekToWord(wordIndex, isPlaying)
+        return
+      }
+
       const starts = sectionStartIndexRef.current
       if (starts.length === 0 || audioUrls.length === 0) {
         setCurrentIndex((prev) => Math.max(0, Math.min(audioUrls.length - 1, prev)))
@@ -1037,7 +1438,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       const maxIndex = Math.max(0, audioUrls.length - 1)
       setCurrentIndex(Math.max(0, Math.min(targetSegment, maxIndex)))
     },
-    [audioUrls.length, hasAudio]
+    [audioUrls.length, continuousModeActive, hasAudio, isPlaying, queueSeekToWord]
   )
 
   const handlePrevSection = () => {
@@ -1051,7 +1452,6 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const handlePlayPause = () => {
     if (audioUrls.length === 0) {
       if (isDisabled || isGenerating) return
-      autoPlayNextRef.current = true
       handleGenerateRef.current?.()
       return
     }
@@ -1060,6 +1460,20 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     if (isPlaying) {
       audio.pause()
     } else {
+      if (wordTimingsEnabled && readAlongEnabled && onWordProgress) {
+        void (async () => {
+          setIsPreparingTimings(true)
+          try {
+            await fetchWordTimingsForSegment(currentIndex)
+            void fetchWordTimingsForSegment(currentIndex + 1)
+          } finally {
+            setIsPreparingTimings(false)
+          }
+          audio.play().catch(() => {})
+        })()
+        return
+      }
+
       audio.play().catch(() => {})
     }
   }
@@ -1068,17 +1482,63 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     const audio = audioRef.current
     if (!audio) return
     const newTime = Number.parseFloat(e.target.value)
-    audio.currentTime = newTime
-    setCurrentTime(newTime)
+    if (!Number.isFinite(newTime)) return
+
+    if (!continuousModeActive) {
+      audio.currentTime = newTime
+      setCurrentTime(newTime)
+      return
+    }
+
+    const total = totalDurationSecondsRef.current
+    const targetGlobalTime = Math.min(Math.max(0, newTime), Number.isFinite(total) && total > 0 ? total : newTime)
+
+    const starts = segmentStartSecondsRef.current
+    const durations = segmentDurationSecondsRef.current
+    const segmentCount = durations.length
+    if (segmentCount === 0) {
+      audio.currentTime = targetGlobalTime
+      setCurrentTime(targetGlobalTime)
+      return
+    }
+
+    let segmentIndex = segmentCount - 1
+    for (let i = 0; i < segmentCount; i += 1) {
+      const start = starts[i] ?? 0
+      const durationSeconds = durations[i]
+      const end = start + (Number.isFinite(durationSeconds) && durationSeconds > 0 ? durationSeconds : 0)
+      if (i === segmentCount - 1 || targetGlobalTime < end) {
+        segmentIndex = i
+        break
+      }
+    }
+
+    const segmentStart = starts[segmentIndex] ?? 0
+    const localTime = Math.max(0, targetGlobalTime - segmentStart)
+    pendingSeekRef.current = { segmentIndex, timeSeconds: localTime, autoplay: isPlaying }
+    if (segmentIndex !== currentIndex) {
+      setCurrentIndex(segmentIndex)
+      return
+    }
+    applyPendingSeek()
   }
 
   const handleTimeUpdate = () => {
     const audio = audioRef.current
     if (!audio) return
-    setCurrentTime(audio.currentTime)
+    const segmentOffset = continuousModeActive ? (segmentStartSecondsRef.current[currentIndex] ?? 0) : 0
+    setCurrentTime(segmentOffset + audio.currentTime)
     const nextDuration = getEffectiveDurationSeconds(audio)
     if (Number.isFinite(nextDuration) && nextDuration > 0) {
-      setDuration(nextDuration)
+      if (continuousModeActive) {
+        const known = segmentDurationSecondsRef.current[currentIndex]
+        if (!Number.isFinite(known) || Math.abs(known - nextDuration) > 0.05) {
+          segmentDurationSecondsRef.current[currentIndex] = nextDuration
+          recomputeSegmentTimeline()
+        }
+      } else {
+        setDuration(nextDuration)
+      }
     }
     updateWordProgressFromAudio()
   }
@@ -1088,12 +1548,17 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     if (!audio) return
     const nextDuration = getEffectiveDurationSeconds(audio)
     if (Number.isFinite(nextDuration) && nextDuration > 0) {
-      setDuration(nextDuration)
+      if (continuousModeActive) {
+        segmentDurationSecondsRef.current[currentIndex] = nextDuration
+        recomputeSegmentTimeline()
+      } else {
+        setDuration(nextDuration)
+      }
     }
     updateWordProgressFromAudio()
   }
 
-  const currentSegmentSource = hasAudio ? segmentSources[currentIndex] : null
+  const currentSegmentSource = hasAudio && !continuousModeActive ? segmentSources[currentIndex] : null
   const showStickyBar = hasAudio || shouldAutoLoadPregenFullLesson
   const showGenerateButton = !shouldAutoLoadPregenFullLesson || voice !== DEFAULT_VOICE || interestsActive
   const showRegenerateButton = hasAudio && (interestsActive || voice !== DEFAULT_VOICE || !isEnglishish(languagePreference))
@@ -1171,10 +1636,14 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
           onPlay={() => {
+            isPlayingRef.current = true
             setIsPlaying(true)
             updateWordProgressFromAudio()
           }}
-          onPause={() => setIsPlaying(false)}
+          onPause={() => {
+            isPlayingRef.current = false
+            setIsPlaying(false)
+          }}
           onSeeked={updateWordProgressFromAudio}
           className="hidden"
         />

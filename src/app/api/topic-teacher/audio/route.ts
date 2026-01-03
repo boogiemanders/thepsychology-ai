@@ -268,10 +268,10 @@ export async function POST(request: NextRequest) {
   const audioArrayBuffer = await openaiResponse.arrayBuffer()
   const audioBuffer = Buffer.from(audioArrayBuffer)
 
-  if (cacheable) {
-    const cacheKeyUsed = computeCacheKey({ model: modelUsed, voice, format, speed, text })
-    writeAudioToCache(cacheKeyUsed, format, audioBuffer)
-  }
+  // Always write a local cache entry so features like read-along word timings can access the audio bytes later,
+  // even when the segment isn't eligible for long-lived/public caching.
+  const cacheKeyUsed = computeCacheKey({ model: modelUsed, voice, format, speed, text })
+  writeAudioToCache(cacheKeyUsed, format, audioBuffer)
 
   await logUsageEvent({
     userId,

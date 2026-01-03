@@ -318,6 +318,31 @@ function readAudioFromDisk(audioKey: string): Buffer | null {
   }
 }
 
+function readAudioFromPublic(audioKey: string): Buffer | null {
+  const filePath = path.join(process.cwd(), 'public', 'topic-teacher-audio', 'v1', `${audioKey}.${DEFAULT_AUDIO_FORMAT}`)
+  try {
+    return fs.readFileSync(filePath)
+  } catch {
+    return null
+  }
+}
+
+async function readAudioFromRemote(audioKey: string): Promise<Buffer | null> {
+  const base = (process.env.NEXT_PUBLIC_TOPIC_TEACHER_AUDIO_BASE_URL || '').trim().replace(/\/+$/, '')
+  if (!base) return null
+  if (!/^https?:\/\//i.test(base)) return null
+
+  const url = `${base}/${audioKey}.${DEFAULT_AUDIO_FORMAT}`
+  try {
+    const response = await fetch(url, { cache: 'no-store' })
+    if (!response.ok) return null
+    const bytes = await response.arrayBuffer()
+    return Buffer.from(bytes)
+  } catch {
+    return null
+  }
+}
+
 export async function POST(request: NextRequest) {
   const apiKey = getOpenAIApiKey()
   if (!apiKey) {
@@ -365,7 +390,11 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  const audioBuffer = readAudioFromDisk(audioKey) ?? (await readObjectFromR2(`${R2_PREFIX}/${audioKey}.mp3`))
+  const audioBuffer =
+    readAudioFromDisk(audioKey) ??
+    readAudioFromPublic(audioKey) ??
+    (await readAudioFromRemote(audioKey)) ??
+    (await readObjectFromR2(`${R2_PREFIX}/${audioKey}.mp3`))
   if (!audioBuffer) {
     return NextResponse.json({ error: 'Audio segment not found.' }, { status: 404 })
   }
@@ -404,4 +433,3 @@ export async function POST(request: NextRequest) {
 
   return NextResponse.json(payload)
 }
-
