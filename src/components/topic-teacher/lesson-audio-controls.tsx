@@ -925,6 +925,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     if (!urls[currentIndex]) return
 
     audio.load()
+    audio.playbackRate = playbackRate
     const pendingSeek = pendingSeekRef.current
     const hasPendingSeek = pendingSeek?.segmentIndex === currentIndex
     if (!hasPendingSeek) {
@@ -1546,6 +1547,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const handleLoadedMetadata = () => {
     const audio = audioRef.current
     if (!audio) return
+    audio.playbackRate = playbackRate
     const nextDuration = getEffectiveDurationSeconds(audio)
     if (Number.isFinite(nextDuration) && nextDuration > 0) {
       if (continuousModeActive) {
@@ -1636,6 +1638,9 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
           onPlay={() => {
+            if (audioRef.current) {
+              audioRef.current.playbackRate = playbackRate
+            }
             isPlayingRef.current = true
             setIsPlaying(true)
             updateWordProgressFromAudio()
