@@ -2774,21 +2774,21 @@ export function TopicTeacherContent() {
   return (
     <TopicTeacherTourProvider>
     <main className="min-h-screen flex flex-col bg-background overflow-x-hidden">
-      <div className="flex-1 flex flex-col w-full mx-auto px-4 py-6 pb-40 max-w-[800px]">
+      <div className="flex-1 flex flex-col w-full mx-auto px-4 py-6 pb-40 max-w-[800px] overflow-x-hidden">
         {/* 1. Breadcrumb - above audio bar */}
-        <div className="flex items-center justify-between mb-4">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
+        <div className="flex items-center justify-between gap-2 mb-4 min-w-0">
+          <Breadcrumb className="min-w-0 overflow-hidden">
+            <BreadcrumbList className="flex-nowrap">
+              <BreadcrumbItem className="hidden sm:flex">
                 <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
+              <BreadcrumbSeparator className="hidden sm:flex" />
+              <BreadcrumbItem className="hidden sm:flex">
                 <BreadcrumbLink href="/topic-selector">Lessons</BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{displayLessonName}</BreadcrumbPage>
+              <BreadcrumbSeparator className="hidden sm:flex" />
+              <BreadcrumbItem className="min-w-0">
+                <BreadcrumbPage className="truncate max-w-[200px] sm:max-w-none">{displayLessonName}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
@@ -2886,7 +2886,7 @@ export function TopicTeacherContent() {
                     }
                   }
                 }}
-                className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"
+                className="flex-1 min-w-[100px] sm:min-w-[200px] bg-transparent outline-none text-sm"
               />
 
               {/* Enter key indicator */}
@@ -2985,7 +2985,7 @@ export function TopicTeacherContent() {
                       }
                     }
                   }}
-                  className="flex-1 min-w-[200px] bg-transparent outline-none text-sm"
+                  className="flex-1 min-w-[100px] sm:min-w-[200px] bg-transparent outline-none text-sm"
                 />
               )}
 
@@ -3006,7 +3006,7 @@ export function TopicTeacherContent() {
 
         {/* 3. Title - after inputs */}
         <div className="mb-6">
-          <TypographyH1>{displayLessonName}</TypographyH1>
+          <h1 className="scroll-m-20 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight">{displayLessonName}</h1>
         </div>
 
         {/* 5. Metaphor updating message */}
