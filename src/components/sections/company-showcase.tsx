@@ -4,9 +4,68 @@ import { siteConfig } from "@/lib/config"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Marquee } from "@/components/ui/marquee"
 import { TextRotate } from "@/components/ui/text-rotate"
 
 const ROLES = ["psychologists", "researchers", "engineers"]
+
+type CompanyLogo = {
+  id: number
+  name: string
+  src: string | null
+  member?: string
+  invert?: boolean
+  width?: number
+}
+
+function CompanyCard({ logo, compact = false }: { logo: CompanyLogo; compact?: boolean }) {
+  if (compact) {
+    // Simpler card for mobile marquee
+    return (
+      <Link
+        href={logo.member ? `/portfolio?member=${logo.member}` : "/portfolio"}
+        className="flex items-center justify-center px-4 py-2 shrink-0"
+      >
+        <span className="text-xs font-medium tracking-wide text-primary/70 whitespace-nowrap">
+          {logo.name}
+        </span>
+      </Link>
+    )
+  }
+
+  return (
+    <Link
+      href={logo.member ? `/portfolio?member=${logo.member}` : "/portfolio"}
+      className="group w-full h-24 flex items-center justify-center relative p-4 shrink-0"
+    >
+      <div
+        className="transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]
+                   translate-y-0 group-hover:-translate-y-4 flex items-center justify-center w-full h-full"
+      >
+        {logo.src ? (
+          <Image
+            src={logo.src}
+            alt={logo.name}
+            width={logo.width || 120}
+            height={logo.width ? Math.round(logo.width / 3) : 40}
+            className={`object-contain opacity-80 group-hover:opacity-100 transition-opacity ${logo.invert ? "brightness-0 invert" : ""}`}
+          />
+        ) : (
+          <span className="text-xs md:text-sm font-medium tracking-wide text-primary/80 whitespace-nowrap">
+            {logo.name}
+          </span>
+        )}
+      </div>
+
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100
+                      translate-y-8 group-hover:translate-y-4 transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]">
+        <span className="flex items-center gap-2 text-sm font-medium">
+          Learn More <ArrowRight className="w-4 h-4" />
+        </span>
+      </div>
+    </Link>
+  )
+}
 
 export function CompanyShowcase() {
   const { companyShowcase, hero } = siteConfig
@@ -47,39 +106,21 @@ export function CompanyShowcase() {
         </p>
       </div>
 
-      <div className="grid w-full max-w-7xl grid-cols-2 md:grid-cols-4 items-center justify-center z-20">
-        {companyShowcase.companyLogos.map((logo: { id: number; name: string; src: string | null; member?: string; invert?: boolean; width?: number }) => (
-          <Link
-            href={logo.member ? `/portfolio?member=${logo.member}` : "/portfolio"}
-            key={logo.id}
-            className="group w-full h-24 flex items-center justify-center relative p-4"
-          >
-            <div
-              className="transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]
-                         translate-y-0 group-hover:-translate-y-4 flex items-center justify-center w-full h-full"
-            >
-              {logo.src ? (
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width || 120}
-                  height={logo.width ? Math.round(logo.width / 3) : 40}
-                  className={`object-contain opacity-80 group-hover:opacity-100 transition-opacity ${logo.invert ? "brightness-0 invert" : ""}`}
-                />
-              ) : (
-                <span className="text-xs md:text-sm font-medium tracking-wide text-primary/80">
-                  {logo.name}
-                </span>
-              )}
-            </div>
+      {/* Mobile: Marquee */}
+      <div className="block md:hidden relative w-full overflow-hidden z-20">
+        <Marquee pauseOnHover className="[--duration:20s] [--gap:2rem]">
+          {companyShowcase.companyLogos.map((logo: CompanyLogo) => (
+            <CompanyCard key={logo.id} logo={logo} compact />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent" />
+      </div>
 
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100
-                            translate-y-8 group-hover:translate-y-4 transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]">
-              <span className="flex items-center gap-2 text-sm font-medium">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </span>
-            </div>
-          </Link>
+      {/* Desktop: Grid */}
+      <div className="hidden md:grid w-full max-w-7xl grid-cols-4 items-center justify-center z-20">
+        {companyShowcase.companyLogos.map((logo: CompanyLogo) => (
+          <CompanyCard key={logo.id} logo={logo} />
         ))}
       </div>
     </section>
