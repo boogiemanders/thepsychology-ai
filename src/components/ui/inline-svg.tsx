@@ -41,12 +41,20 @@ export function InlineSvg({ src, alt, className }: InlineSvgProps) {
     return <span className={`block animate-pulse bg-muted rounded-lg h-48 ${className || ''}`} />
   }
 
+  // Modify SVG to be responsive - add width="100%" height="auto" and preserve aspect ratio
+  const responsiveSvg = svgContent
+    .replace(/<svg([^>]*)width="[^"]*"/, '<svg$1width="100%"')
+    .replace(/<svg([^>]*)height="[^"]*"/, '<svg$1height="auto"')
+    // If no width attribute, add it after <svg
+    .replace(/<svg(?![^>]*width=)/, '<svg width="100%" height="auto" ')
+
   return (
     <span
-      className={`inline-svg-container block ${className || ''}`}
+      className={`inline-svg-container block w-full max-w-full overflow-hidden ${className || ''}`}
       role="img"
       aria-label={alt}
-      dangerouslySetInnerHTML={{ __html: svgContent }}
+      dangerouslySetInnerHTML={{ __html: responsiveSvg }}
+      style={{ maxWidth: '100%' }}
     />
   )
 }

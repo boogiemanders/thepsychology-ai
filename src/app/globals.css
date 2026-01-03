@@ -509,6 +509,17 @@ strong, b {
   }
 }
 
+/* Inline SVG responsive sizing */
+.inline-svg-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+.inline-svg-container svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Inline SVG theme-aware styling */
 .inline-svg-container .svg-label {
   fill: oklch(0.145 0 0); /* dark text for light mode */
