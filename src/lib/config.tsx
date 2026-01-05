@@ -218,7 +218,7 @@ export const siteConfig = {
       description: (
         <p>
           I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and{" "}
-          <Highlight className="text-brand-soft-blue dark:text-brand-coral">I got a 588 on my first try.</Highlight> This program is what I wish I had for a fraction of the
+          <Highlight className="text-brand-soft-blue dark:text-brand-coral">I passed on my first try.</Highlight> This program is what I wish I had for a fraction of the
           time, cost, and stress.
         </p>
       ),
