@@ -311,6 +311,27 @@ export function LockInDrillButton(props: LockInDrillButtonProps) {
               </div>
             </div>
           )}
+
+          {/* Fallback for unexpected state - prevents blank dialog */}
+          {loadState === "ready" && !current && index < drillQuestions.length && (
+            <div className="space-y-3">
+              <p className="text-sm text-muted-foreground">Something went wrong loading the question.</p>
+              <div className="flex gap-2">
+                <Button
+                  size="sm"
+                  onClick={() => {
+                    resetSession()
+                    startDrill()
+                  }}
+                >
+                  Retry
+                </Button>
+                <Button variant="outline" size="sm" onClick={() => setOpen(false)}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </>

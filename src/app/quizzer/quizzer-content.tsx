@@ -57,6 +57,7 @@ interface QuizQuestion {
 interface QuizState {
   question: number
   score: number
+  totalScoredQuestions: number
   selectedAnswers: Record<number, string>
   showResults: boolean
   timeRemaining: number
@@ -133,6 +134,7 @@ export function QuizzerContent() {
   const [quizState, setQuizState] = useState<QuizState>({
     question: 0,
     score: 0,
+    totalScoredQuestions: 0,
     selectedAnswers: {},
     showResults: false,
     timeRemaining: 0,
@@ -654,6 +656,7 @@ export function QuizzerContent() {
       ...prev,
       showResults: true,
       score: finalScore,
+      totalScoredQuestions: scoredQuestionCount,
     }))
     wrongStreakRef.current = 0
   }, [questions, topic, decodedTopic, domain, finalizeCurrentTiming])
@@ -666,7 +669,11 @@ export function QuizzerContent() {
 
   const isTimeWarning = quizState.timeRemaining > 0 && quizState.timeRemaining <= 120
   const scoredQuestionCount = questions.filter(q => q.isScored !== false).length
-  const passedQuiz = isQuizPass(quizState.score, scoredQuestionCount)
+  // Use stored totalScoredQuestions when showing results to prevent mismatch
+  const passedQuiz = isQuizPass(
+    quizState.score,
+    quizState.showResults ? quizState.totalScoredQuestions : scoredQuestionCount
+  )
   const recoverIsRecommended = showRecoverNudge || recoverRecommendationFromHour
 
   const handleRecoverClick = () => {
@@ -1161,12 +1168,12 @@ export function QuizzerContent() {
               {/* Score Summary */}
               <div className="text-center mb-6">
                 <div className="text-6xl font-bold text-primary mb-2">
-                  {quizState.score}/{scoredQuestionCount}
+                  {quizState.score}/{quizState.totalScoredQuestions}
                 </div>
                 <p className="text-muted-foreground">
                   {Math.round(
-                    scoredQuestionCount > 0
-                      ? (quizState.score / scoredQuestionCount) * 100
+                    quizState.totalScoredQuestions > 0
+                      ? (quizState.score / quizState.totalScoredQuestions) * 100
                       : 0
                   )}% Correct
                 </p>
