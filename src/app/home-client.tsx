@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { siteConfig } from "@/lib/config"
+import { useCurrentSection } from "@/hooks/use-current-section"
 import { CompanyShowcase } from "@/components/sections/company-showcase"
 import { FAQSection } from "@/components/sections/faq-section"
 // import { FeatureSection } from "@/components/sections/feature-section"
@@ -19,6 +20,7 @@ export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const pricingRef = useRef<HTMLElement | null>(null)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
+  const currentSection = useCurrentSection()
 
   useEffect(() => {
     if (typeof window === "undefined") return
@@ -166,6 +168,14 @@ export default function HomeClient() {
 
   const handleMiniTierClick = (tierName: string) => {
     setActiveTier(tierName)
+
+    // Track which section the user was viewing when they clicked
+    fetch('/api/track-mini-pricing-click', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ tierName, section: currentSection }),
+    }).catch(() => {}) // Fire and forget
+
     const pricing = pricingRef.current ?? document.getElementById("get-started")
     if (!pricing) return
 
