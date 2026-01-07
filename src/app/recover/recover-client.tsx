@@ -119,6 +119,7 @@ export default function RecoverPage() {
   const [isSending, setIsSending] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const bottomRef = useRef<HTMLDivElement | null>(null)
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null)
   const insightsInjectedRef = useRef(false)
 
   const canSend = useMemo(
@@ -274,6 +275,8 @@ export default function RecoverPage() {
       setError(e instanceof Error ? e.message : 'Something went wrong.')
     } finally {
       setIsSending(false)
+      // Refocus the textarea after sending
+      setTimeout(() => textareaRef.current?.focus(), 0)
     }
   }
 
@@ -402,6 +405,7 @@ export default function RecoverPage() {
 
             <div className="w-full flex gap-2">
               <Textarea
+                ref={textareaRef}
                 value={draft}
                 onChange={(e) => setDraft(e.target.value)}
                 onKeyDown={handleKeyDown}
