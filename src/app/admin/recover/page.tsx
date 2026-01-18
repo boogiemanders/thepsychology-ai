@@ -27,6 +27,7 @@ import { EmptyTable } from './components/empty-table'
 import { ExamScoreTrendChart } from './components/exam-score-trend-chart'
 import { TopicMasteryProgress } from './components/topic-mastery-progress'
 import { MarketingAnalytics } from './components/marketing-analytics'
+import { AnalyticsDashboard } from './components/analytics-dashboard'
 
 type AdminUserSummary = {
   userId: string
@@ -339,6 +340,7 @@ export default function AdminRecoverPage() {
           <TabsList>
             <TabsTrigger value="learning">Users & Learning</TabsTrigger>
             <TabsTrigger value="marketing">Marketing</TabsTrigger>
+            <TabsTrigger value="analytics">Research Analytics</TabsTrigger>
           </TabsList>
         </div>
 
@@ -720,6 +722,10 @@ export default function AdminRecoverPage() {
 
         <TabsContent value="marketing" className="flex-1 overflow-auto m-0">
           <MarketingAnalytics />
+        </TabsContent>
+
+        <TabsContent value="analytics" className="flex-1 overflow-auto m-0">
+          <AnalyticsDashboard />
         </TabsContent>
       </Tabs>
     </main>

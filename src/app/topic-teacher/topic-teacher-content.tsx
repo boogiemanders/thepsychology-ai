@@ -37,6 +37,7 @@ import { InlineSvg } from '@/components/ui/inline-svg'
 import { VariableStar } from '@/components/ui/variable-star'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { FeatureRatingDialog } from '@/components/feature-rating-dialog'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { LessonAudioControls, type LessonAudioControlsHandle } from '@/components/topic-teacher/lesson-audio-controls'
 import { expandNumericTokenForReadAlong, normalizeTextForReadAlong } from '@/lib/speech-text'
@@ -631,6 +632,9 @@ export function TopicTeacherContent() {
   const [readAlongReady, setReadAlongReady] = useState(false)
   const [readAlongEnabled, setReadAlongEnabled] = useState(true)
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
+  const [showRatingDialog, setShowRatingDialog] = useState(false)
+  const [ratingSubmitted, setRatingSubmitted] = useState(false)
+  const sessionStartRef = useRef<number>(Date.now())
   const readAlongWordCounterRef = useRef(0)
   const spokenWords = useMemo(() => {
     if (!lessonMarkdown.trim()) return []
@@ -699,6 +703,38 @@ export function TopicTeacherContent() {
       })
     }
   }, [user?.id, decodedTopic, domain])
+
+  // Show rating dialog after 2+ minutes of engagement or when navigating away
+  useEffect(() => {
+    if (!user?.id || ratingSubmitted) return
+
+    const RATING_DELAY_MS = 2 * 60 * 1000 // 2 minutes
+
+    // Show rating after delay
+    const timerId = setTimeout(() => {
+      const elapsed = Date.now() - sessionStartRef.current
+      if (elapsed >= RATING_DELAY_MS && !ratingSubmitted) {
+        setShowRatingDialog(true)
+      }
+    }, RATING_DELAY_MS)
+
+    // Show rating on visibility change (tab hidden after 2+ mins)
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden' && !ratingSubmitted) {
+        const elapsed = Date.now() - sessionStartRef.current
+        if (elapsed >= RATING_DELAY_MS) {
+          setShowRatingDialog(true)
+        }
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      clearTimeout(timerId)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [user?.id, ratingSubmitted])
 
   useEffect(() => {
     autoScrollRef.current = readAlongEnabled && autoScrollEnabled
@@ -4123,6 +4159,20 @@ export function TopicTeacherContent() {
             </DialogContent>
           </Dialog>
         )}
+
+        {/* Feature Rating Dialog */}
+        <FeatureRatingDialog
+          open={showRatingDialog}
+          onOpenChange={setShowRatingDialog}
+          feature="topic_teacher"
+          ratingType="stars"
+          topic={decodedTopic}
+          domain={domain ?? undefined}
+          durationSeconds={Math.round((Date.now() - sessionStartRef.current) / 1000)}
+          onSubmit={() => setRatingSubmitted(true)}
+          title="Rate this lesson"
+          description="How helpful was this lesson for your EPPP preparation?"
+        />
       </div>
     </main>
     </TopicTeacherTourProvider>

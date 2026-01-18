@@ -223,6 +223,74 @@ export async function GET(request: NextRequest) {
 
       await sendSlackNotification(weeklyMessage, 'metrics')
 
+      // === RESEARCH METRICS (Monday only) ===
+      // Topic Teacher ratings
+      const { data: ttRatings } = await supabase
+        .from('feature_ratings')
+        .select('rating_value')
+        .eq('feature', 'topic_teacher')
+        .eq('rating_type', 'stars')
+        .gte('created_at', weekAgoISO)
+
+      const ttAvgRating = ttRatings && ttRatings.length > 0
+        ? (ttRatings.reduce((sum, r) => sum + r.rating_value, 0) / ttRatings.length).toFixed(1)
+        : '—'
+      const ttRatingCount = ttRatings?.length ?? 0
+
+      // Quizzer satisfaction
+      const { data: qzRatings } = await supabase
+        .from('feature_ratings')
+        .select('rating_value')
+        .eq('feature', 'quizzer')
+        .eq('rating_type', 'thumbs')
+        .gte('created_at', weekAgoISO)
+
+      const qzThumbsUp = qzRatings?.filter(r => r.rating_value === 1).length ?? 0
+      const qzTotal = qzRatings?.length ?? 0
+      const qzSatisfaction = qzTotal > 0 ? Math.round((qzThumbsUp / qzTotal) * 100) : 0
+
+      // Diagnostic improvement (users with 2+ diagnostics)
+      const { data: diagnostics } = await supabase
+        .from('exam_history')
+        .select('user_id, score, total_questions, created_at')
+        .eq('exam_type', 'diagnostic')
+        .order('created_at', { ascending: true })
+
+      const userDiagnostics: Record<string, { first: number; latest: number }> = {}
+      for (const exam of diagnostics || []) {
+        const pct = (exam.score / exam.total_questions) * 100
+        if (!userDiagnostics[exam.user_id]) {
+          userDiagnostics[exam.user_id] = { first: pct, latest: pct }
+        } else {
+          userDiagnostics[exam.user_id].latest = pct
+        }
+      }
+
+      const improvements = Object.values(userDiagnostics)
+        .filter(d => d.first !== d.latest)
+        .map(d => d.latest - d.first)
+      const avgImprovement = improvements.length > 0
+        ? Math.round(improvements.reduce((a, b) => a + b, 0) / improvements.length)
+        : 0
+
+      // Topics studied this week
+      const { count: topicsStudied } = await supabase
+        .from('study_sessions')
+        .select('*', { count: 'exact', head: true })
+        .eq('feature', 'topic-teacher')
+        .gte('started_at', weekAgoISO)
+
+      const researchMessage = [
+        `📚 *Research Metrics* (Last 7 days)`,
+        '',
+        `⭐ Topic Teacher: ${ttAvgRating}/5 avg (${ttRatingCount} ratings)`,
+        `👍 Quizzer: ${qzSatisfaction}% satisfaction (${qzTotal} ratings)`,
+        `📈 Diagnostic improvement: ${avgImprovement > 0 ? '+' : ''}${avgImprovement}% avg (${improvements.length} users with 2+ attempts)`,
+        `🎯 Topic lessons: ${topicsStudied ?? 0}`,
+      ].join('\n')
+
+      await sendSlackNotification(researchMessage, 'metrics')
+
       // === QUESTION ERROR ALERTS (Monday only) ===
       const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
 
