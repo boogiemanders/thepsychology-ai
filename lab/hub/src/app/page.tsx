@@ -1,9 +1,14 @@
-import { Brain, Beaker, Sparkles, Microscope } from 'lucide-react'
+import { Brain, Beaker, Sparkles, Microscope, ClipboardList } from 'lucide-react'
 
 // In development, SENSE runs on port 3001. In production, middleware handles /SENSE rewrite.
 const SENSE_URL = process.env.NODE_ENV === 'development'
   ? 'http://localhost:3001/SENSE'
   : '/SENSE'
+
+// In development, DIPS runs on port 3003. In production, middleware handles /DIPS rewrite.
+const DIPS_URL = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:3003/DIPS'
+  : '/DIPS'
 
 const projects = [
   {
@@ -17,6 +22,18 @@ const projects = [
     tags: ['Clinical', 'Sensory Processing', 'Session Notes'],
     date: 'Jan 2025',
     color: '#8b5cf6', // Purple
+  },
+  {
+    id: 'dips',
+    name: 'DIPS',
+    description: 'AI clinical training tool for Dr. Inzinna Psychological Services.',
+    status: 'active' as const,
+    href: DIPS_URL,
+    icon: ClipboardList,
+    category: 'Research',
+    tags: ['Survey', 'AI Training', 'Evaluation'],
+    date: 'Jan 2025',
+    color: '#6366f1', // Indigo
   },
   {
     id: 'coming-1',

@@ -1,0 +1,386 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
+  --primary: #6366f1; /* Indigo for research/survey tool */
+  --primary-foreground: #ffffff;
+  --accent: #8b5cf6;
+  --success: #22c55e;
+  --error: #ef4444;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #1a1a1a;
+  --muted-foreground: #a3a3a3;
+  --border: #2a2a2a;
+  --primary: #818cf8;
+  --primary-foreground: #0a0a0a;
+  --accent: #a78bfa;
+  --card-bg: #141414;
+  --input-bg: #1a1a1a;
+}
+
+/* View Transition API styles for animated theme toggler */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tap target for mobile */
+.tap-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Survey card styles */
+.survey-card {
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.survey-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.survey-card:hover .card-title {
+  color: var(--primary);
+}
+
+/* Form styles */
+.form-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.form-sublabel {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: border-color 0.15s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-input::placeholder {
+  color: var(--muted-foreground);
+}
+
+/* Select dropdown */
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--foreground);
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Textarea */
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--foreground);
+  font-size: 1rem;
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Likert scale */
+.likert-scale {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.likert-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+  min-width: 48px;
+}
+
+.likert-option:hover {
+  background: var(--muted);
+}
+
+.likert-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.likert-option span {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+
+/* Checkbox group */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.checkbox-option:hover {
+  background: var(--muted);
+}
+
+.checkbox-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.checkbox-option span {
+  font-size: 0.95rem;
+}
+
+/* Rating scale (0-10) */
+.rating-scale {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.rating-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--foreground);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rating-button:hover {
+  border-color: var(--primary);
+}
+
+.rating-button.selected {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 4px;
+  background: var(--muted);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--muted);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+/* Dual rating row */
+.dual-rating-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.dual-rating-row:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  .dual-rating-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+/* Dealbreakers table */
+.dealbreakers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dealbreakers-table th,
+.dealbreakers-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.dealbreakers-table th {
+  font-weight: 500;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.dealbreakers-table input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+/* Success message */
+.success-message {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+/* Error message */
+.error-text {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
