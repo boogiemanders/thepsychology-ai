@@ -32,7 +32,7 @@ export function AdminFab() {
   if (!isAdmin) return null
 
   return (
-    <div className="fixed bottom-4 left-4 z-50">
+    <div className="fixed bottom-4 right-4 z-50">
       <Popover>
         <PopoverTrigger asChild>
           <Button variant="minimal" size="sm" className="text-xs opacity-60 hover:opacity-100">
@@ -40,7 +40,7 @@ export function AdminFab() {
             <ChevronUp className="w-3 h-3 ml-1" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent align="start" side="top" className="w-48 p-1">
+        <PopoverContent align="end" side="top" className="w-48 p-1">
           <Link
             href="/admin/recover"
             className="flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors"

@@ -1,10 +1,18 @@
 {
-  "name": "my-v0-project",
+  "name": "thepsychology-ai",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "lab/*"
+  ],
   "scripts": {
     "build": "next build",
+    "build:sense": "npm run build --workspace=lab/SENSE",
+    "build:lab": "npm run build --workspace=lab/hub",
     "dev": "next dev",
+    "dev:sense": "npm run dev --workspace=lab/SENSE",
+    "dev:lab": "npm run dev --workspace=lab/hub",
+    "dev:all": "npm run dev & npm run dev:sense & npm run dev:lab",
     "ingest:recover": "node scripts/ingest-recover-pdfs.mjs",
     "lint": "eslint .",
     "start": "next start",

@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id             String    @id @default(cuid())
+  name           String
+  age            Int?
+  settingDefault String?   // home, clinic, school
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  sessions       Session[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  clientId  String
+  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Step 1: Baseline Profile
+  somaticRating        Int?      // 1-5
+  emotionalRating      Int?      // 1-5
+  neurologicalRating   Int?      // 1-5
+  socialRating         Int?      // 1-5
+  environmentalRating  Int?      // 1-5
+  stateTag             String?   // hyper, hypo, mixed, regulated
+  bodySystem           String?   // GI, cardio, respiratory, musculoskeletal, sleep
+  context              String?   // home, clinic, school
+  sensoryModifiers     String?   // JSON array of modifiers
+
+  // Step 2: Hypotheses
+  hypothesis1          String?
+  hypothesis2          String?
+
+  // Step 3: Plan
+  targets              String?   // JSON array of targets
+  interventionId       String?
+  interventionName     String?
+  measure              String?
+  practiceFrequency    String?
+
+  // Step 4: Export
+  exportedNote         String?
+  noteExportedAt       DateTime?
+}
