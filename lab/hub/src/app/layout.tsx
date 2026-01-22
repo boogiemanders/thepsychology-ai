@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import './globals.css'
 import { Search, Menu, ExternalLink } from 'lucide-react'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -37,12 +36,13 @@ export default function RootLayout({
             <div className="flex items-center justify-between px-6 py-4">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <Image
-                  src="/images/logo.png"
+{/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/lab/images/logo.png"
                   alt="Logo"
                   width={40}
                   height={40}
-                  className="size-7 md:size-10 invert"
+                  className="size-7 md:size-10"
                 />
                 <div className="flex flex-col leading-none">
                   <span className="text-lg font-semibold">thePsychology.ai</span>
