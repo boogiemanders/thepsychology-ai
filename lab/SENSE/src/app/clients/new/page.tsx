@@ -122,7 +122,7 @@ export default function NewClientPage() {
                 Clinical Responsibility Acknowledgment
               </p>
               <p className="text-sm text-[var(--muted-foreground)]">
-                SENSE Lens is a clinical decision support tool. Sensory processing
+                SENSE is a clinical decision support tool. Sensory processing
                 considerations are one factor among many in comprehensive assessment.
                 This tool does not replace clinical judgment or comprehensive evaluation.
               </p>

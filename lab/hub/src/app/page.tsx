@@ -1,12 +1,17 @@
 import { Brain, Beaker, Sparkles, Microscope } from 'lucide-react'
 
+// In development, SENSE runs on port 3001. In production, middleware handles /SENSE rewrite.
+const SENSE_URL = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:3001/SENSE'
+  : '/SENSE'
+
 const projects = [
   {
     id: 'sense',
-    name: 'SENSE Lens',
+    name: 'SENSE',
     description: 'A clinician-first tool for integrating sensory processing considerations into therapy sessions.',
     status: 'active' as const,
-    href: '/SENSE',
+    href: SENSE_URL,
     icon: Brain,
     category: 'Tool',
     tags: ['Clinical', 'Sensory Processing', 'Session Notes'],
@@ -107,7 +112,7 @@ export default function LabHomePage() {
         </h2>
 
         <a
-          href="/SENSE"
+          href={SENSE_URL}
           className="block bg-black text-white rounded-lg overflow-hidden hover:bg-gray-900 transition-colors"
         >
           <div className="p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center gap-6">
@@ -116,7 +121,7 @@ export default function LabHomePage() {
             </div>
             <div className="flex-1">
               <div className="text-pink-500 text-sm font-medium mb-2">Now Available</div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">SENSE Lens</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">SENSE</h3>
               <p className="text-gray-400 max-w-xl">
                 Integrate sensory processing considerations into your therapy practice.
                 Track clients, run session wizards, and generate clinical notes.

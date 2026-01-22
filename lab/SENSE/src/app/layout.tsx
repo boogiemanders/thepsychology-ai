@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'SENSE Lens | Sensory-Informed Clinical Framework',
+  title: 'SENSE | Sensory-Informed Clinical Framework',
   description: 'A clinician-first tool for integrating sensory processing considerations into therapy.',
 }
 

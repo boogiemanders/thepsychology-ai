@@ -19,7 +19,7 @@ export default async function HomePage() {
     <div className="space-y-8">
       {/* Header */}
       <header className="text-center space-y-2">
-        <h1 className="text-3xl font-bold">SENSE Lens</h1>
+        <h1 className="text-3xl font-bold">SENSE</h1>
         <p className="text-[var(--muted-foreground)]">
           Sensory-Informed Clinical Framework
         </p>
@@ -95,7 +95,7 @@ export default async function HomePage() {
 
       {/* Footer */}
       <footer className="text-center text-sm text-[var(--muted-foreground)] pt-8 border-t border-[var(--border)]">
-        <p>SENSE Lens is a clinical decision support tool.</p>
+        <p>SENSE is a clinical decision support tool.</p>
         <p className="mt-1">
           Sensory processing is one contributing factor among many.
         </p>
