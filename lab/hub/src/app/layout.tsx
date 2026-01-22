@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import './globals.css'
-import { Search, Menu, ExternalLink } from 'lucide-react'
+import { Search, Menu } from 'lucide-react'
 import { ThemeProvider } from '@/components/theme-provider'
 import { AnimatedThemeToggler } from '@/components/animated-theme-toggler'
 
@@ -40,9 +40,7 @@ export default function RootLayout({
                 <img
                   src="/lab/images/logo.png"
                   alt="Logo"
-                  width={40}
-                  height={40}
-                  className="size-7 md:size-10"
+                  className="h-7 md:h-10 w-auto"
                 />
                 <div className="flex flex-col leading-none">
                   <span className="text-lg font-semibold">thePsychology.ai</span>
@@ -66,7 +64,7 @@ export default function RootLayout({
           {/* Hero tagline bar */}
           <div className="fixed top-[72px] left-0 right-0 z-40 bg-black text-white py-6 px-6">
             <p className="text-2xl md:text-3xl font-light tracking-wide max-w-4xl">
-              Imagine what we can become.
+              Make life easier.
             </p>
           </div>
 
@@ -85,20 +83,8 @@ export default function RootLayout({
                   </Link>
                 ))}
 
-                <div className="mt-8 pt-8 border-t" style={{ borderColor: 'var(--border)' }}>
-                  <a
-                    href="https://thepsychology.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="nav-link flex items-center gap-2"
-                  >
-                    thepsychology.ai
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-
                 {/* Social links */}
-                <div className="mt-8 flex gap-4" style={{ color: 'var(--muted-foreground)' }}>
+                <div className="mt-8 pt-8 border-t flex gap-4" style={{ borderColor: 'var(--border)', color: 'var(--muted-foreground)' }}>
                   <a href="https://x.com/thepsychologyai" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors" aria-label="X (Twitter)">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                   </a>
