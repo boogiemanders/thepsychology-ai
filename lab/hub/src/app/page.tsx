@@ -144,7 +144,7 @@ export default function LabHomePage() {
           <p className="text-[var(--muted-foreground)] leading-relaxed">
             The thepsychology.ai Lab is where we explore new ideas at the intersection of
             psychology, therapy, and technology. Our projects aim to support clinicians
-            with thoughtful tools that enhance—rather than replace—human expertise.
+            with thoughtful tools that enhance human expertise.
           </p>
           <p className="text-[var(--muted-foreground)] leading-relaxed mt-4">
             Every tool we build prioritizes clinical judgment, ethical AI use, and
