@@ -37,11 +37,24 @@ const DAY_MS = 24 * 60 * 60 * 1000
 const CANONICAL_CHANGELOG_AUTHOR = 'Anders Chan, Psy.D.'
 const CANONICAL_CHANGELOG_AUTHOR_ALIASES = new Set(['boogiemanders', 'anders chan'])
 
-// Keywords to filter out from user-facing changelog (payment/billing related)
+// Keywords to filter out from user-facing changelog (payment/billing and non-EPPP related)
 const EXCLUDED_CHANGELOG_KEYWORDS = [
+  // Payment/billing
   'stripe', 'payment', 'billing', 'subscription',
   'price', 'pricing', 'checkout', 'invoice',
-  'charge', 'revenue', 'money', 'paid', 'purchase'
+  'charge', 'revenue', 'money', 'paid', 'purchase',
+  // Lab/SENSE (non-EPPP)
+  'lab hub', 'lab/', 'sense lens', '/sense', 'sensory processing',
+  'clinician tool', 'session wizard', 'mit media lab'
+]
+
+// Also exclude commits that mention lab or SENSE in the title
+const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
+  /\blab\b/i,
+  /\bsense\b/i,
+  /sensory/i,
+  /clinician/i,
+  /therapy session/i,
 ]
 
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {
@@ -103,7 +116,18 @@ function isMergeCommit(title: string): boolean {
 
 function isUserRelevantEntry(entry: ApiChangelogEntry): boolean {
   const text = `${entry.title} ${entry.body || ''}`.toLowerCase()
-  return !EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => text.includes(keyword))
+
+  // Check keyword exclusions
+  if (EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => text.includes(keyword))) {
+    return false
+  }
+
+  // Check title pattern exclusions
+  if (EXCLUDED_CHANGELOG_TITLE_PATTERNS.some(pattern => pattern.test(entry.title))) {
+    return false
+  }
+
+  return true
 }
 
 export async function GET(request: NextRequest) {
