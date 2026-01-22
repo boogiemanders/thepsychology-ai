@@ -119,7 +119,7 @@ body {
 
 .card-tag {
   font-size: 0.75rem;
-  color: var(--primary);
+  color: var(--muted-foreground);
 }
 
 /* Status badges */
