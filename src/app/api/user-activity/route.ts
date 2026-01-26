@@ -33,33 +33,14 @@ async function getUserIdFromToken(token: string): Promise<string | null> {
 
 export async function POST(request: NextRequest) {
   try {
-    // Get auth token from cookie or header
+    // Get auth token from Authorization header (Bearer token)
     const authHeader = request.headers.get('authorization') || ''
-    const cookieToken = request.cookies.get('sb-access-token')?.value
-
     const token = authHeader.toLowerCase().startsWith('bearer ')
       ? authHeader.slice(7).trim()
-      : cookieToken
+      : null
 
-    // Try to get user from session if no token
-    let userId: string | null = null
-
-    if (token) {
-      userId = await getUserIdFromToken(token)
-    }
-
-    // If no token, try the session cookie approach
-    if (!userId && supabaseUrl && supabaseAnonKey) {
-      const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-        global: {
-          headers: {
-            cookie: request.headers.get('cookie') || '',
-          },
-        },
-      })
-      const { data } = await supabase.auth.getSession()
-      userId = data.session?.user?.id || null
-    }
+    // Get user ID from token
+    const userId = token ? await getUserIdFromToken(token) : null
 
     if (!userId) {
       // Silently fail for unauthenticated users - don't error

@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useRef, ReactNode, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useAuth } from '@/context/auth-context'
+import { supabase } from '@/lib/supabase'
 
 interface ActivityContextType {
   trackPageView: (page: string) => void
@@ -12,6 +13,16 @@ const ActivityContext = createContext<ActivityContextType | undefined>(undefined
 
 const HEARTBEAT_INTERVAL = 30000 // 30 seconds
 const DEBOUNCE_MS = 1000 // Debounce rapid page changes
+
+// Helper to get current access token
+async function getAccessToken(): Promise<string | null> {
+  try {
+    const { data } = await supabase.auth.getSession()
+    return data.session?.access_token || null
+  } catch {
+    return null
+  }
+}
 
 export function ActivityProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname()
@@ -34,9 +45,15 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
     lastHeartbeat.current = now
 
     try {
+      const token = await getAccessToken()
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`
+      }
+
       await fetch('/api/user-activity', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           action: 'heartbeat',
           page,
@@ -56,9 +73,15 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
     lastTrackedPath.current = page
 
     try {
+      const token = await getAccessToken()
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`
+      }
+
       const response = await fetch('/api/user-activity', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           action: 'enter',
           page,
@@ -83,9 +106,15 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
     currentPageViewId.current = null
 
     try {
+      const token = await getAccessToken()
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`
+      }
+
       await fetch('/api/user-activity', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           action: 'exit',
           pageViewId,

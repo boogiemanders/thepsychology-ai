@@ -6,6 +6,7 @@ const WEBHOOKS = {
   insights: process.env.SLACK_WEBHOOK_INSIGHTS,
   payments: process.env.SLACK_WEBHOOK_PAYMENTS,
   metrics: process.env.SLACK_WEBHOOK_METRICS,
+  alerts: process.env.SLACK_WEBHOOK_ALERTS,
   default: process.env.SLACK_WEBHOOK_URL,
 } as const
 

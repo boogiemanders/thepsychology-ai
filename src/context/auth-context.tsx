@@ -210,14 +210,70 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (session?.user) {
         // Start session timeout timers
         startSessionTimers()
+
+        // Notify backend of login (for alerts, hidden from changelog)
+        if (event === 'SIGNED_IN' && session.access_token) {
+          fetch('/api/login-notify', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${session.access_token}` },
+          }).catch(() => {
+            // Silently fail - not critical
+          })
+        }
+
         // Fetch user profile on auth change (don't await since it can hang)
         supabase
           .from('users')
           .select('*')
           .eq('id', session.user.id)
           .single()
-          .then(({ data, error: fetchError }) => {
-            if (fetchError && fetchError.code !== 'PGRST116') {
+          .then(async ({ data, error: fetchError }) => {
+            if (fetchError?.code === 'PGRST116' && session?.user) {
+              // User exists in auth but not in users table - create profile
+              // This handles orphaned users (auth signup succeeded but profile creation failed)
+              console.log('Profile not found, creating for orphaned user:', session.user.email)
+              try {
+                const res = await fetch('/api/auth/create-profile', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    userId: session.user.id,
+                    email: session.user.email,
+                    subscriptionTier: 'pro', // Default to pro until end of Jan
+                  }),
+                })
+                if (res.ok) {
+                  const { data: newProfile } = await res.json()
+                  setUserProfile(newProfile?.[0] || {
+                    id: session.user.id,
+                    email: session.user.email || '',
+                    subscription_tier: 'pro',
+                    created_at: new Date().toISOString(),
+                    subscription_started_at: new Date().toISOString(),
+                  })
+                } else {
+                  console.error('Failed to create profile for orphaned user')
+                  // Fall back to local state
+                  setUserProfile({
+                    id: session.user.id,
+                    email: session.user.email || '',
+                    subscription_tier: 'pro',
+                    created_at: new Date().toISOString(),
+                    subscription_started_at: new Date().toISOString(),
+                  })
+                }
+              } catch (createErr) {
+                console.error('Error creating profile for orphaned user:', createErr)
+                // Fall back to local state
+                setUserProfile({
+                  id: session.user.id,
+                  email: session.user.email || '',
+                  subscription_tier: 'pro',
+                  created_at: new Date().toISOString(),
+                  subscription_started_at: new Date().toISOString(),
+                })
+              }
+            } else if (fetchError) {
               console.error('Error fetching user profile:', fetchError)
             } else {
               setUserProfile(data)
