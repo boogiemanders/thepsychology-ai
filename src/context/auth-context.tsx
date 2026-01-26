@@ -64,6 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const maxSessionTimerRef = useRef<NodeJS.Timeout | null>(null)
   const warningTimerRef = useRef<NodeJS.Timeout | null>(null)
   const countdownIntervalRef = useRef<NodeJS.Timeout | null>(null)
+  const lastLoginNotifyRef = useRef<{ userId: string; timestamp: number } | null>(null)
 
   // Update last activity on user interaction
   const updateActivity = useCallback(() => {
@@ -212,13 +213,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         startSessionTimers()
 
         // Notify backend of login (for alerts, hidden from changelog)
+        // Deduplicate: Supabase fires multiple SIGNED_IN events per login
         if (event === 'SIGNED_IN' && session.access_token) {
-          fetch('/api/login-notify', {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${session.access_token}` },
-          }).catch(() => {
-            // Silently fail - not critical
-          })
+          const now = Date.now()
+          const lastNotify = lastLoginNotifyRef.current
+          const shouldNotify =
+            !lastNotify ||
+            lastNotify.userId !== session.user.id ||
+            now - lastNotify.timestamp > 60000 // 60 second debounce
+
+          if (shouldNotify) {
+            lastLoginNotifyRef.current = { userId: session.user.id, timestamp: now }
+            fetch('/api/login-notify', {
+              method: 'POST',
+              headers: { Authorization: `Bearer ${session.access_token}` },
+            }).catch(() => {
+              // Silently fail - not critical
+            })
+          }
         }
 
         // Fetch user profile on auth change (don't await since it can hang)
