@@ -9,6 +9,35 @@ import { Highlighter, Pause, Play, ScrollText, SkipBack, SkipForward } from 'luc
 type MetaphorRange = { start: number; end: number }
 type WordTiming = { word: string; start: number; end: number }
 
+// Manifest types for MFA pre-generated audio
+type ManifestChunk = {
+  chunkId: string
+  text: string
+  audioUrl: string
+  timingsUrl: string
+  duration: number
+  // Section navigation info
+  sectionIdx: number
+  sectionTitle: string
+  sectionStart: boolean
+}
+
+type ManifestSection = {
+  idx: number
+  title: string
+  startChunkIdx: number
+}
+
+type ManifestResponse = {
+  lessonId: string
+  hobby: string | null
+  sections: ManifestSection[]
+  chunks: ManifestChunk[]
+  totalDuration: number
+  version: number
+  schemaVersion: number
+}
+
 type MarkdownSection = {
   title: string | null
   level: number
@@ -415,6 +444,10 @@ type LessonAudioControlsProps = {
   onWordProgress?: (payload: { wordIndex: number | null; totalWords: number }) => void
   autoScrollEnabled?: boolean
   onAutoScrollToggle?: () => void
+  /** Lesson slug for manifest lookup (e.g., "3-social/persuasion") */
+  lessonSlug?: string | null
+  /** Whether to use MFA manifest if available (default: true) */
+  useManifest?: boolean
 }
 
 export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonAudioControlsProps>((props, ref) => {
@@ -433,6 +466,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     onWordProgress,
     autoScrollEnabled = false,
     onAutoScrollToggle,
+    lessonSlug = null,
+    useManifest = true,
   } = props
 
   const voice = DEFAULT_VOICE
@@ -485,6 +520,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const sectionStartIndexRef = useRef<number[]>([])
   const sectionWordStartIndexRef = useRef<number[]>([])
   const [sectionTitles, setSectionTitles] = useState<string[]>([])
+  const [usedManifest, setUsedManifest] = useState(false)
+  const manifestDataRef = useRef<ManifestResponse | null>(null)
 
   const lessonReady = Boolean(lessonMarkdown && lessonMarkdown.trim())
   const interestsActive = Boolean(userInterests && userInterests.trim())
@@ -572,10 +609,185 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     sectionWordStartIndexRef.current = []
     setSectionTitles([])
     onWordProgress?.({ wordIndex: null, totalWords: 0 })
+    setUsedManifest(false)
+    manifestDataRef.current = null
     if (audioRef.current) {
       audioRef.current.pause()
       audioRef.current.removeAttribute('src')
       audioRef.current.load()
+    }
+  }
+
+  /**
+   * Try to fetch and use the MFA manifest for this lesson.
+   * Returns true if successful, false if not available.
+   */
+  const tryLoadFromManifest = async (signal: AbortSignal): Promise<boolean> => {
+    if (!useManifest || !lessonSlug) {
+      return false
+    }
+
+    try {
+      const hobby = userInterests?.trim() || ''
+      const params = new URLSearchParams({ lessonId: lessonSlug })
+      if (hobby) params.set('hobby', hobby)
+
+      const response = await fetch(`/api/topic-teacher/lesson-manifest?${params}`, {
+        signal,
+      })
+
+      if (!response.ok) {
+        return false
+      }
+
+      const manifest: ManifestResponse = await response.json()
+      if (!manifest.chunks || manifest.chunks.length === 0) {
+        return false
+      }
+
+      manifestDataRef.current = manifest
+
+      // Load audio URLs from manifest
+      const urls: string[] = []
+      const sources: Array<'pregen' | 'live'> = []
+      const counts: number[] = []
+      const offsets: number[] = []
+      const progressMaps: number[][] = []
+      const durations: number[] = []
+      const texts: string[] = []
+      const startTimes: number[][] = []
+      const endTimes: number[][] = []
+      const segmentSectionIndices: number[] = []
+      let totalWords = 0
+      let totalDurationSecs = 0
+
+      for (const chunk of manifest.chunks) {
+        // Fetch audio blob for each chunk
+        const audioResponse = await fetch(chunk.audioUrl, { signal })
+        if (!audioResponse.ok) {
+          console.warn(`[manifest] Failed to fetch audio: ${chunk.audioUrl}`)
+          return false
+        }
+        const blob = await audioResponse.blob()
+        const url = URL.createObjectURL(blob)
+        urls.push(url)
+        sources.push('pregen')
+
+        // Fetch timings for this chunk
+        let timings: Array<{ word: string; start: number; end: number }> = []
+        try {
+          const timingsResponse = await fetch(chunk.timingsUrl, { signal })
+          if (timingsResponse.ok) {
+            const timingsData = await timingsResponse.json()
+            if (Array.isArray(timingsData.words)) {
+              timings = timingsData.words
+            }
+          }
+        } catch {
+          // Timing fetch failed, will use fallback
+        }
+
+        const wordCount = timings.length > 0 ? timings.length : countWords(normalizeTextForReadAlong(chunk.text))
+        counts.push(wordCount)
+        offsets.push(totalWords)
+        totalWords += wordCount
+        texts.push(chunk.text)
+        durations.push(chunk.duration)
+        totalDurationSecs += chunk.duration
+
+        // Use actual timings if available
+        if (timings.length > 0) {
+          startTimes.push(timings.map((t) => t.start))
+          endTimes.push(timings.map((t) => t.end))
+          progressMaps.push([]) // Not needed when we have actual timings
+        } else {
+          startTimes.push([])
+          endTimes.push([])
+          progressMaps.push(computeWordProgressMap(normalizeTextForReadAlong(chunk.text)))
+        }
+
+        // Track section info for navigation
+        segmentSectionIndices.push(chunk.sectionIdx ?? 0)
+      }
+
+      // Update all the state and refs
+      audioUrlsRef.current = urls
+      setAudioUrls(urls)
+      setSegmentSources(sources)
+      setSourceCounts({ pregen: urls.length, live: 0 })
+
+      segmentWordCountsRef.current = counts
+      segmentWordProgressRef.current = progressMaps
+      segmentWordOffsetsRef.current = offsets
+      segmentTextsRef.current = texts
+      segmentDurationSecondsRef.current = durations
+      segmentWordStartTimesRef.current = startTimes
+      segmentWordEndTimesRef.current = endTimes
+      totalWordsRef.current = totalWords
+      totalDurationSecondsRef.current = totalDurationSecs
+
+      // Compute segment start times
+      const starts: number[] = []
+      let cumulative = 0
+      for (const dur of durations) {
+        starts.push(cumulative)
+        cumulative += dur
+      }
+      segmentStartSecondsRef.current = starts
+
+      setDuration(totalDurationSecs)
+      setReadAlongTotalWords(totalWords)
+      setUsedManifest(true)
+
+      // Set up section navigation from manifest
+      segmentSectionIndexRef.current = segmentSectionIndices
+
+      if (manifest.sections && manifest.sections.length > 0) {
+        // Use sections from manifest
+        const titles = manifest.sections.map(s => s.title)
+        const startIndices = manifest.sections.map(s => s.startChunkIdx)
+
+        // Calculate word start indices for each section
+        const wordStarts: number[] = []
+        for (const section of manifest.sections) {
+          const offset = offsets[section.startChunkIdx] ?? 0
+          wordStarts.push(offset)
+        }
+
+        sectionStartIndexRef.current = startIndices
+        sectionWordStartIndexRef.current = wordStarts
+        setSectionTitles(titles)
+      } else {
+        // Derive sections from chunk data for backward compatibility
+        const titlesMap = new Map<number, string>()
+        const startIndicesMap = new Map<number, number>()
+        const wordStartsMap = new Map<number, number>()
+
+        manifest.chunks.forEach((chunk, idx) => {
+          if (!titlesMap.has(chunk.sectionIdx ?? 0)) {
+            titlesMap.set(chunk.sectionIdx ?? 0, chunk.sectionTitle ?? 'Introduction')
+            startIndicesMap.set(chunk.sectionIdx ?? 0, idx)
+            wordStartsMap.set(chunk.sectionIdx ?? 0, offsets[idx] ?? 0)
+          }
+        })
+
+        const sectionIndices = Array.from(titlesMap.keys()).sort((a, b) => a - b)
+        sectionStartIndexRef.current = sectionIndices.map(idx => startIndicesMap.get(idx) ?? 0)
+        sectionWordStartIndexRef.current = sectionIndices.map(idx => wordStartsMap.get(idx) ?? 0)
+        setSectionTitles(sectionIndices.map(idx => titlesMap.get(idx) ?? 'Introduction'))
+      }
+
+      if (onWordProgress) {
+        onWordProgress({ wordIndex: null, totalWords })
+      }
+
+      return true
+    } catch (err) {
+      if ((err as Error)?.name === 'AbortError') {
+        throw err
+      }
+      console.warn('[manifest] Failed to load manifest:', err)
+      return false
     }
   }
 
@@ -1227,6 +1439,20 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 	    setCurrentIndex(0)
 
 	    try {
+      // Try to load from MFA manifest first (if available)
+      const controller = new AbortController()
+      abortRef.current = controller
+
+      if (useManifest && lessonSlug && canUsePregen) {
+        const manifestLoaded = await tryLoadFromManifest(controller.signal)
+        if (manifestLoaded) {
+          console.log('[audio-controls] Loaded audio from MFA manifest')
+          setIsGenerating(false)
+          return
+        }
+      }
+
+      // Fall back to existing audio generation
       const normalizedRanges =
         baseLessonMarkdown && metaphorRanges.length > 0 && isEnglishish(languagePreference)
           ? normalizeRanges(baseLessonMarkdown, metaphorRanges)
@@ -1378,9 +1604,11 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         : null
   const sourceTotal = sourceCounts.pregen + sourceCounts.live
   const sourceText =
-    sourceTotal > 0
-      ? `Audio source: ${sourceCounts.pregen} pre-generated · ${sourceCounts.live} live`
-      : null
+    usedManifest
+      ? `Audio source: MFA manifest (${sourceCounts.pregen} chunks)`
+      : sourceTotal > 0
+        ? `Audio source: ${sourceCounts.pregen} pre-generated · ${sourceCounts.live} live`
+        : null
 
   const formatTime = (seconds: number) => {
     if (!Number.isFinite(seconds)) return '0:00'
@@ -1751,7 +1979,15 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   </span>
                 )}
 
-                {currentSegmentSource && (
+                {usedManifest ? (
+                  <span
+                    className="hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium border-blue-400/40 text-blue-500"
+                    title="Using MFA-aligned pre-generated audio with perfect word synchronization."
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+                    MFA
+                  </span>
+                ) : currentSegmentSource && (
                   <span
                     className={`hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${
                       currentSegmentSource === 'pregen'
