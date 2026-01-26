@@ -79,6 +79,11 @@ The key is that the preferred activity must be truly preferred, and access to it
 
 Punishment gets a bad reputation, but used correctly, it's an important tool. Remember: positive punishment means adding something unpleasant, and negative punishment means removing something pleasant. Both decrease behavior.
 
+**EPPP tips on punishment effectiveness:**
+- Punishment should be delivered at **maximum intensity the first time** (don't start mild and escalate)
+- It should be **certain** (consistently applied) with **little delay** after the behavior
+- When there's a sequence of behaviors, punish **early in the sequence** (e.g., when a child starts whining, not after the full tantrum develops)
+
 ### Overcorrection: Making Amends Plus Extra
 
 **Overcorrection** is technically positive punishment (adding a consequence), but it's designed to be educational rather than just unpleasant. It has two components:

@@ -40,6 +40,8 @@ The first-generation antipsychotics (also called "typical" antipsychotics) were 
 
 **How They Work:** FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.
 
+**Naming tip:** Typical/conventional antipsychotics often end in "-azine" (chlorpromazine, thioridazine, fluphenazine).
+
 **What They Treat Well:** FGAs are effective for positive symptoms of schizophrenia. Things like hallucinations, delusions, and disorganized thinking. However, they're much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation).
 
 **The Side Effect Problem:** This is where FGAs get tricky. They cause three major categories of side effects, and understanding these is exam-essential:
@@ -173,6 +175,8 @@ Tricyclic Antidepressants come in two types:
 **What They Treat:** Depression, panic disorder, OCD (especially clomipramine), and chronic pain (especially nortriptyline and amitriptyline).
 
 **The Problem:** TCAs are effective but have significant side effects: cardiovascular effects (including dangerous drops in blood pressure when standing), anticholinergic effects, sedation, weight gain, and sexual dysfunction. Secondary amines have fewer side effects than tertiary amines.
+
+**Naming tip:** Tricyclics can often be recognized by the ending "-amine" (imipramine, clomipramine, desipramine) or "-tyline" (amitriptyline, nortriptyline).
 
 The biggest concern: **TCAs are cardiotoxic and lethal in overdose**. This means you must be very cautious prescribing them to anyone with heart disease or who may be suicidal. {{M}}TCAs are like powerful tools in a workshop. Effective when used properly, but requiring serious safety precautions because the potential for harm is real.{{/M}}
 

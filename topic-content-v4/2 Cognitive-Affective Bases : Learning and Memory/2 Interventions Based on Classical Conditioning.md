@@ -37,6 +37,8 @@ Second, the fear never goes away on its own because your client keeps avoiding t
 
 During exposure with response prevention, you're helping the brain learn new information: "This thing I'm afraid of... nothing bad is actually happening." But here's the critical part. Your client needs to stay in the situation long enough for their anxiety to decrease during that session. If they bail while still panicking, you've just reinforced that the situation is dangerous.
 
+**EPPP tip:** Research shows that prolonged exposure (e.g., 45 minutes) is more effective than multiple, briefer periods of exposure, which can actually make the fear worse.
+
 **Two Approaches to Exposure:**
 
 | **Flooding** | **Graded Exposure** |
