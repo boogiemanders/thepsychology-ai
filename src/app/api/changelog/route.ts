@@ -45,7 +45,10 @@ const EXCLUDED_CHANGELOG_KEYWORDS = [
   'charge', 'revenue', 'money', 'paid', 'purchase',
   // Lab/SENSE (non-EPPP)
   'lab hub', 'lab/', 'sense lens', '/sense', 'sensory processing',
-  'clinician tool', 'session wizard', 'mit media lab'
+  'clinician tool', 'session wizard', 'mit media lab',
+  // Infrastructure/code changes (not user-facing)
+  'domain_folder_map', 'source_folder_to_domain', 'kebab-case',
+  'topic-content-v3', 'topic-content-v4',
 ]
 
 // Also exclude commits that mention lab or SENSE in the title
@@ -55,6 +58,10 @@ const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /sensory/i,
   /clinician/i,
   /therapy session/i,
+  // Infrastructure/rename commits
+  /rename.*domain.*folder/i,
+  /rename.*lesson.*file/i,
+  /update.*mapping/i,
 ]
 
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {
