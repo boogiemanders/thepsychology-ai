@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getOpenAIApiKey } from '@/lib/openai-api-key'
 import { normalizeTextForReadAlong } from '@/lib/speech-text'
+import { logUsageEvent } from '@/lib/usage-events'
 import OpenAI, { toFile } from 'openai'
 import crypto from 'node:crypto'
 import fs from 'node:fs'
@@ -400,6 +401,15 @@ export async function POST(request: NextRequest) {
   }
 
   const whisperWordsRaw = await transcribeAudioWithWordTimes(audioBuffer, text, apiKey)
+
+  // Log Whisper transcription usage
+  void logUsageEvent({
+    eventName: 'topic-teacher.word-timings',
+    endpoint: '/api/topic-teacher/word-timings',
+    model: 'whisper-1',
+    metadata: { audioKey, textLength: text.length, wordCount: expectedWords.length }
+  })
+
   const expandedWhisperWords: WhisperWord[] = []
   for (const token of whisperWordsRaw) {
     expandedWhisperWords.push(...expandTranscriptToken(token))

@@ -8,6 +8,7 @@ import { INITIAL_RECOVER_ASSISTANT_MESSAGE } from '@/lib/recover'
 import fs from 'node:fs'
 import path from 'node:path'
 import { sanitizeOpenAIApiKey } from '@/lib/openai-api-key'
+import { logUsageEvent } from '@/lib/usage-events'
 
 export const runtime = 'nodejs'
 
@@ -237,6 +238,15 @@ async function getRecoverContext(
       input: userMessage,
     })
 
+    // Log embedding usage (no userId available in this context)
+    void logUsageEvent({
+      eventName: 'recover-chat.embedding',
+      endpoint: '/api/recover-chat',
+      model: 'text-embedding-3-small',
+      inputTokens: embeddingResponse.usage?.prompt_tokens ?? null,
+      outputTokens: embeddingResponse.usage?.total_tokens ?? null,
+    })
+
     const queryEmbedding = embeddingResponse.data[0]?.embedding
     if (!queryEmbedding) return { context: '', sources: [] }
 
@@ -452,6 +462,17 @@ export async function POST(request: NextRequest) {
       model: 'gpt-4o',
       temperature: 0.7,
       messages: [...systemMessages, ...messages.slice(-20)],
+    })
+
+    // Log chat completion usage
+    void logUsageEvent({
+      userId: parsed.data.userId,
+      eventName: 'recover-chat.completion',
+      endpoint: '/api/recover-chat',
+      model: 'gpt-4o',
+      inputTokens: completion.usage?.prompt_tokens ?? null,
+      outputTokens: completion.usage?.completion_tokens ?? null,
+      metadata: { sessionId: parsed.data.sessionId }
     })
 
     const message = completion.choices[0]?.message?.content?.trim()

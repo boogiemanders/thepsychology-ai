@@ -4,6 +4,7 @@ import { getSupabaseClient } from '@/lib/supabase-server'
 import { writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join } from 'path'
 import { getOpenAIApiKey } from '@/lib/openai-api-key'
+import { logUsageEvent } from '@/lib/usage-events'
 
 const openaiApiKey = getOpenAIApiKey()
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
@@ -285,6 +286,17 @@ export async function POST(request: NextRequest) {
     }
 
     console.log(`[Pre-Gen] Received response from OpenAI (${content.length} characters)`)
+
+    // Log usage event (examData parsed later, so we log here with basic info)
+    void logUsageEvent({
+      userId,
+      eventName: `pre-generate-exam.${examType}`,
+      endpoint: '/api/pre-generate-exam',
+      model,
+      inputTokens: completion.usage?.prompt_tokens ?? null,
+      outputTokens: completion.usage?.completion_tokens ?? null,
+      metadata: { examType }
+    })
 
     let examData: any
     try {
