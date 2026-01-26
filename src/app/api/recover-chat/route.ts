@@ -32,6 +32,9 @@ type UserProgressContext = {
   progress: DomainProgress[] | null
   exams: ExamHistoryEntry[] | null
   examCount: number
+  lessonCount: number
+  questionsAnswered: number
+  studyBehavior: 'passive' | 'active' | 'balanced' | null
 }
 
 function readDotenvLocalValue(key: string): string | null {
@@ -229,14 +232,39 @@ async function getUserProgressContext(
       .select('id', { count: 'exact', head: true })
       .eq('user_id', userId)
 
+    // Get lesson count from feature_ratings (topic_teacher ratings indicate completed lessons)
+    const { count: lessonCount } = await supabase
+      .from('feature_ratings')
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', userId)
+      .eq('feature', 'topic_teacher')
+
+    // Get total questions answered from user_question_history
+    const { count: questionsAnswered } = await supabase
+      .from('user_question_history')
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', userId)
+
+    // Determine study behavior based on lesson/question ratio
+    let studyBehavior: 'passive' | 'active' | 'balanced' | null = null
+    if ((lessonCount ?? 0) >= 5) {
+      const ratio = (questionsAnswered ?? 0) / (lessonCount ?? 1)
+      if (ratio < 0.5) studyBehavior = 'passive'
+      else if (ratio > 2) studyBehavior = 'active'
+      else studyBehavior = 'balanced'
+    }
+
     return {
       progress: progress as DomainProgress[] | null,
       exams: exams as ExamHistoryEntry[] | null,
       examCount: examCount ?? 0,
+      lessonCount: lessonCount ?? 0,
+      questionsAnswered: questionsAnswered ?? 0,
+      studyBehavior,
     }
   } catch (error) {
     console.error('[recover-chat] Failed to fetch user progress:', error)
-    return { progress: null, exams: null, examCount: 0 }
+    return { progress: null, exams: null, examCount: 0, lessonCount: 0, questionsAnswered: 0, studyBehavior: null }
   }
 }
 
@@ -273,6 +301,16 @@ function getRecoverSystemPrompt(userContext?: UserProgressContext): string {
       parts.push(`Total practice exams taken: ${userContext.examCount}`)
     }
 
+    // Add lesson and question counts
+    if (userContext.lessonCount > 0) {
+      parts.push(`Topic Teacher lessons completed: ${userContext.lessonCount}`)
+    }
+    if (userContext.questionsAnswered > 0) {
+      parts.push(`Quiz questions answered: ${userContext.questionsAnswered}`)
+    } else if (userContext.lessonCount > 3) {
+      parts.push(`Quiz questions answered: 0 (hasn't tried quizzes yet)`)
+    }
+
     if (parts.length > 0) {
       contextSection = `
 
@@ -282,6 +320,22 @@ ${parts.map((p) => `- ${p}`).join('\n')}
 When suggesting study actions, recommend specific topics from their weak areas above.
 When they mention struggling with certain content, connect it to their actual progress data.
 `
+    }
+
+    // Add behavior-specific guidance for passive learners
+    if (userContext.studyBehavior === 'passive') {
+      contextSection += `
+
+## Special: This user learns by reading
+They've completed ${userContext.lessonCount} lessons but answered few quiz questions.
+
+Your approach with them:
+1. VALIDATE: "You've been putting in serious work - ${userContext.lessonCount} lessons is impressive dedication!"
+2. PRAISE RANGE: If they covered multiple domains, mention it positively
+3. PRAISE PACING: Taking time between sessions helps memory consolidation
+4. GENTLE NUDGE: "To really cement what you're learning, try the quick quiz at the end of lessons - even 3-5 questions. Active recall is the #1 evidence-based way to move info into long-term memory."
+
+Don't lecture about study methods. Just validate their effort and offer the quiz suggestion naturally.`
     }
   }
 

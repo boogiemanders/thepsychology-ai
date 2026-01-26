@@ -38,6 +38,7 @@ import { VariableStar } from '@/components/ui/variable-star'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { FeatureRatingDialog } from '@/components/feature-rating-dialog'
+import { supabase } from '@/lib/supabase'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { LessonAudioControls, type LessonAudioControlsHandle } from '@/components/topic-teacher/lesson-audio-controls'
 import { expandNumericTokenForReadAlong, normalizeTextForReadAlong } from '@/lib/speech-text'
@@ -634,6 +635,7 @@ export function TopicTeacherContent() {
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
   const [showRatingDialog, setShowRatingDialog] = useState(false)
   const [ratingSubmitted, setRatingSubmitted] = useState(false)
+  const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const sessionStartRef = useRef<number>(Date.now())
   const readAlongWordCounterRef = useRef(0)
   const spokenWords = useMemo(() => {
@@ -4169,10 +4171,64 @@ export function TopicTeacherContent() {
           topic={decodedTopic}
           domain={domain ?? undefined}
           durationSeconds={Math.round((Date.now() - sessionStartRef.current) / 1000)}
-          onSubmit={() => setRatingSubmitted(true)}
+          onSubmit={async () => {
+            setRatingSubmitted(true)
+
+            // Check if user is a passive learner and show Recover nudge
+            if (user?.id) {
+              try {
+                const { count: lessons } = await supabase
+                  .from('feature_ratings')
+                  .select('id', { count: 'exact', head: true })
+                  .eq('user_id', user.id)
+                  .eq('feature', 'topic_teacher')
+
+                const { count: questions } = await supabase
+                  .from('user_question_history')
+                  .select('id', { count: 'exact', head: true })
+                  .eq('user_id', user.id)
+
+                if ((lessons ?? 0) >= 5 && (questions ?? 0) / (lessons ?? 1) < 0.5) {
+                  setTimeout(() => setShowRecoverNudge(true), 500)
+                }
+              } catch (error) {
+                console.error('[topic-teacher] Failed to check passive learner status:', error)
+              }
+            }
+          }}
           title="Rate this lesson"
           description="How helpful was this lesson for your EPPP preparation?"
         />
+
+        {/* Recover Nudge for Passive Learners */}
+        {showRecoverNudge && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-card border rounded-lg shadow-lg p-4 max-w-md z-50"
+          >
+            <div className="flex items-start gap-3">
+              <span className="text-2xl">💪</span>
+              <div className="flex-1">
+                <p className="font-medium">You're on a roll!</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Take 5 minutes in Recover to reflect on your progress and plan your next steps.
+                </p>
+                <div className="flex gap-2 mt-3">
+                  <Link href="/recover">
+                    <Button size="sm">Try Recover</Button>
+                  </Link>
+                  <Button size="sm" variant="ghost" onClick={() => setShowRecoverNudge(false)}>
+                    Maybe later
+                  </Button>
+                </div>
+              </div>
+              <button onClick={() => setShowRecoverNudge(false)} className="text-muted-foreground hover:text-foreground">
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+          </motion.div>
+        )}
       </div>
     </main>
     </TopicTeacherTourProvider>
