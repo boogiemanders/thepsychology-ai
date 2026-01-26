@@ -80,6 +80,8 @@ For the EPPP, remember these patterns:
 - Separated presentation + immediate decision = Recency
 - Other combinations don't show consistent patterns
 
+**Quick memory tip:** Long gap before decision → speak **first** (Primacy). Short gap before decision → speak **last** (Recency).
+
 ### Fear Appeals: How Scared Should People Be?
 
 For years, researchers debated whether fear-based messages work. Should anti-smoking campaigns show graphic images? Should you emphasize worst-case scenarios when discussing health risks with clients?

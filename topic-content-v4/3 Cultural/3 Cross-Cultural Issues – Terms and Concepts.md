@@ -124,6 +124,8 @@ Most modern practitioners adopt a balanced view, recognizing universal aspects o
 
 {{M}}If your shoes hurt, you can develop tougher feet (autoplastic) or get different shoes (alloplastic).{{/M}} Cultural competence requires knowing when each approach is appropriate. Sometimes clients need coping skills; sometimes they need environmental change.
 
+**Memory tip:** "Alloplastic" means *other* ("allo") and *changing* ("plastic") - changing the environment. "Autoplastic" means *oneself* ("auto") and *changing* ("plastic") - changing yourself.
+
 ## Cultural Encapsulation: Being Trapped in Your Own Perspective
 
 Wrenn coined this term to describe mental health professionals who can't work effectively across cultures. **Culturally encapsulated** therapists assume their cultural assumptions about mental health apply universally. They're insensitive to differences and impose their worldview on all clients.
@@ -280,7 +282,7 @@ Reality: Everyone has a culture. Understanding your own cultural assumptions is 
 
 **Microaggressions hierarchy**: Assault > Insult > Invalidation (from most to least obvious)
 
-**Emic vs. Etic**: Emic = Culture-specific (both start with 'E'); Etic = Universal (think "ethical standards" applying to everyone)
+**Emic vs. Etic**: **ET**ic = **ET**ernal truths (universal); **eM**ic = **M**ulticultural perspective (culture-specific)
 
 **Communication styles**: High-context = High involvement of context; Low-context = Low involvement of context
 

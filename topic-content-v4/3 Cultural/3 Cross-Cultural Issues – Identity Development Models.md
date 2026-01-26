@@ -130,6 +130,8 @@ Finally, a model for White individuals. Helms was one of the first to argue that
 
 **Reintegration:** They resolve the discomfort by deciding White people are superior and blaming minority groups for their own problems. *IPS: Selective perception and negative out-group distortion.*
 
+**EPPP caution:** Don't confuse names! Although "integration" is usually positive (like "integrative awareness" in minority identity models), Helms's "reintegration" stage is *negative* - it involves endorsing White racial superiority.
+
 ### Phase 2: Defining a Nonracist White Identity
 
 **Pseudo-Independence:** Something makes them question their beliefs about racial superiority. They develop a superficial tolerance of minority groups but may show paternalistic attitudes that actually perpetuate racism. {{M}}Like the colleague who champions hiring more diverse candidates but then micromanages the new minority employees because they "need extra help"{{/M}}. *IPS: Reshaping reality and selective perception.*
