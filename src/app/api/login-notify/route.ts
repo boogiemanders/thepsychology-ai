@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     await sendSlackNotification(
       `🔑 Login: ${email} at ${timestamp}`,
-      'alerts'
+      'signups'
     )
 
     return NextResponse.json({ ok: true })
