@@ -64,6 +64,15 @@ const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /rename.*domain.*folder/i,
   /rename.*lesson.*file/i,
   /update.*mapping/i,
+  // Content/lesson file additions (internal)
+  /\bv4\b/i,
+  /rtf.*source/i,
+  /lesson.*files?/i,
+  /infrastructure/i,
+  /filter.*commit/i,
+  /changelog.*filter/i,
+  /hide.*commit/i,
+  /remove.*github/i,
 ]
 
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {
