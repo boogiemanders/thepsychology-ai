@@ -1800,7 +1800,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   }, [shouldAutoLoadPregenFullLesson, isDisabled, isGenerating, hasAudio, error])
 
   // Temporary maintenance mode - set to true to show maintenance notice
-  const audioMaintenanceMode = true
+  const audioMaintenanceMode = false
 
   return (
     <>
