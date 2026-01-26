@@ -295,14 +295,14 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
     // This ensures all source files from wrong answers appear as recommendations
     if (!addedTopics.has(cleanedName)) {
       addedTopics.add(cleanedName)
-      // Convert to kebab-case for topic-content-v3-test format
+      // Convert to kebab-case for topic-content-v4 format
       const topicContentFormat = convertToTopicContentFormat(cleanedName)
       recommendedTopics.push({
         topicName: cleanedName,
         // Keep a human-readable filename (no path, no extension) for display
         sourceFile: baseName,
         domainId: '3-5-6',
-        topicContentFormat, // For use in links to topic-content-v3-test
+        topicContentFormat, // For use in links to topic-content-v4
       })
     }
   })
@@ -311,7 +311,7 @@ export function extractOrgPsychTopicsFromSourceFiles(sourceFiles: string[]): Rec
 }
 
 /**
- * Convert filename to kebab-case format for topic-content-v3-test links
+ * Convert filename to kebab-case format for topic-content-v4 links
  * e.g., "Brain Regions and Functions" → "brain-regions-and-functions"
  */
 function convertToTopicContentFormat(topicName: string): string {
@@ -358,14 +358,14 @@ export function convertSourceFilesToTopicNames(sourceFiles: string[], domainNumb
     // This ensures all source files from wrong answers appear as recommendations
     if (!addedTopics.has(cleanTopicName)) {
       addedTopics.add(cleanTopicName)
-      // Convert to kebab-case for topic-content-v3-test format
+      // Convert to kebab-case for topic-content-v4 format
       const topicContentFormat = convertToTopicContentFormat(cleanTopicName)
       recommendedTopics.push({
         topicName: cleanTopicName,
         // Keep a human-readable filename (no path, no extension) for display
         sourceFile: baseName,
         domainId: domain.id,
-        topicContentFormat, // For use in links to topic-content-v3-test
+        topicContentFormat, // For use in links to topic-content-v4
       })
     }
   })

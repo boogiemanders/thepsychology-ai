@@ -17,20 +17,20 @@ export interface TopicContent {
   baseContent: string // Content without personalization placeholder
 }
 
-// Maps domain IDs to actual folder names in topic-content-v3-test
+// Maps domain IDs to actual folder names in topic-content-v4
 const DOMAIN_FOLDER_MAP: Record<string, string> = {
-  '1': '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology',
-  '2': '2 Cognitive-Affective Bases : Learning and Memory',
+  '1': '1 Biopsychology (Neuroscience & Pharmacology)',
+  '2': '2 Learning and Memory',
   '3-social': '3 Social Psychology',
-  '3-cultural': '3 Cultural',
-  '4': '4 Growth  : Lifespan Development',
+  '3-cultural': '3 Cultural Considerations',
+  '4': '4 Development',
   '5-assessment': '5 Assessment',
-  '5-diagnosis': '5 Diagnosis  : Psychopathology',
+  '5-diagnosis': '5 Diagnosis',
   '5-test': '5 Test Construction',
-  '6': '6 Treatment : Intervention',
-  '7': '7 Research Methods : Statistics',
-  '8': '8 Ethical  : Legal  : Professional Issues',
-  '3-5-6': '2 3 5 6 Organizational Psychology',
+  '6': '6 Clinical Interventions',
+  '7': '7 Research and Stats',
+  '8': '8 Ethics',
+  '3-5-6': '2 3 5 6 I-O Psychology',
 }
 
 /**
@@ -94,7 +94,7 @@ function slugifyTopicName(name: string): string {
 function resolveTopicFilePath(
   topicName: string,
   domain?: string | null,
-  rootDirName: string = 'topic-content-v3-test',
+  rootDirName: string = 'topic-content-v4',
 ): string | null {
   const slug = slugifyTopicName(topicName)
   const rootDir = path.join(process.cwd(), rootDirName)

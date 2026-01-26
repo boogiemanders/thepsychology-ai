@@ -15,16 +15,27 @@ export interface TopicSourceCandidate {
 }
 
 const SOURCE_FOLDER_TO_DOMAIN_ID: Record<string, string> = {
+  // New v4 folder names
+  '1 Biopsychology (Neuroscience & Pharmacology)': '1',
+  '2 Learning and Memory': '2',
+  '3 Social Psychology': '3-social',
+  '3 Cultural Considerations': '3-cultural',
+  '4 Development': '4',
+  '5 Assessment': '5-assessment',
+  '5 Diagnosis': '5-diagnosis',
+  '5 Test Construction': '5-test',
+  '6 Clinical Interventions': '6',
+  '7 Research and Stats': '7',
+  '8 Ethics': '8',
+  '2 3 5 6 I-O Psychology': '3-5-6',
+  // Legacy folder names for backwards compatibility
   '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology': '1',
   '2 Cognitive-Affective Bases : Learning and Memory': '2',
-  '3 Social Psychology': '3-social',
   '3 Cultural': '3-cultural',
   '4 Growth & Lifespan Development': '4',
   '4 Growth  : Lifespan Development': '4',
-  '5 Assessment': '5-assessment',
   '5 Diagnosis : Psychopathology': '5-diagnosis',
   '5 Diagnosis  : Psychopathology': '5-diagnosis',
-  '5 Test Construction': '5-test',
   '6 Treatment : Intervention': '6',
   '6 Treatment, Intervention, and Prevention : Clinical Psychology': '6',
   '7 Research Methods & Statistics': '7',

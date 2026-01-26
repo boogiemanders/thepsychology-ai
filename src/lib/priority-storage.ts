@@ -12,7 +12,7 @@ export interface RecommendedTopic {
   topicName: string // Topic name or source_file name
   sourceFile?: string // Source file name (e.g., "5 Anxiety Disorders.md") for linking
   domainId: string // Domain ID for routing to topic-teacher
-  topicContentFormat?: string // Kebab-case format for linking to topic-content-v3-test
+  topicContentFormat?: string // Kebab-case format for linking to topic-content-v4
 }
 
 export interface PriorityDomainRecommendation {

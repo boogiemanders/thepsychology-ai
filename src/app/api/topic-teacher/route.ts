@@ -204,7 +204,7 @@ export async function POST(request: NextRequest) {
           console.error(`[Topic Teacher] Domain ID: ${domain}`)
 
           return NextResponse.json(
-            { error: `No pre-generated content found for topic: ${topic}. Please ensure the content exists in topic-content-v3-test.` },
+            { error: `No pre-generated content found for topic: ${topic}. Please ensure the content exists in topic-content-v4.` },
             { status: 404 }
           )
         }
