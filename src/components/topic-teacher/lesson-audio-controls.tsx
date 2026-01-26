@@ -2089,6 +2089,11 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                 {error}
               </div>
             )}
+
+            {/* Testing banner */}
+            <div className="mt-2 px-2 py-1 text-xs text-center text-amber-600 bg-amber-500/10 border border-amber-500/30 rounded">
+              Audio sync is being tested. Please report any issues!
+            </div>
           </div>
         </div>
       )}
