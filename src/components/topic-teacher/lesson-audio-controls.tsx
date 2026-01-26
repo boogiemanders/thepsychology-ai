@@ -1571,13 +1571,25 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     void handleGenerate()
   }, [shouldAutoLoadPregenFullLesson, isDisabled, isGenerating, hasAudio, error])
 
+  // Temporary maintenance mode - set to true to show maintenance notice
+  const audioMaintenanceMode = true
+
   return (
     <>
       {/* Spacer when unified audio bar is visible */}
-      {showStickyBar && <div className="h-20" />}
+      {showStickyBar && !audioMaintenanceMode && <div className="h-20" />}
+
+      {/* Maintenance Notice */}
+      {audioMaintenanceMode && (
+        <Alert className="mb-4 max-w-2xl border-amber-500/50 bg-amber-500/10">
+          <AlertDescription className="text-sm">
+            Audio playback is temporarily unavailable while we improve word synchronization. Check back soon!
+          </AlertDescription>
+        </Alert>
+      )}
 
       {/* Initial Settings Panel - only shown when NO audio exists and sticky bar is not visible */}
-      {!hasAudio && !showStickyBar && (
+      {!hasAudio && !showStickyBar && !audioMaintenanceMode && (
         <div className="mb-4 max-w-2xl">
           <div className="flex flex-wrap items-center gap-3 rounded-md border border-border/60 bg-background px-3 py-2">
             {/* Playback speed slider */}
@@ -1655,7 +1667,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       )}
 
       {/* Unified Sticky Audio Bar */}
-      {showStickyBar && (
+      {showStickyBar && !audioMaintenanceMode && (
         <div
           className="fixed left-0 right-0 z-50 transition-[top] duration-100 pointer-events-none"
           style={{ top: `${stickyTop}px` }}
