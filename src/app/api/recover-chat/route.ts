@@ -9,8 +9,30 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { sanitizeOpenAIApiKey } from '@/lib/openai-api-key'
 import { logUsageEvent } from '@/lib/usage-events'
+import { SupabaseClient } from '@supabase/supabase-js'
 
 export const runtime = 'nodejs'
+
+// Types for user progress context
+type DomainProgress = {
+  domain_name: string
+  mastery_level: number
+  questions_answered: number
+}
+
+type ExamHistoryEntry = {
+  score: number
+  total_questions: number
+  correct_answers: number
+  exam_type: string
+  created_at: string
+}
+
+type UserProgressContext = {
+  progress: DomainProgress[] | null
+  exams: ExamHistoryEntry[] | null
+  examCount: number
+}
 
 function readDotenvLocalValue(key: string): string | null {
   try {
@@ -182,7 +204,87 @@ async function maybeSendAlert(input: {
   }
 }
 
-function getRecoverSystemPrompt(): string {
+async function getUserProgressContext(
+  userId: string,
+  supabase: SupabaseClient
+): Promise<UserProgressContext> {
+  try {
+    // Get topic mastery from user_domain_progress
+    const { data: progress } = await supabase
+      .from('user_domain_progress')
+      .select('domain_name, mastery_level, questions_answered')
+      .eq('user_id', userId)
+
+    // Get recent exam scores from exam_history
+    const { data: exams } = await supabase
+      .from('exam_history')
+      .select('score, total_questions, correct_answers, exam_type, created_at')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false })
+      .limit(3)
+
+    // Get total exam count
+    const { count: examCount } = await supabase
+      .from('exam_history')
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', userId)
+
+    return {
+      progress: progress as DomainProgress[] | null,
+      exams: exams as ExamHistoryEntry[] | null,
+      examCount: examCount ?? 0,
+    }
+  } catch (error) {
+    console.error('[recover-chat] Failed to fetch user progress:', error)
+    return { progress: null, exams: null, examCount: 0 }
+  }
+}
+
+function getRecoverSystemPrompt(userContext?: UserProgressContext): string {
+  let contextSection = ''
+
+  if (userContext) {
+    const parts: string[] = []
+
+    // Format weak topics (mastery < 50%)
+    if (userContext.progress && userContext.progress.length > 0) {
+      const weakTopics = userContext.progress
+        .filter((p) => p.mastery_level < 50)
+        .sort((a, b) => a.mastery_level - b.mastery_level)
+        .slice(0, 5)
+        .map((p) => `${p.domain_name} (${Math.round(p.mastery_level)}%)`)
+
+      if (weakTopics.length > 0) {
+        parts.push(`Topics needing work: ${weakTopics.join(', ')}`)
+      }
+    }
+
+    // Format recent exam performance
+    if (userContext.exams && userContext.exams.length > 0) {
+      const latestExam = userContext.exams[0]
+      const scorePercent = Math.round(latestExam.score)
+      parts.push(`Recent exam score: ${scorePercent}%`)
+    } else {
+      parts.push('Recent exam score: no exams taken yet')
+    }
+
+    // Add exam count
+    if (userContext.examCount > 0) {
+      parts.push(`Total practice exams taken: ${userContext.examCount}`)
+    }
+
+    if (parts.length > 0) {
+      contextSection = `
+
+## User's Study Progress (use to personalize recommendations)
+${parts.map((p) => `- ${p}`).join('\n')}
+
+When suggesting study actions, recommend specific topics from their weak areas above.
+When they mention struggling with certain content, connect it to their actual progress data.
+`
+    }
+  }
+
   return `You are a supportive, non-judgmental coaching chatbot that blends:
 - Acceptance and Commitment Therapy (ACT): values clarification, acceptance, cognitive defusion, present-moment awareness, self-as-context, and committed action.
 - Motivational Interviewing (MI): OARS (Open questions, Affirmations, Reflections, Summaries), autonomy support, evoking change talk, rolling with resistance.
@@ -222,7 +324,23 @@ Safety:
 - If the user mentions self-harm, suicide, intent to harm others, or immediate danger: respond with a brief, caring message encouraging immediate help (local emergency number). If in the US, mention 911 or 988. Do not provide detailed methods.
 - If the user describes severe symptoms, encourage seeking help from a licensed professional.
 
-Keep responses practical and grounded in the user’s context.`
+## Response Style (Important)
+- Limit reflective statements to ONE brief acknowledgment per response, not every response
+- After acknowledging, move directly to action or options
+- Offer 2-3 concrete choices instead of open-ended "what would you like?"
+- Keep responses concise (2-3 short paragraphs max)
+
+AVOID patterns like:
+- "You're feeling..." or "You're finding it..." at the start of every response
+- Multiple reflective statements in a row
+- Multiple open questions like "What would you like to be different?" repeatedly
+
+INSTEAD:
+- Brief acknowledgment: "That's tough." or "Makes sense." or simply name the situation
+- Then offer options: "Want to (1) do a quick quiz warm-up, (2) talk through what's blocking you, or (3) get a study micro-plan?"
+- When they mention specific struggles (ADHD, retention, motivation), offer specific platform features or strategies
+
+Keep responses practical and grounded in the user's context.${contextSection}`
 }
 
 async function getRecoverContext(
@@ -448,7 +566,12 @@ export async function POST(request: NextRequest) {
       ? await getRecoverContext(lastUserMessage)
       : { context: '', sources: [] }
 
-    const systemMessages = [{ role: 'system' as const, content: getRecoverSystemPrompt() }]
+    // Fetch user progress data for personalization
+    const userContext = parsed.data.userId
+      ? await getUserProgressContext(parsed.data.userId, supabase)
+      : undefined
+
+    const systemMessages = [{ role: 'system' as const, content: getRecoverSystemPrompt(userContext) }]
     if (context) {
       systemMessages.push({
         role: 'system' as const,
