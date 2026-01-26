@@ -98,7 +98,7 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
   }, [user?.id])
 
   // Track page view exit
-  const trackPageExit = useCallback(async () => {
+  const trackPageExit = useCallback(async (sessionEnd = false) => {
     if (!user?.id || !currentPageViewId.current) return
 
     const durationMs = Date.now() - pageEnteredAt.current
@@ -119,6 +119,7 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
           action: 'exit',
           pageViewId,
           durationMs,
+          sessionEnd,
         }),
       })
     } catch (error) {
@@ -130,8 +131,8 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'hidden') {
-        // User switched away - record page exit
-        trackPageExit()
+        // User switched away - record page exit with session end flag
+        trackPageExit(true)
       } else if (document.visibilityState === 'visible' && pathname) {
         // User came back - re-enter the page
         trackPageEnter(pathname)
@@ -200,7 +201,7 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      trackPageExit()
+      trackPageExit(true)
     }
   }, [trackPageExit])
 
