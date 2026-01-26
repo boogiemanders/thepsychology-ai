@@ -49,6 +49,8 @@ const EXCLUDED_CHANGELOG_KEYWORDS = [
   // Infrastructure/code changes (not user-facing)
   'domain_folder_map', 'source_folder_to_domain', 'kebab-case',
   'topic-content-v3', 'topic-content-v4',
+  // Marketing/testimonials
+  'testimonial',
 ]
 
 // Also exclude commits that mention lab or SENSE in the title
@@ -183,7 +185,7 @@ export async function GET(request: NextRequest) {
           date: commit.commit?.author?.date || new Date().toISOString(),
           title,
           body,
-          url: commit.html_url,
+          // Intentionally omit url to prevent exposing GitHub repo to users
           author,
         }
       })

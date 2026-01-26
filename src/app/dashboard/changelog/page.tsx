@@ -137,13 +137,7 @@ export default function DashboardChangelogPage() {
                     <div className="flex flex-wrap items-start justify-between gap-3">
                       <div className="min-w-0">
                         <div className="text-sm font-semibold">
-                          {entry.url ? (
-                            <a href={entry.url} target="_blank" rel="noreferrer" className="underline underline-offset-2">
-                              {entry.title}
-                            </a>
-                          ) : (
-                            entry.title
-                          )}
+                          {entry.title}
                         </div>
                         <div className="mt-1 text-xs text-muted-foreground">{formatDate(entry.date)}</div>
                         {entry.author ? (
