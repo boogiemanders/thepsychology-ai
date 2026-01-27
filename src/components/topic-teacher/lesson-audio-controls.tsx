@@ -1450,16 +1450,20 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       const controller = new AbortController()
       abortRef.current = controller
 
+      // Manifest can be used even with interests (hobby variants supported)
+      // Only require voice=default and English language
+      const canUseManifest = voice === DEFAULT_VOICE && isEnglishish(languagePreference)
       console.log('[handleGenerate] Checking manifest conditions:', {
         useManifest,
         lessonSlug,
+        canUseManifest,
         canUsePregen,
         voice,
         interestsActive,
         languagePreference,
       })
 
-      if (useManifest && lessonSlug && canUsePregen) {
+      if (useManifest && lessonSlug && canUseManifest) {
         const manifestLoaded = await tryLoadFromManifest(controller.signal)
         if (manifestLoaded) {
           console.log('[audio-controls] Loaded audio from MFA manifest')
