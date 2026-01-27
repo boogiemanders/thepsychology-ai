@@ -2959,6 +2959,7 @@ export function TopicTeacherContent() {
                   ? `Translating to ${languagePreference}...`
                   : null
           }
+          lessonSlug={domain && decodedTopic ? `${domain.toLowerCase().replace(/\s+/g, '-')}/${decodedTopic}` : null}
         />
 
         {/* 3. Interest & Language Inputs */}
