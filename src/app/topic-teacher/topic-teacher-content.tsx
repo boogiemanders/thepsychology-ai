@@ -106,6 +106,11 @@ type HastNode = {
 const READ_ALONG_WORD_REGEX = /\d+(?:\.\d+)+|[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
 const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 const READ_ALONG_SKIP_SELECTOR = Array.from(READ_ALONG_SKIP_TAGS).join(',')
+// Debug: Log skip tags on module load to verify deployment
+if (typeof window !== 'undefined') {
+  console.log('[read-along] Skip tags:', Array.from(READ_ALONG_SKIP_TAGS))
+  console.log('[read-along] Skip selector:', READ_ALONG_SKIP_SELECTOR)
+}
 const EPPP_WORD_REGEX = /\bE\.?P\.?P\.?P\.?\b/i
 const ACRONYM_WORD_REGEX = /^[A-Z]{2,5}$/
 const ACRONYM_VOWEL_REGEX = /[AEIOUY]/
@@ -210,6 +215,7 @@ function wrapReactNodeWords(node: React.ReactNode, wordIndexRef: { current: numb
 }
 
 function wrapReadAlongWordsInContainer(container: HTMLElement): HTMLSpanElement[] {
+  console.log('[read-along] wrapReadAlongWordsInContainer called')
   const wordIndexRef = { current: 0 }
   const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT)
   const textNodes: Text[] = []
@@ -218,12 +224,16 @@ function wrapReadAlongWordsInContainer(container: HTMLElement): HTMLSpanElement[
     textNodes.push(walker.currentNode as Text)
   }
 
+  let skippedInHeaders = 0
   for (const textNode of textNodes) {
     const text = textNode.nodeValue ?? ''
     if (!text.trim()) continue
     const parent = textNode.parentElement
     if (!parent) continue
-    if (parent.closest(READ_ALONG_SKIP_SELECTOR)) continue
+    if (parent.closest(READ_ALONG_SKIP_SELECTOR)) {
+      skippedInHeaders++
+      continue
+    }
     if (parent.closest('span.tt-word')) continue
 
     READ_ALONG_WORD_REGEX.lastIndex = 0
@@ -258,7 +268,9 @@ function wrapReadAlongWordsInContainer(container: HTMLElement): HTMLSpanElement[
     parent.replaceChild(fragment, textNode)
   }
 
-  return Array.from(container.querySelectorAll<HTMLSpanElement>('span.tt-word'))
+  const spans = Array.from(container.querySelectorAll<HTMLSpanElement>('span.tt-word'))
+  console.log('[read-along] Wrapped words:', spans.length, 'Skipped in headers:', skippedInHeaders)
+  return spans
 }
 
 type ReadAlongWordEntry = { word: string; index: number }
