@@ -648,6 +648,9 @@ export function TopicTeacherContent() {
   const [showRatingDialog, setShowRatingDialog] = useState(false)
   const [ratingSubmitted, setRatingSubmitted] = useState(false)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
+  const [isRapidNavigationBlocked, setIsRapidNavigationBlocked] = useState(false)
+  const [blockTimeRemaining, setBlockTimeRemaining] = useState(0)
+  const navigationTimestampsRef = useRef<number[]>([])
   const sessionStartRef = useRef<number>(Date.now())
   const readAlongWordCounterRef = useRef(0)
   const spokenWords = useMemo(() => {
@@ -766,14 +769,91 @@ export function TopicTeacherContent() {
     return () => clearTimeout(timer)
   }, [user?.id])
 
+  // Admin check - used for screenshot protection and rapid navigation skip
+  const ADMIN_EMAIL = 'chanders0@yahoo.com'
+  const isAdminUser = user?.email === ADMIN_EMAIL
+
+  // Check for existing rapid navigation block on mount
+  useEffect(() => {
+    if (!user?.id) return
+    const blockKey = `rapid_nav_block_${user.id}`
+    const blockData = localStorage.getItem(blockKey)
+    if (blockData) {
+      try {
+        const { unblockAt } = JSON.parse(blockData)
+        if (Date.now() < unblockAt) {
+          setIsRapidNavigationBlocked(true)
+          setBlockTimeRemaining(Math.ceil((unblockAt - Date.now()) / 1000))
+        } else {
+          localStorage.removeItem(blockKey)
+        }
+      } catch {
+        localStorage.removeItem(blockKey)
+      }
+    }
+  }, [user?.id])
+
+  // Trigger block and set localStorage
+  const triggerRapidNavigationBlock = useCallback(() => {
+    if (!user?.id) return
+    const blockKey = `rapid_nav_block_${user.id}`
+    const unblockAt = Date.now() + 5 * 60 * 1000 // 5 minutes
+
+    localStorage.setItem(blockKey, JSON.stringify({
+      blockedAt: Date.now(),
+      unblockAt
+    }))
+
+    setIsRapidNavigationBlocked(true)
+    setBlockTimeRemaining(300) // 5 minutes in seconds
+    navigationTimestampsRef.current = [] // Reset timestamps
+  }, [user?.id])
+
+  // Track navigation events and detect rapid pattern
+  const trackNavigation = useCallback(() => {
+    // Skip for admin users
+    if (isAdminUser) return
+
+    const now = Date.now()
+    const fiveMinutesAgo = now - 5 * 60 * 1000
+
+    // Add current timestamp, filter to last 5 minutes
+    navigationTimestampsRef.current = [
+      ...navigationTimestampsRef.current.filter(t => t > fiveMinutesAgo),
+      now
+    ]
+
+    // Check for rapid pattern: 50+ navigation events in 5 minutes
+    if (navigationTimestampsRef.current.length >= 50) {
+      triggerRapidNavigationBlock()
+    }
+  }, [isAdminUser, triggerRapidNavigationBlock])
+
+  // Countdown timer for rapid navigation block
+  useEffect(() => {
+    if (!isRapidNavigationBlocked || blockTimeRemaining <= 0) return
+
+    const timer = setInterval(() => {
+      setBlockTimeRemaining(prev => {
+        if (prev <= 1) {
+          setIsRapidNavigationBlocked(false)
+          if (user?.id) {
+            localStorage.removeItem(`rapid_nav_block_${user.id}`)
+          }
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [isRapidNavigationBlocked, blockTimeRemaining, user?.id])
+
   useEffect(() => {
     autoScrollRef.current = readAlongEnabled && autoScrollEnabled
   }, [autoScrollEnabled, readAlongEnabled])
 
   // Screenshot protection - only allow for admin user
-  const ADMIN_EMAIL = 'chanders0@yahoo.com'
-  const isAdminUser = user?.email === ADMIN_EMAIL
-
   useEffect(() => {
     // Skip protection for admin user
     if (isAdminUser) return
@@ -1916,6 +1996,7 @@ export function TopicTeacherContent() {
       ])
       captureAssistantEnglishContent(0, lessonContent)
       setInitialized(true)
+      trackNavigation() // Track rapid navigation pattern
       setPreviousUserInterests(userInterests)
       setLastTranslationCacheKey(null)
     } catch (err) {
@@ -4348,6 +4429,37 @@ export function TopicTeacherContent() {
               </button>
             </div>
           </motion.div>
+        )}
+
+        {/* Rapid Navigation Block Overlay */}
+        {isRapidNavigationBlocked && (
+          <div className="fixed inset-0 bg-background/95 z-50 flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-card border rounded-xl shadow-lg p-6 max-w-md text-center"
+            >
+              <div className="text-4xl mb-4">🧠</div>
+              <h2 className="text-xl font-semibold mb-2">
+                Great enthusiasm for studying!
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                We noticed you're moving through content quickly. Let's take a
+                5-minute break to let the material sink in.
+              </p>
+              <p className="text-2xl font-mono mb-4">
+                {Math.floor(blockTimeRemaining / 60)}:{(blockTimeRemaining % 60).toString().padStart(2, '0')}
+              </p>
+              <p className="text-sm text-muted-foreground mb-4">
+                Try Recover to reflect on what you've learned so far!
+              </p>
+              <Button asChild>
+                <Link href={`/recover?entry=quick-reset&returnTo=${encodeURIComponent(typeof window !== 'undefined' ? window.location.pathname + window.location.search : '/topic-teacher')}`}>
+                  Try Recover
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
         )}
       </div>
     </main>
