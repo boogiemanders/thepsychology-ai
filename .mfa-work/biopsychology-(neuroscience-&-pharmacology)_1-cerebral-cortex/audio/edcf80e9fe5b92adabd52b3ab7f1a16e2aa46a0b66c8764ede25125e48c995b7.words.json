@@ -1,0 +1,167 @@
+{
+  "words": [
+    {
+      "word": "the",
+      "start": 0.07,
+      "end": 0.16
+    },
+    {
+      "word": "arcuate",
+      "start": 0.16,
+      "end": 1.02
+    },
+    {
+      "word": "fasciculus",
+      "start": 1.02,
+      "end": 1.32
+    },
+    {
+      "word": "connects",
+      "start": 1.32,
+      "end": 1.64
+    },
+    {
+      "word": "wernicke's",
+      "start": 1.64,
+      "end": 2.17
+    },
+    {
+      "word": "area",
+      "start": 2.17,
+      "end": 2.49
+    },
+    {
+      "word": "to",
+      "start": 2.49,
+      "end": 2.53
+    },
+    {
+      "word": "broca's",
+      "start": 2.53,
+      "end": 3.07
+    },
+    {
+      "word": "area",
+      "start": 3.07,
+      "end": 3.47
+    }
+  ],
+  "phones": [
+    {
+      "phone": "ð",
+      "start": 0.07,
+      "end": 0.13
+    },
+    {
+      "phone": "a",
+      "start": 0.13,
+      "end": 0.16
+    },
+    {
+      "phone": "k",
+      "start": 1.32,
+      "end": 1.39
+    },
+    {
+      "phone": "ə",
+      "start": 1.39,
+      "end": 1.43
+    },
+    {
+      "phone": "n",
+      "start": 1.43,
+      "end": 1.46
+    },
+    {
+      "phone": "ɛ",
+      "start": 1.46,
+      "end": 1.55
+    },
+    {
+      "phone": "k",
+      "start": 1.55,
+      "end": 1.6
+    },
+    {
+      "phone": "s",
+      "start": 1.6,
+      "end": 1.64
+    },
+    {
+      "phone": "i",
+      "start": 2.01,
+      "end": 2.11
+    },
+    {
+      "phone": "z",
+      "start": 2.11,
+      "end": 2.17
+    },
+    {
+      "phone": "ɛ",
+      "start": 2.17,
+      "end": 2.21
+    },
+    {
+      "phone": "a",
+      "start": 2.21,
+      "end": 2.26
+    },
+    {
+      "phone": "ɹ",
+      "start": 2.26,
+      "end": 2.34
+    },
+    {
+      "phone": "i",
+      "start": 2.34,
+      "end": 2.44
+    },
+    {
+      "phone": "a",
+      "start": 2.44,
+      "end": 2.49
+    },
+    {
+      "phone": "ə",
+      "start": 2.49,
+      "end": 2.53
+    },
+    {
+      "phone": "i",
+      "start": 2.97,
+      "end": 3
+    },
+    {
+      "phone": "z",
+      "start": 3,
+      "end": 3.07
+    },
+    {
+      "phone": "ɛ",
+      "start": 3.07,
+      "end": 3.12
+    },
+    {
+      "phone": "a",
+      "start": 3.12,
+      "end": 3.17
+    },
+    {
+      "phone": "ɹ",
+      "start": 3.17,
+      "end": 3.25
+    },
+    {
+      "phone": "i",
+      "start": 3.25,
+      "end": 3.35
+    },
+    {
+      "phone": "a",
+      "start": 3.35,
+      "end": 3.47
+    }
+  ],
+  "duration": 3.668753
+}

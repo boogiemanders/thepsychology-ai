@@ -1,0 +1,237 @@
+{
+  "words": [
+    {
+      "word": "temporal",
+      "start": 0.04,
+      "end": 0.46
+    },
+    {
+      "word": "lobe",
+      "start": 0.46,
+      "end": 0.77
+    },
+    {
+      "word": "syndrome",
+      "start": 0.77,
+      "end": 1.37
+    },
+    {
+      "word": "irritability",
+      "start": 1.45,
+      "end": 2.17
+    },
+    {
+      "word": "and",
+      "start": 2.17,
+      "end": 2.3
+    },
+    {
+      "word": "hostility",
+      "start": 2.3,
+      "end": 3.03
+    }
+  ],
+  "phones": [
+    {
+      "phone": "ʈ",
+      "start": 0.04,
+      "end": 0.12
+    },
+    {
+      "phone": "ɛ",
+      "start": 0.12,
+      "end": 0.19
+    },
+    {
+      "phone": "m",
+      "start": 0.19,
+      "end": 0.25
+    },
+    {
+      "phone": "p",
+      "start": 0.25,
+      "end": 0.3
+    },
+    {
+      "phone": "ə",
+      "start": 0.3,
+      "end": 0.33
+    },
+    {
+      "phone": "ɹ",
+      "start": 0.33,
+      "end": 0.36
+    },
+    {
+      "phone": "ə",
+      "start": 0.36,
+      "end": 0.4
+    },
+    {
+      "phone": "l",
+      "start": 0.4,
+      "end": 0.46
+    },
+    {
+      "phone": "l",
+      "start": 0.46,
+      "end": 0.54
+    },
+    {
+      "phone": "əw",
+      "start": 0.54,
+      "end": 0.69
+    },
+    {
+      "phone": "b",
+      "start": 0.69,
+      "end": 0.77
+    },
+    {
+      "phone": "s",
+      "start": 0.77,
+      "end": 0.87
+    },
+    {
+      "phone": "ɪ",
+      "start": 0.87,
+      "end": 0.93
+    },
+    {
+      "phone": "n",
+      "start": 0.93,
+      "end": 1.01
+    },
+    {
+      "phone": "d",
+      "start": 1.01,
+      "end": 1.07
+    },
+    {
+      "phone": "ɹ",
+      "start": 1.07,
+      "end": 1.12
+    },
+    {
+      "phone": "ə",
+      "start": 1.12,
+      "end": 1.24
+    },
+    {
+      "phone": "m",
+      "start": 1.24,
+      "end": 1.37
+    },
+    {
+      "phone": "i",
+      "start": 1.45,
+      "end": 1.53
+    },
+    {
+      "phone": "ɹ",
+      "start": 1.53,
+      "end": 1.61
+    },
+    {
+      "phone": "i",
+      "start": 1.61,
+      "end": 1.65
+    },
+    {
+      "phone": "t",
+      "start": 1.65,
+      "end": 1.69
+    },
+    {
+      "phone": "a",
+      "start": 1.69,
+      "end": 1.73
+    },
+    {
+      "phone": "bʲ",
+      "start": 1.73,
+      "end": 1.81
+    },
+    {
+      "phone": "i",
+      "start": 1.81,
+      "end": 1.87
+    },
+    {
+      "phone": "ʎ",
+      "start": 1.87,
+      "end": 1.98
+    },
+    {
+      "phone": "i",
+      "start": 1.98,
+      "end": 2.01
+    },
+    {
+      "phone": "tʲ",
+      "start": 2.01,
+      "end": 2.04
+    },
+    {
+      "phone": "i",
+      "start": 2.04,
+      "end": 2.17
+    },
+    {
+      "phone": "a",
+      "start": 2.17,
+      "end": 2.26
+    },
+    {
+      "phone": "n",
+      "start": 2.26,
+      "end": 2.3
+    },
+    {
+      "phone": "h",
+      "start": 2.3,
+      "end": 2.38
+    },
+    {
+      "phone": "ɑ",
+      "start": 2.38,
+      "end": 2.44
+    },
+    {
+      "phone": "s",
+      "start": 2.44,
+      "end": 2.55
+    },
+    {
+      "phone": "tʲ",
+      "start": 2.55,
+      "end": 2.6
+    },
+    {
+      "phone": "ɪ",
+      "start": 2.6,
+      "end": 2.66
+    },
+    {
+      "phone": "ʎ",
+      "start": 2.66,
+      "end": 2.75
+    },
+    {
+      "phone": "ɪ",
+      "start": 2.75,
+      "end": 2.79
+    },
+    {
+      "phone": "tʲ",
+      "start": 2.79,
+      "end": 2.82
+    },
+    {
+      "phone": "i",
+      "start": 2.82,
+      "end": 3.03
+    }
+  ],
+  "duration": 3.343673
+}

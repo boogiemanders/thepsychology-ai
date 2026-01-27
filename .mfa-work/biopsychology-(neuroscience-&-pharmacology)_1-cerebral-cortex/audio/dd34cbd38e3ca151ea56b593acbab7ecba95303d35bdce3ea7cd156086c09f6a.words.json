@@ -1,0 +1,402 @@
+{
+  "words": [
+    {
+      "word": "this",
+      "start": 0.03,
+      "end": 0.42
+    },
+    {
+      "word": "processes",
+      "start": 0.54,
+      "end": 1.32
+    },
+    {
+      "word": "sound",
+      "start": 1.32,
+      "end": 1.89
+    },
+    {
+      "word": "damage",
+      "start": 2.61,
+      "end": 3.13
+    },
+    {
+      "word": "can",
+      "start": 3.13,
+      "end": 3.32
+    },
+    {
+      "word": "cause",
+      "start": 3.32,
+      "end": 3.85
+    },
+    {
+      "word": "auditory",
+      "start": 4.22,
+      "end": 4.81
+    },
+    {
+      "word": "<unk>",
+      "start": 4.81,
+      "end": 5.48
+    },
+    {
+      "word": "[bracketed]",
+      "start": 6.09,
+      "end": 8.11
+    },
+    {
+      "word": "auditory",
+      "start": 8.11,
+      "end": 8.77
+    },
+    {
+      "word": "hallucinations",
+      "start": 9.43,
+      "end": 10.39
+    },
+    {
+      "word": "cortical",
+      "start": 10.39,
+      "end": 10.9
+    },
+    {
+      "word": "deafness",
+      "start": 10.9,
+      "end": 11.18
+    },
+    {
+      "word": "[bracketed]",
+      "start": 11.97,
+      "end": 17.209999
+    }
+  ],
+  "phones": [
+    {
+      "phone": "d̪",
+      "start": 0.03,
+      "end": 0.13
+    },
+    {
+      "phone": "ɪ",
+      "start": 0.13,
+      "end": 0.25
+    },
+    {
+      "phone": "s",
+      "start": 0.25,
+      "end": 0.42
+    },
+    {
+      "phone": "p",
+      "start": 0.54,
+      "end": 0.6
+    },
+    {
+      "phone": "ɹ",
+      "start": 0.6,
+      "end": 0.65
+    },
+    {
+      "phone": "ɑ",
+      "start": 0.65,
+      "end": 0.77
+    },
+    {
+      "phone": "s",
+      "start": 0.77,
+      "end": 0.89
+    },
+    {
+      "phone": "ɛ",
+      "start": 0.89,
+      "end": 1.01
+    },
+    {
+      "phone": "s",
+      "start": 1.01,
+      "end": 1.12
+    },
+    {
+      "phone": "ɪ",
+      "start": 1.12,
+      "end": 1.26
+    },
+    {
+      "phone": "z",
+      "start": 1.26,
+      "end": 1.32
+    },
+    {
+      "phone": "s",
+      "start": 1.32,
+      "end": 1.42
+    },
+    {
+      "phone": "aw",
+      "start": 1.42,
+      "end": 1.71
+    },
+    {
+      "phone": "n",
+      "start": 1.71,
+      "end": 1.74
+    },
+    {
+      "phone": "d",
+      "start": 1.74,
+      "end": 1.89
+    },
+    {
+      "phone": "d",
+      "start": 2.61,
+      "end": 2.72
+    },
+    {
+      "phone": "a",
+      "start": 2.72,
+      "end": 2.89
+    },
+    {
+      "phone": "mʲ",
+      "start": 2.89,
+      "end": 2.95
+    },
+    {
+      "phone": "i",
+      "start": 2.95,
+      "end": 3.03
+    },
+    {
+      "phone": "dʒ",
+      "start": 3.03,
+      "end": 3.13
+    },
+    {
+      "phone": "cʰ",
+      "start": 3.13,
+      "end": 3.2
+    },
+    {
+      "phone": "æ",
+      "start": 3.2,
+      "end": 3.24
+    },
+    {
+      "phone": "n",
+      "start": 3.24,
+      "end": 3.32
+    },
+    {
+      "phone": "k",
+      "start": 3.32,
+      "end": 3.4
+    },
+    {
+      "phone": "ɒ",
+      "start": 3.4,
+      "end": 3.71
+    },
+    {
+      "phone": "z",
+      "start": 3.71,
+      "end": 3.85
+    },
+    {
+      "phone": "ɑ",
+      "start": 4.22,
+      "end": 4.37
+    },
+    {
+      "phone": "d",
+      "start": 4.37,
+      "end": 4.41
+    },
+    {
+      "phone": "ə",
+      "start": 4.41,
+      "end": 4.45
+    },
+    {
+      "phone": "tʰ",
+      "start": 4.45,
+      "end": 4.56
+    },
+    {
+      "phone": "ɒ",
+      "start": 4.56,
+      "end": 4.64
+    },
+    {
+      "phone": "ɹ",
+      "start": 4.64,
+      "end": 4.72
+    },
+    {
+      "phone": "i",
+      "start": 4.72,
+      "end": 4.81
+    },
+    {
+      "phone": "ɑ",
+      "start": 8.11,
+      "end": 8.22
+    },
+    {
+      "phone": "d",
+      "start": 8.22,
+      "end": 8.31
+    },
+    {
+      "phone": "ə",
+      "start": 8.31,
+      "end": 8.42
+    },
+    {
+      "phone": "tʰ",
+      "start": 8.42,
+      "end": 8.45
+    },
+    {
+      "phone": "ɒ",
+      "start": 8.45,
+      "end": 8.61
+    },
+    {
+      "phone": "ɹ",
+      "start": 8.61,
+      "end": 8.73
+    },
+    {
+      "phone": "i",
+      "start": 8.73,
+      "end": 8.77
+    },
+    {
+      "phone": "h",
+      "start": 9.43,
+      "end": 9.46
+    },
+    {
+      "phone": "a",
+      "start": 9.46,
+      "end": 9.51
+    },
+    {
+      "phone": "l",
+      "start": 9.51,
+      "end": 9.61
+    },
+    {
+      "phone": "uː",
+      "start": 9.61,
+      "end": 9.65
+    },
+    {
+      "phone": "s",
+      "start": 9.65,
+      "end": 9.77
+    },
+    {
+      "phone": "i",
+      "start": 9.77,
+      "end": 9.8
+    },
+    {
+      "phone": "n",
+      "start": 9.8,
+      "end": 9.93
+    },
+    {
+      "phone": "e",
+      "start": 9.93,
+      "end": 10.05
+    },
+    {
+      "phone": "ʃ",
+      "start": 10.05,
+      "end": 10.1
+    },
+    {
+      "phone": "ɔ",
+      "start": 10.1,
+      "end": 10.16
+    },
+    {
+      "phone": "n",
+      "start": 10.16,
+      "end": 10.32
+    },
+    {
+      "phone": "z",
+      "start": 10.32,
+      "end": 10.39
+    },
+    {
+      "phone": "k",
+      "start": 10.39,
+      "end": 10.43
+    },
+    {
+      "phone": "ɒː",
+      "start": 10.43,
+      "end": 10.49
+    },
+    {
+      "phone": "ʈʲ",
+      "start": 10.49,
+      "end": 10.52
+    },
+    {
+      "phone": "ɪ",
+      "start": 10.52,
+      "end": 10.66
+    },
+    {
+      "phone": "k",
+      "start": 10.66,
+      "end": 10.79
+    },
+    {
+      "phone": "ə",
+      "start": 10.79,
+      "end": 10.82
+    },
+    {
+      "phone": "l",
+      "start": 10.82,
+      "end": 10.9
+    },
+    {
+      "phone": "d",
+      "start": 10.9,
+      "end": 10.93
+    },
+    {
+      "phone": "ɛ",
+      "start": 10.93,
+      "end": 10.96
+    },
+    {
+      "phone": "f",
+      "start": 10.96,
+      "end": 10.99
+    },
+    {
+      "phone": "n",
+      "start": 10.99,
+      "end": 11.02
+    },
+    {
+      "phone": "ə",
+      "start": 11.02,
+      "end": 11.05
+    },
+    {
+      "phone": "s",
+      "start": 11.05,
+      "end": 11.18
+    }
+  ],
+  "duration": 17.507846
+}

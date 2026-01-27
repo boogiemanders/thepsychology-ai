@@ -10,6 +10,16 @@ import { supabase } from "@/lib/supabase"
 import { REFERRAL_SOURCES, CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
 import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI } from "@/lib/utm-tracking"
 
+// Retry helper for critical API calls (profile creation)
+async function fetchWithRetry(url: string, options: RequestInit, retries = 3): Promise<Response> {
+  for (let i = 0; i < retries; i++) {
+    const response = await fetch(url, options)
+    if (response.ok) return response
+    if (i < retries - 1) await new Promise(r => setTimeout(r, 1000 * Math.pow(2, i)))
+  }
+  return fetch(url, options) // Final attempt, let it throw
+}
+
 type PricingSectionProps = {
   activeTier?: string
   onActiveTierChange?: (tierName: string) => void
@@ -141,7 +151,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
         finalReferralSource = `fb_other: ${formData.referralSourceOther.trim()}`
       }
 
-      const profileResponse = await fetch("/api/auth/create-profile", {
+      const profileResponse = await fetchWithRetry("/api/auth/create-profile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

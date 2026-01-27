@@ -1,0 +1,577 @@
+{
+  "words": [
+    {
+      "word": "this",
+      "start": 0.03,
+      "end": 0.27
+    },
+    {
+      "word": "specific",
+      "start": 0.27,
+      "end": 0.83
+    },
+    {
+      "word": "syndrome",
+      "start": 0.83,
+      "end": 1.37
+    },
+    {
+      "word": "results",
+      "start": 1.37,
+      "end": 1.74
+    },
+    {
+      "word": "from",
+      "start": 1.74,
+      "end": 1.92
+    },
+    {
+      "word": "left",
+      "start": 1.92,
+      "end": 2.29
+    },
+    {
+      "word": "[bracketed]",
+      "start": 2.37,
+      "end": 2.79
+    },
+    {
+      "word": "parietal",
+      "start": 2.79,
+      "end": 3.27
+    },
+    {
+      "word": "damage",
+      "start": 3.27,
+      "end": 3.71
+    },
+    {
+      "word": "and",
+      "start": 3.71,
+      "end": 3.85
+    },
+    {
+      "word": "involves",
+      "start": 3.85,
+      "end": 4.32
+    },
+    {
+      "word": "four",
+      "start": 4.32,
+      "end": 4.65
+    },
+    {
+      "word": "symptoms",
+      "start": 4.65,
+      "end": 5.35
+    },
+    {
+      "word": "[bracketed]",
+      "start": 5.74,
+      "end": 6
+    },
+    {
+      "word": "right",
+      "start": 6,
+      "end": 6.23
+    },
+    {
+      "word": "left",
+      "start": 6.56,
+      "end": 6.77
+    },
+    {
+      "word": "disorientation",
+      "start": 7.74,
+      "end": 8.95
+    },
+    {
+      "word": "finger",
+      "start": 8.95,
+      "end": 9.11
+    },
+    {
+      "word": "<unk>",
+      "start": 9.11,
+      "end": 9.36
+    },
+    {
+      "word": "[bracketed]",
+      "start": 10.08,
+      "end": 11.03
+    },
+    {
+      "word": "<unk>",
+      "start": 11.57,
+      "end": 13.41
+    },
+    {
+      "word": "[bracketed]",
+      "start": 13.8,
+      "end": 14.43
+    },
+    {
+      "word": "<unk>",
+      "start": 14.87,
+      "end": 16.23
+    },
+    {
+      "word": "[bracketed]",
+      "start": 16.68,
+      "end": 19.57
+    }
+  ],
+  "phones": [
+    {
+      "phone": "d̪",
+      "start": 0.03,
+      "end": 0.14
+    },
+    {
+      "phone": "ɪ",
+      "start": 0.14,
+      "end": 0.24
+    },
+    {
+      "phone": "s",
+      "start": 0.24,
+      "end": 0.27
+    },
+    {
+      "phone": "s",
+      "start": 0.27,
+      "end": 0.42
+    },
+    {
+      "phone": "p",
+      "start": 0.42,
+      "end": 0.48
+    },
+    {
+      "phone": "ə",
+      "start": 0.48,
+      "end": 0.52
+    },
+    {
+      "phone": "s",
+      "start": 0.52,
+      "end": 0.62
+    },
+    {
+      "phone": "ɪ",
+      "start": 0.62,
+      "end": 0.67
+    },
+    {
+      "phone": "fʲ",
+      "start": 0.67,
+      "end": 0.72
+    },
+    {
+      "phone": "ɪ",
+      "start": 0.72,
+      "end": 0.78
+    },
+    {
+      "phone": "k",
+      "start": 0.78,
+      "end": 0.83
+    },
+    {
+      "phone": "s",
+      "start": 0.83,
+      "end": 0.91
+    },
+    {
+      "phone": "ɪ",
+      "start": 0.91,
+      "end": 0.98
+    },
+    {
+      "phone": "n",
+      "start": 0.98,
+      "end": 1.04
+    },
+    {
+      "phone": "d",
+      "start": 1.04,
+      "end": 1.1
+    },
+    {
+      "phone": "ɹ",
+      "start": 1.1,
+      "end": 1.16
+    },
+    {
+      "phone": "ə",
+      "start": 1.16,
+      "end": 1.29
+    },
+    {
+      "phone": "m",
+      "start": 1.29,
+      "end": 1.37
+    },
+    {
+      "phone": "ɹ",
+      "start": 1.37,
+      "end": 1.42
+    },
+    {
+      "phone": "ɪ",
+      "start": 1.42,
+      "end": 1.46
+    },
+    {
+      "phone": "z",
+      "start": 1.46,
+      "end": 1.52
+    },
+    {
+      "phone": "ɐ",
+      "start": 1.52,
+      "end": 1.58
+    },
+    {
+      "phone": "ɫ",
+      "start": 1.58,
+      "end": 1.66
+    },
+    {
+      "phone": "t",
+      "start": 1.66,
+      "end": 1.7
+    },
+    {
+      "phone": "s",
+      "start": 1.7,
+      "end": 1.74
+    },
+    {
+      "phone": "f",
+      "start": 1.74,
+      "end": 1.8
+    },
+    {
+      "phone": "ɹ",
+      "start": 1.8,
+      "end": 1.83
+    },
+    {
+      "phone": "ɐ",
+      "start": 1.83,
+      "end": 1.87
+    },
+    {
+      "phone": "m",
+      "start": 1.87,
+      "end": 1.92
+    },
+    {
+      "phone": "l",
+      "start": 1.92,
+      "end": 2.03
+    },
+    {
+      "phone": "ɛ",
+      "start": 2.03,
+      "end": 2.14
+    },
+    {
+      "phone": "f",
+      "start": 2.14,
+      "end": 2.22
+    },
+    {
+      "phone": "t",
+      "start": 2.22,
+      "end": 2.29
+    },
+    {
+      "phone": "p",
+      "start": 2.79,
+      "end": 2.86
+    },
+    {
+      "phone": "ə",
+      "start": 2.86,
+      "end": 2.9
+    },
+    {
+      "phone": "ɹ",
+      "start": 2.9,
+      "end": 2.97
+    },
+    {
+      "phone": "aj",
+      "start": 2.97,
+      "end": 3.12
+    },
+    {
+      "phone": "ə",
+      "start": 3.12,
+      "end": 3.15
+    },
+    {
+      "phone": "ʈ",
+      "start": 3.15,
+      "end": 3.18
+    },
+    {
+      "phone": "ə",
+      "start": 3.18,
+      "end": 3.22
+    },
+    {
+      "phone": "l",
+      "start": 3.22,
+      "end": 3.27
+    },
+    {
+      "phone": "d",
+      "start": 3.27,
+      "end": 3.33
+    },
+    {
+      "phone": "a",
+      "start": 3.33,
+      "end": 3.47
+    },
+    {
+      "phone": "mʲ",
+      "start": 3.47,
+      "end": 3.53
+    },
+    {
+      "phone": "i",
+      "start": 3.53,
+      "end": 3.62
+    },
+    {
+      "phone": "dʒ",
+      "start": 3.62,
+      "end": 3.71
+    },
+    {
+      "phone": "a",
+      "start": 3.71,
+      "end": 3.8
+    },
+    {
+      "phone": "n",
+      "start": 3.8,
+      "end": 3.85
+    },
+    {
+      "phone": "ɪ",
+      "start": 3.85,
+      "end": 3.91
+    },
+    {
+      "phone": "n",
+      "start": 3.91,
+      "end": 3.97
+    },
+    {
+      "phone": "v",
+      "start": 3.97,
+      "end": 4.02
+    },
+    {
+      "phone": "ɑ",
+      "start": 4.02,
+      "end": 4.16
+    },
+    {
+      "phone": "ɫ",
+      "start": 4.16,
+      "end": 4.2
+    },
+    {
+      "phone": "v",
+      "start": 4.2,
+      "end": 4.25
+    },
+    {
+      "phone": "z",
+      "start": 4.25,
+      "end": 4.32
+    },
+    {
+      "phone": "f",
+      "start": 4.32,
+      "end": 4.45
+    },
+    {
+      "phone": "ɒ",
+      "start": 4.45,
+      "end": 4.58
+    },
+    {
+      "phone": "ɹ",
+      "start": 4.58,
+      "end": 4.65
+    },
+    {
+      "phone": "s",
+      "start": 4.65,
+      "end": 4.78
+    },
+    {
+      "phone": "i",
+      "start": 4.78,
+      "end": 4.83
+    },
+    {
+      "phone": "m",
+      "start": 4.83,
+      "end": 4.9
+    },
+    {
+      "phone": "p",
+      "start": 4.9,
+      "end": 4.94
+    },
+    {
+      "phone": "t",
+      "start": 4.94,
+      "end": 5
+    },
+    {
+      "phone": "ɔ",
+      "start": 5,
+      "end": 5.06
+    },
+    {
+      "phone": "m",
+      "start": 5.06,
+      "end": 5.2
+    },
+    {
+      "phone": "z",
+      "start": 5.2,
+      "end": 5.35
+    },
+    {
+      "phone": "ɹ",
+      "start": 6,
+      "end": 6.03
+    },
+    {
+      "phone": "aj",
+      "start": 6.03,
+      "end": 6.23
+    },
+    {
+      "phone": "l",
+      "start": 6.56,
+      "end": 6.63
+    },
+    {
+      "phone": "ɛ",
+      "start": 6.63,
+      "end": 6.67
+    },
+    {
+      "phone": "f",
+      "start": 6.67,
+      "end": 6.7
+    },
+    {
+      "phone": "t",
+      "start": 6.7,
+      "end": 6.77
+    },
+    {
+      "phone": "dʲ",
+      "start": 7.74,
+      "end": 7.82
+    },
+    {
+      "phone": "ɪ",
+      "start": 7.82,
+      "end": 7.96
+    },
+    {
+      "phone": "s",
+      "start": 7.96,
+      "end": 8.03
+    },
+    {
+      "phone": "ɒ",
+      "start": 8.03,
+      "end": 8.08
+    },
+    {
+      "phone": "ɹ",
+      "start": 8.08,
+      "end": 8.12
+    },
+    {
+      "phone": "i",
+      "start": 8.12,
+      "end": 8.15
+    },
+    {
+      "phone": "ɛ",
+      "start": 8.15,
+      "end": 8.21
+    },
+    {
+      "phone": "n",
+      "start": 8.21,
+      "end": 8.24
+    },
+    {
+      "phone": "tʰ",
+      "start": 8.24,
+      "end": 8.5
+    },
+    {
+      "phone": "ej",
+      "start": 8.5,
+      "end": 8.55
+    },
+    {
+      "phone": "ʃ",
+      "start": 8.55,
+      "end": 8.63
+    },
+    {
+      "phone": "ə",
+      "start": 8.63,
+      "end": 8.89
+    },
+    {
+      "phone": "n",
+      "start": 8.89,
+      "end": 8.95
+    },
+    {
+      "phone": "fʲ",
+      "start": 8.95,
+      "end": 9.01
+    },
+    {
+      "phone": "i",
+      "start": 9.01,
+      "end": 9.04
+    },
+    {
+      "phone": "ŋ",
+      "start": 9.04,
+      "end": 9.05
+    },
+    {
+      "phone": "ɡ",
+      "start": 9.05,
+      "end": 9.08
+    },
+    {
+      "phone": "a",
+      "start": 9.08,
+      "end": 9.11
+    }
+  ],
+  "duration": 19.829841
+}

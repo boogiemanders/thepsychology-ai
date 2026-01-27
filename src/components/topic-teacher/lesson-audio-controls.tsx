@@ -623,7 +623,9 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
    * Returns true if successful, false if not available.
    */
   const tryLoadFromManifest = async (signal: AbortSignal): Promise<boolean> => {
+    console.log('[manifest] Attempting to load manifest:', { useManifest, lessonSlug, canUsePregen })
     if (!useManifest || !lessonSlug) {
+      console.log('[manifest] Skipped: useManifest or lessonSlug is falsy')
       return false
     }
 
@@ -632,11 +634,16 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       const params = new URLSearchParams({ lessonId: lessonSlug })
       if (hobby) params.set('hobby', hobby)
 
-      const response = await fetch(`/api/topic-teacher/lesson-manifest?${params}`, {
+      const url = `/api/topic-teacher/lesson-manifest?${params}`
+      console.log('[manifest] Fetching:', url)
+      const response = await fetch(url, {
         signal,
       })
 
+      console.log('[manifest] Response status:', response.status)
       if (!response.ok) {
+        const errorText = await response.text().catch(() => 'unknown')
+        console.log('[manifest] Response error:', errorText)
         return false
       }
 
@@ -1442,6 +1449,15 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       // Try to load from MFA manifest first (if available)
       const controller = new AbortController()
       abortRef.current = controller
+
+      console.log('[handleGenerate] Checking manifest conditions:', {
+        useManifest,
+        lessonSlug,
+        canUsePregen,
+        voice,
+        interestsActive,
+        languagePreference,
+      })
 
       if (useManifest && lessonSlug && canUsePregen) {
         const manifestLoaded = await tryLoadFromManifest(controller.signal)

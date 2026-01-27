@@ -1,0 +1,724 @@
+{
+  "lessonId": "biopsychology-(neuroscience-&-pharmacology)/1-cerebral-cortex",
+  "version": 1,
+  "schemaVersion": 1,
+  "createdAt": "2026-01-26T16:40:09.772Z",
+  "contentHash": "be22d46236cc9e1c744c7742852790a4bb78c58d5805573246c3276c01d8a9d0",
+  "sections": [
+    {
+      "idx": 0,
+      "title": "Why Your Brain's Outer Layer Matters More Than You Think",
+      "startChunkIdx": 0
+    },
+    {
+      "idx": 1,
+      "title": "The Big Picture: Four Lobes, Each With Its Own Job",
+      "startChunkIdx": 1
+    },
+    {
+      "idx": 2,
+      "title": "The Frontal Lobe: Your Brain's Executive Suite",
+      "startChunkIdx": 4
+    },
+    {
+      "idx": 3,
+      "title": "Broca's Area: The Speech Production Center",
+      "startChunkIdx": 5
+    },
+    {
+      "idx": 4,
+      "title": "The Prefrontal Cortex: Where Planning Meets Personality",
+      "startChunkIdx": 8
+    },
+    {
+      "idx": 5,
+      "title": "Primary Motor Cortex: Initiating Movement",
+      "startChunkIdx": 13
+    },
+    {
+      "idx": 6,
+      "title": "The Temporal Lobe: Processing Sound and Understanding Language",
+      "startChunkIdx": 14
+    },
+    {
+      "idx": 7,
+      "title": "The Auditory Cortex",
+      "startChunkIdx": 15
+    },
+    {
+      "idx": 8,
+      "title": "Wernicke's Area: Understanding Language",
+      "startChunkIdx": 16
+    },
+    {
+      "idx": 9,
+      "title": "Bonus Connection: Conduction Aphasia",
+      "startChunkIdx": 18
+    },
+    {
+      "idx": 10,
+      "title": "Other Aphasia Types to Know",
+      "startChunkIdx": 21
+    },
+    {
+      "idx": 11,
+      "title": "TBI-Related Syndromes",
+      "startChunkIdx": 22
+    },
+    {
+      "idx": 12,
+      "title": "The Parietal Lobe: Touch, Body Awareness, and Skilled Movement",
+      "startChunkIdx": 25
+    },
+    {
+      "idx": 13,
+      "title": "Somatosensory Agnosias",
+      "startChunkIdx": 26
+    },
+    {
+      "idx": 14,
+      "title": "Apraxias: When Movement Planning Breaks Down",
+      "startChunkIdx": 27
+    },
+    {
+      "idx": 15,
+      "title": "Contralateral Neglect",
+      "startChunkIdx": 30
+    },
+    {
+      "idx": 16,
+      "title": "Gerstmann's Syndrome",
+      "startChunkIdx": 32
+    },
+    {
+      "idx": 17,
+      "title": "The Occipital Lobe: Your Visual Processing Center",
+      "startChunkIdx": 33
+    },
+    {
+      "idx": 18,
+      "title": "Visual Problems from Occipital Damage",
+      "startChunkIdx": 34
+    },
+    {
+      "idx": 19,
+      "title": "Cortical Blindness and the Curious Case of Blindsight",
+      "startChunkIdx": 35
+    },
+    {
+      "idx": 20,
+      "title": "Prosopagnosia: Face Blindness",
+      "startChunkIdx": 37
+    },
+    {
+      "idx": 21,
+      "title": "Brain Lateralization: Left Brain, Right Brain, and Why It Matters",
+      "startChunkIdx": 39
+    },
+    {
+      "idx": 22,
+      "title": "Split-Brain Research: How We Learned About Lateralization",
+      "startChunkIdx": 40
+    },
+    {
+      "idx": 23,
+      "title": "The Dichotic Listening Task",
+      "startChunkIdx": 43
+    },
+    {
+      "idx": 24,
+      "title": "Common Misconceptions to Avoid",
+      "startChunkIdx": 44
+    },
+    {
+      "idx": 25,
+      "title": "Practice Tips for Remembering",
+      "startChunkIdx": 45
+    },
+    {
+      "idx": 26,
+      "title": "Key Takeaways",
+      "startChunkIdx": 46
+    }
+  ],
+  "chunks": [
+    {
+      "chunkId": "s0001",
+      "type": "stable",
+      "sectionIdx": 0,
+      "sectionTitle": "Why Your Brain's Outer Layer Matters More Than You Think",
+      "sectionStart": true,
+      "text": "You're studying for the E triple P, which means you're preparing to work with actual human beings. People whose brains control everything from their ability to hold a conversation to their capacity to recognize their own face in a mirror. The cerebral cortex is where much of that magic happens. It's also where things can go dramatically wrong in ways that will walk into your future office.\n\nUnderstanding the cerebral cortex isn't just about passing an exam. When a client struggles to find the right words, or when someone insists they're fine despite clear signs of stroke, or when a patient shows surprisingly poor judgment despite normal intelligence, you'll need to recognize what's happening neurologically. This knowledge helps you make appropriate referrals, understand limitations, and set realistic treatment goals.\n\nLet's break down this wrinkled outer layer of the brain in a way that actually sticks.",
+      "audioKey": "23a46613e16c1e22b58f0714e9300832baf0674209b091526990b8033ffdc062",
+      "timingsKey": "23a46613e16c1e22b58f0714e9300832baf0674209b091526990b8033ffdc062",
+      "duration": 56.33161
+    },
+    {
+      "chunkId": "s0002",
+      "type": "stable",
+      "sectionIdx": 1,
+      "sectionTitle": "The Big Picture: Four Lobes, Each With Its Own Job",
+      "sectionStart": true,
+      "text": "The cerebral cortex is the brain's outer layer, split into right and left hemispheres. Each hemisphere has four distinct lobes: frontal, temporal, parietal, and occipital.",
+      "audioKey": "9ed6977ce51752c154794ede8d2c1f32cdf3e835bddacc22b6ace4379355d4ce",
+      "timingsKey": "9ed6977ce51752c154794ede8d2c1f32cdf3e835bddacc22b6ace4379355d4ce",
+      "duration": 12.027937
+    },
+    {
+      "chunkId": "m0001",
+      "type": "metaphor",
+      "sectionIdx": 1,
+      "sectionTitle": "The Big Picture: Four Lobes, Each With Its Own Job",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "Think of them as four departments in a company, each handling different responsibilities but needing to communicate constantly to keep the whole operation running smoothly.",
+          "audioKey": "83e857781467f213f7d67e7816ae83c011b34db167bd83d5a1b3e52b2db7a903",
+          "timingsKey": "83e857781467f213f7d67e7816ae83c011b34db167bd83d5a1b3e52b2db7a903",
+          "duration": 10.17034
+        }
+      }
+    },
+    {
+      "chunkId": "s0003",
+      "type": "stable",
+      "sectionIdx": 1,
+      "sectionTitle": "The Big Picture: Four Lobes, Each With Its Own Job",
+      "sectionStart": false,
+      "text": "Here's what you need to memorize:\nLobe, Primary Location, Main FunctionsFrontal, Front of brain, Movement, language production, executive functions, personality\nTemporal, Sides (near temples), Hearing, language comprehension\nParietal, Top-back area, Touch, body awareness, skilled movements\nOccipital, Very back, Vision processing",
+      "audioKey": "8afdc1612da9f9d7e11fc243295ea3703dc235cf3ce721b8ec24111668e7f9ba",
+      "timingsKey": "8afdc1612da9f9d7e11fc243295ea3703dc235cf3ce721b8ec24111668e7f9ba",
+      "duration": 25.82059
+    },
+    {
+      "chunkId": "s0004",
+      "type": "stable",
+      "sectionIdx": 2,
+      "sectionTitle": "The Frontal Lobe: Your Brain's Executive Suite",
+      "sectionStart": true,
+      "text": "The frontal lobes occupy the largest portion of the brain — about 1/3 of the entire brain. They house three critical areas that will come up repeatedly on the E triple P and in your clinical work.",
+      "audioKey": "9c8f8ce188d6f9de7ac371d49f89adbfe409cbd3e4c14ce7fd2dbedcbe019809",
+      "timingsKey": "9c8f8ce188d6f9de7ac371d49f89adbfe409cbd3e4c14ce7fd2dbedcbe019809",
+      "duration": 12.445896
+    },
+    {
+      "chunkId": "s0005",
+      "type": "stable",
+      "sectionIdx": 3,
+      "sectionTitle": "Broca's Area: The Speech Production Center",
+      "sectionStart": true,
+      "text": "Located in the dominant hemisphere (left side for most people), Broca's area is your language production hub. When it's damaged, you get Broca's aphasia. Also called expressive or nonfluent aphasia.\n\nHere's what's fascinating: people with Broca's aphasia can understand what you're saying. They know what they want to say. But getting the words out? That's the struggle. Their speech becomes slow and effortful, stripped down to mainly nouns and verbs.",
+      "audioKey": "208999c44dffd5962a299d99fc2041cf260db93b0712624b2199492f4883435a",
+      "timingsKey": "208999c44dffd5962a299d99fc2041cf260db93b0712624b2199492f4883435a",
+      "duration": 27.631746
+    },
+    {
+      "chunkId": "m0002",
+      "type": "metaphor",
+      "sectionIdx": 3,
+      "sectionTitle": "Broca's Area: The Speech Production Center",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "It's like knowing exactly what you want to text but your phone's keyboard only works for certain letters. You can communicate, but it takes forever and comes out choppy.",
+          "audioKey": "c759926682bb93d468cf51a291dbf3bc39c9750141b3d23a5b3201720ff66c36",
+          "timingsKey": "c759926682bb93d468cf51a291dbf3bc39c9750141b3d23a5b3201720ff66c36",
+          "duration": 9.148662
+        }
+      }
+    },
+    {
+      "chunkId": "s0006",
+      "type": "stable",
+      "sectionIdx": 3,
+      "sectionTitle": "Broca's Area: The Speech Production Center",
+      "sectionStart": false,
+      "text": "Key features of Broca's aphasia:\nSlow, labored speech\nMostly nouns and verbs (telegraphic speech)\nImpaired repetition\nAnomia (can't name familiar objects)\nComprehension relatively intact (this is the crucial distinction)",
+      "audioKey": "2d972c8dcd03694787f0cd5628ccfb0506428112c5e64f84df75c2533391f0ca",
+      "timingsKey": "2d972c8dcd03694787f0cd5628ccfb0506428112c5e64f84df75c2533391f0ca",
+      "duration": 16.486168
+    },
+    {
+      "chunkId": "s0007",
+      "type": "stable",
+      "sectionIdx": 4,
+      "sectionTitle": "The Prefrontal Cortex: Where Planning Meets Personality",
+      "sectionStart": true,
+      "text": "The prefrontal cortex (PFC) is where executive functions live. These are the higher-order processes that separate functional adults from people who need significant support: planning, decision-making, working memory, prospective memory (remembering to do things in the future), social judgment, and self-monitoring.\n\nThe PFC also regulates emotions, motivation, and personality expression.",
+      "audioKey": "4fc852db33340531cfc65098fe42f9ee7827f38bbb6ca5955b101e6e8cc727e7",
+      "timingsKey": "4fc852db33340531cfc65098fe42f9ee7827f38bbb6ca5955b101e6e8cc727e7",
+      "duration": 26.006349
+    },
+    {
+      "chunkId": "m0003",
+      "type": "metaphor",
+      "sectionIdx": 4,
+      "sectionTitle": "The Prefrontal Cortex: Where Planning Meets Personality",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "When someone says \"he's just not himself anymore\" after a brain injury, they're often describing prefrontal damage.",
+          "audioKey": "9289223991763aa463c616537a1bbaf6e55ed2e8c4224eaee1ef54c985f7b513",
+          "timingsKey": "9289223991763aa463c616537a1bbaf6e55ed2e8c4224eaee1ef54c985f7b513",
+          "duration": 7.244626
+        }
+      }
+    },
+    {
+      "chunkId": "s0008",
+      "type": "stable",
+      "sectionIdx": 4,
+      "sectionTitle": "The Prefrontal Cortex: Where Planning Meets Personality",
+      "sectionStart": false,
+      "text": "The PFC has four regions you need to know, and each one has distinct functions and associated disorders:\n\nDorsolateral Prefrontal Cortex (DLPFC)\n\nThis is your goal-directed behavior center. It handles most executive functions and working memory. That mental workspace where you hold and manipulate information.\n\nDamage causes:\nImpaired goal-directed behavior\nConcrete thinking (can't think abstractly)\nPoor judgment and insight\nWorking memory deficits\nPerseverative responses (getting stuck on the same answer or action)\nDisinterest and apathy\n\nAssociated disorders: Major depression, generalized anxiety disorder, OCD, schizophrenia\n\nVentrolateral Prefrontal Cortex (VLPFC)\n\nThe VLPFC handles decision-making, memory, motor inhibition, and emotion regulation.\n\nDamage causes:\nImpaired decision-making\nPoor behavioral self-control\nPoor emotional self-control\n\nAssociated disorders: Social anxiety disorder, generalized anxiety disorder\n\nVentromedial Prefrontal Cortex (VMPFC)\n\nThis region is crucial for social cognition and emotion regulation. When you read someone's facial expression or feel empathy, this area is involved.\n\nDamage causes:\nImpaired decision-making\nImpaired moral judgment\nLack of insight\nConfabulation (making up stories to fill memory gaps without realizing it)\nDeficits in social cognition (can't read facial emotions, reduced empathy)\nBlunted emotional responses\n\nAssociated disorders: Major depression, OCD, generalized anxiety disorder, PTSD, schizophrenia\n\nOrbitofrontal Cortex (OFC)\n\nThe OFC manages emotion regulation, response inhibition, and social behaviors.",
+      "audioKey": "85cfcad90f807614ad57cc3cac68b7604427c728d7ef208d6683c33ea865344a",
+      "timingsKey": "85cfcad90f807614ad57cc3cac68b7604427c728d7ef208d6683c33ea865344a",
+      "duration": 129.195828
+    },
+    {
+      "chunkId": "m0004",
+      "type": "metaphor",
+      "sectionIdx": 4,
+      "sectionTitle": "The Prefrontal Cortex: Where Planning Meets Personality",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "It's like your internal social filter, the thing that stops you from saying every thought that pops into your head during a family dinner.",
+          "audioKey": "3780f6e15daf7355071a405ce4f8b6c9bc16baa528be9e9c5617298899c66f48",
+          "timingsKey": "3780f6e15daf7355071a405ce4f8b6c9bc16baa528be9e9c5617298899c66f48",
+          "duration": 7.383946
+        }
+      }
+    },
+    {
+      "chunkId": "s0009",
+      "type": "stable",
+      "sectionIdx": 4,
+      "sectionTitle": "The Prefrontal Cortex: Where Planning Meets Personality",
+      "sectionStart": false,
+      "text": "Damage causes:\nImpulsivity\nSocial inappropriateness (immature behavior, inappropriate jocularity, oversharing)\nLack of empathy\nAggressive or abusive behaviors\nEmotion dysregulation\n\nAssociated disorders: Major depression, bipolar disorder, OCD, PTSD, schizophrenia, substance use disorders",
+      "audioKey": "f5facaf45ab74c47f2cd3ba1d5eea5ebe3032e205232e27beb90a4f150b6a81a",
+      "timingsKey": "f5facaf45ab74c47f2cd3ba1d5eea5ebe3032e205232e27beb90a4f150b6a81a",
+      "duration": 24.566712
+    },
+    {
+      "chunkId": "s0010",
+      "type": "stable",
+      "sectionIdx": 5,
+      "sectionTitle": "Primary Motor Cortex: Initiating Movement",
+      "sectionStart": true,
+      "text": "This area initiates purposeful movements. Interestingly, it's active not just when you move, but when you imagine moving or watch someone else move. Crucial for learning new skills and for mirror neuron activity.\n\nDamage produces weakness to paralysis on the opposite side (contralateral) of the body. The specific effects depend on which part is damaged and how extensive the damage is.",
+      "audioKey": "1e4d8e31e47e87a583b571ea1035f57789f115c32a39d339a091349c7c7f2caa",
+      "timingsKey": "1e4d8e31e47e87a583b571ea1035f57789f115c32a39d339a091349c7c7f2caa",
+      "duration": 25.82059
+    },
+    {
+      "chunkId": "s0011",
+      "type": "stable",
+      "sectionIdx": 6,
+      "sectionTitle": "The Temporal Lobe: Processing Sound and Understanding Language",
+      "sectionStart": true,
+      "text": "The temporal lobes sit on the sides of your brain, roughly near your temples. They handle auditory processing and language comprehension. Importantly, the temporal lobes rest on top of and connect to the limbic system (amygdala, hippocampus), which is why they're also involved in emotional behavior and memory.",
+      "audioKey": "d34ba4afc435982a5502fb70fdb3d1b859e3860742418ee0b85e699b013fe18c",
+      "timingsKey": "d34ba4afc435982a5502fb70fdb3d1b859e3860742418ee0b85e699b013fe18c",
+      "duration": 18.436644
+    },
+    {
+      "chunkId": "s0012",
+      "type": "stable",
+      "sectionIdx": 7,
+      "sectionTitle": "The Auditory Cortex",
+      "sectionStart": true,
+      "text": "This processes sound. Damage can cause:\nAuditory agnosia (hearing sounds but not recognizing what they are)\nAuditory hallucinations\nCortical deafness (the ears work fine, but the brain can't process the signals)",
+      "audioKey": "dd34cbd38e3ca151ea56b593acbab7ecba95303d35bdce3ea7cd156086c09f6a",
+      "timingsKey": "dd34cbd38e3ca151ea56b593acbab7ecba95303d35bdce3ea7cd156086c09f6a",
+      "duration": 17.507846
+    },
+    {
+      "chunkId": "s0013",
+      "type": "stable",
+      "sectionIdx": 8,
+      "sectionTitle": "Wernicke's Area: Understanding Language",
+      "sectionStart": true,
+      "text": "Located in the dominant hemisphere (usually left), Wernicke's area is where language comprehension happens. Damage produces Wernicke's aphasia. Also called receptive or fluent aphasia.\n\nThis is the opposite pattern from Broca's aphasia. People with Wernicke's aphasia speak fluently, the words flow easily. The problem? Nothing they say makes sense, and they can't understand what others are saying.\n\nKey features of Wernicke's aphasia:\nFluent but meaningless speech\nMany word substitutions and errors\nImpaired comprehension (spoken and written)\nImpaired repetition\nAnomia\nOften unaware of their deficits",
+      "audioKey": "8aa27ea26171196a64433c62ef7d33cb95f5ed77b6b28a3bd97639d8257f30fb",
+      "timingsKey": "8aa27ea26171196a64433c62ef7d33cb95f5ed77b6b28a3bd97639d8257f30fb",
+      "duration": 43.467755
+    },
+    {
+      "chunkId": "m0005",
+      "type": "metaphor",
+      "sectionIdx": 8,
+      "sectionTitle": "Wernicke's Area: Understanding Language",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "If Broca's aphasia is like having a broken keyboard, Wernicke's aphasia is like autocorrect gone wild, the words come out easily but they're completely wrong, and you don't realize it.",
+          "audioKey": "6dcf55dacac5ec77637f1c730d3ddf6ce83468e7ac713315c11422315826a4a0",
+          "timingsKey": "6dcf55dacac5ec77637f1c730d3ddf6ce83468e7ac713315c11422315826a4a0",
+          "duration": 11.192018
+        }
+      }
+    },
+    {
+      "chunkId": "s0014",
+      "type": "stable",
+      "sectionIdx": 9,
+      "sectionTitle": "Bonus Connection: Conduction Aphasia",
+      "sectionStart": true,
+      "text": "The arcuate fasciculus connects Wernicke's area to Broca's area.",
+      "audioKey": "edcf80e9fe5b92adabd52b3ab7f1a16e2aa46a0b66c8764ede25125e48c995b7",
+      "timingsKey": "edcf80e9fe5b92adabd52b3ab7f1a16e2aa46a0b66c8764ede25125e48c995b7",
+      "duration": 3.668753
+    },
+    {
+      "chunkId": "m0006",
+      "type": "metaphor",
+      "sectionIdx": 9,
+      "sectionTitle": "Bonus Connection: Conduction Aphasia",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "It's the communication highway between understanding and producing language.",
+          "audioKey": "e9e7a50a96afae07f5e8d551d0e5aa67facb23b466d7d8e00f53eb633566a0e6",
+          "timingsKey": "e9e7a50a96afae07f5e8d551d0e5aa67facb23b466d7d8e00f53eb633566a0e6",
+          "duration": 4.365351
+        }
+      }
+    },
+    {
+      "chunkId": "s0015",
+      "type": "stable",
+      "sectionIdx": 9,
+      "sectionTitle": "Bonus Connection: Conduction Aphasia",
+      "sectionStart": false,
+      "text": "When it's damaged, you get conduction aphasia:\nRelatively intact comprehension (Wernicke's area still works)\nFluent speech with many errors (Broca's area still works)\nSeverely impaired repetition (the connection is broken)\nAnomia",
+      "audioKey": "574878558a8e84bcfd8bcf01e8fc0c1147e41d025893d4ef0eff876ee8a8cef6",
+      "timingsKey": "574878558a8e84bcfd8bcf01e8fc0c1147e41d025893d4ef0eff876ee8a8cef6",
+      "duration": 16.904127
+    },
+    {
+      "chunkId": "s0016",
+      "type": "stable",
+      "sectionIdx": 10,
+      "sectionTitle": "Other Aphasia Types to Know",
+      "sectionStart": true,
+      "text": "Global Aphasia: Results from widespread damage to language regions. Most language functions are impaired — both production and comprehension are severely affected. This is the most severe form.\n\nAnomic Aphasia: Problems recalling words or names. The person speaks in a roundabout way (circumlocution) — describing things instead of naming them. For example, instead of saying \"watch,\" they might say \"the thing you use to tell time.\" Results from parietal or temporal lobe damage.\n\nTranscortical Aphasias: Three types that are similar to Broca's, Wernicke's, and global aphasia, EXCEPT that the ability to repeat words/phrases remains intact. Example: In transcortical motor aphasia, the person can't spontaneously say \"I am thirsty\" but CAN repeat \"I am thirsty\" when asked.",
+      "audioKey": "d5de169204a628c8c84d38e11fdc8501763afb62adf203da66426f2e3eec277d",
+      "timingsKey": "d5de169204a628c8c84d38e11fdc8501763afb62adf203da66426f2e3eec277d",
+      "duration": 54.891973
+    },
+    {
+      "chunkId": "s0017",
+      "type": "stable",
+      "sectionIdx": 11,
+      "sectionTitle": "TBI-Related Syndromes",
+      "sectionStart": true,
+      "text": "Traumatic brain injury frequently damages the frontal or temporal lobes:\n\nFrontal lobe syndrome: Lack of foresight and concern, executive functioning problems, irresponsibility, loss of insight.",
+      "audioKey": "592d4559c3a942dd7b7e48ebc8b5b9ca23c3ba19af9a5b70a7b6a56cd149346b",
+      "timingsKey": "592d4559c3a942dd7b7e48ebc8b5b9ca23c3ba19af9a5b70a7b6a56cd149346b",
+      "duration": 12.399456
+    },
+    {
+      "chunkId": "m0007",
+      "type": "metaphor",
+      "sectionIdx": 11,
+      "sectionTitle": "TBI-Related Syndromes",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "This is why family members often say \"he's just not himself anymore\" after a frontal TBI.",
+          "audioKey": "2dba7ccb79afe8b045b46adb53e0b6bc0da35bb272c55f37bfdb68623c1dbd06",
+          "timingsKey": "2dba7ccb79afe8b045b46adb53e0b6bc0da35bb272c55f37bfdb68623c1dbd06",
+          "duration": 5.479909
+        }
+      }
+    },
+    {
+      "chunkId": "s0018",
+      "type": "stable",
+      "sectionIdx": 11,
+      "sectionTitle": "TBI-Related Syndromes",
+      "sectionStart": false,
+      "text": "Temporal lobe syndrome: Irritability and hostility.",
+      "audioKey": "e223d7a88b4c59642ff2b3b029d14e6c5c8bc6610136bb4695c6ea689f2e183d",
+      "timingsKey": "e223d7a88b4c59642ff2b3b029d14e6c5c8bc6610136bb4695c6ea689f2e183d",
+      "duration": 3.343673
+    },
+    {
+      "chunkId": "s0019",
+      "type": "stable",
+      "sectionIdx": 12,
+      "sectionTitle": "The Parietal Lobe: Touch, Body Awareness, and Skilled Movement",
+      "sectionStart": true,
+      "text": "The parietal lobe sits at the top-back of your brain and contains the somatosensory cortex, which processes touch, pressure, temperature, pain, and body position.",
+      "audioKey": "07bf3c38fe886629e4fdf12e63e471b57ae05ef40e56bb9b16893d71e7794e14",
+      "timingsKey": "07bf3c38fe886629e4fdf12e63e471b57ae05ef40e56bb9b16893d71e7794e14",
+      "duration": 10.588299
+    },
+    {
+      "chunkId": "s0020",
+      "type": "stable",
+      "sectionIdx": 13,
+      "sectionTitle": "Somatosensory Agnosias",
+      "sectionStart": true,
+      "text": "Damage can produce various types of agnosia (inability to recognize despite intact sensory function):\nTactile agnosia: Can't recognize objects by touch\nAsomatognosia: Lacks interest in or doesn't recognize parts of their own body\nAnosognosia: Denies their illness (a patient with paralyzed left arm insists it works fine)",
+      "audioKey": "346273100b3fcc1f4627891187828c2de7dcfe6b839f1f77c7452c20db806ff5",
+      "timingsKey": "346273100b3fcc1f4627891187828c2de7dcfe6b839f1f77c7452c20db806ff5",
+      "duration": 25.77415
+    },
+    {
+      "chunkId": "s0021",
+      "type": "stable",
+      "sectionIdx": 14,
+      "sectionTitle": "Apraxias: When Movement Planning Breaks Down",
+      "sectionStart": true,
+      "text": "Apraxia is the inability to perform purposeful, skilled movements despite having the physical ability to move.",
+      "audioKey": "285a6de21bf5f9c97fd9541560fa768331090ccd7183f9fe8f7f62cf58714bbe",
+      "timingsKey": "285a6de21bf5f9c97fd9541560fa768331090ccd7183f9fe8f7f62cf58714bbe",
+      "duration": 7.012426
+    },
+    {
+      "chunkId": "m0008",
+      "type": "metaphor",
+      "sectionIdx": 14,
+      "sectionTitle": "Apraxias: When Movement Planning Breaks Down",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "Imagine you're trying to follow a dance tutorial (your body works perfectly, but somehow you can't translate the steps you see into movements you make.",
+          "audioKey": "53682d9f7af5a2d963a935b4232cc563f8f7b992a2fef4802f8a62e9e90a931f",
+          "timingsKey": "53682d9f7af5a2d963a935b4232cc563f8f7b992a2fef4802f8a62e9e90a931f",
+          "duration": 8.498503
+        }
+      }
+    },
+    {
+      "chunkId": "s0022",
+      "type": "stable",
+      "sectionIdx": 14,
+      "sectionTitle": "Apraxias: When Movement Planning Breaks Down",
+      "sectionStart": false,
+      "text": "It's not a motor problem, sensory problem, or language problem) it's a planning and execution problem.\n\nThree types typically result from left (dominant) parietal damage:\nType, Description, ExampleLimb-kinetic, Can't make precise, coordinated movements with fingers, hands, arms, or legs, Can't perform fine motor tasks like buttoning a shirt\nIdeomotor, Can't imitate movements or perform them on command, Can't pretend to comb hair when asked, even though they can do it spontaneously\nIdeational, Can't plan and execute sequential tasks, Can't complete the steps needed to make a sandwich in the right order",
+      "audioKey": "5e1ec185c5e8a96495f74c925d9354e56f9f3c4ef8aef0d676f5be99b6edfbf3",
+      "timingsKey": "5e1ec185c5e8a96495f74c925d9354e56f9f3c4ef8aef0d676f5be99b6edfbf3",
+      "duration": 41.656599
+    },
+    {
+      "chunkId": "s0023",
+      "type": "stable",
+      "sectionIdx": 15,
+      "sectionTitle": "Contralateral Neglect",
+      "sectionStart": true,
+      "text": "Also called unilateral or hemispatial neglect, this typically results from right (nondominant) parietal damage. Patients neglect the left side of their body and stimuli on their left side. They might only eat food from the right side of their plate, only shave the right side of their face, or only draw the right half of a clock.",
+      "audioKey": "5ae1eb7e49e332921364ed31afd0e67601cdf7c346800b545ac3fe8f438bb979",
+      "timingsKey": "5ae1eb7e49e332921364ed31afd0e67601cdf7c346800b545ac3fe8f438bb979",
+      "duration": 19.922721
+    },
+    {
+      "chunkId": "m0009",
+      "type": "metaphor",
+      "sectionIdx": 15,
+      "sectionTitle": "Contralateral Neglect",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "It's not that they can't see the left side. It's more like that entire side of space has been deleted from their awareness.",
+          "audioKey": "ecdfff36fa012a2ae34e2d60f09baf8f1079436007e74ef9b4d67f5144ce58db",
+          "timingsKey": "ecdfff36fa012a2ae34e2d60f09baf8f1079436007e74ef9b4d67f5144ce58db",
+          "duration": 6.965986
+        }
+      }
+    },
+    {
+      "chunkId": "s0024",
+      "type": "stable",
+      "sectionIdx": 16,
+      "sectionTitle": "Gerstmann's Syndrome",
+      "sectionStart": true,
+      "text": "This specific syndrome results from left (dominant) parietal damage and involves four symptoms (memorize this quartet):\nRight-left disorientation\nFinger agnosia (can't identify their own fingers)\nAgraphia (loss of writing skills)\nAcalculia (loss of arithmetic skills)",
+      "audioKey": "bd086afef5b40b6f18042a6cc7b5b0a9100e0862899fdeeb2092257ff6ade7e5",
+      "timingsKey": "bd086afef5b40b6f18042a6cc7b5b0a9100e0862899fdeeb2092257ff6ade7e5",
+      "duration": 19.829841
+    },
+    {
+      "chunkId": "s0025",
+      "type": "stable",
+      "sectionIdx": 17,
+      "sectionTitle": "The Occipital Lobe: Your Visual Processing Center",
+      "sectionStart": true,
+      "text": "The occipital lobe, at the very back of your brain, contains the visual cortex. All visual information ends up here for processing.",
+      "audioKey": "9278399fedb086e3fd3a8b5eeb36d4844c8a272a5f8931be6c723e34920bb03c",
+      "timingsKey": "9278399fedb086e3fd3a8b5eeb36d4844c8a272a5f8931be6c723e34920bb03c",
+      "duration": 7.430385
+    },
+    {
+      "chunkId": "s0026",
+      "type": "stable",
+      "sectionIdx": 18,
+      "sectionTitle": "Visual Problems from Occipital Damage",
+      "sectionStart": true,
+      "text": "Damage can cause:\nVisual agnosia (seeing but not recognizing what you're looking at)\nVisual hallucinations\nAchromatopsia (loss of color vision, seeing only in grayscale)\nCortical blindness",
+      "audioKey": "8c5c81d4e8afd3abcfaf0f516dcaa934b589a07d1ac52d80080d5afaa32cfe81",
+      "timingsKey": "8c5c81d4e8afd3abcfaf0f516dcaa934b589a07d1ac52d80080d5afaa32cfe81",
+      "duration": 14.257052
+    },
+    {
+      "chunkId": "s0027",
+      "type": "stable",
+      "sectionIdx": 19,
+      "sectionTitle": "Cortical Blindness and the Curious Case of Blindsight",
+      "sectionStart": true,
+      "text": "Cortical blindness occurs when the primary visual cortex is damaged but the eyes and optic nerves work perfectly. The camera works fine, but the screen is broken. Damage to the left visual cortex causes blindness in the right visual field, and vice versa.\n\nHere's where it gets weird: some people with cortical blindness exhibit blindsight. They insist they can't see something, but they respond appropriately to it anyway. They'll reach for objects they claim they can't see, or navigate around obstacles they say aren't there.\n\nAffective blindsight is even stranger: patients can't consciously see emotional faces shown to them, but they guess correctly (better than chance) whether the face was happy or angry.",
+      "audioKey": "22900bae06fd648cb561a0015c3d471295421af761d019392b6c2009ef2ee6d2",
+      "timingsKey": "22900bae06fd648cb561a0015c3d471295421af761d019392b6c2009ef2ee6d2",
+      "duration": 46.625669
+    },
+    {
+      "chunkId": "m0010",
+      "type": "metaphor",
+      "sectionIdx": 19,
+      "sectionTitle": "Cortical Blindness and the Curious Case of Blindsight",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "It's like your brain is processing information on a backstage level while your conscious mind insists the show never started.",
+          "audioKey": "f99984dcfea54b244bbf23349be3b50d7c5f86c777819b63c515dbb3888ca550",
+          "timingsKey": "f99984dcfea54b244bbf23349be3b50d7c5f86c777819b63c515dbb3888ca550",
+          "duration": 7.430385
+        }
+      }
+    },
+    {
+      "chunkId": "s0028",
+      "type": "stable",
+      "sectionIdx": 20,
+      "sectionTitle": "Prosopagnosia: Face Blindness",
+      "sectionStart": true,
+      "text": "Bilateral lesions in the occipitotemporal junction (where occipital and temporal lobes meet) can cause prosopagnosia, the inability to recognize familiar faces. In severe cases, people can't recognize their own face in photos, their spouse's face, or even their pet's face. They recognize people by other cues: voice, gait, clothing, context.",
+      "audioKey": "279d82a965aa57ca4dec80f4bf63a76cb467c2a312134c108dd97f4c635ae914",
+      "timingsKey": "279d82a965aa57ca4dec80f4bf63a76cb467c2a312134c108dd97f4c635ae914",
+      "duration": 24.752472
+    },
+    {
+      "chunkId": "m0011",
+      "type": "metaphor",
+      "sectionIdx": 20,
+      "sectionTitle": "Prosopagnosia: Face Blindness",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "Imagine running into your best friend at the grocery store but having no idea who they are until they speak. That's the daily reality for someone with prosopagnosia.",
+          "audioKey": "6782feb026d49cbf0d11b18b84af02b1f55732943777f44ea6f66d3d5eeb264a",
+          "timingsKey": "6782feb026d49cbf0d11b18b84af02b1f55732943777f44ea6f66d3d5eeb264a",
+          "duration": 9.427302
+        }
+      }
+    },
+    {
+      "chunkId": "s0029",
+      "type": "stable",
+      "sectionIdx": 21,
+      "sectionTitle": "Brain Lateralization: Left Brain, Right Brain, and Why It Matters",
+      "sectionStart": true,
+      "text": "While both hemispheres work together on most tasks, each is dominant for certain functions. For about 95% of right-handed people and 50-70% of left-handed people, here's the general pattern:\n\nLeft Hemisphere (Dominant for most people):\nWritten and spoken language\nLogical and analytical thinking\nPositive emotions\nControls right side of body\n\nRight Hemisphere (Nondominant for most people):\nHolistic thinking\nIntuition\nSpatial relationships\nCreativity\nNegative emotions\nThe emotional \"music\" of speech (prosody)\nUnderstanding social context in language (pragmatics) — humor, sarcasm, hyperbole\nControls left side of body\n\nException alert: Smell is different. Odors entering the left nostril go directly to the left hemisphere, and vice versa. Everything else crosses over.",
+      "audioKey": "e58d1e252a233c92a7324abfc24ac823d3cd005ba80bf0befaec8eb64e60ce6d",
+      "timingsKey": "e58d1e252a233c92a7324abfc24ac823d3cd005ba80bf0befaec8eb64e60ce6d",
+      "duration": 62.554558
+    },
+    {
+      "chunkId": "s0030",
+      "type": "stable",
+      "sectionIdx": 22,
+      "sectionTitle": "Split-Brain Research: How We Learned About Lateralization",
+      "sectionStart": true,
+      "text": "Much of what we know comes from Sperry's work with split-brain patients. People whose corpus callosums (the bridge connecting the two hemispheres) were surgically severed to treat severe epilepsy.\n\nIn one classic experiment: When researchers showed a picture of a spoon to the right visual field (processed by the left hemisphere), patients could:\nSay \"spoon\" (language is left hemisphere)\nPick out a spoon with their right hand by touch (left hemisphere controls right hand)\nBut NOT pick it out with their left hand (left hand is controlled by the right hemisphere, which didn't see the spoon)\n\nWhen they showed the spoon to the left visual field (processed by the right hemisphere), patients:\nCould NOT say \"spoon\" (right hemisphere has limited language)\nCould pick it out with their left hand by touch (right hemisphere controls left hand)\nBut NOT with their right hand",
+      "audioKey": "3b56be1d5c4e9e35012c2449c4375210ad7231c12bc32049194048fa3e35d349",
+      "timingsKey": "3b56be1d5c4e9e35012c2449c4375210ad7231c12bc32049194048fa3e35d349",
+      "duration": 51.3161
+    },
+    {
+      "chunkId": "m0012",
+      "type": "metaphor",
+      "sectionIdx": 22,
+      "sectionTitle": "Split-Brain Research: How We Learned About Lateralization",
+      "sectionStart": false,
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "text": "It's like having two people sharing one body, each with access to different information and skills.",
+          "audioKey": "4e6c7c7b7b15db4d9394500be62168c3c29ce9bd9422e2493ba4415d43c1396e",
+          "timingsKey": "4e6c7c7b7b15db4d9394500be62168c3c29ce9bd9422e2493ba4415d43c1396e",
+          "duration": 5.387029
+        }
+      }
+    },
+    {
+      "chunkId": "s0031",
+      "type": "stable",
+      "sectionIdx": 22,
+      "sectionTitle": "Split-Brain Research: How We Learned About Lateralization",
+      "sectionStart": false,
+      "text": "The Classic \"HEART\" Experiment: The word HEART was flashed so that \"HE\" appeared in the left visual field (processed by right hemisphere) and \"ART\" appeared in the right visual field (processed by left hemisphere). Patients could only SAY \"ART\" (left hemisphere controls language) but could POINT to \"HE\" with their left hand (controlled by right hemisphere). This dramatically demonstrates how the two hemispheres process information independently when the corpus callosum is severed.",
+      "audioKey": "da03ec683c537d4a1839eef2e8e83aeb4fd920827eafd6e25bbfc1d011d85a6b",
+      "timingsKey": "da03ec683c537d4a1839eef2e8e83aeb4fd920827eafd6e25bbfc1d011d85a6b",
+      "duration": 29.907302
+    },
+    {
+      "chunkId": "s0032",
+      "type": "stable",
+      "sectionIdx": 23,
+      "sectionTitle": "The Dichotic Listening Task",
+      "sectionStart": true,
+      "text": "This technique confirms speech lateralization. Two different words are presented simultaneously, one to each ear. Most right-handed people repeat the word from their right ear, which sends signals directly to the left auditory cortex (where language processing happens).",
+      "audioKey": "736123def0a2878d7eede76c11c986329ac467eb1d952b34f60c4ea576e6900d",
+      "timingsKey": "736123def0a2878d7eede76c11c986329ac467eb1d952b34f60c4ea576e6900d",
+      "duration": 16.532608
+    },
+    {
+      "chunkId": "s0033",
+      "type": "stable",
+      "sectionIdx": 24,
+      "sectionTitle": "Common Misconceptions to Avoid",
+      "sectionStart": true,
+      "text": "Misconception 1: \"Broca's aphasia means they can't talk, and Wernicke's means they can't understand.\"\n\nReality: Broca's aphasia means slow, effortful speech with relatively intact comprehension. Wernicke's aphasia means fluent but meaningless speech with impaired comprehension.\n\nMisconception 2: \"Left brain people are logical; right brain people are creative.\"\n\nReality: While lateralization exists, both hemispheres are involved in most complex tasks. The \"left brain/right brain personality\" pop psychology oversimplifies actual neuroscience.\n\nMisconception 3: \"Agnosia means sensory loss.\"\n\nReality: Agnosia occurs with intact sensory function. The sensory information gets through; the problem is recognition or awareness. A person with visual agnosia can see perfectly. They just can't recognize what they're looking at.\n\nMisconception 4: \"Prefrontal cortex damage always causes obvious problems.\"\n\nReality: Some prefrontal damage can be subtle. A person might seem fine in casual conversation but struggle with complex planning, show poor judgment in real-world situations, or have difficulty regulating emotions under stress.",
+      "audioKey": "c52df90f896a7cf2d0f9cdd7ab245865570bd82f383b3236daba79da3aced099",
+      "timingsKey": "c52df90f896a7cf2d0f9cdd7ab245865570bd82f383b3236daba79da3aced099",
+      "duration": 82.245079
+    },
+    {
+      "chunkId": "s0034",
+      "type": "stable",
+      "sectionIdx": 25,
+      "sectionTitle": "Practice Tips for Remembering",
+      "sectionStart": true,
+      "text": "Quick Location Mnemonics:\nTemporal lobes are around your temples (above your ears) — so they handle hearing!\nBroca = Broken — broken, choppy speech\n\nFor the Aphasias:\nCreate a simple comparison table and review it regularly:\nFeature, Broca's Aphasia, Wernicke's AphasiaSpeech production, Impaired (slow, effortful), Fluent but meaningless\nComprehension, Relatively intact, Impaired\nRepetition, Impaired, Impaired\nAnomia, Present, Present\nLocation, Frontal lobe, Temporal lobe\nFor the PFC Regions:\nUse the acronym DOLL VINE VOTE OUT to remember the four areas and their general functions:\nDOrsolateral: Logic, working memory\nVentrolateral: Inhibition, Negotiating emotions\nVentromedial: Others' emotions (social cognition), Thinking morally, Emotion\nOrbitofrontal: social filter, stop UTtering inappropriate things\n\nFor Gerstmann's Syndrome:\nRemember the phrase \"RAFF\" (like a drawing raffle):\nRight-left disorientation\nAgraphia\nFinger agnosia\nFinger counting problems (acalculia)\n\nFor Lateralization:\nRemember: \"Left is Language and Logic\" (three L's). Everything else creative, spatial, and emotional tends right.\n\nFor Motor/Sensory Control:\n\"Cross your heart\". Motor and sensory information crosses to the opposite side (except smell).",
+      "audioKey": "68269fcc99b9804460a5a529d039e15ccc442856f869a0fd6053ebf5f97a7c85",
+      "timingsKey": "68269fcc99b9804460a5a529d039e15ccc442856f869a0fd6053ebf5f97a7c85",
+      "duration": 107.41551
+    },
+    {
+      "chunkId": "s0035",
+      "type": "stable",
+      "sectionIdx": 26,
+      "sectionTitle": "Key Takeaways",
+      "sectionStart": true,
+      "text": "Four lobes, four jobs: Frontal (executive functions, movement, speech production), Temporal (hearing, language comprehension), Parietal (touch, body awareness, skilled movement), Occipital (vision)\nBroca's vs. Wernicke's: Broca's = can't speak fluently but understands; Wernicke's = speaks fluently but doesn't understand\nPrefrontal cortex has four regions: Dorsolateral (goal-directed behavior, working memory), Ventrolateral (inhibition, emotion regulation), Ventromedial (social cognition, moral judgment), Orbitofrontal (social appropriateness, impulse control)\nApraxia isn't paralysis: It's a planning/execution problem with intact motor function (limb-kinetic, ideomotor, ideational)\nGerstmann's syndrome quartet: Right-left confusion, finger agnosia, agraphia, acalculia (left parietal damage)\nContralateral neglect: Usually right parietal damage causing neglect of the left side\nProsopagnosia: Face blindness from occipitotemporal junction damage\nCortical blindness can include blindsight: Responding to visual stimuli without conscious awareness\nLateralization is real but complex: Left hemisphere dominant for language in most people; right hemisphere handles emotional prosody and pragmatics\nSplit-brain research revealed lateralization: Each hemisphere has specialized functions that become apparent when they can't communicate\n\nUnderstanding these brain regions and their functions isn't just academic. It's foundational for recognizing neurological contributions to psychological symptoms, making appropriate referrals, and understanding client limitations. When someone struggles with emotion regulation, can't recognize faces, or speaks fluently but makes no sense, you'll know what might be happening neurologically and can respond appropriately.",
+      "audioKey": "153d584c303cda5d6fbcaa90eb84239ea70868a9b051f17fc0cfe5eb4990b72e",
+      "timingsKey": "153d584c303cda5d6fbcaa90eb84239ea70868a9b051f17fc0cfe5eb4990b72e",
+      "duration": 127.013152
+    }
+  ],
+  "totalDuration": 1314.481633
+}

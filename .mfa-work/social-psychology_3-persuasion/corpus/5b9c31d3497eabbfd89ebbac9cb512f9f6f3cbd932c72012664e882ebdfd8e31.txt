@@ -1,0 +1,1 @@
+Consider a coin flip bet: lose $one hundred on tails, gain $one hundred on heads. Most people reject this, even though it's mathematically neutral. Why? Because the potential loss of $one hundred feels worse than the potential gain of $one hundred feels good. But if the bet changes to lose $one hundred on tails, gain $two hundred on heads, people become much more interested.

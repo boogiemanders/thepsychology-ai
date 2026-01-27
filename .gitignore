@@ -162,3 +162,5 @@ recover-pdfs/
 
 # Pre-generated Topic Teacher audio (stored in R2 for production)
 public/topic-teacher-audio/
+.vercel
+.env*.local

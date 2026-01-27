@@ -1,0 +1,442 @@
+{
+  "words": [
+    {
+      "word": "apraxia",
+      "start": 0.09,
+      "end": 0.83
+    },
+    {
+      "word": "is",
+      "start": 0.83,
+      "end": 0.96
+    },
+    {
+      "word": "the",
+      "start": 0.96,
+      "end": 1.1
+    },
+    {
+      "word": "inability",
+      "start": 1.13,
+      "end": 1.73
+    },
+    {
+      "word": "to",
+      "start": 1.77,
+      "end": 1.83
+    },
+    {
+      "word": "perform",
+      "start": 1.83,
+      "end": 2.3
+    },
+    {
+      "word": "purposeful",
+      "start": 2.3,
+      "end": 2.94
+    },
+    {
+      "word": "skilled",
+      "start": 2.94,
+      "end": 3.41
+    },
+    {
+      "word": "movements",
+      "start": 3.41,
+      "end": 3.97
+    },
+    {
+      "word": "despite",
+      "start": 4.31,
+      "end": 4.76
+    },
+    {
+      "word": "having",
+      "start": 4.76,
+      "end": 5.07
+    },
+    {
+      "word": "the",
+      "start": 5.07,
+      "end": 5.14
+    },
+    {
+      "word": "physical",
+      "start": 5.23,
+      "end": 5.63
+    },
+    {
+      "word": "ability",
+      "start": 5.63,
+      "end": 6.19
+    },
+    {
+      "word": "to",
+      "start": 6.19,
+      "end": 6.22
+    },
+    {
+      "word": "move",
+      "start": 6.22,
+      "end": 6.68
+    }
+  ],
+  "phones": [
+    {
+      "phone": "i",
+      "start": 0.83,
+      "end": 0.88
+    },
+    {
+      "phone": "z",
+      "start": 0.88,
+      "end": 0.96
+    },
+    {
+      "phone": "ð",
+      "start": 0.96,
+      "end": 1
+    },
+    {
+      "phone": "a",
+      "start": 1,
+      "end": 1.1
+    },
+    {
+      "phone": "i",
+      "start": 1.13,
+      "end": 1.22
+    },
+    {
+      "phone": "n",
+      "start": 1.22,
+      "end": 1.28
+    },
+    {
+      "phone": "a",
+      "start": 1.28,
+      "end": 1.33
+    },
+    {
+      "phone": "bʲ",
+      "start": 1.33,
+      "end": 1.41
+    },
+    {
+      "phone": "i",
+      "start": 1.41,
+      "end": 1.48
+    },
+    {
+      "phone": "ʎ",
+      "start": 1.48,
+      "end": 1.58
+    },
+    {
+      "phone": "i",
+      "start": 1.58,
+      "end": 1.62
+    },
+    {
+      "phone": "tʲ",
+      "start": 1.62,
+      "end": 1.65
+    },
+    {
+      "phone": "i",
+      "start": 1.65,
+      "end": 1.73
+    },
+    {
+      "phone": "ə",
+      "start": 1.77,
+      "end": 1.83
+    },
+    {
+      "phone": "p",
+      "start": 1.83,
+      "end": 1.89
+    },
+    {
+      "phone": "ə",
+      "start": 1.89,
+      "end": 1.95
+    },
+    {
+      "phone": "f",
+      "start": 1.95,
+      "end": 2.07
+    },
+    {
+      "phone": "ɒː",
+      "start": 2.07,
+      "end": 2.22
+    },
+    {
+      "phone": "m",
+      "start": 2.22,
+      "end": 2.3
+    },
+    {
+      "phone": "pʰ",
+      "start": 2.3,
+      "end": 2.42
+    },
+    {
+      "phone": "aː",
+      "start": 2.42,
+      "end": 2.51
+    },
+    {
+      "phone": "p",
+      "start": 2.51,
+      "end": 2.58
+    },
+    {
+      "phone": "ɔ",
+      "start": 2.58,
+      "end": 2.63
+    },
+    {
+      "phone": "s",
+      "start": 2.63,
+      "end": 2.73
+    },
+    {
+      "phone": "f",
+      "start": 2.73,
+      "end": 2.79
+    },
+    {
+      "phone": "ʊ",
+      "start": 2.79,
+      "end": 2.81
+    },
+    {
+      "phone": "ɫ",
+      "start": 2.81,
+      "end": 2.94
+    },
+    {
+      "phone": "s",
+      "start": 2.94,
+      "end": 3.08
+    },
+    {
+      "phone": "c",
+      "start": 3.08,
+      "end": 3.14
+    },
+    {
+      "phone": "i",
+      "start": 3.14,
+      "end": 3.21
+    },
+    {
+      "phone": "ɫ",
+      "start": 3.21,
+      "end": 3.35
+    },
+    {
+      "phone": "d",
+      "start": 3.35,
+      "end": 3.41
+    },
+    {
+      "phone": "m",
+      "start": 3.41,
+      "end": 3.49
+    },
+    {
+      "phone": "ʉː",
+      "start": 3.49,
+      "end": 3.6
+    },
+    {
+      "phone": "v",
+      "start": 3.6,
+      "end": 3.66
+    },
+    {
+      "phone": "m",
+      "start": 3.66,
+      "end": 3.72
+    },
+    {
+      "phone": "ə",
+      "start": 3.72,
+      "end": 3.8
+    },
+    {
+      "phone": "n",
+      "start": 3.8,
+      "end": 3.84
+    },
+    {
+      "phone": "t",
+      "start": 3.84,
+      "end": 3.88
+    },
+    {
+      "phone": "s",
+      "start": 3.88,
+      "end": 3.97
+    },
+    {
+      "phone": "d",
+      "start": 4.31,
+      "end": 4.39
+    },
+    {
+      "phone": "ɛ",
+      "start": 4.39,
+      "end": 4.43
+    },
+    {
+      "phone": "s",
+      "start": 4.43,
+      "end": 4.53
+    },
+    {
+      "phone": "p",
+      "start": 4.53,
+      "end": 4.58
+    },
+    {
+      "phone": "aj",
+      "start": 4.58,
+      "end": 4.72
+    },
+    {
+      "phone": "t",
+      "start": 4.72,
+      "end": 4.76
+    },
+    {
+      "phone": "h",
+      "start": 4.76,
+      "end": 4.84
+    },
+    {
+      "phone": "a",
+      "start": 4.84,
+      "end": 4.91
+    },
+    {
+      "phone": "v",
+      "start": 4.91,
+      "end": 4.96
+    },
+    {
+      "phone": "ɪ",
+      "start": 4.96,
+      "end": 5
+    },
+    {
+      "phone": "ŋ",
+      "start": 5,
+      "end": 5.07
+    },
+    {
+      "phone": "ð",
+      "start": 5.07,
+      "end": 5.11
+    },
+    {
+      "phone": "a",
+      "start": 5.11,
+      "end": 5.14
+    },
+    {
+      "phone": "fʲ",
+      "start": 5.23,
+      "end": 5.27
+    },
+    {
+      "phone": "i",
+      "start": 5.27,
+      "end": 5.33
+    },
+    {
+      "phone": "z",
+      "start": 5.33,
+      "end": 5.41
+    },
+    {
+      "phone": "i",
+      "start": 5.41,
+      "end": 5.45
+    },
+    {
+      "phone": "k",
+      "start": 5.45,
+      "end": 5.51
+    },
+    {
+      "phone": "a",
+      "start": 5.51,
+      "end": 5.54
+    },
+    {
+      "phone": "ɫ",
+      "start": 5.54,
+      "end": 5.63
+    },
+    {
+      "phone": "a",
+      "start": 5.63,
+      "end": 5.68
+    },
+    {
+      "phone": "bʲ",
+      "start": 5.68,
+      "end": 5.75
+    },
+    {
+      "phone": "i",
+      "start": 5.75,
+      "end": 5.8
+    },
+    {
+      "phone": "ʎ",
+      "start": 5.8,
+      "end": 5.99
+    },
+    {
+      "phone": "i",
+      "start": 5.99,
+      "end": 6.06
+    },
+    {
+      "phone": "tʲ",
+      "start": 6.06,
+      "end": 6.16
+    },
+    {
+      "phone": "i",
+      "start": 6.16,
+      "end": 6.19
+    },
+    {
+      "phone": "ə",
+      "start": 6.19,
+      "end": 6.22
+    },
+    {
+      "phone": "m",
+      "start": 6.22,
+      "end": 6.28
+    },
+    {
+      "phone": "uː",
+      "start": 6.28,
+      "end": 6.53
+    },
+    {
+      "phone": "v",
+      "start": 6.53,
+      "end": 6.68
+    }
+  ],
+  "duration": 7.012426
+}

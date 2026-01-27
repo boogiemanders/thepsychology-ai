@@ -1,0 +1,552 @@
+{
+  "words": [
+    {
+      "word": "it's",
+      "start": 0.03,
+      "end": 0.21
+    },
+    {
+      "word": "like",
+      "start": 0.21,
+      "end": 0.46
+    },
+    {
+      "word": "your",
+      "start": 0.46,
+      "end": 0.56
+    },
+    {
+      "word": "internal",
+      "start": 0.56,
+      "end": 1.17
+    },
+    {
+      "word": "social",
+      "start": 1.17,
+      "end": 1.63
+    },
+    {
+      "word": "filter",
+      "start": 1.63,
+      "end": 2.19
+    },
+    {
+      "word": "the",
+      "start": 2.54,
+      "end": 2.63
+    },
+    {
+      "word": "thing",
+      "start": 2.63,
+      "end": 2.93
+    },
+    {
+      "word": "that",
+      "start": 2.93,
+      "end": 3.04
+    },
+    {
+      "word": "stops",
+      "start": 3.04,
+      "end": 3.48
+    },
+    {
+      "word": "you",
+      "start": 3.48,
+      "end": 3.6
+    },
+    {
+      "word": "from",
+      "start": 3.6,
+      "end": 3.79
+    },
+    {
+      "word": "saying",
+      "start": 3.79,
+      "end": 4.14
+    },
+    {
+      "word": "every",
+      "start": 4.2,
+      "end": 4.53
+    },
+    {
+      "word": "thought",
+      "start": 4.53,
+      "end": 4.81
+    },
+    {
+      "word": "that",
+      "start": 4.85,
+      "end": 5
+    },
+    {
+      "word": "pops",
+      "start": 5,
+      "end": 5.32
+    },
+    {
+      "word": "into",
+      "start": 5.32,
+      "end": 5.54
+    },
+    {
+      "word": "your",
+      "start": 5.54,
+      "end": 5.69
+    },
+    {
+      "word": "head",
+      "start": 5.69,
+      "end": 6
+    },
+    {
+      "word": "during",
+      "start": 6,
+      "end": 6.27
+    },
+    {
+      "word": "a",
+      "start": 6.27,
+      "end": 6.31
+    },
+    {
+      "word": "family",
+      "start": 6.31,
+      "end": 6.71
+    },
+    {
+      "word": "dinner",
+      "start": 6.71,
+      "end": 7.12
+    }
+  ],
+  "phones": [
+    {
+      "phone": "ɪ",
+      "start": 0.03,
+      "end": 0.17
+    },
+    {
+      "phone": "s",
+      "start": 0.17,
+      "end": 0.21
+    },
+    {
+      "phone": "l",
+      "start": 0.21,
+      "end": 0.25
+    },
+    {
+      "phone": "aj",
+      "start": 0.25,
+      "end": 0.37
+    },
+    {
+      "phone": "k",
+      "start": 0.37,
+      "end": 0.46
+    },
+    {
+      "phone": "j",
+      "start": 0.46,
+      "end": 0.49
+    },
+    {
+      "phone": "ɒ",
+      "start": 0.49,
+      "end": 0.52
+    },
+    {
+      "phone": "ɹ",
+      "start": 0.52,
+      "end": 0.56
+    },
+    {
+      "phone": "ɪ",
+      "start": 0.56,
+      "end": 0.67
+    },
+    {
+      "phone": "n",
+      "start": 0.67,
+      "end": 0.8
+    },
+    {
+      "phone": "ʈ",
+      "start": 0.8,
+      "end": 0.89
+    },
+    {
+      "phone": "ɜː",
+      "start": 0.89,
+      "end": 0.99
+    },
+    {
+      "phone": "n",
+      "start": 0.99,
+      "end": 1.05
+    },
+    {
+      "phone": "ə",
+      "start": 1.05,
+      "end": 1.13
+    },
+    {
+      "phone": "l",
+      "start": 1.13,
+      "end": 1.17
+    },
+    {
+      "phone": "s",
+      "start": 1.17,
+      "end": 1.3
+    },
+    {
+      "phone": "əw",
+      "start": 1.3,
+      "end": 1.41
+    },
+    {
+      "phone": "ʃ",
+      "start": 1.41,
+      "end": 1.52
+    },
+    {
+      "phone": "ə",
+      "start": 1.52,
+      "end": 1.57
+    },
+    {
+      "phone": "ɫ",
+      "start": 1.57,
+      "end": 1.63
+    },
+    {
+      "phone": "fʲ",
+      "start": 1.63,
+      "end": 1.74
+    },
+    {
+      "phone": "i",
+      "start": 1.74,
+      "end": 1.78
+    },
+    {
+      "phone": "ɫ",
+      "start": 1.78,
+      "end": 1.86
+    },
+    {
+      "phone": "t",
+      "start": 1.86,
+      "end": 1.97
+    },
+    {
+      "phone": "a",
+      "start": 1.97,
+      "end": 2.19
+    },
+    {
+      "phone": "ð",
+      "start": 2.54,
+      "end": 2.58
+    },
+    {
+      "phone": "a",
+      "start": 2.58,
+      "end": 2.63
+    },
+    {
+      "phone": "t̪",
+      "start": 2.63,
+      "end": 2.72
+    },
+    {
+      "phone": "ɪ",
+      "start": 2.72,
+      "end": 2.81
+    },
+    {
+      "phone": "ŋ",
+      "start": 2.81,
+      "end": 2.93
+    },
+    {
+      "phone": "æ",
+      "start": 2.93,
+      "end": 2.99
+    },
+    {
+      "phone": "t",
+      "start": 2.99,
+      "end": 3.04
+    },
+    {
+      "phone": "s",
+      "start": 3.04,
+      "end": 3.14
+    },
+    {
+      "phone": "t",
+      "start": 3.14,
+      "end": 3.19
+    },
+    {
+      "phone": "ɑ",
+      "start": 3.19,
+      "end": 3.34
+    },
+    {
+      "phone": "p",
+      "start": 3.34,
+      "end": 3.39
+    },
+    {
+      "phone": "s",
+      "start": 3.39,
+      "end": 3.48
+    },
+    {
+      "phone": "j",
+      "start": 3.48,
+      "end": 3.56
+    },
+    {
+      "phone": "ə",
+      "start": 3.56,
+      "end": 3.6
+    },
+    {
+      "phone": "f",
+      "start": 3.6,
+      "end": 3.67
+    },
+    {
+      "phone": "ɹ",
+      "start": 3.67,
+      "end": 3.7
+    },
+    {
+      "phone": "ɐ",
+      "start": 3.7,
+      "end": 3.73
+    },
+    {
+      "phone": "m",
+      "start": 3.73,
+      "end": 3.79
+    },
+    {
+      "phone": "s",
+      "start": 3.79,
+      "end": 3.89
+    },
+    {
+      "phone": "e",
+      "start": 3.89,
+      "end": 4.03
+    },
+    {
+      "phone": "i",
+      "start": 4.03,
+      "end": 4.1
+    },
+    {
+      "phone": "ŋ",
+      "start": 4.1,
+      "end": 4.11
+    },
+    {
+      "phone": "ɡ",
+      "start": 4.11,
+      "end": 4.14
+    },
+    {
+      "phone": "ɛ",
+      "start": 4.2,
+      "end": 4.31
+    },
+    {
+      "phone": "ɹ",
+      "start": 4.31,
+      "end": 4.45
+    },
+    {
+      "phone": "i",
+      "start": 4.45,
+      "end": 4.53
+    },
+    {
+      "phone": "t̪",
+      "start": 4.53,
+      "end": 4.63
+    },
+    {
+      "phone": "ɒː",
+      "start": 4.63,
+      "end": 4.78
+    },
+    {
+      "phone": "ʈ",
+      "start": 4.78,
+      "end": 4.81
+    },
+    {
+      "phone": "æ",
+      "start": 4.85,
+      "end": 4.94
+    },
+    {
+      "phone": "t",
+      "start": 4.94,
+      "end": 5
+    },
+    {
+      "phone": "p",
+      "start": 5,
+      "end": 5.09
+    },
+    {
+      "phone": "ɒ",
+      "start": 5.09,
+      "end": 5.19
+    },
+    {
+      "phone": "p",
+      "start": 5.19,
+      "end": 5.25
+    },
+    {
+      "phone": "s",
+      "start": 5.25,
+      "end": 5.32
+    },
+    {
+      "phone": "ɪ",
+      "start": 5.32,
+      "end": 5.38
+    },
+    {
+      "phone": "n",
+      "start": 5.38,
+      "end": 5.45
+    },
+    {
+      "phone": "ʈ",
+      "start": 5.45,
+      "end": 5.5
+    },
+    {
+      "phone": "ʉː",
+      "start": 5.5,
+      "end": 5.54
+    },
+    {
+      "phone": "j",
+      "start": 5.54,
+      "end": 5.6
+    },
+    {
+      "phone": "ɒ",
+      "start": 5.6,
+      "end": 5.64
+    },
+    {
+      "phone": "ɹ",
+      "start": 5.64,
+      "end": 5.69
+    },
+    {
+      "phone": "h",
+      "start": 5.69,
+      "end": 5.8
+    },
+    {
+      "phone": "ɛ",
+      "start": 5.8,
+      "end": 5.93
+    },
+    {
+      "phone": "d",
+      "start": 5.93,
+      "end": 6
+    },
+    {
+      "phone": "d",
+      "start": 6,
+      "end": 6.06
+    },
+    {
+      "phone": "ɝ",
+      "start": 6.06,
+      "end": 6.13
+    },
+    {
+      "phone": "ɪ",
+      "start": 6.13,
+      "end": 6.22
+    },
+    {
+      "phone": "ŋ",
+      "start": 6.22,
+      "end": 6.27
+    },
+    {
+      "phone": "a",
+      "start": 6.27,
+      "end": 6.31
+    },
+    {
+      "phone": "f",
+      "start": 6.31,
+      "end": 6.4
+    },
+    {
+      "phone": "a",
+      "start": 6.4,
+      "end": 6.53
+    },
+    {
+      "phone": "mʲ",
+      "start": 6.53,
+      "end": 6.58
+    },
+    {
+      "phone": "i",
+      "start": 6.58,
+      "end": 6.61
+    },
+    {
+      "phone": "ʎ",
+      "start": 6.61,
+      "end": 6.66
+    },
+    {
+      "phone": "i",
+      "start": 6.66,
+      "end": 6.71
+    },
+    {
+      "phone": "dʲ",
+      "start": 6.71,
+      "end": 6.77
+    },
+    {
+      "phone": "i",
+      "start": 6.77,
+      "end": 6.85
+    },
+    {
+      "phone": "n",
+      "start": 6.85,
+      "end": 6.89
+    },
+    {
+      "phone": "a",
+      "start": 6.89,
+      "end": 7.12
+    }
+  ],
+  "duration": 7.383946
+}
