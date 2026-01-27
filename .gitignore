@@ -164,3 +164,4 @@ recover-pdfs/
 public/topic-teacher-audio/
 .vercel
 .env*.local
+.mfa-work/
