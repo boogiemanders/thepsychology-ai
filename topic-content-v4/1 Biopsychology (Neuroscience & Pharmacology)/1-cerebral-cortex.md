@@ -30,7 +30,7 @@ Here's what you need to memorize:
 
 ## The Frontal Lobe: Your Brain's Executive Suite
 
-The frontal lobes occupy the largest portion of the brain — about **1/3 of the entire brain**. They house three critical areas that will come up repeatedly on the EPPP and in your clinical work.
+The frontal lobes occupy the largest portion of the brain, about **1/3 of the entire brain**. They house three critical areas that will come up repeatedly on the EPPP and in your clinical work.
 
 ### Broca's Area: The Speech Production Center
 
@@ -148,9 +148,9 @@ The arcuate fasciculus connects Wernicke's area to Broca's area. {{M}}It's the c
 
 ### Other Aphasia Types to Know
 
-**Global Aphasia:** Results from widespread damage to language regions. Most language functions are impaired — both production and comprehension are severely affected. This is the most severe form.
+**Global Aphasia:** Results from widespread damage to language regions. Most language functions are impaired, both production and comprehension are severely affected. This is the most severe form.
 
-**Anomic Aphasia:** Problems recalling words or names. The person speaks in a roundabout way (circumlocution) — describing things instead of naming them. For example, instead of saying "watch," they might say "the thing you use to tell time." Results from parietal or temporal lobe damage.
+**Anomic Aphasia:** Problems recalling words or names. The person speaks in a roundabout way (circumlocution), describing things instead of naming them. For example, instead of saying "watch," they might say "the thing you use to tell time." Results from parietal or temporal lobe damage.
 
 **Transcortical Aphasias:** Three types that are similar to Broca's, Wernicke's, and global aphasia, EXCEPT that the ability to repeat words/phrases remains intact. Example: In transcortical motor aphasia, the person can't spontaneously say "I am thirsty" but CAN repeat "I am thirsty" when asked.
 
@@ -289,8 +289,8 @@ This technique confirms speech lateralization. Two different words are presented
 ## Practice Tips for Remembering
 
 **Quick Location Mnemonics:**
-- **Temp**oral lobes are around your **temp**les (above your ears) — so they handle hearing!
-- **Broca = Broken** — broken, choppy speech
+- **Temp**oral lobes are around your **temp**les (above your ears), so they handle hearing!
+- **Broca = Broken**, broken, choppy speech
 
 **For the Aphasias:**
 Create a simple comparison table and review it regularly:

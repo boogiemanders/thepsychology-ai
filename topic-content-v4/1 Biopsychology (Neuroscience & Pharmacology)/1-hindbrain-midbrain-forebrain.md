@@ -185,7 +185,7 @@ The caudate nucleus, putamen, and nucleus accumbens together form the **striatum
 
 ### Septum (The Aggression Reducer)
 
-The **septum** does the opposite of the amygdala when it comes to aggression—it decreases aggressive behavior. Damage to the septum can cause **septal rage syndrome**, where the person becomes extremely aggressive and irritable.
+The **septum** does the opposite of the amygdala when it comes to aggression, it decreases aggressive behavior. Damage to the septum can cause **septal rage syndrome**, where the person becomes extremely aggressive and irritable.
 
 **EPPP tip:** If you see a question about a structure that *reduces* aggression, think septum. If you see one about *increasing* aggression or fear, think amygdala.
 
@@ -288,7 +288,7 @@ Or is it part of the limbic system? Actually, it connects both systems and coord
 - **M**edulla. **M**andatory for life (breathing, heart rate)
 - **P**ons. **P**erfect sleep and bilateral coordination
 - **C**erebellum. **C**oordination plus procedural memory
-- **Ataxia tip:** Think of "TAXI" as movement—ataxia means movement is off.
+- **Ataxia tip:** Think of "TAXI" as movement, ataxia means movement is off.
 
 **Midbrain quick hits:**
 - **RAS** = **R**aises **A**lertness and **S**tate of consciousness
@@ -305,7 +305,7 @@ Or is it part of the limbic system? Actually, it connects both systems and coord
 - **Hypothalamus "Five F's":** Fever, Feeding, Fighting, Falling asleep, and... sexual activity. (These are the main functions it regulates.)
 - **Hippocampus:** "If you saw a **Hippo** on **Campus**, you would remember him." (Memory!)
 - **Amygdala:** **A** for Amygdala, **A** for increased Aggression.
-- **Septum:** **S** in Septum allows you to **S**immer down. (The septum decreases aggression—damage causes septal rage syndrome.)
+- **Septum:** **S** in Septum allows you to **S**immer down. (The septum decreases aggression, damage causes septal rage syndrome.)
 
 **Korsakoff syndrome = TAM:**
 - **T**halamus damage

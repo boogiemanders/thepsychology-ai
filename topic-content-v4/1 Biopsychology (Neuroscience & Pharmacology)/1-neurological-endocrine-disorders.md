@@ -224,7 +224,7 @@ When the kidneys fail to respond to ADH, it's called **nephrogenic diabetes insi
 
 **Hypopituitarism** (undersecretion of growth hormones): In children → dwarfism, pubertal delay. In adults → gonadal failure (impotence, infertility).
 
-**Hyperpituitarism** (oversecretion of growth hormones): Causes **gigantism** (if before puberty) or **acromegaly** (if after puberty — enlarged hands, feet, face).
+**Hyperpituitarism** (oversecretion of growth hormones): Causes **gigantism** (if before puberty) or **acromegaly** (if after puberty, enlarged hands, feet, face).
 
 ### Pancreatic Disorders: Blood Sugar Problems
 
