@@ -77,7 +77,7 @@ function getDomainFolder(domainId: string): string {
 function slugifyTopicName(name: string): string {
   return name
     .toLowerCase()
-    .replace(/^[\d\s]+/, '') // remove leading numeric prefixes like "5 " or "5 6 "
+    .replace(/^(?:\d+[\s-]+)+/, '') // remove leading numeric prefixes like "5 ", "5 6 ", or "5-6-"
     .replace(/[&]/g, 'and')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
