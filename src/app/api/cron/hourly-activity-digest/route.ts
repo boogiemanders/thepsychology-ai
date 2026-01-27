@@ -29,9 +29,23 @@ function formatDuration(seconds: number): string {
   return remainingMins > 0 ? `${hours}h ${remainingMins}m` : `${hours}h`
 }
 
+interface QuizAttempt {
+  user_id: string
+  topic: string
+  score: number
+  total_questions: number
+}
+
+interface StudySession {
+  user_id: string
+  feature: string
+  duration_seconds: number | null
+  metadata: { topic?: string } | null
+}
+
 /**
  * Hourly Activity Digest
- * Sends a summary of new signups and active users from the past hour
+ * Sends a daily activity summary (cumulative for the day) every hour
  *
  * Schedule: Every hour from 8am to 10pm EST (0 13-23,0-3 * * * in UTC)
  */
@@ -54,31 +68,37 @@ export async function GET(request: NextRequest) {
 
   try {
     const now = new Date()
-    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000)
-    const oneHourAgoISO = oneHourAgo.toISOString()
 
-    // Format time range for display (e.g., "2:00 PM - 3:00 PM EST")
-    const formatHour = (date: Date) =>
-      date.toLocaleString('en-US', {
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true,
-        timeZone: 'America/New_York',
-      })
-    const timeRange = `${formatHour(oneHourAgo)} - ${formatHour(now)} EST`
+    // Get start of today in EST
+    const todayStart = new Date(
+      now.toLocaleString('en-US', { timeZone: 'America/New_York' })
+    )
+    todayStart.setHours(0, 0, 0, 0)
+    // Convert back to UTC for database queries
+    const todayStartISO = new Date(
+      todayStart.toLocaleString('en-US', { timeZone: 'UTC' })
+    ).toISOString()
 
-    // Query new signups in the past hour
+    // Format current time for display (e.g., "3:00 PM EST")
+    const currentTime = now.toLocaleString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+      timeZone: 'America/New_York',
+    })
+
+    // Query new signups today
     const { data: newSignups } = await supabase
       .from('users')
       .select('email')
-      .gte('created_at', oneHourAgoISO)
+      .gte('created_at', todayStartISO)
       .order('created_at', { ascending: false })
 
-    // Query active users in the past hour
+    // Query active users today
     const { data: activeUsers } = await supabase
       .from('users')
       .select('id, email, last_activity_at')
-      .gte('last_activity_at', oneHourAgoISO)
+      .gte('last_activity_at', todayStartISO)
       .order('last_activity_at', { ascending: false })
 
     // Skip if no activity
@@ -86,32 +106,45 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         success: true,
         skipped: true,
-        reason: 'No activity in the past hour',
+        reason: 'No activity today',
       })
     }
 
-    // Get page view data for active users to calculate time spent and features used
+    // Get page view and study session data for active users
     const userActivityMap: Record<
       string,
-      { email: string; totalSeconds: number; features: Set<string> }
+      {
+        email: string
+        totalSeconds: number
+        features: Set<string>
+        topics: Set<string>
+        quizResults: { topic: string; score: number; total: number }[]
+      }
     > = {}
 
     if (activeUsers && activeUsers.length > 0) {
       const activeUserIds = activeUsers.map(u => u.id)
 
-      // Get page views for active users in the past hour
+      // Get page views for active users today
       const { data: pageViews } = await supabase
         .from('user_page_views')
         .select('user_id, page_path, duration_seconds')
         .in('user_id', activeUserIds)
-        .gte('entered_at', oneHourAgoISO)
+        .gte('entered_at', todayStartISO)
 
-      // Get study sessions for active users in the past hour
+      // Get study sessions for active users today (with metadata for topic names)
       const { data: studySessions } = await supabase
         .from('study_sessions')
-        .select('user_id, feature, duration_seconds')
+        .select('user_id, feature, duration_seconds, metadata')
         .in('user_id', activeUserIds)
-        .gte('started_at', oneHourAgoISO)
+        .gte('started_at', todayStartISO)
+
+      // Get quiz attempts for active users today
+      const { data: quizAttempts } = await supabase
+        .from('quiz_attempts')
+        .select('user_id, topic, score, total_questions')
+        .in('user_id', activeUserIds)
+        .gte('created_at', todayStartISO)
 
       // Initialize activity map with all active users
       for (const user of activeUsers) {
@@ -119,6 +152,8 @@ export async function GET(request: NextRequest) {
           email: user.email,
           totalSeconds: 0,
           features: new Set(),
+          topics: new Set(),
+          quizResults: [],
         }
       }
 
@@ -132,9 +167,9 @@ export async function GET(request: NextRequest) {
         }
       }
 
-      // Aggregate study sessions
+      // Aggregate study sessions and extract topic names
       if (studySessions) {
-        for (const session of studySessions) {
+        for (const session of studySessions as StudySession[]) {
           if (userActivityMap[session.user_id]) {
             userActivityMap[session.user_id].totalSeconds += session.duration_seconds || 0
             // Map feature names from study sessions
@@ -147,18 +182,37 @@ export async function GET(request: NextRequest) {
                     ? 'Flashcards'
                     : session.feature
             userActivityMap[session.user_id].features.add(featureName)
+
+            // Extract topic from metadata
+            const topicName = session.metadata?.topic
+            if (topicName) {
+              userActivityMap[session.user_id].topics.add(topicName)
+            }
+          }
+        }
+      }
+
+      // Aggregate quiz attempts
+      if (quizAttempts) {
+        for (const attempt of quizAttempts as QuizAttempt[]) {
+          if (userActivityMap[attempt.user_id]) {
+            userActivityMap[attempt.user_id].quizResults.push({
+              topic: attempt.topic,
+              score: attempt.score,
+              total: attempt.total_questions,
+            })
           }
         }
       }
     }
 
     // Build the Slack message
-    const messageParts: string[] = [`📊 *Hourly Activity* (${timeRange})`]
+    const messageParts: string[] = [`📊 *Daily Activity Summary* (as of ${currentTime} EST)`]
 
     // New signups section
     if (newSignups && newSignups.length > 0) {
       messageParts.push('')
-      messageParts.push(`🆕 *New Signups (${newSignups.length}):*`)
+      messageParts.push(`🆕 *New Signups Today (${newSignups.length}):*`)
       for (const signup of newSignups.slice(0, 10)) {
         messageParts.push(`  • ${signup.email}`)
       }
@@ -174,17 +228,32 @@ export async function GET(request: NextRequest) {
 
     if (activeUsersList.length > 0) {
       messageParts.push('')
-      messageParts.push(`👥 *Active Users (${activeUsersList.length}):*`)
+      messageParts.push(`👥 *Active Users Today (${activeUsersList.length}):*`)
 
-      for (const user of activeUsersList.slice(0, 10)) {
+      for (const user of activeUsersList.slice(0, 15)) {
         const duration = formatDuration(user.totalSeconds)
-        const features = Array.from(user.features).slice(0, 3).join(', ')
-        messageParts.push(
-          `  • ${user.email} - ${duration}${features ? ` (${features})` : ''}`
-        )
+        messageParts.push(`  • ${user.email} - ${duration}`)
+
+        // Add topics studied
+        const topics = Array.from(user.topics)
+        if (topics.length > 0) {
+          const topicsList = topics.slice(0, 5).join(', ')
+          const moreTopics = topics.length > 5 ? ` +${topics.length - 5} more` : ''
+          messageParts.push(`    📚 Topics: ${topicsList}${moreTopics}`)
+        }
+
+        // Add quiz results
+        if (user.quizResults.length > 0) {
+          const quizStrings = user.quizResults.slice(0, 3).map(q => {
+            const pct = Math.round((q.score / q.total) * 100)
+            return `${q.topic} ${q.score}/${q.total} (${pct}%)`
+          })
+          const moreQuizzes = user.quizResults.length > 3 ? ` +${user.quizResults.length - 3} more` : ''
+          messageParts.push(`    📝 Quiz: ${quizStrings.join(', ')}${moreQuizzes}`)
+        }
       }
-      if (activeUsersList.length > 10) {
-        messageParts.push(`  ... and ${activeUsersList.length - 10} more`)
+      if (activeUsersList.length > 15) {
+        messageParts.push(`  ... and ${activeUsersList.length - 15} more`)
       }
     }
 
@@ -198,7 +267,7 @@ export async function GET(request: NextRequest) {
     if (totalEngagementSeconds > 0) {
       messageParts.push('')
       messageParts.push(
-        `📈 Total engagement: ${formatDuration(totalEngagementSeconds)} across ${uniqueActiveCount} user${uniqueActiveCount !== 1 ? 's' : ''}`
+        `📈 Total engagement today: ${formatDuration(totalEngagementSeconds)} across ${uniqueActiveCount} user${uniqueActiveCount !== 1 ? 's' : ''}`
       )
     }
 

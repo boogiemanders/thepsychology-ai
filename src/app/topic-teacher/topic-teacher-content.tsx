@@ -741,7 +741,7 @@ export function TopicTeacherContent() {
   // Targeted nudge for passive learners (temporary - can be removed after user sees it)
   useEffect(() => {
     // Show Recover nudge for specific users who are passive learners
-    const NUDGE_USERS = ['b4aa08a1-6d14-4928-bd23-799f246cdb4f'] // nathaniel.davin@gmail.com
+    const NUDGE_USERS = ['b4aa08a1-6d14-4928-bd23-799f246cdb4f']
     if (!user?.id || !NUDGE_USERS.includes(user.id)) return
 
     const dismissedKey = `recover_nudge_dismissed_${user.id}`
