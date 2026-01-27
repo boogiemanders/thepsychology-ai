@@ -738,6 +738,22 @@ export function TopicTeacherContent() {
     }
   }, [user?.id, ratingSubmitted])
 
+  // Targeted nudge for passive learners (temporary - can be removed after user sees it)
+  useEffect(() => {
+    // Show Recover nudge for specific users who are passive learners
+    const NUDGE_USERS = ['b4aa08a1-6d14-4928-bd23-799f246cdb4f'] // nathaniel.davin@gmail.com
+    if (!user?.id || !NUDGE_USERS.includes(user.id)) return
+
+    const dismissedKey = `recover_nudge_dismissed_${user.id}`
+    if (localStorage.getItem(dismissedKey)) return
+
+    const timer = setTimeout(() => {
+      setShowRecoverNudge(true)
+    }, 30000) // Show after 30 seconds
+
+    return () => clearTimeout(timer)
+  }, [user?.id])
+
   useEffect(() => {
     autoScrollRef.current = readAlongEnabled && autoScrollEnabled
   }, [autoScrollEnabled, readAlongEnabled])
@@ -4215,15 +4231,23 @@ export function TopicTeacherContent() {
                   Take 5 minutes in Recover to reflect on your progress and plan your next steps.
                 </p>
                 <div className="flex gap-2 mt-3">
-                  <Link href="/recover">
+                  <Link href="/recover" onClick={() => {
+                    if (user?.id) localStorage.setItem(`recover_nudge_dismissed_${user.id}`, 'true')
+                  }}>
                     <Button size="sm">Try Recover</Button>
                   </Link>
-                  <Button size="sm" variant="ghost" onClick={() => setShowRecoverNudge(false)}>
+                  <Button size="sm" variant="ghost" onClick={() => {
+                    setShowRecoverNudge(false)
+                    if (user?.id) localStorage.setItem(`recover_nudge_dismissed_${user.id}`, 'true')
+                  }}>
                     Maybe later
                   </Button>
                 </div>
               </div>
-              <button onClick={() => setShowRecoverNudge(false)} className="text-muted-foreground hover:text-foreground">
+              <button onClick={() => {
+                setShowRecoverNudge(false)
+                if (user?.id) localStorage.setItem(`recover_nudge_dismissed_${user.id}`, 'true')
+              }} className="text-muted-foreground hover:text-foreground">
                 <X className="h-4 w-4" />
               </button>
             </div>
