@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { z } from 'zod'
-import { sendSlackNotification } from '@/lib/notify-slack'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -126,50 +125,6 @@ export async function POST(request: NextRequest) {
         })
         .eq('id', pageViewId)
         .eq('user_id', userId) // Ensure user owns this record
-
-      // Send session summary to Slack when session ends
-      if (sessionEnd) {
-        try {
-          // Get user email
-          const { data: user } = await supabase
-            .from('users')
-            .select('email')
-            .eq('id', userId)
-            .single()
-
-          // Get recent page views for this session (last hour)
-          const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString()
-          const { data: recentViews } = await supabase
-            .from('user_page_views')
-            .select('page_path, duration_seconds')
-            .eq('user_id', userId)
-            .gte('entered_at', oneHourAgo)
-            .order('entered_at', { ascending: true })
-
-          if (user?.email && recentViews && recentViews.length > 0) {
-            const totalSeconds = recentViews.reduce((sum, v) => sum + (v.duration_seconds || 0), 0)
-            const totalMinutes = Math.round(totalSeconds / 60)
-
-            const pagesSummary = recentViews
-              .map(v => {
-                const mins = v.duration_seconds ? Math.round(v.duration_seconds / 60) : 0
-                return `  • ${v.page_path} (${mins}m)`
-              })
-              .join('\n')
-
-            const message = [
-              `📊 Session ended: ${user.email}`,
-              `Total time: ${totalMinutes}m across ${recentViews.length} page(s)`,
-              pagesSummary,
-            ].join('\n')
-
-            await sendSlackNotification(message, 'metrics')
-          }
-        } catch (slackError) {
-          // Don't fail the request if Slack notification fails
-          console.debug('[user-activity] session summary slack failed:', slackError)
-        }
-      }
 
       return NextResponse.json({ ok: true })
     }
