@@ -758,6 +758,89 @@ export function TopicTeacherContent() {
     autoScrollRef.current = readAlongEnabled && autoScrollEnabled
   }, [autoScrollEnabled, readAlongEnabled])
 
+  // Screenshot protection - only allow for admin user
+  const ADMIN_EMAIL = 'chanders0@yahoo.com'
+  const isAdminUser = user?.email === ADMIN_EMAIL
+
+  useEffect(() => {
+    // Skip protection for admin user
+    if (isAdminUser) return
+
+    // Prevent keyboard shortcuts for screenshots
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Block PrintScreen
+      if (e.key === 'PrintScreen') {
+        e.preventDefault()
+        return
+      }
+      // Block Ctrl+P (print)
+      if (e.ctrlKey && e.key === 'p') {
+        e.preventDefault()
+        return
+      }
+      // Block Cmd+Shift+3, Cmd+Shift+4 (Mac screenshots)
+      if (e.metaKey && e.shiftKey && (e.key === '3' || e.key === '4' || e.key === '5')) {
+        e.preventDefault()
+        return
+      }
+      // Block Ctrl+Shift+S (some screenshot tools)
+      if (e.ctrlKey && e.shiftKey && e.key === 's') {
+        e.preventDefault()
+        return
+      }
+    }
+
+    // Prevent right-click context menu
+    const handleContextMenu = (e: MouseEvent) => {
+      e.preventDefault()
+    }
+
+    // Prevent copy
+    const handleCopy = (e: ClipboardEvent) => {
+      e.preventDefault()
+    }
+
+    // Add CSS to prevent text selection and printing
+    const styleElement = document.createElement('style')
+    styleElement.setAttribute('data-screenshot-protection', '')
+    styleElement.textContent = `
+      .topic-teacher-protected {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        -webkit-touch-callout: none !important;
+      }
+      @media print {
+        .topic-teacher-protected {
+          display: none !important;
+        }
+        body::after {
+          content: "Printing is disabled for this content.";
+          display: block;
+          text-align: center;
+          padding: 2rem;
+          font-size: 1.5rem;
+        }
+      }
+    `
+    document.head.appendChild(styleElement)
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('contextmenu', handleContextMenu)
+    document.addEventListener('copy', handleCopy)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('contextmenu', handleContextMenu)
+      document.removeEventListener('copy', handleCopy)
+      const existingStyle = document.querySelector('style[data-screenshot-protection]')
+      if (existingStyle) {
+        document.head.removeChild(existingStyle)
+      }
+    }
+  }, [isAdminUser])
+
   useEffect(() => {
     const container = lessonContentRef.current
     if (!readAlongEnabled || !container || !lessonMarkdown.trim()) {
@@ -2827,7 +2910,7 @@ export function TopicTeacherContent() {
 
   return (
     <TopicTeacherTourProvider>
-    <main className="min-h-screen flex flex-col bg-background overflow-x-hidden">
+    <main className={`min-h-screen flex flex-col bg-background overflow-x-hidden ${!isAdminUser ? 'topic-teacher-protected' : ''}`}>
       <div className="flex-1 flex flex-col w-full mx-auto px-4 py-6 pb-40 max-w-[800px] overflow-x-hidden">
         {/* 1. Breadcrumb - above audio bar */}
         <div className="flex items-center justify-between gap-2 mb-4 min-w-0">
