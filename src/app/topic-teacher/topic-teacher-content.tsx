@@ -104,7 +104,7 @@ type HastNode = {
 }
 
 const READ_ALONG_WORD_REGEX = /\d+(?:\.\d+)+|[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
-const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code'])
+const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 const READ_ALONG_SKIP_SELECTOR = Array.from(READ_ALONG_SKIP_TAGS).join(',')
 const EPPP_WORD_REGEX = /\bE\.?P\.?P\.?P\.?\b/i
 const ACRONYM_WORD_REGEX = /^[A-Z]{2,5}$/
