@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendSlackNotification } from '@/lib/notify-slack'
+import { getStripeConversionsLast24h } from '@/lib/stripe-stats'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -151,6 +152,8 @@ export async function GET(request: NextRequest) {
     const proCoachingCount = tiers.filter(u => u.subscription_tier === 'pro_coaching').length
     const estimatedMRR = (proCount * 29) + (proCoachingCount * 99)
 
+    const stripeConversions = await getStripeConversionsLast24h()
+
     const dailyMessage = [
       `📊 *Daily Stats* (${now.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })})`,
       '',
@@ -158,6 +161,7 @@ export async function GET(request: NextRequest) {
       `📝 Exams taken: ${examsToday ?? 0}`,
       `❓ Quizzes taken: ${quizzesToday ?? 0}`,
       `👥 Active users (24h): ${activeUsers ?? 0}`,
+      `💳 Stripe conversions (24h): ${stripeConversions}`,
       '',
       `💰 MRR: $${estimatedMRR.toLocaleString()} (${proCount} Pro + ${proCoachingCount} Pro+Coaching)`,
     ].join('\n')
@@ -358,6 +362,7 @@ export async function GET(request: NextRequest) {
         examsToday: examsToday ?? 0,
         quizzesToday: quizzesToday ?? 0,
         activeUsers: activeUsers ?? 0,
+        stripeConversions,
         estimatedMRR,
       },
     })
