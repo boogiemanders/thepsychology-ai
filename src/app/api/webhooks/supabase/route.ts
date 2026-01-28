@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'crypto'
 import { sendNotificationEmail } from '@/lib/notify-email'
 import { sendSlackNotification, SlackChannel } from '@/lib/notify-slack'
+import { sendTelegramNotification } from '@/lib/notify-telegram'
 
 type SupabaseWebhookPayload = {
   type?: string
@@ -41,6 +42,52 @@ const buildSlackMessage = (payload: SupabaseWebhookPayload): { message: string; 
       message: `🎉 New signup: ${email} (${device}, via ${referral})`,
       channel: 'signups',
     }
+  }
+
+  return null
+}
+
+const maskEmail = (email: string) => {
+  const at = email.indexOf('@')
+  if (at <= 1) return '***'
+  return email.slice(0, 2) + '***' + email.slice(at)
+}
+
+const buildTelegramMessage = (payload: SupabaseWebhookPayload): string | null => {
+  const { table, record } = payload
+  if (!record || typeof record !== 'object') return null
+
+  if (table === 'feedback') {
+    const email = (record.user_email as string) || 'Unknown email'
+    const message = (record.message as string) || '[No message]'
+    const pagePath = (record.page_path as string) || 'Unknown page'
+    const screenshot = record.screenshot_path as string | null | undefined
+    const isAnonymous = Boolean(record.is_anonymous)
+    const status = (record.status as string) || 'new'
+    const createdAt = formatTimestamp(record.created_at)
+
+    const safeEmail = isAnonymous ? 'anonymous' : maskEmail(email)
+
+    const lines = [
+      `feedback: ${pagePath}`,
+      `Time: ${createdAt}`,
+      `Status: ${status}`,
+      `User: ${safeEmail}`,
+      `UserID: ${(record.user_id as string | null | undefined) ?? 'none'}`,
+      '',
+      message,
+    ]
+
+    if (screenshot) lines.push('', `Screenshot: ${screenshot}`)
+
+    return lines.join('\n')
+  }
+
+  if (table === 'users') {
+    const email = (record.email as string) || 'unknown'
+    const device = (record.signup_device as string) || 'unknown'
+    const referral = (record.referral_source as string) || 'direct'
+    return `signup: ${maskEmail(email)}\nTime: ${formatTimestamp(record.created_at)}\nDevice: ${device}\nReferral: ${referral}`
   }
 
   return null
@@ -178,12 +225,13 @@ export async function POST(request: NextRequest) {
 
   const emailPayload = buildEmailPayload(payload)
   const slackMessage = buildSlackMessage(payload)
+  const telegramMessage = buildTelegramMessage(payload)
 
-  if (!emailPayload && !slackMessage) {
+  if (!emailPayload && !slackMessage && !telegramMessage) {
     return NextResponse.json({ ignored: true, reason: 'No handler for this table' })
   }
 
-  const results: { email?: boolean; slack?: boolean } = {}
+  const results: { email?: boolean; slack?: boolean; telegram?: boolean } = {}
 
   if (emailPayload) {
     try {
@@ -206,6 +254,16 @@ export async function POST(request: NextRequest) {
     } catch (error) {
       console.error('Failed to send Slack notification', error)
       results.slack = false
+    }
+  }
+
+  if (telegramMessage) {
+    try {
+      await sendTelegramNotification({ text: telegramMessage })
+      results.telegram = true
+    } catch (error) {
+      console.error('Failed to send Telegram notification', error)
+      results.telegram = false
     }
   }
 
