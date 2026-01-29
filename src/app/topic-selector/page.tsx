@@ -217,8 +217,9 @@ function getTimeAgo(timestamp: number): string {
 }
 
 export default function TopicSelectorPage() {
-  const { user, userProfile } = useAuth()
-  const entitledTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
+  const { user, userProfile, loading } = useAuth()
+  // Default to 'pro' while loading to prevent flash of locked content
+  const entitledTier = loading || !userProfile ? 'pro' : (getEntitledSubscriptionTier(userProfile) ?? 'pro')
   const isFreeTier = entitledTier === 'free'
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [currentInput, setCurrentInput] = useState<string>('')
