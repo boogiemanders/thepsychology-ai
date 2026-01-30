@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState, useCallback, useRef, ReactNode } from 'react'
 import { User as SupabaseUser } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'
-import { handleUserSwitch } from '@/lib/local-study-storage'
+import { handleUserSwitch, hydrateQuizDataFromServer } from '@/lib/local-study-storage'
 
 // Session timeout configuration (in milliseconds)
 const IDLE_TIMEOUT_MS = 2 * 60 * 60 * 1000 // 2 hours idle timeout
@@ -210,6 +210,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (session?.user) {
         // Start session timeout timers
         startSessionTimers()
+
+        // Hydrate quiz data from server if localStorage is empty
+        if (session.access_token) {
+          hydrateQuizDataFromServer(session.access_token).catch((err) => {
+            console.debug('Quiz data hydration failed:', err)
+          })
+        }
 
         // Fetch user profile on auth change (don't await since it can hang)
         supabase
