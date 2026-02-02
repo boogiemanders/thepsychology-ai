@@ -52,7 +52,7 @@ export const siteConfig = {
     "EPPP sign up",
   ],
   links: {
-    email: "support@thepsychology.ai",
+    email: "drchan@thepsychology.ai",
     twitter: "https://twitter.com/thepsychologyai",
     discord: "https://discord.gg/thepsychologyai",
     github: "https://github.com/thepsychologyai",
