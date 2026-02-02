@@ -2,18 +2,18 @@ import fs from 'fs'
 import path from 'path'
 
 export const DOMAIN_FOLDER_MAP: Record<string, string> = {
-  '1': '1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology',
-  '2': '2 Cognitive-Affective Bases : Learning and Memory',
+  '1': '1 Biopsychology (Neuroscience & Pharmacology)',
+  '2': '2 Learning and Memory',
   '3-social': '3 Social Psychology',
-  '3-cultural': '3 Cultural',
-  '4': '4 Growth & Lifespan Development',
+  '3-cultural': '3 Cultural Considerations',
+  '4': '4 Development',
   '5-assessment': '5 Assessment',
-  '5-diagnosis': '5 Diagnosis : Psychopathology',
+  '5-diagnosis': '5 Diagnosis',
   '5-test': '5 Test Construction',
-  '6': '6 Treatment, Intervention, and Prevention : Clinical Psychology',
-  '7': '7 Research Methods & Statistics',
-  '8': '8 Ethical : Legal : Professional Issues',
-  '3-5-6': '2 3 5 6 Organizational Psychology',
+  '6': '6 Clinical Interventions',
+  '7': '7 Research and Stats',
+  '8': '8 Ethics',
+  '3-5-6': '2 3 5 6 I-O Psychology',
 }
 
 export const DOMAIN_NUMBER_MAP: Record<string, string[]> = {
