@@ -79,6 +79,7 @@ function slugifyTopicName(name: string): string {
     .toLowerCase()
     .replace(/^(?:\d+[\s-]+)+/, '') // remove leading numeric prefixes like "5 ", "5 6 ", or "5-6-"
     .replace(/[&]/g, 'and')
+    .replace(/\band\b/g, '') // strip word "and" so "Standards 1 and 2" matches "standards-1-2"
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
 }
