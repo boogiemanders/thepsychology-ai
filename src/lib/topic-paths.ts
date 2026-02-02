@@ -35,6 +35,7 @@ export function normalizeTopicName(topicName: string): string {
   return topicName
     .replace(/\//g, '-')
     .replace(/–/g, '-')
+    .replace(/&/g, 'and') // normalize ampersand to "and" for matching
     .replace(/…/g, '')
     .replace(/\.\.\./g, '')
     .replace(/\s+/g, ' ')
