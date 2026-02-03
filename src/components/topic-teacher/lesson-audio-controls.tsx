@@ -448,6 +448,8 @@ type LessonAudioControlsProps = {
   lessonSlug?: string | null
   /** Whether to use MFA manifest if available (default: true) */
   useManifest?: boolean
+  /** Callback when manifest text is loaded - used for accurate spokenWords alignment */
+  onManifestText?: (text: string) => void
 }
 
 export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonAudioControlsProps>((props, ref) => {
@@ -468,6 +470,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     onAutoScrollToggle,
     lessonSlug = null,
     useManifest = true,
+    onManifestText,
   } = props
 
   const voice = DEFAULT_VOICE
@@ -494,9 +497,10 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const isPlayingRef = useRef(false)
   const pendingAutoAdvanceIndexRef = useRef<number | null>(null)
   const audioUrlsRef = useRef<string[]>([])
-  const segmentWordCountsRef = useRef<number[]>([])
+  const segmentWordCountsRef = useRef<number[]>([]) // MFA-based counts for audio timing
+  const segmentRegexWordCountsRef = useRef<number[]>([]) // Regex-based counts matching spokenWords
   const segmentWordProgressRef = useRef<number[][]>([])
-  const segmentWordOffsetsRef = useRef<number[]>([])
+  const segmentWordOffsetsRef = useRef<number[]>([]) // Regex-based offsets for progress reporting
   const segmentAudioKeysRef = useRef<Array<string | null>>([])
   const segmentTextsRef = useRef<string[]>([])
   const segmentWordStartTimesRef = useRef<number[][]>([])
@@ -584,6 +588,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       return []
     })
     segmentWordCountsRef.current = []
+    segmentRegexWordCountsRef.current = []
     segmentWordProgressRef.current = []
     segmentWordOffsetsRef.current = []
     segmentAudioKeysRef.current = []
@@ -623,15 +628,23 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
    * Returns true if successful, false if not available.
    */
   const tryLoadFromManifest = async (signal: AbortSignal): Promise<boolean> => {
-    console.log('[manifest] Attempting to load manifest:', { useManifest, lessonSlug, canUsePregen })
-    if (!useManifest || !lessonSlug) {
-      console.log('[manifest] Skipped: useManifest or lessonSlug is falsy')
+    console.log('[manifest] Attempting to load manifest:', { useManifest, domain, topic, lessonSlug, canUsePregen })
+    // Can use either domain+topic (preferred) or legacy lessonSlug
+    if (!useManifest || (!lessonSlug && (!domain || !topic))) {
+      console.log('[manifest] Skipped: useManifest is falsy or missing domain/topic/lessonSlug')
       return false
     }
 
     try {
       const hobby = userInterests?.trim() || ''
-      const params = new URLSearchParams({ lessonId: lessonSlug })
+      const params = new URLSearchParams()
+      // Prefer domain+topic as the API will resolve the correct lessonId
+      if (domain && topic) {
+        params.set('domain', domain)
+        params.set('topic', topic)
+      } else if (lessonSlug) {
+        params.set('lessonId', lessonSlug)
+      }
       if (hobby) params.set('hobby', hobby)
 
       const url = `/api/topic-teacher/lesson-manifest?${params}`
@@ -657,15 +670,16 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       // Load audio URLs from manifest
       const urls: string[] = []
       const sources: Array<'pregen' | 'live'> = []
-      const counts: number[] = []
-      const offsets: number[] = []
+      const counts: number[] = [] // MFA-based counts
+      const regexCounts: number[] = [] // Regex-based counts matching spokenWords
+      const offsets: number[] = [] // Regex-based offsets for progress reporting
       const progressMaps: number[][] = []
       const durations: number[] = []
       const texts: string[] = []
       const startTimes: number[][] = []
       const endTimes: number[][] = []
       const segmentSectionIndices: number[] = []
-      let totalWords = 0
+      let totalWords = 0 // Regex-based total for progress reporting
       let totalDurationSecs = 0
 
       for (const chunk of manifest.chunks) {
@@ -694,10 +708,15 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           // Timing fetch failed, will use fallback
         }
 
-        const wordCount = timings.length > 0 ? timings.length : countWords(normalizeTextForReadAlong(chunk.text))
-        counts.push(wordCount)
+        // Calculate regex-based word count (must match spokenWords tokenization)
+        const regexWordCount = countWords(normalizeTextForReadAlong(chunk.text))
+        // MFA word count for timing-based calculations within a segment
+        const mfaWordCount = timings.length > 0 ? timings.length : regexWordCount
+        counts.push(mfaWordCount)
+        regexCounts.push(regexWordCount)
+        // Use regex-based counts for offsets to align with spokenWords/displayWords
         offsets.push(totalWords)
-        totalWords += wordCount
+        totalWords += regexWordCount
         texts.push(chunk.text)
         durations.push(chunk.duration)
         totalDurationSecs += chunk.duration
@@ -723,9 +742,10 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       setSegmentSources(sources)
       setSourceCounts({ pregen: urls.length, live: 0 })
 
-      segmentWordCountsRef.current = counts
+      segmentWordCountsRef.current = counts // MFA-based counts
+      segmentRegexWordCountsRef.current = regexCounts // Regex-based counts
       segmentWordProgressRef.current = progressMaps
-      segmentWordOffsetsRef.current = offsets
+      segmentWordOffsetsRef.current = offsets // Regex-based offsets
       segmentTextsRef.current = texts
       segmentDurationSecondsRef.current = durations
       segmentWordStartTimesRef.current = startTimes
@@ -787,6 +807,11 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       if (onWordProgress) {
         onWordProgress({ wordIndex: null, totalWords })
       }
+
+      // Emit manifest text for accurate spokenWords alignment
+      // Join with double newlines to match section boundaries
+      const manifestText = manifest.chunks.map(c => c.text).join('\n\n')
+      onManifestText?.(manifestText)
 
       return true
     } catch (err) {
@@ -968,7 +993,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         : null
 
     const progressMap = segmentWordProgressRef.current[currentIndex]
-    const localIndex =
+    // localIndex is in MFA space (based on timing data)
+    const mfaLocalIndex =
       endTimes && endTimes.length === currentCount
         ? findWordIndexForEndTimes(endTimes, audio.currentTime)
         : ratio === null
@@ -977,8 +1003,14 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
             ? findWordIndexForRatio(progressMap, ratio)
             : Math.min(currentCount - 1, Math.floor(ratio * currentCount))
 
+    // Scale from MFA space to regex space to align with spokenWords/displayWords
+    const regexCount = segmentRegexWordCountsRef.current[currentIndex] ?? 0
+    const scaledLocalIndex = currentCount > 0 && regexCount > 0
+      ? Math.min(regexCount - 1, Math.floor(mfaLocalIndex * regexCount / currentCount))
+      : mfaLocalIndex
+
     const offset = segmentWordOffsetsRef.current[currentIndex] ?? 0
-    const globalIndex = offset + localIndex
+    const globalIndex = offset + scaledLocalIndex
     if (lastWordIndexRef.current === globalIndex) return
     lastWordIndexRef.current = globalIndex
     setReadAlongWordIndex(globalIndex)
@@ -1249,6 +1281,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           total += count
         })
         segmentWordCountsRef.current = counts
+        segmentRegexWordCountsRef.current = counts // Same as MFA counts when no timings
         segmentWordProgressRef.current = progressMaps
         segmentWordOffsetsRef.current = offsets
         totalWordsRef.current = total
@@ -1264,6 +1297,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         }
       } else {
         segmentWordCountsRef.current = []
+        segmentRegexWordCountsRef.current = []
         segmentWordProgressRef.current = []
         segmentWordOffsetsRef.current = []
         totalWordsRef.current = 0

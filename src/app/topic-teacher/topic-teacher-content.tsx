@@ -104,13 +104,8 @@ type HastNode = {
 }
 
 const READ_ALONG_WORD_REGEX = /\d+(?:\.\d+)+|[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
-const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+const READ_ALONG_SKIP_TAGS = new Set(['pre', 'script', 'style', 'svg', 'code'])
 const READ_ALONG_SKIP_SELECTOR = Array.from(READ_ALONG_SKIP_TAGS).join(',')
-// Debug: Log skip tags on module load to verify deployment
-if (typeof window !== 'undefined') {
-  console.log('[read-along] Skip tags:', Array.from(READ_ALONG_SKIP_TAGS))
-  console.log('[read-along] Skip selector:', READ_ALONG_SKIP_SELECTOR)
-}
 const EPPP_WORD_REGEX = /\bE\.?P\.?P\.?P\.?\b/i
 const ACRONYM_WORD_REGEX = /^[A-Z]{2,5}$/
 const ACRONYM_VOWEL_REGEX = /[AEIOUY]/
@@ -653,11 +648,20 @@ export function TopicTeacherContent() {
   const navigationTimestampsRef = useRef<number[]>([])
   const sessionStartRef = useRef<number>(Date.now())
   const readAlongWordCounterRef = useRef(0)
+  // Manifest text is used when MFA audio is loaded - it's the source of truth for word alignment
+  const [manifestText, setManifestText] = useState<string | null>(null)
   const spokenWords = useMemo(() => {
-    if (!lessonMarkdown.trim()) return []
-    const speakable = normalizeTextForReadAlong(markdownToSpeakableText(lessonMarkdown))
+    // Use manifest text if available (ensures alignment with MFA audio timings)
+    const source = manifestText || lessonMarkdown
+    if (!source.trim()) return []
+    const speakable = normalizeTextForReadAlong(markdownToSpeakableText(source))
     const matches = speakable.match(READ_ALONG_WORD_REGEX)
     return matches ? matches.map((word) => normalizeReadAlongWord(word)) : []
+  }, [lessonMarkdown, manifestText])
+
+  // Clear manifest text when lesson changes so we don't use stale alignment data
+  useEffect(() => {
+    setManifestText(null)
   }, [lessonMarkdown])
 
   const syncReadAlongSpans = (options: { updateState?: boolean } = {}) => {
@@ -947,7 +951,7 @@ export function TopicTeacherContent() {
     const spans = syncReadAlongSpans({ updateState: true })
     activeWordIndexRef.current = null
     spans.forEach((span) => span.classList.remove('tt-word-active'))
-  }, [lessonMarkdown, readAlongEnabled])
+  }, [lessonMarkdown, readAlongEnabled, manifestText])
 
   const handleWordProgress = useCallback(
     (payload: { wordIndex: number | null; totalWords: number }) => {
@@ -3053,6 +3057,7 @@ export function TopicTeacherContent() {
                   : null
           }
           lessonSlug={domain && decodedTopic ? `${domain.toLowerCase().replace(/\s+/g, '-')}/${decodedTopic}` : null}
+          onManifestText={setManifestText}
         />
 
         {/* 3. Interest & Language Inputs */}
