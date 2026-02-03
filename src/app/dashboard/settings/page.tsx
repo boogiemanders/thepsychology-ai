@@ -53,6 +53,8 @@ import {
   Check,
   Info,
   Plus,
+  XCircle,
+  UserX,
 } from 'lucide-react'
 
 interface GraduateProgram {
@@ -83,6 +85,14 @@ export default function SettingsPage() {
     state: '',
   })
   const [addingProgram, setAddingProgram] = useState(false)
+  const [cancellingSubscription, setCancellingSubscription] = useState(false)
+  const [deletingAccount, setDeletingAccount] = useState(false)
+  const [deletingData, setDeletingData] = useState(false)
+  const [showCancelDialog, setShowCancelDialog] = useState(false)
+  const [showDeleteAccountDialog, setShowDeleteAccountDialog] = useState(false)
+  const [showDeleteDataDialog, setShowDeleteDataDialog] = useState(false)
+  const [actionSuccess, setActionSuccess] = useState<string | null>(null)
+  const [actionError, setActionError] = useState<string | null>(null)
 
   useEffect(() => {
     setMounted(true)
@@ -174,11 +184,85 @@ export default function SettingsPage() {
     alert('Data download feature coming soon. Contact support for a manual export.')
   }
 
+  const handleCancelSubscription = async () => {
+    setCancellingSubscription(true)
+    setActionError(null)
+    try {
+      const { data: session } = await supabase.auth.getSession()
+      const response = await fetch('/api/stripe/cancel-subscription', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${session?.session?.access_token}`,
+        },
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to cancel subscription')
+      }
+      setActionSuccess('Subscription will be cancelled at the end of your billing period.')
+      setShowCancelDialog(false)
+      setTimeout(() => setActionSuccess(null), 5000)
+    } catch (err) {
+      console.error('Failed to cancel subscription:', err)
+      setActionError(err instanceof Error ? err.message : 'Failed to cancel subscription')
+    } finally {
+      setCancellingSubscription(false)
+    }
+  }
+
+  const handleDeleteAccount = async () => {
+    setDeletingAccount(true)
+    setActionError(null)
+    try {
+      const { data: session } = await supabase.auth.getSession()
+      const response = await fetch('/api/account/delete', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${session?.session?.access_token}`,
+        },
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to delete account')
+      }
+      // Sign out and redirect
+      await supabase.auth.signOut()
+      router.push('/')
+    } catch (err) {
+      console.error('Failed to delete account:', err)
+      setActionError(err instanceof Error ? err.message : 'Failed to delete account')
+      setDeletingAccount(false)
+    }
+  }
+
   const handleDeleteData = async () => {
-    // TODO: Implement data deletion request
-    alert(
-      'To request data deletion, please contact support@thepsychologyai.com. Your request will be processed within 30 days.'
-    )
+    setDeletingData(true)
+    setActionError(null)
+    try {
+      const { data: session } = await supabase.auth.getSession()
+      const response = await fetch('/api/account/delete-data', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${session?.session?.access_token}`,
+        },
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to delete data')
+      }
+      setActionSuccess('Your data has been permanently deleted.')
+      setShowDeleteDataDialog(false)
+      setTimeout(() => {
+        setActionSuccess(null)
+        // Sign out after data deletion
+        supabase.auth.signOut()
+        router.push('/')
+      }, 2000)
+    } catch (err) {
+      console.error('Failed to delete data:', err)
+      setActionError(err instanceof Error ? err.message : 'Failed to delete data')
+      setDeletingData(false)
+    }
   }
 
   const handleAddProgram = async () => {
@@ -272,6 +356,20 @@ export default function SettingsPage() {
           </div>
         </div>
 
+        {/* Success/Error Messages */}
+        {actionSuccess && (
+          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 flex items-center gap-2">
+            <Check className="w-5 h-5 text-green-600 dark:text-green-400" />
+            <p className="text-sm text-green-800 dark:text-green-200">{actionSuccess}</p>
+          </div>
+        )}
+        {actionError && (
+          <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 flex items-center gap-2">
+            <XCircle className="w-5 h-5 text-red-600 dark:text-red-400" />
+            <p className="text-sm text-red-800 dark:text-red-200">{actionError}</p>
+          </div>
+        )}
+
         {/* Account Section */}
         <Card>
           <CardHeader>
@@ -295,6 +393,108 @@ export default function SettingsPage() {
               <Button variant="outline" size="sm" onClick={() => router.push('/pricing')}>
                 Manage Plan
               </Button>
+            </div>
+
+            {/* Cancel Subscription - only show for paid users */}
+            {userProfile?.subscription_tier && userProfile.subscription_tier !== 'free' && (
+              <>
+                <Separator />
+                <div className="flex items-center justify-between">
+                  <div>
+                    <Label className="text-sm font-medium">Cancel Subscription</Label>
+                    <p className="text-xs text-muted-foreground">
+                      Your access will continue until the end of your billing period.
+                    </p>
+                  </div>
+                  <AlertDialog open={showCancelDialog} onOpenChange={setShowCancelDialog}>
+                    <AlertDialogTrigger asChild>
+                      <Button variant="outline" size="sm" className="text-orange-500 hover:text-orange-600">
+                        <XCircle className="w-4 h-4 mr-2" />
+                        Cancel Subscription
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Cancel Your Subscription?</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Your subscription will remain active until the end of your current billing period.
+                          After that, you&apos;ll lose access to premium features but your study data will be preserved.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel disabled={cancellingSubscription}>Keep Subscription</AlertDialogCancel>
+                        <AlertDialogAction
+                          onClick={(e) => {
+                            e.preventDefault()
+                            handleCancelSubscription()
+                          }}
+                          className="bg-orange-500 hover:bg-orange-600"
+                          disabled={cancellingSubscription}
+                        >
+                          {cancellingSubscription ? (
+                            <>
+                              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                              Cancelling...
+                            </>
+                          ) : (
+                            'Cancel Subscription'
+                          )}
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                </div>
+              </>
+            )}
+
+            <Separator />
+
+            {/* Delete Account */}
+            <div className="flex items-center justify-between">
+              <div>
+                <Label className="text-sm font-medium">Delete Account</Label>
+                <p className="text-xs text-muted-foreground">
+                  Deactivate your account. Your study data will be preserved.
+                </p>
+              </div>
+              <AlertDialog open={showDeleteAccountDialog} onOpenChange={setShowDeleteAccountDialog}>
+                <AlertDialogTrigger asChild>
+                  <Button variant="outline" size="sm" className="text-red-500 hover:text-red-600">
+                    <UserX className="w-4 h-4 mr-2" />
+                    Delete Account
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Delete Your Account?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      This will permanently delete your account and cancel any active subscriptions.
+                      Your study data will be preserved in case you want to return later.
+                      To also delete your data, use &quot;Delete My Data&quot; instead.
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel disabled={deletingAccount}>Cancel</AlertDialogCancel>
+                    <AlertDialogAction
+                      onClick={(e) => {
+                        e.preventDefault()
+                        handleDeleteAccount()
+                      }}
+                      className="bg-red-500 hover:bg-red-600"
+                      disabled={deletingAccount}
+                    >
+                      {deletingAccount ? (
+                        <>
+                          <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                          Deleting...
+                        </>
+                      ) : (
+                        'Delete Account'
+                      )}
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </CardContent>
         </Card>
@@ -605,7 +805,7 @@ export default function SettingsPage() {
                   <Download className="w-4 h-4 mr-2" />
                   Download My Data
                 </Button>
-                <AlertDialog>
+                <AlertDialog open={showDeleteDataDialog} onOpenChange={setShowDeleteDataDialog}>
                   <AlertDialogTrigger asChild>
                     <Button variant="outline" size="sm" className="text-red-500 hover:text-red-600">
                       <Trash2 className="w-4 h-4 mr-2" />
@@ -614,20 +814,31 @@ export default function SettingsPage() {
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
-                      <AlertDialogTitle>Delete Your Data?</AlertDialogTitle>
+                      <AlertDialogTitle>Permanently Delete Your Data?</AlertDialogTitle>
                       <AlertDialogDescription>
-                        This will submit a request to delete all your data from our systems. This
-                        action cannot be undone. Your account will be deactivated and all study
-                        progress will be permanently removed within 30 days.
+                        This will permanently delete all your study data including quiz results,
+                        study priorities, feedback, and research profile. This action cannot be undone.
+                        Your account will also be signed out.
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                      <AlertDialogCancel>Cancel</AlertDialogCancel>
+                      <AlertDialogCancel disabled={deletingData}>Cancel</AlertDialogCancel>
                       <AlertDialogAction
-                        onClick={handleDeleteData}
+                        onClick={(e) => {
+                          e.preventDefault()
+                          handleDeleteData()
+                        }}
                         className="bg-red-500 hover:bg-red-600"
+                        disabled={deletingData}
                       >
-                        Request Deletion
+                        {deletingData ? (
+                          <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Deleting...
+                          </>
+                        ) : (
+                          'Delete All My Data'
+                        )}
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
