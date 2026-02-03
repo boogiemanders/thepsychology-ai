@@ -1095,7 +1095,7 @@ export default function DashboardPage() {
                           Submit anonymously
                         </label>
                         <p className="text-xs text-muted-foreground">
-                          Feedback is stored without your name or email.
+                          Feedback is stored without your name or email. I won&apos;t be able to respond or follow up.
                         </p>
                       </div>
                     </div>
