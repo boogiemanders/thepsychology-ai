@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
-import { Clock, BadgeCheck } from 'lucide-react'
+import { Clock, BadgeCheck, Grid2X2, Flag, Check, Circle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
@@ -11,6 +11,8 @@ import { Separator } from '@/components/ui/separator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { motion } from 'motion/react'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
 import { useAuth } from '@/context/auth-context'
@@ -92,6 +94,8 @@ export default function ExamGeneratorPage() {
   const [isSavingResults, setIsSavingResults] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
+  const [showQuestionNav, setShowQuestionNav] = useState(false)
+  const [isReviewMode, setIsReviewMode] = useState(false)
   const [shouldScrollToStep2, setShouldScrollToStep2] = useState(false)
   const diagnosticQuestionLabel = isFreeTier ? '≈60 questions' : '71 questions'
   const diagnosticHighlights = isFreeTier
@@ -785,6 +789,11 @@ export default function ExamGeneratorPage() {
     }
   }, [currentQuestion])
 
+  const goToQuestion = useCallback((index: number) => {
+    setCurrentQuestion(index)
+    setShowExplanation(false)
+  }, [])
+
   const handlePracticeCardClick = () => {
     if (isFreeTier) {
       setError(practiceLockMessage)
@@ -829,7 +838,8 @@ export default function ExamGeneratorPage() {
         case 'e':
           if (currentQuestion === questions.length - 1) {
             e.preventDefault()
-            handleEndExam()
+            setShowQuestionNav(true)
+            setIsReviewMode(true)
           }
           break
         default:
@@ -839,7 +849,7 @@ export default function ExamGeneratorPage() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isExamStarted, currentQuestion, questions.length, handleNext, handlePrevious, handleHighlightText, handleStrikethroughText, handleEndExam])
+  }, [isExamStarted, currentQuestion, questions.length, handleNext, handlePrevious, handleHighlightText, handleStrikethroughText])
 
 	// Initialize recommended defaults from exam history
 	useEffect(() => {
@@ -1733,7 +1743,7 @@ export default function ExamGeneratorPage() {
             <Progress value={((currentQuestion + 1) / questions.length) * 100} className="h-1" />
           </div>
 
-          {/* Highlight and Strikeout Buttons - Above Question */}
+          {/* Highlight, Strikeout, and Questions Navigator Buttons - Above Question */}
           <div className="flex gap-4 mb-4">
             <div className="flex flex-col gap-1">
               <Button
@@ -1760,6 +1770,18 @@ export default function ExamGeneratorPage() {
                 Strikeout
               </Button>
               <span className="text-xs text-muted-foreground pl-2" style={{ fontFamily: 'Tahoma' }}>{isMac ? 'Option' : 'Alt'} + S</span>
+            </div>
+            <div className="flex flex-col gap-1 ml-auto">
+              <Button
+                onClick={() => setShowQuestionNav(true)}
+                variant="outline"
+                size="sm"
+                className="rounded-none hover:bg-accent transition-colors"
+                style={{ fontFamily: 'Tahoma' }}
+              >
+                <Grid2X2 className="h-4 w-4 mr-2" />
+                Questions
+              </Button>
             </div>
           </div>
 
@@ -1920,13 +1942,13 @@ export default function ExamGeneratorPage() {
 
                 {currentQuestion === questions.length - 1 ? (
                   <Button
-                    onClick={handleEndExam}
+                    onClick={() => { setShowQuestionNav(true); setIsReviewMode(true) }}
                     disabled={isSavingResults}
                     className="min-w-[100px] rounded-none"
                     style={{ fontFamily: 'Tahoma' }}
                     title={`${isMac ? 'Option' : 'Alt'} + E`}
                   >
-                    {isSavingResults ? 'Saving...' : 'End Exam'}
+                    {isSavingResults ? 'Saving...' : 'Review'}
                   </Button>
                 ) : (
                   <Button
@@ -1943,6 +1965,76 @@ export default function ExamGeneratorPage() {
           </motion.div>
 
         </motion.div>
+
+        {/* Question Navigator Sheet */}
+        <Sheet open={showQuestionNav} onOpenChange={(open) => {
+          setShowQuestionNav(open)
+          if (!open) setIsReviewMode(false)
+        }}>
+          <SheetContent side="right" className="w-[320px] p-0 flex flex-col">
+            <SheetHeader className="p-4 pb-2 border-b">
+              <SheetTitle style={{ fontFamily: 'Tahoma' }}>Questions</SheetTitle>
+            </SheetHeader>
+            <ScrollArea className="flex-1 p-4">
+              <div className="grid grid-cols-4 gap-2">
+                {questions.map((_, index) => {
+                  const isAnswered = selectedAnswers[index] !== undefined
+                  const isFlagged = flaggedQuestions[index]
+                  const isCurrent = index === currentQuestion
+
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => goToQuestion(index)}
+                      className={`
+                        relative flex flex-col items-center justify-center p-2 h-14
+                        border rounded-sm text-sm transition-colors
+                        ${isCurrent
+                          ? 'border-foreground bg-accent ring-2 ring-foreground ring-offset-1'
+                          : 'border-border hover:bg-accent/50'}
+                      `}
+                      style={{ fontFamily: 'Tahoma' }}
+                    >
+                      <span className="font-medium">{index + 1}</span>
+                      <div className="flex items-center gap-0.5 mt-0.5">
+                        {isAnswered ? (
+                          <Check className="h-3 w-3 text-green-600" />
+                        ) : (
+                          <Circle className="h-3 w-3 text-muted-foreground" />
+                        )}
+                        {isFlagged && (
+                          <Flag className="h-3 w-3 text-orange-500 fill-orange-500" />
+                        )}
+                      </div>
+                    </button>
+                  )
+                })}
+              </div>
+            </ScrollArea>
+            <div className="p-4 border-t bg-muted/30">
+              <div className="text-sm text-muted-foreground mb-3" style={{ fontFamily: 'Tahoma' }}>
+                {Object.keys(selectedAnswers).length} answered • {questions.length - Object.keys(selectedAnswers).length} unanswered
+                {Object.values(flaggedQuestions).filter(Boolean).length > 0 && (
+                  <> • {Object.values(flaggedQuestions).filter(Boolean).length} flagged</>
+                )}
+              </div>
+              {isReviewMode && (
+                <Button
+                  onClick={() => {
+                    setShowQuestionNav(false)
+                    setIsReviewMode(false)
+                    handleEndExam()
+                  }}
+                  disabled={isSavingResults}
+                  className="w-full rounded-none"
+                  style={{ fontFamily: 'Tahoma' }}
+                >
+                  {isSavingResults ? 'Saving...' : 'Submit Exam'}
+                </Button>
+              )}
+            </div>
+          </SheetContent>
+        </Sheet>
 
         {/* Pause Modal Overlay - Outside the blurred container */}
         {isPaused && (
