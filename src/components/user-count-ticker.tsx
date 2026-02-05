@@ -60,7 +60,7 @@ export function UserCountTicker({ className }: { className?: string }) {
 
   return (
     <p className={className}>
-      <NumberTicker value={displayCount} startValue={0} className="font-bold text-primary" />+ postdocs studying
+      Join <NumberTicker value={displayCount} startValue={0} className="font-bold" />+ postdocs studying to
     </p>
   )
 }

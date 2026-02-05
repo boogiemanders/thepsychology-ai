@@ -90,7 +90,7 @@ export const siteConfig = {
     },
   },
   companyShowcase: {
-    title: "By psychologists from (not affiliated):",
+    title: "Built by psychologists, neuroscientists & researchers from (not affiliated with):",
     subtitle: null,
     companyLogos: [
       { id: 1, name: "UCLA-David Geffen School of Medicine", src: "/dgsom.png", member: "anders", invert: true, width: 160 },

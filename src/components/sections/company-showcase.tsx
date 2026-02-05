@@ -4,7 +4,9 @@ import { siteConfig } from "@/lib/config"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { UserCountTicker } from "@/components/user-count-ticker"
+import { TextRotate } from "@/components/ui/text-rotate"
+
+const ROLES = ["psychologists", "researchers", "engineers"]
 
 export function CompanyShowcase() {
   const { companyShowcase, hero } = siteConfig
@@ -40,15 +42,8 @@ export function CompanyShowcase() {
           </Link>
         </div>
 
-        <div className="text-center mt-8">
-          <UserCountTicker className="text-white text-xl md:text-2xl font-medium" />
-        </div>
-
-        <p className="text-center text-white text-xl md:text-2xl font-medium mt-4">
-          <span className="block">{companyShowcase.title}</span>
-          {companyShowcase.subtitle ? (
-            <span className="block">{companyShowcase.subtitle}</span>
-          ) : null}
+        <p className="text-center text-white text-xl md:text-2xl font-medium">
+          Built by <TextRotate words={ROLES} className="font-bold" /> from (not affiliated with):
         </p>
       </div>
 
