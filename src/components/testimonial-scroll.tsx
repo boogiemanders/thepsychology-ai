@@ -21,7 +21,7 @@ export const TestimonialCard = ({
 }: TestimonialCardProps) => (
   <div
     className={cn(
-      "flex cursor-pointer break-inside-avoid flex-col items-start justify-between gap-3 rounded-xl p-3",
+      "flex cursor-pointer break-inside-avoid flex-col items-start justify-between gap-3 rounded-xl p-3 overflow-hidden",
       // light styles
       "bg-accent",
       "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.04),0px_8px_12px_-4px_rgba(15,12,12,0.08),0px_1px_2px_0px_rgba(15,12,12,0.10)] dark:shadow-[0px_0px_0px_1px_rgba(250,250,250,0.1),0px_0px_0px_1px_#18181B,0px_8px_12px_-4px_rgba(15,12,12,0.3),0px_1px_2px_0px_rgba(15,12,12,0.3)]",
@@ -43,9 +43,9 @@ export const TestimonialCard = ({
         )}
       />
 
-      <div>
-        <p className="font-medium text-primary/90 text-xs">{name}</p>
-        <p className="text-xs font-normal text-primary/50">{role}</p>
+      <div className="min-w-0 overflow-hidden">
+        <p className="font-medium text-primary/90 text-xs truncate">{name}</p>
+        <p className="text-xs font-normal text-primary/50 truncate">{role}</p>
       </div>
     </div>
   </div>
@@ -78,7 +78,7 @@ export function SocialProofTestimonials({
             return (
               <div
                 key={idx}
-                className={`${widthClass} h-[180px] px-1 flex justify-center`}
+                className={`${widthClass} h-[200px] px-1 flex justify-center`}
               >
                 <TestimonialCard {...card} className={cardClassName} />
               </div>

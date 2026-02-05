@@ -167,8 +167,11 @@ export const siteConfig = {
     ],
   },
   quoteSection: {
-    quote:
-      "I poured $1k and a month into studying and passed on my first try. This is the program that gives you everything I did and wish I had for a fraction of the time, cost, and stress.",
+    quote: (
+      <>
+        I poured $1k and a month into studying and passed on my first try. This is the program that gives you everything I did and wish I had for a <Highlight>fraction of the time, cost, and stress</Highlight>.
+      </>
+    ),
     author: {
       name: "Anders H. Chan, Psy.D.",
       role: "Founder - thePsychology.ai",
@@ -230,7 +233,40 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          thePsychology.ai is truly <Highlight className="text-brand-olive dark:text-brand-lavender-gray">one-of-a-kind</Highlight>. It's an <Highlight className="text-brand-olive dark:text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel engaging and manageable, and it clearly reflects a design philosophy of being <Highlight className="text-brand-olive dark:text-brand-lavender-gray">'for the people, by the people'</Highlight>.
+          thePsychology.ai is truly <Highlight className="text-brand-olive dark:text-brand-lavender-gray">one-of-a-kind</Highlight>. It's an <Highlight className="text-brand-olive dark:text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel <Highlight className="text-brand-olive dark:text-brand-lavender-gray">engaging</Highlight> and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">manageable</Highlight>, and it clearly reflects a design philosophy of being <Highlight className="text-brand-olive dark:text-brand-lavender-gray">'for the people, by the people'</Highlight>.
+        </p>
+      ),
+    },
+    {
+      id: "7",
+      name: "Lorin Singh, PsyD",
+      role: "Psychologist",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          I used the program more so for the assessments and stats section. It was pretty <Highlight className="text-brand-soft-blue dark:text-brand-coral">helpful</Highlight> and had <Highlight className="text-brand-soft-blue dark:text-brand-coral">information that I didn't see in Psych Prep</Highlight>. I did like that I was able to <Highlight className="text-brand-soft-blue dark:text-brand-coral">ask questions directly</Highlight> underneath the chapter <Highlight className="text-brand-soft-blue dark:text-brand-coral">for explanations</Highlight>.
+        </p>
+      ),
+    },
+    {
+      id: "8",
+      name: "Anonymous",
+      role: "Postdoc",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          thepsychology.ai is <Highlight className="text-brand-olive dark:text-brand-lavender-gray">insanely impressive work</Highlight>! I'm taking my EPPP next month and have been struggling to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
+        </p>
+      ),
+    },
+    {
+      id: "9",
+      name: "Anonymous",
+      role: "User",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          I came here ready to <Highlight className="text-brand-soft-blue dark:text-brand-coral">recommend this program</Highlight> and I signed up for it myself. Out of all the programs I looked at, this one comes <Highlight className="text-brand-soft-blue dark:text-brand-coral">the closest to how the EPPP actually words its questions</Highlight>. My test didn't have any straight definition questions, it was all application based, and <Highlight className="text-brand-soft-blue dark:text-brand-coral">this program is set up the same way</Highlight>.
         </p>
       ),
     },
