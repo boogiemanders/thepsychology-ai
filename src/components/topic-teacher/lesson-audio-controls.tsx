@@ -13,9 +13,10 @@ type WordTiming = { word: string; start: number; end: number }
 type ManifestChunk = {
   chunkId: string
   text: string
-  audioUrl: string
-  timingsUrl: string
-  duration: number
+  audioUrl: string | null // null if needs live generation
+  timingsUrl: string | null // null if needs live generation
+  duration: number | null // null if needs live generation
+  needsLiveGeneration?: boolean // true for metaphors without hobby variant
   // Section navigation info
   sectionIdx: number
   sectionTitle: string
@@ -625,6 +626,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
   /**
    * Try to fetch and use the MFA manifest for this lesson.
+   * Supports hybrid loading: R2 audio for stable chunks and metaphors with hobby variants,
+   * live generation for metaphors without hobby variants.
    * Returns true if successful, false if not available.
    */
   const tryLoadFromManifest = async (signal: AbortSignal): Promise<boolean> => {
@@ -667,80 +670,162 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
       manifestDataRef.current = manifest
 
-      // Load audio URLs from manifest
-      const urls: string[] = []
-      const sources: Array<'pregen' | 'live'> = []
-      const counts: number[] = [] // MFA-based counts
-      const regexCounts: number[] = [] // Regex-based counts matching spokenWords
-      const offsets: number[] = [] // Regex-based offsets for progress reporting
-      const progressMaps: number[][] = []
-      const durations: number[] = []
-      const texts: string[] = []
-      const startTimes: number[][] = []
-      const endTimes: number[][] = []
-      const segmentSectionIndices: number[] = []
-      let totalWords = 0 // Regex-based total for progress reporting
-      let totalDurationSecs = 0
+      // Arrays for all chunks (will be filled in order)
+      const urls: string[] = new Array(manifest.chunks.length).fill('')
+      const sources: Array<'pregen' | 'live'> = new Array(manifest.chunks.length).fill('pregen')
+      const counts: number[] = new Array(manifest.chunks.length).fill(0) // MFA-based counts
+      const regexCounts: number[] = new Array(manifest.chunks.length).fill(0) // Regex-based counts
+      const progressMaps: number[][] = new Array(manifest.chunks.length).fill([])
+      const durations: number[] = new Array(manifest.chunks.length).fill(0)
+      const texts: string[] = new Array(manifest.chunks.length).fill('')
+      const startTimes: number[][] = new Array(manifest.chunks.length).fill([])
+      const endTimes: number[][] = new Array(manifest.chunks.length).fill([])
+      const segmentSectionIndices: number[] = new Array(manifest.chunks.length).fill(0)
+      const audioKeys: Array<string | null> = new Array(manifest.chunks.length).fill(null)
 
-      for (const chunk of manifest.chunks) {
-        // Fetch audio blob for each chunk
+      // Track chunks needing live generation
+      const chunksNeedingLive: Array<{ index: number; chunk: ManifestChunk }> = []
+      let pregenCount = 0
+      let liveCount = 0
+
+      // First pass: Load R2 chunks, identify chunks needing live generation
+      for (let i = 0; i < manifest.chunks.length; i++) {
+        const chunk = manifest.chunks[i]
+        segmentSectionIndices[i] = chunk.sectionIdx ?? 0
+        texts[i] = chunk.text
+
+        if (chunk.needsLiveGeneration || !chunk.audioUrl) {
+          // This chunk needs live generation (metaphor without hobby variant)
+          chunksNeedingLive.push({ index: i, chunk })
+          sources[i] = 'live'
+          liveCount++
+
+          // Pre-compute word counts for progress tracking
+          const regexWordCount = countWords(normalizeTextForReadAlong(chunk.text))
+          counts[i] = regexWordCount
+          regexCounts[i] = regexWordCount
+          progressMaps[i] = computeWordProgressMap(normalizeTextForReadAlong(chunk.text))
+          // Duration will be set after live generation
+          durations[i] = 0
+          continue
+        }
+
+        // Fetch audio blob from R2
         const audioResponse = await fetch(chunk.audioUrl, { signal })
         if (!audioResponse.ok) {
           console.warn(`[manifest] Failed to fetch audio: ${chunk.audioUrl}`)
           return false
         }
         const blob = await audioResponse.blob()
-        const url = URL.createObjectURL(blob)
-        urls.push(url)
-        sources.push('pregen')
+        urls[i] = URL.createObjectURL(blob)
+        sources[i] = 'pregen'
+        pregenCount++
 
         // Fetch timings for this chunk
         let timings: Array<{ word: string; start: number; end: number }> = []
-        try {
-          const timingsResponse = await fetch(chunk.timingsUrl, { signal })
-          if (timingsResponse.ok) {
-            const timingsData = await timingsResponse.json()
-            if (Array.isArray(timingsData.words)) {
-              timings = timingsData.words
+        if (chunk.timingsUrl) {
+          try {
+            const timingsResponse = await fetch(chunk.timingsUrl, { signal })
+            if (timingsResponse.ok) {
+              const timingsData = await timingsResponse.json()
+              if (Array.isArray(timingsData.words)) {
+                timings = timingsData.words
+              }
             }
+          } catch {
+            // Timing fetch failed, will use fallback
           }
-        } catch {
-          // Timing fetch failed, will use fallback
         }
 
         // Calculate regex-based word count (must match spokenWords tokenization)
         const regexWordCount = countWords(normalizeTextForReadAlong(chunk.text))
         // MFA word count for timing-based calculations within a segment
         const mfaWordCount = timings.length > 0 ? timings.length : regexWordCount
-        counts.push(mfaWordCount)
-        regexCounts.push(regexWordCount)
-        // Use regex-based counts for offsets to align with spokenWords/displayWords
-        offsets.push(totalWords)
-        totalWords += regexWordCount
-        texts.push(chunk.text)
-        durations.push(chunk.duration)
-        totalDurationSecs += chunk.duration
+        counts[i] = mfaWordCount
+        regexCounts[i] = regexWordCount
+        durations[i] = chunk.duration ?? 0
 
         // Use actual timings if available
         if (timings.length > 0) {
-          startTimes.push(timings.map((t) => t.start))
-          endTimes.push(timings.map((t) => t.end))
-          progressMaps.push([]) // Not needed when we have actual timings
+          startTimes[i] = timings.map((t) => t.start)
+          endTimes[i] = timings.map((t) => t.end)
+          progressMaps[i] = [] // Not needed when we have actual timings
         } else {
-          startTimes.push([])
-          endTimes.push([])
-          progressMaps.push(computeWordProgressMap(normalizeTextForReadAlong(chunk.text)))
+          startTimes[i] = []
+          endTimes[i] = []
+          progressMaps[i] = computeWordProgressMap(normalizeTextForReadAlong(chunk.text))
+        }
+      }
+
+      console.log(`[manifest] Loaded ${pregenCount} R2 chunks, ${liveCount} need live generation`)
+
+      // Second pass: Generate live audio for chunks that need it
+      if (chunksNeedingLive.length > 0) {
+        console.log('[manifest] Generating live audio for personalized metaphors...')
+        setProgress({ current: 0, total: chunksNeedingLive.length })
+
+        for (let j = 0; j < chunksNeedingLive.length; j++) {
+          if (signal.aborted) {
+            throw new DOMException('Aborted', 'AbortError')
+          }
+
+          const { index, chunk } = chunksNeedingLive[j]
+          setProgress({ current: j, total: chunksNeedingLive.length })
+
+          const preparedText = prepareTextForTts(chunk.text)
+
+          // Generate live audio via the audio API
+          const audioResponse = await fetch('/api/topic-teacher/audio', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            signal,
+            body: JSON.stringify({
+              text: preparedText,
+              voice: DEFAULT_VOICE,
+              format: 'mp3',
+              cacheable: false, // Personalized content shouldn't be cached
+              userId,
+              topic,
+              domain,
+              languagePreference,
+            }),
+          })
+
+          if (!audioResponse.ok) {
+            const errorMsg = await audioResponse.text().catch(() => 'Failed to generate audio')
+            console.warn(`[manifest] Failed to generate live audio for chunk ${index}:`, errorMsg)
+            return false
+          }
+
+          const blob = await audioResponse.blob()
+          urls[index] = URL.createObjectURL(blob)
+          audioKeys[index] = audioResponse.headers.get('X-Topic-Teacher-Audio-Key')?.trim() || null
+
+          // Load duration for this live-generated chunk
+          const audioDuration = await loadAudioDurationSeconds(urls[index], signal)
+          durations[index] = Number.isFinite(audioDuration) ? audioDuration : 0
         }
 
-        // Track section info for navigation
-        segmentSectionIndices.push(chunk.sectionIdx ?? 0)
+        setProgress({ current: chunksNeedingLive.length, total: chunksNeedingLive.length })
+      }
+
+      // Calculate offsets and totals
+      const offsets: number[] = []
+      let totalWords = 0
+      let totalDurationSecs = 0
+      for (let i = 0; i < manifest.chunks.length; i++) {
+        offsets.push(totalWords)
+        totalWords += regexCounts[i]
+        totalDurationSecs += durations[i]
       }
 
       // Update all the state and refs
       audioUrlsRef.current = urls
       setAudioUrls(urls)
       setSegmentSources(sources)
-      setSourceCounts({ pregen: urls.length, live: 0 })
+      setSourceCounts({ pregen: pregenCount, live: liveCount })
 
       segmentWordCountsRef.current = counts // MFA-based counts
       segmentRegexWordCountsRef.current = regexCounts // Regex-based counts
@@ -750,6 +835,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       segmentDurationSecondsRef.current = durations
       segmentWordStartTimesRef.current = startTimes
       segmentWordEndTimesRef.current = endTimes
+      segmentAudioKeysRef.current = audioKeys
       totalWordsRef.current = totalWords
       totalDurationSecondsRef.current = totalDurationSecs
 
@@ -1659,7 +1745,9 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const sourceTotal = sourceCounts.pregen + sourceCounts.live
   const sourceText =
     usedManifest
-      ? `Audio source: MFA manifest (${sourceCounts.pregen} chunks)`
+      ? sourceCounts.live > 0
+        ? `Audio source: MFA manifest (${sourceCounts.pregen} R2 + ${sourceCounts.live} live personalized)`
+        : `Audio source: MFA manifest (${sourceCounts.pregen} chunks)`
       : sourceTotal > 0
         ? `Audio source: ${sourceCounts.pregen} pre-generated · ${sourceCounts.live} live`
         : null
@@ -1842,7 +1930,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     updateWordProgressFromAudio()
   }
 
-  const currentSegmentSource = hasAudio && !continuousModeActive ? segmentSources[currentIndex] : null
+  // Get current segment source - also include in continuous mode when using manifest with hybrid audio
+  const currentSegmentSource = hasAudio ? segmentSources[currentIndex] ?? null : null
   const showStickyBar = hasAudio || shouldAutoLoadPregenFullLesson
   const showGenerateButton = !shouldAutoLoadPregenFullLesson || voice !== DEFAULT_VOICE || interestsActive
   const showRegenerateButton = hasAudio && (interestsActive || voice !== DEFAULT_VOICE || !isEnglishish(languagePreference))
@@ -2034,13 +2123,26 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                 )}
 
                 {usedManifest ? (
-                  <span
-                    className="hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium border-blue-400/40 text-blue-500"
-                    title="Using MFA-aligned pre-generated audio with perfect word synchronization."
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
-                    MFA
-                  </span>
+                  // Manifest mode: show MFA badge with hybrid indicator if there are live chunks
+                  sourceCounts.live > 0 ? (
+                    // Hybrid mode: MFA + Live
+                    <span
+                      className="hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium border-purple-400/40 text-purple-500"
+                      title={`Hybrid audio: ${sourceCounts.pregen} MFA chunks + ${sourceCounts.live} live personalized chunks. Current: ${currentSegmentSource === 'pregen' ? 'MFA' : 'Live'}`}
+                    >
+                      <span className={`h-1.5 w-1.5 rounded-full ${currentSegmentSource === 'pregen' ? 'bg-blue-500' : 'bg-amber-500'}`} />
+                      MFA+Live
+                    </span>
+                  ) : (
+                    // Pure MFA mode
+                    <span
+                      className="hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium border-[color:color-mix(in_srgb,var(--brand-olive)_40%,transparent)] text-brand-olive"
+                      title="Using MFA-aligned pre-generated audio with perfect word synchronization."
+                    >
+                      <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-olive)]" />
+                      MFA
+                    </span>
+                  )
                 ) : currentSegmentSource && (
                   <span
                     className={`hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${
@@ -2145,8 +2247,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
             )}
 
             {/* Testing banner */}
-            <div className="mt-2 px-2 py-1 text-xs text-center text-amber-600 bg-amber-500/10 border border-amber-500/30 rounded">
-              Audio sync is being tested. Please report any issues!
+            <div className="mt-2 px-2 py-1 text-xs text-center brand-olive-pill rounded">
+              Audio sync finally updated! Please report any issues
             </div>
           </div>
         </div>
