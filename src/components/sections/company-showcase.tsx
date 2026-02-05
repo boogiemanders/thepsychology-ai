@@ -2,7 +2,9 @@
 
 import { siteConfig } from "@/lib/config"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
+import { UserCountTicker } from "@/components/user-count-ticker"
 
 export function CompanyShowcase() {
   const { companyShowcase, hero } = siteConfig
@@ -38,7 +40,11 @@ export function CompanyShowcase() {
           </Link>
         </div>
 
-        <p className="text-center text-muted-foreground font-medium mt-6">
+        <div className="text-center mt-8">
+          <UserCountTicker className="text-muted-foreground text-sm" />
+        </div>
+
+        <p className="text-center text-muted-foreground font-medium mt-4">
           <span className="block">{companyShowcase.title}</span>
           {companyShowcase.subtitle ? (
             <span className="block">{companyShowcase.subtitle}</span>
@@ -47,7 +53,7 @@ export function CompanyShowcase() {
       </div>
 
       <div className="grid w-full max-w-7xl grid-cols-2 md:grid-cols-4 items-center justify-center z-20">
-        {companyShowcase.companyLogos.map((logo: { id: number; name: string; src: string | null; member?: string }) => (
+        {companyShowcase.companyLogos.map((logo: { id: number; name: string; src: string | null; member?: string; invert?: boolean; width?: number }) => (
           <Link
             href={logo.member ? `/portfolio?member=${logo.member}` : "/portfolio"}
             key={logo.id}
@@ -57,9 +63,19 @@ export function CompanyShowcase() {
               className="transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)]
                          translate-y-0 group-hover:-translate-y-4 flex items-center justify-center w-full h-full"
             >
-              <span className="text-xs md:text-sm font-medium tracking-wide text-primary/80">
-                {logo.name}
-              </span>
+              {logo.src ? (
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={logo.width || 120}
+                  height={logo.width ? Math.round(logo.width / 3) : 40}
+                  className={`object-contain opacity-80 group-hover:opacity-100 transition-opacity ${logo.invert ? "brightness-0 invert" : ""}`}
+                />
+              ) : (
+                <span className="text-xs md:text-sm font-medium tracking-wide text-primary/80">
+                  {logo.name}
+                </span>
+              )}
             </div>
 
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100
