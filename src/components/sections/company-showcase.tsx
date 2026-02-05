@@ -27,7 +27,7 @@ export function CompanyShowcase() {
   return (
     <section id="company" className="flex flex-col items-center justify-center gap-10 py-10 pt-20 w-full relative px-6">
       <div className="flex flex-col items-center gap-3">
-        <div className="flex items-center gap-2.5 flex-wrap justify-center">
+        <div className="flex items-center gap-2.5 flex-wrap justify-center -mt-6">
           <button
             onClick={handleStartFree}
             className="brand-soft-blue-bg h-9 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-white w-32 px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.35),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-[#4e7ba4] hover:brightness-95 transition-all ease-out active:scale-95 focus-visible:outline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/70"
@@ -42,7 +42,7 @@ export function CompanyShowcase() {
           </Link>
         </div>
 
-        <p className="text-center text-white text-xl md:text-2xl font-medium">
+        <p className="text-center text-white text-base md:text-lg font-medium mt-6">
           Built by <TextRotate words={ROLES} className="font-bold" /> from (not affiliated with):
         </p>
       </div>

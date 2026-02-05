@@ -17,7 +17,7 @@ export function HeroSection() {
             </p>
           ) : null}
           <div className="flex flex-col items-center justify-center gap-2">
-            <UserCountTicker className="text-white text-xl md:text-2xl font-medium" />
+            <UserCountTicker className="text-white text-base md:text-lg font-medium" />
             {hero.title ? (
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center text-white">
                 {hero.title}
