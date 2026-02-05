@@ -222,9 +222,11 @@ export async function GET(request: NextRequest) {
     }
 
     // Active users section
+    const EXCLUDED_EMAILS = ['chanders0@yahoo.com']
     const activeUsersList = Object.values(userActivityMap)
       .sort((a, b) => b.totalSeconds - a.totalSeconds)
       .filter(u => !newSignups?.some(s => s.email === u.email)) // Exclude new signups from active list
+      .filter(u => !EXCLUDED_EMAILS.includes(u.email)) // Exclude test accounts
 
     if (activeUsersList.length > 0) {
       messageParts.push('')
