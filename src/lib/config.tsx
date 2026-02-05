@@ -290,7 +290,7 @@ export const siteConfig = {
         id: 3,
         question: "Can I schedule my EPPP exam through an online portal?",
         answer:
-          "In most jurisdictions, yes—after your licensing board authorizes you, scheduling is typically done online through the exam delivery vendor (commonly Pearson VUE). Requirements vary by jurisdiction, so confirm with your board and ASPPB.",
+          "In most jurisdictions, yes. After your licensing board authorizes you, scheduling is typically done online through the exam delivery vendor (commonly Pearson VUE). Requirements vary by jurisdiction, so confirm with your board and ASPPB.",
       },
       {
         id: 4,
@@ -302,7 +302,7 @@ export const siteConfig = {
         id: 5,
         question: "How long is the EPPP exam and what format does it follow?",
         answer:
-          "ASPPB lists Part 1 as: Questions: 225 multiple-choice questions (175 scored, 50 pilot items). Time Allotment: 4 hours and 15 minutes. Administration: computer-based exam administered by Pearson VUE. Part 2 (Skills) uses applied scenarios/vignettes. Requirements can vary by jurisdiction—always verify the current requirements before test day.",
+          "ASPPB lists Part 1 as: Questions: 225 multiple-choice questions (175 scored, 50 pilot items). Time Allotment: 4 hours and 15 minutes. Administration: computer-based exam administered by Pearson VUE. Part 2 (Skills) uses applied scenarios/vignettes. Requirements can vary by jurisdiction, so always verify the current requirements before test day.",
       },
       {
         id: 6,
@@ -344,7 +344,7 @@ export const siteConfig = {
         id: 12,
         question: "What are the top-rated mobile apps for EPPP exam preparation?",
         answer:
-          "Many candidates use top-rated study apps like Anki, Quizlet, or Brainscape for spaced repetition, then pair that with an EPPP question bank for timed practice. thePsychology.ai is mobile-friendly, so you can study on your phone like an app—and we’ll be developing a dedicated mobile app.",
+          "Many candidates use top-rated study apps like Anki, Quizlet, or Brainscape for spaced repetition, then pair that with an EPPP question bank for timed practice. thePsychology.ai is mobile-friendly, so you can study on your phone like an app, and we'll be developing a dedicated mobile app.",
       },
       {
         id: 13,
