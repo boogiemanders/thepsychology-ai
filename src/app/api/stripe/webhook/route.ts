@@ -22,7 +22,7 @@ const PRICE_TO_TIER: Record<string, 'pro' | 'pro_coaching'> = {
   'price_1SWv6IAHUPMmLYsCa98Z3Po6': 'pro_coaching',
   // Test price IDs
   'price_1SaZCyAHUPMmLYsChA0LhNDs': 'pro',
-  'price_1SaZDyAHUPMmLYsCpskaQ7eU': 'pro_coaching',
+  'price_1SxOOQAHUPMmLYsCIsVx16ln': 'pro_coaching',
 }
 
 async function updateUserSubscription(

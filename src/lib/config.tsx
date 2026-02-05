@@ -198,16 +198,16 @@ export const siteConfig = {
       {
         name: "Pro + Coaching",
         href: "/#get-started",
-        price: "$1000",
+        price: "$500",
         period: "month",
-        yearlyPrice: "$10000",
+        yearlyPrice: "$5000",
         features: ["Includes: Everything in Pro", "Coach: 2× 45-min calls/month", "Plan: Custom study roadmap", "Support: Priority response", "Compare: $900 over 12 months → pass in 1"],
         featuresLabel: "Everything in Pro plus:",
-        description: "2 calls/month with Dr. Chan (scored 588 on first attempt).",
+        description: "2 calls/month with Dr. Chan.",
         buttonText: "Get Started",
         buttonColor: "bg-primary text-primary-foreground",
         isPopular: false,
-        displayPrice: "$1000/month",
+        displayPrice: "$500/month",
       },
     ],
   },
@@ -237,17 +237,6 @@ export const siteConfig = {
       ),
     },
     {
-      id: "7",
-      name: "Lorin Singh, PsyD",
-      role: "Psychologist",
-      img: "/images/user-icon.svg",
-      description: (
-        <p>
-          I used the program more so for the assessments and stats section. It was pretty <Highlight className="text-brand-soft-blue dark:text-brand-coral">helpful</Highlight> and had <Highlight className="text-brand-soft-blue dark:text-brand-coral">information that I didn't see in Psych Prep</Highlight>. I did like that I was able to <Highlight className="text-brand-soft-blue dark:text-brand-coral">ask questions directly</Highlight> underneath the chapter <Highlight className="text-brand-soft-blue dark:text-brand-coral">for explanations</Highlight>.
-        </p>
-      ),
-    },
-    {
       id: "8",
       name: "Anonymous",
       role: "Postdoc",
@@ -255,6 +244,17 @@ export const siteConfig = {
       description: (
         <p>
           thepsychology.ai is <Highlight className="text-brand-olive dark:text-brand-lavender-gray">insanely impressive work</Highlight>! I'm taking my EPPP next month and have been struggling to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
+        </p>
+      ),
+    },
+    {
+      id: "7",
+      name: "Lorin Singh, PsyD",
+      role: "Psychologist",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          I used the program more so for the assessments and stats section. It was pretty <Highlight className="text-brand-soft-blue dark:text-brand-coral">helpful</Highlight> and had <Highlight className="text-brand-soft-blue dark:text-brand-coral">information that I didn't see in Psych Prep</Highlight>. I did like that I was able to <Highlight className="text-brand-soft-blue dark:text-brand-coral">ask questions directly</Highlight> underneath the chapter <Highlight className="text-brand-soft-blue dark:text-brand-coral">for explanations</Highlight>.
         </p>
       ),
     },
