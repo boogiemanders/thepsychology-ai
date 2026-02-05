@@ -72,10 +72,12 @@ export function parseChunksFromSection(
   while ((match = metaphorRegex.exec(content)) !== null) {
     const stableText = content.slice(lastIndex, match.index).trim()
     if (stableText) {
+      // Prepend section title to the first chunk so audio includes headers
+      const textWithHeader = isFirst ? `${sectionTitle}. ${stableText}` : stableText
       chunks.push({
         id: `s${String(++counters.stable).padStart(4, '0')}`,
         type: 'stable',
-        text: stableText,
+        text: textWithHeader,
         index: -1, // Will be assigned later
         sectionIdx,
         sectionTitle,
@@ -86,10 +88,12 @@ export function parseChunksFromSection(
 
     const metaphorText = match[1].trim()
     if (metaphorText) {
+      // Prepend section title to the first chunk so audio includes headers
+      const textWithHeader = isFirst ? `${sectionTitle}. ${metaphorText}` : metaphorText
       chunks.push({
         id: `m${String(++counters.metaphor).padStart(4, '0')}`,
         type: 'metaphor',
-        text: metaphorText,
+        text: textWithHeader,
         index: -1, // Will be assigned later
         sectionIdx,
         sectionTitle,
@@ -102,10 +106,12 @@ export function parseChunksFromSection(
 
   const remaining = content.slice(lastIndex).trim()
   if (remaining) {
+    // Prepend section title to the first chunk so audio includes headers
+    const textWithHeader = isFirst ? `${sectionTitle}. ${remaining}` : remaining
     chunks.push({
       id: `s${String(++counters.stable).padStart(4, '0')}`,
       type: 'stable',
-      text: remaining,
+      text: textWithHeader,
       index: -1, // Will be assigned later
       sectionIdx,
       sectionTitle,

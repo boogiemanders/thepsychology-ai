@@ -10,15 +10,23 @@
  * 6. Converts WAV to MP3
  * 7. Uploads to R2: audio, timings, and manifests
  *
+ * TTS Providers:
+ *   - edge (recommended): Free Microsoft Edge TTS. Install: pip install edge-tts
+ *   - openai: $15/M chars. Requires OPENAI_API_KEY
+ *   - elevenlabs: ~$200/M chars. Requires ELEVENLABS_API_KEY
+ *
  * Prerequisites:
  *   - MFA installed: conda create -n mfa -c conda-forge montreal-forced-aligner
  *   - MFA models: mfa model download acoustic english_mfa && mfa model download dictionary english_mfa
  *   - ffmpeg installed: brew install ffmpeg
- *   - OpenAI API key in .env.local
- *   - Cloudflare R2 credentials in .env.local
+ *   - For OpenAI: OPENAI_API_KEY in .env.local
+ *   - For ElevenLabs: ELEVENLABS_API_KEY in .env.local
+ *   - For Edge TTS: pip install edge-tts
  *
  * Usage:
- *   npx tsx scripts/pregen-topic-audio.ts --run
+ *   npx tsx scripts/pregen-topic-audio.ts --edge --run                      # Free Edge TTS (recommended)
+ *   npx tsx scripts/pregen-topic-audio.ts --edge --voice en-US-AriaNeural --run
+ *   npx tsx scripts/pregen-topic-audio.ts --run                             # OpenAI (default)
  *   npx tsx scripts/pregen-topic-audio.ts --lessonId="3-social/persuasion" --run
  *   npx tsx scripts/pregen-topic-audio.ts --dry-run
  */
@@ -56,7 +64,30 @@ const ELEVENLABS_VOICES: Record<string, string> = {
   sam: 'yoZ06aMxZJJ28mfd3POQ',
 }
 
-type TtsProvider = 'openai' | 'elevenlabs'
+// Edge TTS configuration (free Microsoft Edge voices)
+const EDGE_DEFAULT_VOICE = 'en-US-AriaNeural'
+const EDGE_VOICES: Record<string, string> = {
+  // US English voices (high quality neural voices)
+  'aria': 'en-US-AriaNeural',        // Female, conversational
+  'jenny': 'en-US-JennyNeural',      // Female, friendly
+  'guy': 'en-US-GuyNeural',          // Male, friendly
+  'davis': 'en-US-DavisNeural',      // Male, calm
+  'amber': 'en-US-AmberNeural',      // Female, warm
+  'ana': 'en-US-AnaNeural',          // Female, childlike
+  'ashley': 'en-US-AshleyNeural',    // Female
+  'brandon': 'en-US-BrandonNeural',  // Male
+  'christopher': 'en-US-ChristopherNeural', // Male
+  'eric': 'en-US-EricNeural',        // Male
+  'jacob': 'en-US-JacobNeural',      // Male
+  'michelle': 'en-US-MichelleNeural', // Female
+  // UK English voices
+  'libby': 'en-GB-LibbyNeural',      // Female
+  'maisie': 'en-GB-MaisieNeural',    // Female, child
+  'ryan': 'en-GB-RyanNeural',        // Male
+  'sonia': 'en-GB-SoniaNeural',      // Female
+}
+
+type TtsProvider = 'openai' | 'elevenlabs' | 'edge'
 
 const R2_PREFIX = 'topic-teacher-audio/v2'
 
@@ -151,9 +182,10 @@ function parseArgs(argv: string[]): CliArgs {
     else if (arg === '--skip-upload') args.skipUpload = true
     else if (arg === '--elevenlabs') args.ttsProvider = 'elevenlabs'
     else if (arg === '--openai') args.ttsProvider = 'openai'
+    else if (arg === '--edge') args.ttsProvider = 'edge'
     else if (arg === '--tts-provider') {
       const provider = argv[++i]?.toLowerCase()
-      if (provider === 'elevenlabs' || provider === 'openai') {
+      if (provider === 'elevenlabs' || provider === 'openai' || provider === 'edge') {
         args.ttsProvider = provider
       }
     }
@@ -231,6 +263,78 @@ function getElevenLabsVoiceId(voice: string): string {
   }
   // Default to Bella
   return ELEVENLABS_DEFAULT_VOICE_ID
+}
+
+function getEdgeVoice(voice: string): string {
+  // Check if it's already a full voice name (contains -Neural)
+  if (voice.includes('Neural')) {
+    return voice
+  }
+  // Check if it's a known short name
+  const lowerVoice = voice.toLowerCase()
+  if (EDGE_VOICES[lowerVoice]) {
+    return EDGE_VOICES[lowerVoice]
+  }
+  // Default to Aria
+  return EDGE_DEFAULT_VOICE
+}
+
+function checkEdgeTtsInstalled(): boolean {
+  try {
+    execSync('edge-tts --help', { stdio: 'pipe' })
+    return true
+  } catch {
+    return false
+  }
+}
+
+// Edge TTS - free Microsoft Edge voices, outputs MP3 which we convert to WAV
+async function requestEdgeSpeech(options: {
+  text: string
+  voice: string
+  outputPath: string // WAV output path
+}): Promise<{ ok: boolean; errorText: string | null }> {
+  const { text, voice, outputPath } = options
+  const edgeVoice = getEdgeVoice(voice)
+
+  // Edge TTS outputs MP3, so we'll output to a temp file then convert
+  const mp3TempPath = outputPath.replace(/\.wav$/, '.edge-temp.mp3')
+
+  try {
+    // Write text to a temp file to avoid shell escaping issues
+    const textTempPath = outputPath.replace(/\.wav$/, '.edge-temp.txt')
+    fs.writeFileSync(textTempPath, text)
+
+    // Run edge-tts with the text file
+    execSync(`edge-tts --voice "${edgeVoice}" --file "${textTempPath}" --write-media "${mp3TempPath}"`, {
+      stdio: 'pipe',
+      timeout: 120000, // 2 minute timeout per chunk
+    })
+
+    // Convert MP3 to WAV for MFA compatibility
+    execSync(`ffmpeg -y -i "${mp3TempPath}" -ar 22050 -ac 1 "${outputPath}"`, {
+      stdio: 'pipe',
+      timeout: 60000,
+    })
+
+    // Clean up temp files
+    try {
+      fs.unlinkSync(mp3TempPath)
+      fs.unlinkSync(textTempPath)
+    } catch {
+      // Ignore cleanup errors
+    }
+
+    return { ok: true, errorText: null }
+  } catch (err) {
+    // Clean up temp files on error
+    try {
+      if (fs.existsSync(mp3TempPath)) fs.unlinkSync(mp3TempPath)
+    } catch {
+      // Ignore
+    }
+    return { ok: false, errorText: (err as Error)?.message ?? String(err) }
+  }
 }
 
 function sleep(ms: number): Promise<void> {
@@ -638,49 +742,66 @@ async function processLesson(options: {
 
       console.log(`    Generating TTS via ${args.ttsProvider}...`)
 
-      let result: { ok: boolean; status: number; buffer: Buffer | null; errorText: string | null }
+      if (args.ttsProvider === 'edge') {
+        // Edge TTS writes directly to file (MP3 converted to WAV)
+        const edgeResult = await requestEdgeSpeech({
+          text: normalized,
+          voice: args.voice,
+          outputPath: wavPath,
+        })
 
-      if (args.ttsProvider === 'elevenlabs') {
-        const elevenLabsKey = getElevenLabsApiKey()
-        if (!elevenLabsKey) {
-          console.warn(`    ElevenLabs API key not found`)
+        if (!edgeResult.ok) {
+          console.warn(`    TTS failed: ${edgeResult.errorText ?? 'unknown error'}`)
           continue
         }
-        const voiceId = getElevenLabsVoiceId(args.voice)
-        result = await requestElevenLabsWithRetry({
-          apiKey: elevenLabsKey,
-          voiceId,
-          text: normalized,
-          maxRetries: args.maxRetries,
-          retryDelayMs: args.retryDelayMs,
-          timeoutMs: args.requestTimeoutMs,
-        })
 
-        // Convert PCM to WAV if successful
-        if (result.ok && result.buffer) {
-          result.buffer = pcmToWav(result.buffer, 22050, 1, 16)
-        }
+        console.log(`    Wrote ${wavPath}`)
       } else {
-        // OpenAI
-        result = await requestSpeechWithRetry({
-          apiKey,
-          model: args.model,
-          voice: args.voice,
-          speed: args.speed,
-          text: normalized,
-          maxRetries: args.maxRetries,
-          retryDelayMs: args.retryDelayMs,
-          timeoutMs: args.requestTimeoutMs,
-        })
-      }
+        // OpenAI or ElevenLabs - returns buffer
+        let result: { ok: boolean; status: number; buffer: Buffer | null; errorText: string | null }
 
-      if (!result.ok || !result.buffer) {
-        console.warn(`    TTS failed: ${result.errorText ?? 'unknown error'}`)
-        continue
-      }
+        if (args.ttsProvider === 'elevenlabs') {
+          const elevenLabsKey = getElevenLabsApiKey()
+          if (!elevenLabsKey) {
+            console.warn(`    ElevenLabs API key not found`)
+            continue
+          }
+          const voiceId = getElevenLabsVoiceId(args.voice)
+          result = await requestElevenLabsWithRetry({
+            apiKey: elevenLabsKey,
+            voiceId,
+            text: normalized,
+            maxRetries: args.maxRetries,
+            retryDelayMs: args.retryDelayMs,
+            timeoutMs: args.requestTimeoutMs,
+          })
 
-      fs.writeFileSync(wavPath, result.buffer)
-      console.log(`    Wrote ${wavPath}`)
+          // Convert PCM to WAV if successful
+          if (result.ok && result.buffer) {
+            result.buffer = pcmToWav(result.buffer, 22050, 1, 16)
+          }
+        } else {
+          // OpenAI
+          result = await requestSpeechWithRetry({
+            apiKey,
+            model: args.model,
+            voice: args.voice,
+            speed: args.speed,
+            text: normalized,
+            maxRetries: args.maxRetries,
+            retryDelayMs: args.retryDelayMs,
+            timeoutMs: args.requestTimeoutMs,
+          })
+        }
+
+        if (!result.ok || !result.buffer) {
+          console.warn(`    TTS failed: ${result.errorText ?? 'unknown error'}`)
+          continue
+        }
+
+        fs.writeFileSync(wavPath, result.buffer)
+        console.log(`    Wrote ${wavPath}`)
+      }
     }
 
     // Write transcript for MFA
@@ -815,7 +936,15 @@ async function main() {
 
   // Validate API key based on provider
   let apiKey: string | null = null
-  if (args.ttsProvider === 'elevenlabs') {
+  if (args.ttsProvider === 'edge') {
+    // Edge TTS is free, no API key needed
+    if (!checkEdgeTtsInstalled()) {
+      console.error('Edge TTS not found. Install with:')
+      console.error('  pip install edge-tts')
+      process.exit(1)
+    }
+    apiKey = 'unused' // Placeholder for type compatibility
+  } else if (args.ttsProvider === 'elevenlabs') {
     apiKey = getElevenLabsApiKey()
     if (!apiKey) {
       console.error('Missing ELEVENLABS_API_KEY (set in env or .env.local).')
@@ -834,7 +963,11 @@ async function main() {
   console.log('========================')
   console.log(`Content root: ${args.contentRoot}`)
   console.log(`TTS Provider: ${args.ttsProvider}`)
-  if (args.ttsProvider === 'elevenlabs') {
+  if (args.ttsProvider === 'edge') {
+    const edgeVoice = getEdgeVoice(args.voice)
+    console.log(`Voice: ${edgeVoice}`)
+    console.log(`Cost: $0 (free Microsoft Edge TTS)`)
+  } else if (args.ttsProvider === 'elevenlabs') {
     const voiceId = getElevenLabsVoiceId(args.voice)
     console.log(`Voice: ${args.voice} (${voiceId})`)
   } else {
