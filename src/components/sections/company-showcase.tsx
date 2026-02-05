@@ -41,7 +41,7 @@ export function CompanyShowcase() {
         </div>
 
         <div className="text-center mt-8">
-          <UserCountTicker className="text-muted-foreground text-sm" />
+          <UserCountTicker className="text-muted-foreground text-lg" />
         </div>
 
         <p className="text-center text-muted-foreground font-medium mt-4">

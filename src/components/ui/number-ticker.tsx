@@ -5,6 +5,7 @@ import { motion } from "motion/react"
 
 interface NumberTickerProps {
   value: number
+  startValue?: number
   duration?: number
   decimals?: number
   className?: string
@@ -12,34 +13,37 @@ interface NumberTickerProps {
 
 export function NumberTicker({
   value,
+  startValue = 0,
   duration = 2,
   decimals = 0,
   className,
 }: NumberTickerProps) {
   const ref = useRef<HTMLSpanElement>(null)
-  const animationRef = useRef<{ current: number }>({ current: 0 })
 
   useEffect(() => {
     const element = ref.current
     if (!element) return
 
-    const start = parseFloat(element.innerText)
+    const start = startValue
     const end = value
     const range = end - start
-    const increment = range / (duration * 100)
+    const totalSteps = duration * 60
+    const increment = range / totalSteps
     let current = start
+    let step = 0
 
     const timer = setInterval(() => {
-      current += increment
-      if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+      step++
+      current = start + (range * step) / totalSteps
+      if (step >= totalSteps) {
         current = end
         clearInterval(timer)
       }
-      element.innerText = current.toFixed(decimals)
-    }, duration * 10)
+      element.innerText = Math.round(current).toFixed(decimals)
+    }, 1000 / 60)
 
     return () => clearInterval(timer)
-  }, [value, duration, decimals])
+  }, [value, startValue, duration, decimals])
 
   return (
     <motion.span
@@ -48,7 +52,7 @@ export function NumberTicker({
       animate={{ opacity: 1 }}
       className={className}
     >
-      {value}
+      {startValue}
     </motion.span>
   )
 }

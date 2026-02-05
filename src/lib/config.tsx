@@ -90,9 +90,8 @@ export const siteConfig = {
     },
   },
   companyShowcase: {
-    title:
-      "Made by psychologists trained at these institutions.",
-    subtitle: "Not affiliated or endorsed.",
+    title: "Created by psychologists trained here. Not affiliated.",
+    subtitle: null,
     companyLogos: [
       { id: 1, name: "UCLA-David Geffen School of Medicine", src: "/dgsom.png", member: "anders", invert: true, width: 160 },
       { id: 2, name: "NYU Langone Health", src: "/nyu.png", member: "anders", invert: true },
