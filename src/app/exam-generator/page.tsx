@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Clock, BadgeCheck, Grid2X2, Flag, Check, Circle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -69,6 +70,7 @@ type QuestionTelemetry = {
 }
 
 export default function ExamGeneratorPage() {
+  const router = useRouter()
   const { user, userProfile } = useAuth()
   const entitledTier = getEntitledSubscriptionTier(userProfile) ?? 'free'
   const isFreeTier = entitledTier === 'free'
@@ -458,7 +460,7 @@ export default function ExamGeneratorPage() {
   // Save and return to dashboard
   const handleSaveAndReturn = () => {
     savePausedExamState()
-    window.location.href = '/dashboard'
+    router.push('/dashboard')
   }
 
 	  // Record per-question results for unified highlighting (Topic Teacher)
@@ -659,7 +661,7 @@ export default function ExamGeneratorPage() {
       setHasPausedExam(false)
 
       // Navigate with just the result ID (no more URI_TOO_LONG!)
-      window.location.href = `/prioritize?id=${data.resultId}`
+      router.push(`/prioritize?id=${data.resultId}`)
     } catch (error) {
       console.error('Error saving exam results:', error)
       setError('Failed to save exam results. Please try again.')
