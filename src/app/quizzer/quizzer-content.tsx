@@ -156,6 +156,7 @@ export function QuizzerContent() {
   const [ratingSubmitted, setRatingSubmitted] = useState(false)
 
   const quizStateRef = useRef<QuizState>(quizState)
+  const isProcessingNextRef = useRef(false)
   useEffect(() => {
     quizStateRef.current = quizState
   }, [quizState])
@@ -459,13 +460,20 @@ export function QuizzerContent() {
   )
 
   const handleNext = useCallback(() => {
+    if (isProcessingNextRef.current) return
+    isProcessingNextRef.current = true
+
     const state = quizStateRef.current
     const currentIndex = state.question
-    if (currentIndex >= questions.length) return
+    if (currentIndex >= questions.length) {
+      isProcessingNextRef.current = false
+      return
+    }
 
     const selectedAnswer = state.selectedAnswers[currentIndex]
     if (!selectedAnswer) {
       setError('Please select an answer')
+      isProcessingNextRef.current = false
       return
     }
 
@@ -486,11 +494,13 @@ export function QuizzerContent() {
         score: prev.score + (isCorrect && currentQuestion.isScored !== false ? 1 : 0),
       }))
       setError(null)
+      isProcessingNextRef.current = false
       return
     }
 
-    const finalScore = state.score + (isCorrect && currentQuestion.isScored !== false ? 1 : 0)
+    const rawScore = state.score + (isCorrect && currentQuestion.isScored !== false ? 1 : 0)
     const scoredQuestionCount = questions.filter(q => q.isScored !== false).length
+    const finalScore = Math.min(rawScore, scoredQuestionCount)
     const wrongAnswers: WrongAnswer[] = []
     const correctAnswers = []
 
@@ -662,6 +672,7 @@ export function QuizzerContent() {
       totalScoredQuestions: scoredQuestionCount,
     }))
     wrongStreakRef.current = 0
+    isProcessingNextRef.current = false
   }, [questions, topic, decodedTopic, domain, finalizeCurrentTiming])
 
   const formatTime = (seconds: number): string => {
@@ -982,11 +993,10 @@ export function QuizzerContent() {
 
         // Auto-submit if time runs out
         if (newTime <= 0) {
-          // Mark quiz as finished without calling handleNext (which has issues)
           setTimeout(() => {
             handleNext()
           }, 0)
-          return prev
+          return { ...prev, timeRemaining: 0 }
         }
 
         return {
@@ -1190,6 +1200,9 @@ export function QuizzerContent() {
                       ? (quizState.score / quizState.totalScoredQuestions) * 100
                       : 0
                   )}% Correct
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  2 of 10 questions are unscored experimental questions
                 </p>
               </div>
 
