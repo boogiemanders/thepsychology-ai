@@ -675,6 +675,192 @@ export function QuizzerContent() {
     isProcessingNextRef.current = false
   }, [questions, topic, decodedTopic, domain, finalizeCurrentTiming])
 
+  const handleFinishQuiz = useCallback(() => {
+    const state = quizStateRef.current
+
+    // Calculate score from scratch across ALL questions
+    let computedScore = 0
+    const wrongAnswers: WrongAnswer[] = []
+    const correctAnswers: { questionId?: number; questionKey: string; question: string; correctAnswer: string; options?: string[]; explanation?: string; isScored: boolean; relatedSections: string[]; wasPreviouslyWrong?: boolean; timestamp: number }[] = []
+
+    questions.forEach((q, idx) => {
+      const selected = state.selectedAnswers[idx] ?? ''
+      const questionWasCorrect = selected === q.correctAnswer
+      const questionKey = computeQuestionKeyClient({
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+      })
+
+      if (selected && questionWasCorrect && q.isScored !== false) {
+        computedScore++
+      }
+
+      if (!questionWasCorrect) {
+        wrongAnswers.push({
+          questionId: q.id,
+          questionKey,
+          question: q.question,
+          selectedAnswer: selected,
+          correctAnswer: q.correctAnswer,
+          relatedSections: q.relatedSections || [],
+          timestamp: Date.now(),
+          options: q.options,
+          explanation: q.explanation,
+          isScored: q.isScored !== false,
+          isResolved: false,
+        })
+      } else {
+        correctAnswers.push({
+          questionId: q.id,
+          questionKey,
+          question: q.question,
+          correctAnswer: q.correctAnswer,
+          options: q.options,
+          explanation: q.explanation,
+          isScored: q.isScored !== false,
+          relatedSections: q.relatedSections || [],
+          timestamp: Date.now(),
+        })
+      }
+    })
+
+    const scoredQuestionCount = questions.filter(q => q.isScored !== false).length
+    const finalScore = Math.min(computedScore, scoredQuestionCount)
+
+    // Merge with previous results
+    const previousResults = decodedTopic ? getQuizResults(decodedTopic) : null
+    const keyFor = (entry: { questionKey?: string; questionId?: number }) =>
+      entry.questionKey || `id:${entry.questionId ?? -1}`
+
+    const mergedWrongByKey = new Map<string, WrongAnswer>()
+    previousResults?.wrongAnswers?.forEach((wa) => {
+      if (!wa) return
+      mergedWrongByKey.set(keyFor(wa), wa)
+    })
+
+    correctAnswers.forEach((ca) => {
+      const key = keyFor(ca as any)
+      const existing = mergedWrongByKey.get(key)
+      if (existing && existing.isResolved !== true) {
+        ;(ca as any).wasPreviouslyWrong = true
+      }
+      if (existing) {
+        existing.isResolved = true
+        existing.timestamp = Date.now()
+      }
+    })
+
+    wrongAnswers.forEach((wa) => {
+      const key = keyFor(wa)
+      const existing = mergedWrongByKey.get(key)
+      mergedWrongByKey.set(key, {
+        ...(existing ?? {}),
+        ...wa,
+        isResolved: false,
+        timestamp: Date.now(),
+      })
+    })
+
+    const mergedWrongAnswers = Array.from(mergedWrongByKey.values()).sort(
+      (a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0)
+    )
+
+    const recentSections = Array.from(
+      new Set(wrongAnswers.flatMap((wa) => wa.relatedSections || []))
+    )
+
+    const quizResults = {
+      topic: decodedTopic,
+      timestamp: Date.now(),
+      score: finalScore,
+      totalQuestions: scoredQuestionCount,
+      wrongAnswers: mergedWrongAnswers,
+      correctAnswers,
+      lastAttemptWrongAnswers: wrongAnswers,
+      lastAttemptCorrectAnswers: correctAnswers,
+    }
+
+    saveQuizResults(quizResults)
+
+    // Finalize timing for the current question before building attempts
+    finalizeCurrentTiming()
+
+    const questionAttempts = questions
+      .map((q, idx) => {
+        const selected = state.selectedAnswers[idx]
+        if (!selected) return null
+        const telemetry = questionTelemetryRef.current[idx]
+        return {
+          questionId: String(q.id),
+          question: q.question,
+          options: q.options,
+          selectedAnswer: selected,
+          correctAnswer: q.correctAnswer,
+          isCorrect: selected === q.correctAnswer,
+          isScored: q.isScored !== false,
+          relatedSections: q.relatedSections || [],
+          timeSpentMs: telemetry?.timeSpentMs ?? null,
+          visitCount: telemetry?.visitCount ?? null,
+          answerChanges: telemetry?.answerChanges ?? null,
+          changedCorrectToWrong: telemetry?.changedCorrectToWrong ?? false,
+          changedWrongToCorrect: telemetry?.changedWrongToCorrect ?? false,
+          flagged: telemetry?.flagged ?? false,
+          highlightCount: telemetry?.highlightCount ?? null,
+          strikethroughCount: telemetry?.strikethroughCount ?? null,
+        }
+      })
+      .filter(Boolean) as Array<{
+      questionId: string
+      question: string
+      options?: string[]
+      selectedAnswer: string
+      correctAnswer: string
+      isCorrect: boolean
+      isScored?: boolean
+      relatedSections?: string[]
+      timeSpentMs?: number | null
+      visitCount?: number | null
+      answerChanges?: number | null
+      changedCorrectToWrong?: boolean
+      changedWrongToCorrect?: boolean
+      flagged?: boolean
+      highlightCount?: number | null
+      strikethroughCount?: number | null
+    }>
+
+    const durationSeconds = quizStartedAtRef.current
+      ? Math.max(Math.round((Date.now() - quizStartedAtRef.current) / 1000), 0)
+      : Math.max(questions.length * 68 - (state.timeRemaining || 0), 0)
+
+    void persistQuizResults({
+      topic: decodedTopic || 'unknown',
+      domain,
+      score: finalScore,
+      totalQuestions: scoredQuestionCount,
+      correctQuestions: finalScore,
+      durationSeconds,
+      questionAttempts,
+    })
+
+    const resultsParam = encodeURIComponent(JSON.stringify(quizResults))
+    const sectionsParam = encodeURIComponent(JSON.stringify(recentSections))
+    window.history.replaceState(
+      null,
+      '',
+      `?topic=${encodeURIComponent(topic || '')}&quizResults=${resultsParam}&recentQuizWrongSections=${sectionsParam}`
+    )
+    setRecentQuizSectionsParam(sectionsParam)
+
+    setQuizState((prev) => ({
+      ...prev,
+      showResults: true,
+      score: finalScore,
+      totalScoredQuestions: scoredQuestionCount,
+    }))
+    wrongStreakRef.current = 0
+  }, [questions, topic, decodedTopic, domain, finalizeCurrentTiming])
+
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60)
     const secs = seconds % 60
@@ -994,7 +1180,7 @@ export function QuizzerContent() {
         // Auto-submit if time runs out
         if (newTime <= 0) {
           setTimeout(() => {
-            handleNext()
+            handleFinishQuiz()
           }, 0)
           return { ...prev, timeRemaining: 0 }
         }
