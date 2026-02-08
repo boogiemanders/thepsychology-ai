@@ -2020,8 +2020,7 @@ export default function ExamGeneratorPage() {
                   <> • {Object.values(flaggedQuestions).filter(Boolean).length} flagged</>
                 )}
               </div>
-              {isReviewMode && (
-                <Button
+              <Button
                   onClick={() => {
                     setShowQuestionNav(false)
                     setIsReviewMode(false)
@@ -2033,7 +2032,6 @@ export default function ExamGeneratorPage() {
                 >
                   {isSavingResults ? 'Saving...' : 'Submit Exam'}
                 </Button>
-              )}
             </div>
           </SheetContent>
         </Sheet>
