@@ -719,6 +719,7 @@ export default function ExamGeneratorPage() {
 
   // Detect if user is on Mac
   const isMac = typeof navigator !== 'undefined' && navigator.platform.toUpperCase().indexOf('MAC') >= 0
+  const shortcutModifierLabel = isMac ? 'Option' : 'Alt'
 
   const scrollToStep2 = useCallback(() => {
     if (step2Ref.current) {
@@ -1935,31 +1936,42 @@ export default function ExamGeneratorPage() {
                   onClick={handlePrevious}
                   disabled={currentQuestion === 0}
                   variant="outline"
-                  className="min-w-[100px] rounded-none"
+                  className="h-auto min-w-[120px] rounded-none py-2"
                   style={{ fontFamily: 'Tahoma' }}
-                  title={`${isMac ? 'Option' : 'Alt'} + P`}
+                  title={`${shortcutModifierLabel} + P`}
                 >
-                  Previous
+                  <span className="flex flex-col items-center leading-tight">
+                    <span>Previous</span>
+                    <span className="text-[11px] font-normal text-muted-foreground">{shortcutModifierLabel} + P</span>
+                  </span>
                 </Button>
 
                 {currentQuestion === questions.length - 1 ? (
                   <Button
                     onClick={() => { setShowQuestionNav(true); setIsReviewMode(true) }}
                     disabled={isSavingResults}
-                    className="min-w-[100px] rounded-none"
+                    className="h-auto min-w-[120px] rounded-none py-2"
                     style={{ fontFamily: 'Tahoma' }}
-                    title={`${isMac ? 'Option' : 'Alt'} + E`}
+                    title={`${shortcutModifierLabel} + E`}
                   >
-                    {isSavingResults ? 'Saving...' : 'Review'}
+                    {isSavingResults ? 'Saving...' : (
+                      <span className="flex flex-col items-center leading-tight">
+                        <span>Review</span>
+                        <span className="text-[11px] font-normal text-muted-foreground">{shortcutModifierLabel} + E</span>
+                      </span>
+                    )}
                   </Button>
                 ) : (
                   <Button
                     onClick={handleNext}
-                    className="min-w-[100px] rounded-none"
+                    className="h-auto min-w-[120px] rounded-none py-2"
                     style={{ fontFamily: 'Tahoma' }}
-                    title={`${isMac ? 'Option' : 'Alt'} + N`}
+                    title={`${shortcutModifierLabel} + N`}
                   >
-                    Next
+                    <span className="flex flex-col items-center leading-tight">
+                      <span>Next</span>
+                      <span className="text-[11px] font-normal text-muted-foreground">{shortcutModifierLabel} + N</span>
+                    </span>
                   </Button>
                 )}
               </div>
@@ -1973,11 +1985,11 @@ export default function ExamGeneratorPage() {
           setShowQuestionNav(open)
           if (!open) setIsReviewMode(false)
         }}>
-          <SheetContent side="right" className="w-[320px] p-0 flex flex-col">
+          <SheetContent side="right" className="w-[320px] p-0 flex h-full min-h-0 flex-col overflow-hidden">
             <SheetHeader className="p-4 pb-2 border-b">
               <SheetTitle style={{ fontFamily: 'Tahoma' }}>Questions</SheetTitle>
             </SheetHeader>
-            <ScrollArea className="flex-1 p-4">
+            <ScrollArea className="min-h-0 flex-1 p-4">
               <div className="grid grid-cols-4 gap-2">
                 {questions.map((_, index) => {
                   const isAnswered = selectedAnswers[index] !== undefined
@@ -2013,7 +2025,7 @@ export default function ExamGeneratorPage() {
                 })}
               </div>
             </ScrollArea>
-            <div className="p-4 border-t bg-muted/30">
+            <div className="shrink-0 border-t bg-muted/30 p-4">
               <div className="text-sm text-muted-foreground mb-3" style={{ fontFamily: 'Tahoma' }}>
                 {Object.keys(selectedAnswers).length} answered • {questions.length - Object.keys(selectedAnswers).length} unanswered
                 {Object.values(flaggedQuestions).filter(Boolean).length > 0 && (
