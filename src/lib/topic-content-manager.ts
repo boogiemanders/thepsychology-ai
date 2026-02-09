@@ -143,6 +143,36 @@ function resolveTopicFilePath(
       if (candidateSlug === slug) {
         return path.join(baseDir, entry.name)
       }
+
+      // 3) Match by frontmatter metadata so human-facing topic links can
+      // resolve to files whose filenames are shorthand/internal aliases.
+      const candidatePath = path.join(baseDir, entry.name)
+      try {
+        const fileContent = readFileSync(candidatePath, 'utf-8')
+        const { metadata } = parseFrontmatter(fileContent)
+
+        const metadataSlug =
+          typeof metadata.slug === 'string' ? slugifyTopicName(metadata.slug) : ''
+        if (metadataSlug === slug) {
+          return candidatePath
+        }
+
+        const metadataTopicName =
+          typeof metadata.topic_name === 'string'
+            ? slugifyTopicName(metadata.topic_name)
+            : ''
+        if (metadataTopicName === slug) {
+          return candidatePath
+        }
+
+        const metadataTitle =
+          typeof metadata.title === 'string' ? slugifyTopicName(metadata.title) : ''
+        if (metadataTitle === slug) {
+          return candidatePath
+        }
+      } catch {
+        // Ignore malformed files and continue scanning other entries.
+      }
     }
   }
 
