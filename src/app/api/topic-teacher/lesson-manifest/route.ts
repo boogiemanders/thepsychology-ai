@@ -1,8 +1,200 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { GetObjectCommand, S3Client } from '@aws-sdk/client-s3'
+import { GetObjectCommand, HeadObjectCommand, S3Client } from '@aws-sdk/client-s3'
 import type { Readable } from 'node:stream'
+import { readFileSync, readdirSync, existsSync } from 'fs'
+import path from 'path'
 
 export const runtime = 'nodejs'
+
+// Maps domain IDs to actual folder names in topic-content-v4
+const DOMAIN_FOLDER_MAP: Record<string, string> = {
+  '1': '1 Biopsychology (Neuroscience & Pharmacology)',
+  '2': '2 Learning and Memory',
+  '3-social': '3 Social Psychology',
+  '3-cultural': '3 Cultural Considerations',
+  '4': '4 Development',
+  '5-assessment': '5 Assessment',
+  '5-diagnosis': '5 Diagnosis',
+  '5-test': '5 Test Construction',
+  '6': '6 Clinical Interventions',
+  '7': '7 Research and Stats',
+  '8': '8 Ethics',
+  '3-5-6': '2 3 5 6 I-O Psychology',
+}
+
+// Reverse map: folder name (without leading number) -> actual folder
+const DOMAIN_NAME_TO_FOLDER: Record<string, string> = {
+  'biopsychology (neuroscience & pharmacology)': '1 Biopsychology (Neuroscience & Pharmacology)',
+  'learning and memory': '2 Learning and Memory',
+  'social psychology': '3 Social Psychology',
+  'cultural considerations': '3 Cultural Considerations',
+  'development': '4 Development',
+  'assessment': '5 Assessment',
+  'diagnosis': '5 Diagnosis',
+  'test construction': '5 Test Construction',
+  'clinical interventions': '6 Clinical Interventions',
+  'research and stats': '7 Research and Stats',
+  'ethics': '8 Ethics',
+  'i-o psychology': '2 3 5 6 I-O Psychology',
+}
+
+/**
+ * Get the actual folder name from a domain parameter.
+ * Handles multiple formats:
+ * - Domain ID: "1" -> "1 Biopsychology..."
+ * - Domain name: "Biopsychology (Neuroscience & Pharmacology)" -> "1 Biopsychology..."
+ */
+function getDomainFolder(domain: string): string | null {
+  // Try direct ID mapping first
+  if (DOMAIN_FOLDER_MAP[domain]) {
+    return DOMAIN_FOLDER_MAP[domain]
+  }
+
+  // Try name-based mapping (case insensitive)
+  const normalized = domain.toLowerCase().trim()
+  if (DOMAIN_NAME_TO_FOLDER[normalized]) {
+    return DOMAIN_NAME_TO_FOLDER[normalized]
+  }
+
+  // Try to find a folder that contains this domain name
+  const rootDir = path.join(process.cwd(), 'topic-content-v4')
+  try {
+    const folders = readdirSync(rootDir, { withFileTypes: true })
+      .filter(d => d.isDirectory())
+      .map(d => d.name)
+
+    // Check if domain matches a folder (with or without leading number)
+    for (const folder of folders) {
+      const folderWithoutPrefix = folder.replace(/^\d+\s+/, '').toLowerCase()
+      if (folderWithoutPrefix === normalized || folder.toLowerCase() === normalized) {
+        return folder
+      }
+    }
+  } catch {
+    // Ignore errors
+  }
+
+  return null
+}
+
+/**
+ * Normalize a topic name to a slug for matching against filenames.
+ * This mirrors the logic from topic-content-manager.ts
+ */
+function slugifyTopicName(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/^(?:\d+[\s-]+)+/, '') // remove leading numeric prefixes
+    .replace(/[&]/g, 'and')
+    .replace(/\band\b/g, '') // align with topic-content-manager matching behavior
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+function parseFrontmatter(content: string): Record<string, string> {
+  const frontmatterRegex = /^---\n([\s\S]*?)\n---\n/
+  const match = content.match(frontmatterRegex)
+  if (!match) return {}
+
+  const metadata: Record<string, string> = {}
+  const frontmatterText = match[1]
+
+  for (const line of frontmatterText.split('\n')) {
+    const [key, ...valueParts] = line.split(': ')
+    const value = valueParts.join(': ').trim()
+    if (!key || !value) continue
+    metadata[key.trim()] = value.replace(/^["']|["']$/g, '')
+  }
+
+  return metadata
+}
+
+/**
+ * Convert a folder or filename part to the lessonId format used by the pregen script.
+ * This mirrors the logic from scripts/pregen-topic-audio.ts getLessonIdFromPath()
+ */
+function normalizeForLessonId(part: string): string {
+  return part.replace(/^\d+\s+/, '').toLowerCase().replace(/\s+/g, '-')
+}
+
+/**
+ * Resolve the lessonId from domain and topic parameters.
+ * This computes the same lessonId that the pregen script would generate.
+ */
+function resolveLessonIdFromDomainTopic(domain: string, topic: string): string | null {
+  const domainFolder = getDomainFolder(domain)
+  if (!domainFolder) {
+    console.log(`[manifest] Unknown domain: ${domain}`)
+    return null
+  }
+
+  const rootDir = path.join(process.cwd(), 'topic-content-v4')
+  const baseDir = path.join(rootDir, domainFolder)
+
+  if (!existsSync(baseDir)) {
+    console.log(`[manifest] Domain folder not found: ${baseDir}`)
+    return null
+  }
+
+  // Find the actual filename by matching slugified topic name
+  const topicSlug = slugifyTopicName(topic)
+  let actualFilename: string | null = null
+
+  try {
+    const entries = readdirSync(baseDir, { withFileTypes: true })
+    for (const entry of entries) {
+      if (!entry.isFile() || !entry.name.endsWith('.md')) continue
+      const baseName = entry.name.slice(0, -3) // drop ".md"
+      const candidateSlug = slugifyTopicName(baseName)
+      if (candidateSlug === topicSlug) {
+        actualFilename = baseName
+        break
+      }
+
+      // Match by frontmatter metadata so topic strings from prioritize/topic-teacher
+      // resolve even when v4 filenames are internal shorthand.
+      try {
+        const fullPath = path.join(baseDir, entry.name)
+        const content = readFileSync(fullPath, 'utf-8')
+        const metadata = parseFrontmatter(content)
+
+        const metadataSlug = metadata.slug ? slugifyTopicName(metadata.slug) : ''
+        if (metadataSlug === topicSlug) {
+          actualFilename = baseName
+          break
+        }
+
+        const metadataTopicName = metadata.topic_name ? slugifyTopicName(metadata.topic_name) : ''
+        if (metadataTopicName === topicSlug) {
+          actualFilename = baseName
+          break
+        }
+
+        const metadataTitle = metadata.title ? slugifyTopicName(metadata.title) : ''
+        if (metadataTitle === topicSlug) {
+          actualFilename = baseName
+          break
+        }
+      } catch {
+        // Ignore malformed files and continue scanning.
+      }
+    }
+  } catch (e) {
+    console.log(`[manifest] Error reading domain folder: ${e}`)
+    return null
+  }
+
+  if (!actualFilename) {
+    console.log(`[manifest] No file found for topic "${topic}" (slug: ${topicSlug}) in ${domainFolder}`)
+    return null
+  }
+
+  // Compute lessonId using the same normalization as the pregen script
+  const normalizedFolder = normalizeForLessonId(domainFolder)
+  const normalizedFile = normalizeForLessonId(actualFilename)
+
+  return `${normalizedFolder}/${normalizedFile}`
+}
 
 /**
  * Manifest chunk from R2 storage.
@@ -61,9 +253,10 @@ type LessonManifest = {
 type ResolvedChunk = {
   chunkId: string
   text: string
-  audioUrl: string
-  timingsUrl: string
-  duration: number
+  audioUrl: string | null // null if needs live generation
+  timingsUrl: string | null // null if needs live generation
+  duration: number | null // null if needs live generation
+  needsLiveGeneration: boolean // true for metaphors without hobby variant
   // Section navigation info
   sectionIdx: number
   sectionTitle: string
@@ -90,6 +283,7 @@ type ManifestResponse = {
   totalDuration: number
   version: number
   schemaVersion: number
+  podcast?: { audio: string | null; video: string | null }
 }
 
 const R2_PREFIX = 'topic-teacher-audio/v2'
@@ -205,13 +399,14 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
     }
 
     if (chunk.type === 'stable') {
-      // Stable chunk - use the single audio/timing
+      // Stable chunk - use the single audio/timing (always from R2)
       return {
         chunkId: chunk.chunkId,
         text: chunk.text ?? '',
         audioUrl: `${r2BaseUrl}/${R2_PREFIX}/audio/${chunk.audioKey}.mp3`,
         timingsUrl: `${r2BaseUrl}/${R2_PREFIX}/timings/${chunk.timingsKey}.words.json`,
         duration: chunk.duration ?? 0,
+        needsLiveGeneration: false,
         ...sectionInfo,
       }
     }
@@ -220,18 +415,48 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
     const variants = chunk.variants ?? {}
     const defaultVariant = chunk.defaultVariant ?? 'default'
 
-    // Try to find a hobby-specific variant, fall back to default
-    const selected = (hobby && variants[hobby]) ? variants[hobby] : variants[defaultVariant]
+    // Check if hobby-specific variant exists in R2
+    if (hobby && variants[hobby]) {
+      // Has hobby-specific variant - use R2 audio
+      const selected = variants[hobby]
+      return {
+        chunkId: chunk.chunkId,
+        text: selected.text,
+        audioUrl: `${r2BaseUrl}/${R2_PREFIX}/audio/${selected.audioKey}.mp3`,
+        timingsUrl: `${r2BaseUrl}/${R2_PREFIX}/timings/${selected.timingsKey}.words.json`,
+        duration: selected.duration,
+        needsLiveGeneration: false,
+        ...sectionInfo,
+      }
+    }
 
+    // Has hobby but no hobby-specific variant - needs live generation
+    if (hobby) {
+      // Return default text as placeholder; client will generate personalized audio
+      const defaultText = variants[defaultVariant]?.text ?? ''
+      return {
+        chunkId: chunk.chunkId,
+        text: defaultText,
+        audioUrl: null, // Signal: needs live generation
+        timingsUrl: null,
+        duration: null,
+        needsLiveGeneration: true,
+        ...sectionInfo,
+      }
+    }
+
+    // No hobby - use default variant from R2
+    const selected = variants[defaultVariant]
     if (!selected) {
       // No variant found - this shouldn't happen but handle gracefully
       console.warn(`[lesson-manifest] No variant found for chunk ${chunk.chunkId}`)
       return {
         chunkId: chunk.chunkId,
         text: '',
-        audioUrl: '',
-        timingsUrl: '',
-        duration: 0,
+        audioUrl: null,
+        timingsUrl: null,
+        duration: null,
+        needsLiveGeneration: false,
         ...sectionInfo,
       }
     }
@@ -242,31 +467,82 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
       audioUrl: `${r2BaseUrl}/${R2_PREFIX}/audio/${selected.audioKey}.mp3`,
       timingsUrl: `${r2BaseUrl}/${R2_PREFIX}/timings/${selected.timingsKey}.words.json`,
       duration: selected.duration,
+      needsLiveGeneration: false,
       ...sectionInfo,
     }
   })
+}
+
+async function checkPodcastExists(lessonId: string): Promise<{ audio: string | null; video: string | null } | null> {
+  const r2 = getR2Client()
+  if (!r2) return null
+
+  const normalizedId = lessonId.replace(/\//g, '_')
+  const mp3Key = `${R2_PREFIX}/podcasts/${normalizedId}.mp3`
+  const m4aKey = `${R2_PREFIX}/podcasts/${normalizedId}.m4a`
+  const mp4Key = `${R2_PREFIX}/podcasts/${normalizedId}.mp4`
+
+  const check = async (key: string): Promise<boolean> => {
+    try {
+      await r2.client.send(new HeadObjectCommand({ Bucket: r2.bucket, Key: key }))
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  const [mp3Exists, m4aExists, mp4Exists] = await Promise.all([check(mp3Key), check(m4aKey), check(mp4Key)])
+
+  if (!mp3Exists && !m4aExists && !mp4Exists) return null
+
+  const r2BaseUrl = getR2BaseUrl()
+  // Prefer mp3 over m4a for audio
+  const audioKey = mp3Exists ? mp3Key : m4aExists ? m4aKey : null
+  return {
+    audio: audioKey ? `${r2BaseUrl}/${audioKey}` : null,
+    video: mp4Exists ? `${r2BaseUrl}/${mp4Key}` : null,
+  }
 }
 
 /**
  * GET /api/topic-teacher/lesson-manifest
  *
  * Query parameters:
- *   - lessonId: The lesson identifier (e.g., "3-social/persuasion")
+ *   - lessonId: The lesson identifier (e.g., "biopsychology-(neuroscience-&-pharmacology)/1-cerebral-cortex")
+ *   - domain: Domain ID (e.g., "1", "3-social") - alternative to lessonId
+ *   - topic: Topic name (e.g., "Cerebral Cortex") - alternative to lessonId
  *   - hobby: Optional hobby for metaphor personalization
+ *
+ * If domain and topic are provided, they will be used to resolve the lessonId.
+ * This is the recommended approach as the frontend can pass the same parameters
+ * used for loading base content.
  *
  * Returns:
  *   - 200: Manifest with resolved chunk URLs
- *   - 400: Missing lessonId
+ *   - 400: Missing lessonId or domain/topic
  *   - 404: Manifest not found
  *   - 500: R2 not configured
  */
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
-  const lessonId = searchParams.get('lessonId')
+  let lessonId = searchParams.get('lessonId')
+  const domain = searchParams.get('domain')
+  const topic = searchParams.get('topic')
   const hobby = searchParams.get('hobby') || null
 
+  // If domain and topic are provided, resolve the lessonId
+  if (domain && topic) {
+    const resolved = resolveLessonIdFromDomainTopic(domain, topic)
+    if (resolved) {
+      console.log(`[manifest] Resolved lessonId from domain="${domain}" topic="${topic}": ${resolved}`)
+      lessonId = resolved
+    } else {
+      console.log(`[manifest] Could not resolve lessonId from domain="${domain}" topic="${topic}"`)
+    }
+  }
+
   if (!lessonId) {
-    return NextResponse.json({ error: 'lessonId is required' }, { status: 400 })
+    return NextResponse.json({ error: 'lessonId (or domain + topic) is required' }, { status: 400 })
   }
 
   // Check R2 is configured
@@ -280,7 +556,28 @@ export async function GET(request: NextRequest) {
 
   // Fetch manifest from R2
   const manifest = await fetchManifestFromR2(lessonId)
+
+  // Check for podcast availability (in parallel with manifest if we refactored, but manifest is already done)
+  const podcast = await checkPodcastExists(lessonId)
+
   if (!manifest) {
+    // No MFA manifest, but if podcast exists, return a minimal response
+    if (podcast) {
+      return NextResponse.json({
+        lessonId,
+        hobby,
+        sections: [],
+        chunks: [],
+        totalDuration: 0,
+        version: 0,
+        schemaVersion: 0,
+        podcast,
+      } satisfies ManifestResponse, {
+        headers: {
+          'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+        },
+      })
+    }
     return NextResponse.json(
       { error: `Manifest not found for lesson: ${lessonId}` },
       { status: 404 }
@@ -290,8 +587,8 @@ export async function GET(request: NextRequest) {
   // Resolve chunks based on hobby
   const resolvedChunks = resolveChunks(manifest, hobby)
 
-  // Calculate total duration from resolved chunks
-  const totalDuration = resolvedChunks.reduce((sum, chunk) => sum + chunk.duration, 0)
+  // Calculate total duration from resolved chunks (null durations for live chunks excluded)
+  const totalDuration = resolvedChunks.reduce((sum, chunk) => sum + (chunk.duration ?? 0), 0)
 
   // Build sections from manifest or derive from resolved chunks
   let sections: ResponseSection[] = []
@@ -324,6 +621,7 @@ export async function GET(request: NextRequest) {
     totalDuration,
     version: manifest.version,
     schemaVersion: manifest.schemaVersion,
+    ...(podcast ? { podcast } : {}),
   }
 
   return NextResponse.json(response, {
