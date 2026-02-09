@@ -124,6 +124,7 @@ export default function ExamGeneratorPage() {
   const lastScoredQuestionRef = useRef<number | null>(null)
   const questionTelemetryRef = useRef<Record<number, QuestionTelemetry>>({})
   const lastQuestionIndexRef = useRef<number | null>(null)
+  const timeRemainingRef = useRef(0)
 
   const getTelemetry = useCallback((index: number): QuestionTelemetry => {
     const store = questionTelemetryRef.current
@@ -190,6 +191,10 @@ export default function ExamGeneratorPage() {
     questionTelemetryRef.current = {}
     lastQuestionIndexRef.current = null
   }, [questions])
+
+  useEffect(() => {
+    timeRemainingRef.current = timeRemaining
+  }, [timeRemaining])
 
   useEffect(() => {
     if (!isExamStarted || questions.length === 0) return
@@ -425,9 +430,9 @@ export default function ExamGeneratorPage() {
     }
   }, [currentQuestion, getTelemetry, questions, textFormats, resolveSelectionText])
 
-  // Save paused exam state to localStorage
-  const savePausedExamState = () => {
-    if (!examType || !mode || questions.length === 0) return
+  // Persist in-progress exam state so users can always resume after refresh/navigation.
+  const savePausedExamState = useCallback((reason: 'manual' | 'autosave' | 'beforeunload' = 'manual') => {
+    if (!isExamStarted || !examType || !mode || questions.length === 0) return
 
     const pausedState = {
       examType,
@@ -437,17 +442,68 @@ export default function ExamGeneratorPage() {
       flaggedQuestions,
       textFormats,
       questions,
-      timeRemaining,
+      timeRemaining: timeRemainingRef.current,
       assignmentId,
       pausedAt: new Date().toISOString(),
+      saveReason: reason,
     }
 
-    localStorage.setItem('pausedExamState', JSON.stringify(pausedState))
-  }
+    try {
+      localStorage.setItem('pausedExamState', JSON.stringify(pausedState))
+    } catch (error) {
+      // Don't break exam flow if storage quota is exceeded.
+      console.error('Failed to persist exam progress:', error)
+    }
+  }, [
+    assignmentId,
+    currentQuestion,
+    examType,
+    flaggedQuestions,
+    isExamStarted,
+    mode,
+    questions,
+    selectedAnswers,
+    textFormats,
+  ])
+
+  // Autosave current in-progress state after meaningful changes.
+  useEffect(() => {
+    if (!isExamStarted || !examType || !mode || questions.length === 0 || isSavingResults) return
+
+    const autosaveTimer = window.setTimeout(() => {
+      savePausedExamState('autosave')
+    }, 250)
+
+    return () => window.clearTimeout(autosaveTimer)
+  }, [
+    assignmentId,
+    currentQuestion,
+    examType,
+    flaggedQuestions,
+    isExamStarted,
+    isSavingResults,
+    mode,
+    questions,
+    savePausedExamState,
+    selectedAnswers,
+    textFormats,
+  ])
+
+  // Final sync for hard refresh/tab close.
+  useEffect(() => {
+    if (!isExamStarted || !examType || !mode || questions.length === 0 || isSavingResults) return
+
+    const handleBeforeUnload = () => {
+      savePausedExamState('beforeunload')
+    }
+
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
+  }, [examType, isExamStarted, isSavingResults, mode, questions.length, savePausedExamState])
 
   // Handle pause button click
   const handlePause = () => {
-    savePausedExamState()
+    savePausedExamState('manual')
     finalizeCurrentTiming()
     setIsPaused(true)
   }
@@ -459,7 +515,7 @@ export default function ExamGeneratorPage() {
 
   // Save and return to dashboard
   const handleSaveAndReturn = () => {
-    savePausedExamState()
+    savePausedExamState('manual')
     router.push('/dashboard')
   }
 
@@ -1724,6 +1780,9 @@ export default function ExamGeneratorPage() {
                 </div>
                 <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Tahoma' }}>
                   Question {currentQuestion + 1} of {questions.length}
+                </p>
+                <p className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                  Progress auto-saves while you work.
                 </p>
               </div>
               {mode === 'test' && timeRemaining > 0 && (
