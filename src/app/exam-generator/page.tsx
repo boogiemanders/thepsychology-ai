@@ -124,6 +124,7 @@ export default function ExamGeneratorPage() {
   const questionTelemetryRef = useRef<Record<number, QuestionTelemetry>>({})
   const lastQuestionIndexRef = useRef<number | null>(null)
   const timeRemainingRef = useRef(0)
+  const activeUserId = user?.id ?? userId ?? null
 
   const getTelemetry = useCallback((index: number): QuestionTelemetry => {
     const store = questionTelemetryRef.current
@@ -583,14 +584,30 @@ export default function ExamGeneratorPage() {
 	    })
 	  }, [examType, questions, selectedAnswers])
 
+  const resolveUserId = useCallback(async (): Promise<string | null> => {
+    if (user?.id) return user.id
+    if (userId) return userId
+    const {
+      data: { session },
+    } = await supabase.auth.getSession()
+    return session?.user?.id ?? null
+  }, [user?.id, userId])
+
   // Handle end exam - save results to Supabase and navigate
   const handleEndExam = useCallback(async () => {
-    if (!userId || !examType || !mode) {
-      console.error('Missing required data for exam completion')
+    const resolvedUserId = await resolveUserId()
+    if (!resolvedUserId || !examType || !mode) {
+      console.error('Missing required data for exam completion', {
+        hasUserId: Boolean(resolvedUserId),
+        hasExamType: Boolean(examType),
+        hasMode: Boolean(mode),
+      })
+      setError('Your session could not be verified. Please refresh and try again.')
       return
     }
 
     setIsSavingResults(true)
+    setUserId(resolvedUserId)
 
     try {
       const scoredQuestions = questions.filter(q => q.isScored !== false)
@@ -680,7 +697,12 @@ export default function ExamGeneratorPage() {
         error: sessionError,
       } = await supabase.auth.getSession()
       if (sessionError) throw sessionError
-      const token = session?.access_token
+      let token = session?.access_token
+      if (!token) {
+        const { data: refreshData, error: refreshError } = await supabase.auth.refreshSession()
+        if (refreshError) throw refreshError
+        token = refreshData.session?.access_token
+      }
       if (!token) throw new Error('Not authenticated')
 
       const response = await fetch('/api/save-exam-results', {
@@ -690,7 +712,7 @@ export default function ExamGeneratorPage() {
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          userId,
+          userId: resolvedUserId,
           examType,
           examMode: mode,
           questions,
@@ -722,7 +744,7 @@ export default function ExamGeneratorPage() {
       setError('Failed to save exam results. Please try again.')
       setIsSavingResults(false)
     }
-  }, [userId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults, finalizeCurrentTiming, resolveCorrectAnswer])
+  }, [resolveUserId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults, finalizeCurrentTiming, resolveCorrectAnswer])
 
   // Resume last paused exam (manual resume via button)
   const handleResumeLastExam = () => {
@@ -922,24 +944,33 @@ export default function ExamGeneratorPage() {
 		setRecommendedMode(defaults.examMode)
 	}, [isFreeTier])
 
-  // Get current user ID for pre-generation
+  // Keep local userId in sync with auth state and recover from delayed session hydration.
   useEffect(() => {
+    if (user?.id) {
+      setUserId(user.id)
+      return
+    }
+
+    let isMounted = true
     const initializeUser = async () => {
       const { data: { session } } = await supabase.auth.getSession()
-      if (session?.user?.id) {
+      if (isMounted && session?.user?.id) {
         setUserId(session.user.id)
       }
     }
     initializeUser()
-  }, [])
+    return () => {
+      isMounted = false
+    }
+  }, [user?.id])
 
   // Pre-generate exams on page load for faster loading
   useEffect(() => {
-    if (userId && !examType) {
-      triggerBackgroundPreGeneration(userId, 'diagnostic')
-      triggerBackgroundPreGeneration(userId, 'practice')
+    if (activeUserId && !examType) {
+      triggerBackgroundPreGeneration(activeUserId, 'diagnostic')
+      triggerBackgroundPreGeneration(activeUserId, 'practice')
     }
-  }, [userId, examType])
+  }, [activeUserId, examType])
 
   // Auto-show explanation in Study Mode
   useEffect(() => {
@@ -1013,18 +1044,23 @@ export default function ExamGeneratorPage() {
       setMode(chosenMode)
       setAssignmentId(null)
 
+      const resolvedUserId = activeUserId ?? await resolveUserId()
+      if (resolvedUserId) {
+        setUserId(resolvedUserId)
+      }
+
       let examData = null
 
       // For paid tiers, try to fetch Git-backed exams first.
       // Free tier always uses free-examsGPT and skips assignments.
-      if (!isFreeTier && userId) {
+      if (!isFreeTier && resolvedUserId) {
         setIsLoadingPreGen(true)
         try {
           console.time('[Exam Gen] Assignment API call')
           const assignResponse = await fetch('/api/assign-exam', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId, examType: chosenExamType }),
+            body: JSON.stringify({ userId: resolvedUserId, examType: chosenExamType }),
           })
           console.timeEnd('[Exam Gen] Assignment API call')
 
@@ -1058,7 +1094,7 @@ export default function ExamGeneratorPage() {
         const response = await fetch(`/api/exam-generator?${params.toString()}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ userId }),
+          body: JSON.stringify({ userId: resolvedUserId }),
         })
 
         if (!response.ok) {
