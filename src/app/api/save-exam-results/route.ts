@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { after, NextRequest, NextResponse } from 'next/server'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 import { saveDevExamResult } from '@/lib/dev-exam-results-store'
 import { applyTopicMasteryDeltas, accumulateTopicMasteryDeltas, TopicAttempt } from '@/lib/topic-mastery'
@@ -137,199 +137,207 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      // Store a summary row for chart-friendly analytics.
-      if (userId && examType && examMode && totalQuestions) {
-        const percentage = totalQuestions > 0 ? (score / totalQuestions) * 100 : 0
-        try {
-          const { error: historyError } = await supabase
-            .from('exam_history')
-            .insert({
+      const persistedResultId = resultId
+      const attemptsPayload = Array.isArray(questionAttempts) ? questionAttempts : []
+      const questionsPayload = Array.isArray(questions) ? questions : []
+      const selectedAnswersPayload = selectedAnswers
+      const assignmentIdPayload = assignmentId ?? null
+
+      // Run analytics/enrichment work after responding so submit stays fast/reliable.
+      after(async () => {
+        // Store a summary row for chart-friendly analytics.
+        if (userId && examType && examMode && totalQuestions) {
+          const percentage = totalQuestions > 0 ? (score / totalQuestions) * 100 : 0
+          try {
+            const { error: historyError } = await supabase
+              .from('exam_history')
+              .insert({
+                user_id: userId,
+                exam_type: examType,
+                exam_mode: examMode,
+                score: Number(percentage.toFixed(2)),
+                total_questions: totalQuestions,
+                correct_answers: score,
+                created_at: new Date().toISOString(),
+              })
+
+            if (historyError) {
+              console.error('Error inserting exam_history in save-exam-results:', historyError)
+            } else {
+              checkUserMilestone(supabase, userId, totalQuestions).catch(err => {
+                console.error('Error checking user milestone:', err)
+              })
+            }
+          } catch (historyException) {
+            console.error('Exception inserting exam_history in save-exam-results:', historyException)
+          }
+        }
+
+        // Store per-question exam telemetry (if provided).
+        if (persistedResultId && attemptsPayload.length > 0) {
+          try {
+            const attemptRows = attemptsPayload.map((attempt: any) => ({
+              exam_result_id: persistedResultId,
               user_id: userId,
               exam_type: examType,
               exam_mode: examMode,
-              score: Number(percentage.toFixed(2)),
-              total_questions: totalQuestions,
-              correct_answers: score,
+              question_index: typeof attempt.questionIndex === 'number' ? attempt.questionIndex : null,
+              question_id: attempt.questionId ? String(attempt.questionId) : null,
+              topic: attempt.topic ?? null,
+              domain: attempt.domain ?? null,
+              kn_id: attempt.knId ?? null,
+              difficulty: attempt.difficulty ?? null,
+              question: attempt.question ?? null,
+              options: Array.isArray(attempt.options) ? attempt.options : null,
+              selected_answer: attempt.selectedAnswer ?? null,
+              correct_answer: attempt.correctAnswer ?? null,
+              is_correct: attempt.isCorrect === true,
+              is_scored: attempt.isScored !== false,
+              related_sections: Array.isArray(attempt.relatedSections) ? attempt.relatedSections : null,
+              time_spent_ms: typeof attempt.timeSpentMs === 'number' ? attempt.timeSpentMs : null,
+              visit_count: typeof attempt.visitCount === 'number' ? attempt.visitCount : null,
+              answer_changes: typeof attempt.answerChanges === 'number' ? attempt.answerChanges : null,
+              changed_correct_to_wrong: attempt.changedCorrectToWrong === true,
+              changed_wrong_to_correct: attempt.changedWrongToCorrect === true,
+              flagged: attempt.flagged === true,
+              highlight_count: typeof attempt.highlightCount === 'number' ? attempt.highlightCount : null,
+              strikethrough_count: typeof attempt.strikethroughCount === 'number' ? attempt.strikethroughCount : null,
               created_at: new Date().toISOString(),
-            })
+            }))
 
-          if (historyError) {
-            console.error('Error inserting exam_history in save-exam-results:', historyError)
-          } else {
-            // Check for user milestones after successful exam_history insert
-            checkUserMilestone(supabase, userId, totalQuestions).catch(err => {
-              console.error('Error checking user milestone:', err)
-            })
-          }
-        } catch (historyException) {
-          console.error('Exception inserting exam_history in save-exam-results:', historyException)
-        }
-      }
+            const { error: attemptError } = await supabase
+              .from('exam_question_attempts')
+              .insert(attemptRows)
 
-      // Store per-question exam telemetry (if provided).
-      if (resultId && Array.isArray(questionAttempts) && questionAttempts.length > 0) {
-        try {
-          const attemptRows = questionAttempts.map((attempt: any) => ({
-            exam_result_id: resultId,
-            user_id: userId,
-            exam_type: examType,
-            exam_mode: examMode,
-            question_index: typeof attempt.questionIndex === 'number' ? attempt.questionIndex : null,
-            question_id: attempt.questionId ? String(attempt.questionId) : null,
-            topic: attempt.topic ?? null,
-            domain: attempt.domain ?? null,
-            kn_id: attempt.knId ?? null,
-            difficulty: attempt.difficulty ?? null,
-            question: attempt.question ?? null,
-            options: Array.isArray(attempt.options) ? attempt.options : null,
-            selected_answer: attempt.selectedAnswer ?? null,
-            correct_answer: attempt.correctAnswer ?? null,
-            is_correct: attempt.isCorrect === true,
-            is_scored: attempt.isScored !== false,
-            related_sections: Array.isArray(attempt.relatedSections) ? attempt.relatedSections : null,
-            time_spent_ms: typeof attempt.timeSpentMs === 'number' ? attempt.timeSpentMs : null,
-            visit_count: typeof attempt.visitCount === 'number' ? attempt.visitCount : null,
-            answer_changes: typeof attempt.answerChanges === 'number' ? attempt.answerChanges : null,
-            changed_correct_to_wrong: attempt.changedCorrectToWrong === true,
-            changed_wrong_to_correct: attempt.changedWrongToCorrect === true,
-            flagged: attempt.flagged === true,
-            highlight_count: typeof attempt.highlightCount === 'number' ? attempt.highlightCount : null,
-            strikethrough_count: typeof attempt.strikethroughCount === 'number' ? attempt.strikethroughCount : null,
-            created_at: new Date().toISOString(),
-          }))
-
-          const { error: attemptError } = await supabase
-            .from('exam_question_attempts')
-            .insert(attemptRows)
-
-          if (attemptError) {
-            console.error('Error inserting exam_question_attempts:', attemptError)
-          }
-        } catch (attemptException) {
-          console.error('Exception inserting exam_question_attempts:', attemptException)
-        }
-      }
-
-      // Update topic mastery rollups for per-topic/section progress tracking.
-      if (userId && Array.isArray(questions) && selectedAnswers) {
-        try {
-          const attempts: TopicAttempt[] = []
-          questions.forEach((question: any, index: number) => {
-            const selected = selectedAnswers[index]
-            if (!selected) return
-
-            const topic = question.topicName || question.topic || question.topicName || ''
-            const domain = question.domainId || question.domain || null
-            const relatedSections = Array.isArray(question.relatedSections)
-              ? question.relatedSections
-              : []
-
-            attempts.push({
-              topic,
-              domain,
-              relatedSections,
-              isCorrect: selected === question.correct_answer,
-              timestamp: Date.now(),
-            })
-          })
-
-          const deltas = accumulateTopicMasteryDeltas(attempts)
-          if (deltas.length > 0) {
-            await applyTopicMasteryDeltas(supabase, userId, deltas)
-          }
-        } catch (masteryError) {
-          console.error('Error updating topic_mastery in save-exam-results:', masteryError)
-        }
-      }
-
-      // Update spaced repetition review queue (primarily wrong answers).
-      if (userId && Array.isArray(questions) && selectedAnswers) {
-        try {
-          const reviewAttempts: ReviewAttempt[] = []
-          questions.forEach((question: any, index: number) => {
-            const selected = selectedAnswers[index]
-            if (!selected) return
-            if (question.isScored === false || question.scored === false) return
-
-            const topic = question.topicName || question.topic || ''
-            const domain = question.domainId || question.domain || null
-            const relatedSections = Array.isArray(question.relatedSections)
-              ? question.relatedSections
-              : []
-
-            const options = Array.isArray(question.options) ? question.options : null
-            const rawCorrect = typeof question.correct_answer === 'string' ? question.correct_answer : ''
-            let correctAnswer = rawCorrect
-            if (options && /^[A-D]$/.test(rawCorrect)) {
-              const idx = rawCorrect.charCodeAt(0) - 65
-              correctAnswer = options[idx] ?? rawCorrect
+            if (attemptError) {
+              console.error('Error inserting exam_question_attempts:', attemptError)
             }
-
-            reviewAttempts.push({
-              examType,
-              questionId: question.id ? String(question.id) : null,
-              question: question.question ?? '',
-              options,
-              correctAnswer: correctAnswer || null,
-              selectedAnswer: selected,
-              wasCorrect: selected === correctAnswer,
-              attemptedAtMs: Date.now(),
-              topic: topic || null,
-              domain: domain ? String(domain) : null,
-              relatedSections,
-              metadata: {
-                examMode,
-                assignmentId: assignmentId ?? null,
-                isScored: question.isScored !== false && question.scored !== false,
-                sourceFile: question.sourceFile || question.source_file || null,
-                knId: question.knId || null,
-                difficulty: question.difficulty || null,
-              },
-            })
-          })
-
-          if (reviewAttempts.length > 0) {
-            await applyReviewQueueUpdates(supabase, userId, reviewAttempts)
+          } catch (attemptException) {
+            console.error('Exception inserting exam_question_attempts:', attemptException)
           }
-        } catch (reviewError) {
-          console.error('Error updating review_queue in save-exam-results:', reviewError)
         }
-      }
 
-      if (userId && Array.isArray(questionAttempts) && questionAttempts.length > 0) {
-        try {
-          const insightAttempts = questionAttempts.map((attempt: any) => ({
-            questionId: attempt.questionId ?? null,
-            question: attempt.question ?? null,
-            topic: attempt.topic ?? null,
-            domain: attempt.domain ?? null,
-            knId: attempt.knId ?? null,
-            relatedSections: Array.isArray(attempt.relatedSections) ? attempt.relatedSections : null,
-            difficulty: attempt.difficulty ?? null,
-            isCorrect: attempt.isCorrect === true,
-            isScored: attempt.isScored !== false,
-            timeSpentMs: attempt.timeSpentMs ?? null,
-            visitCount: attempt.visitCount ?? null,
-            answerChanges: attempt.answerChanges ?? null,
-            changedCorrectToWrong: attempt.changedCorrectToWrong ?? null,
-            changedWrongToCorrect: attempt.changedWrongToCorrect ?? null,
-            flagged: attempt.flagged ?? null,
-            highlightCount: attempt.highlightCount ?? null,
-            strikethroughCount: attempt.strikethroughCount ?? null,
-          }))
+        // Update topic mastery rollups for per-topic/section progress tracking.
+        if (userId && questionsPayload.length > 0 && selectedAnswersPayload) {
+          try {
+            const attempts: TopicAttempt[] = []
+            questionsPayload.forEach((question: any, index: number) => {
+              const selected = selectedAnswersPayload[index]
+              if (!selected) return
 
-          await createRecoverInsight(supabase, {
-            userId,
-            sourceType: 'exam',
-            sourceId: resultId,
-            examType,
-            examMode,
-            questionAttempts: insightAttempts,
-          })
-        } catch (insightError) {
-          console.error('[save-exam-results] Failed to generate Recover insight:', insightError)
+              const topic = question.topicName || question.topic || question.topicName || ''
+              const domain = question.domainId || question.domain || null
+              const relatedSections = Array.isArray(question.relatedSections)
+                ? question.relatedSections
+                : []
+
+              attempts.push({
+                topic,
+                domain,
+                relatedSections,
+                isCorrect: selected === question.correct_answer,
+                timestamp: Date.now(),
+              })
+            })
+
+            const deltas = accumulateTopicMasteryDeltas(attempts)
+            if (deltas.length > 0) {
+              await applyTopicMasteryDeltas(supabase, userId, deltas)
+            }
+          } catch (masteryError) {
+            console.error('Error updating topic_mastery in save-exam-results:', masteryError)
+          }
         }
-      }
+
+        // Update spaced repetition review queue (primarily wrong answers).
+        if (userId && questionsPayload.length > 0 && selectedAnswersPayload) {
+          try {
+            const reviewAttempts: ReviewAttempt[] = []
+            questionsPayload.forEach((question: any, index: number) => {
+              const selected = selectedAnswersPayload[index]
+              if (!selected) return
+              if (question.isScored === false || question.scored === false) return
+
+              const topic = question.topicName || question.topic || ''
+              const domain = question.domainId || question.domain || null
+              const relatedSections = Array.isArray(question.relatedSections)
+                ? question.relatedSections
+                : []
+
+              const options = Array.isArray(question.options) ? question.options : null
+              const rawCorrect = typeof question.correct_answer === 'string' ? question.correct_answer : ''
+              let correctAnswer = rawCorrect
+              if (options && /^[A-D]$/.test(rawCorrect)) {
+                const idx = rawCorrect.charCodeAt(0) - 65
+                correctAnswer = options[idx] ?? rawCorrect
+              }
+
+              reviewAttempts.push({
+                examType,
+                questionId: question.id ? String(question.id) : null,
+                question: question.question ?? '',
+                options,
+                correctAnswer: correctAnswer || null,
+                selectedAnswer: selected,
+                wasCorrect: selected === correctAnswer,
+                attemptedAtMs: Date.now(),
+                topic: topic || null,
+                domain: domain ? String(domain) : null,
+                relatedSections,
+                metadata: {
+                  examMode,
+                  assignmentId: assignmentIdPayload,
+                  isScored: question.isScored !== false && question.scored !== false,
+                  sourceFile: question.sourceFile || question.source_file || null,
+                  knId: question.knId || null,
+                  difficulty: question.difficulty || null,
+                },
+              })
+            })
+
+            if (reviewAttempts.length > 0) {
+              await applyReviewQueueUpdates(supabase, userId, reviewAttempts)
+            }
+          } catch (reviewError) {
+            console.error('Error updating review_queue in save-exam-results:', reviewError)
+          }
+        }
+
+        if (userId && attemptsPayload.length > 0) {
+          try {
+            const insightAttempts = attemptsPayload.map((attempt: any) => ({
+              questionId: attempt.questionId ?? null,
+              question: attempt.question ?? null,
+              topic: attempt.topic ?? null,
+              domain: attempt.domain ?? null,
+              knId: attempt.knId ?? null,
+              relatedSections: Array.isArray(attempt.relatedSections) ? attempt.relatedSections : null,
+              difficulty: attempt.difficulty ?? null,
+              isCorrect: attempt.isCorrect === true,
+              isScored: attempt.isScored !== false,
+              timeSpentMs: attempt.timeSpentMs ?? null,
+              visitCount: attempt.visitCount ?? null,
+              answerChanges: attempt.answerChanges ?? null,
+              changedCorrectToWrong: attempt.changedCorrectToWrong ?? null,
+              changedWrongToCorrect: attempt.changedWrongToCorrect ?? null,
+              flagged: attempt.flagged ?? null,
+              highlightCount: attempt.highlightCount ?? null,
+              strikethroughCount: attempt.strikethroughCount ?? null,
+            }))
+
+            await createRecoverInsight(supabase, {
+              userId,
+              sourceType: 'exam',
+              sourceId: persistedResultId,
+              examType,
+              examMode,
+              questionAttempts: insightAttempts,
+            })
+          } catch (insightError) {
+            console.error('[save-exam-results] Failed to generate Recover insight:', insightError)
+          }
+        }
+      })
     } else {
       console.warn(
         '[save-exam-results] SUPABASE_SERVICE_ROLE_KEY not configured. Falling back to local in-memory storage.'

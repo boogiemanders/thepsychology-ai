@@ -705,32 +705,48 @@ export default function ExamGeneratorPage() {
       }
       if (!token) throw new Error('Not authenticated')
 
-      const response = await fetch('/api/save-exam-results', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          userId: resolvedUserId,
-          examType,
-          examMode: mode,
-          questions,
-          selectedAnswers,
-          flaggedQuestions,
-          score,
-          totalQuestions: scoredQuestions.length,
-          topPriorities: priorityData?.topPriorities || null,
-          allResults: priorityData?.allResults || null,
-          assignmentId: assignmentId || null,
-          questionAttempts,
-        }),
-      })
+      const saveController = new AbortController()
+      const saveTimeoutId = window.setTimeout(() => {
+        saveController.abort()
+      }, 60000)
 
-      const data = await response.json()
+      let response: Response
+      try {
+        response = await fetch('/api/save-exam-results', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            userId: resolvedUserId,
+            examType,
+            examMode: mode,
+            questions,
+            selectedAnswers,
+            flaggedQuestions,
+            score,
+            totalQuestions: scoredQuestions.length,
+            topPriorities: priorityData?.topPriorities || null,
+            allResults: priorityData?.allResults || null,
+            assignmentId: assignmentId || null,
+            questionAttempts,
+          }),
+          signal: saveController.signal,
+        })
+      } finally {
+        window.clearTimeout(saveTimeoutId)
+      }
 
-      if (!data.success) {
-        throw new Error('Failed to save exam results')
+      let data: any = null
+      try {
+        data = await response.json()
+      } catch {
+        throw new Error('Failed to parse save response')
+      }
+
+      if (!response.ok || !data?.success) {
+        throw new Error(data?.error || 'Failed to save exam results')
       }
 
       // Clear paused exam state since exam is now completed
@@ -741,7 +757,11 @@ export default function ExamGeneratorPage() {
       router.push(`/prioritize?id=${data.resultId}`)
     } catch (error) {
       console.error('Error saving exam results:', error)
-      setError('Failed to save exam results. Please try again.')
+      if (error instanceof DOMException && error.name === 'AbortError') {
+        setError('Saving took too long. Please check your connection and try submitting again.')
+      } else {
+        setError('Failed to save exam results. Please try again.')
+      }
       setIsSavingResults(false)
     }
   }, [resolveUserId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults, finalizeCurrentTiming, resolveCorrectAnswer])
