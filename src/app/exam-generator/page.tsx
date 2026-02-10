@@ -1991,47 +1991,51 @@ export default function ExamGeneratorPage() {
 
               {/* Navigation Buttons on Right */}
               <div className="flex items-center gap-3">
-                <Button
-                  onClick={handlePrevious}
-                  disabled={currentQuestion === 0}
-                  variant="outline"
-                  className="h-auto min-w-[120px] rounded-none py-2"
-                  style={{ fontFamily: 'Tahoma' }}
-                  title={`${shortcutModifierLabel} + P`}
-                >
-                  <span className="flex flex-col items-center leading-tight">
-                    <span>Previous</span>
-                    <span className="text-[11px] font-normal text-muted-foreground">{shortcutModifierLabel} + P</span>
+                <div className="flex flex-col gap-1">
+                  <Button
+                    onClick={handlePrevious}
+                    disabled={currentQuestion === 0}
+                    variant="outline"
+                    className="h-auto min-w-[120px] rounded-none py-2"
+                    style={{ fontFamily: 'Tahoma' }}
+                    title={`${shortcutModifierLabel} + P`}
+                  >
+                    Previous
+                  </Button>
+                  <span className="text-xs text-muted-foreground pl-2" style={{ fontFamily: 'Tahoma' }}>
+                    {shortcutModifierLabel} + P
                   </span>
-                </Button>
+                </div>
 
                 {currentQuestion === questions.length - 1 ? (
-                  <Button
-                    onClick={() => { setShowQuestionNav(true); setIsReviewMode(true) }}
-                    disabled={isSavingResults}
-                    className="h-auto min-w-[120px] rounded-none py-2"
-                    style={{ fontFamily: 'Tahoma' }}
-                    title={`${shortcutModifierLabel} + E`}
-                  >
-                    {isSavingResults ? 'Saving...' : (
-                      <span className="flex flex-col items-center leading-tight">
-                        <span>Review</span>
-                        <span className="text-[11px] font-normal text-muted-foreground">{shortcutModifierLabel} + E</span>
-                      </span>
-                    )}
-                  </Button>
-                ) : (
-                  <Button
-                    onClick={handleNext}
-                    className="h-auto min-w-[120px] rounded-none py-2"
-                    style={{ fontFamily: 'Tahoma' }}
-                    title={`${shortcutModifierLabel} + N`}
-                  >
-                    <span className="flex flex-col items-center leading-tight">
-                      <span>Next</span>
-                      <span className="text-[11px] font-normal text-muted-foreground">{shortcutModifierLabel} + N</span>
+                  <div className="flex flex-col gap-1">
+                    <Button
+                      onClick={() => { setShowQuestionNav(true); setIsReviewMode(true) }}
+                      disabled={isSavingResults}
+                      className="h-auto min-w-[120px] rounded-none py-2"
+                      style={{ fontFamily: 'Tahoma' }}
+                      title={`${shortcutModifierLabel} + E`}
+                    >
+                      {isSavingResults ? 'Saving...' : 'Review'}
+                    </Button>
+                    <span className="text-xs text-muted-foreground pl-2" style={{ fontFamily: 'Tahoma' }}>
+                      {shortcutModifierLabel} + E
                     </span>
-                  </Button>
+                  </div>
+                ) : (
+                  <div className="flex flex-col gap-1">
+                    <Button
+                      onClick={handleNext}
+                      className="h-auto min-w-[120px] rounded-none py-2"
+                      style={{ fontFamily: 'Tahoma' }}
+                      title={`${shortcutModifierLabel} + N`}
+                    >
+                      Next
+                    </Button>
+                    <span className="text-xs text-muted-foreground pl-2" style={{ fontFamily: 'Tahoma' }}>
+                      {shortcutModifierLabel} + N
+                    </span>
+                  </div>
                 )}
               </div>
             </div>
