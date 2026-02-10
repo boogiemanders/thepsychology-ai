@@ -27,7 +27,6 @@ import {
 } from '@/components/ui/breadcrumb'
 import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
 import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
-import { createClient } from '@supabase/supabase-js'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/lib/unified-question-results'
 import { recordStudySession } from '@/lib/study-sessions'
@@ -926,10 +925,6 @@ export default function ExamGeneratorPage() {
   // Get current user ID for pre-generation
   useEffect(() => {
     const initializeUser = async () => {
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      )
       const { data: { session } } = await supabase.auth.getSession()
       if (session?.user?.id) {
         setUserId(session.user.id)

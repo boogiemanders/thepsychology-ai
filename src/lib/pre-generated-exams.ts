@@ -1,6 +1,6 @@
 'use client'
 
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from '@/lib/supabase'
 
 // Types
 interface Question {
@@ -36,16 +36,6 @@ interface PreGeneratedExam {
   created_at: string
 }
 
-// Initialize Supabase client
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn('Supabase credentials missing - pre-generated exams will not work')
-}
-
-const supabase = supabaseUrl && supabaseAnonKey ? createClient(supabaseUrl, supabaseAnonKey) : null
-
 /**
  * Get a pre-generated exam for a user
  * Returns null if no valid pre-gen exists
@@ -55,11 +45,6 @@ export async function getPreGeneratedExam(
   userId: string,
   examType: 'diagnostic' | 'practice'
 ): Promise<ExamQuestions | null> {
-  if (!supabase) {
-    console.warn('Supabase not initialized - cannot fetch pre-generated exam')
-    return null
-  }
-
   try {
     // Fetch unused, non-expired exam
     const { data, error } = await supabase
@@ -104,11 +89,6 @@ export async function savePreGeneratedExam(
   examType: 'diagnostic' | 'practice',
   questions: ExamQuestions
 ): Promise<boolean> {
-  if (!supabase) {
-    console.warn('Supabase not initialized - cannot save pre-generated exam')
-    return false
-  }
-
   try {
     const expiresAt = new Date()
     expiresAt.setDate(expiresAt.getDate() + 7) // 7 day expiration
@@ -140,10 +120,6 @@ export async function hasValidPreGeneratedExam(
   userId: string,
   examType: 'diagnostic' | 'practice'
 ): Promise<boolean> {
-  if (!supabase) {
-    return false
-  }
-
   try {
     const { data, error } = await supabase
       .from('pre_generated_exams')
@@ -226,11 +202,6 @@ export async function triggerBackgroundPreGeneration(
  * 2. Expired (expires_at < now)
  */
 export async function cleanupExpiredExams(): Promise<number> {
-  if (!supabase) {
-    console.warn('Supabase not initialized - cannot cleanup exams')
-    return 0
-  }
-
   try {
     const oneDayAgo = new Date()
     oneDayAgo.setDate(oneDayAgo.getDate() - 1)
@@ -272,11 +243,6 @@ export async function cleanupExpiredExams(): Promise<number> {
  * (utility function for more control)
  */
 export async function markExamAsUsed(examId: string): Promise<boolean> {
-  if (!supabase) {
-    console.warn('Supabase not initialized')
-    return false
-  }
-
   try {
     const { error } = await supabase
       .from('pre_generated_exams')
@@ -304,10 +270,6 @@ export async function getPreGenStats(userId: string): Promise<{
   unexpiredUnused: number
   expiredCount: number
 } | null> {
-  if (!supabase) {
-    return null
-  }
-
   try {
     const now = new Date().toISOString()
 

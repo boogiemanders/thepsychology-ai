@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback, useRef, Re
 import { User as SupabaseUser } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'
 import { handleUserSwitch, hydrateQuizDataFromServer } from '@/lib/local-study-storage'
+import { safeSessionStorageSetItem } from '@/lib/safe-storage'
 
 // Session timeout configuration (in milliseconds)
 const IDLE_TIMEOUT_MS = 2 * 60 * 60 * 1000 // 2 hours idle timeout
@@ -149,7 +150,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setConsentPreferences(null)
     // Store message for login page to display
     if (typeof window !== 'undefined') {
-      sessionStorage.setItem('sessionExpiredMessage', message)
+      safeSessionStorageSetItem('sessionExpiredMessage', message)
       window.location.href = '/login'
     }
   }, [clearSessionTimers])
@@ -211,7 +212,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         // Start session timeout timers
         startSessionTimers()
 
-        // Hydrate quiz data from server if localStorage is empty
+        // Merge quiz data from server so progress stays consistent across browsers/devices.
         if (session.access_token) {
           hydrateQuizDataFromServer(session.access_token).catch((err) => {
             console.debug('Quiz data hydration failed:', err)

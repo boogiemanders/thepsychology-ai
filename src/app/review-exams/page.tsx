@@ -17,7 +17,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from '@/lib/supabase'
 
 interface CompletedExam {
   assignmentId: string
@@ -51,10 +51,6 @@ export default function ReviewExamsPage() {
   // Get current user
   useEffect(() => {
     const initializeUser = async () => {
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      )
       const { data: { session } } = await supabase.auth.getSession()
       if (session?.user?.id) {
         setUserId(session.user.id)

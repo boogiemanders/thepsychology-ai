@@ -1,7 +1,24 @@
 import { supabase } from './supabase'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 
+let interestsTableUnavailable = false
+
+function shouldDisableInterestFeature(error: unknown): boolean {
+  if (!error || typeof error !== 'object') return false
+  const candidate = error as { code?: string; message?: string }
+  const code = candidate.code || ''
+  const message = (candidate.message || '').toLowerCase()
+
+  return (
+    code === '42P01' ||
+    code === 'PGRST205' ||
+    message.includes('relation') ||
+    message.includes('could not find the table')
+  )
+}
+
 export async function saveUserInterest(userId: string, interest: string) {
+  if (interestsTableUnavailable) return
   if (!interest.trim()) return
 
   try {
@@ -10,11 +27,14 @@ export async function saveUserInterest(userId: string, interest: string) {
       .from('user_current_interest')
       .select('*')
       .eq('user_id', userId)
-      .single()
+      .maybeSingle()
 
     // PGRST116 means no rows found (expected for new users)
     // Other errors might indicate table doesn't exist or RLS issues
     if (fetchError && fetchError.code !== 'PGRST116') {
+      if (shouldDisableInterestFeature(fetchError)) {
+        interestsTableUnavailable = true
+      }
       // Log to debug console only (won't trigger error boundary)
       console.debug('Fetch error details:', {
         code: fetchError.code,
@@ -36,6 +56,9 @@ export async function saveUserInterest(userId: string, interest: string) {
         .eq('user_id', userId)
 
       if (updateError) {
+        if (shouldDisableInterestFeature(updateError)) {
+          interestsTableUnavailable = true
+        }
         console.debug('Update error:', updateError)
         // Silently skip if tables don't exist
         return
@@ -47,6 +70,9 @@ export async function saveUserInterest(userId: string, interest: string) {
         .insert([{ user_id: userId, interest, created_at: new Date(), updated_at: new Date() }])
 
       if (insertError) {
+        if (shouldDisableInterestFeature(insertError)) {
+          interestsTableUnavailable = true
+        }
         console.debug('Insert error:', insertError)
         // Silently skip if tables don't exist
         return
@@ -59,24 +85,35 @@ export async function saveUserInterest(userId: string, interest: string) {
       .insert([{ user_id: userId, interest, created_at: new Date() }])
 
     if (historyError) {
+      if (shouldDisableInterestFeature(historyError)) {
+        interestsTableUnavailable = true
+      }
       console.debug('Warning: Failed to save to interests history:', historyError)
       // Don't throw - this is secondary
     }
   } catch (error) {
+    if (shouldDisableInterestFeature(error)) {
+      interestsTableUnavailable = true
+    }
     console.debug('Error saving interest:', error)
     // Don't re-throw - allow graceful degradation
   }
 }
 
 export async function getUserCurrentInterest(userId: string): Promise<string | null> {
+  if (interestsTableUnavailable) return null
+
   try {
     const { data, error } = await supabase
       .from('user_current_interest')
       .select('interest')
       .eq('user_id', userId)
-      .single()
+      .maybeSingle()
 
     if (error && error.code !== 'PGRST116') {
+      if (shouldDisableInterestFeature(error)) {
+        interestsTableUnavailable = true
+      }
       // Silently handle missing tables
       if (error.message && error.message.includes('relation')) {
         console.debug('Interest tables not created yet')
@@ -88,12 +125,17 @@ export async function getUserCurrentInterest(userId: string): Promise<string | n
 
     return data?.interest || null
   } catch (error) {
+    if (shouldDisableInterestFeature(error)) {
+      interestsTableUnavailable = true
+    }
     console.debug('Error fetching interest:', error)
     return null
   }
 }
 
 export async function updateUserCurrentInterest(userId: string, interest: string) {
+  if (interestsTableUnavailable) return
+
   try {
     const normalizedInterest = interest.trim()
 
@@ -104,6 +146,9 @@ export async function updateUserCurrentInterest(userId: string, interest: string
         .eq('user_id', userId)
 
       if (deleteError) {
+        if (shouldDisableInterestFeature(deleteError)) {
+          interestsTableUnavailable = true
+        }
         if (deleteError.message && deleteError.message.includes('relation')) {
           console.debug('Interest tables not created yet')
           return
@@ -118,9 +163,12 @@ export async function updateUserCurrentInterest(userId: string, interest: string
       .from('user_current_interest')
       .select('*')
       .eq('user_id', userId)
-      .single()
+      .maybeSingle()
 
     if (fetchError && fetchError.code !== 'PGRST116') {
+      if (shouldDisableInterestFeature(fetchError)) {
+        interestsTableUnavailable = true
+      }
       // Silently handle missing tables
       if (fetchError.message && fetchError.message.includes('relation')) {
         console.debug('Interest tables not created yet')
@@ -143,6 +191,9 @@ export async function updateUserCurrentInterest(userId: string, interest: string
         .eq('user_id', userId)
 
       if (updateError) {
+        if (shouldDisableInterestFeature(updateError)) {
+          interestsTableUnavailable = true
+        }
         console.debug('Update error while updating interest:', updateError)
       }
     } else {
@@ -151,6 +202,9 @@ export async function updateUserCurrentInterest(userId: string, interest: string
         .insert([{ user_id: userId, interest: normalizedInterest, created_at: new Date(), updated_at: new Date() }])
 
       if (insertError) {
+        if (shouldDisableInterestFeature(insertError)) {
+          interestsTableUnavailable = true
+        }
         console.debug('Insert error while inserting interest:', insertError)
       }
     }
@@ -161,9 +215,15 @@ export async function updateUserCurrentInterest(userId: string, interest: string
       .insert([{ user_id: userId, interest: normalizedInterest, created_at: new Date() }])
 
     if (historyError) {
+      if (shouldDisableInterestFeature(historyError)) {
+        interestsTableUnavailable = true
+      }
       console.debug('History error while saving interest history:', historyError)
     }
   } catch (error) {
+    if (shouldDisableInterestFeature(error)) {
+      interestsTableUnavailable = true
+    }
     console.debug('Error updating interest (non-fatal):', error)
   }
 }
@@ -172,6 +232,8 @@ export function subscribeToUserInterestChanges(
   userId: string,
   callback: (interest: string | null) => void
 ): RealtimeChannel | null {
+  if (interestsTableUnavailable) return null
+
   try {
     const channel = supabase
       .channel(`user_interest_${userId}`)

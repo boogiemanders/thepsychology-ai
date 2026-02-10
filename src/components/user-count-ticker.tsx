@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { NumberTicker } from "@/components/ui/number-ticker"
-import { createClient } from "@supabase/supabase-js"
+import { supabase } from "@/lib/supabase"
 
 export function UserCountTicker({ className }: { className?: string }) {
   const [count, setCount] = useState<number | null>(null)
@@ -17,13 +17,6 @@ export function UserCountTicker({ className }: { className?: string }) {
       .catch(() => {})
 
     // Set up real-time subscription (listens for INSERT on users table)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-    if (!supabaseUrl || !supabaseAnonKey) return
-
-    const supabase = createClient(supabaseUrl, supabaseAnonKey)
-
     const channel = supabase
       .channel('user-count')
       .on(

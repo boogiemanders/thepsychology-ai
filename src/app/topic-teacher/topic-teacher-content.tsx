@@ -27,6 +27,13 @@ import type { RealtimeChannel } from '@supabase/supabase-js'
 import { useAuth } from '@/context/auth-context'
 import { getQuizResults, type WrongAnswer } from '@/lib/quiz-results-storage'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
+import { EPPP_DOMAINS } from '@/lib/eppp-data'
+import { getAllLatestRecommendations } from '@/lib/priority-storage'
+import {
+  safeLocalStorageGetItem,
+  safeLocalStorageRemoveItem,
+  safeLocalStorageSetItem,
+} from '@/lib/safe-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import Lottie from 'lottie-react'
 import textLoadingAnimation from '../../../public/animations/text-loading.json'
@@ -94,6 +101,128 @@ const GENERIC_SECTION_NAMES = new Set([
   'entire section',
   'lesson overview',
 ])
+
+function normalizeTopicForExamMatch(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/^[\d\s]+/, '')
+    .replace(/[&]/g, 'and')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+const TOPIC_MATCH_ALIASES: Record<string, string[]> = {
+  'training and evaluation': ['training methods and evaluation'],
+  'training methods and evaluation': ['training and evaluation'],
+}
+
+function addTopicMatchKey(keys: Set<string>, value: string): void {
+  const normalized = normalizeTopicForExamMatch(value)
+  if (!normalized) return
+
+  keys.add(normalized)
+
+  const aliases = TOPIC_MATCH_ALIASES[normalized] || []
+  aliases.forEach((alias) => {
+    const normalizedAlias = normalizeTopicForExamMatch(alias)
+    if (normalizedAlias) {
+      keys.add(normalizedAlias)
+    }
+  })
+}
+
+function buildTopicMatchKeys(values: Array<string | null | undefined>): Set<string> {
+  const keys = new Set<string>()
+
+  values.forEach((value) => {
+    if (!value) return
+    const trimmed = value.trim()
+    if (!trimmed) return
+
+    const variants = [trimmed, getLessonDisplayName(trimmed)]
+    variants.forEach((variant) => {
+      addTopicMatchKey(keys, variant)
+    })
+  })
+
+  return keys
+}
+
+function getUniqueTopicCandidates(values: Array<string | null | undefined>): string[] {
+  const seen = new Set<string>()
+  const candidates: string[] = []
+
+  values.forEach((value) => {
+    if (!value) return
+    const trimmed = value.trim()
+    if (!trimmed) return
+
+    const normalized = normalizeTopicForExamMatch(trimmed)
+    if (!normalized || seen.has(normalized)) return
+
+    seen.add(normalized)
+    candidates.push(trimmed)
+  })
+
+  return candidates
+}
+
+function getTopicNameFromTopicId(topicId: string): string | null {
+  if (!topicId || typeof topicId !== 'string') return null
+  const parts = topicId.split('-')
+  if (parts.length < 2) return null
+
+  const topicIndex = Number.parseInt(parts[parts.length - 1], 10)
+  if (!Number.isInteger(topicIndex) || topicIndex < 0) return null
+
+  const domainId = parts.slice(0, -1).join('-')
+  if (!domainId) return null
+
+  const domain = EPPP_DOMAINS.find((item) => item.id === domainId)
+  if (!domain) return null
+
+  return domain.topics[topicIndex]?.name ?? null
+}
+
+function isRecommendedInTopDomains(
+  topDomains: any[] | null | undefined,
+  currentTopicMatchKeys: Set<string>
+): boolean {
+  if (!Array.isArray(topDomains) || topDomains.length === 0) return false
+  if (currentTopicMatchKeys.size === 0) return false
+
+  const matchesTopic = (candidateTopic: string | null | undefined): boolean => {
+    if (!candidateTopic) return false
+    const candidateKeys = buildTopicMatchKeys([candidateTopic])
+    for (const key of candidateKeys) {
+      if (currentTopicMatchKeys.has(key)) return true
+    }
+    return false
+  }
+
+  for (const domain of topDomains) {
+    const recommendedTopicIds: string[] = Array.isArray(domain?.recommendedTopicIds)
+      ? domain.recommendedTopicIds
+      : []
+    for (const topicId of recommendedTopicIds) {
+      const topicName = getTopicNameFromTopicId(topicId)
+      if (matchesTopic(topicName)) return true
+    }
+
+    const recommendedTopics: Array<{ topicName?: string; sourceFile?: string }> = Array.isArray(
+      domain?.recommendedTopics
+    )
+      ? domain.recommendedTopics
+      : []
+    for (const rec of recommendedTopics) {
+      if (matchesTopic(rec?.topicName)) return true
+      if (matchesTopic(rec?.sourceFile)) return true
+    }
+  }
+
+  return false
+}
 
 type HastNode = {
   type: string
@@ -529,7 +658,7 @@ function TutorialStarLegend({ hasRealStars, starColor, onStarClick }: TutorialSt
           onClick={onStarClick}
           title="Click to change star color"
           color={starColor}
-        /> Most recent practice exam: <span className="italic text-muted-foreground">(Example for tutorial)</span>
+        /> Most recent exam: <span className="italic text-muted-foreground">(Example for tutorial)</span>
       </p>
     </motion.div>
   )
@@ -583,7 +712,6 @@ export function TopicTeacherContent() {
   }
   const decodedTopic = decodeParam(topic)
   const displayLessonName = getLessonDisplayName(decodedTopic)
-  const normalizedTopicName = decodedTopic ? decodedTopic.trim().toLowerCase() : ''
 
   const normalizeSectionName = (section?: string | null): string | null => {
     if (!section) return null
@@ -612,6 +740,16 @@ export function TopicTeacherContent() {
 
     return normalized
   }
+
+  const [resolvedTopicName, setResolvedTopicName] = useState<string | null>(null)
+  const topicCandidatesForResults = useMemo(
+    () => getUniqueTopicCandidates([decodedTopic, resolvedTopicName]),
+    [decodedTopic, resolvedTopicName]
+  )
+  const topicMatchKeys = useMemo(
+    () => buildTopicMatchKeys(topicCandidatesForResults),
+    [topicCandidatesForResults]
+  )
 
   const [messages, setMessages] = useState<Message[]>([])
   const lessonMarkdown = messages[0]?.role === 'assistant' ? messages[0].content : ''
@@ -643,6 +781,7 @@ export function TopicTeacherContent() {
   const [showRatingDialog, setShowRatingDialog] = useState(false)
   const [ratingSubmitted, setRatingSubmitted] = useState(false)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
+  const [showAudioSyncNotice, setShowAudioSyncNotice] = useState(false)
   const [isRapidNavigationBlocked, setIsRapidNavigationBlocked] = useState(false)
   const [blockTimeRemaining, setBlockTimeRemaining] = useState(0)
   const navigationTimestampsRef = useRef<number[]>([])
@@ -663,6 +802,11 @@ export function TopicTeacherContent() {
   useEffect(() => {
     setManifestText(null)
   }, [lessonMarkdown])
+
+  // Reset canonical topic metadata when the URL topic changes.
+  useEffect(() => {
+    setResolvedTopicName(null)
+  }, [decodedTopic, domain])
 
   const syncReadAlongSpans = (options: { updateState?: boolean } = {}) => {
     const container = lessonContentRef.current
@@ -764,13 +908,30 @@ export function TopicTeacherContent() {
     if (!user?.id || !NUDGE_USERS.includes(user.id)) return
 
     const dismissedKey = `recover_nudge_dismissed_${user.id}`
-    if (localStorage.getItem(dismissedKey)) return
+    if (safeLocalStorageGetItem(dismissedKey)) return
 
     const timer = setTimeout(() => {
       setShowRecoverNudge(true)
     }, 30000) // Show after 30 seconds
 
     return () => clearTimeout(timer)
+  }, [user?.id])
+
+  // One-time notice: audio sync updated
+  useEffect(() => {
+    if (!user?.id) return
+    // Don't show if user already dismissed or has already used the audio bar
+    if (safeLocalStorageGetItem(`audio_sync_notice_dismissed_${user.id}`)) return
+    if (safeLocalStorageGetItem(`audio_bar_used_${user.id}`)) return
+    setShowAudioSyncNotice(true)
+  }, [user?.id])
+
+  // Auto-dismiss audio sync notice when audio starts playing (word progress fires)
+  const dismissAudioSyncNotice = useCallback(() => {
+    setShowAudioSyncNotice(false)
+    if (user?.id) {
+      safeLocalStorageSetItem(`audio_sync_notice_dismissed_${user.id}`, '1')
+    }
   }, [user?.id])
 
   // Admin check - used for screenshot protection and rapid navigation skip
@@ -781,7 +942,7 @@ export function TopicTeacherContent() {
   useEffect(() => {
     if (!user?.id) return
     const blockKey = `rapid_nav_block_${user.id}`
-    const blockData = localStorage.getItem(blockKey)
+    const blockData = safeLocalStorageGetItem(blockKey)
     if (blockData) {
       try {
         const { unblockAt } = JSON.parse(blockData)
@@ -789,10 +950,10 @@ export function TopicTeacherContent() {
           setIsRapidNavigationBlocked(true)
           setBlockTimeRemaining(Math.ceil((unblockAt - Date.now()) / 1000))
         } else {
-          localStorage.removeItem(blockKey)
+          safeLocalStorageRemoveItem(blockKey)
         }
       } catch {
-        localStorage.removeItem(blockKey)
+        safeLocalStorageRemoveItem(blockKey)
       }
     }
   }, [user?.id])
@@ -803,7 +964,7 @@ export function TopicTeacherContent() {
     const blockKey = `rapid_nav_block_${user.id}`
     const unblockAt = Date.now() + 5 * 60 * 1000 // 5 minutes
 
-    localStorage.setItem(blockKey, JSON.stringify({
+    safeLocalStorageSetItem(blockKey, JSON.stringify({
       blockedAt: Date.now(),
       unblockAt
     }))
@@ -842,7 +1003,7 @@ export function TopicTeacherContent() {
         if (prev <= 1) {
           setIsRapidNavigationBlocked(false)
           if (user?.id) {
-            localStorage.removeItem(`rapid_nav_block_${user.id}`)
+            safeLocalStorageRemoveItem(`rapid_nav_block_${user.id}`)
           }
           return 0
         }
@@ -955,6 +1116,9 @@ export function TopicTeacherContent() {
 
   const handleWordProgress = useCallback(
     (payload: { wordIndex: number | null; totalWords: number }) => {
+      // Auto-dismiss audio sync notice once audio is playing
+      if (showAudioSyncNotice) dismissAudioSyncNotice()
+
       const container = lessonContentRef.current
       let spans = wordSpansRef.current
       let map = wordIndexMapRef.current
@@ -1008,7 +1172,7 @@ export function TopicTeacherContent() {
         target.scrollIntoView({ behavior: 'smooth', block: 'center' })
       }
     },
-    []
+    [showAudioSyncNotice, dismissAudioSyncNotice]
   )
 
   const handleReadAlongClick = useCallback(
@@ -1084,6 +1248,8 @@ export function TopicTeacherContent() {
     useState(false)
   const [practiceExamWrongQuestionsError, setPracticeExamWrongQuestionsError] =
     useState<string | null>(null)
+  const [isTopicRecommendedByLatestExam, setIsTopicRecommendedByLatestExam] =
+    useState(false)
   const [quizWrongAnswers, setQuizWrongAnswers] = useState<WrongAnswer[]>([])
   const [activeQuizQuestion, setActiveQuizQuestion] = useState<WrongAnswer | null>(null)
   const [matchedExamTerms, setMatchedExamTerms] = useState<string[]>([])
@@ -1141,21 +1307,14 @@ export function TopicTeacherContent() {
 
   const getCachedTranslation = (cacheKey: string): string | null => {
     if (typeof window === 'undefined') return null
-    try {
-      return localStorage.getItem(cacheKey)
-    } catch (error) {
-      console.debug('Unable to read translation cache:', error)
-      return null
-    }
+    return safeLocalStorageGetItem(cacheKey)
   }
 
   const storeCachedTranslation = (cacheKey: string, content: string) => {
     if (typeof window === 'undefined') return
-    try {
-      localStorage.setItem(cacheKey, content)
-    } catch (error) {
-      console.debug('Unable to cache translation:', error)
-    }
+    safeLocalStorageSetItem(cacheKey, content, {
+      clearPrefixesOnQuota: ['tt_translation__'],
+    })
   }
 
   const restoreAssistantEnglishContent = () => {
@@ -1375,7 +1534,7 @@ export function TopicTeacherContent() {
 
         // Fallback to localStorage if Supabase returns nothing
         if (!currentInterest && typeof window !== 'undefined') {
-          currentInterest = localStorage.getItem(`interests_${user.id}`)
+          currentInterest = safeLocalStorageGetItem(`interests_${user.id}`)
         }
 
         setUserInterests(currentInterest)
@@ -1397,7 +1556,7 @@ export function TopicTeacherContent() {
 
         // Load language preference with localStorage fallback
         if (currentLanguage == null && typeof window !== 'undefined') {
-          currentLanguage = localStorage.getItem(`language_pref_${user.id}`)
+          currentLanguage = safeLocalStorageGetItem(`language_pref_${user.id}`)
         }
         if (currentLanguage && currentLanguage.trim().length > 0) {
           setLanguagePreference(currentLanguage)
@@ -1414,7 +1573,7 @@ export function TopicTeacherContent() {
             setInterestsInput(newInterest)
             // Also update localStorage and saved interests display
             if (typeof window !== 'undefined') {
-              localStorage.setItem(`interests_${user.id}`, newInterest)
+              safeLocalStorageSetItem(`interests_${user.id}`, newInterest)
             }
             const interestsList = newInterest
               .split(',')
@@ -1446,11 +1605,11 @@ export function TopicTeacherContent() {
 
   // Load saved star colors from localStorage
   useEffect(() => {
-    const savedColor = localStorage.getItem('starColor')
+    const savedColor = safeLocalStorageGetItem('starColor')
     if (savedColor) {
       setStarColor(savedColor)
     }
-    const savedQuizColor = localStorage.getItem('quizStarColor')
+    const savedQuizColor = safeLocalStorageGetItem('quizStarColor')
     if (savedQuizColor) {
       setQuizStarColor(savedQuizColor)
     }
@@ -1465,9 +1624,9 @@ export function TopicTeacherContent() {
 
       if (typeof window !== 'undefined') {
         if (newLanguage && newLanguage.trim().length > 0) {
-          localStorage.setItem(`language_pref_${user.id}`, newLanguage)
+          safeLocalStorageSetItem(`language_pref_${user.id}`, newLanguage)
         } else {
-          localStorage.removeItem(`language_pref_${user.id}`)
+          safeLocalStorageRemoveItem(`language_pref_${user.id}`)
         }
       }
     })
@@ -1522,110 +1681,200 @@ export function TopicTeacherContent() {
     return filtered.length > 0 ? filtered.join('; ') : ''
   }
 
-  // Load quiz/exam results and compute highlight data
   useEffect(() => {
-    if (decodedTopic) {
-      let allWrongSections: string[] = []
-      let allCorrectSections: string[] = []
-      let allPreviouslyWrongNowCorrect: string[] = []
-      let hasAnyResults = false
-      let quizWrongSections: string[] = []
+    if (topicMatchKeys.size === 0) {
+      setIsTopicRecommendedByLatestExam(false)
+      return
+    }
 
-	      // Always check for quiz results
-      const quizResults = getQuizResults(decodedTopic)
-      if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
-        // Filter to only unresolved wrong answers (like practice exam stars)
-        const unresolvedWrongAnswers = quizResults.wrongAnswers.filter(wa => wa.isResolved !== true)
+    let cancelled = false
 
-        // Store quiz wrong answers for dialog display
-        setQuizWrongAnswers(unresolvedWrongAnswers)
+    const applyFromTopDomains = (topDomains: any[] | null | undefined) => {
+      if (cancelled) return
+      const isRecommended = isRecommendedInTopDomains(topDomains, topicMatchKeys)
+      setIsTopicRecommendedByLatestExam(isRecommended)
+    }
 
-        quizWrongSections = normalizeSections(
-          unresolvedWrongAnswers.flatMap((wa) => wa.relatedSections || []),
-          { allowAll: true }
-        )
+    const applyLocalFallback = () => {
+      const { diagnostic, practice } = getAllLatestRecommendations()
+      const available = [diagnostic, practice].filter(Boolean) as Array<{
+        timestamp: number
+        topPriorities: any[]
+      }>
 
-        // Guard for correctAnswers - may be undefined in malformed/old data
-        if (quizResults.correctAnswers && Array.isArray(quizResults.correctAnswers)) {
-          const quizCorrectSections = normalizeSections(
-            quizResults.correctAnswers
-              .filter((ca) => !(ca as any).wasPreviouslyWrong)
-              .flatMap((ca) => ca.relatedSections || []),
-            { allowAll: false }
-          )
-          const quizPreviouslyWrongNowCorrect = normalizeSections(
-            quizResults.correctAnswers
-              .filter((ca) => (ca as any).wasPreviouslyWrong)
-              .flatMap((ca) => ca.relatedSections || []),
-            { allowAll: false }
-          )
-
-          if (quizCorrectSections.length > 0) {
-            allCorrectSections = [...allCorrectSections, ...quizCorrectSections]
-          }
-
-          if (quizPreviouslyWrongNowCorrect.length > 0) {
-            allPreviouslyWrongNowCorrect = [
-              ...allPreviouslyWrongNowCorrect,
-              ...quizPreviouslyWrongNowCorrect,
-            ]
-          }
-        }
-
-        if (quizWrongSections.length > 0) {
-          allWrongSections = [...allWrongSections, ...quizWrongSections]
-          hasAnyResults = true
-        }
-      }
-
-	      // Always check for exam results (from diagnostic/practice exams)
-	      const { getExamWrongSections } = require('@/lib/unified-question-results')
-	      const examWrongSections = normalizeSections(
-	        getExamWrongSections(decodedTopic),
-	        { allowAll: true }
-	      )
-	      if (examWrongSections.length > 0) {
-	        allWrongSections = [...allWrongSections, ...examWrongSections]
-	        hasAnyResults = true
-      }
-
-      // If this topic was reached from exam-based recommendations but
-      // we don't have granular section data, treat the whole topic as
-      // needing review so the content is highlighted.
-      if (hasExamResults && !hasAnyResults) {
-        setHighlightData({
-          recentlyWrongSections: ['__ALL__'],
-          recentlyCorrectSections: [],
-          previouslyWrongNowCorrectSections: [],
-          quizWrongSections: [],
-          examWrongSections: ['__ALL__'],
-        })
+      if (available.length === 0) {
+        setIsTopicRecommendedByLatestExam(false)
         return
       }
 
-      // Set highlight data with combined results
-      if (hasAnyResults && allWrongSections.length > 0) {
-        const dedupedWrong = [...new Set(allWrongSections)]
-        const dedupedQuizWrong = [...new Set(quizWrongSections)]
-        const dedupedExamWrong = [...new Set(examWrongSections)]
+      available.sort((a, b) => b.timestamp - a.timestamp)
+      applyFromTopDomains(available[0].topPriorities || [])
+    }
 
-        setHighlightData({
-          recentlyWrongSections: dedupedWrong,
-          recentlyCorrectSections: [...new Set(allCorrectSections)],
-          previouslyWrongNowCorrectSections: [
-            ...new Set(allPreviouslyWrongNowCorrect),
-          ],
-          quizWrongSections: dedupedQuizWrong,
-          examWrongSections: dedupedExamWrong,
-        })
+    if (!user?.id) {
+      applyLocalFallback()
+      return () => {
+        cancelled = true
       }
     }
-  }, [decodedTopic, hasExamResults])
 
-  // Load latest practice-exam wrong questions for table-row 🍏 mapping
-  // Always fetch when user is logged in - API returns 404 if no results (handled gracefully)
+    const loadPriorityRecommendation = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('study_priorities')
+          .select('top_domains')
+          .eq('user_id', user.id)
+          .single()
+
+        if (!cancelled && data && !error && Array.isArray(data.top_domains)) {
+          applyFromTopDomains(data.top_domains)
+          return
+        }
+      } catch (error) {
+        console.debug('[Topic Teacher] Failed to load study priorities from Supabase:', error)
+      }
+
+      if (!cancelled) {
+        applyLocalFallback()
+      }
+    }
+
+    loadPriorityRecommendation()
+
+    return () => {
+      cancelled = true
+    }
+  }, [topicMatchKeys, user?.id])
+
+  // Load quiz/exam results and compute highlight data
   useEffect(() => {
-    if (!user?.id || !decodedTopic) return
+    if (topicCandidatesForResults.length === 0) {
+      setQuizWrongAnswers([])
+      setHighlightData({
+        recentlyWrongSections: [],
+        recentlyCorrectSections: [],
+        previouslyWrongNowCorrectSections: [],
+        quizWrongSections: [],
+        examWrongSections: [],
+      })
+      return
+    }
+
+    let allWrongSections: string[] = []
+    let allCorrectSections: string[] = []
+    let allPreviouslyWrongNowCorrect: string[] = []
+    let hasAnyResults = false
+    let quizWrongSections: string[] = []
+
+    // Always check for quiz results.
+    // Use the first candidate topic key that has stored quiz data.
+    const quizResults = topicCandidatesForResults
+      .map((candidateTopic) => getQuizResults(candidateTopic))
+      .find((candidateResults) => candidateResults && Array.isArray(candidateResults.wrongAnswers))
+
+    if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
+      // Filter to only unresolved wrong answers (like practice exam stars)
+      const unresolvedWrongAnswers = quizResults.wrongAnswers.filter(wa => wa.isResolved !== true)
+
+      // Store quiz wrong answers for dialog display
+      setQuizWrongAnswers(unresolvedWrongAnswers)
+
+      quizWrongSections = normalizeSections(
+        unresolvedWrongAnswers.flatMap((wa) => wa.relatedSections || []),
+        { allowAll: true }
+      )
+
+      // Guard for correctAnswers - may be undefined in malformed/old data
+      if (quizResults.correctAnswers && Array.isArray(quizResults.correctAnswers)) {
+        const quizCorrectSections = normalizeSections(
+          quizResults.correctAnswers
+            .filter((ca) => !(ca as any).wasPreviouslyWrong)
+            .flatMap((ca) => ca.relatedSections || []),
+          { allowAll: false }
+        )
+        const quizPreviouslyWrongNowCorrect = normalizeSections(
+          quizResults.correctAnswers
+            .filter((ca) => (ca as any).wasPreviouslyWrong)
+            .flatMap((ca) => ca.relatedSections || []),
+          { allowAll: false }
+        )
+
+        if (quizCorrectSections.length > 0) {
+          allCorrectSections = [...allCorrectSections, ...quizCorrectSections]
+        }
+
+        if (quizPreviouslyWrongNowCorrect.length > 0) {
+          allPreviouslyWrongNowCorrect = [
+            ...allPreviouslyWrongNowCorrect,
+            ...quizPreviouslyWrongNowCorrect,
+          ]
+        }
+      }
+
+      if (quizWrongSections.length > 0) {
+        allWrongSections = [...allWrongSections, ...quizWrongSections]
+        hasAnyResults = true
+      }
+    } else {
+      setQuizWrongAnswers([])
+    }
+
+    // Always check for exam results (from diagnostic/practice exams).
+    const { getExamWrongSections } = require('@/lib/unified-question-results')
+    const examWrongSections = normalizeSections(
+      topicCandidatesForResults.flatMap((candidateTopic) => getExamWrongSections(candidateTopic)),
+      { allowAll: true }
+    )
+    if (examWrongSections.length > 0) {
+      allWrongSections = [...allWrongSections, ...examWrongSections]
+      hasAnyResults = true
+    }
+
+    // If this topic was reached from exam-based recommendations but
+    // we don't have granular section data, treat the whole topic as
+    // needing review so the content is highlighted.
+    if ((hasExamResults || isTopicRecommendedByLatestExam) && !hasAnyResults) {
+      setHighlightData({
+        recentlyWrongSections: ['__ALL__'],
+        recentlyCorrectSections: [],
+        previouslyWrongNowCorrectSections: [],
+        quizWrongSections: [],
+        examWrongSections: ['__ALL__'],
+      })
+      return
+    }
+
+    // Set highlight data with combined results
+    if (hasAnyResults && allWrongSections.length > 0) {
+      const dedupedWrong = [...new Set(allWrongSections)]
+      const dedupedQuizWrong = [...new Set(quizWrongSections)]
+      const dedupedExamWrong = [...new Set(examWrongSections)]
+
+      setHighlightData({
+        recentlyWrongSections: dedupedWrong,
+        recentlyCorrectSections: [...new Set(allCorrectSections)],
+        previouslyWrongNowCorrectSections: [
+          ...new Set(allPreviouslyWrongNowCorrect),
+        ],
+        quizWrongSections: dedupedQuizWrong,
+        examWrongSections: dedupedExamWrong,
+      })
+      return
+    }
+
+    setHighlightData({
+      recentlyWrongSections: [],
+      recentlyCorrectSections: [],
+      previouslyWrongNowCorrectSections: [],
+      quizWrongSections: [],
+      examWrongSections: [],
+    })
+  }, [topicCandidatesForResults, hasExamResults, isTopicRecommendedByLatestExam])
+
+  // Load latest exam wrong questions for table-row 🍏 mapping.
+  // Always fetch when user is logged in - API returns 404 if no results (handled gracefully).
+  useEffect(() => {
+    if (!user?.id || topicCandidatesForResults.length === 0) return
 
     // Reset matched terms when topic changes
     matchedExamTermsRef.current.clear()
@@ -1634,6 +1883,7 @@ export function TopicTeacherContent() {
 
     let cancelled = false
     const controller = new AbortController()
+    const currentTopicMatchKeys = topicMatchKeys
 
     const loadPracticeExamWrongQuestions = async () => {
       try {
@@ -1669,18 +1919,6 @@ export function TopicTeacherContent() {
 
         const wrong: WrongPracticeExamQuestion[] = []
 
-        // Normalize topic names for comparison (handles / vs -, smart quotes, ellipses, etc.)
-        const normalizeTopic = (value: string) =>
-          value
-            .toLowerCase()
-            .replace(/^[\d\s]+/, '') // strip leading numeric prefixes like "1 " or "5 6 "
-            .replace(/[&]/g, 'and')
-            .replace(/[^a-z0-9]+/g, ' ')
-            .replace(/\s+/g, ' ')
-            .trim()
-
-        const normalizedUrlTopic = normalizeTopic(decodedTopic || '')
-
         questions.forEach((question, index) => {
           const selectedAnswer =
             selectedAnswers[index as any] ??
@@ -1702,8 +1940,14 @@ export function TopicTeacherContent() {
           const questionTopic = (question.topicName || question.topic || meta?.topicName || '').trim()
           if (!questionTopic) return
 
-          const normalizedQuestionTopic = normalizeTopic(questionTopic)
-          const topicMatches = normalizedQuestionTopic === normalizedUrlTopic
+          const questionTopicMatchKeys = buildTopicMatchKeys([questionTopic])
+          let topicMatches = false
+          for (const key of questionTopicMatchKeys) {
+            if (currentTopicMatchKeys.has(key)) {
+              topicMatches = true
+              break
+            }
+          }
           if (!topicMatches) return
 
           wrong.push({
@@ -1717,21 +1961,25 @@ export function TopicTeacherContent() {
           setPracticeExamWrongQuestions(wrong)
 
           // Extract relatedSections from wrong questions and update highlightData
-          // This replaces the ['__ALL__'] fallback with actual section names
-          if (wrong.length > 0 && hasExamResults) {
-            const sectionsFromQuestions = wrong
-              .flatMap(w => w.question.relatedSections || [])
-              .filter((section, idx, arr) => arr.indexOf(section) === idx) // dedupe
+          // This replaces the ['__ALL__'] fallback with actual section names when available.
+          if (wrong.length > 0) {
+            const sectionsFromQuestions = normalizeSections(
+              wrong.flatMap((entry) => entry.question.relatedSections || []),
+              { allowAll: true }
+            )
+            const nextExamWrongSections =
+              sectionsFromQuestions.length > 0 ? sectionsFromQuestions : ['__ALL__']
 
-            if (sectionsFromQuestions.length > 0) {
-              setHighlightData(prev => ({
-                ...prev,
-                examWrongSections: sectionsFromQuestions,
-                recentlyWrongSections: prev.recentlyWrongSections.includes('__ALL__')
-                  ? sectionsFromQuestions
-                  : prev.recentlyWrongSections,
-              }))
-            }
+            setHighlightData((prev) => ({
+              ...prev,
+              examWrongSections: nextExamWrongSections,
+              recentlyWrongSections: [
+                ...new Set([
+                  ...prev.recentlyWrongSections.filter((section) => section !== '__ALL__'),
+                  ...nextExamWrongSections,
+                ]),
+              ],
+            }))
           }
         }
       } catch (error) {
@@ -1756,7 +2004,7 @@ export function TopicTeacherContent() {
       cancelled = true
       controller.abort()
     }
-  }, [user?.id, decodedTopic])
+  }, [user?.id, topicCandidatesForResults, topicMatchKeys])
 
   // Initialize with lesson
   useEffect(() => {
@@ -1894,6 +2142,18 @@ export function TopicTeacherContent() {
         throw new Error(`API Error (${response.status}): ${errorText || 'Unknown error'}`)
       }
 
+      const resolvedTopicHeader = response.headers.get('X-Resolved-Topic-Name')
+      if (resolvedTopicHeader) {
+        try {
+          const decodedResolvedTopic = atob(resolvedTopicHeader).trim()
+          if (decodedResolvedTopic) {
+            setResolvedTopicName(decodedResolvedTopic)
+          }
+        } catch (error) {
+          console.warn('[Topic Teacher] Failed to decode resolved topic name header:', error)
+        }
+      }
+
       // Extract base content from response headers
       const baseContentHeader = response.headers.get('X-Base-Content')
       const baseContentLengthHeader = response.headers.get('X-Base-Content-Length')
@@ -1947,6 +2207,9 @@ export function TopicTeacherContent() {
           )
           if (baseResponse.ok) {
             const payload = await baseResponse.json()
+            if (typeof payload?.topicName === 'string' && payload.topicName.trim().length > 0) {
+              setResolvedTopicName(payload.topicName.trim())
+            }
             if (typeof payload?.baseContent === 'string') {
               setBaseContent(payload.baseContent)
             }
@@ -3060,6 +3323,27 @@ export function TopicTeacherContent() {
           onManifestText={setManifestText}
         />
 
+        {/* Audio sync update notice (one-time) */}
+        {showAudioSyncNotice && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            className="w-full max-w-[800px] mb-3 px-3 py-2 rounded-md border border-border bg-muted/50 flex items-center justify-between gap-2"
+          >
+            <p className="text-xs text-muted-foreground">
+              Audio sync has been updated with word-level alignment for all lessons. Hit play to try it out!
+            </p>
+            <button
+              onClick={dismissAudioSyncNotice}
+              className="text-muted-foreground hover:text-foreground shrink-0"
+              aria-label="Dismiss notice"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </motion.div>
+        )}
+
         {/* 3. Interest & Language Inputs */}
         <div className="mb-4 w-full max-w-[800px] flex flex-col sm:flex-row gap-4">
           {/* Interest Tags Input */}
@@ -3086,9 +3370,9 @@ export function TopicTeacherContent() {
                         updateUserCurrentInterest(user.id, joined)
                         if (typeof window !== 'undefined') {
                           if (joined) {
-                            localStorage.setItem(`interests_${user.id}`, joined)
+                            safeLocalStorageSetItem(`interests_${user.id}`, joined)
                           } else {
-                            localStorage.removeItem(`interests_${user.id}`)
+                            safeLocalStorageRemoveItem(`interests_${user.id}`)
                           }
                         }
                       }
@@ -3118,7 +3402,7 @@ export function TopicTeacherContent() {
                     // Persist to Supabase (best-effort) and localStorage
                     updateUserCurrentInterest(user.id, joined)
                     if (typeof window !== 'undefined') {
-                      localStorage.setItem(`interests_${user.id}`, joined)
+                      safeLocalStorageSetItem(`interests_${user.id}`, joined)
                     }
                   }
                 }}
@@ -3170,7 +3454,7 @@ export function TopicTeacherContent() {
                           console.debug('Failed to clear language preference:', error)
                         } finally {
                           if (typeof window !== 'undefined') {
-                            localStorage.removeItem(`language_pref_${user.id}`)
+                            safeLocalStorageRemoveItem(`language_pref_${user.id}`)
                           }
                         }
                       }
@@ -3181,7 +3465,7 @@ export function TopicTeacherContent() {
                         savedInterests.length > 0 ? savedInterests.join(', ') : userInterests || null
                       )
                       if (cacheKeyToRemove && typeof window !== 'undefined') {
-                        localStorage.removeItem(cacheKeyToRemove)
+                        safeLocalStorageRemoveItem(cacheKeyToRemove)
                       }
                     }}
                     className="hover:opacity-70 transition-opacity"
@@ -3211,9 +3495,9 @@ export function TopicTeacherContent() {
                         await updateUserLanguagePreference(user.id, newLanguage ?? '')
                         if (typeof window !== 'undefined') {
                           if (newLanguage) {
-                            localStorage.setItem(`language_pref_${user.id}`, newLanguage)
+                            safeLocalStorageSetItem(`language_pref_${user.id}`, newLanguage)
                           } else {
-                            localStorage.removeItem(`language_pref_${user.id}`)
+                            safeLocalStorageRemoveItem(`language_pref_${user.id}`)
                           }
                         }
                       } catch (error) {
@@ -3293,7 +3577,7 @@ export function TopicTeacherContent() {
                 onClick={() => setShowColorPicker(true)}
                 title="Click to change star color"
                 color={starColor}
-              /> Most recent practice exam
+              /> Most recent exam
               {matchedExamTerms.length > 0
                 ? `: ${matchedExamTerms.join(', ')}`
                 : highlightData.examWrongSections.length > 0
@@ -3968,9 +4252,9 @@ export function TopicTeacherContent() {
               <DialogTitle>Review missed {activeMissedQuestion && activeQuizQuestion ? 'questions' : 'question'}</DialogTitle>
               <DialogDescription>
                 {activeMissedQuestion && activeQuizQuestion
-                  ? 'From your practice exam and recent quiz.'
+                  ? 'From your exam and recent quiz.'
                   : activeMissedQuestion
-                  ? 'From your most recent practice exam.'
+                  ? 'From your most recent exam.'
                   : 'From your most recent quiz.'}
               </DialogDescription>
             </DialogHeader>
@@ -4184,7 +4468,7 @@ export function TopicTeacherContent() {
                   color={starColor}
                   onChange={(newColor) => {
                     setStarColor(newColor)
-                    localStorage.setItem('starColor', newColor)
+                    safeLocalStorageSetItem('starColor', newColor)
                   }}
                   style={{ width: '100%', height: '250px' }}
                 />
@@ -4206,7 +4490,7 @@ export function TopicTeacherContent() {
                 variant="outline"
                 onClick={() => {
                   setStarColor('#000000')
-                  localStorage.setItem('starColor', '#000000')
+                  safeLocalStorageSetItem('starColor', '#000000')
                 }}
               >
                 Reset to Default
@@ -4232,7 +4516,7 @@ export function TopicTeacherContent() {
                   color={quizStarColor}
                   onChange={(newColor) => {
                     setQuizStarColor(newColor)
-                    localStorage.setItem('quizStarColor', newColor)
+                    safeLocalStorageSetItem('quizStarColor', newColor)
                   }}
                   style={{ width: '100%', height: '250px' }}
                 />
@@ -4254,7 +4538,7 @@ export function TopicTeacherContent() {
                 variant="outline"
                 onClick={() => {
                   setQuizStarColor('#000000')
-                  localStorage.setItem('quizStarColor', '#000000')
+                  safeLocalStorageSetItem('quizStarColor', '#000000')
                 }}
               >
                 Reset to Default
@@ -4414,13 +4698,13 @@ export function TopicTeacherContent() {
                 </p>
                 <div className="flex gap-2 mt-3">
                   <Link href="/recover" onClick={() => {
-                    if (user?.id) localStorage.setItem(`recover_nudge_dismissed_${user.id}`, 'true')
+                    if (user?.id) safeLocalStorageSetItem(`recover_nudge_dismissed_${user.id}`, 'true')
                   }}>
                     <Button size="sm">Try Recover</Button>
                   </Link>
                   <Button size="sm" variant="ghost" onClick={() => {
                     setShowRecoverNudge(false)
-                    if (user?.id) localStorage.setItem(`recover_nudge_dismissed_${user.id}`, 'true')
+                    if (user?.id) safeLocalStorageSetItem(`recover_nudge_dismissed_${user.id}`, 'true')
                   }}>
                     Maybe later
                   </Button>
@@ -4428,7 +4712,7 @@ export function TopicTeacherContent() {
               </div>
               <button onClick={() => {
                 setShowRecoverNudge(false)
-                if (user?.id) localStorage.setItem(`recover_nudge_dismissed_${user.id}`, 'true')
+                if (user?.id) safeLocalStorageSetItem(`recover_nudge_dismissed_${user.id}`, 'true')
               }} className="text-muted-foreground hover:text-foreground">
                 <X className="h-4 w-4" />
               </button>

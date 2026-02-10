@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { ChevronDown, Clock, Play, X, AlertCircle, BadgeCheck, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -32,14 +32,9 @@ import {
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
 import { RECOVER_RECOMMENDATION_HOUR_KEY } from '@/lib/recover'
 import type { RealtimeChannel } from '@supabase/supabase-js'
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from '@/lib/supabase'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
 
 // Free-tier topics: one curated topic per domain, backed by free-contentGPT
 const FREE_TOPICS_BY_DOMAIN: Record<string, string[]> = {
@@ -255,8 +250,7 @@ export default function TopicSelectorPage() {
     return trimmed
   }
 
-  // Calculate progress based on quiz results
-  useEffect(() => {
+  const refreshTopicProgress = useCallback(() => {
     const allResults = getAllQuizResults()
 
     // Get recent activities (last 5 topics)
@@ -275,115 +269,6 @@ export default function TopicSelectorPage() {
       const current = topicScores[result.topic] ?? 0
       topicScores[result.topic] = Math.max(current, percentage)
     })
-
-    const mapDomainNumberToIds = (domainNumber?: number | null) => {
-      if (!domainNumber) return []
-      return EPPP_DOMAINS.filter((domain) => {
-        if (domain.id === '3-5-6') return false
-        const [prefix] = domain.id.split('-')
-        return parseInt(prefix, 10) === domainNumber
-      }).map((domain) => domain.id)
-    }
-
-    const derivePriorityState = (topDomains: any[] | null | undefined) => {
-      const topicSet = new Set<string>()
-      const domainSet = new Set<string>()
-
-      const addDomainFromTopicId = (topicId: string) => {
-        if (!topicId) return
-        const parts = topicId.split('-')
-        if (parts.length > 1) {
-          const domainId = parts.slice(0, parts.length - 1).join('-')
-          if (domainId) {
-            domainSet.add(domainId)
-          }
-        }
-      }
-
-      ;(topDomains || []).forEach((domain) => {
-        const recommendedTopicIds: string[] = Array.isArray(domain?.recommendedTopicIds)
-          ? domain.recommendedTopicIds
-          : []
-
-        recommendedTopicIds.forEach((id) => {
-          topicSet.add(id)
-          addDomainFromTopicId(id)
-        })
-
-        if (domain?.type === 'org_psych') {
-          domainSet.add('3-5-6')
-          return
-        }
-
-        if (recommendedTopicIds.length === 0) {
-          const fallbackDomainIds = mapDomainNumberToIds(domain?.domainNumber)
-          if (fallbackDomainIds.length > 0) {
-            domainSet.add(fallbackDomainIds[0])
-          }
-        }
-      })
-
-      return {
-        topicIds: Array.from(topicSet),
-        domainIds: Array.from(domainSet),
-      }
-    }
-
-    const applyLocalPriorityFallback = () => {
-      const { diagnostic, practice } = getAllLatestRecommendations()
-      const available = [diagnostic, practice].filter(Boolean) as Array<{
-        timestamp: number
-        topPriorities: any[]
-      }>
-
-      if (available.length === 0) {
-        const localDiagnostic = getTopPriorities('diagnostic')
-        if (localDiagnostic && localDiagnostic.length > 0) {
-          const state = derivePriorityState(localDiagnostic)
-          setPriorityTopicIds(state.topicIds)
-          setRecommendedDomainIds(state.domainIds)
-        } else {
-          setPriorityTopicIds([])
-          setRecommendedDomainIds([])
-        }
-        return
-      }
-
-      available.sort((a, b) => b.timestamp - a.timestamp)
-      const latest = available[0]
-      const state = derivePriorityState(latest.topPriorities || [])
-      setPriorityTopicIds(state.topicIds)
-      setRecommendedDomainIds(state.domainIds)
-    }
-
-    // Load priority recommendations from Supabase
-    const loadPriorities = async () => {
-      if (!user) {
-        applyLocalPriorityFallback()
-        return
-      }
-
-      try {
-        const { data, error } = await supabase
-          .from('study_priorities')
-          .select('top_domains')
-          .eq('user_id', user.id)
-          .single()
-
-        if (data && !error) {
-          const state = derivePriorityState(data.top_domains || [])
-          setPriorityTopicIds(state.topicIds)
-          setRecommendedDomainIds(state.domainIds)
-        } else {
-          applyLocalPriorityFallback()
-        }
-      } catch (err) {
-        console.error('Failed to load priorities from Supabase:', err)
-        applyLocalPriorityFallback()
-      }
-    }
-
-    loadPriorities()
 
     // Build domains with dynamic progress
     const domainsWithProgress = EPPP_DOMAINS.map((domain) => {
@@ -416,6 +301,148 @@ export default function TopicSelectorPage() {
 
     setDomains(domainsWithProgress)
   }, [])
+
+  const mapDomainNumberToIds = useCallback((domainNumber?: number | null) => {
+    if (!domainNumber) return []
+    return EPPP_DOMAINS.filter((domain) => {
+      if (domain.id === '3-5-6') return false
+      const [prefix] = domain.id.split('-')
+      return parseInt(prefix, 10) === domainNumber
+    }).map((domain) => domain.id)
+  }, [])
+
+  const derivePriorityState = useCallback((topDomains: any[] | null | undefined) => {
+    const topicSet = new Set<string>()
+    const domainSet = new Set<string>()
+
+    const addDomainFromTopicId = (topicId: string) => {
+      if (!topicId) return
+      const parts = topicId.split('-')
+      if (parts.length > 1) {
+        const domainId = parts.slice(0, parts.length - 1).join('-')
+        if (domainId) {
+          domainSet.add(domainId)
+        }
+      }
+    }
+
+    ;(topDomains || []).forEach((domain) => {
+      const recommendedTopicIds: string[] = Array.isArray(domain?.recommendedTopicIds)
+        ? domain.recommendedTopicIds
+        : []
+
+      recommendedTopicIds.forEach((id) => {
+        topicSet.add(id)
+        addDomainFromTopicId(id)
+      })
+
+      if (domain?.type === 'org_psych') {
+        domainSet.add('3-5-6')
+        return
+      }
+
+      if (recommendedTopicIds.length === 0) {
+        const fallbackDomainIds = mapDomainNumberToIds(domain?.domainNumber)
+        if (fallbackDomainIds.length > 0) {
+          domainSet.add(fallbackDomainIds[0])
+        }
+      }
+    })
+
+    return {
+      topicIds: Array.from(topicSet),
+      domainIds: Array.from(domainSet),
+    }
+  }, [mapDomainNumberToIds])
+
+  const loadPriorities = useCallback(async () => {
+    const applyLocalPriorityFallback = () => {
+      const { diagnostic, practice } = getAllLatestRecommendations()
+      const available = [diagnostic, practice].filter(Boolean) as Array<{
+        timestamp: number
+        topPriorities: any[]
+      }>
+
+      if (available.length === 0) {
+        const localDiagnostic = getTopPriorities('diagnostic')
+        if (localDiagnostic && localDiagnostic.length > 0) {
+          const state = derivePriorityState(localDiagnostic)
+          setPriorityTopicIds(state.topicIds)
+          setRecommendedDomainIds(state.domainIds)
+        } else {
+          setPriorityTopicIds([])
+          setRecommendedDomainIds([])
+        }
+        return
+      }
+
+      available.sort((a, b) => b.timestamp - a.timestamp)
+      const latest = available[0]
+      const state = derivePriorityState(latest.topPriorities || [])
+      setPriorityTopicIds(state.topicIds)
+      setRecommendedDomainIds(state.domainIds)
+    }
+
+    const userId = user?.id
+    if (!userId) {
+      applyLocalPriorityFallback()
+      return
+    }
+
+    try {
+      const { data, error } = await supabase
+        .from('study_priorities')
+        .select('top_domains')
+        .eq('user_id', userId)
+        .single()
+
+      if (data && !error) {
+        const state = derivePriorityState(data.top_domains || [])
+        setPriorityTopicIds(state.topicIds)
+        setRecommendedDomainIds(state.domainIds)
+      } else {
+        applyLocalPriorityFallback()
+      }
+    } catch (err) {
+      console.error('Failed to load priorities from Supabase:', err)
+      applyLocalPriorityFallback()
+    }
+  }, [derivePriorityState, user?.id])
+
+  // Keep progress reactive as quiz data changes or hydrates.
+  useEffect(() => {
+    refreshTopicProgress()
+
+    window.addEventListener('storage', refreshTopicProgress)
+    window.addEventListener('quiz-results-updated', refreshTopicProgress)
+    window.addEventListener('quiz-data-hydrated', refreshTopicProgress)
+
+    return () => {
+      window.removeEventListener('storage', refreshTopicProgress)
+      window.removeEventListener('quiz-results-updated', refreshTopicProgress)
+      window.removeEventListener('quiz-data-hydrated', refreshTopicProgress)
+    }
+  }, [refreshTopicProgress])
+
+  useEffect(() => {
+    loadPriorities().catch((error) => {
+      console.error('Failed to load priorities:', error)
+    })
+  }, [loadPriorities])
+
+  // Refresh star recommendations when priorities are recalculated elsewhere.
+  useEffect(() => {
+    const handlePriorityUpdate = () => {
+      loadPriorities().catch((error) => {
+        console.error('Failed to refresh priorities:', error)
+      })
+    }
+
+    window.addEventListener('priority-recommendations-updated', handlePriorityUpdate)
+    return () => {
+      window.removeEventListener('priority-recommendations-updated', handlePriorityUpdate)
+    }
+  }, [loadPriorities])
 
   // Load previously saved interests so topic-selector mirrors topic-teacher
   useEffect(() => {

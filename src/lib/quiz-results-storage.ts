@@ -52,7 +52,14 @@ function getQuizResultsKey(topic: string): string {
 export function saveQuizResults(results: QuizResults): void {
   if (typeof window === 'undefined') return
   const key = getQuizResultsKey(results.topic)
-  localStorage.setItem(key, JSON.stringify(results))
+  const payload = JSON.stringify(results)
+
+  // Best-effort persistence: never let storage failures block quiz completion UX.
+  try {
+    localStorage.setItem(key, payload)
+  } catch (error) {
+    console.error('[quiz-results-storage] Failed to save quiz results:', error)
+  }
 
   // Dispatch a custom event to notify listeners of quiz results update
   window.dispatchEvent(new CustomEvent('quiz-results-updated', {
