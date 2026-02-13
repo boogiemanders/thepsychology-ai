@@ -14,7 +14,6 @@ import { getLessonDisplayName } from '@/lib/topic-display-names'
 import { getKNsForTopic } from '@/lib/kn-topic-mapping'
 import { getTopPriorities } from '@/lib/priority-storage'
 import type { PriorityDomainRecommendation } from '@/lib/priority-storage'
-import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { supabase } from '@/lib/supabase'
 
 export default function PrioritizerPage() {
@@ -43,19 +42,7 @@ export default function PrioritizerPage() {
           }, '')
         }
 
-        // Trigger background pre-generation of next exam type
-        const triggerPreGen = async () => {
-          try {
-            const { data: { session } } = await supabase.auth.getSession()
-            if (session?.user?.id && data.examType) {
-              console.log('[Prioritizer] Triggering background pre-generation')
-              await triggerBackgroundPreGeneration(session.user.id, data.examType)
-            }
-          } catch (preGenError) {
-            console.log('[Prioritizer] Background pre-gen trigger failed (non-critical):', preGenError)
-          }
-        }
-        triggerPreGen()
+        // Pre-generation disabled: exams served from pre-made files
       } catch (error) {
         console.error('Error parsing recommendations:', error)
       }

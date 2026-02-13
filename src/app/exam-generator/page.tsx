@@ -26,7 +26,6 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { getRecommendedDefaults, getExamHistory } from '@/lib/exam-history'
-import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { deriveTopicMetaFromQuestionSource } from '@/lib/topic-source-utils'
 import { saveQuestionResult, addSectionResult, resolveSectionResult } from '@/lib/unified-question-results'
 import { recordStudySession } from '@/lib/study-sessions'
@@ -764,7 +763,7 @@ export default function ExamGeneratorPage() {
       }
       setIsSavingResults(false)
     }
-  }, [resolveUserId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults, finalizeCurrentTiming, resolveCorrectAnswer])
+  }, [resolveUserId, examType, mode, questions, selectedAnswers, flaggedQuestions, recordExamQuestionResults, finalizeCurrentTiming, resolveCorrectAnswer, assignmentId])
 
   // Resume last paused exam (manual resume via button)
   const handleResumeLastExam = () => {
@@ -984,13 +983,8 @@ export default function ExamGeneratorPage() {
     }
   }, [user?.id])
 
-  // Pre-generate exams on page load for faster loading
-  useEffect(() => {
-    if (activeUserId && !examType) {
-      triggerBackgroundPreGeneration(activeUserId, 'diagnostic')
-      triggerBackgroundPreGeneration(activeUserId, 'practice')
-    }
-  }, [activeUserId, examType])
+  // Pre-generation disabled: exams are served from pre-made files in
+  // diagnosticGPT/ and examsGPT/, so calling OpenAI here wastes money.
 
   // Auto-show explanation in Study Mode
   useEffect(() => {

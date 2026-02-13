@@ -26,7 +26,6 @@ import { LogOut, GraduationCap, Droplets, Target, Flame, AlertCircle, History, X
 import { calculateStudyStats, calculateStudyPace, getDailyGoal, getTodayQuizCount, setDailyGoal } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
-import { triggerBackgroundPreGeneration } from '@/lib/pre-generated-exams'
 import { siteConfig } from '@/lib/config'
 import { Switch } from '@/components/ui/switch'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
@@ -412,13 +411,8 @@ export default function DashboardPage() {
     loadPriorities()
   }, [user?.id])
 
-  // Pre-generate exams in background for faster exam loading
-  useEffect(() => {
-    if (user?.id) {
-      triggerBackgroundPreGeneration(user.id, 'diagnostic')
-      triggerBackgroundPreGeneration(user.id, 'practice')
-    }
-  }, [user?.id])
+  // Pre-generation disabled: exams are served from pre-made files in
+  // diagnosticGPT/ and examsGPT/, so calling OpenAI here wastes money.
 
   // Check for paused exam on mount
   useEffect(() => {
