@@ -102,7 +102,7 @@ export function CompanyShowcase() {
         </div>
 
         <p className="text-center text-white text-base md:text-lg font-medium mt-6">
-          Built by <TextRotate words={ROLES} className="font-bold" /> from (not affiliated with):
+          Built by <TextRotate words={ROLES} className="font-bold" /> from:
         </p>
       </div>
 
