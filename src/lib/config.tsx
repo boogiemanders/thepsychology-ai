@@ -29,7 +29,7 @@ export const BLUR_FADE_DELAY = 0.15
 export const siteConfig = {
   name: "thePsychology.ai",
   description:
-    "EPPP exam prep with targeted EPPP practice questions, sample exams, and high-yield study materials—built by psychologists to help you pass faster.",
+    "Free AI-adaptive EPPP exam prep — 80+ lessons, practice exams, and high-yield study materials built by psychologists who passed.",
   cta: "Get Started",
   url:
     process.env.NEXT_PUBLIC_APP_URL ||
@@ -81,11 +81,11 @@ export const siteConfig = {
       </svg>
     ),
     badge: "",
-    title: "Get EPPP-Ready",
+    title: "Study Less. Score Higher.",
     description:
       "with",
     cta: {
-      primary: { text: "Get Started", href: "/#get-started" },
+      primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
     },
   },
@@ -104,8 +104,8 @@ export const siteConfig = {
     ],
   },
   bentoSection: {
-    title: "Examples",
-    description: "Conversational demonstration",
+    title: "What You Get",
+    description: "80+ lessons. Adaptive quizzes. Exam simulation. And one feature no other EPPP program offers.",
     items: [
       {
         id: 1,
@@ -125,7 +125,7 @@ export const siteConfig = {
         content: <FourthBentoAnimation />,
         title: "Replenish",
         description:
-          "Improve focus and reduce burnout while learning relevant EPPP topics (ACT, MI, and CBT-I).",
+          "Evidence-based resets for focus and burnout. Built on ACT, MI, and CBT-I — techniques you'll use in practice.",
       },
       {
         id: 4,
@@ -137,7 +137,7 @@ export const siteConfig = {
   },
   featureSection: {
     title: "Everything You Need to Pass",
-    description: "Comprehensive tools and resources designed specifically for EPPP success",
+    description: "Multimodal, adaptive, and available whenever you are.",
     items: [
       {
         id: 1,
@@ -178,8 +178,8 @@ export const siteConfig = {
     },
   },
   pricing: {
-    title: "Study Efficiently Today",
-    description: "Choose the plan that fits your prep style.",
+    title: "Claim Your Spot",
+    description: "No credit card required. Start studying in 2 minutes.",
     pricingItems: [
       {
         name: "Pro",
@@ -272,7 +272,7 @@ export const siteConfig = {
   ],
   faqSection: {
     title: "Questions People Actually Ask",
-    description: "FAQs",
+    description: "Straight answers. No sales pitch.",
     faQitems: [
       {
         id: 1,
@@ -356,10 +356,10 @@ export const siteConfig = {
   },
   ctaSection: {
     id: "cta",
-    title: "Study quickly and affordably",
+    title: "Your license starts here",
     backgroundImage: "/agent-cta-background.png",
-    button: { text: "Start Pro Today", href: "/#get-started" },
-    subtext: "Free until Jan 31, 2026",
+    button: { text: "Claim Your Free Spot", href: "/#get-started" },
+    subtext: "First 100 spots are free",
   },
   footerLinks: [
     {
