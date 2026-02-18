@@ -165,3 +165,6 @@ public/topic-teacher-audio/
 .vercel
 .env*.local
 .mfa-work/
+
+# MCP config (contains API keys)
+.mcp.json
