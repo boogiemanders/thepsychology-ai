@@ -243,7 +243,7 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          thepsychology.ai is <Highlight className="text-brand-olive dark:text-brand-lavender-gray">insanely impressive work</Highlight>! I'm taking my EPPP next month and have been struggling to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
+          thepsychology.ai is <Highlight className="text-brand-dusty-rose dark:text-brand-sage">insanely impressive work</Highlight>! I'm taking my EPPP next month and have been struggling to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
         </p>
       ),
     },
@@ -265,7 +265,7 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          I came here ready to <Highlight className="text-brand-soft-blue dark:text-brand-coral">recommend this program</Highlight> and I signed up for it myself. Out of all the programs I looked at, this one comes <Highlight className="text-brand-soft-blue dark:text-brand-coral">the closest to how the EPPP actually words its questions</Highlight>. My test didn't have any straight definition questions, it was all application based, and <Highlight className="text-brand-soft-blue dark:text-brand-coral">this program is set up the same way</Highlight>.
+          I came here ready to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">recommend this program</Highlight> and I signed up for it myself. Out of all the programs I looked at, this one comes <Highlight className="text-brand-olive dark:text-brand-lavender-gray">the closest to how the EPPP actually words its questions</Highlight>. My test didn't have any straight definition questions, it was all application based, and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">this program is set up the same way</Highlight>.
         </p>
       ),
     },
