@@ -300,7 +300,7 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
                       <p className="text-sm text-muted-foreground">
                         {tier.name === "Pro + Coaching"
                           ? "We'll reach out to schedule coaching and billing."
-                          : "Free until Jan 31, 2026."}
+                          : "Free while in beta."}
                       </p>
                     </div>
 

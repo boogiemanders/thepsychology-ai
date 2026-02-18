@@ -105,7 +105,7 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "What You Get",
-    description: "80+ lessons. Adaptive quizzes. Exam simulation. And one feature no other EPPP program offers.",
+    description: "80+ lessons. Adaptive quizzes. Exam simulation. And Replenish — evidence-based mental resets no other EPPP program offers.",
     items: [
       {
         id: 1,
