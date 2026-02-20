@@ -83,7 +83,7 @@ export const siteConfig = {
       </svg>
     ),
     badge: "",
-    title: "Study Less. Score Higher.",
+    title: "EPPP Prep Without the Fluff.",
     description:
       "",
     cta: {
