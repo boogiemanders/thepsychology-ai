@@ -69,18 +69,12 @@ export function SocialProofTestimonials({
       <div className="relative overflow-hidden py-8">
         <Marquee className="[--duration:60s]">
           {testimonials.map((card, idx) => {
-            const isMenon = card.name.toLowerCase().includes("menon")
-            const widthClass = isMenon ? "w-[460px]" : "w-[380px]"
-            const cardClassName = cn(
-              "h-full w-full break-words",
-              isMenon ? "max-w-[420px] mx-auto" : "max-w-full"
-            )
             return (
               <div
                 key={idx}
-                className={`${widthClass} h-[200px] px-1 flex justify-center`}
+                className="w-[420px] h-[200px] flex justify-center"
               >
-                <TestimonialCard {...card} className={cardClassName} />
+                <TestimonialCard {...card} className="h-full w-full break-words" />
               </div>
             )
           })}
