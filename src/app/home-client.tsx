@@ -44,6 +44,7 @@ const FINAL_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
 }
 
 const FINAL_CONTENT_LIFT = 659
+const FINAL_HERO_VIDEO_START_AT = 9
 
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
@@ -90,6 +91,15 @@ export default function HomeClient() {
     const video = heroVideoRef.current
     if (!video) return
 
+    const seekToPreferredStart = () => {
+      const duration = Number.isFinite(video.duration) ? video.duration : 0
+      const maxStart = duration > 0 ? Math.max(0, duration - 0.1) : 0
+      const target = Math.max(0, Math.min(FINAL_HERO_VIDEO_START_AT, maxStart))
+      if (Math.abs(video.currentTime - target) > 0.2) {
+        video.currentTime = target
+      }
+    }
+
     video.defaultMuted = true
     video.muted = true
     video.playsInline = true
@@ -97,6 +107,12 @@ export default function HomeClient() {
     video.setAttribute("playsinline", "")
     video.setAttribute("webkit-playsinline", "")
     video.setAttribute("muted", "")
+
+    if (video.readyState >= 1) {
+      seekToPreferredStart()
+    } else {
+      video.addEventListener("loadedmetadata", seekToPreferredStart, { once: true })
+    }
 
     let attemptTimeout: number | null = null
     let gestureListenersAttached = false
@@ -146,6 +162,7 @@ export default function HomeClient() {
     }
 
     const handleEnded = () => {
+      seekToPreferredStart()
       tryPlay()
     }
 
