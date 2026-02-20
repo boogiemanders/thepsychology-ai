@@ -255,7 +255,7 @@ export function PricingSection() {
       </SectionHeader>
 
       <div className="w-full max-w-5xl mx-auto px-6 space-y-8">
-        <div className={cn("grid gap-4 items-start", gridColsClass)}>
+        <div className={cn("grid gap-4 items-stretch", gridColsClass)}>
           {tiers.map((tier) => {
             const { amount, period } = getDisplayPrice(tier)
             const isExpanded = tier.name === expandedTier
@@ -263,12 +263,15 @@ export function PricingSection() {
 
             // Dynamic price display for Pro tier based on promo tier
             const displayAmount = isProTier && promoTier ? `$${promoTier.price}` : amount
+            const anchoredProPrice = promoTier?.fullPrice ?? 100
+            const showCrossedProAnchor =
+              isProTier && ((promoTier && promoTier.price === 0) || (!promoTier && amount === "$0"))
 
             return (
               <div
                 key={tier.name}
                 className={cn(
-                  "rounded-xl border bg-accent p-5 transition-shadow flex flex-col",
+                  "rounded-xl border bg-accent p-5 transition-shadow flex h-full flex-col",
                   isExpanded ? "border-primary shadow-[0px_20px_60px_rgba(15,23,42,0.12)]" : "border-border"
                 )}
               >
@@ -281,6 +284,11 @@ export function PricingSection() {
                   )}
                 </div>
                 <div className="mt-3 flex items-baseline gap-2">
+                  {showCrossedProAnchor && (
+                    <span className="text-lg font-medium text-muted-foreground line-through decoration-2">
+                      ${anchoredProPrice}
+                    </span>
+                  )}
                   <span className="text-3xl font-semibold">{displayAmount}</span>
                   {period && <span className="text-sm text-muted-foreground">/{period}</span>}
                 </div>

@@ -209,23 +209,25 @@ export function OrbitingLoopSection() {
   )
 
   const [activeStep, setActiveStep] = useState(0)
+  const stepCount = steps.length
+  const currentStepIndex = activeStep % stepCount
+  const currentTargetNode = steps[currentStepIndex]?.targetNode ?? null
   const segmentDurationMs = prefersReducedMotion ? 1500 : 1260
   const beamTravelDurationMs = prefersReducedMotion ? 0 : 860
 
   useEffect(() => {
-    const target = steps[activeStep]?.targetNode
-    if (!target) return
+    if (!currentTargetNode) return
 
     const timers: Array<ReturnType<typeof setTimeout>> = []
     setActiveNode(null)
 
     if (beamTravelDurationMs === 0) {
-      setActiveNode(target)
+      setActiveNode(currentTargetNode)
       setHitCounter((c) => c + 1)
     } else {
       timers.push(
         setTimeout(() => {
-          setActiveNode(target)
+          setActiveNode(currentTargetNode)
           setHitCounter((c) => c + 1)
         }, beamTravelDurationMs)
       )
@@ -233,7 +235,7 @@ export function OrbitingLoopSection() {
 
     timers.push(
       setTimeout(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length)
+        setActiveStep((prev) => (prev + 1) % stepCount)
       }, segmentDurationMs)
     )
 
@@ -242,10 +244,10 @@ export function OrbitingLoopSection() {
     }
   }, [
     activeStep,
+    currentTargetNode,
     beamTravelDurationMs,
     segmentDurationMs,
-    steps,
-    steps.length,
+    stepCount,
   ])
 
   return (

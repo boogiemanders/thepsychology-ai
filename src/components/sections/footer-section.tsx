@@ -22,21 +22,29 @@ function XIcon({ className = "h-5 w-5" }: { className?: string }) {
 }
 
 export function FooterSection() {
+  const heroDescription = siteConfig.hero.description?.trim()
+
   return (
     <footer id="footer" className="w-full pb-0">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between p-10">
-        <div className="flex flex-col items-start justify-start gap-y-5 max-w-xs mx-0">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/images/logo.png"
-              alt="Logo"
-              width={25}
-              height={32}
-              className="h-8 w-auto invert dark:invert-0"
-            />
-            <p className="text-xl font-semibold text-primary">thePsychology.ai</p>
-          </Link>
-          <p className="tracking-tight text-muted-foreground font-medium">{siteConfig.hero.description}</p>
+      <div className="grid gap-10 p-10 md:grid-cols-[minmax(260px,1fr)_minmax(560px,2fr)] md:items-stretch">
+        <div className="flex h-full flex-col items-start justify-between gap-8">
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                width={25}
+                height={32}
+                className="h-8 w-auto invert dark:invert-0"
+              />
+              <p className="text-xl font-semibold text-primary">thePsychology.ai</p>
+            </Link>
+            {heroDescription ? (
+              <p className="max-w-xs tracking-tight text-muted-foreground font-medium">
+                {heroDescription}
+              </p>
+            ) : null}
+          </div>
           <div className="flex items-center gap-4">
             <Link
               href={siteConfig.links.tiktok}
@@ -45,7 +53,7 @@ export function FooterSection() {
               aria-label="Follow us on TikTok"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              <TikTokIcon />
+              <TikTokIcon className="h-6 w-6" />
             </Link>
             <Link
               href={siteConfig.links.x}
@@ -54,29 +62,27 @@ export function FooterSection() {
               aria-label="Follow us on X"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              <XIcon />
+              <XIcon className="h-6 w-6" />
             </Link>
           </div>
         </div>
-        <div className="pt-5 md:w-1/2">
-          <div className="flex flex-col items-start justify-start md:flex-row md:items-center md:justify-between gap-y-5 lg:pl-10">
-            {siteConfig.footerLinks.map((column, columnIndex) => (
-              <ul key={columnIndex} className="flex flex-col gap-y-2">
-                <li className="mb-2 text-sm font-semibold text-primary">{column.title}</li>
-                {column.links.map((link) => (
-                  <li
-                    key={link.id}
-                    className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug text-muted-foreground"
-                  >
-                    <Link href={link.url}>{link.title}</Link>
-                    <div className="flex size-4 items-center justify-center border border-border rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100">
-                      <ChevronRightIcon className="h-4 w-4 " />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            ))}
-          </div>
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          {siteConfig.footerLinks.map((column, columnIndex) => (
+            <ul key={columnIndex} className="flex flex-col gap-y-2.5">
+              <li className="mb-2 text-sm font-semibold text-primary">{column.title}</li>
+              {column.links.map((link) => (
+                <li
+                  key={link.id}
+                  className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug text-muted-foreground"
+                >
+                  <Link href={link.url}>{link.title}</Link>
+                  <div className="flex size-4 items-center justify-center border border-border rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100">
+                    <ChevronRightIcon className="h-4 w-4 " />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ))}
         </div>
       </div>
     </footer>

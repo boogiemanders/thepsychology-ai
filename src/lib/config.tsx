@@ -170,7 +170,8 @@ export const siteConfig = {
   quoteSection: {
     quote: (
       <>
-        I poured $1k and a month into studying and passed on my first try. This is the program that gives you everything I did and wish I had for a <Highlight>fraction of the time, cost, and stress</Highlight>.
+        I passed on my first try after exactly 30 days of grinding. This is the tool I used, plus the missing piece I
+        had to learn the hard way: what to study, what to skip, and how to stay out of panic mode.
       </>
     ),
     author: {
@@ -221,9 +222,8 @@ export const siteConfig = {
       img: "/images/anders-chan.png",
       description: (
         <p>
-          I scored a 19% on my first practice diagnostic exam. Poured $1,000 and a month of intense studying, and{" "}
-          <Highlight className="text-brand-soft-blue dark:text-brand-coral">I passed on my first try.</Highlight> This program is what I wish I had for a fraction of the
-          time, cost, and stress.
+          I passed on my first try after exactly 30 days of grinding. This is the tool I used, plus the missing piece
+          I had to learn the hard way: what to study, what to skip, and how to stay out of panic mode.
         </p>
       ),
     },
@@ -252,7 +252,7 @@ export const siteConfig = {
     {
       id: "7",
       name: "Lorin Singh, PsyD",
-      role: "Psychologist",
+      role: "Licensed Psychologist",
       img: "/images/user-icon.svg",
       description: (
         <p>
@@ -287,6 +287,12 @@ export const siteConfig = {
         question: "How is it different from other EPPP exam prep programs?",
         answer:
           "We focus on prioritization: what to study next, why it matters, and how it shows up on the EPPP. Less filler, fewer random drills, more high-yield EPPP practice tests and targeted review.",
+      },
+      {
+        id: 14,
+        question: "Is this cheating? How is this fair?",
+        answer:
+          "No. thePsychology.ai is for prep before test day, not for use during the real EPPP. On exam day, you still take the exam without outside help, under the same testing rules as everyone else.",
       },
       {
         id: 3,

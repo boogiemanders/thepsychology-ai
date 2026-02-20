@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { useAuth } from '@/context/auth-context'
+import { usePathname } from 'next/navigation'
 
 const COPY_ALLOWED_EMAIL = 'chanders0@yahoo.com'
 
@@ -15,11 +16,14 @@ const isEditableElement = (el: EventTarget | null) => {
 
 export function CopyProtection() {
   const { user, userProfile } = useAuth()
+  const pathname = usePathname()
   const normalizedEmail = (userProfile?.email ?? user?.email ?? '').trim().toLowerCase()
   const allowCopy = normalizedEmail === COPY_ALLOWED_EMAIL
+  const isHomePage = pathname === '/'
+  const shouldBypassProtection = allowCopy || isHomePage
 
   useEffect(() => {
-    if (allowCopy) return
+    if (shouldBypassProtection) return
 
     const listenerOptions: AddEventListenerOptions = { capture: true }
 
@@ -56,7 +60,7 @@ export function CopyProtection() {
       document.removeEventListener('keydown', blockCopyKeys, listenerOptions)
       document.removeEventListener('dragstart', blockDragStart, listenerOptions)
     }
-  }, [allowCopy])
+  }, [shouldBypassProtection])
 
   return null
 }
