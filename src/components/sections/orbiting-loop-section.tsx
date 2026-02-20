@@ -1,11 +1,14 @@
 "use client"
 
 import React, { forwardRef, useEffect, useMemo, useRef, useState } from "react"
+import { useReducedMotion } from "motion/react"
 
 import { SectionHeader } from "@/components/section-header"
 import { AnimatedBeam } from "@/components/ui/animated-beam"
 import { Ripple } from "@/components/ui/ripple"
 import { cn } from "@/lib/utils"
+
+type NodeKey = "practice" | "prioritize" | "study" | "quiz"
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -14,14 +17,35 @@ const Circle = forwardRef<
     children?: React.ReactNode
     rippleColor?: string
     rippleKey?: number
+    rippleSize?: number
+    rippleSizeGap?: number
+    rippleDurationMs?: number
+    rippleCircles?: number
+    rippleOpacity?: number
+    rippleBlendMode?: React.CSSProperties["mixBlendMode"]
   }
->(({ className, children, rippleColor, rippleKey }, ref) => {
+>(
+  (
+    {
+      className,
+      children,
+      rippleColor,
+      rippleKey,
+      rippleSize,
+      rippleSizeGap,
+      rippleDurationMs,
+      rippleCircles,
+      rippleOpacity,
+      rippleBlendMode,
+    },
+    ref
+  ) => {
   const showRipple = rippleColor && rippleKey !== undefined
   return (
     <div
       ref={ref}
       className={cn(
-        "relative z-10 flex size-16 md:size-20 items-center justify-center rounded-full border-2 border-border bg-background px-4 py-3 text-xs md:text-sm font-semibold shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] overflow-visible transition-transform duration-300 ease-out transition-shadow",
+        "relative z-10 flex size-16 md:size-20 items-center justify-center rounded-full border-2 border-border bg-background px-4 py-3 text-xs md:text-sm font-semibold shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] overflow-visible transition-transform transition-shadow duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)]",
         className
       )}
     >
@@ -29,9 +53,12 @@ const Circle = forwardRef<
         <Ripple
           key={rippleKey}
           color={rippleColor}
-          mainCircleSize={140}
-          numCircles={3}
-          mainCircleOpacity={0.45}
+          mainCircleSize={rippleSize}
+          circleSizeGap={rippleSizeGap}
+          durationMs={rippleDurationMs}
+          numCircles={rippleCircles}
+          mainCircleOpacity={rippleOpacity}
+          blendMode={rippleBlendMode}
         />
       )}
       <span className="relative z-10">{children}</span>
@@ -42,6 +69,7 @@ const Circle = forwardRef<
 Circle.displayName = "Circle"
 
 export function OrbitingLoopSection() {
+  const prefersReducedMotion = useReducedMotion()
   const rippleColors = useMemo(
     () => ({
       practice: "#788c5d",
@@ -56,16 +84,30 @@ export function OrbitingLoopSection() {
   const prioritizeRef = useRef<HTMLDivElement>(null)
   const studyRef = useRef<HTMLDivElement>(null)
   const quizRef = useRef<HTMLDivElement>(null)
-  const [activeNode, setActiveNode] = useState<
-    "practice" | "prioritize" | "study" | "quiz" | null
-  >(null)
+  const [activeNode, setActiveNode] = useState<NodeKey | null>(null)
   const [hitCounter, setHitCounter] = useState(0)
 
-  const segments = useMemo(
+  const activeNodeStyles: Record<NodeKey, string> = useMemo(
+    () => ({
+      practice:
+        "scale-[1.12] shadow-[0_0_0_7px_rgba(120,140,93,0.2),0_0_35px_rgba(120,140,93,0.4)]",
+      prioritize:
+        "scale-[1.12] shadow-[0_0_0_7px_rgba(106,155,204,0.2),0_0_35px_rgba(106,155,204,0.4)]",
+      study:
+        "scale-[1.12] shadow-[0_0_0_7px_rgba(216,119,88,0.2),0_0_35px_rgba(216,119,88,0.4)]",
+      quiz:
+        "scale-[1.12] shadow-[0_0_0_7px_rgba(196,102,133,0.2),0_0_35px_rgba(196,102,133,0.4)]",
+    }),
+    []
+  )
+
+  const steps = useMemo(
     () => [
       {
-        from: diagnoseRef,
-        to: prioritizeRef,
+        targetNode: "prioritize" as const,
+        accent: rippleColors.prioritize,
+        fromRef: diagnoseRef,
+        toRef: prioritizeRef,
         props: {
           curvature: -8,
           startYOffset: -2,
@@ -73,8 +115,10 @@ export function OrbitingLoopSection() {
         },
       },
       {
-        from: prioritizeRef,
-        to: studyRef,
+        targetNode: "study" as const,
+        accent: rippleColors.study,
+        fromRef: prioritizeRef,
+        toRef: studyRef,
         props: {
           curvature: -42,
           startXOffset: 0,
@@ -85,8 +129,10 @@ export function OrbitingLoopSection() {
         },
       },
       {
-        from: studyRef,
-        to: quizRef,
+        targetNode: "quiz" as const,
+        accent: rippleColors.quiz,
+        fromRef: studyRef,
+        toRef: quizRef,
         props: {
           startXOffset: 0,
           endXOffset: 0,
@@ -98,8 +144,10 @@ export function OrbitingLoopSection() {
         },
       },
       {
-        from: quizRef,
-        to: studyRef,
+        targetNode: "study" as const,
+        accent: rippleColors.study,
+        fromRef: quizRef,
+        toRef: studyRef,
         props: {
           startXOffset: 0,
           endXOffset: 0,
@@ -112,8 +160,10 @@ export function OrbitingLoopSection() {
         },
       },
       {
-        from: studyRef,
-        to: quizRef,
+        targetNode: "quiz" as const,
+        accent: rippleColors.quiz,
+        fromRef: studyRef,
+        toRef: quizRef,
         props: {
           startXOffset: 0,
           endXOffset: 0,
@@ -125,8 +175,10 @@ export function OrbitingLoopSection() {
         },
       },
       {
-        from: quizRef,
-        to: studyRef,
+        targetNode: "study" as const,
+        accent: rippleColors.study,
+        fromRef: quizRef,
+        toRef: studyRef,
         props: {
           startXOffset: 0,
           endXOffset: 0,
@@ -139,8 +191,10 @@ export function OrbitingLoopSection() {
         },
       },
       {
-        from: studyRef,
-        to: diagnoseRef,
+        targetNode: "practice" as const,
+        accent: rippleColors.practice,
+        fromRef: studyRef,
+        toRef: diagnoseRef,
         props: {
           curvature: 42,
           startXOffset: 0,
@@ -151,36 +205,21 @@ export function OrbitingLoopSection() {
         },
       },
     ],
-    []
+    [rippleColors]
   )
 
   const [activeStep, setActiveStep] = useState(0)
-  const segmentDurationMs = 850
-  const highlightDurationMs = 250
-  const arrivalLeadMs = 120
-  const travelDurationMs = Math.max(segmentDurationMs - highlightDurationMs, 0)
+  const segmentDurationMs = prefersReducedMotion ? 1500 : 1260
+  const beamTravelDurationMs = prefersReducedMotion ? 0 : 860
 
   useEffect(() => {
-    const targetOrder: Array<"practice" | "prioritize" | "study" | "quiz"> = [
-      "prioritize", // Practice -> Prioritize
-      "study", // Prioritize -> Study
-      "quiz", // Study -> Quiz
-      "study", // Quiz -> Study
-      "quiz", // Study -> Quiz
-      "study", // Quiz -> Study
-      "practice", // Study -> Practice
-    ]
-
-    const target = targetOrder[activeStep]
-    const highlightDelay = Math.max(travelDurationMs - arrivalLeadMs, 0)
-    const shrinkDelay = Math.min(
-      highlightDelay + highlightDurationMs,
-      segmentDurationMs
-    )
+    const target = steps[activeStep]?.targetNode
+    if (!target) return
 
     const timers: Array<ReturnType<typeof setTimeout>> = []
+    setActiveNode(null)
 
-    if (highlightDelay === 0) {
+    if (beamTravelDurationMs === 0) {
       setActiveNode(target)
       setHitCounter((c) => c + 1)
     } else {
@@ -188,19 +227,13 @@ export function OrbitingLoopSection() {
         setTimeout(() => {
           setActiveNode(target)
           setHitCounter((c) => c + 1)
-        }, highlightDelay)
+        }, beamTravelDurationMs)
       )
     }
 
     timers.push(
       setTimeout(() => {
-        setActiveNode(null)
-      }, shrinkDelay)
-    )
-
-    timers.push(
-      setTimeout(() => {
-        setActiveStep((prev) => (prev + 1) % segments.length)
+      setActiveStep((prev) => (prev + 1) % steps.length)
       }, segmentDurationMs)
     )
 
@@ -209,11 +242,10 @@ export function OrbitingLoopSection() {
     }
   }, [
     activeStep,
-    arrivalLeadMs,
-    highlightDurationMs,
+    beamTravelDurationMs,
     segmentDurationMs,
-    travelDurationMs,
-    segments.length,
+    steps,
+    steps.length,
   ])
 
   return (
@@ -269,18 +301,25 @@ export function OrbitingLoopSection() {
 
           <div
             ref={containerRef}
-            className="order-1 lg:order-2 relative flex w-full max-w-[420px] md:max-w-[520px] mx-auto items-center justify-center overflow-hidden py-10 h-[360px] md:h-[420px] -translate-x-2 md:-translate-x-4"
+            className="order-1 lg:order-2 relative flex w-full max-w-[440px] md:max-w-[560px] mx-auto items-center justify-center overflow-visible py-10 h-[360px] md:h-[420px] md:-translate-x-2"
           >
             {/* Parallelogram layout for the four stages */}
             <Circle
               ref={diagnoseRef}
               className={cn(
                 "absolute left-[18%] top-[22%] sm:left-[20%] sm:top-[20%] brand-olive-bg text-white",
-                activeNode === "practice" &&
-                  "scale-110 shadow-[0_0_30px_rgba(255,255,255,0.45)]"
+                activeNode === "practice" && activeNodeStyles.practice
               )}
               rippleColor={rippleColors.practice}
-              rippleKey={activeNode === "practice" ? hitCounter : undefined}
+              rippleKey={
+                activeNode === "practice" ? hitCounter : undefined
+              }
+              rippleSize={130}
+              rippleSizeGap={64}
+              rippleDurationMs={620}
+              rippleCircles={3}
+              rippleOpacity={0.45}
+              rippleBlendMode="normal"
             >
               Practice
             </Circle>
@@ -288,11 +327,18 @@ export function OrbitingLoopSection() {
               ref={prioritizeRef}
               className={cn(
                 "absolute right-[18%] top-[22%] sm:right-[20%] sm:top-[20%] brand-soft-blue-bg text-white",
-                activeNode === "prioritize" &&
-                  "scale-110 shadow-[0_0_30px_rgba(255,255,255,0.45)]"
+                activeNode === "prioritize" && activeNodeStyles.prioritize
               )}
               rippleColor={rippleColors.prioritize}
-              rippleKey={activeNode === "prioritize" ? hitCounter : undefined}
+              rippleKey={
+                activeNode === "prioritize" ? hitCounter : undefined
+              }
+              rippleSize={130}
+              rippleSizeGap={64}
+              rippleDurationMs={620}
+              rippleCircles={3}
+              rippleOpacity={0.45}
+              rippleBlendMode="normal"
             >
               Prioritize
             </Circle>
@@ -300,56 +346,75 @@ export function OrbitingLoopSection() {
               ref={studyRef}
               className={cn(
                 "absolute left-1/2 bottom-[18%] sm:left-1/2 sm:bottom-[20%] -translate-x-1/2 brand-coral-bg text-white",
-                activeNode === "study" &&
-                  "scale-110 shadow-[0_0_30px_rgba(255,255,255,0.45)]"
+                activeNode === "study" && activeNodeStyles.study
               )}
               rippleColor={rippleColors.study}
-              rippleKey={activeNode === "study" ? hitCounter : undefined}
+              rippleKey={
+                activeNode === "study" ? hitCounter : undefined
+              }
+              rippleSize={130}
+              rippleSizeGap={64}
+              rippleDurationMs={620}
+              rippleCircles={3}
+              rippleOpacity={0.45}
+              rippleBlendMode="normal"
             >
               Study
             </Circle>
             <Circle
               ref={quizRef}
               className={cn(
-                "absolute right-[6%] bottom-[18%] sm:right-[8%] sm:bottom-[20%] brand-dusty-rose-bg text-white",
-                activeNode === "quiz" &&
-                  "scale-110 shadow-[0_0_30px_rgba(255,255,255,0.45)]"
+                "absolute right-[10%] bottom-[18%] sm:right-[13%] sm:bottom-[20%] brand-dusty-rose-bg text-white",
+                activeNode === "quiz" && activeNodeStyles.quiz
               )}
               rippleColor={rippleColors.quiz}
-              rippleKey={activeNode === "quiz" ? hitCounter : undefined}
+              rippleKey={
+                activeNode === "quiz" ? hitCounter : undefined
+              }
+              rippleSize={116}
+              rippleSizeGap={56}
+              rippleDurationMs={620}
+              rippleCircles={3}
+              rippleOpacity={0.42}
+              rippleBlendMode="normal"
             >
               Quiz
             </Circle>
 
-            {segments.map((segment, idx) => (
+            {steps.map((step, idx) => (
               <AnimatedBeam
                 key={`base-${idx}`}
                 containerRef={containerRef}
-                fromRef={segment.from}
-                toRef={segment.to}
+                fromRef={step.fromRef}
+                toRef={step.toRef}
                 duration={6}
                 pathOpacity={0.15}
+                pathColor="#8f8f97"
                 gradientStartColor="transparent"
                 gradientStopColor="transparent"
-                {...segment.props}
+                {...step.props}
               />
             ))}
 
-            {segments.map(
-              (segment, idx) =>
-                idx === activeStep && (
+            {!prefersReducedMotion &&
+              steps.map(
+                (step, idx) =>
+                  idx === activeStep && (
                   <AnimatedBeam
                     key={`active-${idx}`}
                     containerRef={containerRef}
-                    fromRef={segment.from}
-                    toRef={segment.to}
-                    duration={Math.max(travelDurationMs, 0) / 1000}
+                    fromRef={step.fromRef}
+                    toRef={step.toRef}
+                    duration={beamTravelDurationMs / 1000}
+                    pathWidth={3}
                     pathOpacity={0}
                     repeat={0}
-                    {...segment.props}
+                    gradientStartColor={step.accent}
+                    gradientStopColor={step.accent}
+                    {...step.props}
                   />
                 )
-            )}
+              )}
           </div>
         </div>
       </div>
