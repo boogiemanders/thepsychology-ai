@@ -14,6 +14,9 @@ const ActivityContext = createContext<ActivityContextType | undefined>(undefined
 const HEARTBEAT_INTERVAL = 30000 // 30 seconds
 const DEBOUNCE_MS = 1000 // Debounce rapid page changes
 
+type ResolvedTheme = 'light' | 'dark'
+type ThemePreference = 'light' | 'dark' | 'system'
+
 // Helper to get current access token
 async function getAccessToken(): Promise<string | null> {
   try {
@@ -24,23 +27,39 @@ async function getAccessToken(): Promise<string | null> {
   }
 }
 
+function getThemeActivityPayload(): { theme: ResolvedTheme; themePreference: ThemePreference } {
+  const theme: ResolvedTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+
+  let themePreference: ThemePreference = 'system'
+  try {
+    const stored = localStorage.getItem('theme')
+    if (stored === 'light' || stored === 'dark' || stored === 'system') {
+      themePreference = stored
+    }
+  } catch {
+    // Ignore localStorage access issues in private/incognito contexts.
+  }
+
+  return { theme, themePreference }
+}
+
 export function ActivityProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   const { user } = useAuth()
   const currentPageViewId = useRef<string | null>(null)
   const lastHeartbeat = useRef<number>(0)
   const heartbeatInterval = useRef<NodeJS.Timeout | null>(null)
-  const pageEnteredAt = useRef<number>(Date.now())
+  const pageEnteredAt = useRef<number>(0)
   const lastTrackedPath = useRef<string | null>(null)
   const debounceTimeout = useRef<NodeJS.Timeout | null>(null)
 
   // Send heartbeat to update last_activity_at
-  const sendHeartbeat = useCallback(async (page: string) => {
+  const sendHeartbeat = useCallback(async (page: string, options?: { force?: boolean }) => {
     if (!user?.id) return
 
     const now = Date.now()
     // Skip if we recently sent a heartbeat
-    if (now - lastHeartbeat.current < HEARTBEAT_INTERVAL / 2) return
+    if (!options?.force && now - lastHeartbeat.current < HEARTBEAT_INTERVAL / 2) return
 
     lastHeartbeat.current = now
 
@@ -51,12 +70,16 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
         headers['Authorization'] = `Bearer ${token}`
       }
 
+      const { theme, themePreference } = getThemeActivityPayload()
+
       await fetch('/api/user-activity', {
         method: 'POST',
         headers,
         body: JSON.stringify({
           action: 'heartbeat',
           page,
+          theme,
+          themePreference,
         }),
       })
     } catch (error) {
@@ -79,12 +102,16 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
         headers['Authorization'] = `Bearer ${token}`
       }
 
+      const { theme, themePreference } = getThemeActivityPayload()
+
       const response = await fetch('/api/user-activity', {
         method: 'POST',
         headers,
         body: JSON.stringify({
           action: 'enter',
           page,
+          theme,
+          themePreference,
         }),
       })
 
@@ -196,6 +223,19 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
         heartbeatInterval.current = null
       }
     }
+  }, [user?.id, pathname, sendHeartbeat])
+
+  // Push immediate activity update when user toggles theme.
+  useEffect(() => {
+    if (!user?.id) return
+
+    const handleThemeUpdated = () => {
+      if (!pathname || document.visibilityState !== 'visible') return
+      sendHeartbeat(pathname, { force: true })
+    }
+
+    window.addEventListener('app-theme-updated', handleThemeUpdated)
+    return () => window.removeEventListener('app-theme-updated', handleThemeUpdated)
   }, [user?.id, pathname, sendHeartbeat])
 
   // Cleanup on unmount

@@ -44,11 +44,20 @@ export const AnimatedThemeToggler = ({
     await document.startViewTransition(() => {
       flushSync(() => {
         const newTheme = !isDark
+        const themeValue = newTheme ? "dark" : "light"
         setIsDark(newTheme)
         document.documentElement.classList.toggle("dark")
-        localStorage.setItem("theme", newTheme ? "dark" : "light")
+        localStorage.setItem("theme", themeValue)
+        window.dispatchEvent(
+          new CustomEvent("app-theme-updated", {
+            detail: {
+              theme: themeValue,
+              themePreference: themeValue,
+            },
+          })
+        )
         if (user?.id) {
-          updateUserThemePreference(user.id, newTheme ? "dark" : "light")
+          updateUserThemePreference(user.id, themeValue)
         }
       })
     }).ready
