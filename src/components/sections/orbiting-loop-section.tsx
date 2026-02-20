@@ -262,9 +262,9 @@ export function OrbitingLoopSection() {
             className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center"
           >
             {!prefersReducedMotion && (
-              <div className="relative h-[108px] w-[200px] sm:h-[128px] sm:w-[236px] md:h-[164px] md:w-[305px] overflow-hidden rounded-xl border border-border/30">
+              <div className="relative h-[118px] w-[216px] sm:h-[138px] sm:w-[252px] md:h-[180px] md:w-[328px] overflow-hidden rounded-xl border border-border/30">
                 <video
-                  className="h-full w-full object-cover object-center dark:invert"
+                  className="h-full w-full object-cover object-center dark:invert dark:opacity-92"
                   src="/animations/continuous-loop-adapts.mp4"
                   autoPlay
                   muted
@@ -272,10 +272,10 @@ export function OrbitingLoopSection() {
                   playsInline
                   preload="metadata"
                 />
-                <div className="absolute inset-0 bg-background/30" />
+                <div className="absolute inset-0 bg-background/30 dark:bg-white/10" />
               </div>
             )}
-            <div className="absolute inset-0 bg-background/68" />
+            <div className="absolute inset-0 bg-background/68 dark:bg-background/62" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/35 via-transparent to-background/80" />
           </div>
 
