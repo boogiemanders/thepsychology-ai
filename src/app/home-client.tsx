@@ -27,8 +27,6 @@ type HeroVideoLayout = {
   bottomCrop: number
 }
 
-const HERO_TUNER_STORAGE_KEY = "hero-video-tuner"
-
 const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
   tickerY: 337,
@@ -47,12 +45,8 @@ const FINAL_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
 
 const FINAL_CONTENT_LIFT = 659
 
-const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
-
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
-  const [legacyVideoOffsetX, setLegacyVideoOffsetX] = useState(0)
-  const [legacyVideoOffsetY, setLegacyVideoOffsetY] = useState(0)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -89,25 +83,6 @@ export default function HomeClient() {
 
   useEffect(() => {
     setIsHeroVideoReady(true)
-  }, [])
-
-  useEffect(() => {
-    if (typeof window === "undefined") return
-
-    const saved = window.localStorage.getItem(HERO_TUNER_STORAGE_KEY)
-    if (!saved) return
-
-    try {
-      const parsed = JSON.parse(saved) as { offsetX?: number; offsetY?: number }
-      if (typeof parsed.offsetX === "number" && Number.isFinite(parsed.offsetX)) {
-        setLegacyVideoOffsetX(clamp(parsed.offsetX, -1200, 1200))
-      }
-      if (typeof parsed.offsetY === "number" && Number.isFinite(parsed.offsetY)) {
-        setLegacyVideoOffsetY(clamp(parsed.offsetY, -1200, 1200))
-      }
-    } catch {
-      // Ignore malformed persisted layout.
-    }
   }, [])
 
   useEffect(() => {
@@ -200,12 +175,12 @@ export default function HomeClient() {
                 ref={heroVideoRef}
                 className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
                 style={{
-                  transform: `translate(${FINAL_HERO_VIDEO_LAYOUT.offsetX + legacyVideoOffsetX}px, ${FINAL_HERO_VIDEO_LAYOUT.offsetY + legacyVideoOffsetY}px) scale(${FINAL_HERO_VIDEO_LAYOUT.scale / 100})`,
+                  transform: `translate(${FINAL_HERO_VIDEO_LAYOUT.offsetX}px, ${FINAL_HERO_VIDEO_LAYOUT.offsetY}px) scale(${FINAL_HERO_VIDEO_LAYOUT.scale / 100})`,
                   transformOrigin: "center center",
                   clipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
                   WebkitClipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
                 }}
-                src="/hero-background.mp4?v=refresh5"
+                src="/hero-background.mp4?v=refresh6"
                 autoPlay
                 muted
                 loop
