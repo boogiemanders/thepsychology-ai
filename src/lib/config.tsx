@@ -54,6 +54,8 @@ export const siteConfig = {
   links: {
     email: "drchan@thepsychology.ai",
     twitter: "https://twitter.com/thepsychologyai",
+    x: "https://x.com/thepsychologyai",
+    tiktok: "https://www.tiktok.com/@thepsychology.ai",
     discord: "https://discord.gg/thepsychologyai",
     github: "https://github.com/thepsychologyai",
     instagram: "https://instagram.com/thepsychologyai",
