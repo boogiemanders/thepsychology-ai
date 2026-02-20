@@ -49,7 +49,6 @@ const FINAL_HERO_VIDEO_START_AT = 9
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
-  const heroVideoObjectPosition = `calc(50% + ${FINAL_HERO_VIDEO_LAYOUT.offsetX}px) calc(50% + ${FINAL_HERO_VIDEO_LAYOUT.offsetY}px)`
 
   useEffect(() => {
     if (typeof window === "undefined") return
@@ -193,9 +192,8 @@ export default function HomeClient() {
                 ref={heroVideoRef}
                 className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
                 style={{
-                  transform: `scale(${FINAL_HERO_VIDEO_LAYOUT.scale / 100})`,
+                  transform: `translate(${FINAL_HERO_VIDEO_LAYOUT.offsetX}px, ${FINAL_HERO_VIDEO_LAYOUT.offsetY}px) scale(${FINAL_HERO_VIDEO_LAYOUT.scale / 100})`,
                   transformOrigin: "center center",
-                  objectPosition: heroVideoObjectPosition,
                   clipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
                   WebkitClipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
                 }}
