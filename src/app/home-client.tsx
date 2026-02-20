@@ -82,7 +82,7 @@ const MOBILE_HERO_LAYOUT = {
   buttonsY: 0,
   videoY: -228,
   videoBottomCrop: 231,
-  contentGroupY: -537,
+  contentGroupY: -430,
   videoOffsetX: 0,
   videoOffsetY: 0,
 } as const
