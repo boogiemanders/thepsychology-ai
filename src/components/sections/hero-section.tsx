@@ -13,10 +13,9 @@ type HeroSectionProps = {
     ctaX: number
     ctaY: number
   }
-  globalLiftY?: number
 }
 
-export function HeroSection({ offsets, globalLiftY = 0 }: HeroSectionProps) {
+export function HeroSection({ offsets }: HeroSectionProps) {
   const { hero } = siteConfig
 
   const handleStartFree = () => {
@@ -35,10 +34,7 @@ export function HeroSection({ offsets, globalLiftY = 0 }: HeroSectionProps) {
   return (
     <section id="hero" className="w-full relative">
       <div className="relative flex flex-col items-center w-full px-6">
-        <div
-          className="relative z-10 pt-24 pb-14 max-w-3xl mx-auto h-full w-full flex flex-col gap-7 items-center justify-center"
-          style={{ transform: `translateY(${globalLiftY}px)` }}
-        >
+        <div className="relative z-10 pt-24 pb-14 max-w-3xl mx-auto h-full w-full flex flex-col gap-7 items-center justify-center">
           {hero.badge?.trim() ? (
             <p className="border border-border bg-accent rounded-full text-sm h-8 px-3 flex items-center gap-2">
               {hero.badgeIcon}
