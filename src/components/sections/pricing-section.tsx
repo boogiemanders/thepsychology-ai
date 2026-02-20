@@ -21,11 +21,6 @@ async function fetchWithRetry(url: string, options: RequestInit, retries = 3): P
   return fetch(url, options) // Final attempt, let it throw
 }
 
-type PricingSectionProps = {
-  activeTier?: string
-  onActiveTierChange?: (tierName: string) => void
-}
-
 type Tier = (typeof siteConfig.pricing.pricingItems)[number]
 
 function getDisplayPrice(tier: Tier): { amount: string; period: string } {
@@ -36,7 +31,7 @@ function getDisplayPrice(tier: Tier): { amount: string; period: string } {
   return { amount: tier.price, period: tier.period ?? "" }
 }
 
-export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
+export function PricingSection() {
   const tiers = useMemo(() => siteConfig.pricing.pricingItems, [])
   const [expandedTier, setExpandedTier] = useState<string | null>(null)
   const [showPasswordFields, setShowPasswordFields] = useState(false)
@@ -84,10 +79,6 @@ export function PricingSection({ onActiveTierChange }: PricingSectionProps) {
   }, [])
 
   const gridColsClass = tiers.length > 1 ? "md:grid-cols-2" : "md:grid-cols-1"
-
-  useEffect(() => {
-    if (expandedTier) onActiveTierChange?.(expandedTier)
-  }, [onActiveTierChange, expandedTier])
 
   useEffect(() => {
     const handleMiniPricingSelect = (e: Event) => {

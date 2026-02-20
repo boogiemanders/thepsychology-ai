@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { siteConfig } from "@/lib/config"
 import { CompanyShowcase } from "@/components/sections/company-showcase"
 import { FAQSection } from "@/components/sections/faq-section"
 // import { FeatureSection } from "@/components/sections/feature-section"
@@ -13,7 +12,6 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 export default function HomeClient() {
-  const [activeTier, setActiveTier] = useState(() => siteConfig.pricing.pricingItems[0]?.name ?? "")
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
@@ -159,16 +157,16 @@ export default function HomeClient() {
           </div>
           <div className="relative z-10">
             <HeroSection />
-            <CompanyShowcase />
           </div>
         </section>
         <OrbitingLoopSection />
+        <CompanyShowcase />
         <BentoSection />
         <TestimonialSection />
         {/* <FeatureSection /> */}
         {/* <GrowthSection /> */}
-        <PricingSection activeTier={activeTier} onActiveTierChange={setActiveTier} />
-                <FAQSection />
+        <PricingSection />
+        <FAQSection />
         {/* <CTASection /> */}
         <FooterSection />
       </main>
