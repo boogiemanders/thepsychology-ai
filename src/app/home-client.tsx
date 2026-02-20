@@ -46,6 +46,16 @@ const FINAL_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
 const FINAL_CONTENT_LIFT = 659
 const FINAL_HERO_VIDEO_START_AT = 9
 
+const HARD_CODED_HERO_LAYOUT = {
+  bannerTextY: -65,
+  buttonsY: -124,
+  videoY: -84,
+  videoBottomCrop: 0,
+  contentGroupY: 199,
+  videoOffsetX: 0,
+  videoOffsetY: 0,
+} as const
+
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
@@ -179,6 +189,18 @@ export default function HomeClient() {
     }
   }, [isHeroVideoReady])
 
+  const composedHeroOffsets: HeroCopyOffsets = {
+    ...FINAL_HERO_COPY_OFFSETS,
+    ctaY: FINAL_HERO_COPY_OFFSETS.ctaY + HARD_CODED_HERO_LAYOUT.buttonsY,
+  }
+
+  const heroVideoOffsetX = FINAL_HERO_VIDEO_LAYOUT.offsetX + HARD_CODED_HERO_LAYOUT.videoOffsetX
+  const heroVideoOffsetY =
+    FINAL_HERO_VIDEO_LAYOUT.offsetY + HARD_CODED_HERO_LAYOUT.videoOffsetY + HARD_CODED_HERO_LAYOUT.videoY
+  const heroVideoBottomCrop = Math.max(0, FINAL_HERO_VIDEO_LAYOUT.bottomCrop + HARD_CODED_HERO_LAYOUT.videoBottomCrop)
+  const contentGroupMarginTop =
+    FINAL_CONTENT_LIFT > 0 ? -FINAL_CONTENT_LIFT + HARD_CODED_HERO_LAYOUT.contentGroupY : HARD_CODED_HERO_LAYOUT.contentGroupY
+
   return (
     <>
       <main
@@ -192,10 +214,10 @@ export default function HomeClient() {
                 ref={heroVideoRef}
                 className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
                 style={{
-                  transform: `translate(${FINAL_HERO_VIDEO_LAYOUT.offsetX}px, ${FINAL_HERO_VIDEO_LAYOUT.offsetY}px) scale(${FINAL_HERO_VIDEO_LAYOUT.scale / 100})`,
+                  transform: `translate(${heroVideoOffsetX}px, ${heroVideoOffsetY}px) scale(${FINAL_HERO_VIDEO_LAYOUT.scale / 100})`,
                   transformOrigin: "center center",
-                  clipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
-                  WebkitClipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
+                  clipPath: `inset(0 0 ${heroVideoBottomCrop}px 0)`,
+                  WebkitClipPath: `inset(0 0 ${heroVideoBottomCrop}px 0)`,
                 }}
                 src="/hero-background.mp4?v=refresh6"
                 autoPlay
@@ -211,12 +233,12 @@ export default function HomeClient() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
           </div>
           <div className="relative z-10">
-            <HeroSection offsets={FINAL_HERO_COPY_OFFSETS} />
+            <HeroSection offsets={composedHeroOffsets} bannerTextLiftY={HARD_CODED_HERO_LAYOUT.bannerTextY} />
           </div>
         </section>
         <div
           className="relative z-20 w-full bg-background border-t border-border divide-y divide-border"
-          style={FINAL_CONTENT_LIFT > 0 ? { marginTop: -FINAL_CONTENT_LIFT } : undefined}
+          style={contentGroupMarginTop !== 0 ? { marginTop: contentGroupMarginTop } : undefined}
         >
           <OrbitingLoopSection />
           <BentoSection />

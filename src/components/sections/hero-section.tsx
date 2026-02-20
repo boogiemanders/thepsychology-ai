@@ -13,9 +13,10 @@ type HeroSectionProps = {
     ctaX: number
     ctaY: number
   }
+  bannerTextLiftY?: number
 }
 
-export function HeroSection({ offsets }: HeroSectionProps) {
+export function HeroSection({ offsets, bannerTextLiftY = 0 }: HeroSectionProps) {
   const { hero } = siteConfig
 
   const handleStartFree = () => {
@@ -41,7 +42,10 @@ export function HeroSection({ offsets }: HeroSectionProps) {
               {hero.badge}
             </p>
           ) : null}
-          <div className="flex flex-col items-center justify-center gap-2">
+          <div
+            className="flex flex-col items-center justify-center gap-2"
+            style={{ transform: `translateY(${bannerTextLiftY}px)` }}
+          >
             <div
               style={{
                 transform: `translate(${offsets.tickerX}px, ${offsets.tickerY}px)`,
