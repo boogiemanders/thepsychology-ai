@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Loader2, Pause, Play } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Loader2, Pause, Play } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { normalizeTextForReadAlong } from '@/lib/speech-text'
 import {
@@ -55,6 +55,8 @@ export function BlogAudioPlayer({ markdown, slug, onWordProgress }: BlogAudioPla
   const currentChunkRef = useRef(0)
   const totalDurationRef = useRef(0)
   const readyRef = useRef(false)
+  // sectionTimes[i] = { time: number, chunkIdx: number } for each unique section
+  const sectionTimesRef = useRef<{ time: number; chunkIdx: number }[]>([])
   const animFrameRef = useRef<number>(0)
   const abortRef = useRef<AbortController | null>(null)
 
@@ -205,8 +207,11 @@ export function BlogAudioPlayer({ markdown, slug, onWordProgress }: BlogAudioPla
         texts.push(chunk.text)
         totalDur += dur
 
-        // Build fallback progress map
-        const normalizedText = normalizeTextForReadAlong(chunk.text)
+        // Build fallback progress map.
+        // Collapse newlines to spaces to match what edge-tts receives (normalizeForTTS
+        // collapses all whitespace, so paragraph breaks produce no real TTS pause).
+        // Without this, \n\n gap weights create phantom pauses that lag the highlight.
+        const normalizedText = normalizeTextForReadAlong(chunk.text).replace(/\n/g, ' ')
         const progressMap = computeWordProgressMap(normalizedText)
         progressMapsRef.current.set(i, progressMap)
         totalWords += countWords(normalizedText)
@@ -220,6 +225,18 @@ export function BlogAudioPlayer({ markdown, slug, onWordProgress }: BlogAudioPla
       totalDurationRef.current = totalDur
       setDuration(totalDur)
       readyRef.current = true
+
+      // Build section time map — one entry per unique sectionIdx
+      const seen = new Set<number>()
+      const sectionTimes: { time: number; chunkIdx: number }[] = []
+      for (let i = 0; i < manifest.chunks.length; i++) {
+        const sIdx = manifest.chunks[i].sectionIdx
+        if (!seen.has(sIdx)) {
+          seen.add(sIdx)
+          sectionTimes.push({ time: offsets[i], chunkIdx: i })
+        }
+      }
+      sectionTimesRef.current = sectionTimes
 
       // Fetch MFA word timings in background for all chunks
       for (let i = 0; i < manifest.chunks.length; i++) {
@@ -330,63 +347,60 @@ export function BlogAudioPlayer({ markdown, slug, onWordProgress }: BlogAudioPla
     }
   }, [])
 
-  const handleSeek = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+  const seekToTime = useCallback((targetTime: number) => {
     if (!readyRef.current || totalDurationRef.current <= 0) return
-
-    const rect = e.currentTarget.getBoundingClientRect()
-    const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
-    const targetTime = ratio * totalDurationRef.current
-
-    // Find the chunk that contains this time
     let chunkIdx = 0
     for (let i = 0; i < chunkOffsetsRef.current.length; i++) {
-      const chunkEnd = (chunkOffsetsRef.current[i + 1] ?? totalDurationRef.current)
-      if (targetTime < chunkEnd) {
-        chunkIdx = i
-        break
-      }
+      const chunkEnd = chunkOffsetsRef.current[i + 1] ?? totalDurationRef.current
+      if (targetTime < chunkEnd) { chunkIdx = i; break }
     }
-
     const localTime = targetTime - (chunkOffsetsRef.current[chunkIdx] ?? 0)
-
     if (currentChunkRef.current === chunkIdx && audioRef.current) {
       audioRef.current.currentTime = localTime
       setCurrentTime(targetTime)
     } else {
-      // Need to switch chunks
       const url = audioUrlsRef.current[chunkIdx]
       if (!url) return
-
-      if (audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current.removeAttribute('src')
-      }
-
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current.removeAttribute('src') }
       const audio = new Audio(url)
       audio.playbackRate = playbackRate
       audioRef.current = audio
       currentChunkRef.current = chunkIdx
-
       audio.onended = () => {
         const nextIdx = chunkIdx + 1
-        if (nextIdx < audioUrlsRef.current.length) {
-          playChunk(nextIdx)
-        } else {
-          setPlaying(false)
-          onWordProgress?.(null)
-          setCurrentTime(totalDurationRef.current)
-        }
+        if (nextIdx < audioUrlsRef.current.length) { playChunk(nextIdx) }
+        else { setPlaying(false); onWordProgress?.(null); setCurrentTime(totalDurationRef.current) }
       }
-
       audio.addEventListener('loadedmetadata', () => {
         audio.currentTime = localTime
         if (playing) audio.play().catch(() => {})
       }, { once: true })
-
       audio.src = url
       setCurrentTime(targetTime)
     }
   }, [playing, playbackRate, playChunk, onWordProgress])
+
+  const handlePrevSection = useCallback(() => {
+    const sections = sectionTimesRef.current
+    if (!sections.length) return
+    // Find the last section that started more than 2s before current time
+    const target = [...sections].reverse().find(s => s.time < currentTime - 2)
+    seekToTime(target ? target.time : 0)
+  }, [currentTime, seekToTime])
+
+  const handleNextSection = useCallback(() => {
+    const sections = sectionTimesRef.current
+    if (!sections.length) return
+    const target = sections.find(s => s.time > currentTime + 0.5)
+    if (target) seekToTime(target.time)
+  }, [currentTime, seekToTime])
+
+  const handleSeek = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!readyRef.current || totalDurationRef.current <= 0) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
+    seekToTime(ratio * totalDurationRef.current)
+  }, [seekToTime])
 
   const cyclePlaybackRate = useCallback(() => {
     setPlaybackRate((prev) => {
@@ -405,6 +419,17 @@ export function BlogAudioPlayer({ markdown, slug, onWordProgress }: BlogAudioPla
           variant="ghost"
           size="icon"
           className="h-9 w-9 shrink-0"
+          onClick={handlePrevSection}
+          disabled={loading}
+          aria-label="Previous section"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-9 w-9 shrink-0"
           onClick={handlePlayPause}
           disabled={loading}
           aria-label={playing ? 'Pause' : 'Play'}
@@ -416,6 +441,17 @@ export function BlogAudioPlayer({ markdown, slug, onWordProgress }: BlogAudioPla
           ) : (
             <Play className="h-5 w-5" />
           )}
+        </Button>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-9 w-9 shrink-0"
+          onClick={handleNextSection}
+          disabled={loading}
+          aria-label="Next section"
+        >
+          <ChevronRight className="h-5 w-5" />
         </Button>
 
         <div className="flex min-w-0 flex-1 flex-col gap-1">

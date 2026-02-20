@@ -61,39 +61,15 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <main className="w-full px-6 py-16">
       <div className="mx-auto w-full max-w-3xl space-y-10">
-        <header className="space-y-3">
-          <p className="text-sm text-muted-foreground">
-            <Link href="/blog" className="underline underline-offset-4">
-              Blog
-            </Link>{" "}
-            / <span className="text-foreground">{entry.title}</span>
-          </p>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{entry.title}</h1>
-          <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <span>{entry.author}</span>
-            {publishedDate && (
-              <>
-                <span aria-hidden="true">|</span>
-                <time dateTime={entry.publishedAt}>{publishedDate}</time>
-              </>
-            )}
-          </div>
-          {entry.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 pt-1">
-              {entry.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-flex items-center rounded-full border border-border bg-accent px-2.5 py-0.5 text-xs font-medium"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </header>
-
         <article>
-          <BlogArticleWithAudio content={content} slug={slug} />
+          <BlogArticleWithAudio
+            content={content}
+            slug={slug}
+            title={entry.title}
+            author={entry.author}
+            publishedDate={publishedDate}
+            tags={entry.tags}
+          />
         </article>
 
         <section className="rounded-xl border border-border bg-accent/40 p-5 space-y-2">

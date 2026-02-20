@@ -186,25 +186,36 @@ function parseFrontmatter(markdown: string): { metadata: Record<string, string>;
 }
 
 /**
- * Detect section boundaries from markdown headings.
- * Returns section metadata for each paragraph/chunk boundary.
+ * Split markdown content into sections at each h1/h2/h3 heading.
+ * Each section includes its heading line(s) so the audio clip starts with the heading.
+ * Within a section, chunkTextForTts splits further if the text is too long.
  */
-function extractSections(markdown: string): Array<{ title: string; startOffset: number }> {
-  const sections: Array<{ title: string; startOffset: number }> = []
-  const lines = markdown.split('\n')
-  let offset = 0
+function splitIntoSections(
+  content: string
+): Array<{ title: string; speakable: string }> {
+  const lines = content.split('\n')
+  const sections: Array<{ title: string; speakable: string }> = []
+  let currentTitle = 'Introduction'
+  let currentLines: string[] = []
+
+  const flush = () => {
+    const raw = currentLines.join('\n').trim()
+    if (!raw) return
+    const speakable = prepareTextForTts(markdownToSpeakableText(raw))
+    if (speakable.trim()) sections.push({ title: currentTitle, speakable })
+  }
 
   for (const line of lines) {
     const headingMatch = line.match(/^#{1,3}\s+(.+)$/)
     if (headingMatch) {
-      sections.push({ title: headingMatch[1].trim(), startOffset: offset })
+      flush()
+      currentTitle = headingMatch[1].trim()
+      currentLines = [line] // heading line goes into the NEW section
+    } else {
+      currentLines.push(line)
     }
-    offset += line.length + 1 // +1 for newline
   }
-
-  if (sections.length === 0) {
-    sections.push({ title: 'Introduction', startOffset: 0 })
-  }
+  flush()
 
   return sections
 }
@@ -229,24 +240,27 @@ async function processBlogPost(options: {
 
   console.log(`\nProcessing: ${slug}`)
 
-  // Convert markdown to speakable text
-  const speakable = prepareTextForTts(markdownToSpeakableText(content))
-  if (!speakable.trim()) {
+  // Split into sections (each section starts with its heading).
+  // Then chunk each section independently so every audio clip starts at a heading.
+  const sections = splitIntoSections(content)
+  if (sections.length === 0) {
     console.warn(`  No speakable content found, skipping`)
     return null
   }
 
-  // Chunk the text
-  const chunks = chunkTextForTts(speakable, args.maxCharsPerChunk)
-  console.log(`  Chunks: ${chunks.length}`)
-
-  if (chunks.length === 0) {
-    console.warn(`  No chunks, skipping`)
-    return null
+  // Build flat chunk list with section metadata
+  type ChunkWithSection = { text: string; sectionTitle: string; sectionIdx: number }
+  const chunksWithSection: ChunkWithSection[] = []
+  for (let sIdx = 0; sIdx < sections.length; sIdx++) {
+    const section = sections[sIdx]
+    const sectionChunks = chunkTextForTts(section.speakable, args.maxCharsPerChunk)
+    for (const chunkText of sectionChunks) {
+      chunksWithSection.push({ text: chunkText, sectionTitle: section.title, sectionIdx: sIdx })
+    }
   }
 
-  // Extract section info from original markdown
-  const sections = extractSections(content)
+  const chunks = chunksWithSection.map((c) => c.text)
+  console.log(`  Sections: ${sections.length}, Chunks: ${chunks.length}`)
 
   // Create working directories
   const postDir = path.join(workDir, 'blog', slug)
@@ -262,12 +276,10 @@ async function processBlogPost(options: {
   const manifestChunks: BlogManifestChunk[] = []
   let totalDuration = 0
 
-  // Track which section each chunk belongs to based on character position in speakable text
-  let charsSoFar = 0
-
   for (let i = 0; i < chunks.length; i++) {
     const chunkText = chunks[i]
-    console.log(`  Chunk ${i + 1}/${chunks.length}: ${chunkText.length} chars`)
+    const { sectionTitle, sectionIdx } = chunksWithSection[i]!
+    console.log(`  Chunk ${i + 1}/${chunks.length} [${sectionTitle}]: ${chunkText.length} chars`)
 
     // Normalize for TTS
     const normalized = normalizeForTTS(chunkText)
@@ -288,7 +300,6 @@ async function processBlogPost(options: {
     if (!fs.existsSync(wavPath)) {
       if (!args.run) {
         console.log(`    DRY: would generate ${chunkHash}.wav`)
-        charsSoFar += chunkText.length
         continue
       }
 
@@ -301,7 +312,6 @@ async function processBlogPost(options: {
 
       if (!edgeResult.ok) {
         console.warn(`    TTS failed: ${edgeResult.errorText ?? 'unknown error'}`)
-        charsSoFar += chunkText.length
         continue
       }
 
@@ -327,17 +337,6 @@ async function processBlogPost(options: {
     const duration = fs.existsSync(wavPath) ? getAudioDuration(wavPath) : 0
     totalDuration += duration
 
-    // Determine section for this chunk
-    let sectionIdx = 0
-    let sectionTitle = sections[0]?.title ?? 'Introduction'
-    for (let s = sections.length - 1; s >= 0; s--) {
-      if (sections[s].startOffset <= charsSoFar) {
-        sectionIdx = s
-        sectionTitle = sections[s].title
-        break
-      }
-    }
-
     manifestChunks.push({
       chunkId: `blog-${slug}-${i}`,
       text: chunkText,
@@ -347,8 +346,6 @@ async function processBlogPost(options: {
       sectionIdx,
       sectionTitle,
     })
-
-    charsSoFar += chunkText.length
   }
 
   // Run MFA alignment
