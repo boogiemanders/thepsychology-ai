@@ -256,14 +256,38 @@ export function OrbitingLoopSection() {
         <div className="absolute top-0 -left-4 md:-left-14 h-full w-4 md:w-14 text-primary/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div>
         <div className="absolute top-0 -right-4 md:-right-14 h-full w-4 md:w-14 text-primary/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div>
 
-        <SectionHeader>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-            A continuous loop that adapts to you
-          </h2>
-          <p className="text-muted-foreground text-center text-balance font-medium">
-            Study less. Score higher. Here’s how.
-          </p>
-        </SectionHeader>
+        <div className="relative isolate overflow-hidden">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center"
+          >
+            {!prefersReducedMotion && (
+              <div className="relative h-[108px] w-[200px] sm:h-[128px] sm:w-[236px] md:h-[164px] md:w-[305px] overflow-hidden rounded-xl border border-border/30">
+                <video
+                  className="h-full w-full object-cover object-center dark:invert"
+                  src="/animations/continuous-loop-adapts.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
+                <div className="absolute inset-0 bg-background/30" />
+              </div>
+            )}
+            <div className="absolute inset-0 bg-background/68" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/35 via-transparent to-background/80" />
+          </div>
+
+          <SectionHeader>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
+              A continuous loop that adapts to you
+            </h2>
+            <p className="text-muted-foreground text-center text-balance font-medium">
+              Study less. Score higher. Here’s how.
+            </p>
+          </SectionHeader>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 py-10 items-center">
           <div className="order-2 lg:order-1 space-y-6">
@@ -303,7 +327,7 @@ export function OrbitingLoopSection() {
 
           <div
             ref={containerRef}
-            className="order-1 lg:order-2 relative flex w-full max-w-[440px] md:max-w-[560px] mx-auto items-center justify-center overflow-visible py-10 h-[360px] md:h-[420px] md:-translate-x-2"
+            className="order-1 lg:order-2 relative isolate flex w-full max-w-[440px] md:max-w-[560px] mx-auto items-center justify-center overflow-visible py-10 h-[360px] md:h-[420px] md:-translate-x-2"
           >
             {/* Parallelogram layout for the four stages */}
             <Circle
