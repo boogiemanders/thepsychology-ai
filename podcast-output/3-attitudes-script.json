@@ -1,0 +1,238 @@
+[
+  {
+    "speaker": "A",
+    "text": "Welcome back to the show! Today we're diving into one of the most fundamental topics in social psychology: attitudes and attitude change. And I think what makes this topic so fascinating is that it challenges something most of us take for granted."
+  },
+  {
+    "speaker": "B",
+    "text": "Right, because we all assume our attitudes drive our behavior. Like, if I believe exercise is important, then obviously I'll go to the gym. But that's not always what happens, is it?"
+  },
+  {
+    "speaker": "A",
+    "text": "Exactly! And this was actually a huge puzzle for psychologists for decades. Early researchers were really disappointed to find that knowing someone's attitude barely helped predict what they'd actually do. Someone might say they care deeply about climate change but never recycle. A friend might claim they value healthy eating while ordering fast food three times a week."
+  },
+  {
+    "speaker": "B",
+    "text": "So does that mean attitudes are just... useless for predicting behavior?"
+  },
+  {
+    "speaker": "A",
+    "text": "No, and that's the breakthrough. Later research showed the attitude-behavior link isn't broken. It just depends on three critical conditions. Think of it as the SAS framework: Strength, Accessibility, and Specificity."
+  },
+  {
+    "speaker": "B",
+    "text": "Okay, walk me through those. What makes an attitude strong?"
+  },
+  {
+    "speaker": "A",
+    "text": "Two main paths. First is direct experience. If you've personally experienced something, your attitude carries more weight. Someone who's actually tried meditation has a stronger attitude about it than someone who just read an article. The second path is personal relevance. When something directly affects your self-interest, that attitude becomes much stronger."
+  },
+  {
+    "speaker": "B",
+    "text": "That makes sense. Like a grad student's attitude about student loan forgiveness would be way more predictive of their voting behavior than their attitude about, say, agricultural subsidies."
+  },
+  {
+    "speaker": "A",
+    "text": "Perfect example. Now accessibility is the second condition. An accessible attitude is one that comes to mind easily and quickly. Think of it like having an app on your phone's home screen versus buried in a folder three swipes away. The easier it is to access your attitude, the more likely it'll influence your behavior when decision time comes."
+  },
+  {
+    "speaker": "B",
+    "text": "And the third one, specificity?"
+  },
+  {
+    "speaker": "A",
+    "text": "This is where a lot of early studies went wrong. They'd measure general attitudes and try to predict specific behaviors. Imagine trying to predict whether someone will attend a specific yoga class on Tuesday evening by asking if they generally value wellness. That's way too broad. But if you ask about their attitude toward that particular class, you'll get a much better prediction."
+  },
+  {
+    "speaker": "B",
+    "text": "So the rule is: match the level of specificity. General attitudes predict general patterns, specific attitudes predict specific behaviors."
+  },
+  {
+    "speaker": "A",
+    "text": "Exactly right. Now let's talk about the models psychologists use to predict behavior from attitudes. The first big one is the Theory of Planned Behavior. This says that behavioral intention is the best predictor of actual behavior. And intention is shaped by three things. Think ABC: Attitude toward the behavior, Beliefs about what others think, which are called subjective norms, and Confidence in your ability, which is perceived behavioral control."
+  },
+  {
+    "speaker": "B",
+    "text": "So all three need to line up for someone to actually follow through?"
+  },
+  {
+    "speaker": "A",
+    "text": "Right. You might want to change careers, and your partner might support it, but if you don't believe you can afford to go back to school, your intention stays weak. All three factors need to align."
+  },
+  {
+    "speaker": "B",
+    "text": "Are there other models besides Theory of Planned Behavior?"
+  },
+  {
+    "speaker": "A",
+    "text": "Yes! The Prototype Willingness Model is a really interesting one because it recognizes that not all behavior follows a rational planned path. It says there are two routes. There's the reasoned path, which follows planned behavior. But then there's the social reaction path, which happens more spontaneously based on your willingness in the moment."
+  },
+  {
+    "speaker": "B",
+    "text": "What drives that willingness?"
+  },
+  {
+    "speaker": "A",
+    "text": "It depends on your prototype, your mental image of people who engage in that behavior. If you have a positive prototype, you're more willing to do it when the opportunity arises, even without planning. Think of a young professional who doesn't plan to drink heavily but has a positive image of party people as fun and socially successful. At a networking event, their willingness to drink increases, not because they planned it, but because the positive prototype makes it feel acceptable."
+  },
+  {
+    "speaker": "B",
+    "text": "That's been really useful for understanding risky behavior in adolescents and young adults, right?"
+  },
+  {
+    "speaker": "A",
+    "text": "Exactly. Now the third model is the Health Belief Model, which specifically targets health behaviors. It identifies six factors: perceived susceptibility, perceived severity, perceived benefits, perceived barriers, self-efficacy, and cues to action. You can remember it as SS, BB, SC."
+  },
+  {
+    "speaker": "B",
+    "text": "That sounds really useful for clinical work. Like if a client isn't following health recommendations, you can diagnose which factor is the bottleneck."
+  },
+  {
+    "speaker": "A",
+    "text": "That's a great way to put it. Maybe they're underestimating their risk, or they doubt the treatment will help, or maybe the barriers are just too high. Each factor suggests a different intervention. Now, let's shift to the really fun part. How do attitudes actually change?"
+  },
+  {
+    "speaker": "B",
+    "text": "This is where persuasion comes in, right?"
+  },
+  {
+    "speaker": "A",
+    "text": "Yes! The Elaboration Likelihood Model is probably the most important framework here. It identifies two distinct paths to persuasion. The central route is the thoughtful, analytical path. People use it when the message feels personally relevant, when they have the mental capacity to think it through, and interestingly, when they're in a neutral or slightly negative mood, because that promotes careful thinking."
+  },
+  {
+    "speaker": "B",
+    "text": "And the other route?"
+  },
+  {
+    "speaker": "A",
+    "text": "The peripheral route is the automatic, surface-level path. People use it when the message seems unimportant, when they're cognitively overloaded, or actually when they're in a good mood, because good mood reduces critical thinking. Here, persuasion relies on things unrelated to the argument's quality. Is the speaker attractive? Do they seem credible? Does the message just feel right?"
+  },
+  {
+    "speaker": "B",
+    "text": "And the key difference in outcomes?"
+  },
+  {
+    "speaker": "A",
+    "text": "Central route produces strong, lasting attitude change that predicts future behavior. Peripheral route produces weak, temporary change. Here's a practical tip for remembering: Central equals Content matters, both start with C. Peripheral equals Packaging matters, both start with P."
+  },
+  {
+    "speaker": "B",
+    "text": "Oh, that's a great mnemonic. What about Social Judgment Theory?"
+  },
+  {
+    "speaker": "A",
+    "text": "Social Judgment Theory is all about how your current position affects how you receive a persuasive message. It says everyone has three latitudes. Your latitude of acceptance is positions close enough to yours that you'll accept them. The latitude of noncommitment is where positions are moderately different, and this is the sweet spot for persuasion because you'll actually consider them. And the latitude of rejection contains positions so far from yours that you'll immediately dismiss them."
+  },
+  {
+    "speaker": "B",
+    "text": "And ego-involvement changes the sizes of these zones?"
+  },
+  {
+    "speaker": "A",
+    "text": "Exactly. The more personally important an issue is to you, the more your acceptance zone shrinks and your rejection zone expands. Think about a passionate photographer who strongly identifies with a particular camera brand. They'll reject most arguments for competitors because their ego-involvement is high."
+  },
+  {
+    "speaker": "B",
+    "text": "That has big implications for therapy, doesn't it? You can't push clients too far too fast."
+  },
+  {
+    "speaker": "A",
+    "text": "Absolutely. Effective attitude change means starting with positions just slightly different from the client's current stance, staying within their latitude of noncommitment. Push too far and you land in their rejection zone, which can actually backfire and make them more entrenched."
+  },
+  {
+    "speaker": "B",
+    "text": "What about Balance Theory?"
+  },
+  {
+    "speaker": "A",
+    "text": "Heider's Balance Theory, also called POX Theory, focuses on three-way relationships. P is you, O is another person, and X is any attitude object. We're motivated to maintain consistency among these three elements. When there's imbalance, it creates discomfort that pushes us toward change."
+  },
+  {
+    "speaker": "B",
+    "text": "Can you give an example of imbalance?"
+  },
+  {
+    "speaker": "A",
+    "text": "Sure. Say you like your partner and you love hiking, but your partner hates hiking. That's unbalanced. So you're motivated to restore balance, maybe by getting your partner to try hiking, maybe by caring less about hiking, or in extreme cases, by rethinking your feelings about your partner."
+  },
+  {
+    "speaker": "B",
+    "text": "Now we have to talk about cognitive dissonance. That's probably the most famous concept in all of social psychology."
+  },
+  {
+    "speaker": "A",
+    "text": "Festinger's Cognitive Dissonance Theory. The core idea is beautifully simple: when you become aware that two of your beliefs contradict each other, or when your behavior contradicts your attitudes, you experience psychological discomfort. And that discomfort motivates you to reduce it."
+  },
+  {
+    "speaker": "B",
+    "text": "The classic study with this is the one dollar versus twenty dollar experiment, right?"
+  },
+  {
+    "speaker": "A",
+    "text": "Yes! Festinger and Carlsmith's 1959 experiment. Participants did an extremely boring task, turning pegs on a board. Then they were paid either one dollar or twenty dollars to lie to the next participant and say the task was actually fun. Afterward, they rated how enjoyable the task really was. And here's the surprising result: the people paid only one dollar rated the boring task as significantly more enjoyable than those paid twenty dollars."
+  },
+  {
+    "speaker": "B",
+    "text": "Because the one dollar group didn't have enough external justification for lying!"
+  },
+  {
+    "speaker": "A",
+    "text": "Exactly right. They experienced dissonance: I told someone this boring task was fun but I only got a dollar for lying. To reduce that dissonance, they actually changed their attitude, convincing themselves the task was somewhat enjoyable. The twenty dollar group had no dissonance because the money was sufficient justification."
+  },
+  {
+    "speaker": "B",
+    "text": "And this connects to real life too. Like buying an expensive gym membership when you're unsure about fitness. You'll convince yourself fitness is really important to justify the purchase."
+  },
+  {
+    "speaker": "A",
+    "text": "The gym industry basically depends on this phenomenon! Now, there's an alternative explanation for some of these same findings, and that's Bem's Self-Perception Theory. The idea is that we learn about our own attitudes by observing our behavior, the same way we'd learn about someone else's attitudes by watching them."
+  },
+  {
+    "speaker": "B",
+    "text": "And from this comes the overjustification effect, right?"
+  },
+  {
+    "speaker": "A",
+    "text": "Yes! This is a fascinating prediction. If you're externally rewarded for doing something you already enjoy intrinsically, your intrinsic motivation actually decreases. The classic study showed this with children who enjoyed drawing with markers. Those who were rewarded for drawing later spent less time drawing when the rewards were removed, compared to children who were never rewarded."
+  },
+  {
+    "speaker": "B",
+    "text": "Because the rewarded children started thinking, I must be drawing for the reward, rather than, I draw because I enjoy it."
+  },
+  {
+    "speaker": "A",
+    "text": "Exactly. And this has huge practical implications. Paying people for what they already enjoy can backfire. Over-praising clients for therapeutic progress they'd make naturally might reduce intrinsic motivation. If your employer starts paying bonuses for work you previously found meaningful, you might paradoxically find it less fulfilling."
+  },
+  {
+    "speaker": "B",
+    "text": "So how do cognitive dissonance and self-perception theory relate to each other? Do they contradict each other?"
+  },
+  {
+    "speaker": "A",
+    "text": "Great question, and this is actually a common misconception. They don't contradict each other. They apply to different situations. Cognitive dissonance works when attitudes are strong and clear, that's when you feel that uncomfortable tension. Self-perception theory works when attitudes are weak or ambiguous, when you genuinely aren't sure what you think, so you look to your behavior for clues."
+  },
+  {
+    "speaker": "B",
+    "text": "That's such a clean distinction. So to wrap up, what are the key takeaways for someone preparing for the EPPP?"
+  },
+  {
+    "speaker": "A",
+    "text": "I'd highlight five things. First, attitudes predict behavior when they're strong, accessible, and matched in specificity. Remember SAS. Second, the Theory of Planned Behavior says intention predicts behavior, and intention comes from attitude, subjective norms, and perceived behavioral control. Remember ABC."
+  },
+  {
+    "speaker": "B",
+    "text": "And the attitude change theories?"
+  },
+  {
+    "speaker": "A",
+    "text": "Third, the Elaboration Likelihood Model. Central route equals lasting change through argument quality, peripheral route equals temporary change through surface cues. Fourth, cognitive dissonance creates attitude change through the discomfort of inconsistency, especially with insufficient justification. And fifth, self-perception theory explains attitude formation through behavioral observation, and gives us the overjustification effect."
+  },
+  {
+    "speaker": "B",
+    "text": "And remember, these aren't just abstract theories for the exam. They give you real frameworks for understanding client resistance, designing interventions, and recognizing your own patterns of change."
+  },
+  {
+    "speaker": "A",
+    "text": "Couldn't have said it better. Understanding attitudes isn't just about passing the EPPP. It's about understanding how humans actually think, feel, and behave in the real world. Thanks for tuning in, and we'll see you next time!"
+  }
+]

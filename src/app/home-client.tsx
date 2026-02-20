@@ -11,8 +11,47 @@ import { BentoSection } from "@/components/sections/bento-section"
 import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
+type HeroCopyOffsets = {
+  tickerX: number
+  tickerY: number
+  titleX: number
+  titleY: number
+  ctaX: number
+  ctaY: number
+}
+
+type HeroVideoLayout = {
+  scale: number
+  offsetX: number
+  offsetY: number
+  bottomCrop: number
+}
+
+const HERO_TUNER_STORAGE_KEY = "hero-video-tuner"
+const CONTENT_LIFT_STORAGE_KEY = "home-content-lift"
+
+const DEFAULT_HERO_COPY_OFFSETS: HeroCopyOffsets = {
+  tickerX: 0,
+  tickerY: 0,
+  titleX: 0,
+  titleY: 0,
+  ctaX: 0,
+  ctaY: 0,
+}
+
+const DEFAULT_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
+  scale: 100,
+  offsetX: 0,
+  offsetY: 0,
+  bottomCrop: 0,
+}
+
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
+  const [heroCopyOffsets, setHeroCopyOffsets] = useState<HeroCopyOffsets>(DEFAULT_HERO_COPY_OFFSETS)
+  const [heroVideoLayout, setHeroVideoLayout] = useState<HeroVideoLayout>(DEFAULT_HERO_VIDEO_LAYOUT)
+  const [contentLift, setContentLift] = useState(0)
+  const [showContentLiftControl, setShowContentLiftControl] = useState(false)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -51,6 +90,68 @@ export default function HomeClient() {
   useEffect(() => {
     setIsHeroVideoReady(true)
   }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const saved = window.localStorage.getItem(HERO_TUNER_STORAGE_KEY)
+    if (!saved) return
+
+    try {
+      const parsed = JSON.parse(saved) as {
+        scale?: number
+        offsetX?: number
+        offsetY?: number
+        bottomCrop?: number
+        tickerX?: number
+        tickerY?: number
+        titleX?: number
+        titleY?: number
+        ctaX?: number
+        ctaY?: number
+      }
+
+      setHeroVideoLayout({
+        scale: typeof parsed.scale === "number" ? parsed.scale : DEFAULT_HERO_VIDEO_LAYOUT.scale,
+        offsetX: typeof parsed.offsetX === "number" ? parsed.offsetX : DEFAULT_HERO_VIDEO_LAYOUT.offsetX,
+        offsetY: typeof parsed.offsetY === "number" ? parsed.offsetY : DEFAULT_HERO_VIDEO_LAYOUT.offsetY,
+        bottomCrop:
+          typeof parsed.bottomCrop === "number" ? parsed.bottomCrop : DEFAULT_HERO_VIDEO_LAYOUT.bottomCrop,
+      })
+
+      setHeroCopyOffsets({
+        tickerX: typeof parsed.tickerX === "number" ? parsed.tickerX : DEFAULT_HERO_COPY_OFFSETS.tickerX,
+        tickerY: typeof parsed.tickerY === "number" ? parsed.tickerY : DEFAULT_HERO_COPY_OFFSETS.tickerY,
+        titleX: typeof parsed.titleX === "number" ? parsed.titleX : DEFAULT_HERO_COPY_OFFSETS.titleX,
+        titleY: typeof parsed.titleY === "number" ? parsed.titleY : DEFAULT_HERO_COPY_OFFSETS.titleY,
+        ctaX: typeof parsed.ctaX === "number" ? parsed.ctaX : DEFAULT_HERO_COPY_OFFSETS.ctaX,
+        ctaY: typeof parsed.ctaY === "number" ? parsed.ctaY : DEFAULT_HERO_COPY_OFFSETS.ctaY,
+      })
+    } catch {
+      // Ignore malformed persisted layout.
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const params = new URLSearchParams(window.location.search)
+    const shouldShow = process.env.NODE_ENV !== "production" || params.get("layoutTuner") === "1"
+    setShowContentLiftControl(shouldShow)
+
+    const saved = window.sessionStorage.getItem(CONTENT_LIFT_STORAGE_KEY)
+    if (!saved) return
+
+    const parsed = Number(saved)
+    if (Number.isFinite(parsed)) {
+      setContentLift(Math.max(0, Math.min(900, parsed)))
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    window.sessionStorage.setItem(CONTENT_LIFT_STORAGE_KEY, String(contentLift))
+  }, [contentLift])
 
   useEffect(() => {
     if (!isHeroVideoReady) return
@@ -133,15 +234,21 @@ export default function HomeClient() {
   return (
     <>
       <main
-        className="flex flex-col items-center justify-center divide-y divide-border min-h-screen w-full"
+        className="flex flex-col items-center justify-center min-h-screen w-full"
       >
-        <section className="relative w-full overflow-hidden">
+        <section className="relative w-full min-h-screen overflow-hidden">
           <div className="absolute inset-0 -z-10 pointer-events-none bg-black flex items-start justify-center">
             {isHeroVideoReady ? (
               <video
                 id="hero-video"
                 ref={heroVideoRef}
                 className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
+                style={{
+                  transform: `translate(${heroVideoLayout.offsetX}px, ${heroVideoLayout.offsetY}px) scale(${heroVideoLayout.scale / 100})`,
+                  transformOrigin: "center center",
+                  clipPath: `inset(0 0 ${heroVideoLayout.bottomCrop}px 0)`,
+                  WebkitClipPath: `inset(0 0 ${heroVideoLayout.bottomCrop}px 0)`,
+                }}
                 src="/hero-background.mp4?v=refresh5"
                 autoPlay
                 muted
@@ -156,20 +263,49 @@ export default function HomeClient() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
           </div>
           <div className="relative z-10">
-            <HeroSection />
+            <HeroSection offsets={heroCopyOffsets} />
           </div>
         </section>
-        <OrbitingLoopSection />
-        <CompanyShowcase />
-        <BentoSection />
-        <TestimonialSection />
-        {/* <FeatureSection /> */}
-        {/* <GrowthSection /> */}
-        <PricingSection />
-        <FAQSection />
-        {/* <CTASection /> */}
-        <FooterSection />
+        <div
+          className="relative z-20 w-full bg-background border-t border-border divide-y divide-border"
+          style={contentLift > 0 ? { marginTop: -contentLift } : undefined}
+        >
+          <OrbitingLoopSection />
+          <BentoSection />
+          <TestimonialSection />
+          {/* <FeatureSection /> */}
+          {/* <GrowthSection /> */}
+          <PricingSection />
+          <FAQSection />
+          <CompanyShowcase />
+          {/* <CTASection /> */}
+          <FooterSection />
+        </div>
       </main>
+      {showContentLiftControl ? (
+        <div className="fixed bottom-4 right-4 z-50 w-64 rounded-md border border-white/25 bg-black/70 p-3 text-white backdrop-blur-sm">
+          <p className="text-xs font-semibold tracking-wide uppercase">Content Lift</p>
+          <p className="mt-1 text-[11px] text-white/75">Temporary layout control</p>
+          <label className="mt-3 block text-xs">
+            Move sections up: {contentLift}px
+            <input
+              type="range"
+              min={0}
+              max={900}
+              value={contentLift}
+              onChange={(event) => setContentLift(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <button
+            type="button"
+            onClick={() => setContentLift(0)}
+            className="mt-3 inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
+          >
+            Reset
+          </button>
+        </div>
+      ) : null}
     </>
   )
 }

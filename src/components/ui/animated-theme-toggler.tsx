@@ -5,6 +5,8 @@ import { Moon, Sun } from "lucide-react"
 import { flushSync } from "react-dom"
 
 import { cn } from "@/lib/utils"
+import { useAuth } from "@/context/auth-context"
+import { updateUserThemePreference } from "@/lib/theme-preference"
 
 interface AnimatedThemeTogglerProps
   extends React.ComponentPropsWithoutRef<"button"> {
@@ -16,6 +18,7 @@ export const AnimatedThemeToggler = ({
   duration = 400,
   ...props
 }: AnimatedThemeTogglerProps) => {
+  const { user } = useAuth()
   const [isDark, setIsDark] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
 
@@ -44,6 +47,9 @@ export const AnimatedThemeToggler = ({
         setIsDark(newTheme)
         document.documentElement.classList.toggle("dark")
         localStorage.setItem("theme", newTheme ? "dark" : "light")
+        if (user?.id) {
+          updateUserThemePreference(user.id, newTheme ? "dark" : "light")
+        }
       })
     }).ready
 
@@ -69,7 +75,7 @@ export const AnimatedThemeToggler = ({
         pseudoElement: "::view-transition-new(root)",
       }
     )
-  }, [isDark, duration])
+  }, [isDark, duration, user?.id])
 
   return (
     <button

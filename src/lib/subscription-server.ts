@@ -1,4 +1,5 @@
 import { getSupabaseClient } from '@/lib/supabase-server'
+import { getEntitledSubscriptionTier, hasProAccess, getPromoStatus } from '@/lib/subscription-utils'
 
 export interface ServerSubscriptionStatus {
   userId: string
@@ -8,6 +9,8 @@ export interface ServerSubscriptionStatus {
   daysRemaining: number
   hasAccess: boolean
   stripe_customer_id?: string
+  isPromo: boolean
+  isStripeSubscriber: boolean
 }
 
 /**
@@ -34,16 +37,20 @@ export async function getServerSubscriptionStatus(
     return null
   }
 
-  const resolvedTier = user.subscription_tier === 'pro_coaching' ? 'pro_coaching' : 'pro'
+  const promoStatus = getPromoStatus(user)
+  const entitledTier = getEntitledSubscriptionTier(user) || 'free'
+  const hasAccess = hasProAccess(user)
 
   return {
     userId: user.id,
     email: user.email,
-    subscription_tier: resolvedTier,
-    isTrialExpired: false,
-    daysRemaining: Infinity,
-    hasAccess: true,
+    subscription_tier: entitledTier,
+    isTrialExpired: promoStatus.expired,
+    daysRemaining: promoStatus.daysRemaining,
+    hasAccess,
     stripe_customer_id: user.stripe_customer_id,
+    isPromo: promoStatus.isPromo,
+    isStripeSubscriber: promoStatus.isStripeSubscriber,
   }
 }
 
@@ -56,17 +63,30 @@ export interface AccessCheckResult {
 /**
  * Check if a user has access to paid features.
  * @param userId - The user ID to check
- * @param allowTrial - Whether to allow access during free trial (default: true)
+ * @param allowPromo - Whether to allow access during promo period (default: true)
  * @returns Object with allowed boolean, optional reason, and status details
  */
 export async function requireActiveSubscription(
   userId: string,
-  _allowTrial: boolean = true
+  allowPromo: boolean = true
 ): Promise<AccessCheckResult> {
   const status = await getServerSubscriptionStatus(userId)
 
   if (!status) {
     return { allowed: false, reason: 'User not found' }
+  }
+
+  // Check if user has pro access
+  if (!status.hasAccess) {
+    if (status.isTrialExpired) {
+      return { allowed: false, reason: 'Promo period expired', status }
+    }
+    return { allowed: false, reason: 'Subscription required', status }
+  }
+
+  // If promo access is not allowed and user is on promo (not Stripe), deny
+  if (!allowPromo && status.isPromo && !status.isStripeSubscriber) {
+    return { allowed: false, reason: 'Paid subscription required', status }
   }
 
   return { allowed: true, status }

@@ -402,12 +402,21 @@ export async function POST(request: NextRequest) {
 
   const whisperWordsRaw = await transcribeAudioWithWordTimes(audioBuffer, text, apiKey)
 
+  // Estimate audio duration from buffer size (MP3 ~128kbps = ~16KB/sec)
+  const estimatedAudioSeconds = Math.ceil(audioBuffer.byteLength / 16000)
+
   // Log Whisper transcription usage
   void logUsageEvent({
     eventName: 'topic-teacher.word-timings',
     endpoint: '/api/topic-teacher/word-timings',
     model: 'whisper-1',
-    metadata: { audioKey, textLength: text.length, wordCount: expectedWords.length }
+    metadata: {
+      audioKey,
+      textLength: text.length,
+      wordCount: expectedWords.length,
+      audioBytes: audioBuffer.byteLength,
+      audioSeconds: estimatedAudioSeconds,  // Track duration for Whisper billing
+    },
   })
 
   const expandedWhisperWords: WhisperWord[] = []

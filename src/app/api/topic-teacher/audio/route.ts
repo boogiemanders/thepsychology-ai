@@ -282,7 +282,7 @@ export async function POST(request: NextRequest) {
       voice,
       format,
       speed,
-      chars: text.length,
+      characters: text.length,  // Track character count for TTS billing
       topic,
       domain,
       mode,

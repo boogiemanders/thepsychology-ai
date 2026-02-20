@@ -83,7 +83,7 @@ export const siteConfig = {
     badge: "",
     title: "Study Less. Score Higher.",
     description:
-      "with",
+      "",
     cta: {
       primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },

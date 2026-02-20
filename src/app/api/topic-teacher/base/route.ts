@@ -19,6 +19,7 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json(
     {
+      topicName: content.metadata?.topic_name || topic,
       baseContent,
       metaphorRanges: ranges,
       baseContentLength: baseContent.length,

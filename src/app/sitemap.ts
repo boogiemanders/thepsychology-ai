@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { siteConfig } from "@/lib/config"
+import { getAllBlogPosts } from "@/lib/seo/blog-content.server"
 import { getAllTopicContentEntries } from "@/lib/seo/topic-content.server"
 
 export const runtime = "nodejs"
@@ -40,6 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }))
 
+  const blogPosts = getAllBlogPosts()
+  const blogPaths = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }))
+
   return [
     ...staticPaths.map(({ path, changeFrequency, priority }) => ({
       url: `${baseUrl}${path}`,
@@ -47,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency,
       priority,
     })),
+    ...blogPaths,
     ...domainPaths,
     ...topicPaths,
   ]

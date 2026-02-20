@@ -4,7 +4,9 @@ import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRe
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { chunkTextForTts, markdownToSpeakableText, normalizeTextForReadAlong, prepareTextForTts } from '@/lib/speech-text'
-import { Highlighter, Pause, Play, ScrollText, SkipBack, SkipForward } from 'lucide-react'
+import { computeWordProgressMap, findWordIndexForRatio, findWordIndexForEndTimes, countWords, getEffectiveDurationSeconds, estimateSyllables, WORD_REGEX, PLAYBACK_RATE_OPTIONS } from '@/lib/audio-playback-utils'
+import { Highlighter, Pause, Play, Podcast, ScrollText, SkipBack, SkipForward } from 'lucide-react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 
 type MetaphorRange = { start: number; end: number }
 type WordTiming = { word: string; start: number; end: number }
@@ -37,6 +39,7 @@ type ManifestResponse = {
   totalDuration: number
   version: number
   schemaVersion: number
+  podcast?: { audio: string | null; video: string | null }
 }
 
 type MarkdownSection = {
@@ -51,7 +54,6 @@ const DEFAULT_VOICE = 'alloy'
 
 const MAX_CHARS_PER_TTS_REQUEST = 3200
 
-const PLAYBACK_RATE_OPTIONS = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3] as const
 const RECOMMENDED_PLAYBACK_RATE = 1.75
 const DEFAULT_TTS_MODEL = 'gpt-4o-mini-tts'
 const FALLBACK_TTS_MODEL = 'tts-1'
@@ -61,142 +63,12 @@ const PREGENERATED_AUDIO_BASE_PATH = (process.env.NEXT_PUBLIC_TOPIC_TEACHER_AUDI
   ''
 )
 
-const WORD_REGEX = /[A-Za-z0-9]+(?:'[A-Za-z0-9]+)*/g
-const VOWEL_GROUP_REGEX = /[aeiouy]+/gi
-
-function estimateSyllables(word: string): number {
-  const matches = word.toLowerCase().match(VOWEL_GROUP_REGEX)
-  return matches ? Math.max(1, matches.length) : 1
-}
-
 function extractAudioKeyFromPublicUrl(url: string): string | null {
   if (!url) return null
   const base = url.split('#')[0]?.split('?')[0] ?? ''
   const file = base.split('/').pop() ?? ''
   const match = file.match(/^([a-f0-9]{64})\.mp3$/i)
   return match?.[1] ?? null
-}
-
-function computeWordProgressMap(text: string): number[] {
-  const matches = Array.from(text.matchAll(WORD_REGEX))
-  if (matches.length === 0) return []
-
-  const lines = text
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean)
-  const tableLike =
-    lines.length >= 2 &&
-    lines.filter((line) => line.includes(',')).length / lines.length >= 0.6 &&
-    lines.some((line) => /\d/.test(line))
-  const tableLineWordCounts = tableLike
-    ? lines
-        .map((line) => (line.match(WORD_REGEX) || []).length)
-        .filter((count) => count > 0)
-    : []
-  const avgWordsPerTableLine =
-    tableLineWordCounts.length > 0
-      ? tableLineWordCounts.reduce((sum, count) => sum + count, 0) / tableLineWordCounts.length
-      : 0
-  const tableRowPauseBoost = tableLike
-    ? Math.min(3.5, Math.max(1.4, avgWordsPerTableLine * 0.5))
-    : 0
-  const tableCommaBoost = tableLike ? 0.9 : 0
-  const tableWordMultiplier = tableLike ? 1.35 : 1
-
-  const weights: number[] = []
-  for (let i = 0; i < matches.length; i += 1) {
-    const match = matches[i]
-    const word = match[0] ?? ''
-    const start = (match.index ?? 0) + word.length
-    const nextIndex = matches[i + 1]?.index ?? text.length
-    const gap = text.slice(start, nextIndex)
-
-    const syllables = estimateSyllables(word) * tableWordMultiplier
-    let pauseWeight = 0
-
-    if (gap.includes('\n\n')) {
-      pauseWeight += 1.2 + tableRowPauseBoost
-    } else if (gap.includes('\n')) {
-      pauseWeight += 0.8 + tableRowPauseBoost
-    }
-    if (/[.!?]/.test(gap)) pauseWeight += 0.9
-    if (/[,:;]/.test(gap)) pauseWeight += 0.5 + (tableLike && /,/.test(gap) ? tableCommaBoost : 0)
-    if (/(?:--|\u2014|\u2013)/.test(gap)) pauseWeight += 0.3
-
-    weights.push(Math.max(0.9, syllables) + pauseWeight)
-  }
-
-  const total = weights.reduce((acc, w) => acc + w, 0)
-  if (!Number.isFinite(total) || total <= 0) return []
-
-  let cumulative = 0
-  return weights.map((w) => {
-    cumulative += w
-    return Math.min(1, cumulative / total)
-  })
-}
-
-function findWordIndexForRatio(progressMap: number[], ratio: number): number {
-  if (progressMap.length === 0) return 0
-  if (ratio <= progressMap[0]) return 0
-  const lastIndex = progressMap.length - 1
-  if (ratio >= progressMap[lastIndex]) return lastIndex
-
-  let lo = 0
-  let hi = lastIndex
-  while (lo <= hi) {
-    const mid = Math.floor((lo + hi) / 2)
-    if (progressMap[mid] < ratio) {
-      lo = mid + 1
-    } else {
-      hi = mid - 1
-    }
-  }
-  return Math.min(Math.max(lo, 0), lastIndex)
-}
-
-function findWordIndexForEndTimes(endTimes: number[], seconds: number): number {
-  if (endTimes.length === 0) return 0
-  if (!Number.isFinite(seconds) || seconds <= 0) return 0
-
-  const lastIndex = endTimes.length - 1
-  if (seconds >= (endTimes[lastIndex] ?? 0)) return lastIndex
-
-  let lo = 0
-  let hi = lastIndex
-  while (lo <= hi) {
-    const mid = Math.floor((lo + hi) / 2)
-    const end = endTimes[mid] ?? 0
-    if (end < seconds) {
-      lo = mid + 1
-    } else {
-      hi = mid - 1
-    }
-  }
-  return Math.min(Math.max(lo, 0), lastIndex)
-}
-
-function countWords(text: string): number {
-  const matches = text.match(WORD_REGEX)
-  return matches ? matches.length : 0
-}
-
-function getEffectiveDurationSeconds(audio: HTMLAudioElement): number {
-  const direct = audio.duration
-  if (Number.isFinite(direct) && direct > 0) return direct
-
-  const seekable = audio.seekable
-  if (seekable && seekable.length > 0) {
-    try {
-      const end = seekable.end(seekable.length - 1)
-      if (Number.isFinite(end) && end > 0) return end
-    } catch {
-      // ignore
-    }
-  }
-
-  return NaN
 }
 
 async function loadAudioDurationSeconds(url: string, signal?: AbortSignal): Promise<number> {
@@ -527,6 +399,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const [sectionTitles, setSectionTitles] = useState<string[]>([])
   const [usedManifest, setUsedManifest] = useState(false)
   const manifestDataRef = useRef<ManifestResponse | null>(null)
+  const [podcastUrls, setPodcastUrls] = useState<{ audio: string | null; video: string | null } | null>(null)
+  const [showPodcastModal, setShowPodcastModal] = useState(false)
 
   const lessonReady = Boolean(lessonMarkdown && lessonMarkdown.trim())
   const interestsActive = Boolean(userInterests && userInterests.trim())
@@ -617,6 +491,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     onWordProgress?.({ wordIndex: null, totalWords: 0 })
     setUsedManifest(false)
     manifestDataRef.current = null
+    setPodcastUrls(null)
     if (audioRef.current) {
       audioRef.current.pause()
       audioRef.current.removeAttribute('src')
@@ -664,6 +539,12 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       }
 
       const manifest: ManifestResponse = await response.json()
+
+      // Store podcast data regardless of chunks
+      if (manifest.podcast) {
+        setPodcastUrls(manifest.podcast)
+      }
+
       if (!manifest.chunks || manifest.chunks.length === 0) {
         return false
       }
@@ -1551,6 +1432,11 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 	    if (isDisabled || isGenerating) return
 	    if (canUsePregen && !baseContentReady) return
 
+    // Mark that the user has used the audio bar (for one-time notices)
+    if (userId) {
+      try { localStorage.setItem(`audio_bar_used_${userId}`, '1') } catch {}
+    }
+
     const maxCharsPerTtsRequest = readAlongEnabled ? 1400 : MAX_CHARS_PER_TTS_REQUEST
     const sectionSplitLevel = 2
 
@@ -2093,16 +1979,15 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   disabled={!hasAudio}
                   className="flex-1 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
                 />
-                <span className="text-xs text-muted-foreground tabular-nums w-10 shrink-0">
+                <span className="text-xs text-muted-foreground tabular-nums w-12 shrink-0">
                   {formatTime(duration)}
                 </span>
               </div>
 
               {/* Right section: Speed, segment, auto-scroll, actions */}
-              <div className="flex items-center gap-2 shrink-0 ml-3 pl-3 border-l border-border/40">
+              <div className="flex items-center gap-2 shrink min-w-0 ml-3 pl-3 border-l border-border/40 overflow-hidden">
                 {/* Speed slider */}
-                <div className="flex items-center gap-1.5" data-tour="playback-speed">
-                  <span className="text-xs text-muted-foreground">Speed</span>
+                <div className="hidden sm:flex items-center gap-1.5" data-tour="playback-speed">
                   <input
                     type="range"
                     min={0}
@@ -2206,6 +2091,18 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   </button>
                 )}
 
+                {podcastUrls && (
+                  <button
+                    type="button"
+                    onClick={() => setShowPodcastModal(true)}
+                    className="p-1 rounded-full transition-colors hover:bg-muted text-muted-foreground"
+                    aria-label="Listen to podcast discussion"
+                    title="Listen to podcast discussion"
+                  >
+                    <Podcast className="h-3.5 w-3.5" />
+                  </button>
+                )}
+
                 <div className="w-px h-4 bg-border mx-0.5 hidden sm:block" />
 
                 {showRegenerateButton && (
@@ -2246,13 +2143,46 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
               </div>
             )}
 
-            {/* Testing banner */}
-            <div className="mt-2 px-2 py-1 text-xs text-center brand-olive-pill rounded">
-              Audio sync finally updated! Please report any issues
-            </div>
           </div>
         </div>
       )}
+
+      {/* Podcast modal */}
+      <Dialog open={showPodcastModal} onOpenChange={setShowPodcastModal}>
+        <DialogContent className="sm:max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>Podcast Discussion</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            {podcastUrls?.video && (
+              <video
+                controls
+                className="w-full rounded-lg"
+                src={podcastUrls.video}
+                preload="metadata"
+              >
+                Your browser does not support the video element.
+              </video>
+            )}
+            {podcastUrls?.audio && (
+              podcastUrls.video ? (
+                <details className="text-sm">
+                  <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
+                    Audio only
+                  </summary>
+                  <audio controls className="w-full mt-2" src={podcastUrls.audio} preload="metadata">
+                    Your browser does not support the audio element.
+                  </audio>
+                </details>
+              ) : (
+                <audio controls className="w-full" src={podcastUrls.audio} preload="metadata">
+                  Your browser does not support the audio element.
+                </audio>
+              )
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   )
 })

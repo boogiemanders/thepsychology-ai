@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
-
+@plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
 #hero-video::-webkit-media-controls-start-playback-button,
@@ -358,6 +358,30 @@ strong, b {
   }
 }
 
+.marquee-edge-fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-edge-fade {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
 :root {
   --background: oklch(98.46% 0.002 247.84);
   --foreground: oklch(0.145 0 0);
@@ -647,4 +671,56 @@ strong, b {
     animation: none;
     mix-blend-mode: normal;
   }
+}
+
+/* Blog article prose overrides — applied on top of @tailwindcss/typography */
+.prose {
+  color: var(--foreground);
+}
+.prose hr {
+  border-top: 1px solid var(--muted-foreground);
+  opacity: 0.25;
+}
+.prose h2 {
+  margin-top: 1.75rem;
+}
+.prose {
+  color: var(--foreground);
+}
+.prose a {
+  color: var(--secondary);
+  text-underline-offset: 3px;
+}
+/* Responsive table: scroll horizontally on small screens */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+.prose th,
+.prose td {
+  min-width: 7rem;
+}
+/* Freeze first column on horizontal scroll */
+.prose th:first-child,
+.prose td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--background);
+}
+.prose th {
+  border-bottom: 2px solid var(--border);
+}
+.prose td {
+  border-bottom: 1px solid var(--border);
+}
+.prose img {
+  border-radius: 0.5rem;
+}
+
+/* Blog audio player - bottom padding so content isn't hidden behind sticky bar */
+.blog-article-with-audio {
+  padding-bottom: 5rem;
 }

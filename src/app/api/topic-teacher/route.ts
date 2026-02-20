@@ -163,6 +163,7 @@ export async function POST(request: NextRequest) {
     let lessonContent = ''
     let baseContentOnly = ''
     let metaphorRangesHeader = ''
+    let resolvedTopicName = ''
 
     if (isInitial) {
       // Initial lesson request - use pre-generated content
@@ -173,6 +174,7 @@ export async function POST(request: NextRequest) {
         if (preGeneratedContent) {
           console.log(`[Topic Teacher] ✅ Found pre-generated content for ${topic}`)
           console.log(`[Topic Teacher] Content length: ${preGeneratedContent.baseContent.length} chars`)
+          resolvedTopicName = preGeneratedContent.metadata?.topic_name?.trim() || topic
 
           // Store the base content
           const { content: strippedBase, ranges } = stripMetaphorMarkersWithRanges(preGeneratedContent.baseContent)
@@ -253,6 +255,10 @@ export async function POST(request: NextRequest) {
           'X-Base-Content': baseContentOnly ? Buffer.from(baseContentOnly).toString('base64') : '',
           // Ranges (in X-Base-Content) corresponding to {{M}}...{{/M}} spans in the source.
           'X-Metaphor-Ranges': metaphorRangesHeader,
+          // Resolved canonical topic name from markdown metadata (base64-encoded for header safety).
+          'X-Resolved-Topic-Name': resolvedTopicName
+            ? Buffer.from(resolvedTopicName).toString('base64')
+            : '',
         },
       })
     }
