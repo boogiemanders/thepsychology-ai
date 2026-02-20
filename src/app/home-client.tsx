@@ -40,11 +40,11 @@ const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
 
 const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 150,
+  tickerY: 120,
   titleX: 0,
-  titleY: 0,
+  titleY: -20,
   ctaX: 0,
-  ctaY: 82,
+  ctaY: 52,
 }
 
 const FINAL_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
@@ -81,7 +81,7 @@ const MOBILE_HERO_LAYOUT = {
   bannerTextY: 0,
   buttonsY: 0,
   videoY: -228,
-  videoBottomCrop: 231,
+  videoBottomCrop: 80,
   contentGroupY: -430,
   videoOffsetX: 0,
   videoOffsetY: 0,
