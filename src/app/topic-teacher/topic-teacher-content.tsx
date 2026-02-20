@@ -3504,7 +3504,7 @@ export function TopicTeacherContent() {
                     <div
                       ref={message.role === 'assistant' && idx === 0 ? lessonContentRef : undefined}
                       onClick={shouldWrapReadAlong ? handleReadAlongClick : undefined}
-                      className="text-base leading-relaxed max-w-none prose prose-invert
+                      className="text-base leading-relaxed max-w-none prose dark:prose-invert
                       [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:leading-tight [&_h1:not(:first-child)]:mt-12 [&_h1:not(:first-child)]:mb-6
                       [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:leading-snug [&_h2:not(:first-child)]:mb-4 [&_h2:not(:first-child)]:border-t [&_h2:not(:first-child)]:border-border/20 [&_h2:not(:first-child)]:pt-8 [&_h2:not(:first-child)]:mt-0
                       [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:leading-snug [&_h3:not(:first-child)]:mt-7 [&_h3:not(:first-child)]:mb-3
