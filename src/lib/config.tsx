@@ -107,7 +107,7 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "What You Get",
-    description: "80+ lessons. Adaptive quizzes. Exam simulation. And Replenish — evidence-based mental resets no other EPPP program offers.",
+    description: "80+ lessons. Adaptive quizzes. Exam simulation. And Recover. Evidence-based mental resets no other EPPP program offers.",
     items: [
       {
         id: 1,
@@ -125,9 +125,9 @@ export const siteConfig = {
       {
         id: 3,
         content: <FourthBentoAnimation />,
-        title: "Replenish",
+        title: "Recover",
         description:
-          "Evidence-based resets for focus and burnout. Built on ACT, MI, and CBT-I — techniques you'll use in practice.",
+          "Evidence-based resets for focus and burnout. Built on ACT, MI, and CBT-I techniques you'll use in practice.",
       },
       {
         id: 4,
