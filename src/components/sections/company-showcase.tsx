@@ -14,6 +14,7 @@ type CompanyLogo = {
   src: string | null
   member?: string
   invert?: boolean
+  invertLight?: boolean
   width?: number
 }
 
@@ -27,7 +28,7 @@ function LogoItem({ logo }: { logo: CompanyLogo }) {
             alt={logo.name}
             width={logo.width || 120}
             height={logo.width ? Math.round(logo.width / 3) : 40}
-            className={`object-contain opacity-70 hover:opacity-100 transition-opacity ${logo.invert ? "dark:brightness-0 dark:invert" : ""}`}
+            className={`object-contain opacity-70 hover:opacity-100 transition-opacity ${logo.invert ? "dark:brightness-0 dark:invert" : ""} ${logo.invertLight ? "invert dark:invert-0" : ""}`}
           />
         ) : (
           <span className="text-xs font-medium tracking-wide text-primary/70 whitespace-nowrap">
