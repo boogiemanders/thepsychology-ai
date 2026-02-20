@@ -28,47 +28,31 @@ type HeroVideoLayout = {
 }
 
 const HERO_TUNER_STORAGE_KEY = "hero-video-tuner"
-const CONTENT_LIFT_STORAGE_KEY = "home-content-lift"
-const LEGACY_HERO_COPY_LIFT_STORAGE_KEY = "home-hero-copy-lift"
-const HERO_COPY_TICKER_LIFT_STORAGE_KEY = "home-hero-copy-ticker-lift-y"
-const HERO_COPY_TITLE_LIFT_STORAGE_KEY = "home-hero-copy-title-lift-y"
-const HERO_COPY_CTA_LIFT_STORAGE_KEY = "home-hero-copy-cta-lift-y"
-const HERO_VIDEO_LIFT_STORAGE_KEY = "home-hero-video-lift-y"
 
-const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
-const sanitizeCopyOffset = (value: unknown, min: number, max: number) => {
-  if (typeof value !== "number" || !Number.isFinite(value)) return 0
-  // Legacy tuner values can hide hero elements completely; reset outliers to baseline.
-  if (value < min || value > max) return 0
-  return value
-}
-
-const DEFAULT_HERO_COPY_OFFSETS: HeroCopyOffsets = {
+const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 0,
+  tickerY: 337,
   titleX: 0,
-  titleY: 0,
+  titleY: 47,
   ctaX: 0,
-  ctaY: 0,
+  ctaY: 253,
 }
 
-const DEFAULT_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
+const FINAL_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
   scale: 100,
   offsetX: 0,
-  offsetY: 0,
+  offsetY: -56,
   bottomCrop: 0,
 }
 
+const FINAL_CONTENT_LIFT = 659
+
+const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
+
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
-  const [heroCopyOffsets, setHeroCopyOffsets] = useState<HeroCopyOffsets>(DEFAULT_HERO_COPY_OFFSETS)
-  const [heroVideoLayout, setHeroVideoLayout] = useState<HeroVideoLayout>(DEFAULT_HERO_VIDEO_LAYOUT)
-  const [contentLift, setContentLift] = useState(0)
-  const [heroTickerLiftY, setHeroTickerLiftY] = useState(0)
-  const [heroTitleLiftY, setHeroTitleLiftY] = useState(0)
-  const [heroCtaLiftY, setHeroCtaLiftY] = useState(0)
-  const [heroVideoLiftY, setHeroVideoLiftY] = useState(0)
-  const [showContentLiftControl, setShowContentLiftControl] = useState(false)
+  const [legacyVideoOffsetX, setLegacyVideoOffsetX] = useState(0)
+  const [legacyVideoOffsetY, setLegacyVideoOffsetY] = useState(0)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -103,7 +87,6 @@ export default function HomeClient() {
     }
   }, [])
 
-
   useEffect(() => {
     setIsHeroVideoReady(true)
   }, [])
@@ -115,137 +98,17 @@ export default function HomeClient() {
     if (!saved) return
 
     try {
-      const parsed = JSON.parse(saved) as {
-        scale?: number
-        offsetX?: number
-        offsetY?: number
-        bottomCrop?: number
-        tickerX?: number
-        tickerY?: number
-        titleX?: number
-        titleY?: number
-        ctaX?: number
-        ctaY?: number
+      const parsed = JSON.parse(saved) as { offsetX?: number; offsetY?: number }
+      if (typeof parsed.offsetX === "number" && Number.isFinite(parsed.offsetX)) {
+        setLegacyVideoOffsetX(clamp(parsed.offsetX, -1200, 1200))
       }
-
-      setHeroVideoLayout({
-        scale:
-          typeof parsed.scale === "number"
-            ? clamp(parsed.scale, 40, 250)
-            : DEFAULT_HERO_VIDEO_LAYOUT.scale,
-        offsetX:
-          typeof parsed.offsetX === "number"
-            ? clamp(parsed.offsetX, -1200, 1200)
-            : DEFAULT_HERO_VIDEO_LAYOUT.offsetX,
-        offsetY:
-          typeof parsed.offsetY === "number"
-            ? clamp(parsed.offsetY, -1200, 1200)
-            : DEFAULT_HERO_VIDEO_LAYOUT.offsetY,
-        bottomCrop:
-          typeof parsed.bottomCrop === "number"
-            ? clamp(parsed.bottomCrop, 0, 1200)
-            : DEFAULT_HERO_VIDEO_LAYOUT.bottomCrop,
-      })
-
-      setHeroCopyOffsets({
-        tickerX: sanitizeCopyOffset(parsed.tickerX, -180, 180),
-        tickerY: sanitizeCopyOffset(parsed.tickerY, -220, 220),
-        titleX: sanitizeCopyOffset(parsed.titleX, -180, 180),
-        titleY: sanitizeCopyOffset(parsed.titleY, -220, 220),
-        ctaX: sanitizeCopyOffset(parsed.ctaX, -180, 180),
-        ctaY: sanitizeCopyOffset(parsed.ctaY, -220, 220),
-      })
+      if (typeof parsed.offsetY === "number" && Number.isFinite(parsed.offsetY)) {
+        setLegacyVideoOffsetY(clamp(parsed.offsetY, -1200, 1200))
+      }
     } catch {
       // Ignore malformed persisted layout.
     }
   }, [])
-
-  useEffect(() => {
-    if (typeof window === "undefined") return
-
-    const params = new URLSearchParams(window.location.search)
-    const shouldShow = process.env.NODE_ENV !== "production" || params.get("layoutTuner") === "1"
-    setShowContentLiftControl(shouldShow)
-
-    const saved = window.sessionStorage.getItem(CONTENT_LIFT_STORAGE_KEY)
-    if (saved) {
-      const parsed = Number(saved)
-      if (Number.isFinite(parsed)) {
-        setContentLift(Math.max(0, Math.min(900, parsed)))
-      }
-    }
-
-    const savedTickerLift = window.sessionStorage.getItem(HERO_COPY_TICKER_LIFT_STORAGE_KEY)
-    if (savedTickerLift) {
-      const parsedTickerLift = Number(savedTickerLift)
-      if (Number.isFinite(parsedTickerLift)) {
-        setHeroTickerLiftY(clamp(parsedTickerLift, -240, 600))
-      }
-    }
-
-    const savedTitleLift = window.sessionStorage.getItem(HERO_COPY_TITLE_LIFT_STORAGE_KEY)
-    if (savedTitleLift) {
-      const parsedTitleLift = Number(savedTitleLift)
-      if (Number.isFinite(parsedTitleLift)) {
-        setHeroTitleLiftY(clamp(parsedTitleLift, -240, 240))
-      }
-    }
-
-    const savedCtaLift = window.sessionStorage.getItem(HERO_COPY_CTA_LIFT_STORAGE_KEY)
-    if (savedCtaLift) {
-      const parsedCtaLift = Number(savedCtaLift)
-      if (Number.isFinite(parsedCtaLift)) {
-        setHeroCtaLiftY(clamp(parsedCtaLift, -240, 600))
-      }
-    }
-
-    // Backward-compatible fallback from the old single hero-copy slider.
-    if (!savedTickerLift && !savedTitleLift && !savedCtaLift) {
-      const legacyLift = window.sessionStorage.getItem(LEGACY_HERO_COPY_LIFT_STORAGE_KEY)
-      if (legacyLift) {
-        const parsedLegacyLift = Number(legacyLift)
-        if (Number.isFinite(parsedLegacyLift)) {
-          const clampedLegacyLift = clamp(parsedLegacyLift, -240, 240)
-          setHeroTickerLiftY(clampedLegacyLift)
-          setHeroTitleLiftY(clampedLegacyLift)
-          setHeroCtaLiftY(clampedLegacyLift)
-        }
-      }
-    }
-
-    const savedHeroVideoLift = window.sessionStorage.getItem(HERO_VIDEO_LIFT_STORAGE_KEY)
-    if (savedHeroVideoLift) {
-      const parsedHeroVideoLift = Number(savedHeroVideoLift)
-      if (Number.isFinite(parsedHeroVideoLift)) {
-        setHeroVideoLiftY(clamp(parsedHeroVideoLift, -320, 320))
-      }
-    }
-  }, [])
-
-  useEffect(() => {
-    if (typeof window === "undefined") return
-    window.sessionStorage.setItem(CONTENT_LIFT_STORAGE_KEY, String(contentLift))
-  }, [contentLift])
-
-  useEffect(() => {
-    if (typeof window === "undefined") return
-    window.sessionStorage.setItem(HERO_COPY_TICKER_LIFT_STORAGE_KEY, String(heroTickerLiftY))
-  }, [heroTickerLiftY])
-
-  useEffect(() => {
-    if (typeof window === "undefined") return
-    window.sessionStorage.setItem(HERO_COPY_TITLE_LIFT_STORAGE_KEY, String(heroTitleLiftY))
-  }, [heroTitleLiftY])
-
-  useEffect(() => {
-    if (typeof window === "undefined") return
-    window.sessionStorage.setItem(HERO_COPY_CTA_LIFT_STORAGE_KEY, String(heroCtaLiftY))
-  }, [heroCtaLiftY])
-
-  useEffect(() => {
-    if (typeof window === "undefined") return
-    window.sessionStorage.setItem(HERO_VIDEO_LIFT_STORAGE_KEY, String(heroVideoLiftY))
-  }, [heroVideoLiftY])
 
   useEffect(() => {
     if (!isHeroVideoReady) return
@@ -324,7 +187,6 @@ export default function HomeClient() {
     }
   }, [isHeroVideoReady])
 
-
   return (
     <>
       <main
@@ -338,10 +200,10 @@ export default function HomeClient() {
                 ref={heroVideoRef}
                 className="w-full h-auto object-contain object-top lg:h-full lg:min-h-[750px] lg:w-full lg:min-w-full lg:object-cover lg:object-center"
                 style={{
-                  transform: `translate(${heroVideoLayout.offsetX}px, ${heroVideoLayout.offsetY + heroVideoLiftY}px) scale(${heroVideoLayout.scale / 100})`,
+                  transform: `translate(${FINAL_HERO_VIDEO_LAYOUT.offsetX + legacyVideoOffsetX}px, ${FINAL_HERO_VIDEO_LAYOUT.offsetY + legacyVideoOffsetY}px) scale(${FINAL_HERO_VIDEO_LAYOUT.scale / 100})`,
                   transformOrigin: "center center",
-                  clipPath: `inset(0 0 ${heroVideoLayout.bottomCrop}px 0)`,
-                  WebkitClipPath: `inset(0 0 ${heroVideoLayout.bottomCrop}px 0)`,
+                  clipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
+                  WebkitClipPath: `inset(0 0 ${FINAL_HERO_VIDEO_LAYOUT.bottomCrop}px 0)`,
                 }}
                 src="/hero-background.mp4?v=refresh5"
                 autoPlay
@@ -357,19 +219,12 @@ export default function HomeClient() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
           </div>
           <div className="relative z-10">
-            <HeroSection
-              offsets={{
-                ...heroCopyOffsets,
-                tickerY: heroCopyOffsets.tickerY + heroTickerLiftY,
-                titleY: heroCopyOffsets.titleY + heroTitleLiftY,
-                ctaY: heroCopyOffsets.ctaY + heroCtaLiftY,
-              }}
-            />
+            <HeroSection offsets={FINAL_HERO_COPY_OFFSETS} />
           </div>
         </section>
         <div
           className="relative z-20 w-full bg-background border-t border-border divide-y divide-border"
-          style={contentLift > 0 ? { marginTop: -contentLift } : undefined}
+          style={FINAL_CONTENT_LIFT > 0 ? { marginTop: -FINAL_CONTENT_LIFT } : undefined}
         >
           <OrbitingLoopSection />
           <BentoSection />
@@ -383,121 +238,6 @@ export default function HomeClient() {
           <FooterSection />
         </div>
       </main>
-      {showContentLiftControl ? (
-        <div className="fixed bottom-4 right-4 z-50 w-72 rounded-md border border-white/25 bg-black/70 p-3 text-white backdrop-blur-sm">
-          <p className="text-xs font-semibold tracking-wide uppercase">Layout Tuner</p>
-          <p className="mt-1 text-[11px] text-white/75">Temporary layout control</p>
-          <label className="mt-3 block text-xs">
-            Move sections up: {contentLift}px
-            <input
-              type="range"
-              min={0}
-              max={900}
-              value={contentLift}
-              onChange={(event) => setContentLift(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <label className="mt-3 block text-xs">
-            Ticker row Y (negative = up): {heroTickerLiftY}px
-            <input
-              type="range"
-              min={-240}
-              max={600}
-              value={heroTickerLiftY}
-              onChange={(event) => setHeroTickerLiftY(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <label className="mt-3 block text-xs">
-            Title row Y (negative = up): {heroTitleLiftY}px
-            <input
-              type="range"
-              min={-240}
-              max={240}
-              value={heroTitleLiftY}
-              onChange={(event) => setHeroTitleLiftY(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <label className="mt-3 block text-xs">
-            Buttons row Y (negative = up): {heroCtaLiftY}px
-            <input
-              type="range"
-              min={-240}
-              max={600}
-              value={heroCtaLiftY}
-              onChange={(event) => setHeroCtaLiftY(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <label className="mt-3 block text-xs">
-            Video Y (negative = up): {heroVideoLiftY}px
-            <input
-              type="range"
-              min={-320}
-              max={320}
-              value={heroVideoLiftY}
-              onChange={(event) => setHeroVideoLiftY(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <div className="mt-3 flex gap-2">
-            <button
-              type="button"
-              onClick={() => {
-                setHeroTickerLiftY(0)
-                setHeroTitleLiftY(0)
-                setHeroCtaLiftY(0)
-              }}
-              className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
-            >
-              Reset Rows
-            </button>
-            <button
-              type="button"
-              onClick={() => setContentLift(0)}
-              className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
-            >
-              Reset Sections
-            </button>
-            <button
-              type="button"
-              onClick={() => setHeroVideoLiftY(0)}
-              className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
-            >
-              Reset Video
-            </button>
-          </div>
-          <button
-            type="button"
-            onClick={() => {
-              setHeroCopyOffsets(DEFAULT_HERO_COPY_OFFSETS)
-              if (typeof window !== "undefined") {
-                const saved = window.localStorage.getItem(HERO_TUNER_STORAGE_KEY)
-                if (saved) {
-                  try {
-                    const parsed = JSON.parse(saved) as Record<string, unknown>
-                    delete parsed.tickerX
-                    delete parsed.tickerY
-                    delete parsed.titleX
-                    delete parsed.titleY
-                    delete parsed.ctaX
-                    delete parsed.ctaY
-                    window.localStorage.setItem(HERO_TUNER_STORAGE_KEY, JSON.stringify(parsed))
-                  } catch {
-                    // If legacy data is malformed, clear it entirely.
-                    window.localStorage.removeItem(HERO_TUNER_STORAGE_KEY)
-                  }
-                }
-              }
-            }}
-            className="mt-2 inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
-          >
-            Reset Saved Hero Offsets
-          </button>
-        </div>
-      ) : null}
     </>
   )
 }
