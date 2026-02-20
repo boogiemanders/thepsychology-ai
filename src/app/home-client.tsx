@@ -280,8 +280,8 @@ export default function HomeClient() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center min-h-[100svh] md:min-h-screen w-full">
-        <section className="relative w-full min-h-[100svh] md:min-h-screen overflow-hidden">
+      <main className="flex flex-col items-center justify-center min-h-screen w-full">
+        <section className="relative w-full min-h-screen overflow-hidden">
           <div className="absolute inset-0 -z-10 pointer-events-none bg-black flex items-start justify-center">
             {isHeroVideoReady ? (
               <video
