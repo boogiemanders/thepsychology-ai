@@ -48,7 +48,7 @@ const FINAL_HERO_VIDEO_START_AT = 9
 
 const HARD_CODED_HERO_LAYOUT = {
   bannerTextY: -65,
-  buttonsY: -124,
+  buttonsY: -64,
   videoY: -84,
   videoBottomCrop: 0,
   contentGroupY: 199,
