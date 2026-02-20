@@ -3,13 +3,22 @@ import { NextResponse } from 'next/server'
 import { getPricingTier, PROMO_START_DATE, FULL_PRICE } from '@/lib/pricing-tiers'
 
 export const revalidate = 60 // Cache for 60 seconds
+const DISPLAY_FREE_SPOTS_CAP = 37
+
+function applyDisplayRemainingCap(tier: ReturnType<typeof getPricingTier>) {
+  if (tier.tier !== 1) return tier
+  return {
+    ...tier,
+    remaining: Math.min(tier.remaining, DISPLAY_FREE_SPOTS_CAP),
+  }
+}
 
 export async function GET() {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
 
   if (!supabase) {
     // Default to tier 1 if we can't get the count
-    const tier = getPricingTier(0)
+    const tier = applyDisplayRemainingCap(getPricingTier(0))
     return NextResponse.json({
       promoCount: 0,
       ...tier,
@@ -22,7 +31,7 @@ export async function GET() {
 
   if (error) {
     console.error('Promo count error:', error)
-    const tier = getPricingTier(0)
+    const tier = applyDisplayRemainingCap(getPricingTier(0))
     return NextResponse.json({
       promoCount: 0,
       ...tier,
@@ -37,7 +46,7 @@ export async function GET() {
   })
 
   const promoCount = promoUsers.length
-  const tier = getPricingTier(promoCount)
+  const tier = applyDisplayRemainingCap(getPricingTier(promoCount))
 
   return NextResponse.json({
     promoCount,

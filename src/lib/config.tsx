@@ -192,7 +192,7 @@ export const siteConfig = {
         yearlyPrice: "n/a",
         features: ["Learn: 80+ text + audio lessons", "Practice: 10-min targeted quizzes", "Simulate: Real exam tools (highlight, flag, timer)", "Personalize: Custom metaphors + focus areas", "Recover: 5-min mental resets"],
         featuresLabel: "Everything includes:",
-        description: "($100/mo value)",
+        description: "",
         buttonText: "Claim Your Free Spot",
         buttonColor: "bg-primary text-primary-foreground",
         isPopular: true,

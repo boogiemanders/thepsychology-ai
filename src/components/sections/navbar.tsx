@@ -121,8 +121,8 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky z-50 mx-4 flex justify-center transition-all duration-300 md:mx-0",
-        hasScrolled ? "top-8" : "top-6 mx-0",
+        "sticky z-50 flex justify-center transition-all duration-300",
+        hasScrolled ? "top-2 mx-2 md:top-8 md:mx-0" : "top-2 mx-2 md:top-6 md:mx-0",
       )}
     >
       <motion.div
@@ -135,10 +135,10 @@ export function Navbar() {
             "mx-auto max-w-7xl rounded-2xl transition-all duration-300  xl:px-0",
             hasScrolled
               ? "px-2 border border-border backdrop-blur-lg bg-background/75"
-              : "shadow-none px-7 border border-border/60 backdrop-blur-lg bg-background/70",
+              : "shadow-none px-3 sm:px-7 border border-border/60 backdrop-blur-lg bg-background/70",
           )}
         >
-          <div className="flex h-[64px] items-center justify-between px-5">
+          <div className="flex h-[60px] sm:h-[64px] items-center justify-between px-4 sm:px-5">
             <Link href={user ? "/dashboard" : "/"} className="flex items-center gap-3">
               <Image
                 src="/images/logo.png"

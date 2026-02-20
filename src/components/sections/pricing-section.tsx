@@ -38,7 +38,6 @@ export function PricingSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null)
   const [promoTier, setPromoTier] = useState<(PricingTier & { fullPrice: number; promoCount: number }) | null>(null)
-  const [totalUserCount, setTotalUserCount] = useState<number | null>(null)
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -50,21 +49,14 @@ export function PricingSection() {
     referralSourceOther: "", // For "Other" option
   })
 
-  // Fetch promo tier info and total user count
+  // Fetch promo tier info
   useEffect(() => {
     async function fetchCounts() {
       try {
-        const [promoRes, countRes] = await Promise.all([
-          fetch('/api/promo-count'),
-          fetch('/api/user-count'),
-        ])
+        const promoRes = await fetch('/api/promo-count')
         if (promoRes.ok) {
           const data = await promoRes.json()
           setPromoTier(data)
-        }
-        if (countRes.ok) {
-          const data = await countRes.json()
-          setTotalUserCount(data.count)
         }
       } catch (err) {
         console.error('Failed to fetch pricing data:', err)
@@ -266,6 +258,17 @@ export function PricingSection() {
             const anchoredProPrice = promoTier?.fullPrice ?? 100
             const showCrossedProAnchor =
               isProTier && ((promoTier && promoTier.price === 0) || (!promoTier && amount === "$0"))
+            const showFreeSpotsLine =
+              isProTier &&
+              !!promoTier &&
+              promoTier.tier === 1 &&
+              promoTier.remaining > 0 &&
+              promoTier.nextTierPrice !== null
+            const showPaidSpotsLine =
+              isProTier &&
+              !!promoTier &&
+              promoTier.tier > 1 &&
+              promoTier.remaining > 0
 
             return (
               <div
@@ -292,30 +295,30 @@ export function PricingSection() {
                   <span className="text-3xl font-semibold">{displayAmount}</span>
                   {period && <span className="text-sm text-muted-foreground">/{period}</span>}
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
+                {tier.description?.trim() ? (
+                  <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
+                ) : null}
 
                 {/* Scarcity messaging for Pro tier */}
-                {isProTier && promoTier && totalUserCount !== null && (
-                  <div className="mt-3 space-y-2">
-                    <p className="text-sm font-medium text-foreground">
-                      Join {totalUserCount}+ postdocs studying for free
-                    </p>
-                    {promoTier.remaining > 0 && promoTier.nextTierPrice !== null && (
-                      <p className="text-sm text-amber-600 dark:text-amber-400 font-medium flex items-center gap-1">
-                        <span>⏳</span>
-                        <span>{promoTier.remaining} free spot{promoTier.remaining !== 1 ? 's' : ''} left</span>
+                {isProTier && promoTier && (
+                  <div className="mt-3">
+                    {showFreeSpotsLine ? (
+                      <p className="text-sm font-medium text-foreground sm:whitespace-nowrap">
+                        <span className="text-amber-600 dark:text-amber-400">
+                          ⏳ {promoTier.remaining} free spot{promoTier.remaining !== 1 ? "s" : ""} left
+                        </span>{" "}
                         <span className="text-muted-foreground font-normal">→ then ${promoTier.nextTierPrice}/mo</span>
                       </p>
-                    )}
-                    {promoTier.tier > 1 && promoTier.remaining > 0 && (
-                      <p className="text-sm text-amber-600 dark:text-amber-400 font-medium flex items-center gap-1">
-                        <span>⏳</span>
-                        <span>{promoTier.remaining} spot{promoTier.remaining !== 1 ? 's' : ''} left at ${promoTier.price}/mo</span>
-                        {promoTier.nextTierPrice && (
+                    ) : showPaidSpotsLine ? (
+                      <p className="text-sm font-medium text-foreground sm:whitespace-nowrap">
+                        <span className="text-amber-600 dark:text-amber-400">
+                          ⏳ {promoTier.remaining} spot{promoTier.remaining !== 1 ? "s" : ""} left at ${promoTier.price}/mo
+                        </span>{" "}
+                        {promoTier.nextTierPrice ? (
                           <span className="text-muted-foreground font-normal">→ then ${promoTier.nextTierPrice}/mo</span>
-                        )}
+                        ) : null}
                       </p>
-                    )}
+                    ) : null}
                   </div>
                 )}
                 <ul className="mt-4 space-y-2 text-sm flex-grow">

@@ -9,6 +9,15 @@ import { siteConfig } from "@/lib/config";
 
 export function FAQSection() {
   const { faqSection } = siteConfig;
+  const fairnessFaq = {
+    question: "Is this cheating? How is this fair?",
+    answer:
+      "No. thePsychology.ai is for prep before test day, not for use during the real EPPP. On exam day, you still take the exam without outside help, under the same testing rules as everyone else.",
+  };
+  const faQitems = [
+    { id: 0, ...fairnessFaq },
+    ...faqSection.faQitems.filter((item) => item.question !== fairnessFaq.question),
+  ];
 
   return (
     <section
@@ -30,7 +39,7 @@ export function FAQSection() {
           collapsible
           className="w-full border-b-0 grid gap-2"
         >
-          {faqSection.faQitems.map((faq, index) => (
+          {faQitems.map((faq, index) => (
             <AccordionItem
               key={index}
               value={index.toString()}
