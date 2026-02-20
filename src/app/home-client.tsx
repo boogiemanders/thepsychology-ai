@@ -29,6 +29,7 @@ type HeroVideoLayout = {
 
 const HERO_TUNER_STORAGE_KEY = "hero-video-tuner"
 const CONTENT_LIFT_STORAGE_KEY = "home-content-lift"
+const HERO_COPY_LIFT_STORAGE_KEY = "home-hero-copy-lift"
 
 const DEFAULT_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
@@ -51,6 +52,7 @@ export default function HomeClient() {
   const [heroCopyOffsets, setHeroCopyOffsets] = useState<HeroCopyOffsets>(DEFAULT_HERO_COPY_OFFSETS)
   const [heroVideoLayout, setHeroVideoLayout] = useState<HeroVideoLayout>(DEFAULT_HERO_VIDEO_LAYOUT)
   const [contentLift, setContentLift] = useState(0)
+  const [heroCopyLiftY, setHeroCopyLiftY] = useState(0)
   const [showContentLiftControl, setShowContentLiftControl] = useState(false)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
@@ -140,11 +142,19 @@ export default function HomeClient() {
     setShowContentLiftControl(shouldShow)
 
     const saved = window.sessionStorage.getItem(CONTENT_LIFT_STORAGE_KEY)
-    if (!saved) return
+    if (saved) {
+      const parsed = Number(saved)
+      if (Number.isFinite(parsed)) {
+        setContentLift(Math.max(0, Math.min(900, parsed)))
+      }
+    }
 
-    const parsed = Number(saved)
-    if (Number.isFinite(parsed)) {
-      setContentLift(Math.max(0, Math.min(900, parsed)))
+    const savedHeroCopyLift = window.sessionStorage.getItem(HERO_COPY_LIFT_STORAGE_KEY)
+    if (savedHeroCopyLift) {
+      const parsedHeroCopyLift = Number(savedHeroCopyLift)
+      if (Number.isFinite(parsedHeroCopyLift)) {
+        setHeroCopyLiftY(Math.max(-240, Math.min(240, parsedHeroCopyLift)))
+      }
     }
   }, [])
 
@@ -152,6 +162,11 @@ export default function HomeClient() {
     if (typeof window === "undefined") return
     window.sessionStorage.setItem(CONTENT_LIFT_STORAGE_KEY, String(contentLift))
   }, [contentLift])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    window.sessionStorage.setItem(HERO_COPY_LIFT_STORAGE_KEY, String(heroCopyLiftY))
+  }, [heroCopyLiftY])
 
   useEffect(() => {
     if (!isHeroVideoReady) return
@@ -263,7 +278,14 @@ export default function HomeClient() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
           </div>
           <div className="relative z-10">
-            <HeroSection offsets={heroCopyOffsets} />
+            <HeroSection
+              offsets={{
+                ...heroCopyOffsets,
+                tickerY: heroCopyOffsets.tickerY + heroCopyLiftY,
+                titleY: heroCopyOffsets.titleY + heroCopyLiftY,
+                ctaY: heroCopyOffsets.ctaY + heroCopyLiftY,
+              }}
+            />
           </div>
         </section>
         <div
@@ -283,8 +305,8 @@ export default function HomeClient() {
         </div>
       </main>
       {showContentLiftControl ? (
-        <div className="fixed bottom-4 right-4 z-50 w-64 rounded-md border border-white/25 bg-black/70 p-3 text-white backdrop-blur-sm">
-          <p className="text-xs font-semibold tracking-wide uppercase">Content Lift</p>
+        <div className="fixed bottom-4 right-4 z-50 w-72 rounded-md border border-white/25 bg-black/70 p-3 text-white backdrop-blur-sm">
+          <p className="text-xs font-semibold tracking-wide uppercase">Layout Tuner</p>
           <p className="mt-1 text-[11px] text-white/75">Temporary layout control</p>
           <label className="mt-3 block text-xs">
             Move sections up: {contentLift}px
@@ -297,13 +319,33 @@ export default function HomeClient() {
               className="mt-1 w-full"
             />
           </label>
-          <button
-            type="button"
-            onClick={() => setContentLift(0)}
-            className="mt-3 inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
-          >
-            Reset
-          </button>
+          <label className="mt-3 block text-xs">
+            Hero copy Y (negative = up): {heroCopyLiftY}px
+            <input
+              type="range"
+              min={-240}
+              max={240}
+              value={heroCopyLiftY}
+              onChange={(event) => setHeroCopyLiftY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <div className="mt-3 flex gap-2">
+            <button
+              type="button"
+              onClick={() => setHeroCopyLiftY(0)}
+              className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
+            >
+              Reset Hero
+            </button>
+            <button
+              type="button"
+              onClick={() => setContentLift(0)}
+              className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
+            >
+              Reset Sections
+            </button>
+          </div>
         </div>
       ) : null}
     </>

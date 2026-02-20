@@ -17,9 +17,9 @@ export function FooterSection() {
             <Image
               src="/images/logo.png"
               alt="Logo"
-              width={32}
+              width={25}
               height={32}
-              className="size-8 invert dark:invert-0"
+              className="h-8 w-auto invert dark:invert-0"
             />
             <p className="text-xl font-semibold text-primary">thePsychology.ai</p>
           </Link>
