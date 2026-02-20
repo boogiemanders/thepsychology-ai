@@ -31,6 +31,14 @@ const HERO_TUNER_STORAGE_KEY = "hero-video-tuner"
 const CONTENT_LIFT_STORAGE_KEY = "home-content-lift"
 const HERO_COPY_LIFT_STORAGE_KEY = "home-hero-copy-lift"
 
+const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
+const sanitizeCopyOffset = (value: unknown, min: number, max: number) => {
+  if (typeof value !== "number" || !Number.isFinite(value)) return 0
+  // Legacy tuner values can hide hero elements completely; reset outliers to baseline.
+  if (value < min || value > max) return 0
+  return value
+}
+
 const DEFAULT_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
   tickerY: 0,
@@ -114,20 +122,31 @@ export default function HomeClient() {
       }
 
       setHeroVideoLayout({
-        scale: typeof parsed.scale === "number" ? parsed.scale : DEFAULT_HERO_VIDEO_LAYOUT.scale,
-        offsetX: typeof parsed.offsetX === "number" ? parsed.offsetX : DEFAULT_HERO_VIDEO_LAYOUT.offsetX,
-        offsetY: typeof parsed.offsetY === "number" ? parsed.offsetY : DEFAULT_HERO_VIDEO_LAYOUT.offsetY,
+        scale:
+          typeof parsed.scale === "number"
+            ? clamp(parsed.scale, 40, 250)
+            : DEFAULT_HERO_VIDEO_LAYOUT.scale,
+        offsetX:
+          typeof parsed.offsetX === "number"
+            ? clamp(parsed.offsetX, -1200, 1200)
+            : DEFAULT_HERO_VIDEO_LAYOUT.offsetX,
+        offsetY:
+          typeof parsed.offsetY === "number"
+            ? clamp(parsed.offsetY, -1200, 1200)
+            : DEFAULT_HERO_VIDEO_LAYOUT.offsetY,
         bottomCrop:
-          typeof parsed.bottomCrop === "number" ? parsed.bottomCrop : DEFAULT_HERO_VIDEO_LAYOUT.bottomCrop,
+          typeof parsed.bottomCrop === "number"
+            ? clamp(parsed.bottomCrop, 0, 1200)
+            : DEFAULT_HERO_VIDEO_LAYOUT.bottomCrop,
       })
 
       setHeroCopyOffsets({
-        tickerX: typeof parsed.tickerX === "number" ? parsed.tickerX : DEFAULT_HERO_COPY_OFFSETS.tickerX,
-        tickerY: typeof parsed.tickerY === "number" ? parsed.tickerY : DEFAULT_HERO_COPY_OFFSETS.tickerY,
-        titleX: typeof parsed.titleX === "number" ? parsed.titleX : DEFAULT_HERO_COPY_OFFSETS.titleX,
-        titleY: typeof parsed.titleY === "number" ? parsed.titleY : DEFAULT_HERO_COPY_OFFSETS.titleY,
-        ctaX: typeof parsed.ctaX === "number" ? parsed.ctaX : DEFAULT_HERO_COPY_OFFSETS.ctaX,
-        ctaY: typeof parsed.ctaY === "number" ? parsed.ctaY : DEFAULT_HERO_COPY_OFFSETS.ctaY,
+        tickerX: sanitizeCopyOffset(parsed.tickerX, -180, 180),
+        tickerY: sanitizeCopyOffset(parsed.tickerY, -220, 220),
+        titleX: sanitizeCopyOffset(parsed.titleX, -180, 180),
+        titleY: sanitizeCopyOffset(parsed.titleY, -220, 220),
+        ctaX: sanitizeCopyOffset(parsed.ctaX, -180, 180),
+        ctaY: sanitizeCopyOffset(parsed.ctaY, -220, 220),
       })
     } catch {
       // Ignore malformed persisted layout.
@@ -153,7 +172,7 @@ export default function HomeClient() {
     if (savedHeroCopyLift) {
       const parsedHeroCopyLift = Number(savedHeroCopyLift)
       if (Number.isFinite(parsedHeroCopyLift)) {
-        setHeroCopyLiftY(Math.max(-240, Math.min(240, parsedHeroCopyLift)))
+        setHeroCopyLiftY(clamp(parsedHeroCopyLift, -240, 240))
       }
     }
   }, [])
@@ -279,12 +298,8 @@ export default function HomeClient() {
           </div>
           <div className="relative z-10">
             <HeroSection
-              offsets={{
-                ...heroCopyOffsets,
-                tickerY: heroCopyOffsets.tickerY + heroCopyLiftY,
-                titleY: heroCopyOffsets.titleY + heroCopyLiftY,
-                ctaY: heroCopyOffsets.ctaY + heroCopyLiftY,
-              }}
+              offsets={heroCopyOffsets}
+              globalLiftY={heroCopyLiftY}
             />
           </div>
         </section>
@@ -346,6 +361,33 @@ export default function HomeClient() {
               Reset Sections
             </button>
           </div>
+          <button
+            type="button"
+            onClick={() => {
+              setHeroCopyOffsets(DEFAULT_HERO_COPY_OFFSETS)
+              if (typeof window !== "undefined") {
+                const saved = window.localStorage.getItem(HERO_TUNER_STORAGE_KEY)
+                if (saved) {
+                  try {
+                    const parsed = JSON.parse(saved) as Record<string, unknown>
+                    delete parsed.tickerX
+                    delete parsed.tickerY
+                    delete parsed.titleX
+                    delete parsed.titleY
+                    delete parsed.ctaX
+                    delete parsed.ctaY
+                    window.localStorage.setItem(HERO_TUNER_STORAGE_KEY, JSON.stringify(parsed))
+                  } catch {
+                    // If legacy data is malformed, clear it entirely.
+                    window.localStorage.removeItem(HERO_TUNER_STORAGE_KEY)
+                  }
+                }
+              }
+            }}
+            className="mt-2 inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
+          >
+            Reset Saved Hero Offsets
+          </button>
         </div>
       ) : null}
     </>
