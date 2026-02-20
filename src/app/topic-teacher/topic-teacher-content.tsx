@@ -543,6 +543,8 @@ export function TopicTeacherContent() {
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
   const hasExamResults = searchParams.get('hasExamResults') === 'true'
+  const hasQuizResults = searchParams.get('hasQuizResults') === 'true'
+  const recentQuizWrongSectionsParam = searchParams.get('recentQuizWrongSections')
   const decodeParam = (value: string | null): string => {
     if (!value) return ''
     try {
@@ -553,6 +555,25 @@ export function TopicTeacherContent() {
   }
   const decodedTopic = decodeParam(topic)
   const displayLessonName = getLessonDisplayName(decodedTopic)
+
+  const recentQuizWrongSectionsFromUrl = useMemo(() => {
+    if (!recentQuizWrongSectionsParam) return [] as string[]
+
+    try {
+      const parsed = JSON.parse(recentQuizWrongSectionsParam)
+      if (!Array.isArray(parsed)) return [] as string[]
+      return parsed.filter((section): section is string => typeof section === 'string')
+    } catch {
+      try {
+        const decoded = decodeURIComponent(recentQuizWrongSectionsParam)
+        const parsed = JSON.parse(decoded)
+        if (!Array.isArray(parsed)) return [] as string[]
+        return parsed.filter((section): section is string => typeof section === 'string')
+      } catch {
+        return [] as string[]
+      }
+    }
+  }, [recentQuizWrongSectionsParam])
 
   const normalizeSectionName = (section?: string | null): string | null => {
     if (!section) return null
@@ -1522,6 +1543,13 @@ export function TopicTeacherContent() {
     return filtered.length > 0 ? filtered.join('; ') : ''
   }
 
+  const getQuizAnswerKey = (answer: WrongAnswer): string => {
+    if (answer.questionKey && answer.questionKey.length > 0) {
+      return answer.questionKey
+    }
+    return `id:${answer.questionId}|q:${(answer.question || '').trim().toLowerCase()}`
+  }
+
   useEffect(() => {
     if (topicMatchKeys.size === 0) {
       setIsTopicRecommendedByLatestExam(false)
@@ -1614,14 +1642,18 @@ export function TopicTeacherContent() {
       .find((candidateResults) => candidateResults && Array.isArray(candidateResults.wrongAnswers))
 
     if (quizResults && quizResults.wrongAnswers && quizResults.wrongAnswers.length > 0) {
-      // Filter to only unresolved wrong answers (like practice exam stars)
-      const unresolvedWrongAnswers = quizResults.wrongAnswers.filter(wa => wa.isResolved !== true)
+      // "Most recent quiz" should reflect the latest attempt only when available.
+      const latestAttemptWrongAnswers =
+        Array.isArray(quizResults.lastAttemptWrongAnswers) &&
+        quizResults.lastAttemptWrongAnswers.length > 0
+          ? quizResults.lastAttemptWrongAnswers
+          : quizResults.wrongAnswers.filter((wa) => wa.isResolved !== true)
 
       // Store quiz wrong answers for dialog display
-      setQuizWrongAnswers(unresolvedWrongAnswers)
+      setQuizWrongAnswers(latestAttemptWrongAnswers)
 
       quizWrongSections = normalizeSections(
-        unresolvedWrongAnswers.flatMap((wa) => wa.relatedSections || []),
+        latestAttemptWrongAnswers.flatMap((wa) => wa.relatedSections || []),
         { allowAll: true }
       )
 
@@ -1658,6 +1690,16 @@ export function TopicTeacherContent() {
       }
     } else {
       setQuizWrongAnswers([])
+    }
+
+    if (quizWrongSections.length === 0 && hasQuizResults && recentQuizWrongSectionsFromUrl.length > 0) {
+      quizWrongSections = normalizeSections(recentQuizWrongSectionsFromUrl, {
+        allowAll: true,
+      })
+      if (quizWrongSections.length > 0) {
+        allWrongSections = [...allWrongSections, ...quizWrongSections]
+        hasAnyResults = true
+      }
     }
 
     // Always check for exam results (from diagnostic/practice exams).
@@ -1710,7 +1752,13 @@ export function TopicTeacherContent() {
       quizWrongSections: [],
       examWrongSections: [],
     })
-  }, [topicCandidatesForResults, hasExamResults, isTopicRecommendedByLatestExam])
+  }, [
+    topicCandidatesForResults,
+    hasExamResults,
+    hasQuizResults,
+    isTopicRecommendedByLatestExam,
+    recentQuizWrongSectionsFromUrl,
+  ])
 
   // Load latest exam wrong questions for table-row 🍏 mapping.
   // Always fetch when user is logged in - API returns 404 if no results (handled gracefully).
@@ -2648,6 +2696,46 @@ export function TopicTeacherContent() {
     return null
   }
 
+  // Find a quiz wrong answer that matches the given section name
+  const findQuizMatchForSection = (sectionName: string): WrongAnswer | null => {
+    if (!sectionName || quizWrongAnswers.length === 0) return null
+
+    for (const answer of quizWrongAnswers) {
+      if (answer.isResolved) continue
+
+      // Check relatedSections directly
+      for (const section of answer.relatedSections) {
+        if (labelsMatch(sectionName, section)) return answer
+      }
+
+      // Check quizQuestionToBestHeader map
+      const bestHeader = quizQuestionToBestHeader.get(getQuizAnswerKey(answer))
+      if (bestHeader && labelsMatch(sectionName, bestHeader)) return answer
+    }
+
+    return null
+  }
+
+  // Find a practice exam wrong question that matches the given section name
+  const findExamMatchForSection = (sectionName: string): WrongPracticeExamQuestion | null => {
+    if (!sectionName || practiceExamWrongQuestions.length === 0) return null
+
+    for (const wrongQ of practiceExamWrongQuestions) {
+      // Check relatedSections directly
+      if (wrongQ.question.relatedSections) {
+        for (const section of wrongQ.question.relatedSections) {
+          if (labelsMatch(sectionName, section)) return wrongQ
+        }
+      }
+
+      // Check practiceExamQuestionToBestHeader map
+      const bestHeader = practiceExamQuestionToBestHeader.get(wrongQ.questionIndex)
+      if (bestHeader && labelsMatch(sectionName, bestHeader)) return wrongQ
+    }
+
+    return null
+  }
+
   const getAnswerLabel = (
     question: PracticeExamQuestion,
     answerText?: string | null
@@ -2705,7 +2793,7 @@ export function TopicTeacherContent() {
   // Pre-calculate the best header match for each quiz question
   // This runs ONCE per content change, not during render
   const quizQuestionToBestHeader = useMemo(() => {
-    const result = new Map<number, string>() // questionId -> best header text
+    const result = new Map<string, string>() // quiz answer key -> best header text
 
     if (quizWrongAnswers.length === 0 || !baseContent) return result
 
@@ -2859,7 +2947,7 @@ export function TopicTeacherContent() {
       }
 
       if (bestHeader) {
-        result.set(question.questionId, bestHeader)
+        result.set(getQuizAnswerKey(question), bestHeader)
       }
     }
 
@@ -3139,7 +3227,7 @@ export function TopicTeacherContent() {
           lessonMarkdown={lessonMarkdown}
           baseLessonMarkdown={baseContent}
           metaphorRanges={metaphorRanges}
-          topic={displayLessonName}
+          topic={resolvedTopicName || decodedTopic || displayLessonName}
           domain={domain}
           userId={user?.id ?? null}
           userInterests={savedInterests.length > 0 ? savedInterests.join(', ') : userInterests}
@@ -3571,9 +3659,10 @@ export function TopicTeacherContent() {
                             )
 
                             // Check if THIS header is the best match for any quiz question
-                            const quizMatched = quizWrongAnswers.find(
-                              (q) => !q.isResolved && quizQuestionToBestHeader.get(q.questionId) === text
-                            )
+                            const quizMatched = quizWrongAnswers.find((q) => {
+                              if (q.isResolved) return false
+                              return quizQuestionToBestHeader.get(getQuizAnswerKey(q)) === text
+                            })
 
                             if (examMatched || quizMatched) {
                               return (
@@ -3624,9 +3713,10 @@ export function TopicTeacherContent() {
                             )
 
                             // Check if THIS header is the best match for any quiz question
-                            const quizMatched = quizWrongAnswers.find(
-                              (q) => !q.isResolved && quizQuestionToBestHeader.get(q.questionId) === text
-                            )
+                            const quizMatched = quizWrongAnswers.find((q) => {
+                              if (q.isResolved) return false
+                              return quizQuestionToBestHeader.get(getQuizAnswerKey(q)) === text
+                            })
 
                             if (examMatched || quizMatched) {
                               return (
@@ -3778,12 +3868,48 @@ export function TopicTeacherContent() {
                             const { quizWrong, examWrong, recentlyCorrect, recovered } =
                               getHighlightFlags(currentSectionRef.current)
 
-                            const showIcon = examWrong || recentlyCorrect || recovered
+                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+
+                            // Try to find matching questions for clickable stars
+                            const sectionQuizMatch = quizWrong ? findQuizMatchForSection(currentSectionRef.current) : null
+                            const sectionExamMatch = examWrong ? findExamMatchForSection(currentSectionRef.current) : null
+                            const hasClickable = !!sectionQuizMatch || !!sectionExamMatch
 
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
-                                {showIcon && (
-                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center text-base leading-none">
+                                {showIcon && hasClickable && (
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center gap-0.5 text-base leading-none">
+                                    {sectionQuizMatch && (
+                                      <button
+                                        type="button"
+                                        className="apple-pulsate cursor-pointer"
+                                        onClick={() => {
+                                          setActiveQuizQuestion(sectionQuizMatch)
+                                          setMissedQuestionDialogOpen(true)
+                                        }}
+                                        aria-label="Review missed quiz question"
+                                      >
+                                        <VariableStar className="ml-0.5" color={quizStarColor} />
+                                      </button>
+                                    )}
+                                    {sectionExamMatch && (
+                                      <button
+                                        type="button"
+                                        className="apple-pulsate cursor-pointer"
+                                        onClick={() => {
+                                          setActiveMissedQuestion(sectionExamMatch)
+                                          setMissedQuestionDialogOpen(true)
+                                        }}
+                                        aria-label="Review missed practice exam question"
+                                      >
+                                        <VariableStar className="ml-0.5" color={starColor} />
+                                      </button>
+                                    )}
+                                  </span>
+                                )}
+                                {showIcon && !hasClickable && (
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center gap-0.5 text-base leading-none">
+                                    {quizWrong && <VariableStar className="ml-0.5" color={quizStarColor} />}
                                     {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
@@ -3792,15 +3918,49 @@ export function TopicTeacherContent() {
                             )
                           },
                           ul: ({ children }) => {
-                            const { examWrong, recentlyCorrect, recovered } =
+                            const { quizWrong, examWrong, recentlyCorrect, recovered } =
                               getHighlightFlags(currentSectionRef.current)
 
-                            const showIcon = examWrong || recentlyCorrect || recovered
+                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+                            const sectionQuizMatch = quizWrong ? findQuizMatchForSection(currentSectionRef.current) : null
+                            const sectionExamMatch = examWrong ? findExamMatchForSection(currentSectionRef.current) : null
+                            const hasClickable = !!sectionQuizMatch || !!sectionExamMatch
 
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
-                                {showIcon && (
-                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center text-base leading-none">
+                                {showIcon && hasClickable && (
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center gap-0.5 text-base leading-none">
+                                    {sectionQuizMatch && (
+                                      <button
+                                        type="button"
+                                        className="apple-pulsate cursor-pointer"
+                                        onClick={() => {
+                                          setActiveQuizQuestion(sectionQuizMatch)
+                                          setMissedQuestionDialogOpen(true)
+                                        }}
+                                        aria-label="Review missed quiz question"
+                                      >
+                                        <VariableStar className="ml-0.5" color={quizStarColor} />
+                                      </button>
+                                    )}
+                                    {sectionExamMatch && (
+                                      <button
+                                        type="button"
+                                        className="apple-pulsate cursor-pointer"
+                                        onClick={() => {
+                                          setActiveMissedQuestion(sectionExamMatch)
+                                          setMissedQuestionDialogOpen(true)
+                                        }}
+                                        aria-label="Review missed practice exam question"
+                                      >
+                                        <VariableStar className="ml-0.5" color={starColor} />
+                                      </button>
+                                    )}
+                                  </span>
+                                )}
+                                {showIcon && !hasClickable && (
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center gap-0.5 text-base leading-none">
+                                    {quizWrong && <VariableStar className="ml-0.5" color={quizStarColor} />}
                                     {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}
@@ -3812,12 +3972,46 @@ export function TopicTeacherContent() {
                             const { quizWrong, examWrong, recentlyCorrect, recovered } =
                               getHighlightFlags(currentSectionRef.current)
 
-                            const showIcon = examWrong || recentlyCorrect || recovered
+                            const showIcon = quizWrong || examWrong || recentlyCorrect || recovered
+                            const sectionQuizMatch = quizWrong ? findQuizMatchForSection(currentSectionRef.current) : null
+                            const sectionExamMatch = examWrong ? findExamMatchForSection(currentSectionRef.current) : null
+                            const hasClickable = !!sectionQuizMatch || !!sectionExamMatch
 
                             return (
                               <div className={`transition-colors ${showIcon ? 'relative' : ''}`}>
-                                {showIcon && (
-                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center text-base leading-none">
+                                {showIcon && hasClickable && (
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center gap-0.5 text-base leading-none">
+                                    {sectionQuizMatch && (
+                                      <button
+                                        type="button"
+                                        className="apple-pulsate cursor-pointer"
+                                        onClick={() => {
+                                          setActiveQuizQuestion(sectionQuizMatch)
+                                          setMissedQuestionDialogOpen(true)
+                                        }}
+                                        aria-label="Review missed quiz question"
+                                      >
+                                        <VariableStar className="ml-0.5" color={quizStarColor} />
+                                      </button>
+                                    )}
+                                    {sectionExamMatch && (
+                                      <button
+                                        type="button"
+                                        className="apple-pulsate cursor-pointer"
+                                        onClick={() => {
+                                          setActiveMissedQuestion(sectionExamMatch)
+                                          setMissedQuestionDialogOpen(true)
+                                        }}
+                                        aria-label="Review missed practice exam question"
+                                      >
+                                        <VariableStar className="ml-0.5" color={starColor} />
+                                      </button>
+                                    )}
+                                  </span>
+                                )}
+                                {showIcon && !hasClickable && (
+                                  <span className="absolute -left-10 top-0 w-8 flex items-center justify-center gap-0.5 text-base leading-none">
+                                    {quizWrong && <VariableStar className="ml-0.5" color={quizStarColor} />}
                                     {examWrong && <VariableStar className="ml-0.5" color={starColor} />}
                                   </span>
                                 )}

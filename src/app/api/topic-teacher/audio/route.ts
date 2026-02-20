@@ -17,6 +17,8 @@ const DEFAULT_VOICE = 'alloy'
 const MAX_INPUT_CHARS = 5000
 const AUDIO_CACHE_DIR = path.join(process.cwd(), '.next', 'cache', 'topic-teacher-audio')
 const MAX_MEMORY_CACHE_BYTES = 75 * 1024 * 1024
+const LIVE_TTS_DISABLED_ERROR =
+  'Live Topic Teacher TTS is disabled on this deployment. This app is configured for pre-generated R2 audio only.'
 
 type MemoryCacheEntry = {
   buffer: Buffer
@@ -142,7 +144,17 @@ function normalizeSpeed(raw: unknown): number {
   return Math.min(3, Math.max(0.5, raw))
 }
 
+function envFlagEnabled(raw: string | null | undefined): boolean {
+  const normalized = raw?.trim().toLowerCase()
+  return normalized === '1' || normalized === 'true' || normalized === 'yes' || normalized === 'on'
+}
+
 export async function POST(request: NextRequest) {
+  const liveTtsEnabled = envFlagEnabled(process.env.TOPIC_TEACHER_ALLOW_LIVE_TTS)
+  if (!liveTtsEnabled) {
+    return NextResponse.json({ error: LIVE_TTS_DISABLED_ERROR }, { status: 403 })
+  }
+
   if (!openaiApiKey) {
     return NextResponse.json(
       { error: 'Topic Teacher audio is not configured (missing OPENAI_API_KEY).' },

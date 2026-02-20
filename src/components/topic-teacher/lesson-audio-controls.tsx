@@ -58,10 +58,19 @@ const RECOMMENDED_PLAYBACK_RATE = 1.75
 const DEFAULT_TTS_MODEL = 'gpt-4o-mini-tts'
 const FALLBACK_TTS_MODEL = 'tts-1'
 const DEFAULT_TTS_SPEED = 1
+const LIVE_TTS_DISABLED_ERROR =
+  'Pre-generated R2 audio is unavailable for this lesson. Live TTS fallback is disabled.'
+const LIVE_TTS_MISSING_CHUNKS_ERROR =
+  'Some lesson chunks are missing from pre-generated R2 audio. Live TTS fallback is disabled.'
 const PREGENERATED_AUDIO_BASE_PATH = (process.env.NEXT_PUBLIC_TOPIC_TEACHER_AUDIO_BASE_URL || '/topic-teacher-audio/v1').replace(
   /\/+$/,
   ''
 )
+
+function envFlagEnabled(raw: string | null | undefined): boolean {
+  const normalized = raw?.trim().toLowerCase()
+  return normalized === '1' || normalized === 'true' || normalized === 'yes' || normalized === 'on'
+}
 
 function extractAudioKeyFromPublicUrl(url: string): string | null {
   if (!url) return null
@@ -411,18 +420,23 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const continuousAudioEnabled = !['0', 'false', 'no', 'off'].includes(
     (process.env.NEXT_PUBLIC_TOPIC_TEACHER_CONTINUOUS_AUDIO || '').trim().toLowerCase()
   )
+  // Fail-closed cost control: live TTS is disabled unless explicitly enabled.
+  const allowLiveAudioGeneration = envFlagEnabled(process.env.NEXT_PUBLIC_TOPIC_TEACHER_ALLOW_LIVE_TTS)
+  // Cost control: default to R2-only manifest audio.
+  // Set NEXT_PUBLIC_TOPIC_TEACHER_LIVE_AUDIO_PERSONALIZATION=1 to enable
+  // hobby-specific metaphor fallbacks that can trigger live TTS generation.
+  const allowLiveAudioPersonalization = envFlagEnabled(process.env.NEXT_PUBLIC_TOPIC_TEACHER_LIVE_AUDIO_PERSONALIZATION)
   const continuousModeActive = continuousAudioEnabled
   const baseContentReady = Boolean(baseLessonMarkdown && baseLessonMarkdown.trim())
   const pregenReady = !canUsePregen || baseContentReady
   const shouldAutoLoadPregenFullLesson =
-    lessonReady && voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference) && pregenReady
+    lessonReady && voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
+  const waitingForBaseContent = canUsePregen && !baseContentReady
   const effectiveDisabledReason =
     disabledReason ??
     (!lessonReady
       ? 'Load a lesson to enable audio.'
-      : !pregenReady
-        ? 'Loading base content for pre-generated audio...'
-        : null)
+      : null)
   const isDisabled = Boolean(effectiveDisabledReason)
 
   const speakableFullText = useMemo(() => {
@@ -506,19 +520,28 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
    * Returns true if successful, false if not available.
    */
   const tryLoadFromManifest = async (signal: AbortSignal): Promise<boolean> => {
-    console.log('[manifest] Attempting to load manifest:', { useManifest, domain, topic, lessonSlug, canUsePregen })
-    // Can use either domain+topic (preferred) or legacy lessonSlug
-    if (!useManifest || (!lessonSlug && (!domain || !topic))) {
-      console.log('[manifest] Skipped: useManifest is falsy or missing domain/topic/lessonSlug')
+    console.log('[manifest] Attempting to load manifest:', {
+      useManifest,
+      domain,
+      topic,
+      lessonSlug,
+      canUsePregen,
+      allowLiveAudioGeneration,
+    })
+    // Can use domain+topic (preferred), topic-only, or legacy lessonSlug.
+    if (!useManifest || (!topic && !lessonSlug)) {
+      console.log('[manifest] Skipped: useManifest is falsy or missing topic/lessonSlug')
       return false
     }
 
     try {
-      const hobby = userInterests?.trim() || ''
+      const hobby = allowLiveAudioPersonalization ? (userInterests?.trim() || '') : ''
       const params = new URLSearchParams()
-      // Prefer domain+topic as the API will resolve the correct lessonId
+      // Prefer domain+topic, then topic-only, then legacy lessonSlug.
       if (domain && topic) {
         params.set('domain', domain)
+        params.set('topic', topic)
+      } else if (topic) {
         params.set('topic', topic)
       } else if (lessonSlug) {
         params.set('lessonId', lessonSlug)
@@ -642,6 +665,9 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
       // Second pass: Generate live audio for chunks that need it
       if (chunksNeedingLive.length > 0) {
+        if (!allowLiveAudioGeneration) {
+          throw new Error(LIVE_TTS_MISSING_CHUNKS_ERROR)
+        }
         console.log('[manifest] Generating live audio for personalized metaphors...')
         setProgress({ current: 0, total: chunksNeedingLive.length })
 
@@ -783,6 +809,12 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       return true
     } catch (err) {
       if ((err as Error)?.name === 'AbortError') {
+        throw err
+      }
+      if (
+        err instanceof Error &&
+        (err.message === LIVE_TTS_DISABLED_ERROR || err.message === LIVE_TTS_MISSING_CHUNKS_ERROR)
+      ) {
         throw err
       }
       console.warn('[manifest] Failed to load manifest:', err)
@@ -1392,6 +1424,10 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         }
       }
 
+      if (!allowLiveAudioGeneration) {
+        throw new Error(LIVE_TTS_DISABLED_ERROR)
+      }
+
       const response = await fetch('/api/topic-teacher/audio', {
         method: 'POST',
         headers: {
@@ -1430,7 +1466,6 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
 
 	  const handleGenerate = async () => {
 	    if (isDisabled || isGenerating) return
-	    if (canUsePregen && !baseContentReady) return
 
     // Mark that the user has used the audio bar (for one-time notices)
     if (userId) {
@@ -1469,12 +1504,15 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         languagePreference,
       })
 
-      if (useManifest && lessonSlug && canUseManifest) {
+      if (useManifest && canUseManifest) {
         const manifestLoaded = await tryLoadFromManifest(controller.signal)
         if (manifestLoaded) {
           console.log('[audio-controls] Loaded audio from MFA manifest')
           setIsGenerating(false)
           return
+        }
+        if (!allowLiveAudioGeneration) {
+          throw new Error(LIVE_TTS_DISABLED_ERROR)
         }
       }
 
@@ -1884,9 +1922,9 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           </div>
 
           {/* Status messages */}
-          {(effectiveDisabledReason || progressText || sourceText) && (
+          {(effectiveDisabledReason || progressText || sourceText || waitingForBaseContent) && (
             <div className="mt-1 text-xs text-muted-foreground">
-              {effectiveDisabledReason || progressText || sourceText}
+              {effectiveDisabledReason || progressText || sourceText || (waitingForBaseContent ? 'Loading base content for pre-generated audio...' : null)}
             </div>
           )}
 

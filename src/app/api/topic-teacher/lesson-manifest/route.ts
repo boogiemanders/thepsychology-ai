@@ -118,6 +118,52 @@ function normalizeForLessonId(part: string): string {
 }
 
 /**
+ * Find a markdown filename in a domain folder that matches the provided topic slug.
+ */
+function findMatchingFilenameInDomainFolder(baseDir: string, topicSlug: string): string | null {
+  try {
+    const entries = readdirSync(baseDir, { withFileTypes: true })
+    for (const entry of entries) {
+      if (!entry.isFile() || !entry.name.endsWith('.md')) continue
+      const baseName = entry.name.slice(0, -3) // drop ".md"
+      const candidateSlug = slugifyTopicName(baseName)
+      if (candidateSlug === topicSlug) {
+        return baseName
+      }
+
+      // Match by frontmatter metadata so topic strings from prioritize/topic-teacher
+      // resolve even when v4 filenames are internal shorthand.
+      try {
+        const fullPath = path.join(baseDir, entry.name)
+        const content = readFileSync(fullPath, 'utf-8')
+        const metadata = parseFrontmatter(content)
+
+        const metadataSlug = metadata.slug ? slugifyTopicName(metadata.slug) : ''
+        if (metadataSlug === topicSlug) {
+          return baseName
+        }
+
+        const metadataTopicName = metadata.topic_name ? slugifyTopicName(metadata.topic_name) : ''
+        if (metadataTopicName === topicSlug) {
+          return baseName
+        }
+
+        const metadataTitle = metadata.title ? slugifyTopicName(metadata.title) : ''
+        if (metadataTitle === topicSlug) {
+          return baseName
+        }
+      } catch {
+        // Ignore malformed files and continue scanning.
+      }
+    }
+  } catch (e) {
+    console.log(`[manifest] Error reading domain folder: ${e}`)
+  }
+
+  return null
+}
+
+/**
  * Resolve the lessonId from domain and topic parameters.
  * This computes the same lessonId that the pregen script would generate.
  */
@@ -138,51 +184,7 @@ function resolveLessonIdFromDomainTopic(domain: string, topic: string): string |
 
   // Find the actual filename by matching slugified topic name
   const topicSlug = slugifyTopicName(topic)
-  let actualFilename: string | null = null
-
-  try {
-    const entries = readdirSync(baseDir, { withFileTypes: true })
-    for (const entry of entries) {
-      if (!entry.isFile() || !entry.name.endsWith('.md')) continue
-      const baseName = entry.name.slice(0, -3) // drop ".md"
-      const candidateSlug = slugifyTopicName(baseName)
-      if (candidateSlug === topicSlug) {
-        actualFilename = baseName
-        break
-      }
-
-      // Match by frontmatter metadata so topic strings from prioritize/topic-teacher
-      // resolve even when v4 filenames are internal shorthand.
-      try {
-        const fullPath = path.join(baseDir, entry.name)
-        const content = readFileSync(fullPath, 'utf-8')
-        const metadata = parseFrontmatter(content)
-
-        const metadataSlug = metadata.slug ? slugifyTopicName(metadata.slug) : ''
-        if (metadataSlug === topicSlug) {
-          actualFilename = baseName
-          break
-        }
-
-        const metadataTopicName = metadata.topic_name ? slugifyTopicName(metadata.topic_name) : ''
-        if (metadataTopicName === topicSlug) {
-          actualFilename = baseName
-          break
-        }
-
-        const metadataTitle = metadata.title ? slugifyTopicName(metadata.title) : ''
-        if (metadataTitle === topicSlug) {
-          actualFilename = baseName
-          break
-        }
-      } catch {
-        // Ignore malformed files and continue scanning.
-      }
-    }
-  } catch (e) {
-    console.log(`[manifest] Error reading domain folder: ${e}`)
-    return null
-  }
+  const actualFilename = findMatchingFilenameInDomainFolder(baseDir, topicSlug)
 
   if (!actualFilename) {
     console.log(`[manifest] No file found for topic "${topic}" (slug: ${topicSlug}) in ${domainFolder}`)
@@ -194,6 +196,41 @@ function resolveLessonIdFromDomainTopic(domain: string, topic: string): string |
   const normalizedFile = normalizeForLessonId(actualFilename)
 
   return `${normalizedFolder}/${normalizedFile}`
+}
+
+/**
+ * Resolve lessonId from topic only by scanning all known domain folders.
+ * This supports links that omit `domain`.
+ */
+function resolveLessonIdFromTopic(topic: string): string | null {
+  const rootDir = path.join(process.cwd(), 'topic-content-v4')
+  const topicSlug = slugifyTopicName(topic)
+  const matches: string[] = []
+  const seenFolders = new Set<string>()
+
+  for (const domainFolder of Object.values(DOMAIN_FOLDER_MAP)) {
+    if (!domainFolder || seenFolders.has(domainFolder)) continue
+    seenFolders.add(domainFolder)
+
+    const baseDir = path.join(rootDir, domainFolder)
+    if (!existsSync(baseDir)) continue
+
+    const actualFilename = findMatchingFilenameInDomainFolder(baseDir, topicSlug)
+    if (!actualFilename) continue
+
+    matches.push(`${normalizeForLessonId(domainFolder)}/${normalizeForLessonId(actualFilename)}`)
+  }
+
+  if (matches.length === 0) {
+    console.log(`[manifest] No file found for topic "${topic}" (slug: ${topicSlug}) across all domains`)
+    return null
+  }
+
+  if (matches.length > 1) {
+    console.log(`[manifest] Multiple lesson matches for topic "${topic}" (slug: ${topicSlug}), choosing first:`, matches)
+  }
+
+  return matches[0]
 }
 
 /**
@@ -514,8 +551,7 @@ async function checkPodcastExists(lessonId: string): Promise<{ audio: string | n
  *   - hobby: Optional hobby for metaphor personalization
  *
  * If domain and topic are provided, they will be used to resolve the lessonId.
- * This is the recommended approach as the frontend can pass the same parameters
- * used for loading base content.
+ * If only topic is provided, the API will scan all domains and use the first match.
  *
  * Returns:
  *   - 200: Manifest with resolved chunk URLs
@@ -530,7 +566,7 @@ export async function GET(request: NextRequest) {
   const topic = searchParams.get('topic')
   const hobby = searchParams.get('hobby') || null
 
-  // If domain and topic are provided, resolve the lessonId
+  // If domain and topic are provided, resolve the lessonId first.
   if (domain && topic) {
     const resolved = resolveLessonIdFromDomainTopic(domain, topic)
     if (resolved) {
@@ -541,8 +577,19 @@ export async function GET(request: NextRequest) {
     }
   }
 
+  // Fall back to topic-only resolution when lessonId is still missing.
+  if (!lessonId && topic) {
+    const resolved = resolveLessonIdFromTopic(topic)
+    if (resolved) {
+      console.log(`[manifest] Resolved lessonId from topic="${topic}": ${resolved}`)
+      lessonId = resolved
+    } else {
+      console.log(`[manifest] Could not resolve lessonId from topic="${topic}"`)
+    }
+  }
+
   if (!lessonId) {
-    return NextResponse.json({ error: 'lessonId (or domain + topic) is required' }, { status: 400 })
+    return NextResponse.json({ error: 'lessonId, or topic, or domain + topic is required' }, { status: 400 })
   }
 
   // Check R2 is configured
