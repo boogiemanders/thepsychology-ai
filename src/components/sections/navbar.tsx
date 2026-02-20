@@ -143,9 +143,9 @@ export function Navbar() {
               <Image
                 src="/images/logo.png"
                 alt="Logo"
-                width={40}
-                height={40}
-                className="size-7 md:size-10 invert dark:invert-0"
+                width={420}
+                height={535}
+                className="h-7 w-auto md:h-10 md:w-auto invert dark:invert-0"
               />
               <p className="text-lg font-semibold text-primary">thePsychology.ai</p>
             </Link>
@@ -223,9 +223,9 @@ export function Navbar() {
                     <Image
                       src="/images/logo.png"
                       alt="Logo"
-                      width={40}
-                      height={40}
-                      className="size-7 md:size-10 invert dark:invert-0"
+                      width={420}
+                      height={535}
+                      className="h-7 w-auto md:h-10 md:w-auto invert dark:invert-0"
                     />
                     <p className="text-lg font-semibold text-primary">
                       thePsychology.ai
