@@ -12,6 +12,8 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
+const FINAL_CONTINUOUS_LOOP_BELOW_Y = 674
+const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -64
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
 const HERO_TICKER_TUNER_STORAGE_KEY = "home-layout-tuner-ticker-lift-y"
 const HERO_TITLE_TUNER_STORAGE_KEY = "home-layout-tuner-title-lift-y"
@@ -31,20 +33,20 @@ type HeroCopyOffsets = {
 
 const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 743,
+  tickerY: 699,
   titleX: 0,
-  titleY: 421,
+  titleY: 401,
   ctaX: 0,
-  ctaY: 483,
+  ctaY: 445,
 }
 
 const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 173,
+  tickerY: 200,
   titleX: 0,
-  titleY: 19,
+  titleY: 29,
   ctaX: 0,
-  ctaY: 125,
+  ctaY: 57,
 }
 
 const FINAL_CONTENT_LIFT = 659
@@ -151,6 +153,16 @@ export default function HomeClient() {
     const shouldShowLayoutTuner = params.get("layoutTuner") === "1"
     setShowLayoutTuner(shouldShowLayoutTuner)
 
+    if (!shouldShowLayoutTuner) {
+      setContentLiftTuner(0)
+      setHeroTickerLiftY(0)
+      setHeroTitleLiftY(0)
+      setHeroCtaLiftY(0)
+      setHeroVideoLiftY(0)
+      setHeroVideoZoom(100)
+      return
+    }
+
     const readStoredValue = (key: string, min: number, max: number) => {
       const rawValue = window.sessionStorage.getItem(key)
       if (!rawValue) return 0
@@ -169,6 +181,7 @@ export default function HomeClient() {
 
   useEffect(() => {
     if (typeof window === "undefined") return
+    if (!showLayoutTuner) return
 
     window.sessionStorage.setItem(CONTENT_LIFT_TUNER_STORAGE_KEY, String(contentLiftTuner))
     window.sessionStorage.setItem(HERO_TICKER_TUNER_STORAGE_KEY, String(heroTickerLiftY))
@@ -176,7 +189,7 @@ export default function HomeClient() {
     window.sessionStorage.setItem(HERO_CTA_TUNER_STORAGE_KEY, String(heroCtaLiftY))
     window.sessionStorage.setItem(HERO_VIDEO_TUNER_STORAGE_KEY, String(heroVideoLiftY))
     window.sessionStorage.setItem(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, String(heroVideoZoom))
-  }, [contentLiftTuner, heroTickerLiftY, heroTitleLiftY, heroCtaLiftY, heroVideoLiftY, heroVideoZoom])
+  }, [showLayoutTuner, contentLiftTuner, heroTickerLiftY, heroTitleLiftY, heroCtaLiftY, heroVideoLiftY, heroVideoZoom])
 
   useEffect(() => {
     if (!isHeroVideoReady) return
@@ -298,7 +311,16 @@ export default function HomeClient() {
     ctaY: activeHeroCopyOffsets.ctaY + activeHeroLayout.buttonsY + heroCtaLiftY,
   }
   const activeCopyPresetName = isMobileLayout ? "MOBILE_HERO_COPY_OFFSETS" : "FINAL_HERO_COPY_OFFSETS"
+  const activeContinuousLoopBelowYName = isMobileLayout
+    ? "MOBILE_CONTINUOUS_LOOP_BELOW_Y"
+    : "FINAL_CONTINUOUS_LOOP_BELOW_Y"
+  const activeContinuousLoopBelowY = isMobileLayout
+    ? MOBILE_CONTINUOUS_LOOP_BELOW_Y
+    : FINAL_CONTINUOUS_LOOP_BELOW_Y
+  const effectiveContinuousLoopBelowY = activeContinuousLoopBelowY + contentLiftTuner
   const copyValuesSnippet = [
+    `const ${activeContinuousLoopBelowYName} = ${effectiveContinuousLoopBelowY}`,
+    "",
     `const ${activeCopyPresetName}: HeroCopyOffsets = {`,
     `  tickerX: ${composedHeroOffsets.tickerX},`,
     `  tickerY: ${composedHeroOffsets.tickerY},`,
@@ -311,7 +333,7 @@ export default function HomeClient() {
 
   const baseContentGroupMarginTop =
     activeContentLift > 0 ? -activeContentLift + activeHeroLayout.contentGroupY : activeHeroLayout.contentGroupY
-  const contentGroupMarginTop = baseContentGroupMarginTop + contentLiftTuner
+  const contentGroupMarginTop = baseContentGroupMarginTop + effectiveContinuousLoopBelowY
   const heroVideoTransform =
     heroVideoLiftY !== 0 || heroVideoZoom !== 100
       ? {
@@ -460,6 +482,9 @@ export default function HomeClient() {
           </div>
           <div className="mt-3 rounded border border-white/20 bg-black/35 p-2 font-mono text-[11px] leading-5 text-white/90">
             <p>{activeCopyPresetName}</p>
+            <p>
+              {activeContinuousLoopBelowYName}: {effectiveContinuousLoopBelowY}
+            </p>
             <p>tickerX: {composedHeroOffsets.tickerX}</p>
             <p>tickerY: {composedHeroOffsets.tickerY}</p>
             <p>titleX: {composedHeroOffsets.titleX}</p>

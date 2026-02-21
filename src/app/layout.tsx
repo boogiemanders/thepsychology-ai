@@ -1,6 +1,6 @@
 import type React from "react"
 import { Navbar } from "@/components/sections/navbar"
-import { ThemeProvider } from "@/components/theme-provider"
+import { AppThemeProvider } from "@/components/app-theme-provider"
 import { AuthProvider } from "@/context/auth-context"
 import { ActivityProvider } from "@/context/activity-context"
 import { OnboardingProvider } from "@/components/onboarding"
@@ -109,7 +109,7 @@ export default function RootLayout({
           <ActivityProvider>
             <OnboardingProvider>
               <CopyProtection />
-              <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+              <AppThemeProvider>
                 <SubscriptionGate>
                 <div className="max-w-7xl mx-auto sm:border-x relative">
                   <div className="hidden sm:block w-px h-full border-l border-border absolute top-0 left-6 z-10"></div>
@@ -119,7 +119,7 @@ export default function RootLayout({
                   {children}
                 </div>
               </SubscriptionGate>
-              </ThemeProvider>
+              </AppThemeProvider>
             </OnboardingProvider>
           </ActivityProvider>
         </AuthProvider>
