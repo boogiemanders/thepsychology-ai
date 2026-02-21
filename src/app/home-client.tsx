@@ -12,7 +12,7 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
-const FINAL_CONTINUOUS_LOOP_BELOW_Y = 166
+const FINAL_CONTINUOUS_LOOP_BELOW_Y = 316
 const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -64
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
 const HERO_TICKER_TUNER_STORAGE_KEY = "home-layout-tuner-ticker-lift-y"
