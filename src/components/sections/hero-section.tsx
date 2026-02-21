@@ -58,7 +58,7 @@ export function HeroSection({ isMobileLayout = false, titleYOffset = 0, ctaYOffs
       {/* Flexible spacer — gap where video text shows through */}
       <div
         className="flex-1"
-        style={{ minHeight: isMobileLayout ? "10vh" : "18vh" }}
+        style={{ minHeight: isMobileLayout ? "2vh" : "18vh" }}
       />
 
       {/* CTA Buttons */}

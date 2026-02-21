@@ -13,13 +13,13 @@ import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
 const FINAL_CONTINUOUS_LOOP_BELOW_Y = 1006
-const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -72
+const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -253
 const FINAL_HERO_TITLE_Y = 147
 const FINAL_HERO_CTA_Y = -179
 const FINAL_HERO_BANNER_Y = -153
-const MOBILE_HERO_TITLE_Y = 0
-const MOBILE_HERO_CTA_Y = 0
-const MOBILE_HERO_BANNER_Y = 0
+const MOBILE_HERO_TITLE_Y = 279
+const MOBILE_HERO_CTA_Y = -300
+const MOBILE_HERO_BANNER_Y = -300
 const HERO_OFFSET_REFERENCE_HEIGHT = 900
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
 const HERO_VIDEO_TUNER_STORAGE_KEY = "home-layout-tuner-video-lift-y"
@@ -303,10 +303,13 @@ export default function HomeClient() {
     : FINAL_CONTINUOUS_LOOP_BELOW_Y
   const effectiveContinuousLoopBelowY = activeContinuousLoopBelowY + contentLiftTuner
 
-  const heroOffsetScale = isMobileLayout ? 1 : Math.min(1, viewportHeight / HERO_OFFSET_REFERENCE_HEIGHT)
-  const activeHeroTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : Math.round(FINAL_HERO_TITLE_Y * heroOffsetScale)
-  const activeHeroCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : Math.round(FINAL_HERO_CTA_Y * heroOffsetScale)
-  const activeHeroBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : Math.round(FINAL_HERO_BANNER_Y * heroOffsetScale)
+  const heroOffsetScale = Math.min(1, viewportHeight / HERO_OFFSET_REFERENCE_HEIGHT)
+  const rawTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : FINAL_HERO_TITLE_Y
+  const rawCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : FINAL_HERO_CTA_Y
+  const rawBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : FINAL_HERO_BANNER_Y
+  const activeHeroTitleY = Math.round(rawTitleY * heroOffsetScale)
+  const activeHeroCTAY = Math.round(rawCTAY * heroOffsetScale)
+  const activeHeroBannerY = Math.round(rawBannerY * heroOffsetScale)
   const effectiveHeroTitleY = activeHeroTitleY + heroTitleY
   const effectiveHeroCTAY = activeHeroCTAY + heroCTAY
   const effectiveHeroBannerY = activeHeroBannerY + heroBannerY
