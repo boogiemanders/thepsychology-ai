@@ -20,6 +20,7 @@ const FINAL_HERO_BANNER_Y = -153
 const MOBILE_HERO_TITLE_Y = 0
 const MOBILE_HERO_CTA_Y = 0
 const MOBILE_HERO_BANNER_Y = 0
+const HERO_OFFSET_REFERENCE_HEIGHT = 900
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
 const HERO_VIDEO_TUNER_STORAGE_KEY = "home-layout-tuner-video-lift-y"
 const HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY = "home-layout-tuner-video-zoom"
@@ -47,6 +48,7 @@ export default function HomeClient() {
   const [heroTitleY, setHeroTitleY] = useState(0)
   const [heroCTAY, setHeroCTAY] = useState(0)
   const [heroBannerY, setHeroBannerY] = useState(0)
+  const [viewportHeight, setViewportHeight] = useState(HERO_OFFSET_REFERENCE_HEIGHT)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -69,6 +71,14 @@ export default function HomeClient() {
         mediaQuery.removeListener(updateLayoutMode)
       }
     }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    const updateHeight = () => setViewportHeight(window.innerHeight)
+    updateHeight()
+    window.addEventListener("resize", updateHeight)
+    return () => window.removeEventListener("resize", updateHeight)
   }, [])
 
   useEffect(() => {
@@ -293,9 +303,10 @@ export default function HomeClient() {
     : FINAL_CONTINUOUS_LOOP_BELOW_Y
   const effectiveContinuousLoopBelowY = activeContinuousLoopBelowY + contentLiftTuner
 
-  const activeHeroTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : FINAL_HERO_TITLE_Y
-  const activeHeroCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : FINAL_HERO_CTA_Y
-  const activeHeroBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : FINAL_HERO_BANNER_Y
+  const heroOffsetScale = isMobileLayout ? 1 : Math.min(1, viewportHeight / HERO_OFFSET_REFERENCE_HEIGHT)
+  const activeHeroTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : Math.round(FINAL_HERO_TITLE_Y * heroOffsetScale)
+  const activeHeroCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : Math.round(FINAL_HERO_CTA_Y * heroOffsetScale)
+  const activeHeroBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : Math.round(FINAL_HERO_BANNER_Y * heroOffsetScale)
   const effectiveHeroTitleY = activeHeroTitleY + heroTitleY
   const effectiveHeroCTAY = activeHeroCTAY + heroCTAY
   const effectiveHeroBannerY = activeHeroBannerY + heroBannerY
