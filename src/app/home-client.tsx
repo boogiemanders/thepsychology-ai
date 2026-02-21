@@ -12,44 +12,23 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
-const FINAL_CONTINUOUS_LOOP_BELOW_Y = 316
+const FINAL_CONTINUOUS_LOOP_BELOW_Y = 1006
 const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -72
+const FINAL_HERO_TITLE_Y = 147
+const FINAL_HERO_CTA_Y = -179
+const FINAL_HERO_BANNER_Y = -153
+const MOBILE_HERO_TITLE_Y = 0
+const MOBILE_HERO_CTA_Y = 0
+const MOBILE_HERO_BANNER_Y = 0
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
-const HERO_TICKER_TUNER_STORAGE_KEY = "home-layout-tuner-ticker-lift-y"
-const HERO_TITLE_TUNER_STORAGE_KEY = "home-layout-tuner-title-lift-y"
-const HERO_CTA_TUNER_STORAGE_KEY = "home-layout-tuner-cta-lift-y"
 const HERO_VIDEO_TUNER_STORAGE_KEY = "home-layout-tuner-video-lift-y"
 const HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY = "home-layout-tuner-video-zoom"
+const HERO_TITLE_Y_STORAGE_KEY = "home-layout-tuner-hero-title-y"
+const HERO_CTA_Y_STORAGE_KEY = "home-layout-tuner-hero-cta-y"
+const HERO_BANNER_Y_STORAGE_KEY = "home-layout-tuner-hero-banner-y"
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
 const getLayoutScopedStorageKey = (baseKey: string, isMobile: boolean) =>
   `${baseKey}-${isMobile ? "mobile" : "desktop"}`
-
-type HeroCopyOffsets = {
-  tickerX: number
-  tickerY: number
-  titleX: number
-  titleY: number
-  ctaX: number
-  ctaY: number
-}
-
-const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
-  tickerX: 0,
-  tickerY: 630,
-  titleX: 0,
-  titleY: 352,
-  ctaX: 0,
-  ctaY: 395,
-}
-
-const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
-  tickerX: 0,
-  tickerY: 200,
-  titleX: 0,
-  titleY: 29,
-  ctaX: 0,
-  ctaY: 57,
-}
 
 const FINAL_CONTENT_LIFT = 659
 const FINAL_HERO_VIDEO_START_AT = 9
@@ -57,37 +36,17 @@ const MOBILE_HERO_VIDEO_START_AT = 0
 const MOBILE_HERO_VIDEO_LOOP_END_AT = 8.8
 const MOBILE_CONTENT_LIFT = 0
 
-const HARD_CODED_HERO_LAYOUT = {
-  bannerTextY: -65,
-  buttonsY: -40,
-  videoY: 0,
-  videoBottomCrop: 0,
-  contentGroupY: 199,
-  videoOffsetX: 0,
-  videoOffsetY: 0,
-} as const
-
-const MOBILE_HERO_LAYOUT = {
-  bannerTextY: 0,
-  buttonsY: 0,
-  videoY: 0,
-  videoBottomCrop: 0,
-  contentGroupY: -430,
-  videoOffsetX: 0,
-  videoOffsetY: 0,
-} as const
-
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const [isMobileLayout, setIsMobileLayout] = useState(false)
   const [showLayoutTuner, setShowLayoutTuner] = useState(false)
   const [didCopyCopyValues, setDidCopyCopyValues] = useState(false)
   const [contentLiftTuner, setContentLiftTuner] = useState(0)
-  const [heroTickerLiftY, setHeroTickerLiftY] = useState(0)
-  const [heroTitleLiftY, setHeroTitleLiftY] = useState(0)
-  const [heroCtaLiftY, setHeroCtaLiftY] = useState(0)
   const [heroVideoLiftY, setHeroVideoLiftY] = useState(0)
   const [heroVideoZoom, setHeroVideoZoom] = useState(100)
+  const [heroTitleY, setHeroTitleY] = useState(0)
+  const [heroCTAY, setHeroCTAY] = useState(0)
+  const [heroBannerY, setHeroBannerY] = useState(0)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -158,11 +117,11 @@ export default function HomeClient() {
 
     if (!shouldShowLayoutTuner || !shouldRestoreTunerValues) {
       setContentLiftTuner(0)
-      setHeroTickerLiftY(0)
-      setHeroTitleLiftY(0)
-      setHeroCtaLiftY(0)
       setHeroVideoLiftY(0)
       setHeroVideoZoom(100)
+      setHeroTitleY(0)
+      setHeroCTAY(0)
+      setHeroBannerY(0)
       return
     }
 
@@ -183,11 +142,11 @@ export default function HomeClient() {
     }
 
     setContentLiftTuner(readStoredValue(CONTENT_LIFT_TUNER_STORAGE_KEY, -900, 900))
-    setHeroTickerLiftY(readStoredValue(HERO_TICKER_TUNER_STORAGE_KEY, -240, 600))
-    setHeroTitleLiftY(readStoredValue(HERO_TITLE_TUNER_STORAGE_KEY, -240, 240))
-    setHeroCtaLiftY(readStoredValue(HERO_CTA_TUNER_STORAGE_KEY, -240, 600))
     setHeroVideoLiftY(readStoredValue(HERO_VIDEO_TUNER_STORAGE_KEY, -320, 320))
     setHeroVideoZoom(readStoredValue(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, 50, 200) || 100)
+    setHeroTitleY(readStoredValue(HERO_TITLE_Y_STORAGE_KEY, -300, 300))
+    setHeroCTAY(readStoredValue(HERO_CTA_Y_STORAGE_KEY, -300, 300))
+    setHeroBannerY(readStoredValue(HERO_BANNER_Y_STORAGE_KEY, -300, 300))
   }, [isMobileLayout])
 
   useEffect(() => {
@@ -199,18 +158,6 @@ export default function HomeClient() {
       String(contentLiftTuner),
     )
     window.sessionStorage.setItem(
-      getLayoutScopedStorageKey(HERO_TICKER_TUNER_STORAGE_KEY, isMobileLayout),
-      String(heroTickerLiftY),
-    )
-    window.sessionStorage.setItem(
-      getLayoutScopedStorageKey(HERO_TITLE_TUNER_STORAGE_KEY, isMobileLayout),
-      String(heroTitleLiftY),
-    )
-    window.sessionStorage.setItem(
-      getLayoutScopedStorageKey(HERO_CTA_TUNER_STORAGE_KEY, isMobileLayout),
-      String(heroCtaLiftY),
-    )
-    window.sessionStorage.setItem(
       getLayoutScopedStorageKey(HERO_VIDEO_TUNER_STORAGE_KEY, isMobileLayout),
       String(heroVideoLiftY),
     )
@@ -218,16 +165,19 @@ export default function HomeClient() {
       getLayoutScopedStorageKey(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, isMobileLayout),
       String(heroVideoZoom),
     )
-  }, [
-    showLayoutTuner,
-    isMobileLayout,
-    contentLiftTuner,
-    heroTickerLiftY,
-    heroTitleLiftY,
-    heroCtaLiftY,
-    heroVideoLiftY,
-    heroVideoZoom,
-  ])
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_TITLE_Y_STORAGE_KEY, isMobileLayout),
+      String(heroTitleY),
+    )
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_CTA_Y_STORAGE_KEY, isMobileLayout),
+      String(heroCTAY),
+    )
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_BANNER_Y_STORAGE_KEY, isMobileLayout),
+      String(heroBannerY),
+    )
+  }, [showLayoutTuner, isMobileLayout, contentLiftTuner, heroVideoLiftY, heroVideoZoom, heroTitleY, heroCTAY, heroBannerY])
 
   useEffect(() => {
     if (!isHeroVideoReady) return
@@ -337,40 +287,20 @@ export default function HomeClient() {
     }
   }, [isHeroVideoReady, isMobileLayout])
 
-  const activeHeroCopyOffsets = isMobileLayout ? MOBILE_HERO_COPY_OFFSETS : FINAL_HERO_COPY_OFFSETS
-  const activeHeroLayout = isMobileLayout ? MOBILE_HERO_LAYOUT : HARD_CODED_HERO_LAYOUT
   const activeContentLift = isMobileLayout ? MOBILE_CONTENT_LIFT : FINAL_CONTENT_LIFT
-
-  const defaultTickerY = activeHeroCopyOffsets.tickerY
-  const composedHeroOffsets: HeroCopyOffsets = {
-    ...activeHeroCopyOffsets,
-    tickerY: defaultTickerY + heroTickerLiftY,
-    titleY: activeHeroCopyOffsets.titleY + heroTitleLiftY,
-    ctaY: activeHeroCopyOffsets.ctaY + activeHeroLayout.buttonsY + heroCtaLiftY,
-  }
-  const activeCopyPresetName = isMobileLayout ? "MOBILE_HERO_COPY_OFFSETS" : "FINAL_HERO_COPY_OFFSETS"
-  const activeContinuousLoopBelowYName = isMobileLayout
-    ? "MOBILE_CONTINUOUS_LOOP_BELOW_Y"
-    : "FINAL_CONTINUOUS_LOOP_BELOW_Y"
   const activeContinuousLoopBelowY = isMobileLayout
     ? MOBILE_CONTINUOUS_LOOP_BELOW_Y
     : FINAL_CONTINUOUS_LOOP_BELOW_Y
   const effectiveContinuousLoopBelowY = activeContinuousLoopBelowY + contentLiftTuner
-  const copyValuesSnippet = [
-    `const ${activeContinuousLoopBelowYName} = ${effectiveContinuousLoopBelowY}`,
-    "",
-    `const ${activeCopyPresetName}: HeroCopyOffsets = {`,
-    `  tickerX: ${composedHeroOffsets.tickerX},`,
-    `  tickerY: ${composedHeroOffsets.tickerY},`,
-    `  titleX: ${composedHeroOffsets.titleX},`,
-    `  titleY: ${composedHeroOffsets.titleY},`,
-    `  ctaX: ${composedHeroOffsets.ctaX},`,
-    `  ctaY: ${composedHeroOffsets.ctaY},`,
-    "}",
-  ].join("\n")
 
-  const baseContentGroupMarginTop =
-    activeContentLift > 0 ? -activeContentLift + activeHeroLayout.contentGroupY : activeHeroLayout.contentGroupY
+  const activeHeroTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : FINAL_HERO_TITLE_Y
+  const activeHeroCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : FINAL_HERO_CTA_Y
+  const activeHeroBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : FINAL_HERO_BANNER_Y
+  const effectiveHeroTitleY = activeHeroTitleY + heroTitleY
+  const effectiveHeroCTAY = activeHeroCTAY + heroCTAY
+  const effectiveHeroBannerY = activeHeroBannerY + heroBannerY
+
+  const baseContentGroupMarginTop = activeContentLift > 0 ? -activeContentLift : 0
   const contentGroupMarginTop = baseContentGroupMarginTop + effectiveContinuousLoopBelowY
   const heroVideoTransform =
     heroVideoLiftY !== 0 || heroVideoZoom !== 100
@@ -405,7 +335,12 @@ export default function HomeClient() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
           </div>
           <div className="relative z-10">
-            <HeroSection offsets={composedHeroOffsets} bannerTextLiftY={activeHeroLayout.bannerTextY} />
+            <HeroSection
+              isMobileLayout={isMobileLayout}
+              titleYOffset={effectiveHeroTitleY}
+              ctaYOffset={effectiveHeroCTAY}
+              bannerYOffset={effectiveHeroBannerY}
+            />
           </div>
         </section>
         <div
@@ -442,39 +377,6 @@ export default function HomeClient() {
             />
           </label>
           <label className="mt-3 block text-xs">
-            Ticker row Y: {heroTickerLiftY}px
-            <input
-              type="range"
-              min={-240}
-              max={600}
-              value={heroTickerLiftY}
-              onChange={(event) => setHeroTickerLiftY(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <label className="mt-3 block text-xs">
-            Title row Y: {heroTitleLiftY}px
-            <input
-              type="range"
-              min={-240}
-              max={240}
-              value={heroTitleLiftY}
-              onChange={(event) => setHeroTitleLiftY(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <label className="mt-3 block text-xs">
-            Buttons row Y: {heroCtaLiftY}px
-            <input
-              type="range"
-              min={-240}
-              max={600}
-              value={heroCtaLiftY}
-              onChange={(event) => setHeroCtaLiftY(Number(event.target.value))}
-              className="mt-1 w-full"
-            />
-          </label>
-          <label className="mt-3 block text-xs">
             Video Y: {heroVideoLiftY}px
             <input
               type="range"
@@ -496,17 +398,76 @@ export default function HomeClient() {
               className="mt-1 w-full"
             />
           </label>
+          <label className="mt-3 block text-xs">
+            Title Y: {heroTitleY}px
+            <input
+              type="range"
+              min={-300}
+              max={300}
+              value={heroTitleY}
+              onChange={(event) => setHeroTitleY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <label className="mt-3 block text-xs">
+            Start Free CTA Y: {heroCTAY}px
+            <input
+              type="range"
+              min={-300}
+              max={300}
+              value={heroCTAY}
+              onChange={(event) => setHeroCTAY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <label className="mt-3 block text-xs">
+            Banner text Y: {heroBannerY}px
+            <input
+              type="range"
+              min={-300}
+              max={300}
+              value={heroBannerY}
+              onChange={(event) => setHeroBannerY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <div className="mt-3 rounded border border-white/15 bg-white/5 p-2 text-[11px] font-mono leading-relaxed space-y-1">
+            <div>
+              <span className="text-white/50">{isMobileLayout ? 'MOBILE' : 'FINAL'}_CONTINUOUS_LOOP_BELOW_Y: </span>
+              <span className="text-green-400 font-bold">{effectiveContinuousLoopBelowY}px</span>
+            </div>
+            <div>
+              <span className="text-white/50">{isMobileLayout ? 'MOBILE' : 'FINAL'}_HERO_TITLE_Y: </span>
+              <span className="text-green-400 font-bold">{effectiveHeroTitleY}px</span>
+            </div>
+            <div>
+              <span className="text-white/50">{isMobileLayout ? 'MOBILE' : 'FINAL'}_HERO_CTA_Y: </span>
+              <span className="text-green-400 font-bold">{effectiveHeroCTAY}px</span>
+            </div>
+            <div>
+              <span className="text-white/50">{isMobileLayout ? 'MOBILE' : 'FINAL'}_HERO_BANNER_Y: </span>
+              <span className="text-green-400 font-bold">{effectiveHeroBannerY}px</span>
+            </div>
+          </div>
           <div className="mt-3 flex gap-2">
             <button
               type="button"
               onClick={() => {
-                setHeroTickerLiftY(0)
-                setHeroTitleLiftY(0)
-                setHeroCtaLiftY(0)
+                const prefix = isMobileLayout ? 'MOBILE' : 'FINAL'
+                navigator.clipboard.writeText(
+                  [
+                    `const ${prefix}_CONTINUOUS_LOOP_BELOW_Y = ${effectiveContinuousLoopBelowY}`,
+                    `const ${prefix}_HERO_TITLE_Y = ${effectiveHeroTitleY}`,
+                    `const ${prefix}_HERO_CTA_Y = ${effectiveHeroCTAY}`,
+                    `const ${prefix}_HERO_BANNER_Y = ${effectiveHeroBannerY}`,
+                  ].join('\n')
+                )
+                setDidCopyCopyValues(true)
+                setTimeout(() => setDidCopyCopyValues(false), 1500)
               }}
               className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
             >
-              Reset Rows
+              {didCopyCopyValues ? 'Copied!' : 'Copy Values'}
             </button>
             <button
               type="button"
@@ -514,40 +475,15 @@ export default function HomeClient() {
                 setContentLiftTuner(0)
                 setHeroVideoLiftY(0)
                 setHeroVideoZoom(100)
+                setHeroTitleY(0)
+                setHeroCTAY(0)
+                setHeroBannerY(0)
               }}
               className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
             >
-              Reset Layout
+              Reset All
             </button>
           </div>
-          <div className="mt-3 rounded border border-white/20 bg-black/35 p-2 font-mono text-[11px] leading-5 text-white/90">
-            <p>{activeCopyPresetName}</p>
-            <p>
-              {activeContinuousLoopBelowYName}: {effectiveContinuousLoopBelowY}
-            </p>
-            <p>tickerX: {composedHeroOffsets.tickerX}</p>
-            <p>tickerY: {composedHeroOffsets.tickerY}</p>
-            <p>titleX: {composedHeroOffsets.titleX}</p>
-            <p>titleY: {composedHeroOffsets.titleY}</p>
-            <p>ctaX: {composedHeroOffsets.ctaX}</p>
-            <p>ctaY: {composedHeroOffsets.ctaY}</p>
-          </div>
-          <button
-            type="button"
-            onClick={async () => {
-              if (typeof navigator === "undefined" || !navigator.clipboard) return
-              try {
-                await navigator.clipboard.writeText(copyValuesSnippet)
-                setDidCopyCopyValues(true)
-                window.setTimeout(() => setDidCopyCopyValues(false), 1200)
-              } catch {
-                // Ignore clipboard write failures.
-              }
-            }}
-            className="mt-2 inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
-          >
-            {didCopyCopyValues ? "Copied Values" : "Copy Values"}
-          </button>
         </div>
       ) : null}
     </>
