@@ -13,7 +13,7 @@ import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
 const FINAL_CONTINUOUS_LOOP_BELOW_Y = 316
-const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -64
+const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -72
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
 const HERO_TICKER_TUNER_STORAGE_KEY = "home-layout-tuner-ticker-lift-y"
 const HERO_TITLE_TUNER_STORAGE_KEY = "home-layout-tuner-title-lift-y"
@@ -39,7 +39,7 @@ const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   titleX: 0,
   titleY: 352,
   ctaX: 0,
-  ctaY: 379,
+  ctaY: 388,
 }
 
 const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
@@ -389,7 +389,7 @@ export default function HomeClient() {
               <video
                 id="hero-video"
                 ref={heroVideoRef}
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full object-contain sm:object-cover object-center"
                 style={heroVideoTransform}
                 src="/hero-background.mp4?v=refresh7"
                 autoPlay
