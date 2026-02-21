@@ -39,7 +39,7 @@ const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   titleX: 0,
   titleY: 352,
   ctaX: 0,
-  ctaY: 385,
+  ctaY: 395,
 }
 
 const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
