@@ -12,6 +12,13 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
+const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
+const HERO_TICKER_TUNER_STORAGE_KEY = "home-layout-tuner-ticker-lift-y"
+const HERO_TITLE_TUNER_STORAGE_KEY = "home-layout-tuner-title-lift-y"
+const HERO_CTA_TUNER_STORAGE_KEY = "home-layout-tuner-cta-lift-y"
+const HERO_VIDEO_TUNER_STORAGE_KEY = "home-layout-tuner-video-lift-y"
+const HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY = "home-layout-tuner-video-zoom"
+const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
 
 type HeroCopyOffsets = {
   tickerX: number
@@ -22,43 +29,22 @@ type HeroCopyOffsets = {
   ctaY: number
 }
 
-type HeroVideoLayout = {
-  scale: number
-  offsetX: number
-  offsetY: number
-  bottomCrop: number
-}
-
 const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 337,
+  tickerY: 743,
   titleX: 0,
-  titleY: 47,
+  titleY: 421,
   ctaX: 0,
-  ctaY: 253,
+  ctaY: 483,
 }
 
 const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 120,
+  tickerY: 173,
   titleX: 0,
-  titleY: -20,
+  titleY: 19,
   ctaX: 0,
-  ctaY: 52,
-}
-
-const FINAL_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
-  scale: 100,
-  offsetX: 0,
-  offsetY: -56,
-  bottomCrop: 0,
-}
-
-const MOBILE_HERO_VIDEO_LAYOUT: HeroVideoLayout = {
-  scale: 100,
-  offsetX: 0,
-  offsetY: 0,
-  bottomCrop: 0,
+  ctaY: 125,
 }
 
 const FINAL_CONTENT_LIFT = 659
@@ -70,7 +56,7 @@ const MOBILE_CONTENT_LIFT = 0
 const HARD_CODED_HERO_LAYOUT = {
   bannerTextY: -65,
   buttonsY: -64,
-  videoY: -84,
+  videoY: 0,
   videoBottomCrop: 0,
   contentGroupY: 199,
   videoOffsetX: 0,
@@ -80,8 +66,8 @@ const HARD_CODED_HERO_LAYOUT = {
 const MOBILE_HERO_LAYOUT = {
   bannerTextY: 0,
   buttonsY: 0,
-  videoY: -228,
-  videoBottomCrop: 80,
+  videoY: 0,
+  videoBottomCrop: 0,
   contentGroupY: -430,
   videoOffsetX: 0,
   videoOffsetY: 0,
@@ -90,6 +76,14 @@ const MOBILE_HERO_LAYOUT = {
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const [isMobileLayout, setIsMobileLayout] = useState(false)
+  const [showLayoutTuner, setShowLayoutTuner] = useState(false)
+  const [didCopyCopyValues, setDidCopyCopyValues] = useState(false)
+  const [contentLiftTuner, setContentLiftTuner] = useState(0)
+  const [heroTickerLiftY, setHeroTickerLiftY] = useState(0)
+  const [heroTitleLiftY, setHeroTitleLiftY] = useState(0)
+  const [heroCtaLiftY, setHeroCtaLiftY] = useState(0)
+  const [heroVideoLiftY, setHeroVideoLiftY] = useState(0)
+  const [heroVideoZoom, setHeroVideoZoom] = useState(100)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -149,6 +143,40 @@ export default function HomeClient() {
   useEffect(() => {
     setIsHeroVideoReady(true)
   }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const params = new URLSearchParams(window.location.search)
+    const shouldShowLayoutTuner = params.get("layoutTuner") === "1"
+    setShowLayoutTuner(shouldShowLayoutTuner)
+
+    const readStoredValue = (key: string, min: number, max: number) => {
+      const rawValue = window.sessionStorage.getItem(key)
+      if (!rawValue) return 0
+      const parsed = Number(rawValue)
+      if (!Number.isFinite(parsed)) return 0
+      return clamp(parsed, min, max)
+    }
+
+    setContentLiftTuner(readStoredValue(CONTENT_LIFT_TUNER_STORAGE_KEY, -900, 900))
+    setHeroTickerLiftY(readStoredValue(HERO_TICKER_TUNER_STORAGE_KEY, -240, 600))
+    setHeroTitleLiftY(readStoredValue(HERO_TITLE_TUNER_STORAGE_KEY, -240, 240))
+    setHeroCtaLiftY(readStoredValue(HERO_CTA_TUNER_STORAGE_KEY, -240, 600))
+    setHeroVideoLiftY(readStoredValue(HERO_VIDEO_TUNER_STORAGE_KEY, -320, 320))
+    setHeroVideoZoom(readStoredValue(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, 50, 200) || 100)
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    window.sessionStorage.setItem(CONTENT_LIFT_TUNER_STORAGE_KEY, String(contentLiftTuner))
+    window.sessionStorage.setItem(HERO_TICKER_TUNER_STORAGE_KEY, String(heroTickerLiftY))
+    window.sessionStorage.setItem(HERO_TITLE_TUNER_STORAGE_KEY, String(heroTitleLiftY))
+    window.sessionStorage.setItem(HERO_CTA_TUNER_STORAGE_KEY, String(heroCtaLiftY))
+    window.sessionStorage.setItem(HERO_VIDEO_TUNER_STORAGE_KEY, String(heroVideoLiftY))
+    window.sessionStorage.setItem(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, String(heroVideoZoom))
+  }, [contentLiftTuner, heroTickerLiftY, heroTitleLiftY, heroCtaLiftY, heroVideoLiftY, heroVideoZoom])
 
   useEffect(() => {
     if (!isHeroVideoReady) return
@@ -259,24 +287,38 @@ export default function HomeClient() {
   }, [isHeroVideoReady, isMobileLayout])
 
   const activeHeroCopyOffsets = isMobileLayout ? MOBILE_HERO_COPY_OFFSETS : FINAL_HERO_COPY_OFFSETS
-  const activeHeroVideoLayout = isMobileLayout ? MOBILE_HERO_VIDEO_LAYOUT : FINAL_HERO_VIDEO_LAYOUT
   const activeHeroLayout = isMobileLayout ? MOBILE_HERO_LAYOUT : HARD_CODED_HERO_LAYOUT
   const activeContentLift = isMobileLayout ? MOBILE_CONTENT_LIFT : FINAL_CONTENT_LIFT
 
   const defaultTickerY = activeHeroCopyOffsets.tickerY
   const composedHeroOffsets: HeroCopyOffsets = {
     ...activeHeroCopyOffsets,
-    tickerY: defaultTickerY,
-    ctaY: activeHeroCopyOffsets.ctaY + activeHeroLayout.buttonsY,
+    tickerY: defaultTickerY + heroTickerLiftY,
+    titleY: activeHeroCopyOffsets.titleY + heroTitleLiftY,
+    ctaY: activeHeroCopyOffsets.ctaY + activeHeroLayout.buttonsY + heroCtaLiftY,
   }
+  const activeCopyPresetName = isMobileLayout ? "MOBILE_HERO_COPY_OFFSETS" : "FINAL_HERO_COPY_OFFSETS"
+  const copyValuesSnippet = [
+    `const ${activeCopyPresetName}: HeroCopyOffsets = {`,
+    `  tickerX: ${composedHeroOffsets.tickerX},`,
+    `  tickerY: ${composedHeroOffsets.tickerY},`,
+    `  titleX: ${composedHeroOffsets.titleX},`,
+    `  titleY: ${composedHeroOffsets.titleY},`,
+    `  ctaX: ${composedHeroOffsets.ctaX},`,
+    `  ctaY: ${composedHeroOffsets.ctaY},`,
+    "}",
+  ].join("\n")
 
-  const heroVideoOffsetX = activeHeroVideoLayout.offsetX + activeHeroLayout.videoOffsetX
-  const heroVideoOffsetY =
-    activeHeroVideoLayout.offsetY + activeHeroLayout.videoOffsetY + activeHeroLayout.videoY
-  const heroVideoScale = activeHeroVideoLayout.scale
-  const heroVideoBottomCrop = Math.max(0, activeHeroVideoLayout.bottomCrop + activeHeroLayout.videoBottomCrop)
-  const contentGroupMarginTop =
+  const baseContentGroupMarginTop =
     activeContentLift > 0 ? -activeContentLift + activeHeroLayout.contentGroupY : activeHeroLayout.contentGroupY
+  const contentGroupMarginTop = baseContentGroupMarginTop + contentLiftTuner
+  const heroVideoTransform =
+    heroVideoLiftY !== 0 || heroVideoZoom !== 100
+      ? {
+          transform: `translateY(${heroVideoLiftY}px) scale(${heroVideoZoom / 100})`,
+          transformOrigin: "center center",
+        }
+      : undefined
 
   return (
     <>
@@ -287,14 +329,9 @@ export default function HomeClient() {
               <video
                 id="hero-video"
                 ref={heroVideoRef}
-                className="h-full w-full object-contain object-center md:object-cover lg:min-h-[750px] lg:min-w-full"
-                style={{
-                  transform: `translate(${heroVideoOffsetX}px, ${heroVideoOffsetY}px) scale(${heroVideoScale / 100})`,
-                  transformOrigin: "center center",
-                  clipPath: `inset(0 0 ${heroVideoBottomCrop}px 0)`,
-                  WebkitClipPath: `inset(0 0 ${heroVideoBottomCrop}px 0)`,
-                }}
-                src="/hero-background.mp4?v=refresh6"
+                className="h-full w-full object-contain object-center"
+                style={heroVideoTransform}
+                src="/hero-background.mp4?v=refresh7"
                 autoPlay
                 muted
                 loop
@@ -327,6 +364,127 @@ export default function HomeClient() {
           <FooterSection />
         </div>
       </main>
+      {showLayoutTuner ? (
+        <div className="fixed bottom-4 right-4 z-50 w-72 rounded-md border border-white/25 bg-black/70 p-3 text-white backdrop-blur-sm">
+          <p className="text-xs font-semibold tracking-wide uppercase">Layout Tuner</p>
+          <p className="mt-1 text-[11px] text-white/75">Use ?layoutTuner=1 in production</p>
+          <label className="mt-3 block text-xs">
+            Continuous loop + below Y: {contentLiftTuner}px
+            <input
+              type="range"
+              min={-900}
+              max={900}
+              value={contentLiftTuner}
+              onChange={(event) => setContentLiftTuner(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <label className="mt-3 block text-xs">
+            Ticker row Y: {heroTickerLiftY}px
+            <input
+              type="range"
+              min={-240}
+              max={600}
+              value={heroTickerLiftY}
+              onChange={(event) => setHeroTickerLiftY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <label className="mt-3 block text-xs">
+            Title row Y: {heroTitleLiftY}px
+            <input
+              type="range"
+              min={-240}
+              max={240}
+              value={heroTitleLiftY}
+              onChange={(event) => setHeroTitleLiftY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <label className="mt-3 block text-xs">
+            Buttons row Y: {heroCtaLiftY}px
+            <input
+              type="range"
+              min={-240}
+              max={600}
+              value={heroCtaLiftY}
+              onChange={(event) => setHeroCtaLiftY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <label className="mt-3 block text-xs">
+            Video Y: {heroVideoLiftY}px
+            <input
+              type="range"
+              min={-320}
+              max={320}
+              value={heroVideoLiftY}
+              onChange={(event) => setHeroVideoLiftY(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <label className="mt-3 block text-xs">
+            Video zoom: {heroVideoZoom}%
+            <input
+              type="range"
+              min={50}
+              max={200}
+              value={heroVideoZoom}
+              onChange={(event) => setHeroVideoZoom(Number(event.target.value))}
+              className="mt-1 w-full"
+            />
+          </label>
+          <div className="mt-3 flex gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setHeroTickerLiftY(0)
+                setHeroTitleLiftY(0)
+                setHeroCtaLiftY(0)
+              }}
+              className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
+            >
+              Reset Rows
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setContentLiftTuner(0)
+                setHeroVideoLiftY(0)
+                setHeroVideoZoom(100)
+              }}
+              className="inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
+            >
+              Reset Layout
+            </button>
+          </div>
+          <div className="mt-3 rounded border border-white/20 bg-black/35 p-2 font-mono text-[11px] leading-5 text-white/90">
+            <p>{activeCopyPresetName}</p>
+            <p>tickerX: {composedHeroOffsets.tickerX}</p>
+            <p>tickerY: {composedHeroOffsets.tickerY}</p>
+            <p>titleX: {composedHeroOffsets.titleX}</p>
+            <p>titleY: {composedHeroOffsets.titleY}</p>
+            <p>ctaX: {composedHeroOffsets.ctaX}</p>
+            <p>ctaY: {composedHeroOffsets.ctaY}</p>
+          </div>
+          <button
+            type="button"
+            onClick={async () => {
+              if (typeof navigator === "undefined" || !navigator.clipboard) return
+              try {
+                await navigator.clipboard.writeText(copyValuesSnippet)
+                setDidCopyCopyValues(true)
+                window.setTimeout(() => setDidCopyCopyValues(false), 1200)
+              } catch {
+                // Ignore clipboard write failures.
+              }
+            }}
+            className="mt-2 inline-flex h-8 items-center justify-center rounded border border-white/30 px-3 text-xs text-white hover:bg-white/10"
+          >
+            {didCopyCopyValues ? "Copied Values" : "Copy Values"}
+          </button>
+        </div>
+      ) : null}
     </>
   )
 }
