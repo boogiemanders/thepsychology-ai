@@ -389,7 +389,7 @@ export default function HomeClient() {
               <video
                 id="hero-video"
                 ref={heroVideoRef}
-                className="h-full w-full object-contain object-center"
+                className="h-full w-full object-cover object-center"
                 style={heroVideoTransform}
                 src="/hero-background.mp4?v=refresh7"
                 autoPlay
