@@ -12,7 +12,7 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
-const FINAL_CONTINUOUS_LOOP_BELOW_Y = 674
+const FINAL_CONTINUOUS_LOOP_BELOW_Y = 216
 const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -64
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
 const HERO_TICKER_TUNER_STORAGE_KEY = "home-layout-tuner-ticker-lift-y"
@@ -21,6 +21,8 @@ const HERO_CTA_TUNER_STORAGE_KEY = "home-layout-tuner-cta-lift-y"
 const HERO_VIDEO_TUNER_STORAGE_KEY = "home-layout-tuner-video-lift-y"
 const HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY = "home-layout-tuner-video-zoom"
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
+const getLayoutScopedStorageKey = (baseKey: string, isMobile: boolean) =>
+  `${baseKey}-${isMobile ? "mobile" : "desktop"}`
 
 type HeroCopyOffsets = {
   tickerX: number
@@ -33,11 +35,11 @@ type HeroCopyOffsets = {
 
 const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 699,
+  tickerY: 459,
   titleX: 0,
-  titleY: 401,
+  titleY: 174,
   ctaX: 0,
-  ctaY: 445,
+  ctaY: 206,
 }
 
 const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
@@ -57,7 +59,7 @@ const MOBILE_CONTENT_LIFT = 0
 
 const HARD_CODED_HERO_LAYOUT = {
   bannerTextY: -65,
-  buttonsY: -64,
+  buttonsY: -40,
   videoY: 0,
   videoBottomCrop: 0,
   contentGroupY: 199,
@@ -151,9 +153,10 @@ export default function HomeClient() {
 
     const params = new URLSearchParams(window.location.search)
     const shouldShowLayoutTuner = params.get("layoutTuner") === "1"
+    const shouldRestoreTunerValues = params.get("restoreTuner") === "1"
     setShowLayoutTuner(shouldShowLayoutTuner)
 
-    if (!shouldShowLayoutTuner) {
+    if (!shouldShowLayoutTuner || !shouldRestoreTunerValues) {
       setContentLiftTuner(0)
       setHeroTickerLiftY(0)
       setHeroTitleLiftY(0)
@@ -164,7 +167,15 @@ export default function HomeClient() {
     }
 
     const readStoredValue = (key: string, min: number, max: number) => {
-      const rawValue = window.sessionStorage.getItem(key)
+      const layoutScopedKey = getLayoutScopedStorageKey(key, isMobileLayout)
+      let rawValue = window.sessionStorage.getItem(layoutScopedKey)
+      if (!rawValue) {
+        const legacyRawValue = window.sessionStorage.getItem(key)
+        if (legacyRawValue) {
+          rawValue = legacyRawValue
+          window.sessionStorage.setItem(layoutScopedKey, legacyRawValue)
+        }
+      }
       if (!rawValue) return 0
       const parsed = Number(rawValue)
       if (!Number.isFinite(parsed)) return 0
@@ -177,19 +188,46 @@ export default function HomeClient() {
     setHeroCtaLiftY(readStoredValue(HERO_CTA_TUNER_STORAGE_KEY, -240, 600))
     setHeroVideoLiftY(readStoredValue(HERO_VIDEO_TUNER_STORAGE_KEY, -320, 320))
     setHeroVideoZoom(readStoredValue(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, 50, 200) || 100)
-  }, [])
+  }, [isMobileLayout])
 
   useEffect(() => {
     if (typeof window === "undefined") return
     if (!showLayoutTuner) return
 
-    window.sessionStorage.setItem(CONTENT_LIFT_TUNER_STORAGE_KEY, String(contentLiftTuner))
-    window.sessionStorage.setItem(HERO_TICKER_TUNER_STORAGE_KEY, String(heroTickerLiftY))
-    window.sessionStorage.setItem(HERO_TITLE_TUNER_STORAGE_KEY, String(heroTitleLiftY))
-    window.sessionStorage.setItem(HERO_CTA_TUNER_STORAGE_KEY, String(heroCtaLiftY))
-    window.sessionStorage.setItem(HERO_VIDEO_TUNER_STORAGE_KEY, String(heroVideoLiftY))
-    window.sessionStorage.setItem(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, String(heroVideoZoom))
-  }, [showLayoutTuner, contentLiftTuner, heroTickerLiftY, heroTitleLiftY, heroCtaLiftY, heroVideoLiftY, heroVideoZoom])
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(CONTENT_LIFT_TUNER_STORAGE_KEY, isMobileLayout),
+      String(contentLiftTuner),
+    )
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_TICKER_TUNER_STORAGE_KEY, isMobileLayout),
+      String(heroTickerLiftY),
+    )
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_TITLE_TUNER_STORAGE_KEY, isMobileLayout),
+      String(heroTitleLiftY),
+    )
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_CTA_TUNER_STORAGE_KEY, isMobileLayout),
+      String(heroCtaLiftY),
+    )
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_VIDEO_TUNER_STORAGE_KEY, isMobileLayout),
+      String(heroVideoLiftY),
+    )
+    window.sessionStorage.setItem(
+      getLayoutScopedStorageKey(HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY, isMobileLayout),
+      String(heroVideoZoom),
+    )
+  }, [
+    showLayoutTuner,
+    isMobileLayout,
+    contentLiftTuner,
+    heroTickerLiftY,
+    heroTitleLiftY,
+    heroCtaLiftY,
+    heroVideoLiftY,
+    heroVideoZoom,
+  ])
 
   useEffect(() => {
     if (!isHeroVideoReady) return
@@ -389,7 +427,9 @@ export default function HomeClient() {
       {showLayoutTuner ? (
         <div className="fixed bottom-4 right-4 z-50 w-72 rounded-md border border-white/25 bg-black/70 p-3 text-white backdrop-blur-sm">
           <p className="text-xs font-semibold tracking-wide uppercase">Layout Tuner</p>
-          <p className="mt-1 text-[11px] text-white/75">Use ?layoutTuner=1 in production</p>
+          <p className="mt-1 text-[11px] text-white/75">
+            Use ?layoutTuner=1 (add &amp;restoreTuner=1 to load saved values)
+          </p>
           <label className="mt-3 block text-xs">
             Continuous loop + below Y: {contentLiftTuner}px
             <input
