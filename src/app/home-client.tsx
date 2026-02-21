@@ -35,11 +35,11 @@ type HeroCopyOffsets = {
 
 const FINAL_HERO_COPY_OFFSETS: HeroCopyOffsets = {
   tickerX: 0,
-  tickerY: 711,
+  tickerY: 630,
   titleX: 0,
-  titleY: 414,
+  titleY: 352,
   ctaX: 0,
-  ctaY: 500,
+  ctaY: 379,
 }
 
 const MOBILE_HERO_COPY_OFFSETS: HeroCopyOffsets = {
