@@ -331,7 +331,7 @@ export default function HomeClient() {
   return (
     <>
       <main className="flex flex-col items-center justify-center min-h-screen w-full">
-        <section className="relative w-full min-h-screen overflow-hidden">
+        <section className="relative w-full h-[min(100vh,820px)] overflow-hidden">
           <div className="absolute inset-0 -z-10 pointer-events-none bg-black flex items-start justify-center">
             {isHeroVideoReady ? (
               <video

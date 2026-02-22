@@ -28,7 +28,7 @@ export function HeroSection({ isMobileLayout = false, titleYOffset = 0, ctaYOffs
   }
 
   return (
-    <section id="hero" className="w-full relative min-h-screen flex flex-col items-center px-6">
+    <section id="hero" className="w-full relative h-[min(100vh,820px)] flex flex-col items-center px-6">
       {/* Nav clearance */}
       <div className="shrink-0" style={{ height: "12vh" }} />
 
