@@ -12,11 +12,11 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
-const FINAL_CONTINUOUS_LOOP_BELOW_Y = 1006
+const FINAL_CONTINUOUS_LOOP_BELOW_Y = 658
 const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -253
-const FINAL_HERO_TITLE_Y = 147
-const FINAL_HERO_CTA_Y = -179
-const FINAL_HERO_BANNER_Y = -153
+const FINAL_HERO_TITLE_Y = 134
+const FINAL_HERO_CTA_Y = -163
+const FINAL_HERO_BANNER_Y = -139
 const MOBILE_HERO_TITLE_Y = 279
 const MOBILE_HERO_CTA_Y = -300
 const MOBILE_HERO_BANNER_Y = -300
@@ -49,6 +49,7 @@ export default function HomeClient() {
   const [heroCTAY, setHeroCTAY] = useState(0)
   const [heroBannerY, setHeroBannerY] = useState(0)
   const [viewportHeight, setViewportHeight] = useState(HERO_OFFSET_REFERENCE_HEIGHT)
+  const [viewportWidth, setViewportWidth] = useState(0)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -75,10 +76,13 @@ export default function HomeClient() {
 
   useEffect(() => {
     if (typeof window === "undefined") return
-    const updateHeight = () => setViewportHeight(window.innerHeight)
-    updateHeight()
-    window.addEventListener("resize", updateHeight)
-    return () => window.removeEventListener("resize", updateHeight)
+    const updateSize = () => {
+      setViewportHeight(window.innerHeight)
+      setViewportWidth(window.innerWidth)
+    }
+    updateSize()
+    window.addEventListener("resize", updateSize)
+    return () => window.removeEventListener("resize", updateSize)
   }, [])
 
   useEffect(() => {
@@ -303,7 +307,7 @@ export default function HomeClient() {
     : FINAL_CONTINUOUS_LOOP_BELOW_Y
   const effectiveContinuousLoopBelowY = activeContinuousLoopBelowY + contentLiftTuner
 
-  const heroOffsetScale = Math.min(1, viewportHeight / HERO_OFFSET_REFERENCE_HEIGHT)
+  const heroOffsetScale = Math.min(820, viewportHeight) / HERO_OFFSET_REFERENCE_HEIGHT
   const rawTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : FINAL_HERO_TITLE_Y
   const rawCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : FINAL_HERO_CTA_Y
   const rawBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : FINAL_HERO_BANNER_Y
@@ -376,6 +380,9 @@ export default function HomeClient() {
       {showLayoutTuner ? (
         <div className="fixed bottom-4 right-4 z-50 w-72 rounded-md border border-white/25 bg-black/70 p-3 text-white backdrop-blur-sm">
           <p className="text-xs font-semibold tracking-wide uppercase">Layout Tuner</p>
+          <p className="mt-1 text-[11px] font-mono text-yellow-300">
+            {viewportWidth} × {viewportHeight}px &middot; scale {heroOffsetScale.toFixed(2)}
+          </p>
           <p className="mt-1 text-[11px] text-white/75">
             Use ?layoutTuner=1 (add &amp;restoreTuner=1 to load saved values)
           </p>
