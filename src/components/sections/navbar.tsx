@@ -120,6 +120,7 @@ export function Navbar() {
 
   return (
     <header
+      data-site-navbar="true"
       className={cn(
         "sticky z-50 flex justify-center transition-all duration-300",
         hasScrolled ? "top-2 mx-2 md:top-8 md:mx-0" : "top-2 mx-2 md:top-6 md:mx-0",

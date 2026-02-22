@@ -14,9 +14,9 @@ import { TestimonialSection } from "@/components/sections/testimonial-section"
 const MOBILE_LAYOUT_BREAKPOINT = 768
 const FINAL_CONTINUOUS_LOOP_BELOW_Y = 658
 const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -253
-const FINAL_HERO_TITLE_Y = 134
-const FINAL_HERO_CTA_Y = -163
-const FINAL_HERO_BANNER_Y = -139
+const FINAL_HERO_TITLE_Y = 329
+const FINAL_HERO_CTA_Y = 58
+const FINAL_HERO_BANNER_Y = 61
 const MOBILE_HERO_TITLE_Y = 279
 const MOBILE_HERO_CTA_Y = -300
 const MOBILE_HERO_BANNER_Y = -300
@@ -36,6 +36,12 @@ const FINAL_HERO_VIDEO_START_AT = 9
 const MOBILE_HERO_VIDEO_START_AT = 0
 const MOBILE_HERO_VIDEO_LOOP_END_AT = 8.8
 const MOBILE_CONTENT_LIFT = 0
+const DESKTOP_NAVBAR_FALLBACK_HEIGHT = 64
+const MOBILE_NAVBAR_FALLBACK_HEIGHT = 60
+const DESKTOP_NAVBAR_FALLBACK_VISUAL_OFFSET = 24
+const MOBILE_NAVBAR_FALLBACK_VISUAL_OFFSET = 8
+const DESKTOP_FROZEN_HERO_OFFSET_SCALE = 820 / HERO_OFFSET_REFERENCE_HEIGHT
+const SHORT_VIEWPORT_UNIFORM_LIFT_FACTOR = 0.52
 
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
@@ -50,6 +56,9 @@ export default function HomeClient() {
   const [heroBannerY, setHeroBannerY] = useState(0)
   const [viewportHeight, setViewportHeight] = useState(HERO_OFFSET_REFERENCE_HEIGHT)
   const [viewportWidth, setViewportWidth] = useState(0)
+  const [navbarBottom, setNavbarBottom] = useState(0)
+  const [navbarHeight, setNavbarHeight] = useState(0)
+  const [hasNavbarMetrics, setHasNavbarMetrics] = useState(false)
   const heroVideoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
@@ -83,6 +92,34 @@ export default function HomeClient() {
     updateSize()
     window.addEventListener("resize", updateSize)
     return () => window.removeEventListener("resize", updateSize)
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const updateNavbarMetrics = () => {
+      const navbar = document.querySelector<HTMLElement>('header[data-site-navbar="true"]')
+      if (!navbar) return
+
+      const rect = navbar.getBoundingClientRect()
+      const nextBottom = Math.max(0, Math.round(rect.bottom))
+      const nextHeight = Math.max(0, Math.round(navbar.offsetHeight))
+
+      setNavbarBottom((prevBottom) => (prevBottom === nextBottom ? prevBottom : nextBottom))
+      setNavbarHeight((prevHeight) => (prevHeight === nextHeight ? prevHeight : nextHeight))
+      setHasNavbarMetrics(true)
+    }
+
+    updateNavbarMetrics()
+    const rafId = window.requestAnimationFrame(updateNavbarMetrics)
+    window.addEventListener("resize", updateNavbarMetrics)
+    window.addEventListener("scroll", updateNavbarMetrics, { passive: true })
+
+    return () => {
+      window.cancelAnimationFrame(rafId)
+      window.removeEventListener("resize", updateNavbarMetrics)
+      window.removeEventListener("scroll", updateNavbarMetrics)
+    }
   }, [])
 
   useEffect(() => {
@@ -307,16 +344,39 @@ export default function HomeClient() {
     : FINAL_CONTINUOUS_LOOP_BELOW_Y
   const effectiveContinuousLoopBelowY = activeContinuousLoopBelowY + contentLiftTuner
 
-  const heroOffsetScale = Math.min(820, viewportHeight) / HERO_OFFSET_REFERENCE_HEIGHT
+  const fallbackNavbarHeight = isMobileLayout ? MOBILE_NAVBAR_FALLBACK_HEIGHT : DESKTOP_NAVBAR_FALLBACK_HEIGHT
+  const fallbackNavbarVisualOffset = isMobileLayout
+    ? MOBILE_NAVBAR_FALLBACK_VISUAL_OFFSET
+    : DESKTOP_NAVBAR_FALLBACK_VISUAL_OFFSET
+  const effectiveNavbarHeight = hasNavbarMetrics ? navbarHeight : fallbackNavbarHeight
+  const effectiveNavbarBottom = hasNavbarMetrics
+    ? navbarBottom
+    : fallbackNavbarHeight + fallbackNavbarVisualOffset
+  const effectiveNavbarVisualOffset = Math.max(
+    0,
+    hasNavbarMetrics ? effectiveNavbarBottom - effectiveNavbarHeight : fallbackNavbarVisualOffset,
+  )
+  const heroAvailableHeight = Math.max(0, viewportHeight - effectiveNavbarBottom)
+  const heroContentFrameHeight = Math.max(0, Math.min(820, viewportHeight) - effectiveNavbarBottom)
+  const heroSectionStyle = {
+    height: `${heroAvailableHeight}px`,
+    marginTop: `${effectiveNavbarVisualOffset}px`,
+  }
+
+  const heroOffsetScale = isMobileLayout
+    ? Math.min(820, viewportHeight) / HERO_OFFSET_REFERENCE_HEIGHT
+    : DESKTOP_FROZEN_HERO_OFFSET_SCALE
   const rawTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : FINAL_HERO_TITLE_Y
   const rawCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : FINAL_HERO_CTA_Y
   const rawBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : FINAL_HERO_BANNER_Y
   const activeHeroTitleY = Math.round(rawTitleY * heroOffsetScale)
   const activeHeroCTAY = Math.round(rawCTAY * heroOffsetScale)
   const activeHeroBannerY = Math.round(rawBannerY * heroOffsetScale)
-  const effectiveHeroTitleY = activeHeroTitleY + heroTitleY
-  const effectiveHeroCTAY = activeHeroCTAY + heroCTAY
-  const effectiveHeroBannerY = activeHeroBannerY + heroBannerY
+  const shortViewportDeficit = isMobileLayout ? 0 : Math.max(0, 820 - viewportHeight)
+  const shortViewportLift = Math.round(shortViewportDeficit * SHORT_VIEWPORT_UNIFORM_LIFT_FACTOR)
+  const effectiveHeroTitleY = activeHeroTitleY + heroTitleY - shortViewportLift
+  const effectiveHeroCTAY = activeHeroCTAY + heroCTAY - shortViewportLift
+  const effectiveHeroBannerY = activeHeroBannerY + heroBannerY - shortViewportLift
 
   const baseContentGroupMarginTop = activeContentLift > 0 ? -activeContentLift : 0
   const contentGroupMarginTop = baseContentGroupMarginTop + effectiveContinuousLoopBelowY
@@ -331,7 +391,7 @@ export default function HomeClient() {
   return (
     <>
       <main className="flex flex-col items-center justify-center min-h-screen w-full">
-        <section className="relative w-full h-[min(100vh,820px)] overflow-hidden">
+        <section className="relative w-full overflow-hidden" style={heroSectionStyle}>
           <div className="absolute inset-0 -z-10 pointer-events-none bg-black flex items-start justify-center">
             {isHeroVideoReady ? (
               <video
@@ -339,7 +399,7 @@ export default function HomeClient() {
                 ref={heroVideoRef}
                 className="h-full w-full object-contain sm:object-cover object-center"
                 style={heroVideoTransform}
-                src="/hero-background.mp4?v=refresh7"
+                src="/hero-background.mp4?v=refresh8"
                 autoPlay
                 muted
                 loop
@@ -358,6 +418,7 @@ export default function HomeClient() {
               titleYOffset={effectiveHeroTitleY}
               ctaYOffset={effectiveHeroCTAY}
               bannerYOffset={effectiveHeroBannerY}
+              contentFrameHeight={heroContentFrameHeight}
             />
           </div>
         </section>
