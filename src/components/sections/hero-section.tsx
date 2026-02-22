@@ -4,8 +4,6 @@ import { siteConfig } from "@/lib/config"
 import { UserCountTicker } from "@/components/user-count-ticker"
 import Link from "next/link"
 
-const clampNumber = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
-
 type HeroSectionProps = {
   isMobileLayout?: boolean
   titleYOffset?: number
@@ -40,21 +38,6 @@ export function HeroSection({
     typeof contentFrameHeight === "number" && Number.isFinite(contentFrameHeight)
       ? Math.max(0, contentFrameHeight)
       : null
-  const shortFrameCompression = clampedContentFrameHeight !== null
-    ? clampNumber((820 - clampedContentFrameHeight) / 320, 0, 1)
-    : 0
-  const navClearancePercent = isMobileLayout
-    ? 12
-    : clampNumber(12 - shortFrameCompression * 4, 8, 12)
-  const spacerMinPercent = isMobileLayout
-    ? 2
-    : clampNumber(18 - shortFrameCompression * 12, 6, 18)
-  const bannerTopPercent = isMobileLayout
-    ? 2
-    : clampNumber(2 - shortFrameCompression * 1, 1, 2)
-  const bannerBottomPercent = isMobileLayout
-    ? 4
-    : clampNumber(4 - shortFrameCompression * 2, 2, 4)
   const contentFrameStyle = clampedContentFrameHeight !== null
     ? { height: `${clampedContentFrameHeight}px`, maxHeight: "100%", minHeight: "0" }
     : { height: "100%", minHeight: "0" }
@@ -63,7 +46,7 @@ export function HeroSection({
     <section id="hero" className="w-full relative h-full flex flex-col items-center px-6">
       <div className="w-full max-h-full flex flex-col items-center" style={contentFrameStyle}>
         {/* Nav clearance */}
-        <div className="shrink-0" style={{ height: `${navClearancePercent}%` }} />
+        <div className="shrink-0" style={{ height: "12%" }} />
 
         {/* Title block */}
         <div
@@ -91,7 +74,7 @@ export function HeroSection({
         {/* Flexible spacer — gap where video text shows through */}
         <div
           className="flex-1"
-          style={{ minHeight: `${spacerMinPercent}%` }}
+          style={{ minHeight: isMobileLayout ? "2%" : "18%" }}
         />
 
         {/* CTA Buttons */}
@@ -117,8 +100,8 @@ export function HeroSection({
         <div
           className="shrink-0"
           style={{
-            marginTop: `${bannerTopPercent}%`,
-            marginBottom: `${bannerBottomPercent}%`,
+            marginTop: "2%",
+            marginBottom: "4%",
             ...(bannerYOffset ? { transform: `translateY(${bannerYOffset}px)` } : {}),
           }}
         >

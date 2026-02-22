@@ -14,13 +14,18 @@ import { TestimonialSection } from "@/components/sections/testimonial-section"
 const MOBILE_LAYOUT_BREAKPOINT = 768
 const FINAL_CONTINUOUS_LOOP_BELOW_Y = 658
 const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -253
-const FINAL_HERO_TITLE_Y = 329
-const FINAL_HERO_CTA_Y = 58
-const FINAL_HERO_BANNER_Y = 61
+const FINAL_HERO_TITLE_Y = 339
+const FINAL_HERO_CTA_Y = 52
+const FINAL_HERO_BANNER_Y = 45
 const MOBILE_HERO_TITLE_Y = 279
 const MOBILE_HERO_CTA_Y = -300
 const MOBILE_HERO_BANNER_Y = -300
 const HERO_OFFSET_REFERENCE_HEIGHT = 900
+const DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT = 1231
+const DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT = 612
+const DESKTOP_HERO_TITLE_Y_AT_MIN_HEIGHT = 78
+const DESKTOP_HERO_CTA_Y_AT_MIN_HEIGHT = -97
+const DESKTOP_HERO_BANNER_Y_AT_MIN_HEIGHT = -84
 const CONTENT_LIFT_TUNER_STORAGE_KEY = "home-layout-tuner-content-lift-y"
 const HERO_VIDEO_TUNER_STORAGE_KEY = "home-layout-tuner-video-lift-y"
 const HERO_VIDEO_ZOOM_TUNER_STORAGE_KEY = "home-layout-tuner-video-zoom"
@@ -40,8 +45,6 @@ const DESKTOP_NAVBAR_FALLBACK_HEIGHT = 64
 const MOBILE_NAVBAR_FALLBACK_HEIGHT = 60
 const DESKTOP_NAVBAR_FALLBACK_VISUAL_OFFSET = 24
 const MOBILE_NAVBAR_FALLBACK_VISUAL_OFFSET = 8
-const DESKTOP_FROZEN_HERO_OFFSET_SCALE = 820 / HERO_OFFSET_REFERENCE_HEIGHT
-const SHORT_VIEWPORT_UNIFORM_LIFT_FACTOR = 0.52
 
 export default function HomeClient() {
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
@@ -363,20 +366,37 @@ export default function HomeClient() {
     marginTop: `${effectiveNavbarVisualOffset}px`,
   }
 
+  const desktopOffsetRange = DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT - DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT
+  const desktopViewportProgress = clamp(
+    (DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT - viewportHeight) / desktopOffsetRange,
+    0,
+    1,
+  )
+  const desktopHeroTitleY = Math.round(
+    FINAL_HERO_TITLE_Y
+      + (DESKTOP_HERO_TITLE_Y_AT_MIN_HEIGHT - FINAL_HERO_TITLE_Y) * desktopViewportProgress,
+  )
+  const desktopHeroCTAY = Math.round(
+    FINAL_HERO_CTA_Y
+      + (DESKTOP_HERO_CTA_Y_AT_MIN_HEIGHT - FINAL_HERO_CTA_Y) * desktopViewportProgress,
+  )
+  const desktopHeroBannerY = Math.round(
+    FINAL_HERO_BANNER_Y
+      + (DESKTOP_HERO_BANNER_Y_AT_MIN_HEIGHT - FINAL_HERO_BANNER_Y) * desktopViewportProgress,
+  )
+
   const heroOffsetScale = isMobileLayout
     ? Math.min(820, viewportHeight) / HERO_OFFSET_REFERENCE_HEIGHT
-    : DESKTOP_FROZEN_HERO_OFFSET_SCALE
-  const rawTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : FINAL_HERO_TITLE_Y
-  const rawCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : FINAL_HERO_CTA_Y
-  const rawBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : FINAL_HERO_BANNER_Y
+    : 1
+  const rawTitleY = isMobileLayout ? MOBILE_HERO_TITLE_Y : desktopHeroTitleY
+  const rawCTAY = isMobileLayout ? MOBILE_HERO_CTA_Y : desktopHeroCTAY
+  const rawBannerY = isMobileLayout ? MOBILE_HERO_BANNER_Y : desktopHeroBannerY
   const activeHeroTitleY = Math.round(rawTitleY * heroOffsetScale)
   const activeHeroCTAY = Math.round(rawCTAY * heroOffsetScale)
   const activeHeroBannerY = Math.round(rawBannerY * heroOffsetScale)
-  const shortViewportDeficit = isMobileLayout ? 0 : Math.max(0, 820 - viewportHeight)
-  const shortViewportLift = Math.round(shortViewportDeficit * SHORT_VIEWPORT_UNIFORM_LIFT_FACTOR)
-  const effectiveHeroTitleY = activeHeroTitleY + heroTitleY - shortViewportLift
-  const effectiveHeroCTAY = activeHeroCTAY + heroCTAY - shortViewportLift
-  const effectiveHeroBannerY = activeHeroBannerY + heroBannerY - shortViewportLift
+  const effectiveHeroTitleY = activeHeroTitleY + heroTitleY
+  const effectiveHeroCTAY = activeHeroCTAY + heroCTAY
+  const effectiveHeroBannerY = activeHeroBannerY + heroBannerY
 
   const baseContentGroupMarginTop = activeContentLift > 0 ? -activeContentLift : 0
   const contentGroupMarginTop = baseContentGroupMarginTop + effectiveContinuousLoopBelowY
