@@ -94,7 +94,7 @@ export function OrbitingLoopSection() {
               style={{ width: "200%", height: "220%", top: "-59%", left: "-50%", transform: "scale(0.5)" }}
             >
               <Spline
-                scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=10"
+                scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11"
               />
             </div>
           </div>

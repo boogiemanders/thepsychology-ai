@@ -71,7 +71,7 @@ export default function SplineTunerPage() {
                 transform: `scale(${scale})`,
               }}
             >
-              <Spline scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=10" />
+              <Spline scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11" />
             </div>
           </div>
         </div>
