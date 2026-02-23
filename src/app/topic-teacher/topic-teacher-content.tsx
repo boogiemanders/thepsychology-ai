@@ -44,7 +44,7 @@ import { InlineSvg } from '@/components/ui/inline-svg'
 import { VariableStar } from '@/components/ui/variable-star'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
-import { FeatureRatingDialog } from '@/components/feature-rating-dialog'
+import { InlineLessonRating } from '@/components/topic-teacher/inline-lesson-rating'
 import { supabase } from '@/lib/supabase'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { LessonAudioControls, type LessonAudioControlsHandle } from '@/components/topic-teacher/lesson-audio-controls'
@@ -640,7 +640,6 @@ export function TopicTeacherContent() {
   const [readAlongReady, setReadAlongReady] = useState(false)
   const [readAlongEnabled, setReadAlongEnabled] = useState(true)
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
-  const [showRatingDialog, setShowRatingDialog] = useState(false)
   const [ratingSubmitted, setRatingSubmitted] = useState(false)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const [showAudioSyncNotice, setShowAudioSyncNotice] = useState(false)
@@ -731,37 +730,6 @@ export function TopicTeacherContent() {
     }
   }, [user?.id, decodedTopic, domain])
 
-  // Show rating dialog after 2+ minutes of engagement or when navigating away
-  useEffect(() => {
-    if (!user?.id || ratingSubmitted) return
-
-    const RATING_DELAY_MS = 2 * 60 * 1000 // 2 minutes
-
-    // Show rating after delay
-    const timerId = setTimeout(() => {
-      const elapsed = Date.now() - sessionStartRef.current
-      if (elapsed >= RATING_DELAY_MS && !ratingSubmitted) {
-        setShowRatingDialog(true)
-      }
-    }, RATING_DELAY_MS)
-
-    // Show rating on visibility change (tab hidden after 2+ mins)
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'hidden' && !ratingSubmitted) {
-        const elapsed = Date.now() - sessionStartRef.current
-        if (elapsed >= RATING_DELAY_MS) {
-          setShowRatingDialog(true)
-        }
-      }
-    }
-
-    document.addEventListener('visibilitychange', handleVisibilityChange)
-
-    return () => {
-      clearTimeout(timerId)
-      document.removeEventListener('visibilitychange', handleVisibilityChange)
-    }
-  }, [user?.id, ratingSubmitted])
 
   // Targeted nudge for passive learners (temporary - can be removed after user sees it)
   useEffect(() => {
@@ -4213,6 +4181,16 @@ export function TopicTeacherContent() {
 
           {isLoading && <PulseSpinner message="Loading your lesson..." fullScreen={false} />}
 
+          {messages.length > 0 && !isLoading && !ratingSubmitted && (
+            <InlineLessonRating
+              feature="topic_teacher"
+              topic={decodedTopic}
+              domain={domain ?? undefined}
+              durationSeconds={Math.round((Date.now() - sessionStartRef.current) / 1000)}
+              onSubmitted={() => setRatingSubmitted(true)}
+            />
+          )}
+
           <div ref={messagesEndRef} />
       </div>
 
@@ -4679,43 +4657,6 @@ export function TopicTeacherContent() {
           </Dialog>
         )}
 
-        {/* Feature Rating Dialog */}
-        <FeatureRatingDialog
-          open={showRatingDialog}
-          onOpenChange={setShowRatingDialog}
-          feature="topic_teacher"
-          ratingType="stars"
-          topic={decodedTopic}
-          domain={domain ?? undefined}
-          durationSeconds={Math.round((Date.now() - sessionStartRef.current) / 1000)}
-          onSubmit={async () => {
-            setRatingSubmitted(true)
-
-            // Check if user is a passive learner and show Recover nudge
-            if (user?.id) {
-              try {
-                const { count: lessons } = await supabase
-                  .from('feature_ratings')
-                  .select('id', { count: 'exact', head: true })
-                  .eq('user_id', user.id)
-                  .eq('feature', 'topic_teacher')
-
-                const { count: questions } = await supabase
-                  .from('user_question_history')
-                  .select('id', { count: 'exact', head: true })
-                  .eq('user_id', user.id)
-
-                if ((lessons ?? 0) >= 5 && (questions ?? 0) / (lessons ?? 1) < 0.5) {
-                  setTimeout(() => setShowRecoverNudge(true), 500)
-                }
-              } catch (error) {
-                console.error('[topic-teacher] Failed to check passive learner status:', error)
-              }
-            }
-          }}
-          title="Rate this lesson"
-          description="How helpful was this lesson for your EPPP preparation?"
-        />
 
         {/* Recover Nudge for Passive Learners */}
         {showRecoverNudge && (
