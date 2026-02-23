@@ -18,7 +18,7 @@ import { useAuth } from '@/context/auth-context'
 import { supabase } from '@/lib/supabase'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
-import { FeatureRatingDialog } from '@/components/feature-rating-dialog'
+import { InlineLessonRating } from '@/components/topic-teacher/inline-lesson-rating'
 import { computeQuestionKeyClient } from '@/lib/question-key-client'
 import { isQuizPass } from '@/lib/quiz-passing'
 import { RECOVER_RECOMMENDATION_HOUR_KEY } from '@/lib/recover'
@@ -152,7 +152,6 @@ export function QuizzerContent() {
   const lastQuestionIndexRef = useRef<number | null>(null)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const [recoverRecommendationFromHour, setRecoverRecommendationFromHour] = useState(false)
-  const [showRatingDialog, setShowRatingDialog] = useState(false)
   const [ratingSubmitted, setRatingSubmitted] = useState(false)
 
   const quizStateRef = useRef<QuizState>(quizState)
@@ -1019,16 +1018,6 @@ export function QuizzerContent() {
     setReturnTo(`${window.location.pathname}${window.location.search}`)
   }, [quizState.showResults])
 
-  // Show rating dialog after quiz completion (with slight delay for better UX)
-  useEffect(() => {
-    if (!quizState.showResults || ratingSubmitted || !user?.id) return
-
-    const timerId = setTimeout(() => {
-      setShowRatingDialog(true)
-    }, 2000) // Show after 2 seconds to let user see their results first
-
-    return () => clearTimeout(timerId)
-  }, [quizState.showResults, ratingSubmitted, user?.id])
 
   // Auto-generate quiz when page loads with a topic
   useEffect(() => {
@@ -1459,6 +1448,17 @@ export function QuizzerContent() {
                 })}
               </div>
 
+              {/* Inline Rating */}
+              {!ratingSubmitted && (
+                <InlineLessonRating
+                  feature="quizzer"
+                  topic={decodedTopic}
+                  domain={effectiveDomain ?? undefined}
+                  durationSeconds={quizStartedAtRef.current ? Math.round((Date.now() - quizStartedAtRef.current) / 1000) : undefined}
+                  onSubmitted={() => setRatingSubmitted(true)}
+                />
+              )}
+
               {/* Action Buttons */}
               <div className="space-y-2">
                 <Link href="/topic-selector" className="block">
@@ -1704,19 +1704,6 @@ export function QuizzerContent() {
         </motion.div>
       </div>
 
-      {/* Feature Rating Dialog */}
-      <FeatureRatingDialog
-        open={showRatingDialog}
-        onOpenChange={setShowRatingDialog}
-        feature="quizzer"
-        ratingType="thumbs"
-        topic={decodedTopic}
-        domain={effectiveDomain ?? undefined}
-        durationSeconds={quizStartedAtRef.current ? Math.round((Date.now() - quizStartedAtRef.current) / 1000) : undefined}
-        onSubmit={() => setRatingSubmitted(true)}
-        title="How was this quiz?"
-        description="Was this quiz helpful for your learning?"
-      />
     </main>
   )
 }
