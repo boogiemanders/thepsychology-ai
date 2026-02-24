@@ -37,6 +37,7 @@ export const TestimonialCard = ({
       <img
         src={img}
         alt={name}
+        draggable={false}
         className={cn(
           "size-7 rounded-full flex-shrink-0",
           img?.includes("user-icon") && "dark:invert"
@@ -67,7 +68,7 @@ export function SocialProofTestimonials({
   return (
     <div className="w-full">
       <div className="relative overflow-hidden py-8">
-        <Marquee className="[--duration:60s]">
+        <Marquee className="[--duration:60s]" dragToScroll>
           {testimonials.map((card, idx) => {
             return (
               <div
