@@ -85,7 +85,7 @@ export const siteConfig = {
     badge: "",
     title: "EPPP Prep Without the Fluff.",
     description:
-      "",
+      "Adaptive lessons, practice exams, and quizzes built by psychologists who passed the EPPP recently.",
     cta: {
       primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
