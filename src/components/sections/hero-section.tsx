@@ -65,7 +65,7 @@ export function HeroSection({
             </h1>
           ) : null}
           {hero.description?.trim() ? (
-            <p className="text-base md:text-lg text-center text-white font-medium text-balance leading-relaxed tracking-tight">
+            <p className="sr-only">
               {hero.description}
             </p>
           ) : null}

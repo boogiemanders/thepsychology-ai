@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import { useReducedMotion } from "motion/react"
 
@@ -10,8 +10,190 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
 
 import { SectionHeader } from "@/components/section-header"
 
+const MOBILE_LAYOUT_BREAKPOINT = 768
+// app.spline.design/file URLs are editor pages; runtime needs a direct .splinecode scene URL.
+const MOBILE_SPLINE_SCENE = "https://prod.spline.design/GQqJTPWg2mZ38Ew0/scene.splinecode?v=mobile-refresh-20260224-2"
+const DESKTOP_SPLINE_SCENE = "https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11"
+
+type SplineTunerState = {
+  x: number
+  y: number
+  zoom: number
+  cropLeft: number
+  cropRight: number
+  cropTop: number
+  cropBottom: number
+}
+
+function SplineTuner({
+  x,
+  y,
+  zoom,
+  cropLeft,
+  cropRight,
+  cropTop,
+  cropBottom,
+  onChange,
+}: SplineTunerState & { onChange: (patch: Partial<SplineTunerState>) => void }) {
+  const rowClassName = "flex items-center gap-2 text-xs font-mono"
+
+  return (
+    <div className="fixed bottom-4 left-4 z-[9999] w-80 space-y-2.5 rounded-xl bg-black/90 p-4 text-white shadow-2xl backdrop-blur">
+      <div className="border-b border-white/20 pb-2 text-sm font-semibold">Spline Mobile Tuner</div>
+      <div className={rowClassName}>
+        <label className="w-20 shrink-0">X Pos</label>
+        <input
+          type="range"
+          min={-120}
+          max={120}
+          step={1}
+          value={x}
+          onChange={(event) => onChange({ x: Number(event.target.value) })}
+          className="flex-1 accent-orange-500"
+        />
+        <span className="w-12 text-right tabular-nums">{x}px</span>
+      </div>
+      <div className={rowClassName}>
+        <label className="w-20 shrink-0">Y Pos</label>
+        <input
+          type="range"
+          min={-120}
+          max={120}
+          step={1}
+          value={y}
+          onChange={(event) => onChange({ y: Number(event.target.value) })}
+          className="flex-1 accent-green-500"
+        />
+        <span className="w-12 text-right tabular-nums">{y}px</span>
+      </div>
+      <div className={rowClassName}>
+        <label className="w-20 shrink-0">Zoom</label>
+        <input
+          type="range"
+          min={60}
+          max={140}
+          step={1}
+          value={zoom}
+          onChange={(event) => onChange({ zoom: Number(event.target.value) })}
+          className="flex-1 accent-blue-500"
+        />
+        <span className="w-12 text-right tabular-nums">{zoom}%</span>
+      </div>
+      <div className="border-t border-white/10 pt-2 text-[10px] uppercase tracking-wider text-white/50">
+        Crop
+      </div>
+      <div className={rowClassName}>
+        <label className="w-20 shrink-0">Crop Left</label>
+        <input
+          type="range"
+          min={-20}
+          max={35}
+          step={1}
+          value={cropLeft}
+          onChange={(event) => onChange({ cropLeft: Number(event.target.value) })}
+          className="flex-1 accent-red-500"
+        />
+        <span className="w-12 text-right tabular-nums">{cropLeft}%</span>
+      </div>
+      <div className={rowClassName}>
+        <label className="w-20 shrink-0">Crop Right</label>
+        <input
+          type="range"
+          min={-20}
+          max={35}
+          step={1}
+          value={cropRight}
+          onChange={(event) => onChange({ cropRight: Number(event.target.value) })}
+          className="flex-1 accent-red-500"
+        />
+        <span className="w-12 text-right tabular-nums">{cropRight}%</span>
+      </div>
+      <div className={rowClassName}>
+        <label className="w-20 shrink-0">Crop Top</label>
+        <input
+          type="range"
+          min={-20}
+          max={35}
+          step={1}
+          value={cropTop}
+          onChange={(event) => onChange({ cropTop: Number(event.target.value) })}
+          className="flex-1 accent-red-500"
+        />
+        <span className="w-12 text-right tabular-nums">{cropTop}%</span>
+      </div>
+      <div className={rowClassName}>
+        <label className="w-20 shrink-0">Crop Bottom</label>
+        <input
+          type="range"
+          min={-20}
+          max={35}
+          step={1}
+          value={cropBottom}
+          onChange={(event) => onChange({ cropBottom: Number(event.target.value) })}
+          className="flex-1 accent-red-500"
+        />
+        <span className="w-12 text-right tabular-nums">{cropBottom}%</span>
+      </div>
+    </div>
+  )
+}
+
 export function OrbitingLoopSection() {
   const prefersReducedMotion = useReducedMotion()
+  const [hasMounted, setHasMounted] = useState(false)
+  const [isMobileLayout, setIsMobileLayout] = useState(false)
+  const [tuner, setTuner] = useState<SplineTunerState>({
+    x: 30,
+    y: 0,
+    zoom: 131,
+    cropLeft: -15,
+    cropRight: 24,
+    cropTop: 0,
+    cropBottom: 28,
+  })
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const mediaQuery = window.matchMedia(`(max-width: ${MOBILE_LAYOUT_BREAKPOINT - 1}px)`)
+    const updateLayoutMode = () => setIsMobileLayout(mediaQuery.matches)
+
+    updateLayoutMode()
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", updateLayoutMode)
+    } else {
+      mediaQuery.addListener(updateLayoutMode)
+    }
+
+    return () => {
+      if (typeof mediaQuery.removeEventListener === "function") {
+        mediaQuery.removeEventListener("change", updateLayoutMode)
+      } else {
+        mediaQuery.removeListener(updateLayoutMode)
+      }
+    }
+  }, [])
+
+  const updateTuner = (patch: Partial<SplineTunerState>) => {
+    setTuner((prev) => ({ ...prev, ...patch }))
+  }
+
+  const activeScene = isMobileLayout ? MOBILE_SPLINE_SCENE : DESKTOP_SPLINE_SCENE
+
+  const frameVars = {
+    "--orbit-x": `${tuner.x}px`,
+    "--orbit-y": `${tuner.y}px`,
+    "--orbit-mobile-scale": String((0.32 * tuner.zoom) / 100),
+    "--orbit-sm-scale": String((0.4 * tuner.zoom) / 100),
+    "--orbit-crop-left": `${tuner.cropLeft}%`,
+    "--orbit-crop-right": `${tuner.cropRight}%`,
+    "--orbit-crop-top": `${tuner.cropTop}%`,
+    "--orbit-crop-bottom": `${tuner.cropBottom}%`,
+  } as React.CSSProperties
 
   return (
     <section className="flex flex-col items-center justify-center w-full relative px-5 md:px-10">
@@ -24,7 +206,7 @@ export function OrbitingLoopSection() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center"
           >
-            {!prefersReducedMotion && (
+            {hasMounted && !prefersReducedMotion && (
               <div className="relative h-[118px] w-[216px] sm:h-[138px] sm:w-[252px] md:h-[180px] md:w-[328px] overflow-hidden rounded-xl border border-border/30">
                 <video
                   className="h-full w-full object-cover object-center dark:invert dark:opacity-92"
@@ -88,24 +270,66 @@ export function OrbitingLoopSection() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 relative flex w-full md:max-w-[560px] mx-auto items-center justify-center h-[360px] md:h-[420px] overflow-hidden bg-background">
+          <div
+            className="orbit-frame order-1 lg:order-2 relative flex w-[calc(100vw-2rem)] md:w-full md:max-w-[560px] mx-auto items-center justify-center aspect-[4/3] md:aspect-auto md:h-[420px] overflow-hidden bg-background"
+            style={frameVars}
+          >
             <style>{`
-              .spline-wrap { left: -67%; }
-              @media (min-width: 768px) { .spline-wrap { left: -50%; } }
+              .orbit-frame {
+                clip-path: inset(
+                  var(--orbit-crop-top)
+                  var(--orbit-crop-right)
+                  var(--orbit-crop-bottom)
+                  var(--orbit-crop-left)
+                );
+              }
+
+              .orbit-spline-wrap {
+                width: 200%;
+                height: 220%;
+                left: calc(-58% - 20px + var(--orbit-x));
+                top: calc(-71% + var(--orbit-y));
+                transform: scale(var(--orbit-mobile-scale));
+              }
+
+              .orbit-spline-wrap a[href*="spline.design"] {
+                display: none !important;
+              }
+
+              @media (min-width: 640px) {
+                .orbit-spline-wrap {
+                  left: calc(-54% - 20px + var(--orbit-x));
+                  top: calc(-71% + var(--orbit-y));
+                  transform: scale(var(--orbit-sm-scale));
+                }
+              }
+
+              @media (min-width: 768px) {
+                .orbit-frame {
+                  clip-path: inset(0 0 0 0);
+                }
+
+                .orbit-spline-wrap {
+                  width: 200%;
+                  height: 220%;
+                  left: -50%;
+                  top: -71%;
+                  transform: scale(0.51);
+                }
+              }
             `}</style>
-            <div
-              className="spline-wrap absolute origin-center scale-[0.24] md:scale-[0.51]"
-              style={{ width: "200%", height: "220%", top: "-71%" }}
-            >
+            <div className="orbit-spline-wrap absolute z-[1] origin-center">
               <Spline
-                scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11"
+                key={activeScene}
+                scene={activeScene}
               />
             </div>
             {/* Hide Spline watermark */}
-            <div className="absolute bottom-0 left-0 right-0 h-12 bg-background z-10 pointer-events-none" />
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-10 hidden h-12 bg-background md:block" />
           </div>
         </div>
       </div>
+      <SplineTuner {...tuner} onChange={updateTuner} />
     </section>
   )
 }
