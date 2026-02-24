@@ -44,10 +44,10 @@ export function OrbitingLoopSection() {
 
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              A continuous loop that adapts to you
+              Your AI Study Coach
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Study less. Score higher. Here&apos;s how.
+              A continuous loop that adapts to you — study less, score higher.
             </p>
           </SectionHeader>
         </div>
@@ -88,15 +88,21 @@ export function OrbitingLoopSection() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 relative flex w-full max-w-[440px] md:max-w-[560px] mx-auto items-center justify-center h-[360px] md:h-[420px] overflow-hidden bg-background">
+          <div className="order-1 lg:order-2 relative flex w-full md:max-w-[560px] mx-auto items-center justify-center h-[360px] md:h-[420px] overflow-hidden bg-background">
+            <style>{`
+              .spline-wrap { left: -67%; }
+              @media (min-width: 768px) { .spline-wrap { left: -50%; } }
+            `}</style>
             <div
-              className="absolute origin-center"
-              style={{ width: "200%", height: "220%", top: "-59%", left: "-50%", transform: "scale(0.5)" }}
+              className="spline-wrap absolute origin-center scale-[0.24] md:scale-[0.51]"
+              style={{ width: "200%", height: "220%", top: "-71%" }}
             >
               <Spline
                 scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11"
               />
             </div>
+            {/* Hide Spline watermark */}
+            <div className="absolute bottom-0 left-0 right-0 h-12 bg-background z-10 pointer-events-none" />
           </div>
         </div>
       </div>
