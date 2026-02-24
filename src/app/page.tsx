@@ -3,6 +3,7 @@ import HomeClient from "./home-client"
 import { siteConfig } from "@/lib/config"
 
 export const metadata: Metadata = {
+  title: "EPPP Exam Prep — Free AI-Powered Study Tools | thePsychology.ai",
   alternates: {
     canonical: "/",
   },

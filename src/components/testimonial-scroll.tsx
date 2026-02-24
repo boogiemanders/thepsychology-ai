@@ -73,9 +73,9 @@ export function SocialProofTestimonials({
             return (
               <div
                 key={idx}
-                className="w-[420px] h-[200px] flex justify-center"
+                className="w-[420px] min-h-[200px] flex justify-center"
               >
-                <TestimonialCard {...card} className="h-full w-full break-words" />
+                <TestimonialCard {...card} className="w-full break-words" />
               </div>
             )
           })}
