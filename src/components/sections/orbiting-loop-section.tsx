@@ -11,6 +11,7 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
 import { SectionHeader } from "@/components/section-header"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
+const SHOW_MOBILE_SPLINE_TUNER = false
 // app.spline.design/file URLs are editor pages; runtime needs a direct .splinecode scene URL.
 const MOBILE_SPLINE_SCENE = "https://prod.spline.design/GQqJTPWg2mZ38Ew0/scene.splinecode?v=mobile-refresh-20260224-2"
 const DESKTOP_SPLINE_SCENE = "https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11"
@@ -329,7 +330,7 @@ export function OrbitingLoopSection() {
           </div>
         </div>
       </div>
-      <SplineTuner {...tuner} onChange={updateTuner} />
+      {SHOW_MOBILE_SPLINE_TUNER ? <SplineTuner {...tuner} onChange={updateTuner} /> : null}
     </section>
   )
 }
