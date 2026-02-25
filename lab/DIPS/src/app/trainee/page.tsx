@@ -4,7 +4,7 @@ import { useState } from "react";
 import { SurveyLayout, FormSection, FormField, NavigationButtons } from "@/components/SurveyLayout";
 import { Dropdown } from "@/components/Dropdown";
 import { TextArea } from "@/components/TextArea";
-import { DualRatingRow, DualRatingHeader } from "@/components/DualRatingRow";
+import { TripleRatingRow } from "@/components/TripleRatingRow";
 import { CheckboxGroup } from "@/components/CheckboxGroup";
 import { LikertScale } from "@/components/LikertScale";
 import { DealbreakersTable } from "@/components/DealbreakersTable";
@@ -12,50 +12,54 @@ import { SuccessMessage } from "@/components/SuccessMessage";
 import {
   TRAINING_LEVELS,
   THEORETICAL_ORIENTATIONS,
-  CLINICAL_SETTINGS,
-  CLINICAL_HOURS_RANGES,
+  WEEKLY_CLIENT_HOURS,
+  WEEKLY_SUPERVISION_HOURS,
   AGE_RANGES,
-  GENDER_OPTIONS,
-  RACE_ETHNICITY_OPTIONS,
   CLINICAL_SKILLS,
-  COMPETENCE_SOURCES,
   FEASIBILITY_ITEMS,
   BARRIERS,
   PRIVACY_SCENARIOS,
+  HIPAA_COMPLIANCE_SCENARIO,
+  AI_TOOL_PERCEPTIONS,
+  TIMEPOINT_OPTIONS,
   IMPORTANCE_LABELS,
   ABILITY_LABELS,
   CONFIDENCE_LABELS,
   LIKERT_5_LABELS,
 } from "@/lib/survey-config";
+import type { HipaaComplianceResponse } from "@/lib/survey-config";
 
-const TOTAL_STEPS = 8;
+const TOTAL_STEPS = 7;
 
 interface FormData {
   // Demographics
-  participantId: string;
+  traineeId: string;
+  date: string;
+  timepoint: string;
   trainingLevel: string;
+  trainingLevelOther: string;
   orientation: string;
-  setting: string;
-  clinicalHours: string;
+  orientationOther: string;
+  weeklyClientHours: string;
+  weeklySupervisionHours: string;
   age: string;
   gender: string;
   raceEthnicity: string;
 
   // Open-ended
-  trainingNeeds1: string;
-  trainingNeeds2: string;
-  trainingNeeds3: string;
+  trainingNeeds: string;
   desiredAIFeatures: string;
+  aiConcerns: string;
 
-  // Skill matrices
+  // Skill matrices (3 ratings per skill)
   skillImportance: Record<string, number | null>;
   skillAbility: Record<string, number | null>;
   skillConfidence: Record<string, number | null>;
-  skillCompetence: Record<string, number | null>;
 
-  // Source of competence
-  competenceSources: string[];
-  competenceSourceOther: string;
+  // AI description
+  aiToolLooksLike: string;
+  aiToolPerceptions: string[];
+  aiToolPerceptionOther: string;
 
   // Feasibility/Acceptability
   feasibilityResponses: Record<string, number | null>;
@@ -66,31 +70,36 @@ interface FormData {
 
   // Privacy
   privacyResponses: Record<string, "dealbreaker" | "acceptable" | "unsure" | null>;
+  hipaaCompliance: HipaaComplianceResponse | null;
 }
 
 const initialFormData: FormData = {
-  participantId: "",
+  traineeId: "",
+  date: "",
+  timepoint: "",
   trainingLevel: "",
+  trainingLevelOther: "",
   orientation: "",
-  setting: "",
-  clinicalHours: "",
+  orientationOther: "",
+  weeklyClientHours: "",
+  weeklySupervisionHours: "",
   age: "",
   gender: "",
   raceEthnicity: "",
-  trainingNeeds1: "",
-  trainingNeeds2: "",
-  trainingNeeds3: "",
+  trainingNeeds: "",
   desiredAIFeatures: "",
+  aiConcerns: "",
   skillImportance: {},
   skillAbility: {},
   skillConfidence: {},
-  skillCompetence: {},
-  competenceSources: [],
-  competenceSourceOther: "",
+  aiToolLooksLike: "",
+  aiToolPerceptions: [],
+  aiToolPerceptionOther: "",
   feasibilityResponses: {},
   barriers: [],
   barrierOther: "",
   privacyResponses: {},
+  hipaaCompliance: null,
 };
 
 export default function TraineeSurvey() {
@@ -131,9 +140,9 @@ export default function TraineeSurvey() {
 
   if (isSubmitted) {
     return (
-      <SurveyLayout title="Clinician/Trainee Survey">
+      <SurveyLayout title="AI Clinical Training Tool Evaluation (Trainee)">
         <SuccessMessage
-          title="Thank you for completing the survey!"
+          title="Thank you for completing this survey."
           message="Your responses have been recorded. Your input will help shape the future of AI-assisted clinical training."
         />
       </SurveyLayout>
@@ -142,8 +151,8 @@ export default function TraineeSurvey() {
 
   return (
     <SurveyLayout
-      title="Clinician/Trainee Survey"
-      description="AI Training Tool Evaluation"
+      title="AI Clinical Training Tool Evaluation (Trainee)"
+      description="Clinician Survey (10–12 minutes)"
       currentStep={step}
       totalSteps={TOTAL_STEPS}
     >
@@ -151,20 +160,41 @@ export default function TraineeSurvey() {
       {step === 1 && (
         <>
           <FormSection
-            title="Demographics"
-            description="Please provide some background information about yourself."
+            title="Section 1: Demographics"
+            description="Estimated time: 2 minutes"
           >
-            <FormField label="Participant ID" sublabel="Optional - for longitudinal tracking">
-              <input
-                type="text"
-                className="form-input"
-                placeholder="Enter ID if provided"
-                value={formData.participantId}
-                onChange={(e) => updateField("participantId", e.target.value)}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <FormField label="Trainee ID">
+                <input
+                  type="text"
+                  className="form-input"
+                  placeholder="Enter ID"
+                  value={formData.traineeId}
+                  onChange={(e) => updateField("traineeId", e.target.value)}
+                />
+              </FormField>
+
+              <FormField label="Date">
+                <input
+                  type="date"
+                  className="form-input"
+                  value={formData.date}
+                  onChange={(e) => updateField("date", e.target.value)}
+                />
+              </FormField>
+            </div>
+
+            <FormField label="Timepoint">
+              <Dropdown
+                name="timepoint"
+                value={formData.timepoint}
+                onChange={(v) => updateField("timepoint", v)}
+                options={TIMEPOINT_OPTIONS}
+                placeholder="Select timepoint"
               />
             </FormField>
 
-            <FormField label="Training Level" required>
+            <FormField label="1.1 Current training level" required>
               <Dropdown
                 name="trainingLevel"
                 value={formData.trainingLevel}
@@ -172,9 +202,18 @@ export default function TraineeSurvey() {
                 options={TRAINING_LEVELS}
                 placeholder="Select your training level"
               />
+              {formData.trainingLevel === "other" && (
+                <input
+                  type="text"
+                  className="form-input mt-2"
+                  placeholder="Please specify..."
+                  value={formData.trainingLevelOther}
+                  onChange={(e) => updateField("trainingLevelOther", e.target.value)}
+                />
+              )}
             </FormField>
 
-            <FormField label="Primary Theoretical Orientation" required>
+            <FormField label="1.2 Primary theoretical orientation" required>
               <Dropdown
                 name="orientation"
                 value={formData.orientation}
@@ -182,29 +221,38 @@ export default function TraineeSurvey() {
                 options={THEORETICAL_ORIENTATIONS}
                 placeholder="Select your orientation"
               />
+              {formData.orientation === "other" && (
+                <input
+                  type="text"
+                  className="form-input mt-2"
+                  placeholder="Please specify..."
+                  value={formData.orientationOther}
+                  onChange={(e) => updateField("orientationOther", e.target.value)}
+                />
+              )}
             </FormField>
 
-            <FormField label="Primary Clinical Setting" required>
+            <FormField label="1.4 Current weekly direct client contact hours" required>
               <Dropdown
-                name="setting"
-                value={formData.setting}
-                onChange={(v) => updateField("setting", v)}
-                options={CLINICAL_SETTINGS}
-                placeholder="Select your setting"
-              />
-            </FormField>
-
-            <FormField label="Total Clinical Hours" required>
-              <Dropdown
-                name="clinicalHours"
-                value={formData.clinicalHours}
-                onChange={(v) => updateField("clinicalHours", v)}
-                options={CLINICAL_HOURS_RANGES}
+                name="weeklyClientHours"
+                value={formData.weeklyClientHours}
+                onChange={(v) => updateField("weeklyClientHours", v)}
+                options={WEEKLY_CLIENT_HOURS}
                 placeholder="Select hour range"
               />
             </FormField>
 
-            <FormField label="Age Range">
+            <FormField label="1.5 Current weekly supervision hours received" required>
+              <Dropdown
+                name="weeklySupervisionHours"
+                value={formData.weeklySupervisionHours}
+                onChange={(v) => updateField("weeklySupervisionHours", v)}
+                options={WEEKLY_SUPERVISION_HOURS}
+                placeholder="Select hour range"
+              />
+            </FormField>
+
+            <FormField label="1.6 Age range">
               <Dropdown
                 name="age"
                 value={formData.age}
@@ -214,23 +262,23 @@ export default function TraineeSurvey() {
               />
             </FormField>
 
-            <FormField label="Gender">
-              <Dropdown
-                name="gender"
+            <FormField label="1.7 Gender identity">
+              <input
+                type="text"
+                className="form-input"
+                placeholder="Enter gender identity"
                 value={formData.gender}
-                onChange={(v) => updateField("gender", v)}
-                options={GENDER_OPTIONS}
-                placeholder="Select gender"
+                onChange={(e) => updateField("gender", e.target.value)}
               />
             </FormField>
 
-            <FormField label="Race/Ethnicity">
-              <Dropdown
-                name="raceEthnicity"
+            <FormField label="1.8 Race/ethnicity" sublabel="Select all that apply">
+              <input
+                type="text"
+                className="form-input"
+                placeholder="Enter race/ethnicity"
                 value={formData.raceEthnicity}
-                onChange={(v) => updateField("raceEthnicity", v)}
-                options={RACE_ETHNICITY_OPTIONS}
-                placeholder="Select race/ethnicity"
+                onChange={(e) => updateField("raceEthnicity", e.target.value)}
               />
             </FormField>
           </FormSection>
@@ -243,60 +291,47 @@ export default function TraineeSurvey() {
         </>
       )}
 
-      {/* Step 2: Open-ended Questions */}
+      {/* Step 2: Open-Ended Questions */}
       {step === 2 && (
         <>
           <FormSection
-            title="Training Needs & AI Features"
-            description="Tell us about your training priorities and what AI tools could help."
+            title="Section 2: Open-Ended Questions"
+            description="Estimated time: 2 minutes"
           >
             <FormField
-              label="What are your top 3 training needs?"
-              sublabel="Please describe areas where you would benefit from additional training or practice."
+              label="2.1 What are your TOP 3 TRAINING NEEDS right now as a psychology trainee?"
+              sublabel="List in order of priority"
             >
-              <div className="space-y-3">
-                <div>
-                  <span className="text-sm text-[var(--muted-foreground)]">1.</span>
-                  <TextArea
-                    name="trainingNeeds1"
-                    value={formData.trainingNeeds1}
-                    onChange={(v) => updateField("trainingNeeds1", v)}
-                    placeholder="First training need..."
-                    rows={2}
-                  />
-                </div>
-                <div>
-                  <span className="text-sm text-[var(--muted-foreground)]">2.</span>
-                  <TextArea
-                    name="trainingNeeds2"
-                    value={formData.trainingNeeds2}
-                    onChange={(v) => updateField("trainingNeeds2", v)}
-                    placeholder="Second training need..."
-                    rows={2}
-                  />
-                </div>
-                <div>
-                  <span className="text-sm text-[var(--muted-foreground)]">3.</span>
-                  <TextArea
-                    name="trainingNeeds3"
-                    value={formData.trainingNeeds3}
-                    onChange={(v) => updateField("trainingNeeds3", v)}
-                    placeholder="Third training need..."
-                    rows={2}
-                  />
-                </div>
-              </div>
+              <TextArea
+                name="trainingNeeds"
+                value={formData.trainingNeeds}
+                onChange={(v) => updateField("trainingNeeds", v)}
+                placeholder="1. &#10;2. &#10;3. "
+                rows={5}
+              />
             </FormField>
 
             <FormField
-              label="What AI features would be most helpful for your training?"
-              sublabel="Describe any features or capabilities you'd want in an AI clinical training tool."
+              label="2.2 What specific features or capabilities would make an AI clinical training tool WORTH USING regularly in your practice?"
+              sublabel="Be as specific as possible"
             >
               <TextArea
                 name="desiredAIFeatures"
                 value={formData.desiredAIFeatures}
                 onChange={(v) => updateField("desiredAIFeatures", v)}
                 placeholder="Describe desired AI features..."
+                rows={4}
+              />
+            </FormField>
+
+            <FormField
+              label="2.3 What concerns do you have about using AI?"
+            >
+              <TextArea
+                name="aiConcerns"
+                value={formData.aiConcerns}
+                onChange={(v) => updateField("aiConcerns", v)}
+                placeholder="Describe your concerns..."
                 rows={4}
               />
             </FormField>
@@ -309,25 +344,40 @@ export default function TraineeSurvey() {
         </>
       )}
 
-      {/* Step 3: Skill Importance/Ability Matrix */}
+      {/* Step 3: Skill Importance / Ability / Confidence */}
       {step === 3 && (
         <>
           <FormSection
-            title="Skill Importance & Ability"
-            description="For each skill, rate both its importance to your work and your current ability level."
+            title="Section 3: Skill Importance / Ability / Confidence"
+            description="Estimated time: 3 minutes. For each clinical skill, rate its IMPORTANCE to your current practice, your current ABILITY level, and your CONFIDENCE performing it independently."
           >
-            <DualRatingHeader
-              column1Label="Importance"
-              column1Subtitle="1 = Not Important, 5 = Essential"
-              column2Label="Ability"
-              column2Subtitle="1 = Cannot Do, 5 = Expert"
-            />
-            {CLINICAL_SKILLS.map((skill) => (
-              <DualRatingRow
+            <div className="mb-4 p-3 bg-[var(--muted)] rounded-lg text-xs text-[var(--muted-foreground)] space-y-1">
+              <p><strong>Importance:</strong> 1 Not important, 2 Somewhat important, 3 Important, 4 Very important, 5 Critical</p>
+              <p><strong>Ability:</strong> 1 Novice, 2 Advanced beginner, 3 Competent, 4 Proficient, 5 Expert</p>
+              <p><strong>Confidence:</strong> 1 Not confident, 2 Slightly confident, 3 Moderately confident, 4 Very confident, 5 Extremely confident</p>
+            </div>
+
+            {/* Desktop column headers */}
+            <div className="hidden sm:grid grid-cols-[1fr_1fr_1fr] gap-3 border-b-2 border-[var(--border)] pb-3 mb-2 ml-[33%]">
+              <div className="text-center">
+                <div className="font-semibold text-xs">Importance</div>
+                <div className="text-[10px] text-[var(--muted-foreground)]">1–5</div>
+              </div>
+              <div className="text-center">
+                <div className="font-semibold text-xs">Ability</div>
+                <div className="text-[10px] text-[var(--muted-foreground)]">1–5</div>
+              </div>
+              <div className="text-center">
+                <div className="font-semibold text-xs">Confidence</div>
+                <div className="text-[10px] text-[var(--muted-foreground)]">1–5</div>
+              </div>
+            </div>
+
+            {CLINICAL_SKILLS.map((skill, index) => (
+              <TripleRatingRow
                 key={skill.id}
                 id={skill.id}
-                label={skill.label}
-                rating1Name="importance"
+                label={`3.${index + 1} ${skill.label}`}
                 rating1Value={formData.skillImportance[skill.id] ?? null}
                 rating1Labels={IMPORTANCE_LABELS}
                 onRating1Change={(v) =>
@@ -336,12 +386,19 @@ export default function TraineeSurvey() {
                     [skill.id]: v,
                   })
                 }
-                rating2Name="ability"
                 rating2Value={formData.skillAbility[skill.id] ?? null}
                 rating2Labels={ABILITY_LABELS}
                 onRating2Change={(v) =>
                   updateField("skillAbility", {
                     ...formData.skillAbility,
+                    [skill.id]: v,
+                  })
+                }
+                rating3Value={formData.skillConfidence[skill.id] ?? null}
+                rating3Labels={CONFIDENCE_LABELS}
+                onRating3Change={(v) =>
+                  updateField("skillConfidence", {
+                    ...formData.skillConfidence,
                     [skill.id]: v,
                   })
                 }
@@ -356,44 +413,38 @@ export default function TraineeSurvey() {
         </>
       )}
 
-      {/* Step 4: Confidence/Competence Matrix */}
+      {/* Step 4: AI Description + What Does AI Mean to You? */}
       {step === 4 && (
         <>
           <FormSection
-            title="Skill Confidence & Competence"
-            description="For each skill, rate your confidence level and perceived competence."
+            title='Section 4: AI Description + "What Does AI Mean to You?"'
+            description="Estimated time: 1 minute"
           >
-            <DualRatingHeader
-              column1Label="Confidence"
-              column1Subtitle="1 = Not Confident, 5 = Extremely"
-              column2Label="Competence"
-              column2Subtitle="1 = Cannot Do, 5 = Expert"
-            />
-            {CLINICAL_SKILLS.map((skill) => (
-              <DualRatingRow
-                key={skill.id}
-                id={`${skill.id}-cc`}
-                label={skill.label}
-                rating1Name="confidence"
-                rating1Value={formData.skillConfidence[skill.id] ?? null}
-                rating1Labels={CONFIDENCE_LABELS}
-                onRating1Change={(v) =>
-                  updateField("skillConfidence", {
-                    ...formData.skillConfidence,
-                    [skill.id]: v,
-                  })
-                }
-                rating2Name="competence"
-                rating2Value={formData.skillCompetence[skill.id] ?? null}
-                rating2Labels={ABILITY_LABELS}
-                onRating2Change={(v) =>
-                  updateField("skillCompetence", {
-                    ...formData.skillCompetence,
-                    [skill.id]: v,
-                  })
-                }
+            <FormField
+              label="4.1 What do you think an AI tool for clinical work would look like?"
+            >
+              <TextArea
+                name="aiToolLooksLike"
+                value={formData.aiToolLooksLike}
+                onChange={(v) => updateField("aiToolLooksLike", v)}
+                placeholder="Describe what you envision..."
+                rows={4}
               />
-            ))}
+            </FormField>
+
+            <FormField
+              label="4.2 What would an AI clinical training tool do?"
+              sublabel="Check all that apply"
+            >
+              <CheckboxGroup
+                options={AI_TOOL_PERCEPTIONS}
+                selectedValues={formData.aiToolPerceptions}
+                onChange={(v) => updateField("aiToolPerceptions", v)}
+                showOtherInput={true}
+                otherValue={formData.aiToolPerceptionOther}
+                onOtherChange={(v) => updateField("aiToolPerceptionOther", v)}
+              />
+            </FormField>
           </FormSection>
 
           <NavigationButtons
@@ -403,41 +454,21 @@ export default function TraineeSurvey() {
         </>
       )}
 
-      {/* Step 5: Source of Competence */}
+      {/* Step 5: Feasibility / Acceptability */}
       {step === 5 && (
         <>
           <FormSection
-            title="Sources of Competence"
-            description="Which sources have contributed most to your clinical competence? (Select all that apply)"
+            title="Section 5: Feasibility / Acceptability"
+            description="Estimated time: 2 minutes. Rate your agreement with each statement about using an AI clinical training tool in your practice."
           >
-            <CheckboxGroup
-              options={COMPETENCE_SOURCES}
-              selectedValues={formData.competenceSources}
-              onChange={(v) => updateField("competenceSources", v)}
-              showOtherInput={true}
-              otherValue={formData.competenceSourceOther}
-              onOtherChange={(v) => updateField("competenceSourceOther", v)}
-            />
-          </FormSection>
+            <div className="mb-4 p-3 bg-[var(--muted)] rounded-lg text-xs text-[var(--muted-foreground)]">
+              <p>1 Strongly disagree, 2 Disagree, 3 Neutral, 4 Agree, 5 Strongly agree</p>
+            </div>
 
-          <NavigationButtons
-            onBack={() => setStep(4)}
-            onNext={() => setStep(6)}
-          />
-        </>
-      )}
-
-      {/* Step 6: Feasibility/Acceptability */}
-      {step === 6 && (
-        <>
-          <FormSection
-            title="Feasibility & Acceptability"
-            description="Please rate your agreement with each statement about AI training tools."
-          >
             <div className="space-y-6">
-              {FEASIBILITY_ITEMS.map((item) => (
+              {FEASIBILITY_ITEMS.map((item, index) => (
                 <div key={item.id}>
-                  <p className="font-medium text-sm mb-3">{item.text}</p>
+                  <p className="font-medium text-sm mb-3">5.{index + 1} {item.text}</p>
                   <LikertScale
                     name={item.id}
                     value={formData.feasibilityResponses[item.id] ?? null}
@@ -455,18 +486,18 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(5)}
-            onNext={() => setStep(7)}
+            onBack={() => setStep(4)}
+            onNext={() => setStep(6)}
           />
         </>
       )}
 
-      {/* Step 7: Barriers */}
-      {step === 7 && (
+      {/* Step 6: Barriers Checklist */}
+      {step === 6 && (
         <>
           <FormSection
-            title="Barriers to AI Training Tool Adoption"
-            description="What barriers might prevent you from using AI clinical training tools? (Select all that apply)"
+            title="Section 6: Barriers Checklist"
+            description="Estimated time: 1 minute. Check ALL barriers that would make you hesitant to use an AI clinical training tool."
           >
             <CheckboxGroup
               options={BARRIERS}
@@ -479,18 +510,18 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(6)}
-            onNext={() => setStep(8)}
+            onBack={() => setStep(5)}
+            onNext={() => setStep(7)}
           />
         </>
       )}
 
-      {/* Step 8: Privacy/HIPAA Dealbreakers */}
-      {step === 8 && (
+      {/* Step 7: Privacy / HIPAA Dealbreakers */}
+      {step === 7 && (
         <>
           <FormSection
-            title="Privacy & Data Handling"
-            description="For each scenario, indicate whether it would be a dealbreaker, acceptable, or you're unsure."
+            title="Section 7: Privacy / HIPAA Dealbreakers"
+            description="Estimated time: 1 minute. Indicate whether each scenario would be a DEALBREAKER (would prevent you from using the tool)."
           >
             <DealbreakersTable
               scenarios={PRIVACY_SCENARIOS}
@@ -502,10 +533,35 @@ export default function TraineeSurvey() {
                 })
               }
             />
+
+            {/* Scenario 7.5 with different response options */}
+            <div className="mt-6 p-4 border border-[var(--border)] rounded-lg">
+              <p className="font-medium text-sm mb-3">
+                7.5 {HIPAA_COMPLIANCE_SCENARIO.text}
+              </p>
+              <div className="space-y-2">
+                {[
+                  { value: "required" as const, label: "This is REQUIRED for me to use the tool" },
+                  { value: "preferred" as const, label: "This is preferred but not required" },
+                  { value: "no_effect" as const, label: "This does not affect my decision" },
+                ].map((option) => (
+                  <label key={option.value} className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-[var(--muted)] transition-colors">
+                    <input
+                      type="radio"
+                      name="hipaaCompliance"
+                      checked={formData.hipaaCompliance === option.value}
+                      onChange={() => updateField("hipaaCompliance", option.value)}
+                      className="w-5 h-5 accent-[var(--primary)]"
+                    />
+                    <span className="text-sm">{option.label}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(7)}
+            onBack={() => setStep(6)}
             onSubmit={handleSubmit}
             isSubmitting={isSubmitting}
             isLastStep={true}

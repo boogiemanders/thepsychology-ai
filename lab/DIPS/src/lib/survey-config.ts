@@ -2,23 +2,19 @@
 // Defines all survey questions, options, and structure
 
 export const TRAINING_LEVELS = [
-  { value: "practicum", label: "Practicum Student" },
-  { value: "intern", label: "Intern" },
-  { value: "postdoc", label: "Postdoctoral Fellow" },
-  { value: "early_career", label: "Early Career (0-5 years)" },
-  { value: "mid_career", label: "Mid Career (5-15 years)" },
-  { value: "senior", label: "Senior (15+ years)" },
+  { value: "extern", label: "Extern (pre-doctoral practicum)" },
+  { value: "intern", label: "Intern (doctoral internship)" },
+  { value: "postdoc", label: "Postdoctoral fellow" },
+  { value: "early_career", label: "Early career psychologist (0–3 years post-licensure)" },
+  { value: "licensed", label: "Licensed psychologist (3+ years)" },
+  { value: "other", label: "Other" },
 ] as const;
 
 export const THEORETICAL_ORIENTATIONS = [
-  { value: "cbt", label: "Cognitive-Behavioral (CBT)" },
-  { value: "psychodynamic", label: "Psychodynamic/Psychoanalytic" },
-  { value: "humanistic", label: "Humanistic/Person-Centered" },
-  { value: "integrative", label: "Integrative/Eclectic" },
-  { value: "behavioral", label: "Behavioral" },
-  { value: "dbt", label: "DBT" },
-  { value: "act", label: "ACT" },
-  { value: "systems", label: "Systems/Family" },
+  { value: "cbt", label: "Cognitive-behavioral (CBT/DBT/ACT)" },
+  { value: "psychodynamic", label: "Psychodynamic/psychoanalytic" },
+  { value: "humanistic", label: "Humanistic/person-centered" },
+  { value: "integrative", label: "Integrative/eclectic" },
   { value: "other", label: "Other" },
 ] as const;
 
@@ -33,22 +29,28 @@ export const CLINICAL_SETTINGS = [
   { value: "other", label: "Other" },
 ] as const;
 
-export const CLINICAL_HOURS_RANGES = [
-  { value: "0-500", label: "0-500 hours" },
-  { value: "501-1000", label: "501-1,000 hours" },
-  { value: "1001-2000", label: "1,001-2,000 hours" },
-  { value: "2001-4000", label: "2,001-4,000 hours" },
-  { value: "4001+", label: "4,001+ hours" },
+export const WEEKLY_CLIENT_HOURS = [
+  { value: "0-5", label: "0–5 hours" },
+  { value: "6-10", label: "6–10 hours" },
+  { value: "11-15", label: "11–15 hours" },
+  { value: "16-20", label: "16–20 hours" },
+  { value: "21+", label: "21+ hours" },
+] as const;
+
+export const WEEKLY_SUPERVISION_HOURS = [
+  { value: "0-1", label: "0–1 hour" },
+  { value: "1.1-2", label: "1.1–2 hours" },
+  { value: "2.1-3", label: "2.1–3 hours" },
+  { value: "3.1-4", label: "3.1–4 hours" },
+  { value: "4+", label: "4+ hours" },
 ] as const;
 
 export const AGE_RANGES = [
-  { value: "18-24", label: "18-24" },
-  { value: "25-34", label: "25-34" },
-  { value: "35-44", label: "35-44" },
-  { value: "45-54", label: "45-54" },
-  { value: "55-64", label: "55-64" },
-  { value: "65+", label: "65+" },
-  { value: "prefer_not_to_say", label: "Prefer not to say" },
+  { value: "22-26", label: "22–26" },
+  { value: "27-31", label: "27–31" },
+  { value: "32-36", label: "32–36" },
+  { value: "37-41", label: "37–41" },
+  { value: "42+", label: "42+" },
 ] as const;
 
 export const GENDER_OPTIONS = [
@@ -71,18 +73,18 @@ export const RACE_ETHNICITY_OPTIONS = [
   { value: "prefer_not_to_say", label: "Prefer not to say" },
 ] as const;
 
-// Skills for Importance/Ability and Confidence/Competence matrices
+// Skills for Importance/Ability/Confidence matrix
 export const CLINICAL_SKILLS = [
-  { id: "assessment", label: "Conducting psychological assessments" },
-  { id: "diagnosis", label: "Developing accurate diagnoses" },
-  { id: "treatment_planning", label: "Creating treatment plans" },
-  { id: "therapeutic_alliance", label: "Building therapeutic alliance" },
-  { id: "intervention_selection", label: "Selecting appropriate interventions" },
-  { id: "case_conceptualization", label: "Case conceptualization" },
-  { id: "documentation", label: "Clinical documentation" },
-  { id: "risk_assessment", label: "Risk assessment" },
-  { id: "cultural_competence", label: "Cultural competence" },
-  { id: "ethical_decision_making", label: "Ethical decision-making" },
+  { id: "case_conceptualization", label: "Case conceptualization and treatment planning" },
+  { id: "therapeutic_alliance", label: "Therapeutic alliance building and rapport" },
+  { id: "evidence_based_intervention", label: "Evidence-based intervention delivery (e.g., CBT, exposure)" },
+  { id: "crisis_assessment", label: "Crisis assessment and safety planning" },
+  { id: "diagnostic_assessment", label: "Diagnostic assessment and differential diagnosis" },
+  { id: "therapeutic_ruptures", label: "Managing therapeutic ruptures and resistance" },
+  { id: "cultural_humility", label: "Cultural humility and diversity-responsive practice" },
+  { id: "documentation", label: "Documentation and clinical record-keeping" },
+  { id: "ethical_decision_making", label: "Ethical decision-making in complex situations" },
+  { id: "self_reflection", label: "Self-reflection and use of supervision" },
 ] as const;
 
 // Sources of competence (multi-select)
@@ -101,42 +103,70 @@ export const COMPETENCE_SOURCES = [
 
 // Feasibility/Acceptability items
 export const FEASIBILITY_ITEMS = [
-  { id: "fa1", text: "I would be willing to use an AI tool to practice clinical skills" },
-  { id: "fa2", text: "An AI training tool would fit into my current learning routine" },
-  { id: "fa3", text: "I believe AI could provide useful feedback on my clinical work" },
-  { id: "fa4", text: "I would trust AI-generated suggestions for treatment approaches" },
-  { id: "fa5", text: "AI tools could help me learn faster than traditional methods alone" },
-  { id: "fa6", text: "I would feel comfortable practicing difficult conversations with AI" },
-  { id: "fa7", text: "AI feedback would be a valuable supplement to supervisor feedback" },
-  { id: "fa8", text: "I would recommend an AI training tool to peers" },
-  { id: "fa9", text: "An AI tool could help me feel more prepared for real sessions" },
-  { id: "fa10", text: "I believe AI training tools will become standard in clinical education" },
+  { id: "fa1", text: "An AI training tool would fit well into my current clinical workflow." },
+  { id: "fa2", text: "I would feel comfortable using AI-generated feedback to improve my clinical skills." },
+  { id: "fa3", text: "An AI tool could provide timely feedback when my supervisor is unavailable." },
+  { id: "fa4", text: "I believe an AI tool could help me identify blind spots in my clinical practice." },
+  { id: "fa5", text: "Using an AI training tool would be worth the time investment required." },
+  { id: "fa6", text: "I trust that an AI tool could provide clinically accurate and evidence-based guidance." },
+  { id: "fa7", text: "An AI training tool would complement (not replace) human supervision effectively." },
+  { id: "fa8", text: "I would recommend an AI clinical training tool to my peers." },
+  { id: "fa9", text: "The benefits of using an AI training tool would outweigh any concerns I have." },
+  { id: "fa10", text: "I would use an AI training tool regularly if it were available to me." },
 ] as const;
 
 // Barriers checklist
 export const BARRIERS = [
-  { id: "b1", label: "Cost/affordability" },
-  { id: "b2", label: "Time constraints" },
-  { id: "b3", label: "Lack of institutional support" },
-  { id: "b4", label: "Privacy/confidentiality concerns" },
-  { id: "b5", label: "Skepticism about AI accuracy" },
-  { id: "b6", label: "Preference for human instruction" },
-  { id: "b7", label: "Technical difficulties/access issues" },
-  { id: "b8", label: "Ethical concerns about AI in mental health" },
-  { id: "b9", label: "Fear that AI will replace human clinicians" },
-  { id: "b10", label: "Lack of evidence base for AI training tools" },
-  { id: "b11", label: "Concern about developing bad habits" },
-  { id: "b12", label: "Over-reliance on technology" },
+  { id: "b1", label: "Lack of time in my schedule" },
+  { id: "b2", label: "Concerns about data privacy and confidentiality" },
+  { id: "b3", label: "Skepticism about AI accuracy or clinical validity" },
+  { id: "b4", label: "Preference for human-only supervision" },
+  { id: "b5", label: "Technical difficulties or poor user interface" },
+  { id: "b6", label: "Lack of institutional support or endorsement" },
+  { id: "b7", label: "Cost or lack of funding" },
+  { id: "b8", label: "Concerns about AI replacing human supervisors" },
+  { id: "b9", label: "Uncertainty about how to integrate it into my workflow" },
+  { id: "b10", label: "Lack of training on how to use the tool effectively" },
+  { id: "b11", label: "Concerns about bias in AI algorithms" },
+  { id: "b12", label: "Fear of being evaluated or judged by the tool" },
   { id: "b13", label: "Other (please specify)" },
+  { id: "b14", label: "Ethics (cognitive learning, social/political impacts, environmental impacts)" },
 ] as const;
 
-// Privacy/HIPAA scenarios
+// Privacy/HIPAA scenarios (7.1-7.4 use dealbreaker/acceptable/unsure)
 export const PRIVACY_SCENARIOS = [
-  { id: "p1", text: "The AI tool stores de-identified session transcripts for model improvement" },
-  { id: "p2", text: "The AI tool uses cloud-based processing (data leaves local device)" },
-  { id: "p3", text: "The AI tool requires linking to your professional license number" },
-  { id: "p4", text: "Session recordings with simulated patients are reviewed by human trainers" },
-  { id: "p5", text: "The AI company shares aggregate (non-identifiable) usage data with researchers" },
+  { id: "p1", text: "The AI tool requires you to input de-identified case vignettes (no names, dates, or identifying details)." },
+  { id: "p2", text: "The AI tool stores your anonymized interaction data to improve the algorithm over time." },
+  { id: "p3", text: "The AI tool shares aggregated, non-identifiable usage data with your training program for educational purposes." },
+  { id: "p4", text: "Your supervisor can view your AI tool usage patterns (frequency, topics) but NOT specific case content." },
+] as const;
+
+// Privacy scenario 7.5 has different response options
+export const HIPAA_COMPLIANCE_SCENARIO = {
+  id: "p5",
+  text: "The AI tool is HIPAA-compliant and uses end-to-end encryption for all data.",
+} as const;
+
+export type HipaaComplianceResponse = "required" | "preferred" | "no_effect";
+
+// AI tool perception options (Section 4.2)
+export const AI_TOOL_PERCEPTIONS = [
+  { id: "ai_listen", label: "It listens to my session (audio)" },
+  { id: "ai_live_transcription", label: "Live transcription during session" },
+  { id: "ai_after_transcript", label: "After-session transcript only" },
+  { id: "ai_after_summary", label: "After-session summary / note draft" },
+  { id: "ai_roleplay", label: "Roleplay practice (simulated patient)" },
+  { id: "ai_supervision_prep", label: "Supervision prep (agenda + questions)" },
+  { id: "ai_treatment_planning", label: "Treatment planning suggestions" },
+  { id: "other", label: "Other" },
+] as const;
+
+// Timepoint options
+export const TIMEPOINT_OPTIONS = [
+  { value: "week_0", label: "Week 0" },
+  { value: "week_4", label: "Week 4" },
+  { value: "week_8", label: "Week 8" },
+  { value: "week_12", label: "Week 12" },
 ] as const;
 
 // Supervisor survey - AI policy options
@@ -192,27 +222,27 @@ export const LIKERT_5_LABELS = [
 ] as const;
 
 export const IMPORTANCE_LABELS = [
-  "Not Important",
-  "Slightly Important",
-  "Moderately Important",
-  "Very Important",
-  "Essential",
+  "Not important",
+  "Somewhat important",
+  "Important",
+  "Very important",
+  "Critical",
 ] as const;
 
 export const ABILITY_LABELS = [
-  "Cannot Do",
-  "Beginner",
-  "Developing",
+  "Novice",
+  "Advanced beginner",
   "Competent",
+  "Proficient",
   "Expert",
 ] as const;
 
 export const CONFIDENCE_LABELS = [
-  "Not Confident",
-  "Slightly Confident",
-  "Moderately Confident",
-  "Very Confident",
-  "Extremely Confident",
+  "Not confident",
+  "Slightly confident",
+  "Moderately confident",
+  "Very confident",
+  "Extremely confident",
 ] as const;
 
 export const CHANGE_OPTIONS = [
