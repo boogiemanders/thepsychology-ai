@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'motion/react'
 import { supabase } from '@/lib/supabase'
@@ -9,55 +8,41 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
-import { TypographyH1, TypographyMuted } from '@/components/ui/typography'
 
-export default function LoginPage() {
-  const router = useRouter()
+export default function ForgotPasswordPage() {
+  const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  })
-
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
+  const [sent, setSent] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
 
-    if (!formData.email || !formData.password) {
-      setError('Email and password are required')
+    if (!email.trim()) {
+      setError('Email is required')
       return
     }
 
     setLoading(true)
 
     try {
-      // Start the sign-in process (don't await it since it hangs)
-      supabase.auth.signInWithPassword({
-        email: formData.email,
-        password: formData.password,
-      }).catch(err => {
-        setError(err.message || 'Login failed')
-        setLoading(false)
-      })
+      const options =
+        typeof window !== 'undefined'
+          ? { redirectTo: `${window.location.origin}/reset-password` }
+          : undefined
 
-      // Redirect to dashboard after a delay (auth context will handle setting the user)
-      setTimeout(() => {
-        router.push('/dashboard')
-      }, 2000)
+      const { error: resetError } = await supabase.auth.resetPasswordForEmail(email.trim(), options)
 
+      if (resetError) {
+        throw resetError
+      }
+
+      setSent(true)
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Login failed'
+      const message = err instanceof Error ? err.message : 'Unable to send reset link'
       setError(message)
+    } finally {
       setLoading(false)
     }
   }
@@ -72,9 +57,9 @@ export default function LoginPage() {
         >
           <Card>
             <CardHeader className="space-y-2">
-              <TypographyH1>Welcome Back</TypographyH1>
+              <CardTitle>Reset your password</CardTitle>
               <CardDescription>
-                Log in to your EPPP Skills account
+                Enter your email and we&apos;ll send you a secure reset link.
               </CardDescription>
             </CardHeader>
 
@@ -95,6 +80,24 @@ export default function LoginPage() {
                 )}
               </AnimatePresence>
 
+              <AnimatePresence mode="wait">
+                {sent && (
+                  <motion.div
+                    key="sent"
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Alert>
+                      <AlertDescription>
+                        If an account exists for this email, a password reset link has been sent.
+                      </AlertDescription>
+                    </Alert>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
@@ -104,50 +107,28 @@ export default function LoginPage() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
                     required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <label htmlFor="password" className="text-sm font-medium">
-                      Password
-                    </label>
-                    <Link href="/forgot-password" className="text-xs text-primary hover:underline transition-colors">
-                      Forgot password?
-                    </Link>
-                  </div>
-                  <Input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleInputChange}
-                    placeholder="Your password"
-                    required
+                    disabled={loading}
                   />
                 </div>
 
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full mt-6 transition-transform duration-200 hover:-translate-y-0.5"
+                  className="w-full mt-4 transition-transform duration-200 hover:-translate-y-0.5"
                   size="lg"
                 >
-                  {loading ? 'Logging in...' : 'Log In'}
+                  {loading ? 'Sending reset link...' : 'Send reset link'}
                 </Button>
               </form>
 
-              <div className="text-center">
-                <TypographyMuted>
-                  Don&apos;t have an account?{' '}
-                  <Link href="/signup" className="text-primary hover:underline font-medium">
-                    Sign up
-                  </Link>
-                </TypographyMuted>
+              <div className="text-center text-sm">
+                <Link href="/login" className="text-primary hover:underline font-medium">
+                  Back to login
+                </Link>
               </div>
             </CardContent>
           </Card>
