@@ -104,6 +104,27 @@ const normalizeQuestionText = (value: string): string => {
     .trim()
 }
 
+const splitExplanationIntoParagraphs = (explanation: string): string[] => {
+  const text = explanation.trim()
+  if (!text) return []
+
+  const numberedSections = text
+    .match(/(?:^|\s)\d+[.)]\s[\s\S]*?(?=(?:\s+\d+[.)]\s)|$)/g)
+    ?.map((section) => section.trim())
+    .filter(Boolean)
+
+  if (numberedSections && numberedSections.length > 1) {
+    return numberedSections
+  }
+
+  const paragraphs = text
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean)
+
+  return paragraphs.length > 0 ? paragraphs : [text]
+}
+
 export function QuizzerContent() {
   const searchParams = useSearchParams()
   const pathname = usePathname()
@@ -1420,9 +1441,11 @@ export function QuizzerContent() {
                           {/* Explanation - expanded by default */}
                           <div className="rounded-lg border border-border p-4">
                             <h4 className="text-sm font-semibold mb-2">Explanation</h4>
-                            <p className="text-sm text-muted-foreground">
-                              {q.explanation}
-                            </p>
+                            <div className="text-sm text-muted-foreground space-y-3">
+                              {splitExplanationIntoParagraphs(q.explanation).map((paragraph, idx) => (
+                                <p key={`${idx}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                              ))}
+                            </div>
                           </div>
 
                           {/* Action buttons for wrong answers */}
