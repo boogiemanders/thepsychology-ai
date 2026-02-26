@@ -401,15 +401,31 @@ export async function GET(request: NextRequest) {
       const todayStart = new Date()
       todayStart.setHours(0, 0, 0, 0)
 
-      const { data: pageViewData, error: pageViewError } = await supabase
-        .from('user_page_views')
-        .select('user_id, duration_seconds, created_at')
-        .in('user_id', userIds)
-        .not('duration_seconds', 'is', null)
+      // PostgREST defaults to 1000 rows per response, so paginate to avoid
+      // undercounting users with older/non-leading page-view rows.
+      const PAGE_SIZE = 1000
+      let from = 0
+      let hasMore = true
 
-      if (!pageViewError && pageViewData) {
-        // Aggregate time spent
-        for (const row of pageViewData) {
+      while (hasMore) {
+        const to = from + PAGE_SIZE - 1
+        const { data: pageViewData, error: pageViewError } = await supabase
+          .from('user_page_views')
+          .select('user_id, duration_seconds, created_at')
+          .in('user_id', userIds)
+          .not('duration_seconds', 'is', null)
+          .order('created_at', { ascending: false })
+          .range(from, to)
+
+        if (pageViewError) {
+          if (!pageViewError.message?.includes('does not exist')) {
+            console.error('[admin/recover] page views error:', pageViewError)
+          }
+          break
+        }
+
+        const rows = pageViewData || []
+        for (const row of rows) {
           const id = String((row as any).user_id)
           const entry = summaryByUser.get(id)
           if (!entry) continue
@@ -423,8 +439,12 @@ export async function GET(request: NextRequest) {
             entry.timeSpentTodaySeconds += duration
           }
         }
-      } else if (pageViewError && !pageViewError.message?.includes('does not exist')) {
-        console.error('[admin/recover] page views error:', pageViewError)
+
+        if (rows.length < PAGE_SIZE) {
+          hasMore = false
+        } else {
+          from += PAGE_SIZE
+        }
       }
     }
 
@@ -447,4 +467,3 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
   }
 }
-
