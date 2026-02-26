@@ -10,6 +10,7 @@ import path from 'node:path'
 import { sanitizeOpenAIApiKey } from '@/lib/openai-api-key'
 import { logUsageEvent } from '@/lib/usage-events'
 import { SupabaseClient } from '@supabase/supabase-js'
+import { EPPP_DOMAINS } from '@/lib/eppp-data'
 
 export const runtime = 'nodejs'
 
@@ -34,7 +35,265 @@ type UserProgressContext = {
   examCount: number
   lessonCount: number
   questionsAnswered: number
+  priorityDomains: Array<{
+    domainName: string
+    priorityScore: number | null
+    percentageWrong: number | null
+  }>
   studyBehavior: 'passive' | 'active' | 'balanced' | null
+}
+
+function normalizePriorityDomains(raw: unknown): UserProgressContext['priorityDomains'] {
+  if (!Array.isArray(raw)) return []
+
+  return raw
+    .flatMap((item) => {
+      if (!item || typeof item !== 'object') return []
+      const row = item as Record<string, unknown>
+
+      const domainNameRaw = row.domainName ?? row.domain_name
+      const priorityScoreRaw = row.priorityScore ?? row.priority_score
+      const percentageWrongRaw = row.percentageWrong ?? row.percentage_wrong
+
+      const domainName = typeof domainNameRaw === 'string' ? domainNameRaw.trim() : ''
+      if (!domainName) return []
+
+      return [
+        {
+          domainName,
+          priorityScore: typeof priorityScoreRaw === 'number' ? priorityScoreRaw : null,
+          percentageWrong: typeof percentageWrongRaw === 'number' ? percentageWrongRaw : null,
+        },
+      ]
+    })
+    .slice(0, 3)
+}
+
+function isStudyRecommendationRequest(text: string): boolean {
+  const normalized = text.toLowerCase()
+  return (
+    /\b(recommend|recommendation|prioritize|priority)\b/.test(normalized) ||
+    /\b(order|sequence)\b/.test(normalized) ||
+    /\bwhat should i study\b/.test(normalized) ||
+    /\bwhat do i study next\b/.test(normalized) ||
+    /\bwhich (domain|topic|area)\b/.test(normalized) ||
+    /\bwhere should i start\b/.test(normalized) ||
+    /\bwhat next\b/.test(normalized)
+  )
+}
+
+type QuizTopicMatch = {
+  topicName: string
+  domainId: string | null
+  source: 'catalog' | 'custom'
+}
+
+type RecoverMessage = {
+  role: 'user' | 'assistant'
+  content: string
+}
+
+function normalizeIntentText(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[&]/g, ' and ')
+    .replace(/[^a-z0-9\s]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+const QUIZ_TOPIC_CATALOG = EPPP_DOMAINS.flatMap((domain) =>
+  domain.topics
+    .map((topic) => {
+      const topicName = topic.name.trim()
+      const normalized = normalizeIntentText(topicName)
+      if (!topicName || !normalized) return null
+      return { topicName, domainId: domain.id, normalized }
+    })
+    .filter((item): item is { topicName: string; domainId: string; normalized: string } => item !== null)
+).sort((a, b) => b.normalized.length - a.normalized.length)
+
+function isQuizNavigationRequest(text: string): boolean {
+  const normalized = normalizeIntentText(text)
+  if (!normalized) return false
+  const hasQuizWord = /\bquiz\b/.test(normalized) || /\bquestions?\b/.test(normalized)
+  if (!hasQuizWord) return false
+
+  return (
+    /\b(where|start|open|link|send|do|take|want|lets|let|can|quick|five|5)\b/.test(normalized) ||
+    normalized === 'quiz'
+  )
+}
+
+function isAwaitingQuizTopic(messages: RecoverMessage[]): boolean {
+  const latestAssistant = [...messages].reverse().find((m) => m.role === 'assistant')?.content
+  if (!latestAssistant) return false
+  const normalized = normalizeIntentText(latestAssistant)
+  return normalized.includes('which topic do you want the quiz on')
+}
+
+function matchCatalogTopic(text: string): QuizTopicMatch | null {
+  const normalizedText = normalizeIntentText(text)
+  if (!normalizedText) return null
+
+  for (const candidate of QUIZ_TOPIC_CATALOG) {
+    const pattern = new RegExp(`\\b${escapeRegex(candidate.normalized).replace(/\s+/g, '\\s+')}\\b`)
+    if (pattern.test(normalizedText)) {
+      return {
+        topicName: candidate.topicName,
+        domainId: candidate.domainId,
+        source: 'catalog',
+      }
+    }
+  }
+
+  return null
+}
+
+function cleanTopicCandidate(raw: string): string {
+  return raw
+    .trim()
+    .replace(/^["']+|["']+$/g, '')
+    .replace(/\b(?:please|thanks|thank you|lol)\b/gi, '')
+    .replace(/[.?!,:;]+$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function isCustomTopicUsable(candidate: string): boolean {
+  if (!candidate) return false
+  const normalized = normalizeIntentText(candidate)
+  if (!normalized || normalized.length < 3) return false
+  if (normalized.split(' ').length > 10) return false
+  if (/\bbig\s*6\b|\bbig six\b/.test(normalized)) return false
+  if (/\b(i don t know|idk|not sure|you choose|your choice|anything|whatever|surprise me)\b/.test(normalized)) return false
+  if (/^(ok|okay|yes|yep|sure|no|nah|later|stop|cancel|topic|quiz|questions?)$/.test(normalized)) return false
+  return true
+}
+
+function extractCustomTopic(text: string, allowLooseReply = false): QuizTopicMatch | null {
+  const trimmed = text.trim()
+  if (!trimmed) return null
+
+  const patterns: RegExp[] = [
+    /\b(?:quiz|questions?)\s+(?:on|about|for)\s+(.+)$/i,
+    /\b(?:on|about|for)\s+(.+?)\s+(?:quiz|questions?)\b/i,
+    /\btopic\s*[:\-]\s*(.+)$/i,
+  ]
+
+  for (const pattern of patterns) {
+    const match = trimmed.match(pattern)
+    if (!match?.[1]) continue
+    const candidate = cleanTopicCandidate(match[1])
+    if (!isCustomTopicUsable(candidate)) continue
+    return {
+      topicName: candidate,
+      domainId: null,
+      source: 'custom',
+    }
+  }
+
+  if (allowLooseReply) {
+    const candidate = cleanTopicCandidate(trimmed)
+    if (isCustomTopicUsable(candidate)) {
+      return {
+        topicName: candidate,
+        domainId: null,
+        source: 'custom',
+      }
+    }
+  }
+
+  return null
+}
+
+function resolveRequestedQuizTopic(messages: RecoverMessage[], allowLooseReply: boolean): QuizTopicMatch | null {
+  const userMessages = messages
+    .filter((message) => message.role === 'user')
+    .map((message) => message.content)
+    .reverse()
+
+  for (let idx = 0; idx < userMessages.length; idx += 1) {
+    const message = userMessages[idx]
+    const shouldInspect = idx === 0 || isQuizNavigationRequest(message) || /\btopic\b/i.test(message)
+    if (!shouldInspect) continue
+
+    const catalogMatch = matchCatalogTopic(message)
+    if (catalogMatch) return catalogMatch
+
+    const customMatch = extractCustomTopic(message, allowLooseReply && idx === 0)
+    if (customMatch) return customMatch
+  }
+
+  return null
+}
+
+function buildPriorityOrderText(userContext?: UserProgressContext): string | null {
+  if (!userContext || userContext.priorityDomains.length === 0) return null
+
+  const lines = userContext.priorityDomains.map((domain, index) => `${index + 1}. ${domain.domainName}`)
+  if (lines.length === 0) return null
+
+  return `If you want my recommendation, start with:\n${lines.join('\n')}`
+}
+
+function buildQuizRoutingReply(input: {
+  messages: RecoverMessage[]
+  lastUserMessage: string
+  userContext?: UserProgressContext
+}): string | null {
+  const { messages, lastUserMessage, userContext } = input
+  const awaitingTopic = isAwaitingQuizTopic(messages)
+  const isQuizRequest = isQuizNavigationRequest(lastUserMessage)
+  if (!isQuizRequest && !awaitingTopic) return null
+
+  const mentionsFiveQuestions =
+    /\b(5|five)\b/.test(normalizeIntentText(lastUserMessage)) &&
+    /\b(quiz|questions?)\b/.test(normalizeIntentText(lastUserMessage))
+
+  const requestedTopic = resolveRequestedQuizTopic(messages, awaitingTopic)
+
+  if (requestedTopic) {
+    const quizHref = `/quizzer?topic=${encodeURIComponent(requestedTopic.topicName)}${
+      requestedTopic.domainId ? `&domain=${encodeURIComponent(requestedTopic.domainId)}` : ''
+    }`
+
+    const lines: string[] = [
+      `Start here: [Open quiz for ${requestedTopic.topicName}](${quizHref})`,
+      'Need a different topic? Use [Topic Selector](/topic-selector).',
+    ]
+
+    if (mentionsFiveQuestions) {
+      lines.push('Quick note: Quizzer currently runs 10 questions (8 scored + 2 experimental).')
+    }
+
+    if (requestedTopic.source === 'custom') {
+      lines.push('If we have matching local question-bank content, Quizzer uses it first, then falls back to generation.')
+    }
+
+    return lines.join('\n\n')
+  }
+
+  const lines: string[] = ['Which topic do you want the quiz on?']
+
+  if (mentionsFiveQuestions) {
+    lines.push('Quick note: Quizzer currently runs 10 questions (8 scored + 2 experimental).')
+  }
+
+  const priorityOrderText = buildPriorityOrderText(userContext)
+  if (priorityOrderText) {
+    lines.push(priorityOrderText)
+  }
+
+  lines.push(
+    'Pick one in [Topic Selector](/topic-selector), or type a custom topic and I will open a quiz for it.'
+  )
+
+  return lines.join('\n\n')
 }
 
 function readDotenvLocalValue(key: string): string | null {
@@ -245,6 +504,18 @@ async function getUserProgressContext(
       .select('id', { count: 'exact', head: true })
       .eq('user_id', userId)
 
+    // Pull latest top 3 domains from Prioritize (source of truth for study order guidance)
+    const { data: studyPrioritiesRow, error: studyPrioritiesError } = await supabase
+      .from('study_priorities')
+      .select('top_domains')
+      .eq('user_id', userId)
+      .maybeSingle()
+
+    if (studyPrioritiesError) {
+      console.error('[recover-chat] Failed to fetch study priorities:', studyPrioritiesError)
+    }
+    const priorityDomains = normalizePriorityDomains(studyPrioritiesRow?.top_domains)
+
     // Determine study behavior based on lesson/question ratio
     let studyBehavior: 'passive' | 'active' | 'balanced' | null = null
     if ((lessonCount ?? 0) >= 5) {
@@ -260,11 +531,20 @@ async function getUserProgressContext(
       examCount: examCount ?? 0,
       lessonCount: lessonCount ?? 0,
       questionsAnswered: questionsAnswered ?? 0,
+      priorityDomains,
       studyBehavior,
     }
   } catch (error) {
     console.error('[recover-chat] Failed to fetch user progress:', error)
-    return { progress: null, exams: null, examCount: 0, lessonCount: 0, questionsAnswered: 0, studyBehavior: null }
+    return {
+      progress: null,
+      exams: null,
+      examCount: 0,
+      lessonCount: 0,
+      questionsAnswered: 0,
+      priorityDomains: [],
+      studyBehavior: null,
+    }
   }
 }
 
@@ -294,6 +574,19 @@ function getRecoverSystemPrompt(userContext?: UserProgressContext): string {
       parts.push(`Recent exam score: ${scorePercent}%`)
     } else {
       parts.push('Recent exam score: no exams taken yet')
+    }
+
+    if (userContext.priorityDomains.length > 0) {
+      const formattedOrder = userContext.priorityDomains
+        .map((domain, index) => {
+          const wrongRate =
+            typeof domain.percentageWrong === 'number' ? `, ${Math.round(domain.percentageWrong)}% wrong` : ''
+          return `${index + 1}. ${domain.domainName}${wrongRate}`
+        })
+        .join(' | ')
+      parts.push(`Prioritize top domains (use this order): ${formattedOrder}`)
+    } else {
+      parts.push('Prioritize top domains: unavailable')
     }
 
     // Add exam count
@@ -339,20 +632,46 @@ Don't lecture about study methods. Just validate their effort and offer the quiz
     }
   }
 
-  return `You are a supportive study coach for EPPP test-takers. Your goal is to help users get unstuck and back to studying quickly.
+  return `You are a supportive coach for EPPP test-takers. Your agenda is to help users feel understood, then help them feel more prepared to study.
 
 ## How conversations work
-- The UI opens with: "How's studying been going?"
-- After they share what's hard, move quickly to offering concrete help
-- Don't stay in "listening mode" for too long. Get to action within 2-3 exchanges.
+- The UI opens with: "How are you doing right now? We can talk about studying, or anything that feels most useful."
+- Follow the user's lead first. Do not force study planning before they are ready.
+- If they want to talk about non-study things, support that briefly, then ask permission before pivoting to studying.
+
+## Agenda transparency
+- If the user says "stop pushing your agenda" (or similar), do not deny it.
+- Acknowledge directly: your agenda is to help them feel understood and leave with one small next step when they want it.
+- Offer choice and control: they can keep talking, pause, or switch to study planning.
+
+## Study recommendation rules
+- If the user asks what to study next, asks for recommendations, or asks for study order:
+- Use "Prioritize top domains" from user context as source of truth.
+- Do not derive study order from PDF/reference excerpts.
+- If Prioritize data is unavailable, say that clearly, then give a provisional order based on their weak areas.
+
+## Quiz routing rules
+- Never tell users to find an external quiz platform.
+- If they ask for a quiz, first ask what topic they want if none is provided.
+- If topic is known, send them to in-app Quizzer or Topic Selector.
+- Custom topic requests are allowed.
+
+## Model transparency
+- If asked what AI model you are, do not guess a version name.
+- Say you are an OpenAI language model used in this app, and you may not have access to the exact deployed version.
 
 ## Your approach
-1. Briefly acknowledge what they're experiencing (one sentence max)
-2. Ask ONE clarifying question if needed, OR move directly to offering options
-3. Offer 2-3 concrete choices tailored to their situation
-4. Help them pick one small action they can do in the next 24 hours
+1. Briefly acknowledge what they said (one sentence max)
+2. Ask what they want right now: to vent/talk, to get a concrete study step, or both
+3. Match their choice; avoid pushing
+4. When they are open, offer 2-3 concrete options and help pick one action for the next 24 hours
 
-## Concrete options to offer (pick what fits their situation)
+## If they want to talk about other things
+- It is acceptable to stay with non-study conversation for 1-3 turns.
+- Be supportive, calm, and concise.
+- Then gently offer a choice: keep talking, or shift to a small study step.
+
+## Concrete options to offer when they want study help
 - "Want me to suggest a 15-minute study plan to get started?"
 - "Should we figure out which topic to tackle first based on your weak areas?"
 - "Would a quick 5-question quiz help you warm up?"
@@ -367,23 +686,25 @@ Don't lecture about study methods. Just validate their effort and offer the quiz
 - **Anxiety**: Normalize it, suggest starting with familiar material to build momentum
 
 ## Style
-- Warm but efficient. Get to the point.
+- Warm, respectful, and non-defensive
 - Keep responses to 2-3 short paragraphs max
 - One question at a time
+- If the user is upset or using profanity, stay calm and avoid scolding
 - Avoid em dashes; use commas or periods
 - Do not diagnose or claim to provide therapy
 
 ## Response patterns to AVOID
 - Starting every response with "You're feeling..." or "You're finding it..."
 - Multiple reflective statements in a row
-- Asking "What would you like to be different?" repeatedly
-- Staying in listening mode without offering concrete help
+- Repeatedly pushing study actions after the user says no
+- Denying you have an agenda when asked
+- Claiming a specific OpenAI model version unless you are certain
 
 ## Safety
 - If the user mentions self-harm, suicide, or intent to harm: respond with a brief caring message and encourage immediate help (911 or 988 in the US)
 - For severe symptoms, encourage seeking a licensed professional
 
-Be practical and action-oriented. Help them take one small step forward.${contextSection}`
+Be practical, consent-based, and action-oriented when invited. Help them take one small step forward.${contextSection}`
 }
 
 async function getRecoverContext(
@@ -605,14 +926,40 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    const { context, sources } = lastUserMessage
-      ? await getRecoverContext(lastUserMessage)
-      : { context: '', sources: [] }
-
     // Fetch user progress data for personalization
     const userContext = parsed.data.userId
       ? await getUserProgressContext(parsed.data.userId, supabase)
       : undefined
+
+    const quizRoutingReply = lastUserMessage
+      ? buildQuizRoutingReply({ messages, lastUserMessage, userContext })
+      : null
+
+    if (quizRoutingReply) {
+      const responsePayload = { message: quizRoutingReply }
+
+      if (parsed.data.userId) {
+        void persistRecoverTranscript({
+          supabase,
+          sessionId: parsed.data.sessionId,
+          userId: parsed.data.userId,
+          messages,
+          assistantMessage: quizRoutingReply,
+          alertReason,
+        })
+      }
+
+      return NextResponse.json(responsePayload)
+    }
+
+    const shouldSkipReferenceContext = lastUserMessage
+      ? isStudyRecommendationRequest(lastUserMessage) || isQuizNavigationRequest(lastUserMessage)
+      : false
+
+    const { context, sources } =
+      lastUserMessage && !shouldSkipReferenceContext
+        ? await getRecoverContext(lastUserMessage)
+        : { context: '', sources: [] }
 
     const systemMessages = [{ role: 'system' as const, content: getRecoverSystemPrompt(userContext) }]
     if (context) {

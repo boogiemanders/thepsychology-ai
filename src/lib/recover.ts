@@ -1,4 +1,5 @@
-export const INITIAL_RECOVER_ASSISTANT_MESSAGE = "How's studying been going?"
+export const INITIAL_RECOVER_ASSISTANT_MESSAGE =
+  "How are you doing right now? We can talk about studying, or anything that feels most useful."
 export const RECOVER_RECOMMENDATION_HOUR_KEY = 'recover_recommendation_hour'
 
 export const QUICK_RESET_RECOVER_ASSISTANT_MESSAGE = [
@@ -6,7 +7,7 @@ export const QUICK_RESET_RECOVER_ASSISTANT_MESSAGE = [
   '',
   '- 4 slow breaths, longer exhales.',
   '- Drop your shoulders and unclench your jaw.',
-  '- When you are ready, let\'s talk about how studying has been going',
+  '- When you are ready, we can talk about studying or anything that is on your mind.',
 ].join('\n')
 
 export function getRecoverInitialAssistantMessage(entry?: string | null): string {
