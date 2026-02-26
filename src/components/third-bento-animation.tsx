@@ -22,7 +22,7 @@ When Tony Stark tells the press, “I am Iron Man,” he’s owning his truth. N
   return (
     <Reasoning>
       <ReasoningContent className="">
-        <ReasoningResponse text={reasoningText} />
+        <ReasoningResponse text={reasoningText} className="[&_p]:m-0" />
       </ReasoningContent>
     </Reasoning>
   );
@@ -155,5 +155,3 @@ export function ThirdBentoAnimation() {
   );
 
 }
-
-

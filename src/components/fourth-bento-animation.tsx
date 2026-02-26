@@ -16,7 +16,7 @@ export function ReasoningBasic() {
   return (
     <Reasoning>
       <ReasoningContent className="">
-        <ReasoningResponse text={reasoningText} />
+        <ReasoningResponse text={reasoningText} className="[&_p]:m-0" />
       </ReasoningContent>
     </Reasoning>
   );
