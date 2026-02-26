@@ -1511,6 +1511,27 @@ export function TopicTeacherContent() {
     return filtered.length > 0 ? filtered.join('; ') : ''
   }
 
+  const splitExplanationIntoParagraphs = (explanation: string): string[] => {
+    const text = explanation.trim()
+    if (!text) return []
+
+    const numberedSections = text
+      .match(/(?:^|\s)\d+[.)]\s[\s\S]*?(?=(?:\s+\d+[.)]\s)|$)/g)
+      ?.map((section) => section.trim())
+      .filter(Boolean)
+
+    if (numberedSections && numberedSections.length > 1) {
+      return numberedSections
+    }
+
+    const paragraphs = text
+      .split(/\n{2,}/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean)
+
+    return paragraphs.length > 0 ? paragraphs : [text]
+  }
+
   const getQuizAnswerKey = (answer: WrongAnswer): string => {
     if (answer.questionKey && answer.questionKey.length > 0) {
       return answer.questionKey
@@ -4353,9 +4374,13 @@ export function TopicTeacherContent() {
                   {activeMissedQuestion.question.explanation ? (
                     <div>
                       <h4 className="font-semibold text-sm mb-2">Explanation</h4>
-                      <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
-                        {activeMissedQuestion.question.explanation}
-                      </p>
+                      <div className="text-sm text-foreground bg-muted/50 p-3 rounded space-y-3">
+                        {splitExplanationIntoParagraphs(
+                          activeMissedQuestion.question.explanation
+                        ).map((paragraph, idx) => (
+                          <p key={`${idx}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                        ))}
+                      </div>
                     </div>
                   ) : null}
 
@@ -4449,9 +4474,13 @@ export function TopicTeacherContent() {
                   {activeQuizQuestion.explanation && (
                     <div>
                       <h4 className="font-semibold text-sm mb-2">Explanation</h4>
-                      <p className="text-sm text-foreground bg-muted/50 p-3 rounded">
-                        {activeQuizQuestion.explanation}
-                      </p>
+                      <div className="text-sm text-foreground bg-muted/50 p-3 rounded space-y-3">
+                        {splitExplanationIntoParagraphs(
+                          activeQuizQuestion.explanation
+                        ).map((paragraph, idx) => (
+                          <p key={`${idx}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+                        ))}
+                      </div>
                     </div>
                   )}
 
