@@ -46,7 +46,7 @@ export function CompanyShowcase() {
   return (
     <section id="company" className="flex flex-col items-center justify-center gap-6 py-8 w-full relative px-6">
       <p className="text-center text-foreground text-base md:text-lg font-medium">
-        Built by <TextRotate words={ROLES} className="font-bold" /> from:
+        Built by <TextRotate words={ROLES} className="font-bold" /> trained at:
       </p>
 
       <div className="relative w-full max-w-5xl overflow-hidden marquee-edge-fade">

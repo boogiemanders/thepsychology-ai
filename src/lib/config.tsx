@@ -92,7 +92,7 @@ export const siteConfig = {
     },
   },
   companyShowcase: {
-    title: "Built by psychologists, neuroscientists & researchers from:",
+    title: "Built by psychologists, neuroscientists & researchers trained at:",
     subtitle: null,
     companyLogos: [
       { id: 1, name: "UCLA-David Geffen School of Medicine", src: "/dgsom.png", member: "anders", invert: true, width: 160 },
@@ -289,6 +289,12 @@ export const siteConfig = {
           "We focus on prioritization: what to study next, why it matters, and how it shows up on the EPPP. Less filler, fewer random drills, more high-yield EPPP practice tests and targeted review.",
       },
       {
+        id: 14,
+        question: "Is this cheating? How is this fair?",
+        answer:
+          "No. thePsychology.ai is for prep before test day, not for use during the real EPPP. On exam day, you still take the exam without outside help, under the same testing rules as everyone else.",
+      },
+      {
         id: 3,
         question: "Can I schedule my EPPP exam through an online portal?",
         answer:
@@ -353,12 +359,6 @@ export const siteConfig = {
         question: "Do you have EPPP practice questions, an EPPP sample exam, or EPPP practice questions 2025-2026?",
         answer:
           "If you’re searching for EPPP practice questions 2025-2026, focus on materials aligned with the current ASPPB blueprint and updated regularly. Our approach is to generate targeted practice questions by topic and reinforce them with clear, exam-style explanations and review.",
-      },
-      {
-        id: 14,
-        question: "Is this cheating? How is this fair?",
-        answer:
-          "No. thePsychology.ai is for prep before test day, not for use during the real EPPP. On exam day, you still take the exam without outside help, under the same testing rules as everyone else.",
       },
     ],
   },
