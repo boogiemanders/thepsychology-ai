@@ -13,54 +13,43 @@ interface DealbreakersTableProps {
   onChange: (id: string, value: Response) => void;
 }
 
+const OPTIONS: { value: Response; label: string }[] = [
+  { value: "dealbreaker", label: "Dealbreaker" },
+  { value: "acceptable", label: "Acceptable" },
+  { value: "unsure", label: "Unsure" },
+];
+
 export function DealbreakersTable({
   scenarios,
   responses,
   onChange,
 }: DealbreakersTableProps) {
   return (
-    <div className="overflow-x-auto">
-      <table className="dealbreakers-table">
-        <thead>
-          <tr>
-            <th className="min-w-[200px]">Scenario</th>
-            <th className="text-center w-24">Dealbreaker</th>
-            <th className="text-center w-24">Acceptable</th>
-            <th className="text-center w-24">Unsure</th>
-          </tr>
-        </thead>
-        <tbody>
-          {scenarios.map((scenario) => (
-            <tr key={scenario.id}>
-              <td className="text-sm">{scenario.text}</td>
-              <td className="text-center">
-                <input
-                  type="radio"
-                  name={scenario.id}
-                  checked={responses[scenario.id] === "dealbreaker"}
-                  onChange={() => onChange(scenario.id, "dealbreaker")}
-                />
-              </td>
-              <td className="text-center">
-                <input
-                  type="radio"
-                  name={scenario.id}
-                  checked={responses[scenario.id] === "acceptable"}
-                  onChange={() => onChange(scenario.id, "acceptable")}
-                />
-              </td>
-              <td className="text-center">
-                <input
-                  type="radio"
-                  name={scenario.id}
-                  checked={responses[scenario.id] === "unsure"}
-                  onChange={() => onChange(scenario.id, "unsure")}
-                />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="space-y-4">
+      {scenarios.map((scenario) => (
+        <div key={scenario.id} className="p-4 border border-[var(--border)] rounded-lg">
+          <p className="text-sm mb-3">{scenario.text}</p>
+          <div className="grid grid-cols-3 gap-2">
+            {OPTIONS.map((opt) => {
+              const sel = responses[scenario.id] === opt.value;
+              return (
+                <button
+                  key={opt.value}
+                  type="button"
+                  onClick={() => onChange(scenario.id, opt.value)}
+                  className={`min-h-[44px] px-2 py-2 rounded-lg border text-xs font-medium cursor-pointer transition-all text-center
+                    ${sel
+                      ? "bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]"
+                      : "bg-[var(--input-bg)] text-[var(--foreground)] border-[var(--border)] hover:border-[var(--primary)]"
+                    }`}
+                >
+                  {opt.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

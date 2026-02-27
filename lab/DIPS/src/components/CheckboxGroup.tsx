@@ -33,17 +33,38 @@ export function CheckboxGroup({
   const isOtherSelected = selectedValues.includes("other");
 
   return (
-    <div className="checkbox-group">
-      {options.map((option) => (
-        <label key={option.id} className="checkbox-option">
-          <input
-            type="checkbox"
-            checked={selectedValues.includes(option.id)}
-            onChange={() => handleToggle(option.id)}
-          />
-          <span>{option.label}</span>
-        </label>
-      ))}
+    <div className="flex flex-col gap-3">
+      {options.map((option) => {
+        const isChecked = selectedValues.includes(option.id);
+        return (
+          <label
+            key={option.id}
+            className={`flex items-center gap-3 min-h-[48px] px-4 py-3 rounded-lg border cursor-pointer transition-all
+              ${isChecked
+                ? "border-[var(--primary)] bg-[var(--primary)]/10"
+                : "border-[var(--border)] hover:border-[var(--primary)] hover:bg-[var(--muted)]"
+              }`}
+          >
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={() => handleToggle(option.id)}
+              className="sr-only"
+            />
+            <span
+              className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center
+                ${isChecked ? "bg-[var(--primary)] border-[var(--primary)]" : "border-[var(--border)]"}`}
+            >
+              {isChecked && (
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
+            </span>
+            <span className="text-sm">{option.label}</span>
+          </label>
+        );
+      })}
 
       {/* Other input field */}
       {showOtherInput && isOtherSelected && onOtherChange && (

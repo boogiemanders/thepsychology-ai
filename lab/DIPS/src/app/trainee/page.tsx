@@ -112,6 +112,25 @@ export default function TraineeSurvey() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
+  const goToStep = (n: number) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setStep(n);
+  };
+
+  const scrollToNextFeasibility = (currentId: string) => {
+    const idx = FEASIBILITY_ITEMS.findIndex((i) => i.id === currentId);
+    if (idx < FEASIBILITY_ITEMS.length - 1) {
+      const nextId = FEASIBILITY_ITEMS[idx + 1].id;
+      setTimeout(() => {
+        const el = document.querySelector(`[data-feasibility="${nextId}"]`);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }, 80);
+    }
+  };
+
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
@@ -158,7 +177,7 @@ export default function TraineeSurvey() {
     >
       {/* Step 1: Demographics */}
       {step === 1 && (
-        <>
+        <div key={1} className="step-enter">
           <FormSection
             title="Section 1: Demographics"
             description="Estimated time: 2 minutes"
@@ -284,16 +303,16 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onNext={() => setStep(2)}
+            onNext={() => goToStep(2)}
             showBack={false}
             canProceed={true}
           />
-        </>
+        </div>
       )}
 
       {/* Step 2: Open-Ended Questions */}
       {step === 2 && (
-        <>
+        <div key={2} className="step-enter">
           <FormSection
             title="Section 2: Open-Ended Questions"
             description="Estimated time: 2 minutes"
@@ -338,15 +357,15 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(1)}
-            onNext={() => setStep(3)}
+            onBack={() => goToStep(1)}
+            onNext={() => goToStep(3)}
           />
-        </>
+        </div>
       )}
 
       {/* Step 3: Skill Importance / Ability / Confidence */}
       {step === 3 && (
-        <>
+        <div key={3} className="step-enter">
           <FormSection
             title="Section 3: Skill Importance / Ability / Confidence"
             description="Estimated time: 3 minutes. For each clinical skill, rate its IMPORTANCE to your current practice, your current ABILITY level, and your CONFIDENCE performing it independently."
@@ -407,15 +426,15 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(2)}
-            onNext={() => setStep(4)}
+            onBack={() => goToStep(2)}
+            onNext={() => goToStep(4)}
           />
-        </>
+        </div>
       )}
 
       {/* Step 4: AI Description + What Does AI Mean to You? */}
       {step === 4 && (
-        <>
+        <div key={4} className="step-enter">
           <FormSection
             title='Section 4: AI Description + "What Does AI Mean to You?"'
             description="Estimated time: 1 minute"
@@ -448,15 +467,15 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(3)}
-            onNext={() => setStep(5)}
+            onBack={() => goToStep(3)}
+            onNext={() => goToStep(5)}
           />
-        </>
+        </div>
       )}
 
       {/* Step 5: Feasibility / Acceptability */}
       {step === 5 && (
-        <>
+        <div key={5} className="step-enter">
           <FormSection
             title="Section 5: Feasibility / Acceptability"
             description="Estimated time: 2 minutes. Rate your agreement with each statement about using an AI clinical training tool in your practice."
@@ -467,17 +486,18 @@ export default function TraineeSurvey() {
 
             <div className="space-y-6">
               {FEASIBILITY_ITEMS.map((item, index) => (
-                <div key={item.id}>
+                <div key={item.id} data-feasibility={item.id}>
                   <p className="font-medium text-sm mb-3">5.{index + 1} {item.text}</p>
                   <LikertScale
                     name={item.id}
                     value={formData.feasibilityResponses[item.id] ?? null}
-                    onChange={(v) =>
+                    onChange={(v) => {
                       updateField("feasibilityResponses", {
                         ...formData.feasibilityResponses,
                         [item.id]: v,
-                      })
-                    }
+                      });
+                      scrollToNextFeasibility(item.id);
+                    }}
                     labels={LIKERT_5_LABELS}
                   />
                 </div>
@@ -486,15 +506,15 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(4)}
-            onNext={() => setStep(6)}
+            onBack={() => goToStep(4)}
+            onNext={() => goToStep(6)}
           />
-        </>
+        </div>
       )}
 
       {/* Step 6: Barriers Checklist */}
       {step === 6 && (
-        <>
+        <div key={6} className="step-enter">
           <FormSection
             title="Section 6: Barriers Checklist"
             description="Estimated time: 1 minute. Check ALL barriers that would make you hesitant to use an AI clinical training tool."
@@ -510,15 +530,15 @@ export default function TraineeSurvey() {
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(5)}
-            onNext={() => setStep(7)}
+            onBack={() => goToStep(5)}
+            onNext={() => goToStep(7)}
           />
-        </>
+        </div>
       )}
 
       {/* Step 7: Privacy / HIPAA Dealbreakers */}
       {step === 7 && (
-        <>
+        <div key={7} className="step-enter">
           <FormSection
             title="Section 7: Privacy / HIPAA Dealbreakers"
             description="Estimated time: 1 minute. Indicate whether each scenario would be a DEALBREAKER (would prevent you from using the tool)."
@@ -544,30 +564,35 @@ export default function TraineeSurvey() {
                   { value: "required" as const, label: "This is REQUIRED for me to use the tool" },
                   { value: "preferred" as const, label: "This is preferred but not required" },
                   { value: "no_effect" as const, label: "This does not affect my decision" },
-                ].map((option) => (
-                  <label key={option.value} className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-[var(--muted)] transition-colors">
-                    <input
-                      type="radio"
-                      name="hipaaCompliance"
-                      checked={formData.hipaaCompliance === option.value}
-                      onChange={() => updateField("hipaaCompliance", option.value)}
-                      className="w-5 h-5 accent-[var(--primary)]"
-                    />
-                    <span className="text-sm">{option.label}</span>
-                  </label>
-                ))}
+                ].map((option) => {
+                  const sel = formData.hipaaCompliance === option.value;
+                  return (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => updateField("hipaaCompliance", option.value)}
+                      className={`w-full min-h-[44px] px-4 py-3 rounded-lg border text-sm text-left cursor-pointer transition-all
+                        ${sel
+                          ? "bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]"
+                          : "bg-[var(--input-bg)] text-[var(--foreground)] border-[var(--border)] hover:border-[var(--primary)]"
+                        }`}
+                    >
+                      {option.label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </FormSection>
 
           <NavigationButtons
-            onBack={() => setStep(6)}
+            onBack={() => goToStep(6)}
             onSubmit={handleSubmit}
             isSubmitting={isSubmitting}
             isLastStep={true}
             canProceed={true}
           />
-        </>
+        </div>
       )}
     </SurveyLayout>
   );

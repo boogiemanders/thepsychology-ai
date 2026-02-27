@@ -29,21 +29,24 @@ export function LikertScale({
   const options = Array.from({ length: max - min + 1 }, (_, i) => min + i);
 
   return (
-    <div className="grid grid-cols-5 gap-2">
-      {options.map((optionValue, index) => (
-        <label key={optionValue} className="flex flex-col items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-[var(--muted)] transition-colors">
-          <input
-            type="radio"
-            name={name}
-            value={optionValue}
-            checked={value === optionValue}
-            onChange={() => onChange(optionValue)}
-            className="w-5 h-5 accent-[var(--primary)]"
-          />
-          <span className="text-xs text-center text-[var(--muted-foreground)]">{labels[index] || optionValue}</span>
-        </label>
-      ))}
-    </div>
+    <fieldset className="border-0 p-0 m-0">
+      <legend className="text-xs text-[var(--muted-foreground)] mb-2 w-full">
+        {min} = {labels[0]} &nbsp;···&nbsp; {max} = {labels[labels.length - 1]}
+      </legend>
+      <div className="rating-scale">
+        {options.map((v) => (
+          <button
+            key={v}
+            type="button"
+            onClick={() => onChange(v)}
+            className={`rating-button${value === v ? " selected" : ""}`}
+            aria-label={labels[v - min]}
+          >
+            {v}
+          </button>
+        ))}
+      </div>
+    </fieldset>
   );
 }
 
@@ -58,18 +61,22 @@ export function LikertScaleCompact({
   const options = Array.from({ length: max - min + 1 }, (_, i) => min + i);
 
   return (
-    <div className="flex gap-2">
-      {options.map((optionValue) => (
-        <label key={optionValue} className="flex items-center cursor-pointer">
-          <input
-            type="radio"
-            name={name}
-            value={optionValue}
-            checked={value === optionValue}
-            onChange={() => onChange(optionValue)}
-            className="w-5 h-5 accent-[var(--primary)]"
-          />
-        </label>
+    <div className="flex gap-1">
+      {options.map((v) => (
+        <button
+          key={v}
+          type="button"
+          onClick={() => onChange(v)}
+          aria-label={`${name}: ${v}`}
+          className={`flex items-center justify-center rounded-lg border text-sm font-medium cursor-pointer transition-all
+            w-9 h-9 sm:w-6 sm:h-6
+            ${value === v
+              ? "bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]"
+              : "bg-[var(--input-bg)] text-[var(--foreground)] border-[var(--border)] hover:border-[var(--primary)]"
+            }`}
+        >
+          {v}
+        </button>
       ))}
     </div>
   );
