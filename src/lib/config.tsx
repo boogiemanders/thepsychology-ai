@@ -85,7 +85,7 @@ export const siteConfig = {
     badge: "",
     title: "Prep That Actually Matches the EPPP",
     description:
-      "Most programs give you 95% scores on practice, then you fail the real thing. We build questions the way the EPPP actually words them, so your practice score means something.",
+      "Most programs give you 95% scores on practice, and then still not pass the real thing. We build questions the way the EPPP actually words them, so your practice score means something.",
     cta: {
       primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
