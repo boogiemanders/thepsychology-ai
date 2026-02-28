@@ -513,6 +513,9 @@ export default function HomeClient() {
               <div className="h-full w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950" />
             )}
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
+            <p className="absolute bottom-4 left-0 right-0 z-10 text-center text-xs md:text-sm tracking-wide text-white/50">
+              Free during beta &middot; $0 while others charge $849+
+            </p>
           </div>
           <div className="relative z-10">
             <HeroSection
