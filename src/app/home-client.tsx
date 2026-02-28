@@ -14,23 +14,37 @@ import { TestimonialSection } from "@/components/sections/testimonial-section"
 const MOBILE_LAYOUT_BREAKPOINT = 768
 const FINAL_CONTINUOUS_LOOP_BELOW_Y = 658
 const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -17
-const FINAL_HERO_TITLE_Y = 339
+const FINAL_HERO_TITLE_Y = 295
 const FINAL_HERO_CTA_Y = 52
 const FINAL_HERO_BANNER_Y = 45
-const MOBILE_HERO_TITLE_Y = 254
-const MOBILE_HERO_CTA_Y = -170
-const MOBILE_HERO_BANNER_Y = -125
+const MOBILE_HERO_TITLE_Y = 178
+const MOBILE_HERO_CTA_Y = -141
+const MOBILE_HERO_BANNER_Y = -104
 const HERO_OFFSET_REFERENCE_HEIGHT = 900
 const DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT = 1231
-const DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT = 859
+const DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT = 840
 const DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT = 612
 const DESKTOP_HERO_OFFSET_FLOOR_VIEWPORT_HEIGHT = 400
-const DESKTOP_HERO_TITLE_Y_AT_MID_HEIGHT = 182
-const DESKTOP_HERO_CTA_Y_AT_MID_HEIGHT = -128
-const DESKTOP_HERO_BANNER_Y_AT_MID_HEIGHT = -115
+const DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT = 912
+const DESKTOP_HERO_TITLE_Y_AT_HIGH_HEIGHT_WIDE = 140
+const DESKTOP_HERO_TITLE_Y_AT_HIGH_HEIGHT_NARROW = 196
+const DESKTOP_HERO_CTA_Y_AT_HIGH_HEIGHT = -102
+const DESKTOP_HERO_BANNER_Y_AT_HIGH_HEIGHT = -92
+const DESKTOP_HERO_HIGH_WIDTH_THRESHOLD = 1280
+const DESKTOP_HERO_TITLE_Y_AT_MID_HEIGHT = 105
+const DESKTOP_HERO_CTA_Y_AT_MID_HEIGHT = -126
+const DESKTOP_HERO_BANNER_Y_AT_MID_HEIGHT = -113
+const DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT = 624
+const DESKTOP_HERO_TITLE_Y_AT_LOW_HEIGHT = 45
+const DESKTOP_HERO_CTA_Y_AT_LOW_HEIGHT = -99
+const DESKTOP_HERO_BANNER_Y_AT_LOW_HEIGHT = -86
 const DESKTOP_HERO_TITLE_Y_AT_MIN_HEIGHT = 78
 const DESKTOP_HERO_CTA_Y_AT_MIN_HEIGHT = -97
 const DESKTOP_HERO_BANNER_Y_AT_MIN_HEIGHT = -84
+const DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT = 463
+const DESKTOP_HERO_TITLE_Y_AT_SUB_HEIGHT = -17
+const DESKTOP_HERO_CTA_Y_AT_SUB_HEIGHT = -2
+const DESKTOP_HERO_BANNER_Y_AT_SUB_HEIGHT = -29
 const DESKTOP_HERO_TITLE_Y_AT_FLOOR_HEIGHT = 25
 const DESKTOP_HERO_CTA_Y_AT_FLOOR_HEIGHT = 7
 const DESKTOP_HERO_BANNER_Y_AT_FLOOR_HEIGHT = -6
@@ -392,75 +406,150 @@ export default function HomeClient() {
     marginTop: `${effectiveNavbarVisualOffset}px`,
   }
 
-  const desktopHeroTitleY = viewportHeight >= DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT
+  const highTitleY = viewportWidth >= DESKTOP_HERO_HIGH_WIDTH_THRESHOLD
+    ? DESKTOP_HERO_TITLE_Y_AT_HIGH_HEIGHT_WIDE
+    : DESKTOP_HERO_TITLE_Y_AT_HIGH_HEIGHT_NARROW
+  const desktopHeroTitleY = viewportHeight >= DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT
     ? interpolateYOffset(
         viewportHeight,
         DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT,
         FINAL_HERO_TITLE_Y,
-        DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
-        DESKTOP_HERO_TITLE_Y_AT_MID_HEIGHT,
+        DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT,
+        highTitleY,
       )
-    : viewportHeight >= DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT
+    : viewportHeight >= DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT
       ? interpolateYOffset(
           viewportHeight,
+          DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT,
+          highTitleY,
           DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
           DESKTOP_HERO_TITLE_Y_AT_MID_HEIGHT,
-          DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_TITLE_Y_AT_MIN_HEIGHT,
         )
-      : interpolateYOffset(
-          viewportHeight,
-          DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_TITLE_Y_AT_MIN_HEIGHT,
-          DESKTOP_HERO_OFFSET_FLOOR_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_TITLE_Y_AT_FLOOR_HEIGHT,
-        )
-  const desktopHeroCTAY = viewportHeight >= DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT
+      : viewportHeight >= DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT
+        ? interpolateYOffset(
+            viewportHeight,
+            DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
+            DESKTOP_HERO_TITLE_Y_AT_MID_HEIGHT,
+            DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT,
+            DESKTOP_HERO_TITLE_Y_AT_LOW_HEIGHT,
+          )
+        : viewportHeight >= DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT
+          ? interpolateYOffset(
+              viewportHeight,
+              DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT,
+              DESKTOP_HERO_TITLE_Y_AT_LOW_HEIGHT,
+              DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
+              DESKTOP_HERO_TITLE_Y_AT_MIN_HEIGHT,
+            )
+          : viewportHeight >= DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT
+            ? interpolateYOffset(
+                viewportHeight,
+                DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_TITLE_Y_AT_MIN_HEIGHT,
+                DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_TITLE_Y_AT_SUB_HEIGHT,
+              )
+            : interpolateYOffset(
+                viewportHeight,
+                DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_TITLE_Y_AT_SUB_HEIGHT,
+                DESKTOP_HERO_OFFSET_FLOOR_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_TITLE_Y_AT_FLOOR_HEIGHT,
+              )
+  const desktopHeroCTAY = viewportHeight >= DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT
     ? interpolateYOffset(
         viewportHeight,
         DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT,
         FINAL_HERO_CTA_Y,
-        DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
-        DESKTOP_HERO_CTA_Y_AT_MID_HEIGHT,
+        DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT,
+        DESKTOP_HERO_CTA_Y_AT_HIGH_HEIGHT,
       )
-    : viewportHeight >= DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT
+    : viewportHeight >= DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT
       ? interpolateYOffset(
           viewportHeight,
+          DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT,
+          DESKTOP_HERO_CTA_Y_AT_HIGH_HEIGHT,
           DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
           DESKTOP_HERO_CTA_Y_AT_MID_HEIGHT,
-          DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_CTA_Y_AT_MIN_HEIGHT,
         )
-      : interpolateYOffset(
-          viewportHeight,
-          DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_CTA_Y_AT_MIN_HEIGHT,
-          DESKTOP_HERO_OFFSET_FLOOR_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_CTA_Y_AT_FLOOR_HEIGHT,
-        )
-  const desktopHeroBannerY = viewportHeight >= DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT
+      : viewportHeight >= DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT
+        ? interpolateYOffset(
+            viewportHeight,
+            DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
+            DESKTOP_HERO_CTA_Y_AT_MID_HEIGHT,
+            DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT,
+            DESKTOP_HERO_CTA_Y_AT_LOW_HEIGHT,
+          )
+        : viewportHeight >= DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT
+          ? interpolateYOffset(
+              viewportHeight,
+              DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT,
+              DESKTOP_HERO_CTA_Y_AT_LOW_HEIGHT,
+              DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
+              DESKTOP_HERO_CTA_Y_AT_MIN_HEIGHT,
+            )
+          : viewportHeight >= DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT
+            ? interpolateYOffset(
+                viewportHeight,
+                DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_CTA_Y_AT_MIN_HEIGHT,
+                DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_CTA_Y_AT_SUB_HEIGHT,
+              )
+            : interpolateYOffset(
+                viewportHeight,
+                DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_CTA_Y_AT_SUB_HEIGHT,
+                DESKTOP_HERO_OFFSET_FLOOR_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_CTA_Y_AT_FLOOR_HEIGHT,
+              )
+  const desktopHeroBannerY = viewportHeight >= DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT
     ? interpolateYOffset(
         viewportHeight,
         DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT,
         FINAL_HERO_BANNER_Y,
-        DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
-        DESKTOP_HERO_BANNER_Y_AT_MID_HEIGHT,
+        DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT,
+        DESKTOP_HERO_BANNER_Y_AT_HIGH_HEIGHT,
       )
-    : viewportHeight >= DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT
+    : viewportHeight >= DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT
       ? interpolateYOffset(
           viewportHeight,
+          DESKTOP_HERO_OFFSET_HIGH_VIEWPORT_HEIGHT,
+          DESKTOP_HERO_BANNER_Y_AT_HIGH_HEIGHT,
           DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
           DESKTOP_HERO_BANNER_Y_AT_MID_HEIGHT,
-          DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_BANNER_Y_AT_MIN_HEIGHT,
         )
-      : interpolateYOffset(
-          viewportHeight,
-          DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_BANNER_Y_AT_MIN_HEIGHT,
-          DESKTOP_HERO_OFFSET_FLOOR_VIEWPORT_HEIGHT,
-          DESKTOP_HERO_BANNER_Y_AT_FLOOR_HEIGHT,
-        )
+      : viewportHeight >= DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT
+        ? interpolateYOffset(
+            viewportHeight,
+            DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT,
+            DESKTOP_HERO_BANNER_Y_AT_MID_HEIGHT,
+            DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT,
+            DESKTOP_HERO_BANNER_Y_AT_LOW_HEIGHT,
+          )
+        : viewportHeight >= DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT
+          ? interpolateYOffset(
+              viewportHeight,
+              DESKTOP_HERO_OFFSET_LOW_VIEWPORT_HEIGHT,
+              DESKTOP_HERO_BANNER_Y_AT_LOW_HEIGHT,
+              DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
+              DESKTOP_HERO_BANNER_Y_AT_MIN_HEIGHT,
+            )
+          : viewportHeight >= DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT
+            ? interpolateYOffset(
+                viewportHeight,
+                DESKTOP_HERO_OFFSET_MIN_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_BANNER_Y_AT_MIN_HEIGHT,
+                DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_BANNER_Y_AT_SUB_HEIGHT,
+              )
+            : interpolateYOffset(
+                viewportHeight,
+                DESKTOP_HERO_OFFSET_SUB_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_BANNER_Y_AT_SUB_HEIGHT,
+                DESKTOP_HERO_OFFSET_FLOOR_VIEWPORT_HEIGHT,
+                DESKTOP_HERO_BANNER_Y_AT_FLOOR_HEIGHT,
+              )
 
   const heroOffsetScale = isMobileLayout
     ? Math.min(820, viewportHeight) / HERO_OFFSET_REFERENCE_HEIGHT
@@ -663,6 +752,7 @@ export default function HomeClient() {
                   const prefix = isMobileLayout ? 'MOBILE' : 'FINAL'
                   navigator.clipboard.writeText(
                     [
+                      `// ${viewportWidth} × ${viewportHeight}px (${isMobileLayout ? 'mobile' : 'desktop'})`,
                       `const ${prefix}_CONTINUOUS_LOOP_BELOW_Y = ${effectiveContinuousLoopBelowY}`,
                       `const ${prefix}_HERO_TITLE_Y = ${effectiveHeroTitleY}`,
                       `const ${prefix}_HERO_CTA_Y = ${effectiveHeroCTAY}`,
