@@ -710,16 +710,16 @@ export default function TopicSelectorPage() {
 
             {isFreeTier && (
               <div className="rounded-lg border border-dashed border-border/70 bg-muted/30 p-4 text-sm">
-                <p className="font-medium mb-1">You’re on the free plan.</p>
+                <p className="font-medium mb-1">You're on the free plan.</p>
                 <p className="text-muted-foreground mb-3">
                   You have access to one curated lesson in each domain. Upgrade to unlock all lessons and advanced tools.
                 </p>
                 <Button
                   size="sm"
-                  onClick={() => startCheckout(‘pro’, { redirectPath: ‘/topic-selector’ })}
+                  onClick={() => startCheckout('pro', { redirectPath: '/topic-selector' })}
                   disabled={checkoutLoading}
                 >
-                  {checkoutLoading ? ‘Redirecting…’ : ‘Upgrade to Pro’}
+                  {checkoutLoading ? 'Redirecting…' : 'Upgrade to Pro'}
                 </Button>
               </div>
             )}
