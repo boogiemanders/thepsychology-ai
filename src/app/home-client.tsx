@@ -17,9 +17,9 @@ const MOBILE_CONTINUOUS_LOOP_BELOW_Y = -17
 const FINAL_HERO_TITLE_Y = 295
 const FINAL_HERO_CTA_Y = 52
 const FINAL_HERO_BANNER_Y = 45
-const MOBILE_HERO_TITLE_Y = 162
-const MOBILE_HERO_CTA_Y = -128
-const MOBILE_HERO_BANNER_Y = -95
+const MOBILE_HERO_TITLE_Y = 123
+const MOBILE_HERO_CTA_Y = -97
+const MOBILE_HERO_BANNER_Y = -72
 const HERO_OFFSET_REFERENCE_HEIGHT = 900
 const DESKTOP_HERO_OFFSET_MAX_VIEWPORT_HEIGHT = 1231
 const DESKTOP_HERO_OFFSET_MID_VIEWPORT_HEIGHT = 840
@@ -60,6 +60,11 @@ const getLayoutScopedStorageKey = (baseKey: string, isMobile: boolean) =>
   `${baseKey}-${isMobile ? "mobile" : "desktop"}`
 
 const FINAL_CONTENT_LIFT = 659
+const MOBILE_HERO_VIDEO_LIFT_Y_WIDE = -230
+const MOBILE_HERO_VIDEO_LIFT_Y_MID = -95
+const MOBILE_HERO_VIDEO_LIFT_Y_NARROW = -28
+const MOBILE_HERO_VIDEO_WIDTH_WIDE = 650
+const MOBILE_HERO_VIDEO_WIDTH_MID = 564
 const HERO_VIDEO_START_AT = 9
 const HERO_VIDEO_DESKTOP_SRC = "/hero-background.mp4?v=refresh9"
 const HERO_VIDEO_MOBILE_SRC = "/hero-backgroundmobile.mp4?v=refresh1"
@@ -566,11 +571,32 @@ export default function HomeClient() {
 
   const baseContentGroupMarginTop = activeContentLift > 0 ? -activeContentLift : 0
   const contentGroupMarginTop = baseContentGroupMarginTop + effectiveContinuousLoopBelowY
-  const heroVideoTransform =
-    heroVideoLiftY !== 0 || heroVideoZoom !== 100
+  const mobileVideoLiftY = isMobileLayout
+    ? (viewportWidth >= MOBILE_HERO_VIDEO_WIDTH_WIDE
+        ? MOBILE_HERO_VIDEO_LIFT_Y_WIDE
+        : viewportWidth >= MOBILE_HERO_VIDEO_WIDTH_MID
+          ? Math.round(interpolateYOffset(
+              viewportWidth,
+              MOBILE_HERO_VIDEO_WIDTH_WIDE,
+              MOBILE_HERO_VIDEO_LIFT_Y_WIDE,
+              MOBILE_HERO_VIDEO_WIDTH_MID,
+              MOBILE_HERO_VIDEO_LIFT_Y_MID,
+            ))
+          : Math.round(interpolateYOffset(
+              viewportWidth,
+              MOBILE_HERO_VIDEO_WIDTH_MID,
+              MOBILE_HERO_VIDEO_LIFT_Y_MID,
+              320,
+              MOBILE_HERO_VIDEO_LIFT_Y_NARROW,
+            )))
+    : 0
+  const effectiveVideoLiftY = mobileVideoLiftY + heroVideoLiftY
+  const heroVideoStyle: React.CSSProperties | undefined =
+    effectiveVideoLiftY !== 0 || heroVideoZoom !== 100
       ? {
-          transform: `translateY(${heroVideoLiftY}px) scale(${heroVideoZoom / 100})`,
+          transform: `translateY(${effectiveVideoLiftY}px) scale(${heroVideoZoom / 100})`,
           transformOrigin: "center center",
+          ...(effectiveVideoLiftY < 0 ? { height: `calc(100% + ${Math.abs(effectiveVideoLiftY)}px)` } : {}),
         }
       : undefined
   const heroVideoSrc = isMobileLayout ? HERO_VIDEO_MOBILE_SRC : HERO_VIDEO_DESKTOP_SRC
@@ -589,7 +615,7 @@ export default function HomeClient() {
                 id="hero-video"
                 ref={heroVideoRef}
                 className={heroVideoClassName}
-                style={heroVideoTransform}
+                style={heroVideoStyle}
                 src={heroVideoSrc}
                 autoPlay
                 muted
@@ -602,9 +628,14 @@ export default function HomeClient() {
               <div className="h-full w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950" />
             )}
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
-            <p className="absolute bottom-4 left-0 right-0 z-10 text-center text-xs md:text-sm tracking-wide text-white/50">
-              Free during beta &middot; $0 while others charge $849+
-            </p>
+            <div className="absolute bottom-3 md:bottom-4 left-0 right-0 z-10 flex justify-center">
+              <p className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-3 py-1 text-[9px] md:text-[10px] tracking-[0.06em] text-white/40 uppercase">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#6a9bcc]/60" />
+                Free during beta
+                <span className="text-white/20 mx-0.5">/</span>
+                $0 while others charge $849+
+              </p>
+            </div>
           </div>
           <div className="relative z-10">
             <HeroSection
@@ -733,6 +764,14 @@ export default function HomeClient() {
                 <span className="text-green-400 font-bold">{effectiveContinuousLoopBelowY}px</span>
               </div>
               <div>
+                <span className="text-white/50">HERO_VIDEO_Y: </span>
+                <span className="text-green-400 font-bold">{heroVideoLiftY}px</span>
+              </div>
+              <div>
+                <span className="text-white/50">HERO_VIDEO_ZOOM: </span>
+                <span className="text-green-400 font-bold">{heroVideoZoom}%</span>
+              </div>
+              <div>
                 <span className="text-white/50">{isMobileLayout ? 'MOBILE' : 'FINAL'}_HERO_TITLE_Y: </span>
                 <span className="text-green-400 font-bold">{effectiveHeroTitleY}px</span>
               </div>
@@ -754,6 +793,8 @@ export default function HomeClient() {
                     [
                       `// ${viewportWidth} × ${viewportHeight}px (${isMobileLayout ? 'mobile' : 'desktop'})`,
                       `const ${prefix}_CONTINUOUS_LOOP_BELOW_Y = ${effectiveContinuousLoopBelowY}`,
+                      `const HERO_VIDEO_Y = ${heroVideoLiftY}`,
+                      `const HERO_VIDEO_ZOOM = ${heroVideoZoom}`,
                       `const ${prefix}_HERO_TITLE_Y = ${effectiveHeroTitleY}`,
                       `const ${prefix}_HERO_CTA_Y = ${effectiveHeroCTAY}`,
                       `const ${prefix}_HERO_BANNER_Y = ${effectiveHeroBannerY}`,
