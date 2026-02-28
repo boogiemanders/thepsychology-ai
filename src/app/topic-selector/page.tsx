@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge'
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { motion, AnimatePresence } from 'motion/react'
 import { RecoverNudge } from '@/components/recover-nudge'
+import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 import { getAllQuizResults } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
@@ -216,6 +217,7 @@ export default function TopicSelectorPage() {
   // Default to 'pro' while loading to prevent flash of locked content
   const entitledTier = loading || !userProfile ? 'pro' : (getEntitledSubscriptionTier(userProfile) ?? 'pro')
   const isFreeTier = entitledTier === 'free'
+  const { startCheckout, loading: checkoutLoading } = useStripeCheckout()
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [currentInput, setCurrentInput] = useState<string>('')
   const [savedInterests, setSavedInterests] = useState<string[]>([])
@@ -710,7 +712,15 @@ export default function TopicSelectorPage() {
               <div className="rounded-lg border border-dashed border-border/70 bg-muted/30 p-4 text-sm">
                 <p className="font-medium mb-1">You’re on the free plan.</p>
                 <p className="text-muted-foreground">
-                  You have access to one curated lesson in each domain. Upgrade to Pro to unlock all lessons and advanced tools.
+                  You have access to one curated lesson in each domain.{‘ ‘}
+                  <button
+                    onClick={() => startCheckout(‘pro’, { redirectPath: ‘/topic-selector’ })}
+                    disabled={checkoutLoading}
+                    className="underline font-medium text-foreground hover:text-primary transition-colors disabled:opacity-50"
+                  >
+                    {checkoutLoading ? ‘Redirecting…’ : ‘Upgrade to Pro’}
+                  </button>{‘ ‘}
+                  to unlock all lessons and advanced tools.
                 </p>
               </div>
             )}
