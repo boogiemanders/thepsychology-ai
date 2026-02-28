@@ -29,7 +29,7 @@ export const BLUR_FADE_DELAY = 0.15
 export const siteConfig = {
   name: "thePsychology.ai",
   description:
-    "Free AI-adaptive EPPP exam prep — 80+ lessons, practice exams, and high-yield study materials built by psychologists who passed.",
+    "Free AI-adaptive EPPP exam prep. 80+ lessons, realistic practice exams, and high-yield study materials built by psychologists who passed. $0 while others charge $849+.",
   cta: "Get Started",
   url:
     process.env.NEXT_PUBLIC_APP_URL ||
@@ -82,10 +82,10 @@ export const siteConfig = {
         <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
       </svg>
     ),
-    badge: "",
-    title: "EPPP Prep Without the Fluff.",
+    badge: "Free during beta. $0 while others charge $849+",
+    title: "EPPP Prep That Actually Matches the Exam.",
     description:
-      "Adaptive lessons, practice exams, and quizzes built by psychologists who passed the EPPP recently.",
+      "Most programs give you 95% scores on practice, then you fail the real thing. We build questions the way the EPPP actually words them, so your practice score means something.",
     cta: {
       primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
@@ -107,13 +107,13 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "What You Get",
-    description: "80+ lessons. Adaptive quizzes. Exam simulation. And Recover. Evidence-based mental resets no other EPPP program offers.",
+    description: "80+ lessons. Adaptive quizzes. Full exam simulation. And Recover: evidence-based mental resets for focus and burnout. No other EPPP program offers any of this.",
     items: [
       {
         id: 1,
         content: <FirstBentoAnimation />,
         title: "Study What Matters",
-        description: "We show you the highest-yield topics so every hour moves your score.",
+        description: "We surface the highest-yield topics first, so every hour of study actually moves your score.",
       },
       {
         id: 2,
@@ -182,7 +182,7 @@ export const siteConfig = {
   },
   pricing: {
     title: "Start Studying Free Today",
-    description: "No credit card required. Start studying in 2 minutes.",
+    description: "Other programs charge $849 to $1,649. We're $0 during beta. No credit card, no catch. Start studying in 2 minutes.",
     pricingItems: [
       {
         name: "Pro",
@@ -271,6 +271,28 @@ export const siteConfig = {
         </p>
       ),
     },
+    {
+      id: "10",
+      name: "Anonymous",
+      role: "Psychologist (TikTok comment)",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          <Highlight className="text-brand-soft-blue dark:text-brand-coral">I wish I would have had this years ago!</Highlight>
+        </p>
+      ),
+    },
+    {
+      id: "11",
+      name: "Anonymous",
+      role: "TikTok comment",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          <Highlight className="text-brand-dusty-rose dark:text-brand-sage">Those are great and much needed tools! Hope it goes well with all the great ideas you have! As a person who is always on the go, I’m always wishing I could use a tool to study while in between places on my phone.</Highlight>
+        </p>
+      ),
+    },
   ],
   faqSection: {
     title: "Questions People Actually Ask",
@@ -286,7 +308,7 @@ export const siteConfig = {
         id: 2,
         question: "How is it different from other EPPP exam prep programs?",
         answer:
-          "We focus on prioritization: what to study next, why it matters, and how it shows up on the EPPP. Less filler, fewer random drills, more high-yield EPPP practice tests and targeted review.",
+          "Most prep programs sell you static content. You score 95% on their practice tests, then bomb the real EPPP. Users report as low as 20% content overlap with the actual exam. We're the only AI-native platform that adapts to how the EPPP actually tests you: application-based questions, not straight definitions. Our questions mirror real exam wording, and our adaptive engine focuses your time on what you don't know yet, not what you've already mastered.",
       },
       {
         id: 14,
@@ -367,7 +389,7 @@ export const siteConfig = {
     title: "Your license starts here",
     backgroundImage: "/agent-cta-background.png",
     button: { text: "Claim Your Free Spot", href: "/#get-started" },
-    subtext: "First 100 spots are free",
+    subtext: "The EPPP is changing in 2027. Start preparing now. First 100 spots are free.",
   },
   footerLinks: [
     {
