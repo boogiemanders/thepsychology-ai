@@ -222,7 +222,7 @@ export const siteConfig = {
       img: "/images/anders-chan.png",
       description: (
         <p>
-          I passed on my first try after exactly 30 days of grinding. This is the tool I used, plus the missing piece
+          I passed on my <Highlight className="text-brand-coral">first try</Highlight> after exactly <Highlight className="text-brand-coral">30 days</Highlight> of grinding. This is the tool I used, plus the missing piece
           I had to learn the hard way: what to study, what to skip, and how to stay out of panic mode.
         </p>
       ),
