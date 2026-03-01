@@ -24,7 +24,11 @@ export function InlineSvg({ src, alt, className }: InlineSvgProps) {
         return res.text()
       })
       .then((text) => {
-        setSvgContent(text)
+        // Strip <script> tags and on* event handler attributes for defense-in-depth
+        const sanitized = text
+          .replace(/<script[\s\S]*?<\/script>/gi, '')
+          .replace(/\s+on\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]*)/gi, '')
+        setSvgContent(sanitized)
       })
       .catch(() => {
         setError(true)

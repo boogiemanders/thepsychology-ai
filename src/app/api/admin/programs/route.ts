@@ -43,7 +43,8 @@ export async function GET(request: NextRequest) {
     // Get query params
     const { searchParams } = new URL(request.url)
     const verified = searchParams.get('verified')
-    const limit = Math.min(parseInt(searchParams.get('limit') || '100'), 200)
+    const parsedLimit = parseInt(searchParams.get('limit') || '100')
+    const limit = Number.isFinite(parsedLimit) && parsedLimit > 0 ? Math.min(parsedLimit, 200) : 100
 
     // Build query
     let query = supabase

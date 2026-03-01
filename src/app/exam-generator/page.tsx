@@ -90,6 +90,16 @@ export default function ExamGeneratorPage() {
   const [userId, setUserId] = useState<string | null>(null)
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<number, boolean>>({})
   const [textFormats, setTextFormats] = useState<Record<number, { question: string; options: string[] }>>({})
+
+  // Escape HTML to prevent XSS when rendering user-generated text via dangerouslySetInnerHTML
+  const escapeHtml = useCallback((value: string): string => {
+    return value
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;')
+  }, [])
   const [assignmentId, setAssignmentId] = useState<string | null>(null)
   const [isSavingResults, setIsSavingResults] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
@@ -292,8 +302,8 @@ export default function ExamGeneratorPage() {
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
-        // Get current formatted text or original
-        const oldQuestion = textFormats[currentQuestion]?.question || question.question
+        // Get current formatted text or escaped original
+        const oldQuestion = textFormats[currentQuestion]?.question || escapeHtml(question.question)
 
         // Create a temporary div to work with HTML
         const tempDiv = document.createElement('div')
@@ -336,7 +346,7 @@ export default function ExamGeneratorPage() {
 
         // Do the same for options
         const formattedOptions = textFormats[currentQuestion]?.options
-        const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options
+        const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options.map(escapeHtml)
         const newOptions = currentOptions.map((option: string) => {
           const optDiv = document.createElement('div')
           optDiv.innerHTML = option
@@ -356,7 +366,7 @@ export default function ExamGeneratorPage() {
         lastSelectionRef.current = null
       }
     }
-  }, [currentQuestion, getTelemetry, questions, textFormats, resolveSelectionText])
+  }, [currentQuestion, escapeHtml, getTelemetry, questions, textFormats, resolveSelectionText])
 
   // Apply strikethrough to selected text (question and answer choices)
   const handleStrikethroughText = useCallback(() => {
@@ -364,8 +374,8 @@ export default function ExamGeneratorPage() {
     if (selectedText && currentQuestion !== undefined) {
       const question = questions[currentQuestion]
       if (question) {
-        // Get current formatted text or original
-        const oldQuestion = textFormats[currentQuestion]?.question || question.question
+        // Get current formatted text or escaped original
+        const oldQuestion = textFormats[currentQuestion]?.question || escapeHtml(question.question)
 
         // Create a temporary div to work with HTML
         const tempDiv = document.createElement('div')
@@ -407,7 +417,7 @@ export default function ExamGeneratorPage() {
 
         // Do the same for options
         const formattedOptions = textFormats[currentQuestion]?.options
-        const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options
+        const currentOptions = Array.isArray(formattedOptions) ? formattedOptions : question.options.map(escapeHtml)
         const newOptions = currentOptions.map((option: string) => {
           const optDiv = document.createElement('div')
           optDiv.innerHTML = option
@@ -427,7 +437,7 @@ export default function ExamGeneratorPage() {
         lastSelectionRef.current = null
       }
     }
-  }, [currentQuestion, getTelemetry, questions, textFormats, resolveSelectionText])
+  }, [currentQuestion, escapeHtml, getTelemetry, questions, textFormats, resolveSelectionText])
 
   // Persist in-progress exam state so users can always resume after refresh/navigation.
   const savePausedExamState = useCallback((reason: 'manual' | 'autosave' | 'beforeunload' = 'manual') => {

@@ -30,8 +30,10 @@ export async function GET(request: NextRequest) {
 
     // Get pagination params
     const { searchParams } = new URL(request.url)
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100)
-    const offset = parseInt(searchParams.get('offset') || '0')
+    const parsedLimit = parseInt(searchParams.get('limit') || '50')
+    const limit = Number.isFinite(parsedLimit) && parsedLimit > 0 ? Math.min(parsedLimit, 100) : 50
+    const parsedOffset = parseInt(searchParams.get('offset') || '0')
+    const offset = Number.isFinite(parsedOffset) && parsedOffset >= 0 ? parsedOffset : 0
 
     // Fetch consent audit history
     const { data: history, error, count } = await supabase
