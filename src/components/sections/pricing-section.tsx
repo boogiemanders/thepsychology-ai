@@ -135,9 +135,29 @@ export function PricingSection() {
     setIsSubmitting(true)
 
     try {
+      // Determine final referral source (append "Other" text if selected)
+      let finalReferralSource = formData.referralSource
+      if (formData.referralSource === 'other' && formData.referralSourceOther.trim()) {
+        finalReferralSource = `other: ${formData.referralSourceOther.trim()}`
+      } else if (formData.referralSource === 'fb_other' && formData.referralSourceOther.trim()) {
+        finalReferralSource = `fb_other: ${formData.referralSourceOther.trim()}`
+      }
+
+      // Get UTM params for attribution
+      const utmParams = formatUTMForAPI(getStoredUTMParams())
+
+      // Store referral + UTM data in auth user_metadata so it survives
+      // even if profile creation fails (orphan handler can read it back)
       const { data, error } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
+        options: {
+          data: {
+            referral_source: finalReferralSource,
+            full_name: formData.fullName || null,
+            ...utmParams,
+          },
+        },
       })
 
       if (error) throw new Error(error.message)
@@ -162,17 +182,6 @@ export function PricingSection() {
       } else {
         // No promo spots left → free tier
         subscriptionTier = "free"
-      }
-
-      // Get UTM params for attribution
-      const utmParams = formatUTMForAPI(getStoredUTMParams())
-
-      // Determine final referral source (append "Other" text if selected)
-      let finalReferralSource = formData.referralSource
-      if (formData.referralSource === 'other' && formData.referralSourceOther.trim()) {
-        finalReferralSource = `other: ${formData.referralSourceOther.trim()}`
-      } else if (formData.referralSource === 'fb_other' && formData.referralSourceOther.trim()) {
-        finalReferralSource = `fb_other: ${formData.referralSourceOther.trim()}`
       }
 
       const profileResponse = await fetchWithRetry("/api/auth/create-profile", {
@@ -219,6 +228,35 @@ export function PricingSection() {
 
       // Clear stored UTM params after successful signup
       clearStoredUTMParams()
+
+      // Track homepage A/B conversion (non-blocking)
+      try {
+        // Detect which section is most visible (trigger section)
+        let triggerSection: string | null = null
+        const sectionEls = document.querySelectorAll<HTMLElement>('[data-section]')
+        let maxVisible = 0
+        for (const el of sectionEls) {
+          const rect = el.getBoundingClientRect()
+          const visible = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0))
+          if (visible > maxVisible) {
+            maxVisible = visible
+            triggerSection = el.dataset.section ?? null
+          }
+        }
+
+        // Calculate time on page
+        const pageStartEl = document.querySelector<HTMLElement>('[data-hp-page-start]')
+        const pageStart = pageStartEl ? Number(pageStartEl.dataset.hpPageStart) : null
+        const timeOnPageMs = pageStart ? Date.now() - pageStart : null
+
+        fetch('/api/hp/convert', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userId, triggerSection, timeOnPageMs }),
+        })
+      } catch {
+        // fire-and-forget
+      }
 
       setSubmitMessage({ type: "success", text: "Account created! Redirecting to login..." })
       setTimeout(() => {

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, type ComponentType } from "react"
 import { CompanyShowcase } from "@/components/sections/company-showcase"
 import { FAQSection } from "@/components/sections/faq-section"
 // import { FeatureSection } from "@/components/sections/feature-section"
@@ -10,6 +10,21 @@ import { OrbitingLoopSection } from "@/components/sections/orbiting-loop-section
 import { BentoSection } from "@/components/sections/bento-section"
 import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
+import type { SectionKey } from "@/lib/hp-utils"
+
+const SECTION_REGISTRY: Record<SectionKey, ComponentType> = {
+  orbiting: OrbitingLoopSection,
+  bento: BentoSection,
+  testimonials: TestimonialSection,
+  pricing: PricingSection,
+  faq: FAQSection,
+  company: CompanyShowcase,
+}
+
+interface HomeClientProps {
+  sectionOrder: SectionKey[]
+  variantId: string | null
+}
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
 const FINAL_CONTINUOUS_LOOP_BELOW_Y = 658
@@ -84,7 +99,8 @@ const interpolateYOffset = (
   return Math.round(upperValue + (lowerValue - upperValue) * progress)
 }
 
-export default function HomeClient() {
+export default function HomeClient({ sectionOrder, variantId }: HomeClientProps) {
+  const pageStartRef = useRef(Date.now())
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const [isMobileLayout, setIsMobileLayout] = useState(false)
   const [showLayoutTuner, setShowLayoutTuner] = useState(false)
@@ -386,6 +402,40 @@ export default function HomeClient() {
     }
   }, [isHeroVideoReady, isMobileLayout])
 
+  // Scroll tracking: fire sendBeacon when sections enter viewport
+  useEffect(() => {
+    if (typeof window === "undefined" || !variantId) return
+
+    const observed = new Set<string>()
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue
+          const sectionKey = (entry.target as HTMLElement).dataset.section
+          if (!sectionKey || observed.has(sectionKey)) continue
+          observed.add(sectionKey)
+          try {
+            if (navigator.sendBeacon) {
+              const blob = new Blob(
+                [JSON.stringify({ eventType: "section_visible", sectionKey, variantId })],
+                { type: "application/json" }
+              )
+              navigator.sendBeacon("/api/hp/event", blob)
+            }
+          } catch {
+            // fire-and-forget
+          }
+        }
+      },
+      { threshold: 0.3 }
+    )
+
+    const sections = document.querySelectorAll("[data-section]")
+    sections.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [variantId])
+
   const activeContentLift = isMobileLayout ? MOBILE_CONTENT_LIFT : FINAL_CONTENT_LIFT
   const activeContinuousLoopBelowY = isMobileLayout
     ? MOBILE_CONTINUOUS_LOOP_BELOW_Y
@@ -606,7 +656,7 @@ export default function HomeClient() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center min-h-screen w-full">
+      <main className="flex flex-col items-center justify-center min-h-screen w-full" data-hp-page-start={pageStartRef.current}>
         <section className="relative w-full overflow-hidden" style={heroSectionStyle}>
           <div className="absolute inset-0 -z-10 pointer-events-none bg-black flex items-start justify-center">
             {isHeroVideoReady ? (
@@ -651,15 +701,14 @@ export default function HomeClient() {
           className="relative z-20 w-full bg-background border-t border-border divide-y divide-border"
           style={contentGroupMarginTop !== 0 ? { marginTop: contentGroupMarginTop } : undefined}
         >
-          <OrbitingLoopSection />
-          <BentoSection />
-          <TestimonialSection />
-          {/* <FeatureSection /> */}
-          {/* <GrowthSection /> */}
-          <PricingSection />
-          <FAQSection />
-          <CompanyShowcase />
-          {/* <CTASection /> */}
+          {sectionOrder.map((key) => {
+            const SectionComponent = SECTION_REGISTRY[key]
+            return (
+              <div key={key} data-section={key} data-variant={variantId ?? undefined}>
+                <SectionComponent />
+              </div>
+            )
+          })}
           <FooterSection />
         </div>
       </main>
