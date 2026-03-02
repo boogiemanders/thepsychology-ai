@@ -100,10 +100,10 @@ export async function POST(request: NextRequest) {
 
     const { device: signupDevice, userAgent: signupUserAgent } = inferSignupDevice(request.headers)
 
-    // Create the user profile
+    // Create the user profile (upsert to handle race with on_auth_user_created trigger)
     const { error: profileError, data } = await supabase
       .from('users')
-      .insert([
+      .upsert(
         {
           id: userId,
           email,
@@ -121,7 +121,8 @@ export async function POST(request: NextRequest) {
           utm_content: utm_content || null,
           utm_term: utm_term || null,
         },
-      ])
+        { onConflict: 'id' }
+      )
       .select()
 
     if (profileError) {
