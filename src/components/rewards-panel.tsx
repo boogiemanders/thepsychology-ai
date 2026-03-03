@@ -34,7 +34,7 @@ interface RewardsState {
 function StatusBadge({ status, days }: { status: RewardStatus; days: number }) {
   if (status === 'approved') {
     return (
-      <span className="inline-flex items-center gap-1 text-[10px] font-medium text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 px-1.5 py-0.5 rounded-full">
+      <span className="inline-flex items-center gap-1 text-[10px] font-medium text-brand-coral dark:text-brand-coral bg-brand-coral/10 dark:bg-brand-coral/20 px-1.5 py-0.5 rounded-full">
         <Check className="w-2.5 h-2.5" /> +{days} days
       </span>
     )
@@ -213,7 +213,7 @@ export function RewardsPanel() {
               <div
                 key={type}
                 className={`w-2 h-2 rounded-full ${
-                  s === 'done' ? 'bg-green-500' : s === 'pending' ? 'bg-amber-400' : 'bg-border'
+                  s === 'done' ? 'bg-brand-coral' : s === 'pending' ? 'bg-amber-400' : 'bg-border'
                 }`}
               />
             )
@@ -249,7 +249,7 @@ export function RewardsPanel() {
                 {/* Header row — always visible */}
                 <AccordionTrigger className="p-2.5 py-2.5 hover:no-underline [&>svg]:hidden">
                   <div className="flex items-center gap-2 w-full">
-                    <Icon className={`w-3.5 h-3.5 shrink-0 ${isDone ? 'text-green-500' : 'text-brand-coral'}`} />
+                    <Icon className={`w-3.5 h-3.5 shrink-0 ${isDone ? 'text-brand-coral' : 'text-brand-coral'}`} />
                     <div className="flex-1 min-w-0 text-left">
                       <span className="text-xs font-medium block truncate">{title}</span>
                       <span className="text-[10px] text-muted-foreground block truncate">{desc}</span>
@@ -364,7 +364,7 @@ export function RewardsPanel() {
                                 className="shrink-0 p-1.5 rounded-md border border-border hover:bg-muted transition-colors"
                                 title="Copy link"
                               >
-                                {copied ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+                                {copied ? <Check className="w-3 h-3 text-brand-coral" /> : <Copy className="w-3 h-3" />}
                               </button>
                             </div>
                             <p className="text-[10px] text-muted-foreground">
