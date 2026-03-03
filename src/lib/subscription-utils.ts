@@ -3,10 +3,8 @@ export interface SubscriptionLike {
   created_at?: string | null
   subscription_started_at?: string | null
   stripe_customer_id?: string | null
+  trial_ends_at?: string | null
 }
-
-// Promo users get 1 year of pro access from their signup date
-const PROMO_DURATION_DAYS = 365
 
 export function isFreeTier(user?: SubscriptionLike | null): boolean {
   if (!user) return true
@@ -17,26 +15,17 @@ export function isStripeSubscriber(user?: SubscriptionLike | null): boolean {
   return Boolean(user?.stripe_customer_id)
 }
 
-export function getPromoExpirationDate(user?: SubscriptionLike | null): Date | null {
-  if (!user?.subscription_started_at) return null
-  const startDate = new Date(user.subscription_started_at)
-  const expirationDate = new Date(startDate)
-  expirationDate.setDate(expirationDate.getDate() + PROMO_DURATION_DAYS)
-  return expirationDate
+export function isTrialExpired(user?: SubscriptionLike | null): boolean {
+  if (!user?.trial_ends_at) return false
+  return new Date() > new Date(user.trial_ends_at)
 }
 
-export function isPromoExpired(user?: SubscriptionLike | null): boolean {
-  // Stripe subscribers never expire
-  if (isStripeSubscriber(user)) return false
-
-  // Free tier users are not on promo
-  if (isFreeTier(user)) return false
-
-  // Check if promo period has expired
-  const expirationDate = getPromoExpirationDate(user)
-  if (!expirationDate) return false
-
-  return new Date() > expirationDate
+export function getTrialDaysRemaining(user?: SubscriptionLike | null): number {
+  if (!user?.trial_ends_at) return 0
+  const endsAt = new Date(user.trial_ends_at)
+  const now = new Date()
+  const msRemaining = endsAt.getTime() - now.getTime()
+  return Math.max(0, Math.ceil(msRemaining / (1000 * 60 * 60 * 24)))
 }
 
 export function getEntitledSubscriptionTier(
@@ -46,7 +35,7 @@ export function getEntitledSubscriptionTier(
 
   // Stripe subscribers keep their tier indefinitely
   if (isStripeSubscriber(user)) {
-    return user.subscription_tier === 'pro_coaching' ? 'pro_coaching' : 'pro'
+    return 'pro'
   }
 
   // Free tier users stay on free
@@ -54,17 +43,18 @@ export function getEntitledSubscriptionTier(
     return 'free'
   }
 
-  // Promo users: check if their promo period has expired
-  if (isPromoExpired(user)) {
-    return 'free' // Downgrade to free after promo expires
+  // Trial users: check if their trial has expired
+  if (user.trial_ends_at && isTrialExpired(user)) {
+    return 'free'
   }
 
-  return user.subscription_tier === 'pro_coaching' ? 'pro_coaching' : 'pro'
+  // Active trial or legacy pro user
+  return 'pro'
 }
 
 export function hasProAccess(user?: SubscriptionLike | null): boolean {
   const tier = getEntitledSubscriptionTier(user)
-  return tier === 'pro' || tier === 'pro_coaching'
+  return tier === 'pro'
 }
 
 export function getPromoStatus(user?: SubscriptionLike | null) {
@@ -81,22 +71,16 @@ export function getPromoStatus(user?: SubscriptionLike | null) {
 
   const stripeSubscriber = isStripeSubscriber(user)
   const freeTier = isFreeTier(user)
-  const expirationDate = getPromoExpirationDate(user)
-  const expired = isPromoExpired(user)
-
-  let daysRemaining = Infinity
-  if (!stripeSubscriber && !freeTier && expirationDate) {
-    const now = new Date()
-    daysRemaining = Math.max(0, Math.ceil((expirationDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)))
-  }
+  const expired = isTrialExpired(user)
+  const daysRemaining = getTrialDaysRemaining(user)
 
   return {
     isFreeTier: freeTier || expired,
-    isPromo: !stripeSubscriber && !freeTier,
+    isPromo: !stripeSubscriber && !freeTier && Boolean(user.trial_ends_at),
     isStripeSubscriber: stripeSubscriber,
     expired,
     daysRemaining: stripeSubscriber ? Infinity : daysRemaining,
-    expiresAt: expirationDate?.toISOString() ?? null,
+    expiresAt: user.trial_ends_at ?? null,
   }
 }
 

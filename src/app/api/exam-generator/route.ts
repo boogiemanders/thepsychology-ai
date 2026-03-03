@@ -8,6 +8,7 @@ import { loadFullTopicContent } from '@/lib/topic-content-manager'
 import { logUsageEvent } from '@/lib/usage-events'
 import { getCaseQuestionsByKnId } from '@/lib/case-bank'
 import { sendSlackNotification } from '@/lib/notify-slack'
+import { checkSubscriptionAccess } from '@/lib/subscription-server'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -342,6 +343,10 @@ export async function POST(request: NextRequest) {
         )
       }
     }
+
+    // Gate: Full exam generation is Pro only
+    const accessDenied = await checkSubscriptionAccess(userId ?? undefined)
+    if (accessDenied) return accessDenied
 
     // For diagnostic exams, prefer pre-generated GPT exams from diagnosticGPT
     if (examType === 'diagnostic') {

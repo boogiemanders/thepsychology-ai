@@ -8,13 +8,16 @@ const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
 
 // Price IDs to determine plan tier
-const PRICE_TO_TIER: Record<string, 'pro' | 'pro_coaching'> = {
+const PRICE_TO_TIER: Record<string, 'pro'> = {
   // Live price IDs
   'price_1SWv6wAHUPMmLYsCy5yObtDu': 'pro',
-  'price_1SWv6IAHUPMmLYsCa98Z3Po6': 'pro_coaching',
+  'price_1SWv6IAHUPMmLYsCa98Z3Po6': 'pro', // was coaching, now pro
   // Test price IDs
   'price_1SaZCyAHUPMmLYsChA0LhNDs': 'pro',
-  'price_1SxOOQAHUPMmLYsCIsVx16ln': 'pro_coaching',
+  'price_1SxOOQAHUPMmLYsCIsVx16ln': 'pro', // was coaching, now pro
+  // Founding price ($20/mo) and standard price ($30/mo)
+  ...(process.env.STRIPE_PRICE_ID_PRO_FOUNDING ? { [process.env.STRIPE_PRICE_ID_PRO_FOUNDING]: 'pro' as const } : {}),
+  ...(process.env.STRIPE_PRICE_ID_PRO_STANDARD ? { [process.env.STRIPE_PRICE_ID_PRO_STANDARD]: 'pro' as const } : {}),
 }
 
 // In-memory rate limiting: one sync per user per minute

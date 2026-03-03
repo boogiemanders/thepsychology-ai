@@ -1,62 +1,31 @@
-// Tiered scarcity pricing configuration
-// Track signups from launch date of this promo
+// Founding price logic: $20/month before cutoff, $30/month after
+// March 2026 subscribers lock in $20/month forever via Stripe
 
-export const PROMO_START_DATE = new Date('2026-02-06T00:00:00Z')
-export const TIER_SIZE = 100
-export const FULL_PRICE = 100 // $100/mo value anchor
+const FOUNDING_PRICE_ENDS_AT = process.env.FOUNDING_PRICE_ENDS_AT || '2026-04-01T04:00:00.000Z'
 
-export type PricingTier = {
-  tier: 1 | 2 | 3 | 4
-  price: number
-  discount: number
-  remaining: number
-  nextTierPrice: number | null
+export interface PricingInfo {
+  currentPrice: number
+  standardPrice: number
+  isFoundingPrice: boolean
+  daysUntilPriceIncrease: number
+  foundingPriceEndsAt: Date
 }
 
-export function getPricingTier(promoSignupCount: number): PricingTier {
-  if (promoSignupCount < 100) {
-    return {
-      tier: 1,
-      price: 0,
-      discount: 100,
-      remaining: 100 - promoSignupCount,
-      nextTierPrice: 20,
-    }
-  }
-  if (promoSignupCount < 200) {
-    return {
-      tier: 2,
-      price: 20,
-      discount: 80,
-      remaining: 200 - promoSignupCount,
-      nextTierPrice: 50,
-    }
-  }
-  if (promoSignupCount < 300) {
-    return {
-      tier: 3,
-      price: 50,
-      discount: 50,
-      remaining: 300 - promoSignupCount,
-      nextTierPrice: 100,
-    }
-  }
+export function getPricingInfo(now: Date = new Date()): PricingInfo {
+  const endsAt = new Date(FOUNDING_PRICE_ENDS_AT)
+  const isFoundingPrice = now < endsAt
+  const msRemaining = Math.max(0, endsAt.getTime() - now.getTime())
+  const daysUntilPriceIncrease = Math.ceil(msRemaining / (1000 * 60 * 60 * 24))
+
   return {
-    tier: 4,
-    price: 100,
-    discount: 0,
-    remaining: 0,
-    nextTierPrice: null,
+    currentPrice: isFoundingPrice ? 20 : 30,
+    standardPrice: 30,
+    isFoundingPrice,
+    daysUntilPriceIncrease,
+    foundingPriceEndsAt: endsAt,
   }
 }
 
 export function formatPrice(price: number): string {
   return price === 0 ? '$0' : `$${price}`
-}
-
-export function getTierLabel(tier: PricingTier): string {
-  if (tier.tier === 1) return 'First 100 spots'
-  if (tier.tier === 2) return 'Next 100 spots'
-  if (tier.tier === 3) return 'Next 100 spots'
-  return 'Full price'
 }

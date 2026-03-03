@@ -30,13 +30,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const normalizedTier = body.tier.trim().toLowerCase()
-    const subscriptionTier =
-      normalizedTier === 'pro + coaching' ||
-      normalizedTier === 'pro_coaching' ||
-      normalizedTier === 'pro-coaching'
-        ? 'pro_coaching'
-        : 'pro'
+    const subscriptionTier = 'pro'
 
     // Insert into Supabase
     const { data, error } = await supabase

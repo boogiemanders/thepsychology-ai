@@ -15,19 +15,22 @@ if (!stripeSecretKey || !webhookSecret) {
 
 const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
 
-// Price IDs to determine plan tier (live mode)
-const PRICE_TO_TIER: Record<string, 'pro' | 'pro_coaching'> = {
-  // Live price IDs
+// Price IDs to determine plan tier
+const PRICE_TO_TIER: Record<string, 'pro'> = {
+  // Live price IDs (legacy)
   'price_1SWv6wAHUPMmLYsCy5yObtDu': 'pro',
-  'price_1SWv6IAHUPMmLYsCa98Z3Po6': 'pro_coaching',
+  'price_1SWv6IAHUPMmLYsCa98Z3Po6': 'pro', // was coaching, now pro
   // Test price IDs
   'price_1SaZCyAHUPMmLYsChA0LhNDs': 'pro',
-  'price_1SxOOQAHUPMmLYsCIsVx16ln': 'pro_coaching',
+  'price_1SxOOQAHUPMmLYsCIsVx16ln': 'pro', // was coaching, now pro
+  // Founding price ($20/mo) and standard price ($30/mo) — added at runtime
+  ...(process.env.STRIPE_PRICE_ID_PRO_FOUNDING ? { [process.env.STRIPE_PRICE_ID_PRO_FOUNDING]: 'pro' as const } : {}),
+  ...(process.env.STRIPE_PRICE_ID_PRO_STANDARD ? { [process.env.STRIPE_PRICE_ID_PRO_STANDARD]: 'pro' as const } : {}),
 }
 
 async function updateUserSubscription(
   userId: string,
-  tier: 'pro' | 'pro_coaching',
+  tier: 'pro',
   stripeCustomerId?: string
 ) {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
@@ -48,10 +51,11 @@ async function updateUserSubscription(
     throw new Error(`User not found in database: ${userId}`)
   }
 
-  // Build update data - only set stripe_customer_id if provided and not already set
+  // Build update data - clear trial_ends_at since they're paying now
   const updateData: Record<string, unknown> = {
     subscription_tier: tier,
     subscription_started_at: new Date().toISOString(),
+    trial_ends_at: null,
   }
 
   if (stripeCustomerId && !existingUser.stripe_customer_id) {
@@ -75,11 +79,11 @@ async function updateUserSubscription(
   }
 }
 
-async function getTierFromSession(session: Stripe.Checkout.Session): Promise<'pro' | 'pro_coaching' | null> {
+async function getTierFromSession(session: Stripe.Checkout.Session): Promise<'pro' | null> {
   // First check metadata
   if (session.metadata?.planTier) {
     console.log('[Stripe] Got tier from metadata:', session.metadata.planTier)
-    return session.metadata.planTier as 'pro' | 'pro_coaching'
+    return 'pro'
   }
 
   // Otherwise, try to determine from line items
@@ -112,7 +116,7 @@ async function getTierFromSession(session: Stripe.Checkout.Session): Promise<'pr
   return null
 }
 
-async function getTierFromSubscription(subscription: Stripe.Subscription): Promise<'pro' | 'pro_coaching' | null> {
+async function getTierFromSubscription(subscription: Stripe.Subscription): Promise<'pro' | null> {
   const priceId = subscription.items.data[0]?.price?.id
   return priceId ? PRICE_TO_TIER[priceId] ?? null : null
 }
@@ -149,7 +153,7 @@ async function findUserForStripeCustomer(
 
 async function setUserTierById(
   userId: string,
-  update: { subscription_tier: 'free' | 'pro' | 'pro_coaching'; stripe_customer_id?: string; subscription_started_at?: string | null }
+  update: { subscription_tier: 'free' | 'pro'; stripe_customer_id?: string; subscription_started_at?: string | null }
 ) {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) {
@@ -262,9 +266,8 @@ export async function POST(request: Request) {
       })
 
       // Slack notification for new subscription
-      const tierLabel = planTier === 'pro_coaching' ? 'Pro + Coaching' : 'Pro'
       await sendSlackNotification(
-        `💰 New subscription! ${session.customer_email || 'Unknown'} subscribed to ${tierLabel}`,
+        `💰 New subscription! ${session.customer_email || 'Unknown'} subscribed to Pro`,
         'payments'
       )
     }

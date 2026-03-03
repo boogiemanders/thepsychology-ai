@@ -4,21 +4,19 @@ import { useAuth } from '@/context/auth-context'
 import { supabase } from '@/lib/supabase'
 import { trackFunnelEvent } from '@/lib/funnel-events'
 
-export type StripeTier = 'pro' | 'pro_coaching'
-
 interface CheckoutOptions {
   redirectPath?: string
+  source?: string
 }
 
 export function useStripeCheckout() {
   const router = useRouter()
   const { user } = useAuth()
-  const [activeTier, setActiveTier] = useState<StripeTier | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const startCheckout = useCallback(
-    async (tier: StripeTier, options?: CheckoutOptions) => {
+    async (options?: CheckoutOptions) => {
       if (!user) {
         const redirectSuffix = options?.redirectPath ? `?redirect=${encodeURIComponent(options.redirectPath)}` : ''
         router.push(`/login${redirectSuffix}`)
@@ -30,7 +28,6 @@ export function useStripeCheckout() {
         return
       }
 
-      setActiveTier(tier)
       setError(null)
       setLoading(true)
 
@@ -47,15 +44,15 @@ export function useStripeCheckout() {
         }
 
         trackFunnelEvent(user.id, 'checkout_started', {
-          planTier: tier,
-          source: 'dashboard',
+          planTier: 'pro',
+          source: options?.source || 'unknown',
         })
 
         const response = await fetch('/api/stripe/create-checkout-session', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            planTier: tier,
+            planTier: 'pro',
             userId: user.id,
             userEmail: user.email,
           }),
@@ -81,7 +78,6 @@ export function useStripeCheckout() {
 
   return {
     startCheckout,
-    checkoutTier: activeTier,
     checkoutLoading: loading,
     checkoutError: error,
     resetCheckoutError,

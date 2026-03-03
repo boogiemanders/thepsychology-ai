@@ -100,7 +100,8 @@ const interpolateYOffset = (
 }
 
 export default function HomeClient({ sectionOrder, variantId }: HomeClientProps) {
-  const pageStartRef = useRef(Date.now())
+  const pageStartRef = useRef(0)
+  useEffect(() => { pageStartRef.current = Date.now() }, [])
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
   const [isMobileLayout, setIsMobileLayout] = useState(false)
   const [showLayoutTuner, setShowLayoutTuner] = useState(false)

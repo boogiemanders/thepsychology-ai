@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { siteConfig } from '@/lib/config'
-import { getProPromoConfig } from '@/lib/promo-pro'
+import { getPricingInfo } from '@/lib/pricing-tiers'
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 
@@ -11,14 +11,17 @@ if (!stripeSecretKey) {
 
 const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
 
-const FALLBACK_PRICE_IDS: Record<'pro' | 'pro_coaching', string> = {
-  pro: 'price_1SWv6wAHUPMmLYsCy5yObtDu',
-  pro_coaching: 'price_1SWv6IAHUPMmLYsCa98Z3Po6',
-}
+// Founding ($20/mo) and standard ($30/mo) price IDs
+const FALLBACK_PRO_PRICE = 'price_1SWv6wAHUPMmLYsCy5yObtDu'
 
-const priceIdByTier: Record<'pro' | 'pro_coaching', string | undefined> = {
-  pro: process.env.STRIPE_PRICE_ID_PRO || FALLBACK_PRICE_IDS.pro,
-  pro_coaching: process.env.STRIPE_PRICE_ID_PRO_COACHING || FALLBACK_PRICE_IDS.pro_coaching,
+function getProPriceId(): string {
+  const { isFoundingPrice } = getPricingInfo()
+
+  if (isFoundingPrice) {
+    return process.env.STRIPE_PRICE_ID_PRO_FOUNDING || FALLBACK_PRO_PRICE
+  }
+
+  return process.env.STRIPE_PRICE_ID_PRO_STANDARD || FALLBACK_PRO_PRICE
 }
 
 function getBaseUrl(req: NextRequest) {
@@ -34,29 +37,22 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { planTier, userId, userEmail } = (await req.json()) as {
-      planTier?: 'pro' | 'pro_coaching'
+    const { userId, userEmail } = (await req.json()) as {
+      planTier?: string
       userId?: string
       userEmail?: string | null
     }
 
-    if (!planTier || !userId || !userEmail) {
+    if (!userId || !userEmail) {
       return NextResponse.json({ error: 'Missing required checkout fields' }, { status: 400 })
     }
 
-    const priceId = priceIdByTier[planTier]
-    if (!priceId) {
-      return NextResponse.json({ error: 'Plan configuration missing' }, { status: 400 })
-    }
-
+    const priceId = getProPriceId()
     const baseUrl = getBaseUrl(req)
-
-    const promo = planTier === 'pro' ? getProPromoConfig() : null
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
-      payment_method_collection: promo ? 'always' : undefined,
       customer_email: userEmail,
       client_reference_id: userId,
       line_items: [
@@ -67,17 +63,16 @@ export async function POST(req: NextRequest) {
       ],
       metadata: {
         userId,
-        planTier,
+        planTier: 'pro',
       },
       subscription_data: {
         metadata: {
           userId,
-          planTier,
+          planTier: 'pro',
         },
-        trial_end: promo ? promo.trialEndSeconds : undefined,
       },
       success_url: `${baseUrl}/dashboard?upgrade=success`,
-      cancel_url: `${baseUrl}/trial-expired?upgrade=cancelled`,
+      cancel_url: `${baseUrl}/dashboard?upgrade=cancelled`,
     })
 
     return NextResponse.json({ url: session.url })

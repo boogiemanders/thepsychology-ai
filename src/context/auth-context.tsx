@@ -15,11 +15,12 @@ interface UserProfile {
   id: string
   email: string
   full_name?: string
-  subscription_tier: 'free' | 'basic' | 'pro' | 'pro_coaching'
+  subscription_tier: 'free' | 'basic' | 'pro'
   exam_date?: string
   created_at: string
   subscription_started_at?: string
   stripe_customer_id?: string
+  trial_ends_at?: string
 }
 
 interface ConsentPreferences {
@@ -231,13 +232,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               // This handles orphaned users (auth signup succeeded but profile creation failed)
               console.log('Profile not found, creating for orphaned user:', session.user.email)
               try {
+                // Read referral + UTM data from auth user_metadata (stored during signUp)
+                const meta = session.user.user_metadata || {}
                 const res = await fetch('/api/auth/create-profile', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
                     userId: session.user.id,
                     email: session.user.email,
-                    subscriptionTier: 'pro', // Default to pro until end of Jan
+                    fullName: meta.full_name || null,
+                    subscriptionTier: 'free',
+                    referralSource: meta.referral_source || null,
+                    utm_source: meta.utm_source || null,
+                    utm_medium: meta.utm_medium || null,
+                    utm_campaign: meta.utm_campaign || null,
+                    utm_content: meta.utm_content || null,
+                    utm_term: meta.utm_term || null,
                   }),
                 })
                 if (res.ok) {

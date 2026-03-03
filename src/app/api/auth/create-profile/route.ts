@@ -100,6 +100,10 @@ export async function POST(request: NextRequest) {
 
     const { device: signupDevice, userAgent: signupUserAgent } = inferSignupDevice(request.headers)
 
+    // All new signups get 7-day Pro trial
+    const now = new Date()
+    const trialEndsAt = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000)
+
     // Create the user profile (upsert to handle race with on_auth_user_created trigger)
     const { error: profileError, data } = await supabase
       .from('users')
@@ -108,10 +112,11 @@ export async function POST(request: NextRequest) {
           id: userId,
           email,
           full_name: fullName || null,
-          subscription_tier: subscriptionTier || 'free',
+          subscription_tier: 'pro',
+          trial_ends_at: trialEndsAt.toISOString(),
           promo_code_used: promoCodeUsed || null,
           referral_source: referralSource || null,
-          subscription_started_at: new Date().toISOString(),
+          subscription_started_at: now.toISOString(),
           signup_device: signupDevice,
           signup_user_agent: signupUserAgent,
           // UTM tracking for marketing attribution

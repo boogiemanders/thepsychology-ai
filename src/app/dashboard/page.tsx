@@ -32,6 +32,7 @@ import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { StudyProgressChart } from './components/study-progress-chart'
 import { ConsentModal, useConsentModal } from '@/components/consent-modal'
+import { UpgradeBanner } from '@/components/upgrade-banner'
 
 type ApiChangelogEntry = {
   id: string
@@ -50,14 +51,6 @@ type ApiChangelogResponse = {
 }
 
 const subscriptionTierVisuals = {
-  pro_coaching: {
-    label: 'Pro + Coaching',
-    style: {
-      borderColor: '#c46685',
-      backgroundColor: 'rgba(196, 102, 133, 0.1)',
-      color: '#c46685',
-    },
-  },
   pro: {
     label: 'Pro',
     style: {
@@ -939,6 +932,8 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12 space-y-8">
+        <UpgradeBanner />
+
         <div data-tour="dashboard-header">
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, {userProfile?.email?.split('@')[0]}</p>

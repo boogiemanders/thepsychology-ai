@@ -9,6 +9,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { sanitizeOpenAIApiKey } from '@/lib/openai-api-key'
 import { logUsageEvent } from '@/lib/usage-events'
+import { checkSubscriptionAccess } from '@/lib/subscription-server'
 import { SupabaseClient } from '@supabase/supabase-js'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 
@@ -1288,6 +1289,10 @@ export async function POST(request: NextRequest) {
     if (!parsed.success) {
       return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 })
     }
+
+    // Gate: Recover is Pro only
+    const accessDenied = await checkSubscriptionAccess(parsed.data.userId)
+    if (accessDenied) return accessDenied
 
     const messages = parsed.data.messages ?? []
     if (messages.length === 0) {

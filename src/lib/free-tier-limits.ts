@@ -1,0 +1,8 @@
+export const FREE_TIER_LIMITS = {
+  LESSONS_ACCESSIBLE: 10,
+  QUIZZES_PER_DAY: 3,
+  RECOVER_SESSIONS_PER_DAY: 0, // Pro only
+  EXAM_SIMULATION: false,
+  CUSTOM_METAPHORS: false,
+  AUDIO_LESSONS: false,
+} as const

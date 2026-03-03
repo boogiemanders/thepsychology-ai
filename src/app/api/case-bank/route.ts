@@ -9,7 +9,7 @@ function getBearerToken(request: NextRequest): string | null {
 }
 
 function isProTier(tier: string | null): boolean {
-  return tier === 'pro' || tier === 'pro_coaching'
+  return tier === 'pro'
 }
 
 async function resolveSubscriptionTier(request: NextRequest): Promise<string | null> {

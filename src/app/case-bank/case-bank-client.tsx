@@ -82,7 +82,7 @@ export function CaseBankClient() {
   const domainFilter = searchParams.get("domain")
 
   const { userProfile } = useAuth()
-  const hasProAccess = userProfile?.subscription_tier === "pro" || userProfile?.subscription_tier === "pro_coaching"
+  const hasProAccess = userProfile?.subscription_tier === "pro"
 
   const [listState, setListState] = useState<LoadState>("idle")
   const [cases, setCases] = useState<CaseSummary[]>([])

@@ -7,9 +7,9 @@ import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { supabase } from "@/lib/supabase"
-import { REFERRAL_SOURCES, CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
+import { CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
 import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI } from "@/lib/utm-tracking"
-import type { PricingTier } from "@/lib/pricing-tiers"
+import { getPricingInfo } from "@/lib/pricing-tiers"
 
 // Retry helper for critical API calls (profile creation)
 async function fetchWithRetry(url: string, options: RequestInit, retries = 3): Promise<Response> {
@@ -33,11 +33,11 @@ function getDisplayPrice(tier: Tier): { amount: string; period: string } {
 
 export function PricingSection() {
   const tiers = useMemo(() => siteConfig.pricing.pricingItems, [])
+  const pricingInfo = useMemo(() => getPricingInfo(), [])
   const [expandedTier, setExpandedTier] = useState<string | null>(null)
   const [showPasswordFields, setShowPasswordFields] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null)
-  const [promoTier, setPromoTier] = useState<(PricingTier & { fullPrice: number; promoCount: number }) | null>(null)
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -46,31 +46,13 @@ export function PricingSection() {
     goals: "",
     examDate: "",
     referralSource: "",
-    referralSourceOther: "", // For "Other" option
+    referralSourceOther: "",
   })
-
-  // Fetch promo tier info
-  useEffect(() => {
-    async function fetchCounts() {
-      try {
-        const promoRes = await fetch('/api/promo-count')
-        if (promoRes.ok) {
-          const data = await promoRes.json()
-          setPromoTier(data)
-        }
-      } catch (err) {
-        console.error('Failed to fetch pricing data:', err)
-      }
-    }
-    fetchCounts()
-  }, [])
 
   // Store UTM params when component mounts
   useEffect(() => {
     storeUTMParams()
   }, [])
-
-  const gridColsClass = tiers.length > 1 ? "md:grid-cols-2" : "md:grid-cols-1"
 
   useEffect(() => {
     const handleMiniPricingSelect = (e: Event) => {
@@ -126,7 +108,6 @@ export function PricingSection() {
       return
     }
 
-    // If "Other" is selected, require the text field
     if (formData.referralSource === 'other' && !formData.referralSourceOther.trim()) {
       setSubmitMessage({ type: "error", text: "Please specify how you found us." })
       return
@@ -135,7 +116,6 @@ export function PricingSection() {
     setIsSubmitting(true)
 
     try {
-      // Determine final referral source (append "Other" text if selected)
       let finalReferralSource = formData.referralSource
       if (formData.referralSource === 'other' && formData.referralSourceOther.trim()) {
         finalReferralSource = `other: ${formData.referralSourceOther.trim()}`
@@ -143,11 +123,8 @@ export function PricingSection() {
         finalReferralSource = `fb_other: ${formData.referralSourceOther.trim()}`
       }
 
-      // Get UTM params for attribution
       const utmParams = formatUTMForAPI(getStoredUTMParams())
 
-      // Store referral + UTM data in auth user_metadata so it survives
-      // even if profile creation fails (orphan handler can read it back)
       const { data, error } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
@@ -167,23 +144,7 @@ export function PricingSection() {
         throw new Error("Unable to create account. Please try again.")
       }
 
-      // Determine subscription tier based on promo availability
-      // Pro + Coaching always gets pro_coaching
-      // Pro tier: 'pro' if promo spots available, 'free' if not
-      let subscriptionTier: string
-      if (expandedTier === "Pro + Coaching") {
-        subscriptionTier = "pro_coaching"
-      } else if (promoTier && promoTier.tier === 1 && promoTier.remaining > 0) {
-        // First 100 spots: free promo → pro tier
-        subscriptionTier = "pro"
-      } else if (promoTier && promoTier.tier >= 2 && promoTier.tier <= 3 && promoTier.remaining > 0) {
-        // Tiers 2-3: paid promo spots → pro tier (will need Stripe)
-        subscriptionTier = "pro"
-      } else {
-        // No promo spots left → free tier
-        subscriptionTier = "free"
-      }
-
+      // All signups get pro trial (create-profile handles trial_ends_at)
       const profileResponse = await fetchWithRetry("/api/auth/create-profile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -191,7 +152,7 @@ export function PricingSection() {
           userId,
           email: formData.email,
           fullName: formData.fullName || null,
-          subscriptionTier,
+          subscriptionTier: "pro",
           promoCodeUsed: null,
           referralSource: finalReferralSource,
           ...utmParams,
@@ -226,12 +187,10 @@ export function PricingSection() {
         }
       }
 
-      // Clear stored UTM params after successful signup
       clearStoredUTMParams()
 
       // Track homepage A/B conversion (non-blocking)
       try {
-        // Detect which section is most visible (trigger section)
         let triggerSection: string | null = null
         const sectionEls = document.querySelectorAll<HTMLElement>('[data-section]')
         let maxVisible = 0
@@ -244,7 +203,6 @@ export function PricingSection() {
           }
         }
 
-        // Calculate time on page
         const pageStartEl = document.querySelector<HTMLElement>('[data-hp-page-start]')
         const pageStart = pageStartEl ? Number(pageStartEl.dataset.hpPageStart) : null
         const timeOnPageMs = pageStart ? Date.now() - pageStart : null
@@ -285,28 +243,11 @@ export function PricingSection() {
       </SectionHeader>
 
       <div className="w-full max-w-5xl mx-auto px-6 space-y-8">
-        <div className={cn("grid gap-4 items-stretch", gridColsClass)}>
+        <div className="grid gap-4 items-stretch md:grid-cols-2">
           {tiers.map((tier) => {
             const { amount, period } = getDisplayPrice(tier)
             const isExpanded = tier.name === expandedTier
             const isProTier = tier.name === "Pro"
-
-            // Dynamic price display for Pro tier based on promo tier
-            const displayAmount = isProTier && promoTier ? `$${promoTier.price}` : amount
-            const anchoredProPrice = promoTier?.fullPrice ?? 100
-            const showCrossedProAnchor =
-              isProTier && ((promoTier && promoTier.price === 0) || (!promoTier && amount === "$0"))
-            const showFreeSpotsLine =
-              isProTier &&
-              !!promoTier &&
-              promoTier.tier === 1 &&
-              promoTier.remaining > 0 &&
-              promoTier.nextTierPrice !== null
-            const showPaidSpotsLine =
-              isProTier &&
-              !!promoTier &&
-              promoTier.tier > 1 &&
-              promoTier.remaining > 0
 
             return (
               <div
@@ -318,47 +259,45 @@ export function PricingSection() {
               >
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-sm font-medium">{tier.name}</p>
-                  {tier.isPopular && (
-                    <span className="brand-soft-blue-bg text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.15)]">
-                      Popular
-                    </span>
-                  )}
+                  <div className="flex items-center gap-1.5">
+                    {tier.isPopular && (
+                      <span className="brand-soft-blue-bg text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.15)]">
+                        Popular
+                      </span>
+                    )}
+                    {isProTier && pricingInfo.isFoundingPrice && (
+                      <span className="bg-amber-500/90 text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.15)]">
+                        Founding Price
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <div className="mt-3 flex items-baseline gap-2">
-                  {showCrossedProAnchor && (
+                  {isProTier && pricingInfo.isFoundingPrice && (
                     <span className="text-lg font-medium text-muted-foreground line-through decoration-2">
-                      ${anchoredProPrice}
+                      ${pricingInfo.standardPrice}
                     </span>
                   )}
-                  <span className="text-3xl font-semibold">{displayAmount}</span>
+                  <span className="text-3xl font-semibold">
+                    {isProTier ? `$${pricingInfo.currentPrice}` : amount}
+                  </span>
                   {period && <span className="text-sm text-muted-foreground">/{period}</span>}
                 </div>
                 {tier.description?.trim() ? (
                   <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
                 ) : null}
 
-                {/* Scarcity messaging for Pro tier */}
-                {isProTier && promoTier && (
+                {/* Founding price urgency for Pro tier */}
+                {isProTier && pricingInfo.isFoundingPrice && pricingInfo.daysUntilPriceIncrease > 0 && (
                   <div className="mt-3">
-                    {showFreeSpotsLine ? (
-                      <p className="text-sm font-medium text-foreground sm:whitespace-nowrap">
-                        <span className="text-amber-600 dark:text-amber-400">
-                          ⏳ {promoTier.remaining} free spot{promoTier.remaining !== 1 ? "s" : ""} left
-                        </span>{" "}
-                        <span className="text-muted-foreground font-normal">→ then ${promoTier.nextTierPrice}/mo</span>
-                      </p>
-                    ) : showPaidSpotsLine ? (
-                      <p className="text-sm font-medium text-foreground sm:whitespace-nowrap">
-                        <span className="text-amber-600 dark:text-amber-400">
-                          ⏳ {promoTier.remaining} spot{promoTier.remaining !== 1 ? "s" : ""} left at ${promoTier.price}/mo
-                        </span>{" "}
-                        {promoTier.nextTierPrice ? (
-                          <span className="text-muted-foreground font-normal">→ then ${promoTier.nextTierPrice}/mo</span>
-                        ) : null}
-                      </p>
-                    ) : null}
+                    <p className="text-sm font-medium text-foreground">
+                      <span className="text-amber-600 dark:text-amber-400">
+                        Price increases to ${pricingInfo.standardPrice}/mo in {pricingInfo.daysUntilPriceIncrease} day{pricingInfo.daysUntilPriceIncrease !== 1 ? "s" : ""}
+                      </span>
+                    </p>
                   </div>
                 )}
+
                 <ul className="mt-4 space-y-2 text-sm flex-grow">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
@@ -397,7 +336,7 @@ export function PricingSection() {
                       : "border border-border bg-background hover:bg-muted/50"
                   )}
                 >
-                  {isExpanded ? "Selected" : (isProTier && promoTier?.tier === 1 ? "Claim Your Free Spot" : tier.buttonText || "Select")}
+                  {isExpanded ? "Selected" : tier.buttonText || "Select"}
                 </button>
 
                 <motion.div
@@ -409,9 +348,9 @@ export function PricingSection() {
                   <div className="border-t border-border mt-5 pt-5 space-y-4">
                     <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                       <p className="text-sm text-muted-foreground">
-                        {tier.name === "Pro + Coaching"
-                          ? "We'll reach out to schedule coaching and billing."
-                          : "Free while in beta."}
+                        {isProTier
+                          ? "7 days of full Pro access. No credit card required."
+                          : "Free forever. Upgrade anytime."}
                       </p>
                     </div>
 
@@ -547,7 +486,6 @@ export function PricingSection() {
                             ))}
                           </select>
 
-                          {/* Show text input when "Other" is selected */}
                           {formData.referralSource === 'other' && (
                             <input
                               type="text"
@@ -561,7 +499,6 @@ export function PricingSection() {
                             />
                           )}
 
-                          {/* Show text input for "Facebook: Other Group" */}
                           {formData.referralSource === 'fb_other' && (
                             <input
                               type="text"

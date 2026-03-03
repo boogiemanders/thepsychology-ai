@@ -716,7 +716,7 @@ export default function TopicSelectorPage() {
                 </p>
                 <Button
                   size="sm"
-                  onClick={() => startCheckout('pro', { redirectPath: '/topic-selector' })}
+                  onClick={() => startCheckout({ source: 'topic-selector', redirectPath: '/topic-selector' })}
                   disabled={checkoutLoading}
                 >
                   {checkoutLoading ? 'Redirecting…' : 'Upgrade to Pro'}

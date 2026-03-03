@@ -1,7 +1,7 @@
 export interface User {
   id: string
   email: string
-  tier: '7-Day Free Trial' | 'Pro' | 'Pro + Coaching'
+  tier: 'Free' | 'Pro'
   createdAt: string
   trialExpiresAt: string | null
 }
@@ -83,23 +83,23 @@ export function login(email: string, password: string): User | null {
 export function canAccessFeature(user: User | null, feature: 'all-topics' | 'recovery'): boolean {
   if (!user) return false
 
-  // Free trial users cannot access all topics or recovery
-  if (user.tier === '7-Day Free Trial') {
+  // Free users cannot access all topics or recovery
+  if (user.tier === 'Free') {
     return false
   }
 
-  // Pro and Pro + Coaching can access all features
+  // Pro can access all features
   return true
 }
 
 export function getTopicLimit(user: User | null): number {
   if (!user) return 0
 
-  // Free trial limited to 1 topic
-  if (user.tier === '7-Day Free Trial') {
+  // Free tier limited to 1 topic
+  if (user.tier === 'Free') {
     return 1
   }
 
-  // Pro and Pro + Coaching have unlimited topics
+  // Pro has unlimited topics
   return Infinity
 }

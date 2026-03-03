@@ -28,7 +28,7 @@ export async function getServerSubscriptionStatus(
 
   const { data: user, error } = await supabase
     .from('users')
-    .select('id, email, subscription_tier, created_at, subscription_started_at, stripe_customer_id')
+    .select('id, email, subscription_tier, created_at, subscription_started_at, stripe_customer_id, trial_ends_at')
     .eq('id', userId)
     .single()
 
@@ -39,7 +39,7 @@ export async function getServerSubscriptionStatus(
 
   const promoStatus = getPromoStatus(user)
   const entitledTier = getEntitledSubscriptionTier(user) || 'free'
-  const hasAccess = hasProAccess(user)
+  const access = hasProAccess(user)
 
   return {
     userId: user.id,
@@ -47,7 +47,7 @@ export async function getServerSubscriptionStatus(
     subscription_tier: entitledTier,
     isTrialExpired: promoStatus.expired,
     daysRemaining: promoStatus.daysRemaining,
-    hasAccess,
+    hasAccess: access,
     stripe_customer_id: user.stripe_customer_id,
     isPromo: promoStatus.isPromo,
     isStripeSubscriber: promoStatus.isStripeSubscriber,
@@ -63,12 +63,12 @@ export interface AccessCheckResult {
 /**
  * Check if a user has access to paid features.
  * @param userId - The user ID to check
- * @param allowPromo - Whether to allow access during promo period (default: true)
+ * @param allowTrial - Whether to allow access during trial period (default: true)
  * @returns Object with allowed boolean, optional reason, and status details
  */
 export async function requireActiveSubscription(
   userId: string,
-  allowPromo: boolean = true
+  allowTrial: boolean = true
 ): Promise<AccessCheckResult> {
   const status = await getServerSubscriptionStatus(userId)
 
@@ -79,13 +79,13 @@ export async function requireActiveSubscription(
   // Check if user has pro access
   if (!status.hasAccess) {
     if (status.isTrialExpired) {
-      return { allowed: false, reason: 'Promo period expired', status }
+      return { allowed: false, reason: 'Trial expired', status }
     }
     return { allowed: false, reason: 'Subscription required', status }
   }
 
-  // If promo access is not allowed and user is on promo (not Stripe), deny
-  if (!allowPromo && status.isPromo && !status.isStripeSubscriber) {
+  // If trial access is not allowed and user is on trial (not Stripe), deny
+  if (!allowTrial && status.isPromo && !status.isStripeSubscriber) {
     return { allowed: false, reason: 'Paid subscription required', status }
   }
 
@@ -94,22 +94,7 @@ export async function requireActiveSubscription(
 
 /**
  * Middleware helper for API routes that require subscription access.
- * Returns null if access is granted, or a NextResponse if access is denied.
- *
- * @example
- * ```typescript
- * import { checkSubscriptionAccess } from '@/lib/subscription-server'
- *
- * export async function POST(request: NextRequest) {
- *   const body = await request.json()
- *   const { userId } = body
- *
- *   const accessDenied = await checkSubscriptionAccess(userId)
- *   if (accessDenied) return accessDenied
- *
- *   // ... rest of handler
- * }
- * ```
+ * Returns null if access is granted, or a Response if access is denied.
  */
 export async function checkSubscriptionAccess(
   userId: string | undefined,

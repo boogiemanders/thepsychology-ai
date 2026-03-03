@@ -73,8 +73,7 @@ export async function GET(request: NextRequest) {
 
       const tiers = tierCounts || []
       const proCount = tiers.filter(u => u.subscription_tier === 'pro').length
-      const proCoachingCount = tiers.filter(u => u.subscription_tier === 'pro_coaching').length
-      const paidCount = proCount + proCoachingCount
+      const paidCount = proCount
 
       const { count: newPaidMonth } = await supabase
         .from('users')
@@ -148,8 +147,7 @@ export async function GET(request: NextRequest) {
 
     const tiers = tierCounts || []
     const proCount = tiers.filter(u => u.subscription_tier === 'pro').length
-    const proCoachingCount = tiers.filter(u => u.subscription_tier === 'pro_coaching').length
-    const estimatedMRR = (proCount * 29) + (proCoachingCount * 99)
+    const estimatedMRR = proCount * 20
 
     const dailyMessage = [
       `📊 *Daily Stats* (${now.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })})`,
