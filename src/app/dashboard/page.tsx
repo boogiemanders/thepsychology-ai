@@ -1088,6 +1088,19 @@ export default function DashboardPage() {
                                 {checkoutLoading ? 'Redirecting...' : 'Upgrade to Pro'}
                               </Button>
                             )}
+                            {item.name === 'Pro' && isCurrent && userProfile?.stripe_customer_id && (
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                className="w-full h-7 text-xs text-orange-500 hover:text-orange-600"
+                                onClick={() => {
+                                  setIsManagePlanOpen(false)
+                                  router.push('/dashboard/settings')
+                                }}
+                              >
+                                Cancel Subscription
+                              </Button>
+                            )}
                           </div>
                         )
                       })}

@@ -56,6 +56,7 @@ import {
   XCircle,
   UserX,
 } from 'lucide-react'
+import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 
 interface GraduateProgram {
   id: string
@@ -68,6 +69,7 @@ interface GraduateProgram {
 
 export default function SettingsPage() {
   const router = useRouter()
+  const { startCheckout, checkoutLoading } = useStripeCheckout()
   const { user, userProfile, consentPreferences, loading, updateConsent, refreshConsent } = useAuth()
   const [mounted, setMounted] = useState(false)
   const [saving, setSaving] = useState<string | null>(null)
@@ -390,13 +392,17 @@ export default function SettingsPage() {
                   {userProfile?.subscription_tier?.replace('_', ' + ') || 'Free'}
                 </p>
               </div>
-              <Button variant="outline" size="sm" onClick={() => router.push('/#get-started')}>
-                Manage Plan
-              </Button>
+              {!userProfile?.stripe_customer_id ? (
+                <Button variant="outline" size="sm" disabled={checkoutLoading} onClick={() => startCheckout({ source: 'settings-manage-plan' })}>
+                  {checkoutLoading ? 'Loading...' : 'Upgrade to Pro'}
+                </Button>
+              ) : (
+                <span className="text-xs text-green-600 font-medium">Active</span>
+              )}
             </div>
 
-            {/* Cancel Subscription - only show for paid users */}
-            {userProfile?.subscription_tier && userProfile.subscription_tier !== 'free' && (
+            {/* Cancel Subscription - only show for Stripe subscribers */}
+            {userProfile?.stripe_customer_id && (
               <>
                 <Separator />
                 <div className="flex items-center justify-between">
