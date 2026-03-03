@@ -9,26 +9,31 @@ function isAdmin(email: string | undefined): boolean {
   return adminEmails.includes(email.toLowerCase())
 }
 
-function getAuthenticatedSupabase(request: NextRequest) {
+function getClients(request: NextRequest) {
   const authToken = request.headers.get('authorization')?.split('Bearer ')[1]
   if (!authToken) return null
 
-  const supabase = getSupabaseClient(
+  // Auth client: uses user JWT to verify identity
+  const authClient = getSupabaseClient(
     { global: { headers: { Authorization: `Bearer ${authToken}` } } },
     { requireServiceRole: true }
   )
-  return supabase
+  // Service client: uses service role key for DB operations (bypasses RLS)
+  const serviceClient = getSupabaseClient({}, { requireServiceRole: true })
+
+  if (!authClient || !serviceClient) return null
+  return { authClient, serviceClient }
 }
 
 // GET - List pending rewards with user email
 export async function GET(request: NextRequest) {
   try {
-    const supabase = getAuthenticatedSupabase(request)
-    if (!supabase) {
+    const clients = getClients(request)
+    if (!clients) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const { data: { user }, error: authError } = await clients.authClient.auth.getUser()
     if (authError || !user) {
       return NextResponse.json({ error: 'Invalid authentication token' }, { status: 401 })
     }
@@ -39,7 +44,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const statusFilter = searchParams.get('status') || 'pending'
 
-    const { data, error } = await supabase
+    const { data, error } = await clients.serviceClient
       .from('user_rewards')
       .select('id, user_id, reward_type, status, submission_data, created_at, reviewed_at, reviewed_by')
       .eq('status', statusFilter)
@@ -53,7 +58,7 @@ export async function GET(request: NextRequest) {
     // Fetch user emails for all rewards
     const userIds = [...new Set((data ?? []).map((r) => r.user_id))]
     const { data: users } = userIds.length > 0
-      ? await supabase.from('users').select('id, email').in('id', userIds)
+      ? await clients.serviceClient.from('users').select('id, email').in('id', userIds)
       : { data: [] }
 
     const userMap = new Map((users ?? []).map((u) => [u.id, u.email]))
@@ -73,12 +78,12 @@ export async function GET(request: NextRequest) {
 // PATCH - Approve or reject a reward
 export async function PATCH(request: NextRequest) {
   try {
-    const supabase = getAuthenticatedSupabase(request)
-    if (!supabase) {
+    const clients = getClients(request)
+    if (!clients) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const { data: { user }, error: authError } = await clients.authClient.auth.getUser()
     if (authError || !user) {
       return NextResponse.json({ error: 'Invalid authentication token' }, { status: 401 })
     }
@@ -93,7 +98,7 @@ export async function PATCH(request: NextRequest) {
     }
 
     // Fetch the reward
-    const { data: reward, error: fetchError } = await supabase
+    const { data: reward, error: fetchError } = await clients.serviceClient
       .from('user_rewards')
       .select('*')
       .eq('id', rewardId)
@@ -110,7 +115,7 @@ export async function PATCH(request: NextRequest) {
     const newStatus = action === 'approve' ? 'approved' : 'rejected'
 
     // Update reward status
-    const { error: updateError } = await supabase
+    const { error: updateError } = await clients.serviceClient
       .from('user_rewards')
       .update({
         status: newStatus,
@@ -126,7 +131,7 @@ export async function PATCH(request: NextRequest) {
 
     // If approved, extend the user's trial
     if (action === 'approve') {
-      const { error: rpcError } = await supabase.rpc('extend_trial', {
+      const { error: rpcError } = await clients.serviceClient.rpc('extend_trial', {
         p_user_id: reward.user_id,
         p_days: 7,
       })
@@ -137,7 +142,7 @@ export async function PATCH(request: NextRequest) {
       }
 
       // Fetch user email for notification
-      const { data: rewardUser } = await supabase
+      const { data: rewardUser } = await clients.serviceClient
         .from('users')
         .select('email')
         .eq('id', reward.user_id)
