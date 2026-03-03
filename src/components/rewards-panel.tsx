@@ -68,7 +68,7 @@ export function RewardsPanel() {
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
 
-  const shouldShow = userProfile?.subscription_tier === 'free' && userProfile?.trial_ends_at
+  const shouldShow = userProfile?.trial_ends_at != null
 
   const fetchRewards = useCallback(async () => {
     const { data: { session } } = await supabase.auth.getSession()
