@@ -9,6 +9,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 type RewardStatus = 'pending' | 'approved' | 'rejected'
 type RewardType = 'video' | 'testimonial' | 'referral'
 
+const REWARD_DAYS: Record<RewardType, number> = {
+  video: 28,
+  testimonial: 14,
+  referral: 7,
+}
+const MAX_REFERRALS = 4
+const MAX_TOTAL_DAYS = 28 + 14 + 7 * MAX_REFERRALS // 70
+
 interface Reward {
   id: string
   reward_type: RewardType
@@ -23,11 +31,11 @@ interface RewardsState {
   loading: boolean
 }
 
-function StatusBadge({ status }: { status: RewardStatus }) {
+function StatusBadge({ status, days }: { status: RewardStatus; days: number }) {
   if (status === 'approved') {
     return (
       <span className="inline-flex items-center gap-1 text-[10px] font-medium text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 px-1.5 py-0.5 rounded-full">
-        <Check className="w-2.5 h-2.5" /> +7 days
+        <Check className="w-2.5 h-2.5" /> +{days} days
       </span>
     )
   }
@@ -49,9 +57,9 @@ const INPUT_CLASS = 'w-full px-3 py-1.5 text-xs rounded-md border border-border 
 const BUTTON_CLASS = 'w-full px-3 py-1.5 text-xs font-medium rounded-md brand-coral-bg text-white hover:opacity-90 transition-opacity disabled:opacity-50'
 
 const CARDS: { type: RewardType; icon: typeof Video; title: string; desc: string }[] = [
-  { type: 'video', icon: Video, title: 'Post a Quick Video', desc: '30-sec clip on IG, TikTok, LinkedIn, or FB' },
-  { type: 'testimonial', icon: MessageSquare, title: 'Share Your Experience', desc: 'Tell us how it helped your prep' },
-  { type: 'referral', icon: Users, title: 'Invite a Colleague', desc: 'You both get 7 days of Pro' },
+  { type: 'video', icon: Video, title: 'Post a Quick Video', desc: '+4 weeks — 30-sec clip on IG, TikTok, LinkedIn, or FB' },
+  { type: 'testimonial', icon: MessageSquare, title: 'Share Your Experience', desc: '+2 weeks — tell us how it helped your prep' },
+  { type: 'referral', icon: Users, title: 'Invite a Colleague', desc: '+1 week each — up to 4 referrals' },
 ]
 
 export function RewardsPanel() {
@@ -95,7 +103,12 @@ export function RewardsPanel() {
   if (state.loading) return null
 
   const getReward = (type: string) => state.rewards.find((r) => r.reward_type === type)
-  const approvedCount = state.rewards.filter((r) => r.status === 'approved').length
+  const getRewards = (type: string) => state.rewards.filter((r) => r.reward_type === type)
+  const approvedDays = state.rewards
+    .filter((r) => r.status === 'approved')
+    .reduce((sum, r) => sum + (REWARD_DAYS[r.reward_type as RewardType] ?? 0), 0)
+  const referralCount = getRewards('referral').length
+  const referralApprovedCount = getRewards('referral').filter((r) => r.status === 'approved').length
 
   const handleSubmit = async (rewardType: 'video' | 'testimonial') => {
     setError(null)
@@ -170,6 +183,11 @@ export function RewardsPanel() {
   }
 
   const getCardStatus = (type: RewardType): 'done' | 'pending' | 'available' => {
+    if (type === 'referral') {
+      if (referralApprovedCount >= MAX_REFERRALS) return 'done'
+      if (referralCount > referralApprovedCount) return 'pending'
+      return 'available'
+    }
     const reward = getReward(type)
     if (!reward) return 'available'
     if (reward.status === 'approved') return 'done'
@@ -182,9 +200,9 @@ export function RewardsPanel() {
       <div className="flex items-center gap-3">
         <Gift className="w-4 h-4 text-brand-coral shrink-0" />
         <div className="flex-1 min-w-0">
-          <span className="text-xs font-semibold text-foreground">Get Pro Back — Free</span>
+          <span className="text-xs font-semibold text-foreground">Earn Free Pro</span>
           <span className="text-[10px] text-muted-foreground ml-2">
-            {approvedCount}/3 activities = {approvedCount * 7} of 21 days earned
+            {approvedDays} of {MAX_TOTAL_DAYS} days earned
           </span>
         </div>
         {/* Progress dots */}
@@ -237,7 +255,7 @@ export function RewardsPanel() {
                       <span className="text-[10px] text-muted-foreground block truncate">{desc}</span>
                     </div>
                     {reward ? (
-                      <StatusBadge status={reward.status} />
+                      <StatusBadge status={reward.status} days={REWARD_DAYS[type]} />
                     ) : (
                       <ChevronDown className={`w-3 h-3 text-muted-foreground shrink-0 transition-transform duration-200 ${expandedCard === type ? 'rotate-180' : ''}`} />
                     )}

@@ -130,10 +130,12 @@ export async function PATCH(request: NextRequest) {
     }
 
     // If approved, extend the user's trial
+    const REWARD_DAYS: Record<string, number> = { video: 28, testimonial: 14, referral: 7 }
     if (action === 'approve') {
+      const days = REWARD_DAYS[reward.reward_type] ?? 7
       const { error: rpcError } = await clients.serviceClient.rpc('extend_trial', {
         p_user_id: reward.user_id,
-        p_days: 7,
+        p_days: days,
       })
 
       if (rpcError) {
@@ -149,7 +151,7 @@ export async function PATCH(request: NextRequest) {
         .single()
 
       await sendSlackNotification(
-        `✅ Pro reward approved (${reward.reward_type}) for ${rewardUser?.email ?? reward.user_id} — +7 days Pro`,
+        `✅ Pro reward approved (${reward.reward_type}) for ${rewardUser?.email ?? reward.user_id} — +${days} days Pro`,
         'feedback'
       )
     }
