@@ -28,11 +28,16 @@ import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { getTopPriorities, getAllLatestRecommendations } from '@/lib/priority-storage'
 import { siteConfig } from '@/lib/config'
 import { Switch } from '@/components/ui/switch'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
+import { getPricingInfo } from '@/lib/pricing-tiers'
+import { Check as CheckIcon } from 'lucide-react'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { StudyProgressChart } from './components/study-progress-chart'
 import { ConsentModal, useConsentModal } from '@/components/consent-modal'
 import { UpgradeBanner } from '@/components/upgrade-banner'
+import { RewardsPanel } from '@/components/rewards-panel'
 
 type ApiChangelogEntry = {
   id: string
@@ -51,6 +56,14 @@ type ApiChangelogResponse = {
 }
 
 const subscriptionTierVisuals = {
+  free: {
+    label: 'Free',
+    style: {
+      borderColor: '#9ca3af',
+      backgroundColor: 'rgba(156, 163, 175, 0.1)',
+      color: '#9ca3af',
+    },
+  },
   pro: {
     label: 'Pro',
     style: {
@@ -118,6 +131,10 @@ export default function DashboardPage() {
   const [feedbackStatus, setFeedbackStatus] = useState<'success' | 'error' | null>(null)
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
   const [isAnonymousFeedback, setIsAnonymousFeedback] = useState(false)
+  const [isManagePlanOpen, setIsManagePlanOpen] = useState(false)
+  const { startCheckout, checkoutLoading } = useStripeCheckout()
+  const pricingInfo = getPricingInfo()
+  const pricingItems = siteConfig.pricing.pricingItems
   const subscriptionTierKey = userProfile?.subscription_tier ?? 'pro'
   const subscriptionTierVisual =
     subscriptionTierKey in subscriptionTierVisuals
@@ -933,6 +950,7 @@ export default function DashboardPage() {
     <main className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12 space-y-8">
         <UpgradeBanner />
+        <RewardsPanel />
 
         <div data-tour="dashboard-header">
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
@@ -1007,12 +1025,75 @@ export default function DashboardPage() {
             </div>
             <div className="w-full md:flex-1">
               <div className="flex flex-col gap-2 md:flex-row md:flex-nowrap md:items-center md:gap-3">
-                <div
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full border px-5 text-sm font-medium md:w-auto"
-                  style={subscriptionTierStyle}
-                >
-                  Plan: {subscriptionTierLabel}
-                </div>
+                <Popover open={isManagePlanOpen} onOpenChange={setIsManagePlanOpen}>
+                  <PopoverTrigger asChild>
+                    <div
+                      className="group inline-flex h-10 w-full items-center justify-center rounded-full border px-5 text-sm font-medium cursor-pointer transition-opacity hover:opacity-80 md:w-auto"
+                      style={subscriptionTierStyle}
+                      title="Manage Plan"
+                    >
+                      <span className="group-hover:hidden">Plan: {subscriptionTierLabel}</span>
+                      <span className="hidden group-hover:inline">Manage Plan</span>
+                    </div>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-80 p-0" align="start" sideOffset={8}>
+                    <div className="p-3 space-y-2">
+                      <p className="text-xs font-semibold text-foreground px-1">Choose your plan</p>
+                      {pricingItems.map((item) => {
+                        const isCurrent = (item.name === 'Free' && subscriptionTierKey === 'free') ||
+                          (item.name === 'Pro' && subscriptionTierKey === 'pro')
+                        return (
+                          <div
+                            key={item.name}
+                            className={`rounded-lg border p-3 ${isCurrent ? 'border-brand-coral/50 bg-brand-coral/5' : 'border-border'}`}
+                          >
+                            <div className="flex items-center justify-between mb-2">
+                              <div>
+                                <span className="text-sm font-semibold">{item.name}</span>
+                                <span className="text-xs text-muted-foreground ml-2">
+                                  {item.name === 'Pro'
+                                    ? `${pricingInfo.isFoundingPrice ? `$${pricingInfo.currentPrice}` : `$${pricingInfo.standardPrice}`}/mo`
+                                    : '$0/forever'}
+                                </span>
+                              </div>
+                              {isCurrent && (
+                                <span className="text-[10px] font-medium text-brand-coral bg-brand-coral/10 px-2 py-0.5 rounded-full">
+                                  Current
+                                </span>
+                              )}
+                            </div>
+                            {item.name === 'Pro' && pricingInfo.isFoundingPrice && (
+                              <p className="text-[10px] text-muted-foreground mb-2">
+                                Founding price — locks in ${pricingInfo.currentPrice}/mo forever ({pricingInfo.daysUntilPriceIncrease} days left)
+                              </p>
+                            )}
+                            <ul className="space-y-1 mb-2">
+                              {item.features.map((feature) => (
+                                <li key={feature} className="flex items-start gap-1.5 text-[11px] text-muted-foreground">
+                                  <CheckIcon className="w-3 h-3 mt-0.5 shrink-0 text-green-500" />
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            {item.name === 'Pro' && !isCurrent && (
+                              <Button
+                                size="sm"
+                                className="w-full h-7 text-xs brand-coral-bg text-white hover:opacity-90"
+                                onClick={() => {
+                                  setIsManagePlanOpen(false)
+                                  startCheckout({ source: 'manage-plan' })
+                                }}
+                                disabled={checkoutLoading}
+                              >
+                                {checkoutLoading ? 'Redirecting...' : 'Upgrade to Pro'}
+                              </Button>
+                            )}
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </PopoverContent>
+                </Popover>
                 <Button
                   variant="outline"
                   className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
