@@ -181,36 +181,36 @@ export const siteConfig = {
     },
   },
   pricing: {
-    title: "Start Studying Free Today",
-    description: "Other programs charge $849 to $1,649. We're $0 during beta. No credit card, no catch. Start studying in 2 minutes.",
+    title: "Start Studying Today",
+    description: "Other programs charge $849 to $1,649. Start with a free plan or unlock everything with Pro.",
     pricingItems: [
+      {
+        name: "Free",
+        href: "/#get-started",
+        price: "$0",
+        period: "forever",
+        yearlyPrice: "n/a",
+        features: ["Learn: 10 text lessons", "Practice: 3 quizzes per day", "Simulate: Basic exam tools"],
+        featuresLabel: "Includes:",
+        description: "Get started with the essentials.",
+        buttonText: "Start Free",
+        buttonColor: "border border-border bg-background hover:bg-muted/50",
+        isPopular: false,
+        displayPrice: "$0/forever",
+      },
       {
         name: "Pro",
         href: "/#get-started",
-        price: "$0",
+        price: "$20",
         period: "month",
         yearlyPrice: "n/a",
-        features: ["Learn: 80+ text + audio lessons", "Practice: 10-min targeted quizzes", "Simulate: Real exam tools (highlight, flag, timer)", "Personalize: Custom metaphors + focus areas", "Recover: 5-min mental resets"],
+        features: ["Learn: 80+ text + audio lessons", "Practice: Unlimited quizzes", "Simulate: Full exam tools (highlight, flag, timer)", "Personalize: Custom metaphors + focus areas", "Recover: 5-min mental resets"],
         featuresLabel: "Everything includes:",
-        description: "",
-        buttonText: "Claim Your Free Spot",
+        description: "7 days free. No credit card required.",
+        buttonText: "Start Free Trial",
         buttonColor: "bg-primary text-primary-foreground",
         isPopular: true,
-        displayPrice: "$0/month",
-      },
-      {
-        name: "Pro + Coaching",
-        href: "/#get-started",
-        price: "$500",
-        period: "month",
-        yearlyPrice: "$5000",
-        features: ["Includes: Everything in Pro", "Coach: 2× 45-min calls/month", "Plan: Custom study roadmap", "Support: Priority response", "Compare: $900 over 12 months → pass in 1"],
-        featuresLabel: "Everything in Pro plus:",
-        description: "2 calls/month with Dr. Chan.",
-        buttonText: "Get Started",
-        buttonColor: "bg-primary text-primary-foreground",
-        isPopular: false,
-        displayPrice: "$500/month",
+        displayPrice: "$20/month",
       },
     ],
   },
@@ -278,7 +278,7 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          <Highlight className="text-brand-soft-blue dark:text-brand-coral">I wish I would have had this years ago!</Highlight>
+          I wish I would have had this <Highlight className="text-brand-soft-blue dark:text-brand-coral">years ago</Highlight>!
         </p>
       ),
     },
@@ -289,7 +289,7 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          <Highlight className="text-brand-dusty-rose dark:text-brand-sage">Those are great and much needed tools! Hope it goes well with all the great ideas you have! As a person who is always on the go, I’m always wishing I could use a tool to study while in between places on my phone.</Highlight>
+          Those are great and <Highlight className="text-brand-dusty-rose dark:text-brand-sage">much needed tools</Highlight>! Hope it goes well with all the great ideas you have! As a person who is always on the go, I’m always wishing I could use <Highlight className="text-brand-dusty-rose dark:text-brand-sage">a tool to study while in between places</Highlight> on my phone.
         </p>
       ),
     },
