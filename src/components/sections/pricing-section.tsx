@@ -9,7 +9,6 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { supabase } from "@/lib/supabase"
 import { CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
 import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI } from "@/lib/utm-tracking"
-import { getPricingInfo } from "@/lib/pricing-tiers"
 
 // Retry helper for critical API calls (profile creation)
 async function fetchWithRetry(url: string, options: RequestInit, retries = 3): Promise<Response> {
@@ -33,8 +32,6 @@ function getDisplayPrice(tier: Tier): { amount: string; period: string } {
 
 export function PricingSection() {
   const tiers = useMemo(() => siteConfig.pricing.pricingItems, [])
-  const pricingInfo = useMemo(() => getPricingInfo(), [])
-  const [expandedTier, setExpandedTier] = useState<string | null>(null)
   const [showPasswordFields, setShowPasswordFields] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null)
@@ -49,18 +46,18 @@ export function PricingSection() {
     referralSourceOther: "",
   })
 
-  // Store UTM params when component mounts
+  // Store UTM params and referral code when component mounts
   useEffect(() => {
     storeUTMParams()
+    const params = new URLSearchParams(window.location.search)
+    const ref = params.get('ref')
+    if (ref) {
+      localStorage.setItem('referral_code', ref)
+    }
   }, [])
 
   useEffect(() => {
-    const handleMiniPricingSelect = (e: Event) => {
-      const customEvent = e as CustomEvent<{ tierName: string }>
-      const tierName = customEvent.detail?.tierName
-      if (!tierName) return
-      if (!tiers.some((tier) => tier.name === tierName)) return
-      setExpandedTier(tierName)
+    const handleMiniPricingSelect = () => {
       setFormData({
         fullName: "",
         email: "",
@@ -77,7 +74,7 @@ export function PricingSection() {
 
     window.addEventListener("mini-pricing-select", handleMiniPricingSelect)
     return () => window.removeEventListener("mini-pricing-select", handleMiniPricingSelect)
-  }, [tiers])
+  }, [])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -145,6 +142,7 @@ export function PricingSection() {
       }
 
       // All signups get pro trial (create-profile handles trial_ends_at)
+      const referredByCode = localStorage.getItem('referral_code')
       const profileResponse = await fetchWithRetry("/api/auth/create-profile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -155,6 +153,7 @@ export function PricingSection() {
           subscriptionTier: "pro",
           promoCodeUsed: null,
           referralSource: finalReferralSource,
+          referredByCode: referredByCode || undefined,
           ...utmParams,
         }),
       })
@@ -179,7 +178,7 @@ export function PricingSection() {
               phone: "",
               testDate: formData.examDate || "",
               thoughtsGoalsQuestions: goalParts.join(" | "),
-              tier: expandedTier,
+              tier: "Pro",
             }),
           })
         } catch (submissionError) {
@@ -188,6 +187,7 @@ export function PricingSection() {
       }
 
       clearStoredUTMParams()
+      localStorage.removeItem('referral_code')
 
       // Track homepage A/B conversion (non-blocking)
       try {
@@ -242,318 +242,237 @@ export function PricingSection() {
         </p>
       </SectionHeader>
 
-      <div className="w-full max-w-5xl mx-auto px-6 space-y-8">
-        <div className="grid gap-4 items-stretch md:grid-cols-2">
-          {tiers.map((tier) => {
-            const { amount, period } = getDisplayPrice(tier)
-            const isExpanded = tier.name === expandedTier
-            const isProTier = tier.name === "Pro"
+      <div className="w-full max-w-lg mx-auto px-6 space-y-8">
+        {tiers.map((tier) => {
+          const { amount, period } = getDisplayPrice(tier)
 
-            return (
-              <div
-                key={tier.name}
-                className={cn(
-                  "rounded-xl border bg-accent p-5 transition-shadow flex h-full flex-col",
-                  isExpanded ? "border-primary shadow-[0px_20px_60px_rgba(15,23,42,0.12)]" : "border-border"
-                )}
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-medium">{tier.name}</p>
-                  <div className="flex items-center gap-1.5">
-                    {tier.isPopular && (
-                      <span className="brand-soft-blue-bg text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.15)]">
-                        Popular
-                      </span>
-                    )}
-                    {isProTier && pricingInfo.isFoundingPrice && (
-                      <span className="bg-amber-500/90 text-white h-6 inline-flex w-fit items-center justify-center px-2 rounded-full text-sm shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.15)]">
-                        Founding Price
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <div className="mt-3 flex items-baseline gap-2">
-                  {isProTier && pricingInfo.isFoundingPrice && (
-                    <span className="text-lg font-medium text-muted-foreground line-through decoration-2">
-                      ${pricingInfo.standardPrice}
+          return (
+            <div
+              key={tier.name}
+              className="rounded-xl border border-primary bg-accent p-5 shadow-[0px_20px_60px_rgba(15,23,42,0.12)] flex flex-col"
+            >
+              <div className="mt-1 flex items-baseline gap-2">
+                <span className="text-3xl font-semibold">{amount}</span>
+                {period && <span className="text-sm text-muted-foreground">/{period}</span>}
+              </div>
+              {tier.description?.trim() ? (
+                <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
+              ) : null}
+
+              <ul className="mt-4 space-y-2 text-sm">
+                {tier.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2">
+                    <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary/10 text-[10px]">
+                      ✓
                     </span>
-                  )}
-                  <span className="text-3xl font-semibold">
-                    {isProTier ? `$${pricingInfo.currentPrice}` : amount}
-                  </span>
-                  {period && <span className="text-sm text-muted-foreground">/{period}</span>}
-                </div>
-                {tier.description?.trim() ? (
-                  <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
-                ) : null}
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
 
-                {/* Founding price urgency for Pro tier */}
-                {isProTier && pricingInfo.isFoundingPrice && pricingInfo.daysUntilPriceIncrease > 0 && (
-                  <div className="mt-3">
-                    <p className="text-sm font-medium text-foreground">
-                      <span className="text-amber-600 dark:text-amber-400">
-                        Price increases to ${pricingInfo.standardPrice}/mo in {pricingInfo.daysUntilPriceIncrease} day{pricingInfo.daysUntilPriceIncrease !== 1 ? "s" : ""}
-                      </span>
-                    </p>
+              <div className="border-t border-border mt-5 pt-5 space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  7 days of full Pro access. No credit card required.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor={`fullName-${tier.name}`} className="block text-sm font-medium mb-2">
+                      Full Name (optional)
+                    </label>
+                    <input
+                      type="text"
+                      id={`fullName-${tier.name}`}
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleInputChange}
+                      placeholder="Your name"
+                      className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
                   </div>
-                )}
 
-                <ul className="mt-4 space-y-2 text-sm flex-grow">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
-                      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary/10 text-[10px]">
-                        ✓
-                      </span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (isExpanded) {
-                      setExpandedTier(null)
-                    } else {
-                      setExpandedTier(tier.name)
-                      setFormData({
-                        fullName: "",
-                        email: "",
-                        password: "",
-                        confirmPassword: "",
-                        goals: "",
-                        examDate: "",
-                        referralSource: "",
-                        referralSourceOther: "",
-                      })
-                      setSubmitMessage(null)
-                      setShowPasswordFields(false)
-                    }
-                  }}
-                  className={cn(
-                    "mt-5 h-10 w-full rounded-full text-sm font-medium transition-all",
-                    isExpanded
-                      ? "bg-primary text-primary-foreground"
-                      : "border border-border bg-background hover:bg-muted/50"
-                  )}
-                >
-                  {isExpanded ? "Selected" : tier.buttonText || "Select"}
-                </button>
+                  <div>
+                    <label htmlFor={`email-${tier.name}`} className="block text-sm font-medium mb-2">
+                      Email Address <span className="text-brand-lavender-gray">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id={`email-${tier.name}`}
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      onFocus={() => setShowPasswordFields(true)}
+                      placeholder="your@email.com"
+                      required
+                      className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
 
-                <motion.div
-                  className="overflow-hidden"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={isExpanded ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                >
-                  <div className="border-t border-border mt-5 pt-5 space-y-4">
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                      <p className="text-sm text-muted-foreground">
-                        {isProTier
-                          ? "7 days of full Pro access. No credit card required."
-                          : "Free forever. Upgrade anytime."}
-                      </p>
-                    </div>
-
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={showPasswordFields ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="space-y-4">
                       <div>
-                        <label htmlFor={`fullName-${tier.name}`} className="block text-sm font-medium mb-2">
-                          Full Name (optional)
+                        <label htmlFor={`password-${tier.name}`} className="block text-sm font-medium mb-2">
+                          Password <span className="text-brand-lavender-gray">*</span>
                         </label>
                         <input
-                          type="text"
-                          id={`fullName-${tier.name}`}
-                          name="fullName"
-                          value={formData.fullName}
+                          type="password"
+                          id={`password-${tier.name}`}
+                          name="password"
+                          value={formData.password}
                           onChange={handleInputChange}
-                          placeholder="Your name"
-                          className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor={`email-${tier.name}`} className="block text-sm font-medium mb-2">
-                          Email Address <span className="text-brand-lavender-gray">*</span>
-                        </label>
-                        <input
-                          type="email"
-                          id={`email-${tier.name}`}
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          onFocus={() => setShowPasswordFields(true)}
-                          placeholder="your@email.com"
+                          placeholder="Minimum 6 characters"
                           required
                           className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </div>
 
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={showPasswordFields ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
-                        transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="overflow-hidden"
+                      <div>
+                        <label htmlFor={`confirmPassword-${tier.name}`} className="block text-sm font-medium mb-2">
+                          Confirm Password <span className="text-brand-lavender-gray">*</span>
+                        </label>
+                        <input
+                          type="password"
+                          id={`confirmPassword-${tier.name}`}
+                          name="confirmPassword"
+                          value={formData.confirmPassword}
+                          onChange={handleInputChange}
+                          placeholder="Re-enter password"
+                          required
+                          className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <div className="border border-dashed border-border/60 rounded-lg p-4 space-y-4">
+                    <div>
+                      <label htmlFor={`goals-${tier.name}`} className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
+                        EPPP Goals
+                      </label>
+                      <textarea
+                        id={`goals-${tier.name}`}
+                        name="goals"
+                        value={formData.goals}
+                        onChange={handleInputChange}
+                        placeholder="Plans, concerns, or what success looks like."
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary min-h-[90px]"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor={`examDate-${tier.name}`}
+                        className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
                       >
-                        <div className="space-y-4">
-                          <div>
-                            <label htmlFor={`password-${tier.name}`} className="block text-sm font-medium mb-2">
-                              Password <span className="text-brand-lavender-gray">*</span>
-                            </label>
-                            <input
-                              type="password"
-                              id={`password-${tier.name}`}
-                              name="password"
-                              value={formData.password}
-                              onChange={handleInputChange}
-                              placeholder="Minimum 6 characters"
-                              required
-                              className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                            />
-                          </div>
+                        Planned exam date
+                      </label>
+                      <input
+                        type="date"
+                        id={`examDate-${tier.name}`}
+                        name="examDate"
+                        value={formData.examDate}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
 
-                          <div>
-                            <label htmlFor={`confirmPassword-${tier.name}`} className="block text-sm font-medium mb-2">
-                              Confirm Password <span className="text-brand-lavender-gray">*</span>
-                            </label>
-                            <input
-                              type="password"
-                              id={`confirmPassword-${tier.name}`}
-                              name="confirmPassword"
-                              value={formData.confirmPassword}
-                              onChange={handleInputChange}
-                              placeholder="Re-enter password"
-                              required
-                              className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      <div className="border border-dashed border-border/60 rounded-lg p-4 space-y-4">
-                        <div>
-                          <label htmlFor={`goals-${tier.name}`} className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground">
-                            EPPP Goals
-                          </label>
-                          <textarea
-                            id={`goals-${tier.name}`}
-                            name="goals"
-                            value={formData.goals}
-                            onChange={handleInputChange}
-                            placeholder="Plans, concerns, or what success looks like."
-                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary min-h-[90px]"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor={`examDate-${tier.name}`}
-                            className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
-                          >
-                            Planned exam date
-                          </label>
-                          <input
-                            type="date"
-                            id={`examDate-${tier.name}`}
-                            name="examDate"
-                            value={formData.examDate}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                          />
-                        </div>
-
-                        <div>
-                          <label
-                            htmlFor={`referralSource-${tier.name}`}
-                            className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
-                          >
-                            How did you find us? <span className="text-brand-lavender-gray">*</span>
-                          </label>
-                          <select
-                            id={`referralSource-${tier.name}`}
-                            name="referralSource"
-                            value={formData.referralSource}
-                            onChange={handleInputChange}
-                            required
-                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer"
-                          >
-                            <option value="">Select an option...</option>
-                            {Object.entries(getReferralSourcesByCategory()).map(([category, sources]) => (
-                              <optgroup key={category} label={CATEGORY_LABELS[category as keyof typeof CATEGORY_LABELS]}>
-                                {sources.map((source) => (
-                                  <option key={source.value} value={source.value}>
-                                    {source.label}
-                                  </option>
-                                ))}
-                              </optgroup>
+                    <div>
+                      <label
+                        htmlFor={`referralSource-${tier.name}`}
+                        className="block text-xs font-medium mb-1 uppercase tracking-wide text-muted-foreground"
+                      >
+                        How did you find us? <span className="text-brand-lavender-gray">*</span>
+                      </label>
+                      <select
+                        id={`referralSource-${tier.name}`}
+                        name="referralSource"
+                        value={formData.referralSource}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer"
+                      >
+                        <option value="">Select an option...</option>
+                        {Object.entries(getReferralSourcesByCategory()).map(([category, sources]) => (
+                          <optgroup key={category} label={CATEGORY_LABELS[category as keyof typeof CATEGORY_LABELS]}>
+                            {sources.map((source) => (
+                              <option key={source.value} value={source.value}>
+                                {source.label}
+                              </option>
                             ))}
-                          </select>
+                          </optgroup>
+                        ))}
+                      </select>
 
-                          {formData.referralSource === 'other' && (
-                            <input
-                              type="text"
-                              id={`referralSourceOther-${tier.name}`}
-                              name="referralSourceOther"
-                              value={formData.referralSourceOther}
-                              onChange={handleInputChange}
-                              placeholder="Please specify..."
-                              required
-                              className="w-full mt-2 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                            />
-                          )}
-
-                          {formData.referralSource === 'fb_other' && (
-                            <input
-                              type="text"
-                              id={`referralSourceOther-${tier.name}`}
-                              name="referralSourceOther"
-                              value={formData.referralSourceOther}
-                              onChange={handleInputChange}
-                              placeholder="Which Facebook group?"
-                              className="w-full mt-2 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                            />
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <InteractiveHoverButton
-                          type="submit"
-                          disabled={isSubmitting}
-                          text={isSubmitting ? "Submitting..." : "Start"}
-                          className={cn(
-                            "transition-colors duration-150 focus-visible:outline focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/60 border border-border shadow-sm",
-                            "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
-                            "hover:!bg-brand-coral hover:!text-white dark:hover:!bg-black dark:hover:!text-white"
-                          )}
-                          hoverTextClassName="text-white dark:text-white"
-                          dotClassName="brand-coral-bg dark:brand-lavender-gray-bg"
-                        >
-                          {isSubmitting ? "Submitting..." : "Start"}
-                        </InteractiveHoverButton>
-                      </div>
-
-                      {submitMessage && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className={`p-3 rounded-lg text-sm text-center ${
-                            submitMessage.type === "success"
-                              ? "bg-green-50 text-green-700 border border-green-200"
-                              : "bg-red-50 text-red-700 border border-red-200"
-                          }`}
-                        >
-                          {submitMessage.text}
-                        </motion.div>
+                      {formData.referralSource === 'other' && (
+                        <input
+                          type="text"
+                          id={`referralSourceOther-${tier.name}`}
+                          name="referralSourceOther"
+                          value={formData.referralSourceOther}
+                          onChange={handleInputChange}
+                          placeholder="Please specify..."
+                          required
+                          className="w-full mt-2 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
                       )}
 
-                      <p className="text-xs text-foreground/60 text-center leading-relaxed">
-                        Educational tool, not therapy. Not affiliated with ASPPB.
-                      </p>
-                    </form>
+                      {formData.referralSource === 'fb_other' && (
+                        <input
+                          type="text"
+                          id={`referralSourceOther-${tier.name}`}
+                          name="referralSourceOther"
+                          value={formData.referralSourceOther}
+                          onChange={handleInputChange}
+                          placeholder="Which Facebook group?"
+                          className="w-full mt-2 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      )}
+                    </div>
                   </div>
-                </motion.div>
+
+                  <div className="flex justify-center">
+                    <InteractiveHoverButton
+                      type="submit"
+                      disabled={isSubmitting}
+                      text={isSubmitting ? "Submitting..." : "Start"}
+                      className={cn(
+                        "transition-colors duration-150 focus-visible:outline focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/60 border border-border shadow-sm",
+                        "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
+                        "hover:!bg-brand-coral hover:!text-white dark:hover:!bg-black dark:hover:!text-white"
+                      )}
+                      hoverTextClassName="text-white dark:text-white"
+                      dotClassName="brand-coral-bg dark:brand-lavender-gray-bg"
+                    >
+                      {isSubmitting ? "Submitting..." : "Start"}
+                    </InteractiveHoverButton>
+                  </div>
+
+                  {submitMessage && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className={`p-3 rounded-lg text-sm text-center ${
+                        submitMessage.type === "success"
+                          ? "bg-green-50 text-green-700 border border-green-200"
+                          : "bg-red-50 text-red-700 border border-red-200"
+                      }`}
+                    >
+                      {submitMessage.text}
+                    </motion.div>
+                  )}
+
+                  <p className="text-xs text-foreground/60 text-center leading-relaxed">
+                    Educational tool, not therapy. Not affiliated with ASPPB.
+                  </p>
+                </form>
               </div>
-            )
-          })}
-        </div>
+            </div>
+          )
+        })}
       </div>
     </section>
   )
