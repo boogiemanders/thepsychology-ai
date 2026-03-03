@@ -168,7 +168,7 @@ export default function AdminRewardsPage() {
                         {reward.reward_type}
                       </Badge>
                     </TableCell>
-                    <TableCell className="max-w-xs">
+                    <TableCell className="max-w-md">
                       {reward.reward_type === 'video' ? (
                         <a
                           href={reward.submission_data.video_url}
@@ -179,7 +179,7 @@ export default function AdminRewardsPage() {
                           View video <ExternalLink className="w-3 h-3" />
                         </a>
                       ) : reward.reward_type === 'testimonial' ? (
-                        <p className="text-sm text-muted-foreground truncate">
+                        <p className="text-sm text-muted-foreground whitespace-pre-wrap">
                           {reward.submission_data.text}
                         </p>
                       ) : (
