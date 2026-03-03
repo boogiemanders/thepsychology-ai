@@ -390,7 +390,7 @@ export default function SettingsPage() {
                   {userProfile?.subscription_tier?.replace('_', ' + ') || 'Free'}
                 </p>
               </div>
-              <Button variant="outline" size="sm" onClick={() => router.push('/pricing')}>
+              <Button variant="outline" size="sm" onClick={() => router.push('/#get-started')}>
                 Manage Plan
               </Button>
             </div>

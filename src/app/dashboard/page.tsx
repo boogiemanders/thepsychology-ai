@@ -1027,14 +1027,14 @@ export default function DashboardPage() {
               <div className="flex flex-col gap-2 md:flex-row md:flex-nowrap md:items-center md:gap-3">
                 <Popover open={isManagePlanOpen} onOpenChange={setIsManagePlanOpen}>
                   <PopoverTrigger asChild>
-                    <div
+                    <button
                       className="group inline-flex h-10 w-full items-center justify-center rounded-full border px-5 text-sm font-medium cursor-pointer transition-opacity hover:opacity-80 md:w-auto"
                       style={subscriptionTierStyle}
                       title="Manage Plan"
                     >
                       <span className="group-hover:hidden">Plan: {subscriptionTierLabel}</span>
                       <span className="hidden group-hover:inline">Manage Plan</span>
-                    </div>
+                    </button>
                   </PopoverTrigger>
                   <PopoverContent className="w-80 p-0" align="start" sideOffset={8}>
                     <div className="p-3 space-y-2">
