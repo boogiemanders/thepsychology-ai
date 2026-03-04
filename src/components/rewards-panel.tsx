@@ -33,11 +33,25 @@ interface RewardsState {
   loading: boolean
 }
 
-function StatusBadge({ status, days }: { status: RewardStatus; days: number }) {
+interface BannerProfileState {
+  resolved: boolean
+  tier: 'free' | 'basic' | 'pro' | null
+  trialEndsAt: string | null
+}
+
+function StatusBadge({
+  status,
+  days,
+  showDays = true,
+}: {
+  status: RewardStatus
+  days: number
+  showDays?: boolean
+}) {
   if (status === 'approved') {
     return (
       <span className="inline-flex items-center gap-1 text-[10px] font-medium brand-sage-text bg-[var(--brand-sage)]/10 px-1.5 py-0.5 rounded-full">
-        <Check className="w-2.5 h-2.5" /> +{days} days
+        <Check className="w-2.5 h-2.5" /> {showDays ? `+${days} days` : 'Approved'}
       </span>
     )
   }
@@ -58,14 +72,37 @@ function StatusBadge({ status, days }: { status: RewardStatus; days: number }) {
 const INPUT_CLASS = 'w-full px-3 py-1.5 text-xs rounded-md border border-border bg-background focus:outline-none focus:ring-1 focus:ring-brand-coral/50'
 const BUTTON_CLASS = 'w-full px-3 py-1.5 text-xs font-medium rounded-md brand-coral-bg text-white hover:opacity-90 transition-opacity disabled:opacity-50'
 
-const CARDS: { type: RewardType; icon: typeof Video; title: string; desc: string }[] = [
-  { type: 'video', icon: Video, title: 'Post a Quick Video', desc: '+4 weeks — 30-sec clip on IG, TikTok, LinkedIn, or FB' },
-  { type: 'testimonial', icon: MessageSquare, title: 'Share Your Experience', desc: '+2 weeks — tell us how it helped your prep' },
-  { type: 'referral', icon: Users, title: 'Invite a Colleague', desc: '+1 week each — up to 4 referrals' },
+const CARDS: { type: RewardType; icon: typeof Video; title: string; rewardDesc: string; supportDesc: string }[] = [
+  {
+    type: 'video',
+    icon: Video,
+    title: 'Post a Quick Video',
+    rewardDesc: '+4 weeks — 30-sec clip on IG, TikTok, LinkedIn, or FB',
+    supportDesc: '30-sec clip on IG, TikTok, LinkedIn, or FB',
+  },
+  {
+    type: 'testimonial',
+    icon: MessageSquare,
+    title: 'Share Your Experience',
+    rewardDesc: '+2 weeks — tell us how it helped your prep',
+    supportDesc: 'Tell us how it helped your prep',
+  },
+  {
+    type: 'referral',
+    icon: Users,
+    title: 'Invite a Colleague',
+    rewardDesc: '+1 week each — up to 4 referrals',
+    supportDesc: 'Share your link with friends who are studying',
+  },
 ]
 
 export function RewardsPanel() {
   const { userProfile } = useAuth()
+  const [bannerProfile, setBannerProfile] = useState<BannerProfileState>({
+    resolved: false,
+    tier: null,
+    trialEndsAt: null,
+  })
   const [state, setState] = useState<RewardsState>({ rewards: [], referralCode: null, loading: true })
   const [expandedCard, setExpandedCard] = useState<RewardType | null>(null)
   const [videoUrl, setVideoUrl] = useState('')
@@ -79,23 +116,95 @@ export function RewardsPanel() {
   const [copied, setCopied] = useState(false)
   const [animatedProgressValue, setAnimatedProgressValue] = useState(0)
 
+  useEffect(() => {
+    let isActive = true
+
+    const resolveBannerProfile = async () => {
+      if (!userProfile?.id) {
+        if (isActive) {
+          setBannerProfile({
+            resolved: true,
+            tier: null,
+            trialEndsAt: null,
+          })
+        }
+        return
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from('users')
+          .select('subscription_tier, trial_ends_at')
+          .eq('id', userProfile.id)
+          .single()
+
+        if (!isActive) return
+
+        if (error) {
+          throw error
+        }
+
+        setBannerProfile({
+          resolved: true,
+          tier: (data?.subscription_tier as 'free' | 'basic' | 'pro' | null) ?? null,
+          trialEndsAt: data?.trial_ends_at ?? null,
+        })
+      } catch {
+        if (!isActive) return
+
+        // Fall back to auth context state if direct profile fetch fails.
+        setBannerProfile({
+          resolved: true,
+          tier: userProfile.subscription_tier ?? null,
+          trialEndsAt: userProfile.trial_ends_at ?? null,
+        })
+      }
+    }
+
+    setBannerProfile((prev) => ({ ...prev, resolved: false }))
+    void resolveBannerProfile()
+
+    return () => {
+      isActive = false
+    }
+  }, [userProfile?.id, userProfile?.subscription_tier, userProfile?.trial_ends_at])
+
+  const effectiveTier = bannerProfile.resolved
+    ? bannerProfile.tier
+    : (userProfile?.subscription_tier ?? null)
+  const effectiveTrialEndsAt = bannerProfile.resolved
+    ? bannerProfile.trialEndsAt
+    : (userProfile?.trial_ends_at ?? null)
+
+  const isPaidPro = effectiveTier === 'pro'
   // Show rewards after trial users roll to free so they can earn more access time.
-  const shouldShow =
-    userProfile?.subscription_tier === 'free' &&
-    userProfile?.trial_ends_at != null
+  const isFreePostTrial =
+    effectiveTier === 'free' &&
+    effectiveTrialEndsAt != null
+  const isMinimalShareMode = isPaidPro
+  const shouldShow = isFreePostTrial || isPaidPro
 
   const fetchRewards = useCallback(async () => {
     const { data: { session } } = await supabase.auth.getSession()
-    if (!session?.access_token) return
+    if (!session?.access_token) {
+      setState((s) => ({ ...s, loading: false }))
+      return
+    }
 
     try {
       const res = await fetch('/api/rewards/status', {
         headers: { Authorization: `Bearer ${session.access_token}` },
       })
-      if (res.ok) {
-        const data = await res.json()
-        setState({ rewards: data.rewards, referralCode: data.referralCode, loading: false })
+      if (!res.ok) {
+        setState((s) => ({ ...s, loading: false }))
+        return
       }
+      const data = await res.json()
+      setState({
+        rewards: Array.isArray(data.rewards) ? data.rewards : [],
+        referralCode: typeof data.referralCode === 'string' ? data.referralCode : null,
+        loading: false,
+      })
     } catch {
       setState((s) => ({ ...s, loading: false }))
     }
@@ -123,6 +232,7 @@ export function RewardsPanel() {
     return () => cancelAnimationFrame(frame)
   }, [state.loading, rewardsProgressValue])
 
+  if (!bannerProfile.resolved && userProfile?.id) return null
   if (!shouldShow) return null
   if (state.loading) return null
 
@@ -211,42 +321,62 @@ export function RewardsPanel() {
   }
 
   return (
-    <div className="rounded-lg border border-brand-coral/30 bg-brand-coral/5 dark:border-brand-coral/20 dark:bg-brand-coral/10 p-3 md:p-4">
+    <div
+      className={`rounded-lg border p-3 md:p-4 ${
+        isMinimalShareMode
+          ? 'border-border/60 bg-muted/30 dark:border-border/50 dark:bg-muted/20'
+          : 'border-brand-coral/30 bg-brand-coral/5 dark:border-brand-coral/20 dark:bg-brand-coral/10'
+      }`}
+    >
       {/* Compact header row */}
-      <div className="flex items-center gap-3">
-        <Gift className="w-4 h-4 text-brand-coral shrink-0" />
-        <div className="flex-1 min-w-0">
-          <span className="text-xs font-semibold text-foreground">Earn Free Pro</span>
-          <span className="text-[10px] text-muted-foreground ml-2">
-            {approvedDays} of {MAX_TOTAL_DAYS} days earned
-          </span>
+      {isMinimalShareMode ? (
+        <div className="flex items-center gap-3">
+          <Users className="w-4 h-4 text-brand-coral shrink-0" />
+          <div className="flex-1 min-w-0">
+            <span className="text-xs font-semibold text-foreground">Share with friends</span>
+            <span className="block text-[10px] text-muted-foreground">
+              Help other postdocs discover thePsychology.ai
+            </span>
+          </div>
         </div>
-        {/* Progress dots */}
-        <div className="flex items-center gap-1">
-          {CARDS.map(({ type }) => {
-            const s = getCardStatus(type)
-            return (
-              <div
-                key={type}
-                className={`w-2 h-2 rounded-full ${
-                  s === 'done' ? 'brand-sage-bg' : s === 'pending' ? 'bg-amber-400' : 'brand-lavender-gray-bg'
-                }`}
-              />
-            )
-          })}
-        </div>
-      </div>
+      ) : (
+        <>
+          <div className="flex items-center gap-3">
+            <Gift className="w-4 h-4 text-brand-coral shrink-0" />
+            <div className="flex-1 min-w-0">
+              <span className="text-xs font-semibold text-foreground">Earn Free Pro</span>
+              <span className="text-[10px] text-muted-foreground ml-2">
+                {approvedDays} of {MAX_TOTAL_DAYS} days earned
+              </span>
+            </div>
+            {/* Progress dots */}
+            <div className="flex items-center gap-1">
+              {CARDS.map(({ type }) => {
+                const s = getCardStatus(type)
+                return (
+                  <div
+                    key={type}
+                    className={`w-2 h-2 rounded-full ${
+                      s === 'done' ? 'brand-sage-bg' : s === 'pending' ? 'bg-amber-400' : 'brand-lavender-gray-bg'
+                    }`}
+                  />
+                )
+              })}
+            </div>
+          </div>
 
-      <div className="mt-2 flex items-center gap-2">
-        <Progress
-          value={animatedProgressValue}
-          aria-label="Rewards completion progress"
-          className="h-1.5 bg-brand-coral/15 [&>div]:bg-brand-coral [&>div]:duration-700 [&>div]:ease-out"
-        />
-        <span className="text-[10px] text-muted-foreground tabular-nums">
-          {submittedRewardsCount}/{MAX_TOTAL_REWARDS}
-        </span>
-      </div>
+          <div className="mt-2 flex items-center gap-2">
+            <Progress
+              value={animatedProgressValue}
+              aria-label="Rewards completion progress"
+              className="h-1.5 bg-brand-coral/15 [&>div]:bg-brand-coral [&>div]:duration-700 [&>div]:ease-out"
+            />
+            <span className="text-[10px] text-muted-foreground tabular-nums">
+              {submittedRewardsCount}/{MAX_TOTAL_REWARDS}
+            </span>
+          </div>
+        </>
+      )}
 
       {/* Hover-expand card row */}
       <div className="grid gap-2 sm:grid-cols-3 mt-3">
@@ -257,9 +387,10 @@ export function RewardsPanel() {
           onValueChange={(v) => setExpandedCard((v as RewardType) || null)}
           className="contents"
         >
-          {CARDS.map(({ type, icon: Icon, title, desc }) => {
+          {CARDS.map(({ type, icon: Icon, title, rewardDesc, supportDesc }) => {
             const reward = getReward(type)
             const isDone = reward?.status === 'approved'
+            const desc = isMinimalShareMode ? supportDesc : rewardDesc
 
             return (
               <AccordionItem
@@ -282,7 +413,11 @@ export function RewardsPanel() {
                       <span className="text-[10px] text-muted-foreground block truncate">{desc}</span>
                     </div>
                     {reward ? (
-                      <StatusBadge status={reward.status} days={REWARD_DAYS[type]} />
+                      <StatusBadge
+                        status={reward.status}
+                        days={REWARD_DAYS[type]}
+                        showDays={!isMinimalShareMode}
+                      />
                     ) : (
                       <ChevronDown className={`w-3 h-3 text-muted-foreground shrink-0 transition-transform duration-200 ${expandedCard === type ? 'rotate-180' : ''}`} />
                     )}
@@ -395,7 +530,11 @@ export function RewardsPanel() {
                               </button>
                             </div>
                             <p className="text-[10px] text-muted-foreground">
-                              {copied ? 'Copied!' : 'Auto-rewards when they sign up'}
+                              {copied
+                                ? 'Copied!'
+                                : isMinimalShareMode
+                                  ? 'Share this with friends who are prepping'
+                                  : 'Auto-rewards when they sign up'}
                             </p>
                           </>
                         )}

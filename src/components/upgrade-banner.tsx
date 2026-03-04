@@ -5,14 +5,26 @@ import { X } from 'lucide-react'
 import { useAuth } from '@/context/auth-context'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 import { getPricingInfo } from '@/lib/pricing-tiers'
+import { supabase } from '@/lib/supabase'
 
 const DISMISS_KEY = 'upgrade-banner-dismissed-at'
 const DISMISS_DURATION_MS = 24 * 60 * 60 * 1000 // 24 hours
+
+interface BannerProfileState {
+  resolved: boolean
+  tier: 'free' | 'basic' | 'pro' | null
+  trialEndsAt: string | null
+}
 
 export function UpgradeBanner() {
   const { userProfile } = useAuth()
   const { startCheckout, checkoutLoading } = useStripeCheckout()
   const [dismissed, setDismissed] = useState(true) // Default to hidden to prevent flash
+  const [bannerProfile, setBannerProfile] = useState<BannerProfileState>({
+    resolved: false,
+    tier: null,
+    trialEndsAt: null,
+  })
 
   useEffect(() => {
     const dismissedAt = localStorage.getItem(DISMISS_KEY)
@@ -24,10 +36,67 @@ export function UpgradeBanner() {
     }
   }, [])
 
+  useEffect(() => {
+    let isActive = true
+
+    const resolveBannerProfile = async () => {
+      if (!userProfile?.id) {
+        if (isActive) {
+          setBannerProfile({
+            resolved: true,
+            tier: null,
+            trialEndsAt: null,
+          })
+        }
+        return
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from('users')
+          .select('subscription_tier, trial_ends_at')
+          .eq('id', userProfile.id)
+          .single()
+
+        if (!isActive) return
+        if (error) throw error
+
+        setBannerProfile({
+          resolved: true,
+          tier: (data?.subscription_tier as 'free' | 'basic' | 'pro' | null) ?? null,
+          trialEndsAt: data?.trial_ends_at ?? null,
+        })
+      } catch {
+        if (!isActive) return
+
+        setBannerProfile({
+          resolved: true,
+          tier: userProfile.subscription_tier ?? null,
+          trialEndsAt: userProfile.trial_ends_at ?? null,
+        })
+      }
+    }
+
+    setBannerProfile((prev) => ({ ...prev, resolved: false }))
+    void resolveBannerProfile()
+
+    return () => {
+      isActive = false
+    }
+  }, [userProfile?.id, userProfile?.subscription_tier, userProfile?.trial_ends_at])
+
+  const effectiveTier = bannerProfile.resolved
+    ? bannerProfile.tier
+    : (userProfile?.subscription_tier ?? null)
+  const effectiveTrialEndsAt = bannerProfile.resolved
+    ? bannerProfile.trialEndsAt
+    : (userProfile?.trial_ends_at ?? null)
+
   // Only show for free users who had a trial (trial_ends_at is set)
   if (!userProfile) return null
-  if (userProfile.subscription_tier !== 'free') return null
-  if (!userProfile.trial_ends_at) return null
+  if (!bannerProfile.resolved && userProfile.id) return null
+  if (effectiveTier !== 'free') return null
+  if (!effectiveTrialEndsAt) return null
   if (dismissed) return null
 
   const pricingInfo = getPricingInfo()
