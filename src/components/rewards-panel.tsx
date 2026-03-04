@@ -5,6 +5,7 @@ import { useAuth } from '@/context/auth-context'
 import { Video, MessageSquare, Users, Check, Clock, Copy, ImagePlus, ChevronDown, Gift } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Progress } from '@/components/ui/progress'
 
 type RewardStatus = 'pending' | 'approved' | 'rejected'
 type RewardType = 'video' | 'testimonial' | 'referral'
@@ -16,6 +17,7 @@ const REWARD_DAYS: Record<RewardType, number> = {
 }
 const MAX_REFERRALS = 4
 const MAX_TOTAL_DAYS = 28 + 14 + 7 * MAX_REFERRALS // 70
+const MAX_TOTAL_REWARDS = 2 + MAX_REFERRALS
 
 interface Reward {
   id: string
@@ -75,6 +77,7 @@ export function RewardsPanel() {
   const [submitting, setSubmitting] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
+  const [animatedProgressValue, setAnimatedProgressValue] = useState(0)
 
   const shouldShow = userProfile?.trial_ends_at != null
 
@@ -99,9 +102,6 @@ export function RewardsPanel() {
     if (shouldShow) fetchRewards()
   }, [shouldShow, fetchRewards])
 
-  if (!shouldShow) return null
-  if (state.loading) return null
-
   const getReward = (type: string) => state.rewards.find((r) => r.reward_type === type)
   const getRewards = (type: string) => state.rewards.filter((r) => r.reward_type === type)
   const approvedDays = state.rewards
@@ -109,6 +109,19 @@ export function RewardsPanel() {
     .reduce((sum, r) => sum + (REWARD_DAYS[r.reward_type as RewardType] ?? 0), 0)
   const referralCount = getRewards('referral').length
   const referralApprovedCount = getRewards('referral').filter((r) => r.status === 'approved').length
+  const submittedRewardsCount = Math.min(getRewards('video').length, 1)
+    + Math.min(getRewards('testimonial').length, 1)
+    + Math.min(referralCount, MAX_REFERRALS)
+  const rewardsProgressValue = (submittedRewardsCount / MAX_TOTAL_REWARDS) * 100
+
+  useEffect(() => {
+    if (state.loading) return
+    const frame = requestAnimationFrame(() => setAnimatedProgressValue(rewardsProgressValue))
+    return () => cancelAnimationFrame(frame)
+  }, [state.loading, rewardsProgressValue])
+
+  if (!shouldShow) return null
+  if (state.loading) return null
 
   const handleSubmit = async (rewardType: 'video' | 'testimonial') => {
     setError(null)
@@ -219,6 +232,17 @@ export function RewardsPanel() {
             )
           })}
         </div>
+      </div>
+
+      <div className="mt-2 flex items-center gap-2">
+        <Progress
+          value={animatedProgressValue}
+          aria-label="Rewards completion progress"
+          className="h-1.5 bg-brand-coral/15 [&>div]:bg-brand-coral [&>div]:duration-700 [&>div]:ease-out"
+        />
+        <span className="text-[10px] text-muted-foreground tabular-nums">
+          {submittedRewardsCount}/{MAX_TOTAL_REWARDS}
+        </span>
       </div>
 
       {/* Hover-expand card row */}
