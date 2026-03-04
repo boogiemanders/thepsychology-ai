@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'crypto'
 import { sendNotificationEmail } from '@/lib/notify-email'
 import { sendSlackNotification, SlackChannel } from '@/lib/notify-slack'
+import { getSupabaseClient } from '@/lib/supabase-server'
 
 type SupabaseWebhookPayload = {
   type?: string
@@ -12,6 +13,140 @@ type SupabaseWebhookPayload = {
 }
 
 const WEBHOOK_SECRET = process.env.SUPABASE_WEBHOOK_SECRET
+
+const asNonEmptyString = (value: unknown): string | null => {
+  if (typeof value !== 'string') return null
+  const trimmed = value.trim()
+  return trimmed.length > 0 ? trimmed : null
+}
+
+const plusSevenDaysIso = (baseIso: string) => {
+  const baseDate = new Date(baseIso)
+  if (Number.isNaN(baseDate.getTime())) {
+    return new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+  }
+  baseDate.setUTCDate(baseDate.getUTCDate() + 7)
+  return baseDate.toISOString()
+}
+
+async function repairIncompleteSignupRecord(
+  payload: SupabaseWebhookPayload
+): Promise<Record<string, unknown> | null> {
+  if (payload.table !== 'users' || payload.type !== 'INSERT') return null
+  if (!payload.record || typeof payload.record !== 'object') return null
+
+  const record = payload.record
+  const userId = asNonEmptyString(record.id)
+  if (!userId) return null
+
+  // Never touch Stripe-backed accounts.
+  const hasStripeCustomer = Boolean(asNonEmptyString(record.stripe_customer_id))
+  if (hasStripeCustomer) return null
+
+  const tier = asNonEmptyString(record.subscription_tier)
+  const subscriptionStartedAt = asNonEmptyString(record.subscription_started_at)
+  const trialEndsAt = asNonEmptyString(record.trial_ends_at)
+  const referralSource = asNonEmptyString(record.referral_source)
+
+  const needsRepair =
+    tier !== 'pro' ||
+    !subscriptionStartedAt ||
+    !trialEndsAt ||
+    !referralSource
+
+  if (!needsRepair) return null
+
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) {
+    console.warn('[supabase-webhook] Skipping signup repair: Supabase service client unavailable')
+    return null
+  }
+
+  let metadata: Record<string, unknown> = {}
+  let authCreatedAt: string | null = null
+
+  try {
+    const { data: adminUser, error: adminUserError } = await supabase.auth.admin.getUserById(userId)
+    if (!adminUserError && adminUser?.user) {
+      metadata = (adminUser.user.user_metadata || {}) as Record<string, unknown>
+      authCreatedAt = asNonEmptyString(adminUser.user.created_at)
+    } else if (adminUserError) {
+      console.warn('[supabase-webhook] Failed to load auth metadata for signup repair:', adminUserError)
+    }
+  } catch (error) {
+    console.warn('[supabase-webhook] Unexpected metadata lookup error during signup repair:', error)
+  }
+
+  const derivedCreatedAt =
+    subscriptionStartedAt ||
+    authCreatedAt ||
+    asNonEmptyString(record.created_at) ||
+    new Date().toISOString()
+
+  const updateData: Record<string, unknown> = {}
+
+  if (tier !== 'pro') updateData.subscription_tier = 'pro'
+  if (!subscriptionStartedAt) updateData.subscription_started_at = derivedCreatedAt
+  if (!trialEndsAt) updateData.trial_ends_at = plusSevenDaysIso(derivedCreatedAt)
+
+  if (!referralSource) {
+    const metadataReferral = asNonEmptyString(metadata.referral_source)
+    if (metadataReferral) updateData.referral_source = metadataReferral
+  }
+
+  if (!asNonEmptyString(record.full_name)) {
+    const metadataFullName = asNonEmptyString(metadata.full_name)
+    if (metadataFullName) updateData.full_name = metadataFullName
+  }
+
+  if (!asNonEmptyString(record.utm_source)) {
+    const metadataValue = asNonEmptyString(metadata.utm_source)
+    if (metadataValue) updateData.utm_source = metadataValue
+  }
+  if (!asNonEmptyString(record.utm_medium)) {
+    const metadataValue = asNonEmptyString(metadata.utm_medium)
+    if (metadataValue) updateData.utm_medium = metadataValue
+  }
+  if (!asNonEmptyString(record.utm_campaign)) {
+    const metadataValue = asNonEmptyString(metadata.utm_campaign)
+    if (metadataValue) updateData.utm_campaign = metadataValue
+  }
+  if (!asNonEmptyString(record.utm_content)) {
+    const metadataValue = asNonEmptyString(metadata.utm_content)
+    if (metadataValue) updateData.utm_content = metadataValue
+  }
+  if (!asNonEmptyString(record.utm_term)) {
+    const metadataValue = asNonEmptyString(metadata.utm_term)
+    if (metadataValue) updateData.utm_term = metadataValue
+  }
+
+  if (Object.keys(updateData).length === 0) return null
+
+  const { data: updatedUser, error: updateError } = await supabase
+    .from('users')
+    .update(updateData)
+    .eq('id', userId)
+    .select('*')
+    .maybeSingle()
+
+  if (updateError) {
+    console.warn('[supabase-webhook] Failed to repair incomplete signup row:', {
+      userId,
+      updateError,
+      attemptedFields: Object.keys(updateData),
+    })
+    return null
+  }
+
+  if (updatedUser) {
+    console.log('[supabase-webhook] Repaired incomplete signup row', {
+      userId,
+      repairedFields: Object.keys(updateData),
+    })
+  }
+
+  return updatedUser as Record<string, unknown> | null
+}
 
 const formatTimestamp = (value?: unknown) => {
   if (!value || typeof value !== 'string') return 'unknown'
@@ -174,6 +309,13 @@ export async function POST(request: NextRequest) {
 
   if (payload.type !== 'INSERT') {
     return NextResponse.json({ ignored: true, reason: 'Only INSERT events are processed' })
+  }
+
+  if (payload.table === 'users') {
+    const repairedRecord = await repairIncompleteSignupRecord(payload)
+    if (repairedRecord && payload.record && typeof payload.record === 'object') {
+      payload.record = { ...payload.record, ...repairedRecord }
+    }
   }
 
   const emailPayload = buildEmailPayload(payload)

@@ -151,6 +151,7 @@ export function PricingSection() {
           email: formData.email,
           fullName: formData.fullName || null,
           subscriptionTier: "pro",
+          authCreatedAt: data.user?.created_at || null,
           promoCodeUsed: null,
           referralSource: finalReferralSource,
           referredByCode: referredByCode || undefined,

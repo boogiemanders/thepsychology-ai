@@ -21,6 +21,7 @@ interface UserProfile {
   subscription_started_at?: string
   stripe_customer_id?: string
   trial_ends_at?: string
+  referral_code?: string
 }
 
 interface ConsentPreferences {
@@ -241,7 +242,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                     userId: session.user.id,
                     email: session.user.email,
                     fullName: meta.full_name || null,
-                    subscriptionTier: 'free',
+                    subscriptionTier: 'pro',
+                    authCreatedAt: session.user.created_at || null,
                     referralSource: meta.referral_source || null,
                     utm_source: meta.utm_source || null,
                     utm_medium: meta.utm_medium || null,

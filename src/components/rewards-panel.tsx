@@ -79,7 +79,10 @@ export function RewardsPanel() {
   const [copied, setCopied] = useState(false)
   const [animatedProgressValue, setAnimatedProgressValue] = useState(0)
 
-  const shouldShow = userProfile?.trial_ends_at != null
+  // Show rewards after trial users roll to free so they can earn more access time.
+  const shouldShow =
+    userProfile?.subscription_tier === 'free' &&
+    userProfile?.trial_ends_at != null
 
   const fetchRewards = useCallback(async () => {
     const { data: { session } } = await supabase.auth.getSession()
