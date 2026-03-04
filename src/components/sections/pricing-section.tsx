@@ -252,7 +252,7 @@ export function PricingSection() {
               className="rounded-xl border border-primary bg-accent p-5 shadow-[0px_20px_60px_rgba(15,23,42,0.12)] flex flex-col"
             >
               <div className="mt-1 flex items-baseline gap-2">
-                <span className="text-3xl font-semibold">{amount}</span>
+                <span className="text-3xl font-medium tracking-tighter">{amount}</span>
                 {period && <span className="text-sm text-muted-foreground">/{period}</span>}
               </div>
               {tier.description?.trim() ? (
