@@ -889,7 +889,7 @@ export function TopicTeacherContent() {
 
   // Admin check - used for screenshot protection and rapid navigation skip
   const ADMIN_EMAIL = 'chanders0@yahoo.com'
-  const isAdminUser = user?.email === ADMIN_EMAIL
+  const isAdminUser = (user?.email ?? '').trim().toLowerCase() === ADMIN_EMAIL
 
   // Check for existing rapid navigation block on mount
   useEffect(() => {
@@ -1010,6 +1010,11 @@ export function TopicTeacherContent() {
       e.preventDefault()
     }
 
+    // Prevent paste
+    const handlePaste = (e: ClipboardEvent) => {
+      e.preventDefault()
+    }
+
     // Add CSS to prevent text selection and printing
     const styleElement = document.createElement('style')
     styleElement.setAttribute('data-screenshot-protection', '')
@@ -1039,11 +1044,13 @@ export function TopicTeacherContent() {
     document.addEventListener('keydown', handleKeyDown)
     document.addEventListener('contextmenu', handleContextMenu)
     document.addEventListener('copy', handleCopy)
+    document.addEventListener('paste', handlePaste)
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('contextmenu', handleContextMenu)
       document.removeEventListener('copy', handleCopy)
+      document.removeEventListener('paste', handlePaste)
       const existingStyle = document.querySelector('style[data-screenshot-protection]')
       if (existingStyle) {
         document.head.removeChild(existingStyle)
