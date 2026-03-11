@@ -17,7 +17,7 @@ export default function BlogPage() {
     <main className="w-full px-6 py-16">
       <div className="mx-auto w-full max-w-3xl space-y-10">
         <header className="space-y-3">
-          <h1 className="text-4xl font-bold tracking-tight">Blog</h1>
+          <h1 className="text-4xl font-bold tracking-tight">EPPP Study Guides & Exam Tips</h1>
           <p className="text-muted-foreground">
             EPPP study guides, exam tips, and honest prep program comparisons.
           </p>

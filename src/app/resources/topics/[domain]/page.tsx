@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { getAllTopicContentEntries } from "@/lib/seo/topic-content.server"
 
 type PageProps = {
-  params: { domain: string }
+  params: Promise<{ domain: string }>
 }
 
 export const dynamicParams = false
@@ -16,7 +16,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { domain } = params
+  const { domain } = await params
   const topics = getAllTopicContentEntries().filter((t) => t.domainDir === domain)
   const domainLabel = topics[0]?.domainLabel
 
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function ResourceDomainPage({ params }: PageProps) {
-  const { domain } = params
+  const { domain } = await params
 
   const topics = getAllTopicContentEntries()
     .filter((t) => t.domainDir === domain)

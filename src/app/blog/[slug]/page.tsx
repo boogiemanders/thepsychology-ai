@@ -50,6 +50,28 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const { entry, content } = post
 
+  const description = entry.description || getPlainTextExcerpt(content, 155)
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: entry.title,
+    description,
+    author: {
+      "@type": "Person",
+      name: entry.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "thePsychology.ai",
+      url: "https://thepsychology.ai",
+    },
+    url: `https://thepsychology.ai/blog/${slug}`,
+    ...(entry.publishedAt && { datePublished: entry.publishedAt }),
+    ...(entry.updatedAt && { dateModified: entry.updatedAt }),
+    ...(entry.tags.length > 0 && { keywords: entry.tags.join(", ") }),
+  }
+
   const publishedDate = entry.publishedAt
     ? new Date(entry.publishedAt).toLocaleDateString("en-US", {
         year: "numeric",
@@ -60,6 +82,10 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="w-full px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto w-full max-w-3xl space-y-10">
         <article>
           <BlogArticleWithAudio

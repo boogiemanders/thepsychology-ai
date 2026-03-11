@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm"
 import { getAllTopicContentEntries, getPlainTextExcerpt, getTopicContentMarkdown } from "@/lib/seo/topic-content.server"
 
 type PageProps = {
-  params: { domain: string; slug: string }
+  params: Promise<{ domain: string; slug: string }>
 }
 
 export const dynamicParams = false
@@ -19,7 +19,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const topic = getTopicContentMarkdown(params.domain, params.slug)
+  const { domain, slug } = await params
+  const topic = getTopicContentMarkdown(domain, slug)
   if (!topic) {
     return {
       title: "Resources",
@@ -38,8 +39,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default function ResourceTopicPage({ params }: PageProps) {
-  const topic = getTopicContentMarkdown(params.domain, params.slug)
+export default async function ResourceTopicPage({ params }: PageProps) {
+  const { domain, slug } = await params
+  const topic = getTopicContentMarkdown(domain, slug)
   if (!topic) notFound()
 
   const { entry, content } = topic
