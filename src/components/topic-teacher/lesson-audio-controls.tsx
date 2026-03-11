@@ -1872,7 +1872,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   return (
     <>
       {/* Spacer when unified audio bar is visible */}
-      {showStickyBar && !audioMaintenanceMode && <div className="h-20" />}
+      {showStickyBar && !audioMaintenanceMode && <div className="h-12" />}
 
       {/* Maintenance Notice */}
       {audioMaintenanceMode && (
@@ -1967,10 +1967,11 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           className="fixed left-0 right-0 z-50 transition-[top] duration-100 pointer-events-none"
           style={{ top: `${stickyTop}px` }}
         >
-          <div className="mx-auto max-w-[800px] px-4 py-2 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border/40 pointer-events-auto">
+          <div className="mx-auto max-w-[800px] px-4 py-1.5 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border/40 pointer-events-auto">
+            {/* Single row: transport | progress | speed | toggles | actions */}
             <div className="flex items-center gap-2">
-              {/* Playback controls - first for prominence */}
-              <div className="flex items-center gap-1 shrink-0">
+              {/* Left: transport + speed */}
+              <div className="flex items-center gap-1.5 shrink-0">
                 <button
                   type="button"
                   onClick={handlePrevSection}
@@ -2003,9 +2004,9 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                 </button>
               </div>
 
-              {/* Progress bar section */}
+              {/* Progress bar - inline */}
               <div className="flex-1 flex items-center gap-1.5 min-w-0">
-                <span className="text-xs text-muted-foreground tabular-nums w-8 text-right shrink-0">
+                <span className="text-[11px] text-muted-foreground tabular-nums shrink-0">
                   {formatTime(currentTime)}
                 </span>
                 <input
@@ -2017,13 +2018,13 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   disabled={!hasAudio}
                   className="flex-1 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
                 />
-                <span className="text-xs text-muted-foreground tabular-nums w-12 shrink-0">
+                <span className="text-[11px] text-muted-foreground tabular-nums shrink-0">
                   {formatTime(duration)}
                 </span>
               </div>
 
-              {/* Right section: Speed, segment, auto-scroll, actions */}
-              <div className="flex items-center gap-2 shrink min-w-0 ml-3 pl-3 border-l border-border/40 overflow-hidden">
+              {/* Right section: speed, toggles, actions */}
+              <div className="flex items-center gap-1.5 shrink-0">
                 {/* Speed slider */}
                 <div className="hidden sm:flex items-center gap-1.5" data-tour="playback-speed">
                   <input
@@ -2034,33 +2035,24 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                     onChange={(e) => setPlaybackRate(PLAYBACK_RATE_OPTIONS[parseInt(e.target.value)])}
                     className="w-14 h-1 appearance-none bg-border rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary"
                   />
-                  <span className="text-xs text-muted-foreground tabular-nums">
+                  <span className="text-[11px] text-muted-foreground tabular-nums">
                     {playbackRate}×
                   </span>
                 </div>
 
-                {hasAudio && sectionCount > 0 && (
-                  <span className="text-xs text-muted-foreground tabular-nums hidden sm:block" title={sectionTitles[currentSectionIndex] ?? ''}>
-                    {`Section ${Math.min(sectionCount, currentSectionIndex + 1)}/${sectionCount}`}
-                  </span>
-                )}
-
                 {usedManifest ? (
-                  // Manifest mode: show MFA badge with hybrid indicator if there are live chunks
                   sourceCounts.live > 0 ? (
-                    // Hybrid mode: MFA + Live
                     <span
-                      className="hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium border-purple-400/40 text-purple-500"
-                      title={`Hybrid audio: ${sourceCounts.pregen} MFA chunks + ${sourceCounts.live} live personalized chunks. Current: ${currentSegmentSource === 'pregen' ? 'MFA' : 'Live'}`}
+                      className="hidden sm:inline-flex items-center gap-1 rounded-full border px-1.5 py-px text-[10px] font-medium border-purple-400/30 text-purple-400/80"
+                      title={`Hybrid audio: ${sourceCounts.pregen} MFA chunks + ${sourceCounts.live} live personalized chunks`}
                     >
                       <span className={`h-1.5 w-1.5 rounded-full ${currentSegmentSource === 'pregen' ? 'bg-blue-500' : 'bg-amber-500'}`} />
                       MFA+Live
                     </span>
                   ) : (
-                    // Pure MFA mode
                     <span
-                      className="hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium border-[color:color-mix(in_srgb,var(--brand-olive)_40%,transparent)] text-brand-olive"
-                      title="Using MFA-aligned pre-generated audio with perfect word synchronization."
+                      className="hidden sm:inline-flex items-center gap-1 rounded-full border px-1.5 py-px text-[10px] font-medium border-[color:color-mix(in_srgb,var(--brand-olive)_30%,transparent)] text-brand-olive/80"
+                      title="MFA-aligned pre-generated audio"
                     >
                       <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-olive)]" />
                       MFA
@@ -2068,42 +2060,26 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   )
                 ) : currentSegmentSource && (
                   <span
-                    className={`hidden sm:inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${
+                    className={`hidden sm:inline-flex items-center gap-1 rounded-full border px-1.5 py-px text-[10px] font-medium ${
                       currentSegmentSource === 'pregen'
-                        ? 'border-emerald-400/40 text-emerald-500'
-                        : 'border-amber-400/40 text-amber-500'
+                        ? 'border-emerald-400/30 text-emerald-400/80'
+                        : 'border-amber-400/30 text-amber-400/80'
                     }`}
-                    title={
-                      currentSegmentSource === 'pregen'
-                        ? 'This segment is pre-generated.'
-                        : 'This segment was generated live.'
-                    }
+                    title={currentSegmentSource === 'pregen' ? 'Pre-generated' : 'Live generated'}
                   >
-                    <span
-                      className={`h-1.5 w-1.5 rounded-full ${
-                        currentSegmentSource === 'pregen' ? 'bg-emerald-500' : 'bg-amber-500'
-                      }`}
-                    />
+                    <span className={`h-1.5 w-1.5 rounded-full ${currentSegmentSource === 'pregen' ? 'bg-emerald-500' : 'bg-amber-500'}`} />
                     {currentSegmentSource === 'pregen' ? 'Pregen' : 'Live'}
                   </span>
                 )}
 
-                {readAlongEnabled && hasAudio && (
-                  <span className="text-xs text-muted-foreground tabular-nums hidden sm:block">
-                    {readAlongTotalWords > 0
-                      ? `Word ${readAlongWordIndex !== null ? readAlongWordIndex + 1 : 0}/${readAlongTotalWords}`
-                      : 'Word —'}
-                  </span>
-                )}
+                <div className="w-px h-4 bg-border/30 mx-0.5 hidden sm:block" />
 
                 {onAutoScrollToggle && (
                   <button
                     type="button"
                     onClick={onAutoScrollToggle}
-                    className={`p-1 rounded-full transition-colors ${
-                      autoScrollEnabled
-                        ? 'bg-primary/20 text-primary'
-                        : 'hover:bg-muted text-muted-foreground'
+                    className={`p-1 rounded-md transition-colors ${
+                      autoScrollEnabled ? 'bg-primary/15 text-primary' : 'hover:bg-muted text-muted-foreground/60'
                     }`}
                     aria-label={autoScrollEnabled ? 'Disable auto-scroll' : 'Enable auto-scroll'}
                     title={autoScrollEnabled ? 'Auto-scroll: On' : 'Auto-scroll: Off'}
@@ -2116,10 +2092,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   <button
                     type="button"
                     onClick={onReadAlongToggle}
-                    className={`p-1 rounded-full transition-colors ${
-                      readAlongEnabled
-                        ? 'bg-primary/20 text-primary'
-                        : 'hover:bg-muted text-muted-foreground'
+                    className={`p-1 rounded-md transition-colors ${
+                      readAlongEnabled ? 'bg-primary/15 text-primary' : 'hover:bg-muted text-muted-foreground/60'
                     }`}
                     aria-label={readAlongEnabled ? 'Disable read-along highlighting' : 'Enable read-along highlighting'}
                     title={readAlongEnabled ? 'Read-along: On' : 'Read-along: Off'}
@@ -2133,7 +2107,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   <button
                     type="button"
                     onClick={() => setShowPodcastModal(true)}
-                    className="p-1 rounded-full transition-colors hover:bg-muted text-muted-foreground"
+                    className="p-1 rounded-md transition-colors hover:bg-muted text-muted-foreground/60"
                     aria-label="Listen to podcast discussion"
                     title="Listen to podcast discussion"
                   >
@@ -2141,30 +2115,26 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
                   </button>
                 )}
 
-                <div className="w-px h-4 bg-border mx-0.5 hidden sm:block" />
-
                 {showRegenerateButton && (
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="ghost"
-                    onClick={handleGenerate}
-                    disabled={isDisabled || isGenerating}
-                    className="h-6 px-2 text-xs hidden sm:inline-flex"
-                  >
-                    {isGenerating ? 'Generating...' : 'Regenerate'}
-                  </Button>
+                  <>
+                    <div className="w-px h-4 bg-border/30 mx-0.5 hidden sm:block" />
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="ghost"
+                      onClick={handleGenerate}
+                      disabled={isDisabled || isGenerating}
+                      className="h-6 px-2 text-[11px] hidden sm:inline-flex text-muted-foreground"
+                    >
+                      {isGenerating ? 'Generating...' : 'Regenerate'}
+                    </Button>
+                  </>
                 )}
-                {isGenerating ? (
-                  <Button type="button" size="sm" variant="ghost" onClick={handleCancel} className="h-6 px-2 text-xs">
+                {isGenerating && (
+                  <Button type="button" size="sm" variant="ghost" onClick={handleCancel} className="h-6 px-2 text-[11px] text-muted-foreground">
                     Cancel
                   </Button>
-                ) : (
-                  <Button type="button" size="sm" variant="ghost" onClick={clearAudio} className="h-6 px-2 text-xs">
-                    Clear
-                  </Button>
                 )}
-
               </div>
             </div>
 
