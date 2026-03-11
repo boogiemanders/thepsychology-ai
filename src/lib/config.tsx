@@ -15,7 +15,7 @@ export const Highlight = ({
   return (
     <span
       className={cn(
-        "p-1 py-0.5 font-medium dark:font-semibold text-brand-coral",
+        "py-0.5 font-medium dark:font-semibold text-brand-coral",
         className
       )}
     >
@@ -276,6 +276,17 @@ export const siteConfig = {
       description: (
         <p>
           Those are great and <Highlight className="text-brand-dusty-rose dark:text-brand-sage">much needed tools</Highlight>! Hope it goes well with all the great ideas you have! As a person who is always on the go, I’m always wishing I could use <Highlight className="text-brand-dusty-rose dark:text-brand-sage">a tool to study while in between places</Highlight> on my phone.
+        </p>
+      ),
+    },
+    {
+      id: "12",
+      name: "Anonymous",
+      role: "User",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          Information like PrepJet, but <Highlight className="text-brand-olive dark:text-brand-lavender-gray">much easier to digest</Highlight> and at a <Highlight className="text-brand-olive dark:text-brand-lavender-gray">fraction of the cost</Highlight>. Overall good program and would <Highlight className="text-brand-olive dark:text-brand-lavender-gray">recommend to peers</Highlight>.
         </p>
       ),
     },

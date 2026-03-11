@@ -682,9 +682,9 @@ export default function HomeClient({ sectionOrder, variantId }: HomeClientProps)
             <div className="absolute bottom-3 md:bottom-4 left-0 right-0 z-10 flex justify-center">
               <p className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-3 py-1 text-[9px] md:text-[10px] tracking-[0.06em] text-white/40 uppercase">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#6a9bcc]/60" />
-                Free during beta
+                Try free for 7 days
                 <span className="text-white/20 mx-0.5">/</span>
-                $0 while others charge $849+
+                Others charge $849+
               </p>
             </div>
           </div>
