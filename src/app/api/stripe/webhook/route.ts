@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { sendSlackNotification } from '@/lib/notify-slack'
+import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/notify-email'
 
 export const dynamic = 'force-dynamic'
 
@@ -220,6 +221,85 @@ export async function POST(request: Request) {
   try {
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session
+
+      // Handle custom audio one-time payment
+      if (session.metadata?.generationType === 'custom_audio') {
+        const userId = session.metadata.userId
+        const lessonId = session.metadata.lessonId
+        const contentHash = session.metadata.contentHash
+        const interest = session.metadata.interest || null
+        const language = session.metadata.language || null
+
+        console.log('[Stripe] Processing custom audio payment', {
+          sessionId: session.id,
+          userId,
+          lessonId,
+          contentHash,
+        })
+
+        if (!userId || !lessonId || !contentHash) {
+          console.error('[Stripe] Missing custom audio metadata', { metadata: session.metadata })
+          return NextResponse.json({ error: 'Missing custom audio metadata' }, { status: 500 })
+        }
+
+        const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+        if (!supabase) {
+          return NextResponse.json({ error: 'Database not configured' }, { status: 500 })
+        }
+
+        // Insert generation record
+        const { getCustomAudioR2Prefix } = await import('@/lib/custom-audio-utils')
+        const genId = crypto.randomUUID()
+        const r2Prefix = getCustomAudioR2Prefix(genId)
+
+        const { error: insertError } = await supabase
+          .from('custom_audio_generations')
+          .insert({
+            id: genId,
+            user_id: userId,
+            lesson_id: lessonId,
+            interest,
+            language,
+            content_hash: contentHash,
+            r2_prefix: r2Prefix,
+            status: 'pending',
+            stripe_checkout_session_id: session.id,
+          })
+
+        if (insertError) {
+          console.error('[Stripe] Failed to insert custom audio generation:', insertError)
+          return NextResponse.json({ error: 'Failed to create generation' }, { status: 500 })
+        }
+
+        // Fire-and-forget: trigger generation
+        const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://thepsychology.ai'
+        const internalSecret = process.env.CUSTOM_AUDIO_INTERNAL_SECRET || process.env.SUPABASE_WEBHOOK_SECRET
+        fetch(`${baseUrl}/api/topic-teacher/custom-audio/generate`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${internalSecret}`,
+          },
+          body: JSON.stringify({ generationId: genId }),
+        }).catch((err) => {
+          console.error('[Stripe] Failed to trigger custom audio generation:', err)
+        })
+
+        await sendSlackNotification(
+          `🎧 Custom audio purchased! ${session.customer_email || 'Unknown'} for lesson ${lessonId}`,
+          'payments'
+        )
+
+        await logFunnelEvent(userId, 'custom_audio_purchased', {
+          lessonId,
+          interest,
+          language,
+          sessionId: session.id,
+        })
+
+        return NextResponse.json({ received: true })
+      }
+
       const userId = (session.metadata?.userId || session.client_reference_id) as string | undefined
       const planTier = await getTierFromSession(session)
       const stripeCustomerId = typeof session.customer === 'string'
@@ -270,6 +350,14 @@ export async function POST(request: Request) {
         `💰 New subscription! ${session.customer_email || 'Unknown'} subscribed to Pro`,
         'payments'
       )
+
+      // Email notification for new subscription
+      if (isNotificationEmailConfigured()) {
+        await sendNotificationEmail({
+          subject: `New Pro subscription: ${session.customer_email || 'Unknown'}`,
+          text: `New Pro subscription!\n\nEmail: ${session.customer_email || 'Unknown'}\nUser ID: ${userId}\nStripe Customer: ${stripeCustomerId || 'N/A'}\nSession: ${session.id}`,
+        }).catch((err) => console.error('[Stripe] Failed to send payment email:', err))
+      }
     }
 
     if (event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
