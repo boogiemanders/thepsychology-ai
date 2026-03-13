@@ -302,7 +302,7 @@ export function ExamResultForm({ open, onOpenChange, userId, userEmail, existing
           <div className="space-y-2">
             <Label>Upload score report photo (optional)</Label>
             <p className="text-xs text-muted-foreground">
-              Upload a photo of your domain score bars — we&apos;ll use it to identify which areas need the most help.
+              Upload a photo of your domain score bars — we&apos;ll use it to identify which areas need the most help. Please block out your name and ID to protect your privacy.
             </p>
             {scoreReportPreview || existingScoreReportPath ? (
               <div className="relative rounded-lg border border-border overflow-hidden">
