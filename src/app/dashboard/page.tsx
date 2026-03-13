@@ -38,6 +38,7 @@ import { StudyProgressChart } from './components/study-progress-chart'
 import { ConsentModal, useConsentModal } from '@/components/consent-modal'
 import { UpgradeBanner } from '@/components/upgrade-banner'
 import { RewardsPanel } from '@/components/rewards-panel'
+import { ExamResultForm } from '@/components/dashboard/exam-result-form'
 
 type ApiChangelogEntry = {
   id: string
@@ -132,6 +133,8 @@ export default function DashboardPage() {
   const [isFeedbackSubmitting, setIsFeedbackSubmitting] = useState(false)
   const [isAnonymousFeedback, setIsAnonymousFeedback] = useState(false)
   const [isManagePlanOpen, setIsManagePlanOpen] = useState(false)
+  const [isExamResultOpen, setIsExamResultOpen] = useState(false)
+  const [existingExamResult, setExistingExamResult] = useState<any>(null)
   const { startCheckout, checkoutLoading } = useStripeCheckout()
   const pricingInfo = getPricingInfo()
   const pricingItems = siteConfig.pricing.pricingItems
@@ -196,6 +199,19 @@ export default function DashboardPage() {
     setDailyGoal(newGoal)
     setIsPopoverOpen(false)
   }
+
+  useEffect(() => {
+    if (!user?.id) return
+    supabase
+      .from('eppp_exam_results')
+      .select('*')
+      .eq('user_id', user.id)
+      .order('created_at', { ascending: false })
+      .limit(1)
+      .then(({ data }) => {
+        if (data && data.length > 0) setExistingExamResult(data[0])
+      })
+  }, [user?.id, isExamResultOpen])
 
   useEffect(() => {
     if (!isFeedbackOpen) {
@@ -1124,6 +1140,14 @@ export default function DashboardPage() {
                 <Button
                   variant="outline"
                   className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
+                  onClick={() => setIsExamResultOpen(true)}
+                >
+                  <GraduationCap className="w-4 h-4 mr-2" />
+                  {existingExamResult ? 'Update My Score' : 'Report My Score'}
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full h-10 px-5 text-sm font-medium w-full md:w-auto"
                   onClick={startTour}
                 >
                   <HelpCircle className="w-4 h-4 mr-2" />
@@ -1268,6 +1292,15 @@ export default function DashboardPage() {
             </div>
           </div>
         )}
+
+        {/* Exam Result Form */}
+        <ExamResultForm
+          open={isExamResultOpen}
+          onOpenChange={setIsExamResultOpen}
+          userId={user?.id ?? ''}
+          userEmail={user?.email ?? ''}
+          existingResult={existingExamResult}
+        />
 
         {/* Consent Modal for new users */}
         <ConsentModal open={shouldShowConsentModal ?? false} onClose={dismissConsentModal} />
