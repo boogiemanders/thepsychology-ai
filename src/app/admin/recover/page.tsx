@@ -28,6 +28,7 @@ import { ExamScoreTrendChart } from './components/exam-score-trend-chart'
 import { TopicMasteryProgress } from './components/topic-mastery-progress'
 import { MarketingAnalytics } from './components/marketing-analytics'
 import { AnalyticsDashboard } from './components/analytics-dashboard'
+import { AdminRewardsPanel } from './components/admin-rewards-panel'
 
 type AdminUserSummary = {
   userId: string
@@ -339,6 +340,7 @@ export default function AdminRecoverPage() {
           </div>
           <TabsList>
             <TabsTrigger value="learning">Users & Learning</TabsTrigger>
+            <TabsTrigger value="rewards">Rewards</TabsTrigger>
             <TabsTrigger value="marketing">Marketing</TabsTrigger>
             <TabsTrigger value="analytics">Research Analytics</TabsTrigger>
           </TabsList>
@@ -718,6 +720,10 @@ export default function AdminRecoverPage() {
           </div>
         </section>
           </div>
+        </TabsContent>
+
+        <TabsContent value="rewards" className="flex-1 overflow-auto m-0">
+          <AdminRewardsPanel embedded />
         </TabsContent>
 
         <TabsContent value="marketing" className="flex-1 overflow-auto m-0">
