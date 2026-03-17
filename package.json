@@ -24,6 +24,7 @@
     "@emotion/is-prop-valid": "latest",
     "@eslint/eslintrc": "latest",
     "@floating-ui/react": "^0.27.16",
+    "@google-analytics/data": "^5.2.1",
     "@hookform/resolvers": "^3.10.0",
     "@number-flow/react": "0.5.10",
     "@radix-ui/react-accordion": "latest",

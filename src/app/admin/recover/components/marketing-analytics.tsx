@@ -10,6 +10,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { Badge } from '@/components/ui/badge'
 import { supabase } from '@/lib/supabase'
 import { REFERRAL_SOURCES, getReferralSourceByValue } from '@/lib/referral-sources'
+import { GA4Analytics } from './ga4-analytics'
 
 type MarketingData = {
   totalUsers: number
@@ -378,6 +379,13 @@ export function MarketingAnalytics() {
           </ScrollArea>
         </CardContent>
       </Card>
+
+      {/* GA4 Site Traffic */}
+      <div className="border-t pt-6">
+        <h3 className="text-lg font-semibold mb-1">Site Traffic (GA4)</h3>
+        <p className="text-sm text-muted-foreground mb-4">Page views, visitors, and traffic sources from Google Analytics</p>
+        <GA4Analytics timeRange={timeRange} />
+      </div>
     </div>
   )
 }
