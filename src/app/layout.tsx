@@ -12,6 +12,7 @@ import "./globals.css"
 import { AdminFab } from "@/components/admin-fab"
 import { SessionWarningDialog } from "@/components/session-warning-dialog"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from "@/components/google-analytics"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,6 +70,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   const baseUrl = siteConfig.url.replace(/\/$/, "")
+  const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -121,6 +123,7 @@ export default function RootLayout({
             </OnboardingProvider>
           </ActivityProvider>
         </AuthProvider>
+        {googleAnalyticsId ? <GoogleAnalytics measurementId={googleAnalyticsId} /> : null}
         <Analytics />
       </body>
     </html>
