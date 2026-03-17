@@ -9,7 +9,6 @@ import { siteConfig } from "@/lib/config"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
-import { AdminFab } from "@/components/admin-fab"
 import { SessionWarningDialog } from "@/components/session-warning-dialog"
 import { Analytics } from "@vercel/analytics/next"
 import { GoogleAnalytics } from "@/components/google-analytics"
@@ -116,7 +115,6 @@ export default function RootLayout({
                   <div className="hidden sm:block w-px h-full border-l border-border absolute top-0 left-6 z-10"></div>
                   <div className="hidden sm:block w-px h-full border-r border-border absolute top-0 right-6 z-10"></div>
                   <Navbar />
-                  <AdminFab />
                   {children}
                 </div>
               </AppThemeProvider>
