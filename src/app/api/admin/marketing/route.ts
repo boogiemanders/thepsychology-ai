@@ -55,6 +55,66 @@ function getDateRangeFilter(range: string): Date {
   }
 }
 
+type MarketingUserRow = {
+  id: string
+  email: string | null
+  full_name: string | null
+  referral_source: string | null
+  utm_source: string | null
+  utm_medium: string | null
+  utm_campaign: string | null
+  utm_content: string | null
+  utm_term: string | null
+  signup_device: string | null
+  created_at: string
+}
+
+async function fetchMarketingUsers(
+  supabase: NonNullable<ReturnType<typeof getSupabaseClient>>,
+  rangeStart: Date
+): Promise<{ data: MarketingUserRow[] | null; error: unknown | null }> {
+  const selectVariants = [
+    'id, email, full_name, referral_source, utm_source, utm_medium, utm_campaign, utm_content, utm_term, signup_device, created_at',
+    'id, email, full_name, referral_source, utm_source, utm_medium, utm_campaign, signup_device, created_at',
+    'id, email, full_name, referral_source, signup_device, created_at',
+    'id, email, full_name, referral_source, created_at',
+    'id, email, full_name, created_at',
+  ]
+
+  let lastError: unknown = null
+
+  for (const select of selectVariants) {
+    const { data, error } = await supabase
+      .from('users')
+      .select(select)
+      .gte('created_at', rangeStart.toISOString())
+      .order('created_at', { ascending: false })
+
+    if (!error) {
+      const normalized = (data || []).map((user) => ({
+        id: user.id,
+        email: user.email ?? null,
+        full_name: user.full_name ?? null,
+        referral_source: 'referral_source' in user ? user.referral_source ?? null : null,
+        utm_source: 'utm_source' in user ? user.utm_source ?? null : null,
+        utm_medium: 'utm_medium' in user ? user.utm_medium ?? null : null,
+        utm_campaign: 'utm_campaign' in user ? user.utm_campaign ?? null : null,
+        utm_content: 'utm_content' in user ? user.utm_content ?? null : null,
+        utm_term: 'utm_term' in user ? user.utm_term ?? null : null,
+        signup_device: 'signup_device' in user ? user.signup_device ?? null : null,
+        created_at: user.created_at,
+      }))
+
+      return { data: normalized, error: null }
+    }
+
+    lastError = error
+    console.warn('[admin/marketing] Falling back to narrower users select:', error)
+  }
+
+  return { data: null, error: lastError }
+}
+
 export async function GET(request: NextRequest) {
   try {
     const admin = await requireAdmin(request)
@@ -104,11 +164,7 @@ export async function GET(request: NextRequest) {
     const usersToday = allUsers?.filter(u => new Date(u.created_at) >= startOfDay).length || 0
 
     // Get users with marketing data for the selected range
-    const { data: rangeUsers, error: rangeError } = await supabase
-      .from('users')
-      .select('id, email, full_name, referral_source, utm_source, utm_medium, utm_campaign, utm_content, utm_term, signup_device, created_at')
-      .gte('created_at', rangeStart.toISOString())
-      .order('created_at', { ascending: false })
+    const { data: rangeUsers, error: rangeError } = await fetchMarketingUsers(supabase, rangeStart)
 
     if (rangeError) {
       console.error('Failed to fetch range users:', rangeError)
