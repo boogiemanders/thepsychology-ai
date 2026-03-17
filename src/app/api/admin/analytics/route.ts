@@ -55,6 +55,11 @@ function getDateRangeFilter(range: string): Date {
   }
 }
 
+type UserEmailRow = {
+  id: string
+  email: string | null
+}
+
 export async function GET(request: NextRequest) {
   try {
     const admin = await requireAdmin(request)
@@ -78,13 +83,30 @@ export async function GET(request: NextRequest) {
     const { range } = parsedQuery.data
     const rangeStart = getDateRangeFilter(range)
     const rangeStartISO = rangeStart.toISOString()
+    const adminEmails = new Set(getAdminEmailAllowlist())
 
     // ============ ENGAGEMENT METRICS ============
 
-    // Total users
-    const { count: totalUsers } = await supabase
+    // Total users, excluding admin accounts from research analytics.
+    const { data: users, error: usersError } = await supabase
       .from('users')
-      .select('*', { count: 'exact', head: true })
+      .select('id, email')
+
+    if (usersError) {
+      console.error('Failed to fetch users for analytics:', usersError)
+      return NextResponse.json({ error: 'Failed to fetch user data' }, { status: 500 })
+    }
+
+    const excludedUserIds = new Set(
+      ((users || []) as UserEmailRow[])
+        .filter((user) => user.email && adminEmails.has(user.email.toLowerCase()))
+        .map((user) => user.id)
+    )
+
+    const isIncludedUserId = (userId: string | null | undefined): userId is string =>
+      Boolean(userId) && !excludedUserIds.has(userId)
+
+    const totalUsers = ((users || []) as UserEmailRow[]).filter((user) => !excludedUserIds.has(user.id)).length
 
     // Active users in range (had study sessions)
     const { data: activeUserData } = await supabase
@@ -92,7 +114,11 @@ export async function GET(request: NextRequest) {
       .select('user_id')
       .gte('started_at', rangeStartISO)
 
-    const activeUserIds = new Set(activeUserData?.map(s => s.user_id) || [])
+    const activeUserIds = new Set(
+      (activeUserData || [])
+        .map((session) => session.user_id)
+        .filter(isIncludedUserId)
+    )
     const activeUsersInRange = activeUserIds.size
 
     // Sessions per user
@@ -105,6 +131,8 @@ export async function GET(request: NextRequest) {
     const featureStats: Record<string, { totalSeconds: number; sessionCount: number; userIds: Set<string> }> = {}
 
     for (const session of sessionData || []) {
+      if (!isIncludedUserId(session.user_id)) continue
+
       // Count sessions per user
       userSessionCounts[session.user_id] = (userSessionCounts[session.user_id] || 0) + 1
 
@@ -147,6 +175,8 @@ export async function GET(request: NextRequest) {
     }
 
     for (const session of allSessions || []) {
+      if (!isIncludedUserId(session.user_id)) continue
+
       const dateStr = new Date(session.started_at).toISOString().split('T')[0]
       if (dailyActiveMap[dateStr]) {
         dailyActiveMap[dateStr].add(session.user_id)
@@ -169,6 +199,8 @@ export async function GET(request: NextRequest) {
     const userDiagnostics: Record<string, { first: { score: number; total: number }; latest: { score: number; total: number } }> = {}
 
     for (const exam of diagnosticExams || []) {
+      if (!isIncludedUserId(exam.user_id)) continue
+
       if (!userDiagnostics[exam.user_id]) {
         userDiagnostics[exam.user_id] = {
           first: { score: exam.score, total: exam.total_questions },
@@ -210,7 +242,8 @@ export async function GET(request: NextRequest) {
       .select('user_id, score, total_questions')
       .gte('created_at', rangeStartISO)
 
-    const quizScores = (quizData || []).map(q => (q.score / q.total_questions) * 100)
+    const filteredQuizData = (quizData || []).filter((quiz) => isIncludedUserId(quiz.user_id))
+    const quizScores = filteredQuizData.map(q => (q.score / q.total_questions) * 100)
     const avgQuizScore = quizScores.length > 0
       ? quizScores.reduce((a, b) => a + b, 0) / quizScores.length
       : 0
@@ -218,9 +251,9 @@ export async function GET(request: NextRequest) {
       ? (quizScores.filter(s => s >= 70).length / quizScores.length) * 100
       : 0
 
-    const quizUserIds = new Set((quizData || []).map(q => q.user_id))
+    const quizUserIds = new Set(filteredQuizData.map(q => q.user_id))
     const avgQuizzesPerUser = quizUserIds.size > 0
-      ? (quizData?.length || 0) / quizUserIds.size
+      ? filteredQuizData.length / quizUserIds.size
       : 0
 
     // Topic mastery stats
@@ -233,6 +266,8 @@ export async function GET(request: NextRequest) {
     let accuracyCount = 0
 
     for (const mastery of masteryData || []) {
+      if (!isIncludedUserId(mastery.user_id)) continue
+
       userTopicCounts[mastery.user_id] = (userTopicCounts[mastery.user_id] || 0) + 1
       if (mastery.total_attempts > 0) {
         totalAccuracy += (mastery.correct_attempts / mastery.total_attempts) * 100
@@ -251,13 +286,13 @@ export async function GET(request: NextRequest) {
     // Topic Teacher ratings
     const { data: topicTeacherRatings } = await supabase
       .from('feature_ratings')
-      .select('rating_value, comment, created_at')
+      .select('user_id, rating_value, comment, created_at')
       .eq('feature', 'topic_teacher')
       .eq('rating_type', 'stars')
       .gte('created_at', rangeStartISO)
       .order('created_at', { ascending: false })
 
-    const ttRatings = topicTeacherRatings || []
+    const ttRatings = (topicTeacherRatings || []).filter((rating) => isIncludedUserId(rating.user_id))
     const ttAvgRating = ttRatings.length > 0
       ? ttRatings.reduce((sum, r) => sum + r.rating_value, 0) / ttRatings.length
       : 0
@@ -279,13 +314,13 @@ export async function GET(request: NextRequest) {
     // Quizzer ratings
     const { data: quizzerRatings } = await supabase
       .from('feature_ratings')
-      .select('rating_value, comment, created_at')
+      .select('user_id, rating_value, comment, created_at')
       .eq('feature', 'quizzer')
       .eq('rating_type', 'thumbs')
       .gte('created_at', rangeStartISO)
       .order('created_at', { ascending: false })
 
-    const qzRatings = quizzerRatings || []
+    const qzRatings = (quizzerRatings || []).filter((rating) => isIncludedUserId(rating.user_id))
     const thumbsUpCount = qzRatings.filter(r => r.rating_value === 1).length
     const thumbsDownCount = qzRatings.filter(r => r.rating_value === 0).length
     const qzSatisfactionRate = qzRatings.length > 0
@@ -305,12 +340,14 @@ export async function GET(request: NextRequest) {
 
     const { data: usageEvents } = await supabase
       .from('usage_events')
-      .select('event_name, endpoint, model, input_tokens, output_tokens')
+      .select('user_id, event_name, endpoint, model, input_tokens, output_tokens')
       .gte('created_at', rangeStartISO)
 
     const aiByFeature: Record<string, { callCount: number; inputTokens: number; outputTokens: number }> = {}
 
     for (const event of usageEvents || []) {
+      if (!isIncludedUserId(event.user_id)) continue
+
       const feature = event.event_name?.split('.')[0] || event.endpoint || 'unknown'
       if (!aiByFeature[feature]) {
         aiByFeature[feature] = { callCount: 0, inputTokens: 0, outputTokens: 0 }
@@ -329,12 +366,12 @@ export async function GET(request: NextRequest) {
       }))
       .sort((a, b) => b.callCount - a.callCount)
 
-    const totalAICalls = usageEvents?.length || 0
+    const totalAICalls = Object.values(aiByFeature).reduce((sum, stats) => sum + stats.callCount, 0)
 
     // Daily AI calls
     const { data: allUsageEvents } = await supabase
       .from('usage_events')
-      .select('created_at')
+      .select('user_id, created_at')
       .gte('created_at', new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString())
 
     const dailyAICallsMap: Record<string, number> = {}
@@ -344,6 +381,8 @@ export async function GET(request: NextRequest) {
     }
 
     for (const event of allUsageEvents || []) {
+      if (!isIncludedUserId(event.user_id)) continue
+
       const dateStr = new Date(event.created_at).toISOString().split('T')[0]
       if (dailyAICallsMap[dateStr] !== undefined) {
         dailyAICallsMap[dateStr]++
@@ -376,7 +415,7 @@ export async function GET(request: NextRequest) {
           avgQuizScore: Math.round(avgQuizScore * 10) / 10,
           avgQuizzesPerUser: Math.round(avgQuizzesPerUser * 10) / 10,
           passRate: Math.round(quizPassRate * 10) / 10,
-          totalQuizzes: quizData?.length || 0,
+          totalQuizzes: filteredQuizData.length,
         },
         topicMasteryStats: {
           avgTopicsMastered: Math.round(avgTopicsMastered * 10) / 10,
