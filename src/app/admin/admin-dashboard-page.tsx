@@ -346,9 +346,9 @@ export default function AdminRecoverPage() {
           </TabsList>
         </div>
 
-        <TabsContent value="learning" className="flex-1 overflow-hidden m-0 px-6">
-          <div className="h-full w-full flex">
-            <aside className="w-[360px] border-r border-border h-full flex flex-col">
+        <TabsContent value="learning" className="flex-1 overflow-hidden m-0 px-6 min-h-0">
+          <div className="h-full w-full flex min-h-0">
+            <aside className="w-[360px] border-r border-border h-full flex flex-col min-h-0">
               <div className="p-4 flex items-center justify-between gap-2">
                 <div>
                   <div className="text-sm font-semibold">Recover Admin</div>
@@ -401,7 +401,7 @@ export default function AdminRecoverPage() {
 
           <Separator />
 
-          <ScrollArea className="flex-1">
+          <ScrollArea className="flex-1 min-h-0">
             {loadingUsers ? (
               <UserListSkeleton />
             ) : filteredUsers.length === 0 ? (
