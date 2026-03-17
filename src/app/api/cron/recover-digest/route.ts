@@ -124,7 +124,7 @@ export async function GET(request: NextRequest) {
         return `${idx + 1}. [${sourceLabel}] ${preview}`
       }).join('\n\n')
 
-      const adminUrl = `${baseUrl}/admin/recover?userId=${userId}`
+      const adminUrl = `${baseUrl}/admin?userId=${userId}`
 
       const subject = `[Recover Digest] ${userInsights.length} new insight${userInsights.length > 1 ? 's' : ''} for ${userName}`
 

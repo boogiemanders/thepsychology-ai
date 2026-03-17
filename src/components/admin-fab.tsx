@@ -42,7 +42,7 @@ export function AdminFab() {
         </PopoverTrigger>
         <PopoverContent align="end" side="top" className="w-48 p-1">
           <Link
-            href="/admin/recover"
+            href="/admin"
             className="flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors"
           >
             <Users className="w-4 h-4" />
@@ -60,4 +60,3 @@ export function AdminFab() {
     </div>
   )
 }
-

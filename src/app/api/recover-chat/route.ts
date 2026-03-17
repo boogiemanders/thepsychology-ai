@@ -815,7 +815,7 @@ async function maybeSendAlert(input: {
     'For HIPAA compliance, user details and transcript are not included in this email.',
     '',
     `Review the session in your admin dashboard:`,
-    `${baseUrl}/admin/recover?session=${input.sessionId}`,
+    `${baseUrl}/admin?session=${input.sessionId}`,
     '',
     'Please follow up appropriately based on your protocols.',
   ].join('\n')
