@@ -1,14 +1,10 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import dynamic from "next/dynamic"
 import { useReducedMotion } from "motion/react"
 
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-})
-
 import { SectionHeader } from "@/components/section-header"
+import { SplineViewer } from "@/components/spline-viewer"
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
 const SHOW_MOBILE_SPLINE_TUNER = false
@@ -230,7 +226,7 @@ export function OrbitingLoopSection() {
               Your AI Study Coach
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              A continuous loop that adapts to you — study less, score higher.
+              A continuous loop that adapts to you. Study less, score higher.
             </p>
           </SectionHeader>
         </div>
@@ -320,9 +316,10 @@ export function OrbitingLoopSection() {
               }
             `}</style>
             <div className="orbit-spline-wrap absolute z-[1] origin-center">
-              <Spline
+              <SplineViewer
                 key={activeScene}
                 scene={activeScene}
+                className="block h-full w-full"
               />
             </div>
             {/* Hide Spline watermark */}

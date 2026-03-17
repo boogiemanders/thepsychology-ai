@@ -19,7 +19,7 @@ export function TestimonialSection() {
           Real Psychologists. Real Results.
         </h2>
         <p className="text-muted-foreground text-center text-balance font-medium">
-          Built by clinicians, powered by AI, proven by scores.
+          Built by clinicians, powered by AI. 3 users passed. Average prep time: 6 weeks.
         </p>
       </SectionHeader>
 

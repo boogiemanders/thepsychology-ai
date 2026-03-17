@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/config";
 import { motion } from "motion/react";
 
 export function BentoSection() {
-  const { title, description, items } = siteConfig.bentoSection;
+  const { title, subtitle, description, items } = siteConfig.bentoSection;
   const normalizedDescription = description
     .replace(/\bReplenish\b/g, "Recover")
     .replace(/[ \t]*—[ \t]*/g, ". ");
@@ -25,9 +25,14 @@ export function BentoSection() {
         <div className="absolute top-0 -right-4 md:-right-14 h-full w-4 md:w-14 text-primary/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div>
 
         <SectionHeader>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-            {title}
-          </h2>
+          <div className="flex flex-col items-center gap-1.5 pb-1">
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
+              {title}
+            </h2>
+            <p className="text-sm md:text-base font-medium text-muted-foreground tracking-wide uppercase text-center">
+              {subtitle}
+            </p>
+          </div>
           <p className="text-muted-foreground text-center text-balance font-medium">
             {normalizedDescription}
           </p>

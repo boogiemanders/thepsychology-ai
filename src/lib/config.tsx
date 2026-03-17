@@ -82,10 +82,10 @@ export const siteConfig = {
         <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
       </svg>
     ),
-    badge: "",
-    title: "Prep That Actually Matches the EPPP",
+    badge: "From 19% to 588 in 30 days",
+    title: "Actual EPPP Prep",
     description:
-      "Most programs give you 95% scores on practice, and then still not pass the real thing. We build questions the way the EPPP actually words them, so your practice score means something.",
+      "Most programs give you 95% on practice, then you bomb the real thing. We build questions the way the EPPP actually words them, so your practice score means something.",
     cta: {
       primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
@@ -107,7 +107,8 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "What You Get",
-    description: "80+ lessons. Adaptive quizzes. Full exam simulation. And Recover: evidence-based mental resets for focus and burnout. No other EPPP program offers any of this.",
+    subtitle: "Without spending $849 or 9 months",
+    description: "80+ lessons. Adaptive quizzes. Full exam simulation. Plus Recover: because burnout kills more EPPP scores than bad studying.",
     items: [
       {
         id: 1,
@@ -138,8 +139,8 @@ export const siteConfig = {
     ],
   },
   featureSection: {
-    title: "Everything You Need to Pass",
-    description: "Multimodal, adaptive, and available whenever you are.",
+    title: "Everything I Wish I Had When I Was Studying",
+    description: "Built by someone who was broke, burnt out, and sick of paying $849 for programs that didn't work.",
     items: [
       {
         id: 1,
@@ -182,7 +183,7 @@ export const siteConfig = {
   },
   pricing: {
     title: "Start Studying Today",
-    description: "Other programs charge $849 to $1,649. Start free today.",
+    description: "Other programs charge $849-$1,649. Start free, no credit card needed.",
     pricingItems: [
       {
         name: "Pro",
@@ -193,7 +194,7 @@ export const siteConfig = {
         features: ["Learn: 80+ text + audio lessons", "Practice: Unlimited quizzes", "Simulate: Full exam tools (highlight, flag, timer)", "Personalize: Custom metaphors + focus areas", "Recover: 5-min mental resets"],
         featuresLabel: "Everything includes:",
         description: "All Pro features free for 7 days. No credit card required.",
-        buttonText: "Start Free Trial",
+        buttonText: "Start My Free Trial",
         buttonColor: "bg-primary text-primary-foreground",
         isPopular: true,
         displayPrice: "Free/7 days",
@@ -201,6 +202,17 @@ export const siteConfig = {
     ],
   },
   testimonials: [
+    {
+      id: "6",
+      name: "Dr. Menon",
+      role: "Licensed Psychologist",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          thePsychology.ai is truly <Highlight className="text-brand-olive dark:text-brand-lavender-gray">one-of-a-kind</Highlight>. It's an <Highlight className="text-brand-olive dark:text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel <Highlight className="text-brand-olive dark:text-brand-lavender-gray">engaging</Highlight> and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">manageable</Highlight>, and it clearly reflects a design philosophy of being <Highlight className="text-brand-olive dark:text-brand-lavender-gray">'for the people, by the people'</Highlight>.
+        </p>
+      ),
+    },
     {
       id: "4",
       name: "Anders Chan",
@@ -214,24 +226,13 @@ export const siteConfig = {
       ),
     },
     {
-      id: "6",
-      name: "Dr. Menon",
-      role: "Licensed Psychologist",
-      img: "/images/user-icon.svg",
-      description: (
-        <p>
-          thePsychology.ai is truly <Highlight className="text-brand-olive dark:text-brand-lavender-gray">one-of-a-kind</Highlight>. It's an <Highlight className="text-brand-olive dark:text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel <Highlight className="text-brand-olive dark:text-brand-lavender-gray">engaging</Highlight> and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">manageable</Highlight>, and it clearly reflects a design philosophy of being <Highlight className="text-brand-olive dark:text-brand-lavender-gray">'for the people, by the people'</Highlight>.
-        </p>
-      ),
-    },
-    {
-      id: "8",
+      id: "9",
       name: "Anonymous",
-      role: "Postdoc",
+      role: "User",
       img: "/images/user-icon.svg",
       description: (
         <p>
-          thepsychology.ai is <Highlight className="text-brand-dusty-rose dark:text-brand-sage">insanely impressive work</Highlight>! I'm taking my EPPP next month and have been struggling to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
+          I came here ready to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">recommend this program</Highlight> and I signed up for it myself. Out of all the programs I looked at, this one comes <Highlight className="text-brand-olive dark:text-brand-lavender-gray">the closest to how the EPPP actually words its questions</Highlight>. My test didn't have any straight definition questions, it was all application based, and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">this program is set up the same way</Highlight>.
         </p>
       ),
     },
@@ -247,13 +248,13 @@ export const siteConfig = {
       ),
     },
     {
-      id: "9",
+      id: "8",
       name: "Anonymous",
-      role: "User",
+      role: "Postdoc",
       img: "/images/user-icon.svg",
       description: (
         <p>
-          I came here ready to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">recommend this program</Highlight> and I signed up for it myself. Out of all the programs I looked at, this one comes <Highlight className="text-brand-olive dark:text-brand-lavender-gray">the closest to how the EPPP actually words its questions</Highlight>. My test didn't have any straight definition questions, it was all application based, and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">this program is set up the same way</Highlight>.
+          thepsychology.ai is <Highlight className="text-brand-dusty-rose dark:text-brand-sage">insanely impressive work</Highlight>! I'm taking my EPPP next month and have been struggling to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
         </p>
       ),
     },
@@ -335,7 +336,7 @@ export const siteConfig = {
         id: 6,
         question: "What is the average passing score required on the EPPP (and the EPPP score range)?",
         answer:
-          "EPPP scores are reported on a scaled score range (commonly cited as 200–800). Many jurisdictions use a 500 cut score, but the required passing score is set by your licensing jurisdiction.",
+          "EPPP scores are reported on a scaled score range (commonly cited as 200-800). Many jurisdictions use a 500 cut score, but the required passing score is set by your licensing jurisdiction.",
       },
       {
         id: 7,
@@ -379,14 +380,32 @@ export const siteConfig = {
         answer:
           "If you’re searching for EPPP practice questions 2025-2026, focus on materials aligned with the current ASPPB blueprint and updated regularly. Our approach is to generate targeted practice questions by topic and reinforce them with clear, exam-style explanations and review.",
       },
+      {
+        id: 15,
+        question: "What happens after my 7-day trial?",
+        answer:
+          "After 7 days, Pro is $20/month. Cancel anytime. No contracts, no cancellation fees. You keep access to everything as long as you’re subscribed.",
+      },
+      {
+        id: 16,
+        question: "How long do most people study before passing?",
+        answer:
+          "Our users who’ve passed the EPPP studied for 1-2 months. Three have passed so far, with prep times of 1 month, 1 month, and 2 months.",
+      },
+      {
+        id: 17,
+        question: "Can I use this on my phone?",
+        answer:
+          "Yes. thePsychology.ai works in any mobile browser. No app download needed. Study on the train, between sessions, wherever.",
+      },
     ],
   },
   ctaSection: {
     id: "cta",
     title: "Your license starts here",
     backgroundImage: "/agent-cta-background.png",
-    button: { text: "Claim Your Free Spot", href: "/#get-started" },
-    subtext: "The EPPP is changing in 2027. Start preparing now. First 100 spots are free.",
+    button: { text: "Start My Free Trial", href: "/#get-started" },
+    subtext: "The EPPP is changing in 2027. Start your free trial now.",
   },
   footerLinks: [
     {
