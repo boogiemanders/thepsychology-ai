@@ -106,35 +106,35 @@ export const siteConfig = {
     ],
   },
   bentoSection: {
-    title: "What You Get",
-    subtitle: "Without spending $849 or 9 months",
-    description: "80+ lessons. Adaptive quizzes. Full exam simulation. Plus Recover: because burnout kills more EPPP scores than bad studying.",
+    title: "Everything you need. Nothing you don’t.",
+    subtitle: "Practice testing first. AI that adapts. Built by someone who passed.",
+    description: "80+ focused lessons. Adaptive quizzes after each one. Full-length practice exams that simulate the real thing. And a recovery system for when the anxiety hits.",
     items: [
       {
         id: 1,
         content: <FirstBentoAnimation />,
-        title: "Study What Matters",
-        description: "We surface the highest-yield topics first, so every hour of study actually moves your score.",
+        title: "Skip the fluff",
+        description: "Most EPPP materials are ‘overly detailed’ because they’re selling pages, not results. We cut to what’s actually on the exam.",
       },
       {
         id: 2,
         content: <ThirdBentoAnimation />,
-        title: "Make It Stick",
+        title: "Remember it on test day",
         description:
-          "Turns dense theory into customized and clear examples.",
+          "Active recall after every lesson. The testing effect is the single most replicated finding in learning science. We built around it.",
       },
       {
         id: 3,
         content: <FourthBentoAnimation />,
-        title: "Recover",
+        title: "When the panic hits",
         description:
-          "Evidence-based resets for focus and burnout. Built on ACT, MI, and CBT-I techniques you'll use in practice.",
+          "EPPP prep can feel defeating. ‘Beyond defeated,’ in the words of one candidate. Built-in evidence-based resets so you don’t spiral.",
       },
       {
         id: 4,
         content: <SecondBentoAnimation />,
-        title: "Frictionless Studying",
-        description: "Everything you need. Nothing you don’t",
+        title: "15 minutes that move the needle",
+        description: "Phone, laptop, lunch break. Short sessions that compound. No 3-hour reading marathons that leave you retaining 15%.",
       },
     ],
   },
@@ -182,8 +182,8 @@ export const siteConfig = {
     },
   },
   pricing: {
-    title: "Start Studying Today",
-    description: "Other programs charge $849-$1,649. Start free, no credit card needed.",
+    title: "7 days free. Because $849 upfront is insane.",
+    description: "Start here for free. See if it works before spending a dollar.",
     pricingItems: [
       {
         name: "Pro",
@@ -304,9 +304,9 @@ export const siteConfig = {
       },
       {
         id: 2,
-        question: "How is it different from other EPPP exam prep programs?",
+        question: "How is this different from AATBS and other EPPP prep programs?",
         answer:
-          "Most prep programs sell you static content. You score 95% on their practice tests, then bomb the real EPPP. Users report as low as 20% content overlap with the actual exam. We're the only AI-native platform that adapts to how the EPPP actually tests you: application-based questions, not straight definitions. Our questions mirror real exam wording, and our adaptive engine focuses your time on what you don't know yet, not what you've already mastered.",
+          "AATBS charges $849 to $1,799 and gives you dense textbook-style content that many students describe as 'cumbersome, intimidating, and overly detailed.' Their materials are not updated frequently. We focus on adaptive practice testing, the study method research shows actually works, at a fraction of the price. Our questions mirror real exam wording: application-based, not straight definitions.",
       },
       {
         id: 14,
@@ -381,6 +381,30 @@ export const siteConfig = {
           "If you’re searching for EPPP practice questions 2025-2026, focus on materials aligned with the current ASPPB blueprint and updated regularly. Our approach is to generate targeted practice questions by topic and reinforce them with clear, exam-style explanations and review.",
       },
       {
+        id: 18,
+        question: "Will the practice questions match the real exam?",
+        answer:
+          "This is the #1 complaint about every EPPP prep program. Our questions are designed to match the actual exam's format, difficulty, and question style. We don't make questions 'purposefully ambiguous' to tank your practice scores, and we don't make them so easy you develop false confidence. The goal is accurate preparation.",
+      },
+      {
+        id: 19,
+        question: "I've already failed the EPPP. Will this help?",
+        answer:
+          "Yes. If your previous approach was primarily reading-based, switching to practice-test-first studying often makes the difference. Our system identifies exactly which domains need work and builds every session around closing those gaps. The founder scored 19% on his first diagnostic. The method works for people starting from behind.",
+      },
+      {
+        id: 20,
+        question: "I can't afford another expensive study program.",
+        answer:
+          "That's why we offer 7 days free with no credit card required. The full cost after the trial is $20/month, a fraction of AATBS. You should be able to try a prep program and see real results before spending money, especially when early-career psychologists are already financially stretched.",
+      },
+      {
+        id: 21,
+        question: "Is this actually built by psychologists?",
+        answer:
+          "Yes. The founder, Anders Chan, Psy.D., built this after passing the EPPP on his first try. The content is written and reviewed by licensed psychologists. This is not a generic test prep factory. We only do EPPP prep, and the people behind it have taken the exam themselves.",
+      },
+      {
         id: 15,
         question: "What happens after my 7-day trial?",
         answer:
@@ -405,7 +429,7 @@ export const siteConfig = {
     title: "Your license starts here",
     backgroundImage: "/agent-cta-background.png",
     button: { text: "Start My Free Trial", href: "/#get-started" },
-    subtext: "The EPPP is changing in 2027. Start your free trial now.",
+    subtext: "The EPPP-2 launches in 2027 with a new format. Pass the current version while your prep still applies.",
   },
   footerLinks: [
     {

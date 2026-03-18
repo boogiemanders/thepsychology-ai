@@ -7,14 +7,18 @@ import { FAQSection } from "@/components/sections/faq-section"
 import { FooterSection } from "@/components/sections/footer-section"
 import { HeroSection } from "@/components/sections/hero-section"
 import { OrbitingLoopSection } from "@/components/sections/orbiting-loop-section"
+import { ProblemSection } from "@/components/sections/problem-section"
 import { BentoSection } from "@/components/sections/bento-section"
 import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
+import { VisionSection } from "@/components/sections/vision-section"
 import type { SectionKey } from "@/lib/hp-utils"
 
 const SECTION_REGISTRY: Record<SectionKey, ComponentType> = {
+  problem: ProblemSection,
   orbiting: OrbitingLoopSection,
   bento: BentoSection,
+  vision: VisionSection,
   testimonials: TestimonialSection,
   pricing: PricingSection,
   faq: FAQSection,

@@ -223,10 +223,10 @@ export function OrbitingLoopSection() {
 
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Your AI Study Coach
+              Stop re-reading. Start passing.
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              A continuous loop that adapts to you. Study less, score higher.
+              The #1 predictor of EPPP success is practice testing, not re-reading 400 pages of dense text. Every session here is built around that.
             </p>
           </SectionHeader>
         </div>
@@ -234,34 +234,31 @@ export function OrbitingLoopSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 py-10 items-center">
           <div className="order-2 lg:order-1 space-y-6">
             <p className="text-[0.95rem] leading-[1.9] md:text-base md:leading-relaxed text-muted-foreground max-w-xl">
-              Your AI coach helps you study what you actually need.
+              Your weak spots get more reps. Your strong spots get out of the way. The system adapts after every quiz so you&apos;re always studying what will move your score the most right now.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm md:text-base">
               <div className="space-y-1.5">
                 <h3 className="font-semibold tracking-tight">Practice</h3>
                 <p className="text-muted-foreground">
-                  Take practice exams to know where your EPPP readiness stands.
+                  Full-length practice exams that match the real test format. Not &ldquo;purposefully ambiguous.&rdquo; Actually representative.
                 </p>
               </div>
               <div className="space-y-1.5">
                 <h3 className="font-semibold tracking-tight">Prioritize</h3>
                 <p className="text-muted-foreground">
-                  Focus your limited study time on the topics that will move
-                  your score the most right now.
+                  Your weakest, highest-weighted domains first. Not chapter order. Opportunity order.
                 </p>
               </div>
               <div className="space-y-1.5">
                 <h3 className="font-semibold tracking-tight">Study</h3>
                 <p className="text-muted-foreground">
-                  Dive into tailored explanations that match your exact
-                  knowledge gaps.
+                  Focused lessons on your gaps. Not 400 pages of &ldquo;cumbersome, intimidating, and overly detailed&rdquo; text.
                 </p>
               </div>
               <div className="space-y-1.5">
                 <h3 className="font-semibold tracking-tight">Quiz</h3>
                 <p className="text-muted-foreground">
-                  Get short adaptive quizzes that inform what to highlight
-                  during next study session.
+                  10-question quizzes after every lesson. Active recall, not passive re-reading. The method that actually works.
                 </p>
               </div>
             </div>

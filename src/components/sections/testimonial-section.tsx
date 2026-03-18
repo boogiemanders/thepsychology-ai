@@ -16,10 +16,10 @@ export function TestimonialSection() {
     >
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
-          Real Psychologists. Real Results.
+          They passed. First try.
         </h2>
         <p className="text-muted-foreground text-center text-balance font-medium">
-          Built by clinicians, powered by AI. 3 users passed. Average prep time: 6 weeks.
+          4 practice exams. Review every weakness. Average prep time: 6 weeks.
         </p>
       </SectionHeader>
 

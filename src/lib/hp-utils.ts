@@ -2,7 +2,7 @@ import { getSupabaseClient } from '@/lib/supabase-server'
 
 // --- Types ---
 
-export type SectionKey = 'orbiting' | 'bento' | 'testimonials' | 'pricing' | 'faq' | 'company'
+export type SectionKey = 'problem' | 'orbiting' | 'bento' | 'vision' | 'testimonials' | 'pricing' | 'faq' | 'company'
 
 export interface VariantOrder {
   variantId: string | null
@@ -25,8 +25,10 @@ export interface VisitorSignals {
 // --- Constants ---
 
 export const SECTION_KEYS: SectionKey[] = [
+  'problem',
   'orbiting',
   'bento',
+  'vision',
   'testimonials',
   'pricing',
   'faq',
@@ -34,8 +36,10 @@ export const SECTION_KEYS: SectionKey[] = [
 ]
 
 export const DEFAULT_ORDER: SectionKey[] = [
+  'problem',
   'orbiting',
   'bento',
+  'vision',
   'testimonials',
   'pricing',
   'faq',
@@ -53,13 +57,13 @@ export const HP_EXCLUDED_EMAILS = [
 
 // Preview variants — used by ?hp_preview= query param to bypass cookie/DB
 export const HP_PREVIEW_VARIANTS: Record<string, SectionKey[]> = {
-  'control':              ['orbiting', 'bento', 'testimonials', 'pricing', 'faq', 'company'],
-  'pricing-early':        ['testimonials', 'pricing', 'orbiting', 'bento', 'faq', 'company'],
-  'social-first':         ['testimonials', 'company', 'bento', 'orbiting', 'pricing', 'faq'],
-  'faq-objection-buster': ['testimonials', 'faq', 'bento', 'orbiting', 'pricing', 'company'],
-  'product-first':        ['bento', 'orbiting', 'testimonials', 'pricing', 'faq', 'company'],
-  'late-pricing':         ['orbiting', 'bento', 'testimonials', 'company', 'faq', 'pricing'],
-  'trust-sandwich':       ['company', 'orbiting', 'bento', 'testimonials', 'pricing', 'faq'],
+  'control':              ['problem', 'orbiting', 'bento', 'vision', 'testimonials', 'pricing', 'faq', 'company'],
+  'pricing-early':        ['problem', 'testimonials', 'pricing', 'orbiting', 'bento', 'vision', 'faq', 'company'],
+  'social-first':         ['problem', 'testimonials', 'company', 'bento', 'orbiting', 'vision', 'pricing', 'faq'],
+  'faq-objection-buster': ['problem', 'testimonials', 'faq', 'bento', 'orbiting', 'vision', 'pricing', 'company'],
+  'product-first':        ['problem', 'bento', 'orbiting', 'vision', 'testimonials', 'pricing', 'faq', 'company'],
+  'late-pricing':         ['problem', 'orbiting', 'bento', 'vision', 'testimonials', 'company', 'faq', 'pricing'],
+  'trust-sandwich':       ['problem', 'company', 'orbiting', 'bento', 'vision', 'testimonials', 'pricing', 'faq'],
 }
 
 // --- Functions ---
