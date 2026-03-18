@@ -74,7 +74,7 @@ export default function LoginPage() {
             <CardHeader className="space-y-2">
               <TypographyH1>Welcome Back</TypographyH1>
               <CardDescription>
-                Log in to your EPPP Skills account
+                Log in to thePsychology.ai
               </CardDescription>
             </CardHeader>
 

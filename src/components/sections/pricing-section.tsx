@@ -164,6 +164,16 @@ export function PricingSection() {
         throw new Error(`Failed to create profile: ${errorData?.error || "Please try again"}`)
       }
 
+      // Track sign-up in Google Analytics
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "sign_up", {
+          method: "email",
+          referral_source: finalReferralSource,
+          page_path: window.location.pathname,
+          page_referrer: document.referrer,
+        })
+      }
+
       const hasGoalDetails = Boolean(formData.goals.trim() || formData.examDate)
       if (hasGoalDetails) {
         const goalParts = []
@@ -439,7 +449,7 @@ export function PricingSection() {
                     <InteractiveHoverButton
                       type="submit"
                       disabled={isSubmitting}
-                      text={isSubmitting ? "Submitting..." : "Start"}
+                      text={isSubmitting ? "Submitting..." : "Start My Free Trial"}
                       className={cn(
                         "transition-colors duration-150 focus-visible:outline focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/60 border border-border shadow-sm",
                         "bg-black text-white border border-black/60 dark:bg-white dark:text-slate-900 dark:border-slate-300",
@@ -448,7 +458,7 @@ export function PricingSection() {
                       hoverTextClassName="text-white dark:text-white"
                       dotClassName="brand-coral-bg dark:brand-lavender-gray-bg"
                     >
-                      {isSubmitting ? "Submitting..." : "Start"}
+                      {isSubmitting ? "Submitting..." : "Start My Free Trial"}
                     </InteractiveHoverButton>
                   </div>
 

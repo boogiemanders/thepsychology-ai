@@ -1,11 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import dynamic from "next/dynamic"
 
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-})
+import { SplineViewer } from "@/components/spline-viewer"
 
 export default function SplineTunerPage() {
   const [x, setX] = useState(-50)
@@ -71,7 +68,10 @@ export default function SplineTunerPage() {
                 transform: `scale(${scale})`,
               }}
             >
-              <Spline scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11" />
+              <SplineViewer
+                scene="https://prod.spline.design/5Vh4gTb7J89r4Q9n/scene.splinecode?v=11"
+                className="block h-full w-full"
+              />
             </div>
           </div>
         </div>
