@@ -687,7 +687,7 @@ export default function HomeClient({ sectionOrder, variantId, heroFlags = DEFAUL
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
             {heroFlags.showHeroTagline && (
               <div className="absolute bottom-3 md:bottom-4 left-0 right-0 z-10 flex justify-center">
-                <p className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-3 py-1 text-[9px] md:text-[10px] tracking-[0.06em] text-white/40 uppercase">
+                <p className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-3 py-1 text-[9px] md:text-[10px] tracking-[0.06em] text-white/40">
                   <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#6a9bcc]/60" />
                   Try free for 7 days
                   <span className="text-white/20 mx-0.5">/</span>

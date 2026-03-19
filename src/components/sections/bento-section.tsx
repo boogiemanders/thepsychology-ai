@@ -5,10 +5,11 @@ import { siteConfig } from "@/lib/config";
 import { motion } from "motion/react";
 
 export function BentoSection() {
-  const { title, subtitle, description, items } = siteConfig.bentoSection;
-  const normalizedDescription = description
-    .replace(/\bReplenish\b/g, "Recover")
-    .replace(/[ \t]*—[ \t]*/g, ". ");
+  const { title, subtitle, items } = siteConfig.bentoSection;
+  const descriptionLines = [
+    "80+ focused lessons. Adaptive quizzes after each one.",
+    "Full-length practice exams that simulate the real thing. And a recovery system for when the anxiety hits.",
+  ]
   const normalizedItems = items.map((item) => ({
     ...item,
     title: item.title.replace(/\bReplenish\b/g, "Recover"),
@@ -25,17 +26,19 @@ export function BentoSection() {
         <div className="absolute top-0 -right-4 md:-right-14 h-full w-4 md:w-14 text-primary/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div>
 
         <SectionHeader>
-          <div className="flex flex-col items-center gap-1.5 pb-1">
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
+          <div className="flex max-w-4xl flex-col items-center gap-4 pb-3">
+            <h2 className="max-w-3xl text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance leading-[0.98]">
               {title}
             </h2>
-            <p className="text-sm md:text-base font-medium text-muted-foreground tracking-wide text-center">
+            <p className="max-w-4xl text-base font-medium leading-relaxed text-muted-foreground text-center text-balance">
               {subtitle}
             </p>
           </div>
-          <p className="text-muted-foreground text-center text-balance font-medium">
-            {normalizedDescription}
-          </p>
+          <div className="max-w-4xl space-y-1.5 text-center text-base font-medium leading-relaxed text-muted-foreground">
+            {descriptionLines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
         </SectionHeader>
 
         <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden">

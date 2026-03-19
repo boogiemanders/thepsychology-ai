@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/config"
 import { decodeOrderCookie, DEFAULT_ORDER, DEFAULT_HERO_FLAGS, HP_ORDER_COOKIE, HP_PREVIEW_VARIANTS, type SectionKey, type HeroFlags } from "@/lib/hp-utils"
 
 export const metadata: Metadata = {
-  title: "EPPP Exam Prep — Free AI-Powered Study Tools | thePsychology.ai",
+  title: "Affordable EPPP Prep That Actually Works | thePsychology.ai",
   alternates: {
     canonical: "/",
   },
