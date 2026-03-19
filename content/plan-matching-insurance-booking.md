@@ -239,10 +239,56 @@ When a student passes the EPPP (tracked in `eppp_exam_results`), show a prompt:
 
 Pre-fills provider profile from student's `graduate_program_id` and `user_research_profile` data.
 
+### Embeddable Review Badge (Clinician Marketing Tool)
+
+Give clinicians the power to showcase their reviews outside thepsychology.ai. This is a clinician-first feature that also serves as organic advertising for the platform.
+
+**How it works:**
+1. After a patient leaves a review, the clinician sees it in their provider dashboard
+2. Clinician can grab an **embed code** (HTML snippet or script tag) from their dashboard
+3. The badge renders on their personal website showing: star rating, review count, and a "Verified on thepsychology.ai" link
+4. Badge auto-updates — new reviews appear without the clinician touching anything
+5. Clicking the badge links back to the provider's profile on thepsychology.ai (organic traffic + trust signal)
+
+**Badge styles:**
+- **Compact**: Star rating + review count in a small horizontal bar (for sidebars/footers)
+- **Card**: Shows latest 5-star review quote + overall rating (for homepage/about page)
+- **Floating**: Small corner widget with rating that expands on hover
+
+**Review system:**
+- Patients can leave a review after a completed session (prompted via email 24h after appointment)
+- Reviews include: 1-5 star rating, free-text feedback, optional tags (good listener, helped me feel safe, practical strategies, etc.)
+- Clinician can respond to reviews (visible publicly)
+- Clinician controls which reviews appear on the embeddable badge (opt-in per review)
+- Reviews are tied to verified appointments — no fake reviews possible
+
+**Why this matters strategically:**
+- Gives clinicians something no competitor offers — portable, verifiable social proof
+- Every badge on a clinician's website is a backlink + ad for thepsychology.ai
+- Builds clinician loyalty — the more reviews they accumulate, the harder it is to leave the platform
+- Differentiates from Psychology Today (no reviews), Zocdoc (reviews locked to platform), and Headway (no reviews at all)
+
+**New tables:**
+- `patient_reviews` — review content, rating, tags, appointment_id (verified), status (pending/approved/flagged)
+- `provider_review_responses` — clinician replies to reviews
+- `embeddable_badge_configs` — per-provider badge style, theme, which reviews to show, embed token
+
+**Files:**
+- `supabase/migrations/YYYYMMDD_create_reviews_and_badges.sql`
+- `src/app/api/reviews/submit/route.ts` — patient submits review (must have completed appointment)
+- `src/app/api/reviews/respond/route.ts` — provider replies to review
+- `src/app/api/reviews/badge/[token]/route.ts` — public JSON endpoint serving badge data (no auth required, CORS-open)
+- `src/app/api/reviews/badge/[token]/widget.js/route.ts` — serves the embeddable JS widget script
+- `src/app/provider/reviews/page.tsx` — provider review management dashboard
+- `src/app/provider/reviews/embed/page.tsx` — embed code generator with live preview
+- `src/components/review/review-badge-preview.tsx` — badge style previews
+- `src/app/api/cron/review-request/route.ts` — sends review request emails 24h post-session via Resend
+
 ### Admin Extensions
 - `src/app/admin/providers/page.tsx` — review pending profiles, verify licenses
 - `src/app/admin/matching/page.tsx` — matching analytics, weight tuning
 - `src/app/admin/appointments/page.tsx` — volume, no-show rates, revenue
+- `src/app/admin/reviews/page.tsx` — flagged review moderation
 
 ---
 
@@ -286,3 +332,4 @@ STRIPE_PRICE_ID_PROVIDER_PRO=
 8. **EPPP pipeline**: Mark test student as passed, verify provider CTA appears, verify profile pre-fill
 9. **RLS**: Verify patients see only their data, providers see only their profile + appointments
 10. **Freemium gate**: Verify free-tier provider hits 5-client cap, upgrade flow works via Stripe
+11. **Reviews + Badge**: Submit review after completed appointment, verify badge JSON endpoint returns correct data, embed widget script on a test HTML page and confirm auto-updating display
