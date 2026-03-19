@@ -107,7 +107,7 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "Everything you need. Nothing you don’t.",
-    subtitle: "Practice testing first. AI that adapts. Built by someone who passed.",
+    subtitle: "You're carrying a full caseload. 3-hour study blocks aren't realistic. Short sessions, real results.",
     description: "80+ focused lessons. Adaptive quizzes after each one. Full-length practice exams that simulate the real thing. And a recovery system for when the anxiety hits.",
     items: [
       {
@@ -183,7 +183,7 @@ export const siteConfig = {
   },
   pricing: {
     title: "7 days free. Because $849 upfront is insane.",
-    description: "Start here for free. See if it works before spending a dollar.",
+    description: "Start here for free. See if it works before spending a dollar. $20/mo after your trial.",
     pricingItems: [
       {
         name: "Pro",

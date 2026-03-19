@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { cookies } from "next/headers"
 import HomeClient from "./home-client"
 import { siteConfig } from "@/lib/config"
-import { decodeOrderCookie, DEFAULT_ORDER, HP_ORDER_COOKIE, HP_PREVIEW_VARIANTS, type SectionKey } from "@/lib/hp-utils"
+import { decodeOrderCookie, DEFAULT_ORDER, DEFAULT_HERO_FLAGS, HP_ORDER_COOKIE, HP_PREVIEW_VARIANTS, type SectionKey, type HeroFlags } from "@/lib/hp-utils"
 
 export const metadata: Metadata = {
   title: "EPPP Exam Prep — Free AI-Powered Study Tools | thePsychology.ai",
@@ -22,6 +22,7 @@ export default async function Home({
 
   let sectionOrder: SectionKey[] = DEFAULT_ORDER
   let variantId: string | null = null
+  let heroFlags: HeroFlags = DEFAULT_HERO_FLAGS
 
   // ?hp_preview=variant-name overrides cookie for dev previewing
   const previewVariant = typeof params.hp_preview === 'string' ? params.hp_preview : null
@@ -32,7 +33,12 @@ export default async function Home({
     const decoded = decodeOrderCookie(orderCookie)
     sectionOrder = decoded.sectionOrder
     variantId = decoded.variantId
+    heroFlags = decoded.heroFlags
   }
+
+  // ?hp_badge=0/1 and ?hp_tagline=0/1 override flags for previewing
+  if (params.hp_badge !== undefined) heroFlags = { ...heroFlags, showHeroBadge: params.hp_badge !== '0' }
+  if (params.hp_tagline !== undefined) heroFlags = { ...heroFlags, showHeroTagline: params.hp_tagline !== '0' }
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -55,7 +61,7 @@ export default async function Home({
           __html: JSON.stringify(faqJsonLd),
         }}
       />
-      <HomeClient sectionOrder={sectionOrder} variantId={variantId} />
+      <HomeClient sectionOrder={sectionOrder} variantId={variantId} heroFlags={heroFlags} />
     </>
   )
 }

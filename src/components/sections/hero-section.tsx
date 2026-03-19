@@ -10,6 +10,7 @@ type HeroSectionProps = {
   ctaYOffset?: number
   bannerYOffset?: number
   contentFrameHeight?: number
+  showBadge?: boolean
 }
 
 export function HeroSection({
@@ -18,6 +19,7 @@ export function HeroSection({
   ctaYOffset = 0,
   bannerYOffset = 0,
   contentFrameHeight,
+  showBadge = true,
 }: HeroSectionProps) {
   const { hero } = siteConfig
 
@@ -53,7 +55,7 @@ export function HeroSection({
           className="shrink-0 flex flex-col items-center gap-2 max-w-3xl w-full"
           style={titleYOffset ? { transform: `translateY(${titleYOffset}px)` } : undefined}
         >
-          {hero.badge?.trim() ? (
+          {showBadge && hero.badge?.trim() ? (
             <p className="border border-border bg-accent rounded-full text-sm h-8 px-3 flex items-center gap-2">
               {hero.badgeIcon}
               {hero.badge}

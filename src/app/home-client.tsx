@@ -12,7 +12,8 @@ import { BentoSection } from "@/components/sections/bento-section"
 import { PricingSection } from "@/components/sections/pricing-section"
 import { TestimonialSection } from "@/components/sections/testimonial-section"
 import { VisionSection } from "@/components/sections/vision-section"
-import type { SectionKey } from "@/lib/hp-utils"
+import type { SectionKey, HeroFlags } from "@/lib/hp-utils"
+import { DEFAULT_HERO_FLAGS } from "@/lib/hp-utils"
 
 const SECTION_REGISTRY: Record<SectionKey, ComponentType> = {
   problem: ProblemSection,
@@ -28,6 +29,7 @@ const SECTION_REGISTRY: Record<SectionKey, ComponentType> = {
 interface HomeClientProps {
   sectionOrder: SectionKey[]
   variantId: string | null
+  heroFlags?: HeroFlags
 }
 
 const MOBILE_LAYOUT_BREAKPOINT = 768
@@ -103,7 +105,7 @@ const interpolateYOffset = (
   return Math.round(upperValue + (lowerValue - upperValue) * progress)
 }
 
-export default function HomeClient({ sectionOrder, variantId }: HomeClientProps) {
+export default function HomeClient({ sectionOrder, variantId, heroFlags = DEFAULT_HERO_FLAGS }: HomeClientProps) {
   const pageStartRef = useRef(0)
   useEffect(() => { pageStartRef.current = Date.now() }, [])
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false)
@@ -683,14 +685,16 @@ export default function HomeClient({ sectionOrder, variantId }: HomeClientProps)
               <div className="h-full w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950" />
             )}
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
-            <div className="absolute bottom-3 md:bottom-4 left-0 right-0 z-10 flex justify-center">
-              <p className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-3 py-1 text-[9px] md:text-[10px] tracking-[0.06em] text-white/40 uppercase">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#6a9bcc]/60" />
-                Try free for 7 days
-                <span className="text-white/20 mx-0.5">/</span>
-                Others charge $849+
-              </p>
-            </div>
+            {heroFlags.showHeroTagline && (
+              <div className="absolute bottom-3 md:bottom-4 left-0 right-0 z-10 flex justify-center">
+                <p className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-3 py-1 text-[9px] md:text-[10px] tracking-[0.06em] text-white/40 uppercase">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#6a9bcc]/60" />
+                  Try free for 7 days
+                  <span className="text-white/20 mx-0.5">/</span>
+                  Others charge $849+
+                </p>
+              </div>
+            )}
           </div>
           <div className="relative z-10">
             <HeroSection
@@ -699,6 +703,7 @@ export default function HomeClient({ sectionOrder, variantId }: HomeClientProps)
               ctaYOffset={effectiveHeroCTAY}
               bannerYOffset={effectiveHeroBannerY}
               contentFrameHeight={heroContentFrameHeight}
+              showBadge={heroFlags.showHeroBadge}
             />
           </div>
         </section>

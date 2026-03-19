@@ -29,7 +29,7 @@ export function BentoSection() {
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
               {title}
             </h2>
-            <p className="text-sm md:text-base font-medium text-muted-foreground tracking-wide uppercase text-center">
+            <p className="text-sm md:text-base font-medium text-muted-foreground tracking-wide text-center">
               {subtitle}
             </p>
           </div>
