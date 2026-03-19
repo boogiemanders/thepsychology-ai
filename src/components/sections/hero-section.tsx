@@ -55,12 +55,6 @@ export function HeroSection({
           className="shrink-0 flex flex-col items-center gap-2 max-w-3xl w-full"
           style={titleYOffset ? { transform: `translateY(${titleYOffset}px)` } : undefined}
         >
-          {showBadge && hero.badge?.trim() ? (
-            <p className="border border-border bg-accent rounded-full text-sm h-8 px-3 flex items-center gap-2">
-              {hero.badgeIcon}
-              {hero.badge}
-            </p>
-          ) : null}
           {hero.title ? (
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center text-white">
               {hero.title}
