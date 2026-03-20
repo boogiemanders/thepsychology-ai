@@ -1,0 +1,340 @@
+{
+  "questions": [
+    {
+      "stem": "A researcher examines the relationship between years of clinical experience and client satisfaction ratings. When plotting the scatterplot, she notices that therapists with fewer years of experience show widely varying client satisfaction scores (ranging from 2 to 10), while therapists with many years of experience consistently receive high satisfaction scores (ranging from 8 to 10). This pattern indicates a violation of which assumption of correlation?",
+      "options": [
+        "Linearity, because the relationship between the variables follows a curvilinear pattern",
+        "Unrestricted range, because the full range of satisfaction scores is not represented at all levels",
+        "Homoscedasticity, because the variability in criterion scores differs across levels of the predictor",
+        "Normality, because the satisfaction scores are not normally distributed"
+      ],
+      "answer": "Homoscedasticity, because the variability in criterion scores differs across levels of the predictor",
+      "explanation": "The scenario describes heteroscedasticity — the variability in criterion scores (client satisfaction) is much larger at low levels of the predictor (few years of experience) than at high levels. The lesson defines homoscedasticity as meaning 'the variability in your criterion scores should be similar across all levels of your predictor scores' and gives a nearly identical example. Linearity (A) is not the issue here since the question describes variability differences, not a curved relationship. Unrestricted range (B) is not violated since both variables span their full range. Normality (D) is not one of the three critical assumptions of correlation listed in the lesson.",
+      "kn": "KN55",
+      "kn_explanation": "Scatterplot analysis of correlation between two variables is a quantitative analytic method",
+      "difficulty": "medium",
+      "quality_comment": "Excellent application question that requires understanding the conceptual meaning of homoscedasticity rather than just recognizing the term. The scenario closely parallels the lesson example.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### Assumption 3: Homoscedasticity",
+      "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A researcher plots the relationship between a predictor variable (X) and a criterion variable (Y) on a scatterplot. She notices that the spread of Y scores is roughly the same at every level of X, and the data points form a circular cloud with no discernible pattern. Which of the following BEST describes this situation?",
+      "options": [
+        "The variables show a strong linear relationship with homoscedasticity",
+        "The variables show heteroscedasticity with a moderate positive correlation",
+        "The variables show homoscedasticity with a correlation near zero",
+        "The variables show a curvilinear relationship that Pearson's r would accurately capture"
+      ],
+      "answer": "The variables show homoscedasticity with a correlation near zero",
+      "explanation": "When the variability in Y scores is similar across all levels of X (homoscedasticity) and the data form a circular cloud with no discernible pattern, the correlation is near zero. Homoscedasticity means the 'variability in your criterion scores should be similar across all levels of your predictor scores.' A circular cloud pattern indicates no systematic linear relationship. Option A is wrong because a strong linear relationship would show an elongated ellipse, not a circular cloud. Option B is wrong because heteroscedasticity would mean unequal variability across predictor levels. Option D is wrong because Pearson's r would not accurately capture curvilinear relationships.",
+      "kn": "KN55",
+      "kn_explanation": "Analyzing spread of residuals in a scatterplot (heteroscedasticity) is a quantitative analytic/statistical method",
+      "difficulty": "medium",
+      "quality_comment": "Good integration of homoscedasticity concept with correlation strength interpretation. Tests understanding of how scatterplot patterns relate to both assumptions and correlation magnitude.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### Assumption 3: Homoscedasticity",
+      "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "An industrial-organizational psychologist validates a cognitive ability test by correlating test scores with subsequent job performance ratings. However, because only applicants who scored above the 60th percentile were hired, the validation study includes only those employees. The resulting validity coefficient is r = .25. What is the most accurate interpretation of this finding?",
+      "options": [
+        "The test has low predictive validity and should not be used for selection decisions.",
+        "The true validity of the test is likely higher than .25 because restriction of range attenuates the correlation coefficient.",
+        "The coefficient of determination indicates the test explains 25% of variance in job performance.",
+        "The correlation would be lower if the full applicant pool had been included in the validation study."
+      ],
+      "answer": "The true validity of the test is likely higher than .25 because restriction of range attenuates the correlation coefficient.",
+      "explanation": "The correct answer recognizes that validating a test only on hired employees (who scored above a cutoff) restricts the range of scores, which attenuates (reduces) the observed correlation. The lesson explicitly states that restricted range causes correlations to underestimate the true relationship. Option A is incorrect because it fails to account for the range restriction artifact—the low coefficient may not reflect true validity. Option C is incorrect because it confuses the correlation coefficient (.25) with the coefficient of determination; r² = .0625, meaning only 6.25% of variance is explained, not 25%. Option D is incorrect because it reverses the effect—including the full range of scores would increase, not decrease, the correlation.",
+      "kn": "KN55",
+      "kn_explanation": "Correlating test scores with criterion measures involves quantitative analytic methods (correlation/regression)",
+      "difficulty": "hard",
+      "quality_comment": "Integrates restricted range with a realistic employment testing scenario. The r²-confusion distractor (C) targets a common EPPP error pattern. Tests both conceptual understanding and practical application.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### Assumption 2: Unrestricted Range",
+      "lessonExcerpt": "This is crucial for employment testing. If you validate a test only on people who were hired (and thus likely scored well), you're missing the lower range of scores, and your correlation will underestimate the test's true predictive power.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "In a study examining the relationship between education level and job performance, which of the following best describes the role of education as a moderator variable?",
+      "options": [
+        "Education level directly affects job performance without influencing other variables.",
+        "Education level changes the strength or direction of the relationship between job performance and other factors.",
+        "Education level is an independent variable that predicts job performance.",
+        "Education level has no impact on job performance."
+      ],
+      "answer": "Education level changes the strength or direction of the relationship between job performance and other factors.",
+      "explanation": "Education as a moderator variable indicates that it influences how other variables relate to job performance. The first option misrepresents its role, the third option incorrectly categorizes it as an independent variable, and the last option denies any impact, which is incorrect.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to understanding the role of moderator variables in research.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of moderator variables in correlation analysis.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "In multiple regression analysis, what is the purpose of weighting variables?",
+      "options": [
+        "To increase the sample size for more reliable results.",
+        "To adjust the influence of each predictor variable on the outcome variable.",
+        "To eliminate multicollinearity among predictor variables.",
+        "To ensure all variables contribute equally to the model."
+      ],
+      "answer": "To adjust the influence of each predictor variable on the outcome variable.",
+      "explanation": "Weighting variables in multiple regression allows researchers to account for the varying degrees of influence that different predictors have on the outcome. The other options do not accurately describe the purpose of weighting in regression analysis.",
+      "kn": "KN9",
+      "kn_explanation": "This question pertains to the role of weighting variables in regression analysis.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests knowledge of multiple regression techniques.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## Choosing the Right Correlation Coefficient",
+      "lessonExcerpt": "Weighting variables helps to adjust the influence of each predictor variable on the outcome variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "In predictive modeling, which of the following best describes the role of multiple predictor variables?",
+      "options": [
+        "They are used to manipulate the dependent variable directly.",
+        "They help estimate the criterion variable by examining their combined effects.",
+        "They serve solely to increase the complexity of the model.",
+        "They are irrelevant to the outcome of the predictive analysis."
+      ],
+      "answer": "They help estimate the criterion variable by examining their combined effects.",
+      "explanation": "The correct answer is that multiple predictor variables are used to estimate the criterion variable by examining their combined effects. This is fundamental to predictive modeling, where the goal is to understand how various factors influence an outcome. The other options misrepresent the role of predictors in modeling.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies because it relates to understanding the use of multiple variables in predictive analysis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of predictive modeling concepts.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## Why Correlation and Regression Matter for Your Psychology Career",
+      "lessonExcerpt": "These tools help you evaluate whether a new therapy actually works, determine if a psychological test is worth using, and understand research that guides your clinical decisions.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Which statistical method is primarily used for confirming hypotheses about underlying relationships among variables?",
+      "options": [
+        "Regression analysis",
+        "Factor analysis",
+        "Chi-square test",
+        "T-test"
+      ],
+      "answer": "Factor analysis",
+      "explanation": "Factor analysis is specifically designed to identify underlying relationships among variables, making it the correct choice. Regression analysis is used for predicting outcomes, chi-square tests are for categorical data, and t-tests compare means between groups, which do not confirm underlying relationships.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the understanding of statistical methods for hypothesis confirmation.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests advanced understanding of statistical methods.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "Factor analysis is used to confirm hypotheses about underlying relationships among variables.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What is a significant limitation of the Pearson correlation coefficient?",
+      "options": [
+        "It can only be used with nominal data",
+        "It assumes a linear relationship between variables",
+        "It provides information about causation",
+        "It requires a large sample size"
+      ],
+      "answer": "It assumes a linear relationship between variables",
+      "explanation": "The Pearson correlation coefficient assumes a linear relationship, which is a significant limitation. The other options are incorrect as Pearson can be used with interval data, does not imply causation, and does not specifically require a large sample size.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to the limitations of correlation interpretation.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights a key limitation of the Pearson correlation.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### The Three Critical Assumptions",
+      "lessonExcerpt": "The relationship between your variables needs to be linear.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "What does a correlation of 0.85 between IQ scores suggest about the relationship between the two variables?",
+      "options": [
+        "There is a strong positive relationship",
+        "There is a weak negative relationship",
+        "There is no relationship",
+        "There is a strong negative relationship"
+      ],
+      "answer": "There is a strong positive relationship",
+      "explanation": "A correlation of 0.85 indicates a strong positive relationship between the two variables, meaning as one increases, the other tends to increase as well. The other options misinterpret the strength and direction of the correlation.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to the interpretation of correlation.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of correlation interpretation.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "Most correlation coefficients range from -1.0 to +1.0, and a perfect positive correlation means as one variable increases, the other increases.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "In a study examining the relationship between multiple variables, which statistical method is most appropriate for assessing the interrelationships among a set of observed variables?",
+      "options": [
+        "Multiple regression analysis",
+        "Canonical correlation analysis",
+        "Factor analysis",
+        "Path analysis"
+      ],
+      "answer": "Canonical correlation analysis",
+      "explanation": "Canonical correlation analysis is specifically designed to assess the relationships between two sets of variables, making it the correct choice for examining interrelationships among multiple observed variables. Multiple regression analysis focuses on predicting a single dependent variable from multiple independent variables, while factor analysis is used to identify underlying factors among observed variables. Path analysis is used to model relationships among variables but does not specifically assess interrelationships among sets of variables.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies because it relates to understanding advanced statistical methods for analyzing relationships among multiple variables.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests advanced understanding of statistical methods.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## Why Correlation and Regression Matter for Your Psychology Career",
+      "lessonExcerpt": "Canonical correlation is used to assess the relationships between two sets of variables.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "What does the biserial coefficient primarily measure?",
+      "options": [
+        "The strength of the relationship between two continuous variables",
+        "The strength of the relationship between a continuous variable and a dichotomous variable",
+        "The difference between two means",
+        "The variance within a single group"
+      ],
+      "answer": "The strength of the relationship between a continuous variable and a dichotomous variable",
+      "explanation": "The correct answer is 'The strength of the relationship between a continuous variable and a dichotomous variable' because the biserial coefficient is specifically used to assess the correlation between these types of variables. The other options do not accurately describe the purpose of the biserial coefficient.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it pertains to understanding the application of the biserial coefficient in statistical analysis.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of correlation coefficients.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## Choosing the Right Correlation Coefficient",
+      "lessonExcerpt": "The biserial coefficient measures the strength of the relationship between a continuous variable and a dichotomous variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "If a student scores in the 75th percentile on a standardized test, what does this indicate about their performance relative to their peers?",
+      "options": [
+        "They scored higher than 75% of the test-takers.",
+        "They scored lower than 75% of the test-takers.",
+        "They scored exactly at the average level.",
+        "They are in the top 25% of all test-takers."
+      ],
+      "answer": "They scored higher than 75% of the test-takers.",
+      "explanation": "A percentile rank indicates the percentage of scores that fall below a particular score. Therefore, scoring in the 75th percentile means the student performed better than 75% of their peers. The other options misinterpret the meaning of percentile ranks.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to understanding percentile ranks, which is a fundamental concept in statistics.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of percentile ranks and their interpretation.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "A percentile rank indicates the percentage of scores that fall below a particular score.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "In the context of correlation, what does it mean for two variables to be orthogonal?",
+      "options": [
+        "They have a perfect positive correlation.",
+        "They have no correlation at all.",
+        "They are negatively correlated.",
+        "They are correlated but not causally related."
+      ],
+      "answer": "They have no correlation at all.",
+      "explanation": "Orthogonality in statistics refers to the condition where two variables are uncorrelated, meaning they do not influence each other. The other options describe different types of relationships that do not fit the definition of orthogonality.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses understanding of the concept of orthogonality in correlation.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a deep understanding of correlation concepts.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "Orthogonality refers to the condition where two variables are uncorrelated.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What does an inverted U relationship between two variables indicate about their correlation?",
+      "options": [
+        "There is a perfect positive correlation.",
+        "There is a perfect negative correlation.",
+        "The relationship is non-linear, with optimal performance at a moderate level of one variable.",
+        "There is no relationship between the variables."
+      ],
+      "answer": "The relationship is non-linear, with optimal performance at a moderate level of one variable.",
+      "explanation": "An inverted U relationship suggests that as one variable increases, the other variable increases to a point (optimal level) and then begins to decrease, indicating a non-linear correlation. The other options misinterpret the nature of the relationship.",
+      "kn": "KN4",
+      "kn_explanation": "This question tests the understanding of inverted U relationships and their implications for correlation.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively challenges the test-taker's understanding of complex relationships in correlation.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### Assumption 1: Linear Relationships",
+      "lessonExcerpt": "At very low anxiety, performance might be poor... At moderate anxiety, performance peaks... At very high anxiety, performance drops again... This creates a curved, inverted-U relationship.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "In the context of test validity, what does a high correlation between a test and an established measure indicate?",
+      "options": [
+        "The test is reliable but not necessarily valid.",
+        "The test is valid and reliable.",
+        "The test is valid but not reliable.",
+        "The test is neither valid nor reliable."
+      ],
+      "answer": "The test is valid and reliable.",
+      "explanation": "A high correlation with an established measure suggests that the test accurately measures what it claims to measure (validity) and produces consistent results (reliability). The other options misinterpret the implications of high correlation.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the relationship between correlation, validity, and reliability.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively tests knowledge of test validity.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "A high correlation between a test and an established measure indicates that the test is valid and reliable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What does partial correlation measure in correlation analysis?",
+      "options": [
+        "The relationship between two variables while controlling for a third variable.",
+        "The overall strength of the relationship between all variables involved.",
+        "The direct relationship between two variables without any controls.",
+        "The relationship between two variables in a non-linear context."
+      ],
+      "answer": "The relationship between two variables while controlling for a third variable.",
+      "explanation": "The correct answer defines partial correlation accurately, indicating that it assesses the relationship between two variables while accounting for the influence of a third variable. The other options misrepresent the concept of partial correlation.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the concept of partial correlation in correlation analysis.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and tests knowledge of correlation analysis.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "Partial correlation measures the relationship between two variables while controlling for a third variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    }
+  ]
+}

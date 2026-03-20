@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "What is echolalia, and how does it manifest in child development?",
+      "options": [
+        "The ability to create original sentences",
+        "Repetition of phrases or sentences heard from others",
+        "The use of sign language for communication",
+        "A delay in speech development"
+      ],
+      "answer": "Repetition of phrases or sentences heard from others",
+      "explanation": "Echolalia is characterized by the repetition of phrases or sentences that a child hears, often as a part of language acquisition. The other options do not accurately describe this phenomenon.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically in understanding language acquisition.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of language development.",
+      "suggestedLesson": "1-sensory-perception",
+      "suggestedParagraph": "## The Foundation: Sensation vs. Perception",
+      "lessonExcerpt": "Echolalia is characterized by the repetition of phrases or sentences that a child hears.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "According to the gate control theory of pain perception, what mechanism is primarily responsible for modulating pain signals?",
+      "options": [
+        "Endorphin release",
+        "Cognitive appraisal",
+        "Spinal cord gating",
+        "Peripheral nerve damage"
+      ],
+      "answer": "Spinal cord gating",
+      "explanation": "Gate control theory posits that pain signals are modulated at the spinal cord level, where certain signals can be 'gated' or blocked. Endorphin release can influence pain but is not the primary mechanism described by the theory. Cognitive appraisal and peripheral nerve damage are not directly related to the gating mechanism.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior and pain perception theories.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of pain perception mechanisms.",
+      "suggestedLesson": "1-sensory-perception",
+      "suggestedParagraph": "## Pain Perception: Theories and Mechanisms",
+      "lessonExcerpt": "Understanding pain perception involves recognizing how signals can be modulated at the spinal cord level.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    }
+  ]
+}

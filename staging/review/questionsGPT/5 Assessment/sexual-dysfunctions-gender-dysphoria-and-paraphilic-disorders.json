@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A 7-year-old biological male is brought to a psychologist by concerned parents. The child consistently insists on wearing dresses, prefers playing with dolls, exclusively chooses female playmates, and has expressed a strong desire to be a girl for the past 8 months. According to DSM-5-TR criteria, how many of the specified symptoms must be present to diagnose gender dysphoria in children?",
+      "options": [
+        "At least 2 of 6 specified symptoms for 6 or more months",
+        "At least 4 of 8 specified symptoms for 6 or more months",
+        "At least 6 of 8 specified symptoms for 6 or more months",
+        "At least 3 of 5 specified symptoms for 12 or more months"
+      ],
+      "answer": "At least 6 of 8 specified symptoms for 6 or more months",
+      "explanation": "The DSM-5-TR requires children to meet 6 of 8 specified symptoms for at least 6 months for a diagnosis of gender dysphoria. This threshold is higher than for adolescents/adults, who need only 2 of 6 symptoms, because children express gender identity through observable behaviors (toy preferences, clothing choices, playmate selection) rather than through the more articulate self-awareness available to older individuals. Option A (2 of 6) describes the adolescent/adult criteria. Options B and D are fabricated thresholds.",
+      "kn": "KN36",
+      "kn_explanation": "Question involves diagnosing Gender Dysphoria in a child using DSM classification criteria, fitting classification systems and evaluation of client functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests a high-yield diagnostic threshold distinction between child and adult criteria that commonly appears on the EPPP.",
+      "suggestedLesson": "5-sex-and-gender",
+      "suggestedParagraph": "### Diagnostic Criteria Across Ages",
+      "lessonExcerpt": "**For Children** (need 6 of 8 symptoms for 6+ months): Strong desire to be another gender, Strong preference for cross-gender clothing, Preference for cross-gender roles in play, Preference for toys/activities typical of other gender, Preference for playmates of other gender, Rejection of own anatomy, Strong desire for physical sex characteristics of other gender, General distress about assigned gender",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
+    }
+  ]
+}

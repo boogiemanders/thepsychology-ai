@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A developmental psychologist is reviewing epidemiological data on autism spectrum disorder (ASD) for a grant proposal. Based on current prevalence estimates, which of the following statements most accurately describes the sex distribution of ASD diagnoses?",
+      "options": [
+        "Females are diagnosed approximately twice as often as males",
+        "Males and females are diagnosed at approximately equal rates",
+        "Males are diagnosed three to four times more often than females",
+        "Males are diagnosed ten times more often than females"
+      ],
+      "answer": "Males are diagnosed three to four times more often than females",
+      "explanation": "Research consistently shows that males receive ASD diagnoses 3-4 times more often than females. This is one of the most well-established epidemiological findings in developmental psychology. Option A reverses the sex ratio. Option B incorrectly suggests equal rates. Option D exaggerates the male predominance — while the ratio is significant, it is not as extreme as 10:1.",
+      "kn": "KN38",
+      "kn_explanation": "The question asks about epidemiological data and prevalence rates of a psychological disorder (ASD), which directly maps to KN38: Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward factual recall question testing a frequently examined epidemiological fact about ASD.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "### Prevalence and Gender Differences",
+      "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A child psychologist is conducting an initial evaluation of a 9-year-old boy who was referred for multiple motor tics (eye blinking, shoulder shrugging) and one vocal tic (throat clearing) that have been present for 18 months. The psychologist should be MOST alert to the possible co-occurrence of which condition?",
+      "options": [
+        "Obsessive-compulsive disorder",
+        "Specific learning disorder",
+        "Attention-deficit/hyperactivity disorder",
+        "Separation anxiety disorder"
+      ],
+      "answer": "Attention-deficit/hyperactivity disorder",
+      "explanation": "ADHD is the most common comorbid disorder with Tourette's disorder. The child described meets criteria for Tourette's (multiple motor tics AND at least one vocal tic persisting for more than one year with onset before age 18), so the psychologist should screen for ADHD. While OCD is also commonly associated with Tourette's, ADHD is specifically identified as the most common comorbidity. Specific learning disorder and separation anxiety disorder are not as strongly associated with Tourette's.",
+      "kn": "KN5",
+      "kn_explanation": "Tourette's disorder comorbidity patterns fall under the Diagnosis subdomain of Assessment and Diagnosis",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific knowledge of Tourette's most common comorbidity rather than just recognition of tic disorders",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "### The Three Tic Disorder Diagnoses",
+      "lessonExcerpt": "ADHD is the most common comorbid disorder with Tourette's.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    }
+  ]
+}

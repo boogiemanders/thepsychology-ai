@@ -1,0 +1,508 @@
+{
+  "questions": [
+    {
+      "stem": "A 4-year-old child watches as a researcher pours water from a short, wide glass into a tall, narrow glass. The child insists that the tall glass now contains more water. This error is best explained by which characteristic of Piaget's preoperational stage?",
+      "options": [
+        "Transductive reasoning, in which the child assumes that co-occurring events are causally linked",
+        "Centration, in which the child focuses on one perceptual dimension while ignoring others",
+        "Animism, in which the child attributes living qualities to inanimate objects",
+        "Egocentrism, in which the child cannot take another person's perspective"
+      ],
+      "answer": "Centration, in which the child focuses on one perceptual dimension while ignoring others",
+      "explanation": "The classic conservation task error occurs because preoperational children exhibit centration—they focus on one salient perceptual feature (the height of the water) while ignoring another relevant dimension (the width of the glass). This, combined with irreversibility, prevents them from understanding conservation. Transductive reasoning (A) involves assuming causal relationships between co-occurring events, not perceptual focus. Animism (C) involves attributing life to inanimate objects, which is unrelated to conservation. Egocentrism (D) involves difficulty understanding others' perspectives, not perceptual judgments about quantities.",
+      "kn": "KN23",
+      "kn_explanation": "Conservation task illustrates Piaget's preoperational stage — a major research-based developmental theory",
+      "difficulty": "medium",
+      "quality_comment": "Classic conservation task scenario with distractors drawn from other preoperational characteristics to test precise understanding.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others... The preoperational child will say the tall glass has more water because they focus on the water level, not the total amount.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A child who has learned the concept of \"dog\" by interacting with the family's golden retriever encounters a Labrador for the first time and immediately calls it a \"dog.\" According to Piaget, the child is engaging in the process of:",
+      "options": [
+        "Accommodation",
+        "Assimilation",
+        "Equilibration",
+        "Decentration"
+      ],
+      "answer": "Assimilation",
+      "explanation": "Assimilation involves fitting new information into existing mental frameworks (schemas). The child is applying the existing 'dog' schema to a new but similar stimulus without modifying the schema. Accommodation (A) would involve changing or creating new schemas when existing ones don't work, such as learning that a cat is not a dog and creating a separate 'cat' schema. Equilibration (C) is the broader drive toward cognitive balance that encompasses both assimilation and accommodation. Decentration (D) refers to the ability to focus on multiple aspects of a situation simultaneously, a concrete operational achievement.",
+      "kn": "KN23",
+      "kn_explanation": "Assimilation of new exemplar into existing schema is a core Piagetian concept — a major developmental theory",
+      "difficulty": "easy",
+      "quality_comment": "Classic Piagetian concept with a clear, concrete example. Well-differentiated distractors from within Piaget's framework.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "**Assimilation** means fitting new information into existing mental frameworks (schemas).",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A 5-year-old child is shown two rows of eight pennies each, arranged identically. When the experimenter spreads out the pennies in one row so they cover a wider area, the child says that row now has \"more pennies.\" This error is BEST explained by Piaget's concept of:",
+      "options": [
+        "Egocentrism",
+        "Transductive reasoning",
+        "Centration",
+        "Animism"
+      ],
+      "answer": "Centration",
+      "explanation": "Centration is the tendency to focus on one perceptual aspect of a situation while ignoring other relevant dimensions. The child focuses on the spatial extent (how spread out the row is) while ignoring the number of pennies, leading to a failure in conservation. Egocentrism (A) involves difficulty understanding that others experience things differently, not perceptual focusing errors on physical tasks. Transductive reasoning (B) involves believing that events occurring together are causally related. Animism (D) involves attributing life to inanimate objects. While all are preoperational limitations, centration specifically explains conservation failures.",
+      "kn": "KN23",
+      "kn_explanation": "Number conservation task is another classic Piagetian preoperational-stage demonstration — a major developmental theory",
+      "difficulty": "medium",
+      "quality_comment": "Applied scenario requiring identification of the specific cognitive limitation. All distractors are genuine preoperational limitations, increasing discrimination difficulty.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "**Centration**: Focusing on one aspect while ignoring others",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "A school psychologist is consulting with a second-grade teacher about a 7-year-old student who has recently begun organizing her rock collection by size, weight, and color simultaneously. She can also understand that rearranging the rocks in her collection does not change the total number. According to Piaget, this child's cognitive abilities are MOST consistent with the transition into which stage of development?",
+      "options": [
+        "Preoperational stage, characterized by symbolic representation and centration",
+        "Concrete operational stage, characterized by logical operations applied to tangible situations",
+        "Formal operational stage, characterized by hypothetical-deductive reasoning",
+        "Sensorimotor stage, characterized by object permanence and representational thought"
+      ],
+      "answer": "Concrete operational stage, characterized by logical operations applied to tangible situations",
+      "explanation": "The concrete operational stage spans ages 7 to 12 years. At this stage, children can classify objects by physical characteristics, order items by quantitative dimensions, and perform conservation tasks. This 7-year-old's ability to organize rocks by multiple dimensions simultaneously reflects decentration (focusing on multiple aspects), and understanding that rearranging doesn't change the number reflects conservation. Option A is incorrect because the preoperational stage (ages 2-7) is characterized by centration and inability to conserve. Option C is incorrect because formal operations (age 12+) involves abstract, hypothetical reasoning beyond what is described. Option D is incorrect because the sensorimotor stage (birth to 2 years) involves understanding the world through sensation and movement.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of Piaget's stage theory, a major research-based theory of cognitive development.",
+      "difficulty": "easy",
+      "quality_comment": "Clear vignette mapping to concrete operational abilities with age-appropriate scenario. All distractors are other Piagetian stages.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
+      "lessonExcerpt": "Concrete Operational Stage (7 to 12 years) - Children can now use logical operations. Mental activities that allow logical thinking about concrete situations. They can: Classify objects by physical characteristics, Order items by quantitative dimensions, Perform mathematical operations, Conserve (finally!)",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A 4-year-old child tells her father that the sun went to sleep because it was tired. This statement best illustrates which characteristic of preoperational thought?",
+      "options": [
+        "Egocentrism",
+        "Animism",
+        "Transductive reasoning",
+        "Centration"
+      ],
+      "answer": "Animism",
+      "explanation": "Animism is the preoperational tendency to attribute life and lifelike qualities (such as feelings, intentions, and fatigue) to inanimate objects. The child is attributing the human experience of tiredness and sleeping to the sun. Egocentrism involves difficulty understanding others' perspectives, not attributing life to objects. Transductive reasoning involves believing co-occurring events are causally related. Centration refers to focusing on one perceptual aspect while ignoring others, typically demonstrated in conservation tasks.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses cognitive development in the preoperational stage, a core Growth and Lifespan Development topic.",
+      "difficulty": "medium",
+      "quality_comment": "Classic application-level question requiring differentiation among preoperational characteristics with a clear clinical vignette.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
+      "lessonExcerpt": "Animism: Attributing life to inanimate objects",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A child who insists that the wind is angry because it knocked over her bicycle is most likely in which of Piaget's stages of cognitive development?",
+      "options": [
+        "Sensorimotor",
+        "Preoperational",
+        "Concrete operational",
+        "Formal operational"
+      ],
+      "answer": "Preoperational",
+      "explanation": "Animistic thinking—attributing emotions and intentions to inanimate objects or natural forces—is a hallmark of the preoperational stage (ages 2-7). The child is attributing anger to the wind. Sensorimotor children (birth to 2) understand the world through sensation and action and have not yet developed symbolic thought to this degree. Concrete operational children (7-12) use logical operations and have largely overcome animistic thinking. Formal operational thinkers (12+) engage in abstract and hypothetical reasoning.",
+      "kn": "KN4",
+      "kn_explanation": "This question tests knowledge of Piaget's stages, a fundamental Growth and Lifespan Development topic.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward identification question linking animism to the correct Piagetian stage. Good foundational-level item.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
+      "lessonExcerpt": "Animism: Attributing life to inanimate objects",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A 72-year-old retired professor takes longer to recall names and learns new technology more slowly than before, but continues to lecture brilliantly on her area of expertise and maintains strong vocabulary skills. This pattern is MOST consistent with:",
+      "options": [
+        "Early-stage Alzheimer's disease",
+        "Normal age-related cognitive changes",
+        "Vascular dementia",
+        "Major neurocognitive disorder due to frontotemporal degeneration"
+      ],
+      "answer": "Normal age-related cognitive changes",
+      "explanation": "Normal aging is characterized by gradual declines in processing speed, working memory, and new learning (fluid abilities) while crystallized abilities such as vocabulary, accumulated knowledge, and expertise remain intact or even improve. This professor shows exactly this pattern—slower name retrieval and difficulty with novel technology alongside preserved expert knowledge. Alzheimer's disease would involve progressive decline across multiple cognitive domains including episodic memory, eventually impairing daily functioning. Vascular dementia typically presents with stepwise deterioration and focal neurological signs. Frontotemporal degeneration would involve prominent personality changes or language deterioration beyond what is described.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses age-related cognitive changes across the lifespan, a core developmental psychology topic.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that requires distinguishing normal aging from pathological processes. Tests applied understanding rather than rote recall.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss. This process accelerates after age 60.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "At what age do children typically begin to demonstrate operational thought according to Piaget's theory?",
+      "options": [
+        "2 to 7 years",
+        "7 to 12 years",
+        "12 to 18 years",
+        "18 years and older"
+      ],
+      "answer": "7 to 12 years",
+      "explanation": "According to Piaget's theory, children enter the Concrete Operational Stage at ages 7 to 12, where they begin to think logically about concrete events. The other age ranges do not correspond to the development of operational thought.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to cognitive development and the stages outlined by Piaget.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of Piaget's stages of cognitive development.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## The Big Three Theories You Need to Know",
+      "lessonExcerpt": "Children can now use logical operations. Mental activities that allow logical thinking about concrete situations.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "At what stage of cognitive development, according to Piaget, do children begin to exhibit animistic thinking, where they attribute life to inanimate objects?",
+      "options": [
+        "Sensorimotor Stage",
+        "Preoperational Stage",
+        "Concrete Operational Stage",
+        "Formal Operational Stage"
+      ],
+      "answer": "Preoperational Stage",
+      "explanation": "The correct answer is the Preoperational Stage, where children engage in animistic thinking, believing that inanimate objects have feelings and intentions. The Sensorimotor Stage focuses on sensory experiences and motor actions, while the Concrete Operational Stage involves logical thinking about concrete events. The Formal Operational Stage is characterized by abstract reasoning. Thus, the Preoperational Stage is the only option that aligns with the concept of animistic thinking.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies because it relates to cognitive development theories, specifically Piaget's stages.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of Piaget's theory and animistic thinking.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "Children in the Preoperational Stage exhibit magical thinking and animism, attributing life to inanimate objects.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Which of the following is NOT one of Piaget's stages of cognitive development?",
+      "options": [
+        "Sensorimotor Stage",
+        "Preoperational Stage",
+        "Social Interaction Stage",
+        "Concrete Operational Stage"
+      ],
+      "answer": "Social Interaction Stage",
+      "explanation": "The correct answer is the Social Interaction Stage, which is not one of Piaget's identified stages. Piaget proposed four stages: Sensorimotor, Preoperational, Concrete Operational, and Formal Operational. The other options are all valid stages in Piaget's theory.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to Piaget's stages of cognitive development.",
+      "difficulty": "hard",
+      "quality_comment": "The question tests knowledge of Piaget's stages and distinguishes between correct and incorrect options effectively.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "Piaget proposed four universal stages that emerge in the same order for everyone.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "In Piaget's theory of cognitive development, what does the process of accommodation involve?",
+      "options": [
+        "Fitting new information into existing schemas",
+        "Changing existing schemas to incorporate new information",
+        "Ignoring new information",
+        "Reinforcing existing knowledge"
+      ],
+      "answer": "Changing existing schemas to incorporate new information",
+      "explanation": "The correct answer is 'Changing existing schemas to incorporate new information' because accommodation refers to the modification of existing cognitive structures to adapt to new experiences. The other options describe different cognitive processes.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to Piaget's theory of cognitive development.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of Piaget's concepts.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "What is a characteristic of egocentrism in Piaget's preoperational stage of cognitive development?",
+      "options": [
+        "Ability to understand others' perspectives",
+        "Difficulty in understanding that others have different viewpoints",
+        "Recognition of shared experiences",
+        "Capacity for logical reasoning"
+      ],
+      "answer": "Difficulty in understanding that others have different viewpoints",
+      "explanation": "The correct answer is 'Difficulty in understanding that others have different viewpoints' as egocentrism refers to the inability of children in the preoperational stage to see things from perspectives other than their own. The other options describe abilities that develop later.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it relates to Piaget's stages of cognitive development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of Piaget's concepts effectively.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## The Big Three Theories You Need to Know",
+      "lessonExcerpt": "Egocentrism: Difficulty understanding that others experience things differently.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What cognitive decline is commonly observed in aging adults as measured by the WAIS-IV?",
+      "options": [
+        "Increased verbal comprehension",
+        "Decreased processing speed",
+        "Enhanced working memory",
+        "Improved fluid intelligence"
+      ],
+      "answer": "Decreased processing speed",
+      "explanation": "The correct answer is 'Decreased processing speed' as aging is associated with slower cognitive processing, which is a common finding in WAIS-IV assessments. The other options do not accurately reflect typical cognitive changes in aging.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it relates to cognitive decline in aging as measured by standardized tests.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and tests knowledge of cognitive aging.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "According to Piaget's theory of cognitive development, which stage is characterized by children's understanding of rules as fixed and unchangeable, primarily judging actions by their consequences rather than intentions?",
+      "options": [
+        "Premoral Stage",
+        "Heteronomous Stage",
+        "Autonomous Stage",
+        "Concrete Operational Stage"
+      ],
+      "answer": "Heteronomous Stage",
+      "explanation": "The Heteronomous Stage is where children understand that rules exist but believe they are handed down by authorities and cannot be changed. In contrast, the Premoral Stage lacks a grasp of rules, the Autonomous Stage involves understanding rules as mutual agreements, and the Concrete Operational Stage focuses on logical operations rather than moral reasoning.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies because it relates to Piaget's stages of moral development, which is part of cognitive development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of Piaget's stages and requires understanding of moral reasoning.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## The Foundation: Piaget's Three-Stage Theory",
+      "lessonExcerpt": "The key feature of this stage is moral realism – kids judge actions purely by their consequences, not by intentions.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "In Piaget's theory of cognitive development, which stage is characterized by the ability to perform operations mentally rather than physically?",
+      "options": [
+        "Sensorimotor Stage",
+        "Preoperational Stage",
+        "Concrete Operational Stage",
+        "Formal Operational Stage"
+      ],
+      "answer": "Concrete Operational Stage",
+      "explanation": "The Concrete Operational Stage, occurring between ages 7 to 12, is characterized by the ability to perform mental operations and understand concepts such as conservation. The other stages do not emphasize mental operations to the same extent.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to Piaget's stages of cognitive development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of Piaget's cognitive development stages.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "During the Concrete Operational Stage (7 to 12 years), children can now use logical operations.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "What cognitive ability is primarily associated with the development of theory of mind in early childhood?",
+      "options": [
+        "Understanding that others have different thoughts and feelings",
+        "Ability to perform logical operations",
+        "Recognition of object permanence",
+        "Use of symbolic play"
+      ],
+      "answer": "Understanding that others have different thoughts and feelings",
+      "explanation": "Theory of mind refers to the understanding that others have their own thoughts, beliefs, and feelings, which is a crucial cognitive ability that develops in early childhood. The ability to perform logical operations is associated with Piaget's Concrete Operational Stage, while object permanence relates to the Sensorimotor Stage, and symbolic play is a manifestation of representational thought.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to cognitive development, specifically the emergence of theory of mind.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and targets a specific cognitive development milestone.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## The Big Three Theories You Need to Know",
+      "lessonExcerpt": "Theory of mind refers to the understanding that others have their own thoughts, beliefs, and feelings.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "What cognitive issue is commonly observed in elderly individuals related to memory retrieval?",
+      "options": [
+        "Increased speed of memory retrieval",
+        "Difficulty in recalling specific details",
+        "Enhanced memory for recent events",
+        "Improved working memory capacity"
+      ],
+      "answer": "Difficulty in recalling specific details",
+      "explanation": "Elderly individuals often experience difficulty in recalling specific details, which is a common cognitive issue associated with aging. The other options incorrectly suggest improvements or enhancements in memory.",
+      "kn": "KN11",
+      "kn_explanation": "This KN code applies as it relates to cognitive aging and memory issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of cognitive aging.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following cognitive changes is most commonly associated with aging?",
+      "options": [
+        "Improved problem-solving skills",
+        "Increased processing speed",
+        "Decline in working memory",
+        "Enhanced verbal skills"
+      ],
+      "answer": "Decline in working memory",
+      "explanation": "A common cognitive change associated with aging is a decline in working memory, which affects the ability to hold and manipulate information. The other options incorrectly suggest improvements or enhancements.",
+      "kn": "KN12",
+      "kn_explanation": "This KN code applies as it relates to cognitive aging and changes in cognitive abilities.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of cognitive changes with aging.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "The frontal lobes (especially that prefrontal cortex) and parietal lobes show the greatest decrease in size.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "According to Vygotsky's theory, what is the 'zone of proximal development'?",
+      "options": [
+        "The range of tasks that a child can perform independently",
+        "The difference between what a child can do alone and what they can do with help",
+        "The level of development a child has already achieved",
+        "The maximum potential a child can reach with guidance"
+      ],
+      "answer": "The difference between what a child can do alone and what they can do with help",
+      "explanation": "The zone of proximal development (ZPD) refers to the gap between what a child can achieve independently and what they can achieve with guidance from a more knowledgeable other. The other options do not accurately describe the ZPD.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to Vygotsky's theories of cognitive development.",
+      "difficulty": "hard",
+      "quality_comment": "The question is clear and tests understanding of a key concept in Vygotsky's theory.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
+      "lessonExcerpt": "The difference between what a child can do alone and what they can do with help.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "In Piaget's constructivist theory, what is the process called when a child modifies their existing schemas to incorporate new information?",
+      "options": [
+        "Assimilation",
+        "Accommodation",
+        "Equilibration",
+        "Adaptation"
+      ],
+      "answer": "Accommodation",
+      "explanation": "Accommodation is the process by which a child modifies their existing schemas to incorporate new information that does not fit into their current understanding. Assimilation involves fitting new information into existing schemas, while equilibration is the overall process of balancing assimilation and accommodation.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to cognitive development and Piaget's theories.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of Piaget's theory.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "What cognitive abilities typically decline with aging, according to research?",
+      "options": [
+        "Memory and processing speed",
+        "Creativity and problem-solving",
+        "Emotional intelligence and empathy",
+        "Social skills and communication"
+      ],
+      "answer": "Memory and processing speed",
+      "explanation": "The correct answer is 'Memory and processing speed', as research indicates that these cognitive abilities often decline with aging. The other options may not show the same level of decline or may even improve with age.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies because it relates to cognitive development and aging.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of cognitive changes associated with aging.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss, affecting memory and processing speed.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "At what age do infants typically begin to demonstrate the understanding of object permanence, according to Piaget's theory?",
+      "options": [
+        "At birth",
+        "Around 4-8 months",
+        "Between 8-12 months",
+        "After 12 months"
+      ],
+      "answer": "Between 8-12 months",
+      "explanation": "The correct answer is that object permanence begins to develop around 8-12 months of age, as infants start to understand that objects continue to exist even when they cannot be seen. The other options do not accurately reflect Piaget's stages of cognitive development.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to cognitive development, specifically Piaget's stages.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of cognitive development milestones.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## The Big Three Theories You Need to Know",
+      "lessonExcerpt": "Object permanence begins around 8-12 months.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "During which stage of Piaget's cognitive development do children begin to engage in symbolic play and develop representational thought?",
+      "options": [
+        "Sensorimotor stage",
+        "Preoperational stage",
+        "Concrete operational stage",
+        "Formal operational stage"
+      ],
+      "answer": "Preoperational stage",
+      "explanation": "The correct answer is the Preoperational stage, where children engage in symbolic play and develop representational thought. The Sensorimotor stage focuses on sensory and motor interactions, while the Concrete and Formal operational stages involve more advanced logical thinking.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to cognitive development and Piaget's stages.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of Piaget's stages of cognitive development.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "During the Preoperational stage, children engage in symbolic play and develop representational thought.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "In developmental psychology, what does the term 'decalage' refer to?",
+      "options": [
+        "The uneven development of cognitive abilities.",
+        "The process of synaptic pruning.",
+        "The stages of moral development.",
+        "The impact of environmental factors on development."
+      ],
+      "answer": "The uneven development of cognitive abilities.",
+      "explanation": "Decalage refers to the phenomenon where different cognitive abilities develop at different rates, which is a key concept in understanding cognitive development. The other options do not accurately describe decalage.",
+      "kn": "KN4",
+      "kn_explanation": "This question tests knowledge of developmental psychology concepts, specifically cognitive development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of decalage in cognitive development.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## The Big Three Theories You Need to Know",
+      "lessonExcerpt": "Decalage refers to the uneven development of cognitive abilities.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 24
+    }
+  ]
+}

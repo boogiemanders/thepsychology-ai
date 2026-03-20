@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist administers an IQ test that has a standard deviation of 15 and a reliability coefficient of .91. She calculates the standard error of measurement (SEM) to be 4.5. The SEM value of 4.5 is expressed in:",
+      "options": [
+        "Standard deviation units",
+        "The same units as the test's raw or standard scores",
+        "Percentile rank units",
+        "Correlation coefficient units"
+      ],
+      "answer": "The same units as the test's raw or standard scores",
+      "explanation": "The SEM is calculated using the formula SEM = SD × √(1 - reliability). Since it is derived by multiplying the test's standard deviation by a scalar value, the resulting SEM is expressed in the same metric (units) as the test scores themselves. In this case, the test uses IQ points with SD = 15, so the SEM of 4.5 is in IQ points. It is not in standard deviation units (which would be a z-score-like metric), not in percentile ranks (a different scale entirely), and not in correlation coefficient units (which are dimensionless values between -1 and +1).",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of measurement is a core psychometric concept related to reliability and test characteristics.",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual question grounded in the SEM formula from the lesson. The lesson clearly shows SEM derived from the SD, implying shared units.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
+      "lessonExcerpt": "SEM = SD × √(1 - Reliability coefficient)... Example calculation: Test has SD = 15 and reliability = .91, SEM = 15 × √(1 - .91) = 15 × √.09 = 15 × .3 = 4.5",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Two clinicians independently diagnose 100 patients using the same structured diagnostic interview. Their inter-rater agreement yields a Cohen's Kappa of .85. This coefficient indicates that:",
+      "options": [
+        "The two raters agreed on 85% of their diagnoses",
+        "The raters demonstrated high agreement beyond what would be expected by chance alone",
+        "85% of the variance in diagnoses is attributable to true diagnostic differences",
+        "The diagnostic interview has a reliability coefficient of .85"
+      ],
+      "answer": "The raters demonstrated high agreement beyond what would be expected by chance alone",
+      "explanation": "Cohen's Kappa is specifically described in the lesson as 'a more sophisticated measure that corrects for chance agreement.' A Kappa of .85 indicates high inter-rater agreement after accounting for the agreement that would occur by chance. Option A confuses Kappa with simple percent agreement — Kappa adjusts for chance, so .85 does not mean 85% raw agreement. Option C confuses Kappa with a reliability coefficient interpreted as variance explained; Kappa is an agreement index, not a variance-partitioning statistic. Option D incorrectly equates inter-rater Kappa with the test's overall reliability coefficient — Kappa measures agreement between specific raters, not the test's general reliability.",
+      "kn": "KN29",
+      "kn_explanation": "Cohen's Kappa and inter-rater reliability are psychometric properties covering reliability of measurement.",
+      "difficulty": "medium",
+      "quality_comment": "Clean question that tests conceptual understanding of Kappa versus simple percent agreement, well-grounded in lesson content.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### 4. Inter-Rater Reliability: Consistency Across Scorers",
+      "lessonExcerpt": "Cohen's Kappa: A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale (categories with no inherent order).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A psychologist is evaluating a cognitive ability test that has a standard deviation of 15. She notes that the standard error of measurement (SEM) for this test could theoretically range from:",
+      "options": [
+        "0.0 to 1.0",
+        "0.0 to 15",
+        "-15 to +15",
+        "0.0 to 225"
+      ],
+      "answer": "0.0 to 15",
+      "explanation": "The SEM ranges from 0.0 to the standard deviation of the test (SDx). When reliability is perfect (1.0), SEM = SD × √(1-1.0) = 0. When reliability is 0, SEM = SD × √(1-0) = SD. Therefore, for a test with SD = 15, SEM ranges from 0 to 15. Option A (0 to 1.0) confuses SEM range with the range of the reliability coefficient itself. Option C (-15 to +15) incorrectly applies the range of a correlation coefficient. Option D (0 to 225) confuses SEM with variance (SD²).",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of measurement and standard deviation are fundamental psychometric/test characteristics.",
+      "difficulty": "hard",
+      "quality_comment": "Tests understanding of the mathematical relationship between SEM, reliability, and SD — a frequently tested psychometric concept.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
+      "lessonExcerpt": "The standard error of the measurement has a range from 0.0 to SDx.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A graduate student is studying psychometric principles and reads that the Spearman-Brown prophecy formula is used in split-half reliability to correct for the fact that shorter tests are less reliable. This principle reflects the broader psychometric finding that increasing test length:",
+      "options": [
+        "Increases both reliability and validity, with validity always exceeding reliability",
+        "Increases reliability but has no effect on validity",
+        "Increases reliability, and because reliability sets a ceiling on validity, can also increase the maximum possible validity",
+        "Decreases reliability due to respondent fatigue but increases validity through broader content sampling"
+      ],
+      "answer": "Increases reliability, and because reliability sets a ceiling on validity, can also increase the maximum possible validity",
+      "explanation": "Adding more items to a test increases reliability (as demonstrated by the Spearman-Brown formula, which corrects split-half reliability upward to estimate full-test reliability). Since reliability sets a ceiling on validity (maximum validity = √reliability), increasing reliability through greater test length also raises the maximum possible validity. Option A is wrong because validity cannot exceed the reliability index (√reliability), not reliability itself. Option B is partially correct about reliability increasing but wrong that there is no effect on validity — the ceiling effect means increased reliability can permit higher validity. Option D reverses the effect on reliability; while fatigue is a practical concern, the psychometric principle is that more items increase reliability.",
+      "kn": "KN29",
+      "kn_explanation": "Spearman-Brown prophecy formula and split-half reliability are core psychometric theories and reliability concepts.",
+      "difficulty": "hard",
+      "quality_comment": "Integrates two related psychometric principles — Spearman-Brown correction and the reliability ceiling on validity — into one applied question.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### 3. Internal Consistency Reliability: Do the Items Work Together?",
+      "lessonExcerpt": "Because shorter tests are less reliable, split-half gives you the reliability of two half-length tests. The Spearman-Brown formula corrects this to estimate the full test's reliability... A test's reliability always sets a ceiling on its validity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A test developer is deciding between classical test theory (CTT) and item response theory (IRT) for constructing a new adaptive screening measure. Which characteristic of IRT represents its PRIMARY advantage over CTT for this application?",
+      "options": [
+        "IRT produces more reliable total scores across all ability levels",
+        "IRT item parameters remain stable across different examinee samples",
+        "IRT requires smaller sample sizes for item calibration",
+        "IRT eliminates the need for establishing test-retest reliability"
+      ],
+      "answer": "IRT item parameters remain stable across different examinee samples",
+      "explanation": "The primary advantage of IRT over CTT is that IRT is sample-invariant—item properties (difficulty, discrimination, guessing parameters) remain stable across different groups of examinees. This is essential for adaptive testing because items are selected from an item bank and administered to diverse populations. In CTT, item statistics are sample-dependent, meaning they change depending on who takes the test. IRT does not necessarily produce more reliable total scores at all levels, does not require smaller samples (it typically requires larger ones), and does not eliminate the need for reliability assessment.",
+      "kn": "KN5",
+      "kn_explanation": "IRT vs. CTT comparisons are a core test construction topic within the Assessment domain",
+      "difficulty": "hard",
+      "quality_comment": "Targets the specific sample-invariance property that makes IRT suitable for adaptive testing, requiring deeper understanding beyond surface-level comparison",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Item Response Theory: The Modern Alternative",
+      "lessonExcerpt": "Sample-dependent (item statistics change with different groups) | Sample-invariant (item properties stable across groups)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    }
+  ]
+}

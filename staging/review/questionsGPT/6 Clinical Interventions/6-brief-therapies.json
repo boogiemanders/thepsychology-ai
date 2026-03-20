@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A clinical psychologist is comparing different theoretical models of addiction with a graduate student. How does the Alcoholics Anonymous (AA) model conceptualize the etiology of alcohol dependence?",
+      "options": [
+        "As an overlearned maladaptive habit maintained by reinforcement contingencies",
+        "As a disease that the individual is powerless to control without external support",
+        "As a behavior maintained by negative reinforcement through withdrawal avoidance",
+        "As a consequence of irrational beliefs about the necessity of alcohol for coping"
+      ],
+      "answer": "As a disease that the individual is powerless to control without external support",
+      "explanation": "AA follows a disease model of addiction, viewing alcoholism as an illness over which the individual is powerless—a core tenet of the 12-step philosophy. This contrasts sharply with Marlatt's cognitive-behavioral relapse prevention model, which views addiction as 'an overlearned habit' (A) and treats relapses as learning opportunities rather than failures. The negative reinforcement model (C) represents a behavioral learning perspective, and the irrational beliefs model (D) reflects a cognitive therapy approach (like REBT). The lesson explicitly contrasts AA's abstinence-based approach with Marlatt's model.",
+      "kn": "KN43",
+      "kn_explanation": "Comparing theoretical models of addiction (AA model) falls under contemporary research-based theories and models of treatment/intervention",
+      "difficulty": "medium",
+      "quality_comment": "Good discrimination question with plausible distractors representing distinct theoretical models. The lesson references AA as abstinence-based but the disease model conceptualization is more implied than explicitly stated.",
+      "suggestedLesson": "6-brief-therapies",
+      "suggestedParagraph": "## The Three Faces of Prevention",
+      "lessonExcerpt": "Unlike AA and other abstinence based programs, Marlatt views addiction as an overlearned habit, and attempts to minimize the effects of relapses by teaching recovering addicts to view relapses as inevitable experiences.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A graduate student is comparing different models of addiction. Which of the following best describes how Alcoholics Anonymous (AA) conceptualizes addiction?",
+      "options": [
+        "Addiction is an overlearned maladaptive habit that can be unlearned through skills training",
+        "Addiction is a disease that requires lifelong abstinence and is never fully cured",
+        "Addiction results from operant conditioning and is maintained by reinforcement contingencies",
+        "Addiction is a rational choice made in response to environmental contingencies"
+      ],
+      "answer": "Addiction is a disease that requires lifelong abstinence and is never fully cured",
+      "explanation": "Alcoholics Anonymous conceptualizes addiction as a disease—a chronic condition that cannot be cured but can be managed through complete abstinence. This is contrasted in the literature with cognitive-behavioral approaches like Marlatt's relapse prevention model, which views addiction as an overlearned habit (A) rather than a disease. The operant conditioning model (C) represents a pure behavioral perspective, while the rational choice model (D) represents an economic/decision-making perspective. AA's disease model is significant because it frames recovery as requiring lifelong management and abstinence, and views any use as a relapse rather than a learning opportunity.",
+      "kn": "KN43",
+      "kn_explanation": "Comparing models of addiction and how AA conceptualizes it is about contemporary theories and models of treatment",
+      "difficulty": "medium",
+      "quality_comment": "Clear contrast between disease model and behavioral models of addiction. The Marlatt comparison in the source material provides strong support.",
+      "suggestedLesson": "6-brief-therapies",
+      "suggestedParagraph": "## Motivational Interviewing (MI)",
+      "lessonExcerpt": "Unlike AA and other abstinence based programs, Marlatt views addiction as an overlearned habit, and attempts to minimize the effects of relapses by teaching recovering addicts to view relapses as inevitable experiences.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 13
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "questions": [
+    {
+      "stem": "On the MMPI-2, a client obtains a moderately elevated K scale score alongside low F and elevated L scores. The psychologist interprets this pattern as reflecting a defensive response style in which the client is minimizing psychological difficulties. In this interpretation, the K scale is functioning primarily as a:",
+      "options": [
+        "Clinical indicator of psychopathology",
+        "Measure of intellectual functioning",
+        "Validity scale that detects subtle defensiveness",
+        "Suppressor variable that reduces criterion variance"
+      ],
+      "answer": "Validity scale that detects subtle defensiveness",
+      "explanation": "The K scale on the MMPI-2 functions as a validity scale that detects subtle forms of defensiveness, denial, or resistance to evaluation. The lesson describes K as detecting 'subtle faking good' with high scores indicating 'defensiveness, denial, or resistance to evaluation.' In the described pattern (High L + High K + Low F), the K scale contributes to identifying a 'faking good' response pattern. It is not a clinical indicator of psychopathology (it's a validity scale, not a clinical scale). It does not measure intellectual functioning. While K scores are historically used as a correction factor added to certain clinical scales (acting somewhat like a moderator), the lesson specifically frames K as a validity scale for detecting defensiveness, making option C the best answer. The term 'suppressor variable' describes a statistical concept not how the lesson characterizes the K scale.",
+      "kn": "KN32",
+      "kn_explanation": "The question asks about interpreting validity scale patterns on the MMPI-2, a commonly used psychological instrument and its appropriate use in assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The lesson covers K as a validity scale for subtle defensiveness but does not explicitly discuss K-correction as a moderator variable added to clinical scales. The question was adapted to test what the lesson actually covers.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "### The Main Validity Scales",
+      "lessonExcerpt": "K (Correction): Subtle faking good — Defensiveness, denial, or resistance to evaluation... High L + High K + Low F = Faking Good... High K scale scores often predict resistance to treatment.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A forensic psychologist administers the MMPI-2 to an individual undergoing a child custody evaluation. The validity scale profile shows elevated L and K scales with a low F scale. This configuration is MOST consistent with which response pattern?",
+      "options": [
+        "A defensive, 'faking good' profile in which the individual is attempting to present themselves in an unrealistically favorable light",
+        "A 'faking bad' profile suggesting the individual is exaggerating psychiatric symptoms for secondary gain",
+        "A random responding pattern indicating the individual did not attend to item content",
+        "A genuinely pathological profile reflecting severe psychopathology consistent with psychotic features"
+      ],
+      "answer": "A defensive, 'faking good' profile in which the individual is attempting to present themselves in an unrealistically favorable light",
+      "explanation": "The lesson clearly identifies the High L + High K + Low F pattern as indicative of 'faking good': 'This pattern shows up like an overly filtered social media profile—everything looks perfect, no flaws admitted, problems denied. This combination is particularly common in custody evaluations, where parents want to appear flawless.' The L (Lie) scale detects obvious faking good, the K (Correction) scale detects subtle defensiveness, and low F (Infrequency) indicates the person is not endorsing unusual or pathological items. Option B (faking bad) would show high F, not low F. Option C (random responding) would show elevated VRIN. Option D (genuine pathology) would show elevated F and clinical scales.",
+      "kn": "KN5",
+      "kn_explanation": "This question tests knowledge of MMPI-2 validity scale interpretation, specifically the faking good configuration, a core personality assessment concept.",
+      "difficulty": "medium",
+      "quality_comment": "Excellent applied question with a forensic context. The lesson provides a direct, detailed description of this exact validity scale pattern and its common context in custody evaluations.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "### Reading Validity Scale Combinations",
+      "lessonExcerpt": "High L + High K + Low F = Faking Good. This pattern shows up like an overly filtered social media profile—everything looks perfect, no flaws admitted, problems denied. This combination is particularly common in custody evaluations, where parents want to appear flawless.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "When interpreting the MMPI-2 validity profile, which T-score range indicates a potential exaggeration of symptoms?",
+      "options": [
+        "T-scores below 35",
+        "T-scores around 50",
+        "T-scores of 65 and above",
+        "T-scores between 55 and 60"
+      ],
+      "answer": "T-scores of 65 and above",
+      "explanation": "T-scores of 65 and above on the MMPI-2 indicate clinically significant results, which may suggest exaggeration of symptoms. The other ranges do not indicate potential exaggeration.",
+      "kn": "KN10",
+      "kn_explanation": "This question pertains to the interpretation of the MMPI-2 validity profile in psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of MMPI-2 interpretation.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## Why the MMPI-2 Matters for Your Career",
+      "lessonExcerpt": "T-scores of 65 and above indicate clinically significant results, which may suggest exaggeration of symptoms.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which of the following symptoms is most characteristic of Histrionic Personality Disorder?",
+      "options": [
+        "A. Excessive need for admiration",
+        "B. Attention-seeking behavior",
+        "C. Fear of abandonment",
+        "D. Lack of empathy"
+      ],
+      "answer": "B. Attention-seeking behavior",
+      "explanation": "Attention-seeking behavior is a hallmark symptom of Histrionic Personality Disorder, as individuals with this disorder often engage in dramatic and theatrical behaviors to gain attention. Option A refers to Narcissistic Personality Disorder, while C is more aligned with Borderline Personality Disorder. Option D is a trait more commonly associated with Antisocial Personality Disorder.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to the assessment and diagnosis of personality disorders, specifically focusing on Histrionic Personality Disorder.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of personality disorder symptoms at a doctoral level.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## Why the MMPI-2 Matters for Your Career",
+      "lessonExcerpt": "The MMPI-2 is the most widely used psychological test in clinical settings.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 31
+    },
+    {
+      "stem": "What is the primary effect of adjusting cutoff scores in psychological research?",
+      "options": [
+        "To increase the number of participants who qualify for a study",
+        "To enhance the reliability of the test results",
+        "To improve the validity of the diagnostic criteria",
+        "To reduce the risk of Type I errors"
+      ],
+      "answer": "To improve the validity of the diagnostic criteria",
+      "explanation": "Adjusting cutoff scores primarily aims to enhance the validity of diagnostic criteria by ensuring that the scores accurately reflect the intended construct. The other options do not accurately describe the main purpose of cutoff score adjustments.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to the impact of statistical decisions on the validity of psychological assessments.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of statistical implications in psychological research.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## What Makes the MMPI-2 Special",
+      "lessonExcerpt": "The MMPI-2 is the most widely used psychological test in clinical settings.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is a significant issue related to diagnostic interrater reliability in the assessment of borderline personality disorder?",
+      "options": [
+        "Lack of clear diagnostic criteria",
+        "High prevalence of the disorder in the general population",
+        "Overlapping symptoms with other personality disorders",
+        "Limited availability of assessment tools"
+      ],
+      "answer": "Overlapping symptoms with other personality disorders",
+      "explanation": "The overlapping symptoms with other personality disorders create challenges in achieving consistent diagnoses among different raters. The other options do not directly address the core issue of interrater reliability.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it pertains to the challenges in achieving reliable diagnoses in personality disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of diagnostic reliability issues.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## What Makes the MMPI-2 Special",
+      "lessonExcerpt": "The MMPI-2 is the most widely used psychological test in clinical settings.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What is a common challenge in assessing individuals with anorexia nervosa?",
+      "options": [
+        "Lack of available treatment options",
+        "Denial of the severity of their eating disorder",
+        "High rates of comorbid disorders",
+        "Difficulty in establishing rapport with clients"
+      ],
+      "answer": "Denial of the severity of their eating disorder",
+      "explanation": "Individuals with anorexia nervosa often exhibit denial regarding the severity of their condition, which complicates assessment and treatment. The other options may be relevant but do not capture the primary challenge in assessment.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it pertains to the assessment challenges specific to eating disorders, particularly anorexia nervosa.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of assessment challenges in eating disorders.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## What Makes the MMPI-2 Special",
+      "lessonExcerpt": "The MMPI-2 is the most widely used psychological test in clinical settings.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "What does a high F score on the MMPI-2 typically indicate?",
+      "options": [
+        "The individual is likely exaggerating symptoms or responding randomly.",
+        "The individual has a high level of anxiety.",
+        "The individual is experiencing significant depression.",
+        "The individual has a strong sense of self-efficacy."
+      ],
+      "answer": "The individual is likely exaggerating symptoms or responding randomly.",
+      "explanation": "A high F score on the MMPI-2 suggests that the individual may be exaggerating symptoms or responding randomly, indicating potential issues with the validity of their responses. The other options do not accurately reflect the implications of a high F score.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to the interpretation of MMPI-2 validity scales.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of MMPI-2 interpretation and validity.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## What Makes the MMPI-2 Special",
+      "lessonExcerpt": "A high F score suggests that the individual may be exaggerating symptoms or responding randomly.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What does a low K score on the MMPI-2 typically indicate?",
+      "options": [
+        "A tendency to exaggerate symptoms.",
+        "A high level of defensiveness.",
+        "A potential for underreporting of psychological issues.",
+        "A strong adherence to social norms."
+      ],
+      "answer": "A potential for underreporting of psychological issues.",
+      "explanation": "A low K score on the MMPI-2 suggests that an individual may be underreporting psychological issues or presenting themselves in an overly favorable light. The other options misinterpret the implications of a low K score.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to the interpretation of MMPI-2 scores.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of MMPI-2 score interpretation.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## Reading the Personality Map",
+      "lessonExcerpt": "A low K score on the MMPI-2 typically indicates a potential for underreporting of psychological issues.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 28
+    }
+  ]
+}

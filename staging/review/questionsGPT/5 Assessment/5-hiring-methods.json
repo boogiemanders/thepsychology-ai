@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "An organization is concerned that its current selection procedure for entry-level warehouse positions disproportionately screens out minority applicants. Which selection method would BEST address this concern while maintaining job-relevant prediction of performance?",
+      "options": [
+        "A general mental ability test, since it has the highest validity for predicting job performance",
+        "An unstructured interview conducted by experienced managers",
+        "A work sample test requiring applicants to perform actual warehouse tasks",
+        "A biographical information blank with empirically keyed items"
+      ],
+      "answer": "A work sample test requiring applicants to perform actual warehouse tasks",
+      "explanation": "Work sample tests require applicants to actually perform job tasks under realistic conditions, providing high face validity and direct job relevance. The lesson notes that work samples work exceptionally well for manual skilled jobs. While general mental ability tests (Option A) are the most valid predictors overall, the lesson explicitly states they carry 'the highest risk of adverse impact on applicants from certain ethnic and racial minority groups,' making them the worst choice when the goal is reducing discrimination. Unstructured interviews (Option B) may introduce interviewer biases. Biographical information blanks (Option D) may lack face validity and raise privacy concerns, and the lesson notes items may appear 'invasive or irrelevant.' Work samples, being direct demonstrations of job-relevant skills, minimize the construct-irrelevant variance that drives adverse impact.",
+      "kn": "KN29",
+      "kn_explanation": "Test fairness and bias in selection procedures, specifically adverse impact on minority applicants relates to psychometric concepts of test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Good applied question requiring integration of validity and adverse impact concepts. The lesson clearly establishes GMA as highest adverse impact and work samples as job-relevant for manual jobs.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "### 5. Work Samples: Show, Don't Tell",
+      "lessonExcerpt": "Work samples require applicants to actually perform job tasks under realistic conditions... Work samples were traditionally used for manual skilled jobs (like welding or carpentry), where they work exceptionally well... General Mental Ability Tests: Highest (most valid) — Highest adverse impact risk",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    }
+  ]
+}

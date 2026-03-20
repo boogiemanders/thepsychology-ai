@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A company is concerned about adverse impact in their hiring process after learning that their general mental ability test disproportionately screens out qualified applicants from certain minority groups. An I-O psychologist recommends replacing the cognitive test with a selection method that asks applicants to perform actual job tasks under standardized conditions. The psychologist is recommending:",
+      "options": [
+        "An assessment center with leaderless group discussions",
+        "A structured behavioral interview",
+        "A work sample test",
+        "A biodata inventory"
+      ],
+      "answer": "A work sample test",
+      "explanation": "Work sample tests ask applicants to perform actual job-related tasks under realistic, standardized conditions. They are recommended as alternatives to general mental ability tests when adverse impact is a concern because they directly assess job-relevant skills rather than abstract cognitive ability. The question describes the defining feature of work samples—performing actual job tasks. An assessment center uses multiple methods including simulations but is broader than just task performance and typically used for managerial positions. A structured behavioral interview asks about past behavior but does not have candidates perform tasks. A biodata inventory collects biographical information through multiple-choice questions about life experiences, not task performance.",
+      "kn": "KN29",
+      "kn_explanation": "Adverse impact from a hiring test is a test fairness and bias issue, which falls under psychometric properties including test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Clear question testing knowledge of work samples. The lesson discusses work samples and adverse impact of GMA tests separately but does not explicitly link work samples as 'fair alternatives' with lower adverse impact.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Work Samples: The \"Try Before You Buy\" Approach",
+      "lessonExcerpt": "Work samples are exactly what they sound like: you ask applicants to actually perform job-related tasks under realistic conditions... The logic is straightforward: actual performance of job tasks should predict future performance of those same tasks.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    }
+  ]
+}

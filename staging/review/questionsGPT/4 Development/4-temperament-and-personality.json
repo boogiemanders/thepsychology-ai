@@ -1,0 +1,298 @@
+{
+  "questions": [
+    {
+      "stem": "A 17-year-old high school student tells her school counselor that she plans to become an attorney, just like her father and grandfather. When asked if she has considered other career paths, she states, \"No, I've always known this is what I would do. My family has a long tradition in law, and I never really thought about anything else.\" According to Marcia's identity status model, this adolescent is best classified as being in which identity status?",
+      "options": [
+        "Identity achievement, because she has made a firm career commitment",
+        "Identity foreclosure, because she has committed to an identity without exploring alternatives",
+        "Identity moratorium, because she is still in the process of identity formation",
+        "Identity diffusion, because she has not yet engaged in meaningful self-exploration"
+      ],
+      "answer": "Identity foreclosure, because she has committed to an identity without exploring alternatives",
+      "explanation": "Identity foreclosure is characterized by having made a commitment (Yes) without having experienced an identity crisis or exploration period (No). This adolescent has adopted her family's values and career expectations without considering alternatives, which is the hallmark of foreclosure. Identity achievement (A) requires both exploration AND commitment. Identity moratorium (C) involves active exploration without commitment yet. Identity diffusion (D) involves neither exploration nor commitment—the adolescent here has clearly committed, ruling out diffusion.",
+      "kn": "KN23",
+      "kn_explanation": "Relates to Marcia's identity status theory (foreclosure) - a major developmental theory",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that requires distinguishing foreclosure from achievement based on the absence of exploration.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Marcia's Identity Statuses",
+      "lessonExcerpt": "Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "According to Erikson's theory of psychosocial development, a 2-year-old child who is encouraged to make choices about what clothes to wear and what snacks to eat is most likely developing a sense of:",
+      "options": [
+        "Trust",
+        "Autonomy",
+        "Initiative",
+        "Industry"
+      ],
+      "answer": "Autonomy",
+      "explanation": "Erikson's second stage, Autonomy vs. Shame/Doubt, occurs during ages 1-3 (toddlerhood). During this stage, children develop a sense of personal control and independence through making choices. Trust vs. Mistrust (A) is the first stage (0-1 year). Initiative vs. Guilt (C) is the third stage (3-6 years), involving purposeful activity and leadership. Industry vs. Inferiority (D) is the fourth stage (6-12 years), focusing on competence through academic and social skills.",
+      "kn": "KN23",
+      "kn_explanation": "Erikson's psychosocial development theory is a major developmental theory",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward stage identification with plausible adjacent-stage distractors. Good foundational EPPP question.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "### Erikson's Psychosocial Stages",
+      "lessonExcerpt": "| 1-3 years | Autonomy vs. Shame/Doubt | Will |",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "According to Freud, the Oedipus complex occurs during which psychosexual stage, and what is its primary characteristic?",
+      "options": [
+        "Oral stage; the child's desire for exclusive attachment to the mother through feeding",
+        "Anal stage; the child's struggle for control and autonomy against parental authority",
+        "Phallic stage; the child's unconscious sexual desire for the opposite-sex parent and rivalry with the same-sex parent",
+        "Latency stage; the child's repression of sexual feelings and identification with same-sex peers"
+      ],
+      "answer": "Phallic stage; the child's unconscious sexual desire for the opposite-sex parent and rivalry with the same-sex parent",
+      "explanation": "The Oedipus complex (and its female counterpart, the Electra complex) occurs during the phallic stage (ages 3-6), when libido is focused on the genitals. The child develops unconscious desires for the opposite-sex parent and views the same-sex parent as a rival. Option A describes oral stage characteristics but mischaracterizes its dynamics. Option B describes anal stage themes of control but not the Oedipal dynamics. Option D incorrectly places Oedipal dynamics in the latency stage, during which sexual feelings are dormant, not actively expressed.",
+      "kn": "KN23",
+      "kn_explanation": "Freud's psychosexual stages is a major research-based theory of development",
+      "difficulty": "easy",
+      "quality_comment": "Tests core knowledge of Freud's phallic stage. Distractors pair other stages with plausible but incorrect descriptions.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "### Freud's Psychosexual Stages",
+      "lessonExcerpt": "| 3-6 years | Phallic | Genitals, Oedipus/Electra complex | Sexual dysfunction, authority issues |",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A developmental psychology student is comparing Freud's psychosexual and Erikson's psychosocial stage theories. Which of the following CORRECTLY pairs a Freudian stage with its corresponding Eriksonian crisis during the same developmental period?",
+      "options": [
+        "Oral stage (0-1 year) corresponds to Autonomy vs. Shame and Doubt",
+        "Anal stage (1-3 years) corresponds to Initiative vs. Guilt",
+        "Phallic stage (3-6 years) corresponds to Initiative vs. Guilt",
+        "Latency stage (6-12 years) corresponds to Identity vs. Role Confusion"
+      ],
+      "answer": "Phallic stage (3-6 years) corresponds to Initiative vs. Guilt",
+      "explanation": "According to the lesson, Erikson's first five stages align age-wise with Freud's stages. The Phallic stage covers ages 3-6, which corresponds to Erikson's Initiative vs. Guilt crisis (also ages 3-6). Option A is incorrect because the Oral stage (0-1 year) corresponds to Trust vs. Mistrust, not Autonomy vs. Shame and Doubt. Option B is incorrect because the Anal stage (1-3 years) corresponds to Autonomy vs. Shame and Doubt, not Initiative vs. Guilt. Option D is incorrect because the Latency stage (6-12 years) corresponds to Industry vs. Inferiority, not Identity vs. Role Confusion (which corresponds to the Genital stage in adolescence).",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of the correspondence between two foundational stage theories of personality development.",
+      "difficulty": "medium",
+      "quality_comment": "Tests precise knowledge of stage-to-stage mapping with plausible but systematically offset distractors. Each wrong answer shifts one stage in either Freud's or Erikson's framework.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "### Erikson's Psychosocial Stages",
+      "lessonExcerpt": "Notice that Erikson's first five stages align age-wise with Freud's stages. The key difference: Erikson continues through adulthood, focusing on relationship and meaning issues rather than biological drives.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A parent asks their pediatric psychologist when they should begin toilet training their 14-month-old toddler. Based on developmental readiness research, the psychologist should advise that most children are physiologically ready for toilet training between:",
+      "options": [
+        "12 and 15 months of age",
+        "18 and 30 months of age",
+        "36 and 48 months of age",
+        "6 and 12 months of age"
+      ],
+      "answer": "18 and 30 months of age",
+      "explanation": "Developmental readiness for toilet training typically occurs between 18 and 30 months, when children achieve sufficient sphincter control and can understand and follow simple instructions. Freud's psychosexual stages place the anal stage at ages 1-3, with toilet training as the central developmental task. At 12-15 months, most children lack the necessary neuromuscular maturity and cognitive readiness. Beginning at 6-12 months is far too early, as voluntary sphincter control has not developed. Waiting until 36-48 months is unnecessarily late for most typically developing children.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses motor development milestones and developmental readiness, core lifespan development topics.",
+      "difficulty": "medium",
+      "quality_comment": "Practical clinical scenario with clear developmental rationale. The lesson references Freud's anal stage (1-3 years) involving toilet training.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "### Freud's Psychosexual Stages",
+      "lessonExcerpt": "1-3 years | Anal | Toilet training, control | Obsessiveness or messiness",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "What psychological changes are commonly observed during mid-life?",
+      "options": [
+        "Increased cognitive flexibility and creativity",
+        "Heightened emotional stability and resilience",
+        "A decline in cognitive abilities and increased anxiety about aging",
+        "Improved social relationships and community involvement"
+      ],
+      "answer": "A decline in cognitive abilities and increased anxiety about aging",
+      "explanation": "Research indicates that mid-life can be associated with a decline in certain cognitive abilities and increased anxiety about aging. The other options suggest positive changes that are not universally observed.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to lifespan development and psychological changes during mid-life.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of psychological changes during mid-life.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following best describes the correspondence between Freud's and Erikson's stages of development?",
+      "options": [
+        "Freud's stages focus on sexual development while Erikson's focus on social relationships.",
+        "Both theorists propose identical stages of development.",
+        "Erikson's stages are a direct extension of Freud's psychosexual stages.",
+        "Freud's stages are more relevant to adult development than Erikson's."
+      ],
+      "answer": "Freud's stages focus on sexual development while Erikson's focus on social relationships.",
+      "explanation": "Freud's psychosexual stages emphasize sexual development, while Erikson's psychosocial stages emphasize social relationships and identity. The other options misrepresent the theories.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to psychosexual development and the comparison of Freud's and Erikson's theories.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of the differences between Freud's and Erikson's theories.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Freud proposed five stages from birth through adolescence, each focused on a different body zone where libido (sexual energy) concentrates.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following is a source of resilience that can help individuals overcome adversity?",
+      "options": [
+        "Social support",
+        "Genetic predisposition",
+        "Financial resources",
+        "All of the above"
+      ],
+      "answer": "Social support",
+      "explanation": "The correct answer is social support, as it is a key source of resilience that helps individuals cope with adversity. While genetic predisposition and financial resources can play roles, they are not as universally impactful as social support in fostering resilience.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to developmental psychology and resilience.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of resilience factors.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
+      "lessonExcerpt": "Social support is a crucial source of resilience in overcoming adversity.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "options": [
+        "Observation, reinforcement, imitation",
+        "Imitation, reinforcement, observation",
+        "Reinforcement, observation, imitation",
+        "Observation, imitation, reinforcement"
+      ],
+      "answer": "Observation, imitation, reinforcement",
+      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to gender identity theories and the development of gender roles.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of social learning theory in the context of gender role development.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "Which of the following statements best describes the differences in parenting styles based on gender?",
+      "options": [
+        "Mothers are generally more permissive than fathers",
+        "Fathers are more likely to engage in physical play than mothers",
+        "Both parents exhibit similar styles regardless of gender",
+        "Mothers are more authoritative than fathers"
+      ],
+      "answer": "Fathers are more likely to engage in physical play than mothers",
+      "explanation": "Research indicates that fathers often engage in more physical play with their children compared to mothers, who may adopt more nurturing and verbal approaches. The other options either misrepresent typical parenting styles or suggest incorrect generalizations.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to gender development and parenting styles.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of gender differences in parenting.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Why Understanding Temperament and Personality Matters for Your EPPP",
+      "lessonExcerpt": "Understanding temperament and personality development gives you the framework to predict, explain, and intervene effectively throughout the lifespan.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which of the following best describes the developmental model of antisocial behavior?",
+      "options": [
+        "Antisocial behavior is solely a result of genetic factors.",
+        "Antisocial behavior develops through a combination of biological, psychological, and social factors.",
+        "Antisocial behavior is primarily influenced by peer pressure during adolescence.",
+        "Antisocial behavior is a learned response to environmental stressors."
+      ],
+      "answer": "Antisocial behavior develops through a combination of biological, psychological, and social factors.",
+      "explanation": "The developmental model of antisocial behavior emphasizes the interaction of multiple factors, including genetics, individual psychology, and social influences. The other options oversimplify the causes of antisocial behavior.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to understanding the multifactorial nature of antisocial behavior development.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of the complexities involved in antisocial behavior development.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Antisocial behavior develops through a combination of biological, psychological, and social factors.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "How does ADHD typically manifest across the lifespan according to developmental theories?",
+      "options": [
+        "It resolves completely by adulthood.",
+        "Symptoms become less severe with age.",
+        "It remains consistent but may change in presentation.",
+        "It only affects children and adolescents."
+      ],
+      "answer": "It remains consistent but may change in presentation.",
+      "explanation": "The correct answer reflects that ADHD symptoms can persist into adulthood but may manifest differently as individuals age. The other options are incorrect as ADHD does not resolve completely, and while symptoms may become less disruptive, they do not disappear.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to developmental disorders and their progression across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of ADHD across the lifespan.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
+      "lessonExcerpt": "ADHD remains consistent but may change in presentation across the lifespan.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "What is a significant factor contributing to the comorbidity of mental disorders in adulthood?",
+      "options": [
+        "Genetic predisposition",
+        "Environmental stressors",
+        "Lack of social support",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "The correct answer is 'All of the above' as each factor can contribute to the comorbidity of mental disorders. Genetic predisposition can increase vulnerability, environmental stressors can trigger symptoms, and lack of social support can exacerbate mental health issues.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to clinical psychology and the understanding of mental health disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of factors contributing to mental health comorbidity.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Genetic predisposition, environmental stressors, and lack of social support are significant factors in the comorbidity of mental disorders.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which of the following statements best reflects the concept of trait theory in personality psychology?",
+      "options": [
+        "Personality traits are consistent across different situations and over time.",
+        "Personality is solely determined by environmental factors.",
+        "Personality traits can change dramatically with life experiences.",
+        "Personality is a fixed characteristic that does not evolve."
+      ],
+      "answer": "Personality traits are consistent across different situations and over time.",
+      "explanation": "Trait theory posits that individuals have stable characteristics that influence their behavior across various situations. The other options suggest that personality is either entirely environmental or fixed, which contradicts the essence of trait theory.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to understanding personality psychology and the consistency of traits, which is a fundamental aspect of trait theory.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of trait theory and its implications.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
+      "lessonExcerpt": "Temperament is your biological starting point (genetically influenced but shaped by environment. Think of temperament as the default settings on a new phone)",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 21
+    }
+  ]
+}

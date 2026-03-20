@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A forensic psychologist is developing a treatment plan for a client diagnosed with antisocial personality disorder who has a history of manipulation and disregard for social norms. Based on the literature regarding treatment of antisocial personality disorder, which type of consequence would be MOST effective in influencing this client's behavior?",
+      "options": [
+        "Empathic confrontation within a supportive therapeutic alliance",
+        "Natural and logical consequences directly tied to the client's actions",
+        "Positive reinforcement delivered on a continuous schedule for prosocial behavior",
+        "Insight-oriented interpretation of unconscious motivations for antisocial acts"
+      ],
+      "answer": "Natural and logical consequences directly tied to the client's actions",
+      "explanation": "Individuals with antisocial personality disorder are generally most responsive to natural and logical consequences—real-world outcomes that follow directly from their behavior—because they are less responsive to social reinforcement, empathy-based interventions, or insight-oriented approaches. Empathic confrontation (A) may be ineffective because these individuals often lack the emotional responsiveness to benefit from relationship-based interventions. Continuous positive reinforcement (C) is less effective than consequences that mirror real-world contingencies. Insight-oriented interpretation (D) is typically ineffective because individuals with ASPD generally lack the motivation for self-reflection and may use insight to further manipulate.",
+      "kn": "KN42",
+      "kn_explanation": "Developing a treatment plan matched to a specific diagnosis (ASPD) and client characteristics is treatment/intervention decision-making",
+      "difficulty": "hard",
+      "quality_comment": "Clinically relevant question but lesson content does not directly cover ASPD treatment. Based on standard EPPP knowledge.",
+      "suggestedLesson": "5-personality",
+      "suggestedParagraph": "### Antisocial Personality Disorder",
+      "lessonExcerpt": "Treatment is notoriously difficult because these individuals don't believe they have a problem. However, cognitive-behavioral group interventions may reduce reoffending, and contingency management can help with comorbid substance use.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 21
+    }
+  ]
+}

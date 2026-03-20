@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "stem": "In adoption studies examining the heritability of intelligence, researchers have found that as adopted children grow older, their IQ scores tend to show:",
+      "options": [
+        "Increasing correlation with adoptive parents' IQ and decreasing correlation with biological parents' IQ",
+        "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+        "Equal and stable correlations with both biological and adoptive parents' IQ",
+        "No significant correlation with either biological or adoptive parents' IQ"
+      ],
+      "answer": "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+      "explanation": "Adoption studies consistently demonstrate that as adopted children age, their IQ scores become more similar to their biological parents and less similar to their adoptive parents, supporting a strong genetic contribution to intelligence. This reflects the concept of active gene-environment correlation, where individuals increasingly select environments matching their genetic predispositions. Option A reverses the actual finding. Option C incorrectly suggests equal contributions that remain static. Option D contradicts the well-established finding that IQ has substantial heritability.",
+      "kn": "KN23",
+      "kn_explanation": "Adoption studies on heritability of intelligence relate to major research-based theories and models of development (nature vs nurture, behavioral genetics models of cognitive development)",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of adoption study findings. Lesson covers adoption study methodology and that resemblance to biological parents suggests genetic influence, but doesn't give specific age-trend data.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "### Adoption Studies",
+      "lessonExcerpt": "By comparing adopted children to both biological and adoptive parents, researchers can separate genetic from environmental transmission. If adopted children resemble biological parents they never lived with, this suggests genetic influence.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A researcher studying the heritability of intelligence explains that monozygotic twins share 100% of their DNA while dizygotic twins share approximately 50%, similar to non-twin siblings. If a heritability study finds that monozygotic twins show substantially higher IQ correlations than dizygotic twins, this finding MOST directly supports which conclusion?",
+      "options": [
+        "Intelligence is entirely determined by genetic factors with minimal environmental contribution",
+        "Genetic factors contribute meaningfully to individual differences in intelligence within the studied population",
+        "Shared family environment is the primary determinant of intelligence differences",
+        "Heritability of intelligence is stable across all populations and environmental contexts"
+      ],
+      "answer": "Genetic factors contribute meaningfully to individual differences in intelligence within the studied population",
+      "explanation": "When monozygotic twins (who share 100% of DNA) show substantially higher IQ correlations than dizygotic twins (who share 50% of DNA like regular siblings), this provides evidence for genetic contributions to intelligence differences. The lesson states intelligence has moderate-high heritability (0.50-0.70). Option A is incorrect because the lesson emphasizes that both nature and nurture always interact and that heritability of 0.50-0.70 means environment also contributes significantly. Option C is contradicted by the finding that MZ twins are more similar than DZ twins despite both sharing family environment. Option D is incorrect because the lesson explicitly states that heritability estimates vary depending on the environment and are population statistics, not fixed values.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests understanding of twin study methodology and heritability estimates for intelligence, core nature vs. nurture concepts in developmental psychology.",
+      "difficulty": "hard",
+      "quality_comment": "Tests conceptual understanding of twin studies and heritability rather than rote memorization. The lesson covers twin study methodology and heritability concepts but does not provide specific sibling IQ correlations.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "### Twin Studies",
+      "lessonExcerpt": "Monozygotic (identical) twins share 100% of their DNA. Dizygotic (fraternal) twins share 50% of their DNA, like regular siblings. If identical twins are more similar than fraternal twins on a trait, this suggests genetic influence.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is the typical correlation of IQ scores among siblings raised in the same household?",
+      "options": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "answer": "0.5",
+      "explanation": "Research indicates that the correlation of IQ scores among siblings raised in the same household is approximately 0.5, reflecting both genetic and environmental influences. The other correlations do not accurately represent this relationship.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to intelligence and the heritability of IQ.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses knowledge of the heritability of intelligence.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Heritability: Understanding the Numbers",
+      "lessonExcerpt": "A heritability of 0.50 means that approximately 50% of the differences we see between people in intelligence are due to genetic differences.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "In Bronfenbrenner's ecological model, which system directly influences a child's development through immediate interactions with family and peers?",
+      "options": [
+        "Macrosystem",
+        "Exosystem",
+        "Mesosystem",
+        "Chronosystem"
+      ],
+      "answer": "Mesosystem",
+      "explanation": "The Mesosystem refers to the interconnections between the various microsystems, such as family and school, that directly influence a child's development. The Macrosystem encompasses broader cultural values, the Exosystem includes indirect influences, and the Chronosystem refers to the dimension of time in relation to a child's environment.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies because it relates to environmental influences on behavior as described in Bronfenbrenner's ecological model.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of Bronfenbrenner's ecological model and its components.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Key Principles: How Nature and Nurture Actually Work",
+      "lessonExcerpt": "The Mesosystem refers to the interconnections between the various microsystems.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "Which of the following factors is most commonly associated with an increased risk of developing autism spectrum disorder?",
+      "options": [
+        "High socioeconomic status",
+        "Advanced parental age",
+        "Low birth weight",
+        "Exposure to environmental toxins"
+      ],
+      "answer": "Advanced parental age",
+      "explanation": "Research indicates that advanced parental age, particularly of the father, is associated with an increased risk of autism spectrum disorder. While low birth weight and environmental toxins can be factors, advanced parental age has a stronger correlation. High socioeconomic status is not typically associated with increased risk.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to understanding developmental disorders, specifically autism spectrum disorder.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of risk factors for autism spectrum disorder.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Key Principles: How Nature and Nurture Actually Work",
+      "lessonExcerpt": "Advanced parental age is a factor associated with an increased risk of autism spectrum disorder.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "In developmental psychopathology, what does the term multifinality refer to?",
+      "options": [
+        "Different outcomes from the same starting point",
+        "The same outcome from different starting points",
+        "The ability to adapt to various environments",
+        "The process of developing multiple skills simultaneously"
+      ],
+      "answer": "Different outcomes from the same starting point",
+      "explanation": "Multifinality refers to the concept that individuals with the same initial conditions can develop different outcomes, particularly in the context of psychological development. The other options misrepresent the concept or focus on unrelated ideas.",
+      "kn": "KN13",
+      "kn_explanation": "This KN code applies as it relates to developmental psychopathology and understanding varied outcomes.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests knowledge of a specific concept in developmental psychopathology.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## The Core Debate: What Makes Us Who We Are?",
+      "lessonExcerpt": "The truth, as modern research has shown, is far more nuanced and interesting than either extreme position.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which of the following best illustrates the interaction of genes and environment in human development?",
+      "options": [
+        "A child with a genetic predisposition for high intelligence who grows up in a stimulating environment",
+        "A child with no genetic predisposition for athleticism who becomes a professional athlete",
+        "A child raised in an impoverished environment who shows no signs of cognitive development",
+        "A child with a genetic disorder who thrives in a supportive family"
+      ],
+      "answer": "A child with a genetic predisposition for high intelligence who grows up in a stimulating environment",
+      "explanation": "This option illustrates how genetic predispositions can be enhanced or diminished by environmental factors, demonstrating the interaction between nature and nurture. The other options either misrepresent the interaction or suggest that environment alone determines outcomes without considering genetic influences.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the nature vs. nurture debate in developmental psychology.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-constructed and tests understanding of gene-environment interactions.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Key Principles: How Nature and Nurture Actually Work",
+      "lessonExcerpt": "The question isn't which one matters. It's how they interact.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "Which demographic group is generally associated with the highest life expectancy, according to current trends?",
+      "options": [
+        "African American males",
+        "Caucasian females",
+        "Hispanic males",
+        "Asian females"
+      ],
+      "answer": "Asian females",
+      "explanation": "Current demographic trends indicate that Asian females typically have the highest life expectancy compared to other groups. While Caucasian females also have high life expectancy, Asian females surpass them in longevity.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to demographic trends in life expectancy.",
+      "difficulty": "hard",
+      "quality_comment": "The question requires knowledge of demographic trends and life expectancy.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## The Core Debate: What Makes Us Who We Are?",
+      "lessonExcerpt": "Current demographic trends indicate that life expectancy varies significantly by gender and race, with Asian females generally having the highest life expectancy.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "What does current research suggest about the genetic determination of handedness?",
+      "options": [
+        "It is entirely determined by genetics",
+        "It is influenced by both genetics and environment",
+        "It is solely a result of environmental factors",
+        "It is determined by birth order"
+      ],
+      "answer": "It is influenced by both genetics and environment",
+      "explanation": "The correct answer is 'It is influenced by both genetics and environment', as research indicates that while there is a genetic component to handedness, environmental factors also play a significant role. The other options are incorrect as they oversimplify the complexity of handedness determination.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies because it relates to motor development and genetic influences.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the interplay between genetics and environment.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## The Core Debate: What Makes Us Who We Are?",
+      "lessonExcerpt": "Current research suggests that handedness is influenced by both genetic and environmental factors.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which of the following is considered a risk factor in child development that can lead to negative outcomes?",
+      "options": [
+        "High parental involvement",
+        "Stable home environment",
+        "Exposure to violence",
+        "Access to quality education"
+      ],
+      "answer": "Exposure to violence",
+      "explanation": "Exposure to violence is a well-documented risk factor that can lead to various negative outcomes in child development, including emotional and behavioral issues. The other options are protective factors that promote positive development.",
+      "kn": "KN5",
+      "kn_explanation": "This question addresses risk factors in child development, a critical area in developmental psychology.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and effectively tests knowledge of risk factors in child development.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Key Principles: How Nature and Nurture Actually Work",
+      "lessonExcerpt": "Exposure to violence is a significant risk factor in child development.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 25
+    }
+  ]
+}

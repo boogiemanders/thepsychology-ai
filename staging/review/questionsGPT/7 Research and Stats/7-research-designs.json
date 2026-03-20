@@ -1,0 +1,319 @@
+{
+  "questions": [
+    {
+      "stem": "A school psychologist implements a new social skills intervention with a student diagnosed with autism spectrum disorder. During the baseline phase, the student's disruptive behavior is stable at approximately 12 incidents per day. After introducing the intervention (Phase B), disruptive behavior drops to 4 incidents per day. However, the school also hired a new, highly engaging classroom aide at the same time the intervention began. Which threat to internal validity is MOST concerning in this AB design?",
+      "options": [
+        "Maturation, because the student may have naturally developed better social skills over time",
+        "History, because an external event (hiring of the aide) coincided with the introduction of treatment",
+        "Statistical regression, because the student was selected based on high rates of disruptive behavior",
+        "Instrumentation, because the observers may have changed their recording criteria over time"
+      ],
+      "answer": "History, because an external event (hiring of the aide) coincided with the introduction of treatment",
+      "explanation": "In AB single-subject designs, history is a primary threat because there is no withdrawal or replication phase to rule out coincidental external events. The lesson explicitly states that the AB design 'doesn't control for history – any one-time event that happens to coincide with treatment.' The hiring of a new aide is a classic history confound. Maturation (A) is actually controlled in AB designs because 'those would show up as gradual trends' during baseline. Statistical regression (C) could be a concern but is less directly relevant here since the baseline was stable. Instrumentation (D) is possible but not the most salient threat given the scenario.",
+      "kn": "KN54",
+      "kn_explanation": "Describes a single-subject ABAB reversal design, which is an experimental study design",
+      "difficulty": "hard",
+      "quality_comment": "Strong application question requiring integration of single-subject design knowledge with internal validity threats. The scenario is realistic and the distractors are plausible.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### AB Design: The Basic Version",
+      "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A researcher conducts a 3 × 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly, biweekly) on depression scores. The results reveal a significant interaction effect but non-significant main effects for both therapy type and session frequency. Which of the following is the BEST interpretation?",
+      "options": [
+        "Neither therapy type nor session frequency affects depression scores under any conditions",
+        "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
+        "The results are uninterpretable because main effects must be significant before interactions can be meaningful",
+        "Session frequency moderates depression scores regardless of therapy type"
+      ],
+      "answer": "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
+      "explanation": "The lesson describes this exact pattern: 'Neither therapy nor medication matters alone, but specific combinations work' is listed as an example of 'Interaction only.' A significant interaction means the effect of one IV depends on the level of the other IV. Non-significant main effects mean that neither variable has a consistent overall effect when averaged across levels of the other variable. Option A is incorrect because the significant interaction indicates that certain combinations DO affect depression. Option C is incorrect — main effects do not need to be significant for interactions to be meaningful; in fact, the lesson warns 'When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.' Option D incorrectly describes moderation as independent of therapy type.",
+      "kn": "KN55",
+      "kn_explanation": "Factorial ANOVA is an analytic/statistical method",
+      "difficulty": "hard",
+      "quality_comment": "Excellent question requiring nuanced understanding of factorial ANOVA interpretation. Tests the common misconception that main effects must be significant for interactions to be meaningful.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Factorial Designs: Testing Multiple Variables at Once",
+      "lessonExcerpt": "Interaction only: Neither therapy nor medication matters alone, but specific combinations work",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A behavior analyst uses an ABAB reversal design to evaluate a token economy for reducing aggressive behavior in a child with conduct disorder. During both treatment phases, aggressive behavior decreases substantially. However, during the second baseline phase, aggressive behavior does NOT return to original baseline levels. What is the MOST likely methodological concern?",
+      "options": [
+        "The treatment lacks internal validity because the results were not replicated across phases",
+        "Carryover effects from the treatment may have produced lasting behavioral change that prevents a true return to baseline",
+        "The failure to return to baseline indicates that maturation rather than the treatment caused the improvement",
+        "The design should be abandoned in favor of a multiple baseline design whenever behavior fails to reverse"
+      ],
+      "answer": "Carryover effects from the treatment may have produced lasting behavioral change that prevents a true return to baseline",
+      "explanation": "The ABAB design relies on behavior returning to baseline levels when treatment is withdrawn to demonstrate experimental control. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT reverse, this undermines the logic of the design. The most likely explanation is carryover — the treatment produced learning or behavioral change that persists even after formal treatment withdrawal. Option A is partially correct but doesn't identify the mechanism. Option C is less likely since maturation would produce gradual change, not the pattern described. Option D is too absolute — the design may still provide useful information even without perfect reversal.",
+      "kn": "KN54",
+      "kn_explanation": "ABAB reversal design is an experimental study design",
+      "difficulty": "hard",
+      "quality_comment": "Strong conceptual question that tests understanding of the fundamental logic of reversal designs and their limitations. Clinically realistic scenario.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### ABAB Design: More Convincing",
+      "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A clinical psychologist systematically tracks a single client's depressive symptoms across baseline and treatment phases, collecting repeated measurements and analyzing the data by visual inspection of graphed results. This approach is BEST classified as:",
+      "options": [
+        "A nomothetic research approach because it uses standardized symptom measures",
+        "An idiographic research approach because it focuses on understanding patterns within a single individual",
+        "A qualitative research approach because it does not use inferential statistical analysis",
+        "A quasi-experimental approach because it lacks random assignment to conditions"
+      ],
+      "answer": "An idiographic research approach because it focuses on understanding patterns within a single individual",
+      "explanation": "Single-subject designs are the hallmark of idiographic research, which focuses on understanding the individual case in depth. The lesson describes single-subject designs as 'powerful tools for clinical practice' that involve 'at least two phases: baseline (A) and treatment (B)' with 'multiple measurements during each phase.' This individual-focused, repeated-measurement approach exemplifies idiographic methodology. Option A is incorrect because using standardized measures does not make research nomothetic — nomothetic research seeks general laws across groups. Option C is incorrect because single-subject designs are quantitative, using numerical data and systematic measurement. Option D, while technically accurate (single-subject designs lack random assignment), does not best classify the methodology — it describes a limitation rather than the fundamental approach.",
+      "kn": "KN54",
+      "kn_explanation": "Single-case experimental design with baseline and treatment phases",
+      "difficulty": "easy",
+      "quality_comment": "Tests fundamental understanding of the idiographic-nomothetic distinction as applied to single-subject designs. Distractors represent common confusions about classification.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Single-Subject Designs: When One Person Is Enough",
+      "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
+      "needsReview": true,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A researcher is evaluating a new behavioral intervention for a single client using an AB design. During the treatment phase, a natural disaster occurs in the client's community, leading to a noticeable increase in stress-related behaviors. Which threat to internal validity is MOST relevant in this scenario, and why is this design particularly vulnerable to it?",
+      "options": [
+        "Maturation, because the AB design cannot account for natural developmental changes over time",
+        "History, because the AB design lacks a second baseline phase to demonstrate that changes are due to the intervention rather than coincidental external events",
+        "Differential attrition, because the participant may drop out of the study due to the disaster",
+        "Statistical regression, because the client's extreme baseline scores would naturally move toward the mean"
+      ],
+      "answer": "History, because the AB design lacks a second baseline phase to demonstrate that changes are due to the intervention rather than coincidental external events",
+      "explanation": "The AB design is specifically vulnerable to history threats because it has only one baseline and one treatment phase. When an external event (the natural disaster) coincides with the treatment phase, there is no way to disentangle the effects of the intervention from the effects of the external event. The lesson explicitly states the AB design 'doesn't control for history – any one-time event that happens to coincide with treatment.' An ABAB design would better address this by demonstrating the behavior changes with each phase transition. Maturation is incorrect because the AB design does control for maturation (gradual trends would be visible). Differential attrition applies to group designs with dropout. Statistical regression requires selection based on extreme scores.",
+      "kn": "KN57",
+      "kn_explanation": "Threat to internal validity (history effect) in a research design",
+      "difficulty": "medium",
+      "quality_comment": "Strong integration of single-subject design knowledge with internal validity threats. Requires understanding why the AB design specifically fails to control for history.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### AB Design: The Basic Version",
+      "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A researcher conducts a 2 × 3 factorial ANOVA examining the effects of therapy type (CBT vs. psychodynamic) and session frequency (weekly, biweekly, monthly) on depression scores. The results reveal a significant interaction effect but NO significant main effects. Which interpretation is MOST appropriate?",
+      "options": [
+        "Neither therapy type nor session frequency has any effect on depression scores",
+        "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect across all conditions",
+        "The results are uninterpretable because main effects must be significant before an interaction can be meaningful",
+        "The study lacked sufficient power to detect main effects, so the interaction is likely a Type I error"
+      ],
+      "answer": "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect across all conditions",
+      "explanation": "A significant interaction without significant main effects means that the effect of one variable depends on the level of the other variable, but neither variable produces a consistent average effect across all levels of the other. For example, CBT might be superior with weekly sessions while psychodynamic might be superior with monthly sessions, with these effects canceling out when averaged. The lesson states: 'When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.' Option A is wrong because the significant interaction shows the variables DO affect scores, just conditionally. Option C is wrong because interactions can be significant and meaningful without significant main effects. Option D is an unwarranted assumption.",
+      "kn": "KN55",
+      "kn_explanation": "Factorial ANOVA is an analytic/statistical method",
+      "difficulty": "hard",
+      "quality_comment": "Excellent discriminating question that tests deeper understanding of factorial ANOVA interpretation beyond simple definitions.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Factorial Designs: Testing Multiple Variables at Once",
+      "lessonExcerpt": "When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A clinician uses an ABAB withdrawal design to evaluate a token economy intervention for reducing aggressive outbursts in a child with conduct disorder. During the second baseline phase (second A), the child's aggressive behavior does NOT return to the original baseline level but remains partially reduced. What is the MOST likely methodological concern?",
+      "options": [
+        "The study demonstrates a testing threat that invalidates the findings",
+        "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
+        "The results confirm that the intervention was effective because some improvement was maintained",
+        "The study should be redesigned as a multiple baseline design to eliminate the need for withdrawal"
+      ],
+      "answer": "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
+      "explanation": "The ABAB design's logic depends on behavior returning to baseline levels when treatment is withdrawn, and improving again when treatment is reintroduced. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT return to baseline, it suggests carryover effects — the treatment produced lasting changes that persist even after withdrawal. This undermines the design's internal validity because the causal demonstration relies on the behavior tracking with the treatment phases. Option A incorrectly identifies the threat. Option C mistakes a methodological limitation for a strength — while maintenance is clinically desirable, it weakens the design's logic. Option D identifies an alternative design but doesn't address the core concern.",
+      "kn": "KN54",
+      "kn_explanation": "ABAB withdrawal design is an experimental study design",
+      "difficulty": "hard",
+      "quality_comment": "Tests a nuanced understanding of ABAB design logic — the tension between clinical desirability of maintained gains and methodological requirements for demonstrating experimental control.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### ABAB Design: More Convincing",
+      "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Single-subject experimental designs, such as the AB and ABAB designs, are considered examples of which methodological approach?",
+      "options": [
+        "Nomothetic methods, because they seek to establish general laws of behavior across individuals",
+        "Idiographic methods, because they focus on understanding patterns within a single individual",
+        "Qualitative methods, because they do not involve numerical measurement of behavior",
+        "Correlational methods, because they examine relationships between baseline and treatment phases"
+      ],
+      "answer": "Idiographic methods, because they focus on understanding patterns within a single individual",
+      "explanation": "Single-subject designs are classified as idiographic methods because they focus on the intensive study of individual cases rather than deriving general laws from group data. The lesson describes single-subject designs as 'powerful tools for clinical practice' that evaluate individual treatment effects with 'at least two phases: baseline (A) and treatment (B)' and 'multiple measurements during each phase.' This focus on tracking one person's behavior across conditions exemplifies the idiographic approach. Option A is wrong because nomothetic methods seek universal principles using group data and statistical averages. Option C is wrong because single-subject designs use quantitative measurement (e.g., frequency counts, behavioral ratings). Option D is wrong because single-subject designs are experimental (they manipulate an IV), not correlational.",
+      "kn": "KN54",
+      "kn_explanation": "Asking about classification of single-subject experimental designs as a methodological approach",
+      "difficulty": "easy",
+      "quality_comment": "Tests fundamental classification knowledge. The lesson covers single-subject designs extensively but does not explicitly use the terms idiographic or nomothetic.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Single-Subject Designs: When One Person Is Enough",
+      "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
+      "needsReview": true,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "What is the primary purpose of using ANCOVA in research design?",
+      "options": [
+        "To compare means across multiple groups while controlling for covariates.",
+        "To assess the relationship between two categorical variables.",
+        "To determine the effect of a single independent variable on a dependent variable.",
+        "To analyze variance within a single group."
+      ],
+      "answer": "To compare means across multiple groups while controlling for covariates.",
+      "explanation": "ANCOVA is specifically designed to compare means while controlling for other variables (covariates). The other options describe different statistical methods and do not accurately reflect the purpose of ANCOVA.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses the use of ANCOVA in research design.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ANCOVA's purpose in research.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "ANCOVA allows researchers to compare means across groups while controlling for covariates.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary purpose of the Solomon Four-Group design in experimental research?",
+      "options": [
+        "To control for the effects of pre-testing on the dependent variable.",
+        "To compare multiple treatment conditions simultaneously.",
+        "To assess the long-term effects of an intervention.",
+        "To evaluate the reliability of measurement tools."
+      ],
+      "answer": "To control for the effects of pre-testing on the dependent variable.",
+      "explanation": "The Solomon Four-Group design is specifically structured to assess the impact of pre-testing on outcomes by including groups that do and do not receive pre-tests. The other options do not accurately reflect the primary purpose of this design.",
+      "kn": "KN6",
+      "kn_explanation": "This question pertains to the purpose of the Solomon Four-Group design in experimental research.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-constructed and tests knowledge of a specific experimental design.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "The Solomon Four-Group design helps control for the effects of pre-testing on the dependent variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What is the primary function of structural equation modeling (SEM) in testing causal models?",
+      "options": [
+        "To establish correlations between variables without inferring causation.",
+        "To assess the fit of a proposed model to the observed data.",
+        "To compare means across different groups.",
+        "To analyze the variance within a single group."
+      ],
+      "answer": "To assess the fit of a proposed model to the observed data.",
+      "explanation": "The primary function of SEM is to evaluate how well a proposed causal model fits the observed data, allowing researchers to test complex relationships between variables. The other options do not accurately reflect the purpose of SEM.",
+      "kn": "KN10",
+      "kn_explanation": "This question addresses the use of structural equation modeling in testing causal relationships.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of SEM and its application in research.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "Structural equation modeling assesses the fit of a proposed model to the observed data.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "In an ABAB design, what is the primary purpose of the sequential treatment phases?",
+      "options": [
+        "To establish a control group",
+        "To assess the effectiveness of an intervention",
+        "To compare two different treatments",
+        "To eliminate selection bias"
+      ],
+      "answer": "To assess the effectiveness of an intervention",
+      "explanation": "The ABAB design is specifically structured to assess the effectiveness of an intervention by alternating between treatment and no treatment phases. The other options do not accurately describe the purpose of this design.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to the sequential treatment design in research.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-constructed and tests understanding of research designs.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "The ABAB design is used to assess the effectiveness of an intervention.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "In an ABAB design, what is the primary purpose of returning to the baseline phase after the intervention phase?",
+      "options": [
+        "To establish a control for the intervention's effects",
+        "To increase the duration of the study",
+        "To introduce a new treatment",
+        "To randomize participant assignment"
+      ],
+      "answer": "To establish a control for the intervention's effects",
+      "explanation": "The primary purpose of returning to the baseline phase in an ABAB design is to establish a control for the intervention's effects. This allows researchers to observe whether the behavior returns to baseline levels after the intervention is withdrawn, thereby demonstrating the effect of the intervention. Increasing the duration of the study, introducing a new treatment, and randomizing participant assignment are not the main goals of the ABAB design.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies because it pertains to understanding single-subject research designs and their methodologies.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of single-subject design principles.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "Returning to the baseline phase allows researchers to observe whether the behavior returns to baseline levels after the intervention is withdrawn.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "Which of the following methods is most effective in reducing experimenter bias in research design?",
+      "options": [
+        "Using a single-blind design where participants are unaware of the treatment conditions.",
+        "Employing random assignment to groups.",
+        "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
+        "Using a control group that receives no treatment."
+      ],
+      "answer": "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
+      "explanation": "The correct answer is the most effective method for minimizing experimenter bias, as it prevents both participants and researchers from influencing the results. The other options may reduce bias but do not eliminate it as effectively as a double-blind design.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding methods to reduce bias in research design.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of research design principles.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "Conducting a double-blind study helps reduce experimenter bias.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which of the following is a common challenge faced in single-subject research design?",
+      "options": [
+        "Difficulty in generalizing findings to larger populations.",
+        "Inability to measure changes over time.",
+        "Lack of control over extraneous variables.",
+        "High cost of conducting single-subject studies."
+      ],
+      "answer": "Difficulty in generalizing findings to larger populations.",
+      "explanation": "The correct answer identifies a key limitation of single-subject designs, which often focus on individual cases, making it hard to generalize results. The other options do not accurately reflect the primary challenges associated with single-subject research.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the limitations of single-subject research designs.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of research design challenges.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Why Research Design Matters (And Why You'll Actually Use This)",
+      "lessonExcerpt": "Single-subject designs often face challenges in generalizing findings to larger populations.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    }
+  ]
+}

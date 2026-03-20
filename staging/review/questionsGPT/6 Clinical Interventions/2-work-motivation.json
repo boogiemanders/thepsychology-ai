@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A human resources consultant is advising a technology company on strategies to improve employee motivation. She recommends redesigning several positions to include greater decision-making authority, project ownership, and opportunities for professional growth. A colleague suggests instead that the company simply assign additional tasks at the same skill level to keep employees busier. The consultant's recommendation reflects which approach, and how does it differ from her colleague's suggestion?",
+      "options": [
+        "Job enrichment (adding depth and meaning) versus job enlargement (adding more tasks at the same level)",
+        "Job enlargement (expanding task variety) versus job rotation (cycling through different positions)",
+        "Job rotation (broadening experience) versus job enrichment (deepening skill requirements)",
+        "Job enrichment (adding more tasks) versus job specialization (narrowing task focus)"
+      ],
+      "answer": "Job enrichment (adding depth and meaning) versus job enlargement (adding more tasks at the same level)",
+      "explanation": "Job enrichment involves redesigning jobs to include more motivator factors—meaningful challenges, autonomy, and responsibility (vertical loading). Job enlargement simply adds more tasks at the same level (horizontal loading). The consultant's recommendation of greater decision-making authority, project ownership, and professional growth opportunities exemplifies job enrichment. The colleague's suggestion of adding more same-level tasks is job enlargement. Option B incorrectly labels the consultant's approach as enlargement. Option C introduces job rotation, which is not described. Option D incorrectly defines job enrichment as adding more tasks.",
+      "kn": "KN46",
+      "kn_explanation": "Consultant recommending job redesign to improve employee motivation is an intervention to enhance performance of individuals and organizations",
+      "difficulty": "medium",
+      "quality_comment": "Strong applied question with clear contrast between the two concepts. Directly supported by lesson content.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #3: Herzberg's Two-Factor Theory",
+      "lessonExcerpt": "Job Enrichment emerged from this theory. It's about redesigning jobs to include more motivator factors, adding meaningful challenges, autonomy, and responsibility. Don't confuse job enrichment with job enlargement. Job enlargement just means piling on more tasks at the same level.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 27
+    }
+  ]
+}

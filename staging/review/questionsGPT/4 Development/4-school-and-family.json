@@ -1,0 +1,319 @@
+{
+  "questions": [
+    {
+      "stem": "Research on the psychological adjustment of adults following divorce indicates that negative consequences for men and women tend to differ in important ways. Which of the following most accurately describes a key gender difference in post-divorce adjustment?",
+      "options": [
+        "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
+        "Men experience greater long-term psychological distress, while women show primarily short-term adjustment difficulties",
+        "Women typically show increased risky behaviors and social isolation, while men face primarily financial challenges",
+        "Both men and women experience equivalent patterns of adjustment, with differences attributable solely to custody arrangements"
+      ],
+      "answer": "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
+      "explanation": "Research consistently shows that divorce affects men and women differently. For women, economic hardship is the primary challenge, and these economic consequences tend to be chronic. For men, health problems stem more from risky behaviors, social isolation, and psychological factors, but these negative effects are often temporary rather than chronic. Option B reverses the pattern—men's effects tend to be temporary, not long-term. Option C incorrectly assigns risky behaviors to women and financial challenges to men (the reverse is true). Option D incorrectly claims equivalent patterns.",
+      "kn": "KN26",
+      "kn_explanation": "Divorce is a major life event that influences the course of development across the lifespan, and the question addresses its psychological impact on adults.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a commonly examined gender difference with plausible distractors that reverse the actual pattern.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "### The Aftermath: How Divorce Affects Adults",
+      "lessonExcerpt": "For women: Economic hardship is the primary challenge... These economic consequences tend to be chronic. For men: Health problems more often stem from risky behaviors, social isolation, and psychological factors... However, these negative effects are often temporary rather than chronic.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A psychologist is evaluating two children from the same household where intimate partner violence occurs. Child A has been directly physically abused by the perpetrating parent, while Child B has not been directly abused but has regularly witnessed the violence between parents. Based on the research literature on family violence and child outcomes, which of the following statements is MOST accurate?",
+      "options": [
+        "Child B is unlikely to develop significant psychological symptoms because the violence was not directed at them",
+        "Both children are at risk for psychological problems, and witnessing domestic violence can produce effects comparable to those of direct abuse",
+        "Child A will exclusively develop externalizing symptoms while Child B will exclusively develop internalizing symptoms",
+        "Only Child A would benefit from trauma-focused treatment because Child B was not a direct victim"
+      ],
+      "answer": "Both children are at risk for psychological problems, and witnessing domestic violence can produce effects comparable to those of direct abuse",
+      "explanation": "Research consistently shows that children who witness domestic violence are at significant risk for psychological problems, even without being directly abused themselves. The lesson identifies that TF-CBT is indicated for 'domestic violence exposure' as well as direct maltreatment, indicating that witnessing domestic violence is recognized as a traumatic experience requiring treatment. Option A incorrectly minimizes the impact of witnessing violence. Option C falsely assigns exclusive symptom patterns based on type of exposure. Option D incorrectly suggests only direct victims need trauma treatment, contradicting the lesson's indication that TF-CBT treats domestic violence exposure.",
+      "kn": "KN26",
+      "kn_explanation": "This question addresses the impact of family violence on child development, a key factor influencing developmental trajectories.",
+      "difficulty": "medium",
+      "quality_comment": "The lesson mentions TF-CBT treating 'domestic violence exposure' but does not provide a detailed comparison of witnessing vs. direct abuse effects. The question is grounded in standard EPPP knowledge but lesson support is limited.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## Violence and Abuse in Families",
+      "lessonExcerpt": "Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) for ages 3-18: Treats sexual abuse, maltreatment, domestic violence exposure, traumatic loss",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A clinical psychologist is treating a 16-year-old female whose parents divorced when she was 5. The client reports chronic anxiety about abandonment in her romantic relationship and recently became pregnant. Her parents describe her as having adjusted well throughout childhood with no apparent difficulties. This presentation is MOST consistent with which research finding on divorce and child adjustment?",
+      "options": [
+        "The positive adaptation effect, in which early divorce experiences build resilience against later relational challenges",
+        "The externalizing pathway, in which children of divorce consistently display conduct problems from childhood through adolescence",
+        "The sleeper effect, in which girls who appear well-adjusted after parental divorce develop serious problems during adolescence",
+        "The conflict hypothesis, which predicts that children from low-conflict divorces show worse outcomes than those from high-conflict intact families"
+      ],
+      "answer": "The sleeper effect, in which girls who appear well-adjusted after parental divorce develop serious problems during adolescence",
+      "explanation": "The sleeper effect describes the pattern where girls who seem fine after their parents' divorce develop serious problems in adolescence, including noncompliance, low self-esteem, becoming pregnant before marriage, or intense fears about abandonment in romantic relationships. This vignette matches precisely: the girl appeared well-adjusted throughout childhood but is now showing abandonment fears and early pregnancy in adolescence. Option A is fabricated and not supported by research. Option B describes a consistent pattern of externalizing problems, which contradicts the described period of good adjustment. Option D reverses the actual finding: high-conflict intact families produce worse outcomes than low-conflict divorced families.",
+      "kn": "KN26",
+      "kn_explanation": "This question addresses the long-term developmental impact of divorce, a major life event influencing the course of development.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent clinical vignette that tests the sleeper effect concept with specific behavioral indicators drawn directly from the lesson content.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "### How Divorce Affects Children",
+      "lessonExcerpt": "The 'sleeper effect' is particularly important: Girls who seem fine after their parents' divorce may develop serious problems in adolescence. They may become noncompliant, develop low self-esteem, become pregnant before marriage, or experience intense fears about abandonment in their own romantic relationships.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A child development specialist is describing the Montessori educational approach to a group of parents considering preschool options. Which of the following BEST captures the key principle underlying the Montessori method?",
+      "options": [
+        "Maximum learning occurs through direct classroom instruction with age-matched peer groups and standardized curricula",
+        "Maximum learning comes from manipulation of sensory-motor materials rather than traditional classroom instruction, with mixed-age groupings",
+        "Maximum learning occurs through competitive academic exercises designed to identify and accelerate gifted students",
+        "Maximum learning comes from teacher-directed rote memorization supplemented by regular standardized testing"
+      ],
+      "answer": "Maximum learning comes from manipulation of sensory-motor materials rather than traditional classroom instruction, with mixed-age groupings",
+      "explanation": "The key principle of Montessori schools is that maximum learning comes from manipulation of materials (sensory-motor stimuli), rather than through traditional classroom instruction and rote learning. Children are grouped with peers of different ages and abilities, and are encouraged to perform at their potential with individually tailored learning goals. Option A is incorrect because Montessori specifically rejects traditional classroom instruction and same-age groupings. Option C is incorrect because Montessori philosophy does not emphasize competition or identifying gifted students; children are not pushed to excel but encouraged to perform at their potential. Option D is incorrect because Montessori explicitly opposes rote learning.",
+      "kn": "KN26",
+      "kn_explanation": "This question addresses educational approaches that influence child development, a relevant topic within school and family influences on development.",
+      "difficulty": "easy",
+      "quality_comment": "The lesson .md files do not cover Montessori; this content is found only in the reference text (TXT_cleaned_v2.rtf). Consider adding Montessori content to the school-and-family lesson.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## School Influences",
+      "lessonExcerpt": "MONTESSORI SCHOOLS - The key principle underlying Montessori schools is that maximum learning comes from manipulation of materials (sensory-motor stimuli), rather than through traditional classroom instruction and rote learning. Children in Montessori schools are grouped with peers of different ages and abilities.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Research on gender dynamics in classroom settings has consistently found that teachers tend to:",
+      "options": [
+        "Call on female students more frequently and provide them with more detailed feedback",
+        "Interact more frequently with male students, including giving them both more praise and more criticism",
+        "Provide equal attention to male and female students but use different tones of voice",
+        "Give female students more opportunities to answer open-ended questions while limiting males to factual recall"
+      ],
+      "answer": "Interact more frequently with male students, including giving them both more praise and more criticism",
+      "explanation": "Research on gender and classroom interactions has consistently shown that teachers interact more with male students overall. Boys receive more attention from teachers in the form of both positive feedback (praise, encouragement) and negative feedback (criticism, discipline). This pattern occurs regardless of teacher gender and contributes to differential educational experiences. The other options do not reflect the research findings: studies do not show that girls receive more detailed feedback, that attention is equal but tonal, or that question types are systematically divided by gender in the manner described.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses gender and educational dynamics, a topic within Growth and Lifespan Development.",
+      "difficulty": "medium",
+      "quality_comment": "Tests knowledge of a well-established research finding in educational psychology. The lesson covers gender differences in school context but the specific teacher interaction finding is not directly quoted.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Family and school experiences are the laboratories where people first learn about relationships, conflict, success, and failure.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "How do child-rearing practices influence the development of altruism in children?",
+      "options": [
+        "Children raised in authoritarian households are more altruistic.",
+        "Children learn altruism through modeling and reinforcement from caregivers.",
+        "Altruism is solely a genetic trait and not influenced by upbringing.",
+        "Children in neglectful environments show higher levels of altruism."
+      ],
+      "answer": "Children learn altruism through modeling and reinforcement from caregivers.",
+      "explanation": "Research indicates that children develop altruistic behaviors by observing and imitating caregivers who model such behaviors, as well as through reinforcement. The other options present incorrect or unsupported claims.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to social development and the influence of parenting on altruism.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of the relationship between parenting and altruism.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "These early lessons become templates (often unconscious ones) that people carry into adulthood.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which of the following best describes the effects of divorce on children?",
+      "options": [
+        "Children are unaffected by parental divorce if they are not directly involved.",
+        "Divorce has uniform effects on all children, regardless of age or gender.",
+        "Children from divorced families often experience emotional and behavioral difficulties.",
+        "Divorced parents are always less effective than married parents."
+      ],
+      "answer": "Children from divorced families often experience emotional and behavioral difficulties.",
+      "explanation": "Research shows that children from divorced families frequently face emotional and behavioral challenges, particularly in the immediate aftermath of the divorce. The other options are overly simplistic or inaccurate.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to family dynamics and their impact on child development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the impact of divorce on children.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## How Divorce Affects Children",
+      "lessonExcerpt": "The impact on children varies significantly based on several factors.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What impact do teacher-student gender interactions have on educational outcomes?",
+      "options": [
+        "They have no significant impact",
+        "They can reinforce gender stereotypes",
+        "They improve academic performance for all students",
+        "They only affect male students"
+      ],
+      "answer": "They can reinforce gender stereotypes",
+      "explanation": "The correct answer is that teacher-student gender interactions can reinforce gender stereotypes, which can affect students' perceptions of their abilities and interests. The other options are incorrect as they either underestimate the impact of these interactions or incorrectly specify their effects.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to educational psychology and gender interactions.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the implications of gender interactions in education.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Teacher-student gender interactions can reinforce gender stereotypes, affecting educational outcomes.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "At what age do children typically begin to show signs of racial awareness, according to child development research?",
+      "options": [
+        "Infancy",
+        "Around 2-3 years",
+        "Around 5-6 years",
+        "Adolescence"
+      ],
+      "answer": "Around 2-3 years",
+      "explanation": "The correct answer is 'Around 2-3 years' as this is when children start to notice and categorize people based on race. The other options do not accurately reflect the typical age for the onset of racial awareness.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to child development and racial awareness.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and tests knowledge of child development stages.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Understanding how families and schools shape development isn't just academic trivia.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "What is the primary mechanism by which the Rosenthal effect influences student performance?",
+      "options": [
+        "Increased parental involvement",
+        "Teacher expectations",
+        "Peer pressure",
+        "Standardized testing"
+      ],
+      "answer": "Teacher expectations",
+      "explanation": "The Rosenthal effect, also known as the Pygmalion effect, primarily influences student performance through teacher expectations. When teachers have higher expectations for certain students, those students tend to perform better. The other options do not directly relate to the mechanism of the Rosenthal effect.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to educational psychology and the impact of expectations on performance.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and assesses understanding of the Rosenthal effect in an educational context.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## Predicting Divorce: Warning Signs in Communication",
+      "lessonExcerpt": "The Rosenthal effect, also known as the Pygmalion effect, shows that teacher expectations can significantly influence student performance.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "How might children typically respond emotionally to their parents' divorce?",
+      "options": [
+        "They show no significant changes in behavior",
+        "They may experience a range of emotions including sadness and anger",
+        "They become more independent immediately",
+        "They often blame themselves for the divorce"
+      ],
+      "answer": "They may experience a range of emotions including sadness and anger",
+      "explanation": "Children often experience a range of emotions such as sadness, anger, and confusion in response to parental divorce. The other options either underestimate the emotional impact or misrepresent typical responses.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it relates to emotional development and the impact of family changes.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of children's emotional responses to divorce.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## How Divorce Affects Children",
+      "lessonExcerpt": "The impact on children varies significantly based on several factors.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which of the following is considered a protective factor in the context of developmental resilience?",
+      "options": [
+        "Exposure to high levels of stress",
+        "Strong family support",
+        "Chronic health conditions",
+        "Low socioeconomic status"
+      ],
+      "answer": "Strong family support",
+      "explanation": "Strong family support is a well-documented protective factor that can help individuals cope with stress and adversity, promoting resilience. The other options are risk factors that can hinder development and well-being.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to understanding resilience and protective factors in development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of resilience factors in development.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
+      "lessonExcerpt": "Strong family support can help individuals cope with stress and adversity.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Research indicates that job satisfaction tends to change with age. Which of the following statements best reflects this relationship?",
+      "options": [
+        "Job satisfaction decreases consistently as individuals age.",
+        "Job satisfaction remains constant throughout adulthood.",
+        "Job satisfaction tends to increase as individuals age.",
+        "Job satisfaction is unrelated to age."
+      ],
+      "answer": "Job satisfaction tends to increase as individuals age.",
+      "explanation": "Research shows that job satisfaction often increases with age, likely due to factors such as increased experience, stability, and alignment of job roles with personal values. The other options do not accurately reflect the general trend observed in studies.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to adult development and the factors influencing job satisfaction over the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of the relationship between age and job satisfaction.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Aftermath: How Divorce Affects Adults",
+      "lessonExcerpt": "Job satisfaction tends to increase as individuals age.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What is a key factor in understanding bullying behavior in childhood according to developmental psychology?",
+      "options": [
+        "It is primarily a result of genetic predisposition.",
+        "It is influenced by peer relationships and social dynamics.",
+        "It is solely a reflection of family dynamics.",
+        "It is a behavior that typically resolves without intervention."
+      ],
+      "answer": "It is influenced by peer relationships and social dynamics.",
+      "explanation": "The correct answer highlights that bullying behavior is significantly influenced by peer relationships and the social context in which children operate. The other options oversimplify the issue by attributing it to genetics, family dynamics, or assuming it resolves on its own.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to social development and the factors influencing childhood behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of social development and bullying behavior.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Bullying behavior is influenced by peer relationships and social dynamics.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What role does play serve in child development according to developmental psychology?",
+      "options": [
+        "It is merely a form of entertainment.",
+        "It helps children develop social skills and emotional regulation.",
+        "It has no significant impact on cognitive development.",
+        "It is primarily a way for children to expend energy."
+      ],
+      "answer": "It helps children develop social skills and emotional regulation.",
+      "explanation": "The correct answer reflects the understanding that play is crucial for developing social skills and emotional regulation, as it allows children to practice interactions and manage their emotions. The other options underestimate the importance of play in development.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to developmental psychology and the importance of play in child development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of the role of play in development.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Play helps children develop social skills and emotional regulation.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    }
+  ]
+}

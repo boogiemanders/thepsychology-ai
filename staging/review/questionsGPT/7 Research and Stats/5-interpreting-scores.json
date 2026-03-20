@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A client obtains a T-score of 70 on a standardized anxiety measure that has a normal distribution. What is the client's approximate percentile rank?",
+      "options": [
+        "70th percentile",
+        "84th percentile",
+        "95th percentile",
+        "98th percentile"
+      ],
+      "answer": "98th percentile",
+      "explanation": "A T-score of 70 corresponds to 2 standard deviations above the mean (T-scores have M=50, SD=10; so 70 = 50 + 2×10). In a normal distribution, a score at +2 SD corresponds to approximately the 98th percentile. The lesson provides the conversion table showing that +2 SD = T-score of 70 = z-score of +2.0 = percentile rank of 98. Option A (70th) confuses the T-score value with a percentile rank. Option B (84th) corresponds to +1 SD (T-score of 60). Option C (95th) is incorrect and may be confused with the 95% confidence interval.",
+      "kn": "KN55",
+      "kn_explanation": "Converting T-scores to percentile ranks requires knowledge of probability theory and descriptive statistics (normal distribution properties), which falls under KN55's quantitative analytic methods.",
+      "difficulty": "medium",
+      "quality_comment": "Clean, straightforward conversion question. Tests memorization of the standard score equivalency table which is essential EPPP knowledge.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### The Critical Table: Standard Score Equivalents",
+      "lessonExcerpt": "| +2 SD | +2.0 | 70 | 130 | 9 | 98 |",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A set of raw scores from an anxiety measure has a bimodal distribution. When each raw score is converted to a z-score using the formula z = (X – M)/SD, the resulting distribution of z-scores will be:",
+      "options": [
+        "Normal, because z-score transformation always normalizes a distribution",
+        "Bimodal, because z-score conversion is a linear transformation that preserves the shape of the distribution",
+        "Rectangular, because z-scores spread all values evenly across the distribution",
+        "Positively skewed, because z-scores shift all values to the right of the distribution"
+      ],
+      "answer": "Bimodal, because z-score conversion is a linear transformation that preserves the shape of the distribution",
+      "explanation": "Converting raw scores to z-scores is a linear transformation, which changes the scale (mean becomes 0, SD becomes 1) but preserves the shape of the original distribution. The lesson explicitly states: 'converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.' Therefore, if the original distribution is bimodal, the z-score distribution will also be bimodal. Option A is incorrect — z-score transformation does NOT normalize distributions; that requires a separate nonlinear normalization procedure. Option C describes the effect of converting to percentile ranks, not z-scores. Option D has no basis in how z-score transformation works.",
+      "kn": "KN55",
+      "kn_explanation": "Understanding z-score transformations and their effect on distribution shape is a descriptive statistics concept, falling under KN55's quantitative analytic methods.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a commonly confused concept — the distinction between linear transformation (z-scores) and nonlinear transformation (percentile ranks/normalization). Strong distractors.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### Standard Scores: Speaking the Language of Standard Deviations",
+      "lessonExcerpt": "converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    }
+  ]
+}

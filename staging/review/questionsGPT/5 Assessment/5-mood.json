@@ -1,0 +1,88 @@
+{
+  "questions": [
+    {
+      "stem": "A clinical psychologist is educating a family about the genetic contribution to bipolar I disorder. When discussing concordance rates in twin studies, which of the following most accurately reflects the research findings?",
+      "options": [
+        "Concordance is approximately 10-15% for monozygotic twins and 2-5% for dizygotic twins",
+        "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+        "Concordance is approximately 90-95% for monozygotic twins and 40-60% for dizygotic twins",
+        "Concordance rates for monozygotic and dizygotic twins are approximately equal at 30-40%"
+      ],
+      "answer": "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+      "explanation": "Twin studies of bipolar disorder show concordance rates of 40-80% for monozygotic (identical) twins and 5-30% for dizygotic (fraternal) twins, reflecting high heritability (60-90%). Option A underestimates the concordance rates significantly. Option C overestimates the monozygotic rate and dramatically overestimates the dizygotic rate. Option D incorrectly suggests similar concordance regardless of zygosity, which would indicate minimal genetic contribution — contradicting the strong genetic evidence for bipolar disorder.",
+      "kn": "KN39",
+      "kn_explanation": "Twin study concordance rates for bipolar I disorder relate to major research-based theories and models of psychopathology, specifically the genetic/biological underpinnings of mental disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific quantitative knowledge about bipolar genetics that is commonly examined on the EPPP.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "### The Genetics Are Strong",
+      "lessonExcerpt": "Monozygotic (identical) twins: 40-80%. Dizygotic (fraternal) twins: 5-30%.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Based on 2022 CDC epidemiological data, a psychologist conducting a suicide risk assessment should be MOST aware that the highest rate of completed suicide among males occurs in which demographic group?",
+      "options": [
+        "Males aged 75 and older",
+        "Males aged 45 to 64",
+        "Males aged 25 to 34",
+        "Males aged 15 to 24"
+      ],
+      "answer": "Males aged 75 and older",
+      "explanation": "According to the lesson content citing 2022 CDC data, the highest suicide rate for males is in those aged 75 and older. The lesson states: 'Males: 4 times higher suicide rate than females; Highest rate for males: ages 75+; Highest rate for females: ages 45-64.' Option B (45-64) is the highest rate age group for females, not males. Options C and D represent younger age groups that, while at risk, do not have the highest completion rates. The lesson also notes that non-Hispanic American Indian/Alaskan Native individuals have the highest rates among ethnic groups.",
+      "kn": "KN5",
+      "kn_explanation": "This question tests knowledge of suicide epidemiology and demographic risk factors, which falls under the diagnosis and psychopathology component of assessment and diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward factual recall question targeting a high-yield EPPP topic. The lesson provides clear, specific data supporting the correct answer.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Suicide: The Critical Risk Factor",
+      "lessonExcerpt": "Males: 4 times higher suicide rate than females. Highest rate for males: ages 75+. Highest rate for females: ages 45-64. Ethnicity: Highest rates for non-Hispanic American Indian/Alaskan Native individuals.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A psychologist is evaluating a 32-year-old patient who has experienced a single episode of markedly elevated mood, decreased need for sleep, pressured speech, and grandiose delusions lasting 10 days, requiring hospitalization. The patient has never experienced a major depressive episode. Based on DSM-5 criteria, what is the MOST appropriate diagnosis?",
+      "options": [
+        "Bipolar II disorder",
+        "Bipolar I disorder",
+        "Cyclothymic disorder",
+        "Unspecified bipolar and related disorder"
+      ],
+      "answer": "Bipolar I disorder",
+      "explanation": "Bipolar I disorder requires at least one manic episode lasting at least one week (or any duration if hospitalization is required). This patient meets criteria with a 10-day episode requiring hospitalization. Critically, Bipolar I does NOT require a depressive episode—only one manic episode is needed. Bipolar II requires at least one hypomanic AND one major depressive episode, and by definition the person has never had a full manic episode. Cyclothymic disorder involves chronic fluctuating hypomanic and depressive symptoms that never meet full episode criteria. Unspecified bipolar disorder is inappropriate when full criteria for a specific diagnosis are met.",
+      "kn": "KN5",
+      "kn_explanation": "Bipolar I diagnostic criteria are a core topic within the Diagnosis subdomain of Assessment and Diagnosis",
+      "difficulty": "medium",
+      "quality_comment": "Tests the critical distinction that Bipolar I requires only ONE manic episode and does NOT require depression; a common exam trap",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## The Bipolar Disorders: Different Combinations, Different Diagnoses",
+      "lessonExcerpt": "Bipolar I only requires ONE manic episode. That person might never have depression, but they still have Bipolar I.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A researcher studying the epidemiology of major depressive disorder across the lifespan finds that prevalence rates for boys and girls are roughly equivalent until a specific developmental period, after which rates diverge significantly. This divergence is MOST likely to become apparent during:",
+      "options": [
+        "Middle childhood (ages 6-8)",
+        "Early adolescence",
+        "Early adulthood (ages 18-25)",
+        "Middle adulthood (ages 40-50)"
+      ],
+      "answer": "Early adolescence",
+      "explanation": "Research consistently shows that during childhood, depression rates are similar for boys and girls, but in early adolescence, rates for females increase substantially while male rates remain stable. This pattern is attributed to hormonal changes at puberty that may sensitize females but desensitize males to stress from negative life events, resulting in females having rates 1.5 to 3 times higher than males throughout adulthood. The divergence does not occur in middle childhood, early adulthood, or middle adulthood—it begins specifically at early adolescence.",
+      "kn": "KN5",
+      "kn_explanation": "Depression epidemiology and gender differences in prevalence fall under the Diagnosis subdomain",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific knowledge of when the gender gap in depression emerges, not just that it exists",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "### The Gender Gap",
+      "lessonExcerpt": "During childhood, depression rates are similar for boys and girls. But in early adolescence, rates for females skyrocket while male rates stay stable.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
+    }
+  ]
+}

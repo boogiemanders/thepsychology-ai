@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "Research on the Type A behavior pattern and coronary heart disease has found that the component most strongly associated with increased cardiovascular risk is:",
+      "options": [
+        "Chronic time urgency",
+        "Excessive competitiveness",
+        "Hostility",
+        "Achievement striving"
+      ],
+      "answer": "Hostility",
+      "explanation": "The lesson clearly identifies hostility as the toxic component: 'While earlier research linked the entire pattern to coronary heart disease, more recent studies suggest hostility is the toxic component. The person who's driven and time-urgent but not hostile may not face elevated heart disease risk. But the hostile, cynical person—regardless of time urgency—shows increased cardiovascular problems.' Time urgency (A) and competitiveness (B), while features of Type A personality, are not independently predictive of cardiovascular disease. Achievement striving (D) is a general motivational characteristic not identified as the pathogenic element.",
+      "kn": "KN39",
+      "kn_explanation": "Type A behavior pattern and its association with coronary heart disease is a research-based model of psychopathology/behavioral disorder, fitting KN39's focus on major research-based theories and models of psychopathology.",
+      "difficulty": "easy",
+      "quality_comment": "Classic EPPP question testing a well-established finding. The lesson provides very clear support for the correct answer.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "suggestedParagraph": "## Common Misconceptions That Trip Up Test-Takers",
+      "lessonExcerpt": "**Type A Behavior Pattern** is the opposite of protective. Friedman and Rosenman described it as chronic time urgency, excessive competitiveness, and hostility. While earlier research linked the entire pattern to coronary heart disease, more recent studies suggest hostility is the toxic component.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A newly appointed department head believes that her employees are intrinsically motivated, capable of self-direction, and willing to seek responsibility when given the opportunity. She designs her management approach around providing autonomy and conditions for employees to pursue their own goals while meeting organizational objectives. Her management philosophy is MOST consistent with which theoretical perspective?",
+      "options": [
+        "Taylor's scientific management principles",
+        "McGregor's Theory X assumptions",
+        "McGregor's Theory Y assumptions",
+        "Weber's bureaucratic management model"
+      ],
+      "answer": "McGregor's Theory Y assumptions",
+      "explanation": "Theory Y supervisors believe subordinates enjoy work, are self-directed and internally motivated, seek responsibility, and want to contribute meaningfully. The appropriate management approach under Theory Y is to provide conditions for employees to fulfill their own goals while achieving organizational objectives—exactly what this manager is doing. Taylor's scientific management (A) views workers as primarily motivated by money. Theory X (B) assumes workers are lazy and need directive, controlling management. Weber's bureaucratic model (D) emphasizes rules, hierarchy, and formal procedures rather than autonomy.",
+      "kn": "KN47",
+      "kn_explanation": "This describes a consultation scenario involving organizational leadership and management theory (Theory X/Theory Y), which falls under research-based consultation models and processes.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward application question. Well-grounded in lesson content with clear answer.",
+      "suggestedLesson": "6-management-theories",
+      "suggestedParagraph": "## McGregor's Theory X/Theory Y: The Self-Fulfilling Prophecy",
+      "lessonExcerpt": "Theory Y Supervisors Believe: Subordinates enjoy work, Workers are self-directed and internally motivated, Employees seek responsibility, People want to contribute meaningfully. Therefore: Supervisors should provide conditions for employees to fulfill their own goals while achieving organizational objectives.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 24
+    }
+  ]
+}

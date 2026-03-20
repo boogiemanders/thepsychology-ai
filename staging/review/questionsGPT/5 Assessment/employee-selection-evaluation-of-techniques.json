@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "An employer uses a cognitive ability test for hiring that results in a selection rate of 70% for White applicants and 50% for Black applicants. According to the Uniform Guidelines on Employee Selection Procedures, the employer should first determine whether adverse impact exists by applying:",
+      "options": [
+        "The differential validity standard, comparing validity coefficients across groups",
+        "The four-fifths (80%) rule, comparing the minority hiring rate to the majority hiring rate",
+        "A chi-square test of statistical significance between group selection rates",
+        "The standard error of measurement to determine if group differences exceed chance"
+      ],
+      "answer": "The four-fifths (80%) rule, comparing the minority hiring rate to the majority hiring rate",
+      "explanation": "The Uniform Guidelines provide the 80% (four-fifths) rule as the standard method for detecting adverse impact. The lesson states: 'The Uniform Guidelines on Employee Selection Procedures gives us a specific way to detect adverse impact: the 80% rule. Calculate the hiring rate for each group. If the hiring rate for a protected group is less than 80% of the hiring rate for the majority group, adverse impact is occurring.' In this scenario, 70% × 0.80 = 56%, and the 50% rate for Black applicants falls below this threshold, indicating adverse impact. Differential validity (A) addresses whether test validity differs across groups, which is a separate question. Options C and D describe statistical procedures not specified in the Uniform Guidelines for this purpose.",
+      "kn": "KN29",
+      "kn_explanation": "Test fairness and bias in selection testing, including adverse impact analysis related to psychometric properties",
+      "difficulty": "medium",
+      "quality_comment": "While the lesson covers adverse impact and the four-fifths rule thoroughly, it does not explicitly mention Griggs v. Duke Power by name. The question tests the legal framework that Griggs established without requiring the case name.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "### The 80% Rule (Four-Fifths Rule)",
+      "lessonExcerpt": "The Uniform Guidelines on Employee Selection Procedures gives us a specific way to detect adverse impact: the **80% rule**. Here's how it works: Calculate the hiring rate for each group. If the hiring rate for a protected group is less than 80% of the hiring rate for the majority group, adverse impact is occurring.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 28
+    }
+  ]
+}

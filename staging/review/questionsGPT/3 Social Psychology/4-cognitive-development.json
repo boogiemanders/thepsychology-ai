@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "Research on gender-role stereotypes and academic achievement has found that parents typically attribute their sons' success in mathematics to ability, while attributing their daughters' success in mathematics to:",
+      "options": [
+        "Innate talent",
+        "Effort",
+        "Teacher favoritism",
+        "Luck"
+      ],
+      "answer": "Effort",
+      "explanation": "Research on gender stereotypes in academic attribution shows that parents expect sons to excel at math and attribute their success to ability, but attribute daughters' success to effort. This differential attribution pattern creates self-fulfilling prophecies that affect children's confidence, interest, course selection, and career choices. 'Innate talent' is incorrect because that is what parents attribute to sons, not daughters. 'Teacher favoritism' and 'Luck' are not the attributions identified in this research.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses social and multicultural bases of behavior, specifically gender stereotypes and attribution patterns.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content with a clear correct answer grounded in research findings.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Sex Differences in Cognitive Abilities and Self-Esteem",
+      "lessonExcerpt": "Parents expect sons to excel at math and attribute their success to ability, but attribute daughters' success to effort. Children internalize these views, affecting confidence, interest, course selection, and career choices.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    }
+  ]
+}

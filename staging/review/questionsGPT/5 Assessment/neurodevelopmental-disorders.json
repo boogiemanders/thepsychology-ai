@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "Under DSM-5-TR, a child previously diagnosed with Asperger's disorder would now receive which diagnosis?",
+      "options": [
+        "Social (pragmatic) communication disorder",
+        "Autism spectrum disorder",
+        "Autism spectrum disorder with language impairment specifier",
+        "Unspecified neurodevelopmental disorder"
+      ],
+      "answer": "Autism spectrum disorder",
+      "explanation": "The DSM-5-TR combined what were previously separate diagnoses—autistic disorder, Asperger's disorder, and PDD-NOS—into a single diagnosis of autism spectrum disorder (ASD). A child who would have previously received an Asperger's diagnosis (characterized by social communication deficits and restricted interests without significant language delay) now receives an ASD diagnosis. The key is that ASD requires both social communication/interaction deficits AND restricted, repetitive behaviors. Social (pragmatic) communication disorder (A) would apply only if restricted/repetitive behaviors were absent. Option C is incorrect because Asperger's was characterized by the absence of language impairment, not its presence. Option D is a residual category, not the appropriate primary diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question is about DSM-5-TR classification systems and how diagnostic categories have been reorganized (Asperger's folded into Autism Spectrum Disorder), which falls under classification systems and their underlying rationales.",
+      "difficulty": "medium",
+      "quality_comment": "Tests an important DSM-5 structural change that is high-yield for the EPPP and clinically relevant.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Autism Spectrum Disorder (ASD)",
+      "lessonExcerpt": "ASD has gone through several name changes and classification updates. The current DSM-5-TR combines what used to be separate diagnoses (autistic disorder, Asperger's disorder) into one spectrum.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    }
+  ]
+}

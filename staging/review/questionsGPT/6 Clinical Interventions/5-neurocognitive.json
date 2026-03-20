@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is conducting a neuropsychological evaluation of an HIV-positive client who presents with forgetfulness, difficulty concentrating, psychomotor slowing, and social withdrawal. These symptoms are most consistent with which pattern of neurocognitive impairment?",
+      "options": [
+        "Cortical neurocognitive disorder, characterized by aphasia, agnosia, and apraxia",
+        "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+        "Cortico-subcortical neurocognitive disorder, characterized by variable symptoms depending on areas affected",
+        "Frontotemporal neurocognitive disorder, characterized by personality changes and disinhibition"
+      ],
+      "answer": "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+      "explanation": "The lesson states that HIV-related NCD is 'Caused by HIV infection affecting the brain' and 'Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' The client's presentation matches this subcortical pattern exactly. Option A is incorrect because cortical NCDs (like Alzheimer's) feature aphasia, agnosia, and apraxia as primary symptoms. Option C describes cortico-subcortical patterns seen in vascular NCD or Lewy body disease. Option D describes frontotemporal NCD, which is a cortical disorder featuring personality changes as the earliest symptom.",
+      "kn": "KN42",
+      "kn_explanation": "Neuropsychological evaluation of an HIV-positive client with cognitive symptoms relates to matching treatment/intervention decisions to assessment and diagnosis findings, including consideration of medical comorbidities and special population factors.",
+      "difficulty": "medium",
+      "quality_comment": "Tests ability to identify subcortical vs. cortical NCD patterns in a specific medical population. Lesson coverage is adequate but brief.",
+      "suggestedLesson": "5-neurocognitive",
+      "suggestedParagraph": "### HIV-Related NCD",
+      "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 4
+    }
+  ]
+}

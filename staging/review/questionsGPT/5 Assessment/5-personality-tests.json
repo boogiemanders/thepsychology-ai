@@ -1,0 +1,151 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following methods is most effective for increasing the sensitivity of a psychological test?",
+      "options": [
+        "Reducing the number of items",
+        "Using a forced-choice format",
+        "Increasing the test length",
+        "Employing a Likert scale"
+      ],
+      "answer": "Using a forced-choice format",
+      "explanation": "A forced-choice format can increase sensitivity by requiring respondents to make a choice between two equally appealing options, thus providing clearer distinctions in responses. The other options may not effectively enhance sensitivity.",
+      "kn": "KN3",
+      "kn_explanation": "This question pertains to test development and methods to enhance test sensitivity.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of test development strategies.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Using a forced-choice format can increase the sensitivity of a psychological test.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary goal of frame-of-reference training in performance appraisal?",
+      "options": [
+        "To enhance employee motivation",
+        "To standardize performance ratings across evaluators",
+        "To improve communication skills",
+        "To increase job satisfaction"
+      ],
+      "answer": "To standardize performance ratings across evaluators",
+      "explanation": "Frame-of-reference training aims to ensure that all evaluators use the same standards and criteria when assessing employee performance, thus standardizing ratings. The other options do not capture the primary goal of this training.",
+      "kn": "KN6",
+      "kn_explanation": "This question relates to performance appraisal and the purpose of frame-of-reference training.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses understanding of performance appraisal techniques.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The primary goal of frame-of-reference training is to standardize performance ratings across evaluators.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "In functional analysis of behavior, what is the primary goal of identifying antecedents and consequences?",
+      "options": [
+        "A. To increase the frequency of maladaptive behaviors",
+        "B. To understand the context in which behaviors occur",
+        "C. To eliminate all behaviors from the individual",
+        "D. To create a standardized behavior assessment tool"
+      ],
+      "answer": "B. To understand the context in which behaviors occur",
+      "explanation": "Option B is correct because the goal of functional analysis is to identify the antecedents and consequences that influence behavior, thereby understanding the context in which behaviors occur. Option A is incorrect as the aim is not to increase maladaptive behaviors. Option C is misleading; the goal is not to eliminate behaviors but to understand them. Option D is not relevant to the purpose of functional analysis.",
+      "kn": "KN23",
+      "kn_explanation": "This question relates to the functional analysis of behavior, which is a key aspect of behavioral assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of functional analysis.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The goal of functional analysis is to identify the antecedents and consequences that influence behavior.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which strategy is most effective in addressing rater leniency during performance appraisals?",
+      "options": [
+        "Implementing a forced-choice rating system",
+        "Providing extensive training on rating criteria",
+        "Using a peer review process",
+        "Conducting appraisals more frequently"
+      ],
+      "answer": "Providing extensive training on rating criteria",
+      "explanation": "Providing extensive training on rating criteria helps raters understand the standards and reduces leniency bias. The other options may help but do not directly address the root cause of leniency.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to methods of improving the accuracy of performance evaluations.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of performance appraisal techniques.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which symptom is most characteristic of dissociative amnesia?",
+      "options": [
+        "Inability to recall important autobiographical information",
+        "Experiencing episodes of intense fear in social situations",
+        "Persistent feelings of sadness and hopelessness",
+        "Delusions of grandeur or persecution"
+      ],
+      "answer": "Inability to recall important autobiographical information",
+      "explanation": "The hallmark of dissociative amnesia is the inability to recall significant personal information, often related to trauma. The other options describe symptoms of anxiety disorders and mood disorders.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it pertains to the diagnosis and characteristics of dissociative disorders, specifically dissociative amnesia.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of dissociative disorders.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What is the primary purpose of empirical criterion keying in personality assessment?",
+      "options": [
+        "To ensure the test is culturally fair.",
+        "To identify items that differentiate between groups.",
+        "To create a forced-choice format.",
+        "To enhance the test's face validity."
+      ],
+      "answer": "To identify items that differentiate between groups.",
+      "explanation": "Empirical criterion keying focuses on selecting items that effectively distinguish between individuals with different diagnoses or characteristics, enhancing the test's predictive validity. The other options do not accurately describe the primary purpose of this method.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code is relevant as it pertains to the methodology of personality testing and assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and assesses knowledge of personality assessment methods.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The lesson does not explicitly cover empirical criterion keying in personality assessment.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What is the main purpose of projective tests in psychology?",
+      "options": [
+        "To measure specific personality traits directly.",
+        "To assess cognitive abilities.",
+        "To reveal unconscious thoughts and feelings.",
+        "To provide standardized scores for comparison."
+      ],
+      "answer": "To reveal unconscious thoughts and feelings.",
+      "explanation": "Projective tests are designed to uncover underlying emotions and thoughts by analyzing responses to ambiguous stimuli. The other options describe functions of more structured assessments rather than the exploratory nature of projective tests.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the role of projective assessments in psychological evaluation.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of projective testing purposes.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The lesson does not adequately cover the purpose of projective tests in psychology.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    }
+  ]
+}

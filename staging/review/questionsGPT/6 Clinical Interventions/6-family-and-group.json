@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A family therapist using Minuchin's structural approach works with a family in which the mother and eldest daughter form a stable coalition against the father. The father has become increasingly disengaged from the family. What would be the PRIMARY therapeutic focus in this treatment?",
+      "options": [
+        "Exploring the multigenerational transmission process that led to the current family dynamics",
+        "Restructuring the family's boundaries and subsystem organization",
+        "Identifying and externalizing the dominant problem-saturated narrative",
+        "Using circular questioning to reveal each member's perception of the coalition"
+      ],
+      "answer": "Restructuring the family's boundaries and subsystem organization",
+      "explanation": "Structural family therapy (Minuchin) focuses primarily on the family's organizational structure—specifically subsystems and boundaries. The presenting pattern describes a problematic stable coalition (one parent and child teaming up against the other parent) with rigid boundaries leading to disengagement. The therapist would work to restructure these boundaries using techniques like boundary making, unbalancing, and enactment. Exploring multigenerational transmission (A) is a Bowenian approach. Externalizing narratives (C) is a narrative therapy technique. Circular questioning (D) is associated with Milan systemic therapy.",
+      "kn": "KN46",
+      "kn_explanation": "Structural family therapy (Minuchin) is an intervention technique for families, fitting interventions to enhance functioning of families",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with clear distractors representing other family therapy approaches. Well-supported by lesson content.",
+      "suggestedLesson": "6-family-and-group",
+      "suggestedParagraph": "### 2. Structural Family Therapy (Minuchin)",
+      "lessonExcerpt": "Salvador Minuchin focused on the family's structure. How it's organized and what rules govern interactions. Two concepts are central: Subsystems: Smaller units within the family with specific functions... Boundaries: Rules determining how much contact family members have with each other.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "A strategic family therapist instructs the parents of a defiant adolescent to tell their son that he must continue to refuse to follow household rules for the next two weeks, and that any compliance would be premature. The therapist's directive is an example of which therapeutic technique?",
+      "options": [
+        "Reframing the symptom as a positive contribution to family cohesion",
+        "Paradoxical intervention through prescribing the symptom",
+        "Enactment to observe family interaction patterns in session",
+        "Unbalancing by strategically aligning with the adolescent"
+      ],
+      "answer": "Paradoxical intervention through prescribing the symptom",
+      "explanation": "Paradoxical intervention involves directing clients to engage in or continue the very behavior that is problematic. By prescribing the symptom—instructing the adolescent to continue his defiance—the therapist uses the family's resistance therapeutically. If the family complies with the directive, the symptom is now under therapeutic control; if they resist the directive, they must change the problematic behavior. This technique was developed within strategic family therapy (Haley). Reframing as positive contribution (A) describes Milan systemic therapy's positive connotation. Enactment (C) is a structural family therapy technique involving in-session role-play. Unbalancing (D) is a structural technique of aligning with a lower-power family member.",
+      "kn": "KN44",
+      "kn_explanation": "Paradoxical intervention (prescribing the symptom) is a specific treatment technique used in strategic family therapy",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question testing paradoxical directives. The lesson covers prescribing the symptom in strategic therapy. Note: paradoxical intention (Frankl) is a related but distinct concept not covered in lessons.",
+      "suggestedLesson": "6-family-and-group",
+      "suggestedParagraph": "### 3. Strategic Family Therapy (Haley)",
+      "lessonExcerpt": "Prescribing the symptom: Instruct the family to do the problematic behavior, often exaggerated... This helps them realize they actually control the behavior. Restraining: Encourage the family not to change or warn against changing too quickly. This uses their resistance therapeutically.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 28
+    }
+  ]
+}

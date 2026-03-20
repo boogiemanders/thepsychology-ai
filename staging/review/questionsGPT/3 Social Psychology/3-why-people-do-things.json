@@ -1,0 +1,340 @@
+{
+  "questions": [
+    {
+      "stem": "A psychology intern observes a coworker arriving late to a supervision meeting and immediately concludes that the coworker is irresponsible and disorganized. Later that day, the intern herself is late to a client session due to an unexpected traffic jam and attributes her tardiness entirely to the road conditions. The intern's judgment about her coworker's lateness best illustrates which cognitive bias?",
+      "options": [
+        "Self-serving bias",
+        "Fundamental attribution error",
+        "Actor-observer effect",
+        "Ultimate attribution error"
+      ],
+      "answer": "Fundamental attribution error",
+      "explanation": "The fundamental attribution error is the tendency to overestimate dispositional (personality) factors and underestimate situational factors when explaining OTHER people's behavior. The intern attributed her coworker's lateness to character traits (irresponsible, disorganized) rather than considering situational explanations. While the actor-observer effect (C) also applies to the full scenario (she explains her own lateness situationally but the coworker's dispositionally), the question specifically asks about the judgment of the coworker's lateness, which is the fundamental attribution error. The self-serving bias (A) involves taking credit for successes and blaming failures on external factors, which doesn't apply here. The ultimate attribution error (D) applies the self-serving logic to entire groups, not individuals.",
+      "kn": "KN14",
+      "kn_explanation": "This describes the fundamental attribution error, which falls under person perception and social cognition.",
+      "difficulty": "medium",
+      "quality_comment": "Tests distinction between FAE and actor-observer effect, a common EPPP trap. The scenario clearly isolates the FAE component.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "### The Fundamental Attribution Error",
+      "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Dr. Patel is running late for a supervision meeting and attributes her tardiness to unexpected traffic. However, when her supervisee arrives late the following week, Dr. Patel assumes the supervisee is irresponsible. This pattern of attributing one's own behavior to situational factors while attributing others' behavior to dispositional factors is known as:",
+      "options": [
+        "The fundamental attribution error",
+        "The actor-observer effect",
+        "The self-serving bias",
+        "The ultimate attribution error"
+      ],
+      "answer": "The actor-observer effect",
+      "explanation": "The actor-observer effect, described by Jones and Nisbett (1971), is the tendency to attribute our own behaviors to situational factors but others' behaviors to dispositional (personality) factors. The key distinction from the fundamental attribution error is that actor-observer explicitly contrasts how we explain OUR OWN behavior versus OTHERS' behavior for the same type of event. The fundamental attribution error refers only to overweighting dispositional factors when explaining others' behavior, without the self-other comparison. The self-serving bias specifically involves taking credit for successes and blaming failures on external factors—it's about successes vs. failures, not self vs. other. The ultimate attribution error extends attribution biases to in-group vs. out-group dynamics.",
+      "kn": "KN3",
+      "kn_explanation": "This question tests social cognition and attribution biases, a core area of social psychology.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the critical distinction between actor-observer bias and fundamental attribution error using a realistic clinical scenario.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "### The Actor-Observer Effect",
+      "lessonExcerpt": "We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities... We have access to our own internal experiences, context, and history. We know all the situational pressures we face. But when observing others, we see their behavior without full access to their circumstances, so we fill in the gaps with assumptions about their character.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "According to the reformulated learned helplessness model, a person who attributes a job rejection to the belief that 'I'm incompetent at everything and always will be' is making attributions that are:",
+      "options": [
+        "External, stable, and global",
+        "Internal, unstable, and specific",
+        "Internal, stable, and global",
+        "External, unstable, and specific"
+      ],
+      "answer": "Internal, stable, and global",
+      "explanation": "The reformulated learned helplessness model (Abramson, Seligman, & Teasdale) identifies a pessimistic attributional style as the cognitive vulnerability for learned helplessness and depression: attributing negative events to internal ('I'm incompetent'), stable ('always will be'), and global ('at everything') causes. This combination predicts the most pervasive helplessness. External, stable, and global attributions would blame outside forces. Internal, unstable, and specific reflects an optimistic style for negative events. External, unstable, and specific represents the most optimistic attributional pattern for negative events.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses attributional style and its relationship to learned helplessness, a concept at the intersection of social cognition and psychopathology.",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported by lesson content and tests understanding of the three attribution dimensions in learned helplessness.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## What Are Causal Attributions?",
+      "lessonExcerpt": "People with a pessimistic explanatory style do the opposite with negative events, attributing them to internal, stable, and global factors. They think 'I'm not qualified' (internal), 'I'm always bad at interviews' (stable), and 'I can't do anything right' (global).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A doctoral student who has consistently performed well on comprehensive exams unexpectedly receives a failing score on one section. When discussing the result with peers, the student states, 'The questions were unfairly worded and the grading rubric was inconsistent.' This response BEST illustrates which attribution pattern?",
+      "options": [
+        "Fundamental attribution error",
+        "Self-serving bias",
+        "Actor-observer effect",
+        "Ultimate attribution error"
+      ],
+      "answer": "Self-serving bias",
+      "explanation": "The self-serving bias involves taking credit for successes (internal attribution) but blaming external circumstances for failures. The student attributes the unexpected failure to external factors (unfair questions, inconsistent rubric) rather than internal factors (insufficient preparation, lack of knowledge). The lesson states: 'The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).' Option A (fundamental attribution error) applies to explaining others' behavior, not one's own. Option C (actor-observer effect) is a broader pattern about self vs. other attributions generally, not specifically about success/failure. Option D (ultimate attribution error) applies to in-group vs. out-group attributions.",
+      "kn": "KN11",
+      "kn_explanation": "This question tests self-serving bias within causal attribution, part of the Social and Multicultural Bases domain.",
+      "difficulty": "medium",
+      "quality_comment": "Clear application of self-serving bias with good distractors representing related but distinct attribution biases.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "### The Self-Serving Bias",
+      "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A clinical psychologist completes a particularly successful assessment with a complex client and attributes the outcome to her advanced training and clinical intuition. The following week, she conducts an assessment that goes poorly and attributes the outcome to the client's lack of motivation and the referring provider's inadequate background information. This pattern of attribution BEST illustrates:",
+      "options": [
+        "The actor-observer effect",
+        "The self-serving bias",
+        "The fundamental attribution error",
+        "The false consensus effect"
+      ],
+      "answer": "The self-serving bias",
+      "explanation": "The self-serving bias involves taking credit for successes (internal attribution) while blaming external factors for failures (external attribution). Here, the psychologist attributes her successful assessment to internal factors (her training and intuition) but attributes the unsuccessful assessment to external factors (client motivation, referral information). The actor-observer effect (A) involves attributing one's own behavior to situations but others' behavior to personality—it doesn't specifically address the success/failure asymmetry. The fundamental attribution error (C) involves overestimating dispositional factors when explaining others' behavior, not the self-protective pattern of attributing one's own outcomes differently based on valence. The false consensus effect (D) involves overestimating how many others share one's opinions, which is unrelated to this scenario.",
+      "kn": "KN12",
+      "kn_explanation": "KN12 covers social cognition including attribution processes, which encompasses the self-serving bias as a key attribution error in social psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical scenario that clearly differentiates self-serving bias from related attribution concepts by showing the asymmetric internal/external pattern across success and failure.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "### The Self-Serving Bias",
+      "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following best describes how gender stereotypes can influence the attribution of performance in academic settings?",
+      "options": [
+        "Performance is attributed to innate ability regardless of gender.",
+        "Performance is often attributed to effort, particularly for males.",
+        "Performance is frequently attributed to external factors for females.",
+        "Performance is viewed as equally influenced by both internal and external factors for all genders."
+      ],
+      "answer": "Performance is frequently attributed to external factors for females.",
+      "explanation": "The correct answer highlights how gender stereotypes can lead to different attributions based on gender, particularly that women's performance may be attributed to external factors rather than their abilities. The other options do not accurately reflect the influence of gender stereotypes on performance attribution.",
+      "kn": "KN3",
+      "kn_explanation": "This question relates to the attribution of performance based on gender roles, specifically how stereotypes can skew perceptions.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of gender stereotypes in attribution theory.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## What Are Causal Attributions?",
+      "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "In the context of motivation theories, which of the following statements best differentiates intrinsic from extrinsic motivation?",
+      "options": [
+        "Intrinsic motivation is driven by external rewards, while extrinsic motivation is driven by internal satisfaction.",
+        "Intrinsic motivation leads to more sustainable behavior change than extrinsic motivation.",
+        "Extrinsic motivation is always more effective than intrinsic motivation in achieving long-term goals.",
+        "Intrinsic motivation is less likely to be influenced by social factors compared to extrinsic motivation."
+      ],
+      "answer": "Intrinsic motivation leads to more sustainable behavior change than extrinsic motivation.",
+      "explanation": "The correct answer emphasizes the greater sustainability of intrinsic motivation compared to extrinsic. The other options misrepresent the definitions or effectiveness of intrinsic and extrinsic motivation.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses the distinction between intrinsic and extrinsic motivation, a key concept in motivation theories.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately tests knowledge of motivation theories and their implications.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## Why Causal Attributions Matter in Your Career as a Psychologist",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP, but it's also essential for your future clinical work.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "What is the actor-observer bias in attribution theory?",
+      "options": [
+        "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+        "The inclination to see one's own behavior as a reflection of personality traits.",
+        "The belief that others' behavior is influenced more by situational factors than by their personality.",
+        "The tendency to overestimate the role of situational factors in one's own behavior."
+      ],
+      "answer": "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+      "explanation": "This answer correctly defines the actor-observer bias, which highlights the double standard in attributions. The other options misrepresent the bias or confuse it with other attribution concepts.",
+      "kn": "KN3",
+      "kn_explanation": "This question relates to the actor-observer bias, a key aspect of attribution theory.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses understanding of the actor-observer bias.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "The actor-observer effect highlights a double standard we all use: We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "How does learned helplessness relate to attribution styles in individuals?",
+      "options": [
+        "Individuals with a pessimistic attribution style are more likely to develop learned helplessness.",
+        "Learned helplessness is unrelated to attribution styles.",
+        "Optimistic attribution styles lead to learned helplessness.",
+        "All individuals experience learned helplessness regardless of their attribution style."
+      ],
+      "answer": "Individuals with a pessimistic attribution style are more likely to develop learned helplessness.",
+      "explanation": "This answer correctly identifies the link between pessimistic attribution styles and learned helplessness, while the other options either misrepresent the relationship or deny it.",
+      "kn": "KN3",
+      "kn_explanation": "This question connects learned helplessness to attribution styles, a critical aspect of attribution theory.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the relationship between learned helplessness and attribution styles.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "People with a pessimistic explanatory style do the opposite with negative events, attributing them to internal, stable, and global factors.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "According to Kelly's Personal Construct Theory, how do individuals use their constructs to anticipate future events?",
+      "options": [
+        "Individuals rely solely on past experiences to predict future outcomes.",
+        "Constructs are used to create a framework for understanding and predicting future events.",
+        "Individuals do not use constructs to anticipate future events.",
+        "Constructs are fixed and do not change over time."
+      ],
+      "answer": "Constructs are used to create a framework for understanding and predicting future events.",
+      "explanation": "This answer correctly reflects Kelly's theory that individuals use personal constructs to interpret and anticipate future experiences. The other options misrepresent the role of constructs in prediction.",
+      "kn": "KN3",
+      "kn_explanation": "This question relates to Kelly's Personal Construct Theory and its application to future anticipation.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of Personal Construct Theory.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## What Are Causal Attributions?",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What attribution style is most likely to lead to a positive self-image in athletes?",
+      "options": [
+        "Internal and stable",
+        "External and unstable",
+        "Internal and unstable",
+        "External and stable"
+      ],
+      "answer": "Internal and unstable",
+      "explanation": "The correct answer is 'Internal and unstable' because this attribution style allows athletes to take credit for their successes (internal) while viewing failures as temporary (unstable), which helps maintain a positive self-image. 'Internal and stable' would lead to a negative self-image as it suggests a permanent flaw. 'External and unstable' does not allow for personal accountability, and 'External and stable' would lead to a negative self-image as it suggests consistent external factors causing failure.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it relates to attribution theory and self-perception in sports.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of attribution theory in sports.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "An internal and unstable attribution style allows individuals to maintain a positive self-image by attributing successes to their abilities and failures to temporary factors.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which attribution style is most commonly associated with the maintenance of depression?",
+      "options": [
+        "Optimistic attribution style",
+        "Pessimistic attribution style",
+        "Situational attribution style",
+        "Global attribution style"
+      ],
+      "answer": "Pessimistic attribution style",
+      "explanation": "The pessimistic attribution style is correct as it involves attributing negative events to internal, stable, and global factors, which is linked to the maintenance of depression. The other options do not reflect the same negative explanatory patterns associated with depression.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code is relevant as it pertains to social psychology and the understanding of how attribution styles affect mental health.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and targets a critical aspect of attribution theory in relation to depression.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## What Are Causal Attributions?",
+      "lessonExcerpt": "People with a pessimistic explanatory style do the opposite with negative events, attributing them to internal, stable, and global factors.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "In the context of attribution theory, how do individuals typically explain their failures when experiencing depression?",
+      "options": [
+        "By attributing them to external, unstable factors",
+        "By attributing them to internal, stable factors",
+        "By attributing them to situational, specific factors",
+        "By attributing them to global, external factors"
+      ],
+      "answer": "By attributing them to internal, stable factors",
+      "explanation": "This option is correct as individuals with depression often attribute their failures to internal, stable factors, which reinforces their negative self-view. The other options do not align with the typical cognitive patterns observed in depressed individuals.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code is relevant as it pertains to social psychology and the understanding of how attribution styles affect mental health.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-crafted and targets a critical aspect of attribution theory in relation to depression.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "People with a pessimistic explanatory style explain bad events as internal, stable, and global factors.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "According to attribution theory, which type of attribution is most likely to be made when a colleague is promoted over others?",
+      "options": [
+        "Internal attribution based on their skills and abilities.",
+        "External attribution based on luck or favoritism.",
+        "Stable attribution suggesting this will happen consistently.",
+        "Global attribution affecting all areas of their life."
+      ],
+      "answer": "Internal attribution based on their skills and abilities.",
+      "explanation": "In attribution theory, when someone is promoted, observers are likely to attribute this success to internal factors such as skills and abilities, rather than external factors. The other options do not accurately reflect the typical attribution made in this context.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding attribution theory and its implications in social contexts.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses understanding of attribution theory in workplace performance.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## What Are Causal Attributions?",
+      "lessonExcerpt": "Observers are likely to attribute this success to internal factors such as skills and abilities.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "What is a common attribution bias that affects social perception?",
+      "options": [
+        "Self-serving bias",
+        "Fundamental attribution error",
+        "Actor-observer effect",
+        "Ultimate attribution error"
+      ],
+      "answer": "Fundamental attribution error",
+      "explanation": "The fundamental attribution error is a common bias where individuals overestimate personality factors and underestimate situational factors when explaining others' behaviors. The other biases are also relevant but do not specifically address the common errors in social perception.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding attribution biases in social perception.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of attribution biases.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "The fundamental attribution error is a common bias where individuals overestimate personality factors and underestimate situational factors.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "How does cognitive dissonance relate to payment effects in decision-making?",
+      "options": [
+        "Higher payments reduce cognitive dissonance.",
+        "Cognitive dissonance increases when payments are made.",
+        "Payments can create dissonance if they conflict with personal values.",
+        "Cognitive dissonance has no relation to payment effects."
+      ],
+      "answer": "Payments can create dissonance if they conflict with personal values.",
+      "explanation": "Cognitive dissonance occurs when there is a conflict between one's beliefs and actions. If a payment is made that contradicts personal values, it can lead to dissonance. The other options either misrepresent the relationship or state incorrect facts.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding cognitive dissonance and its implications in decision-making.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of cognitive dissonance in relation to payment effects.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## Why Causal Attributions Matter in Your Career as a Psychologist",
+      "lessonExcerpt": "Payments can create dissonance if they conflict with personal values.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    }
+  ]
+}

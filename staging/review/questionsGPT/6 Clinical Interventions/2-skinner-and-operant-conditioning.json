@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A behavioral psychologist wants to establish a new target behavior as quickly as possible during the initial acquisition phase of treatment. Which reinforcement schedule would produce the fastest learning of the new behavior?",
+      "options": [
+        "Variable ratio schedule, because it produces the highest overall response rate",
+        "Fixed ratio schedule, because it produces high, steady response rates",
+        "Continuous reinforcement schedule, because every correct response is reinforced",
+        "Variable interval schedule, because it produces steady and sustained responding"
+      ],
+      "answer": "Continuous reinforcement schedule, because every correct response is reinforced",
+      "explanation": "The lesson clearly states: 'Initially, the fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs.' While variable ratio schedules produce the highest response rates once behavior is established, they are not optimal for initial acquisition. The question specifically asks about initial acquisition, not maintenance or resistance to extinction. Option A is a common trap—VR schedules produce the highest response rate and greatest resistance to extinction, but the question asks about fastest acquisition of a NEW behavior. Option B (fixed ratio) produces high rates but is not as efficient for initial learning. Option D (variable interval) produces only moderate response rates.",
+      "kn": "KN44",
+      "kn_explanation": "Question asks about treatment techniques (reinforcement schedules) and their efficacy during the acquisition phase of behavioral treatment",
+      "difficulty": "hard",
+      "quality_comment": "Excellent discriminating question. The distinction between fastest acquisition (continuous) and highest response rate (VR) is a common EPPP trap.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "Initially, the fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 6
+    }
+  ]
+}

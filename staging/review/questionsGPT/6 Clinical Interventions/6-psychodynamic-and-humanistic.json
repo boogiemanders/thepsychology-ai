@@ -1,0 +1,130 @@
+{
+  "questions": [
+    {
+      "stem": "A psychology intern is studying the evolution of psychodynamic thought. Compared to classical Freudian psychoanalysis, the Neo-Freudian psychologists primarily emphasized the role of which factors in personality development?",
+      "options": [
+        "Biological drives and psychosexual stages",
+        "Social and cultural factors",
+        "Object relations and attachment in the first year of life",
+        "Cognitive schemas and information processing"
+      ],
+      "answer": "Social and cultural factors",
+      "explanation": "The Neo-Freudians (including Sullivan, Horney, and Fromm) departed from classical Freudian theory by emphasizing social and cultural factors rather than biological and instinctual drives. They believed psychological disturbance results from faulty learning and maladaptive interpersonal styles. Biological drives and psychosexual stages (A) represent classical Freudian theory, which is precisely what the Neo-Freudians moved away from. Object relations (C) represents a different post-Freudian school. Cognitive schemas (D) represent Beck's cognitive therapy, not a psychodynamic approach.",
+      "kn": "KN43",
+      "kn_explanation": "Neo-Freudian vs classical Freudian theory is about contemporary research-based theories and models of treatment",
+      "difficulty": "easy",
+      "quality_comment": "Clear, well-supported question. The lesson content explicitly states the Neo-Freudian emphasis.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## The Psychodynamic Perspective: Understanding the Hidden Forces",
+      "lessonExcerpt": "The neo-Freudians focused on the impact of social and cultural factors in determining personality. They believed that psychological disturbance results from faulty learning and involves a characterologically maladaptive style of interacting with the environment.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "In Jungian analytical psychology, the process by which an individual attributes qualities from their own unconscious—particularly disowned or unacceptable aspects of the self—onto other people or external situations is most closely associated with which archetype?",
+      "options": [
+        "The persona",
+        "The anima/animus",
+        "The shadow",
+        "The self"
+      ],
+      "answer": "The shadow",
+      "explanation": "In Jungian psychology, the shadow represents one's hidden, dark, or unacceptable aspects. When individuals project shadow material outward, they attribute their own disowned qualities onto others. Jungians specifically view transference as a projection of the personal and/or collective unconscious. The persona (A) is the social mask—the public face presented to the world, not the source of projected negative material. The anima/animus (B) represents the feminine/masculine aspects of the psyche. The self (C) is the transcendent part of the psyche that encompasses all archetypes and represents the goal of individuation—wholeness and integration.",
+      "kn": "KN43",
+      "kn_explanation": "Jungian projection is a theory/model of treatment and intervention",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported question testing integration of Jungian archetype concepts with the defense mechanism of projection.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Jung's Analytical Psychology: Beyond Freud",
+      "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects)... Jungians see transference as a projection of the personal and/or collective unconscious.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "A psychology intern is preparing a presentation on the evolution of psychoanalytic thought. What is the primary theoretical emphasis that distinguishes the Neo-Freudian psychoanalysts (e.g., Sullivan, Horney, Fromm) from classical Freudian psychoanalysis?",
+      "options": [
+        "The role of ego autonomous functions in personality development",
+        "The impact of social and cultural factors on personality",
+        "The importance of early object relationships in personality formation",
+        "The process of individuation through integration of archetypes"
+      ],
+      "answer": "The impact of social and cultural factors on personality",
+      "explanation": "The Neo-Freudians (Sullivan, Horney, and Fromm) are distinguished by their focus on the impact of social and cultural factors in determining personality. They believed that psychological disturbance results from faulty learning and involves a characterologically maladaptive style of interacting with the environment. Ego autonomous functions (A) is the focus of ego psychology (Hartmann, Anna Freud, Erikson). Early object relationships (C) is the focus of object relations theory (Klein, Winnicott, Mahler). Integration of archetypes and individuation (D) is the focus of Jungian analytical psychology. Each of these represents a distinct extension or departure from classical psychoanalysis.",
+      "kn": "KN43",
+      "kn_explanation": "Evolution of psychoanalytic thought and object relations theory are treatment theories and models",
+      "difficulty": "medium",
+      "quality_comment": "Excellent discrimination question requiring knowledge of how different psychoanalytic schools differ. All distractors are real emphases of other schools.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## The Psychodynamic Perspective: Understanding the Hidden Forces",
+      "lessonExcerpt": "The neo-Freudians focused on the impact of social and cultural factors in determining personality. They believed that psychological disturbance results from faulty learning and involves a characterologically maladaptive style of interacting with the environment.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "In Jungian analytical psychology, the process by which an individual attributes their own unacknowledged dark or undesirable qualities onto other people or external situations is most accurately described as:",
+      "options": [
+        "Reaction formation against the anima archetype",
+        "Projection of the shadow archetype",
+        "Introjection of the collective unconscious",
+        "Repression of the persona archetype"
+      ],
+      "answer": "Projection of the shadow archetype",
+      "explanation": "In Jungian psychology, the shadow represents one's 'dark side'—hidden, unacknowledged aspects of the personality. When individuals fail to integrate their shadow, they often project these undesirable qualities onto others, perceiving in external people or situations what they cannot accept in themselves. This projection of shadow material is a central concept in Jungian therapy, and individuation requires integrating the shadow rather than projecting it. Reaction formation against the anima (A) conflates Freudian defense mechanisms with a different archetype. Introjection of the collective unconscious (C) misapplies a Gestalt concept to Jungian theory. Repression of the persona (D) is incorrect because the persona is the public mask, not the hidden dark side.",
+      "kn": "KN43",
+      "kn_explanation": "Jungian shadow projection is a theoretical model underlying treatment",
+      "difficulty": "medium",
+      "quality_comment": "Tests integration of Jungian concepts (shadow, projection) with clinical application. Distractors mix different archetypes and defense mechanisms.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Jung's Analytical Psychology: Beyond Freud",
+      "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "During a Gestalt therapy session, a client describes a recurring dream in which she is lost in a dark forest while a bright light shines from a distant tower. The therapist asks the client to \"become\" the dark forest and speak as the forest, then to \"become\" the bright light and speak as the light. This approach to dream interpretation reflects which Gestalt principle?",
+      "options": [
+        "Dream elements are symbolic representations of unconscious wishes that require the therapist's interpretation",
+        "Each element of the dream represents a projected or disowned aspect of the dreamer's own personality",
+        "Dreams reveal archetypal patterns from the collective unconscious that guide individuation",
+        "Dream content should be analyzed for latent meaning through free association to manifest elements"
+      ],
+      "answer": "Each element of the dream represents a projected or disowned aspect of the dreamer's own personality",
+      "explanation": "In Gestalt therapy, dreams are not interpreted symbolically by the therapist (as in psychoanalysis). Instead, clients role-play different elements of their dreams because each part is treated as a disowned aspect of the client's own personality. By 'becoming' the forest and the light, the client can access and integrate these different aspects of self. Option A describes Freudian dream interpretation with therapist-delivered symbolic analysis. Option C describes Jungian interpretation involving collective unconscious archetypes. Option D describes the psychoanalytic free association approach to manifest dream content.",
+      "kn": "KN44",
+      "kn_explanation": "Gestalt therapy session technique (dream work, empty chair) is a specific treatment technique/intervention",
+      "difficulty": "medium",
+      "quality_comment": "Strong question differentiating Gestalt dream work from psychoanalytic and Jungian approaches. Directly supported by lesson content.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Gestalt Therapy: Awareness and Contact",
+      "lessonExcerpt": "Dream work: Unlike Freud's symbolic interpretation, Gestalt therapists have clients role-play different elements of their dreams, treating each part as a disowned aspect of the client's own personality.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "A behavioral psychologist explains that the emotional release experienced during psychoanalytic free association is therapeutically beneficial not because of catharsis per se, but because it allows the client to discuss previously avoided material without negative consequences. This explanation is MOST consistent with which behavioral principle?",
+      "options": [
+        "Systematic desensitization through reciprocal inhibition of anxiety responses",
+        "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+        "Counterconditioning by pairing distressing memories with the positive therapeutic relationship",
+        "Stimulus generalization of relaxation from the therapy setting to real-world situations"
+      ],
+      "answer": "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+      "explanation": "From a behavioral perspective, the catharsis that occurs in psychoanalysis can be understood as extinction. When clients verbalize previously avoided (repressed) thoughts and feelings during free association, they are exposed to conditioned stimuli (the distressing memories and emotions) without the originally feared negative consequences. Over repeated exposures in the safe therapy environment, the conditioned emotional responses gradually extinguish. Option A is incorrect because systematic desensitization involves a structured anxiety hierarchy and relaxation training, not free association. Option C describes counterconditioning, which requires actively pairing the stimulus with an incompatible positive response—this is a related but distinct mechanism from extinction. Option D describes stimulus generalization, which refers to transfer of learning across contexts rather than the in-session emotional release phenomenon.",
+      "kn": "KN44",
+      "kn_explanation": "Behavioral reinterpretation of free association as extinction is about treatment techniques and their mechanisms of efficacy",
+      "difficulty": "hard",
+      "quality_comment": "Excellent integrative question requiring understanding of both psychodynamic concepts and behavioral principles. The lesson mentions catharsis but does not provide the behavioral reinterpretation as extinction.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Freudian Psychoanalysis: The Original Talk Therapy",
+      "lessonExcerpt": "through repeated interpretation, clients experience catharsis (releasing repressed emotions) and insight, which leads to working through. Gradually accepting and integrating these new understandings into their lives.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 32
+    }
+  ]
+}

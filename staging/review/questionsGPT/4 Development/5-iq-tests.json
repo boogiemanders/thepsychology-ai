@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A neuropsychologist administers the WAIS-IV to a cognitively healthy 72-year-old woman. Which index score pattern is MOST consistent with the \"classic aging pattern\"?",
+      "options": [
+        "VCI = 105, PRI = 108, WMI = 100, PSI = 112",
+        "VCI = 112, PRI = 95, WMI = 98, PSI = 88",
+        "VCI = 88, PRI = 105, WMI = 100, PSI = 110",
+        "VCI = 95, PRI = 95, WMI = 95, PSI = 95"
+      ],
+      "answer": "VCI = 112, PRI = 95, WMI = 98, PSI = 88",
+      "explanation": "The 'classic aging pattern' on the WAIS involves verbal abilities (VCI, reflecting crystallized intelligence) remaining strong while performance/nonverbal abilities (PRI, reflecting fluid intelligence) and especially processing speed (PSI) decline. Option B shows VCI highest and PSI lowest, consistent with this pattern. Option A shows PSI highest, the opposite of the aging pattern. Option C shows VCI lowest, which contradicts the well-preserved crystallized intelligence finding. Option D shows a flat profile with no differential aging effects.",
+      "kn": "KN21",
+      "kn_explanation": "The question asks about normal age-related cognitive changes in a healthy 72-year-old, which is normal development across the lifespan (fluid vs crystallized intelligence aging pattern).",
+      "difficulty": "hard",
+      "quality_comment": "Requires applied knowledge of the classic aging pattern with realistic WAIS-IV score profiles. Well-supported by lesson content.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "### Age-Related Changes",
+      "lessonExcerpt": "This creates the \"classic aging pattern\". Verbal abilities stay strong while performance (nonverbal) abilities decline earlier.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Research on the predictive validity of IQ scores for academic achievement indicates that the correlation between IQ and academic performance is BEST characterized as:",
+      "options": [
+        "Strongest at the graduate school level, where cognitive demands are highest",
+        "Roughly equivalent across all levels of education from elementary through graduate school",
+        "Strongest at the elementary school level and decreasing at higher levels of education",
+        "Negligible at all levels, with motivation being the primary predictor of academic success"
+      ],
+      "answer": "Strongest at the elementary school level and decreasing at higher levels of education",
+      "explanation": "IQ scores are the best single predictor of academic achievement, with correlations highest at the elementary school level (approximately .60-.70) and decreasing at higher educational levels (approximately .40-.50 in college, and lower in graduate school). This decline occurs due to restriction of range — students at higher educational levels represent an increasingly select and homogeneous group in terms of cognitive ability. Option A reverses the actual pattern. Option B incorrectly suggests uniform correlations. Option D underestimates IQ's predictive power, which is well-established across educational settings.",
+      "kn": "KN22",
+      "kn_explanation": "IQ-academic achievement correlations across education levels relate to the influence of individual-environment interaction on development over time (KN22).",
+      "difficulty": "medium",
+      "quality_comment": "Tests a classic psychometric finding about restriction of range effects on IQ-achievement correlations. The lesson files do not explicitly cover this gradient across education levels.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## The Flynn Effect: Why Test Norms Matter",
+      "lessonExcerpt": "The CogAT7 predicts academic performance and identifies gifted/at-risk students in grades 2-12",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19
+    }
+  ]
+}

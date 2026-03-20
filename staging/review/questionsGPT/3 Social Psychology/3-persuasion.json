@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "stem": "A public health official wants to create the most effective anti-vaping campaign for teenagers. Based on persuasion research, which combination of elements would produce the STRONGEST persuasive effect?",
+      "options": [
+        "A moderately frightening message delivered by a celebrity endorser without any action steps",
+        "A low-fear message emphasizing only the statistical risks of vaping, delivered by an unknown source",
+        "A high-fear message describing health consequences paired with clear efficacy information about how teens can quit, delivered by a credible medical expert",
+        "A high-fear message delivered by a low-credibility source with no efficacy component"
+      ],
+      "answer": "A high-fear message describing health consequences paired with clear efficacy information about how teens can quit, delivered by a credible medical expert",
+      "explanation": "Research on persuasion identifies three ingredients for effective fear appeals: high fear arousal, an efficacy message assuring people they can take effective action, and a clear risk description. The lesson states: 'fear appeals work best when they're high in fear BUT they must also include an efficacy message.' Additionally, communicator credibility (expertise + trustworthiness) enhances persuasion. Option A lacks efficacy information and relies on peripheral cues. Option B uses low fear, which is less effective. Option D lacks efficacy and uses a low-credibility source, which would likely produce defensiveness rather than attitude change.",
+      "kn": "KN11",
+      "kn_explanation": "This question addresses persuasion factors within the Social and Multicultural Bases of Behavior domain.",
+      "difficulty": "medium",
+      "quality_comment": "Integrates multiple persuasion concepts (fear appeals, efficacy, credibility) in an applied scenario.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "### Fear Appeals: How Scared Should People Be?",
+      "lessonExcerpt": "Fear appeals work best when they're high in fear BUT (and this is crucial) they must also include an efficacy message... Three ingredients make fear appeals effective: 1. High fear arousal 2. Efficacy message 3. Clear risk description.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "How does cognitive dissonance typically lead to attitude change?",
+      "options": [
+        "By reinforcing existing beliefs",
+        "By creating discomfort that motivates change",
+        "By providing new information that contradicts beliefs",
+        "By increasing confidence in one's decisions"
+      ],
+      "answer": "By creating discomfort that motivates change",
+      "explanation": "The correct answer is 'By creating discomfort that motivates change' because cognitive dissonance arises when there is a conflict between beliefs and behaviors, leading to psychological discomfort that individuals seek to resolve by changing their attitudes. 'By reinforcing existing beliefs' is incorrect as cognitive dissonance challenges existing beliefs. 'By providing new information that contradicts beliefs' does not capture the essence of dissonance, which is about internal conflict. 'By increasing confidence in one's decisions' is misleading, as dissonance often leads to uncertainty.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to cognitive dissonance and its effects on attitude change.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## Why Persuasion Matters for Psychologists",
+      "lessonExcerpt": "Cognitive dissonance creates discomfort that motivates individuals to change their attitudes to resolve the conflict.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "According to the elaboration likelihood model, which route to persuasion is most effective when individuals are motivated and able to process information?",
+      "options": [
+        "Peripheral route.",
+        "Central route.",
+        "Social proof route.",
+        "Fear appeal route."
+      ],
+      "answer": "Central route.",
+      "explanation": "The correct answer indicates that the central route is effective when individuals are motivated and able to engage deeply with the content. The peripheral route is less effective under these conditions.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to persuasion theory and the elaboration likelihood model.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of persuasion mechanisms.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## The Two Big Strategies: Alpha and Omega",
+      "lessonExcerpt": "Understanding what makes messages stick – and what makes people resist them – isn't just academic knowledge.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What technique can increase compliance by making a request seem less daunting through audience engagement?",
+      "options": [
+        "Foot-in-the-door technique.",
+        "Door-in-the-face technique.",
+        "Low-ball technique.",
+        "That's-not-all technique."
+      ],
+      "answer": "That's-not-all technique.",
+      "explanation": "The correct answer reflects the technique where an initial request is followed by additional incentives, making the request seem more appealing. The other options describe different compliance techniques that do not specifically focus on audience engagement.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding persuasion techniques.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of compliance techniques.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## Communicator Factors: Who's Doing the Persuading?",
+      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which persuasive strategy involves addressing a person's resistance to change by acknowledging their concerns?",
+      "options": [
+        "Alpha strategy",
+        "Omega strategy",
+        "Cognitive dissonance",
+        "Social proof"
+      ],
+      "answer": "Omega strategy",
+      "explanation": "An omega strategy focuses on reducing resistance by addressing concerns and providing counterarguments, making the change seem less threatening. An alpha strategy, in contrast, increases the appeal of the change. Cognitive dissonance refers to the discomfort from holding conflicting beliefs, and social proof involves using others' behaviors to influence someone.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding persuasion techniques and how they can be effectively employed.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of persuasion strategies and their applications.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## The Two Big Strategies: Alpha and Omega",
+      "lessonExcerpt": "Omega strategies take a different approach. Instead of adding more pull, they reduce the push-back.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    }
+  ]
+}

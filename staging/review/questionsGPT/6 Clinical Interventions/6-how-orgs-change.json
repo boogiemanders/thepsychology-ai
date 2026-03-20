@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "An I/O psychologist is advising an organization considering alternative work schedules. Based on meta-analytic research, what is the primary documented benefit of implementing a flextime schedule?",
+      "options": [
+        "Substantial increase in overall job satisfaction",
+        "Significant improvement in employee productivity ratings",
+        "Strongest effect on reducing employee absenteeism",
+        "Marked decrease in workplace accidents and errors"
+      ],
+      "answer": "Strongest effect on reducing employee absenteeism",
+      "explanation": "Research on alternative work schedules shows that flextime's strongest documented benefit is reducing absenteeism, while its effects on self-rated performance are the weakest. In contrast, compressed workweeks have the strongest positive effect on job satisfaction. Substantial increase in job satisfaction (A) is more associated with compressed workweeks. Significant improvement in productivity (B) is not the primary finding for flextime—effects on performance are weak. Decreased workplace accidents (D) is not a documented primary benefit of flextime in the research literature.",
+      "kn": "KN48",
+      "kn_explanation": "Alternative work schedules relate to vocational/career development and workplace structure, fitting KN48's research-based models of vocational and career development",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with clear lesson support differentiating flextime from compressed workweek outcomes.",
+      "suggestedLesson": "6-how-orgs-change",
+      "suggestedParagraph": "### Technostructural Interventions",
+      "lessonExcerpt": "Flextime: Strongest effect on reducing absenteeism; weakest effect on self-rated performance; beneficial for job satisfaction... compressed workweeks boost satisfaction most, while flextime reduces absenteeism most.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "An I/O psychologist is advising a manufacturing company on implementing a compressed workweek schedule (four 10-hour days). Based on the research literature, what outcome pattern should the psychologist predict?",
+      "options": [
+        "Strong improvements in both job satisfaction and productivity",
+        "Strong improvement in job satisfaction with a weaker effect on productivity",
+        "Strong improvement in productivity with a weaker effect on job satisfaction",
+        "Strong reduction in absenteeism with minimal effects on satisfaction or productivity"
+      ],
+      "answer": "Strong improvement in job satisfaction with a weaker effect on productivity",
+      "explanation": "Research on compressed workweeks consistently shows a strong positive effect on job satisfaction but a positive yet weaker effect on productivity, with unclear effects on absenteeism. This pattern is distinct from flextime, which shows its strongest effect on reducing absenteeism and its weakest effect on self-rated performance. Option A overstates the productivity effect. Option C reverses the pattern. Option D describes the pattern more associated with flextime (strongest effect on reducing absenteeism). The key exam takeaway is knowing that different alternative work schedules produce different patterns of outcomes.",
+      "kn": "KN48",
+      "kn_explanation": "Compressed workweek implementation advice relates to vocational/career development models and workplace scheduling research under KN48",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced knowledge of specific research findings. Requires distinguishing between compressed workweek and flextime effects.",
+      "suggestedLesson": "6-how-orgs-change",
+      "suggestedParagraph": "### Alternative Work Schedules",
+      "lessonExcerpt": "Compressed Workweek: Fewer days with longer hours (e.g., four 10-hour days) | Strong positive effect on job satisfaction; positive but weaker effect on productivity; unclear effects on absenteeism",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16
+    }
+  ]
+}

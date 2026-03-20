@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is treating a client with obsessive-compulsive disorder who engages in elaborate hand-washing rituals after touching doorknobs. Which treatment approach has the strongest evidence base for this condition, and what is its primary mechanism of action?",
+      "options": [
+        "Systematic desensitization, which uses counterconditioning to replace anxiety with relaxation",
+        "Exposure with response prevention, which uses extinction by exposing the client to feared stimuli while preventing avoidance behaviors",
+        "Cognitive restructuring, which modifies the client's irrational beliefs about contamination",
+        "Stress inoculation training, which builds coping skills through graduated exposure to stressors"
+      ],
+      "answer": "Exposure with response prevention, which uses extinction by exposing the client to feared stimuli while preventing avoidance behaviors",
+      "explanation": "Exposure with response prevention (ERP) is the gold standard treatment for OCD. It works through extinction by exposing the client to feared stimuli (e.g., touching doorknobs) while preventing the compulsive response (hand-washing). The lesson explicitly identifies ERP as the 'workhorse intervention for anxiety disorders' and notes it is best for 'Anxiety disorders, OCD, phobias.' Systematic desensitization (A) uses counterconditioning with relaxation hierarchies and is more commonly associated with specific phobias. Cognitive restructuring (C) is a component of CBT but is not the primary evidence-based intervention for OCD. Stress inoculation training (D) is designed for stress management, not OCD specifically.",
+      "kn": "KN44",
+      "kn_explanation": "Question asks about specific treatment technique (ERP) for OCD and its efficacy, which falls under treatment techniques/interventions and evidence for their comparative efficacy",
+      "difficulty": "medium",
+      "quality_comment": "Strong question that tests ability to distinguish between similar behavioral interventions and their mechanisms for a specific disorder.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### Exposure with Response Prevention",
+      "lessonExcerpt": "Exposure with Response Prevention | Extinction | Anxiety disorders, OCD, phobias | Real or imagined exposure without avoidance",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 1
+    }
+  ]
+}

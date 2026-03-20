@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is reviewing DSM-5 changes for a continuing education course. Regarding the diagnostic significance of bizarre delusions across psychotic disorders, which of the following reflects a key change from DSM-IV-TR to DSM-5?",
+      "options": [
+        "Bizarre delusions are now sufficient by themselves for a diagnosis of schizophrenia",
+        "Bizarre delusions now require the presence of negative symptoms for any psychotic disorder diagnosis",
+        "The presence of a single bizarre delusion no longer suffices for a schizophrenia diagnosis, and delusional disorder no longer requires that delusions be non-bizarre",
+        "Bizarre delusions have been eliminated as a diagnostic criterion across all psychotic disorders"
+      ],
+      "answer": "The presence of a single bizarre delusion no longer suffices for a schizophrenia diagnosis, and delusional disorder no longer requires that delusions be non-bizarre",
+      "explanation": "In DSM-5, two significant changes were made regarding bizarre delusions: (1) the previous allowance that bizarre delusions alone could satisfy the symptom criterion for schizophrenia was eliminated — now at least two symptoms are required; and (2) delusional disorder no longer requires that delusions be non-bizarre, with a specifier added for bizarre type. Option A is the opposite of the change — this was the old DSM-IV rule that was eliminated. Option B introduces a fabricated requirement. Option D overstates the change — bizarre delusions remain relevant as symptom content, just not as a standalone diagnostic shortcut.",
+      "kn": "KN36",
+      "kn_explanation": "Question addresses DSM-5 classification changes for diagnosing psychotic disorders, which falls under classification systems and their underlying rationales and limitations for evaluating client functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests critical DSM-5 changes that differentiate psychotic disorders — a high-yield EPPP topic.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Core Symptoms: The Building Blocks",
+      "lessonExcerpt": "elimination of the allowance that bizarre delusions or two or more voices conversing suffice for a diagnosis of schizophrenia; thus the requirement is now at least two symptoms... There is no longer a requirement that the delusions in delusional disorder are non-bizarre; a specifier is added for bizarre type.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following best describes the Rosenthal effect in the context of expectations influencing performance?",
+      "options": [
+        "The tendency for individuals to perform better when they believe they are being observed.",
+        "The phenomenon where higher expectations lead to improved performance due to increased motivation.",
+        "The effect where individuals perform worse when they are aware of being evaluated.",
+        "The impact of external rewards on intrinsic motivation."
+      ],
+      "answer": "The phenomenon where higher expectations lead to improved performance due to increased motivation.",
+      "explanation": "The Rosenthal effect, or Pygmalion effect, refers to the idea that higher expectations from others can lead to improved performance. Option A describes observation effects, which are not specific to expectations. Option C refers to a different phenomenon related to evaluation apprehension, and Option D discusses external rewards, which is unrelated to the Rosenthal effect.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding how expectations can influence behavior and performance.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of the Rosenthal effect.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "Understanding these techniques will give you practical tools for treating anxiety disorders, phobias, PTSD, and addictive behaviors.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What role does classical conditioning play in the development of attitudes as conditioned responses?",
+      "options": [
+        "Attitudes are formed through direct reinforcement of behaviors.",
+        "Attitudes develop as a result of repeated pairings of stimuli that evoke emotional responses.",
+        "Attitudes are solely based on cognitive evaluations of situations.",
+        "Attitudes cannot be modified once established."
+      ],
+      "answer": "Attitudes develop as a result of repeated pairings of stimuli that evoke emotional responses.",
+      "explanation": "Classical conditioning suggests that attitudes can be formed through the association of neutral stimuli with emotional responses, leading to conditioned attitudes. Option A misrepresents the role of reinforcement, while Option C ignores the emotional aspect, and Option D is incorrect as attitudes can be modified.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding how attitudes are formed and influenced.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of classical conditioning and its impact on attitudes.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Matters for Your Practice",
+      "lessonExcerpt": "Understanding classical conditioning isn't just about passing the EPPP. It's about recognizing one of the most powerful ways our nervous system learns.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is the term for the process by which an individual becomes less responsive to a stimulus after repeated exposure?",
+      "options": [
+        "Sensitization",
+        "Habituation",
+        "Conditioning",
+        "Extinction"
+      ],
+      "answer": "Habituation",
+      "explanation": "Habituation is the process by which an individual becomes less responsive to a stimulus after repeated exposure. Sensitization, in contrast, refers to an increased response to a stimulus. Conditioning involves learning associations between stimuli.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to behavioral responses and learning processes.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of habituation.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## The Foundation: What Makes These Interventions Work",
+      "lessonExcerpt": "The response can be modified through new experiences.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "According to Acquired Needs Theory, which of the following statements best describes the stability of work-related needs over time?",
+      "options": [
+        "Work-related needs are fixed and do not change throughout a person's career.",
+        "Work-related needs can evolve based on life experiences and personal growth.",
+        "Work-related needs are solely determined by external factors such as salary.",
+        "Work-related needs are only relevant during the initial stages of a career."
+      ],
+      "answer": "Work-related needs can evolve based on life experiences and personal growth.",
+      "explanation": "The correct answer reflects the idea that individuals' needs can change as they gain new experiences and insights over time. The other options suggest a static view of needs or limit their relevance, which does not align with the dynamic nature of human motivation.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to understanding the evolution of work-related needs as described in Acquired Needs Theory.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of a complex psychological theory.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "The lesson does not specifically address Acquired Needs Theory, indicating a need for review.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following best describes the importance of the therapeutic relationship in psychotherapy?",
+      "options": [
+        "It is the primary factor in determining the effectiveness of any therapeutic technique.",
+        "It serves as a distraction from the client's presenting problems.",
+        "It is only relevant in the initial stages of therapy.",
+        "It has no significant impact on treatment outcomes."
+      ],
+      "answer": "It is the primary factor in determining the effectiveness of any therapeutic technique.",
+      "explanation": "The therapeutic relationship is crucial because it fosters trust and safety, allowing clients to engage more fully in the therapeutic process. The other options either downplay its importance or misrepresent its role in therapy.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding the dynamics of therapeutic relationships in clinical practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of therapeutic dynamics.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "Understanding these techniques will give you practical tools for treating anxiety disorders, phobias, PTSD, and addictive behaviors.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following environmental factors is most likely to influence eating behavior according to behavioral psychology?",
+      "options": [
+        "The presence of food cues in the environment",
+        "The time of day when meals are consumed",
+        "The emotional state of the individual",
+        "The nutritional value of the food"
+      ],
+      "answer": "The presence of food cues in the environment",
+      "explanation": "The presence of food cues in the environment can trigger eating behaviors, as these cues can evoke conditioned responses related to hunger and eating. The other options, while relevant to eating behavior, do not specifically highlight the environmental influence as strongly as food cues do.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding how environmental factors can condition behaviors, particularly in the context of eating.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of behavioral psychology in relation to environmental influences on eating.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "These aren't problems of logic or willpower. They're learned responses (automatic reactions the brain picked up through experience).",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "What distinguishes habituation from extinction in learning theories?",
+      "options": [
+        "Habituation involves a decrease in response to a repeated stimulus, while extinction involves the removal of reinforcement.",
+        "Habituation is a conscious process, while extinction is unconscious.",
+        "Habituation occurs only in classical conditioning, while extinction occurs in operant conditioning.",
+        "Habituation is permanent, while extinction can lead to spontaneous recovery."
+      ],
+      "answer": "Habituation involves a decrease in response to a repeated stimulus, while extinction involves the removal of reinforcement.",
+      "explanation": "Habituation is characterized by a decrease in response to a stimulus after repeated exposure, whereas extinction refers to the process of eliminating a conditioned response by removing reinforcement. The other options mischaracterize the processes involved.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to the distinction between different learning processes.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests the nuanced understanding of two important concepts in learning theories.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## The Foundation: What Makes These Interventions Work",
+      "lessonExcerpt": "Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is treating a client diagnosed with obsessive-compulsive disorder who engages in extensive hand-washing rituals triggered by contamination fears. The psychologist plans to use the most well-supported behavioral intervention for this condition. Which technique should the psychologist implement?",
+      "options": [
+        "Systematic desensitization with progressive muscle relaxation",
+        "Exposure with response prevention using prolonged in vivo contact with contaminants",
+        "Covert sensitization pairing contamination imagery with relaxation",
+        "Implosive therapy incorporating psychodynamic themes of contamination"
+      ],
+      "answer": "Exposure with response prevention using prolonged in vivo contact with contaminants",
+      "explanation": "Exposure with response prevention (ERP) is the evidence-based behavioral treatment for OCD and anxiety disorders. The technique involves exposing the client to feared stimuli (contaminants) while preventing the usual avoidance or ritualistic response (hand-washing), allowing extinction of the conditioned fear response. Systematic desensitization (A) uses counterconditioning with relaxation and is primarily indicated for phobias, not OCD rituals. Covert sensitization (C) is used to reduce unwanted approach behaviors (e.g., addictions), not anxiety-based avoidance. Implosive therapy (D) adds psychodynamic elements to imaginal flooding and is less commonly used; it is not the standard treatment for OCD.",
+      "kn": "KN44",
+      "kn_explanation": "ERP is a specific treatment technique for OCD with strong evidence base",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in lesson content with clear distractor rationale. Tests applied knowledge of intervention selection.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## The Foundation: What Makes These Interventions Work",
+      "lessonExcerpt": "Exposure with Response Prevention... is your workhorse intervention for anxiety disorders. The name tells you exactly what happens: you expose the client to what they fear while preventing their usual escape or avoidance response.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is best understood as an application of which behavioral learning principle?",
+      "options": [
+        "Operant extinction through removal of reinforcement for avoidance",
+        "Counterconditioning by replacing performance anxiety with pleasurable sensations",
+        "Negative reinforcement through escape from aversive sexual situations",
+        "Stimulus generalization from non-sexual to sexual touching contexts"
+      ],
+      "answer": "Counterconditioning by replacing performance anxiety with pleasurable sensations",
+      "explanation": "Sensate focus works through counterconditioning (also called reciprocal inhibition): the anxiety associated with sexual performance is gradually replaced by an incompatible response—pleasurable, relaxed sensations. The graduated approach mirrors systematic desensitization, moving from non-sexual touching to sexual touching to intercourse. The lesson explicitly states the technique 'works similarly to exposure therapy. You start with lower-stakes situations to reduce anxiety before moving to higher-stakes ones.' Operant extinction (A) involves removing reinforcement, which is not the primary mechanism. Negative reinforcement (C) would strengthen avoidance behavior, the opposite of the therapeutic goal. Stimulus generalization (D) describes responding similarly across contexts but does not capture the anxiety-replacement mechanism.",
+      "kn": "KN44",
+      "kn_explanation": "Sensate focus is a treatment technique grounded in behavioral principles",
+      "difficulty": "medium",
+      "quality_comment": "Strong question linking behavioral theory to clinical application. Lesson explicitly describes sensate focus as working like exposure therapy with graduated approach.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### Counterconditioning-Based Interventions: Creating New Connections",
+      "lessonExcerpt": "Counterconditioning means replacing an unwanted response with a different, incompatible one. You can't be deeply relaxed and panicked at the same time... By pairing the trigger with a new, opposite response, you overwrite the old pattern.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A client with alcohol use disorder reports experiencing intense cravings whenever he drives past the bar where he used to drink regularly. From a behavioral perspective, this craving response is BEST explained by:",
+      "options": [
+        "Operant conditioning, in which the bar serves as a positive discriminative stimulus signaling reinforcement availability",
+        "Classical conditioning, in which the bar has become a conditioned stimulus eliciting a conditioned craving response",
+        "Negative reinforcement, in which drinking at the bar previously removed withdrawal symptoms",
+        "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement"
+      ],
+      "answer": "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement",
+      "explanation": "Addictive behaviors are maintained through the interplay of both classical and operant conditioning. Through classical conditioning, environmental cues (the bar) become conditioned stimuli that elicit conditioned craving responses. Through operant conditioning, the drinking behavior is maintained by positive reinforcement (pleasurable effects of alcohol) and negative reinforcement (removal of withdrawal symptoms or stress). The lesson on cue exposure therapy explains: 'With addiction, certain cues become powerfully associated with use... These become conditioned stimuli that trigger cravings and use.' Meanwhile, operant principles explain why the behavior persists. Option A captures only the operant component; Option B captures only the classical component; Option C is partially correct but incomplete, addressing only one type of reinforcement.",
+      "kn": "KN44",
+      "kn_explanation": "Behavioral conceptualization of cravings informing treatment intervention",
+      "difficulty": "hard",
+      "quality_comment": "Tests integration of two learning paradigms in addiction—a common EPPP application question format.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### Cue Exposure Therapy",
+      "lessonExcerpt": "With addiction, certain cues become powerfully associated with use. The smell of cigarette smoke in a bar, the sight of friends you used to drink with, even the specific route home that passes your dealer's corner. These become conditioned stimuli that trigger cravings and use.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A client developed a conditioned fear of elevators after being trapped in one during a power outage. To extinguish this classically conditioned fear response, the therapist should:",
+      "options": [
+        "Pair elevator exposure with an aversive stimulus to create a competing response",
+        "Repeatedly present the conditioned stimulus (elevator) without the unconditioned stimulus (being trapped)",
+        "Reinforce the client each time they successfully avoid elevators",
+        "Have the client practice relaxation while imagining elevators, progressing through a fear hierarchy"
+      ],
+      "answer": "Repeatedly present the conditioned stimulus (elevator) without the unconditioned stimulus (being trapped)",
+      "explanation": "Classical extinction occurs when the conditioned stimulus (CS) is repeatedly presented without the unconditioned stimulus (US), breaking the learned association. The lesson states: 'Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response... the trigger no longer leads to the old reaction because you've interrupted that pathway enough times.' Option A describes aversion therapy, which creates new aversive associations rather than extinguishing existing ones. Option C reinforces avoidance, which would maintain the fear through negative reinforcement. Option D describes systematic desensitization, which Wolpe conceptualized as counterconditioning (not extinction), though research suggests its effectiveness may actually work through extinction.",
+      "kn": "KN44",
+      "kn_explanation": "Extinction of conditioned fear is a treatment technique (exposure-based)",
+      "difficulty": "easy",
+      "quality_comment": "Foundational question clearly supported by lesson content. Good distractors that test related but distinct concepts.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Extinction-Based Interventions: Breaking Old Connections",
+      "lessonExcerpt": "Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response... the trigger no longer leads to the old reaction because you've interrupted that pathway enough times.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "In Beck's cognitive therapy model, the primary therapeutic focus is on identifying and modifying:",
+      "options": [
+        "Irrational beliefs expressed as absolute demands using 'must' and 'should'",
+        "Maladaptive schemas, automatic thoughts, and systematic cognitive distortions",
+        "Unconscious conflicts that produce anxiety and defense mechanisms",
+        "Experiential avoidance and cognitive fusion that reduce psychological flexibility"
+      ],
+      "answer": "Maladaptive schemas, automatic thoughts, and systematic cognitive distortions",
+      "explanation": "Beck's cognitive therapy focuses on three core components: cognitive schemas (deep core beliefs), automatic thoughts (spontaneous moment-to-moment cognitions), and cognitive distortions (systematic thinking errors such as arbitrary inference, selective abstraction, and dichotomous thinking). The lesson states: 'Beck identified three elements that create and maintain psychological distress' and describes these three components in detail. Option A describes Ellis's REBT, which targets irrational beliefs expressed as rigid demands. Option C describes psychoanalytic therapy's focus on unconscious conflicts. Option D describes ACT's focus on experiential avoidance and cognitive fusion.",
+      "kn": "KN43",
+      "kn_explanation": "Beck's cognitive therapy model is a research-based theory of treatment",
+      "difficulty": "easy",
+      "quality_comment": "Clean discrimination question distinguishing Beck from Ellis, psychoanalysis, and ACT. Well-supported by lesson content.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### The Three Core Components",
+      "lessonExcerpt": "Beck identified three elements that create and maintain psychological distress: Cognitive Schemas (Core Beliefs)... Automatic Thoughts... Cognitive Distortions (Thinking Errors).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Meichenbaum's self-instructional training was originally developed for which population and involves a progression from external to internal speech guidance?",
+      "options": [
+        "Adults with generalized anxiety disorder",
+        "Impulsive children",
+        "Adolescents with conduct disorder",
+        "Older adults with early-stage dementia"
+      ],
+      "answer": "Impulsive children",
+      "explanation": "The lesson explicitly states: 'Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.' The technique teaches people to guide behavior through internal speech, progressing through five stages from cognitive modeling (watching someone talk through a task) to covert self-instruction (silently guiding oneself). While the approach has been applied to other populations, the original target population was impulsive children. Adults with GAD (A), adolescents with conduct disorder (C), and older adults with dementia (D) were not the original development population.",
+      "kn": "KN44",
+      "kn_explanation": "Self-instructional training is a specific intervention technique",
+      "difficulty": "easy",
+      "quality_comment": "Directly supported by explicit lesson content. Tests key factual knowledge about the target population for this intervention.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Self-Instructional Training: Teaching Self-Talk",
+      "lessonExcerpt": "Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A psychologist receives a referral for a 52-year-old patient with chronic low back pain. What should the psychologist's first step be in working with this patient?",
+      "options": [
+        "Implement a cognitive-behavioral pain management protocol",
+        "Conduct a comprehensive assessment of the pain experience including physical, emotional, and cognitive factors",
+        "Prescribe a time-contingent medication schedule in consultation with the referring physician",
+        "Begin relaxation training and biofeedback to reduce muscle tension"
+      ],
+      "answer": "Conduct a comprehensive assessment of the pain experience including physical, emotional, and cognitive factors",
+      "explanation": "Chronic pain is considered a multifactorial process with both physical and emotional effects (depression, anger, anxiety, tense muscles, limited mobility, lack of energy). Before implementing any specific intervention, a thorough assessment is essential to understand the full picture. While CBT (A) and relaxation training (D) are evidence-based interventions for chronic pain, they should follow assessment. Time-contingent medication scheduling (C) relates to medication management, which would be the physician's domain, and the psychologist's role requires understanding the patient's pain experience first.",
+      "kn": "KN42",
+      "kn_explanation": "First step in treatment decision-making, matching treatment to assessment",
+      "difficulty": "medium",
+      "quality_comment": "Good clinical reasoning question. The lesson discusses chronic pain as multifactorial but doesn't explicitly state 'assess first' as a step—this is implied by general clinical practice principles.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Why Cognitive-Behavioral Therapies Matter for Your EPPP",
+      "lessonExcerpt": "Chronic pain is a considered to be a multi-factorial process, largely affected by neural memories of previous pain... Chronic pain affects people both physically and emotionally. Physical effects may include tense muscles, limited mobility, and lack of energy. Emotional effects may include depression, anger, and anxiety.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A depressed client tells her therapist, 'My coworker didn't say hello to me this morning, so she must hate me.' According to Beck's cognitive therapy, this thought is best classified as which type of cognitive distortion?",
+      "options": [
+        "Selective abstraction, because the client is focusing on one negative detail",
+        "Arbitrary inference, because the client is drawing a negative conclusion without supporting evidence",
+        "Personalization, because the client is assuming she caused the coworker's behavior",
+        "Emotional reasoning, because the client is using her feelings as evidence for the conclusion"
+      ],
+      "answer": "Arbitrary inference, because the client is drawing a negative conclusion without supporting evidence",
+      "explanation": "According to Beck's cognitive therapy as described in the lesson, arbitrary inference involves 'Drawing negative conclusions without evidence.' The client's example—concluding a coworker hates her based solely on not receiving a greeting—perfectly illustrates this distortion. There are many possible reasons the coworker didn't say hello, but the client jumps to a negative conclusion without evidence. Option A (selective abstraction) would involve focusing on one negative detail while ignoring other information. Option C (personalization) involves assuming you caused something—while related, the core distortion here is the unfounded conclusion about hatred, not self-blame for causing it. Option D (emotional reasoning) involves using feelings as facts (e.g., 'I feel anxious so something bad must be happening').",
+      "kn": "KN43",
+      "kn_explanation": "Identifying cognitive distortions within Beck's theoretical model",
+      "difficulty": "medium",
+      "quality_comment": "Good discrimination question. The distractors represent cognitive distortions that could superficially apply but are technically distinct from arbitrary inference.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### The Three Core Components",
+      "lessonExcerpt": "Arbitrary Inference | Drawing negative conclusions without evidence | 'My boss didn't smile at me this morning, so I'm probably getting fired'",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Meichenbaum's self-instructional training was originally developed for which population?",
+      "options": [
+        "Adults with generalized anxiety disorder",
+        "Impulsive children",
+        "Adolescents with conduct disorder",
+        "Older adults with mild cognitive impairment"
+      ],
+      "answer": "Impulsive children",
+      "explanation": "The lesson clearly states: 'Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.' The training teaches people to guide their behavior through internal speech, progressing from external modeling through overt self-guidance to covert self-instruction. This was particularly suited to impulsive children who needed to develop internal regulatory speech. Option A is incorrect—while self-instructional training can be used with anxious adults, it was not originally developed for them. Option C is incorrect—conduct disorder populations were not the original target. Option D is incorrect—older adults with cognitive impairment were not the original population.",
+      "kn": "KN44",
+      "kn_explanation": "Self-instructional training is a specific intervention technique for a population",
+      "difficulty": "easy",
+      "quality_comment": "Direct factual recall question. Important EPPP content that is clearly supported by the lesson.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Self-Instructional Training: Teaching Self-Talk",
+      "lessonExcerpt": "Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A psychologist receives a referral for a 42-year-old construction worker who sustained a back injury eight months ago and continues to report significant pain despite medical clearance indicating the injury has healed. What should the psychologist's first step be?",
+      "options": [
+        "Begin a course of cognitive-behavioral therapy for pain management",
+        "Conduct a comprehensive biopsychosocial assessment of the pain experience",
+        "Teach relaxation and mindfulness techniques to reduce pain perception",
+        "Refer the client back to the physician for additional medical evaluation"
+      ],
+      "answer": "Conduct a comprehensive biopsychosocial assessment of the pain experience",
+      "explanation": "When receiving a chronic pain referral, the appropriate first step is always a comprehensive assessment. Chronic pain is considered a multi-factorial process affected by neural memories of previous pain, physical effects (tense muscles, limited mobility), and emotional effects (depression, anger, anxiety). Jumping directly to CBT (A) or relaxation techniques (C) without first understanding the full picture of the client's pain experience would be premature. Referring back to the physician (D) is inappropriate when medical clearance has already been given. A thorough assessment informs the treatment plan and ensures that all contributing factors—biological, psychological, and social—are properly identified before intervention begins.",
+      "kn": "KN42",
+      "kn_explanation": "Treatment decision-making for chronic pain referral, matching treatment to assessment",
+      "difficulty": "medium",
+      "quality_comment": "Tests the fundamental principle that assessment precedes intervention. Distractors represent common but premature interventions.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Why Cognitive-Behavioral Therapies Matter for Your EPPP (and Your Future Practice)",
+      "lessonExcerpt": "Chronic pain is a considered to be a multi-factorial process, largely affected by neural memories of previous pain.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 12
+    }
+  ]
+}

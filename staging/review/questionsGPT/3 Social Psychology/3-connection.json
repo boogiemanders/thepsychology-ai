@@ -1,0 +1,298 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following is MOST characteristic of the structural organization found in many African American family systems?",
+      "options": [
+        "A strict patriarchal hierarchy with clearly delineated gender roles",
+        "An extended kinship network with flexible family boundaries and role sharing",
+        "A nuclear family structure emphasizing individual autonomy and independence",
+        "A matriarchal system in which all decision-making authority rests with the eldest female"
+      ],
+      "answer": "An extended kinship network with flexible family boundaries and role sharing",
+      "explanation": "Research on African American family systems highlights the importance of extended kinship networks, flexible family roles, and permeable household boundaries as key structural characteristics. Option A is incorrect because African American families tend to have more egalitarian role structures rather than strict patriarchy. Option C describes an individualistic nuclear family model more typical of European American norms. Option D is a stereotype; while women play important roles, characterizing the system as exclusively matriarchal with all decision-making power in one person oversimplifies the reality of shared responsibilities across the kinship network.",
+      "kn": "KN19",
+      "kn_explanation": "African American family structural organization relates to identity diversity and its psychological impact on families and systems",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of cultural family structures while challenging common stereotypes. Supported by cultural concepts lesson.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### African American Clients",
+      "lessonExcerpt": "Extended kinship networks often include friends and church community, not just family. Family roles are often flexible and egalitarian.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Research on interpersonal attraction has found that while people express a preference for the most physically attractive partners available, their actual partner selections tell a different story. According to the matching hypothesis, which of the following outcomes is MOST likely when individuals select romantic partners?",
+      "options": [
+        "People select partners who are complementary in personality traits rather than similar in attractiveness",
+        "People of approximately equal physical attractiveness are likely to select each other as partners",
+        "Women consistently select partners who are significantly more physically attractive than themselves",
+        "Physical attractiveness becomes irrelevant once partners have interacted for more than a few minutes"
+      ],
+      "answer": "People of approximately equal physical attractiveness are likely to select each other as partners",
+      "explanation": "The matching hypothesis posits that despite preferences for highly attractive partners, people of approximately equal physical attractiveness are likely to select each other. This is a well-established finding in interpersonal attraction research. Option A incorrectly invokes complementarity, which research does not consistently support over similarity. Option C is not supported by research—gender differences in mate selection relate to prioritization of attractiveness versus resources, not selecting partners more attractive than oneself. Option D is incorrect because physical attractiveness continues to influence attraction beyond initial interactions.",
+      "kn": "KN15",
+      "kn_explanation": "Interpersonal attraction and mate selection fall under social interaction and relationships",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward recall question well-grounded in lesson content. The matching hypothesis is a classic EPPP concept.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
+      "lessonExcerpt": "People prefer physically attractive partners, but the matching hypothesis posits that people of approximately equal physical attractiveness are likely to select each other.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A graduate student receives unexpectedly critical feedback on her dissertation proposal and is unsure whether her emotional reaction is proportionate. According to Festinger's social comparison theory, she would most likely seek out:",
+      "options": [
+        "A trusted mentor who has extensive experience reviewing dissertations",
+        "Fellow graduate students who recently received feedback on their own proposals",
+        "Online forums where anonymous users share academic experiences",
+        "A therapist who can objectively evaluate whether her reaction is appropriate"
+      ],
+      "answer": "Fellow graduate students who recently received feedback on their own proposals",
+      "explanation": "According to Festinger's social comparison theory, when people are uncertain about how to feel or react, they seek out similar others to gauge whether their responses are appropriate. The graduate student would most likely turn to peers in comparable situations—other graduate students who recently received proposal feedback—because they provide the most relevant comparison point. A mentor (A) represents an authority figure, not a similar other. Online forums (C) offer anonymous strangers who may not be in comparable situations. A therapist (D) provides expert evaluation, not social comparison with similar others. The key principle is that people compare themselves with those in similar circumstances to evaluate their own reactions.",
+      "kn": "KN15",
+      "kn_explanation": "Social comparison of emotional reactions relates to social interaction, though it touches social cognition; the core is about social feedback and interpersonal context",
+      "difficulty": "medium",
+      "quality_comment": "Good application-level question requiring understanding of the 'similar others' component of social comparison theory rather than simple recall.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "### Schachter's Anxiety Studies: Misery Loves Company (But Only Certain Company)",
+      "lessonExcerpt": "Social comparison theory, developed by Leon Festinger in 1954, explains why. When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "A 4-year-old boy correctly states that he will grow up to be a man, but he believes that if he wore a dress and grew his hair long, he could become a girl. According to Kohlberg's cognitive developmental theory, this child has achieved which stage of gender identity development?",
+      "options": [
+        "Gender identity",
+        "Gender stability",
+        "Gender constancy",
+        "Gender schema"
+      ],
+      "answer": "Gender stability",
+      "explanation": "In Kohlberg's cognitive developmental theory, the gender stability stage (around age 4) is characterized by the understanding that gender is stable over time—a boy knows he will become a man. However, children at this stage have not yet achieved gender constancy and may believe that gender can change based on superficial appearance changes (like clothing or hair length). Gender identity (A) is the first stage (ages 2-3), where children can simply label themselves and others as male or female but don't yet understand temporal stability. Gender constancy (C) is the final stage (ages 6-7), where children understand that gender remains the same regardless of changes in appearance or activities. Gender schema (D) is from Bem's gender schema theory, not Kohlberg's stage model.",
+      "kn": "KN14",
+      "kn_explanation": "Gender constancy development is a social cognitive developmental concept (person perception/categorization), not social interaction - fits social cognition models",
+      "difficulty": "medium",
+      "quality_comment": "Good scenario-based question that tests nuanced understanding of the distinction between gender stability and gender constancy. Lesson coverage is in the Development domain file rather than a social/multicultural file.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "### Kohlberg's Cognitive Developmental Theory",
+      "lessonExcerpt": "1. **Gender identity** (ages 2-3): Correctly labels self and others as male/female\n2. **Gender stability** (age 4): Understands gender is stable over time (boys become men)\n3. **Gender constancy** (ages 6-7): Understands gender is stable across situations and doesn't change with appearance",
+      "needsReview": true,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "How does cultural context enhance the understanding of individual behavior according to cultural psychology?",
+      "options": [
+        "By isolating individual traits from social influences",
+        "By emphasizing universal psychological processes",
+        "By recognizing the influence of cultural norms and values",
+        "By focusing solely on biological factors"
+      ],
+      "answer": "By recognizing the influence of cultural norms and values",
+      "explanation": "The correct answer is 'By recognizing the influence of cultural norms and values' because cultural psychology emphasizes that individual behavior cannot be fully understood without considering the cultural context in which it occurs. 'By isolating individual traits from social influences' is incorrect as it contradicts the premise of cultural psychology. 'By emphasizing universal psychological processes' overlooks the specificity of cultural influences. 'By focusing solely on biological factors' ignores the social and cultural dimensions.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding cultural psychology and its impact on behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of cultural psychology.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
+      "lessonExcerpt": "Cultural psychology recognizes that understanding individuals requires acknowledging the influence of cultural norms and values.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "In child development, how does credibility influence altruistic behavior?",
+      "options": [
+        "Children are more likely to help when they perceive the helper as credible.",
+        "Children's altruism is unaffected by the credibility of the helper.",
+        "Credibility only matters in peer interactions, not adult-child interactions.",
+        "Children prefer to help those who are less credible."
+      ],
+      "answer": "Children are more likely to help when they perceive the helper as credible.",
+      "explanation": "The correct answer is 'Children are more likely to help when they perceive the helper as credible' because research indicates that children's willingness to engage in altruistic behavior is influenced by their perception of the helper's credibility. 'Children's altruism is unaffected by the credibility of the helper' is incorrect as credibility plays a significant role. 'Credibility only matters in peer interactions, not adult-child interactions' is misleading, as it applies to both contexts. 'Children prefer to help those who are less credible' contradicts the established findings.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to developmental psychology and altruism.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and assesses understanding of child development.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
+      "lessonExcerpt": "Children are more likely to engage in altruistic behavior when they perceive the helper as credible.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "Which of the following best describes how early relationships influence adult intimacy according to attachment theory?",
+      "options": [
+        "Early relationships create a secure base that fosters healthy adult intimacy.",
+        "Adult intimacy is solely determined by individual personality traits.",
+        "Early relationships have no significant impact on adult intimacy.",
+        "Adult intimacy is primarily influenced by social norms and peer relationships."
+      ],
+      "answer": "Early relationships create a secure base that fosters healthy adult intimacy.",
+      "explanation": "The correct answer reflects the idea that early relationships, particularly those characterized by secure attachment, provide a foundation for healthy intimacy in adulthood. The other options either deny the influence of early relationships or misattribute the source of adult intimacy.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to the understanding of how early attachment experiences shape later intimate relationships.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of attachment theory in relation to adult intimacy.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
+      "lessonExcerpt": "Understanding these patterns isn't just academic. It's practical knowledge you'll use almost daily.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "According to social comparison theory, which of the following best explains why individuals seek emotional support from others during stressful situations?",
+      "options": [
+        "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
+        "B) To avoid personal responsibility for their emotions.",
+        "C) To enhance their self-esteem through competition.",
+        "D) To demonstrate their emotional resilience to others."
+      ],
+      "answer": "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
+      "explanation": "Option A is correct because social comparison theory suggests that individuals look to others in similar situations to assess their own emotional responses. Option B is incorrect as seeking support does not imply avoiding responsibility. Option C is not relevant to the theory, which focuses on validation rather than competition. Option D misrepresents the motivation for seeking support, which is more about understanding than demonstrating resilience.",
+      "kn": "KN3",
+      "kn_explanation": "This question relates to social psychology concepts, specifically social comparison theory.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of social comparison theory and its application to emotional support.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
+      "lessonExcerpt": "When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "According to Helms's model of racial identity development, which stage involves individuals actively seeking to understand their racial identity and the implications of racism?",
+      "options": [
+        "Pre-encounter",
+        "Encounter",
+        "Immersion-Emersion",
+        "Internalization"
+      ],
+      "answer": "Immersion-Emersion",
+      "explanation": "The Immersion-Emersion stage in Helms's model is characterized by individuals immersing themselves in their racial identity and grappling with the implications of racism. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts awareness, and the Internalization stage involves a more integrated sense of self. Therefore, Immersion-Emersion is the correct answer.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to racial identity development in social psychology.",
+      "difficulty": "hard",
+      "quality_comment": "Well-structured question that assesses knowledge of racial identity stages.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "### Stages of Racial Identity Development",
+      "lessonExcerpt": "The Immersion-Emersion stage involves individuals actively seeking to understand their racial identity and the implications of racism.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "According to Cross's model of Black racial identity development, which stage is characterized by a strong sense of pride in one's racial identity and a commitment to the Black community?",
+      "options": [
+        "Pre-encounter",
+        "Encounter",
+        "Immersion-Emersion",
+        "Internalization"
+      ],
+      "answer": "Immersion-Emersion",
+      "explanation": "The Immersion-Emersion stage is where individuals experience a strong sense of pride in their racial identity and actively engage with the Black community. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts reflection on race, and the Internalization stage involves a more integrated sense of self. Thus, Immersion-Emersion is the correct answer.",
+      "kn": "KN11",
+      "kn_explanation": "This KN code applies as it pertains to the understanding of racial identity development models.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of a specific model of racial identity development.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
+      "lessonExcerpt": "The Immersion-Emersion stage is characterized by a strong sense of pride in one's racial identity and a commitment to the Black community.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "In the context of sexual identity development, what characterizes the identity pride stage?",
+      "options": [
+        "Exploration of sexual orientation",
+        "Acceptance of one's sexual identity",
+        "Integration of sexual identity into overall self-concept",
+        "Public affirmation of sexual identity"
+      ],
+      "answer": "Public affirmation of sexual identity",
+      "explanation": "The identity pride stage is characterized by a strong public affirmation of one's sexual identity, often accompanied by pride in that identity. Exploration occurs in earlier stages, while acceptance and integration are part of later stages. Thus, the correct answer is public affirmation of sexual identity.",
+      "kn": "KN14",
+      "kn_explanation": "This KN code applies as it relates to understanding stages of sexual identity development.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses knowledge of sexual identity development stages.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
+      "lessonExcerpt": "The identity pride stage is characterized by a strong public affirmation of one's sexual identity.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Research indicates that which leadership style is often associated with better outcomes in gender-diverse teams?",
+      "options": [
+        "Autocratic leadership",
+        "Transformational leadership",
+        "Transactional leadership",
+        "Laissez-faire leadership"
+      ],
+      "answer": "Transformational leadership",
+      "explanation": "Transformational leadership is often associated with better outcomes in gender-diverse teams as it emphasizes inspiration, motivation, and the development of team members. Autocratic leadership tends to stifle input, transactional leadership focuses on exchanges rather than development, and laissez-faire leadership can lead to a lack of direction. Therefore, the correct answer is transformational leadership.",
+      "kn": "KN19",
+      "kn_explanation": "This KN code applies as it pertains to understanding gender differences in leadership styles.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of leadership styles in diverse teams.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
+      "lessonExcerpt": "Transformational leadership is often associated with better outcomes in gender-diverse teams.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "In political communication, what is the primary purpose of timing in campaign strategies?",
+      "options": [
+        "To ensure that messages are delivered when the audience is most receptive.",
+        "To create a sense of urgency that compels immediate action.",
+        "To align campaign messages with the political calendar.",
+        "To distract opponents from their strategies."
+      ],
+      "answer": "To ensure that messages are delivered when the audience is most receptive.",
+      "explanation": "Effective timing in campaign strategies is crucial for maximizing audience receptiveness to messages. The other options, while relevant, do not capture the primary purpose of timing in communication.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding social influence in political contexts.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of campaign strategies.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
+      "lessonExcerpt": "The lesson does not adequately cover political communication timing.",
+      "needsReview": true,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "According to social exchange theory, what primarily drives interpersonal attraction?",
+      "options": [
+        "The pursuit of emotional intimacy and connection.",
+        "The perceived rewards and costs associated with a relationship.",
+        "The influence of societal norms and expectations.",
+        "The biological instincts for reproduction and survival."
+      ],
+      "answer": "The perceived rewards and costs associated with a relationship.",
+      "explanation": "Social exchange theory posits that interpersonal attraction is driven by the evaluation of the rewards and costs involved in a relationship. The other options reflect different theories of attraction but do not align with the principles of social exchange theory.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding the dynamics of attraction in social psychology.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of attraction theories.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
+      "lessonExcerpt": "The lesson does not adequately cover social exchange theory.",
+      "needsReview": true,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    }
+  ]
+}

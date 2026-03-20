@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A school psychologist wants to determine the percentage of time a student spends on-task during a 30-minute independent reading period. The psychologist divides the observation period into 60 equal intervals and checks at the end of each interval whether the student is engaged in reading at that exact moment. This procedure is BEST described as:",
+      "options": [
+        "Event recording",
+        "Whole-interval sampling",
+        "Momentary time sampling",
+        "Continuous recording"
+      ],
+      "answer": "Momentary time sampling",
+      "explanation": "Momentary time sampling involves recording whether the target behavior is present or absent at the moment the time interval ends. This matches the described procedure of checking at the end of each interval. Whole-interval sampling requires the behavior to be exhibited for the full duration of the interval to be scored positively. Event recording involves tallying each occurrence of a discrete behavior. Continuous recording tracks every instance of a behavior with exact onset and offset times.",
+      "kn": "KN5",
+      "kn_explanation": "Behavioral observation methods are a core assessment technique tested under the Assessment domain",
+      "difficulty": "medium",
+      "quality_comment": "Requires distinguishing between momentary time sampling and whole-interval sampling based on the specific recording criterion; scenario provides clear procedural details",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Observational studies",
+      "lessonExcerpt": "MOMENTARY TIME SAMPLING Momentary time sampling involves the observer simply recording whether the target behavior is present or absent at the moment that the time interval ends.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 12
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist obtains a z-score of +1.5 on a standardized measure for a client. The psychologist needs to convert this to a T-score for reporting purposes. What is the equivalent T-score?",
+      "options": [
+        "55",
+        "60",
+        "65",
+        "72.5"
+      ],
+      "answer": "65",
+      "explanation": "T-scores have a mean of 50 and a standard deviation of 10. To convert a z-score to a T-score, use the formula: T = 50 + 10(z). With z = +1.5: T = 50 + 10(1.5) = 50 + 15 = 65. Option A (55) would correspond to z = +0.5. Option B (60) would correspond to z = +1.0. Option D (72.5) incorrectly uses a different conversion formula. Understanding standardized score conversions is essential for interpreting psychological test results across different metric systems.",
+      "kn": "KN55",
+      "kn_explanation": "Converting z-scores to T-scores involves descriptive statistics and probability theory (score transformations).",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward calculation question. The lesson content does not explicitly cover z-to-T-score conversions, so this draws on standard EPPP knowledge beyond the provided lessons.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## T-Scores",
+      "lessonExcerpt": "T-scores have a mean of 50 and a standard deviation of 10. They're essentially z-scores that have been rescaled to avoid negative numbers and decimals.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    }
+  ]
+}

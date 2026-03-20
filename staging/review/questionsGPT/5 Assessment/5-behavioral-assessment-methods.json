@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "In behavior analysis, what is the primary function of interval recording?",
+      "options": [
+        "To measure the frequency of a behavior over a set period.",
+        "To assess the duration of a specific behavior.",
+        "To determine the latency of a behavior before it occurs.",
+        "To record whether a behavior occurs within specified time intervals."
+      ],
+      "answer": "To record whether a behavior occurs within specified time intervals.",
+      "explanation": "Interval recording focuses on whether a behavior occurs during predetermined intervals, making it useful for tracking behaviors that may not happen frequently. The other options describe different measurement methods.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to behavioral assessment methods and their applications.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of interval recording in behavior analysis.",
+      "suggestedLesson": "5-behavioral-assessment-methods",
+      "suggestedParagraph": "## Use of Interval Recording in Behavior Analysis",
+      "lessonExcerpt": "Interval recording is used to record whether a behavior occurs within specified time intervals.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    }
+  ]
+}

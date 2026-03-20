@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "According to the DSM-5-TR, the ten specific personality disorders are organized using which classification approach?",
+      "options": [
+        "A categorical model grouping disorders into three clusters based on shared descriptive features",
+        "A dimensional model rating personality traits along five continuous spectra derived from the Big Five",
+        "A hierarchical model with a single general personality pathology factor at the top and specific disorders below",
+        "A prototype matching model requiring clinicians to rate overall similarity to ideal disorder descriptions"
+      ],
+      "answer": "A categorical model grouping disorders into three clusters based on shared descriptive features",
+      "explanation": "The DSM-5-TR uses a categorical classification model in which the ten personality disorders are organized into three clusters based on shared descriptive characteristics: Cluster A (odd/eccentric: paranoid, schizoid, schizotypal), Cluster B (dramatic/emotional/erratic: antisocial, borderline, histrionic, narcissistic), and Cluster C (anxious/fearful: avoidant, dependent, obsessive-compulsive). Option B describes a dimensional approach (the alternative DSM-5 model in Section III, not the primary classification). Option C describes a hierarchical factor model that is a research framework but not the DSM-5-TR's primary organization. Option D describes prototype matching, which is an alternative diagnostic approach not used as the primary DSM-5-TR system.",
+      "kn": "KN5",
+      "kn_explanation": "This question tests knowledge of the DSM-5-TR's organizational framework for personality disorders, a core diagnostic classification concept.",
+      "difficulty": "easy",
+      "quality_comment": "Foundational question about personality disorder classification. Clearly supported by lesson content describing the three-cluster categorical model.",
+      "suggestedLesson": "5-personality",
+      "suggestedParagraph": "## The Three Clusters: Your Organizational Framework",
+      "lessonExcerpt": "The DSM-5-TR organizes the ten personality disorders into three clusters based on shared characteristics... Cluster A: Odd, eccentric behaviors... Cluster B: Dramatic, emotional, erratic behaviors... Cluster C: Anxious, fearful behaviors.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    }
+  ]
+}

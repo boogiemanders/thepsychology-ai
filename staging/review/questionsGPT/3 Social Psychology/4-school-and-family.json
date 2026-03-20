@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A family court judge asks a psychologist to provide expert testimony about the effects of being raised by same-sex parents on children's development. Based on the research literature, the psychologist should testify that children raised by gay or lesbian parents:",
+      "options": [
+        "Show equivalent rates of homosexuality as children in the general population",
+        "Tend to have more behavioral problems but better academic performance",
+        "Are more likely to identify as gay or lesbian in adulthood",
+        "Show poorer psychological adjustment but stronger gender identity development"
+      ],
+      "answer": "Show equivalent rates of homosexuality as children in the general population",
+      "explanation": "Research consistently shows that children raised by gay or lesbian parents do not differ from children of heterosexual parents in psychological adjustment, intellectual functioning, gender identity, or sexual orientation. Furthermore, these children show equivalent rates of homosexuality as in the general population. The other options contradict the research evidence. Children of same-sex parents do not show more behavioral problems, are not more likely to identify as gay/lesbian, and do not show poorer psychological adjustment.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses family structure and child development within the social and multicultural context.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by two lesson sources and addresses a frequently tested EPPP topic.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "### Gay and Lesbian Parents",
+      "lessonExcerpt": "Research consistently shows children raised by gay or lesbian parents don't differ from children of heterosexual parents in psychological adjustment, intellectual functioning, gender identity, or sexual orientation. Gay and lesbian parents' skills are similar to or better than those of heterosexual parents.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    }
+  ]
+}

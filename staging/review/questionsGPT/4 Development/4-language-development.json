@@ -1,0 +1,172 @@
+{
+  "questions": [
+    {
+      "stem": "A 2-year-old child points at a horse and says \"doggie.\" This language error is an example of:",
+      "options": [
+        "Underextension, in which the child applies a word too narrowly to a specific referent",
+        "Overregularization, in which the child misapplies grammatical rules to irregular forms",
+        "Overextension, in which the child applies a word too broadly based on shared perceptual features",
+        "Holophrastic speech, in which the child uses a single word to convey an entire sentence"
+      ],
+      "answer": "Overextension, in which the child applies a word too broadly based on shared perceptual features",
+      "explanation": "Overextension occurs when a child uses a word too broadly, applying it to objects that share similar perceptual features with the original referent. Calling a horse 'doggie' because both are four-legged animals is a classic example. Underextension (A) is the opposite error—using a word too narrowly (e.g., only calling the family pet 'doggie'). Overregularization (B) involves applying grammatical rules to exceptions (e.g., 'goed' instead of 'went'). Holophrastic speech (D) refers to using single words to express complete thoughts but doesn't involve categorization errors.",
+      "kn": "KN21",
+      "kn_explanation": "Overextension is a normal language development milestone in toddlers, fitting normal growth and development across the lifespan.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward application question using a classic example, with well-constructed distractors from related language development concepts.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## Common Language Errors: Totally Normal Development",
+      "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals 'doggie'",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which principle is central to Montessori education?",
+      "options": [
+        "Strict adherence to a standardized curriculum",
+        "Emphasis on child-led learning and exploration",
+        "Focus on competitive academic achievement",
+        "Use of traditional lecture-based teaching methods"
+      ],
+      "answer": "Emphasis on child-led learning and exploration",
+      "explanation": "Montessori education is characterized by its emphasis on child-led learning and exploration, allowing children to learn at their own pace. The other options do not accurately reflect Montessori principles.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to educational psychology and the principles of Montessori education.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of Montessori education principles.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
+      "lessonExcerpt": "This theory combines both biological readiness and social environment.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "According to Piaget, how does language influence thought during the preoperational stage of cognitive development?",
+      "options": [
+        "Language and thought are independent",
+        "Language shapes thought processes",
+        "Thought precedes language development",
+        "Language is merely a tool for communication"
+      ],
+      "answer": "Language shapes thought processes",
+      "explanation": "The correct answer is 'Language shapes thought processes' as Piaget believed that language development is closely tied to cognitive development, especially in the preoperational stage. The other options do not accurately reflect Piaget's views.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to Piaget's theory of cognitive development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the relationship between language and thought.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
+      "lessonExcerpt": "Language isn't just about words. It's the foundation of how we connect with others, process our experiences, and develop cognitively.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What are the primary milestones in language development during the first two years of life?",
+      "options": [
+        "Cooing, babbling, first words",
+        "First words, two-word phrases, complex sentences",
+        "Babbling, complex sentences, understanding grammar",
+        "Cooing, understanding grammar, two-word phrases"
+      ],
+      "answer": "Cooing, babbling, first words",
+      "explanation": "The primary milestones in language development during the first two years include cooing (around 2-3 months), babbling (around 6 months), and the emergence of first words (around 12 months). The other options either misorder these milestones or include stages not typically reached within the first two years.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to language development milestones in early childhood.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of language development milestones.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## Language Development Timeline: From Womb to Words",
+      "lessonExcerpt": "The primary milestones in language development during the first two years include cooing, babbling, and the emergence of first words.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What does code-switching in bilingual individuals primarily refer to?",
+      "options": [
+        "Switching languages based on context",
+        "Changing dialects within the same language",
+        "Using slang in informal settings",
+        "Adopting formal language in professional contexts"
+      ],
+      "answer": "Switching languages based on context",
+      "explanation": "Code-switching refers to the practice of alternating between two or more languages or dialects depending on the social context. The other options describe variations in language use but do not capture the essence of code-switching.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding bilingualism and language use.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of code-switching in bilingual individuals.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## Language Development Timeline: From Womb to Words",
+      "lessonExcerpt": "Bilingual children as young as 20 months can code-switch appropriately, using French with their French-speaking parent and English with their English-speaking parent.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "What type of reading errors are characteristic of deep dyslexia?",
+      "options": [
+        "Phonological errors",
+        "Semantic errors",
+        "Syntactic errors",
+        "Orthographic errors"
+      ],
+      "answer": "Semantic errors",
+      "explanation": "Deep dyslexia is characterized by semantic errors, where a reader may substitute a word with another that has a similar meaning. Phonological errors relate to phonological dyslexia, while syntactic and orthographic errors are not specific to deep dyslexia.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it pertains to language development and reading disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question is specific and tests knowledge of a particular reading disorder.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
+      "lessonExcerpt": "Deep dyslexia is characterized by semantic errors, where a reader may substitute a word with another that has a similar meaning.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is a common issue that can lead to the misdiagnosis of learning disorders in children?",
+      "options": [
+        "Cultural differences in learning styles",
+        "Lack of parental involvement in education",
+        "Overemphasis on standardized testing",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "The correct answer is 'All of the above' as each factor can contribute to the misdiagnosis of learning disorders. Cultural differences can lead to misunderstandings of a child's abilities, lack of parental involvement can affect educational outcomes, and standardized testing may not accurately reflect a child's learning style.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to educational psychology and the assessment of learning disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of factors influencing the diagnosis of learning disorders.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## The Building Blocks: Five Components of Language",
+      "lessonExcerpt": "Cultural differences, lack of parental involvement, and overemphasis on standardized testing can all lead to misdiagnosis of learning disorders.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What cognitive advantage is often associated with bilingualism in children?",
+      "options": [
+        "Increased vocabulary in both languages",
+        "Enhanced problem-solving skills",
+        "Better social skills",
+        "Improved physical coordination"
+      ],
+      "answer": "Enhanced problem-solving skills",
+      "explanation": "Bilingualism is linked to enhanced cognitive flexibility and problem-solving skills due to the mental juggling of two languages. The other options, while potentially true, are not the primary cognitive advantages associated with bilingualism.",
+      "kn": "KN6",
+      "kn_explanation": "This question pertains to the cognitive effects of bilingualism, a significant topic in developmental psychology.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the cognitive benefits of bilingualism.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
+      "lessonExcerpt": "Bilingualism is linked to enhanced problem-solving skills.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 26
+    }
+  ]
+}

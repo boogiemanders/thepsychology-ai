@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist administers an anxiety measure that has a standard deviation of 12 and a reliability coefficient of .91. She calculates the standard error of measurement (SEM) to construct a confidence interval around a client's observed score. The SEM she obtains will be expressed in:",
+      "options": [
+        "Standard deviation units of the normative sample",
+        "The same units as the test's raw scores",
+        "Z-score units",
+        "Percentile rank units"
+      ],
+      "answer": "The same units as the test's raw scores",
+      "explanation": "The standard error of measurement (SEM) is calculated using the formula SEM = SD × √(1 - reliability). Since it is derived by multiplying the test's standard deviation (which is in raw score units) by a constant, the resulting SEM is expressed in the same units as the original test scores. If the test scores are in raw score points, the SEM is in raw score points. It is not converted to z-scores, percentile ranks, or abstract standard deviation units. This is important because the SEM is used to build confidence intervals around an individual's observed score (e.g., score ± 1 SEM for 68% confidence), and those intervals must be in the same metric as the score itself.",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of measurement derives from reliability coefficient and SD — core psychometric/reliability concept",
+      "difficulty": "medium",
+      "quality_comment": "Solid conceptual question. The lesson provides the SEM formula and examples but does not explicitly state the units. The answer is logically derivable from the formula provided.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement and Confidence Intervals",
+      "lessonExcerpt": "SEM = SD × √(1 - reliability coefficient)... Example: Someone scores 90 on a test with SEM of 5. 68% confidence interval: 90 ± 5 = 85 to 95",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Two clinicians independently review 100 patient records and classify each patient as meeting or not meeting criteria for a specific diagnosis. Their percent agreement is 88%, but when Cohen's Kappa is calculated, the value is .76. The difference between these two values is best explained by the fact that Kappa:",
+      "options": [
+        "Uses a more lenient threshold for agreement than percent agreement",
+        "Adjusts for the proportion of agreement expected by chance alone",
+        "Weights disagreements by severity rather than treating all disagreements equally",
+        "Only counts agreement on positive cases while ignoring agreement on negative cases"
+      ],
+      "answer": "Adjusts for the proportion of agreement expected by chance alone",
+      "explanation": "Cohen's Kappa provides a more conservative estimate of inter-rater agreement by correcting for chance agreement. Simple percent agreement can be inflated because raters will agree some proportion of the time purely by chance, especially when base rates are very high or very low. For example, if 90% of cases are negative, two raters could agree 81% of the time just by both randomly guessing 'negative.' Kappa removes this chance-expected agreement, yielding a lower but more meaningful value. A Kappa of .76 indicates substantial agreement beyond chance. Kappa does not weight disagreements by severity (that would be weighted Kappa), does not use a more lenient threshold, and does not ignore agreement on negative cases.",
+      "kn": "KN29",
+      "kn_explanation": "Inter-rater reliability (percent agreement between clinicians) is a reliability/psychometric concept",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual question. The lesson mentions Kappa corrects for chance agreement but does not provide specific interpretation benchmarks for Kappa values (e.g., .76 = substantial). The core concept is well-supported.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### Inter-Rater Reliability: The Subjective Scoring Check",
+      "lessonExcerpt": "Cohen's Kappa fixes this by accounting for chance agreement. It provides a more conservative estimate of true rater consistency.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    }
+  ]
+}

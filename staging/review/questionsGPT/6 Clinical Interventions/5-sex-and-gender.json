@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is theoretically classified as which type of intervention?",
+      "options": [
+        "An extinction-based procedure that habituates the anxiety response through repeated exposure",
+        "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+        "A cognitive restructuring approach that challenges irrational beliefs about sexual performance",
+        "An operant conditioning procedure that reinforces successive approximations of sexual behavior"
+      ],
+      "answer": "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+      "explanation": "Sensate focus is classified as a counterconditioning intervention. According to the reference material, it 'uses pleasure as the counterconditioning response to inhibit performance anxiety.' Pleasure is elicited through body massages that are discontinued at the first sign of anxiety, and the couple initially abstains from intercourse to reduce performance pressure. Option A is incorrect because sensate focus is not primarily an extinction procedure—it actively pairs a new response (pleasure) with the anxiety-provoking stimulus. Option C is incorrect because sensate focus is a behavioral, not cognitive, technique. Option D is incorrect because sensate focus is based on classical conditioning (counterconditioning), not operant conditioning or shaping.",
+      "kn": "KN44",
+      "kn_explanation": "Sensate focus is a specific treatment technique for sexual dysfunctions; the question asks about classifying the intervention type, which maps to treatment techniques and their evidence base.",
+      "difficulty": "hard",
+      "quality_comment": "Tests precise theoretical classification of a commonly tested intervention. Distractors represent plausible but incorrect mechanisms.",
+      "suggestedLesson": "5-sex-and-gender",
+      "suggestedParagraph": "### Erectile Disorder: Understanding the Numbers",
+      "lessonExcerpt": "Sensate Focus (developed by Masters and Johnson in 1970) is the gold standard behavioral intervention. It works by gradually rebuilding intimacy while removing performance pressure.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 2
+    }
+  ]
+}

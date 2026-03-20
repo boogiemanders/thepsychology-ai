@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A pediatrician reports that a 4-year-old patient has been hospitalized multiple times for symptoms that cannot be medically explained, and lab results appear to have been tampered with. The child's mother, who has medical training, is always present and appears very engaged with hospital staff. There is no evidence of external incentive such as financial gain or avoidance of legal responsibility. Which diagnosis is most appropriate for the mother?",
+      "options": [
+        "Malingering",
+        "Factitious disorder imposed on another",
+        "Somatic symptom disorder",
+        "Illness anxiety disorder"
+      ],
+      "answer": "Factitious disorder imposed on another",
+      "explanation": "Factitious disorder imposed on another involves falsifying or inducing symptoms in another person (often a child) with associated deception and no clear external reward. This distinguishes it from malingering, which requires a clear external motivation such as financial gain, avoiding work, or obtaining drugs. Somatic symptom disorder involves excessive thoughts/emotions/behaviors about one's own real symptoms, not fabrication of symptoms in another person. Illness anxiety disorder involves preoccupation with having a serious illness oneself, with minimal somatic symptoms. The key distinguishing feature is the absence of obvious external reward combined with the deception directed at a dependent person.",
+      "kn": "KN33",
+      "kn_explanation": "Integrating non-psychological medical information (unexplained hospitalizations, lab results) into psychological assessment points to differential diagnosis with medical data",
+      "difficulty": "medium",
+      "quality_comment": "Good differential diagnosis question requiring distinction between factitious disorder imposed on another and malingering based on motivation, and from somatic symptom/illness anxiety disorders based on who is affected.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "### Factitious Disorder: The Deception Element",
+      "lessonExcerpt": "Imposed on another: Person causes symptoms in someone else (often a child)... The person presents themselves as ill or impaired even without obvious external reward. This distinguishes it from malingering.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A 4-year-old child who spent the first two years of life in a severely understaffed orphanage now lives with an adoptive family. The child readily approaches unfamiliar adults at the park, sits on strangers' laps, and has wandered off with an unknown person at a store without showing distress. This presentation is most consistent with a diagnosis of:",
+      "options": [
+        "Reactive attachment disorder",
+        "Disinhibited social engagement disorder",
+        "Separation anxiety disorder",
+        "Attention-deficit/hyperactivity disorder, predominantly hyperactive-impulsive presentation"
+      ],
+      "answer": "Disinhibited social engagement disorder",
+      "explanation": "Disinhibited Social Engagement Disorder (DSED) is characterized by indiscriminate social behavior toward unfamiliar adults following a history of extreme insufficient care. The lesson describes DSED: 'these kids act like every adult is potentially their caregiver. They'll approach strangers without hesitation, act overly familiar with people they just met, wander off without checking back with their actual caregivers, and might leave with strangers readily.' Reactive attachment disorder (A) involves the opposite response—emotional withdrawal and failure to seek comfort. Separation anxiety disorder (C) involves excessive distress about separation from attachment figures, not indiscriminate approach behavior. ADHD (D) involves hyperactivity and impulsivity but not the characteristic pattern of indiscriminate social approach with strangers following neglect.",
+      "kn": "KN36",
+      "kn_explanation": "Describing a child with indiscriminate attachment behavior following institutional deprivation points to classification/diagnosis of a disorder (likely Reactive Attachment Disorder or Disinhibited Social Engagement Disorder)",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that tests the critical distinction between RAD and DSED as opposite responses to severe neglect.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "### The Early Years: When Caregiving Goes Wrong",
+      "lessonExcerpt": "**DSED is the \"indiscriminate\" response.** Instead of shutting down, these kids act like every adult is potentially their caregiver. They'll approach strangers without hesitation, act overly familiar with people they just met, wander off without checking back with their actual caregivers, and might leave with strangers readily.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    }
+  ]
+}

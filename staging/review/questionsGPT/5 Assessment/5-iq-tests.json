@@ -1,0 +1,235 @@
+{
+  "questions": [
+    {
+      "stem": "A school psychologist administers the WISC-V to a 7-year-old child referred for a gifted education evaluation. The child obtains maximum or near-maximum scores on multiple subtests, making it difficult to determine precisely how far above average the child's abilities extend. This limitation is BEST described as:",
+      "options": [
+        "A ceiling effect that restricts the test's ability to differentiate among high-ability examinees",
+        "A practice effect resulting from the child's prior exposure to similar test items",
+        "A floor effect indicating the test items are too difficult for the child's developmental level",
+        "A regression to the mean artifact that will resolve upon retesting"
+      ],
+      "answer": "A ceiling effect that restricts the test's ability to differentiate among high-ability examinees",
+      "explanation": "When a child scores at or near the maximum on test items, the test lacks sufficient difficulty to distinguish among very high-ability examinees—this is a ceiling effect. The test cannot measure how far above the maximum the child's true ability extends. This is a well-known limitation of standard IQ tests for gifted children. Option B (practice effect) refers to score improvement from repeated testing. Option C (floor effect) is the opposite problem—when items are too difficult, scores cluster at the bottom. Option D (regression to the mean) is a statistical phenomenon where extreme scores tend to move toward the average on retesting, unrelated to item difficulty limitations.",
+      "kn": "KN5",
+      "kn_explanation": "This question addresses limitations of intelligence tests in assessment, specifically how ceiling effects impact gifted evaluations.",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual question about a well-known IQ test limitation. While the lesson doesn't explicitly discuss ceiling effects for gifted children in detail, the SB5 section discusses ceiling levels in test administration, and this is a standard EPPP concept.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Stanford-Binet Intelligence Scale, 5th Edition (SB5)",
+      "lessonExcerpt": "Testing continues until you reach the ceiling level—the point where they miss 75% of questions at two consecutive age levels.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What aspect of a creativity exam is most closely related to its validity?",
+      "options": [
+        "The number of items on the test",
+        "The diversity of the test-takers",
+        "The alignment of test content with creative tasks",
+        "The time allowed for completion"
+      ],
+      "answer": "The alignment of test content with creative tasks",
+      "explanation": "The validity of a creativity exam is primarily determined by how well the test content aligns with actual creative tasks and processes. The other options do not directly influence the validity of the test.",
+      "kn": "KN4",
+      "kn_explanation": "This question relates to test validity, specifically in the context of creativity assessments.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of test validity principles.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The validity of a creativity exam is determined by the alignment of test content with creative tasks.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "What is a significant limitation of the WISC-IV when assessing gifted children?",
+      "options": [
+        "It does not measure verbal skills",
+        "It may underestimate abilities in nonverbal areas",
+        "It lacks cultural fairness",
+        "It is not suitable for children under age 6"
+      ],
+      "answer": "It may underestimate abilities in nonverbal areas",
+      "explanation": "The WISC-IV has been criticized for potentially underestimating the abilities of gifted children, particularly in nonverbal areas, due to its structure and scoring. The other options do not accurately reflect limitations of the WISC-IV.",
+      "kn": "KN7",
+      "kn_explanation": "This question pertains to intelligence testing and the limitations of the WISC-IV.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and tests knowledge of the limitations of intelligence assessments.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The WISC-IV may underestimate abilities in nonverbal areas when assessing gifted children.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What is the predictive validity of infant intelligence tests primarily concerned with?",
+      "options": [
+        "Their ability to forecast academic success in adulthood",
+        "Their correlation with parental intelligence",
+        "Their effectiveness in identifying developmental delays",
+        "Their reliability across different cultures"
+      ],
+      "answer": "Their ability to forecast academic success in adulthood",
+      "explanation": "The predictive validity of infant intelligence tests is primarily concerned with how well these tests can forecast future academic success. The other options do not directly relate to the primary concern of predictive validity.",
+      "kn": "KN9",
+      "kn_explanation": "This question relates to developmental assessment and the predictive validity of infant intelligence tests.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests understanding of predictive validity.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The predictive validity of infant intelligence tests is primarily concerned with their ability to forecast academic success in adulthood.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What is the primary purpose of establishing test validity during the construction of psychological assessments?",
+      "options": [
+        "A. To ensure the test is easy to administer",
+        "B. To confirm that the test measures what it claims to measure",
+        "C. To increase the number of test items",
+        "D. To enhance the test's reliability"
+      ],
+      "answer": "B. To confirm that the test measures what it claims to measure",
+      "explanation": "Option B is correct because test validity is fundamentally about ensuring that the test accurately measures the construct it is intended to assess. Option A is incorrect as ease of administration is not a primary concern of validity. Option C does not relate to validity; increasing the number of items does not guarantee validity. Option D, while related to test quality, focuses on reliability rather than validity.",
+      "kn": "KN22",
+      "kn_explanation": "This question pertains to the key aspects of test construction, specifically focusing on test validity.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests a critical understanding of test construction.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "Test validity is fundamentally about ensuring that the test accurately measures the construct it is intended to assess.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "According to the Cattell-Horn-Carroll theory of intelligence, which of the following abilities is classified under fluid intelligence?",
+      "options": [
+        "A. Vocabulary knowledge",
+        "B. Problem-solving skills",
+        "C. Memory recall",
+        "D. Social understanding"
+      ],
+      "answer": "B. Problem-solving skills",
+      "explanation": "Option B is correct because fluid intelligence encompasses the ability to solve new problems and think abstractly, which includes problem-solving skills. Option A refers to crystallized intelligence, which is based on learned knowledge. Option C relates to memory recall, which is also not classified as fluid intelligence. Option D, social understanding, does not fit within the fluid intelligence category.",
+      "kn": "KN24",
+      "kn_explanation": "This question pertains to the Cattell-Horn-Carroll theory of intelligence, specifically focusing on the classification of intelligence types.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and tests a nuanced understanding of intelligence theory.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "Fluid intelligence encompasses the ability to solve new problems and think abstractly.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "What is the primary method for optimizing test reliability during the development of psychological assessments?",
+      "options": [
+        "A. Increasing the number of test items",
+        "B. Ensuring a diverse test population",
+        "C. Standardizing test administration procedures",
+        "D. Using subjective scoring methods"
+      ],
+      "answer": "C. Standardizing test administration procedures",
+      "explanation": "Option C is correct because standardizing test administration procedures is crucial for ensuring that tests yield consistent results across different administrations. Option A may help but does not guarantee reliability. Option B is important for validity but not directly for reliability. Option D is incorrect as subjective scoring can introduce variability and reduce reliability.",
+      "kn": "KN26",
+      "kn_explanation": "This question pertains to optimizing test reliability, which is a key aspect of test development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of reliability in test development.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "Standardizing test administration procedures is crucial for ensuring that tests yield consistent results.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "Which type of delusional disorder is characterized by the belief that one is being persecuted or harmed?",
+      "options": [
+        "Grandiose delusions",
+        "Persecutory delusions",
+        "Somatic delusions",
+        "Nihilistic delusions"
+      ],
+      "answer": "Persecutory delusions",
+      "explanation": "Persecutory delusions specifically involve the belief that one is being targeted or harmed by others. The other options describe different types of delusions that do not fit this definition.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to the classification and characteristics of delusional disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is straightforward and tests knowledge of delusional disorder types.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "What is a key characteristic of the Thematic Apperception Test (TAT) in projective testing?",
+      "options": [
+        "It uses standardized questions with fixed responses",
+        "It assesses personality through storytelling based on ambiguous images",
+        "It measures cognitive abilities through problem-solving tasks",
+        "It provides a quantitative score for personality traits"
+      ],
+      "answer": "It assesses personality through storytelling based on ambiguous images",
+      "explanation": "The TAT is designed to elicit stories from individuals based on ambiguous images, which helps reveal underlying personality traits. The other options describe characteristics of structured tests or cognitive assessments.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it pertains to the characteristics and uses of projective tests in personality assessment.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of projective testing methods.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "When assessing intelligence in children with disorders, which type of test is most likely to be used to evaluate verbal intelligence?",
+      "options": [
+        "Wechsler Intelligence Scale for Children (WISC)",
+        "Bender Visual-Motor Gestalt Test",
+        "Peabody Picture Vocabulary Test",
+        "Kaufman Assessment Battery for Children"
+      ],
+      "answer": "Wechsler Intelligence Scale for Children (WISC)",
+      "explanation": "The Wechsler Intelligence Scale for Children (WISC) is specifically designed to assess verbal intelligence among other cognitive abilities in children. The other tests listed focus on different aspects of intelligence or cognitive functioning.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to assessing intelligence in children, particularly those with disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of intelligence assessment tools for children.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The lesson does not specifically cover verbal intelligence tests for children with disorders.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "What is the primary focus of the Primary Mental Abilities Test?",
+      "options": [
+        "To measure overall intelligence as a single factor.",
+        "To assess specific cognitive abilities across multiple domains.",
+        "To evaluate personality traits and emotional functioning.",
+        "To diagnose learning disabilities in children."
+      ],
+      "answer": "To assess specific cognitive abilities across multiple domains.",
+      "explanation": "The Primary Mental Abilities Test is designed to measure specific cognitive abilities rather than overall intelligence or personality traits. The other options misrepresent the test's purpose.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to understanding the focus of intelligence testing methodologies.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of a specific intelligence test.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The Primary Mental Abilities Test assesses specific cognitive abilities across multiple domains.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    }
+  ]
+}

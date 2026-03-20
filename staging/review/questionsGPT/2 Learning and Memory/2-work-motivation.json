@@ -1,0 +1,151 @@
+{
+  "questions": [
+    {
+      "stem": "A hospital administrator implements a new policy that significantly increases nurses' salaries and improves break room facilities, yet six months later, employee surveys show no change in work motivation or job satisfaction. Which theory best explains this finding?",
+      "options": [
+        "Maslow's need hierarchy theory, because safety needs have already been met",
+        "Herzberg's two-factor theory, because salary and working conditions are hygiene factors that prevent dissatisfaction but do not produce satisfaction or motivation",
+        "Adams' equity theory, because the nurses perceive the changes as restoring fairness rather than creating overpayment",
+        "Vroom's expectancy theory, because the nurses do not value the salary increase"
+      ],
+      "answer": "Herzberg's two-factor theory, because salary and working conditions are hygiene factors that prevent dissatisfaction but do not produce satisfaction or motivation",
+      "explanation": "Herzberg's two-factor theory distinguishes between hygiene factors (pay, benefits, working conditions) and motivator factors (challenge, responsibility, recognition). According to this theory, improving hygiene factors can reduce dissatisfaction but cannot create satisfaction or motivation—workers simply move from dissatisfied to 'not dissatisfied.' Only motivator factors related to job content produce actual satisfaction and motivation. Option A is incorrect because Maslow's theory would predict that meeting lower needs should allow higher needs to emerge, not stagnation. Option C is incorrect because equity theory would predict that increased pay beyond equity should temporarily increase effort. Option D is incorrect because nothing in the scenario suggests the nurses don't value higher pay; the issue is that pay operates as a hygiene factor, not a motivator.",
+      "kn": "KN9",
+      "kn_explanation": "This describes Herzberg's two-factor theory of motivation, where hygiene factors (salary, facilities) prevent dissatisfaction but do not increase motivation/satisfaction.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question that tests the counterintuitive core of Herzberg's theory—that improving pay doesn't increase motivation—with plausible distractors from other motivation theories.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #3: Herzberg's Two-Factor Theory",
+      "lessonExcerpt": "Hygiene Factors (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Alderfer's ERG theory departs from Maslow's hierarchy in several important ways. According to ERG theory, when a person is frustrated in attempts to satisfy higher-level growth needs, the person will:",
+      "options": [
+        "Remain fixated at the growth level until the need is met",
+        "Regress to a previously satisfied lower-level need",
+        "Abandon all motivational striving temporarily",
+        "Seek to satisfy the frustrated need through sublimation"
+      ],
+      "answer": "Regress to a previously satisfied lower-level need",
+      "explanation": "ERG theory's frustration-regression principle states that when a person is frustrated in satisfying a higher-level need, they will regress to focus on a previously satisfied lower-level need. This contrasts with Maslow's unidirectional progression up the hierarchy. Remaining fixated (A) describes neither theory accurately. Abandoning motivational striving (C) contradicts ERG theory's view that all needs can be active simultaneously. Sublimation (D) is a psychodynamic defense mechanism, not a component of ERG theory.",
+      "kn": "KN6",
+      "kn_explanation": "ERG theory is a need-based motivation theory within the Cognitive-Affective Bases domain, specifically under work motivation theories.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the key distinguishing feature of ERG theory (frustration-regression) rather than simple recall of the three need categories.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #2: Maslow's Need Hierarchy Theory",
+      "lessonExcerpt": "A modification of Maslow's theory, ERG Theory (1972) divides needs into those based on existence, relatedness and growth. Rather than arranging the needs hierarchically, Alderfer posits that all needs may influence a person at the same time. Further, according to the principle of frustration-regression, if a person is frustrated, he or she will move towards a previously met need.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "According to Maslow's need hierarchy theory, which of the following BEST distinguishes self-actualization from the four lower-level needs?",
+      "options": [
+        "Self-actualization is the only need that requires social interaction",
+        "Self-actualization can never be fully satisfied, while lower needs can be",
+        "Self-actualization emerges only after age 40",
+        "Self-actualization is motivated by external reinforcement rather than internal drive"
+      ],
+      "answer": "Self-actualization can never be fully satisfied, while lower needs can be",
+      "explanation": "According to Maslow, self-actualization is unique among the five needs because it can never be fully satisfied—there is always room for more growth and development. Once lower needs (physiological, safety, social, esteem) are satisfied, they stop motivating behavior, and the next level takes over. Self-actualization does not require social interaction more than other needs (A)—social needs are at level 3. There is no age restriction in the theory (C). Self-actualization is driven by internal growth motivation, not external reinforcement (D).",
+      "kn": "KN6",
+      "kn_explanation": "Maslow's need hierarchy is a foundational motivation theory within the Cognitive-Affective Bases domain.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a nuanced aspect of Maslow's theory rather than simple recall of the five levels. The lesson explicitly states the self-actualization exception.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #2: Maslow's Need Hierarchy Theory",
+      "lessonExcerpt": "The exception? Self-actualization never gets fully satisfied. There's always room for more growth and development.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "An employee discovers that a coworker with the same job title and similar qualifications earns significantly more per hour. According to Adams' equity theory, the employee experiencing underpayment inequity is MOST likely to:",
+      "options": [
+        "Increase both the quality and quantity of their work output",
+        "Decrease effort or seek higher compensation to restore the input-outcome ratio",
+        "Experience increased motivation due to competitive drive",
+        "Attribute the pay difference to their own superior qualifications"
+      ],
+      "answer": "Decrease effort or seek higher compensation to restore the input-outcome ratio",
+      "explanation": "Adams' equity theory predicts that underpayment inequity—when a worker's input/outcome ratio is worse than a comparison other's—motivates the worker to restore equity by decreasing inputs (effort, quality, quantity) or seeking better outcomes (raises, promotions). Increasing work output (A) is the predicted response to overpayment inequity, not underpayment. Increased motivation from competition (C) is not an equity theory prediction. Attributing the difference to superior qualifications (D) would reflect a perception of equity, not inequity, and contradicts the scenario premise.",
+      "kn": "KN6",
+      "kn_explanation": "Equity theory is a workplace motivation theory within the Cognitive-Affective Bases domain.",
+      "difficulty": "medium",
+      "quality_comment": "Tests application of equity theory predictions to a concrete scenario. Key distractor (A) tests the common confusion between underpayment and overpayment responses.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #5: Equity Theory",
+      "lessonExcerpt": "Underpayment Inequity: Your ratio is worse than others' (more work for less pay). This motivates you to decrease quality/quantity or seek better outcomes.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A consulting psychologist recommends that a manufacturing company redesign assembly-line positions to include more decision-making authority, skill variety, and opportunities for advancement. Several months later, the company finds that younger, college-educated employees show significant increases in motivation, while older employees with less education show minimal change. Which concept best accounts for these differential outcomes?",
+      "options": [
+        "The job characteristics model predicts that autonomy only affects workers with external locus of control",
+        "Job enrichment works best for younger, well-educated workers and those with high achievement needs",
+        "Job enlargement increases motivation primarily for experienced workers who seek variety",
+        "Herzberg's hygiene factors must be addressed before motivator factors can take effect"
+      ],
+      "answer": "Job enrichment works best for younger, well-educated workers and those with high achievement needs",
+      "explanation": "The lesson explicitly states that job enrichment — redesigning jobs to include more motivator factors such as meaningful challenges, autonomy, and responsibility — 'works best for younger, well-educated workers and those with high achievement needs.' This directly explains why the younger, college-educated employees benefited more. Option A misattributes locus of control to the job characteristics model. Option C confuses job enlargement (adding more tasks at the same level) with job enrichment (adding depth and meaning). Option D, while partially true of Herzberg's theory, doesn't explain the individual differences in response to enrichment.",
+      "kn": "KN6",
+      "kn_explanation": "Job enrichment and work motivation fall under Domain 2: Cognitive-Affective Bases, specifically I-O psychology content tested on the EPPP.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the nuanced individual difference finding about who benefits most from job enrichment, requiring precise knowledge rather than general understanding.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #3: Herzberg's Two-Factor Theory",
+      "lessonExcerpt": "Job Enrichment emerged from this theory. It's about redesigning jobs to include more motivator factors, adding meaningful challenges, autonomy, and responsibility. This works best for younger, well-educated workers and those with high achievement needs.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A consulting psychologist is designing a leadership development program for mid-career professionals. According to McClelland's acquired needs theory, which of the following statements best reflects a core premise of this theory?",
+      "options": [
+        "The needs for achievement, affiliation, and power are innate biological drives that remain stable across the lifespan",
+        "The three core psychological needs are shaped by early experiences and life circumstances rather than being fixed traits",
+        "Achievement motivation is the only need that can be reliably modified through workplace interventions",
+        "Power and affiliation needs emerge only after achievement needs have been satisfied"
+      ],
+      "answer": "The three core psychological needs are shaped by early experiences and life circumstances rather than being fixed traits",
+      "explanation": "McClelland's acquired needs theory posits that the needs for achievement, power, and affiliation are shaped by early experiences and life circumstances, making them malleable rather than fixed. Option A is incorrect because the theory explicitly frames these as acquired (learned) needs, not innate biological drives. Option C is incorrect because all three needs—not just achievement—are shaped by experience. Option D is incorrect because McClelland did not propose a hierarchical relationship among the three needs (that would be more consistent with Maslow's theory).",
+      "kn": "KN6",
+      "kn_explanation": "This question falls under Domain 2: Cognitive-Affective Bases of Behavior, which covers motivation theories including McClelland's acquired needs theory.",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of the core theoretical premise (malleability) rather than surface-level recall of the three needs.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### McClelland's Acquired Needs Theory: What Really Drives You?",
+      "lessonExcerpt": "He identified three core drivers shaped by our early experiences and life circumstances.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "An industrial-organizational psychologist is advising a company whose employees report low morale despite receiving competitive salaries and excellent benefits. According to Herzberg's two-factor theory, the most likely explanation for this situation is that:",
+      "options": [
+        "The salary and benefits are insufficient to meet employees' basic physiological needs",
+        "Adequate hygiene factors prevent dissatisfaction but do not generate motivation or satisfaction",
+        "Employees have habituated to the rewards and require increasingly larger compensation packages",
+        "The company has failed to establish a continuous reinforcement schedule for work performance"
+      ],
+      "answer": "Adequate hygiene factors prevent dissatisfaction but do not generate motivation or satisfaction",
+      "explanation": "Herzberg's two-factor theory distinguishes between hygiene factors (salary, benefits, working conditions, company policies, job security) and motivator factors (responsibility, challenge, advancement, recognition, meaningful work). Hygiene factors prevent dissatisfaction when adequate but cannot create satisfaction or motivation—only motivator factors can do that. Option A incorrectly applies Maslow's hierarchy rather than Herzberg's framework. Option C describes hedonic adaptation, not Herzberg's theory. Option D incorrectly applies operant conditioning principles to this motivational question.",
+      "kn": "KN6",
+      "kn_explanation": "This question falls under Domain 2: Cognitive-Affective Bases of Behavior, which includes workplace motivation theories.",
+      "difficulty": "medium",
+      "quality_comment": "Applied scenario that tests the critical distinction in Herzberg's theory—that satisfaction and dissatisfaction are separate dimensions with different determinants.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Herzberg's Two-Factor Theory: Why Raises Don't Always Work",
+      "lessonExcerpt": "Hygiene Factors (also called job context factors) include salary, benefits, working conditions, company policies, and job security. These prevent dissatisfaction when adequate, but don't create motivation or satisfaction.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    }
+  ]
+}

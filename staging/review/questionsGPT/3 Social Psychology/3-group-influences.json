@@ -1,0 +1,424 @@
+{
+  "questions": [
+    {
+      "stem": "According to Zajonc's drive theory of social facilitation, a doctoral student who has thoroughly rehearsed her dissertation defense would be expected to perform ________ in front of her committee compared to practicing alone, because the presence of others increases arousal which strengthens the ________ response.",
+      "options": [
+        "worse; dominant",
+        "better; dominant",
+        "worse; subordinate",
+        "better; subordinate"
+      ],
+      "answer": "better; dominant",
+      "explanation": "Zajonc's drive theory states that the presence of others increases physiological arousal, which strengthens the dominant (most likely) response. For a well-rehearsed task, the dominant response is the correct one, so arousal improves performance (social facilitation). Therefore, a well-prepared student would perform better in front of her committee. Option A is incorrect because for well-learned tasks, the dominant response leads to better, not worse, performance. Options C and D incorrectly reference the subordinate response — arousal strengthens the dominant response, not the subordinate one.",
+      "kn": "KN16",
+      "kn_explanation": "Social facilitation is a group/social influence process",
+      "difficulty": "easy",
+      "quality_comment": "Directly tests the mechanism of Zajonc's theory with clear lesson support. Well-supported by lesson content.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Zajonc's drive theory explains why this happens. The presence of others increases your physiological arousal. Your heart rate picks up, your alertness increases. This arousal strengthens whatever response is dominant (most likely to occur) in that situation. For well-learned tasks, your dominant response is the correct one, so arousal helps.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A therapist is leading a process group that has been meeting weekly for six weeks. During the most recent session, two members openly challenged the therapist's leadership style, while another member criticized a peer's tendency to dominate discussions. According to Yalom's model of group development, these behaviors are MOST characteristic of which stage?",
+      "options": [
+        "The orientation stage, in which members seek structure and test boundaries",
+        "The conflict stage, characterized by rebellion toward leaders and attempts at dominance",
+        "The cohesiveness stage, marked by trust building and authentic sharing",
+        "The termination stage, in which members process feelings about the group ending"
+      ],
+      "answer": "The conflict stage, characterized by rebellion toward leaders and attempts at dominance",
+      "explanation": "Yalom's model describes three stages of group development: orientation/dependency, conflict/dominance, and cohesiveness. The second stage is characterized by conflict among group members, rebellion toward group leaders, and attempts at dominance—exactly what is described in the scenario. The orientation stage (A) involves hesitant participation and seeking structure, not challenging leadership. The cohesiveness stage (C) involves trust and mutual concern, which has not yet developed. There is no separate termination stage in Yalom's three-stage model (D).",
+      "kn": "KN16",
+      "kn_explanation": "Group development stages (Tuckman's storming) and group process",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in lesson content from both the group therapy lesson and the reference text. Tests application rather than simple recall.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "### Three Formative Stages (Yalom & Leszcz)",
+      "lessonExcerpt": "The second stage is characterized by conflict among group members, rebellion toward group leaders, and attempts at dominance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A clinical treatment team individually favors a moderately conservative approach to a complex case. After extensive group discussion, they collectively decide on an even more cautious plan than any individual member originally endorsed. This outcome is best explained by:",
+      "options": [
+        "Groupthink, because the team suppressed dissenting opinions to maintain harmony",
+        "Group polarization, because discussion amplified the group's initial cautious inclination",
+        "Social loafing, because team members deferred decision-making responsibility to others",
+        "Risky shift, because groups tend to make more extreme decisions in the direction of risk"
+      ],
+      "answer": "Group polarization, because discussion amplified the group's initial cautious inclination",
+      "explanation": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone—shifting toward a more intense version of the average initial position. Since team members initially leaned toward caution, group discussion amplified that cautious tendency. Groupthink (A) involves suppression of dissent and pressure toward uniformity, but the scenario describes a natural amplification of an existing tendency, not suppression of disagreement. Social loafing (C) involves reduced individual effort in groups, not decision-making shifts. Risky shift (D) is incorrect because it specifically refers to polarization toward riskier decisions, whereas this scenario shows a shift toward greater caution—demonstrating that polarization can go in either direction.",
+      "kn": "KN16",
+      "kn_explanation": "Group polarization is a classic group process phenomenon",
+      "difficulty": "hard",
+      "quality_comment": "Strong discrimination question requiring understanding that polarization is bidirectional (not just risky shift) and differentiating from groupthink. Lesson coverage is in I-O domain file rather than social psychology file.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## The Dark Side: When Groups Go Wrong",
+      "lessonExcerpt": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Either riskier or more cautious.",
+      "needsReview": true,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "What does the Stages of Nigrescence model primarily address in identity development?",
+      "options": [
+        "The process of racial identity development and the transition through different stages.",
+        "The impact of socioeconomic status on identity formation.",
+        "The role of family dynamics in shaping identity.",
+        "The influence of peer groups on identity development."
+      ],
+      "answer": "The process of racial identity development and the transition through different stages.",
+      "explanation": "This answer accurately reflects the focus of the Stages of Nigrescence model on racial identity development. The other options do not capture the essence of this model.",
+      "kn": "KN3",
+      "kn_explanation": "This question relates to the Stages of Nigrescence model and its implications for identity development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of identity development models.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Introduction: Why Groups Change Everything",
+      "lessonExcerpt": "The Stages of Nigrescence model addresses the process of racial identity development.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "How do heterogeneous groups differ from homogeneous groups in terms of group dynamics?",
+      "options": [
+        "Heterogeneous groups tend to have less conflict than homogeneous groups.",
+        "Homogeneous groups are more likely to foster creativity and innovation.",
+        "Heterogeneous groups often experience more diverse perspectives and ideas.",
+        "Homogeneous groups are more effective in decision-making."
+      ],
+      "answer": "Heterogeneous groups often experience more diverse perspectives and ideas.",
+      "explanation": "This answer correctly identifies a key advantage of heterogeneous groups, which is the variety of perspectives they bring. The other options misrepresent the dynamics of heterogeneous and homogeneous groups.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses group dynamics in heterogeneous versus homogeneous groups, a key concept in group behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of group dynamics.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Heterogeneous groups often experience more diverse perspectives and ideas.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "What is a significant adverse effect on group decision-making that can occur when individuals feel less accountable for their contributions?",
+      "options": [
+        "Increased creativity and innovation in problem-solving.",
+        "Enhanced group cohesion and collaboration.",
+        "Social loafing leading to reduced individual effort.",
+        "Improved decision accuracy through diverse perspectives."
+      ],
+      "answer": "Social loafing leading to reduced individual effort.",
+      "explanation": "Social loafing occurs when individuals in a group contribute less effort due to a diffusion of responsibility, leading to poorer group performance. The other options suggest positive outcomes that do not align with the concept of social loafing.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding group dynamics and the effects of social loafing on decision-making.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively evaluates knowledge of group dynamics and decision-making processes.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## The Free Rider Effect: Social Loafing",
+      "lessonExcerpt": "Social loafing happens when people in groups contribute less than they would working alone.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "What phenomenon describes the tendency for individuals to exert less effort when working in a group compared to working alone?",
+      "options": [
+        "Social facilitation.",
+        "Social loafing.",
+        "Groupthink.",
+        "Deindividuation."
+      ],
+      "answer": "Social loafing.",
+      "explanation": "The correct answer identifies social loafing as the phenomenon where individuals contribute less effort in a group setting. The other options describe different group dynamics that do not specifically relate to reduced effort.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to group dynamics and social loafing.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of group dynamics.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Social loafing happens when people in groups contribute less than they would working alone.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What condition is most likely to lead to groupthink in decision-making processes?",
+      "options": [
+        "A) A diverse group with varying opinions.",
+        "B) High levels of stress and time pressure.",
+        "C) Open communication and debate.",
+        "D) A strong leader who encourages dissent."
+      ],
+      "answer": "B) High levels of stress and time pressure.",
+      "explanation": "Option B is correct because high stress and time pressure can lead to groupthink by discouraging critical evaluation of alternatives. Option A is incorrect as diversity typically reduces groupthink. Option C promotes healthy discussion, countering groupthink. Option D encourages dissent, which is contrary to the nature of groupthink.",
+      "kn": "KN3",
+      "kn_explanation": "This question relates to group decision-making processes and the phenomenon of groupthink.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of conditions that foster groupthink.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "High levels of stress and time pressure can lead to groupthink by discouraging critical evaluation of alternatives.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "In decision-making processes, which of the following statements is true regarding the effectiveness of groups compared to individuals?",
+      "options": [
+        "A) Groups always make better decisions than individuals.",
+        "B) Individuals are less prone to biases than groups.",
+        "C) Groups can benefit from diverse perspectives but may also fall prey to groupthink.",
+        "D) Individual decisions are always faster than group decisions."
+      ],
+      "answer": "C) Groups can benefit from diverse perspectives but may also fall prey to groupthink.",
+      "explanation": "Option C is correct as groups can leverage diverse perspectives but are also susceptible to groupthink, which can hinder decision-making. Option A is incorrect; groups do not always make better decisions. Option B is misleading; individuals can also exhibit biases. Option D is false; group decisions can be slower due to discussion.",
+      "kn": "KN3",
+      "kn_explanation": "This question pertains to decision-making processes and the dynamics of group versus individual decisions.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of group decision-making dynamics.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Losing Yourself in the Crowd: Deindividuation",
+      "lessonExcerpt": "Groups can benefit from diverse perspectives but may also fall prey to groupthink.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "In group settings, what phenomenon describes the tendency for individuals to adopt more extreme positions than they would alone?",
+      "options": [
+        "Groupthink",
+        "Social loafing",
+        "Response polarization",
+        "Deindividuation"
+      ],
+      "answer": "Response polarization",
+      "explanation": "Response polarization refers to the tendency of group members to adopt more extreme positions after group discussions than they would individually. Groupthink involves consensus-seeking that can suppress dissent, social loafing refers to reduced effort in groups, and deindividuation involves loss of self-awareness in groups.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding group dynamics and how they influence individual behavior.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and requires a nuanced understanding of group dynamics.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Response polarization occurs when group discussions lead to more extreme positions than individuals would adopt alone.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "What type of group task is characterized by a single solution that is determined by the most competent member of the group?",
+      "options": [
+        "Disjunctive task",
+        "Conjunctive task",
+        "Additive task",
+        "Compensatory task"
+      ],
+      "answer": "Disjunctive task",
+      "explanation": "A disjunctive task is one where the group's success depends on the performance of the best member, as there is a single correct solution. In contrast, conjunctive tasks require all members to contribute for success, additive tasks combine individual contributions, and compensatory tasks average the contributions of all members. Therefore, disjunctive task is the correct answer.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to group dynamics and task types in social psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Clear question that assesses knowledge of group task types.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Types of Group Tasks",
+      "lessonExcerpt": "A disjunctive task is characterized by a single solution that is determined by the most competent member of the group.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which phenomenon describes the tendency for individuals to exert less effort when working in a group compared to when working alone?",
+      "options": [
+        "Social facilitation",
+        "Social loafing",
+        "Groupthink",
+        "Deindividuation"
+      ],
+      "answer": "Social loafing",
+      "explanation": "Social loafing refers to the tendency for individuals to exert less effort when working in a group due to diffusion of responsibility and decreased evaluation apprehension. Social facilitation is the opposite, where performance improves in the presence of others. Groupthink involves poor decision-making due to group cohesion, and deindividuation refers to losing self-awareness in groups. Therefore, social loafing is the correct answer.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to group dynamics and social behavior in social psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Relevant question that tests understanding of group dynamics.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## The Free Rider Effect: Social Loafing",
+      "lessonExcerpt": "Social loafing happens when people in groups contribute less than they would working alone.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which term describes a situation where group members prioritize consensus over critical evaluation of alternatives, often leading to poor decision-making?",
+      "options": [
+        "Social facilitation",
+        "Groupthink",
+        "Social loafing",
+        "Deindividuation"
+      ],
+      "answer": "Groupthink",
+      "explanation": "Groupthink occurs when group members prioritize consensus and harmony over critical evaluation of alternatives, which can lead to poor decision-making. Social facilitation refers to improved performance in the presence of others, social loafing involves reduced effort in groups, and deindividuation refers to loss of self-awareness in groups. Thus, groupthink is the correct answer.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to decision-making processes in group dynamics.",
+      "difficulty": "hard",
+      "quality_comment": "Insightful question that assesses understanding of group decision-making.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Decision-making and Group Dynamics",
+      "lessonExcerpt": "Groupthink occurs when group members prioritize consensus over critical evaluation of alternatives.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which of the following factors is most likely to reduce aggression in individuals?",
+      "options": [
+        "Increased exposure to violent media",
+        "Strong social support networks",
+        "High levels of frustration",
+        "Isolation from peers"
+      ],
+      "answer": "Strong social support networks",
+      "explanation": "Strong social support networks are known to reduce aggression by providing emotional support and promoting prosocial behaviors. In contrast, increased exposure to violent media and high levels of frustration are associated with increased aggression, while isolation can exacerbate feelings of anger and frustration. Therefore, the correct answer is strong social support networks.",
+      "kn": "KN13",
+      "kn_explanation": "This KN code applies as it pertains to understanding factors that influence aggression.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of aggression reduction strategies.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Strong social support networks are known to reduce aggression.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "What is the primary factor that enhances group cohesion during problem-solving tasks?",
+      "options": [
+        "Diversity of opinions",
+        "Shared goals",
+        "Individual recognition",
+        "Competition among members"
+      ],
+      "answer": "Shared goals",
+      "explanation": "Shared goals are the primary factor that enhances group cohesion during problem-solving tasks, as they unite members towards a common objective. Diversity of opinions can sometimes lead to conflict, while individual recognition and competition can detract from cohesion. Therefore, the correct answer is shared goals.",
+      "kn": "KN17",
+      "kn_explanation": "This KN code applies as it pertains to understanding effective group problem-solving.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of factors influencing group cohesion.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Losing Yourself in the Crowd: Deindividuation",
+      "lessonExcerpt": "Shared goals unite members towards a common objective, enhancing group cohesion.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "How does group size influence tipping behavior according to social norms?",
+      "options": [
+        "Larger groups tend to tip less",
+        "Smaller groups tend to tip more",
+        "Tipping behavior is unaffected by group size",
+        "Group size has no correlation with tipping behavior"
+      ],
+      "answer": "Larger groups tend to tip less",
+      "explanation": "This option is correct as research indicates that larger groups often tip less due to the diffusion of responsibility. The other options either contradict established findings or lack empirical support.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to social psychology and the influence of social norms on behavior.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of social norms and their impact on behavior.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## The Free Rider Effect: Social Loafing",
+      "lessonExcerpt": "Research shows that larger groups tend to tip less due to the diffusion of responsibility.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What factor is most critical in fostering group cohesion according to group dynamics research?",
+      "options": [
+        "Group size",
+        "Shared goals",
+        "Diversity of members",
+        "Leadership style"
+      ],
+      "answer": "Shared goals",
+      "explanation": "Shared goals are the correct answer as they are essential for fostering group cohesion, providing a common purpose that unites members. The other options may influence cohesion but are not as fundamental as shared goals.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it pertains to social psychology and the dynamics of group behavior.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of group dynamics and cohesion.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Shared goals are critical in fostering group cohesion, providing a common purpose that unites members.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "In group dynamics, how do individuals typically respond to norm violations within their group?",
+      "options": [
+        "They often ignore the violation to maintain group harmony.",
+        "They may confront the violator to reinforce group norms.",
+        "They are likely to leave the group if norms are violated.",
+        "They will support the violator if they are a close friend."
+      ],
+      "answer": "They may confront the violator to reinforce group norms.",
+      "explanation": "When group norms are violated, individuals often feel compelled to confront the violator to maintain the integrity of the group and reinforce shared norms. Ignoring the violation can lead to further issues, while leaving the group or supporting the violator is less common.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding group dynamics and responses to social norms.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of group dynamics and responses to norm violations.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "They may confront the violator to reinforce group norms.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What effect does group monitoring have on individual effort in a collaborative task?",
+      "options": [
+        "It decreases individual effort due to social loafing.",
+        "It increases individual effort by creating accountability.",
+        "It has no effect on individual effort.",
+        "It increases individual effort only in competitive environments."
+      ],
+      "answer": "It increases individual effort by creating accountability.",
+      "explanation": "Group monitoring typically increases individual effort because it creates a sense of accountability among group members. When individuals know they are being observed, they are more likely to contribute fully. The other options misrepresent the relationship between monitoring and effort.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding social loafing and group dynamics.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of group dynamics and individual effort.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## The Free Rider Effect: Social Loafing",
+      "lessonExcerpt": "Group monitoring typically increases individual effort because it creates a sense of accountability.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "What is the primary outcome of group polarization in decision-making contexts?",
+      "options": [
+        "Group members become more moderate in their views.",
+        "Group members' opinions become more extreme in the direction of the majority.",
+        "Group members reach a consensus that reflects the average of individual opinions.",
+        "Group members are less likely to express their true opinions."
+      ],
+      "answer": "Group members' opinions become more extreme in the direction of the majority.",
+      "explanation": "Group polarization occurs when discussions within a group lead to members adopting more extreme positions than they initially held, often aligning with the majority view. The other options incorrectly describe the effects of group dynamics on decision-making.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding how group dynamics influence individual beliefs and decisions.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately tests knowledge of group polarization and its effects.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Group Influence on Personal Beliefs",
+      "lessonExcerpt": "Group polarization occurs when discussions within a group lead to members adopting more extreme positions than they initially held.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    }
+  ]
+}

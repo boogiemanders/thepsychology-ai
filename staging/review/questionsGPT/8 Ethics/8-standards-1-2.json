@@ -1,0 +1,256 @@
+{
+  "questions": [
+    {
+      "stem": "During a therapy session, a client reveals that her previous therapist initiated a sexual relationship with her during treatment. According to ethical guidelines, what is the MOST appropriate action for the current therapist to take?",
+      "options": [
+        "File an ethics complaint against the former therapist on behalf of the client immediately",
+        "Assist the client in understanding available options for reporting the misconduct, including filing an ethics complaint or licensing board complaint",
+        "Contact the former therapist directly to confront them about the alleged misconduct",
+        "Document the disclosure in session notes and take no further action unless the client requests it"
+      ],
+      "answer": "Assist the client in understanding available options for reporting the misconduct, including filing an ethics complaint or licensing board complaint",
+      "explanation": "Standard 10.05 addresses sexual intimacies with current therapy clients, and the broader ethics code addresses how psychologists should respond to reports of ethical violations by colleagues. The ethical approach is to help the client understand their options for recourse—including filing complaints with the APA Ethics Committee or the state licensing board—while respecting client autonomy. Option A is wrong because the psychologist should not file on the client's behalf without the client's consent, as this could retraumatize the client and violates their autonomy. Option C is wrong because directly confronting the former therapist would breach the current client's confidentiality. Option D is wrong because merely documenting without helping the client understand options fails the ethical obligation to assist clients who may have been harmed by another professional.",
+      "kn": "KN64",
+      "kn_explanation": "Identifying and managing the ethical issue of a previous therapist's sexual misconduct — requires knowing reporting obligations and how to handle the situation",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced understanding of balancing reporting obligations with client autonomy. Lesson content does not explicitly address this scenario.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Handling Conflicts Between Ethics and Law",
+      "lessonExcerpt": "The APA Ethics Code is organized into sections that build from aspirational ideals down to enforceable rules.",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A psychology intern is studying for the EPPP and is confused about the difference between the General Principles and the Ethical Standards in the APA Ethics Code. Which of the following MOST accurately describes this distinction?",
+      "options": [
+        "General Principles are enforceable and address broad professional conduct, while Ethical Standards provide aspirational guidance for specific situations",
+        "General Principles are aspirational ideals that cannot be used as a basis for sanctions, while Ethical Standards are enforceable rules that can result in disciplinary action",
+        "General Principles apply only to clinical practice, while Ethical Standards apply to all areas of psychological work including research and teaching",
+        "General Principles and Ethical Standards are equally enforceable, but General Principles carry less severe sanctions when violated"
+      ],
+      "answer": "General Principles are aspirational ideals that cannot be used as a basis for sanctions, while Ethical Standards are enforceable rules that can result in disciplinary action",
+      "explanation": "The lesson content explicitly states: 'These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession.' In contrast, the Ethical Standards are described as 'the enforceable rules organized into ten categories.' This distinction is fundamental to understanding the structure of the APA Ethics Code. Option A reverses the relationship. Option C is wrong because both principles and standards apply broadly across professional activities. Option D is wrong because General Principles are not enforceable at all—they cannot form the basis for sanctions.",
+      "kn": "KN61",
+      "kn_explanation": "Understanding the structure of the APA Ethics Code (General Principles vs. Ethical Standards) is core knowledge of current ethical codes",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward but essential concept. Directly supported by lesson content with clear quotes available.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Section C: The Five General Principles",
+      "lessonExcerpt": "These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A client in individual therapy tells you that her previous therapist engaged in a sexual relationship with her during treatment. She asks you not to report it because she feels ashamed. According to APA Ethics Standards 1.04 and 1.05, what is the most appropriate initial course of action?",
+      "options": [
+        "Immediately file a formal complaint with the state licensing board regardless of the client's wishes",
+        "Respect the client's confidentiality and take no action since you learned about the violation in therapy",
+        "Discuss the situation with the client, explain the importance of addressing the violation, and explore options including informal and formal resolution while respecting confidentiality",
+        "Contact the previous therapist directly to confront them about the alleged boundary violation"
+      ],
+      "answer": "Discuss the situation with the client, explain the importance of addressing the violation, and explore options including informal and formal resolution while respecting confidentiality",
+      "explanation": "Standard 1.05 requires reporting when a violation has caused or is likely to cause substantial harm, but Standard 1.04 also notes that psychologists only intervene 'when doing so doesn't violate confidentiality rights.' Sexual misconduct clearly causes substantial harm, but the psychologist learned about it through a confidential therapeutic relationship. The best initial step is to discuss options with the client and support them in taking action. Option A ignores the client's confidentiality rights. Option B is too passive given the severity of sexual misconduct. Option D is inappropriate because contacting the other therapist without considering confidentiality could violate the client's rights and the informal approach may not be suitable for sexual misconduct.",
+      "kn": "KN64",
+      "kn_explanation": "Managing the ethical dilemma of a client's request not to report a previous therapist's sexual misconduct — identification and management of potential ethical issues",
+      "difficulty": "hard",
+      "quality_comment": "Tests the tension between duty to report colleague violations and protecting client confidentiality—a nuanced EPPP topic.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Dealing with Colleagues' Ethical Violations",
+      "lessonExcerpt": "You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm... Critical caveat: You only intervene when doing so doesn't violate confidentiality rights.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "According to ethical guidelines, what is the primary purpose of providing feedback after an evaluation?",
+      "options": [
+        "To inform the client of their diagnosis and treatment options.",
+        "To fulfill legal requirements for documentation.",
+        "To ensure the client understands the evaluation process and results.",
+        "To establish a therapeutic alliance with the client."
+      ],
+      "answer": "To ensure the client understands the evaluation process and results.",
+      "explanation": "The correct answer emphasizes the importance of client understanding, which is crucial in ethical practice. The lesson states that feedback is essential for clients to comprehend their evaluations, thus supporting this answer. The other options, while relevant, do not capture the primary ethical purpose of feedback.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to ethical guidelines for providing feedback in psychological evaluations.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of ethical feedback practices.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
+      "lessonExcerpt": "Your job is to ensure that clients understand the evaluation process and results.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which of the following is a limit of confidentiality that psychologists must ethically uphold?",
+      "options": [
+        "Psychologists can disclose any information if the client requests it.",
+        "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
+        "Psychologists can share client information with family members without consent.",
+        "Psychologists are allowed to disclose information for marketing purposes."
+      ],
+      "answer": "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
+      "explanation": "The correct answer is that psychologists have an ethical obligation to break confidentiality if there is a risk of harm to the client or others. The other options violate ethical standards regarding confidentiality and client autonomy.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to the ethical obligations of psychologists regarding confidentiality and the limits that must be respected.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ethical obligations regarding confidentiality.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "options": [
+        "To ensure that their intervention does not violate any laws.",
+        "To provide assistance only if they are being compensated.",
+        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
+        "To refer the individual to another professional immediately."
+      ],
+      "answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
+      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "kn": "KN2",
+      "kn_explanation": "This question pertains to the ethics of crisis intervention and the responsibilities of psychologists in emergency situations.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of ethical crisis intervention.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
+      "lessonExcerpt": "Psychologists must act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "What should a psychologist do when they receive a court order for client records?",
+      "options": [
+        "Immediately comply without question.",
+        "Consult with the client before taking any action.",
+        "Ignore the order if they believe it violates confidentiality.",
+        "Release all records without consulting anyone."
+      ],
+      "answer": "Consult with the client before taking any action.",
+      "explanation": "The correct answer reflects the ethical obligation to discuss the implications of the court order with the client. Immediate compliance or ignoring the order does not respect the client's rights.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses the legal compliance and ethical considerations when responding to court orders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of legal compliance.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "Before doing anything else, reach out to discuss the implications.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "What is the ethical stance on providing pro bono services in psychology?",
+      "options": [
+        "Psychologists are required to provide pro bono services.",
+        "Psychologists are encouraged to contribute professional time for little or no compensation.",
+        "Psychologists must only work for financial gain.",
+        "Psychologists should avoid pro bono work to maintain professionalism."
+      ],
+      "answer": "Psychologists are encouraged to contribute professional time for little or no compensation.",
+      "explanation": "The correct answer reflects the aspirational nature of pro bono work in the ethics code, which encourages but does not mandate such contributions. The other options misrepresent the ethical guidelines.",
+      "kn": "KN9",
+      "kn_explanation": "This question pertains to the ethics of pro bono services and the expectations for psychologists.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of ethical practice regarding pro bono work.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## The Five General Principles",
+      "lessonExcerpt": "Psychologists are encouraged to contribute professional time for little or no compensation.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "What is the ethical responsibility of psychologists when they observe unethical conduct by other professionals?",
+      "options": [
+        "To ignore it unless it directly affects their practice.",
+        "To report it to the appropriate authorities.",
+        "To confront the individual in public.",
+        "To discuss it only with colleagues."
+      ],
+      "answer": "To report it to the appropriate authorities.",
+      "explanation": "The correct answer reflects the ethical obligation to report unethical conduct to maintain the integrity of the profession. Ignoring it or discussing it only with colleagues does not fulfill this responsibility.",
+      "kn": "KN10",
+      "kn_explanation": "This question addresses the ethical responsibilities psychologists have regarding the conduct of their peers.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ethical responsibilities in reporting misconduct.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## The Five General Principles",
+      "lessonExcerpt": "Psychologists have an ethical obligation to report unethical conduct to the appropriate authorities.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 30
+    },
+    {
+      "stem": "When discussing psychological test results with parents, what is the primary ethical consideration a psychologist must keep in mind?",
+      "options": [
+        "The parents' right to know their child's results supersedes the child's privacy.",
+        "The psychologist should only share results that are favorable to the child.",
+        "The psychologist must ensure that the discussion is age-appropriate and respects the child's confidentiality.",
+        "The psychologist can disclose all test results without limitation."
+      ],
+      "answer": "The psychologist must ensure that the discussion is age-appropriate and respects the child's confidentiality.",
+      "explanation": "The correct answer highlights the importance of balancing parental rights with the child's confidentiality and developmental level. The other options either violate confidentiality or do not consider the child's perspective.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to ethical considerations in test interpretation and communication.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of ethical communication in psychological practice.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
+      "lessonExcerpt": "The key question isn't always 'Was this technically part of my job?' The APA considers whether your personal actions overlap with your professional role.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What must a psychologist demonstrate to establish legal liability in a malpractice case?",
+      "options": [
+        "The client must show emotional distress.",
+        "The psychologist must have a personal relationship with the client.",
+        "The psychologist must have breached a duty of care that caused measurable harm.",
+        "The client must have a prior history of mental health issues."
+      ],
+      "answer": "The psychologist must have breached a duty of care that caused measurable harm.",
+      "explanation": "The correct answer reflects the essential elements required to establish legal liability in a malpractice case, specifically the breach of duty and resulting harm. The other options do not accurately represent the legal requirements for establishing malpractice.",
+      "kn": "KN26",
+      "kn_explanation": "This KN code applies as it pertains to legal liability and malpractice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of legal liability in psychology.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "The psychologist must have breached a duty of care that caused measurable harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "Which standard emphasizes the necessity of competence in assessment practices for psychologists?",
+      "options": [
+        "Standard 1: Resolving Ethical Issues",
+        "Standard 2: Competence",
+        "Standard 3: Human Relations",
+        "Standard 4: Privacy and Confidentiality"
+      ],
+      "answer": "Standard 2: Competence",
+      "explanation": "Standard 2 specifically addresses the necessity of maintaining competence in all professional activities, including assessment practices. The other standards focus on different aspects of ethical practice.",
+      "kn": "KN8",
+      "kn_explanation": "This question relates to the importance of competence in psychological assessment as outlined in the APA Ethics Code.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights a key ethical standard relevant to assessment practices.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Standard 2: Competence",
+      "lessonExcerpt": "Standard 2 emphasizes the necessity of maintaining competence in all professional activities.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8
+    }
+  ]
+}

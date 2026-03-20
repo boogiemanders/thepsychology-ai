@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is consulting with a manufacturing company about leadership effectiveness. According to Fiedler's contingency model, a task-oriented leader with a low LPC score would be MOST effective in which of the following situations?",
+      "options": [
+        "A moderately favorable situation where leader-member relations are good but task structure is low",
+        "A very favorable situation where the leader has good relations, high task structure, and strong position power",
+        "A moderately favorable situation where the leader must balance relationship building with task completion",
+        "Any situation, provided the leader receives training to adapt their style to the group's needs"
+      ],
+      "answer": "A very favorable situation where the leader has good relations, high task structure, and strong position power",
+      "explanation": "Fiedler's contingency model holds that low-LPC (task-oriented) leaders perform best in situations that are either very favorable or very unfavorable. In highly favorable conditions (good leader-member relations, high task structure, strong position power), the task-oriented leader thrives because the group is already cohesive and the work is clear, so directive leadership moves things forward efficiently. Option A describes a moderately favorable situation, which is where high-LPC (relationship-oriented) leaders perform best. Option C also describes moderate favorability. Option D is incorrect because a central tenet of Fiedler's model is that leadership style is relatively fixed—rather than training the leader to change style, the model recommends changing the situation to match the leader.",
+      "kn": "KN47",
+      "kn_explanation": "Research-based consultation on leadership effectiveness using Fiedler's contingency model",
+      "difficulty": "hard",
+      "quality_comment": "Strong question testing core LPC contingency theory. However, the provided lesson content does not cover Fiedler's model, so this is based on general EPPP knowledge rather than the lesson.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## Fiedler's Contingency Model",
+      "lessonExcerpt": "Fiedler used the Least Preferred Coworker (LPC) scale. Leaders rate their least preferred coworker on bipolar adjectives. Low LPC leaders (task-oriented) rate their least preferred coworker negatively because they focus on that person's poor task performance.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 31
+    },
+    {
+      "stem": "A newly hired employee quickly adopts the work habits and values of a senior colleague whom she admires and with whom she strongly identifies. The senior colleague's ability to influence the new employee's behavior is best explained by which of French and Raven's bases of social power?",
+      "options": [
+        "Expert power",
+        "Legitimate power",
+        "Referent power",
+        "Informational power"
+      ],
+      "answer": "Referent power",
+      "explanation": "Referent power is based on identification with and admiration for the power holder. The new employee changes her behavior because she identifies with and wants to be like the senior colleague, which is the hallmark of referent power. Expert power (A) is based on perceived knowledge or skill, not personal identification. Legitimate power (B) derives from a formal role or position of authority. Informational power (D) stems from possessing specific information others need. The key distinguishing feature here is the identification and admiration, pointing to referent power.",
+      "kn": "KN16",
+      "kn_explanation": "Adopting habits/values of an admired colleague reflects social influence processes (identification, conformity) within a work system",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed vignette that clearly distinguishes referent power from other bases. Not covered in the provided lesson files.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## French and Raven's Bases of Social Power",
+      "lessonExcerpt": "French and Raven (1958) identified five types of power leaders use to influence others. The 'softer' forms of power (expert and referent) generate genuine commitment, while reward and legitimate power get compliance, and coercive power often backfires with resistance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A behavior analyst is using differential reinforcement of other behavior (DRO) with a child who engages in repetitive head-banging. The therapist reinforces the child at the end of each 5-minute interval in which no head-banging occurred. Which behavioral principle BEST explains why DRO is effective?",
+      "options": [
+        "The target behavior is placed on extinction while any behavior other than head-banging is reinforced during set intervals",
+        "A behavior that is physically incompatible with head-banging is systematically shaped through successive approximations",
+        "The frequency of head-banging is gradually reduced to an acceptable level through reinforcement of low rates",
+        "A specific alternative replacement behavior is trained to serve the same function as the head-banging"
+      ],
+      "answer": "The target behavior is placed on extinction while any behavior other than head-banging is reinforced during set intervals",
+      "explanation": "DRO involves reinforcing ANY behavior except the target problem behavior during specified time intervals, while the problem behavior is placed on extinction. The key principle is that all differential reinforcement procedures combine extinction of the problem behavior with reinforcement of other behaviors. Option B describes DRI (differential reinforcement of incompatible behavior), which requires a physically incompatible response. Option C describes DRL (differential reinforcement of low rates), which reduces rather than eliminates behavior. Option D describes DRA (differential reinforcement of alternative behavior), which reinforces a specific replacement behavior.",
+      "kn": "KN44",
+      "kn_explanation": "DRO is a specific treatment technique/intervention, and the question addresses its application and efficacy for reducing problem behavior",
+      "difficulty": "medium",
+      "quality_comment": "Excellent discrimination question requiring knowledge of all four differential reinforcement types. Directly supported by lesson content.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "### Differential Reinforcement: The Swiss Army Knife of Behavior Change",
+      "lessonExcerpt": "Differential Reinforcement of Other Behavior (DRO): You reinforce ANY behavior except the target problem behavior during specified time intervals. This is less focused than DRI or DRA but sometimes more practical.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 26
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A graduate student studies a dense chapter on neuroanatomy and then immediately goes to sleep. Her roommate studies the same material but stays awake watching television for several hours before going to bed. When both are tested the next morning, the student who slept immediately after studying performs significantly better. This finding is BEST explained by:",
+      "options": [
+        "The encoding specificity principle, because the sleeping student's retrieval context more closely matched her study context",
+        "The primacy effect, because the sleeping student encoded the material first and thus had stronger initial memory traces",
+        "Sleep-dependent memory consolidation, because sleep—particularly slow-wave sleep—enhances the transfer of recently learned information into long-term memory",
+        "Reduced proactive interference, because the sleeping student had fewer prior memories competing with the new material"
+      ],
+      "answer": "Sleep-dependent memory consolidation, because sleep—particularly slow-wave sleep—enhances the transfer of recently learned information into long-term memory",
+      "explanation": "Research on sleep-dependent memory consolidation shows that sleep, particularly slow-wave sleep, facilitates the consolidation of recently learned declarative information into long-term memory. Studying before sleep takes advantage of this process. Option A is incorrect because encoding specificity relates to matching study and test conditions, not the sleep-consolidation mechanism. Option B is incorrect because the primacy effect relates to serial position in list learning, not timing of sleep relative to study. Option D is incorrect because proactive interference involves old memories blocking new learning; while reduced retroactive interference (fewer new experiences between study and test) could also contribute, the primary mechanism described in the research is active sleep-dependent consolidation, not merely passive protection from interference.",
+      "kn": "KN8",
+      "kn_explanation": "This question is about memory consolidation during sleep versus waking interference, which falls under theories and models of memory.",
+      "difficulty": "hard",
+      "quality_comment": "The lesson content mentions sleep-dependent consolidation briefly as a study tip rather than covering it in depth. The question is well-constructed but the lesson support is thin.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Study Strategies Based on Memory Neuroscience",
+      "lessonExcerpt": "Study before sleep: Memory consolidation happens during sleep, particularly during slow-wave sleep. Reviewing challenging material before bed may enhance retention.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is evaluating a 10-year-old boy referred for academic difficulties. Testing reveals average intelligence but significant reading deficits. Which of the following is MOST accurate regarding specific learning disorder with impairment in reading?",
+      "options": [
+        "It is diagnosed when IQ scores fall significantly below average",
+        "It represents approximately 80% of all specific learning disorder cases",
+        "ADHD is rarely comorbid with specific learning disorders",
+        "It is equally common in boys and girls and typically resolves by adolescence"
+      ],
+      "answer": "It represents approximately 80% of all specific learning disorder cases",
+      "explanation": "Approximately 80% of children with specific learning disorders have a reading disorder, making it by far the most common subtype. Option A is incorrect because people with specific learning disorders typically have average to above-average IQ; that discrepancy is part of what distinguishes learning disorders from intellectual disability. Option C is wrong because ADHD is actually the most common comorbid psychiatric disorder with specific learning disorders. Option D is misleading; while prevalence rates may be similar across genders in some studies, learning disorders tend to be chronic conditions that persist into adulthood rather than resolving by adolescence.",
+      "kn": "KN28",
+      "kn_explanation": "Reading deficiency in a child despite average intelligence suggests a specific learning disorder (e.g., dyslexia), which is a disorder that impacts the expected course of development over the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Tests key epidemiological facts about reading disorders. The lesson covers prevalence and comorbidity well but long-term prognosis is not explicitly addressed.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "### The Numbers",
+      "lessonExcerpt": "About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    }
+  ]
+}

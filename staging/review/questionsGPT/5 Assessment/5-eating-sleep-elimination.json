@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A 28-year-old patient presents with a chief complaint of suddenly falling asleep during conversations and at work, occurring approximately four times per week for the past six months. She also reports vivid, dream-like visual experiences just as she is waking up. Her sleep study reveals a REM sleep latency of 12 minutes. Which additional finding would be MOST consistent with a diagnosis of narcolepsy?",
+      "options": [
+        "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+        "Repeated occurrences of extended, well-remembered nightmares during the second half of the sleep period",
+        "Incomplete awakenings from Stage 3 sleep with panicky screaming and autonomic arousal",
+        "Difficulty maintaining sleep characterized by frequent awakenings occurring three or more nights per week"
+      ],
+      "answer": "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+      "explanation": "Narcolepsy diagnosis requires irresistible sleep attacks plus at least ONE of: cataplexy (episodes of loss of muscle tone), hypocretin deficiency, or REM sleep latency ≤15 minutes. The patient already meets the REM latency criterion (12 minutes), but cataplexy—sudden loss of muscle tone often triggered by strong emotions—is the hallmark associated feature of narcolepsy and would further confirm the diagnosis. Option B describes nightmare disorder (REM sleep, second half of sleep period, well-remembered). Option C describes sleep terrors (non-REM sleep arousal disorder with panicky screaming and no memory). Option D describes insomnia disorder symptoms, not narcolepsy.",
+      "kn": "KN5",
+      "kn_explanation": "This question assesses knowledge of DSM-5 diagnostic criteria for narcolepsy within the sleep-wake disorders category, falling under Assessment and Diagnosis (Domain 5).",
+      "difficulty": "medium",
+      "quality_comment": "Strong question requiring differential knowledge of sleep-wake disorders and specific narcolepsy diagnostic criteria. Integrates cataplexy, hallucinations, and REM latency.",
+      "suggestedLesson": "5-eating-sleep-elimination",
+      "suggestedParagraph": "### Narcolepsy: Irresistible Sleep Attacks",
+      "lessonExcerpt": "Diagnosis Requires ONE of These: Episodes of cataplexy (loss of muscle tone), Hypocretin deficiency, REM sleep latency of 15 minutes or less on polysomnography... Because cataplexy is often triggered by strong emotions, people with narcolepsy may try to control their emotions to prevent sleep episodes.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    }
+  ]
+}

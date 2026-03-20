@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "Fragile X syndrome is the most common inherited cause of intellectual developmental disorder. Males with the Fragile X mutation typically show more severe symptoms than females because:",
+      "options": [
+        "The mutation is located on the Y chromosome, which only males possess",
+        "Males have only one X chromosome, so there is no second copy to compensate for the mutation",
+        "Testosterone amplifies the expression of X-linked mutations during prenatal development",
+        "Males have higher metabolic rates that accelerate neurodegeneration caused by the mutation"
+      ],
+      "answer": "Males have only one X chromosome, so there is no second copy to compensate for the mutation",
+      "explanation": "The lesson explains: 'Males typically show more severe symptoms because they only have one X chromosome—if that X carries the mutation, there's no backup copy. Females have two X chromosomes, so the normal copy can partially compensate.' This is the fundamental principle of X-linked inheritance—males are hemizygous for X-linked genes. Option A is wrong because Fragile X is X-linked, not Y-linked. Option C is fabricated—testosterone does not amplify X-linked mutations. Option D describes a mechanism that does not apply to Fragile X syndrome.",
+      "kn": "KN39",
+      "kn_explanation": "Fragile X syndrome as a cause of intellectual developmental disorder relates to major research-based theories and models of psychopathology, including genetic/biological models of psychological disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a fundamental genetics concept with strong lesson support. The distractors represent common misconceptions about sex-linked inheritance.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "### Sex Chromosome Disorders: Too Many or Too Few X's",
+      "lessonExcerpt": "Males typically show more severe symptoms because they only have one X chromosome—if that X carries the mutation, there's no backup copy. Females have two X chromosomes, so the normal copy can partially compensate.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
+    }
+  ]
+}

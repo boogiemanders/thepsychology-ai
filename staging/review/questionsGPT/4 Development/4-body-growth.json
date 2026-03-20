@@ -1,0 +1,403 @@
+{
+  "questions": [
+    {
+      "stem": "Research on the psychosocial effects of puberty timing indicates that early physical maturation has different consequences for boys and girls. Which of the following statements is MOST consistent with the research literature?",
+      "options": [
+        "Early maturation is associated with predominantly positive outcomes for both boys and girls",
+        "Early maturation is associated with predominantly negative outcomes for girls but mixed outcomes for boys",
+        "Early maturation is associated with predominantly negative outcomes for boys but mixed outcomes for girls",
+        "Early maturation is associated with equivalent increases in self-esteem for both boys and girls"
+      ],
+      "answer": "Early maturation is associated with predominantly negative outcomes for girls but mixed outcomes for boys",
+      "explanation": "Research clearly demonstrates that early puberty has different effects by gender. For boys, early maturation produces a mixed picture—positive effects include higher self-esteem, greater social maturity, more popularity, and better athletic skills, while negative effects include higher alcohol use, more antisocial behavior, and precocious sexual behavior. For girls, early maturation is predominantly negative, including lower self-esteem and popularity, poorer academic achievement, higher risk for precocious sexual behavior, and increased rates of substance use, depression, anxiety, eating disorders, and disruptive behavior. Options A and D incorrectly suggest positive or equivalent outcomes for girls. Option C reverses the gender pattern.",
+      "kn": "KN21",
+      "kn_explanation": "Puberty timing and its differential psychosocial effects for boys vs girls is a core topic of normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Tests an important and frequently examined gender distinction in puberty timing effects with a clear correct answer.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "### Puberty Timing: Different Outcomes for Boys and Girls",
+      "lessonExcerpt": "Early Puberty in Boys. Mixed bag... Early Puberty in Girls. Predominantly negative: Lower self-esteem and popularity, Poorer academic achievement, Higher risk for precocious sexual behavior, Increased rates of substance use, depression, anxiety, eating disorders, and disruptive behavior.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Research on sexuality in older adulthood consistently identifies which of the following as the BEST predictor of sexual activity frequency among older adults?",
+      "options": [
+        "Current physical health status",
+        "Frequency of sexual activity during younger years",
+        "Availability of hormone replacement therapy",
+        "Level of emotional intimacy in the current relationship"
+      ],
+      "answer": "Frequency of sexual activity during younger years",
+      "explanation": "Research consistently shows that the likelihood of sexual activity in later years is closely related to the frequency of sexual activity during younger years. People who were sexually active when younger are likely to remain sexually active in old age. Current physical health (A), while relevant, is not the best predictor. Hormone replacement therapy (C) may address physiological changes but is not the primary predictor of sexual activity frequency. Emotional intimacy (D) contributes to relationship satisfaction but is not identified as the strongest predictor of sexual activity frequency in older adulthood.",
+      "kn": "KN21",
+      "kn_explanation": "Sexuality in older adulthood and predictors of sexual activity frequency is part of normal developmental processes across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a well-established research finding about aging and sexuality. Lesson content from original reference source provides clear support.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Sexual Orientation and Fluidity",
+      "lessonExcerpt": "the likelihood of sexual activity in the later years is closely related to the frequency of sexual activity during younger years. Research has indicated that people who were sexually active are likely to remain sexually active during old age.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A newborn infant, when its cheek is stroked, turns its head toward the stimulus and opens its mouth. This reflexive behavior, which is essential for initiating breastfeeding, is known as the:",
+      "options": [
+        "Moro reflex",
+        "Babinski reflex",
+        "Rooting reflex",
+        "Palmar grasp reflex"
+      ],
+      "answer": "Rooting reflex",
+      "explanation": "The rooting reflex causes a neonate to turn its head toward a tactile stimulus on the cheek and open its mouth, facilitating the location of the nipple for breastfeeding. This is one of several survival-oriented neonatal reflexes. The Moro reflex is a startle response involving arm extension and then retraction when the infant feels a sudden loss of support. The Babinski reflex involves fanning of the toes when the sole of the foot is stroked. The palmar grasp reflex involves gripping when an object is placed in the palm. While the rooting reflex helps the infant find the food source, the sucking reflex then enables actual feeding.",
+      "kn": "KN4",
+      "kn_explanation": "Neonatal reflexes are a fundamental topic in Growth and Lifespan Development.",
+      "difficulty": "easy",
+      "quality_comment": "Tests basic knowledge of neonatal reflexes. The lesson discusses reflexive reactions in the sensorimotor stage but does not detail specific reflexes like rooting by name.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
+      "lessonExcerpt": "When a baby is born, their brain weighs about 25% of what it will weigh as an adult.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "At the time of birth, a full-term neonate's brain contains approximately what proportion of the neurons it will have in adulthood?",
+      "options": [
+        "About 25%, with most neurons generated during the first two years",
+        "About 50%, with rapid neurogenesis continuing through early childhood",
+        "Nearly all neurons are present at birth, with postnatal growth driven primarily by synaptogenesis and myelination",
+        "About 75%, with the remaining neurons generated during adolescent brain maturation"
+      ],
+      "answer": "Nearly all neurons are present at birth, with postnatal growth driven primarily by synaptogenesis and myelination",
+      "explanation": "The lesson explicitly states that most neurons are already present at birth. Postnatal brain growth—from 25% of adult weight at birth to 80% by age two—is driven not by new neuron creation but by synaptogenesis (forming new connections), dendritic growth (more branches), and myelination (insulating axons to speed neural transmission). The 25% figure refers to brain weight, not neuron count. The options suggesting 50% or 75% of neurons are present at birth incorrectly conflate brain weight with neuron number.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses prenatal and postnatal brain development, a core Growth and Lifespan Development topic.",
+      "difficulty": "medium",
+      "quality_comment": "Tests an important and commonly confused distinction between neuron count and brain weight at birth. Directly supported by lesson content.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "### Early Brain Development: The First Two Years",
+      "lessonExcerpt": "Most neurons are already present at birth. Instead, three major processes are happening: Synaptogenesis... Dendritic growth... Myelination",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Dr. Martinez is conducting a neuropsychological evaluation of a 68-year-old client. She expects to find age-related decline on tasks measuring fluid intelligence but relatively preserved performance on tasks measuring crystallized intelligence. Which pattern of test results would be MOST consistent with this expectation?",
+      "options": [
+        "Decreased vocabulary scores and increased performance on novel problem-solving tasks",
+        "Decreased performance on timed pattern recognition tasks and preserved general knowledge scores",
+        "Equally decreased performance across all cognitive domains",
+        "Preserved processing speed with decreased fund of information"
+      ],
+      "answer": "Decreased performance on timed pattern recognition tasks and preserved general knowledge scores",
+      "explanation": "Fluid intelligence involves the ability to solve novel problems, reason abstractly, and process information quickly—capacities that decline with age. Timed pattern recognition is a classic fluid intelligence task. Crystallized intelligence encompasses accumulated knowledge, vocabulary, and learned skills, which remain stable or even increase across much of the lifespan. General knowledge is a crystallized ability. Option A reverses the expected pattern. Option C describes global decline more consistent with dementia. Option D also reverses the expected pattern, as processing speed (a fluid ability) declines while fund of information (crystallized) is preserved.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses cognitive aging and the fluid vs. crystallized intelligence distinction across the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "Requires applied understanding of the Gf/Gc distinction in a clinical assessment context. The lesson discusses age-related brain changes and cognitive compensation.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "### Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss. This process accelerates after age 60... the brain isn't helpless against this decline. It compensates through: Developing new connections between remaining neurons",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "What is the primary method used to assess cognitive changes associated with aging?",
+      "options": [
+        "Neuroimaging",
+        "Cognitive testing",
+        "Genetic analysis",
+        "Behavioral observation"
+      ],
+      "answer": "Cognitive testing",
+      "explanation": "Cognitive testing is the primary method for assessing cognitive changes associated with aging, as it directly measures various cognitive functions. Neuroimaging can provide insights into brain structure but does not assess cognitive function directly. Genetic analysis is not typically used for cognitive assessment, and behavioral observation may not provide specific cognitive insights.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies because it relates to neurocognitive disorders and aging.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of assessment methods for cognitive changes in aging.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Cognitive testing is essential for assessing cognitive changes associated with aging.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "What is a key indicator that a child is ready for toilet training?",
+      "options": [
+        "Ability to follow complex instructions",
+        "Showing interest in adult bathroom habits",
+        "Consistent bowel movements",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "The correct answer is 'All of the above' as each option indicates readiness for toilet training. Following complex instructions shows cognitive readiness, interest in adult habits indicates social learning, and consistent bowel movements suggest physiological readiness. Therefore, all these factors together signal readiness for toilet training.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to child development and readiness indicators.",
+      "difficulty": "medium",
+      "quality_comment": "The question comprehensively assesses knowledge of readiness for toilet training.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Why Physical Development Matters for Your EPPP Success",
+      "lessonExcerpt": "Key indicators of readiness for toilet training include showing interest in adult bathroom habits and having consistent bowel movements.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "Which neonatal reflex is crucial for successful breastfeeding?",
+      "options": [
+        "Moro reflex",
+        "Rooting reflex",
+        "Grasp reflex",
+        "Stepping reflex"
+      ],
+      "answer": "Rooting reflex",
+      "explanation": "The correct answer is the Rooting reflex, which helps infants turn their heads toward a stimulus (like a nipple) and is essential for breastfeeding. The Moro reflex is a startle response, the Grasp reflex involves holding objects, and the Stepping reflex is related to walking movements, none of which are directly related to breastfeeding.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to infant development and reflexes.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of neonatal reflexes and their importance in breastfeeding.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Early Brain Development: The First Two Years",
+      "lessonExcerpt": "The rooting reflex is crucial for successful breastfeeding as it helps infants locate the nipple.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What percentage of a newborn's brain weight is achieved by age two?",
+      "options": [
+        "25%",
+        "50%",
+        "80%",
+        "100%"
+      ],
+      "answer": "80%",
+      "explanation": "The correct answer is 80%, as by age two, a newborn's brain reaches approximately 80% of its adult weight. The other options do not accurately reflect the growth trajectory of the brain during this critical period.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to neuroscience and brain development.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of early brain development milestones.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Early Brain Development: The First Two Years",
+      "lessonExcerpt": "By age two, a newborn's brain weighs about 80% of what it will weigh as an adult.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What cognitive changes are commonly associated with aging?",
+      "options": [
+        "Increased processing speed",
+        "Enhanced memory retention",
+        "Decline in executive function",
+        "Improved problem-solving skills"
+      ],
+      "answer": "Decline in executive function",
+      "explanation": "The correct answer is a decline in executive function, which is commonly observed in aging individuals. The other options incorrectly suggest improvements or increases in cognitive abilities that typically decline with age.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to aging and cognitive changes.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of cognitive changes associated with aging.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss, leading to a decline in executive function.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "At what age do most children typically begin to walk independently, marking a significant milestone in motor development?",
+      "options": [
+        "6 months",
+        "12 months",
+        "18 months",
+        "24 months"
+      ],
+      "answer": "12 months",
+      "explanation": "The correct answer is 12 months, as this is the age when most children achieve the milestone of walking independently. The other options are incorrect because walking typically does not occur at 6 months, and while some children may walk by 18 or 24 months, it is not the average milestone age.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to the understanding of motor development milestones in children.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of a specific developmental milestone.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
+      "lessonExcerpt": "Walking typically occurs around 12 months of age, marking a significant milestone in motor development.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "What are the potential outcomes of early physical maturity in adolescents?",
+      "options": [
+        "Increased academic performance",
+        "Higher risk of engaging in risky behaviors",
+        "Improved social relationships",
+        "Enhanced emotional regulation"
+      ],
+      "answer": "Higher risk of engaging in risky behaviors",
+      "explanation": "The correct answer is 'Higher risk of engaging in risky behaviors' as early physical maturity can lead to increased peer pressure and risky decision-making. The other options do not accurately reflect the common outcomes associated with early maturation.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to developmental psychology and adolescent outcomes.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and tests knowledge of adolescent development.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
+      "lessonExcerpt": "Understanding how the body and brain develop across the lifespan gives you crucial insight into when certain psychological disorders might emerge.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What is the typical duration of REM sleep in infants compared to adults, and why is this significant for their development?",
+      "options": [
+        "Shorter than adults, important for brain development",
+        "Longer than adults, less important for development",
+        "Similar to adults, equally important for development",
+        "Shorter than adults, less important for development"
+      ],
+      "answer": "Longer than adults, less important for development",
+      "explanation": "Infants typically spend a greater proportion of their sleep in REM compared to adults, which is significant for brain development. However, the statement about it being 'less important for development' is misleading; REM sleep is crucial for infants. The other options either misrepresent the duration or the importance of REM sleep.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to sleep development in infants, a critical aspect of growth and lifespan development.",
+      "difficulty": "medium",
+      "quality_comment": "The question assesses knowledge of sleep patterns in infants and their developmental significance.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Early Brain Development: The First Two Years",
+      "lessonExcerpt": "Infants typically spend a greater proportion of their sleep in REM compared to adults.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following is a key developmental milestone in motor skills for infants around 12 months of age?",
+      "options": [
+        "Crawling",
+        "Walking independently",
+        "Sitting without support",
+        "Grasping objects"
+      ],
+      "answer": "Walking independently",
+      "explanation": "By around 12 months of age, most infants achieve the milestone of walking independently, marking a significant development in their motor skills. Crawling and sitting without support occur earlier, while grasping objects is a more basic skill that develops even earlier.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to developmental milestones in motor skills for infants.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of motor skills development milestones.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
+      "lessonExcerpt": "By around 12 months, most infants can walk independently.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "How does inadequate nutrition during critical periods of development impact a child's physical growth?",
+      "options": [
+        "It leads to increased cognitive abilities",
+        "It can cause stunted growth and developmental delays",
+        "It has no significant impact",
+        "It enhances physical strength"
+      ],
+      "answer": "It can cause stunted growth and developmental delays",
+      "explanation": "Inadequate nutrition during critical periods can lead to stunted growth and developmental delays, as proper nutrition is essential for physical and cognitive development. The other options incorrectly suggest positive outcomes or no impact at all.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to physical development and the impact of nutrition.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge on the effects of nutrition on development.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Why Physical Development Matters for Your EPPP Success",
+      "lessonExcerpt": "Understanding how the body and brain develop across the lifespan gives you crucial insight into when certain psychological disorders might emerge.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Which of the following senses is least developed at birth and shows significant improvement by 7-8 months of age?",
+      "options": [
+        "Hearing",
+        "Touch",
+        "Vision",
+        "Taste"
+      ],
+      "answer": "Vision",
+      "explanation": "Vision is the least developed sense at birth, with newborns having a visual acuity of approximately 20/400 to 20/600. By 7-8 months, infants achieve visual acuity similar to that of normal adults. Hearing, touch, and taste are more developed at birth compared to vision.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to the understanding of sensory development in infants.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of sensory development in infants.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "### Vision: From Blur to Clarity",
+      "lessonExcerpt": "Vision is the least developed sense at birth. A newborn's visual acuity is roughly 20/400 to 20/600. By 7-8 months, though, infants have visual acuity similar to normal adults.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "What is the primary benefit of early stimulation in infants regarding motor skill development?",
+      "options": [
+        "Increased muscle mass",
+        "Enhanced cognitive abilities",
+        "Improved sensory integration",
+        "Faster neural connections"
+      ],
+      "answer": "Improved sensory integration",
+      "explanation": "Early stimulation is crucial for motor skill development as it enhances sensory integration, allowing infants to better coordinate their movements with sensory feedback. While cognitive abilities and neural connections may also benefit, the primary focus of early stimulation is on sensory integration.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding motor development in infants.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of motor skill development.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Early Brain Development: The First Two Years",
+      "lessonExcerpt": "Early stimulation is crucial for motor skill development, enhancing sensory integration.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "What is the primary characteristic of sexual dimorphism in humans?",
+      "options": [
+        "Differences in height and weight",
+        "Variations in skin color",
+        "Differences in brain structure",
+        "Variations in reproductive anatomy"
+      ],
+      "answer": "Variations in reproductive anatomy",
+      "explanation": "The correct answer is 'Variations in reproductive anatomy', as sexual dimorphism refers to the distinct differences in male and female reproductive systems and secondary sexual characteristics. The other options may reflect differences among individuals but do not specifically pertain to sexual dimorphism.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies because it relates to biological development and sexual dimorphism.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of biological differences between sexes.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
+      "lessonExcerpt": "Sexual dimorphism refers to the distinct differences in male and female reproductive systems.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What is a significant health concern regarding HIV infection in older adults?",
+      "options": [
+        "Increased risk of developing diabetes",
+        "Higher rates of cardiovascular disease",
+        "Potential for cognitive decline and social isolation",
+        "Greater likelihood of developing arthritis"
+      ],
+      "answer": "Potential for cognitive decline and social isolation",
+      "explanation": "The correct answer highlights the concern that older adults with HIV may experience cognitive decline and social isolation, which can significantly impact their quality of life. The other options, while relevant to older adults, do not specifically address the unique implications of HIV infection.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it pertains to health psychology and the implications of chronic health conditions in older adults.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and assesses knowledge of health psychology in the context of aging.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Older adults with HIV may face cognitive decline and social isolation.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    }
+  ]
+}

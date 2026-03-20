@@ -1,0 +1,277 @@
+{
+  "questions": [
+    {
+      "stem": "Dr. Martinez has been a member of her department's faculty committee for three years. During that time, she has consistently attended meetings, volunteered for subcommittees, and supported the group's decisions. Recently, she proposed a curriculum change that deviates significantly from the committee's traditional approach. Despite the unconventional nature of her proposal, the committee gave it serious consideration and ultimately approved it. According to Hollander's concept, the committee's willingness to accept Dr. Martinez's deviation is BEST explained by:",
+      "options": [
+        "Groupthink, which causes groups to suppress critical evaluation of proposals",
+        "Idiosyncrasy credits she earned through her history of conforming to group norms",
+        "The minority influence effect, which produces private acceptance through consistency",
+        "Social facilitation, which improves individual performance in the presence of others"
+      ],
+      "answer": "Idiosyncrasy credits she earned through her history of conforming to group norms",
+      "explanation": "Hollander's concept of idiosyncrasy credits explains that group members who initially conform to the group's norms earn 'credits' that later allow them greater latitude to deviate from those norms without facing rejection. Dr. Martinez's three years of consistent participation and support built up these credits, allowing her unconventional proposal to be accepted. Groupthink (A) involves the suppression of dissent, not the acceptance of well-earned deviation. Minority influence (C) involves a consistent minority changing the majority's view, but this concept doesn't account for the role of prior conformity. Social facilitation (D) relates to task performance in the presence of others, not group tolerance of deviance.",
+      "kn": "KN16",
+      "kn_explanation": "Faculty committee participation, volunteering, and group membership dynamics reflect group/systems processes in a work setting",
+      "difficulty": "medium",
+      "quality_comment": "Strong applied scenario that tests understanding of idiosyncrasy credits. The concept is supported by the reference text though not in the structured lesson files.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Conformity to Group Norms: Going Along to Get Along",
+      "lessonExcerpt": "Idiosyncrasy credits can be earned by initially conforming to the group's norms. If a person has earned idiosyncrasy credits, the group is more tolerant when she or he later deviates from certain group norms.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Milgram's obedience studies are frequently cited as a landmark example of ethically problematic research in psychology. Which of the following best describes a primary ethical concern raised by these experiments?",
+      "options": [
+        "Participants were not debriefed after the study concluded",
+        "Participants experienced significant psychological distress from believing they were harming another person",
+        "The confederate learner was actually subjected to painful electric shocks",
+        "Participants were recruited through coercion and were unable to withdraw"
+      ],
+      "answer": "Participants experienced significant psychological distress from believing they were harming another person",
+      "explanation": "The primary ethical concern with Milgram's studies was the extreme psychological distress participants experienced. They believed they were delivering painful and potentially lethal shocks to another person, causing them significant emotional turmoil. Option A is incorrect because Milgram did debrief participants. Option C is incorrect because the learner was a confederate who did not actually receive shocks ('The learner wasn't actually receiving shocks, but they acted like they were, screaming, begging to stop, and eventually going silent'). Option D is incorrect because participants were not coerced into participating, though the situational pressures made it psychologically difficult to withdraw once the study began.",
+      "kn": "KN11",
+      "kn_explanation": "This question addresses Social and Multicultural Bases of Behavior, specifically ethics in classic social psychology research.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in lesson content about Milgram's methodology and the distress participants experienced.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Obedience to Authority: The Milgram Studies",
+      "lessonExcerpt": "The learner wasn't actually receiving shocks, but they acted like they were, screaming, begging to stop, and eventually going silent.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "What is the primary mechanism through which attitudes can change due to social influence?",
+      "options": [
+        "Social comparison leads to attitude change through direct experience.",
+        "Social norms create pressure to conform, leading to attitude change.",
+        "Attitudes are fixed and cannot change through social influence.",
+        "Social influence has no effect on individual attitudes."
+      ],
+      "answer": "Social norms create pressure to conform, leading to attitude change.",
+      "explanation": "This answer accurately describes how social norms can influence attitudes through conformity. The other options incorrectly state that attitudes cannot change or misrepresent the role of social influence.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses the concept of attitude change through social influence, a key area in social psychology.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and effectively assesses understanding of social influence on attitudes.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Social influence shows up everywhere: in your therapy room when a client describes peer pressure.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What is a key benefit of cooperative learning in educational settings?",
+      "options": [
+        "It promotes competition among students.",
+        "It enhances individual accountability.",
+        "It fosters social interaction and teamwork.",
+        "It reduces the need for teacher involvement."
+      ],
+      "answer": "It fosters social interaction and teamwork.",
+      "explanation": "The correct answer is 'It fosters social interaction and teamwork' because cooperative learning emphasizes collaboration among students, which enhances their social skills and ability to work together. 'It promotes competition among students' contradicts the principles of cooperative learning. 'It enhances individual accountability' is a secondary benefit, while 'It reduces the need for teacher involvement' is misleading, as teachers still play a crucial role in facilitating cooperative learning.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it relates to educational psychology and cooperative learning.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and assesses understanding of cooperative learning.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Cooperative learning fosters social interaction and teamwork, which are essential for effective learning experiences.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "How does exposure to pornography potentially affect empathy towards victims of sexual violence?",
+      "options": [
+        "It increases empathy by providing educational content.",
+        "It has no effect on empathy levels.",
+        "It may decrease empathy by normalizing aggressive behaviors.",
+        "It enhances understanding of consent and healthy relationships."
+      ],
+      "answer": "It may decrease empathy by normalizing aggressive behaviors.",
+      "explanation": "The correct answer reflects research suggesting that exposure to pornography can desensitize individuals to violence and reduce empathy towards victims. The other options either misrepresent the effects or suggest positive outcomes that are not supported by evidence.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to media influence and its effects on social attitudes.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and tests knowledge of media influence on empathy.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Introduction: Why Understanding Social Influence Matters for Your Practice",
+      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which leadership style focuses on inspiring and motivating followers to achieve higher levels of performance?",
+      "options": [
+        "Transactional leadership.",
+        "Transformational leadership.",
+        "Autocratic leadership.",
+        "Laissez-faire leadership."
+      ],
+      "answer": "Transformational leadership.",
+      "explanation": "The correct answer identifies transformational leadership as the style that emphasizes inspiration and motivation. The other options describe different leadership styles that do not focus on inspiring followers.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding different leadership styles.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of leadership styles.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which type of power is characterized by the ability to influence others through the use of rewards?",
+      "options": [
+        "A) Coercive power",
+        "B) Reward power",
+        "C) Expert power",
+        "D) Referent power"
+      ],
+      "answer": "B) Reward power",
+      "explanation": "Option B is correct as reward power is defined by the ability to influence others by providing rewards. Option A, coercive power, involves threats or punishment. Option C, expert power, is based on knowledge or skills. Option D, referent power, stems from personal traits or relationships.",
+      "kn": "KN3",
+      "kn_explanation": "This question pertains to leadership power dynamics.",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly assesses knowledge of types of power in leadership.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Reward power is characterized by the ability to influence others through the use of rewards.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "In high-context cultures, which communication style is most commonly observed?",
+      "options": [
+        "Direct and explicit",
+        "Indirect and implicit",
+        "Formal and structured",
+        "Casual and informal"
+      ],
+      "answer": "Indirect and implicit",
+      "explanation": "High-context cultures rely on indirect and implicit communication styles, where much of the information is conveyed through context, non-verbal cues, and shared understanding rather than explicit verbal communication. In contrast, low-context cultures tend to favor direct and explicit communication. Formality and casualness can vary independently of context, making them less relevant to this specific question. Thus, indirect and implicit is the correct answer.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to cultural communication styles in social psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Effective question that tests understanding of communication styles in cultural contexts.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "High-context cultures rely on indirect and implicit communication styles.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Which aspect of kinesics is most important for interpreting nonverbal communication across different cultures?",
+      "options": [
+        "Facial expressions",
+        "Gestures",
+        "Posture",
+        "Eye contact"
+      ],
+      "answer": "Gestures",
+      "explanation": "Gestures are particularly important in kinesics as they can vary significantly across cultures, leading to different interpretations of nonverbal communication. While facial expressions and posture also play roles, gestures are often the most culturally specific. Eye contact can also vary, but gestures are more likely to cause misunderstandings. Therefore, the correct answer is gestures.",
+      "kn": "KN16",
+      "kn_explanation": "This KN code applies as it pertains to understanding nonverbal communication and interpretation.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of kinesics in cross-cultural contexts.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Gestures can vary significantly across cultures, leading to different interpretations of nonverbal communication.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Which type of conformity involves changing one's beliefs or behaviors based on information from others?",
+      "options": [
+        "Normative conformity",
+        "Informational conformity",
+        "Private conformity",
+        "Public conformity"
+      ],
+      "answer": "Informational conformity",
+      "explanation": "Informational conformity occurs when individuals change their beliefs or behaviors based on the information they receive from others, particularly in ambiguous situations. Normative conformity is driven by the desire to fit in, while private and public conformity refer to the nature of the change (internal vs. external). Therefore, the correct answer is informational conformity.",
+      "kn": "KN18",
+      "kn_explanation": "This KN code applies as it pertains to understanding types of conformity.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of conformity types.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Obedience to Authority: The Milgram Studies",
+      "lessonExcerpt": "Informational conformity occurs when individuals change their beliefs or behaviors based on the information they receive from others.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "According to social learning theory, what is the primary mechanism through which aggression is learned?",
+      "options": [
+        "Direct reinforcement",
+        "Observational learning",
+        "Cognitive restructuring",
+        "Emotional regulation"
+      ],
+      "answer": "Observational learning",
+      "explanation": "Observational learning is the correct answer as it refers to learning behaviors by watching others, which is a key component of social learning theory. Direct reinforcement, cognitive restructuring, and emotional regulation do not specifically address the mechanism of learning aggression through observation.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to social psychology and the mechanisms of learning behaviors.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and effectively tests knowledge of social learning theory.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Observational learning is a primary mechanism through which aggression is learned according to social learning theory.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which brainstorming technique is most effective for enhancing group creativity?",
+      "options": [
+        "Encouraging criticism of ideas during the session.",
+        "Allowing free-flowing ideas without immediate judgment.",
+        "Focusing on a single idea until it is fully developed.",
+        "Limiting the number of participants to avoid chaos."
+      ],
+      "answer": "Allowing free-flowing ideas without immediate judgment.",
+      "explanation": "Research shows that allowing free-flowing ideas without immediate judgment fosters creativity in brainstorming sessions. The other options either inhibit creativity or do not align with effective brainstorming practices.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding group creativity and effective brainstorming techniques.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of group creativity techniques.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Allowing free-flowing ideas without immediate judgment fosters creativity in brainstorming sessions.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Which of the following best describes referent power in the context of social influence?",
+      "options": [
+        "The ability to influence others based on perceived authority or expertise.",
+        "The capacity to affect others' behavior through personal relationships and admiration.",
+        "The influence derived from the ability to reward or punish others.",
+        "The power to change others' beliefs through logical argumentation."
+      ],
+      "answer": "The capacity to affect others' behavior through personal relationships and admiration.",
+      "explanation": "Referent power is based on the personal relationships and admiration that one individual has for another, making them more likely to be influenced. The other options describe different types of power, such as expert power or coercive power, which do not align with the concept of referent power.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the dynamics of social influence and power structures.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of referent power in social influence.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Referent power is based on the personal relationships and admiration that one individual has for another.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    }
+  ]
+}

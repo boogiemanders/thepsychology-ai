@@ -1,0 +1,529 @@
+{
+  "questions": [
+    {
+      "stem": "A psychiatrist explains to a psychology intern that the positive symptoms of schizophrenia—such as hallucinations, delusions, and disorganized thinking—are believed to result from excessive activity of a specific neurotransmitter. First-generation antipsychotics were developed to target this system. Which neurotransmitter system is most directly implicated in the positive symptoms of schizophrenia?",
+      "options": [
+        "Serotonin",
+        "GABA",
+        "Dopamine",
+        "Norepinephrine"
+      ],
+      "answer": "Dopamine",
+      "explanation": "The dopamine hypothesis of schizophrenia posits that excessive dopamine activity, particularly in the mesolimbic pathway, is responsible for the positive symptoms of schizophrenia. First-generation antipsychotics work by blocking dopamine D2 receptors, which reduces this overactivity. Serotonin is involved in the mechanism of second-generation antipsychotics but is not the primary neurotransmitter implicated in positive symptoms. GABA is the brain's primary inhibitory neurotransmitter and is more associated with anxiety and seizure disorders. Norepinephrine is involved in arousal and attention but is not the primary neurotransmitter implicated in schizophrenia's positive symptoms.",
+      "kn": "KN2",
+      "kn_explanation": "Focus is on drug mechanism of action (dopamine receptor blockade by antipsychotics) rather than neurobiological bases of behavior",
+      "difficulty": "easy",
+      "quality_comment": "Directly supported by the pharmacology lesson's detailed discussion of first-generation antipsychotics as dopamine antagonists treating positive symptoms.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms... FGAs are effective for positive symptoms of schizophrenia. Things like hallucinations, delusions, and disorganized thinking.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A psychiatry resident is studying the neurochemical basis of schizophrenia. Which of the following BEST describes the dopamine hypothesis of schizophrenia and its primary supporting evidence?",
+      "options": [
+        "Schizophrenia results from insufficient dopamine activity, as evidenced by the effectiveness of dopamine agonists in treating symptoms",
+        "Excessive dopamine activity in certain brain pathways contributes to schizophrenia, as supported by the fact that effective antipsychotics block dopamine receptors",
+        "Schizophrenia is caused by dopamine deficiency in the frontal lobes, as demonstrated by low dopamine metabolites in cerebrospinal fluid",
+        "Dopamine imbalance causes schizophrenia only when combined with serotonin excess, as shown by the superior efficacy of atypical antipsychotics"
+      ],
+      "answer": "Excessive dopamine activity in certain brain pathways contributes to schizophrenia, as supported by the fact that effective antipsychotics block dopamine receptors",
+      "explanation": "The dopamine hypothesis of schizophrenia proposes that excessive dopamine activity, particularly in the mesolimbic pathway, contributes to the positive symptoms of schizophrenia. The primary evidence comes from the fact that first-generation antipsychotics are dopamine antagonists — they block D2 receptors and effectively reduce positive symptoms like hallucinations and delusions. Additionally, drugs that increase dopamine activity (such as amphetamines) can produce psychotic symptoms resembling schizophrenia. Option A reverses the hypothesis. Option C is partially true for negative symptoms but does not represent the core dopamine hypothesis. Option D conflates the dopamine hypothesis with the mechanism of atypical antipsychotics.",
+      "kn": "KN1",
+      "kn_explanation": "Focus is on the neurochemical/neurobiological basis of schizophrenia (dopamine hypothesis), which is a functional correlate of the neurobiological bases of behavior",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of a critical EPPP concept linking neurotransmitter theory to pharmacological evidence. Well-supported by the lesson content on antipsychotic mechanisms.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A 35-year-old male with chronic schizophrenia has been treated with haloperidol for several years. During a routine appointment, his psychologist observes involuntary, repetitive movements of his tongue and jaw, including lip smacking and chewing motions. These movements were not present at his last visit six months ago. Which medication side effect is MOST consistent with this presentation?",
+      "options": [
+        "Akathisia",
+        "Acute dystonia",
+        "Tardive dyskinesia",
+        "Neuroleptic malignant syndrome"
+      ],
+      "answer": "Tardive dyskinesia",
+      "explanation": "Tardive dyskinesia typically emerges after long-term use of first-generation antipsychotics like haloperidol and involves involuntary movements usually starting with the tongue, face, and jaw. The presentation of lip smacking and chewing motions after years of treatment is classic. Akathisia involves subjective restlessness and an inability to sit still, not involuntary oral-facial movements. Acute dystonia involves sudden, sustained muscle spasms (e.g., torticollis, oculogyric crisis) and typically occurs early in treatment, not after years. Neuroleptic malignant syndrome presents with muscle rigidity, high fever, confusion, and unstable vital signs—a medical emergency distinct from this gradual-onset movement disorder.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of medication-induced movement disorders, specifically the clinical presentation of tardive dyskinesia associated with first-generation antipsychotics.",
+      "difficulty": "medium",
+      "quality_comment": "Clear clinical vignette with temporal cues (long-term use, gradual onset) that distinguish tardive dyskinesia from other extrapyramidal side effects.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "tardive dyskinesia. This condition typically emerges after long-term use and involves involuntary movements (usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk. It's more common in women and older adults, and here's the scary part: it can be irreversible.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A psychiatrist is considering prescribing an SSRI to a patient diagnosed with bipolar I disorder who is currently experiencing a major depressive episode. The psychiatrist decides to co-prescribe a mood stabilizer. What is the PRIMARY reason for adding the mood stabilizer?",
+      "options": [
+        "To reduce the risk of serotonin syndrome from the SSRI",
+        "To counteract the anticholinergic side effects of the SSRI",
+        "To prevent the SSRI from triggering a manic episode",
+        "To accelerate the therapeutic onset of the SSRI from weeks to days"
+      ],
+      "answer": "To prevent the SSRI from triggering a manic episode",
+      "explanation": "The lesson states that for bipolar disorder, SSRIs are used cautiously and usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes. This is the primary prescribing precaution when using antidepressants in patients with bipolar disorder. Serotonin syndrome (option A) results from combining multiple serotonergic drugs, not from SSRIs alone, and mood stabilizers do not prevent it. SSRIs have fewer anticholinergic effects than TCAs (option B), and mood stabilizers do not address anticholinergic effects. Mood stabilizers do not accelerate SSRI onset (option D); all antidepressants require 2-4 weeks for initial effects regardless of augmentation.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of antidepressant prescribing precautions in mood disorders, specifically the risk of antidepressants triggering mania in bipolar disorder.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant question. Note: the lesson specifically discusses SSRIs triggering mania, not TCAs specifically. The concept generalizes to antidepressants broadly but the lesson excerpt is SSRI-focused.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### SSRIs: The First-Line Treatment",
+      "lessonExcerpt": "For bipolar disorder, they're used cautiously. Usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes.",
+      "needsReview": true,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A psychiatrist switches a patient with schizophrenia from a second-generation antipsychotic to haloperidol due to concerns about metabolic syndrome. Which limitation of this first-generation antipsychotic should the treatment team anticipate?",
+      "options": [
+        "Increased risk of agranulocytosis requiring regular blood monitoring",
+        "Limited effectiveness for positive symptoms such as hallucinations",
+        "Greater efficacy for negative symptoms but poor control of delusions",
+        "Reduced effectiveness for negative symptoms such as flat affect and social withdrawal"
+      ],
+      "answer": "Reduced effectiveness for negative symptoms such as flat affect and social withdrawal",
+      "explanation": "First-generation (typical) antipsychotics like haloperidol are effective for positive symptoms (hallucinations, delusions, disorganized thinking) but are much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation). Agranulocytosis risk (A) is specifically associated with clozapine, a second-generation antipsychotic. Option B is incorrect because FGAs are effective for positive symptoms. Option C reverses the actual pattern — FGAs are better for positive, not negative, symptoms.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of psychopharmacology, specifically the differential effectiveness of first-generation antipsychotics, a biological bases topic.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant scenario that tests understanding of FGA limitations. The switch from SGA to FGA due to metabolic syndrome adds realistic context.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "FGAs are effective for positive symptoms of schizophrenia. Things like hallucinations, delusions, and disorganized thinking. However, they're much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A psychologist is consulting with a psychiatrist about a patient prescribed phenelzine for treatment-resistant depression. Which dietary counseling is MOST essential for this patient to prevent a medical emergency?",
+      "options": [
+        "Avoid grapefruit juice due to interference with hepatic drug metabolism",
+        "Restrict intake of foods high in tryptophan to prevent serotonin syndrome",
+        "Avoid tyramine-containing foods such as aged cheeses, red wine, and cured meats",
+        "Eliminate caffeine to prevent dangerous cardiac arrhythmias"
+      ],
+      "answer": "Avoid tyramine-containing foods such as aged cheeses, red wine, and cured meats",
+      "explanation": "Phenelzine is an MAOI (monoamine oxidase inhibitor). MAOIs can cause a dangerous spike in blood pressure (hypertensive crisis) when combined with foods containing tyramine. Foods to avoid include aged cheeses and meats, soy products, beer, red wine, sauerkraut, fava beans, and overripe bananas. Grapefruit juice interaction (A) is associated with certain other medications but is not the primary MAOI concern. Tryptophan restriction (B) is not the standard dietary counseling for MAOIs. Caffeine elimination (D) is not the critical dietary restriction for MAOIs.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of MAOI precautions and dietary restrictions, a key psychopharmacology topic within biological bases.",
+      "difficulty": "easy",
+      "quality_comment": "High-yield, clinically important question. Well-supported by lesson content with specific food examples. Distractors represent plausible but incorrect dietary concerns.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### MAOIs: The Last Resort (Usually)",
+      "lessonExcerpt": "MAOIs can cause a dangerous spike in blood pressure when combined with certain drugs or foods containing tyramine. Foods to avoid include aged cheeses and meats, soy products, beer, red wine, sauerkraut, fava beans, and overripe bananas.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "A patient presents with winter-onset depression characterized by hypersomnia, increased appetite, weight gain, and carbohydrate cravings. The biological mechanism underlying this seasonal pattern is most strongly associated with:",
+      "options": [
+        "Elevated cortisol levels due to prolonged stress response",
+        "Decreased dopamine activity in the mesolimbic pathway",
+        "Low serotonin levels combined with elevated melatonin production",
+        "Reduced norepinephrine synthesis in the locus coeruleus"
+      ],
+      "answer": "Low serotonin levels combined with elevated melatonin production",
+      "explanation": "Seasonal affective disorder (SAD) with winter onset is linked to low serotonin and high melatonin levels. Treatment often involves phototherapy (bright light exposure) which suppresses melatonin production. Elevated cortisol (A) is associated with chronic stress but is not the primary mechanism for SAD. Decreased dopamine in the mesolimbic pathway (B) is more associated with general anhedonia and substance use. Reduced norepinephrine in the locus coeruleus (D) is implicated in some depression models but is not the specific biological basis of seasonal pattern depression.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of the biological basis of mood disorders, specifically the neurochemical mechanisms underlying seasonal affective disorder.",
+      "difficulty": "hard",
+      "quality_comment": "Integrates symptom recognition with biological mechanism knowledge. The correct answer requires understanding the specific neurochemical profile of SAD rather than general depression neurobiology.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### Seasonal Affective Disorder (SAD)",
+      "lessonExcerpt": "The 'with seasonal pattern' specifier typically applies to winter-onset depression. Symptoms include hypersomnia, overeating, weight gain, and carbohydrate cravings. It's linked to low serotonin and high melatonin levels. Treatment often involves phototherapy (bright light exposure) which suppresses melatonin production.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "A psychiatrist starts a patient on chlorpromazine for psychotic symptoms. When counseling the patient about the MOST commonly reported anticholinergic side effect, the psychiatrist should emphasize:",
+      "options": [
+        "Urinary retention requiring catheterization",
+        "Tachycardia with palpitations",
+        "Dry mouth",
+        "Severe constipation"
+      ],
+      "answer": "Dry mouth",
+      "explanation": "Anticholinergic side effects are most associated with low-potency first-generation antipsychotics like chlorpromazine. The lesson lists the anticholinergic effects as: dry mouth, blurred vision, constipation, urinary retention, and rapid heart rate. Dry mouth (xerostomia) is widely recognized in psychopharmacology literature as the most prevalent anticholinergic side effect. While all listed options are genuine anticholinergic effects, urinary retention (Option A) and tachycardia (Option B) are less frequently reported, and constipation (Option D), while common, occurs less frequently than dry mouth.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests psychopharmacology knowledge regarding medication side effects, a core biological bases topic.",
+      "difficulty": "hard",
+      "quality_comment": "The lesson lists anticholinergic effects with dry mouth first but does not explicitly state it is the 'most prevalent.' This is standard EPPP knowledge but not directly stated in the lesson text.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "Anticholinergic Effects | Low-potency FGAs (chlorpromazine, thioridazine) | Dry mouth, blurred vision, constipation, urinary retention, rapid heart rate",
+      "needsReview": true,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "Which of the following medications is most likely to cause restlessness as a side effect?",
+      "options": [
+        "Fluoxetine",
+        "Lithium",
+        "Haloperidol",
+        "Buspirone"
+      ],
+      "answer": "Haloperidol",
+      "explanation": "Haloperidol, a first-generation antipsychotic, is known to cause extrapyramidal side effects, including akathisia, which manifests as restlessness. Fluoxetine (an SSRI) can cause side effects but is less likely to cause restlessness compared to Haloperidol. Lithium is primarily used for mood stabilization and does not typically cause restlessness, while Buspirone is an anxiolytic with a milder side effect profile.",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to the biological bases of behavior, specifically the side effects of medications.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of medication side effects effectively.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "High-potency FGAs (haloperidol, fluphenazine)... akathisia (restlessness)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "When prescribing tricyclic antidepressants, which consideration is most critical due to potential side effects?",
+      "options": [
+        "Risk of addiction",
+        "Cardiovascular effects",
+        "Weight gain",
+        "Sedation"
+      ],
+      "answer": "Cardiovascular effects",
+      "explanation": "Tricyclic antidepressants can have significant cardiovascular side effects, including arrhythmias and orthostatic hypotension, making this a critical consideration when prescribing. While sedation and weight gain are also concerns, the cardiovascular effects are particularly important due to their potential severity. Risk of addiction is more associated with other classes of medications.",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to the biological bases of behavior, specifically considerations in prescribing medications for mental health disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and tests understanding of medication side effects effectively.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Tricyclic antidepressants can have significant cardiovascular side effects.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which cognitive side effect is commonly associated with the use of antipsychotic medications?",
+      "options": [
+        "Memory loss",
+        "Increased attention",
+        "Improved problem-solving",
+        "Enhanced creativity"
+      ],
+      "answer": "Memory loss",
+      "explanation": "Memory loss is a common cognitive side effect associated with antipsychotic medications, particularly due to their impact on neurotransmitter systems. Increased attention and improved problem-solving are not typical effects, and enhanced creativity is not a recognized side effect of these medications.",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to the biological bases of behavior, specifically the cognitive effects of psychotropic medications.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of medication side effects.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Memory loss is a common cognitive side effect associated with antipsychotic medications.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "What is the primary mechanism of action for neuroleptics used in treating paranoid symptoms?",
+      "options": [
+        "Increasing serotonin levels",
+        "Blocking dopamine receptors",
+        "Enhancing norepinephrine activity",
+        "Inhibiting GABA activity"
+      ],
+      "answer": "Blocking dopamine receptors",
+      "explanation": "Neuroleptics, also known as antipsychotics, primarily work by blocking dopamine receptors, particularly D2 receptors, which helps reduce psychotic symptoms. The other options do not accurately describe the mechanism of action for neuroleptics.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, specifically regarding pharmacological treatments for psychiatric symptoms.",
+      "difficulty": "hard",
+      "quality_comment": "The question is clear and tests knowledge of pharmacological mechanisms.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## Antipsychotics: The Three Generations",
+      "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "Which dietary restriction is critical for patients taking MAO inhibitors?",
+      "options": [
+        "High-protein foods",
+        "Foods high in tyramine",
+        "Caffeinated beverages",
+        "Alcoholic drinks"
+      ],
+      "answer": "Foods high in tyramine",
+      "explanation": "Patients taking MAO inhibitors must avoid foods high in tyramine to prevent hypertensive crises. The other options do not pose the same risk when taking MAO inhibitors.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly in understanding medication interactions.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of dietary restrictions related to medication.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## Antidepressants: MAO Inhibitors",
+      "lessonExcerpt": "Dietary restrictions are critical for patients taking MAO inhibitors, particularly avoiding foods high in tyramine.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "Which of the following is a common side effect associated with anticholinergic medications?",
+      "options": [
+        "Increased appetite",
+        "Dry mouth",
+        "Weight loss",
+        "Sedation"
+      ],
+      "answer": "Dry mouth",
+      "explanation": "Dry mouth is a well-known anticholinergic side effect due to the blockade of acetylcholine, which affects salivary gland function. Increased appetite and weight loss are not typical anticholinergic effects, and while sedation can occur, it is not specific to anticholinergic medications.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, specifically medication side effects.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of medication side effects.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## Antipsychotics: The Three Generations",
+      "lessonExcerpt": "Common anticholinergic effects include dry mouth, blurred vision, constipation, urinary retention, rapid heart rate.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "According to the dopamine hypothesis, which of the following is believed to contribute to the symptoms of psychotic disorders?",
+      "options": [
+        "Increased serotonin levels",
+        "Decreased dopamine activity",
+        "Increased dopamine activity",
+        "Decreased serotonin levels"
+      ],
+      "answer": "Increased dopamine activity",
+      "explanation": "The dopamine hypothesis suggests that increased dopamine activity, particularly in certain brain pathways, is associated with the positive symptoms of psychotic disorders. Increased serotonin levels and decreased dopamine activity do not align with this hypothesis.",
+      "kn": "KN4",
+      "kn_explanation": "This question relates to the dopamine hypothesis and its implications for understanding psychotic disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of the dopamine hypothesis in relation to psychosis.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "The dopamine hypothesis suggests that increased dopamine activity is associated with the positive symptoms of psychotic disorders.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which medication is commonly used to treat bipolar disorder?",
+      "options": [
+        "Fluoxetine",
+        "Lithium",
+        "Sertraline",
+        "Haloperidol"
+      ],
+      "answer": "Lithium",
+      "explanation": "Lithium is a well-known mood stabilizer used to treat bipolar disorder. Fluoxetine and sertraline are antidepressants, while haloperidol is an antipsychotic.",
+      "kn": "KN8",
+      "kn_explanation": "This question focuses on the medications used for bipolar disorder treatment, which is essential for understanding mood disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of bipolar disorder treatment options.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## Antipsychotics: The Three Generations",
+      "lessonExcerpt": "Lithium is a well-known mood stabilizer used to treat bipolar disorder.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What is a significant risk associated with the use of MAO inhibitors?",
+      "options": [
+        "Increased heart rate",
+        "Hypertensive crisis",
+        "Weight loss",
+        "Improved mood"
+      ],
+      "answer": "Hypertensive crisis",
+      "explanation": "MAO inhibitors can lead to hypertensive crises if certain foods containing tyramine are consumed, as they inhibit the breakdown of this substance. Increased heart rate and weight loss are not direct risks, and improved mood is a desired effect, not a risk.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior and the pharmacological effects of MAO inhibitors.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of MAO inhibitors and their risks.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "MAO inhibitors can lead to hypertensive crises if certain foods containing tyramine are consumed.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What is a common side effect of Prozac when used as an antidepressant?",
+      "options": [
+        "Weight gain",
+        "Increased energy",
+        "Sexual dysfunction",
+        "Improved sleep quality"
+      ],
+      "answer": "Sexual dysfunction",
+      "explanation": "Sexual dysfunction is a well-documented side effect of Prozac (fluoxetine), which is a selective serotonin reuptake inhibitor (SSRI). Weight gain can occur but is less common, increased energy is not typical, and improved sleep quality is not guaranteed.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to the pharmacology of antidepressants, specifically Prozac.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of Prozac's side effects.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Sexual dysfunction is a well-documented side effect of Prozac.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which class of medication is commonly used as a first-line treatment for OCD?",
+      "options": [
+        "Benzodiazepines",
+        "SSRIs",
+        "Antipsychotics",
+        "Mood stabilizers"
+      ],
+      "answer": "SSRIs",
+      "explanation": "SSRIs (selective serotonin reuptake inhibitors) are commonly used as a first-line treatment for OCD due to their effectiveness in reducing obsessive-compulsive symptoms. Benzodiazepines are not typically used for OCD, antipsychotics are generally not first-line treatments, and mood stabilizers are not indicated for OCD.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it pertains to medication classes for anxiety disorders, specifically OCD.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of OCD treatment options.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## Antidepressants: The SSRIs",
+      "lessonExcerpt": "SSRIs are commonly used as a first-line treatment for OCD due to their effectiveness.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What is a primary concern regarding the use of methylphenidate in children with ADHD?",
+      "options": [
+        "Increased risk of obesity",
+        "Potential for substance abuse",
+        "Decreased academic performance",
+        "Increased aggression"
+      ],
+      "answer": "Potential for substance abuse",
+      "explanation": "The correct answer reflects concerns about the potential for misuse of stimulant medications like methylphenidate. The other options do not accurately represent the primary concerns associated with this medication.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the effects of ADHD medications and their implications.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and addresses a significant concern in pediatric medication management.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Methylphenidate has been associated with a potential for substance abuse.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "Agranulocytosis is a serious side effect associated with which class of medications?",
+      "options": [
+        "Antidepressants",
+        "Antipsychotics",
+        "Stimulants",
+        "Mood stabilizers"
+      ],
+      "answer": "Antipsychotics",
+      "explanation": "Agranulocytosis is a potentially life-threatening side effect primarily associated with certain antipsychotic medications, particularly clozapine. The other classes of medications do not typically cause this side effect.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to understanding side effects of antipsychotic medications.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately targets knowledge of medication side effects.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## Antipsychotics: The Three Generations",
+      "lessonExcerpt": "Agranulocytosis is a serious side effect associated with certain antipsychotics.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What is the primary mechanism of action for drug agonists?",
+      "options": [
+        "They block neurotransmitter receptors.",
+        "They increase neurotransmitter activity.",
+        "They inhibit neurotransmitter release.",
+        "They decrease neurotransmitter reuptake."
+      ],
+      "answer": "They increase neurotransmitter activity.",
+      "explanation": "The correct answer describes the primary function of drug agonists, which enhance neurotransmitter activity. The other options describe mechanisms associated with antagonists or reuptake inhibitors.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to neurotransmitter action and pharmacological mechanisms.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of pharmacological principles.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Agonists increase neurotransmitter activity (either directly or indirectly).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Which medication is commonly prescribed for childhood anxiety and OCD?",
+      "options": [
+        "A. Clonidine",
+        "B. Fluoxetine",
+        "C. Lithium",
+        "D. Buspirone"
+      ],
+      "answer": "B. Fluoxetine",
+      "explanation": "Fluoxetine, a selective serotonin reuptake inhibitor (SSRI), is commonly prescribed for childhood anxiety and OCD. Clonidine is used for ADHD and some anxiety but is not a first-line treatment for anxiety disorders. Lithium is primarily used for bipolar disorder, and buspirone is less effective for childhood anxiety compared to SSRIs.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to pharmacotherapy for childhood anxiety and OCD.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of appropriate pharmacotherapy for childhood anxiety and OCD.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Fluoxetine is an SSRI that is effective for treating anxiety and OCD in children.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Which medication is most likely to cause tremors as a side effect?",
+      "options": [
+        "A. SSRIs",
+        "B. Beta-blockers",
+        "C. Lithium",
+        "D. Benzodiazepines"
+      ],
+      "answer": "C. Lithium",
+      "explanation": "Lithium is known to cause tremors as a side effect, particularly at therapeutic levels. SSRIs and benzodiazepines are less commonly associated with tremors, while beta-blockers are more likely to reduce tremors rather than cause them. Therefore, lithium is the correct answer.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it pertains to understanding medication side effects, specifically tremors.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of medication side effects.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Lithium is known to cause tremors as a side effect.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which side effect is commonly associated with antipsychotic medications?",
+      "options": [
+        "Increased energy levels",
+        "Weight gain",
+        "Improved cognitive function",
+        "Enhanced emotional regulation"
+      ],
+      "answer": "Weight gain",
+      "explanation": "The correct answer is weight gain, which is a well-documented side effect of many antipsychotic medications, particularly second-generation antipsychotics. The other options do not accurately reflect common side effects of these medications.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly in medication side effects.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of medication side effects in psychotic disorder treatment.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "SGAs cause fewer extrapyramidal side effects than FGAs, which sounds great. But they introduced a new major concern: metabolic syndrome.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    }
+  ]
+}

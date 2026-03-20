@@ -1,0 +1,277 @@
+{
+  "questions": [
+    {
+      "stem": "A researcher studying conformity uses a mild deception paradigm in which participants are told the study examines \"visual perception\" when it actually measures social influence. The IRB approved the study. After data collection, which of the following is the researcher's PRIMARY ethical obligation regarding the deception?",
+      "options": [
+        "The researcher must debrief participants as early as feasible, explaining the true nature of the study and allowing them to withdraw their data",
+        "The researcher must wait until all data collection is complete before debriefing any participant to avoid contaminating results",
+        "The researcher must send a written apology to each participant for the deception",
+        "The researcher must offer participants additional compensation for having been deceived"
+      ],
+      "answer": "The researcher must debrief participants as early as feasible, explaining the true nature of the study and allowing them to withdraw their data",
+      "explanation": "Standard 8.08 requires that when deception is used in research, psychologists must debrief participants as early as feasible, preferably at the conclusion of their participation. The debriefing must explain the nature and purpose of the deception, and participants should be permitted to withdraw their data if they wish. Option B is wrong because debriefing should occur as soon as feasible for each participant, not delayed until all data collection is finished. Option C is wrong because a formal apology is not required—debriefing with an explanation is the standard. Option D is wrong because additional compensation is not ethically mandated for deception studies.",
+      "kn": "KN69",
+      "kn_explanation": "Deception in research is an ethical issue in the conduct of research",
+      "difficulty": "medium",
+      "quality_comment": "Tests a commonly examined research ethics concept. Lesson content on Standard 8 is truncated before reaching the deception section.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 8: Research and Publication",
+      "lessonExcerpt": "Standard 7 focuses on education and training, while Standard 8 covers research and publication.",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A doctoral student completes her dissertation under the mentorship of her faculty advisor. The advisor provided guidance on conceptualizing the research question, helped design the methodology, and offered editorial feedback on the manuscript. The student conducted all data collection and analysis independently. When the dissertation is prepared for publication, who should be listed as principal author?",
+      "options": [
+        "The faculty advisor, because senior researchers typically receive first authorship on student publications",
+        "The student, because students must be listed as principal author on articles substantially based on their dissertations",
+        "Both should be listed as co-first authors to reflect the collaborative nature of the work",
+        "The faculty advisor, because formulating the problem and structuring the design constitute substantial contributions"
+      ],
+      "answer": "The student, because students must be listed as principal author on articles substantially based on their dissertations",
+      "explanation": "Standard 8.12 explicitly states that 'Students must be listed as principal author on articles substantially based on their dissertations, except in exceptional circumstances.' While the advisor made important contributions (which warrant co-authorship), the student conducted the core independent work and the publication is based on her dissertation. Option A is incorrect because seniority does not determine authorship; contributions do. Option C is incorrect because the standard specifically designates the student as principal (first) author for dissertation-based work. Option D is incorrect because while the advisor's contributions are significant and warrant authorship credit, the standard still requires the student to be principal author on dissertation-based publications.",
+      "kn": "KN69",
+      "kn_explanation": "Authorship credit on dissertations is an ethical issue in the conduct of research",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported by the lesson with a clear correct answer. Distractors reflect common misconceptions about authorship conventions.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "### Reporting Results and Publication Credit (8.10-8.13)",
+      "lessonExcerpt": "Students must be listed as principal author on articles substantially based on their dissertations, except in exceptional circumstances.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "What is the ethical guideline regarding the termination of therapy when a client poses a threat to themselves or others?",
+      "options": [
+        "Therapy should continue until the client is stable.",
+        "Termination is not allowed under any circumstances.",
+        "Therapy should be terminated immediately.",
+        "The psychologist should assess the risk and consult with colleagues."
+      ],
+      "answer": "The psychologist should assess the risk and consult with colleagues.",
+      "explanation": "Ethically, psychologists must assess the risk and consider the best course of action, which may include consultation with colleagues before making a decision about termination. Immediate termination is not always the best option.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to ethical termination practices in therapy.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of ethical termination in therapy.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "### Evaluating Student Performance",
+      "lessonExcerpt": "You must take reasonable steps to resolve it. Discuss it with those involved, consult colleagues, prioritize the affected person's best interests.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "What is the psychologist's duty when they become aware of a client's threat of violence?",
+      "options": [
+        "To maintain confidentiality at all costs.",
+        "To warn the potential victim and authorities if necessary.",
+        "To ignore the threat unless it is imminent.",
+        "To discuss the threat with the client only."
+      ],
+      "answer": "To warn the potential victim and authorities if necessary.",
+      "explanation": "Psychologists have a duty to warn potential victims if a client poses a threat of violence, which may involve notifying authorities. Maintaining confidentiality is not permissible in such cases.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it relates to the duty to warn in psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the duty to warn.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "### Getting Institutional Approval",
+      "lessonExcerpt": "You must take reasonable steps to resolve it.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "What is required for a psychologist to evaluate a minor when the guardian has provided consent?",
+      "options": [
+        "The minor must agree to the evaluation.",
+        "The psychologist must have prior experience with minors.",
+        "The evaluation must be conducted in a school setting.",
+        "The psychologist must document the guardian's consent."
+      ],
+      "answer": "The psychologist must document the guardian's consent.",
+      "explanation": "When evaluating a minor, it is essential for the psychologist to document the guardian's consent to ensure ethical and legal compliance. The minor's agreement, while important, is not a strict requirement for the evaluation to proceed.",
+      "kn": "KN9",
+      "kn_explanation": "This question pertains to the evaluation of minors with guardian consent.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of legal requirements for minor evaluations.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Getting Institutional Approval (8.01)",
+      "lessonExcerpt": "You need approval from an Institutional Review Board (IRB).",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "Under the Buckley Amendment, what is a student's right regarding their educational records?",
+      "options": [
+        "Students have no rights to access their records.",
+        "Students can request to amend their records if they believe they are inaccurate.",
+        "Students can demand that their records be destroyed after graduation.",
+        "Students can access their records only if they are currently enrolled."
+      ],
+      "answer": "Students can request to amend their records if they believe they are inaccurate.",
+      "explanation": "The correct answer reflects the rights granted under the Buckley Amendment, which allows students to request amendments to their records. The lesson supports this by stating that students have rights concerning their educational records. The other options misrepresent students' rights under the amendment.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it pertains to privacy protection of student records under the Buckley Amendment.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests understanding of student rights regarding educational records.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
+      "lessonExcerpt": "Students have the right to request to amend their records if they believe they are inaccurate.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "When a psychologist suspects child abuse based on a disclosure from a child, what is their primary ethical obligation?",
+      "options": [
+        "To confront the parents about the allegations before taking any action.",
+        "To report the suspected abuse to the appropriate authorities as mandated by law.",
+        "To wait for further evidence before making any reports.",
+        "To discuss the allegations with the child to gather more details."
+      ],
+      "answer": "To report the suspected abuse to the appropriate authorities as mandated by law.",
+      "explanation": "The correct answer reflects the psychologist's legal and ethical obligation to report suspected child abuse to protect the child. The other options either delay necessary action or compromise the child's safety.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to child protection and reporting obligations.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 7: Education and Training",
+      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "When a client discloses potential child abuse during therapy, what is the psychologist's ethical obligation?",
+      "options": [
+        "To maintain confidentiality and not report the disclosure.",
+        "To report the disclosure to the authorities as required by law.",
+        "To discuss the disclosure with the client before taking any action.",
+        "To document the disclosure but take no further action."
+      ],
+      "answer": "To report the disclosure to the authorities as required by law.",
+      "explanation": "The correct answer reflects the psychologist's legal and ethical obligation to report suspected child abuse to protect the child. The other options either delay necessary action or compromise the child's safety.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it relates to child protection and reporting obligations.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 7: Education and Training",
+      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What regulatory body oversees the professional behavior of psychologists?",
+      "options": [
+        "The American Psychological Association (APA).",
+        "State licensing boards.",
+        "The National Institute of Mental Health (NIMH).",
+        "The American Medical Association (AMA)."
+      ],
+      "answer": "State licensing boards.",
+      "explanation": "The correct answer identifies state licensing boards as the regulatory bodies responsible for overseeing psychologists' professional behavior. The other options do not have regulatory authority over psychologists.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it relates to professional regulation and oversight.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of regulatory bodies in psychology.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 7: Education and Training",
+      "lessonExcerpt": "The APA can also take action against you for things outside your direct professional role.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following best describes the ethical considerations regarding authorship in academic publications?",
+      "options": [
+        "Authorship should be based solely on the amount of work contributed to the project.",
+        "All contributors should be included as authors regardless of their level of involvement.",
+        "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+        "Only the principal investigator should be listed as the author."
+      ],
+      "answer": "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+      "explanation": "The correct answer emphasizes that authorship must be based on substantial contributions, which aligns with ethical standards in publication. The other options either misrepresent the criteria for authorship or suggest unethical practices such as including all contributors regardless of their actual contributions.",
+      "kn": "KN21",
+      "kn_explanation": "This KN code applies as it pertains to ethical considerations in authorship and publication ethics.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests a nuanced understanding of authorship ethics.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 8: Research and Publication",
+      "lessonExcerpt": "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "What is a key criterion for authorship in research papers according to ethical standards?",
+      "options": [
+        "Contributing to the writing of the manuscript.",
+        "Providing funding for the research project.",
+        "Being the principal investigator of the study.",
+        "Making substantial contributions to the research design or analysis."
+      ],
+      "answer": "Making substantial contributions to the research design or analysis.",
+      "explanation": "The correct answer reflects the ethical standard that authorship should be based on significant contributions to the research process. The other options do not necessarily indicate a substantial contribution to the research itself.",
+      "kn": "KN24",
+      "kn_explanation": "This KN code applies as it relates to authorship criteria in research publications.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of authorship criteria.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 8: Research and Publication",
+      "lessonExcerpt": "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "What should a psychologist do if they receive an unresolved complaint from a student in an academic setting?",
+      "options": [
+        "Ignore the complaint if it seems trivial.",
+        "Address the complaint through established institutional procedures.",
+        "Discuss the complaint with other faculty members immediately.",
+        "Respond to the student with a personal opinion."
+      ],
+      "answer": "Address the complaint through established institutional procedures.",
+      "explanation": "The appropriate response is to follow institutional procedures for addressing complaints, ensuring that the process is formal and fair. Ignoring the complaint or discussing it informally undermines the seriousness of the issue.",
+      "kn": "KN26",
+      "kn_explanation": "This KN code applies as it relates to professional ethics in handling complaints in academia.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of professional ethics in an academic context.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 7: Education and Training",
+      "lessonExcerpt": "The lesson does not specifically address unresolved complaints, indicating a gap in coverage.",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "What ethical requirement must psychology students fulfill regarding their psychotherapy training?",
+      "options": [
+        "They must undergo therapy with a therapist affiliated with their program.",
+        "They should not be required to disclose personal information.",
+        "They must choose a therapist who is not affiliated with the program.",
+        "They can select any therapist regardless of qualifications."
+      ],
+      "answer": "They must choose a therapist who is not affiliated with the program.",
+      "explanation": "Students are required to select a therapist who is not affiliated with their training program to avoid conflicts of interest and maintain professional boundaries. The other options do not align with ethical guidelines.",
+      "kn": "KN28",
+      "kn_explanation": "This KN code applies as it pertains to education ethics in psychotherapy training.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and addresses a critical ethical requirement in training.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "### Mandatory Therapy Requirements",
+      "lessonExcerpt": "Students must be able to choose a therapist who isn't affiliated with the program.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 28
+    }
+  ]
+}

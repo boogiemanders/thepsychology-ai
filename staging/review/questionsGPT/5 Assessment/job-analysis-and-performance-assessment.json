@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "stem": "A supervisor provides performance ratings for employees in her department. She recently learned that one of her subordinates graduated from a prestigious doctoral program. Although this information is unrelated to the employee's current job duties, the supervisor's ratings of this employee are consistently higher across all performance dimensions compared to a colleague with equivalent actual performance. This scenario best illustrates:",
+      "options": [
+        "Criterion deficiency",
+        "Criterion contamination",
+        "Halo effect",
+        "Leniency bias"
+      ],
+      "answer": "Criterion contamination",
+      "explanation": "Criterion contamination occurs when performance ratings are influenced by irrelevant factors that are unrelated to actual job performance. In this case, the supervisor's knowledge of the employee's prestigious educational background is polluting her ratings, making them reflect more than just job performance. This is distinct from criterion deficiency, which involves failing to measure important aspects of performance. While the scenario superficially resembles halo effect, halo effect specifically refers to one performance dimension rating bleeding into ratings on other unrelated performance dimensions—not external biographical information influencing all ratings. Leniency bias involves rating all employees too highly, not selectively inflating ratings for one employee based on extraneous information.",
+      "kn": "KN37",
+      "kn_explanation": "Halo effect from prestigious graduation is a cognitive heuristic/bias influencing rating decisions, explicitly covered by KN37's mention of heuristics and biases in interpretation and decision-making.",
+      "difficulty": "hard",
+      "quality_comment": "Strong question requiring nuanced distinction between criterion contamination and halo effect, which are commonly confused concepts.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "### The Gap Between Perfect and Practical Measurement",
+      "lessonExcerpt": "Criterion contamination means we're measuring things we shouldn't. This happens when ratings get polluted by irrelevant factors. If your supervisor's ratings are influenced by knowing you were hired through a prestigious fellowship program, or by your gender or ethnicity, or simply by whether they like you personally, that's contamination.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "An organizational psychologist consults with a company whose performance appraisal system uses graphic rating scales. Supervisors tend to rate employees who excel in one area as excellent across all dimensions, even those unrelated to the area of strength. The psychologist recommends implementing a training program that helps raters understand that performance is multidimensional, provides examples of effective versus ineffective behaviors, and includes practice rating with feedback. This intervention is known as:",
+      "options": [
+        "Forced distribution training",
+        "Bias awareness training",
+        "Frame-of-reference (FOR) training",
+        "Critical incident technique training"
+      ],
+      "answer": "Frame-of-reference (FOR) training",
+      "explanation": "Frame-of-reference (FOR) training is the most effective rater training method for improving rating accuracy. It teaches raters that job performance is multidimensional, defines what the organization considers effective versus ineffective performance, and includes practice opportunities where raters evaluate performance examples and receive feedback. The problem described is halo effect—one strong performance dimension inflating ratings on unrelated dimensions. Simple bias awareness training (just teaching people about biases like halo effect) has actually been shown to decrease overall accuracy because raters become preoccupied with avoiding specific biases rather than making meaningful distinctions. Forced distribution is a rating method, not a training program. Critical incident technique is a method for collecting behavioral examples, not a training approach.",
+      "kn": "KN34",
+      "kn_explanation": "Graphic rating scales with central tendency/leniency bias concerns are about instruments and methods for organizational and personnel assessment and their limitations.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question that tests knowledge of FOR training as the preferred intervention for rating biases and distinguishes it from less effective bias awareness approaches.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Fixing Rating Problems: Strategies That Actually Work",
+      "lessonExcerpt": "The better approach is frame-of-reference (FOR) training. This comprehensive training helps raters understand: Job performance is multidimensional... What the organization defines as effective versus ineffective performance... How to observe and categorize performance accurately... FOR training includes practice opportunities: raters watch performance examples, assign ratings, and receive feedback on their accuracy.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "An industrial-organizational psychologist develops a performance evaluation for clinical psychologists that measures diagnostic accuracy and treatment effectiveness but fails to assess ethics, cultural competence, or consultation skills. This evaluation instrument best illustrates which measurement problem?",
+      "options": [
+        "Criterion contamination",
+        "Criterion deficiency",
+        "Halo error",
+        "Differential validity"
+      ],
+      "answer": "Criterion deficiency",
+      "explanation": "Criterion deficiency occurs when important aspects of job performance are missing from the measurement. The lesson specifically uses this exact example: 'A job knowledge test for clinical psychologists covering only diagnosis and treatment but ignoring ethics, consultation skills, and cultural competence is deficient—it leaves out crucial aspects of actual performance.' Criterion contamination (A) is the opposite problem—measuring irrelevant factors. Halo error (C) is a rater bias where one dimension influences ratings on unrelated dimensions. Differential validity (D) refers to a test having different validity coefficients for different groups.",
+      "kn": "KN34",
+      "kn_explanation": "Developing a performance evaluation instrument for clinical psychologists is constructing an organizational/personnel assessment method.",
+      "difficulty": "medium",
+      "quality_comment": "Uses the lesson's own example scenario, making it a strong content-grounded question testing the distinction between criterion deficiency and contamination.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "### The Gap Between Perfect and Practical Measurement",
+      "lessonExcerpt": "**Criterion deficiency** means we're missing important stuff. A job knowledge test for clinical psychologists covering only diagnosis and treatment but ignoring ethics, consultation skills, and cultural competence is deficient—it leaves out crucial aspects of actual performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
+    }
+  ]
+}

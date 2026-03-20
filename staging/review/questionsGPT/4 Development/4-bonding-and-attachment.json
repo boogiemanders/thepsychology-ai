@@ -1,0 +1,550 @@
+{
+  "questions": [
+    {
+      "stem": "A pediatrician refers a 16-month-old infant to a psychologist because the child becomes extremely distressed whenever the primary caregiver leaves the room. Given what is known about normative separation anxiety, the psychologist should recognize that this child's behavior is MOST likely:",
+      "options": [
+        "A sign of insecure-resistant attachment requiring immediate intervention",
+        "Developmentally appropriate, as separation anxiety typically peaks between 14 and 18 months",
+        "An early indicator of an anxiety disorder, as separation anxiety normally resolves by 12 months",
+        "Atypical, because separation anxiety does not normally emerge until 18 to 24 months"
+      ],
+      "answer": "Developmentally appropriate, as separation anxiety typically peaks between 14 and 18 months",
+      "explanation": "Separation anxiety emerges around 6-8 months and peaks at 14-18 months. A 16-month-old showing distress upon caregiver departure is within the normative peak window. This behavior is a healthy sign that a specific attachment bond has formed, not a pathological indicator. Option A incorrectly pathologizes normative behavior. Option C is incorrect because separation anxiety peaks at 14-18 months, not resolving by 12 months. Option D is incorrect because separation anxiety emerges at 6-8 months, well before 18-24 months.",
+      "kn": "KN21",
+      "kn_explanation": "Attachment behavior at 16 months reflects normal developmental processes across the lifespan",
+      "difficulty": "easy",
+      "quality_comment": "Tests a key developmental milestone with a clinical referral framing that distinguishes normative from pathological behavior.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "### Signs That Attachment Has Formed",
+      "lessonExcerpt": "Separation anxiety (6-8 months, peaks at 14-18 months): Distress when separated from attachment figures. This isn't clinginess. It's actually a healthy sign that a specific bond has formed.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "On the Adult Attachment Interview (AAI), a mother provides an idealized account of her childhood, describing her parents as \"wonderful\" and \"always there for me,\" but is unable to offer specific memories supporting these claims. Her infant is MOST likely to be classified as:",
+      "options": [
+        "Securely attached",
+        "Insecure/resistant (ambivalent)",
+        "Insecure/avoidant",
+        "Disorganized/disoriented"
+      ],
+      "answer": "Insecure/avoidant",
+      "explanation": "The mother's AAI response pattern is characteristic of the 'dismissing' adult attachment classification, in which adults give idealized descriptions of childhood that contradict specific memories or lack supporting evidence. Dismissing adults' children typically develop insecure/avoidant attachment. Autonomous adults (A) provide clear, coherent descriptions of childhood and their children usually have secure attachment. Preoccupied adults (B) show angry, confused preoccupation with parents and their children usually have resistant attachment. Disorganized attachment (D) is associated with caregivers who are frightening or frightened, not dismissing.",
+      "kn": "KN23",
+      "kn_explanation": "The Adult Attachment Interview relates to major research-based theories and models of development (attachment theory)",
+      "difficulty": "hard",
+      "quality_comment": "Requires integration of AAI classification with infant attachment outcomes. Well-supported by lesson content.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "### Adult Attachment: The Intergenerational Transmission",
+      "lessonExcerpt": "**Dismissing adults** (whose children usually have avoidant attachment): Give idealized descriptions of childhood (\"my parents were perfect\") that contradict specific memories or lack supporting evidence. They've defensively distanced from painful experiences.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "According to Rowe and Kahn's model, which combination of factors is most closely associated with successful aging outcomes?",
+      "options": [
+        "Genetic predisposition, cognitive reserve, and social network size",
+        "Reduced disease risk, maintained cognitive and physical functioning, and active life engagement",
+        "Financial security, access to healthcare, and marital satisfaction",
+        "Selection of meaningful goals, optimization of remaining abilities, and compensatory strategies"
+      ],
+      "answer": "Reduced disease risk, maintained cognitive and physical functioning, and active life engagement",
+      "explanation": "Rowe and Kahn's three-component model identifies three hierarchical elements of successful aging: (1) reducing disease risk and disability, (2) maintaining high cognitive and physical functioning, and (3) active engagement with life. Option A lists factors not part of this specific model. Option C describes general wellness factors, not the model's components. Option D describes Baltes and Baltes' SOC (Selective Optimization with Compensation) model, which is a separate framework for successful aging that focuses on adaptive strategies rather than maintaining high functioning across domains.",
+      "kn": "KN23",
+      "kn_explanation": "Rowe and Kahn's model of successful aging is a major research-based theory/model of development",
+      "difficulty": "medium",
+      "quality_comment": "Strong question that tests ability to distinguish between two major successful aging models (Rowe & Kahn vs. SOC). Option D serves as an effective distractor for students who confuse the two frameworks.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Successful Aging: More Than Just Surviving",
+      "lessonExcerpt": "Successful aging requires three elements in hierarchical order: 1. **Reducing disease risk and disability** (foundation) 2. **Maintaining high cognitive and physical functioning** (builds on #1) 3. **Active engagement with life** (requires #1 and #2)",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "In Ainsworth's Strange Situation research, which attachment pattern was observed most frequently among infants, and what caregiver behavior was most associated with it?",
+      "options": [
+        "Insecure/avoidant attachment, associated with caregivers who were over-stimulating and intrusive",
+        "Secure attachment, associated with caregivers who were sensitive, responsive, and consistent",
+        "Insecure/resistant attachment, associated with caregivers who were inconsistently responsive",
+        "Disorganized/disoriented attachment, associated with caregivers who were frightening or frightened"
+      ],
+      "answer": "Secure attachment, associated with caregivers who were sensitive, responsive, and consistent",
+      "explanation": "Research consistently shows that secure attachment is the most prevalent pattern, observed in approximately 60-65% of infants studied. Secure attachment is associated with caregivers who are sensitive, responsive, and consistent. The lesson describes secure infants as those who 'explore confidently when caregiver present; may or may not cry at separation; actively seek contact upon reunion; prefer caregiver to strangers,' with caregiver behavior characterized as 'sensitive, responsive, consistent.' Options A, C, and D describe the three insecure attachment patterns, each of which occurs at lower rates than secure attachment.",
+      "kn": "KN23",
+      "kn_explanation": "Ainsworth's Strange Situation is a major research-based theory/model of development",
+      "difficulty": "medium",
+      "quality_comment": "Good integration question requiring knowledge of both attachment prevalence and associated caregiver behavior. The lesson describes all four patterns and their caregiver correlates but does not state explicit prevalence percentages. The ~60-65% figure is standard EPPP knowledge.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
+      "lessonExcerpt": "**Secure** | Explores confidently when caregiver present; may or may not cry at separation; actively seeks contact upon reunion; prefers caregiver to strangers | Sensitive, responsive, consistent | More likely to have trusting relationships; better emotion regulation",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "A psychologist reviewing longitudinal research on childhood aggression would most accurately conclude that:",
+      "options": [
+        "Aggressive behavior in early childhood rarely persists beyond the preschool years due to rapid socialization",
+        "Physical aggression peaks around age 2 and transitions into verbal and relational forms by age 4, with aggressive patterns showing notable stability across development",
+        "Aggression is entirely situational and shows no trait-like consistency from childhood into adolescence",
+        "Only hostile aggression demonstrates stability over time, while instrumental aggression is transient and age-limited"
+      ],
+      "answer": "Physical aggression peaks around age 2 and transitions into verbal and relational forms by age 4, with aggressive patterns showing notable stability across development",
+      "explanation": "The lesson describes the developmental trajectory of aggression: 'physical instrumental aggression peaks around age 2, then declines as verbal and relational hostile aggression increase around age 4.' Longitudinal research consistently demonstrates that aggression is one of the most stable behavioral characteristics across development. Option A is incorrect because aggressive behavior shows considerable continuity, not rapid dissolution. Option C is incorrect because research clearly demonstrates trait-like stability in aggression. Option D incorrectly claims only hostile aggression is stable; research shows stability applies to aggressive behavior patterns generally, with forms changing but the underlying tendency persisting.",
+      "kn": "KN21",
+      "kn_explanation": "Longitudinal research on childhood aggression trajectories relates to normal growth and development across the lifespan",
+      "difficulty": "hard",
+      "quality_comment": "Integrates the lesson's developmental trajectory content with the broader EPPP concept of aggression stability. The lesson covers the shift in aggression forms but does not explicitly state that aggression is one of the most stable traits across development. Partially supported by lesson content.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Understanding Aggression: Forms, Functions, and Interventions",
+      "lessonExcerpt": "Developmentally, physical instrumental aggression peaks around age 2, then declines as verbal and relational hostile aggression increase around age 4.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "According to Carstensen's socioemotional selectivity theory, which of the following BEST describes the shift in social motivation that typically occurs as adults perceive their remaining time as increasingly limited?",
+      "options": [
+        "Adults become more future-oriented and expand their social networks to maximize information gathering",
+        "Adults shift from knowledge-seeking to emotional gratification as the primary driver of social connections, becoming more selective and preferring emotionally close relationships",
+        "Adults increase their reliance on large social networks for instrumental support as cognitive resources decline",
+        "Adults become less emotionally regulated and increasingly seek novel social experiences to compensate for perceived losses"
+      ],
+      "answer": "Adults shift from knowledge-seeking to emotional gratification as the primary driver of social connections, becoming more selective and preferring emotionally close relationships",
+      "explanation": "Carstensen's socioemotional selectivity theory proposes that when time feels limited (typical of older adults or anyone facing mortality), people become present-oriented with emotional gratification driving their social connections. They become selective, preferring emotionally close friends and avoiding relationships that generate negative feelings. Option A describes the pattern of younger adults who perceive time as unlimited. Option C fabricates a claim about instrumental support networks not found in the theory. Option D contradicts the research showing older adults have better emotion regulation and smaller, more satisfying networks.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests socioemotional selectivity theory, which explains how time perception shapes adult social motivation and relationships across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Directly grounded in the lesson's coverage of socioemotional selectivity theory. The lesson addresses time perception and social motivation in adulthood rather than specific 'midlife transitions,' so framing is adjusted to match lesson content.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "### Socioemotional Selectivity Theory",
+      "lessonExcerpt": "When time feels limited (typical of older adults or anyone facing mortality): Present-oriented, Emotional gratification drives social connections, Become selective, preferring emotionally close friends, Avoid relationships that generate negative feelings",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A psychologist is evaluating risk and protective factors for an 8-year-old child growing up in a high-conflict household with limited financial resources. Which of the following would be considered the STRONGEST protective factor contributing to resilience in this child?",
+      "options": [
+        "High intelligence quotient (IQ above 130)",
+        "A secure attachment relationship with at least one competent, caring adult",
+        "Enrollment in an academically rigorous private school",
+        "Absence of any diagnosable psychiatric condition"
+      ],
+      "answer": "A secure attachment relationship with at least one competent, caring adult",
+      "explanation": "Research consistently identifies a warm, stable relationship with at least one caring and competent adult as the single most powerful protective factor for children facing adversity. This finding aligns with attachment theory and the broader resilience literature. While higher intelligence can serve as a protective factor, an IQ above 130 specifically is not identified as the strongest protective factor. Attending a rigorous school addresses only one domain and does not provide the relational security that is most critical. The absence of psychiatric diagnosis is not itself a protective factor—it describes the absence of a risk factor, which is conceptually different from the presence of a protective one.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses resilience and protective factors in child development, a Growth and Lifespan Development topic.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically grounded scenario testing a well-established finding in the resilience literature. The lesson discusses attachment extensively though the specific resilience research is implied rather than directly stated.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "Attachment refers to the deep emotional bond between people that creates feelings of security and comfort.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "What is a potential impact of domestic violence on children's development?",
+      "options": [
+        "Increased cognitive abilities due to heightened awareness of their environment",
+        "Development of emotional and behavioral problems",
+        "Enhanced social skills from observing conflict resolution",
+        "Improved academic performance due to increased resilience"
+      ],
+      "answer": "Development of emotional and behavioral problems",
+      "explanation": "Children exposed to domestic violence often develop emotional and behavioral problems due to the trauma and instability in their environment. The other options suggest positive outcomes that are not typically associated with exposure to domestic violence.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies because it relates to the impact of family dynamics, specifically domestic violence, on child development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the negative impacts of domestic violence on children.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "Understanding socioemotional development isn't just about memorizing attachment styles for the EPPP. It's about recognizing patterns that show up daily in your consulting room.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which ethnic group has been reported to have the highest rates of adolescent suicide in the United States?",
+      "options": [
+        "Caucasian",
+        "African American",
+        "Hispanic",
+        "Asian American"
+      ],
+      "answer": "Caucasian",
+      "explanation": "Caucasian adolescents have been reported to have the highest rates of suicide compared to other ethnic groups. The other options are incorrect as they do not reflect the highest rates according to current statistics.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to understanding the demographic factors influencing adolescent mental health.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and requires knowledge of specific statistics related to adolescent psychology.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "Adolescent suicide rates vary by ethnicity, with Caucasian adolescents showing the highest rates.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "According to Erikson's stages of psychosocial development, which stage is primarily focused on the development of trust versus mistrust?",
+      "options": [
+        "Autonomy vs. Shame and Doubt",
+        "Trust vs. Mistrust",
+        "Identity vs. Role Confusion",
+        "Intimacy vs. Isolation"
+      ],
+      "answer": "Trust vs. Mistrust",
+      "explanation": "The correct answer is 'Trust vs. Mistrust' because this is the first stage in Erikson's theory, where infants learn to trust their caregivers for basic needs. The other options represent different stages of psychosocial development that occur later in life.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to Erikson's stages of psychosocial development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of Erikson's theory effectively.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "This lesson covers the foundation of how humans connect, from the first bonds infants form to how older adults choose their social circles.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "In Erikson's psychosocial development theory, which stage is primarily concerned with the psychosocial task of identity?",
+      "options": [
+        "Trust vs. Mistrust",
+        "Identity vs. Role Confusion",
+        "Intimacy vs. Isolation",
+        "Generativity vs. Stagnation"
+      ],
+      "answer": "Identity vs. Role Confusion",
+      "explanation": "The correct answer is 'Identity vs. Role Confusion' as this stage focuses on adolescents developing a sense of self and personal identity. The other options represent different stages of psychosocial development.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to Erikson's stages of psychosocial development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of Erikson's theory.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Bowlby's Ethological Theory: Survival Through Connection",
+      "lessonExcerpt": "These early experiences create internal working models.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Who are typically the primary caregivers for Alzheimer's patients, and what challenges do they face?",
+      "options": [
+        "Siblings, financial stress",
+        "Spouses, emotional strain",
+        "Children, physical demands",
+        "Friends, social isolation"
+      ],
+      "answer": "Spouses, emotional strain",
+      "explanation": "Spouses are often the primary caregivers for Alzheimer's patients, facing significant emotional strain due to the demands of caregiving and the emotional toll of witnessing a loved one's decline. The other options misidentify the primary caregivers or the nature of the challenges they face.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to caregiving dynamics in the context of Alzheimer's disease.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of caregiving dynamics for Alzheimer's patients.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "Spouses are often the primary caregivers for Alzheimer's patients, facing significant emotional strain.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "At what age do infants typically begin to engage in social referencing, looking to caregivers for cues on how to respond in uncertain situations?",
+      "options": [
+        "3-4 months",
+        "6-8 months",
+        "10-12 months",
+        "12-18 months"
+      ],
+      "answer": "6-8 months",
+      "explanation": "Social referencing typically begins around 6-8 months of age, as infants start looking to their caregivers' facial expressions to determine how to react in uncertain situations. The other options are incorrect as they do not align with the developmental timeline for this behavior.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies because it relates to understanding attachment theory and social referencing in infants.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of social referencing in infants.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Signs That Attachment Has Formed",
+      "lessonExcerpt": "Three key behaviors signal that attachment has developed, all emerging around 6-10 months: Social referencing (6-8 months)...",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "What is a potential long-term effect of early deprivation on attachment in children?",
+      "options": [
+        "Increased resilience in relationships",
+        "Heightened ability to form secure attachments",
+        "Increased risk of developing attachment disorders",
+        "Improved social skills"
+      ],
+      "answer": "Increased risk of developing attachment disorders",
+      "explanation": "Early deprivation can lead to attachment disorders, as children may struggle to form secure attachments due to inconsistent or absent caregiving. The other options incorrectly suggest positive outcomes or improvements.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it relates to attachment theory and the impact of early experiences.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge on attachment theory.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "Understanding socioemotional development isn't just about memorizing attachment styles for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which of the following best describes the identity status of foreclosure in Erikson's theory of identity development?",
+      "options": [
+        "A commitment to an identity without exploration of alternatives",
+        "A period of exploration without commitment to any identity",
+        "A stable identity achieved through exploration and commitment",
+        "A rejection of all societal norms and values"
+      ],
+      "answer": "A commitment to an identity without exploration of alternatives",
+      "explanation": "Foreclosure occurs when individuals commit to an identity without exploring other options, often adopting the beliefs and values of their parents or society. The other options describe different identity statuses: moratorium (exploration without commitment), achieved identity (commitment after exploration), and identity diffusion (lack of commitment and exploration).",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to identity development theories, specifically Erikson's stages.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests understanding of a specific concept in identity development.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "Foreclosure occurs when individuals commit to an identity without exploring other options.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "What is social referencing in infants, and why is it important?",
+      "options": [
+        "Infants look to caregivers for emotional cues to guide their behavior in uncertain situations.",
+        "Infants develop attachment styles based on their interactions with peers.",
+        "Infants use social cues to determine their own emotional states.",
+        "Infants learn to communicate through imitation of adult behaviors."
+      ],
+      "answer": "Infants look to caregivers for emotional cues to guide their behavior in uncertain situations.",
+      "explanation": "Social referencing involves infants seeking emotional information from caregivers to navigate unfamiliar or ambiguous situations. The other options do not accurately describe the concept of social referencing.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to attachment theory and the development of social behaviors in infants.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests understanding of a key concept in attachment theory.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Early Discoveries: Contact Comfort Over Food",
+      "lessonExcerpt": "Infants look to caregivers' facial expressions to determine how to react in uncertain situations.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What is the relationship between separation protest and object permanence in infants?",
+      "options": [
+        "Separation protest indicates that infants have developed object permanence.",
+        "Object permanence develops before separation protest.",
+        "Separation protest and object permanence are unrelated.",
+        "Both develop simultaneously in infants."
+      ],
+      "answer": "Separation protest indicates that infants have developed object permanence.",
+      "explanation": "Separation protest typically emerges after infants have developed object permanence, as they begin to understand that caregivers continue to exist even when they are not visible. The other options misrepresent the developmental sequence of these concepts.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to attachment theory and cognitive development in infants.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests understanding of the relationship between key developmental concepts.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "Separation protest indicates that infants have developed object permanence.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which of the following describes insecure attachment styles in infants?",
+      "options": [
+        "Infants show consistent and responsive behavior towards caregivers.",
+        "Infants exhibit anxiety and avoidance in relationships.",
+        "Infants demonstrate a strong preference for strangers over caregivers.",
+        "Infants are indifferent to caregiver presence and absence."
+      ],
+      "answer": "Infants exhibit anxiety and avoidance in relationships.",
+      "explanation": "Insecure attachment styles, such as avoidant and ambivalent attachment, are characterized by anxiety and avoidance in relationships. The other options describe secure attachment or do not accurately reflect the behaviors associated with insecure attachment.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to attachment theory and the classification of attachment styles in infants.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of attachment styles and their characteristics.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
+      "lessonExcerpt": "Infants exhibit anxiety and avoidance in relationships.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "According to Levinson's theory, which stage of adult development is characterized by the transition from early adulthood to middle adulthood?",
+      "options": [
+        "Entering the Adult World",
+        "Age 30 Transition",
+        "Settling Down",
+        "Mid-Life Transition"
+      ],
+      "answer": "Age 30 Transition",
+      "explanation": "The Age 30 Transition is a critical period in Levinson's theory where individuals reassess their life choices and make adjustments as they move from early adulthood to middle adulthood. The other options represent different stages in Levinson's framework.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding stages of adult development.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a deep understanding of Levinson's stages.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "Levinson's theory outlines various stages of adult development, including the Age 30 Transition, which is a critical period for reassessing life choices.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "What is a common strategy for helping children cope with grief during childhood?",
+      "options": [
+        "Encouraging them to forget their loss",
+        "Providing age-appropriate explanations",
+        "Avoiding discussions about the deceased",
+        "Promoting isolation from peers"
+      ],
+      "answer": "Providing age-appropriate explanations",
+      "explanation": "Providing age-appropriate explanations helps children understand their grief and process their emotions in a healthy way. Encouraging them to forget their loss or avoiding discussions can lead to unresolved feelings, while promoting isolation is detrimental to their emotional health.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to emotional development and coping strategies for grief.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of emotional development in childhood.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "Common strategies for helping children cope with grief include providing age-appropriate explanations about loss.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "According to Erikson's psychosocial development theory, which of the following is the primary challenge faced during the stage of late adulthood?",
+      "options": [
+        "Integrity vs. Despair",
+        "Generativity vs. Stagnation",
+        "Intimacy vs. Isolation",
+        "Trust vs. Mistrust"
+      ],
+      "answer": "Integrity vs. Despair",
+      "explanation": "The correct answer is 'Integrity vs. Despair', as this is the psychosocial challenge identified by Erikson for late adulthood. The other options represent challenges from different stages of development: 'Generativity vs. Stagnation' pertains to middle adulthood, 'Intimacy vs. Isolation' to young adulthood, and 'Trust vs. Mistrust' to infancy.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies because it relates to Erikson's stages of psychosocial development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of Erikson's theory.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "The primary challenge faced during late adulthood is 'Integrity vs. Despair'.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "During which period of development do infants first begin to show signs of attachment according to Bowlby's theory?",
+      "options": [
+        "Preattachment",
+        "Attachment-in-the-making",
+        "Clear-cut attachment",
+        "Formation of reciprocal relationships"
+      ],
+      "answer": "Attachment-in-the-making",
+      "explanation": "The correct answer is 'Attachment-in-the-making', as this stage occurs from 6 weeks to 6-8 months, where infants start to prefer familiar caregivers. The other stages represent different phases of attachment development: 'Preattachment' is from birth to 6 weeks, 'Clear-cut attachment' is from 6-8 months to 18-24 months, and 'Formation of reciprocal relationships' begins at 18-24 months.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies because it relates to attachment theory and early development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and assesses understanding of Bowlby's attachment stages.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Early Discoveries: Contact Comfort Over Food",
+      "lessonExcerpt": "Bowlby identified four stages of attachment during the first two years, with 'Attachment-in-the-making' occurring from 6 weeks to 6-8 months.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "How do Erikson's stages of psychosocial development differ from Freud's psychosexual stages?",
+      "options": [
+        "Erikson's stages focus on social relationships, while Freud's focus on sexual drives",
+        "Freud's stages are more culturally influenced than Erikson's",
+        "Erikson's stages are strictly sequential, while Freud's are not",
+        "Freud's stages emphasize adult development more than Erikson's"
+      ],
+      "answer": "Erikson's stages focus on social relationships, while Freud's focus on sexual drives",
+      "explanation": "The correct answer is 'Erikson's stages focus on social relationships, while Freud's focus on sexual drives', as Erikson's theory emphasizes psychosocial challenges throughout the lifespan, whereas Freud's theory centers on psychosexual development during early childhood. The other options misrepresent the core differences between the two theories.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies because it relates to the comparison of psychosocial and psychosexual development theories.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and tests understanding of two foundational theories.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "Erikson's stages focus on social relationships, while Freud's focus on sexual drives.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "According to Erikson's psychosocial development theory, which of the following best describes the challenge faced during the stage of generativity vs. stagnation?",
+      "options": [
+        "The desire to create and nurture things that will outlast oneself",
+        "The struggle to establish intimate relationships",
+        "The need to develop a sense of identity",
+        "The challenge of achieving autonomy from caregivers"
+      ],
+      "answer": "The desire to create and nurture things that will outlast oneself",
+      "explanation": "The correct answer reflects Erikson's concept of generativity, which involves contributing to society and helping to guide future generations. The other options pertain to different stages of Erikson's theory: intimacy vs. isolation, identity vs. role confusion, and autonomy vs. shame and doubt, respectively.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to psychosocial development, specifically Erikson's stages.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of Erikson's theory at a doctoral level.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "The desire to create and nurture things that will outlast oneself is a key aspect of generativity.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Which attachment style, identified by Ainsworth, is characterized by a child who shows distress when separated from the caregiver but is ambivalent upon reunion?",
+      "options": [
+        "Secure attachment",
+        "Insecure/Resistant (Ambivalent) attachment",
+        "Insecure/Avoidant attachment",
+        "Disorganized attachment"
+      ],
+      "answer": "Insecure/Resistant (Ambivalent) attachment",
+      "explanation": "The correct answer describes the Insecure/Resistant (Ambivalent) attachment style, where the child is distressed by separation and exhibits ambivalence upon reunion. Secure attachment is characterized by comfort with exploration and a positive reunion, while Insecure/Avoidant attachment shows indifference. Disorganized attachment involves a lack of clear attachment behavior.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to attachment theory and Ainsworth's classifications.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of attachment styles at a doctoral level.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
+      "lessonExcerpt": "Insecure/Resistant (Ambivalent) attachment is characterized by distress at separation and ambivalence at reunion.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "Which parenting style is associated with the most positive outcomes in children, including higher self-esteem and better social skills?",
+      "options": [
+        "Authoritarian",
+        "Permissive",
+        "Neglectful",
+        "Authoritative"
+      ],
+      "answer": "Authoritative",
+      "explanation": "The authoritative parenting style is characterized by high responsiveness and high demands, leading to the best outcomes in children. The other styles either lack responsiveness or impose excessive control, which can hinder development.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses the impact of parenting styles on child outcomes, a key concept in developmental psychology.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and assesses understanding of parenting styles effectively.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "Authoritative parenting is associated with the most positive outcomes in children.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 23
+    }
+  ]
+}

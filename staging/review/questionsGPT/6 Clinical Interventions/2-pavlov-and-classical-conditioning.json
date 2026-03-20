@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A client who completed an inpatient substance use treatment program relapses after walking past the bar where he used to drink regularly. The sight of the bar triggered intense cravings that overwhelmed his coping skills. This relapse is best explained by which principle?",
+      "options": [
+        "Operant extinction burst—the bar visit temporarily increased substance-seeking behavior before it would have decreased",
+        "Classical conditioning—environmental cues associated with past drug use became conditioned stimuli that trigger cravings",
+        "Negative reinforcement—the client used substances to escape the unpleasant feelings triggered by seeing the bar",
+        "Stimulus generalization—the client generalized his drinking behavior to a new environment"
+      ],
+      "answer": "Classical conditioning—environmental cues associated with past drug use became conditioned stimuli that trigger cravings",
+      "explanation": "The lesson on classical conditioning explicitly states: 'Drug cues (needles, specific locations, certain people) become CSs that trigger cravings and physiological preparation for drug use. This is why changing environments can be crucial in early recovery.' The bar is a conditioned stimulus that was repeatedly paired with substance use (the unconditioned stimulus), and seeing it elicits conditioned craving responses. Option A is incorrect because this is not an extinction burst—the behavior was not being extinguished at the time. Option C, while partially true in that negative reinforcement may play a role in substance use generally, does not explain the specific mechanism of environmental cue-triggered cravings. Option D is incorrect because the bar is the original environment, not a new one—this is direct conditioned responding, not generalization.",
+      "kn": "KN44",
+      "kn_explanation": "Describes a classical conditioning phenomenon (cue-induced relapse) in the context of substance use treatment, relating to treatment techniques and understanding relapse mechanisms",
+      "difficulty": "medium",
+      "quality_comment": "Applied clinical scenario that requires distinguishing between classical and operant conditioning mechanisms in addiction. All distractors are plausible.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## Real-World Applications in Clinical Practice",
+      "lessonExcerpt": "Drug cues (needles, specific locations, certain people) become CSs that trigger cravings and physiological preparation for drug use. This is why changing environments can be crucial in early recovery.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A client was classically conditioned to fear elevators after being trapped in one during a power outage. A therapist treats this phobia by having the client repeatedly ride elevators without any aversive event occurring, until the fear response diminishes. This procedure is best described as:",
+      "options": [
+        "Counterconditioning, because a new response is being paired with the conditioned stimulus",
+        "Stimulus discrimination training, because the client learns to differentiate safe from dangerous elevators",
+        "Classical extinction, because the conditioned stimulus is repeatedly presented without the unconditioned stimulus",
+        "Systematic desensitization, because the client is gradually exposed to the feared situation"
+      ],
+      "answer": "Classical extinction, because the conditioned stimulus is repeatedly presented without the unconditioned stimulus",
+      "explanation": "The lesson on classical conditioning states: 'if you repeatedly present the CS without the US, the CR gradually disappears. This is classical extinction.' The elevator (CS) was paired with being trapped (US), producing fear (CR). By repeatedly presenting the elevator without the aversive event, the fear response extinguishes. Option A is incorrect because no new incompatible response is being deliberately paired with the stimulus—the client is simply exposed to the CS without the US. Option B is incorrect because the goal is not to distinguish between safe and dangerous elevators but to extinguish the fear response to elevators generally. Option D is incorrect because systematic desensitization specifically involves creating an anxiety hierarchy and pairing relaxation with feared stimuli, which is not described here.",
+      "kn": "KN44",
+      "kn_explanation": "Describes systematic desensitization or exposure therapy (a specific treatment technique) for a classically conditioned phobia, fitting treatment techniques and their efficacy",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward application question with clear correct answer. Tests fundamental distinction between extinction and counterconditioning.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Classical Extinction",
+      "lessonExcerpt": "if you repeatedly present the CS without the US, the CR gradually disappears. This is classical extinction.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 7
+    }
+  ]
+}

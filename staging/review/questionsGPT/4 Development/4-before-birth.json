@@ -1,0 +1,172 @@
+{
+  "questions": [
+    {
+      "stem": "A genetic counselor refers a couple for psychological support after their child is diagnosed with the most common genetic cause of intellectual developmental disorder. The child has characteristic facial features, hypotonia, and moderate cognitive delays. Which condition is MOST likely responsible for this presentation?",
+      "options": [
+        "Fragile X syndrome",
+        "Fetal alcohol spectrum disorder",
+        "Down syndrome (Trisomy 21)",
+        "Prader-Willi syndrome"
+      ],
+      "answer": "Down syndrome (Trisomy 21)",
+      "explanation": "Down syndrome is explicitly identified in the lesson as 'the most common genetic cause of intellectual developmental disorder.' It involves chromosome 21 and is an autosomal disorder. Fragile X syndrome (A) is the most common *inherited* intellectual disability but is less prevalent overall than Down syndrome. Fetal alcohol spectrum disorder (B) is an environmental/teratogenic cause, not a genetic cause. Prader-Willi syndrome (D) is a deletion disorder on paternal chromosome 15 that involves intellectual disabilities but is far less common than Down syndrome.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of genetic conditions affecting intellectual development, a key topic in prenatal development and developmental disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question that tests the distinction between most common genetic cause (Down syndrome) vs. most common inherited cause (Fragile X) vs. environmental causes (FASD).",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "### Down Syndrome: The Most Common Chromosomal Condition",
+      "lessonExcerpt": "Down syndrome is the most common genetic cause of intellectual developmental disorder. It involves chromosome 21 rather than sex chromosomes, making it an autosomal disorder.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A female infant is born with ambiguous genitalia, including a noticeably enlarged clitoris. Genetic testing confirms a 46,XX karyotype. Which of the following BEST explains this presentation?",
+      "options": [
+        "Turner syndrome (45,X)",
+        "Excessive prenatal androgen exposure",
+        "Klinefelter syndrome (47,XXY)",
+        "Maternal progesterone deficiency"
+      ],
+      "answer": "Excessive prenatal androgen exposure",
+      "explanation": "In genetic females (46,XX), excessive prenatal androgen exposure—most commonly from congenital adrenal hyperplasia (CAH)—can masculinize the external genitalia, resulting in an enlarged clitoris and ambiguous genitalia. The lesson content discusses how prenatal hormonal influences affect fetal development, with androgens playing a key role in sexual differentiation. Turner syndrome (45,X) involves a missing X chromosome and presents differently (short stature, webbed neck) without genital ambiguity from androgen excess. Klinefelter syndrome (47,XXY) affects genetic males. Progesterone deficiency would not cause virilization of female genitalia.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses prenatal hormonal influences on development, within the Growth and Lifespan Development domain.",
+      "difficulty": "hard",
+      "quality_comment": "Integrates chromosomal and hormonal prenatal development knowledge. The lesson discusses chromosomal conditions and prenatal influences but does not deeply cover CAH specifically.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## When Chromosomes Tell a Different Story",
+      "lessonExcerpt": "Chromosomes carry our genetic blueprint. 23 Pairs in every cell, with one chromosome from each parent. But sometimes there are copying errors, deletions, or unusual combinations that lead to lifelong conditions.",
+      "needsReview": true,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following is a recognized cause of intellectual disability?",
+      "options": [
+        "Exposure to teratogens during prenatal development",
+        "High socioeconomic status",
+        "Advanced maternal age",
+        "Participation in early childhood education programs"
+      ],
+      "answer": "Exposure to teratogens during prenatal development",
+      "explanation": "Exposure to teratogens during prenatal development is a well-documented cause of intellectual disabilities. The other options do not have a direct causal relationship with intellectual disabilities.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to developmental disorders and their causes.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of causes of intellectual disability.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
+      "lessonExcerpt": "Exposure to harmful substances (called teratogens) causes the most serious damage.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "How does exposure to androgens during prenatal development affect female fetuses?",
+      "options": [
+        "Increases risk of developmental delays",
+        "Enhances cognitive abilities",
+        "May lead to masculinization of physical traits",
+        "Decreases likelihood of behavioral problems"
+      ],
+      "answer": "May lead to masculinization of physical traits",
+      "explanation": "The correct answer is that exposure to androgens during prenatal development may lead to masculinization of physical traits in female fetuses. This exposure can influence the development of certain physical characteristics typically associated with males. The other options do not accurately reflect the effects of androgen exposure on female fetuses.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to prenatal development and the effects of hormones.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the impact of prenatal hormone exposure.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
+      "lessonExcerpt": "Exposure to androgens during prenatal development may lead to masculinization of physical traits.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "What long-term effects are associated with fetal alcohol syndrome (FAS) as children grow into adulthood?",
+      "options": [
+        "Increased height and weight",
+        "Cognitive impairments and behavioral issues",
+        "Enhanced social skills",
+        "Improved academic performance"
+      ],
+      "answer": "Cognitive impairments and behavioral issues",
+      "explanation": "The correct answer is cognitive impairments and behavioral issues, as these are well-documented long-term effects of fetal alcohol syndrome. The other options are incorrect as they do not reflect the typical outcomes associated with FAS.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to understanding the impact of prenatal exposure to alcohol on development.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of the consequences of prenatal development issues.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
+      "lessonExcerpt": "Children with fetal alcohol syndrome often experience cognitive impairments and behavioral challenges that persist into adulthood.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "What is a potential consequence of fetal malnutrition during the prenatal development period?",
+      "options": [
+        "Increased cognitive abilities",
+        "Improved physical growth",
+        "Higher risk of behavioral problems",
+        "Enhanced sensory development"
+      ],
+      "answer": "Higher risk of behavioral problems",
+      "explanation": "The correct answer is 'Higher risk of behavioral problems' because fetal malnutrition can lead to various developmental issues, including cognitive and behavioral challenges. The other options are incorrect as they do not reflect the negative impacts of malnutrition.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to prenatal development and its effects.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of prenatal influences on development.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
+      "lessonExcerpt": "Understanding prenatal development isn't just academic trivia. It's the foundation for recognizing how early biological events shape someone's entire life trajectory.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What genetic abnormality is primarily associated with Down syndrome, and what is its typical cause?",
+      "options": [
+        "Deletion of chromosome 15, maternal age",
+        "Trisomy 21, nondisjunction during meiosis",
+        "Monosomy X, paternal age",
+        "Trisomy 18, environmental factors"
+      ],
+      "answer": "Trisomy 21, nondisjunction during meiosis",
+      "explanation": "Down syndrome is primarily caused by Trisomy 21, which results from nondisjunction during meiosis, leading to an extra copy of chromosome 21. The other options either misidentify the chromosome involved or incorrectly attribute the cause.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to genetic abnormalities and their implications for development.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses knowledge of genetic causes of Down syndrome.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## When Chromosomes Tell a Different Story",
+      "lessonExcerpt": "Down syndrome is primarily caused by Trisomy 21, which results from nondisjunction during meiosis.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What is the primary risk associated with teratogen exposure during the embryonic period of prenatal development?",
+      "options": [
+        "Minor functional problems",
+        "Severe structural abnormalities",
+        "Increased birth weight",
+        "Enhanced cognitive abilities"
+      ],
+      "answer": "Severe structural abnormalities",
+      "explanation": "The correct answer is 'Severe structural abnormalities', as the embryonic period (weeks 3-8) is when major organs and body structures are forming, making it the time of greatest vulnerability to teratogens. The other options do not accurately reflect the risks during this critical period.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies because it relates to prenatal development and the effects of teratogens.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of prenatal vulnerabilities.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## The Embryonic Period (Weeks 3-8)",
+      "lessonExcerpt": "This is the high-stakes period... exposure to harmful substances (called teratogens) causes the most serious damage.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4
+    }
+  ]
+}

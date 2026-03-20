@@ -1,0 +1,193 @@
+{
+  "questions": [
+    {
+      "stem": "A researcher wants to use a chi-square test to examine whether there is a relationship between therapy modality (CBT, psychodynamic, humanistic) and treatment completion (completed, dropped out). The study includes 180 participants. However, when constructing the contingency table, one cell (humanistic/dropped out) contains only 3 participants. What is the PRIMARY concern about using the chi-square test in this situation?",
+      "options": [
+        "The chi-square test cannot be used with more than two categories per variable",
+        "The chi-square test requires that expected frequencies in each cell be sufficiently large",
+        "The chi-square test is inappropriate because the dependent variable is dichotomous",
+        "The chi-square test assumes that the variables are measured on at least an ordinal scale"
+      ],
+      "answer": "The chi-square test requires that expected frequencies in each cell be sufficiently large",
+      "explanation": "A key assumption of the chi-square test is that expected cell frequencies must be adequate (typically at least 5). Small expected frequencies can lead to inaccurate results. The lesson notes that chi-square is a nonparametric test used with nominal data and frequencies, and that nonparametric tests are used 'if your sample is small, groups are unequal in size.' When cells have very low frequencies, the chi-square approximation breaks down. Option A is incorrect — chi-square can handle multiple categories. Option C is incorrect — dichotomous variables are appropriate for chi-square. Option D is incorrect — chi-square specifically works with nominal (categorical) data, not ordinal.",
+      "kn": "KN55",
+      "kn_explanation": "Chi-square test is a quantitative analytic method (inferential statistics)",
+      "difficulty": "medium",
+      "quality_comment": "Good question testing a common practical limitation of chi-square. The scenario is realistic and the distractors address common misconceptions.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "The chi-square test works with nominal data. Frequencies and categories.",
+      "needsReview": true,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A researcher uses a chi-square test to examine whether diagnosis type (anxiety disorder, mood disorder, or personality disorder) is associated with treatment preference (medication, psychotherapy, or combined). She collects data by surveying 150 clients at a clinic, where some married couples are both included in the sample. What assumption of the chi-square test is MOST likely violated?",
+      "options": [
+        "The assumption of homogeneity of variance across diagnostic groups",
+        "The assumption of normally distributed data within each cell",
+        "The assumption of independence of observations, because married couples' responses may be correlated",
+        "The assumption that all expected cell frequencies must be equal"
+      ],
+      "answer": "The assumption of independence of observations, because married couples' responses may be correlated",
+      "explanation": "The chi-square test requires that each observation is independent of every other observation. When married couples are both included, their responses may be correlated — partners often share treatment preferences, diagnostic patterns influenced by shared environment, or may influence each other's responses. This violates independence of observations. Option A is incorrect because homogeneity of variance is an assumption of parametric tests like ANOVA, not chi-square. Option B is wrong because chi-square is a nonparametric test that does not assume normality. Option D is wrong because chi-square does not require equal expected frequencies — it requires adequate expected frequencies (typically at least 5 per cell), not equal ones.",
+      "kn": "KN55",
+      "kn_explanation": "Chi-square test is a quantitative analytic method (inferential statistics)",
+      "difficulty": "medium",
+      "quality_comment": "Good applied scenario. The lesson covers chi-square basics but does not explicitly discuss the independence of observations assumption, so this draws on standard EPPP knowledge.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "The chi-square test works with nominal data. Frequencies and categories.",
+      "needsReview": true,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A clinical researcher wants to determine whether there are significant differences in burnout scores (measured on a validated interval-level scale) among therapists who primarily use one of four theoretical orientations: psychodynamic, cognitive-behavioral, humanistic, or integrative. Each therapist practices only one orientation, and participants were randomly assigned to orientation-based supervision groups at the start of their training. Which statistical test is most appropriate for this analysis?",
+      "options": [
+        "One-way ANOVA",
+        "Independent samples t-test",
+        "Multiple-sample chi-square",
+        "Factorial ANOVA"
+      ],
+      "answer": "One-way ANOVA",
+      "explanation": "A one-way ANOVA is correct because the study has one independent variable (theoretical orientation) with more than two levels (four orientations) and one dependent variable (burnout scores) measured on an interval scale. An independent samples t-test (B) is incorrect because it is limited to comparing exactly two groups, not four. A multiple-sample chi-square (C) is incorrect because it is used for nominal/categorical data, not interval-level burnout scores. A factorial ANOVA (D) is incorrect because there is only one independent variable; factorial ANOVA requires two or more independent variables.",
+      "kn": "KN55",
+      "kn_explanation": "ANOVA/comparing group means is a quantitative analytic method (inferential statistics)",
+      "difficulty": "medium",
+      "quality_comment": "Tests the critical decision point between t-test (2 groups) and one-way ANOVA (>2 groups) with plausible distractors representing common selection errors.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## One-Way ANOVA: Comparing Multiple Groups",
+      "lessonExcerpt": "When you have one independent variable with more than two levels and one dependent variable on an interval or ratio scale, you need a one-way analysis of variance (ANOVA).",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Which of the following best describes a violation of independence in the context of a chi-square test?",
+      "options": [
+        "Participants in one group influence the responses of participants in another group.",
+        "The sample size is too small to draw valid conclusions.",
+        "The expected frequencies are too low for accurate analysis.",
+        "The variables being tested are not categorical."
+      ],
+      "answer": "Participants in one group influence the responses of participants in another group.",
+      "explanation": "A violation of independence occurs when the responses of one group affect another, which undermines the assumptions of the chi-square test. The other options describe issues related to sample size or data type but do not pertain to independence.",
+      "kn": "KN4",
+      "kn_explanation": "This question relates to the assumptions of chi-square tests, specifically independence.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and assesses understanding of chi-square test assumptions.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "Independence means that the responses of one participant do not influence the responses of another.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "When calculating expected frequencies for a chi-square test, which of the following is the correct formula to use?",
+      "options": [
+        "Total number of observations divided by the number of categories.",
+        "Row total multiplied by column total divided by the grand total.",
+        "Observed frequency divided by total frequency.",
+        "Total frequency minus observed frequency."
+      ],
+      "answer": "Row total multiplied by column total divided by the grand total.",
+      "explanation": "The correct formula for calculating expected frequencies in a chi-square test involves multiplying the row total by the column total and then dividing by the grand total. The other options do not accurately describe the method for calculating expected frequencies.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests knowledge of calculating expected frequencies in chi-square analysis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of chi-square calculations.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "Expected frequencies are calculated by multiplying the row total by the column total and dividing by the grand total.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "When comparing multiple outcome measures, which statistical test is most appropriate to use?",
+      "options": [
+        "ANOVA",
+        "MANOVA",
+        "t-test",
+        "Chi-square test"
+      ],
+      "answer": "MANOVA",
+      "explanation": "The correct answer is 'MANOVA' because it is specifically designed to handle multiple dependent variables simultaneously, allowing researchers to assess the impact of independent variables on several outcomes at once. ANOVA is limited to one dependent variable, while t-tests and Chi-square tests are not suitable for multiple outcomes.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it pertains to understanding the appropriate statistical tests for analyzing multiple outcomes.",
+      "difficulty": "hard",
+      "quality_comment": "The question challenges the test-taker's understanding of statistical tests.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "MANOVA is used for multiple outcome measures.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "In a repeated measures ANOVA, what is primarily being analyzed?",
+      "options": [
+        "Differences between independent groups",
+        "Differences within the same group over time",
+        "Differences in categorical variables",
+        "Differences in variances"
+      ],
+      "answer": "Differences within the same group over time",
+      "explanation": "The correct answer is 'Differences within the same group over time' because repeated measures ANOVA is specifically designed to analyze data where the same subjects are measured multiple times under different conditions. It contrasts with other tests that compare independent groups or categorical variables.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to understanding the application of repeated measures ANOVA.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests advanced knowledge of statistical methods.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Student's t-Test: Comparing Two Means",
+      "lessonExcerpt": "Repeated measures ANOVA analyzes differences within the same group over time.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What does an F ratio in ANOVA represent?",
+      "options": [
+        "The ratio of between-group variance to within-group variance",
+        "The total variance in the data",
+        "The average of the dependent variable",
+        "The correlation between independent and dependent variables"
+      ],
+      "answer": "The ratio of between-group variance to within-group variance",
+      "explanation": "The correct answer is 'The ratio of between-group variance to within-group variance' because the F ratio is calculated to determine whether the means of different groups are significantly different by comparing the variance explained by the group differences to the variance within the groups. The other options do not accurately describe the F ratio.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to understanding the interpretation of ANOVA results.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests a fundamental aspect of ANOVA.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "The F ratio represents the ratio of between-group variance to within-group variance.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What is the primary purpose of structural equation modeling (SEM) in statistical analysis?",
+      "options": [
+        "To analyze the relationship between two categorical variables",
+        "To test complex relationships among multiple variables simultaneously",
+        "To determine the mean differences between two groups",
+        "To assess the reliability of a measurement scale"
+      ],
+      "answer": "To test complex relationships among multiple variables simultaneously",
+      "explanation": "Structural equation modeling (SEM) is designed to evaluate complex relationships involving multiple variables, allowing researchers to test theoretical models. The other options do not accurately describe the purpose of SEM.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to understanding advanced statistical techniques.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and assesses understanding of advanced statistical methods.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Two Main Families of Statistical Tests",
+      "lessonExcerpt": "Structural equation modeling (SEM) allows researchers to test complex relationships among multiple variables simultaneously.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12
+    }
+  ]
+}

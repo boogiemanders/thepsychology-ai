@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A therapist is conducting aversion therapy with a client who has a fetishistic disorder. In this counterconditioning paradigm, the fetish object (e.g., a specific article of clothing) is repeatedly presented immediately before an aversive stimulus such as a mild electric shock. In classical conditioning terms, the fetish object serves as the:",
+      "options": [
+        "Unconditioned stimulus (US)",
+        "Conditioned stimulus (CS)",
+        "Conditioned response (CR)",
+        "Unconditioned response (UR)"
+      ],
+      "answer": "Conditioned stimulus (CS)",
+      "explanation": "In aversion therapy, the stimuli associated with the problem behavior serve as the conditioned stimulus (CS). The fetish object is a previously learned stimulus that currently elicits a pleasurable response; the goal of aversion therapy is to pair it with an unconditioned stimulus (electric shock, which naturally produces pain/discomfort as the UR) so that the fetish object eventually elicits an aversive conditioned response (CR) instead of pleasure. The unconditioned stimulus (A) is the aversive stimulus itself (shock). The conditioned response (C) is the new aversive reaction to the fetish object after conditioning. The unconditioned response (D) is the natural pain reaction to the shock.",
+      "kn": "KN44",
+      "kn_explanation": "Aversion therapy is a specific treatment technique (counterconditioning paradigm) for a diagnosed disorder, fitting KN44's focus on treatment techniques/interventions and their efficacy.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content which explicitly lists the fetish object as a CS example. Clear, unambiguous answer.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "### Aversion Therapy",
+      "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object). Unconditioned Stimulus (US): Something naturally unpleasant (electric shock, nausea-inducing drug, foul odor).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 30
+    }
+  ]
+}

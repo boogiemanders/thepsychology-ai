@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "According to Sue and Sue's Racial/Cultural Identity Development (R/CID) model, an individual who initially idealized the dominant culture but now actively rejects dominant cultural values and immerses in their own cultural heritage is most likely in which stage?",
+      "options": [
+        "Conformity",
+        "Dissonance",
+        "Resistance and immersion",
+        "Integrative awareness"
+      ],
+      "answer": "Resistance and immersion",
+      "explanation": "In the R/CID model, the resistance and immersion stage is characterized by active rejection of the dominant culture and full embrace of one's own cultural group. Conformity (A) involves preference for dominant cultural values. Dissonance (B) involves conflict and questioning but not yet full rejection. Integrative awareness (D) represents the final stage where the individual develops a balanced appreciation of both their own and other cultures. The active rejection described in the stem is the defining feature of resistance and immersion.",
+      "kn": "KN18",
+      "kn_explanation": "Sue and Sue's R/CID model is a cultural/racial identity development model, fitting cultural and sociopolitical psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of stage progression in a widely tested identity model. Not covered in the provided lesson files.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Atkinson, Morten, and Sue's R/CID Model",
+      "lessonExcerpt": "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model... This is your foundational model. It applies broadly to members of any racial or cultural minority group.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    }
+  ]
+}

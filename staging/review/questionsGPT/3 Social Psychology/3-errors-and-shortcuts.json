@@ -1,0 +1,193 @@
+{
+  "questions": [
+    {
+      "stem": "In a malpractice case, a jury evaluates whether a psychologist should have predicted a client's violent behavior. After learning about the violent outcome, jurors report that the warning signs were 'obvious' and that any competent clinician should have foreseen the danger. This judgment MOST likely reflects which cognitive bias?",
+      "options": [
+        "Confirmation bias",
+        "Base rate fallacy",
+        "Hindsight bias",
+        "Illusory correlation"
+      ],
+      "answer": "Hindsight bias",
+      "explanation": "Hindsight bias is the tendency to believe, after an event occurs, that one could have predicted it. The jurors' belief that warning signs were 'obvious' after knowing the outcome exemplifies this bias. The lesson states hindsight bias is 'the tendency to believe, after an event occurs, that we predicted it would happen (or that we could have predicted it) more than we actually could have or did.' Option A (confirmation bias) involves seeking information that confirms existing beliefs, not retroactive prediction. Option B (base rate fallacy) involves ignoring statistical base rates in favor of case details. Option D (illusory correlation) involves seeing relationships between unrelated variables.",
+      "kn": "KN11",
+      "kn_explanation": "This question applies cognitive biases from social psychology to a forensic/legal context within the Social and Multicultural Bases domain.",
+      "difficulty": "medium",
+      "quality_comment": "Strong applied question linking hindsight bias to a realistic malpractice scenario.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "### Hindsight Bias: I Knew It All Along",
+      "lessonExcerpt": "Hindsight bias is the tendency to believe, after an event occurs, that we predicted it would happen (or that we could have predicted it) more than we actually could have or did.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "In legal judgments, what is the primary effect of hindsight bias?",
+      "options": [
+        "It leads to more accurate predictions of future events.",
+        "It causes individuals to believe outcomes were more predictable than they actually were.",
+        "It enhances the credibility of eyewitness testimonies.",
+        "It reduces the influence of emotional responses on decisions."
+      ],
+      "answer": "It causes individuals to believe outcomes were more predictable than they actually were.",
+      "explanation": "The correct answer is 'It causes individuals to believe outcomes were more predictable than they actually were' because hindsight bias distorts our perception of past events, making them seem more obvious or predictable after they have occurred. 'It leads to more accurate predictions of future events' is incorrect as hindsight bias does not improve predictive accuracy. 'It enhances the credibility of eyewitness testimonies' is misleading, as hindsight bias can actually undermine credibility. 'It reduces the influence of emotional responses on decisions' is false, as hindsight bias can exacerbate emotional responses.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to cognitive biases in decision-making.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and relevant to cognitive biases.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "Hindsight bias leads individuals to believe that outcomes were more predictable than they actually were, distorting their understanding of past events.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following best illustrates the self-serving bias in social cognition?",
+      "options": [
+        "A person attributes their success in a job interview to their skills and preparation.",
+        "A student blames a poor exam score on the difficulty of the questions.",
+        "An athlete credits their victory to their team's support and strategy.",
+        "A musician believes their recent performance was successful due to their talent."
+      ],
+      "answer": "A student blames a poor exam score on the difficulty of the questions.",
+      "explanation": "The self-serving bias involves taking credit for successes (internal attribution) while blaming failures on external factors. The correct answer illustrates this by showing the student attributing their failure to external circumstances (difficulty of questions) rather than their own performance. The other options either attribute success to personal qualities or do not illustrate the bias effectively.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies because it relates to understanding cognitive biases, specifically the self-serving bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of self-serving bias with relevant options.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "What psychological effect is most likely to occur in individuals living in overcrowded environments?",
+      "options": [
+        "Increased feelings of social support and community.",
+        "Heightened levels of stress and anxiety.",
+        "Improved cognitive functioning and creativity.",
+        "Enhanced interpersonal relationships."
+      ],
+      "answer": "Heightened levels of stress and anxiety.",
+      "explanation": "The correct answer reflects research indicating that overcrowding can lead to increased stress and anxiety due to the lack of personal space and increased competition for resources. The other options are generally contrary to the effects of overcrowding.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to environmental psychology and the effects of overcrowding on psychological states.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of environmental psychology.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## Why Your Brain Takes Shortcuts (And How That Shows Up on the EPPP)",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary mechanism through which cognitive dissonance leads to attitude adjustment?",
+      "options": [
+        "Increased awareness of conflicting beliefs.",
+        "Rationalization of behavior to align with beliefs.",
+        "Social comparison with others.",
+        "Emotional regulation strategies."
+      ],
+      "answer": "Rationalization of behavior to align with beliefs.",
+      "explanation": "The correct answer highlights that cognitive dissonance often leads individuals to rationalize their behavior to reduce discomfort, thereby adjusting their attitudes. The other options do not accurately capture the primary mechanism of cognitive dissonance.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to cognitive dissonance theory and its effects on attitude change.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "How can personal bias affect employee evaluations in the workplace?",
+      "options": [
+        "A) It ensures that all employees are evaluated based on objective criteria.",
+        "B) It can lead to favoritism and unfair assessments of employee performance.",
+        "C) It promotes a more diverse workplace by recognizing individual strengths.",
+        "D) It has no significant impact on the evaluation process."
+      ],
+      "answer": "B) It can lead to favoritism and unfair assessments of employee performance.",
+      "explanation": "Option B is correct because personal bias can skew evaluations, leading to favoritism and unfair assessments. Option A is incorrect as bias undermines objectivity. Option C is misleading since bias does not inherently promote diversity. Option D is false; personal bias significantly impacts evaluations.",
+      "kn": "KN3",
+      "kn_explanation": "This question relates to bias in assessment within workplace psychology.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of the implications of personal bias in evaluations.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "Personal bias can lead to favoritism and unfair assessments of employee performance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "What is the term for the bias where individuals attribute hostile intentions to others, often leading to negative social perceptions?",
+      "options": [
+        "Hostility attribution bias",
+        "Fundamental attribution error",
+        "Self-serving bias",
+        "Actor-observer effect"
+      ],
+      "answer": "Hostility attribution bias",
+      "explanation": "Hostility attribution bias refers to the tendency to perceive others' actions as having hostile intent, which can lead to negative social perceptions and interactions. The fundamental attribution error involves misattributing behavior to personality rather than situational factors, while self-serving bias relates to personal success and failure attributions. The actor-observer effect describes the tendency to attribute one's own actions to situational factors while attributing others' actions to their character.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding social perception and biases in interpreting others' behaviors.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of social perception biases.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "Hostility attribution bias refers to the tendency to perceive others' actions as having hostile intent.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which cognitive bias is primarily responsible for individuals who believe in astrology focusing on information that confirms their beliefs while ignoring contradictory evidence?",
+      "options": [
+        "Availability heuristic",
+        "Confirmation bias",
+        "Fundamental attribution error",
+        "Self-serving bias"
+      ],
+      "answer": "Confirmation bias",
+      "explanation": "Confirmation bias is the tendency to seek out and pay attention to information that confirms existing beliefs while ignoring information that contradicts them. The availability heuristic refers to making judgments based on readily available information, while the fundamental attribution error involves overestimating personality factors in others' behaviors. The self-serving bias pertains to attributing successes to oneself and failures to external factors. Therefore, confirmation bias is the correct answer as it directly relates to the belief in astrology.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to cognitive biases in social psychology.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality question that tests understanding of cognitive biases.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "### Confirmation Bias: Your Brain's Echo Chamber",
+      "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What cognitive bias is illustrated by the halo effect in social perception?",
+      "options": [
+        "Overgeneralization",
+        "Confirmation bias",
+        "Self-serving bias",
+        "Attribution error"
+      ],
+      "answer": "Attribution error",
+      "explanation": "Attribution error is the correct answer as the halo effect involves making assumptions about someone's character based on a single positive trait, leading to biased evaluations. The other options do not specifically capture this cognitive bias.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to social psychology and cognitive biases in social perception.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of cognitive biases and their implications in social perception.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "The halo effect illustrates an attribution error where positive traits lead to biased evaluations of character.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    }
+  ]
+}

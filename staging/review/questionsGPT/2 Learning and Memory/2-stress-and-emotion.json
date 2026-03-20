@@ -1,0 +1,446 @@
+{
+  "questions": [
+    {
+      "stem": "What is the primary effect of job enrichment on workers according to motivation theories?",
+      "options": [
+        "Increases job dissatisfaction.",
+        "Decreases employee turnover.",
+        "Reduces the need for training.",
+        "Enhances intrinsic motivation."
+      ],
+      "answer": "Enhances intrinsic motivation.",
+      "explanation": "Job enrichment is designed to enhance intrinsic motivation by providing employees with more meaningful work, greater autonomy, and opportunities for personal growth. The other options do not accurately reflect the primary outcomes associated with job enrichment.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to motivation theories and their implications for worker satisfaction and performance.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of job enrichment and its motivational impact.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Job enrichment is designed to enhance intrinsic motivation by providing employees with more meaningful work.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which of the following factors is most likely to influence goal achievement according to goal-setting theory?",
+      "options": [
+        "The complexity of the goal.",
+        "The level of intrinsic motivation.",
+        "The presence of external rewards.",
+        "The specificity of the goal."
+      ],
+      "answer": "The specificity of the goal.",
+      "explanation": "Goal-setting theory emphasizes that specific and challenging goals lead to higher performance compared to vague or easy goals. While intrinsic motivation and external rewards can play roles, specificity is a key factor in achieving goals.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to goal-setting theory and the factors that influence the achievement of goals.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of goal-setting theory.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Specific and challenging goals lead to higher performance compared to vague or easy goals.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "How does performance distribution affect an individual's perception of their capability?",
+      "options": [
+        "It has no impact on self-perception.",
+        "It influences self-efficacy based on social comparisons.",
+        "It leads to increased anxiety about performance.",
+        "It decreases motivation to improve."
+      ],
+      "answer": "It influences self-efficacy based on social comparisons.",
+      "explanation": "Performance distribution can affect how individuals perceive their capabilities, particularly through social comparison processes, which can enhance or diminish self-efficacy. The other options do not accurately capture the relationship between performance distribution and self-perception.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to social perception and how performance influences self-efficacy.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of social perception and self-efficacy.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Performance distribution can affect how individuals perceive their capabilities, particularly through social comparison processes.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "According to equity theory, how does perceived fairness affect work effort?",
+      "options": [
+        "It has no impact on motivation.",
+        "It increases effort when individuals feel under-rewarded.",
+        "It decreases effort when individuals feel over-rewarded.",
+        "It influences effort based on perceived fairness compared to others."
+      ],
+      "answer": "It influences effort based on perceived fairness compared to others.",
+      "explanation": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others. If they perceive inequity, it can lead to changes in effort. The other options do not accurately reflect the principles of equity theory.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to motivation theories and the impact of perceived equity on work behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of equity theory and its implications for work effort.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Chronic exposure to stress is most likely to result in which of the following outcomes?",
+      "options": [
+        "Increased cognitive flexibility",
+        "Enhanced immune function",
+        "Deterioration of hippocampal neurons",
+        "Improved emotional regulation"
+      ],
+      "answer": "Deterioration of hippocampal neurons",
+      "explanation": "Chronic stress can lead to damage in the hippocampus, affecting memory and learning. The other options are incorrect as chronic stress typically impairs cognitive flexibility, immune function, and emotional regulation.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to the effects of chronic stress exposure.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses understanding of chronic stress effects.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "chronic stress and elevated cortisol can actually damage hippocampal neurons, leading to memory problems.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "According to the James-Lange theory of emotion, which of the following statements is true?",
+      "options": [
+        "Emotions are experienced before physiological changes occur.",
+        "Physiological changes occur and then lead to emotional experiences.",
+        "Emotions are solely based on cognitive appraisal.",
+        "Physiological responses have no impact on emotional experiences."
+      ],
+      "answer": "Physiological changes occur and then lead to emotional experiences.",
+      "explanation": "The James-Lange theory posits that physiological responses precede and inform emotional experiences. The other options misrepresent the theory's core premise.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to understanding emotion theories.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of emotion theories.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "The James-Lange theory posits that physiological responses precede and inform emotional experiences.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "In the context of motivation theories, what does the learned helplessness model primarily explain?",
+      "options": [
+        "The impact of rewards on behavior.",
+        "The effects of uncontrollable events on motivation and behavior.",
+        "The role of cognitive appraisal in emotional responses.",
+        "The influence of social factors on motivation."
+      ],
+      "answer": "The effects of uncontrollable events on motivation and behavior.",
+      "explanation": "The learned helplessness model illustrates how repeated exposure to uncontrollable events can lead to a lack of motivation and passivity. The other options do not accurately capture the essence of this model.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding motivation theories.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of motivation theories.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "The learned helplessness model illustrates how repeated exposure to uncontrollable events can lead to a lack of motivation and passivity.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Expectancy in motivational theories primarily refers to which of the following?",
+      "options": [
+        "The belief that one can achieve a desired outcome.",
+        "The anticipation of negative consequences.",
+        "The expectation of external rewards.",
+        "The understanding of social norms."
+      ],
+      "answer": "The belief that one can achieve a desired outcome.",
+      "explanation": "Expectancy in motivational theories is about the belief in one's ability to achieve goals, which influences motivation. The other options do not accurately reflect the concept of expectancy.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it pertains to understanding motivational theories.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of expectancy in motivation.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "Expectancy in motivational theories is about the belief in one's ability to achieve goals.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "According to the Yerkes-Dodson law, what is the relationship between arousal and performance in decision-making tasks?",
+      "options": [
+        "Higher arousal always leads to better performance",
+        "There is an optimal level of arousal for peak performance",
+        "Arousal has no effect on performance",
+        "Performance decreases as arousal increases"
+      ],
+      "answer": "There is an optimal level of arousal for peak performance",
+      "explanation": "The correct answer is 'There is an optimal level of arousal for peak performance' because the Yerkes-Dodson law posits that performance improves with arousal up to a certain point, after which it can decline. The other options are incorrect as they misrepresent the relationship outlined by the law.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to arousal theory and its impact on decision-making.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a nuanced understanding of the Yerkes-Dodson law.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "The Yerkes-Dodson law posits that performance improves with arousal up to a certain point, after which it can decline.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What does the diathesis-stress model suggest about the development of mental illness?",
+      "options": [
+        "Mental illness is solely caused by environmental factors",
+        "Genetic predisposition interacts with stressors to trigger mental illness",
+        "Mental illness is only a result of biological factors",
+        "Stress alone is sufficient to cause mental illness"
+      ],
+      "answer": "Genetic predisposition interacts with stressors to trigger mental illness",
+      "explanation": "The correct answer is 'Genetic predisposition interacts with stressors to trigger mental illness' because the diathesis-stress model posits that both genetic vulnerabilities and environmental stressors contribute to the onset of mental disorders. The other options are incorrect as they oversimplify the causes of mental illness.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to psychopathology and the understanding of mental illness development.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of a complex model in psychopathology.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "The diathesis-stress model posits that both genetic vulnerabilities and environmental stressors contribute to the onset of mental disorders.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which of the following stages is NOT part of Kubler-Ross's stages of grief?",
+      "options": [
+        "Denial",
+        "Anger",
+        "Bargaining",
+        "Acceptance",
+        "Resilience"
+      ],
+      "answer": "Resilience",
+      "explanation": "The correct answer is E because resilience is not one of the stages in Kubler-Ross's model of grief. The other options are all recognized stages of grief. Option A is incorrect as denial is a stage. Option B is incorrect as anger is a stage. Option C is incorrect as bargaining is a stage. Option D is incorrect as acceptance is a stage.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to grief theory and the stages of grief.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of grief stages.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "This structure helps you remember where and when something emotional happened.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "According to the two-factor theory of emotion, which two components are essential for the experience of emotion?",
+      "options": [
+        "Physiological arousal and cognitive labeling",
+        "Cognitive appraisal and emotional expression",
+        "Behavioral response and physiological arousal",
+        "Cognitive labeling and emotional suppression"
+      ],
+      "answer": "Physiological arousal and cognitive labeling",
+      "explanation": "The two-factor theory of emotion posits that emotion is based on physiological arousal followed by cognitive labeling of that arousal. The other options do not accurately reflect the components of this theory.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding the mechanisms behind emotional experiences.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of a foundational theory in emotion psychology.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "Understanding these mechanisms will make you a better clinician who can explain to clients why their heart races before presentations.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "Research indicates that men and women may exhibit different leadership styles. Which of the following is a commonly observed difference?",
+      "options": [
+        "Men are more likely to use transformational leadership",
+        "Women are more likely to adopt a democratic leadership style",
+        "Men are more likely to use a participative approach",
+        "Women are more likely to use an authoritarian style"
+      ],
+      "answer": "Women are more likely to adopt a democratic leadership style",
+      "explanation": "Research has shown that women tend to adopt a more democratic or participative leadership style, which contrasts with the more autocratic styles often associated with men. The other options do not accurately reflect the common findings in leadership research.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding gender differences in leadership styles.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of gender differences in leadership.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "This structure helps you remember where and when something emotional happened.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "In educational settings, which of the following non-verbal communication cues is most likely to enhance student learning?",
+      "options": [
+        "Eye contact",
+        "Crossed arms",
+        "Looking at the floor",
+        "Fidgeting"
+      ],
+      "answer": "Eye contact",
+      "explanation": "Eye contact is a powerful non-verbal communication cue that can enhance engagement and learning in educational settings. Crossed arms, looking at the floor, and fidgeting are generally associated with disinterest or anxiety, which can detract from learning.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it pertains to understanding non-verbal communication in teaching.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of effective communication in education.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "This is your immediate response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which behavior is most likely to be influenced by high achievement motivation?",
+      "options": [
+        "Avoiding challenging tasks to prevent failure",
+        "Seeking out difficult tasks to demonstrate competence",
+        "Preferring tasks with minimal effort",
+        "Choosing tasks based on peer approval"
+      ],
+      "answer": "Seeking out difficult tasks to demonstrate competence",
+      "explanation": "High achievement motivation typically drives individuals to seek out challenging tasks that allow them to demonstrate their competence and skills. The other options reflect avoidance or external validation rather than intrinsic motivation to achieve.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding motivation theories, specifically achievement motivation.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of achievement motivation.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "In auditory tasks, what is the primary function of selective attention?",
+      "options": [
+        "To enhance memory retention of all auditory stimuli",
+        "To filter out irrelevant sounds and focus on specific information",
+        "To increase the volume of important sounds",
+        "To improve the clarity of background noise"
+      ],
+      "answer": "To filter out irrelevant sounds and focus on specific information",
+      "explanation": "Selective attention allows individuals to focus on specific auditory information while filtering out irrelevant sounds, which is crucial for effective communication and comprehension. The other options do not accurately describe the function of selective attention.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding attention processes, specifically selective attention.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively tests knowledge of auditory attention.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "This structure processes interoceptive awareness. Your perception of internal bodily states.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "Which factor is most commonly associated with job satisfaction according to motivation theories?",
+      "options": [
+        "Salary and benefits",
+        "Opportunities for advancement",
+        "Work-life balance",
+        "Recognition and appreciation"
+      ],
+      "answer": "Recognition and appreciation",
+      "explanation": "Recognition and appreciation are often highlighted as key factors in job satisfaction, as they contribute to an individual's sense of value and belonging in the workplace. While salary, advancement, and work-life balance are important, they do not universally lead to job satisfaction as effectively as recognition.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding motivation theories, specifically job satisfaction.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of job satisfaction factors.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "According to equity theory, what motivates individuals to maintain their level of effort in a workplace?",
+      "options": [
+        "Perceived fairness in rewards compared to others",
+        "Personal ambition to excel",
+        "Desire for recognition from peers",
+        "Fear of job loss"
+      ],
+      "answer": "Perceived fairness in rewards compared to others",
+      "explanation": "Equity theory posits that individuals are motivated to maintain their effort based on their perception of fairness in the distribution of rewards compared to others. The other options do not directly relate to the core principle of equity theory.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding motivation theories, specifically equity theory.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of equity theory.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What is the impact of extrinsic rewards on intrinsic motivation according to motivation research?",
+      "options": [
+        "They always enhance intrinsic motivation",
+        "They can undermine intrinsic motivation",
+        "They have no effect on intrinsic motivation",
+        "They are more effective than intrinsic rewards"
+      ],
+      "answer": "They can undermine intrinsic motivation",
+      "explanation": "Research indicates that extrinsic rewards can sometimes undermine intrinsic motivation, particularly if the rewards are perceived as controlling or if they shift the focus away from the inherent enjoyment of the activity. The other options do not accurately reflect the nuanced relationship between extrinsic and intrinsic motivation.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding motivation research, specifically the relationship between extrinsic and intrinsic motivation.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests specific knowledge of motivation research.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "According to the James-Lange theory of emotion, how do individuals experience emotions?",
+      "options": [
+        "Emotions are experienced simultaneously with physiological responses.",
+        "Physiological responses occur first, followed by the emotional experience.",
+        "Emotions are purely cognitive evaluations of situations.",
+        "Emotions are learned responses to environmental stimuli."
+      ],
+      "answer": "Physiological responses occur first, followed by the emotional experience.",
+      "explanation": "The James-Lange theory posits that physiological arousal precedes the emotional experience; thus, the correct answer reflects this sequence. The first option is incorrect because it suggests simultaneous experience, while the third and fourth options misrepresent the theory's focus on physiological responses as the basis for emotions.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to the understanding of emotion theories, specifically the James-Lange theory.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of a foundational emotion theory.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "The James-Lange theory of emotion states that physiological responses occur first, followed by the emotional experience.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following components is NOT part of Lazarus's emotion theory?",
+      "options": [
+        "Cognitive appraisal",
+        "Physiological response",
+        "Emotional regulation",
+        "Coping strategies"
+      ],
+      "answer": "Physiological response",
+      "explanation": "Lazarus's emotion theory emphasizes cognitive appraisal and coping strategies as central components, while physiological responses are not a focus of his model. The other options are integral to understanding how emotions are processed and managed according to Lazarus.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it pertains to the components of emotion and coping as outlined in Lazarus's theory.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively distinguishes between components of Lazarus's theory and common physiological responses.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "Lazarus's emotion theory includes cognitive appraisal and coping strategies, but not physiological response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    }
+  ]
+}

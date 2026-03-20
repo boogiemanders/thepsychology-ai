@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A researcher is using Test X to predict scores on a criterion measure. The criterion measure has a standard deviation of 10. If the validity coefficient between the predictor and criterion is .00, what would the standard error of estimate equal?",
+      "options": [
+        "0",
+        "5",
+        "10",
+        "It cannot be determined without knowing the predictor's standard deviation"
+      ],
+      "answer": "10",
+      "explanation": "The standard error of estimate is calculated as: SEE = SD of criterion × √(1 - r²). When the validity coefficient (r) equals .00, the formula becomes: SEE = 10 × √(1 - 0) = 10 × √1 = 10 × 1 = 10. This means the SEE equals the full standard deviation of the criterion, reflecting maximum prediction error. The lesson explicitly states: 'The standard error ranges from 0 (when r = ±1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).' Option A (0) would only occur with perfect validity. Option B (5) has no basis. Option D is incorrect because the formula only requires the criterion SD and validity coefficient, not the predictor's SD.",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of estimate, validity coefficients, and criterion prediction are core psychometric/test characteristics concepts.",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests the conceptual relationship described in the lesson between SEE, criterion SD, and validity coefficient with a clear computational example.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Predicting Individual Scores: Standard Error of Estimate",
+      "lessonExcerpt": "The standard error ranges from 0 (when r = ±1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A psychologist is using a screening instrument for alcohol use disorder in a primary care setting. The current cutoff score produces high specificity but low sensitivity. If the psychologist LOWERS the cutoff score, which of the following outcomes is MOST likely?",
+      "options": [
+        "Both true positives and false positives will increase",
+        "True positives will increase while false positives will decrease",
+        "Both true negatives and false negatives will increase",
+        "Sensitivity will decrease while specificity will increase"
+      ],
+      "answer": "Both true positives and false positives will increase",
+      "explanation": "Lowering the cutoff score makes it easier to 'pass' (test positive), which means more people are selected/identified. According to the lesson, lowering the cutoff results in: 'More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives, Fewer false negatives.' This increases sensitivity (catching more people with the disorder) but decreases specificity (more false alarms). Option B is wrong because false positives increase, not decrease. Option C is wrong because both true negatives and false negatives decrease. Option D describes raising the cutoff, not lowering it.",
+      "kn": "KN5",
+      "kn_explanation": "This question addresses classification accuracy and the effects of adjusting predictor cutoff scores on sensitivity and specificity, a key test construction concept.",
+      "difficulty": "hard",
+      "quality_comment": "Strong application question requiring understanding of how cutoff score adjustments affect the four classification categories and sensitivity/specificity trade-offs.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "### Understanding Cutoff Score Effects",
+      "lessonExcerpt": "Lowering the cutoff (making it easier to 'pass'): More people selected, More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives (reject fewer people correctly), Fewer false negatives (miss fewer good candidates).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    }
+  ]
+}

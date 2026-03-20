@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "stem": "An industrial-organizational psychologist is consulting with a company that wants to add a new cognitive ability test to its hiring process. Using the Taylor-Russell tables, she finds that the test's incremental validity will be maximized when the company has:",
+      "options": [
+        "A high base rate, high selection ratio, and high validity coefficient",
+        "A moderate base rate, low selection ratio, and a moderate-to-high validity coefficient",
+        "A low base rate, high selection ratio, and high validity coefficient",
+        "A high base rate, low selection ratio, and low validity coefficient"
+      ],
+      "answer": "A moderate base rate, low selection ratio, and a moderate-to-high validity coefficient",
+      "explanation": "The Taylor-Russell tables estimate hiring success improvement based on three variables: validity coefficient, selection ratio, and base rate. A moderate base rate (~.50) provides the most room for improvement. A low selection ratio (being highly selective) amplifies even modest validity. A higher validity coefficient always helps. Option A is wrong because a high base rate means the current system already works well, leaving little room for improvement. Option C is wrong because a low base rate suggests systemic problems beyond selection, and a high selection ratio means you're hiring almost everyone, minimizing the test's impact. Option D is wrong because a low validity coefficient provides minimal predictive value.",
+      "kn": "KN29",
+      "kn_explanation": "Adding a cognitive ability test to hiring involves test construction, standardization, validity, and test fairness/bias considerations",
+      "difficulty": "hard",
+      "quality_comment": "Integrates all three Taylor-Russell variables into a single application question requiring conceptual understanding.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "### The Taylor-Russell Tables: Putting It All Together",
+      "lessonExcerpt": "The Taylor-Russell tables let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A company receives 200 applications from White candidates and hires 80 (40% hiring rate), and receives 100 applications from Hispanic candidates and hires 28 (28% hiring rate). According to the four-fifths rule outlined in the Uniform Guidelines on Employee Selection Procedures, this hiring pattern:",
+      "options": [
+        "Does not indicate adverse impact because both groups had candidates hired",
+        "Indicates adverse impact because 28% ÷ 40% = .70, which is below the .80 threshold",
+        "Does not indicate adverse impact because the hiring rate difference is less than 20 percentage points",
+        "Cannot be evaluated for adverse impact without knowing the validity coefficient of the selection procedure"
+      ],
+      "answer": "Indicates adverse impact because 28% ÷ 40% = .70, which is below the .80 threshold",
+      "explanation": "The four-fifths (80%) rule states that adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group. Here, 28% ÷ 40% = .70, which is below .80, indicating adverse impact. Option A is wrong because simply hiring some members of both groups does not preclude adverse impact. Option C incorrectly uses a raw percentage point difference rather than the ratio. Option D is wrong because the four-fifths rule is a statistical test applied to hiring rates independent of validity — though validity may be used as a defense after adverse impact is established.",
+      "kn": "KN29",
+      "kn_explanation": "Comparing hiring rates across racial groups is about adverse impact analysis, which falls under test fairness and bias",
+      "difficulty": "medium",
+      "quality_comment": "Requires application of the four-fifths rule calculation to a novel scenario with realistic numbers.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "### The 80% Rule (Four-Fifths Rule)",
+      "lessonExcerpt": "Adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "An I-O psychologist introduces a new cognitive ability test (validity coefficient = .35) to a company's hiring process. According to the Taylor-Russell tables, under which combination of conditions will this test produce the GREATEST incremental validity?",
+      "options": [
+        "Base rate of .50 and selection ratio of .10",
+        "Base rate of .80 and selection ratio of .10",
+        "Base rate of .50 and selection ratio of .90",
+        "Base rate of .80 and selection ratio of .90"
+      ],
+      "answer": "Base rate of .50 and selection ratio of .10",
+      "explanation": "The Taylor-Russell tables show that incremental validity is maximized when the base rate is moderate (around .50, providing maximum room for improvement) and the selection ratio is low (like .10, meaning the organization is highly selective). A high base rate (.80) means the current system already works well, leaving little room for improvement. A high selection ratio (.90) means almost everyone is hired, reducing the test's ability to differentiate. The lesson demonstrates that with a base rate of .50, validity of .30, and selection ratio of .10, success increases to 71% (a 21% improvement), but with a selection ratio of .90, improvement is only 3%.",
+      "kn": "KN5",
+      "kn_explanation": "Taylor-Russell tables and incremental validity are core test construction/personnel selection concepts in the Assessment domain",
+      "difficulty": "hard",
+      "quality_comment": "Requires integrating understanding of both base rate and selection ratio effects on incremental validity from the Taylor-Russell framework",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "### The Taylor-Russell Tables: Putting It All Together",
+      "lessonExcerpt": "Current base rate: .50... New predictor's validity coefficient: .30... Selection ratio: .10... Result: Adding the new predictor increases success rate to 71%, a 21% improvement! But change the selection ratio to .90... and that same predictor only increases success to 53%. Barely a 3% improvement.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    }
+  ]
+}

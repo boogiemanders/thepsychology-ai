@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "An HIV prevention program targets at-risk young adults by presenting information showing that the majority of their peers practice safe sex behaviors. This intervention strategy is most directly based on which of the following?",
+      "options": [
+        "The health belief model's emphasis on perceived susceptibility",
+        "The influence of descriptive social norms on behavior",
+        "Classical conditioning of fear responses to risky behavior",
+        "The elaboration likelihood model's central route to persuasion"
+      ],
+      "answer": "The influence of descriptive social norms on behavior",
+      "explanation": "Descriptive social norms refer to perceptions of what most people actually do. Presenting data that peers practice safe sex leverages descriptive norms to influence behavior change. The health belief model's perceived susceptibility (A) focuses on personal risk perception, not peer behavior. Classical conditioning (C) would involve pairing stimuli, not presenting normative information. The elaboration likelihood model's central route (D) involves effortful processing of argument quality, not normative influence.",
+      "kn": "KN16",
+      "kn_explanation": "Using social norms (peer behavior) to influence behavior is a persuasion/social influence technique, fitting group and systems processes.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant question combining social norms with health behavior. The lesson on attitudes mentions subjective norms in the Theory of Planned Behavior but does not specifically address HIV prevention or descriptive norms.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Theory of Planned Behavior",
+      "lessonExcerpt": "Subjective norms: What you believe others think you should do.",
+      "needsReview": true,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    }
+  ]
+}

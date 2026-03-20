@@ -1,0 +1,277 @@
+{
+  "questions": [
+    {
+      "stem": "A graduate student in a forensic psychology program obtains a copy of a widely used intelligence test and posts several test items on a professional forum to discuss scoring controversies. Which of the following BEST describes the ethical and legal status of this action?",
+      "options": [
+        "This is ethically acceptable because the purpose is educational and promotes professional discussion",
+        "This is ethically acceptable as long as the student removes the items if the test publisher requests it",
+        "This violates ethical standards regarding test security because distributing secure test materials undermines test integrity",
+        "This is only a violation if the student profits financially from distributing the materials"
+      ],
+      "answer": "This violates ethical standards regarding test security because distributing secure test materials undermines test integrity",
+      "explanation": "Standard 9.11 requires psychologists to make reasonable efforts to maintain the integrity and security of test materials. Posting actual test items from a secure, copyrighted instrument on a public or semi-public forum compromises test security and potentially violates copyright law. Once test items are exposed, the validity of the measure is threatened for all future examinees. Option A is wrong because educational purpose does not override the obligation to maintain test security. Option B is wrong because the ethical violation occurs at the point of distribution, not only if the publisher objects. Option D is wrong because the prohibition on distributing secure test materials applies regardless of financial gain.",
+      "kn": "KN62",
+      "kn_explanation": "Posting test items violates professional standards for test security (Standards for Educational and Psychological Testing)",
+      "difficulty": "medium",
+      "quality_comment": "Good scenario testing test security principles. Lesson content on Standards 9-10 is truncated before explicitly covering test security provisions.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "Standard 9.07 is straightforward: don't let unqualified people use psychological assessment techniques.",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "An attorney requests that Dr. Nguyen release raw test data from a neuropsychological evaluation of a client involved in a personal injury lawsuit. The client has signed a valid release authorizing disclosure to the attorney. According to APA ethical standards, Dr. Nguyen should:",
+      "options": [
+        "Release the raw test data directly to the attorney as requested since the client provided authorization",
+        "Refuse to release raw test data under any circumstances because attorneys are not qualified to interpret the data",
+        "Release the raw test data as directed by the client's authorization, but may limit the release to protect the client from substantial harm if appropriate",
+        "Release only a summary report and refuse to release raw data regardless of the client's authorization"
+      ],
+      "answer": "Release the raw test data as directed by the client's authorization, but may limit the release to protect the client from substantial harm if appropriate",
+      "explanation": "Standard 9.04 addresses the release of test data. When a client provides a valid release, psychologists are generally required to provide test data to the designated party. However, the standard also recognizes that psychologists may withhold data if release would cause 'substantial harm' to the client or others, or if the data would be misused. This creates a nuanced obligation—comply with the authorization while exercising professional judgment about potential harm. Option A is wrong because it ignores the psychologist's discretion to limit release when substantial harm is a concern. Option B is wrong because an absolute refusal violates the client's authorization rights under the standard. Option D is wrong because psychologists cannot categorically refuse to release raw data when a valid authorization exists.",
+      "kn": "KN63",
+      "kn_explanation": "Release of raw test data in response to legal/attorney request involves laws and judicial decisions affecting practice",
+      "difficulty": "hard",
+      "quality_comment": "Tests the nuanced balance between client authorization and professional judgment on test data release. Lesson content is truncated before this specific standard.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "Standards 9 and 10 of the APA Ethics Code aren't just exam fodder. They're your roadmap for handling assessments and therapy relationships without accidentally causing harm or losing your license.",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Dr. Nguyen terminated therapy with a client two and a half years ago. The therapy lasted 18 months and focused on the client's severe childhood trauma and attachment difficulties. The former client has now asked Dr. Nguyen on a date. According to APA Standard 10.08, what is the most accurate statement about this situation?",
+      "options": [
+        "The two-year waiting period has passed, so Dr. Nguyen may freely pursue the relationship",
+        "Sexual intimacies with former clients are permanently and absolutely prohibited under all circumstances",
+        "Although the two-year minimum has passed, the nature, duration, and intensity of the therapy make this relationship almost certainly unethical, and Dr. Nguyen bears the burden of proving it is not exploitative",
+        "Dr. Nguyen may pursue the relationship only after obtaining a formal ethics consultation documenting approval"
+      ],
+      "answer": "Although the two-year minimum has passed, the nature, duration, and intensity of the therapy make this relationship almost certainly unethical, and Dr. Nguyen bears the burden of proving it is not exploitative",
+      "explanation": "Standard 10.08 prohibits sexual intimacies with former clients for at least two years and states they are still prohibited after two years except in 'the most unusual circumstances,' with the psychologist bearing the burden of proof. The factors to evaluate include time since termination, nature/duration/intensity of therapy, circumstances of termination, client's personal history and mental status, and likelihood of adverse impact. Here, the long-duration, trauma-focused therapy creates a high-risk situation. Option A ignores that the two-year period is a minimum, not a green light. Option B is technically incorrect—the standard does allow for 'most unusual circumstances.' Option D fabricates a consultation approval requirement not in the standard.",
+      "kn": "KN64",
+      "kn_explanation": "Post-termination sexual/dual relationship is identification and management of potential ethical issues",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that tests understanding of the nuance beyond the two-year rule, including the burden-of-proof requirement.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "### Sexual Intimacies: Absolute Boundaries",
+      "lessonExcerpt": "No sexual intimacies with former clients for at least two years after termination. After two years, it's still prohibited except in the 'most unusual circumstances,' and you bear the burden of proving the relationship isn't exploitative.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A psychologist receives a request from another provider to release treatment records for a client she treated 12 years ago. The records contain assessment results from a test version that has since been replaced by a newer edition with updated norms. What is the MOST appropriate course of action?",
+      "options": [
+        "Refuse to release the records because the test results are obsolete and could be misleading",
+        "Release the records but include a notation that the test results may be outdated for current purposes and describe relevant limitations",
+        "Re-administer the current version of the test before releasing any information",
+        "Release only the treatment notes and withhold all test data from the old records"
+      ],
+      "answer": "Release the records but include a notation that the test results may be outdated for current purposes and describe relevant limitations",
+      "explanation": "Standards 9.08(a) and (b) prohibit using outdated or obsolete test results 'for the current purpose,' which means the context matters. The psychologist should release the records as requested (clients and their authorized representatives are generally entitled to their records) but should note that the test results may be outdated and describe the limitations. Option A is incorrect because the psychologist cannot simply refuse to release records that belong to the client; the obligation is to note limitations. Option C is incorrect because re-administering a test is not required or always appropriate when releasing old records. Option D is incorrect because selectively withholding test data without justification is not appropriate.",
+      "kn": "KN63",
+      "kn_explanation": "Record retention period and release obligations involve laws and statutes governing psychological practice",
+      "difficulty": "hard",
+      "quality_comment": "Good integrative question combining record release with outdated test concerns. The lesson covers outdated tests but doesn't explicitly address releasing old records with outdated results to another provider.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "### Outdated vs. Obsolete: A Nuanced Decision",
+      "lessonExcerpt": "Standards 9.08(a) and (b) prohibit using test results or tests that are outdated or obsolete 'for the current purpose.' That last part is crucial. It's context-dependent.",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 28
+    },
+    {
+      "stem": "What ethical consideration must psychologists address when conducting research involving individuals with conservators?",
+      "options": [
+        "Informed consent must be obtained from the conservator.",
+        "Participants do not need to provide consent.",
+        "Only the conservator's consent is required.",
+        "Informed consent is not necessary if the research is beneficial."
+      ],
+      "answer": "Informed consent must be obtained from the conservator.",
+      "explanation": "When conducting research involving individuals with conservators, it is essential to obtain informed consent from the conservator to ensure ethical standards are met. Participants themselves may not be able to provide consent.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it relates to research ethics involving vulnerable populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of ethical research practices.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "### Getting Institutional Approval",
+      "lessonExcerpt": "You must obtain informed consent from participants.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "What is a critical ethical consideration for psychologists working in forensic settings?",
+      "options": [
+        "Psychologists should avoid any involvement with legal cases.",
+        "Psychologists must ensure they maintain objectivity and competence.",
+        "Psychologists can prioritize their personal beliefs over professional standards.",
+        "Psychologists should only work with clients they personally agree with."
+      ],
+      "answer": "Psychologists must ensure they maintain objectivity and competence.",
+      "explanation": "The correct answer highlights the necessity for psychologists to uphold objectivity and competence in forensic settings, which is a key ethical requirement. The lesson emphasizes the importance of these qualities in forensic work. The other options misrepresent ethical obligations and suggest unprofessional conduct.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it pertains to competence in forensic psychology and the ethical standards that govern it.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests critical understanding of forensic ethics.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
+      "lessonExcerpt": "Psychologists must ensure they maintain objectivity and competence in forensic settings.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "In custody cases, what is an ethical obligation of psychologists who testify?",
+      "options": [
+        "To advocate for the parent they believe is best for the child.",
+        "To provide objective and unbiased testimony based on their evaluations.",
+        "To prioritize the interests of the court over the child's welfare.",
+        "To only testify if they have a personal connection to the case."
+      ],
+      "answer": "To provide objective and unbiased testimony based on their evaluations.",
+      "explanation": "The correct answer emphasizes the ethical obligation to provide objective and unbiased testimony, which is crucial in custody cases. The lesson supports this by stating that psychologists must maintain objectivity in their professional roles. The other options misrepresent the ethical responsibilities of psychologists in these situations.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it pertains to ethical obligations when testifying in custody cases.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of ethical obligations in legal testimony.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
+      "lessonExcerpt": "Psychologists must provide objective and unbiased testimony based on their evaluations in custody cases.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "In research involving minors, what is a critical component of obtaining informed consent?",
+      "options": [
+        "Only the parents need to provide consent for the minor's participation.",
+        "The minor must be informed about the research in an age-appropriate manner and assent to participate.",
+        "Informed consent is not necessary if the research poses minimal risk.",
+        "The researcher can proceed without consent if they believe the research is beneficial."
+      ],
+      "answer": "The minor must be informed about the research in an age-appropriate manner and assent to participate.",
+      "explanation": "The correct answer emphasizes the importance of obtaining assent from minors, in addition to parental consent, ensuring that the minor understands the research. The other options either neglect the minor's role in consent or misinterpret the requirements.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to informed consent in research involving vulnerable populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of informed consent processes in research.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "In cases where there is a risk of imminent harm, what is a psychologist's duty to warn?",
+      "options": [
+        "To inform the potential victim of the threat.",
+        "To maintain confidentiality and not disclose any information.",
+        "To seek legal advice before taking any action.",
+        "To document the threat but take no further action."
+      ],
+      "answer": "To inform the potential victim of the threat.",
+      "explanation": "The correct answer reflects the psychologist's ethical and legal obligation to warn potential victims of imminent harm. The other options either neglect this duty or suggest inappropriate inaction.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it relates to confidentiality exceptions and duty to warn.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ethical obligations in cases of imminent harm.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "What is one of the primary goals of the APA's Ethical Principles?",
+      "options": [
+        "To promote financial gain for psychologists.",
+        "To ensure the protection of individuals with whom psychologists work.",
+        "To establish a hierarchy of psychological practices.",
+        "To limit the scope of practice for psychologists."
+      ],
+      "answer": "To ensure the protection of individuals with whom psychologists work.",
+      "explanation": "One of the primary goals of the APA's Ethical Principles is to protect the welfare of individuals involved in psychological services. The other options do not reflect the core mission of the ethical principles.",
+      "kn": "KN9",
+      "kn_explanation": "This question relates to the overarching goals of the APA's Ethical Principles in psychology.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively captures a fundamental goal of the APA's ethical framework.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment",
+      "lessonExcerpt": "The primary goal of the APA's Ethical Principles is to ensure the protection of individuals with whom psychologists work.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What is the appropriate action for a psychologist who witnesses an ethical violation by a colleague?",
+      "options": [
+        "Ignore the violation if it does not directly affect clients.",
+        "Report the violation to the appropriate authorities.",
+        "Confront the colleague directly and demand they correct their behavior.",
+        "Discuss the violation with clients to inform them."
+      ],
+      "answer": "Report the violation to the appropriate authorities.",
+      "explanation": "The appropriate action is to report the violation to ensure accountability and protect clients. Ignoring the violation or discussing it with clients does not address the ethical breach, and confronting the colleague may not be safe or effective.",
+      "kn": "KN10",
+      "kn_explanation": "This question pertains to the ethical obligation to report violations in the field of psychology.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively addresses a critical ethical responsibility for psychologists.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 10: Reporting Ethical Violations",
+      "lessonExcerpt": "Psychologists have an ethical obligation to report violations to the appropriate authorities.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "What ethical considerations must psychologists keep in mind when administering psychological tests?",
+      "options": [
+        "Tests should only be administered if the psychologist is familiar with the client.",
+        "Tests must be used for their intended purpose and with established validity.",
+        "Psychologists can modify tests as they see fit.",
+        "Tests can be administered without supervision."
+      ],
+      "answer": "Tests must be used for their intended purpose and with established validity.",
+      "explanation": "The correct answer emphasizes the ethical obligation to use tests appropriately and based on established research. The other options either suggest unethical practices or misunderstand the requirements for test administration.",
+      "kn": "KN17",
+      "kn_explanation": "This KN code applies as it relates to assessment ethics in the context of psychological testing.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively challenges understanding of ethical testing practices.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "You need enough information to support your conclusions.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What ethical obligation does a psychologist have when testifying as a fact witness?",
+      "options": [
+        "To provide only opinions based on personal beliefs.",
+        "To disclose all information about the client without restrictions.",
+        "To testify truthfully based on their observations and knowledge.",
+        "To advocate for the client's interests during testimony."
+      ],
+      "answer": "To testify truthfully based on their observations and knowledge.",
+      "explanation": "As a fact witness, a psychologist is obligated to provide truthful testimony based on their observations and knowledge, without bias or personal opinion. The other options misrepresent the role and responsibilities of a fact witness.",
+      "kn": "KN29",
+      "kn_explanation": "This KN code applies as it pertains to legal obligations in the context of testifying.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses knowledge of ethical obligations in legal contexts.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "The lesson does not specifically address the obligations of fact witnesses, indicating a gap in coverage.",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29
+    }
+  ]
+}

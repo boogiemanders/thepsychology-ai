@@ -1,0 +1,277 @@
+{
+  "questions": [
+    {
+      "stem": "A neurologist is evaluating a patient who sustained damage to a subcortical structure and now presents with both anterograde and retrograde amnesia, along with disrupted sensory processing. Imaging reveals a lesion in a structure known to relay sensory information to the cortex. Which structure is most likely damaged?",
+      "options": [
+        "Hippocampus",
+        "Thalamus",
+        "Basal ganglia",
+        "Amygdala"
+      ],
+      "answer": "Thalamus",
+      "explanation": "The thalamus serves as the brain's primary sensory relay center, routing nearly all sensory information (except olfaction) to the appropriate cortical areas for processing. The lesson also identifies the thalamus as playing a role in memory processing, with damage causing both anterograde and retrograde amnesia. The hippocampus is critical for consolidating declarative memories but is not a sensory relay center. The basal ganglia are involved in motor control and procedural memory. The amygdala processes emotional significance of memories but does not serve as a sensory relay.",
+      "kn": "KN1",
+      "kn_explanation": "Subcortical damage causing amnesia relates to neurobiological bases of cognition (memory) in disease processes",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported by lesson content from the memory and sleep file, which describes the thalamus as a processing gateway with memory functions.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### The Thalamus: A Processing Gateway",
+      "lessonExcerpt": "The thalamus plays a role in memory processing, and damage here can cause both anterograde amnesia (inability to form new memories) and retrograde amnesia (loss of past memories).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Patient H.M. underwent bilateral removal of the hippocampus and surrounding medial temporal lobe structures to treat intractable seizures. Following surgery, which of the following patterns best characterizes his memory deficits?",
+      "options": [
+        "Inability to form new declarative long-term memories with intact short-term and procedural memory",
+        "Complete loss of all previously formed memories with intact ability to form new memories",
+        "Impairment in both procedural and declarative memory formation with intact remote memories",
+        "Selective loss of emotional memories with preservation of factual recall"
+      ],
+      "answer": "Inability to form new declarative long-term memories with intact short-term and procedural memory",
+      "explanation": "The case of H.M. demonstrated that the hippocampus is essential for consolidating declarative information from short-term to long-term storage. After surgery, H.M. could hold conversations (intact short-term memory) and learn new motor skills (intact procedural memory), but could not form new long-term declarative memories. He did not lose all previously formed memories—his oldest memories remained relatively clear. His procedural memory was intact, not impaired. Emotional memory processing involves the amygdala, and while H.M.'s amygdala was also removed, the hallmark finding was the declarative memory deficit.",
+      "kn": "KN1",
+      "kn_explanation": "H.M. case involves neurobiological bases of memory/cognition following brain lesion",
+      "difficulty": "medium",
+      "quality_comment": "Directly and thoroughly supported by the lesson content describing H.M.'s case in detail.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### The Hippocampus: Your Memory Transfer Agent",
+      "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Patient H.M. underwent bilateral removal of the hippocampus to treat severe seizures. Following surgery, which pattern of memory impairment was observed?",
+      "options": [
+        "Complete inability to form any new memories, including procedural skills",
+        "Inability to form new declarative long-term memories with preserved short-term and procedural memory",
+        "Selective loss of emotional memories with intact episodic and semantic memory",
+        "Loss of all previously stored memories with preserved ability to form new ones"
+      ],
+      "answer": "Inability to form new declarative long-term memories with preserved short-term and procedural memory",
+      "explanation": "The case of H.M. demonstrated that the hippocampus serves as a consolidation hub for declarative memories. After surgery, H.M. could still hold conversations (intact short-term memory) and learn new motor skills (intact procedural memory), but could not transfer new declarative information into long-term storage. Option A is incorrect because procedural memory was preserved. Option C is incorrect because the deficit was not limited to emotional memories — all new declarative memories were affected. Option D describes the opposite of what occurred — H.M. retained most old memories but could not form new declarative ones.",
+      "kn": "KN1",
+      "kn_explanation": "H.M. memory impairment pattern relates to neurobiological bases of cognition",
+      "difficulty": "easy",
+      "quality_comment": "Classic EPPP topic directly supported by detailed lesson content about patient H.M. Tests understanding of hippocampal function in memory consolidation.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### The Hippocampus: Your Memory Transfer Agent",
+      "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A researcher is reviewing an EEG recording from a participant who is sitting quietly with their eyes closed but is awake and relaxed. Which brain wave pattern would be MOST prominent in this recording?",
+      "options": [
+        "Delta waves (0.5–4 Hz)",
+        "Theta waves (4–8 Hz)",
+        "Alpha waves (8–13 Hz)",
+        "Beta waves (13–30 Hz)"
+      ],
+      "answer": "Alpha waves (8–13 Hz)",
+      "explanation": "Alpha waves (8–13 Hz) are the characteristic brain wave pattern associated with relaxed wakefulness, particularly when a person is sitting quietly with eyes closed. They are most prominent over the occipital regions. Delta waves are associated with deep sleep (Stage 3 NREM). Theta waves are associated with light sleep (Stage 1 and 2 NREM) and drowsiness. Beta waves are associated with active thinking, concentration, and alert wakefulness with eyes open.",
+      "kn": "KN5",
+      "kn_explanation": "EEG brain wave pattern identification is an electrophysiological method application",
+      "difficulty": "easy",
+      "quality_comment": "Foundational EPPP concept about brain waves. The lesson covers sleep stages and associated brain wave patterns.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Sleep Stages and Brain Waves",
+      "lessonExcerpt": "Alpha waves are associated with relaxed wakefulness, typically observed when a person is calm with eyes closed.",
+      "needsReview": true,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 54-year-old man undergoes surgical resection of bilateral medial temporal lobe structures, including the hippocampi, to control intractable seizures. Following the procedure, neuropsychological testing reveals that he can carry on a normal conversation, learn to trace a figure while looking in a mirror, and recall childhood memories with reasonable accuracy. However, he is unable to remember the names of his new nurses or recall what he ate for breakfast. Which of the following best characterizes this patient's memory profile?",
+      "options": [
+        "Intact short-term and procedural memory with impaired formation of new declarative long-term memories",
+        "Global amnesia affecting all memory systems equally, with only remote episodic memories spared",
+        "Selective impairment of implicit memory with preserved explicit memory encoding",
+        "Intact declarative memory consolidation with impaired retrieval of previously stored semantic knowledge"
+      ],
+      "answer": "Intact short-term and procedural memory with impaired formation of new declarative long-term memories",
+      "explanation": "This question is modeled on the classic case of patient H.M. described in the lesson. Bilateral medial temporal lobe removal, including the hippocampi, disrupts the consolidation of declarative (explicit) memories while leaving short-term memory and procedural (implicit) memory intact. The patient can hold a conversation (short-term memory), learn mirror tracing (procedural memory stored by basal ganglia and cerebellum), and recall remote memories (already consolidated), but cannot form new declarative long-term memories. Option B is incorrect because the amnesia is not global—procedural memory and short-term memory are preserved. Option C reverses the actual deficit; implicit memory is preserved, not impaired. Option D is incorrect because the core deficit is in consolidation of new declarative memories, not retrieval of old semantic knowledge.",
+      "kn": "KN1",
+      "kn_explanation": "Bilateral medial temporal lobe resection effects on cognition/memory relates to neurobiological bases of behavior",
+      "difficulty": "hard",
+      "quality_comment": "Strong question that tests understanding of dissociable memory systems and the specific role of temporal lobe structures in explicit memory. Requires integration of multiple memory concepts rather than simple recall.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### The Hippocampus: Your Memory Transfer Agent",
+      "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "A sleep researcher is monitoring a participant's brain activity using EEG. The participant is sitting upright, actively solving complex math problems, and appears highly focused. Which type of brain wave pattern would the EEG MOST likely display?",
+      "options": [
+        "Delta waves characterized by high amplitude and low frequency",
+        "Theta waves associated with light drowsiness and the onset of sleep",
+        "Alpha waves associated with relaxed wakefulness and calm alertness",
+        "Beta waves characterized by low amplitude and high frequency"
+      ],
+      "answer": "Beta waves characterized by low amplitude and high frequency",
+      "explanation": "Beta waves are associated with active concentration, alertness, and focused mental activity. The lesson uses the mnemonic 'Beta waves mean you beta be alert' and describes them as low-amplitude, high-frequency waves present during active wakefulness. They also appear during REM sleep. Delta waves (option A) dominate Stage N3 deep sleep and represent the opposite of alert wakefulness. Theta waves (option B) appear during Stage N1 drowsiness and light sleep. Alpha waves (option C) are present during relaxed, calm wakefulness—not the intense concentration described in the vignette.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests understanding of EEG brain wave patterns and their association with different states of consciousness and arousal.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward but important foundational question. The scenario clearly differentiates active concentration from relaxed wakefulness.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### NREM Sleep: The Three Stages",
+      "lessonExcerpt": "Memory tip: 'Beta waves mean you beta be alert. Alpha waves mean you're saying 'aaah' (relaxed).'",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A research participant is part of a sleep deprivation study in which she is selectively awakened each time polysomnography indicates she has entered REM sleep. After several nights of this protocol, what change in sleep architecture would MOST likely be observed when the participant is finally allowed to sleep without interruption?",
+      "options": [
+        "An increase in Stage N3 slow-wave sleep at the expense of all other stages",
+        "A significant decrease in total sleep time due to conditioned arousal patterns",
+        "An increase in the proportion and duration of REM sleep periods compared to baseline",
+        "A shift to predominantly Stage N1 and N2 sleep with minimal deep or REM sleep"
+      ],
+      "answer": "An increase in the proportion and duration of REM sleep periods compared to baseline",
+      "explanation": "REM rebound is a well-established phenomenon in which selective deprivation of REM sleep leads to a compensatory increase in REM sleep when uninterrupted sleep is permitted. The lesson describes that REM periods normally get longer as the night progresses, and this rebound effect intensifies that pattern. An increase in N3 (option A) would be expected after total sleep deprivation rather than selective REM deprivation. Decreased total sleep time (option B) contradicts the recovery/restoration function of sleep. A shift to light sleep only (option D) does not reflect the brain's compensatory mechanisms for REM deprivation.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests understanding of sleep stage regulation and the REM rebound phenomenon following selective sleep deprivation.",
+      "difficulty": "hard",
+      "quality_comment": "This question tests a well-known EPPP concept (REM rebound) but the lesson content does not explicitly discuss REM rebound. The lesson covers REM sleep characteristics thoroughly but the specific rebound effect must be inferred from general sleep architecture knowledge.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### REM Sleep: The Paradox",
+      "lessonExcerpt": "As the night progresses, your REM periods get longer and your N3 periods get shorter.",
+      "needsReview": true,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A patient with narcolepsy reports experiencing vivid, dreamlike visual scenes of unfamiliar people in the room just as she begins to fall asleep each night. These experiences are MOST consistent with:",
+      "options": [
+        "Hypnopompic hallucinations associated with awakening from REM sleep",
+        "Hypnagogic hallucinations occurring during the transition to sleep onset",
+        "REM sleep behavior disorder with loss of muscle atonia",
+        "Night terrors occurring during Stage N3 deep sleep"
+      ],
+      "answer": "Hypnagogic hallucinations occurring during the transition to sleep onset",
+      "explanation": "Hypnagogic hallucinations are vivid hallucinations that occur just before falling asleep, during the transition from wakefulness to sleep. They are commonly associated with narcolepsy and represent intrusions of REM sleep phenomena into the sleep-wake transition. Hypnopompic hallucinations (Option A) occur upon awakening, not at sleep onset. REM sleep behavior disorder (Option C) involves acting out dreams due to loss of normal REM paralysis. Night terrors (Option D) occur during N3 deep sleep and involve screaming/thrashing without the vivid perceptual experiences described.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of sleep phenomena and their neurobiological basis, a biological bases topic.",
+      "difficulty": "medium",
+      "quality_comment": "The 1-memory-and-sleep lesson describes N1 as the transition zone but does not explicitly mention hypnagogic hallucinations. The concept is covered in the diagnosis lesson on sleep disorders. Question is clinically accurate but lesson coverage in Domain 1 is limited.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### NREM Sleep: The Three Stages",
+      "lessonExcerpt": "Stage N1: The Transition Zone — This is that drowsy state when you're just nodding off. Your alpha waves (present when you're awake and relaxed) shift to theta waves.",
+      "needsReview": true,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "How does interrupted sleep primarily affect the dreaming process?",
+      "options": [
+        "Increases REM sleep duration",
+        "Decreases overall sleep quality",
+        "Reduces the frequency of dreams",
+        "Enhances dream recall"
+      ],
+      "answer": "Decreases overall sleep quality",
+      "explanation": "Interrupted sleep typically leads to decreased overall sleep quality, which can affect the amount and quality of REM sleep, where most dreaming occurs. While it may reduce the frequency of dreams, the primary impact is on sleep quality rather than the quantity of dreams or dream recall.",
+      "kn": "KN1",
+      "kn_explanation": "This question pertains to the biological bases of behavior, specifically the effects of sleep on dreaming.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of sleep and dreaming dynamics.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
+      "lessonExcerpt": "Interrupted sleep typically leads to decreased overall sleep quality.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What phenomenon occurs during the transition from wakefulness to sleep, often involving vivid auditory or visual hallucinations?",
+      "options": [
+        "Hypnopompic hallucinations",
+        "Hypnogogic hallucinations",
+        "Sleep paralysis",
+        "REM sleep behavior disorder"
+      ],
+      "answer": "Hypnogogic hallucinations",
+      "explanation": "Hypnogogic hallucinations occur during the transition from wakefulness to sleep and can involve vivid sensory experiences. Hypnopompic hallucinations occur during the transition from sleep to wakefulness. Sleep paralysis is the inability to move while falling asleep or waking up, and REM sleep behavior disorder involves acting out dreams.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly sleep disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of sleep-related phenomena.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
+      "lessonExcerpt": "Hypnogogic hallucinations occur during the transition from wakefulness to sleep.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which phenomenon is commonly observed during NREM sleep?",
+      "options": [
+        "Dreaming",
+        "Sleepwalking",
+        "Rapid eye movement",
+        "Increased heart rate"
+      ],
+      "answer": "Sleepwalking",
+      "explanation": "Sleepwalking is a phenomenon that typically occurs during NREM sleep, particularly in the deeper stages. Dreaming and rapid eye movement are associated with REM sleep, while increased heart rate is not a defining characteristic of NREM sleep.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior and sleep phenomena.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of sleep stages and associated behaviors.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
+      "lessonExcerpt": "Sleepwalking is a phenomenon that typically occurs during NREM sleep.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What is a common change in sleep patterns observed in older adults?",
+      "options": [
+        "Increased REM sleep duration",
+        "Decreased total sleep time",
+        "Increased deep sleep",
+        "Decreased sleep fragmentation"
+      ],
+      "answer": "Decreased total sleep time",
+      "explanation": "Older adults often experience decreased total sleep time due to changes in sleep architecture, including less deep sleep and more frequent awakenings. Increased REM sleep duration and deep sleep are not typically observed, and sleep fragmentation tends to increase rather than decrease.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it pertains to aging and sleep patterns in older adults.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately reflects knowledge of sleep changes in older adults.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
+      "lessonExcerpt": "Older adults often experience decreased total sleep time due to changes in sleep architecture.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "How does REM sleep change across the lifespan?",
+      "options": [
+        "REM sleep duration increases in childhood and decreases in adulthood.",
+        "REM sleep remains constant throughout life.",
+        "REM sleep duration decreases in childhood and increases in adulthood.",
+        "REM sleep duration is highest in infancy and decreases significantly with age."
+      ],
+      "answer": "REM sleep duration is highest in infancy and decreases significantly with age.",
+      "explanation": "The correct answer is that REM sleep duration is highest in infancy and decreases significantly with age, as research indicates that infants spend a larger proportion of their sleep in REM compared to older children and adults. The other options incorrectly describe the trends of REM sleep across the lifespan.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies because it relates to the biological bases of behavior, specifically sleep physiology.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of sleep physiology across different life stages.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Why Memory and Sleep Matter for Your EPPP Success",
+      "lessonExcerpt": "REM sleep duration is highest in infancy and decreases significantly with age.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    }
+  ]
+}

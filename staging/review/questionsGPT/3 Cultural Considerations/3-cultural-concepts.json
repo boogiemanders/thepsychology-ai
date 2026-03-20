@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist who assumes that all clients share the same worldview and applies a single theoretical framework regardless of the client's cultural background is best demonstrating which of the following?",
+      "options": [
+        "Ethnocentric monoculturalism",
+        "Cultural encapsulation",
+        "Etic perspective bias",
+        "Stereotype threat"
+      ],
+      "answer": "Cultural encapsulation",
+      "explanation": "Cultural encapsulation, a term coined by Wrenn, refers to therapists who operate from a narrow, culturally bound perspective, substituting their own values and assumptions for those of the client without awareness. Ethnocentric monoculturalism (A) refers to a broader societal-level phenomenon where one cultural group's values dominate. An etic perspective bias (C) involves applying universal frameworks across cultures but does not specifically describe the clinical insularity described. Stereotype threat (D) refers to anxiety about confirming negative stereotypes and is unrelated to therapist behavior.",
+      "kn": "KN18",
+      "kn_explanation": "Applying a single framework regardless of cultural background relates to cultural psychology and cross-cultural comparisons.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a key multicultural counseling concept. Well-supported by lesson content on cultural encapsulation.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Cultural Encapsulation",
+      "lessonExcerpt": "Wrenn coined this term to describe mental health professionals who can't work effectively across cultures. Culturally encapsulated therapists assume their cultural assumptions about mental health apply universally.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    }
+  ]
+}

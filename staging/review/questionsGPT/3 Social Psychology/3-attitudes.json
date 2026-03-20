@@ -1,0 +1,172 @@
+{
+  "questions": [
+    {
+      "stem": "After deliberating for weeks, a graduate student finally chooses to accept an offer from Program A over an equally appealing offer from Program B. In the days following her decision, she begins emphasizing Program A's strengths (excellent mentorship, prestigious faculty) while focusing on Program B's weaknesses (less funding, smaller alumni network). According to Festinger's theory, her shift in evaluations MOST likely reflects:",
+      "options": [
+        "Self-perception theory, in which she infers her preferences by observing her own behavior",
+        "The overjustification effect, in which external rewards undermine intrinsic motivation",
+        "Post-decisional dissonance reduction, in which she spreads apart the alternatives to justify her choice",
+        "The false consensus effect, in which she overestimates how many others would make the same choice"
+      ],
+      "answer": "Post-decisional dissonance reduction, in which she spreads apart the alternatives to justify her choice",
+      "explanation": "Cognitive dissonance theory predicts that after choosing between two equally attractive alternatives (an approach-approach conflict), the decision-maker experiences post-decisional dissonance. To reduce this discomfort, she 'spreads apart the alternatives'—enhancing the perceived value of the chosen option and devaluing the rejected option. This is consistent with Festinger's theory that when behavior contradicts or creates tension with attitudes, people adjust their attitudes to restore consistency. Self-perception theory (A) applies when initial attitudes are weak or ambiguous, not when someone is actively rationalizing a difficult decision. The overjustification effect (B) involves external rewards undermining intrinsic motivation, which is irrelevant here. The false consensus effect (D) involves overestimating agreement from others, not changing one's own evaluations.",
+      "kn": "KN14",
+      "kn_explanation": "This describes cognitive dissonance following a decision (post-decisional dissonance), which falls under social cognition theories and models.",
+      "difficulty": "hard",
+      "quality_comment": "Strong integration of approach-approach conflict and cognitive dissonance theory. The lesson covers dissonance theory thoroughly; the specific post-decisional application draws from the reference text noting that after choosing, 'the other decreases in its appeal.'",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Cognitive Dissonance Theory: The Discomfort of Inconsistency",
+      "lessonExcerpt": "Festinger's cognitive dissonance theory is one of the most influential concepts in social psychology. The core idea: when you become aware that two of your cognitions (attitudes, beliefs, opinions) contradict each other, or when your behavior contradicts your attitudes, you experience psychological discomfort called dissonance. This discomfort motivates you to reduce it.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "In a classic study, children who enjoyed drawing with markers were given external rewards for drawing during a play period. When the rewards were later removed, the previously rewarded children drew less than unrewarded children. This finding best illustrates:",
+      "options": [
+        "Cognitive dissonance reduction",
+        "The overjustification effect",
+        "Negative reinforcement",
+        "Reactance theory"
+      ],
+      "answer": "The overjustification effect",
+      "explanation": "The overjustification effect occurs when external rewards for an intrinsically enjoyable activity undermine intrinsic motivation. The children who were rewarded inferred 'I must be drawing for the reward' rather than 'I draw because I enjoy it,' so when rewards were removed, they drew less. Cognitive dissonance involves attitude change following inconsistent behavior, not reward effects on intrinsic motivation. Negative reinforcement involves removing an aversive stimulus to increase behavior. Reactance theory involves resistance to perceived threats to freedom, not reward-motivation dynamics.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses social cognition and attitude formation through self-perception theory, a core social psychology concept.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP-style question based directly on the Lepper, Greene, & Nisbett study described in lesson content.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Self-Perception Theory: Observing Yourself",
+      "lessonExcerpt": "Children who enjoyed drawing with markers were either rewarded or not rewarded for drawing during a play period. Later, when rewards were removed, the previously rewarded children spent less time drawing than the unrewarded children.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "In a replication of Festinger and Carlsmith's classic experiment, participants perform a tedious task and are then paid either $2 or $50 to tell the next participant the task was enjoyable. According to cognitive dissonance theory, which group will subsequently rate the task as MORE enjoyable, and why?",
+      "options": [
+        "The $50 group, because receiving a large reward creates positive associations with the task",
+        "The $2 group, because insufficient external justification for lying creates dissonance that is reduced by changing their attitude about the task",
+        "The $50 group, because the larger payment reinforces their behavior through operant conditioning",
+        "Both groups equally, because the act of telling someone the task was enjoyable changes attitudes regardless of payment"
+      ],
+      "answer": "The $2 group, because insufficient external justification for lying creates dissonance that is reduced by changing their attitude about the task",
+      "explanation": "According to cognitive dissonance theory, the $2 group experiences dissonance because they lied about the task being enjoyable without sufficient external justification. The lesson explains: 'The $1 participants experienced dissonance: \"I told someone this boring task was fun, but I only got a dollar for lying.\" They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude.' The $50 group has sufficient justification ('I lied, but hey, I got paid well for it'), so they experience no dissonance and don't need to change their attitude. Option A incorrectly applies reinforcement principles. Option C confuses operant conditioning with dissonance. Option D ignores the critical role of justification magnitude.",
+      "kn": "KN11",
+      "kn_explanation": "This question tests cognitive dissonance theory, a core concept in the Social and Multicultural Bases of Behavior domain.",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests the classic Festinger and Carlsmith paradigm with updated dollar amounts to ensure originality.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Cognitive Dissonance Theory: The Discomfort of Inconsistency",
+      "lessonExcerpt": "The $1 participants experienced dissonance: 'I told someone this boring task was fun, but I only got a dollar for lying.' They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Which of the following ethical concerns is most directly associated with the potential for harm to participants in psychological experiments?",
+      "options": [
+        "Informed consent",
+        "Confidentiality",
+        "Deception",
+        "Risk of harm"
+      ],
+      "answer": "Risk of harm",
+      "explanation": "The correct answer is 'Risk of harm' because ethical concerns in psychological experiments often focus on ensuring that participants are not exposed to unnecessary risks or harm. 'Informed consent' relates to participants being aware of the study, 'confidentiality' pertains to protecting participant information, and 'deception' involves misleading participants about the study's purpose, which can also raise ethical issues but is not as directly linked to harm as the risk of harm itself.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to ethical considerations in research, particularly the protection of participants.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of research ethics.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
+      "lessonExcerpt": "The lesson discusses the importance of ethical considerations in psychological research, particularly the risk of harm to participants.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Which of the following best describes how cultural expectations shape gender roles in society?",
+      "options": [
+        "Cultural expectations have no impact on gender roles.",
+        "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
+        "Gender roles are solely determined by biological factors.",
+        "Cultural expectations only affect gender roles in certain societies."
+      ],
+      "answer": "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
+      "explanation": "Cultural expectations significantly influence how society defines and enforces gender roles, dictating specific behaviors and responsibilities assigned to men and women. The other options either downplay the role of culture or incorrectly attribute gender roles solely to biology or specific contexts.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding social and cultural influences on behavior, specifically regarding gender roles.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of cultural influences on gender roles.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
+      "lessonExcerpt": "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following best describes the emic approach in psychology?",
+      "options": [
+        "A focus on universal psychological principles across cultures.",
+        "An emphasis on understanding behaviors and beliefs from within a specific cultural context.",
+        "A method that prioritizes quantitative data over qualitative insights.",
+        "A strategy that seeks to apply Western psychological theories globally."
+      ],
+      "answer": "An emphasis on understanding behaviors and beliefs from within a specific cultural context.",
+      "explanation": "The emic approach focuses on understanding behaviors and beliefs from the perspective of the cultural group being studied, rather than imposing external frameworks. The other options either describe the etic approach or misrepresent the emic focus.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies because it relates to understanding cultural influences on behavior, which is a key aspect of social psychology.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of emic vs. etic approaches.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
+      "lessonExcerpt": "The lesson does not explicitly cover emic vs. etic approaches.",
+      "needsReview": true,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "According to reactance theory, what is the primary psychological response individuals exhibit when they perceive their freedoms are being threatened?",
+      "options": [
+        "Increased compliance",
+        "Psychological reactance",
+        "Cognitive dissonance",
+        "Social facilitation"
+      ],
+      "answer": "Psychological reactance",
+      "explanation": "Psychological reactance is the correct answer as it specifically refers to the emotional response individuals have when they feel their freedoms are being restricted. Increased compliance, cognitive dissonance, and social facilitation do not directly relate to the perception of freedom being threatened.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to social psychology concepts, particularly those involving individual responses to perceived threats to autonomy.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of reactance theory at a doctoral level.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
+      "lessonExcerpt": "The primary psychological response is psychological reactance, which occurs when individuals feel their freedoms are being threatened.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which of the following best describes the phenomenon of loss aversion in investment decisions?",
+      "options": [
+        "Investors are more likely to sell winning stocks than losing ones.",
+        "Investors prefer to avoid losses rather than acquire equivalent gains.",
+        "Investors are indifferent to the potential outcomes of their investments.",
+        "Investors are more influenced by potential gains than potential losses."
+      ],
+      "answer": "Investors prefer to avoid losses rather than acquire equivalent gains.",
+      "explanation": "Loss aversion refers to the tendency for people to prefer avoiding losses over acquiring equivalent gains. This means that the pain of losing is psychologically more impactful than the pleasure of gaining. The other options either misrepresent this concept or do not relate to loss aversion.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding behavioral economics and decision-making processes.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of a key concept in behavioral economics.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
+      "lessonExcerpt": "Investors prefer to avoid losses rather than acquire equivalent gains.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    }
+  ]
+}

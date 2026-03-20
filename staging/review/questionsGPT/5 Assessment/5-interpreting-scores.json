@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is explaining test results to the parents of a child who scored 85% correct on a reading mastery assessment. The parents ask whether this means their child is performing better than 85% of other children. Which response BEST clarifies the distinction between the two types of scores?",
+      "options": [
+        "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance",
+        "The 85% is equivalent to a percentile rank of 85, meaning the child scored better than 85% of the normative sample",
+        "The 85% should be converted to a z-score before any meaningful interpretation can be made",
+        "The 85% represents a norm-referenced standard score that places the child one standard deviation above the mean"
+      ],
+      "answer": "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance",
+      "explanation": "A percentage score of 85% is a criterion-referenced score indicating the child answered 85% of items correctly—it measures mastery of content, not comparison to others. Option B confuses percentage scores with percentile ranks, which are norm-referenced and indicate standing relative to a comparison group. As the lesson explicitly states: 'A percentile rank of 75 means you scored better than 75% of people. A percentage score of 75 means you answered 75% of questions correctly. These are completely different metrics.' Option C is incorrect because criterion-referenced scores are meaningful without conversion to z-scores. Option D is wrong because 85% correct is not a standard score.",
+      "kn": "KN5",
+      "kn_explanation": "This question tests understanding of test score interpretation, specifically distinguishing criterion-referenced from norm-referenced scores, a core assessment and test construction concept.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant scenario that tests a commonly confused distinction. The lesson explicitly addresses this misconception.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## Criterion-Referenced Scores: Measuring Against a Standard",
+      "lessonExcerpt": "While norm-referenced scores compare people to each other, criterion-referenced scores evaluate whether someone has achieved a specific level of competence or mastery. The question shifts from 'How do you compare to others?' to 'Can you do what needs to be done?'",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    }
+  ]
+}

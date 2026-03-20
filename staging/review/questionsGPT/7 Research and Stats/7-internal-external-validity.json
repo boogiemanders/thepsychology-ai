@@ -1,0 +1,130 @@
+{
+  "questions": [
+    {
+      "stem": "What does research suggest about the stability of IQ scores over time?",
+      "options": [
+        "IQ scores are highly unstable and fluctuate significantly throughout life.",
+        "IQ scores tend to remain stable after early childhood.",
+        "IQ scores are influenced solely by environmental factors.",
+        "IQ scores are irrelevant to long-term academic success."
+      ],
+      "answer": "IQ scores tend to remain stable after early childhood.",
+      "explanation": "Research indicates that IQ scores generally show stability after early childhood, suggesting that they are relatively consistent over time. The other options misrepresent the findings regarding IQ stability.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses the expectations of IQ stability over time in intelligence testing.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately reflects research findings on IQ stability.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## Why Internal and External Validity Actually Matter",
+      "lessonExcerpt": "IQ scores tend to remain stable after early childhood.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What is a common threat to validity associated with selection bias in research assignment methods?",
+      "options": [
+        "Participants may drop out of the study",
+        "The sample may not represent the population",
+        "The data may be skewed",
+        "The results may not be statistically significant"
+      ],
+      "answer": "The sample may not represent the population",
+      "explanation": "Selection bias occurs when the sample does not accurately represent the population, which is a common threat to validity. The other options describe different issues that may arise in research but are not directly related to selection bias.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it relates to threats to validity in assignment methods.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of validity threats.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## The Seven Threats to Internal Validity",
+      "lessonExcerpt": "Selection bias can lead to a sample that does not represent the population.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which of the following is a potential threat to the validity of quasi-experimental designs?",
+      "options": [
+        "Random assignment",
+        "Selection bias",
+        "Control groups",
+        "Standardized measures"
+      ],
+      "answer": "Selection bias",
+      "explanation": "The correct answer is 'Selection bias' because quasi-experimental designs often lack random assignment, which can lead to systematic differences between groups that threaten the internal validity of the study. Random assignment, control groups, and standardized measures are strategies used to enhance validity, not threats.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to understanding the validity threats specific to quasi-experimental designs.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of validity threats.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## The Seven Threats to Internal Validity",
+      "lessonExcerpt": "Selection bias can occur in quasi-experimental designs due to the lack of random assignment.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Which of the following strategies is most effective for optimizing external validity in research?",
+      "options": [
+        "Using a diverse sample",
+        "Controlling for extraneous variables",
+        "Increasing sample size",
+        "Using complex statistical models"
+      ],
+      "answer": "Using a diverse sample",
+      "explanation": "The correct answer is 'Using a diverse sample' because a diverse sample enhances the generalizability of the findings to a broader population, which is the essence of external validity. While controlling for extraneous variables and increasing sample size are important, they do not directly address the generalizability of results across different populations.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it pertains to understanding strategies for enhancing external validity.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of external validity considerations.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## Breaking Down External Validity Into Five Parts",
+      "lessonExcerpt": "Using a diverse sample is crucial for optimizing external validity.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following is NOT considered a threat to validity in research design?",
+      "options": [
+        "History",
+        "Maturation",
+        "Random assignment",
+        "Differential selection"
+      ],
+      "answer": "Random assignment",
+      "explanation": "The correct answer is 'Random assignment' because it is a method used to enhance internal validity by ensuring that groups are equivalent at the start of a study. In contrast, history, maturation, and differential selection are all recognized threats to validity.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it pertains to understanding threats to validity in research design.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of validity threats.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## The Seven Threats to Internal Validity",
+      "lessonExcerpt": "Random assignment is not considered a threat to validity; it is a method to enhance it.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which of the following is a threat to internal validity that occurs when an external event affects the outcome of a study?",
+      "options": [
+        "Maturation",
+        "History",
+        "Differential Selection",
+        "Statistical Regression"
+      ],
+      "answer": "History",
+      "explanation": "History refers to external events that occur during the study that can affect the results, making it difficult to determine if the treatment caused the change. Maturation involves natural changes over time, Differential Selection relates to how participants are assigned to groups, and Statistical Regression deals with the tendency of extreme scores to move closer to the mean over time.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding threats to internal validity in research.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of internal validity threats.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## The Seven Threats to Internal Validity",
+      "lessonExcerpt": "History occurs when outside events during the study affect the results.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11
+    }
+  ]
+}

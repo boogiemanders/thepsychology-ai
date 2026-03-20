@@ -1,0 +1,445 @@
+{
+  "questions": [
+    {
+      "stem": "Dr. Alvarez, a psychologist in private practice, refers clients to Dr. Kim, a neuropsychologist, for specialized testing. Dr. Kim sends Dr. Alvarez a percentage of the fees collected from each referred client as a \"referral bonus.\" Which of the following best describes the ethical status of this arrangement?",
+      "options": [
+        "This is acceptable because both psychologists are providing legitimate services to the client",
+        "This is acceptable as long as the client is informed about the referral fee arrangement",
+        "This is a violation because fee splitting based on referrals rather than services provided is prohibited",
+        "This is acceptable as long as the referral fee does not exceed 10% of the total charges"
+      ],
+      "answer": "This is a violation because fee splitting based on referrals rather than services provided is prohibited",
+      "explanation": "The APA Ethics Code (Standard 6.07) prohibits psychologists from paying, receiving, or participating in referral fees based solely on the referral itself. Fee splitting is only permissible when each professional is being compensated for services they actually provided. Dr. Kim sending a percentage back to Dr. Alvarez simply for the referral constitutes an impermissible kickback arrangement. Option A is wrong because the legitimacy of each professional's services doesn't justify a referral kickback. Option B is wrong because client disclosure doesn't make referral-based fee splitting ethical. Option D is wrong because there is no percentage threshold that makes referral-based fee splitting acceptable.",
+      "kn": "KN64",
+      "kn_explanation": "Fee splitting/referral kickbacks is an ethical issue to identify and manage",
+      "difficulty": "medium",
+      "quality_comment": "Good applied scenario testing fee-splitting rules. Lesson content on Standard 6 is truncated and does not explicitly cover fee splitting.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### Referral Fees",
+      "lessonExcerpt": "Standard 6.07 states that referral fees must be 'based on the services provided' and not 'on the referral itself.' Prohibited: Paying a colleague $50 for each client they refer to you, regardless of what they did.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Dr. Park recently opened a private practice and asks several of her current therapy clients to write positive reviews on her practice's website to attract new clients. She explains that participation is voluntary and that it will not affect their treatment. According to APA Standard 5.05, this action is:",
+      "options": [
+        "Ethical, because she informed clients that participation is voluntary and will not affect treatment",
+        "Unethical, because psychologists are prohibited from soliciting testimonials from current therapy clients who are vulnerable to undue influence",
+        "Ethical, as long as the clients provide written consent and the testimonials are anonymous",
+        "Unethical only if the clients are in crisis; otherwise, current clients may provide testimonials when asked"
+      ],
+      "answer": "Unethical, because psychologists are prohibited from soliciting testimonials from current therapy clients who are vulnerable to undue influence",
+      "explanation": "Standard 5.05 explicitly prohibits soliciting testimonials from current therapy clients or other vulnerable individuals. The therapeutic relationship involves a power imbalance, meaning clients may feel pressured to provide positive feedback even if told it's voluntary. The standard mentions people who 'because of their particular circumstances are vulnerable to undue influence.' Option A is incorrect because voluntariness cannot overcome the inherent power imbalance. Option C is wrong because anonymity does not change the prohibition on solicitation from current clients. Option D incorrectly narrows the prohibition to clients in crisis, when it applies to all current therapy clients.",
+      "kn": "KN64",
+      "kn_explanation": "Soliciting testimonials from current clients raises ethical issues to identify and manage",
+      "difficulty": "easy",
+      "quality_comment": "Clear application of Standard 5.05 with well-constructed distractors that address common rationalizations.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Testimonial Problem",
+      "lessonExcerpt": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or other vulnerable individuals... Because the therapeutic relationship involves a power imbalance. Clients might feel pressured to provide positive feedback even if that's not their genuine experience.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "A doctoral student in clinical psychology who has not yet completed her dissertation is developing a website for her supervised practice placement. She lists herself as 'Dr. Jane Smith, Clinical Psychologist' and advertises her fee of $150 per session. Which aspect of this advertisement is most clearly problematic under APA Standard 5.01?",
+      "options": [
+        "Advertising fees on a website, which is prohibited for trainees",
+        "Using the title 'Dr.' and 'Clinical Psychologist' before earning the doctoral degree and obtaining licensure",
+        "Failing to list her supervisor's name alongside her own credentials",
+        "Charging $150 per session, which exceeds what a trainee may ethically charge"
+      ],
+      "answer": "Using the title 'Dr.' and 'Clinical Psychologist' before earning the doctoral degree and obtaining licensure",
+      "explanation": "Standard 5.01 prohibits false, deceptive, or fraudulent public statements about credentials and licenses. The student has not yet earned her doctoral degree, so claiming 'Dr.' is false. Additionally, claiming the title 'Clinical Psychologist' typically requires licensure, which she does not have. The lesson specifies that acceptable degree credentials are 'Doctoral degrees in psychology from regionally accredited institutions' or 'Degrees that your state licensing board accepted as the basis for your psychology license.' She meets neither criterion. Option A is incorrect—advertising fees is not inherently prohibited for trainees. Option C, while good practice, is not the most clearly problematic element. Option D is incorrect—there is no specific cap on what a trainee may charge.",
+      "kn": "KN62",
+      "kn_explanation": "Proper representation of credentials and training status relates to professional standards",
+      "difficulty": "medium",
+      "quality_comment": "Practical scenario testing a common trainee error with clear grounding in the degree credential rule.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "You can only claim degrees as credentials for mental health services if they meet specific requirements. According to Standard 5.01, acceptable degrees are either: Doctoral degrees in psychology from regionally accredited institutions, OR Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A psychologist's client has an insurance plan that does not cover adjustment disorders. The client's presenting problem is clearly an adjustment disorder with depressed mood. The psychologist considers assigning a major depressive disorder diagnosis instead so the client can receive insurance coverage. According to APA Standard 6.06, which of the following best describes the consequences of this action?",
+      "options": [
+        "It is acceptable if the psychologist documents the clinical rationale for the alternative diagnosis in the client's file",
+        "It is acceptable as long as the client provides informed consent to use the alternative diagnosis",
+        "It constitutes both an ethical violation of accurate billing standards and insurance fraud, which is also illegal",
+        "It is a minor ethical infraction that would result in a warning but no formal sanction"
+      ],
+      "answer": "It constitutes both an ethical violation of accurate billing standards and insurance fraud, which is also illegal",
+      "explanation": "Standard 6.06 requires providing accurate information about diagnosis codes, types of services, who provided services, and fees charged. The lesson explicitly identifies 'Assigning inaccurate diagnosis for insurance coverage' as a practice that is 'both unethical and illegal (fraud).' No amount of documentation or client consent makes misrepresenting a diagnosis acceptable. Option A is incorrect—documenting rationale does not legitimize a knowingly inaccurate diagnosis. Option B is wrong because client consent cannot authorize fraud. Option D understates the severity; insurance fraud carries serious legal and professional consequences.",
+      "kn": "KN64",
+      "kn_explanation": "Fraudulent billing/misdiagnosis for insurance is an ethical issue to identify and manage",
+      "difficulty": "easy",
+      "quality_comment": "Clear, well-grounded question testing a commonly tested ethical scenario with strong lesson support.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### Accurate Billing",
+      "lessonExcerpt": "Assigning inaccurate diagnosis for insurance coverage: Misrepresents the client's condition; insurance fraud... These practices are both unethical and illegal (fraud).",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A clinical social worker who completed a doctoral program from a non-regionally accredited institution wants to advertise herself as a 'professional psychologist' in private practice. Under which condition would this be permissible?",
+      "options": [
+        "If she has accumulated more than 3,000 supervised clinical hours",
+        "If her state licensing board accepted her degree as the basis for a psychology license",
+        "If she completed a postdoctoral fellowship at an APA-accredited institution",
+        "If she passes the EPPP and obtains professional liability insurance"
+      ],
+      "answer": "If her state licensing board accepted her degree as the basis for a psychology license",
+      "explanation": "According to the lesson on Standard 5.01, degrees can be used as credentials for mental health services if they are either doctoral degrees from regionally accredited institutions OR degrees that the state licensing board accepted as the basis for the psychology license. Using the title 'professional psychologist' requires licensure, and the degree must meet one of these two criteria. Option A is wrong because supervised hours alone do not confer the right to the title without proper licensure. Option C is wrong because completing a postdoctoral fellowship does not substitute for having an acceptable degree for licensure. Option D is wrong because passing the EPPP alone does not grant the title; state licensure based on an accepted degree is required.",
+      "kn": "KN62",
+      "kn_explanation": "Use of professional titles and credential representation falls under professional standards",
+      "difficulty": "hard",
+      "quality_comment": "Tests an important nuance about degree credentials and title use. The lesson covers degree credentials well but does not specifically address the legal definition of 'professional psychologist' as a title requiring state licensure.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "Acceptable degrees are either: 1. Doctoral degrees in psychology from regionally accredited institutions, OR 2. Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
+      "needsReview": true,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "Dr. Kim is starting a new private practice and considers offering a free initial consultation to prospective clients. According to APA ethical guidelines, which of the following is the MOST important consideration when offering such free sessions?",
+      "options": [
+        "Free sessions are prohibited because they constitute in-person solicitation of vulnerable individuals",
+        "The psychologist must clearly explain the limited purpose of the session, inform the person of future fees, document the agreement, and be cautious about creating unmet expectations",
+        "Free sessions are permissible only if they last no longer than 15 minutes",
+        "The psychologist must obtain approval from the state licensing board before offering free sessions"
+      ],
+      "answer": "The psychologist must clearly explain the limited purpose of the session, inform the person of future fees, document the agreement, and be cautious about creating unmet expectations",
+      "explanation": "The lesson states that offering free initial consultations is 'not explicitly prohibited' but requires caution. Specifically, the psychologist should clearly explain the limited purpose, inform the person of future fees beforehand, document the agreement, and be cautious about creating expectations that cannot be met. Option A is incorrect because free initial consultations are distinct from prohibited in-person solicitation of vulnerable individuals. Option C is incorrect because the Ethics Code does not specify a time limit. Option D is incorrect because state licensing board approval is not mentioned as a requirement.",
+      "kn": "KN61",
+      "kn_explanation": "APA ethical code provisions on fees and free consultations",
+      "difficulty": "medium",
+      "quality_comment": "Good practical question testing knowledge of what is and isn't prohibited, with the correct answer well-supported by the lesson.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## The Money Talk: Fees and Financial Arrangements",
+      "lessonExcerpt": "Some psychologists offer free initial consultations. This isn't explicitly prohibited, but requires caution: Clearly explain the limited purpose (helping both parties determine if it's a good fit), Inform the person of future session fees beforehand, Document the agreement, Be cautious about creating expectations you can't meet.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "A psychologist in independent practice needs to transmit client billing information electronically to an insurance company. According to APA ethical standards, what is the MOST appropriate way to protect confidentiality during this transmission?",
+      "options": [
+        "Use personal email as long as no clinical information is included in the message body",
+        "Use coding or other techniques to protect personal identifiers and employ encryption for electronic transmissions",
+        "Verbally communicate the billing information to the insurance company by phone instead",
+        "Include a confidentiality notice at the bottom of the email stating the information is privileged"
+      ],
+      "answer": "Use coding or other techniques to protect personal identifiers and employ encryption for electronic transmissions",
+      "explanation": "Standard 6.02(b) requires 'using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.' The lesson also lists encryption as a key modern protection strategy for confidential records. Option A is incorrect because personal email is described as inappropriate—the lesson compares it to 'shouting client information across a crowded coffee shop.' Option C is incorrect because while phone communication avoids electronic risks, it is not the standard solution for billing transmissions and introduces its own documentation concerns. Option D is incorrect because a confidentiality notice does not provide actual data protection.",
+      "kn": "KN71",
+      "kn_explanation": "Electronic transmission of client data involves technology-assisted psychological services",
+      "difficulty": "medium",
+      "quality_comment": "Practical question well-grounded in the lesson's discussion of electronic confidentiality protections.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### Protecting Confidentiality in Records",
+      "lessonExcerpt": "Standard 6.02(b) requires using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "Under what circumstances can a psychologist disclose confidential information without client consent?",
+      "options": [
+        "When the psychologist believes it will benefit the client",
+        "When there is a risk of harm to the client or others",
+        "When requested by a family member",
+        "When the psychologist is subpoenaed"
+      ],
+      "answer": "When there is a risk of harm to the client or others",
+      "explanation": "Confidential information can be disclosed without consent when there is a clear risk of harm, as this is a recognized exception to confidentiality. A subpoena may require disclosure, but it is not an automatic exception without considering client rights.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to confidentiality exceptions in psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of confidentiality exceptions.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "Assert psychotherapist-patient privilege on behalf of your client.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "What ethical consideration must psychologists keep in mind when discussing co-payments with clients?",
+      "options": [
+        "Co-payments should be kept confidential.",
+        "Clients should be informed of all fees upfront.",
+        "Psychologists can charge whatever they want.",
+        "Co-payments are not relevant to ethical practice."
+      ],
+      "answer": "Clients should be informed of all fees upfront.",
+      "explanation": "Ethically, psychologists must provide clear and upfront information about all fees, including co-payments, to ensure transparency and informed consent. Keeping fees confidential is not a standard practice.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to financial ethics in psychological practice.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of financial ethics in therapy.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Degree Credential Rule",
+      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "How should psychologists determine their fees for therapy services?",
+      "options": [
+        "Based on what competitors charge.",
+        "By considering their own financial needs.",
+        "In accordance with the APA guidelines and community standards.",
+        "By charging the highest possible rate."
+      ],
+      "answer": "In accordance with the APA guidelines and community standards.",
+      "explanation": "Psychologists should establish their fees based on ethical guidelines and community standards to ensure fairness and accessibility. Charging based on competitors or personal financial needs can lead to unethical practices.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it pertains to fee structure in psychological practice.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of ethical fee-setting practices.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What is a key ethical consideration for psychologists when promoting their services through media?",
+      "options": [
+        "They should exaggerate their qualifications to attract clients.",
+        "They must ensure all public statements are truthful and not misleading.",
+        "They can use testimonials from current clients to enhance credibility.",
+        "They should avoid discussing their fees in public statements."
+      ],
+      "answer": "They must ensure all public statements are truthful and not misleading.",
+      "explanation": "Ethical media promotion requires psychologists to make truthful and accurate public statements about their qualifications and services. Exaggerating qualifications or using testimonials from current clients violates ethical standards.",
+      "kn": "KN4",
+      "kn_explanation": "This question addresses media ethics related to psychologists' self-promotion.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of ethical media practices.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
+      "lessonExcerpt": "Psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "What is the ethical guideline regarding quoting academic work in psychological publications?",
+      "options": [
+        "Quoting is allowed without attribution as long as the source is well-known.",
+        "All quotes must be accurately attributed to the original author.",
+        "Paraphrasing is preferred over direct quotes.",
+        "Only use quotes from peer-reviewed journals."
+      ],
+      "answer": "All quotes must be accurately attributed to the original author.",
+      "explanation": "The correct answer is that all quotes must be attributed, which is a fundamental ethical guideline in academic writing. The lesson emphasizes the importance of proper citation to maintain integrity in academic work. The other options misrepresent ethical standards regarding quoting and attribution.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to authorship and citation ethics in psychology.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of ethical citation practices.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "All quotes must be accurately attributed to the original author to maintain integrity.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is a psychologist's responsibility when they discover that a public statement they made was misleading?",
+      "options": [
+        "They should ignore it if no one has complained.",
+        "They must correct the misrepresentation as soon as possible.",
+        "They can wait until they receive a formal complaint before addressing it.",
+        "They should deny any responsibility for the misleading statement."
+      ],
+      "answer": "They must correct the misrepresentation as soon as possible.",
+      "explanation": "The correct answer reflects the ethical obligation to correct any misleading public statements to maintain integrity and trust. Ignoring it or waiting for complaints does not align with ethical standards.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses the responsibility of psychologists for their public representations and the ethical implications of misrepresentation.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of ethical responsibilities regarding public statements.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
+      "lessonExcerpt": "Psychologists must correct the misrepresentation as soon as possible.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which of the following best describes the ethical considerations involved in marketing psychological services?",
+      "options": [
+        "Psychologists can make exaggerated claims about their services to attract clients.",
+        "Psychologists should ensure that all marketing materials are truthful and not misleading.",
+        "Psychologists can use testimonials from current clients to promote their services.",
+        "Psychologists should focus solely on their qualifications and ignore client outcomes."
+      ],
+      "answer": "Psychologists should ensure that all marketing materials are truthful and not misleading.",
+      "explanation": "The correct answer emphasizes the ethical requirement for honesty in marketing. The other options violate ethical standards regarding truthfulness and the exploitation of client relationships.",
+      "kn": "KN5",
+      "kn_explanation": "This question pertains to the ethics of marketing psychological services and the importance of truthful representation.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of advertising ethics.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
+      "lessonExcerpt": "Psychologists should ensure that all marketing materials are truthful and not misleading.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "What ethical principle governs the release of psychological test data to third parties?",
+      "options": [
+        "Confidentiality must be maintained unless the client provides explicit consent.",
+        "Psychologists can release data if they believe it will benefit the client.",
+        "Test data can be shared freely among professionals without consent.",
+        "Only aggregate data can be shared without client consent."
+      ],
+      "answer": "Confidentiality must be maintained unless the client provides explicit consent.",
+      "explanation": "The correct answer reflects the ethical obligation to maintain confidentiality regarding test data. The other options either misinterpret confidentiality or suggest inappropriate sharing of sensitive information.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to confidentiality in the context of psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of confidentiality in psychological practice.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
+      "lessonExcerpt": "Psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "What is an important factor psychologists should discuss with managed care patients?",
+      "options": [
+        "The potential for their treatment to be denied based on insurance policies.",
+        "The psychologist's personal opinions about managed care.",
+        "The financial benefits of managed care for the psychologist.",
+        "The possibility of switching to a different insurance provider."
+      ],
+      "answer": "The potential for their treatment to be denied based on insurance policies.",
+      "explanation": "The correct answer highlights the importance of transparency regarding managed care policies and their impact on treatment. The other options either focus on irrelevant information or do not prioritize the patient's understanding.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to managed care and ethical communication with clients.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of managed care considerations in psychological practice.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
+      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "In the context of countertransference, what is the most appropriate way for a therapist to manage their feelings towards a client who reminds them of a close friend?",
+      "options": [
+        "Discuss these feelings openly with the client to build rapport.",
+        "Seek supervision or consultation to explore these feelings and their impact on therapy.",
+        "Ignore the feelings and focus solely on the client's issues.",
+        "Terminate the therapeutic relationship to avoid conflict."
+      ],
+      "answer": "Seek supervision or consultation to explore these feelings and their impact on therapy.",
+      "explanation": "The correct answer highlights the importance of seeking supervision to manage countertransference, which is crucial for maintaining professional boundaries and effective therapy. The other options either involve inappropriate disclosure, avoidance, or premature termination, which do not address the underlying issue effectively.",
+      "kn": "KN22",
+      "kn_explanation": "This KN code applies as it relates to managing countertransference in therapy.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of countertransference management.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 6: Human Relations",
+      "lessonExcerpt": "When faced with countertransference, therapists should seek supervision or consultation to explore these feelings and their impact on therapy.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "When reporting diagnoses to insurance companies, what ethical consideration must psychologists keep in mind?",
+      "options": [
+        "They should provide as much detail as possible to ensure coverage.",
+        "They must ensure that the information is accurate and reflects the client's actual condition.",
+        "They can exaggerate symptoms to secure better reimbursement.",
+        "They should avoid reporting any sensitive information."
+      ],
+      "answer": "They must ensure that the information is accurate and reflects the client's actual condition.",
+      "explanation": "The correct answer emphasizes the ethical obligation to provide accurate information when reporting to insurance companies, which is crucial for maintaining integrity and client trust. The other options either promote unethical behavior or misinterpret the requirements for reporting.",
+      "kn": "KN27",
+      "kn_explanation": "This KN code applies as it relates to ethical insurance reporting practices.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of ethical reporting standards.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
+      "lessonExcerpt": "They must ensure that the information is accurate and reflects the client's actual condition.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "What must a psychologist ensure when obtaining consent for psychological testing?",
+      "options": [
+        "The client must understand the purpose and potential risks of the testing.",
+        "The psychologist can proceed without consent if they believe testing is necessary.",
+        "Consent can be implied through the client's attendance at the session.",
+        "The psychologist should only inform the client about the testing after it is completed."
+      ],
+      "answer": "The client must understand the purpose and potential risks of the testing.",
+      "explanation": "The correct answer emphasizes the necessity of informed consent, which includes understanding the purpose and risks involved in testing. The other options either undermine the importance of consent or misrepresent the ethical obligations of the psychologist.",
+      "kn": "KN13",
+      "kn_explanation": "This KN code applies as it relates to confidentiality and consent in the context of psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of ethical standards regarding consent.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "You need enough information to support your conclusions.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "How should a psychologist respond if a client expresses concerns about the testing process?",
+      "options": [
+        "Dismiss the concerns as irrelevant to the testing.",
+        "Acknowledge the concerns and provide clear information about the testing process.",
+        "Tell the client that their concerns are unfounded.",
+        "Reassure the client that testing is always accurate."
+      ],
+      "answer": "Acknowledge the concerns and provide clear information about the testing process.",
+      "explanation": "The correct answer emphasizes the importance of open communication and addressing client concerns, which is essential for ethical practice. The other options either dismiss the client's feelings or provide misleading information.",
+      "kn": "KN15",
+      "kn_explanation": "This KN code applies as it relates to communication ethics in the context of assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of ethical communication with clients.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "You must ensure that your conclusions are based on solid ground.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "When providing advice in public settings, what is a key ethical boundary psychologists must maintain?",
+      "options": [
+        "Offering specific treatment recommendations to individuals.",
+        "Providing general information without establishing a client relationship.",
+        "Encouraging individuals to seek therapy without qualification.",
+        "Discussing personal experiences related to the topic."
+      ],
+      "answer": "Providing general information without establishing a client relationship.",
+      "explanation": "Psychologists must ensure that their public statements do not imply a professional relationship. Offering general information maintains ethical boundaries, while specific recommendations could mislead individuals into thinking they are receiving professional services.",
+      "kn": "KN27",
+      "kn_explanation": "This KN code applies as it pertains to maintaining professional boundaries in public advice.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of professional boundaries.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### Media Appearances and Online Advice",
+      "lessonExcerpt": "When you respond to someone's comment on your psychology blog or answer a question on social media, you must make it clear that this interaction doesn't establish a therapist-client relationship.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 27
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "questions": [
+    {
+      "stem": "A psychiatrist is considering prescribing a selective serotonin reuptake inhibitor (SSRI) for a patient with comorbid depression and insomnia. The rationale for this medication choice is based on the understanding that serotonin plays a regulatory role in which of the following?",
+      "options": [
+        "Motor coordination and procedural memory",
+        "Mood, sleep, and appetite regulation",
+        "Dopamine synthesis and release in the mesolimbic pathway",
+        "Acetylcholine transmission at the neuromuscular junction"
+      ],
+      "answer": "Mood, sleep, and appetite regulation",
+      "explanation": "Serotonin is a key neurotransmitter involved in regulating mood, sleep, and appetite, which is why SSRIs—which increase serotonin availability in the synapse by blocking its reuptake—are used to treat depression, anxiety, and sleep disturbances. Motor coordination and procedural memory are primarily associated with the basal ganglia and cerebellum, not serotonin. SSRIs do not work by affecting dopamine synthesis in the mesolimbic pathway. Acetylcholine transmission at the neuromuscular junction is unrelated to serotonin function.",
+      "kn": "KN2",
+      "kn_explanation": "Asks about SSRI drug classification and mechanism of action, fitting drug mechanisms and desired/adverse effects.",
+      "difficulty": "easy",
+      "quality_comment": "Supported by the pharmacology lesson's discussion of SSRIs and their mechanism of action as reuptake inhibitors affecting serotonin.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Reuptake inhibitors prevent neurotransmitters from being sucked back up by the sending neuron, leaving more available in the synapse",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A psychiatrist is explaining to a patient why their SSRI medication may help with both depression and insomnia. Which neurotransmitter targeted by SSRIs plays a key role in regulating BOTH mood and sleep?",
+      "options": [
+        "Dopamine",
+        "Serotonin",
+        "Norepinephrine",
+        "GABA"
+      ],
+      "answer": "Serotonin",
+      "explanation": "Serotonin (5-HT) is a neurotransmitter that plays a significant role in regulating both mood and sleep. SSRIs work by blocking the reuptake of serotonin, increasing its availability in the synapse. Low serotonin levels are associated with depression, and serotonin also helps regulate sleep-wake cycles. Dopamine is primarily associated with reward, motivation, and motor control. Norepinephrine is involved in alertness and the stress response. GABA is the brain's primary inhibitory neurotransmitter involved in anxiety reduction and sedation but is not the primary target of SSRIs.",
+      "kn": "KN1",
+      "kn_explanation": "Asks about the neurotransmitter (serotonin) and its role in depression/insomnia — neurobiological bases of mood and cognition.",
+      "difficulty": "easy",
+      "quality_comment": "Clinically relevant question connecting neurotransmitter function to pharmacological intervention. The lesson discusses serotonin's roles across multiple files.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "### Serotonin: The Mood and Sleep Regulator",
+      "lessonExcerpt": "Serotonin is involved in mood regulation, sleep, appetite, and pain perception. Low levels are associated with depression, anxiety, and sleep disturbances.",
+      "needsReview": true,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A 19-year-old female presents with binge-purge behaviors consistent with bulimia nervosa. Based on current neurobiological research, which neurotransmitter abnormality is most likely associated with her condition?",
+      "options": [
+        "Elevated dopamine levels in the mesolimbic pathway",
+        "Deficient serotonin levels in specific brain regions",
+        "Elevated serotonin levels causing anxiety and obsessive thinking",
+        "Deficient GABA levels producing chronic insomnia"
+      ],
+      "answer": "Deficient serotonin levels in specific brain regions",
+      "explanation": "Bulimia nervosa is associated with low serotonin levels in specific brain regions. Option A is incorrect because elevated mesolimbic dopamine is associated with addiction and reward, not bulimia specifically. Option C describes the pattern seen in anorexia nervosa, not bulimia—anorexia involves higher-than-normal brain serotonin, and food restriction temporarily lowers serotonin, creating a negative reinforcement cycle. Option D describes a pattern associated with anxiety and insomnia, not eating disorders specifically.",
+      "kn": "KN1",
+      "kn_explanation": "Asks about neurobiological/neurotransmitter systems implicated in bulimia nervosa — neurobiological bases of behavior in disease.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with a clinically relevant distractor (Option C) that tests the important distinction between serotonin patterns in bulimia vs. anorexia.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "### The Major Neurotransmitters You Must Know",
+      "lessonExcerpt": "Low serotonin levels in specific brain regions are linked to: Depression and increased suicide risk, Bulimia nervosa, Obsessive-compulsive disorder, Migraine headaches.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A patient with myasthenia gravis reports progressive difficulty with voluntary movements, including chewing, swallowing, and lifting her arms. Which neurotransmitter system is most directly implicated in her motor symptoms?",
+      "options": [
+        "Dopamine at the substantia nigra",
+        "GABA at cortical inhibitory synapses",
+        "Acetylcholine at neuromuscular junctions",
+        "Serotonin at raphe nuclei projections"
+      ],
+      "answer": "Acetylcholine at neuromuscular junctions",
+      "explanation": "Myasthenia gravis destroys acetylcholine (ACh) receptors at neuromuscular junctions, causing progressive muscle weakness. ACh is the neurotransmitter responsible for muscle contraction at the neuromuscular junction, making it essential for voluntary motor movement. Option A (dopamine at substantia nigra) is associated with Parkinson's disease. Option B (GABA) is the primary inhibitory neurotransmitter and is not directly involved at the neuromuscular junction. Option D (serotonin) affects mood, appetite, and sleep but is not the primary neurotransmitter at neuromuscular junctions.",
+      "kn": "KN1",
+      "kn_explanation": "Asks about the neurotransmitter system (acetylcholine) underlying myasthenia gravis symptoms — neurobiological bases of a neurobehavioral disease process.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical application question that directly tests understanding of acetylcholine's role in voluntary movement. Well-supported by lesson content.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "### The Major Neurotransmitters You Must Know",
+      "lessonExcerpt": "Movement: ACh causes muscle contraction at neuromuscular junctions. Myasthenia gravis destroys ACh receptors, causing progressive muscle weakness.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Exogenous opioids such as morphine and heroin produce their analgesic and euphoric effects primarily by mimicking the action of which endogenous substances?",
+      "options": [
+        "Acetylcholine and norepinephrine",
+        "Endorphins and enkephalins",
+        "Glutamate and GABA",
+        "Serotonin and dopamine"
+      ],
+      "answer": "Endorphins and enkephalins",
+      "explanation": "Opioids mimic the body's natural pain relievers — endorphins and enkephalins. These are neuropeptides (the brain's natural opioids) that reduce pain and create euphoria. Acetylcholine and norepinephrine (A) are small-molecule neurotransmitters involved in different functions. Glutamate and GABA (C) are the primary excitatory and inhibitory neurotransmitters, respectively. Serotonin and dopamine (D) are involved in mood and reward but are not the endogenous substances that opioids directly mimic.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of neuropeptides and their relationship to exogenous drug effects, a core neurotransmitter topic in biological bases.",
+      "difficulty": "easy",
+      "quality_comment": "Direct and well-supported by two lesson files. Tests fundamental knowledge of the endogenous opioid system.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "### The Major Neurotransmitters You Must Know",
+      "lessonExcerpt": "Neuropeptides: Larger molecules synthesized in the cell body and transported to terminals (endorphins, enkephalins, the brain's natural opioids that reduce pain and create euphoria)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "In physiological responses, what term describes the number of heartbeats per minute?",
+      "options": [
+        "Cardiac output",
+        "Heart rate",
+        "Stroke volume",
+        "Blood pressure"
+      ],
+      "answer": "Heart rate",
+      "explanation": "Heart rate specifically refers to the number of heartbeats per minute, while the other options describe different cardiovascular metrics.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly in understanding physiological responses.",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear and tests basic physiological knowledge.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## The Nervous System: Your Body's Information Network",
+      "lessonExcerpt": "Heart rate is defined as the number of heartbeats per minute.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Which neurotransmitter is primarily associated with the modulation of pain relief through opioid peptides?",
+      "options": [
+        "Serotonin",
+        "Dopamine",
+        "Endorphins",
+        "Norepinephrine"
+      ],
+      "answer": "Endorphins",
+      "explanation": "Opioid peptides, such as endorphins, are primarily responsible for pain relief in the body. The other neurotransmitters listed do not have the same direct role in pain modulation.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly in understanding neurotransmitter functions.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests knowledge of neurotransmitter roles.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## Neurons: The Messengers That Make It All Work",
+      "lessonExcerpt": "Opioid peptides, such as endorphins, are primarily responsible for pain relief in the body.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Which neurotransmitter is most commonly implicated in obsessive-compulsive disorder (OCD)?",
+      "options": [
+        "Dopamine",
+        "Serotonin",
+        "Norepinephrine",
+        "Acetylcholine"
+      ],
+      "answer": "Serotonin",
+      "explanation": "Serotonin is the neurotransmitter most commonly associated with OCD, as many treatments for OCD target serotonin levels. Dopamine, norepinephrine, and acetylcholine are involved in various other functions but are not primarily linked to OCD.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior and neurotransmitter functions.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of neurotransmitters related to OCD.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## The Nervous System: Your Body's Information Network",
+      "lessonExcerpt": "Understanding neurotransmitter function underlies nearly every question about medication effects, substance use disorders, and neurological conditions you'll encounter on the exam.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which primary neurotransmitter is primarily affected by alcohol consumption, leading to its depressant effects?",
+      "options": [
+        "Dopamine",
+        "Serotonin",
+        "GABA",
+        "Norepinephrine"
+      ],
+      "answer": "GABA",
+      "explanation": "Alcohol primarily enhances the activity of GABA, which is an inhibitory neurotransmitter. This leads to the depressant effects associated with alcohol consumption. Dopamine and serotonin are also involved in the effects of alcohol but are not the primary neurotransmitter affected. Norepinephrine is associated with arousal and alertness, which is contrary to alcohol's effects.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies because it relates to the biological bases of behavior, specifically the effects of neurotransmitters.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of neurotransmitter functions related to alcohol.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## Neurotransmitter Systems",
+      "lessonExcerpt": "Alcohol primarily enhances the activity of GABA, which is an inhibitory neurotransmitter.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "How does the magnitude of an action potential relate to stimulus intensity?",
+      "options": [
+        "A. The magnitude of an action potential increases with stimulus intensity.",
+        "B. The magnitude of an action potential is constant regardless of stimulus intensity.",
+        "C. The magnitude of an action potential decreases with stimulus intensity.",
+        "D. The magnitude of an action potential varies based on the type of neuron."
+      ],
+      "answer": "B. The magnitude of an action potential is constant regardless of stimulus intensity.",
+      "explanation": "The magnitude of an action potential is an all-or-nothing response; it does not change with the intensity of the stimulus. Instead, the frequency of action potentials increases with greater stimulus intensity. Option A is incorrect because action potential magnitude does not increase. Option C is incorrect as well; the magnitude does not decrease. Option D is misleading as the action potential magnitude is consistent across neuron types.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it pertains to neurophysiology and the principles of action potentials.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of action potentials and their relationship to stimulus intensity.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## How Information Travels Within a Neuron",
+      "lessonExcerpt": "The magnitude of an action potential is constant regardless of stimulus intensity.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following best describes the role of genetic coding in behavior and cognition?",
+      "options": [
+        "Genetic coding solely determines intelligence and personality traits.",
+        "Genetic coding has no influence on behavior or cognition.",
+        "Genetic coding interacts with environmental factors to shape behavior and cognition.",
+        "Genetic coding only affects physical traits, not cognitive abilities."
+      ],
+      "answer": "Genetic coding interacts with environmental factors to shape behavior and cognition.",
+      "explanation": "The correct answer highlights the interaction between genetic coding and environmental influences, which is crucial in understanding behavioral genetics. The other options either overstate or understate the role of genetics in behavior and cognition.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, particularly in behavioral genetics.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and tests understanding of the complex relationship between genetics and behavior.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## The Nervous System: Your Body's Information Network",
+      "lessonExcerpt": "Genetic coding interacts with environmental factors to shape behavior and cognition.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What is the primary mechanism by which L-Dopa alleviates symptoms of Parkinson's disease?",
+      "options": [
+        "It increases serotonin levels in the brain.",
+        "It enhances dopamine production in the brain.",
+        "It blocks acetylcholine receptors.",
+        "It reduces glutamate activity."
+      ],
+      "answer": "It enhances dopamine production in the brain.",
+      "explanation": "L-Dopa is a precursor to dopamine and is used in Parkinson's disease treatment to increase dopamine levels, which are deficient in patients. The other options do not accurately describe L-Dopa's mechanism of action. Serotonin, acetylcholine, and glutamate are not the primary targets of L-Dopa treatment.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically neurotransmitter systems involved in movement disorders.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality question that tests specific knowledge of pharmacological treatment mechanisms.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## Neurotransmitter Systems",
+      "lessonExcerpt": "L-Dopa is a precursor to dopamine and is used in Parkinson's disease treatment to increase dopamine levels.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    }
+  ]
+}

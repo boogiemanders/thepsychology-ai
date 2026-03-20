@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "A 28-year-old woman presents to the emergency department reporting heart palpitations, chest tightness, shortness of breath, dizziness, and tingling in her extremities. She states the episode came on suddenly while watching television and peaked within approximately 10 minutes. Medical workup including EKG, troponin levels, and thyroid panel are all within normal limits. She reports persistent worry about having additional episodes and has begun avoiding situations where she previously experienced similar symptoms. The most likely diagnosis is:",
+      "options": [
+        "Somatic symptom disorder",
+        "Illness anxiety disorder",
+        "Panic disorder",
+        "Generalized anxiety disorder"
+      ],
+      "answer": "Panic disorder",
+      "explanation": "This presentation is classic panic disorder: recurrent unexpected panic attacks (abrupt surge of intense fear peaking within minutes) with at least four symptoms (palpitations, chest tightness, shortness of breath, dizziness, paresthesias), followed by persistent worry about future attacks and maladaptive behavioral changes (avoidance). The medical workup ruled out cardiac and thyroid conditions, which is important because hyperthyroidism and cardiac arrhythmia can mimic panic attacks. Somatic symptom disorder involves excessive thoughts, feelings, or behaviors about somatic symptoms—the focus is on disproportionate concern about symptoms, not sudden episodic surges of fear. Illness anxiety disorder involves preoccupation with having a serious illness with minimal or no somatic symptoms, whereas this patient has prominent acute physical symptoms during discrete episodes. GAD involves excessive worry about multiple life domains, not discrete episodes of sudden intense fear with specific physiological symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Differentiating panic disorder from medical conditions (e.g., cardiac) requires differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette requiring differential diagnosis. Well-supported by lesson content on panic disorder criteria and the need to rule out medical conditions.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Panic Disorder: The Alarm System Gone Haywire",
+      "lessonExcerpt": "Panic disorder requires recurrent unexpected panic attacks, with at least one followed by a month or more of worry about future attacks or maladaptive behavior changes because of attacks... Critical diagnostic consideration: Rule out medical conditions first. Hyperthyroidism, cardiac arrhythmia, and other medical issues can mimic panic attacks.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 28-year-old woman reports intense fear and avoidance of work meetings, dinner parties, and any situation where she might be observed by others. She experiences heart palpitations, sweating, and trembling exclusively in these social contexts. She does not experience panic attacks at any other time. The most appropriate diagnosis is:",
+      "options": [
+        "Panic disorder",
+        "Specific phobia, situational type",
+        "Social anxiety disorder",
+        "Agoraphobia"
+      ],
+      "answer": "Social anxiety disorder",
+      "explanation": "This presentation is most consistent with social anxiety disorder because the fear and physiological symptoms occur exclusively in social situations where the person might face scrutiny. The lesson states: 'Social anxiety disorder involves fear or anxiety in social situations where scrutiny might occur. The person fears showing anxiety symptoms that others will negatively evaluate.' The panic-like symptoms (palpitations, sweating, trembling) are situationally bound to social contexts, not unexpected. Panic disorder (A) requires recurrent unexpected panic attacks—these attacks are expected and tied to social situations. Specific phobia, situational type (B) involves fears of specific situations like elevators or flying, not social evaluation. Agoraphobia (D) involves fear of situations where escape might be difficult, not specifically fear of social scrutiny.",
+      "kn": "KN36",
+      "kn_explanation": "Identifying social anxiety disorder from a symptom presentation involves applying DSM classification systems and diagnostic criteria to evaluate client functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a clinically important differential diagnosis point—distinguishing situationally-bound panic symptoms in social anxiety from unexpected panic attacks in panic disorder.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Social Anxiety Disorder: Fear of the Spotlight",
+      "lessonExcerpt": "Social anxiety disorder involves fear or anxiety in social situations where scrutiny might occur. The person fears showing anxiety symptoms that others will negatively evaluate. Duration requirement: six months minimum.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 25
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "George Kelly's Personal Construct Theory is based on the fundamental postulate that people's psychological processes are directed by the ways they anticipate events. Kelly's central metaphor for understanding human cognition was that ordinary people function as:",
+      "options": [
+        "Philosophers seeking meaning",
+        "Scientists forming and testing hypotheses",
+        "Artists interpreting reality creatively",
+        "Computers processing information"
+      ],
+      "answer": "Scientists forming and testing hypotheses",
+      "explanation": "Kelly described ordinary people as scientists who are constantly forming, testing, and revising hypotheses about the world around them. His theory views people as active and future-oriented, using personal constructs (bipolar dimensions of meaning) to anticipate events. 'Philosophers seeking meaning' better describes existential approaches. 'Artists interpreting reality creatively' does not capture Kelly's emphasis on hypothesis testing. 'Computers processing information' describes the information processing approach, not Kelly's constructivist framework.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses personal construct theory, which falls within the social and multicultural domain as a framework for understanding how people construe social reality.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by reference text and lesson content with clear correct answer.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Personal Construct Therapy: Changing How You See Things",
+      "lessonExcerpt": "George Kelly is known for describing ordinary people as scientists, who are constantly forming, testing, and revising hypotheses about the world around them.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    }
+  ]
+}

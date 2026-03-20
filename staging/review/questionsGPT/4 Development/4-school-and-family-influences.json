@@ -1,0 +1,88 @@
+{
+  "questions": [
+    {
+      "stem": "According to Patterson's model of aggression, what is a key factor contributing to conduct problems in children?",
+      "options": [
+        "Parental warmth",
+        "Peer influence",
+        "Inconsistent discipline",
+        "High academic achievement"
+      ],
+      "answer": "Inconsistent discipline",
+      "explanation": "Patterson's model suggests that inconsistent discipline from parents can lead to conduct problems in children, as it fails to provide clear boundaries and expectations. The other options do not align with the core principles of Patterson's model regarding the development of aggression.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to conduct problems in children and the factors influencing aggression.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses knowledge of Patterson's model and its implications for child behavior.",
+      "suggestedLesson": "4-school-and-family-influences",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Inconsistent discipline from parents can lead to conduct problems in children.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following factors is most strongly associated with predicting adolescent alcohol use?",
+      "options": [
+        "Peer influence",
+        "Parental supervision",
+        "Socioeconomic status",
+        "Academic performance"
+      ],
+      "answer": "Peer influence",
+      "explanation": "The correct answer is 'Peer influence', as research consistently shows that adolescents are more likely to engage in alcohol use when they have peers who drink. While parental supervision, socioeconomic status, and academic performance can influence behavior, peer influence is a more direct predictor of alcohol use among adolescents.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies because it relates to predictors of substance use in adolescents.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of adolescent behavior and substance use.",
+      "suggestedLesson": "4-school-and-family-influences",
+      "suggestedParagraph": "## Predicting Divorce: Warning Signs in Communication",
+      "lessonExcerpt": "Peer influence is a significant predictor of adolescent alcohol use.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "What impact does poor parenting have on the likelihood of delinquency in children?",
+      "options": [
+        "It has no significant impact",
+        "It increases the likelihood of delinquency",
+        "It decreases the likelihood of delinquency",
+        "It only affects academic performance"
+      ],
+      "answer": "It increases the likelihood of delinquency",
+      "explanation": "The correct answer is 'It increases the likelihood of delinquency', as research indicates that poor parenting practices, such as lack of supervision and inconsistent discipline, are associated with higher rates of delinquent behavior in children. The other options are incorrect as they do not accurately reflect the established link between parenting and delinquency.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies because it relates to child development and the effects of parenting.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of the relationship between parenting and delinquency.",
+      "suggestedLesson": "4-school-and-family-influences",
+      "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
+      "lessonExcerpt": "Poor parenting practices increase the likelihood of delinquency in children.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What is the leading cause of death among adolescents in the United States?",
+      "options": [
+        "Accidents",
+        "Violence",
+        "Suicide",
+        "Chronic health conditions"
+      ],
+      "answer": "Violence",
+      "explanation": "Violence is a significant cause of death among adolescents, often overshadowed by accidents and suicide. The other options, while relevant, do not specifically highlight violence as the leading cause.",
+      "kn": "KN2",
+      "kn_explanation": "This question pertains to adolescent health and the understanding of mortality causes in this age group.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of adolescent health issues effectively.",
+      "suggestedLesson": "4-school-and-family-influences",
+      "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
+      "lessonExcerpt": "Violence is a significant cause of death among adolescents.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 22
+    }
+  ]
+}

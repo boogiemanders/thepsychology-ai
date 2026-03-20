@@ -1,0 +1,319 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist receives a referral for a client recently diagnosed with HIV. Neuropsychological testing reveals forgetfulness, poor attention, cognitive slowing, and psychomotor retardation. These symptoms are MOST consistent with which pattern of neurocognitive impairment?",
+      "options": [
+        "Cortical neurocognitive disorder characterized by aphasia and agnosia",
+        "Subcortical neurocognitive disorder characterized by cognitive slowing and apathy",
+        "Cortico-subcortical neurocognitive disorder with mixed cortical and motor symptoms",
+        "Delirium secondary to acute HIV-related medical complications"
+      ],
+      "answer": "Subcortical neurocognitive disorder characterized by cognitive slowing and apathy",
+      "explanation": "HIV-related neurocognitive disorder produces a subcortical pattern of impairment. The lesson explicitly states: 'HIV infection affecting the brain shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' Cortical disorders (A) feature aphasia, agnosia, apraxia, and poor insight—hallmarks of conditions like Alzheimer's disease. Cortico-subcortical disorders (C) such as vascular NCD show variable symptoms depending on affected areas. Delirium (D) is characterized by rapid onset, fluctuating consciousness, and disorientation, which are not described in this presentation.",
+      "kn": "KN45",
+      "kn_explanation": "Intervention/rehabilitation for special population (HIV-related cognitive impairment)",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content. Tests differential diagnosis knowledge important for clinical management of HIV-positive clients.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### HIV-Related NCD",
+      "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "According to research on common factors in psychotherapy outcomes, which of the following contributes MOST to variance in therapy outcomes?",
+      "options": [
+        "Specific treatment techniques used by the therapist",
+        "Patient contributions including motivation, resources, and social support",
+        "The strength of the therapeutic working alliance",
+        "Therapist characteristics such as experience and training"
+      ],
+      "answer": "Patient contributions including motivation, resources, and social support",
+      "explanation": "Research by Norcross and Lambert identifies patient contributions (motivation, resources, social support) as accounting for the largest identified portion of outcome variance at 30%. The therapeutic relationship accounts for 12%, treatment method for 8%, and therapist characteristics for 7%. While 40% remains unexplained, among identified factors, patient contributions are the strongest predictor. Option A (treatment method at 8%) is often overemphasized by clinicians. Option C (therapeutic alliance at 12%) is the second-largest identified factor. Option D (therapist characteristics at 7%) contributes the least of the named factors.",
+      "kn": "KN44",
+      "kn_explanation": "Research on common factors and their comparative contribution to therapy outcomes",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported by lesson content with specific percentages. A classic EPPP topic testing common factors research.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## What Makes Therapy Work? The Common Factors Debate",
+      "lessonExcerpt": "Norcross and Lambert's research suggests this breakdown of what contributes to therapy outcomes: 30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method, 7% therapist characteristics, 3% other factors, 40% unexplained variance.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A school psychologist consults with a teacher who consistently struggles to work effectively with students from a particular cultural background. The psychologist suspects the teacher's personal biases are interfering with her professional objectivity. According to Caplan's consultation model, this situation is BEST addressed through which type of consultation?",
+      "options": [
+        "Client-centered case consultation focused on developing a plan for a specific student",
+        "Program-centered administrative consultation to restructure classroom procedures",
+        "Consultee-centered case consultation to address the teacher's theme interference",
+        "Consultee-centered administrative consultation to improve school-wide cultural competency"
+      ],
+      "answer": "Consultee-centered case consultation to address the teacher's theme interference",
+      "explanation": "Consultee-centered case consultation focuses on building the consultee's professional skills, particularly when personal biases interfere with objectivity. The lesson states: 'Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.' Theme interference is a specific concept within consultee-centered case consultation where the consultee's personal issues affect their work with certain clients. Client-centered case consultation (A) focuses on solving the immediate client problem, not the consultee's underlying bias. Program-centered administrative consultation (B) addresses existing program problems, not individual practitioner skills. Consultee-centered administrative consultation (D) builds administrators' program management skills, not frontline practitioners' clinical objectivity.",
+      "kn": "KN47",
+      "kn_explanation": "Research-based consultation process with a teacher about cultural competence",
+      "difficulty": "hard",
+      "quality_comment": "Excellent application question requiring integration of theme interference concept with correct consultation type. Well-supported by lesson content.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Caplan's Four Types of Consultation",
+      "lessonExcerpt": "Consultee-Centered Case Consultation shifts focus to building the consultee's skills... Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A psychologist is consulting with a community task force on domestic violence intervention. Based on the research literature, which approach has been found to produce the best long-term outcomes for reducing spousal abuse recidivism?",
+      "options": [
+        "Couples therapy focusing on communication skills",
+        "Arrest of the perpetrator",
+        "Individual psychotherapy for the abuser",
+        "Mandatory anger management group treatment"
+      ],
+      "answer": "Arrest of the perpetrator",
+      "explanation": "Research on domestic violence indicates that the best long-term results follow arrest of the perpetrator. The research also suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further. Couples therapy (A) is generally contraindicated in active abuse situations. Individual psychotherapy (C) and anger management groups (D) may be components of treatment but have not been shown to produce the best long-term outcomes. The distinction between expressive and instrumental abuse is also relevant—expressive abuse is more amenable to psychological treatment, but left untreated becomes instrumental over time.",
+      "kn": "KN47",
+      "kn_explanation": "Consulting with community task force on evidence-based domestic violence intervention",
+      "difficulty": "hard",
+      "quality_comment": "Strong question testing a counterintuitive finding that is well-supported by the lesson content. Distractors represent plausible but less supported interventions.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Domestic Violence",
+      "lessonExcerpt": "The research suggests that change in the perpetrator of the abuse takes place only when the victim refuses to tolerate the situation any further. The best long-term results seem to follow arrest of the perpetrator.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Dr. Okonkwo is reviewing the psychotherapy outcome literature to improve her clinical practice. According to Norcross and Lambert's research on common factors, which variable accounts for the largest identified portion of variance in therapy outcomes?",
+      "options": [
+        "Specific treatment method used",
+        "Therapeutic relationship quality",
+        "Patient contributions such as motivation and social support",
+        "Therapist characteristics and experience level"
+      ],
+      "answer": "Patient contributions such as motivation and social support",
+      "explanation": "According to Norcross and Lambert's breakdown of factors contributing to therapy outcomes, patient contributions (motivation, resources, social support) account for 30% of variance—the largest identified portion. The therapeutic relationship accounts for 12%, treatment method for only 8%, and therapist characteristics for 7%. While 40% remains unexplained variance, of the identified factors, patient contributions are the most influential. This finding challenges the common assumption that technique or the therapist matters most.",
+      "kn": "KN44",
+      "kn_explanation": "Common factors research on treatment efficacy and what drives therapy outcomes",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported by explicit percentages in the lesson. Tests an important and frequently tested concept with precise data.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## What Makes Therapy Work? The Common Factors Debate",
+      "lessonExcerpt": "Norcross and Lambert's research suggests this breakdown of what contributes to therapy outcomes: 30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method, 7% therapist characteristics, 3% other factors, 40% unexplained variance.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "A psychologist is reviewing the literature on multicultural counseling to improve service delivery. Research on client-therapist ethnic matching indicates that matching has what pattern of effects?",
+      "options": [
+        "Strong positive effects on both client perceptions and treatment outcomes",
+        "Moderate effect on client perceptions of the therapist but minimal effect on actual outcomes",
+        "No significant effect on perceptions but a strong effect on reducing premature termination",
+        "Negative effects on the therapeutic alliance due to assumed similarity"
+      ],
+      "answer": "Moderate effect on client perceptions of the therapist but minimal effect on actual outcomes",
+      "explanation": "Research on ethnic matching in therapy shows a moderate effect (.32) on how clients perceive their therapists but only a minimal effect (.09) on actual treatment outcomes. This is a nuanced finding—matching influences satisfaction and perception but doesn't substantially change clinical results. Strong effects on both (A) overstates the findings. Option C reverses the actual pattern. Option D contradicts the research showing positive perceptual effects. The research also shows that cultural competence and worldview alignment matter more than ethnic matching itself.",
+      "kn": "KN42",
+      "kn_explanation": "Matching client-therapist characteristics (ethnic matching) in treatment decision-making",
+      "difficulty": "hard",
+      "quality_comment": "Well-supported by specific effect sizes in the lesson. Tests a nuanced, frequently examined finding.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Client-Therapist Matching: Does It Matter?",
+      "lessonExcerpt": "Matching has a moderate effect (.32) on how clients perceive their therapists but minimal effect (.09) on actual outcomes... cultural competence, compassion, and worldview alignment matter more than ethnic matching itself.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A researcher is explaining the significance of Smith, Glass, and Miller's (1980) landmark meta-analysis to a class of graduate students. The average effect size of .85 found in their study indicates that:",
+      "options": [
+        "Therapy patients improved 85% more than untreated individuals on standardized measures",
+        "85% of therapy patients showed clinically significant improvement by the end of treatment",
+        "The average treated person was better off than 80% of untreated individuals",
+        "Therapists achieved positive outcomes with 85% of their caseload on average"
+      ],
+      "answer": "The average treated person was better off than 80% of untreated individuals",
+      "explanation": "Smith, Glass, and Miller's meta-analysis of 475 studies found an average effect size of .85, which means the average therapy patient was better off than 80% of people who did not receive therapy. This is a specific statistical interpretation—an effect size of .85 standard deviations corresponds to the 80th percentile. Option A misinterprets effect size as a percentage improvement. Option B confuses the finding with dose-effect data (Howard found 50% improved by session 8). Option D confuses effect size with a success rate.",
+      "kn": "KN44",
+      "kn_explanation": "Landmark meta-analysis on comparative efficacy of psychotherapy (Smith, Glass & Miller)",
+      "difficulty": "medium",
+      "quality_comment": "Excellent question testing precise understanding of a frequently tested statistic. The lesson explicitly states the interpretation.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Smith, Glass, and Miller's Meta-Analysis (1980)",
+      "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A psychiatry resident asks a clinical psychologist about the primary indication for electroconvulsive therapy (ECT). Based on current evidence, ECT is most commonly indicated as a treatment for:",
+      "options": [
+        "Treatment-resistant obsessive-compulsive disorder",
+        "Severe depression, particularly when rapid response is needed",
+        "Chronic schizophrenia with predominantly negative symptoms",
+        "Generalized anxiety disorder unresponsive to medication"
+      ],
+      "answer": "Severe depression, particularly when rapid response is needed",
+      "explanation": "ECT is primarily indicated for severe depression, with response rates of approximately 80% and remission rates of approximately 70%, with time to remission of only 1-3 weeks. This makes it especially valuable when rapid response is critical. While ECT may also be used for acute psychosis and catatonia, its primary and most well-established indication is severe depression. OCD (A) is typically treated with SSRIs and exposure-response prevention. Chronic schizophrenia with negative symptoms (C) does not respond well to ECT. GAD (D) is not a primary indication for ECT.",
+      "kn": "KN44",
+      "kn_explanation": "Evidence base for ECT as a treatment technique and its clinical indications",
+      "difficulty": "easy",
+      "quality_comment": "Well-supported by lesson content with specific efficacy data. Tests a fundamental clinical knowledge point.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Alternative and Adjunctive Treatments",
+      "lessonExcerpt": "Electroconvulsive Therapy (ECT): The heavy hitter for severe depression. Response rates: ~80%. Remission rates: ~70%. Time to remission: 1-3 weeks.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "According to research on psychotherapy outcomes, which factor accounts for the largest identified proportion of variance in therapy outcomes?",
+      "options": [
+        "Specific treatment method used by the therapist",
+        "Therapeutic relationship quality between client and therapist",
+        "Patient contributions including motivation, resources, and social support",
+        "Individual therapist characteristics and competence"
+      ],
+      "answer": "Patient contributions including motivation, resources, and social support",
+      "explanation": "According to Norcross and Lambert's research cited in the lesson, patient contributions account for 30% of therapy outcome variance—the largest identified factor. The therapeutic relationship accounts for 12%, treatment method for 8%, and therapist characteristics for 7%. While 40% remains unexplained variance, of the identified factors, patient contributions are the largest. Option B (therapeutic relationship at 12%) is the second largest identified factor. Option A (treatment method at 8%) is notably smaller than commonly assumed. Option D (therapist characteristics at 7%) is the smallest of the major identified factors.",
+      "kn": "KN44",
+      "kn_explanation": "Research on factors contributing to variance in therapy outcomes",
+      "difficulty": "medium",
+      "quality_comment": "Tests a high-yield EPPP topic. The specific percentages from Norcross and Lambert are frequently tested.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## What Makes Therapy Work? The Common Factors Debate",
+      "lessonExcerpt": "30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method, 7% therapist characteristics",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A school psychologist consults with a teacher who consistently believes that students from single-parent households are destined to fail academically, which interferes with her ability to effectively teach these students. According to Caplan's consultation model, this problem is best addressed through which type of consultation?",
+      "options": [
+        "Client-centered case consultation, focused on developing a plan for a specific struggling student",
+        "Program-centered administrative consultation, focused on improving the school's academic support programs",
+        "Consultee-centered case consultation, focused on addressing the teacher's theme interference",
+        "Consultee-centered administrative consultation, focused on building the administrator's program evaluation skills"
+      ],
+      "answer": "Consultee-centered case consultation, focused on addressing the teacher's theme interference",
+      "explanation": "The lesson identifies theme interference as a key concept within consultee-centered case consultation: 'Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.' The teacher's unfounded belief that children from single-parent homes are destined to fail is a classic example of theme interference—a bias that impairs her professional functioning across multiple cases. Option A is incorrect because client-centered case consultation focuses on helping with a specific client, not on the consultee's broader biases. Option B is incorrect because program-centered administrative consultation addresses existing program problems, not individual consultee beliefs. Option D is incorrect because consultee-centered administrative consultation builds administrative skills, not clinical objectivity.",
+      "kn": "KN47",
+      "kn_explanation": "Research-based consultation process with a teacher about biased beliefs",
+      "difficulty": "hard",
+      "quality_comment": "Excellent applied scenario requiring knowledge of both Caplan's consultation types and the specific concept of theme interference.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Caplan's Four Types of Consultation",
+      "lessonExcerpt": "Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A psychologist is consulted about the most effective long-term intervention for reducing recidivism in cases of domestic violence. Based on the research literature, which intervention has been associated with the best long-term outcomes for stopping spousal abuse?",
+      "options": [
+        "Mandated couples therapy focusing on communication skills",
+        "Arrest of the perpetrator",
+        "Individual psychodynamic therapy for the abuser",
+        "Group anger management programs for batterers"
+      ],
+      "answer": "Arrest of the perpetrator",
+      "explanation": "Research on domestic violence indicates that the best long-term results for reducing recidivism follow arrest of the perpetrator. The literature suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further, and arrest represents a concrete consequence. Couples therapy (A) is generally contraindicated in active abuse situations due to safety concerns. Individual psychodynamic therapy (C) and group anger management (D) have not shown the same level of effectiveness as arrest for long-term outcomes. Additionally, the research distinguishes between expressive abuse (less deliberate, more amenable to treatment) and instrumental abuse (deliberate control), noting that even expressive abuse becomes instrumental over time if untreated.",
+      "kn": "KN44",
+      "kn_explanation": "Evidence-based intervention for reducing domestic violence recidivism",
+      "difficulty": "hard",
+      "quality_comment": "Strong question testing applied knowledge of domestic violence intervention research. The distractors represent commonly assumed interventions.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## The Three Faces of Prevention: Stopping Problems Before They Start",
+      "lessonExcerpt": "The research suggests that change in the perpetrator of the abuse takes place only when the victim refuses to tolerate the situation any further. The best long-term results seem to follow arrest of the perpetrator.",
+      "needsReview": true,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "According to research on common factors in psychotherapy outcomes, which therapist-related variable is most consistently identified as a significant predictor of positive therapeutic outcomes?",
+      "options": [
+        "Years of clinical experience",
+        "Empathy",
+        "Theoretical orientation",
+        "Level of professional training"
+      ],
+      "answer": "Empathy",
+      "explanation": "Research consistently identifies empathy as one of the most important therapist variables predicting positive outcomes. The APA Division 29 report concluded that empathy is 'demonstrably effective' as a relationship element. While the therapeutic relationship overall accounts for approximately 12% of outcome variance, empathy is identified as a core component driving this effect. Years of experience (A) shows some effect on reducing dropout rates but is not the strongest predictor. Theoretical orientation (C) and specific treatment methods account for only about 8% of outcome variance. Level of professional training (D) shows relatively modest effects compared to relational factors like empathy.",
+      "kn": "KN44",
+      "kn_explanation": "Research on therapist variables contributing to therapy outcome variance",
+      "difficulty": "medium",
+      "quality_comment": "Tests a frequently examined concept on the EPPP. Distractors represent other therapist variables that students might confuse with the most predictive one.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## What Makes Therapy Work? The Common Factors Debate",
+      "lessonExcerpt": "These include the therapeutic alliance in individual, youth, and family psychotherapy; cohesion in group therapy; empathy; and collecting client feedback. Aspects deemed to be 'probably effective' included goal consensus, collaboration, and positive regard.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "A clinical psychologist is reviewing research on ethnic matching in psychotherapy. According to the literature, what is the most accurate conclusion about matching clients and therapists by ethnicity?",
+      "options": [
+        "Ethnic matching consistently improves both therapy process ratings and treatment outcomes across all groups",
+        "Ethnic matching has a moderate effect on client perceptions of the therapist but minimal effect on actual treatment outcomes",
+        "Ethnic matching has no measurable effect on any therapy variable",
+        "Ethnic matching improves outcomes for African American clients but not for other ethnic groups"
+      ],
+      "answer": "Ethnic matching has a moderate effect on client perceptions of the therapist but minimal effect on actual treatment outcomes",
+      "explanation": "Research shows nuanced effects of ethnic matching: a moderate effect (.32) on how clients perceive their therapists but a minimal effect (.09) on actual outcomes. Furthermore, effects vary by ethnicity—matching reduced premature termination for Asian, Hispanic, and European American clients but not African American clients, and only improved outcomes for Hispanic American clients. Option A overstates the benefits across all groups. Option C understates the effect on perceptions. Option D reverses the finding—it was Hispanic American clients, not African American clients, who showed improved outcomes with matching. Cultural competence, compassion, and worldview alignment matter more than ethnic matching itself.",
+      "kn": "KN42",
+      "kn_explanation": "Research on client-therapist ethnic matching in treatment decision-making",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced understanding of research findings. Requires knowledge of differential effects across ethnic groups.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Client-Therapist Matching: Does It Matter?",
+      "lessonExcerpt": "Matching has a moderate effect (.32) on how clients perceive their therapists but minimal effect (.09) on actual outcomes. Effects also vary by race/ethnicity, matching reduced premature termination for Asian, Hispanic, and European American clients but not African American clients, and only improved outcomes for Hispanic American clients.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "In Smith, Glass, and Miller's landmark 1980 meta-analysis of psychotherapy outcomes, what was the average effect size for psychotherapy compared to no treatment?",
+      "options": [
+        "0.50, indicating the average therapy patient was better off than 69% of untreated individuals",
+        "0.85, indicating the average therapy patient was better off than 80% of untreated individuals",
+        "1.20, indicating the average therapy patient was better off than 88% of untreated individuals",
+        "0.65, indicating the average therapy patient was better off than 74% of untreated individuals"
+      ],
+      "answer": "0.85, indicating the average therapy patient was better off than 80% of untreated individuals",
+      "explanation": "Smith, Glass, and Miller's pioneering 1980 meta-analysis combined results from 475 studies comparing therapy to no treatment and found an effect size of .85. This means the average therapy patient was better off than 80% of people who didn't receive therapy. This was landmark empirical evidence that psychotherapy is effective, countering Eysenck's earlier controversial claim that therapy was ineffective. The other options present plausible but incorrect effect sizes. This specific finding (.85/80%) is a frequently tested fact on the EPPP.",
+      "kn": "KN44",
+      "kn_explanation": "Meta-analytic evidence for psychotherapy efficacy (Smith, Glass & Miller effect size)",
+      "difficulty": "medium",
+      "quality_comment": "Tests recall of a specific, frequently examined research finding. Distractors use plausible alternative effect sizes with correctly calculated percentile equivalents.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Smith, Glass, and Miller's Meta-Analysis (1980)",
+      "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A community mental health center establishes a halfway house program for individuals with severe mental illness who have completed inpatient psychiatric treatment. Residents receive social skills training, vocational rehabilitation, and ongoing medication management while gradually reintegrating into the community. This program is BEST classified as which level of prevention?",
+      "options": [
+        "Primary prevention",
+        "Secondary prevention",
+        "Tertiary prevention",
+        "Indicated prevention"
+      ],
+      "answer": "Tertiary prevention",
+      "explanation": "Tertiary prevention targets individuals who already have a diagnosed condition, with goals of reducing severity, preventing relapse, and supporting rehabilitation. A halfway house for individuals transitioning from inpatient psychiatric treatment is a classic example of tertiary prevention—the disorder already exists, and the focus is on reintegration and preventing worsening. Primary prevention (A) targets everyone before problems develop. Secondary prevention (B) involves early identification and intervention for at-risk individuals. Indicated prevention (D) is part of Gordon's framework and targets individuals showing early warning signs but without a formal diagnosis.",
+      "kn": "KN45",
+      "kn_explanation": "Prevention/intervention/rehabilitation for special population (severe mental illness, halfway house)",
+      "difficulty": "easy",
+      "quality_comment": "Clear, well-supported question with direct lesson content match. Tests application of prevention levels.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Caplan's Classic Prevention Model",
+      "lessonExcerpt": "Tertiary Prevention comes into play when someone already has a diagnosis. Your goal shifts to reducing severity, preventing relapse, and supporting rehabilitation. Social skills training for patients with schizophrenia, halfway houses for people transitioning from addiction treatment, and Alcoholics Anonymous meetings all fall under tertiary prevention.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 23
+    }
+  ]
+}

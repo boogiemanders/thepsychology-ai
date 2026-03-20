@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist uses a selection test with a validity coefficient of .60 to predict job performance. The criterion measure (supervisor ratings) has a standard deviation of 8. If the validity coefficient were increased to .80 while the criterion SD remained the same, what would happen to the standard error of estimate?",
+      "options": [
+        "It would increase from 6.4 to 7.2",
+        "It would decrease from 6.4 to 4.8",
+        "It would remain unchanged because the criterion SD is the same",
+        "It would decrease from 4.8 to 3.2"
+      ],
+      "answer": "It would decrease from 6.4 to 4.8",
+      "explanation": "The standard error of estimate formula is: SEE = SD of criterion × √(1 - validity coefficient²). With validity = .60: SEE = 8 × √(1 - .36) = 8 × √.64 = 8 × .8 = 6.4. With validity = .80: SEE = 8 × √(1 - .64) = 8 × √.36 = 8 × .6 = 4.8. Thus, increasing the validity coefficient from .60 to .80 decreases the SEE from 6.4 to 4.8. This illustrates the inverse relationship between the validity coefficient and the standard error of estimate: as the predictor becomes more valid, prediction errors become smaller. The criterion SD alone does not determine the SEE; both the criterion SD and the validity coefficient jointly determine it.",
+      "kn": "KN29",
+      "kn_explanation": "Validity coefficients, criterion measures, and prediction of job performance are core psychometric concepts (reliability and validity).",
+      "difficulty": "hard",
+      "quality_comment": "Excellent computational question that requires applying the SEE formula and understanding the inverse relationship between validity and prediction error.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "### The Standard Error of Estimate",
+      "lessonExcerpt": "Here's the formula: Standard Error = SD of criterion × √(1 - validity coefficient²)... Example calculation: Your job performance measure has a standard deviation of 5, and your hiring test has a validity coefficient of .60. Step 1: Square the coefficient: .60² = .36. Step 2: Subtract from 1: 1 - .36 = .64. Step 3: Take the square root: √.64 = .8. Step 4: Multiply by criterion SD: 5 × .8 = 4.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    }
+  ]
+}

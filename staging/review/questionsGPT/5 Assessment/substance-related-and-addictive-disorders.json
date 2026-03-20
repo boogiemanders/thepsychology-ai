@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A 35-year-old graduate student presents with restlessness, insomnia, muscle twitching, rambling speech, tachycardia, and psychomotor agitation. She reports consuming approximately 8-10 cups of coffee daily to stay awake while studying for comprehensive exams. She denies use of any other substances, and her urine drug screen is negative. The most likely diagnosis is:",
+      "options": [
+        "Generalized anxiety disorder",
+        "Stimulant intoxication due to amphetamine use",
+        "Caffeine intoxication",
+        "Hypomanic episode"
+      ],
+      "answer": "Caffeine intoxication",
+      "explanation": "The patient's symptoms—restlessness, insomnia, muscle twitching, rambling speech, tachycardia, and psychomotor agitation—are classic features of caffeine intoxication, which develops during or shortly after excessive caffeine consumption. Her reported intake of 8-10 cups of coffee daily is well above typical consumption. The negative urine drug screen rules out stimulant intoxication from amphetamines, though the symptom presentation can be similar since caffeine is itself a stimulant. GAD involves excessive worry about multiple domains for at least 6 months—while restlessness and insomnia overlap, GAD does not typically present with muscle twitching, rambling speech, and tachycardia as a cluster. A hypomanic episode would require a distinct period of elevated, expansive, or irritable mood lasting at least 4 days, and the symptoms here are better explained by the known excessive caffeine intake.",
+      "kn": "KN33",
+      "kn_explanation": "Differential diagnosis question requiring integration of physical/medical symptoms (tachycardia, muscle twitching) with psychological presentation to arrive at correct diagnosis",
+      "difficulty": "medium",
+      "quality_comment": "Good clinical vignette. However, the lesson content on caffeine intoxication is minimal—it only notes caffeine 'can cause intoxication' without listing specific symptoms. The specific symptoms used in this question are based on DSM-5-TR criteria rather than lesson content.",
+      "suggestedLesson": "5-substance-misuse",
+      "suggestedParagraph": "## The Big Picture: Two Categories, Ten Substances",
+      "lessonExcerpt": "Caffeine can cause intoxication and withdrawal but doesn't have a recognized use disorder in DSM-5-TR. It's the exception in the substance categories.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    }
+  ]
+}

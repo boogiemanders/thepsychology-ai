@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A pediatrician refers a 4-year-old child to a psychologist after the child has been hospitalized multiple times for unexplained symptoms. The mother appears unusually knowledgeable about medical procedures and seems invested in the child remaining hospitalized, but no external incentives such as financial gain or avoidance of legal consequences can be identified. Which diagnosis is most appropriate for the mother?",
+      "options": [
+        "Malingering",
+        "Factitious disorder imposed on another",
+        "Somatic symptom disorder",
+        "Illness anxiety disorder"
+      ],
+      "answer": "Factitious disorder imposed on another",
+      "explanation": "Factitious disorder imposed on another involves falsifying or inducing symptoms in another person (often a child) and presenting them as ill, with deception occurring even without obvious external rewards. This is the correct answer because the mother is inducing symptoms in her child with no identifiable external gain. Malingering is incorrect because it requires clear external rewards (money, drugs, avoiding consequences) and is not a mental disorder. Somatic symptom disorder is incorrect because it involves the person's own distressing physical symptoms, not inducing symptoms in another. Illness anxiety disorder is incorrect because it involves preoccupation with having a serious illness oneself, with absent or mild somatic symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Integrating non-psychological medical information (unexplained hospitalizations, pediatrician referral) into psychological assessment for differential diagnosis, likely involving Factitious Disorder Imposed on Another",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing the key distinction between factitious disorder imposed on another and malingering based on motivation, well-supported by lesson content.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "### Factitious Disorder: The Intent to Deceive",
+      "lessonExcerpt": "Factitious Disorder Imposed on Another: Same as above, but symptoms are induced in another person (often a child by their parent)... Factitious Disorder: Internal psychological need; no obvious external reward... Malingering: Clear external reward (money, drugs, avoiding work/legal consequences)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "questions": [
+    {
+      "stem": "A researcher draws random samples from a population with a standard deviation of 20. If she increases her sample size from 25 to 100, what will happen to the standard error of the mean?",
+      "options": [
+        "It will decrease from 4.0 to 2.0",
+        "It will decrease from 4.0 to 1.0",
+        "It will decrease from 0.8 to 0.2",
+        "It will remain the same because the population standard deviation has not changed"
+      ],
+      "answer": "It will decrease from 4.0 to 2.0",
+      "explanation": "The standard error of the mean equals the population standard deviation divided by the square root of the sample size (SE = SD/√n). With n=25: SE = 20/√25 = 20/5 = 4.0. With n=100: SE = 20/√100 = 20/10 = 2.0. The lesson states that 'the standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size' and emphasizes that 'the standard error gets smaller as sample size increases.' Option B (1.0) incorrectly divides by the sample size rather than its square root. Option C uses incorrect values. Option D ignores the role of sample size.",
+      "kn": "KN55",
+      "kn_explanation": "Standard error of the mean is a concept in descriptive/inferential statistics and probability theory",
+      "difficulty": "medium",
+      "quality_comment": "Good computational question that tests both the formula and conceptual understanding of standard error. Distractors target common calculation errors.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "### The Central Limit Theorem: Three Critical Predictions",
+      "lessonExcerpt": "The standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A researcher draws random samples from a population with a standard deviation of 20. She wants to reduce the standard error of the mean from 4.0 to 2.0. What must she do to her sample size?",
+      "options": [
+        "Double the sample size",
+        "Quadruple the sample size",
+        "Increase the sample size by 50%",
+        "Halve the population standard deviation instead"
+      ],
+      "answer": "Quadruple the sample size",
+      "explanation": "The standard error of the mean equals the population standard deviation divided by the square root of the sample size (SE = σ/√n). With σ = 20 and SE = 4.0, the original sample size is n = (20/4)² = 25. To achieve SE = 2.0: n = (20/2)² = 100. Thus, the sample size must be quadrupled from 25 to 100. Because sample size is under a square root in the formula, cutting the standard error in half requires multiplying the sample size by four, not two. Option A is incorrect because doubling n would only reduce SE by a factor of √2 (approximately 1.41). Option C would reduce SE even less. Option D is not a methodological change the researcher can make.",
+      "kn": "KN55",
+      "kn_explanation": "Standard error calculation and sample size determination are inferential/descriptive statistics concepts",
+      "difficulty": "hard",
+      "quality_comment": "Requires application of the SE formula rather than just recognition. The square root relationship is a common EPPP trap.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "### The Central Limit Theorem: Three Critical Predictions",
+      "lessonExcerpt": "The standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which scoring method is typically used for standardized entrance exams to ensure fairness across different test-takers?",
+      "options": [
+        "Raw score method",
+        "Percentile rank method",
+        "Standardized score method",
+        "Cumulative score method"
+      ],
+      "answer": "Standardized score method",
+      "explanation": "The standardized score method adjusts scores based on the distribution of scores in the population, ensuring fairness. The raw score method does not account for variability among test-takers, the percentile rank method ranks scores but does not standardize them, and the cumulative score method is not typically used for entrance exams.",
+      "kn": "KN2",
+      "kn_explanation": "This question pertains to the scoring methods used in standardized testing.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and targets knowledge of scoring systems in entrance exams.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
+      "lessonExcerpt": "Standardized tests provide a way to compare scores across different populations.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "In the context of Bayes' Theorem, what does the term 'prior probability' refer to?",
+      "options": [
+        "The probability of an event occurring before new evidence is considered.",
+        "The probability of an event occurring after new evidence is taken into account.",
+        "The likelihood of observing evidence given a specific hypothesis.",
+        "The overall probability of all possible outcomes."
+      ],
+      "answer": "The probability of an event occurring before new evidence is considered.",
+      "explanation": "Prior probability is defined as the initial assessment of the likelihood of an event before incorporating new evidence. The other options describe aspects of posterior probability or likelihood, which are not correct in this context.",
+      "kn": "KN5",
+      "kn_explanation": "This question tests understanding of conditional probabilities in relation to Bayes' Theorem.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of Bayes' Theorem and its components.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Foundation: Sampling Distributions and Probability",
+      "lessonExcerpt": "Prior probability refers to the probability of an event occurring before new evidence is considered.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is the primary consequence of conducting research with low statistical power?",
+      "options": [
+        "Increased likelihood of Type I errors.",
+        "Increased likelihood of Type II errors.",
+        "Greater confidence in the results obtained.",
+        "More robust findings that can be generalized."
+      ],
+      "answer": "Increased likelihood of Type II errors.",
+      "explanation": "The correct answer is that low statistical power increases the likelihood of Type II errors, which occur when a true effect is not detected. This means that researchers may fail to identify a real effect due to insufficient power. The other options incorrectly describe the consequences of low power.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it pertains to understanding the implications of statistical power in research.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately tests knowledge of statistical power and its effects on research outcomes.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Statistical Power: Your Ability to Detect Real Effects",
+      "lessonExcerpt": "The probability of making a Type II error is beta (β). However, you can reduce it by increasing your study's statistical power.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "In a one-way ANOVA, what is the primary purpose of the analysis?",
+      "options": [
+        "To compare means across multiple groups",
+        "To assess the correlation between two variables",
+        "To test the difference between two means",
+        "To evaluate the reliability of a measure"
+      ],
+      "answer": "To compare means across multiple groups",
+      "explanation": "The primary purpose of a one-way ANOVA is to compare means across multiple groups, making it the correct answer. The other options refer to different statistical analyses: correlation assesses relationships, t-tests compare two means, and reliability tests evaluate consistency.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to the statistical analysis of group differences.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of ANOVA and its purpose.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Making Decisions: The Four Possible Outcomes",
+      "lessonExcerpt": "One-way ANOVA is used to compare means across multiple groups.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "How do you determine the score threshold for a specific percentile in a normal distribution?",
+      "options": [
+        "By calculating the mean and standard deviation",
+        "By using z-scores",
+        "By applying the central limit theorem",
+        "By conducting a t-test"
+      ],
+      "answer": "By using z-scores",
+      "explanation": "To determine the score threshold for a specific percentile in a normal distribution, you use z-scores, which indicate how many standard deviations a score is from the mean. The other options do not directly relate to finding percentiles.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to determining score thresholds in normal distribution.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of statistical concepts.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Foundation: Sampling Distributions and Probability",
+      "lessonExcerpt": "You determine score thresholds for percentiles using z-scores.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which statistical test is most appropriate for analyzing non-linear outcomes in a dataset?",
+      "options": [
+        "ANOVA",
+        "Regression analysis",
+        "Trend analysis",
+        "Chi-square test"
+      ],
+      "answer": "Trend analysis",
+      "explanation": "Trend analysis is specifically designed to analyze non-linear outcomes, making it the correct choice. ANOVA is used for comparing means, regression analysis can handle linear relationships, and chi-square tests are for categorical data.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it relates to statistical tests for non-linear outcomes.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a nuanced understanding of statistical tests.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "Trend analysis is used for analyzing non-linear outcomes.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What is a key advantage of using MANOVA over ANOVA?",
+      "options": [
+        "It reduces the risk of Type I error",
+        "It is simpler to conduct",
+        "It requires fewer assumptions",
+        "It can only analyze one dependent variable"
+      ],
+      "answer": "It reduces the risk of Type I error",
+      "explanation": "MANOVA reduces the risk of Type I error by allowing researchers to test multiple dependent variables simultaneously, which is its primary advantage over ANOVA. The other options are incorrect as MANOVA is more complex, has similar assumptions, and analyzes multiple dependent variables.",
+      "kn": "KN9",
+      "kn_explanation": "This KN code applies as it relates to the advantages of using MANOVA over ANOVA.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights a key advantage of MANOVA.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Two Main Families of Statistical Tests",
+      "lessonExcerpt": "MANOVA reduces the risk of Type I error by testing multiple dependent variables simultaneously.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "In a meta-analysis, which of the following is primarily calculated to combine study results?",
+      "options": [
+        "Mean difference",
+        "Effect size",
+        "Standard deviation",
+        "Confidence interval"
+      ],
+      "answer": "Effect size",
+      "explanation": "The correct answer is 'Effect size' because meta-analysis aims to quantify the overall effect of a treatment or intervention across multiple studies. The mean difference is a specific type of effect size, but effect size is the broader term that encompasses various measures. Standard deviation and confidence interval are not the primary focus of meta-analysis.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies because it relates to understanding how to synthesize research findings quantitatively.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of meta-analysis concepts.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
+      "lessonExcerpt": "Meta-analysis combines study results into an effect size.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What is the primary way to increase the statistical power of a study?",
+      "options": [
+        "Increase sample size",
+        "Use a one-tailed test",
+        "Reduce alpha level",
+        "Increase the number of variables"
+      ],
+      "answer": "Increase sample size",
+      "explanation": "The correct answer is 'Increase sample size' because a larger sample size reduces the standard error and increases the likelihood of detecting a true effect, thereby enhancing statistical power. Using a one-tailed test can increase power but is not a primary method, while reducing alpha level and increasing the number of variables do not directly increase power.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it pertains to understanding factors that influence statistical power.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests a fundamental concept in statistics.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Statistical Power: Your Ability to Detect Real Effects",
+      "lessonExcerpt": "Statistical power is increased primarily by increasing sample size.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "In stepwise regression, what is the primary criterion for selecting predictors?",
+      "options": [
+        "The strength of the relationship with the dependent variable",
+        "The number of predictors already included",
+        "The order of entry into the model",
+        "The sample size of the study"
+      ],
+      "answer": "The strength of the relationship with the dependent variable",
+      "explanation": "The correct answer is 'The strength of the relationship with the dependent variable' because stepwise regression selects predictors based on their statistical significance and contribution to explaining variance in the dependent variable. The other options do not accurately reflect the primary criterion for predictor selection.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it relates to understanding the process of selecting predictors in regression analysis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of regression techniques.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "Stepwise regression selects predictors based on their strength of relationship with the dependent variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which of the following employee selection methods is most appropriate for assessing multiple skills in candidates?",
+      "options": [
+        "A structured interview focusing on past experiences.",
+        "A cognitive ability test.",
+        "A work sample test that simulates job tasks.",
+        "A personality inventory."
+      ],
+      "answer": "A work sample test that simulates job tasks.",
+      "explanation": "A work sample test is designed to assess a candidate's ability to perform specific tasks related to the job, making it ideal for evaluating multiple skills. The other options focus on narrower aspects of candidate evaluation.",
+      "kn": "KN3",
+      "kn_explanation": "This question pertains to employee selection methods, particularly in assessing multiple skills.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of effective employee selection methods.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
+      "lessonExcerpt": "A work sample test is designed to assess a candidate's ability to perform specific tasks related to the job.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "When conducting multiple t-tests, what is the primary concern regarding Type I error rates?",
+      "options": [
+        "The Type I error rate remains constant regardless of the number of tests conducted.",
+        "The Type I error rate increases with each additional t-test performed.",
+        "The Type I error rate decreases as more tests are conducted.",
+        "The Type I error rate is irrelevant when using t-tests."
+      ],
+      "answer": "The Type I error rate increases with each additional t-test performed.",
+      "explanation": "The correct answer highlights that conducting multiple t-tests increases the likelihood of making at least one Type I error, which is a common issue in statistical testing. The other options incorrectly state the behavior of Type I error rates in relation to multiple tests.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding Type I error in the context of multiple comparisons.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests a critical understanding of statistical principles.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "### Type I Error: The False Alarm",
+      "lessonExcerpt": "If α = .05, you're accepting a 5% chance of a false positive. If you conduct multiple tests, the overall Type I error rate increases.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What distinguishes statistical significance from practical significance in research findings?",
+      "options": [
+        "Statistical significance indicates a real-world impact, while practical significance does not.",
+        "Statistical significance is determined by p-values, while practical significance considers effect size.",
+        "Statistical significance is always more important than practical significance.",
+        "Practical significance is determined by p-values, while statistical significance considers effect size."
+      ],
+      "answer": "Statistical significance is determined by p-values, while practical significance considers effect size.",
+      "explanation": "The correct answer highlights the distinction between the two concepts: statistical significance is assessed through p-values, while practical significance is evaluated through effect sizes, which reflect the real-world relevance of the findings. The other options misrepresent the relationship between the two concepts.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the difference between statistical and practical significance.",
+      "difficulty": "hard",
+      "quality_comment": "The question is clear and effectively tests the understanding of significance in research.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Making Decisions: The Four Possible Outcomes",
+      "lessonExcerpt": "Statistical significance is determined by p-values, while practical significance considers effect size.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary justification for using a pooled error term in ANOVA?",
+      "options": [
+        "To increase the sample size for more accurate estimates.",
+        "To account for unequal variances across groups.",
+        "To provide a more stable estimate of the error variance.",
+        "To simplify the calculations involved in ANOVA."
+      ],
+      "answer": "To provide a more stable estimate of the error variance.",
+      "explanation": "The correct answer reflects the purpose of pooling error terms, which is to enhance the stability of the error variance estimate across groups. The other options either misstate the purpose or are not relevant to the justification for pooling.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the assumptions and justifications for ANOVA.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of ANOVA assumptions.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "Pooling error terms provides a more stable estimate of the error variance in ANOVA.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which of the following best exemplifies cluster sampling in research?",
+      "options": [
+        "Selecting every tenth person from a list of registered voters.",
+        "Randomly choosing a few schools from a district and surveying all students within those schools.",
+        "Surveying individuals from different socioeconomic backgrounds across a city.",
+        "Choosing participants based on their availability and willingness to participate."
+      ],
+      "answer": "Randomly choosing a few schools from a district and surveying all students within those schools.",
+      "explanation": "The correct answer illustrates cluster sampling, where entire groups (clusters) are selected, and all individuals within those clusters are surveyed. The other options describe different sampling methods.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding sampling methods, specifically cluster sampling.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of sampling techniques.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "Cluster sampling involves selecting entire groups and surveying all individuals within those groups.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    }
+  ]
+}

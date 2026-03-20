@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "options": [
+        "The Hawthorne effect",
+        "Demand characteristics",
+        "The Rosenthal effect",
+        "Observer bias"
+      ],
+      "answer": "The Rosenthal effect",
+      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses experimenter expectancy effects, which fall under research methodology concepts within the Cognitive-Affective Bases of Behavior domain.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a commonly confused set of research artifacts. The scenario clearly describes experimenter-transmitted cues rather than participant awareness or recording errors.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### Teacher Expectations",
+      "lessonExcerpt": "Experimenter expectancies, also known as the Rosenthal effect, refer to the cues or clues transmitted to the subjects by the experimenter.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    }
+  ]
+}

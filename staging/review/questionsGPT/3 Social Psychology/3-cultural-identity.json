@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "An African American college student who has always admired White cultural values experiences a racially motivated incident on campus. She begins to question her previous assumptions and develops a growing interest in learning about her African American heritage. According to Cross's Nigrescence model, this student is most likely in the:",
+      "options": [
+        "Pre-Encounter stage",
+        "Encounter stage",
+        "Immersion-Emersion stage",
+        "Internalization stage"
+      ],
+      "answer": "Encounter stage",
+      "explanation": "In Cross's Nigrescence model, the Encounter stage occurs when something happens that forces awareness of racism's impact, triggering questioning and interest in one's own culture. The student previously idealized White culture (Pre-Encounter) but a racially motivated incident has shaken her assumptions, leading to new cultural curiosity—hallmarks of the Encounter stage. Pre-Encounter would involve continued idealization of White culture without questioning. Immersion-Emersion involves complete rejection of White culture and intense immersion in Black culture. Internalization involves a secure Black identity with tolerance for racial differences.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses racial identity development models, a core topic in multicultural psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed scenario that tests stage identification in Cross's model with clear behavioral indicators.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Cross's Black Racial Identity Development Model",
+      "lessonExcerpt": "Encounter: Something happens that forces awareness of racism's impact. It's like suddenly noticing a pattern you'd been blind to... This triggers questioning and interest in their own culture.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    }
+  ]
+}

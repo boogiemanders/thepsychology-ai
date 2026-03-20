@@ -1,0 +1,130 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist consulting with an organization wants to help mid-career professionals understand why they consistently gravitate toward certain types of work roles despite receiving attractive offers in other areas. Which theoretical framework would be MOST useful for explaining why these professionals resist career changes that conflict with their core professional self-concept?",
+      "options": [
+        "Holland's RIASEC model of vocational interests",
+        "Schein's career anchor theory",
+        "Super's life-span, life-space theory",
+        "Dawis and Lofquist's theory of work adjustment"
+      ],
+      "answer": "Schein's career anchor theory",
+      "explanation": "Schein's career anchor theory proposes that a person's self-concept acts as a stabilizing force (anchor) that determines future occupational decisions. This explains why professionals resist changes that conflict with their core career identity. Holland's RIASEC model classifies interests into six types but doesn't specifically address why people resist career changes. Super's theory focuses on developmental stages across the lifespan. The theory of work adjustment focuses on person-environment correspondence and satisfaction, not the anchoring function of self-concept.",
+      "kn": "KN5",
+      "kn_explanation": "This question addresses I-O psychology career development theory, which falls under the Assessment and I-O content domain",
+      "difficulty": "hard",
+      "quality_comment": "Tests understanding of Schein's unique contribution vs. other career theories; the scenario requires distinguishing the anchoring self-concept mechanism from general interest classification",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
+      "lessonExcerpt": "Schein developed a theory of career anchors according to which a person's self-concept acts as an anchor, or stabilizing force, determining what future occupational decisions will be made.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "According to Edgar Schein's career model, which of the following components is NOT included in the model's framework?",
+      "options": [
+        "Career anchors",
+        "Organizational culture",
+        "Personal values",
+        "Career stages"
+      ],
+      "answer": "Organizational culture",
+      "explanation": "The correct answer is 'Organizational culture' because Schein's model focuses on career anchors, personal values, and career stages as key components. Organizational culture is a broader concept that influences but is not a direct component of Schein's career model. The other options are integral to understanding individual career paths within organizations.",
+      "kn": "KN11",
+      "kn_explanation": "This KN code applies as it pertains to understanding career development models in organizational psychology.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of Schein's model and differentiates between related concepts.",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
+      "lessonExcerpt": "The lesson does not explicitly cover Schein's career model, indicating a need for review.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "What is the primary purpose of calculating a confidence interval for test scores in psychological assessment?",
+      "options": [
+        "To determine the exact score a client will achieve on a future test",
+        "To estimate the range within which a true score is likely to fall",
+        "To compare the scores of different clients directly",
+        "To assess the reliability of the test itself"
+      ],
+      "answer": "To estimate the range within which a true score is likely to fall",
+      "explanation": "The correct answer is that confidence intervals provide an estimate of the range within which the true score is likely to fall, reflecting the uncertainty inherent in test scores. The other options are incorrect as they misrepresent the purpose of confidence intervals in psychological testing.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies because it relates to the assessment and interpretation of test scores, specifically focusing on statistical methods used in psychological evaluations.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of statistical concepts in psychological assessment.",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
+      "lessonExcerpt": "Interest inventories are excellent at predicting job choice, satisfaction, and persistence, but they're much less accurate at predicting actual job success.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "According to Donald Super's Career Rainbow model, which of the following stages emphasizes the exploration of various career options?",
+      "options": [
+        "Growth",
+        "Exploration",
+        "Establishment",
+        "Maintenance"
+      ],
+      "answer": "Exploration",
+      "explanation": "The Exploration stage in Super's Career Rainbow model focuses on individuals exploring various career options and making choices about their future. The Growth stage involves developing self-concept, while Establishment and Maintenance focus on settling into and maintaining a career.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to understanding career development models and their stages.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately reflects the stages of Super's Career Rainbow model.",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## The Two Heavy Hitters You Need to Know",
+      "lessonExcerpt": "The lesson does not explicitly cover Super's Career Rainbow model.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "In Holland's Self-Directed Search, which of the following is a key component that helps individuals identify their career interests?",
+      "options": [
+        "Personality types",
+        "Cognitive abilities",
+        "Work values",
+        "Job market trends"
+      ],
+      "answer": "Personality types",
+      "explanation": "Holland's Self-Directed Search emphasizes personality types as a key component in helping individuals identify their career interests. The other options are not the primary focus of this assessment tool.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to understanding career decision-making theories.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately reflects the components of Holland's Self-Directed Search.",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## The Two Heavy Hitters You Need to Know",
+      "lessonExcerpt": "The lesson does not specifically cover Holland's Self-Directed Search.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "Which of the following statements best reflects the validity of biographical data in employee evaluation during the employee selection process?",
+      "options": [
+        "Biographical data is highly predictive of job performance across all industries.",
+        "Biographical data can provide insights into a candidate's potential fit for a role but is less reliable for predicting actual job success.",
+        "Biographical data is the most important factor in employee selection methods.",
+        "Biographical data should be completely disregarded in favor of personality assessments."
+      ],
+      "answer": "Biographical data can provide insights into a candidate's potential fit for a role but is less reliable for predicting actual job success.",
+      "explanation": "The correct answer highlights that while biographical data can suggest a candidate's fit and preferences, it does not reliably predict job success. The first option overstates the predictive power of biographical data, while the third option incorrectly prioritizes it over other methods. The fourth option dismisses biographical data entirely, which is not accurate.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to assessment methods in employee selection, specifically focusing on the validity of biographical data.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the nuances in employee selection methods.",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
+      "lessonExcerpt": "interest inventories are excellent at predicting job choice, satisfaction, and persistence, but they're much less accurate at predicting actual job success.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 31
+    }
+  ]
+}

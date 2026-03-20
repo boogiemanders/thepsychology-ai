@@ -1,0 +1,382 @@
+{
+  "questions": [
+    {
+      "stem": "A therapist working with a child uses a token economy in which the child earns a sticker after completing a varying number of homework problems—sometimes after 3, sometimes after 8, sometimes after 5. The child works at a consistently high rate and continues working even when stickers are delayed. This pattern of reinforcement is BEST described as a:",
+      "options": [
+        "Fixed ratio schedule, because the child receives reinforcement based on the number of responses",
+        "Variable interval schedule, because the reinforcement is delivered at unpredictable times",
+        "Variable ratio schedule, because reinforcement is delivered after an unpredictable number of responses",
+        "Fixed interval schedule, because the child receives reinforcement at regular intervals during the session"
+      ],
+      "answer": "Variable ratio schedule, because reinforcement is delivered after an unpredictable number of responses",
+      "explanation": "A variable ratio (VR) schedule delivers reinforcement after an unpredictable number of responses. In this scenario, the number of homework problems required for a sticker varies (3, 8, 5), making the reinforcement contingent on a variable number of responses. VR schedules produce the highest response rates and greatest resistance to extinction. Option A is incorrect because a fixed ratio schedule requires a set, unchanging number of responses. Option B is incorrect because variable interval schedules are based on time, not number of responses. Option D is incorrect because fixed interval schedules deliver reinforcement after a fixed time period, regardless of responses.",
+      "kn": "KN7",
+      "kn_explanation": "Token economy and variable-ratio reinforcement schedules are principles of operant conditioning/learning",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward identification question appropriate for ensuring foundational knowledge. The clinical context adds relevance beyond rote memorization.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### The Four Intermittent Schedules",
+      "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses... This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A client with social anxiety avoids making phone calls because doing so eliminates the distressing feelings of anticipatory anxiety. Over time, the client's avoidance behavior has increased significantly. This pattern is BEST explained by:",
+      "options": [
+        "Positive reinforcement, because the client gains a sense of control by avoiding the situation",
+        "Negative reinforcement, because the avoidance behavior is strengthened by the removal of an aversive stimulus",
+        "Positive punishment, because the anxiety serves as an added consequence that suppresses phone use",
+        "Negative punishment, because the client loses social opportunities as a result of avoidance"
+      ],
+      "answer": "Negative reinforcement, because the avoidance behavior is strengthened by the removal of an aversive stimulus",
+      "explanation": "Negative reinforcement occurs when a behavior increases because it results in the removal of an aversive stimulus. In this case, avoidance of phone calls removes anticipatory anxiety (the aversive stimulus), which strengthens the avoidance behavior. This is a classic example of avoidance conditioning maintained through negative reinforcement. Option A is incorrect because positive reinforcement involves adding a pleasant stimulus, not removing an unpleasant one. Option C is incorrect because positive punishment would decrease behavior, not increase it. Option D is incorrect because negative punishment involves removing a desirable stimulus to decrease behavior, which describes a consequence of avoidance but not the mechanism maintaining it.",
+      "kn": "KN7",
+      "kn_explanation": "Negative reinforcement and avoidance learning are core learning principles",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant scenario that tests the commonly confused distinction between negative reinforcement and punishment. The avoidance context is highly testable on the EPPP.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Escape and Avoidance Conditioning",
+      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation. Note that the medication itself isn't the reinforcer, the removal of pain is what reinforces taking the medication.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "In Skinner's classic pigeon experiment, food was delivered at fixed 15-second intervals regardless of the pigeons' behavior. Several pigeons developed ritualistic movements such as spinning or head-bobbing that they repeated consistently before each food delivery. This phenomenon is BEST explained as:",
+      "options": [
+        "Operant discrimination, because the pigeons learned to distinguish between reinforced and non-reinforced behaviors",
+        "Respondent conditioning, because the time interval became a conditioned stimulus for salivation",
+        "Superstitious behavior, because the pigeons' actions were accidentally reinforced by coincidental pairing with food delivery",
+        "Fixed interval scalloping, because the pigeons increased responding as the reinforcement time approached"
+      ],
+      "answer": "Superstitious behavior, because the pigeons' actions were accidentally reinforced by coincidental pairing with food delivery",
+      "explanation": "Superstitious behavior occurs when a behavior is accidentally reinforced—when reinforcement happens to follow the behavior by coincidence rather than because the behavior caused it. In Skinner's experiment, food was delivered on a time-based schedule regardless of behavior, but pigeons developed ritualistic actions because whatever they happened to be doing when food arrived was coincidentally reinforced. Option A is incorrect because the pigeons never actually learned a true discrimination—no specific behavior was required for reinforcement. Option B is incorrect because the ritualistic motor behaviors are operant responses, not respondent (classically conditioned) reflexes. Option D is incorrect because while the experiment used a fixed time interval, the phenomenon being described is the development of superstitious ritualistic behavior, not the scalloping response pattern.",
+      "kn": "KN7",
+      "kn_explanation": "Superstitious behavior from non-contingent reinforcement is a learning phenomenon described by Skinner",
+      "difficulty": "medium",
+      "quality_comment": "Note: The concept requested was 'superstitious behavior acquired through respondent conditioning,' but the lesson content explicitly describes this as an operant conditioning phenomenon (accidental reinforcement), not respondent conditioning. The question is written to match the lesson content accurately.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Superstitious Behavior",
+      "lessonExcerpt": "Superstitious behavior develops when a behavior is accidentally reinforced, when reinforcement happens to follow the behavior by coincidence, not because the behavior caused it.",
+      "needsReview": true,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which of the following statements BEST captures Skinner's central contribution to the understanding of learning through operant conditioning?",
+      "options": [
+        "Learning occurs through the formation of stimulus-response associations that are stamped in by satisfying consequences",
+        "Whether a voluntary behavior is repeated depends on whether it produces reinforcement or punishment from operating on the environment",
+        "All behavior can be explained by classical conditioning principles involving stimulus substitution",
+        "Organisms learn by forming cognitive maps of their environment through latent exploration"
+      ],
+      "answer": "Whether a voluntary behavior is repeated depends on whether it produces reinforcement or punishment from operating on the environment",
+      "explanation": "Skinner's operant conditioning framework proposes that voluntary behaviors are controlled by their consequences—specifically, whether they produce reinforcement (which increases behavior) or punishment (which decreases behavior). The term 'operant' reflects that the organism 'operates' on the environment. Option A describes Thorndike's law of effect, which was the precursor to Skinner's work but used the language of 'satisfying consequences' and 'stamping in.' Option C incorrectly attributes all behavior to classical conditioning, which Skinner specifically differentiated from operant conditioning. Option D describes Tolman's latent learning and cognitive maps, a cognitive approach that differs from Skinner's behavioral framework.",
+      "kn": "KN7",
+      "kn_explanation": "Skinner's operant conditioning is a major theory/model of learning",
+      "difficulty": "medium",
+      "quality_comment": "Tests conceptual understanding of Skinner vs. Thorndike vs. Tolman. Requires knowing the specific contributions of each theorist rather than just rote definitions.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Where It All Started",
+      "lessonExcerpt": "B. F. Skinner took this concept further in 1938, developing what we now call operant conditioning. He proposed that whether or not a voluntary behavior happens depends on how it 'operates' on the environment. Specifically, whether it produces reinforcement or punishment.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A clinical psychologist is designing a token economy program for a residential treatment facility. After successfully establishing a target behavior using continuous reinforcement, she transitions to an intermittent schedule to maintain the behavior long-term. Which of the following schedules would produce the GREATEST resistance to extinction if the token system were eventually discontinued?",
+      "options": [
+        "Fixed ratio schedule, because the predictable reinforcement pattern strengthens the behavior-consequence association",
+        "Fixed interval schedule, because the consistent time-based delivery ensures reliable behavioral maintenance",
+        "Variable ratio schedule, because the unpredictable reinforcement pattern makes it difficult for the individual to detect when reinforcement has ceased",
+        "Variable interval schedule, because the time-based unpredictability prevents habituation to the reinforcement"
+      ],
+      "answer": "Variable ratio schedule, because the unpredictable reinforcement pattern makes it difficult for the individual to detect when reinforcement has ceased",
+      "explanation": "Variable ratio (VR) schedules produce the highest response rates and the greatest resistance to extinction. This is because the unpredictability of reinforcement delivery means the individual cannot easily discriminate between a period of non-reinforcement during the schedule and the actual cessation of reinforcement (extinction). Fixed ratio schedules (A) produce post-reinforcement pauses and are less resistant to extinction because the individual quickly detects when the expected reinforcement after a set number of responses fails to appear. Fixed interval schedules (B) produce scalloping patterns with low overall response rates and are the least resistant to extinction among intermittent schedules. Variable interval schedules (D) do produce greater resistance to extinction than fixed schedules, but they generate lower response rates and less resistance to extinction compared to variable ratio schedules.",
+      "kn": "KN7",
+      "kn_explanation": "Token economy and reinforcement schedules are applications of learning principles",
+      "difficulty": "medium",
+      "quality_comment": "Strong question that tests understanding of schedule properties in an applied clinical context. Distractors include plausible but incorrect reasoning for each alternative schedule.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### The Four Intermittent Schedules",
+      "lessonExcerpt": "Variable ratio schedules produce the highest response rates and strongest resistance to extinction. Variable schedules are more resistant to extinction than fixed schedules.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A parent has been giving a toddler a cookie every time the child whines at the grocery store. The parent decides to stop providing cookies entirely. In the first few shopping trips after this change, the parent should expect the whining to:",
+      "options": [
+        "Immediately cease once the child realizes no cookie is forthcoming",
+        "Temporarily increase in frequency and intensity before eventually decreasing",
+        "Remain at exactly the same level as before the change",
+        "Gradually decrease at a steady, predictable rate from the first trip"
+      ],
+      "answer": "Temporarily increase in frequency and intensity before eventually decreasing",
+      "explanation": "When reinforcement for a previously reinforced behavior is discontinued, an extinction burst typically occurs—the behavior temporarily increases in frequency and/or intensity before eventually decreasing. This is a well-established operant conditioning principle. Immediate cessation (A) contradicts the extinction burst phenomenon. Remaining at the same level (C) would indicate the reinforcement was not actually maintaining the behavior. A gradual, steady decrease (D) describes what happens after the extinction burst, not the initial response to removal of reinforcement.",
+      "kn": "KN6",
+      "kn_explanation": "Extinction burst is an operant conditioning concept within the Cognitive-Affective Bases domain.",
+      "difficulty": "easy",
+      "quality_comment": "Practical applied scenario testing a commonly tested operant conditioning concept. Clinically relevant for parent training interventions.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Extinction and Extinction Burst",
+      "lessonExcerpt": "when you first stop the reinforcement, the behavior often *increases* temporarily. This is called an extinction burst.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A client reports that she fastens her seatbelt every time she gets in the car because the annoying warning chime stops as soon as the belt clicks. Her seatbelt-fastening behavior is BEST maintained by:",
+      "options": [
+        "Positive reinforcement",
+        "Negative reinforcement",
+        "Negative punishment",
+        "Positive punishment"
+      ],
+      "answer": "Negative reinforcement",
+      "explanation": "Negative reinforcement increases or maintains behavior through the removal of an aversive stimulus. The annoying warning chime (aversive stimulus) is removed when the seatbelt is fastened, which strengthens the seatbelt-fastening behavior. Positive reinforcement (A) would involve adding a pleasant stimulus after the behavior. Negative punishment (C) involves removing a desirable stimulus to decrease behavior. Positive punishment (D) involves adding an aversive stimulus to decrease behavior. The two-step identification process confirms: the behavior is increasing/maintaining (reinforcement) and something unpleasant is being removed (negative).",
+      "kn": "KN6",
+      "kn_explanation": "Negative reinforcement is a fundamental operant conditioning concept within the Cognitive-Affective Bases domain.",
+      "difficulty": "easy",
+      "quality_comment": "Classic EPPP-style question testing the most commonly confused concept in operant conditioning. The scenario clearly illustrates removal of an aversive stimulus maintaining behavior.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Negative Reinforcement: Increases/maintains behavior. Something unpleasant is removed. Memory Aid: Relief.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A therapist working with an adolescent who frequently uses profanity during sessions decides to implement a brief, firm verbal reprimand each time the behavior occurs. Over the next several sessions, the frequency of profanity decreases. Which operant conditioning principle best explains the reduction in the adolescent's behavior?",
+      "options": [
+        "Negative reinforcement, because the reprimand removes the desire to use profanity",
+        "Positive punishment, because an aversive stimulus is introduced following the behavior",
+        "Negative punishment, because a pleasant interaction is disrupted by the reprimand",
+        "Extinction, because the therapist is no longer reinforcing the profanity"
+      ],
+      "answer": "Positive punishment, because an aversive stimulus is introduced following the behavior",
+      "explanation": "Positive punishment involves adding an aversive stimulus (the reprimand) after an undesired behavior, which decreases that behavior. This matches the definition: 'Positive Punishment: Decreases behavior. Something unpleasant is added.' Negative reinforcement (A) increases behavior through removal of an aversive stimulus — the opposite of what's happening. Negative punishment (C) would involve removing something desirable (like a privilege), not adding something aversive. Extinction (D) would involve withholding reinforcement that previously maintained the behavior, not introducing a new consequence.",
+      "kn": "KN6",
+      "kn_explanation": "This question assesses understanding of operant conditioning consequences, which falls under Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the commonly confused distinction between positive punishment and negative reinforcement/punishment with a clear clinical scenario.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Positive Punishment | Decreases | Something unpleasant is added | Pain",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A behavioral consultant is asked why a teacher's repeated use of verbal reprimands for off-task behavior has become progressively less effective over the course of the school year. The consultant explains that the students' responsiveness to the reprimands has diminished through repeated exposure. This phenomenon is best described as:",
+      "options": [
+        "Extinction, because the reprimands are no longer paired with meaningful consequences",
+        "Negative reinforcement, because the students have learned to avoid attending to the reprimands",
+        "Habituation, because repeated exposure to the stimulus has led to a gradual decline in responding",
+        "Learned helplessness, because the students have given up trying to change their behavior"
+      ],
+      "answer": "Habituation, because repeated exposure to the stimulus has led to a gradual decline in responding",
+      "explanation": "Habituation refers to a gradual decline in response over time with repeated exposure. The lesson specifically notes that when punishment is used repeatedly, 'people often become accustomed to it, and it loses effectiveness,' creating 'a dangerous situation: as punishment becomes less effective, there's temptation to increase its intensity.' Extinction (A) involves withholding reinforcement for a previously reinforced behavior, not diminished response to a punisher. Negative reinforcement (B) would increase behavior, not decrease responsiveness to a stimulus. Learned helplessness (D) involves exposure to uncontrollable aversive events leading to passivity, which is a different mechanism than simple habituation.",
+      "kn": "KN6",
+      "kn_explanation": "Habituation in the context of punishment effectiveness is a learning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant scenario that tests habituation in its most EPPP-relevant context — diminishing effectiveness of punishment.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Habituation and the Problem with Punishment",
+      "lessonExcerpt": "Habituation refers to a gradual decline in response over time. In operant conditioning contexts, this is particularly relevant to punishment. When punishment is used repeatedly, people often become accustomed to it, and it loses effectiveness.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "A client with social anxiety reports that she frequently makes excuses to leave parties early because doing so immediately reduces her feelings of distress. Over time, she has become increasingly likely to leave social events within the first few minutes. The maintenance of this early-departure behavior is best explained by:",
+      "options": [
+        "Positive punishment, because the social anxiety serves as an aversive consequence for attending parties",
+        "Negative reinforcement, because the behavior is strengthened by the termination of an aversive state",
+        "Positive reinforcement, because leaving the party provides the reward of being alone",
+        "Avoidance conditioning, because she prevents the anxiety from occurring in the first place"
+      ],
+      "answer": "Negative reinforcement, because the behavior is strengthened by the termination of an aversive state",
+      "explanation": "Negative reinforcement occurs when a behavior increases because it removes or terminates an aversive stimulus. The client's leaving behavior is strengthened because it removes the unpleasant anxiety she is currently experiencing. As the lesson states, negative reinforcement involves 'something unpleasant is removed' and the behavior 'increases/maintains.' Positive punishment (A) decreases behavior by adding something aversive — the opposite direction. Positive reinforcement (C) would involve adding a pleasant stimulus; while solitude might be pleasant, the key mechanism here is the relief from distress. Avoidance conditioning (D) involves preventing an aversive event before it starts; since the client is already at the party experiencing distress, this is escape conditioning (a form of negative reinforcement), not avoidance.",
+      "kn": "KN6",
+      "kn_explanation": "Negative reinforcement is a core operant conditioning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the important distinction between escape (negative reinforcement when aversive stimulus is already present) and avoidance conditioning, a common EPPP discrimination.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Escape and Avoidance Conditioning",
+      "lessonExcerpt": "Escape conditioning: A behavior occurs because it allows you to get away from something unpleasant that's already happening.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "E. L. Thorndike's puzzle box experiments with cats demonstrated that over successive trials, the time required to escape the box gradually decreased. Thorndike attributed this learning to the principle that behaviors producing satisfying outcomes are more likely to recur, while behaviors producing discomfort tend to diminish. This foundational principle is known as:",
+      "options": [
+        "The principle of reinforcement, which states that consequences must be immediate to affect behavior",
+        "The law of effect, which states that consequences determine the future probability of behavior",
+        "The law of exercise, which states that repeated practice strengthens stimulus-response connections",
+        "The matching law, which states that response rates are proportional to reinforcement rates"
+      ],
+      "answer": "The law of effect, which states that consequences determine the future probability of behavior",
+      "explanation": "Thorndike's law of effect states that 'behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.' This principle, derived from his puzzle box experiments, was foundational to operant conditioning. The principle of reinforcement (A) is a broader concept and doesn't specifically reference the satisfying/unsatisfying consequence framework. The law of exercise (C) is a different Thorndike principle about practice strengthening connections, not about consequences. The matching law (D) was developed later by Herrnstein and describes proportional response allocation across concurrent schedules.",
+      "kn": "KN6",
+      "kn_explanation": "Thorndike's law of effect is a foundational learning theory concept within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward recall question but includes plausible distractors including Thorndike's own law of exercise and the matching law.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Where It All Started",
+      "lessonExcerpt": "This led to his law of effect: behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A researcher is studying a pigeon that has been trained to peck a red key for food on a VI-30 schedule and a green key for food on a separate VI-30 schedule. When the researcher switches the green key to extinction while maintaining the red key schedule, the pigeon's rate of pecking on the red key increases significantly even though its reinforcement schedule has not changed. This phenomenon is called:",
+      "options": [
+        "Negative behavioral contrast, because the behavior with unchanged reinforcement decreased",
+        "Positive behavioral contrast, because the behavior with unchanged reinforcement increased",
+        "The matching law, because response rates shifted proportionally to available reinforcement",
+        "Behavioral momentum, because the more frequently reinforced behavior resisted change"
+      ],
+      "answer": "Positive behavioral contrast, because the behavior with unchanged reinforcement increased",
+      "explanation": "Behavioral contrast occurs when changing reinforcement for one behavior affects another behavior whose reinforcement has not changed. Positive behavioral contrast specifically occurs 'when you decrease reinforcement for Behavior A, Behavior B increases (even though its reinforcement stayed the same).' The lesson clarifies: 'the name refers to what happens to the behavior with *unchanged* reinforcement. If that behavior goes down, it's negative. If it goes up, it's positive.' Since the green key went to extinction and the red key pecking increased (the unchanged behavior went up), this is positive behavioral contrast. Negative behavioral contrast (A) would involve the unchanged behavior decreasing. The matching law (C) predicts proportional allocation but doesn't specifically describe the contrast effect. Behavioral momentum (D) refers to resistance to change for well-reinforced behaviors, a different phenomenon.",
+      "kn": "KN6",
+      "kn_explanation": "Behavioral contrast is an operant conditioning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the counterintuitive naming convention of behavioral contrast — positive refers to what happens to the unchanged behavior, not the changed one.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Behavioral Contrast",
+      "lessonExcerpt": "Positive behavioral contrast: When you decrease reinforcement for Behavior A, Behavior B increases (even though its reinforcement stayed the same).",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Which of the following best describes negative reinforcement in the context of behavior modification?",
+      "options": [
+        "The addition of an unpleasant stimulus to decrease a behavior.",
+        "The removal of an unpleasant stimulus to increase a behavior.",
+        "The introduction of a neutral stimulus to modify behavior.",
+        "The reinforcement of a behavior through positive feedback."
+      ],
+      "answer": "The removal of an unpleasant stimulus to increase a behavior.",
+      "explanation": "Negative reinforcement involves increasing a behavior by removing an aversive stimulus, thereby providing relief. Option A describes positive punishment, while Option C misrepresents the concept, and Option D refers to positive reinforcement.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding reinforcement mechanisms in behavior modification.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of negative reinforcement.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Negative reinforcement increases/maintains behavior by removing something unpleasant.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which of the following best exemplifies positive punishment in a behavioral context?",
+      "options": [
+        "A teacher reprimands a student for talking during class.",
+        "A parent removes a child's favorite toy for misbehavior.",
+        "A manager praises an employee for meeting a deadline.",
+        "A coach makes a player run laps for arriving late to practice."
+      ],
+      "answer": "A coach makes a player run laps for arriving late to practice.",
+      "explanation": "This option illustrates positive punishment because it involves adding an unpleasant consequence (running laps) to decrease the likelihood of the undesirable behavior (arriving late). The other options either represent reinforcement or negative punishment, which do not fit the definition of positive punishment.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies because it relates to operant conditioning and the consequences of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of positive punishment.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Positive punishment decreases behavior by adding something unpleasant.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Which of the following best describes the consequences of behavior in learning theory?",
+      "options": [
+        "Consequences have no impact on future behavior.",
+        "Consequences can either reinforce or punish behavior.",
+        "Consequences are only relevant in classical conditioning.",
+        "Consequences must always be immediate to be effective."
+      ],
+      "answer": "Consequences can either reinforce or punish behavior.",
+      "explanation": "In learning theory, consequences are critical as they determine whether a behavior is likely to be repeated (reinforcement) or decreased (punishment). The other options misrepresent the role of consequences in behavior change.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to operant conditioning and the effects of consequences on behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of behavioral consequences.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Understanding Operant Conditioning: The Psychology of Consequences",
+      "lessonExcerpt": "What happens after a behavior determines whether that behavior increases or decreases.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What is likely to happen to a behavior when reinforcement is no longer provided?",
+      "options": [
+        "The behavior will be reinforced more strongly.",
+        "The behavior will likely extinguish over time.",
+        "The behavior will become more frequent.",
+        "The behavior will remain unchanged."
+      ],
+      "answer": "The behavior will likely extinguish over time.",
+      "explanation": "When reinforcement is no longer provided, the behavior is likely to extinguish as the individual no longer receives the positive or negative consequences that maintained it. The other options incorrectly suggest that the behavior would increase or remain the same.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to operant conditioning and the effects of reinforcement cessation.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of behavior extinction.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "When reinforcement stops, the behavior disappears rapidly.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "In operant conditioning, which schedule of reinforcement is characterized by providing reinforcement after a fixed amount of time has passed?",
+      "options": [
+        "Variable Ratio",
+        "Fixed Interval",
+        "Variable Interval",
+        "Continuous"
+      ],
+      "answer": "Fixed Interval",
+      "explanation": "A Fixed Interval schedule provides reinforcement after a set period of time, regardless of the number of responses. Variable Ratio and Variable Interval schedules involve varying times or ratios, while Continuous reinforcement provides reinforcement every time the behavior occurs.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding schedules of reinforcement within operant conditioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and tests knowledge of reinforcement schedules.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "Fixed Interval (FI): Reinforcement comes after a set period of time, regardless of how many responses occur.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Which reinforcement schedule is characterized by providing reinforcement after a variable amount of time has passed?",
+      "options": [
+        "Fixed Interval",
+        "Variable Interval",
+        "Fixed Ratio",
+        "Variable Ratio"
+      ],
+      "answer": "Variable Interval",
+      "explanation": "The variable interval schedule provides reinforcement after varying, unpredictable time periods, which leads to a steady rate of response. Fixed interval provides reinforcement after a set time, fixed ratio after a set number of responses, and variable ratio after a varying number of responses.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it relates to understanding operant conditioning, specifically reinforcement schedules.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of reinforcement schedules.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "Reinforcement comes after varying, unpredictable time periods.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    }
+  ]
+}

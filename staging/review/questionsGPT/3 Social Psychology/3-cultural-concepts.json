@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist is designing a culturally adapted treatment plan for a first-generation Chinese American client who presents with symptoms of depression. Based on research on culturally appropriate therapeutic approaches for Asian American clients, which of the following treatment characteristics would be MOST consistent with this client's likely cultural preferences?",
+      "options": [
+        "Unstructured, insight-oriented sessions emphasizing emotional exploration and free association",
+        "Brief, structured, goal-oriented sessions with the therapist positioned as a knowledgeable expert who provides guidance",
+        "Network therapy that mobilizes extended family members and tribal elders for communal healing ceremonies",
+        "Non-directive, client-centered sessions that prioritize unconditional positive regard and avoid giving advice"
+      ],
+      "answer": "Brief, structured, goal-oriented sessions with the therapist positioned as a knowledgeable expert who provides guidance",
+      "explanation": "Research indicates that Asian Americans typically prefer brief, structured, goal-oriented, family-focused approaches and expect therapists to be knowledgeable experts who give advice while still encouraging participation in goal-setting. Option A (unstructured, insight-oriented) contradicts the preference for structure and directiveness. Option C describes network therapy, which is characteristic of culturally appropriate approaches for Native American clients, not Asian American clients. Option D (non-directive, client-centered) conflicts with the expectation that therapists provide expert guidance and advice.",
+      "kn": "KN18",
+      "kn_explanation": "Culturally adapted treatment for a first-generation immigrant client directly involves cross-cultural comparisons and acculturation considerations.",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests knowledge of culturally specific treatment preferences with plausible distractors drawn from other cultural groups' preferences.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### Asian American Clients",
+      "lessonExcerpt": "Asian Americans typically prefer brief, structured, goal-oriented, family-focused approaches. They expect therapists to be knowledgeable experts who give advice while still encouraging participation in goal-setting.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A psychologist working with Latino children incorporates traditional folktales that model adaptive behaviors as therapeutic narratives. This culturally congruent intervention is known as:",
+      "options": [
+        "Personalismo",
+        "Dichos therapy",
+        "Cuento therapy",
+        "Formalismo"
+      ],
+      "answer": "Cuento therapy",
+      "explanation": "Cuento therapy is a culturally congruent technique for use with Latino populations that uses folktales (cuentos) as models for adaptive behavior. It is a specific culturally adapted therapeutic approach. Dichos refers to proverbs used for emotional expression, not folktales as therapeutic narratives. Personalismo refers to a warm, personal interpersonal style valued in Latino culture. Formalismo refers to the formal style of interaction appropriate when first meeting Latino clients.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses culturally adapted therapy techniques, a core multicultural competency topic.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content. Tests specific knowledge of culturally adapted interventions for Latino populations.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### Hispanic/Latino American Clients",
+      "lessonExcerpt": "Culturally congruent techniques include cuento therapy (folktales as models) and dichos (proverbs for emotional expression).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A psychologist working with a Latino client who presents with somatic complaints and strong religious beliefs is considering culturally adapted interventions. According to guidelines for culturally adapted treatments, which of the following format changes would be MOST consistent with best practices?",
+      "options": [
+        "Replacing core CBT components with exclusively spiritual interventions",
+        "Including indigenous healers as part of the treatment approach while maintaining core treatment components",
+        "Eliminating all evidence-based protocols in favor of folk healing traditions",
+        "Referring the client exclusively to a folk healer and discontinuing psychological services"
+      ],
+      "answer": "Including indigenous healers as part of the treatment approach while maintaining core treatment components",
+      "explanation": "The lesson identifies that culturally adapted interventions may include format changes such as 'including indigenous healers' while noting that 'adaptations work better when adding features rather than replacing core components.' Option A is incorrect because it replaces rather than supplements core components. Option C is incorrect for the same reason—eliminating evidence-based protocols entirely contradicts the fidelity-adaptation balance. Option D is incorrect because complete referral away from psychological services abandons the psychologist's role entirely rather than integrating cultural elements.",
+      "kn": "KN11",
+      "kn_explanation": "This question addresses multicultural therapy practices within the Social and Multicultural Bases of Behavior domain.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content on culturally adapted interventions and the fidelity-adaptation dilemma.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Evidence-Based Practice Meets Cultural Adaptation",
+      "lessonExcerpt": "Format changes: Delivering treatment in native language, adopting culturally appropriate interpersonal styles, including indigenous healers... Adaptations work better when adding features rather than replacing core components.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A researcher studying depression wants to determine whether a Western-developed depression inventory is valid for use with individuals from a collectivist Southeast Asian culture. The researcher's assumption that the same construct and measurement tool should apply universally across cultures reflects which perspective?",
+      "options": [
+        "An emic perspective",
+        "An etic perspective",
+        "An alloplastic perspective",
+        "A culturally encapsulated perspective"
+      ],
+      "answer": "An etic perspective",
+      "explanation": "The etic perspective assumes that behavior is universal and that the same theories and interventions work across cultures. Using a Western-developed instrument across cultures without modification reflects this assumption. Option A (emic) is incorrect because the emic perspective holds that behavior is culture-bound and requires different tools for different cultural contexts. Option C (alloplastic) refers to changing the environment to fit the client, not a research perspective on cultural universality. Option D (culturally encapsulated) describes therapists who impose their worldview on clients; while related, it describes a clinical failing rather than a research perspective.",
+      "kn": "KN11",
+      "kn_explanation": "This question addresses emic and etic perspectives within the Social and Multicultural Bases of Behavior domain.",
+      "difficulty": "medium",
+      "quality_comment": "Clearly grounded in the lesson's definitions of emic vs. etic perspectives.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Etic vs. Emic: Universal or Culture-Specific?",
+      "lessonExcerpt": "Etic perspective: Behavior is universal. The same theories and interventions work across cultures. Emic perspective: Behavior is culture-bound. What works for one group may not work for another.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A psychologist begins working with an African American family presenting with communication difficulties. Based on culturally responsive treatment guidelines, which therapeutic approach would be MOST appropriate?",
+      "options": [
+        "A strictly psychodynamic approach emphasizing individual intrapsychic conflict",
+        "A multisystems approach that intervenes across individual, family, community, and agency levels",
+        "An exclusively behavioral approach focused on contingency management within the home",
+        "A nondirective Rogerian approach that avoids any structured problem-solving"
+      ],
+      "answer": "A multisystems approach that intervenes across individual, family, community, and agency levels",
+      "explanation": "The lesson specifically states that for African American clients, 'Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.' The lesson also notes that 'African American clients typically prefer egalitarian relationships and problem-solving approaches' and that therapists should consider 'environmental factors (racism, discrimination) may contribute to presenting problems.' Option A is too narrow and individually focused, ignoring systemic factors. Option C addresses only behavioral contingencies without considering broader systems. Option D contradicts the preference for problem-solving approaches.",
+      "kn": "KN11",
+      "kn_explanation": "This question addresses culturally appropriate interventions for African American clients within the Social and Multicultural Bases domain.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by specific lesson content citing Boyd-Franklin's recommendation.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### African American Clients",
+      "lessonExcerpt": "Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A patient with a history of chronic alcohol dependence is asked what he did yesterday. He provides a detailed, coherent account of visiting his daughter at college, though his daughter confirms he was in the hospital all day. The patient appears to genuinely believe his account. This phenomenon is BEST described as:",
+      "options": [
+        "Malingering",
+        "Confabulation",
+        "Delusional disorder",
+        "Retrospective falsification"
+      ],
+      "answer": "Confabulation",
+      "explanation": "Confabulation is a hallmark feature of Korsakoff syndrome, which results from thiamine deficiency due to chronic alcoholism. Individuals with Korsakoff syndrome fill in memory gaps with fabricated information without intent to deceive—their brain is attempting to make sense of missing information. Malingering (A) involves intentional fabrication for external gain, which contradicts the patient genuinely believing his account. Delusional disorder (C) involves fixed false beliefs not related to memory gaps from brain damage. Retrospective falsification (D) involves unconscious distortion of actual memories, whereas confabulation involves fabrication to fill gaps where no memory exists.",
+      "kn": "KN6",
+      "kn_explanation": "Confabulation in Korsakoff syndrome relates to memory pathology, a topic within the Cognitive-Affective Bases domain.",
+      "difficulty": "medium",
+      "quality_comment": "Clinical vignette tests the key feature of confabulation—fabrication without intent to deceive—in the context of alcohol-related brain damage.",
+      "suggestedLesson": "5-substance-misuse",
+      "suggestedParagraph": "### Alcohol-Induced Major Neurocognitive Disorder",
+      "lessonExcerpt": "People with Korsakoff syndrome often confabulate, meaning they fill in memory gaps with fabricated information. They're not lying) their brain is trying to make sense of missing information.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    }
+  ]
+}

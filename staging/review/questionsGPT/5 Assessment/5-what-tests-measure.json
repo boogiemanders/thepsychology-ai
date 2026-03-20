@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A test developer creates an integrity test designed to screen job applicants for dishonest tendencies. The items are carefully worded to appear as general workplace attitude questions rather than directly asking about theft or dishonesty. This approach deliberately reduces which of the following?",
+      "options": [
+        "Face validity",
+        "Content validity",
+        "Construct validity",
+        "Criterion-related validity"
+      ],
+      "answer": "Face validity",
+      "explanation": "Face validity refers to whether a test looks like it measures what it claims to measure from the test-taker's perspective. The lesson states that face validity 'is not actual validity at all. It's about appearances and perceptions.' The lesson also notes that 'tests measuring socially sensitive topics like honesty, criminal thinking, or prejudice often work better when they're not face valid. If it's obvious what you're measuring, people can fake their responses to look better.' Content validity involves systematic domain sampling verified by experts (Option B). Construct validity involves convergent and divergent evidence for hypothetical traits (Option C). Criterion-related validity involves predicting or estimating criterion performance (Option D). None of these are reduced by disguising item content.",
+      "kn": "KN5",
+      "kn_explanation": "This question tests knowledge of face validity versus other types of test validity, a fundamental test construction concept in the assessment domain.",
+      "difficulty": "medium",
+      "quality_comment": "Excellent application question that tests understanding of when low face validity is desirable, directly supported by lesson content about socially sensitive constructs.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "### Content Validity vs. Face Validity",
+      "lessonExcerpt": "Face validity refers to whether a test looks valid to the people taking it. It's not actual validity at all. It's about appearances and perceptions... Tests measuring socially sensitive topics like honesty, criminal thinking, or prejudice often work better when they're not face valid.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    }
+  ]
+}

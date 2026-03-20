@@ -1,0 +1,340 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist selects Raven's Standard Progressive Matrices (SPM) to assess a 10-year-old child with autism spectrum disorder who has limited verbal abilities. This choice is most appropriate because Raven's SPM:",
+      "options": [
+        "Provides separate scores for crystallized and fluid intelligence, allowing comparison across domains",
+        "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+        "Was specifically normed on populations with autism spectrum disorder and intellectual disabilities",
+        "Measures Spearman's g factor by assessing both verbal comprehension and perceptual reasoning equally"
+      ],
+      "answer": "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+      "explanation": "Raven's SPM measures abstract reasoning and fluid intelligence through nonverbal pattern completion tasks, making it relatively free from cultural and educational influences. Critically, research shows it is less likely than Wechsler tests to underestimate intelligence in people with ASD. Option A is wrong because Raven's only measures fluid intelligence/abstract reasoning, not crystallized intelligence. Option C is wrong because Raven's was not specifically normed on ASD populations — it simply performs better with this population. Option D is wrong because Raven's does not assess verbal comprehension at all; while it is considered a good measure of Spearman's g, it achieves this through nonverbal means only.",
+      "kn": "KN35",
+      "kn_explanation": "Selecting an appropriate assessment instrument based on the client's characteristics (ASD, limited verbal ability) involves criteria for selection and adaptation of assessment methods, including cultural appropriateness and accommodations for specific populations.",
+      "difficulty": "medium",
+      "quality_comment": "Integrates test selection rationale with knowledge of Spearman's g and ASD assessment considerations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "research has shown Raven's SPM is less likely than Wechsler tests to underestimate intelligence in people with autism spectrum disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A developmental psychologist administers the Bayley-4 to a 24-month-old toddler who obtains above-average scores across all domains. When the parents ask whether this means their child will have a high IQ in school, the psychologist's MOST accurate response would be:",
+      "options": [
+        "Infant developmental tests are better for identifying delays than for predicting later IQ scores in typically developing children",
+        "Bayley-4 scores at 24 months are highly predictive of IQ at school age with a correlation above .80",
+        "The Bayley-4 directly measures the same cognitive abilities as school-age intelligence tests",
+        "Above-average scores at 24 months guarantee placement in gifted programs upon school entry"
+      ],
+      "answer": "Infant developmental tests are better for identifying delays than for predicting later IQ scores in typically developing children",
+      "explanation": "The lesson explicitly addresses this as a common misconception: 'Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.' The Bayley-4 measures cognitive, motor, language, social-emotional, and adaptive behavior domains—these overlap only partially with what school-age IQ tests measure. Option B overstates the predictive correlation. Option C is incorrect because infant tests measure developmental milestones, not the same abilities as later IQ tests. Option D makes an unsupported guarantee about gifted placement.",
+      "kn": "KN5",
+      "kn_explanation": "This question tests knowledge of the predictive limitations of infant intelligence/developmental tests, a core concept in cognitive assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant question that addresses a common misconception explicitly identified in the lesson content.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## The Youngest Clients: Infant and Toddler Assessment",
+      "lessonExcerpt": "Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "In criterion-based scoring, which of the following is a primary focus?",
+      "options": [
+        "Comparing scores to a normative sample",
+        "Assessing the reliability of the test",
+        "Evaluating the validity of the test",
+        "Determining the relationship between test items and specific criteria"
+      ],
+      "answer": "Determining the relationship between test items and specific criteria",
+      "explanation": "Criterion-based scoring focuses on how well test items relate to specific criteria or outcomes rather than comparing scores to a normative sample. The other options pertain to different aspects of test evaluation.",
+      "kn": "KN2",
+      "kn_explanation": "This question relates to psychometric assessment, specifically criterion-based scoring.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests understanding of psychometric principles.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "Criterion-based scoring focuses on determining the relationship between test items and specific criteria.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which principle of item response theory emphasizes the relationship between item characteristics and respondent abilities?",
+      "options": [
+        "Item difficulty",
+        "Item discrimination",
+        "Guessing parameter",
+        "Test reliability"
+      ],
+      "answer": "Item discrimination",
+      "explanation": "The correct answer is 'Item discrimination' as it refers to how well an item differentiates between respondents of varying abilities. The other options do not capture this specific relationship as accurately.",
+      "kn": "KN18",
+      "kn_explanation": "This KN code applies as it relates to understanding psychometric theory and item response theory.",
+      "difficulty": "hard",
+      "quality_comment": "The question is precise and tests knowledge of item response theory principles effectively.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The lesson does not specifically cover item response theory principles, indicating a need for review.",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What does test-retest reliability measure in psychological testing?",
+      "options": [
+        "The consistency of a test's results over time",
+        "The accuracy of a test in predicting outcomes",
+        "The degree to which a test measures what it claims to measure",
+        "The agreement between different raters scoring the same test"
+      ],
+      "answer": "The consistency of a test's results over time",
+      "explanation": "Test-retest reliability specifically assesses how consistent a test's results are when administered at different times. The other options refer to different types of reliability or validity.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to the measurement of reliability in psychological assessments, focusing on the stability of test scores over time.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of reliability types in psychological testing.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Tests Based on Brain Processing Models",
+      "lessonExcerpt": "This test is particularly useful when you suspect a child has specific processing difficulties rather than general intellectual problems.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary purpose of the Kuder-Richardson formula in psychological testing?",
+      "options": [
+        "A. To assess the validity of a test",
+        "B. To estimate the reliability of a test with dichotomous choices",
+        "C. To determine the standard error of measurement",
+        "D. To analyze the variance in test scores"
+      ],
+      "answer": "B. To estimate the reliability of a test with dichotomous choices",
+      "explanation": "Option B is correct because the Kuder-Richardson formula is specifically designed to estimate the reliability of tests that have dichotomous (yes/no) responses. Option A refers to validity, C pertains to standard error, and D relates to variance analysis.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to reliability estimation methods in psychological testing.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of reliability estimation.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Kuder-Richardson formula is used to estimate the reliability of tests with dichotomous choices.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "In the WISC-IV, which cognitive ability is primarily assessed by the Perceptual Reasoning Index?",
+      "options": [
+        "A. Verbal comprehension",
+        "B. Visual-spatial skills",
+        "C. Working memory",
+        "D. Processing speed"
+      ],
+      "answer": "B. Visual-spatial skills",
+      "explanation": "Option B is correct because the Perceptual Reasoning Index of the WISC-IV specifically measures visual-spatial skills and non-verbal reasoning. Options A, C, and D pertain to other cognitive abilities assessed by different indices.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to cognitive abilities measured by the WISC-IV.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of the WISC-IV structure.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Perceptual Reasoning Index assesses visual-spatial skills and non-verbal reasoning.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "How does the standard error of estimate relate to the validity of a psychological test?",
+      "options": [
+        "A. A higher standard error indicates greater validity.",
+        "B. A lower standard error suggests less reliability.",
+        "C. A lower standard error enhances the test's predictive validity.",
+        "D. The standard error is unrelated to validity."
+      ],
+      "answer": "C. A lower standard error enhances the test's predictive validity.",
+      "explanation": "Option C is correct because a lower standard error of estimate indicates that the predictions made by the test are more accurate, thus enhancing its predictive validity. Options A and B are incorrect as they misinterpret the relationship, and D is false as the standard error is indeed related to validity.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to the relationship between validity and standard error.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of validity and standard error.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "A lower standard error of estimate enhances the predictive validity of a test.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What does the Kappa coefficient measure in psychological assessments?",
+      "options": [
+        "A. The internal consistency of a test",
+        "B. The agreement between two raters",
+        "C. The validity of a test",
+        "D. The reliability of test scores over time"
+      ],
+      "answer": "B. The agreement between two raters",
+      "explanation": "Option B is correct because the Kappa coefficient specifically measures the level of agreement between two raters or observers. Options A, C, and D refer to different aspects of test evaluation.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to interrater reliability measurement.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly assesses knowledge of interrater reliability.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Kappa coefficient measures the agreement between two raters.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What is a key characteristic of the forced distribution method in employee performance evaluations?",
+      "options": [
+        "A. It allows for unlimited ratings across all employees.",
+        "B. It requires employees to be ranked within a predetermined distribution curve.",
+        "C. It focuses solely on qualitative feedback.",
+        "D. It eliminates bias in performance ratings."
+      ],
+      "answer": "B. It requires employees to be ranked within a predetermined distribution curve.",
+      "explanation": "Option B is correct because the forced distribution method mandates that employees be ranked according to a specific distribution, often leading to a set percentage of employees being categorized into performance tiers. Options A, C, and D are incorrect as they misrepresent the forced distribution method.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to employee performance evaluation methods.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of forced distribution in evaluations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The forced distribution method requires employees to be ranked within a predetermined distribution curve.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "When adjusting predictor cutoffs in hiring processes, what is a primary consideration?",
+      "options": [
+        "A. The cost of the testing materials",
+        "B. The potential impact on diversity in hiring",
+        "C. The length of the assessment process",
+        "D. The popularity of the assessment tool"
+      ],
+      "answer": "B. The potential impact on diversity in hiring",
+      "explanation": "Option B is correct because adjusting predictor cutoffs can significantly affect the diversity of candidates selected for hiring. Options A, C, and D are less relevant to the ethical and practical implications of cutoff adjustments.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to predictor cutoff adjustments in hiring.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of hiring practices and diversity considerations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "Adjusting predictor cutoffs in hiring processes requires consideration of the potential impact on diversity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "What does the standard error of measurement (SEM) indicate in the context of psychological testing?",
+      "options": [
+        "It reflects the degree to which a test score can vary due to measurement error.",
+        "It measures the reliability of a test based on the number of items it contains.",
+        "It indicates the validity of a test by comparing it to other established measures.",
+        "It determines the average score of a population on a specific test."
+      ],
+      "answer": "It reflects the degree to which a test score can vary due to measurement error.",
+      "explanation": "The SEM quantifies the amount of error associated with a test score, providing insight into the precision of the measurement. The other options misinterpret the purpose of SEM or confuse it with other testing concepts.",
+      "kn": "KN2",
+      "kn_explanation": "This KN code applies as it pertains to psychometric principles in assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of SEM in psychological assessment.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The standard error of measurement (SEM) indicates the degree to which a test score can vary due to measurement error.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "How might chronic otitis media affect cognitive testing results in children?",
+      "options": [
+        "It can lead to significant impairments in visual-motor integration skills.",
+        "It has no impact on cognitive testing as it primarily affects hearing.",
+        "It may result in lower scores due to temporary hearing loss affecting language processing.",
+        "It typically enhances cognitive abilities by improving attention span."
+      ],
+      "answer": "It may result in lower scores due to temporary hearing loss affecting language processing.",
+      "explanation": "Chronic otitis media can cause hearing loss, which may hinder a child's ability to process language during cognitive assessments, leading to lower scores. The other options either exaggerate the effects or incorrectly state that there is no impact.",
+      "kn": "KN3",
+      "kn_explanation": "This KN code applies as it relates to the assessment of cognitive abilities in children with medical conditions.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the impact of chronic otitis media on cognitive testing.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Tests Based on Brain Processing Models",
+      "lessonExcerpt": "Chronic otitis media may result in lower scores due to temporary hearing loss affecting language processing.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary purpose of the Stroop Color Interference Test in cognitive assessment?",
+      "options": [
+        "To measure verbal intelligence and vocabulary.",
+        "To assess cognitive flexibility and processing speed.",
+        "To evaluate memory retention over time.",
+        "To determine the level of emotional distress in individuals."
+      ],
+      "answer": "To assess cognitive flexibility and processing speed.",
+      "explanation": "The Stroop Test evaluates how well individuals can manage conflicting information, which reflects cognitive flexibility and processing speed. The other options do not accurately describe the primary purpose of the test.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it relates to cognitive assessment tools and their specific functions.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the Stroop Test's purpose.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Executive Function Tests",
+      "lessonExcerpt": "The primary purpose of the Stroop Color Interference Test is to assess cognitive flexibility and processing speed.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is the primary goal of administering the Mini-Mental State Examination (MMSE)?",
+      "options": [
+        "To assess personality traits and emotional functioning.",
+        "To evaluate cognitive impairment and screen for dementia.",
+        "To measure intelligence quotient (IQ) levels.",
+        "To determine the effectiveness of psychotherapy."
+      ],
+      "answer": "To evaluate cognitive impairment and screen for dementia.",
+      "explanation": "The MMSE is specifically designed to assess cognitive functioning and identify potential dementia. The other options do not accurately reflect the purpose of the MMSE.",
+      "kn": "KN8",
+      "kn_explanation": "This KN code applies as it relates to cognitive assessment tools and their specific functions.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of the MMSE's purpose.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Cognitive Assessment Tools",
+      "lessonExcerpt": "The primary goal of the MMSE is to evaluate cognitive impairment and screen for dementia.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What is the primary challenge in equating scores from non-parallel measures in psychological assessment?",
+      "options": [
+        "Ensuring that both measures assess the same construct.",
+        "Determining the reliability of each measure independently.",
+        "Adjusting for differences in test administration conditions.",
+        "Calculating the mean scores of both measures."
+      ],
+      "answer": "Ensuring that both measures assess the same construct.",
+      "explanation": "The primary challenge in equating scores from non-parallel measures is confirming that they are measuring the same underlying construct, which is essential for valid comparisons. The other options address different aspects of measurement but do not capture the core issue.",
+      "kn": "KN10",
+      "kn_explanation": "This KN code applies as it relates to measurement theory and the challenges of score equating.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the complexities involved in score equating.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The primary challenge in equating scores from non-parallel measures is ensuring that both measures assess the same construct.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    }
+  ]
+}

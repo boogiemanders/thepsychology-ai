@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "stem": "A 32-year-old woman presents to the emergency department with sudden onset of chest pain, heart palpitations, dizziness, and intense fear of dying. Cardiac workup and other medical tests reveal no abnormalities. She reports that similar episodes have occurred three times over the past two months, and she now avoids exercising because she fears triggering another episode. The most likely diagnosis is:",
+      "options": [
+        "Somatic symptom disorder",
+        "Illness anxiety disorder",
+        "Panic disorder",
+        "Generalized anxiety disorder"
+      ],
+      "answer": "Panic disorder",
+      "explanation": "This presentation is classic for panic disorder: recurrent, unexpected panic attacks (sudden onset of chest pain, palpitations, dizziness, fear of dying — at least four of the 13 panic attack symptoms) followed by maladaptive behavior change (avoiding exercise for fear of triggering attacks). The lesson states panic disorder involves 'recurrent, unexpected panic attacks followed by at least one month of either persistent concern about additional attacks or their consequences, OR significant maladaptive behavior change related to the attacks.' Medical causes have been ruled out, which the lesson notes is essential. Somatic symptom disorder (Option A) is incorrect because it requires excessive thoughts, emotions, or behaviors about somatic symptoms rather than discrete panic episodes. Illness anxiety disorder (Option B) involves preoccupation with having a serious illness with absent or mild somatic symptoms, not acute panic episodes. GAD (Option D) involves chronic worry across multiple domains, not discrete sudden-onset episodes with specific physical symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Differential diagnosis requiring integration of medical/non-psychological information (ruling out cardiac conditions vs. panic disorder)",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP-style vignette with well-constructed distractors from related diagnostic categories, directly supported by lesson content.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "## Panic Disorder",
+      "lessonExcerpt": "Panic disorder involves recurrent, unexpected panic attacks followed by at least one month of either: Persistent concern about additional attacks or their consequences, OR Significant maladaptive behavior change related to the attacks... These symptoms overlap with medical conditions like hyperthyroidism and cardiac arrhythmia. Always rule out medical causes before diagnosing panic disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A child psychologist is conducting an intake evaluation for an 8-year-old boy referred for repetitive hand-washing and intrusive thoughts about contamination. When considering the epidemiology of obsessive-compulsive disorder, the psychologist should be aware that:",
+      "options": [
+        "OCD affects males and females equally across all age groups",
+        "Males have earlier onset than females, resulting in higher childhood prevalence of OCD in males",
+        "Females have earlier onset than males, resulting in higher childhood prevalence of OCD in females",
+        "OCD is diagnosed exclusively in adults, making this referral inconsistent with the disorder's typical presentation"
+      ],
+      "answer": "Males have earlier onset than females, resulting in higher childhood prevalence of OCD in males",
+      "explanation": "Research shows that males have earlier onset of OCD than females, which results in higher childhood prevalence among males. In contrast, females have slightly higher adult prevalence. This sex difference in onset timing is a commonly tested EPPP fact. Option A is wrong because there are clear sex differences in onset and prevalence across the lifespan. Option C reverses the pattern — it is males, not females, who have earlier onset. Option D is wrong because OCD can and does present in childhood, and the question scenario itself describes a childhood presentation.",
+      "kn": "KN33",
+      "kn_explanation": "Differential diagnosis during intake evaluation, distinguishing OCD from other conditions based on clinical presentation",
+      "difficulty": "medium",
+      "quality_comment": "Contextualizes an epidemiological fact within a clinical scenario, testing both factual knowledge and clinical application.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Demographics and Comorbidity",
+      "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence). Females have slightly higher adult prevalence.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "When comparing the epidemiology of obsessive-compulsive disorder across gender, which statement MOST accurately describes the research findings?",
+      "options": [
+        "Males and females have equal prevalence rates across all age groups",
+        "Males have higher prevalence in childhood, while females have slightly higher prevalence in adulthood",
+        "Females have higher prevalence rates in both childhood and adulthood",
+        "Males have higher prevalence rates in both childhood and adulthood"
+      ],
+      "answer": "Males have higher prevalence in childhood, while females have slightly higher prevalence in adulthood",
+      "explanation": "Research on OCD epidemiology shows that males have earlier onset than females, resulting in higher childhood prevalence for males. However, females have slightly higher adult prevalence. This creates a crossover pattern across development. Equal prevalence across all age groups is incorrect because there are documented gender differences. Females do not have higher rates in both childhood and adulthood. Males do not have higher rates across both periods either—the pattern shifts from male predominance in childhood to female predominance in adulthood.",
+      "kn": "KN5",
+      "kn_explanation": "OCD epidemiology and gender differences in prevalence are part of the Diagnosis subdomain",
+      "difficulty": "medium",
+      "quality_comment": "Tests the nuanced developmental crossover pattern in OCD gender prevalence rather than a simple male-vs-female comparison",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Demographics and Comorbidity",
+      "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence); Females have slightly higher adult prevalence",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    }
+  ]
+}

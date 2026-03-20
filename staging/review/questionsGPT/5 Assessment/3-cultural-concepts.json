@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist working in a residential facility for adults with intellectual disabilities notices that staff members consistently attribute a resident's social withdrawal, appetite changes, and sleep disturbance solely to the resident's intellectual disability rather than considering a possible mood disorder. This pattern BEST illustrates:",
+      "options": [
+        "Confirmation bias",
+        "Diagnostic overshadowing",
+        "Fundamental attribution error",
+        "Anchoring heuristic"
+      ],
+      "answer": "Diagnostic overshadowing",
+      "explanation": "Diagnostic overshadowing originally described the tendency to attribute all problems of people with intellectual disabilities to that diagnosis while overlooking other conditions, such as comorbid psychiatric disorders. In this case, symptoms consistent with depression are being attributed to the intellectual disability rather than being evaluated as a separate condition. Confirmation bias involves seeking information that confirms preexisting beliefs. The fundamental attribution error involves overattributing behavior to dispositional rather than situational factors. The anchoring heuristic involves over-reliance on an initial piece of information when making judgments.",
+      "kn": "KN5",
+      "kn_explanation": "Diagnostic overshadowing is a critical bias in assessment and diagnosis, particularly relevant to dual-diagnosis populations",
+      "difficulty": "medium",
+      "quality_comment": "Uses the classic population (intellectual disability) where diagnostic overshadowing was originally described, grounded directly in lesson content",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Diagnostic Overshadowing: When One Factor Eclipses Everything",
+      "lessonExcerpt": "Diagnostic overshadowing originally described attributing all problems of people with intellectual disabilities to that diagnosis, overlooking other issues.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    }
+  ]
+}
