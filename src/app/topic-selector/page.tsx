@@ -2,7 +2,9 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Clock, Play, X, AlertCircle, BadgeCheck, CheckCircle2 } from 'lucide-react'
+import { useSearchParams } from 'next/navigation'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
+import { ChevronDown, Clock, Play, X, AlertCircle, BadgeCheck, CheckCircle2, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -36,22 +38,7 @@ import type { RealtimeChannel } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
-
-// Free-tier topics: one curated topic per domain, backed by free-contentGPT
-const FREE_TOPICS_BY_DOMAIN: Record<string, string[]> = {
-  '1': ['Cerebral Cortex'],
-  '2': ['Pavlov and Classical Conditioning'],
-  '3-social': ['Connection'],
-  '3-cultural': ['Cultural Identity'],
-  '4': ['Cognitive Development'],
-  '5-assessment': ['Clinical Tests'],
-  '5-diagnosis': ['Anxiety and OCD'],
-  '5-test': ['Items and Reliability'],
-  '6': ['CBT'],
-  '7': ['Correlation and Regression'],
-  '8': ['Standards 1 and 2'],
-  '3-5-6': ['Work Satisfaction'],
-}
+import { FREE_TOPICS_BY_DOMAIN, FREE_TOPIC_NAMES } from '@/lib/free-tier-limits'
 
 // Display order only (does NOT change stable topic IDs like "2-0", "2-1", etc.)
 const TOPIC_DISPLAY_ORDER_OVERRIDES: Record<string, string[]> = {
@@ -214,10 +201,13 @@ function getTimeAgo(timestamp: number): string {
 
 export default function TopicSelectorPage() {
   const { user, userProfile, loading } = useAuth()
+  const searchParams = useSearchParams()
+  const showUpgradeNotice = searchParams.get('upgrade') === '1'
   // Default to 'pro' while loading to prevent flash of locked content
   const entitledTier = loading || !userProfile ? 'pro' : (getEntitledSubscriptionTier(userProfile) ?? 'pro')
   const isFreeTier = entitledTier === 'free'
   const { startCheckout, loading: checkoutLoading } = useStripeCheckout()
+  const [lockedTopicName, setLockedTopicName] = useState<string | null>(null)
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [currentInput, setCurrentInput] = useState<string>('')
   const [savedInterests, setSavedInterests] = useState<string[]>([])
@@ -708,6 +698,16 @@ export default function TopicSelectorPage() {
               />
             )}
 
+            {showUpgradeNotice && isFreeTier && (
+              <div className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-4 text-sm flex items-start gap-3">
+                <AlertCircle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-medium text-amber-600 dark:text-amber-400">That lesson is for Pro subscribers.</p>
+                  <p className="text-muted-foreground mt-0.5">Upgrade to unlock all lessons and advanced tools, or choose a free lesson below.</p>
+                </div>
+              </div>
+            )}
+
             {isFreeTier && (
               <div className="rounded-lg border border-dashed border-border/70 bg-muted/30 p-4 text-sm">
                 <p className="font-medium mb-1">You're on the free plan.</p>
@@ -869,12 +869,19 @@ export default function TopicSelectorPage() {
                     </CardDescription>
                   </div>
                   {studyStats.lastStudiedTopic && (
-                    <Link href={`/quizzer?topic=${encodeURIComponent(studyStats.lastStudiedTopic)}`}>
-                      <Button size="sm" className="gap-2">
-                        <Play size={16} />
-                        Continue
+                    isFreeTier && !FREE_TOPIC_NAMES.has(studyStats.lastStudiedTopic) ? (
+                      <Button size="sm" className="gap-2" disabled>
+                        <Lock size={16} />
+                        Locked
                       </Button>
-                    </Link>
+                    ) : (
+                      <Link href={`/quizzer?topic=${encodeURIComponent(studyStats.lastStudiedTopic)}`}>
+                        <Button size="sm" className="gap-2">
+                          <Play size={16} />
+                          Continue
+                        </Button>
+                      </Link>
+                    )
                   )}
                 </div>
               </CardHeader>
@@ -885,6 +892,8 @@ export default function TopicSelectorPage() {
                     const scoreColor = getRecentScoreColor(activity.score)
                     const lessonName = getLessonDisplayName(activity.topic)
 
+                    const isLocked = isFreeTier && !FREE_TOPIC_NAMES.has(activity.topic)
+
                     return (
                       <motion.div
                         key={idx}
@@ -892,24 +901,43 @@ export default function TopicSelectorPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.05 }}
                       >
-                        <Link href={`/quizzer?topic=${encodeURIComponent(activity.topic)}`}>
-                          <div className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary hover:bg-accent transition-colors cursor-pointer group">
+                        {isLocked ? (
+                          <div className="flex items-center justify-between p-3 rounded-lg border border-border opacity-60 cursor-not-allowed">
                             <div className="flex-1">
-                              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+                              <p className="font-medium text-sm flex items-center gap-1.5">
+                                <Lock size={12} className="text-muted-foreground" />
                                 {lessonName}
                               </p>
                               <p className="text-xs text-muted-foreground">
-                                {timeAgo}
+                                Pro only
                               </p>
                             </div>
                             <div className="flex items-center gap-3">
                               <span className={`text-sm font-semibold ${scoreColor}`}>
                                 {activity.score}%
                               </span>
-                              <ChevronDown size={16} className="transform -rotate-90 text-muted-foreground group-hover:text-primary transition-colors" />
                             </div>
                           </div>
-                        </Link>
+                        ) : (
+                          <Link href={`/quizzer?topic=${encodeURIComponent(activity.topic)}`}>
+                            <div className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary hover:bg-accent transition-colors cursor-pointer group">
+                              <div className="flex-1">
+                                <p className="font-medium text-sm group-hover:text-primary transition-colors">
+                                  {lessonName}
+                                </p>
+                                <p className="text-xs text-muted-foreground">
+                                  {timeAgo}
+                                </p>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <span className={`text-sm font-semibold ${scoreColor}`}>
+                                  {activity.score}%
+                                </span>
+                                <ChevronDown size={16} className="transform -rotate-90 text-muted-foreground group-hover:text-primary transition-colors" />
+                              </div>
+                            </div>
+                          </Link>
+                        )}
                       </motion.div>
                     )
                   })}
@@ -1046,9 +1074,10 @@ export default function TopicSelectorPage() {
 
                         // Locked (Pro-only) topic for free tier
                         return (
-                          <div
+                          <button
                             key={topic.name}
-                            className="block opacity-70 cursor-not-allowed"
+                            className="w-full text-left opacity-70 hover:opacity-90 transition-opacity cursor-pointer"
+                            onClick={() => setLockedTopicName(topic.name)}
                           >
                             <div className="flex items-center justify-between mb-1">
                               <div className="flex items-center gap-2 flex-1">
@@ -1075,7 +1104,7 @@ export default function TopicSelectorPage() {
                               </span>
                             </div>
                             <Progress value={topic.progress} className="h-1.5" />
-                          </div>
+                          </button>
                         )
                       })}
                     </CardContent>
@@ -1086,6 +1115,33 @@ export default function TopicSelectorPage() {
           ))}
         </div>
       </div>
+
+      <Dialog open={!!lockedTopicName} onOpenChange={(open) => { if (!open) setLockedTopicName(null) }}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Pro lesson</DialogTitle>
+            <DialogDescription>
+              <strong>{getLessonDisplayName(lockedTopicName ?? '')}</strong> is available on the Pro plan.
+              Upgrade to unlock all lessons, audio, exam simulations, and more.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="flex-col gap-2 sm:flex-col">
+            <Button
+              className="w-full"
+              onClick={() => {
+                setLockedTopicName(null)
+                startCheckout({ source: 'locked-topic-dialog', redirectPath: '/topic-selector' })
+              }}
+              disabled={checkoutLoading}
+            >
+              {checkoutLoading ? 'Redirecting…' : 'Upgrade to Pro — $20/mo'}
+            </Button>
+            <Button variant="ghost" className="w-full" onClick={() => setLockedTopicName(null)}>
+              Maybe later
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </main>
   )
 }

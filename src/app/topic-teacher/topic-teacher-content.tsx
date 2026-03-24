@@ -47,6 +47,7 @@ import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { InlineLessonRating } from '@/components/topic-teacher/inline-lesson-rating'
 import { supabase } from '@/lib/supabase'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
+import { isTopicAccessible } from '@/lib/free-tier-limits'
 import { LessonAudioControls, type LessonAudioControlsHandle } from '@/components/topic-teacher/lesson-audio-controls'
 import { expandNumericTokenForReadAlong, normalizeTextForReadAlong } from '@/lib/speech-text'
 import { markdownToSpeakableText } from '@/lib/speech-text'
@@ -665,6 +666,7 @@ export function TopicTeacherContent() {
   const { user, userProfile, loading: authLoading } = useAuth()
   const domain = searchParams.get('domain')
   const topic = searchParams.get('topic')
+  const customAudioParam = searchParams.get('custom-audio')
   const hasExamResults = searchParams.get('hasExamResults') === 'true'
   const hasQuizResults = searchParams.get('hasQuizResults') === 'true'
   const recentQuizWrongSectionsParam = searchParams.get('recentQuizWrongSections')
@@ -766,6 +768,7 @@ export function TopicTeacherContent() {
   const [ratingSubmitted, setRatingSubmitted] = useState(false)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const [showAudioSyncNotice, setShowAudioSyncNotice] = useState(false)
+  const [showCustomAudioSuccess, setShowCustomAudioSuccess] = useState(false)
   const [isRapidNavigationBlocked, setIsRapidNavigationBlocked] = useState(false)
   const [blockTimeRemaining, setBlockTimeRemaining] = useState(0)
   const navigationTimestampsRef = useRef<number[]>([])
@@ -781,6 +784,17 @@ export function TopicTeacherContent() {
     const matches = speakable.match(READ_ALONG_WORD_REGEX)
     return matches ? matches.map((word) => normalizeReadAlongWord(word)) : []
   }, [lessonMarkdown, manifestText])
+
+  // Redirect free-tier users who navigate directly to a locked topic
+  useEffect(() => {
+    if (authLoading || !userProfile) return
+    const tier = getEntitledSubscriptionTier(userProfile) ?? 'free'
+    const decodedDomain = domain ?? ''
+    const decodedTopicVal = decodedTopic ?? ''
+    if (!isTopicAccessible(decodedDomain, decodedTopicVal, tier)) {
+      router.replace('/topic-selector?upgrade=1')
+    }
+  }, [authLoading, userProfile, domain, decodedTopic, router])
 
   // Clear manifest text when lesson changes so we don't use stale alignment data
   useEffect(() => {
@@ -878,6 +892,17 @@ export function TopicTeacherContent() {
     if (safeLocalStorageGetItem(`audio_bar_used_${user.id}`)) return
     setShowAudioSyncNotice(true)
   }, [user?.id])
+
+  // Show custom audio success notice when returning from Stripe
+  useEffect(() => {
+    if (customAudioParam === 'success') {
+      setShowCustomAudioSuccess(true)
+      // Clean URL
+      const url = new URL(window.location.href)
+      url.searchParams.delete('custom-audio')
+      window.history.replaceState({}, '', url.toString())
+    }
+  }, [customAudioParam])
 
   // Auto-dismiss audio sync notice when audio starts playing (word progress fires)
   const dismissAudioSyncNotice = useCallback(() => {
@@ -3434,6 +3459,27 @@ export function TopicTeacherContent() {
             </p>
             <button
               onClick={dismissAudioSyncNotice}
+              className="text-muted-foreground hover:text-foreground shrink-0"
+              aria-label="Dismiss notice"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </motion.div>
+        )}
+
+        {/* Custom audio generation success notice */}
+        {showCustomAudioSuccess && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            className="w-full max-w-[800px] mb-3 px-3 py-2 rounded-md border border-green-500/30 bg-green-500/5 flex items-center justify-between gap-2"
+          >
+            <p className="text-xs text-muted-foreground">
+              Custom audio is being generated for your personalized lesson. It will be ready shortly!
+            </p>
+            <button
+              onClick={() => setShowCustomAudioSuccess(false)}
               className="text-muted-foreground hover:text-foreground shrink-0"
               aria-label="Dismiss notice"
             >

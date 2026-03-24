@@ -7,11 +7,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { CheckCircle2, XCircle, Circle, BookOpen, ChevronUp, ChevronDown } from 'lucide-react'
+import { CheckCircle2, XCircle, Circle, BookOpen, ChevronUp, ChevronDown, Lock } from 'lucide-react'
 import type { DomainPerformance } from '@/lib/priority-calculator'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
+import { useAuth } from '@/context/auth-context'
+import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
+import { isTopicAccessible } from '@/lib/free-tier-limits'
 
 interface Question {
   id: number
@@ -85,6 +88,9 @@ export function ExpandableDomainAnalysis({
   const hasDescription =
     typeof resolvedDescription === 'string' && resolvedDescription.trim().length > 0
   const shouldRenderHeader = hasTitle || hasDescription
+
+  const { userProfile } = useAuth()
+  const isFreeTier = (getEntitledSubscriptionTier(userProfile) ?? 'free') === 'free'
 
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   // Track expanded question per domain (key = domain name, value = question accordion value)
@@ -239,8 +245,9 @@ export function ExpandableDomainAnalysis({
     if (!domainId) return null
 
     const href = `/topic-teacher?domain=${encodeURIComponent(domainId)}&topic=${encodeURIComponent(meta.topicName)}&hasExamResults=true`
+    const locked = isFreeTier && !isTopicAccessible(domainId, meta.topicName, 'free')
 
-    return { displayName, href }
+    return { displayName, href, locked }
   }
 
   const getStatusDisplay = (status: string) => {
@@ -547,15 +554,23 @@ export function ExpandableDomainAnalysis({
                                       if (!lessonInfo) return null
                                       return (
                                         <div className="pt-2 border-t border-border/50">
-                                          <Link
-                                            href={lessonInfo.href}
-                                            className="inline-flex items-center gap-2 text-sm text-brand-soft-blue hover:underline"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                          >
-                                            <BookOpen size={14} />
-                                            <span>Study this topic: {lessonInfo.displayName}</span>
-                                          </Link>
+                                          {lessonInfo.locked ? (
+                                            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground opacity-50 cursor-not-allowed">
+                                              <Lock size={14} />
+                                              <span>Study this topic: {lessonInfo.displayName}</span>
+                                              <Badge variant="outline" className="text-[10px] uppercase tracking-wide">Pro</Badge>
+                                            </span>
+                                          ) : (
+                                            <Link
+                                              href={lessonInfo.href}
+                                              className="inline-flex items-center gap-2 text-sm text-brand-soft-blue hover:underline"
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                            >
+                                              <BookOpen size={14} />
+                                              <span>Study this topic: {lessonInfo.displayName}</span>
+                                            </Link>
+                                          )}
                                         </div>
                                       )
                                     })()}

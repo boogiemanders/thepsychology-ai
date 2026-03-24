@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle, FileText, ChevronDown } from 'lucide-react'
+import { Lightbulb, TrendingDown, BookOpen, Target, Zap, AlertTriangle, FileText, ChevronDown, Lock } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -35,6 +35,8 @@ import { ExpandableDomainAnalysis } from '@/components/expandable-domain-analysi
 import { getAllQuizResults, hasQuizResults } from '@/lib/quiz-results-storage'
 import { Progress } from '@/components/ui/progress'
 import { getLessonDisplayName } from '@/lib/topic-display-names'
+import { isTopicAccessible } from '@/lib/free-tier-limits'
+import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 
 interface AnalysisData {
   overallScore?: number
@@ -71,8 +73,9 @@ export function PrioritizeContent() {
   const resultId = searchParams.get('id')
   const resultsParam = searchParams.get('results')
   const router = useRouter()
-  const { user } = useAuth()
+  const { user, userProfile } = useAuth()
   const userId = user?.id ?? null
+  const isFreeTier = (getEntitledSubscriptionTier(userProfile) ?? 'free') === 'free'
 
   const [analysis, setAnalysis] = useState('')
   const [isAnalyzing, setIsAnalyzing] = useState(false)
@@ -847,9 +850,26 @@ export function PrioritizeContent() {
                                                 ? Math.max(0, Math.min(100, Math.round(topicScore)))
                                                 : null
 
+                                            const topicLocked = isFreeTier && !isTopicAccessible(topic.domainId, topicParam, 'free')
+
                                             return (
                                               <li key={topicIdx} className="space-y-1">
                                                 <div className="flex items-center justify-between gap-3">
+                                                  {topicLocked ? (
+                                                    <span
+                                                      className="flex items-center gap-2 opacity-50 cursor-not-allowed text-muted-foreground"
+                                                      title="Upgrade to Pro to access this lesson"
+                                                    >
+                                                      <Lock size={12} />
+                                                      {lessonName}
+                                                      <Badge
+                                                        variant="outline"
+                                                        className="text-[10px] uppercase tracking-wide"
+                                                      >
+                                                        Pro
+                                                      </Badge>
+                                                    </span>
+                                                  ) : (
                                                   <Link
                                                     href={`/topic-teacher?domain=${encodeURIComponent(topic.domainId)}&topic=${encodeURIComponent(topicParam)}${hasQuizResults(topicParam) ? '&hasQuizResults=true' : ''}&hasExamResults=true`}
                                                     className={`hover:underline ${
@@ -861,6 +881,7 @@ export function PrioritizeContent() {
                                                   >
                                                     {lessonName}
                                                   </Link>
+                                                  )}
                                                   {topicScore !== null && (
                                                     <div className="flex items-center gap-2 text-xs">
                                                       <span

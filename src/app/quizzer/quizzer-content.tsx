@@ -10,11 +10,13 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { Checkbox } from '@/components/ui/checkbox'
 import { motion } from 'motion/react'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { saveQuizResults, getQuizResults, WrongAnswer, getAllQuizResults } from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
 import { useAuth } from '@/context/auth-context'
+import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
+import { isTopicAccessible } from '@/lib/free-tier-limits'
 import { supabase } from '@/lib/supabase'
 import { recordStudySession } from '@/lib/study-sessions'
 import { QuestionFeedbackButton } from '@/components/question-feedback-button'
@@ -128,7 +130,8 @@ const splitExplanationIntoParagraphs = (explanation: string): string[] => {
 export function QuizzerContent() {
   const searchParams = useSearchParams()
   const pathname = usePathname()
-  const { user } = useAuth()
+  const router = useRouter()
+  const { user, userProfile, loading: authLoading } = useAuth()
   const topic = searchParams.get('topic')
   const domain = searchParams.get('domain')
   const review = searchParams.get('review')
@@ -177,6 +180,18 @@ export function QuizzerContent() {
 
   const quizStateRef = useRef<QuizState>(quizState)
   const isProcessingNextRef = useRef(false)
+
+  // Redirect free-tier users who navigate directly to a locked topic
+  useEffect(() => {
+    if (authLoading || !userProfile) return
+    const tier = getEntitledSubscriptionTier(userProfile) ?? 'free'
+    const topicVal = topic ? (() => { try { return decodeURIComponent(topic) } catch { return topic } })() : ''
+    const domainVal = domain ?? ''
+    if (!isTopicAccessible(domainVal, topicVal, tier)) {
+      router.replace('/topic-selector?upgrade=1')
+    }
+  }, [authLoading, userProfile, topic, domain, router])
+
   useEffect(() => {
     quizStateRef.current = quizState
   }, [quizState])
