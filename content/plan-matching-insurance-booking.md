@@ -2,7 +2,7 @@
 
 ## Context
 
-thepsychology.ai is currently an EPPP exam prep platform for psychology students. The competitive research (see `content/competitive-pain-points.md`) shows a massive gap in the patient-clinician matching market:
+thepsychology.ai is currently an EPPP exam prep platform for psychology students. The competitive research (see `content/competitive-pain-points.md`) shows a massive gap in the client-clinician matching market:
 
 - **Directories** (Psychology Today, Mental Health Match) don't book or verify insurance
 - **Insurance platforms** (Headway, Alma, Grow, Rula) bait-and-switch on rates/referrals
@@ -30,7 +30,7 @@ The strategic advantage: EPPP students who study on the platform graduate, pass 
 
 Keep as a single Next.js app. The EPPP-to-provider pipeline is the moat — splitting into separate apps breaks that flywheel.
 
-- `/find-therapist/*` — patient-facing matching and booking
+- `/find-therapist/*` — client-facing matching and booking
 - `/provider/*` — therapist dashboard, profile, calendar, clients
 - `/api/matching/*`, `/api/insurance/*`, `/api/booking/*` — new API groups
 - Existing routes (`/dashboard`, `/admin`, `/quizzer`, etc.) remain untouched
@@ -43,7 +43,7 @@ Keep as a single Next.js app. The EPPP-to-provider pipeline is the moat — spli
 ### 1A. User Role System
 
 Add to existing `public.users` table:
-- `user_role` column (`student | patient | provider | admin`, default `student`)
+- `user_role` column (`student | client | provider | admin`, default `student`)
 - `secondary_roles` array (a graduated student becomes a provider too)
 
 Update middleware to route-protect `/provider/*` and `/find-therapist/book/*`.
@@ -75,9 +75,9 @@ RLS policies: providers manage their own profile; active profiles publicly reada
 - `src/app/api/provider/create-profile/route.ts`
 - `src/app/api/provider/update-profile/route.ts`
 
-### 1C. Patient Intake Profiles Table
+### 1C. Client Intake Profiles Table
 
-New `patient_intake_profiles` table with:
+New `client_intake_profiles` table with:
 - **Presenting concerns**: conditions (same taxonomy as provider specializations), severity, free-text description
 - **Previous therapy experience**: what worked, what didn't
 - **Therapist preferences**: modality, gender, age range, style preferences (same 1-10 scales)
@@ -88,13 +88,13 @@ New `patient_intake_profiles` table with:
 - **Consent gates**: `hipaa_consent_given_at`, `matching_consent_given_at`
 
 **Files:**
-- `supabase/migrations/YYYYMMDD_create_patient_intake.sql`
+- `supabase/migrations/YYYYMMDD_create_client_intake.sql`
 - `src/app/find-therapist/page.tsx` — landing page
 - `src/app/find-therapist/intake/page.tsx` — multi-step intake questionnaire (5-10 min)
 
 ### 1D. PHI Access Audit Log
 
-New `phi_access_log` table — every time PHI is accessed (matching, profile view, booking, insurance check), it's logged with accessor, patient, access type, IP address. Extends existing `consent_audit_log` pattern.
+New `phi_access_log` table — every time PHI is accessed (matching, profile view, booking, insurance check), it's logged with accessor, client, access type, IP address. Extends existing `consent_audit_log` pattern.
 
 ---
 
@@ -103,7 +103,7 @@ New `phi_access_log` table — every time PHI is accessed (matching, profile vie
 ### Three-Layer Scoring Pipeline
 
 **Layer 1 — Hard Filters** (eliminate non-viable):
-- Provider licensed in patient's state
+- Provider licensed in client's state
 - Accepting new clients
 - At least one session format overlap
 - (Insurance match is a soft filter — OON providers shown lower, not eliminated)
@@ -112,7 +112,7 @@ New `phi_access_log` table — every time PHI is accessed (matching, profile vie
 
 | Dimension | Weight | Method |
 |---|---|---|
-| Specialization match | 0.25 | Jaccard similarity: patient concerns vs provider specializations |
+| Specialization match | 0.25 | Jaccard similarity: client concerns vs provider specializations |
 | Modality match | 0.15 | Jaccard similarity: preferred vs offered modalities |
 | Semantic concern match | 0.20 | Cosine similarity: concern_embedding vs bio/approach embeddings |
 | Style compatibility | 0.15 | Inverted Euclidean distance on 4 style dimensions |
@@ -121,7 +121,7 @@ New `phi_access_log` table — every time PHI is accessed (matching, profile vie
 | Demographic preference | 0.05 | Gender/age preference match |
 
 **Layer 3 — AI Re-ranking** (DEFERRED — post-MVP, after 200+ outcomes):
-- Send patient free-text + provider bios/approaches + Layer 2 scores to Claude
+- Send client free-text + provider bios/approaches + Layer 2 scores to Claude
 - LLM returns re-ranked scores + personalized "why this therapist might be a good fit" explanation
 - Uses existing Anthropic SDK (`@anthropic-ai/sdk` already in package.json)
 - **Not included in MVP** — ship Layers 1+2, collect outcome data, then add Layer 3
@@ -158,7 +158,7 @@ Stedi handles real-time 270/271 X12 eligibility transactions via a REST/JSON API
 - `insurance_verifications` — cached verification results (24-hour TTL)
 
 ### Flow
-1. Patient enters insurance in intake
+1. Client enters insurance in intake
 2. Top 10 matches trigger async verification calls to Stedi
 3. Results cached 24 hours
 4. UI shows: "In-network: $30 copay" or "Out-of-network" or "Verifying..."
@@ -193,7 +193,7 @@ Google Calendar API (or Nylas) via OAuth:
 
 ### Telehealth Video Integration (Daily.co)
 - Provider gets a persistent Daily.co room URL on profile creation
-- When patient books, a unique room token is generated with expiry matching appointment time
+- When client books, a unique room token is generated with expiry matching appointment time
 - Video room URL stored on `appointments.video_room_url`
 - Minimal in-app video UI: join button on appointment card, opens Daily.co prebuilt component
 - New table: `provider_video_rooms` (room_name, room_url, provider_profile_id)
@@ -235,7 +235,7 @@ Reuses existing Stripe infrastructure. New Price IDs in `PRICE_TO_TIER` map.
 
 ### EPPP Pipeline Feature
 When a student passes the EPPP (tracked in `eppp_exam_results`), show a prompt:
-> "Congratulations on passing! Set up your provider profile and get matched with patients."
+> "Congratulations on passing! Set up your provider profile and get matched with clients."
 
 Pre-fills provider profile from student's `graduate_program_id` and `user_research_profile` data.
 
@@ -244,7 +244,7 @@ Pre-fills provider profile from student's `graduate_program_id` and `user_resear
 Give clinicians the power to showcase their reviews outside thepsychology.ai. This is a clinician-first feature that also serves as organic advertising for the platform.
 
 **How it works:**
-1. After a patient leaves a review, the clinician sees it in their provider dashboard
+1. After a client leaves a review, the clinician sees it in their provider dashboard
 2. Clinician can grab an **embed code** (HTML snippet or script tag) from their dashboard
 3. The badge renders on their personal website showing: star rating, review count, and a "Verified on thepsychology.ai" link
 4. Badge auto-updates — new reviews appear without the clinician touching anything
@@ -256,7 +256,7 @@ Give clinicians the power to showcase their reviews outside thepsychology.ai. Th
 - **Floating**: Small corner widget with rating that expands on hover
 
 **Review system:**
-- Patients can leave a review after a completed session (prompted via email 24h after appointment)
+- Clients can leave a review after a completed session (prompted via email 24h after appointment)
 - Reviews include: 1-5 star rating, free-text feedback, optional tags (good listener, helped me feel safe, practical strategies, etc.)
 - Clinician can respond to reviews (visible publicly)
 - Clinician controls which reviews appear on the embeddable badge (opt-in per review)
@@ -269,13 +269,13 @@ Give clinicians the power to showcase their reviews outside thepsychology.ai. Th
 - Differentiates from Psychology Today (no reviews), Zocdoc (reviews locked to platform), and Headway (no reviews at all)
 
 **New tables:**
-- `patient_reviews` — review content, rating, tags, appointment_id (verified), status (pending/approved/flagged)
+- `client_reviews` — review content, rating, tags, appointment_id (verified), status (pending/approved/flagged)
 - `provider_review_responses` — clinician replies to reviews
 - `embeddable_badge_configs` — per-provider badge style, theme, which reviews to show, embed token
 
 **Files:**
 - `supabase/migrations/YYYYMMDD_create_reviews_and_badges.sql`
-- `src/app/api/reviews/submit/route.ts` — patient submits review (must have completed appointment)
+- `src/app/api/reviews/submit/route.ts` — client submits review (must have completed appointment)
 - `src/app/api/reviews/respond/route.ts` — provider replies to review
 - `src/app/api/reviews/badge/[token]/route.ts` — public JSON endpoint serving badge data (no auth required, CORS-open)
 - `src/app/api/reviews/badge/[token]/widget.js/route.ts` — serves the embeddable JS widget script
@@ -323,13 +323,87 @@ STRIPE_PRICE_ID_PROVIDER_PRO=
 ## Verification Plan
 
 1. **Provider onboarding**: Create test provider (CA-licensed), complete all onboarding steps, verify profile in DB
-2. **Patient intake**: Complete intake as NY patient, verify embeddings generated, consent logged
-3. **Matching**: Run match — verify CA provider excluded for NY patient (state filter), verify scoring on a matching-state pair
+2. **Client intake**: Complete intake as NY client, verify embeddings generated, consent logged
+3. **Matching**: Run match — verify CA provider excluded for NY client (state filter), verify scoring on a matching-state pair
 4. **Insurance**: Mock Stedi API call, verify cached result returned on 2nd call within 24h, verify copay shows in results
 5. **Booking**: Book a slot, verify conflict detection, verify Daily.co room URL generated, verify reminder cron fires
 6. **Video**: Join session via Daily.co embed, verify token expiry matches appointment window
 7. **Cancel/reschedule**: Test full lifecycle — cancel, reschedule, no-show marking
 8. **EPPP pipeline**: Mark test student as passed, verify provider CTA appears, verify profile pre-fill
-9. **RLS**: Verify patients see only their data, providers see only their profile + appointments
+9. **RLS**: Verify clients see only their data, providers see only their profile + appointments
 10. **Freemium gate**: Verify free-tier provider hits 5-client cap, upgrade flow works via Stripe
 11. **Reviews + Badge**: Submit review after completed appointment, verify badge JSON endpoint returns correct data, embed widget script on a test HTML page and confirm auto-updating display
+
+---
+
+## Phase 6: Deliberate Practice & Provider Quality
+
+Research shows years of experience do NOT predict therapist effectiveness — most therapists plateau or slightly decline over time (Goldberg et al., 2016; Germer et al., 2022; Erekson et al., 2017). What DOES predict outcomes: session recording review, routine outcome monitoring, and deliberate practice with behavioral feedback. This phase builds tools no competitor offers.
+
+### 6A. Routine Outcome Monitoring (ROM)
+
+New `session_outcomes` table:
+- `session_id`, `provider_id`, `client_id`, `completion_status`, `continuation_intent`, `client_satisfaction_rating`, `symptom_change_measure`, `created_at`
+
+After each session, client receives a brief outcome measure (e.g., ORS/SRS or PHQ-4) — 30 seconds to complete. Provider dashboard surfaces: clients on-track, clients showing deterioration, overall trend.
+
+**Why**: Effect size 0.36–0.53 for at-risk clients when clinical support tools flag them early (Barkham et al., 2023). Therapists cannot accurately identify deteriorating clients without objective data (APA Guidelines 2025; Muir et al., 2019).
+
+**Files:**
+- `supabase/migrations/YYYYMMDD_create_session_outcomes.sql`
+- `src/app/api/outcomes/submit/route.ts`
+- `src/app/provider/analytics/outcomes/page.tsx`
+
+### 6B. Session Recording Review
+
+Opt-in encrypted recording via Daily.co recording API, stored in Vercel Blob, provider-only access.
+
+New `session_recordings` table:
+- `recording_id`, `appointment_id`, `provider_id`, `storage_url`, `encrypted_key`, `reviewed_at`, `review_notes`, `created_at`
+
+Provider can mark recordings as "reviewed" with private notes. 90% of clients find recording review acceptable and useful (Shepherd et al., 2009).
+
+**Why**: Single strongest predictor of superior outcomes (Chow et al., 2015). 2025 APA Guidelines emphasize self-report is constrained by memory and self-protective biases — direct observation is essential.
+
+**Files:**
+- `supabase/migrations/YYYYMMDD_create_session_recordings.sql`
+- `src/app/api/recordings/route.ts`
+- `src/app/provider/recordings/page.tsx`
+
+### 6C. Deliberate Practice Dashboard
+
+Provider analytics at `src/app/provider/analytics/page.tsx`:
+- Outcome trends over time (am I improving?)
+- Caseload pattern analysis (what types of clients do I see most?)
+- Comparison to platform averages (anonymized)
+- "Not-on-track" client alerts
+- Practice prompts: weekly nudges to review a session, reflect on a specific case, target a skill
+- CE recommendations based on caseload patterns
+- Skill-targeting exercises based on DP workshop model (Westra et al., 2021)
+
+**Files:**
+- `src/app/provider/analytics/page.tsx`
+- `src/app/provider/analytics/components/outcome-trends.tsx`
+- `src/app/provider/analytics/components/caseload-patterns.tsx`
+- `src/app/api/cron/practice-prompts/route.ts`
+
+### 6D. Privacy & Trust Guarantees
+
+- All data private to the provider. Never used for ranking, penalizing, or rate changes.
+- Explicitly stated in provider TOS and on-screen when features are introduced.
+- Provider can delete recordings at any time.
+- Outcome data never shared with clients, insurance, or third parties.
+
+### Research References
+
+1. Goldberg et al. 2016 — experience ≠ outcomes, most therapists plateau
+2. Germer et al. 2022 — German replication confirming no experience-outcome link
+3. Erekson et al. 2017 — training stage doesn't predict outcomes
+4. Chow et al. 2015 — deliberate practice (recording review) predicts effectiveness
+5. Barkham et al. 2023 — ROM effect sizes, clinical support tools for at-risk clients
+6. Muir et al. 2019 — therapists can't identify deteriorating clients without data
+7. APA Guidelines 2025 — direct observation essential, self-report insufficient
+8. Shepherd et al. 2009 — 90% client acceptance of session recordings
+9. Westra et al. 2021 — DP workshop trainees showed lasting skill improvement
+10. Goldberg et al. 2016b — agency implementing DP + ROM reversed stagnation
+11. Diamond et al. 2025 — systematic review noting evidence still developing (honest limitation)

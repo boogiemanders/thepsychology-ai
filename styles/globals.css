@@ -134,6 +134,10 @@
     }
   }
 
+  .animate-shiny-text {
+    animation: shiny-text-once 4s ease-in-out infinite;
+  }
+
   @keyframes shine {
     0% {
       background-position: 0% 0%;

@@ -448,6 +448,8 @@ export const siteConfig = {
         { id: 6, title: "FAQ", url: "/#faq" },
         { id: 7, title: "Practice Questions", url: "/resources/practice-questions" },
         { id: 8, title: "Sample Exams", url: "/resources/sample-exams" },
+        { id: 13, title: "For Providers", url: "/provider" },
+        { id: 14, title: "Find a Therapist", url: "/client" },
       ],
     },
     {

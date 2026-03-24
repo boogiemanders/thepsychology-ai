@@ -1,6 +1,6 @@
 'use client'
 
-import type { ComponentPropsWithoutRef, CSSProperties, FC } from 'react'
+import { useEffect, useRef, type ComponentPropsWithoutRef, type FC } from 'react'
 import { cn } from '@/lib/utils'
 
 export interface AnimatedShinyTextProps extends ComponentPropsWithoutRef<'span'> {
@@ -13,19 +13,38 @@ export const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
   shimmerWidth = 100,
   ...props
 }) => {
+  const ref = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    el.style.backgroundSize = `${shimmerWidth}px 100%`
+    el.style.backgroundRepeat = 'no-repeat'
+    el.style.backgroundImage =
+      'linear-gradient(to right, transparent, rgba(255,255,255,0.8) 50%, transparent)'
+    el.style.backgroundClip = 'text'
+    el.style.setProperty('-webkit-background-clip', 'text')
+    el.style.backgroundPosition = `calc(-100% - ${shimmerWidth}px) 0`
+
+    const keyframes = [
+      { backgroundPosition: `calc(-100% - ${shimmerWidth}px) 0` },
+      { backgroundPosition: `calc(100% + ${shimmerWidth}px) 0`, offset: 0.3 },
+      { backgroundPosition: `calc(100% + ${shimmerWidth}px) 0`, offset: 0.6 },
+      { backgroundPosition: `calc(-100% - ${shimmerWidth}px) 0` },
+    ]
+
+    el.animate(keyframes, {
+      duration: 4000,
+      easing: 'ease-in-out',
+      iterations: Infinity,
+    })
+  }, [shimmerWidth])
+
   return (
     <span
-      style={
-        {
-          '--shiny-width': `${shimmerWidth}px`,
-        } as CSSProperties
-      }
+      ref={ref}
       className={cn(
         'mx-auto max-w-md text-neutral-600/70 dark:text-neutral-400/70',
-        // Shine effect – single run on mount
-        'animate-[shiny-text-once_3s_cubic-bezier(.6,.6,0,1)_1] [background-size:var(--shiny-width)_100%] bg-clip-text [background-position:0_0] bg-no-repeat',
-        // Shine gradient
-        'bg-gradient-to-r from-transparent via-white/80 via-50% to-transparent dark:via-white/80',
         className
       )}
       {...props}
@@ -34,4 +53,3 @@ export const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
     </span>
   )
 }
-

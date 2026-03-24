@@ -21,8 +21,8 @@ function XIcon({ className = "h-5 w-5" }: { className?: string }) {
   )
 }
 
-export function FooterSection() {
-  const heroDescription = siteConfig.hero.description?.trim()
+export function FooterSection({ description }: { description?: string } = {}) {
+  const heroDescription = (description ?? siteConfig.hero.description)?.trim()
 
   return (
     <footer id="footer" className="w-full pb-0">
